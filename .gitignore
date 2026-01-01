@@ -1,0 +1,23 @@
+# --- Dependencias ---
+node_modules/
+frontend/node_modules/
+backend/venv/
+venv/
+__pycache__/
+*.pyc
+
+# --- Seguridad (CRÍTICO) ---
+.env
+.env.local
+frontend/.env.local
+*.env
+
+# --- Sistema y Varios ---
+.DS_Store
+Thumbs.db
+.next/
+out/
+build/
+dist/
+*.db
+*.sqlite3
