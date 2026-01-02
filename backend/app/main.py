@@ -23,7 +23,7 @@ except Exception as e:
     logger.error(f"❌ Error CRÍTICO al conectar DB: {e}")
 
 # 3. Configuración de Seguridad (Hashing de contraseñas)
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["argon2", "bcrypt"], deprecated="auto")
 
 # --- INICIALIZACIÓN DE LA APP ---
 app = FastAPI(
