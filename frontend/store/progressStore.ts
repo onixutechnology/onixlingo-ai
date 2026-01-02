@@ -25,7 +25,6 @@ export const useProgressStore = create<ProgressState>()(
       completedLessons: {},
 
       // 1. CARGA MASIVA (Se usa al hacer Login)
-      // Recibe el objeto de progreso de la BD y actualiza el estado local
       loadProgressFromDB: (data) => {
           console.log("📥 Sincronizando progreso desde Base de Datos...", data);
           set({ completedLessons: data });
@@ -33,12 +32,11 @@ export const useProgressStore = create<ProgressState>()(
 
       // 2. COMPLETAR LECCIÓN (Lógica Híbrida)
       completeLesson: (lessonId, score, stars) => {
-        // A. Actualización Local (Zustand + LocalStorage)
-        // Esto hace que la UI se actualice instantáneamente (Optimistic UI)
+        // A. Actualización Local (Zustand + LocalStorage) - Optimistic UI
         set((state) => {
           const current = state.completedLessons[lessonId];
           
-          // Solo actualizamos si no existía o si el nuevo puntaje/estrellas es mejor
+          // Solo actualizamos si no existía o si el nuevo puntaje es mejor
           if (!current || stars > current.stars) {
             return {
               completedLessons: {
@@ -47,16 +45,26 @@ export const useProgressStore = create<ProgressState>()(
               },
             };
           }
-          return state; // Si ya tenías 3 estrellas y sacaste 2, no hacemos nada
+          return state; 
         });
 
-        // B. Actualización en la Nube (Backend)
-        // Verificamos si hay un usuario logueado en el navegador
+        // B. Actualización en la Nube (Backend Dinámico)
         const currentUser = typeof window !== 'undefined' ? localStorage.getItem('currentUser') : null;
         
         if (currentUser) {
-            console.log(`☁️ Guardando progreso de ${currentUser} en la nube...`);
-            fetch('http://127.0.0.1:8001/api/v1/save_progress', {
+            // ---------------------------------------------------------
+            // 🚀 AQUÍ ESTÁ LA MAGIA: USA LA VARIABLE DE ENTORNO
+            // ---------------------------------------------------------
+            const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+            if (!API_URL) {
+                console.error("❌ ERROR CRÍTICO: No se encontró NEXT_PUBLIC_API_URL. Revisa tu .env.local o Vercel.");
+                return;
+            }
+
+            console.log(`☁️ Guardando progreso en: ${API_URL}`);
+            
+            fetch(`${API_URL}/api/v1/save_progress`, {  // <--- ¡CORREGIDO!
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
@@ -65,18 +73,21 @@ export const useProgressStore = create<ProgressState>()(
                     stars: stars 
                 })
             })
-            .then(res => res.json())
-            .then(data => console.log("✅ Progreso guardado en DB:", data))
-            .catch(err => console.error("❌ Error guardando en nube (Offline?):", err));
+            .then(res => {
+                if (!res.ok) throw new Error(`Error HTTP: ${res.status}`);
+                return res.json();
+            })
+            .then(data => console.log("✅ Progreso guardado en Nube:", data))
+            .catch(err => console.error("❌ Error conectando con Backend:", err));
         }
       },
 
-      // Helpers para la UI
+      // Helpers
       isLessonCompleted: (lessonId) => !!get().completedLessons[lessonId],
       getLessonStars: (lessonId) => get().completedLessons[lessonId]?.stars || 0,
     }),
     {
-      name: 'onixlingo-progress', // Nombre de la key en localStorage
+      name: 'onixlingo-progress', 
     }
   )
 );
