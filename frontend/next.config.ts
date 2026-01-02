@@ -1,13 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Ignorar errores de TypeScript durante el build (para páginas vacías)
+  // Ignorar errores de TypeScript durante el build
   typescript: {
     ignoreBuildErrors: true,
-  },
-  // Ignorar errores de linter (estilo) durante el build
-  eslint: {
-    ignoreDuringBuilds: true,
   },
 };
 
