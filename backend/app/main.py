@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from passlib.context import CryptContext
+from typing import Optional
 import logging
 
 # --- IMPORTS PROPIOS ---
@@ -10,41 +11,42 @@ from app.core.settings import settings
 from app.database import create_db, get_db, User, Progress
 from app.api.v1.endpoints import lessons, gemini_ai
 
-# 1. Configuración de Logging (Para ver errores en consola)
+# 1. Configuración de Logging (Vital para depurar en Render)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # 2. Inicializar Base de Datos
 try:
     create_db()
-    logger.info("✅ Base de datos inicializada correctamente.")
+    logger.info("✅ Base de datos inicializada y conectada.")
 except Exception as e:
-    logger.error(f"❌ Error al conectar con la base de datos: {e}")
+    logger.error(f"❌ Error CRÍTICO al conectar DB: {e}")
 
-# 3. Configuración de Seguridad (Hashing)
+# 3. Configuración de Seguridad (Hashing de contraseñas)
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # --- INICIALIZACIÓN DE LA APP ---
 app = FastAPI(
     title=settings.PROJECT_NAME,
-    description="Backend de OnixLingo con soporte para IA, Base de Datos y Ngrok.",
+    description="Backend Profesional OnixLingo (FastAPI + PostgreSQL + Gemini AI)",
     version="1.0.0",
-    openapi_url="/api/v1/openapi.json"
+    docs_url="/docs",
+    redoc_url=None
 )
 
-# --- CONFIGURACIÓN CORS (CRÍTICO PARA NGROK) ---
-# allow_origins=["*"] es esencial para Ngrok porque la URL cambia siempre.
+# --- CONFIGURACIÓN CORS (PERMISIVA PARA EVITAR BLOQUEOS) ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Permite cualquier origen (localhost, ngrok, vercel, etc.)
+    allow_origins=["*"],  # Acepta Vercel, Localhost, Ngrok, etc.
     allow_credentials=True,
-    allow_methods=["*"],  # Permite todos los métodos (GET, POST, OPTIONS, etc.)
-    allow_headers=["*"],  # Permite todos los headers
+    allow_methods=["*"],  # Acepta GET, POST, OPTIONS, PUT, DELETE
+    allow_headers=["*"],  # Acepta Authorization, Content-Type, etc.
 )
 
-# --- MODELOS PYDANTIC (Schemas) ---
+# --- MODELOS PYDANTIC (Validación de Datos) ---
 class UserCreate(BaseModel):
     username: str
+    email: Optional[str] = None  # Agregado para compatibilidad con el Frontend
     password: str
 
 class ProgressUpdate(BaseModel):
@@ -57,9 +59,10 @@ class ProgressUpdate(BaseModel):
 @app.post("/api/v1/register", status_code=status.HTTP_201_CREATED)
 def register(user: UserCreate, db: Session = Depends(get_db)):
     """
-    Registra un nuevo usuario.
-    Retorna error 400 si el usuario ya existe.
+    Registra un nuevo usuario en PostgreSQL.
     """
+    logger.info(f"📝 Intentando registrar usuario: {user.username}")
+    
     # 1. Verificar existencia
     existing_user = db.query(User).filter(User.username == user.username).first()
     if existing_user:
@@ -70,29 +73,39 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
     
     # 2. Hashear password y guardar
     hashed_password = pwd_context.hash(user.password)
+    # Nota: Si tu modelo de DB tiene campo email, agrégalo aquí: email=user.email
     db_user = User(username=user.username, hashed_password=hashed_password)
-    db.add(db_user)
-    db.commit()
-    db.refresh(db_user)
     
-    return {"message": "Usuario creado exitosamente", "user_id": db_user.id}
+    try:
+        db.add(db_user)
+        db.commit()
+        db.refresh(db_user)
+        logger.info(f"✅ Usuario {user.username} creado con éxito (ID: {db_user.id})")
+        return {"message": "Usuario creado exitosamente", "user_id": db_user.id}
+    except Exception as e:
+        db.rollback()
+        logger.error(f"❌ Error al guardar en DB: {e}")
+        raise HTTPException(status_code=500, detail="Error interno al crear usuario")
 
 @app.post("/api/v1/login")
 def login(user: UserCreate, db: Session = Depends(get_db)):
     """
-    Autentica al usuario y devuelve su progreso actual.
+    Autentica al usuario y devuelve su progreso sincronizado.
     """
+    logger.info(f"🔐 Intento de login: {user.username}")
+    
     # 1. Buscar usuario
     db_user = db.query(User).filter(User.username == user.username).first()
     
     # 2. Validar password
     if not db_user or not pwd_context.verify(user.password, db_user.hashed_password):
+        logger.warning(f"⚠️ Login fallido para: {user.username}")
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED, 
             detail="Credenciales incorrectas"
         )
     
-    # 3. Formatear progreso para el Frontend (Zustand store)
+    # 3. Formatear progreso
     progress_data = {}
     for p in db_user.progress:
         progress_data[p.lesson_id] = {
@@ -100,6 +113,7 @@ def login(user: UserCreate, db: Session = Depends(get_db)):
             "score": p.stars * 10 
         }
         
+    logger.info(f"🔓 Login exitoso para: {user.username}")
     return {
         "message": "Login exitoso", 
         "username": db_user.username, 
@@ -109,8 +123,7 @@ def login(user: UserCreate, db: Session = Depends(get_db)):
 @app.post("/api/v1/save_progress")
 def save_progress(data: ProgressUpdate, db: Session = Depends(get_db)):
     """
-    Guarda el progreso (estrellas) de una lección específica.
-    Solo actualiza si la nueva puntuación es mayor o igual.
+    Guarda o actualiza el progreso (estrellas) de una lección.
     """
     user = db.query(User).filter(User.username == data.username).first()
     if not user:
@@ -123,31 +136,31 @@ def save_progress(data: ProgressUpdate, db: Session = Depends(get_db)):
     ).first()
     
     if prog:
-        # Lógica de "High Score": Solo actualizamos si mejora o empata
+        # Lógica "High Score": Solo actualizamos si mejora
         if data.stars >= prog.stars:
             prog.stars = data.stars
     else:
-        # Crear nuevo registro
+        # Nuevo registro
         new_prog = Progress(user_id=user.id, lesson_id=data.lesson_id, stars=data.stars)
         db.add(new_prog)
     
-    db.commit()
-    return {"status": "saved", "lesson": data.lesson_id, "stars": data.stars}
+    try:
+        db.commit()
+        return {"status": "saved", "lesson": data.lesson_id, "stars": data.stars}
+    except Exception as e:
+        db.rollback()
+        logger.error(f"Error guardando progreso: {e}")
+        raise HTTPException(status_code=500, detail="Error al guardar progreso")
 
 # --- REGISTRO DE RUTAS (ROUTERS) ---
-
-# Lecciones (JSON estático + Lógica de juego)
 app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lecciones"])
-
-# Inteligencia Artificial (Gemini)
 app.include_router(gemini_ai.router, prefix="/api/v1/ai", tags=["IA Tutor"])
 
-# --- ENDPOINT DE SALUD (Health Check) ---
+# --- ENDPOINT DE SALUD ---
 @app.get("/", tags=["General"])
 async def root():
     return {
-        "app": "OnixLingo Backend",
-        "status": "Running 🚀",
-        "docs": "/docs",
-        "ngrok_ready": True
+        "app": "OnixLingo Backend v1.0",
+        "status": "Online 🟢",
+        "cors_enabled": True
     }
