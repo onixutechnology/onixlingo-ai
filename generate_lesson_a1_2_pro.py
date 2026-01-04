@@ -1,218 +1,211 @@
 import json
 import random
 import os
+import uuid
 
-# --- BASE DE DATOS DE CONTEXTO ---
-time_markers_past = ["Last year", "In 1999", "When I was a child", "A decade ago", "Yesterday"]
-time_markers_future = ["Next month", "In two years", "When she grows up", "By 2030", "Tomorrow"]
-time_markers_present = ["Currently", "Nowadays", "At this moment", "Today", "Right now"]
+# --- 1. BASE DE DATOS DE CONTEXTO EXPANDIDA ---
 
-subjects = [
-    {"en": "my younger brother", "pronoun": "he", "be_past": "was", "be_pres": "is", "be_fut": "will be"},
-    {"en": "my parents", "pronoun": "they", "be_past": "were", "be_pres": "are", "be_fut": "will be"},
-    {"en": "the old building", "pronoun": "it", "be_past": "was", "be_pres": "is", "be_fut": "will be"},
-    {"en": "I", "pronoun": "I", "be_past": "was", "be_pres": "am", "be_fut": "will be"},
-    {"en": "we", "pronoun": "we", "be_past": "were", "be_pres": "are", "be_fut": "will be"}
-]
-
-# --- GENERADORES DE EJERCICIOS ---
-
-def gen_past_tense(idx):
-    """Pasado: Contexto de edad/números"""
-    subj = random.choice(subjects)
-    marker = random.choice(time_markers_past)
-    age = random.randint(5, 90)
-    sentence_base = f"{marker}, {subj['en']} ___ {age} years old."
-    correct = subj['be_past']
-    options = [correct, subj['be_pres'], "had", "did"]
-    random.shuffle(options)
-    
-    return {
-        "id": f"q_past_{idx}",
-        "type": "quiz_choice",
-        "question": f"Historia pasada: '{sentence_base}'",
-        "options": options,
-        "correct_answer": correct,
-        "explanation": f"El marcador '{marker}' indica pasado. Usamos '{correct}'."
-    }
-
-def gen_present_tense(idx):
-    """Presente: Regla de 'To Be' vs 'Have'"""
-    subj = random.choice(subjects)
-    marker = random.choice(time_markers_present)
-    age = random.randint(1, 99)
-    sentence_base = f"{marker}, it is a fact that {subj['en']} ___ {age}."
-    correct = subj['be_pres']
-    options = [correct, "has", "have", "is having"]
-    random.shuffle(options)
-    
-    return {
-        "id": f"q_pres_{idx}",
-        "type": "quiz_choice",
-        "question": f"Hecho actual: '{sentence_base}'",
-        "options": options,
-        "correct_answer": correct,
-        "explanation": f"Para la edad usamos '{correct}', nunca 'have/has'."
-    }
-
-def gen_future_tense(idx):
-    """Futuro: Predicciones"""
-    subj = random.choice(subjects)
-    marker = random.choice(time_markers_future)
-    age = random.randint(18, 100)
-    sentence_base = f"{marker}, I believe {subj['en']} ___ {age} years old."
-    correct = "will be"
-    options = ["will be", "is going to have", "will has", "are"]
-    random.shuffle(options)
-    
-    return {
-        "id": f"q_fut_{idx}",
-        "type": "quiz_choice",
-        "question": f"Predicción: '{sentence_base}'",
-        "options": options,
-        "correct_answer": correct,
-        "explanation": f"Edad futura siempre es 'will be'."
-    }
-
-def gen_negative_complex(idx):
-    """Negaciones Lógicas"""
-    subj = random.choice(subjects)
-    tense = random.choice(["past", "present"])
-    
-    if tense == "past":
-        verb = "was not" if subj['be_past'] == "was" else "were not"
-        distractor = "didn't be"
-        context = "back then"
-    else:
-        verb = "is not" if subj['be_pres'] == "is" else ("am not" if subj['be_pres'] == "am" else "are not")
-        distractor = "no is"
-        context = "right now"
-        
-    sentence = f"Even though it looks new, {subj['en']} ___ {random.randint(10,50)} years old {context}."
-    options = [verb, distractor, "not has", "don't have"]
-    random.shuffle(options)
-    
-    return {
-        "id": f"q_neg_{idx}",
-        "type": "quiz_choice",
-        "question": f"Niega la frase: '{sentence}'",
-        "options": options,
-        "correct_answer": verb,
-        "explanation": f"La negación correcta es '{verb}'."
-    }
-
-def gen_positive_complex(idx):
-    """Matemáticas y Lógica"""
-    num1 = random.randint(100, 900)
-    num2 = random.randint(10, 99)
-    total = num1 + num2
-    sentence = f"If you calculate carefully, {num1} plus {num2} ___ exactly {total}."
-    correct = "equals"
-    options = ["equals", "equal", "is equal to", "are"]
-    random.shuffle(options)
-    
-    return {
-        "id": f"q_pos_{idx}",
-        "type": "quiz_choice",
-        "question": f"Matemáticas: '{sentence}'",
-        "options": options,
-        "correct_answer": correct,
-        "explanation": "En operaciones matemáticas usamos singular ('equals' o 'is')."
-    }
-
-# --- ENSAMBLAJE DE LA LECCIÓN (MODE LECTURE) ---
-lesson = {
-    "id": "a1-2",
-    "title": "Advanced Ages & Timelines ⏳",
-    "level": "A1+",
-    "description": "Domina el tiempo: Pasado, Presente y Futuro con tu Tutor IA.",
-    "stages": []
+DB = {
+    "subjects": [
+        {"p": "I", "v_past": "was", "v_pres": "am", "v_fut": "will be", "en": "I", "es": "Yo"},
+        {"p": "He", "v_past": "was", "v_pres": "is", "v_fut": "will be", "en": "my brother", "es": "Mi hermano"},
+        {"p": "She", "v_past": "was", "v_pres": "is", "v_fut": "will be", "en": "Sarah", "es": "Sarah"},
+        {"p": "It", "v_past": "was", "v_pres": "is", "v_fut": "will be", "en": "the building", "es": "El edificio"},
+        {"p": "We", "v_past": "were", "v_pres": "are", "v_fut": "will be", "en": "we", "es": "Nosotros"},
+        {"p": "They", "v_past": "were", "v_pres": "are", "v_fut": "will be", "en": "my parents", "es": "Mis padres"}
+    ],
+    "markers": {
+        "past": ["In 1999", "Last century", "When I was a child", "A decade ago", "Yesterday"],
+        "present": ["Currently", "Nowadays", "At this moment", "Today", "In reality"],
+        "future": ["In the future", "By 2050", "Next year", "Someday", "When robots rule"]
+    },
+    "math_ops": ["plus", "minus", "times"]
 }
 
-# --- INTRO ---
-lesson["stages"].append({
-    "type": "lecture",
-    "title": "Time Traveler 🚀",
-    "parts": [
-        {
-            "visual": "## Cronología del Verbo\nVamos a aprender a movernos en el tiempo.\n\n* **Past:** Was / Were\n* **Present:** Am / Is / Are\n* **Future:** Will be",
-            "audio": "Hello time traveler! Today we are going to master the timelines. It is not just about numbers, it is about when things happen. Past, Present, and Future.",
-            "animation": "happy"
-        }
+# --- 2. GENERADORES DE EJERCICIOS AVANZADOS ---
+
+def gen_timeline_logic(idx):
+    """(NUEVO) Ordena cronológicamente."""
+    subj = random.choice(DB["subjects"])
+    age_base = random.randint(10, 30)
+    
+    events = [
+        {"txt": f"In 2010, {subj['p'].lower()} {subj['v_past']} {age_base}.", "year": 2010},
+        {"txt": f"Now, {subj['p'].lower()} {subj['v_pres']} {age_base + 13}.", "year": 2023},
+        {"txt": f"In 2030, {subj['p'].lower()} {subj['v_fut']} {age_base + 20}.", "year": 2030}
     ]
-})
+    random.shuffle(events)
+    
+    return {
+        "id": f"time_{idx}",
+        "type": "order_sentence",
+        "difficulty": "hard",
+        "tags": ["logic", "tenses"],
+        "question": "Ordena estos eventos del pasado al futuro:",
+        "parts": [e["txt"] for e in events],
+        "correct_order": sorted([e["txt"] for e in events], key=lambda x: [ev["year"] for ev in events if ev["txt"] == x][0]),
+        "explanation": "El orden lógico es: Pasado (was) -> Presente (is) -> Futuro (will be)."
+    }
 
-# 1. PASADO (20)
-lesson["stages"].append({
-    "type": "lecture",
-    "title": "Módulo 1: El Pasado",
-    "parts": [{
-        "visual": "## Memorias (Past Tense)\n\n* I/He/She/It ➔ **WAS**\n* We/You/They ➔ **WERE**\n\n❌ I were happy.\n✅ I **was** happy.",
-        "audio": "Let's go back in time. Remember: Singular uses WAS. Plural uses WERE. It is that simple. Don't say 'I were', please.",
-        "animation": "teacher_pointing"
-    }]
-})
-lesson["stages"].append({"type": "quiz", "questions": [gen_past_tense(i) for i in range(20)]})
+def gen_age_error_correction(idx):
+    """(CRÍTICO) Detecta el error común 'I have 20 years'."""
+    subj = random.choice(DB["subjects"])
+    age = random.randint(15, 60)
+    
+    # Generamos una frase incorrecta típica de hispanohablantes
+    incorrect = f"{subj['p']} has {age} years old."
+    if subj['p'] in ["I", "We", "They"]:
+        incorrect = f"{subj['p']} have {age} years old."
+        
+    correct = f"{subj['p']} {subj['v_pres']} {age} years old."
+    
+    return {
+        "id": f"err_{idx}",
+        "type": "quiz_choice",
+        "difficulty": "medium",
+        "tags": ["common_errors", "grammar"],
+        "question": f"¿Cuál es la forma CORRECTA de decir la edad?",
+        "options": [incorrect, correct, f"{subj['p']} haves {age}."],
+        "correct_answer": correct,
+        "explanation": "En inglés NUNCA usamos 'have' para la edad. Usamos el verbo To Be (am/is/are)."
+    }
 
-# 2. PRESENTE (20)
-lesson["stages"].append({
-    "type": "lecture",
-    "title": "Módulo 2: El Presente",
-    "parts": [{
-        "visual": "## La Regla de Oro ✨\n\nNunca digas 'I have 20 years'.\n\nEn inglés, tú **ERES** tu edad.\n✅ I **am** 20.",
-        "audio": "Back to the present. Listen carefully: Never use 'Have' for age. In English, you ARE your age. I am twenty, she is thirty.",
-        "animation": "talking"
-    }]
-})
-lesson["stages"].append({"type": "quiz", "questions": [gen_present_tense(i) for i in range(20)]})
+def gen_tense_context_match(idx):
+    """Rellenar huecos basado en el marcador temporal."""
+    tense = random.choice(["past", "present", "future"])
+    subj = random.choice(DB["subjects"])
+    marker = random.choice(DB["markers"][tense])
+    age = random.randint(5, 80)
+    
+    if tense == "past":
+        verb = subj['v_past']
+        hint = "Pasado"
+    elif tense == "present":
+        verb = subj['v_pres']
+        hint = "Presente"
+    else:
+        verb = subj['v_fut']
+        hint = "Futuro"
+        
+    sentence = f"{marker}, {subj['en']} ___ {age} years old."
+    
+    return {
+        "id": f"ctx_{idx}",
+        "type": "fill_input",
+        "difficulty": "medium",
+        "tags": ["grammar", "tenses"],
+        "question": f"Completa según el contexto temporal: '{sentence}'",
+        "correct_answers": [verb],
+        "hint": f"Marcador de tiempo: {hint}",
+        "explanation": f"'{marker}' nos indica que debemos usar {hint} ({verb})."
+    }
 
-# 3. FUTURO (20)
-lesson["stages"].append({
-    "type": "lecture",
-    "title": "Módulo 3: El Futuro",
-    "parts": [{
-        "visual": "## Predicciones 🔮\n\nEl futuro es fácil. Para todos es igual:\n\n👉 **Will be**\n\n* Next year, I **will be** older.",
-        "audio": "Now, let's look at the crystal ball. The future is very easy. It is always 'will be' for everyone. I will be, you will be, everybody will be.",
-        "animation": "curious"
-    }]
-})
-lesson["stages"].append({"type": "quiz", "questions": [gen_future_tense(i) for i in range(20)]})
+def gen_math_logic(idx):
+    """Matemáticas en inglés."""
+    a = random.randint(5, 20)
+    b = random.randint(1, 10)
+    op = random.choice(DB["math_ops"])
+    
+    if op == "plus": res = a + b
+    elif op == "minus": res = a - b
+    elif op == "times": res = a * b
+    
+    sentence = f"{a} {op} {b} ___ {res}."
+    
+    return {
+        "id": f"math_{idx}",
+        "type": "quiz_choice",
+        "difficulty": "easy",
+        "tags": ["vocabulary", "logic"],
+        "question": f"Completa la operación: '{sentence}'",
+        "options": ["is", "are", "am", "be"],
+        "correct_answer": "is",
+        "explanation": "El resultado de una operación matemática se trata como singular (is/equals)."
+    }
 
-# 4. NEGATIVO (20)
-lesson["stages"].append({
-    "type": "lecture",
-    "title": "Módulo 4: Negaciones",
-    "parts": [{
-        "visual": "## Diciendo NO ⛔\n\nSolo agrega **NOT** después del verbo.\n\n* I was **not** ready.\n* It will **not** be easy.",
-        "audio": "To deny facts in any timeline, just add the word NOT after the verb. Simple logic.",
-        "animation": "talking"
-    }]
-})
-lesson["stages"].append({"type": "quiz", "questions": [gen_negative_complex(i) for i in range(20)]})
+# --- 3. ENSAMBLAJE DE LECCIÓN (TITANIUM STRUCTURE) ---
 
-# 5. POSITIVO/COMPLEJO (20)
-lesson["stages"].append({
-    "type": "lecture",
-    "title": "Módulo 5: Desafío Final",
-    "parts": [{
-        "visual": "## Matemáticas y Lógica 🧠\n\n* 10 plus 10 **is** 20.\n* 5 and 5 **equals** 10.\n\n¡Concéntrate!",
-        "audio": "Final challenge. Let's mix everything with some math. Stay focused and analyze the context.",
-        "animation": "happy"
-    }]
-})
-lesson["stages"].append({"type": "quiz", "questions": [gen_positive_complex(i) for i in range(20)]})
+def build_lesson():
+    lesson = {
+        "id": "pro-a1-2",
+        "version": "Titanium 2.0",
+        "title": "Time Mastery: Ages & Eras",
+        "level": "A1+",
+        "tags": ["tenses", "grammar", "foundations"],
+        "stages": []
+    }
+    
+    # ETAPA 1: CONCEPTOS (Lecture)
+    lesson["stages"].append({
+        "id": "stage_intro",
+        "type": "lecture",
+        "title": "The Timeline",
+        "parts": [
+            {
+                "visual": "## The Golden Rule 🌟\n\n**Have** = Posesión (I have a car).\n**Be** = Edad/Estado (I am 20).\n\nNever mix them!",
+                "audio": "Welcome back. Today we fix the most common mistake. In English, you do not 'have' years. You ARE your years. Let's master the timeline.",
+                "animation": "teacher_pointing",
+                "duration": 12
+            }
+        ]
+    })
+    
+    # ETAPA 2: AGE ERROR CORRECTION (Drill específico)
+    lesson["stages"].append({
+        "id": "stage_drill_age",
+        "type": "gamified_quiz",
+        "title": "The 'Have' Trap",
+        "description": "Evita el error más común del inglés.",
+        "xp_reward": 100,
+        "questions": [gen_age_error_correction(i) for i in range(10)]
+    })
+    
+    # ETAPA 3: CONTEXT MATCHING (Fill Input)
+    lesson["stages"].append({
+        "id": "stage_context",
+        "type": "gamified_quiz",
+        "title": "Chrono-Logic",
+        "description": "Deduce el tiempo gramatical por el contexto.",
+        "xp_reward": 150,
+        "questions": [gen_tense_context_match(i) for i in range(10)]
+    })
+    
+    # ETAPA 4: LOGIC & MATH
+    lesson["stages"].append({
+        "id": "stage_math",
+        "type": "gamified_quiz",
+        "title": "Math & Logic",
+        "questions": [gen_math_logic(i) for i in range(5)]
+    })
+    
+    # ETAPA 5: TIMELINE SORTING (Advanced)
+    lesson["stages"].append({
+        "id": "stage_sort",
+        "type": "gamified_quiz",
+        "title": "Timeline Architect",
+        "description": "Ordena los eventos cronológicamente.",
+        "xp_reward": 200,
+        "questions": [gen_timeline_logic(i) for i in range(5)]
+    })
+    
+    # BOSS: TIME TRAVELER CHAT
+    lesson["stages"].append({
+        "id": "stage_boss",
+        "type": "practice_chat",
+        "title": "The Time Traveler",
+        "scenario": "Estás en el año 3000. Explícale a un robot cuántos años tenías en el pasado y cuántos tendrás en el futuro.",
+        "ai_system_prompt": "ROLE: Future Robot. GOAL: Ask user 'How old were you in 2020?' and 'How old will you be in 2050?'. Correct usage of 'was/will be'.",
+        "initial_message": "Bleep Blop. I am Unit 734. Accessing history files... How old were you in the year 2020?",
+        "success_criteria": ["uses_was_correctly", "uses_will_be_correctly"]
+    })
+    
+    return lesson
 
-# CHAT FINAL
-lesson["stages"].append({
-    "type": "practice_chat",
-    "scenario": "Eres un viajero del tiempo. Habla con la IA sobre tus distintas edades.",
-    "ai_system_prompt": "ROLE: Time Traveler Assistant. GOAL: Ask user about ages in 1990, 2020, and 2050. Check 'was/is/will be'."
-})
-
-# GUARDAR
-output_path = "backend/app/data/lessons/a1-2.json"
-os.makedirs(os.path.dirname(output_path), exist_ok=True)
-with open(output_path, "w", encoding="utf-8") as f:
-    json.dump(lesson, f, indent=2, ensure_ascii=False)
-
-print(f"✅ LECCIÓN A1-2 (LECTURE MODE) GENERADA: {output_path}")
+# --- EXEC ---
+if __name__ == "__main__":
+    data = build_lesson()
+    out_path = "backend/app/data/lessons/pro-a1-2.json"
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    print(f"✅ LECCIÓN GENERADA: {out_path}")

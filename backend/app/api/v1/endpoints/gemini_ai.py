@@ -1,120 +1,149 @@
 import json
 import logging
 import re
-from fastapi import APIRouter, HTTPException, status
+import asyncio
+from fastapi import APIRouter
 from pydantic import BaseModel, Field
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 
-# Importamos el servicio (Asumimos que ya tienes la lógica de llamada a la API ahí)
-from app.services.gemini_service import GeminiService
-
-# 1. Configuración de Logging
+# --- CONFIGURACIÓN ---
 logger = logging.getLogger("OnixLingo.AI")
-
 router = APIRouter()
-ai_service = GeminiService()
 
-# --- MODELOS DE DATOS (Strict Typing) ---
+# Aquí importarías tu servicio real cuando tengas la API Key
+# from app.services.gemini_service import GeminiService
+# ai_service = GeminiService()
+
+# --- MODELOS DE DATOS (Executive Analysis Schema) ---
 
 class ChatRequest(BaseModel):
     message: str
-    context: str = Field(
-        ..., 
-        description="El System Prompt que define la personalidad (Examinador, Tutor, etc.)"
-    )
-    # Opcional: Para saber si estamos en modo examen
-    mode: Optional[str] = "practice" 
+    context: str = Field(..., description="Rol del Tutor (Ej: 'CEO de Tech Company')")
+    mode: Optional[str] = "practice" # 'practice', 'exam', 'negotiation'
+
+class AnalysisData(BaseModel):
+    correction: Optional[str] = None
+    score: Optional[int] = None
+    
+    # --- CAMPOS NUEVOS (Nivel Directivo) ---
+    vocabulary_upgrade: Optional[str] = Field(None, description="Sugerencia de palabra más profesional")
+    tone_check: Optional[str] = Field(None, description="Evaluación: professional, aggressive, passive, too_casual")
 
 class ChatResponse(BaseModel):
     text: str
-    gesture: str
-    audio_url: Optional[str] = None # Preparado para futuro TTS
-    analysis: Optional[Dict[str, Any]] = None # Para feedback de gramática/score
+    gesture: str # 'talking', 'happy', 'thinking', 'surprise', 'listening', 'stern'
+    audio_url: Optional[str] = None
+    analysis: Optional[AnalysisData] = None
 
-# --- UTILIDADES ---
+# --- UTILS: LIMPIEZA DE LLM ---
+def extract_json_from_text(text: str) -> Dict[str, Any]:
+    """
+    Extrae JSON válido de respuestas sucias de LLMs.
+    Soporta bloques Markdown y texto explicativo extra.
+    """
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
 
-def clean_json_string(raw_str: str) -> str:
-    """
-    Limpia la respuesta de la IA si incluye bloques de código Markdown.
-    Ej: ```json {data} ``` -> {data}
-    """
-    cleaned = raw_str.strip()
-    # Eliminar bloques de código markdown
-    if cleaned.startswith("```"):
-        # Buscar el primer '{' y el último '}'
-        start = cleaned.find("{")
-        end = cleaned.rfind("}")
-        if start != -1 and end != -1:
-            cleaned = cleaned[start : end + 1]
-    return cleaned
+    # Regex para encontrar el primer objeto JSON {...}
+    # DOTALL permite que el punto capture saltos de línea
+    match = re.search(r"\{.*\}", text, re.DOTALL)
+    
+    if match:
+        json_str = match.group()
+        try:
+            return json.loads(json_str)
+        except json.JSONDecodeError:
+            logger.error(f"JSON Regex falló: {json_str[:50]}...")
+    
+    # Fallback de emergencia
+    return {
+        "text": text, 
+        "gesture": "confused", 
+        "analysis": {"correction": "Error processing AI response.", "score": 0}
+    }
 
 # --- ENDPOINT ---
-
 @router.post("/chat", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest):
     """
-    Motor de IA Conversacional OnixLingo.
-    Fuerza una salida JSON estructurada para controlar el Avatar y el Feedback.
+    Motor de IA Conversacional OnixLingo Titanium.
+    Genera respuestas habladas y analiza Tono, Vocabulario y Gramática en tiempo real.
     """
-    try:
-        # 1. CONSTRUCCIÓN DEL META-PROMPT (Ingeniería de Prompts)
-        # Forzamos a Gemini a responder SIEMPRE en JSON, sin importar la personalidad.
-        system_instruction = f"""
-        {request.context}
-        
-        [SYSTEM COMMAND - OVERRIDE]
-        You MUST respond in strict JSON format using this schema:
-        {{
-            "text": "Your spoken response here (keep it natural)",
-            "gesture": "one of: [talking, happy, thinking, surprise, listening, explaining]",
-            "analysis": {{
-                "correction": "Optional grammar correction if user made a mistake, else null",
-                "score": 0-100 (only if evaluating)
-            }}
+    
+    # 1. Prompt Engineering (Executive Level)
+    # Instrucción diseñada para obligar a Gemini a actuar como evaluador C-Level
+    system_instruction = f"""
+    ROLE: {request.context}
+    TARGET AUDIENCE: C-Level Executives / High-End Professionals.
+    
+    INSTRUCTION:
+    You are the backend for a 3D Avatar Tutor. 
+    Analyze the user's input for Business English proficiency.
+    
+    OUTPUT REQUIREMENTS:
+    1. Respond naturally to the conversation.
+    2. Analyze the user's tone (is it professional?).
+    3. Suggest a "Vocabulary Upgrade" if they use basic words (e.g., 'buy' -> 'acquire').
+    4. Provide JSON ONLY. No Markdown.
+    
+    JSON SCHEMA:
+    {{
+        "text": "Your spoken response.",
+        "gesture": "talking|happy|thinking|surprise|stern",
+        "analysis": {{
+            "correction": "Grammar fix or null",
+            "vocabulary_upgrade": "Better synonym or null",
+            "tone_check": "professional|casual|aggressive|passive",
+            "score": 0-100
         }}
-        Do NOT output markdown. Do NOT output plain text outside the JSON.
-        """
+    }}
+    """
+    
+    logger.info(f"🧠 AI Request: '{request.message[:40]}...' | Context: {request.context}")
 
-        logger.info(f"🤖 Procesando mensaje: '{request.message[:50]}...' | Modo: {request.context[:30]}...")
-
-        # 2. LLAMADA AL SERVICIO
-        # Pasamos el prompt "envenenado" con la estructura JSON forzada
-        raw_response = await ai_service.get_chat_response(request.message, system_instruction)
-
-        # 3. PROCESAMIENTO ROBUSTO DE RESPUESTA
-        final_data = {}
+    try:
+        # 2. LLAMADA AL SERVICIO (Simulación)
+        # response_text = await ai_service.generate(request.message, system_instruction)
         
-        # Caso A: El servicio ya devolvió un dict (ideal)
-        if isinstance(raw_response, dict):
-            final_data = raw_response
-            
-        # Caso B: El servicio devolvió un string (común en LLMs)
-        elif isinstance(raw_response, str):
-            clean_str = clean_json_string(raw_response)
-            try:
-                final_data = json.loads(clean_str)
-            except json.JSONDecodeError:
-                logger.warning(f"⚠️ Falló el parsing JSON. Respuesta cruda: {raw_response}")
-                # Fallback de emergencia: convertir texto plano a estructura válida
-                final_data = {
-                    "text": raw_response, # Usamos todo el texto como respuesta hablada
-                    "gesture": "talking",
-                    "analysis": None
-                }
+        # --- MOCK PARA PRUEBAS (Simula un análisis real) ---
+        await asyncio.sleep(0.6) # Latencia de red
+        
+        # Simulación: Si el usuario dice algo básico
+        mock_response = {
+            "text": f"I understand your point about '{request.message}'. However, in a boardroom setting, we should be more precise.",
+            "gesture": "thinking",
+            "analysis": {
+                "correction": None,
+                "vocabulary_upgrade": "Consider using 'leverage' instead of 'use'.",
+                "tone_check": "too_casual",
+                "score": 75
+            }
+        }
+        
+        # Si el mensaje es muy corto, simular respuesta rápida
+        if len(request.message) < 5:
+             mock_response["text"] = "Could you elaborate on that?"
+             mock_response["gesture"] = "listening"
+        
+        response_text = json.dumps(mock_response)
+        # ---------------------------------------------------
 
-        # 4. NORMALIZACIÓN DE SALIDA
-        # Aseguramos que los campos existan aunque la IA los haya omitido
+        # 3. Limpieza y Parsing
+        data = extract_json_from_text(response_text)
+
+        # 4. Construcción de Respuesta Tipada
         return ChatResponse(
-            text=final_data.get("text", "I'm having trouble processing that."),
-            gesture=final_data.get("gesture", "thinking"),
-            analysis=final_data.get("analysis", None)
+            text=data.get("text", "I am analyzing your data..."),
+            gesture=data.get("gesture", "talking"),
+            analysis=AnalysisData(**(data.get("analysis") or {}))
         )
 
     except Exception as e:
-        logger.error(f"❌ Error crítico en AI Engine: {e}")
-        # Respuesta de error elegante para el frontend (no un 500 feo)
+        logger.error(f"🔥 Error Crítico AI: {str(e)}")
         return ChatResponse(
-            text="Connection to neural core unstable. Please try again.",
+            text="Connection to Neural Core interrupted.",
             gesture="sad",
-            analysis={"error": str(e)}
+            analysis=None
         )

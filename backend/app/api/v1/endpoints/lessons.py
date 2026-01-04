@@ -3,93 +3,118 @@ import logging
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 from fastapi import APIRouter, HTTPException, status, Path as PathParam
+from pydantic import BaseModel, ValidationError
 
-# Configuramos el logger específico para este módulo
+# Configuramos el logger
 logger = logging.getLogger("OnixLingo.ContentDelivery")
 
 router = APIRouter()
 
-# --- CONFIGURACIÓN DE RUTAS ROBUSTA ---
-# Calculamos la ruta absoluta basada en la ubicación de ESTE archivo
-# Esto evita errores si ejecutas el backend desde carpetas distintas.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent # Sube hasta 'backend'
-LESSONS_DIR = BASE_DIR / "app" / "data" / "lessons"
+# --- 1. CONFIGURACIÓN DE RUTAS ---
+# Calculamos la ruta absoluta de forma robusta
+CURRENT_FILE = Path(__file__).resolve()
+# Estructura: backend/app/api/v1/endpoints/lessons.py -> Subimos 4 niveles a 'backend'
+APP_ROOT = CURRENT_FILE.parents[4] 
+LESSONS_DIR = APP_ROOT / "app" / "data" / "lessons"
 
-# --- ESQUEMA DE VALIDACIÓN (PYDANTIC LITE) ---
-# Aunque leemos JSON, validamos que tenga lo mínimo necesario antes de responder
-# para evitar que el Frontend explote.
+# Validación de arranque
+if not LESSONS_DIR.exists():
+    logger.warning(f"⚠️ DIRECTORIO NO ENCONTRADO: {LESSONS_DIR}")
 
-def validate_lesson_structure(data: dict, lesson_id: str):
-    """
-    Verifica que el JSON tenga los campos críticos para el Dashboard Titanium.
-    """
-    required_fields = ["id", "title", "stages"]
-    for field in required_fields:
-        if field not in data:
-            logger.error(f"❌ JSON corrupto en {lesson_id}: Falta campo '{field}'")
-            raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail=f"Integridad de datos fallida: La lección no tiene '{field}'"
-            )
-    return True
+# --- 2. MODELOS DE VALIDACIÓN (SCHEMA TITANIUM FLEXIBLE) ---
 
-@router.get("/{lesson_id}", response_model=Dict[str, Any])
-async def get_lesson_content(
-    lesson_id: str = PathParam(..., title="ID de la lección", min_length=3, pattern="^[a-zA-Z0-9_-]+$")
+class LessonStage(BaseModel):
+    id: str
+    type: str # 'lecture', 'gamified_quiz', 'practice_chat', 'bucket_sort'
+    
+    # Campos comunes
+    title: Optional[str] = None
+    description: Optional[str] = None
+    xp_reward: Optional[int] = 0
+
+    # Campos Específicos (Titanium V2)
+    # Ya no obligamos a usar 'content', aceptamos los campos directos del generador
+    parts: Optional[List[Dict[str, Any]]] = None      # Para Lectures (Multimedia)
+    questions: Optional[List[Dict[str, Any]]] = None  # Para Quizzes/Drills
+    
+    # Campos para Chat/Roleplay
+    scenario: Optional[str] = None
+    ai_system_prompt: Optional[str] = None
+    initial_message: Optional[str] = None
+    success_criteria: Optional[List[str]] = None
+
+    # Campos para Bucket Sort
+    items: Optional[List[str]] = None
+    buckets: Optional[Dict[str, List[str]]] = None
+
+    # Mantenemos compatibilidad con lógica antigua o branching futuro
+    next_stage_id: Optional[str] = None
+    content: Optional[Dict[str, Any]] = None 
+
+    class Config:
+        # CRÍTICO: Permite campos extra no definidos en el modelo
+        # Esto evita el Error 500 si el JSON tiene un campo nuevo que olvidamos declarar
+        extra = "allow" 
+
+class LessonContent(BaseModel):
+    id: str
+    title: str
+    version: Optional[str] = "1.0"
+    level: Optional[str] = "A1"
+    total_xp: Optional[int] = 0
+    tags: Optional[List[str]] = []
+    description: Optional[str] = None
+    stages: List[LessonStage]
+
+# --- 3. ENDPOINTS ---
+
+@router.get("/{lesson_id}", response_model=LessonContent)
+def get_lesson_content(
+    lesson_id: str = PathParam(..., title="ID de la lección", min_length=3)
 ):
     """
-    Recupera el contenido estático de una lección (JSON).
-    
-    - **Validación de Seguridad**: Evita Path Traversal (ej: ../../).
-    - **Validación de Datos**: Asegura que el JSON sea válido.
+    Recupera el contenido de una lección.
+    Soporta formato Titanium V2 (parts, questions) y Legacy.
     """
     
-    # 1. Construcción Segura del Path
+    # A. Construcción del Path
     target_file = LESSONS_DIR / f"{lesson_id}.json"
     
-    # 2. Seguridad: Path Traversal Check
-    # Nos aseguramos de que el archivo final esté realmente DENTRO de la carpeta lessons
+    # B. Seguridad: Path Traversal Check
     try:
         target_file = target_file.resolve()
         if LESSONS_DIR.resolve() not in target_file.parents:
-            logger.warning(f"🚨 Intento de ataque Path Traversal detectado: {lesson_id}")
-            raise HTTPException(status_code=403, detail="Acceso denegado a recursos del sistema.")
+            logger.critical(f"🚨 SEGURIDAD: Intento de Path Traversal -> {lesson_id}")
+            raise HTTPException(status_code=403, detail="Acceso denegado.")
     except Exception:
-        # Si falla resolve() porque el archivo no existe, lo manejamos abajo
         pass
 
-    logger.info(f"📂 Solicitando recurso: {target_file.name}")
+    logger.info(f"📂 Cargando lección: {target_file.name}")
 
-    # 3. Verificación de Existencia
+    # C. Verificación de Existencia
     if not target_file.exists() or not target_file.is_file():
         logger.warning(f"⚠️ Lección no encontrada: {lesson_id}")
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"El módulo de aprendizaje '{lesson_id}' no está disponible o no existe."
+            detail=f"Lección '{lesson_id}' no encontrada."
         )
 
-    # 4. Lectura y Parsing Seguro
+    # D. Lectura y Validación
     try:
         with open(target_file, "r", encoding="utf-8") as f:
-            lesson_data = json.load(f)
+            raw_data = json.load(f)
             
-        # 5. Validación de Integridad
-        validate_lesson_structure(lesson_data, lesson_id)
-        
-        logger.info(f"✅ Lección servida exitosamente: {lesson_id}")
-        return lesson_data
+        # Validación Pydantic
+        lesson = LessonContent(**raw_data)
+        return lesson
 
     except json.JSONDecodeError as e:
-        logger.error(f"❌ Error de sintaxis JSON en {lesson_id}: {e}")
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Error crítico: El archivo de lección está corrupto (JSON inválido)."
-        )
-    except HTTPException as he:
-        raise he
+        logger.error(f"❌ JSON Corrupto en {lesson_id}: {e}")
+        raise HTTPException(status_code=500, detail="Archivo de datos corrupto.")
+    except ValidationError as ve:
+        logger.error(f"❌ Error de Schema en {lesson_id}: {ve}")
+        # Mostramos el error detallado para depuración
+        raise HTTPException(status_code=500, detail=f"Error de estructura de datos: {ve}")
     except Exception as e:
-        logger.error(f"❌ Error inesperado leyendo lección: {e}")
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Error interno del sistema de contenidos."
-        )
+        logger.error(f"❌ Error I/O: {e}")
+        raise HTTPException(status_code=500, detail="Error interno del servidor.")

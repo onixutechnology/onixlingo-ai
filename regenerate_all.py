@@ -6,7 +6,7 @@ scripts = [
     "generate_lesson_a1_2_pro.py",
     "generate_lesson_a1_3_pro.py",
     "generate_lesson_a1_4_pro.py",
-    "generate_checkpoint_a1_pro.py"
+    "generate_checkpoint_a1.py"
 ]
 
 print("🚀 INICIANDO GENERACIÓN MASIVA DE CONTENIDO A1...")

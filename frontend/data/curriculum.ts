@@ -1,8 +1,8 @@
-export type ExerciseType = 'chat' | 'grammar' | 'listening' | 'toeic_mock';
+export type ExerciseType = 'chat' | 'grammar' | 'listening' | 'toeic_mock' | 'lecture';
 
 // 1. Definimos la estructura del Nodo (La bolita en el mapa)
 export interface LessonNode {
-  id: string;
+  id: string; // DEBE COINCIDIR con el nombre del archivo JSON en backend (ej: pro-a1-1)
   title: string;
   description: string;
   type: ExerciseType;
@@ -13,7 +13,7 @@ export interface LessonNode {
   stars: 0 | 1 | 2 | 3;
   position: 'left' | 'center' | 'right'; // Para el efecto zig-zag
   
-  // LA MAGIA: El prompt que se enviará a Gemini
+  // LA MAGIA: El prompt que se enviará a Gemini (Fallback si no hay JSON)
   aiPrompt: string;
 }
 
@@ -35,40 +35,40 @@ export const CURRICULUM: LevelSection[] = [
     color: 'emerald', // Verde Duolingo
     lessons: [
       { 
-        id: 'a1-1', 
+        id: 'pro-a1-1',  // ID SINCRONIZADO CON BACKEND
         title: 'Hello & To Be', 
         description: 'Preséntate y usa el verbo ser/estar.',
-        type: 'chat', 
+        type: 'lecture', 
         locked: false, 
-        completed: true, 
-        stars: 3, 
+        completed: false, 
+        stars: 0, 
         position: 'center',
         aiPrompt: 'The user is a complete beginner (A1). Your goal is to teach the Verb "To Be" (am, is, are). Start by explaining it simply in Spanish, then ask the user to introduce themselves. Correct every mistake gently.'
       },
       { 
-        id: 'a1-2', 
-        title: 'Numbers & Ages', 
-        description: 'Aprende a decir tu edad y contar.',
+        id: 'pro-a1-2', // ID SINCRONIZADO CON BACKEND
+        title: 'Time Mastery', 
+        description: 'Pasado, Presente y Futuro.',
         type: 'grammar', 
-        locked: false, 
-        completed: true, 
-        stars: 2, 
+        locked: true, 
+        completed: false, 
+        stars: 0, 
         position: 'left',
         aiPrompt: 'Teach numbers 1-20 and how to ask "How old are you?". Practice with the user by asking their age and the age of family members.'
       },
       { 
-        id: 'a1-3', 
+        id: 'pro-a1-3', // ID SINCRONIZADO CON BACKEND
         title: 'Daily Routine', 
         description: 'Present Simple para rutinas.',
         type: 'chat', 
-        locked: false, 
+        locked: true, 
         completed: false, 
         stars: 0, 
         position: 'center',
         aiPrompt: 'Teach the Present Simple tense for routines. Focus on the third person "s" (he runs, she eats). Ask the user what they do in the morning.'
       },
       { 
-        id: 'a1-4', 
+        id: 'pro-a1-4', // ID SINCRONIZADO CON BACKEND
         title: 'Food & Ordering', 
         description: 'Pide comida en un restaurante.',
         type: 'listening', 
@@ -124,23 +124,34 @@ export const CURRICULUM: LevelSection[] = [
     ]
   },
 
-  // --- MUNDO 3: NIVEL B1 (Intermedio) ---
+  // --- MUNDO 3: NIVEL B1 (Executive Foundation - PRO) ---
   {
-    id: 'B1',
+    id: 'exec-b1', // ID COINCIDE CON DASHBOARD PRO
     title: 'Nivel B1: Intermediate',
     description: 'Opiniones complejas y trabajo.',
     color: 'orange',
     lessons: [
       { 
-        id: 'b1-1', 
-        title: 'Job Interview', 
-        description: 'Simulación de entrevista.',
+        id: 'pro-b1-1', // ID SINCRONIZADO CON BACKEND (Generado en fix_lesson.py)
+        title: 'Professional Intro', 
+        description: 'Networking de alto nivel.',
         type: 'chat', 
         locked: true, 
         completed: false, 
         stars: 0, 
         position: 'center',
-        aiPrompt: 'Roleplay: You are an HR Manager at Google. Conduct a job interview with the user. Ask about strengths, weaknesses, and experience.'
+        aiPrompt: 'Roleplay: You are a CEO. The user must introduce themselves professionally. Accept only "Good morning" or "How do you do".'
+      },
+      { 
+        id: 'pro-b1-2', 
+        title: 'Formal Emailing', 
+        description: 'Redacción corporativa.',
+        type: 'grammar', 
+        locked: true, 
+        completed: false, 
+        stars: 0, 
+        position: 'right',
+        aiPrompt: 'Teach formal email structure: Subject line, Salutation (Dear Mr./Ms.), Body, and Sign-off (Sincerely).'
       }
     ]
   },

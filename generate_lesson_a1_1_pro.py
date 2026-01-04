@@ -1,208 +1,252 @@
 import json
 import random
 import os
+import uuid
 
-# --- BASE DE DATOS DE CONTEXTO ---
-contexts = [
-    "Even though it's late,", "Despite the rain,", "Honestly,", "In my opinion,",
-    "Generally speaking,", "At this moment,", "Unfortunately,", "Luckily,"
-]
+# --- 1. BASE DE DATOS LINGÜÍSTICA EXPANDIDA ---
 
-subjects = [
-    {"pronoun": "I", "verb": "am", "contract": "I'm", "neg": "am not", "neg_contract": "I'm not", "en": "I"},
-    {"pronoun": "My best friend", "verb": "is", "contract": "He's", "neg": "is not", "neg_contract": "isn't", "en": "he"},
-    {"pronoun": "Sarah and I", "verb": "are", "contract": "We're", "neg": "are not", "neg_contract": "aren't", "en": "we"},
-    {"pronoun": "The new students", "verb": "are", "contract": "They're", "neg": "are not", "neg_contract": "aren't", "en": "they"},
-    {"pronoun": "This situation", "verb": "is", "contract": "It's", "neg": "is not", "neg_contract": "isn't", "en": "it"}
-]
-
-adjectives_complex = [
-    "absolutely exhausted", "incredibly intelligent", "somewhat confused", 
-    "really excited about the trip", "not ready for the exam", "a bit hungry"
-]
-
-# --- GENERADORES DE EJERCICIOS (Mecánica Pro) ---
-
-def gen_affirmative_complex(idx):
-    subj = random.choice(subjects)
-    ctx = random.choice(contexts)
-    adj = random.choice(adjectives_complex)
-    sentence = f"{ctx} {subj['pronoun']} ___ {adj}."
-    correct = subj['verb']
-    options = ["am", "is", "are", "be"]
-    final_options = list(set([correct] + random.sample(options, 3)))[:3] 
-    random.shuffle(final_options)
-    return {
-        "id": f"q_aff_{idx}",
-        "type": "quiz_choice",
-        "question": f"Completa: '{sentence}'",
-        "options": final_options,
-        "correct_answer": correct,
-        "explanation": f"El sujeto '{subj['pronoun']}' requiere el verbo '{correct}'."
-    }
-
-def gen_negative_complex(idx):
-    subj = random.choice(subjects)
-    ctx = random.choice(contexts)
-    adj = random.choice(adjectives_complex)
-    use_contraction = random.choice([True, False])
-    if use_contraction:
-        sentence = f"{ctx} {subj['pronoun']} ___ {adj}."
-        correct = subj['neg_contract']
-        distractor = "amn't" if subj['verb'] == "am" else ("aren't" if subj['verb'] == "is" else "isn't")
-    else:
-        sentence = f"{ctx} {subj['pronoun']} ___ {adj}."
-        correct = subj['neg']
-        distractor = "not is"
-    options = [correct, distractor, "not be", "no are"]
-    random.shuffle(options)
-    return {
-        "id": f"q_neg_{idx}",
-        "type": "quiz_choice",
-        "question": f"Niega: '{sentence}'",
-        "options": options,
-        "correct_answer": correct,
-        "explanation": f"Negativo correcto: '{correct}'."
-    }
-
-def gen_question_complex(idx):
-    subj = random.choice(subjects)
-    adj = random.choice(adjectives_complex)
-    wh_word = random.choice(["Why", "Where", "How", ""])
-    prefix = f"{wh_word} " if wh_word else ""
-    sentence = f"{prefix}___ {subj['pronoun'].lower()} {adj}?"
-    correct = subj['verb'].capitalize() if not wh_word else subj['verb']
-    options = ["Am", "Is", "Are"] if not wh_word else ["am", "is", "are"]
-    random.shuffle(options)
-    return {
-        "id": f"q_ques_{idx}",
-        "type": "quiz_choice",
-        "question": f"Pregunta: '{sentence}'",
-        "options": options,
-        "correct_answer": correct,
-        "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-    }
-
-def gen_contraction_mastery(idx):
-    subj = random.choice(subjects)
-    if " " in subj['pronoun']: subj = subjects[0]
-    sentence = f"If you ask me, {subj['pronoun']} ___ the best candidate."
-    correct = subj['contract']
-    options = [correct, f"{subj['pronoun']}'s", f"{subj['pronoun']}re"]
-    random.shuffle(options)
-    return {
-        "id": f"q_cont_{idx}",
-        "type": "quiz_choice",
-        "question": f"Contracción: '{sentence}'",
-        "options": options,
-        "correct_answer": correct,
-        "explanation": f"Contracción nativa: {correct}."
-    }
-
-def gen_error_hunt_pro(idx):
-    subj = random.choice(subjects)
-    wrong_verb = "is" if subj['verb'] == "are" else "are"
-    if subj['pronoun'] == "I": wrong_verb = "are"
-    text = f"Hello! My name is John. {subj['pronoun']} {wrong_verb} very happy to be here."
-    return {
-        "id": f"q_err_{idx}",
-        "type": "quiz_choice",
-        "question": f"Encuentra el error: \n\n*\"{text}\"*",
-        "options": [f"Error: {wrong_verb}", "Error: John", "No hay error"],
-        "correct_answer": f"Error: {wrong_verb}",
-        "explanation": f"Sujeto y verbo no coinciden."
-    }
-
-# --- ENSAMBLAJE DE LA LECCIÓN (CON AVATAR LECTURE) ---
-
-lesson = {
-    "id": "a1-1",
-    "title": "Mastery: To Be & Introductions",
-    "level": "A1",
-    "description": "Curso completo con Tutor Virtual.",
-    "stages": []
+DB = {
+    "contexts": [
+        "Honestly,", "Look,", "Listen,", "In reality,", "Basically,", 
+        "Believe it or not,", "Generally,"
+    ],
+    "times": ["this morning", "tonight", "right now", "these days"],
+    "subjects": [
+        {"p": "I", "v": "am", "c": "I'm", "n": "am not", "nc": "I'm not", "es": "Yo"},
+        {"p": "You", "v": "are", "c": "You're", "n": "are not", "nc": "aren't", "es": "Tú"},
+        {"p": "He", "v": "is", "c": "He's", "n": "is not", "nc": "isn't", "es": "Él"},
+        {"p": "She", "v": "is", "c": "She's", "n": "is not", "nc": "isn't", "es": "Ella"},
+        {"p": "We", "v": "are", "c": "We're", "n": "are not", "nc": "aren't", "es": "Nosotros"},
+        {"p": "They", "v": "are", "c": "They're", "n": "are not", "nc": "aren't", "es": "Ellos"}
+    ],
+    "names": ["Emma", "Liam", "Sofia", "Noah", "The CEO", "My doctor"],
+    "adjectives": [
+        "exhausted", "thrilled", "overwhelmed", "skeptical", "brilliant", 
+        "lost", "hired", "fired", "late", "early"
+    ],
+    "locations": [
+        "at the airport", "in the meeting", "on the bus", "at Google HQ", "in the lobby"
+    ]
 }
 
-# --- INTRODUCCIÓN PROFUNDA (Lecture Mode) ---
-lesson["stages"].append({
-    "type": "lecture",
-    "title": "Bienvenida al Nivel A1",
-    "parts": [
-        {
-            "visual": "## The Engine of English 🚀\nEl verbo **To Be** (Ser/Estar) es el motor del idioma.\n\nSin él, no podemos decir quiénes somos ni cómo estamos.",
-            "audio": "Hello friend! Welcome to your first step. I am your AI Tutor. Today we are going to master the most important verb in the English language: To Be. It is the engine of everything. Without it, you cannot say who you are, or how you feel.",
-            "animation": "talking"
-        },
-        {
-            "visual": "## La Estructura\n\n* **I am** (Yo soy)\n* **You are** (Tú eres)\n* **She is** (Ella es)",
-            "audio": "It looks simple, but be careful. Remember: 'I' always goes with 'am'. 'He', 'She', and 'It' use 'is'. And for everyone else, we use 'are'. Let's practice this logic now.",
-            "animation": "teacher_pointing"
-        }
-    ]
-})
+# --- 2. UTILIDADES DEL MOTOR ---
 
-# 1. AFIRMATIVO (20)
-lesson["stages"].append({
-    "type": "lecture",
-    "title": "Módulo 1: Afirmaciones",
-    "parts": [{
-        "visual": "## Contexto Real\nYa no somos robots.\n\n❌ I am happy.\n✅ **Honestly, I am happy.**",
-        "audio": "Let's stop talking like robots. In real life, we use connectors. Pay attention to the context in the following exercises.",
-        "animation": "happy"
-    }]
-})
-lesson["stages"].append({"type": "quiz", "questions": [gen_affirmative_complex(i) for i in range(20)]})
+def get_smart_distractors(correct_verb):
+    """Genera errores comunes en lugar de opciones aleatorias."""
+    distractors = []
+    if correct_verb == "am": distractors = ["is", "are", "be"]
+    elif correct_verb == "is": distractors = ["are", "am", "be"]
+    elif correct_verb == "are": distractors = ["is", "am", "be"]
+    return distractors
 
-# 2. NEGATIVO (20)
-lesson["stages"].append({
-    "type": "lecture",
-    "title": "Módulo 2: Negaciones",
-    "parts": [{
-        "visual": "## El Poder del NO\n\nEl **NOT** siempre va después del verbo.\n\n* She **is not** ready.",
-        "audio": "Now, let's learn to say NO. It is easy. Just put the word 'not' immediately after the verb. She is NOT ready.",
-        "animation": "talking"
-    }]
-})
-lesson["stages"].append({"type": "quiz", "questions": [gen_negative_complex(i) for i in range(20)]})
+def get_subject_variant(subj_data):
+    """Devuelve 'She' o 'Emma' aleatoriamente para variedad."""
+    if subj_data['p'] in ["He", "She"]:
+        return random.choice([subj_data['p'], random.choice(DB["names"])])
+    return subj_data['p']
 
-# 3. PREGUNTAS (20)
-lesson["stages"].append({
-    "type": "lecture",
-    "title": "Módulo 3: Preguntas",
-    "parts": [{
-        "visual": "## Modo Detective 🕵️\n\nInvierte el orden:\n\n* You are happy -> **Are you** happy?",
-        "audio": "To ask questions, we flip the order. The verb jumps to the front. Imagine you are a detective.",
-        "animation": "curious"
-    }]
-})
-lesson["stages"].append({"type": "quiz", "questions": [gen_question_complex(i) for i in range(20)]})
+# --- 3. GENERADORES DE EJERCICIOS AVANZADOS ---
 
-# 4. CONTRACCIONES (20)
-lesson["stages"].append({
-    "type": "lecture",
-    "title": "Módulo 4: Fluidez",
-    "parts": [{
-        "visual": "## Contracciones 🇺🇸\n\n* You are -> **You're**\n* It is -> **It's**",
-        "audio": "Native speakers love contractions. They make you sound faster and more natural. Let's practice them.",
-        "animation": "talking"
-    }]
-})
-lesson["stages"].append({"type": "quiz", "questions": [gen_contraction_mastery(i) for i in range(20)]})
+def gen_scramble_sentence(idx):
+    """(IMPL 3) Crea ejercicios de ordenar oraciones."""
+    subj = random.choice(DB["subjects"])
+    s_text = get_subject_variant(subj)
+    adj = random.choice(DB["adjectives"])
+    
+    # Oración base: She is exhausted
+    sentence_parts = [s_text, subj['v'], adj]
+    random.shuffle(sentence_parts)
+    
+    return {
+        "id": f"scr_{idx}",
+        "type": "order_sentence",
+        "difficulty": "medium",
+        "tags": ["grammar", "syntax"],
+        "question": "Ordena las palabras para formar una oración correcta:",
+        "parts": sentence_parts,
+        "correct_order": [s_text, subj['v'], adj],
+        "audio_ref": f"{s_text} {subj['v']} {adj}.",
+        "hint": "El sujeto va primero, luego el verbo To Be."
+    }
 
-# 5. CAZADOR DE ERRORES (20)
-lesson["stages"].append({"type": "quiz", "questions": [gen_error_hunt_pro(i) for i in range(20)]})
+def gen_listening_match(idx):
+    """(IMPL 5) Simulación de ejercicio de escucha."""
+    subj = random.choice(DB["subjects"])
+    adj = random.choice(DB["adjectives"])
+    sentence = f"{subj['p']} {subj['v']} {adj}"
+    
+    # Generamos opciones que suenan parecido o confunden
+    distractor_1 = f"{subj['p']} {subj['v']} not {adj}"
+    distractor_2 = f"{subj['p']} is {adj}" if subj['v'] == "are" else f"{subj['p']} are {adj}"
+    
+    options = [sentence, distractor_1, distractor_2]
+    random.shuffle(options)
+    
+    return {
+        "id": f"lst_{idx}",
+        "type": "listening_match",
+        "difficulty": "hard",
+        "tags": ["listening", "comprehension"],
+        "question": "Escucha el audio y selecciona la frase exacta.",
+        "tts_text": sentence, # El frontend usará esto para generar voz
+        "options": options,
+        "correct_answer": sentence
+    }
 
-# FINAL BOSS
-lesson["stages"].append({
-    "type": "practice_chat",
-    "scenario": "Entrevista en Google.",
-    "ai_system_prompt": "ROLE: Google Recruiter. GOAL: Assess basic 'To Be' usage."
-})
+def gen_translation_challenge(idx):
+    """(IMPL 13) Traducción inversa."""
+    subj = random.choice(DB["subjects"])
+    adj = random.choice(DB["adjectives"])
+    
+    es_sentence = f"{subj['es']} está {adj} (en inglés)"
+    en_correct = f"{subj['p']} {subj['v']} {adj}"
+    
+    return {
+        "id": f"tra_{idx}",
+        "type": "quiz_choice",
+        "difficulty": "medium",
+        "tags": ["translation", "vocabulary"],
+        "question": f"¿Cómo se dice: '{es_sentence}'?",
+        "options": [
+            f"{subj['p']} {subj['v']} {adj}",
+            f"{subj['p']} is {adj}",
+            f"{subj['p']} have {adj}"
+        ],
+        "correct_answer": en_correct
+    }
 
-# GUARDAR
-output_path = "backend/app/data/lessons/a1-1.json"
-os.makedirs(os.path.dirname(output_path), exist_ok=True)
-with open(output_path, "w", encoding="utf-8") as f:
-    json.dump(lesson, f, indent=2, ensure_ascii=False)
+def gen_fill_blank_context(idx):
+    """(IMPL 4 & 10) Rellenar espacio con contexto rico."""
+    subj = random.choice(DB["subjects"])
+    ctx = random.choice(DB["contexts"])
+    loc = random.choice(DB["locations"])
+    
+    sentence = f"{ctx} {subj['p']} ___ {loc}."
+    
+    return {
+        "id": f"fib_{idx}",
+        "type": "fill_input", # Usuario debe escribir
+        "difficulty": "hard",
+        "tags": ["grammar", "writing"],
+        "question": f"Completa la frase: '{sentence}'",
+        "correct_answers": [subj['v'], subj['c']], # Acepta "are" o "We're" (si aplica)
+        "hint": f"Verbo To Be para '{subj['p']}'",
+        "explanation": f"Con '{subj['p']}' siempre usamos '{subj['v']}'."
+    }
 
-print(f"✅ LECCIÓN A1-1 (LECTURE MODE) GENERADA: {output_path}")
+def gen_odd_one_out(idx):
+    """(IMPL 14) Encuentra el intruso."""
+    category = random.choice(["pronouns", "verbs"])
+    
+    if category == "verbs":
+        options = ["am", "is", "are", "happy"]
+        correct = "happy"
+        reason = "'Happy' es un adjetivo, los demás son formas del verbo To Be."
+    else:
+        options = ["He", "She", "It", "Am"]
+        correct = "Am"
+        reason = "'Am' es un verbo, los demás son pronombres."
+        
+    random.shuffle(options)
+    return {
+        "id": f"odd_{idx}",
+        "type": "quiz_choice",
+        "difficulty": "easy",
+        "tags": ["vocabulary", "logic"],
+        "question": "Selecciona la palabra que NO pertenece al grupo:",
+        "options": options,
+        "correct_answer": correct,
+        "explanation": reason
+    }
+
+# --- 4. ENSAMBLAJE DE LA LECCIÓN (ESTRUCTURA MODULAR) ---
+
+def build_lesson():
+    lesson = {
+        "id": "pro-a1-1",
+        "version": "Titanium 2.0",
+        "title": "Executive Basics: To Be",
+        "level": "A1",
+        "tags": ["grammar", "business", "foundations"],
+        "stages": []
+    }
+
+    # ETAPA 1: CONCEPTOS (Lecture)
+    lesson["stages"].append({
+        "id": "stage_1",
+        "type": "lecture",
+        "title": "Core Concepts",
+        "parts": [
+            {
+                "visual": "## The Logic\n\nI -> **am**\nYou -> **are**\nHe/She -> **is**",
+                "audio": "Welcome back. Let's synchronize our grammar. The verb To Be connects the subject to a description.",
+                "animation": "explaining",
+                "duration": 10
+            }
+        ]
+    })
+
+    # ETAPA 2: GRAMMAR DRILLS (Variedad de tipos)
+    questions_mix = []
+    for i in range(5): questions_mix.append(gen_fill_blank_context(i))
+    for i in range(5): questions_mix.append(gen_odd_one_out(i+5))
+    random.shuffle(questions_mix)
+    
+    lesson["stages"].append({
+        "id": "stage_2",
+        "type": "gamified_quiz",
+        "title": "Grammar Calibration",
+        "description": "Ajuste de precisión gramatical.",
+        "xp_reward": 100,
+        "questions": questions_mix
+    })
+
+    # ETAPA 3: LISTENING & SYNTAX (Habilidades activas)
+    active_mix = []
+    for i in range(5): active_mix.append(gen_scramble_sentence(i+10))
+    for i in range(5): active_mix.append(gen_listening_match(i+15))
+    
+    lesson["stages"].append({
+        "id": "stage_3",
+        "type": "gamified_quiz",
+        "title": "Active Listening & Syntax",
+        "description": "Entrenamiento auditivo y orden mental.",
+        "xp_reward": 150,
+        "questions": active_mix
+    })
+
+    # ETAPA 4: TRADUCCIÓN (Puente mental)
+    lesson["stages"].append({
+        "id": "stage_4",
+        "type": "gamified_quiz",
+        "title": "Translation Bridge",
+        "questions": [gen_translation_challenge(i) for i in range(5)]
+    })
+
+    # ETAPA FINAL: BOSS BATTLE (Roleplay Estructurado)
+    lesson["stages"].append({
+        "id": "stage_boss",
+        "type": "practice_chat",
+        "title": "The Interview",
+        "scenario": "Estás en el lobby de una empresa internacional. Preséntate.",
+        "ai_system_prompt": "ROLE: Receptionist at Stark Industries. GOAL: Verify user can use 'I am', 'It is' correctly.",
+        "initial_message": "Good morning. I am the receptionist. Who are you?",
+        "success_criteria": ["uses_i_am", "uses_nice_to_meet_you"]
+    })
+
+    return lesson
+
+# --- 5. EJECUCIÓN Y GUARDADO ---
+
+if __name__ == "__main__":
+    generated_lesson = build_lesson()
+    
+    # Ruta segura para backend
+    output_path = "backend/app/data/lessons/pro-a1-1.json"
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(generated_lesson, f, indent=2, ensure_ascii=False)
+
+    print(f"✨ LECCIÓN TITANIUM GENERADA: {len(generated_lesson['stages'])} etapas creadas.")
+    print(f"📂 Archivo guardado en: {output_path}")

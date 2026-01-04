@@ -1,0 +1,626 @@
+{
+  "id": "pro-a1-3",
+  "version": "Titanium 2.0",
+  "title": "Routine & Habits Mastery",
+  "level": "A1",
+  "tags": [
+    "present_simple",
+    "daily_life",
+    "grammar"
+  ],
+  "total_xp": 200,
+  "stages": [
+    {
+      "id": "stage_intro",
+      "type": "lecture",
+      "title": "The Daily Grind",
+      "parts": [
+        {
+          "visual": "## The Super 'S' 🦸\n\nHe/She/It needs an **S**.\n\n* Work ➔ Works\n* Watch ➔ Watches\n* Study ➔ Studies\n* Have ➔ **Has** (Irregular!)",
+          "audio": "Welcome. To talk about daily life, you need to master the third person. Remember the spelling rules. It's not always just adding an S. Watch out for 'Has'!",
+          "animation": "teacher_pointing",
+          "duration": 15
+        },
+        {
+          "visual": "## Frequency 📊\n\n**Always** (100%)\n**Usually** (80%)\n**Sometimes** (50%)\n**Never** (0%)\n\nPosition: Before the verb!",
+          "audio": "Where do you put 'always'? Before the action. I ALWAYS eat breakfast. I NEVER wake up late.",
+          "animation": "explaining"
+        }
+      ]
+    },
+    {
+      "id": "stage_conjugation",
+      "type": "gamified_quiz",
+      "title": "Conjugation Challenge",
+      "description": "Elige la forma correcta del verbo.",
+      "xp_reward": 100,
+      "questions": [
+        {
+          "id": "conj_0",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
+          ],
+          "question": "Completa la rutina: 'My dad ___ breakfast every day.'",
+          "options": [
+            "have",
+            "haveing",
+            "haves",
+            "has"
+          ],
+          "correct_answer": "has",
+          "explanation": "Sujeto 'My dad' es 3ra persona, requiere S/ES."
+        },
+        {
+          "id": "conj_1",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
+          ],
+          "question": "Completa la rutina: 'You ___ breakfast every day.'",
+          "options": [
+            "haveing",
+            "has",
+            "to have",
+            "have"
+          ],
+          "correct_answer": "have",
+          "explanation": "Sujeto 'You' no es 3ra persona, usa verbo base."
+        },
+        {
+          "id": "conj_2",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
+          ],
+          "question": "Completa la rutina: 'She ___ breakfast every day.'",
+          "options": [
+            "haves",
+            "have",
+            "has",
+            "haveing"
+          ],
+          "correct_answer": "has",
+          "explanation": "Sujeto 'She' es 3ra persona, requiere S/ES."
+        },
+        {
+          "id": "conj_3",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
+          ],
+          "question": "Completa la rutina: 'We ___ English every day.'",
+          "options": [
+            "study",
+            "studies",
+            "to study",
+            "studying"
+          ],
+          "correct_answer": "study",
+          "explanation": "Sujeto 'We' no es 3ra persona, usa verbo base."
+        },
+        {
+          "id": "conj_4",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
+          ],
+          "question": "Completa la rutina: 'I ___ to work every day.'",
+          "options": [
+            "to go",
+            "going",
+            "goes",
+            "go"
+          ],
+          "correct_answer": "go",
+          "explanation": "Sujeto 'I' no es 3ra persona, usa verbo base."
+        },
+        {
+          "id": "conj_5",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
+          ],
+          "question": "Completa la rutina: 'We ___ at 7 AM every day.'",
+          "options": [
+            "wakes up",
+            "wake uping",
+            "wake up",
+            "to wake up"
+          ],
+          "correct_answer": "wake up",
+          "explanation": "Sujeto 'We' no es 3ra persona, usa verbo base."
+        },
+        {
+          "id": "conj_6",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
+          ],
+          "question": "Completa la rutina: 'He ___ English every day.'",
+          "options": [
+            "studying",
+            "studies",
+            "study",
+            "to study"
+          ],
+          "correct_answer": "studies",
+          "explanation": "Sujeto 'He' es 3ra persona, requiere S/ES."
+        },
+        {
+          "id": "conj_7",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
+          ],
+          "question": "Completa la rutina: 'She ___ to work every day.'",
+          "options": [
+            "going",
+            "gos",
+            "goes",
+            "go"
+          ],
+          "correct_answer": "goes",
+          "explanation": "Sujeto 'She' es 3ra persona, requiere S/ES."
+        }
+      ]
+    },
+    {
+      "id": "stage_negation",
+      "type": "gamified_quiz",
+      "title": "The Power of NO",
+      "description": "Transforma oraciones a negativo correctamente.",
+      "xp_reward": 150,
+      "questions": [
+        {
+          "id": "neg_0",
+          "type": "quiz_choice",
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
+          ],
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'They go to work.'",
+          "options": [
+            "They don't go to work.",
+            "They not go to work.",
+            "They don't go to work.",
+            "They no go to work."
+          ],
+          "correct_answer": "They don't go to work.",
+          "explanation": "Usamos 'don't' y el verbo vuelve a su forma BASE (sin S)."
+        },
+        {
+          "id": "neg_1",
+          "type": "quiz_choice",
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
+          ],
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'We brush my teeth.'",
+          "options": [
+            "We don't brush my teeth.",
+            "We don't brush my teeth.",
+            "We no brush my teeth.",
+            "We not brush my teeth."
+          ],
+          "correct_answer": "We don't brush my teeth.",
+          "explanation": "Usamos 'don't' y el verbo vuelve a su forma BASE (sin S)."
+        },
+        {
+          "id": "neg_2",
+          "type": "quiz_choice",
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
+          ],
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'She has breakfast.'",
+          "options": [
+            "She doesn't have breakfast.",
+            "She doesn't has breakfast.",
+            "She no have breakfast.",
+            "She not has breakfast."
+          ],
+          "correct_answer": "She doesn't have breakfast.",
+          "explanation": "Usamos 'doesn't' y el verbo vuelve a su forma BASE (sin S)."
+        },
+        {
+          "id": "neg_3",
+          "type": "quiz_choice",
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
+          ],
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'My dad has breakfast.'",
+          "options": [
+            "My dad doesn't has breakfast.",
+            "My dad not has breakfast.",
+            "My dad no have breakfast.",
+            "My dad doesn't have breakfast."
+          ],
+          "correct_answer": "My dad doesn't have breakfast.",
+          "explanation": "Usamos 'doesn't' y el verbo vuelve a su forma BASE (sin S)."
+        },
+        {
+          "id": "neg_4",
+          "type": "quiz_choice",
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
+          ],
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'My dad does exercise.'",
+          "options": [
+            "My dad doesn't does exercise.",
+            "My dad not does exercise.",
+            "My dad doesn't do exercise.",
+            "My dad no do exercise."
+          ],
+          "correct_answer": "My dad doesn't do exercise.",
+          "explanation": "Usamos 'doesn't' y el verbo vuelve a su forma BASE (sin S)."
+        },
+        {
+          "id": "neg_5",
+          "type": "quiz_choice",
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
+          ],
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'We do exercise.'",
+          "options": [
+            "We don't do exercise.",
+            "We not do exercise.",
+            "We no do exercise.",
+            "We don't do exercise."
+          ],
+          "correct_answer": "We don't do exercise.",
+          "explanation": "Usamos 'don't' y el verbo vuelve a su forma BASE (sin S)."
+        },
+        {
+          "id": "neg_6",
+          "type": "quiz_choice",
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
+          ],
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'We do exercise.'",
+          "options": [
+            "We don't do exercise.",
+            "We no do exercise.",
+            "We don't do exercise.",
+            "We not do exercise."
+          ],
+          "correct_answer": "We don't do exercise.",
+          "explanation": "Usamos 'don't' y el verbo vuelve a su forma BASE (sin S)."
+        },
+        {
+          "id": "neg_7",
+          "type": "quiz_choice",
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
+          ],
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'She brushes my teeth.'",
+          "options": [
+            "She not brushes my teeth.",
+            "She doesn't brush my teeth.",
+            "She doesn't brushes my teeth.",
+            "She no brush my teeth."
+          ],
+          "correct_answer": "She doesn't brush my teeth.",
+          "explanation": "Usamos 'doesn't' y el verbo vuelve a su forma BASE (sin S)."
+        }
+      ]
+    },
+    {
+      "id": "stage_order",
+      "type": "gamified_quiz",
+      "title": "Frequency Architect",
+      "description": "Ordena las palabras en la posición correcta.",
+      "xp_reward": 150,
+      "questions": [
+        {
+          "id": "ord_0",
+          "type": "order_sentence",
+          "difficulty": "hard",
+          "tags": [
+            "syntax",
+            "adverbs"
+          ],
+          "question": "Ordena la frase (80% frequency):",
+          "parts": [
+            "go",
+            "to work",
+            "They",
+            "usually"
+          ],
+          "correct_order": [
+            "They",
+            "usually",
+            "go",
+            "to work"
+          ],
+          "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
+        },
+        {
+          "id": "ord_1",
+          "type": "order_sentence",
+          "difficulty": "hard",
+          "tags": [
+            "syntax",
+            "adverbs"
+          ],
+          "question": "Ordena la frase (50% frequency):",
+          "parts": [
+            "sometimes",
+            "He",
+            "does",
+            "exercise"
+          ],
+          "correct_order": [
+            "He",
+            "sometimes",
+            "does",
+            "exercise"
+          ],
+          "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
+        },
+        {
+          "id": "ord_2",
+          "type": "order_sentence",
+          "difficulty": "hard",
+          "tags": [
+            "syntax",
+            "adverbs"
+          ],
+          "question": "Ordena la frase (0% frequency):",
+          "parts": [
+            "never",
+            "English",
+            "study",
+            "You"
+          ],
+          "correct_order": [
+            "You",
+            "never",
+            "study",
+            "English"
+          ],
+          "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
+        },
+        {
+          "id": "ord_3",
+          "type": "order_sentence",
+          "difficulty": "hard",
+          "tags": [
+            "syntax",
+            "adverbs"
+          ],
+          "question": "Ordena la frase (80% frequency):",
+          "parts": [
+            "usually",
+            "They",
+            "brush",
+            "my teeth"
+          ],
+          "correct_order": [
+            "They",
+            "usually",
+            "brush",
+            "my teeth"
+          ],
+          "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
+        },
+        {
+          "id": "ord_4",
+          "type": "order_sentence",
+          "difficulty": "hard",
+          "tags": [
+            "syntax",
+            "adverbs"
+          ],
+          "question": "Ordena la frase (0% frequency):",
+          "parts": [
+            "to work",
+            "We",
+            "never",
+            "go"
+          ],
+          "correct_order": [
+            "We",
+            "never",
+            "go",
+            "to work"
+          ],
+          "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
+        },
+        {
+          "id": "ord_5",
+          "type": "order_sentence",
+          "difficulty": "hard",
+          "tags": [
+            "syntax",
+            "adverbs"
+          ],
+          "question": "Ordena la frase (80% frequency):",
+          "parts": [
+            "usually",
+            "watches",
+            "He",
+            "TV"
+          ],
+          "correct_order": [
+            "He",
+            "usually",
+            "watches",
+            "TV"
+          ],
+          "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
+        }
+      ]
+    },
+    {
+      "id": "stage_prep",
+      "type": "gamified_quiz",
+      "title": "Time Lords",
+      "description": "Escribe AT, IN u ON.",
+      "xp_reward": 150,
+      "questions": [
+        {
+          "id": "prep_0",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
+          ],
+          "question": "Escribe la preposición correcta (at/in/on): 'She sleeps ___ the weekend.'",
+          "correct_answers": [
+            "at"
+          ],
+          "hint": "Usamos esta preposición para 'the weekend'.",
+          "explanation": "Regla: AT se usa con 'the weekend'."
+        },
+        {
+          "id": "prep_1",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
+          ],
+          "question": "Escribe la preposición correcta (at/in/on): 'They sleeps ___ Mondays.'",
+          "correct_answers": [
+            "on"
+          ],
+          "hint": "Usamos esta preposición para 'Mondays'.",
+          "explanation": "Regla: ON se usa con 'Mondays'."
+        },
+        {
+          "id": "prep_2",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
+          ],
+          "question": "Escribe la preposición correcta (at/in/on): 'They sleeps ___ the afternoon.'",
+          "correct_answers": [
+            "in"
+          ],
+          "hint": "Usamos esta preposición para 'the afternoon'.",
+          "explanation": "Regla: IN se usa con 'the afternoon'."
+        },
+        {
+          "id": "prep_3",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
+          ],
+          "question": "Escribe la preposición correcta (at/in/on): 'You sleeps ___ midnight.'",
+          "correct_answers": [
+            "at"
+          ],
+          "hint": "Usamos esta preposición para 'midnight'.",
+          "explanation": "Regla: AT se usa con 'midnight'."
+        },
+        {
+          "id": "prep_4",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
+          ],
+          "question": "Escribe la preposición correcta (at/in/on): 'They sleeps ___ midnight.'",
+          "correct_answers": [
+            "at"
+          ],
+          "hint": "Usamos esta preposición para 'midnight'.",
+          "explanation": "Regla: AT se usa con 'midnight'."
+        },
+        {
+          "id": "prep_5",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
+          ],
+          "question": "Escribe la preposición correcta (at/in/on): 'You sleeps ___ 7:00 PM.'",
+          "correct_answers": [
+            "at"
+          ],
+          "hint": "Usamos esta preposición para '7:00 PM'.",
+          "explanation": "Regla: AT se usa con '7:00 PM'."
+        },
+        {
+          "id": "prep_6",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
+          ],
+          "question": "Escribe la preposición correcta (at/in/on): 'I sleeps ___ the weekend.'",
+          "correct_answers": [
+            "at"
+          ],
+          "hint": "Usamos esta preposición para 'the weekend'.",
+          "explanation": "Regla: AT se usa con 'the weekend'."
+        },
+        {
+          "id": "prep_7",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
+          ],
+          "question": "Escribe la preposición correcta (at/in/on): 'She sleeps ___ the morning.'",
+          "correct_answers": [
+            "in"
+          ],
+          "hint": "Usamos esta preposición para 'the morning'.",
+          "explanation": "Regla: IN se usa con 'the morning'."
+        }
+      ]
+    },
+    {
+      "id": "stage_boss",
+      "type": "practice_chat",
+      "title": "The Interview",
+      "scenario": "Estás en una entrevista de trabajo. El reclutador quiere saber si eres organizado.",
+      "ai_system_prompt": "ROLE: Strict HR Manager. GOAL: Ask 'What time do you wake up?' and 'Do you work on weekends?'. Verify Prepositions and Present Simple.",
+      "initial_message": "Have a seat. I need productive people. Tell me, what time do you usually wake up?",
+      "success_criteria": [
+        "uses_at_time",
+        "uses_present_simple"
+      ]
+    }
+  ]
+}

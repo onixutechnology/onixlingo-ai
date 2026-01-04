@@ -1,3 +1,4 @@
+# backend/app/database.py
 import os
 from datetime import datetime
 from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, DateTime, Boolean, func
@@ -11,7 +12,7 @@ if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
     # Fix para compatibilidad con SQLAlchemy recientes en Heroku/Render
     DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
-# Configuración por defecto (SQLite para desarrollo local rápido)
+# Configuración por defecto (SQLite para desarrollo local rápido si no hay .env)
 if not DATABASE_URL:
     DATABASE_URL = "sqlite:///./onixlingo.db"
     connect_args = {"check_same_thread": False} 
@@ -34,13 +35,13 @@ class User(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True, nullable=False)
-    email = Column(String, unique=True, index=True, nullable=True) # Nuevo: Identidad real
+    email = Column(String, unique=True, index=True, nullable=True)
     hashed_password = Column(String, nullable=False)
     
     # Metadatos de Cuenta Corporativa
-    is_active = Column(Boolean, default=True) # Para desactivar usuarios sin borrar
+    is_active = Column(Boolean, default=True)
     role = Column(String, default="student")  # 'student', 'admin', 'teacher'
-    created_at = Column(DateTime(timezone=True), server_default=func.now()) # Auditoría de registro
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     # Relaciones
     progress = relationship("Progress", back_populates="owner", cascade="all, delete-orphan")
@@ -53,20 +54,25 @@ class Progress(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
-    lesson_id = Column(String, index=True, nullable=False)
+    lesson_id = Column(String, index=True, nullable=False) # Ej: 'pro-b1-1'
     
-    # Métricas de Rendimiento
+    # --- MÉTRICAS PRO ---
     stars = Column(Integer, default=0) # Gamificación (0-3)
     score = Column(Integer, default=0) # Precisión académica (0-100)
     
-    # Auditoría Temporal (CRÍTICO PARA RACHAS/STREAKS)
+    # Nuevos campos para Dashboard Titanium
+    current_step = Column(Integer, default=0) # Dónde se quedó (ej: Slide 5)
+    total_steps = Column(Integer, default=1)  # Total de slides (ej: 20)
+    status = Column(String, default="locked") # 'locked', 'active', 'completed'
+    
+    # Auditoría Temporal
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 
     # Relaciones
     owner = relationship("User", back_populates="progress")
 
     def __repr__(self):
-        return f"<Progress(user={self.user_id}, lesson='{self.lesson_id}', stars={self.stars})>"
+        return f"<Progress(user={self.user_id}, lesson='{self.lesson_id}', step={self.current_step})>"
 
 # 5. FUNCIONES UTILITARIAS DE GESTIÓN
 
