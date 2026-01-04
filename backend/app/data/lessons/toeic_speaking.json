@@ -1,0 +1,88 @@
+{
+  "id": "toeic-speaking-1",
+  "title": "TOEIC Speaking: Official Simulation",
+  "level": "C1",
+  "description": "Examen completo de expresión oral (20 min).",
+  "stages": [
+    {
+      "type": "lecture",
+      "title": "Speaking Test Instructions",
+      "parts": [
+        {
+          "visual": "## Speaking Test Instructions 📢\n\nIn this section, you will answer 11 questions. For some questions you will have time to prepare. Speak clearly and answer fully.",
+          "audio": "In this section, you will answer 11 questions. For some questions you will have time to prepare. Speak clearly and answer fully.",
+          "animation": "serious"
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "title": "Questions 1-2: Read Aloud",
+      "parts": [
+        {
+          "visual": "## Questions 1-2: Read Aloud 📢\n\nYou will see a text on the screen. You have 45 seconds to prepare. Then you will have 45 seconds to read the text aloud.",
+          "audio": "You will see a text on the screen. You have 45 seconds to prepare. Then you will have 45 seconds to read the text aloud.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "type": "pronunciation_drill",
+      "title": "Task 1: Read a Text Aloud",
+      "content": "Preparation: 45 seconds | Response: 45 seconds",
+      "sentences": [
+        "Traffic update: There is heavy congestion on Highway 95 due to construction work. Commuters are advised to seek alternate routes to avoid significant delays this morning."
+      ],
+      "ai_system_prompt": "You are a TOEIC examiner. Rate the user's pronunciation, intonation, and stress."
+    },
+    {
+      "type": "pronunciation_drill",
+      "title": "Task 2: Read a Text Aloud",
+      "content": "Preparation: 45 seconds | Response: 45 seconds",
+      "sentences": [
+        "Traffic update: There is heavy congestion on Highway 95 due to construction work. Commuters are advised to seek alternate routes to avoid significant delays this morning."
+      ],
+      "ai_system_prompt": "You are a TOEIC examiner. Rate the user's pronunciation, intonation, and stress."
+    },
+    {
+      "type": "lecture",
+      "title": "Question 3: Describe a Picture",
+      "parts": [
+        {
+          "visual": "## Question 3: Describe a Picture 📢\n\nYou will see a picture. Describe it in as much detail as possible. Focus on Who, What, and Where.",
+          "audio": "You will see a picture. Describe it in as much detail as possible. Focus on Who, What, and Where.",
+          "animation": "analyzing"
+        }
+      ]
+    },
+    {
+      "type": "practice_chat",
+      "scenario": "TASK 3: DESCRIBE THE PICTURE\n\nContext: A busy airport terminal with passengers checking in at the counter.",
+      "ai_system_prompt": "User is describing a picture. Evaluate usage of prepositions and present continuous tense.",
+      "input_mode": "voice"
+    },
+    {
+      "type": "lecture",
+      "title": "Questions 4-6: Interview",
+      "parts": [
+        {
+          "visual": "## Questions 4-6: Interview 📢\n\nImagine that a marketing firm is doing research in your area. You agreed to participate in a telephone interview.",
+          "audio": "Imagine that a marketing firm is doing research in your area. You agreed to participate in a telephone interview.",
+          "animation": "talking"
+        }
+      ]
+    },
+    {
+      "type": "practice_chat",
+      "scenario": "TASK 4: RESPOND TO QUESTIONS\n\nQuestion: What do you consider your greatest professional strength?\n(Provide a specific example from your past experience.)",
+      "ai_system_prompt": "You are an interviewer. Evaluate the candidate's response for coherence, vocabulary and fluency.",
+      "input_mode": "voice"
+    },
+    {
+      "type": "practice_chat",
+      "scenario": "TASK 5: RESPOND TO QUESTIONS\n\nQuestion: Where do you see yourself in five years?\n(Imagine you are in a job interview for a Manager position.)",
+      "ai_system_prompt": "You are an interviewer. Evaluate the candidate's response for coherence, vocabulary and fluency.",
+      "input_mode": "voice"
+    }
+  ]
+}

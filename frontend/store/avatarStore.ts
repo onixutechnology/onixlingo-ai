@@ -1,45 +1,48 @@
 import { create } from 'zustand';
 
-// Definimos los tipos de datos que manejará nuestra tienda
-type AvatarState = {
-  // Estado del Robot
-  gesture: 'idle' | 'nod' | 'shake' | 'happy' | 'thinking';
-  isSpeaking: boolean;
-  
-  // Estado del Juego (Gamificación)
-  xp: number;
-  level: number;
-  streak: number;
+// Tipos sincronizados con la IA
+export type AvatarGesture = 
+  | 'idle' 
+  | 'talking' 
+  | 'listening' 
+  | 'thinking' 
+  | 'happy' 
+  | 'sad' 
+  | 'surprise' 
+  | 'explaining' 
+  | 'confused';
 
-  // Acciones (Funciones para cambiar el estado)
-  setGesture: (gesture: AvatarState['gesture']) => void;
+type AvatarState = {
+  // Estado Visual Puro
+  gesture: AvatarGesture;
+  isSpeaking: boolean;
+  isListening: boolean; // Nuevo: Para reaccionar al micrófono del usuario
+
+  // Acciones
+  setGesture: (gesture: AvatarGesture) => void;
   setSpeaking: (speaking: boolean) => void;
-  
-  // ESTA ES LA FUNCIÓN QUE FALTABA
-  addXp: (amount: number) => void;
+  setListening: (listening: boolean) => void;
+  resetAvatar: () => void;
 };
 
 export const useAvatarStore = create<AvatarState>((set) => ({
-  // Valores iniciales
   gesture: 'idle',
   isSpeaking: false,
-  xp: 0,
-  level: 1,
-  streak: 1, // Racha inicial de 1 día
+  isListening: false,
 
-  // Funciones
   setGesture: (gesture) => set({ gesture }),
-  setSpeaking: (isSpeaking) => set({ isSpeaking }),
-
-  // Lógica para subir de nivel
-  addXp: (amount) => set((state) => {
-    const newXp = state.xp + amount;
-    // Fórmula simple: Cada 100 puntos subes de nivel
-    const newLevel = Math.floor(newXp / 100) + 1;
-    
-    return { 
-      xp: newXp, 
-      level: newLevel 
-    };
+  
+  setSpeaking: (isSpeaking) => set({ 
+    isSpeaking, 
+    // Si habla, forzamos gesto de hablar. Si calla, volvemos a idle.
+    gesture: isSpeaking ? 'talking' : 'idle' 
   }),
+
+  setListening: (isListening) => set({ 
+    isListening,
+    // Si escucha, gesto de atención.
+    gesture: isListening ? 'listening' : 'idle'
+  }),
+
+  resetAvatar: () => set({ gesture: 'idle', isSpeaking: false, isListening: false }),
 }));

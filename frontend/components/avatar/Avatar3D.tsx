@@ -1,105 +1,130 @@
 'use client';
 
-import React, { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { useGLTF, Environment, OrbitControls, ContactShadows } from '@react-three/drei';
+import React, { useRef, useMemo } from 'react';
+import { Canvas, useFrame, useGraph } from '@react-three/fiber';
+import { useGLTF, Environment, ContactShadows, OrbitControls } from '@react-three/drei';
 import { useAvatarStore } from '@/store/avatarStore';
 import * as THREE from 'three';
+import { MathUtils } from 'three';
 
-// --- FUNCIÓN DE MOVIMIENTO ORGÁNICO ---
-const noise = (t: number, speed: number, amplitude: number, offset: number = 0) => {
-  return (Math.sin(t * speed + offset) + Math.cos(t * speed * 0.7 + offset)) * amplitude;
-};
-
+// --- LÓGICA DE ANIMACIÓN (Huesos y Gestos) ---
 function HumanModel() {
-  const { isSpeaking, gesture } = useAvatarStore();
-  const { scene } = useGLTF('/models/avatar.glb'); 
-  const modelRef = useRef<THREE.Group>(null);
-  const lerpSpeed = useRef(0.05);
+  const { isSpeaking, isListening, gesture } = useAvatarStore();
+  const { scene } = useGLTF('/models/avatar.glb');
+  const { nodes } = useGraph(scene);
 
-  useFrame((state) => {
-    if (!modelRef.current) return;
+  // Mapeo de huesos
+  const bones = useMemo(() => {
+    const findBone = (names: string[]) => {
+      for (const name of names) {
+        const found = Object.values(nodes).find(n => n.name.toLowerCase().includes(name.toLowerCase()) && n.type === 'Bone');
+        if (found) return found as THREE.Bone;
+      }
+      return null;
+    };
+    return {
+      head: findBone(['Head', 'mixamorigHead', 'def_head']),
+      neck: findBone(['Neck', 'mixamorigNeck', 'def_neck']),
+      spine: findBone(['Spine', 'Spine1', 'mixamorigSpine', 'def_spine']),
+      jaw: findBone(['Jaw', 'Teeth', 'Mouth']),
+    };
+  }, [nodes]);
+
+  const currentLook = useRef(new THREE.Vector2(0, 0));
+  const jawOpen = useRef(0);
+
+  useFrame((state, delta) => {
     const t = state.clock.getElapsedTime();
 
-    // 1. IDLE: Respiración y balanceo sutil
-    let targetY = -1.8 + noise(t, 1.5, 0.003); 
-    let targetRotX = noise(t, 0.5, 0.01, 1);
-    let targetRotY = noise(t, 0.3, 0.015, 2); 
-    let targetRotZ = noise(t, 0.4, 0.005, 3);
-    lerpSpeed.current = 0.06;
+    // 1. MIRADA (Head Tracking)
+    let targetLookX = 0;
+    let targetLookY = 0;
 
-    // 2. HABLANDO: Movimiento más activo
+    if (gesture === 'idle' || gesture === 'listening' || isListening) {
+      targetLookX = state.mouse.x * 0.3; // Movimiento más sutil
+      targetLookY = state.mouse.y * 0.2;
+    } else if (gesture === 'thinking') {
+      targetLookX = -0.3; targetLookY = 0.3;
+    }
+
+    // Suavizado (Damping)
+    currentLook.current.x = MathUtils.damp(currentLook.current.x, targetLookX, 2, delta);
+    currentLook.current.y = MathUtils.damp(currentLook.current.y, targetLookY, 2, delta);
+
+    if (bones.neck && bones.head) {
+      // Distribuir rotación entre cuello y cabeza para naturalidad
+      bones.neck.rotation.y = MathUtils.damp(bones.neck.rotation.y, currentLook.current.x * 0.5, 3, delta);
+      bones.neck.rotation.x = MathUtils.damp(bones.neck.rotation.x, -currentLook.current.y * 0.3, 3, delta);
+      bones.head.rotation.y = MathUtils.damp(bones.head.rotation.y, currentLook.current.x * 0.3, 3, delta);
+      bones.head.rotation.x = MathUtils.damp(bones.head.rotation.x, -currentLook.current.y * 0.2, 3, delta);
+    }
+
+    // 2. RESPIRACIÓN
+    if (bones.spine) {
+      bones.spine.rotation.x = Math.sin(t * 0.7) * 0.02;
+    }
+
+    // 3. MOVIMIENTO DE BOCA (Lip Sync Simulado)
+    let targetJaw = 0;
     if (isSpeaking) {
-       targetY += Math.sin(t * 18) * 0.005; 
-       targetRotX += Math.sin(t * 10) * 0.02; 
-       targetRotY += Math.sin(t * 5) * 0.03; 
-       lerpSpeed.current = 0.1; 
+      targetJaw = ((Math.sin(t * 20) + 1) / 2) * 0.15;
     }
+    jawOpen.current = MathUtils.damp(jawOpen.current, targetJaw, 15, delta);
 
-    // 3. GESTOS: Reacciones rápidas
-    if (gesture) {
-        lerpSpeed.current = 0.15;
-        if (gesture === 'happy') {
-            targetY += Math.abs(Math.sin(t * 6)) * 0.04 + 0.02; 
-            targetRotX -= 0.08; 
-        } else if (gesture === 'nod') {
-            targetRotX += Math.sin(t * 12) * 0.15;
-        } else if (gesture === 'thinking') {
-            targetRotZ = 0.08;
-            targetRotX = -0.05;
-            targetRotY = 0.12;
-        } else if (gesture === 'sad') {
-            targetRotX = 0.20;
-            targetY -= 0.04;
-        }
-    } else if (!isSpeaking) {
-        // Reset suave
-        targetRotX *= 0.8; targetRotY *= 0.8; targetRotZ *= 0.8;
+    if (bones.jaw) {
+      bones.jaw.rotation.x = jawOpen.current;
+    } else if (isSpeaking && bones.head) {
+      bones.head.rotation.x += Math.sin(t * 18) * 0.015;
     }
-
-    // Aplicar movimiento suave
-    modelRef.current.position.y = THREE.MathUtils.lerp(modelRef.current.position.y, targetY, lerpSpeed.current);
-    modelRef.current.rotation.x = THREE.MathUtils.lerp(modelRef.current.rotation.x, targetRotX, lerpSpeed.current);
-    modelRef.current.rotation.y = THREE.MathUtils.lerp(modelRef.current.rotation.y, targetRotY, lerpSpeed.current);
-    modelRef.current.rotation.z = THREE.MathUtils.lerp(modelRef.current.rotation.z, targetRotZ, lerpSpeed.current);
   });
 
-  // ESCALA: 1.8 (Tamaño ideal)
-  // POSICIÓN: -1.8 (Pies abajo)
-  return <primitive ref={modelRef} object={scene} scale={1.8} position={[0, -1.8, 0]} />;
+  // --- POSICIÓN CORRECTIVA ---
+  // Scale 1.5: Tamaño estándar.
+  // Y = -2.2: Bajamos mucho el modelo. Como la cámara está lejos, esto centra la parte superior del cuerpo.
+  return <primitive object={scene} scale={1.5} position={[0, -2.2, 0]} />;
 }
 
-export default function Avatar3D() {
+// --- ESCENA OPTIMIZADA (SIN ERRORES DE SHADER) ---
+export default function Avatar3D({ className }: { className?: string }) {
   return (
-    <div className="w-full h-full relative bg-transparent">
+    <div className={`relative w-full h-full ${className} min-h-[350px]`}>
       <Canvas
-        shadows
-        // --- AJUSTE DE CÁMARA PARA PLANO MEDIO ---
-        // Y=0.7: Altura del pecho (centro de gravedad visual)
-        // Z=4.2: Distancia perfecta para ver cabeza + torso + manos
-        camera={{ position: [0, 0.7, 4.2], fov: 30 }}
+        // Quitamos 'shadows' global pesado para evitar el error de compilación de shader
+        // Usaremos ContactShadows que es más barato y estable.
+        
+        // --- CÁMARA DE RETRATO LEJANA ---
+        // Z=8.0: Muy alejada para que entre todo el torso y cabeza sin cortes.
+        // Y=0.2: Altura de los ojos.
+        // FOV=20: Lente muy cerrado (Teleobjetivo) para aplanar la imagen y que se vea profesional.
+        camera={{ position: [0, 0.2, 8.0], fov: 20 }} 
+        dpr={[1, 1.5]} // Limitamos la resolución de píxeles para rendimiento
       >
-        <ambientLight intensity={1.1} />
-        <directionalLight position={[2, 2, 5]} intensity={1.4} color="#fff5eb" castShadow />
-        <spotLight position={[-3, 4, -2]} intensity={1.8} color="#e0f2fe" angle={0.5} /> 
-        <pointLight position={[0, -1, 2]} intensity={0.6} color="#ffedd5" />
+        {/* ILUMINACIÓN BÁSICA (Eficiente) */}
+        <ambientLight intensity={0.7} />
+        
+        {/* Luz Principal (Sin sombras pesadas para evitar el error) */}
+        <directionalLight position={[5, 5, 5]} intensity={1.2} color="#fff0e6" />
+        
+        {/* Luz de Relleno (Azulada) */}
+        <directionalLight position={[-5, 5, 5]} intensity={0.8} color="#dbeafe" />
+        
+        {/* Luz Trasera (Rim Light - Efecto Cine) */}
+        <spotLight position={[0, 5, -5]} intensity={2} color="#ffffff" angle={0.5} />
 
+        {/* Entorno HDRI (Pre-baked lighting) */}
         <Environment preset="city" />
 
         <HumanModel />
-        
-        <ContactShadows opacity={0.35} scale={10} blur={3} far={4} color="#000000" />
+
+        {/* Sombra falsa en el piso (Muy barata para la GPU) */}
+        <ContactShadows resolution={256} scale={10} blur={2} opacity={0.3} far={10} color="#000000" />
 
         <OrbitControls 
-            // --- TARGET AL PECHO ---
-            // Apuntamos al centro del pecho (Y=0.7) para centrarlo verticalmente
-            target={[0, 0.7, 0]} 
-            enableZoom={false} 
-            enablePan={false} 
-            minPolarAngle={Math.PI / 2.1} 
-            maxPolarAngle={Math.PI / 1.9}
-            minAzimuthAngle={-Math.PI / 8}
-            maxAzimuthAngle={Math.PI / 8}
+          target={[0, 0.1, 0]} // Apunta a la cara
+          enableZoom={false} 
+          enablePan={false}
+          minPolarAngle={Math.PI / 2.2}
+          maxPolarAngle={Math.PI / 1.8}
         />
       </Canvas>
     </div>

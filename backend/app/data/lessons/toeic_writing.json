@@ -1,0 +1,42 @@
+{
+  "id": "toeic-writing-1",
+  "title": "TOEIC Writing: Emails & Essays",
+  "level": "C1",
+  "description": "Redacción profesional de negocios.",
+  "stages": [
+    {
+      "type": "lecture",
+      "title": "Email Etiquette",
+      "parts": [
+        {
+          "visual": "## The Sandwich Method 🥪\n\n1. **Greeting & Purpose** (Positive)\n2. **The Issue/Request** (Meat)\n3. **Closing & Call to Action** (Positive)",
+          "audio": "When writing business emails, structure is key. Start positive, state your business clearly, and end with a polite closing like 'Sincerely' or 'Best regards'.",
+          "animation": "talking"
+        }
+      ]
+    },
+    {
+      "type": "practice_chat",
+      "scenario": "Business Email Response",
+      "question": "TASK: Write an email to your manager asking for two days of leave next month for a family wedding.",
+      "ai_system_prompt": "ROLE: TOEIC Grader. GOAL: Evaluate the user's email for tone, grammar, and clarity. Give a score out of 10."
+    },
+    {
+      "type": "lecture",
+      "title": "Opinion Essay",
+      "parts": [
+        {
+          "visual": "## Opinion Essay (300 words)\n\n* Introduction (Thesis)\n* Argument 1 + Example\n* Argument 2 + Example\n* Conclusion",
+          "audio": "For the final essay, you have 30 minutes. Pick a side immediately. Do not be neutral. Support your opinion with specific examples.",
+          "animation": "serious"
+        }
+      ]
+    },
+    {
+      "type": "practice_chat",
+      "scenario": "Opinion Essay",
+      "question": "TOPIC: Describe a significant challenge you faced at work and how you overcame it.",
+      "ai_system_prompt": "ROLE: TOEIC Essay Grader. GOAL: Assess structure, vocabulary, and grammar. Provide constructive feedback."
+    }
+  ]
+}

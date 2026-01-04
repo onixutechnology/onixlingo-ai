@@ -1,145 +1,124 @@
 import google.generativeai as genai
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from app.core.settings import settings
 import json
-import re
+import logging
 from typing import Dict, Any, Optional
+
+# Configuración de Logging
+logger = logging.getLogger("OnixLingo.GeminiService")
 
 class GeminiService:
     def __init__(self):
+        # 1. Configuración Global
+        if not settings.GEMINI_API_KEY:
+            logger.critical("❌ FALTA GEMINI_API_KEY. La IA no funcionará.")
+        
         genai.configure(api_key=settings.GEMINI_API_KEY)
         
-        # Usamos el modelo especificado.
-        # Nota: Si en el futuro necesitas cambiar, 'gemini-1.5-flash' es la alternativa
-        # estándar con alto rate limit (15 RPM / 1,500 RPD).
-        self.model = genai.GenerativeModel(
-            model_name='gemma-3-27b-it' 
-        )
+        # 2. Configuración de Seguridad (Permisiva para contexto educativo)
+        # Evita que bloquee discusiones inocuas sobre cultura o errores gramaticales.
+        self.safety_settings = {
+            HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+            HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+            HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+            HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+        }
 
-    async def _clean_and_parse_json(self, raw_text: str) -> Dict[str, Any]:
+        # 3. Configuración de Generación (JSON MODE ACTIVO)
+        # Esto es clave: Forzamos a la API a devolver siempre JSON.
+        self.generation_config = {
+            "temperature": 0.7, # Creativo pero controlado
+            "top_p": 0.95,
+            "top_k": 64,
+            "max_output_tokens": 1024,
+            "response_mime_type": "application/json", # <--- LA MAGIA ENTERPRISE
+        }
+        
+        # Modelo base (Usamos Flash por velocidad y bajo costo)
+        self.model_name = 'gemini-1.5-flash' 
+
+    async def get_chat_response(self, message: str, context_instruction: str) -> Dict[str, Any]:
         """
-        Método auxiliar para limpiar la respuesta de la IA y extraer JSON puro.
-        Maneja bloques de markdown y texto extra.
+        Genera una respuesta de chat actuando bajo un rol específico.
         """
         try:
-            # 1. Debug log
-            print(f"\n🤖 RAW AI RESPONSE:\n{raw_text[:200]}...\n") # Solo imprimimos el inicio para no ensuciar
+            # 1. Instanciación Dinámica del Modelo
+            # Creamos el modelo "on the fly" para inyectarle la personalidad (System Instruction)
+            # específica de ESTA lección (ej: Examinador TOEIC vs Tutor Amable).
+            model = genai.GenerativeModel(
+                model_name=self.model_name,
+                system_instruction=context_instruction, # Inyección directa al sistema
+                generation_config=self.generation_config,
+                safety_settings=self.safety_settings
+            )
 
-            # 2. Regex para encontrar el primer objeto JSON válido { ... }
-            # re.DOTALL permite que el punto (.) coincida con saltos de línea
-            json_match = re.search(r'\{.*\}', raw_text, re.DOTALL)
-            
-            if json_match:
-                clean_json_str = json_match.group(0)
-                return json.loads(clean_json_str)
-            else:
-                raise ValueError("No JSON found in response")
-                
-        except json.JSONDecodeError as e:
-            print(f"❌ JSON PARSE ERROR: {e}")
-            return None
-        except Exception as e:
-            print(f"❌ GENERAL ERROR: {e}")
-            return None
-
-    # --- 1. CHAT CONTEXTUAL (Para el Avatar) ---
-    async def get_chat_response(self, message: str, context_instruction: str = "") -> Dict[str, Any]:
-        try:
-            # Si viene contexto del JSON de la lección (ej: "Eres un mesero..."), lo inyectamos.
-            system_role = context_instruction if context_instruction else "You are a helpful Language Tutor."
-
+            # 2. Generación de Contenido
+            # Nota: Al usar response_mime_type="application/json", no necesitamos pedirle JSON en el prompt,
+            # pero ayuda reforzar la estructura de campos que queremos.
             prompt = f"""
-            ROLE: {system_role}
-            USER MESSAGE: "{message}"
-
-            TASK:
-            1. Respond naturally to the user in the target language.
-            2. If the user makes a grammar mistake, correct it gently in the 'correction' field.
-            3. Choose an emotion/gesture.
-
-            CRITICAL: Output ONLY valid JSON.
+            User Input: "{message}"
+            
+            Based on your role, reply to the user.
+            Ensure your JSON response adheres to this schema:
             {{
-                "text": "Your spoken response...",
-                "correction": "Correction or null",
-                "gesture": "nod" | "shake" | "happy" | "thinking",
-                "emotion": "neutral" | "joy" | "surprise"
+                "text": "String. The spoken response in the target language.",
+                "correction": "String or Null. If the user made a grammar mistake, explain it here briefly.",
+                "gesture": "String. One of: [talking, listening, happy, thinking, explaining, surprise]",
+                "analysis": {{
+                    "score": Integer (0-100, optional estimation of user input quality),
+                    "grammar_check": "String (Short feedback)"
+                }}
             }}
             """
             
-            response = await self.model.generate_content_async(prompt)
-            result = await self._clean_and_parse_json(response.text)
+            response = await model.generate_content_async(prompt)
             
-            if result: return result
-            
-            # Fallback
-            raise ValueError("Empty result")
+            # 3. Parsing Directo (Sin Regex)
+            # Gracias al modo JSON, response.text SIEMPRE es un JSON válido.
+            return json.loads(response.text)
 
-        except Exception as e:
+        except json.JSONDecodeError:
+            logger.error("❌ Gemini devolvió un JSON malformado (raro en modo JSON).")
             return {
-                "text": "Sorry, I lost my train of thought. Can you say that again?",
-                "correction": None,
-                "gesture": "thinking",
-                "emotion": "neutral"
+                "text": "I encountered a system error processing your response.",
+                "gesture": "confused",
+                "analysis": None
+            }
+        except Exception as e:
+            logger.error(f"❌ Error en Gemini API: {e}")
+            return {
+                "text": "Connection to AI server interrupted.",
+                "gesture": "sad",
+                "analysis": None
             }
 
-    # --- 2. GENERADOR DE LECCIONES (Para contenido dinámico) ---
-    async def generate_structured_lesson(self, topic: str, level: str) -> Dict[str, Any]:
+    # --- GENERADORES AUXILIARES (Legacy support) ---
+    
+    async def analyze_speech(self, target: str, transcript: str) -> Dict[str, Any]:
+        """
+        Evalúa pronunciación comparando texto esperado vs transcripción.
+        """
         try:
-            prompt = f"""
-            Create a structured English lesson for a {level} student.
-            Topic: "{topic}"
-
-            Generate STRICT JSON with:
-            1. "theory_content": Markdown text explaining the grammar/topic clearly.
-            2. "quiz_questions": Array of 3 objects {{ "question", "options": [], "correct_index": int, "explanation" }}.
-            3. "avatar_scenario": A short string describing a roleplay scenario for the final practice.
-
-            JSON format only.
-            """
+            model = genai.GenerativeModel(
+                model_name=self.model_name,
+                generation_config=self.generation_config
+            )
             
-            response = await self.model.generate_content_async(prompt)
-            result = await self._clean_and_parse_json(response.text)
-            return result
-
+            prompt = f"""
+            Compare target text vs user transcript.
+            Target: "{target}"
+            User: "{transcript}"
+            
+            Output JSON:
+            {{
+                "score": Int (0-100 accuracy),
+                "feedback": "String (Specific words mispronounced)",
+                "missed_words": ["Array", "of", "words"]
+            }}
+            """
+            response = await model.generate_content_async(prompt)
+            return json.loads(response.text)
         except Exception as e:
-            print(f"Error generating lesson: {e}")
-            return None
-
-    # --- 3. ANALISTA DE ERRORES (Para el Quiz) ---
-    async def analyze_mistake(self, question: str, user_answer: str, correct_answer: str) -> Dict[str, Any]:
-        try:
-            prompt = f"""
-            The student made a mistake in a quiz.
-            Question: "{question}"
-            Correct Answer: "{correct_answer}"
-            Student's Answer: "{user_answer}"
-            
-            Task: Explain briefly WHY the student is wrong (grammar rule). Keep it short (1-2 sentences).
-            Output JSON: {{ "feedback": "Explanation here..." }}
-            """
-            
-            response = await self.model.generate_content_async(prompt)
-            return await self._clean_and_parse_json(response.text)
-            
-        except Exception:
-            return {"feedback": f"The correct answer was: {correct_answer}"}
-
-    # --- 4. ANALISTA DE PRONUNCIACIÓN (Para lectura) ---
-    async def analyze_speech(self, target_text: str, user_transcript: str) -> Dict[str, Any]:
-        try:
-            prompt = f"""
-            Compare these texts for reading accuracy.
-            Target: "{target_text}"
-            User said: "{user_transcript}"
-            
-            Task:
-            1. Score accuracy (0-100).
-            2. Identify mispronounced words.
-            
-            Output JSON: {{ "score": 85, "feedback": "Good, but watch the word 'X'." }}
-            """
-            
-            response = await self.model.generate_content_async(prompt)
-            return await self._clean_and_parse_json(response.text)
-            
-        except Exception:
-            return {"score": 0, "feedback": "Could not analyze audio."}
+            logger.error(f"Speech Analysis Error: {e}")
+            return {"score": 0, "feedback": "Error analyzing speech."}

@@ -7,14 +7,17 @@ interface LessonProgress {
 }
 
 interface ProgressState {
-  // Mapa de lecciones completadas: { 'a1-1': { stars: 3, score: 100 } }
+  // Datos Persistentes
   completedLessons: Record<string, LessonProgress>;
-  
+  totalXP: number; // Nuevo: Acumulador global
+  streak: number;  // Nuevo: Días seguidos
+  level: number;   // Nuevo: Nivel de jugador
+
   // Acciones
   loadProgressFromDB: (data: Record<string, LessonProgress>) => void;
   completeLesson: (lessonId: string, score: number, stars: number) => void;
   
-  // Getters (Selectores)
+  // Selectores
   isLessonCompleted: (lessonId: string) => boolean;
   getLessonStars: (lessonId: string) => number;
 }
@@ -23,71 +26,72 @@ export const useProgressStore = create<ProgressState>()(
   persist(
     (set, get) => ({
       completedLessons: {},
+      totalXP: 0,
+      streak: 1,
+      level: 1,
 
-      // 1. CARGA MASIVA (Se usa al hacer Login)
       loadProgressFromDB: (data) => {
-          console.log("📥 Sincronizando progreso desde Base de Datos...", data);
-          set({ completedLessons: data });
+        // Al cargar, recalculamos XP basado en las lecciones traídas
+        let calcXP = 0;
+        Object.values(data).forEach(l => calcXP += (l.stars * 20)); // 20 XP por estrella
+        
+        set({ 
+            completedLessons: data,
+            totalXP: calcXP,
+            level: Math.floor(calcXP / 500) + 1 // Nivel sube cada 500 XP
+        });
       },
 
-      // 2. COMPLETAR LECCIÓN (Lógica Híbrida)
       completeLesson: (lessonId, score, stars) => {
-        // A. Actualización Local (Zustand + LocalStorage) - Optimistic UI
         set((state) => {
           const current = state.completedLessons[lessonId];
+          const isReplay = !!current;
           
-          // Solo actualizamos si no existía o si el nuevo puntaje es mejor
-          if (!current || stars > current.stars) {
-            return {
-              completedLessons: {
-                ...state.completedLessons,
-                [lessonId]: { stars, score },
-              },
-            };
+          // Cálculo de XP ganado
+          // Si es replay, solo damos la diferencia si mejoró. Si es nueva, todo.
+          let xpGain = 0;
+          if (!isReplay) {
+              xpGain = 50 + (stars * 10); // Base 50 + Bonus Estrellas
+          } else if (stars > current.stars) {
+              xpGain = (stars - current.stars) * 10; // Solo diferencia de estrellas
           }
-          return state; 
-        });
 
-        // B. Actualización en la Nube (Backend Dinámico)
-        const currentUser = typeof window !== 'undefined' ? localStorage.getItem('currentUser') : null;
-        
-        if (currentUser) {
-            // ---------------------------------------------------------
-            // 🚀 AQUÍ ESTÁ LA MAGIA: USA LA VARIABLE DE ENTORNO
-            // ---------------------------------------------------------
-            const API_URL = process.env.NEXT_PUBLIC_API_URL;
+          const newXP = state.totalXP + xpGain;
+          const newLevel = Math.floor(newXP / 500) + 1;
 
-            if (!API_URL) {
-                console.error("❌ ERROR CRÍTICO: No se encontró NEXT_PUBLIC_API_URL. Revisa tu .env.local o Vercel.");
-                return;
+          // Actualizar estado local
+          const newState = {
+            totalXP: newXP,
+            level: newLevel,
+            completedLessons: {
+              ...state.completedLessons,
+              [lessonId]: { stars: Math.max(stars, current?.stars || 0), score: Math.max(score, current?.score || 0) }
             }
+          };
 
-            console.log(`☁️ Guardando progreso en: ${API_URL}`);
-            
-            fetch(`${API_URL}/api/v1/save_progress`, {  // <--- ¡CORREGIDO!
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ 
-                    username: currentUser, 
-                    lesson_id: lessonId, 
-                    stars: stars 
-                })
-            })
-            .then(res => {
-                if (!res.ok) throw new Error(`Error HTTP: ${res.status}`);
-                return res.json();
-            })
-            .then(data => console.log("✅ Progreso guardado en Nube:", data))
-            .catch(err => console.error("❌ Error conectando con Backend:", err));
-        }
+          // Sincronización Backend (Fire & Forget)
+          const currentUser = typeof window !== 'undefined' ? localStorage.getItem('currentUser') : null;
+          const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+          if (currentUser && API_URL) {
+            fetch(`${API_URL}/api/v1/save_progress`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ 
+                username: currentUser, 
+                lesson_id: lessonId, 
+                stars: stars 
+              })
+            }).catch(e => console.warn("Sync error:", e));
+          }
+
+          return newState;
+        });
       },
 
-      // Helpers
-      isLessonCompleted: (lessonId) => !!get().completedLessons[lessonId],
-      getLessonStars: (lessonId) => get().completedLessons[lessonId]?.stars || 0,
+      isLessonCompleted: (id) => !!get().completedLessons[id],
+      getLessonStars: (id) => get().completedLessons[id]?.stars || 0,
     }),
-    {
-      name: 'onixlingo-progress', 
-    }
+    { name: 'onixlingo-progress' }
   )
 );
