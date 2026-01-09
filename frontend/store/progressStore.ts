@@ -9,9 +9,9 @@ interface LessonProgress {
 interface ProgressState {
   // Datos Persistentes
   completedLessons: Record<string, LessonProgress>;
-  totalXP: number; // Nuevo: Acumulador global
-  streak: number;  // Nuevo: Días seguidos
-  level: number;   // Nuevo: Nivel de jugador
+  totalXP: number; 
+  streak: number;  
+  level: number;   
 
   // Acciones
   loadProgressFromDB: (data: Record<string, LessonProgress>) => void;
@@ -31,14 +31,13 @@ export const useProgressStore = create<ProgressState>()(
       level: 1,
 
       loadProgressFromDB: (data) => {
-        // Al cargar, recalculamos XP basado en las lecciones traídas
         let calcXP = 0;
-        Object.values(data).forEach(l => calcXP += (l.stars * 20)); // 20 XP por estrella
+        Object.values(data).forEach(l => calcXP += (l.stars * 20));
         
         set({ 
             completedLessons: data,
             totalXP: calcXP,
-            level: Math.floor(calcXP / 500) + 1 // Nivel sube cada 500 XP
+            level: Math.floor(calcXP / 500) + 1 
         });
       },
 
@@ -47,19 +46,16 @@ export const useProgressStore = create<ProgressState>()(
           const current = state.completedLessons[lessonId];
           const isReplay = !!current;
           
-          // Cálculo de XP ganado
-          // Si es replay, solo damos la diferencia si mejoró. Si es nueva, todo.
           let xpGain = 0;
           if (!isReplay) {
-              xpGain = 50 + (stars * 10); // Base 50 + Bonus Estrellas
+              xpGain = 50 + (stars * 10); 
           } else if (stars > current.stars) {
-              xpGain = (stars - current.stars) * 10; // Solo diferencia de estrellas
+              xpGain = (stars - current.stars) * 10; 
           }
 
           const newXP = state.totalXP + xpGain;
           const newLevel = Math.floor(newXP / 500) + 1;
 
-          // Actualizar estado local
           const newState = {
             totalXP: newXP,
             level: newLevel,
@@ -69,12 +65,18 @@ export const useProgressStore = create<ProgressState>()(
             }
           };
 
-          // Sincronización Backend (Fire & Forget)
+          // --- SINCRONIZACIÓN INTELIGENTE (HYBRID BACKEND) ---
           const currentUser = typeof window !== 'undefined' ? localStorage.getItem('currentUser') : null;
-          const API_URL = process.env.NEXT_PUBLIC_API_URL;
+          
+          // 🧠 DETECCIÓN AUTOMÁTICA DE ENTORNO
+          const BASE_URL = process.env.NODE_ENV === 'development' 
+            ? 'http://localhost:8000'                  // Local
+            : 'https://onixlingo-bckend.onrender.com'; // Nube (Render)
 
-          if (currentUser && API_URL) {
-            fetch(`${API_URL}/api/v1/save_progress`, {
+          if (currentUser) {
+            console.log(`💾 Guardando progreso en: ${BASE_URL}`);
+            
+            fetch(`${BASE_URL}/api/v1/save_progress`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ 
@@ -82,7 +84,7 @@ export const useProgressStore = create<ProgressState>()(
                 lesson_id: lessonId, 
                 stars: stars 
               })
-            }).catch(e => console.warn("Sync error:", e));
+            }).catch(e => console.warn("❌ Error guardando progreso:", e));
           }
 
           return newState;

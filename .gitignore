@@ -5,11 +5,13 @@ backend/venv/
 venv/
 __pycache__/
 *.pyc
+backend/__pycache__/
 
-# --- Seguridad (CRÍTICO) ---
+# --- Seguridad (CRÍTICO - BLOQUEO DE LLAVES) ---
 .env
 .env.local
 frontend/.env.local
+backend/.env
 *.env
 
 # --- Sistema y Varios ---

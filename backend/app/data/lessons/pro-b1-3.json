@@ -1,0 +1,86 @@
+{
+  "id": "pro-b1-3",
+  "title": "Negotiation Tactics",
+  "description": "First Conditional.",
+  "level": "B1",
+  "topic": "Negotiation",
+  "xp_reward": 250,
+  "slides": [
+    {
+      "type": "lecture",
+      "title": "The Art of the Deal",
+      "content": "\n        <h3 class='text-lg font-bold text-orange-600 mb-2'>1. The Logic of Negotiation</h3>\n        <p class='text-slate-600 mb-2'>Negotiation is about exchange. We use the <strong>First Conditional</strong> to link a condition with a result.</p>\n        <div class='bg-orange-50 p-3 rounded text-sm font-mono border border-orange-200 mb-4'>\n            <strong>IF</strong> + [Present Simple], ... <strong>WILL</strong> + [Verb]\n        </div>\n        <ul class='list-disc pl-5 space-y-1 text-slate-600 text-sm'>\n            <li>\"<strong>If</strong> you <em>sign</em> today, we <strong>will give</strong> you a 10% discount.\"</li>\n            <li>\"<strong>If</strong> you <em>buy</em> in bulk, we <strong>will cover</strong> the shipping.\"</li>\n        </ul>\n\n        <h3 class='text-lg font-bold text-orange-600 mt-4 mb-2'>2. Key Vocabulary</h3>\n        <ul class='list-disc pl-5 space-y-1 text-slate-600 text-sm'>\n            <li><strong>Bulk order:</strong> Buying a large quantity at once.</li>\n            <li><strong>Compromise:</strong> Meeting in the middle.</li>\n            <li><strong>Counter-offer:</strong> A new offer made in response to one you rejected.</li>\n            <li><strong>The bottom line:</strong> The final price or result.</li>\n        </ul>\n        ",
+      "speech_text": "In negotiation, never give something for nothing. Use the First Conditional structure: 'If you do X, I will do Y'. This makes your offer conditional and safe. For example: 'If you order 50 units, we will reduce the price'."
+    },
+    {
+      "type": "listening",
+      "title": "Closing the Deal",
+      "content": "Listen to a vendor negotiating a software contract.",
+      "audio_script": "\n        Client: The price is a bit high for us. We only have a budget of $5,000.\n        Vendor: I understand. However, the standard price is $6,000.\n        Client: Is there any flexibility?\n        Vendor: Well, if you sign a 2-year contract instead of 1 year, we will lower the annual fee to $4,500.\n        Client: That sounds interesting. Does that include support?\n        Vendor: If you sign by Friday, I will include premium support for free.\n        Client: Deal.\n        ",
+      "quiz": [
+        {
+          "question": "What is the condition for the lower price?",
+          "options": [
+            "Signing immediately",
+            "Signing a 2-year contract",
+            "Buying more licenses"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "What extra benefit does the vendor offer?",
+          "options": [
+            "Free shipping",
+            "Premium support",
+            "A free laptop"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "title": "Build the Offer",
+      "instruction": "Complete the conditional sentences correctly.",
+      "questions": [
+        {
+          "text": "If you _____ 100 units, we will give you a discount.",
+          "options": [
+            "ordered",
+            "order",
+            "will order"
+          ],
+          "correct": 1,
+          "explanation": "En la parte del IF usamos Presente Simple (If you order...)."
+        },
+        {
+          "text": "If we delay the launch, we _____ money.",
+          "options": [
+            "lose",
+            "lost",
+            "will lose"
+          ],
+          "correct": 2,
+          "explanation": "En la parte del resultado usamos WILL (Futuro)."
+        },
+        {
+          "text": "Complete the counter-offer: 'I can't accept that price, but...'",
+          "options": [
+            "...if you lower it, I will buy.",
+            "...if you lowered, I buy.",
+            "...if lower, I bought."
+          ],
+          "correct": 0,
+          "explanation": "Estructura correcta: If + Presente + Will."
+        }
+      ]
+    },
+    {
+      "type": "chat",
+      "title": "Roleplay: Negotiate the Price",
+      "system_prompt": "\n        You are a supplier selling office furniture.\n        The user is a client who wants a discount.\n        Current Offer: 50 Chairs for $5,000 ($100 each).\n        \n        Steps:\n        1. State your price ($5,000 for 50 chairs).\n        2. Wait for the user to ask for a discount.\n        3. Make a conditional offer: \"If you buy 100 chairs, I will lower the price to $90 each.\"\n        4. Or: \"If you pay cash, I will give you free delivery.\"\n        5. Reach a deal.\n        \n        Correction Focus: Ensure the user uses \"If... will...\" or polite negotiation phrases.\n        ",
+      "initial_message": "Thank you for your interest in our ergonomic chairs. For 50 units, the total is $5,000.",
+      "user_goal": "Negotiate a better deal using an 'If' condition (e.g., If I buy more, will you...?)"
+    }
+  ]
+}

@@ -1,23 +1,23 @@
 {
   "id": "pro-a1-1",
   "version": "Titanium 2.0",
-  "title": "Executive Basics: To Be",
+  "title": "The Networking Event",
   "level": "A1",
+  "description": "Domina las presentaciones formales y el verbo To Be en contextos profesionales.",
   "tags": [
-    "grammar",
-    "business",
-    "foundations"
+    "networking",
+    "introductions",
+    "grammar"
   ],
   "stages": [
     {
       "id": "stage_1",
       "type": "lecture",
-      "title": "Core Concepts",
+      "title": "Executive Briefing",
       "parts": [
         {
-          "visual": "## The Logic\n\nI -> **am**\nYou -> **are**\nHe/She -> **is**",
-          "audio": "Welcome back. Let's synchronize our grammar. The verb To Be connects the subject to a description.",
-          "animation": "explaining",
+          "visual": "## Identity Protocol\n\nI **am** (I'm) -> Self\nYou **are** (You're) -> Partner\nHe/She **is** (He's) -> Third Party",
+          "audio": "In business, clarity is power. Using the verb 'To Be' correctly establishes your identity immediately.",
           "duration": 10
         }
       ]
@@ -26,483 +26,296 @@
       "id": "stage_2",
       "type": "gamified_quiz",
       "title": "Grammar Calibration",
-      "description": "Ajuste de precisión gramatical.",
+      "description": "Alineación de estructuras básicas.",
       "xp_reward": 100,
       "questions": [
         {
-          "id": "fib_0",
-          "type": "fill_input",
-          "difficulty": "hard",
-          "tags": [
-            "grammar",
-            "writing"
-          ],
-          "question": "Completa la frase: 'Listen, She ___ in the meeting.'",
-          "correct_answers": [
-            "is",
-            "She's"
-          ],
-          "hint": "Verbo To Be para 'She'",
-          "explanation": "Con 'She' siempre usamos 'is'."
-        },
-        {
-          "id": "odd_7",
+          "id": "odd_4",
           "type": "quiz_choice",
           "difficulty": "easy",
-          "tags": [
-            "vocabulary",
-            "logic"
-          ],
-          "question": "Selecciona la palabra que NO pertenece al grupo:",
+          "question": "Selecciona el intruso (Odd one out):",
           "options": [
-            "She",
-            "It",
-            "He",
-            "Am"
-          ],
-          "correct_answer": "Am",
-          "explanation": "'Am' es un verbo, los demás son pronombres."
-        },
-        {
-          "id": "odd_8",
-          "type": "quiz_choice",
-          "difficulty": "easy",
-          "tags": [
-            "vocabulary",
-            "logic"
-          ],
-          "question": "Selecciona la palabra que NO pertenece al grupo:",
-          "options": [
-            "He",
-            "She",
-            "Am",
-            "It"
-          ],
-          "correct_answer": "Am",
-          "explanation": "'Am' es un verbo, los demás son pronombres."
-        },
-        {
-          "id": "odd_5",
-          "type": "quiz_choice",
-          "difficulty": "easy",
-          "tags": [
-            "vocabulary",
-            "logic"
-          ],
-          "question": "Selecciona la palabra que NO pertenece al grupo:",
-          "options": [
-            "Am",
-            "She",
-            "He",
-            "It"
-          ],
-          "correct_answer": "Am",
-          "explanation": "'Am' es un verbo, los demás son pronombres."
-        },
-        {
-          "id": "fib_4",
-          "type": "fill_input",
-          "difficulty": "hard",
-          "tags": [
-            "grammar",
-            "writing"
-          ],
-          "question": "Completa la frase: 'Listen, You ___ in the meeting.'",
-          "correct_answers": [
+            "efficient",
             "are",
-            "You're"
+            "am",
+            "is"
           ],
-          "hint": "Verbo To Be para 'You'",
-          "explanation": "Con 'You' siempre usamos 'are'."
-        },
-        {
-          "id": "odd_6",
-          "type": "quiz_choice",
-          "difficulty": "easy",
-          "tags": [
-            "vocabulary",
-            "logic"
-          ],
-          "question": "Selecciona la palabra que NO pertenece al grupo:",
-          "options": [
-            "are",
-            "is",
-            "happy",
-            "am"
-          ],
-          "correct_answer": "happy",
-          "explanation": "'Happy' es un adjetivo, los demás son formas del verbo To Be."
-        },
-        {
-          "id": "fib_3",
-          "type": "fill_input",
-          "difficulty": "hard",
-          "tags": [
-            "grammar",
-            "writing"
-          ],
-          "question": "Completa la frase: 'In reality, We ___ on the bus.'",
-          "correct_answers": [
-            "are",
-            "We're"
-          ],
-          "hint": "Verbo To Be para 'We'",
-          "explanation": "Con 'We' siempre usamos 'are'."
-        },
-        {
-          "id": "odd_9",
-          "type": "quiz_choice",
-          "difficulty": "easy",
-          "tags": [
-            "vocabulary",
-            "logic"
-          ],
-          "question": "Selecciona la palabra que NO pertenece al grupo:",
-          "options": [
-            "is",
-            "are",
-            "happy",
-            "am"
-          ],
-          "correct_answer": "happy",
-          "explanation": "'Happy' es un adjetivo, los demás son formas del verbo To Be."
-        },
-        {
-          "id": "fib_1",
-          "type": "fill_input",
-          "difficulty": "hard",
-          "tags": [
-            "grammar",
-            "writing"
-          ],
-          "question": "Completa la frase: 'In reality, She ___ on the bus.'",
-          "correct_answers": [
-            "is",
-            "She's"
-          ],
-          "hint": "Verbo To Be para 'She'",
-          "explanation": "Con 'She' siempre usamos 'is'."
+          "correct_answer": "efficient",
+          "explanation": "'Efficient' es un adjetivo. Los otros son conjugaciones del verbo To Be."
         },
         {
           "id": "fib_2",
           "type": "fill_input",
           "difficulty": "hard",
-          "tags": [
-            "grammar",
-            "writing"
+          "question": "Completa el correo: 'Currently, The CEO ___ in a meeting.'",
+          "correct_answers": [
+            "is",
+            "The CEO's"
           ],
-          "question": "Completa la frase: 'Honestly, They ___ in the meeting.'",
+          "hint": "Verbo To Be para 'The CEO'",
+          "explanation": "Para 'The CEO' usamos 'is'."
+        },
+        {
+          "id": "fib_3",
+          "type": "fill_input",
+          "difficulty": "hard",
+          "question": "Completa el correo: 'Honestly, He ___ at the conference.'",
+          "correct_answers": [
+            "is",
+            "He's"
+          ],
+          "hint": "Verbo To Be para 'He'",
+          "explanation": "Para 'He' usamos 'is'."
+        },
+        {
+          "id": "odd_6",
+          "type": "quiz_choice",
+          "difficulty": "easy",
+          "question": "Selecciona el intruso (Odd one out):",
+          "options": [
+            "He",
+            "Am",
+            "She",
+            "We"
+          ],
+          "correct_answer": "Am",
+          "explanation": "'Am' es un verbo. Los otros son pronombres personales."
+        },
+        {
+          "id": "fib_0",
+          "type": "fill_input",
+          "difficulty": "hard",
+          "question": "Completa el correo: 'For this project, We ___ unavailable.'",
           "correct_answers": [
             "are",
-            "They're"
+            "We're"
           ],
-          "hint": "Verbo To Be para 'They'",
-          "explanation": "Con 'They' siempre usamos 'are'."
+          "hint": "Verbo To Be para 'We'",
+          "explanation": "Para 'We' usamos 'are'."
+        },
+        {
+          "id": "odd_5",
+          "type": "quiz_choice",
+          "difficulty": "easy",
+          "question": "Selecciona el intruso (Odd one out):",
+          "options": [
+            "are",
+            "am",
+            "is",
+            "efficient"
+          ],
+          "correct_answer": "efficient",
+          "explanation": "'Efficient' es un adjetivo. Los otros son conjugaciones del verbo To Be."
+        },
+        {
+          "id": "fib_1",
+          "type": "fill_input",
+          "difficulty": "hard",
+          "question": "Completa el correo: 'For this project, He ___ on a call.'",
+          "correct_answers": [
+            "is",
+            "He's"
+          ],
+          "hint": "Verbo To Be para 'He'",
+          "explanation": "Para 'He' usamos 'is'."
         }
       ]
     },
     {
       "id": "stage_3",
       "type": "gamified_quiz",
-      "title": "Active Listening & Syntax",
-      "description": "Entrenamiento auditivo y orden mental.",
+      "title": "Active Simulation",
+      "description": "Entrenamiento de respuesta rápida.",
       "xp_reward": 150,
       "questions": [
         {
           "id": "scr_10",
           "type": "order_sentence",
           "difficulty": "medium",
-          "tags": [
-            "grammar",
-            "syntax"
-          ],
-          "question": "Ordena las palabras para formar una oración correcta:",
+          "question": "Reorganiza para dar un reporte coherente:",
           "parts": [
-            "They",
-            "are",
-            "early"
+            "busy",
+            "is",
+            "The client"
           ],
           "correct_order": [
-            "They",
-            "are",
-            "early"
+            "The client",
+            "is",
+            "busy"
           ],
-          "audio_ref": "They are early.",
-          "hint": "El sujeto va primero, luego el verbo To Be."
+          "audio_ref": "The client is busy.",
+          "hint": "Sujeto + Verbo To Be + Adjetivo."
         },
         {
           "id": "scr_11",
           "type": "order_sentence",
           "difficulty": "medium",
-          "tags": [
-            "grammar",
-            "syntax"
-          ],
-          "question": "Ordena las palabras para formar una oración correcta:",
+          "question": "Reorganiza para dar un reporte coherente:",
           "parts": [
-            "are",
-            "lost",
-            "We"
+            "is",
+            "busy",
+            "The client"
           ],
           "correct_order": [
-            "We",
-            "are",
-            "lost"
+            "The client",
+            "is",
+            "busy"
           ],
-          "audio_ref": "We are lost.",
-          "hint": "El sujeto va primero, luego el verbo To Be."
+          "audio_ref": "The client is busy.",
+          "hint": "Sujeto + Verbo To Be + Adjetivo."
         },
         {
           "id": "scr_12",
           "type": "order_sentence",
           "difficulty": "medium",
-          "tags": [
-            "grammar",
-            "syntax"
-          ],
-          "question": "Ordena las palabras para formar una oración correcta:",
+          "question": "Reorganiza para dar un reporte coherente:",
           "parts": [
-            "is",
-            "He",
-            "late"
+            "committed",
+            "They",
+            "are"
           ],
           "correct_order": [
-            "He",
-            "is",
-            "late"
+            "They",
+            "are",
+            "committed"
           ],
-          "audio_ref": "He is late.",
-          "hint": "El sujeto va primero, luego el verbo To Be."
+          "audio_ref": "They are committed.",
+          "hint": "Sujeto + Verbo To Be + Adjetivo."
         },
         {
           "id": "scr_13",
           "type": "order_sentence",
           "difficulty": "medium",
-          "tags": [
-            "grammar",
-            "syntax"
-          ],
-          "question": "Ordena las palabras para formar una oración correcta:",
+          "question": "Reorganiza para dar un reporte coherente:",
           "parts": [
-            "He",
-            "exhausted",
-            "is"
+            "are",
+            "We",
+            "strategic"
           ],
           "correct_order": [
-            "He",
-            "is",
-            "exhausted"
+            "We",
+            "are",
+            "strategic"
           ],
-          "audio_ref": "He is exhausted.",
-          "hint": "El sujeto va primero, luego el verbo To Be."
+          "audio_ref": "We are strategic.",
+          "hint": "Sujeto + Verbo To Be + Adjetivo."
         },
         {
-          "id": "scr_14",
-          "type": "order_sentence",
-          "difficulty": "medium",
-          "tags": [
-            "grammar",
-            "syntax"
+          "id": "lst_14",
+          "type": "listening_match",
+          "difficulty": "hard",
+          "question": "Selecciona exactamente lo que escuchas:",
+          "tts_text": "The CEO is busy",
+          "options": [
+            "The CEO is not busy",
+            "The CEO are busy",
+            "The CEO is busy"
           ],
-          "question": "Ordena las palabras para formar una oración correcta:",
-          "parts": [
-            "thrilled",
-            "is",
-            "My doctor"
-          ],
-          "correct_order": [
-            "My doctor",
-            "is",
-            "thrilled"
-          ],
-          "audio_ref": "My doctor is thrilled.",
-          "hint": "El sujeto va primero, luego el verbo To Be."
+          "correct_answer": "The CEO is busy"
         },
         {
           "id": "lst_15",
           "type": "listening_match",
           "difficulty": "hard",
-          "tags": [
-            "listening",
-            "comprehension"
-          ],
-          "question": "Escucha el audio y selecciona la frase exacta.",
-          "tts_text": "He is late",
+          "question": "Selecciona exactamente lo que escuchas:",
+          "tts_text": "You are prepared",
           "options": [
-            "He are late",
-            "He is late",
-            "He is not late"
+            "You are prepared",
+            "You are not prepared",
+            "You is prepared"
           ],
-          "correct_answer": "He is late"
+          "correct_answer": "You are prepared"
         },
         {
           "id": "lst_16",
           "type": "listening_match",
           "difficulty": "hard",
-          "tags": [
-            "listening",
-            "comprehension"
-          ],
-          "question": "Escucha el audio y selecciona la frase exacta.",
-          "tts_text": "She is hired",
+          "question": "Selecciona exactamente lo que escuchas:",
+          "tts_text": "The client is efficient",
           "options": [
-            "She is hired",
-            "She is not hired",
-            "She are hired"
+            "The client is not efficient",
+            "The client are efficient",
+            "The client is efficient"
           ],
-          "correct_answer": "She is hired"
-        },
-        {
-          "id": "lst_17",
-          "type": "listening_match",
-          "difficulty": "hard",
-          "tags": [
-            "listening",
-            "comprehension"
-          ],
-          "question": "Escucha el audio y selecciona la frase exacta.",
-          "tts_text": "I am late",
-          "options": [
-            "I am not late",
-            "I are late",
-            "I am late"
-          ],
-          "correct_answer": "I am late"
-        },
-        {
-          "id": "lst_18",
-          "type": "listening_match",
-          "difficulty": "hard",
-          "tags": [
-            "listening",
-            "comprehension"
-          ],
-          "question": "Escucha el audio y selecciona la frase exacta.",
-          "tts_text": "We are lost",
-          "options": [
-            "We are not lost",
-            "We are lost",
-            "We is lost"
-          ],
-          "correct_answer": "We are lost"
-        },
-        {
-          "id": "lst_19",
-          "type": "listening_match",
-          "difficulty": "hard",
-          "tags": [
-            "listening",
-            "comprehension"
-          ],
-          "question": "Escucha el audio y selecciona la frase exacta.",
-          "tts_text": "I am early",
-          "options": [
-            "I am early",
-            "I are early",
-            "I am not early"
-          ],
-          "correct_answer": "I am early"
+          "correct_answer": "The client is efficient"
         }
       ]
     },
     {
       "id": "stage_4",
       "type": "gamified_quiz",
-      "title": "Translation Bridge",
+      "title": "Mental Bridge",
+      "description": "Traducción de intención a inglés.",
       "questions": [
         {
           "id": "tra_0",
           "type": "quiz_choice",
           "difficulty": "medium",
-          "tags": [
-            "translation",
-            "vocabulary"
-          ],
-          "question": "¿Cómo se dice: 'Yo está skeptical (en inglés)'?",
+          "question": "¿Cómo dirías esto en una reunión?: 'Yo soy/estoy busy'",
           "options": [
-            "I am skeptical",
-            "I is skeptical",
-            "I have skeptical"
+            "I am busy",
+            "I have busy",
+            "I is busy"
           ],
-          "correct_answer": "I am skeptical"
+          "correct_answer": "I am busy"
         },
         {
           "id": "tra_1",
           "type": "quiz_choice",
           "difficulty": "medium",
-          "tags": [
-            "translation",
-            "vocabulary"
-          ],
-          "question": "¿Cómo se dice: 'Ella está fired (en inglés)'?",
+          "question": "¿Cómo dirías esto en una reunión?: 'El cliente está responsible (en contexto laboral)'",
           "options": [
-            "She is fired",
-            "She is fired",
-            "She have fired"
+            "The client is responsible",
+            "The client have responsible",
+            "The client are responsible"
           ],
-          "correct_answer": "She is fired"
+          "correct_answer": "The client is responsible"
         },
         {
           "id": "tra_2",
           "type": "quiz_choice",
           "difficulty": "medium",
-          "tags": [
-            "translation",
-            "vocabulary"
-          ],
-          "question": "¿Cómo se dice: 'Yo está early (en inglés)'?",
+          "question": "¿Cómo dirías esto en una reunión?: 'El CEO está available (en contexto laboral)'",
           "options": [
-            "I am early",
-            "I is early",
-            "I have early"
+            "The CEO is available",
+            "The CEO have available",
+            "The CEO are available"
           ],
-          "correct_answer": "I am early"
+          "correct_answer": "The CEO is available"
         },
         {
           "id": "tra_3",
           "type": "quiz_choice",
           "difficulty": "medium",
-          "tags": [
-            "translation",
-            "vocabulary"
-          ],
-          "question": "¿Cómo se dice: 'Nosotros está exhausted (en inglés)'?",
+          "question": "¿Cómo dirías esto en una reunión?: 'Tú soy/estoy prepared'",
           "options": [
-            "We are exhausted",
-            "We is exhausted",
-            "We have exhausted"
+            "You are prepared",
+            "You have prepared",
+            "You is prepared"
           ],
-          "correct_answer": "We are exhausted"
+          "correct_answer": "You are prepared"
         },
         {
           "id": "tra_4",
           "type": "quiz_choice",
           "difficulty": "medium",
-          "tags": [
-            "translation",
-            "vocabulary"
-          ],
-          "question": "¿Cómo se dice: 'Tú está lost (en inglés)'?",
+          "question": "¿Cómo dirías esto en una reunión?: 'Yo soy/estoy optimistic'",
           "options": [
-            "You are lost",
-            "You is lost",
-            "You have lost"
+            "I am optimistic",
+            "I have optimistic",
+            "I is optimistic"
           ],
-          "correct_answer": "You are lost"
+          "correct_answer": "I am optimistic"
         }
       ]
     },
     {
       "id": "stage_boss",
       "type": "practice_chat",
-      "title": "The Interview",
-      "scenario": "Estás en el lobby de una empresa internacional. Preséntate.",
-      "ai_system_prompt": "ROLE: Receptionist at Stark Industries. GOAL: Verify user can use 'I am', 'It is' correctly.",
-      "initial_message": "Good morning. I am the receptionist. Who are you?",
-      "success_criteria": [
-        "uses_i_am",
-        "uses_nice_to_meet_you"
-      ]
+      "title": "The Networking Event",
+      "scenario": "Estás en un cóctel de negocios en Nueva York. Un posible socio se acerca.",
+      "ai_system_prompt": "\n        ACT AS: Mr. Sterling, a potential business partner at a Networking Event.\n        TONE: Professional, polite, but slightly busy.\n        GOAL: Ask the user who they are and what they do.\n        SUCCESS CRITERIA: User must correctly use 'I am' + [Name/Role/Adjective].\n        BEHAVIOR:\n        1. Start by introducing yourself briefly.\n        2. Wait for the user to introduce themselves.\n        3. If they make a grammar mistake with 'To Be', politely ask for clarification.\n        4. Keep responses short (under 2 sentences).\n        ",
+      "initial_message": "Good evening. I don't think we've met. I am James Sterling."
     }
   ]
 }

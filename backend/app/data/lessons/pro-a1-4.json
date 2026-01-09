@@ -45,19 +45,19 @@
           ],
           "question": "Clasifica los alimentos según si se pueden contar (1, 2, 3) o no:",
           "items": [
-            "bread",
-            "soup",
-            "apple",
-            "egg"
+            "coffee",
+            "water",
+            "burger",
+            "sandwich"
           ],
           "buckets": {
             "Countable (How many)": [
-              "apple",
-              "egg"
+              "burger",
+              "sandwich"
             ],
             "Uncountable (How much)": [
-              "bread",
-              "soup"
+              "coffee",
+              "water"
             ]
           },
           "explanation": "Los líquidos y masas (Water, Rice) son incontables. Objetos individuales (Burger, Apple) son contables."
@@ -72,19 +72,19 @@
           ],
           "question": "Clasifica los alimentos según si se pueden contar (1, 2, 3) o no:",
           "items": [
-            "egg",
-            "apple",
-            "bread",
-            "cheese"
+            "pancake",
+            "soup",
+            "water",
+            "sandwich"
           ],
           "buckets": {
             "Countable (How many)": [
-              "egg",
-              "apple"
+              "pancake",
+              "sandwich"
             ],
             "Uncountable (How much)": [
-              "bread",
-              "cheese"
+              "soup",
+              "water"
             ]
           },
           "explanation": "Los líquidos y masas (Water, Rice) son incontables. Objetos individuales (Burger, Apple) son contables."
@@ -99,19 +99,19 @@
           ],
           "question": "Clasifica los alimentos según si se pueden contar (1, 2, 3) o no:",
           "items": [
-            "coffee",
-            "sandwich",
             "egg",
-            "apple"
+            "coffee",
+            "pancake",
+            "bread"
           ],
           "buckets": {
             "Countable (How many)": [
-              "sandwich",
               "egg",
-              "apple"
+              "pancake"
             ],
             "Uncountable (How much)": [
-              "coffee"
+              "coffee",
+              "bread"
             ]
           },
           "explanation": "Los líquidos y masas (Water, Rice) son incontables. Objetos individuales (Burger, Apple) son contables."
@@ -126,19 +126,19 @@
           ],
           "question": "Clasifica los alimentos según si se pueden contar (1, 2, 3) o no:",
           "items": [
-            "bread",
-            "burger",
-            "soup",
-            "egg"
+            "coffee",
+            "pancake",
+            "apple",
+            "burger"
           ],
           "buckets": {
             "Countable (How many)": [
-              "burger",
-              "egg"
+              "pancake",
+              "apple",
+              "burger"
             ],
             "Uncountable (How much)": [
-              "bread",
-              "soup"
+              "coffee"
             ]
           },
           "explanation": "Los líquidos y masas (Water, Rice) son incontables. Objetos individuales (Burger, Apple) son contables."
@@ -153,19 +153,19 @@
           ],
           "question": "Clasifica los alimentos según si se pueden contar (1, 2, 3) o no:",
           "items": [
-            "burger",
-            "sandwich",
-            "pasta",
-            "egg"
+            "water",
+            "rice",
+            "pancake",
+            "burger"
           ],
           "buckets": {
             "Countable (How many)": [
-              "burger",
-              "sandwich",
-              "egg"
+              "pancake",
+              "burger"
             ],
             "Uncountable (How much)": [
-              "pasta"
+              "water",
+              "rice"
             ]
           },
           "explanation": "Los líquidos y masas (Water, Rice) son incontables. Objetos individuales (Burger, Apple) son contables."
@@ -180,19 +180,19 @@
           ],
           "question": "Clasifica los alimentos según si se pueden contar (1, 2, 3) o no:",
           "items": [
-            "soup",
-            "water",
-            "apple",
-            "sandwich"
+            "pasta",
+            "steak",
+            "burger",
+            "coffee"
           ],
           "buckets": {
             "Countable (How many)": [
-              "apple",
-              "sandwich"
+              "steak",
+              "burger"
             ],
             "Uncountable (How much)": [
-              "soup",
-              "water"
+              "pasta",
+              "coffee"
             ]
           },
           "explanation": "Los líquidos y masas (Water, Rice) son incontables. Objetos individuales (Burger, Apple) son contables."
@@ -214,99 +214,14 @@
             "grammar",
             "quantifiers"
           ],
-          "question": "Completa la pregunta: 'How ___ pancakes do we need?'",
+          "question": "Completa la pregunta: 'How ___ steaks do we need?'",
           "options": [
             "much",
             "many",
             "a lot"
           ],
           "correct_answer": "many",
-          "explanation": "Usamos 'many' porque 'pancakes' es contable."
-        },
-        {
-          "id": "art_0",
-          "type": "quiz_choice",
-          "difficulty": "easy",
-          "tags": [
-            "grammar",
-            "articles"
-          ],
-          "question": "Completa la frase: 'I'd like ___ pasta, please.'",
-          "options": [
-            "a",
-            "an",
-            "some"
-          ],
-          "correct_answer": "some",
-          "explanation": "'Pasta' es incontable, usamos SOME."
-        },
-        {
-          "id": "art_2",
-          "type": "quiz_choice",
-          "difficulty": "easy",
-          "tags": [
-            "grammar",
-            "articles"
-          ],
-          "question": "Completa la frase: 'I'd like ___ pasta, please.'",
-          "options": [
-            "some",
-            "an",
-            "a"
-          ],
-          "correct_answer": "some",
-          "explanation": "'Pasta' es incontable, usamos SOME."
-        },
-        {
-          "id": "art_3",
-          "type": "quiz_choice",
-          "difficulty": "easy",
-          "tags": [
-            "grammar",
-            "articles"
-          ],
-          "question": "Completa la frase: 'I'd like ___ bread, please.'",
-          "options": [
-            "some",
-            "an",
-            "a"
-          ],
-          "correct_answer": "some",
-          "explanation": "'Bread' es incontable, usamos SOME."
-        },
-        {
-          "id": "art_4",
-          "type": "quiz_choice",
-          "difficulty": "easy",
-          "tags": [
-            "grammar",
-            "articles"
-          ],
-          "question": "Completa la frase: 'I'd like ___ egg, please.'",
-          "options": [
-            "a",
-            "an",
-            "some"
-          ],
-          "correct_answer": "an",
-          "explanation": "'Egg' es singular contable y empieza por vocal."
-        },
-        {
-          "id": "art_1",
-          "type": "quiz_choice",
-          "difficulty": "easy",
-          "tags": [
-            "grammar",
-            "articles"
-          ],
-          "question": "Completa la frase: 'I'd like ___ bread, please.'",
-          "options": [
-            "an",
-            "a",
-            "some"
-          ],
-          "correct_answer": "some",
-          "explanation": "'Bread' es incontable, usamos SOME."
+          "explanation": "Usamos 'many' porque 'steaks' es contable."
         },
         {
           "id": "quant_4",
@@ -316,51 +231,34 @@
             "grammar",
             "quantifiers"
           ],
-          "question": "Completa la pregunta: 'How ___ soup do we need?'",
+          "question": "Completa la pregunta: 'How ___ bread do we need?'",
           "options": [
             "much",
             "many",
             "a lot"
           ],
           "correct_answer": "much",
-          "explanation": "Usamos 'much' porque 'soup' es incontable."
+          "explanation": "Usamos 'much' porque 'bread' es incontable."
         },
         {
-          "id": "quant_3",
+          "id": "art_2",
           "type": "quiz_choice",
-          "difficulty": "medium",
+          "difficulty": "easy",
           "tags": [
             "grammar",
-            "quantifiers"
+            "articles"
           ],
-          "question": "Completa la pregunta: 'How ___ pasta do we need?'",
+          "question": "Completa la frase: 'I'd like ___ coffee, please.'",
           "options": [
-            "much",
-            "many",
-            "a lot"
+            "a",
+            "some",
+            "an"
           ],
-          "correct_answer": "much",
-          "explanation": "Usamos 'much' porque 'pasta' es incontable."
+          "correct_answer": "some",
+          "explanation": "'Coffee' es incontable, usamos SOME."
         },
         {
           "id": "quant_2",
-          "type": "quiz_choice",
-          "difficulty": "medium",
-          "tags": [
-            "grammar",
-            "quantifiers"
-          ],
-          "question": "Completa la pregunta: 'How ___ burgers do we need?'",
-          "options": [
-            "much",
-            "many",
-            "a lot"
-          ],
-          "correct_answer": "many",
-          "explanation": "Usamos 'many' porque 'burgers' es contable."
-        },
-        {
-          "id": "quant_1",
           "type": "quiz_choice",
           "difficulty": "medium",
           "tags": [
@@ -375,6 +273,108 @@
           ],
           "correct_answer": "many",
           "explanation": "Usamos 'many' porque 'steaks' es contable."
+        },
+        {
+          "id": "art_3",
+          "type": "quiz_choice",
+          "difficulty": "easy",
+          "tags": [
+            "grammar",
+            "articles"
+          ],
+          "question": "Completa la frase: 'I'd like ___ apple, please.'",
+          "options": [
+            "some",
+            "an",
+            "a"
+          ],
+          "correct_answer": "an",
+          "explanation": "'Apple' es singular contable y empieza por vocal."
+        },
+        {
+          "id": "art_4",
+          "type": "quiz_choice",
+          "difficulty": "easy",
+          "tags": [
+            "grammar",
+            "articles"
+          ],
+          "question": "Completa la frase: 'I'd like ___ coffee, please.'",
+          "options": [
+            "an",
+            "a",
+            "some"
+          ],
+          "correct_answer": "some",
+          "explanation": "'Coffee' es incontable, usamos SOME."
+        },
+        {
+          "id": "art_1",
+          "type": "quiz_choice",
+          "difficulty": "easy",
+          "tags": [
+            "grammar",
+            "articles"
+          ],
+          "question": "Completa la frase: 'I'd like ___ rice, please.'",
+          "options": [
+            "an",
+            "a",
+            "some"
+          ],
+          "correct_answer": "some",
+          "explanation": "'Rice' es incontable, usamos SOME."
+        },
+        {
+          "id": "quant_1",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "quantifiers"
+          ],
+          "question": "Completa la pregunta: 'How ___ eggs do we need?'",
+          "options": [
+            "much",
+            "many",
+            "a lot"
+          ],
+          "correct_answer": "many",
+          "explanation": "Usamos 'many' porque 'eggs' es contable."
+        },
+        {
+          "id": "art_0",
+          "type": "quiz_choice",
+          "difficulty": "easy",
+          "tags": [
+            "grammar",
+            "articles"
+          ],
+          "question": "Completa la frase: 'I'd like ___ apple, please.'",
+          "options": [
+            "a",
+            "some",
+            "an"
+          ],
+          "correct_answer": "an",
+          "explanation": "'Apple' es singular contable y empieza por vocal."
+        },
+        {
+          "id": "quant_3",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "quantifiers"
+          ],
+          "question": "Completa la pregunta: 'How ___ apples do we need?'",
+          "options": [
+            "much",
+            "many",
+            "a lot"
+          ],
+          "correct_answer": "many",
+          "explanation": "Usamos 'many' porque 'apples' es contable."
         }
       ]
     },
@@ -395,19 +395,19 @@
           ],
           "question": "Ordena las palabras para pedir educadamente:",
           "parts": [
-            "have",
+            "I",
             "please",
-            "some",
-            "bread",
-            "May",
-            "I"
+            "egg",
+            "an",
+            "Could",
+            "have"
           ],
           "correct_order": [
-            "May",
+            "Could",
             "I",
             "have",
-            "some",
-            "bread",
+            "an",
+            "egg",
             "please"
           ],
           "explanation": "Estructura: Frase de cortesía + Objeto + Please."
@@ -422,19 +422,19 @@
           ],
           "question": "Ordena las palabras para pedir educadamente:",
           "parts": [
-            "would",
-            "apple",
+            "I",
+            "some",
             "please",
-            "an",
-            "like",
-            "I"
+            "Could",
+            "soup",
+            "have"
           ],
           "correct_order": [
+            "Could",
             "I",
-            "would",
-            "like",
-            "an",
-            "apple",
+            "have",
+            "some",
+            "soup",
             "please"
           ],
           "explanation": "Estructura: Frase de cortesía + Objeto + Please."
@@ -449,19 +449,19 @@
           ],
           "question": "Ordena las palabras para pedir educadamente:",
           "parts": [
-            "I",
+            "would",
             "please",
-            "an",
-            "Could",
-            "have",
-            "apple"
+            "I",
+            "like",
+            "some",
+            "pasta"
           ],
           "correct_order": [
-            "Could",
             "I",
-            "have",
-            "an",
-            "apple",
+            "would",
+            "like",
+            "some",
+            "pasta",
             "please"
           ],
           "explanation": "Estructura: Frase de cortesía + Objeto + Please."
@@ -477,10 +477,10 @@
           "question": "Ordena las palabras para pedir educadamente:",
           "parts": [
             "have",
+            "cheese",
+            "some",
             "May",
             "I",
-            "rice",
-            "some",
             "please"
           ],
           "correct_order": [
@@ -488,7 +488,7 @@
             "I",
             "have",
             "some",
-            "rice",
+            "cheese",
             "please"
           ],
           "explanation": "Estructura: Frase de cortesía + Objeto + Please."
@@ -503,17 +503,17 @@
           ],
           "question": "Ordena las palabras para pedir educadamente:",
           "parts": [
-            "pancake",
-            "have",
+            "please",
             "I",
             "a",
-            "please",
-            "May"
+            "get",
+            "pancake",
+            "Can"
           ],
           "correct_order": [
-            "May",
+            "Can",
             "I",
-            "have",
+            "get",
             "a",
             "pancake",
             "please"
@@ -530,19 +530,19 @@
           ],
           "question": "Ordena las palabras para pedir educadamente:",
           "parts": [
-            "get",
-            "Can",
-            "some",
-            "water",
+            "have",
+            "Could",
+            "I",
+            "egg",
             "please",
-            "I"
+            "an"
           ],
           "correct_order": [
-            "Can",
+            "Could",
             "I",
-            "get",
-            "some",
-            "water",
+            "have",
+            "an",
+            "egg",
             "please"
           ],
           "explanation": "Estructura: Frase de cortesía + Objeto + Please."
@@ -564,15 +564,15 @@
             "vocabulary",
             "numbers"
           ],
-          "question": "MENU: [ Soup: $8 | Water: $2 | Steak: $25 ]\n\nYou order 1 steak and 1 water. How much is it?",
+          "question": "MENU: [ Salad: $12 | Cake: $6 | Steak: $25 ]\n\nYou order 1 steak and 1 salad. How much is it?",
           "options": [
-            "$27",
-            "$25",
-            "$32",
-            "$29"
+            "$37",
+            "$35",
+            "$42",
+            "$39"
           ],
-          "correct_answer": "$27",
-          "explanation": "Steak ($25) + Water ($2) = $27."
+          "correct_answer": "$37",
+          "explanation": "Steak ($25) + Salad ($12) = $37."
         },
         {
           "id": "math_1",
@@ -582,15 +582,15 @@
             "vocabulary",
             "numbers"
           ],
-          "question": "MENU: [ Water: $2 | Burger: $10 | Coffee: $4 ]\n\nYou order 1 coffee and 1 burger. How much is it?",
+          "question": "MENU: [ Cake: $6 | Soup: $8 | Steak: $25 ]\n\nYou order 1 steak and 1 soup. How much is it?",
           "options": [
-            "$14",
-            "$12",
-            "$19",
-            "$16"
+            "$33",
+            "$31",
+            "$38",
+            "$35"
           ],
-          "correct_answer": "$14",
-          "explanation": "Coffee ($4) + Burger ($10) = $14."
+          "correct_answer": "$33",
+          "explanation": "Steak ($25) + Soup ($8) = $33."
         },
         {
           "id": "math_2",
@@ -600,15 +600,15 @@
             "vocabulary",
             "numbers"
           ],
-          "question": "MENU: [ Coffee: $4 | Burger: $10 | Salad: $12 ]\n\nYou order 1 burger and 1 coffee. How much is it?",
+          "question": "MENU: [ Cake: $6 | Coffee: $4 | Soup: $8 ]\n\nYou order 1 soup and 1 coffee. How much is it?",
           "options": [
-            "$14",
             "$12",
-            "$19",
-            "$16"
+            "$10",
+            "$17",
+            "$14"
           ],
-          "correct_answer": "$14",
-          "explanation": "Burger ($10) + Coffee ($4) = $14."
+          "correct_answer": "$12",
+          "explanation": "Soup ($8) + Coffee ($4) = $12."
         },
         {
           "id": "math_3",
@@ -618,15 +618,15 @@
             "vocabulary",
             "numbers"
           ],
-          "question": "MENU: [ Steak: $25 | Salad: $12 | Water: $2 ]\n\nYou order 1 steak and 1 water. How much is it?",
+          "question": "MENU: [ Burger: $10 | Cake: $6 | Soup: $8 ]\n\nYou order 1 soup and 1 burger. How much is it?",
           "options": [
-            "$27",
-            "$25",
-            "$32",
-            "$29"
+            "$18",
+            "$16",
+            "$23",
+            "$20"
           ],
-          "correct_answer": "$27",
-          "explanation": "Steak ($25) + Water ($2) = $27."
+          "correct_answer": "$18",
+          "explanation": "Soup ($8) + Burger ($10) = $18."
         },
         {
           "id": "math_4",
@@ -636,7 +636,7 @@
             "vocabulary",
             "numbers"
           ],
-          "question": "MENU: [ Cake: $6 | Water: $2 | Salad: $12 ]\n\nYou order 1 cake and 1 water. How much is it?",
+          "question": "MENU: [ Cake: $6 | Water: $2 | Soup: $8 ]\n\nYou order 1 water and 1 cake. How much is it?",
           "options": [
             "$8",
             "$6",
@@ -644,7 +644,7 @@
             "$10"
           ],
           "correct_answer": "$8",
-          "explanation": "Cake ($6) + Water ($2) = $8."
+          "explanation": "Water ($2) + Cake ($6) = $8."
         }
       ]
     },

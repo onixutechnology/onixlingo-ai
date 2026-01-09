@@ -22,35 +22,35 @@
           "id": "L1_0",
           "type": "quiz_choice",
           "question": "[IMAGE CONTEXT: A busy business setting]. Listen to the four statements.",
-          "audio_script": "A) They are scheduling an appointment in the airport terminal. B) They are watching a movie. C) He is leaving the airport terminal. D) The airport terminal is empty.",
+          "audio_script": "A) The reception desk is empty. B) They are eating lunch. C) They are boarding the flight in the reception desk. D) He is leaving the reception desk.",
           "options": [
             "Statement A",
             "Statement B",
             "Statement C",
             "Statement D"
           ],
-          "correct_answer": "Statement A",
-          "explanation": "La descripción correcta es: 'They are scheduling an appointment in the airport terminal.'."
+          "correct_answer": "Statement C",
+          "explanation": "La descripción correcta es: 'They are boarding the flight in the reception desk.'."
         },
         {
           "id": "L1_1",
           "type": "quiz_choice",
           "question": "[IMAGE CONTEXT: A busy business setting]. Listen to the four statements.",
-          "audio_script": "A) The conference room is empty. B) They are eating lunch. C) They are boarding the flight in the conference room. D) He is leaving the conference room.",
+          "audio_script": "A) They are inspecting the inventory in the reception desk. B) They are sleeping on the couch. C) The reception desk is empty. D) He is leaving the reception desk.",
           "options": [
             "Statement A",
             "Statement B",
             "Statement C",
             "Statement D"
           ],
-          "correct_answer": "Statement C",
-          "explanation": "La descripción correcta es: 'They are boarding the flight in the conference room.'."
+          "correct_answer": "Statement A",
+          "explanation": "La descripción correcta es: 'They are inspecting the inventory in the reception desk.'."
         },
         {
           "id": "L1_2",
           "type": "quiz_choice",
           "question": "[IMAGE CONTEXT: A busy business setting]. Listen to the four statements.",
-          "audio_script": "A) They are reviewing the quarterly report in the airport terminal. B) The airport terminal is empty. C) They are cleaning the floor. D) He is leaving the airport terminal.",
+          "audio_script": "A) They are inspecting the inventory in the reception desk. B) He is leaving the reception desk. C) The reception desk is empty. D) They are cleaning the floor.",
           "options": [
             "Statement A",
             "Statement B",
@@ -58,13 +58,13 @@
             "Statement D"
           ],
           "correct_answer": "Statement A",
-          "explanation": "La descripción correcta es: 'They are reviewing the quarterly report in the airport terminal.'."
+          "explanation": "La descripción correcta es: 'They are inspecting the inventory in the reception desk.'."
         },
         {
           "id": "L1_3",
           "type": "quiz_choice",
           "question": "[IMAGE CONTEXT: A busy business setting]. Listen to the four statements.",
-          "audio_script": "A) The airport terminal is empty. B) They are eating lunch. C) They are reviewing the quarterly report in the airport terminal. D) He is leaving the airport terminal.",
+          "audio_script": "A) The conference room is empty. B) They are eating lunch. C) They are greeting a client in the conference room. D) He is leaving the conference room.",
           "options": [
             "Statement A",
             "Statement B",
@@ -72,21 +72,21 @@
             "Statement D"
           ],
           "correct_answer": "Statement C",
-          "explanation": "La descripción correcta es: 'They are reviewing the quarterly report in the airport terminal.'."
+          "explanation": "La descripción correcta es: 'They are greeting a client in the conference room.'."
         },
         {
           "id": "L1_4",
           "type": "quiz_choice",
           "question": "[IMAGE CONTEXT: A busy business setting]. Listen to the four statements.",
-          "audio_script": "A) They are scheduling an appointment in the reception desk. B) They are cleaning the floor. C) The reception desk is empty. D) He is leaving the reception desk.",
+          "audio_script": "A) He is leaving the airport terminal. B) The airport terminal is empty. C) They are sleeping on the couch. D) They are greeting a client in the airport terminal.",
           "options": [
             "Statement A",
             "Statement B",
             "Statement C",
             "Statement D"
           ],
-          "correct_answer": "Statement A",
-          "explanation": "La descripción correcta es: 'They are scheduling an appointment in the reception desk.'."
+          "correct_answer": "Statement D",
+          "explanation": "La descripción correcta es: 'They are greeting a client in the airport terminal.'."
         }
       ]
     },
@@ -99,8 +99,8 @@
           "question": "Listen to the conversation. Where does the woman want to go?",
           "audio_script": "W: Excuse me, does this bus go to the city center?\nM: No, this one goes to the airport. You need the number 42 bus.\nW: Oh, thanks. Do you know when it arrives?",
           "options": [
-            "The bus station",
             "The airport",
+            "The bus station",
             "Number 42",
             "The city center"
           ],
@@ -113,9 +113,9 @@
           "question": "Listen to the conversation. Where does the woman want to go?",
           "audio_script": "W: Excuse me, does this bus go to the city center?\nM: No, this one goes to the airport. You need the number 42 bus.\nW: Oh, thanks. Do you know when it arrives?",
           "options": [
-            "The airport",
             "Number 42",
             "The city center",
+            "The airport",
             "The bus station"
           ],
           "correct_answer": "The city center",
@@ -124,15 +124,15 @@
         {
           "id": "L3_2",
           "type": "quiz_choice",
-          "question": "Listen to the conversation. When is the proposal due now?",
-          "audio_script": "M: When is the deadline for the marketing proposal?\nW: It was due yesterday, but the manager extended it until Friday.\nM: That's a relief. I thought I was going to miss it.",
+          "question": "Listen to the conversation. Where does the woman want to go?",
+          "audio_script": "W: Excuse me, does this bus go to the city center?\nM: No, this one goes to the airport. You need the number 42 bus.\nW: Oh, thanks. Do you know when it arrives?",
           "options": [
-            "Yesterday",
-            "Friday",
-            "Today",
-            "Next Monday"
+            "The airport",
+            "The city center",
+            "Number 42",
+            "The bus station"
           ],
-          "correct_answer": "Friday",
+          "correct_answer": "The city center",
           "explanation": "Basado en el audio, la fecha fue extendida hasta el Viernes."
         },
         {
@@ -155,10 +155,10 @@
           "question": "Listen to the conversation. When is the proposal due now?",
           "audio_script": "M: When is the deadline for the marketing proposal?\nW: It was due yesterday, but the manager extended it until Friday.\nM: That's a relief. I thought I was going to miss it.",
           "options": [
-            "Today",
-            "Friday",
+            "Yesterday",
             "Next Monday",
-            "Yesterday"
+            "Today",
+            "Friday"
           ],
           "correct_answer": "Friday",
           "explanation": "Basado en el audio, la fecha fue extendida hasta el Viernes."

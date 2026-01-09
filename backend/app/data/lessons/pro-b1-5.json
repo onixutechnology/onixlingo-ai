@@ -1,0 +1,95 @@
+{
+  "id": "pro-b1-5",
+  "title": "Market Trends",
+  "description": "Comparatives & Data.",
+  "level": "B1",
+  "topic": "Data Analysis",
+  "xp_reward": 250,
+  "slides": [
+    {
+      "type": "lecture",
+      "title": "Describing Movement",
+      "content": "\n        <h3 class='text-lg font-bold text-orange-600 mb-2'>1. Verbs of Change</h3>\n        <p class='text-slate-600 mb-2'>Don't just say \"go up\" or \"go down\". Use professional verbs:</p>\n        <div class='grid grid-cols-2 gap-2 text-sm'>\n            <div class='bg-green-50 p-2 rounded'><strong>📈 UP:</strong> Increase, Rise, Grow, <em>Soar</em> (fly high), <em>Skyrocket</em> (go up very fast).</div>\n            <div class='bg-red-50 p-2 rounded'><strong>📉 DOWN:</strong> Decrease, Fall, Drop, <em>Plummet</em> (fall very fast), <em>Crash</em>.</div>\n        </div>\n        <p class='text-sm mt-2'><strong>Other movements:</strong> <em>Fluctuate</em> (up and down), <em>Stabilize</em> (stay the same), <em>Peak</em> (reach the top).</p>\n\n        <h3 class='text-lg font-bold text-orange-600 mt-4 mb-2'>2. Adverbs (How fast?)</h3>\n        <ul class='list-disc pl-5 space-y-1 text-slate-600 text-sm'>\n            <li><strong>Dramatically / Sharply:</strong> Very fast change.</li>\n            <li><strong>Steadily / Gradually:</strong> Slow, constant change.</li>\n            <li><strong>Slightly:</strong> A very small change.</li>\n        </ul>\n        ",
+      "speech_text": "To sound professional when analyzing data, avoid simple words. Instead of 'it went up a lot', say 'sales skyrocketed'. Instead of 'it went down a little', say 'it decreased slightly'."
+    },
+    {
+      "type": "listening",
+      "title": "Quarterly Sales Report",
+      "content": "Listen to the analyst describing the Q2 performance.",
+      "audio_script": "\n        Analyst: Let's look at the chart. In January, sales started at $10,000.\n        Manager: And what happened in February?\n        Analyst: In February, they rose steadily to $12,000. However, in March, we had a problem with the server, so sales plummeted to $5,000.\n        Manager: That looks bad. Did we recover?\n        Analyst: Yes. In April, after the fix, sales recovered dramatically, reaching a peak of $15,000.\n        ",
+      "quiz": [
+        {
+          "question": "What happened in March?",
+          "options": [
+            "Sales rose steadily",
+            "Sales plummeted",
+            "Sales stabilized"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "How did sales recover in April?",
+          "options": [
+            "Slightly",
+            "Dramatically",
+            "Slowly"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "What does 'Peak' mean?",
+          "options": [
+            "The lowest point",
+            "The highest point",
+            "The average"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "title": "Prepositions: By vs To",
+      "instruction": "Select the correct preposition. This is tricky!",
+      "questions": [
+        {
+          "text": "Sales increased _____ 10% (from 100 to 110).",
+          "options": [
+            "to",
+            "by",
+            "at"
+          ],
+          "correct": 1,
+          "explanation": "BY indica la diferencia (el cambio). TO indica el número final."
+        },
+        {
+          "text": "The price fell _____ $50 (it is now $50).",
+          "options": [
+            "by",
+            "of",
+            "to"
+          ],
+          "correct": 2,
+          "explanation": "El resultado final es $50, así que usamos TO."
+        },
+        {
+          "text": "There was a sharp increase _____ demand.",
+          "options": [
+            "on",
+            "in",
+            "at"
+          ],
+          "correct": 1,
+          "explanation": "Decimos 'an increase IN something' (increase in sales, in demand, in price)."
+        }
+      ]
+    },
+    {
+      "type": "chat",
+      "title": "Roleplay: Explain the Graph",
+      "system_prompt": "\n        You are a Board Director asking about company performance.\n        The user is the Data Analyst.\n        \n        Steps:\n        1. Ask: \"How did our stocks perform last month?\"\n        2. Wait for the user to describe a movement (e.g., \"They increased...\").\n        3. Ask for details: \"Was it a sharp increase or a slight one?\"\n        4. Ask for numbers: \"What number did we finish at?\"\n        \n        Correction Focus: Ensure they use professional verbs (increase, drop, rise) instead of \"go up/down\".\n        ",
+      "initial_message": "I'm looking at the monthly report. Can you summarize how our stocks performed last month?",
+      "user_goal": "Describe a trend using a verb (e.g., increased) and an adverb (e.g., sharply)."
+    }
+  ]
+}

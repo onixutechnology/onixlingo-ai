@@ -3,27 +3,34 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useProgressStore } from '@/store/progressStore'; 
-import { LogIn, UserPlus, User, Lock, Mail, AlertCircle, Loader2, ArrowRight } from 'lucide-react';
+import { LogIn, UserPlus, User, Lock, Mail, AlertCircle, Loader2, ArrowRight, CheckCircle2 } from 'lucide-react';
 
-// Detecta automáticamente si estás en Local o en Render
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
+// --- CONFIGURACIÓN INTELIGENTE ---
+const API_URL = process.env.NEXT_PUBLIC_API_URL || (
+  process.env.NODE_ENV === 'development'
+    ? 'http://127.0.0.1:8001'                  // Tu puerto local
+    : 'https://onixlingo-bckend.onrender.com'  // Tu backend en la nube
+);
 
 export default function AuthPage() {
   const router = useRouter();
   const { loadProgressFromDB } = useProgressStore();
 
-  // --- ESTADO DEL INTERRUPTOR (LOGIN vs REGISTER) ---
-  const [isRegister, setIsRegister] = useState(false); // false = Login, true = Registro
+  const [isRegister, setIsRegister] = useState(false); 
 
   // Estados del formulario
   const [formData, setFormData] = useState({ username: '', password: '', email: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  
+  // 🟢 NUEVO: Estado para el mensaje de éxito
+  const [success, setSuccess] = useState<string | null>(null);
 
-  // Limpiar formulario al cambiar de modo
+  // Limpiar formulario al cambiar de modo (Manual)
   const toggleMode = () => {
     setIsRegister(!isRegister);
     setError(null);
+    setSuccess(null); // Limpiamos éxito al cambiar manualmente
     setFormData({ username: '', password: '', email: '' });
   };
 
@@ -31,15 +38,14 @@ export default function AuthPage() {
     e.preventDefault();
     setLoading(true);
     setError(null);
+    setSuccess(null); // Limpiamos éxito previo
 
-    // Seleccionamos el endpoint según el modo
     const endpoint = isRegister ? '/api/v1/register' : '/api/v1/login';
     const url = `${API_URL}${endpoint}`;
 
     try {
       console.log(`🔐 Conectando a: ${url}`);
 
-      // Preparamos los datos (Email solo se envía si es registro)
       const payload = isRegister 
         ? formData 
         : { username: formData.username, password: formData.password };
@@ -58,11 +64,11 @@ export default function AuthPage() {
 
       // --- LÓGICA DE ÉXITO ---
       if (isRegister) {
-        // CASO 1: REGISTRO EXITOSO
-        alert("¡Cuenta creada con éxito! Ahora inicia sesión.");
-        toggleMode(); // Cambiamos automáticamente a la vista de Login
+        // 🟢 CAMBIO: En lugar de alert(), usamos el estado visual
+        setIsRegister(false); // Cambiamos a Login
+        setSuccess("¡Cuenta creada con éxito! Por favor inicia sesión.");
+        setFormData({ username: '', password: '', email: '' }); // Limpiamos inputs
       } else {
-        // CASO 2: LOGIN EXITOSO
         localStorage.setItem('currentUser', formData.username);
         
         if (data.progress) {
@@ -84,7 +90,6 @@ export default function AuthPage() {
     <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4 transition-all">
       <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md border border-slate-100 overflow-hidden relative">
         
-        {/* Header Visual Dinámico */}
         <div className={`p-8 text-center transition-colors duration-500 ${isRegister ? 'bg-purple-600' : 'bg-blue-600'}`}>
           <div className="mx-auto w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-4 text-white shadow-inner">
             {isRegister ? <UserPlus size={32} /> : <LogIn size={32} />}
@@ -98,6 +103,16 @@ export default function AuthPage() {
         </div>
 
         <div className="p-8">
+          
+          {/* 🟢 NUEVO: Barra de ÉXITO (Verde) */}
+          {success && (
+            <div className="mb-6 p-4 bg-green-50 text-green-700 text-sm rounded-xl flex items-center gap-3 border border-green-200 animate-in fade-in slide-in-from-top-2 shadow-sm">
+              <CheckCircle2 size={24} className="shrink-0 text-green-500" /> 
+              <span className="font-bold">{success}</span>
+            </div>
+          )}
+
+          {/* Barra de ERROR (Roja) */}
           {error && (
             <div className="mb-6 p-4 bg-red-50 text-red-600 text-sm rounded-xl flex items-center gap-3 border border-red-100 animate-in fade-in slide-in-from-top-2">
               <AlertCircle size={20} className="shrink-0" /> 
@@ -106,8 +121,6 @@ export default function AuthPage() {
           )}
           
           <form onSubmit={handleSubmit} className="space-y-4">
-            
-            {/* INPUT: USUARIO (Siempre visible) */}
             <div className="space-y-1">
               <label className="text-xs font-bold text-slate-500 uppercase ml-1 tracking-wider">Usuario</label>
               <div className="relative group">
@@ -123,7 +136,6 @@ export default function AuthPage() {
               </div>
             </div>
 
-            {/* INPUT: EMAIL (Solo visible en Registro) */}
             {isRegister && (
               <div className="space-y-1 animate-in fade-in slide-in-from-top-4">
                 <label className="text-xs font-bold text-slate-500 uppercase ml-1 tracking-wider">Correo Electrónico</label>
@@ -141,7 +153,6 @@ export default function AuthPage() {
               </div>
             )}
 
-            {/* INPUT: CONTRASEÑA (Siempre visible) */}
             <div className="space-y-1">
               <label className="text-xs font-bold text-slate-500 uppercase ml-1 tracking-wider">Contraseña</label>
               <div className="relative group">
@@ -157,7 +168,6 @@ export default function AuthPage() {
               </div>
             </div>
             
-            {/* BOTÓN DE ACCIÓN */}
             <button 
               disabled={loading}
               className={`w-full text-white font-bold py-4 rounded-xl transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed mt-6 ${isRegister ? 'bg-purple-600 hover:bg-purple-700 shadow-purple-600/30' : 'bg-blue-600 hover:bg-blue-700 shadow-blue-600/30'}`}
@@ -166,7 +176,6 @@ export default function AuthPage() {
             </button>
           </form>
 
-          {/* TOGGLE (EL INTERRUPTOR) */}
           <div className="mt-8 text-center pt-6 border-t border-slate-100">
             <p className="text-slate-500 text-sm mb-2 font-medium">
               {isRegister ? '¿Ya tienes una cuenta?' : '¿Nuevo en la plataforma?'}

@@ -2,12 +2,10 @@
 
 /**
  * ==============================================================================
- * ONIXLINGO LMS DASHBOARD - TITANIUM EDITION v7.0 (FIXED)
+ * ONIXLINGO LMS DASHBOARD - STUDENT EDITION (FREE TIER)
  * ==============================================================================
- * CORRECCIONES APLICADAS:
- * 1. Estructura JSX arreglada (Sidebar ahora se posiciona correctamente).
- * 2. Mapeo de colores estático (Tailwind no soporta interpolación dinámica).
- * 3. Limpieza de imports no utilizados.
+ * RUTA: /dashboard/page.tsx
+ * ESTADO: Acceso Libre con Publicidad (Se oculta si es Premium)
  * ==============================================================================
  */
 
@@ -17,18 +15,18 @@ import Link from 'next/link';
 import { useUIStore } from '@/store/uiStore';
 import Sidebar from '@/components/dashboard/sidebar'; 
 
-// --- ICONS ---
+// --- 📢 IMPORTACIÓN DE ANUNCIOS ---
+import { AdBanner } from '@/components/ads/AdBanner';
+
 import { 
   LogOut, ChevronRight, Play, Lock, Check, Home,
   Trophy, Zap, Flame, Headphones, BookOpen, PenTool, 
   Mic, Shield, LayoutGrid, User
 } from 'lucide-react';
 
-// --- DATA & STORES ---
 import { CURRICULUM } from '@/data/curriculum';
 import { useProgressStore } from '@/store/progressStore';
 
-// --- TYPES ---
 type LessonStatus = 'locked' | 'active' | 'completed';
 
 interface ThemeConfig {
@@ -41,8 +39,6 @@ interface ThemeConfig {
   gradient: string;
 }
 
-// --- UTILS: COLOR VARIANTS (FIX PARA TAILWIND) ---
-// Tailwind necesita clases completas, no dinámicas como `bg-${color}-100`
 const COLOR_VARIANTS: Record<string, { bg: string, text: string, hoverBorder: string, hoverShadow: string }> = {
     emerald: { bg: 'bg-emerald-100', text: 'text-emerald-600', hoverBorder: 'hover:border-emerald-300', hoverShadow: 'hover:shadow-emerald-100' },
     blue: { bg: 'bg-blue-100', text: 'text-blue-600', hoverBorder: 'hover:border-blue-300', hoverShadow: 'hover:shadow-blue-100' },
@@ -53,7 +49,6 @@ const COLOR_VARIANTS: Record<string, { bg: string, text: string, hoverBorder: st
     amber: { bg: 'bg-amber-100', text: 'text-amber-600', hoverBorder: 'hover:border-amber-300', hoverShadow: 'hover:shadow-amber-100' },
 };
 
-// --- UTILS: THEME ENGINE ---
 const getProfessionalTheme = (colorName: string, status: LessonStatus): ThemeConfig => {
   if (status === 'locked') {
     return {
@@ -102,7 +97,6 @@ const getLessonDescription = (title: string) => {
     return "Lección fundamental para avanzar en tu dominio del idioma inglés.";
 };
 
-// --- COMPONENT: HEADER STATS ---
 const HeaderStats = ({ xp, streak }: { xp: number, streak: number }) => (
   <div className="hidden md:flex items-center gap-4 bg-white/80 backdrop-blur-md px-5 py-2.5 rounded-2xl border border-slate-200 shadow-sm">
     <div className="flex items-center gap-3 px-3 border-r border-slate-200">
@@ -126,7 +120,6 @@ const HeaderStats = ({ xp, streak }: { xp: number, streak: number }) => (
   </div>
 );
 
-// --- COMPONENT: MOBILE BOTTOM NAV ---
 const MobileBottomNav = () => (
   <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 px-8 py-4 flex justify-between items-center z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] pb-safe">
     <Link href="/dashboard" className="flex flex-col items-center gap-1.5 text-indigo-600">
@@ -147,7 +140,6 @@ const MobileBottomNav = () => (
   </div>
 );
 
-// --- COMPONENT: TIMELINE NODE ---
 const TimelineNode = ({ id, title, status, stars, index, isLast, color, onClick }: any) => {
   const theme = getProfessionalTheme(color, status);
   const description = getLessonDescription(title);
@@ -155,12 +147,10 @@ const TimelineNode = ({ id, title, status, stars, index, isLast, color, onClick 
   
   return (
     <div className="relative flex group w-full mb-8">
-      {/* Línea Vertical */}
       {!isLast && (
         <div className="absolute left-[2.2rem] md:left-[2.7rem] top-[5rem] bottom-[-2rem] w-[3px] bg-slate-100 z-0 rounded-full"></div>
       )}
 
-      {/* Nodo (Icono) */}
       <div className="relative z-10 mr-6 md:mr-10 flex-shrink-0 pt-2">
         <button
           onClick={() => status !== 'locked' && onClick(id)}
@@ -178,7 +168,6 @@ const TimelineNode = ({ id, title, status, stars, index, isLast, color, onClick 
         </button>
       </div>
 
-      {/* Tarjeta de Contenido */}
       <div 
         onClick={() => status !== 'locked' && onClick(id)}
         className={`
@@ -232,7 +221,6 @@ const TimelineNode = ({ id, title, status, stars, index, isLast, color, onClick 
   );
 };
 
-// --- COMPONENT: CERT CARD ---
 const CertCard = ({ title, desc, icon: Icon, href, active = false, color }: any) => {
     const variant = COLOR_VARIANTS[color] || COLOR_VARIANTS['indigo'];
     
@@ -269,11 +257,10 @@ const CertCard = ({ title, desc, icon: Icon, href, active = false, color }: any)
     );
 };
 
-// --- MAIN PAGE ---
 export default function DashboardPage() {
   const router = useRouter();
   const { mode } = useUIStore(); 
-  const { isLessonCompleted, getLessonStars, completeLesson } = useProgressStore();
+  const { isLessonCompleted, getLessonStars } = useProgressStore();
   
   const [isMounted, setIsMounted] = useState(false);
   const [currentUser, setCurrentUser] = useState<string | null>(null);
@@ -290,13 +277,32 @@ export default function DashboardPage() {
     const user = localStorage.getItem('currentUser');
     setCurrentUser(user);
 
-    const progress = localStorage.getItem('onixlingo-progress');
-    if (progress) {
-      try {
-        const p = JSON.parse(progress);
-        const completedCount = p.state?.completedLessons?.length || 0;
-        setUserStats({ xp: completedCount * 150, lessons: completedCount, streak: 3 });
-      } catch (e) { console.error("Error parsing stats"); }
+    const localProgress = localStorage.getItem('onixlingo-progress');
+    if (localProgress) {
+        try {
+            const p = JSON.parse(localProgress);
+            const completedCount = Object.keys(p.state?.completedLessons || {}).length;
+            setUserStats({ xp: completedCount * 150, lessons: completedCount, streak: 3 });
+        } catch (e) { console.error(e); }
+    }
+
+    if (user) {
+        const BASE_URL = process.env.NEXT_PUBLIC_API_URL || (
+            process.env.NODE_ENV === 'development' 
+                ? 'http://127.0.0.1:8001'
+                : 'https://onixlingo-bckend.onrender.com'
+        );
+
+        fetch(`${BASE_URL}/api/v1/user/progress-map/${user}`)
+            .then(res => res.json())
+            .then(data => {
+                if (Object.keys(data).length > 0) {
+                    useProgressStore.getState().loadProgressFromDB(data);
+                    const count = Object.keys(data).length;
+                    setUserStats({ xp: count * 150, lessons: count, streak: 5 });
+                }
+            })
+            .catch(err => console.error("Error sincronizando:", err));
     }
   }, []);
 
@@ -321,10 +327,36 @@ export default function DashboardPage() {
     }
   };
 
+  const handleUnlockAll = async () => {
+    if (!currentUser) return alert("Error: No hay usuario activo.");
+
+    const BASE_URL = process.env.NEXT_PUBLIC_API_URL || (
+        process.env.NODE_ENV === 'development' 
+            ? 'http://127.0.0.1:8001' 
+            : 'https://onixlingo-bckend.onrender.com'
+    );
+
+    try {
+        const response = await fetch(`${BASE_URL}/api/v1/debug/unlock-all/${currentUser}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        });
+
+        if (response.ok) {
+            alert("🔓 MODO DIOS ACTIVADO: Niveles desbloqueados.");
+            window.location.reload(); 
+        } else {
+            alert("Error: No se pudo desbloquear.");
+        }
+    } catch (error) {
+        console.error(error);
+        alert(`Error de conexión con ${BASE_URL}. ¿El backend está encendido?`);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] via-[#F1F5F9] to-[#E2E8F0] font-sans text-slate-900 pb-32 lg:pb-0 selection:bg-indigo-100 selection:text-indigo-900">
       
-      {/* 1. TOP NAVIGATION */}
       <nav className="sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-slate-200/60 px-6 md:px-10 h-24 flex items-center justify-between shadow-sm transition-all">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center shadow-xl shadow-indigo-600/30 hover:scale-105 transition-transform cursor-pointer">
@@ -361,30 +393,38 @@ export default function DashboardPage() {
         </div>
       </nav>
 
-      {/* 2. MAIN CONTAINER */}
       <div className="max-w-[90rem] mx-auto flex flex-col lg:flex-row gap-12 pt-12 px-6 sm:px-10">
         
-        {/* LEFT COLUMN: CONTENT */}
         <div className="flex-1 min-w-0">
           
-          {/* Welcome Title */}
           <div className="mb-16">
             <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">
               Bienvenido, {currentUser || 'Estudiante'}
             </h1>
-            <p className="text-lg text-slate-500 max-w-2xl leading-relaxed">
+            <p className="text-lg text-slate-500 max-w-2xl leading-relaxed mb-6">
               Continúa tu ruta de aprendizaje. Estás a <span className="font-bold text-indigo-600">3 módulos</span> de tu próxima certificación oficial.
             </p>
+
+            <button
+              onClick={handleUnlockAll}
+              className="bg-red-600 text-white font-black py-3 px-6 rounded-xl shadow-lg border-2 border-red-500 hover:bg-red-700 hover:scale-105 transition-all flex items-center gap-3 animate-pulse"
+            >
+              <span className="text-2xl">🔓</span>
+              <div className="text-left leading-none">
+                <span className="block text-xs opacity-80 uppercase tracking-widest">Dev Tools</span>
+                <span className="text-sm">Desbloquear Todo</span>
+              </div>
+            </button>
           </div>
 
-          {/* CURRICULUM TIMELINE */}
+          {/* 📢 AQUÍ HE COLOCADO EL ANUNCIO HORIZONTAL */}
+          <AdBanner variant="horizontal" />
+
           <div className="space-y-16">
             {CURRICULUM.map((section, sIdx) => {
-                // Obtenemos colores seguros
                 const safeColor = COLOR_VARIANTS[section.color] || COLOR_VARIANTS['blue'];
                 return (
                     <div key={section.id} className="relative">
-                        {/* Section Header */}
                         <div className="flex items-end gap-4 mb-8 border-b-2 border-slate-200 pb-4">
                             <div className={`p-3 rounded-2xl ${safeColor.bg} ${safeColor.text} shadow-sm`}>
                                 <LayoutGrid size={32} />
@@ -415,7 +455,6 @@ export default function DashboardPage() {
             })}
           </div>
 
-          {/* CERTIFICATION CENTER (TOEIC) */}
           <div className="mt-24 mb-12">
             <div className="flex items-center justify-between mb-8">
               <div>
@@ -438,15 +477,12 @@ export default function DashboardPage() {
             </div>
           </div>
           
-        </div> {/* ✅ FIN DE COLUMNA IZQUIERDA */}
+        </div>
 
-        {/* RIGHT COLUMN: SIDEBAR */}
-        {/* Ahora está correctamente fuera del div flex-1 pero dentro del flex container */}
         <Sidebar userStats={userStats} />
 
-      </div> {/* ✅ FIN DEL CONTAINER PRINCIPAL */}
+      </div>
 
-      {/* 4. MOBILE NAV */}
       <MobileBottomNav />
 
     </div>

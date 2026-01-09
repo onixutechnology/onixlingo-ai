@@ -1,0 +1,86 @@
+{
+  "id": "pro-a2-2",
+  "title": "Future Forecast",
+  "description": "Planning with Going To.",
+  "level": "A2",
+  "topic": "Strategy",
+  "xp_reward": 200,
+  "slides": [
+    {
+      "type": "lecture",
+      "title": "Discussing Future Plans",
+      "content": "\n        <h3 class='text-lg font-bold text-indigo-600 mb-2'>1. The 'Going To' Structure</h3>\n        <p class='text-slate-600 mb-2'>In business, when we have a definite plan, we use:</p>\n        <div class='bg-blue-50 p-3 rounded text-center font-mono text-sm mb-4 border border-blue-200'>\n            Subject + <strong>AM/IS/ARE</strong> + <strong>GOING TO</strong> + Verb\n        </div>\n        <ul class='list-disc pl-5 space-y-1 text-slate-600 text-sm'>\n            <li>I <strong>am going to</strong> hire a new assistant.</li>\n            <li>She <strong>is going to</strong> present the data.</li>\n            <li>We <strong>are going to</strong> open a new office.</li>\n        </ul>\n\n        <h3 class='text-lg font-bold text-indigo-600 mt-4 mb-2'>2. Business Timeframes</h3>\n        <ul class='list-disc pl-5 space-y-1 text-slate-600 text-sm'>\n            <li><strong>Next Quarter (Q1, Q2...):</strong> The next 3-month period.</li>\n            <li><strong>Upcoming:</strong> Happening soon (e.g., \"The upcoming event\").</li>\n            <li><strong>Deadline:</strong> The final date to finish something.</li>\n        </ul>\n        ",
+      "speech_text": "When we talk about strategy, we don't usually guess. We have plans. We say: 'We are going to launch the product next quarter'. Don't forget the verb 'to be': I AM going to, She IS going to."
+    },
+    {
+      "type": "listening",
+      "title": "Q3 Strategy Meeting",
+      "content": "Listen to the CEO discussing plans for the next quarter.",
+      "audio_script": "\n        CEO: Alright team, let's talk about Q3 (Quarter 3).\n        Manager: What is the main goal?\n        CEO: Well, we are going to expand into the Asian market.\n        Manager: That's big. Who is going to lead that project?\n        CEO: Sarah is going to travel to Tokyo next month to set it up.\n        Manager: And what about the budget?\n        CEO: The finance team is going to review it tomorrow.\n        ",
+      "quiz": [
+        {
+          "question": "What is the plan for Q3?",
+          "options": [
+            "Close the office",
+            "Expand to Asia",
+            "Hire more staff"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Who is going to travel to Tokyo?",
+          "options": [
+            "The CEO",
+            "The Manager",
+            "Sarah"
+          ],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "title": "Structure Check",
+      "instruction": "Select the grammatically correct sentence.",
+      "questions": [
+        {
+          "text": "Identify the correct plan:",
+          "options": [
+            "We going to start.",
+            "We are going to start.",
+            "We going start."
+          ],
+          "correct": 1,
+          "explanation": "Siempre necesitas el verbo TO BE (am/is/are) antes de 'going to'."
+        },
+        {
+          "text": "Choose the correct negative form:",
+          "options": [
+            "I no going to sign.",
+            "I am not going to sign.",
+            "I don't going to sign."
+          ],
+          "correct": 1,
+          "explanation": "La negación va en el verbo to be: 'I am NOT going to...'."
+        },
+        {
+          "text": "Next month, the CEO _____ visit the factory.",
+          "options": [
+            "is going to",
+            "are going to",
+            "going to"
+          ],
+          "correct": 0,
+          "explanation": "The CEO = He/She -> IS going to."
+        }
+      ]
+    },
+    {
+      "type": "chat",
+      "title": "Roleplay: Your Agenda",
+      "system_prompt": "\n        You are a manager asking an employee about their plans for next week.\n        The user is the employee.\n        \n        Steps:\n        1. Ask: \"What are you going to do next week regarding the [Project Name]?\"\n        2. Ask specifically about a meeting or a deadline.\n        3. End the conversation confirming the plan.\n        \n        Correction Focus: Ensure the user uses \"I am going to...\" instead of \"I will...\" or \"I do...\".\n        If they say \"I will call the client\", say: \"Since it's a plan, say 'I am going to call...'\".\n        ",
+      "initial_message": "Let's review your schedule. What are you going to focus on next week?",
+      "user_goal": "State two planned actions using 'I am going to...'."
+    }
+  ]
+}

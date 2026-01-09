@@ -1,0 +1,86 @@
+{
+  "id": "pro-a2-3",
+  "title": "Tech Support",
+  "description": "Troubleshooting basics.",
+  "level": "A2",
+  "topic": "Technology",
+  "xp_reward": 200,
+  "slides": [
+    {
+      "type": "lecture",
+      "title": "Solving Tech Problems",
+      "content": "\n        <h3 class='text-lg font-bold text-indigo-600 mb-2'>1. Common Problems</h3>\n        <ul class='list-disc pl-5 space-y-1 text-slate-600 text-sm'>\n            <li><strong>The screen is frozen:</strong> It doesn't move.</li>\n            <li><strong>I can't log in:</strong> My password is not working.</li>\n            <li><strong>The Wi-Fi is down:</strong> No internet connection.</li>\n            <li><strong>The printer is jammed:</strong> Paper is stuck inside.</li>\n        </ul>\n\n        <h3 class='text-lg font-bold text-indigo-600 mt-4 mb-2'>2. Giving Instructions (Imperatives)</h3>\n        <p class='text-slate-600 mb-2'>To give technical help, use the verb directly:</p>\n        <div class='grid grid-cols-2 gap-2 text-sm'>\n            <div class='bg-blue-50 p-2 rounded'><strong>Restart</strong> the computer.</div>\n            <div class='bg-blue-50 p-2 rounded'><strong>Click</strong> on the icon.</div>\n            <div class='bg-blue-50 p-2 rounded'><strong>Check</strong> the cable.</div>\n            <div class='bg-blue-50 p-2 rounded'><strong>Don't turn off</strong> the power.</div>\n        </div>\n        ",
+      "speech_text": "Don't panic when technology fails. First, describe the problem: 'My screen is frozen'. Then, follow instructions. We use imperatives like 'Restart', 'Click', or 'Open' to tell someone what to do."
+    },
+    {
+      "type": "listening",
+      "title": "Help Desk Call",
+      "content": "Listen to an employee calling IT support.",
+      "audio_script": "\n        IT Support: IT Help Desk, this is Kevin. How can I help?\n        Employee: Hi Kevin. I have a problem. I can't access my email.\n        IT Support: Okay. Is there an error message?\n        Employee: Yes, it says 'Incorrect Password', but I am using the right one.\n        IT Support: I see. Please click on 'Forgot Password' and check your phone for a code.\n        Employee: Ah, okay. I see the code now. Thanks!\n        ",
+      "quiz": [
+        {
+          "question": "What is the employee's problem?",
+          "options": [
+            "Wi-Fi is down",
+            "Cannot access email",
+            "Printer is broken"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "What does Kevin tell the employee to do?",
+          "options": [
+            "Restart the computer",
+            "Buy a new phone",
+            "Click on 'Forgot Password'"
+          ],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "title": "Fix it!",
+      "instruction": "Select the correct instruction for each problem.",
+      "questions": [
+        {
+          "text": "Problem: The computer is very slow. Solution: ____ it.",
+          "options": [
+            "Restarting",
+            "Restart",
+            "To restart"
+          ],
+          "correct": 1,
+          "explanation": "Para dar instrucciones usamos el Imperativo (el verbo en su forma base)."
+        },
+        {
+          "text": "Problem: No internet. Solution: ____ the router cable.",
+          "options": [
+            "Check",
+            "Checks",
+            "Checking"
+          ],
+          "correct": 0,
+          "explanation": "Imperativo directo: 'Check'."
+        },
+        {
+          "text": "Problem: The file is closed. Solution: ____ it again.",
+          "options": [
+            "Opening",
+            "Open",
+            "Opens"
+          ],
+          "correct": 1,
+          "explanation": "Imperativo directo: 'Open'."
+        }
+      ]
+    },
+    {
+      "type": "chat",
+      "title": "Roleplay: IT Assistant",
+      "system_prompt": "\n        You are an IT Support Specialist.\n        The user is a colleague with a technical problem.\n        \n        Steps:\n        1. Ask: \"Hello, IT Support. What is the problem?\"\n        2. Listen to their issue (e.g., printer not working, no internet).\n        3. Give them a simple instruction using an IMPERATIVE (e.g., \"Restart the router\", \"Check the cable\").\n        4. Ask if it works now.\n        \n        Correction Focus: If the user describes the problem vaguely (\"It's bad\"), ask for details (\"Is there an error message?\").\n        ",
+      "initial_message": "IT Support here. What seems to be the problem with your computer?",
+      "user_goal": "Describe a problem (e.g., 'My internet is slow') and follow the instruction."
+    }
+  ]
+}

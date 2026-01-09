@@ -3,244 +3,246 @@ import random
 import os
 import uuid
 
-# --- 1. BASE DE DATOS LINGÜÍSTICA EXPANDIDA ---
+# ==========================================
+# 1. BASE DE DATOS FINANCIERA (A1-3)
+# ==========================================
 
 DB = {
-    "subjects": [
-        {"p": "I", "3rd": False, "v_be": "am", "aux": "do", "es": "Yo"},
-        {"p": "You", "3rd": False, "v_be": "are", "aux": "do", "es": "Tú"},
-        {"p": "He", "3rd": True, "v_be": "is", "aux": "does", "es": "Él"},
-        {"p": "She", "3rd": True, "v_be": "is", "aux": "does", "es": "Ella"},
-        {"p": "My dad", "3rd": True, "v_be": "is", "aux": "does", "es": "Mi papá"},
-        {"p": "We", "3rd": False, "v_be": "are", "aux": "do", "es": "Nosotros"},
-        {"p": "They", "3rd": False, "v_be": "are", "aux": "do", "es": "Ellos"}
+    # Items de oficina con precios base aproximados y plurales
+    "items": [
+        {"s": "laptop", "p": "laptops", "price": 1000, "type": "tech"},
+        {"s": "ergonomic chair", "p": "ergonomic chairs", "price": 300, "type": "furniture"},
+        {"s": "printer", "p": "printers", "price": 250, "type": "tech"},
+        {"s": "software license", "p": "software licenses", "price": 50, "type": "software"},
+        {"s": "desk", "p": "desks", "price": 500, "type": "furniture"},
+        {"s": "projector", "p": "projectors", "price": 800, "type": "tech"},
+        {"s": "coffee machine", "p": "coffee machines", "price": 150, "type": "kitchen"}
     ],
-    "verbs": [
-        {"base": "wake up", "3rd": "wakes up", "obj": "at 7 AM"},
-        {"base": "brush", "3rd": "brushes", "obj": "my teeth"}, # -es ending
-        {"base": "study", "3rd": "studies", "obj": "English"},  # -ies ending
-        {"base": "go", "3rd": "goes", "obj": "to work"},        # -es ending
-        {"base": "have", "3rd": "has", "obj": "breakfast"},     # irregular
-        {"base": "watch", "3rd": "watches", "obj": "TV"},
-        {"base": "do", "3rd": "does", "obj": "exercise"}
+    # Monedas globales
+    "currencies": [
+        {"code": "USD", "symbol": "$", "name": "Dollars"},
+        {"code": "EUR", "symbol": "€", "name": "Euros"},
+        {"code": "GBP", "symbol": "£", "name": "Pounds"},
+        {"code": "JPY", "symbol": "¥", "name": "Yen"}
     ],
-    "adverbs": [
-        {"word": "always", "pct": "100%"},
-        {"word": "usually", "pct": "80%"},
-        {"word": "sometimes", "pct": "50%"},
-        {"word": "never", "pct": "0%"}
+    # Números escritos para práctica de lectura
+    "numbers_text": [
+        {"n": 100, "t": "one hundred"},
+        {"n": 1000, "t": "one thousand"},
+        {"n": 1500, "t": "one thousand five hundred"},
+        {"n": 50000, "t": "fifty thousand"},
+        {"n": 1000000, "t": "one million"},
+        {"n": 250, "t": "two hundred and fifty"}
     ],
-    "prepositions": [
-        {"prep": "at", "items": ["7:00 PM", "noon", "midnight", "night", "the weekend"]},
-        {"prep": "in", "items": ["the morning", "the afternoon", "the evening", "December"]},
-        {"prep": "on", "items": ["Mondays", "Sunday morning", "my birthday", "weekdays"]}
+    # Vocabulario Clave (Mejora 3)
+    "vocabulary_list": [
+        {"word": "Budget", "meaning": "An estimate of income and expenditure for a set period.", "ipa": "/ˈbʌdʒɪt/"},
+        {"word": "Currency", "meaning": "A system of money in general use in a particular country.", "ipa": "/ˈkɜːrənsi/"},
+        {"word": "Invoice", "meaning": "A list of goods sent or services provided, with a statement of the sum due.", "ipa": "/ˈɪnvɔɪs/"},
+        {"word": "Affordable", "meaning": "Inexpensive; reasonably priced.", "ipa": "/əˈfɔːrdəbl/"}
     ]
 }
 
-# --- 2. GENERADORES DE EJERCICIOS AVANZADOS ---
+# ==========================================
+# 2. UTILIDADES
+# ==========================================
 
-def gen_conjugation_logic(idx):
-    """
-    (QUIZ) Reglas de 3ra persona (s, es, ies, irregular).
-    """
-    subj = random.choice(DB["subjects"])
-    verb = random.choice(DB["verbs"])
+def generate_unique_id(prefix):
+    return f"{prefix}_{uuid.uuid4().hex[:8]}"
+
+# ==========================================
+# 3. GENERADORES DE EJERCICIOS (DRILLS)
+# ==========================================
+
+def gen_price_grammar(idx):
+    """Gramática: How much IS (singular) vs ARE (plural)."""
+    item = random.choice(DB["items"])
+    is_plural = random.choice([True, False])
     
-    correct = verb['3rd'] if subj['3rd'] else verb['base']
-    
-    # Generar distractores inteligentes
-    if subj['3rd']:
-        # Si es 3ra persona, distractores son: base, gerundio, o error tipo "haves"
-        distractors = [verb['base'], f"{verb['base']}ing"]
-        if verb['base'] == "have": distractors.append("haves")
-        elif verb['base'] == "go": distractors.append("gos")
+    if is_plural:
+        obj = item["p"]
+        verb = "are"
+        distractor = "is"
     else:
-        # Si no es 3ra persona, distractores son: forma 3ra, gerundio
-        distractors = [verb['3rd'], f"{verb['base']}ing"]
-
-    # Completar opciones
-    while len(distractors) < 3:
-        distractors.append("to " + verb['base'])
+        obj = item["s"]
+        verb = "is"
+        distractor = "are"
+        
+    sentence = f"How much ___ the {obj}?"
     
-    options = [correct] + distractors[:3]
+    return {
+        "id": generate_unique_id("gram"),
+        "type": "quiz_choice",
+        "difficulty": "medium",
+        "tags": ["grammar", "singular_plural", "prices"],
+        "question": f"Completa la pregunta: '{sentence}'",
+        "options": [verb, distractor, "am", "be"],
+        "correct_answer": verb,
+        "explanation": f"'{obj}' es {'plural' if is_plural else 'singular'}, así que usamos '{verb}'."
+    }
+
+def gen_number_reading(idx):
+    """Lectura de números grandes."""
+    num_data = random.choice(DB["numbers_text"])
+    currency = random.choice(DB["currencies"])
+    
+    display = f"{currency['symbol']}{num_data['n']:,}" # Ejemplo: $1,000
+    
+    # Generar distractores lógicos
+    options = [
+        f"{num_data['t']} {currency['name'].lower()}", # Correcto
+        f"{num_data['t']} {currency['code']}",
+        f"{num_data['n']} {currency['name'].lower()}" 
+    ]
+    # Distractor extra confuso
+    if num_data['n'] == 1000:
+        options.append(f"one hundred {currency['name'].lower()}")
+    else:
+        options.append(f"ten thousand {currency['name'].lower()}")
+        
     random.shuffle(options)
     
     return {
-        "id": f"conj_{idx}",
+        "id": generate_unique_id("num"),
+        "type": "quiz_choice",
+        "difficulty": "hard",
+        "tags": ["vocabulary", "numbers"],
+        "question": f"¿Cómo se lee este precio en un contrato?: **{display}**",
+        "options": options,
+        "correct_answer": f"{num_data['t']} {currency['name'].lower()}",
+        "explanation": "En inglés de negocios, debemos escribir los números completos en documentos formales."
+    }
+
+def gen_total_calculation(idx):
+    """Matemáticas simples de negocios."""
+    item = random.choice(DB["items"])
+    qty = random.choice([2, 3, 4, 5, 10])
+    currency = random.choice(DB["currencies"])
+    
+    total = item["price"] * qty
+    
+    prompt = f"We need {qty} {item['p']}. Each one costs {currency['symbol']}{item['price']}."
+    question = f"What is the total budget?"
+    
+    correct_str = f"{currency['symbol']}{total:,}"
+    distractor1 = f"{currency['symbol']}{item['price']:,}"
+    distractor2 = f"{currency['symbol']}{total + 100:,}"
+    
+    return {
+        "id": generate_unique_id("math"),
         "type": "quiz_choice",
         "difficulty": "medium",
-        "tags": ["grammar", "present_simple"],
-        "question": f"Completa la rutina: '{subj['p']} ___ {verb['obj']} every day.'",
-        "options": options,
-        "correct_answer": correct,
-        "explanation": f"Sujeto '{subj['p']}' {( 'es 3ra persona, requiere S/ES' if subj['3rd'] else 'no es 3ra persona, usa verbo base' )}."
+        "tags": ["logic", "math", "budgeting"],
+        "question": f"{prompt} {question}",
+        "options": [correct_str, distractor1, distractor2],
+        "correct_answer": correct_str,
+        "explanation": f"{qty} veces {item['price']} es igual a {total}."
     }
 
-def gen_adverb_order_scramble(idx):
-    """
-    (ORDER) Orden de adverbios: Sujeto + Adverbio + Verbo.
-    """
-    subj = random.choice(DB["subjects"])
-    verb = random.choice(DB["verbs"])
-    adv = random.choice(DB["adverbs"])
-    
-    # Caso 1: Verbo de acción (Adverbio ANTES)
-    # Ej: She always eats.
-    v_form = verb['3rd'] if subj['3rd'] else verb['base']
-    parts = [subj['p'], adv['word'], v_form, verb['obj']]
-    scrambled = parts.copy()
-    random.shuffle(scrambled)
+def gen_currency_symbol_match(idx):
+    """Identificación de símbolos de moneda."""
+    curr = random.choice(DB["currencies"])
     
     return {
-        "id": f"ord_{idx}",
-        "type": "order_sentence",
-        "difficulty": "hard",
-        "tags": ["syntax", "adverbs"],
-        "question": f"Ordena la frase ({adv['pct']} frequency):",
-        "parts": scrambled,
-        "correct_order": parts,
-        "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
-    }
-
-def gen_preposition_fill(idx):
-    """
-    (TYPE) Escribir At/In/On según contexto.
-    """
-    group = random.choice(DB["prepositions"])
-    item = random.choice(group["items"])
-    subj = random.choice(DB["subjects"])
-    
-    sentence = f"{subj['p']} sleeps ___ {item}."
-    
-    return {
-        "id": f"prep_{idx}",
+        "id": generate_unique_id("sym"),
         "type": "fill_input",
-        "difficulty": "medium",
-        "tags": ["grammar", "prepositions"],
-        "question": f"Escribe la preposición correcta (at/in/on): '{sentence}'",
-        "correct_answers": [group["prep"]],
-        "hint": f"Usamos esta preposición para '{item}'.",
-        "explanation": f"Regla: {group['prep'].upper()} se usa con '{item}'."
+        "difficulty": "easy",
+        "tags": ["vocabulary", "symbols"],
+        "question": f"¿Qué moneda representa el símbolo **{curr['symbol']}**? (Escribe el nombre en inglés, plural)",
+        "correct_answers": [curr["name"], curr["name"].lower()],
+        "hint": f"Código ISO: {curr['code']}",
+        "explanation": f"{curr['symbol']} es el símbolo para {curr['name']}."
     }
 
-def gen_negative_transformation(idx):
-    """
-    (QUIZ) Transformar afirmativo a negativo (Don't vs Doesn't).
-    """
-    subj = random.choice(DB["subjects"])
-    verb = random.choice(DB["verbs"])
-    
-    # Frase original: She plays
-    v_form = verb['3rd'] if subj['3rd'] else verb['base']
-    original = f"{subj['p']} {v_form} {verb['obj']}."
-    
-    # Correcto: She doesn't play
-    aux_neg = "doesn't" if subj['3rd'] else "don't"
-    correct = f"{subj['p']} {aux_neg} {verb['base']} {verb['obj']}."
-    
-    # Trampas
-    wrong1 = f"{subj['p']} not {v_form} {verb['obj']}." # She not plays
-    wrong2 = f"{subj['p']} {aux_neg} {v_form} {verb['obj']}." # She doesn't plays (ERROR COMÚN)
-    wrong3 = f"{subj['p']} no {verb['base']} {verb['obj']}." # She no play
-    
-    options = [correct, wrong1, wrong2, wrong3]
-    random.shuffle(options)
-    
-    return {
-        "id": f"neg_{idx}",
-        "type": "quiz_choice",
-        "difficulty": "hard",
-        "tags": ["grammar", "negation"],
-        "question": f"Selecciona la forma NEGATIVA correcta de:\n'{original}'",
-        "options": options,
-        "correct_answer": correct,
-        "explanation": f"Usamos '{aux_neg}' y el verbo vuelve a su forma BASE (sin S)."
-    }
-
-# --- 3. ENSAMBLAJE DE LECCIÓN (TITANIUM) ---
+# ==========================================
+# 4. BUILDER
+# ==========================================
 
 def build_lesson():
     lesson = {
+        "meta": {
+            "version": "Titanium 2.1",
+            "created_at": "2024-01-01",
+            "author": "Titanium Engine"
+        },
         "id": "pro-a1-3",
-        "version": "Titanium 2.0",
-        "title": "Routine & Habits Mastery",
+        "title": "Budget & Numbers",
         "level": "A1",
-        "tags": ["present_simple", "daily_life", "grammar"],
-        "total_xp": 200,
+        "cefr_code": "A1.2",
+        "description": "Aprende a preguntar precios, manejar monedas internacionales y calcular presupuestos básicos.",
+        "tags": ["money", "numbers", "business", "math"],
+        "duration_min": 50,
+        "learning_objectives": ["Can ask for prices using 'How much'", "Can read large numbers and currencies", "Can calculate simple totals"],
+        "prerequisites": ["pro-a1-2"],
+        "vocabulary_list": DB["vocabulary_list"],
+        "theme_color": "#F59E0B", # Amber (Gold/Money)
+        "cultural_notes": "In the US, prices displayed often do not include sales tax, which is added at the register.",
         "stages": []
     }
-    
-    # ETAPA 1: CONCEPTOS (Lecture)
+
+    # --- STAGE 1: LECTURE ---
     lesson["stages"].append({
         "id": "stage_intro",
         "type": "lecture",
-        "title": "The Daily Grind",
+        "title": "Money Talks",
         "parts": [
             {
-                "visual": "## The Super 'S' 🦸\n\nHe/She/It needs an **S**.\n\n* Work ➔ Works\n* Watch ➔ Watches\n* Study ➔ Studies\n* Have ➔ **Has** (Irregular!)",
-                "audio": "Welcome. To talk about daily life, you need to master the third person. Remember the spelling rules. It's not always just adding an S. Watch out for 'Has'!",
-                "animation": "teacher_pointing",
-                "duration": 15
-            },
-            {
-                "visual": "## Frequency 📊\n\n**Always** (100%)\n**Usually** (80%)\n**Sometimes** (50%)\n**Never** (0%)\n\nPosition: Before the verb!",
-                "audio": "Where do you put 'always'? Before the action. I ALWAYS eat breakfast. I NEVER wake up late.",
-                "animation": "explaining"
+                "visual": "## The Price Formula 💰\n\nSingular: How much **IS** the laptop?\nPlural: How much **ARE** the printers?\n\nSymbols: $ (Dollars), € (Euros), £ (Pounds).",
+                "audio_script": "In business, numbers must be precise. Remember: use IS for one item, and ARE for many. Let's talk about money.",
+                "duration": 15,
+                "image_prompt": "A clean infographic showing currencies USD, EUR, GBP and a price tag."
             }
         ]
     })
+
+    # --- BLOQUES DE EJERCICIOS (100 TOTAL) ---
+    all_questions = []
+
+    # Generamos 100 ejercicios mezclados
+    for i in range(30): all_questions.append(gen_price_grammar(i))      # Gramática (Is/Are)
+    for i in range(30): all_questions.append(gen_number_reading(i+30))  # Lectura de números
+    for i in range(20): all_questions.append(gen_total_calculation(i+60)) # Matemáticas
+    for i in range(20): all_questions.append(gen_currency_symbol_match(i+80)) # Símbolos
     
-    # ETAPA 2: 3RD PERSON DRILL (Quiz)
-    lesson["stages"].append({
-        "id": "stage_conjugation",
-        "type": "gamified_quiz",
-        "title": "Conjugation Challenge",
-        "description": "Elige la forma correcta del verbo.",
-        "xp_reward": 100,
-        "questions": [gen_conjugation_logic(i) for i in range(8)]
-    })
-    
-    # ETAPA 3: NEGATION LOGIC (Transform)
-    lesson["stages"].append({
-        "id": "stage_negation",
-        "type": "gamified_quiz",
-        "title": "The Power of NO",
-        "description": "Transforma oraciones a negativo correctamente.",
-        "xp_reward": 150,
-        "questions": [gen_negative_transformation(i) for i in range(8)]
-    })
-    
-    # ETAPA 4: ADVERB SCRAMBLE (Order)
-    lesson["stages"].append({
-        "id": "stage_order",
-        "type": "gamified_quiz",
-        "title": "Frequency Architect",
-        "description": "Ordena las palabras en la posición correcta.",
-        "xp_reward": 150,
-        "questions": [gen_adverb_order_scramble(i) for i in range(6)]
-    })
-    
-    # ETAPA 5: PREPOSITION TYPING (Fill Input)
-    lesson["stages"].append({
-        "id": "stage_prep",
-        "type": "gamified_quiz",
-        "title": "Time Lords",
-        "description": "Escribe AT, IN u ON.",
-        "xp_reward": 150,
-        "questions": [gen_preposition_fill(i) for i in range(8)]
-    })
-    
-    # BOSS: ROUTINE CHAT
+    random.shuffle(all_questions)
+
+    # Chunking en bloques de 20
+    chunk_size = 20
+    for i in range(0, len(all_questions), chunk_size):
+        chunk = all_questions[i:i + chunk_size]
+        block_num = (i // chunk_size) + 1
+        
+        lesson["stages"].append({
+            "id": f"stage_practice_block_{block_num}",
+            "type": "gamified_quiz",
+            "title": f"Financial Drill {block_num}",
+            "description": f"Auditoría de conocimientos {block_num}/5.",
+            "xp_reward": 100 + (block_num * 10),
+            "questions": chunk,
+            "recommended_streak": 2
+        })
+
+    # --- BOSS STAGE: THE NEGOTIATION ---
     lesson["stages"].append({
         "id": "stage_boss",
         "type": "practice_chat",
-        "title": "The Interview",
-        "scenario": "Estás en una entrevista de trabajo. El reclutador quiere saber si eres organizado.",
-        "ai_system_prompt": "ROLE: Strict HR Manager. GOAL: Ask 'What time do you wake up?' and 'Do you work on weekends?'. Verify Prepositions and Present Simple.",
-        "initial_message": "Have a seat. I need productive people. Tell me, what time do you usually wake up?",
-        "success_criteria": ["uses_at_time", "uses_present_simple"]
+        "title": "The Vendor Negotiation",
+        "scenario": "Estás comprando equipo para tu nueva oficina. Pregunta precios al vendedor.",
+        "ai_system_prompt": """
+        ROLE: Office Supplies Vendor.
+        GOAL: Answer questions about prices of laptops, desks, and chairs.
+        BEHAVIOR:
+        1. When user asks "How much is the [item]?", give a price in Dollars.
+        2. If user asks about plural "How much are the [items]?", give a price per unit.
+        3. Be polite but professional.
+        4. Sometimes offer a small discount if they buy many.
+        """,
+        "initial_message": "Welcome to OfficeDepot Pro. How can I help you with your budget today?",
+        "next_lesson_id": "pro-a1-4",
+        "confidence_score_enabled": True,
+        "badge_reward": "Finance Rookie"
     })
-    
+
     return lesson
 
 # --- EXEC ---
@@ -248,6 +250,10 @@ if __name__ == "__main__":
     data = build_lesson()
     out_path = "backend/app/data/lessons/pro-a1-3.json"
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
-    print(f"✅ LECCIÓN GENERADA: {out_path}")
+        
+    print(f"✅ LECCIÓN A1-3 (TITANIUM) GENERADA CON ÉXITO.")
+    print(f"📂 Ubicación: {out_path}")
+    print(f"🔢 Total de Ejercicios: {sum(len(s.get('questions', [])) for s in data['stages'])}")

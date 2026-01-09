@@ -1,162 +1,233 @@
 export type ExerciseType = 'chat' | 'grammar' | 'listening' | 'toeic_mock' | 'lecture';
 
-// 1. Definimos la estructura del Nodo (La bolita en el mapa)
+// 1. Estructura del Nodo (La lección individual)
 export interface LessonNode {
-  id: string; // DEBE COINCIDIR con el nombre del archivo JSON en backend (ej: pro-a1-1)
+  id: string; // DEBE COINCIDIR EXACTAMENTE con el nombre del archivo JSON en backend
   title: string;
   description: string;
   type: ExerciseType;
   
-  // Propiedades Visuales (Gamification)
+  // Gamification & UI
   locked: boolean;
   completed: boolean;
   stars: 0 | 1 | 2 | 3;
-  position: 'left' | 'center' | 'right'; // Para el efecto zig-zag
+  position: 'left' | 'center' | 'right'; 
   
-  // LA MAGIA: El prompt que se enviará a Gemini (Fallback si no hay JSON)
+  // Prompt de Respaldo para la IA
   aiPrompt: string;
 }
 
-// 2. Definimos la Sección (El Mundo: A1, A2, etc.)
+// 2. Estructura de la Sección (El Nivel)
 export interface LevelSection {
   id: string;
   title: string;
   description: string;
-  color: string; // 'emerald', 'blue', 'orange', 'purple'
+  color: 'emerald' | 'blue' | 'orange' | 'purple'; 
   lessons: LessonNode[];
 }
 
 export const CURRICULUM: LevelSection[] = [
-  // --- MUNDO 1: NIVEL A1 (Principiante) ---
+  // --- NIVEL A1: BEGINNER (Archivos: pro-a1-X.json) ---
   {
     id: 'A1',
-    title: 'Nivel A1: Beginner',
-    description: 'Fundamentos, saludos y supervivencia.',
-    color: 'emerald', // Verde Duolingo
+    title: 'Nivel A1: Foundations',
+    description: 'Fundamentos ejecutivos y supervivencia.',
+    color: 'emerald',
     lessons: [
       { 
-        id: 'pro-a1-1',  // ID SINCRONIZADO CON BACKEND
-        title: 'Hello & To Be', 
-        description: 'Preséntate y usa el verbo ser/estar.',
+        id: 'pro-a1-1', 
+        title: 'The Networking Event', 
+        description: 'Identity & To Be.',
         type: 'lecture', 
-        locked: false, 
-        completed: false, 
-        stars: 0, 
-        position: 'center',
-        aiPrompt: 'The user is a complete beginner (A1). Your goal is to teach the Verb "To Be" (am, is, are). Start by explaining it simply in Spanish, then ask the user to introduce themselves. Correct every mistake gently.'
+        locked: false, completed: false, stars: 0, position: 'center',
+        aiPrompt: 'Roleplay: Networking event. User introduces themselves using To Be.'
       },
       { 
-        id: 'pro-a1-2', // ID SINCRONIZADO CON BACKEND
+        id: 'pro-a1-2', 
         title: 'Time Mastery', 
-        description: 'Pasado, Presente y Futuro.',
+        description: 'Logistics & Schedules.',
         type: 'grammar', 
-        locked: true, 
-        completed: false, 
-        stars: 0, 
-        position: 'left',
-        aiPrompt: 'Teach numbers 1-20 and how to ask "How old are you?". Practice with the user by asking their age and the age of family members.'
+        locked: true, completed: false, stars: 0, position: 'left',
+        aiPrompt: 'Practice telling time and scheduling meetings.'
       },
       { 
-        id: 'pro-a1-3', // ID SINCRONIZADO CON BACKEND
+        id: 'pro-a1-3', 
+        title: 'Budget & Numbers', 
+        description: 'Currency & Prices.',
+        type: 'chat', 
+        locked: true, completed: false, stars: 0, position: 'center',
+        aiPrompt: 'Negotiation practice involving numbers and prices.'
+      },
+      { 
+        id: 'pro-a1-4', 
         title: 'Daily Routine', 
-        description: 'Present Simple para rutinas.',
+        description: 'Habits & Productivity.',
         type: 'chat', 
-        locked: true, 
-        completed: false, 
-        stars: 0, 
-        position: 'center',
-        aiPrompt: 'Teach the Present Simple tense for routines. Focus on the third person "s" (he runs, she eats). Ask the user what they do in the morning.'
+        locked: true, completed: false, stars: 0, position: 'right',
+        aiPrompt: 'Discuss daily work routines using Present Simple.'
       },
       { 
-        id: 'pro-a1-4', // ID SINCRONIZADO CON BACKEND
-        title: 'Food & Ordering', 
-        description: 'Pide comida en un restaurante.',
+        id: 'pro-a1-5', 
+        title: 'Office Navigation', 
+        description: 'Locations & Directions.',
+        type: 'grammar', 
+        locked: true, completed: false, stars: 0, position: 'center',
+        aiPrompt: 'Give and receive directions within an office building.'
+      },
+      { 
+        id: 'pro-a1-6', 
+        title: 'The Business Lunch', 
+        description: 'Hospitality & Ordering.',
         type: 'listening', 
-        locked: true, 
-        completed: false, 
-        stars: 0, 
-        position: 'right',
-        aiPrompt: 'Roleplay: You are a waiter in a London cafe. The user is the customer. Guide them to order breakfast using "I would like" or "Can I have".'
+        locked: true, completed: false, stars: 0, position: 'left',
+        aiPrompt: 'Order a meal professionally with a client.'
       },
       { 
-        id: 'a1-boss', 
-        title: 'Checkpoint A1', 
-        description: 'Demuestra que ya no eres novato.',
-        type: 'toeic_mock', 
-        locked: true, 
-        completed: false, 
-        stars: 0, 
-        position: 'center',
-        aiPrompt: 'Conduct a mini-test covering To Be, Numbers, and Routines. Ask 5 rapid-fire questions. If they fail 2, tell them to study more.'
-      },
-    ]
-  },
-
-  // --- MUNDO 2: NIVEL A2 (Elemental) ---
-  {
-    id: 'A2',
-    title: 'Nivel A2: Elementary',
-    description: 'Pasado simple, viajes y anécdotas.',
-    color: 'blue',
-    lessons: [
-      { 
-        id: 'a2-1', 
-        title: 'Last Weekend', 
-        description: 'Uso del Past Simple.',
+        id: 'pro-a1-7', 
+        title: 'Business Trip', 
+        description: 'Travel Logistics.',
         type: 'chat', 
-        locked: true, 
-        completed: false, 
-        stars: 0, 
-        position: 'center',
-        aiPrompt: 'Focus on Past Simple (Regular and Irregular verbs). Ask the user what they did last weekend. Correct usage of "did" and "didn\'t".'
-      },
-      { 
-        id: 'a2-2', 
-        title: 'Travel Plans', 
-        description: 'Future with Going To.',
-        type: 'grammar', 
-        locked: true, 
-        completed: false, 
-        stars: 0, 
-        position: 'left',
-        aiPrompt: 'Teach "Going to" for future plans. Ask the user where they are going to go on their next vacation.'
-      },
-    ]
-  },
-
-  // --- MUNDO 3: NIVEL B1 (Executive Foundation - PRO) ---
-  {
-    id: 'exec-b1', // ID COINCIDE CON DASHBOARD PRO
-    title: 'Nivel B1: Intermediate',
-    description: 'Opiniones complejas y trabajo.',
-    color: 'orange',
-    lessons: [
-      { 
-        id: 'pro-b1-1', // ID SINCRONIZADO CON BACKEND (Generado en fix_lesson.py)
-        title: 'Professional Intro', 
-        description: 'Networking de alto nivel.',
-        type: 'chat', 
-        locked: true, 
-        completed: false, 
-        stars: 0, 
-        position: 'center',
-        aiPrompt: 'Roleplay: You are a CEO. The user must introduce themselves professionally. Accept only "Good morning" or "How do you do".'
-      },
-      { 
-        id: 'pro-b1-2', 
-        title: 'Formal Emailing', 
-        description: 'Redacción corporativa.',
-        type: 'grammar', 
-        locked: true, 
-        completed: false, 
-        stars: 0, 
-        position: 'right',
-        aiPrompt: 'Teach formal email structure: Subject line, Salutation (Dear Mr./Ms.), Body, and Sign-off (Sincerely).'
+        locked: true, completed: false, stars: 0, position: 'center',
+        aiPrompt: 'Check-in at an airport and handle travel scenarios.'
       }
     ]
   },
 
-  // --- MUNDO FINAL: TOEIC PREP ---
+  // --- NIVEL A2: ELEMENTARY (Archivos: pro-a2-X.json) ---
+  {
+    id: 'A2',
+    title: 'Nivel A2: Operations',
+    description: 'Reportes pasados y planes futuros.',
+    color: 'blue',
+    lessons: [
+      { 
+        id: 'pro-a2-1', // ID Corregido para coincidir con backend
+        title: 'Project Update', 
+        description: 'Past Simple Reporting.',
+        type: 'chat', 
+        locked: true, completed: false, stars: 0, position: 'center',
+        aiPrompt: 'Report on what happened last week using Past Simple.'
+      },
+      { 
+        id: 'pro-a2-2', // ID Corregido
+        title: 'Future Forecast', 
+        description: 'Planning with Going To.',
+        type: 'grammar', 
+        locked: true, completed: false, stars: 0, position: 'right',
+        aiPrompt: 'Discuss project plans for the next quarter.'
+      },
+      { 
+        id: 'pro-a2-3', // ID Corregido
+        title: 'Tech Support', 
+        description: 'Troubleshooting basics.',
+        type: 'listening', 
+        locked: true, completed: false, stars: 0, position: 'left',
+        aiPrompt: 'Explain a technical problem simply.'
+      },
+      // --- NUEVAS LECCIONES A2 ---
+      { 
+        id: 'pro-a2-4', 
+        title: 'Client Call', 
+        description: 'Phone Etiquette.',
+        type: 'chat', 
+        locked: true, completed: false, stars: 0, position: 'center',
+        aiPrompt: 'Handle a phone call taking a message for a colleague.'
+      },
+      { 
+        id: 'pro-a2-5', 
+        title: 'Office Safety', 
+        description: 'Modals & Rules.',
+        type: 'grammar', 
+        locked: true, completed: false, stars: 0, position: 'right',
+        aiPrompt: 'Explain safety rules using must, should, and have to.'
+      },
+      { 
+        id: 'pro-a2-6', 
+        title: 'Inventory Check', 
+        description: 'Countable vs Uncountable.',
+        type: 'lecture', 
+        locked: true, completed: false, stars: 0, position: 'center',
+        aiPrompt: 'Discuss stock levels and office supplies.'
+      },
+      { 
+        id: 'pro-a2-7', 
+        title: 'Scheduling Conflicts', 
+        description: 'Present Continuous.',
+        type: 'chat', 
+        locked: true, completed: false, stars: 0, position: 'left',
+        aiPrompt: 'Reschedule a meeting due to a conflict.'
+      }
+    ]
+  },
+
+  // --- NIVEL B1: INTERMEDIATE (Archivos: pro-b1-X.json) ---
+  {
+    id: 'B1',
+    title: 'Nivel B1: Management',
+    description: 'Negociación y comunicación formal.',
+    color: 'orange',
+    lessons: [
+      { 
+        id: 'pro-b1-1', 
+        title: 'The Elevator Pitch', 
+        description: 'Professional Intros.',
+        type: 'chat', 
+        locked: true, completed: false, stars: 0, position: 'center',
+        aiPrompt: 'Deliver a persuasive 30-second introduction.'
+      },
+      { 
+        id: 'pro-b1-2', 
+        title: 'Crisis Management', 
+        description: 'Formal Emailing.',
+        type: 'grammar', 
+        locked: true, completed: false, stars: 0, position: 'right',
+        aiPrompt: 'Write a formal apology email to a client.'
+      },
+      // --- NUEVAS LECCIONES B1 ---
+      { 
+        id: 'pro-b1-3', 
+        title: 'Negotiation Tactics', 
+        description: 'First Conditional.',
+        type: 'chat', 
+        locked: true, completed: false, stars: 0, position: 'left',
+        aiPrompt: 'Negotiate a deal using if-clauses.'
+      },
+      { 
+        id: 'pro-b1-4', 
+        title: 'Performance Review', 
+        description: 'Giving Feedback.',
+        type: 'listening', 
+        locked: true, completed: false, stars: 0, position: 'center',
+        aiPrompt: 'Give constructive feedback to an employee.'
+      },
+      { 
+        id: 'pro-b1-5', 
+        title: 'Market Trends', 
+        description: 'Comparatives & Data.',
+        type: 'lecture', 
+        locked: true, completed: false, stars: 0, position: 'right',
+        aiPrompt: 'Describe charts and graphs comparing sales data.'
+      },
+      { 
+        id: 'pro-b1-6', 
+        title: 'Leading a Meeting', 
+        description: 'Phrasal Verbs.',
+        type: 'chat', 
+        locked: true, completed: false, stars: 0, position: 'center',
+        aiPrompt: 'Chair a meeting and keep participants on track.'
+      },
+      { 
+        id: 'pro-b1-7', 
+        title: 'Strategic Planning', 
+        description: 'Future Perfect.',
+        type: 'grammar', 
+        locked: true, completed: false, stars: 0, position: 'left',
+        aiPrompt: 'Discuss goals achieved by a certain date in the future.'
+      }
+    ]
+  },
+
+  // --- CERTIFICACIÓN: TOEIC (Archivos: toeic_X.json) ---
   {
     id: 'TOEIC',
     title: 'TOEIC® Mastery',
@@ -164,33 +235,42 @@ export const CURRICULUM: LevelSection[] = [
     color: 'purple',
     lessons: [
       { 
-        id: 'toeic-listening', 
+        id: 'toeic_listening', 
         title: 'Photo Description', 
-        description: 'Part 1 del examen.',
+        description: 'Part 1: Visual Analysis.',
         type: 'listening', 
-        locked: true, 
-        completed: false, 
-        stars: 0, 
-        position: 'left',
-        aiPrompt: 'TOEIC Part 1 Practice: Describe a complex scene (e.g., a busy office) and ask the user to choose the statement that best describes it.'
+        locked: true, completed: false, stars: 0, position: 'left',
+        aiPrompt: 'Analyze business photographs strictly following TOEIC format.'
       },
       { 
-        id: 'toeic-final', 
-        title: 'FULL SIMULATION', 
-        description: 'El Jefe Final (990 Puntos).',
+        id: 'toeic_reading', 
+        title: 'Incomplete Sentences', 
+        description: 'Part 5: Grammar Precision.',
+        type: 'grammar', 
+        locked: true, completed: false, stars: 0, position: 'right',
+        aiPrompt: 'Fill in the blanks with precise business grammar.'
+      },
+      { 
+        id: 'toeic_speaking', 
+        title: 'Express an Opinion', 
+        description: 'Question 11: Logic.',
+        type: 'chat', 
+        locked: true, completed: false, stars: 0, position: 'center',
+        aiPrompt: 'State an opinion and support it with reasons.'
+      },
+      { 
+        id: 'toeic_writing', 
+        title: 'Email Response', 
+        description: 'Questions 6-7.',
         type: 'toeic_mock', 
-        locked: true, 
-        completed: false, 
-        stars: 0, 
-        position: 'center',
-        aiPrompt: 'ACT AS A TOEIC EXAMINER. Do not teach. Do not explain. You will conduct a simulated test covering: 1. Listening (describe an image), 2. Speaking (express an opinion), 3. Reading/Grammar check. Evaluate strictly on a scale of 0-990.'
+        locked: true, completed: false, stars: 0, position: 'left',
+        aiPrompt: 'Respond to a written request with specific requirements.'
       }
     ]
   }
 ];
 
-// --- Utility Helper ---
-// Esto nos servirá para encontrar la lección rápido cuando hagamos click
+// --- Helper para búsqueda rápida ---
 export function getLessonById(id: string): LessonNode | undefined {
     for (const section of CURRICULUM) {
         const lesson = section.lessons.find(l => l.id === id);

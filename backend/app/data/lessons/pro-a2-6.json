@@ -1,0 +1,86 @@
+{
+  "id": "pro-a2-6",
+  "title": "Inventory Check",
+  "description": "Countable vs Uncountable.",
+  "level": "A2",
+  "topic": "Logistics",
+  "xp_reward": 200,
+  "slides": [
+    {
+      "type": "lecture",
+      "title": "Counting Supplies",
+      "content": "\n        <h3 class='text-lg font-bold text-indigo-600 mb-2'>1. Countable Nouns (1, 2, 3...)</h3>\n        <p class='text-slate-600 mb-2'>Things we can count individually. They have a plural form (s).</p>\n        <ul class='list-disc pl-5 space-y-1 text-slate-600 text-sm'>\n            <li>One <strong>pen</strong> -> Two <strong>pens</strong>.</li>\n            <li>One <strong>chair</strong> -> Ten <strong>chairs</strong>.</li>\n            <li>Question: <strong>How many</strong> pens do we need?</li>\n        </ul>\n\n        <h3 class='text-lg font-bold text-indigo-600 mt-4 mb-2'>2. Uncountable Nouns (Mass/Abstract)</h3>\n        <p class='text-slate-600 mb-2'>Things we see as a whole mass. They <strong>never</strong> have a plural 's'.</p>\n        <ul class='list-disc pl-5 space-y-1 text-slate-600 text-sm'>\n            <li><strong>Information</strong> (NOT informations).</li>\n            <li><strong>Furniture</strong> (NOT furnitures).</li>\n            <li><strong>Money</strong>, <strong>Water</strong>, <strong>Time</strong>.</li>\n            <li>Question: <strong>How much</strong> money does it cost?</li>\n        </ul>\n        ",
+      "speech_text": "In logistics, accuracy is key. Countable nouns like 'pens' use 'How many'. Uncountable nouns like 'paper', 'furniture', or 'information' use 'How much'. Never add an 'S' to uncountable nouns."
+    },
+    {
+      "type": "listening",
+      "title": "Supply Room Check",
+      "content": "Listen to the office manager checking the inventory.",
+      "audio_script": "\n        Manager: Let's check the stock list. How many laptops do we have?\n        Assistant: We have five new laptops in the box.\n        Manager: Okay. And what about paper? Do we need more?\n        Assistant: Let me check... We don't have much paper left. Only two packs.\n        Manager: Alright. And furniture?\n        Assistant: We have plenty of furniture, but we need more chairs for the meeting room.\n        ",
+      "quiz": [
+        {
+          "question": "How many laptops are there?",
+          "options": [
+            "Two",
+            "Five",
+            "None"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Does the assistant say 'many paper' or 'much paper'?",
+          "options": [
+            "Much paper",
+            "Many paper",
+            "Many papers"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "title": "Grammar Challenge",
+      "instruction": "Select the correct option.",
+      "questions": [
+        {
+          "text": "_____ employees are in the meeting?",
+          "options": [
+            "How much",
+            "How many",
+            "How lot"
+          ],
+          "correct": 1,
+          "explanation": "Employees son personas (contables): 1 employee, 2 employees -> 'How many'."
+        },
+        {
+          "text": "We need more _____ regarding the project.",
+          "options": [
+            "informations",
+            "information",
+            "inform"
+          ],
+          "correct": 1,
+          "explanation": "'Information' es incontable en inglés. Nunca lleva 's'."
+        },
+        {
+          "text": "_____ time do we have left?",
+          "options": [
+            "How many",
+            "How much",
+            "How long"
+          ],
+          "correct": 1,
+          "explanation": "'Time' (tiempo) es abstracto/incontable -> 'How much'."
+        }
+      ]
+    },
+    {
+      "type": "chat",
+      "title": "Roleplay: Ordering Supplies",
+      "system_prompt": "\n        You are a Supply Manager.\n        The user wants to order office items.\n        \n        Steps:\n        1. Ask: \"What supplies do you need?\"\n        2. Wait for the user to list items.\n        3. Ask for quantities using the correct grammar:\n           - If they say \"Pens\", ask \"How many pens?\"\n           - If they say \"Paper\" or \"Ink\", ask \"How much paper/ink?\"\n        4. Confirm the order.\n        \n        Correction: If the user says \"2 informations\" or \"How many money\", correct them gently.\n        ",
+      "initial_message": "Hello. I am taking the weekly supply order. What do you need for your department?",
+      "user_goal": "Order 'Pens' (countable) and 'Paper' (uncountable) correctly."
+    }
+  ]
+}

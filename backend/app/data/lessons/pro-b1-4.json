@@ -1,0 +1,86 @@
+{
+  "id": "pro-b1-4",
+  "title": "Performance Review",
+  "description": "Giving Feedback.",
+  "level": "B1",
+  "topic": "Management",
+  "xp_reward": 250,
+  "slides": [
+    {
+      "type": "lecture",
+      "title": "Constructive Feedback",
+      "content": "\n        <h3 class='text-lg font-bold text-orange-600 mb-2'>1. The Sandwich Technique</h3>\n        <p class='text-slate-600 mb-2'>To give criticism without demotivating someone, use this structure:</p>\n        <div class='bg-white border border-slate-200 p-3 rounded text-sm shadow-sm'>\n            <p class='text-green-600'><strong>1. The Bun (Positive):</strong> Start with praise.<br><em>\"I really appreciate your creativity...\"</em></p>\n            <p class='text-red-600 mt-2'><strong>2. The Meat (Constructive):</strong> The area to improve.<br><em>\"...however, your reports are often late...\"</em></p>\n            <p class='text-green-600 mt-2'><strong>3. The Bun (Positive):</strong> End on a high note.<br><em>\"...but keep up the great design work.\"</em></p>\n        </div>\n\n        <h3 class='text-lg font-bold text-orange-600 mt-4 mb-2'>2. Softening Language</h3>\n        <p class='text-slate-600 text-sm'>Direct criticism can sound rude. Use \"softeners\":</p>\n        <ul class='list-disc pl-5 space-y-1 text-slate-600 text-sm'>\n            <li>Instead of \"You are lazy\", say: \"You <strong>tend to be a bit</strong> slow sometimes.\"</li>\n            <li>Instead of \"This is wrong\", say: \"This <strong>could be</strong> better.\"</li>\n        </ul>\n        ",
+      "speech_text": "Giving feedback is an art. Never be too direct with negative news. Use the Sandwich Technique: start with a compliment, mention the problem gently using softeners like 'a bit' or 'tend to', and finish with encouragement."
+    },
+    {
+      "type": "listening",
+      "title": "The Annual Review",
+      "content": "Listen to a manager giving a performance review to an employee.",
+      "audio_script": "\n        Manager: Hi Tom, thanks for coming in. First, I want to say that your sales numbers this quarter were fantastic. You are very proactive.\n        Tom: Thank you, I worked hard on that.\n        Manager: However, I have noticed that you tend to be late for the Monday meetings. Punctuality is important for the team morale.\n        Tom: I understand. I will work on that.\n        Manager: Great. Overall, you are a valuable asset to the team. Let's keep pushing.\n        ",
+      "quiz": [
+        {
+          "question": "What is the positive feedback (The Top Bun)?",
+          "options": [
+            "He is punctual",
+            "His sales numbers are fantastic",
+            "He is a good designer"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "What is the area for improvement (The Meat)?",
+          "options": [
+            "He is lazy",
+            "He tends to be late",
+            "He is rude"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "title": "Soften the Blow",
+      "instruction": "Transform rude sentences into professional feedback.",
+      "questions": [
+        {
+          "text": "Rude: 'Your report is messy.' → Professional:",
+          "options": [
+            "Your report is bad.",
+            "Your report seems a bit disorganized.",
+            "Fix your report."
+          ],
+          "correct": 1,
+          "explanation": "Usamos 'seems a bit' para suavizar adjetivos negativos como 'messy' o 'disorganized'."
+        },
+        {
+          "text": "Rude: 'You talk too much.' → Professional:",
+          "options": [
+            "You tend to dominate the conversation.",
+            "Shut up please.",
+            "You speak a lot."
+          ],
+          "correct": 0,
+          "explanation": "'Tend to' indica un hábito sin acusar directamente a la persona de ser así siempre."
+        },
+        {
+          "text": "Choose the positive adjective for someone who works hard:",
+          "options": [
+            "Lazy",
+            "Diligent",
+            "Careless"
+          ],
+          "correct": 1,
+          "explanation": "'Diligent' es un adjetivo formal excelente para 'hard-working'."
+        }
+      ]
+    },
+    {
+      "type": "chat",
+      "title": "Roleplay: Give Feedback",
+      "system_prompt": "\n        You are an employee named Alex.\n        The user is your Manager giving you a performance review.\n        \n        Scenario:\n        1. You (Alex) ask: \"How am I doing in the company?\"\n        2. The user must use the SANDWICH METHOD:\n           - Praise your coding skills.\n           - Criticize your lack of communication (gently).\n           - End with encouragement.\n        3. If the user is too rude (e.g., \"You are bad at talking\"), act hurt/defensive.\n        4. If they are polite, accept the feedback gratefully.\n        ",
+      "initial_message": "Hi boss. Do you have a moment? I wanted to ask for some feedback on my recent performance.",
+      "user_goal": "Give feedback using the Sandwich Method (Positive -> Negative -> Positive)."
+    }
+  ]
+}

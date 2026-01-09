@@ -1,0 +1,86 @@
+{
+  "id": "pro-a1-6",
+  "title": "The Business Lunch",
+  "description": "Hospitality & Ordering.",
+  "level": "A1",
+  "topic": "Socializing",
+  "xp_reward": 150,
+  "slides": [
+    {
+      "type": "lecture",
+      "title": "Ordering Professionally",
+      "content": "\n        <h3 class='text-lg font-bold text-indigo-600 mb-2'>1. The Menu Structure</h3>\n        <ul class='list-disc pl-5 space-y-1 text-slate-600'>\n            <li><strong>Starter / Appetizer:</strong> Small dish before the meal (e.g., Soup, Salad).</li>\n            <li><strong>Main Course:</strong> The biggest part of the meal (e.g., Steak, Pasta).</li>\n            <li><strong>Dessert:</strong> Sweet food at the end (e.g., Cake).</li>\n            <li><strong>The Bill / The Check:</strong> The paper with the price.</li>\n        </ul>\n\n        <h3 class='text-lg font-bold text-indigo-600 mt-4 mb-2'>2. Polite Requests (IMPORTANT)</h3>\n        <div class='bg-red-50 p-3 rounded mb-2 border-l-4 border-red-400'>\n            <strong>❌ Rude:</strong> \"I want the steak.\" / \"Give me water.\"\n        </div>\n        <div class='bg-green-50 p-3 rounded border-l-4 border-green-400'>\n            <strong>✅ Professional:</strong> \"I <em>would like</em> the steak, please.\" / \"<em>Could I have</em> some water?\"\n        </div>\n        ",
+      "speech_text": "In business, politeness is key. Never say 'I want'. Instead, use 'I would like' or 'Could I have'. We usually divide the meal into starters, main courses, and desserts."
+    },
+    {
+      "type": "listening",
+      "title": "Taking the Order",
+      "content": "Listen to a business lunch order.",
+      "audio_script": "\n        Waiter: Are you ready to order?\n        Client: Yes. For the starter, I would like the tomato soup.\n        Waiter: And for the main course?\n        Client: I'll have the grilled salmon with vegetables, please.\n        Waiter: Would you like anything to drink?\n        Client: Just sparkling water, please.\n        ",
+      "quiz": [
+        {
+          "question": "What did the client order as a starter?",
+          "options": [
+            "Grilled Salmon",
+            "Tomato Soup",
+            "Sparkling Water"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Which phrase did the client use to order?",
+          "options": [
+            "I want...",
+            "Give me...",
+            "I would like..."
+          ],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "title": "Polite or Rude?",
+      "instruction": "Select the most professional option.",
+      "questions": [
+        {
+          "text": "Waiter: 'What would you like?' You say:",
+          "options": [
+            "I want pasta.",
+            "I'd like the pasta, please.",
+            "Pasta. Now."
+          ],
+          "correct": 1,
+          "explanation": "'I'd like' es la contracción de 'I would like', la forma estándar de cortesía."
+        },
+        {
+          "text": "You need the bill. You ask:",
+          "options": [
+            "Could we have the bill?",
+            "Bring the check.",
+            "How much is it?"
+          ],
+          "correct": 0,
+          "explanation": "'Could we have...?' es una petición suave y educada."
+        },
+        {
+          "text": "Waiter: 'Still or sparkling water?' You say:",
+          "options": [
+            "No gas.",
+            "Sparkling, please.",
+            "Water with gas."
+          ],
+          "correct": 1,
+          "explanation": "En inglés se dice 'Sparkling' (con gas) o 'Still' (sin gas)."
+        }
+      ]
+    },
+    {
+      "type": "chat",
+      "title": "Roleplay: Ordering Lunch",
+      "system_prompt": "\n        You are a polite waiter at a high-end restaurant.\n        The user is a business customer.\n        \n        Steps:\n        1. Ask if they are ready to order.\n        2. Ask what they want for a Starter and Main Course.\n        3. Ask about drinks (Still or Sparkling water).\n        4. Confirm the order politely.\n        \n        Correction Rule: If the user says \"I want\", gently suggest saying \"I would like\" instead.\n        ",
+      "initial_message": "Good afternoon. Here is the menu. Are you ready to order?",
+      "user_goal": "Order a full meal (Starter + Main) using polite phrases ('I would like...')."
+    }
+  ]
+}

@@ -5,7 +5,10 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Briefcase, GraduationCap, ToggleLeft, ToggleRight, Sparkles, Activity, Zap, Target } from 'lucide-react';
 
-// Props para recibir datos del usuario (opcional, si quieres pasar stats)
+// --- 📢 1. IMPORTAMOS EL ANUNCIO INTELIGENTE ---
+import { AdBanner } from '@/components/ads/AdBanner';
+
+// Props para recibir datos del usuario
 interface SidebarProps {
   userStats?: { xp: number; lessons: number; streak: number };
 }
@@ -24,7 +27,7 @@ export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }
   return (
     <aside className="hidden lg:flex flex-col w-96 gap-8 sticky top-32 self-start h-fit">
       
-      {/* --- ZONA DEL SWITCH (NUEVO) --- */}
+      {/* --- ZONA DEL SWITCH --- */}
       <div className="bg-white border border-slate-200 rounded-2xl p-4 flex items-center justify-between shadow-sm">
         <div className="flex items-center gap-2">
             <div className={`p-2 rounded-lg ${mode === 'professional' ? 'bg-indigo-100 text-indigo-600' : 'bg-green-100 text-green-600'}`}>
@@ -40,7 +43,7 @@ export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }
         </button>
       </div>
 
-      {/* --- TU WIDGET DE IA (ORIGINAL) --- */}
+      {/* --- TU WIDGET DE IA --- */}
       <div className="bg-gradient-to-br from-indigo-600 to-violet-700 rounded-[2.5rem] p-8 text-white shadow-2xl shadow-indigo-900/30 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
         <div className="absolute -top-10 -right-10 w-40 h-40 bg-white opacity-10 rounded-full blur-3xl"></div>
         <div className="relative z-10 flex flex-col items-center text-center">
@@ -59,7 +62,7 @@ export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }
         </div>
       </div>
 
-      {/* --- TU WIDGET DE STATS (ORIGINAL) --- */}
+      {/* --- TU WIDGET DE STATS --- */}
       <div className="bg-white border border-slate-200 rounded-[2rem] p-8 shadow-sm">
         <h4 className="font-bold text-slate-400 text-xs uppercase tracking-widest mb-8 flex items-center gap-2">
           <Activity size={16} className="text-indigo-500" /> Métricas de Rendimiento
@@ -79,6 +82,11 @@ export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }
           </div>
         </div>
       </div>
+
+      {/* --- 📢 2. ZONA DE PUBLICIDAD --- */}
+      {/* Este componente decide solo si se muestra o no */}
+      <AdBanner variant="sidebar" />
+
     </aside>
   );
 }

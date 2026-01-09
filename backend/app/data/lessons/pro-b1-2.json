@@ -1,0 +1,95 @@
+{
+  "id": "pro-b1-2",
+  "title": "Crisis Management",
+  "description": "Formal Emailing.",
+  "level": "B1",
+  "topic": "Business Writing",
+  "xp_reward": 250,
+  "slides": [
+    {
+      "type": "lecture",
+      "title": "The Art of Apology",
+      "content": "\n        <h3 class='text-lg font-bold text-orange-600 mb-2'>1. Key Vocabulary for Problems</h3>\n        <ul class='list-disc pl-5 space-y-1 text-slate-600 text-sm'>\n            <li><strong>Inconvenience:</strong> Trouble caused to someone.</li>\n            <li><strong>Oversight:</strong> A mistake made by not noticing something.</li>\n            <li><strong>Rectify:</strong> To fix or correct a mistake (Formal).</li>\n            <li><strong>Delay:</strong> When something is late.</li>\n        </ul>\n\n        <h3 class='text-lg font-bold text-orange-600 mt-4 mb-2'>2. Structuring a Formal Apology</h3>\n        <div class='bg-slate-100 p-3 rounded text-sm'>\n            <p><strong>1. Acknowledge:</strong> \"Thank you for bringing this to our attention.\"</p>\n            <p><strong>2. Apologize:</strong> \"We <em>sincerely apologize</em> for the error.\"</p>\n            <p><strong>3. Explain (Briefly):</strong> \"Unfortunately, due to a system failure...\"</p>\n            <p><strong>4. Solve:</strong> \"To <em>rectify</em> this, we have issued a full refund.\"</p>\n            <p><strong>5. Close:</strong> \"Sincerely, [Your Name].\"</p>\n        </div>\n        ",
+      "speech_text": "Writing a formal apology email is a critical skill. You must acknowledge the mistake, apologize sincerely without being overly emotional, and most importantly, offer a concrete solution to rectify the situation."
+    },
+    {
+      "type": "listening",
+      "title": "Email to a Client",
+      "content": "Listen to the Customer Service Manager responding to a complaint.",
+      "audio_script": "\n        Dear Mr. Henderson,\n        Thank you for your email regarding Order #902.\n        We sincerely apologize for the delay in your shipment.\n        Unfortunately, we experienced a technical oversight at our warehouse which caused the package to be held back.\n        To rectify this, we have upgraded your shipping to Express Delivery at no extra cost. It will arrive tomorrow.\n        We appreciate your patience.\n        Sincerely,\n        Maria Gonzalez.\n        ",
+      "quiz": [
+        {
+          "question": "What was the problem?",
+          "options": [
+            "The product was broken",
+            "The shipment was delayed",
+            "The order was cancelled"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "How did Maria fix the problem?",
+          "options": [
+            "She gave a refund",
+            "She cancelled the order",
+            "She upgraded to Express Delivery"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Which word means 'mistake'?",
+          "options": [
+            "Oversight",
+            "Rectify",
+            "Sincerely"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "title": "Formal vs. Informal",
+      "instruction": "Select the most professional phrase for a business email.",
+      "questions": [
+        {
+          "text": "Informal: 'Sorry for the mess.' → Formal:",
+          "options": [
+            "Please accept our apologies for the inconvenience.",
+            "My bad, sorry.",
+            "We feel bad about this."
+          ],
+          "correct": 0,
+          "explanation": "'Please accept our apologies' es la frase estándar de oro en correos corporativos."
+        },
+        {
+          "text": "Informal: 'I'll fix it.' → Formal:",
+          "options": [
+            "I will do it.",
+            "I am taking steps to rectify the issue.",
+            "I'm gonna repair it."
+          ],
+          "correct": 1,
+          "explanation": "'Rectify the issue' demuestra profesionalismo y control de la situación."
+        },
+        {
+          "text": "Informal: 'Bad news, it's late.' → Formal:",
+          "options": [
+            "Unfortunately, there will be a delay.",
+            "It is late.",
+            "Don't panic, but it's delayed."
+          ],
+          "correct": 0,
+          "explanation": "Usamos 'Unfortunately' o 'I am afraid that...' para suavizar las malas noticias."
+        }
+      ]
+    },
+    {
+      "type": "chat",
+      "title": "Roleplay: Damage Control",
+      "system_prompt": "\n        You are an angry client named Mr. Smith.\n        You ordered a report clearly for Monday, but it is now Tuesday and you don't have it.\n        The user is the Project Manager writing/speaking to you.\n        \n        Steps:\n        1. Complain: \"Where is my report? It was due yesterday!\"\n        2. Wait for the user to apologize appropriately (using 'sincerely apologize', 'oversight', etc.).\n        3. If they are polite, ask: \"So when will I get it?\"\n        4. If they offer a solution (e.g., sending it within an hour), accept it and calm down.\n        \n        Correction Focus: If the user says \"Sorry\" (too casual), suggest \"We sincerely apologize\".\n        ",
+      "initial_message": "This is unacceptable. I still haven't received the quarterly report. Where is it?",
+      "user_goal": "Apologize formally for the delay and promise to send it immediately."
+    }
+  ]
+}

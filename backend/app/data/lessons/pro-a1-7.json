@@ -1,0 +1,86 @@
+{
+  "id": "pro-a1-7",
+  "title": "Business Trip",
+  "description": "Travel Logistics.",
+  "level": "A1",
+  "topic": "Travel",
+  "xp_reward": 150,
+  "slides": [
+    {
+      "type": "lecture",
+      "title": "At the Airport",
+      "content": "\n        <h3 class='text-lg font-bold text-indigo-600 mb-2'>1. Essential Documents</h3>\n        <ul class='list-disc pl-5 space-y-1 text-slate-600'>\n            <li><strong>Passport / ID:</strong> Your identification.</li>\n            <li><strong>Boarding Pass:</strong> The ticket to enter the plane.</li>\n            <li><strong>Booking Reference:</strong> The code for your reservation.</li>\n        </ul>\n\n        <h3 class='text-lg font-bold text-indigo-600 mt-4 mb-2'>2. Key Locations</h3>\n        <div class='grid grid-cols-2 gap-2 text-sm'>\n            <div class='bg-slate-100 p-2 rounded'><strong>Check-in Desk:</strong> Where you leave your bags.</div>\n            <div class='bg-slate-100 p-2 rounded'><strong>Gate:</strong> The door to the airplane.</div>\n            <div class='bg-slate-100 p-2 rounded'><strong>Customs:</strong> Where officers check items.</div>\n            <div class='bg-slate-100 p-2 rounded'><strong>Baggage Claim:</strong> Where you pick up bags.</div>\n        </div>\n        ",
+      "speech_text": "Traveling for business requires specific vocabulary. You need your boarding pass to get on the flight. You drop your luggage at the check-in desk and go to the Gate to board."
+    },
+    {
+      "type": "listening",
+      "title": "Checking In",
+      "content": "Listen to the conversation at the airline counter.",
+      "audio_script": "\n        Agent: Good morning. Where are you flying to today?\n        Traveler: I am flying to New York. Here is my passport.\n        Agent: Are you checking any bags?\n        Traveler: Yes, just one suitcase.\n        Agent: Okay. Here is your boarding pass. Your flight leaves from Gate 12. Boarding starts at 10:30.\n        Traveler: Thank you. Is there free Wi-Fi in the lounge?\n        ",
+      "quiz": [
+        {
+          "question": "Where is the traveler going?",
+          "options": [
+            "London",
+            "New York",
+            "Paris"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "What is the Gate number?",
+          "options": [
+            "Gate 10",
+            "Gate 20",
+            "Gate 12"
+          ],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "title": "Travel Prepositions",
+      "instruction": "Choose the correct preposition for travel contexts.",
+      "questions": [
+        {
+          "text": "I am arriving _____ the airport now.",
+          "options": [
+            "to",
+            "at",
+            "on"
+          ],
+          "correct": 1,
+          "explanation": "Decimos 'Arrive at' para lugares específicos como aeropuertos o estaciones."
+        },
+        {
+          "text": "My flight is _____ 7:00 PM.",
+          "options": [
+            "in",
+            "at",
+            "on"
+          ],
+          "correct": 1,
+          "explanation": "Para horas exactas siempre usamos 'at'."
+        },
+        {
+          "text": "I am traveling _____ London tomorrow.",
+          "options": [
+            "to",
+            "at",
+            "in"
+          ],
+          "correct": 0,
+          "explanation": "Para destino/movimiento usamos 'to' (travel to, fly to, go to)."
+        }
+      ]
+    },
+    {
+      "type": "chat",
+      "title": "Roleplay: At the Counter",
+      "system_prompt": "\n        You are an airline check-in agent.\n        The user is a business traveler checking in for a flight.\n        \n        Steps:\n        1. Ask for their destination and passport.\n        2. Ask if they have bags to check.\n        3. Give them a random Gate number and boarding time.\n        4. Wish them a safe trip.\n        \n        Keep sentences short and clear (A1 Level).\n        ",
+      "initial_message": "Hello! Welcome to Onix Airlines. Where are you traveling to today?",
+      "user_goal": "State destination, confirm you have one bag, and ask for the Gate number."
+    }
+  ]
+}

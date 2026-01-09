@@ -6,7 +6,7 @@
  * ==============================================================================
  * RUTA: /dashboard/pro/page.tsx
  * TEMA: "Midnight Executive" - Ultra Dark Mode, Gold Accents, Deep Blue Gradients.
- * ESTADO: Maximizada para impacto visual.
+ * ESTADO: Lógica de desbloqueo vía LocalStorage integrada.
  * ==============================================================================
  */
 
@@ -17,6 +17,9 @@ import {
   Briefcase, TrendingUp, Globe, Award, Lock, Play, Check, 
   PieChart, Users, Building, LogOut, ArrowLeft, Gem, Star, ChevronRight
 } from 'lucide-react';
+
+// --- 🔒 IMPORTACIÓN DEL PAYWALL ---
+import { UpgradeModal } from '@/components/pro/UpgradeModal';
 
 // --- DATA: EXECUTIVE CURRICULUM ---
 const PRO_CURRICULUM = [
@@ -222,7 +225,25 @@ export default function ProfessionalDashboard() {
   const router = useRouter();
   const { mode, setMode } = useUIStore();
   
-  // Hardcoded para demostración visual
+  // 🔑 AQUÍ ESTÁ EL CAMBIO CLAVE:
+  // En lugar de 'false' fijo, usamos estado y verificamos localStorage
+  const [isUserPremium, setIsUserPremium] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // 🔑 MAGIA: Verificamos si el usuario ya pagó (leyendo el navegador)
+  useEffect(() => {
+    // 1. Revisamos el "pasaporte" que nos dio la página de éxito
+    const tier = localStorage.getItem('onix_tier');
+    
+    // 2. Si dice TITANIUM, abrimos la puerta
+    if (tier === 'TITANIUM') {
+        setIsUserPremium(true);
+    }
+    
+    // Dejamos de cargar (para mostrar el contenido o el modal)
+    setIsLoading(false);
+  }, []);
+
   const currentLessonId = 'pro-b1-1'; 
 
   useEffect(() => {
@@ -237,13 +258,17 @@ export default function ProfessionalDashboard() {
 
   const getLessonStatus = (id: string, sectionIndex: number, lessonIndex: number) => {
      if (id === currentLessonId) return 'active';
-     // Nada completado antes para que se vea el ejemplo limpio en B1
      return 'locked';
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-amber-500/30 selection:text-amber-200">
+    // Se añade 'relative' para que el modal absoluto se posicione correctamente
+    <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-amber-500/30 selection:text-amber-200 relative">
       
+      {/* 🔒 PANTALLA DE BLOQUEO (PAYWALL) INTELIGENTE */}
+      {/* Solo se muestra si NO está cargando Y el usuario NO es premium */}
+      {!isLoading && !isUserPremium && <UpgradeModal />}
+
       {/* 1. SIDEBAR (Minimalist Vertical Bar) */}
       <aside className="fixed left-0 top-0 bottom-0 w-20 bg-black border-r border-slate-900 hidden lg:flex flex-col items-center py-8 z-50">
         <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg flex items-center justify-center mb-12 shadow-lg shadow-amber-900/20">
@@ -265,7 +290,9 @@ export default function ProfessionalDashboard() {
       </aside>
 
       {/* 2. MAIN CONTENT */}
-      <main className="lg:pl-24 min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-950 to-slate-950">
+      {/* Añadimos un pequeño blur si está bloqueado para dar efecto de fondo */}
+      {/* NOTA: Ahora el blur depende de !isUserPremium y !isLoading */}
+      <main className={`lg:pl-24 min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-950 to-slate-950 transition-all duration-500 ${!isUserPremium && !isLoading ? 'blur-sm brightness-50 pointer-events-none overflow-hidden h-screen' : ''}`}>
         
         {/* HEADER */}
         <header className="sticky top-0 z-40 px-8 h-24 flex items-center justify-between bg-gradient-to-b from-slate-950 to-transparent pointer-events-none">
