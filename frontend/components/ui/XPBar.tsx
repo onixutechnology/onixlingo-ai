@@ -1,20 +1,33 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Trophy, Flame } from 'lucide-react';
-import { useProgressStore } from '@/store/progressStore'; // 👈 CAMBIO IMPORTANTE: Usamos progressStore
-import { useUIStore } from '@/store/uiStore'; // Para detectar modo PRO
+import { Zap, Flame } from 'lucide-react';
+import { useProgressStore } from '@/store/progressStore'; 
+import { useUIStore } from '@/store/uiStore'; 
 
 export default function XPBar() {
-  // 1. Obtenemos XP y Streak del store correcto
-  const { xp, streak } = useProgressStore();
+  // 1. Estado para evitar error de Hidratación (Hydration Mismatch)
+  const [mounted, setMounted] = useState(false);
+
+  // 2. Obtenemos datos del store (con valores seguros por defecto)
+  const xp = useProgressStore((state) => state.xp || 0);
+  const streak = useProgressStore((state) => state.streak || 0);
   const { mode } = useUIStore();
+
+  // 3. Efecto para indicar que ya estamos en el cliente
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Si no está montado aún, no renderizamos nada para evitar parpadeos o errores
+  if (!mounted) return null;
   
   const isPro = mode === 'professional';
 
-  // 2. Calculamos el nivel basado en XP (ej: cada 100 XP es un nivel)
+  // 4. Cálculos de nivel
   const level = Math.floor(xp / 100) + 1;
-  const progressToNextLevel = xp % 100; // Porcentaje 0-100
+  const progressToNextLevel = xp % 100; 
 
   return (
     <div className={`flex items-center gap-4 p-2 rounded-2xl border backdrop-blur-sm shadow-sm transition-colors ${
@@ -34,10 +47,11 @@ export default function XPBar() {
             stroke="currentColor"
             strokeWidth="3"
           />
-          {/* Progreso */}
+          {/* Progreso Animado */}
           <motion.path
             initial={{ pathLength: 0 }}
             animate={{ pathLength: progressToNextLevel / 100 }}
+            transition={{ duration: 1, ease: "easeOut" }}
             className={isPro ? "text-amber-500" : "text-indigo-500"}
             d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
             fill="none"
