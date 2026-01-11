@@ -1,23 +1,25 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { persist, createJSONStorage } from 'zustand/middleware';
 
+// Definición de tipos para los datos de una lección
 interface LessonProgress {
   stars: number;
-  score: number;
+  completedAt: string;
 }
 
+// Interfaz del Estado Global de Progreso
 interface ProgressState {
-  // Datos Persistentes
+  // --- ESTADO ---
+  xp: number;
+  streak: number;
   completedLessons: Record<string, LessonProgress>;
-  totalXP: number; 
-  streak: number;  
-  level: number;   
 
-  // Acciones
-  loadProgressFromDB: (data: Record<string, LessonProgress>) => void;
-  completeLesson: (lessonId: string, score: number, stars: number) => void;
-  
-  // Selectores
+  // --- ACCIONES (Setters) ---
+  addXp: (amount: number) => void;
+  completeLesson: (lessonId: string, stars: number) => void;
+  loadProgressFromDB: (data: any) => void;
+
+  // --- SELECTORES (Getters) ---
   isLessonCompleted: (lessonId: string) => boolean;
   getLessonStars: (lessonId: string) => number;
 }
@@ -25,75 +27,61 @@ interface ProgressState {
 export const useProgressStore = create<ProgressState>()(
   persist(
     (set, get) => ({
+      // 1. Valores Iniciales
+      xp: 0,
+      streak: 1, // Podrías conectar esto a lógica de fechas real luego
       completedLessons: {},
-      totalXP: 0,
-      streak: 1,
-      level: 1,
 
-      loadProgressFromDB: (data) => {
-        let calcXP = 0;
-        Object.values(data).forEach(l => calcXP += (l.stars * 20));
-        
-        set({ 
-            completedLessons: data,
-            totalXP: calcXP,
-            level: Math.floor(calcXP / 500) + 1 
-        });
-      },
+      // 2. Función para sumar XP (Usada en el Chat/Práctica)
+      addXp: (amount: number) => set((state) => ({
+        xp: state.xp + amount
+      })),
 
-      completeLesson: (lessonId, score, stars) => {
-        set((state) => {
-          const current = state.completedLessons[lessonId];
-          const isReplay = !!current;
-          
-          let xpGain = 0;
-          if (!isReplay) {
-              xpGain = 50 + (stars * 10); 
-          } else if (stars > current.stars) {
-              xpGain = (stars - current.stars) * 10; 
-          }
+      // 3. Función al terminar una lección
+      completeLesson: (lessonId, stars) => set((state) => {
+        const currentProgress = state.completedLessons[lessonId];
+        const currentStars = currentProgress?.stars || 0;
 
-          const newXP = state.totalXP + xpGain;
-          const newLevel = Math.floor(newXP / 500) + 1;
+        // Calculamos XP ganada (ej: 10 XP por estrella)
+        const xpGained = stars * 10;
 
-          const newState = {
-            totalXP: newXP,
-            level: newLevel,
-            completedLessons: {
-              ...state.completedLessons,
-              [lessonId]: { stars: Math.max(stars, current?.stars || 0), score: Math.max(score, current?.score || 0) }
+        return {
+          xp: state.xp + xpGained, // Siempre sumamos XP por el esfuerzo
+          completedLessons: {
+            ...state.completedLessons,
+            [lessonId]: {
+              // Guardamos el mayor número de estrellas obtenido (High Score)
+              stars: Math.max(currentStars, stars),
+              completedAt: new Date().toISOString()
             }
-          };
-
-          // --- SINCRONIZACIÓN INTELIGENTE (HYBRID BACKEND) ---
-          const currentUser = typeof window !== 'undefined' ? localStorage.getItem('currentUser') : null;
-          
-          // 🧠 DETECCIÓN AUTOMÁTICA DE ENTORNO
-          const BASE_URL = process.env.NODE_ENV === 'development' 
-            ? 'http://localhost:8000'                  // Local
-            : 'https://onixlingo-bckend.onrender.com'; // Nube (Render)
-
-          if (currentUser) {
-            console.log(`💾 Guardando progreso en: ${BASE_URL}`);
-            
-            fetch(`${BASE_URL}/api/v1/save_progress`, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ 
-                username: currentUser, 
-                lesson_id: lessonId, 
-                stars: stars 
-              })
-            }).catch(e => console.warn("❌ Error guardando progreso:", e));
           }
+        };
+      }),
 
-          return newState;
-        });
+      // 4. Cargar datos desde Backend (Sincronización)
+      loadProgressFromDB: (data) => {
+        if (data && typeof data === 'object') {
+          // Asumimos que 'data' viene con la estructura correcta del backend
+          set((state) => ({
+            completedLessons: data.completedLessons || state.completedLessons,
+            xp: data.xp || state.xp,
+            streak: data.streak || state.streak
+          }));
+        }
       },
 
-      isLessonCompleted: (id) => !!get().completedLessons[id],
-      getLessonStars: (id) => get().completedLessons[id]?.stars || 0,
+      // 5. Verificadores (Helpers para la UI)
+      isLessonCompleted: (lessonId) => {
+        return !!get().completedLessons[lessonId];
+      },
+
+      getLessonStars: (lessonId) => {
+        return get().completedLessons[lessonId]?.stars || 0;
+      }
     }),
-    { name: 'onixlingo-progress' }
+    {
+      name: 'onixlingo-progress', // Nombre de la 'cookie' en localStorage
+      storage: createJSONStorage(() => localStorage), // Persistencia explícita
+    }
   )
 );
