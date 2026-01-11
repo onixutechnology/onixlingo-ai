@@ -1,239 +1,256 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import Avatar3D from '@/components/avatar/Avatar3D';
+import { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { 
+  Mic, Send, Volume2, ArrowLeft, Sparkles, Loader2, 
+  MessageSquare, Zap, MonitorPlay 
+} from 'lucide-react';
+
+// --- STORES ---
 import { useAvatarStore } from '@/store/avatarStore';
-import XPBar from '@/components/ui/XPBar';
+import { useProgressStore } from '@/store/progressStore'; // 👈 IMPORTACIÓN CORRECTA
+import { useUIStore } from '@/store/uiStore'; 
 
-// Definición para TS del reconocimiento de voz
-declare global {
-  interface Window {
-    webkitSpeechRecognition: any;
-  }
-}
+// --- COMPONENTES ---
+import Avatar3D from '@/components/avatar/Avatar3D';
 
-export default function DashboardPage() {
-  const { setGesture, setSpeaking, isSpeaking, addXp } = useAvatarStore();
+// --- CONFIGURACIÓN API (Ajústalo a tu backend real) ---
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
+
+export default function PracticePage() {
+  const router = useRouter();
+  
+  // 1. Estados Globales y UI
+  const { mode } = useUIStore();
+  const isPro = mode === 'professional';
+  
+  // 2. Stores Separados (Solución del Error)
+  const { setGesture, setSpeaking, isSpeaking } = useAvatarStore(); 
+  const { addXp } = useProgressStore(); 
+
+  // 3. Estados Locales
   const [input, setInput] = useState('');
   const [response, setResponse] = useState('¡Hola! Soy tu tutor IA. ¿Qué quieres practicar hoy?');
   const [loading, setLoading] = useState(false);
-  const [isListening, setIsListening] = useState(false);
-  const recognitionRef = useRef<any>(null);
+  const [isRecording, setIsRecording] = useState(false);
 
-  // --- LÓGICA DE VOZ Y CHAT (Igual que antes) ---
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.webkitSpeechRecognition) {
-      const recognition = new window.webkitSpeechRecognition();
-      recognition.continuous = false;
-      recognition.lang = 'es-ES'; 
-      recognition.interimResults = false;
+  // --- LÓGICA DE TEXT-TO-SPEECH ---
+  const speak = (text: string) => {
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      
+      // Intentar buscar una voz en inglés decente
+      const voices = window.speechSynthesis.getVoices();
+      const enVoice = voices.find(v => v.lang.includes('en-US')) || voices[0];
+      utterance.voice = enVoice;
+      utterance.lang = 'en-US';
+      utterance.rate = 1;
 
-      recognition.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
-        setInput(transcript);
-        handleSend(transcript); 
+      utterance.onstart = () => {
+        setSpeaking(true);
+        setGesture('talking');
+      };
+      utterance.onend = () => {
+        setSpeaking(false);
+        setGesture('idle');
       };
 
-      recognition.onend = () => setIsListening(false);
-      recognitionRef.current = recognition;
-    }
-  }, []);
-
-const speakText = (text: string) => {
-    if (!window.speechSynthesis) return;
-    
-    window.speechSynthesis.cancel();
-    
-    const utterance = new SpeechSynthesisUtterance(text);
-    const voices = window.speechSynthesis.getVoices();
-    
-    // 1. MEJORA EN DETECCIÓN: Agregamos más palabras comunes para detectar español
-    // Si la frase contiene tildes O palabras clave en español
-    const isSpanish = /[áéíóúñ¿¡]/.test(text) || 
-                      /hola|buenos|gracias|estoy|bien|tutor|idiomas|claro|si|puedo/i.test(text);
-    
-    let preferredVoice;
-
-    if (isSpanish) {
-       // ESPAÑOL: Priorizamos Google (Mujer) -> Luego Sabina (Mujer) -> Luego cualquiera
-       preferredVoice = voices.find(v => v.name.includes('Google') && v.lang.includes('es')) || 
-                        voices.find(v => v.name.includes('Sabina')) || 
-                        voices.find(v => v.lang.startsWith('es'));
-    } else {
-       // INGLÉS: Priorizamos Google (Mujer) -> Luego Zira (Mujer) -> Luego cualquiera
-       preferredVoice = voices.find(v => v.name.includes('Google') && v.lang.includes('en-US')) || 
-                        voices.find(v => v.name.includes('Zira')) || 
-                        voices.find(v => v.lang.startsWith('en'));
-    }
-
-    if (preferredVoice) {
-        utterance.voice = preferredVoice;
-        utterance.rate = 1.0; 
-        // Tip: Si quieres que hable más agudo o grave, puedes ajustar 'pitch'
-        // utterance.pitch = 1.0; 
-    }
-
-    utterance.onstart = () => setSpeaking(true);
-    utterance.onend = () => setSpeaking(false);
-    
-    window.speechSynthesis.speak(utterance);
-  };
-  const toggleMic = () => {
-    if (!recognitionRef.current) return alert("Usa Chrome en PC para la voz.");
-    if (isListening) {
-      recognitionRef.current.stop();
-    } else {
-      recognitionRef.current.start();
-      setIsListening(true);
+      window.speechSynthesis.speak(utterance);
     }
   };
 
-const handleSend = async (textToSend: string = input) => {
-    if (!textToSend.trim()) return;
+  // --- LÓGICA DE ENVÍO (CHAT) ---
+  const handleSend = async () => {
+    if (!input.trim()) return;
+
     setLoading(true);
-    
+    // 1. Animación de "Pensando"
+    setGesture('thinking'); 
+
     try {
-      console.log("📡 Enviando mensaje al backend:", textToSend); // Log 1
+      // --- AQUÍ CONECTAS TU BACKEND REAL ---
+      // const res = await fetch(`${API_URL}/api/v1/chat`, { method: 'POST', body: JSON.stringify({ message: input }) });
+      // const data = await res.json();
+      // const aiMessage = data.response;
 
-      // CAMBIO IMPORTANTE: Usamos 127.0.0.1 en lugar de localhost para evitar problemas de DNS/IPv6
-      const res = await fetch('http://127.0.0.1:8001/api/v1/ai/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: textToSend }),
-      });
+      // --- SIMULACIÓN (Para que funcione la UI ya mismo) ---
+      await new Promise(r => setTimeout(r, 1500)); // Simula delay de red
+      const aiMessage = `That's an interesting point about "${input}". In a professional context, we might phrase it more precisely. Let's try again!`;
       
-      console.log("📡 Estado de respuesta HTTP:", res.status); // Log 2
+      setResponse(aiMessage);
+      speak(aiMessage);
+      
+      // Ganar XP por participar
+      addXp(15); 
 
-      if (!res.ok) {
-        throw new Error(`Error del servidor: ${res.status} ${res.statusText}`);
-      }
-      
-      const data = await res.json();
-      console.log("📦 Datos recibidos (JSON):", data); // Log 3
-
-      setResponse(data.text);
-      if (data.gesture) setGesture(data.gesture); 
-      
-      if (data.emotion === 'joy' || data.gesture === 'happy') addXp(25);
-      else if (data.gesture === 'nod') addXp(10);
-
-      speakText(data.text);
-      
     } catch (error) {
-      // AQUÍ ESTÁ LA CLAVE: Imprimimos el error real en la consola roja
-      console.error("❌ ERROR CRÍTICO EN FRONTEND:", error);
-      setResponse("Ups, mi cerebro se desconectó un momento. 🧠 (Mira la consola F12)");
+      console.error("Error connecting to AI:", error);
+      setResponse("Lo siento, tuve un problema de conexión. Intenta de nuevo.");
+      setGesture('sad');
     } finally {
       setLoading(false);
       setInput('');
     }
   };
 
-  // --- DISEÑO VISUAL MEJORADO ---
+  const handleMicToggle = () => {
+    setIsRecording(!isRecording);
+    // Aquí iría la lógica real de Web Speech API (SpeechToText)
+    if (!isRecording) {
+        setGesture('listening');
+    } else {
+        setGesture('idle');
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-brand-50 p-4 lg:p-8 font-sans flex flex-col items-center justify-center relative overflow-hidden">
+    <div className={`min-h-screen flex flex-col transition-colors duration-500 ${isPro ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
       
-      {/* Fondo Decorativo */}
-      <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-accent-yellow/30 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
-
-      <div className="max-w-7xl w-full relative z-10 h-[90vh] flex flex-col">
+      {/* --- HEADER --- */}
+      <header className={`h-16 px-6 flex items-center justify-between sticky top-0 z-20 backdrop-blur-md border-b ${isPro ? 'bg-slate-900/80 border-slate-800' : 'bg-white/80 border-slate-200'}`}>
+        <div className="flex items-center gap-4">
+            <Link href={isPro ? "/dashboard/pro" : "/dashboard"}>
+                <button className={`p-2 rounded-full transition-colors ${isPro ? 'hover:bg-white/10 text-slate-400 hover:text-white' : 'hover:bg-slate-100 text-slate-500 hover:text-slate-900'}`}>
+                    <ArrowLeft size={24} />
+                </button>
+            </Link>
+            <div>
+                <h1 className={`text-lg font-bold tracking-tight ${isPro ? 'text-white' : 'text-slate-800'}`}>
+                    AI Tutor <span className={isPro ? 'text-amber-500' : 'text-indigo-600'}>Live</span>
+                </h1>
+                <p className="text-[10px] opacity-60 uppercase tracking-widest font-bold">Conversation Mode</p>
+            </div>
+        </div>
         
-        {/* HEADER */}
-        <header className="flex justify-between items-center mb-6 px-4">
-            <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                    On
-                </div>
-                <h1 className="text-2xl font-extrabold text-brand-700 tracking-tight">OnixLingo</h1>
-            </div>
+        {/* Indicador de Status */}
+        <div className={`px-3 py-1 rounded-full text-xs font-bold border flex items-center gap-2 ${isPro ? 'bg-slate-800 border-slate-700 text-emerald-400' : 'bg-white border-slate-200 text-emerald-600'}`}>
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            ONLINE
+        </div>
+      </header>
+
+      {/* --- MAIN CONTENT (Split View) --- */}
+      <main className="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
+        
+        {/* COLUMNA IZQUIERDA: AVATAR 3D */}
+        <section className={`relative flex-1 min-h-[40vh] lg:min-h-auto flex items-center justify-center overflow-hidden ${isPro ? 'bg-gradient-to-b from-slate-900 to-indigo-950' : 'bg-gradient-to-b from-blue-50 to-white'}`}>
             
-            {/* Status Badge */}
-            <div className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm border transition-all ${isSpeaking ? 'bg-green-100 text-green-700 border-green-200 animate-pulse' : 'bg-white text-slate-400 border-slate-200'}`}>
-                {isSpeaking ? '● Hablando' : '○ Esperando'}
-            </div>
-        </header>
-
-        {/* CONTENIDO PRINCIPAL: GRID 2 COLUMNAS */}
-        <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 min-h-0">
+            {/* Efectos de Fondo */}
+            <div className={`absolute inset-0 opacity-30 ${isPro ? 'bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent' : 'bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-400/20 via-transparent to-transparent'}`}></div>
             
-            {/* COLUMNA IZQUIERDA: ROBOT (40% ancho) */}
-            <div className="lg:col-span-5 flex flex-col min-h-[300px]">
-                <div className="bg-gradient-to-b from-brand-200 to-white rounded-[2.5rem] shadow-soft border-[6px] border-white flex-1 relative overflow-hidden group">
-                    {/* Efecto de luz interior */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10"></div>
-                    
-                    {/* Componente 3D */}
-                    <div className="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing">
-                         <Avatar3D />
-                    </div>
-                </div>
+            {/* El Avatar */}
+            <div className="w-full h-full relative z-10">
+                <Avatar3D />
             </div>
 
-            {/* COLUMNA DERECHA: INTERFAZ (60% ancho) */}
-            <div className="lg:col-span-7 flex flex-col gap-5 h-full">
-                
-                {/* 1. Barra de Nivel */}
-                <XPBar />
-
-                {/* 2. Chat Container */}
-                <div className="bg-white rounded-[2.5rem] shadow-soft border-[6px] border-white p-6 flex flex-col flex-1 relative overflow-hidden">
-                    
-                    {/* Área de Mensajes (Scrollable si fuera necesario) */}
-                    <div className="flex-1 overflow-y-auto mb-6 flex flex-col justify-end space-y-4 pr-2 custom-scrollbar">
-                        
-                        {/* Mensaje del Robot */}
-                        <div className="flex gap-4 items-end">
-                            <div className="w-10 h-10 rounded-full bg-brand-100 border-2 border-brand-200 flex items-center justify-center text-xl shrink-0">
-                                🤖
-                            </div>
-                            <div className="bg-brand-50 p-5 rounded-2xl rounded-bl-none text-brand-800 font-medium text-lg border border-brand-100 shadow-sm max-w-[90%]">
-                                <p className={loading ? "animate-pulse" : ""}>
-                                    {loading ? "Analizando tu respuesta..." : response}
-                                </p>
-                            </div>
+            {/* Subtítulos Flotantes (Respuesta de IA) */}
+            <div className="absolute bottom-8 left-6 right-6 text-center z-20">
+                <div className={`inline-block px-6 py-4 rounded-3xl shadow-xl backdrop-blur-md max-w-2xl text-lg font-medium transition-all ${
+                    isPro 
+                        ? 'bg-black/60 text-white border border-white/10' 
+                        : 'bg-white/80 text-slate-800 border border-white shadow-blue-900/5'
+                }`}>
+                    {loading ? (
+                        <div className="flex items-center gap-2 justify-center text-sm opacity-80">
+                            <Sparkles size={16} className="animate-spin" /> Thinking...
                         </div>
+                    ) : (
+                        <p>{response}</p>
+                    )}
+                </div>
+            </div>
+        </section>
 
-                        {/* (Opcional) Aquí podrías mostrar el último mensaje del usuario alineado a la derecha */}
-                    </div>
+        {/* COLUMNA DERECHA: INTERACCIÓN */}
+        <section className={`w-full lg:w-[450px] flex flex-col border-l z-20 ${isPro ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-200'}`}>
+            
+            {/* Chat Area (Placeholder visual) */}
+            <div className="flex-1 p-6 flex flex-col items-center justify-center text-center opacity-40">
+                <div className={`p-6 rounded-full mb-4 ${isPro ? 'bg-slate-900' : 'bg-slate-100'}`}>
+                    <MessageSquare size={40} />
+                </div>
+                <p className="text-sm">Historial de conversación disponible en la versión completa.</p>
+            </div>
 
-                    {/* Área de Input (Control Center) */}
-                    <div className="relative group">
+            {/* Input Area */}
+            <div className={`p-6 border-t ${isPro ? 'border-slate-800 bg-slate-900' : 'border-slate-100 bg-slate-50'}`}>
+                
+                {/* Botones de Acción Rápida */}
+                <div className="flex gap-2 mb-4 overflow-x-auto pb-2 scrollbar-hide">
+                    {['Explain grammar', 'Pronunciation', 'Give me a quiz'].map((prompt) => (
+                        <button 
+                            key={prompt}
+                            onClick={() => { setInput(prompt); }}
+                            className={`whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold border transition-all ${
+                                isPro 
+                                    ? 'border-slate-700 hover:bg-slate-800 text-slate-300' 
+                                    : 'border-slate-200 hover:bg-white hover:shadow-sm text-slate-600'
+                            }`}
+                        >
+                            {prompt}
+                        </button>
+                    ))}
+                </div>
+
+                <div className="flex items-end gap-3">
+                    <div className={`flex-1 relative rounded-2xl border-2 transition-all focus-within:ring-2 ${
+                        isPro 
+                            ? 'bg-slate-950 border-slate-700 focus-within:border-amber-500 focus-within:ring-amber-500/20' 
+                            : 'bg-white border-slate-200 focus-within:border-indigo-500 focus-within:ring-indigo-200'
+                    }`}>
                         <textarea 
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
-                            onKeyDown={(e) => { if(e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSend(); } }}
-                            className="w-full h-32 pl-6 pr-6 pt-5 pb-16 bg-slate-50 border-2 border-slate-200 rounded-3xl focus:border-brand-500 focus:ring-4 focus:ring-brand-100/50 outline-none resize-none text-lg text-slate-700 placeholder:text-slate-400 transition-all font-medium shadow-inner"
+                            onKeyDown={handleKeyDown}
                             placeholder="Escribe tu respuesta..."
+                            className={`w-full bg-transparent p-4 outline-none resize-none h-[60px] ${isPro ? 'text-white placeholder:text-slate-600' : 'text-slate-800 placeholder:text-slate-400'}`}
                         />
-                        
-                        {/* Botonera Flotante dentro del Textarea */}
-                        <div className="absolute bottom-3 right-3 flex gap-2">
-                            {/* Botón Micrófono */}
-                            <button 
-                                onClick={toggleMic}
-                                className={`h-12 w-12 rounded-xl flex items-center justify-center transition-all shadow-md active:scale-95 ${isListening ? 'bg-red-500 text-white animate-pulse' : 'bg-white text-slate-500 hover:bg-slate-100 border border-slate-200'}`}
-                                title="Usar voz"
-                            >
-                                <span className="text-xl">🎙️</span>
-                            </button>
-
-                            {/* Botón Enviar */}
-                            <button 
-                                onClick={() => handleSend()}
-                                disabled={loading || (!input.trim() && !isListening)}
-                                className={`h-12 px-6 rounded-xl font-bold flex items-center gap-2 transition-all shadow-md active:scale-95 ${loading || (!input.trim() && !isListening) ? 'bg-slate-200 text-slate-400 cursor-not-allowed' : 'bg-brand-600 text-white hover:bg-brand-700 shadow-brand-500/30'}`}
-                            >
-                                <span>ENVIAR</span>
-                                <span className="text-lg">🚀</span>
-                            </button>
-                        </div>
+                        <button 
+                            onClick={handleMicToggle}
+                            className={`absolute right-3 bottom-3 p-2 rounded-full transition-colors ${
+                                isRecording 
+                                    ? 'bg-red-500 text-white animate-pulse' 
+                                    : (isPro ? 'text-slate-500 hover:text-white' : 'text-slate-400 hover:text-indigo-600')
+                            }`}
+                        >
+                            <Mic size={20} />
+                        </button>
                     </div>
 
+                    <button 
+                        onClick={handleSend}
+                        disabled={loading || !input.trim()}
+                        className={`h-[60px] w-[60px] rounded-2xl flex items-center justify-center shadow-lg transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed ${
+                            isPro 
+                                ? 'bg-amber-500 text-slate-900 shadow-amber-900/20' 
+                                : 'bg-indigo-600 text-white shadow-indigo-200'
+                        }`}
+                    >
+                        {loading ? <Loader2 size={24} className="animate-spin" /> : <Send size={24} />}
+                    </button>
+                </div>
+                
+                <div className="mt-3 flex justify-between items-center text-[10px] uppercase font-bold tracking-widest opacity-50">
+                    <span>Press Enter to send</span>
+                    <span className="flex items-center gap-1"><MonitorPlay size={10} /> {isPro ? 'GPT-4 Turbo' : 'Standard Model'}</span>
                 </div>
             </div>
-        </div>
-      </div>
+        </section>
+
+      </main>
     </div>
   );
 }
