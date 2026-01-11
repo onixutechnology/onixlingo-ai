@@ -8,8 +8,8 @@ import { LogIn, UserPlus, User, Lock, Mail, AlertCircle, Loader2, ArrowRight, Ch
 // --- CONFIGURACIÓN INTELIGENTE ---
 const API_URL = process.env.NEXT_PUBLIC_API_URL || (
   process.env.NODE_ENV === 'development'
-    ? 'http://127.0.0.1:8001'                  // Tu puerto local
-    : 'https://onixlingo-bckend.onrender.com'  // Tu backend en la nube
+    ? '' // ✅ AHORA LA COOKIE SE QUEDA EN LOCALHOST         
+    : 'https://onixlingo-bckend.onrender.com'
 );
 
 export default function AuthPage() {
@@ -18,19 +18,15 @@ export default function AuthPage() {
 
   const [isRegister, setIsRegister] = useState(false); 
 
-  // Estados del formulario
   const [formData, setFormData] = useState({ username: '', password: '', email: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  
-  // 🟢 NUEVO: Estado para el mensaje de éxito
   const [success, setSuccess] = useState<string | null>(null);
 
-  // Limpiar formulario al cambiar de modo (Manual)
   const toggleMode = () => {
     setIsRegister(!isRegister);
     setError(null);
-    setSuccess(null); // Limpiamos éxito al cambiar manualmente
+    setSuccess(null); 
     setFormData({ username: '', password: '', email: '' });
   };
 
@@ -38,7 +34,7 @@ export default function AuthPage() {
     e.preventDefault();
     setLoading(true);
     setError(null);
-    setSuccess(null); // Limpiamos éxito previo
+    setSuccess(null);
 
     const endpoint = isRegister ? '/api/v1/register' : '/api/v1/login';
     const url = `${API_URL}${endpoint}`;
@@ -54,6 +50,7 @@ export default function AuthPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
+        credentials: 'include', // ✅ Vital para cookies
       });
       
       const data = await res.json();
@@ -64,17 +61,22 @@ export default function AuthPage() {
 
       // --- LÓGICA DE ÉXITO ---
       if (isRegister) {
-        // 🟢 CAMBIO: En lugar de alert(), usamos el estado visual
-        setIsRegister(false); // Cambiamos a Login
+        setIsRegister(false); 
         setSuccess("¡Cuenta creada con éxito! Por favor inicia sesión.");
-        setFormData({ username: '', password: '', email: '' }); // Limpiamos inputs
+        setFormData({ username: '', password: '', email: '' }); 
       } else {
+        // LOGIN EXITOSO
         localStorage.setItem('currentUser', formData.username);
         
         if (data.progress) {
           loadProgressFromDB(data.progress);
         }
         
+        // 🚨 LA SOLUCIÓN: Refrescar el caché de rutas de Next.js
+        // Esto hace que el Middleware reconozca la cookie recién creada.
+        router.refresh(); 
+        
+        // Esperamos un micro-momento y redirigimos
         router.push('/dashboard');
       }
 
@@ -103,8 +105,6 @@ export default function AuthPage() {
         </div>
 
         <div className="p-8">
-          
-          {/* 🟢 NUEVO: Barra de ÉXITO (Verde) */}
           {success && (
             <div className="mb-6 p-4 bg-green-50 text-green-700 text-sm rounded-xl flex items-center gap-3 border border-green-200 animate-in fade-in slide-in-from-top-2 shadow-sm">
               <CheckCircle2 size={24} className="shrink-0 text-green-500" /> 
@@ -112,7 +112,6 @@ export default function AuthPage() {
             </div>
           )}
 
-          {/* Barra de ERROR (Roja) */}
           {error && (
             <div className="mb-6 p-4 bg-red-50 text-red-600 text-sm rounded-xl flex items-center gap-3 border border-red-100 animate-in fade-in slide-in-from-top-2">
               <AlertCircle size={20} className="shrink-0" /> 
@@ -127,6 +126,7 @@ export default function AuthPage() {
                 <User className="absolute left-4 top-3.5 text-slate-400 group-focus-within:text-blue-500 transition-colors" size={20} />
                 <input 
                   type="text" 
+                  autoComplete="username" 
                   placeholder="Ej. onixuser" 
                   value={formData.username} 
                   onChange={e => setFormData({...formData, username: e.target.value})}
@@ -143,6 +143,7 @@ export default function AuthPage() {
                   <Mail className="absolute left-4 top-3.5 text-slate-400 group-focus-within:text-purple-500 transition-colors" size={20} />
                   <input 
                     type="email" 
+                    autoComplete="email"
                     placeholder="tucorreo@ejemplo.com" 
                     value={formData.email} 
                     onChange={e => setFormData({...formData, email: e.target.value})}
@@ -159,6 +160,7 @@ export default function AuthPage() {
                 <Lock className="absolute left-4 top-3.5 text-slate-400 group-focus-within:text-blue-500 transition-colors" size={20} />
                 <input 
                   type="password" 
+                  autoComplete="current-password"
                   placeholder="••••••••" 
                   value={formData.password} 
                   onChange={e => setFormData({...formData, password: e.target.value})}

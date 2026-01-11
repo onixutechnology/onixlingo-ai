@@ -259,7 +259,7 @@ const CertCard = ({ title, desc, icon: Icon, href, active = false, color }: any)
 
 export default function DashboardPage() {
   const router = useRouter();
-  const { mode } = useUIStore(); 
+  const { mode, setMode } = useUIStore(); 
   const { isLessonCompleted, getLessonStars } = useProgressStore();
   
   const [isMounted, setIsMounted] = useState(false);
@@ -319,11 +319,26 @@ export default function DashboardPage() {
 
   const getStars = (lessonId: string) => isMounted ? getLessonStars(lessonId) : 0;
   const handleLessonClick = (id: string) => router.push(`/lesson/${id}`);
-  
-  const handleLogout = () => {
+  // Busca esta línea al inicio del componente DashboardPage
+
+const handleLogout = () => {
     if(confirm("¿Cerrar sesión?")) {
+      // 1. Borrar datos de usuario
       localStorage.removeItem('currentUser');
-      window.location.reload();
+      
+      // 2. 🚨 BORRAR LA MARCA "TITANIUM" (La que pusimos en SuccessPage)
+      localStorage.removeItem('onix_tier');
+
+      // 3. 🚨 BORRAR LA PERSISTENCIA DE LA UI
+      // Esto elimina el archivo de guardado de Zustand del navegador
+      localStorage.removeItem('onixlingo-ui-prefs'); 
+
+      // 4. Resetear el estado en memoria inmediatamente
+      setMode('student'); 
+
+      // 5. Redirigir al login y refrescar caché de Next.js
+      router.push('/login');
+      router.refresh(); 
     }
   };
 

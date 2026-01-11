@@ -1,0 +1,410 @@
+{
+  "id": "pro-b1-1",
+  "title": "Executive Presence: The 50-Step Gauntlet",
+  "stages": [
+    {
+      "id": "stage-intro",
+      "type": "theory",
+      "title": "Module Overview: Impact & Identity",
+      "parts": [
+        {
+          "visual": "Welcome to the Executive Gauntlet.\n\nThis is not a standard lesson. It is a 50-step simulation designed to rewire how you introduce yourself in high-stakes environments.\n\nWe will cover:\n1. **Auditory Discrimination:** Identifying confidence vs. arrogance.\n2. **Situational Judgment:** Choosing the power move.\n3. **Syntactic Structure:** Building complex sentences correctly.\n4. **Lexical Precision:** Using the exact word for the job.\n\nPrepare yourself.",
+          "audio": "Welcome to the Executive Gauntlet. This session is designed to test your command of professional introductions across fifty unique scenarios. Let's begin."
+        }
+      ]
+    },
+    {
+      "id": "stage-listening",
+      "type": "quiz",
+      "title": "Phase 1: Auditory Analysis (Listening)",
+      "questions": [
+        {
+          "type": "listening_match",
+          "question": "Listen to the statement. Is this tone appropriate for a Board Meeting?",
+          "tts_text": "Hey guys, I'm gonna talk about the numbers now.",
+          "options": ["Appropriate", "Inappropriate"],
+          "correct_answer": "Inappropriate",
+          "explanation": "Casual phrasing ('Hey guys', 'gonna') undermines authority in board settings."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the speaker's role based on the introduction:",
+          "tts_text": "I oversee the strategic alignment of our APAC subsidiaries.",
+          "options": ["Operational Staff", "Executive Leadership", "Intern"],
+          "correct_answer": "Executive Leadership",
+          "explanation": "'Oversee', 'Strategic Alignment', and 'Subsidiaries' are C-Level vocabulary markers."
+        },
+        {
+          "type": "listening_match",
+          "question": "Which verb adds more authority to this sentence?",
+          "tts_text": "I [help/facilitate] cross-border transactions.",
+          "options": ["Help", "Facilitate"],
+          "correct_answer": "Facilitate",
+          "explanation": "'Facilitate' implies process ownership; 'Help' is generic."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. What is the key error in this introduction?",
+          "tts_text": "Um, hi, I am... I think I am the new manager.",
+          "options": ["Lack of confidence", "Too aggressive", "Too formal"],
+          "correct_answer": "Lack of confidence",
+          "explanation": "Hesitation markers ('Um', 'I think') destroy credibility instantly."
+        },
+        {
+          "type": "listening_match",
+          "question": "Select the most concise version:",
+          "tts_text": "I am responsible for the management of the sales team.",
+          "options": ["I manage the sales team.", "I am responsible for the management."],
+          "correct_answer": "I manage the sales team.",
+          "explanation": "Executive brevity: Use verbs (Manage) instead of noun phrases (Responsible for management)."
+        },
+        {
+          "type": "listening_match",
+          "question": "Is this a 'Value-Add' introduction?",
+          "tts_text": "I'm Dave. I work in IT.",
+          "options": ["Yes", "No"],
+          "correct_answer": "No",
+          "explanation": "It states identity but lacks Scope and Impact."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. What is the 'Impact' component here?",
+          "tts_text": "I lead the QA team to ensure zero-defect product launches.",
+          "options": ["I lead the QA team", "Ensure zero-defect product launches"],
+          "correct_answer": "Ensure zero-defect product launches",
+          "explanation": "The impact is the result or benefit (zero defects), not the role itself."
+        },
+        {
+          "type": "listening_match",
+          "question": "Which option sounds more senior?",
+          "tts_text": "I handle the money.",
+          "options": ["I handle the money", "I direct financial strategy"],
+          "correct_answer": "I direct financial strategy",
+          "explanation": "'Direct financial strategy' implies foresight; 'Handle money' sounds clerical."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this person emphasizing 'Task' or 'Strategy'?",
+          "tts_text": "I am currently coding the new login page.",
+          "options": ["Task", "Strategy"],
+          "correct_answer": "Task",
+          "explanation": "Specific, low-level actions are tasks. Strategy would be 'Enhancing user authentication'."
+        },
+        {
+          "type": "listening_match",
+          "question": "Final Check: Is this a 'Power Greeting'?",
+          "tts_text": "Good morning. John Doe, VP of Operations. A pleasure.",
+          "options": ["Yes", "No"],
+          "correct_answer": "Yes",
+          "explanation": "Concise, titled, and polite. Perfect execution."
+        }
+      ]
+    },
+    {
+      "id": "stage-choice",
+      "type": "quiz",
+      "title": "Phase 2: Situational Judgment (Selection)",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "You are introducing yourself to a potential investor. Choose the best opener.",
+          "options": [
+            "Hi, I have a cool idea.",
+            "Hello, I founded a startup last year.",
+            "Good afternoon. I'm the Founder of Onix, a fintech scaling at 20% MoM.",
+            "Hey, wanna hear about my business?"
+          ],
+          "correct_answer": "Good afternoon. I'm the Founder of Onix, a fintech scaling at 20% MoM.",
+          "explanation": "Investors care about metrics (scaling 20%) and defined roles."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A client forgets your name. How do you re-introduce yourself gracefully?",
+          "options": [
+            "You forgot me? I'm Alex.",
+            "It's Alex, from the last meeting.",
+            "Alex Mercer, Lead Consultant. Great to connect again.",
+            "I'm the guy who emailed you."
+          ],
+          "correct_answer": "Alex Mercer, Lead Consultant. Great to connect again.",
+          "explanation": "State your full name and title confidently without acknowledging the awkwardness."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Which word is a 'Weasel Word' (weak) that you should avoid?",
+          "options": ["Spearhead", "Try", "Execute", "Analyze"],
+          "correct_answer": "Try",
+          "explanation": "Do or do not. 'Try' implies the possibility of failure."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You are leading a project. Which title describes you best if you are not a manager?",
+          "options": ["Project Helper", "Project Lead", "Project Worker", "The person in charge"],
+          "correct_answer": "Project Lead",
+          "explanation": "'Lead' is a powerful non-managerial title that commands respect."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Select the best synonym for 'I change things':",
+          "options": ["I alter stuff.", "I drive transformation.", "I switch processes.", "I make things different."],
+          "correct_answer": "I drive transformation.",
+          "explanation": "'Transformation' is the corporate standard for significant change."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "When meeting a C-Level executive, your introduction should be:",
+          "options": ["Long and detailed", "Personal and funny", "Concise and value-driven", "Modest and shy"],
+          "correct_answer": "Concise and value-driven",
+          "explanation": "Executives are time-poor. Get to the value proposition immediately."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Which phrase establishes 'Scope'?",
+          "options": ["I work hard.", "I oversee the North American division.", "I am good at sales.", "I like my job."],
+          "correct_answer": "I oversee the North American division.",
+          "explanation": "Scope defines the boundaries of your authority (North American division)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You are entering a conference call. What do you say?",
+          "options": ["Is anyone there?", "Hello?", "Sarah here, Marketing Director.", "Can you hear me?"],
+          "correct_answer": "Sarah here, Marketing Director.",
+          "explanation": "Announce your presence and role clearly to avoid confusion."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Choose the stronger verb: 'I ______ problems.'",
+          "options": ["fix", "resolve", "mitigate", "do"],
+          "correct_answer": "mitigate",
+          "explanation": "'Mitigate' is specific to risk and complex problems; 'fix' is manual."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is an 'Elevator Pitch'?",
+          "options": ["A sales technique for elevators.", "A 30-second summary of who you are and your value.", "A speech about elevator maintenance.", "A long story."],
+          "correct_answer": "A 30-second summary of who you are and your value.",
+          "explanation": "It is a core executive skill: condensing value into a brief timeframe."
+        }
+      ]
+    },
+    {
+      "id": "stage-structure",
+      "type": "gamified_quiz",
+      "title": "Phase 3: Structural Engineering (Ordering)",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Build the formal introduction:",
+          "parts": ["Allow", "me", "to", "introduce", "myself,", "I", "am", "the", "COO."],
+          "correct_order": ["Allow", "me", "to", "introduce", "myself,", "I", "am", "the", "COO."],
+          "explanation": "A classic, polite, and authoritative opening."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Construct the scope statement:",
+          "parts": ["I", "am", "tasked", "with", "optimizing", "global", "logistics."],
+          "correct_order": ["I", "am", "tasked", "with", "optimizing", "global", "logistics."],
+          "explanation": "'Tasked with' is a passive but formal way to describe assigned responsibility."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Order the value proposition:",
+          "parts": ["My", "focus", "is", "driving", "revenue", "growth", "in", "Q3."],
+          "correct_order": ["My", "focus", "is", "driving", "revenue", "growth", "in", "Q3."],
+          "explanation": "Focus + Action Verb + Metric + Timeframe."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Assemble the experience statement:",
+          "parts": ["I", "bring", "a", "decade", "of", "experience", "in", "fintech."],
+          "correct_order": ["I", "bring", "a", "decade", "of", "experience", "in", "fintech."],
+          "explanation": "'Bringing experience' frames your past as a present asset."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Create the liaison statement:",
+          "parts": ["I", "serve", "as", "the", "primary", "liaison", "for", "key", "accounts."],
+          "correct_order": ["I", "serve", "as", "the", "primary", "liaison", "for", "key", "accounts."],
+          "explanation": "'Liaison' defines a role bridging two groups."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Structure the hierarchy description:",
+          "parts": ["I", "report", "directly", "to", "the", "Chief", "Executive", "Officer."],
+          "correct_order": ["I", "report", "directly", "to", "the", "Chief", "Executive", "Officer."],
+          "explanation": "Defining who you report to establishes your level in the hierarchy."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Order the oversight statement:",
+          "parts": ["My", "team", "oversees", "compliance", "across", "three", "continents."],
+          "correct_order": ["My", "team", "oversees", "compliance", "across", "three", "continents."],
+          "explanation": "Scaling scope (three continents) demonstrates seniority."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Build the strategic intent:",
+          "parts": ["We", "aim", "to", "disrupt", "the", "legacy", "market."],
+          "correct_order": ["We", "aim", "to", "disrupt", "the", "legacy", "market."],
+          "explanation": "'Disrupt' and 'Legacy' are key tech/business buzzwords."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Construct the collaborative intro:",
+          "parts": ["I", "look", "forward", "to", "synergizing", "with", "your", "division."],
+          "correct_order": ["I", "look", "forward", "to", "synergizing", "with", "your", "division."],
+          "explanation": "While 'synergize' is a buzzword, it is valid in introductions to imply cooperation."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Order the closing:",
+          "parts": ["It", "is", "a", "privilege", "to", "meet", "you", "all."],
+          "correct_order": ["It", "is", "a", "privilege", "to", "meet", "you", "all."],
+          "explanation": "High-formality closing."
+        }
+      ]
+    },
+    {
+      "id": "stage-precision",
+      "type": "gamified_quiz",
+      "title": "Phase 4: Lexical Precision (Input)",
+      "questions": [
+        {
+          "type": "fill_input",
+          "question": "I am the Point of ______ (POC) for this project.",
+          "correct_answers": ["Contact", "contact"],
+          "explanation": "POC is the standard acronym for the responsible person."
+        },
+        {
+          "type": "fill_input",
+          "question": "We need to hit the ground ______ to meet the deadline.",
+          "correct_answers": ["running", "Running"],
+          "explanation": "'Hit the ground running' means to start effectively immediately."
+        },
+        {
+          "type": "fill_input",
+          "question": "I will ______ (verb starting with L) with the legal team regarding the contract.",
+          "correct_answers": ["liaise", "Liaise"],
+          "explanation": "'Liaise' means to cooperate on a matter of mutual concern."
+        },
+        {
+          "type": "fill_input",
+          "question": "Please keep me in the ______ regarding these updates.",
+          "correct_answers": ["loop", "Loop"],
+          "explanation": "'In the loop' means informed and involved."
+        },
+        {
+          "type": "fill_input",
+          "question": "My core ______ is in supply chain management. (Knowledge/Skill area)",
+          "correct_answers": ["competency", "Competency", "expertise"],
+          "explanation": "Core competency is the preferred term for main skill set."
+        },
+        {
+          "type": "fill_input",
+          "question": "We need to ______ (verbs starting with S) our efforts to avoid redundancy.",
+          "correct_answers": ["streamline", "Streamline", "synchronize"],
+          "explanation": "'Streamline' means to make an organization or system more efficient."
+        },
+        {
+          "type": "fill_input",
+          "question": "This is a ______-win situation.",
+          "correct_answers": ["win", "Win"],
+          "explanation": "Win-win is the goal of all negotiations."
+        },
+        {
+          "type": "fill_input",
+          "question": "I report ______ to the VP of Sales.",
+          "correct_answers": ["directly", "Directly"],
+          "explanation": "Reporting 'directly' implies a close hierarchical step."
+        },
+        {
+          "type": "fill_input",
+          "question": "Let's touch ______ next week.",
+          "correct_answers": ["base", "Base"],
+          "explanation": "'Touch base' is the standard idiom for briefly reconnecting."
+        },
+        {
+          "type": "fill_input",
+          "question": "I am responsible ______ the final audit.",
+          "correct_answers": ["for", "For"],
+          "explanation": "Grammar check: Responsible + FOR."
+        }
+      ]
+    },
+    {
+      "id": "stage-mastery",
+      "type": "quiz",
+      "title": "Phase 5: Executive Mastery (Advanced)",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Which sentence demonstrates the highest level of accountability?",
+          "options": ["The team failed.", "Mistakes were made.", "I take full ownership of the oversight.", "Ideally, it should have worked."],
+          "correct_answer": "I take full ownership of the oversight.",
+          "explanation": "Extreme Ownership is the hallmark of true leadership."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Construct the vision statement:",
+          "parts": ["We", "envision", "a", "paradigm", "shift", "in", "renewable", "energy."],
+          "correct_order": ["We", "envision", "a", "paradigm", "shift", "in", "renewable", "energy."],
+          "explanation": "'Paradigm shift' refers to a fundamental change in approach."
+        },
+        {
+          "type": "fill_input",
+          "question": "We must ensure full ______ with GDPR regulations.",
+          "correct_answers": ["compliance", "Compliance"],
+          "explanation": "Compliance is non-negotiable in executive governance."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Translate 'I fix problems' to C-Suite language:",
+          "options": ["I do repairs.", "I resolve critical bottlenecks.", "I help out.", "I am a fixer."],
+          "correct_answer": "I resolve critical bottlenecks.",
+          "explanation": "'Bottlenecks' identifies the strategic choke point, not just the symptom."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Order the delegation:",
+          "parts": ["I", "am", "delegating", "authority", "to", "my", "deputy."],
+          "correct_order": ["I", "am", "delegating", "authority", "to", "my", "deputy."],
+          "explanation": "Clear transfer of power."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this speaker avoiding the question?",
+          "tts_text": "That is an interesting perspective, let's circle back to it offline.",
+          "options": ["Yes", "No"],
+          "correct_answer": "Yes",
+          "explanation": "'Take it offline' is often a tactic to avoid public debate."
+        },
+        {
+          "type": "fill_input",
+          "question": "We need to ______ (scale up) our operations.",
+          "correct_answers": ["scale", "Scale", "expand"],
+          "explanation": "Scale is the verb for growth."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Which is best for closing a first meeting?",
+          "options": ["Bye.", "I look forward to our fruitful collaboration.", "See ya.", "Good luck."],
+          "correct_answer": "I look forward to our fruitful collaboration.",
+          "explanation": "Forward-looking and positive."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Construct the value statement:",
+          "parts": ["I", "deliver", "measurable", "results", "under", "pressure."],
+          "correct_order": ["I", "deliver", "measurable", "results", "under", "pressure."],
+          "explanation": "Measurable results are the only currency that matters."
+        },
+        {
+          "type": "fill_input",
+          "question": "This strategy is not ______ (capable of working).",
+          "correct_answers": ["viable", "Viable", "feasible"],
+          "explanation": "Viable means capable of working successfully."
+        }
+      ]
+    }
+  ]
+}

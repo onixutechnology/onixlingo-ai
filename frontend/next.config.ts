@@ -1,9 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Ignorar errores de TypeScript durante el build
-  typescript: {
-    ignoreBuildErrors: true,
+  // 👇 ESTO ES EL PROXY MÁGICO
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*', // Cuando el frontend pida /api/...
+        destination: 'http://127.0.0.1:8001/api/:path*', // ...Next.js lo envía al Backend
+      },
+    ]
   },
 };
 

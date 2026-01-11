@@ -1,7 +1,7 @@
 import logging
 import stripe
-import os # <--- 1. NUEVO: Para leer el sistema
-from dotenv import load_dotenv # <--- 2. NUEVO: Para leer el archivo .env
+import os 
+from dotenv import load_dotenv 
 
 from fastapi import FastAPI, Request, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -17,8 +17,6 @@ load_dotenv()
 # ==============================================================================
 # 🔐 CONFIGURACIÓN DE STRIPE (MODO SEGURO)
 # ==============================================================================
-
-# 4. AHORA LEEMOS DESDE EL ARCHIVO OCULTO (Ya no escribimos la clave aquí)
 stripe.api_key = os.getenv("STRIPE_API_KEY") 
 ENDPOINT_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET")
 
@@ -48,11 +46,23 @@ app = FastAPI(
     docs_url="/docs"
 )
 
-# 4. Middleware (CORS - FIX PARA RENDER)
+# ==============================================================================
+# 🛡️ MIDDLEWARE CORS (CORREGIDO PARA COOKIES Y LOGOUT)
+# ==============================================================================
+# IMPORTANTE: Para que las Cookies (HttpOnly) funcionen, no puedes usar ["*"].
+# Debes listar explícitamente los dominios de tu Frontend.
+
+origins = [
+    "http://localhost:3000",             # Frontend Local (Next.js)
+    "http://127.0.0.1:3000",             # Alternativa Local
+    "https://onixlingo.vercel.app",      # ⚠️ TU DOMINIO DE PRODUCCIÓN (Ajústalo si es diferente)
+    # "https://tu-dominio.com"           # Agrega aquí otros dominios si compraste uno
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], 
-    allow_credentials=True,
+    allow_origins=origins,   # 👈 CAMBIO CRÍTICO: Usamos la lista explícita
+    allow_credentials=True,  # ✅ Ahora el navegador permitirá enviar/borrar cookies
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -67,13 +77,11 @@ async def stripe_webhook(request: Request, stripe_signature: str = Header(None))
     """
     payload = await request.body()
 
-    # Verificación de seguridad: Si no hay claves configuradas, fallamos gracefuly
     if not stripe.api_key or not ENDPOINT_SECRET:
         logger.error("❌ [STRIPE] Faltan las claves en el archivo .env")
         raise HTTPException(status_code=500, detail="Configuration Error")
 
     try:
-        # Verificar que el evento viene realmente de Stripe
         event = stripe.Webhook.construct_event(
             payload, stripe_signature, ENDPOINT_SECRET
         )
@@ -81,24 +89,19 @@ async def stripe_webhook(request: Request, stripe_signature: str = Header(None))
         logger.error(f"❌ [STRIPE] Payload inválido: {e}")
         raise HTTPException(status_code=400, detail="Invalid payload")
     except stripe.error.SignatureVerificationError as e:
-        logger.error(f"❌ [STRIPE] Firma inválida. ¿Cambiaste el ENDPOINT_SECRET?: {e}")
+        logger.error(f"❌ [STRIPE] Firma inválida: {e}")
         raise HTTPException(status_code=400, detail="Invalid signature")
 
     # ✅ MANEJO DEL PAGO EXITOSO
     if event['type'] == 'checkout.session.completed':
         session = event['data']['object']
         
-        # Datos del usuario
         user_id = session.get("metadata", {}).get("userId")
         user_email = session.get("customer_details", {}).get("email")
 
         logger.info(f"💰 [STRIPE] Pago recibido de: {user_email} (ID: {user_id})")
 
-        # ---------------------------------------------------------------------
-        # AQUÍ LA LÓGICA DE BASE DE DATOS (Desbloqueo)
-        # ---------------------------------------------------------------------
-        # Ejemplo futuro: db.users.update_one({"_id": user_id}, {"$set": {"is_premium": True}})
-        
+        # AQUÍ LA LÓGICA DE BASE DE DATOS...
         logger.info(f"🔓 [DB] Usuario {user_id} actualizado a PREMIUM exitosamente.")
 
     return {"status": "success"}

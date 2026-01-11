@@ -1,0 +1,400 @@
+{
+  "id": "pro-b1-10",
+  "title": "B1 Milestone: The Global Networking Gala",
+  "stages": [
+    {
+      "id": "stage-intro",
+      "type": "theory",
+      "title": "Simulation Briefing",
+      "parts": [
+        {
+          "visual": "Welcome to your B1 Capstone.\n\n**The Scenario:** You are attending the 'Global Innovation Summit' in Zurich. Your goal is to secure three strategic contacts and exit gracefully.\n\n**The Challenge:** You will face 50 random interactions ranging from introductions to crisis management. You must navigate them using the 'Executive Presence' principles learned in this tier.\n\n**Objective:** Demonstrate poise, precision, and polish.",
+          "audio": "This is not a drill. You are now live at the Global Innovation Summit. Good luck."
+        }
+      ]
+    },
+    {
+      "id": "stage-listening",
+      "type": "quiz",
+      "title": "Phase 1: Arrival & Scanning (Listening)",
+      "questions": [
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this person open to conversation?",
+          "tts_text": "I'm just waiting for a colleague, but hello!",
+          "options": ["Open", "Closed"],
+          "correct_answer": "Open",
+          "explanation": "The 'but hello!' signal invites a brief chat while they wait."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the VIP:",
+          "tts_text": "I founded the company back in '99.",
+          "options": ["Employee", "Founder/Owner"],
+          "correct_answer": "Founder/Owner",
+          "explanation": "Founder status marks them as a high-value target."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. What is the topic?",
+          "tts_text": "The volatility in the Asian markets is concerning.",
+          "options": ["Weather", "Global Finance"],
+          "correct_answer": "Global Finance",
+          "explanation": "Volatility/Markets = Finance."
+        },
+        {
+          "type": "listening_match",
+          "question": "Is this a graceful exit?",
+          "tts_text": "Okay, I'm bored. Bye.",
+          "options": ["Graceful", "Rude"],
+          "correct_answer": "Rude",
+          "explanation": "Never express boredom. Excuse yourself to 'get a drink' or 'meet someone'."
+        },
+        {
+          "type": "listening_match",
+          "question": "What does this person want?",
+          "tts_text": "I am looking for a partner in logistics.",
+          "options": ["A job", "A business alliance"],
+          "correct_answer": "A business alliance",
+          "explanation": "Partnering implies B2B collaboration."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this person tipsy (drunk)?",
+          "tts_text": "I looooove this champagne! You're my best friend!",
+          "options": ["Sober", "Intoxicated"],
+          "correct_answer": "Intoxicated",
+          "explanation": "Slurred speech and over-familiarity signal intoxication. Exit politeley."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the accent/origin context:",
+          "tts_text": "We are based out of Silicon Valley.",
+          "options": ["Finance Sector", "Tech Sector"],
+          "correct_answer": "Tech Sector",
+          "explanation": "Silicon Valley is the global hub for tech."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this a competitor?",
+          "tts_text": "We are launching a product similar to yours next month.",
+          "options": ["Client", "Competitor"],
+          "correct_answer": "Competitor",
+          "explanation": "Launching a similar product defines competition. Be guarded."
+        },
+        {
+          "type": "listening_match",
+          "question": "What is the mood?",
+          "tts_text": "This venue is spectacular, isn't it?",
+          "options": ["Complaining", "Appreciative"],
+          "correct_answer": "Appreciative",
+          "explanation": "Positive small talk about the environment."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the name pronounced correctly?",
+          "tts_text": "It is pronounced 'Siobhan' (Shiv-awn).",
+          "options": ["Yes", "No"],
+          "correct_answer": "Yes",
+          "explanation": "Siobhan is an Irish name often mispronounced. Listening carefully is key."
+        }
+      ]
+    },
+    {
+      "id": "stage-choice",
+      "type": "quiz",
+      "title": "Phase 2: Tactical Engagement (Selection)",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "You approach a group of three. How do you enter?",
+          "options": ["Force your way in.", "Stand silently until noticed.", "Wait for a lull, smile, and ask 'May I join you?'", "Interrupt them."],
+          "correct_answer": "Wait for a lull, smile, and ask 'May I join you?'",
+          "explanation": "Respect the group dynamic before entering."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Someone hands you a business card. You:",
+          "options": ["Put it in your pocket immediately.", "Read it, comment on it, then put it away respectfully.", "Drop it.", "Use it as a toothpick."],
+          "correct_answer": "Read it, comment on it, then put it away respectfully.",
+          "explanation": "In many cultures (especially Asia), the card represents the person. Treat it with respect."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You spill your drink on a guest. You:",
+          "options": ["Run away.", "Blame them.", "Apologize profusely, offer to pay for cleaning, and get napkins.", "Laugh."],
+          "correct_answer": "Apologize profusely, offer to pay for cleaning, and get napkins.",
+          "explanation": "Full ownership and immediate remediation."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A potential client asks what you do. You give:",
+          "options": ["Your life story.", "A one-word answer.", "Your 30-second Elevator Pitch.", "A joke."],
+          "correct_answer": "Your 30-second Elevator Pitch.",
+          "explanation": "Concise, value-driven summary of your role."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You want to leave a boring conversation. You say:",
+          "options": ["You are boring.", "I see a friend over there, please excuse me.", "Bye.", "I need the bathroom."],
+          "correct_answer": "I see a friend over there, please excuse me.",
+          "explanation": "A polite social lie to extricate yourself without offense."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You are holding a drink. Which hand do you hold it in?",
+          "options": ["Right hand.", "Left hand.", "Both hands.", "No hands."],
+          "correct_answer": "Left hand.",
+          "explanation": "Keep your right hand dry and warm for handshakes."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Someone asks a confidential question about your company. You:",
+          "options": ["Tell them everything.", "Lie.", "Say: 'I'm afraid I can't discuss that right now, but let's talk about [X].'", "Get angry."],
+          "correct_answer": "Say: 'I'm afraid I can't discuss that right now, but let's talk about [X].'",
+          "explanation": "Polite refusal + Pivot."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You forget the name of the person you are talking to. You:",
+          "options": ["Panic.", "Ask for their card.", "Introduce them to someone else and listen for their name.", "Call them 'Buddy'."],
+          "correct_answer": "Introduce them to someone else and listen for their name.",
+          "explanation": "A classic networking trick to recover a lost name."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "The event is ending. You want to follow up. You say:",
+          "options": ["Can I have your number?", "Let's connect on LinkedIn.", "Can I come to your house?", "Add me on Facebook."],
+          "correct_answer": "Let's connect on LinkedIn.",
+          "explanation": "LinkedIn is the standard platform for professional follow-up."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the goal of networking?",
+          "options": ["Selling.", "Eating free food.", "Building mutually beneficial relationships.", "Collecting paper."],
+          "correct_answer": "Building mutually beneficial relationships.",
+          "explanation": "It's about farming (relationships), not hunting (sales)."
+        }
+      ]
+    },
+    {
+      "id": "stage-structure",
+      "type": "gamified_quiz",
+      "title": "Phase 3: Conversation Architecture (Ordering)",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "The Introduction:",
+          "parts": ["Hello,", "I", "am", "James,", "Director", "of", "Sales", "at", "Onix."],
+          "correct_order": ["Hello,", "I", "am", "James,", "Director", "of", "Sales", "at", "Onix."],
+          "explanation": "Greeting + Name + Title + Company."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Compliment:",
+          "parts": ["I", "really", "enjoyed", "your", "keynote", "speech", "earlier."],
+          "correct_order": ["I", "really", "enjoyed", "your", "keynote", "speech", "earlier."],
+          "explanation": "Specific praise is a great opener."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Inquiry:",
+          "parts": ["What", "brings", "you", "to", "the", "summit", "this", "year?"],
+          "correct_order": ["What", "brings", "you", "to", "the", "summit", "this", "year?"],
+          "explanation": "Open-ended question to start dialogue."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Value Proposition:",
+          "parts": ["We", "help", "companies", "automate", "their", "workflow."],
+          "correct_order": ["We", "help", "companies", "automate", "their", "workflow."],
+          "explanation": "Simple statement of what you do."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Connection:",
+          "parts": ["It", "seems", "we", "face", "similar", "challenges", "in", "logistics."],
+          "correct_order": ["It", "seems", "we", "face", "similar", "challenges", "in", "logistics."],
+          "explanation": "Finding common ground."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Transition:",
+          "parts": ["On", "another", "note,", "have", "you", "tried", "the", "appetizers?"],
+          "correct_order": ["On", "another", "note,", "have", "you", "tried", "the", "appetizers?"],
+          "explanation": "Softening the conversation to social topics."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Proposal:",
+          "parts": ["I", "would", "love", "to", "continue", "this", "over", "coffee."],
+          "correct_order": ["I", "would", "love", "to", "continue", "this", "over", "coffee."],
+          "explanation": "Moving the relationship to the next stage."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Exchange:",
+          "parts": ["May", "I", "offer", "you", "my", "card?"],
+          "correct_order": ["May", "I", "offer", "you", "my", "card?"],
+          "explanation": "Polite offer of contact info."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Exit:",
+          "parts": ["Please", "excuse", "me,", "I", "must", "make", "a", "call."],
+          "correct_order": ["Please", "excuse", "me,", "I", "must", "make", "a", "call."],
+          "explanation": "Valid reason to leave."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Follow-up Promise:",
+          "parts": ["I", "will", "email", "you", "the", "details", "on", "Monday."],
+          "correct_order": ["I", "will", "email", "you", "the", "details", "on", "Monday."],
+          "explanation": "Setting expectations for next steps."
+        }
+      ]
+    },
+    {
+      "id": "stage-vocab",
+      "type": "gamified_quiz",
+      "title": "Phase 4: Networking Vocabulary (Input)",
+      "questions": [
+        {
+          "type": "fill_input",
+          "question": "This event is a great ______ (opportunity to meet people).",
+          "correct_answers": ["networking", "Networking", "opportunity"],
+          "explanation": "Networking."
+        },
+        {
+          "type": "fill_input",
+          "question": "I gave the ______ (main speech) address.",
+          "correct_answers": ["keynote", "Keynote"],
+          "explanation": "The primary speech at a conference."
+        },
+        {
+          "type": "fill_input",
+          "question": "Let's ______ (give and take) contact details.",
+          "correct_answers": ["exchange", "Exchange", "swap"],
+          "explanation": "To swap information."
+        },
+        {
+          "type": "fill_input",
+          "question": "She is an ______ (expert/leader) in her field.",
+          "correct_answers": ["authority", "Authority", "expert"],
+          "explanation": "Someone with high standing."
+        },
+        {
+          "type": "fill_input",
+          "question": "We need to ______ (nurture) this relationship.",
+          "correct_answers": ["cultivate", "Cultivate", "nurture"],
+          "explanation": "Relationships require care to grow."
+        },
+        {
+          "type": "fill_input",
+          "question": "I am attending a ______ (workshop/meeting) on AI.",
+          "correct_answers": ["seminar", "Seminar", "session"],
+          "explanation": "Educational session."
+        },
+        {
+          "type": "fill_input",
+          "question": "Dress code is Business ______ (relaxed).",
+          "correct_answers": ["casual", "Casual"],
+          "explanation": "Professional but not a full suit."
+        },
+        {
+          "type": "fill_input",
+          "question": "He is a potential ______ (customer/lead).",
+          "correct_answers": ["prospect", "Prospect", "lead"],
+          "explanation": "Sales term for a potential client."
+        },
+        {
+          "type": "fill_input",
+          "question": "That was a fruitful ______ (interaction).",
+          "correct_answers": ["conversation", "Conversation", "discussion"],
+          "explanation": "Productive talk."
+        },
+        {
+          "type": "fill_input",
+          "question": "I'll send you an ______ (invitation) on LinkedIn.",
+          "correct_answers": ["invite", "Invite", "request"],
+          "explanation": "Social media connection request."
+        }
+      ]
+    },
+    {
+      "id": "stage-mastery",
+      "type": "quiz",
+      "title": "Phase 5: The Final Test (Scenarios)",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Scenario: You are trapped with a 'Talker' who won't stop. You:",
+          "options": ["Scream.", "Interrupt firmly but politely: 'I'm so sorry to interrupt, but I have to catch someone before they leave.'", "Walk away while they talk.", "Sleep."],
+          "correct_answer": "Interrupt firmly but politely: 'I'm so sorry to interrupt, but I have to catch someone before they leave.'",
+          "explanation": "The 'Time Constraint' exit is the only way to escape a monopolizer politeley."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Introduce two people:",
+          "parts": ["Sarah,", "I", "would", "like", "to", "introduce", "you", "to", "Mark."],
+          "correct_order": ["Sarah,", "I", "would", "like", "to", "introduce", "you", "to", "Mark."],
+          "explanation": "The connector role."
+        },
+        {
+          "type": "fill_input",
+          "question": "We should ______ (work together) on this project.",
+          "correct_answers": ["collaborate", "Collaborate", "partner"],
+          "explanation": "Proposing joint work."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Soft Close'?",
+          "options": ["Closing a door quietly.", "Ending a conversation without a firm commitment, keeping the door open.", "Whispering bye.", "Falling asleep."],
+          "correct_answer": "Ending a conversation without a firm commitment, keeping the door open.",
+          "explanation": "Useful when you aren't sure of the value yet."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this a brush-off (rejection)?",
+          "tts_text": "We aren't looking for vendors right now, but thanks.",
+          "options": ["Yes", "No"],
+          "correct_answer": "Yes",
+          "explanation": "A polite but firm 'No'."
+        },
+        {
+          "type": "fill_input",
+          "question": "I represent ______ (Company Name).",
+          "correct_answers": ["Onix", "Onix Systems"],
+          "explanation": "Representing your brand."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Express gratitude for the event:",
+          "parts": ["Thank", "you", "for", "organizing", "such", "a", "splendid", "event."],
+          "correct_order": ["Thank", "you", "for", "organizing", "such", "a", "splendid", "event."],
+          "explanation": "Thanking the host is mandatory etiquette."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "The 'Open Stance' in body language means:",
+          "options": ["Arms crossed.", "Legs crossed.", "Arms uncrossed, facing the room, inviting approach.", "Lying down."],
+          "correct_answer": "Arms uncrossed, facing the room, inviting approach.",
+          "explanation": "Signals approachability."
+        },
+        {
+          "type": "fill_input",
+          "question": "Let's keep the ______ (momentum/energy) going.",
+          "correct_answers": ["momentum", "Momentum"],
+          "explanation": "Keeping the relationship active."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Capstone Final: You achieved your goal. How do you feel?",
+          "options": ["Tired.", "Accomplished.", "Hungry.", "Sad."],
+          "correct_answer": "Accomplished.",
+          "explanation": "You have survived the B1 Executive Gauntlet."
+        }
+      ]
+    }
+  ]
+}

@@ -1,30 +1,39 @@
 'use client';
 import { useState } from 'react';
-import { Check, ShieldCheck, Zap } from 'lucide-react';
+import { useRouter } from 'next/navigation'; // 👈 1. Importamos Router
+import { Check, ShieldCheck, Zap, ArrowLeft } from 'lucide-react';
+import { useUIStore } from '@/store/uiStore'; // 👈 2. Importamos el Store para apagar el modo Pro
 
 export const UpgradeModal = () => {
-  // 🕵️ RASTREADOR: Esta línea nos dirá en la consola quién está importando este componente
+  // 🕵️ RASTREADOR
   console.trace("🚨 RASTREANDO MODAL: ¿Desde qué archivo me están llamando?");
 
+  const router = useRouter();
+  const { setMode } = useUIStore(); // 👈 3. Traemos la función para cambiar el diseño
   const [loading, setLoading] = useState(false);
+
+  // 👇 4. Función para cancelar y regresar
+  const handleCancel = () => {
+    // Apagamos el switch visualmente (volvemos a modo standard)
+    setMode('student'); 
+    
+    // Opcional: Aseguramos que se quede en el dashboard
+    router.refresh();
+  };
 
   const handleCheckout = async () => {
     try {
       setLoading(true);
-      // Llamamos a NUESTRO Backend
       const response = await fetch('/api/stripe/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
-            // En una app real, esto viene de tu sistema de login
             userId: 'usuario_demo_123', 
             userEmail: 'usuario@ejemplo.com' 
         })
       });
       
       const data = await response.json();
-      
-      // Si el Backend nos dio la URL de Stripe, vamos allá
       if (data.url) window.location.href = data.url; 
       
     } catch (error) {
@@ -35,7 +44,7 @@ export const UpgradeModal = () => {
   };
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md">
+    <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-in fade-in duration-300">
       <div className="bg-slate-950 border border-amber-500/30 rounded-3xl max-w-md w-full p-8 relative overflow-hidden shadow-[0_0_60px_rgba(245,158,11,0.15)]">
         
         <div className="text-center mb-8">
@@ -70,7 +79,15 @@ export const UpgradeModal = () => {
           )}
         </button>
         
-        <div className="mt-6 text-center">
+        {/* 👇 5. NUEVO BOTÓN DE CANCELAR */}
+        <button 
+            onClick={handleCancel}
+            className="w-full mt-4 py-2 text-slate-500 text-sm hover:text-white transition-colors flex items-center justify-center gap-2 hover:bg-white/5 rounded-lg"
+        >
+            <ArrowLeft size={16} /> No por ahora, volver al plan Gratuito
+        </button>
+
+        <div className="mt-6 text-center border-t border-slate-800/50 pt-4">
           <p className="text-xs text-slate-500 mb-1">
             <ShieldCheck size={12} className="inline mr-1" />
             Pago seguro procesado por Stripe
