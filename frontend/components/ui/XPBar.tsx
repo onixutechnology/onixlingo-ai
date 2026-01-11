@@ -1,55 +1,73 @@
 'use client';
 
-import { useAvatarStore } from '@/store/avatarStore';
-// Si no instalaste framer-motion, usa el div alternativo comentado abajo
-import { motion } from 'framer-motion'; 
+import { motion } from 'framer-motion';
+import { Zap, Trophy, Flame } from 'lucide-react';
+import { useProgressStore } from '@/store/progressStore'; // 👈 CAMBIO IMPORTANTE: Usamos progressStore
+import { useUIStore } from '@/store/uiStore'; // Para detectar modo PRO
 
 export default function XPBar() {
-  const { xp, level, streak } = useAvatarStore();
-  const progress = (xp % 100); 
+  // 1. Obtenemos XP y Streak del store correcto
+  const { xp, streak } = useProgressStore();
+  const { mode } = useUIStore();
+  
+  const isPro = mode === 'professional';
+
+  // 2. Calculamos el nivel basado en XP (ej: cada 100 XP es un nivel)
+  const level = Math.floor(xp / 100) + 1;
+  const progressToNextLevel = xp % 100; // Porcentaje 0-100
 
   return (
-    <div className="w-full bg-white rounded-3xl p-5 shadow-soft border-2 border-brand-100 flex items-center gap-5 mb-8 relative overflow-hidden">
-      {/* Decoración de fondo sutil */}
-      <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-brand-50 rounded-full opacity-50 z-0"></div>
-
-      {/* Insignia de Nivel (Grande y llamativa) */}
-      <div className="relative z-10 shrink-0">
-        <div className="w-16 h-16 bg-brand-500 rounded-2xl flex items-center justify-center text-white font-extrabold text-2xl shadow-lg transform rotate-3 border-4 border-brand-200">
-          {level}
-        </div>
-        <div className="absolute -bottom-2 -right-2 bg-accent-yellow text-brand-700 text-xs font-black px-2 py-1 rounded-full border-2 border-white transform -rotate-3">
-          NIVEL
-        </div>
-      </div>
-
-      {/* Barra de Progreso */}
-      <div className="flex-1 z-10">
-        <div className="flex justify-between text-sm font-bold text-brand-700 mb-2">
-          <span>Progreso del Nivel</span>
-          <span className="text-brand-500">{xp} XP Total</span>
-        </div>
-        <div className="h-5 w-full bg-brand-100 rounded-full overflow-hidden border-2 border-brand-200 p-0.5">
-          {/* Barra animada */}
-          <motion.div 
-            className="h-full bg-gradient-to-r from-brand-400 to-brand-500 rounded-full shadow-inner"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+    <div className={`flex items-center gap-4 p-2 rounded-2xl border backdrop-blur-sm shadow-sm transition-colors ${
+        isPro 
+            ? 'bg-slate-900/80 border-slate-700 text-slate-200' 
+            : 'bg-white/80 border-slate-200 text-slate-700'
+    }`}>
+      
+      {/* Nivel Circular */}
+      <div className="relative w-10 h-10 flex items-center justify-center">
+        <svg className="absolute w-full h-full -rotate-90" viewBox="0 0 36 36">
+          {/* Fondo del círculo */}
+          <path
+            className={isPro ? "text-slate-800" : "text-slate-200"}
+            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
           />
-          {/* ALTERNATIVA SIN FRAMER MOTION:
-          <div 
-            className="h-full bg-gradient-to-r from-brand-400 to-brand-500 rounded-full shadow-inner transition-all duration-500"
-            style={{ width: `${progress}%` }}
-          /> 
-          */}
-        </div>
+          {/* Progreso */}
+          <motion.path
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: progressToNextLevel / 100 }}
+            className={isPro ? "text-amber-500" : "text-indigo-500"}
+            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeDasharray="100, 100"
+          />
+        </svg>
+        <span className="text-xs font-black">{level}</span>
       </div>
 
-      {/* Racha (Chunky y divertida) */}
-      <div className="flex flex-col items-center justify-center bg-accent-orange/10 px-4 py-2 rounded-2xl border-2 border-accent-orange/30 z-10">
-        <span className="text-3xl drop-shadow-sm">🔥</span>
-        <span className="text-sm font-black text-accent-orange">{streak} Días</span>
+      {/* Info de Texto */}
+      <div className="flex flex-col">
+        <div className="flex items-center gap-2">
+            <span className="text-xs font-bold uppercase opacity-60">Level {level}</span>
+            {streak > 0 && (
+                <div className={`flex items-center text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
+                    isPro ? 'bg-orange-900/30 text-orange-400' : 'bg-orange-100 text-orange-600'
+                }`}>
+                    <Flame size={10} className="mr-0.5 fill-current" /> {streak}
+                </div>
+            )}
+        </div>
+        
+        <div className="flex items-center gap-1">
+            <Zap size={14} className={isPro ? "text-amber-500 fill-current" : "text-yellow-500 fill-current"} />
+            <span className={`text-sm font-black ${isPro ? "text-white" : "text-slate-900"}`}>
+                {xp} <span className="text-[10px] opacity-60">XP</span>
+            </span>
+        </div>
       </div>
     </div>
   );
