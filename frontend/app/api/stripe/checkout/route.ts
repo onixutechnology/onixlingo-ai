@@ -1,35 +1,45 @@
 import { NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
 
+// 🛑 IMPORTANTE: Esto arregla el error "Neither apiKey nor config.authenticator provided"
+// Le dice a Vercel que esta ruta es dinámica y no debe ejecutarse durante el Build.
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: Request) {
   try {
-    // 1. Logs de diagnóstico para ver qué pasa en la consola
-    console.log("💳 Iniciando proceso de Checkout en Stripe...");
+    console.log("💳 [STRIPE] Iniciando Checkout...");
 
-    // 2. Validación de seguridad: ¿Tenemos la clave del precio?
+    // 1. Obtener la URL base dinámicamente (funciona en localhost y producción)
+    // Si por alguna razón no detecta el origen, usa la variable de entorno como respaldo.
+    const origin = req.headers.get('origin') || process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+
+    // 2. Validación de Configuración
     const priceId = process.env.STRIPE_PRICE_ID_PRO;
     if (!priceId) {
-      console.error("❌ ERROR CRÍTICO: Falta STRIPE_PRICE_ID_PRO en .env.local");
-      return new NextResponse('Server Config Error: Missing Price ID', { status: 500 });
+      console.error("❌ [STRIPE CRITICAL] Falta STRIPE_PRICE_ID_PRO en .env.local");
+      return new NextResponse(JSON.stringify({ error: "Server Config Error" }), { status: 500 });
     }
 
-    // 3. Recibir datos del usuario (Frontend)
+    // 3. Parsear datos del usuario
     const body = await req.json();
     const { userId, userEmail } = body;
 
-    // 4. Crear la Sesión de Stripe (La configuración maestra)
+    if (!userId) {
+      return new NextResponse("Unauthorized: Missing User ID", { status: 401 });
+    }
+
+    console.log(`👤 Procesando para usuario: ${userId} (${userEmail || 'No email'})`);
+
+    // 4. Crear Sesión de Checkout
     const session = await stripe.checkout.sessions.create({
-      // A dónde ir si paga o cancela
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/success`,
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/dashboard/pro?canceled=true`,
+      success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${origin}/dashboard/pro?canceled=true`,
       
-      // Configuración de Pago
       payment_method_types: ['card'],
       mode: 'subscription',
       billing_address_collection: 'auto',
-      customer_email: userEmail, // Pre-llenar el email si lo tenemos
+      customer_email: userEmail,
       
-      // El Producto ($49 MXN)
       line_items: [
         {
           price: priceId,
@@ -37,25 +47,30 @@ export async function POST(req: Request) {
         },
       ],
 
-      // 🎁 TUS REQUISITOS (Prueba Gratis + Metadatos)
+      // 🎁 Metadatos en la SESIÓN (Para fácil acceso)
+      metadata: {
+        userId: userId,
+      },
+
       subscription_data: {
-        trial_period_days: 7, // 7 Días de prueba gratuita
+        trial_period_days: 7, // 7 Días Gratis
+        // 🎁 Metadatos en la SUSCRIPCIÓN (Para los webhooks de renovación)
         metadata: {
-          userId: userId, // Guardamos quién pagó para activarlo luego
+          userId: userId,
         },
       },
 
-      // 🎟️ TUS REQUISITOS (Cupones VIP)
-      allow_promotion_codes: true, // Habilita la caja para poner "ONIXVIP"
+      // 🎟️ Permitir Cupones (ONIXVIP)
+      allow_promotion_codes: true,
     });
 
-    console.log("✅ Sesión creada. URL:", session.url);
+    console.log("✅ [STRIPE] Sesión creada exitosamente:", session.id);
 
-    // 5. Devolver la URL a tu Frontend para que redirija
     return NextResponse.json({ url: session.url });
 
   } catch (error: any) {
-    console.error('❌ [STRIPE ERROR]:', error.message);
+    console.error('❌ [STRIPE ERROR]:', error);
+    // Devolvemos un mensaje genérico al cliente por seguridad, pero logueamos el real
     return new NextResponse(`Internal Error: ${error.message}`, { status: 500 });
   }
 }

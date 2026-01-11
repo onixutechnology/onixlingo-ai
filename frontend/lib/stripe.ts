@@ -1,7 +1,10 @@
 import Stripe from 'stripe';
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  // Usamos 'as any' para evitar que TypeScript bloquee el build por conflictos de versión
-  apiVersion: '2023-10-16' as any, 
+// FIX: Usar una clave "dummy" si la variable de entorno no existe durante el build.
+// Esto evita que Vercel falle al compilar. En ejecución real, usará la variable correcta.
+const apiKey = process.env.STRIPE_SECRET_KEY || 'sk_test_dummy_key_for_build_process';
+
+export const stripe = new Stripe(apiKey, {
+  apiVersion: '2023-10-16' as any,
   typescript: true,
 });
