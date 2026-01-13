@@ -5,8 +5,9 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: '/api/:path*', // Cuando el frontend pida /api/...
-        destination: 'http://127.0.0.1:8001/api/:path*', // ...Next.js lo envía al Backend
+        source: '/api/v1/:path*', // Captura todo lo que empiece por /api/v1/
+        // 👇 AQUÍ ESTABA EL ERROR: Debe apuntar a Render, no a localhost
+        destination: 'https://onixlingo-bckend.onrender.com/api/v1/:path*', 
       },
     ]
   },
