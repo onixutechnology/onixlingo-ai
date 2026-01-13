@@ -64,7 +64,7 @@ export default function AuthPage() {
         setIsRegister(false); 
         setSuccess("¡Cuenta creada con éxito! Por favor inicia sesión.");
         setFormData({ username: '', password: '', email: '' }); 
-      } else {
+} else {
         // LOGIN EXITOSO
         localStorage.setItem('currentUser', formData.username);
         
@@ -72,14 +72,14 @@ export default function AuthPage() {
           loadProgressFromDB(data.progress);
         }
         
-        // 🚨 LA SOLUCIÓN: Refrescar el caché de rutas de Next.js
-        // Esto hace que el Middleware reconozca la cookie recién creada.
-        router.refresh(); 
-        
-        // Esperamos un micro-momento y redirigimos
-        router.push('/dashboard');
-      }
+        // 🚨 CAMBIO CRÍTICO AQUÍ 🚨
+        // router.refresh();  <-- BORRA ESTO
+        // router.push('/dashboard'); <-- BORRA ESTO
 
+        // USA ESTO: Fuerza al navegador a cargar de cero. 
+        // Esto garantiza que el Middleware vea la cookie nueva.
+        window.location.href = '/dashboard';
+      }
     } catch (err: any) {
       console.error(err);
       setError(err.message || "Error de conexión con el servidor");
