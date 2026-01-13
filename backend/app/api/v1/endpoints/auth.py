@@ -13,13 +13,7 @@ from app.core.security import verify_password, get_password_hash, create_access_
 router = APIRouter()
 logger = logging.getLogger("OnixLingo.Auth")
 
-# --- ⚙️ CONFIGURACIÓN INTELIGENTE ---
-# Detectamos si estamos en producción (Render/Vercel) o en Localhost.
-# En Localhost NO podemos usar secure=True porque corre en HTTP.
-IS_PRODUCTION = os.getenv("RENDER") is not None or os.getenv("VERCEL") is not None
 COOKIE_NAME = "access_token"
-
-logger.info(f"Modo de Seguridad Cookies: {'🔐 PRODUCCIÓN (Secure)' if IS_PRODUCTION else '🚧 DESARROLLO (No Secure)'}")
 
 # --- DTOs (Modelos de Datos) ---
 class UserCreate(BaseModel):
@@ -67,25 +61,30 @@ def login(user: UserLogin, response: Response, db: Session = Depends(get_db)):
     # 3. Generar Token JWT
     access_token = create_access_token(subject=db_user.username)
 
-    # 4. 🍪 GUARDAR COOKIE (Configuración Dinámica)
+    # 4. 🍪 GUARDAR COOKIE (CORREGIDO PARA RENDER -> LOCALHOST)
+    # Explicación:
+    # 'samesite="none"' permite que la cookie viaje desde Render (Backend) hasta Localhost (Frontend).
+    # 'secure=True' es OBLIGATORIO cuando usas samesite="none". 
+    # Como Render tiene HTTPS, esto funciona perfecto.
     response.set_cookie(
         key=COOKIE_NAME,
         value=f"Bearer {access_token}",
         httponly=True,   
-        # 👇 AQUÍ ESTÁ LA MAGIA: False en localhost, True en Prod
-        secure=IS_PRODUCTION, 
-        samesite="lax",
-        path="/",        # 👈 IMPORTANTE: Para que esté disponible en toda la app
+        secure=True,      
+        samesite="none",  
+        path="/",        
         max_age=60 * 60 * 24 # 24 horas
     )
 
     # 5. Preparar respuesta
-    progress_map = {p.lesson_id: {"stars": p.stars} for p in db_user.progress}
+    # Manejo seguro por si el usuario no tiene progreso aún
+    progress_map = {}
+    if db_user.progress:
+        progress_map = {p.lesson_id: {"stars": p.stars} for p in db_user.progress}
     
     return {
         "message": "Autenticado", 
         "username": db_user.username,
-        # "role": db_user.role, # 💡 SUGERENCIA: Si tienes un campo de rol/premium, agrégalo aquí
         "progress": progress_map
     }
 
@@ -98,9 +97,8 @@ def logout(response: Response):
     response.delete_cookie(
         key=COOKIE_NAME,
         httponly=True,
-        # 👇 Debe coincidir con el login
-        secure=IS_PRODUCTION, 
-        samesite="lax",
-        path="/" # 👈 Debe coincidir con el login
+        secure=True,      # Debe coincidir con login
+        samesite="none",  # Debe coincidir con login
+        path="/"          # Debe coincidir con login
     )
     return {"message": "Sesión cerrada correctamente"}
