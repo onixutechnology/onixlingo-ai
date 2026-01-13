@@ -3,22 +3,32 @@
 import { motion } from 'framer-motion';
 import { Trophy, ArrowRight, RotateCcw, Gem, Zap } from 'lucide-react';
 import Link from 'next/link';
-import { useUIStore } from '@/store/uiStore'; // Importamos para detectar el tema
+import { useUIStore } from '@/store/uiStore';
 
 interface Props {
   xpEarned: number;
   accuracy: number;
-  opportunities?: any[]; // 👈 FIX: Agregado para evitar el error de TS
+  opportunities?: any[];
   onRetry: () => void;
+  onExit?: () => void; // 👈 1. AGREGADO: Propiedad opcional para manejar la salida
 }
 
-export default function LessonComplete({ xpEarned, accuracy, onRetry }: Props) {
+export default function LessonComplete({ xpEarned, accuracy, onRetry, onExit }: Props) {
   // 1. Detectamos si estamos en modo PRO para cambiar el estilo
   const { mode } = useUIStore();
   const isPro = mode === 'professional';
 
-  // 2. Definimos la ruta de salida según el modo
+  // 2. Definimos la ruta de salida por defecto
   const dashboardRoute = isPro ? '/dashboard/pro' : '/dashboard';
+
+  // 3. Estilos comunes para el botón principal (para no repetir código)
+  const mainButtonClasses = `
+    w-full py-4 font-bold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98]
+    ${isPro 
+        ? 'bg-amber-600 hover:bg-amber-500 text-white shadow-amber-900/40' 
+        : 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200'
+    }
+  `;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -93,17 +103,21 @@ export default function LessonComplete({ xpEarned, accuracy, onRetry }: Props) {
 
         {/* Botones de Acción */}
         <div className="space-y-3">
-            <Link href={dashboardRoute} className="block w-full">
-                <button className={`
-                    w-full py-4 font-bold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98]
-                    ${isPro 
-                        ? 'bg-amber-600 hover:bg-amber-500 text-white shadow-amber-900/40' 
-                        : 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200'
-                    }
-                `}>
+            
+            {/* 4. LÓGICA CONDICIONAL PARA EL BOTÓN DE SALIDA */}
+            {onExit ? (
+                // Caso A: Se pasó una función onExit (ej: Vocabulario)
+                <button onClick={onExit} className={mainButtonClasses}>
                     {isPro ? 'RETURN TO HQ' : 'CONTINUAR'} <ArrowRight size={20} />
                 </button>
-            </Link>
+            ) : (
+                // Caso B: Comportamiento por defecto (Link al Dashboard)
+                <Link href={dashboardRoute} className="block w-full">
+                    <button className={mainButtonClasses}>
+                        {isPro ? 'RETURN TO HQ' : 'CONTINUAR'} <ArrowRight size={20} />
+                    </button>
+                </Link>
+            )}
             
             <button 
                 onClick={onRetry}
