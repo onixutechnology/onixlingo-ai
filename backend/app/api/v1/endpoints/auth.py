@@ -85,6 +85,7 @@ def login(user: UserLogin, response: Response, db: Session = Depends(get_db)):
     return {
         "message": "Autenticado", 
         "username": db_user.username,
+        "access_token": access_token,  # <--- ¡AGREGA ESTO! Es vital.
         "progress": progress_map
     }
 

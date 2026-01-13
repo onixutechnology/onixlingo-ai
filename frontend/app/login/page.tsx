@@ -4,13 +4,12 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useProgressStore } from '@/store/progressStore'; 
 import { LogIn, UserPlus, User, Lock, Mail, AlertCircle, Loader2, ArrowRight, CheckCircle2 } from 'lucide-react';
+import Cookies from 'js-cookie'; // 📦 IMPORTANTE: Librería para manejo manual de cookies
 
-// --- CONFIGURACIÓN INTELIGENTE ---
-const API_URL = process.env.NEXT_PUBLIC_API_URL || (
-  process.env.NODE_ENV === 'development'
-    ? '' // ✅ AHORA LA COOKIE SE QUEDA EN LOCALHOST         
-    : 'https://onixlingo-bckend.onrender.com'
-);
+// --- CONFIGURACIÓN ---
+// Ya no usamos el proxy (string vacío). Vamos directo al Backend.
+// Esto evita problemas si el proxy de next.config.ts falla.
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
 
 export default function AuthPage() {
   const router = useRouter();
@@ -50,7 +49,7 @@ export default function AuthPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
-        credentials: 'include', // ✅ Vital para cookies
+        // credentials: 'include', // Opcional ahora que guardamos manual, pero bueno dejarlo
       });
       
       const data = await res.json();
@@ -64,20 +63,34 @@ export default function AuthPage() {
         setIsRegister(false); 
         setSuccess("¡Cuenta creada con éxito! Por favor inicia sesión.");
         setFormData({ username: '', password: '', email: '' }); 
-} else {
-        // LOGIN EXITOSO
+      } else {
+        // === LOGIN EXITOSO ===
+        
+        // 1. Guardar usuario en LocalStorage (para mostrar nombre, etc.)
         localStorage.setItem('currentUser', formData.username);
         
+        // 2. 🍪 GUARDADO MANUAL DE COOKIE (SOLUCIÓN DEFINITIVA)
+        // Tomamos el token que viene en el JSON y lo forzamos en el navegador.
+        if (data.access_token) {
+            Cookies.set('access_token', data.access_token, { 
+                expires: 1, // Expira en 1 día
+                path: '/',  // Accesible en toda la app
+                secure: window.location.protocol === 'https:', // Secure solo si usas HTTPS (auto-detect)
+                sameSite: 'Lax' 
+            });
+            console.log("✅ Cookie 'access_token' guardada manualmente.");
+        } else {
+            console.warn("⚠️ El backend no devolvió 'access_token' en el JSON. Revisa auth.py");
+        }
+
+        // 3. Cargar progreso si existe
         if (data.progress) {
           loadProgressFromDB(data.progress);
         }
         
-        // 🚨 CAMBIO CRÍTICO AQUÍ 🚨
-        // router.refresh();  <-- BORRA ESTO
-        // router.push('/dashboard'); <-- BORRA ESTO
-
-        // USA ESTO: Fuerza al navegador a cargar de cero. 
-        // Esto garantiza que el Middleware vea la cookie nueva.
+        // 4. Redirección Forzada
+        // Usamos window.location para recargar la página completa.
+        // Esto asegura que el Middleware lea la cookie recién creada.
         window.location.href = '/dashboard';
       }
     } catch (err: any) {
