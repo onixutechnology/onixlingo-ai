@@ -1,75 +1,433 @@
 {
-    "id": "pro-c1-2",
-    "title": "Crisis Management",
-    "stages": [
+  "id": "pro-c1-2",
+  "title": "Crisis Management",
+  "description": "Master crisis response, stakeholder communication, reputation management, media relations, and organizational recovery for C-suite leadership",
+  "difficulty": "C1",
+  "tier": "Advanced Executive - Board-Level Crisis Leadership",
+  "prerequisites": ["pro-c1-1-global-market-analysis"],
+  "is_c1_crisis_module": true,
+  "stages": [
+    {
+      "id": "stage-intro",
+      "type": "theory",
+      "title": "C1 Crisis Management: Executive Decision-Making Under Pressure",
+      "duration": "10 min",
+      "parts": [
         {
-            "id": "stage-1",
-            "type": "theory",
-            "title": "Strategic Concept: Crisis Management",
-            "parts": [
-                {
-                    "visual": "Welcome to the C1 executive module: Crisis Management.\n\nIn this session, we analyze the critical vocabulary required to navigate this scenario with authority.\n\nKey Principle:\nTrue professionals don't just communicate information; they communicate *intent*.\n\nObserve the nuance in the following exercises.",
-                    "audio": "Welcome to the C1 executive module: Crisis Management. Let's master this topic."
-                }
-            ]
-        },
-        {
-            "id": "stage-2",
-            "type": "quiz",
-            "title": "Executive Comprehension",
-            "questions": [
-                {
-                    "type": "quiz_choice",
-                    "question": "Which is the most professional approach regarding 'Crisis Management'?",
-                    "options": [
-                        "Use casual slang to seem friendly.",
-                        "Prioritize clarity, brevity, and formal tone.",
-                        "Avoid eye contact and speak softly.",
-                        "Use overly complex words to sound smart."
-                    ],
-                    "correct_answer": "Prioritize clarity, brevity, and formal tone.",
-                    "explanation": "Executive presence is built on clear and concise communication, not complexity."
-                }
-            ]
-        },
-        {
-            "id": "stage-3",
-            "type": "gamified_quiz",
-            "title": "Structure & Syntax Drill",
-            "questions": [
-                {
-                    "type": "order_sentence",
-                    "question": "Arrange the standard corporate phrase:",
-                    "parts": [
-                        "We",
-                        "need",
-                        "to",
-                        "leverage",
-                        "our",
-                        "core",
-                        "competencies."
-                    ],
-                    "correct_order": [
-                        "We",
-                        "need",
-                        "to",
-                        "leverage",
-                        "our",
-                        "core",
-                        "competencies."
-                    ],
-                    "explanation": "'Leveraging competencies' is standard business English for using your strengths."
-                },
-                {
-                    "type": "fill_input",
-                    "question": "Complete the term: Return on ______ (ROI).",
-                    "correct_answers": [
-                        "Investment",
-                        "investment"
-                    ],
-                    "explanation": "ROI stands for Return On Investment."
-                }
-            ]
+          "visual": "Welcome to the **C1 CRISIS MANAGEMENT Executive Module**.\n\n**The C1 Crisis Reality:**\nEvery company faces crisis. Not if, but when:\n- Data breach affecting 10M customers\n- Executive indicted for fraud\n- Product defect causing injuries/deaths\n- Catastrophic failure (system outage, supply chain collapse)\n- Reputational attack (sexual harassment allegations, environmental violation)\n- Market collapse (interest rate shock, competitor disruption)\n- Geopolitical event (war, sanctions, political instability)\n\n**The C1 Difference:**\nB2 leaders execute in stable environments. C1 leaders navigate chaos, make decisions with incomplete information, and restore trust.\n\n**Key Principle:**\nIn crisis, **communication > action**. How you communicate determines survival.\n\n**The Crisis Management Framework: RESPOND + COMMUNICATE + RECOVER**\n\n**RESPOND (First 24 hours):**\n1. **Activate crisis team** (CEO, CFO, General Counsel, PR, HR)\n2. **Secure immediate facts** (What happened? How bad? Spread?)\n3. **Protect stakeholders** (Customers, employees, investors)\n4. **Contain damage** (Isolate issue; prevent spread)\n5. **Prepare communication** (Draft statement; get legal review)\n\n**COMMUNICATE (24-72 hours):**\n1. **Employees first** (They hear rumors; give them truth)\n2. **Customers/Stakeholders second** (Affected parties need clarity)\n3. **Media/Public third** (Control narrative before it controls you)\n4. **Investors fourth** (Quarterly call; explain impact + plan)\n5. **Regulators as needed** (SEC, FDA, FTC depending on crisis)\n\n**RECOVER (Weeks/Months):**\n1. **Root cause analysis** (Why did this happen?)\n2. **Remediation plan** (How do we fix it?)\n3. **Preventive measures** (How do we prevent recurrence?)\n4. **Transparency & accountability** (Own the mistake; announce fixes)\n5. **Rebuild trust** (Consistent actions; follow through)\n\n**The 10 C1 Crisis Principles:**\n\n1. **Speed > Perfection** - Communicate quickly, even if imperfect\n2. **Transparency** - Honesty rebuilds trust; lies destroy credibility\n3. **Employee First** - Protect employees; they protect you\n4. **Stakeholder Focus** - Who's affected? Prioritize them\n5. **Single Voice** - One CEO speaks; message is unified\n6. **Accountability** - Own the mistake; don't blame\n7. **Plan Visible** - Show the fix; prove you care\n8. **Legal Shield** - Get counsel on every statement\n9. **Narrative Control** - Shape the story before media does\n10. **Follow Through** - Do what you promise; measure recovery\n\n**Crisis Types & Response Strategies:**\n\n**Type 1: Operational Crisis (system failure, recall, accident)**\n- Response: Immediate shutdown if unsafe; transparent communication\n- Example: Boeing 737 MAX crashes → Ground fleet; transparency\n- Success metric: Customer trust restored; no regulatory fine\n\n**Type 2: Fraud/Executive Crisis (CEO indicted, accounting scandal)**\n- Response: Remove guilty party immediately; appoint new leadership\n- Example: Theranos founder conviction → Company dissolves; investor lawsuits\n- Success metric: Legal settlement; business continuity\n\n**Type 3: Reputational Crisis (harassment, discrimination, environmental)**\n- Response: Acknowledge; apologize; announce concrete changes\n- Example: #MeToo allegations → Terminations; investigation; prevention policies\n- Success metric: Culture change demonstrated; trust rebuilt\n\n**Type 4: Market/Economic Crisis (recession, competitor disruption, tech failure)**\n- Response: Rapid adaptation; cost cutting; cash preservation\n- Example: 2008 financial crisis → Bailouts; restructuring; layoffs\n- Success metric: Survival; market share maintained/grown\n\n**Type 5: Geopolitical Crisis (war, sanctions, political instability)**\n- Response: Supply chain pivot; market exit if needed; employee safety\n- Example: Russia invasion of Ukraine → Western companies exit; supply chain rerouted\n- Success metric: Employees safe; business continuity, limited financial impact\n\n**The Crisis Communication Hierarchy (Who speaks when):**\n\n1. **CEO** (public face; credibility)\n2. **CFO** (financial impact; investor confidence)\n3. **General Counsel** (legal implications; accuracy)\n4. **Head of Function** affected (operational details)\n5. **PR/Communications** (message discipline; consistency)\n\n**NOT Board members, junior managers, or random employees.**\n\n**The Media Relations Strategy:**\n\n- **Proactive**: Release statement before media asks (control narrative)\n- **Prepared**: Train CEO for questions; anticipate hostile media\n- **Candid**: Answer honestly; don't \"no comment\" (looks guilty)\n- **Consistent**: Same message every time; every spokesperson\n- **Accountable**: Own mistakes; don't deflect blame\n\n**Example Media Statement (Crisis):**\n\nWeak: \"We're aware of the issue. We're investigating.\" (Vague, defensive)\n\nStrong: \"Yesterday, we discovered a data breach affecting 5M customers. We immediately shut down the affected system, hired forensic investigators, and notified law enforcement. We're offering 2 years of free credit monitoring to affected customers. We'll publish a full report in 30 days. I take personal responsibility. We'll implement new security measures by Q2. Here's a number for customer questions: [number].\" (Specific, accountable, action-oriented)\n\n**The Employee Communication Strategy:**\n\nEmployees are your most important stakeholder in crisis. They:\n- Hear rumors first\n- Amplify your message (or undermine it)\n- Are affected by crisis\n- Need reassurance about their jobs\n\nBest practice: All-hands within 24 hours. CEO speaks directly. Acknowledge the crisis. Explain impact. Announce next steps. Answer questions.\n\n**The Investor/Board Communication:**\n\nInvestors care about:\n- **Financial impact** (Revenue? Margin? Cash burn?)\n- **Regulatory risk** (Fines? Lawsuits? License revocation?)\n- **Reputational risk** (Customer loss? Brand damage?)\n- **Management confidence** (Does the team know what they're doing?)\n\nCommunicate quarterly (or sooner if major). Transparent financials. Clear recovery plan. Timeline for normalcy.\n\n**Crisis Decision Framework:**\n\n**When faced with a decision in crisis:**\n1. **Ask**: Is this legal? (Get counsel approval)\n2. **Ask**: Is this right? (Does it fix the problem?)\n3. **Ask**: How will it look? (Media/stakeholder perception?)\n4. **Decide**: Based on facts + principle, not emotion\n5. **Communicate**: Explain decision + reasoning\n6. **Execute**: Follow through completely\n7. **Measure**: Assess if decision worked; adjust if needed\n\n**The 72-Hour Crisis Window:**\n\nFirst 72 hours define outcome:\n- **Hours 0-24**: Assess + respond internally\n- **Hours 24-48**: Communicate to employees + close stakeholders\n- **Hours 48-72**: Public communication + media engagement\n\nBy hour 72, the narrative is usually set. If you've communicated well, you can shape it. If you've been silent, media has controlled it.\n\n**Crisis Recovery Metrics:**\n\n- **Customer retention**: % of customers who stay\n- **Media sentiment**: % positive vs. negative coverage\n- **Stock price**: % decline vs. market\n- **Employee morale**: Retention + engagement scores\n- **Regulatory outcome**: Fines, settlements, ongoing oversight\n- **Brand recovery**: Net Promoter Score (NPS) improvement\n- **Legal resolution**: Lawsuits settled, time to resolution\n\n**The Worst Crisis Mistakes:**\n\n1. ❌ **Silence** (Looks like guilt)\n2. ❌ **Lying** (Destroys credibility; creates legal liability)\n3. ❌ **Blaming others** (Avoids accountability; looks cowardly)\n4. ❌ **Over-explaining** (Confuses message; looks defensive)\n5. ❌ **No plan** (Looks incompetent)\n6. ❌ **Inconsistent messages** (Different people say different things; looks chaotic)\n7. ❌ **Slow response** (Media fills void with speculation)\n8. ❌ **No follow-through** (Promise changes; don't deliver)\n9. ❌ **Focusing on PR, not problem** (Fix the issue, not optics)\n10. ❌ **Forgetting employees** (They're your credibility)\n\n**Post-Crisis Learning:**\n\nAfter crisis resolves:\n1. **Conduct after-action review** (What worked? What didn't?)\n2. **Document lessons** (Prevent recurrence)\n3. **Update crisis playbook** (Better prepared next time)\n4. **Thank the team** (Celebrate getting through it)\n5. **Move forward** (Don't dwell; rebuild momentum)",
+          "audio": "Welcome to C1 Crisis Management. Every leader faces crisis. How you respond determines whether your company survives and thrives, or collapses. The first 72 hours are critical. Speed, transparency, and accountability define success. Let's master this."
         }
-    ]
+      ]
+    },
+    {
+      "id": "stage-listening",
+      "type": "quiz",
+      "title": "Phase 1: Auditory Analysis - Crisis Communication Cues (Listening)",
+      "duration": "19 min",
+      "total_questions": 40,
+      "questions": [
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this crisis response speed appropriate?",
+          "tts_text": "We discovered the breach on Tuesday. We're planning to announce it in 2 weeks after we finish investigating.",
+          "options": ["Appropriate", "Too slow (media will leak before you announce; control narrative lost)"],
+          "correct_answer": "Too slow (media will leak before you announce; control narrative lost)",
+          "explanation": "Announce within 24-48 hours. Delay looks like cover-up."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the accountability issue:",
+          "tts_text": "Our system failed because the cloud provider made a mistake. This is not our fault.",
+          "options": ["Good accountability", "Avoids responsibility (should own customer impact)"],
+          "correct_answer": "Avoids responsibility (should own customer impact)",
+          "explanation": "Better: 'Our provider had an issue. We should have had redundancy. We own this. Here's our fix.'"
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the employee communication transparent?",
+          "tts_text": "Employees are hearing about the layoffs from Twitter. We haven't told them directly.",
+          "options": ["Transparent", "Opaque (employees blindsided; morale destruction)"],
+          "correct_answer": "Opaque (employees blindsided; morale destruction)",
+          "explanation": "Employees must hear from CEO first, directly."
+        },
+        {
+          "type": "listening_match",
+          "question": "What does this reveal about crisis planning?",
+          "tts_text": "We didn't have a crisis plan. We're making it up as we go.",
+          "options": ["Adaptable", "Chaotic (unprepared)"],
+          "correct_answer": "Chaotic (unprepared)",
+          "explanation": "Pre-crisis planning prevents chaos. Improvisation under pressure = mistakes."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the media strategy controlled?",
+          "tts_text": "We haven't released an official statement. Let's see what the media says, then respond.",
+          "options": ["Strategic", "Reactive (media controls narrative)"],
+          "correct_answer": "Reactive (media controls narrative)",
+          "explanation": "Release statement first; shape narrative; then media reacts to you."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the stakeholder prioritization error:",
+          "tts_text": "We're focusing on investor relations first. Customers and employees will be updated later.",
+          "options": ["Correct order", "Wrong (should be: employees → customers → investors)"],
+          "correct_answer": "Wrong (should be: employees → customers → investors)",
+          "explanation": "Employees and customers are most affected. Investors care about impact. Prioritize accordingly."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the CEO showing accountability?",
+          "tts_text": "This crisis happened on my watch. I take responsibility. Here's what we're doing to fix it and prevent recurrence.",
+          "options": ["Accountability present", "Accountability absent"],
+          "correct_answer": "Accountability present",
+          "explanation": "Personal accountability rebuilds trust."
+        },
+        {
+          "type": "listening_match",
+          "question": "What is the communication clarity issue?",
+          "tts_text": "We experienced a situation involving certain systems that may have had some exposure.",
+          "options": ["Clear", "Vague (jargon; confusing; looks evasive)"],
+          "correct_answer": "Vague (jargon; confusing; looks evasive)",
+          "explanation": "Better: 'We had a data breach. 5M customers' information was exposed. Here's what we're doing.'"
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Does this show legal awareness?",
+          "tts_text": "We're admitting full guilt in our public statement. We'll likely face major lawsuits.",
+          "options": ["Honest but risky", "Should coordinate with legal counsel first"],
+          "correct_answer": "Should coordinate with legal counsel first",
+          "explanation": "Transparency yes, but legal review first to minimize liability."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the follow-through gap:",
+          "tts_text": "We promised to implement new security by Q2. It's now Q4 and we haven't done it.",
+          "options": ["Good execution", "Trust destruction (promised but didn't deliver)"],
+          "correct_answer": "Trust destruction (promised but didn't deliver)",
+          "explanation": "Do what you promise. Credibility depends on it."
+        }
+      ]
+    },
+    {
+      "id": "stage-choice",
+      "type": "quiz",
+      "title": "Phase 2: Strategic Selection - Crisis Scenarios (Choice)",
+      "duration": "21 min",
+      "total_questions": 42,
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "You discover a product defect that could cause injuries. You:",
+          "options": [
+            "Investigate internally; don't announce yet.",
+            "Immediately halt sales. Notify customers. Coordinate with regulators. Announce within 24 hours.",
+            "Fix quietly; don't create panic.",
+            "Release a vague statement about 'quality concerns.'"],
+          "correct_answer": "Immediately halt sales. Notify customers. Coordinate with regulators. Announce within 24 hours.",
+          "explanation": "Safety > business. Transparency + speed = trust rebuild."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A major executive (COO) is indicted for fraud. They claim innocence. You:",
+          "options": [
+            "Stand by them publicly; they're innocent until proven guilty.",
+            "Remove them immediately; announce leadership transition; make clear the company is separate from the individual.",
+            "Wait for trial; don't comment.",
+            "Negotiate quietly for their resignation."],
+          "correct_answer": "Remove them immediately; announce leadership transition; make clear the company is separate from the individual.",
+          "explanation": "Protect the company. Individuals are separate. Show swift action."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your company's environmental practices are exposed as worse than claimed. You:",
+          "options": [
+            "Deny the allegations.",
+            "'We fell short of our own standards. We acknowledge the gap. Here's our 5-year remediation plan with external audits. We're committed to transparency.'",
+            "Blame regulators for unclear standards.",
+            "Minimize the issue."],
+          "correct_answer": "'We fell short of our own standards. We acknowledge the gap. Here's our 5-year remediation plan with external audits. We're committed to transparency.'",
+          "explanation": "Acknowledge, apologize, fix, measure. Transparency rebuilds ESG reputation."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A competitor falsely claims your product is dangerous. Media runs the story. You:",
+          "options": [
+            "Sue them for defamation.",
+            "Release data proving safety. Invite independent testing. Communicate to customers.",
+            "Issue a vague denial.",
+            "Ignore it; let it blow over."],
+          "correct_answer": "Release data proving safety. Invite independent testing. Communicate to customers.",
+          "explanation": "Respond quickly with facts. Independent validation builds trust."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your system goes down for 12 hours. Revenue loss: $10M. Customer trust is shaken. You:",
+          "options": [
+            "Minimize impact; focus on resumption.",
+            "'System failed. We take full responsibility. Root cause: [specific]. Fix: [specific]. Prevention: [specific]. Compensation: [e.g., credit for downtime]. Preventing this is our priority.'",
+            "Blame the vendor.",
+            "Hope customers forget about it."],
+          "correct_answer": "'System failed. We take full responsibility. Root cause: [specific]. Fix: [specific]. Prevention: [specific]. Compensation: [e.g., credit for downtime]. Preventing this is our priority.'",
+          "explanation": "Ownership + specifics + compensation = trust rebuild."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Sexual harassment allegations against a senior leader emerge. Multiple accusers. You:",
+          "options": [
+            "Defend them; call it false accusations.",
+            "Immediately place them on leave. Hire external investigator. Announce zero-tolerance policy. Keep stakeholders updated.",
+            "Negotiate a quiet settlement.",
+            "Wait for legal process; don't comment."],
+          "correct_answer": "Immediately place them on leave. Hire external investigator. Announce zero-tolerance policy. Keep stakeholders updated.",
+          "explanation": "Protect victims. Show swift action. Demonstrate culture change."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Hackers release confidential CEO emails on the dark web. You:",
+          "options": [
+            "Don't acknowledge it; minimize attention.",
+            "'Our systems were breached. We immediately secured them and hired forensic investigators. We're working with law enforcement. Affected individuals are being notified. We're implementing additional security.'",
+            "Blame hackers; claim victim status.",
+            "Release a legal statement only."],
+          "correct_answer": "'Our systems were breached. We immediately secured them and hired forensic investigators. We're working with law enforcement. Affected individuals are being notified. We're implementing additional security.'",
+          "explanation": "Speed, specifics, accountability, action."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your company caused environmental damage (spill, toxic release). Cleanup costs: $100M. You:",
+          "options": [
+            "Resist paying; fight regulators in court.",
+            "'We caused this. We're responsible. We're funding full remediation, offering community support, implementing prevention systems, and supporting independent oversight.'",
+            "Negotiate minimum settlement.",
+            "Delay paying as long as possible."],
+          "correct_answer": "'We caused this. We're responsible. We're funding full remediation, offering community support, implementing prevention systems, and supporting independent oversight.'",
+          "explanation": "Own it completely. Rebuild trust through action + transparency."
+        }
+      ]
+    },
+    {
+      "id": "stage-structure",
+      "type": "gamified_quiz",
+      "title": "Phase 3: Crisis Response Framework (Ordering)",
+      "duration": "18 min",
+      "total_questions": 24,
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "The First 24-Hour Response:",
+          "parts": ["1.", "Assess", "facts.", "2.", "Protect", "stakeholders.", "3.", "Activate", "crisis", "team.", "4.", "Legal", "review.", "5.", "Draft", "employee", "communication."],
+          "correct_order": ["1.", "Assess", "facts.", "2.", "Protect", "stakeholders.", "3.", "Activate", "crisis", "team.", "4.", "Legal", "review.", "5.", "Draft", "employee", "communication."],
+          "explanation": "Immediate 24-hour playbook."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Crisis Communication Sequence:",
+          "parts": ["1.", "Employees", "(internal", "first).", "2.", "Customers/Stakeholders.", "3.", "Media/Public.", "4.", "Investors.", "5.", "Regulators", "(if", "needed)."],
+          "correct_order": ["1.", "Employees", "(internal", "first).", "2.", "Customers/Stakeholders.", "3.", "Media/Public.", "4.", "Investors.", "5.", "Regulators", "(if", "needed)."],
+          "explanation": "Stakeholder priority hierarchy."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Strong Crisis Statement Structure:",
+          "parts": ["1.", "Acknowledge", "the", "crisis.", "2.", "State", "what", "happened", "(specifically).", "3.", "Explain", "impact.", "4.", "Announce", "immediate", "actions.", "5.", "Show", "accountability.", "6.", "Outline", "prevention."],
+          "correct_order": ["1.", "Acknowledge", "the", "crisis.", "2.", "State", "what", "happened", "(specifically).", "3.", "Explain", "impact.", "4.", "Announce", "immediate", "actions.", "5.", "Show", "accountability.", "6.", "Outline", "prevention."],
+          "explanation": "Crisis statement framework."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Recovery Phase (Weeks/Months):",
+          "parts": ["1.", "Root", "cause", "analysis.", "2.", "Remediation", "plan.", "3.", "Prevention", "measures.", "4.", "Transparent", "updates.", "5.", "Follow-through", "verification.", "6.", "Rebuild", "trust."],
+          "correct_order": ["1.", "Root", "cause", "analysis.", "2.", "Remediation", "plan.", "3.", "Prevention", "measures.", "4.", "Transparent", "updates.", "5.", "Follow-through", "verification.", "6.", "Rebuild", "trust."],
+          "explanation": "Long-term recovery roadmap."
+        }
+      ]
+    },
+    {
+      "id": "stage-vocab",
+      "type": "gamified_quiz",
+      "title": "Phase 4: Crisis Vocabulary & Concepts (Input)",
+      "duration": "18 min",
+      "total_questions": 52,
+      "questions": [
+        {
+          "type": "fill_input",
+          "question": "______ (First 72 hours of crisis where narrative is shaped and outcomes determined) are critical.",
+          "correct_answers": ["Golden hours", "hours"],
+          "explanation": "First response determines long-term impact."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Unexpected event creating organizational risk or reputation damage) must be responded to swiftly.",
+          "correct_answers": ["Crisis", "Crisis"],
+          "explanation": "Types: operational, fraud, reputational, market, geopolitical."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Team of execs handling crisis: CEO, CFO, GC, PR, HR) must be pre-identified.",
+          "correct_answers": ["Crisis team", "team"],
+          "explanation": "Pre-plan who decides in crisis."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Public statement addressing crisis: what happened, why, what we're doing) must be released quickly.",
+          "correct_answers": ["Crisis statement", "statement"],
+          "explanation": "Controls media narrative."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Damage to reputation, brand, customer trust) from crisis can take years to rebuild.",
+          "correct_answers": ["Reputational damage", "damage"],
+          "explanation": "Recovery requires sustained action."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Personal responsibility for outcomes, mistakes, failures) is essential in crisis.",
+          "correct_answers": ["Accountability", "Accountability"],
+          "explanation": "Leaders own crises; don't deflect."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Complete honesty about what happened, impact, next steps) builds trust faster than spin.",
+          "correct_answers": ["Transparency", "Transparency"],
+          "explanation": "Honesty is more credible than PR."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Speed of crisis response) is as important as quality.",
+          "correct_answers": ["Speed", "Speed"],
+          "explanation": "Delayed response = media fills void with speculation."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Written plan detailing crisis roles, response sequence, communication templates) prevents chaos.",
+          "correct_answers": ["Crisis playbook", "playbook"],
+          "explanation": "Pre-planning enables faster response."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Investigation determining why crisis happened and how to prevent recurrence) must be rigorous.",
+          "correct_answers": ["Root cause analysis", "analysis"],
+          "explanation": "Understand the problem; fix it systematically."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Legal review of all crisis communications to minimize liability) is mandatory.",
+          "correct_answers": ["Legal counsel approval", "counsel"],
+          "explanation": "Every statement should be reviewed by general counsel."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Actions taken during crisis to minimize damage, protect stakeholders, and stabilize situation) must be immediate.",
+          "correct_answers": ["Damage control", "control"],
+          "explanation": "Fast action prevents escalation."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Relationship with media during crisis; proactive communication, not reactive) shapes narrative.",
+          "correct_answers": ["Media relations", "relations"],
+          "explanation": "Control the story; don't let media create it."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Metrics tracking recovery: customer retention, media sentiment, stock recovery, NPS) measure crisis impact.",
+          "correct_answers": ["Recovery metrics", "metrics"),
+          "explanation": "Measure what matters."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Post-crisis review identifying lessons learned and improvements to crisis plan) prevents future failures.",
+          "correct_answers": ["After-action review", "review"],
+          "explanation": "Learn from crisis; improve playbook."
+        }
+      ]
+    },
+    {
+      "id": "stage-mastery",
+      "type": "quiz",
+      "title": "Phase 5: Executive Mastery - Advanced Crisis Scenarios (Scenarios)",
+      "duration": "19 min",
+      "total_questions": 32,
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is 'The Crisis Amplification Loop'?",
+          "options": [
+            "Crisis gets worse over time naturally.",
+            "Poor communication → speculation → fear → customer loss → employee loss → more loss (compounds without action).",
+            "Media always exaggerates.",
+            "Not real."],
+          "correct_answer": "Poor communication → speculation → fear → customer loss → employee loss → more loss (compounds without action).",
+          "explanation": "Silence amplifies crisis. Communication dampens it."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this company managing the narrative well?",
+          "tts_text": "We haven't released a statement. We're waiting to see what the media says before we respond.",
+          "options": [
+            "Strategic wait.",
+            "Reactive (media controls narrative; you respond defensively)."
+          ],
+          "correct_answer": "Reactive (media controls narrative; you respond defensively).",
+          "explanation": "Release statement first; shape narrative; then media reacts to you."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'The Trust Paradox'?",
+          "options": [
+            "Trust is built slowly; destroyed quickly.",
+            "In crisis, being honest (even bad news) rebuilds trust faster than being evasive.",
+            "You can't rebuild trust.",
+            "Trust doesn't matter in crisis."],
+          "correct_answer": "In crisis, being honest (even bad news) rebuilds trust faster than being evasive.",
+          "explanation": "Honesty + accountability > spin + defensiveness."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Communication to employees before external stakeholders) is the golden rule in crisis.",
+          "correct_answers": ["Internal first", "internal"],
+          "explanation": "Employees are your most important audience."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this CEO showing leadership in crisis?",
+          "tts_text": "'I've made mistakes. I take full responsibility. Here's my plan to fix it and prevent recurrence. I welcome your feedback.'",
+          "options": [
+            "Weakness (admitting mistakes).",
+            "Strength (accountability + listening + action)."
+          ],
+          "correct_answer": "Strength (accountability + listening + action).",
+          "explanation": "Leaders own mistakes, fix them, and listen to feedback."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'The Expectation Trap'?",
+          "options": [
+            "Customers expect crisis.",
+            "Over-promising in crisis creates new crisis when you fail to deliver.",
+            "Customers are flexible.",
+            "Not real."],
+          "correct_answer": "Over-promising in crisis creates new crisis when you fail to deliver.",
+          "explanation": "Under-promise, over-deliver. Do what you say."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Present a holistic crisis response plan:",
+          "parts": ["Hour", "1:", "Assess.", "Hour", "24:", "Communicate", "to", "employees.", "Hour", "48:", "Public", "statement.", "Week", "1:", "Root", "cause.", "Week", "2-4:", "Recovery", "plan.", "Month", "2-3:", "Implementation", "+", "verification.", "Month", "4+:", "Trust", "rebuild."],
+          "correct_order": ["Hour", "1:", "Assess.", "Hour", "24:", "Communicate", "to", "employees.", "Hour", "48:", "Public", "statement.", "Week", "1:", "Root", "cause.", "Week", "2-4:", "Recovery", "plan.", "Month", "2-3:", "Implementation", "+", "verification.", "Month", "4+:", "Trust", "rebuild."],
+          "explanation": "Timeline from immediate response through recovery."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'The Silence Penalty'?",
+          "options": [
+            "Quiet companies avoid criticism.",
+            "Silence = guilt. Media fills void with speculation. Customers panic. Stock drops.",
+            "Silence is strategic.",
+            "Not relevant."],
+          "correct_answer": "Silence = guilt. Media fills void with speculation. Customers panic. Stock drops.",
+          "explanation": "Communicate early and often. Silence destroys credibility."
+        }
+      ]
+    }
+  ]
 }

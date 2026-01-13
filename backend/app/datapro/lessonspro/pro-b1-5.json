@@ -1,15 +1,45 @@
 {
   "id": "pro-b1-5",
+  "version": "2.1",
   "title": "Office Small Talk: Strategic Rapport",
+  "subtitle": "Master Professional Relationships and Workplace Rapport Building",
+  "description": "A comprehensive professional English course for mastering office small talk, building strategic relationships, networking effectively, and navigating workplace social dynamics with authenticity and influence.",
+  "difficulty": "intermediate",
+  "duration_minutes": 240,
+  "estimated_completion_hours": 4.5,
+  "language": "en",
+  "target_audience": ["executives", "managers", "sales_professionals", "team_leaders", "networking_professionals"],
+  "learning_objectives": [
+    "Master the art of professional small talk and rapport building",
+    "Navigate workplace social dynamics with authenticity and confidence",
+    "Develop active listening and emotional intelligence skills",
+    "Learn to network effectively and build lasting professional relationships",
+    "Understand social boundaries and safe topics in corporate environments",
+    "Recognize and respond to social cues with appropriate language and tone"
+  ],
+  "metadata": {
+    "created_at": "2026-01-12",
+    "last_updated": "2026-01-12",
+    "instructor": "Executive Relationship Coach",
+    "category": "Professional Development",
+    "tags": ["small talk", "networking", "relationships", "rapport", "social skills", "emotional intelligence"],
+    "prerequisites": ["Basic English B1"],
+    "cer_aligned": true
+  },
   "stages": [
     {
       "id": "stage-intro",
       "type": "theory",
       "title": "The Art of 'Brief but Warm'",
+      "sequence": 1,
+      "duration_minutes": 15,
+      "content_type": "introduction",
       "parts": [
         {
-          "visual": "Small talk is not 'filler'; it is the grease that keeps the corporate engine running.\n\nIn executive circles, small talk serves three purposes:\n1. **Humanizing:** Showing you are approachable.\n2. **Intelligence Gathering:** Learning about team morale or client mood.\n3. **Bridge Building:** Creating connection before business.\n\nKey Rule: **Be Interested, Not Interesting.** Ask open-ended questions, but keep boundaries firm.",
-          "audio": "Mastering small talk is essential for likability and influence. Let's learn to chat with purpose."
+          "type": "visual_narrative",
+          "visual": "Small talk is not 'filler'; it is the grease that keeps the corporate engine running.\n\n**In executive circles, small talk serves three purposes:**\n\n1. **Humanizing:** Showing you are approachable and relatable.\n2. **Intelligence Gathering:** Learning about team morale, client sentiment, or office atmosphere.\n3. **Bridge Building:** Creating genuine connection before diving into business discussions.\n\n**Key Rule: Be Interested, Not Interesting.** Ask open-ended questions, listen actively, but keep boundaries firm.\n\n**The 'Small Talk Triangle':**\n- **Safe Topics:** Weather, travel, food, hobbies, non-controversial current events\n- **Risky Topics:** Politics, religion, salaries, personal health, relationship drama\n- **Forbidden Topics:** Anything discriminatory, overly personal, or gossip-based\n\n**The Golden Ratio:** 70% listening, 30% talking.",
+          "audio": "Mastering small talk is essential for likability, influence, and career advancement. Let's learn to chat with genuine purpose and strategic intention.",
+          "key_takeaway": "Small talk is not shallow—it is the foundation of professional relationships and organizational culture."
         }
       ]
     },
@@ -17,86 +47,120 @@
       "id": "stage-listening",
       "type": "quiz",
       "title": "Phase 1: Auditory Analysis (Listening)",
+      "sequence": 2,
+      "duration_minutes": 35,
+      "passing_score": 70,
+      "total_questions": 10,
       "questions": [
         {
+          "id": "q1-1",
           "type": "listening_match",
           "question": "Listen. Is this topic safe for work?",
           "tts_text": "So, who are you voting for in the election?",
           "options": ["Safe", "Unsafe"],
           "correct_answer": "Unsafe",
-          "explanation": "Politics is a high-risk topic in professional environments. Avoid it."
+          "difficulty": "easy",
+          "explanation": "Politics is a high-risk topic in professional environments. Avoid entirely. Can alienate colleagues and damage working relationships.",
+          "context": "Topic Selection"
         },
         {
+          "id": "q1-2",
           "type": "listening_match",
           "question": "What is the speaker doing?",
           "tts_text": "Did you catch the game last night?",
           "options": ["Building Rapport", "Complaining"],
           "correct_answer": "Building Rapport",
-          "explanation": "Sports is a common, neutral ground for initial connection."
+          "difficulty": "easy",
+          "explanation": "Sports is a common, neutral ground for initial connection. Shared interest in teams or games creates bond.",
+          "context": "Rapport Building"
         },
         {
+          "id": "q1-3",
           "type": "listening_match",
           "question": "Identify the tone:",
           "tts_text": "I'm so exhausted. I hate Mondays.",
           "options": ["Professional Vulnerability", "Negative Complaining"],
           "correct_answer": "Negative Complaining",
-          "explanation": "Constant negativity drains the team. 'Professional vulnerability' would be 'It's a busy start to the week.'"
+          "difficulty": "easy",
+          "explanation": "Constant negativity drains the team. Professional vulnerability would be 'It's a busy start to the week, but I'm managing.'",
+          "context": "Tone Recognition"
         },
         {
+          "id": "q1-4",
           "type": "listening_match",
           "question": "Listen. Is this a good way to exit a conversation?",
           "tts_text": "I have to go do actual work now.",
           "options": ["Polite", "Rude"],
           "correct_answer": "Rude",
-          "explanation": "It implies the current conversation is worthless. Better: 'I'd love to chat more, but I have a deadline.'"
+          "difficulty": "easy",
+          "explanation": "It implies the current conversation is worthless. Better: 'I'd love to chat more, but I have a deadline coming up.'",
+          "context": "Exit Phrases"
         },
         {
+          "id": "q1-5",
           "type": "listening_match",
           "question": "What is the implied meaning?",
           "tts_text": "It's been quite a week, hasn't it?",
           "options": ["It was a short week.", "It was a difficult/busy week."],
           "correct_answer": "It was a difficult/busy week.",
-          "explanation": "A standard idiomatic phrase for shared struggle."
+          "difficulty": "medium",
+          "explanation": "A standard idiomatic phrase for shared struggle. Invites agreement and builds connection through empathy.",
+          "context": "Idioms"
         },
         {
+          "id": "q1-6",
           "type": "listening_match",
           "question": "Listen. Is this person oversharing?",
           "tts_text": "My divorce lawyer is costing me a fortune.",
           "options": ["Yes", "No"],
           "correct_answer": "Yes",
-          "explanation": "Deeply personal financial or legal troubles are TMI (Too Much Information)."
+          "difficulty": "medium",
+          "explanation": "Deeply personal financial or legal troubles are TMI (Too Much Information). Keep personal matters private until you trust someone.",
+          "context": "Boundaries"
         },
         {
+          "id": "q1-7",
           "type": "listening_match",
           "question": "Which response shows active listening?",
           "tts_text": "Oh, that sounds challenging. How did you handle it?",
           "options": ["Active Listening", "Dismissive"],
           "correct_answer": "Active Listening",
-          "explanation": "Acknowledging the emotion and asking a follow-up question."
+          "difficulty": "medium",
+          "explanation": "Acknowledging the emotion ('that sounds challenging') and asking a follow-up question ('How did you handle it?') demonstrates engagement.",
+          "context": "Active Listening"
         },
         {
+          "id": "q1-8",
           "type": "listening_match",
           "question": "Identify the context:",
           "tts_text": "Any big plans for the weekend?",
           "options": ["Monday morning", "Friday afternoon"],
           "correct_answer": "Friday afternoon",
-          "explanation": "Standard closing banter for the end of the week."
+          "difficulty": "medium",
+          "explanation": "Standard closing banter for the end of the work week. Creates positive, forward-looking tone.",
+          "context": "Contextual Awareness"
         },
         {
+          "id": "q1-9",
           "type": "listening_match",
-          "question": "Listen. Is this a compliment or harassment?",
+          "question": "Listen. Is this a professional compliment?",
           "tts_text": "You look great in that dress.",
           "options": ["Professional Compliment", "Risky/Inappropriate"],
           "correct_answer": "Risky/Inappropriate",
-          "explanation": "Commenting on bodies/clothing can be risky. Stick to work-related compliments ('Great presentation')."
+          "difficulty": "hard",
+          "explanation": "Commenting on bodies, clothing, or appearance can be risky and is not appropriate. Stick to work-related compliments ('Great presentation', 'Excellent analysis').",
+          "context": "Professional Boundaries"
         },
         {
+          "id": "q1-10",
           "type": "listening_match",
           "question": "What does 'break the ice' mean?",
           "tts_text": "Let's break the ice with some introductions.",
           "options": ["Shatter frozen water", "Relieve tension/start conversation"],
           "correct_answer": "Relieve tension/start conversation",
-          "explanation": "A classic idiom for starting a meeting or event."
+          "difficulty": "hard",
+          "explanation": "A classic idiom for starting a meeting or event by reducing initial awkwardness.",
+          "context": "Idioms"
         }
       ]
     },
@@ -104,76 +168,160 @@
       "id": "stage-choice",
       "type": "quiz",
       "title": "Phase 2: Social Strategy (Selection)",
+      "sequence": 3,
+      "duration_minutes": 35,
+      "passing_score": 70,
+      "total_questions": 10,
       "questions": [
         {
+          "id": "q2-1",
           "type": "quiz_choice",
           "question": "You meet a colleague in the elevator. Silence is awkward. What do you say?",
-          "options": ["Nice weather we're having.", "You look tired.", "Silence is golden.", "How is the [Project Name] coming along?"],
+          "options": [
+            "Nice weather we're having.",
+            "You look tired.",
+            "Silence is golden.",
+            "How is the [Project Name] coming along?"
+          ],
           "correct_answer": "How is the [Project Name] coming along?",
-          "explanation": "Asking about work is safe and shows professional interest."
+          "difficulty": "easy",
+          "explanation": "Asking about work is safe and shows professional interest. It's specific and relevant to your shared context.",
+          "context": "Icebreakers"
         },
         {
+          "id": "q2-2",
           "type": "quiz_choice",
           "question": "Someone asks 'How are you?'. You are stressed. You say:",
-          "options": ["Terrible.", "Hanging in there. How about you?", "I want to quit.", "Fine."],
+          "options": [
+            "Terrible.",
+            "Hanging in there. How about you?",
+            "I want to quit.",
+            "Fine."
+          ],
           "correct_answer": "Hanging in there. How about you?",
-          "explanation": "'Hanging in there' admits busy-ness without being overly negative."
+          "difficulty": "easy",
+          "explanation": "'Hanging in there' admits busy-ness without being overly negative. Reciprocates the question (good manners).",
+          "context": "Emotional Management"
         },
         {
+          "id": "q2-3",
           "type": "quiz_choice",
           "question": "A client asks about your weekend. You stayed in bed all day. You say:",
-          "options": ["I did nothing.", "It was very relaxing, just recharged. How was yours?", "I slept for 20 hours.", "Boring."],
+          "options": [
+            "I did nothing.",
+            "It was very relaxing, just recharged. How was yours?",
+            "I slept for 20 hours.",
+            "Boring."
+          ],
           "correct_answer": "It was very relaxing, just recharged. How was yours?",
-          "explanation": "Frame inactivity as 'recharging' or 'relaxing'."
+          "difficulty": "easy",
+          "explanation": "Frame inactivity as 'recharging' or 'relaxing'. Turns potential negative into positive wellness framing.",
+          "context": "Impression Management"
         },
         {
+          "id": "q2-4",
           "type": "quiz_choice",
           "question": "Which topic is the safest for business dinners?",
-          "options": ["Religion", "Travel/Food", "Salaries", "Politics"],
+          "options": [
+            "Religion",
+            "Travel/Food",
+            "Salaries",
+            "Politics"
+          ],
           "correct_answer": "Travel/Food",
-          "explanation": "Universal, positive topics that allow people to share experiences."
+          "difficulty": "easy",
+          "explanation": "Universal, positive topics that allow people to share experiences. Both parties can contribute equally.",
+          "context": "Topic Selection"
         },
         {
+          "id": "q2-5",
           "type": "quiz_choice",
           "question": "You forgot someone's name. What do you do?",
-          "options": ["Guess.", "Avoid them.", "Say 'Hey you!'", "Apologize politely: 'I'm blanking on your name, remind me?'"],
+          "options": [
+            "Guess.",
+            "Avoid them.",
+            "Say 'Hey you!'",
+            "Apologize politely: 'I'm blanking on your name, remind me?'"
+          ],
           "correct_answer": "Apologize politely: 'I'm blanking on your name, remind me?'",
-          "explanation": "Honesty is better than an awkward wrong guess."
+          "difficulty": "medium",
+          "explanation": "Honesty is better than an awkward wrong guess. Most people appreciate candor and will help.",
+          "context": "Problem Solving"
         },
         {
+          "id": "q2-6",
           "type": "quiz_choice",
           "question": "How do you pivot from small talk to business?",
-          "options": ["Stop talking.", "Anyway, let's get down to business.", "Whatever.", "Enough of that."],
+          "options": [
+            "Stop talking.",
+            "Anyway, let's get down to business.",
+            "Whatever.",
+            "Enough of that."
+          ],
           "correct_answer": "Anyway, let's get down to business.",
-          "explanation": "Use a transition word ('Anyway', 'So') to signal the shift."
+          "difficulty": "medium",
+          "explanation": "Use a transition word ('Anyway', 'So', 'Speaking of which') to signal the shift smoothly.",
+          "context": "Transitions"
         },
         {
+          "id": "q2-7",
           "type": "quiz_choice",
           "question": "A coworker is gossiping about another colleague. You:",
-          "options": ["Join in.", "Listen silently.", "Change the subject or excuse yourself.", "Tell the boss."],
+          "options": [
+            "Join in.",
+            "Listen silently.",
+            "Change the subject or excuse yourself.",
+            "Tell the boss."
+          ],
           "correct_answer": "Change the subject or excuse yourself.",
-          "explanation": "Protect your reputation. Being associated with gossip creates distrust."
+          "difficulty": "hard",
+          "explanation": "Protect your reputation. Being associated with gossip creates distrust and damages relationships.",
+          "context": "Integrity"
         },
         {
+          "id": "q2-8",
           "type": "quiz_choice",
           "question": "What is the 'Water Cooler' effect?",
-          "options": ["Hydration breaks.", "Informal information exchange among employees.", "A plumbing issue.", "Cooling systems."],
+          "options": [
+            "Hydration breaks.",
+            "Informal information exchange among employees.",
+            "A plumbing issue.",
+            "Cooling systems."
+          ],
           "correct_answer": "Informal information exchange among employees.",
-          "explanation": "Casual chats often reveal critical organizational info."
+          "difficulty": "easy",
+          "explanation": "Casual chats at water coolers, lunch tables, or breaks often reveal critical organizational info and shape culture.",
+          "context": "Organizational Culture"
         },
         {
+          "id": "q2-9",
           "type": "quiz_choice",
           "question": "Someone compliments your work. You say:",
-          "options": ["I know.", "It was nothing.", "Thank you, the team worked hard on it.", "Finally someone noticed."],
+          "options": [
+            "I know.",
+            "It was nothing.",
+            "Thank you, the team worked hard on it.",
+            "Finally someone noticed."
+          ],
           "correct_answer": "Thank you, the team worked hard on it.",
-          "explanation": "Accept the compliment (Thank you) and share credit (Team)."
+          "difficulty": "medium",
+          "explanation": "Accept the compliment (Thank you) and share credit (Team). Shows confidence and leadership.",
+          "context": "Gratitude"
         },
         {
+          "id": "q2-10",
           "type": "quiz_choice",
           "question": "You are late to a video call. You enter saying:",
-          "options": ["Sorry, traffic.", "I'm here now.", "Apologies for the delay, please continue.", "Start over."],
+          "options": [
+            "Sorry, traffic.",
+            "I'm here now.",
+            "Apologies for the delay, please continue.",
+            "Start over."
+          ],
           "correct_answer": "Apologies for the delay, please continue.",
-          "explanation": "Brief apology, minimize disruption."
+          "difficulty": "medium",
+          "explanation": "Brief apology, minimize disruption, show respect for others' time.",
+          "context": "Professional Etiquette"
         }
       ]
     },
@@ -181,76 +329,110 @@
       "id": "stage-structure",
       "type": "gamified_quiz",
       "title": "Phase 3: Conversational Flow (Ordering)",
+      "sequence": 4,
+      "duration_minutes": 30,
+      "passing_score": 75,
+      "total_questions": 10,
       "questions": [
         {
+          "id": "q3-1",
           "type": "order_sentence",
           "question": "Open a conversation:",
           "parts": ["How", "was", "your", "trip", "in", "from", "London?"],
           "correct_order": ["How", "was", "your", "trip", "in", "from", "London?"],
-          "explanation": "Asking about their journey is a standard opener."
+          "difficulty": "easy",
+          "explanation": "Asking about their journey is a standard, considerate opener that shows interest.",
+          "context": "Opening"
         },
         {
+          "id": "q3-2",
           "type": "order_sentence",
           "question": "Offer hospitality:",
           "parts": ["Can", "I", "get", "you", "a", "coffee", "or", "water?"],
           "correct_order": ["Can", "I", "get", "you", "a", "coffee", "or", "water?"],
-          "explanation": "Basic etiquette for hosting."
+          "difficulty": "easy",
+          "explanation": "Basic etiquette for hosting. Shows care and creates comfort.",
+          "context": "Hosting"
         },
         {
+          "id": "q3-3",
           "type": "order_sentence",
           "question": "Pivot to business:",
           "parts": ["Shall", "we", "get", "started", "with", "the", "agenda?"],
           "correct_order": ["Shall", "we", "get", "started", "with", "the", "agenda?"],
-          "explanation": "A gentle but firm transition."
+          "difficulty": "medium",
+          "explanation": "A gentle but firm transition using 'Shall we'. Shows respect and clarity.",
+          "context": "Transitions"
         },
         {
+          "id": "q3-4",
           "type": "order_sentence",
           "question": "Ask about wellbeing:",
           "parts": ["I", "hope", "you", "had", "a", "good", "weekend."],
           "correct_order": ["I", "hope", "you", "had", "a", "good", "weekend."],
-          "explanation": "Standard Monday greeting."
+          "difficulty": "easy",
+          "explanation": "Standard Monday greeting. Shows personal interest.",
+          "context": "Greetings"
         },
         {
+          "id": "q3-5",
           "type": "order_sentence",
           "question": "Show interest:",
           "parts": ["That", "is", "fascinating,", "tell", "me", "more", "about", "that."],
           "correct_order": ["That", "is", "fascinating,", "tell", "me", "more", "about", "that."],
-          "explanation": "Encourages the other person to speak."
+          "difficulty": "medium",
+          "explanation": "Encourages the other person to speak. Demonstrates active listening.",
+          "context": "Engagement"
         },
         {
+          "id": "q3-6",
           "type": "order_sentence",
           "question": "Exit conversation:",
           "parts": ["It", "was", "great", "catching", "up,", "see", "you", "later."],
           "correct_order": ["It", "was", "great", "catching", "up,", "see", "you", "later."],
-          "explanation": "Positive closing."
+          "difficulty": "easy",
+          "explanation": "Positive closing that validates the interaction.",
+          "context": "Closing"
         },
         {
+          "id": "q3-7",
           "type": "order_sentence",
           "question": "Validate an opinion:",
           "parts": ["I", "completely", "agree", "with", "your", "point", "of", "view."],
           "correct_order": ["I", "completely", "agree", "with", "your", "point", "of", "view."],
-          "explanation": "Building alignment."
+          "difficulty": "hard",
+          "explanation": "Building alignment and agreement. Creates bond and trust.",
+          "context": "Alignment"
         },
         {
+          "id": "q3-8",
           "type": "order_sentence",
           "question": "Introduce a colleague:",
           "parts": ["Have", "you", "met", "Sarah", "from", "Marketing?"],
           "correct_order": ["Have", "you", "met", "Sarah", "from", "Marketing?"],
-          "explanation": "Connecting people is a leadership trait."
+          "difficulty": "medium",
+          "explanation": "Connecting people is a leadership trait and shows community-building.",
+          "context": "Networking"
         },
         {
+          "id": "q3-9",
           "type": "order_sentence",
           "question": "Bridge to a topic:",
           "parts": ["Speaking", "of", "budget,", "did", "you", "see", "the", "report?"],
           "correct_order": ["Speaking", "of", "budget,", "did", "you", "see", "the", "report?"],
-          "explanation": "'Speaking of X' connects the current chat to a new topic."
+          "difficulty": "hard",
+          "explanation": "'Speaking of X' connects the current chat to a new topic smoothly.",
+          "context": "Topic Transitions"
         },
         {
+          "id": "q3-10",
           "type": "order_sentence",
           "question": "Express empathy:",
           "parts": ["I", "am", "sorry", "to", "hear", "about", "that", "trouble."],
           "correct_order": ["I", "am", "sorry", "to", "hear", "about", "that", "trouble."],
-          "explanation": "Professional empathy for minor bad news."
+          "difficulty": "medium",
+          "explanation": "Professional empathy for minor bad news. Builds emotional connection.",
+          "context": "Empathy"
         }
       ]
     },
@@ -258,66 +440,101 @@
       "id": "stage-vocab",
       "type": "gamified_quiz",
       "title": "Phase 4: Social Vocabulary (Input)",
+      "sequence": 5,
+      "duration_minutes": 25,
+      "passing_score": 80,
+      "total_questions": 10,
+      "vocabulary_category": "Small Talk & Networking",
       "questions": [
         {
+          "id": "q4-1",
           "type": "fill_input",
           "question": "We need to ______ (start conversation) the ice.",
           "correct_answers": ["break", "Break"],
-          "explanation": "Break the ice."
+          "difficulty": "easy",
+          "explanation": "'Break the ice' is an idiom meaning to relieve tension and start conversation.",
+          "context": "Idioms"
         },
         {
+          "id": "q4-2",
           "type": "fill_input",
           "question": "Let's ______ (reconnect) up later.",
           "correct_answers": ["catch", "Catch"],
-          "explanation": "Catch up means to update each other."
+          "difficulty": "easy",
+          "explanation": "'Catch up' means to reconnect and update each other on news.",
+          "context": "Phrasal Verbs"
         },
         {
+          "id": "q4-3",
           "type": "fill_input",
           "question": "I heard through the ______ (rumor mill) that we are merging.",
           "correct_answers": ["grapevine", "Grapevine"],
-          "explanation": "The grapevine is the informal communication network."
+          "difficulty": "medium",
+          "explanation": "'The grapevine' is the informal communication network where rumors and news spread.",
+          "context": "Idioms"
         },
         {
+          "id": "q4-4",
           "type": "fill_input",
           "question": "Please give my ______ (respects) to your manager.",
           "correct_answers": ["regards", "Regards"],
-          "explanation": "Give my regards."
+          "difficulty": "easy",
+          "explanation": "'Give my regards' is a polite way to ask someone to convey your respect.",
+          "context": "Expressions"
         },
         {
+          "id": "q4-5",
           "type": "fill_input",
           "question": "We engage in small ______ before meetings.",
           "correct_answers": ["talk", "Talk"],
-          "explanation": "Small talk."
+          "difficulty": "easy",
+          "explanation": "'Small talk' refers to polite, casual conversation about non-controversial topics.",
+          "context": "Terminology"
         },
         {
+          "id": "q4-6",
           "type": "fill_input",
           "question": "It's a pleasure to make your ______ (meeting you).",
           "correct_answers": ["acquaintance", "Acquaintance"],
-          "explanation": "Make your acquaintance (formal)."
+          "difficulty": "medium",
+          "explanation": "'Make your acquaintance' is a formal way to express meeting someone.",
+          "context": "Formal Expressions"
         },
         {
+          "id": "q4-7",
           "type": "fill_input",
           "question": "Sorry to ______ (disturb) you.",
           "correct_answers": ["bother", "Bother", "interrupt"],
-          "explanation": "Polite entry phrase."
+          "difficulty": "easy",
+          "explanation": "A polite entry phrase when approaching someone who is busy.",
+          "context": "Politeness"
         },
         {
+          "id": "q4-8",
           "type": "fill_input",
           "question": "Are you a ______ (person familiar with the area) here?",
           "correct_answers": ["local", "Local"],
-          "explanation": "Asking if they live in the city."
+          "difficulty": "medium",
+          "explanation": "Asking if they live in the city or region. Opens conversation about place.",
+          "context": "Conversation Topics"
         },
         {
+          "id": "q4-9",
           "type": "fill_input",
           "question": "Have a safe ______ (trip) back.",
           "correct_answers": ["journey", "Journey", "flight"],
-          "explanation": "Standard farewell to travelers."
+          "difficulty": "easy",
+          "explanation": "Standard farewell to travelers. Shows care.",
+          "context": "Farewells"
         },
         {
+          "id": "q4-10",
           "type": "fill_input",
           "question": "I enjoyed our ______ (talk).",
           "correct_answers": ["chat", "Chat", "conversation"],
-          "explanation": "Validating the interaction."
+          "difficulty": "easy",
+          "explanation": "Validating the interaction and expressing appreciation.",
+          "context": "Gratitude"
         }
       ]
     },
@@ -325,76 +542,294 @@
       "id": "stage-mastery",
       "type": "quiz",
       "title": "Phase 5: Networking Mastery",
+      "sequence": 6,
+      "duration_minutes": 40,
+      "passing_score": 75,
+      "total_questions": 10,
       "questions": [
         {
+          "id": "q5-1",
           "type": "quiz_choice",
           "question": "What is 'working the room'?",
-          "options": ["Cleaning the office.", "Interacting with as many people as possible at an event.", "Painting walls.", "Sitting in the corner."],
+          "options": [
+            "Cleaning the office.",
+            "Interacting with as many people as possible at an event.",
+            "Painting walls.",
+            "Sitting in the corner."
+          ],
           "correct_answer": "Interacting with as many people as possible at an event.",
-          "explanation": "A networking skill involving brief, high-energy interactions."
+          "difficulty": "easy",
+          "explanation": "A networking skill involving brief, high-energy interactions to build connections.",
+          "context": "Networking Skills"
         },
         {
+          "id": "q5-2",
           "type": "fill_input",
           "question": "Here is my business ______ (contact info).",
           "correct_answers": ["card", "Card"],
-          "explanation": "Even in the digital age, cards are used in Asia and formal settings."
+          "difficulty": "easy",
+          "explanation": "Business cards remain valuable in Asia, formal settings, and face-to-face networking.",
+          "context": "Networking Tools"
         },
         {
+          "id": "q5-3",
           "type": "order_sentence",
           "question": "Propose a LinkedIn connection:",
           "parts": ["I", "would", "love", "to", "connect", "with", "you", "on", "LinkedIn."],
           "correct_order": ["I", "would", "love", "to", "connect", "with", "you", "on", "LinkedIn."],
-          "explanation": "Modern networking standard."
+          "difficulty": "medium",
+          "explanation": "Modern networking standard. Professional social media connection.",
+          "context": "Digital Networking"
         },
         {
+          "id": "q5-4",
           "type": "quiz_choice",
           "question": "You forget the word you wanted to say. You say:",
-          "options": ["I am stupid.", "It's on the tip of my tongue.", "My brain is broken.", "Forget it."],
+          "options": [
+            "I am stupid.",
+            "It's on the tip of my tongue.",
+            "My brain is broken.",
+            "Forget it."
+          ],
           "correct_answer": "It's on the tip of my tongue.",
-          "explanation": "Standard idiom for temporary forgetfulness."
+          "difficulty": "medium",
+          "explanation": "Standard idiom for temporary forgetfulness. Self-deprecating humor.",
+          "context": "Idioms"
         },
         {
+          "id": "q5-5",
           "type": "listening_match",
           "question": "Listen. Is the speaker bored?",
           "tts_text": "Uh-huh. Yeah. Cool. Anyway...",
           "options": ["Yes", "No"],
           "correct_answer": "Yes",
-          "explanation": "Short, monosyllabic responses followed by a topic change signal disinterest."
+          "difficulty": "hard",
+          "explanation": "Short, monosyllabic responses ('Uh-huh', 'Yeah') followed by a topic change signal disinterest or impatience.",
+          "context": "Social Cues"
         },
         {
+          "id": "q5-6",
           "type": "fill_input",
           "question": "We share a ______ (common) interest in golf.",
           "correct_answers": ["mutual", "Mutual"],
-          "explanation": "Mutual interest builds strong bonds."
+          "difficulty": "medium",
+          "explanation": "'Mutual interest' builds strong professional bonds and foundation for relationships.",
+          "context": "Relationship Building"
         },
         {
+          "id": "q5-7",
           "type": "order_sentence",
           "question": "Compliment the office:",
           "parts": ["You", "have", "a", "wonderful", "view", "from", "this", "office."],
           "correct_order": ["You", "have", "a", "wonderful", "view", "from", "this", "office."],
-          "explanation": "Safe, situational compliment."
+          "difficulty": "medium",
+          "explanation": "Safe, situational compliment that doesn't involve personal appearance.",
+          "context": "Compliments"
         },
         {
+          "id": "q5-8",
           "type": "quiz_choice",
           "question": "What is 'Active Listening'?",
-          "options": ["Listening while running.", "Listening to reply.", "Listening to understand and engaging.", "Ignoring noise."],
-          "correct_answer": "Listening to understand and engaging.",
-          "explanation": "Key EQ skill."
+          "options": [
+            "Listening while running.",
+            "Listening to reply.",
+            "Listening to understand and engaging with what is said.",
+            "Ignoring noise."
+          ],
+          "correct_answer": "Listening to understand and engaging with what is said.",
+          "difficulty": "hard",
+          "explanation": "Key emotional intelligence (EQ) skill. Involves full attention, eye contact, and responding thoughtfully.",
+          "context": "Emotional Intelligence"
         },
         {
+          "id": "q5-9",
           "type": "fill_input",
           "question": "Don't burn ______ (destroy relationships).",
           "correct_answers": ["bridges", "Bridges"],
-          "explanation": "Don't burn bridges; you may need that person later."
+          "difficulty": "easy",
+          "explanation": "'Don't burn bridges' means maintain relationships. You may need that person later.",
+          "context": "Idioms"
         },
         {
+          "id": "q5-10",
           "type": "quiz_choice",
           "question": "How to handle an awkward silence?",
-          "options": ["Panic.", "Check your phone.", "Ask an open-ended question.", "Leave."],
+          "options": [
+            "Panic.",
+            "Check your phone.",
+            "Ask an open-ended question.",
+            "Leave."
+          ],
           "correct_answer": "Ask an open-ended question.",
-          "explanation": "Questions restart the flow."
+          "difficulty": "medium",
+          "explanation": "Questions restart the flow and show interest. Open-ended questions (starting with 'how', 'what', 'tell me') are better than yes/no.",
+          "context": "Problem Solving"
         }
       ]
     }
-  ]
+  ],
+  "assessment": {
+    "type": "cumulative",
+    "passing_threshold": 70,
+    "total_questions": 50,
+    "time_limit_minutes": 240,
+    "sections": [
+      {
+        "section_id": "stage-listening",
+        "section_title": "Auditory Analysis",
+        "weight": 0.2,
+        "question_count": 10,
+        "passing_score": 70
+      },
+      {
+        "section_id": "stage-choice",
+        "section_title": "Social Strategy",
+        "weight": 0.2,
+        "question_count": 10,
+        "passing_score": 70
+      },
+      {
+        "section_id": "stage-structure",
+        "section_title": "Conversational Flow",
+        "weight": 0.2,
+        "question_count": 10,
+        "passing_score": 75
+      },
+      {
+        "section_id": "stage-vocab",
+        "section_title": "Social Vocabulary",
+        "weight": 0.2,
+        "question_count": 10,
+        "passing_score": 80
+      },
+      {
+        "section_id": "stage-mastery",
+        "section_title": "Networking Mastery",
+        "weight": 0.2,
+        "question_count": 10,
+        "passing_score": 75
+      }
+    ]
+  },
+  "resources": {
+    "external_links": [
+      {
+        "id": "res-1",
+        "title": "Small Talk Tips for Introverts",
+        "url": "https://www.psychologytoday.com/us/basics/small-talk",
+        "description": "Strategies for effective small talk regardless of personality type"
+      },
+      {
+        "id": "res-2",
+        "title": "LinkedIn Professional Networking",
+        "url": "https://www.linkedin.com",
+        "description": "Build and maintain professional network digitally"
+      },
+      {
+        "id": "res-3",
+        "title": "Emotional Intelligence (EQ) Training",
+        "url": "https://www.mindtools.com/pages/article/newCOM_50.htm",
+        "description": "Develop emotional awareness and social skills"
+      },
+      {
+        "id": "res-4",
+        "title": "Active Listening Techniques",
+        "url": "https://www.forbes.com/sites/forbescoachescouncil/2017/05/09/10-tips-on-active-listening/",
+        "description": "Master the art of truly hearing and responding to others"
+      },
+      {
+        "id": "res-5",
+        "title": "Workplace Ethics and Boundaries",
+        "url": "https://www.shrm.org/resourcesandtools/hr-topics/behavioral-competencies/pages/default.aspx",
+        "description": "Professional conduct and appropriate workplace topics"
+      }
+    ],
+    "downloadables": [
+      {
+        "id": "dl-1",
+        "type": "guide",
+        "name": "Small Talk Topics Guide",
+        "format": "pdf",
+        "description": "Safe and engaging conversation starters for different situations"
+      },
+      {
+        "id": "dl-2",
+        "type": "checklist",
+        "name": "Networking Event Preparation",
+        "format": "pdf",
+        "description": "What to bring, how to dress, conversation starters"
+      },
+      {
+        "id": "dl-3",
+        "type": "template",
+        "name": "Active Listening Reflection",
+        "format": "docx",
+        "description": "Self-assessment tool for improving listening skills"
+      },
+      {
+        "id": "dl-4",
+        "type": "guide",
+        "name": "Workplace Taboo Topics",
+        "format": "pdf",
+        "description": "Topics to avoid and alternative safe topics"
+      }
+    ]
+  },
+  "completion_criteria": {
+    "minimum_score": 70,
+    "time_investment_hours": 4.5,
+    "all_stages_attempted": true,
+    "sections_passed": 5,
+    "badge_earned": "Office Rapport Master",
+    "certificate_eligible": true
+  },
+  "difficulty_progression": [
+    {
+      "stage": 1,
+      "level": "easy",
+      "focus": "Small talk fundamentals and topic selection"
+    },
+    {
+      "stage": 2,
+      "level": "easy_to_medium",
+      "focus": "Listening comprehension for social scenarios"
+    },
+    {
+      "stage": 3,
+      "level": "easy_to_medium",
+      "focus": "Social decision-making and strategy"
+    },
+    {
+      "stage": 4,
+      "level": "medium",
+      "focus": "Conversational flow and syntax"
+    },
+    {
+      "stage": 5,
+      "level": "medium",
+      "focus": "Social and networking vocabulary"
+    },
+    {
+      "stage": 6,
+      "level": "medium_to_hard",
+      "focus": "Advanced networking and emotional intelligence"
+    }
+  ],
+  "language_focus": {
+    "grammar_structures": [
+      "Active voice for clear communication",
+      "Question formation for engagement",
+      "Conditional and polite forms",
+      "Transitional phrases for topic shifts",
+      "Idiomatic expressions for naturalness"
+    ],
+    "vocabulary_domains": [
+      "Small talk and rapport building",
+      "Networking and relationship terminology",
+      "Emotional and social language",
+      "Safe and unsafe workplace topics",
+      "Active listening and empathy expressions",
+      "Professional etiquette and boundaries"
+    ]
+  }
 }

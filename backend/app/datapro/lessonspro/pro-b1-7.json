@@ -1,15 +1,18 @@
 {
   "id": "pro-b1-7",
   "title": "Telephone Etiquette: Voice Command",
+  "description": "Master professional phone communication, conference calls, and voice protocols",
+  "difficulty": "B1",
   "stages": [
     {
       "id": "stage-intro",
       "type": "theory",
       "title": "The Power of the Voice",
+      "duration": "3 min",
       "parts": [
         {
-          "visual": "In a digital world, the telephone call is a high-bandwidth tool for urgency and nuance. Without visual cues, your **Tone** and **Clarity** are everything.\n\nKey Protocols:\n1. **Immediate ID:** Always state your name and company immediately.\n2. **The Hold Rule:** Ask permission before placing someone on hold.\n3. **Voicemail Strategy:** Be concise—Name, Number, Reason, Action.\n\nVocabulary Shift: Instead of 'Call me', use **'Reach out'** or **'Connect'**. Instead of 'Bye', use **'I look forward to our next steps'**.",
-          "audio": "Your voice is your brand. On the phone, you must project confidence, clarity, and competence instantly."
+          "visual": "In a digital world, the telephone call is a high-bandwidth tool for urgency and nuance. Without visual cues, your **Tone** and **Clarity** are everything.\n\nKey Protocols:\n1. **Immediate ID:** Always state your name and company immediately.\n2. **The Hold Rule:** Ask permission before placing someone on hold.\n3. **Voicemail Strategy:** Be concise—Name, Number, Reason, Action, Name/Number again.\n4. **Conference Call Mastery:** Mute when silent. Introduce yourself. Speak clearly.\n\nVocabulary Shift:\n- Instead of 'Call me' → use **'Reach out'** or **'Connect'**\n- Instead of 'Bye' → use **'I look forward to our next steps'**\n- Instead of 'Hold on' → use **'May I put you on hold?'**",
+          "audio": "Your voice is your brand. On the phone, you must project confidence, clarity, and competence instantly. Every call is an opportunity to build professional credibility."
         }
       ]
     },
@@ -17,6 +20,8 @@
       "id": "stage-listening",
       "type": "quiz",
       "title": "Phase 1: Auditory Analysis (Listening)",
+      "duration": "10 min",
+      "total_questions": 18,
       "questions": [
         {
           "type": "listening_match",
@@ -24,7 +29,7 @@
           "tts_text": "Yeah, hello?",
           "options": ["Professional", "Unprofessional"],
           "correct_answer": "Unprofessional",
-          "explanation": "Never answer with just 'Hello' or 'Yeah'. State your name/department: 'John speaking'."
+          "explanation": "Never answer with just 'Hello' or 'Yeah'. Always state your name/department: 'John speaking' or 'Sales Department, how may I help?'"
         },
         {
           "type": "listening_match",
@@ -32,7 +37,7 @@
           "tts_text": "Could you please hold for a brief moment while I pull up the file?",
           "options": ["Hanging up", "Placing on hold"],
           "correct_answer": "Placing on hold",
-          "explanation": "Asking permission ('Could you please') is the correct protocol for holding."
+          "explanation": "Asking permission ('Could you please') is the correct protocol for holding. Notice the reason is given."
         },
         {
           "type": "listening_match",
@@ -40,7 +45,7 @@
           "tts_text": "I can't hear you, are you there? Hello? Hello?",
           "options": ["Bad connection", "Rude speaker"],
           "correct_answer": "Bad connection",
-          "explanation": "Standard reaction to signal loss. A pro would say: 'I seem to be losing you.'"
+          "explanation": "Standard reaction to signal loss. A professional would say: 'I seem to be losing you. Can you hear me clearly?'"
         },
         {
           "type": "listening_match",
@@ -48,7 +53,7 @@
           "tts_text": "I have Mr. Smith on the line for you regarding the audit. Connecting you now.",
           "options": ["Cold Transfer", "Warm Transfer"],
           "correct_answer": "Warm Transfer",
-          "explanation": "A warm transfer involves briefing the receiver before connecting the caller."
+          "explanation": "A warm transfer involves briefing the receiver before connecting the caller. A cold transfer provides no context."
         },
         {
           "type": "listening_match",
@@ -56,7 +61,7 @@
           "tts_text": "I'm calling to follow up on the invoice sent last week.",
           "options": ["Social chat", "Business Inquiry"],
           "correct_answer": "Business Inquiry",
-          "explanation": "Clear statement of purpose ('calling to follow up')."
+          "explanation": "Clear statement of purpose ('calling to follow up'). Establishes context immediately."
         },
         {
           "type": "listening_match",
@@ -64,7 +69,7 @@
           "tts_text": "Okay, bye bye bye.",
           "options": ["Formal", "Casual/Rushed"],
           "correct_answer": "Casual/Rushed",
-          "explanation": "Repetitive 'byes' signal a rush. Better: 'Thank you, goodbye.'"
+          "explanation": "Repetitive 'byes' signal rushing or anxiety. Better: 'Thank you for your time. I'll send the details by end of day.'"
         },
         {
           "type": "listening_match",
@@ -72,15 +77,15 @@
           "tts_text": "Thank you for calling Onix, how may I direct your call?",
           "options": ["Yes (Smiling voice)", "No (Flat tone)"],
           "correct_answer": "Yes (Smiling voice)",
-          "explanation": "A 'smiling voice' is audible and creates a welcoming atmosphere."
+          "explanation": "A 'smiling voice' is audible—warmer, higher pitch, friendlier. It creates a welcoming atmosphere."
         },
         {
           "type": "listening_match",
           "question": "What does 'You're breaking up' mean?",
           "tts_text": "Sorry, you're breaking up. Can you repeat that?",
-          "options": ["The relationship is over.", " The audio signal is intermittent."],
-          "correct_answer": " The audio signal is intermittent.",
-          "explanation": "Standard phrase for poor reception."
+          "options": ["The relationship is over.", "The audio signal is intermittent."],
+          "correct_answer": "The audio signal is intermittent.",
+          "explanation": "Standard phrase for poor/choppy reception on calls."
         },
         {
           "type": "listening_match",
@@ -88,7 +93,7 @@
           "tts_text": "It's me. Call me back.",
           "options": ["Effective", "Ineffective"],
           "correct_answer": "Ineffective",
-          "explanation": "Lacks Name, Number, Context, and Urgency."
+          "explanation": "Lacks Name, Number, Context, Reason, and Call-to-Action. Never assume the recipient knows who 'me' is."
         },
         {
           "type": "listening_match",
@@ -96,7 +101,71 @@
           "tts_text": "I appreciate your patience.",
           "options": ["Empathetic", "Dismissive"],
           "correct_answer": "Empathetic",
-          "explanation": "Validates the caller's waiting time."
+          "explanation": "Validates the caller's waiting time and shows respect."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the speaker in control?",
+          "tts_text": "Thank you for joining. I'll now walk through the agenda: first we'll discuss Q4 results, then we'll cover next steps.",
+          "options": ["Yes", "No"],
+          "correct_answer": "Yes",
+          "explanation": "Taking charge, setting expectations. Confident leadership on the call."
+        },
+        {
+          "type": "listening_match",
+          "question": "What is the speaker acknowledging?",
+          "tts_text": "Welcome, Sarah. We have Tom from Engineering and Lisa from Sales on the line as well.",
+          "options": ["Latecomer", "Team composition"],
+          "correct_answer": "Team composition",
+          "explanation": "Introducing participants helps everyone know who is on the call."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is background noise acceptable?",
+          "tts_text": "[Wind noise, honking, muffled talking in background]",
+          "options": ["Yes", "No"],
+          "correct_answer": "No",
+          "explanation": "Never call from a loud environment. Find a quiet space. Use mute if on a conference call."
+        },
+        {
+          "type": "listening_match",
+          "question": "What is the speaker doing wrong?",
+          "tts_text": "[Long silence] Hello? Are you there? [More silence]",
+          "options": ["Checking connection", "Not speaking clearly/pausing too long"],
+          "correct_answer": "Not speaking clearly/pausing too long",
+          "explanation": "Extended silence creates uncertainty. Fill gaps: 'I'm gathering the data' or 'One moment please.'"
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the speaker prepared?",
+          "tts_text": "Um, let me find... okay, the order number is... uh... 47382. Wait, maybe 47328?",
+          "options": ["Prepared", "Unprepared"],
+          "correct_answer": "Unprepared",
+          "explanation": "Hesitation and uncertainty damage credibility. Always have information ready."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the barrier to understanding:",
+          "tts_text": "So we're gonna synergize the verticals with the stakeholder touchpoints to leverage bandwidth on the initiatives.",
+          "options": ["Jargon overload", "Clear communication"],
+          "correct_answer": "Jargon overload",
+          "explanation": "Overusing buzzwords confuses listeners. Simplify: 'We'll align teams and share resources.'"
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. What is the speaker's status?",
+          "tts_text": "I apologize for the delay. I'm currently in another meeting and will join shortly.",
+          "options": ["Busy", "Available now"],
+          "correct_answer": "Busy",
+          "explanation": "Shows professionalism in acknowledging constraint."
+        },
+        {
+          "type": "listening_match",
+          "question": "Is this a clear action item?",
+          "tts_text": "So I'll send that by Friday, and you'll review it. Then we'll touch base next week.",
+          "options": ["Clear", "Vague"],
+          "correct_answer": "Clear",
+          "explanation": "Specific date (Friday), clear owner (I'll send), and next step (review/touch base)."
         }
       ]
     },
@@ -104,76 +173,127 @@
       "id": "stage-choice",
       "type": "quiz",
       "title": "Phase 2: Situational Strategy (Selection)",
+      "duration": "12 min",
+      "total_questions": 18,
       "questions": [
         {
           "type": "quiz_choice",
           "question": "You answer a call for a colleague who is out. You say:",
-          "options": ["She's not here.", "She's at the dentist.", "She is currently away from her desk. May I take a message?", "Call back later."],
-          "correct_answer": "She is currently away from her desk. May I take a message?",
-          "explanation": "Protects privacy (dentist) while being helpful."
+          "options": ["She's not here.", "She's at the dentist.", "She is currently away from her desk. May I take a message or have her call you back?", "Call back later."],
+          "correct_answer": "She is currently away from her desk. May I take a message or have her call you back?",
+          "explanation": "Protects privacy (dentist detail), offers solutions (message/callback), remains professional."
         },
         {
           "type": "quiz_choice",
           "question": "The caller is angry and shouting. You:",
-          "options": ["Shout back.", "Hang up immediately.", "Stay calm and say: 'I want to help, but I need you to speak calmly.'", "Laugh."],
-          "correct_answer": "Stay calm and say: 'I want to help, but I need you to speak calmly.'",
-          "explanation": "De-escalation technique: Validating intent to help while setting boundaries."
+          "options": ["Shout back.", "Hang up immediately.", "Stay calm and say: 'I want to help, but I need you to speak calmly so I can understand your concern.'", "Laugh."],
+          "correct_answer": "Stay calm and say: 'I want to help, but I need you to speak calmly so I can understand your concern.'",
+          "explanation": "De-escalation technique: Validating intent to help while setting respectful boundaries."
         },
         {
           "type": "quiz_choice",
           "question": "You need to spell your name 'SMYTHE'. You use:",
-          "options": ["S as in Sugar, M as in Mother...", "S like Sam...", "Use the NATO Phonetic Alphabet (Sierra, Mike, Yankee...).", "Guess."],
-          "correct_answer": "Use the NATO Phonetic Alphabet (Sierra, Mike, Yankee...).",
-          "explanation": "The global standard for clarity over the phone."
+          "options": ["S as in Sugar, M as in Mother...", "S like Sam...", "S as in Sierra, M as in Mike, Y as in Yankee, T as in Tango, H as in Hotel, E as in Echo.", "Guess."],
+          "correct_answer": "S as in Sierra, M as in Mike, Y as in Yankee, T as in Tango, H as in Hotel, E as in Echo.",
+          "explanation": "The NATO Phonetic Alphabet is the global standard for crystal-clear spelling over the phone."
         },
         {
           "type": "quiz_choice",
           "question": "You dial the wrong number. You say:",
-          "options": ["Who is this?", "Wrong number!", "Apologies, I seem to have the wrong number. Goodbye.", "Hang up silently."],
-          "correct_answer": "Apologies, I seem to have the wrong number. Goodbye.",
-          "explanation": "Polite ownership of the mistake."
+          "options": ["Who is this?", "Wrong number!", "My apologies. I seem to have the wrong number. Have a good day.", "Hang up silently."],
+          "correct_answer": "My apologies. I seem to have the wrong number. Have a good day.",
+          "explanation": "Polite ownership of the mistake. Apologize, acknowledge error, exit gracefully."
         },
         {
           "type": "quiz_choice",
           "question": "Leaving a voicemail. Which order is correct?",
-          "options": ["Message, Name, Number.", "Name, Number, Message, Name/Number again.", "Number only.", "Just the message."],
-          "correct_answer": "Name, Number, Message, Name/Number again.",
-          "explanation": "Repeating contact info at the end allows the listener to write it down without replaying."
+          "options": ["Message, then Name, then Number.", "Name, Number, Message, Name/Number again, Reason.", "Number only.", "Just the message without ID."],
+          "correct_answer": "Name, Number, Message, Name/Number again, Reason.",
+          "explanation": "Structure: [Your Name] [Your Phone] [Message] [Callback info] [Urgency]. Repeating at end prevents replaying."
         },
         {
           "type": "quiz_choice",
           "question": "You are on a conference call and not speaking. You should:",
-          "options": ["Breathe heavily into the mic.", "Mute your line.", "Type loudly.", "Eat lunch."],
-          "correct_answer": "Mute your line.",
-          "explanation": "Standard etiquette to eliminate background noise."
+          "options": ["Breathe heavily into the mic.", "Mute your line to eliminate background noise.", "Type loudly on keyboard.", "Eat lunch with speaker on."],
+          "correct_answer": "Mute your line to eliminate background noise.",
+          "explanation": "Standard etiquette. Only unmute when speaking. Prevents distracting background sounds."
         },
         {
           "type": "quiz_choice",
           "question": "Someone joins the conference call late. The host should:",
-          "options": ["Stop everything to recap.", "Ignore them.", "Say 'Welcome [Name], we are discussing [Topic], please catch up.'", "Scold them."],
+          "options": ["Stop everything to replay all 30 minutes.", "Ignore them without greeting.", "Say 'Welcome [Name], we are discussing [Topic], please catch up.'", "Scold them for being late."],
           "correct_answer": "Say 'Welcome [Name], we are discussing [Topic], please catch up.'",
-          "explanation": "Acknowledges entry without derailing the meeting."
+          "explanation": "Acknowledges entry without derailing the meeting. Professional and efficient."
         },
         {
           "type": "quiz_choice",
           "question": "Asking for someone who is busy:",
-          "options": ["Is he there?", "Is this a good time?", "Put him on.", "I know he's there."],
-          "correct_answer": "Is this a good time?",
-          "explanation": "Respects the recipient's schedule."
+          "options": ["Is he there? Put him on.", "Is this a good time, or should I call back?", "He must talk to me now.", "I know he's there."],
+          "correct_answer": "Is this a good time, or should I call back?",
+          "explanation": "Respects the recipient's schedule and demonstrates professionalism."
         },
         {
           "type": "quiz_choice",
           "question": "Ending a call with a client:",
-          "options": ["Bye.", "See ya.", "Thank you for your time. Have a great day.", "Cheers mate."],
-          "correct_answer": "Thank you for your time. Have a great day.",
-          "explanation": "Formal and appreciative."
+          "options": ["Bye.", "See ya.", "Thank you for your time. I'll follow up by end of week. Have a great day.", "Cheers mate."],
+          "correct_answer": "Thank you for your time. I'll follow up by end of week. Have a great day.",
+          "explanation": "Formal, appreciative, and includes a clear next step."
         },
         {
           "type": "quiz_choice",
           "question": "Screening a call for your boss:",
-          "options": ["Who are you?", "May I ask who is calling?", "He's busy.", "What do you want?"],
-          "correct_answer": "May I ask who is calling?",
-          "explanation": "Polite gatekeeping phrase."
+          "options": ["Who are you? What do you want?", "May I ask who is calling and the nature of your call?", "He's busy.", "Why are you calling?"],
+          "correct_answer": "May I ask who is calling and the nature of your call?",
+          "explanation": "Polite gatekeeping. Gathers information without sounding rude."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You're on mute during a conference call and didn't realize it. You:",
+          "options": ["Stay silent.", "Say 'Sorry, I was on mute.'", "Pretend you weren't muted.", "Unmute and scream."],
+          "correct_answer": "Say 'Sorry, I was on mute.'",
+          "explanation": "Own the mistake briefly and move on. Everyone understands this happens."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "The connection keeps dropping. You should:",
+          "options": ["Keep calling back repeatedly.", "Say 'This connection is unstable. May I call you back from my office line?'", "Give up.", "Text instead."],
+          "correct_answer": "Say 'This connection is unstable. May I call you back from my office line?'",
+          "explanation": "Solves the problem professionally while showing respect for the other person's time."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "During a call, you need to cough. You:",
+          "options": ["Cough directly into the phone.", "Mute, cough, unmute.", "Ignore it.", "Leave the call."],
+          "correct_answer": "Mute, cough, unmute.",
+          "explanation": "Protect the other person from noise while staying on the line."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A colleague is interrupting your call constantly. You:",
+          "options": ["Ignore them.", "Put caller on hold, address the colleague, come back.", "Get frustrated.", "End the call."],
+          "correct_answer": "Put caller on hold, address the colleague, come back.",
+          "explanation": "Manages both relationships professionally. Ask caller permission first: 'May I put you on hold one moment?'"
+        },
+        {
+          "type": "quiz_choice",
+          "question": "The caller asks to speak to you but you're the wrong department. You:",
+          "options": ["Hang up.", "Transfer them without context.", "Say 'You've reached Marketing, but your question is for Sales. Let me transfer you now.'", "Tell them to call back."],
+          "correct_answer": "Say 'You've reached Marketing, but your question is for Sales. Let me transfer you now.'",
+          "explanation": "A warm transfer with context (the 'why' for transferring)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Someone calls asking for confidential information about an employee. You:",
+          "options": ["Tell them everything.", "Ask who they are and verify they have authorization.", "Hang up.", "Transfer to random department."],
+          "correct_answer": "Ask who they are and verify they have authorization.",
+          "explanation": "Protect company and employee privacy. Always verify identity and authorization."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You need to reschedule a call with a client. You say:",
+          "options": ["Cancel.", "Can't do today.", "I apologize, but something urgent came up. Would [specific time tomorrow] work better for you?", "I'm busy."],
+          "correct_answer": "I apologize, but something urgent came up. Would [specific time tomorrow] work better for you?",
+          "explanation": "Apologizes, explains, and offers a specific alternative (not vague 'soon')."
         }
       ]
     },
@@ -181,76 +301,106 @@
       "id": "stage-structure",
       "type": "gamified_quiz",
       "title": "Phase 3: Call Flow (Ordering)",
+      "duration": "14 min",
+      "total_questions": 14,
       "questions": [
         {
           "type": "order_sentence",
-          "question": "Answer the phone:",
+          "question": "Answer the phone professionally:",
           "parts": ["Good", "morning,", "Onix", "Systems,", "Sarah", "speaking."],
           "correct_order": ["Good", "morning,", "Onix", "Systems,", "Sarah", "speaking."],
-          "explanation": "Greeting + Company + Name."
+          "explanation": "Greeting + Company + Name. Sets professional tone immediately."
         },
         {
           "type": "order_sentence",
           "question": "Ask to speak to someone:",
           "parts": ["May", "I", "speak", "with", "Mr.", "Jones,", "please?"],
           "correct_order": ["May", "I", "speak", "with", "Mr.", "Jones,", "please?"],
-          "explanation": "Standard polite request."
+          "explanation": "Standard polite request. Use 'may' not 'can'—more formal."
         },
         {
           "type": "order_sentence",
           "question": "Put someone on hold:",
-          "parts": ["Can", "you", "hold", "for", "a", "moment,", "please?"],
-          "correct_order": ["Can", "you", "hold", "for", "a", "moment,", "please?"],
-          "explanation": "Always ask permission."
+          "parts": ["Can", "you", "hold", "for", "a", "moment", "while", "I", "gather", "that", "information?"],
+          "correct_order": ["Can", "you", "hold", "for", "a", "moment", "while", "I", "gather", "that", "information?"],
+          "explanation": "Always ask permission. Give a reason (even brief) so they know what to expect."
         },
         {
           "type": "order_sentence",
           "question": "Take a message:",
-          "parts": ["Would", "you", "like", "to", "leave", "a", "message?"],
-          "correct_order": ["Would", "you", "like", "to", "leave", "a", "message?"],
-          "explanation": "Offering assistance when the target is unavailable."
+          "parts": ["Would", "you", "like", "to", "leave", "a", "message,", "or", "shall", "I", "have", "her", "call", "you", "back?"],
+          "correct_order": ["Would", "you", "like", "to", "leave", "a", "message,", "or", "shall", "I", "have", "her", "call", "you", "back?"],
+          "explanation": "Offering both options gives the caller control."
         },
         {
           "type": "order_sentence",
           "question": "Clarify bad audio:",
-          "parts": ["I", "am", "sorry,", "you", "are", "breaking", "up."],
-          "correct_order": ["I", "am", "sorry,", "you", "are", "breaking", "up."],
-          "explanation": "Identifying technical issues politely."
+          "parts": ["I", "am", "sorry,", "you", "are", "breaking", "up.", "Could", "you", "repeat", "that?"],
+          "correct_order": ["I", "am", "sorry,", "you", "are", "breaking", "up.", "Could", "you", "repeat", "that?"],
+          "explanation": "Identify technical issue politely. Request repetition clearly."
         },
         {
           "type": "order_sentence",
-          "question": "Transfer a call:",
-          "parts": ["I", "am", "transferring", "you", "to", "Accounting", "now."],
-          "correct_order": ["I", "am", "transferring", "you", "to", "Accounting", "now."],
-          "explanation": "Narrating the action so the caller knows what's happening."
+          "question": "Transfer a call warmly:",
+          "parts": ["I", "am", "connecting", "you", "to", "David", "in", "Accounting", "who", "handles", "invoices."],
+          "correct_order": ["I", "am", "connecting", "you", "to", "David", "in", "Accounting", "who", "handles", "invoices."],
+          "explanation": "Warm transfer: Name, Department, and Reason (why David can help)."
         },
         {
           "type": "order_sentence",
-          "question": "End a voicemail:",
-          "parts": ["I", "look", "forward", "to", "hearing", "from", "you."],
-          "correct_order": ["I", "look", "forward", "to", "hearing", "from", "you."],
-          "explanation": "Professional sign-off."
+          "question": "End a voicemail professionally:",
+          "parts": ["I", "look", "forward", "to", "hearing", "from", "you.", "Thank", "you."],
+          "correct_order": ["I", "look", "forward", "to", "hearing", "from", "you.", "Thank", "you."],
+          "explanation": "Positive closing with gratitude."
         },
         {
           "type": "order_sentence",
-          "question": "Check wrong number:",
-          "parts": ["What", "number", "were", "you", "trying", "to", "reach?"],
-          "correct_order": ["What", "number", "were", "you", "trying", "to", "reach?"],
-          "explanation": "Verifying before disconnecting."
+          "question": "Verify wrong number politely:",
+          "parts": ["What", "number", "were", "you", "trying", "to", "reach?", "Let", "me", "confirm."],
+          "correct_order": ["What", "number", "were", "you", "trying", "to", "reach?", "Let", "me", "confirm."],
+          "explanation": "Verification before disconnecting prevents repeated wrong numbers."
         },
         {
           "type": "order_sentence",
-          "question": "Return a call:",
-          "parts": ["I", "am", "returning", "your", "call", "from", "yesterday."],
-          "correct_order": ["I", "am", "returning", "your", "call", "from", "yesterday."],
-          "explanation": "Establishing context immediately."
+          "question": "Return a call with context:",
+          "parts": ["Hi,", "it's", "Sarah", "from", "Onix.", "I'm", "returning", "your", "call", "from", "yesterday."],
+          "correct_order": ["Hi,", "it's", "Sarah", "from", "Onix.", "I'm", "returning", "your", "call", "from", "yesterday."],
+          "explanation": "Establishes context immediately. Name + Company + Purpose."
         },
         {
           "type": "order_sentence",
-          "question": "Handle unavailability:",
-          "parts": ["He", "is", "in", "a", "meeting", "at", "the", "moment."],
-          "correct_order": ["He", "is", "in", "a", "meeting", "at", "the", "moment."],
-          "explanation": "Standard reason for unavailability."
+          "question": "Explain unavailability professionally:",
+          "parts": ["He", "is", "currently", "in", "a", "meeting.", "May", "I", "take", "a", "message?"],
+          "correct_order": ["He", "is", "currently", "in", "a", "meeting.", "May", "I", "take", "a", "message?"],
+          "explanation": "Standard reason. Offers alternative action."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Join a conference call late:",
+          "parts": ["Good", "morning,", "it's", "Sarah", "joining", "from", "the", "SLP", "office."],
+          "correct_order": ["Good", "morning,", "it's", "Sarah", "joining", "from", "the", "SLP", "office."],
+          "explanation": "Announce yourself, location. Helps host track participants."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Summarize a call:",
+          "parts": ["To", "recap,", "you'll", "send", "the", "proposal", "by", "Friday,", "and", "I'll", "review", "it."],
+          "correct_order": ["To", "recap,", "you'll", "send", "the", "proposal", "by", "Friday,", "and", "I'll", "review", "it."],
+          "explanation": "Recap confirms understanding. Use 'you'll' and 'I'll' for clarity."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Set next steps clearly:",
+          "parts": ["Let's", "touch", "base", "Monday", "at", "10", "AM.", "Does", "that", "work?"],
+          "correct_order": ["Let's", "touch", "base", "Monday", "at", "10", "AM.", "Does", "that", "work?"],
+          "explanation": "Specific day + time + confirmation question = accountability."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Host introduces conference call:",
+          "parts": ["Good", "morning", "everyone.", "This", "is", "the", "Q4", "planning", "call.", "We", "have", "Marketing,", "Sales,", "and", "Engineering", "today."],
+          "correct_order": ["Good", "morning", "everyone.", "This", "is", "the", "Q4", "planning", "call.", "We", "have", "Marketing,", "Sales,", "and", "Engineering", "today."],
+          "explanation": "Host sets context and introduces all departments participating."
         }
       ]
     },
@@ -258,36 +408,38 @@
       "id": "stage-vocab",
       "type": "gamified_quiz",
       "title": "Phase 4: Telephony Vocabulary (Input)",
+      "duration": "12 min",
+      "total_questions": 18,
       "questions": [
         {
           "type": "fill_input",
-          "question": "Please ______ (wait) the line.",
+          "question": "Please ______ (wait) the line while I gather the information.",
           "correct_answers": ["hold", "Hold"],
-          "explanation": "Hold the line."
+          "explanation": "Hold the line is standard phrasing."
         },
         {
           "type": "fill_input",
           "question": "I will put you ______ (speakerphone) so the team can hear.",
           "correct_answers": ["on speaker", "On speaker"],
-          "explanation": "Using the loudspeaker."
+          "explanation": "On speaker = using the loudspeaker function."
         },
         {
           "type": "fill_input",
-          "question": "We got ______ (disconnected) off.",
-          "correct_answers": ["cut", "Cut"],
-          "explanation": "Cut off means the call dropped."
+          "question": "We got ______ (disconnected) during the call.",
+          "correct_answers": ["cut off", "Cut off"],
+          "explanation": "Cut off = sudden disconnection."
         },
         {
           "type": "fill_input",
-          "question": "I need to ______ (call someone else) a number.",
+          "question": "I need to ______ (call/enter) a number to reach the extension.",
           "correct_answers": ["dial", "Dial"],
-          "explanation": "Dialing is the act of entering the number."
+          "explanation": "Dialing = entering the phone number."
         },
         {
           "type": "fill_input",
-          "question": "His line is ______ (occupied).",
+          "question": "His line is ______ (occupied/unavailable).",
           "correct_answers": ["busy", "Busy", "engaged"],
-          "explanation": "Engaged/Busy tone."
+          "explanation": "Busy/Engaged tone indicates the line is in use."
         },
         {
           "type": "fill_input",
@@ -297,102 +449,404 @@
         },
         {
           "type": "fill_input",
-          "question": "I will ______ (send) your call to Sales.",
+          "question": "I will ______ (send/move) your call to the Sales department.",
           "correct_answers": ["transfer", "Transfer", "direct"],
-          "explanation": "Moving the call to another extension."
+          "explanation": "Transfer/Direct = moving the call to another extension or person."
         },
         {
           "type": "fill_input",
-          "question": "What is your ______ (internal number) number?",
+          "question": "What is your ______ (internal code) number?",
           "correct_answers": ["extension", "Extension"],
-          "explanation": "Short internal code (e.g., x204)."
+          "explanation": "Extension = short internal code (e.g., x204 or ext. 5042)."
         },
         {
           "type": "fill_input",
-          "question": "Sorry, I was on ______ (silent mode).",
+          "question": "Sorry, I was on ______ (silent mode) and didn't hear you.",
           "correct_answers": ["mute", "Mute"],
-          "explanation": "Common conference call error."
+          "explanation": "Mute = silencing your microphone."
         },
         {
           "type": "fill_input",
-          "question": "Thanks for ______ (contacting) out.",
+          "question": "Thanks for ______ (contacting) out. Let's connect soon.",
           "correct_answers": ["reaching", "Reaching"],
           "explanation": "Reaching out is a modern synonym for calling/contacting."
+        },
+        {
+          "type": "fill_input",
+          "question": "I ______ (ended/severed) the connection accidentally.",
+          "correct_answers": ["dropped", "Dropped"],
+          "explanation": "Dropped the call = accidental disconnection."
+        },
+        {
+          "type": "fill_input",
+          "question": "Please ______ (leave a message on the phone system).",
+          "correct_answers": ["record", "Record", "leave a voicemail"],
+          "explanation": "Recording a message for later playback."
+        },
+        {
+          "type": "fill_input",
+          "question": "I couldn't reach him. His phone went straight to ______ (automated message system).",
+          "correct_answers": ["voicemail", "message"],
+          "explanation": "Voicemail = system for recording messages when recipient unavailable."
+        },
+        {
+          "type": "fill_input",
+          "question": "Let's ______ (use telephone) in the morning to discuss details.",
+          "correct_answers": ["call", "Call", "touch base"],
+          "explanation": "Call/Touch base are common for scheduling phone meetings."
+        },
+        {
+          "type": "fill_input",
+          "question": "Can I ______ (use video and audio) for our meeting?",
+          "correct_answers": ["video call", "Video call", "call"],
+          "explanation": "Video call combines audio and video communication."
+        },
+        {
+          "type": "fill_input",
+          "question": "I need to ______ (ring) her back.",
+          "correct_answers": ["call", "Call"],
+          "explanation": "Ring back = returning a phone call."
+        },
+        {
+          "type": "fill_input",
+          "question": "The ______ (phone prefix code) for international is +52 for Mexico.",
+          "correct_answers": ["country code", "Country code"],
+          "explanation": "Country code (+52) precedes the area code for international calls."
+        },
+        {
+          "type": "fill_input",
+          "question": "I'm using a ______ (device for calling) to reach you.",
+          "correct_answers": ["landline", "Landline", "mobile", "cell phone"],
+          "explanation": "Landline = office/home phone; Mobile/Cell = portable phone."
         }
       ]
     },
     {
       "id": "stage-mastery",
       "type": "quiz",
-      "title": "Phase 5: Advanced Comms",
+      "title": "Phase 5: Advanced Communication",
+      "duration": "14 min",
+      "total_questions": 18,
       "questions": [
         {
           "type": "quiz_choice",
           "question": "What is 'Phone Tag'?",
-          "options": ["A game.", "A series of missed calls between two people.", "Labeling a phone.", "Texting."],
+          "options": ["A game played on the phone.", "A series of missed calls between two people.", "Labeling a phone with tags.", "Texting back and forth."],
           "correct_answer": "A series of missed calls between two people.",
-          "explanation": "A frustrating cycle of voicemails."
+          "explanation": "A frustrating cycle where both parties keep missing each other. Best avoided by scheduling specific times."
         },
         {
           "type": "fill_input",
-          "question": "Let's schedule a ______ call (video/audio remote meeting).",
-          "correct_answers": ["conference", "Conference", "conf"],
-          "explanation": "Conference call allows multiple participants."
+          "question": "Let's schedule a ______ call to discuss with the whole team.",
+          "correct_answers": ["conference", "Conference", "team"],
+          "explanation": "Conference call = phone meeting with multiple participants."
         },
         {
           "type": "order_sentence",
-          "question": "Ask for repetition:",
-          "parts": ["Could", "you", "please", "repeat", "that", "last", "point?"],
-          "correct_order": ["Could", "you", "please", "repeat", "that", "last", "point?"],
-          "explanation": "Polite request for clarity."
+          "question": "Ask for repetition professionally:",
+          "parts": ["Could", "you", "please", "repeat", "that", "last", "point?", "I", "want", "to", "make", "sure", "I", "understood."],
+          "correct_order": ["Could", "you", "please", "repeat", "that", "last", "point?", "I", "want", "to", "make", "sure", "I", "understood."],
+          "explanation": "Shows you're paying attention and confirms accuracy."
         },
         {
           "type": "quiz_choice",
-          "question": "You are leading a call. You must:",
-          "options": ["Wait silently.", "Take charge, introduce everyone, and manage the agenda.", "Let people talk randomly.", "Sing."],
-          "correct_answer": "Take charge, introduce everyone, and manage the agenda.",
-          "explanation": "The host controls the flow."
+          "question": "You are leading a conference call. Your role is to:",
+          "options": ["Stay silent and let chaos happen.", "Take charge, introduce everyone, manage the agenda, and set clear action items.", "Let people talk randomly and interrupt each other.", "Sing."],
+          "correct_answer": "Take charge, introduce everyone, manage the agenda, and set clear action items.",
+          "explanation": "The host controls the flow. Without leadership, calls become unproductive."
         },
         {
           "type": "listening_match",
-          "question": "Listen. Is the speaker checking understanding?",
-          "tts_text": "Does that make sense so far?",
+          "question": "Listen. Is the speaker checking for understanding?",
+          "tts_text": "Does that make sense so far? Any questions?",
           "options": ["Yes", "No"],
           "correct_answer": "Yes",
-          "explanation": "Standard check-in phrase."
+          "explanation": "Standard check-in phrase ensuring comprehension and engagement."
         },
         {
           "type": "fill_input",
-          "question": "I will ______ (give a summary) the main points in an email.",
+          "question": "I will ______ (summarize/give summary of) the main points in an email.",
           "correct_answers": ["recap", "Recap", "summarize"],
-          "explanation": "Recap is short for recapitulate."
+          "explanation": "Recap = recapitulate = summarize key points after the call."
         },
         {
           "type": "order_sentence",
-          "question": "Verify speaker identity:",
-          "parts": ["Who", "am", "I", "speaking", "with,", "please?"],
-          "correct_order": ["Who", "am", "I", "speaking", "with,", "please?"],
-          "explanation": "Polite identity check."
+          "question": "Verify speaker identity professionally:",
+          "parts": ["To", "confirm,", "who", "am", "I", "speaking", "with,", "please?"],
+          "correct_order": ["To", "confirm,", "who", "am", "I", "speaking", "with,", "please?"],
+          "explanation": "Polite identity check. Can add: 'What company are you calling from?'"
         },
         {
           "type": "quiz_choice",
           "question": "What is a 'Cold Call'?",
-          "options": ["Calling when it's freezing.", "Unsolicited call to a potential customer.", "A calm call.", "A boring call."],
-          "correct_answer": "Unsolicited call to a potential customer.",
-          "explanation": "Sales term for calling without prior contact."
+          "options": ["Calling when it's freezing outside.", "An unsolicited call to a potential customer.", "A call from someone calm.", "A boring conversation."],
+          "correct_answer": "An unsolicited call to a potential customer.",
+          "explanation": "Sales term for calling without prior relationship. Requires strong opening and value proposition."
         },
         {
           "type": "fill_input",
-          "question": "The battery is ______ (no power).",
+          "question": "My phone battery is ______ (completely empty).",
           "correct_answers": ["dead", "Dead", "flat"],
-          "explanation": "Reason for mobile disconnection."
+          "explanation": "Reason for mobile disconnection—common, acceptable excuse."
         },
         {
           "type": "quiz_choice",
-          "question": "You need to finish the call. You say:",
-          "options": ["Bye.", "I have to run to another meeting. Let's speak soon.", "Stop talking.", "I'm done."],
-          "correct_answer": "I have to run to another meeting. Let's speak soon.",
-          "explanation": "Professional exit strategy."
+          "question": "You need to finish a call professionally. You say:",
+          "options": ["Bye.", "I have to run to another meeting. I'll send the summary by end of day. Let's connect next Monday.", "Stop talking.", "I'm done."],
+          "correct_answer": "I have to run to another meeting. I'll send the summary by end of day. Let's connect next Monday.",
+          "explanation": "Professional exit strategy: Reason + Follow-up + Next Steps."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Active Listening' on a phone call?",
+          "options": ["Just hearing the words.", "Fully concentrating, understanding, and responding thoughtfully.", "Pretending to listen.", "Writing emails while someone talks."],
+          "correct_answer": "Fully concentrating, understanding, and responding thoughtfully.",
+          "explanation": "Active listeners ask questions, take notes, and confirm understanding."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the speaker practicing active listening?",
+          "tts_text": "That's interesting. So if I understand correctly, you're concerned about the timeline. Is that right?",
+          "options": ["Yes", "No"],
+          "correct_answer": "Yes",
+          "explanation": "Paraphrasing and confirming shows genuine engagement."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Elevator Pitch' for phone calls?",
+          "options": ["A pitch for an elevator company.", "A 30-second summary of who you are and why you're calling.", "A long, detailed explanation.", "A pitch in an elevator."],
+          "correct_answer": "A 30-second summary of who you are and why you're calling.",
+          "explanation": "Quick, compelling summary for initial contact or cold calls."
+        },
+        {
+          "type": "fill_input",
+          "question": "I need to ______ (make known/communicate) this issue to management.",
+          "correct_answers": ["escalate", "Escalate", "surface"],
+          "explanation": "Escalate = move urgent issues up the hierarchy."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Confirm next actions clearly:",
+          "parts": ["To", "summarize:", "you'll", "send", "the", "proposal", "by", "Friday", "EOD,", "and", "I'll", "review", "over", "the", "weekend."],
+          "correct_order": ["To", "summarize:", "you'll", "send", "the", "proposal", "by", "Friday", "EOD,", "and", "I'll", "review", "over", "the", "weekend."],
+          "explanation": "EOD = End of Day. Clear timeline + responsibilities = accountability."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A caller becomes inappropriate. You:",
+          "options": ["Curse back.", "Politely say 'I don't feel comfortable continuing this call' and disconnect.", "Stay on forever.", "Tell everyone."],
+          "correct_answer": "Politely say 'I don't feel comfortable continuing this call' and disconnect.",
+          "explanation": "You have the right to end unprofessional calls. Protect yourself and your company."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does 'DND' mean in telephony?",
+          "options": ["Do Not Disturb—a setting to block incoming calls.", "Do Not Dial.", "Do Not Download.", "Day and Night."],
+          "correct_answer": "Do Not Disturb—a setting to block incoming calls.",
+          "explanation": "Enables focus time on meetings or work without interruptions."
+        }
+      ]
+    },
+    {
+      "id": "stage-conversation",
+      "type": "quiz",
+      "title": "Phase 6: Real-World Application",
+      "duration": "15 min",
+      "total_questions": 14,
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "First time calling a prospect you found on LinkedIn. Best approach:",
+          "options": ["Don't introduce yourself.", "Hi, are you there? I'm selling stuff.", "Hi [Name], I'm [Your Name] from [Company]. I came across your profile and thought we could discuss [specific value]. Do you have 2 minutes?", "Just leave a voicemail."],
+          "correct_answer": "Hi [Name], I'm [Your Name] from [Company]. I came across your profile and thought we could discuss [specific value]. Do you have 2 minutes?",
+          "explanation": "Personalization + Name + Company + Value Proposition + Permission for time."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your boss calls you on your mobile while you're in a client meeting. You:",
+          "options": ["Answer immediately.", "Let it go to voicemail, then call back during a break.", "Scream.", "Ignore forever."],
+          "correct_answer": "Let it go to voicemail, then call back during a break.",
+          "explanation": "Respect both parties' time. Return the call soon but don't interrupt the client."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this an effective opening for a sales call?",
+          "tts_text": "Hi, I noticed you were searching for inventory management solutions. We specialize in that. Can we chat for 5 minutes about your current process?",
+          "options": ["Effective", "Ineffective"],
+          "correct_answer": "Effective",
+          "explanation": "Shows research, identifies pain point, asks permission. All essentials covered."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "During a difficult call, the client says 'I'm very unhappy.' You respond:",
+          "options": ["Too bad.", "That's not my problem.", "I hear your frustration. Let me understand what happened so we can fix it together.", "I'll call you back."],
+          "correct_answer": "I hear your frustration. Let me understand what happened so we can fix it together.",
+          "explanation": "Empathy + Problem-solving = relationship preservation."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Handle a difficult customer on the phone:",
+          "parts": ["I", "understand", "this", "is", "frustrating.", "Here's", "what", "I", "can", "do:", "I", "will", "personally", "follow", "up", "tomorrow", "with", "a", "solution."],
+          "correct_order": ["I", "understand", "this", "is", "frustrating.", "Here's", "what", "I", "can", "do:", "I", "will", "personally", "follow", "up", "tomorrow", "with", "a", "solution."],
+          "explanation": "Validate + Action + Commitment = de-escalation."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A colleague's phone call is getting heated. The best action is:",
+          "options": ["Let them handle it.", "Quietly get their attention and offer support.", "Jump in and yell.", "Record it."],
+          "correct_answer": "Quietly get their attention and offer support.",
+          "explanation": "Show solidarity without derailing the conversation."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this person prepared for a negotiation call?",
+          "tts_text": "Our minimum contract is $50K annually, with quarterly reviews. Based on your needs, I'd recommend the Pro tier at $60K, which includes dedicated support.",
+          "options": ["Yes", "No"],
+          "correct_answer": "Yes",
+          "explanation": "Knows pricing, understands customer needs, offers tiered options. Professional."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You realize you've been giving the caller wrong information. You:",
+          "options": ["Keep lying.", "Act confused.", "I apologize—I misspoke. The correct information is [X]. Thank you for catching that.", "Hang up."],
+          "correct_answer": "I apologize—I misspoke. The correct information is [X]. Thank you for catching that.",
+          "explanation": "Own the mistake, correct it, and appreciate the catch. Builds trust."
+        },
+        {
+          "type": "fill_input",
+          "question": "At the end of a phone interview for a job, you should say: 'When can I expect to ______ (hear back) from you?'",
+          "correct_answers": ["hear", "Hear"],
+          "explanation": "Standard closing question for interview calls."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your company's voicemail greeting should:",
+          "options": ["Be boring and generic.", "Include company name, greeting, and instruction to leave a message.", "Be a funny song.", "Be incomplete."],
+          "correct_answer": "Include company name, greeting, and instruction to leave a message.",
+          "explanation": "Professional standard: Company + Greeting + Instruction + Callback time estimate."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this an acceptable voicemail?",
+          "tts_text": "Hi, this is Sarah Chen at Onix Systems. I'm unavailable until Thursday. Please leave your name, number, and the best time to reach you, and I'll call you back within 24 hours. Thank you.",
+          "options": ["Acceptable", "Not acceptable"],
+          "correct_answer": "Acceptable",
+          "explanation": "Name + Company + Return timeframe + Clear instructions = professional."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "When joining a video call where you're audio-only, you should:",
+          "options": ["Stay silent.", "Introduce yourself: 'This is [Name] from [Department], audio only today.'", "Don't join.", "Pretend to be on video."],
+          "correct_answer": "Introduce yourself: 'This is [Name] from [Department], audio only today.'",
+          "explanation": "Transparency helps host track participants and manage the call."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Post-call best practice:",
+          "options": ["Do nothing.", "Send an email summarizing key points, action items, and next steps within 1 hour.", "Wait a week.", "Call again immediately."],
+          "correct_answer": "Send an email summarizing key points, action items, and next steps within 1 hour.",
+          "explanation": "Reinforces the call, creates accountability, prevents misunderstandings."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Handle scheduling a callback:",
+          "parts": ["What", "is", "the", "best", "time", "and", "number", "to", "reach", "you?"],
+          "correct_order": ["What", "is", "the", "best", "time", "and", "number", "to", "reach", "you?"],
+          "explanation": "Open-ended question captures both time and contact preference."
+        }
+      ]
+    },
+    {
+      "id": "stage-challenge",
+      "type": "quiz",
+      "title": "Phase 7: Expert Challenge",
+      "duration": "12 min",
+      "total_questions": 12,
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Call Screening'?",
+          "options": ["Watching a movie on the phone.", "Filtering incoming calls based on criteria.", "Testing phone quality.", "Ignoring all calls."],
+          "correct_answer": "Filtering incoming calls based on criteria.",
+          "explanation": "Executive assistants screen calls to prioritize urgent matters."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Does this speaker understand urgency?",
+          "tts_text": "This isn't urgent, but when you get a chance, can we discuss the timeline?",
+          "options": ["Yes", "No"],
+          "correct_answer": "Yes",
+          "explanation": "Framing allows the recipient to prioritize. Shows respect for their time."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Call Recording Consent'?",
+          "options": ["Recording without permission.", "Asking permission before recording a call.", "A type of phone plan.", "Deleting recordings."],
+          "correct_answer": "Asking permission before recording a call.",
+          "explanation": "Legal requirement in many jurisdictions. Always ask: 'May I record this call for quality and training purposes?'"
+        },
+        {
+          "type": "fill_input",
+          "question": "In a difficult negotiation, you should avoid ______ (making emotional decisions) and stay focused.",
+          "correct_answers": ["reacting", "Reacting"],
+          "explanation": "Pause before responding. Take a breath. Stay professional."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Call Coaching'?",
+          "options": ["Teaching someone how to coach on the phone.", "Guidance to improve phone communication skills.", "A sports technique.", "Hanging up when nervous."],
+          "correct_answer": "Guidance to improve phone communication skills.",
+          "explanation": "Common in sales and customer service to improve performance."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. What tone is the speaker conveying?",
+          "tts_text": "I really appreciate your patience with this process. Your commitment to the project is invaluable.",
+          "options": ["Dismissive", "Appreciative/Genuine"],
+          "correct_answer": "Appreciative/Genuine",
+          "explanation": "Warm tone + specific appreciation = builds relationship."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Dead Air' on a phone call?",
+          "options": ["No oxygen.", "Extended silence that feels uncomfortable.", "A music station.", "Hanging up."],
+          "correct_answer": "Extended silence that feels uncomfortable.",
+          "explanation": "Prevents dead air by: 'Let me pull that up for you,' or 'One moment please.'"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Handle an international call professionally:",
+          "parts": ["Hello,", "this", "is", "[Name]", "from", "[City,", "Country].", "Can", "you", "hear", "me", "clearly?"],
+          "correct_order": ["Hello,", "this", "is", "[Name]", "from", "[City,", "Country].", "Can", "you", "hear", "me", "clearly?"],
+          "explanation": "Location context + clarity check. Time zones and audio quality are often issues."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What separates amateur from professional phone communication?",
+          "options": ["Speaking fast.", "Preparation, active listening, and clarity of purpose.", "Yelling.", "Hanging up quickly."],
+          "correct_answer": "Preparation, active listening, and clarity of purpose.",
+          "explanation": "Professionals: Prepare notes. Listen without interrupting. State purpose upfront."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this an executive-level phone style?",
+          "tts_text": "I've reviewed your proposal. Here are three concerns we should address: cost, timeline, and support. What's your take on each?",
+          "options": ["Yes", "No"],
+          "correct_answer": "Yes",
+          "explanation": "Concise, agenda-focused, collaborative. No rambling. Clear structure."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "When should you use a phone call vs. email?",
+          "options": ["Always phone.", "Always email.", "Phone: Urgent/Complex/Relationship. Email: Documentation/Follow-up.", "Randomly."],
+          "correct_answer": "Phone: Urgent/Complex/Relationship. Email: Documentation/Follow-up.",
+          "explanation": "Strategic channel choice saves time and improves outcomes."
+        },
+        {
+          "type": "fill_input",
+          "question": "The phrase 'I will ______ (contact you soon)' shows professionalism without vagueness.",
+          "correct_answers": ["follow up", "Follow up", "reach out"],
+          "explanation": "Always pair with specific timeframe: 'I'll follow up by Friday.'"
         }
       ]
     }

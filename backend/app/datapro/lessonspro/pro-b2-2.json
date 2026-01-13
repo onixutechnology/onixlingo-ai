@@ -1,75 +1,787 @@
 {
-    "id": "pro-b2-2",
-    "title": "Negotiation Fundamentals",
-    "stages": [
+  "id": "pro-b2-2",
+  "title": "Negotiation Fundamentals",
+  "description": "Master strategic negotiation, win-win deal-making, and high-stakes business agreements with executive-level tactics",
+  "difficulty": "B2",
+  "stages": [
+    {
+      "id": "stage-intro",
+      "type": "theory",
+      "title": "Strategic Concept: Negotiation Fundamentals with Executive Authority",
+      "duration": "6 min",
+      "parts": [
         {
-            "id": "stage-1",
-            "type": "theory",
-            "title": "Strategic Concept: Negotiation Fundamentals",
-            "parts": [
-                {
-                    "visual": "Welcome to the B2 executive module: Negotiation Fundamentals.\n\nIn this session, we analyze the critical vocabulary required to navigate this scenario with authority.\n\nKey Principle:\nTrue professionals don't just communicate information; they communicate *intent*.\n\nObserve the nuance in the following exercises.",
-                    "audio": "Welcome to the B2 executive module: Negotiation Fundamentals. Let's master this topic."
-                }
-            ]
-        },
-        {
-            "id": "stage-2",
-            "type": "quiz",
-            "title": "Executive Comprehension",
-            "questions": [
-                {
-                    "type": "quiz_choice",
-                    "question": "Which is the most professional approach regarding 'Negotiation Fundamentals'?",
-                    "options": [
-                        "Use casual slang to seem friendly.",
-                        "Prioritize clarity, brevity, and formal tone.",
-                        "Avoid eye contact and speak softly.",
-                        "Use overly complex words to sound smart."
-                    ],
-                    "correct_answer": "Prioritize clarity, brevity, and formal tone.",
-                    "explanation": "Executive presence is built on clear and concise communication, not complexity."
-                }
-            ]
-        },
-        {
-            "id": "stage-3",
-            "type": "gamified_quiz",
-            "title": "Structure & Syntax Drill",
-            "questions": [
-                {
-                    "type": "order_sentence",
-                    "question": "Arrange the standard corporate phrase:",
-                    "parts": [
-                        "We",
-                        "need",
-                        "to",
-                        "leverage",
-                        "our",
-                        "core",
-                        "competencies."
-                    ],
-                    "correct_order": [
-                        "We",
-                        "need",
-                        "to",
-                        "leverage",
-                        "our",
-                        "core",
-                        "competencies."
-                    ],
-                    "explanation": "'Leveraging competencies' is standard business English for using your strengths."
-                },
-                {
-                    "type": "fill_input",
-                    "question": "Complete the term: Return on ______ (ROI).",
-                    "correct_answers": [
-                        "Investment",
-                        "investment"
-                    ],
-                    "explanation": "ROI stands for Return On Investment."
-                }
-            ]
+          "visual": "Welcome to the **B2 Executive Module**: Negotiation Fundamentals.\n\nYou have mastered B1 communication skills. Now, you step into the **strategic negotiation tier**.\n\n**The Shift from B1 to B2:**\n- **B1**: How to communicate clearly in professional settings\n- **B2**: How to negotiate strategically, create value, and close deals with mutual benefit\n\n**Key Principle:**\nTrue executives don't just *talk*; they **create value before, during, and after the negotiation**.\n\nIn B2 Negotiation, every position serves a purpose:\n- **Preparation** determines 80% of negotiation outcomes\n- **BATNA** (Best Alternative to Negotiated Agreement) is your power\n- **Interests** matter more than positions\n- **Silence** is a powerful tool\n- **Win-win** is a strategy, not sentiment\n\n**The Negotiation Mindset:**\n\nWeak Approach: \"I want $100K. What do you offer?\"\nStrong Approach: \"Based on market rates, ROI analysis, and timeline, my range is $95K-$110K. Where do you see the fair value?\"\n\nThe second version:\n- Shows preparation (market data)\n- Establishes anchoring (your number first)\n- Invites their input (collaborative frame)\n- Provides flexibility ($15K range)\n\n**The 5 Core Negotiation Principles:**\n\n1. **Preparation** - Know your BATNA, their BATNA, your walk-away point, their pain points\n2. **Information Asymmetry** - Whoever has more/better information wins\n3. **Anchoring** - The first number sets the negotiation range (be first)\n4. **Interests over Positions** - They say \"$80K\"; you ask \"Why is budget a constraint?\"\n5. **Silence** - After your offer, stay silent. Whoever talks first loses.\n\n**Common Negotiation Traps to Avoid:**\n- ❌ Revealing your BATNA\n- ❌ Accepting their first offer\n- ❌ Negotiating against yourself\n- ❌ Splitting the difference (lazy negotiation)\n- ❌ Emotional reactions\n- ❌ Forgetting the relationship matters",
+          "audio": "Welcome to B2 Negotiation. In this module, you learn that negotiation is not a zero-sum game. It's about creating value, understanding interests, and structuring deals where both sides win. Preparation determines outcomes. Let's master this."
         }
-    ]
+      ]
+    },
+    {
+      "id": "stage-listening",
+      "type": "quiz",
+      "title": "Phase 1: Auditory Analysis - Negotiation Tactics (Listening)",
+      "duration": "15 min",
+      "total_questions": 24,
+      "questions": [
+        {
+          "type": "listening_match",
+          "question": "Listen. Who has more power in this negotiation?",
+          "tts_text": "We can go with you, but we have three other options we're evaluating.",
+          "options": ["You (seller)", "Them (buyer)"],
+          "correct_answer": "Them (buyer)",
+          "explanation": "Having alternatives = power. They can walk away. You have weaker BATNA."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the anchoring tactic:",
+          "tts_text": "Based on market rates, this role typically pays $150K-$170K. Where do you see the fair value?",
+          "options": ["No anchor", "Anchors high with market data"],
+          "correct_answer": "Anchors high with market data",
+          "explanation": "Anchoring first (with data) sets the negotiation range in your favor."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Are they revealing their BATNA?",
+          "tts_text": "If we don't close a deal with you, we have to go with our current vendor and lose 2 months.",
+          "options": ["Yes, revealing weakness", "No, protecting leverage"],
+          "correct_answer": "Yes, revealing weakness",
+          "explanation": "Revealing their walk-away point gives you negotiating power. They just told you they are desperate."
+        },
+        {
+          "type": "listening_match",
+          "question": "What is the speaker doing here?",
+          "tts_text": "I can offer $85K, but I need to understand your constraints first. What is driving your budget?",
+          "options": ["Making an offer", "Probing interests before committing"],
+          "correct_answer": "Probing interests before committing",
+          "explanation": "Smart negotiators understand interests (why) before anchoring (what)."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this a take-it-or-leave-it offer?",
+          "tts_text": "This is our final offer. We can't go higher.",
+          "options": ["Flexible", "Hard line/ultimatum"],
+          "correct_answer": "Hard line/ultimatum",
+          "explanation": "Ultimatums often signal they are truly maxed out OR bluffing. Silence after this reveals the truth."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the move:",
+          "tts_text": "We can offer the service at $100K if you commit to a 3-year contract.",
+          "options": ["Single-variable negotiation", "Multi-variable bundling"],
+          "correct_answer": "Multi-variable bundling",
+          "explanation": "Bundling creates options: lower price for longer commitment. Win-win structure."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Are they interested in win-win?",
+          "tts_text": "I want a deal that works for both of us. If you hit your margin target, I hit my growth target.",
+          "options": ["Zero-sum thinking", "Win-win thinking"],
+          "correct_answer": "Win-win thinking",
+          "explanation": "Framing the negotiation as mutual success = collaborative tone."
+        },
+        {
+          "type": "listening_match",
+          "question": "What is the negotiation style?",
+          "tts_text": "You're asking too much. That's not realistic.",
+          "options": ["Collaborative", "Aggressive/dismissive"],
+          "correct_answer": "Aggressive/dismissive",
+          "explanation": "Dismissing your position without counter-proposal = aggressive stance. Professional response: 'I understand. Let me explain the value proposition.'"
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Are they creating urgency?",
+          "tts_text": "I have another offer coming in Friday. If we don't close by Thursday, I have to take it.",
+          "options": ["No time pressure", "Creating artificial deadline"],
+          "correct_answer": "Creating artificial deadline",
+          "explanation": "Artificial urgency is a negotiation tactic. Call it out: 'I appreciate the timeline. Let me see if we can accelerate.'"
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the concession structure:",
+          "tts_text": "I can move from $150K to $140K. Can you move on timeline?",
+          "options": ["One-way concession", "Mutual concessions (trading)"],
+          "correct_answer": "Mutual concessions (trading)",
+          "explanation": "Trading concessions (I give on X, you give on Y) = professional negotiation."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the speaker using scarcity?",
+          "tts_text": "We only have two implementation slots available this year. If you want Q1, you need to decide this week.",
+          "options": ["No scarcity", "Using scarcity to drive decision"],
+          "correct_answer": "Using scarcity to drive decision",
+          "explanation": "Limited availability = legitimately increases your negotiating position."
+        },
+        {
+          "type": "listening_match",
+          "question": "What does the silence after the offer signal?",
+          "tts_text": "[Long pause after: 'Our final offer is $95K.']",
+          "options": ["Weakness", "Strength/confidence in the offer"],
+          "correct_answer": "Strength/confidence in the offer",
+          "explanation": "Silence after an offer signals confidence and invites them to respond. Whoever breaks the silence first often concedes."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Are they revealing their true constraint?",
+          "tts_text": "We would love to pay more, but our board approved only $80K for this hire.",
+          "options": ["Genuine constraint", "Negotiation tactic"],
+          "correct_answer": "Genuine constraint",
+          "explanation": "Board approval is often a real constraint. You may need to go higher in the organization to move the number."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the anchor poison:",
+          "tts_text": "I was thinking $200K, but I know that's too high, so I'll start at $150K.",
+          "options": ["Effective anchor", "Weak anchor (self-deprecating)"],
+          "correct_answer": "Weak anchor (self-deprecating)",
+          "explanation": "By dismissing your own anchor, you reduce its power. Anchor confidently: 'Based on market rates and my background, $150K is fair.'"
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Are they negotiating in good faith?",
+          "tts_text": "We'll honor whatever we agree to. I want to make sure we both feel good about this.",
+          "options": ["Good faith/trustworthy", "Posturing"],
+          "correct_answer": "Good faith/trustworthy",
+          "explanation": "Commitment to honoring agreements + mutual satisfaction = good faith negotiation."
+        },
+        {
+          "type": "listening_match",
+          "question": "What is the negotiation phase?",
+          "tts_text": "Before we talk numbers, help me understand your priorities. Is it timeline, cost, or scope?",
+          "options": ["Final offer phase", "Information gathering phase"],
+          "correct_answer": "Information gathering phase",
+          "explanation": "Understanding priorities before numbers = smarter negotiation. You can trade on low-priority items."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Are they anchoring or exploring?",
+          "tts_text": "I've seen similar deals range from $100K to $200K depending on scope. Where do you think this fits?",
+          "options": ["Hard anchor", "Collaborative range-setting"],
+          "correct_answer": "Collaborative range-setting",
+          "explanation": "Giving a range vs. a single number = more collaborative. It invites their input on where you fit."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the emotional tactic:",
+          "tts_text": "We've been waiting for your response for 2 weeks. This is frustrating.",
+          "options": ["Fact-based pressure", "Emotional manipulation"],
+          "correct_answer": "Emotional manipulation",
+          "explanation": "Guilt/frustration tactics are emotional, not data-driven. Respond professionally: 'I understand the urgency. Let me move this forward.'"
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Are they protecting their walk-away point?",
+          "tts_text": "I can't go below $80K on this. That's my minimum.",
+          "options": ["Revealing walk-away (weakness)", "Protecting walk-away (strength)"],
+          "correct_answer": "Protecting walk-away (strength)",
+          "explanation": "Setting a clear floor = you know where negotiations end. You can work within that boundary."
+        },
+        {
+          "type": "listening_match",
+          "question": "What is the speaker signaling?",
+          "tts_text": "If you move on price, I can move on payment terms. Three monthly installments instead of one lump sum.",
+          "options": ["Refusing to negotiate", "Creating trading blocks"],
+          "correct_answer": "Creating trading blocks",
+          "explanation": "Identifying what you value (cash flow) vs. them (lower price) = smarter deal structure."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this a real or fake ultimatum?",
+          "tts_text": "This is our final offer. We're walking away if you don't accept by Friday.",
+          "options": ["Real (unlikely to budge)", "Fake (might continue negotiating)"],
+          "correct_answer": "Real (unlikely to budge)",
+          "explanation": "Adding a specific deadline to the ultimatum makes it more credible. Test it: stay silent or propose a counter."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the value creation move:",
+          "tts_text": "Instead of negotiating the unit price, what if we structured this as a revenue share? You make more when I succeed.",
+          "options": ["Price negotiation", "Value structure redesign"],
+          "correct_answer": "Value structure redesign",
+          "explanation": "Changing the negotiation model = creating new value. Win-win structure emerges."
+        }
+      ]
+    },
+    {
+      "id": "stage-choice",
+      "type": "quiz",
+      "title": "Phase 2: Strategic Selection - Negotiation Scenarios (Choice)",
+      "duration": "17 min",
+      "total_questions": 24,
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "You're negotiating salary. They offer $100K. You respond:",
+          "options": ["Accept immediately (be grateful).", "Counter with $120K.", "Pause and ask: 'What drove you to $100K? I was expecting higher based on market rates.'", "Reject and walk."],
+          "correct_answer": "Pause and ask: 'What drove you to $100K? I was expecting higher based on market rates.'",
+          "explanation": "Probe before countering. Understand their constraint. Your counter is stronger when informed."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "They say 'This is our final offer. Take it or leave it.' You:",
+          "options": ["Panic and accept.", "Become aggressive and reject.", "Stay calm: 'I appreciate the clarity. Let me think about this and follow up tomorrow.'", "Counter immediately."],
+          "correct_answer": "Stay calm: 'I appreciate the clarity. Let me think about this and follow up tomorrow.'",
+          "explanation": "Ultimatums often soften with time. Don't react immediately. Create space to explore if they budge."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You discover they have a weak BATNA (few alternatives). You:",
+          "options": ["Exploit it ruthlessly.", "Acknowledge it but focus on value creation for both.", "Ignore it.", "Throw the deal away."],
+          "correct_answer": "Acknowledge it but focus on value creation for both.",
+          "explanation": "Exploiting weakness creates resentment. Professional negotiators create sustainable deals."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What should you do BEFORE the negotiation?",
+          "options": ["Show up and improvise.", "Define your BATNA, their likely BATNA, walk-away point, and opening offer.", "Focus on the relationship.", "Prepare emotionally only."],
+          "correct_answer": "Define your BATNA, their likely BATNA, walk-away point, and opening offer.",
+          "explanation": "80% of negotiation success is preparation. Know your numbers before you sit down."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "They counter-offer at $110K (you asked $120K). You:",
+          "options": ["Accept (split the difference).", "Counter at $115K and explain the value gap.", "Demand $120K again.", "Walk away."],
+          "correct_answer": "Counter at $115K and explain the value gap.",
+          "explanation": "Trading concessions is normal. Justify your counter with value evidence."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You make an offer. They go silent. You should:",
+          "options": ["Fill the silence by explaining more.", "Stay silent and let them respond first.", "Change your offer.", "Become frustrated."],
+          "correct_answer": "Stay silent and let them respond first.",
+          "explanation": "Silence is a negotiation tool. Whoever talks first after an offer often concedes. Control the silence."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You realize you have the stronger BATNA. How do you use it?",
+          "options": ["Brag about your other options.", "Subtly mention you have alternatives without details.", "Don't mention it.", "Use it to bully them."],
+          "correct_answer": "Subtly mention you have alternatives without details.",
+          "explanation": "Power is strongest when implied, not stated. 'I have other options I'm exploring' signals strength without aggression."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "They ask 'What's your bottom line?' You respond:",
+          "options": ["Share your true walk-away point immediately.", "Deflect: 'I'm flexible if the overall deal works. What are your priorities?'", "Lie about your number.", "Say 'I have many options.'"],
+          "correct_answer": "Deflect: 'I'm flexible if the overall deal works. What are your priorities?'",
+          "explanation": "Never reveal your walk-away point first. Keep negotiating room."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You're negotiating a contract with hidden details you disagree with. You:",
+          "options": ["Sign it without reading.", "Point out all problems at once.", "Raise one major issue and ask: 'How can we solve this?'", "Refuse the contract."],
+          "correct_answer": "Raise one major issue and ask: 'How can we solve this?'",
+          "explanation": "Raising issues one at a time (not all at once) keeps the negotiation moving."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You want to bundle price with payment terms to create value. You say:",
+          "options": ["Take the price or take the payment terms, not both.", "If you lock in 3-year contract, I can improve the unit price by 10%.", "You have to negotiate separately.", "There's no flexibility."],
+          "correct_answer": "If you lock in 3-year contract, I can improve the unit price by 10%.",
+          "explanation": "Bundling creates optionality. You get commitment; they get a better price. Win-win."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "They make a concession on an issue you care about. You:",
+          "options": ["Assume you won and stop negotiating.", "Thank them and immediately concede on something to reciprocate.", "Thank them and ask what they need in return.", "Take it and give nothing back."],
+          "correct_answer": "Thank them and ask what they need in return.",
+          "explanation": "Concessions are trades. Reciprocate strategically on items that cost you less than they gain."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You realize mid-negotiation that you undervalued something. You:",
+          "options": ["Ignore it and move on.", "Acknowledge it: 'I need to adjust my thinking on [X]. Here's why...'", "Try to secretly adjust your position.", "Blame them."],
+          "correct_answer": "Acknowledge it: 'I need to adjust my thinking on [X]. Here's why...'",
+          "explanation": "Intellectual honesty builds trust. Adjusting based on new info = strength, not weakness."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "The negotiation is stalled. You should:",
+          "options": ["Give up.", "Bring in a mediator or suggest a break.", "Change the negotiation model (e.g., revenue share vs. fixed fee).", "Both B and C."],
+          "correct_answer": "Both B and C.",
+          "explanation": "Stalled negotiations need circuit-breakers: mediation, breaks, or structural redesign."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You're negotiating with an emotional person. They get upset at your offer. You:",
+          "options": ["Get emotional back.", "Dismiss their feelings.", "Stay calm and say: 'I understand this is important. Let's find a way forward together.'", "Change your position to appease them."],
+          "correct_answer": "Stay calm and say: 'I understand this is important. Let's find a way forward together.'",
+          "explanation": "Emotional regulation is a core negotiation skill. Stay professional regardless of their tone."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Before finalizing, you review the deal and notice a discrepancy. You:",
+          "options": ["Sign anyway (too late now).", "Flag it immediately: 'I want to confirm we agreed on X, not Y.'", "Point it out later as a problem.", "Silently benefit from the error."],
+          "correct_answer": "Flag it immediately: 'I want to confirm we agreed on X, not Y.'",
+          "explanation": "Clarity before signing = avoiding disputes later. Professional integrity matters."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "They introduce a new issue at the last minute (scope creep). You:",
+          "options": ["Agree to it to close the deal.", "Refuse entirely.", "Acknowledge it: 'This is new. Let's understand the impact and adjust timeline/price accordingly.'", "Blame them for moving goalposts."],
+          "correct_answer": "Acknowledge it: 'This is new. Let's understand the impact and adjust timeline/price accordingly.'",
+          "explanation": "New scope = new timeline/cost. Don't absorb it silently."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is your anchor strategy?",
+          "options": ["Make the first offer, but low to be safe.", "Let them anchor first.", "Make the first offer with confidence and data backing.", "Avoid anchoring; let it emerge naturally."],
+          "correct_answer": "Make the first offer with confidence and data backing.",
+          "explanation": "Anchoring first (with data) sets the range in your favor by 10-20%."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You discover they're negotiating with your competitor too. You:",
+          "options": ["Get angry and withdraw.", "Acknowledge it: 'I know you're exploring options. Here's why we're the best fit.'", "Threaten to walk.", "Immediately discount to win."],
+          "correct_answer": "Acknowledge it: 'I know you're exploring options. Here's why we're the best fit.'",
+          "explanation": "Competition is normal. Compete on value, not just price."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "After closing, they request changes. You:",
+          "options": ["Agree to everything (relationship maintenance).", "Refuse everything (stick to the deal).", "Listen to their request and determine: 'Does this benefit both of us? If so, let's renegotiate.'", "Ignore them."],
+          "correct_answer": "Listen to their request and determine: 'Does this benefit both of us? If so, let's renegotiate.'",
+          "explanation": "Post-deal negotiations are common. Treat them like pre-deal: value creation first."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is your biggest advantage in a B2B negotiation?",
+          "options": ["Aggression.", "Information (knowing more than they do).", "Confidence.", "Speed."],
+          "correct_answer": "Information (knowing more than they do).",
+          "explanation": "Information asymmetry = power. Research their business, their constraints, their alternatives."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You're asked to make the first move. You:",
+          "options": ["Refuse (let them anchor first).", "Make a strong anchor with data backing.", "Ask them to go first while you listen.", "Suggest splitting the difference from the start."],
+          "correct_answer": "Make a strong anchor with data backing.",
+          "explanation": "Research shows anchoring first gives you 10-20% advantage. Do it confidently."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "They offer a deal that's slightly better than your BATNA. You:",
+          "options": ["Accept immediately (be grateful).", "Counter because you can do better.", "Ask: 'Is this your best offer, or is there room to improve?'", "Walk away to test your BATNA."],
+          "correct_answer": "Ask: 'Is this your best offer, or is there room to improve?'",
+          "explanation": "Just because it's better than BATNA doesn't mean it's optimal. Keep negotiating professionally."
+        }
+      ]
+    },
+    {
+      "id": "stage-structure",
+      "type": "gamified_quiz",
+      "title": "Phase 3: Syntactic Architecture - Negotiation Framework (Ordering)",
+      "duration": "15 min",
+      "total_questions": 18,
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "The Opening Statement (establishes frame):",
+          "parts": ["Thank", "you", "for", "making", "time.", "Based", "on", "market", "research", "and", "scope,", "I", "see", "the", "fair", "range", "at", "$95K-$110K."],
+          "correct_order": ["Thank", "you", "for", "making", "time.", "Based", "on", "market", "research", "and", "scope,", "I", "see", "the", "fair", "range", "at", "$95K-$110K."],
+          "explanation": "Anchor first + data-backed + range provided = confident opening."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Probe (understanding their position):",
+          "parts": ["Before", "I", "respond,", "help", "me", "understand:", "What", "is", "driving", "your", "$80K", "number?"],
+          "correct_order": ["Before", "I", "respond,", "help", "me", "understand:", "What", "is", "driving", "your", "$80K", "number?"],
+          "explanation": "Asking 'why' before 'what' = smarter negotiation."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Value Statement (justify your position):",
+          "parts": ["My", "offer", "reflects", "my", "experience,", "track", "record,", "and", "the", "market", "rate", "for", "this", "role."],
+          "correct_order": ["My", "offer", "reflects", "my", "experience,", "track", "record,", "and", "the", "market", "rate", "for", "this", "role."],
+          "explanation": "Grounding your position in data/experience = stronger anchor."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Concession Offer (trading value):",
+          "parts": ["I", "can", "move", "to", "$105K", "if", "you", "commit", "to", "a", "2-year", "contract."],
+          "correct_order": ["I", "can", "move", "to", "$105K", "if", "you", "commit", "to", "a", "2-year", "contract."],
+          "explanation": "Trading concessions (I give X, you give Y) = mutual benefit."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Walk-Away Statement (setting boundaries):",
+          "parts": ["I", "need", "to", "be", "candid:", "below", "$95K,", "this", "doesn't", "make", "sense", "for", "me."],
+          "correct_order": ["I", "need", "to", "be", "candid:", "below", "$95K,", "this", "doesn't", "make", "sense", "for", "me."],
+          "explanation": "Clear walk-away point = credible. You know where you'll stop negotiating."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Pause (strategic silence):",
+          "parts": ["I", "hear", "your", "position.", "[Long", "silence", "for", "5-10", "seconds]"],
+          "correct_order": ["I", "hear", "your", "position.", "[Long", "silence", "for", "5-10", "seconds]"],
+          "explanation": "Silence after their offer invites them to continue negotiating or make a concession."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Reframe (shifting the negotiation model):",
+          "parts": ["Instead", "of", "debating", "the", "unit", "price,", "what", "if", "we", "structured", "this", "as", "a", "revenue", "share?"],
+          "correct_order": ["Instead", "of", "debating", "the", "unit", "price,", "what", "if", "we", "structured", "this", "as", "a", "revenue", "share?"],
+          "explanation": "Changing the negotiation model = creating new value options."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Trade Proposal (mutual gain):",
+          "parts": ["You", "want", "a", "lower", "price;", "I", "want", "faster", "payment.", "Can", "we", "trade", "on", "those?"],
+          "correct_order": ["You", "want", "a", "lower", "price;", "I", "want", "faster", "payment.", "Can", "we", "trade", "on", "those?"],
+          "explanation": "Identifying what you want (different from what they want) = trading blocks."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Urgency Counter (managing artificial pressure):",
+          "parts": ["I", "understand", "your", "timeline.", "Let", "me", "see", "if", "we", "can", "accelerate", "our", "process."],
+          "correct_order": ["I", "understand", "your", "timeline.", "Let", "me", "see", "if", "we", "can", "accelerate", "our", "process."],
+          "explanation": "Acknowledge pressure without succumbing to it. Offer to speed up instead of caving."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Confirmation (locking in the deal):",
+          "parts": ["Let", "me", "confirm:", "You", "agree", "to", "$102K", "and", "a", "2-year", "commitment.", "Correct?"],
+          "correct_order": ["Let", "me", "confirm:", "You", "agree", "to", "$102K", "and", "a", "2-year", "commitment.", "Correct?"],
+          "explanation": "Explicit confirmation prevents 'I thought we agreed' disputes later."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Conditional Move (contingency planning):",
+          "parts": ["If", "you", "need", "additional", "support,", "we", "can", "discuss", "phased", "pricing."],
+          "correct_order": ["If", "you", "need", "additional", "support,", "we", "can", "discuss", "phased", "pricing."],
+          "explanation": "Offering contingencies = flexibility without losing negotiating position."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Close (finalizing with confidence):",
+          "parts": ["I", "believe", "we", "have", "a", "deal", "that", "works", "for", "both", "of", "us."],
+          "correct_order": ["I", "believe", "we", "have", "a", "deal", "that", "works", "for", "both", "of", "us."],
+          "explanation": "Confident close = validates both parties. Shows win-win thinking."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Follow-Up Commitment (post-deal):",
+          "parts": ["I", "will", "send", "a", "term", "sheet", "by", "tomorrow", "and", "legal", "by", "Friday."],
+          "correct_order": ["I", "will", "send", "a", "term", "sheet", "by", "tomorrow", "and", "legal", "by", "Friday."],
+          "explanation": "Specific timeline for next steps = momentum maintained."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Interest Probe (before anchoring):",
+          "parts": ["What", "matters", "most", "to", "you", "in", "this", "deal:", "price,", "timeline,", "or", "scope?"],
+          "correct_order": ["What", "matters", "most", "to", "you", "in", "this", "deal:", "price,", "timeline,", "or", "scope?"],
+          "explanation": "Understanding priorities helps you trade on low-priority items."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Batna Reference (subtle leverage):",
+          "parts": ["I", "have", "other", "options", "I'm", "exploring.", "I", "want", "to", "make", "sure", "this", "is", "the", "best", "fit."],
+          "correct_order": ["I", "have", "other", "options", "I'm", "exploring.", "I", "want", "to", "make", "sure", "this", "is", "the", "best", "fit."],
+          "explanation": "Subtle mention of alternatives = power without aggression."
+        }
+      ]
+    },
+    {
+      "id": "stage-vocab",
+      "type": "gamified_quiz",
+      "title": "Phase 4: Negotiation Vocabulary & Concepts (Input)",
+      "duration": "14 min",
+      "total_questions": 26,
+      "questions": [
+        {
+          "type": "fill_input",
+          "question": "Your ______ (Best Alternative to Negotiated Agreement) is your walk-away point.",
+          "correct_answers": ["BATNA", "batna"],
+          "explanation": "BATNA = your best option if the negotiation fails. Knowing it gives you confidence."
+        },
+        {
+          "type": "fill_input",
+          "question": "The first number in a negotiation is the ______ (sets the range).",
+          "correct_answers": ["anchor", "Anchor"],
+          "explanation": "Anchoring first gives you 10-20% negotiation advantage."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (The other party's underlying needs) matter more than their stated position.",
+          "correct_answers": ["Interests", "interests"],
+          "explanation": "Interests (why) vs. Positions (what). Understanding interests opens solutions."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (mutual exchange of concessions) is when both sides give on different items.",
+          "correct_answers": ["trade", "Trade"],
+          "explanation": "Trading concessions = professional negotiation (I give on X, you give on Y)."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Creating something of mutual value) is the goal of win-win negotiation.",
+          "correct_answers": ["Value creation", "value"],
+          "explanation": "Value creation = expanding the pie, not just fighting over slices."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (final statement that you won't budge) can be real or bluffing.",
+          "correct_answers": ["ultimatum", "Ultimatum"],
+          "explanation": "Ultimatums need credibility. Test them: stay silent or propose a counter."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Information you have that they don't) is your negotiating power.",
+          "correct_answers": ["Information asymmetry", "information"],
+          "explanation": "Whoever knows more = wins. Research is critical."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Making your position seem less attractive) weakens your negotiation.",
+          "correct_answers": ["Self-deprecation", "self"],
+          "explanation": "Never diminish your own anchor. Be confident in your offer."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Limited availability) creates urgency and negotiating power.",
+          "correct_answers": ["Scarcity", "scarcity"],
+          "explanation": "Real scarcity (limited slots, time-sensitive) is legitimate leverage."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (combining multiple variables in a deal) allows trading flexibility.",
+          "correct_answers": ["bundle", "Bundle"],
+          "explanation": "Bundling price with terms, timeline, scope = more options."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Staying quiet after your offer) forces them to respond first.",
+          "correct_answers": ["Silence", "silence"],
+          "explanation": "Silence is a negotiation tool. Whoever talks first often concedes."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (external reference point) anchors your number to reality.",
+          "correct_answers": ["market rate", "market"],
+          "explanation": "Using market data or industry standards = credible anchors."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Revealing your true constraints too early) weakens your position.",
+          "correct_answers": ["Transparency", "transparency"],
+          "explanation": "Strategic opacity on walk-away points = stronger negotiation."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (mutual exchange where both sides feel good) is sustainable.",
+          "correct_answers": ["win-win deal", "win"],
+          "explanation": "Win-win deals breed repeat business and positive relationships."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Artificial time pressure) is a common negotiation tactic.",
+          "correct_answers": ["Urgency", "urgency"],
+          "explanation": "Call out artificial deadlines: 'Let me see if we can accelerate.'"
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Shifting the discussion from price to other factors) creates value.",
+          "correct_answers": ["Reframing", "reframing"],
+          "explanation": "Reframing (timeline, scope, payment terms) = new negotiating options."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (person who negotiates on behalf of a party) may have limits.",
+          "correct_answers": ["representative", "Representative"],
+          "explanation": "Knowing their authority limits = understanding their real walk-away."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Things both sides value differently) are trading opportunities.",
+          "correct_answers": ["Asymmetric values", "values"],
+          "explanation": "If you value A more and they value B more, trade on that."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Splitting the difference evenly) is lazy negotiation.",
+          "correct_answers": ["Compromise", "compromise"],
+          "explanation": "Compromise = each side gives equally. But interests differ—trade instead."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (agreement reached before legal documents) is your handshake deal.",
+          "correct_answers": ["term sheet", "term"],
+          "explanation": "A term sheet captures agreement before lawyers draft full contracts."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Addressing concerns before they become objections) prevents stalls.",
+          "correct_answers": ["Proactive mitigation", "proactive"],
+          "explanation": "Anticipating concerns and addressing them = smoother negotiations."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (changing the negotiation structure) can break deadlocks.",
+          "correct_answers": ["pivot", "Pivot"],
+          "explanation": "If price negotiation is stuck, pivot to: 'What if we structured this differently?'"
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Making multiple small concessions) without getting anything back is weak.",
+          "correct_answers": ["Negotiating against yourself", "negotiating"],
+          "explanation": "If you keep lowering your offer without reciprocation, you're negotiating against yourself."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (shared understanding of what was agreed) prevents later disputes.",
+          "correct_answers": ["confirmation", "Confirmation"],
+          "explanation": "Always confirm in writing what you agreed to."
+        }
+      ]
+    },
+    {
+      "id": "stage-mastery",
+      "type": "quiz",
+      "title": "Phase 5: Executive Mastery - Advanced Negotiation (Scenarios)",
+      "duration": "16 min",
+      "total_questions": 22,
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Zone of Possible Agreement (ZOPA)'?",
+          "options": ["A physical meeting space.", "The range between your walk-away and their walk-away where a deal is possible.", "A negotiation technique.", "A company name."],
+          "correct_answer": "The range between your walk-away and their walk-away where a deal is possible.",
+          "explanation": "If your range is $95K-$110K and theirs is $80K-$100K, ZOPA is $95K-$100K."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the speaker anchoring effectively?",
+          "tts_text": "Market research shows this role is worth $100K-$130K. I'm looking at $110K based on the specifics.",
+          "options": ["Weak anchor", "Strong anchor with range"],
+          "correct_answer": "Strong anchor with range",
+          "explanation": "Market data + range = credible, confident anchor."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Negotiation Leverage'?",
+          "options": ["Using force to get what you want.", "Your relative power based on BATNA, information, scarcity, and alternatives.", "A mechanical tool.", "Being aggressive."],
+          "correct_answer": "Your relative power based on BATNA, information, scarcity, and alternatives.",
+          "explanation": "Leverage = the sum of your negotiating power sources."
+        },
+        {
+          "type": "fill_input",
+          "question": "When they make an offer, ______ (stay quiet) to let them continue talking or make concessions.",
+          "correct_answers": ["silence", "Silence"],
+          "explanation": "Silence is a negotiation tool. Use it strategically."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Are they creating an artificial deadline?",
+          "tts_text": "Another offer is coming in Friday. If you want to be considered, we need this by Thursday.",
+          "options": ["Real deadline", "Artificial (test it)"],
+          "correct_answer": "Artificial (test it)",
+          "explanation": "Real deadlines are often movable. Probe: 'Can we extend to Monday if we're close?'"
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Negotiating Against Yourself'?",
+          "options": ["Being confused.", "Making concession after concession without reciprocation from the other side.", "Debating your own position.", "Being indecisive."],
+          "correct_answer": "Making concession after concession without reciprocation from the other side.",
+          "explanation": "If you keep lowering your ask without them budging, stop. Demand reciprocation."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Respond to an ultimatum that might be real:",
+          "parts": ["I", "understand", "your", "position.", "Let", "me", "see", "if", "we", "can", "work", "within", "that", "timeline."],
+          "correct_order": ["I", "understand", "your", "position.", "Let", "me", "see", "if", "we", "can", "work", "within", "that", "timeline."],
+          "explanation": "Acknowledge without submitting. Test their flexibility."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Distributive Negotiation'?",
+          "options": ["Win-win deal-making.", "A zero-sum game where one side's gain is the other's loss.", "Spreading goods fairly.", "Delivering a product."],
+          "correct_answer": "A zero-sum game where one side's gain is the other's loss.",
+          "explanation": "Distributive = fighting over a fixed pie. Integrative = expanding the pie."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Integrative Negotiation'?",
+          "options": ["Aggressive negotiation.", "Creating value by expanding the pie and finding mutual gains.", "Dishonest negotiation.", "Rushing to close."],
+          "correct_answer": "Creating value by expanding the pie and finding mutual gains.",
+          "explanation": "Integrative = win-win. Both parties leave better off."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this integrative or distributive thinking?",
+          "tts_text": "Instead of arguing price, what if we structured payment in phases so you get lower immediate cost and I get faster deployment?",
+          "options": ["Distributive", "Integrative"],
+          "correct_answer": "Integrative",
+          "explanation": "Restructuring to meet both needs = integrative thinking."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'The Flinch'?",
+          "options": ["A nervous reaction.", "A tactic where you react with surprise/disappointment to their offer to signal it's low.", "A physical movement.", "A negotiation fail."],
+          "correct_answer": "A tactic where you react with surprise/disappointment to their offer to signal it's low.",
+          "explanation": "The flinch ('Wow, that's lower than I expected') can prompt a concession, but use sparingly."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Use silence strategically after their offer:",
+          "parts": ["I", "hear", "your", "number.", "[5-second", "pause]"],
+          "correct_order": ["I", "hear", "your", "number.", "[5-second", "pause]"],
+          "explanation": "Silence after their offer = they feel pressure to clarify, justify, or concede."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Information Asymmetry'?",
+          "options": ["Imbalance of information between parties.", "Equal information on both sides.", "Hiding the truth.", "A communication failure."],
+          "correct_answer": "Imbalance of information between parties.",
+          "explanation": "Whoever knows more (about the other's constraints, alternatives, market) wins."
+        },
+        {
+          "type": "fill_input",
+          "question": "The ______ (initial offer) should be aggressive but defensible with data.",
+          "correct_answers": ["anchor", "Anchor"],
+          "explanation": "Anchor high (with justification) = better final price."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this speaker negotiating or capitulating?",
+          "tts_text": "Your $80K is lower than I wanted, but I'll take it to move forward.",
+          "options": ["Negotiating", "Capitulating"],
+          "correct_answer": "Capitulating",
+          "explanation": "Accepting below your comfort zone = weak. They may exploit this later."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Package Negotiation'?",
+          "options": ["Shipping a product.", "Bundling multiple items together to create value and trading options.", "Negotiating packages only.", "A negotiation failure."],
+          "correct_answer": "Bundling multiple items together to create value and trading options.",
+          "explanation": "Packaging = combining price + timeline + scope = more options."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Handle a real constraint they reveal:",
+          "parts": ["Thank", "you", "for", "sharing", "that.", "That", "helps", "me", "understand", "your", "position.", "How", "can", "we", "work", "within", "that?"],
+          "correct_order": ["Thank", "you", "for", "sharing", "that.", "That", "helps", "me", "understand", "your", "position.", "How", "can", "we", "work", "within", "that?"],
+          "explanation": "Acknowledging constraints + problem-solving together = collaborative."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What should you do if they ask 'Is that your final offer?'",
+          "options": ["Say yes immediately (lock it in).", "Say no (leave room to move).", "Pause and respond: 'It depends. Are we close to a deal?'", "Refuse to answer."],
+          "correct_answer": "Pause and respond: 'It depends. Are we close to a deal?'",
+          "explanation": "Conditional language = you have room to move if they do."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this a sustainable deal?",
+          "tts_text": "I had to give up a lot to make this work, but I'm confident we both benefit long-term.",
+          "options": ["Sustainable", "Resentful (unsustainable)"],
+          "correct_answer": "Sustainable",
+          "explanation": "If both sides feel they got value despite trade-offs = sustainable deal."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the biggest error in salary negotiation?",
+          "options": ["Asking for too much.", "Accepting their first offer.", "Negotiating too aggressively.", "Not having a walk-away point."],
+          "correct_answer": "Accepting their first offer.",
+          "explanation": "First offers are always negotiable. There's always room to move."
+        }
+      ]
+    }
+  ]
 }

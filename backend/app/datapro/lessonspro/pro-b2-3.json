@@ -1,75 +1,797 @@
 {
-    "id": "pro-b2-3",
-    "title": "Data Presentation",
-    "stages": [
+  "id": "pro-b2-3",
+  "title": "Data Presentation",
+  "description": "Master the art of presenting data with impact, building persuasive narratives, and influencing decisions through strategic storytelling",
+  "difficulty": "B2",
+  "stages": [
+    {
+      "id": "stage-intro",
+      "type": "theory",
+      "title": "Strategic Concept: Data Presentation with Executive Impact",
+      "duration": "6 min",
+      "parts": [
         {
-            "id": "stage-1",
-            "type": "theory",
-            "title": "Strategic Concept: Data Presentation",
-            "parts": [
-                {
-                    "visual": "Welcome to the B2 executive module: Data Presentation.\n\nIn this session, we analyze the critical vocabulary required to navigate this scenario with authority.\n\nKey Principle:\nTrue professionals don't just communicate information; they communicate *intent*.\n\nObserve the nuance in the following exercises.",
-                    "audio": "Welcome to the B2 executive module: Data Presentation. Let's master this topic."
-                }
-            ]
-        },
-        {
-            "id": "stage-2",
-            "type": "quiz",
-            "title": "Executive Comprehension",
-            "questions": [
-                {
-                    "type": "quiz_choice",
-                    "question": "Which is the most professional approach regarding 'Data Presentation'?",
-                    "options": [
-                        "Use casual slang to seem friendly.",
-                        "Prioritize clarity, brevity, and formal tone.",
-                        "Avoid eye contact and speak softly.",
-                        "Use overly complex words to sound smart."
-                    ],
-                    "correct_answer": "Prioritize clarity, brevity, and formal tone.",
-                    "explanation": "Executive presence is built on clear and concise communication, not complexity."
-                }
-            ]
-        },
-        {
-            "id": "stage-3",
-            "type": "gamified_quiz",
-            "title": "Structure & Syntax Drill",
-            "questions": [
-                {
-                    "type": "order_sentence",
-                    "question": "Arrange the standard corporate phrase:",
-                    "parts": [
-                        "We",
-                        "need",
-                        "to",
-                        "leverage",
-                        "our",
-                        "core",
-                        "competencies."
-                    ],
-                    "correct_order": [
-                        "We",
-                        "need",
-                        "to",
-                        "leverage",
-                        "our",
-                        "core",
-                        "competencies."
-                    ],
-                    "explanation": "'Leveraging competencies' is standard business English for using your strengths."
-                },
-                {
-                    "type": "fill_input",
-                    "question": "Complete the term: Return on ______ (ROI).",
-                    "correct_answers": [
-                        "Investment",
-                        "investment"
-                    ],
-                    "explanation": "ROI stands for Return On Investment."
-                }
-            ]
+          "visual": "Welcome to the **B2 Executive Module**: Data Presentation.\n\nYou have mastered B1 communication skills. Now, you step into the **data-driven leadership tier**.\n\n**The Shift from B1 to B2:**\n- **B1**: How to communicate clearly with data\n- **B2**: How to present data strategically to influence decisions and drive action\n\n**Key Principle:**\nTrue executives don't just *present* data; they **tell a data-driven story**.\n\nIn B2 Data Presentation, every number, chart, and insight serves a narrative:\n- **Context** answers 'Why should you care?'\n- **Data** provides evidence\n- **Insight** reveals the meaning\n- **Action** is the call-to-action\n\n**The Data Presentation Framework: SCIDA**\n\n**S**ituation: What's the business context?\n**C**omplication: What's the problem or opportunity?\n**I**nsight: What does the data reveal?\n**D**ata: Show the evidence\n**A**ction: What should we do?\n\nWeak Approach: \"Here's Q3 revenue data: $2.5M, up 15% YoY. Next slide...\"\nStrong Approach: \"Our revenue grew 15% YoY to $2.5M, BUT customer retention dropped to 90%. This signals quality issues masking by volume growth. We need to shift focus from acquisition to retention. Recommend investing $500K in customer success.\" \n\nThe second version:\n- Leads with the headline (complication)\n- Shows the data (evidence)\n- Reveals the insight (what it means)\n- Proposes action (what to do)\n\n**The 6 Core Data Presentation Principles:**\n\n1. **Headline First** - State the insight before the data\n2. **Simplicity** - One insight per chart. Remove 80% of detail.\n3. **Audience First** - Data for engineers differs from data for executives\n4. **Story Arc** - Context → Complication → Insight → Action\n5. **Silence** - Let visuals speak. Minimize text.\n6. **Credibility** - Source, methodology, confidence level = trust\n\n**Common Data Presentation Traps to Avoid:**\n- ❌ \"Let me walk you through all 47 data points...\"\n- ❌ Chart with 10 lines and no clear takeaway\n- ❌ Burying the insight in a sea of numbers\n- ❌ Presenting data without context (\"revenue is $2.5M\" - so what?)\n- ❌ Using percentages without absolute numbers (or vice versa)\n- ❌ Confusing correlation with causation\n- ❌ Using the wrong chart type (line chart for categories, pie chart for trends)\n- ❌ Apologizing for or downplaying findings\n- ❌ Presenting without recommendations\n\n**The Psychology of Data:**\nPeople don't buy data. They buy **conclusions**. Data is the evidence for your conclusion.\n\n**The Pyramid Principle:**\nStructure your presentation as an inverted pyramid:\n- **Top**: Recommendation/Headline\n- **Middle**: Key findings\n- **Bottom**: Supporting data\n\nThis way, busy executives can stop at the headline and still understand your main point.",
+          "audio": "Welcome to B2 Data Presentation. In this module, you learn that data without narrative is noise. Your job is to transform numbers into stories that drive decisions. Context matters. Simplicity wins. Let's master executive-level data storytelling."
         }
-    ]
+      ]
+    },
+    {
+      "id": "stage-listening",
+      "type": "quiz",
+      "title": "Phase 1: Auditory Analysis - Data Presentation Cues (Listening)",
+      "duration": "15 min",
+      "total_questions": 26,
+      "questions": [
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this presenter leading with the headline?",
+          "tts_text": "Q3 revenue was $2.5M, up 15% YoY. But customer retention dropped to 90%. This is our core problem.",
+          "options": ["Headline buried in data", "Headline leads"],
+          "correct_answer": "Headline leads",
+          "explanation": "Starting with the insight (retention drop is the problem) = strong data storytelling."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the data presentation style:",
+          "tts_text": "Here are 47 metrics across 12 dimensions. Let me walk you through each one.",
+          "options": ["Executive summary", "Data dump"],
+          "correct_answer": "Data dump",
+          "explanation": "Overwhelming detail obscures insight. Simplify to the 3-5 key metrics."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the presenter providing context?",
+          "tts_text": "Our NPS is 42. This is strong in our industry.",
+          "options": ["Context given", "No context"],
+          "correct_answer": "Context given",
+          "explanation": "Explaining what the number means (42 is strong) = contextual data."
+        },
+        {
+          "type": "listening_match",
+          "question": "What is the problem here?",
+          "tts_text": "Churn increased 3% this quarter.",
+          "options": ["Clear insight", "Missing context/baseline"],
+          "correct_answer": "Missing context/baseline",
+          "explanation": "Is 3% up from 5% (improvement) or from 2% (degradation)? Need baseline for context."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the presenter connecting data to action?",
+          "tts_text": "CAC is $500 per customer, LTV is $2000. So we should acquire more aggressively in this segment.",
+          "options": ["Data without action", "Data with recommendation"],
+          "correct_answer": "Data with recommendation",
+          "explanation": "Showing the math (CAC/LTV ratio) + proposing action = complete story."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the logical fallacy:",
+          "tts_text": "Our marketing spend increased 20% and revenue grew 20%. Marketing caused the revenue growth.",
+          "options": ["Correct inference", "Correlation ≠ Causation"],
+          "correct_answer": "Correlation ≠ Causation",
+          "explanation": "Both increased, but product launch or market trends may have driven revenue. Be careful with causation claims."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this presenter using the right metric?",
+          "tts_text": "Our average order value is $250. That's our success metric.",
+          "options": ["Right metric if context is given", "Missing the real metric (profit, retention, etc.)"],
+          "correct_answer": "Missing the real metric (profit, retention, etc.)",
+          "explanation": "AOV alone doesn't show profitability or customer health. Need context on margins and retention."
+        },
+        {
+          "type": "listening_match",
+          "question": "What is the presentation style?",
+          "tts_text": "Here's the situation: We're growing at 15% YoY. But we're losing customers at rate X. This means we're acquiring fast but can't retain. The data shows...",
+          "options": ["Confusing/scattered", "Structured/narrative-driven"],
+          "correct_answer": "Structured/narrative-driven",
+          "explanation": "Situation → Complication → Data = clear story structure."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this presenter acknowledging limitations?",
+          "tts_text": "This analysis is based on 3 months of data, so I'm 70% confident in the trend. We need 6 months to confirm.",
+          "options": ["Acknowledging limits", "Ignoring limitations"],
+          "correct_answer": "Acknowledging limits",
+          "explanation": "Transparency about confidence levels = credible presenter."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the chart type mismatch:",
+          "tts_text": "I'm using a pie chart to show revenue trend over 12 months.",
+          "options": ["Correct chart type", "Wrong chart type (line chart better)"],
+          "correct_answer": "Wrong chart type (line chart better)",
+          "explanation": "Pie charts = parts of a whole. Line charts = trends over time. Mismatch here."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the presenter connecting to the audience?",
+          "tts_text": "This metric matters because it directly impacts your Q4 bonus targets.",
+          "options": ["Generic data", "Audience-relevant data"],
+          "correct_answer": "Audience-relevant data",
+          "explanation": "Making data relevant to their incentives = engagement."
+        },
+        {
+          "type": "listening_match",
+          "question": "What is the presenter revealing?",
+          "tts_text": "Our worst-performing region is the Northeast, at 45% below target. Here's why [explanation] and here's how we fix it [solution].",
+          "options": ["Hiding problems", "Transparency + solution"],
+          "correct_answer": "Transparency + solution",
+          "explanation": "Admitting problems + proposing solutions = credible leadership."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the presenter using qualitative + quantitative data?",
+          "tts_text": "Revenue is up 15% (quantitative). Customers say we're easier to work with (qualitative). Together, this shows we're winning.",
+          "options": ["Numbers only", "Balanced data"],
+          "correct_answer": "Balanced data",
+          "explanation": "Numbers + stories = more persuasive than numbers alone."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the presentation flaw:",
+          "tts_text": "I apologize, but our numbers aren't great this quarter. We're only at 90% of target.",
+          "options": ["Confident presentation", "Weak/apologetic opening"],
+          "correct_answer": "Weak/apologetic opening",
+          "explanation": "Never apologize for data. Own it and explain: 'We're at 90% due to X. We're fixing it with Y.'"
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this a leading or misleading visualization?",
+          "tts_text": "I'm showing the Y-axis starting at 90, not 0, to highlight small differences.",
+          "options": ["Fair visualization", "Misleading (truncated axis)"],
+          "correct_answer": "Misleading (truncated axis)",
+          "explanation": "Truncated axes exaggerate small changes. Use full range unless specifically justified."
+        },
+        {
+          "type": "listening_match",
+          "question": "What does the presenter reveal about understanding?",
+          "tts_text": "This metric moved because of X factor we identified through cohort analysis.",
+          "options": ["Surface-level observation", "Deep understanding"],
+          "correct_answer": "Deep understanding",
+          "explanation": "Attributing changes to specific factors (not just reporting movement) = deeper insight."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the presenter using the Pyramid Principle?",
+          "tts_text": "Recommendation: Increase marketing spend by 30%. Why? Because CAC dropped and LTV improved, which means our ROI on acquisition is now 3.2x.",
+          "options": ["Inverted pyramid (top-down)", "Bottom-up (build to recommendation)"],
+          "correct_answer": "Inverted pyramid (top-down)",
+          "explanation": "Starting with the recommendation, then supporting with data = executive-friendly."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the metric choice issue:",
+          "tts_text": "Our page load time is 2 seconds. That's our quality metric.",
+          "options": ["Vanity metric", "Business metric"],
+          "correct_answer": "Vanity metric",
+          "explanation": "Page load matters only if it correlates to revenue/retention. Without that connection, it's vanity."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Does the presenter acknowledge nuance?",
+          "tts_text": "Growth is strong, but it's coming from one customer accounting for 40% of revenue. This creates risk.",
+          "options": ["Surface-level analysis", "Nuanced understanding"],
+          "correct_answer": "Nuanced understanding",
+          "explanation": "Recognizing concentrated risk = sophisticated analysis."
+        },
+        {
+          "type": "listening_match",
+          "question": "What is the presentation move?",
+          "tts_text": "This is the bad news: churn increased. This is the good news: we know exactly why and how to fix it.",
+          "options": ["Hiding bad news", "Sandwich with solution"],
+          "correct_answer": "Sandwich with solution",
+          "explanation": "Bad news + root cause + solution = professional communication."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the presenter simplifying or complicating?",
+          "tts_text": "Instead of showing 50 KPIs, here are the 3 that matter for decision-making.",
+          "options": ["Overwhelming detail", "Smart simplification"],
+          "correct_answer": "Smart simplification",
+          "explanation": "Ruthlessly cutting to the essential metrics = executive focus."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the data credibility issue:",
+          "tts_text": "I saw a trend online that showed similar numbers, so our data must be right.",
+          "options": ["Credible validation", "Weak reasoning"],
+          "correct_answer": "Weak reasoning",
+          "explanation": "Online trends don't validate your internal data. Use methodology, statistical tests, and reputable sources."
+        }
+      ]
+    },
+    {
+      "id": "stage-choice",
+      "type": "quiz",
+      "title": "Phase 2: Strategic Selection - Data Presentation Scenarios (Choice)",
+      "duration": "18 min",
+      "total_questions": 26,
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "You're presenting to the C-suite with 30 minutes. You prepare:",
+          "options": ["A 100-slide deck with all analysis.", "A 10-slide deck with headline, 3 key findings, recommendation, appendix.", "No slides, just data.", "Only verbal discussion."],
+          "correct_answer": "A 10-slide deck with headline, 3 key findings, recommendation, appendix.",
+          "explanation": "Executives want headlines + key findings + action. Appendix handles details."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your data shows a problem you didn't expect. You:",
+          "options": ["Hide it and focus on good news.", "Lead with the problem, explain why, propose solution.", "Blame external factors.", "Delay the presentation."],
+          "correct_answer": "Lead with the problem, explain why, propose solution.",
+          "explanation": "Transparency + ownership + action = credibility. Hiding hurts long-term."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Which chart type should you use for showing monthly revenue trend?",
+          "options": ["Pie chart.", "Bar chart.", "Line chart.", "Table."],
+          "correct_answer": "Line chart.",
+          "explanation": "Line charts show trends over time. Pie charts show parts of a whole."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your metric shows growth, but the CEO asks 'So what?' You respond:",
+          "options": ["Repeat the number.", "Explain what it means: 'This trend allows us to [specific benefit].'", "Get defensive.", "Change the subject."],
+          "correct_answer": "Explain what it means: 'This trend allows us to [specific benefit].'",
+          "explanation": "Insight (what it means) matters more than the number."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You notice correlation between marketing spend and revenue. You:",
+          "options": ["Claim marketing caused the growth.", "Investigate other factors (product launches, seasonality, market trends) before claiming causation.", "Ignore the correlation.", "Use it for marketing budget requests."],
+          "correct_answer": "Investigate other factors (product launches, seasonality, market trends) before claiming causation.",
+          "explanation": "Correlation is a signal. Causation requires more investigation."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your audience is technical (engineers). You present:",
+          "options": ["High-level summaries without detail.", "Detailed methodology, sample sizes, statistical tests, confidence levels.", "Marketing-focused metrics.", "Intuition-based analysis."],
+          "correct_answer": "Detailed methodology, sample sizes, statistical tests, confidence levels.",
+          "explanation": "Engineers respect rigor. Show your work, confidence intervals, and methods."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You're presenting to sales leadership. You focus on:",
+          "options": ["Product features.", "Revenue impact, deal size trends, quota attainment, customer acquisition cost.", "Technical implementation.", "General updates."],
+          "correct_answer": "Revenue impact, deal size trends, quota attainment, customer acquisition cost.",
+          "explanation": "Sales leaders care about: revenue, quotas, and customer economics."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your chart has 8 lines showing different segments. It's:",
+          "options": ["Great for comparing trends.", "Overwhelming and unclear (simplify to top 3).", "Perfect for executives.", "Ideal for presentations."],
+          "correct_answer": "Overwhelming and unclear (simplify to top 3).",
+          "explanation": "One insight per chart. 8 lines = 8 different messages = confusion."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You have data that contradicts your hypothesis. You:",
+          "options": ["Don't present it.", "Lead with the contradiction and investigate why.", "Bury it in an appendix.", "Blame the data quality."],
+          "correct_answer": "Lead with the contradiction and investigate why.",
+          "explanation": "Unexpected findings are more interesting than expected ones. Show curiosity."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "An executive asks about a data point you haven't analyzed. You:",
+          "options": ["Make up an answer.", "Admit you don't know and offer to investigate.", "Deflect to another topic.", "Blame the data team."],
+          "correct_answer": "Admit you don't know and offer to investigate.",
+          "explanation": "Honesty + follow-up = credibility. Making up answers destroys trust."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your metric is 'engagement' but you haven't defined it. You:",
+          "options": ["Assume everyone knows what it means.", "Define it explicitly: 'Engagement = logins + session duration + feature usage.'", "Leave it vague.", "Use a proxy metric instead."],
+          "correct_answer": "Define it explicitly: 'Engagement = logins + session duration + feature usage.'",
+          "explanation": "Definitions prevent misinterpretation. Always define ambiguous metrics."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your slide has text covering 40% of the screen. You:",
+          "options": ["Keep it (provides detail).", "Remove 80% of text; let the visual speak.", "Add more text for clarity.", "Use smaller font size."],
+          "correct_answer": "Remove 80% of text; let the visual speak.",
+          "explanation": "Visuals should tell the story. Text should be minimal (headline + labels)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You're presenting a decline in a key metric. Your approach:",
+          "options": ["Minimize it ('It's not that bad').", "Own it, explain root cause, propose fix ('Decline due to X. We're fixing with Y.').", "Change the subject.", "Blame external factors entirely."],
+          "correct_answer": "Own it, explain root cause, propose fix ('Decline due to X. We're fixing with Y.').",
+          "explanation": "Ownership + explanation + action = professional response."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your data shows a seasonal pattern (peak in Q4). You:",
+          "options": ["Ignore the seasonality.", "Account for it: 'Q4 is up 20% YoY, but seasonally typical. Underlying growth is 8%.'", "Claim unexpected growth.", "Use raw numbers without context."],
+          "correct_answer": "Account for it: 'Q4 is up 20% YoY, but seasonally typical. Underlying growth is 8%.'",
+          "explanation": "Isolating true signal from seasonal noise = sophisticated analysis."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You have 5 minutes to present. You prioritize:",
+          "options": ["All findings equally.", "Headline + 1 key insight + call-to-action.", "Background and context.", "Charts without explanation."],
+          "correct_answer": "Headline + 1 key insight + call-to-action.",
+          "explanation": "Ruthless prioritization for short time. Skip nuance; hit the main point."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your metric shows we're at 95% of target. An executive says 'That's practically 100%.' You:",
+          "options": ["Agree (be positive).", "Clarify the gap: '5% short of target means $X in lost revenue. Here's the plan to close it.'", "Move on.", "Say it's close enough."],
+          "correct_answer": "Clarify the gap: '5% short of target means $X in lost revenue. Here's the plan to close it.'",
+          "explanation": "Don't let executives round in their heads. Show the real impact of the gap."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your data set has missing data (5% of records). You:",
+          "options": ["Ignore the gap and present as if complete.", "Disclose it: 'Analysis includes 95% of records due to data quality. This shouldn't materially change conclusions.'", "Estimate the missing data.", "Use only complete records and don't mention it."],
+          "correct_answer": "Disclose it: 'Analysis includes 95% of records due to data quality. This shouldn't materially change conclusions.'",
+          "explanation": "Transparency about data quality = credibility. Hiding limits trust."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You're using percentages in your presentation. You also show:",
+          "options": ["Nothing else (percentages are enough).", "Absolute numbers too ('15% increase = 300 customers').", "Just percentages for simplicity.", "Neither."],
+          "correct_answer": "Absolute numbers too ('15% increase = 300 customers').",
+          "explanation": "Percentages without absolute numbers can hide scale. Show both."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your presentation includes a visualization that's 'interesting' but doesn't support your point. You:",
+          "options": ["Keep it (it looks good).", "Remove it (stick to findings only).", "Add more complex charts.", "Explain why it matters."],
+          "correct_answer": "Remove it (stick to findings only).",
+          "explanation": "Every chart should support a specific insight. Interesting ≠ relevant."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "An executive asks 'Is this statistically significant?' You respond:",
+          "options": ["Assume yes because the trend is visible.", "Provide confidence level and sample size: 'Yes, with 95% confidence and N=1000.'", "Avoid the question.", "Say 'It looks significant.'"],
+          "correct_answer": "Provide confidence level and sample size: 'Yes, with 95% confidence and N=1000.'",
+          "explanation": "Statistical rigor = executive-level thinking. Know your confidence levels."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your data contradicts a strategic belief held by the CEO. You:",
+          "options": ["Hide or downplay the finding.", "Present it respectfully, with strong methodology explanation and potential solutions.", "Soften the language to make it less harsh.", "Don't present it."],
+          "correct_answer": "Present it respectfully, with strong methodology explanation and potential solutions.",
+          "explanation": "Data integrity > politics. Present professionally with solutions, not blame."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your presentation is 30 slides but you have only 20 minutes. You:",
+          "options": ["Rush through all 30.", "Cut to 8-10 key slides; offer appendix for deep-dive.", "Skip the visuals and just talk.", "Extend the time."],
+          "correct_answer": "Cut to 8-10 key slides; offer appendix for deep-dive.",
+          "explanation": "Time limits demand ruthless prioritization. Quality beats quantity."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You notice your trend is driven by one outlier data point. You:",
+          "options": ["Ignore it and report the trend.", "Investigate the outlier: 'Is it real or data error? Does it change the conclusion?'", "Remove it silently.", "Report both with and without it."],
+          "correct_answer": "Investigate the outlier: 'Is it real or data error? Does it change the conclusion?'",
+          "explanation": "Outliers matter. Understanding them reveals insights or data issues."
+        }
+      ]
+    },
+    {
+      "id": "stage-structure",
+      "type": "gamified_quiz",
+      "title": "Phase 3: Syntactic Architecture - Data Presentation Framework (Ordering)",
+      "duration": "15 min",
+      "total_questions": 18,
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "The Headline (insight-first):",
+          "parts": ["Our", "customer", "retention", "dropped", "to", "90%,", "signaling", "a", "product", "quality", "issue", "we", "must", "address", "immediately."],
+          "correct_order": ["Our", "customer", "retention", "dropped", "to", "90%,", "signaling", "a", "product", "quality", "issue", "we", "must", "address", "immediately."],
+          "explanation": "Lead with the key insight, not just the number. 'So what?' is answered upfront."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Context (setting the baseline):",
+          "parts": ["Historically,", "our", "retention", "has", "been", "95%.", "Last", "quarter,", "it", "dropped", "to", "90%."],
+          "correct_order": ["Historically,", "our", "retention", "has", "been", "95%.", "Last", "quarter,", "it", "dropped", "to", "90%."],
+          "explanation": "Baseline (95%) makes the drop (90%) meaningful. Context = understanding."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Root Cause (explaining the 'why'):",
+          "parts": ["The", "drop", "correlates", "with", "our", "Q3", "feature", "release,", "which", "introduced", "bugs", "affecting", "10%", "of", "customers."],
+          "correct_order": ["The", "drop", "correlates", "with", "our", "Q3", "feature", "release,", "which", "introduced", "bugs", "affecting", "10%", "of", "customers."],
+          "explanation": "Identifying causal factors (feature bugs) = deeper analysis."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Segmentation (showing nuance):",
+          "parts": ["The", "drop", "is", "concentrated", "in", "Enterprise", "segment", "(15%", "drop)", "while", "SMB", "segment", "is", "stable", "at", "92%."],
+          "correct_order": ["The", "drop", "is", "concentrated", "in", "Enterprise", "segment", "(15%", "drop)", "while", "SMB", "segment", "is", "stable", "at", "92%."],
+          "explanation": "Segmenting reveals where the problem is concentrated. Nuance = better decisions."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Impact (translating to business terms):",
+          "parts": ["This", "5%", "retention", "drop", "represents", "50", "lost", "customers", "and", "$250K", "in", "annual", "recurring", "revenue."],
+          "correct_order": ["This", "5%", "retention", "drop", "represents", "50", "lost", "customers", "and", "$250K", "in", "annual", "recurring", "revenue."],
+          "explanation": "Translating metrics to business impact (revenue, customer count) = executive relevance."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Prognosis (if action isn't taken):",
+          "parts": ["If", "we", "don't", "fix", "this,", "we", "project", "a", "further", "drop", "to", "85%", "by", "Q4,", "costing", "$500K."],
+          "correct_order": ["If", "we", "don't", "fix", "this,", "we", "project", "a", "further", "drop", "to", "85%", "by", "Q4,", "costing", "$500K."],
+          "explanation": "Showing the cost of inaction = urgency."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Recommendation (the action):",
+          "parts": ["We", "recommend", "immediately", "rolling", "back", "the", "buggy", "feature", "and", "investing", "$100K", "in", "QA."],
+          "correct_order": ["We", "recommend", "immediately", "rolling", "back", "the", "buggy", "feature", "and", "investing", "$100K", "in", "QA."],
+          "explanation": "Specific action + investment + timeline = clarity."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Success Metric (how we'll measure impact):",
+          "parts": ["Success", "means", "returning", "retention", "to", "94%", "within", "30", "days."],
+          "correct_order": ["Success", "means", "returning", "retention", "to", "94%", "within", "30", "days."],
+          "explanation": "Defining success upfront = accountability."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Confidence Statement (credibility):",
+          "parts": ["This", "analysis", "is", "based", "on", "6", "months", "of", "data", "with", "95%", "statistical", "confidence."],
+          "correct_order": ["This", "analysis", "is", "based", "on", "6", "months", "of", "data", "with", "95%", "statistical", "confidence."],
+          "explanation": "Transparency about methodology = credibility."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Stakeholder Impact (who cares):",
+          "parts": ["This", "impacts", "Sales", "quota", "attainment", "and", "Customer", "Success", "capacity."],
+          "correct_order": ["This", "impacts", "Sales", "quota", "attainment", "and", "Customer", "Success", "capacity."],
+          "explanation": "Showing who cares = audience relevance."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Risk (what could go wrong):",
+          "parts": ["Risk:", "rolling", "back", "could", "disappoint", "customers", "expecting", "the", "new", "feature."],
+          "correct_order": ["Risk:", "rolling", "back", "could", "disappoint", "customers", "expecting", "the", "new", "feature."],
+          "explanation": "Acknowledging trade-offs = sophisticated analysis."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Mitigation (managing the risk):",
+          "parts": ["To", "mitigate,", "we'll", "notify", "customers", "with", "an", "upgrade", "timeline."],
+          "correct_order": ["To", "mitigate,", "we'll", "notify", "customers", "with", "an", "upgrade", "timeline."],
+          "explanation": "Proactive risk management = confidence."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Timeline (when things happen):",
+          "parts": ["Timeline:", "Rollback", "by", "EOW,", "QA", "improvements", "by", "EOD", "Friday,", "feature", "re-launch", "by", "Week", "2."],
+          "correct_order": ["Timeline:", "Rollback", "by", "EOW,", "QA", "improvements", "by", "EOD", "Friday,", "feature", "re-launch", "by", "Week", "2."],
+          "explanation": "Specificity = accountability."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Investment (what it costs):",
+          "parts": ["Investment:", "$100K", "in", "QA", "tools/training,", "$50K", "in", "customer", "communications."],
+          "correct_order": ["Investment:", "$100K", "in", "QA", "tools/training,", "$50K", "in", "customer", "communications."],
+          "explanation": "Being specific about cost = executive confidence."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The ROI (return on investment):",
+          "parts": ["ROI:", "$150K", "investment", "saves", "$500K", "in", "lost", "revenue.", "Payoff:", "3", "weeks."],
+          "correct_order": ["ROI:", "$150K", "investment", "saves", "$500K", "in", "lost", "revenue.", "Payoff:", "3", "weeks."],
+          "explanation": "Quantifying return = compelling business case."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Escalation (if plan fails):",
+          "parts": ["If", "retention", "doesn't", "improve", "within", "30", "days,", "we'll", "escalate", "to", "product", "redesign."],
+          "correct_order": ["If", "retention", "doesn't", "improve", "within", "30", "days,", "we'll", "escalate", "to", "product", "redesign."],
+          "explanation": "Plan B = preparedness."
+        }
+      ]
+    },
+    {
+      "id": "stage-vocab",
+      "type": "gamified_quiz",
+      "title": "Phase 4: Data Presentation Vocabulary & Concepts (Input)",
+      "duration": "14 min",
+      "total_questions": 28,
+      "questions": [
+        {
+          "type": "fill_input",
+          "question": "A ______ (ratio of revenue to investment) shows profitability of an investment.",
+          "correct_answers": ["ROI", "roi"],
+          "explanation": "ROI = (Profit / Investment) × 100. Core business metric."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Customer Lifetime Value) is the total revenue expected from a customer.",
+          "correct_answers": ["LTV", "ltv"],
+          "explanation": "LTV = average customer revenue × years retained."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Customer Acquisition Cost) is how much you spend to acquire a customer.",
+          "correct_answers": ["CAC", "cac"],
+          "explanation": "CAC = marketing spend / new customers acquired."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Net Promoter Score) measures customer loyalty (0-100).",
+          "correct_answers": ["NPS", "nps"],
+          "explanation": "NPS = % promoters - % detractors. Higher is better."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Churn rate) is the percentage of customers lost per period.",
+          "correct_answers": ["Churn", "churn"],
+          "explanation": "Churn = lost customers / starting customers."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (assumption-based projection) predicts future outcomes based on current data.",
+          "correct_answers": ["forecast", "Forecast"],
+          "explanation": "Forecasts are educated guesses based on data patterns."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Statistical certainty) indicates how confident you are in your finding.",
+          "correct_answers": ["Confidence level", "confidence"],
+          "explanation": "95% confidence = 95% certain the finding is true."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (unusual data point) can reveal errors or special circumstances.",
+          "correct_answers": ["outlier", "Outlier"],
+          "explanation": "Outliers deserve investigation, not dismissal."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Relationship between two variables) doesn't prove one caused the other.",
+          "correct_answers": ["Correlation", "correlation"],
+          "explanation": "Correlation ≠ Causation. Always investigate deeper."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (visual showing magnitude changes over time) is ideal for trends.",
+          "correct_answers": ["line chart", "line"],
+          "explanation": "Line charts = trends over time."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (visual showing parts of a whole) should total 100%.",
+          "correct_answers": ["pie chart", "pie"],
+          "explanation": "Pie charts = composition (parts that sum to whole)."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (visual comparing categories) is good for ranking segments.",
+          "correct_answers": ["bar chart", "bar"],
+          "explanation": "Bar charts = comparing discrete categories."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Reducing unnecessary visual elements) makes charts clearer.",
+          "correct_answers": ["Minimalism", "minimalism"],
+          "explanation": "Remove gridlines, legends, colors > focus on data."
+        },
+        {
+          "type": "fill_input",
+          "question": "The ______ (main finding that explains the data) is your key insight.",
+          "correct_answers": ["headline", "Headline"],
+          "explanation": "Headline = what the data means, not just the number."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Information that provides meaning for a number) is critical for understanding.",
+          "correct_answers": ["Context", "context"],
+          "explanation": "Revenue of $2.5M means nothing without: last year's revenue, industry average, target."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (data sample) represents the full population being studied.",
+          "correct_answers": ["sample", "Sample"],
+          "explanation": "Sample size matters. Larger samples = higher confidence."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (A metric that looks good but doesn't matter) can mislead leadership.",
+          "correct_answers": ["Vanity metric", "vanity"],
+          "explanation": "Vanity metrics: page views, downloads, signups (without revenue impact)."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (metric tied to business outcomes) matters more than vanity metrics.",
+          "correct_answers": ["business metric", "business"],
+          "explanation": "Business metrics: revenue, retention, profit, market share."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Percentage change from a reference point) shows relative magnitude.",
+          "correct_answers": ["Year-over-year", "YoY"],
+          "explanation": "YoY = this year vs. last year. Controls for seasonality."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (group of similar items analyzed separately) reveals patterns.",
+          "correct_answers": ["cohort", "Cohort"],
+          "explanation": "Cohort analysis: comparing groups (by region, customer type, etc.)."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Showing multiple perspectives on data) provides balanced view.",
+          "correct_answers": ["Triangulation", "triangulation"],
+          "explanation": "Using quantitative + qualitative + external data = stronger conclusions."
+        },
+        {
+          "type": "fill_input",
+          "question": "The ______ (Inverted Pyramid) puts key finding at top, details below.",
+          "correct_answers": ["Pyramid Principle", "pyramid"],
+          "explanation": "Top: Recommendation. Middle: Key findings. Bottom: Supporting data."
+        },
+        {
+          "type": "fill_input",
+          "question": "A ______ (data limitation preventing full analysis) should be disclosed.",
+          "correct_answers": ["gap", "Gap"],
+          "explanation": "Missing data, small sample sizes, or timing issues = gaps to disclose."
+        }
+      ]
+    },
+    {
+      "id": "stage-mastery",
+      "type": "quiz",
+      "title": "Phase 5: Executive Mastery - Advanced Data Presentation (Scenarios)",
+      "duration": "16 min",
+      "total_questions": 24,
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Pyramid Principle'?",
+          "options": ["Using pyramid-shaped charts.", "Structuring communication with headline first, then supporting points.", "A sales technique.", "A data structure."],
+          "correct_answer": "Structuring communication with headline first, then supporting points.",
+          "explanation": "Inverted pyramid: Top (answer), Middle (findings), Bottom (details)."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the presenter using the Pyramid Principle?",
+          "tts_text": "We should invest in product quality. Why? Because our retention dropped 5%. Why did it drop? Because of bug X in Q3.",
+          "options": ["Top-down (Pyramid)", "Bottom-up (detail-first)"],
+          "correct_answer": "Top-down (Pyramid)",
+          "explanation": "Recommendation first, then evidence = Pyramid Principle."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'The SCIDA Framework'?",
+          "options": ["A chart type.", "Situation → Complication → Insight → Data → Action (data storytelling structure).", "A metric.", "A software tool."],
+          "correct_answer": "Situation → Complication → Insight → Data → Action (data storytelling structure).",
+          "explanation": "SCIDA guides your narrative from context to action."
+        },
+        {
+          "type": "fill_input",
+          "question": "When presenting to different audiences, ______ (adjust your data depth and focus).",
+          "correct_answers": ["segment", "Segment"],
+          "explanation": "Engineers want methodology; salespeople want revenue impact."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this presenter acknowledging uncertainty?",
+          "tts_text": "This trend appears strong, but we have only 2 months of data, so I'm 60% confident. We need 6 months to be certain.",
+          "options": ["Ignoring uncertainty", "Acknowledging limits"],
+          "correct_answer": "Acknowledging limits",
+          "explanation": "Transparent confidence levels = credible."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'A Vanity Metric'?",
+          "options": ["A metric that's hard to measure.", "A metric that looks good but doesn't drive business outcome (e.g., page views without revenue).", "A personal metric.", "A prediction metric."],
+          "correct_answer": "A metric that looks good but doesn't drive business outcome (e.g., page views without revenue).",
+          "explanation": "Watch out for metrics that impress but don't matter."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Open a data presentation with impact:",
+          "parts": ["Our", "biggest", "risk", "is", "customer", "concentration:", "one", "customer", "is", "40%", "of", "revenue."],
+          "correct_order": ["Our", "biggest", "risk", "is", "customer", "concentration:", "one", "customer", "is", "40%", "of", "revenue."],
+          "explanation": "Lead with the insight, not the data. 'So what?' is answered upfront."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You're presenting a failure. Your approach:",
+          "options": ["Downplay it.", "Own it: 'We missed target by 10%. Here's why and how we're fixing it.'", "Blame external factors.", "Change the subject."],
+          "correct_answer": "Own it: 'We missed target by 10%. Here's why and how we're fixing it.'",
+          "explanation": "Transparency + action = credibility even in failure."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the presenter showing 'Insight' or just 'Observation'?",
+          "tts_text": "Revenue is up 15%. This means we're winning in the market.",
+          "options": ["Observation only", "Insight (interpreting meaning)"],
+          "correct_answer": "Insight (interpreting meaning)",
+          "explanation": "'Winning' is an interpretation of the data (insight). Observation = 'Revenue is up 15%.'"
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your analysis shows we should do X, but leadership prefers Y. You:",
+          "options": ["Agree with leadership to be agreeable.", "Present your findings professionally and let them decide.", "Argue aggressively for X.", "Soften your findings to match their preference."],
+          "correct_answer": "Present your findings professionally and let them decide.",
+          "explanation": "Your job: present data honestly. Their job: decide. Respect both roles."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this presenter using the right visual?",
+          "tts_text": "I'm showing growth over 12 months as a pie chart.",
+          "options": ["Correct chart type", "Wrong chart type (use line chart for trends)"],
+          "correct_answer": "Wrong chart type (use line chart for trends)",
+          "explanation": "Pie charts = parts of a whole. Line charts = trends over time."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Statistical Significance'?",
+          "options": ["Data that looks important.", "A result unlikely to occur by chance (usually 95% confidence).", "Large sample size.", "Dramatic findings."],
+          "correct_answer": "A result unlikely to occur by chance (usually 95% confidence).",
+          "explanation": "Statistical significance means your finding is likely real, not random."
+        },
+        {
+          "type": "fill_input",
+          "question": "When showing percentages, also show ______ (absolute numbers) for full picture.",
+          "correct_answers": ["absolute numbers", "numbers"],
+          "explanation": "15% growth means nothing without: growth of 15 customers or 150? Or 1500?"
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this presenter avoiding responsibility?",
+          "tts_text": "The data shows a problem. Here's our analysis and here's how I recommend we solve it together.",
+          "options": ["Avoiding responsibility", "Taking ownership"],
+          "correct_answer": "Taking ownership",
+          "explanation": "'My recommendation' + 'together' = ownership with collaboration."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What should your presentation do if your data is inconclusive?",
+          "options": ["Present as if conclusive.", "Disclose: 'The data is inconclusive. Here's what we'd need to decide.'", "Avoid presenting.", "Make assumptions to reach a conclusion."],
+          "correct_answer": "Disclose: 'The data is inconclusive. Here's what we'd need to decide.'",
+          "explanation": "Honesty about limitations > false certainty."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Respond to 'This seems small':",
+          "parts": ["You're", "right,", "the", "1%", "difference", "looks", "small.", "But", "it", "represents", "$1M", "in", "impact."],
+          "correct_order": ["You're", "right,", "the", "1%", "difference", "looks", "small.", "But", "it", "represents", "$1M", "in", "impact."],
+          "explanation": "Translate percentages to business impact (revenue, customers, etc.)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'A Cohort Analysis'?",
+          "options": ["A group of people in the same location.", "Comparing groups (e.g., by acquisition date or region) to find patterns.", "A demographic study.", "A survey."],
+          "correct_answer": "Comparing groups (e.g., by acquisition date or region) to find patterns.",
+          "explanation": "Cohort analysis: Do Q1 customers behave differently than Q2?"
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this presenter showing balanced perspective?",
+          "tts_text": "Revenue is up 15%, but CAC increased 30%. Both trends are real and both need attention.",
+          "options": ["One-sided (only good news)", "Balanced (acknowledging complexity)"],
+          "correct_answer": "Balanced (acknowledging complexity)",
+          "explanation": "Good presenters show the full picture, even when it's mixed."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your slide has 10 axes and colors. It's:",
+          "options": ["Great for detail.", "Overwhelming and confusing (simplify to 1-2 key metrics).", "Impressive.", "Ideal for executives."],
+          "correct_answer": "Overwhelming and confusing (simplify to 1-2 key metrics).",
+          "explanation": "One insight per chart. Simplicity = clarity."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the presenter showing cause or correlation?",
+          "tts_text": "We increased marketing spend and revenue went up, so marketing caused the growth.",
+          "options": ["Showing correlation", "Claiming causation (needs more investigation)"],
+          "correct_answer": "Claiming causation (needs more investigation)",
+          "explanation": "Both moving together doesn't prove causation. Other factors may be at play."
+        }
+      ]
+    }
+  ]
 }

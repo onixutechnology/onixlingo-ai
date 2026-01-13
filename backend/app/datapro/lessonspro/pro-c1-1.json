@@ -1,75 +1,499 @@
 {
-    "id": "pro-c1-1",
-    "title": "Global Market Analysis",
-    "stages": [
+  "id": "pro-c1-1",
+  "title": "Global Market Analysis",
+  "description": "Master global market strategy, geopolitical analysis, market entry/expansion, competitive intelligence, and macroeconomic drivers for C-suite decision-making",
+  "difficulty": "C1",
+  "tier": "Advanced Executive - Board-Level Strategic Thinking",
+  "prerequisites": ["pro-b2-1 through pro-b2-10"],
+  "is_c1_foundation_module": true,
+  "stages": [
+    {
+      "id": "stage-intro",
+      "type": "theory",
+      "title": "Strategic Concept: C1 Global Market Analysis with Board Authority",
+      "duration": "10 min",
+      "parts": [
         {
-            "id": "stage-1",
-            "type": "theory",
-            "title": "Strategic Concept: Global Market Analysis",
-            "parts": [
-                {
-                    "visual": "Welcome to the C1 executive module: Global Market Analysis.\n\nIn this session, we analyze the critical vocabulary required to navigate this scenario with authority.\n\nKey Principle:\nTrue professionals don't just communicate information; they communicate *intent*.\n\nObserve the nuance in the following exercises.",
-                    "audio": "Welcome to the C1 executive module: Global Market Analysis. Let's master this topic."
-                }
-            ]
-        },
-        {
-            "id": "stage-2",
-            "type": "quiz",
-            "title": "Executive Comprehension",
-            "questions": [
-                {
-                    "type": "quiz_choice",
-                    "question": "Which is the most professional approach regarding 'Global Market Analysis'?",
-                    "options": [
-                        "Use casual slang to seem friendly.",
-                        "Prioritize clarity, brevity, and formal tone.",
-                        "Avoid eye contact and speak softly.",
-                        "Use overly complex words to sound smart."
-                    ],
-                    "correct_answer": "Prioritize clarity, brevity, and formal tone.",
-                    "explanation": "Executive presence is built on clear and concise communication, not complexity."
-                }
-            ]
-        },
-        {
-            "id": "stage-3",
-            "type": "gamified_quiz",
-            "title": "Structure & Syntax Drill",
-            "questions": [
-                {
-                    "type": "order_sentence",
-                    "question": "Arrange the standard corporate phrase:",
-                    "parts": [
-                        "We",
-                        "need",
-                        "to",
-                        "leverage",
-                        "our",
-                        "core",
-                        "competencies."
-                    ],
-                    "correct_order": [
-                        "We",
-                        "need",
-                        "to",
-                        "leverage",
-                        "our",
-                        "core",
-                        "competencies."
-                    ],
-                    "explanation": "'Leveraging competencies' is standard business English for using your strengths."
-                },
-                {
-                    "type": "fill_input",
-                    "question": "Complete the term: Return on ______ (ROI).",
-                    "correct_answers": [
-                        "Investment",
-                        "investment"
-                    ],
-                    "explanation": "ROI stands for Return On Investment."
-                }
-            ]
+          "visual": "Welcome to the **C1 FOUNDATION Executive Module**: Global Market Analysis.\n\nYou have MASTERED B2 (1920+ exercises across 10 modules). You are now entering **C1: Advanced Executive (Board-Level) Tier**.\n\n**The Shift from B2 to C1:**\n- **B2**: Execution excellence (meetings, projects, teams, feedback)\n- **C1**: Strategic vision (markets, geopolitics, disruption, M&A, global expansion)\n\n**The C1 Reality:**\nC1 executives think in:\n- **Years/Decades** (not quarters)\n- **Markets/Industries** (not products)\n- **Geopolitics/Macro** (not tactics)\n- **Transformation** (not optimization)\n- **Risk/Opportunity** (not KPIs)\n\n**Key Principle:**\nTrue C-suite executives don't just *execute in a market*; they **analyze markets, predict disruption, and position for the future**.\n\nIn C1 Global Market Analysis, you master:\n- **Market Sizing** - TAM/SAM/SOM framework\n- **Geopolitical Risk** - How do trade wars, tariffs, sanctions affect strategy?\n- **Market Entry** - Which markets to enter? How? With what timeline?\n- **Competitive Dynamics** - Who wins in global markets? Why?\n- **Macroeconomic Drivers** - Interest rates, inflation, currency, supply chains\n- **Disruption Signals** - What's changing? What should we prepare for?\n- **M&A Strategy** - Should we buy, build, or partner?\n\n**The C1 Market Analysis Framework: PESTEL + Porter's Five Forces + Blue Ocean**\n\n**PESTEL (Macro Environment):**\n- **Political**: Government stability, regulations, trade policy\n- **Economic**: GDP growth, inflation, interest rates, employment\n- **Social**: Demographics, culture, consumer trends\n- **Technological**: Innovation, disruption, digital transformation\n- **Environmental**: Climate, ESG, sustainability\n- **Legal**: Compliance, IP, labor laws\n\n**Porter's Five Forces (Competitive Intensity):**\n1. Threat of new entrants (barriers to entry)\n2. Bargaining power of suppliers\n3. Bargaining power of buyers\n5. Threat of substitutes\n5. Rivalry among competitors\n\n**Blue Ocean vs. Red Ocean:**\n- **Red Ocean**: Compete on price in existing market (bloody)\n- **Blue Ocean**: Create uncontested market space (unopposed)\n\n**TAM/SAM/SOM Framework (Market Sizing):**\n- **TAM** (Total Addressable Market): How big is the total market opportunity?\n- **SAM** (Serviceable Addressable Market): How much can we realistically serve?\n- **SOM** (Serviceable Obtainable Market): What can we capture in year 1-3?\n\n**The 12 Core C1 Market Analysis Principles:**\n\n1. **Macro Drives Micro** - Geopolitics/economics shape all markets\n2. **Market Selection** - Choose winning markets; exit losing ones\n3. **Entry Strategy** - Organic growth, M&A, partnerships (each has trade-offs)\n4. **Competitive Moats** - Build defensibility (brand, network, scale, IP)\n5. **Disruption Watch** - Anticipate change; be the disruptor, not the disrupted\n6. **Geopolitical Risk** - Tariffs, sanctions, instability affect supply chains\n7. **Local Knowledge** - Global strategy executed through local insights\n8. **Portfolio Balance** - Mix of growth markets, stable markets, cash cows\n9. **Regulatory Compliance** - GDPR, antitrust, environmental regulations\n10. **Currency & Macro** - Exchange rates, inflation impact profitability\n11. **Talent Arbitrage** - Where is top talent? Where are costs lowest?\n12. **Strategic Patience** - Long-term vision over quarterly pressure\n\n**Common C1 Market Analysis Traps:**\n- ❌ Assuming home market = global market (local nuances matter)\n- ❌ Entering too many markets at once (spread too thin)\n- ❌ Ignoring geopolitical risk (tariffs, sanctions, instability destroy models)\n- ❌ Competing on price in low-margin markets (race to bottom)\n- ❌ Missing disruption signals (Kodak missed digital; Blockbuster missed streaming)\n- ❌ Overpaying for M&A (integration is hard; cultural fit fails)\n- ❌ Ignoring regulatory changes (GDPR cost billions; AI regulation emerging)\n- ❌ Chasing growth in wrong markets (sexy market ≠ profitable market)\n- ❌ Building moats without defensibility (easy to copy)\n- ❌ Centralized decision-making (local teams understand local markets)\n\n**Global Market Categories:**\n\n1. **Growth Markets** (high growth, high risk): India, Vietnam, Indonesia, Brazil\n2. **Developed Markets** (stable, mature): US, Western Europe, Japan, Australia\n3. **Emerging Markets** (rising middle class): China, Southeast Asia, Middle East\n4. **Frontier Markets** (frontier, very high risk): Nigeria, Bangladesh, Pakistan\n5. **Developed Markets Under Stress** (declining, high risk): Russia (sanctions), Iran (sanctions)\n\n**Market Entry Strategies:**\n\n1. **Organic (Build)** - Start from scratch, hire local team, gradual growth (slow but controlled)\n2. **M&A (Buy)** - Acquire local competitor, get instant market access (fast but risky, integration hard)\n3. **Partnerships** - JV, distribution deal, whitelist OEM (fast but loss of control)\n4. **Franchise** - License model to local operators (scalable but brand risk)\n\n**C1 Executive Mindset:**\n- Think in **3-10 year horizons**, not quarters\n- Make decisions with **70% certainty, not 100%** (perfect data never comes)\n- **Manage portfolio**: balance growth markets with cash cows\n- **Build moats**: compete on defensibility, not price\n- **Anticipate disruption**: change is the constant\n- **Local execution**: global strategy, local tactics\n- **Risk management**: what's my downside if wrong?\n\n**The Geopolitical Risk Premium:**\nWhen entering markets with political/economic instability, require higher returns (e.g., Russia 20% return hurdle vs. Western Europe 10%).\n\n**Example C1 Thinking:**\nB2 executive: \"We're growing 30% YoY! Let's expand to 5 new markets.\"\nC1 executive: \"Impressive, but which markets? What's TAM? Regulatory risk? Currency risk? Competitive dynamics? Do we have local talent? What's our 5-year economics in each? Let's prioritize 2 markets, master them, then expand.\"",
+          "audio": "Welcome to C1 Global Market Analysis. You've mastered execution. Now master strategy. This module is about analyzing the global chessboard: which markets matter? Where is disruption? How do geopolitics change our strategy? Think like a board member, not a manager."
         }
-    ]
+      ]
+    },
+    {
+      "id": "stage-listening",
+      "type": "quiz",
+      "title": "Phase 1: Auditory Analysis - Market Analysis Cues (Listening)",
+      "duration": "19 min",
+      "total_questions": 40,
+      "questions": [
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this TAM sizing realistic?",
+          "tts_text": "Our market opportunity is huge. We're targeting the global software market, which is $1 trillion+. Our initial target is Fortune 5000 companies in North America.",
+          "options": ["Confused sizing (TAM ≠ SAM)", "Clear TAM vs. SAM distinction"],
+          "correct_answer": "Confused sizing (TAM ≠ SAM)",
+          "explanation": "TAM = $1T (global software). SAM = Fortune 5000 in NA = ~$50B. SOM (year 1) = maybe $1B. They're mixing them up."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the geopolitical risk oversight:",
+          "tts_text": "We're expanding to China because it's the fastest-growing market. No regulatory concerns; our product will work anywhere.",
+          "options": ["Realistic", "Naive (ignoring geopolitical + regulatory risk)"],
+          "correct_answer": "Naive (ignoring geopolitical + regulatory risk)",
+          "explanation": "China expansion ignores: IP theft risk, data localization reqs, government approval, US-China tensions affecting B2B, regulatory scrutiny."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the competitive analysis comprehensive?",
+          "tts_text": "Our competitive advantage is our technology. We're the best in the world.",
+          "options": ["Comprehensive", "Incomplete (ignores Porter's Five Forces)"],
+          "correct_answer": "Incomplete (ignores Porter's Five Forces)",
+          "explanation": "Must analyze: new entrants, suppliers, buyers, substitutes, rivals. Technology alone isn't defensible if others can copy."
+        },
+        {
+          "type": "listening_match",
+          "question": "What does this reveal about market understanding?",
+          "tts_text": "We're entering India because the population is huge and growing. Our product works in developed markets, so it'll work there.",
+          "options": ["Smart expansion", "Risky (local adaptation required)"],
+          "correct_answer": "Risky (local adaptation required)",
+          "explanation": "India ≠ US. Different income levels, payment methods, regulatory environment, customer expectations. Requires local product/pricing/go-to-market."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Does this company understand disruption risk?",
+          "tts_text": "Our core business is growing 20% YoY. No threats on the horizon. Market is very stable.",
+          "options": ["Complacent (disruption emerging)", "Alert (watching carefully)"],
+          "correct_answer": "Complacent (disruption emerging)",
+          "explanation": "Kodak was growing when digital photography emerged. Blockbuster was growing when streaming emerged. Complacency = death."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the M&A strategy clarity:",
+          "tts_text": "We want to acquire a company in Europe to accelerate growth. We haven't identified a target yet, but we're open to anything.",
+          "options": ["Clear strategy", "Unfocused (no acquisition thesis)"],
+          "correct_answer": "Unfocused (no acquisition thesis)",
+          "explanation": "Before acquiring, define: what capabilities do we need? What cultural fit? What size? What geography? Random acquisitions fail."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is the macro environment considered?",
+          "tts_text": "We're expanding into emerging markets. Interest rates are rising, currencies are volatile, but that won't affect us.",
+          "options": ["Prepared", "Risky (ignoring macro)"],
+          "correct_answer": "Risky (ignoring macro)",
+          "explanation": "Rising rates reduce B2B spending, customer CAC rises, churn increases. Currency volatility affects profit. These matter."
+        },
+        {
+          "type": "listening_match",
+          "question": "What does this reveal about market selection?",
+          "tts_text": "We're entering 8 new markets this year: India, Brazil, Vietnam, Mexico, Nigeria, Egypt, Poland, and UAE.",
+          "options": ["Aggressive growth", "Overextended (spread too thin)"],
+          "correct_answer": "Overextended (spread too thin)",
+          "explanation": "8 markets = 8 different regulatory, competitive, cultural contexts. Execution quality drops. Better to master 2 deeply."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Are they building defensible moats?",
+          "tts_text": "Our competitive advantage is speed to market. We can ship features faster than competitors.",
+          "options": ["Defensible moat", "Weak moat (easy to copy)"],
+          "correct_answer": "Weak moat (easy to copy)",
+          "explanation": "Speed is replicable. Defensible moats: brand, network effects, switching costs, economies of scale, IP."
+        },
+        {
+          "type": "listening_match",
+          "question": "Identify the currency risk awareness:",
+          "tts_text": "We earn revenue in USD but have costs in 12 different countries' currencies. We haven't hedged currency exposure.",
+          "options": ["Managed risk", "Unmanaged risk (vulnerable)"],
+          "correct_answer": "Unmanaged risk (vulnerable)",
+          "explanation": "Unhedged foreign exchange = profit volatility. If USD strengthens, revenue declines in real terms. Must hedge or accept volatility."
+        }
+      ]
+    },
+    {
+      "id": "stage-choice",
+      "type": "quiz",
+      "title": "Phase 2: Strategic Selection - Global Market Scenarios (Choice)",
+      "duration": "21 min",
+      "total_questions": 42,
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "You're a SaaS company with $50M ARR (US-only). Board wants international expansion. Which market to enter first?",
+          "options": [
+            "China (largest market, highest growth).",
+            "Western Europe (stable, mature, regulatory clarity, similar to US).",
+            "India (huge population, fastest-growing, cheapest).",
+            "All simultaneously (diversify risk)."],
+          "correct_answer": "Western Europe (stable, mature, regulatory clarity, similar to US).",
+          "explanation": "Easiest entry: legal system similar to US, GDPR is known, English-speaking execs. Master it, then expand to harder markets."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your market is growing 50% annually in developed markets but only 5% in emerging markets. Where should you invest?",
+          "options": [
+            "Stop emerging markets entirely.",
+            "'Developed markets = cash generation (stable). Emerging markets = future growth (plant seeds now). Split 70/30.'",
+            "All in emerging (higher growth potential).",
+            "Equal investment in both."],
+          "correct_answer": "'Developed markets = cash generation (stable). Emerging markets = future growth (plant seeds now). Split 70/30.'",
+          "explanation": "Portfolio balance: cash cows fund growth bets (C1 strategic thinking)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A competitor just entered your market with aggressive pricing (30% below you). You:",
+          "options": [
+            "Match their price immediately.",
+            "'Analyze: Are they profitable at that price? Is this a race-to-bottom? Or market expansion? If losing margin war, differentiate on value, not price.'",
+            "Exit the market.",
+            "Ignore them; keep pricing."],
+          "correct_answer": "'Analyze: Are they profitable at that price? Is this a race-to-bottom? Or market expansion? If losing margin war, differentiate on value, not price.'",
+          "explanation": "Price war = destruction. Better to own premium segment or shift to value (not cheaper)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A tariff on tech products increases your COGS by 15%. Market price can't increase (competitive pressure). You:",
+          "options": [
+            "Accept lower margins.",
+            "'Move supply chain out of tariff zone, or find tariff-exempt suppliers, or negotiate with government, or raise prices strategically with value shift.'",
+            "Pass costs to customers.",
+            "Exit the market."],
+          "correct_answer": "'Move supply chain out of tariff zone, or find tariff-exempt suppliers, or negotiate with government, or raise prices strategically with value shift.'",
+          "explanation": "Geopolitical risk requires supply chain agility (C1 strategic response)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Your company has strong engineering talent in India, expensive talent in Silicon Valley. Optimal strategy:",
+          "options": [
+            "Centralize all engineering in SV (proximity).",
+            "'Distribute: Product/innovation in SV, scale engineering in India. Leverage talent arbitrage; control core IP.'",
+            "Move everything to India (cost savings).",
+            "Equal distribution everywhere."],
+          "correct_answer": "'Distribute: Product/innovation in SV, scale engineering in India. Leverage talent arbitrage; control core IP.'",
+          "explanation": "Talent arbitrage + IP protection = optimal (C1 organizational design)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You've identified a market with $100M TAM, but competitors are entrenched. You:",
+          "options": [
+            "Ignore it (too competitive).",
+            "'Is this a red ocean? Can we create blue ocean by redefining the market? Or skip and find a $20M TAM where we have moat?'",
+            "Enter aggressively anyway.",
+            "Partner with entrenched competitor."],
+          "correct_answer": "'Is this a red ocean? Can we create blue ocean by redefining the market? Or skip and find a $20M TAM where we have moat?'",
+          "explanation": "Red ocean = low margins, high risk. Better to own a small blue ocean than lose a large red ocean (C1 strategy)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "An AI startup in your market is growing 200% YoY. They use AI for something you currently do manually. You:",
+          "options": [
+            "Ignore them; they're too small.",
+            "'This is a disruption signal. Do we: 1) Acquire them, 2) Build AI in-house, 3) Pivot our model, or 4) Partner? Urgent.'",
+            "Compete on pricing.",
+            "Wait to see if they survive."],
+          "correct_answer": "'This is a disruption signal. Do we: 1) Acquire them, 2) Build AI in-house, 3) Pivot our model, or 4) Partner? Urgent.'",
+          "explanation": "Anticipate disruption before it's too late. Kodak invented digital but ignored it. Don't be Kodak."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "You're evaluating an M&A target in Europe: 500 employees, €50M ARR, great technology, but cultural fit is unclear. You:",
+          "options": [
+            "Acquire; worry about culture later.",
+            "'Before acquiring: 1) Deep cultural due diligence, 2) Retention plan for key talent, 3) Integration roadmap, 4) Realistic synergy targets. If culture is bad, walk.'",
+            "Walk away immediately.",
+            "Acquire only if valuation is cheap enough."],
+          "correct_answer": "'Before acquiring: 1) Deep cultural due diligence, 2) Retention plan for key talent, 3) Integration roadmap, 4) Realistic synergy targets. If culture is bad, walk.'",
+          "explanation": "M&A failures are usually cultural, not strategic. Culture risk = deal killer (C1 M&A wisdom)."
+        }
+      ]
+    },
+    {
+      "id": "stage-structure",
+      "type": "gamified_quiz",
+      "title": "Phase 3: Syntactic Architecture - Global Market Framework (Ordering)",
+      "duration": "18 min",
+      "total_questions": 26,
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "The Market Sizing Statement (TAM/SAM/SOM):",
+          "parts": ["TAM:", "$100B", "(global", "SaaS).", "SAM:", "$10B", "(enterprise", "North", "America).", "SOM:", "$500M", "(our", "year", "3", "target)."],
+          "correct_order": ["TAM:", "$100B", "(global", "SaaS).", "SAM:", "$10B", "(enterprise", "North", "America).", "SOM:", "$500M", "(our", "year", "3", "target)."],
+          "explanation": "Clear sizing hierarchy: opportunity → serviceable → obtainable."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Geopolitical Risk Assessment:",
+          "parts": ["Market:", "China.", "Risk:", "IP", "theft,", "data", "localization,", "US", "tensions.", "Mitigation:", "Partner", "with", "trusted", "local", "entity."],
+          "correct_order": ["Market:", "China.", "Risk:", "IP", "theft,", "data", "localization,", "US", "tensions.", "Mitigation:", "Partner", "with", "trusted", "local", "entity."],
+          "explanation": "Identify risk, then mitigate."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Competitive Moat Analysis:",
+          "parts": ["Moat:", "Network", "effects", "+", "switching", "costs.", "Defensibility:", "Strong", "(hard", "to", "compete).", "Duration:", "5-10", "years."],
+          "correct_order": ["Moat:", "Network", "effects", "+", "switching", "costs.", "Defensibility:", "Strong", "(hard", "to", "compete).", "Duration:", "5-10", "years."],
+          "explanation": "Defensibility is key to long-term value."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The M&A Thesis:",
+          "parts": ["Acquire", "for:", "Engineering", "talent.", "Cultural", "fit:", "Strong.", "Valuation:", "6x", "revenue.", "Synergies:", "$20M", "over", "2", "years."],
+          "correct_order": ["Acquire", "for:", "Engineering", "talent.", "Cultural", "fit:", "Strong.", "Valuation:", "6x", "revenue.", "Synergies:", "$20M", "over", "2", "years."],
+          "explanation": "Clear acquisition thesis + realistic synergies."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Market Entry Decision:",
+          "parts": ["Market:", "India.", "Entry", "method:", "Organic", "+", "partnerships.", "Timeline:", "18", "months.", "Investment:", "$10M."],
+          "correct_order": ["Market:", "India.", "Entry", "method:", "Organic", "+", "partnerships.", "Timeline:", "18", "months.", "Investment:", "$10M."],
+          "explanation": "Clear entry plan with method + timeline + investment."
+        },
+        {
+          "type": "order_sentence",
+          "question": "The Disruption Response Plan:",
+          "parts": ["Threat:", "AI", "competitor", "200%", "growth.", "Response:", "Acquire", "or", "build", "AI.", "Timeline:", "6", "months.", "Decision", "deadline:", "30", "days."],
+          "correct_order": ["Threat:", "AI", "competitor", "200%", "growth.", "Response:", "Acquire", "or", "build", "AI.", "Timeline:", "6", "months.", "Decision", "deadline:", "30", "days."],
+          "explanation": "Identify, decide, execute (C1 urgency)."
+        }
+      ]
+    },
+    {
+      "id": "stage-vocab",
+      "type": "gamified_quiz",
+      "title": "Phase 4: Global Market Vocabulary & Concepts (Input)",
+      "duration": "18 min",
+      "total_questions": 56,
+      "questions": [
+        {
+          "type": "fill_input",
+          "question": "______ (Total Addressable Market: how big is the total opportunity?) is the ceiling of revenue potential.",
+          "correct_answers": ["TAM", "tam"],
+          "explanation": "TAM = market size if you owned 100% (unrealistic but useful)."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Serviceable Addressable Market: how much can we realistically reach?) is more realistic than TAM.",
+          "correct_answers": ["SAM", "sam"],
+          "explanation": "SAM = realistic addressable market given competition + geography + product fit."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Serviceable Obtainable Market: what can we capture in 3-5 years?) is your financial forecast.",
+          "correct_answers": ["SOM", "som"],
+          "explanation": "SOM = what you actually expect to capture."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Competitive advantage that's hard to replicate) protects long-term profitability.",
+          "correct_answers": ["Moat", "moat"],
+          "explanation": "Moats: brand, network effects, switching costs, scale, IP."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Analysis of: political, economic, social, tech, environmental, legal factors) frames market opportunity.",
+          "correct_answers": ["PESTEL", "pestel"],
+          "explanation": "PESTEL = macro environment analysis."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (5 forces: new entrants, suppliers, buyers, substitutes, rivals) determines market attractiveness.",
+          "correct_answers": ["Porter's Five Forces", "Five Forces"],
+          "explanation": "If all 5 forces are strong (high barriers, weak suppliers/buyers, few substitutes), market is attractive."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Competing in established market with price pressure) vs. Blue Ocean (creating uncontested space).",
+          "correct_answers": ["Red Ocean", "Red"],
+          "explanation": "Red = bloody, competitive. Blue = unopposed, profitable."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Market emerging with rapid growth, higher risk, often with lower regulations) attracts entrepreneurs.",
+          "correct_answers": ["Emerging market", "Emerging"],
+          "explanation": "Examples: India, Vietnam, Brazil. High growth, high risk."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Established market with stable growth, mature competition, clear regulations) is safer but slower growth.",
+          "correct_answers": ["Developed market", "Developed"],
+          "explanation": "Examples: US, Western Europe, Japan. Stable, mature, competitive."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Combining smaller market share with higher prices/margins in premium segment) avoids price war.",
+          "correct_answers": ["Premium positioning", "positioning"],
+          "explanation": "Choose: compete on price (red ocean) or value (blue ocean)."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Growth from within: hiring, building product, gradual market expansion) is slower but controlled.",
+          "correct_answers": ["Organic growth", "Organic"],
+          "explanation": "Organic = you control culture + execution."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Growth by acquiring competitor: instant market access, customers, talent) is faster but integration-heavy.",
+          "correct_answers": ["Inorganic growth", "Inorganic"],
+          "explanation": "Inorganic = fast but culture/integration risks."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Business model where local operators run business under your brand + guidance) scales fast with lower capital.",
+          "correct_answers": ["Franchise", "Franchise"],
+          "explanation": "Franchise = scalable but brand risk if franchisees underperform."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Joint venture with local partner: share equity, risk, and control) balances speed + risk.",
+          "correct_answers": ["Joint venture", "JV"],
+          "explanation": "JV = partnership model. Need aligned incentives."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Unexpected change (technology, regulation, competitor, macro) that disrupts existing markets) kills complacency.",
+          "correct_answers": ["Disruption", "Disruption"],
+          "explanation": "Examples: digital photography (Kodak), streaming (Blockbuster), smartphones (Nokia)."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Cost difference for companies doing business across multiple countries due to exchange rates, tariffs, labor) affects profitability.",
+          "correct_answers": ["Geopolitical risk", "risk"],
+          "explanation": "Tariffs, sanctions, currency volatility, political instability all matter."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Risk premium required for investing in unstable markets: 15-20% hurdle rate vs. 10% in developed) reflects uncertainty.",
+          "correct_answers": ["Risk premium", "premium"],
+          "explanation": "Higher risk = require higher expected returns."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Strategy where employees in lower-cost countries do same work as higher-cost countries) reduces costs.",
+          "correct_answers": ["Talent arbitrage", "arbitrage"],
+          "explanation": "Example: engineering in India vs. Silicon Valley."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Protection of intellectual property: patents, trademarks, copyrights) especially important in IP-theft-risk countries.",
+          "correct_answers": ["IP protection", "IP"],
+          "explanation": "Must be deliberate in China, Russia, India."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (How much profit / revenue from global operations due to taxes, tariffs, currency, regulatory compliance) affects real earnings.",
+          "correct_answers": ["Margin compression", "margin"],
+          "explanation": "Global expansion often compresses margins initially (regulatory, localization costs)."
+        }
+      ]
+    },
+    {
+      "id": "stage-mastery",
+      "type": "quiz",
+      "title": "Phase 5: Executive Mastery - Advanced Global Strategy (Scenarios)",
+      "duration": "19 min",
+      "total_questions": 34,
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is 'The Innovator's Dilemma'?",
+          "options": [
+            "Hard to innovate.",
+            "Successful companies optimize existing business; miss disruption. (Kodak, Blockbuster, Nokia, Blackberry)",
+            "Innovation is expensive.",
+            "Not a real concept."],
+          "correct_answer": "Successful companies optimize existing business; miss disruption. (Kodak, Blockbuster, Nokia, Blackberry)",
+          "explanation": "Core C1 risk: Become complacent; get disrupted."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this company thinking strategically about market selection?",
+          "tts_text": "Our top growth market is Southeast Asia. We're allocating 10% of resources there because it's high-growth but risky. Our core market is Western Europe; 80% of resources.",
+          "options": [
+            "Imbalanced (too much in core).",
+            "Strategic (core funds operations; growth markets plant seeds for future). Realistic portfolio."
+          ],
+          "correct_answer": "Strategic (core funds operations; growth markets plant seeds for future). Realistic portfolio.",
+          "explanation": "Cash cows fund growth bets = C1 portfolio management."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'the Globalization Trap'?",
+          "options": [
+            "Not expanding globally.",
+            "Assuming global model = local execution. Ignoring cultural, regulatory, competitive nuances.",
+            "Too much local adaptation.",
+            "Not real."],
+          "correct_answer": "Assuming global model = local execution. Ignoring cultural, regulatory, competitive nuances.",
+          "explanation": "Glocalization = global strategy, local execution."
+        },
+        {
+          "type": "fill_input",
+          "question": "______ (Ability to access data + insights about competitors, markets, regulations, disruption signals) is boardroom currency.",
+          "correct_answers": ["Market intelligence", "intelligence"],
+          "explanation": "Competitive intelligence drives strategic decisions."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Does this company understand supply chain geopolitics?",
+          "tts_text": "Our supply chain is 40% China, 30% Vietnam, 20% India, 10% US. No concentration risk; we're diversified.",
+          "options": [
+            "Well-diversified.",
+            "Vulnerable (China dependency still high; US-China tensions affect all 3 countries)."
+          ],
+          "correct_answer": "Vulnerable (China dependency still high; US-China tensions affect all 3 countries).",
+          "explanation": "All three countries (China, Vietnam, India) are affected by US-China trade tensions. Must diversify outside Asia."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'The Local Content Problem'?",
+          "options": [
+            "Not making local content.",
+            "Many countries require % local ownership, staff, suppliers. Increases costs; restricts control.",
+            "Content marketing doesn't work locally.",
+            "Not relevant."],
+          "correct_answer": "Many countries require % local ownership, staff, suppliers. Increases costs; restricts control.",
+          "explanation": "India, Brazil, Russia all have local content requirements. Must factor into strategy."
+        },
+        {
+          "type": "order_sentence",
+          "question": "Present a global expansion decision framework:",
+          "parts": ["Market", "selection:", "[criteria]", "→", "Entry", "method:", "[options]", "→", "Resource", "allocation:", "[investment]", "→", "Measure:", "[KPIs]", "→", "Decide.", "Review", "quarterly."],
+          "correct_order": ["Market", "selection:", "[criteria]", "→", "Entry", "method:", "[options]", "→", "Resource", "allocation:", "[investment]", "→", "Measure:", "[KPIs]", "→", "Decide.", "Review", "quarterly."],
+          "explanation": "Systematic global expansion: market → method → resource → measure → review."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'The Currency Headwind'?",
+          "options": [
+            "Wind that's expensive.",
+            "Strong home currency makes exports expensive; weak currency makes imports expensive. Either way, pressure on margins.",
+            "Currency never matters.",
+            "Not real."],
+          "correct_answer": "Strong home currency makes exports expensive; weak currency makes imports expensive. Either way, pressure on margins.",
+          "explanation": "USD strength 2020-2023 hurt US exporters; strengthened US importers."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen. Is this company prepared for regulatory disruption?",
+          "tts_text": "We're a tech company. GDPR happened. Now AI regulation is coming. We're monitoring regulatory changes.",
+          "options": [
+            "Reactive (just monitoring).",
+            "Somewhat prepared (at least watching). Better would be: 'We're built GDPR-compliant. We're AI-regulation-ready before it passes.'"
+          ],
+          "correct_answer": "Somewhat prepared (at least watching). Better would be: 'We're built GDPR-compliant. We're AI-regulation-ready before it passes.'",
+          "explanation": "Proactive = build for regulation before it's required (C1 strategic planning)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'The Pricing Arbitrage Problem'?",
+          "options": [
+            "Pricing is arbitrary.",
+            "In global markets, price same product differently by geography. Customers find cheaper version; buy + resell (gray market).",
+            "Arbitrage doesn't exist.",
+            "Not relevant to global companies."],
+          "correct_answer": "In global markets, price same product differently by geography. Customers find cheaper version; buy + resell (gray market).",
+          "explanation": "Pharmaceutical, software, luxury goods all face gray market. Must prevent geographic arbitrage."
+        }
+      ]
+    }
+  ]
 }

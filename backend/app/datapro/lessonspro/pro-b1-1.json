@@ -1,6 +1,9 @@
 {
   "id": "pro-b1-1",
   "title": "Executive Presence: The 50-Step Gauntlet",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
   "stages": [
     {
       "id": "stage-intro",
@@ -24,7 +27,7 @@
           "tts_text": "Hey guys, I'm gonna talk about the numbers now.",
           "options": ["Appropriate", "Inappropriate"],
           "correct_answer": "Inappropriate",
-          "explanation": "Casual phrasing ('Hey guys', 'gonna') undermines authority in board settings."
+          "explanation": "🇬🇧 Casual phrasing ('Hey guys', 'gonna') undermines authority in board settings.\n\n🇪🇸 El fraseo casual ('Hey guys', 'gonna') socava la autoridad en reuniones directivas."
         },
         {
           "type": "listening_match",
@@ -32,7 +35,7 @@
           "tts_text": "I oversee the strategic alignment of our APAC subsidiaries.",
           "options": ["Operational Staff", "Executive Leadership", "Intern"],
           "correct_answer": "Executive Leadership",
-          "explanation": "'Oversee', 'Strategic Alignment', and 'Subsidiaries' are C-Level vocabulary markers."
+          "explanation": "🇬🇧 'Oversee', 'Strategic Alignment', and 'Subsidiaries' are C-Level vocabulary markers.\n\n🇪🇸 'Supervisar', 'Alineación Estratégica' y 'Filiales' son marcadores de vocabulario de nivel ejecutivo."
         },
         {
           "type": "listening_match",
@@ -40,7 +43,7 @@
           "tts_text": "I [help/facilitate] cross-border transactions.",
           "options": ["Help", "Facilitate"],
           "correct_answer": "Facilitate",
-          "explanation": "'Facilitate' implies process ownership; 'Help' is generic."
+          "explanation": "🇬🇧 'Facilitate' implies process ownership; 'Help' is generic.\n\n🇪🇸 'Facilitar' implica propiedad del proceso; 'Ayudar' es genérico."
         },
         {
           "type": "listening_match",
@@ -48,7 +51,7 @@
           "tts_text": "Um, hi, I am... I think I am the new manager.",
           "options": ["Lack of confidence", "Too aggressive", "Too formal"],
           "correct_answer": "Lack of confidence",
-          "explanation": "Hesitation markers ('Um', 'I think') destroy credibility instantly."
+          "explanation": "🇬🇧 Hesitation markers ('Um', 'I think') destroy credibility instantly.\n\n🇪🇸 Los marcadores de duda ('Um', 'Creo que') destruyen la credibilidad instantáneamente."
         },
         {
           "type": "listening_match",
@@ -56,7 +59,7 @@
           "tts_text": "I am responsible for the management of the sales team.",
           "options": ["I manage the sales team.", "I am responsible for the management."],
           "correct_answer": "I manage the sales team.",
-          "explanation": "Executive brevity: Use verbs (Manage) instead of noun phrases (Responsible for management)."
+          "explanation": "🇬🇧 Executive brevity: Use verbs (Manage) instead of noun phrases (Responsible for management).\n\n🇪🇸 Brevedad ejecutiva: Usa verbos (Gestionar) en lugar de frases nominales (Responsable de la gestión)."
         },
         {
           "type": "listening_match",
@@ -64,7 +67,7 @@
           "tts_text": "I'm Dave. I work in IT.",
           "options": ["Yes", "No"],
           "correct_answer": "No",
-          "explanation": "It states identity but lacks Scope and Impact."
+          "explanation": "🇬🇧 It states identity but lacks Scope and Impact.\n\n🇪🇸 Indica identidad pero carece de Alcance e Impacto."
         },
         {
           "type": "listening_match",
@@ -72,7 +75,7 @@
           "tts_text": "I lead the QA team to ensure zero-defect product launches.",
           "options": ["I lead the QA team", "Ensure zero-defect product launches"],
           "correct_answer": "Ensure zero-defect product launches",
-          "explanation": "The impact is the result or benefit (zero defects), not the role itself."
+          "explanation": "🇬🇧 The impact is the result or benefit (zero defects), not the role itself.\n\n🇪🇸 El impacto es el resultado o beneficio (cero defectos), no el rol en sí."
         },
         {
           "type": "listening_match",
@@ -80,7 +83,7 @@
           "tts_text": "I handle the money.",
           "options": ["I handle the money", "I direct financial strategy"],
           "correct_answer": "I direct financial strategy",
-          "explanation": "'Direct financial strategy' implies foresight; 'Handle money' sounds clerical."
+          "explanation": "🇬🇧 'Direct financial strategy' implies foresight; 'Handle money' sounds clerical.\n\n🇪🇸 'Dirigir la estrategia financiera' implica visión; 'Manejar dinero' suena administrativo."
         },
         {
           "type": "listening_match",
@@ -88,7 +91,7 @@
           "tts_text": "I am currently coding the new login page.",
           "options": ["Task", "Strategy"],
           "correct_answer": "Task",
-          "explanation": "Specific, low-level actions are tasks. Strategy would be 'Enhancing user authentication'."
+          "explanation": "🇬🇧 Specific, low-level actions are tasks. Strategy would be 'Enhancing user authentication'.\n\n🇪🇸 Las acciones específicas de bajo nivel son tareas. La estrategia sería 'Mejorar la autenticación de usuarios'."
         },
         {
           "type": "listening_match",
@@ -96,7 +99,7 @@
           "tts_text": "Good morning. John Doe, VP of Operations. A pleasure.",
           "options": ["Yes", "No"],
           "correct_answer": "Yes",
-          "explanation": "Concise, titled, and polite. Perfect execution."
+          "explanation": "🇬🇧 Concise, titled, and polite. Perfect execution.\n\n🇪🇸 Conciso, con título y educado. Ejecución perfecta."
         }
       ]
     },
@@ -115,7 +118,7 @@
             "Hey, wanna hear about my business?"
           ],
           "correct_answer": "Good afternoon. I'm the Founder of Onix, a fintech scaling at 20% MoM.",
-          "explanation": "Investors care about metrics (scaling 20%) and defined roles."
+          "explanation": "🇬🇧 Investors care about metrics (scaling 20%) and defined roles.\n\n🇪🇸 A los inversores les importan las métricas (escalado del 20%) y los roles definidos."
         },
         {
           "type": "quiz_choice",
@@ -127,63 +130,63 @@
             "I'm the guy who emailed you."
           ],
           "correct_answer": "Alex Mercer, Lead Consultant. Great to connect again.",
-          "explanation": "State your full name and title confidently without acknowledging the awkwardness."
+          "explanation": "🇬🇧 State your full name and title confidently without acknowledging the awkwardness.\n\n🇪🇸 Di tu nombre completo y título con confianza sin reconocer la incomodidad."
         },
         {
           "type": "quiz_choice",
           "question": "Which word is a 'Weasel Word' (weak) that you should avoid?",
           "options": ["Spearhead", "Try", "Execute", "Analyze"],
           "correct_answer": "Try",
-          "explanation": "Do or do not. 'Try' implies the possibility of failure."
+          "explanation": "🇬🇧 Do or do not. 'Try' implies the possibility of failure.\n\n🇪🇸 Hazlo o no lo hagas. 'Intentar' implica la posibilidad de fracaso."
         },
         {
           "type": "quiz_choice",
           "question": "You are leading a project. Which title describes you best if you are not a manager?",
           "options": ["Project Helper", "Project Lead", "Project Worker", "The person in charge"],
           "correct_answer": "Project Lead",
-          "explanation": "'Lead' is a powerful non-managerial title that commands respect."
+          "explanation": "🇬🇧 'Lead' is a powerful non-managerial title that commands respect.\n\n🇪🇸 'Líder' es un título poderoso no gerencial que inspira respeto."
         },
         {
           "type": "quiz_choice",
           "question": "Select the best synonym for 'I change things':",
           "options": ["I alter stuff.", "I drive transformation.", "I switch processes.", "I make things different."],
           "correct_answer": "I drive transformation.",
-          "explanation": "'Transformation' is the corporate standard for significant change."
+          "explanation": "🇬🇧 'Transformation' is the corporate standard for significant change.\n\n🇪🇸 'Transformación' es el estándar corporativo para cambios significativos."
         },
         {
           "type": "quiz_choice",
           "question": "When meeting a C-Level executive, your introduction should be:",
           "options": ["Long and detailed", "Personal and funny", "Concise and value-driven", "Modest and shy"],
           "correct_answer": "Concise and value-driven",
-          "explanation": "Executives are time-poor. Get to the value proposition immediately."
+          "explanation": "🇬🇧 Executives are time-poor. Get to the value proposition immediately.\n\n🇪🇸 Los ejecutivos tienen poco tiempo. Ve a la propuesta de valor inmediatamente."
         },
         {
           "type": "quiz_choice",
           "question": "Which phrase establishes 'Scope'?",
           "options": ["I work hard.", "I oversee the North American division.", "I am good at sales.", "I like my job."],
           "correct_answer": "I oversee the North American division.",
-          "explanation": "Scope defines the boundaries of your authority (North American division)."
+          "explanation": "🇬🇧 Scope defines the boundaries of your authority (North American division).\n\n🇪🇸 El alcance define los límites de tu autoridad (división norteamericana)."
         },
         {
           "type": "quiz_choice",
           "question": "You are entering a conference call. What do you say?",
           "options": ["Is anyone there?", "Hello?", "Sarah here, Marketing Director.", "Can you hear me?"],
           "correct_answer": "Sarah here, Marketing Director.",
-          "explanation": "Announce your presence and role clearly to avoid confusion."
+          "explanation": "🇬🇧 Announce your presence and role clearly to avoid confusion.\n\n🇪🇸 Anuncia tu presencia y rol claramente para evitar confusiones."
         },
         {
           "type": "quiz_choice",
           "question": "Choose the stronger verb: 'I ______ problems.'",
           "options": ["fix", "resolve", "mitigate", "do"],
           "correct_answer": "mitigate",
-          "explanation": "'Mitigate' is specific to risk and complex problems; 'fix' is manual."
+          "explanation": "🇬🇧 'Mitigate' is specific to risk and complex problems; 'fix' is manual.\n\n🇪🇸 'Mitigar' es específico para riesgos y problemas complejos; 'arreglar' es manual."
         },
         {
           "type": "quiz_choice",
           "question": "What is an 'Elevator Pitch'?",
           "options": ["A sales technique for elevators.", "A 30-second summary of who you are and your value.", "A speech about elevator maintenance.", "A long story."],
           "correct_answer": "A 30-second summary of who you are and your value.",
-          "explanation": "It is a core executive skill: condensing value into a brief timeframe."
+          "explanation": "🇬🇧 It is a core executive skill: condensing value into a brief timeframe.\n\n🇪🇸 Es una habilidad ejecutiva clave: condensar el valor en un periodo breve."
         }
       ]
     },
@@ -197,70 +200,70 @@
           "question": "Build the formal introduction:",
           "parts": ["Allow", "me", "to", "introduce", "myself,", "I", "am", "the", "COO."],
           "correct_order": ["Allow", "me", "to", "introduce", "myself,", "I", "am", "the", "COO."],
-          "explanation": "A classic, polite, and authoritative opening."
+          "explanation": "🇬🇧 A classic, polite, and authoritative opening.\n\n🇪🇸 Una apertura clásica, educada y autoritaria."
         },
         {
           "type": "order_sentence",
           "question": "Construct the scope statement:",
           "parts": ["I", "am", "tasked", "with", "optimizing", "global", "logistics."],
           "correct_order": ["I", "am", "tasked", "with", "optimizing", "global", "logistics."],
-          "explanation": "'Tasked with' is a passive but formal way to describe assigned responsibility."
+          "explanation": "🇬🇧 'Tasked with' is a passive but formal way to describe assigned responsibility.\n\n🇪🇸 'Encargado de' es una forma pasiva pero formal de describir responsabilidad asignada."
         },
         {
           "type": "order_sentence",
           "question": "Order the value proposition:",
           "parts": ["My", "focus", "is", "driving", "revenue", "growth", "in", "Q3."],
           "correct_order": ["My", "focus", "is", "driving", "revenue", "growth", "in", "Q3."],
-          "explanation": "Focus + Action Verb + Metric + Timeframe."
+          "explanation": "🇬🇧 Focus + Action Verb + Metric + Timeframe.\n\n🇪🇸 Enfoque + Verbo de Acción + Métrica + Plazo."
         },
         {
           "type": "order_sentence",
           "question": "Assemble the experience statement:",
           "parts": ["I", "bring", "a", "decade", "of", "experience", "in", "fintech."],
           "correct_order": ["I", "bring", "a", "decade", "of", "experience", "in", "fintech."],
-          "explanation": "'Bringing experience' frames your past as a present asset."
+          "explanation": "🇬🇧 'Bringing experience' frames your past as a present asset.\n\n🇪🇸 'Traer experiencia' enmarca tu pasado como un activo presente."
         },
         {
           "type": "order_sentence",
           "question": "Create the liaison statement:",
           "parts": ["I", "serve", "as", "the", "primary", "liaison", "for", "key", "accounts."],
           "correct_order": ["I", "serve", "as", "the", "primary", "liaison", "for", "key", "accounts."],
-          "explanation": "'Liaison' defines a role bridging two groups."
+          "explanation": "🇬🇧 'Liaison' defines a role bridging two groups.\n\n🇪🇸 'Enlace' define un rol que une dos grupos."
         },
         {
           "type": "order_sentence",
           "question": "Structure the hierarchy description:",
           "parts": ["I", "report", "directly", "to", "the", "Chief", "Executive", "Officer."],
           "correct_order": ["I", "report", "directly", "to", "the", "Chief", "Executive", "Officer."],
-          "explanation": "Defining who you report to establishes your level in the hierarchy."
+          "explanation": "🇬🇧 Defining who you report to establishes your level in the hierarchy.\n\n🇪🇸 Definir a quién reportas establece tu nivel en la jerarquía."
         },
         {
           "type": "order_sentence",
           "question": "Order the oversight statement:",
           "parts": ["My", "team", "oversees", "compliance", "across", "three", "continents."],
           "correct_order": ["My", "team", "oversees", "compliance", "across", "three", "continents."],
-          "explanation": "Scaling scope (three continents) demonstrates seniority."
+          "explanation": "🇬🇧 Scaling scope (three continents) demonstrates seniority.\n\n🇪🇸 Escalar el alcance (tres continentes) demuestra antigüedad."
         },
         {
           "type": "order_sentence",
           "question": "Build the strategic intent:",
           "parts": ["We", "aim", "to", "disrupt", "the", "legacy", "market."],
           "correct_order": ["We", "aim", "to", "disrupt", "the", "legacy", "market."],
-          "explanation": "'Disrupt' and 'Legacy' are key tech/business buzzwords."
+          "explanation": "🇬🇧 'Disrupt' and 'Legacy' are key tech/business buzzwords.\n\n🇪🇸 'Disrumpir' y 'Legado' son palabras clave en tecnología y negocios."
         },
         {
           "type": "order_sentence",
           "question": "Construct the collaborative intro:",
           "parts": ["I", "look", "forward", "to", "synergizing", "with", "your", "division."],
           "correct_order": ["I", "look", "forward", "to", "synergizing", "with", "your", "division."],
-          "explanation": "While 'synergize' is a buzzword, it is valid in introductions to imply cooperation."
+          "explanation": "🇬🇧 While 'synergize' is a buzzword, it is valid in introductions to imply cooperation.\n\n🇪🇸 Aunque 'sinergia' es una palabra de moda, es válida para implicar cooperación."
         },
         {
           "type": "order_sentence",
           "question": "Order the closing:",
           "parts": ["It", "is", "a", "privilege", "to", "meet", "you", "all."],
           "correct_order": ["It", "is", "a", "privilege", "to", "meet", "you", "all."],
-          "explanation": "High-formality closing."
+          "explanation": "🇬🇧 High-formality closing.\n\n🇪🇸 Cierre de alta formalidad."
         }
       ]
     },
@@ -273,61 +276,61 @@
           "type": "fill_input",
           "question": "I am the Point of ______ (POC) for this project.",
           "correct_answers": ["Contact", "contact"],
-          "explanation": "POC is the standard acronym for the responsible person."
+          "explanation": "🇬🇧 POC is the standard acronym for the responsible person.\n\n🇪🇸 POC es el acrónimo estándar para la persona responsable."
         },
         {
           "type": "fill_input",
           "question": "We need to hit the ground ______ to meet the deadline.",
           "correct_answers": ["running", "Running"],
-          "explanation": "'Hit the ground running' means to start effectively immediately."
+          "explanation": "🇬🇧 'Hit the ground running' means to start effectively immediately.\n\n🇪🇸 'Hit the ground running' significa empezar efectivamente de inmediato."
         },
         {
           "type": "fill_input",
           "question": "I will ______ (verb starting with L) with the legal team regarding the contract.",
           "correct_answers": ["liaise", "Liaise"],
-          "explanation": "'Liaise' means to cooperate on a matter of mutual concern."
+          "explanation": "🇬🇧 'Liaise' means to cooperate on a matter of mutual concern.\n\n🇪🇸 'Liaise' significa cooperar en un asunto de interés mutuo."
         },
         {
           "type": "fill_input",
           "question": "Please keep me in the ______ regarding these updates.",
           "correct_answers": ["loop", "Loop"],
-          "explanation": "'In the loop' means informed and involved."
+          "explanation": "🇬🇧 'In the loop' means informed and involved.\n\n🇪🇸 'In the loop' significa informado e involucrado."
         },
         {
           "type": "fill_input",
           "question": "My core ______ is in supply chain management. (Knowledge/Skill area)",
           "correct_answers": ["competency", "Competency", "expertise"],
-          "explanation": "Core competency is the preferred term for main skill set."
+          "explanation": "🇬🇧 Core competency is the preferred term for main skill set.\n\n🇪🇸 'Competencia central' es el término preferido para el conjunto de habilidades principales."
         },
         {
           "type": "fill_input",
           "question": "We need to ______ (verbs starting with S) our efforts to avoid redundancy.",
           "correct_answers": ["streamline", "Streamline", "synchronize"],
-          "explanation": "'Streamline' means to make an organization or system more efficient."
+          "explanation": "🇬🇧 'Streamline' means to make an organization or system more efficient.\n\n🇪🇸 'Agilizar' (Streamline) significa hacer una organización o sistema más eficiente."
         },
         {
           "type": "fill_input",
           "question": "This is a ______-win situation.",
           "correct_answers": ["win", "Win"],
-          "explanation": "Win-win is the goal of all negotiations."
+          "explanation": "🇬🇧 Win-win is the goal of all negotiations.\n\n🇪🇸 Ganar-ganar es el objetivo de todas las negociaciones."
         },
         {
           "type": "fill_input",
           "question": "I report ______ to the VP of Sales.",
           "correct_answers": ["directly", "Directly"],
-          "explanation": "Reporting 'directly' implies a close hierarchical step."
+          "explanation": "🇬🇧 Reporting 'directly' implies a close hierarchical step.\n\n🇪🇸 Reportar 'directamente' implica un paso jerárquico cercano."
         },
         {
           "type": "fill_input",
           "question": "Let's touch ______ next week.",
           "correct_answers": ["base", "Base"],
-          "explanation": "'Touch base' is the standard idiom for briefly reconnecting."
+          "explanation": "🇬🇧 'Touch base' is the standard idiom for briefly reconnecting.\n\n🇪🇸 'Touch base' es el modismo estándar para reconectar brevemente."
         },
         {
           "type": "fill_input",
           "question": "I am responsible ______ the final audit.",
           "correct_answers": ["for", "For"],
-          "explanation": "Grammar check: Responsible + FOR."
+          "explanation": "🇬🇧 Grammar check: Responsible + FOR.\n\n🇪🇸 Revisión gramatical: Responsable + FOR."
         }
       ]
     },
@@ -341,34 +344,34 @@
           "question": "Which sentence demonstrates the highest level of accountability?",
           "options": ["The team failed.", "Mistakes were made.", "I take full ownership of the oversight.", "Ideally, it should have worked."],
           "correct_answer": "I take full ownership of the oversight.",
-          "explanation": "Extreme Ownership is the hallmark of true leadership."
+          "explanation": "🇬🇧 Extreme Ownership is the hallmark of true leadership.\n\n🇪🇸 La Propiedad Extrema es el sello distintivo del verdadero liderazgo."
         },
         {
           "type": "order_sentence",
           "question": "Construct the vision statement:",
           "parts": ["We", "envision", "a", "paradigm", "shift", "in", "renewable", "energy."],
           "correct_order": ["We", "envision", "a", "paradigm", "shift", "in", "renewable", "energy."],
-          "explanation": "'Paradigm shift' refers to a fundamental change in approach."
+          "explanation": "🇬🇧 'Paradigm shift' refers to a fundamental change in approach.\n\n🇪🇸 'Cambio de paradigma' se refiere a un cambio fundamental de enfoque."
         },
         {
           "type": "fill_input",
           "question": "We must ensure full ______ with GDPR regulations.",
           "correct_answers": ["compliance", "Compliance"],
-          "explanation": "Compliance is non-negotiable in executive governance."
+          "explanation": "🇬🇧 Compliance is non-negotiable in executive governance.\n\n🇪🇸 El cumplimiento es innegociable en el gobierno ejecutivo."
         },
         {
           "type": "quiz_choice",
           "question": "Translate 'I fix problems' to C-Suite language:",
           "options": ["I do repairs.", "I resolve critical bottlenecks.", "I help out.", "I am a fixer."],
           "correct_answer": "I resolve critical bottlenecks.",
-          "explanation": "'Bottlenecks' identifies the strategic choke point, not just the symptom."
+          "explanation": "🇬🇧 'Bottlenecks' identifies the strategic choke point, not just the symptom.\n\n🇪🇸 'Cuellos de botella' identifica el punto de estrangulamiento estratégico, no solo el síntoma."
         },
         {
           "type": "order_sentence",
           "question": "Order the delegation:",
           "parts": ["I", "am", "delegating", "authority", "to", "my", "deputy."],
           "correct_order": ["I", "am", "delegating", "authority", "to", "my", "deputy."],
-          "explanation": "Clear transfer of power."
+          "explanation": "🇬🇧 Clear transfer of power.\n\n🇪🇸 Transferencia clara de poder."
         },
         {
           "type": "listening_match",
@@ -376,33 +379,33 @@
           "tts_text": "That is an interesting perspective, let's circle back to it offline.",
           "options": ["Yes", "No"],
           "correct_answer": "Yes",
-          "explanation": "'Take it offline' is often a tactic to avoid public debate."
+          "explanation": "🇬🇧 'Take it offline' is often a tactic to avoid public debate.\n\n🇪🇸 'Llevarlo fuera de línea' suele ser una táctica para evitar el debate público."
         },
         {
           "type": "fill_input",
           "question": "We need to ______ (scale up) our operations.",
           "correct_answers": ["scale", "Scale", "expand"],
-          "explanation": "Scale is the verb for growth."
+          "explanation": "🇬🇧 Scale is the verb for growth.\n\n🇪🇸 'Escalar' es el verbo para crecimiento."
         },
         {
           "type": "quiz_choice",
           "question": "Which is best for closing a first meeting?",
           "options": ["Bye.", "I look forward to our fruitful collaboration.", "See ya.", "Good luck."],
           "correct_answer": "I look forward to our fruitful collaboration.",
-          "explanation": "Forward-looking and positive."
+          "explanation": "🇬🇧 Forward-looking and positive.\n\n🇪🇸 Con visión de futuro y positivo."
         },
         {
           "type": "order_sentence",
           "question": "Construct the value statement:",
           "parts": ["I", "deliver", "measurable", "results", "under", "pressure."],
           "correct_order": ["I", "deliver", "measurable", "results", "under", "pressure."],
-          "explanation": "Measurable results are the only currency that matters."
+          "explanation": "🇬🇧 Measurable results are the only currency that matters.\n\n🇪🇸 Los resultados medibles son la única moneda que importa."
         },
         {
           "type": "fill_input",
           "question": "This strategy is not ______ (capable of working).",
           "correct_answers": ["viable", "Viable", "feasible"],
-          "explanation": "Viable means capable of working successfully."
+          "explanation": "🇬🇧 Viable means capable of working successfully.\n\n🇪🇸 Viable significa capaz de funcionar con éxito."
         }
       ]
     }

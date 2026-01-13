@@ -1,400 +1,1074 @@
 {
   "id": "pro-b1-2",
-  "title": "Formal Emailing: Precision & Assertiveness",
+  "title": "Formal Emailing: Precision & Assertiveness (Extended Master Edition)",
+  "description": "Master executive email communication: tone, structure, vocabulary, and situational awareness across 8 progressive phases.",
+  "estimatedDuration": 90,
+  "difficulty": "B1-B2",
+  "xpReward": 350,
   "stages": [
     {
-      "id": "stage-theory",
+      "id": "stage-0-intro",
       "type": "theory",
       "title": "The BLUF Method (Bottom Line Up Front)",
+      "duration": 5,
       "parts": [
         {
-          "visual": "Executive inboxes are overwhelmed. To get a response, use the **BLUF Method** (Bottom Line Up Front).\n\nDo not bury the lead. State your request in the first two sentences.\n\n❌ **Weak:** \"I hope you are well. I was looking at the data and I think we might need to change...\"\n✅ **Strong:** \"**Action Required:** Please approve the Q4 budget revision by Friday, Oct 15.\"\n\nPrecision is polite. Ambiguity is disrespectful of time.",
-          "audio": "In corporate communication, clarity is the highest form of courtesy. Learn to structure your emails for instant comprehension."
+          "type": "visual",
+          "content": "**Why Email Precision Matters in Executive Settings**\n\nExecutive inboxes receive 100-200+ emails daily. Your message has 3 seconds to be understood.\n\n**The BLUF Method** (Bottom Line Up Front):\n1. State the REQUEST in line 1\n2. Provide context in line 2\n3. List details in line 3+\n4. End with a CALL TO ACTION\n\n**Example:**\n❌ **Weak:** \"I hope you're well. I was reviewing the budget and noticed some inconsistencies. Maybe we should talk about adjusting...\"\n\n✅ **Strong:** \"**ACTION REQUIRED:** Please approve the Q4 budget revision (attached) by Friday, Oct 15.\n\nRationale: Q3 exceeded projections by 12%, requiring reallocation.\n\nPlease reply with confirmation.\"",
+          "media": {
+            "type": "image",
+            "url": "https://via.placeholder.com/800x400?text=BLUF+Structure",
+            "alt": "BLUF Email Structure Diagram"
+          }
+        },
+        {
+          "type": "audio",
+          "content": "In corporate communication, clarity is the highest form of courtesy. Learn to structure your emails for instant comprehension and maximum executive impact."
         }
       ]
     },
     {
-      "id": "stage-listening",
+      "id": "stage-1-listening",
       "type": "quiz",
-      "title": "Phase 1: Tone Analysis (Listening)",
+      "title": "Phase 1: Tone Analysis (Listening Comprehension)",
+      "duration": 15,
+      "instructions": "Listen to each email opening/phrase. Identify the tone, formality level, and appropriateness.",
       "questions": [
         {
+          "id": "q1-1",
           "type": "listening_match",
-          "question": "Listen. Is this email opening too casual for a new client?",
+          "question": "Listen carefully. Is this email opening appropriate for a new client meeting request?",
           "tts_text": "Hey there! Just checking in on the deal.",
-          "options": ["Too Casual", "Appropriate"],
-          "correct_answer": "Too Casual",
-          "explanation": "'Hey there' and 'checking in' lack professional weight for a new relationship."
+          "options": [
+            { "text": "Perfectly appropriate", "value": "appropriate" },
+            { "text": "Too casual for new client", "value": "too_casual" },
+            { "text": "Too formal", "value": "too_formal" }
+          ],
+          "correct_answer": "too_casual",
+          "xp": 10,
+          "explanation": "'Hey there' and 'just checking in' lack professional weight for establishing credibility with a new relationship. Better: 'I wanted to follow up on our proposal...'"
         },
         {
+          "id": "q1-2",
           "type": "listening_match",
-          "question": "Identify the purpose of this closing statement:",
+          "question": "Identify the PRIMARY PURPOSE of this closing statement:",
           "tts_text": "I look forward to your guidance on this matter.",
-          "options": ["Requesting action", "Expressing gratitude", "Deferring to authority"],
-          "correct_answer": "Deferring to authority",
-          "explanation": "This phrase politely invites a superior to make the final decision."
+          "options": [
+            { "text": "Requesting action", "value": "action" },
+            { "text": "Expressing gratitude", "value": "gratitude" },
+            { "text": "Deferring to authority/expertise", "value": "deference" },
+            { "text": "Ending conversation", "value": "ending" }
+          ],
+          "correct_answer": "deference",
+          "xp": 10,
+          "explanation": "The phrase 'look forward to your guidance' politely invites a senior person to make the final call, showing respect for their position."
         },
         {
+          "id": "q1-3",
           "type": "listening_match",
-          "question": "Which phrase is more assertive?",
-          "tts_text": "I was wondering if you could possibly send it?",
-          "options": ["Assertive", "Passive"],
-          "correct_answer": "Passive",
-          "explanation": "Multiple qualifiers ('wondering', 'could', 'possibly') weaken the request significantly."
+          "question": "Which sentence is MORE ASSERTIVE? Listen to both mentally.",
+          "tts_text": "I was wondering if you could possibly send it when you get a chance?",
+          "options": [
+            { "text": "Original (wondering...could...possibly)", "value": "weak" },
+            { "text": "Please send the report by EOD Friday", "value": "strong" }
+          ],
+          "correct_answer": "strong",
+          "xp": 15,
+          "explanation": "Multiple qualifiers ('wondering', 'could', 'possibly', 'when you get a chance') weaken the request. Assertiveness = clarity + deadline."
         },
         {
+          "id": "q1-4",
           "type": "listening_match",
-          "question": "Listen. Does this subject line indicate urgency?",
-          "tts_text": "URGENT: Approval Needed - Project Alpha Launch.",
-          "options": ["Yes", "No"],
-          "correct_answer": "Yes",
-          "explanation": "Starting with URGENT (in caps) is a clear signal, but should be used sparingly."
+          "question": "Does this subject line indicate true URGENCY?",
+          "tts_text": "URGENT: Approval Needed - Project Alpha Launch Decision",
+          "options": [
+            { "text": "Yes, clear urgency signal", "value": "yes" },
+            { "text": "No, overused word", "value": "no" }
+          ],
+          "correct_answer": "yes",
+          "xp": 10,
+          "explanation": "Starting with URGENT in caps signals priority, BUT should be used sparingly (not on every email) to maintain effectiveness."
         },
         {
+          "id": "q1-5",
           "type": "listening_match",
-          "question": "What is the implied meaning of 'Let's take this offline'?",
-          "tts_text": "This discussion is becoming complex. Let's take this offline.",
-          "options": ["Stop talking", "Discuss privately/later", "The internet is down"],
-          "correct_answer": "Discuss privately/later",
-          "explanation": "It means to move the conversation from a group email/meeting to a 1-on-1 setting."
+          "question": "What does 'Let's take this offline' literally mean?",
+          "tts_text": "This discussion is becoming too complex for email. Let's take this offline.",
+          "options": [
+            { "text": "Stop communicating", "value": "stop" },
+            { "text": "Discuss privately/1-on-1 later", "value": "private" },
+            { "text": "The email system is broken", "value": "broken" },
+            { "text": "I'm disconnecting from internet", "value": "internet" }
+          ],
+          "correct_answer": "private",
+          "xp": 10,
+          "explanation": "A key business idiom: move the conversation from group email/meeting to a 1-on-1 call or in-person setting for deeper discussion."
         },
         {
+          "id": "q1-6",
           "type": "listening_match",
-          "question": "Listen. Is this an apology or a justification?",
-          "tts_text": "I apologize for the delay; we encountered an unexpected server outage.",
-          "options": ["Pure Apology", "Apology + Reason"],
-          "correct_answer": "Apology + Reason",
-          "explanation": "Providing a brief, factual reason is professional; making excuses is not."
+          "question": "Is this an apology or a justification?",
+          "tts_text": "I sincerely apologize for the three-day delay; we experienced an unexpected server outage that affected our entire network.",
+          "options": [
+            { "text": "Pure apology (no reasons given)", "value": "pure" },
+            { "text": "Apology + brief factual reason", "value": "reason" },
+            { "text": "Just an excuse", "value": "excuse" }
+          ],
+          "correct_answer": "reason",
+          "xp": 10,
+          "explanation": "Providing a brief, factual reason shows transparency; making excuses or blaming externals is unprofessional. Balance ownership with context."
         },
         {
+          "id": "q1-7",
           "type": "listening_match",
-          "question": "Select the better option for attaching a file:",
-          "tts_text": "I put the file in the email.",
-          "options": ["I put the file...", "Please find attached..."],
-          "correct_answer": "Please find attached...",
-          "explanation": "'Please find attached' is the standard professional formula."
+          "question": "Select the MOST PROFESSIONAL way to reference a file:",
+          "tts_text": "I have attached the contract revision for your review.",
+          "options": [
+            { "text": "I put the file in the email", "value": "casual" },
+            { "text": "Please find attached the contract revision", "value": "formal" },
+            { "text": "Here's the file", "value": "very_casual" }
+          ],
+          "correct_answer": "formal",
+          "xp": 10,
+          "explanation": "'Please find attached [document name]' is the gold-standard professional formula. Avoid 'I put' (too casual) or 'Here's' (too informal)."
         },
         {
+          "id": "q1-8",
           "type": "listening_match",
-          "question": "Which tone communicates disappointment professionally?",
-          "tts_text": "We are concerned about the lack of progress.",
-          "options": ["We are concerned...", "We are angry..."],
-          "correct_answer": "We are concerned...",
-          "explanation": "'Concerned' is the corporate code for 'unhappy but constructive'."
+          "question": "Which tone communicates PROFESSIONAL CONCERN?",
+          "tts_text": "We are concerned about the lack of measurable progress on this initiative.",
+          "options": [
+            { "text": "We are concerned about...", "value": "concern" },
+            { "text": "We are angry about...", "value": "angry" },
+            { "text": "We are disappointed in...", "value": "disappointed" }
+          ],
+          "correct_answer": "concern",
+          "xp": 10,
+          "explanation": "'Concerned' is corporate code for 'unhappy but constructive.' It opens dialogue. 'Angry' escalates; 'disappointed' is passive-aggressive."
         },
         {
+          "id": "q1-9",
           "type": "listening_match",
-          "question": "Listen. Is this a firm deadline?",
-          "tts_text": "Please submit the report by COB tomorrow.",
-          "options": ["Firm", "Flexible"],
-          "correct_answer": "Firm",
-          "explanation": "COB (Close of Business) is a specific, hard deadline."
+          "question": "Is 'COB tomorrow' a firm or flexible deadline?",
+          "tts_text": "Please ensure all deliverables are submitted by COB tomorrow.",
+          "options": [
+            { "text": "Firm, non-negotiable", "value": "firm" },
+            { "text": "Flexible, can be adjusted", "value": "flexible" },
+            { "text": "I don't know what COB means", "value": "unknown" }
+          ],
+          "correct_answer": "firm",
+          "xp": 10,
+          "explanation": "COB = Close of Business (typically 5 PM). It's a specific, hard deadline, not a guideline."
         },
         {
+          "id": "q1-10",
           "type": "listening_match",
-          "question": "Identify the tone:",
-          "tts_text": "Per my previous email, the data is in the shared folder.",
-          "options": ["Helpful", "Passive-Aggressive"],
-          "correct_answer": "Passive-Aggressive",
-          "explanation": "'Per my previous email' is often interpreted as 'I already told you this'."
+          "question": "Identify the HIDDEN TONE of this phrase:",
+          "tts_text": "Per my previous email, the data has been uploaded to the shared folder.",
+          "options": [
+            { "text": "Helpfully clarifying", "value": "helpful" },
+            { "text": "Passive-aggressive reminder", "value": "passive_agg" },
+            { "text": "Concerned about confusion", "value": "concerned" }
+          ],
+          "correct_answer": "passive_agg",
+          "xp": 15,
+          "explanation": "'Per my previous email' is often read as 'I already told you this.' It signals frustration. Better: 'As mentioned before...' or just restate clearly without calling attention."
         }
       ]
     },
     {
-      "id": "stage-choice",
+      "id": "stage-2-selection",
       "type": "quiz",
-      "title": "Phase 2: Situational Strategy (Selection)",
+      "title": "Phase 2: Situational Strategy (Multiple Choice)",
+      "duration": 20,
+      "instructions": "Choose the BEST response for each workplace email scenario.",
       "questions": [
         {
+          "id": "q2-1",
           "type": "quiz_choice",
-          "question": "You need to chase a delayed response without being annoying. Choose the best subject line:",
-          "options": ["Read this!", "Following up on [Topic]", "Why no reply?", "Hello?"],
-          "correct_answer": "Following up on [Topic]",
-          "explanation": "'Following up' is neutral and professional."
+          "question": "You need to follow up on a delayed response WITHOUT annoying the recipient. Best subject line?",
+          "options": [
+            { "text": "Read this!", "value": "a" },
+            { "text": "Following up: [Original Topic Name]", "value": "b" },
+            { "text": "Why no reply???", "value": "c" },
+            { "text": "URGENT - Reply Now", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 15,
+          "explanation": "'Following up' is neutral and professional. It recontextualizes the thread without accusations. Avoid panic markers like '???' or ALL CAPS."
         },
         {
+          "id": "q2-2",
           "type": "quiz_choice",
-          "question": "How do you start an email to a group of executives?",
-          "options": ["Hi guys,", "Dear Team,", "Distinguished guests,", "To whom it may concern,"],
-          "correct_answer": "Dear Team,",
-          "explanation": "'Dear Team' or 'Good morning all' is inclusive and professional. 'Guys' is too casual."
+          "question": "How should you greet a group of C-level executives in an email?",
+          "options": [
+            { "text": "Hi guys,", "value": "a" },
+            { "text": "Dear Team,", "value": "b" },
+            { "text": "Distinguished guests,", "value": "c" },
+            { "text": "To whom it may concern,", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 10,
+          "explanation": "'Dear Team,' or 'Good morning all,' is inclusive and professional. 'Guys' is too casual for formal settings. 'Distinguished' is overly theatrical."
         },
         {
+          "id": "q2-3",
           "type": "quiz_choice",
-          "question": "You disagree with a proposal. How do you say 'No' politely?",
-          "options": ["This is a bad idea.", "I'm afraid we cannot proceed with this direction.", "No way.", "You are wrong."],
-          "correct_answer": "I'm afraid we cannot proceed with this direction.",
-          "explanation": "'I'm afraid' softens the blow while maintaining a firm position."
+          "question": "You disagree with a proposal. How do you say 'No' professionally?",
+          "options": [
+            { "text": "This is a bad idea.", "value": "a" },
+            { "text": "I'm afraid we cannot proceed with this approach at this time.", "value": "b" },
+            { "text": "No way.", "value": "c" },
+            { "text": "You are wrong.", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 15,
+          "explanation": "'I'm afraid' softens the blow while maintaining a firm position. The phrase 'cannot proceed...at this time' leaves a door open for future reconsideration."
         },
         {
+          "id": "q2-4",
           "type": "quiz_choice",
-          "question": "What does 'CC' imply in an email context?",
-          "options": ["For information only (FYI)", "Action required", "Secret copy", "Carbon Copy"],
-          "correct_answer": "For information only (FYI)",
-          "explanation": "People in CC are observers, not primary actors."
+          "question": "What does placing someone in 'CC' primarily mean?",
+          "options": [
+            { "text": "For information only (FYI)", "value": "a" },
+            { "text": "Action required from this person", "value": "b" },
+            { "text": "Secret copy (confidential)", "value": "c" },
+            { "text": "They are in trouble", "value": "d" }
+          ],
+          "correct_answer": "a",
+          "xp": 10,
+          "explanation": "CC'd people are observers, not primary actors. TO = primary responsibility. CC = awareness. BCC = hidden copy (use sparingly, only when necessary)."
         },
         {
+          "id": "q2-5",
           "type": "quiz_choice",
-          "question": "You made a mistake. Best way to own it?",
-          "options": ["It wasn't really my fault.", "Please overlook this.", "I take full responsibility for the oversight.", "Oops."],
-          "correct_answer": "I take full responsibility for the oversight.",
-          "explanation": "Ownership builds trust faster than excuses."
+          "question": "You made a mistake that impacted the team. Best way to own it?",
+          "options": [
+            { "text": "It wasn't really my fault.", "value": "a" },
+            { "text": "Please overlook this small error.", "value": "b" },
+            { "text": "I take full responsibility for this oversight and am implementing a fix.", "value": "c" },
+            { "text": "Oops, my bad.", "value": "d" }
+          ],
+          "correct_answer": "c",
+          "xp": 15,
+          "explanation": "Ownership + solution builds trust faster than excuses. Shows accountability and forward momentum."
         },
         {
+          "id": "q2-6",
           "type": "quiz_choice",
-          "question": "Which sign-off is most appropriate for a formal client?",
-          "options": ["Cheers,", "Best,", "Sincerely,", "Later,"],
-          "correct_answer": "Sincerely,",
-          "explanation": "'Sincerely' or 'Best regards' are the gold standards for formality."
+          "question": "Which sign-off is most appropriate for a formal first-time contact with a client?",
+          "options": [
+            { "text": "Cheers,", "value": "a" },
+            { "text": "Best,", "value": "b" },
+            { "text": "Sincerely,", "value": "c" },
+            { "text": "Later,", "value": "d" }
+          ],
+          "correct_answer": "c",
+          "xp": 10,
+          "explanation": "'Sincerely,' 'Best Regards,' or 'Kind Regards' are the gold standards for formal, new relationships. 'Best' and 'Cheers' are friendly but less formal."
         },
         {
+          "id": "q2-7",
           "type": "quiz_choice",
-          "question": "You are attaching a large file. What should you do?",
-          "options": ["Just attach it.", "Warn the recipient or use a link.", "Send it in multiple emails.", "Zip it and hope."],
-          "correct_answer": "Warn the recipient or use a link.",
-          "explanation": "Large attachments can block inboxes. Cloud links (SharePoint/Drive) are preferred."
+          "question": "You're attaching a 50MB video file to a client. What should you do?",
+          "options": [
+            { "text": "Just attach it directly", "value": "a" },
+            { "text": "Warn the recipient or use a cloud link (Drive/SharePoint)", "value": "b" },
+            { "text": "Send it in multiple emails (split the file)", "value": "c" },
+            { "text": "Zip it and hope for the best", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 15,
+          "explanation": "Large attachments can crash inboxes or trigger spam filters. Cloud links (Google Drive, SharePoint, Dropbox) are the modern standard for heavy files."
         },
         {
+          "id": "q2-8",
           "type": "quiz_choice",
-          "question": "How do you escalate an issue to a manager?",
-          "options": ["Tattle on the coworker.", "Forward the chain without comment.", "Summarize the blocker and request intervention.", "Complain loudly."],
-          "correct_answer": "Summarize the blocker and request intervention.",
-          "explanation": "Provide context (the blocker) so the manager can act efficiently."
+          "question": "A project is blocked due to another team's delay. How do you escalate to your manager?",
+          "options": [
+            { "text": "Tattle on the coworker in the email", "value": "a" },
+            { "text": "Forward the chain without any context", "value": "b" },
+            { "text": "Summarize the blocker, timeline impact, and request intervention", "value": "c" },
+            { "text": "Complain loudly in the email", "value": "d" }
+          ],
+          "correct_answer": "c",
+          "xp": 15,
+          "explanation": "Context is king. Give your manager the blocker (what's stuck), the impact (timeline/budget), and what you need (specific ask). This enables fast decision-making."
         },
         {
+          "id": "q2-9",
           "type": "quiz_choice",
-          "question": "Select the correct phrase for introducing a new topic in a reply:",
-          "options": ["Changing the subject...", "On a separate note...", "By the way...", "Also..."],
-          "correct_answer": "On a separate note...",
-          "explanation": "It clearly signals a shift in topic within a professional context."
+          "question": "You want to introduce a NEW TOPIC in a reply to an ongoing thread. Best phrase?",
+          "options": [
+            { "text": "Changing the subject...", "value": "a" },
+            { "text": "On a separate note...", "value": "b" },
+            { "text": "By the way...", "value": "c" },
+            { "text": "Also...", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 10,
+          "explanation": "'On a separate note...' clearly signals a shift in topic within a professional context. 'By the way' is more casual; 'Also' doesn't signal the separation well."
         },
         {
+          "id": "q2-10",
           "type": "quiz_choice",
           "question": "When should you use 'Reply All'?",
-          "options": ["Always.", "When the information is critical for everyone on the thread.", "To say 'Thanks'.", "Never."],
-          "correct_answer": "When the information is critical for everyone on the thread.",
-          "explanation": "Overusing Reply All creates noise. Use it only when necessary."
+          "options": [
+            { "text": "Always, to keep everyone informed", "value": "a" },
+            { "text": "Only when the information is critical for EVERYONE on the thread", "value": "b" },
+            { "text": "To say 'Thanks' or 'Got it'", "value": "c" },
+            { "text": "Never, it's old-fashioned", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 15,
+          "explanation": "Overusing Reply All creates inbox noise. Use it only when your response is actionable/critical for all recipients. Otherwise, reply to sender only."
         }
       ]
     },
     {
-      "id": "stage-structure",
+      "id": "stage-3-syntax",
       "type": "gamified_quiz",
-      "title": "Phase 3: Syntactic Precision (Ordering)",
+      "title": "Phase 3: Syntactic Precision (Drag & Order)",
+      "duration": 15,
+      "instructions": "Arrange the words/phrases in the correct order to form professional email sentences.",
       "questions": [
         {
+          "id": "q3-1",
           "type": "order_sentence",
-          "question": "Order the request for a meeting:",
-          "parts": ["I", "would", "like", "to", "schedule", "a", "brief", "call", "to", "discuss", "the", "proposal."],
-          "correct_order": ["I", "would", "like", "to", "schedule", "a", "brief", "call", "to", "discuss", "the", "proposal."],
-          "explanation": "Clear, polite, and specific purpose."
+          "question": "Order the professional request for a meeting:",
+          "parts": [
+            "I", "would", "like", "to", "schedule", "a", "brief", "call", "to", "discuss", "the", "proposal."
+          ],
+          "correct_order": [
+            "I", "would", "like", "to", "schedule", "a", "brief", "call", "to", "discuss", "the", "proposal."
+          ],
+          "xp": 10,
+          "explanation": "This structure is polite, specific (brief call = respects time), and states purpose clearly."
         },
         {
+          "id": "q3-2",
           "type": "order_sentence",
-          "question": "Construct the deadline reminder:",
-          "parts": ["Please", "ensure", "that", "all", "deliverables", "are", "submitted", "by", "Friday."],
-          "correct_order": ["Please", "ensure", "that", "all", "deliverables", "are", "submitted", "by", "Friday."],
-          "explanation": "'Ensure' is a strong verb for compliance."
+          "question": "Construct the FIRM deadline reminder:",
+          "parts": [
+            "Please", "ensure", "that", "all", "deliverables", "are", "submitted", "by", "Friday", "COB."
+          ],
+          "correct_order": [
+            "Please", "ensure", "that", "all", "deliverables", "are", "submitted", "by", "Friday", "COB."
+          ],
+          "xp": 10,
+          "explanation": "'Ensure' is a strong verb that implies compliance. 'By Friday COB' sets a non-negotiable deadline."
         },
         {
+          "id": "q3-3",
           "type": "order_sentence",
-          "question": "Structure the apology:",
-          "parts": ["Please", "accept", "my", "sincere", "apologies", "for", "the", "oversight."],
-          "correct_order": ["Please", "accept", "my", "sincere", "apologies", "for", "the", "oversight."],
-          "explanation": "Using 'oversight' minimizes the error without denying it."
+          "question": "Build the professional apology:",
+          "parts": [
+            "Please", "accept", "my", "sincere", "apologies", "for", "the", "oversight."
+          ],
+          "correct_order": [
+            "Please", "accept", "my", "sincere", "apologies", "for", "the", "oversight."
+          ],
+          "xp": 10,
+          "explanation": "Using 'oversight' minimizes the error without denying responsibility. 'Please accept' adds politeness."
         },
         {
+          "id": "q3-4",
           "type": "order_sentence",
           "question": "Order the attachment notification:",
-          "parts": ["Attached", "please", "find", "the", "revised", "contract", "for", "your", "review."],
-          "correct_order": ["Attached", "please", "find", "the", "revised", "contract", "for", "your", "review."],
-          "explanation": "Standard formal structure."
+          "parts": [
+            "Attached", "please", "find", "the", "revised", "contract", "for", "your", "review."
+          ],
+          "correct_order": [
+            "Attached", "please", "find", "the", "revised", "contract", "for", "your", "review."
+          ],
+          "xp": 10,
+          "explanation": "This is the standard formal structure. Variations: 'I have attached...' or 'Please see the attached...'"
         },
         {
+          "id": "q3-5",
           "type": "order_sentence",
-          "question": "Build the clarification request:",
-          "parts": ["Could", "you", "please", "clarify", "the", "objectives", "for", "Q3?"],
-          "correct_order": ["Could", "you", "please", "clarify", "the", "objectives", "for", "Q3?"],
-          "explanation": "Polite inquiry using 'Could you please'."
+          "question": "Construct the clarification request:",
+          "parts": [
+            "Could", "you", "please", "clarify", "the", "specific", "objectives", "for", "Q3?"
+          ],
+          "correct_order": [
+            "Could", "you", "please", "clarify", "the", "specific", "objectives", "for", "Q3?"
+          ],
+          "xp": 10,
+          "explanation": "'Could you please' is the polite interrogative form. 'Specific objectives' shows you want precision, not vague goals."
         },
         {
+          "id": "q3-6",
           "type": "order_sentence",
-          "question": "Construct the follow-up:",
-          "parts": ["I", "am", "writing", "to", "follow", "up", "on", "our", "previous", "conversation."],
-          "correct_order": ["I", "am", "writing", "to", "follow", "up", "on", "our", "previous", "conversation."],
-          "explanation": "Establishes context immediately."
+          "question": "Order the context-setting follow-up:",
+          "parts": [
+            "I", "am", "writing", "to", "follow", "up", "on", "our", "conversation", "from", "yesterday."
+          ],
+          "correct_order": [
+            "I", "am", "writing", "to", "follow", "up", "on", "our", "conversation", "from", "yesterday."
+          ],
+          "xp": 10,
+          "explanation": "Establishes context immediately and sets a professional, formal tone."
         },
         {
+          "id": "q3-7",
           "type": "order_sentence",
-          "question": "Order the availability check:",
-          "parts": ["Please", "let", "me", "know", "your", "availability", "for", "next", "week."],
-          "correct_order": ["Please", "let", "me", "know", "your", "availability", "for", "next", "week."],
-          "explanation": "Putting the onus on them to provide slots."
+          "question": "Order the availability inquiry:",
+          "parts": [
+            "Would", "you", "be", "available", "for", "a", "30-minute", "call", "next", "Tuesday?"
+          ],
+          "correct_order": [
+            "Would", "you", "be", "available", "for", "a", "30-minute", "call", "next", "Tuesday?"
+          ],
+          "xp": 10,
+          "explanation": "Specific time frame (30 minutes) and date (next Tuesday) shows respect for their schedule."
         },
         {
+          "id": "q3-8",
           "type": "order_sentence",
           "question": "Structure the gratitude statement:",
-          "parts": ["Thank", "you", "in", "advance", "for", "your", "cooperation", "in", "this", "matter."],
-          "correct_order": ["Thank", "you", "in", "advance", "for", "your", "cooperation", "in", "this", "matter."],
-          "explanation": "Standard closing for instructions."
+          "parts": [
+            "Thank", "you", "in", "advance", "for", "your", "cooperation", "in", "this", "matter."
+          ],
+          "correct_order": [
+            "Thank", "you", "in", "advance", "for", "your", "cooperation", "in", "this", "matter."
+          ],
+          "xp": 10,
+          "explanation": "Standard closing for instructions or requests. Shows appreciation before they even act."
         },
         {
+          "id": "q3-9",
           "type": "order_sentence",
-          "question": "Build the introduction:",
-          "parts": ["I", "am", "reaching", "out", "to", "introduce", "our", "new", "services."],
-          "correct_order": ["I", "am", "reaching", "out", "to", "introduce", "our", "new", "services."],
-          "explanation": "'Reaching out' is a modern, slightly softer way to say 'contacting'."
+          "question": "Build the introduction of new services:",
+          "parts": [
+            "I", "am", "reaching", "out", "to", "introduce", "our", "newly", "launched", "services."
+          ],
+          "correct_order": [
+            "I", "am", "reaching", "out", "to", "introduce", "our", "newly", "launched", "services."
+          ],
+          "xp": 10,
+          "explanation": "'Reaching out' is modern and slightly softer than 'contacting.' 'Newly launched' adds urgency/newsworthiness."
         },
         {
+          "id": "q3-10",
           "type": "order_sentence",
-          "question": "Order the out-of-office message:",
-          "parts": ["I", "will", "be", "out", "of", "the", "office", "until", "Monday."],
-          "correct_order": ["I", "will", "be", "out", "of", "the", "office", "until", "Monday."],
-          "explanation": "Clear and factual."
+          "question": "Order the out-of-office auto-reply:",
+          "parts": [
+            "I", "will", "be", "out", "of", "the", "office", "from", "August", "1-15", "and", "will", "return", "your", "email", "upon", "return."
+          ],
+          "correct_order": [
+            "I", "will", "be", "out", "of", "the", "office", "from", "August", "1-15", "and", "will", "return", "your", "email", "upon", "return."
+          ],
+          "xp": 10,
+          "explanation": "Clear dates and expectation-setting (will respond on return) is critical for OOO messages."
         }
       ]
     },
     {
-      "id": "stage-vocabulary",
+      "id": "stage-4-vocabulary",
       "type": "gamified_quiz",
-      "title": "Phase 4: Active Vocabulary (Input)",
+      "title": "Phase 4: Active Vocabulary (Fill in the Blank)",
+      "duration": 15,
+      "instructions": "Fill in the missing word(s) to complete professional email phrases. Accept multiple correct answers.",
       "questions": [
         {
+          "id": "q4-1",
           "type": "fill_input",
           "question": "I have ______ (copied) the manager on this email.",
-          "correct_answers": ["cc'd", "CC'd", "copied"],
-          "explanation": "CC'd is the verb form of Carbon Copy."
+          "correct_answers": ["cc'd", "CC'd", "copied", "CCed"],
+          "xp": 10,
+          "explanation": "CC'd is the verb form of Carbon Copy. Variations: 'cc'd', 'CCed'. Modern usage: 'I've added the manager to this email.'"
         },
         {
+          "id": "q4-2",
           "type": "fill_input",
-          "question": "Please ______ (reply) to this email by EOD.",
+          "question": "Please ______ (reply) to this email by end of day.",
           "correct_answers": ["respond", "Respond", "reply"],
-          "explanation": "Respond implies a thoughtful answer."
+          "xp": 10,
+          "explanation": "'Respond' implies a thoughtful, substantive answer. 'Reply' is neutral. Both are acceptable in formal contexts."
         },
         {
+          "id": "q4-3",
           "type": "fill_input",
-          "question": "We need to ______ (set a time) a meeting.",
+          "question": "We need to ______ (arrange/set time for) a meeting next week.",
           "correct_answers": ["schedule", "Schedule"],
-          "explanation": "Schedule is the professional term for arranging time."
+          "xp": 10,
+          "explanation": "'Schedule' is the professional term for arranging a meeting. Avoid 'book' (too casual) or 'set up' (too informal)."
         },
         {
+          "id": "q4-4",
           "type": "fill_input",
-          "question": "Please find the ______ (document sent with email) enclosed.",
+          "question": "Please find the document ______ (sent with the email) enclosed.",
           "correct_answers": ["attachment", "Attachment"],
-          "explanation": "Attachment is the digital file."
+          "xp": 10,
+          "explanation": "'Attachment' is the digital file. Often used: 'Please see attached' or 'Attached is the file.'"
         },
         {
+          "id": "q4-5",
           "type": "fill_input",
-          "question": "I am writing to ______ (ask) about the status.",
+          "question": "I am writing to ______ (formally ask) about the project timeline.",
           "correct_answers": ["inquire", "Inquire"],
-          "explanation": "Inquire is more formal than 'ask'."
+          "xp": 10,
+          "explanation": "'Inquire' is more formal than 'ask'. Usage: 'I am writing to inquire about...' or 'Please inquire if you have questions.'"
         },
         {
+          "id": "q4-6",
           "type": "fill_input",
-          "question": "Best ______ (closing),",
-          "correct_answers": ["regards", "Regards"],
-          "explanation": "Best regards is the most common professional closing."
+          "question": "Best ______ (closing expression),",
+          "correct_answers": ["regards", "Regards", "regards,"],
+          "xp": 10,
+          "explanation": "'Best regards,' 'Kind regards,' or 'Warm regards' are the most common professional closings."
         },
         {
+          "id": "q4-7",
           "type": "fill_input",
-          "question": "Let's touch ______ (connect) later today.",
-          "correct_answers": ["base", "Base"],
-          "explanation": "Touch base is a key business idiom."
+          "question": "Let's ______ (reconnect/sync) on this topic later today.",
+          "correct_answers": ["touch base", "touch base"],
+          "xp": 10,
+          "explanation": "'Touch base' is a key business idiom meaning to reconnect or sync up briefly. Very common in corporate emails."
         },
         {
+          "id": "q4-8",
           "type": "fill_input",
-          "question": "This is a ______ (high priority) matter.",
+          "question": "This is a ______ (high priority) matter that requires immediate attention.",
           "correct_answers": ["pressing", "Pressing", "urgent"],
-          "explanation": "Pressing implies urgency without panic."
+          "xp": 10,
+          "explanation": "'Pressing' implies urgency without panic. 'Urgent' is stronger. 'Critical' or 'time-sensitive' are alternatives."
         },
         {
+          "id": "q4-9",
           "type": "fill_input",
-          "question": "Please ______ (send to someone else) this to the accounting department.",
+          "question": "Please ______ (send to someone else) this email chain to the accounting department.",
           "correct_answers": ["forward", "Forward"],
-          "explanation": "Forwarding sends the email chain to a new recipient."
+          "xp": 10,
+          "explanation": "'Forward' is the standard term. It shares the entire email thread with new recipients."
         },
         {
+          "id": "q4-10",
           "type": "fill_input",
-          "question": "I appreciate your ______ (quick) response.",
+          "question": "I appreciate your ______ (quick/timely) response to my inquiry.",
           "correct_answers": ["prompt", "Prompt"],
-          "explanation": "Prompt is the professional word for 'fast'."
+          "xp": 10,
+          "explanation": "'Prompt' is the professional word for 'fast/quick'. Usage: 'Your prompt attention is appreciated.'"
+        },
+        {
+          "id": "q4-11",
+          "type": "fill_input",
+          "question": "We ______ (receive/are receiving) several inquiries about the new product.",
+          "correct_answers": ["are receiving", "receive"],
+          "xp": 10,
+          "explanation": "Present continuous ('are receiving') shows ongoing action. Simple present ('receive') is more formal."
+        },
+        {
+          "id": "q4-12",
+          "type": "fill_input",
+          "question": "Your ______ (expert) input on this proposal would be invaluable.",
+          "correct_answers": ["expert", "Expert"],
+          "xp": 10,
+          "explanation": "Flattery that's earned increases receptiveness. 'Your expert opinion/input' is a common professional phrase."
         }
       ]
     },
     {
-      "id": "stage-mastery",
+      "id": "stage-5-advanced",
       "type": "quiz",
-      "title": "Phase 5: Email Mastery (Advanced)",
+      "title": "Phase 5: Advanced Email Strategy (Complex Scenarios)",
+      "duration": 20,
+      "instructions": "Tackle sophisticated email situations that require nuance, diplomacy, and multi-layered thinking.",
       "questions": [
         {
+          "id": "q5-1",
           "type": "quiz_choice",
-          "question": "Which subject line ensures the email gets opened?",
-          "options": ["Update", "Meeting", "Decision Required: Q3 Budget Strategy", "Hello"],
-          "correct_answer": "Decision Required: Q3 Budget Strategy",
-          "explanation": "It states the Action (Decision) and the Topic (Budget) immediately."
+          "question": "Which subject line is MOST LIKELY to get opened AND acted upon?",
+          "options": [
+            { "text": "Update", "value": "a" },
+            { "text": "Meeting", "value": "b" },
+            { "text": "Decision Required: Q3 Budget Strategy (Revised Numbers Attached)", "value": "c" },
+            { "text": "Hello", "value": "d" }
+          ],
+          "correct_answer": "c",
+          "xp": 20,
+          "explanation": "It states ACTION (Decision Required), TOPIC (Budget), STATUS (Revised), and EXPECTATION (attachment). Executives can prioritize immediately."
         },
         {
+          "id": "q5-2",
           "type": "order_sentence",
-          "question": "Construct the polite refusal:",
-          "parts": ["While", "we", "appreciate", "the", "offer,", "we", "will", "pass", "at", "this", "time."],
-          "correct_order": ["While", "we", "appreciate", "the", "offer,", "we", "will", "pass", "at", "this", "time."],
-          "explanation": "The 'sandwich' method: Positive start, clear No, neutral closing."
+          "question": "Construct the diplomatically firm refusal (the 'sandwich' method):",
+          "parts": [
+            "While", "we", "deeply", "appreciate", "your", "proposal,", "we", "will", "respectfully", "pass", "at", "this", "time."
+          ],
+          "correct_order": [
+            "While", "we", "deeply", "appreciate", "your", "proposal,", "we", "will", "respectfully", "pass", "at", "this", "time."
+          ],
+          "xp": 15,
+          "explanation": "Structure: Appreciation (positive) → Clear No (main message) → 'At this time' (door open). Avoids burn bridges."
         },
         {
+          "id": "q5-3",
           "type": "fill_input",
-          "question": "I will get back to you ______ (as soon as possible).",
-          "correct_answers": ["ASAP", "shortly"],
-          "explanation": "ASAP (pronounced A-S-A-P) is acceptable, but 'shortly' is more formal."
+          "question": "I will get back to you ______ (as soon as possible, abbreviated).",
+          "correct_answers": ["ASAP", "shortly", "ASAP"],
+          "xp": 10,
+          "explanation": "ASAP (pronounced A-S-A-P) is acceptable in fast-paced environments. 'Shortly' is more formal and implies a specific timeframe."
         },
         {
+          "id": "q5-4",
           "type": "quiz_choice",
-          "question": "Someone is angry in an email. How do you respond?",
-          "options": ["Reply angrily.", "Ignore it.", "Acknowledge their frustration and propose a solution.", "Tell them to calm down."],
-          "correct_answer": "Acknowledge their frustration and propose a solution.",
-          "explanation": "Validation + Solution defuses conflict."
+          "question": "An executive sends you an angry email. Your best response strategy?",
+          "options": [
+            { "text": "Reply angrily to match their tone", "value": "a" },
+            { "text": "Ignore it and hope it goes away", "value": "b" },
+            { "text": "Acknowledge their frustration + propose concrete solution", "value": "c" },
+            { "text": "Tell them to 'calm down'", "value": "d" }
+          ],
+          "correct_answer": "c",
+          "xp": 20,
+          "explanation": "Validation (I understand your concern) + Solution (here's what I'm doing) defuses conflict and builds credibility."
         },
         {
+          "id": "q5-5",
           "type": "order_sentence",
-          "question": "Order the request for feedback:",
-          "parts": ["Your", "input", "on", "this", "draft", "would", "be", "greatly", "valued."],
-          "correct_order": ["Your", "input", "on", "this", "draft", "would", "be", "greatly", "valued."],
-          "explanation": "Making the recipient feel valued increases the chance of a quality response."
+          "question": "Order the request for feedback (make them feel valued):",
+          "parts": [
+            "Your", "critical", "input", "on", "this", "draft", "would", "be", "greatly", "valued."
+          ],
+          "correct_order": [
+            "Your", "critical", "input", "on", "this", "draft", "would", "be", "greatly", "valued."
+          ],
+          "xp": 15,
+          "explanation": "Calling it 'critical input' and saying 'greatly valued' increases likelihood of quality feedback."
         },
         {
+          "id": "q5-6",
           "type": "listening_match",
-          "question": "Listen. Is this person requesting or commanding?",
-          "tts_text": "I need this on my desk by noon.",
-          "options": ["Requesting", "Commanding"],
-          "correct_answer": "Commanding",
-          "explanation": "Direct imperatives ('I need') indicate a command from a superior."
+          "question": "Is this person REQUESTING or COMMANDING?",
+          "tts_text": "I need this report on my desk by noon tomorrow.",
+          "options": [
+            { "text": "Polite request", "value": "request" },
+            { "text": "Direct command", "value": "command" }
+          ],
+          "correct_answer": "command",
+          "xp": 15,
+          "explanation": "'I need' + specific deadline = direct command (usually from a superior or authority figure). Non-negotiable."
         },
         {
+          "id": "q5-7",
           "type": "fill_input",
-          "question": "Please ______ (check) the document for errors.",
+          "question": "Please ______ (examine thoroughly) the document for errors before submission.",
           "correct_answers": ["review", "Review"],
-          "explanation": "Review implies a careful check."
+          "xp": 10,
+          "explanation": "'Review' implies a careful, thoughtful check. Alternatives: 'audit', 'proofread', 'examine'."
         },
         {
+          "id": "q5-8",
           "type": "quiz_choice",
-          "question": "What is the best way to end an email chain?",
-          "options": ["Stop replying.", "Say 'Okay'.", "Send a brief 'Thank you' or 'Noted'.", "Send a thumbs up emoji."],
-          "correct_answer": "Send a brief 'Thank you' or 'Noted'.",
-          "explanation": "It confirms receipt and closes the loop professionally."
+          "question": "How should you end a long email chain professionally?",
+          "options": [
+            { "text": "Just stop replying", "value": "a" },
+            { "text": "Send one final 'Okay'", "value": "b" },
+            { "text": "Send a brief 'Thank you' or 'Noted and confirmed'", "value": "c" },
+            { "text": "Send a thumbs up emoji", "value": "d" }
+          ],
+          "correct_answer": "c",
+          "xp": 15,
+          "explanation": "A final professional response confirms receipt, closes the loop, and leaves a positive last impression."
         },
         {
+          "id": "q5-9",
           "type": "order_sentence",
-          "question": "Construct the conditional offer:",
-          "parts": ["Should", "you", "require", "further", "info,", "do", "not", "hesitate", "to", "ask."],
-          "correct_order": ["Should", "you", "require", "further", "info,", "do", "not", "hesitate", "to", "ask."],
-          "explanation": "'Should you require' is a formal conditional structure (inversion)."
+          "question": "Order the formal conditional offer (inversion for formality):",
+          "parts": [
+            "Should", "you", "require", "any", "further", "information,", "do", "not", "hesitate", "to", "ask."
+          ],
+          "correct_order": [
+            "Should", "you", "require", "any", "further", "information,", "do", "not", "hesitate", "to", "ask."
+          ],
+          "xp": 15,
+          "explanation": "Subject-verb inversion ('Should you require...') is a highly formal structure that shows education and professionalism."
         },
         {
+          "id": "q5-10",
           "type": "fill_input",
-          "question": "We are currently ______ (overwhelmed) with requests.",
+          "question": "We are currently ______ (overwhelmed) with inquiries about the service outage.",
           "correct_answers": ["inundated", "Inundated"],
-          "explanation": "Inundated is a sophisticated way to say 'swamped'."
+          "xp": 10,
+          "explanation": "'Inundated' is a sophisticated synonym for 'swamped' or 'overwhelmed'. Shows command of nuanced vocabulary."
         }
       ]
+    },
+    {
+      "id": "stage-6-idioms",
+      "type": "quiz",
+      "title": "Phase 6: Email Idioms & Expressions (Nuanced Meanings)",
+      "duration": 15,
+      "instructions": "Master idiomatic expressions and non-literal phrases that are common in executive emails.",
+      "questions": [
+        {
+          "id": "q6-1",
+          "type": "quiz_choice",
+          "question": "What does 'I'm in the loop' mean?",
+          "options": [
+            { "text": "I'm stuck in a difficult situation", "value": "a" },
+            { "text": "I'm receiving updates and informed", "value": "b" },
+            { "text": "I'm physically in an office", "value": "c" },
+            { "text": "I'm waiting on the phone", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 10,
+          "explanation": "'In the loop' = receiving information/updates. 'Kept in the loop' = stay informed."
+        },
+        {
+          "id": "q6-2",
+          "type": "quiz_choice",
+          "question": "What does 'I have a bandwidth issue' mean in email context?",
+          "options": [
+            { "text": "My internet connection is slow", "value": "a" },
+            { "text": "I don't have time/capacity for this task", "value": "b" },
+            { "text": "There's a technical problem", "value": "c" },
+            { "text": "My email is full", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 10,
+          "explanation": "'Bandwidth' = time/capacity. 'I don't have the bandwidth' = too busy or understaffed to take on more."
+        },
+        {
+          "id": "q6-3",
+          "type": "quiz_choice",
+          "question": "What does 'Let's circle back on this' mean?",
+          "options": [
+            { "text": "Let's talk in a circle", "value": "a" },
+            { "text": "Let's revisit this topic later", "value": "b" },
+            { "text": "Let's go back to a previous location", "value": "c" },
+            { "text": "Let's disagree about everything", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 10,
+          "explanation": "'Circle back' = return to a topic later. Used to postpone discussion. 'We'll circle back on this next week.'"
+        },
+        {
+          "id": "q6-4",
+          "type": "quiz_choice",
+          "question": "What does 'I'm on it' mean?",
+          "options": [
+            { "text": "I'm physically on the object", "value": "a" },
+            { "text": "I'm working on it / I have taken action", "value": "b" },
+            { "text": "I'm sitting on a chair", "value": "c" },
+            { "text": "I'm keeping a secret", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 10,
+          "explanation": "'I'm on it' = I've taken action / it's in progress. Very common in fast-paced corporate settings."
+        },
+        {
+          "id": "q6-5",
+          "type": "quiz_choice",
+          "question": "What does 'We're aligned on this' mean?",
+          "options": [
+            { "text": "We are standing in a line", "value": "a" },
+            { "text": "We agree on the direction/approach", "value": "b" },
+            { "text": "We are in the same physical space", "value": "c" },
+            { "text": "We are in conflict", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 10,
+          "explanation": "'Aligned' = agreement on strategy/direction. 'Let's make sure we're aligned' = let's agree on the approach."
+        },
+        {
+          "id": "q6-6",
+          "type": "quiz_choice",
+          "question": "What does 'This is not on my radar' mean?",
+          "options": [
+            { "text": "I don't have a radar device", "value": "a" },
+            { "text": "I'm not aware of this issue / it's not a priority", "value": "b" },
+            { "text": "I disagree with it", "value": "c" },
+            { "text": "I need a radar to understand it", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 10,
+          "explanation": "'On my radar' = aware + prioritized. 'Not on my radar' = either unknown or low priority."
+        },
+        {
+          "id": "q6-7",
+          "type": "quiz_choice",
+          "question": "What does 'We need to synergize efforts' mean?",
+          "options": [
+            { "text": "We need to work together for combined effect", "value": "a" },
+            { "text": "We need to be synchronized", "value": "b" },
+            { "text": "We need to merge our companies", "value": "c" },
+            { "text": "We need to separate", "value": "d" }
+          ],
+          "correct_answer": "a",
+          "xp": 10,
+          "explanation": "'Synergize' = combine forces for greater effect. Overused in corporate jargon, but still common."
+        },
+        {
+          "id": "q6-8",
+          "type": "quiz_choice",
+          "question": "What does 'Let's boil the ocean on this' mean?",
+          "options": [
+            { "text": "Let's overly complicate a simple task", "value": "a" },
+            { "text": "Let's think through every possible angle (sometimes unnecessarily)", "value": "b" },
+            { "text": "Let's go to the beach", "value": "c" },
+            { "text": "Let's heat water", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 15,
+          "explanation": "'Boil the ocean' = explore every possible option in depth (can imply overthinking). Often used sarcastically: 'We don't need to boil the ocean on this.'"
+        },
+        {
+          "id": "q6-9",
+          "type": "quiz_choice",
+          "question": "What does 'It's not a blocker' mean?",
+          "options": [
+            { "text": "It's not stopping something / it's not critical", "value": "a" },
+            { "text": "It's not a person blocking", "value": "b" },
+            { "text": "It's not a wall", "value": "c" },
+            { "text": "It's not an issue", "value": "d" }
+          ],
+          "correct_answer": "a",
+          "xp": 10,
+          "explanation": "'Blocker' = something that stops progress. 'Not a blocker' = we can proceed despite this issue."
+        },
+        {
+          "id": "q6-10",
+          "type": "quiz_choice",
+          "question": "What does 'Let's table this discussion' mean?",
+          "options": [
+            { "text": "Let's put it on a table", "value": "a" },
+            { "text": "Let's postpone this / save for later", "value": "b" },
+            { "text": "Let's argue about it", "value": "c" },
+            { "text": "Let's find a table to sit at", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 10,
+          "explanation": "'Table' (verb) = postpone discussion. 'Let's table this and revisit next week' = save for later."
+        }
+      ]
+    },
+    {
+      "id": "stage-7-writing",
+      "type": "gamified_quiz",
+      "title": "Phase 7: Email Composition (Write from Scratch)",
+      "duration": 25,
+      "instructions": "Compose professional email responses to real-world scenarios. Your response will be evaluated on tone, clarity, and appropriateness.",
+      "questions": [
+        {
+          "id": "q7-1",
+          "type": "freeform_write",
+          "question": "A client has been waiting 3 days for a response. Write a follow-up email (2-3 sentences).",
+          "rubric": {
+            "clarity": "Does it state the purpose clearly?",
+            "tone": "Is it professional yet personable?",
+            "action": "Does it include a clear call-to-action?"
+          },
+          "sample_answer": "I sincerely apologize for the delayed response on your inquiry. I wanted to ensure I provided thorough information, and I'm now ready to discuss the proposal. Would you be available for a 30-minute call this week to walk through the details?",
+          "xp": 25,
+          "explanation": "Strong because: (1) apology + reason, (2) professional tone, (3) specific meeting request. Uses BLUF implicitly."
+        },
+        {
+          "id": "q7-2",
+          "type": "freeform_write",
+          "question": "You disagree with a colleague's approach in an email chain. Write a respectful disagreement (2-3 sentences).",
+          "rubric": {
+            "respect": "Does it respect the colleague?",
+            "clarity": "Is the disagreement clear without being rude?",
+            "alternative": "Do you propose an alternative?"
+          },
+          "sample_answer": "I appreciate the thoughtful approach you've outlined. However, I'm concerned about the timeline constraints this might create. Would you be open to discussing an alternative that maintains our compliance deadline while still honoring the proposed strategy?",
+          "xp": 25,
+          "explanation": "Strong because: (1) appreciation first, (2) 'concerned' not 'opposed', (3) proposes dialogue, (4) leaves door open."
+        },
+        {
+          "id": "q7-3",
+          "type": "freeform_write",
+          "question": "Write a subject line for an email announcing a company restructuring to employees.",
+          "rubric": {
+            "clarity": "Does it clearly state the topic?",
+            "tone": "Is it professional and not alarming?",
+            "action": "Does it prompt immediate reading?"
+          },
+          "sample_answer": "Important Announcement: Organization Restructuring Plan (Details in Message)",
+          "xp": 20,
+          "explanation": "Works because: (1) 'Important' signals priority, (2) clear topic, (3) 'Plan' softens impact, (4) sets expectation."
+        },
+        {
+          "id": "q7-4",
+          "type": "freeform_write",
+          "question": "You made a mistake that cost the company $5,000. Write the email to your manager (3-4 sentences).",
+          "rubric": {
+            "ownership": "Do you take full responsibility?",
+            "solution": "Do you propose a fix?",
+            "forward": "Do you focus on prevention going forward?"
+          },
+          "sample_answer": "I want to immediately inform you of an error in the Q3 budget reconciliation that resulted in a $5,000 overcharge. I take full responsibility for the oversight. I have already corrected the mistake and am implementing a dual-check system to prevent future occurrences. I apologize for the impact this has caused.",
+          "xp": 30,
+          "explanation": "Excellent because: (1) immediate transparency, (2) takes ownership, (3) specific solution, (4) prevents future recurrence, (5) apologizes."
+        },
+        {
+          "id": "q7-5",
+          "type": "freeform_write",
+          "question": "Write a diplomatic 'No' to a request from a peer who has more seniority (2-3 sentences).",
+          "rubric": {
+            "respect": "Do you respect their seniority?",
+            "firmness": "Is the 'No' clear despite politeness?",
+            "reason": "Do you give a brief, credible reason?"
+          },
+          "sample_answer": "I greatly respect your proposal and understand its potential value. However, our Q3 commitments have fully allocated our team's capacity, and I'm unable to take on additional work at this time. I'd be happy to revisit this in Q4 when we have more resources available.",
+          "xp": 25,
+          "explanation": "Strong because: (1) respect shown, (2) clear refusal, (3) reason given, (4) future possibility left open."
+        }
+      ]
+    },
+    {
+      "id": "stage-8-capstone",
+      "type": "gamified_quiz",
+      "title": "Phase 8: Capstone - Real-World Email Simulation",
+      "duration": 30,
+      "instructions": "You are an Executive Assistant. Respond to 5 real-world email scenarios as if you were sending on behalf of your executive.",
+      "questions": [
+        {
+          "id": "q8-1",
+          "type": "scenario_respond",
+          "scenario": "A vendor has submitted an invoice 2 weeks past the agreed payment date. They send a follow-up email with a frustrated tone: 'Still waiting for payment. This is unusual for your company.'",
+          "question": "Draft a response on behalf of your executive (3-4 sentences).",
+          "rubric": {
+            "apology": "Do you acknowledge the delay?",
+            "action": "Do you commit to specific next steps?",
+            "relationship": "Do you preserve the vendor relationship?"
+          },
+          "sample_answer": "Thank you for your patience, and I sincerely apologize for the payment delay. This does not reflect our standard practice, and I'm investigating the hold-up in our accounts payable immediately. I will personally ensure this is resolved by end of week and will follow up with you by Friday at 2 PM with a payment confirmation.",
+          "xp": 35,
+          "explanation": "Excellent: (1) apology + validation, (2) action (investigation), (3) specific timeline, (4) personal touch (I will), (5) vendor feels valued."
+        },
+        {
+          "id": "q8-2",
+          "type": "scenario_respond",
+          "scenario": "Your executive is invited to speak at a high-profile conference, but the date conflicts with a critical board meeting. The conference organizer's email: 'We're excited to have you as keynote. Can you confirm attendance?'",
+          "question": "Decline diplomatically (2-3 sentences).",
+          "rubric": {
+            "gratitude": "Do you thank them for the honor?",
+            "reason": "Do you give a credible, brief reason?",
+            "future": "Do you leave door open for future?"
+          },
+          "sample_answer": "Thank you so much for the invitation—we are truly honored. Unfortunately, my executive has a prior board commitment that cannot be rescheduled on that date. I'd love to explore speaking opportunities in future events; could we discuss Q4 or 2027 possibilities?",
+          "xp": 35,
+          "explanation": "Strong: (1) gratitude first, (2) clear reason (board can't move), (3) future possibility, (4) professional deflection."
+        },
+        {
+          "id": "q8-3",
+          "type": "scenario_respond",
+          "scenario": "An employee sends a personal email about a family emergency and requests 2 weeks off immediately. They write: 'I know this is last minute, but I really need your help.'",
+          "question": "Respond with empathy and clarity (3-4 sentences).",
+          "rubric": {
+            "empathy": "Do you acknowledge the difficulty?",
+            "clarity": "Do you state what can/cannot be approved?",
+            "support": "Do you offer HR/wellbeing resources?"
+          },
+          "sample_answer": "My heart goes out to you, and I'm sorry you're facing this challenging situation. I'm approving the leave immediately—your wellbeing is paramount. Please connect with our HR department to ensure all paperwork is in order, and don't hesitate to reach out if you need additional support or resources.",
+          "xp": 35,
+          "explanation": "Excellent: (1) empathy, (2) quick approval, (3) clear process, (4) offers HR support, (5) keeps door open."
+        },
+        {
+          "id": "q8-4",
+          "type": "scenario_respond",
+          "scenario": "A major client is upset about a product feature delay. They CC'd multiple people and wrote: 'This is the 3rd delay. We're considering alternatives.' This email has serious business risk.",
+          "question": "Write a response that salvages the relationship (4-5 sentences).",
+          "rubric": {
+            "accountability": "Do you own the issue?",
+            "urgency": "Do you show it's being addressed NOW?",
+            "specificity": "Do you provide exact next steps + timeline?"
+          },
+          "sample_answer": "I sincerely apologize for the repeated delays—this falls short of our commitment to you. I am personally overseeing this feature's completion, and we will deliver by [specific date]. I'm setting up a call with our product team and your technical lead tomorrow at 10 AM to discuss interim solutions and a realistic roadmap. I value our partnership and am committed to rebuilding your confidence.",
+          "xp": 40,
+          "explanation": "Exceptional: (1) personal ownership, (2) specific date, (3) immediate action, (4) interim solutions, (5) rebuilds trust."
+        },
+        {
+          "id": "q8-5",
+          "type": "scenario_respond",
+          "scenario": "You've been asked to communicate a difficult cost-cutting initiative to all department heads. The email must convey urgency, fairness, and support. Draft the announcement (5-6 sentences).",
+          "question": "Write the opening announcement that sets tone for the cost-cutting initiative.",
+          "rubric": {
+            "transparency": "Do you explain the 'why'?",
+            "fairness": "Is the burden shared equally?",
+            "support": "Do you offer resources/guidance?",
+            "hope": "Do you end on forward momentum?"
+          },
+          "sample_answer": "Following our Q3 analysis, we must implement a targeted cost-reduction initiative to strengthen our financial position for 2027. This affects all departments equally, and we're committed to no workforce reductions. I'm establishing a cost-optimization task force, and each department will receive a customized roadmap and support from finance. This is a collective challenge, and I'm confident our team will emerge stronger. Let's schedule a town hall next Tuesday to discuss details.",
+          "xp": 40,
+          "explanation": "Strong: (1) clear rationale, (2) fairness emphasized, (3) 'no layoffs' transparency, (4) support system, (5) forward-looking tone, (6) specific next step."
+        }
+      ]
+    },
+    {
+      "id": "stage-final",
+      "type": "assessment",
+      "title": "Final Assessment: Email Mastery Exam",
+      "duration": 45,
+      "instructions": "Complete a comprehensive assessment covering all 8 phases. You must score 80%+ to pass.",
+      "questions": [
+        {
+          "id": "final-1",
+          "type": "quiz_choice",
+          "question": "Which email opens with BLUF?",
+          "options": [
+            { "text": "I hope this email finds you well. I was thinking about our conversation...", "value": "a" },
+            { "text": "ACTION REQUIRED: Please approve the attached proposal by Friday EOD. Attached: Q4 Strategy Brief.", "value": "b" },
+            { "text": "Hi! Just wanted to touch base about the project.", "value": "c" },
+            { "text": "Per my previous email, the data is in the folder.", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 20,
+          "explanation": "Only option B opens with BLUF: ACTION (clear), TOPIC (Q4), DEADLINE (EOD Friday), EXPECTATION (attached document)."
+        },
+        {
+          "id": "final-2",
+          "type": "fill_input",
+          "question": "Complete: 'I am writing to ______ (politely request clarification) on the Q3 targets.'",
+          "correct_answers": ["inquire", "Inquire"],
+          "xp": 15,
+          "explanation": "'Inquire' is the formal verb. 'Seek clarification' also works."
+        },
+        {
+          "id": "final-3",
+          "type": "order_sentence",
+          "question": "Order the professional meeting request:",
+          "parts": [
+            "I", "would", "greatly", "appreciate", "the", "opportunity", "to", "discuss", "this", "proposal", "at", "your", "earliest", "convenience."
+          ],
+          "correct_order": [
+            "I", "would", "greatly", "appreciate", "the", "opportunity", "to", "discuss", "this", "proposal", "at", "your", "earliest", "convenience."
+          ],
+          "xp": 20,
+          "explanation": "Polite, formal, and gives the recipient flexibility ('earliest convenience')."
+        },
+        {
+          "id": "final-4",
+          "type": "quiz_choice",
+          "question": "What is the biggest mistake in this email? 'Per my previous email, you were supposed to send the report by now. Where is it???'",
+          "options": [
+            { "text": "Too many question marks", "value": "a" },
+            { "text": "Passive-aggressive tone + accusatory phrasing", "value": "b" },
+            { "text": "The spelling is wrong", "value": "c" },
+            { "text": "The font is too small", "value": "d" }
+          ],
+          "correct_answer": "b",
+          "xp": 20,
+          "explanation": "'Per my previous email' + 'Where is it???' reads as frustrated/accusatory. Better: 'I wanted to follow up on the report. Could you share a status update?'"
+        },
+        {
+          "id": "final-5",
+          "type": "freeform_write",
+          "question": "Your executive made a mistake in a public announcement. Draft a brief correction email (2-3 sentences).",
+          "sample_answer": "I wanted to clarify a detail from this morning's announcement. The Q3 budget adjustment is 8% (not 5% as stated). This change affects the timeline accordingly. Please reference the attached corrected memo for full details.",
+          "xp": 30,
+          "explanation": "Effective: (1) doesn't blame anyone, (2) corrects clearly, (3) provides source, (4) forward-looking."
+        }
+      ],
+      "passing_score": 80,
+      "rewards": {
+        "badge": "Email Master: BLUF & Diplomacy",
+        "xp_bonus": 100
+      }
     }
   ]
 }

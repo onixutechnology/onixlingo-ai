@@ -1,15 +1,45 @@
 {
   "id": "pro-b1-3",
+  "version": "2.1",
   "title": "Business Travel: Logistics & Protocol",
+  "subtitle": "Master Global Mobility and Corporate Travel Management",
+  "description": "A comprehensive professional English course for mastering business travel logistics, expense management, international protocol, and crisis communication in travel scenarios.",
+  "difficulty": "intermediate",
+  "duration_minutes": 240,
+  "estimated_completion_hours": 4.5,
+  "language": "en",
+  "target_audience": ["executives", "managers", "business_professionals", "travel_coordinators"],
+  "learning_objectives": [
+    "Master business travel terminology and professional protocol",
+    "Understand expense management and reimbursement processes",
+    "Develop contingency planning and crisis communication skills",
+    "Navigate international travel logistics and documentation",
+    "Communicate professionally during travel disruptions and delays",
+    "Manage time zones, jet lag, and cross-cultural expectations"
+  ],
+  "metadata": {
+    "created_at": "2026-01-12",
+    "last_updated": "2026-01-12",
+    "instructor": "Global Mobility Expert",
+    "category": "Professional Development",
+    "tags": ["travel", "logistics", "business", "international", "protocol", "communication"],
+    "prerequisites": ["Basic English B1"],
+    "cer_aligned": true
+  },
   "stages": [
     {
       "id": "stage-intro",
       "type": "theory",
       "title": "The Mobile Office Mindset",
+      "sequence": 1,
+      "duration_minutes": 15,
+      "content_type": "introduction",
       "parts": [
         {
-          "visual": "Business travel is not tourism; it is a remote deployment.\n\nTo manage logistics like a pro, distinguish between **Preference** and **Policy**.\n\nKey Concepts:\n1. **Itinerary Integrity:** Ensuring tight connections and buffer times.\n2. **Expense Compliance:** Understanding Per Diems and Reimbursements.\n3. **Contingency Planning:** Always having a Plan B for delays.\n\nVocabulary shift: Instead of 'Hotel', use **'Accommodation'**. Instead of 'Plan', use **'Itinerary'**.",
-          "audio": "Efficiency in travel reflects efficiency in management. In this module, we master the language of corporate mobility."
+          "type": "visual_narrative",
+          "visual": "Business travel is not tourism; it is a remote deployment.\n\nTo manage logistics like a pro, distinguish between **Preference** and **Policy**.\n\n**Key Concepts:**\n\n1. **Itinerary Integrity:** Ensuring tight connections and buffer times.\n2. **Expense Compliance:** Understanding Per Diems and Reimbursements.\n3. **Contingency Planning:** Always having a Plan B for delays.\n4. **Cultural Adaptation:** Adjusting communication styles across regions.\n5. **Risk Management:** Mitigating travel-related operational disruptions.\n\n**Vocabulary Shift:**\n- Instead of 'Hotel', use **'Accommodation'**\n- Instead of 'Plan', use **'Itinerary'**\n- Instead of 'Delay', use **'Schedule Variance'**\n- Instead of 'Money Back', use **'Reimbursement'**\n- Instead of 'Tired', use **'Experiencing Jet Lag'**\n- Instead of 'Book', use **'Reserve'** or **'Confirm'**",
+          "audio": "Efficiency in travel reflects efficiency in management. In this module, we master the language of corporate mobility. Professional travel is about precision, protocol, and proactive problem-solving.",
+          "key_takeaway": "Business travel demands excellence in planning, communication, and adaptability. Every detail matters."
         }
       ]
     },
@@ -17,86 +47,111 @@
       "id": "stage-listening",
       "type": "quiz",
       "title": "Phase 1: Auditory Analysis (Listening)",
+      "sequence": 2,
+      "duration_minutes": 35,
+      "passing_score": 70,
+      "total_questions": 10,
       "questions": [
         {
+          "id": "q1-1",
           "type": "listening_match",
           "question": "Listen. Is this a professional request for a change?",
           "tts_text": "I hate this room. I want a new one now.",
           "options": ["Professional", "Unprofessional"],
           "correct_answer": "Unprofessional",
-          "explanation": "Demands show a lack of emotional control. A pro requests an 'upgrade' or 'room change' politely."
+          "difficulty": "easy",
+          "explanation": "Demands show a lack of emotional control. A pro requests an 'upgrade' or 'room change' politely.",
+          "professional_alternative": "Could we arrange an alternative room, please? Perhaps a quieter location or a different view?"
         },
         {
+          "id": "q1-2",
           "type": "listening_match",
           "question": "What is the speaker discussing?",
           "tts_text": "Please submit your receipts for reimbursement by Friday.",
           "options": ["Booking a flight", "Expense Management"],
           "correct_answer": "Expense Management",
-          "explanation": "'Reimbursement' refers to the company paying you back for out-of-pocket costs."
+          "difficulty": "easy",
+          "explanation": "'Reimbursement' refers to the company paying you back for out-of-pocket costs incurred during travel."
         },
         {
+          "id": "q1-3",
           "type": "listening_match",
           "question": "Which term describes the daily money allowance?",
           "tts_text": "The company provides a $100 per diem for meals.",
           "options": ["Per diem", "Salary"],
           "correct_answer": "Per diem",
-          "explanation": "'Per diem' (Latin for 'per day') is the standard term for daily travel allowances."
+          "difficulty": "easy",
+          "explanation": "'Per diem' (Latin for 'per day') is the standard term for daily travel allowances covering meals and incidentals."
         },
         {
+          "id": "q1-4",
           "type": "listening_match",
           "question": "Listen. Is this a direct flight?",
           "tts_text": "We have a two-hour layover in Frankfurt.",
           "options": ["Direct", "Connecting"],
           "correct_answer": "Connecting",
-          "explanation": "A 'layover' (or stopover) implies a connection between flights."
+          "difficulty": "easy",
+          "explanation": "A 'layover' (or stopover) implies a connection between flights. A direct flight has no stops."
         },
         {
+          "id": "q1-5",
           "type": "listening_match",
           "question": "Identify the tone:",
           "tts_text": "We regret to inform you that the flight has been cancelled.",
           "options": ["Formal Notification", "Casual Chat"],
           "correct_answer": "Formal Notification",
-          "explanation": "'Regret to inform' is standard airline protocol for bad news."
+          "difficulty": "easy",
+          "explanation": "'Regret to inform' is standard airline protocol for communicating bad news professionally."
         },
         {
+          "id": "q1-6",
           "type": "listening_match",
           "question": "What is 'Ground Transport'?",
           "tts_text": "Please arrange ground transport from the airport to the HQ.",
           "options": ["Taxis/Cars/Trains", "Walking"],
           "correct_answer": "Taxis/Cars/Trains",
-          "explanation": "Ground transport covers all movement after landing."
+          "difficulty": "easy",
+          "explanation": "Ground transport covers all movement after landing: taxis, rental cars, trains, shuttles, and private drivers."
         },
         {
+          "id": "q1-7",
           "type": "listening_match",
           "question": "Listen. Is this person requesting a specific seat?",
           "tts_text": "I would prefer an aisle seat near the front.",
           "options": ["Yes", "No"],
           "correct_answer": "Yes",
-          "explanation": "'Aisle' (pasillo) vs 'Window'. Executives often prefer aisle for faster exit."
+          "difficulty": "medium",
+          "explanation": "'Aisle' (pasillo) vs 'Window'. Executives often prefer aisle seats for faster exit and mid-flight calls."
         },
         {
+          "id": "q1-8",
           "type": "listening_match",
           "question": "Which phrase implies a schedule conflict?",
           "tts_text": "The departure time overlaps with the conference call.",
           "options": ["Overlaps", "Fits"],
           "correct_answer": "Overlaps",
-          "explanation": "Overlap means two events happening simultaneously."
+          "difficulty": "medium",
+          "explanation": "Overlap means two events happening simultaneously, creating a scheduling conflict that must be resolved."
         },
         {
+          "id": "q1-9",
           "type": "listening_match",
           "question": "Listen. What is the status of the booking?",
           "tts_text": "Your reservation is confirmed and ticketed.",
           "options": ["Pending", "Finalized"],
           "correct_answer": "Finalized",
-          "explanation": "'Ticketed' means the transaction is complete and valid."
+          "difficulty": "medium",
+          "explanation": "'Ticketed' means the transaction is complete, valid, and the booking is final. No further changes without fees."
         },
         {
+          "id": "q1-10",
           "type": "listening_match",
           "question": "Identify the speaker's role:",
           "tts_text": "I will have your luggage brought up to the suite immediately.",
           "options": ["CEO", "Concierge/Bellman"],
           "correct_answer": "Concierge/Bellman",
-          "explanation": "Service language typical of high-end hospitality."
+          "difficulty": "hard",
+          "explanation": "Service-oriented language typical of high-end hospitality staff. Uses formal future tense and service terminology."
         }
       ]
     },
@@ -104,76 +159,140 @@
       "id": "stage-choice",
       "type": "quiz",
       "title": "Phase 2: Situational Logistics (Selection)",
+      "sequence": 3,
+      "duration_minutes": 35,
+      "passing_score": 70,
+      "total_questions": 10,
       "questions": [
         {
+          "id": "q2-1",
           "type": "quiz_choice",
           "question": "Your flight is delayed, and you will miss a meeting. What do you email the client?",
-          "options": ["I'm late.", "Unforeseen travel delays have occurred. I propose pushing our meeting by 30 minutes.", "The airline sucks.", "Wait for me."],
+          "options": [
+            "I'm late.",
+            "Unforeseen travel delays have occurred. I propose pushing our meeting by 30 minutes.",
+            "The airline sucks.",
+            "Wait for me."
+          ],
           "correct_answer": "Unforeseen travel delays have occurred. I propose pushing our meeting by 30 minutes.",
-          "explanation": "State the fact neutrally and immediately propose a solution (new time)."
+          "difficulty": "easy",
+          "explanation": "State the fact neutrally and immediately propose a solution with a specific new time. Avoid blame, emotion, and vagueness.",
+          "context": "Crisis Communication"
         },
         {
+          "id": "q2-2",
           "type": "quiz_choice",
           "question": "You need to book a hotel. What is the corporate term?",
           "options": ["Sleeping place", "Accommodation", "The Inn", "A room"],
           "correct_answer": "Accommodation",
-          "explanation": "Accommodation covers hotels, apartments, and suites formally."
+          "difficulty": "easy",
+          "explanation": "Accommodation is the formal corporate term covering hotels, serviced apartments, and suites.",
+          "context": "Terminology"
         },
         {
+          "id": "q2-3",
           "type": "quiz_choice",
           "question": "What is an 'Expense Report'?",
-          "options": ["A travel diary.", "A document listing costs to be paid back by the company.", "A complaint about prices.", "A flight ticket."],
+          "options": [
+            "A travel diary.",
+            "A document listing costs to be paid back by the company.",
+            "A complaint about prices.",
+            "A flight ticket."
+          ],
           "correct_answer": "A document listing costs to be paid back by the company.",
-          "explanation": "Crucial for financial compliance."
+          "difficulty": "easy",
+          "explanation": "An expense report is crucial for financial compliance and reimbursement processing. Must include receipts.",
+          "context": "Financial Management"
         },
         {
+          "id": "q2-4",
           "type": "quiz_choice",
           "question": "How do you ask for a receipt politely?",
-          "options": ["Give me the paper.", "Could you please provide a tax invoice?", "I need proof.", "Paperwork, please."],
+          "options": [
+            "Give me the paper.",
+            "Could you please provide a tax invoice?",
+            "I need proof.",
+            "Paperwork, please."
+          ],
           "correct_answer": "Could you please provide a tax invoice?",
-          "explanation": "'Tax invoice' or 'VAT receipt' is often required for corporate accounting."
+          "difficulty": "medium",
+          "explanation": "'Tax invoice' or 'VAT receipt' is the formal term required for corporate accounting and audit trails.",
+          "context": "Documentation"
         },
         {
+          "id": "q2-5",
           "type": "quiz_choice",
           "question": "Select the synonym for 'Plan B':",
           "options": ["Contingency plan", "Second idea", "Backup thing", "Oops strategy"],
           "correct_answer": "Contingency plan",
-          "explanation": "Contingency planning is essential for risk management."
+          "difficulty": "easy",
+          "explanation": "Contingency planning is essential for risk management in travel. Always have alternatives ready.",
+          "context": "Risk Management"
         },
         {
+          "id": "q2-6",
           "type": "quiz_choice",
           "question": "You arrive in a different time zone. You are suffering from:",
           "options": ["Sleepy head", "Jet lag", "Time sickness", "Plane tired"],
           "correct_answer": "Jet lag",
-          "explanation": "Jet lag is the physiological condition resulting from transmeridian travel."
+          "difficulty": "easy",
+          "explanation": "Jet lag is the physiological condition from transmeridian travel (crossing time zones). Causes circadian desynchronization.",
+          "context": "Health & Wellness"
         },
         {
+          "id": "q2-7",
           "type": "quiz_choice",
           "question": "What does 'ETA' stand for?",
-          "options": ["Estimated Time of Arrival", "Eat The Apple", "End Travel Arrangement", "Early Train Access"],
+          "options": [
+            "Estimated Time of Arrival",
+            "Eat The Apple",
+            "End Travel Arrangement",
+            "Early Train Access"
+          ],
           "correct_answer": "Estimated Time of Arrival",
-          "explanation": "Universal logistics acronym."
+          "difficulty": "easy",
+          "explanation": "Universal logistics acronym used in aviation, transportation, and supply chain management.",
+          "context": "Acronyms & Terminology"
         },
         {
+          "id": "q2-8",
           "type": "quiz_choice",
           "question": "Which seat offers more legroom but requires responsibility?",
           "options": ["Window seat", "Exit row", "Back row", "Middle seat"],
           "correct_answer": "Exit row",
-          "explanation": "Exit rows offer space but require willingness to assist in emergencies."
+          "difficulty": "medium",
+          "explanation": "Exit rows offer extra space but require willingness to assist in emergencies and follow safety protocols.",
+          "context": "Flight Operations"
         },
         {
+          "id": "q2-9",
           "type": "quiz_choice",
           "question": "What is a 'Red-eye flight'?",
-          "options": ["A flight where you serve coffee.", "An overnight flight arriving in the morning.", "A dangerous flight.", "A flight at sunset."],
+          "options": [
+            "A flight where you serve coffee.",
+            "An overnight flight arriving in the morning.",
+            "A dangerous flight.",
+            "A flight at sunset."
+          ],
           "correct_answer": "An overnight flight arriving in the morning.",
-          "explanation": "Common business term for overnight travel to save a work day."
+          "difficulty": "medium",
+          "explanation": "Common business term for overnight travel to save a work day. Called 'red-eye' due to tired eyes on arrival.",
+          "context": "Travel Strategies"
         },
         {
+          "id": "q2-10",
           "type": "quiz_choice",
           "question": "You need to change currency. Where do you go?",
-          "options": ["The money shop", "Currency Exchange / Bureau de Change", "The bank vault", "The ATM only"],
+          "options": [
+            "The money shop",
+            "Currency Exchange / Bureau de Change",
+            "The bank vault",
+            "The ATM only"
+          ],
           "correct_answer": "Currency Exchange / Bureau de Change",
-          "explanation": "Standard international signage terms."
+          "difficulty": "medium",
+          "explanation": "Standard international signage. ATMs work but often have poor rates. Exchanges offer better rates.",
+          "context": "International Operations"
         }
       ]
     },
@@ -181,76 +300,110 @@
       "id": "stage-structure",
       "type": "gamified_quiz",
       "title": "Phase 3: Itinerary Structure (Ordering)",
+      "sequence": 4,
+      "duration_minutes": 30,
+      "passing_score": 75,
+      "total_questions": 10,
       "questions": [
         {
+          "id": "q3-1",
           "type": "order_sentence",
           "question": "Request the itinerary:",
           "parts": ["Please", "send", "the", "finalized", "itinerary", "for", "review."],
           "correct_order": ["Please", "send", "the", "finalized", "itinerary", "for", "review."],
-          "explanation": "Standard administrative request."
+          "difficulty": "easy",
+          "explanation": "Standard administrative request with clear subject-verb-object structure.",
+          "context": "Requests"
         },
         {
+          "id": "q3-2",
           "type": "order_sentence",
           "question": "Report a delay:",
           "parts": ["My", "flight", "has", "been", "delayed", "by", "two", "hours."],
           "correct_order": ["My", "flight", "has", "been", "delayed", "by", "two", "hours."],
-          "explanation": "Factual update of status."
+          "difficulty": "easy",
+          "explanation": "Factual status update using passive voice to remain neutral and professional.",
+          "context": "Status Updates"
         },
         {
+          "id": "q3-3",
           "type": "order_sentence",
           "question": "Ask for reimbursement:",
           "parts": ["I", "have", "attached", "all", "receipts", "for", "reimbursement."],
           "correct_order": ["I", "have", "attached", "all", "receipts", "for", "reimbursement."],
-          "explanation": "Clear action for finance."
+          "difficulty": "easy",
+          "explanation": "Clear action for finance department using present perfect tense to show completed action.",
+          "context": "Expense Processing"
         },
         {
+          "id": "q3-4",
           "type": "order_sentence",
           "question": "State specific dietary needs for the flight:",
           "parts": ["I", "require", "a", "vegetarian", "meal", "for", "the", "flight."],
           "correct_order": ["I", "require", "a", "vegetarian", "meal", "for", "the", "flight."],
-          "explanation": "'Require' is stronger than 'want'."
+          "difficulty": "medium",
+          "explanation": "'Require' is stronger than 'want' and ensures airlines prioritize your dietary requirements.",
+          "context": "Special Requests"
         },
         {
+          "id": "q3-5",
           "type": "order_sentence",
           "question": "Coordinate arrival:",
           "parts": ["I", "will", "land", "at", "Heathrow", "Terminal", "5", "at", "noon."],
           "correct_order": ["I", "will", "land", "at", "Heathrow", "Terminal", "5", "at", "noon."],
-          "explanation": "Specific location (Terminal) and time."
+          "difficulty": "medium",
+          "explanation": "Specific location (Terminal) and exact time needed for ground transport and meeting coordination.",
+          "context": "Logistics Coordination"
         },
         {
+          "id": "q3-6",
           "type": "order_sentence",
           "question": "Request hotel amenities:",
           "parts": ["Does", "the", "accommodation", "include", "high-speed", "Wi-Fi?"],
           "correct_order": ["Does", "the", "accommodation", "include", "high-speed", "Wi-Fi?"],
-          "explanation": "Checking critical business requirements."
+          "difficulty": "medium",
+          "explanation": "Checking critical business requirements (internet) before confirming accommodation.",
+          "context": "Accommodation Requirements"
         },
         {
+          "id": "q3-7",
           "type": "order_sentence",
           "question": "Discuss corporate policy:",
           "parts": ["This", "expense", "is", "compliant", "with", "travel", "policy."],
           "correct_order": ["This", "expense", "is", "compliant", "with", "travel", "policy."],
-          "explanation": "Asserting that you followed the rules."
+          "difficulty": "hard",
+          "explanation": "Asserting compliance with rules during expense justification. Shows policy awareness.",
+          "context": "Policy Compliance"
         },
         {
+          "id": "q3-8",
           "type": "order_sentence",
           "question": "Check-in instructions:",
           "parts": ["What", "is", "the", "procedure", "for", "late", "check-in?"],
           "correct_order": ["What", "is", "the", "procedure", "for", "late", "check-in?"],
-          "explanation": "Asking for 'procedure' implies a formal process."
+          "difficulty": "hard",
+          "explanation": "Using 'procedure' implies a formal process and shows professionalism and respect for hotel operations.",
+          "context": "Hotel Operations"
         },
         {
+          "id": "q3-9",
           "type": "order_sentence",
           "question": "Transport arrangement:",
           "parts": ["Please", "book", "a", "chauffeur", "for", "airport", "transfer."],
           "correct_order": ["Please", "book", "a", "chauffeur", "for", "airport", "transfer."],
-          "explanation": "'Chauffeur' implies a private driver, not a taxi."
+          "difficulty": "hard",
+          "explanation": "'Chauffeur' implies a private driver service, not a taxi or ride-share. More formal and professional.",
+          "context": "Ground Transportation"
         },
         {
+          "id": "q3-10",
           "type": "order_sentence",
           "question": "Meeting confirmation:",
           "parts": ["We", "are", "scheduled", "to", "meet", "in", "the", "lobby."],
           "correct_order": ["We", "are", "scheduled", "to", "meet", "in", "the", "lobby."],
-          "explanation": "Clarifying the meeting point."
+          "difficulty": "medium",
+          "explanation": "Clarifying the meeting point and location to avoid confusion upon arrival.",
+          "context": "Meeting Coordination"
         }
       ]
     },
@@ -258,66 +411,101 @@
       "id": "stage-vocab",
       "type": "gamified_quiz",
       "title": "Phase 4: Logistics Vocabulary (Input)",
+      "sequence": 5,
+      "duration_minutes": 25,
+      "passing_score": 80,
+      "total_questions": 10,
+      "vocabulary_category": "Travel & Logistics",
       "questions": [
         {
+          "id": "q4-1",
           "type": "fill_input",
           "question": "The schedule for the trip is called an ______.",
           "correct_answers": ["itinerary", "Itinerary"],
-          "explanation": "The document detailing the plan."
+          "difficulty": "easy",
+          "explanation": "The document detailing all travel plans: flights, accommodations, meetings, and activities.",
+          "context": "Planning Documents"
         },
         {
+          "id": "q4-2",
           "type": "fill_input",
           "question": "We have a 3-hour ______ (stop) in Dubai.",
           "correct_answers": ["layover", "Layover", "stopover"],
-          "explanation": "A waiting period between connecting flights."
+          "difficulty": "easy",
+          "explanation": "A waiting period between connecting flights. Different from a 'connection' (switching planes).",
+          "context": "Flight Terminology"
         },
         {
+          "id": "q4-3",
           "type": "fill_input",
           "question": "I need to submit my ______ (spending) report.",
           "correct_answers": ["expense", "Expense"],
-          "explanation": "Expense report is the standard term."
+          "difficulty": "easy",
+          "explanation": "Expense report is the standard term documenting business spending and requires supporting receipts.",
+          "context": "Financial Documents"
         },
         {
+          "id": "q4-4",
           "type": "fill_input",
           "question": "The company pays me back via ______.",
           "correct_answers": ["reimbursement", "Reimbursement"],
-          "explanation": "The process of refunding money spent."
+          "difficulty": "easy",
+          "explanation": "The process of refunding money spent on business expenses after expense report approval.",
+          "context": "Financial Processes"
         },
         {
+          "id": "q4-5",
           "type": "fill_input",
           "question": "I am suffering from ______ (tiredness from time zones).",
           "correct_answers": ["jet lag", "Jet lag", "Jetlag"],
-          "explanation": "Circadian rhythm disruption."
+          "difficulty": "easy",
+          "explanation": "Circadian rhythm disruption from crossing time zones. Affects sleep, digestion, and cognitive function.",
+          "context": "Health & Travel"
         },
         {
+          "id": "q4-6",
           "type": "fill_input",
           "question": "Please arrange ______ (cars/trains) transport.",
           "correct_answers": ["ground", "Ground"],
-          "explanation": "Transport on the ground (vs. air)."
+          "difficulty": "easy",
+          "explanation": "Transport on the ground (taxi, car rental, train, bus) as opposed to air transport.",
+          "context": "Transportation"
         },
         {
+          "id": "q4-7",
           "type": "fill_input",
           "question": "My flight was ______ (stopped/annulled).",
           "correct_answers": ["cancelled", "Cancelled", "canceled"],
-          "explanation": "When the flight will not fly."
+          "difficulty": "easy",
+          "explanation": "When the flight will not operate. Different from 'delayed' (postponed but still operates).",
+          "context": "Flight Status"
         },
         {
+          "id": "q4-8",
           "type": "fill_input",
           "question": "I have a ______ (money allowance) of $50 per day.",
           "correct_answers": ["per diem", "Per diem"],
-          "explanation": "Daily allowance."
+          "difficulty": "medium",
+          "explanation": "Daily allowance (from Latin: 'per' = each, 'diem' = day). Covers meals and incidental expenses.",
+          "context": "Financial Terms"
         },
         {
+          "id": "q4-9",
           "type": "fill_input",
           "question": "We were bumped to Business Class. It was a free ______.",
           "correct_answers": ["upgrade", "Upgrade"],
-          "explanation": "Moving to a better category."
+          "difficulty": "medium",
+          "explanation": "Moving to a better service class (Economy → Business/First). Often given on oversold flights.",
+          "context": "Flight Benefits"
         },
         {
+          "id": "q4-10",
           "type": "fill_input",
           "question": "The flight is now ______ (getting on the plane).",
           "correct_answers": ["boarding", "Boarding"],
-          "explanation": "The process of entering the aircraft."
+          "difficulty": "medium",
+          "explanation": "The process of entering the aircraft in designated groups. Pre-boarding includes families and elites.",
+          "context": "Airport Procedures"
         }
       ]
     },
@@ -325,76 +513,284 @@
       "id": "stage-mastery",
       "type": "quiz",
       "title": "Phase 5: Global Mobility Mastery",
+      "sequence": 6,
+      "duration_minutes": 40,
+      "passing_score": 75,
+      "total_questions": 10,
       "questions": [
         {
+          "id": "q5-1",
           "type": "quiz_choice",
           "question": "What is 'Bleisure'?",
-          "options": ["A medical condition.", "Mixing Business and Leisure travel.", "A brand of luggage.", "Being lazy."],
+          "options": [
+            "A medical condition.",
+            "Mixing Business and Leisure travel.",
+            "A brand of luggage.",
+            "Being lazy."
+          ],
           "correct_answer": "Mixing Business and Leisure travel.",
-          "explanation": "A modern trend where executives extend trips for vacation."
+          "difficulty": "hard",
+          "explanation": "A modern trend where executives extend business trips for vacation. Growing post-2020 due to remote work flexibility.",
+          "context": "Modern Travel Trends"
         },
         {
+          "id": "q5-2",
           "type": "fill_input",
           "question": "The time difference is 6 hours due to the Time ______.",
           "correct_answers": ["Zone", "zone"],
-          "explanation": "Time Zone differences affect scheduling."
+          "difficulty": "easy",
+          "explanation": "Time Zone differences affect scheduling. Use UTC/GMT for international coordination to avoid confusion.",
+          "context": "International Coordination"
         },
         {
+          "id": "q5-3",
           "type": "order_sentence",
           "question": "Order the visa inquiry:",
           "parts": ["Do", "I", "require", "a", "transit", "visa", "for", "this", "connection?"],
           "correct_order": ["Do", "I", "require", "a", "transit", "visa", "for", "this", "connection?"],
-          "explanation": "Critical legal check for international travel."
+          "difficulty": "hard",
+          "explanation": "Critical legal check for international travel. Transit visas differ from tourist/business visas.",
+          "context": "Legal Requirements"
         },
         {
+          "id": "q5-4",
           "type": "quiz_choice",
           "question": "Which is more formal? 'Hotel' or 'Accommodation'?",
           "options": ["Hotel", "Accommodation"],
           "correct_answer": "Accommodation",
-          "explanation": "Accommodation is the broader, more formal category."
+          "difficulty": "easy",
+          "explanation": "Accommodation is the broader, more formal category covering all lodging types globally.",
+          "context": "Terminology"
         },
         {
+          "id": "q5-5",
           "type": "fill_input",
           "question": "We need to go through ______ (passport control).",
           "correct_answers": ["immigration", "Immigration", "customs"],
-          "explanation": "Immigration checks people; Customs checks goods."
+          "difficulty": "hard",
+          "explanation": "Immigration checks people and documents; Customs checks goods. Both required for international entry.",
+          "context": "Border Control"
         },
         {
+          "id": "q5-6",
           "type": "listening_match",
           "question": "Listen. Is the flight non-stop?",
           "tts_text": "It's a direct flight, but it touches down in Singapore.",
           "options": ["Yes", "No"],
           "correct_answer": "No",
-          "explanation": "Trick question: 'Direct' keeps the same flight number but can stop. 'Non-stop' has no stops."
+          "difficulty": "hard",
+          "explanation": "Trick question: 'Direct' keeps the same flight number but can stop. 'Non-stop' has zero stops.",
+          "context": "Flight Terminology"
         },
         {
+          "id": "q5-7",
           "type": "order_sentence",
           "question": "Expense justification:",
           "parts": ["This", "dinner", "was", "a", "client", "entertainment", "expense."],
           "correct_order": ["This", "dinner", "was", "a", "client", "entertainment", "expense."],
-          "explanation": "Justifying costs for accounting."
+          "difficulty": "hard",
+          "explanation": "Justifying costs for accounting. Client entertainment is often a separate expense category.",
+          "context": "Expense Categories"
         },
         {
+          "id": "q5-8",
           "type": "quiz_choice",
           "question": "What is a 'Frequent Flyer Program'?",
-          "options": ["A pilot training course.", "A loyalty scheme to earn miles/points.", "A fear of flying.", "A busy schedule."],
+          "options": [
+            "A pilot training course.",
+            "A loyalty scheme to earn miles/points.",
+            "A fear of flying.",
+            "A busy schedule."
+          ],
           "correct_answer": "A loyalty scheme to earn miles/points.",
-          "explanation": "Essential for executives to gain status and perks."
+          "difficulty": "easy",
+          "explanation": "Essential for executives to gain elite status, upgrades, lounge access, and priority boarding.",
+          "context": "Loyalty Programs"
         },
         {
+          "id": "q5-9",
           "type": "fill_input",
           "question": "Please bring your ______ (ticket) pass.",
           "correct_answers": ["boarding", "Boarding"],
-          "explanation": "Boarding pass is the document needed to fly."
+          "difficulty": "easy",
+          "explanation": "Boarding pass is the document needed to access the aircraft. Now usually digital (mobile or printed).",
+          "context": "Airport Documentation"
         },
         {
+          "id": "q5-10",
           "type": "quiz_choice",
           "question": "You missed the last flight. You are...",
           "options": ["Grounded", "Stranded", "Home", "Happy"],
           "correct_answer": "Stranded",
-          "explanation": "Stranded means stuck in a location without a way out."
+          "difficulty": "medium",
+          "explanation": "Stranded means stuck without a way out. Requires rebooking and contingency activation.",
+          "context": "Travel Disruptions"
         }
       ]
     }
-  ]
+  ],
+  "assessment": {
+    "type": "cumulative",
+    "passing_threshold": 70,
+    "total_questions": 50,
+    "time_limit_minutes": 240,
+    "sections": [
+      {
+        "section_id": "stage-listening",
+        "section_title": "Auditory Analysis",
+        "weight": 0.2,
+        "question_count": 10,
+        "passing_score": 70
+      },
+      {
+        "section_id": "stage-choice",
+        "section_title": "Situational Logistics",
+        "weight": 0.2,
+        "question_count": 10,
+        "passing_score": 70
+      },
+      {
+        "section_id": "stage-structure",
+        "section_title": "Itinerary Structure",
+        "weight": 0.2,
+        "question_count": 10,
+        "passing_score": 75
+      },
+      {
+        "section_id": "stage-vocab",
+        "section_title": "Logistics Vocabulary",
+        "weight": 0.2,
+        "question_count": 10,
+        "passing_score": 80
+      },
+      {
+        "section_id": "stage-mastery",
+        "section_title": "Global Mobility Mastery",
+        "weight": 0.2,
+        "question_count": 10,
+        "passing_score": 75
+      }
+    ]
+  },
+  "resources": {
+    "external_links": [
+      {
+        "id": "res-1",
+        "title": "IATA Travel Pass",
+        "url": "https://www.iatatravelpass.iata.org/",
+        "description": "Digital travel credentials for international compliance and health documentation"
+      },
+      {
+        "id": "res-2",
+        "title": "TSA PreCheck",
+        "url": "https://www.tsa.gov/precheck",
+        "description": "US trusted traveler program for expedited security screening"
+      },
+      {
+        "id": "res-3",
+        "title": "Frequent Flyer Program Comparison",
+        "url": "https://www.thepoint.com",
+        "description": "Track and maximize airline miles across programs"
+      },
+      {
+        "id": "res-4",
+        "title": "Google Translate for Business Travel",
+        "url": "https://translate.google.com",
+        "description": "Real-time translation tool for international business communication"
+      },
+      {
+        "id": "res-5",
+        "title": "XE Currency Converter",
+        "url": "https://www.xe.com",
+        "description": "Real-time currency exchange rates and converter"
+      }
+    ],
+    "downloadables": [
+      {
+        "id": "dl-1",
+        "type": "template",
+        "name": "Business Travel Expense Report Template",
+        "format": "xlsx",
+        "description": "Customizable expense tracking spreadsheet with reimbursement calculations"
+      },
+      {
+        "id": "dl-2",
+        "type": "checklist",
+        "name": "Pre-Travel Checklist",
+        "format": "pdf",
+        "description": "Documents, payments, and confirmations to review before departure"
+      },
+      {
+        "id": "dl-3",
+        "type": "guide",
+        "name": "Global Time Zone Reference Map",
+        "format": "pdf",
+        "description": "Visual reference for scheduling across regions and managing jet lag"
+      },
+      {
+        "id": "dl-4",
+        "type": "template",
+        "name": "Business Travel Itinerary Template",
+        "format": "docx",
+        "description": "Professional itinerary document for team coordination"
+      }
+    ]
+  },
+  "completion_criteria": {
+    "minimum_score": 70,
+    "time_investment_hours": 4.5,
+    "all_stages_attempted": true,
+    "sections_passed": 5,
+    "badge_earned": "Global Mobility Professional",
+    "certificate_eligible": true
+  },
+  "difficulty_progression": [
+    {
+      "stage": 1,
+      "level": "easy",
+      "focus": "Foundational concepts and terminology"
+    },
+    {
+      "stage": 2,
+      "level": "easy_to_medium",
+      "focus": "Listening comprehension and listening recognition"
+    },
+    {
+      "stage": 3,
+      "level": "easy_to_medium",
+      "focus": "Practical decision-making in logistics"
+    },
+    {
+      "stage": 4,
+      "level": "medium",
+      "focus": "Sentence structure and professional communication"
+    },
+    {
+      "stage": 5,
+      "level": "medium",
+      "focus": "Specialized vocabulary and contexts"
+    },
+    {
+      "stage": 6,
+      "level": "medium_to_hard",
+      "focus": "Advanced scenarios and nuanced understanding"
+    }
+  ],
+  "language_focus": {
+    "grammar_structures": [
+      "Present perfect for completed actions",
+      "Passive voice for professional reporting",
+      "Conditional clauses for contingencies",
+      "Formal request structures",
+      "Business email conventions"
+    ],
+    "vocabulary_domains": [
+      "Aviation terminology",
+      "Hospitality and accommodation",
+      "Financial and expense management",
+      "Travel logistics and coordination",
+      "Crisis communication",
+      "International protocols"
+    ]
+  }
 }
