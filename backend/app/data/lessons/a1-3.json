@@ -1,1324 +1,626 @@
 {
-  "id": "a1-3",
-  "title": "Daily Routine & Habits 📅",
+  "id": "pro-a1-3",
+  "version": "Titanium 2.0",
+  "title": "Routine & Habits Mastery",
   "level": "A1",
-  "description": "Aprende a hablar de tu día a día con tu Tutor Virtual.",
+  "tags": [
+    "present_simple",
+    "daily_life",
+    "grammar"
+  ],
+  "total_xp": 200,
   "stages": [
     {
+      "id": "stage_intro",
       "type": "lecture",
-      "title": "Bienvenido a la Rutina",
+      "title": "The Daily Grind",
       "parts": [
         {
-          "visual": "## My Day, Your Day\nVamos a aprender a describir lo que hacemos todos los días.\n\n* **I wake up**\n* **She wakes up**",
-          "audio": "Hello! Ready to talk about your life? Today we will learn to describe our daily routine. It is very useful for conversations. But watch out for the third person!",
-          "animation": "happy"
+          "visual": "## The Super 'S' 🦸\n\nHe/She/It needs an **S**.\n\n* Work ➔ Works\n* Watch ➔ Watches\n* Study ➔ Studies\n* Have ➔ **Has** (Irregular!)",
+          "audio": "Welcome. To talk about daily life, you need to master the third person. Remember the spelling rules. It's not always just adding an S. Watch out for 'Has'!",
+          "animation": "teacher_pointing",
+          "duration": 15
+        },
+        {
+          "visual": "## Frequency 📊\n\n**Always** (100%)\n**Usually** (80%)\n**Sometimes** (50%)\n**Never** (0%)\n\nPosition: Before the verb!",
+          "audio": "Where do you put 'always'? Before the action. I ALWAYS eat breakfast. I NEVER wake up late.",
+          "animation": "explaining"
         }
       ]
     },
     {
-      "type": "lecture",
-      "title": "Módulo 1: La Regla de Oro",
-      "parts": [
-        {
-          "visual": "## La 'S' Superpoderosa 🦸\n\nSi hablas de **He, She, It**, el verbo necesita una **S**.\n\n* I eat.\n* She eat**s**.\n* He sleep**s**.",
-          "audio": "This is the Golden Rule of English. If you talk about 'He', 'She', or 'It', you must add an 'S' to the verb. She eats, He runs. Never forget the S!",
-          "animation": "teacher_pointing"
-        }
-      ]
-    },
-    {
-      "type": "quiz",
+      "id": "stage_conjugation",
+      "type": "gamified_quiz",
+      "title": "Conjugation Challenge",
+      "description": "Elige la forma correcta del verbo.",
+      "xp_reward": 100,
       "questions": [
         {
-          "id": "q_habit_0",
+          "id": "conj_0",
           "type": "quiz_choice",
-          "question": "Rutina: 'On typical days, I ___ English every day.'",
-          "options": [
-            "studies",
-            "studying",
-            "study"
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
           ],
-          "correct_answer": "study",
-          "explanation": "I/You/We/They usan el verbo base."
+          "question": "Completa la rutina: 'I ___ at 7 AM every day.'",
+          "options": [
+            "wakes up",
+            "wake up",
+            "to wake up",
+            "wake uping"
+          ],
+          "correct_answer": "wake up",
+          "explanation": "Sujeto 'I' no es 3ra persona, usa verbo base."
         },
         {
-          "id": "q_habit_1",
+          "id": "conj_1",
           "type": "quiz_choice",
-          "question": "Rutina: 'Generally, He ___ English every day.'",
-          "options": [
-            "study",
-            "studies",
-            "studying"
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
           ],
-          "correct_answer": "studies",
-          "explanation": "3ra persona (He/She/It) necesita 'S'."
+          "question": "Completa la rutina: 'I ___ to work every day.'",
+          "options": [
+            "go",
+            "goes",
+            "to go",
+            "going"
+          ],
+          "correct_answer": "go",
+          "explanation": "Sujeto 'I' no es 3ra persona, usa verbo base."
         },
         {
-          "id": "q_habit_2",
+          "id": "conj_2",
           "type": "quiz_choice",
-          "question": "Rutina: 'Believe it or not, My brother ___ TV every day.'",
-          "options": [
-            "watching",
-            "watches",
-            "watch"
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
           ],
-          "correct_answer": "watches",
-          "explanation": "3ra persona (He/She/It) necesita 'S'."
-        },
-        {
-          "id": "q_habit_3",
-          "type": "quiz_choice",
-          "question": "Rutina: 'Believe it or not, They ___ breakfast every day.'",
-          "options": [
-            "has",
-            "having",
-            "have"
-          ],
-          "correct_answer": "have",
-          "explanation": "I/You/We/They usan el verbo base."
-        },
-        {
-          "id": "q_habit_4",
-          "type": "quiz_choice",
-          "question": "Rutina: 'Actually, My brother ___ up every day.'",
-          "options": [
-            "waking",
-            "wakes",
-            "wake"
-          ],
-          "correct_answer": "wakes",
-          "explanation": "3ra persona (He/She/It) necesita 'S'."
-        },
-        {
-          "id": "q_habit_5",
-          "type": "quiz_choice",
-          "question": "Rutina: 'On typical days, She ___ TV every day.'",
-          "options": [
-            "watch",
-            "watching",
-            "watches"
-          ],
-          "correct_answer": "watches",
-          "explanation": "3ra persona (He/She/It) necesita 'S'."
-        },
-        {
-          "id": "q_habit_6",
-          "type": "quiz_choice",
-          "question": "Rutina: 'To be honest, We ___ up every day.'",
-          "options": [
-            "wake",
-            "wakes",
-            "waking"
-          ],
-          "correct_answer": "wake",
-          "explanation": "I/You/We/They usan el verbo base."
-        },
-        {
-          "id": "q_habit_7",
-          "type": "quiz_choice",
-          "question": "Rutina: 'Generally, We ___ teeth every day.'",
+          "question": "Completa la rutina: 'You ___ my teeth every day.'",
           "options": [
             "brushes",
+            "to brush",
             "brush",
             "brushing"
           ],
           "correct_answer": "brush",
-          "explanation": "I/You/We/They usan el verbo base."
+          "explanation": "Sujeto 'You' no es 3ra persona, usa verbo base."
         },
         {
-          "id": "q_habit_8",
+          "id": "conj_3",
           "type": "quiz_choice",
-          "question": "Rutina: 'Believe it or not, My brother ___ TV every day.'",
-          "options": [
-            "watches",
-            "watch",
-            "watching"
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
           ],
-          "correct_answer": "watches",
-          "explanation": "3ra persona (He/She/It) necesita 'S'."
-        },
-        {
-          "id": "q_habit_9",
-          "type": "quiz_choice",
-          "question": "Rutina: 'To be honest, They ___ a shower every day.'",
-          "options": [
-            "takes",
-            "take",
-            "taking"
-          ],
-          "correct_answer": "take",
-          "explanation": "I/You/We/They usan el verbo base."
-        },
-        {
-          "id": "q_habit_10",
-          "type": "quiz_choice",
-          "question": "Rutina: 'Generally, I ___ breakfast every day.'",
-          "options": [
-            "has",
-            "having",
-            "have"
-          ],
-          "correct_answer": "have",
-          "explanation": "I/You/We/They usan el verbo base."
-        },
-        {
-          "id": "q_habit_11",
-          "type": "quiz_choice",
-          "question": "Rutina: 'To be honest, He ___ breakfast every day.'",
-          "options": [
-            "having",
-            "has",
-            "have"
-          ],
-          "correct_answer": "has",
-          "explanation": "3ra persona (He/She/It) necesita 'S'."
-        },
-        {
-          "id": "q_habit_12",
-          "type": "quiz_choice",
-          "question": "Rutina: 'Actually, My brother ___ a shower every day.'",
-          "options": [
-            "take",
-            "taking",
-            "takes"
-          ],
-          "correct_answer": "takes",
-          "explanation": "3ra persona (He/She/It) necesita 'S'."
-        },
-        {
-          "id": "q_habit_13",
-          "type": "quiz_choice",
-          "question": "Rutina: 'Believe it or not, My brother ___ English every day.'",
-          "options": [
-            "studying",
-            "studies",
-            "study"
-          ],
-          "correct_answer": "studies",
-          "explanation": "3ra persona (He/She/It) necesita 'S'."
-        },
-        {
-          "id": "q_habit_14",
-          "type": "quiz_choice",
-          "question": "Rutina: 'On typical days, She ___ to work every day.'",
+          "question": "Completa la rutina: 'He ___ to work every day.'",
           "options": [
             "goes",
-            "go",
-            "going"
+            "going",
+            "gos",
+            "go"
           ],
           "correct_answer": "goes",
-          "explanation": "3ra persona (He/She/It) necesita 'S'."
+          "explanation": "Sujeto 'He' es 3ra persona, requiere S/ES."
         },
         {
-          "id": "q_habit_15",
+          "id": "conj_4",
           "type": "quiz_choice",
-          "question": "Rutina: 'Believe it or not, We ___ breakfast every day.'",
-          "options": [
-            "having",
-            "have",
-            "has"
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
           ],
-          "correct_answer": "have",
-          "explanation": "I/You/We/They usan el verbo base."
-        },
-        {
-          "id": "q_habit_16",
-          "type": "quiz_choice",
-          "question": "Rutina: 'Believe it or not, I ___ TV every day.'",
+          "question": "Completa la rutina: 'I ___ TV every day.'",
           "options": [
+            "watching",
             "watch",
-            "watches",
-            "watching"
+            "to watch",
+            "watches"
           ],
           "correct_answer": "watch",
-          "explanation": "I/You/We/They usan el verbo base."
+          "explanation": "Sujeto 'I' no es 3ra persona, usa verbo base."
         },
         {
-          "id": "q_habit_17",
+          "id": "conj_5",
           "type": "quiz_choice",
-          "question": "Rutina: 'Generally, She ___ up every day.'",
-          "options": [
-            "wake",
-            "wakes",
-            "waking"
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
           ],
-          "correct_answer": "wakes",
-          "explanation": "3ra persona (He/She/It) necesita 'S'."
-        },
-        {
-          "id": "q_habit_18",
-          "type": "quiz_choice",
-          "question": "Rutina: 'On typical days, The students ___ up every day.'",
+          "question": "Completa la rutina: 'We ___ TV every day.'",
           "options": [
-            "waking",
-            "wakes",
-            "wake"
-          ],
-          "correct_answer": "wake",
-          "explanation": "I/You/We/They usan el verbo base."
-        },
-        {
-          "id": "q_habit_19",
-          "type": "quiz_choice",
-          "question": "Rutina: 'Actually, We ___ TV every day.'",
-          "options": [
-            "watches",
             "watching",
+            "to watch",
+            "watches",
             "watch"
           ],
           "correct_answer": "watch",
-          "explanation": "I/You/We/They usan el verbo base."
-        }
-      ]
-    },
-    {
-      "type": "lecture",
-      "title": "Módulo 2: Frecuencia",
-      "parts": [
+          "explanation": "Sujeto 'We' no es 3ra persona, usa verbo base."
+        },
         {
-          "visual": "## ¿Siempre o Nunca? 📊\n\nEl orden es clave:\n\n✅ Sujeto + **Always** + Verbo\n❌ I go **always**...",
-          "audio": "How often do you study? Always? Never? The frequency adverb goes BEFORE the action verb. I always study. I never sleep late.",
-          "animation": "talking"
+          "id": "conj_6",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
+          ],
+          "question": "Completa la rutina: 'You ___ to work every day.'",
+          "options": [
+            "going",
+            "to go",
+            "goes",
+            "go"
+          ],
+          "correct_answer": "go",
+          "explanation": "Sujeto 'You' no es 3ra persona, usa verbo base."
+        },
+        {
+          "id": "conj_7",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "present_simple"
+          ],
+          "question": "Completa la rutina: 'They ___ TV every day.'",
+          "options": [
+            "to watch",
+            "watching",
+            "watches",
+            "watch"
+          ],
+          "correct_answer": "watch",
+          "explanation": "Sujeto 'They' no es 3ra persona, usa verbo base."
         }
       ]
     },
     {
-      "type": "quiz",
+      "id": "stage_negation",
+      "type": "gamified_quiz",
+      "title": "The Power of NO",
+      "description": "Transforma oraciones a negativo correctamente.",
+      "xp_reward": 150,
       "questions": [
         {
-          "id": "q_adv_0",
+          "id": "neg_0",
           "type": "quiz_choice",
-          "question": "Ordena: 'The students ___ late.'",
-          "options": [
-            "often taking a shower",
-            "take a shower often",
-            "often take a shower"
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
           ],
-          "correct_answer": "often take a shower",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'We brush my teeth.'",
+          "options": [
+            "We no brush my teeth.",
+            "We not brush my teeth.",
+            "We don't brush my teeth.",
+            "We don't brush my teeth."
+          ],
+          "correct_answer": "We don't brush my teeth.",
+          "explanation": "Usamos 'don't' y el verbo vuelve a su forma BASE (sin S)."
         },
         {
-          "id": "q_adv_1",
+          "id": "neg_1",
           "type": "quiz_choice",
-          "question": "Ordena: 'You ___ late.'",
-          "options": [
-            "sometimes study English",
-            "sometimes studying English",
-            "study English sometimes"
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
           ],
-          "correct_answer": "sometimes study English",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'You wake up at 7 AM.'",
+          "options": [
+            "You don't wake up at 7 AM.",
+            "You no wake up at 7 AM.",
+            "You not wake up at 7 AM.",
+            "You don't wake up at 7 AM."
+          ],
+          "correct_answer": "You don't wake up at 7 AM.",
+          "explanation": "Usamos 'don't' y el verbo vuelve a su forma BASE (sin S)."
         },
         {
-          "id": "q_adv_2",
+          "id": "neg_2",
           "type": "quiz_choice",
-          "question": "Ordena: 'They ___ late.'",
-          "options": [
-            "usually brushing teeth",
-            "usually brush teeth",
-            "brush teeth usually"
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
           ],
-          "correct_answer": "usually brush teeth",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'She does exercise.'",
+          "options": [
+            "She doesn't do exercise.",
+            "She no do exercise.",
+            "She not does exercise.",
+            "She doesn't does exercise."
+          ],
+          "correct_answer": "She doesn't do exercise.",
+          "explanation": "Usamos 'doesn't' y el verbo vuelve a su forma BASE (sin S)."
         },
         {
-          "id": "q_adv_3",
+          "id": "neg_3",
           "type": "quiz_choice",
-          "question": "Ordena: 'The students ___ late.'",
-          "options": [
-            "watch TV always",
-            "always watching TV",
-            "always watch TV"
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
           ],
-          "correct_answer": "always watch TV",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'I wake up at 7 AM.'",
+          "options": [
+            "I don't wake up at 7 AM.",
+            "I don't wake up at 7 AM.",
+            "I not wake up at 7 AM.",
+            "I no wake up at 7 AM."
+          ],
+          "correct_answer": "I don't wake up at 7 AM.",
+          "explanation": "Usamos 'don't' y el verbo vuelve a su forma BASE (sin S)."
         },
         {
-          "id": "q_adv_4",
+          "id": "neg_4",
           "type": "quiz_choice",
-          "question": "Ordena: 'You ___ late.'",
-          "options": [
-            "always brush teeth",
-            "always brushing teeth",
-            "brush teeth always"
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
           ],
-          "correct_answer": "always brush teeth",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'We study English.'",
+          "options": [
+            "We don't study English.",
+            "We don't study English.",
+            "We not study English.",
+            "We no study English."
+          ],
+          "correct_answer": "We don't study English.",
+          "explanation": "Usamos 'don't' y el verbo vuelve a su forma BASE (sin S)."
         },
         {
-          "id": "q_adv_5",
+          "id": "neg_5",
           "type": "quiz_choice",
-          "question": "Ordena: 'He ___ late.'",
-          "options": [
-            "never waking up",
-            "never wakes up",
-            "wakes up never"
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
           ],
-          "correct_answer": "never wakes up",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'She studies English.'",
+          "options": [
+            "She no study English.",
+            "She not studies English.",
+            "She doesn't study English.",
+            "She doesn't studies English."
+          ],
+          "correct_answer": "She doesn't study English.",
+          "explanation": "Usamos 'doesn't' y el verbo vuelve a su forma BASE (sin S)."
         },
         {
-          "id": "q_adv_6",
+          "id": "neg_6",
           "type": "quiz_choice",
-          "question": "Ordena: 'I ___ late.'",
-          "options": [
-            "brush teeth sometimes",
-            "sometimes brushing teeth",
-            "sometimes brush teeth"
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
           ],
-          "correct_answer": "sometimes brush teeth",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'I study English.'",
+          "options": [
+            "I not study English.",
+            "I no study English.",
+            "I don't study English.",
+            "I don't study English."
+          ],
+          "correct_answer": "I don't study English.",
+          "explanation": "Usamos 'don't' y el verbo vuelve a su forma BASE (sin S)."
         },
         {
-          "id": "q_adv_7",
+          "id": "neg_7",
           "type": "quiz_choice",
-          "question": "Ordena: 'She ___ late.'",
-          "options": [
-            "often wakes up",
-            "often waking up",
-            "wakes up often"
+          "difficulty": "hard",
+          "tags": [
+            "grammar",
+            "negation"
           ],
-          "correct_answer": "often wakes up",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
-        },
-        {
-          "id": "q_adv_8",
-          "type": "quiz_choice",
-          "question": "Ordena: 'You ___ late.'",
+          "question": "Selecciona la forma NEGATIVA correcta de:\n'They do exercise.'",
           "options": [
-            "sometimes watch TV",
-            "sometimes watching TV",
-            "watch TV sometimes"
+            "They don't do exercise.",
+            "They no do exercise.",
+            "They don't do exercise.",
+            "They not do exercise."
           ],
-          "correct_answer": "sometimes watch TV",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
-        },
-        {
-          "id": "q_adv_9",
-          "type": "quiz_choice",
-          "question": "Ordena: 'He ___ late.'",
-          "options": [
-            "often watching TV",
-            "watches TV often",
-            "often watches TV"
-          ],
-          "correct_answer": "often watches TV",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
-        },
-        {
-          "id": "q_adv_10",
-          "type": "quiz_choice",
-          "question": "Ordena: 'We ___ late.'",
-          "options": [
-            "never study English",
-            "study English never",
-            "never studying English"
-          ],
-          "correct_answer": "never study English",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
-        },
-        {
-          "id": "q_adv_11",
-          "type": "quiz_choice",
-          "question": "Ordena: 'He ___ late.'",
-          "options": [
-            "sometimes taking a shower",
-            "takes a shower sometimes",
-            "sometimes takes a shower"
-          ],
-          "correct_answer": "sometimes takes a shower",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
-        },
-        {
-          "id": "q_adv_12",
-          "type": "quiz_choice",
-          "question": "Ordena: 'I ___ late.'",
-          "options": [
-            "always have breakfast",
-            "always having breakfast",
-            "have breakfast always"
-          ],
-          "correct_answer": "always have breakfast",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
-        },
-        {
-          "id": "q_adv_13",
-          "type": "quiz_choice",
-          "question": "Ordena: 'She ___ late.'",
-          "options": [
-            "goes to work usually",
-            "usually going to work",
-            "usually goes to work"
-          ],
-          "correct_answer": "usually goes to work",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
-        },
-        {
-          "id": "q_adv_14",
-          "type": "quiz_choice",
-          "question": "Ordena: 'He ___ late.'",
-          "options": [
-            "has breakfast often",
-            "often has breakfast",
-            "often having breakfast"
-          ],
-          "correct_answer": "often has breakfast",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
-        },
-        {
-          "id": "q_adv_15",
-          "type": "quiz_choice",
-          "question": "Ordena: 'My brother ___ late.'",
-          "options": [
-            "sometimes waking up",
-            "wakes up sometimes",
-            "sometimes wakes up"
-          ],
-          "correct_answer": "sometimes wakes up",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
-        },
-        {
-          "id": "q_adv_16",
-          "type": "quiz_choice",
-          "question": "Ordena: 'He ___ late.'",
-          "options": [
-            "always having breakfast",
-            "always has breakfast",
-            "has breakfast always"
-          ],
-          "correct_answer": "always has breakfast",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
-        },
-        {
-          "id": "q_adv_17",
-          "type": "quiz_choice",
-          "question": "Ordena: 'You ___ late.'",
-          "options": [
-            "rarely wake up",
-            "rarely waking up",
-            "wake up rarely"
-          ],
-          "correct_answer": "rarely wake up",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
-        },
-        {
-          "id": "q_adv_18",
-          "type": "quiz_choice",
-          "question": "Ordena: 'They ___ late.'",
-          "options": [
-            "sometimes waking up",
-            "sometimes wake up",
-            "wake up sometimes"
-          ],
-          "correct_answer": "sometimes wake up",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
-        },
-        {
-          "id": "q_adv_19",
-          "type": "quiz_choice",
-          "question": "Ordena: 'My brother ___ late.'",
-          "options": [
-            "usually has breakfast",
-            "has breakfast usually",
-            "usually having breakfast"
-          ],
-          "correct_answer": "usually has breakfast",
-          "explanation": "El adverbio (always, never) va ANTES del verbo."
+          "correct_answer": "They don't do exercise.",
+          "explanation": "Usamos 'don't' y el verbo vuelve a su forma BASE (sin S)."
         }
       ]
     },
     {
-      "type": "lecture",
-      "title": "Módulo 3: Auxiliares",
-      "parts": [
-        {
-          "visual": "## Do vs Does 🛠️\n\nPara preguntar y negar:\n\n* **I/You/We/They** ➔ **Do / Don't**\n* **He/She/It** ➔ **Does / Doesn't**",
-          "audio": "We need helpers to ask questions. 'Do' is for I, You, We, They. 'Does' is for the special third person. Do you understand? Does she understand?",
-          "animation": "curious"
-        }
-      ]
-    },
-    {
-      "type": "quiz",
+      "id": "stage_order",
+      "type": "gamified_quiz",
+      "title": "Frequency Architect",
+      "description": "Ordena las palabras en la posición correcta.",
+      "xp_reward": 150,
       "questions": [
         {
-          "id": "q_aux_0",
-          "type": "quiz_choice",
-          "question": "Completa: 'No, They ___ brush teeth early.'",
-          "options": [
-            "doesn't",
-            "isn't",
-            "don't",
-            "not"
+          "id": "ord_0",
+          "type": "order_sentence",
+          "difficulty": "hard",
+          "tags": [
+            "syntax",
+            "adverbs"
           ],
-          "correct_answer": "don't",
-          "explanation": "Negación correcta: 'don't'."
+          "question": "Ordena la frase (0% frequency):",
+          "parts": [
+            "never",
+            "brushes",
+            "my teeth",
+            "She"
+          ],
+          "correct_order": [
+            "She",
+            "never",
+            "brushes",
+            "my teeth"
+          ],
+          "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
         },
         {
-          "id": "q_aux_1",
-          "type": "quiz_choice",
-          "question": "Completa: '___ he take a shower early?'",
-          "options": [
-            "Do",
-            "Does",
-            "Are",
-            "Is"
+          "id": "ord_1",
+          "type": "order_sentence",
+          "difficulty": "hard",
+          "tags": [
+            "syntax",
+            "adverbs"
           ],
-          "correct_answer": "Does",
-          "explanation": "Auxiliar para preguntas: 'Does'."
+          "question": "Ordena la frase (80% frequency):",
+          "parts": [
+            "has",
+            "usually",
+            "breakfast",
+            "He"
+          ],
+          "correct_order": [
+            "He",
+            "usually",
+            "has",
+            "breakfast"
+          ],
+          "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
         },
         {
-          "id": "q_aux_2",
-          "type": "quiz_choice",
-          "question": "Completa: 'No, The students ___ take a shower early.'",
-          "options": [
-            "doesn't",
-            "isn't",
-            "not",
-            "don't"
+          "id": "ord_2",
+          "type": "order_sentence",
+          "difficulty": "hard",
+          "tags": [
+            "syntax",
+            "adverbs"
           ],
-          "correct_answer": "don't",
-          "explanation": "Negación correcta: 'don't'."
+          "question": "Ordena la frase (50% frequency):",
+          "parts": [
+            "sometimes",
+            "English",
+            "studies",
+            "She"
+          ],
+          "correct_order": [
+            "She",
+            "sometimes",
+            "studies",
+            "English"
+          ],
+          "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
         },
         {
-          "id": "q_aux_3",
-          "type": "quiz_choice",
-          "question": "Completa: 'No, I ___ have breakfast early.'",
-          "options": [
-            "don't",
-            "not",
-            "isn't",
-            "doesn't"
+          "id": "ord_3",
+          "type": "order_sentence",
+          "difficulty": "hard",
+          "tags": [
+            "syntax",
+            "adverbs"
           ],
-          "correct_answer": "don't",
-          "explanation": "Negación correcta: 'don't'."
+          "question": "Ordena la frase (50% frequency):",
+          "parts": [
+            "She",
+            "watches",
+            "TV",
+            "sometimes"
+          ],
+          "correct_order": [
+            "She",
+            "sometimes",
+            "watches",
+            "TV"
+          ],
+          "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
         },
         {
-          "id": "q_aux_4",
-          "type": "quiz_choice",
-          "question": "Completa: 'No, I ___ go to work early.'",
-          "options": [
-            "isn't",
-            "doesn't",
-            "don't",
-            "not"
+          "id": "ord_4",
+          "type": "order_sentence",
+          "difficulty": "hard",
+          "tags": [
+            "syntax",
+            "adverbs"
           ],
-          "correct_answer": "don't",
-          "explanation": "Negación correcta: 'don't'."
+          "question": "Ordena la frase (80% frequency):",
+          "parts": [
+            "to work",
+            "usually",
+            "You",
+            "go"
+          ],
+          "correct_order": [
+            "You",
+            "usually",
+            "go",
+            "to work"
+          ],
+          "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
         },
         {
-          "id": "q_aux_5",
-          "type": "quiz_choice",
-          "question": "Completa: '___ my brother brush teeth early?'",
-          "options": [
-            "Does",
-            "Is",
-            "Do",
-            "Are"
+          "id": "ord_5",
+          "type": "order_sentence",
+          "difficulty": "hard",
+          "tags": [
+            "syntax",
+            "adverbs"
           ],
-          "correct_answer": "Does",
-          "explanation": "Auxiliar para preguntas: 'Does'."
-        },
-        {
-          "id": "q_aux_6",
-          "type": "quiz_choice",
-          "question": "Completa: 'No, She ___ go to work early.'",
-          "options": [
-            "doesn't",
-            "not",
-            "don't",
-            "isn't"
+          "question": "Ordena la frase (0% frequency):",
+          "parts": [
+            "I",
+            "never",
+            "to work",
+            "go"
           ],
-          "correct_answer": "doesn't",
-          "explanation": "Negación correcta: 'doesn't'."
-        },
-        {
-          "id": "q_aux_7",
-          "type": "quiz_choice",
-          "question": "Completa: 'No, You ___ wake up early.'",
-          "options": [
-            "not",
-            "don't",
-            "isn't",
-            "doesn't"
+          "correct_order": [
+            "I",
+            "never",
+            "go",
+            "to work"
           ],
-          "correct_answer": "don't",
-          "explanation": "Negación correcta: 'don't'."
-        },
-        {
-          "id": "q_aux_8",
-          "type": "quiz_choice",
-          "question": "Completa: 'No, The students ___ have breakfast early.'",
-          "options": [
-            "not",
-            "doesn't",
-            "isn't",
-            "don't"
-          ],
-          "correct_answer": "don't",
-          "explanation": "Negación correcta: 'don't'."
-        },
-        {
-          "id": "q_aux_9",
-          "type": "quiz_choice",
-          "question": "Completa: 'No, She ___ brush teeth early.'",
-          "options": [
-            "don't",
-            "not",
-            "doesn't",
-            "isn't"
-          ],
-          "correct_answer": "doesn't",
-          "explanation": "Negación correcta: 'doesn't'."
-        },
-        {
-          "id": "q_aux_10",
-          "type": "quiz_choice",
-          "question": "Completa: '___ she watch TV early?'",
-          "options": [
-            "Is",
-            "Does",
-            "Are",
-            "Do"
-          ],
-          "correct_answer": "Does",
-          "explanation": "Auxiliar para preguntas: 'Does'."
-        },
-        {
-          "id": "q_aux_11",
-          "type": "quiz_choice",
-          "question": "Completa: 'No, You ___ take a shower early.'",
-          "options": [
-            "doesn't",
-            "not",
-            "don't",
-            "isn't"
-          ],
-          "correct_answer": "don't",
-          "explanation": "Negación correcta: 'don't'."
-        },
-        {
-          "id": "q_aux_12",
-          "type": "quiz_choice",
-          "question": "Completa: 'No, You ___ wake up early.'",
-          "options": [
-            "not",
-            "isn't",
-            "doesn't",
-            "don't"
-          ],
-          "correct_answer": "don't",
-          "explanation": "Negación correcta: 'don't'."
-        },
-        {
-          "id": "q_aux_13",
-          "type": "quiz_choice",
-          "question": "Completa: '___ you take a shower early?'",
-          "options": [
-            "Is",
-            "Are",
-            "Does",
-            "Do"
-          ],
-          "correct_answer": "Do",
-          "explanation": "Auxiliar para preguntas: 'Do'."
-        },
-        {
-          "id": "q_aux_14",
-          "type": "quiz_choice",
-          "question": "Completa: '___ my brother watch TV early?'",
-          "options": [
-            "Does",
-            "Do",
-            "Is",
-            "Are"
-          ],
-          "correct_answer": "Does",
-          "explanation": "Auxiliar para preguntas: 'Does'."
-        },
-        {
-          "id": "q_aux_15",
-          "type": "quiz_choice",
-          "question": "Completa: '___ you wake up early?'",
-          "options": [
-            "Are",
-            "Is",
-            "Does",
-            "Do"
-          ],
-          "correct_answer": "Do",
-          "explanation": "Auxiliar para preguntas: 'Do'."
-        },
-        {
-          "id": "q_aux_16",
-          "type": "quiz_choice",
-          "question": "Completa: 'No, The students ___ have breakfast early.'",
-          "options": [
-            "doesn't",
-            "not",
-            "isn't",
-            "don't"
-          ],
-          "correct_answer": "don't",
-          "explanation": "Negación correcta: 'don't'."
-        },
-        {
-          "id": "q_aux_17",
-          "type": "quiz_choice",
-          "question": "Completa: '___ the students wake up early?'",
-          "options": [
-            "Does",
-            "Is",
-            "Are",
-            "Do"
-          ],
-          "correct_answer": "Do",
-          "explanation": "Auxiliar para preguntas: 'Do'."
-        },
-        {
-          "id": "q_aux_18",
-          "type": "quiz_choice",
-          "question": "Completa: '___ she have breakfast early?'",
-          "options": [
-            "Does",
-            "Is",
-            "Are",
-            "Do"
-          ],
-          "correct_answer": "Does",
-          "explanation": "Auxiliar para preguntas: 'Does'."
-        },
-        {
-          "id": "q_aux_19",
-          "type": "quiz_choice",
-          "question": "Completa: 'No, You ___ study English early.'",
-          "options": [
-            "not",
-            "isn't",
-            "don't",
-            "doesn't"
-          ],
-          "correct_answer": "don't",
-          "explanation": "Negación correcta: 'don't'."
+          "explanation": "Regla: Sujeto + Adverbio de Frecuencia + Verbo de Acción."
         }
       ]
     },
     {
-      "type": "lecture",
-      "title": "Módulo 4: El Reloj",
-      "parts": [
-        {
-          "visual": "## Preposiciones de Tiempo ⏰\n\n* **AT** 7:00 / night\n* **IN** the morning\n* **ON** Mondays",
-          "audio": "Time is tricky. We say AT seven o'clock, but IN the morning. And for days of the week, always use ON. On Monday, on Sunday.",
-          "animation": "talking"
-        }
-      ]
-    },
-    {
-      "type": "quiz",
+      "id": "stage_prep",
+      "type": "gamified_quiz",
+      "title": "Time Lords",
+      "description": "Escribe AT, IN u ON.",
+      "xp_reward": 150,
       "questions": [
         {
-          "id": "q_prep_0",
-          "type": "quiz_choice",
-          "question": "Preposición: 'My brother studies English ___ Mondays.'",
-          "options": [
-            "at",
-            "in",
+          "id": "prep_0",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
+          ],
+          "question": "Escribe la preposición correcta (at/in/on): 'We sleeps ___ weekdays.'",
+          "correct_answers": [
             "on"
           ],
-          "correct_answer": "on",
-          "explanation": "Con 'Mondays' usamos 'on'."
+          "hint": "Usamos esta preposición para 'weekdays'.",
+          "explanation": "Regla: ON se usa con 'weekdays'."
         },
         {
-          "id": "q_prep_1",
-          "type": "quiz_choice",
-          "question": "Preposición: 'You have breakfast ___ night.'",
-          "options": [
-            "at",
-            "in",
-            "on"
+          "id": "prep_1",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
           ],
-          "correct_answer": "at",
-          "explanation": "Con 'night' usamos 'at'."
+          "question": "Escribe la preposición correcta (at/in/on): 'They sleeps ___ the afternoon.'",
+          "correct_answers": [
+            "in"
+          ],
+          "hint": "Usamos esta preposición para 'the afternoon'.",
+          "explanation": "Regla: IN se usa con 'the afternoon'."
         },
         {
-          "id": "q_prep_2",
-          "type": "quiz_choice",
-          "question": "Preposición: 'He watches TV ___ night.'",
-          "options": [
-            "at",
-            "in",
+          "id": "prep_2",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
+          ],
+          "question": "Escribe la preposición correcta (at/in/on): 'My dad sleeps ___ Mondays.'",
+          "correct_answers": [
             "on"
           ],
-          "correct_answer": "at",
-          "explanation": "Con 'night' usamos 'at'."
+          "hint": "Usamos esta preposición para 'Mondays'.",
+          "explanation": "Regla: ON se usa con 'Mondays'."
         },
         {
-          "id": "q_prep_3",
-          "type": "quiz_choice",
-          "question": "Preposición: 'She goes to work ___ weekends.'",
-          "options": [
-            "at",
-            "in",
-            "on"
+          "id": "prep_3",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
           ],
-          "correct_answer": "on",
-          "explanation": "Con 'weekends' usamos 'on'."
+          "question": "Escribe la preposición correcta (at/in/on): 'They sleeps ___ 7:00 PM.'",
+          "correct_answers": [
+            "at"
+          ],
+          "hint": "Usamos esta preposición para '7:00 PM'.",
+          "explanation": "Regla: AT se usa con '7:00 PM'."
         },
         {
-          "id": "q_prep_4",
-          "type": "quiz_choice",
-          "question": "Preposición: 'I brush teeth ___ Mondays.'",
-          "options": [
-            "at",
-            "in",
-            "on"
+          "id": "prep_4",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
           ],
-          "correct_answer": "on",
-          "explanation": "Con 'Mondays' usamos 'on'."
+          "question": "Escribe la preposición correcta (at/in/on): 'She sleeps ___ midnight.'",
+          "correct_answers": [
+            "at"
+          ],
+          "hint": "Usamos esta preposición para 'midnight'.",
+          "explanation": "Regla: AT se usa con 'midnight'."
         },
         {
-          "id": "q_prep_5",
-          "type": "quiz_choice",
-          "question": "Preposición: 'They go to work ___ the afternoon.'",
-          "options": [
-            "at",
-            "in",
+          "id": "prep_5",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
+          ],
+          "question": "Escribe la preposición correcta (at/in/on): 'You sleeps ___ Sunday morning.'",
+          "correct_answers": [
             "on"
           ],
-          "correct_answer": "in",
-          "explanation": "Con 'the afternoon' usamos 'in'."
+          "hint": "Usamos esta preposición para 'Sunday morning'.",
+          "explanation": "Regla: ON se usa con 'Sunday morning'."
         },
         {
-          "id": "q_prep_6",
-          "type": "quiz_choice",
-          "question": "Preposición: 'He studies English ___ Mondays.'",
-          "options": [
-            "at",
-            "in",
-            "on"
+          "id": "prep_6",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
           ],
-          "correct_answer": "on",
-          "explanation": "Con 'Mondays' usamos 'on'."
+          "question": "Escribe la preposición correcta (at/in/on): 'She sleeps ___ night.'",
+          "correct_answers": [
+            "at"
+          ],
+          "hint": "Usamos esta preposición para 'night'.",
+          "explanation": "Regla: AT se usa con 'night'."
         },
         {
-          "id": "q_prep_7",
-          "type": "quiz_choice",
-          "question": "Preposición: 'They brush teeth ___ 7:00 AM.'",
-          "options": [
-            "at",
-            "in",
-            "on"
+          "id": "prep_7",
+          "type": "fill_input",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "prepositions"
           ],
-          "correct_answer": "at",
-          "explanation": "Con '7:00 AM' usamos 'at'."
-        },
-        {
-          "id": "q_prep_8",
-          "type": "quiz_choice",
-          "question": "Preposición: 'You have breakfast ___ the afternoon.'",
-          "options": [
-            "at",
-            "in",
-            "on"
+          "question": "Escribe la preposición correcta (at/in/on): 'We sleeps ___ the afternoon.'",
+          "correct_answers": [
+            "in"
           ],
-          "correct_answer": "in",
-          "explanation": "Con 'the afternoon' usamos 'in'."
-        },
-        {
-          "id": "q_prep_9",
-          "type": "quiz_choice",
-          "question": "Preposición: 'The students go to work ___ the afternoon.'",
-          "options": [
-            "at",
-            "in",
-            "on"
-          ],
-          "correct_answer": "in",
-          "explanation": "Con 'the afternoon' usamos 'in'."
-        },
-        {
-          "id": "q_prep_10",
-          "type": "quiz_choice",
-          "question": "Preposición: 'I wake up ___ noon.'",
-          "options": [
-            "at",
-            "in",
-            "on"
-          ],
-          "correct_answer": "at",
-          "explanation": "Con 'noon' usamos 'at'."
-        },
-        {
-          "id": "q_prep_11",
-          "type": "quiz_choice",
-          "question": "Preposición: 'You go to work ___ the afternoon.'",
-          "options": [
-            "at",
-            "in",
-            "on"
-          ],
-          "correct_answer": "in",
-          "explanation": "Con 'the afternoon' usamos 'in'."
-        },
-        {
-          "id": "q_prep_12",
-          "type": "quiz_choice",
-          "question": "Preposición: 'My brother goes to work ___ noon.'",
-          "options": [
-            "at",
-            "in",
-            "on"
-          ],
-          "correct_answer": "at",
-          "explanation": "Con 'noon' usamos 'at'."
-        },
-        {
-          "id": "q_prep_13",
-          "type": "quiz_choice",
-          "question": "Preposición: 'You take a shower ___ the morning.'",
-          "options": [
-            "at",
-            "in",
-            "on"
-          ],
-          "correct_answer": "in",
-          "explanation": "Con 'the morning' usamos 'in'."
-        },
-        {
-          "id": "q_prep_14",
-          "type": "quiz_choice",
-          "question": "Preposición: 'I brush teeth ___ the afternoon.'",
-          "options": [
-            "at",
-            "in",
-            "on"
-          ],
-          "correct_answer": "in",
-          "explanation": "Con 'the afternoon' usamos 'in'."
-        },
-        {
-          "id": "q_prep_15",
-          "type": "quiz_choice",
-          "question": "Preposición: 'We wake up ___ the afternoon.'",
-          "options": [
-            "at",
-            "in",
-            "on"
-          ],
-          "correct_answer": "in",
-          "explanation": "Con 'the afternoon' usamos 'in'."
-        },
-        {
-          "id": "q_prep_16",
-          "type": "quiz_choice",
-          "question": "Preposición: 'We go to work ___ weekends.'",
-          "options": [
-            "at",
-            "in",
-            "on"
-          ],
-          "correct_answer": "on",
-          "explanation": "Con 'weekends' usamos 'on'."
-        },
-        {
-          "id": "q_prep_17",
-          "type": "quiz_choice",
-          "question": "Preposición: 'They wake up ___ noon.'",
-          "options": [
-            "at",
-            "in",
-            "on"
-          ],
-          "correct_answer": "at",
-          "explanation": "Con 'noon' usamos 'at'."
-        },
-        {
-          "id": "q_prep_18",
-          "type": "quiz_choice",
-          "question": "Preposición: 'He has breakfast ___ noon.'",
-          "options": [
-            "at",
-            "in",
-            "on"
-          ],
-          "correct_answer": "at",
-          "explanation": "Con 'noon' usamos 'at'."
-        },
-        {
-          "id": "q_prep_19",
-          "type": "quiz_choice",
-          "question": "Preposición: 'The students have breakfast ___ the morning.'",
-          "options": [
-            "at",
-            "in",
-            "on"
-          ],
-          "correct_answer": "in",
-          "explanation": "Con 'the morning' usamos 'in'."
+          "hint": "Usamos esta preposición para 'the afternoon'.",
+          "explanation": "Regla: IN se usa con 'the afternoon'."
         }
       ]
     },
     {
-      "type": "lecture",
-      "title": "Módulo 5: Auditoría",
-      "parts": [
-        {
-          "visual": "## Detective de Errores 🕵️\n\nEncuentra los fallos típicos.\n\n* She have... ❌\n* She has... ✅",
-          "audio": "Now, become a detective. Find the mistakes in these sentences. Pay attention to the S and the auxiliaries.",
-          "animation": "curious"
-        }
-      ]
-    },
-    {
-      "type": "quiz",
-      "questions": [
-        {
-          "id": "q_err_0",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'You doesn't like coffee.'",
-          "options": [
-            "Error: doesn't",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: doesn't",
-          "explanation": "Auxiliar incorrecto."
-        },
-        {
-          "id": "q_err_1",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'He have breakfast at 8.'",
-          "options": [
-            "Error: have",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: have",
-          "explanation": "Verbo incorrecto para 'He'."
-        },
-        {
-          "id": "q_err_2",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'I shower at the morning.'",
-          "options": [
-            "Error: at",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: at",
-          "explanation": "Decimos 'IN the morning'."
-        },
-        {
-          "id": "q_err_3",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'I shower at the morning.'",
-          "options": [
-            "Error: at",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: at",
-          "explanation": "Decimos 'IN the morning'."
-        },
-        {
-          "id": "q_err_4",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'I shower at the morning.'",
-          "options": [
-            "Error: at",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: at",
-          "explanation": "Decimos 'IN the morning'."
-        },
-        {
-          "id": "q_err_5",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'I shower at the morning.'",
-          "options": [
-            "Error: at",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: at",
-          "explanation": "Decimos 'IN the morning'."
-        },
-        {
-          "id": "q_err_6",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'She have breakfast at 8.'",
-          "options": [
-            "Error: have",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: have",
-          "explanation": "Verbo incorrecto para 'She'."
-        },
-        {
-          "id": "q_err_7",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'I shower at the morning.'",
-          "options": [
-            "Error: at",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: at",
-          "explanation": "Decimos 'IN the morning'."
-        },
-        {
-          "id": "q_err_8",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'He have breakfast at 8.'",
-          "options": [
-            "Error: have",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: have",
-          "explanation": "Verbo incorrecto para 'He'."
-        },
-        {
-          "id": "q_err_9",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'I shower at the morning.'",
-          "options": [
-            "Error: at",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: at",
-          "explanation": "Decimos 'IN the morning'."
-        },
-        {
-          "id": "q_err_10",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'She don't like coffee.'",
-          "options": [
-            "Error: don't",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: don't",
-          "explanation": "Auxiliar incorrecto."
-        },
-        {
-          "id": "q_err_11",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'I shower at the morning.'",
-          "options": [
-            "Error: at",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: at",
-          "explanation": "Decimos 'IN the morning'."
-        },
-        {
-          "id": "q_err_12",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'I shower at the morning.'",
-          "options": [
-            "Error: at",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: at",
-          "explanation": "Decimos 'IN the morning'."
-        },
-        {
-          "id": "q_err_13",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'The students has breakfast at 8.'",
-          "options": [
-            "Error: has",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: has",
-          "explanation": "Verbo incorrecto para 'The students'."
-        },
-        {
-          "id": "q_err_14",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'I shower at the morning.'",
-          "options": [
-            "Error: at",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: at",
-          "explanation": "Decimos 'IN the morning'."
-        },
-        {
-          "id": "q_err_15",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'My brother have breakfast at 8.'",
-          "options": [
-            "Error: have",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: have",
-          "explanation": "Verbo incorrecto para 'My brother'."
-        },
-        {
-          "id": "q_err_16",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'She don't like coffee.'",
-          "options": [
-            "Error: don't",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: don't",
-          "explanation": "Auxiliar incorrecto."
-        },
-        {
-          "id": "q_err_17",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'We has breakfast at 8.'",
-          "options": [
-            "Error: has",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: has",
-          "explanation": "Verbo incorrecto para 'We'."
-        },
-        {
-          "id": "q_err_18",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'I shower at the morning.'",
-          "options": [
-            "Error: at",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: at",
-          "explanation": "Decimos 'IN the morning'."
-        },
-        {
-          "id": "q_err_19",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: 'They doesn't like coffee.'",
-          "options": [
-            "Error: doesn't",
-            "No hay error",
-            "Error: breakfast"
-          ],
-          "correct_answer": "Error: doesn't",
-          "explanation": "Auxiliar incorrecto."
-        }
-      ]
-    },
-    {
+      "id": "stage_boss",
       "type": "practice_chat",
-      "scenario": "Un amigo curioso quiere saber tu rutina diaria.",
-      "ai_system_prompt": "ROLE: Curious Friend 'Alex'. GOAL: Ask user about routine. Check 3rd person S and Do/Does."
+      "title": "The Interview",
+      "scenario": "Estás en una entrevista de trabajo. El reclutador quiere saber si eres organizado.",
+      "ai_system_prompt": "ROLE: Strict HR Manager. GOAL: Ask 'What time do you wake up?' and 'Do you work on weekends?'. Verify Prepositions and Present Simple.",
+      "initial_message": "Have a seat. I need productive people. Tell me, what time do you usually wake up?",
+      "success_criteria": [
+        "uses_at_time",
+        "uses_present_simple"
+      ]
     }
   ]
 }

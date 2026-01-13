@@ -35,7 +35,7 @@ export const CURRICULUM: LevelSection[] = [
     color: 'emerald',
     lessons: [
       { 
-        id: 'pro-a1-1', 
+        id: 'a1-1', 
         title: 'The Networking Event', 
         description: 'Identity & To Be.',
         type: 'lecture', 
@@ -43,7 +43,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Roleplay: Networking event. User introduces themselves using To Be.'
       },
       { 
-        id: 'pro-a1-2', 
+        id: 'a1-2', 
         title: 'Time Mastery', 
         description: 'Logistics & Schedules.',
         type: 'grammar', 
@@ -51,7 +51,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Practice telling time and scheduling meetings.'
       },
       { 
-        id: 'pro-a1-3', 
+        id: 'a1-3', 
         title: 'Budget & Numbers', 
         description: 'Currency & Prices.',
         type: 'chat', 
@@ -59,7 +59,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Negotiation practice involving numbers and prices.'
       },
       { 
-        id: 'pro-a1-4', 
+        id: 'a1-4', 
         title: 'Daily Routine', 
         description: 'Habits & Productivity.',
         type: 'chat', 
@@ -67,7 +67,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Discuss daily work routines using Present Simple.'
       },
       { 
-        id: 'pro-a1-5', 
+        id: 'a1-5', 
         title: 'Office Navigation', 
         description: 'Locations & Directions.',
         type: 'grammar', 
@@ -75,7 +75,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Give and receive directions within an office building.'
       },
       { 
-        id: 'pro-a1-6', 
+        id: 'a1-6', 
         title: 'The Business Lunch', 
         description: 'Hospitality & Ordering.',
         type: 'listening', 
@@ -83,7 +83,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Order a meal professionally with a client.'
       },
       { 
-        id: 'pro-a1-7', 
+        id: 'a1-7', 
         title: 'Business Trip', 
         description: 'Travel Logistics.',
         type: 'chat', 
@@ -101,7 +101,7 @@ export const CURRICULUM: LevelSection[] = [
     color: 'blue',
     lessons: [
       { 
-        id: 'pro-a2-1', // ID Corregido para coincidir con backend
+        id: 'a2-1', // ID Corregido para coincidir con backend
         title: 'Project Update', 
         description: 'Past Simple Reporting.',
         type: 'chat', 
@@ -109,7 +109,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Report on what happened last week using Past Simple.'
       },
       { 
-        id: 'pro-a2-2', // ID Corregido
+        id: 'a2-2', // ID Corregido
         title: 'Future Forecast', 
         description: 'Planning with Going To.',
         type: 'grammar', 
@@ -117,7 +117,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Discuss project plans for the next quarter.'
       },
       { 
-        id: 'pro-a2-3', // ID Corregido
+        id: 'a2-3', // ID Corregido
         title: 'Tech Support', 
         description: 'Troubleshooting basics.',
         type: 'listening', 
@@ -126,7 +126,7 @@ export const CURRICULUM: LevelSection[] = [
       },
       // --- NUEVAS LECCIONES A2 ---
       { 
-        id: 'pro-a2-4', 
+        id: 'a2-4', 
         title: 'Client Call', 
         description: 'Phone Etiquette.',
         type: 'chat', 
@@ -134,7 +134,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Handle a phone call taking a message for a colleague.'
       },
       { 
-        id: 'pro-a2-5', 
+        id: 'a2-5', 
         title: 'Office Safety', 
         description: 'Modals & Rules.',
         type: 'grammar', 
@@ -142,7 +142,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Explain safety rules using must, should, and have to.'
       },
       { 
-        id: 'pro-a2-6', 
+        id: 'a2-6', 
         title: 'Inventory Check', 
         description: 'Countable vs Uncountable.',
         type: 'lecture', 
@@ -150,7 +150,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Discuss stock levels and office supplies.'
       },
       { 
-        id: 'pro-a2-7', 
+        id: 'a2-7', 
         title: 'Scheduling Conflicts', 
         description: 'Present Continuous.',
         type: 'chat', 
@@ -168,7 +168,7 @@ export const CURRICULUM: LevelSection[] = [
     color: 'orange',
     lessons: [
       { 
-        id: 'pro-b1-1', 
+        id: 'b1-1', 
         title: 'The Elevator Pitch', 
         description: 'Professional Intros.',
         type: 'chat', 
@@ -176,7 +176,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Deliver a persuasive 30-second introduction.'
       },
       { 
-        id: 'pro-b1-2', 
+        id: 'b1-2', 
         title: 'Crisis Management', 
         description: 'Formal Emailing.',
         type: 'grammar', 
@@ -185,7 +185,7 @@ export const CURRICULUM: LevelSection[] = [
       },
       // --- NUEVAS LECCIONES B1 ---
       { 
-        id: 'pro-b1-3', 
+        id: 'b1-3', 
         title: 'Negotiation Tactics', 
         description: 'First Conditional.',
         type: 'chat', 
@@ -193,7 +193,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Negotiate a deal using if-clauses.'
       },
       { 
-        id: 'pro-b1-4', 
+        id: 'b1-4', 
         title: 'Performance Review', 
         description: 'Giving Feedback.',
         type: 'listening', 
@@ -201,7 +201,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Give constructive feedback to an employee.'
       },
       { 
-        id: 'pro-b1-5', 
+        id: 'b1-5', 
         title: 'Market Trends', 
         description: 'Comparatives & Data.',
         type: 'lecture', 
@@ -209,7 +209,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Describe charts and graphs comparing sales data.'
       },
       { 
-        id: 'pro-b1-6', 
+        id: 'b1-6', 
         title: 'Leading a Meeting', 
         description: 'Phrasal Verbs.',
         type: 'chat', 
@@ -217,7 +217,7 @@ export const CURRICULUM: LevelSection[] = [
         aiPrompt: 'Chair a meeting and keep participants on track.'
       },
       { 
-        id: 'pro-b1-7', 
+        id: 'b1-7', 
         title: 'Strategic Planning', 
         description: 'Future Perfect.',
         type: 'grammar', 

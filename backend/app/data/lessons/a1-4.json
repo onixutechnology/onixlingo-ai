@@ -1,1324 +1,665 @@
 {
-  "id": "a1-4",
-  "title": "Food & Ordering 🍔",
+  "id": "pro-a1-4",
+  "version": "Titanium 2.0",
+  "title": "Restaurant Master: Ordering Food",
   "level": "A1",
-  "description": "Domina el arte de pedir comida con tu Tutor IA.",
+  "tags": [
+    "vocabulary",
+    "food",
+    "travel"
+  ],
+  "total_xp": 250,
   "stages": [
     {
+      "id": "stage_intro",
       "type": "lecture",
-      "title": "Welcome to the Restaurant",
+      "title": "Dining Etiquette",
       "parts": [
         {
-          "visual": "## Bon Appétit! 🍽️\nHoy aprenderemos a sobrevivir en un restaurante.\n\n* Pedir comida\n* Ser educado\n* Pagar la cuenta",
-          "audio": "Welcome to my kitchen! Today we are going to learn essential vocabulary for restaurants. Ordering food can be scary, but I will help you sound like a local.",
-          "animation": "happy"
+          "visual": "## Countable vs Uncountable 📏\n\n🍎 1 Apple, 2 Apples -> **Countable**\n💧 Water, 🍚 Rice -> **Uncountable**",
+          "audio": "Welcome to the restaurant. Before we order, we need to know what we can count. You can count burgers, but you cannot count soup. For soup, we use units, like a 'bowl' of soup.",
+          "animation": "teacher_pointing",
+          "duration": 12
+        },
+        {
+          "visual": "## Politeness Magic ✨\n\n❌ I want...\n✅ **I would like...** / **I'd like...**",
+          "audio": "In English, politeness is key. Never say 'I want'. It sounds like a demanding child. Always say 'I would like' or 'Could I have'.",
+          "animation": "explaining"
         }
       ]
     },
     {
-      "type": "lecture",
-      "title": "Módulo 1: Cantidades",
-      "parts": [
-        {
-          "visual": "## ¿Se puede contar? 📏\n\n* **MANY:** 🍎🍎🍎 (1, 2, 3)\n* **MUCH:** 💧💧💧 (Agua, Arroz)",
-          "audio": "First rule: Quantities. If you can count it with your fingers like apples, use MANY. If it is a liquid or powder like water or sugar, use MUCH.",
-          "animation": "teacher_pointing"
-        }
-      ]
-    },
-    {
-      "type": "quiz",
+      "id": "stage_sort",
+      "type": "gamified_quiz",
+      "title": "The Pantry",
+      "description": "Separa la comida: ¿Se cuenta o no?",
+      "xp_reward": 100,
       "questions": [
         {
-          "id": "q_count_0",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ meat is left?'",
-          "options": [
-            "many",
-            "a lot",
-            "much"
+          "id": "sort_0",
+          "type": "bucket_sort",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "vocabulary"
           ],
-          "correct_answer": "much",
-          "explanation": "'Meat' es incontable (líquido/masa) ➔ MUCH."
+          "question": "Clasifica los alimentos según si se pueden contar (1, 2, 3) o no:",
+          "items": [
+            "coffee",
+            "water",
+            "burger",
+            "sandwich"
+          ],
+          "buckets": {
+            "Countable (How many)": [
+              "burger",
+              "sandwich"
+            ],
+            "Uncountable (How much)": [
+              "coffee",
+              "water"
+            ]
+          },
+          "explanation": "Los líquidos y masas (Water, Rice) son incontables. Objetos individuales (Burger, Apple) son contables."
         },
         {
-          "id": "q_count_1",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ eggs would you like?'",
-          "options": [
-            "much",
-            "many",
-            "a lot"
+          "id": "sort_1",
+          "type": "bucket_sort",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "vocabulary"
           ],
-          "correct_answer": "many",
-          "explanation": "'Eggs' son contables (1, 2, 3) ➔ MANY."
+          "question": "Clasifica los alimentos según si se pueden contar (1, 2, 3) o no:",
+          "items": [
+            "pancake",
+            "soup",
+            "water",
+            "sandwich"
+          ],
+          "buckets": {
+            "Countable (How many)": [
+              "pancake",
+              "sandwich"
+            ],
+            "Uncountable (How much)": [
+              "soup",
+              "water"
+            ]
+          },
+          "explanation": "Los líquidos y masas (Water, Rice) son incontables. Objetos individuales (Burger, Apple) son contables."
         },
         {
-          "id": "q_count_2",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ pancakes would you like?'",
-          "options": [
-            "much",
-            "many",
-            "a lot"
+          "id": "sort_2",
+          "type": "bucket_sort",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "vocabulary"
           ],
-          "correct_answer": "many",
-          "explanation": "'Pancakes' son contables (1, 2, 3) ➔ MANY."
+          "question": "Clasifica los alimentos según si se pueden contar (1, 2, 3) o no:",
+          "items": [
+            "egg",
+            "coffee",
+            "pancake",
+            "bread"
+          ],
+          "buckets": {
+            "Countable (How many)": [
+              "egg",
+              "pancake"
+            ],
+            "Uncountable (How much)": [
+              "coffee",
+              "bread"
+            ]
+          },
+          "explanation": "Los líquidos y masas (Water, Rice) son incontables. Objetos individuales (Burger, Apple) son contables."
         },
         {
-          "id": "q_count_3",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ apples would you like?'",
-          "options": [
-            "many",
-            "a lot",
-            "much"
+          "id": "sort_3",
+          "type": "bucket_sort",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "vocabulary"
           ],
-          "correct_answer": "many",
-          "explanation": "'Apples' son contables (1, 2, 3) ➔ MANY."
+          "question": "Clasifica los alimentos según si se pueden contar (1, 2, 3) o no:",
+          "items": [
+            "coffee",
+            "pancake",
+            "apple",
+            "burger"
+          ],
+          "buckets": {
+            "Countable (How many)": [
+              "pancake",
+              "apple",
+              "burger"
+            ],
+            "Uncountable (How much)": [
+              "coffee"
+            ]
+          },
+          "explanation": "Los líquidos y masas (Water, Rice) son incontables. Objetos individuales (Burger, Apple) son contables."
         },
         {
-          "id": "q_count_4",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ eggs would you like?'",
-          "options": [
-            "much",
-            "many",
-            "a lot"
+          "id": "sort_4",
+          "type": "bucket_sort",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "vocabulary"
           ],
-          "correct_answer": "many",
-          "explanation": "'Eggs' son contables (1, 2, 3) ➔ MANY."
+          "question": "Clasifica los alimentos según si se pueden contar (1, 2, 3) o no:",
+          "items": [
+            "water",
+            "rice",
+            "pancake",
+            "burger"
+          ],
+          "buckets": {
+            "Countable (How many)": [
+              "pancake",
+              "burger"
+            ],
+            "Uncountable (How much)": [
+              "water",
+              "rice"
+            ]
+          },
+          "explanation": "Los líquidos y masas (Water, Rice) son incontables. Objetos individuales (Burger, Apple) son contables."
         },
         {
-          "id": "q_count_5",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ fries would you like?'",
-          "options": [
-            "many",
-            "a lot",
-            "much"
+          "id": "sort_5",
+          "type": "bucket_sort",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "vocabulary"
           ],
-          "correct_answer": "many",
-          "explanation": "'Fries' son contables (1, 2, 3) ➔ MANY."
-        },
-        {
-          "id": "q_count_6",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ soup is left?'",
-          "options": [
-            "a lot",
-            "much",
-            "many"
+          "question": "Clasifica los alimentos según si se pueden contar (1, 2, 3) o no:",
+          "items": [
+            "pasta",
+            "steak",
+            "burger",
+            "coffee"
           ],
-          "correct_answer": "much",
-          "explanation": "'Soup' es incontable (líquido/masa) ➔ MUCH."
-        },
-        {
-          "id": "q_count_7",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ water is left?'",
-          "options": [
-            "much",
-            "many",
-            "a lot"
-          ],
-          "correct_answer": "much",
-          "explanation": "'Water' es incontable (líquido/masa) ➔ MUCH."
-        },
-        {
-          "id": "q_count_8",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ bread is left?'",
-          "options": [
-            "a lot",
-            "much",
-            "many"
-          ],
-          "correct_answer": "much",
-          "explanation": "'Bread' es incontable (líquido/masa) ➔ MUCH."
-        },
-        {
-          "id": "q_count_9",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ sandwiches would you like?'",
-          "options": [
-            "much",
-            "many",
-            "a lot"
-          ],
-          "correct_answer": "many",
-          "explanation": "'Sandwiches' son contables (1, 2, 3) ➔ MANY."
-        },
-        {
-          "id": "q_count_10",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ bread is left?'",
-          "options": [
-            "a lot",
-            "much",
-            "many"
-          ],
-          "correct_answer": "much",
-          "explanation": "'Bread' es incontable (líquido/masa) ➔ MUCH."
-        },
-        {
-          "id": "q_count_11",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ tables would you like?'",
-          "options": [
-            "a lot",
-            "much",
-            "many"
-          ],
-          "correct_answer": "many",
-          "explanation": "'Tables' son contables (1, 2, 3) ➔ MANY."
-        },
-        {
-          "id": "q_count_12",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ burgers would you like?'",
-          "options": [
-            "a lot",
-            "much",
-            "many"
-          ],
-          "correct_answer": "many",
-          "explanation": "'Burgers' son contables (1, 2, 3) ➔ MANY."
-        },
-        {
-          "id": "q_count_13",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ cheese is left?'",
-          "options": [
-            "much",
-            "a lot",
-            "many"
-          ],
-          "correct_answer": "much",
-          "explanation": "'Cheese' es incontable (líquido/masa) ➔ MUCH."
-        },
-        {
-          "id": "q_count_14",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ rice is left?'",
-          "options": [
-            "many",
-            "much",
-            "a lot"
-          ],
-          "correct_answer": "much",
-          "explanation": "'Rice' es incontable (líquido/masa) ➔ MUCH."
-        },
-        {
-          "id": "q_count_15",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ coffee is left?'",
-          "options": [
-            "a lot",
-            "much",
-            "many"
-          ],
-          "correct_answer": "much",
-          "explanation": "'Coffee' es incontable (líquido/masa) ➔ MUCH."
-        },
-        {
-          "id": "q_count_16",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ cheese is left?'",
-          "options": [
-            "much",
-            "a lot",
-            "many"
-          ],
-          "correct_answer": "much",
-          "explanation": "'Cheese' es incontable (líquido/masa) ➔ MUCH."
-        },
-        {
-          "id": "q_count_17",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ fries would you like?'",
-          "options": [
-            "a lot",
-            "much",
-            "many"
-          ],
-          "correct_answer": "many",
-          "explanation": "'Fries' son contables (1, 2, 3) ➔ MANY."
-        },
-        {
-          "id": "q_count_18",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ rice is left?'",
-          "options": [
-            "many",
-            "a lot",
-            "much"
-          ],
-          "correct_answer": "much",
-          "explanation": "'Rice' es incontable (líquido/masa) ➔ MUCH."
-        },
-        {
-          "id": "q_count_19",
-          "type": "quiz_choice",
-          "question": "Completa: 'How ___ cheese is left?'",
-          "options": [
-            "many",
-            "a lot",
-            "much"
-          ],
-          "correct_answer": "much",
-          "explanation": "'Cheese' es incontable (líquido/masa) ➔ MUCH."
+          "buckets": {
+            "Countable (How many)": [
+              "steak",
+              "burger"
+            ],
+            "Uncountable (How much)": [
+              "pasta",
+              "coffee"
+            ]
+          },
+          "explanation": "Los líquidos y masas (Water, Rice) son incontables. Objetos individuales (Burger, Apple) son contables."
         }
       ]
     },
     {
-      "type": "lecture",
-      "title": "Módulo 2: Modales",
-      "parts": [
-        {
-          "visual": "## Don't be rude! 🎩\n\n❌ I want pizza.\n✅ I **would like** pizza.",
-          "audio": "Please, never say 'I want'. It sounds very aggressive. Always use 'I would like' or 'Can I have'. Manners are very important.",
-          "animation": "talking"
-        }
-      ]
-    },
-    {
-      "type": "quiz",
+      "id": "stage_grammar",
+      "type": "gamified_quiz",
+      "title": "Grammar Chef",
+      "description": "Usa A, An, Some, Much y Many correctamente.",
+      "xp_reward": 150,
       "questions": [
         {
-          "id": "q_polite_0",
+          "id": "quant_0",
           "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ a burger, please.'",
-          "options": [
-            "I'd like",
-            "I am",
-            "Bring me"
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "quantifiers"
           ],
-          "correct_answer": "I'd like",
-          "explanation": "'I'd like' es educado. 'Bring me' es grosero."
+          "question": "Completa la pregunta: 'How ___ steaks do we need?'",
+          "options": [
+            "much",
+            "many",
+            "a lot"
+          ],
+          "correct_answer": "many",
+          "explanation": "Usamos 'many' porque 'steaks' es contable."
         },
         {
-          "id": "q_polite_1",
+          "id": "quant_4",
           "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ an apple, please.'",
-          "options": [
-            "I want",
-            "I am",
-            "I'd like"
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "quantifiers"
           ],
-          "correct_answer": "I'd like",
-          "explanation": "'I'd like' es educado. 'I want' es grosero."
+          "question": "Completa la pregunta: 'How ___ bread do we need?'",
+          "options": [
+            "much",
+            "many",
+            "a lot"
+          ],
+          "correct_answer": "much",
+          "explanation": "Usamos 'much' porque 'bread' es incontable."
         },
         {
-          "id": "q_polite_2",
+          "id": "art_2",
           "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ a burger, please.'",
-          "options": [
-            "I want",
-            "I'd like",
-            "I am"
+          "difficulty": "easy",
+          "tags": [
+            "grammar",
+            "articles"
           ],
-          "correct_answer": "I'd like",
-          "explanation": "'I'd like' es educado. 'I want' es grosero."
-        },
-        {
-          "id": "q_polite_3",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ an apple, please.'",
-          "options": [
-            "I'd like",
-            "Give me",
-            "I am"
-          ],
-          "correct_answer": "I'd like",
-          "explanation": "'I'd like' es educado. 'Give me' es grosero."
-        },
-        {
-          "id": "q_polite_4",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ an egg, please.'",
-          "options": [
-            "I am",
-            "I want",
-            "I would like"
-          ],
-          "correct_answer": "I would like",
-          "explanation": "'I would like' es educado. 'I want' es grosero."
-        },
-        {
-          "id": "q_polite_5",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ an apple, please.'",
-          "options": [
-            "Could I get",
-            "I am",
-            "I need"
-          ],
-          "correct_answer": "Could I get",
-          "explanation": "'Could I get' es educado. 'I need' es grosero."
-        },
-        {
-          "id": "q_polite_6",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ an apple, please.'",
-          "options": [
-            "I would like",
-            "I am",
-            "I want"
-          ],
-          "correct_answer": "I would like",
-          "explanation": "'I would like' es educado. 'I want' es grosero."
-        },
-        {
-          "id": "q_polite_7",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ an egg, please.'",
-          "options": [
-            "Give me",
-            "Could I get",
-            "I am"
-          ],
-          "correct_answer": "Could I get",
-          "explanation": "'Could I get' es educado. 'Give me' es grosero."
-        },
-        {
-          "id": "q_polite_8",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ a fry, please.'",
-          "options": [
-            "I'd like",
-            "Bring me",
-            "I am"
-          ],
-          "correct_answer": "I'd like",
-          "explanation": "'I'd like' es educado. 'Bring me' es grosero."
-        },
-        {
-          "id": "q_polite_9",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ a burger, please.'",
-          "options": [
-            "I want",
-            "I am",
-            "I'd like"
-          ],
-          "correct_answer": "I'd like",
-          "explanation": "'I'd like' es educado. 'I want' es grosero."
-        },
-        {
-          "id": "q_polite_10",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ an egg, please.'",
-          "options": [
-            "I'd like",
-            "I am",
-            "Give me"
-          ],
-          "correct_answer": "I'd like",
-          "explanation": "'I'd like' es educado. 'Give me' es grosero."
-        },
-        {
-          "id": "q_polite_11",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ a sandwich, please.'",
-          "options": [
-            "I would like",
-            "I am",
-            "Bring me"
-          ],
-          "correct_answer": "I would like",
-          "explanation": "'I would like' es educado. 'Bring me' es grosero."
-        },
-        {
-          "id": "q_polite_12",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ a table, please.'",
-          "options": [
-            "Bring me",
-            "I am",
-            "Can I have"
-          ],
-          "correct_answer": "Can I have",
-          "explanation": "'Can I have' es educado. 'Bring me' es grosero."
-        },
-        {
-          "id": "q_polite_13",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ a sandwich, please.'",
-          "options": [
-            "I am",
-            "Can I have",
-            "Bring me"
-          ],
-          "correct_answer": "Can I have",
-          "explanation": "'Can I have' es educado. 'Bring me' es grosero."
-        },
-        {
-          "id": "q_polite_14",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ a fry, please.'",
-          "options": [
-            "Give me",
-            "I am",
-            "Could I get"
-          ],
-          "correct_answer": "Could I get",
-          "explanation": "'Could I get' es educado. 'Give me' es grosero."
-        },
-        {
-          "id": "q_polite_15",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ a pancake, please.'",
-          "options": [
-            "Bring me",
-            "I am",
-            "I'd like"
-          ],
-          "correct_answer": "I'd like",
-          "explanation": "'I'd like' es educado. 'Bring me' es grosero."
-        },
-        {
-          "id": "q_polite_16",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ a sandwich, please.'",
-          "options": [
-            "I am",
-            "Could I get",
-            "Give me"
-          ],
-          "correct_answer": "Could I get",
-          "explanation": "'Could I get' es educado. 'Give me' es grosero."
-        },
-        {
-          "id": "q_polite_17",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ an egg, please.'",
-          "options": [
-            "I'd like",
-            "I am",
-            "Give me"
-          ],
-          "correct_answer": "I'd like",
-          "explanation": "'I'd like' es educado. 'Give me' es grosero."
-        },
-        {
-          "id": "q_polite_18",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ a pancake, please.'",
-          "options": [
-            "I am",
-            "I would like",
-            "I need"
-          ],
-          "correct_answer": "I would like",
-          "explanation": "'I would like' es educado. 'I need' es grosero."
-        },
-        {
-          "id": "q_polite_19",
-          "type": "quiz_choice",
-          "question": "In a restaurant, ask politely: '___ a pancake, please.'",
-          "options": [
-            "I would like",
-            "I want",
-            "I am"
-          ],
-          "correct_answer": "I would like",
-          "explanation": "'I would like' es educado. 'I want' es grosero."
-        }
-      ]
-    },
-    {
-      "type": "lecture",
-      "title": "Módulo 3: Artículos",
-      "parts": [
-        {
-          "visual": "## A, An, Some 🍎\n\n* **A/An:** Uno solo (A burger).\n* **Some:** Incontables (Some water).",
-          "audio": "Be careful with articles. Use 'A' or 'An' only for single items. For liquids or plural things, use 'Some'. I would like some water, please.",
-          "animation": "curious"
-        }
-      ]
-    },
-    {
-      "type": "quiz",
-      "questions": [
-        {
-          "id": "q_art_0",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ bread?'",
-          "options": [
-            "some",
-            "a",
-            "two"
-          ],
-          "correct_answer": "some",
-          "explanation": "Incontables usan SOME, nunca A/AN."
-        },
-        {
-          "id": "q_art_1",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ burger?'",
-          "options": [
-            "two",
-            "a",
-            "some"
-          ],
-          "correct_answer": "a",
-          "explanation": "Singular contable usa A/AN."
-        },
-        {
-          "id": "q_art_2",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ coffee?'",
-          "options": [
-            "two",
-            "some",
-            "a"
-          ],
-          "correct_answer": "some",
-          "explanation": "Incontables usan SOME, nunca A/AN."
-        },
-        {
-          "id": "q_art_3",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ coffee?'",
-          "options": [
-            "some",
-            "two",
-            "a"
-          ],
-          "correct_answer": "some",
-          "explanation": "Incontables usan SOME, nunca A/AN."
-        },
-        {
-          "id": "q_art_4",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ table?'",
+          "question": "Completa la frase: 'I'd like ___ coffee, please.'",
           "options": [
             "a",
-            "two",
-            "some"
-          ],
-          "correct_answer": "a",
-          "explanation": "Singular contable usa A/AN."
-        },
-        {
-          "id": "q_art_5",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ sandwich?'",
-          "options": [
-            "two",
             "some",
-            "a"
-          ],
-          "correct_answer": "a",
-          "explanation": "Singular contable usa A/AN."
-        },
-        {
-          "id": "q_art_6",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ soup?'",
-          "options": [
-            "some",
-            "two",
-            "a"
+            "an"
           ],
           "correct_answer": "some",
-          "explanation": "Incontables usan SOME, nunca A/AN."
+          "explanation": "'Coffee' es incontable, usamos SOME."
         },
         {
-          "id": "q_art_7",
+          "id": "quant_2",
           "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ table?'",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "quantifiers"
+          ],
+          "question": "Completa la pregunta: 'How ___ steaks do we need?'",
+          "options": [
+            "much",
+            "many",
+            "a lot"
+          ],
+          "correct_answer": "many",
+          "explanation": "Usamos 'many' porque 'steaks' es contable."
+        },
+        {
+          "id": "art_3",
+          "type": "quiz_choice",
+          "difficulty": "easy",
+          "tags": [
+            "grammar",
+            "articles"
+          ],
+          "question": "Completa la frase: 'I'd like ___ apple, please.'",
           "options": [
             "some",
-            "two",
-            "a"
-          ],
-          "correct_answer": "a",
-          "explanation": "Singular contable usa A/AN."
-        },
-        {
-          "id": "q_art_8",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ apple?'",
-          "options": [
-            "two",
             "an",
             "a"
           ],
           "correct_answer": "an",
-          "explanation": "Singular contable usa A/AN."
+          "explanation": "'Apple' es singular contable y empieza por vocal."
         },
         {
-          "id": "q_art_9",
+          "id": "art_4",
           "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ cheese?'",
+          "difficulty": "easy",
+          "tags": [
+            "grammar",
+            "articles"
+          ],
+          "question": "Completa la frase: 'I'd like ___ coffee, please.'",
+          "options": [
+            "an",
+            "a",
+            "some"
+          ],
+          "correct_answer": "some",
+          "explanation": "'Coffee' es incontable, usamos SOME."
+        },
+        {
+          "id": "art_1",
+          "type": "quiz_choice",
+          "difficulty": "easy",
+          "tags": [
+            "grammar",
+            "articles"
+          ],
+          "question": "Completa la frase: 'I'd like ___ rice, please.'",
+          "options": [
+            "an",
+            "a",
+            "some"
+          ],
+          "correct_answer": "some",
+          "explanation": "'Rice' es incontable, usamos SOME."
+        },
+        {
+          "id": "quant_1",
+          "type": "quiz_choice",
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "quantifiers"
+          ],
+          "question": "Completa la pregunta: 'How ___ eggs do we need?'",
+          "options": [
+            "much",
+            "many",
+            "a lot"
+          ],
+          "correct_answer": "many",
+          "explanation": "Usamos 'many' porque 'eggs' es contable."
+        },
+        {
+          "id": "art_0",
+          "type": "quiz_choice",
+          "difficulty": "easy",
+          "tags": [
+            "grammar",
+            "articles"
+          ],
+          "question": "Completa la frase: 'I'd like ___ apple, please.'",
           "options": [
             "a",
             "some",
-            "two"
+            "an"
           ],
-          "correct_answer": "some",
-          "explanation": "Incontables usan SOME, nunca A/AN."
+          "correct_answer": "an",
+          "explanation": "'Apple' es singular contable y empieza por vocal."
         },
         {
-          "id": "q_art_10",
+          "id": "quant_3",
           "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ coffee?'",
-          "options": [
-            "a",
-            "two",
-            "some"
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "quantifiers"
           ],
-          "correct_answer": "some",
-          "explanation": "Incontables usan SOME, nunca A/AN."
-        },
-        {
-          "id": "q_art_11",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ rice?'",
+          "question": "Completa la pregunta: 'How ___ apples do we need?'",
           "options": [
-            "some",
-            "two",
-            "a"
+            "much",
+            "many",
+            "a lot"
           ],
-          "correct_answer": "some",
-          "explanation": "Incontables usan SOME, nunca A/AN."
-        },
-        {
-          "id": "q_art_12",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ coffee?'",
-          "options": [
-            "two",
-            "a",
-            "some"
-          ],
-          "correct_answer": "some",
-          "explanation": "Incontables usan SOME, nunca A/AN."
-        },
-        {
-          "id": "q_art_13",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ sandwich?'",
-          "options": [
-            "a",
-            "two",
-            "some"
-          ],
-          "correct_answer": "a",
-          "explanation": "Singular contable usa A/AN."
-        },
-        {
-          "id": "q_art_14",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ burger?'",
-          "options": [
-            "a",
-            "two",
-            "some"
-          ],
-          "correct_answer": "a",
-          "explanation": "Singular contable usa A/AN."
-        },
-        {
-          "id": "q_art_15",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ soup?'",
-          "options": [
-            "two",
-            "a",
-            "some"
-          ],
-          "correct_answer": "some",
-          "explanation": "Incontables usan SOME, nunca A/AN."
-        },
-        {
-          "id": "q_art_16",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ fry?'",
-          "options": [
-            "two",
-            "a",
-            "some"
-          ],
-          "correct_answer": "a",
-          "explanation": "Singular contable usa A/AN."
-        },
-        {
-          "id": "q_art_17",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ water?'",
-          "options": [
-            "some",
-            "a",
-            "two"
-          ],
-          "correct_answer": "some",
-          "explanation": "Incontables usan SOME, nunca A/AN."
-        },
-        {
-          "id": "q_art_18",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ soup?'",
-          "options": [
-            "a",
-            "two",
-            "some"
-          ],
-          "correct_answer": "some",
-          "explanation": "Incontables usan SOME, nunca A/AN."
-        },
-        {
-          "id": "q_art_19",
-          "type": "quiz_choice",
-          "question": "Waiter: 'Would you like ___ burger?'",
-          "options": [
-            "a",
-            "two",
-            "some"
-          ],
-          "correct_answer": "a",
-          "explanation": "Singular contable usa A/AN."
+          "correct_answer": "many",
+          "explanation": "Usamos 'many' porque 'apples' es contable."
         }
       ]
     },
     {
-      "type": "lecture",
-      "title": "Módulo 4: El Mesero",
-      "parts": [
-        {
-          "visual": "## Frases Clave 🗣️\n\n* Ready to order?\n* Anything to drink?\n* The check, please.",
-          "audio": "Listen to the waiter. He will ask if you are ready to order. At the end, don't forget to ask for 'the check'.",
-          "animation": "talking"
-        }
-      ]
-    },
-    {
-      "type": "quiz",
+      "id": "stage_order",
+      "type": "gamified_quiz",
+      "title": "The Perfect Order",
+      "description": "Construye frases educadas.",
+      "xp_reward": 150,
       "questions": [
         {
-          "id": "q_dial_0",
-          "type": "quiz_choice",
-          "question": "Waiter: **'How was everything?'**\nYou say:",
-          "options": [
-            "Yes, please.",
-            "Yes, we have a reservation.",
-            "It was delicious, thanks."
+          "id": "ord_0",
+          "type": "order_sentence",
+          "difficulty": "medium",
+          "tags": [
+            "politeness",
+            "syntax"
           ],
-          "correct_answer": "It was delicious, thanks.",
-          "explanation": "Respuesta lógica al contexto."
+          "question": "Ordena las palabras para pedir educadamente:",
+          "parts": [
+            "I",
+            "please",
+            "egg",
+            "an",
+            "Could",
+            "have"
+          ],
+          "correct_order": [
+            "Could",
+            "I",
+            "have",
+            "an",
+            "egg",
+            "please"
+          ],
+          "explanation": "Estructura: Frase de cortesía + Objeto + Please."
         },
         {
-          "id": "q_dial_1",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Are you ready to order?'**\nYou say:",
-          "options": [
-            "Yes, I'd like the steak.",
-            "Yes, we have a reservation.",
-            "Just water, please."
+          "id": "ord_1",
+          "type": "order_sentence",
+          "difficulty": "medium",
+          "tags": [
+            "politeness",
+            "syntax"
           ],
-          "correct_answer": "Yes, I'd like the steak.",
-          "explanation": "Respuesta lógica al contexto."
+          "question": "Ordena las palabras para pedir educadamente:",
+          "parts": [
+            "I",
+            "some",
+            "please",
+            "Could",
+            "soup",
+            "have"
+          ],
+          "correct_order": [
+            "Could",
+            "I",
+            "have",
+            "some",
+            "soup",
+            "please"
+          ],
+          "explanation": "Estructura: Frase de cortesía + Objeto + Please."
         },
         {
-          "id": "q_dial_2",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Are you ready to order?'**\nYou say:",
-          "options": [
-            "Yes, I'd like the steak.",
-            "Just water, please.",
-            "It was delicious, thanks."
+          "id": "ord_2",
+          "type": "order_sentence",
+          "difficulty": "medium",
+          "tags": [
+            "politeness",
+            "syntax"
           ],
-          "correct_answer": "Yes, I'd like the steak.",
-          "explanation": "Respuesta lógica al contexto."
+          "question": "Ordena las palabras para pedir educadamente:",
+          "parts": [
+            "would",
+            "please",
+            "I",
+            "like",
+            "some",
+            "pasta"
+          ],
+          "correct_order": [
+            "I",
+            "would",
+            "like",
+            "some",
+            "pasta",
+            "please"
+          ],
+          "explanation": "Estructura: Frase de cortesía + Objeto + Please."
         },
         {
-          "id": "q_dial_3",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Can I get you the check?'**\nYou say:",
-          "options": [
-            "Yes, please.",
-            "It was delicious, thanks.",
-            "Just water, please."
+          "id": "ord_3",
+          "type": "order_sentence",
+          "difficulty": "medium",
+          "tags": [
+            "politeness",
+            "syntax"
           ],
-          "correct_answer": "Yes, please.",
-          "explanation": "Respuesta lógica al contexto."
+          "question": "Ordena las palabras para pedir educadamente:",
+          "parts": [
+            "have",
+            "cheese",
+            "some",
+            "May",
+            "I",
+            "please"
+          ],
+          "correct_order": [
+            "May",
+            "I",
+            "have",
+            "some",
+            "cheese",
+            "please"
+          ],
+          "explanation": "Estructura: Frase de cortesía + Objeto + Please."
         },
         {
-          "id": "q_dial_4",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Table for two?'**\nYou say:",
-          "options": [
-            "Yes, we have a reservation.",
-            "Yes, I'd like the steak.",
-            "It was delicious, thanks."
+          "id": "ord_4",
+          "type": "order_sentence",
+          "difficulty": "medium",
+          "tags": [
+            "politeness",
+            "syntax"
           ],
-          "correct_answer": "Yes, we have a reservation.",
-          "explanation": "Respuesta lógica al contexto."
+          "question": "Ordena las palabras para pedir educadamente:",
+          "parts": [
+            "please",
+            "I",
+            "a",
+            "get",
+            "pancake",
+            "Can"
+          ],
+          "correct_order": [
+            "Can",
+            "I",
+            "get",
+            "a",
+            "pancake",
+            "please"
+          ],
+          "explanation": "Estructura: Frase de cortesía + Objeto + Please."
         },
         {
-          "id": "q_dial_5",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Are you ready to order?'**\nYou say:",
-          "options": [
-            "Just water, please.",
-            "Yes, we have a reservation.",
-            "Yes, I'd like the steak."
+          "id": "ord_5",
+          "type": "order_sentence",
+          "difficulty": "medium",
+          "tags": [
+            "politeness",
+            "syntax"
           ],
-          "correct_answer": "Yes, I'd like the steak.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_6",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Can I get you the check?'**\nYou say:",
-          "options": [
-            "Yes, please.",
-            "Yes, I'd like the steak.",
-            "It was delicious, thanks."
+          "question": "Ordena las palabras para pedir educadamente:",
+          "parts": [
+            "have",
+            "Could",
+            "I",
+            "egg",
+            "please",
+            "an"
           ],
-          "correct_answer": "Yes, please.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_7",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Can I get you the check?'**\nYou say:",
-          "options": [
-            "Yes, I'd like the steak.",
-            "Yes, please.",
-            "Yes, we have a reservation."
+          "correct_order": [
+            "Could",
+            "I",
+            "have",
+            "an",
+            "egg",
+            "please"
           ],
-          "correct_answer": "Yes, please.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_8",
-          "type": "quiz_choice",
-          "question": "Waiter: **'How was everything?'**\nYou say:",
-          "options": [
-            "Yes, I'd like the steak.",
-            "It was delicious, thanks.",
-            "Just water, please."
-          ],
-          "correct_answer": "It was delicious, thanks.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_9",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Table for two?'**\nYou say:",
-          "options": [
-            "Yes, we have a reservation.",
-            "It was delicious, thanks.",
-            "Just water, please."
-          ],
-          "correct_answer": "Yes, we have a reservation.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_10",
-          "type": "quiz_choice",
-          "question": "Waiter: **'How was everything?'**\nYou say:",
-          "options": [
-            "Yes, we have a reservation.",
-            "Yes, I'd like the steak.",
-            "It was delicious, thanks."
-          ],
-          "correct_answer": "It was delicious, thanks.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_11",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Table for two?'**\nYou say:",
-          "options": [
-            "Just water, please.",
-            "Yes, I'd like the steak.",
-            "Yes, we have a reservation."
-          ],
-          "correct_answer": "Yes, we have a reservation.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_12",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Are you ready to order?'**\nYou say:",
-          "options": [
-            "Yes, we have a reservation.",
-            "Yes, I'd like the steak.",
-            "Yes, please."
-          ],
-          "correct_answer": "Yes, I'd like the steak.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_13",
-          "type": "quiz_choice",
-          "question": "Waiter: **'How was everything?'**\nYou say:",
-          "options": [
-            "Just water, please.",
-            "It was delicious, thanks.",
-            "Yes, I'd like the steak."
-          ],
-          "correct_answer": "It was delicious, thanks.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_14",
-          "type": "quiz_choice",
-          "question": "Waiter: **'How was everything?'**\nYou say:",
-          "options": [
-            "Yes, we have a reservation.",
-            "Yes, please.",
-            "It was delicious, thanks."
-          ],
-          "correct_answer": "It was delicious, thanks.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_15",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Can I get you the check?'**\nYou say:",
-          "options": [
-            "It was delicious, thanks.",
-            "Just water, please.",
-            "Yes, please."
-          ],
-          "correct_answer": "Yes, please.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_16",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Are you ready to order?'**\nYou say:",
-          "options": [
-            "It was delicious, thanks.",
-            "Yes, I'd like the steak.",
-            "Yes, please."
-          ],
-          "correct_answer": "Yes, I'd like the steak.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_17",
-          "type": "quiz_choice",
-          "question": "Waiter: **'Table for two?'**\nYou say:",
-          "options": [
-            "It was delicious, thanks.",
-            "Yes, we have a reservation.",
-            "Yes, please."
-          ],
-          "correct_answer": "Yes, we have a reservation.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_18",
-          "type": "quiz_choice",
-          "question": "Waiter: **'How was everything?'**\nYou say:",
-          "options": [
-            "It was delicious, thanks.",
-            "Yes, we have a reservation.",
-            "Yes, I'd like the steak."
-          ],
-          "correct_answer": "It was delicious, thanks.",
-          "explanation": "Respuesta lógica al contexto."
-        },
-        {
-          "id": "q_dial_19",
-          "type": "quiz_choice",
-          "question": "Waiter: **'How was everything?'**\nYou say:",
-          "options": [
-            "Yes, we have a reservation.",
-            "Yes, please.",
-            "It was delicious, thanks."
-          ],
-          "correct_answer": "It was delicious, thanks.",
-          "explanation": "Respuesta lógica al contexto."
+          "explanation": "Estructura: Frase de cortesía + Objeto + Please."
         }
       ]
     },
     {
-      "type": "lecture",
-      "title": "Módulo 5: Pedido Maestro",
-      "parts": [
-        {
-          "visual": "## El Combo Completo 🌟\n\n* I'd like a **spicy** burger **with** fries.",
-          "audio": "Let's put it all together. Adjectives, prepositions, and polite requests. Make me proud!",
-          "animation": "happy"
-        }
-      ]
-    },
-    {
-      "type": "quiz",
+      "id": "stage_menu",
+      "type": "gamified_quiz",
+      "title": "Check, please!",
+      "description": "Calcula la cuenta del menú.",
+      "xp_reward": 200,
       "questions": [
         {
-          "id": "q_comp_0",
+          "id": "math_0",
           "type": "quiz_choice",
-          "question": "Completa: 'I'd like a cold sandwich ___ some rice.'",
-          "options": [
-            "on",
-            "in",
-            "with",
-            "at"
+          "difficulty": "hard",
+          "tags": [
+            "vocabulary",
+            "numbers"
           ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
+          "question": "MENU: [ Salad: $12 | Cake: $6 | Steak: $25 ]\n\nYou order 1 steak and 1 salad. How much is it?",
+          "options": [
+            "$37",
+            "$35",
+            "$42",
+            "$39"
+          ],
+          "correct_answer": "$37",
+          "explanation": "Steak ($25) + Salad ($12) = $37."
         },
         {
-          "id": "q_comp_1",
+          "id": "math_1",
           "type": "quiz_choice",
-          "question": "Completa: 'I'd like a fresh table ___ some water.'",
-          "options": [
-            "on",
-            "at",
-            "in",
-            "with"
+          "difficulty": "hard",
+          "tags": [
+            "vocabulary",
+            "numbers"
           ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
+          "question": "MENU: [ Cake: $6 | Soup: $8 | Steak: $25 ]\n\nYou order 1 steak and 1 soup. How much is it?",
+          "options": [
+            "$33",
+            "$31",
+            "$38",
+            "$35"
+          ],
+          "correct_answer": "$33",
+          "explanation": "Steak ($25) + Soup ($8) = $33."
         },
         {
-          "id": "q_comp_2",
+          "id": "math_2",
           "type": "quiz_choice",
-          "question": "Completa: 'I'd like a sweet burger ___ some cheese.'",
-          "options": [
-            "at",
-            "on",
-            "with",
-            "in"
+          "difficulty": "hard",
+          "tags": [
+            "vocabulary",
+            "numbers"
           ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
+          "question": "MENU: [ Cake: $6 | Coffee: $4 | Soup: $8 ]\n\nYou order 1 soup and 1 coffee. How much is it?",
+          "options": [
+            "$12",
+            "$10",
+            "$17",
+            "$14"
+          ],
+          "correct_answer": "$12",
+          "explanation": "Soup ($8) + Coffee ($4) = $12."
         },
         {
-          "id": "q_comp_3",
+          "id": "math_3",
           "type": "quiz_choice",
-          "question": "Completa: 'I'd like a delicious table ___ some cheese.'",
-          "options": [
-            "at",
-            "on",
-            "in",
-            "with"
+          "difficulty": "hard",
+          "tags": [
+            "vocabulary",
+            "numbers"
           ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
+          "question": "MENU: [ Burger: $10 | Cake: $6 | Soup: $8 ]\n\nYou order 1 soup and 1 burger. How much is it?",
+          "options": [
+            "$18",
+            "$16",
+            "$23",
+            "$20"
+          ],
+          "correct_answer": "$18",
+          "explanation": "Soup ($8) + Burger ($10) = $18."
         },
         {
-          "id": "q_comp_4",
+          "id": "math_4",
           "type": "quiz_choice",
-          "question": "Completa: 'I'd like an sweet apple ___ some coffee.'",
-          "options": [
-            "with",
-            "on",
-            "in",
-            "at"
+          "difficulty": "hard",
+          "tags": [
+            "vocabulary",
+            "numbers"
           ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_5",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like an delicious egg ___ some soup.'",
+          "question": "MENU: [ Cake: $6 | Water: $2 | Soup: $8 ]\n\nYou order 1 water and 1 cake. How much is it?",
           "options": [
-            "on",
-            "at",
-            "in",
-            "with"
+            "$8",
+            "$6",
+            "$13",
+            "$10"
           ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_6",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like an spicy egg ___ some water.'",
-          "options": [
-            "on",
-            "at",
-            "with",
-            "in"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_7",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like an hot egg ___ some coffee.'",
-          "options": [
-            "on",
-            "with",
-            "at",
-            "in"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_8",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like a salty pancake ___ some coffee.'",
-          "options": [
-            "with",
-            "in",
-            "on",
-            "at"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_9",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like an salty apple ___ some rice.'",
-          "options": [
-            "with",
-            "on",
-            "in",
-            "at"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_10",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like a spicy burger ___ some soup.'",
-          "options": [
-            "at",
-            "with",
-            "in",
-            "on"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_11",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like a fresh sandwich ___ some rice.'",
-          "options": [
-            "in",
-            "on",
-            "at",
-            "with"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_12",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like a spicy sandwich ___ some soup.'",
-          "options": [
-            "in",
-            "with",
-            "on",
-            "at"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_13",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like a cold fry ___ some coffee.'",
-          "options": [
-            "on",
-            "in",
-            "with",
-            "at"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_14",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like a fresh fry ___ some meat.'",
-          "options": [
-            "at",
-            "on",
-            "with",
-            "in"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_15",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like an hot egg ___ some rice.'",
-          "options": [
-            "with",
-            "on",
-            "in",
-            "at"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_16",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like a delicious burger ___ some bread.'",
-          "options": [
-            "on",
-            "at",
-            "in",
-            "with"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_17",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like an sweet egg ___ some water.'",
-          "options": [
-            "in",
-            "on",
-            "with",
-            "at"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_18",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like an hot apple ___ some cheese.'",
-          "options": [
-            "on",
-            "at",
-            "with",
-            "in"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
-        },
-        {
-          "id": "q_comp_19",
-          "type": "quiz_choice",
-          "question": "Completa: 'I'd like an cold egg ___ some water.'",
-          "options": [
-            "in",
-            "with",
-            "at",
-            "on"
-          ],
-          "correct_answer": "with",
-          "explanation": "'With' indica acompañamiento."
+          "correct_answer": "$8",
+          "explanation": "Water ($2) + Cake ($6) = $8."
         }
       ]
     },
     {
+      "id": "stage_boss",
       "type": "practice_chat",
-      "scenario": "Estás en 'Bella Italia'. El mesero Luigi espera tu orden.",
-      "ai_system_prompt": "ROLE: Italian Waiter 'Luigi'. GOAL: Take order. Correct rude phrases ('I want') to polite ones ('I would like')."
+      "title": "Dinner at Luigi's",
+      "scenario": "Estás en un restaurante italiano elegante. Pide entrada, plato fuerte y bebida.",
+      "ai_system_prompt": "ROLE: Italian Waiter 'Luigi'. GOAL: Take a 3-course order. Reject 'I want' (say 'So rude!'). Praise 'I would like'. Ask 'Still or sparkling water?'.",
+      "initial_message": "Buonasera! Welcome to Luigi's. Are you ready to order, or are you waiting for someone?",
+      "success_criteria": [
+        "uses_polite_phrases",
+        "orders_drink",
+        "understands_menu"
+      ]
     }
   ]
 }

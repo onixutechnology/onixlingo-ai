@@ -1,6 +1,7 @@
 import logging
 import stripe
 import os
+import json
 from contextlib import asynccontextmanager
 from dotenv import load_dotenv
 
@@ -134,3 +135,11 @@ def health_check():
         "status": "OPERATIONAL 🟢",
         "cors_enabled_for": origins
     }
+
+@app.get("/api/v1/voclessons/{lesson_id}")
+def get_voc_lesson(lesson_id: str):
+    path = f"app/voclessons/lessons/{lesson_id}.json"
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    raise HTTPException(status_code=404, detail="Lesson not found")

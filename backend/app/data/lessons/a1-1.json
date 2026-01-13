@@ -1,1318 +1,148 @@
 {
-  "id": "a1-1",
-  "title": "Mastery: To Be & Introductions",
+  "id": "lesson-a1-1",
+  "version": "2.0-MAX",
+  "title": "Identity & Origins: Mastery",
   "level": "A1",
-  "description": "Curso completo con Tutor Virtual.",
+  "description": "Entrenamiento intensivo: Domina el verbo To Be, todos los pronombres y 50 palabras esenciales.",
+  "total_xp": 1000,
+  "difficulty": "easy",
+  "tags": [
+    "basics",
+    "pronouns",
+    "to_be",
+    "vocabulary",
+    "adjectives"
+  ],
   "stages": [
     {
+      "id": "stg_theory",
       "type": "lecture",
-      "title": "Bienvenida al Nivel A1",
+      "title": "Concept Download",
       "parts": [
         {
-          "visual": "## The Engine of English 🚀\nEl verbo **To Be** (Ser/Estar) es el motor del idioma.\n\nSin él, no podemos decir quiénes somos ni cómo estamos.",
-          "audio": "Hello friend! Welcome to your first step. I am your AI Tutor. Today we are going to master the most important verb in the English language: To Be. It is the engine of everything. Without it, you cannot say who you are, or how you feel.",
-          "animation": "talking"
+          "visual": "WELCOME TO ONIXLINGO.\n\nTo speak English, you need the 'Golden Formula':\nSubject (Actor) + Verb (Action) + Complement (Detail).",
+          "audio": "Welcome. Let's master the code of English identity."
         },
         {
-          "visual": "## La Estructura\n\n* **I am** (Yo soy)\n* **You are** (Tú eres)\n* **She is** (Ella es)",
-          "audio": "It looks simple, but be careful. Remember: 'I' always goes with 'am'. 'He', 'She', and 'It' use 'is'. And for everyone else, we use 'are'. Let's practice this logic now.",
-          "animation": "teacher_pointing"
-        }
-      ]
-    },
-    {
-      "type": "lecture",
-      "title": "Módulo 1: Afirmaciones",
-      "parts": [
+          "visual": "SINGULAR PRONOUNS:\n\nI (Yo)\nYou (Tú)\nHe (Él)\nShe (Ella)\nIt (Eso - para cosas/animales)",
+          "audio": "First, the singular pronouns. I, You, He, She, and It."
+        },
         {
-          "visual": "## Contexto Real\nYa no somos robots.\n\n❌ I am happy.\n✅ **Honestly, I am happy.**",
-          "audio": "Let's stop talking like robots. In real life, we use connectors. Pay attention to the context in the following exercises.",
-          "animation": "happy"
+          "visual": "PLURAL PRONOUNS:\n\nWe (Nosotros)\nYou (Ustedes - sí, es igual que Tú)\nThey (Ellos/Ellas)",
+          "audio": "Now, the plurals. We, You, and They."
+        },
+        {
+          "visual": "THE VERB 'TO BE' (Ser/Estar):\n\nI am\nYou are\nHe/She/It is\nWe/They are",
+          "audio": "The verb To Be changes depending on the person. Am, Is, Are."
+        },
+        {
+          "visual": "CONTRACTIONS (Short forms):\n\nI am -> I'm\nYou are -> You're\nHe is -> He's\nThey are -> They're",
+          "audio": "Native speakers usually use contractions. Listen carefully."
         }
       ]
     },
     {
-      "type": "quiz",
+      "id": "stg_rapid_fire",
+      "type": "gamified_quiz",
+      "title": "Drill 1: Rapid Identification",
       "questions": [
-        {
-          "id": "q_aff_0",
-          "type": "quiz_choice",
-          "question": "Completa: 'At this moment, My best friend ___ somewhat confused.'",
-          "options": [
-            "are",
-            "is",
-            "am"
-          ],
-          "correct_answer": "is",
-          "explanation": "El sujeto 'My best friend' requiere el verbo 'is'."
-        },
-        {
-          "id": "q_aff_1",
-          "type": "quiz_choice",
-          "question": "Completa: 'Honestly, The new students ___ absolutely exhausted.'",
-          "options": [
-            "are",
-            "is",
-            "be"
-          ],
-          "correct_answer": "are",
-          "explanation": "El sujeto 'The new students' requiere el verbo 'are'."
-        },
-        {
-          "id": "q_aff_2",
-          "type": "quiz_choice",
-          "question": "Completa: 'Generally speaking, Sarah and I ___ a bit hungry.'",
-          "options": [
-            "be",
-            "is",
-            "are"
-          ],
-          "correct_answer": "are",
-          "explanation": "El sujeto 'Sarah and I' requiere el verbo 'are'."
-        },
-        {
-          "id": "q_aff_3",
-          "type": "quiz_choice",
-          "question": "Completa: 'Even though it's late, Sarah and I ___ a bit hungry.'",
-          "options": [
-            "are",
-            "be",
-            "is"
-          ],
-          "correct_answer": "are",
-          "explanation": "El sujeto 'Sarah and I' requiere el verbo 'are'."
-        },
-        {
-          "id": "q_aff_4",
-          "type": "quiz_choice",
-          "question": "Completa: 'Luckily, The new students ___ incredibly intelligent.'",
-          "options": [
-            "be",
-            "am",
-            "are"
-          ],
-          "correct_answer": "are",
-          "explanation": "El sujeto 'The new students' requiere el verbo 'are'."
-        },
-        {
-          "id": "q_aff_5",
-          "type": "quiz_choice",
-          "question": "Completa: 'Despite the rain, Sarah and I ___ a bit hungry.'",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correct_answer": "are",
-          "explanation": "El sujeto 'Sarah and I' requiere el verbo 'are'."
-        },
-        {
-          "id": "q_aff_6",
-          "type": "quiz_choice",
-          "question": "Completa: 'Generally speaking, This situation ___ absolutely exhausted.'",
-          "options": [
-            "is",
-            "am",
-            "are"
-          ],
-          "correct_answer": "is",
-          "explanation": "El sujeto 'This situation' requiere el verbo 'is'."
-        },
-        {
-          "id": "q_aff_7",
-          "type": "quiz_choice",
-          "question": "Completa: 'In my opinion, The new students ___ incredibly intelligent.'",
-          "options": [
-            "be",
-            "are",
-            "is"
-          ],
-          "correct_answer": "are",
-          "explanation": "El sujeto 'The new students' requiere el verbo 'are'."
-        },
-        {
-          "id": "q_aff_8",
-          "type": "quiz_choice",
-          "question": "Completa: 'Generally speaking, Sarah and I ___ not ready for the exam.'",
-          "options": [
-            "are",
-            "be",
-            "is"
-          ],
-          "correct_answer": "are",
-          "explanation": "El sujeto 'Sarah and I' requiere el verbo 'are'."
-        },
-        {
-          "id": "q_aff_9",
-          "type": "quiz_choice",
-          "question": "Completa: 'Generally speaking, The new students ___ incredibly intelligent.'",
-          "options": [
-            "be",
-            "is",
-            "are"
-          ],
-          "correct_answer": "are",
-          "explanation": "El sujeto 'The new students' requiere el verbo 'are'."
-        },
-        {
-          "id": "q_aff_10",
-          "type": "quiz_choice",
-          "question": "Completa: 'Unfortunately, Sarah and I ___ not ready for the exam.'",
-          "options": [
-            "is",
-            "be",
-            "are"
-          ],
-          "correct_answer": "are",
-          "explanation": "El sujeto 'Sarah and I' requiere el verbo 'are'."
-        },
-        {
-          "id": "q_aff_11",
-          "type": "quiz_choice",
-          "question": "Completa: 'Unfortunately, Sarah and I ___ a bit hungry.'",
-          "options": [
-            "are",
-            "am",
-            "be"
-          ],
-          "correct_answer": "are",
-          "explanation": "El sujeto 'Sarah and I' requiere el verbo 'are'."
-        },
-        {
-          "id": "q_aff_12",
-          "type": "quiz_choice",
-          "question": "Completa: 'At this moment, This situation ___ not ready for the exam.'",
-          "options": [
-            "be",
-            "are",
-            "is"
-          ],
-          "correct_answer": "is",
-          "explanation": "El sujeto 'This situation' requiere el verbo 'is'."
-        },
-        {
-          "id": "q_aff_13",
-          "type": "quiz_choice",
-          "question": "Completa: 'At this moment, My best friend ___ really excited about the trip.'",
-          "options": [
-            "be",
-            "is",
-            "are"
-          ],
-          "correct_answer": "is",
-          "explanation": "El sujeto 'My best friend' requiere el verbo 'is'."
-        },
-        {
-          "id": "q_aff_14",
-          "type": "quiz_choice",
-          "question": "Completa: 'In my opinion, I ___ not ready for the exam.'",
-          "options": [
-            "am",
-            "is",
-            "be"
-          ],
-          "correct_answer": "am",
-          "explanation": "El sujeto 'I' requiere el verbo 'am'."
-        },
-        {
-          "id": "q_aff_15",
-          "type": "quiz_choice",
-          "question": "Completa: 'Even though it's late, I ___ not ready for the exam.'",
-          "options": [
-            "am",
-            "are",
-            "is"
-          ],
-          "correct_answer": "am",
-          "explanation": "El sujeto 'I' requiere el verbo 'am'."
-        },
-        {
-          "id": "q_aff_16",
-          "type": "quiz_choice",
-          "question": "Completa: 'Generally speaking, The new students ___ somewhat confused.'",
-          "options": [
-            "are",
-            "is",
-            "be"
-          ],
-          "correct_answer": "are",
-          "explanation": "El sujeto 'The new students' requiere el verbo 'are'."
-        },
-        {
-          "id": "q_aff_17",
-          "type": "quiz_choice",
-          "question": "Completa: 'Unfortunately, My best friend ___ really excited about the trip.'",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correct_answer": "is",
-          "explanation": "El sujeto 'My best friend' requiere el verbo 'is'."
-        },
-        {
-          "id": "q_aff_18",
-          "type": "quiz_choice",
-          "question": "Completa: 'At this moment, I ___ really excited about the trip.'",
-          "options": [
-            "am",
-            "be",
-            "is"
-          ],
-          "correct_answer": "am",
-          "explanation": "El sujeto 'I' requiere el verbo 'am'."
-        },
-        {
-          "id": "q_aff_19",
-          "type": "quiz_choice",
-          "question": "Completa: 'At this moment, My best friend ___ not ready for the exam.'",
-          "options": [
-            "is",
-            "be",
-            "are"
-          ],
-          "correct_answer": "is",
-          "explanation": "El sujeto 'My best friend' requiere el verbo 'is'."
-        }
+        { "id": "q1", "type": "quiz_choice", "question": "Translate: 'Yo'", "options": ["You", "I", "Me"], "correct_answer": "I" },
+        { "id": "q2", "type": "quiz_choice", "question": "Translate: 'Él'", "options": ["She", "It", "He"], "correct_answer": "He" },
+        { "id": "q3", "type": "quiz_choice", "question": "Translate: 'Ella'", "options": ["He", "She", "They"], "correct_answer": "She" },
+        { "id": "q4", "type": "quiz_choice", "question": "Translate: 'Nosotros'", "options": ["We", "They", "You"], "correct_answer": "We" },
+        { "id": "q5", "type": "quiz_choice", "question": "Translate: 'Ellos'", "options": ["We", "Us", "They"], "correct_answer": "They" },
+        { "id": "q6", "type": "quiz_choice", "question": "Select the verb: I ____", "options": ["is", "are", "am"], "correct_answer": "am" },
+        { "id": "q7", "type": "quiz_choice", "question": "Select the verb: You ____", "options": ["am", "is", "are"], "correct_answer": "are" },
+        { "id": "q8", "type": "quiz_choice", "question": "Select the verb: She ____", "options": ["are", "am", "is"], "correct_answer": "is" },
+        { "id": "q9", "type": "quiz_choice", "question": "Select the verb: He ____", "options": ["is", "are", "am"], "correct_answer": "is" },
+        { "id": "q10", "type": "quiz_choice", "question": "Select the verb: It ____", "options": ["am", "are", "is"], "correct_answer": "is" },
+        { "id": "q11", "type": "quiz_choice", "question": "Select the verb: We ____", "options": ["is", "am", "are"], "correct_answer": "are" },
+        { "id": "q12", "type": "quiz_choice", "question": "Select the verb: They ____", "options": ["are", "is", "am"], "correct_answer": "are" },
+        { "id": "q13", "type": "quiz_choice", "question": "Translate: 'Maestro'", "options": ["Student", "Teacher", "Doctor"], "correct_answer": "Teacher" },
+        { "id": "q14", "type": "quiz_choice", "question": "Translate: 'Estudiante'", "options": ["Teacher", "Person", "Student"], "correct_answer": "Student" },
+        { "id": "q15", "type": "quiz_choice", "question": "Translate: 'Feliz'", "options": ["Sad", "Happy", "Angry"], "correct_answer": "Happy" },
+        { "id": "q16", "type": "quiz_choice", "question": "Translate: 'Triste'", "options": ["Happy", "Sad", "Ready"], "correct_answer": "Sad" },
+        { "id": "q17", "type": "quiz_choice", "question": "Translate: 'Listo' (Prepared)", "options": ["Late", "Ready", "Busy"], "correct_answer": "Ready" },
+        { "id": "q18", "type": "quiz_choice", "question": "Translate: 'Ocupado'", "options": ["Free", "Busy", "Tall"], "correct_answer": "Busy" },
+        { "id": "q19", "type": "quiz_choice", "question": "Translate: 'Cansado'", "options": ["Tired", "Fine", "Good"], "correct_answer": "Tired" },
+        { "id": "q20", "type": "quiz_choice", "question": "Odd one out (Intruso):", "options": ["He", "She", "Apple"], "correct_answer": "Apple" },
+        { "id": "q21", "type": "quiz_choice", "question": "Odd one out:", "options": ["Am", "Is", "Student"], "correct_answer": "Student" },
+        { "id": "q22", "type": "quiz_choice", "question": "Complete: ____ are friends.", "options": ["We", "He", "I"], "correct_answer": "We" },
+        { "id": "q23", "type": "quiz_choice", "question": "Complete: ____ is my brother.", "options": ["She", "He", "They"], "correct_answer": "He" },
+        { "id": "q24", "type": "quiz_choice", "question": "Complete: ____ am here.", "options": ["I", "You", "It"], "correct_answer": "I" },
+        { "id": "q25", "type": "quiz_choice", "question": "Meaning of 'It is':", "options": ["Eso es/está", "Yo soy", "Ellos son"], "correct_answer": "Eso es/está" }
       ]
     },
     {
-      "type": "lecture",
-      "title": "Módulo 2: Negaciones",
-      "parts": [
-        {
-          "visual": "## El Poder del NO\n\nEl **NOT** siempre va después del verbo.\n\n* She **is not** ready.",
-          "audio": "Now, let's learn to say NO. It is easy. Just put the word 'not' immediately after the verb. She is NOT ready.",
-          "animation": "talking"
-        }
-      ]
-    },
-    {
-      "type": "quiz",
+      "id": "stg_builder",
+      "type": "gamified_quiz",
+      "title": "Drill 2: Sentence Construction",
       "questions": [
-        {
-          "id": "q_neg_0",
-          "type": "quiz_choice",
-          "question": "Niega: 'Unfortunately, This situation ___ really excited about the trip.'",
-          "options": [
-            "not be",
-            "not is",
-            "no are",
-            "is not"
-          ],
-          "correct_answer": "is not",
-          "explanation": "Negativo correcto: 'is not'."
-        },
-        {
-          "id": "q_neg_1",
-          "type": "quiz_choice",
-          "question": "Niega: 'Unfortunately, This situation ___ incredibly intelligent.'",
-          "options": [
-            "no are",
-            "aren't",
-            "not be",
-            "isn't"
-          ],
-          "correct_answer": "isn't",
-          "explanation": "Negativo correcto: 'isn't'."
-        },
-        {
-          "id": "q_neg_2",
-          "type": "quiz_choice",
-          "question": "Niega: 'Even though it's late, The new students ___ incredibly intelligent.'",
-          "options": [
-            "aren't",
-            "not be",
-            "no are",
-            "isn't"
-          ],
-          "correct_answer": "aren't",
-          "explanation": "Negativo correcto: 'aren't'."
-        },
-        {
-          "id": "q_neg_3",
-          "type": "quiz_choice",
-          "question": "Niega: 'Despite the rain, My best friend ___ absolutely exhausted.'",
-          "options": [
-            "isn't",
-            "no are",
-            "aren't",
-            "not be"
-          ],
-          "correct_answer": "isn't",
-          "explanation": "Negativo correcto: 'isn't'."
-        },
-        {
-          "id": "q_neg_4",
-          "type": "quiz_choice",
-          "question": "Niega: 'Even though it's late, The new students ___ absolutely exhausted.'",
-          "options": [
-            "no are",
-            "not be",
-            "isn't",
-            "aren't"
-          ],
-          "correct_answer": "aren't",
-          "explanation": "Negativo correcto: 'aren't'."
-        },
-        {
-          "id": "q_neg_5",
-          "type": "quiz_choice",
-          "question": "Niega: 'Unfortunately, This situation ___ incredibly intelligent.'",
-          "options": [
-            "is not",
-            "not be",
-            "no are",
-            "not is"
-          ],
-          "correct_answer": "is not",
-          "explanation": "Negativo correcto: 'is not'."
-        },
-        {
-          "id": "q_neg_6",
-          "type": "quiz_choice",
-          "question": "Niega: 'Honestly, My best friend ___ really excited about the trip.'",
-          "options": [
-            "not be",
-            "no are",
-            "is not",
-            "not is"
-          ],
-          "correct_answer": "is not",
-          "explanation": "Negativo correcto: 'is not'."
-        },
-        {
-          "id": "q_neg_7",
-          "type": "quiz_choice",
-          "question": "Niega: 'Luckily, Sarah and I ___ incredibly intelligent.'",
-          "options": [
-            "not be",
-            "not is",
-            "no are",
-            "are not"
-          ],
-          "correct_answer": "are not",
-          "explanation": "Negativo correcto: 'are not'."
-        },
-        {
-          "id": "q_neg_8",
-          "type": "quiz_choice",
-          "question": "Niega: 'Even though it's late, This situation ___ a bit hungry.'",
-          "options": [
-            "isn't",
-            "not be",
-            "no are",
-            "aren't"
-          ],
-          "correct_answer": "isn't",
-          "explanation": "Negativo correcto: 'isn't'."
-        },
-        {
-          "id": "q_neg_9",
-          "type": "quiz_choice",
-          "question": "Niega: 'Even though it's late, This situation ___ really excited about the trip.'",
-          "options": [
-            "not be",
-            "is not",
-            "not is",
-            "no are"
-          ],
-          "correct_answer": "is not",
-          "explanation": "Negativo correcto: 'is not'."
-        },
-        {
-          "id": "q_neg_10",
-          "type": "quiz_choice",
-          "question": "Niega: 'Luckily, Sarah and I ___ not ready for the exam.'",
-          "options": [
-            "not is",
-            "are not",
-            "not be",
-            "no are"
-          ],
-          "correct_answer": "are not",
-          "explanation": "Negativo correcto: 'are not'."
-        },
-        {
-          "id": "q_neg_11",
-          "type": "quiz_choice",
-          "question": "Niega: 'Unfortunately, The new students ___ incredibly intelligent.'",
-          "options": [
-            "not be",
-            "no are",
-            "are not",
-            "not is"
-          ],
-          "correct_answer": "are not",
-          "explanation": "Negativo correcto: 'are not'."
-        },
-        {
-          "id": "q_neg_12",
-          "type": "quiz_choice",
-          "question": "Niega: 'Despite the rain, I ___ really excited about the trip.'",
-          "options": [
-            "I'm not",
-            "amn't",
-            "no are",
-            "not be"
-          ],
-          "correct_answer": "I'm not",
-          "explanation": "Negativo correcto: 'I'm not'."
-        },
-        {
-          "id": "q_neg_13",
-          "type": "quiz_choice",
-          "question": "Niega: 'Honestly, Sarah and I ___ a bit hungry.'",
-          "options": [
-            "isn't",
-            "not be",
-            "no are",
-            "aren't"
-          ],
-          "correct_answer": "aren't",
-          "explanation": "Negativo correcto: 'aren't'."
-        },
-        {
-          "id": "q_neg_14",
-          "type": "quiz_choice",
-          "question": "Niega: 'Generally speaking, This situation ___ incredibly intelligent.'",
-          "options": [
-            "not is",
-            "not be",
-            "is not",
-            "no are"
-          ],
-          "correct_answer": "is not",
-          "explanation": "Negativo correcto: 'is not'."
-        },
-        {
-          "id": "q_neg_15",
-          "type": "quiz_choice",
-          "question": "Niega: 'Despite the rain, Sarah and I ___ incredibly intelligent.'",
-          "options": [
-            "aren't",
-            "not be",
-            "isn't",
-            "no are"
-          ],
-          "correct_answer": "aren't",
-          "explanation": "Negativo correcto: 'aren't'."
-        },
-        {
-          "id": "q_neg_16",
-          "type": "quiz_choice",
-          "question": "Niega: 'Even though it's late, I ___ absolutely exhausted.'",
-          "options": [
-            "am not",
-            "no are",
-            "not be",
-            "not is"
-          ],
-          "correct_answer": "am not",
-          "explanation": "Negativo correcto: 'am not'."
-        },
-        {
-          "id": "q_neg_17",
-          "type": "quiz_choice",
-          "question": "Niega: 'In my opinion, The new students ___ not ready for the exam.'",
-          "options": [
-            "not is",
-            "not be",
-            "no are",
-            "are not"
-          ],
-          "correct_answer": "are not",
-          "explanation": "Negativo correcto: 'are not'."
-        },
-        {
-          "id": "q_neg_18",
-          "type": "quiz_choice",
-          "question": "Niega: 'Despite the rain, This situation ___ absolutely exhausted.'",
-          "options": [
-            "no are",
-            "not be",
-            "is not",
-            "not is"
-          ],
-          "correct_answer": "is not",
-          "explanation": "Negativo correcto: 'is not'."
-        },
-        {
-          "id": "q_neg_19",
-          "type": "quiz_choice",
-          "question": "Niega: 'Despite the rain, This situation ___ incredibly intelligent.'",
-          "options": [
-            "not be",
-            "no are",
-            "aren't",
-            "isn't"
-          ],
-          "correct_answer": "isn't",
-          "explanation": "Negativo correcto: 'isn't'."
-        }
+        { "id": "sb1", "type": "order_sentence", "question": "Yo soy un estudiante", "parts": ["I", "am", "a", "student"], "correct_order": ["I", "am", "a", "student"] },
+        { "id": "sb2", "type": "order_sentence", "question": "Tú eres mi amigo", "parts": ["You", "are", "my", "friend"], "correct_order": ["You", "are", "my", "friend"] },
+        { "id": "sb3", "type": "order_sentence", "question": "Ella es doctora", "parts": ["She", "is", "a", "doctor"], "correct_order": ["She", "is", "a", "doctor"] },
+        { "id": "sb4", "type": "order_sentence", "question": "Él es feliz", "parts": ["He", "is", "happy"], "correct_order": ["He", "is", "happy"] },
+        { "id": "sb5", "type": "order_sentence", "question": "Nosotros estamos listos", "parts": ["We", "are", "ready"], "correct_order": ["We", "are", "ready"] },
+        { "id": "sb6", "type": "order_sentence", "question": "Ellos están ocupados", "parts": ["They", "are", "busy"], "correct_order": ["They", "are", "busy"] },
+        { "id": "sb7", "type": "order_sentence", "question": "Eso es un gato", "parts": ["It", "is", "a", "cat"], "correct_order": ["It", "is", "a", "cat"] },
+        { "id": "sb8", "type": "order_sentence", "question": "Yo estoy cansado", "parts": ["I", "am", "tired"], "correct_order": ["I", "am", "tired"] },
+        { "id": "sb9", "type": "order_sentence", "question": "Tú eres inteligente", "parts": ["You", "are", "smart"], "correct_order": ["You", "are", "smart"] },
+        { "id": "sb10", "type": "order_sentence", "question": "Ella es alta", "parts": ["She", "is", "tall"], "correct_order": ["She", "is", "tall"] },
+        { "id": "sb11", "type": "order_sentence", "question": "El perro es rápido", "parts": ["The", "dog", "is", "fast"], "correct_order": ["The", "dog", "is", "fast"] },
+        { "id": "sb12", "type": "order_sentence", "question": "Nosotros somos estudiantes", "parts": ["We", "are", "students"], "correct_order": ["We", "are", "students"] },
+        { "id": "sb13", "type": "order_sentence", "question": "Ellas son mis hermanas", "parts": ["They", "are", "my", "sisters"], "correct_order": ["They", "are", "my", "sisters"] },
+        { "id": "sb14", "type": "order_sentence", "question": "Yo soy de México", "parts": ["I", "am", "from", "Mexico"], "correct_order": ["I", "am", "from", "Mexico"] },
+        { "id": "sb15", "type": "order_sentence", "question": "Él está en la escuela", "parts": ["He", "is", "at", "school"], "correct_order": ["He", "is", "at", "school"] },
+        { "id": "sb16", "type": "order_sentence", "question": "Tú no eres viejo", "parts": ["You", "are", "not", "old"], "correct_order": ["You", "are", "not", "old"] },
+        { "id": "sb17", "type": "order_sentence", "question": "Ella no está triste", "parts": ["She", "is", "not", "sad"], "correct_order": ["She", "is", "not", "sad"] },
+        { "id": "sb18", "type": "order_sentence", "question": "Yo no soy doctor", "parts": ["I", "am", "not", "a", "doctor"], "correct_order": ["I", "am", "not", "a", "doctor"] },
+        { "id": "sb19", "type": "order_sentence", "question": "Nosotros no estamos enojados", "parts": ["We", "are", "not", "angry"], "correct_order": ["We", "are", "not", "angry"] },
+        { "id": "sb20", "type": "order_sentence", "question": "Contracción: I'm happy", "parts": ["I'm", "happy"], "correct_order": ["I'm", "happy"] },
+        { "id": "sb21", "type": "order_sentence", "question": "Contracción: You're late", "parts": ["You're", "late"], "correct_order": ["You're", "late"] },
+        { "id": "sb22", "type": "order_sentence", "question": "Contracción: She's nice", "parts": ["She's", "nice"], "correct_order": ["She's", "nice"] },
+        { "id": "sb23", "type": "order_sentence", "question": "Contracción: We're family", "parts": ["We're", "family"], "correct_order": ["We're", "family"] },
+        { "id": "sb24", "type": "order_sentence", "question": "Contracción: They're here", "parts": ["They're", "here"], "correct_order": ["They're", "here"] },
+        { "id": "sb25", "type": "order_sentence", "question": "La casa es grande", "parts": ["The", "house", "is", "big"], "correct_order": ["The", "house", "is", "big"] }
       ]
     },
     {
-      "type": "lecture",
-      "title": "Módulo 3: Preguntas",
-      "parts": [
-        {
-          "visual": "## Modo Detective 🕵️\n\nInvierte el orden:\n\n* You are happy -> **Are you** happy?",
-          "audio": "To ask questions, we flip the order. The verb jumps to the front. Imagine you are a detective.",
-          "animation": "curious"
-        }
-      ]
-    },
-    {
-      "type": "quiz",
+      "id": "stg_listening",
+      "type": "gamified_quiz",
+      "title": "Drill 3: Listening Lab",
       "questions": [
-        {
-          "id": "q_ques_0",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'Where ___ this situation really excited about the trip?'",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correct_answer": "is",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_1",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'How ___ i a bit hungry?'",
-          "options": [
-            "are",
-            "is",
-            "am"
-          ],
-          "correct_answer": "am",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_2",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'How ___ the new students absolutely exhausted?'",
-          "options": [
-            "am",
-            "are",
-            "is"
-          ],
-          "correct_answer": "are",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_3",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'Where ___ the new students really excited about the trip?'",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correct_answer": "are",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_4",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'How ___ this situation somewhat confused?'",
-          "options": [
-            "are",
-            "am",
-            "is"
-          ],
-          "correct_answer": "is",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_5",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'Where ___ the new students incredibly intelligent?'",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correct_answer": "are",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_6",
-          "type": "quiz_choice",
-          "question": "Pregunta: '___ this situation not ready for the exam?'",
-          "options": [
-            "Am",
-            "Is",
-            "Are"
-          ],
-          "correct_answer": "Is",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_7",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'How ___ the new students not ready for the exam?'",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correct_answer": "are",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_8",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'How ___ my best friend absolutely exhausted?'",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correct_answer": "is",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_9",
-          "type": "quiz_choice",
-          "question": "Pregunta: '___ i a bit hungry?'",
-          "options": [
-            "Am",
-            "Are",
-            "Is"
-          ],
-          "correct_answer": "Am",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_10",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'Why ___ i absolutely exhausted?'",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correct_answer": "am",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_11",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'How ___ i a bit hungry?'",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correct_answer": "am",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_12",
-          "type": "quiz_choice",
-          "question": "Pregunta: '___ sarah and i a bit hungry?'",
-          "options": [
-            "Are",
-            "Is",
-            "Am"
-          ],
-          "correct_answer": "Are",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_13",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'How ___ sarah and i really excited about the trip?'",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correct_answer": "are",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_14",
-          "type": "quiz_choice",
-          "question": "Pregunta: '___ this situation a bit hungry?'",
-          "options": [
-            "Is",
-            "Am",
-            "Are"
-          ],
-          "correct_answer": "Is",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_15",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'How ___ my best friend somewhat confused?'",
-          "options": [
-            "are",
-            "is",
-            "am"
-          ],
-          "correct_answer": "is",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_16",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'Where ___ sarah and i really excited about the trip?'",
-          "options": [
-            "is",
-            "am",
-            "are"
-          ],
-          "correct_answer": "are",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_17",
-          "type": "quiz_choice",
-          "question": "Pregunta: '___ my best friend incredibly intelligent?'",
-          "options": [
-            "Is",
-            "Am",
-            "Are"
-          ],
-          "correct_answer": "Is",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_18",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'Where ___ my best friend absolutely exhausted?'",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correct_answer": "is",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        },
-        {
-          "id": "q_ques_19",
-          "type": "quiz_choice",
-          "question": "Pregunta: 'How ___ this situation really excited about the trip?'",
-          "options": [
-            "am",
-            "are",
-            "is"
-          ],
-          "correct_answer": "is",
-          "explanation": "En preguntas, el verbo To Be va antes del sujeto."
-        }
+        { "id": "ls1", "type": "listening_match", "question": "Select exactly what you hear:", "tts_text": "He is happy", "options": ["She is happy", "He is happy", "He is sad"], "correct_answer": "He is happy" },
+        { "id": "ls2", "type": "listening_match", "question": "Select exactly what you hear:", "tts_text": "She is ready", "options": ["She is ready", "He is ready", "She is red"], "correct_answer": "She is ready" },
+        { "id": "ls3", "type": "listening_match", "question": "Select exactly what you hear:", "tts_text": "We are friends", "options": ["We are friends", "They are friends", "We are fine"], "correct_answer": "We are friends" },
+        { "id": "ls4", "type": "listening_match", "question": "Select exactly what you hear:", "tts_text": "It is a dog", "options": ["It is a dog", "This is a dog", "It is a cat"], "correct_answer": "It is a dog" },
+        { "id": "ls5", "type": "listening_match", "question": "Select exactly what you hear:", "tts_text": "You are late", "options": ["You are late", "You are eight", "We are late"], "correct_answer": "You are late" },
+        { "id": "ls6", "type": "listening_match", "question": "Select exactly what you hear:", "tts_text": "I am not busy", "options": ["I am busy", "I am not busy", "I am hot"], "correct_answer": "I am not busy" },
+        { "id": "ls7", "type": "listening_match", "question": "Select exactly what you hear:", "tts_text": "They are here", "options": ["They are here", "We are here", "There are here"], "correct_answer": "They are here" },
+        { "id": "ls8", "type": "listening_match", "question": "Select exactly what you hear:", "tts_text": "The car is blue", "options": ["The car is blue", "The cat is blue", "A car is blue"], "correct_answer": "The car is blue" },
+        { "id": "ls9", "type": "listening_match", "question": "Select exactly what you hear:", "tts_text": "She is my teacher", "options": ["He is my teacher", "She is my teacher", "She is a teacher"], "correct_answer": "She is my teacher" },
+        { "id": "ls10", "type": "listening_match", "question": "Select exactly what you hear:", "tts_text": "I am happy today", "options": ["I am happy today", "I am happy to play", "I'm happy today"], "correct_answer": "I am happy today" }
       ]
     },
     {
-      "type": "lecture",
-      "title": "Módulo 4: Fluidez",
-      "parts": [
-        {
-          "visual": "## Contracciones 🇺🇸\n\n* You are -> **You're**\n* It is -> **It's**",
-          "audio": "Native speakers love contractions. They make you sound faster and more natural. Let's practice them.",
-          "animation": "talking"
-        }
-      ]
-    },
-    {
-      "type": "quiz",
+      "id": "stg_writing",
+      "type": "gamified_quiz",
+      "title": "Drill 4: Master Writing",
       "questions": [
-        {
-          "id": "q_cont_0",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I'm",
-            "Ire",
-            "I's"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_1",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I's",
-            "I'm",
-            "Ire"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_2",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I's",
-            "I'm",
-            "Ire"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_3",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I's",
-            "I'm",
-            "Ire"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_4",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "Ire",
-            "I'm",
-            "I's"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_5",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I's",
-            "I'm",
-            "Ire"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_6",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I's",
-            "I'm",
-            "Ire"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_7",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I's",
-            "I'm",
-            "Ire"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_8",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I'm",
-            "Ire",
-            "I's"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_9",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I'm",
-            "Ire",
-            "I's"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_10",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I'm",
-            "Ire",
-            "I's"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_11",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I's",
-            "I'm",
-            "Ire"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_12",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I'm",
-            "Ire",
-            "I's"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_13",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "Ire",
-            "I's",
-            "I'm"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_14",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I's",
-            "I'm",
-            "Ire"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_15",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I'm",
-            "Ire",
-            "I's"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_16",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I's",
-            "Ire",
-            "I'm"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_17",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I'm",
-            "I's",
-            "Ire"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_18",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I'm",
-            "Ire",
-            "I's"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        },
-        {
-          "id": "q_cont_19",
-          "type": "quiz_choice",
-          "question": "Contracción: 'If you ask me, I ___ the best candidate.'",
-          "options": [
-            "I's",
-            "I'm",
-            "Ire"
-          ],
-          "correct_answer": "I'm",
-          "explanation": "Contracción nativa: I'm."
-        }
+        { "id": "wr1", "type": "fill_input", "question": "Escribe 'Hola' en inglés", "correct_answers": ["Hello", "Hi"], "hints": ["H___"] },
+        { "id": "wr2", "type": "fill_input", "question": "Completa: I ___ happy", "correct_answers": ["am", "'m"], "hints": ["Verbo To Be para 'I'"] },
+        { "id": "wr3", "type": "fill_input", "question": "Completa: She ___ tall", "correct_answers": ["is", "'s"], "hints": ["Verbo To Be para 'She'"] },
+        { "id": "wr4", "type": "fill_input", "question": "Completa: They ___ students", "correct_answers": ["are", "'re"], "hints": ["Verbo To Be plural"] },
+        { "id": "wr5", "type": "fill_input", "question": "Escribe 'Gracias' en inglés", "correct_answers": ["Thanks", "Thank you"], "hints": ["T____"] },
+        { "id": "wr6", "type": "fill_input", "question": "Completa: You ___ my friend", "correct_answers": ["are", "'re"], "hints": ["Verbo To Be para 'You'"] },
+        { "id": "wr7", "type": "fill_input", "question": "Escribe 'Adiós' en inglés", "correct_answers": ["Goodbye", "Bye"], "hints": ["G______"] },
+        { "id": "wr8", "type": "fill_input", "question": "Completa: It ___ a cat", "correct_answers": ["is", "'s"], "hints": ["Verbo To Be para cosas"] },
+        { "id": "wr9", "type": "fill_input", "question": "Completa: We ___ ready", "correct_answers": ["are", "'re"], "hints": ["Verbo plural"] },
+        { "id": "wr10", "type": "fill_input", "question": "Escribe 'Buenos días'", "correct_answers": ["Good morning"], "hints": ["Good m______"] },
+        { "id": "wr11", "type": "fill_input", "question": "Escribe 'Buenas noches' (llegada)", "correct_answers": ["Good evening"], "hints": ["Good e______"] },
+        { "id": "wr12", "type": "fill_input", "question": "Escribe 'Por favor'", "correct_answers": ["Please"], "hints": ["P_____"] },
+        { "id": "wr13", "type": "fill_input", "question": "Completa: __ am Juan", "correct_answers": ["I"], "hints": ["Pronombre para 'Yo'"] },
+        { "id": "wr14", "type": "fill_input", "question": "Completa: __ is Maria", "correct_answers": ["She"], "hints": ["Pronombre para 'Ella'"] },
+        { "id": "wr15", "type": "fill_input", "question": "Completa: __ are busy", "correct_answers": ["We", "They", "You"], "hints": ["Pronombre plural"] }
       ]
-    },
-    {
-      "type": "quiz",
-      "questions": [
-        {
-          "id": "q_err_0",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. I are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_1",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. Sarah and I is very happy to be here.\"*",
-          "options": [
-            "Error: is",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: is",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_2",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. I are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_3",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. This situation are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_4",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. My best friend are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_5",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. The new students is very happy to be here.\"*",
-          "options": [
-            "Error: is",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: is",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_6",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. I are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_7",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. I are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_8",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. Sarah and I is very happy to be here.\"*",
-          "options": [
-            "Error: is",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: is",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_9",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. The new students is very happy to be here.\"*",
-          "options": [
-            "Error: is",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: is",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_10",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. This situation are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_11",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. My best friend are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_12",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. This situation are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_13",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. Sarah and I is very happy to be here.\"*",
-          "options": [
-            "Error: is",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: is",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_14",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. My best friend are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_15",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. This situation are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_16",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. Sarah and I is very happy to be here.\"*",
-          "options": [
-            "Error: is",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: is",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_17",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. My best friend are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_18",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. The new students is very happy to be here.\"*",
-          "options": [
-            "Error: is",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: is",
-          "explanation": "Sujeto y verbo no coinciden."
-        },
-        {
-          "id": "q_err_19",
-          "type": "quiz_choice",
-          "question": "Encuentra el error: \n\n*\"Hello! My name is John. I are very happy to be here.\"*",
-          "options": [
-            "Error: are",
-            "Error: John",
-            "No hay error"
-          ],
-          "correct_answer": "Error: are",
-          "explanation": "Sujeto y verbo no coinciden."
-        }
-      ]
-    },
-    {
-      "type": "practice_chat",
-      "scenario": "Entrevista en Google.",
-      "ai_system_prompt": "ROLE: Google Recruiter. GOAL: Assess basic 'To Be' usage."
     }
   ]
 }

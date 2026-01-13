@@ -21,7 +21,8 @@ import { AdBanner } from '@/components/ads/AdBanner';
 import { 
   LogOut, ChevronRight, Play, Lock, Check, Home,
   Trophy, Zap, Flame, Headphones, BookOpen, PenTool, 
-  Mic, Shield, LayoutGrid, User, Loader2, Briefcase
+  Mic, Shield, LayoutGrid, User, Loader2, Briefcase,
+  BookA
 } from 'lucide-react';
 
 import { CURRICULUM } from '@/data/curriculum';
@@ -391,7 +392,15 @@ export default function DashboardPage() {
 
         <div className="flex items-center gap-3 md:gap-6">
           <HeaderStats xp={userStats.xp} streak={userStats.streak} />
-          
+          {/* ✅ NUEVO BOTÓN: VOCABULARIO */}
+          <Link 
+            href="/dashboard/vocabulary" // Asegúrate que esta ruta exista o cámbiala por la tuya
+            className="hidden md:flex items-center gap-2 bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
+          >
+            <BookA size={18} className="text-slate-400 group-hover:text-indigo-500 transition-colors" />
+            <span className="text-xs md:text-sm font-bold">Vocabulario</span>
+          </Link>
+
           {/* 🔥 BOTÓN TOGGLE VISIBLE EN MÓVIL (SOLUCIÓN A TU PROBLEMA) 🔥 */}
           <button 
             onClick={toggleProMode}
