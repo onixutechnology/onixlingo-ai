@@ -403,7 +403,7 @@ const ProTimelineNode = ({ lesson, index, status, isLast }: any) => {
 
   const handleNavigate = () => {
     if (!isLocked) {
-      router.push(`/lessonspro/${lesson.id}`);
+      router.push(`/lesson/${lesson.id}`);
     }
   };
 
