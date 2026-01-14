@@ -1,31 +1,37 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-import { Check, X, RefreshCw, Zap } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion'; // 👈 Importante para animaciones suaves
+import { Check, X, Zap, Volume2 } from 'lucide-react';
+import confetti from 'canvas-confetti';
+
+// --- CONFIGURACIÓN ---
+const BATCH_SIZE = 6; // Número de parejas por ronda (12 cartas en total)
 
 // --- TIPOS ---
-interface PairingItem {
-  id: string;
-  text: string;
-  pairId: string;
-  type: 'en' | 'es';
-  status: 'idle' | 'selected' | 'matched' | 'error';
-}
-
 interface PairingDrillProps {
   stage: {
     title?: string;
     description?: string;
-    pairs: { id: string; en: string; es: string }[];
   };
+  pairs: { id: string; en: string; es: string }[]; // Recibe TODAS las palabras
   isPro: boolean;
   onComplete: () => void;
   onError: () => void;
   onCorrect: () => void;
 }
 
+interface CardItem {
+  id: string;      // ID único de la carta (ej: p_01_en)
+  pairId: string;  // ID de la pareja (ej: p_01)
+  text: string;
+  type: 'en' | 'es';
+  status: 'idle' | 'selected' | 'matched' | 'error';
+}
+
 export default function PairingDrill({ 
   stage, 
+  pairs = [], // Default array vacío para evitar crash
   isPro, 
   onComplete, 
   onError, 
@@ -33,196 +39,229 @@ export default function PairingDrill({
 }: PairingDrillProps) {
   
   // --- ESTADOS ---
-  const [items, setItems] = useState<PairingItem[]>([]);
-  const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [isProcessing, setIsProcessing] = useState(false); // Bloquea clics durante animaciones
-  const [matchedCount, setMatchedCount] = useState(0);
+  const [activeCards, setActiveCards] = useState<CardItem[]>([]);
+  const [completedPairIds, setCompletedPairIds] = useState<Set<string>>(new Set());
+  const [selectedCards, setSelectedCards] = useState<CardItem[]>([]);
+  const [isProcessing, setIsProcessing] = useState(false);
 
-  // --- INICIALIZACIÓN ---
+  // --- 1. LÓGICA DE LOTES (BATCHING) ---
   useEffect(() => {
-    if (stage.pairs) {
-      // 1. Crear las tarjetas duplicadas (EN y ES)
-      const generatedItems: PairingItem[] = stage.pairs.flatMap((pair) => [
-        { id: `${pair.id}_en`, text: pair.en, pairId: pair.id, type: 'en', status: 'idle' },
-        { id: `${pair.id}_es`, text: pair.es, pairId: pair.id, type: 'es', status: 'idle' }
-      ]);
+    // Si no hay pares, no hacer nada
+    if (!pairs || pairs.length === 0) return;
 
-      // 2. Mezclar aleatoriamente (Fisher-Yates simplificado)
-      const shuffled = generatedItems.sort(() => Math.random() - 0.5);
-      
-      setItems(shuffled);
-      setMatchedCount(0);
-      setSelectedId(null);
-    }
-  }, [stage]);
-
-  // --- LÓGICA DEL JUEGO ---
-  const handleCardClick = (clickedId: string) => {
-    // Bloqueos de seguridad
-    if (isProcessing) return;
-    const clickedItem = items.find(i => i.id === clickedId);
-    if (!clickedItem || clickedItem.status === 'matched') return;
-
-    // CASO 1: Primer clic (Selección)
-    if (!selectedId) {
-      setSelectedId(clickedId);
-      updateItemStatus(clickedId, 'selected');
+    // Si completamos todas las parejas disponibles -> FIN
+    if (completedPairIds.size === pairs.length) {
+      setTimeout(onComplete, 1000);
       return;
     }
 
-    // CASO 2: Clic en la misma tarjeta (Deseleccionar)
-    if (selectedId === clickedId) {
-      setSelectedId(null);
-      updateItemStatus(clickedId, 'idle');
-      return;
-    }
-
-    // CASO 3: Segundo clic (Verificación)
-    const firstItem = items.find(i => i.id === selectedId);
-    if (!firstItem) return;
-
-    setIsProcessing(true); // Bloquear interacción momentáneamente
-
-    if (firstItem.pairId === clickedItem.pairId) {
-      // --- ACIERTO ---
-      handleMatch(firstItem.id, clickedItem.id);
-    } else {
-      // --- ERROR ---
-      handleError(firstItem.id, clickedItem.id);
-    }
-  };
-
-  // Helper para actualizar estado de un item específico
-  const updateItemStatus = (id: string, status: PairingItem['status']) => {
-    setItems(prev => prev.map(item => item.id === id ? { ...item, status } : item));
-  };
-
-  // Manejo de Acierto
-  const handleMatch = (id1: string, id2: string) => {
-    // 1. Actualizar visualmente a 'matched' (verde/éxito)
-    setItems(prev => prev.map(item => 
-      (item.id === id1 || item.id === id2) ? { ...item, status: 'matched' } : item
-    ));
+    // Verificar si necesitamos cargar nuevas cartas
+    // Criterio: No hay cartas O todas las visibles están matcheadas
+    const allVisibleMatched = activeCards.length > 0 && activeCards.every(c => c.status === 'matched');
     
-    onCorrect(); // Sonido/XP externo
-    
-    const newCount = matchedCount + 1;
-    setMatchedCount(newCount);
-    setSelectedId(null);
-    setIsProcessing(false);
-
-    // 2. Verificar Victoria
-    if (newCount === stage.pairs.length) {
-      setTimeout(() => onComplete(), 1000); // Dar un segundo para celebrar antes de salir
+    if (activeCards.length === 0 || allVisibleMatched) {
+      loadNextBatch();
     }
-  };
+  }, [completedPairIds, pairs.length]);
 
-  // Manejo de Error
-  const handleError = (id1: string, id2: string) => {
-    // 1. Marcar error (rojo/shake)
-    setItems(prev => prev.map(item => 
-      (item.id === id1 || item.id === id2) ? { ...item, status: 'error' } : item
-    ));
+  const loadNextBatch = () => {
+    // 1. Filtrar las que faltan por hacer
+    const remainingPairs = pairs.filter(p => !completedPairIds.has(p.id));
+    
+    if (remainingPairs.length === 0) return;
 
-    onError(); // Sonido error externo
+    // 2. Tomar las siguientes N parejas
+    const nextBatch = remainingPairs.slice(0, BATCH_SIZE);
 
-    // 2. Esperar y resetear
+    // 3. Generar las cartas (EN + ES)
+    const newCards: CardItem[] = nextBatch.flatMap(pair => [
+      { id: `${pair.id}_en`, pairId: pair.id, text: pair.en, type: 'en', status: 'idle' },
+      { id: `${pair.id}_es`, pairId: pair.id, text: pair.es, type: 'es', status: 'idle' }
+    ]);
+
+    // 4. Barajar y setear (con pequeño delay para que la animación de salida termine)
     setTimeout(() => {
-      setItems(prev => prev.map(item => 
-        (item.id === id1 || item.id === id2) ? { ...item, status: 'idle' } : item
-      ));
-      setSelectedId(null);
-      setIsProcessing(false); // Desbloquear
-    }, 800);
+        setActiveCards(newCards.sort(() => Math.random() - 0.5));
+    }, 300);
   };
 
-  // --- ESTILOS DINÁMICOS ---
-  const getCardStyles = (item: PairingItem) => {
-    const baseStyles = "relative flex flex-col items-center justify-center p-4 h-32 rounded-2xl border-b-4 transition-all duration-200 active:scale-95 cursor-pointer select-none overflow-hidden";
+  // --- 2. MANEJO DE CLICS ---
+  const handleCardClick = (card: CardItem) => {
+    if (isProcessing || card.status === 'matched' || card.status === 'selected') return;
+
+    // A. Primera Selección
+    if (selectedCards.length === 0) {
+      updateCardStatus(card.id, 'selected');
+      setSelectedCards([card]);
+      return;
+    }
+
+    // B. Segunda Selección
+    if (selectedCards.length === 1) {
+      const firstCard = selectedCards[0];
+      
+      // Evitar clic en la misma carta
+      if (firstCard.id === card.id) return;
+
+      updateCardStatus(card.id, 'selected');
+      setSelectedCards([...selectedCards, card]);
+      setIsProcessing(true);
+
+      // Verificar Match
+      if (firstCard.pairId === card.pairId) {
+        handleMatchSuccess(firstCard.id, card.id, firstCard.pairId);
+      } else {
+        handleMatchError(firstCard.id, card.id);
+      }
+    }
+  };
+
+  const updateCardStatus = (cardId: string, status: CardItem['status']) => {
+    setActiveCards(prev => prev.map(c => c.id === cardId ? { ...c, status } : c));
+  };
+
+  // --- 3. EXITO Y ERROR ---
+  const handleMatchSuccess = (id1: string, id2: string, pairId: string) => {
+    onCorrect();
+    // Efecto visual
+    confetti({ particleCount: 30, spread: 60, origin: { y: 0.6 }, colors: ['#4ade80', '#3b82f6'] });
+
+    // Esperar un poco antes de marcar como matched (para que se vea la selección)
+    setTimeout(() => {
+      setActiveCards(prev => prev.map(c => 
+        (c.id === id1 || c.id === id2) ? { ...c, status: 'matched' } : c
+      ));
+      setSelectedCards([]);
+      setIsProcessing(false);
+      
+      // IMPORTANTE: Esto dispara el useEffect para cargar el siguiente lote si corresponde
+      setCompletedPairIds(prev => new Set(prev).add(pairId));
+    }, 500);
+  };
+
+  const handleMatchError = (id1: string, id2: string) => {
+    onError();
+    updateCardStatus(id1, 'error');
+    updateCardStatus(id2, 'error');
+
+    setTimeout(() => {
+      // Resetear a idle
+      setActiveCards(prev => prev.map(c => 
+        (c.id === id1 || c.id === id2) ? { ...c, status: 'idle' } : c
+      ));
+      setSelectedCards([]);
+      setIsProcessing(false);
+    }, 1000);
+  };
+
+  // --- 4. ESTILOS DINÁMICOS (Tailwind Puro para máxima compatibilidad) ---
+  const getCardClasses = (card: CardItem) => {
+    const isSelected = card.status === 'selected';
+    const isError = card.status === 'error';
+    const isEn = card.type === 'en';
     
-    if (item.status === 'matched') {
-      return `${baseStyles} border-transparent bg-transparent opacity-0 pointer-events-none scale-0`; // Desaparecer suavemente
-      // Alternativa: Si quieres que se queden verdes, usa:
-      // return `${baseStyles} bg-emerald-100 border-emerald-400 text-emerald-700 opacity-50`;
+    // Base layout
+    let classes = "relative flex flex-col items-center justify-center p-4 h-28 md:h-32 rounded-2xl border-b-4 transition-all duration-200 cursor-pointer select-none overflow-hidden active:scale-95 shadow-sm ";
+    
+    // Tema PRO vs Normal
+    if (isPro) {
+        if (isSelected) classes += "bg-indigo-600 border-indigo-800 text-white ring-2 ring-indigo-400 ";
+        else if (isError) classes += "bg-red-900/50 border-red-600 text-red-200 animate-shake ";
+        else classes += "bg-slate-800 border-slate-950 text-slate-200 hover:bg-slate-700 hover:-translate-y-1 ";
+    } else {
+        if (isSelected) classes += "bg-blue-500 border-blue-700 text-white ring-4 ring-blue-200 ";
+        else if (isError) classes += "bg-red-100 border-red-400 text-red-700 animate-shake ";
+        else classes += "bg-white border-slate-200 text-slate-700 hover:border-blue-300 hover:text-blue-600 hover:-translate-y-1 ";
     }
 
-    if (item.status === 'error') {
-      return `${baseStyles} bg-red-100 border-red-400 text-red-700 animate-shake`; 
-      // Nota: Asegúrate de tener una animación 'shake' en tu CSS global o tailwind config.
-      // Si no, usa: translate-x-1 translate-y-1 (efecto simple)
-    }
-
-    if (item.status === 'selected') {
-      return isPro
-        ? `${baseStyles} bg-indigo-600 border-indigo-800 text-white shadow-lg scale-105 ring-4 ring-indigo-500/30 z-10`
-        : `${baseStyles} bg-blue-600 border-blue-800 text-white shadow-lg scale-105 ring-4 ring-blue-400/30 z-10`;
-    }
-
-    // Estado Idle (Normal)
-    return isPro
-      ? `${baseStyles} bg-slate-800 border-slate-950 text-slate-200 hover:bg-slate-700 hover:-translate-y-1`
-      : `${baseStyles} bg-white border-slate-200 text-slate-700 hover:border-indigo-300 hover:text-indigo-600 hover:shadow-md hover:-translate-y-1`;
+    return classes;
   };
 
   // --- RENDER ---
+  const progressPercent = Math.round((completedPairIds.size / Math.max(pairs.length, 1)) * 100);
+
   return (
-    <div className="max-w-5xl w-full mx-auto flex flex-col items-center animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="max-w-5xl w-full mx-auto flex flex-col items-center">
       
-      {/* HEADER DE LA ACTIVIDAD */}
-      <div className="w-full flex justify-between items-end mb-8 px-4">
-        <div>
+      {/* HEADER */}
+      <div className="w-full flex flex-col md:flex-row justify-between items-end mb-6 px-4 gap-4">
+        <div className="flex-1">
           <h2 className={`text-2xl md:text-3xl font-black ${isPro ? 'text-white' : 'text-slate-800'}`}>
-            {stage.title || "Neuro Link"}
+            {stage?.title || "Vocabulary Drill"}
           </h2>
           <p className={`${isPro ? 'text-slate-400' : 'text-slate-500'} text-sm mt-1`}>
-            {stage.description || "Conecta los conceptos relacionados."}
+            {stage?.description || "Empareja los conceptos."}
           </p>
         </div>
         
-        <div className={`px-4 py-2 rounded-xl font-bold font-mono text-sm flex items-center gap-2 ${isPro ? 'bg-slate-800 text-indigo-400' : 'bg-white border border-slate-200 text-indigo-600'}`}>
-          <Zap size={16} fill="currentColor" />
-          <span>{matchedCount} / {stage.pairs?.length || 0}</span>
+        {/* Barra de Progreso */}
+        <div className="w-full md:w-1/3 flex flex-col items-end">
+            <div className={`flex items-center gap-2 font-bold mb-1 ${isPro ? 'text-indigo-400' : 'text-indigo-600'}`}>
+                <Zap size={16} fill="currentColor" />
+                <span>{completedPairIds.size} / {pairs.length}</span>
+            </div>
+            <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                <motion.div 
+                    className="h-full bg-indigo-500"
+                    initial={{ width: 0 }}
+                    animate={{ width: `${progressPercent}%` }}
+                    transition={{ duration: 0.5 }}
+                />
+            </div>
         </div>
       </div>
 
-      {/* GRID DE TARJETAS */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 w-full px-2 pb-20">
-        {items.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => handleCardClick(item.id)}
-            className={getCardStyles(item)}
-            disabled={item.status === 'matched' || (isProcessing && item.status !== 'selected')}
-          >
-            {/* Indicador de Idioma (Badge pequeño) */}
-            <span className={`
-              absolute top-2 right-2 text-[10px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded
-              ${item.type === 'en' 
-                ? (isPro ? 'bg-slate-900/50 text-slate-400' : 'bg-blue-50 text-blue-400') 
-                : (isPro ? 'bg-slate-900/50 text-emerald-400' : 'bg-emerald-50 text-emerald-600')
-              }
-            `}>
-              {item.type === 'en' ? 'EN' : 'ES'}
-            </span>
+      {/* GRID (Usando AnimatePresence para transiciones de lotes) */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 w-full px-2 pb-20 min-h-[400px]">
+        <AnimatePresence mode='popLayout'>
+            {activeCards.map((card) => {
+               // Si está matcheada, la sacamos del DOM visualmente para limpiar la vista (estilo Duolingo)
+               if (card.status === 'matched') return null;
 
-            {/* Texto Central */}
-            <span className="text-center font-bold leading-tight px-2">
-              {item.text}
-            </span>
+               return (
+                <motion.button
+                    key={card.id}
+                    layout
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                    onClick={() => handleCardClick(card)}
+                    className={getCardClasses(card)}
+                    disabled={isProcessing}
+                >
+                    {/* Badge Idioma */}
+                    <span className={`
+                    absolute top-2 right-2 text-[10px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded
+                    ${card.type === 'en' 
+                        ? (isPro ? 'bg-slate-900 text-slate-500' : 'bg-blue-50 text-blue-400') 
+                        : (isPro ? 'bg-slate-900 text-emerald-500' : 'bg-emerald-50 text-emerald-600')
+                    }
+                    `}>
+                    {card.type === 'en' ? 'EN' : 'ES'}
+                    </span>
 
-            {/* Icono de estado (Solo aparece en error/match) */}
-            {item.status === 'matched' && (
-              <div className="absolute inset-0 bg-emerald-500 flex items-center justify-center text-white animate-in zoom-in duration-300">
-                <Check size={48} strokeWidth={4} />
-              </div>
-            )}
-            {item.status === 'error' && (
-              <div className="absolute inset-0 flex items-center justify-center opacity-20 text-red-600">
-                <X size={48} strokeWidth={4} />
-              </div>
-            )}
-          </button>
-        ))}
+                    <span className="text-center font-bold leading-tight px-1 text-lg">
+                    {card.text}
+                    </span>
+
+                    {/* Feedback Icon (Solo error, el success desaparece la carta) */}
+                    {card.status === 'error' && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-red-100/10 text-red-500">
+                            <X size={48} strokeWidth={4} />
+                        </div>
+                    )}
+                </motion.button>
+               );
+            })}
+        </AnimatePresence>
+        
+        {/* Loading State cuando cambia de lote */}
+        {activeCards.length === 0 && completedPairIds.size < pairs.length && (
+            <div className="col-span-full flex items-center justify-center h-64 text-slate-400 animate-pulse">
+                Cargando siguiente ronda...
+            </div>
+        )}
       </div>
 
     </div>
