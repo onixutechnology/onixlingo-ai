@@ -1,11 +1,11 @@
 {
   "id": "basics_mod_04",
   "category_id": "basics",
-  "title": "Counting Basics",
-  "description": "Domina los números esenciales para precios, horarios y cantidades.",
+  "title": "Numbers & Money",
+  "description": "Domina los números, precios, transacciones y cantidades esenciales.",
   "level": "A1",
   "part": 4,
-  "total_xp": 150,
+  "total_xp": 500,
   "status": "locked",
   "theme": {
     "icon": "Hash",
@@ -15,82 +15,60 @@
     {
       "id": "drill_basics_mod_04_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Numbers 1-10",
-      "description": "Asociación rápida de cantidades y cifras.",
-      "instruction": "Empareja el número con su escritura en inglés.",
+      "title": "Neuro Link: The Count",
+      "description": "Conecta números y conceptos monetarios.",
+      "instruction": "Empareja la cifra o concepto con su traducción.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "One",
-          "es": "Uno",
-          "pronunciation": "/wʌn/",
-          "grammar_type": "numeral",
-          "image_key": "img_num_1",
-          "context": {
-            "en_sentence": "I have one question.",
-            "es_sentence": "Tengo una pregunta."
-          }
-        },
-        {
-          "id": "p_1",
-          "en": "Two",
-          "es": "Dos",
-          "pronunciation": "/tuː/",
-          "grammar_type": "numeral",
-          "image_key": "img_num_2",
-          "context": {
-            "en_sentence": "A table for two, please.",
-            "es_sentence": "Una mesa para dos, por favor."
-          }
-        },
-        {
-          "id": "p_2",
-          "en": "Three",
-          "es": "Tres",
-          "pronunciation": "/θriː/",
-          "grammar_type": "numeral",
-          "image_key": "img_num_3",
-          "context": {
-            "en_sentence": "Three kilometers away.",
-            "es_sentence": "A tres kilómetros de distancia."
-          }
-        },
-        {
-          "id": "p_3",
-          "en": "Four",
-          "es": "Cuatro",
-          "pronunciation": "/fɔːr/",
-          "grammar_type": "numeral",
-          "image_key": "img_num_4",
-          "context": {
-            "en_sentence": "The car has four wheels.",
-            "es_sentence": "El coche tiene cuatro ruedas."
-          }
-        },
-        {
-          "id": "p_4",
-          "en": "Five",
-          "es": "Cinco",
-          "pronunciation": "/faɪv/",
-          "grammar_type": "numeral",
-          "image_key": "img_num_5",
-          "context": {
-            "en_sentence": "Give me five minutes.",
-            "es_sentence": "Dame cinco minutos."
-          }
-        },
-        {
-          "id": "p_5",
-          "en": "Ten",
-          "es": "Diez",
-          "pronunciation": "/ten/",
-          "grammar_type": "numeral",
-          "image_key": "img_num_10",
-          "context": {
-            "en_sentence": "The store opens at ten.",
-            "es_sentence": "La tienda abre a las diez."
-          }
-        }
+        { "id": "p_01", "en": "Zero", "es": "Cero" },
+        { "id": "p_02", "en": "One", "es": "Uno" },
+        { "id": "p_03", "en": "Two", "es": "Dos" },
+        { "id": "p_04", "en": "Three", "es": "Tres" },
+        { "id": "p_05", "en": "Four", "es": "Cuatro" },
+        { "id": "p_06", "en": "Five", "es": "Cinco" },
+        { "id": "p_07", "en": "Six", "es": "Seis" },
+        { "id": "p_08", "en": "Seven", "es": "Siete" },
+        { "id": "p_09", "en": "Eight", "es": "Ocho" },
+        { "id": "p_10", "en": "Nine", "es": "Nueve" },
+        { "id": "p_11", "en": "Ten", "es": "Diez" },
+        { "id": "p_12", "en": "Eleven", "es": "Once" },
+        { "id": "p_13", "en": "Twelve", "es": "Doce" },
+        { "id": "p_14", "en": "Thirteen", "es": "Trece" },
+        { "id": "p_15", "en": "Fourteen", "es": "Catorce" },
+        { "id": "p_16", "en": "Fifteen", "es": "Quince" },
+        { "id": "p_17", "en": "Sixteen", "es": "Dieciséis" },
+        { "id": "p_18", "en": "Seventeen", "es": "Diecisiete" },
+        { "id": "p_19", "en": "Eighteen", "es": "Dieciocho" },
+        { "id": "p_20", "en": "Nineteen", "es": "Diecinueve" },
+        { "id": "p_21", "en": "Twenty", "es": "Veinte" },
+        { "id": "p_22", "en": "Thirty", "es": "Treinta" },
+        { "id": "p_23", "en": "Forty", "es": "Cuarenta" },
+        { "id": "p_24", "en": "Fifty", "es": "Cincuenta" },
+        { "id": "p_25", "en": "Sixty", "es": "Sesenta" },
+        { "id": "p_26", "en": "Seventy", "es": "Setenta" },
+        { "id": "p_27", "en": "Eighty", "es": "Ochenta" },
+        { "id": "p_28", "en": "Ninety", "es": "Noventa" },
+        { "id": "p_29", "en": "Hundred", "es": "Cien" },
+        { "id": "p_30", "en": "Thousand", "es": "Mil" },
+        { "id": "p_31", "en": "Million", "es": "Millón" },
+        { "id": "p_32", "en": "First", "es": "Primero" },
+        { "id": "p_33", "en": "Second", "es": "Segundo" },
+        { "id": "p_34", "en": "Third", "es": "Tercero" },
+        { "id": "p_35", "en": "Last", "es": "Último" },
+        { "id": "p_36", "en": "Money", "es": "Dinero" },
+        { "id": "p_37", "en": "Cash", "es": "Efectivo" },
+        { "id": "p_38", "en": "Card", "es": "Tarjeta" },
+        { "id": "p_39", "en": "Price", "es": "Precio" },
+        { "id": "p_40", "en": "Cost", "es": "Costo" },
+        { "id": "p_41", "en": "Cheap", "es": "Barato" },
+        { "id": "p_42", "en": "Expensive", "es": "Caro" },
+        { "id": "p_43", "en": "To Buy", "es": "Comprar" },
+        { "id": "p_44", "en": "To Sell", "es": "Vender" },
+        { "id": "p_45", "en": "To Pay", "es": "Pagar" },
+        { "id": "p_46", "en": "Total", "es": "Total" },
+        { "id": "p_47", "en": "Half", "es": "Mitad" },
+        { "id": "p_48", "en": "Quarter", "es": "Cuarto" },
+        { "id": "p_49", "en": "Number", "es": "Número" },
+        { "id": "p_50", "en": "Quantity", "es": "Cantidad" }
       ]
     }
   ]

@@ -1,46 +1,74 @@
 {
   "id": "business_mod_20",
-  "title": "Business Pro C1-4",
-  "description": "Mastering business vocabulary. Level C1, Part 4.",
+  "category_id": "business",
+  "title": "Business Pro: Leadership & Ethics",
+  "description": "Vocabulario C1 sobre liderazgo, gestión de crisis, ética empresarial y economía compleja.",
   "level": "C1",
-  "total_xp": 180,
+  "part": 4,
+  "total_xp": 600,
+  "status": "locked",
+  "theme": {
+    "icon": "Award",
+    "color": "gold"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_20",
+      "id": "drill_business_mod_20_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Power & Crisis",
+      "description": "Conecta términos de liderazgo, crisis y ética.",
+      "instruction": "Empareja el término avanzado con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Dividend",
-          "es": "Dividendo"
-        },
-        {
-          "id": "p_1",
-          "en": "Bankruptcy",
-          "es": "Bancarrota"
-        },
-        {
-          "id": "p_2",
-          "en": "Fiscal",
-          "es": "Fiscal"
-        },
-        {
-          "id": "p_3",
-          "en": "Deficit",
-          "es": "Déficit"
-        },
-        {
-          "id": "p_4",
-          "en": "Embargo",
-          "es": "Embargo"
-        },
-        {
-          "id": "p_5",
-          "en": "Tycoon",
-          "es": "Magnate"
-        }
+        { "id": "p_01", "en": "Tycoon", "es": "Magnate" },
+        { "id": "p_02", "en": "Mogul", "es": "Magnate / Persona influyente" },
+        { "id": "p_03", "en": "Magnate", "es": "Magnate" },
+        { "id": "p_04", "en": "Entrepreneur", "es": "Emprendedor" },
+        { "id": "p_05", "en": "Visionary", "es": "Visionario" },
+        { "id": "p_06", "en": "Consultant", "es": "Consultor" },
+        { "id": "p_07", "en": "Analyst", "es": "Analista" },
+        { "id": "p_08", "en": "Whistleblower", "es": "Denunciante (interno)" },
+        { "id": "p_09", "en": "Dividend", "es": "Dividendo" },
+        { "id": "p_10", "en": "Yield", "es": "Rendimiento / Rentabilidad" },
+        { "id": "p_11", "en": "Collateral", "es": "Garantía / Aval" },
+        { "id": "p_12", "en": "Bankruptcy", "es": "Bancarrota" },
+        { "id": "p_13", "en": "Insolvency", "es": "Insolvencia" },
+        { "id": "p_14", "en": "Default", "es": "Incumplimiento de pago (Default)" },
+        { "id": "p_15", "en": "Bailout", "es": "Rescate financiero" },
+        { "id": "p_16", "en": "Austerity", "es": "Austeridad" },
+        { "id": "p_17", "en": "Deficit", "es": "Déficit" },
+        { "id": "p_18", "en": "Surplus", "es": "Superávit" },
+        { "id": "p_19", "en": "Fiscal", "es": "Fiscal" },
+        { "id": "p_20", "en": "Monetary", "es": "Monetario" },
+        { "id": "p_21", "en": "Hyperinflation", "es": "Hiperinflación" },
+        { "id": "p_22", "en": "Stagnation", "es": "Estancamiento" },
+        { "id": "p_23", "en": "Embargo", "es": "Embargo" },
+        { "id": "p_24", "en": "Sanction", "es": "Sanción" },
+        { "id": "p_25", "en": "Tariff", "es": "Arancel" },
+        { "id": "p_26", "en": "Quota", "es": "Cuota" },
+        { "id": "p_27", "en": "Corruption", "es": "Corrupción" },
+        { "id": "p_28", "en": "Bribery", "es": "Soborno" },
+        { "id": "p_29", "en": "Fraud", "es": "Fraude" },
+        { "id": "p_30", "en": "Embezzlement", "es": "Malversación de fondos" },
+        { "id": "p_31", "en": "Money laundering", "es": "Lavado de dinero" },
+        { "id": "p_32", "en": "Negligence", "es": "Negligencia" },
+        { "id": "p_33", "en": "Malpractice", "es": "Mala práctica / Negligencia profesional" },
+        { "id": "p_34", "en": "Liability", "es": "Responsabilidad civil" },
+        { "id": "p_35", "en": "Compliance", "es": "Cumplimiento normativo" },
+        { "id": "p_36", "en": "Ethics", "es": "Ética" },
+        { "id": "p_37", "en": "Integrity", "es": "Integridad" },
+        { "id": "p_38", "en": "Nepotism", "es": "Nepotismo" },
+        { "id": "p_39", "en": "Discrimination", "es": "Discriminación" },
+        { "id": "p_40", "en": "Bureaucracy", "es": "Burocracia" },
+        { "id": "p_41", "en": "Red tape", "es": "Trámite burocrático excesivo" },
+        { "id": "p_42", "en": "Hierarchy", "es": "Jerarquía" },
+        { "id": "p_43", "en": "Paradigm", "es": "Paradigma" },
+        { "id": "p_44", "en": "Synergy", "es": "Sinergia" },
+        { "id": "p_45", "en": "Leverage", "es": "Apalancamiento / Ventaja" },
+        { "id": "p_46", "en": "Deadlock", "es": "Punto muerto" },
+        { "id": "p_47", "en": "Impasse", "es": "Callejón sin salida" },
+        { "id": "p_48", "en": "Mediation", "es": "Mediación" },
+        { "id": "p_49", "en": "Consensus", "es": "Consenso" },
+        { "id": "p_50", "en": "Compromise", "es": "Compromiso / Acuerdo mutuo" }
       ]
     }
   ]

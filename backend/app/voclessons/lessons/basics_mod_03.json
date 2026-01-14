@@ -1,12 +1,12 @@
 {
   "id": "basics_mod_03",
   "category_id": "basics",
-  "title": "Life Essentials: Colors",
-  "description": "Vocabulario esencial de colores básicos. Nivel A1, Parte 3.",
+  "title": "Colors & Visual World",
+  "description": "Explora el espectro de colores, formas, tonalidades y verbos visuales esenciales.",
   "level": "A1",
   "part": 3,
-  "total_xp": 150,
-  "status": "unlocked",
+  "total_xp": 500,
+  "status": "locked",
   "theme": {
     "icon": "Palette",
     "color": "purple"
@@ -15,130 +15,60 @@
     {
       "id": "drill_basics_mod_03_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Colors",
-      "description": "Conecta los colores básicos del inglés con su significado.",
-      "instruction": "Empareja la palabra en inglés con su color en español.",
+      "title": "Neuro Link: Chroma",
+      "description": "Conecta colores, formas y conceptos visuales.",
+      "instruction": "Empareja la palabra en inglés con su significado en español.",
       "pairs": [
-        {
-          "id": "p_01",
-          "en": "Red",
-          "es": "Rojo",
-          "pronunciation": "/red/",
-          "grammar_type": "adjective",
-          "image_key": "img_red",
-          "context": {
-            "en_sentence": "The red apple is sweet.",
-            "es_sentence": "La manzana roja es dulce."
-          }
-        },
-        {
-          "id": "p_02",
-          "en": "Blue",
-          "es": "Azul",
-          "pronunciation": "/bluː/",
-          "grammar_type": "adjective",
-          "image_key": "img_blue",
-          "context": {
-            "en_sentence": "I like the blue sky.",
-            "es_sentence": "Me gusta el cielo azul."
-          }
-        },
-        {
-          "id": "p_03",
-          "en": "Green",
-          "es": "Verde",
-          "pronunciation": "/ɡriːn/",
-          "grammar_type": "adjective",
-          "image_key": "img_green",
-          "context": {
-            "en_sentence": "Green grass is beautiful.",
-            "es_sentence": "La hierba verde es hermosa."
-          }
-        },
-        {
-          "id": "p_04",
-          "en": "Black",
-          "es": "Negro",
-          "pronunciation": "/blæk/",
-          "grammar_type": "adjective",
-          "image_key": "img_black",
-          "context": {
-            "en_sentence": "My cat is black.",
-            "es_sentence": "Mi gato es negro."
-          }
-        },
-        {
-          "id": "p_05",
-          "en": "White",
-          "es": "Blanco",
-          "pronunciation": "/waɪt/",
-          "grammar_type": "adjective",
-          "image_key": "img_white",
-          "context": {
-            "en_sentence": "The white milk is cold.",
-            "es_sentence": "La leche blanca está fría."
-          }
-        },
-        {
-          "id": "p_06",
-          "en": "Yellow",
-          "es": "Amarillo",
-          "pronunciation": "/ˈjel.oʊ/",
-          "grammar_type": "adjective",
-          "image_key": "img_yellow",
-          "context": {
-            "en_sentence": "The yellow sun is hot.",
-            "es_sentence": "El sol amarillo está caliente."
-          }
-        },
-        {
-          "id": "p_07",
-          "en": "Orange",
-          "es": "Naranja",
-          "pronunciation": "/ˈɔːr.ɪndʒ/",
-          "grammar_type": "adjective",
-          "image_key": "img_orange",
-          "context": {
-            "en_sentence": "I eat an orange fruit.",
-            "es_sentence": "Como una fruta naranja."
-          }
-        },
-        {
-          "id": "p_08",
-          "en": "Brown",
-          "es": "Marrón",
-          "pronunciation": "/braʊn/",
-          "grammar_type": "adjective",
-          "image_key": "img_brown",
-          "context": {
-            "en_sentence": "The brown bread is good.",
-            "es_sentence": "El pan marrón está bueno."
-          }
-        },
-        {
-          "id": "p_09",
-          "en": "Pink",
-          "es": "Rosa",
-          "pronunciation": "/pɪŋk/",
-          "grammar_type": "adjective",
-          "image_key": "img_pink",
-          "context": {
-            "en_sentence": "The pink flower is pretty.",
-            "es_sentence": "La flor rosa es bonita."
-          }
-        },
-        {
-          "id": "p_10",
-          "en": "Purple",
-          "es": "Morado",
-          "pronunciation": "/ˈpɜːr.pəl/",
-          "grammar_type": "adjective",
-          "image_key": "img_purple",
-          "context": {
-            "en_sentence": "Purple grapes are sweet.",
-            "es_sentence": "Las uvas moradas son dulces."
-          }
-        }
+        { "id": "p_01", "en": "Red", "es": "Rojo" },
+        { "id": "p_02", "en": "Blue", "es": "Azul" },
+        { "id": "p_03", "en": "Green", "es": "Verde" },
+        { "id": "p_04", "en": "Yellow", "es": "Amarillo" },
+        { "id": "p_05", "en": "Black", "es": "Negro" },
+        { "id": "p_06", "en": "White", "es": "Blanco" },
+        { "id": "p_07", "en": "Orange", "es": "Naranja" },
+        { "id": "p_08", "en": "Purple", "es": "Morado" },
+        { "id": "p_09", "en": "Pink", "es": "Rosa" },
+        { "id": "p_10", "en": "Brown", "es": "Marrón" },
+        { "id": "p_11", "en": "Grey", "es": "Gris" },
+        { "id": "p_12", "en": "Gold", "es": "Oro" },
+        { "id": "p_13", "en": "Silver", "es": "Plata" },
+        { "id": "p_14", "en": "Light", "es": "Claro" },
+        { "id": "p_15", "en": "Dark", "es": "Oscuro" },
+        { "id": "p_16", "en": "Bright", "es": "Brillante" },
+        { "id": "p_17", "en": "Pale", "es": "Pálido" },
+        { "id": "p_18", "en": "Shiny", "es": "Reluciente" },
+        { "id": "p_19", "en": "Color", "es": "Color" },
+        { "id": "p_20", "en": "Rainbow", "es": "Arcoíris" },
+        { "id": "p_21", "en": "Shape", "es": "Forma" },
+        { "id": "p_22", "en": "Circle", "es": "Círculo" },
+        { "id": "p_23", "en": "Square", "es": "Cuadrado" },
+        { "id": "p_24", "en": "Triangle", "es": "Triángulo" },
+        { "id": "p_25", "en": "Star", "es": "Estrella" },
+        { "id": "p_26", "en": "Line", "es": "Línea" },
+        { "id": "p_27", "en": "Dot", "es": "Punto" },
+        { "id": "p_28", "en": "Violet", "es": "Violeta" },
+        { "id": "p_29", "en": "Indigo", "es": "Añil" },
+        { "id": "p_30", "en": "Beige", "es": "Beige" },
+        { "id": "p_31", "en": "Turquoise", "es": "Turquesa" },
+        { "id": "p_32", "en": "To Paint", "es": "Pintar" },
+        { "id": "p_33", "en": "To Draw", "es": "Dibujar" },
+        { "id": "p_34", "en": "To See", "es": "Ver" },
+        { "id": "p_35", "en": "To Look", "es": "Mirar" },
+        { "id": "p_36", "en": "Beautiful", "es": "Hermoso" },
+        { "id": "p_37", "en": "Ugly", "es": "Feo" },
+        { "id": "p_38", "en": "Clean", "es": "Limpio" },
+        { "id": "p_39", "en": "Dirty", "es": "Sucio" },
+        { "id": "p_40", "en": "Colorful", "es": "Colorido" },
+        { "id": "p_41", "en": "Clear", "es": "Transparente" },
+        { "id": "p_42", "en": "Art", "es": "Arte" },
+        { "id": "p_43", "en": "Photo", "es": "Foto" },
+        { "id": "p_44", "en": "Image", "es": "Imagen" },
+        { "id": "p_45", "en": "Glass", "es": "Vidrio" },
+        { "id": "p_46", "en": "Mirror", "es": "Espejo" },
+        { "id": "p_47", "en": "Visual", "es": "Visual" },
+        { "id": "p_48", "en": "Tone", "es": "Tono" },
+        { "id": "p_49", "en": "Style", "es": "Estilo" },
+        { "id": "p_50", "en": "Design", "es": "Diseño" }
       ]
     }
   ]

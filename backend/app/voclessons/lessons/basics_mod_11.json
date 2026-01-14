@@ -1,96 +1,74 @@
 {
   "id": "basics_mod_11",
   "category_id": "basics",
-  "title": "The Human Body & Health",
-  "description": "Anatomía esencial y expresiones relacionadas con la salud física y emocional.",
+  "title": "Time & Chronology",
+  "description": "Dominio del tiempo: frecuencia, duración, secuencia y adverbios temporales esenciales.",
   "level": "B1",
   "part": 3,
-  "total_xp": 140,
+  "total_xp": 500,
   "status": "locked",
   "theme": {
-    "icon": "Heart",
-    "color": "orange"
+    "icon": "Clock",
+    "color": "cyan"
   },
   "stages": [
     {
       "id": "drill_basics_mod_11_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Anatomy",
-      "description": "Identifica las partes del cuerpo en contextos intermedios.",
-      "instruction": "Empareja la parte del cuerpo con su nombre en inglés.",
+      "title": "Neuro Link: Timeline",
+      "description": "Conecta conceptos temporales y frecuencias.",
+      "instruction": "Empareja el término temporal con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Head",
-          "es": "Cabeza",
-          "pronunciation": "/hed/",
-          "grammar_type": "noun",
-          "image_key": "img_head",
-          "context": {
-            "en_sentence": "He nodded his head in agreement during the meeting.",
-            "es_sentence": "Él asintió con la cabeza en señal de acuerdo durante la reunión."
-          }
-        },
-        {
-          "id": "p_1",
-          "en": "Hand",
-          "es": "Mano",
-          "pronunciation": "/hænd/",
-          "grammar_type": "noun",
-          "image_key": "img_hand",
-          "context": {
-            "en_sentence": "Please wash your hands thoroughly before preparing food.",
-            "es_sentence": "Por favor, lávate bien las manos antes de preparar la comida."
-          }
-        },
-        {
-          "id": "p_2",
-          "en": "Leg",
-          "es": "Pierna",
-          "pronunciation": "/leɡ/",
-          "grammar_type": "noun",
-          "image_key": "img_leg",
-          "context": {
-            "en_sentence": "She broke her leg while skiing in the mountains last winter.",
-            "es_sentence": "Se rompió la pierna mientras esquiaba en las montañas el invierno pasado."
-          }
-        },
-        {
-          "id": "p_3",
-          "en": "Eye",
-          "es": "Ojo",
-          "pronunciation": "/aɪ/",
-          "grammar_type": "noun",
-          "image_key": "img_eye",
-          "context": {
-            "en_sentence": "Could you please keep an eye on my bag for a moment?",
-            "es_sentence": "¿Podrías echarle un ojo a mi bolsa un momento, por favor?"
-          }
-        },
-        {
-          "id": "p_4",
-          "en": "Face",
-          "es": "Cara",
-          "pronunciation": "/feɪs/",
-          "grammar_type": "noun",
-          "image_key": "img_face",
-          "context": {
-            "en_sentence": "He had a worried look on his face when he heard the news.",
-            "es_sentence": "Tenía una mirada de preocupación en su cara cuando escuchó la noticia."
-          }
-        },
-        {
-          "id": "p_5",
-          "en": "Heart",
-          "es": "Corazón",
-          "pronunciation": "/hɑːrt/",
-          "grammar_type": "noun",
-          "image_key": "img_heart",
-          "context": {
-            "en_sentence": "Regular exercise is essential for maintaining a healthy heart.",
-            "es_sentence": "El ejercicio regular es esencial para mantener un corazón sano."
-          }
-        }
+        { "id": "p_01", "en": "Time", "es": "Tiempo" },
+        { "id": "p_02", "en": "Moment", "es": "Momento" },
+        { "id": "p_03", "en": "Period", "es": "Periodo" },
+        { "id": "p_04", "en": "Schedule", "es": "Horario" },
+        { "id": "p_05", "en": "Deadline", "es": "Fecha límite" },
+        { "id": "p_06", "en": "Delay", "es": "Retraso" },
+        { "id": "p_07", "en": "Calendar", "es": "Calendario" },
+        { "id": "p_08", "en": "Date", "es": "Fecha" },
+        { "id": "p_09", "en": "Past", "es": "Pasado" },
+        { "id": "p_10", "en": "Present", "es": "Presente" },
+        { "id": "p_11", "en": "Future", "es": "Futuro" },
+        { "id": "p_12", "en": "History", "es": "Historia" },
+        { "id": "p_13", "en": "Beginning", "es": "Comienzo" },
+        { "id": "p_14", "en": "Middle", "es": "Medio" },
+        { "id": "p_15", "en": "End", "es": "Fin" },
+        { "id": "p_16", "en": "Morning", "es": "Mañana" },
+        { "id": "p_17", "en": "Afternoon", "es": "Tarde" },
+        { "id": "p_18", "en": "Evening", "es": "Noche (temprano)" },
+        { "id": "p_19", "en": "Night", "es": "Noche" },
+        { "id": "p_20", "en": "Midnight", "es": "Medianoche" },
+        { "id": "p_21", "en": "Noon", "es": "Mediodía" },
+        { "id": "p_22", "en": "Decade", "es": "Década" },
+        { "id": "p_23", "en": "Century", "es": "Siglo" },
+        { "id": "p_24", "en": "Always", "es": "Siempre" },
+        { "id": "p_25", "en": "Never", "es": "Nunca" },
+        { "id": "p_26", "en": "Often", "es": "A menudo" },
+        { "id": "p_27", "en": "Sometimes", "es": "A veces" },
+        { "id": "p_28", "en": "Usually", "es": "Usualmente" },
+        { "id": "p_29", "en": "Rarely", "es": "Raramente" },
+        { "id": "p_30", "en": "Daily", "es": "Diariamente" },
+        { "id": "p_31", "en": "Weekly", "es": "Semanalmente" },
+        { "id": "p_32", "en": "Monthly", "es": "Mensualmente" },
+        { "id": "p_33", "en": "Yearly", "es": "Anualmente" },
+        { "id": "p_34", "en": "Now", "es": "Ahora" },
+        { "id": "p_35", "en": "Soon", "es": "Pronto" },
+        { "id": "p_36", "en": "Later", "es": "Más tarde" },
+        { "id": "p_37", "en": "Early", "es": "Temprano" },
+        { "id": "p_38", "en": "Late", "es": "Tarde" },
+        { "id": "p_39", "en": "Recently", "es": "Recientemente" },
+        { "id": "p_40", "en": "Currently", "es": "Actualmente" },
+        { "id": "p_41", "en": "Suddenly", "es": "De repente" },
+        { "id": "p_42", "en": "Already", "es": "Ya" },
+        { "id": "p_43", "en": "Yet", "es": "Aún / Todavía" },
+        { "id": "p_44", "en": "Still", "es": "Todavía" },
+        { "id": "p_45", "en": "During", "es": "Durante" },
+        { "id": "p_46", "en": "While", "es": "Mientras" },
+        { "id": "p_47", "en": "Until", "es": "Hasta" },
+        { "id": "p_48", "en": "Since", "es": "Desde" },
+        { "id": "p_49", "en": "Before", "es": "Antes" },
+        { "id": "p_50", "en": "After", "es": "Después" }
       ]
     }
   ]

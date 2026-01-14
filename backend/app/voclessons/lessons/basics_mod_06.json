@@ -1,11 +1,11 @@
 {
   "id": "basics_mod_06",
   "category_id": "basics",
-  "title": "Clothing & Attire",
-  "description": "Prendas de vestir esenciales y cómo hablar de lo que llevas puesto.",
+  "title": "Clothing & Style",
+  "description": "Vocabulario de moda, ropa, accesorios y verbos para vestirse.",
   "level": "A2",
   "part": 2,
-  "total_xp": 120,
+  "total_xp": 500,
   "status": "locked",
   "theme": {
     "icon": "Shirt",
@@ -15,82 +15,60 @@
     {
       "id": "drill_basics_mod_06_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Wardrobe",
-      "description": "Asociación de prendas de vestir.",
-      "instruction": "Empareja la prenda con su nombre en inglés.",
+      "title": "Neuro Link: The Wardrobe",
+      "description": "Conecta prendas, accesorios y verbos de vestimenta.",
+      "instruction": "Empareja la prenda con su traducción.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Shirt",
-          "es": "Camisa",
-          "pronunciation": "/ʃɜːrt/",
-          "grammar_type": "noun",
-          "image_key": "img_shirt",
-          "context": {
-            "en_sentence": "I need to iron my white shirt for work.",
-            "es_sentence": "Necesito planchar mi camisa blanca para el trabajo."
-          }
-        },
-        {
-          "id": "p_1",
-          "en": "Shoe",
-          "es": "Zapato",
-          "pronunciation": "/ʃuː/",
-          "grammar_type": "noun",
-          "image_key": "img_shoe",
-          "context": {
-            "en_sentence": "This shoe fits perfectly.",
-            "es_sentence": "Este zapato me queda perfecto."
-          }
-        },
-        {
-          "id": "p_2",
-          "en": "Pants",
-          "es": "Pantalones",
-          "pronunciation": "/pænts/",
-          "grammar_type": "plural noun",
-          "image_key": "img_pants",
-          "context": {
-            "en_sentence": "These pants are too long for me.",
-            "es_sentence": "Estos pantalones son demasiado largos para mí."
-          }
-        },
-        {
-          "id": "p_3",
-          "en": "Hat",
-          "es": "Sombrero",
-          "pronunciation": "/hæt/",
-          "grammar_type": "noun",
-          "image_key": "img_hat",
-          "context": {
-            "en_sentence": "He is wearing a hat to protect himself from the sun.",
-            "es_sentence": "Él lleva un sombrero para protegerse del sol."
-          }
-        },
-        {
-          "id": "p_4",
-          "en": "Coat",
-          "es": "Abrigo",
-          "pronunciation": "/koʊt/",
-          "grammar_type": "noun",
-          "image_key": "img_coat",
-          "context": {
-            "en_sentence": "Don't forget your coat; it's freezing outside.",
-            "es_sentence": "No olvides tu abrigo; está helando afuera."
-          }
-        },
-        {
-          "id": "p_5",
-          "en": "Dress",
-          "es": "Vestido",
-          "pronunciation": "/dres/",
-          "grammar_type": "noun",
-          "image_key": "img_dress",
-          "context": {
-            "en_sentence": "She bought an elegant black dress for the party.",
-            "es_sentence": "Ella compró un vestido negro elegante para la fiesta."
-          }
-        }
+        { "id": "p_01", "en": "Shirt", "es": "Camisa" },
+        { "id": "p_02", "en": "T-shirt", "es": "Camiseta" },
+        { "id": "p_03", "en": "Pants", "es": "Pantalones" },
+        { "id": "p_04", "en": "Jeans", "es": "Vaqueros" },
+        { "id": "p_05", "en": "Shorts", "es": "Pantalones cortos" },
+        { "id": "p_06", "en": "Dress", "es": "Vestido" },
+        { "id": "p_07", "en": "Skirt", "es": "Falda" },
+        { "id": "p_08", "en": "Suit", "es": "Traje" },
+        { "id": "p_09", "en": "Coat", "es": "Abrigo" },
+        { "id": "p_10", "en": "Jacket", "es": "Chaqueta" },
+        { "id": "p_11", "en": "Sweater", "es": "Suéter" },
+        { "id": "p_12", "en": "Hoodie", "es": "Sudadera" },
+        { "id": "p_13", "en": "Vest", "es": "Chaleco" },
+        { "id": "p_14", "en": "Shoe", "es": "Zapato" },
+        { "id": "p_15", "en": "Boot", "es": "Bota" },
+        { "id": "p_16", "en": "Sneaker", "es": "Zapatilla" },
+        { "id": "p_17", "en": "Sandal", "es": "Sandalia" },
+        { "id": "p_18", "en": "Sock", "es": "Calcetín" },
+        { "id": "p_19", "en": "Hat", "es": "Sombrero" },
+        { "id": "p_20", "en": "Cap", "es": "Gorra" },
+        { "id": "p_21", "en": "Scarf", "es": "Bufanda" },
+        { "id": "p_22", "en": "Glove", "es": "Guante" },
+        { "id": "p_23", "en": "Belt", "es": "Cinturón" },
+        { "id": "p_24", "en": "Tie", "es": "Corbata" },
+        { "id": "p_25", "en": "Watch", "es": "Reloj" },
+        { "id": "p_26", "en": "Glasses", "es": "Gafas" },
+        { "id": "p_27", "en": "Sunglasses", "es": "Gafas de sol" },
+        { "id": "p_28", "en": "Ring", "es": "Anillo" },
+        { "id": "p_29", "en": "Necklace", "es": "Collar" },
+        { "id": "p_30", "en": "Earring", "es": "Pendiente" },
+        { "id": "p_31", "en": "Purse", "es": "Bolso" },
+        { "id": "p_32", "en": "Wallet", "es": "Cartera" },
+        { "id": "p_33", "en": "Pocket", "es": "Bolsillo" },
+        { "id": "p_34", "en": "Button", "es": "Botón" },
+        { "id": "p_35", "en": "Zipper", "es": "Cremallera" },
+        { "id": "p_36", "en": "Size", "es": "Talla" },
+        { "id": "p_37", "en": "Small", "es": "Pequeño" },
+        { "id": "p_38", "en": "Medium", "es": "Mediano" },
+        { "id": "p_39", "en": "Large", "es": "Grande" },
+        { "id": "p_40", "en": "Tight", "es": "Ajustado" },
+        { "id": "p_41", "en": "Loose", "es": "Holgado" },
+        { "id": "p_42", "en": "Cotton", "es": "Algodón" },
+        { "id": "p_43", "en": "Wool", "es": "Lana" },
+        { "id": "p_44", "en": "Leather", "es": "Cuero" },
+        { "id": "p_45", "en": "To Wear", "es": "Llevar puesto" },
+        { "id": "p_46", "en": "To Put On", "es": "Ponerse" },
+        { "id": "p_47", "en": "To Take Off", "es": "Quitarse" },
+        { "id": "p_48", "en": "To Try On", "es": "Probarse" },
+        { "id": "p_49", "en": "To Fit", "es": "Quedar bien" },
+        { "id": "p_50", "en": "Fashion", "es": "Moda" }
       ]
     }
   ]

@@ -1,46 +1,74 @@
 {
   "id": "business_mod_17",
-  "title": "Business Pro C1-1",
-  "description": "Mastering business vocabulary. Level C1, Part 1.",
+  "category_id": "business",
+  "title": "Business Pro: Corp Finance",
+  "description": "Vocabulario C1 sobre fusiones, adquisiciones, finanzas corporativas avanzadas y gobernanza.",
   "level": "C1",
-  "total_xp": 180,
+  "part": 1,
+  "total_xp": 600,
+  "status": "locked",
+  "theme": {
+    "icon": "TrendingUp",
+    "color": "gold"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_17",
+      "id": "drill_business_mod_17_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: M&A and Finance",
+      "description": "Conecta términos de alta dirección y finanzas.",
+      "instruction": "Empareja el término financiero/corporativo con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Merger",
-          "es": "Fusión"
-        },
-        {
-          "id": "p_1",
-          "en": "Acquisition",
-          "es": "Adquisición"
-        },
-        {
-          "id": "p_2",
-          "en": "Liability",
-          "es": "Pasivo"
-        },
-        {
-          "id": "p_3",
-          "en": "Assets",
-          "es": "Activos"
-        },
-        {
-          "id": "p_4",
-          "en": "Turnover",
-          "es": "Rotación"
-        },
-        {
-          "id": "p_5",
-          "en": "Stakeholder",
-          "es": "Interesado"
-        }
+        { "id": "p_01", "en": "Merger", "es": "Fusión" },
+        { "id": "p_02", "en": "Acquisition", "es": "Adquisición" },
+        { "id": "p_03", "en": "Takeover", "es": "Toma de control / Adquisición" },
+        { "id": "p_04", "en": "Conglomerate", "es": "Conglomerado" },
+        { "id": "p_05", "en": "Subsidiary", "es": "Filial / Subsidiaria" },
+        { "id": "p_06", "en": "Consortium", "es": "Consorcio" },
+        { "id": "p_07", "en": "Asset", "es": "Activo" },
+        { "id": "p_08", "en": "Liability", "es": "Pasivo" },
+        { "id": "p_09", "en": "Equity", "es": "Patrimonio neto / Capital" },
+        { "id": "p_10", "en": "Dividend", "es": "Dividendo" },
+        { "id": "p_11", "en": "Turnover", "es": "Volumen de ventas / Rotación" },
+        { "id": "p_12", "en": "Revenue", "es": "Ingresos (Totales)" },
+        { "id": "p_13", "en": "Expenditure", "es": "Gasto / Desembolso" },
+        { "id": "p_14", "en": "Overhead", "es": "Gastos generales" },
+        { "id": "p_15", "en": "Fiscal year", "es": "Año fiscal" },
+        { "id": "p_16", "en": "Audit", "es": "Auditoría" },
+        { "id": "p_17", "en": "Compliance", "es": "Cumplimiento normativo" },
+        { "id": "p_18", "en": "Governance", "es": "Gobernanza" },
+        { "id": "p_19", "en": "Stakeholder", "es": "Parte interesada / Interesado" },
+        { "id": "p_20", "en": "Shareholder", "es": "Accionista" },
+        { "id": "p_21", "en": "Board of Directors", "es": "Junta directiva" },
+        { "id": "p_22", "en": "Executive", "es": "Ejecutivo" },
+        { "id": "p_23", "en": "Portfolio", "es": "Cartera / Portafolio" },
+        { "id": "p_24", "en": "ROI", "es": "Retorno de inversión (ROI)" },
+        { "id": "p_25", "en": "Profitability", "es": "Rentabilidad" },
+        { "id": "p_26", "en": "Margin", "es": "Margen" },
+        { "id": "p_27", "en": "Liquidity", "es": "Liquidez" },
+        { "id": "p_28", "en": "Solvency", "es": "Solvencia" },
+        { "id": "p_29", "en": "Insolvency", "es": "Insolvencia" },
+        { "id": "p_30", "en": "Bankruptcy", "es": "Bancarrota / Quiebra" },
+        { "id": "p_31", "en": "Liquidation", "es": "Liquidación" },
+        { "id": "p_32", "en": "Valuation", "es": "Valoración" },
+        { "id": "p_33", "en": "Depreciation", "es": "Depreciación" },
+        { "id": "p_34", "en": "Fluctuation", "es": "Fluctuación" },
+        { "id": "p_35", "en": "Volatility", "es": "Volatilidad" },
+        { "id": "p_36", "en": "Recession", "es": "Recesión" },
+        { "id": "p_37", "en": "Monopoly", "es": "Monopolio" },
+        { "id": "p_38", "en": "Synergy", "es": "Sinergia" },
+        { "id": "p_39", "en": "Diversification", "es": "Diversificación" },
+        { "id": "p_40", "en": "Feasibility", "es": "Factibilidad / Viabilidad" },
+        { "id": "p_41", "en": "Viability", "es": "Viabilidad" },
+        { "id": "p_42", "en": "Sustainability", "es": "Sostenibilidad" },
+        { "id": "p_43", "en": "Innovation", "es": "Innovación" },
+        { "id": "p_44", "en": "To Merge", "es": "Fusionarse" },
+        { "id": "p_45", "en": "To Acquire", "es": "Adquirir" },
+        { "id": "p_46", "en": "To Divest", "es": "Desinvertir" },
+        { "id": "p_47", "en": "To Restructure", "es": "Reestructurar" },
+        { "id": "p_48", "en": "To Audit", "es": "Auditar" },
+        { "id": "p_49", "en": "Capital", "es": "Capital" },
+        { "id": "p_50", "en": "Speculation", "es": "Especulación" }
       ]
     }
   ]

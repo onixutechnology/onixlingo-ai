@@ -1,12 +1,12 @@
 {
   "id": "basics_mod_15",
   "category_id": "basics",
-  "title": "Life Essentials: Weather",
-  "description": "Vocabulario esencial de fenómenos meteorológicos. Nivel B2, Parte 3.",
+  "title": "Weather & Climate",
+  "description": "Vocabulario avanzado sobre clima, pronósticos y fenómenos naturales.",
   "level": "B2",
   "part": 3,
-  "total_xp": 220,
-  "status": "unlocked",
+  "total_xp": 500,
+  "status": "locked",
   "theme": {
     "icon": "CloudSun",
     "color": "cyan"
@@ -15,130 +15,60 @@
     {
       "id": "drill_basics_mod_15_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Weather",
-      "description": "Conecta los fenómenos del tiempo del inglés con su significado.",
-      "instruction": "Empareja la palabra en inglés con su condición meteorológica en español.",
+      "title": "Neuro Link: Meteorology",
+      "description": "Conecta los fenómenos atmosféricos y climáticos.",
+      "instruction": "Empareja el término meteorológico con su significado.",
       "pairs": [
-        {
-          "id": "p_01",
-          "en": "Weather",
-          "es": "Clima",
-          "pronunciation": "/ˈweð.ɚ/",
-          "grammar_type": "noun",
-          "image_key": "img_weather",
-          "context": {
-            "en_sentence": "What is the weather today?",
-            "es_sentence": "¿Cuál es el clima hoy?"
-          }
-        },
-        {
-          "id": "p_02",
-          "en": "Rain",
-          "es": "Lluvia",
-          "pronunciation": "/reɪn/",
-          "grammar_type": "noun",
-          "image_key": "img_rain",
-          "context": {
-            "en_sentence": "There is heavy rain outside.",
-            "es_sentence": "Hay lluvia fuerte afuera."
-          }
-        },
-        {
-          "id": "p_03",
-          "en": "Sun",
-          "es": "Sol",
-          "pronunciation": "/sʌn/",
-          "grammar_type": "noun",
-          "image_key": "img_sun",
-          "context": {
-            "en_sentence": "The yellow sun is hot.",
-            "es_sentence": "El sol amarillo está caliente."
-          }
-        },
-        {
-          "id": "p_04",
-          "en": "Snow",
-          "es": "Nieve",
-          "pronunciation": "/snoʊ/",
-          "grammar_type": "noun",
-          "image_key": "img_snow",
-          "context": {
-            "en_sentence": "White snow covers the ground.",
-            "es_sentence": "La nieve blanca cubre el suelo."
-          }
-        },
-        {
-          "id": "p_05",
-          "en": "Wind",
-          "es": "Viento",
-          "pronunciation": "/wɪnd/",
-          "grammar_type": "noun",
-          "image_key": "img_wind",
-          "context": {
-            "en_sentence": "Strong wind moves the trees.",
-            "es_sentence": "Viento fuerte mueve los árboles."
-          }
-        },
-        {
-          "id": "p_06",
-          "en": "Cloud",
-          "es": "Nube",
-          "pronunciation": "/klaʊd/",
-          "grammar_type": "noun",
-          "image_key": "img_cloud",
-          "context": {
-            "en_sentence": "Gray clouds bring rain.",
-            "es_sentence": "Nubes grises traen lluvia."
-          }
-        },
-        {
-          "id": "p_07",
-          "en": "Storm",
-          "es": "Tormenta",
-          "pronunciation": "/stɔːrm/",
-          "grammar_type": "noun",
-          "image_key": "img_storm",
-          "context": {
-            "en_sentence": "The storm has thunder.",
-            "es_sentence": "La tormenta tiene truenos."
-          }
-        },
-        {
-          "id": "p_08",
-          "en": "Fog",
-          "es": "Niebla",
-          "pronunciation": "/fɑːɡ/",
-          "grammar_type": "noun",
-          "image_key": "img_fog",
-          "context": {
-            "en_sentence": "Dense fog hides the road.",
-            "es_sentence": "Niebla densa oculta la carretera."
-          }
-        },
-        {
-          "id": "p_09",
-          "en": "Hot",
-          "es": "Caluroso",
-          "pronunciation": "/hɑːt/",
-          "grammar_type": "adjective",
-          "image_key": "img_hot",
-          "context": {
-            "en_sentence": "Summer is very hot.",
-            "es_sentence": "El verano es muy caluroso."
-          }
-        },
-        {
-          "id": "p_10",
-          "en": "Cold",
-          "es": "Frío",
-          "pronunciation": "/koʊld/",
-          "grammar_type": "adjective",
-          "image_key": "img_cold",
-          "context": {
-            "en_sentence": "Winter weather is cold.",
-            "es_sentence": "El clima de invierno es frío."
-          }
-        }
+        { "id": "p_01", "en": "Weather", "es": "Clima / Tiempo" },
+        { "id": "p_02", "en": "Climate", "es": "Clima (patrón general)" },
+        { "id": "p_03", "en": "Forecast", "es": "Pronóstico" },
+        { "id": "p_04", "en": "Temperature", "es": "Temperatura" },
+        { "id": "p_05", "en": "Degree", "es": "Grado" },
+        { "id": "p_06", "en": "Sun", "es": "Sol" },
+        { "id": "p_07", "en": "Rain", "es": "Lluvia" },
+        { "id": "p_08", "en": "Snow", "es": "Nieve" },
+        { "id": "p_09", "en": "Wind", "es": "Viento" },
+        { "id": "p_10", "en": "Cloud", "es": "Nube" },
+        { "id": "p_11", "en": "Storm", "es": "Tormenta" },
+        { "id": "p_12", "en": "Thunder", "es": "Trueno" },
+        { "id": "p_13", "en": "Lightning", "es": "Rayo" },
+        { "id": "p_14", "en": "Fog", "es": "Niebla" },
+        { "id": "p_15", "en": "Mist", "es": "Neblina" },
+        { "id": "p_16", "en": "Hail", "es": "Granizo" },
+        { "id": "p_17", "en": "Frost", "es": "Escarcha" },
+        { "id": "p_18", "en": "Dew", "es": "Rocío" },
+        { "id": "p_19", "en": "Rainbow", "es": "Arcoíris" },
+        { "id": "p_20", "en": "Humidity", "es": "Humedad" },
+        { "id": "p_21", "en": "Hurricane", "es": "Huracán" },
+        { "id": "p_22", "en": "Tornado", "es": "Tornado" },
+        { "id": "p_23", "en": "Blizzard", "es": "Ventisca" },
+        { "id": "p_24", "en": "Flood", "es": "Inundación" },
+        { "id": "p_25", "en": "Drought", "es": "Sequía" },
+        { "id": "p_26", "en": "Heatwave", "es": "Ola de calor" },
+        { "id": "p_27", "en": "Breeze", "es": "Brisa" },
+        { "id": "p_28", "en": "Gale", "es": "Vendaval" },
+        { "id": "p_29", "en": "Shower", "es": "Chubasco" },
+        { "id": "p_30", "en": "Overcast", "es": "Nublado (cubierto)" },
+        { "id": "p_31", "en": "Clear", "es": "Despejado" },
+        { "id": "p_32", "en": "Sunny", "es": "Soleado" },
+        { "id": "p_33", "en": "Cloudy", "es": "Nublado" },
+        { "id": "p_34", "en": "Windy", "es": "Ventoso" },
+        { "id": "p_35", "en": "Hot", "es": "Caluroso" },
+        { "id": "p_36", "en": "Cold", "es": "Frío" },
+        { "id": "p_37", "en": "Warm", "es": "Cálido" },
+        { "id": "p_38", "en": "Cool", "es": "Fresco" },
+        { "id": "p_39", "en": "Dry", "es": "Seco" },
+        { "id": "p_40", "en": "Wet", "es": "Mojado" },
+        { "id": "p_41", "en": "Season", "es": "Estación" },
+        { "id": "p_42", "en": "Spring", "es": "Primavera" },
+        { "id": "p_43", "en": "Summer", "es": "Verano" },
+        { "id": "p_44", "en": "Autumn", "es": "Otoño" },
+        { "id": "p_45", "en": "Winter", "es": "Invierno" },
+        { "id": "p_46", "en": "To Freeze", "es": "Congelar" },
+        { "id": "p_47", "en": "To Melt", "es": "Derretir" },
+        { "id": "p_48", "en": "To Shine", "es": "Brillar" },
+        { "id": "p_49", "en": "To Blow", "es": "Soplar" },
+        { "id": "p_50", "en": "Atmosphere", "es": "Atmósfera" }
       ]
     }
   ]

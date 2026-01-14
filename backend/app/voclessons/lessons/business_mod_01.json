@@ -1,46 +1,74 @@
 {
   "id": "business_mod_01",
-  "title": "Business Pro A1-1",
-  "description": "Mastering business vocabulary. Level A1, Part 1.",
+  "category_id": "business",
+  "title": "Business Pro: First Steps",
+  "description": "Vocabulario fundamental para el entorno de trabajo y la oficina. Nivel A1.",
   "level": "A1",
-  "total_xp": 100,
+  "part": 1,
+  "total_xp": 500,
+  "status": "unlocked",
+  "theme": {
+    "icon": "Briefcase",
+    "color": "blue"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_01",
+      "id": "drill_business_mod_01_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: The Office",
+      "description": "Conecta conceptos básicos del mundo laboral.",
+      "instruction": "Empareja el término de negocios con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Job",
-          "es": "Trabajo"
-        },
-        {
-          "id": "p_1",
-          "en": "Boss",
-          "es": "Jefe"
-        },
-        {
-          "id": "p_2",
-          "en": "Office",
-          "es": "Oficina"
-        },
-        {
-          "id": "p_3",
-          "en": "Team",
-          "es": "Equipo"
-        },
-        {
-          "id": "p_4",
-          "en": "Desk",
-          "es": "Escritorio"
-        },
-        {
-          "id": "p_5",
-          "en": "Call",
-          "es": "Llamada"
-        }
+        { "id": "p_01", "en": "Job", "es": "Empleo / Trabajo" },
+        { "id": "p_02", "en": "Work", "es": "Trabajo (acción/lugar)" },
+        { "id": "p_03", "en": "Boss", "es": "Jefe" },
+        { "id": "p_04", "en": "Office", "es": "Oficina" },
+        { "id": "p_05", "en": "Company", "es": "Empresa" },
+        { "id": "p_06", "en": "Team", "es": "Equipo" },
+        { "id": "p_07", "en": "Desk", "es": "Escritorio" },
+        { "id": "p_08", "en": "Computer", "es": "Computadora" },
+        { "id": "p_09", "en": "Phone", "es": "Teléfono" },
+        { "id": "p_10", "en": "Email", "es": "Correo electrónico" },
+        { "id": "p_11", "en": "Meeting", "es": "Reunión" },
+        { "id": "p_12", "en": "Time", "es": "Tiempo" },
+        { "id": "p_13", "en": "Money", "es": "Dinero" },
+        { "id": "p_14", "en": "Client", "es": "Cliente" },
+        { "id": "p_15", "en": "Manager", "es": "Gerente" },
+        { "id": "p_16", "en": "Staff", "es": "Personal" },
+        { "id": "p_17", "en": "Colleague", "es": "Colega" },
+        { "id": "p_18", "en": "Project", "es": "Proyecto" },
+        { "id": "p_19", "en": "Report", "es": "Informe" },
+        { "id": "p_20", "en": "Problem", "es": "Problema" },
+        { "id": "p_21", "en": "Idea", "es": "Idea" },
+        { "id": "p_22", "en": "Plan", "es": "Plan" },
+        { "id": "p_23", "en": "Goal", "es": "Meta" },
+        { "id": "p_24", "en": "Success", "es": "Éxito" },
+        { "id": "p_25", "en": "Date", "es": "Fecha" },
+        { "id": "p_26", "en": "Number", "es": "Número" },
+        { "id": "p_27", "en": "Price", "es": "Precio" },
+        { "id": "p_28", "en": "Cost", "es": "Costo" },
+        { "id": "p_29", "en": "Sale", "es": "Venta" },
+        { "id": "p_30", "en": "Contract", "es": "Contrato" },
+        { "id": "p_31", "en": "To Work", "es": "Trabajar" },
+        { "id": "p_32", "en": "To Call", "es": "Llamar" },
+        { "id": "p_33", "en": "To Ask", "es": "Preguntar" },
+        { "id": "p_34", "en": "To Answer", "es": "Responder" },
+        { "id": "p_35", "en": "To Buy", "es": "Comprar" },
+        { "id": "p_36", "en": "To Sell", "es": "Vender" },
+        { "id": "p_37", "en": "To Pay", "es": "Pagar" },
+        { "id": "p_38", "en": "To Start", "es": "Empezar" },
+        { "id": "p_39", "en": "To Finish", "es": "Terminar" },
+        { "id": "p_40", "en": "Open", "es": "Abierto" },
+        { "id": "p_41", "en": "Closed", "es": "Cerrado" },
+        { "id": "p_42", "en": "Busy", "es": "Ocupado" },
+        { "id": "p_43", "en": "Free", "es": "Libre / Gratis" },
+        { "id": "p_44", "en": "New", "es": "Nuevo" },
+        { "id": "p_45", "en": "Important", "es": "Importante" },
+        { "id": "p_46", "en": "Laptop", "es": "Portátil" },
+        { "id": "p_47", "en": "Screen", "es": "Pantalla" },
+        { "id": "p_48", "en": "Document", "es": "Documento" },
+        { "id": "p_49", "en": "Message", "es": "Mensaje" },
+        { "id": "p_50", "en": "Business", "es": "Negocios" }
       ]
     }
   ]

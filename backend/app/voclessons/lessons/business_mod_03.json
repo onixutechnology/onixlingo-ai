@@ -1,46 +1,74 @@
 {
   "id": "business_mod_03",
-  "title": "Business Pro A1-3",
-  "description": "Mastering business vocabulary. Level A1, Part 3.",
+  "category_id": "business",
+  "title": "Business Pro: Workspace & Basics",
+  "description": "Vocabulario del espacio de trabajo, cortesía básica, pausas y verbos de acción simple.",
   "level": "A1",
-  "total_xp": 100,
+  "part": 3,
+  "total_xp": 500,
+  "status": "locked",
+  "theme": {
+    "icon": "Briefcase",
+    "color": "blue"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_03",
+      "id": "drill_business_mod_03_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: The Facility",
+      "description": "Conecta objetos, lugares y acciones básicas de la oficina.",
+      "instruction": "Empareja la palabra con su traducción.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Staff",
-          "es": "Personal"
-        },
-        {
-          "id": "p_1",
-          "en": "File",
-          "es": "Archivo"
-        },
-        {
-          "id": "p_2",
-          "en": "Pen",
-          "es": "Bolígrafo"
-        },
-        {
-          "id": "p_3",
-          "en": "Room",
-          "es": "Sala"
-        },
-        {
-          "id": "p_4",
-          "en": "Chair",
-          "es": "Silla"
-        },
-        {
-          "id": "p_5",
-          "en": "Break",
-          "es": "Descanso"
-        }
+        { "id": "p_01", "en": "Staff", "es": "Personal" },
+        { "id": "p_02", "en": "Worker", "es": "Trabajador" },
+        { "id": "p_03", "en": "Guest", "es": "Invitado / Visita" },
+        { "id": "p_04", "en": "Reception", "es": "Recepción" },
+        { "id": "p_05", "en": "Room", "es": "Sala / Cuarto" },
+        { "id": "p_06", "en": "Hall", "es": "Pasillo" },
+        { "id": "p_07", "en": "Door", "es": "Puerta" },
+        { "id": "p_08", "en": "Window", "es": "Ventana" },
+        { "id": "p_09", "en": "Floor", "es": "Piso" },
+        { "id": "p_10", "en": "Lift", "es": "Elevador" },
+        { "id": "p_11", "en": "Stairs", "es": "Escaleras" },
+        { "id": "p_12", "en": "Toilet", "es": "Baño" },
+        { "id": "p_13", "en": "Kitchen", "es": "Cocina" },
+        { "id": "p_14", "en": "Chair", "es": "Silla" },
+        { "id": "p_15", "en": "Table", "es": "Mesa" },
+        { "id": "p_16", "en": "Board", "es": "Pizarra" },
+        { "id": "p_17", "en": "Marker", "es": "Marcador" },
+        { "id": "p_18", "en": "Pen", "es": "Bolígrafo" },
+        { "id": "p_19", "en": "Pencil", "es": "Lápiz" },
+        { "id": "p_20", "en": "Book", "es": "Libro" },
+        { "id": "p_21", "en": "Bag", "es": "Bolsa / Maletín" },
+        { "id": "p_22", "en": "Box", "es": "Caja" },
+        { "id": "p_23", "en": "Key", "es": "Llave" },
+        { "id": "p_24", "en": "Light", "es": "Luz" },
+        { "id": "p_25", "en": "Break", "es": "Descanso" },
+        { "id": "p_26", "en": "Lunch", "es": "Almuerzo" },
+        { "id": "p_27", "en": "Coffee", "es": "Café" },
+        { "id": "p_28", "en": "Water", "es": "Agua" },
+        { "id": "p_29", "en": "File", "es": "Archivo" },
+        { "id": "p_30", "en": "Copy", "es": "Copia" },
+        { "id": "p_31", "en": "Please", "es": "Por favor" },
+        { "id": "p_32", "en": "Thanks", "es": "Gracias" },
+        { "id": "p_33", "en": "Sorry", "es": "Lo siento" },
+        { "id": "p_34", "en": "Hello", "es": "Hola" },
+        { "id": "p_35", "en": "Bye", "es": "Adiós" },
+        { "id": "p_36", "en": "Yes", "es": "Sí" },
+        { "id": "p_37", "en": "No", "es": "No" },
+        { "id": "p_38", "en": "Good", "es": "Bueno" },
+        { "id": "p_39", "en": "Bad", "es": "Malo" },
+        { "id": "p_40", "en": "Right", "es": "Correcto / Derecha" },
+        { "id": "p_41", "en": "Wrong", "es": "Incorrecto" },
+        { "id": "p_42", "en": "To Go", "es": "Ir" },
+        { "id": "p_43", "en": "To Come", "es": "Venir" },
+        { "id": "p_44", "en": "To Sit", "es": "Sentarse" },
+        { "id": "p_45", "en": "To Wait", "es": "Esperar" },
+        { "id": "p_46", "en": "To Help", "es": "Ayudar" },
+        { "id": "p_47", "en": "To Use", "es": "Usar" },
+        { "id": "p_48", "en": "To Open", "es": "Abrir" },
+        { "id": "p_49", "en": "To Close", "es": "Cerrar" },
+        { "id": "p_50", "en": "To Do", "es": "Hacer" }
       ]
     }
   ]

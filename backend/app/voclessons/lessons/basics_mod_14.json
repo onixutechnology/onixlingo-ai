@@ -1,12 +1,12 @@
 {
   "id": "basics_mod_14",
   "category_id": "basics",
-  "title": "Life Essentials: Kitchen",
-  "description": "Vocabulario esencial de electrodomésticos y utensilios de cocina. Nivel B2, Parte 2.",
+  "title": "Culinary Tools & Kitchenware",
+  "description": "Vocabulario detallado de utensilios, electrodomésticos y equipamiento de cocina.",
   "level": "B2",
   "part": 2,
-  "total_xp": 220,
-  "status": "unlocked",
+  "total_xp": 500,
+  "status": "locked",
   "theme": {
     "icon": "Fridge",
     "color": "teal"
@@ -15,130 +15,60 @@
     {
       "id": "drill_basics_mod_14_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Kitchen",
-      "description": "Conecta los electrodomésticos y utensilios de cocina del inglés con su significado.",
-      "instruction": "Empareja la palabra en inglés con su objeto de cocina en español.",
+      "title": "Neuro Link: The Chef's Kit",
+      "description": "Conecta herramientas culinarias y electrodomésticos.",
+      "instruction": "Empareja el utensilio o aparato con su nombre.",
       "pairs": [
-        {
-          "id": "p_01",
-          "en": "Fridge",
-          "es": "Refrigerador",
-          "pronunciation": "/frɪdʒ/",
-          "grammar_type": "noun",
-          "image_key": "img_fridge",
-          "context": {
-            "en_sentence": "Put the milk in the fridge.",
-            "es_sentence": "Pon la leche en el refrigerador."
-          }
-        },
-        {
-          "id": "p_02",
-          "en": "Oven",
-          "es": "Horno",
-          "pronunciation": "/ˈʌv.ən/",
-          "grammar_type": "noun",
-          "image_key": "img_oven",
-          "context": {
-            "en_sentence": "Mother bakes bread in the oven.",
-            "es_sentence": "Madre hornea pan en el horno."
-          }
-        },
-        {
-          "id": "p_03",
-          "en": "Stove",
-          "es": "Estufa",
-          "pronunciation": "/stoʊv/",
-          "grammar_type": "noun",
-          "image_key": "img_stove",
-          "context": {
-            "en_sentence": "Cook rice on the stove.",
-            "es_sentence": "Cocina arroz en la estufa."
-          }
-        },
-        {
-          "id": "p_04",
-          "en": "Sink",
-          "es": "Fregadero",
-          "pronunciation": "/sɪŋk/",
-          "grammar_type": "noun",
-          "image_key": "img_sink",
-          "context": {
-            "en_sentence": "Wash plates in the sink.",
-            "es_sentence": "Lava platos en el fregadero."
-          }
-        },
-        {
-          "id": "p_05",
-          "en": "Plate",
-          "es": "Plato",
-          "pronunciation": "/pleɪt/",
-          "grammar_type": "noun",
-          "image_key": "img_plate",
-          "context": {
-            "en_sentence": "The white plate is clean.",
-            "es_sentence": "El plato blanco está limpio."
-          }
-        },
-        {
-          "id": "p_06",
-          "en": "Cup",
-          "es": "Taza",
-          "pronunciation": "/kʌp/",
-          "grammar_type": "noun",
-          "image_key": "img_cup",
-          "context": {
-            "en_sentence": "Drink coffee from this cup.",
-            "es_sentence": "Bebe café de esta taza."
-          }
-        },
-        {
-          "id": "p_07",
-          "en": "Microwave",
-          "es": "Microondas",
-          "pronunciation": "/ˈmaɪ.kroʊ.weɪv/",
-          "grammar_type": "noun",
-          "image_key": "img_microwave",
-          "context": {
-            "en_sentence": "Heat food in the microwave.",
-            "es_sentence": "Calienta comida en el microondas."
-          }
-        },
-        {
-          "id": "p_08",
-          "en": "Toaster",
-          "es": "Tostadora",
-          "pronunciation": "/ˈtoʊ.stɚ/",
-          "grammar_type": "noun",
-          "image_key": "img_toaster",
-          "context": {
-            "en_sentence": "Make toast in the toaster.",
-            "es_sentence": "Haz tostadas en la tostadora."
-          }
-        },
-        {
-          "id": "p_09",
-          "en": "Fork",
-          "es": "Tenedor",
-          "pronunciation": "/fɔːrk/",
-          "grammar_type": "noun",
-          "image_key": "img_fork",
-          "context": {
-            "en_sentence": "Use a fork for meat.",
-            "es_sentence": "Usa tenedor para la carne."
-          }
-        },
-        {
-          "id": "p_10",
-          "en": "Knife",
-          "es": "Cuchillo",
-          "pronunciation": "/naɪf/",
-          "grammar_type": "noun",
-          "image_key": "img_knife",
-          "context": {
-            "en_sentence": "Cut bread with a knife.",
-            "es_sentence": "Corta pan con cuchillo."
-          }
-        }
+        { "id": "p_01", "en": "Fridge", "es": "Refrigerador" },
+        { "id": "p_02", "en": "Freezer", "es": "Congelador" },
+        { "id": "p_03", "en": "Oven", "es": "Horno" },
+        { "id": "p_04", "en": "Stove", "es": "Estufa" },
+        { "id": "p_05", "en": "Microwave", "es": "Microondas" },
+        { "id": "p_06", "en": "Dishwasher", "es": "Lavavajillas" },
+        { "id": "p_07", "en": "Toaster", "es": "Tostadora" },
+        { "id": "p_08", "en": "Blender", "es": "Licuadora" },
+        { "id": "p_09", "en": "Mixer", "es": "Batidora" },
+        { "id": "p_10", "en": "Kettle", "es": "Tetera eléctrica" },
+        { "id": "p_11", "en": "Coffee maker", "es": "Cafetera" },
+        { "id": "p_12", "en": "Sink", "es": "Fregadero" },
+        { "id": "p_13", "en": "Faucet", "es": "Grifo" },
+        { "id": "p_14", "en": "Counter", "es": "Encimera" },
+        { "id": "p_15", "en": "Cabinet", "es": "Alacena" },
+        { "id": "p_16", "en": "Drawer", "es": "Cajón" },
+        { "id": "p_17", "en": "Plate", "es": "Plato" },
+        { "id": "p_18", "en": "Bowl", "es": "Tazón" },
+        { "id": "p_19", "en": "Cup", "es": "Taza" },
+        { "id": "p_20", "en": "Glass", "es": "Vaso" },
+        { "id": "p_21", "en": "Mug", "es": "Tazón (mug)" },
+        { "id": "p_22", "en": "Fork", "es": "Tenedor" },
+        { "id": "p_23", "en": "Knife", "es": "Cuchillo" },
+        { "id": "p_24", "en": "Spoon", "es": "Cuchara" },
+        { "id": "p_25", "en": "Teaspoon", "es": "Cucharadita" },
+        { "id": "p_26", "en": "Pan", "es": "Sartén" },
+        { "id": "p_27", "en": "Pot", "es": "Olla" },
+        { "id": "p_28", "en": "Lid", "es": "Tapa" },
+        { "id": "p_29", "en": "Tray", "es": "Bandeja" },
+        { "id": "p_30", "en": "Cutting board", "es": "Tabla de picar" },
+        { "id": "p_31", "en": "Grater", "es": "Rallador" },
+        { "id": "p_32", "en": "Peeler", "es": "Pelador" },
+        { "id": "p_33", "en": "Whisk", "es": "Batidor de globo" },
+        { "id": "p_34", "en": "Spatula", "es": "Espátula" },
+        { "id": "p_35", "en": "Ladle", "es": "Cucharón" },
+        { "id": "p_36", "en": "Tongs", "es": "Pinzas" },
+        { "id": "p_37", "en": "Can opener", "es": "Abrelatas" },
+        { "id": "p_38", "en": "Corkscrew", "es": "Sacacorchos" },
+        { "id": "p_39", "en": "Colander", "es": "Colador" },
+        { "id": "p_40", "en": "Apron", "es": "Delantal" },
+        { "id": "p_41", "en": "Napkin", "es": "Servilleta" },
+        { "id": "p_42", "en": "Tablecloth", "es": "Mantel" },
+        { "id": "p_43", "en": "Jar", "es": "Frasco" },
+        { "id": "p_44", "en": "Bottle", "es": "Botella" },
+        { "id": "p_45", "en": "Jug", "es": "Jarra" },
+        { "id": "p_46", "en": "Trash can", "es": "Bote de basura" },
+        { "id": "p_47", "en": "Sponge", "es": "Esponja" },
+        { "id": "p_48", "en": "Soap", "es": "Jabón" },
+        { "id": "p_49", "en": "Broom", "es": "Escoba" },
+        { "id": "p_50", "en": "Mop", "es": "Trapeador" }
       ]
     }
   ]

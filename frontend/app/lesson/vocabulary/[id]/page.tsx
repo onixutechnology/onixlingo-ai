@@ -8,10 +8,6 @@ import { Loader2, ArrowLeft, AlertTriangle, X } from 'lucide-react';
 import PairingDrill from '@/components/lesson/vocabulary/PairingDrill'; 
 import LessonComplete from '@/components/lesson/LessonComplete';
 
-// Placeholders (descomentar cuando crees estos archivos)
-// import FlashcardFlow from '@/components/lesson/vocabulary/FlashcardFlow';
-// import SentenceBuilder from '@/components/lesson/vocabulary/SentenceBuilder';
-
 export default function VocabularyLessonPage() {
   const params = useParams();
   const router = useRouter();
@@ -96,12 +92,25 @@ export default function VocabularyLessonPage() {
     />
   );
 
-  // --- PREPARACIÓN DE DATOS ---
+  // --- PREPARACIÓN INTELIGENTE DE DATOS ---
   const currentStage = lesson.stages[currentStageIndex];
   
-  const stagePayload = currentStage.data_refs 
-    ? currentStage.data_refs.map((refId: string) => lesson.content_data.find((item: any) => item.id === refId)).filter(Boolean)
-    : lesson.content_data;
+  let stagePayload: any[] = [];
+  
+  // A. Prioridad: Pares directos en la etapa (JSON nuevo de 50 palabras)
+  if (currentStage.pairs && Array.isArray(currentStage.pairs)) {
+    stagePayload = currentStage.pairs;
+  } 
+  // B. Fallback: Referencias a content_data (JSON antiguo complejo)
+  else if (currentStage.data_refs && lesson.content_data) {
+    stagePayload = currentStage.data_refs
+      .map((refId: string) => lesson.content_data.find((item: any) => item.id === refId))
+      .filter(Boolean);
+  }
+  // C. Último recurso: Todo content_data disponible
+  else if (lesson.content_data) {
+    stagePayload = lesson.content_data;
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
@@ -144,9 +153,8 @@ export default function VocabularyLessonPage() {
             stage={currentStage}  
             pairs={stagePayload}
             onComplete={handleStageComplete}
-            // 👇 SOLUCIÓN: Agregamos estas dos funciones para evitar el crash
-            onCorrect={() => console.log('Correct Match!')} 
-            onError={() => console.log('Wrong Match!')}
+            onCorrect={() => {}} 
+            onError={() => {}}
             isPro={true} 
           />
         )}

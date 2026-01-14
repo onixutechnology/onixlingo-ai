@@ -1,46 +1,74 @@
 {
   "id": "business_mod_04",
-  "title": "Business Pro A1-4",
-  "description": "Mastering business vocabulary. Level A1, Part 4.",
+  "category_id": "business",
+  "title": "Business Pro: Time & Status",
+  "description": "Vocabulario para gestionar el tiempo, horarios y describir el estado de las tareas.",
   "level": "A1",
-  "total_xp": 100,
+  "part": 4,
+  "total_xp": 500,
+  "status": "locked",
+  "theme": {
+    "icon": "Briefcase",
+    "color": "blue"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_04",
+      "id": "drill_business_mod_04_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Schedule",
+      "description": "Conecta conceptos temporales y estados.",
+      "instruction": "Empareja el término con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Busy",
-          "es": "Ocupado"
-        },
-        {
-          "id": "p_1",
-          "en": "Late",
-          "es": "Tarde"
-        },
-        {
-          "id": "p_2",
-          "en": "Early",
-          "es": "Temprano"
-        },
-        {
-          "id": "p_3",
-          "en": "Open",
-          "es": "Abierto"
-        },
-        {
-          "id": "p_4",
-          "en": "Close",
-          "es": "Cerrado"
-        },
-        {
-          "id": "p_5",
-          "en": "Sell",
-          "es": "Vender"
-        }
+        { "id": "p_01", "en": "Time", "es": "Tiempo" },
+        { "id": "p_02", "en": "Hour", "es": "Hora" },
+        { "id": "p_03", "en": "Minute", "es": "Minuto" },
+        { "id": "p_04", "en": "Day", "es": "Día" },
+        { "id": "p_05", "en": "Week", "es": "Semana" },
+        { "id": "p_06", "en": "Month", "es": "Mes" },
+        { "id": "p_07", "en": "Year", "es": "Año" },
+        { "id": "p_08", "en": "Today", "es": "Hoy" },
+        { "id": "p_09", "en": "Tomorrow", "es": "Mañana" },
+        { "id": "p_10", "en": "Yesterday", "es": "Ayer" },
+        { "id": "p_11", "en": "Now", "es": "Ahora" },
+        { "id": "p_12", "en": "Later", "es": "Más tarde" },
+        { "id": "p_13", "en": "Soon", "es": "Pronto" },
+        { "id": "p_14", "en": "Early", "es": "Temprano" },
+        { "id": "p_15", "en": "Late", "es": "Tarde" },
+        { "id": "p_16", "en": "Morning", "es": "Mañana" },
+        { "id": "p_17", "en": "Afternoon", "es": "Tarde" },
+        { "id": "p_18", "en": "Night", "es": "Noche" },
+        { "id": "p_19", "en": "Schedule", "es": "Horario" },
+        { "id": "p_20", "en": "Deadline", "es": "Fecha límite" },
+        { "id": "p_21", "en": "Busy", "es": "Ocupado" },
+        { "id": "p_22", "en": "Free", "es": "Libre" },
+        { "id": "p_23", "en": "Open", "es": "Abierto" },
+        { "id": "p_24", "en": "Closed", "es": "Cerrado" },
+        { "id": "p_25", "en": "Ready", "es": "Listo" },
+        { "id": "p_26", "en": "Done", "es": "Hecho" },
+        { "id": "p_27", "en": "Fast", "es": "Rápido" },
+        { "id": "p_28", "en": "Slow", "es": "Lento" },
+        { "id": "p_29", "en": "Easy", "es": "Fácil" },
+        { "id": "p_30", "en": "Hard", "es": "Difícil" },
+        { "id": "p_31", "en": "Big", "es": "Grande" },
+        { "id": "p_32", "en": "Small", "es": "Pequeño" },
+        { "id": "p_33", "en": "New", "es": "Nuevo" },
+        { "id": "p_34", "en": "Old", "es": "Viejo" },
+        { "id": "p_35", "en": "Good", "es": "Bueno" },
+        { "id": "p_36", "en": "Bad", "es": "Malo" },
+        { "id": "p_37", "en": "Right", "es": "Correcto" },
+        { "id": "p_38", "en": "Wrong", "es": "Incorrecto" },
+        { "id": "p_39", "en": "Full", "es": "Lleno" },
+        { "id": "p_40", "en": "Empty", "es": "Vacío" },
+        { "id": "p_41", "en": "To Start", "es": "Empezar" },
+        { "id": "p_42", "en": "To Stop", "es": "Parar" },
+        { "id": "p_43", "en": "To Finish", "es": "Terminar" },
+        { "id": "p_44", "en": "To Wait", "es": "Esperar" },
+        { "id": "p_45", "en": "To Change", "es": "Cambiar" },
+        { "id": "p_46", "en": "To Fix", "es": "Arreglar" },
+        { "id": "p_47", "en": "Daily", "es": "Diario" },
+        { "id": "p_48", "en": "Weekly", "es": "Semanal" },
+        { "id": "p_49", "en": "Plan", "es": "Plan" },
+        { "id": "p_50", "en": "Result", "es": "Resultado" }
       ]
     }
   ]

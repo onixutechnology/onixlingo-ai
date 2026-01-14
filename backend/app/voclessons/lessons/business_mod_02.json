@@ -1,46 +1,74 @@
 {
   "id": "business_mod_02",
-  "title": "Business Pro A1-2",
-  "description": "Mastering business vocabulary. Level A1, Part 2.",
+  "category_id": "business",
+  "title": "Business Pro: Daily Ops",
+  "description": "Vocabulario esencial de operaciones diarias: dinero, tiempo, herramientas y transacciones.",
   "level": "A1",
-  "total_xp": 100,
+  "part": 2,
+  "total_xp": 500,
+  "status": "locked",
+  "theme": {
+    "icon": "Briefcase",
+    "color": "blue"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_02",
+      "id": "drill_business_mod_02_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Commerce",
+      "description": "Conecta herramientas y conceptos comerciales básicos.",
+      "instruction": "Empareja la palabra de negocios con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Money",
-          "es": "Dinero"
-        },
-        {
-          "id": "p_1",
-          "en": "Pay",
-          "es": "Paga"
-        },
-        {
-          "id": "p_2",
-          "en": "Work",
-          "es": "Trabajo"
-        },
-        {
-          "id": "p_3",
-          "en": "Plan",
-          "es": "Plan"
-        },
-        {
-          "id": "p_4",
-          "en": "Date",
-          "es": "Cita"
-        },
-        {
-          "id": "p_5",
-          "en": "Note",
-          "es": "Nota"
-        }
+        { "id": "p_01", "en": "Money", "es": "Dinero" },
+        { "id": "p_02", "en": "Cash", "es": "Efectivo" },
+        { "id": "p_03", "en": "Card", "es": "Tarjeta" },
+        { "id": "p_04", "en": "Bank", "es": "Banco" },
+        { "id": "p_05", "en": "Bill", "es": "Factura / Cuenta" },
+        { "id": "p_06", "en": "Check", "es": "Cheque" },
+        { "id": "p_07", "en": "Price", "es": "Precio" },
+        { "id": "p_08", "en": "Cost", "es": "Costo" },
+        { "id": "p_09", "en": "Cheap", "es": "Barato" },
+        { "id": "p_10", "en": "Expensive", "es": "Caro" },
+        { "id": "p_11", "en": "Salary", "es": "Salario" },
+        { "id": "p_12", "en": "Bonus", "es": "Bono" },
+        { "id": "p_13", "en": "Tax", "es": "Impuesto" },
+        { "id": "p_14", "en": "Customer", "es": "Cliente (Consumidor)" },
+        { "id": "p_15", "en": "Shop", "es": "Tienda" },
+        { "id": "p_16", "en": "Market", "es": "Mercado" },
+        { "id": "p_17", "en": "Product", "es": "Producto" },
+        { "id": "p_18", "en": "Service", "es": "Servicio" },
+        { "id": "p_19", "en": "Order", "es": "Pedido" },
+        { "id": "p_20", "en": "Deal", "es": "Trato" },
+        { "id": "p_21", "en": "Pen", "es": "Bolígrafo" },
+        { "id": "p_22", "en": "Paper", "es": "Papel" },
+        { "id": "p_23", "en": "Notebook", "es": "Cuaderno" },
+        { "id": "p_24", "en": "File", "es": "Archivo" },
+        { "id": "p_25", "en": "Folder", "es": "Carpeta" },
+        { "id": "p_26", "en": "Document", "es": "Documento" },
+        { "id": "p_27", "en": "Copy", "es": "Copia" },
+        { "id": "p_28", "en": "Letter", "es": "Carta" },
+        { "id": "p_29", "en": "Envelope", "es": "Sobre" },
+        { "id": "p_30", "en": "Signature", "es": "Firma" },
+        { "id": "p_31", "en": "Computer", "es": "Computadora" },
+        { "id": "p_32", "en": "Keyboard", "es": "Teclado" },
+        { "id": "p_33", "en": "Mouse", "es": "Ratón" },
+        { "id": "p_34", "en": "Screen", "es": "Pantalla" },
+        { "id": "p_35", "en": "Internet", "es": "Internet" },
+        { "id": "p_36", "en": "Wifi", "es": "Wifi" },
+        { "id": "p_37", "en": "Password", "es": "Contraseña" },
+        { "id": "p_38", "en": "Login", "es": "Inicio de sesión" },
+        { "id": "p_39", "en": "Date", "es": "Fecha" },
+        { "id": "p_40", "en": "Calendar", "es": "Calendario" },
+        { "id": "p_41", "en": "Schedule", "es": "Horario" },
+        { "id": "p_42", "en": "Break", "es": "Descanso" },
+        { "id": "p_43", "en": "To Buy", "es": "Comprar" },
+        { "id": "p_44", "en": "To Sell", "es": "Vender" },
+        { "id": "p_45", "en": "To Pay", "es": "Pagar" },
+        { "id": "p_46", "en": "To Sign", "es": "Firmar" },
+        { "id": "p_47", "en": "To Print", "es": "Imprimir" },
+        { "id": "p_48", "en": "To Send", "es": "Enviar" },
+        { "id": "p_49", "en": "To Get", "es": "Conseguir / Recibir" },
+        { "id": "p_50", "en": "To Need", "es": "Necesitar" }
       ]
     }
   ]

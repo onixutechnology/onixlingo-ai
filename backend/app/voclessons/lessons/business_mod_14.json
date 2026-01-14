@@ -1,46 +1,74 @@
 {
   "id": "business_mod_14",
-  "title": "Business Pro B2-2",
-  "description": "Mastering business vocabulary. Level B2, Part 2.",
+  "category_id": "business",
+  "title": "Business Pro: Deals & Networks",
+  "description": "Vocabulario avanzado sobre alianzas estratégicas, networking, contratos y aspectos legales.",
   "level": "B2",
-  "total_xp": 160,
+  "part": 2,
+  "total_xp": 500,
+  "status": "locked",
+  "theme": {
+    "icon": "Handshake",
+    "color": "purple"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_14",
+      "id": "drill_business_mod_14_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Partnerships",
+      "description": "Conecta términos de alianzas y legalidad.",
+      "instruction": "Empareja el término legal o estratégico con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Revenue",
-          "es": "Ingresos brutos"
-        },
-        {
-          "id": "p_1",
-          "en": "Strategy",
-          "es": "Estrategia"
-        },
-        {
-          "id": "p_2",
-          "en": "Investor",
-          "es": "Inversor"
-        },
-        {
-          "id": "p_3",
-          "en": "Partner",
-          "es": "Socio"
-        },
-        {
-          "id": "p_4",
-          "en": "Contract",
-          "es": "Contrato"
-        },
-        {
-          "id": "p_5",
-          "en": "Network",
-          "es": "Red"
-        }
+        { "id": "p_01", "en": "Revenue", "es": "Ingresos brutos" },
+        { "id": "p_02", "en": "Strategy", "es": "Estrategia" },
+        { "id": "p_03", "en": "Investor", "es": "Inversor" },
+        { "id": "p_04", "en": "Partner", "es": "Socio" },
+        { "id": "p_05", "en": "Partnership", "es": "Asociación / Sociedad" },
+        { "id": "p_06", "en": "Alliance", "es": "Alianza" },
+        { "id": "p_07", "en": "Joint venture", "es": "Empresa conjunta" },
+        { "id": "p_08", "en": "Collaboration", "es": "Colaboración" },
+        { "id": "p_09", "en": "Synergy", "es": "Sinergia" },
+        { "id": "p_10", "en": "Network", "es": "Red (de contactos)" },
+        { "id": "p_11", "en": "Networking", "es": "Creación de contactos" },
+        { "id": "p_12", "en": "Contact", "es": "Contacto" },
+        { "id": "p_13", "en": "Referral", "es": "Referencia / Recomendación" },
+        { "id": "p_14", "en": "Reputation", "es": "Reputación" },
+        { "id": "p_15", "en": "Contract", "es": "Contrato" },
+        { "id": "p_16", "en": "Agreement", "es": "Acuerdo" },
+        { "id": "p_17", "en": "Clause", "es": "Cláusula" },
+        { "id": "p_18", "en": "Term", "es": "Término / Plazo" },
+        { "id": "p_19", "en": "Condition", "es": "Condición" },
+        { "id": "p_20", "en": "Provision", "es": "Disposición" },
+        { "id": "p_21", "en": "Obligation", "es": "Obligación" },
+        { "id": "p_22", "en": "Liability", "es": "Responsabilidad legal" },
+        { "id": "p_23", "en": "Warranty", "es": "Garantía" },
+        { "id": "p_24", "en": "Breach", "es": "Incumplimiento" },
+        { "id": "p_25", "en": "Dispute", "es": "Disputa" },
+        { "id": "p_26", "en": "Settlement", "es": "Acuerdo (resolución)" },
+        { "id": "p_27", "en": "Lawsuit", "es": "Demanda judicial" },
+        { "id": "p_28", "en": "Intellectual property", "es": "Propiedad intelectual" },
+        { "id": "p_29", "en": "Trademark", "es": "Marca registrada" },
+        { "id": "p_30", "en": "Patent", "es": "Patente" },
+        { "id": "p_31", "en": "Copyright", "es": "Derechos de autor" },
+        { "id": "p_32", "en": "License", "es": "Licencia" },
+        { "id": "p_33", "en": "NDA", "es": "Acuerdo de confidencialidad" },
+        { "id": "p_34", "en": "Confidentiality", "es": "Confidencialidad" },
+        { "id": "p_35", "en": "Startup", "es": "Empresa emergente" },
+        { "id": "p_36", "en": "Venture capital", "es": "Capital de riesgo" },
+        { "id": "p_37", "en": "Funding", "es": "Financiamiento" },
+        { "id": "p_38", "en": "Entrepreneur", "es": "Emprendedor" },
+        { "id": "p_39", "en": "Stake", "es": "Participación (en empresa)" },
+        { "id": "p_40", "en": "Binding", "es": "Vinculante" },
+        { "id": "p_41", "en": "Null", "es": "Nulo" },
+        { "id": "p_42", "en": "Valid", "es": "Válido" },
+        { "id": "p_43", "en": "To Negotiate", "es": "Negociar" },
+        { "id": "p_44", "en": "To Draft", "es": "Redactar (borrador)" },
+        { "id": "p_45", "en": "To Review", "es": "Revisar" },
+        { "id": "p_46", "en": "To Sign", "es": "Firmar" },
+        { "id": "p_47", "en": "To Renew", "es": "Renovar" },
+        { "id": "p_48", "en": "To Terminate", "es": "Rescindir / Terminar" },
+        { "id": "p_49", "en": "To Comply", "es": "Cumplir (normas)" },
+        { "id": "p_50", "en": "To Enforce", "es": "Hacer cumplir" }
       ]
     }
   ]

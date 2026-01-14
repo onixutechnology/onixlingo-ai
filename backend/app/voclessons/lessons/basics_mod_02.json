@@ -2,95 +2,73 @@
   "id": "basics_mod_02",
   "category_id": "basics",
   "title": "Kitchen & Dining Staples",
-  "description": "Ingredientes esenciales para cocinar y condimentos básicos de mesa.",
+  "description": "Ingredientes, utensilios y vocabulario esencial para sobrevivir en la cocina y restaurantes.",
   "level": "A1",
   "part": 2,
-  "total_xp": 150,
-  "status": "locked", 
+  "total_xp": 500,
+  "status": "locked",
   "theme": {
-    "icon": "Utensils", 
+    "icon": "Utensils",
     "color": "orange"
   },
   "stages": [
     {
       "id": "drill_basics_mod_02_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Ingredients",
-      "description": "Asocia los alimentos con sus nombres en inglés.",
-      "instruction": "Empareja el ingrediente con su traducción correcta.",
+      "title": "Neuro Link: Kitchen Mastery",
+      "description": "Domina los elementos de la cocina y el comedor.",
+      "instruction": "Empareja la palabra en inglés con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Egg",
-          "es": "Huevo",
-          "pronunciation": "/ɛɡ/",
-          "grammar_type": "noun",
-          "image_key": "img_egg",
-          "context": {
-            "en_sentence": "I eat a boiled egg for breakfast.",
-            "es_sentence": "Como un huevo cocido para el desayuno."
-          }
-        },
-        {
-          "id": "p_1",
-          "en": "Fish",
-          "es": "Pescado",
-          "pronunciation": "/fɪʃ/",
-          "grammar_type": "noun",
-          "image_key": "img_fish",
-          "context": {
-            "en_sentence": "Grilled fish is very healthy.",
-            "es_sentence": "El pescado a la parrilla es muy saludable."
-          }
-        },
-        {
-          "id": "p_2",
-          "en": "Meat",
-          "es": "Carne",
-          "pronunciation": "/miːt/",
-          "grammar_type": "noun",
-          "image_key": "img_meat",
-          "context": {
-            "en_sentence": "Do you eat meat or are you vegetarian?",
-            "es_sentence": "¿Comes carne o eres vegetariano?"
-          }
-        },
-        {
-          "id": "p_3",
-          "en": "Rice",
-          "es": "Arroz",
-          "pronunciation": "/raɪs/",
-          "grammar_type": "noun",
-          "image_key": "img_rice",
-          "context": {
-            "en_sentence": "A bowl of white rice, please.",
-            "es_sentence": "Un tazón de arroz blanco, por favor."
-          }
-        },
-        {
-          "id": "p_4",
-          "en": "Salt",
-          "es": "Sal",
-          "pronunciation": "/sɔːlt/",
-          "grammar_type": "noun",
-          "image_key": "img_salt",
-          "context": {
-            "en_sentence": "Pass the salt, please.",
-            "es_sentence": "Pásame la sal, por favor."
-          }
-        },
-        {
-          "id": "p_5",
-          "en": "Sugar",
-          "es": "Azúcar",
-          "pronunciation": "/ˈʃʊɡ.ər/",
-          "grammar_type": "noun",
-          "image_key": "img_sugar",
-          "context": {
-            "en_sentence": "I take my coffee with sugar.",
-            "es_sentence": "Tomo mi café con azúcar."
-          }
-        }
+        { "id": "p_01", "en": "Egg", "es": "Huevo" },
+        { "id": "p_02", "en": "Fish", "es": "Pescado" },
+        { "id": "p_03", "en": "Meat", "es": "Carne" },
+        { "id": "p_04", "en": "Rice", "es": "Arroz" },
+        { "id": "p_05", "en": "Salt", "es": "Sal" },
+        { "id": "p_06", "en": "Sugar", "es": "Azúcar" },
+        { "id": "p_07", "en": "Fork", "es": "Tenedor" },
+        { "id": "p_08", "en": "Knife", "es": "Cuchillo" },
+        { "id": "p_09", "en": "Spoon", "es": "Cuchara" },
+        { "id": "p_10", "en": "Plate", "es": "Plato" },
+        { "id": "p_11", "en": "Bowl", "es": "Tazón" },
+        { "id": "p_12", "en": "Glass", "es": "Vaso" },
+        { "id": "p_13", "en": "Cup", "es": "Taza" },
+        { "id": "p_14", "en": "Napkin", "es": "Servilleta" },
+        { "id": "p_15", "en": "Breakfast", "es": "Desayuno" },
+        { "id": "p_16", "en": "Lunch", "es": "Almuerzo" },
+        { "id": "p_17", "en": "Dinner", "es": "Cena" },
+        { "id": "p_18", "en": "Cheese", "es": "Queso" },
+        { "id": "p_19", "en": "Butter", "es": "Mantequilla" },
+        { "id": "p_20", "en": "Oil", "es": "Aceite" },
+        { "id": "p_21", "en": "Pepper", "es": "Pimienta" },
+        { "id": "p_22", "en": "Soup", "es": "Sopa" },
+        { "id": "p_23", "en": "Salad", "es": "Ensalada" },
+        { "id": "p_24", "en": "Chicken", "es": "Pollo" },
+        { "id": "p_25", "en": "Beef", "es": "Res" },
+        { "id": "p_26", "en": "Pork", "es": "Cerdo" },
+        { "id": "p_27", "en": "Potato", "es": "Papa" },
+        { "id": "p_28", "en": "Tomato", "es": "Tomate" },
+        { "id": "p_29", "en": "Onion", "es": "Cebolla" },
+        { "id": "p_30", "en": "Carrot", "es": "Zanahoria" },
+        { "id": "p_31", "en": "Fruit", "es": "Fruta" },
+        { "id": "p_32", "en": "Vegetable", "es": "Verdura" },
+        { "id": "p_33", "en": "Juice", "es": "Jugo" },
+        { "id": "p_34", "en": "Tea", "es": "Té" },
+        { "id": "p_35", "en": "Wine", "es": "Vino" },
+        { "id": "p_36", "en": "Beer", "es": "Cerveza" },
+        { "id": "p_37", "en": "Kitchen", "es": "Cocina" },
+        { "id": "p_38", "en": "Fridge", "es": "Refrigerador" },
+        { "id": "p_39", "en": "Oven", "es": "Horno" },
+        { "id": "p_40", "en": "Stove", "es": "Estufa" },
+        { "id": "p_41", "en": "Restaurant", "es": "Restaurante" },
+        { "id": "p_42", "en": "Menu", "es": "Menú" },
+        { "id": "p_43", "en": "Waiter", "es": "Mesero" },
+        { "id": "p_44", "en": "Bill", "es": "Cuenta" },
+        { "id": "p_45", "en": "To Cook", "es": "Cocinar" },
+        { "id": "p_46", "en": "To Cut", "es": "Cortar" },
+        { "id": "p_47", "en": "To Wash", "es": "Lavar" },
+        { "id": "p_48", "en": "Delicious", "es": "Delicioso" },
+        { "id": "p_49", "en": "Sweet", "es": "Dulce" },
+        { "id": "p_50", "en": "Spicy", "es": "Picante" }
       ]
     }
   ]

@@ -1,12 +1,12 @@
 {
   "id": "basics_mod_07",
   "category_id": "basics",
-  "title": "Life Essentials: Family",
-  "description": "Vocabulario esencial de familia y relaciones. Nivel A2, Parte 3.",
+  "title": "Family & Relationships",
+  "description": "Vocabulario extendido de familia, amigos, estado civil y etapas de la vida.",
   "level": "A2",
   "part": 3,
-  "total_xp": 180,
-  "status": "unlocked",
+  "total_xp": 500,
+  "status": "locked",
   "theme": {
     "icon": "Family",
     "color": "pink"
@@ -15,130 +15,60 @@
     {
       "id": "drill_basics_mod_07_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Family",
-      "description": "Conecta los miembros de la familia del inglés con su significado.",
-      "instruction": "Empareja la palabra en inglés con su relación familiar en español.",
+      "title": "Neuro Link: Connections",
+      "description": "Conecta los vínculos familiares y sociales.",
+      "instruction": "Empareja la persona con su relación en español.",
       "pairs": [
-        {
-          "id": "p_01",
-          "en": "Family",
-          "es": "Familia",
-          "pronunciation": "/ˈfæm.əl.i/",
-          "grammar_type": "noun",
-          "image_key": "img_family",
-          "context": {
-            "en_sentence": "My family is big.",
-            "es_sentence": "Mi familia es grande."
-          }
-        },
-        {
-          "id": "p_02",
-          "en": "Mother",
-          "es": "Madre",
-          "pronunciation": "/ˈmʌð.ɚ/",
-          "grammar_type": "noun",
-          "image_key": "img_mother",
-          "context": {
-            "en_sentence": "My mother cooks good food.",
-            "es_sentence": "Mi madre cocina buena comida."
-          }
-        },
-        {
-          "id": "p_03",
-          "en": "Father",
-          "es": "Padre",
-          "pronunciation": "/ˈfɑː.ðɚ/",
-          "grammar_type": "noun",
-          "image_key": "img_father",
-          "context": {
-            "en_sentence": "My father drives a car.",
-            "es_sentence": "Mi padre conduce un coche."
-          }
-        },
-        {
-          "id": "p_04",
-          "en": "Sister",
-          "es": "Hermana",
-          "pronunciation": "/ˈsɪs.tɚ/",
-          "grammar_type": "noun",
-          "image_key": "img_sister",
-          "context": {
-            "en_sentence": "My sister has a red bike.",
-            "es_sentence": "Mi hermana tiene una bici roja."
-          }
-        },
-        {
-          "id": "p_05",
-          "en": "Brother",
-          "es": "Hermano",
-          "pronunciation": "/ˈbrʌð.ɚ/",
-          "grammar_type": "noun",
-          "image_key": "img_brother",
-          "context": {
-            "en_sentence": "My brother likes trains.",
-            "es_sentence": "Mi hermano quiere trenes."
-          }
-        },
-        {
-          "id": "p_06",
-          "en": "Friend",
-          "es": "Amigo",
-          "pronunciation": "/frend/",
-          "grammar_type": "noun",
-          "image_key": "img_friend",
-          "context": {
-            "en_sentence": "My friend has a black cat.",
-            "es_sentence": "Mi amigo tiene un gato negro."
-          }
-        },
-        {
-          "id": "p_07",
-          "en": "Son",
-          "es": "Hijo",
-          "pronunciation": "/sʌn/",
-          "grammar_type": "noun",
-          "image_key": "img_son",
-          "context": {
-            "en_sentence": "Her son is five years old.",
-            "es_sentence": "Su hijo tiene cinco años."
-          }
-        },
-        {
-          "id": "p_08",
-          "en": "Daughter",
-          "es": "Hija",
-          "pronunciation": "/ˈdɔː.t̬ɚ/",
-          "grammar_type": "noun",
-          "image_key": "img_daughter",
-          "context": {
-            "en_sentence": "Their daughter drinks milk.",
-            "es_sentence": "Su hija bebe leche."
-          }
-        },
-        {
-          "id": "p_09",
-          "en": "Grandmother",
-          "es": "Abuela",
-          "pronunciation": "/ˈɡræn.mʌð.ɚ/",
-          "grammar_type": "noun",
-          "image_key": "img_grandmother",
-          "context": {
-            "en_sentence": "My grandmother tells stories.",
-            "es_sentence": "Mi abuela cuenta historias."
-          }
-        },
-        {
-          "id": "p_10",
-          "en": "Grandfather",
-          "es": "Abuelo",
-          "pronunciation": "/ˈɡræn.fɑː.ðɚ/",
-          "grammar_type": "noun",
-          "image_key": "img_grandfather",
-          "context": {
-            "en_sentence": "My grandfather likes coffee.",
-            "es_sentence": "Mi abuelo quiere café."
-          }
-        }
+        { "id": "p_01", "en": "Family", "es": "Familia" },
+        { "id": "p_02", "en": "Mother", "es": "Madre" },
+        { "id": "p_03", "en": "Father", "es": "Padre" },
+        { "id": "p_04", "en": "Parents", "es": "Padres" },
+        { "id": "p_05", "en": "Son", "es": "Hijo" },
+        { "id": "p_06", "en": "Daughter", "es": "Hija" },
+        { "id": "p_07", "en": "Brother", "es": "Hermano" },
+        { "id": "p_08", "en": "Sister", "es": "Hermana" },
+        { "id": "p_09", "en": "Grandmother", "es": "Abuela" },
+        { "id": "p_10", "en": "Grandfather", "es": "Abuelo" },
+        { "id": "p_11", "en": "Grandparents", "es": "Abuelos" },
+        { "id": "p_12", "en": "Grandson", "es": "Nieto" },
+        { "id": "p_13", "en": "Granddaughter", "es": "Nieta" },
+        { "id": "p_14", "en": "Aunt", "es": "Tía" },
+        { "id": "p_15", "en": "Uncle", "es": "Tío" },
+        { "id": "p_16", "en": "Cousin", "es": "Primo" },
+        { "id": "p_17", "en": "Nephew", "es": "Sobrino" },
+        { "id": "p_18", "en": "Niece", "es": "Sobrina" },
+        { "id": "p_19", "en": "Husband", "es": "Esposo" },
+        { "id": "p_20", "en": "Wife", "es": "Esposa" },
+        { "id": "p_21", "en": "Partner", "es": "Pareja" },
+        { "id": "p_22", "en": "Boyfriend", "es": "Novio" },
+        { "id": "p_23", "en": "Girlfriend", "es": "Novia" },
+        { "id": "p_24", "en": "Friend", "es": "Amigo" },
+        { "id": "p_25", "en": "Neighbor", "es": "Vecino" },
+        { "id": "p_26", "en": "Colleague", "es": "Colega" },
+        { "id": "p_27", "en": "Baby", "es": "Bebé" },
+        { "id": "p_28", "en": "Child", "es": "Niño" },
+        { "id": "p_29", "en": "Teenager", "es": "Adolescente" },
+        { "id": "p_30", "en": "Adult", "es": "Adulto" },
+        { "id": "p_31", "en": "Person", "es": "Persona" },
+        { "id": "p_32", "en": "People", "es": "Gente" },
+        { "id": "p_33", "en": "Man", "es": "Hombre" },
+        { "id": "p_34", "en": "Woman", "es": "Mujer" },
+        { "id": "p_35", "en": "Relative", "es": "Pariente" },
+        { "id": "p_36", "en": "Mother-in-law", "es": "Suegra" },
+        { "id": "p_37", "en": "Father-in-law", "es": "Suegro" },
+        { "id": "p_38", "en": "Stepfather", "es": "Padrastro" },
+        { "id": "p_39", "en": "Stepmother", "es": "Madrastra" },
+        { "id": "p_40", "en": "Single", "es": "Soltero" },
+        { "id": "p_41", "en": "Married", "es": "Casado" },
+        { "id": "p_42", "en": "Divorced", "es": "Divorciado" },
+        { "id": "p_43", "en": "Relationship", "es": "Relación" },
+        { "id": "p_44", "en": "Wedding", "es": "Boda" },
+        { "id": "p_45", "en": "To Love", "es": "Amar" },
+        { "id": "p_46", "en": "To Kiss", "es": "Besar" },
+        { "id": "p_47", "en": "To Hug", "es": "Abrazar" },
+        { "id": "p_48", "en": "To Help", "es": "Ayudar" },
+        { "id": "p_49", "en": "To Visit", "es": "Visitar" },
+        { "id": "p_50", "en": "Together", "es": "Juntos" }
       ]
     }
   ]

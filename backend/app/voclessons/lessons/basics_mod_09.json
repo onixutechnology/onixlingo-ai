@@ -2,10 +2,10 @@
   "id": "basics_mod_09",
   "category_id": "basics",
   "title": "Action & Movement",
-  "description": "Verbos esenciales para describir actividades físicas y necesidades diarias.",
+  "description": "Verbos dinámicos para describir actividades físicas, deportes y movimiento.",
   "level": "B1",
   "part": 1,
-  "total_xp": 140,
+  "total_xp": 500,
   "status": "locked",
   "theme": {
     "icon": "Activity",
@@ -15,82 +15,60 @@
     {
       "id": "drill_basics_mod_09_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Verbs of Motion",
-      "description": "Conecta la acción con su verbo correspondiente.",
-      "instruction": "Empareja el verbo en inglés con su traducción.",
+      "title": "Neuro Link: Motion",
+      "description": "Conecta la acción con el verbo preciso.",
+      "instruction": "Empareja el verbo en inglés con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Run",
-          "es": "Correr",
-          "pronunciation": "/rʌn/",
-          "grammar_type": "verb",
-          "image_key": "img_run",
-          "context": {
-            "en_sentence": "I run five kilometers every morning to stay fit.",
-            "es_sentence": "Corro cinco kilómetros cada mañana para mantenerme en forma."
-          }
-        },
-        {
-          "id": "p_1",
-          "en": "Jump",
-          "es": "Saltar",
-          "pronunciation": "/dʒʌmp/",
-          "grammar_type": "verb",
-          "image_key": "img_jump",
-          "context": {
-            "en_sentence": "The cat can jump over the high fence easily.",
-            "es_sentence": "El gato puede saltar sobre la cerca alta fácilmente."
-          }
-        },
-        {
-          "id": "p_2",
-          "en": "Swim",
-          "es": "Nadar",
-          "pronunciation": "/swɪm/",
-          "grammar_type": "verb",
-          "image_key": "img_swim",
-          "context": {
-            "en_sentence": "We prefer to swim in the ocean rather than the pool.",
-            "es_sentence": "Preferimos nadar en el océano en lugar de la piscina."
-          }
-        },
-        {
-          "id": "p_3",
-          "en": "Walk",
-          "es": "Caminar",
-          "pronunciation": "/wɔːk/",
-          "grammar_type": "verb",
-          "image_key": "img_walk",
-          "context": {
-            "en_sentence": "Let's walk to the store; the weather is nice.",
-            "es_sentence": "Caminemos a la tienda; el clima está agradable."
-          }
-        },
-        {
-          "id": "p_4",
-          "en": "Eat",
-          "es": "Comer",
-          "pronunciation": "/iːt/",
-          "grammar_type": "verb",
-          "image_key": "img_eat",
-          "context": {
-            "en_sentence": "It is important to eat a balanced diet for your health.",
-            "es_sentence": "Es importante comer una dieta balanceada para tu salud."
-          }
-        },
-        {
-          "id": "p_5",
-          "en": "Sleep",
-          "es": "Dormir",
-          "pronunciation": "/sliːp/",
-          "grammar_type": "verb",
-          "image_key": "img_sleep",
-          "context": {
-            "en_sentence": "I usually sleep eight hours to feel rested.",
-            "es_sentence": "Usualmente duermo ocho horas para sentirme descansado."
-          }
-        }
+        { "id": "p_01", "en": "Run", "es": "Correr" },
+        { "id": "p_02", "en": "Walk", "es": "Caminar" },
+        { "id": "p_03", "en": "Jump", "es": "Saltar" },
+        { "id": "p_04", "en": "Swim", "es": "Nadar" },
+        { "id": "p_05", "en": "Fly", "es": "Volar" },
+        { "id": "p_06", "en": "Climb", "es": "Escalar" },
+        { "id": "p_07", "en": "Dance", "es": "Bailar" },
+        { "id": "p_08", "en": "Fall", "es": "Caer" },
+        { "id": "p_09", "en": "Hit", "es": "Golpear" },
+        { "id": "p_10", "en": "Kick", "es": "Patear" },
+        { "id": "p_11", "en": "Throw", "es": "Lanzar" },
+        { "id": "p_12", "en": "Catch", "es": "Atrapar" },
+        { "id": "p_13", "en": "Push", "es": "Empujar" },
+        { "id": "p_14", "en": "Pull", "es": "Jalar" },
+        { "id": "p_15", "en": "Lift", "es": "Levantar" },
+        { "id": "p_16", "en": "Carry", "es": "Cargar" },
+        { "id": "p_17", "en": "Drop", "es": "Dejar caer" },
+        { "id": "p_18", "en": "Hold", "es": "Sostener" },
+        { "id": "p_19", "en": "Sit", "es": "Sentarse" },
+        { "id": "p_20", "en": "Stand", "es": "Pararse" },
+        { "id": "p_21", "en": "Lie down", "es": "Acostarse" },
+        { "id": "p_22", "en": "Wake up", "es": "Despertar" },
+        { "id": "p_23", "en": "Sleep", "es": "Dormir" },
+        { "id": "p_24", "en": "Eat", "es": "Comer" },
+        { "id": "p_25", "en": "Drink", "es": "Beber" },
+        { "id": "p_26", "en": "Cook", "es": "Cocinar" },
+        { "id": "p_27", "en": "Wash", "es": "Lavar" },
+        { "id": "p_28", "en": "Clean", "es": "Limpiar" },
+        { "id": "p_29", "en": "Drive", "es": "Conducir" },
+        { "id": "p_30", "en": "Ride", "es": "Montar" },
+        { "id": "p_31", "en": "Travel", "es": "Viajar" },
+        { "id": "p_32", "en": "Cross", "es": "Cruzar" },
+        { "id": "p_33", "en": "Turn", "es": "Girar" },
+        { "id": "p_34", "en": "Stop", "es": "Detenerse" },
+        { "id": "p_35", "en": "Start", "es": "Empezar" },
+        { "id": "p_36", "en": "Finish", "es": "Terminar" },
+        { "id": "p_37", "en": "Win", "es": "Ganar" },
+        { "id": "p_38", "en": "Lose", "es": "Perder" },
+        { "id": "p_39", "en": "Play", "es": "Jugar" },
+        { "id": "p_40", "en": "Work", "es": "Trabajar" },
+        { "id": "p_41", "en": "Study", "es": "Estudiar" },
+        { "id": "p_42", "en": "Read", "es": "Leer" },
+        { "id": "p_43", "en": "Write", "es": "Escribir" },
+        { "id": "p_44", "en": "Speak", "es": "Hablar" },
+        { "id": "p_45", "en": "Listen", "es": "Escuchar" },
+        { "id": "p_46", "en": "Watch", "es": "Mirar" },
+        { "id": "p_47", "en": "Open", "es": "Abrir" },
+        { "id": "p_48", "en": "Close", "es": "Cerrar" },
+        { "id": "p_49", "en": "Build", "es": "Construir" },
+        { "id": "p_50", "en": "Break", "es": "Romper" }
       ]
     }
   ]

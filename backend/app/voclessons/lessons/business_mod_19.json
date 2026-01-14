@@ -1,46 +1,74 @@
 {
   "id": "business_mod_19",
-  "title": "Business Pro C1-3",
-  "description": "Mastering business vocabulary. Level C1, Part 3.",
+  "category_id": "business",
+  "title": "Business Pro: Econ & Risk",
+  "description": "Vocabulario C1 sobre economía de mercado, riesgos financieros, estructuras legales y tendencias macroeconómicas.",
   "level": "C1",
-  "total_xp": 180,
+  "part": 3,
+  "total_xp": 600,
+  "status": "locked",
+  "theme": {
+    "icon": "Globe",
+    "color": "gold"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_19",
+      "id": "drill_business_mod_19_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Market Dynamics",
+      "description": "Conecta términos económicos y de riesgo.",
+      "instruction": "Empareja el término económico o legal con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Monopoly",
-          "es": "Monopolio"
-        },
-        {
-          "id": "p_1",
-          "en": "Subsidiary",
-          "es": "Filial"
-        },
-        {
-          "id": "p_2",
-          "en": "Lucrative",
-          "es": "Lucrativo"
-        },
-        {
-          "id": "p_3",
-          "en": "Insolvent",
-          "es": "Insolvente"
-        },
-        {
-          "id": "p_4",
-          "en": "Commodity",
-          "es": "Materia prima"
-        },
-        {
-          "id": "p_5",
-          "en": "Fluctuate",
-          "es": "Fluctuar"
-        }
+        { "id": "p_01", "en": "Monopoly", "es": "Monopolio" },
+        { "id": "p_02", "en": "Oligopoly", "es": "Oligopolio" },
+        { "id": "p_03", "en": "Subsidiary", "es": "Filial / Subsidiaria" },
+        { "id": "p_04", "en": "Conglomerate", "es": "Conglomerado" },
+        { "id": "p_05", "en": "Consortium", "es": "Consorcio" },
+        { "id": "p_06", "en": "Commodity", "es": "Materia prima / Mercancía" },
+        { "id": "p_07", "en": "Franchise", "es": "Franquicia" },
+        { "id": "p_08", "en": "Cartel", "es": "Cártel" },
+        { "id": "p_09", "en": "Tariff", "es": "Arancel" },
+        { "id": "p_10", "en": "Quota", "es": "Cuota (de importación/mercado)" },
+        { "id": "p_11", "en": "Embargo", "es": "Embargo comercial" },
+        { "id": "p_12", "en": "Subsidy", "es": "Subsidio / Subvención" },
+        { "id": "p_13", "en": "Insolvent", "es": "Insolvente" },
+        { "id": "p_14", "en": "Solvent", "es": "Solvente" },
+        { "id": "p_15", "en": "Bankrupt", "es": "En bancarrota" },
+        { "id": "p_16", "en": "Liquidation", "es": "Liquidación" },
+        { "id": "p_17", "en": "Lucrative", "es": "Lucrativo" },
+        { "id": "p_18", "en": "Deficit", "es": "Déficit" },
+        { "id": "p_19", "en": "Surplus", "es": "Superávit" },
+        { "id": "p_20", "en": "Volatility", "es": "Volatilidad" },
+        { "id": "p_21", "en": "Fluctuation", "es": "Fluctuación" },
+        { "id": "p_22", "en": "Speculation", "es": "Especulación" },
+        { "id": "p_23", "en": "Recession", "es": "Recesión" },
+        { "id": "p_24", "en": "Depression", "es": "Depresión (económica)" },
+        { "id": "p_25", "en": "Inflation", "es": "Inflación" },
+        { "id": "p_26", "en": "Deflation", "es": "Deflación" },
+        { "id": "p_27", "en": "Interest rate", "es": "Tasa de interés" },
+        { "id": "p_28", "en": "Exchange rate", "es": "Tipo de cambio" },
+        { "id": "p_29", "en": "GDP", "es": "PIB (Producto Interno Bruto)" },
+        { "id": "p_30", "en": "To Fluctuate", "es": "Fluctuar" },
+        { "id": "p_31", "en": "To Plummet", "es": "Desplomarse / Caer en picada" },
+        { "id": "p_32", "en": "To Soar", "es": "Dispararse (subir)" },
+        { "id": "p_33", "en": "To Stabilize", "es": "Estabilizar" },
+        { "id": "p_34", "en": "To Privatize", "es": "Privatizar" },
+        { "id": "p_35", "en": "To Deregulate", "es": "Desregular" },
+        { "id": "p_36", "en": "Litigation", "es": "Litigio" },
+        { "id": "p_37", "en": "Arbitration", "es": "Arbitraje" },
+        { "id": "p_38", "en": "Liability", "es": "Responsabilidad civil / Pasivo" },
+        { "id": "p_39", "en": "Loophole", "es": "Vacío legal" },
+        { "id": "p_40", "en": "Jurisdiction", "es": "Jurisdicción" },
+        { "id": "p_41", "en": "Settlement", "es": "Acuerdo (resolución legal)" },
+        { "id": "p_42", "en": "Verdict", "es": "Veredicto" },
+        { "id": "p_43", "en": "Viable", "es": "Viable" },
+        { "id": "p_44", "en": "Feasible", "es": "Factible" },
+        { "id": "p_45", "en": "Tangible", "es": "Tangible" },
+        { "id": "p_46", "en": "Intangible", "es": "Intangible" },
+        { "id": "p_47", "en": "Fiscal", "es": "Fiscal" },
+        { "id": "p_48", "en": "Monetary", "es": "Monetario" },
+        { "id": "p_49", "en": "Incentive", "es": "Incentivo" },
+        { "id": "p_50", "en": "Momentum", "es": "Impulso / Ímpetu" }
       ]
     }
   ]

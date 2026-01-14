@@ -1,46 +1,74 @@
 {
   "id": "business_mod_09",
-  "title": "Business Pro B1-1",
-  "description": "Mastering business vocabulary. Level B1, Part 1.",
+  "category_id": "business",
+  "title": "Business Pro: Strategy & Ops",
+  "description": "Vocabulario intermedio de gestión, estrategia, planificación y finanzas corporativas.",
   "level": "B1",
-  "total_xp": 140,
+  "part": 1,
+  "total_xp": 500,
+  "status": "locked",
+  "theme": {
+    "icon": "Briefcase",
+    "color": "indigo"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_09",
+      "id": "drill_business_mod_09_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Management",
+      "description": "Conecta conceptos de gestión y estrategia.",
+      "instruction": "Empareja el término estratégico con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Budget",
-          "es": "Presupuesto"
-        },
-        {
-          "id": "p_1",
-          "en": "Deadline",
-          "es": "Fecha límite"
-        },
-        {
-          "id": "p_2",
-          "en": "Goal",
-          "es": "Meta"
-        },
-        {
-          "id": "p_3",
-          "en": "Brand",
-          "es": "Marca"
-        },
-        {
-          "id": "p_4",
-          "en": "Launch",
-          "es": "Lanzamiento"
-        },
-        {
-          "id": "p_5",
-          "en": "Risk",
-          "es": "Riesgo"
-        }
+        { "id": "p_01", "en": "Strategy", "es": "Estrategia" },
+        { "id": "p_02", "en": "Tactic", "es": "Táctica" },
+        { "id": "p_03", "en": "Goal", "es": "Meta" },
+        { "id": "p_04", "en": "Objective", "es": "Objetivo" },
+        { "id": "p_05", "en": "Target", "es": "Blanco / Objetivo (numérico)" },
+        { "id": "p_06", "en": "Budget", "es": "Presupuesto" },
+        { "id": "p_07", "en": "Forecast", "es": "Pronóstico / Previsión" },
+        { "id": "p_08", "en": "Deadline", "es": "Fecha límite" },
+        { "id": "p_09", "en": "Timeline", "es": "Cronograma / Línea de tiempo" },
+        { "id": "p_10", "en": "Milestone", "es": "Hito" },
+        { "id": "p_11", "en": "Phase", "es": "Fase" },
+        { "id": "p_12", "en": "Launch", "es": "Lanzamiento" },
+        { "id": "p_13", "en": "Risk", "es": "Riesgo" },
+        { "id": "p_14", "en": "Challenge", "es": "Desafío / Reto" },
+        { "id": "p_15", "en": "Opportunity", "es": "Oportunidad" },
+        { "id": "p_16", "en": "Solution", "es": "Solución" },
+        { "id": "p_17", "en": "Resource", "es": "Recurso" },
+        { "id": "p_18", "en": "Asset", "es": "Activo" },
+        { "id": "p_19", "en": "Liability", "es": "Pasivo" },
+        { "id": "p_20", "en": "Revenue", "es": "Ingresos" },
+        { "id": "p_21", "en": "Expense", "es": "Gasto" },
+        { "id": "p_22", "en": "Profit", "es": "Beneficio / Ganancia" },
+        { "id": "p_23", "en": "Margin", "es": "Margen" },
+        { "id": "p_24", "en": "Investment", "es": "Inversión" },
+        { "id": "p_25", "en": "Return", "es": "Retorno (ROI)" },
+        { "id": "p_26", "en": "Market", "es": "Mercado" },
+        { "id": "p_27", "en": "Share", "es": "Cuota / Acción" },
+        { "id": "p_28", "en": "Competitor", "es": "Competidor" },
+        { "id": "p_29", "en": "Brand", "es": "Marca" },
+        { "id": "p_30", "en": "Trend", "es": "Tendencia" },
+        { "id": "p_31", "en": "Growth", "es": "Crecimiento" },
+        { "id": "p_32", "en": "Decline", "es": "Declive / Caída" },
+        { "id": "p_33", "en": "Data", "es": "Datos" },
+        { "id": "p_34", "en": "Analysis", "es": "Análisis" },
+        { "id": "p_35", "en": "Report", "es": "Informe" },
+        { "id": "p_36", "en": "Feedback", "es": "Retroalimentación" },
+        { "id": "p_37", "en": "Review", "es": "Revisión / Reseña" },
+        { "id": "p_38", "en": "Performance", "es": "Rendimiento / Desempeño" },
+        { "id": "p_39", "en": "Quality", "es": "Calidad" },
+        { "id": "p_40", "en": "Standard", "es": "Estándar" },
+        { "id": "p_41", "en": "To Manage", "es": "Gestionar / Administrar" },
+        { "id": "p_42", "en": "To Organize", "es": "Organizar" },
+        { "id": "p_43", "en": "To Develop", "es": "Desarrollar" },
+        { "id": "p_44", "en": "To Improve", "es": "Mejorar" },
+        { "id": "p_45", "en": "To Increase", "es": "Aumentar" },
+        { "id": "p_46", "en": "To Decrease", "es": "Disminuir" },
+        { "id": "p_47", "en": "To Solve", "es": "Resolver" },
+        { "id": "p_48", "en": "Efficient", "es": "Eficiente" },
+        { "id": "p_49", "en": "Effective", "es": "Efectivo" },
+        { "id": "p_50", "en": "Professional", "es": "Profesional" }
       ]
     }
   ]

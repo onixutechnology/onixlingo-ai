@@ -1,46 +1,74 @@
 {
   "id": "business_mod_18",
-  "title": "Business Pro C1-2",
-  "description": "Mastering business vocabulary. Level C1, Part 2.",
+  "category_id": "business",
+  "title": "Business Pro: Ops & Strategy",
+  "description": "Vocabulario C1 sobre gestión operativa, eficiencia, planificación estratégica y control de calidad.",
   "level": "C1",
-  "total_xp": 180,
+  "part": 2,
+  "total_xp": 600,
+  "status": "locked",
+  "theme": {
+    "icon": "Activity",
+    "color": "gold"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_18",
+      "id": "drill_business_mod_18_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Operations",
+      "description": "Conecta términos de operaciones y estrategia.",
+      "instruction": "Empareja el término operativo con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Overhead",
-          "es": "Gastos generales"
-        },
-        {
-          "id": "p_1",
-          "en": "Benchmark",
-          "es": "Referencia"
-        },
-        {
-          "id": "p_2",
-          "en": "Outsource",
-          "es": "Subcontratar"
-        },
-        {
-          "id": "p_3",
-          "en": "Audit",
-          "es": "Auditoría"
-        },
-        {
-          "id": "p_4",
-          "en": "Portfolio",
-          "es": "Cartera"
-        },
-        {
-          "id": "p_5",
-          "en": "Equity",
-          "es": "Patrimonio"
-        }
+        { "id": "p_01", "en": "Overhead", "es": "Gastos generales" },
+        { "id": "p_02", "en": "Benchmark", "es": "Referencia / Punto de comparación" },
+        { "id": "p_03", "en": "Outsource", "es": "Subcontratar / Tercerizar" },
+        { "id": "p_04", "en": "Offshore", "es": "Deslocalizar (en el extranjero)" },
+        { "id": "p_05", "en": "Audit", "es": "Auditoría" },
+        { "id": "p_06", "en": "Portfolio", "es": "Cartera (de productos/inversiones)" },
+        { "id": "p_07", "en": "Equity", "es": "Patrimonio / Capital propio" },
+        { "id": "p_08", "en": "Procurement", "es": "Adquisiciones / Compras" },
+        { "id": "p_09", "en": "Logistics", "es": "Logística" },
+        { "id": "p_10", "en": "Supply chain", "es": "Cadena de suministro" },
+        { "id": "p_11", "en": "Inventory", "es": "Inventario" },
+        { "id": "p_12", "en": "Backlog", "es": "Trabajo acumulado / Pedidos pendientes" },
+        { "id": "p_13", "en": "Bottleneck", "es": "Cuello de botella" },
+        { "id": "p_14", "en": "Capacity", "es": "Capacidad" },
+        { "id": "p_15", "en": "Throughput", "es": "Rendimiento / Volumen de producción" },
+        { "id": "p_16", "en": "Efficiency", "es": "Eficiencia" },
+        { "id": "p_17", "en": "Productivity", "es": "Productividad" },
+        { "id": "p_18", "en": "Workflow", "es": "Flujo de trabajo" },
+        { "id": "p_19", "en": "Process", "es": "Proceso" },
+        { "id": "p_20", "en": "Procedure", "es": "Procedimiento" },
+        { "id": "p_21", "en": "Protocol", "es": "Protocolo" },
+        { "id": "p_22", "en": "Standardization", "es": "Estandarización" },
+        { "id": "p_23", "en": "Quality assurance", "es": "Garantía de calidad (QA)" },
+        { "id": "p_24", "en": "Compliance", "es": "Cumplimiento normativo" },
+        { "id": "p_25", "en": "Regulation", "es": "Regulación" },
+        { "id": "p_26", "en": "Bureaucracy", "es": "Burocracia" },
+        { "id": "p_27", "en": "Hierarchy", "es": "Jerarquía" },
+        { "id": "p_28", "en": "Infrastructure", "es": "Infraestructura" },
+        { "id": "p_29", "en": "Facility", "es": "Instalación" },
+        { "id": "p_30", "en": "Maintenance", "es": "Mantenimiento" },
+        { "id": "p_31", "en": "R&D (Research & Development)", "es": "I+D (Investigación y Desarrollo)" },
+        { "id": "p_32", "en": "Innovation", "es": "Innovación" },
+        { "id": "p_33", "en": "Patent", "es": "Patente" },
+        { "id": "p_34", "en": "Prototype", "es": "Prototipo" },
+        { "id": "p_35", "en": "Launch", "es": "Lanzamiento" },
+        { "id": "p_36", "en": "Deadline", "es": "Fecha límite" },
+        { "id": "p_37", "en": "Milestone", "es": "Hito" },
+        { "id": "p_38", "en": "Contingency", "es": "Contingencia" },
+        { "id": "p_39", "en": "Feasibility", "es": "Viabilidad / Factibilidad" },
+        { "id": "p_40", "en": "Scalability", "es": "Escalabilidad" },
+        { "id": "p_41", "en": "To Streamline", "es": "Agilizar / Simplificar" },
+        { "id": "p_42", "en": "To Optimize", "es": "Optimizar" },
+        { "id": "p_43", "en": "To Facilitate", "es": "Facilitar" },
+        { "id": "p_44", "en": "To Delegate", "es": "Delegar" },
+        { "id": "p_45", "en": "To Implement", "es": "Implementar" },
+        { "id": "p_46", "en": "To Oversee", "es": "Supervisar" },
+        { "id": "p_47", "en": "Lucrative", "es": "Lucrativo" },
+        { "id": "p_48", "en": "Cost-effective", "es": "Rentable (costo-efectivo)" },
+        { "id": "p_49", "en": "Sustainable", "es": "Sostenible" },
+        { "id": "p_50", "en": "Agile", "es": "Ágil" }
       ]
     }
   ]

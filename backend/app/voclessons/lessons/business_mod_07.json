@@ -1,46 +1,74 @@
 {
   "id": "business_mod_07",
-  "title": "Business Pro A2-3",
-  "description": "Mastering business vocabulary. Level A2, Part 3.",
+  "category_id": "business",
+  "title": "Business Pro: Career & Finance",
+  "description": "Vocabulario sobre roles profesionales, reclutamiento y conceptos financieros básicos.",
   "level": "A2",
-  "total_xp": 120,
+  "part": 3,
+  "total_xp": 500,
+  "status": "locked",
+  "theme": {
+    "icon": "Briefcase",
+    "color": "blue"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_07",
+      "id": "drill_business_mod_07_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Roles & Money",
+      "description": "Conecta perfiles laborales y términos financieros.",
+      "instruction": "Empareja el término con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Manager",
-          "es": "Gerente"
-        },
-        {
-          "id": "p_1",
-          "en": "Worker",
-          "es": "Obrero"
-        },
-        {
-          "id": "p_2",
-          "en": "Resume",
-          "es": "Currículum"
-        },
-        {
-          "id": "p_3",
-          "en": "Skill",
-          "es": "Habilidad"
-        },
-        {
-          "id": "p_4",
-          "en": "Tax",
-          "es": "Impuesto"
-        },
-        {
-          "id": "p_5",
-          "en": "Cash",
-          "es": "Efectivo"
-        }
+        { "id": "p_01", "en": "Manager", "es": "Gerente" },
+        { "id": "p_02", "en": "Worker", "es": "Trabajador / Obrero" },
+        { "id": "p_03", "en": "Boss", "es": "Jefe" },
+        { "id": "p_04", "en": "CEO", "es": "Director General (CEO)" },
+        { "id": "p_05", "en": "Director", "es": "Director" },
+        { "id": "p_06", "en": "Supervisor", "es": "Supervisor" },
+        { "id": "p_07", "en": "Assistant", "es": "Asistente" },
+        { "id": "p_08", "en": "Intern", "es": "Pasante / Becario" },
+        { "id": "p_09", "en": "Colleague", "es": "Colega" },
+        { "id": "p_10", "en": "Expert", "es": "Experto" },
+        { "id": "p_11", "en": "Staff", "es": "Personal" },
+        { "id": "p_12", "en": "Team", "es": "Equipo" },
+        { "id": "p_13", "en": "Resume", "es": "Currículum" },
+        { "id": "p_14", "en": "CV", "es": "CV (Hoja de vida)" },
+        { "id": "p_15", "en": "Interview", "es": "Entrevista" },
+        { "id": "p_16", "en": "Skill", "es": "Habilidad" },
+        { "id": "p_17", "en": "Experience", "es": "Experiencia" },
+        { "id": "p_18", "en": "Training", "es": "Capacitación / Entrenamiento" },
+        { "id": "p_19", "en": "Knowledge", "es": "Conocimiento" },
+        { "id": "p_20", "en": "Career", "es": "Carrera" },
+        { "id": "p_21", "en": "Position", "es": "Puesto / Cargo" },
+        { "id": "p_22", "en": "Promotion", "es": "Ascenso / Promoción" },
+        { "id": "p_23", "en": "Full-time", "es": "Tiempo completo" },
+        { "id": "p_24", "en": "Part-time", "es": "Medio tiempo" },
+        { "id": "p_25", "en": "Shift", "es": "Turno" },
+        { "id": "p_26", "en": "Tax", "es": "Impuesto" },
+        { "id": "p_27", "en": "Cash", "es": "Efectivo" },
+        { "id": "p_28", "en": "Credit", "es": "Crédito" },
+        { "id": "p_29", "en": "Debit", "es": "Débito" },
+        { "id": "p_30", "en": "Debt", "es": "Deuda" },
+        { "id": "p_31", "en": "Loan", "es": "Préstamo" },
+        { "id": "p_32", "en": "Interest", "es": "Interés" },
+        { "id": "p_33", "en": "Bank", "es": "Banco" },
+        { "id": "p_34", "en": "Account", "es": "Cuenta" },
+        { "id": "p_35", "en": "Balance", "es": "Saldo" },
+        { "id": "p_36", "en": "Transfer", "es": "Transferencia" },
+        { "id": "p_37", "en": "Currency", "es": "Moneda / Divisa" },
+        { "id": "p_38", "en": "Wallet", "es": "Cartera / Billetera" },
+        { "id": "p_39", "en": "Budget", "es": "Presupuesto" },
+        { "id": "p_40", "en": "Income", "es": "Ingresos" },
+        { "id": "p_41", "en": "Expense", "es": "Gasto" },
+        { "id": "p_42", "en": "Investment", "es": "Inversión" },
+        { "id": "p_43", "en": "Profit", "es": "Ganancia" },
+        { "id": "p_44", "en": "Loss", "es": "Pérdida" },
+        { "id": "p_45", "en": "Receipt", "es": "Recibo" },
+        { "id": "p_46", "en": "To Apply", "es": "Aplicar / Solicitar" },
+        { "id": "p_47", "en": "To Quit", "es": "Renunciar" },
+        { "id": "p_48", "en": "To Retire", "es": "Jubilarse" },
+        { "id": "p_49", "en": "To Owe", "es": "Deber (dinero)" },
+        { "id": "p_50", "en": "To Own", "es": "Poseer / Ser dueño" }
       ]
     }
   ]

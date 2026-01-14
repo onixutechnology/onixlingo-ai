@@ -1,46 +1,74 @@
 {
   "id": "business_mod_11",
-  "title": "Business Pro B1-3",
-  "description": "Mastering business vocabulary. Level B1, Part 3.",
+  "category_id": "business",
+  "title": "Business Pro: Logistics & Labor",
+  "description": "Vocabulario sobre cadena de suministro, logística, fabricación y relaciones laborales.",
   "level": "B1",
-  "total_xp": 140,
+  "part": 3,
+  "total_xp": 500,
+  "status": "locked",
+  "theme": {
+    "icon": "Briefcase",
+    "color": "indigo"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_11",
+      "id": "drill_business_mod_11_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Supply Chain",
+      "description": "Conecta conceptos de logística y trabajo.",
+      "instruction": "Empareja el término industrial con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Supply",
-          "es": "Suministro"
-        },
-        {
-          "id": "p_1",
-          "en": "Demand",
-          "es": "Demanda"
-        },
-        {
-          "id": "p_2",
-          "en": "Retail",
-          "es": "Minorista"
-        },
-        {
-          "id": "p_3",
-          "en": "Whole",
-          "es": "Mayorista"
-        },
-        {
-          "id": "p_4",
-          "en": "Strike",
-          "es": "Huelga"
-        },
-        {
-          "id": "p_5",
-          "en": "Union",
-          "es": "Sindicato"
-        }
+        { "id": "p_01", "en": "Supply", "es": "Suministro / Oferta" },
+        { "id": "p_02", "en": "Demand", "es": "Demanda" },
+        { "id": "p_03", "en": "Retail", "es": "Venta al por menor / Minorista" },
+        { "id": "p_04", "en": "Wholesale", "es": "Venta al por mayor / Mayorista" },
+        { "id": "p_05", "en": "Logistics", "es": "Logística" },
+        { "id": "p_06", "en": "Inventory", "es": "Inventario" },
+        { "id": "p_07", "en": "Stock", "es": "Existencias" },
+        { "id": "p_08", "en": "Warehouse", "es": "Almacén" },
+        { "id": "p_09", "en": "Distribution", "es": "Distribución" },
+        { "id": "p_10", "en": "Shipment", "es": "Envío / Embarque" },
+        { "id": "p_11", "en": "Freight", "es": "Carga / Flete" },
+        { "id": "p_12", "en": "Cargo", "es": "Carga (mercancía)" },
+        { "id": "p_13", "en": "Delivery", "es": "Entrega" },
+        { "id": "p_14", "en": "Supplier", "es": "Proveedor" },
+        { "id": "p_15", "en": "Manufacturer", "es": "Fabricante" },
+        { "id": "p_16", "en": "Factory", "es": "Fábrica" },
+        { "id": "p_17", "en": "Production", "es": "Producción" },
+        { "id": "p_18", "en": "Raw material", "es": "Materia prima" },
+        { "id": "p_19", "en": "Output", "es": "Producción (cantidad) / Salida" },
+        { "id": "p_20", "en": "Capacity", "es": "Capacidad" },
+        { "id": "p_21", "en": "Assembly", "es": "Montaje / Ensamblaje" },
+        { "id": "p_22", "en": "Quality", "es": "Calidad" },
+        { "id": "p_23", "en": "Defect", "es": "Defecto" },
+        { "id": "p_24", "en": "Standard", "es": "Estándar" },
+        { "id": "p_25", "en": "Union", "es": "Sindicato" },
+        { "id": "p_26", "en": "Strike", "es": "Huelga" },
+        { "id": "p_27", "en": "Labor", "es": "Trabajo / Mano de obra" },
+        { "id": "p_28", "en": "Workforce", "es": "Fuerza laboral" },
+        { "id": "p_29", "en": "Employee", "es": "Empleado" },
+        { "id": "p_30", "en": "Employer", "es": "Empleador" },
+        { "id": "p_31", "en": "Agreement", "es": "Acuerdo" },
+        { "id": "p_32", "en": "Dispute", "es": "Disputa" },
+        { "id": "p_33", "en": "Negotiation", "es": "Negociación" },
+        { "id": "p_34", "en": "Contract", "es": "Contrato" },
+        { "id": "p_35", "en": "Clause", "es": "Cláusula" },
+        { "id": "p_36", "en": "Policy", "es": "Política (normativa)" },
+        { "id": "p_37", "en": "Regulation", "es": "Regulación" },
+        { "id": "p_38", "en": "Safety", "es": "Seguridad" },
+        { "id": "p_39", "en": "Risk", "es": "Riesgo" },
+        { "id": "p_40", "en": "Delay", "es": "Retraso" },
+        { "id": "p_41", "en": "Schedule", "es": "Programación" },
+        { "id": "p_42", "en": "To Produce", "es": "Producir" },
+        { "id": "p_43", "en": "To Manufacture", "es": "Fabricar" },
+        { "id": "p_44", "en": "To Ship", "es": "Enviar / Embarcar" },
+        { "id": "p_45", "en": "To Deliver", "es": "Entregar" },
+        { "id": "p_46", "en": "To Distribute", "es": "Distribuir" },
+        { "id": "p_47", "en": "To Store", "es": "Almacenar" },
+        { "id": "p_48", "en": "To Negotiate", "es": "Negociar" },
+        { "id": "p_49", "en": "To Strike", "es": "Hacer huelga" },
+        { "id": "p_50", "en": "To Manage", "es": "Gestionar" }
       ]
     }
   ]

@@ -1,12 +1,12 @@
 {
   "id": "basics_mod_17",
   "category_id": "basics",
-  "title": "Life Essentials: Virtues",
-  "description": "Vocabulario esencial de valores y virtudes abstractas. Nivel C1, Parte 1.",
+  "title": "Values & Virtues",
+  "description": "Exploración de conceptos abstractos, moralidad y filosofía. Nivel C1.",
   "level": "C1",
   "part": 1,
-  "total_xp": 250,
-  "status": "unlocked",
+  "total_xp": 600,
+  "status": "locked",
   "theme": {
     "icon": "BalanceScale",
     "color": "gold"
@@ -15,130 +15,60 @@
     {
       "id": "drill_basics_mod_17_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Virtues",
-      "description": "Conecta las virtudes abstractas del inglés con su significado.",
-      "instruction": "Empareja la palabra en inglés con su valor moral en español.",
+      "title": "Neuro Link: Ethics",
+      "description": "Conecta valores morales y conceptos abstractos.",
+      "instruction": "Empareja el concepto abstracto con su significado.",
       "pairs": [
-        {
-          "id": "p_01",
-          "en": "Freedom",
-          "es": "Libertad",
-          "pronunciation": "/ˈfriː.dəm/",
-          "grammar_type": "noun",
-          "image_key": "img_freedom",
-          "context": {
-            "en_sentence": "Freedom is important for all people.",
-            "es_sentence": "La libertad es importante para toda la gente."
-          }
-        },
-        {
-          "id": "p_02",
-          "en": "Wisdom",
-          "es": "Sabiduría",
-          "pronunciation": "/ˈwɪz.dəm/",
-          "grammar_type": "noun",
-          "image_key": "img_wisdom",
-          "context": {
-            "en_sentence": "Grandmother speaks with wisdom.",
-            "es_sentence": "La abuela habla con sabiduría."
-          }
-        },
-        {
-          "id": "p_03",
-          "en": "Justice",
-          "es": "Justicia",
-          "pronunciation": "/ˈdʒʌs.tɪs/",
-          "grammar_type": "noun",
-          "image_key": "img_justice",
-          "context": {
-            "en_sentence": "The judge seeks justice.",
-            "es_sentence": "El juez busca justicia."
-          }
-        },
-        {
-          "id": "p_04",
-          "en": "Courage",
-          "es": "Coraje",
-          "pronunciation": "/ˈkɝː.ɪdʒ/",
-          "grammar_type": "noun",
-          "image_key": "img_courage",
-          "context": {
-            "en_sentence": "He shows courage in danger.",
-            "es_sentence": "Él muestra coraje en peligro."
-          }
-        },
-        {
-          "id": "p_05",
-          "en": "Honesty",
-          "es": "Honestidad",
-          "pronunciation": "/ˈɑː.nɪs.ti/",
-          "grammar_type": "noun",
-          "image_key": "img_honesty",
-          "context": {
-            "en_sentence": "Honesty builds strong friendships.",
-            "es_sentence": "La honestidad construye amistades fuertes."
-          }
-        },
-        {
-          "id": "p_06",
-          "en": "Beauty",
-          "es": "Belleza",
-          "pronunciation": "/ˈbjuː.t̬i/",
-          "grammar_type": "noun",
-          "image_key": "img_beauty",
-          "context": {
-            "en_sentence": "Nature shows great beauty.",
-            "es_sentence": "La naturaleza muestra gran belleza."
-          }
-        },
-        {
-          "id": "p_07",
-          "en": "Truth",
-          "es": "Verdad",
-          "pronunciation": "/truːθ/",
-          "grammar_type": "noun",
-          "image_key": "img_truth",
-          "context": {
-            "en_sentence": "Always speak the truth.",
-            "es_sentence": "Siempre habla la verdad."
-          }
-        },
-        {
-          "id": "p_08",
-          "en": "Peace",
-          "es": "Paz",
-          "pronunciation": "/piːs/",
-          "grammar_type": "noun",
-          "image_key": "img_peace",
-          "context": {
-            "en_sentence": "We want world peace.",
-            "es_sentence": "Queremos paz mundial."
-          }
-        },
-        {
-          "id": "p_09",
-          "en": "Love",
-          "es": "Amor",
-          "pronunciation": "/lʌv/",
-          "grammar_type": "noun",
-          "image_key": "img_love",
-          "context": {
-            "en_sentence": "Family love is special.",
-            "es_sentence": "El amor familiar es especial."
-          }
-        },
-        {
-          "id": "p_10",
-          "en": "Respect",
-          "es": "Respeto",
-          "pronunciation": "/rɪˈspekt/",
-          "grammar_type": "noun",
-          "image_key": "img_respect",
-          "context": {
-            "en_sentence": "Show respect to elders.",
-            "es_sentence": "Muestra respeto a los mayores."
-          }
-        }
+        { "id": "p_01", "en": "Freedom", "es": "Libertad" },
+        { "id": "p_02", "en": "Liberty", "es": "Libertad (derecho)" },
+        { "id": "p_03", "en": "Justice", "es": "Justicia" },
+        { "id": "p_04", "en": "Equality", "es": "Igualdad" },
+        { "id": "p_05", "en": "Wisdom", "es": "Sabiduría" },
+        { "id": "p_06", "en": "Knowledge", "es": "Conocimiento" },
+        { "id": "p_07", "en": "Truth", "es": "Verdad" },
+        { "id": "p_08", "en": "Honesty", "es": "Honestidad" },
+        { "id": "p_09", "en": "Integrity", "es": "Integridad" },
+        { "id": "p_10", "en": "Loyalty", "es": "Lealtad" },
+        { "id": "p_11", "en": "Courage", "es": "Coraje" },
+        { "id": "p_12", "en": "Bravery", "es": "Valentía" },
+        { "id": "p_13", "en": "Peace", "es": "Paz" },
+        { "id": "p_14", "en": "Harmony", "es": "Armonía" },
+        { "id": "p_15", "en": "Love", "es": "Amor" },
+        { "id": "p_16", "en": "Compassion", "es": "Compasión" },
+        { "id": "p_17", "en": "Empathy", "es": "Empatía" },
+        { "id": "p_18", "en": "Respect", "es": "Respeto" },
+        { "id": "p_19", "en": "Dignity", "es": "Dignidad" },
+        { "id": "p_20", "en": "Honor", "es": "Honor" },
+        { "id": "p_21", "en": "Hope", "es": "Esperanza" },
+        { "id": "p_22", "en": "Faith", "es": "Fe" },
+        { "id": "p_23", "en": "Trust", "es": "Confianza" },
+        { "id": "p_24", "en": "Beauty", "es": "Belleza" },
+        { "id": "p_25", "en": "Grace", "es": "Gracia" },
+        { "id": "p_26", "en": "Patience", "es": "Paciencia" },
+        { "id": "p_27", "en": "Tolerance", "es": "Tolerancia" },
+        { "id": "p_28", "en": "Kindness", "es": "Amabilidad" },
+        { "id": "p_29", "en": "Generosity", "es": "Generosidad" },
+        { "id": "p_30", "en": "Gratitude", "es": "Gratitud" },
+        { "id": "p_31", "en": "Ambition", "es": "Ambición" },
+        { "id": "p_32", "en": "Success", "es": "Éxito" },
+        { "id": "p_33", "en": "Failure", "es": "Fracaso" },
+        { "id": "p_34", "en": "Power", "es": "Poder" },
+        { "id": "p_35", "en": "Authority", "es": "Autoridad" },
+        { "id": "p_36", "en": "Responsibility", "es": "Responsabilidad" },
+        { "id": "p_37", "en": "Duty", "es": "Deber" },
+        { "id": "p_38", "en": "Right", "es": "Derecho" },
+        { "id": "p_39", "en": "Privilege", "es": "Privilegio" },
+        { "id": "p_40", "en": "Tradition", "es": "Tradición" },
+        { "id": "p_41", "en": "Culture", "es": "Cultura" },
+        { "id": "p_42", "en": "Progress", "es": "Progreso" },
+        { "id": "p_43", "en": "Change", "es": "Cambio" },
+        { "id": "p_44", "en": "Destiny", "es": "Destino" },
+        { "id": "p_45", "en": "Fate", "es": "Hado / Suerte" },
+        { "id": "p_46", "en": "Soul", "es": "Alma" },
+        { "id": "p_47", "en": "Spirit", "es": "Espíritu" },
+        { "id": "p_48", "en": "Mind", "es": "Mente" },
+        { "id": "p_49", "en": "Reason", "es": "Razón" },
+        { "id": "p_50", "en": "Emotion", "es": "Emoción" }
       ]
     }
   ]

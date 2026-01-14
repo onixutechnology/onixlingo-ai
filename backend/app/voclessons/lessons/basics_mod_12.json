@@ -1,12 +1,12 @@
 {
   "id": "basics_mod_12",
   "category_id": "basics",
-  "title": "Life Essentials: Health",
-  "description": "Vocabulario esencial de salud y atención médica. Nivel B1, Parte 4.",
+  "title": "Health & Medicine",
+  "description": "Vocabulario de salud, síntomas, tratamientos y anatomía básica.",
   "level": "B1",
   "part": 4,
-  "total_xp": 200,
-  "status": "unlocked",
+  "total_xp": 500,
+  "status": "locked",
   "theme": {
     "icon": "Medical",
     "color": "red"
@@ -15,130 +15,60 @@
     {
       "id": "drill_basics_mod_12_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Health",
-      "description": "Conecta los términos médicos del inglés con su significado.",
-      "instruction": "Empareja la palabra en inglés con su concepto de salud en español.",
+      "title": "Neuro Link: Vitality",
+      "description": "Conecta términos médicos y estados de salud.",
+      "instruction": "Empareja la palabra de salud con su significado.",
       "pairs": [
-        {
-          "id": "p_01",
-          "en": "Sick",
-          "es": "Enfermo",
-          "pronunciation": "/sɪk/",
-          "grammar_type": "adjective",
-          "image_key": "img_sick",
-          "context": {
-            "en_sentence": "My brother is sick today.",
-            "es_sentence": "Mi hermano está enfermo hoy."
-          }
-        },
-        {
-          "id": "p_02",
-          "en": "Health",
-          "es": "Salud",
-          "pronunciation": "/helθ/",
-          "grammar_type": "noun",
-          "image_key": "img_health",
-          "context": {
-            "en_sentence": "Good health is important.",
-            "es_sentence": "La buena salud es importante."
-          }
-        },
-        {
-          "id": "p_03",
-          "en": "Pain",
-          "es": "Dolor",
-          "pronunciation": "/peɪn/",
-          "grammar_type": "noun",
-          "image_key": "img_pain",
-          "context": {
-            "en_sentence": "I have pain in my head.",
-            "es_sentence": "Tengo dolor de cabeza."
-          }
-        },
-        {
-          "id": "p_04",
-          "en": "Doctor",
-          "es": "Médico",
-          "pronunciation": "/ˈdɑːk.tɚ/",
-          "grammar_type": "noun",
-          "image_key": "img_doctor",
-          "context": {
-            "en_sentence": "The doctor helps my mother.",
-            "es_sentence": "El médico ayuda a mi madre."
-          }
-        },
-        {
-          "id": "p_05",
-          "en": "Nurse",
-          "es": "Enfermera",
-          "pronunciation": "/nɝːs/",
-          "grammar_type": "noun",
-          "image_key": "img_nurse",
-          "context": {
-            "en_sentence": "The nurse gives medicine.",
-            "es_sentence": "La enfermera da medicina."
-          }
-        },
-        {
-          "id": "p_06",
-          "en": "Medicine",
-          "es": "Medicina",
-          "pronunciation": "/ˈmed.ɪ.sən/",
-          "grammar_type": "noun",
-          "image_key": "img_medicine",
-          "context": {
-            "en_sentence": "Take medicine for pain.",
-            "es_sentence": "Toma medicina para el dolor."
-          }
-        },
-        {
-          "id": "p_07",
-          "en": "Hospital",
-          "es": "Hospital",
-          "pronunciation": "/ˈhɑː.spɪ.t̬əl/",
-          "grammar_type": "noun",
-          "image_key": "img_hospital",
-          "context": {
-            "en_sentence": "Go to the hospital if sick.",
-            "es_sentence": "Ve al hospital si estás enfermo."
-          }
-        },
-        {
-          "id": "p_08",
-          "en": "Headache",
-          "es": "Dolor de cabeza",
-          "pronunciation": "/ˈhed.eɪk/",
-          "grammar_type": "noun",
-          "image_key": "img_headache",
-          "context": {
-            "en_sentence": "I have a bad headache.",
-            "es_sentence": "Tengo un dolor de cabeza fuerte."
-          }
-        },
-        {
-          "id": "p_09",
-          "en": "Fever",
-          "es": "Fiebre",
-          "pronunciation": "/ˈfiː.vɚ/",
-          "grammar_type": "noun",
-          "image_key": "img_fever",
-          "context": {
-            "en_sentence": "The child has a fever.",
-            "es_sentence": "El niño tiene fiebre."
-          }
-        },
-        {
-          "id": "p_10",
-          "en": "Healthy",
-          "es": "Sano",
-          "pronunciation": "/ˈhel.θi/",
-          "grammar_type": "adjective",
-          "image_key": "img_healthy",
-          "context": {
-            "en_sentence": "Eat fruit to stay healthy.",
-            "es_sentence": "Come fruta para estar sano."
-          }
-        }
+        { "id": "p_01", "en": "Health", "es": "Salud" },
+        { "id": "p_02", "en": "Sick", "es": "Enfermo" },
+        { "id": "p_03", "en": "Pain", "es": "Dolor" },
+        { "id": "p_04", "en": "Doctor", "es": "Doctor" },
+        { "id": "p_05", "en": "Nurse", "es": "Enfermera" },
+        { "id": "p_06", "en": "Medicine", "es": "Medicina" },
+        { "id": "p_07", "en": "Hospital", "es": "Hospital" },
+        { "id": "p_08", "en": "Headache", "es": "Dolor de cabeza" },
+        { "id": "p_09", "en": "Fever", "es": "Fiebre" },
+        { "id": "p_10", "en": "Healthy", "es": "Sano" },
+        { "id": "p_11", "en": "Cold", "es": "Resfriado" },
+        { "id": "p_12", "en": "Flu", "es": "Gripe" },
+        { "id": "p_13", "en": "Cough", "es": "Tos" },
+        { "id": "p_14", "en": "Sneeze", "es": "Estornudo" },
+        { "id": "p_15", "en": "Stomachache", "es": "Dolor de estómago" },
+        { "id": "p_16", "en": "Toothache", "es": "Dolor de muelas" },
+        { "id": "p_17", "en": "Sore throat", "es": "Dolor de garganta" },
+        { "id": "p_18", "en": "Injury", "es": "Lesión" },
+        { "id": "p_19", "en": "Wound", "es": "Herida" },
+        { "id": "p_20", "en": "Blood", "es": "Sangre" },
+        { "id": "p_21", "en": "Heart", "es": "Corazón" },
+        { "id": "p_22", "en": "Brain", "es": "Cerebro" },
+        { "id": "p_23", "en": "Lungs", "es": "Pulmones" },
+        { "id": "p_24", "en": "Stomach", "es": "Estómago" },
+        { "id": "p_25", "en": "Bone", "es": "Hueso" },
+        { "id": "p_26", "en": "Muscle", "es": "Músculo" },
+        { "id": "p_27", "en": "Skin", "es": "Piel" },
+        { "id": "p_28", "en": "Patient", "es": "Paciente" },
+        { "id": "p_29", "en": "Treatment", "es": "Tratamiento" },
+        { "id": "p_30", "en": "Pill", "es": "Pastilla" },
+        { "id": "p_31", "en": "Pharmacy", "es": "Farmacia" },
+        { "id": "p_32", "en": "Dentist", "es": "Dentista" },
+        { "id": "p_33", "en": "Ambulance", "es": "Ambulancia" },
+        { "id": "p_34", "en": "Emergency", "es": "Emergencia" },
+        { "id": "p_35", "en": "Surgery", "es": "Cirugía" },
+        { "id": "p_36", "en": "To Heal", "es": "Curar" },
+        { "id": "p_37", "en": "To Hurt", "es": "Doler" },
+        { "id": "p_38", "en": "To Treat", "es": "Tratar" },
+        { "id": "p_39", "en": "To Rest", "es": "Descansar" },
+        { "id": "p_40", "en": "To Recover", "es": "Recuperarse" },
+        { "id": "p_41", "en": "Weak", "es": "Débil" },
+        { "id": "p_42", "en": "Strong", "es": "Fuerte" },
+        { "id": "p_43", "en": "Tired", "es": "Cansado" },
+        { "id": "p_44", "en": "Dizzy", "es": "Mareado" },
+        { "id": "p_45", "en": "Allergy", "es": "Alergia" },
+        { "id": "p_46", "en": "Virus", "es": "Virus" },
+        { "id": "p_47", "en": "Infection", "es": "Infección" },
+        { "id": "p_48", "en": "Diet", "es": "Dieta" },
+        { "id": "p_49", "en": "Exercise", "es": "Ejercicio" },
+        { "id": "p_50", "en": "Life", "es": "Vida" }
       ]
     }
   ]

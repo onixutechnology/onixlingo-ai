@@ -1,46 +1,74 @@
 {
   "id": "business_mod_13",
-  "title": "Business Pro B2-1",
-  "description": "Mastering business vocabulary. Level B2, Part 1.",
+  "category_id": "business",
+  "title": "Business Pro: Corp Strategy",
+  "description": "Vocabulario B2 sobre estrategia corporativa, informes financieros y gobernanza.",
   "level": "B2",
-  "total_xp": 160,
+  "part": 1,
+  "total_xp": 500,
+  "status": "locked",
+  "theme": {
+    "icon": "PieChart",
+    "color": "purple"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_13",
+      "id": "drill_business_mod_13_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Corporate Reporting",
+      "description": "Conecta términos de estrategia y finanzas corporativas.",
+      "instruction": "Empareja el término corporativo con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Forecast",
-          "es": "Pronóstico"
-        },
-        {
-          "id": "p_1",
-          "en": "Shareholder",
-          "es": "Accionista"
-        },
-        {
-          "id": "p_2",
-          "en": "Feedback",
-          "es": "Retroalimentación"
-        },
-        {
-          "id": "p_3",
-          "en": "Outcome",
-          "es": "Resultado"
-        },
-        {
-          "id": "p_4",
-          "en": "Quarter",
-          "es": "Trimestre"
-        },
-        {
-          "id": "p_5",
-          "en": "Income",
-          "es": "Ingresos"
-        }
+        { "id": "p_01", "en": "Forecast", "es": "Pronóstico / Previsión" },
+        { "id": "p_02", "en": "Quarter", "es": "Trimestre" },
+        { "id": "p_03", "en": "Fiscal year", "es": "Año fiscal" },
+        { "id": "p_04", "en": "Shareholder", "es": "Accionista" },
+        { "id": "p_05", "en": "Stakeholder", "es": "Parte interesada" },
+        { "id": "p_06", "en": "Board", "es": "Junta directiva" },
+        { "id": "p_07", "en": "Chairman", "es": "Presidente (de la junta)" },
+        { "id": "p_08", "en": "Executive", "es": "Ejecutivo" },
+        { "id": "p_09", "en": "Management", "es": "Dirección / Gestión" },
+        { "id": "p_10", "en": "Outcome", "es": "Resultado / Desenlace" },
+        { "id": "p_11", "en": "Feedback", "es": "Retroalimentación" },
+        { "id": "p_12", "en": "Income", "es": "Ingresos" },
+        { "id": "p_13", "en": "Revenue", "es": "Ingresos brutos / Facturación" },
+        { "id": "p_14", "en": "Turnover", "es": "Volumen de ventas / Rotación" },
+        { "id": "p_15", "en": "Expenditure", "es": "Gasto / Desembolso" },
+        { "id": "p_16", "en": "Overhead", "es": "Gastos generales" },
+        { "id": "p_17", "en": "Profitability", "es": "Rentabilidad" },
+        { "id": "p_18", "en": "Margin", "es": "Margen" },
+        { "id": "p_19", "en": "Gross", "es": "Bruto" },
+        { "id": "p_20", "en": "Net", "es": "Neto" },
+        { "id": "p_21", "en": "Cash flow", "es": "Flujo de caja" },
+        { "id": "p_22", "en": "Asset", "es": "Activo" },
+        { "id": "p_23", "en": "Liability", "es": "Pasivo" },
+        { "id": "p_24", "en": "Equity", "es": "Patrimonio" },
+        { "id": "p_25", "en": "Dividend", "es": "Dividendo" },
+        { "id": "p_26", "en": "Audit", "es": "Auditoría" },
+        { "id": "p_27", "en": "Compliance", "es": "Cumplimiento" },
+        { "id": "p_28", "en": "Regulation", "es": "Regulación" },
+        { "id": "p_29", "en": "Policy", "es": "Política (interna)" },
+        { "id": "p_30", "en": "Strategy", "es": "Estrategia" },
+        { "id": "p_31", "en": "Implementation", "es": "Implementación" },
+        { "id": "p_32", "en": "Evaluation", "es": "Evaluación" },
+        { "id": "p_33", "en": "Assessment", "es": "Valoración" },
+        { "id": "p_34", "en": "Proposal", "es": "Propuesta" },
+        { "id": "p_35", "en": "Agenda", "es": "Orden del día" },
+        { "id": "p_36", "en": "Minutes", "es": "Actas (de reunión)" },
+        { "id": "p_37", "en": "Consensus", "es": "Consenso" },
+        { "id": "p_38", "en": "Negotiation", "es": "Negociación" },
+        { "id": "p_39", "en": "Deadlock", "es": "Punto muerto" },
+        { "id": "p_40", "en": "Benchmark", "es": "Punto de referencia" },
+        { "id": "p_41", "en": "Target", "es": "Objetivo / Meta" },
+        { "id": "p_42", "en": "Objective", "es": "Objetivo" },
+        { "id": "p_43", "en": "Incentive", "es": "Incentivo" },
+        { "id": "p_44", "en": "Perk", "es": "Beneficio adicional" },
+        { "id": "p_45", "en": "Recruitment", "es": "Reclutamiento" },
+        { "id": "p_46", "en": "Resignation", "es": "Dimisión / Renuncia" },
+        { "id": "p_47", "en": "Dismissal", "es": "Despido" },
+        { "id": "p_48", "en": "Merger", "es": "Fusión" },
+        { "id": "p_49", "en": "Acquisition", "es": "Adquisición" },
+        { "id": "p_50", "en": "To Implement", "es": "Implementar" }
       ]
     }
   ]

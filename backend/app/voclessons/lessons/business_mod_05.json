@@ -1,46 +1,74 @@
 {
   "id": "business_mod_05",
-  "title": "Business Pro A2-1",
-  "description": "Mastering business vocabulary. Level A2, Part 1.",
+  "category_id": "business",
+  "title": "Business Pro: Commerce & Jobs",
+  "description": "Vocabulario de nivel A2 sobre transacciones, empleo, finanzas básicas y estructura empresarial.",
   "level": "A2",
-  "total_xp": 120,
+  "part": 1,
+  "total_xp": 500,
+  "status": "locked",
+  "theme": {
+    "icon": "Briefcase",
+    "color": "blue"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_05",
+      "id": "drill_business_mod_05_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Transactions",
+      "description": "Conecta conceptos de empleo y comercio.",
+      "instruction": "Empareja el término comercial con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Salary",
-          "es": "Salario"
-        },
-        {
-          "id": "p_1",
-          "en": "Client",
-          "es": "Cliente"
-        },
-        {
-          "id": "p_2",
-          "en": "Meeting",
-          "es": "Reunión"
-        },
-        {
-          "id": "p_3",
-          "en": "Bill",
-          "es": "Factura"
-        },
-        {
-          "id": "p_4",
-          "en": "Cost",
-          "es": "Costo"
-        },
-        {
-          "id": "p_5",
-          "en": "Sale",
-          "es": "Venta"
-        }
+        { "id": "p_01", "en": "Salary", "es": "Salario" },
+        { "id": "p_02", "en": "Income", "es": "Ingresos" },
+        { "id": "p_03", "en": "Client", "es": "Cliente" },
+        { "id": "p_04", "en": "Customer", "es": "Consumidor / Cliente" },
+        { "id": "p_05", "en": "Meeting", "es": "Reunión" },
+        { "id": "p_06", "en": "Appointment", "es": "Cita" },
+        { "id": "p_07", "en": "Bill", "es": "Cuenta / Factura" },
+        { "id": "p_08", "en": "Invoice", "es": "Factura (Comercial)" },
+        { "id": "p_09", "en": "Receipt", "es": "Recibo" },
+        { "id": "p_10", "en": "Cost", "es": "Costo" },
+        { "id": "p_11", "en": "Price", "es": "Precio" },
+        { "id": "p_12", "en": "Sale", "es": "Venta" },
+        { "id": "p_13", "en": "Discount", "es": "Descuento" },
+        { "id": "p_14", "en": "Budget", "es": "Presupuesto" },
+        { "id": "p_15", "en": "Profit", "es": "Ganancia / Beneficio" },
+        { "id": "p_16", "en": "Loss", "es": "Pérdida" },
+        { "id": "p_17", "en": "Tax", "es": "Impuesto" },
+        { "id": "p_18", "en": "Bank account", "es": "Cuenta bancaria" },
+        { "id": "p_19", "en": "Credit card", "es": "Tarjeta de crédito" },
+        { "id": "p_20", "en": "Loan", "es": "Préstamo" },
+        { "id": "p_21", "en": "Company", "es": "Empresa" },
+        { "id": "p_22", "en": "Factory", "es": "Fábrica" },
+        { "id": "p_23", "en": "Department", "es": "Departamento" },
+        { "id": "p_24", "en": "Marketing", "es": "Marketing" },
+        { "id": "p_25", "en": "Sales", "es": "Ventas" },
+        { "id": "p_26", "en": "HR (Human Resources)", "es": "Recursos Humanos" },
+        { "id": "p_27", "en": "Employee", "es": "Empleado" },
+        { "id": "p_28", "en": "Employer", "es": "Empleador" },
+        { "id": "p_29", "en": "Manager", "es": "Gerente" },
+        { "id": "p_30", "en": "Assistant", "es": "Asistente" },
+        { "id": "p_31", "en": "Partner", "es": "Socio" },
+        { "id": "p_32", "en": "Job", "es": "Trabajo / Puesto" },
+        { "id": "p_33", "en": "Career", "es": "Carrera profesional" },
+        { "id": "p_34", "en": "Resume", "es": "Currículum (CV)" },
+        { "id": "p_35", "en": "Interview", "es": "Entrevista" },
+        { "id": "p_36", "en": "Contract", "es": "Contrato" },
+        { "id": "p_37", "en": "Skill", "es": "Habilidad" },
+        { "id": "p_38", "en": "Experience", "es": "Experiencia" },
+        { "id": "p_39", "en": "Task", "es": "Tarea" },
+        { "id": "p_40", "en": "Goal", "es": "Meta / Objetivo" },
+        { "id": "p_41", "en": "To Hire", "es": "Contratar" },
+        { "id": "p_42", "en": "To Earn", "es": "Ganar (dinero)" },
+        { "id": "p_43", "en": "To Spend", "es": "Gastar" },
+        { "id": "p_44", "en": "To Save", "es": "Ahorrar" },
+        { "id": "p_45", "en": "To Offer", "es": "Ofrecer" },
+        { "id": "p_46", "en": "To Accept", "es": "Aceptar" },
+        { "id": "p_47", "en": "To Refuse", "es": "Rechazar" },
+        { "id": "p_48", "en": "To Discuss", "es": "Discutir / Debatir" },
+        { "id": "p_49", "en": "To Decide", "es": "Decidir" },
+        { "id": "p_50", "en": "To Agree", "es": "Estar de acuerdo" }
       ]
     }
   ]

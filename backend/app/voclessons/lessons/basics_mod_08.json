@@ -1,12 +1,12 @@
 {
   "id": "basics_mod_08",
   "category_id": "basics",
-  "title": "Life Essentials: Home",
-  "description": "Vocabulario esencial de casa y habitaciones. Nivel A2, Parte 4.",
+  "title": "Home & Living",
+  "description": "Vocabulario completo de la casa, habitaciones, muebles y electrodomésticos.",
   "level": "A2",
   "part": 4,
-  "total_xp": 180,
-  "status": "unlocked",
+  "total_xp": 500,
+  "status": "locked",
   "theme": {
     "icon": "Home",
     "color": "green"
@@ -15,130 +15,60 @@
     {
       "id": "drill_basics_mod_08_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Home",
-      "description": "Conecta las partes de la casa del inglés con su significado.",
-      "instruction": "Empareja la palabra en inglés con su parte de la casa en español.",
+      "title": "Neuro Link: The House",
+      "description": "Conecta espacios y objetos del hogar.",
+      "instruction": "Empareja el objeto o lugar con su significado.",
       "pairs": [
-        {
-          "id": "p_01",
-          "en": "House",
-          "es": "Casa",
-          "pronunciation": "/haʊs/",
-          "grammar_type": "noun",
-          "image_key": "img_house",
-          "context": {
-            "en_sentence": "My family lives in a big house.",
-            "es_sentence": "Mi familia vive en una casa grande."
-          }
-        },
-        {
-          "id": "p_02",
-          "en": "Room",
-          "es": "Cuarto",
-          "pronunciation": "/ruːm/",
-          "grammar_type": "noun",
-          "image_key": "img_room",
-          "context": {
-            "en_sentence": "My sister has a pink room.",
-            "es_sentence": "Mi hermana tiene un cuarto rosa."
-          }
-        },
-        {
-          "id": "p_03",
-          "en": "Kitchen",
-          "es": "Cocina",
-          "pronunciation": "/ˈkɪtʃ.ɪn/",
-          "grammar_type": "noun",
-          "image_key": "img_kitchen",
-          "context": {
-            "en_sentence": "Mother cooks in the kitchen.",
-            "es_sentence": "Madre cocina en la cocina."
-          }
-        },
-        {
-          "id": "p_04",
-          "en": "Door",
-          "es": "Puerta",
-          "pronunciation": "/dɔːr/",
-          "grammar_type": "noun",
-          "image_key": "img_door",
-          "context": {
-            "en_sentence": "Open the white door.",
-            "es_sentence": "Abre la puerta blanca."
-          }
-        },
-        {
-          "id": "p_05",
-          "en": "Window",
-          "es": "Ventana",
-          "pronunciation": "/ˈwɪn.doʊ/",
-          "grammar_type": "noun",
-          "image_key": "img_window",
-          "context": {
-            "en_sentence": "Look through the big window.",
-            "es_sentence": "Mira por la ventana grande."
-          }
-        },
-        {
-          "id": "p_06",
-          "en": "Wall",
-          "es": "Pared",
-          "pronunciation": "/wɑːl/",
-          "grammar_type": "noun",
-          "image_key": "img_wall",
-          "context": {
-            "en_sentence": "The blue wall is clean.",
-            "es_sentence": "La pared azul está limpia."
-          }
-        },
-        {
-          "id": "p_07",
-          "en": "Bedroom",
-          "es": "Dormitorio",
-          "pronunciation": "/ˈbed.ruːm/",
-          "grammar_type": "noun",
-          "image_key": "img_bedroom",
-          "context": {
-            "en_sentence": "My bedroom is small.",
-            "es_sentence": "Mi dormitorio es pequeño."
-          }
-        },
-        {
-          "id": "p_08",
-          "en": "Bathroom",
-          "es": "Baño",
-          "pronunciation": "/ˈbæθ.ruːm/",
-          "grammar_type": "noun",
-          "image_key": "img_bathroom",
-          "context": {
-            "en_sentence": "The bathroom has hot water.",
-            "es_sentence": "El baño tiene agua caliente."
-          }
-        },
-        {
-          "id": "p_09",
-          "en": "Table",
-          "es": "Mesa",
-          "pronunciation": "/ˈteɪ.bəl/",
-          "grammar_type": "noun",
-          "image_key": "img_table",
-          "context": {
-            "en_sentence": "We eat at the brown table.",
-            "es_sentence": "Comemos en la mesa marrón."
-          }
-        },
-        {
-          "id": "p_10",
-          "en": "Chair",
-          "es": "Silla",
-          "pronunciation": "/tʃer/",
-          "grammar_type": "noun",
-          "image_key": "img_chair",
-          "context": {
-            "en_sentence": "Father sits on the chair.",
-            "es_sentence": "Padre se sienta en la silla."
-          }
-        }
+        { "id": "p_01", "en": "House", "es": "Casa" },
+        { "id": "p_02", "en": "Apartment", "es": "Apartamento" },
+        { "id": "p_03", "en": "Building", "es": "Edificio" },
+        { "id": "p_04", "en": "Room", "es": "Cuarto" },
+        { "id": "p_05", "en": "Bedroom", "es": "Dormitorio" },
+        { "id": "p_06", "en": "Bathroom", "es": "Baño" },
+        { "id": "p_07", "en": "Kitchen", "es": "Cocina" },
+        { "id": "p_08", "en": "Living room", "es": "Sala" },
+        { "id": "p_09", "en": "Dining room", "es": "Comedor" },
+        { "id": "p_10", "en": "Garden", "es": "Jardín" },
+        { "id": "p_11", "en": "Garage", "es": "Garaje" },
+        { "id": "p_12", "en": "Balcony", "es": "Balcón" },
+        { "id": "p_13", "en": "Door", "es": "Puerta" },
+        { "id": "p_14", "en": "Window", "es": "Ventana" },
+        { "id": "p_15", "en": "Floor", "es": "Piso" },
+        { "id": "p_16", "en": "Wall", "es": "Pared" },
+        { "id": "p_17", "en": "Roof", "es": "Techo" },
+        { "id": "p_18", "en": "Ceiling", "es": "Techo (interior)" },
+        { "id": "p_19", "en": "Stairs", "es": "Escaleras" },
+        { "id": "p_20", "en": "Key", "es": "Llave" },
+        { "id": "p_21", "en": "Furniture", "es": "Muebles" },
+        { "id": "p_22", "en": "Table", "es": "Mesa" },
+        { "id": "p_23", "en": "Chair", "es": "Silla" },
+        { "id": "p_24", "en": "Sofa", "es": "Sofá" },
+        { "id": "p_25", "en": "Bed", "es": "Cama" },
+        { "id": "p_26", "en": "Desk", "es": "Escritorio" },
+        { "id": "p_27", "en": "Lamp", "es": "Lámpara" },
+        { "id": "p_28", "en": "Mirror", "es": "Espejo" },
+        { "id": "p_29", "en": "Carpet", "es": "Alfombra" },
+        { "id": "p_30", "en": "Curtain", "es": "Cortina" },
+        { "id": "p_31", "en": "Towel", "es": "Toalla" },
+        { "id": "p_32", "en": "Soap", "es": "Jabón" },
+        { "id": "p_33", "en": "Shampoo", "es": "Champú" },
+        { "id": "p_34", "en": "Brush", "es": "Cepillo" },
+        { "id": "p_35", "en": "Toothbrush", "es": "Cepillo de dientes" },
+        { "id": "p_36", "en": "Fridge", "es": "Refrigerador" },
+        { "id": "p_37", "en": "Oven", "es": "Horno" },
+        { "id": "p_38", "en": "Stove", "es": "Estufa" },
+        { "id": "p_39", "en": "Sink", "es": "Fregadero" },
+        { "id": "p_40", "en": "Microwave", "es": "Microondas" },
+        { "id": "p_41", "en": "TV", "es": "Televisión" },
+        { "id": "p_42", "en": "Computer", "es": "Computadora" },
+        { "id": "p_43", "en": "Phone", "es": "Teléfono" },
+        { "id": "p_44", "en": "Radio", "es": "Radio" },
+        { "id": "p_45", "en": "Clock", "es": "Reloj" },
+        { "id": "p_46", "en": "To Live", "es": "Vivir" },
+        { "id": "p_47", "en": "To Sleep", "es": "Dormir" },
+        { "id": "p_48", "en": "To Clean", "es": "Limpiar" },
+        { "id": "p_49", "en": "To Wash", "es": "Lavar" },
+        { "id": "p_50", "en": "Home", "es": "Hogar" }
       ]
     }
   ]

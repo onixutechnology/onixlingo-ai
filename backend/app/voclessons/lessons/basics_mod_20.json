@@ -1,12 +1,12 @@
 {
   "id": "basics_mod_20",
   "category_id": "basics",
-  "title": "Life Essentials: World",
-  "description": "Vocabulario esencial de conceptos globales y progreso humano. Nivel C1, Parte 4.",
+  "title": "Global World & Progress",
+  "description": "Conceptos avanzados sobre globalización, ciencia, arte y el futuro de la humanidad.",
   "level": "C1",
   "part": 4,
-  "total_xp": 250,
-  "status": "unlocked",
+  "total_xp": 600,
+  "status": "locked",
   "theme": {
     "icon": "Earth",
     "color": "darkgreen"
@@ -15,130 +15,60 @@
     {
       "id": "drill_basics_mod_20_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: World",
-      "description": "Conecta los conceptos globales del inglés con su significado.",
-      "instruction": "Empareja la palabra en inglés con su concepto universal en español.",
+      "title": "Neuro Link: Globalization",
+      "description": "Conecta conceptos globales y de progreso.",
+      "instruction": "Empareja el término global con su significado.",
       "pairs": [
-        {
-          "id": "p_01",
-          "en": "Tradition",
-          "es": "Tradición",
-          "pronunciation": "/trəˈdɪʃ.ən/",
-          "grammar_type": "noun",
-          "image_key": "img_tradition",
-          "context": {
-            "en_sentence": "Tradition connects past and present.",
-            "es_sentence": "La tradición conecta pasado y presente."
-          }
-        },
-        {
-          "id": "p_02",
-          "en": "Economy",
-          "es": "Economía",
-          "pronunciation": "/iːˈkɑː.nə.mi/",
-          "grammar_type": "noun",
-          "image_key": "img_economy",
-          "context": {
-            "en_sentence": "Strong economy helps society.",
-            "es_sentence": "Una economía fuerte ayuda a la sociedad."
-          }
-        },
-        {
-          "id": "p_03",
-          "en": "Society",
-          "es": "Sociedad",
-          "pronunciation": "/səˈsaɪ.ə.t̬i/",
-          "grammar_type": "noun",
-          "image_key": "img_society",
-          "context": {
-            "en_sentence": "Society values culture and justice.",
-            "es_sentence": "La sociedad valora cultura y justicia."
-          }
-        },
-        {
-          "id": "p_04",
-          "en": "Science",
-          "es": "Ciencia",
-          "pronunciation": "/ˈsaɪ.əns/",
-          "grammar_type": "noun",
-          "image_key": "img_science",
-          "context": {
-            "en_sentence": "Science improves our health.",
-            "es_sentence": "La ciencia mejora nuestra salud."
-          }
-        },
-        {
-          "id": "p_05",
-          "en": "Art",
-          "es": "Arte",
-          "pronunciation": "/ɑːrt/",
-          "grammar_type": "noun",
-          "image_key": "img_art",
-          "context": {
-            "en_sentence": "Art expresses beauty and emotion.",
-            "es_sentence": "El arte expresa belleza y emoción."
-          }
-        },
-        {
-          "id": "p_06",
-          "en": "Nature",
-          "es": "Naturaleza",
-          "pronunciation": "/ˈneɪ.tʃɚ/",
-          "grammar_type": "noun",
-          "image_key": "img_nature",
-          "context": {
-            "en_sentence": "Protect nature from pollution.",
-            "es_sentence": "Protege la naturaleza de la contaminación."
-          }
-        },
-        {
-          "id": "p_07",
-          "en": "Technology",
-          "es": "Tecnología",
-          "pronunciation": "/tekˈnɑː.lə.dʒi/",
-          "grammar_type": "noun",
-          "image_key": "img_technology",
-          "context": {
-            "en_sentence": "Technology changes our economy.",
-            "es_sentence": "La tecnología cambia nuestra economía."
-          }
-        },
-        {
-          "id": "p_08",
-          "en": "Education",
-          "es": "Educación",
-          "pronunciation": "/ˌedʒ.əˈkeɪ.ʃən/",
-          "grammar_type": "noun",
-          "image_key": "img_education",
-          "context": {
-            "en_sentence": "Education brings wisdom.",
-            "es_sentence": "La educación trae sabiduría."
-          }
-        },
-        {
-          "id": "p_09",
-          "en": "Progress",
-          "es": "Progreso",
-          "pronunciation": "/ˈprɑː.ɡres/",
-          "grammar_type": "noun",
-          "image_key": "img_progress",
-          "context": {
-            "en_sentence": "Science drives human progress.",
-            "es_sentence": "La ciencia impulsa el progreso humano."
-          }
-        },
-        {
-          "id": "p_10",
-          "en": "Environment",
-          "es": "Medio ambiente",
-          "pronunciation": "/ɪnˈvaɪ.rən.mənt/",
-          "grammar_type": "noun",
-          "image_key": "img_environment",
-          "context": {
-            "en_sentence": "Protect our environment daily.",
-            "es_sentence": "Protege nuestro medio ambiente diariamente."
-          }
-        }
+        { "id": "p_01", "en": "World", "es": "Mundo" },
+        { "id": "p_02", "en": "Globe", "es": "Globo (terráqueo)" },
+        { "id": "p_03", "en": "Planet", "es": "Planeta" },
+        { "id": "p_04", "en": "Universe", "es": "Universo" },
+        { "id": "p_05", "en": "Humanity", "es": "Humanidad" },
+        { "id": "p_06", "en": "Civilization", "es": "Civilización" },
+        { "id": "p_07", "en": "Society", "es": "Sociedad" },
+        { "id": "p_08", "en": "Culture", "es": "Cultura" },
+        { "id": "p_09", "en": "Tradition", "es": "Tradición" },
+        { "id": "p_10", "en": "History", "es": "Historia" },
+        { "id": "p_11", "en": "Future", "es": "Futuro" },
+        { "id": "p_12", "en": "Progress", "es": "Progreso" },
+        { "id": "p_13", "en": "Development", "es": "Desarrollo" },
+        { "id": "p_14", "en": "Innovation", "es": "Innovación" },
+        { "id": "p_15", "en": "Technology", "es": "Tecnología" },
+        { "id": "p_16", "en": "Science", "es": "Ciencia" },
+        { "id": "p_17", "en": "Research", "es": "Investigación" },
+        { "id": "p_18", "en": "Knowledge", "es": "Conocimiento" },
+        { "id": "p_19", "en": "Education", "es": "Educación" },
+        { "id": "p_20", "en": "Art", "es": "Arte" },
+        { "id": "p_21", "en": "Literature", "es": "Literatura" },
+        { "id": "p_22", "en": "Music", "es": "Música" },
+        { "id": "p_23", "en": "Media", "es": "Medios" },
+        { "id": "p_24", "en": "Communication", "es": "Comunicación" },
+        { "id": "p_25", "en": "Internet", "es": "Internet" },
+        { "id": "p_26", "en": "Network", "es": "Red" },
+        { "id": "p_27", "en": "Economy", "es": "Economía" },
+        { "id": "p_28", "en": "Market", "es": "Mercado" },
+        { "id": "p_29", "en": "Trade", "es": "Comercio" },
+        { "id": "p_30", "en": "Business", "es": "Negocios" },
+        { "id": "p_31", "en": "Industry", "es": "Industria" },
+        { "id": "p_32", "en": "Production", "es": "Producción" },
+        { "id": "p_33", "en": "Consumption", "es": "Consumo" },
+        { "id": "p_34", "en": "Resource", "es": "Recurso" },
+        { "id": "p_35", "en": "Energy", "es": "Energía" },
+        { "id": "p_36", "en": "Environment", "es": "Medio ambiente" },
+        { "id": "p_37", "en": "Pollution", "es": "Contaminación" },
+        { "id": "p_38", "en": "Climate Change", "es": "Cambio climático" },
+        { "id": "p_39", "en": "Sustainability", "es": "Sostenibilidad" },
+        { "id": "p_40", "en": "Migration", "es": "Migración" },
+        { "id": "p_41", "en": "Diversity", "es": "Diversidad" },
+        { "id": "p_42", "en": "Equality", "es": "Igualdad" },
+        { "id": "p_43", "en": "Rights", "es": "Derechos" },
+        { "id": "p_44", "en": "Justice", "es": "Justicia" },
+        { "id": "p_45", "en": "Peace", "es": "Paz" },
+        { "id": "p_46", "en": "Conflict", "es": "Conflicto" },
+        { "id": "p_47", "en": "Crisis", "es": "Crisis" },
+        { "id": "p_48", "en": "Solution", "es": "Solución" },
+        { "id": "p_49", "en": "Goal", "es": "Meta / Objetivo" },
+        { "id": "p_50", "en": "Success", "es": "Éxito" }
       ]
     }
   ]

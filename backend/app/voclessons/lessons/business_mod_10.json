@@ -1,46 +1,74 @@
 {
   "id": "business_mod_10",
-  "title": "Business Pro B1-2",
-  "description": "Mastering business vocabulary. Level B1, Part 2.",
+  "category_id": "business",
+  "title": "Business Pro: Finance & Econ",
+  "description": "Vocabulario intermedio sobre finanzas, economía global y desarrollo profesional avanzado.",
   "level": "B1",
-  "total_xp": 140,
+  "part": 2,
+  "total_xp": 500,
+  "status": "locked",
+  "theme": {
+    "icon": "TrendingUp",
+    "color": "violet"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_10",
+      "id": "drill_business_mod_10_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: The Economy",
+      "description": "Conecta términos financieros y económicos.",
+      "instruction": "Empareja el término económico con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Profit",
-          "es": "Ganancia"
-        },
-        {
-          "id": "p_1",
-          "en": "Loss",
-          "es": "Pérdida"
-        },
-        {
-          "id": "p_2",
-          "en": "Debt",
-          "es": "Deuda"
-        },
-        {
-          "id": "p_3",
-          "en": "Loan",
-          "es": "Préstamo"
-        },
-        {
-          "id": "p_4",
-          "en": "Wage",
-          "es": "Sueldo"
-        },
-        {
-          "id": "p_5",
-          "en": "Career",
-          "es": "Carrera"
-        }
+        { "id": "p_01", "en": "Profit", "es": "Ganancia / Beneficio" },
+        { "id": "p_02", "en": "Loss", "es": "Pérdida" },
+        { "id": "p_03", "en": "Revenue", "es": "Ingresos (Facturación)" },
+        { "id": "p_04", "en": "Turnover", "es": "Volumen de ventas / Rotación" },
+        { "id": "p_05", "en": "Expense", "es": "Gasto" },
+        { "id": "p_06", "en": "Debt", "es": "Deuda" },
+        { "id": "p_07", "en": "Loan", "es": "Préstamo" },
+        { "id": "p_08", "en": "Interest", "es": "Interés" },
+        { "id": "p_09", "en": "Rate", "es": "Tasa / Tipo" },
+        { "id": "p_10", "en": "Tax", "es": "Impuesto" },
+        { "id": "p_11", "en": "Audit", "es": "Auditoría" },
+        { "id": "p_12", "en": "Asset", "es": "Activo" },
+        { "id": "p_13", "en": "Liability", "es": "Pasivo" },
+        { "id": "p_14", "en": "Equity", "es": "Patrimonio / Capital" },
+        { "id": "p_15", "en": "Share", "es": "Acción (Bolsa)" },
+        { "id": "p_16", "en": "Stock", "es": "Existencias / Acciones" },
+        { "id": "p_17", "en": "Dividend", "es": "Dividendo" },
+        { "id": "p_18", "en": "Investor", "es": "Inversor" },
+        { "id": "p_19", "en": "Capital", "es": "Capital" },
+        { "id": "p_20", "en": "Currency", "es": "Divisa / Moneda" },
+        { "id": "p_21", "en": "Exchange", "es": "Intercambio / Cambio" },
+        { "id": "p_22", "en": "Inflation", "es": "Inflación" },
+        { "id": "p_23", "en": "Recession", "es": "Recesión" },
+        { "id": "p_24", "en": "Supply", "es": "Oferta / Suministro" },
+        { "id": "p_25", "en": "Demand", "es": "Demanda" },
+        { "id": "p_26", "en": "Import", "es": "Importación" },
+        { "id": "p_27", "en": "Export", "es": "Exportación" },
+        { "id": "p_28", "en": "Global", "es": "Global" },
+        { "id": "p_29", "en": "Local", "es": "Local" },
+        { "id": "p_30", "en": "Wage", "es": "Sueldo (generalmente por hora/semana)" },
+        { "id": "p_31", "en": "Salary", "es": "Salario (mensual/anual)" },
+        { "id": "p_32", "en": "Bonus", "es": "Bono / Prima" },
+        { "id": "p_33", "en": "Commission", "es": "Comisión" },
+        { "id": "p_34", "en": "Pension", "es": "Pensión" },
+        { "id": "p_35", "en": "Benefit", "es": "Beneficio / Prestación" },
+        { "id": "p_36", "en": "Insurance", "es": "Seguro" },
+        { "id": "p_37", "en": "Career", "es": "Carrera profesional" },
+        { "id": "p_38", "en": "Vacancy", "es": "Vacante" },
+        { "id": "p_39", "en": "Applicant", "es": "Solicitante / Candidato" },
+        { "id": "p_40", "en": "Recruitment", "es": "Reclutamiento" },
+        { "id": "p_41", "en": "To Invest", "es": "Invertir" },
+        { "id": "p_42", "en": "To Borrow", "es": "Pedir prestado" },
+        { "id": "p_43", "en": "To Lend", "es": "Prestar" },
+        { "id": "p_44", "en": "To Owe", "es": "Deber (dinero)" },
+        { "id": "p_45", "en": "To Earn", "es": "Ganar (dinero)" },
+        { "id": "p_46", "en": "To Spend", "es": "Gastar" },
+        { "id": "p_47", "en": "To Save", "es": "Ahorrar" },
+        { "id": "p_48", "en": "To Resign", "es": "Renunciar" },
+        { "id": "p_49", "en": "To Retire", "es": "Jubilarse" },
+        { "id": "p_50", "en": "To Dismiss", "es": "Despedir" }
       ]
     }
   ]

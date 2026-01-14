@@ -1,46 +1,74 @@
 {
   "id": "business_mod_16",
-  "title": "Business Pro B2-4",
-  "description": "Mastering business vocabulary. Level B2, Part 4.",
+  "category_id": "business",
+  "title": "Business Pro: Admin & Ops",
+  "description": "Vocabulario B2 sobre administración, gestión de reuniones, operaciones y documentación formal.",
   "level": "B2",
-  "total_xp": 160,
+  "part": 4,
+  "total_xp": 500,
+  "status": "locked",
+  "theme": {
+    "icon": "ClipboardList",
+    "color": "purple"
+  },
   "stages": [
     {
-      "id": "drill_business_mod_16",
+      "id": "drill_business_mod_16_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Business",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Administration",
+      "description": "Conecta términos de operaciones y reuniones.",
+      "instruction": "Empareja el término administrativo con su significado.",
       "pairs": [
-        {
-          "id": "p_0",
-          "en": "Expense",
-          "es": "Gasto"
-        },
-        {
-          "id": "p_1",
-          "en": "Policy",
-          "es": "Política"
-        },
-        {
-          "id": "p_2",
-          "en": "Agenda",
-          "es": "Agenda"
-        },
-        {
-          "id": "p_3",
-          "en": "Minutes",
-          "es": "Actas"
-        },
-        {
-          "id": "p_4",
-          "en": "Proposal",
-          "es": "Propuesta"
-        },
-        {
-          "id": "p_5",
-          "en": "Quote",
-          "es": "Cotización"
-        }
+        { "id": "p_01", "en": "Administration", "es": "Administración" },
+        { "id": "p_02", "en": "Operations", "es": "Operaciones" },
+        { "id": "p_03", "en": "Management", "es": "Gestión / Dirección" },
+        { "id": "p_04", "en": "Supervision", "es": "Supervisión" },
+        { "id": "p_05", "en": "Coordination", "es": "Coordinación" },
+        { "id": "p_06", "en": "Agenda", "es": "Orden del día / Agenda" },
+        { "id": "p_07", "en": "Minutes", "es": "Actas (de reunión)" },
+        { "id": "p_08", "en": "Briefing", "es": "Sesión informativa / Instrucciones" },
+        { "id": "p_09", "en": "Chairperson", "es": "Presidente (de la reunión)" },
+        { "id": "p_10", "en": "Attendee", "es": "Asistente" },
+        { "id": "p_11", "en": "Venue", "es": "Lugar (del evento)" },
+        { "id": "p_12", "en": "Schedule", "es": "Cronograma / Horario" },
+        { "id": "p_13", "en": "Proposal", "es": "Propuesta" },
+        { "id": "p_14", "en": "Quote", "es": "Cotización" },
+        { "id": "p_15", "en": "Estimate", "es": "Estimación / Presupuesto" },
+        { "id": "p_16", "en": "Invoice", "es": "Factura" },
+        { "id": "p_17", "en": "Receipt", "es": "Recibo" },
+        { "id": "p_18", "en": "Purchase order", "es": "Orden de compra" },
+        { "id": "p_19", "en": "Memo", "es": "Memorando" },
+        { "id": "p_20", "en": "Report", "es": "Informe" },
+        { "id": "p_21", "en": "Policy", "es": "Política" },
+        { "id": "p_22", "en": "Procedure", "es": "Procedimiento" },
+        { "id": "p_23", "en": "Protocol", "es": "Protocolo" },
+        { "id": "p_24", "en": "Regulation", "es": "Reglamento" },
+        { "id": "p_25", "en": "Guideline", "es": "Directriz / Pauta" },
+        { "id": "p_26", "en": "Standard", "es": "Estándar" },
+        { "id": "p_27", "en": "Requirement", "es": "Requisito" },
+        { "id": "p_28", "en": "Compliance", "es": "Cumplimiento" },
+        { "id": "p_29", "en": "Audit", "es": "Auditoría" },
+        { "id": "p_30", "en": "Inspection", "es": "Inspección" },
+        { "id": "p_31", "en": "Expense", "es": "Gasto" },
+        { "id": "p_32", "en": "Cost", "es": "Costo" },
+        { "id": "p_33", "en": "Budget", "es": "Presupuesto" },
+        { "id": "p_34", "en": "Overhead", "es": "Gastos generales" },
+        { "id": "p_35", "en": "Petty cash", "es": "Caja chica" },
+        { "id": "p_36", "en": "Resource", "es": "Recurso" },
+        { "id": "p_37", "en": "Inventory", "es": "Inventario" },
+        { "id": "p_38", "en": "Maintenance", "es": "Mantenimiento" },
+        { "id": "p_39", "en": "Logistics", "es": "Logística" },
+        { "id": "p_40", "en": "Vendor", "es": "Vendedor / Proveedor" },
+        { "id": "p_41", "en": "To Organize", "es": "Organizar" },
+        { "id": "p_42", "en": "To Supervise", "es": "Supervisar" },
+        { "id": "p_43", "en": "To Authorize", "es": "Autorizar" },
+        { "id": "p_44", "en": "To Approve", "es": "Aprobar" },
+        { "id": "p_45", "en": "To Reject", "es": "Rechazar" },
+        { "id": "p_46", "en": "To Submit", "es": "Enviar / Presentar" },
+        { "id": "p_47", "en": "To Draft", "es": "Redactar (borrador)" },
+        { "id": "p_48", "en": "To Review", "es": "Revisar" },
+        { "id": "p_49", "en": "To Implement", "es": "Implementar" },
+        { "id": "p_50", "en": "To Monitor", "es": "Monitorear" }
       ]
     }
   ]
