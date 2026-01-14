@@ -20,7 +20,7 @@ NORMAL_DIR = APP_ROOT / "app" / "data" / "lessons"
 
 # Ruta 2: Lecciones PRO
 # 🚨 CORRECCIÓN: Agregué "data" que faltaba en tu ruta anterior según tu estructura de archivos
-PRO_DIR = APP_ROOT / "app" / "data" / "datapro" / "lessonspro"
+PRO_DIR = APP_ROOT / "app" / "datapro" / "lessonspro"
 
 # --- 2. MODELOS DE VALIDACIÓN ---
 
