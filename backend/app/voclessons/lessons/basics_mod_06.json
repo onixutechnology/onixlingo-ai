@@ -1,45 +1,95 @@
 {
   "id": "basics_mod_06",
-  "title": "Life Essentials A2-2",
-  "description": "Mastering basics vocabulary. Level A2, Part 2.",
+  "category_id": "basics",
+  "title": "Clothing & Attire",
+  "description": "Prendas de vestir esenciales y cómo hablar de lo que llevas puesto.",
   "level": "A2",
+  "part": 2,
   "total_xp": 120,
+  "status": "locked",
+  "theme": {
+    "icon": "Shirt",
+    "color": "orange"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_06",
+      "id": "drill_basics_mod_06_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Wardrobe",
+      "description": "Asociación de prendas de vestir.",
+      "instruction": "Empareja la prenda con su nombre en inglés.",
       "pairs": [
         {
           "id": "p_0",
           "en": "Shirt",
-          "es": "Camisa"
+          "es": "Camisa",
+          "pronunciation": "/ʃɜːrt/",
+          "grammar_type": "noun",
+          "image_key": "img_shirt",
+          "context": {
+            "en_sentence": "I need to iron my white shirt for work.",
+            "es_sentence": "Necesito planchar mi camisa blanca para el trabajo."
+          }
         },
         {
           "id": "p_1",
           "en": "Shoe",
-          "es": "Zapato"
+          "es": "Zapato",
+          "pronunciation": "/ʃuː/",
+          "grammar_type": "noun",
+          "image_key": "img_shoe",
+          "context": {
+            "en_sentence": "This shoe fits perfectly.",
+            "es_sentence": "Este zapato me queda perfecto."
+          }
         },
         {
           "id": "p_2",
           "en": "Pants",
-          "es": "Pantalones"
+          "es": "Pantalones",
+          "pronunciation": "/pænts/",
+          "grammar_type": "plural noun",
+          "image_key": "img_pants",
+          "context": {
+            "en_sentence": "These pants are too long for me.",
+            "es_sentence": "Estos pantalones son demasiado largos para mí."
+          }
         },
         {
           "id": "p_3",
           "en": "Hat",
-          "es": "Sombrero"
+          "es": "Sombrero",
+          "pronunciation": "/hæt/",
+          "grammar_type": "noun",
+          "image_key": "img_hat",
+          "context": {
+            "en_sentence": "He is wearing a hat to protect himself from the sun.",
+            "es_sentence": "Él lleva un sombrero para protegerse del sol."
+          }
         },
         {
           "id": "p_4",
           "en": "Coat",
-          "es": "Abrigo"
+          "es": "Abrigo",
+          "pronunciation": "/koʊt/",
+          "grammar_type": "noun",
+          "image_key": "img_coat",
+          "context": {
+            "en_sentence": "Don't forget your coat; it's freezing outside.",
+            "es_sentence": "No olvides tu abrigo; está helando afuera."
+          }
         },
         {
           "id": "p_5",
           "en": "Dress",
-          "es": "Vestido"
+          "es": "Vestido",
+          "pronunciation": "/dres/",
+          "grammar_type": "noun",
+          "image_key": "img_dress",
+          "context": {
+            "en_sentence": "She bought an elegant black dress for the party.",
+            "es_sentence": "Ella compró un vestido negro elegante para la fiesta."
+          }
         }
       ]
     }

@@ -1,45 +1,143 @@
 {
   "id": "basics_mod_12",
-  "title": "Life Essentials B1-4",
-  "description": "Mastering basics vocabulary. Level B1, Part 4.",
+  "category_id": "basics",
+  "title": "Life Essentials: Health",
+  "description": "Vocabulario esencial de salud y atención médica. Nivel B1, Parte 4.",
   "level": "B1",
-  "total_xp": 140,
+  "part": 4,
+  "total_xp": 200,
+  "status": "unlocked",
+  "theme": {
+    "icon": "Medical",
+    "color": "red"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_12",
+      "id": "drill_basics_mod_12_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Health",
+      "description": "Conecta los términos médicos del inglés con su significado.",
+      "instruction": "Empareja la palabra en inglés con su concepto de salud en español.",
       "pairs": [
         {
-          "id": "p_0",
+          "id": "p_01",
           "en": "Sick",
-          "es": "Enfermo"
+          "es": "Enfermo",
+          "pronunciation": "/sɪk/",
+          "grammar_type": "adjective",
+          "image_key": "img_sick",
+          "context": {
+            "en_sentence": "My brother is sick today.",
+            "es_sentence": "Mi hermano está enfermo hoy."
+          }
         },
         {
-          "id": "p_1",
+          "id": "p_02",
           "en": "Health",
-          "es": "Salud"
+          "es": "Salud",
+          "pronunciation": "/helθ/",
+          "grammar_type": "noun",
+          "image_key": "img_health",
+          "context": {
+            "en_sentence": "Good health is important.",
+            "es_sentence": "La buena salud es importante."
+          }
         },
         {
-          "id": "p_2",
+          "id": "p_03",
           "en": "Pain",
-          "es": "Dolor"
+          "es": "Dolor",
+          "pronunciation": "/peɪn/",
+          "grammar_type": "noun",
+          "image_key": "img_pain",
+          "context": {
+            "en_sentence": "I have pain in my head.",
+            "es_sentence": "Tengo dolor de cabeza."
+          }
         },
         {
-          "id": "p_3",
+          "id": "p_04",
           "en": "Doctor",
-          "es": "Médico"
+          "es": "Médico",
+          "pronunciation": "/ˈdɑːk.tɚ/",
+          "grammar_type": "noun",
+          "image_key": "img_doctor",
+          "context": {
+            "en_sentence": "The doctor helps my mother.",
+            "es_sentence": "El médico ayuda a mi madre."
+          }
         },
         {
-          "id": "p_4",
+          "id": "p_05",
           "en": "Nurse",
-          "es": "Enfermera"
+          "es": "Enfermera",
+          "pronunciation": "/nɝːs/",
+          "grammar_type": "noun",
+          "image_key": "img_nurse",
+          "context": {
+            "en_sentence": "The nurse gives medicine.",
+            "es_sentence": "La enfermera da medicina."
+          }
         },
         {
-          "id": "p_5",
+          "id": "p_06",
           "en": "Medicine",
-          "es": "Medicina"
+          "es": "Medicina",
+          "pronunciation": "/ˈmed.ɪ.sən/",
+          "grammar_type": "noun",
+          "image_key": "img_medicine",
+          "context": {
+            "en_sentence": "Take medicine for pain.",
+            "es_sentence": "Toma medicina para el dolor."
+          }
+        },
+        {
+          "id": "p_07",
+          "en": "Hospital",
+          "es": "Hospital",
+          "pronunciation": "/ˈhɑː.spɪ.t̬əl/",
+          "grammar_type": "noun",
+          "image_key": "img_hospital",
+          "context": {
+            "en_sentence": "Go to the hospital if sick.",
+            "es_sentence": "Ve al hospital si estás enfermo."
+          }
+        },
+        {
+          "id": "p_08",
+          "en": "Headache",
+          "es": "Dolor de cabeza",
+          "pronunciation": "/ˈhed.eɪk/",
+          "grammar_type": "noun",
+          "image_key": "img_headache",
+          "context": {
+            "en_sentence": "I have a bad headache.",
+            "es_sentence": "Tengo un dolor de cabeza fuerte."
+          }
+        },
+        {
+          "id": "p_09",
+          "en": "Fever",
+          "es": "Fiebre",
+          "pronunciation": "/ˈfiː.vɚ/",
+          "grammar_type": "noun",
+          "image_key": "img_fever",
+          "context": {
+            "en_sentence": "The child has a fever.",
+            "es_sentence": "El niño tiene fiebre."
+          }
+        },
+        {
+          "id": "p_10",
+          "en": "Healthy",
+          "es": "Sano",
+          "pronunciation": "/ˈhel.θi/",
+          "grammar_type": "adjective",
+          "image_key": "img_healthy",
+          "context": {
+            "en_sentence": "Eat fruit to stay healthy.",
+            "es_sentence": "Come fruta para estar sano."
+          }
         }
       ]
     }

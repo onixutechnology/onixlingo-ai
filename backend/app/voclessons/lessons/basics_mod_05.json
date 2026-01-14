@@ -1,45 +1,143 @@
 {
   "id": "basics_mod_05",
-  "title": "Life Essentials A2-1",
-  "description": "Mastering basics vocabulary. Level A2, Part 1.",
+  "category_id": "basics",
+  "title": "Life Essentials: Transport",
+  "description": "Vocabulario esencial de transporte y movilidad. Nivel A2, Parte 1.",
   "level": "A2",
-  "total_xp": 120,
+  "part": 1,
+  "total_xp": 180,
+  "status": "unlocked",
+  "theme": {
+    "icon": "Car",
+    "color": "blue"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_05",
+      "id": "drill_basics_mod_05_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Transport",
+      "description": "Conecta los medios de transporte del inglés con su significado.",
+      "instruction": "Empareja la palabra en inglés con su traducción en español.",
       "pairs": [
         {
-          "id": "p_0",
+          "id": "p_01",
           "en": "Car",
-          "es": "Coche"
+          "es": "Coche",
+          "pronunciation": "/kɑːr/",
+          "grammar_type": "noun",
+          "image_key": "img_car",
+          "context": {
+            "en_sentence": "I drive a red car.",
+            "es_sentence": "Conduzco un coche rojo."
+          }
         },
         {
-          "id": "p_1",
+          "id": "p_02",
           "en": "Bus",
-          "es": "Autobús"
+          "es": "Autobús",
+          "pronunciation": "/bʌs/",
+          "grammar_type": "noun",
+          "image_key": "img_bus",
+          "context": {
+            "en_sentence": "The yellow bus is big.",
+            "es_sentence": "El autobús amarillo es grande."
+          }
         },
         {
-          "id": "p_2",
+          "id": "p_03",
           "en": "Train",
-          "es": "Tren"
+          "es": "Tren",
+          "pronunciation": "/treɪn/",
+          "grammar_type": "noun",
+          "image_key": "img_train",
+          "context": {
+            "en_sentence": "The train is fast.",
+            "es_sentence": "El tren es rápido."
+          }
         },
         {
-          "id": "p_3",
+          "id": "p_04",
           "en": "Bike",
-          "es": "Bici"
+          "es": "Bicicleta",
+          "pronunciation": "/baɪk/",
+          "grammar_type": "noun",
+          "image_key": "img_bike",
+          "context": {
+            "en_sentence": "I ride my green bike.",
+            "es_sentence": "Voy en mi bicicleta verde."
+          }
         },
         {
-          "id": "p_4",
+          "id": "p_05",
           "en": "Road",
-          "es": "Carretera"
+          "es": "Carretera",
+          "pronunciation": "/roʊd/",
+          "grammar_type": "noun",
+          "image_key": "img_road",
+          "context": {
+            "en_sentence": "The black road is long.",
+            "es_sentence": "La carretera negra es larga."
+          }
         },
         {
-          "id": "p_5",
+          "id": "p_06",
           "en": "Wheel",
-          "es": "Rueda"
+          "es": "Rueda",
+          "pronunciation": "/wiːl/",
+          "grammar_type": "noun",
+          "image_key": "img_wheel",
+          "context": {
+            "en_sentence": "The car has four wheels.",
+            "es_sentence": "El coche tiene cuatro ruedas."
+          }
+        },
+        {
+          "id": "p_07",
+          "en": "Taxi",
+          "es": "Taxi",
+          "pronunciation": "/ˈtæk.si/",
+          "grammar_type": "noun",
+          "image_key": "img_taxi",
+          "context": {
+            "en_sentence": "I take a yellow taxi.",
+            "es_sentence": "Tomo un taxi amarillo."
+          }
+        },
+        {
+          "id": "p_08",
+          "en": "Plane",
+          "es": "Avión",
+          "pronunciation": "/pleɪn/",
+          "grammar_type": "noun",
+          "image_key": "img_plane",
+          "context": {
+            "en_sentence": "The white plane flies high.",
+            "es_sentence": "El avión blanco vuela alto."
+          }
+        },
+        {
+          "id": "p_09",
+          "en": "Motorcycle",
+          "es": "Motocicleta",
+          "pronunciation": "/ˈmoʊ.t̬ɚ.saɪ.kəl/",
+          "grammar_type": "noun",
+          "image_key": "img_motorcycle",
+          "context": {
+            "en_sentence": "The black motorcycle is fast.",
+            "es_sentence": "La motocicleta negra es rápida."
+          }
+        },
+        {
+          "id": "p_10",
+          "en": "Traffic",
+          "es": "Tráfico",
+          "pronunciation": "/ˈtræf.ɪk/",
+          "grammar_type": "noun",
+          "image_key": "img_traffic",
+          "context": {
+            "en_sentence": "There is a lot of traffic.",
+            "es_sentence": "Hay mucho tráfico."
+          }
         }
       ]
     }

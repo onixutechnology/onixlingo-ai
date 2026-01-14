@@ -1,45 +1,95 @@
 {
   "id": "basics_mod_13",
-  "title": "Life Essentials B2-1",
-  "description": "Mastering basics vocabulary. Level B2, Part 1.",
+  "category_id": "basics",
+  "title": "Interior Design & Living Spaces",
+  "description": "Descripción de espacios, mobiliario y atmósfera del hogar a un nivel avanzado.",
   "level": "B2",
+  "part": 1,
   "total_xp": 160,
+  "status": "locked",
+  "theme": {
+    "icon": "Armchair",
+    "color": "orange"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_13",
+      "id": "drill_basics_mod_13_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Home Decor",
+      "description": "Vocabulario de mobiliario en contextos descriptivos.",
+      "instruction": "Empareja el objeto con su definición en inglés.",
       "pairs": [
         {
           "id": "p_0",
           "en": "Furniture",
-          "es": "Muebles"
+          "es": "Muebles",
+          "pronunciation": "/ˈfɜːr.nɪ.tʃər/",
+          "grammar_type": "uncountable noun",
+          "image_key": "img_furniture",
+          "context": {
+            "en_sentence": "We need to rearrange the furniture to create more space in the living room.",
+            "es_sentence": "Necesitamos reacomodar los muebles para crear más espacio en la sala."
+          }
         },
         {
           "id": "p_1",
           "en": "Table",
-          "es": "Mesa"
+          "es": "Mesa",
+          "pronunciation": "/ˈteɪ.bəl/",
+          "grammar_type": "noun",
+          "image_key": "img_table",
+          "context": {
+            "en_sentence": "They sat around the antique oak table for a formal dinner.",
+            "es_sentence": "Se sentaron alrededor de la mesa de roble antiguo para una cena formal."
+          }
         },
         {
           "id": "p_2",
           "en": "Chair",
-          "es": "Silla"
+          "es": "Silla",
+          "pronunciation": "/tʃer/",
+          "grammar_type": "noun",
+          "image_key": "img_chair",
+          "context": {
+            "en_sentence": "Please pull up a chair and join the discussion.",
+            "es_sentence": "Por favor, acerca una silla y únete a la discusión."
+          }
         },
         {
           "id": "p_3",
           "en": "Bed",
-          "es": "Cama"
+          "es": "Cama",
+          "pronunciation": "/bed/",
+          "grammar_type": "noun",
+          "image_key": "img_bed",
+          "context": {
+            "en_sentence": "After a long shift, I collapsed onto the bed immediately.",
+            "es_sentence": "Después de un turno largo, me desplomé en la cama inmediatamente."
+          }
         },
         {
           "id": "p_4",
           "en": "Sofa",
-          "es": "Sofá"
+          "es": "Sofá",
+          "pronunciation": "/ˈsoʊ.fə/",
+          "grammar_type": "noun",
+          "image_key": "img_sofa",
+          "context": {
+            "en_sentence": "This leather sofa is the centerpiece of the lounge area.",
+            "es_sentence": "Este sofá de cuero es la pieza central de la zona de descanso."
+          }
         },
         {
           "id": "p_5",
           "en": "Lamp",
-          "es": "Lámpara"
+          "es": "Lámpara",
+          "pronunciation": "/læmp/",
+          "grammar_type": "noun",
+          "image_key": "img_lamp",
+          "context": {
+            "en_sentence": "The dim light from the lamp created a cozy atmosphere.",
+            "es_sentence": "La luz tenue de la lámpara creó una atmósfera acogedora."
+          }
         }
       ]
     }

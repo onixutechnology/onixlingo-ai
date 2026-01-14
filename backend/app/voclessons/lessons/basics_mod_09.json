@@ -1,45 +1,95 @@
 {
   "id": "basics_mod_09",
-  "title": "Life Essentials B1-1",
-  "description": "Mastering basics vocabulary. Level B1, Part 1.",
+  "category_id": "basics",
+  "title": "Action & Movement",
+  "description": "Verbos esenciales para describir actividades físicas y necesidades diarias.",
   "level": "B1",
+  "part": 1,
   "total_xp": 140,
+  "status": "locked",
+  "theme": {
+    "icon": "Activity",
+    "color": "orange"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_09",
+      "id": "drill_basics_mod_09_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Verbs of Motion",
+      "description": "Conecta la acción con su verbo correspondiente.",
+      "instruction": "Empareja el verbo en inglés con su traducción.",
       "pairs": [
         {
           "id": "p_0",
           "en": "Run",
-          "es": "Correr"
+          "es": "Correr",
+          "pronunciation": "/rʌn/",
+          "grammar_type": "verb",
+          "image_key": "img_run",
+          "context": {
+            "en_sentence": "I run five kilometers every morning to stay fit.",
+            "es_sentence": "Corro cinco kilómetros cada mañana para mantenerme en forma."
+          }
         },
         {
           "id": "p_1",
           "en": "Jump",
-          "es": "Saltar"
+          "es": "Saltar",
+          "pronunciation": "/dʒʌmp/",
+          "grammar_type": "verb",
+          "image_key": "img_jump",
+          "context": {
+            "en_sentence": "The cat can jump over the high fence easily.",
+            "es_sentence": "El gato puede saltar sobre la cerca alta fácilmente."
+          }
         },
         {
           "id": "p_2",
           "en": "Swim",
-          "es": "Nadar"
+          "es": "Nadar",
+          "pronunciation": "/swɪm/",
+          "grammar_type": "verb",
+          "image_key": "img_swim",
+          "context": {
+            "en_sentence": "We prefer to swim in the ocean rather than the pool.",
+            "es_sentence": "Preferimos nadar en el océano en lugar de la piscina."
+          }
         },
         {
           "id": "p_3",
           "en": "Walk",
-          "es": "Caminar"
+          "es": "Caminar",
+          "pronunciation": "/wɔːk/",
+          "grammar_type": "verb",
+          "image_key": "img_walk",
+          "context": {
+            "en_sentence": "Let's walk to the store; the weather is nice.",
+            "es_sentence": "Caminemos a la tienda; el clima está agradable."
+          }
         },
         {
           "id": "p_4",
           "en": "Eat",
-          "es": "Comer"
+          "es": "Comer",
+          "pronunciation": "/iːt/",
+          "grammar_type": "verb",
+          "image_key": "img_eat",
+          "context": {
+            "en_sentence": "It is important to eat a balanced diet for your health.",
+            "es_sentence": "Es importante comer una dieta balanceada para tu salud."
+          }
         },
         {
           "id": "p_5",
           "en": "Sleep",
-          "es": "Dormir"
+          "es": "Dormir",
+          "pronunciation": "/sliːp/",
+          "grammar_type": "verb",
+          "image_key": "img_sleep",
+          "context": {
+            "en_sentence": "I usually sleep eight hours to feel rested.",
+            "es_sentence": "Usualmente duermo ocho horas para sentirme descansado."
+          }
         }
       ]
     }

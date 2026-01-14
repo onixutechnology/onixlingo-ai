@@ -1,45 +1,95 @@
 {
   "id": "basics_mod_01",
-  "title": "Life Essentials A1-1",
-  "description": "Mastering basics vocabulary. Level A1, Part 1.",
+  "category_id": "basics",
+  "title": "Life Essentials: First Words",
+  "description": "El vocabulario de supervivencia absoluto. Comida, bebida y necesidades básicas.",
   "level": "A1",
-  "total_xp": 100,
+  "part": 1,
+  "total_xp": 150,
+  "status": "unlocked",
+  "theme": {
+    "icon": "Coffee",
+    "color": "orange"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_01",
+      "id": "drill_basics_mod_01_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Sustenance",
+      "description": "Conecta los elementos básicos de supervivencia.",
+      "instruction": "Empareja la palabra en inglés con su significado.",
       "pairs": [
         {
-          "id": "p_0",
+          "id": "p_01",
           "en": "Apple",
-          "es": "Manzana"
+          "es": "Manzana",
+          "pronunciation": "/ˈæp.əl/",
+          "grammar_type": "noun",
+          "image_key": "img_apple",
+          "context": {
+            "en_sentence": "I eat a red apple.",
+            "es_sentence": "Yo como una manzana roja."
+          }
         },
         {
-          "id": "p_1",
-          "en": "Banana",
-          "es": "Plátano"
-        },
-        {
-          "id": "p_2",
-          "en": "Orange",
-          "es": "Naranja"
-        },
-        {
-          "id": "p_3",
+          "id": "p_02",
           "en": "Water",
-          "es": "Agua"
+          "es": "Agua",
+          "pronunciation": "/ˈwɔː.tər/",
+          "grammar_type": "noun",
+          "image_key": "img_water",
+          "context": {
+            "en_sentence": "I need water, please.",
+            "es_sentence": "Necesito agua, por favor."
+          }
         },
         {
-          "id": "p_4",
-          "en": "Milk",
-          "es": "Leche"
-        },
-        {
-          "id": "p_5",
+          "id": "p_03",
           "en": "Bread",
-          "es": "Pan"
+          "es": "Pan",
+          "pronunciation": "/bred/",
+          "grammar_type": "noun",
+          "image_key": "img_bread",
+          "context": {
+            "en_sentence": "Fresh bread smells good.",
+            "es_sentence": "El pan fresco huele bien."
+          }
+        },
+        {
+          "id": "p_04",
+          "en": "Milk",
+          "es": "Leche",
+          "pronunciation": "/mɪlk/",
+          "grammar_type": "noun",
+          "image_key": "img_milk",
+          "context": {
+            "en_sentence": "Coffee with milk.",
+            "es_sentence": "Café con leche."
+          }
+        },
+        {
+          "id": "p_05",
+          "en": "Coffee",
+          "es": "Café",
+          "pronunciation": "/ˈkɒf.i/",
+          "grammar_type": "noun",
+          "image_key": "img_coffee",
+          "context": {
+            "en_sentence": "I drink hot coffee.",
+            "es_sentence": "Bebo café caliente."
+          }
+        },
+        {
+          "id": "p_06",
+          "en": "Food",
+          "es": "Comida",
+          "pronunciation": "/fuːd/",
+          "grammar_type": "noun",
+          "image_key": "img_food",
+          "context": {
+            "en_sentence": "The food is delicious.",
+            "es_sentence": "La comida está deliciosa."
+          }
         }
       ]
     }

@@ -1,45 +1,143 @@
 {
   "id": "basics_mod_17",
-  "title": "Life Essentials C1-1",
-  "description": "Mastering basics vocabulary. Level C1, Part 1.",
+  "category_id": "basics",
+  "title": "Life Essentials: Virtues",
+  "description": "Vocabulario esencial de valores y virtudes abstractas. Nivel C1, Parte 1.",
   "level": "C1",
-  "total_xp": 180,
+  "part": 1,
+  "total_xp": 250,
+  "status": "unlocked",
+  "theme": {
+    "icon": "BalanceScale",
+    "color": "gold"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_17",
+      "id": "drill_basics_mod_17_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Virtues",
+      "description": "Conecta las virtudes abstractas del inglés con su significado.",
+      "instruction": "Empareja la palabra en inglés con su valor moral en español.",
       "pairs": [
         {
-          "id": "p_0",
+          "id": "p_01",
           "en": "Freedom",
-          "es": "Libertad"
+          "es": "Libertad",
+          "pronunciation": "/ˈfriː.dəm/",
+          "grammar_type": "noun",
+          "image_key": "img_freedom",
+          "context": {
+            "en_sentence": "Freedom is important for all people.",
+            "es_sentence": "La libertad es importante para toda la gente."
+          }
         },
         {
-          "id": "p_1",
+          "id": "p_02",
           "en": "Wisdom",
-          "es": "Sabiduría"
+          "es": "Sabiduría",
+          "pronunciation": "/ˈwɪz.dəm/",
+          "grammar_type": "noun",
+          "image_key": "img_wisdom",
+          "context": {
+            "en_sentence": "Grandmother speaks with wisdom.",
+            "es_sentence": "La abuela habla con sabiduría."
+          }
         },
         {
-          "id": "p_2",
+          "id": "p_03",
           "en": "Justice",
-          "es": "Justicia"
+          "es": "Justicia",
+          "pronunciation": "/ˈdʒʌs.tɪs/",
+          "grammar_type": "noun",
+          "image_key": "img_justice",
+          "context": {
+            "en_sentence": "The judge seeks justice.",
+            "es_sentence": "El juez busca justicia."
+          }
         },
         {
-          "id": "p_3",
+          "id": "p_04",
           "en": "Courage",
-          "es": "Coraje"
+          "es": "Coraje",
+          "pronunciation": "/ˈkɝː.ɪdʒ/",
+          "grammar_type": "noun",
+          "image_key": "img_courage",
+          "context": {
+            "en_sentence": "He shows courage in danger.",
+            "es_sentence": "Él muestra coraje en peligro."
+          }
         },
         {
-          "id": "p_4",
+          "id": "p_05",
           "en": "Honesty",
-          "es": "Honestidad"
+          "es": "Honestidad",
+          "pronunciation": "/ˈɑː.nɪs.ti/",
+          "grammar_type": "noun",
+          "image_key": "img_honesty",
+          "context": {
+            "en_sentence": "Honesty builds strong friendships.",
+            "es_sentence": "La honestidad construye amistades fuertes."
+          }
         },
         {
-          "id": "p_5",
+          "id": "p_06",
           "en": "Beauty",
-          "es": "Belleza"
+          "es": "Belleza",
+          "pronunciation": "/ˈbjuː.t̬i/",
+          "grammar_type": "noun",
+          "image_key": "img_beauty",
+          "context": {
+            "en_sentence": "Nature shows great beauty.",
+            "es_sentence": "La naturaleza muestra gran belleza."
+          }
+        },
+        {
+          "id": "p_07",
+          "en": "Truth",
+          "es": "Verdad",
+          "pronunciation": "/truːθ/",
+          "grammar_type": "noun",
+          "image_key": "img_truth",
+          "context": {
+            "en_sentence": "Always speak the truth.",
+            "es_sentence": "Siempre habla la verdad."
+          }
+        },
+        {
+          "id": "p_08",
+          "en": "Peace",
+          "es": "Paz",
+          "pronunciation": "/piːs/",
+          "grammar_type": "noun",
+          "image_key": "img_peace",
+          "context": {
+            "en_sentence": "We want world peace.",
+            "es_sentence": "Queremos paz mundial."
+          }
+        },
+        {
+          "id": "p_09",
+          "en": "Love",
+          "es": "Amor",
+          "pronunciation": "/lʌv/",
+          "grammar_type": "noun",
+          "image_key": "img_love",
+          "context": {
+            "en_sentence": "Family love is special.",
+            "es_sentence": "El amor familiar es especial."
+          }
+        },
+        {
+          "id": "p_10",
+          "en": "Respect",
+          "es": "Respeto",
+          "pronunciation": "/rɪˈspekt/",
+          "grammar_type": "noun",
+          "image_key": "img_respect",
+          "context": {
+            "en_sentence": "Show respect to elders.",
+            "es_sentence": "Muestra respeto a los mayores."
+          }
         }
       ]
     }

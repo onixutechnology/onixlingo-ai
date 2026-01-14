@@ -1,45 +1,143 @@
 {
   "id": "basics_mod_08",
-  "title": "Life Essentials A2-4",
-  "description": "Mastering basics vocabulary. Level A2, Part 4.",
+  "category_id": "basics",
+  "title": "Life Essentials: Home",
+  "description": "Vocabulario esencial de casa y habitaciones. Nivel A2, Parte 4.",
   "level": "A2",
-  "total_xp": 120,
+  "part": 4,
+  "total_xp": 180,
+  "status": "unlocked",
+  "theme": {
+    "icon": "Home",
+    "color": "green"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_08",
+      "id": "drill_basics_mod_08_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Home",
+      "description": "Conecta las partes de la casa del inglés con su significado.",
+      "instruction": "Empareja la palabra en inglés con su parte de la casa en español.",
       "pairs": [
         {
-          "id": "p_0",
+          "id": "p_01",
           "en": "House",
-          "es": "Casa"
+          "es": "Casa",
+          "pronunciation": "/haʊs/",
+          "grammar_type": "noun",
+          "image_key": "img_house",
+          "context": {
+            "en_sentence": "My family lives in a big house.",
+            "es_sentence": "Mi familia vive en una casa grande."
+          }
         },
         {
-          "id": "p_1",
+          "id": "p_02",
           "en": "Room",
-          "es": "Cuarto"
+          "es": "Cuarto",
+          "pronunciation": "/ruːm/",
+          "grammar_type": "noun",
+          "image_key": "img_room",
+          "context": {
+            "en_sentence": "My sister has a pink room.",
+            "es_sentence": "Mi hermana tiene un cuarto rosa."
+          }
         },
         {
-          "id": "p_2",
+          "id": "p_03",
           "en": "Kitchen",
-          "es": "Cocina"
+          "es": "Cocina",
+          "pronunciation": "/ˈkɪtʃ.ɪn/",
+          "grammar_type": "noun",
+          "image_key": "img_kitchen",
+          "context": {
+            "en_sentence": "Mother cooks in the kitchen.",
+            "es_sentence": "Madre cocina en la cocina."
+          }
         },
         {
-          "id": "p_3",
+          "id": "p_04",
           "en": "Door",
-          "es": "Puerta"
+          "es": "Puerta",
+          "pronunciation": "/dɔːr/",
+          "grammar_type": "noun",
+          "image_key": "img_door",
+          "context": {
+            "en_sentence": "Open the white door.",
+            "es_sentence": "Abre la puerta blanca."
+          }
         },
         {
-          "id": "p_4",
+          "id": "p_05",
           "en": "Window",
-          "es": "Ventana"
+          "es": "Ventana",
+          "pronunciation": "/ˈwɪn.doʊ/",
+          "grammar_type": "noun",
+          "image_key": "img_window",
+          "context": {
+            "en_sentence": "Look through the big window.",
+            "es_sentence": "Mira por la ventana grande."
+          }
         },
         {
-          "id": "p_5",
+          "id": "p_06",
           "en": "Wall",
-          "es": "Pared"
+          "es": "Pared",
+          "pronunciation": "/wɑːl/",
+          "grammar_type": "noun",
+          "image_key": "img_wall",
+          "context": {
+            "en_sentence": "The blue wall is clean.",
+            "es_sentence": "La pared azul está limpia."
+          }
+        },
+        {
+          "id": "p_07",
+          "en": "Bedroom",
+          "es": "Dormitorio",
+          "pronunciation": "/ˈbed.ruːm/",
+          "grammar_type": "noun",
+          "image_key": "img_bedroom",
+          "context": {
+            "en_sentence": "My bedroom is small.",
+            "es_sentence": "Mi dormitorio es pequeño."
+          }
+        },
+        {
+          "id": "p_08",
+          "en": "Bathroom",
+          "es": "Baño",
+          "pronunciation": "/ˈbæθ.ruːm/",
+          "grammar_type": "noun",
+          "image_key": "img_bathroom",
+          "context": {
+            "en_sentence": "The bathroom has hot water.",
+            "es_sentence": "El baño tiene agua caliente."
+          }
+        },
+        {
+          "id": "p_09",
+          "en": "Table",
+          "es": "Mesa",
+          "pronunciation": "/ˈteɪ.bəl/",
+          "grammar_type": "noun",
+          "image_key": "img_table",
+          "context": {
+            "en_sentence": "We eat at the brown table.",
+            "es_sentence": "Comemos en la mesa marrón."
+          }
+        },
+        {
+          "id": "p_10",
+          "en": "Chair",
+          "es": "Silla",
+          "pronunciation": "/tʃer/",
+          "grammar_type": "noun",
+          "image_key": "img_chair",
+          "context": {
+            "en_sentence": "Father sits on the chair.",
+            "es_sentence": "Padre se sienta en la silla."
+          }
         }
       ]
     }

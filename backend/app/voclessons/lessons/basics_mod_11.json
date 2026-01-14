@@ -1,45 +1,95 @@
 {
   "id": "basics_mod_11",
-  "title": "Life Essentials B1-3",
-  "description": "Mastering basics vocabulary. Level B1, Part 3.",
+  "category_id": "basics",
+  "title": "The Human Body & Health",
+  "description": "Anatomía esencial y expresiones relacionadas con la salud física y emocional.",
   "level": "B1",
+  "part": 3,
   "total_xp": 140,
+  "status": "locked",
+  "theme": {
+    "icon": "Heart",
+    "color": "orange"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_11",
+      "id": "drill_basics_mod_11_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Anatomy",
+      "description": "Identifica las partes del cuerpo en contextos intermedios.",
+      "instruction": "Empareja la parte del cuerpo con su nombre en inglés.",
       "pairs": [
         {
           "id": "p_0",
           "en": "Head",
-          "es": "Cabeza"
+          "es": "Cabeza",
+          "pronunciation": "/hed/",
+          "grammar_type": "noun",
+          "image_key": "img_head",
+          "context": {
+            "en_sentence": "He nodded his head in agreement during the meeting.",
+            "es_sentence": "Él asintió con la cabeza en señal de acuerdo durante la reunión."
+          }
         },
         {
           "id": "p_1",
           "en": "Hand",
-          "es": "Mano"
+          "es": "Mano",
+          "pronunciation": "/hænd/",
+          "grammar_type": "noun",
+          "image_key": "img_hand",
+          "context": {
+            "en_sentence": "Please wash your hands thoroughly before preparing food.",
+            "es_sentence": "Por favor, lávate bien las manos antes de preparar la comida."
+          }
         },
         {
           "id": "p_2",
           "en": "Leg",
-          "es": "Pierna"
+          "es": "Pierna",
+          "pronunciation": "/leɡ/",
+          "grammar_type": "noun",
+          "image_key": "img_leg",
+          "context": {
+            "en_sentence": "She broke her leg while skiing in the mountains last winter.",
+            "es_sentence": "Se rompió la pierna mientras esquiaba en las montañas el invierno pasado."
+          }
         },
         {
           "id": "p_3",
           "en": "Eye",
-          "es": "Ojo"
+          "es": "Ojo",
+          "pronunciation": "/aɪ/",
+          "grammar_type": "noun",
+          "image_key": "img_eye",
+          "context": {
+            "en_sentence": "Could you please keep an eye on my bag for a moment?",
+            "es_sentence": "¿Podrías echarle un ojo a mi bolsa un momento, por favor?"
+          }
         },
         {
           "id": "p_4",
           "en": "Face",
-          "es": "Cara"
+          "es": "Cara",
+          "pronunciation": "/feɪs/",
+          "grammar_type": "noun",
+          "image_key": "img_face",
+          "context": {
+            "en_sentence": "He had a worried look on his face when he heard the news.",
+            "es_sentence": "Tenía una mirada de preocupación en su cara cuando escuchó la noticia."
+          }
         },
         {
           "id": "p_5",
           "en": "Heart",
-          "es": "Corazón"
+          "es": "Corazón",
+          "pronunciation": "/hɑːrt/",
+          "grammar_type": "noun",
+          "image_key": "img_heart",
+          "context": {
+            "en_sentence": "Regular exercise is essential for maintaining a healthy heart.",
+            "es_sentence": "El ejercicio regular es esencial para mantener un corazón sano."
+          }
         }
       ]
     }

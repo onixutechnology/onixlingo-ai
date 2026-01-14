@@ -1,45 +1,95 @@
 {
   "id": "basics_mod_18",
-  "title": "Life Essentials C1-2",
-  "description": "Mastering basics vocabulary. Level C1, Part 2.",
+  "category_id": "basics",
+  "title": "Abstract Concepts & Ideals",
+  "description": "Exploración de conceptos filosóficos universales y la condición humana en contextos complejos.",
   "level": "C1",
+  "part": 2,
   "total_xp": 180,
+  "status": "locked",
+  "theme": {
+    "icon": "Scale",
+    "color": "orange"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_18",
+      "id": "drill_basics_mod_18_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: The Human Condition",
+      "description": "Asocia conceptos abstractos con definiciones profundas.",
+      "instruction": "Empareja el concepto con su término en inglés.",
       "pairs": [
         {
           "id": "p_0",
           "en": "Truth",
-          "es": "Verdad"
+          "es": "Verdad",
+          "pronunciation": "/truːθ/",
+          "grammar_type": "abstract noun",
+          "image_key": "img_truth",
+          "context": {
+            "en_sentence": "Ultimately, the objective truth proved elusive during the complex investigation.",
+            "es_sentence": "En última instancia, la verdad objetiva resultó esquiva durante la compleja investigación."
+          }
         },
         {
           "id": "p_1",
           "en": "Peace",
-          "es": "Paz"
+          "es": "Paz",
+          "pronunciation": "/piːs/",
+          "grammar_type": "abstract noun",
+          "image_key": "img_peace",
+          "context": {
+            "en_sentence": "Achieving lasting peace in the region requires significant compromise from all factions.",
+            "es_sentence": "Lograr una paz duradera en la región requiere un compromiso significativo de todas las facciones."
+          }
         },
         {
           "id": "p_2",
           "en": "War",
-          "es": "Guerra"
+          "es": "Guerra",
+          "pronunciation": "/wɔːr/",
+          "grammar_type": "abstract noun",
+          "image_key": "img_war",
+          "context": {
+            "en_sentence": "The socio-economic toll of war persists long after the armistice is signed.",
+            "es_sentence": "El costo socioeconómico de la guerra persiste mucho después de que se firma el armisticio."
+          }
         },
         {
           "id": "p_3",
           "en": "Love",
-          "es": "Amor"
+          "es": "Amor",
+          "pronunciation": "/lʌv/",
+          "grammar_type": "abstract noun",
+          "image_key": "img_love",
+          "context": {
+            "en_sentence": "His capacity for unconditional love remained unshaken despite the betrayal.",
+            "es_sentence": "Su capacidad de amor incondicional permaneció inquebrantable a pesar de la traición."
+          }
         },
         {
           "id": "p_4",
           "en": "Hate",
-          "es": "Odio"
+          "es": "Odio",
+          "pronunciation": "/heɪt/",
+          "grammar_type": "abstract noun",
+          "image_key": "img_hate",
+          "context": {
+            "en_sentence": "Their rivalry was fueled by a deep-seated hate spanning several generations.",
+            "es_sentence": "Su rivalidad fue alimentada por un odio profundamente arraigado que abarcó varias generaciones."
+          }
         },
         {
           "id": "p_5",
           "en": "Hope",
-          "es": "Esperanza"
+          "es": "Esperanza",
+          "pronunciation": "/hoʊp/",
+          "grammar_type": "abstract noun",
+          "image_key": "img_hope",
+          "context": {
+            "en_sentence": "Amidst the despair, a faint glimmer of hope emerged for the survivors.",
+            "es_sentence": "En medio de la desesperación, un leve rayo de esperanza surgió para los sobrevivientes."
+          }
         }
       ]
     }

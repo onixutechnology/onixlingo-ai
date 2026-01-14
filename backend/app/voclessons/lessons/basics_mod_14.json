@@ -1,45 +1,143 @@
 {
   "id": "basics_mod_14",
-  "title": "Life Essentials B2-2",
-  "description": "Mastering basics vocabulary. Level B2, Part 2.",
+  "category_id": "basics",
+  "title": "Life Essentials: Kitchen",
+  "description": "Vocabulario esencial de electrodomésticos y utensilios de cocina. Nivel B2, Parte 2.",
   "level": "B2",
-  "total_xp": 160,
+  "part": 2,
+  "total_xp": 220,
+  "status": "unlocked",
+  "theme": {
+    "icon": "Fridge",
+    "color": "teal"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_14",
+      "id": "drill_basics_mod_14_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Kitchen",
+      "description": "Conecta los electrodomésticos y utensilios de cocina del inglés con su significado.",
+      "instruction": "Empareja la palabra en inglés con su objeto de cocina en español.",
       "pairs": [
         {
-          "id": "p_0",
+          "id": "p_01",
           "en": "Fridge",
-          "es": "Refri"
+          "es": "Refrigerador",
+          "pronunciation": "/frɪdʒ/",
+          "grammar_type": "noun",
+          "image_key": "img_fridge",
+          "context": {
+            "en_sentence": "Put the milk in the fridge.",
+            "es_sentence": "Pon la leche en el refrigerador."
+          }
         },
         {
-          "id": "p_1",
+          "id": "p_02",
           "en": "Oven",
-          "es": "Horno"
+          "es": "Horno",
+          "pronunciation": "/ˈʌv.ən/",
+          "grammar_type": "noun",
+          "image_key": "img_oven",
+          "context": {
+            "en_sentence": "Mother bakes bread in the oven.",
+            "es_sentence": "Madre hornea pan en el horno."
+          }
         },
         {
-          "id": "p_2",
+          "id": "p_03",
           "en": "Stove",
-          "es": "Estufa"
+          "es": "Estufa",
+          "pronunciation": "/stoʊv/",
+          "grammar_type": "noun",
+          "image_key": "img_stove",
+          "context": {
+            "en_sentence": "Cook rice on the stove.",
+            "es_sentence": "Cocina arroz en la estufa."
+          }
         },
         {
-          "id": "p_3",
+          "id": "p_04",
           "en": "Sink",
-          "es": "Lavabo"
+          "es": "Fregadero",
+          "pronunciation": "/sɪŋk/",
+          "grammar_type": "noun",
+          "image_key": "img_sink",
+          "context": {
+            "en_sentence": "Wash plates in the sink.",
+            "es_sentence": "Lava platos en el fregadero."
+          }
         },
         {
-          "id": "p_4",
+          "id": "p_05",
           "en": "Plate",
-          "es": "Plato"
+          "es": "Plato",
+          "pronunciation": "/pleɪt/",
+          "grammar_type": "noun",
+          "image_key": "img_plate",
+          "context": {
+            "en_sentence": "The white plate is clean.",
+            "es_sentence": "El plato blanco está limpio."
+          }
         },
         {
-          "id": "p_5",
+          "id": "p_06",
           "en": "Cup",
-          "es": "Taza"
+          "es": "Taza",
+          "pronunciation": "/kʌp/",
+          "grammar_type": "noun",
+          "image_key": "img_cup",
+          "context": {
+            "en_sentence": "Drink coffee from this cup.",
+            "es_sentence": "Bebe café de esta taza."
+          }
+        },
+        {
+          "id": "p_07",
+          "en": "Microwave",
+          "es": "Microondas",
+          "pronunciation": "/ˈmaɪ.kroʊ.weɪv/",
+          "grammar_type": "noun",
+          "image_key": "img_microwave",
+          "context": {
+            "en_sentence": "Heat food in the microwave.",
+            "es_sentence": "Calienta comida en el microondas."
+          }
+        },
+        {
+          "id": "p_08",
+          "en": "Toaster",
+          "es": "Tostadora",
+          "pronunciation": "/ˈtoʊ.stɚ/",
+          "grammar_type": "noun",
+          "image_key": "img_toaster",
+          "context": {
+            "en_sentence": "Make toast in the toaster.",
+            "es_sentence": "Haz tostadas en la tostadora."
+          }
+        },
+        {
+          "id": "p_09",
+          "en": "Fork",
+          "es": "Tenedor",
+          "pronunciation": "/fɔːrk/",
+          "grammar_type": "noun",
+          "image_key": "img_fork",
+          "context": {
+            "en_sentence": "Use a fork for meat.",
+            "es_sentence": "Usa tenedor para la carne."
+          }
+        },
+        {
+          "id": "p_10",
+          "en": "Knife",
+          "es": "Cuchillo",
+          "pronunciation": "/naɪf/",
+          "grammar_type": "noun",
+          "image_key": "img_knife",
+          "context": {
+            "en_sentence": "Cut bread with a knife.",
+            "es_sentence": "Corta pan con cuchillo."
+          }
         }
       ]
     }

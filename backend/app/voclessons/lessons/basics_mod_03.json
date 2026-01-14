@@ -1,45 +1,143 @@
 {
   "id": "basics_mod_03",
-  "title": "Life Essentials A1-3",
-  "description": "Mastering basics vocabulary. Level A1, Part 3.",
+  "category_id": "basics",
+  "title": "Life Essentials: Colors",
+  "description": "Vocabulario esencial de colores básicos. Nivel A1, Parte 3.",
   "level": "A1",
-  "total_xp": 100,
+  "part": 3,
+  "total_xp": 150,
+  "status": "unlocked",
+  "theme": {
+    "icon": "Palette",
+    "color": "purple"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_03",
+      "id": "drill_basics_mod_03_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Colors",
+      "description": "Conecta los colores básicos del inglés con su significado.",
+      "instruction": "Empareja la palabra en inglés con su color en español.",
       "pairs": [
         {
-          "id": "p_0",
+          "id": "p_01",
           "en": "Red",
-          "es": "Rojo"
+          "es": "Rojo",
+          "pronunciation": "/red/",
+          "grammar_type": "adjective",
+          "image_key": "img_red",
+          "context": {
+            "en_sentence": "The red apple is sweet.",
+            "es_sentence": "La manzana roja es dulce."
+          }
         },
         {
-          "id": "p_1",
+          "id": "p_02",
           "en": "Blue",
-          "es": "Azul"
+          "es": "Azul",
+          "pronunciation": "/bluː/",
+          "grammar_type": "adjective",
+          "image_key": "img_blue",
+          "context": {
+            "en_sentence": "I like the blue sky.",
+            "es_sentence": "Me gusta el cielo azul."
+          }
         },
         {
-          "id": "p_2",
+          "id": "p_03",
           "en": "Green",
-          "es": "Verde"
+          "es": "Verde",
+          "pronunciation": "/ɡriːn/",
+          "grammar_type": "adjective",
+          "image_key": "img_green",
+          "context": {
+            "en_sentence": "Green grass is beautiful.",
+            "es_sentence": "La hierba verde es hermosa."
+          }
         },
         {
-          "id": "p_3",
+          "id": "p_04",
           "en": "Black",
-          "es": "Negro"
+          "es": "Negro",
+          "pronunciation": "/blæk/",
+          "grammar_type": "adjective",
+          "image_key": "img_black",
+          "context": {
+            "en_sentence": "My cat is black.",
+            "es_sentence": "Mi gato es negro."
+          }
         },
         {
-          "id": "p_4",
+          "id": "p_05",
           "en": "White",
-          "es": "Blanco"
+          "es": "Blanco",
+          "pronunciation": "/waɪt/",
+          "grammar_type": "adjective",
+          "image_key": "img_white",
+          "context": {
+            "en_sentence": "The white milk is cold.",
+            "es_sentence": "La leche blanca está fría."
+          }
         },
         {
-          "id": "p_5",
+          "id": "p_06",
           "en": "Yellow",
-          "es": "Amarillo"
+          "es": "Amarillo",
+          "pronunciation": "/ˈjel.oʊ/",
+          "grammar_type": "adjective",
+          "image_key": "img_yellow",
+          "context": {
+            "en_sentence": "The yellow sun is hot.",
+            "es_sentence": "El sol amarillo está caliente."
+          }
+        },
+        {
+          "id": "p_07",
+          "en": "Orange",
+          "es": "Naranja",
+          "pronunciation": "/ˈɔːr.ɪndʒ/",
+          "grammar_type": "adjective",
+          "image_key": "img_orange",
+          "context": {
+            "en_sentence": "I eat an orange fruit.",
+            "es_sentence": "Como una fruta naranja."
+          }
+        },
+        {
+          "id": "p_08",
+          "en": "Brown",
+          "es": "Marrón",
+          "pronunciation": "/braʊn/",
+          "grammar_type": "adjective",
+          "image_key": "img_brown",
+          "context": {
+            "en_sentence": "The brown bread is good.",
+            "es_sentence": "El pan marrón está bueno."
+          }
+        },
+        {
+          "id": "p_09",
+          "en": "Pink",
+          "es": "Rosa",
+          "pronunciation": "/pɪŋk/",
+          "grammar_type": "adjective",
+          "image_key": "img_pink",
+          "context": {
+            "en_sentence": "The pink flower is pretty.",
+            "es_sentence": "La flor rosa es bonita."
+          }
+        },
+        {
+          "id": "p_10",
+          "en": "Purple",
+          "es": "Morado",
+          "pronunciation": "/ˈpɜːr.pəl/",
+          "grammar_type": "adjective",
+          "image_key": "img_purple",
+          "context": {
+            "en_sentence": "Purple grapes are sweet.",
+            "es_sentence": "Las uvas moradas son dulces."
+          }
         }
       ]
     }

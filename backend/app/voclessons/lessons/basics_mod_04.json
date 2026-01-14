@@ -1,45 +1,95 @@
 {
   "id": "basics_mod_04",
-  "title": "Life Essentials A1-4",
-  "description": "Mastering basics vocabulary. Level A1, Part 4.",
+  "category_id": "basics",
+  "title": "Counting Basics",
+  "description": "Domina los números esenciales para precios, horarios y cantidades.",
   "level": "A1",
-  "total_xp": 100,
+  "part": 4,
+  "total_xp": 150,
+  "status": "locked",
+  "theme": {
+    "icon": "Hash",
+    "color": "orange"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_04",
+      "id": "drill_basics_mod_04_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Numbers 1-10",
+      "description": "Asociación rápida de cantidades y cifras.",
+      "instruction": "Empareja el número con su escritura en inglés.",
       "pairs": [
         {
           "id": "p_0",
           "en": "One",
-          "es": "Uno"
+          "es": "Uno",
+          "pronunciation": "/wʌn/",
+          "grammar_type": "numeral",
+          "image_key": "img_num_1",
+          "context": {
+            "en_sentence": "I have one question.",
+            "es_sentence": "Tengo una pregunta."
+          }
         },
         {
           "id": "p_1",
           "en": "Two",
-          "es": "Dos"
+          "es": "Dos",
+          "pronunciation": "/tuː/",
+          "grammar_type": "numeral",
+          "image_key": "img_num_2",
+          "context": {
+            "en_sentence": "A table for two, please.",
+            "es_sentence": "Una mesa para dos, por favor."
+          }
         },
         {
           "id": "p_2",
           "en": "Three",
-          "es": "Tres"
+          "es": "Tres",
+          "pronunciation": "/θriː/",
+          "grammar_type": "numeral",
+          "image_key": "img_num_3",
+          "context": {
+            "en_sentence": "Three kilometers away.",
+            "es_sentence": "A tres kilómetros de distancia."
+          }
         },
         {
           "id": "p_3",
           "en": "Four",
-          "es": "Cuatro"
+          "es": "Cuatro",
+          "pronunciation": "/fɔːr/",
+          "grammar_type": "numeral",
+          "image_key": "img_num_4",
+          "context": {
+            "en_sentence": "The car has four wheels.",
+            "es_sentence": "El coche tiene cuatro ruedas."
+          }
         },
         {
           "id": "p_4",
           "en": "Five",
-          "es": "Cinco"
+          "es": "Cinco",
+          "pronunciation": "/faɪv/",
+          "grammar_type": "numeral",
+          "image_key": "img_num_5",
+          "context": {
+            "en_sentence": "Give me five minutes.",
+            "es_sentence": "Dame cinco minutos."
+          }
         },
         {
           "id": "p_5",
           "en": "Ten",
-          "es": "Diez"
+          "es": "Diez",
+          "pronunciation": "/ten/",
+          "grammar_type": "numeral",
+          "image_key": "img_num_10",
+          "context": {
+            "en_sentence": "The store opens at ten.",
+            "es_sentence": "La tienda abre a las diez."
+          }
         }
       ]
     }

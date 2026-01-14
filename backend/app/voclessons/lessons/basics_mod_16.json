@@ -1,45 +1,95 @@
 {
   "id": "basics_mod_16",
-  "title": "Life Essentials B2-4",
-  "description": "Mastering basics vocabulary. Level B2, Part 4.",
+  "category_id": "basics",
+  "title": "Nature & Landscapes",
+  "description": "Descripción de entornos naturales, clima y geografía con vocabulario descriptivo avanzado.",
   "level": "B2",
+  "part": 4,
   "total_xp": 160,
+  "status": "locked",
+  "theme": {
+    "icon": "Trees",
+    "color": "orange"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_16",
+      "id": "drill_basics_mod_16_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: The Natural World",
+      "description": "Asocia elementos geográficos con descripciones complejas.",
+      "instruction": "Empareja el elemento natural con su definición.",
       "pairs": [
         {
           "id": "p_0",
           "en": "Tree",
-          "es": "Árbol"
+          "es": "Árbol",
+          "pronunciation": "/triː/",
+          "grammar_type": "noun",
+          "image_key": "img_tree",
+          "context": {
+            "en_sentence": "The ancient oak tree provided shelter from the sudden storm.",
+            "es_sentence": "El antiguo roble proporcionó refugio contra la tormenta repentina."
+          }
         },
         {
           "id": "p_1",
           "en": "Flower",
-          "es": "Flor"
+          "es": "Flor",
+          "pronunciation": "/ˈflaʊ.ɚ/",
+          "grammar_type": "noun",
+          "image_key": "img_flower",
+          "context": {
+            "en_sentence": "These exotic flowers only bloom once a year during early spring.",
+            "es_sentence": "Estas flores exóticas solo florecen una vez al año a principios de la primavera."
+          }
         },
         {
           "id": "p_2",
           "en": "River",
-          "es": "Río"
+          "es": "Río",
+          "pronunciation": "/ˈrɪv.ɚ/",
+          "grammar_type": "noun",
+          "image_key": "img_river",
+          "context": {
+            "en_sentence": "The river winds its way through the valley before reaching the ocean.",
+            "es_sentence": "El río serpentea a través del valle antes de llegar al océano."
+          }
         },
         {
           "id": "p_3",
           "en": "Mountain",
-          "es": "Montaña"
+          "es": "Montaña",
+          "pronunciation": "/ˈmaʊn.tən/",
+          "grammar_type": "noun",
+          "image_key": "img_mountain",
+          "context": {
+            "en_sentence": "Reaching the summit of the mountain requires endurance and skill.",
+            "es_sentence": "Llegar a la cima de la montaña requiere resistencia y habilidad."
+          }
         },
         {
           "id": "p_4",
           "en": "Sea",
-          "es": "Mar"
+          "es": "Mar",
+          "pronunciation": "/siː/",
+          "grammar_type": "noun",
+          "image_key": "img_sea",
+          "context": {
+            "en_sentence": "The sea was rough yesterday, making it dangerous for small boats.",
+            "es_sentence": "El mar estaba agitado ayer, lo que lo hacía peligroso para los barcos pequeños."
+          }
         },
         {
           "id": "p_5",
           "en": "Sky",
-          "es": "Cielo"
+          "es": "Cielo",
+          "pronunciation": "/skaɪ/",
+          "grammar_type": "noun",
+          "image_key": "img_sky",
+          "context": {
+            "en_sentence": "The sky was overcast, hinting at the possibility of rain later.",
+            "es_sentence": "El cielo estaba nublado, insinuando la posibilidad de lluvia más tarde."
+          }
         }
       ]
     }

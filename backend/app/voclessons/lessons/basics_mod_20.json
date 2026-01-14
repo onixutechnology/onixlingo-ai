@@ -1,45 +1,143 @@
 {
   "id": "basics_mod_20",
-  "title": "Life Essentials C1-4",
-  "description": "Mastering basics vocabulary. Level C1, Part 4.",
+  "category_id": "basics",
+  "title": "Life Essentials: World",
+  "description": "Vocabulario esencial de conceptos globales y progreso humano. Nivel C1, Parte 4.",
   "level": "C1",
-  "total_xp": 180,
+  "part": 4,
+  "total_xp": 250,
+  "status": "unlocked",
+  "theme": {
+    "icon": "Earth",
+    "color": "darkgreen"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_20",
+      "id": "drill_basics_mod_20_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: World",
+      "description": "Conecta los conceptos globales del inglés con su significado.",
+      "instruction": "Empareja la palabra en inglés con su concepto universal en español.",
       "pairs": [
         {
-          "id": "p_0",
+          "id": "p_01",
           "en": "Tradition",
-          "es": "Tradición"
+          "es": "Tradición",
+          "pronunciation": "/trəˈdɪʃ.ən/",
+          "grammar_type": "noun",
+          "image_key": "img_tradition",
+          "context": {
+            "en_sentence": "Tradition connects past and present.",
+            "es_sentence": "La tradición conecta pasado y presente."
+          }
         },
         {
-          "id": "p_1",
+          "id": "p_02",
           "en": "Economy",
-          "es": "Economía"
+          "es": "Economía",
+          "pronunciation": "/iːˈkɑː.nə.mi/",
+          "grammar_type": "noun",
+          "image_key": "img_economy",
+          "context": {
+            "en_sentence": "Strong economy helps society.",
+            "es_sentence": "Una economía fuerte ayuda a la sociedad."
+          }
         },
         {
-          "id": "p_2",
+          "id": "p_03",
           "en": "Society",
-          "es": "Sociedad"
+          "es": "Sociedad",
+          "pronunciation": "/səˈsaɪ.ə.t̬i/",
+          "grammar_type": "noun",
+          "image_key": "img_society",
+          "context": {
+            "en_sentence": "Society values culture and justice.",
+            "es_sentence": "La sociedad valora cultura y justicia."
+          }
         },
         {
-          "id": "p_3",
+          "id": "p_04",
           "en": "Science",
-          "es": "Ciencia"
+          "es": "Ciencia",
+          "pronunciation": "/ˈsaɪ.əns/",
+          "grammar_type": "noun",
+          "image_key": "img_science",
+          "context": {
+            "en_sentence": "Science improves our health.",
+            "es_sentence": "La ciencia mejora nuestra salud."
+          }
         },
         {
-          "id": "p_4",
+          "id": "p_05",
           "en": "Art",
-          "es": "Arte"
+          "es": "Arte",
+          "pronunciation": "/ɑːrt/",
+          "grammar_type": "noun",
+          "image_key": "img_art",
+          "context": {
+            "en_sentence": "Art expresses beauty and emotion.",
+            "es_sentence": "El arte expresa belleza y emoción."
+          }
         },
         {
-          "id": "p_5",
+          "id": "p_06",
           "en": "Nature",
-          "es": "Naturaleza"
+          "es": "Naturaleza",
+          "pronunciation": "/ˈneɪ.tʃɚ/",
+          "grammar_type": "noun",
+          "image_key": "img_nature",
+          "context": {
+            "en_sentence": "Protect nature from pollution.",
+            "es_sentence": "Protege la naturaleza de la contaminación."
+          }
+        },
+        {
+          "id": "p_07",
+          "en": "Technology",
+          "es": "Tecnología",
+          "pronunciation": "/tekˈnɑː.lə.dʒi/",
+          "grammar_type": "noun",
+          "image_key": "img_technology",
+          "context": {
+            "en_sentence": "Technology changes our economy.",
+            "es_sentence": "La tecnología cambia nuestra economía."
+          }
+        },
+        {
+          "id": "p_08",
+          "en": "Education",
+          "es": "Educación",
+          "pronunciation": "/ˌedʒ.əˈkeɪ.ʃən/",
+          "grammar_type": "noun",
+          "image_key": "img_education",
+          "context": {
+            "en_sentence": "Education brings wisdom.",
+            "es_sentence": "La educación trae sabiduría."
+          }
+        },
+        {
+          "id": "p_09",
+          "en": "Progress",
+          "es": "Progreso",
+          "pronunciation": "/ˈprɑː.ɡres/",
+          "grammar_type": "noun",
+          "image_key": "img_progress",
+          "context": {
+            "en_sentence": "Science drives human progress.",
+            "es_sentence": "La ciencia impulsa el progreso humano."
+          }
+        },
+        {
+          "id": "p_10",
+          "en": "Environment",
+          "es": "Medio ambiente",
+          "pronunciation": "/ɪnˈvaɪ.rən.mənt/",
+          "grammar_type": "noun",
+          "image_key": "img_environment",
+          "context": {
+            "en_sentence": "Protect our environment daily.",
+            "es_sentence": "Protege nuestro medio ambiente diariamente."
+          }
         }
       ]
     }

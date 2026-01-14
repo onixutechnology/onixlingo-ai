@@ -1,45 +1,143 @@
 {
   "id": "basics_mod_10",
-  "title": "Life Essentials B1-2",
-  "description": "Mastering basics vocabulary. Level B1, Part 2.",
+  "category_id": "basics",
+  "title": "Life Essentials: Skills",
+  "description": "Vocabulario esencial de habilidades cognitivas y comunicación. Nivel B1, Parte 2.",
   "level": "B1",
-  "total_xp": 140,
+  "part": 2,
+  "total_xp": 200,
+  "status": "unlocked",
+  "theme": {
+    "icon": "Brain",
+    "color": "indigo"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_10",
+      "id": "drill_basics_mod_10_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Skills",
+      "description": "Conecta las habilidades mentales del inglés con su significado.",
+      "instruction": "Empareja la palabra en inglés con su habilidad en español.",
       "pairs": [
         {
-          "id": "p_0",
+          "id": "p_01",
           "en": "Read",
-          "es": "Leer"
+          "es": "Leer",
+          "pronunciation": "/riːd/",
+          "grammar_type": "verb",
+          "image_key": "img_read",
+          "context": {
+            "en_sentence": "I read a book in my room.",
+            "es_sentence": "Leo un libro en mi cuarto."
+          }
         },
         {
-          "id": "p_1",
+          "id": "p_02",
           "en": "Write",
-          "es": "Escribir"
+          "es": "Escribir",
+          "pronunciation": "/raɪt/",
+          "grammar_type": "verb",
+          "image_key": "img_write",
+          "context": {
+            "en_sentence": "My sister writes a letter.",
+            "es_sentence": "Mi hermana escribe una carta."
+          }
         },
         {
-          "id": "p_2",
+          "id": "p_03",
           "en": "Speak",
-          "es": "Hablar"
+          "es": "Hablar",
+          "pronunciation": "/spiːk/",
+          "grammar_type": "verb",
+          "image_key": "img_speak",
+          "context": {
+            "en_sentence": "Father speaks with friends.",
+            "es_sentence": "Padre habla con amigos."
+          }
         },
         {
-          "id": "p_3",
+          "id": "p_04",
           "en": "Listen",
-          "es": "Escuchar"
+          "es": "Escuchar",
+          "pronunciation": "/ˈlɪs.ən/",
+          "grammar_type": "verb",
+          "image_key": "img_listen",
+          "context": {
+            "en_sentence": "Listen to the teacher.",
+            "es_sentence": "Escucha al profesor."
+          }
         },
         {
-          "id": "p_4",
+          "id": "p_05",
           "en": "Think",
-          "es": "Pensar"
+          "es": "Pensar",
+          "pronunciation": "/θɪŋk/",
+          "grammar_type": "verb",
+          "image_key": "img_think",
+          "context": {
+            "en_sentence": "I think about my family.",
+            "es_sentence": "Pienso en mi familia."
+          }
         },
         {
-          "id": "p_5",
+          "id": "p_06",
           "en": "Know",
-          "es": "Saber"
+          "es": "Saber",
+          "pronunciation": "/noʊ/",
+          "grammar_type": "verb",
+          "image_key": "img_know",
+          "context": {
+            "en_sentence": "I know the road to home.",
+            "es_sentence": "Sé el camino a casa."
+          }
+        },
+        {
+          "id": "p_07",
+          "en": "Learn",
+          "es": "Aprender",
+          "pronunciation": "/lɝːn/",
+          "grammar_type": "verb",
+          "image_key": "img_learn",
+          "context": {
+            "en_sentence": "Children learn English.",
+            "es_sentence": "Los niños aprenden inglés."
+          }
+        },
+        {
+          "id": "p_08",
+          "en": "Understand",
+          "es": "Entender",
+          "pronunciation": "/ˌʌn.dɚˈstænd/",
+          "grammar_type": "verb",
+          "image_key": "img_understand",
+          "context": {
+            "en_sentence": "I understand the question.",
+            "es_sentence": "Entiendo la pregunta."
+          }
+        },
+        {
+          "id": "p_09",
+          "en": "Remember",
+          "es": "Recordar",
+          "pronunciation": "/rɪˈmem.bɚ/",
+          "grammar_type": "verb",
+          "image_key": "img_remember",
+          "context": {
+            "en_sentence": "Remember your friend's name.",
+            "es_sentence": "Recuerda el nombre de tu amigo."
+          }
+        },
+        {
+          "id": "p_10",
+          "en": "Forget",
+          "es": "Olvidar",
+          "pronunciation": "/fɚˈɡet/",
+          "grammar_type": "verb",
+          "image_key": "img_forget",
+          "context": {
+            "en_sentence": "Don't forget the milk!",
+            "es_sentence": "¡No olvides la leche!"
+          }
         }
       ]
     }

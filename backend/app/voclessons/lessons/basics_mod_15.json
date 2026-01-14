@@ -1,45 +1,143 @@
 {
   "id": "basics_mod_15",
-  "title": "Life Essentials B2-3",
-  "description": "Mastering basics vocabulary. Level B2, Part 3.",
+  "category_id": "basics",
+  "title": "Life Essentials: Weather",
+  "description": "Vocabulario esencial de fenómenos meteorológicos. Nivel B2, Parte 3.",
   "level": "B2",
-  "total_xp": 160,
+  "part": 3,
+  "total_xp": 220,
+  "status": "unlocked",
+  "theme": {
+    "icon": "CloudSun",
+    "color": "cyan"
+  },
   "stages": [
     {
-      "id": "drill_basics_mod_15",
+      "id": "drill_basics_mod_15_a",
       "type": "pairing_drill",
-      "title": "Neuro Link: Basics",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: Weather",
+      "description": "Conecta los fenómenos del tiempo del inglés con su significado.",
+      "instruction": "Empareja la palabra en inglés con su condición meteorológica en español.",
       "pairs": [
         {
-          "id": "p_0",
+          "id": "p_01",
           "en": "Weather",
-          "es": "Clima"
+          "es": "Clima",
+          "pronunciation": "/ˈweð.ɚ/",
+          "grammar_type": "noun",
+          "image_key": "img_weather",
+          "context": {
+            "en_sentence": "What is the weather today?",
+            "es_sentence": "¿Cuál es el clima hoy?"
+          }
         },
         {
-          "id": "p_1",
+          "id": "p_02",
           "en": "Rain",
-          "es": "Lluvia"
+          "es": "Lluvia",
+          "pronunciation": "/reɪn/",
+          "grammar_type": "noun",
+          "image_key": "img_rain",
+          "context": {
+            "en_sentence": "There is heavy rain outside.",
+            "es_sentence": "Hay lluvia fuerte afuera."
+          }
         },
         {
-          "id": "p_2",
+          "id": "p_03",
           "en": "Sun",
-          "es": "Sol"
+          "es": "Sol",
+          "pronunciation": "/sʌn/",
+          "grammar_type": "noun",
+          "image_key": "img_sun",
+          "context": {
+            "en_sentence": "The yellow sun is hot.",
+            "es_sentence": "El sol amarillo está caliente."
+          }
         },
         {
-          "id": "p_3",
+          "id": "p_04",
           "en": "Snow",
-          "es": "Nieve"
+          "es": "Nieve",
+          "pronunciation": "/snoʊ/",
+          "grammar_type": "noun",
+          "image_key": "img_snow",
+          "context": {
+            "en_sentence": "White snow covers the ground.",
+            "es_sentence": "La nieve blanca cubre el suelo."
+          }
         },
         {
-          "id": "p_4",
+          "id": "p_05",
           "en": "Wind",
-          "es": "Viento"
+          "es": "Viento",
+          "pronunciation": "/wɪnd/",
+          "grammar_type": "noun",
+          "image_key": "img_wind",
+          "context": {
+            "en_sentence": "Strong wind moves the trees.",
+            "es_sentence": "Viento fuerte mueve los árboles."
+          }
         },
         {
-          "id": "p_5",
+          "id": "p_06",
           "en": "Cloud",
-          "es": "Nube"
+          "es": "Nube",
+          "pronunciation": "/klaʊd/",
+          "grammar_type": "noun",
+          "image_key": "img_cloud",
+          "context": {
+            "en_sentence": "Gray clouds bring rain.",
+            "es_sentence": "Nubes grises traen lluvia."
+          }
+        },
+        {
+          "id": "p_07",
+          "en": "Storm",
+          "es": "Tormenta",
+          "pronunciation": "/stɔːrm/",
+          "grammar_type": "noun",
+          "image_key": "img_storm",
+          "context": {
+            "en_sentence": "The storm has thunder.",
+            "es_sentence": "La tormenta tiene truenos."
+          }
+        },
+        {
+          "id": "p_08",
+          "en": "Fog",
+          "es": "Niebla",
+          "pronunciation": "/fɑːɡ/",
+          "grammar_type": "noun",
+          "image_key": "img_fog",
+          "context": {
+            "en_sentence": "Dense fog hides the road.",
+            "es_sentence": "Niebla densa oculta la carretera."
+          }
+        },
+        {
+          "id": "p_09",
+          "en": "Hot",
+          "es": "Caluroso",
+          "pronunciation": "/hɑːt/",
+          "grammar_type": "adjective",
+          "image_key": "img_hot",
+          "context": {
+            "en_sentence": "Summer is very hot.",
+            "es_sentence": "El verano es muy caluroso."
+          }
+        },
+        {
+          "id": "p_10",
+          "en": "Cold",
+          "es": "Frío",
+          "pronunciation": "/koʊld/",
+          "grammar_type": "adjective",
+          "image_key": "img_cold",
+          "context": {
+            "en_sentence": "Winter weather is cold.",
+            "es_sentence": "El clima de invierno es frío."
+          }
         }
       ]
     }
