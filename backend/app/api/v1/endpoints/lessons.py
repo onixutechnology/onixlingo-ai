@@ -19,7 +19,7 @@ APP_ROOT = CURRENT_FILE.parents[4]
 
 # 🚨 CORRECCIÓN AQUÍ: Apuntamos a la carpeta que mostraste en la imagen
 # Antes: APP_ROOT / "app" / "data" / "lessons"
-LESSONS_DIR = APP_ROOT / "app" / "data" / "datapro" / "lessonspro"
+LESSONS_DIR = APP_ROOT / "app" / "datapro" / "lessonspro"
 
 # --- 2. MODELOS DE VALIDACIÓN "A PRUEBA DE BALAS" ---
 
