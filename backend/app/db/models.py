@@ -1,25 +1,38 @@
-# backend/app/db/models.py
-
+import enum
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey, func, Enum
 from sqlalchemy.orm import relationship
 from app.db.base import Base
-import enum
 
-# Define tus tipos de lecciones para evitar errores de texto
+# --- ENUMS ---
 class LessonType(str, enum.Enum):
     STANDARD = "standard"
     PRO = "pro"
     VOCAB = "vocab"
 
+# --- MODELOS ---
+
 class User(Base):
     __tablename__ = "users"
+
     id = Column(Integer, primary_key=True, index=True)
-    # ... (tus campos existentes)
     username = Column(String, unique=True, index=True, nullable=False)
+    email = Column(String, unique=True, index=True, nullable=True)
     
+    # 🔥 ESTO FALTABA EN TU CÓDIGO PYTHON:
+    hashed_password = Column(String, nullable=False)
+    
+    is_active = Column(Boolean, default=True)
+    role = Column(String, default="student")
+    
+    # OJO: Si en pgAdmin no ves 'is_pro', el código podría fallar al leerlo. 
+    # Asegúrate de haberlo creado o que SQLAlchemy lo cree.
+    is_pro = Column(Boolean, default=False) 
+    
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
     # Relaciones
     progress = relationship("Progress", back_populates="owner", cascade="all, delete-orphan")
-    achievements = relationship("UserAchievement", back_populates="user") # Nueva relación
+    achievements = relationship("UserAchievement", back_populates="user", cascade="all, delete-orphan")
 
 class Progress(Base):
     __tablename__ = "progress"
@@ -27,9 +40,7 @@ class Progress(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     
-    lesson_id = Column(String, index=True, nullable=False) 
-    
-    # NUEVO: Para saber a qué bloque pertenece este progreso sin parsear el ID
+    lesson_id = Column(String, index=True, nullable=False)
     lesson_type = Column(Enum(LessonType), default=LessonType.STANDARD) 
 
     stars = Column(Integer, default=0)
@@ -40,15 +51,15 @@ class Progress(Base):
     status = Column(String, default="locked") 
     
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+    
     owner = relationship("User", back_populates="progress")
 
-# NUEVA TABLA: Para los trofeos
 class UserAchievement(Base):
     __tablename__ = "user_achievements"
     
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
-    achievement_code = Column(String, index=True) # Ej: "first_perfect_score"
+    achievement_code = Column(String, index=True)
     earned_at = Column(DateTime(timezone=True), server_default=func.now())
     
     user = relationship("User", back_populates="achievements")
