@@ -1,93 +1,132 @@
-# backend/app/services/progress_service.py
-
 from sqlalchemy.orm import Session
 from app.db import models
-from app.services import lesson_service # Importamos el servicio de arriba
+from app.services import lesson_service
 
 def get_user_progress(db: Session, user_id: int, lesson_id: str):
+    """
+    Busca el progreso de una lección específica.
+    """
     return db.query(models.Progress).filter(
         models.Progress.user_id == user_id, 
         models.Progress.lesson_id == lesson_id
     ).first()
 
-def initialize_progress(db: Session, user_id: int, lesson_id: str):
-    """Crea el registro inicial si no existe (status locked por defecto)"""
-    lesson_type = lesson_service.get_lesson_type_by_id(lesson_id)
+def initialize_progress(db: Session, user_id: int, lesson_id: str, lesson_type: models.LessonType = None):
+    """
+    Crea el registro inicial si no existe (status locked por defecto).
+    Si no se pasa lesson_type, intenta deducirlo.
+    """
+    # Si no nos pasan el tipo, intentamos adivinarlo (fallback)
+    if not lesson_type:
+        lesson_type = lesson_service.get_lesson_type_by_id(lesson_id)
+        
     new_prog = models.Progress(
         user_id=user_id,
         lesson_id=lesson_id,
-        lesson_type=lesson_type,
-        status="locked", # Empieza bloqueada hasta que la lógica diga lo contrario
+        lesson_type=lesson_type, # Fundamental para el mapa de Dashboard
+        status="locked", 
         current_step=0,
-        total_steps=10 # Esto debería venir de la data real de la lección
+        total_steps=10 # Idealmente, esto vendría de los metadatos de la lección real
     )
     db.add(new_prog)
     db.commit()
     db.refresh(new_prog)
     return new_prog
 
-def update_lesson_progress(db: Session, user_id: int, lesson_id: str, score: int, steps_completed: int):
+def update_lesson_progress(
+    db: Session, 
+    user_id: int, 
+    lesson_id: str, 
+    score: int, 
+    steps_completed: int, 
+    lesson_type: str = None # Recibimos "standard", "pro", o "vocab" desde el API
+):
     """
     Actualiza el avance. Si llega al 100% y aprueba, desbloquea la siguiente.
     """
+    # 1. Asegurar que tenemos un tipo de lección válido (Enum)
+    # Convertimos el string que viene del API al Enum de la base de datos
+    enum_type = models.LessonType.STANDARD
+    if lesson_type == "pro": enum_type = models.LessonType.PRO
+    elif lesson_type == "vocab": enum_type = models.LessonType.VOCAB
+    
+    # 2. Obtener o Crear Progreso
     progress = get_user_progress(db, user_id, lesson_id)
     if not progress:
-        progress = initialize_progress(db, user_id, lesson_id)
+        progress = initialize_progress(db, user_id, lesson_id, enum_type)
 
-    # Actualizar métricas
+    # 3. Actualizar métricas
     progress.current_step = steps_completed
     progress.score = max(progress.score, score) # Guardar siempre el mejor score
     progress.status = "active"
 
-    # CALCULAR ESTRELLAS (Lógica de negocio)
+    # 4. Calcular Estrellas
     if score >= 90: progress.stars = 3
     elif score >= 70: progress.stars = 2
     elif score >= 50: progress.stars = 1
     else: progress.stars = 0
 
-    # LOGICA DE COMPLETADO
-    # Asumimos que si completó todos los pasos y tiene > 60 puntos, pasa.
-    passed = steps_completed >= progress.total_steps and score >= 60
+    # 5. Lógica de Aprobación
+    # Si completó los pasos o sacó buen puntaje (>60), se considera pasada.
+    passed = (steps_completed >= progress.total_steps) or (score >= 60)
 
     if passed:
         progress.status = "completed"
-        # AQUÍ OCURRE EL DESBLOQUEO AUTOMÁTICO
-        _unlock_next_content(db, user_id, lesson_id)
-        # AQUÍ CHECAMOS TROFEOS
+        
+        # 🔥 DESBLOQUEO AUTOMÁTICO
+        # Pasamos el tipo actual para saber en qué lista buscar la siguiente
+        _unlock_next_content(db, user_id, lesson_id, enum_type)
+        
+        # 🏆 VERIFICAR TROFEOS
         _check_achievements(db, user_id, score)
 
     db.commit()
     db.refresh(progress)
     return progress
 
-def _unlock_next_content(db: Session, user_id: int, current_lesson_id: str):
-    """Función interna para buscar y abrir la siguiente lección"""
+def _unlock_next_content(db: Session, user_id: int, current_lesson_id: str, current_type: models.LessonType):
+    """
+    Busca cuál es la siguiente lección en el curso y la desbloquea.
+    """
+    # Usamos lesson_service para encontrar el ID siguiente
+    # Nota: lesson_service debe tener la lógica para buscar en Standard/Pro/Vocab
     next_id = lesson_service.get_next_lesson_id(current_lesson_id)
     
     if next_id:
-        # Verificar si ya existe registro
+        # Verificar si ya existe registro para la siguiente lección
         next_progress = get_user_progress(db, user_id, next_id)
+        
         if not next_progress:
-            # Crear el registro de la siguiente lección en estado 'active' (desbloqueada)
-            lesson_type = lesson_service.get_lesson_type_by_id(next_id)
+            # Si no existe, lo creamos YA desbloqueado ("active")
+            # Importante: El tipo de la siguiente lección suele ser el mismo que la actual
             new_unlock = models.Progress(
                 user_id=user_id,
                 lesson_id=next_id,
-                lesson_type=lesson_type,
+                lesson_type=current_type, # Mantenemos el mismo bloque
                 status="active", # ¡Desbloqueada!
                 total_steps=10 
             )
             db.add(new_unlock)
         else:
-            # Si existía pero estaba bloqueada, la abrimos
+            # Si existía pero estaba bloqueada (status="locked"), la abrimos
             if next_progress.status == "locked":
                 next_progress.status = "active"
+                db.add(next_progress)
 
 def _check_achievements(db: Session, user_id: int, current_score: int):
-    """Ejemplo simple de trofeos"""
-    # Lógica: Si saca 100, trofeo de perfección
+    """
+    Sistema simple de Gamificación.
+    """
+    # Trofeo: Perfeccionista (100 puntos)
     if current_score == 100:
-        exists = db.query(models.UserAchievement).filter_by(user_id=user_id, achievement_code="perfectionist").first()
+        exists = db.query(models.UserAchievement).filter_by(
+            user_id=user_id, 
+            achievement_code="perfectionist"
+        ).first()
+        
         if not exists:
-            new_ach = models.UserAchievement(user_id=user_id, achievement_code="perfectionist")
+            new_ach = models.UserAchievement(
+                user_id=user_id, 
+                achievement_code="perfectionist"
+            )
             db.add(new_ach)

@@ -5,7 +5,8 @@ from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException, status, Response
 from sqlalchemy.orm import Session
 from pydantic import BaseModel, EmailStr
-from app.database import get_db, User
+from app.database import get_db
+from app.db.models import User  # <--- CORRECTO: User ahora vive aquí
 
 # Importamos la lógica de seguridad
 from app.core.security import verify_password, get_password_hash, create_access_token
