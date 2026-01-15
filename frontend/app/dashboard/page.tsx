@@ -5,15 +5,16 @@
  * ONIXLINGO LMS DASHBOARD - STUDENT EDITION (FREE TIER)
  * ==============================================================================
  * RUTA: /dashboard/page.tsx
- * ESTADO: Acceso Libre con Publicidad (Se oculta si es Premium/Pro)
+ * ESTADO: Conectado a Backend (Fix Auth Cookies)
  * ==============================================================================
  */
 
 import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { useUIStore } from '@/store/uiStore'; // Asegúrate que esto exporte setMode
+import { useUIStore } from '@/store/uiStore'; 
 import Sidebar from '@/components/dashboard/sidebar'; 
+import Cookies from 'js-cookie'; // ✅ [CORRECCIÓN 1] Importamos Cookies
 
 // --- 📢 IMPORTACIÓN DE ANUNCIOS ---
 import { AdBanner } from '@/components/ads/AdBanner';
@@ -26,7 +27,7 @@ import {
 } from 'lucide-react';
 
 import { CURRICULUM } from '@/data/curriculum';
-import { useProgressStore } from '@/store/progressStore';
+// import { useProgressStore } from '@/store/progressStore'; // Ya no se usa directo
 
 // --- TIPOS ---
 type LessonStatus = 'locked' | 'active' | 'completed';
@@ -262,15 +263,13 @@ const CertCard = ({ title, desc, icon: Icon, href, active = false, color }: any)
 export default function DashboardPage() {
 const router = useRouter();
   const { mode, setMode } = useUIStore(); 
-  // const { isLessonCompleted, getLessonStars } = useProgressStore(); // <-- YA NO LO USAMOS DIRECTAMENTE
   
   const [isMounted, setIsMounted] = useState(false);
   const [currentUser, setCurrentUser] = useState<string | null>(null);
   
   // --- NUEVO ESTADO DEL BACKEND ---
-  const [dashboardData, setDashboardData] = useState<any>(null); // Guardará { standard: [], pro: [], ... }
+  const [dashboardData, setDashboardData] = useState<any>(null);
   const [userStats, setUserStats] = useState({ xp: 0, lessons: 0, streak: 0 });
-// ESTADO QUE VIENE DEL BACKEND
 
   // 1. CONTROL DE REDIRECCIÓN Y PREVENCIÓN DE FLICKER (PARPADEO)
   useEffect(() => {
@@ -283,21 +282,25 @@ const router = useRouter();
   useEffect(() => {
     setIsMounted(true);
     const user = localStorage.getItem('currentUser');
-    const token = localStorage.getItem('token'); // ASUMIMOS QUE GUARDAS EL TOKEN AL LOGIN
+    
+    // ✅ [CORRECCIÓN 2]: Leer token desde COOKIES, no localStorage
+    const token = Cookies.get('access_token'); 
+    
     setCurrentUser(user);
 
-    if (user) {
+    if (user && token) {
         // URL dinámica: Local vs Producción
         const BASE_URL = process.env.NEXT_PUBLIC_API_URL || (
             process.env.NODE_ENV === 'development' 
-                ? 'http://127.0.0.1:8001' // Ojo: FastAPI suele ser puerto 8000, revisa tu consola
+                ? 'http://127.0.0.1:8001'
                 : 'https://onixlingo-bckend.onrender.com'
         );
 
         // LLAMADA AL NUEVO ENDPOINT /map
         fetch(`${BASE_URL}/api/v1/progress/map`, {
             headers: {
-                'Authorization': `Bearer ${token}`, // Necesario para el backend seguro
+                // ✅ [CORRECCIÓN 3]: Token limpio (ya incluye Bearer)
+                'Authorization': token, 
                 'Content-Type': 'application/json'
             }
         })
@@ -306,28 +309,26 @@ const router = useRouter();
                 return res.json();
             })
             .then(data => {
-                // data tiene: { standard: [...], pro: [...], vocab: [...], total_xp: ... }
                 setDashboardData(data);
                 
-                // Actualizamos las estadísticas visuales
                 const completedCount = data.standard.filter((l: any) => l.status === 'completed').length;
                 setUserStats({ 
                     xp: data.total_xp || completedCount * 150, 
                     lessons: completedCount, 
-                    streak: 5 // Esto podría venir del backend también
+                    streak: 5 
                 });
             })
             .catch(err => {
                 console.error("⚠️ Error sincronizando con Backend:", err);
-                // Aquí podrías dejar un fallback si falla la red
             });
+    } else if (!token) {
+        // Si no hay token, al login
+        router.push('/login');
     }
-  }, []);
+  }, [router]);
 
-  // 3. SWITCH MANUAL PARA PASAR A PRO
   const toggleProMode = () => {
     setMode('professional'); 
-    // Forzamos redirección inmediata mientras React actualiza el estado
     router.push('/dashboard/pro');
   };
 
@@ -337,12 +338,10 @@ const router = useRouter();
   const getLessonState = (lessonId: string): LessonStatus => {
     if (!isMounted) return 'locked';
     
-    // Si aún no carga el backend, desbloqueamos la primera por defecto para que no se vea todo gris
     if (!dashboardData) {
         return lessonId === 'a1-1' ? 'active' : 'locked';
     }
 
-    // Buscamos esta lección específica en la lista "standard"
     const lessonNode = dashboardData.standard?.find((l: any) => l.lesson_id === lessonId);
 
     if (lessonNode) {
@@ -350,7 +349,6 @@ const router = useRouter();
         if (lessonNode.status === 'active' || lessonNode.is_unlocked) return 'active';
     }
 
-    // Fallback: Si es la primera lección y no hay registro en DB, está activa
     if (lessonId === 'a1-1' && !lessonNode) return 'active';
 
     return 'locked';
@@ -362,12 +360,14 @@ const router = useRouter();
     return lessonNode ? lessonNode.stars : 0;
   };
 
-  // AL HACER CLIC, MANDAMOS "type=standard" PARA QUE LA LECCIÓN SEPA QUÉ GUARDAR
   const handleLessonClick = (id: string) => {
       router.push(`/lesson/${id}?type=standard`);
   };
+  
   const handleLogout = () => {
     if(confirm("¿Cerrar sesión?")) {
+      // Borrar Cookies y LocalStorage
+      Cookies.remove('access_token');
       localStorage.removeItem('currentUser');
       localStorage.removeItem('onix_tier');
       localStorage.removeItem('onixlingo-ui-prefs'); 
@@ -379,11 +379,17 @@ const router = useRouter();
 
   const handleUnlockAll = async () => {
     if (!currentUser) return alert("Error: No hay usuario activo.");
-    const BASE_URL = process.env.NEXT_PUBLIC_API_URL || (process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:8001' : 'https://onixlingo-bckend.onrender.com');
+    // NOTA: Para que esto funcione, también necesitas enviar el token en este fetch
+    const token = Cookies.get('access_token');
+    const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+    
     try {
         const response = await fetch(`${BASE_URL}/api/v1/debug/unlock-all/${currentUser}`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' }
+            headers: { 
+                'Content-Type': 'application/json',
+                'Authorization': token || '' 
+            }
         });
         if (response.ok) {
             alert("🔓 MODO DIOS ACTIVADO: Niveles desbloqueados.");
@@ -393,11 +399,10 @@ const router = useRouter();
         }
     } catch (error) {
         console.error(error);
-        alert(`Error de conexión con ${BASE_URL}.`);
+        alert(`Error de conexión.`);
     }
   };
 
-  // ✅ PREVENCIÓN DE FLICKER: Si estamos cambiando a PRO, no mostramos el dashboard de estudiante
   if (isMounted && mode === 'professional') {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-slate-900 text-white">
@@ -407,7 +412,6 @@ const router = useRouter();
     );
   }
 
-  // Si no está montado aún, un placeholder simple
   if (!isMounted) return <div className="min-h-screen bg-slate-50" />;
 
   return (
@@ -427,16 +431,15 @@ const router = useRouter();
 
         <div className="flex items-center gap-3 md:gap-6">
           <HeaderStats xp={userStats.xp} streak={userStats.streak} />
-          {/* ✅ NUEVO BOTÓN: VOCABULARIO */}
+          
           <Link 
-            href="/dashboard/vocabulary" // Asegúrate que esta ruta exista o cámbiala por la tuya
+            href="/dashboard/vocabulary" 
             className="hidden md:flex items-center gap-2 bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
           >
             <BookA size={18} className="text-slate-400 group-hover:text-indigo-500 transition-colors" />
             <span className="text-xs md:text-sm font-bold">Vocabulario</span>
           </Link>
 
-          {/* 🔥 BOTÓN TOGGLE VISIBLE EN MÓVIL (SOLUCIÓN A TU PROBLEMA) 🔥 */}
           <button 
             onClick={toggleProMode}
             className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-3 py-2 md:px-4 md:py-2.5 rounded-xl transition-all shadow-lg hover:shadow-indigo-500/20 active:scale-95"
@@ -542,7 +545,6 @@ const router = useRouter();
           
         </div>
 
-        {/* Sidebar oculto en móvil, pero ya pusimos el botón de PRO en el Navbar */}
         <div className="hidden lg:block">
             <Sidebar userStats={userStats} />
         </div>

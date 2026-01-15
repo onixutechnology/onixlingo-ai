@@ -1,14 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation'; // Necesario para redirección si no hay auth
+import Cookies from 'js-cookie'; // ✅ IMPORTANTE: Auth real
 import { 
   ArrowLeft, BookA, Search, Play, Brain, 
   Briefcase, Code2, Plane, Users, Coffee, 
-  Lock, CheckCircle2, Sparkles
+  Lock, CheckCircle2, Sparkles, Loader2
 } from 'lucide-react';
 
-// 1. CONFIGURACIÓN DE CATEGORÍAS (Colores seguros para Tailwind)
+// --- CONFIGURACIÓN API ---
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+
+// 1. CONFIGURACIÓN DE CATEGORÍAS
 const CATEGORIES = [
   { 
     id: 'basics', 
@@ -45,12 +50,76 @@ const CATEGORIES = [
 const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
 
 export default function VocabularyPage() {
+  const router = useRouter();
+  
+  // Estados de UI
   const [activeCat, setActiveCat] = useState('basics');
   const [searchTerm, setSearchTerm] = useState('');
+  
+  // Estados de Datos Reales
+  const [vocabProgress, setVocabProgress] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Obtener datos de la categoría activa
+  // Obtener datos de la categoría activa para estilos
   const activeCategoryData = CATEGORIES.find(c => c.id === activeCat) || CATEGORIES[0];
   const Theme = activeCategoryData.theme;
+
+  // --- EFECTO: CARGAR PROGRESO DEL BACKEND ---
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const token = Cookies.get('access_token');
+        if (!token) {
+          router.push('/login');
+          return;
+        }
+
+        const headers = { 'Authorization': token }; // ✅ Auth correcta
+
+        const res = await fetch(`${API_URL}/api/v1/progress/map`, { headers });
+        if (res.ok) {
+          const data = await res.json();
+          // Asumimos que el backend devuelve { vocab: [...] } o similar
+          // Si tu backend mete todo en 'standard', ajusta esto. 
+          // Por ahora usaremos data.vocab o data.standard filtrado si es necesario.
+          setVocabProgress(data.vocab || []); 
+        }
+      } catch (error) {
+        console.error("Error cargando vocabulario:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [router]);
+
+  // --- HELPER PARA SABER ESTADO DE LECCIÓN ---
+  const getLessonState = (lessonId: string) => {
+    // Buscar en la lista descargada
+    const lessonData = vocabProgress.find(p => p.lesson_id === lessonId);
+    
+    if (lessonData) {
+        // Si existe en la DB, devolvemos su estado real
+        if (lessonData.status === 'completed') return 'completed';
+        if (lessonData.status === 'active') return 'active';
+        return 'locked';
+    }
+
+    // Lógica por defecto (si no hay datos, la primera de 'basics' suele estar abierta)
+    if (lessonId === 'basics_mod_01') return 'active';
+
+    return 'locked';
+  };
+
+  const getScore = (lessonId: string) => {
+      const lessonData = vocabProgress.find(p => p.lesson_id === lessonId);
+      return lessonData ? lessonData.score : 0;
+  };
+
+  if (isLoading) {
+      return <div className="min-h-screen flex items-center justify-center bg-slate-50"><Loader2 className="animate-spin text-slate-400"/></div>;
+  }
 
   return (
     <div className="min-h-screen bg-slate-50/50 pb-20 font-sans text-slate-900 selection:bg-slate-200">
@@ -70,16 +139,16 @@ export default function VocabularyPage() {
             </h1>
           </div>
           
-          {/* Stats Pill (Hidden on mobile) */}
+          {/* Stats Pill */}
           <div className="hidden md:flex items-center gap-3">
             <div className="flex items-center gap-2 bg-slate-100 border border-slate-200 px-4 py-1.5 rounded-full text-xs font-bold text-slate-600 shadow-sm">
               <Brain size={14} className="text-slate-400" /> 
-              <span>40 Lecciones Activas</span>
+              <span>{vocabProgress.filter(l => l.status === 'completed').length} Completadas</span>
             </div>
           </div>
         </div>
 
-        {/* --- TABS DE NAVEGACIÓN (Horizontal Scroll) --- */}
+        {/* --- TABS DE NAVEGACIÓN --- */}
         <div className="max-w-7xl mx-auto px-4 md:px-8 mt-1">
           <div className="flex overflow-x-auto hide-scrollbar gap-8 pb-0 mask-gradient-right">
             {CATEGORIES.map((cat) => {
@@ -137,12 +206,17 @@ export default function VocabularyPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {LEVELS.flatMap((level, levelIndex) => [1, 2, 3, 4].map(part => { 
             
-            // LÓGICA DE DATOS
+            // GENERACIÓN DE ID LÓGICO
             const moduleNum = (levelIndex * 4) + part; 
-            const moduleStr = moduleNum.toString().padStart(2, '0'); // "01", "20"
+            const moduleStr = moduleNum.toString().padStart(2, '0'); 
             const lessonId = `${activeCat}_mod_${moduleStr}`;
             
-            // Títulos dinámicos simulados para que se vea profesional
+            // ESTADO REAL DESDE DB
+            const status = getLessonState(lessonId);
+            const score = getScore(lessonId);
+            const isLocked = status === 'locked';
+
+            // Títulos dinámicos
             const baseTitle = activeCategoryData.label.split(' ')[0] || "Lesson";
             const displayTitle = `${baseTitle} Mastery • Level ${level}`;
             const subTitle = `Part ${part}: Essential Vocabulary & Phrases`;
@@ -150,12 +224,11 @@ export default function VocabularyPage() {
             // Filtro de búsqueda
             if (searchTerm && !displayTitle.toLowerCase().includes(searchTerm.toLowerCase())) return null;
 
-            return (
-              <Link href={`/lesson/vocabulary/${lessonId}`} key={lessonId} className="group block h-full">
+            // Renderizar Card (Link solo si no está bloqueado)
+            const CardContent = (
                 <div className={`
                   h-full bg-white border border-slate-200 rounded-2xl p-5 flex flex-col justify-between transition-all duration-300 relative overflow-hidden
-                  hover:border-transparent hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1
-                  ${Theme.ring} focus:ring-2 outline-none
+                  ${!isLocked ? `hover:border-transparent hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1 cursor-pointer ${Theme.ring} focus:ring-2` : 'opacity-60 cursor-not-allowed bg-slate-50'}
                 `}>
                   
                   {/* Contenido Superior */}
@@ -163,14 +236,14 @@ export default function VocabularyPage() {
                     {/* Badge de Nivel */}
                     <div className={`
                       w-14 h-14 flex flex-col items-center justify-center rounded-2xl font-black text-lg shrink-0 shadow-inner
-                      ${Theme.bg} ${Theme.text}
+                      ${!isLocked ? `${Theme.bg} ${Theme.text}` : 'bg-slate-200 text-slate-400'}
                     `}>
                       {level}
                       <span className="text-[9px] font-bold opacity-60 uppercase tracking-wider">Part {part}</span>
                     </div>
 
                     <div className="flex-1 min-w-0 pt-1">
-                      <h3 className="font-bold text-slate-800 text-lg leading-tight group-hover:text-slate-900 truncate">
+                      <h3 className={`font-bold text-lg leading-tight truncate ${!isLocked ? 'text-slate-800' : 'text-slate-400'}`}>
                         {displayTitle}
                       </h3>
                       <p className="text-xs font-medium text-slate-400 mt-1 truncate">
@@ -182,41 +255,50 @@ export default function VocabularyPage() {
                   {/* Footer de la Card */}
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
                     
-                    {/* Barra de Progreso (Simulada) */}
+                    {/* Barra de Progreso */}
                     <div className="flex flex-col gap-1.5 w-1/2">
                       <div className="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                        <span>Progress</span>
-                        <span>0%</span>
+                        <span>Score</span>
+                        <span>{score}%</span>
                       </div>
                       <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                        <div className={`h-full ${Theme.bar} w-[5%] rounded-full opacity-80`}></div>
+                        <div 
+                            className={`h-full ${Theme.bar} rounded-full opacity-80 transition-all duration-1000`} 
+                            style={{ width: `${score}%` }}
+                        ></div>
                       </div>
                     </div>
 
                     {/* Botón de Acción */}
                     <div className={`
-                      w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-sm group-hover:shadow-md
-                      bg-slate-50 text-slate-400 group-hover:text-white
+                      w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-sm
+                      ${isLocked ? 'bg-slate-200 text-slate-400' : 'bg-slate-50 text-slate-400 group-hover:text-white group-hover:shadow-md'}
                     `}
-                    // Aquí inyectamos el color de fondo solo en hover usando style para evitar conflictos
-                    style={{ '--hover-bg': `var(--${activeCat}-color)` } as React.CSSProperties}
+                    style={!isLocked ? { '--hover-bg': `var(--${activeCat}-color)` } as React.CSSProperties : {}}
                     >
-                      {/* El botón cambia de color basado en la categoría */}
-                      <div className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity ${Theme.bar}`} />
-                      <Play size={18} fill="currentColor" className="ml-1 relative z-10" />
+                      {!isLocked && <div className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity ${Theme.bar}`} />}
+                      
+                      {isLocked ? <Lock size={18} /> : (status === 'completed' ? <CheckCircle2 size={18} /> : <Play size={18} fill="currentColor" className="ml-1 relative z-10" />)}
                     </div>
 
                   </div>
                   
                   {/* Decoración Hover (Brillo sutil) */}
-                  <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-white via-transparent to-transparent opacity-0 group-hover:opacity-20 transition-opacity pointer-events-none ${Theme.bg.replace('bg-', 'from-')}`} />
+                  {!isLocked && <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-white via-transparent to-transparent opacity-0 group-hover:opacity-20 transition-opacity pointer-events-none ${Theme.bg.replace('bg-', 'from-')}`} />}
                 </div>
-              </Link>
+            );
+
+            return isLocked ? (
+                <div key={lessonId} className="block h-full">{CardContent}</div>
+            ) : (
+                <Link href={`/lesson/vocabulary/${lessonId}?type=vocab`} key={lessonId} className="group block h-full">
+                    {CardContent}
+                </Link>
             );
           }))}
         </div>
         
-        {/* Estado Vacío (Si la búsqueda falla) */}
+        {/* Estado Vacío */}
         {LEVELS.flatMap(l => [1,2,3,4]).filter(p => !searchTerm || searchTerm.length < 1).length === 0 && (
             <div className="text-center py-20 opacity-50">
                 <Search size={48} className="mx-auto mb-4 text-slate-300" />
