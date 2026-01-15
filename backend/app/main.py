@@ -2,15 +2,18 @@ import logging
 import stripe
 import os
 import json
+from pathlib import Path
 from contextlib import asynccontextmanager
 from dotenv import load_dotenv
 
-from fastapi import FastAPI, Request, Header, HTTPException
+from fastapi import FastAPI, Request, Header, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy.orm import Session
 
 # --- IMPORTACIONES LOCALES ---
 from app.core.settings import settings
-from app.database import create_db
+from app.database import create_db, get_db
+from app.services import user_service  # <--- CRUCIAL: Para activar el PRO
 
 # --- IMPORTAMOS LOS ROUTERS ---
 from app.api.v1.endpoints import auth, lessons, progress, ai
@@ -58,42 +61,42 @@ app = FastAPI(
 )
 
 # ==============================================================================
-# 🛡️ MIDDLEWARE CORS (CORREGIDO CON TU URL DE VERCEL)
+# 🛡️ MIDDLEWARE CORS
 # ==============================================================================
 origins = [
-    "http://localhost:3000",                  # Desarrollo Local
-    "http://127.0.0.1:3000",                  # Alternativa Local
-    
-    # 👇 TUS DOMINIOS DE VERCEL (Agregados desde tu imagen)
-    "https://onixlingo-ai-nknb.vercel.app",       # Tu despliegue específico actual
-    "https://onixlingo-ai.vercel.app",            # Tu alias de producción principal
-    "https://onixlingo-ai-nknb-git-main-jacobs-projects-4ad490ce.vercel.app", # Preview URL (Opcional, pero útil)
-    
-    # Dominio futuro (si compras uno)
-    "https://www.onixlingo.com",              
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://onixlingo-ai-nknb.vercel.app",
+    "https://onixlingo-ai.vercel.app",
+    "https://onixlingo-ai-nknb-git-main-jacobs-projects-4ad490ce.vercel.app",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,       # Permitir solo dominios de confianza
-    allow_credentials=True,      # Permitir Cookies/Tokens
-    allow_methods=["*"],         # Permitir GET, POST, OPTIONS, PUT, DELETE
-    allow_headers=["*"],         # Permitir todos los headers
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # ==============================================================================
-# 💳 ROUTER ESPECIAL: STRIPE WEBHOOK
+# 💳 ROUTER ESPECIAL: STRIPE WEBHOOK (LÓGICA COMPLETA)
 # ==============================================================================
 @app.post("/api/v1/webhooks/stripe", tags=["Payments"], include_in_schema=False)
-async def stripe_webhook(request: Request, stripe_signature: str = Header(None)):
+async def stripe_webhook(
+    request: Request, 
+    stripe_signature: str = Header(None),
+    db: Session = Depends(get_db) # <--- INYECTAMOS LA DB AQUÍ
+):
     """
-    Maneja las notificaciones asíncronas de Stripe (ej: pago exitoso).
+    Recibe la confirmación de pago de Stripe y activa el plan PRO.
     """
     logger = logging.getLogger("OnixLingo.Payments")
     payload = await request.body()
 
+    # 1. Validación de seguridad
     if not stripe.api_key or not ENDPOINT_SECRET:
-        logger.error("❌ [STRIPE CONFIG] Faltan claves en variables de entorno.")
+        logger.error("❌ [STRIPE] Faltan claves de configuración.")
         raise HTTPException(status_code=500, detail="Server Configuration Error")
 
     try:
@@ -105,41 +108,77 @@ async def stripe_webhook(request: Request, stripe_signature: str = Header(None))
     except stripe.error.SignatureVerificationError:
         raise HTTPException(status_code=400, detail="Invalid signature")
 
-    # ✅ LÓGICA DE NEGOCIO: PAGO EXITOSO
+    # 2. Lógica de Activación
     if event['type'] == 'checkout.session.completed':
         session = event['data']['object']
         
-        user_id = session.get("metadata", {}).get("userId")
+        # Recuperamos los datos que enviamos desde el Frontend (metadata)
+        user_id_str = session.get("metadata", {}).get("userId")
         user_email = session.get("customer_details", {}).get("email")
-        amount_total = session.get("amount_total", 0) / 100 
 
-        logger.info(f"💰 [STRIPE SUCCESS] Usuario: {user_email} (ID: {user_id}) pagó ${amount_total}")
+        logger.info(f"💰 [STRIPE] Pago recibido de: {user_email} (ID: {user_id_str})")
 
-        # Aquí conectarías con tu servicio de usuarios para activar PRO
-        
+        if user_id_str:
+            try:
+                # Convertir ID a entero y llamar al servicio
+                user_id = int(user_id_str)
+                updated_user = user_service.set_pro_status(db, user_id=user_id, is_pro=True)
+                
+                if updated_user:
+                    logger.info(f"✅ [UPGRADE] Usuario {user_email} actualizado a PRO exitosamente.")
+                else:
+                    logger.warning(f"⚠️ [WARNING] Usuario ID {user_id} pagó pero no se encontró en DB.")
+            except Exception as e:
+                logger.error(f"❌ [DB ERROR] Fallo al actualizar estado PRO: {e}")
+
     return {"status": "success", "event_type": event['type']}
 
 
 # ==============================================================================
 # 🔗 CONEXIÓN DE RUTAS (ROUTERS)
 # ==============================================================================
-app.include_router(auth.router, prefix="/api/v1", tags=["Authentication"])
-app.include_router(progress.router, prefix="/api/v1", tags=["Analytics & Progress"])
+
+# 1. Auth
+app.include_router(auth.router, prefix="/api/v1/auth", tags=["Authentication"])
+
+# 2. Progress (Mapas, Puntuación, Trofeos)
+app.include_router(progress.router, prefix="/api/v1/progress", tags=["Analytics & Progress"])
+
+# 3. Lessons (Contenido Standard y Pro)
 app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lessons"])
+
+# 4. AI (Avatar, Chatbot)
 app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI Engine"])
 
+
+# ==============================================================================
+# 🛠️ UTILIDADES Y ROOT
+# ==============================================================================
 @app.get("/", tags=["System"])
 def health_check():
     return {
         "system": "OnixLingo Enterprise Kernel",
         "status": "OPERATIONAL 🟢",
-        "cors_enabled_for": origins
+        "version": "Titanium 8.0"
     }
 
-@app.get("/api/v1/voclessons/{lesson_id}")
+# Endpoint para servir JSONs de Vocabulario de forma robusta
+@app.get("/api/v1/voclessons/{lesson_id}", tags=["Lessons"])
 def get_voc_lesson(lesson_id: str):
-    path = f"app/voclessons/lessons/{lesson_id}.json"
-    if os.path.exists(path):
-        with open(path, "r", encoding="utf-8") as f:
+    # Detecta la carpeta raíz del backend (donde está main.py -> app -> backend)
+    base_dir = Path(__file__).resolve().parent 
+    
+    # Ruta: backend/app/voclessons/lessons/{id}.json
+    file_path = base_dir / "voclessons" / "lessons" / f"{lesson_id}.json"
+    
+    if file_path.exists():
+        with open(file_path, "r", encoding="utf-8") as f:
             return json.load(f)
-    raise HTTPException(status_code=404, detail="Lesson not found")
+            
+    # Fallback por si la estructura cambia levemente en producción
+    file_path_alt = base_dir.parent / "app" / "voclessons" / "lessons" / f"{lesson_id}.json"
+    if file_path_alt.exists():
+         with open(file_path_alt, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    raise HTTPException(status_code=404, detail=f"Lesson {lesson_id} not found")

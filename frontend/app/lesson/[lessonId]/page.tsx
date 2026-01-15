@@ -15,6 +15,7 @@ import Avatar3D from '@/components/avatar/Avatar3D';
 import LessonComplete from '@/components/lesson/LessonComplete';
 import { useAvatarStore } from '@/store/avatarStore';
 import { useUIStore } from '@/store/uiStore';
+import { useSearchParams } from 'next/navigation';
 
 const API_URL = process.env.NODE_ENV === 'development'
   ? 'http://127.0.0.1:8001' 
@@ -106,6 +107,8 @@ interface AnalyticsEvent {
 export default function LessonRunnerEngine() {
   const params = useParams();
   const router = useRouter();
+  const searchParams = useSearchParams(); 
+  const lessonType = searchParams.get('type') || 'standard'; // 'standard', 'pro', 'vocab'
   const { setSpeaking } = useAvatarStore();
   const { mode } = useUIStore();
   const isPro = mode === 'professional';
@@ -1165,29 +1168,57 @@ useEffect(() => {
     }
   }, [currentStageIndex, currentQuestionIndex, lesson]);
 
-  // ============================================================================
-  // ==================== FUNCIÓN FINALIZAR LECCIÓN ==========================
+// ============================================================================
+  // ==================== FUNCIÓN FINALIZAR LECCIÓN (CONECTADA) =================
   // ============================================================================
 
   const finishLesson = async () => {
     setIsActive(false);
     setIsSaving(true);
 
+    // Calcular métricas finales
     const accuracy = stats.totalQuestionsAnswered > 0
       ? Math.round((stats.correctAnswers / stats.totalQuestionsAnswered) * 100)
       : 0;
 
     const baseXP = lesson?.total_xp || 100;
-    const totalXP = baseXP + stats.xpAccumulated;
+    const totalXP = baseXP + stats.xpAccumulated; // XP total ganado en esta sesión
 
-    // PRO: Guardar sesión y sincronizar
-    if (isPro) {
-      saveSessionState();
-      await syncProgressRealtime();
-      sendPushNotification('¡Lección Completada!', `Obtuviste ${accuracy}% de precisión`);
-    }
+    // Datos para el Backend (según tu Schema ProgressUpdate)
+// En finishLesson...
+const payload = {
+    lesson_id: lesson?.id,
+    lesson_type: lessonType,
+    // CAMBIO AQUÍ: Si entra a finishLesson, ¡es porque completó todo!
+    current_step: lesson?.stages.length || 1, 
+    total_steps: lesson?.stages.length || 1,
+    score: accuracy,
+    stars: accuracy >= 90 ? 3 : accuracy >= 70 ? 2 : 1
+};
 
     try {
+      const token = localStorage.getItem('token');
+      
+      // 1. LLAMADA AL BACKEND PARA GUARDAR Y DESBLOQUEAR
+      if (token) {
+          const res = await fetch(`${API_URL}/api/v1/progress/complete`, {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify(payload)
+          });
+
+          if (!res.ok) {
+              console.error("Error guardando en servidor:", await res.text());
+              // No lanzamos error fatal para dejar al usuario ver su resultado localmente
+          } else {
+              console.log("✅ Progreso guardado y siguiente nivel desbloqueado!");
+          }
+      }
+
+      // 2. GUARDADO LOCAL (FALLBACK Y UI RAPIDA)
       const progress: UserProgress = {
         userId,
         lessonId: lesson?.id || '',
@@ -1201,21 +1232,11 @@ useEffect(() => {
 
       saveToLocalStorage(`progress_${lesson?.id}`, progress);
 
-      // TODO: Descomentar cuando endpoint esté listo
-      /*
-      await fetch(`${API_URL}/api/v1/progress/update`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(progress)
-      });
-      */
-
-      console.log("💾 Guardado:", { accuracy, totalXP });
     } catch (error) {
-      console.error("Error guardando:", error);
+      console.error("Error crítico al finalizar:", error);
     } finally {
       setIsSaving(false);
-      setShowResults(true);
+      setShowResults(true); // Muestra la pantalla de "Lección Completada"
     }
   };
 

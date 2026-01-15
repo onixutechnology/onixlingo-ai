@@ -260,13 +260,17 @@ const CertCard = ({ title, desc, icon: Icon, href, active = false, color }: any)
 
 // --- PÁGINA PRINCIPAL ---
 export default function DashboardPage() {
-  const router = useRouter();
+const router = useRouter();
   const { mode, setMode } = useUIStore(); 
-  const { isLessonCompleted, getLessonStars } = useProgressStore();
+  // const { isLessonCompleted, getLessonStars } = useProgressStore(); // <-- YA NO LO USAMOS DIRECTAMENTE
   
   const [isMounted, setIsMounted] = useState(false);
   const [currentUser, setCurrentUser] = useState<string | null>(null);
+  
+  // --- NUEVO ESTADO DEL BACKEND ---
+  const [dashboardData, setDashboardData] = useState<any>(null); // Guardará { standard: [], pro: [], ... }
   const [userStats, setUserStats] = useState({ xp: 0, lessons: 0, streak: 0 });
+// ESTADO QUE VIENE DEL BACKEND
 
   // 1. CONTROL DE REDIRECCIÓN Y PREVENCIÓN DE FLICKER (PARPADEO)
   useEffect(() => {
@@ -275,38 +279,48 @@ export default function DashboardPage() {
     }
   }, [mode, router]);
   
-  // 2. CARGA DE DATOS
+// 2. CARGA DE DATOS REALES DEL BACKEND TITANIUM
   useEffect(() => {
     setIsMounted(true);
     const user = localStorage.getItem('currentUser');
+    const token = localStorage.getItem('token'); // ASUMIMOS QUE GUARDAS EL TOKEN AL LOGIN
     setCurrentUser(user);
 
-    const localProgress = localStorage.getItem('onixlingo-progress');
-    if (localProgress) {
-        try {
-            const p = JSON.parse(localProgress);
-            const completedCount = Object.keys(p.state?.completedLessons || {}).length;
-            setUserStats({ xp: completedCount * 150, lessons: completedCount, streak: 3 });
-        } catch (e) { console.error(e); }
-    }
-
     if (user) {
+        // URL dinámica: Local vs Producción
         const BASE_URL = process.env.NEXT_PUBLIC_API_URL || (
             process.env.NODE_ENV === 'development' 
-                ? 'http://127.0.0.1:8001'
+                ? 'http://127.0.0.1:8001' // Ojo: FastAPI suele ser puerto 8000, revisa tu consola
                 : 'https://onixlingo-bckend.onrender.com'
         );
 
-        fetch(`${BASE_URL}/api/v1/user/progress-map/${user}`)
-            .then(res => res.json())
-            .then(data => {
-                if (Object.keys(data).length > 0) {
-                    useProgressStore.getState().loadProgressFromDB(data);
-                    const count = Object.keys(data).length;
-                    setUserStats({ xp: count * 150, lessons: count, streak: 5 });
-                }
+        // LLAMADA AL NUEVO ENDPOINT /map
+        fetch(`${BASE_URL}/api/v1/progress/map`, {
+            headers: {
+                'Authorization': `Bearer ${token}`, // Necesario para el backend seguro
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(res => {
+                if (!res.ok) throw new Error("Error auth o red");
+                return res.json();
             })
-            .catch(err => console.error("Error sincronizando:", err));
+            .then(data => {
+                // data tiene: { standard: [...], pro: [...], vocab: [...], total_xp: ... }
+                setDashboardData(data);
+                
+                // Actualizamos las estadísticas visuales
+                const completedCount = data.standard.filter((l: any) => l.status === 'completed').length;
+                setUserStats({ 
+                    xp: data.total_xp || completedCount * 150, 
+                    lessons: completedCount, 
+                    streak: 5 // Esto podría venir del backend también
+                });
+            })
+            .catch(err => {
+                console.error("⚠️ Error sincronizando con Backend:", err);
+                // Aquí podrías dejar un fallback si falla la red
+            });
     }
   }, []);
 
@@ -319,18 +333,39 @@ export default function DashboardPage() {
 
   const allLessonsFlat = useMemo(() => CURRICULUM.flatMap(section => section.lessons), []);
 
+// BUSCA EN EL JSON DEL BACKEND SI LA LECCIÓN ESTÁ DESBLOQUEADA
   const getLessonState = (lessonId: string): LessonStatus => {
     if (!isMounted) return 'locked';
-    if (isLessonCompleted(lessonId)) return 'completed';
-    const index = allLessonsFlat.findIndex(l => l.id === lessonId);
-    if (index === 0) return 'active';
-    const prevLesson = allLessonsFlat[index - 1];
-    return isLessonCompleted(prevLesson.id) ? 'active' : 'locked';
+    
+    // Si aún no carga el backend, desbloqueamos la primera por defecto para que no se vea todo gris
+    if (!dashboardData) {
+        return lessonId === 'a1-1' ? 'active' : 'locked';
+    }
+
+    // Buscamos esta lección específica en la lista "standard"
+    const lessonNode = dashboardData.standard?.find((l: any) => l.lesson_id === lessonId);
+
+    if (lessonNode) {
+        if (lessonNode.status === 'completed') return 'completed';
+        if (lessonNode.status === 'active' || lessonNode.is_unlocked) return 'active';
+    }
+
+    // Fallback: Si es la primera lección y no hay registro en DB, está activa
+    if (lessonId === 'a1-1' && !lessonNode) return 'active';
+
+    return 'locked';
   };
 
-  const getStars = (lessonId: string) => isMounted ? getLessonStars(lessonId) : 0;
-  const handleLessonClick = (id: string) => router.push(`/lesson/${id}`);
+  const getStars = (lessonId: string) => {
+    if (!dashboardData) return 0;
+    const lessonNode = dashboardData.standard?.find((l: any) => l.lesson_id === lessonId);
+    return lessonNode ? lessonNode.stars : 0;
+  };
 
+  // AL HACER CLIC, MANDAMOS "type=standard" PARA QUE LA LECCIÓN SEPA QUÉ GUARDAR
+  const handleLessonClick = (id: string) => {
+      router.push(`/lesson/${id}?type=standard`);
+  };
   const handleLogout = () => {
     if(confirm("¿Cerrar sesión?")) {
       localStorage.removeItem('currentUser');
