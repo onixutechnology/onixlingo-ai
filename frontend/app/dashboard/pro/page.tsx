@@ -235,7 +235,10 @@ const ProTimelineNode = ({ lesson, index, statusData, isLast }: any) => {
 
   // 🔥 LÓGICA DE ESTADO REAL
   // Si no hay datos en la DB, asumimos que está "locked" (bloqueado)
-  const status = statusData?.status || 'locked';
+  let status = statusData?.status || 'locked';
+if (lesson.id === 'pro-b1-1' && !statusData) {
+    status = 'active';
+}
   const score = statusData?.score || 0;
 
   const isLocked = status === 'locked';
