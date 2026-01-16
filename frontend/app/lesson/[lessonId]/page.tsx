@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
+import Cookies from 'js-cookie'; // 👈 IMPORTANTE
 import { 
   Volume2, ArrowRight, XCircle, CheckCircle2, AlertTriangle, Play, RefreshCw, X, 
   Clock, Zap, Check, X as XIcon, Save, BookOpen, Brain, Target, Flame, Award, 
@@ -257,8 +258,10 @@ export default function LessonRunnerEngine() {
 
   // [FUNCIÓN 8] Manejar salida de la lección
   const handleExit = useCallback((): void => {
-    router.push(isPro ? '/dashboard/pro' : '/dashboard');
-  }, [router, isPro]);
+    if (lessonType === 'vocab') router.push('/dashboard/vocabulary'); // 👈 NUEVO CASO
+    else if (isPro) router.push('/dashboard/pro');
+    else router.push('/dashboard');
+  }, [router, isPro, lessonType]);
 
   // [FUNCIÓN 9] Registrar evento analítico
   const trackEvent = useCallback((eventType: string, data: any): void => {
@@ -1197,7 +1200,7 @@ const payload = {
 };
 
     try {
-      const token = localStorage.getItem('token');
+      const token = Cookies.get('acces_token');
       
       // 1. LLAMADA AL BACKEND PARA GUARDAR Y DESBLOQUEAR
       if (token) {
@@ -1445,7 +1448,11 @@ const validateAnswer = (question: QuizQuestion) => {
       <LessonComplete
         xpEarned={finalXP}
         accuracy={finalAccuracy}
+        lessonId={lesson?.id || ''}       // 👈 Necesario
+        lessonType={lessonType as any}    // 👈 CRÍTICO para navegación
+        totalSteps={lesson?.stages.length || 1}
         onRetry={() => window.location.reload()}
+        onExit={handleExit}               // 👈 Conecta tu función de salida
       />
     );
   }
