@@ -15,6 +15,8 @@ import Link from 'next/link';
 import { useUIStore } from '@/store/uiStore'; 
 import Sidebar from '@/components/dashboard/sidebar'; 
 import Cookies from 'js-cookie'; // ✅ [CORRECCIÓN 1] Importamos Cookies
+// 👇 1. AGREGA ESTO AQUÍ
+import { ServerAwakeLoader } from '@/components/ui/Server/ServerAwakeLoader';
 
 // --- 📢 IMPORTACIÓN DE ANUNCIOS ---
 import { AdBanner } from '@/components/ads/AdBanner';
@@ -23,7 +25,7 @@ import {
   LogOut, ChevronRight, Play, Lock, Check, Home,
   Trophy, Zap, Flame, Headphones, BookOpen, PenTool, 
   Mic, Shield, LayoutGrid, User, Loader2, Briefcase,
-  BookA
+  BookA, Crown
 } from 'lucide-react';
 
 import { CURRICULUM } from '@/data/curriculum';
@@ -412,8 +414,12 @@ const router = useRouter();
     );
   }
 
-  if (!isMounted) return <div className="min-h-screen bg-slate-50" />;
-
+  // ✅ NUEVA LÓGICA:
+  // Si no está montado O si aún no han llegado los datos del backend...
+  // ... mostramos el Juego de Ajedrez para entretener al usuario mientras despierta el servidor.
+  if (!isMounted || !dashboardData) {
+    return <ServerAwakeLoader />;
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] via-[#F1F5F9] to-[#E2E8F0] font-sans text-slate-900 pb-32 lg:pb-0 selection:bg-indigo-100 selection:text-indigo-900">
       
@@ -439,6 +445,16 @@ const router = useRouter();
             <BookA size={18} className="text-slate-400 group-hover:text-indigo-500 transition-colors" />
             <span className="text-xs md:text-sm font-bold">Vocabulario</span>
           </Link>
+
+          {/* 👇👇👇 NUEVO BOTÓN DE AJEDREZ - PÉGALO AQUÍ 👇👇👇 */}
+          <Link 
+            href="/dashboard/chess" 
+            className="hidden md:flex items-center gap-2 bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-emerald-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
+          >
+            <Crown size={18} className="text-slate-400 group-hover:text-emerald-500 transition-colors" />
+            <span className="text-xs md:text-sm font-bold">Ajedrez</span>
+          </Link>
+          {/* 👆👆👆 FIN DEL BOTÓN DE AJEDREZ 👆👆👆 */}
 
           <button 
             onClick={toggleProMode}
