@@ -9,66 +9,69 @@ NEXT_LESSON_MAP = {}
 
 # ==============================================================================
 # 1. RUTA STANDARD (A1 -> A2 -> B1)
-# Basado en tus archivos: a1-1.json hasta b1-7.json
 # ==============================================================================
-
-# --- Nivel A1 (1 al 7) ---
 for i in range(1, 7):
     NEXT_LESSON_MAP[f"a1-{i}"] = f"a1-{i+1}"
-NEXT_LESSON_MAP["a1-7"] = "a2-1"  # Puente de A1 a A2
+NEXT_LESSON_MAP["a1-7"] = "a2-1"
 
-# --- Nivel A2 (1 al 7) ---
 for i in range(1, 7):
     NEXT_LESSON_MAP[f"a2-{i}"] = f"a2-{i+1}"
-NEXT_LESSON_MAP["a2-7"] = "b1-1"  # Puente de A2 a B1
+NEXT_LESSON_MAP["a2-7"] = "b1-1"
 
-# --- Nivel B1 (1 al 7) ---
 for i in range(1, 7):
     NEXT_LESSON_MAP[f"b1-{i}"] = f"b1-{i+1}"
-# NEXT_LESSON_MAP["b1-7"] = "b2-1" # Descomentar si creas archivos b2-x.json
-
 
 # ==============================================================================
 # 2. RUTA PRO (Executive Foundation -> Mastery)
-# Basado en tus archivos: pro-b1, pro-b2, pro-c1, pro-c2, pro-exec, pro-mastery
-# Cada nivel tiene 10 lecciones (1 al 10)
 # ==============================================================================
-
-# --- Pro B1: Executive Foundation ---
+# Pro B1 (10 lecciones)
 for i in range(1, 10):
     NEXT_LESSON_MAP[f"pro-b1-{i}"] = f"pro-b1-{i+1}"
-NEXT_LESSON_MAP["pro-b1-10"] = "pro-b2-1"  # Puente a Management
+NEXT_LESSON_MAP["pro-b1-10"] = "pro-b2-1"
 
-# --- Pro B2: Management Skills ---
+# Pro B2
 for i in range(1, 10):
     NEXT_LESSON_MAP[f"pro-b2-{i}"] = f"pro-b2-{i+1}"
-NEXT_LESSON_MAP["pro-b2-10"] = "pro-c1-1"  # Puente a Strategic
+NEXT_LESSON_MAP["pro-b2-10"] = "pro-c1-1"
 
-# --- Pro C1: Strategic Proficiency ---
+# Pro C1
 for i in range(1, 10):
     NEXT_LESSON_MAP[f"pro-c1-{i}"] = f"pro-c1-{i+1}"
-NEXT_LESSON_MAP["pro-c1-10"] = "pro-c2-1"  # Puente a Fluency
+NEXT_LESSON_MAP["pro-c1-10"] = "pro-c2-1"
 
-# --- Pro C2: Executive Fluency ---
+# Pro C2
 for i in range(1, 10):
     NEXT_LESSON_MAP[f"pro-c2-{i}"] = f"pro-c2-{i+1}"
-NEXT_LESSON_MAP["pro-c2-10"] = "pro-exec-1"  # Puente a Director/Exec
+NEXT_LESSON_MAP["pro-c2-10"] = "pro-exec-1"
 
-# --- Pro Exec: Boardroom Vision ---
+# Pro Exec
 for i in range(1, 10):
     NEXT_LESSON_MAP[f"pro-exec-{i}"] = f"pro-exec-{i+1}"
-NEXT_LESSON_MAP["pro-exec-10"] = "pro-mastery-1"  # Puente a Titanium Mastery
+NEXT_LESSON_MAP["pro-exec-10"] = "pro-mastery-1"
 
-# --- Pro Mastery: Titanium Specializations ---
+# Pro Mastery
 for i in range(1, 10):
     NEXT_LESSON_MAP[f"pro-mastery-{i}"] = f"pro-mastery-{i+1}"
-# Fin de la ruta actual (o puente a especializaciones específicas si existen)
-
 
 # ==============================================================================
-# 3. HELPER FUNCTION
+# 3. RUTA VOCABULARY (Life, Business, Marketing, Tech, Travel)
+# Estructura: category_mod_01 hasta category_mod_20
+# Calculado según tu script generador: (5 niveles * 4 partes = 20 módulos)
 # ==============================================================================
+vocab_categories = ['basics', 'business', 'marketing', 'tech', 'travel']
 
+for cat in vocab_categories:
+    # Generamos del 1 al 19 para mapear al siguiente (el 20 es el final)
+    for i in range(1, 20): 
+        # Formato con ceros a la izquierda: basics_mod_01 -> basics_mod_02
+        current_id = f"{cat}_mod_{str(i).zfill(2)}"
+        next_id = f"{cat}_mod_{str(i+1).zfill(2)}"
+        
+        NEXT_LESSON_MAP[current_id] = next_id
+
+# ==============================================================================
+# 4. HELPER FUNCTION
+# ==============================================================================
 def get_next_lesson_id(current_id: str) -> str | None:
     """
     Devuelve el ID de la siguiente lección basado en la actual.
