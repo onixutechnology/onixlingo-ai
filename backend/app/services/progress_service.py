@@ -1,6 +1,8 @@
 from sqlalchemy.orm import Session
 from app.db import models
-from app.services import lesson_service
+# 1. IMPORTAMOS EL MAPA DIRECTAMENTE (Rompe el ciclo con lesson_service)
+from app.utils.curriculum_map import get_next_lesson_id 
+from datetime import datetime
 
 def get_user_progress(db: Session, user_id: int, lesson_id: str):
     """
@@ -11,22 +13,17 @@ def get_user_progress(db: Session, user_id: int, lesson_id: str):
         models.Progress.lesson_id == lesson_id
     ).first()
 
-def initialize_progress(db: Session, user_id: int, lesson_id: str, lesson_type: models.LessonType = None):
+def initialize_progress(db: Session, user_id: int, lesson_id: str, lesson_type: str = "standard"):
     """
-    Crea el registro inicial si no existe (status locked por defecto).
-    Si no se pasa lesson_type, intenta deducirlo.
+    Crea el registro inicial si no existe.
     """
-    # Si no nos pasan el tipo, intentamos adivinarlo (fallback)
-    if not lesson_type:
-        lesson_type = lesson_service.get_lesson_type_by_id(lesson_id)
-        
     new_prog = models.Progress(
         user_id=user_id,
         lesson_id=lesson_id,
-        lesson_type=lesson_type, # Fundamental para el mapa de Dashboard
+        lesson_type=lesson_type, # Guardamos string directo
         status="locked", 
         current_step=0,
-        total_steps=10 # Idealmente, esto vendría de los metadatos de la lección real
+        total_steps=10
     )
     db.add(new_prog)
     db.commit()
@@ -39,43 +36,38 @@ def update_lesson_progress(
     lesson_id: str, 
     score: int, 
     steps_completed: int, 
-    lesson_type: str = None # Recibimos "standard", "pro", o "vocab" desde el API
+    lesson_type: str = "standard" # Recibimos string
 ):
     """
-    Actualiza el avance. Si llega al 100% y aprueba, desbloquea la siguiente.
+    Actualiza el avance. Si aprueba, desbloquea la siguiente usando el mapa.
     """
-    # 1. Asegurar que tenemos un tipo de lección válido (Enum)
-    # Convertimos el string que viene del API al Enum de la base de datos
-    enum_type = models.LessonType.STANDARD
-    if lesson_type == "pro": enum_type = models.LessonType.PRO
-    elif lesson_type == "vocab": enum_type = models.LessonType.VOCAB
     
-    # 2. Obtener o Crear Progreso
+    # 1. Obtener o Crear Progreso Actual
     progress = get_user_progress(db, user_id, lesson_id)
     if not progress:
-        progress = initialize_progress(db, user_id, lesson_id, enum_type)
+        progress = initialize_progress(db, user_id, lesson_id, lesson_type)
 
-    # 3. Actualizar métricas
+    # 2. Actualizar métricas
     progress.current_step = steps_completed
-    progress.score = max(progress.score, score) # Guardar siempre el mejor score
+    progress.score = max(progress.score, score) 
     progress.status = "active"
+    progress.updated_at = datetime.now()
 
-    # 4. Calcular Estrellas
+    # 3. Calcular Estrellas
     if score >= 90: progress.stars = 3
     elif score >= 70: progress.stars = 2
     elif score >= 50: progress.stars = 1
     else: progress.stars = 0
 
-    # 5. Lógica de Aprobación
-    # Si completó los pasos o sacó buen puntaje (>60), se considera pasada.
+    # 4. Lógica de Aprobación (Si completó todos los pasos o tiene >60)
+    # Ajusta esto según tu lógica de Frontend (si envías steps=10 al final)
     passed = (steps_completed >= progress.total_steps) or (score >= 60)
 
     if passed:
         progress.status = "completed"
         
-        # 🔥 DESBLOQUEO AUTOMÁTICO
-        # Pasamos el tipo actual para saber en qué lista buscar la siguiente
-        _unlock_next_content(db, user_id, lesson_id, enum_type)
+        # 🔥 DESBLOQUEO AUTOMÁTICO (Usando el mapa)
+        _unlock_next_content(db, user_id, lesson_id, lesson_type)
         
         # 🏆 VERIFICAR TROFEOS
         _check_achievements(db, user_id, score)
@@ -84,32 +76,35 @@ def update_lesson_progress(
     db.refresh(progress)
     return progress
 
-def _unlock_next_content(db: Session, user_id: int, current_lesson_id: str, current_type: models.LessonType):
+def _unlock_next_content(db: Session, user_id: int, current_lesson_id: str, current_type: str):
     """
-    Busca cuál es la siguiente lección en el curso y la desbloquea.
+    Busca cuál es la siguiente lección en el curriculum_map y la desbloquea.
     """
-    # Usamos lesson_service para encontrar el ID siguiente
-    # Nota: lesson_service debe tener la lógica para buscar en Standard/Pro/Vocab
-    next_id = lesson_service.get_next_lesson_id(current_lesson_id)
+    # 1. Obtener ID de la siguiente lección desde el mapa estático
+    next_id = get_next_lesson_id(current_lesson_id)
     
     if next_id:
-        # Verificar si ya existe registro para la siguiente lección
+        # 2. Verificar si ya existe registro
         next_progress = get_user_progress(db, user_id, next_id)
         
         if not next_progress:
-            # Si no existe, lo creamos YA desbloqueado ("active")
-            # Importante: El tipo de la siguiente lección suele ser el mismo que la actual
+            # 3. Si no existe, CREARLO DESBLOQUEADO
+            print(f"🔓 Desbloqueando lección: {next_id} para usuario {user_id}")
             new_unlock = models.Progress(
                 user_id=user_id,
                 lesson_id=next_id,
-                lesson_type=current_type, # Mantenemos el mismo bloque
-                status="active", # ¡Desbloqueada!
+                lesson_type=current_type, # Hereda el tipo (pro/standard)
+                status="active", # ✅ ACTIVE = Desbloqueado
+                stars=0,
+                score=0,
+                current_step=0,
                 total_steps=10 
             )
             db.add(new_unlock)
         else:
-            # Si existía pero estaba bloqueada (status="locked"), la abrimos
+            # 4. Si existía bloqueado, abrirlo
             if next_progress.status == "locked":
+                print(f"🔓 Actualizando lección existente: {next_id} a active")
                 next_progress.status = "active"
                 db.add(next_progress)
 
@@ -117,7 +112,6 @@ def _check_achievements(db: Session, user_id: int, current_score: int):
     """
     Sistema simple de Gamificación.
     """
-    # Trofeo: Perfeccionista (100 puntos)
     if current_score == 100:
         exists = db.query(models.UserAchievement).filter_by(
             user_id=user_id, 
