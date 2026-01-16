@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation'; // Necesario para redirección si no hay auth
-import Cookies from 'js-cookie'; // ✅ IMPORTANTE: Auth real
+import { useRouter } from 'next/navigation'; 
+import Cookies from 'js-cookie'; 
 import { 
   ArrowLeft, BookA, Search, Play, Brain, 
   Briefcase, Code2, Plane, Users, Coffee, 
-  Lock, CheckCircle2, Sparkles, Loader2
+  Lock, CheckCircle2, Loader2
 } from 'lucide-react';
 
 // --- CONFIGURACIÓN API ---
@@ -74,14 +74,11 @@ export default function VocabularyPage() {
           return;
         }
 
-        const headers = { 'Authorization': token }; // ✅ Auth correcta
+        const headers = { 'Authorization': token };
 
         const res = await fetch(`${API_URL}/api/v1/progress/map`, { headers });
         if (res.ok) {
           const data = await res.json();
-          // Asumimos que el backend devuelve { vocab: [...] } o similar
-          // Si tu backend mete todo en 'standard', ajusta esto. 
-          // Por ahora usaremos data.vocab o data.standard filtrado si es necesario.
           setVocabProgress(data.vocab || []); 
         }
       } catch (error) {
@@ -96,17 +93,14 @@ export default function VocabularyPage() {
 
   // --- HELPER PARA SABER ESTADO DE LECCIÓN ---
   const getLessonState = (lessonId: string) => {
-    // Buscar en la lista descargada
     const lessonData = vocabProgress.find(p => p.lesson_id === lessonId);
     
     if (lessonData) {
-        // Si existe en la DB, devolvemos su estado real
         if (lessonData.status === 'completed') return 'completed';
         if (lessonData.status === 'active') return 'active';
         return 'locked';
     }
 
-    // Lógica por defecto (si no hay datos, la primera de 'basics' suele estar abierta)
     if (lessonId === 'basics_mod_01') return 'active';
 
     return 'locked';
@@ -224,19 +218,27 @@ export default function VocabularyPage() {
             // Filtro de búsqueda
             if (searchTerm && !displayTitle.toLowerCase().includes(searchTerm.toLowerCase())) return null;
 
-            // Renderizar Card (Link solo si no está bloqueado)
+            // 🔥 RENDERIZADO DE TARJETA CON CAPAS CORREGIDAS (Z-INDEX)
             const CardContent = (
                 <div className={`
-                  h-full bg-white border border-slate-200 rounded-2xl p-5 flex flex-col justify-between transition-all duration-300 relative overflow-hidden
+                  h-full bg-white border border-slate-200 rounded-2xl p-5 flex flex-col justify-between transition-all duration-300 
+                  relative overflow-hidden isolate
                   ${!isLocked ? `hover:border-transparent hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1 cursor-pointer ${Theme.ring} focus:ring-2` : 'opacity-60 cursor-not-allowed bg-slate-50'}
                 `}>
                   
-                  {/* Contenido Superior */}
-                  <div className="flex items-start gap-4 mb-6">
-                    {/* Badge de Nivel */}
+                  {/* CAPA 0: Decoración de Fondo (El círculo naranja) - Detrás de todo */}
+                  {!isLocked && (
                     <div className={`
-                      w-14 h-14 flex flex-col items-center justify-center rounded-2xl font-black text-lg shrink-0 shadow-inner
-                      ${!isLocked ? `${Theme.bg} ${Theme.text}` : 'bg-slate-200 text-slate-400'}
+                        absolute -right-12 -top-12 w-48 h-48 rounded-full opacity-0 group-hover:opacity-10 transition-all duration-500 ease-out z-0 pointer-events-none
+                        ${Theme.bg} group-hover:scale-150
+                    `} />
+                  )}
+
+                  {/* CAPA 10: Contenido Superior (Texto) - Encima del fondo */}
+                  <div className="flex items-start gap-4 mb-6 relative z-10">
+                    <div className={`
+                      w-14 h-14 flex flex-col items-center justify-center rounded-2xl font-black text-lg shrink-0 shadow-inner bg-white
+                      ${!isLocked ? `${Theme.text} ring-1 ring-inset ${Theme.border}` : 'bg-slate-200 text-slate-400'}
                     `}>
                       {level}
                       <span className="text-[9px] font-bold opacity-60 uppercase tracking-wider">Part {part}</span>
@@ -252,8 +254,8 @@ export default function VocabularyPage() {
                     </div>
                   </div>
 
-                  {/* Footer de la Card */}
-                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
+                  {/* CAPA 10: Footer (Progreso y Botón) - Encima del fondo */}
+                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50 relative z-10">
                     
                     {/* Barra de Progreso */}
                     <div className="flex flex-col gap-1.5 w-1/2">
@@ -271,20 +273,17 @@ export default function VocabularyPage() {
 
                     {/* Botón de Acción */}
                     <div className={`
-                      w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-sm
+                      w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-sm relative overflow-hidden
                       ${isLocked ? 'bg-slate-200 text-slate-400' : 'bg-slate-50 text-slate-400 group-hover:text-white group-hover:shadow-md'}
-                    `}
-                    style={!isLocked ? { '--hover-bg': `var(--${activeCat}-color)` } as React.CSSProperties : {}}
-                    >
+                    `}>
                       {!isLocked && <div className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity ${Theme.bar}`} />}
                       
-                      {isLocked ? <Lock size={18} /> : (status === 'completed' ? <CheckCircle2 size={18} /> : <Play size={18} fill="currentColor" className="ml-1 relative z-10" />)}
+                      <div className="relative z-10">
+                          {isLocked ? <Lock size={18} /> : (status === 'completed' ? <CheckCircle2 size={18} /> : <Play size={18} fill="currentColor" className="ml-1" />)}
+                      </div>
                     </div>
 
                   </div>
-                  
-                  {/* Decoración Hover (Brillo sutil) */}
-                  {!isLocked && <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-white via-transparent to-transparent opacity-0 group-hover:opacity-20 transition-opacity pointer-events-none ${Theme.bg.replace('bg-', 'from-')}`} />}
                 </div>
             );
 
