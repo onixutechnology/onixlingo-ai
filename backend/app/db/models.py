@@ -1,9 +1,10 @@
 import enum
-from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey, func, Enum
+from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey, func
 from sqlalchemy.orm import relationship
 from app.db.base import Base
 
 # --- ENUMS ---
+# Lo mantenemos para uso interno, pero no para la definición de la tabla
 class LessonType(str, enum.Enum):
     STANDARD = "standard"
     PRO = "pro"
@@ -18,14 +19,11 @@ class User(Base):
     username = Column(String, unique=True, index=True, nullable=False)
     email = Column(String, unique=True, index=True, nullable=True)
     
-    # 🔥 ESTO FALTABA EN TU CÓDIGO PYTHON:
     hashed_password = Column(String, nullable=False)
     
     is_active = Column(Boolean, default=True)
     role = Column(String, default="student")
     
-    # OJO: Si en pgAdmin no ves 'is_pro', el código podría fallar al leerlo. 
-    # Asegúrate de haberlo creado o que SQLAlchemy lo cree.
     is_pro = Column(Boolean, default=False) 
     
     created_at = Column(DateTime(timezone=True), server_default=func.now())
@@ -41,7 +39,9 @@ class Progress(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     
     lesson_id = Column(String, index=True, nullable=False)
-    lesson_type = Column(Enum(LessonType), default=LessonType.STANDARD) 
+    
+    # 🔥 CORRECCIÓN AQUÍ: Usamos String en lugar de Enum para evitar errores de base de datos
+    lesson_type = Column(String, default="standard") 
 
     stars = Column(Integer, default=0)
     score = Column(Integer, default=0)
