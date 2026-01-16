@@ -4,12 +4,10 @@ from typing import List, Dict, Any
 
 # --- IMPORTS DE INFRAESTRUCTURA ---
 from app.database import get_db
-from app.db import models  # ✅ CORRECTO: Importamos los modelos desde su nueva casa
-from app.api import deps   # Dependencia de autenticación (get_current_active_user)
+from app.db import models 
+from app.api import deps 
 
 # --- IMPORTS DE SCHEMAS (DTOs) ---
-# Asegúrate de que tu archivo de schemas se llame 'titanium.py'. 
-# Si se llama 'schemas.py', cambia esto a: from app.schemas import ...
 from app.schemas.titanium import ProgressUpdate, ProgressRead, DashboardMap
 
 # --- IMPORTS DE LÓGICA DE NEGOCIO ---
@@ -39,7 +37,7 @@ def complete_lesson(
             lesson_id=data.lesson_id,
             score=data.score,
             steps_completed=data.current_step,
-            # ✅ IMPORTANTE: Pasamos el tipo para saber qué mapa desbloquear
+            # ✅ IMPORTANTE: Pasamos el string directo ("standard", "pro", "vocab")
             lesson_type=data.lesson_type 
         )
         return progress
@@ -61,21 +59,17 @@ def get_dashboard_map(
     current_user: models.User = Depends(deps.get_current_active_user)
 ):
     """
-    Devuelve TODO el progreso del usuario organizado por bloques:
-    - Standard (Curso Normal)
-    - Pro (Business/Advanced)
-    - Vocab (Vocabulario)
+    Devuelve TODO el progreso del usuario organizado por bloques.
     """
     # 1. Traemos todo el historial de este usuario
     all_progress = db.query(models.Progress).filter(
         models.Progress.user_id == current_user.id
     ).all()
 
-    # 2. Filtramos en memoria (Python) para separar las listas
-    # Esto es más rápido que hacer 3 consultas SQL separadas.
-    standard_list = [p for p in all_progress if p.lesson_type == models.LessonType.STANDARD]
-    pro_list = [p for p in all_progress if p.lesson_type == models.LessonType.PRO]
-    vocab_list = [p for p in all_progress if p.lesson_type == models.LessonType.VOCAB]
+    # 2. Filtramos en memoria usando STRINGS para evitar conflictos con Enums/DB
+    standard_list = [p for p in all_progress if p.lesson_type == "standard"]
+    pro_list = [p for p in all_progress if p.lesson_type == "pro"]
+    vocab_list = [p for p in all_progress if p.lesson_type == "vocab"]
 
     # 3. Calculamos XP Total
     total_xp = sum(p.score for p in all_progress)
@@ -97,7 +91,7 @@ def get_user_stats(
     current_user: models.User = Depends(deps.get_current_active_user)
 ):
     """
-    Genera las métricas para el perfil y el gráfico de radar.
+    Genera las métricas para el perfil, el gráfico de radar y el estado PRO.
     """
     raw_progress = db.query(models.Progress).filter(models.Progress.user_id == current_user.id).all()
     
@@ -138,10 +132,13 @@ def get_user_stats(
         "username": current_user.username,
         "level_label": _calculate_label(modules_count),
         "total_xp": sum(p.score for p in raw_progress),
-        "streak_days": 5, # TODO: Conectar lógica real de racha
+        "streak_days": 5, # TODO: Conectar lógica real de racha si existe tabla
         "completed_modules": modules_count,
-        "global_progress": min(int((modules_count / 60) * 100), 100), # Asumiendo 60 lecciones totales
-        "skills_radar": radar_data
+        "global_progress": min(int((modules_count / 60) * 100), 100),
+        "skills_radar": radar_data,
+        
+        # 🔥 CRÍTICO: Esto habilita la lógica de Paywall en el Frontend
+        "is_pro": current_user.is_pro 
     }
 
 def _calculate_label(count: int) -> str:
@@ -154,15 +151,13 @@ def _calculate_label(count: int) -> str:
 # ==============================================================================
 # 4. DEBUG / ADMIN (Solo para desarrollo)
 # ==============================================================================
-@router.post("/debug/unlock-all")
+@router.post("/debug/unlock-all/{username}")
 def unlock_all_levels(
-    db: Session = Depends(get_db),
-    current_user: models.User = Depends(deps.get_current_active_user)
+    username: str,
+    db: Session = Depends(get_db)
 ):
     """
     Modo Dios: Desbloquea todas las lecciones para el usuario actual.
-    Útil para testing rápido sin hacer todo el curso.
     """
-    # Ejemplo básico: Inserta registros 'completed' dummy
-    # En producción deberías comentar o proteger este endpoint con role='admin'
-    return {"msg": f"Niveles desbloqueados para {current_user.username} (Simulado)"}
+    # Aquí iría la lógica para insertar registros 'completed' masivamente
+    return {"msg": f"Niveles desbloqueados para {username} (Simulado)"}

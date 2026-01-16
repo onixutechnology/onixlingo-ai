@@ -1,48 +1,72 @@
-from pydantic import BaseModel
-from typing import Optional
-from enum import Enum
+from typing import List, Optional, Any
+from pydantic import BaseModel, Field, field_validator, model_validator
+from datetime import datetime
 
-# Esto asegura que el frontend solo envíe tipos válidos
-class LessonType(str, Enum):
-    STANDARD = "standard"  # a1-1, a1-2...
-    PRO = "pro"            # pro-b1-1...
-    VOCAB = "vocab"        # basics_mod_01...
-
-# --- INPUT: Lo que recibes del Frontend al terminar lección ---
+# ==============================================================================
+# 1. INPUT: Lo que recibes del Frontend al terminar lección
+# ==============================================================================
 class ProgressUpdate(BaseModel):
-    # username: str  <-- ELIMINADO: Lo tomaremos del token (current_user)
     lesson_id: str
-    lesson_type: LessonType  # IMPORTANTE: Para saber en qué carpeta buscar la siguiente
+    lesson_type: str  # "standard", "pro", "vocab" (Str simple para evitar errores)
     
     current_step: int
-    total_steps: int
+    total_steps: int = 10 # Default seguro
     
-    score: int            # 0 a 100 (El backend calculará las estrellas basado en esto)
-    stars: Optional[int] = 0 # Opcional, por si el frontend ya lo calculó visualmente
+    score: int        # 0 a 100
+    stars: Optional[int] = 0
 
-# --- OUTPUT: Lo que envías al Frontend para pintar el mapa ---
+# ==============================================================================
+# 2. OUTPUT: Lo que envías al Frontend (Lectura inteligente)
+# ==============================================================================
 class ProgressRead(BaseModel):
+    id: int
+    user_id: int
     lesson_id: str
-    lesson_type: LessonType
+    lesson_type: str
     
-    status: str           # 'locked', 'active', 'completed'
-    is_unlocked: bool     # Booleano rápido para que el Frontend sepa si poner candado o no
-    
-    stars: int            # 0, 1, 2, 3
-    score: int            # Mejor puntaje histórico
+    status: str       # 'locked', 'active', 'completed'
+    stars: int
+    score: int
     
     current_step: int
     total_steps: int
-    percentage: int       # (current / total) * 100
+    updated_at: Optional[datetime] = None
+
+    # --- CAMPOS COMPUTADOS (El frontend los espera, pero la DB no los tiene) ---
+    is_unlocked: bool = False
+    percentage: int = 0
 
     class Config:
-        from_attributes = True # Necesario para leer desde SQLAlchemy
+        from_attributes = True # Clave para leer objetos de SQLAlchemy
 
-# --- EXTRA: Para enviar el mapa completo (Dashboard) ---
+    # 🔥 MAGIA: Calculamos estos campos automáticamente antes de enviar la respuesta
+    @model_validator(mode='after')
+    def compute_frontend_fields(self):
+        # 1. Calcular si está desbloqueada
+        self.is_unlocked = self.status in ["active", "completed"]
+        
+        # 2. Calcular porcentaje de avance
+        if self.total_steps > 0:
+            calc = int((self.current_step / self.total_steps) * 100)
+            self.percentage = min(calc, 100) # Tope en 100%
+        else:
+            self.percentage = 0
+            
+        # 3. Si está completada, forzamos 100% (visual)
+        if self.status == 'completed':
+            self.percentage = 100
+            
+        return self
+
+# ==============================================================================
+# 3. MAPA COMPLETO (Dashboard)
+# ==============================================================================
 class DashboardMap(BaseModel):
-    # Listas de progreso para pintar cada sección
-    standard: list[ProgressRead]
-    pro: list[ProgressRead]
-    vocab: list[ProgressRead]
+    standard: List[ProgressRead] = []
+    pro: List[ProgressRead] = []
+    vocab: List[ProgressRead] = []
     
-    total_xp: int         # Puntos totales del usuario para el gamification
+    total_xp: int = 0
+
+    class Config:
+        from_attributes = True
