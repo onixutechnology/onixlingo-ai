@@ -1,8 +1,9 @@
 from sqlalchemy.orm import Session
 from app.db import models
-# 1. IMPORTAMOS EL MAPA DIRECTAMENTE (Rompe el ciclo con lesson_service)
-from app.utils.curriculum_map import get_next_lesson_id 
 from datetime import datetime
+
+# ✅ IMPORTACIÓN CORRECTA: Usamos tu función del mapa
+from app.utils.curriculum_map import get_next_lesson_id 
 
 def get_user_progress(db: Session, user_id: int, lesson_id: str):
     """
@@ -13,17 +14,17 @@ def get_user_progress(db: Session, user_id: int, lesson_id: str):
         models.Progress.lesson_id == lesson_id
     ).first()
 
-def initialize_progress(db: Session, user_id: int, lesson_id: str, lesson_type: str = "standard"):
+def initialize_progress(db: Session, user_id: int, lesson_id: str, lesson_type: str, total_steps: int):
     """
     Crea el registro inicial si no existe.
     """
     new_prog = models.Progress(
         user_id=user_id,
         lesson_id=lesson_id,
-        lesson_type=lesson_type, # Guardamos string directo
+        lesson_type=lesson_type,
         status="locked", 
         current_step=0,
-        total_steps=10
+        total_steps=total_steps # Guardamos el total real recibido del frontend
     )
     db.add(new_prog)
     db.commit()
@@ -36,7 +37,8 @@ def update_lesson_progress(
     lesson_id: str, 
     score: int, 
     steps_completed: int, 
-    lesson_type: str = "standard" # Recibimos string
+    total_steps: int, # 👈 RECIBIMOS ESTO DEL FRONTEND
+    lesson_type: str = "standard"
 ):
     """
     Actualiza el avance. Si aprueba, desbloquea la siguiente usando el mapa.
@@ -45,10 +47,11 @@ def update_lesson_progress(
     # 1. Obtener o Crear Progreso Actual
     progress = get_user_progress(db, user_id, lesson_id)
     if not progress:
-        progress = initialize_progress(db, user_id, lesson_id, lesson_type)
+        progress = initialize_progress(db, user_id, lesson_id, lesson_type, total_steps)
 
     # 2. Actualizar métricas
     progress.current_step = steps_completed
+    progress.total_steps = total_steps # Actualizamos por si cambió la lección
     progress.score = max(progress.score, score) 
     progress.status = "active"
     progress.updated_at = datetime.now()
@@ -59,14 +62,14 @@ def update_lesson_progress(
     elif score >= 50: progress.stars = 1
     else: progress.stars = 0
 
-    # 4. Lógica de Aprobación (Si completó todos los pasos o tiene >60)
-    # Ajusta esto según tu lógica de Frontend (si envías steps=10 al final)
-    passed = (steps_completed >= progress.total_steps) or (score >= 60)
+    # 4. Lógica de Aprobación ROBUSTA
+    # Aprueba si: Score > 60%  O  Completó todos los pasos (útil para lecciones sin examen)
+    passed = (score >= 60) or (steps_completed >= total_steps and total_steps > 0)
 
     if passed:
         progress.status = "completed"
         
-        # 🔥 DESBLOQUEO AUTOMÁTICO (Usando el mapa)
+        # 🔥 DESBLOQUEO AUTOMÁTICO (Usando tu mapa)
         _unlock_next_content(db, user_id, lesson_id, lesson_type)
         
         # 🏆 VERIFICAR TROFEOS
@@ -78,9 +81,9 @@ def update_lesson_progress(
 
 def _unlock_next_content(db: Session, user_id: int, current_lesson_id: str, current_type: str):
     """
-    Busca cuál es la siguiente lección en el curriculum_map y la desbloquea.
+    Usa tu mapa inteligente para encontrar la siguiente lección y abrirla.
     """
-    # 1. Obtener ID de la siguiente lección desde el mapa estático
+    # 1. Obtener ID de la siguiente lección desde TU MAPA
     next_id = get_next_lesson_id(current_lesson_id)
     
     if next_id:
@@ -88,23 +91,23 @@ def _unlock_next_content(db: Session, user_id: int, current_lesson_id: str, curr
         next_progress = get_user_progress(db, user_id, next_id)
         
         if not next_progress:
-            # 3. Si no existe, CREARLO DESBLOQUEADO
-            print(f"🔓 Desbloqueando lección: {next_id} para usuario {user_id}")
+            # 3. Si no existe, CREARLO DESBLOQUEADO ('active')
+            print(f"🔓 [AUTO-UNLOCK] Desbloqueando: {next_id} para usuario {user_id}")
             new_unlock = models.Progress(
                 user_id=user_id,
                 lesson_id=next_id,
-                lesson_type=current_type, # Hereda el tipo (pro/standard)
-                status="active", # ✅ ACTIVE = Desbloqueado
+                lesson_type=current_type,
+                status="active", # 🔓 AQUÍ SE QUITA EL CANDADO
                 stars=0,
                 score=0,
                 current_step=0,
-                total_steps=10 
+                total_steps=10 # Valor default, se ajustará cuando el usuario entre
             )
             db.add(new_unlock)
         else:
             # 4. Si existía bloqueado, abrirlo
             if next_progress.status == "locked":
-                print(f"🔓 Actualizando lección existente: {next_id} a active")
+                print(f"🔓 [AUTO-UNLOCK] Abriendo lección existente: {next_id}")
                 next_progress.status = "active"
                 db.add(next_progress)
 

@@ -5,7 +5,7 @@
  * ONIXLINGO LMS DASHBOARD - STUDENT EDITION (FREE TIER)
  * ==============================================================================
  * RUTA: /dashboard/page.tsx
- * ESTADO: Conectado a Backend (Fix Auth Cookies)
+ * ESTADO: Production Ready (Fix Auth Cookies & Lesson Lock)
  * ==============================================================================
  */
 
@@ -14,8 +14,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useUIStore } from '@/store/uiStore'; 
 import Sidebar from '@/components/dashboard/sidebar'; 
-import Cookies from 'js-cookie'; // ✅ [CORRECCIÓN 1] Importamos Cookies
-// 👇 1. AGREGA ESTO AQUÍ
+import Cookies from 'js-cookie'; 
 import { ServerAwakeLoader } from '@/components/ui/Server/ServerAwakeLoader';
 
 // --- 📢 IMPORTACIÓN DE ANUNCIOS ---
@@ -29,7 +28,6 @@ import {
 } from 'lucide-react';
 
 import { CURRICULUM } from '@/data/curriculum';
-// import { useProgressStore } from '@/store/progressStore'; // Ya no se usa directo
 
 // --- TIPOS ---
 type LessonStatus = 'locked' | 'active' | 'completed';
@@ -136,7 +134,7 @@ const MobileBottomNav = () => (
       <span className="text-[10px] font-bold">Inicio</span>
     </Link>
 
-    {/* 2. VOCABULARIO (Corregido: Antes iba a /practice) */}
+    {/* 2. VOCABULARIO */}
     <Link href="/dashboard/vocabulary" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
       <BookA size={24} />
       <span className="text-[10px] font-bold">Vocab</span>
@@ -152,13 +150,13 @@ const MobileBottomNav = () => (
         </span>
     </Link>
 
-    {/* 4. LOGROS (Visual por ahora) */}
+    {/* 4. LOGROS */}
     <Link href="/dashboard" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
       <Trophy size={24} />
       <span className="text-[10px] font-bold">Logros</span>
     </Link>
 
-    {/* 5. PERFIL (Corregido: Ahora lleva al Modo Pro) */}
+    {/* 5. PERFIL */}
     <Link href="/dashboard/pro" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
       <User size={24} />
       <span className="text-[10px] font-bold">Perfil</span>
@@ -279,30 +277,21 @@ const CertCard = ({ title, desc, icon: Icon, href, active = false, color }: any)
 
 // --- PÁGINA PRINCIPAL ---
 export default function DashboardPage() {
-const router = useRouter();
+  const router = useRouter();
   const { mode, setMode } = useUIStore(); 
   
   const [isMounted, setIsMounted] = useState(false);
   const [currentUser, setCurrentUser] = useState<string | null>(null);
-  
-  // --- NUEVO ESTADO DEL BACKEND ---
   const [dashboardData, setDashboardData] = useState<any>(null);
   const [userStats, setUserStats] = useState({ xp: 0, lessons: 0, streak: 0 });
-  
-  // 👇 NUEVO ESTADO: Controla si mostramos el ajedrez
   const [showChessLoader, setShowChessLoader] = useState(false);
 
-  // 👇 NUEVO EFECTO: Temporizador de 2 segundos
+  // EFECTO DE CARGA DE RESERVA (TIMEOUT)
   useEffect(() => {
-    // Si ya llegaron los datos, no hacemos nada
     if (dashboardData) return;
-
-    // Si no hay datos, esperamos 2.5 segundos antes de mostrar el ajedrez
     const timer = setTimeout(() => {
       setShowChessLoader(true);
     }, 3500);
-
-    // Limpiamos el reloj si los datos llegan antes o el componente se desmonta
     return () => clearTimeout(timer);
   }, [dashboardData]);
 
@@ -314,57 +303,49 @@ const router = useRouter();
     }
   }, [mode, router]);
   
-// 2. CARGA DE DATOS REALES DEL BACKEND TITANIUM
+  // 2. CARGA DE DATOS REALES DEL BACKEND TITANIUM
   useEffect(() => {
     setIsMounted(true);
     const user = localStorage.getItem('currentUser');
-    
-    // ✅ [CORRECCIÓN 2]: Leer token desde COOKIES, no localStorage
     const token = Cookies.get('access_token'); 
     
     setCurrentUser(user);
 
     if (user && token) {
-        // URL dinámica: Local vs Producción
         const BASE_URL = process.env.NEXT_PUBLIC_API_URL || (
             process.env.NODE_ENV === 'development' 
                 ? 'http://127.0.0.1:8001'
                 : 'https://onixlingo-bckend.onrender.com'
         );
 
-        // LLAMADA AL NUEVO ENDPOINT /map
         fetch(`${BASE_URL}/api/v1/progress/map`, {
             headers: {
-                // ✅ [CORRECCIÓN 3]: Token limpio (ya incluye Bearer)
                 'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`, 
                 'Content-Type': 'application/json'
             }
         })
-.then(res => {
-                // 👇 CORRECCIÓN CLAVE: Si el token venció (401), sacamos al usuario
-                if (res.status === 401) {
-                    Cookies.remove('access_token');
-                    router.push('/login');
-                    throw new Error("Sesión expirada");
-                }
-                if (!res.ok) throw new Error("Error auth o red");
-                return res.json();
-            })
-            .then(data => {
-                setDashboardData(data);
-                
-                const completedCount = data.standard.filter((l: any) => l.status === 'completed').length;
-                setUserStats({ 
-                    xp: data.total_xp || completedCount * 150, 
-                    lessons: completedCount, 
-                    streak: 5 
-                });
-            })
-            .catch(err => {
-                console.error("⚠️ Error sincronizando con Backend:", err);
+        .then(res => {
+            if (res.status === 401) {
+                Cookies.remove('access_token');
+                router.push('/login');
+                throw new Error("Sesión expirada");
+            }
+            if (!res.ok) throw new Error("Error auth o red");
+            return res.json();
+        })
+        .then(data => {
+            setDashboardData(data);
+            const completedCount = data.standard.filter((l: any) => l.status === 'completed').length;
+            setUserStats({ 
+                xp: data.total_xp || completedCount * 150, 
+                lessons: completedCount, 
+                streak: 5 
             });
+        })
+        .catch(err => {
+            console.error("⚠️ Error sincronizando con Backend:", err);
+        });
     } else if (!token) {
-        // Si no hay token, al login
         router.push('/login');
     }
   }, [router]);
@@ -376,12 +357,14 @@ const router = useRouter();
 
   const allLessonsFlat = useMemo(() => CURRICULUM.flatMap(section => section.lessons), []);
 
-// BUSCA EN EL JSON DEL BACKEND SI LA LECCIÓN ESTÁ DESBLOQUEADA
+  // 🔎 FUNCIÓN CORREGIDA: getLessonState (Auto-unlock 1ra lección)
   const getLessonState = (lessonId: string): LessonStatus => {
     if (!isMounted) return 'locked';
     
+    const firstLessonId = CURRICULUM[0]?.lessons[0]?.id;
+
     if (!dashboardData) {
-        return lessonId === 'a1-1' ? 'active' : 'locked';
+        return lessonId === firstLessonId ? 'active' : 'locked';
     }
 
     const lessonNode = dashboardData.standard?.find((l: any) => l.lesson_id === lessonId);
@@ -391,11 +374,12 @@ const router = useRouter();
         if (lessonNode.status === 'active' || lessonNode.is_unlocked) return 'active';
     }
 
-    if (lessonId === 'a1-1' && !lessonNode) return 'active';
+    if (lessonId === firstLessonId && !lessonNode) return 'active';
 
     return 'locked';
   };
 
+  // 🔎 FUNCIÓN RESTAURADA: getStars (Estaba perdida)
   const getStars = (lessonId: string) => {
     if (!dashboardData) return 0;
     const lessonNode = dashboardData.standard?.find((l: any) => l.lesson_id === lessonId);
@@ -408,7 +392,6 @@ const router = useRouter();
   
   const handleLogout = () => {
     if(confirm("¿Cerrar sesión?")) {
-      // Borrar Cookies y LocalStorage
       Cookies.remove('access_token');
       localStorage.removeItem('currentUser');
       localStorage.removeItem('onix_tier');
@@ -421,7 +404,6 @@ const router = useRouter();
 
   const handleUnlockAll = async () => {
     if (!currentUser) return alert("Error: No hay usuario activo.");
-    // NOTA: Para que esto funcione, también necesitas enviar el token en este fetch
     const token = Cookies.get('access_token');
     const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
     
@@ -454,14 +436,11 @@ const router = useRouter();
     );
   }
 
-// LÓGICA DE CARGA INTELIGENTE
+  // LÓGICA DE CARGA INTELIGENTE
   if (!isMounted || !dashboardData) {
-    // CASO A: El servidor está tardando mucho (>2.5s) -> Mostramos Ajedrez
     if (showChessLoader) {
         return <ServerAwakeLoader />;
     }
-
-    // CASO B: Es una carga rápida normal -> Mostramos spinner simple
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50">
             <Loader2 className="animate-spin text-indigo-600 mb-4" size={48} />
@@ -469,6 +448,7 @@ const router = useRouter();
         </div>
     );
   }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] via-[#F1F5F9] to-[#E2E8F0] font-sans text-slate-900 pb-32 lg:pb-0 selection:bg-indigo-100 selection:text-indigo-900">
       
@@ -495,7 +475,7 @@ const router = useRouter();
             <span className="text-xs md:text-sm font-bold">Vocabulario</span>
           </Link>
 
-          {/* 👇👇👇 NUEVO BOTÓN DE AJEDREZ - PÉGALO AQUÍ 👇👇👇 */}
+          {/* 👇👇👇 BOTÓN DE AJEDREZ 👇👇👇 */}
           <Link 
             href="/dashboard/chess" 
             className="hidden md:flex items-center gap-2 bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-emerald-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
@@ -503,7 +483,6 @@ const router = useRouter();
             <Crown size={18} className="text-slate-400 group-hover:text-emerald-500 transition-colors" />
             <span className="text-xs md:text-sm font-bold">Ajedrez</span>
           </Link>
-          {/* 👆👆👆 FIN DEL BOTÓN DE AJEDREZ 👆👆👆 */}
 
           <button 
             onClick={toggleProMode}
