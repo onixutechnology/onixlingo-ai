@@ -129,25 +129,41 @@ const HeaderStats = ({ xp, streak }: { xp: number, streak: number }) => (
 
 const MobileBottomNav = () => (
   <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 px-6 py-3 flex justify-between items-center z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] pb-safe">
-    <Link href="/dashboard" className="flex flex-col items-center gap-1 text-indigo-600">
+    
+    {/* 1. INICIO */}
+    <Link href="/dashboard" className="flex flex-col items-center gap-1 text-indigo-600 hover:text-indigo-700">
       <Home size={24} strokeWidth={2.5} />
       <span className="text-[10px] font-bold">Inicio</span>
     </Link>
-    <Link href="/practice" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
-      <Mic size={24} />
-      <span className="text-[10px] font-bold">Práctica</span>
+
+    {/* 2. VOCABULARIO (Corregido: Antes iba a /practice) */}
+    <Link href="/dashboard/vocabulary" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
+      <BookA size={24} />
+      <span className="text-[10px] font-bold">Vocab</span>
     </Link>
-    <div className="w-14 h-14 -mt-8 bg-indigo-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-indigo-500/40 border-4 border-slate-50 group cursor-pointer hover:scale-105 transition-transform">
-      <Play size={24} fill="currentColor" className="ml-1" />
-    </div>
-    <Link href="#" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
+
+    {/* 3. AJEDREZ (Botón Central Gigante) */}
+    <Link href="/dashboard/chess" className="group relative">
+        <div className="w-14 h-14 -mt-8 bg-emerald-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-emerald-500/40 border-4 border-slate-50 cursor-pointer transform group-active:scale-95 transition-all">
+          <Crown size={28} fill="currentColor" />
+        </div>
+        <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-bold text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity">
+            Jugar
+        </span>
+    </Link>
+
+    {/* 4. LOGROS (Visual por ahora) */}
+    <Link href="/dashboard" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
       <Trophy size={24} />
       <span className="text-[10px] font-bold">Logros</span>
     </Link>
-    <Link href="#" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
+
+    {/* 5. PERFIL (Corregido: Ahora lleva al Modo Pro) */}
+    <Link href="/dashboard/pro" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
       <User size={24} />
       <span className="text-[10px] font-bold">Perfil</span>
     </Link>
+
   </div>
 );
 
