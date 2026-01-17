@@ -272,6 +272,24 @@ const router = useRouter();
   // --- NUEVO ESTADO DEL BACKEND ---
   const [dashboardData, setDashboardData] = useState<any>(null);
   const [userStats, setUserStats] = useState({ xp: 0, lessons: 0, streak: 0 });
+  
+  // 👇 NUEVO ESTADO: Controla si mostramos el ajedrez
+  const [showChessLoader, setShowChessLoader] = useState(false);
+
+  // 👇 NUEVO EFECTO: Temporizador de 2 segundos
+  useEffect(() => {
+    // Si ya llegaron los datos, no hacemos nada
+    if (dashboardData) return;
+
+    // Si no hay datos, esperamos 2.5 segundos antes de mostrar el ajedrez
+    const timer = setTimeout(() => {
+      setShowChessLoader(true);
+    }, 3500);
+
+    // Limpiamos el reloj si los datos llegan antes o el componente se desmonta
+    return () => clearTimeout(timer);
+  }, [dashboardData]);
+
 
   // 1. CONTROL DE REDIRECCIÓN Y PREVENCIÓN DE FLICKER (PARPADEO)
   useEffect(() => {
@@ -414,11 +432,20 @@ const router = useRouter();
     );
   }
 
-  // ✅ NUEVA LÓGICA:
-  // Si no está montado O si aún no han llegado los datos del backend...
-  // ... mostramos el Juego de Ajedrez para entretener al usuario mientras despierta el servidor.
+// LÓGICA DE CARGA INTELIGENTE
   if (!isMounted || !dashboardData) {
-    return <ServerAwakeLoader />;
+    // CASO A: El servidor está tardando mucho (>2.5s) -> Mostramos Ajedrez
+    if (showChessLoader) {
+        return <ServerAwakeLoader />;
+    }
+
+    // CASO B: Es una carga rápida normal -> Mostramos spinner simple
+    return (
+        <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50">
+            <Loader2 className="animate-spin text-indigo-600 mb-4" size={48} />
+            <p className="text-slate-400 font-bold text-sm animate-pulse">Conectando...</p>
+        </div>
+    );
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] via-[#F1F5F9] to-[#E2E8F0] font-sans text-slate-900 pb-32 lg:pb-0 selection:bg-indigo-100 selection:text-indigo-900">
