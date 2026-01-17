@@ -63,17 +63,14 @@ app = FastAPI(
 # ==============================================================================
 # 🛡️ MIDDLEWARE CORS
 # ==============================================================================
-origins = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "https://onixlingo-ai-nknb.vercel.app",
-    "https://onixlingo-ai.vercel.app",
-    "https://onixlingo-ai-nknb-git-main-jacobs-projects-4ad490ce.vercel.app",
-]
+# ==============================================================================
+# 🛡️ MIDDLEWARE CORS (MODO PERMISIVO - SOLUCIÓN FINAL)
+# ==============================================================================
 
+# Borra la lista de 'origins' específica para evitar errores por URLs dinámicas.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],  # 👈 ESTO ES LA CLAVE: Permite todas las URLs de Vercel
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
