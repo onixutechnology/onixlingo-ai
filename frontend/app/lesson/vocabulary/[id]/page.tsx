@@ -93,13 +93,11 @@ export default function VocabularyLessonPage() {
        accuracy={100} 
        onRetry={() => window.location.reload()}
        onExit={() => router.push('/dashboard/vocabulary')}
-       
-       // 👇👇👇 AGREGA ESTAS 3 LÍNEAS QUE FALTAN 👇👇👇
-       lessonId={params.id as string}  // Pasamos el ID de la URL
-       lessonType="vocab"              // Marcamos que es vocabulario
-       totalSteps={10}                 // O lesson.questions.length si lo tienes disponible
+       lessonId={lessonId as string}
+       lessonType="vocab"
+       totalSteps={lesson.stages?.length || 0}
     />
-);
+  );
 
   // --- PREPARACIÓN DE DATOS ---
   const currentStage = lesson.stages[currentStageIndex];
@@ -149,7 +147,6 @@ export default function VocabularyLessonPage() {
             stage={currentStage}  
             pairs={stagePayload}
             onComplete={handleStageComplete}
-            // 👇 SOLUCIÓN: Agregamos estas dos funciones para evitar el crash
             onCorrect={() => console.log('Correct Match!')} 
             onError={() => console.log('Wrong Match!')}
             isPro={true} 
