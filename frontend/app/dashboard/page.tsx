@@ -320,11 +320,17 @@ const router = useRouter();
         fetch(`${BASE_URL}/api/v1/progress/map`, {
             headers: {
                 // ✅ [CORRECCIÓN 3]: Token limpio (ya incluye Bearer)
-                'Authorization': token, 
+                'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`, 
                 'Content-Type': 'application/json'
             }
         })
-            .then(res => {
+.then(res => {
+                // 👇 CORRECCIÓN CLAVE: Si el token venció (401), sacamos al usuario
+                if (res.status === 401) {
+                    Cookies.remove('access_token');
+                    router.push('/login');
+                    throw new Error("Sesión expirada");
+                }
                 if (!res.ok) throw new Error("Error auth o red");
                 return res.json();
             })
