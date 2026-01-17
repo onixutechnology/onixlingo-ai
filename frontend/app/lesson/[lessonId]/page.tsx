@@ -1189,18 +1189,22 @@ useEffect(() => {
 
     // Datos para el Backend (según tu Schema ProgressUpdate)
 // En finishLesson...
+// ✅ CÓDIGO CORREGIDO
+// 1. Calcular total de preguntas reales
+const totalQuestions = lesson?.stages.reduce((acc, stage) => 
+    acc + (stage.questions ? stage.questions.length : 1), 0) || 1;
+
 const payload = {
     lesson_id: lesson?.id,
     lesson_type: lessonType,
-    // CAMBIO AQUÍ: Si entra a finishLesson, ¡es porque completó todo!
-    current_step: lesson?.stages.length || 1, 
-    total_steps: lesson?.stages.length || 1,
+    current_step: totalQuestions, // Enviamos que completó todo
+    total_steps: totalQuestions,
     score: accuracy,
     stars: accuracy >= 90 ? 3 : accuracy >= 70 ? 2 : 1
 };
 
     try {
-      const token = Cookies.get('acces_token');
+      const token = Cookies.get('access_token');
       
       // 1. LLAMADA AL BACKEND PARA GUARDAR Y DESBLOQUEAR
       if (token) {
@@ -1451,7 +1455,7 @@ const validateAnswer = (question: QuizQuestion) => {
         lessonId={lesson?.id || ''}       // 👈 Necesario
         lessonType={lessonType as any}    // 👈 CRÍTICO para navegación
         totalSteps={lesson?.stages.length || 1}
-        onRetry={() => window.location.reload()}
+        onRetry={restartLesson} // 👈 Usa la función optimizada que ya creaste
         onExit={handleExit}               // 👈 Conecta tu función de salida
       />
     );
