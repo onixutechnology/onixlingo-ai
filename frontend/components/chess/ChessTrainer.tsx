@@ -15,6 +15,10 @@ export default function ChessTrainer() {
   const [status, setStatus] = useState("Tu turno: Juegan Blancas");
   const [isCompleted, setIsCompleted] = useState(false);
 
+  // Truco para silenciar a TypeScript: Convertimos el componente a 'any'
+  // Esto hace que acepte CUALQUIER propiedad (como position o id) sin quejarse.
+  const SafeChessboard = Chessboard as any;
+
   // Función para manejar cuando sueltas una pieza
   function onDrop(sourceSquare: any, targetSquare: any) {
     if (isCompleted) return false;
@@ -54,9 +58,6 @@ export default function ChessTrainer() {
     setStatus("Tu turno: Juegan Blancas");
     setIsCompleted(false);
   };
-
-  // 👇 TRUCO MAESTRO: Convertimos el componente a 'any' para silenciar el error rojo de TypeScript
-  const SafeChessboard = Chessboard as any;
 
   return (
     <div className="flex flex-col items-center w-full max-w-md mx-auto bg-white p-6 rounded-2xl shadow-xl border border-slate-200">
