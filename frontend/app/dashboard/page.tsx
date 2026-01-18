@@ -124,10 +124,9 @@ const HeaderStats = ({ xp, streak }: { xp: number, streak: number }) => (
     </div>
   </div>
 );
-
 const MobileBottomNav = () => (
-  <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 px-6 py-3 flex justify-between items-center z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] pb-safe">
-    
+  // Al quitar lg:hidden, se verá en todos los tamaños:
+  <div className="fixed bottom-0 left-0 right-0 ...">
     {/* 1. INICIO */}
     <Link href="/dashboard" className="flex flex-col items-center gap-1 text-indigo-600 hover:text-indigo-700">
       <Home size={24} strokeWidth={2.5} />
