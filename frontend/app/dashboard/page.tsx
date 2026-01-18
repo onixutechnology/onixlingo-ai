@@ -124,9 +124,10 @@ const HeaderStats = ({ xp, streak }: { xp: number, streak: number }) => (
     </div>
   </div>
 );
+
 const MobileBottomNav = () => (
-  // Al quitar lg:hidden, se verá en todos los tamaños:
-  <div className="fixed bottom-0 left-0 right-0 ...">
+  <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 px-6 py-3 flex justify-between items-center z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] pb-safe">
+
     {/* 1. INICIO */}
     <Link href="/dashboard" className="flex flex-col items-center gap-1 text-indigo-600 hover:text-indigo-700">
       <Home size={24} strokeWidth={2.5} />
@@ -478,7 +479,9 @@ export default function DashboardPage() {
             <span className="text-xs md:text-sm font-bold">Vocabulario</span>
           </Link>
 
-          {/* 👇👇👇 BOTÓN DE AJEDREZ 👇👇👇 */}
+          // ... (código anterior del nav) ...
+
+          {/* 👇👇👇 BOTÓN DE AJEDREZ (YA EXISTE) 👇👇👇 */}
           <Link 
             href="/dashboard/chess" 
             className="hidden md:flex items-center gap-2 bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-emerald-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
@@ -487,8 +490,31 @@ export default function DashboardPage() {
             <span className="text-xs md:text-sm font-bold">Ajedrez</span>
           </Link>
 
+          {/* 🟢 🟢 🟢 PEGA TUS BOTONES NUEVOS AQUÍ 🟢 🟢 🟢 */}
+
+          {/* --- NUEVO BOTÓN: LOGROS --- */}
+          <Link 
+            href="/dashboard" 
+            className="hidden md:flex items-center gap-2 bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
+          >
+            <Trophy size={18} className="text-slate-400 group-hover:text-indigo-500 transition-colors" />
+            <span className="text-xs md:text-sm font-bold">Logros</span>
+          </Link>
+
+          {/* --- NUEVO BOTÓN: PERFIL --- */}
+          <Link 
+            href="/dashboard/profile" 
+            className="hidden md:flex items-center gap-2 bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
+          >
+            <User size={18} className="text-slate-400 group-hover:text-indigo-500 transition-colors" />
+            <span className="text-xs md:text-sm font-bold">Perfil</span>
+          </Link>
+
+          {/* 🟢 🟢 🟢 FIN DEL PEGADO 🟢 🟢 🟢 */}
+
           <button 
             onClick={toggleProMode}
+            // ... resto del botón Modo Pro
             className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-3 py-2 md:px-4 md:py-2.5 rounded-xl transition-all shadow-lg hover:shadow-indigo-500/20 active:scale-95"
           >
             <Briefcase size={18} className="text-indigo-400" />
