@@ -157,7 +157,7 @@ const MobileBottomNav = () => (
     </Link>
 
     {/* 5. PERFIL */}
-    <Link href="/dashboard/pro" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
+    <Link href="/dashboard/profile" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
       <User size={24} />
       <span className="text-[10px] font-bold">Perfil</span>
     </Link>
@@ -360,6 +360,10 @@ export default function DashboardPage() {
   // 🔎 FUNCIÓN CORREGIDA: getLessonState (Auto-unlock 1ra lección)
   const getLessonState = (lessonId: string): LessonStatus => {
     if (!isMounted) return 'locked';
+
+
+
+
     
     const firstLessonId = CURRICULUM[0]?.lessons[0]?.id;
 
