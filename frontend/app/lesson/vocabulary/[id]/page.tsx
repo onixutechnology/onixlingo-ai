@@ -3,14 +3,13 @@
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { Loader2, ArrowLeft, AlertTriangle, X } from 'lucide-react';
+import Cookies from 'js-cookie';
 
-// --- IMPORTACIÓN DE COMPONENTES ---
+// 👇 Importamos TU componente nuevo
 import PairingDrill from '@/components/lesson/vocabulary/PairingDrill'; 
 import LessonComplete from '@/components/lesson/LessonComplete';
 
-// Placeholders (descomentar cuando crees estos archivos)
-// import FlashcardFlow from '@/components/lesson/vocabulary/FlashcardFlow';
-// import SentenceBuilder from '@/components/lesson/vocabulary/SentenceBuilder';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
 
 export default function VocabularyLessonPage() {
   const params = useParams();
@@ -22,8 +21,6 @@ export default function VocabularyLessonPage() {
   const [lesson, setLesson] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  
-  const [currentStageIndex, setCurrentStageIndex] = useState(0);
   const [isLessonComplete, setIsLessonComplete] = useState(false);
 
   // 1. CARGA DE DATOS
@@ -33,7 +30,7 @@ export default function VocabularyLessonPage() {
     const fetchLesson = async () => {
       try {
         setLoading(true);
-        const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+        // Ajusta la URL si usas localhost o render
         const res = await fetch(`${API_URL}/api/v1/voclessons/${lessonId}`);
         
         if (!res.ok) throw new Error("No se pudo conectar con el servidor.");
@@ -53,17 +50,11 @@ export default function VocabularyLessonPage() {
     fetchLesson();
   }, [lessonId]);
 
-  // 2. LÓGICA DE AVANCE
-  const handleStageComplete = () => {
-    if (!lesson) return;
-    setTimeout(() => {
-        if (currentStageIndex < lesson.stages.length - 1) {
-            setCurrentStageIndex(prev => prev + 1);
-            window.scrollTo(0, 0); 
-        } else {
-            setIsLessonComplete(true);
-        }
-    }, 500);
+  // 2. FINALIZAR LECCIÓN
+  const handleLessonComplete = async () => {
+    // Aquí puedes agregar la lógica de guardado en el backend
+    // Similar a la función finishLesson de tu otro archivo
+    setIsLessonComplete(true);
   };
 
   const handleExit = () => router.push('/dashboard/vocabulary');
@@ -72,7 +63,7 @@ export default function VocabularyLessonPage() {
   if (loading) return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50">
       <Loader2 className="animate-spin text-indigo-600 mb-4" size={48} />
-      <p className="text-slate-500 font-medium">Cargando...</p>
+      <p className="text-slate-500 font-medium">Cargando vocabulario...</p>
     </div>
   );
 
@@ -90,103 +81,48 @@ export default function VocabularyLessonPage() {
   if (isLessonComplete) return (
     <LessonComplete 
        xpEarned={lesson.total_xp} 
-       accuracy={100} 
+       accuracy={100} // En vocabulario siempre es 100% al terminar
        onRetry={() => window.location.reload()}
-       onExit={() => router.push('/dashboard/vocabulary')}
+       onExit={handleExit}
        lessonId={lessonId as string}
        lessonType="vocab"
-       totalSteps={lesson.stages?.length || 0}
+       totalSteps={1}
     />
   );
 
-  // --- PREPARACIÓN DE DATOS ---
-// --- PREPARACIÓN DE DATOS ---
-  const currentStage = lesson.stages[currentStageIndex];
+  // --- DATOS ---
+  // Tomamos la primera etapa que tenga pares
+  const currentStage = lesson.stages.find((s: any) => s.type === 'pairing_drill') || lesson.stages[0];
   
-  let stagePayload: any[] = [];
+  // EXTRAEMOS LOS PARES DIRECTAMENTE (Tu PairingDrill ya sabe leer 'en' y 'es')
+  const pairs = currentStage.pairs || [];
 
-  // 1. Detectar si es el formato nuevo (JSON con "pairs" y claves en/es)
-  if ((currentStage as any).pairs) {
-      stagePayload = (currentStage as any).pairs.map((item: any) => ({
-          id: item.id,
-          term: item.en,       // 👈 AQUÍ ESTÁ LA CLAVE: Convertimos 'en' a 'term'
-          definition: item.es, // 👈 Convertimos 'es' a 'definition'
-          image: item.image || null,
-          audio: item.audio || null
-      }));
-  } 
-  // 2. Referencias (Formato antiguo)
-  else if (currentStage.data_refs && lesson.content_data) {
-      stagePayload = currentStage.data_refs
-        .map((refId: string) => lesson.content_data.find((item: any) => item.id === refId))
-        .filter(Boolean);
-  } 
-  // 3. Fallback
-  else if (lesson.content_data) {
-      stagePayload = lesson.content_data;
-  }
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
       
       {/* HEADER */}
       <header className="px-6 h-20 flex items-center justify-between bg-white border-b border-slate-200 sticky top-0 z-10">
-        <button onClick={handleExit} className="p-2 -ml-2 hover:bg-slate-100 rounded-full transition-colors text-slate-400">
+        <button onClick={handleExit} className="p-2 -ml-2 hover:bg-slate-100 rounded-full transition-colors text-slate-500">
           <X size={24} />
         </button>
-        
-        <div className="flex-1 max-w-md mx-4 flex flex-col gap-1">
-           <div className="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-             <span>{currentStage.title || `Stage ${currentStageIndex + 1}`}</span>
-             <span>{Math.round(((currentStageIndex) / lesson.stages.length) * 100)}%</span>
-           </div>
-           <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-             <div 
-               className="h-full bg-indigo-500 transition-all duration-700 ease-out rounded-full"
-               style={{ width: `${((currentStageIndex + 1) / lesson.stages.length) * 100}%` }}
-             />
-           </div>
+        <div className="font-bold text-slate-700 truncate max-w-[200px]">
+            {lesson.title}
         </div>
         <div className="w-8"></div>
       </header>
 
       {/* ÁREA DE JUEGO */}
-      <main className="flex-1 flex flex-col items-center justify-center p-4 md:p-8 animate-in fade-in zoom-in-95 duration-300">
+      <main className="flex-1 flex flex-col items-center justify-start p-4 md:p-8">
         
-        {/* FLASHCARDS */}
-        {currentStage.type === 'flashcard_flow' && (
-           <div className="w-full max-w-4xl text-center p-10 border-2 border-dashed border-slate-300 rounded-3xl bg-slate-100/50">
-             <h3 className="text-xl font-bold text-slate-400 mb-4">Flashcards (Coming Soon)</h3>
-             <button onClick={handleStageComplete} className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-bold">Simular Completar</button>
-           </div>
-        )}
-
-        {/* PAIRING DRILL */}
-        {currentStage.type === 'pairing_drill' && (
-          <PairingDrill 
-            stage={currentStage}  
-            pairs={stagePayload}
-            onComplete={handleStageComplete}
-            onCorrect={() => console.log('Correct Match!')} 
-            onError={() => console.log('Wrong Match!')}
-            isPro={true} 
-          />
-        )}
-
-        {/* SENTENCE BUILDER */}
-        {currentStage.type === 'sentence_builder' && (
-           <div className="w-full max-w-4xl text-center p-10 border-2 border-dashed border-slate-300 rounded-3xl bg-slate-100/50">
-             <h3 className="text-xl font-bold text-slate-400 mb-4">Sentence Builder (Coming Soon)</h3>
-             <button onClick={handleStageComplete} className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-bold">Simular Completar</button>
-           </div>
-        )}
-
-        {/* ERROR DE TIPO */}
-        {!['flashcard_flow', 'pairing_drill', 'sentence_builder'].includes(currentStage.type) && (
-            <div className="text-center text-red-500">
-                <p>Tipo desconocido: <code>{currentStage.type}</code></p>
-                <button onClick={handleStageComplete} className="underline mt-2">Saltar</button>
-            </div>
-        )}
+        {/* Renderizamos tu componente potente */}
+        <PairingDrill 
+            stage={currentStage}
+            pairs={pairs} // 👈 Pasamos los datos crudos (en/es), el componente hace el resto
+            isPro={true}
+            onComplete={handleLessonComplete}
+            onCorrect={() => {}} // Opcional: Sonido
+            onError={() => {}}   // Opcional: Vibración
+        />
 
       </main>
     </div>
