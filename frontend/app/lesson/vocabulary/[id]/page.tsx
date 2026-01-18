@@ -100,12 +100,31 @@ export default function VocabularyLessonPage() {
   );
 
   // --- PREPARACIÓN DE DATOS ---
+// --- PREPARACIÓN DE DATOS ---
   const currentStage = lesson.stages[currentStageIndex];
   
-  const stagePayload = currentStage.data_refs 
-    ? currentStage.data_refs.map((refId: string) => lesson.content_data.find((item: any) => item.id === refId)).filter(Boolean)
-    : lesson.content_data;
+  let stagePayload: any[] = [];
 
+  // 1. Detectar si es el formato nuevo (JSON con "pairs" y claves en/es)
+  if ((currentStage as any).pairs) {
+      stagePayload = (currentStage as any).pairs.map((item: any) => ({
+          id: item.id,
+          term: item.en,       // 👈 AQUÍ ESTÁ LA CLAVE: Convertimos 'en' a 'term'
+          definition: item.es, // 👈 Convertimos 'es' a 'definition'
+          image: item.image || null,
+          audio: item.audio || null
+      }));
+  } 
+  // 2. Referencias (Formato antiguo)
+  else if (currentStage.data_refs && lesson.content_data) {
+      stagePayload = currentStage.data_refs
+        .map((refId: string) => lesson.content_data.find((item: any) => item.id === refId))
+        .filter(Boolean);
+  } 
+  // 3. Fallback
+  else if (lesson.content_data) {
+      stagePayload = lesson.content_data;
+  }
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
       
