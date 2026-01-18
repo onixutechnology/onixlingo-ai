@@ -479,7 +479,7 @@ export default function DashboardPage() {
             <span className="text-xs md:text-sm font-bold">Vocabulario</span>
           </Link>
 
-          // ... (código anterior del nav) ...
+          
 
           {/* 👇👇👇 BOTÓN DE AJEDREZ (YA EXISTE) 👇👇👇 */}
           <Link 
