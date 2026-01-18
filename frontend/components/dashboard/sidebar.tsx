@@ -25,7 +25,7 @@ export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }
   };
 
   return (
-    <aside className="hidden lg:flex flex-col w-96 gap-8 sticky top-32 self-start h-fit">
+    <aside className="flex flex-col w-full lg:w-96 gap-6 lg:gap-8 lg:sticky lg:top-32 self-start h-fit pb-32 lg:pb-0">
       
       {/* --- ZONA DEL SWITCH --- */}
       <div className="bg-white border border-slate-200 rounded-2xl p-4 flex items-center justify-between shadow-sm">
