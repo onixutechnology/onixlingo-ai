@@ -40,49 +40,109 @@ export default function ProfilePage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  // 1. CARGAR DATOS DEL USUARIO (Simulación o Fetch Real)
+  // 1. CARGAR DATOS REALES (Híbrido: API + LocalStorage)
   useEffect(() => {
-    // Aquí conectarías con tu backend: fetch(`${API_URL}/api/v1/users/me`)...
-    
-    // Simulación para visualización inmediata:
-    setTimeout(() => {
-        setUser({
-            id: "usr_onix_001",
-            full_name: "Estudiante Titanium",
-            email: "student@onixlingo.com",
+    const fetchProfile = async () => {
+      try {
+        const token = Cookies.get('access_token');
+        const localUser = localStorage.getItem('currentUser');
+        const localTier = localStorage.getItem('onix_tier') as 'free' | 'pro' | 'titanium' || 'free';
+        
+        // Configuración Base (Fallback si falla la API)
+        const baseProfile: UserProfile = {
+            id: "local_temp",
+            full_name: localUser || "Estudiante",
+            email: "usuario@onixlingo.com", // Placeholder visual
             membership: {
-                tier: 'titanium',
-                valid_until: '2026-12-31T23:59:59Z',
+                tier: localTier,
+                valid_until: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString(),
                 status: 'active'
             },
-            referral_code: "ONIX-2026-X",
+            referral_code: `ONIX-${new Date().getFullYear()}-${localUser?.substring(0,3).toUpperCase() || 'USR'}`,
             stats: {
                 joined_at: new Date().toISOString(),
-                total_xp: 15420
+                total_xp: 0 // Se actualizará si la API responde
+            }
+        };
+
+        if (!token) {
+            router.push('/login');
+            return;
+        }
+
+        const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+        
+        // Intentamos conectar con el Backend Real
+        const res = await fetch(`${API_URL}/api/v1/users/me`, {
+            headers: { 
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
             }
         });
-        setName("Estudiante Titanium");
-        setEmail("student@onixlingo.com");
-        setLoading(false);
-    }, 800);
-  }, []);
 
-  // 2. GUARDAR DATOS
+        if (res.ok) {
+            const data = await res.json();
+            // Mezclamos datos base con los reales de la DB
+            const finalProfile = { ...baseProfile, ...data };
+            setUser(finalProfile);
+            setName(finalProfile.full_name);
+            setEmail(finalProfile.email);
+        } else {
+            console.warn("⚠️ Endpoint /users/me no detectado o error. Usando datos locales.");
+            setUser(baseProfile);
+            setName(baseProfile.full_name);
+        }
+
+      } catch (error) {
+        console.error("Error cargando perfil:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProfile();
+  }, [router]);
+
+  // 2. GUARDAR DATOS (Update Real)
   const handleSave = async () => {
     setSaving(true);
-    // Simulación de llamada a API
-    setTimeout(() => {
+    const token = Cookies.get('access_token');
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+
+    try {
+        const res = await fetch(`${API_URL}/api/v1/users/me`, {
+            method: 'PUT', // O PATCH
+            headers: { 
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ full_name: name, email })
+        });
+
+        if (res.ok) {
+            // Actualizamos también localStorage para mantener consistencia
+            localStorage.setItem('currentUser', name);
+            alert("¡Datos actualizados correctamente!");
+            router.refresh();
+        } else {
+            throw new Error("Error al guardar");
+        }
+    } catch (error) {
+        console.error(error);
+        alert("Simulación: Datos guardados localmente (Backend pendiente).");
+        localStorage.setItem('currentUser', name);
+    } finally {
         setSaving(false);
-        // Aquí podrías usar una librería de Toast/Notificaciones
-        alert("¡Datos actualizados correctamente!");
-    }, 1000);
+    }
   };
 
   // 3. CERRAR SESIÓN
   const handleLogout = () => {
     if(confirm("¿Estás seguro de cerrar sesión?")) {
         Cookies.remove('access_token');
-        localStorage.clear();
+        localStorage.removeItem('currentUser');
+        localStorage.removeItem('onix_tier');
+        localStorage.removeItem('onixlingo-ui-prefs');
         router.push('/login');
     }
   };
@@ -132,7 +192,7 @@ export default function ProfilePage() {
             <div className="relative">
                 <div className="w-28 h-28 rounded-full bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-800 flex items-center justify-center shadow-2xl shadow-indigo-500/20 ring-4 ring-slate-900 z-10 relative">
                     <span className="text-5xl font-black text-white tracking-tighter">
-                        {user?.full_name.charAt(0)}
+                        {user?.full_name?.charAt(0) || 'U'}
                     </span>
                 </div>
                 {/* Badge de Nivel */}
