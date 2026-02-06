@@ -7,8 +7,8 @@ import Cookies from 'js-cookie';
 import confetti from 'canvas-confetti';
 import { useUIStore } from '@/store/uiStore';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
-
+// ✅ URL HÍBRIDA: Detecta si estás en Vercel (Prod) o en tu PC (Dev)
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
 interface Props {
   xpEarned: number;
   accuracy: number;

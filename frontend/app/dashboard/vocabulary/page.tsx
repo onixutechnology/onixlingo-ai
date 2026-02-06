@@ -11,7 +11,8 @@ import {
 } from 'lucide-react';
 
 // --- CONFIGURACIÓN API ---
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+// 👇 CONEXIÓN DIRECTA AL BACKEND LOCAL
+const API_URL = 'http://127.0.0.1:8001';
 
 // 1. CONFIGURACIÓN DE CATEGORÍAS
 const CATEGORIES = [

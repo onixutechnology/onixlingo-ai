@@ -10,7 +10,8 @@ import Cookies from 'js-cookie';
 import PairingDrill from '@/components/lesson/vocabulary/PairingDrill'; 
 import LessonComplete from '@/components/lesson/LessonComplete';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+// ✅ URL INTELIGENTE: Usa la de Vercel en la nube, o Localhost en tu casa
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
 
 // --- TIPOS STRICTOS (Punto 19) ---
 interface Pair {

@@ -312,12 +312,8 @@ export default function DashboardPage() {
     setCurrentUser(user);
 
     if (user && token) {
-        const BASE_URL = process.env.NEXT_PUBLIC_API_URL || (
-            process.env.NODE_ENV === 'development' 
-                ? 'http://127.0.0.1:8001'
-                : 'https://onixlingo-bckend.onrender.com'
-        );
-
+        // 👇 Esta línea usa la Nube en Vercel y tu PC en local
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
         fetch(`${BASE_URL}/api/v1/progress/map`, {
             headers: {
                 'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`, 

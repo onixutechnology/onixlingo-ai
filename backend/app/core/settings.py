@@ -1,4 +1,3 @@
-# backend/app/core/settings.py
 import os
 from typing import List
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -8,8 +7,9 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "OnixLingo Enterprise"
     API_V1_STR: str = "/api/v1"
     
-    # --- SEGURIDAD (Obligatorio para deps.py) ---
-    SECRET_KEY: str = os.getenv("SECRET_KEY", "cambia_esto_por_una_clave_segura_en_produccion")
+    # --- SEGURIDAD ---
+    # 👇 ESTA ES LA CLAVE QUE MANDA. Pon una cadena larga y fija.
+    SECRET_KEY: str = "CLAVE_MAESTRA_FIJA_SUPER_SECRETA_ONIXLINGO_2026"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 8 # 8 días
 
@@ -19,6 +19,7 @@ class Settings(BaseSettings):
     # --- CORS ---
     CORS_ORIGINS: List[str] = [
         "http://localhost:3000",
+        "http://127.0.0.1:3000",
         "https://onixlingo-ai.vercel.app",
         "https://onixlingo-ai-nknb.vercel.app",
     ]
