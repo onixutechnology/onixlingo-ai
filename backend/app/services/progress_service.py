@@ -18,7 +18,8 @@ def initialize_progress(db: Session, user_id: int, lesson_id: str, lesson_type: 
         lesson_type=lesson_type,
         status="locked", 
         current_step=0,
-        total_steps=total_steps
+        total_steps=total_steps,
+        is_unlocked=False # Aseguramos que inicie bloqueada por defecto
     )
     db.add(new_prog)
     db.commit()
@@ -31,7 +32,7 @@ def update_lesson_progress(
     lesson_id: str, 
     score: int, 
     steps_completed: int, 
-    total_steps: int,
+    total_steps: int, 
     lesson_type: str = "standard"
 ):
     # 1. Obtener o Crear Progreso Actual
@@ -39,11 +40,12 @@ def update_lesson_progress(
     if not progress:
         progress = initialize_progress(db, user_id, lesson_id, lesson_type, total_steps)
 
-    # 2. Actualizar métricas
+    # 2. Actualizar métricas de la lección actual
     progress.current_step = steps_completed
     progress.total_steps = total_steps
     progress.score = max(progress.score, score) 
     progress.status = "active"
+    progress.is_unlocked = True # La actual debe estar desbloqueada
     progress.updated_at = datetime.now()
 
     # 3. Calcular Estrellas
@@ -61,17 +63,18 @@ def update_lesson_progress(
         _unlock_next_content(db, user_id, lesson_id, lesson_type)
         _check_achievements(db, user_id, score)
 
+    # El commit aquí guarda los cambios de ESTA lección y los de la SIGUIENTE (generados en _unlock_next_content)
     db.commit()
     db.refresh(progress)
     return progress
+
 
 def _unlock_next_content(db: Session, user_id: int, current_lesson_id: str, current_type: str):
     """
     Busca la siguiente lección y la desbloquea.
     """
     next_id = get_next_lesson_id(current_lesson_id)
-    
-    # 🔍 DEBUG: Esto te dirá en la consola si funcionó
+    # 🔍 DEBUG
     print(f"🔓 [LOGICA] Leccion terminada: {current_lesson_id} | Siguiente detectada: {next_id}")
 
     if next_id:
@@ -83,20 +86,23 @@ def _unlock_next_content(db: Session, user_id: int, current_lesson_id: str, curr
                 user_id=user_id,
                 lesson_id=next_id,
                 lesson_type=current_type,
-                status="active", # IMPORTANTE: active = desbloqueado
+                status="active", 
+                is_unlocked=True, # 🔥 CLAVE: Esto quita el candado en el frontend
                 stars=0,
                 score=0,
                 current_step=0,
                 total_steps=10 
             )
             db.add(new_unlock)
-            print(f"   -> ✅ Nueva lección creada y desbloqueada: {next_id}")
+            print(f" -> ✅ Nueva lección creada y desbloqueada: {next_id}")
+            
         else:
-            # Si ya existía (bloqueada), cambiar estado
-            if next_progress.status == "locked":
+            # Si ya existía, asegurarse de que se marque como desbloqueada
+            if next_progress.status == "locked" or not next_progress.is_unlocked:
                 next_progress.status = "active"
-                db.add(next_progress)
-                print(f"   -> ✅ Lección existente desbloqueada: {next_id}")
+                next_progress.is_unlocked = True # 🔥 CLAVE: Esto quita el candado
+                print(f" -> ✅ Lección existente desbloqueada: {next_id}")
+
 
 def _check_achievements(db: Session, user_id: int, current_score: int):
     if current_score == 100:

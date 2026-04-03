@@ -37,6 +37,7 @@ def complete_lesson(
             lesson_id=data.lesson_id,
             score=data.score,
             steps_completed=data.current_step,
+            total_steps=data.total_steps, # ✅ CORRECCIÓN APLICADA AQUÍ: Previene el crash del servidor
             # ✅ IMPORTANTE: Pasamos el string directo ("standard", "pro", "vocab")
             lesson_type=data.lesson_type 
         )
@@ -136,7 +137,6 @@ def get_user_stats(
         "completed_modules": modules_count,
         "global_progress": min(int((modules_count / 60) * 100), 100),
         "skills_radar": radar_data,
-        
         # 🔥 CRÍTICO: Esto habilita la lógica de Paywall en el Frontend
         "is_pro": current_user.is_pro 
     }
