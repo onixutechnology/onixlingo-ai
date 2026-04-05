@@ -54,11 +54,20 @@ class Progress(Base):
     def is_unlocked(self) -> bool:
         return self.status in ["active", "completed"]
 
+    # ✅ NUEVO AJUSTE: Propiedad dinámica para enviar el porcentaje que exige el Frontend
+    @property
+    def percentage(self) -> int:
+        if self.total_steps and self.total_steps > 0:
+            return int((self.current_step / self.total_steps) * 100)
+        return 0
+
 
 class UserAchievement(Base):
     __tablename__ = "user_achievements"
+    
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     achievement_code = Column(String, index=True)
     earned_at = Column(DateTime(timezone=True), server_default=func.now())
+    
     user = relationship("User", back_populates="achievements")
