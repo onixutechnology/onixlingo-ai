@@ -13,10 +13,12 @@ from sqlalchemy.orm import Session
 # --- IMPORTACIONES LOCALES ---
 from app.core.settings import settings
 from app.database import create_db, get_db
-from app.services import user_service  # <--- CRUCIAL: Para activar el PRO
+from app.services import user_service # <--- CRUCIAL: Para activar el PRO
 
 # --- IMPORTAMOS LOS ROUTERS ---
 from app.api.v1.endpoints import auth, lessons, progress, ai
+# 🔥 AQUÍ IMPORTAMOS EL NUEVO ROUTER DE AJEDREZ
+from app.api import chess 
 
 # 1. CARGA DE ENTORNO
 load_dotenv()
@@ -38,13 +40,11 @@ async def lifespan(app: FastAPI):
         level=logging.INFO
     )
     logger = logging.getLogger("OnixLingo.Core")
-    
     try:
         create_db()
         logger.info("✅ [DB] Base de datos conectada y esquemas sincronizados.")
     except Exception as e:
         logger.critical(f"❌ [DB] Error crítico al conectar DB: {e}")
-    
     yield
     # --- SHUTDOWN ---
     logger.info("🛑 [SYSTEM] Apagando sistema OnixLingo...")
@@ -61,16 +61,13 @@ app = FastAPI(
 )
 
 # ==============================================================================
-# 🛡️ MIDDLEWARE CORS
-# ==============================================================================
-# ==============================================================================
 # 🛡️ MIDDLEWARE CORS (MODO PERMISIVO - SOLUCIÓN FINAL)
 # ==============================================================================
 
 # Borra la lista de 'origins' específica para evitar errores por URLs dinámicas.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # 👈 ESTO ES LA CLAVE: Permite todas las URLs de Vercel
+    allow_origins=["*"], # 👈 ESTO ES LA CLAVE: Permite todas las URLs de Vercel
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -108,7 +105,6 @@ async def stripe_webhook(
     # 2. Lógica de Activación
     if event['type'] == 'checkout.session.completed':
         session = event['data']['object']
-        
         # Recuperamos los datos que enviamos desde el Frontend (metadata)
         user_id_str = session.get("metadata", {}).get("userId")
         user_email = session.get("customer_details", {}).get("email")
@@ -120,7 +116,6 @@ async def stripe_webhook(
                 # Convertir ID a entero y llamar al servicio
                 user_id = int(user_id_str)
                 updated_user = user_service.set_pro_status(db, user_id=user_id, is_pro=True)
-                
                 if updated_user:
                     logger.info(f"✅ [UPGRADE] Usuario {user_email} actualizado a PRO exitosamente.")
                 else:
@@ -129,7 +124,6 @@ async def stripe_webhook(
                 logger.error(f"❌ [DB ERROR] Fallo al actualizar estado PRO: {e}")
 
     return {"status": "success", "event_type": event['type']}
-
 
 # ==============================================================================
 # 🔗 CONEXIÓN DE RUTAS (ROUTERS)
@@ -147,6 +141,8 @@ app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lessons"])
 # 4. AI (Avatar, Chatbot)
 app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI Engine"])
 
+# 🔥 5. Chess Academy (NUEVO)
+app.include_router(chess.router, prefix="/api/v1", tags=["Chess Academy"])
 
 # ==============================================================================
 # 🛠️ UTILIDADES Y ROOT
@@ -164,10 +160,8 @@ def health_check():
 def get_voc_lesson(lesson_id: str):
     # Detecta la carpeta raíz del backend (donde está main.py -> app -> backend)
     base_dir = Path(__file__).resolve().parent 
-    
     # Ruta: backend/app/voclessons/lessons/{id}.json
     file_path = base_dir / "voclessons" / "lessons" / f"{lesson_id}.json"
-    
     if file_path.exists():
         with open(file_path, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -175,7 +169,7 @@ def get_voc_lesson(lesson_id: str):
     # Fallback por si la estructura cambia levemente en producción
     file_path_alt = base_dir.parent / "app" / "voclessons" / "lessons" / f"{lesson_id}.json"
     if file_path_alt.exists():
-         with open(file_path_alt, "r", encoding="utf-8") as f:
+        with open(file_path_alt, "r", encoding="utf-8") as f:
             return json.load(f)
 
     raise HTTPException(status_code=404, detail=f"Lesson {lesson_id} not found")
