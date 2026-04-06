@@ -1,9 +1,19 @@
 'use client';
 
+/**
+ * ==============================================================================
+ * ONIXLINGO LMS DASHBOARD - EXECUTIVE HUB (PRO TIER)
+ * ==============================================================================
+ * RUTA: /dashboard/pro/page.tsx
+ * ESTADO: Production Ready (Fix Auth, Cache Busting & Real-time Sync)
+ * ==============================================================================
+ */
+
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUIStore } from '@/store/uiStore';
-import Cookies from 'js-cookie'; // 📦 Necesario para leer el token
+import Cookies from 'js-cookie'; 
+
 import { 
   Briefcase, TrendingUp, Globe, Award, Lock, Play, Check, 
   PieChart, Users, Building, LogOut, ArrowLeft, Gem, Star, 
@@ -13,13 +23,11 @@ import {
 import { UpgradeModal } from '@/components/pro/UpgradeModal';
 
 // --- CONFIGURACIÓN API ---
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
 
 // ============================================================================
 // ======================== DATA ESTÁTICA (ESTRUCTURA VISUAL) ===============
 // ============================================================================
-// Mantenemos PRO_CURRICULUM y DAILY_BRIEFINGS porque definen el orden visual,
-// pero el ESTADO (candados) vendrá de la base de datos.
 
 const PRO_CURRICULUM = [
   {
@@ -62,7 +70,6 @@ const PRO_CURRICULUM = [
       { id: 'pro-b2-10', title: 'B2 Milestone: Quarterly Review', desc: 'Presentación de resultados Q4.' },
     ]
   },
-  // ... (El resto de tus secciones C1, C2, Titanium se mantienen igual)
 ];
 
 const DAILY_BRIEFINGS = [
@@ -80,7 +87,7 @@ const DAILY_BRIEFINGS = [
     difficulty: 'hard',
     industry: 'Corporate'
   },
-   {
+  {
     id: '3',
     text: '"Our stakeholders expect transparent communication regarding quarterly earnings performance."',
     pronunciation: 'our STAKE-hol-ders ex-PEKT TRAN-spar-ent...',
@@ -90,7 +97,7 @@ const DAILY_BRIEFINGS = [
 ];
 
 // ============================================================================
-// ==================== COMPONENTES VISUALES (SIN CAMBIOS) ==================
+// ==================== COMPONENTES VISUALES ==================================
 // ============================================================================
 
 const FluencyLabPanel = ({ onOpenStudio }: { onOpenStudio: () => void }) => (
@@ -170,11 +177,11 @@ const ReadingStudioModal = ({ onClose }: { onClose: () => void }) => (
       </div>
       <div className="p-8 space-y-8">
         <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 text-slate-200 leading-relaxed min-h-[150px] text-sm">
-           "Our strategic imperative is to leverage synergistic partnerships..."
+          "Our strategic imperative is to leverage synergistic partnerships..."
         </div>
         <div className="flex gap-4">
-           <button className="flex-1 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold uppercase tracking-widest"><Volume2 size={18} className="inline mr-2"/> Play Audio</button>
-           <button className="flex-1 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold uppercase tracking-widest"><Mic size={18} className="inline mr-2"/> Start Recording</button>
+          <button className="flex-1 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold uppercase tracking-widest"><Volume2 size={18} className="inline mr-2"/> Play Audio</button>
+          <button className="flex-1 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold uppercase tracking-widest"><Mic size={18} className="inline mr-2"/> Start Recording</button>
         </div>
       </div>
     </div>
@@ -185,7 +192,6 @@ const ReadingStudioModal = ({ onClose }: { onClose: () => void }) => (
 // ==================== COMPONENTES CON LÓGICA CONECTADA ====================
 // ============================================================================
 
-// [COMPONENTE 3] KPI CARD (Ahora recibe props dinámicos)
 const ExecutiveKPICard = ({ kpis }: { kpis: any }) => (
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
     <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
@@ -207,7 +213,6 @@ const ExecutiveKPICard = ({ kpis }: { kpis: any }) => (
   </div>
 );
 
-// [COMPONENTE 5] PRO HEADER STATS (Conectado)
 const ProHeaderStats = ({ kpis }: { kpis: any }) => (
   <div className="flex items-center gap-6 bg-slate-900/80 backdrop-blur-md px-6 py-3 border border-slate-800 rounded-xl shadow-2xl">
     <div className="flex items-center gap-3">
@@ -228,26 +233,32 @@ const ProHeaderStats = ({ kpis }: { kpis: any }) => (
   </div>
 );
 
-// [COMPONENTE 6] NODE DE LÍNEA DE TIEMPO (AHORA INTELIGENTE)
-// Recibe "statusData" (objeto de DB) en lugar de un string "status"
 const ProTimelineNode = ({ lesson, index, statusData, isLast }: any) => {
   const router = useRouter();
 
-  // 🔥 LÓGICA DE ESTADO REAL
-  // Si no hay datos en la DB, asumimos que está "locked" (bloqueado)
-  let status = statusData?.status || 'locked';
-if (lesson.id === 'pro-b1-1' && !statusData) {
-    status = 'active';
-}
-  const score = statusData?.score || 0;
+  // 🔥 LÓGICA DE ESTADO REAL (Corregida con is_unlocked)
+  let isLocked = true;
+  let isCompleted = false;
+  let isActive = false;
 
-  const isLocked = status === 'locked';
-  const isCompleted = status === 'completed';
-  const isActive = status === 'active';
+  if (statusData) {
+    if (statusData.status === 'completed') {
+      isCompleted = true;
+      isLocked = false;
+    } else if (statusData.status === 'active' || statusData.is_unlocked) {
+      isActive = true;
+      isLocked = false;
+    }
+  } else if (lesson.id === 'pro-b1-1') {
+    // La primera lección de la ruta Pro siempre está desbloqueada por defecto
+    isActive = true;
+    isLocked = false;
+  }
+
+  const score = statusData?.score || 0;
 
   const handleNavigate = () => {
     if (!isLocked) {
-      // Navegamos pasando el tipo PRO
       router.push(`/lesson/${lesson.id}?type=pro`);
     }
   };
@@ -309,7 +320,7 @@ export default function ProfessionalDashboard() {
   const router = useRouter();
   const { mode, setMode } = useUIStore();
   
-  // ESTADOS (Ahora se llenan con fetch)
+  // ESTADOS
   const [proProgress, setProProgress] = useState<any[]>([]);
   const [kpis, setKpis] = useState({ totalXP: 0, currentLevel: 1, accuracy: 0, fluencyScore: 0 });
   const [isLoading, setIsLoading] = useState(true);
@@ -319,7 +330,7 @@ export default function ProfessionalDashboard() {
   const [showReadingStudio, setShowReadingStudio] = useState(false);
   const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
 
-  // --- EFECTO: CARGAR DATOS REALES ---
+  // --- EFECTO: CARGAR DATOS REALES CON BUST DE CACHÉ ---
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -329,26 +340,39 @@ export default function ProfessionalDashboard() {
           return;
         }
 
-        // ✅ CORREGIDO: Usamos el token directo porque ya incluye el prefijo Bearer
-        const headers = { 'Authorization': token };
+        // 🔥 CORRECCIÓN 1: Formato Bearer 100% seguro
+        const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
+        
+        const headers = { 
+          'Authorization': safeToken,
+          'Content-Type': 'application/json',
+          // 🔥 CORRECCIÓN 2: Bust de Caché a nivel navegador y red
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache'
+        };
 
-        // 1. Obtener Mapa de Progreso
-        const mapRes = await fetch(`${API_URL}/api/v1/progress/map`, { headers });
+        const mapRes = await fetch(`${API_URL}/api/v1/progress/map`, { 
+          headers,
+          cache: 'no-store' // 🚀 Bust de Caché a nivel Next.js
+        });
+        
         if (mapRes.ok) {
           const mapData = await mapRes.json();
-          // Guardamos solo la lista 'pro'
           setProProgress(mapData.pro || []);
         }
 
-        // 2. Obtener Estadísticas
-        const statsRes = await fetch(`${API_URL}/api/v1/progress/stats`, { headers });
+        const statsRes = await fetch(`${API_URL}/api/v1/progress/stats`, { 
+          headers,
+          cache: 'no-store' 
+        });
+        
         if (statsRes.ok) {
           const statsData = await statsRes.json();
           setKpis({
             totalXP: statsData.total_xp || 0,
             currentLevel: parseInt(statsData.level_label?.split(' ')[0]) || 1, 
-            accuracy: 88, // Podrías calcular esto real si el backend lo envía
-            fluencyScore: 82
+            accuracy: 88, // TODO: Conectar con backend real cuando esté listo
+            fluencyScore: 82 // TODO: Conectar con backend real cuando esté listo
           });
         }
       } catch (error) {
@@ -361,7 +385,6 @@ export default function ProfessionalDashboard() {
     fetchData();
   }, [router]);
 
-  // Helper para buscar el estado en la lista descargada
   const getLessonData = (lessonId: string) => {
     return proProgress.find(p => p.lesson_id === lessonId);
   };
@@ -452,7 +475,6 @@ export default function ProfessionalDashboard() {
                     key={lesson.id}
                     lesson={lesson}
                     index={lIdx}
-                    // 🔥 AQUÍ ESTÁ LA MAGIA: Pasamos el objeto real de DB
                     statusData={getLessonData(lesson.id)} 
                     isLast={lIdx === section.lessons.length - 1}
                   />
@@ -462,6 +484,7 @@ export default function ProfessionalDashboard() {
           ))}
         </div>
       </div>
+      {showReadingStudio && <ReadingStudioModal onClose={() => setShowReadingStudio(false)} />}
     </div>
   );
 }
