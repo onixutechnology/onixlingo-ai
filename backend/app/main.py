@@ -1,7 +1,7 @@
-import logging
-import stripe
 import os
 import json
+import logging
+import stripe
 from pathlib import Path
 from contextlib import asynccontextmanager
 from dotenv import load_dotenv
@@ -13,11 +13,10 @@ from sqlalchemy.orm import Session
 # --- IMPORTACIONES LOCALES ---
 from app.core.settings import settings
 from app.database import create_db, get_db
-from app.services import user_service # <--- CRUCIAL: Para activar el PRO
+from app.services import user_service
 
 # --- IMPORTAMOS LOS ROUTERS ---
 from app.api.v1.endpoints import auth, lessons, progress, ai
-# 🔥 AQUÍ IMPORTAMOS EL NUEVO ROUTER DE AJEDREZ
 from app.api import chess 
 
 # 1. CARGA DE ENTORNO
@@ -49,6 +48,7 @@ async def lifespan(app: FastAPI):
     # --- SHUTDOWN ---
     logger.info("🛑 [SYSTEM] Apagando sistema OnixLingo...")
 
+
 # ==============================================================================
 # 🚀 INICIALIZACIÓN DE LA APP
 # ==============================================================================
@@ -61,17 +61,24 @@ app = FastAPI(
 )
 
 # ==============================================================================
-# 🛡️ MIDDLEWARE CORS (MODO PERMISIVO - SOLUCIÓN FINAL)
+# 🛡️ MIDDLEWARE CORS (CONFIGURACIÓN ESTRICTA Y SEGURA)
 # ==============================================================================
+# ⚠️ No usar ["*"] si allow_credentials=True. Se deben especificar las URLs exactas.
+origins = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://onixlingo-ai.vercel.app", 
+    "https://onixlingo.onixu.company", # 🚀 Tu nuevo dominio oficial corporativo
+]
 
-# Borra la lista de 'origins' específica para evitar errores por URLs dinámicas.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # 👈 ESTO ES LA CLAVE: Permite todas las URLs de Vercel
-    allow_credentials=True,
+    allow_origins=origins, 
+    allow_credentials=True, # Obligatorio para manejar las cookies de sesión
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # ==============================================================================
 # 💳 ROUTER ESPECIAL: STRIPE WEBHOOK (LÓGICA COMPLETA)
@@ -80,11 +87,9 @@ app.add_middleware(
 async def stripe_webhook(
     request: Request, 
     stripe_signature: str = Header(None),
-    db: Session = Depends(get_db) # <--- INYECTAMOS LA DB AQUÍ
+    db: Session = Depends(get_db)
 ):
-    """
-    Recibe la confirmación de pago de Stripe y activa el plan PRO.
-    """
+    """Recibe la confirmación de pago de Stripe y activa el plan PRO."""
     logger = logging.getLogger("OnixLingo.Payments")
     payload = await request.body()
 
@@ -125,6 +130,7 @@ async def stripe_webhook(
 
     return {"status": "success", "event_type": event['type']}
 
+
 # ==============================================================================
 # 🔗 CONEXIÓN DE RUTAS (ROUTERS)
 # ==============================================================================
@@ -141,8 +147,9 @@ app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lessons"])
 # 4. AI (Avatar, Chatbot)
 app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI Engine"])
 
-# 🔥 5. Chess Academy (NUEVO)
+# 🔥 5. Chess Academy
 app.include_router(chess.router, prefix="/api/v1", tags=["Chess Academy"])
+
 
 # ==============================================================================
 # 🛠️ UTILIDADES Y ROOT
@@ -160,8 +167,10 @@ def health_check():
 def get_voc_lesson(lesson_id: str):
     # Detecta la carpeta raíz del backend (donde está main.py -> app -> backend)
     base_dir = Path(__file__).resolve().parent 
+    
     # Ruta: backend/app/voclessons/lessons/{id}.json
     file_path = base_dir / "voclessons" / "lessons" / f"{lesson_id}.json"
+    
     if file_path.exists():
         with open(file_path, "r", encoding="utf-8") as f:
             return json.load(f)
