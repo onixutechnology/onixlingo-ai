@@ -61,19 +61,21 @@ app = FastAPI(
 )
 
 # ==============================================================================
-# 🛡️ MIDDLEWARE CORS (CONFIGURACIÓN ESTRICTA Y SEGURA)
+# 🛡️ MIDDLEWARE CORS (CONFIGURACIÓN ESTRICTA + VERCEL PREVIEWS)
 # ==============================================================================
-# ⚠️ No usar ["*"] si allow_credentials=True. Se deben especificar las URLs exactas.
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://onixlingo-ai.vercel.app", 
-    "https://onixlingo.onixu.company", # 🚀 Tu nuevo dominio oficial corporativo
+    "https://onixlingo.onixu.company",       # 🚀 Tu dominio oficial corporativo
+    "https://www.onixlingo.onixu.company",   # Cobertura para usuarios que escriban 'www'
+    "https://onixlingo-bckend.onrender.com"  # Dominio del backend (útil para pruebas en /docs)
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins, 
+    # 🪄 MAGIA: Permite cualquier subdominio temporal generado por Vercel
+    allow_origin_regex=r"https://.*\.vercel\.app", 
     allow_credentials=True, # Obligatorio para manejar las cookies de sesión
     allow_methods=["*"],
     allow_headers=["*"],
