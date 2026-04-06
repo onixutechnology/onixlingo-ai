@@ -5,7 +5,7 @@
  * ONIXLINGO CHESS ACADEMY - LOBBY (TITANIUM)
  * ==============================================================================
  * RUTA: /dashboard/chess/page.tsx
- * ESTADO: Production Ready (Conectado a FastAPI + Generación Dinámica)
+ * ESTADO: Production Ready (Failsafe Mode Activado)
  * ==============================================================================
  */
 
@@ -17,22 +17,18 @@ import {
   Layers, Sword, Lock, Star, ChevronRight, Play, Loader2
 } from 'lucide-react';
 
-// --- CONFIGURACIÓN API ---
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
 
-// --- CONFIGURACIÓN VISUAL DE LOS 7 MÓDULOS ---
-// Esto le da el diseño Titanium a los datos que vienen del backend
 const MODULES_UI_CONFIG = [
-  { id: 'fundamentals', title: 'Fundamentos Esenciales', desc: 'Reglas, movimientos y capturas básicas.', icon: Shield, color: 'from-blue-500 to-indigo-600', locked: false },
+  { id: 'fundamentals', title: 'Fundamentos Esenciales', desc: 'Reglas, movimientos y capturas.', icon: Shield, color: 'from-blue-500 to-indigo-600', locked: false },
   { id: 'tactics-1', title: 'Táctica Básica: Patrones', desc: 'Ataques dobles, clavadas y descubiertas.', icon: Zap, color: 'from-emerald-500 to-teal-600', locked: false },
   { id: 'checkmates', title: 'Patrones de Mate', desc: 'Acorrala al Rey enemigo sin piedad.', icon: Crown, color: 'from-amber-500 to-orange-600', locked: false },
   { id: 'openings', title: 'Control del Centro', desc: 'Desarrollo de piezas y seguridad del Rey.', icon: Target, color: 'from-rose-500 to-pink-600', locked: false },
-  { id: 'middlegame', title: 'Estrategia de Medio Juego', desc: 'Planes, estructuras de peones y maniobras.', icon: Layers, color: 'from-purple-500 to-violet-600', locked: false },
+  { id: 'middlegame', title: 'Estrategia de Medio Juego', desc: 'Planes, estructuras y maniobras.', icon: Layers, color: 'from-purple-500 to-violet-600', locked: false },
   { id: 'endgames', title: 'Finales Teóricos', desc: 'Convierte tu ventaja material en victoria.', icon: Sword, color: 'from-cyan-500 to-blue-600', locked: false },
   { id: 'advanced', title: 'Cálculo Avanzado', desc: 'Sacrificios y redes de mate complejas.', icon: Flame, color: 'from-slate-700 to-slate-900', locked: false }
 ];
 
-// Helper para ponerle títulos bonitos a los niveles especiales
 const getLessonTitle = (id: string) => {
   const titles: Record<string, string> = {
     'fundamentals-1': 'La Torre: Muros de Piedra',
@@ -47,57 +43,54 @@ export default function ChessLobbyPage() {
   const [stats, setStats] = useState({ elo: 850, puzzlesSolved: 0 });
   const [isLoading, setIsLoading] = useState(true);
 
-  // --- 🚀 CONEXIÓN REAL AL BACKEND ---
   useEffect(() => {
     const fetchChessData = async () => {
+      let completedLessons: string[] = []; // Por defecto, 0 completadas
+
       try {
         const token = Cookies.get('access_token');
-        if (!token) {
-          setIsLoading(false);
-          return;
-        }
-
-        const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
-        
-        // Descomentamos y activamos la petición a FastAPI
-        const res = await fetch(`${API_URL}/api/v1/chess/progress`, {
-          headers: { 
-            'Authorization': safeToken,
-            'Content-Type': 'application/json',
-            'Cache-Control': 'no-cache, no-store, must-revalidate',
-            'Pragma': 'no-cache'
-          },
-          cache: 'no-store'
-        });
-        
-        if (res.ok) {
-          const data = await res.json();
-          const completedLessons = data.completed_lessons || [];
+        if (token) {
+          const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
           
-          // CONSTRUIMOS LOS 70 NIVELES (7 módulos x 10 lecciones)
-          const dynamicModules = MODULES_UI_CONFIG.map(mod => {
-            const lessons = Array.from({ length: 10 }).map((_, idx) => {
-              const lessonId = `${mod.id}-${idx + 1}`;
-              return {
-                id: lessonId,
-                title: getLessonTitle(lessonId),
-                completed: completedLessons.includes(lessonId)
-              };
-            });
-            return { ...mod, lessons };
+          const res = await fetch(`${API_URL}/api/v1/chess/progress`, {
+            headers: { 
+              'Authorization': safeToken,
+              'Content-Type': 'application/json',
+              'Cache-Control': 'no-cache, no-store, must-revalidate',
+              'Pragma': 'no-cache'
+            },
+            cache: 'no-store'
           });
-
-          setModules(dynamicModules);
           
-          // ELO y Puzzles resueltos dinámicos
-          setStats({ 
-            elo: 850 + (completedLessons.length * 15), 
-            puzzlesSolved: completedLessons.length 
-          });
+          if (res.ok) {
+            const data = await res.json();
+            completedLessons = data.completed_lessons || [];
+          } else {
+            console.warn("⚠️ Backend respondió con error:", res.status);
+          }
         }
       } catch (error) {
-        console.error("Error al cargar progreso de ajedrez:", error);
+        console.error("⚠️ Error de conexión con el backend:", error);
       } finally {
+        // 🔥 EL FAILSAFE: Siempre construye los módulos, haya fallado el backend o no.
+        const dynamicModules = MODULES_UI_CONFIG.map(mod => {
+          const lessons = Array.from({ length: 10 }).map((_, idx) => {
+            const lessonId = `${mod.id}-${idx + 1}`;
+            return {
+              id: lessonId,
+              title: getLessonTitle(lessonId),
+              completed: completedLessons.includes(lessonId)
+            };
+          });
+          return { ...mod, lessons };
+        });
+
+        setModules(dynamicModules);
+        setStats({ 
+          elo: 850 + (completedLessons.length * 15), 
+          puzzlesSolved: completedLessons.length 
+        });
+        
         setIsLoading(false);
       }
     };
