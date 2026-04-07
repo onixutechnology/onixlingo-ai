@@ -5,7 +5,7 @@
  * ONIXLINGO LMS DASHBOARD - STUDENT EDITION (FREE TIER)
  * ==============================================================================
  * RUTA: /dashboard/page.tsx
- * ESTADO: Production Ready (Fix Auth Cookies Cross-Origin)
+ * ESTADO: Production Ready (Fix Auth Cookies & Fallback URL)
  * ==============================================================================
  */
 
@@ -292,10 +292,12 @@ export default function DashboardPage() {
     setCurrentUser(user);
 
     if (user && token) {
-      const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
+      // 🔥 CORRECCIÓN: Apuntamos siempre a Producción si Vercel pierde la variable
+      const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+      
       fetch(`${BASE_URL}/api/v1/progress/map`, {
         cache: 'no-store',
-        credentials: 'include', // 🔥 SOLUCIÓN CRÍTICA: Permite enviar cookies en peticiones cruzadas
+        credentials: 'include',
         headers: {
           'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`,
           'Content-Type': 'application/json',
@@ -313,8 +315,8 @@ export default function DashboardPage() {
         return res.json();
       })
       .then(data => {
-        setDashboardData(data);
-        const completedCount = data.standard.filter((l: any) => l.status === 'completed').length;
+        setDashboardData(data); // El Loader se quitará exitosamente
+        const completedCount = data.standard?.filter((l: any) => l.status === 'completed').length || 0;
         setUserStats({
           xp: data.total_xp || completedCount * 150,
           lessons: completedCount,
@@ -323,6 +325,8 @@ export default function DashboardPage() {
       })
       .catch(err => {
         console.error("⚠️ Error sincronizando con Backend:", err);
+        // Seguro para quitar el loader infinito en caso de falla de red
+        setDashboardData({ standard: [] }); 
       });
     } else if (!token) {
       router.push('/login');
@@ -339,10 +343,10 @@ export default function DashboardPage() {
   const getLessonState = (lessonId: string): LessonStatus => {
     if (!isMounted) return 'locked';
     const firstLessonId = CURRICULUM[0]?.lessons[0]?.id;
-    if (!dashboardData) {
+    if (!dashboardData || !dashboardData.standard || dashboardData.standard.length === 0) {
       return lessonId === firstLessonId ? 'active' : 'locked';
     }
-    const lessonNode = dashboardData.standard?.find((l: any) => l.lesson_id === lessonId);
+    const lessonNode = dashboardData.standard.find((l: any) => l.lesson_id === lessonId);
     if (lessonNode) {
       if (lessonNode.status === 'completed') return 'completed';
       if (lessonNode.status === 'active' || lessonNode.is_unlocked) return 'active';
@@ -352,8 +356,8 @@ export default function DashboardPage() {
   };
 
   const getStars = (lessonId: string) => {
-    if (!dashboardData) return 0;
-    const lessonNode = dashboardData.standard?.find((l: any) => l.lesson_id === lessonId);
+    if (!dashboardData || !dashboardData.standard) return 0;
+    const lessonNode = dashboardData.standard.find((l: any) => l.lesson_id === lessonId);
     return lessonNode ? lessonNode.stars : 0;
   };
 
@@ -381,7 +385,7 @@ export default function DashboardPage() {
       const response = await fetch(`${BASE_URL}/api/v1/debug/unlock-all/${currentUser}`, {
         method: 'POST',
         cache: 'no-store',
-        credentials: 'include', // 🔥 SOLUCIÓN CRÍTICA TAMBIÉN AQUÍ
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': token || '',
