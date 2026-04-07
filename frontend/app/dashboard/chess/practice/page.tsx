@@ -59,19 +59,21 @@ function PracticeArena() {
         if (!token) { router.push('/login'); return; }
         const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
 
+        console.log("📡 [INIT] Descargando lección desde backend...");
         const res = await fetch(`${API_URL}/api/v1/chess/lessons/${lessonId}?t=${Date.now()}`, {
           headers: { 'Authorization': safeToken, 'Cache-Control': 'no-cache' }
         });
 
         if (res.ok) {
           const data = await res.json();
+          console.log("✅ [INIT] Datos de lección recibidos:", data);
           setLessonData(data);
           const safeFen = sanitizeFEN(data.fen);
           engine.current.load(safeFen);
           setFen(engine.current.fen());
         }
       } catch (error) {
-        console.error("Error de conexión:", error);
+        console.error("❌ [INIT] Error de conexión:", error);
       } finally {
         setIsLoading(false);
       }
@@ -86,23 +88,43 @@ function PracticeArena() {
     }
   }, [mistakes, lessonData]);
 
-  // --- MOTOR DE MOVIMIENTO ---
+  // --- RASTREADOR DE AGARRE ---
+  function onDragBegin(piece: string, sourceSquare: string) {
+    console.log(`✋ [DRAG START] Pieza agarrada: ${piece} en la casilla: ${sourceSquare}`);
+  }
+
+  // --- MOTOR DE MOVIMIENTO Y RASTREADOR PRINCIPAL ---
   function onDrop(sourceSquare: Square, targetSquare: Square) {
-    if (engine.current.isGameOver() || status === 'correct' || status === 'gameover') return false;
+    console.log(`\n=========================================`);
+    console.log(`🔥 [DROP DETECTADO] Intento de movimiento: ${sourceSquare} -> ${targetSquare}`);
+    console.log(`📊 [ESTADO] FEN Actual: ${engine.current.fen()}`);
+    console.log(`🎯 [META] Solución esperada por DB: ${lessonData?.solution}`);
+
+    if (engine.current.isGameOver() || status === 'correct' || status === 'gameover') {
+      console.warn("🛑 [BLOQUEO] Movimiento ignorado porque el juego ya terminó o fue resuelto.");
+      return false;
+    }
 
     const moveAttempt = { from: sourceSquare, to: targetSquare, promotion: 'q' };
     let moveResult = null;
     
     try {
+      console.log("⚙️ [MOTOR] Evaluando legalidad en chess.js...");
       moveResult = engine.current.move(moveAttempt);
+      console.log("⚙️ [MOTOR] Resultado de chess.js:", moveResult);
     } catch (e) {
+      console.error("❌ [ERROR MOTOR] chess.js arrojó una excepción (Movimiento muy ilegal):", e);
       return false; // Ilegal, rebota
     }
 
-    if (moveResult === null) return false;
+    if (moveResult === null) {
+      console.warn("⚠️ [ILEGAL] chess.js devolvió NULL. La pieza rebotará.");
+      return false;
+    }
 
     // MODO JUEGO LIBRE (IA)
     if (lessonData?.solution === 'FREE_PLAY') {
+      console.log("🤖 [MODO] Sandbox / IA Activo");
       setFen(engine.current.fen());
       setLastMoveSquares({ from: sourceSquare, to: targetSquare });
       setFeedback('La IA está pensando...');
@@ -133,11 +155,14 @@ function PracticeArena() {
     }
 
     // MODO PUZZLE ESTRICTO
+    console.log("🧩 [MODO] Puzzle Estricto Activo");
     const moveUCI = sourceSquare + targetSquare;
     const moveSAN = moveResult.san;
+    
+    console.log(`🔍 [VALIDACIÓN] Comparando -> Jugador UCI: '${moveUCI}' | Jugador SAN: '${moveSAN}' | Solución DB: '${lessonData?.solution}'`);
 
     if (lessonData?.solution === moveUCI || lessonData?.solution === moveSAN) {
-      // ✅ CORRECTO
+      console.log("✅ [ÉXITO] ¡Movimiento correcto!");
       setFen(engine.current.fen());
       setStatus('correct');
       setFeedback(lessonData.explanation || '¡Brillante! Solución encontrada.');
@@ -146,7 +171,7 @@ function PracticeArena() {
       saveProgress();
       return true;
     } else {
-      // ❌ INCORRECTO
+      console.warn("❌ [FALLO] Movimiento incorrecto. Aplicando Undo...");
       engine.current.undo();
       setMistakes(prev => prev + 1);
       setStatus('wrong');
@@ -219,9 +244,9 @@ function PracticeArena() {
   return (
     <div className="min-h-screen bg-[#0B0F19] text-slate-100 font-sans flex flex-col md:flex-row relative">
       
-      {/* 🔥 EL CHIVATO: Si no ves esto rojo en tu pantalla, Vercel te está engañando 🔥 */}
+      {/* 🔥 EL CHIVATO ROJO */}
       <div className="absolute top-0 left-0 w-full bg-red-600 text-white text-center text-xl font-black py-2 z-50">
-        NUEVA VERSIÓN TITANIUM ACTIVA
+        NUEVA VERSIÓN TITANIUM ACTIVA CON RASTREADORES
       </div>
 
       <div className="w-full md:w-[400px] lg:w-[450px] p-6 md:p-8 pt-16 flex flex-col border-b md:border-b-0 md:border-r border-slate-800 bg-slate-900/80 shadow-2xl z-20 overflow-y-auto">
@@ -290,14 +315,22 @@ function PracticeArena() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/10 via-transparent to-transparent pointer-events-none"></div>
         <div className="relative z-10 w-full max-w-[600px] lg:max-w-[750px] aspect-square">
           <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500/20 via-slate-800 to-emerald-500/20 rounded-xl blur-2xl opacity-50 pointer-events-none"></div>
+          
           <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B]">
             <SafeChessboard 
               id="TitaniumBoard"
               position={fen} 
               onPieceDrop={onDrop}
+              onPieceDragBegin={onDragBegin}
               animationDuration={300}
+              
+              /* Forzado Doble de Estilos */
               customDarkSquareStyle={{ backgroundColor: '#475569' }}
               customLightSquareStyle={{ backgroundColor: '#e2e8f0' }}
+              darkSquareStyle={{ backgroundColor: '#475569' }}
+              lightSquareStyle={{ backgroundColor: '#e2e8f0' }}
+              boardStyle={{ borderRadius: '4px' }}
+              
               customSquareStyles={finalSquareStyles}
               arePiecesDraggable={status !== 'correct' && status !== 'gameover'}
             />
