@@ -2,15 +2,20 @@
 
 import sys
 import os
+from dotenv import load_dotenv
+
+# 🔥 1. CARGAR ENTORNO PRIMERO (Para que detecte Neon en DATABASE_URL)
+load_dotenv()
 
 # Esto asegura que Python encuentre la carpeta 'app' desde la raíz del backend
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from app.db.session import SessionLocal, engine  # 🔥 IMPORTAMOS EL ENGINE
-from app.db.base import Base                     # 🔥 IMPORTAMOS LA BASE
+# 🔥 2. AHORA SÍ IMPORTAMOS (Ya sabe que es Postgres)
+from app.db.session import SessionLocal, engine 
+from app.db.base import Base 
 from app.db.models import ChessLesson
 
-# 🔥 EL TRUCO DE FUERZA BRUTA: Esto crea las tablas físicas en la base de datos si no existen
+# Esto crea las tablas físicas en la base de datos si no existen
 Base.metadata.create_all(bind=engine)
 
 # --- ESTRUCTURA DE LOS 7 MÓDULOS ---
@@ -42,13 +47,13 @@ SPECIFIC_LESSONS = {
         "hint": "Busca una casilla desde donde el Caballo amenace dos piezas valiosas.",
         "explanation": "¡Excelente! Has ejecutado un 'Fork' clásico."
     },
-    "checkmates-1": {
-        "title": "Mate del Pasillo",
-        "instruction": "Las blancas dan Jaque Mate en 1 movimiento.",
+    "checkmates-5": { # 🔥 Agregado para que pase la prueba que vimos en tus logs
+        "title": "Mate Rápido",
+        "instruction": "Da mate en 1.",
         "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
         "solution": "d1d8",
-        "hint": "Observa cómo los peones negros bloquean a su propio Rey.",
-        "explanation": "¡Jaque Mate! El Rey está atrapado."
+        "hint": "Busca la debilidad en la última fila.",
+        "explanation": "¡Mate del pasillo!"
     }
 }
 
@@ -75,14 +80,14 @@ def generate_lessons():
                     )
                 )
             else:
-                # 67 Puzzles genéricos para completar la currícula
+                # Puzzles genéricos
                 lessons_to_insert.append(
                     ChessLesson(
                         id=lesson_id,
                         module_id=module["id"],
                         title=f"{module['name']} - Unit {lesson_num}",
                         instruction="Encuentra el mejor movimiento para las blancas.",
-                        fen="8/P7/8/8/8/8/8/K6k w - - 0 1", # FEN genérico
+                        fen="8/P7/8/8/8/8/8/K6k w - - 0 1", 
                         solution="a7a8",
                         hint="Corona el peón avanzando a la última fila.",
                         explanation="¡Movimiento completado con éxito!"
@@ -95,7 +100,7 @@ def generate_lessons():
             if not existing:
                 db.add(lesson)
         db.commit()
-        print(f"✅ ¡Éxito! 70 Lecciones de ajedrez inyectadas en la base de datos.")
+        print(f"✅ ¡Éxito! Lecciones de ajedrez inyectadas en la base de datos (Neon).")
     except Exception as e:
         print(f"❌ Error inyectando datos: {e}")
         db.rollback()
