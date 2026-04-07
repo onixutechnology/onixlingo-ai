@@ -5,7 +5,7 @@
  * ONIXLINGO CHESS ACADEMY - ENTERPRISE ARENA
  * ==============================================================================
  * RUTA: /dashboard/chess/practice/page.tsx
- * ESTADO: Production Ready (Smart Guide, Auto-Snapback, AI Opponent)
+ * ESTADO: Production Ready (Smart Guide, Auto-Snapback, AI Opponent, Titanium UI)
  * ==============================================================================
  */
 
@@ -25,20 +25,6 @@ import {
 } from 'lucide-react';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
-
-// Generador forzado del diseño Titanium (Pinta las 64 casillas sí o sí)
-const getTitaniumBoardStyles = () => {
-  const styles: Record<string, React.CSSProperties> = {};
-  const files = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
-  for (let i = 0; i < 8; i++) {
-    for (let j = 0; j < 8; j++) {
-      const square = `${files[i]}${j + 1}`;
-      const isDark = (i + j) % 2 === 0;
-      styles[square] = { backgroundColor: isDark ? '#475569' : '#e2e8f0' }; // Slate 600 y Slate 200
-    }
-  }
-  return styles;
-};
 
 const sanitizeFEN = (fen: string) => {
   if (!fen) return "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
@@ -67,7 +53,7 @@ function PracticeArena() {
   const engine = useRef(new Chess()); 
   const [fen, setFen] = useState("start"); // Solo usamos string para dibujar el tablero visual
   
-  // 🚀 Engañamos a TypeScript para que no se queje de los props personalizados
+  // Engañamos a TypeScript para que no se queje de los props personalizados
   const SafeChessboard = Chessboard as any;
 
   useEffect(() => {
@@ -85,7 +71,6 @@ function PracticeArena() {
         if (res.ok) {
           const data = await res.json();
           setLessonData(data);
-          
           // Cargamos el motor de forma segura
           const safeFen = sanitizeFEN(data.fen);
           engine.current.load(safeFen);
@@ -127,6 +112,7 @@ function PracticeArena() {
     // 2. MODO JUEGO LIBRE (IA)
     if (lessonData?.solution === 'FREE_PLAY') {
       setFen(engine.current.fen()); // Actualiza tablero visual
+      setLastMoveSquares({ from: sourceSquare, to: targetSquare });
       setFeedback('La IA está pensando...');
 
       if (engine.current.isGameOver()) {
@@ -139,8 +125,13 @@ function PracticeArena() {
       setTimeout(() => {
         const moves = engine.current.moves();
         if (moves.length > 0) {
-          engine.current.move(moves[Math.floor(Math.random() * moves.length)]);
+          const botMove = engine.current.move(moves[Math.floor(Math.random() * moves.length)]);
           setFen(engine.current.fen()); // Actualiza tablero tras jugada de IA
+          
+          if (botMove && typeof botMove === 'object') {
+             setLastMoveSquares({ from: botMove.from, to: botMove.to });
+          }
+          
           setFeedback('Tu turno.');
           if (engine.current.isGameOver()) {
             setStatus('gameover');
@@ -151,9 +142,11 @@ function PracticeArena() {
       return true;
     }
 
-    // 3. MODO PUZZLE ESTRICTO
-    const moveString = sourceSquare + targetSquare;
-    if (moveString === lessonData?.solution) {
+    // 3. MODO PUZZLE ESTRICTO (Smart Validation)
+    const moveUCI = sourceSquare + targetSquare;
+    const moveSAN = moveResult.san;
+
+    if (lessonData?.solution === moveUCI || lessonData?.solution === moveSAN) {
       // ✅ CORRECTO
       setFen(engine.current.fen());
       setStatus('correct');
@@ -167,30 +160,31 @@ function PracticeArena() {
       engine.current.undo(); // Deshacemos el movimiento en el motor para que no se arruine
       setMistakes(prev => prev + 1);
       setStatus('wrong');
-      setFeedback('Movimiento incorrecto. La pieza regresará a su lugar.');
-      return false; // Obligamos al tablero visual a rebotar la pieza
+      setFeedback('Movimiento incorrecto. Analiza bien el tablero.');
+      setFen(engine.current.fen()); // Forzamos sync para el rebote visual
+      return false; 
     }
   }
 
-  // Combinar estilos base (Titanium) con guías dinámicas
+  // Estilos dinámicos (Pistas y último movimiento)
   const finalSquareStyles = useMemo(() => {
-    const baseStyles = getTitaniumBoardStyles();
+    const styles: Record<string, React.CSSProperties> = {};
     
-    // Resaltar último movimiento libre
+    // Resaltar último movimiento libre (Amarillo)
     if (lastMoveSquares.from && lastMoveSquares.to) {
-      baseStyles[lastMoveSquares.from] = { ...baseStyles[lastMoveSquares.from], backgroundColor: 'rgba(255, 255, 0, 0.4)' };
-      baseStyles[lastMoveSquares.to] = { ...baseStyles[lastMoveSquares.to], backgroundColor: 'rgba(255, 255, 0, 0.4)' };
+      styles[lastMoveSquares.from] = { backgroundColor: 'rgba(255, 255, 0, 0.4)' };
+      styles[lastMoveSquares.to] = { backgroundColor: 'rgba(255, 255, 0, 0.4)' };
     }
 
     // Dibujar Guía de Ayuda (Verde Esmeralda)
     if (showGuide && lessonData?.solution && lessonData.solution !== 'FREE_PLAY') {
       const fromSq = lessonData.solution.substring(0, 2);
       const toSq = lessonData.solution.substring(2, 4);
-      baseStyles[fromSq] = { ...baseStyles[fromSq], boxShadow: 'inset 0 0 0 4px #34d399' };
-      baseStyles[toSq] = { ...baseStyles[toSq], boxShadow: 'inset 0 0 0 4px #34d399' };
+      styles[fromSq] = { boxShadow: 'inset 0 0 0 4px #34d399' };
+      styles[toSq] = { boxShadow: 'inset 0 0 0 4px #34d399' };
     }
     
-    return baseStyles;
+    return styles;
   }, [showGuide, lessonData, lastMoveSquares]);
 
   const saveProgress = async () => {
@@ -210,6 +204,7 @@ function PracticeArena() {
       setStatus(lessonData.solution === 'FREE_PLAY' ? 'playing' : 'playing');
       setMistakes(0);
       setShowGuide(false);
+      setLastMoveSquares({});
       setFeedback('Tablero reiniciado. Analiza tu jugada.');
     }
   };
@@ -304,16 +299,19 @@ function PracticeArena() {
       {/* PANEL DERECHO (TABLERO TITANIUM) */}
       <div className="flex-1 bg-[#0F1523] flex items-center justify-center p-4 md:p-8 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/10 via-transparent to-transparent pointer-events-none"></div>
-        
         <div className="relative z-10 w-full max-w-[600px] lg:max-w-[750px] aspect-square">
           <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500/20 via-slate-800 to-emerald-500/20 rounded-xl blur-2xl opacity-50 pointer-events-none"></div>
-          
           <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B]">
             <SafeChessboard 
               id="TitaniumBoard"
               position={fen} 
               onPieceDrop={onDrop}
               animationDuration={300}
+              
+              /* 🔥 ESTILOS NATIVOS TITANIUM 🔥 */
+              customDarkSquareStyle={{ backgroundColor: '#475569' }}
+              customLightSquareStyle={{ backgroundColor: '#e2e8f0' }}
+              
               customSquareStyles={finalSquareStyles}
               arePiecesDraggable={status !== 'correct' && status !== 'gameover'}
             />
