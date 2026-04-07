@@ -5,11 +5,11 @@
  * ONIXLINGO CHESS ACADEMY - PRACTICE ARENA
  * ==============================================================================
  * RUTA: /dashboard/chess/practice/page.tsx
- * ESTADO: Production Ready (Estado Síncrono + FEN Auto-Healer)
+ * ESTADO: Production Ready (Patrón Oficial de Estado Separado FEN/Engine)
  * ==============================================================================
  */
 
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect, Suspense, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Chess, type Square } from 'chess.js';
 import { Chessboard } from 'react-chessboard';
@@ -23,14 +23,12 @@ import {
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
 
-// 🛠️ AUTO-SANADOR DE FEN: Por si la base de datos manda un puzzle corrupto sin reyes
 const sanitizeFEN = (fen: string) => {
   if (!fen) return "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
   let safeFen = fen;
-  // Si no hay Rey Blanco (K) o Rey Negro (k), usamos el tablero inicial para que no crashee
   if (!safeFen.includes('K') || !safeFen.includes('k')) {
-    console.warn("⚠️ FEN corrupto detectado desde la BD. Aplicando tablero seguro.");
-    safeFen = "3k4/8/8/3p4/8/8/8/3R2K1 w - - 0 1"; // FEN de respaldo con reyes
+    console.warn("⚠️ FEN corregido automáticamente.");
+    safeFen = "3k4/8/8/3p4/8/8/8/3R2K1 w - - 0 1"; 
   }
   return safeFen;
 };
@@ -41,11 +39,15 @@ function PracticeArena() {
   const lessonId = params.get('lessonId');
 
   const [lessonData, setLessonData] = useState<any>(null);
-  const [game, setGame] = useState<Chess>(new Chess());
+  const [isLoading, setIsLoading] = useState(true);
+  
+  // 🔥 LA SOLUCIÓN: Separar el Motor (game) de la Vista (fenText)
+  const [game] = useState(new Chess()); // Motor Lógico Mutable
+  const [fenText, setFenText] = useState('start'); // Conductor Visual
+  
   const [status, setStatus] = useState<'idle' | 'correct' | 'wrong' | 'playing'>('idle');
   const [feedback, setFeedback] = useState('');
   const [lastMoveSquares, setLastMoveSquares] = useState<{from?: string, to?: string}>({});
-  const [isLoading, setIsLoading] = useState(true);
 
   const SafeChessboard = Chessboard as any;
 
@@ -58,8 +60,7 @@ function PracticeArena() {
 
         const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
 
-        // Agregamos timestamp a la URL para destruir cualquier caché del navegador
-        const res = await fetch(`${API_URL}/api/v1/chess/lessons/${lessonId}?t=${new Date().getTime()}`, {
+        const res = await fetch(`${API_URL}/api/v1/chess/lessons/${lessonId}?t=${Date.now()}`, {
           headers: { 'Authorization': safeToken }
         });
 
@@ -67,13 +68,12 @@ function PracticeArena() {
           const data = await res.json();
           setLessonData(data);
           
-          try {
-            const safeFen = sanitizeFEN(data.fen);
-            setGame(new Chess(safeFen));
-            if (data.solution === 'FREE_PLAY') setStatus('playing');
-          } catch (e) {
-            console.error("Error cargando el motor de ajedrez:", e);
-          }
+          // Inicializamos el motor y la vista
+          const safeFen = sanitizeFEN(data.fen);
+          game.load(safeFen);
+          setFenText(game.fen()); // Dispara el render del tablero
+          
+          if (data.solution === 'FREE_PLAY') setStatus('playing');
         }
       } catch (error) {
         console.error("Error de conexión:", error);
@@ -82,61 +82,57 @@ function PracticeArena() {
       }
     };
     fetchLesson();
-  }, [lessonId, router]);
+  }, [lessonId, router, game]);
 
-  // --- LOGICA MAESTRA: ONDROP UNIFICADO ---
+  // --- LÓGICA DE MOVIMIENTO INFALIBLE ---
   function onDrop(sourceSquare: Square, targetSquare: Square) {
-    // 1. Prevenir movimientos si ya ganó o el juego terminó
     if (status === 'correct' || game.isGameOver()) return false;
 
-    const moveAttempt = {
-      from: sourceSquare,
-      to: targetSquare,
-      promotion: 'q', 
-    };
-
-    // 2. Intentar el movimiento en un clon del juego
-    const gameCopy = new Chess(game.fen());
     let moveResult = null;
     
+    // 1. Intentar el movimiento en el motor interno
     try {
-      moveResult = gameCopy.move(moveAttempt);
-    } catch(e) {
-      console.log("⚠️ Movimiento bloqueado por reglas de ajedrez.");
-      return false; // Retorna falso: La pieza regresa como resorte
+      moveResult = game.move({
+        from: sourceSquare,
+        to: targetSquare,
+        promotion: 'q',
+      });
+    } catch (e) {
+      console.log("Movimiento ilegal bloqueado:", e);
+      return false; // Pieza regresa
     }
 
-    // Si el movimiento es inválido (en versiones viejas de chess.js)
-    if (moveResult === null) return false;
+    // Si es null, el árbitro dice que no es legal
+    if (moveResult === null) return false; // Pieza regresa
 
-    // 3. MOVIMIENTO VÁLIDO: Actualizamos el tablero visualmente ¡YA!
-    setGame(gameCopy);
+    // 2. EL MOVIMIENTO ES LEGAL: Actualizamos la vista Inmediatamente
+    setFenText(game.fen());
     setLastMoveSquares({ from: sourceSquare, to: targetSquare });
 
     const moveString = sourceSquare + targetSquare;
 
-    // 4A. MODO IA: JUEGO LIBRE
+    // 3A. MODO IA: JUEGO LIBRE
     if (lessonData?.solution === 'FREE_PLAY') {
-      if (gameCopy.isGameOver()) {
+      if (game.isGameOver()) {
         setStatus('correct');
         setFeedback('¡Partida terminada!');
         confetti({ particleCount: 200, spread: 90 });
         saveProgress();
         return true;
       }
-      // La IA mueve después de medio segundo
+      
       setTimeout(() => {
-        const moves = gameCopy.moves();
+        const moves = game.moves();
         if (moves.length > 0) {
           const randomMove = moves[Math.floor(Math.random() * moves.length)];
-          gameCopy.move(randomMove);
-          setGame(new Chess(gameCopy.fen()));
+          game.move(randomMove);
+          setFenText(game.fen()); // Actualiza vista para movimiento de IA
         }
       }, 500);
       return true;
     }
 
-    // 4B. MODO PUZZLE ESTRICTO
+    // 3B. MODO PUZZLE
     if (moveString === lessonData?.solution) {
       setStatus('correct');
       setFeedback(lessonData.explanation || '¡Excelente movimiento!');
@@ -144,18 +140,19 @@ function PracticeArena() {
       saveProgress();
     } else {
       setStatus('wrong');
-      setFeedback('Movimiento válido, pero no es la solución del puzzle.');
+      setFeedback('Movimiento válido en ajedrez, pero incorrecto para este puzzle.');
       
-      // Regresa el tablero a la posición original del puzzle después de 1.5s
+      // Deshacer movimiento después de un momento
       setTimeout(() => {
-        setGame(new Chess(sanitizeFEN(lessonData.fen)));
+        game.load(sanitizeFEN(lessonData.fen));
+        setFenText(game.fen());
         setStatus('idle');
         setFeedback('');
         setLastMoveSquares({});
       }, 1500);
     }
 
-    return true; // Retorna verdadero: La pieza se queda en su lugar
+    return true; // La pieza se suelta exitosamente
   }
 
   const saveProgress = async () => {
@@ -177,7 +174,8 @@ function PracticeArena() {
 
   const handleReset = () => {
     if (lessonData) {
-      setGame(new Chess(sanitizeFEN(lessonData.fen)));
+      game.load(sanitizeFEN(lessonData.fen));
+      setFenText(game.fen());
       setStatus(lessonData.solution === 'FREE_PLAY' ? 'playing' : 'idle');
       setFeedback('');
       setLastMoveSquares({});
@@ -220,7 +218,6 @@ function PracticeArena() {
 
   return (
     <div className="min-h-screen bg-[#0B0F19] text-slate-100 font-sans flex flex-col md:flex-row">
-      {/* PANEL IZQUIERDO (INSTRUCCIONES) */}
       <div className="w-full md:w-[400px] lg:w-[450px] p-6 md:p-8 flex flex-col border-b md:border-b-0 md:border-r border-slate-800 bg-slate-900/50 shadow-2xl z-20 overflow-y-auto">
         <Link href="/dashboard/chess" className="inline-flex items-center gap-2 text-slate-500 hover:text-white mb-8 transition-colors font-bold text-sm bg-slate-800/50 self-start px-4 py-2 rounded-lg border border-slate-700/50">
           <ArrowLeft size={16} /> Salir al Menú
@@ -276,7 +273,6 @@ function PracticeArena() {
         </div>
       </div>
 
-      {/* PANEL DERECHO (TABLERO VISUAL) */}
       <div className="flex-1 bg-[#0B0F19] flex items-center justify-center p-4 md:p-8 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent pointer-events-none"></div>
         
@@ -286,7 +282,7 @@ function PracticeArena() {
           <div className="relative rounded-sm overflow-hidden shadow-2xl border-[12px] border-[#18212F] bg-[#18212F]">
             <SafeChessboard 
               id="PracticeArenaBoard"
-              position={game.fen()} 
+              position={fenText} // 🔥 MAGIA: Lee directo del estado de texto
               onPieceDrop={onDrop}
               animationDuration={200}
               customDarkSquareStyle={{ backgroundColor: '#475569' }} 
