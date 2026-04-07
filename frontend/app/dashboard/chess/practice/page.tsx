@@ -12,7 +12,7 @@
 import React, { useState, useEffect, Suspense, useRef, useMemo } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Chess, type Square } from 'chess.js';
-import { Chessboard } from 'react-chessboard';
+import dynamic from 'next/dynamic';
 import confetti from 'canvas-confetti';
 import Link from 'next/link';
 import Cookies from 'js-cookie';
@@ -20,6 +20,10 @@ import {
   ArrowLeft, Lightbulb, RotateCcw, CheckCircle2, 
   XCircle, HelpCircle, ChevronRight, Loader2, Target, Bot, AlertTriangle
 } from 'lucide-react';
+
+// 🔥 FIX DEFINITIVO: Desactivamos el SSR para el tablero. 
+// Esto evita el estado zombi y obliga a renderizar la posición correcta.
+const Chessboard = dynamic(() => import('react-chessboard').then((mod) => mod.Chessboard), { ssr: false });
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
 
@@ -46,12 +50,11 @@ function PracticeArena() {
   const [isLoading, setIsLoading] = useState(true);
   const [lastMoveSquares, setLastMoveSquares] = useState<{from?: string, to?: string}>({});
   
-  // 🔥 FIX DE ESTADO: Obliga al tablero a reiniciarse
+  // FIX DE ESTADO: Obliga al tablero a reiniciarse
   const [isBoardReady, setIsBoardReady] = useState(false); 
 
   const engine = useRef(new Chess()); 
   const [fen, setFen] = useState("start"); 
-  const SafeChessboard = Chessboard as any; // El salvavidas de TypeScript
 
   useEffect(() => {
     const fetchLesson = async () => {
@@ -322,9 +325,9 @@ function PracticeArena() {
           <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500/20 via-slate-800 to-emerald-500/20 rounded-xl blur-2xl opacity-50 pointer-events-none"></div>
           
           <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B]">
+            {/* 🔥 Tablero limpio, dinámico y sin props que choquen 🔥 */}
             {isBoardReady ? (
-              <SafeChessboard 
-                id="TitaniumBoard"
+              <Chessboard 
                 position={fen} 
                 onPieceDrop={onDrop}
                 onPieceDragBegin={onDragBegin}
@@ -332,8 +335,6 @@ function PracticeArena() {
                 
                 customDarkSquareStyle={{ backgroundColor: '#475569' }}
                 customLightSquareStyle={{ backgroundColor: '#e2e8f0' }}
-                darkSquareStyle={{ backgroundColor: '#475569' }}
-                lightSquareStyle={{ backgroundColor: '#e2e8f0' }}
                 boardStyle={{ borderRadius: '4px' }}
                 
                 customSquareStyles={finalSquareStyles}
