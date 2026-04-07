@@ -14,6 +14,7 @@ from sqlalchemy.orm import Session
 from app.core.settings import settings
 from app.database import create_db, get_db
 from app.services import user_service
+from app.db import models # 🚀 MAGIA: Obligamos a SQLAlchemy a leer las tablas
 
 # --- IMPORTAMOS LOS ROUTERS ---
 from app.api.v1.endpoints import auth, lessons, progress, ai
@@ -48,7 +49,6 @@ async def lifespan(app: FastAPI):
     # --- SHUTDOWN ---
     logger.info("🛑 [SYSTEM] Apagando sistema OnixLingo...")
 
-
 # ==============================================================================
 # 🚀 INICIALIZACIÓN DE LA APP
 # ==============================================================================
@@ -66,24 +66,22 @@ app = FastAPI(
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://onixlingo.onixu.company",       # 🚀 Tu dominio oficial corporativo
-    "https://www.onixlingo.onixu.company",   # Cobertura para usuarios que escriban 'www'
-    "https://onixlingo-bckend.onrender.com"  # Dominio del backend (útil para pruebas en /docs)
+    "https://onixlingo.onixu.company", 
+    "https://www.onixlingo.onixu.company", 
+    "https://onixlingo-bckend.onrender.com" 
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins, 
-    # 🪄 MAGIA: Permite cualquier subdominio temporal generado por Vercel
     allow_origin_regex=r"https://.*\.vercel\.app", 
-    allow_credentials=True, # Obligatorio para manejar las cookies de sesión
+    allow_credentials=True, 
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-
 # ==============================================================================
-# 💳 ROUTER ESPECIAL: STRIPE WEBHOOK (LÓGICA COMPLETA)
+# 💳 ROUTER ESPECIAL: STRIPE WEBHOOK
 # ==============================================================================
 @app.post("/api/v1/webhooks/stripe", tags=["Payments"], include_in_schema=False)
 async def stripe_webhook(
@@ -91,11 +89,9 @@ async def stripe_webhook(
     stripe_signature: str = Header(None),
     db: Session = Depends(get_db)
 ):
-    """Recibe la confirmación de pago de Stripe y activa el plan PRO."""
     logger = logging.getLogger("OnixLingo.Payments")
     payload = await request.body()
 
-    # 1. Validación de seguridad
     if not stripe.api_key or not ENDPOINT_SECRET:
         logger.error("❌ [STRIPE] Faltan claves de configuración.")
         raise HTTPException(status_code=500, detail="Server Configuration Error")
@@ -109,18 +105,15 @@ async def stripe_webhook(
     except stripe.error.SignatureVerificationError:
         raise HTTPException(status_code=400, detail="Invalid signature")
 
-    # 2. Lógica de Activación
     if event['type'] == 'checkout.session.completed':
         session = event['data']['object']
-        # Recuperamos los datos que enviamos desde el Frontend (metadata)
         user_id_str = session.get("metadata", {}).get("userId")
         user_email = session.get("customer_details", {}).get("email")
-
+        
         logger.info(f"💰 [STRIPE] Pago recibido de: {user_email} (ID: {user_id_str})")
 
         if user_id_str:
             try:
-                # Convertir ID a entero y llamar al servicio
                 user_id = int(user_id_str)
                 updated_user = user_service.set_pro_status(db, user_id=user_id, is_pro=True)
                 if updated_user:
@@ -132,26 +125,14 @@ async def stripe_webhook(
 
     return {"status": "success", "event_type": event['type']}
 
-
 # ==============================================================================
 # 🔗 CONEXIÓN DE RUTAS (ROUTERS)
 # ==============================================================================
-
-# 1. Auth
 app.include_router(auth.router, prefix="/api/v1/auth", tags=["Authentication"])
-
-# 2. Progress (Mapas, Puntuación, Trofeos)
 app.include_router(progress.router, prefix="/api/v1/progress", tags=["Analytics & Progress"])
-
-# 3. Lessons (Contenido Standard y Pro)
 app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lessons"])
-
-# 4. AI (Avatar, Chatbot)
 app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI Engine"])
-
-# 🔥 5. Chess Academy
 app.include_router(chess.router, prefix="/api/v1", tags=["Chess Academy"])
-
 
 # ==============================================================================
 # 🛠️ UTILIDADES Y ROOT
@@ -164,20 +145,14 @@ def health_check():
         "version": "Titanium 8.0"
     }
 
-# Endpoint para servir JSONs de Vocabulario de forma robusta
 @app.get("/api/v1/voclessons/{lesson_id}", tags=["Lessons"])
 def get_voc_lesson(lesson_id: str):
-    # Detecta la carpeta raíz del backend (donde está main.py -> app -> backend)
     base_dir = Path(__file__).resolve().parent 
-    
-    # Ruta: backend/app/voclessons/lessons/{id}.json
     file_path = base_dir / "voclessons" / "lessons" / f"{lesson_id}.json"
-    
     if file_path.exists():
         with open(file_path, "r", encoding="utf-8") as f:
             return json.load(f)
             
-    # Fallback por si la estructura cambia levemente en producción
     file_path_alt = base_dir.parent / "app" / "voclessons" / "lessons" / f"{lesson_id}.json"
     if file_path_alt.exists():
         with open(file_path_alt, "r", encoding="utf-8") as f:
