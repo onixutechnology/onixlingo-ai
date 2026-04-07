@@ -2,18 +2,17 @@
 
 /**
  * ==============================================================================
- * ONIXLINGO CHESS ACADEMY - ENTERPRISE ARENA
+ * ONIXLINGO CHESS ACADEMY - TITANIUM ARENA
  * ==============================================================================
  * RUTA: /dashboard/chess/practice/page.tsx
- * ESTADO: Production Ready (Anti-Cache + Smart Guide + Auto-Snapback)
+ * ESTADO: Production Ready (Motor Aislado + Forzado de Estilos)
  * ==============================================================================
  */
 
-// 🔥 DIRECTIVAS ANTI-CACHÉ PARA VERCEL (OBLIGATORIAS)
 export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
 
-import React, { useState, useEffect, Suspense, useMemo } from 'react';
+import React, { useState, useEffect, Suspense, useRef, useMemo } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Chess, type Square } from 'chess.js';
 import { Chessboard } from 'react-chessboard';
@@ -27,13 +26,26 @@ import {
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
 
+// Generador forzado del diseño Titanium (Pinta las 64 casillas sí o sí)
+const getTitaniumBoardStyles = () => {
+  const styles: Record<string, React.CSSProperties> = {};
+  const files = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+  for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
+      const square = `${files[i]}${j + 1}`;
+      const isDark = (i + j) % 2 === 0;
+      styles[square] = { backgroundColor: isDark ? '#475569' : '#e2e8f0' }; // Slate 600 y Slate 200
+    }
+  }
+  return styles;
+};
+
 const sanitizeFEN = (fen: string) => {
   if (!fen) return "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
-  let safeFen = fen;
-  if (!safeFen.includes('K') || !safeFen.includes('k')) {
-    safeFen = "3k4/8/8/3p4/8/8/8/3R2K1 w - - 0 1"; 
+  if (!fen.includes('K') || !fen.includes('k')) {
+    return "3k4/8/8/3p4/8/8/8/3R2K1 w - - 0 1"; 
   }
-  return safeFen;
+  return fen;
 };
 
 function PracticeArena() {
@@ -41,43 +53,39 @@ function PracticeArena() {
   const router = useRouter();
   const lessonId = params.get('lessonId');
 
-  // --- ESTADOS ---
+  // --- ESTADOS DE UI ---
   const [lessonData, setLessonData] = useState<any>(null);
-  const [game, setGame] = useState<Chess>(new Chess());
   const [status, setStatus] = useState<'playing' | 'correct' | 'wrong' | 'gameover'>('playing');
   const [feedback, setFeedback] = useState('Analiza el tablero y realiza tu movimiento.');
   const [mistakes, setMistakes] = useState(0);
   const [showGuide, setShowGuide] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [lastMoveSquares, setLastMoveSquares] = useState<{from?: string, to?: string}>({});
 
-  const SafeChessboard = Chessboard as any;
+  // 🔥 SOLUCIÓN MAESTRA: Aislar el motor de ajedrez de los re-renders de React
+  const engine = useRef(new Chess()); 
+  const [fen, setFen] = useState("start"); // Solo usamos string para dibujar el tablero visual
 
-  // --- CARGA DE DATOS ---
   useEffect(() => {
     const fetchLesson = async () => {
       if (!lessonId) { setIsLoading(false); return; }
       try {
         const token = Cookies.get('access_token');
         if (!token) { router.push('/login'); return; }
-
         const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
 
-        // El parámetro timestamp destruye el caché del navegador
         const res = await fetch(`${API_URL}/api/v1/chess/lessons/${lessonId}?t=${Date.now()}`, {
-          headers: { 
-            'Authorization': safeToken,
-            'Cache-Control': 'no-cache'
-          }
+          headers: { 'Authorization': safeToken, 'Cache-Control': 'no-cache' }
         });
 
         if (res.ok) {
           const data = await res.json();
           setLessonData(data);
-          try {
-            setGame(new Chess(sanitizeFEN(data.fen)));
-          } catch (e) {
-            setGame(new Chess());
-          }
+          
+          // Cargamos el motor de forma segura
+          const safeFen = sanitizeFEN(data.fen);
+          engine.current.load(safeFen);
+          setFen(engine.current.fen()); // Le decimos al tablero visual qué dibujar
         }
       } catch (error) {
         console.error("Error de conexión:", error);
@@ -88,36 +96,36 @@ function PracticeArena() {
     fetchLesson();
   }, [lessonId, router]);
 
-  // --- VIGILANTE DE ERRORES (Activa la guía a los 3 errores) ---
+  // Vigía de errores para encender la guía
   useEffect(() => {
     if (mistakes >= 3 && lessonData?.solution !== 'FREE_PLAY') {
       setShowGuide(true);
-      setFeedback('¡No te preocupes! El sistema ha activado las guías visuales (casillas esmeralda) para ayudarte.');
+      setFeedback('¡Guías visuales activadas! Observa los aros verdes en el tablero.');
     }
   }, [mistakes, lessonData]);
 
   // --- MOTOR DE MOVIMIENTO ---
   function onDrop(sourceSquare: Square, targetSquare: Square) {
-    if (game.isGameOver() || status === 'correct' || status === 'gameover') return false;
+    if (engine.current.isGameOver() || status === 'correct' || status === 'gameover') return false;
 
-    const gameCopy = new Chess(game.fen());
     const moveAttempt = { from: sourceSquare, to: targetSquare, promotion: 'q' };
 
-    // 1. Verificamos si el movimiento es legal en ajedrez
+    // 1. Intentar el movimiento en el motor aislado
+    let moveResult = null;
     try {
-      const isLegal = gameCopy.move(moveAttempt);
-      if (!isLegal) return false; // Retorna falso: La pieza regresa instantáneamente
+      moveResult = engine.current.move(moveAttempt);
     } catch (e) {
-      return false; 
+      return false; // Ilegal, rebota
     }
 
-    // 2. MODO IA: JUEGO LIBRE
-    if (lessonData?.solution === 'FREE_PLAY') {
-      setGame(new Chess(gameCopy.fen()));
-      setFeedback('La IA está pensando...');
-      setShowGuide(false);
+    if (moveResult === null) return false; // Ilegal, rebota
 
-      if (gameCopy.isGameOver()) {
+    // 2. MODO JUEGO LIBRE (IA)
+    if (lessonData?.solution === 'FREE_PLAY') {
+      setFen(engine.current.fen()); // Actualiza tablero visual
+      setFeedback('La IA está pensando...');
+
+      if (engine.current.isGameOver()) {
         setStatus('gameover');
         setFeedback('¡Fin de la partida!');
         saveProgress();
@@ -125,79 +133,77 @@ function PracticeArena() {
       }
 
       setTimeout(() => {
-        const aiGame = new Chess(gameCopy.fen());
-        const moves = aiGame.moves();
+        const moves = engine.current.moves();
         if (moves.length > 0) {
-          aiGame.move(moves[Math.floor(Math.random() * moves.length)]);
-          setGame(new Chess(aiGame.fen()));
+          engine.current.move(moves[Math.floor(Math.random() * moves.length)]);
+          setFen(engine.current.fen()); // Actualiza tablero tras jugada de IA
           setFeedback('Tu turno.');
-          if (aiGame.isGameOver()) {
+          if (engine.current.isGameOver()) {
             setStatus('gameover');
             saveProgress();
           }
         }
       }, 500);
-      return true; // Movimiento aceptado
+      return true;
     }
 
     // 3. MODO PUZZLE ESTRICTO
     const moveString = sourceSquare + targetSquare;
     if (moveString === lessonData?.solution) {
-      // ✅ MOVIMIENTO CORRECTO
-      setGame(new Chess(gameCopy.fen()));
+      // ✅ CORRECTO
+      setFen(engine.current.fen());
       setStatus('correct');
-      setFeedback(lessonData.explanation || '¡Brillante! Has encontrado la solución.');
+      setFeedback(lessonData.explanation || '¡Brillante! Solución encontrada.');
       setShowGuide(false);
-      confetti({ particleCount: 200, spread: 90, origin: { y: 0.5 }, colors: ['#4ade80', '#818cf8'] });
+      confetti({ particleCount: 200, spread: 90, colors: ['#4ade80', '#818cf8'] });
       saveProgress();
-      return true; // La pieza se queda
+      return true;
     } else {
-      // ❌ MOVIMIENTO INCORRECTO
+      // ❌ INCORRECTO
+      engine.current.undo(); // Deshacemos el movimiento en el motor para que no se arruine
       setMistakes(prev => prev + 1);
       setStatus('wrong');
-      setFeedback('Movimiento incorrecto. Intenta de nuevo.');
-      
-      // Magia de UX: Al retornar FALSE, react-chessboard hace que la pieza rebote a su lugar sola.
-      return false; 
+      setFeedback('Movimiento incorrecto. La pieza regresará a su lugar.');
+      return false; // Obligamos al tablero visual a rebotar la pieza
     }
   }
 
-  // --- ESTILOS DE CASILLAS (Guía Visual) ---
-  const customSquareStyles = useMemo(() => {
-    const styles: Record<string, React.CSSProperties> = {};
+  // Combinar estilos base (Titanium) con guías dinámicas
+  const finalSquareStyles = useMemo(() => {
+    const baseStyles = getTitaniumBoardStyles();
     
-    // Dibujar pistas si están activadas
-    if (showGuide && lessonData?.solution && lessonData.solution !== 'FREE_PLAY') {
-      const fromSquare = lessonData.solution.substring(0, 2);
-      const toSquare = lessonData.solution.substring(2, 4);
-      
-      styles[fromSquare] = { boxShadow: 'inset 0 0 0 4px #34d399', backgroundColor: 'rgba(52, 211, 153, 0.2)' };
-      styles[toSquare] = { boxShadow: 'inset 0 0 0 4px #34d399', backgroundColor: 'rgba(52, 211, 153, 0.2)' };
+    // Resaltar último movimiento libre
+    if (lastMoveSquares.from && lastMoveSquares.to) {
+      baseStyles[lastMoveSquares.from] = { ...baseStyles[lastMoveSquares.from], backgroundColor: 'rgba(255, 255, 0, 0.4)' };
+      baseStyles[lastMoveSquares.to] = { ...baseStyles[lastMoveSquares.to], backgroundColor: 'rgba(255, 255, 0, 0.4)' };
     }
-    return styles;
-  }, [showGuide, lessonData]);
+
+    // Dibujar Guía de Ayuda (Verde Esmeralda)
+    if (showGuide && lessonData?.solution && lessonData.solution !== 'FREE_PLAY') {
+      const fromSq = lessonData.solution.substring(0, 2);
+      const toSq = lessonData.solution.substring(2, 4);
+      baseStyles[fromSq] = { ...baseStyles[fromSq], boxShadow: 'inset 0 0 0 4px #34d399' };
+      baseStyles[toSq] = { ...baseStyles[toSq], boxShadow: 'inset 0 0 0 4px #34d399' };
+    }
+    
+    return baseStyles;
+  }, [showGuide, lessonData, lastMoveSquares]);
 
   const saveProgress = async () => {
-    try {
-      const token = Cookies.get('access_token');
-      if (!token) return;
-      await fetch(`${API_URL}/api/v1/chess/progress`, {
-        method: 'POST',
-        headers: { 
-          'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`, 
-          'Content-Type': 'application/json' 
-        },
-        body: JSON.stringify({ lesson_id: lessonId, status: 'completed' })
-      });
-    } catch (error) {
-      console.error("Error guardando progreso:", error);
-    }
+    const token = Cookies.get('access_token');
+    if (!token) return;
+    await fetch(`${API_URL}/api/v1/chess/progress`, {
+      method: 'POST',
+      headers: { 'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ lesson_id: lessonId, status: 'completed' })
+    });
   };
 
   const handleReset = () => {
     if (lessonData) {
-      setGame(new Chess(sanitizeFEN(lessonData.fen)));
-      setStatus('playing');
+      engine.current.load(sanitizeFEN(lessonData.fen));
+      setFen(engine.current.fen());
+      setStatus(lessonData.solution === 'FREE_PLAY' ? 'playing' : 'playing');
       setMistakes(0);
       setShowGuide(false);
       setFeedback('Tablero reiniciado. Analiza tu jugada.');
@@ -206,14 +212,12 @@ function PracticeArena() {
 
   const forceHint = () => {
     setShowGuide(true);
-    setFeedback('Pista visual activada. Observa las casillas verdes en el tablero.');
+    setFeedback('Pista visual activada. Observa los aros verdes en el tablero.');
   };
 
-  // --- RENDERIZADO VISUAL ---
   if (isLoading) return (
-    <div className="min-h-screen bg-[#0B0F19] flex flex-col items-center justify-center text-indigo-500">
-      <Loader2 className="animate-spin mb-4" size={48} />
-      <p className="font-bold text-slate-400 tracking-widest uppercase text-sm">Cargando Motor Titanium...</p>
+    <div className="min-h-screen bg-[#0B0F19] flex items-center justify-center text-indigo-500">
+      <Loader2 className="animate-spin" size={48} />
     </div>
   );
 
@@ -221,7 +225,7 @@ function PracticeArena() {
     <div className="min-h-screen bg-[#0B0F19] flex flex-col items-center justify-center text-white">
       <Target size={64} className="text-slate-700 mb-6" />
       <h2 className="text-2xl font-bold mb-2">Lección no disponible</h2>
-      <Link href="/dashboard/chess" className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold transition-colors">Volver al Lobby</Link>
+      <Link href="/dashboard/chess" className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold">Volver al Menú</Link>
     </div>
   );
 
@@ -229,9 +233,9 @@ function PracticeArena() {
 
   return (
     <div className="min-h-screen bg-[#0B0F19] text-slate-100 font-sans flex flex-col md:flex-row">
-      {/* PANEL IZQUIERDO (INSTRUCCIONES Y UI) */}
+      {/* PANEL IZQUIERDO */}
       <div className="w-full md:w-[400px] lg:w-[450px] p-6 md:p-8 flex flex-col border-b md:border-b-0 md:border-r border-slate-800 bg-slate-900/80 shadow-2xl z-20 overflow-y-auto">
-        <Link href="/dashboard/chess" className="inline-flex items-center gap-2 text-slate-500 hover:text-white mb-8 transition-colors font-bold text-sm bg-slate-800/50 self-start px-4 py-2 rounded-lg border border-slate-700/50">
+        <Link href="/dashboard/chess" className="inline-flex items-center gap-2 text-slate-500 hover:text-white mb-8 font-bold text-sm bg-slate-800/50 self-start px-4 py-2 rounded-lg border border-slate-700/50">
           <ArrowLeft size={16} /> Salir al Menú
         </Link>
 
@@ -275,16 +279,16 @@ function PracticeArena() {
         {/* BOTONERA */}
         <div className="mt-8 pt-6 border-t border-slate-800 space-y-3 shrink-0">
           {status === 'correct' || status === 'gameover' ? (
-            <button onClick={() => router.push('/dashboard/chess')} className="w-full py-4 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 rounded-xl font-black text-sm uppercase tracking-widest shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition-all hover:-translate-y-1">
+            <button onClick={() => router.push('/dashboard/chess')} className="w-full py-4 bg-gradient-to-r from-emerald-500 to-emerald-600 text-slate-950 rounded-xl font-black text-sm uppercase shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
               Continuar Ruta <ChevronRight size={18} />
             </button>
           ) : (
             <div className="grid grid-cols-2 gap-3">
-              <button onClick={handleReset} className="py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl font-bold text-sm border border-slate-700 flex items-center justify-center gap-2 transition-colors active:scale-95">
+              <button onClick={handleReset} className="py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl font-bold text-sm border border-slate-700 flex items-center justify-center gap-2">
                 <RotateCcw size={16} /> Reiniciar
               </button>
               {!isFreePlay && (
-                <button onClick={forceHint} disabled={showGuide} className="py-3 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 rounded-xl font-bold text-sm border border-indigo-500/30 flex items-center justify-center gap-2 transition-colors active:scale-95 disabled:opacity-50">
+                <button onClick={forceHint} disabled={showGuide} className="py-3 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 rounded-xl font-bold text-sm border border-indigo-500/30 flex items-center justify-center gap-2 disabled:opacity-50">
                   <Lightbulb size={16} /> Ver Guía
                 </button>
               )}
@@ -293,7 +297,7 @@ function PracticeArena() {
         </div>
       </div>
 
-      {/* PANEL DERECHO (EL TABLERO PREMIUM) */}
+      {/* PANEL DERECHO (TABLERO TITANIUM) */}
       <div className="flex-1 bg-[#0F1523] flex items-center justify-center p-4 md:p-8 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/10 via-transparent to-transparent pointer-events-none"></div>
         
@@ -301,14 +305,12 @@ function PracticeArena() {
           <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500/20 via-slate-800 to-emerald-500/20 rounded-xl blur-2xl opacity-50 pointer-events-none"></div>
           
           <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B]">
-            <SafeChessboard 
-              id="EnterpriseBoard"
-              position={game.fen()} 
+            <Chessboard 
+              id="TitaniumBoard"
+              position={fen} 
               onPieceDrop={onDrop}
               animationDuration={300}
-              customDarkSquareStyle={{ backgroundColor: '#475569' }} 
-              customLightSquareStyle={{ backgroundColor: '#e2e8f0' }}
-              customSquareStyles={customSquareStyles}
+              customSquareStyles={finalSquareStyles}
               arePiecesDraggable={status !== 'correct' && status !== 'gameover'}
             />
           </div>
