@@ -5,9 +5,13 @@
  * ONIXLINGO CHESS ACADEMY - ENTERPRISE ARENA
  * ==============================================================================
  * RUTA: /dashboard/chess/practice/page.tsx
- * ESTADO: Production Ready (Smart Guide, Auto-Snapback, AI Opponent)
+ * ESTADO: Production Ready (Anti-Cache + Smart Guide + Auto-Snapback)
  * ==============================================================================
  */
+
+// 🔥 DIRECTIVAS ANTI-CACHÉ PARA VERCEL (OBLIGATORIAS)
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 import React, { useState, useEffect, Suspense, useMemo } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
@@ -58,8 +62,12 @@ function PracticeArena() {
 
         const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
 
+        // El parámetro timestamp destruye el caché del navegador
         const res = await fetch(`${API_URL}/api/v1/chess/lessons/${lessonId}?t=${Date.now()}`, {
-          headers: { 'Authorization': safeToken }
+          headers: { 
+            'Authorization': safeToken,
+            'Cache-Control': 'no-cache'
+          }
         });
 
         if (res.ok) {
@@ -298,8 +306,8 @@ function PracticeArena() {
               position={game.fen()} 
               onPieceDrop={onDrop}
               animationDuration={300}
-              customDarkSquareStyle={{ backgroundColor: '#475569' }}  // Slate 600
-              customLightSquareStyle={{ backgroundColor: '#e2e8f0' }} // Slate 200
+              customDarkSquareStyle={{ backgroundColor: '#475569' }} 
+              customLightSquareStyle={{ backgroundColor: '#e2e8f0' }}
               customSquareStyles={customSquareStyles}
               arePiecesDraggable={status !== 'correct' && status !== 'gameover'}
             />
