@@ -5,7 +5,7 @@
  * ONIXLINGO LMS DASHBOARD - STUDENT EDITION (FREE TIER)
  * ==============================================================================
  * RUTA: /dashboard/page.tsx
- * ESTADO: Production Ready (Fix Auth Cookies & Fallback URL)
+ * ESTADO: Production Ready (Fix Logic Hole & Fallback URL)
  * ==============================================================================
  */
 
@@ -284,16 +284,20 @@ export default function DashboardPage() {
     }
   }, [mode, router]);
 
-  // 2. CARGA DE DATOS REALES DEL BACKEND TITANIUM CON "CACHE & SYNC FIX" Y CROSS-ORIGIN COOKIES 🚀
+  // 2. CARGA DE DATOS REALES (LOGIC FIX) 🚀
   useEffect(() => {
     setIsMounted(true);
     const user = localStorage.getItem('currentUser');
     const token = Cookies.get('access_token');
-    setCurrentUser(user);
+    
+    // Si no hay user en localStorage, ponemos uno por defecto para no bloquear la app
+    setCurrentUser(user || 'Estudiante');
 
-    if (user && token) {
-      // 🔥 CORRECCIÓN: Apuntamos siempre a Producción si Vercel pierde la variable
+    console.log("🛠️ DIAGNÓSTICO: Token existe?", !!token);
+
+    if (token) {
       const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+      console.log("📡 Conectando a:", BASE_URL);
       
       fetch(`${BASE_URL}/api/v1/progress/map`, {
         cache: 'no-store',
@@ -307,6 +311,7 @@ export default function DashboardPage() {
       })
       .then(res => {
         if (res.status === 401) {
+          console.warn("Token inválido, sacando al usuario...");
           Cookies.remove('access_token');
           router.push('/login');
           throw new Error("Sesión expirada");
@@ -315,7 +320,8 @@ export default function DashboardPage() {
         return res.json();
       })
       .then(data => {
-        setDashboardData(data); // El Loader se quitará exitosamente
+        console.log("✅ Datos recibidos del servidor!", data);
+        setDashboardData(data);
         const completedCount = data.standard?.filter((l: any) => l.status === 'completed').length || 0;
         setUserStats({
           xp: data.total_xp || completedCount * 150,
@@ -325,10 +331,10 @@ export default function DashboardPage() {
       })
       .catch(err => {
         console.error("⚠️ Error sincronizando con Backend:", err);
-        // Seguro para quitar el loader infinito en caso de falla de red
         setDashboardData({ standard: [] }); 
       });
-    } else if (!token) {
+    } else {
+      console.warn("No hay token, enviando al login...");
       router.push('/login');
     }
   }, [router]);
