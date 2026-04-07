@@ -5,7 +5,7 @@
  * ONIXLINGO CHESS ACADEMY - PRACTICE ARENA
  * ==============================================================================
  * RUTA: /dashboard/chess/practice/page.tsx
- * ESTADO: Production Ready (IA Opponent + Strict FEN Validation Fixed)
+ * ESTADO: Production Ready (Estado Síncrono + FEN Auto-Healer)
  * ==============================================================================
  */
 
@@ -22,6 +22,18 @@ import {
 } from 'lucide-react';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+
+// 🛠️ AUTO-SANADOR DE FEN: Por si la base de datos manda un puzzle corrupto sin reyes
+const sanitizeFEN = (fen: string) => {
+  if (!fen) return "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+  let safeFen = fen;
+  // Si no hay Rey Blanco (K) o Rey Negro (k), usamos el tablero inicial para que no crashee
+  if (!safeFen.includes('K') || !safeFen.includes('k')) {
+    console.warn("⚠️ FEN corrupto detectado desde la BD. Aplicando tablero seguro.");
+    safeFen = "3k4/8/8/3p4/8/8/8/3R2K1 w - - 0 1"; // FEN de respaldo con reyes
+  }
+  return safeFen;
+};
 
 function PracticeArena() {
   const params = useSearchParams();
@@ -46,14 +58,9 @@ function PracticeArena() {
 
         const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
 
-        const res = await fetch(`${API_URL}/api/v1/chess/lessons/${lessonId}`, {
-          headers: {
-            'Authorization': safeToken,
-            'Content-Type': 'application/json',
-            'Cache-Control': 'no-cache, no-store, must-revalidate',
-            'Pragma': 'no-cache'
-          },
-          cache: 'no-store'
+        // Agregamos timestamp a la URL para destruir cualquier caché del navegador
+        const res = await fetch(`${API_URL}/api/v1/chess/lessons/${lessonId}?t=${new Date().getTime()}`, {
+          headers: { 'Authorization': safeToken }
         });
 
         if (res.ok) {
@@ -61,12 +68,11 @@ function PracticeArena() {
           setLessonData(data);
           
           try {
-            const newGame = new Chess(data.fen);
-            setGame(newGame);
-            // Si es juego libre, cambiamos el estado
+            const safeFen = sanitizeFEN(data.fen);
+            setGame(new Chess(safeFen));
             if (data.solution === 'FREE_PLAY') setStatus('playing');
           } catch (e) {
-            console.error("⚠️ FEN Inválido (Debe tener Reyes):", data.fen);
+            console.error("Error cargando el motor de ajedrez:", e);
           }
         }
       } catch (error) {
@@ -78,111 +84,90 @@ function PracticeArena() {
     fetchLesson();
   }, [lessonId, router]);
 
-  // --- MOTOR DE IA BÁSICO (MOVIMIENTOS DE LA MÁQUINA) ---
-  const makeRandomComputerMove = (currentGame: Chess) => {
-    const possibleMoves = currentGame.moves();
-    if (possibleMoves.length === 0) return; // Jaque mate o ahogado
-
-    // Elige un movimiento legal al azar para dificultar el juego
-    const randomIdx = Math.floor(Math.random() * possibleMoves.length);
-    const gameCopy = new Chess(currentGame.fen());
-    
-    gameCopy.move(possibleMoves[randomIdx]);
-    setGame(gameCopy);
-
-    // Revisar si la máquina te ganó
-    if (gameCopy.isGameOver()) {
-      setStatus('wrong');
-      setFeedback('¡Juego Terminado! El motor de ajedrez te ha vencido o es un empate.');
-    }
-  };
-
-  function makeMove(move: any) {
-    try {
-      const gameCopy = new Chess(game.fen());
-      const result = gameCopy.move(move);
-      if (result) {
-        setGame(gameCopy);
-        setLastMoveSquares({ from: result.from, to: result.to });
-        return true;
-      }
-    } catch (e) {
-      console.log("⚠️ Movimiento Ilegal bloqueado por árbitro:", e);
-      return false;
-    }
-    return false;
-  }
-
+  // --- LOGICA MAESTRA: ONDROP UNIFICADO ---
   function onDrop(sourceSquare: Square, targetSquare: Square) {
-    if (status === 'correct' || game.isGameOver()) return false; 
+    // 1. Prevenir movimientos si ya ganó o el juego terminó
+    if (status === 'correct' || game.isGameOver()) return false;
 
-    const moveString = sourceSquare + targetSquare;
     const moveAttempt = {
       from: sourceSquare,
       to: targetSquare,
       promotion: 'q', 
     };
 
-    // 1. Verificar si el movimiento del jugador es legal
+    // 2. Intentar el movimiento en un clon del juego
     const gameCopy = new Chess(game.fen());
-    let isLegal = false;
+    let moveResult = null;
+    
     try {
-      isLegal = !!gameCopy.move(moveAttempt);
-    } catch(e) { isLegal = false; }
+      moveResult = gameCopy.move(moveAttempt);
+    } catch(e) {
+      console.log("⚠️ Movimiento bloqueado por reglas de ajedrez.");
+      return false; // Retorna falso: La pieza regresa como resorte
+    }
 
-    if (!isLegal) return false; 
+    // Si el movimiento es inválido (en versiones viejas de chess.js)
+    if (moveResult === null) return false;
 
-    // Ejecutamos el movimiento visualmente
-    makeMove(moveAttempt);
+    // 3. MOVIMIENTO VÁLIDO: Actualizamos el tablero visualmente ¡YA!
+    setGame(gameCopy);
+    setLastMoveSquares({ from: sourceSquare, to: targetSquare });
 
-    // 2A. MODO JUEGO LIBRE (Contra la Máquina)
-    if (lessonData && lessonData.solution === 'FREE_PLAY') {
-      const checkGameOver = new Chess(gameCopy.fen());
-      if (checkGameOver.isGameOver()) {
+    const moveString = sourceSquare + targetSquare;
+
+    // 4A. MODO IA: JUEGO LIBRE
+    if (lessonData?.solution === 'FREE_PLAY') {
+      if (gameCopy.isGameOver()) {
         setStatus('correct');
-        setFeedback('¡Felicidades! Has terminado esta partida de práctica.');
-        confetti({ particleCount: 200, spread: 90, origin: { y: 0.5 } });
+        setFeedback('¡Partida terminada!');
+        confetti({ particleCount: 200, spread: 90 });
         saveProgress();
         return true;
       }
-
-      // Si el juego sigue, la máquina responde en medio segundo
+      // La IA mueve después de medio segundo
       setTimeout(() => {
-        makeRandomComputerMove(gameCopy);
+        const moves = gameCopy.moves();
+        if (moves.length > 0) {
+          const randomMove = moves[Math.floor(Math.random() * moves.length)];
+          gameCopy.move(randomMove);
+          setGame(new Chess(gameCopy.fen()));
+        }
       }, 500);
       return true;
     }
 
-    // 2B. MODO PUZZLE ESTRICTO (1 Movimiento Específico)
-    if (lessonData && moveString === lessonData.solution) {
+    // 4B. MODO PUZZLE ESTRICTO
+    if (moveString === lessonData?.solution) {
       setStatus('correct');
-      setFeedback(lessonData.explanation);
+      setFeedback(lessonData.explanation || '¡Excelente movimiento!');
       confetti({ particleCount: 200, spread: 90, origin: { y: 0.5 }, colors: ['#4ade80', '#818cf8', '#facc15'] });
       saveProgress();
     } else {
       setStatus('wrong');
-      setFeedback('Movimiento válido, pero no resuelve el problema táctico. Intenta de nuevo.');
+      setFeedback('Movimiento válido, pero no es la solución del puzzle.');
+      
+      // Regresa el tablero a la posición original del puzzle después de 1.5s
       setTimeout(() => {
-        if (lessonData) {
-          setGame(new Chess(lessonData.fen));
-          setStatus('idle');
-          setFeedback('');
-          setLastMoveSquares({});
-        }
-      }, 2000);
+        setGame(new Chess(sanitizeFEN(lessonData.fen)));
+        setStatus('idle');
+        setFeedback('');
+        setLastMoveSquares({});
+      }, 1500);
     }
-    return true;
+
+    return true; // Retorna verdadero: La pieza se queda en su lugar
   }
 
   const saveProgress = async () => {
     try {
       const token = Cookies.get('access_token');
       if (!token) return;
-      const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
-
       await fetch(`${API_URL}/api/v1/chess/progress`, {
         method: 'POST',
-        headers: { 'Authorization': safeToken, 'Content-Type': 'application/json' },
+        headers: { 
+          'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`, 
+          'Content-Type': 'application/json' 
+        },
         body: JSON.stringify({ lesson_id: lessonId, status: 'completed' })
       });
     } catch (error) {
@@ -192,7 +177,7 @@ function PracticeArena() {
 
   const handleReset = () => {
     if (lessonData) {
-      setGame(new Chess(lessonData.fen));
+      setGame(new Chess(sanitizeFEN(lessonData.fen)));
       setStatus(lessonData.solution === 'FREE_PLAY' ? 'playing' : 'idle');
       setFeedback('');
       setLastMoveSquares({});
@@ -206,6 +191,7 @@ function PracticeArena() {
     }
   };
 
+  // --- RENDERIZADO VISUAL ---
   if (isLoading) {
     return (
       <div className="min-h-screen bg-[#0B0F19] flex flex-col items-center justify-center text-indigo-500">
@@ -220,10 +206,7 @@ function PracticeArena() {
       <div className="min-h-screen bg-[#0B0F19] flex flex-col items-center justify-center text-white">
         <Target size={64} className="text-slate-700 mb-6" />
         <h2 className="text-2xl font-bold mb-2">Lección no encontrada</h2>
-        <p className="text-slate-500 mb-8">El código de este puzzle no existe o ha expirado en el servidor.</p>
-        <Link href="/dashboard/chess" className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold transition-colors">
-          Volver al Lobby
-        </Link>
+        <Link href="/dashboard/chess" className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold transition-colors">Volver al Lobby</Link>
       </div>
     );
   }
@@ -237,6 +220,7 @@ function PracticeArena() {
 
   return (
     <div className="min-h-screen bg-[#0B0F19] text-slate-100 font-sans flex flex-col md:flex-row">
+      {/* PANEL IZQUIERDO (INSTRUCCIONES) */}
       <div className="w-full md:w-[400px] lg:w-[450px] p-6 md:p-8 flex flex-col border-b md:border-b-0 md:border-r border-slate-800 bg-slate-900/50 shadow-2xl z-20 overflow-y-auto">
         <Link href="/dashboard/chess" className="inline-flex items-center gap-2 text-slate-500 hover:text-white mb-8 transition-colors font-bold text-sm bg-slate-800/50 self-start px-4 py-2 rounded-lg border border-slate-700/50">
           <ArrowLeft size={16} /> Salir al Menú
@@ -244,7 +228,7 @@ function PracticeArena() {
 
         <div className="flex-1">
           <div className={`inline-block px-3 py-1 rounded-full border text-[10px] font-black uppercase tracking-widest mb-4 ${isFreePlay ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30'}`}>
-            {isFreePlay ? 'Modo: Juego Interactivo' : 'Práctica Táctica'}
+            {isFreePlay ? 'Modo: Juego Interactivo vs IA' : 'Práctica Táctica'}
           </div>
           
           <h1 className="text-3xl lg:text-4xl font-black text-white mb-6 leading-tight tracking-tight">
@@ -292,6 +276,7 @@ function PracticeArena() {
         </div>
       </div>
 
+      {/* PANEL DERECHO (TABLERO VISUAL) */}
       <div className="flex-1 bg-[#0B0F19] flex items-center justify-center p-4 md:p-8 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent pointer-events-none"></div>
         
@@ -303,12 +288,11 @@ function PracticeArena() {
               id="PracticeArenaBoard"
               position={game.fen()} 
               onPieceDrop={onDrop}
-              animationDuration={250}
+              animationDuration={200}
               customDarkSquareStyle={{ backgroundColor: '#475569' }} 
               customLightSquareStyle={{ backgroundColor: '#cbd5e1' }} 
               customSquareStyles={customSquareStyles}
               arePiecesDraggable={status !== 'correct'}
-              customDropSquareStyle={{ boxShadow: 'inset 0 0 1px 4px rgba(255, 255, 0, 0.5)' }} 
             />
           </div>
         </div>
