@@ -9,11 +9,6 @@
  * ==============================================================================
  */
 
-// 🔥 DESTRUCTOR DE CACHÉ DE VERCEL 🔥
-export const dynamic = 'force-dynamic';
-export const fetchCache = 'force-no-store';
-export const revalidate = 0; 
-
 import React, { useState, useEffect, Suspense, useRef, useMemo } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Chess, type Square } from 'chess.js';
@@ -51,11 +46,10 @@ function PracticeArena() {
   const [isLoading, setIsLoading] = useState(true);
   const [lastMoveSquares, setLastMoveSquares] = useState<{from?: string, to?: string}>({});
 
-  // 🔥 SOLUCIÓN MAESTRA: Aislar el motor de ajedrez de los re-renders de React
+  // 🔥 SOLUCIÓN MAESTRA: Aislar el motor de ajedrez
   const engine = useRef(new Chess()); 
-  const [fen, setFen] = useState("start"); // Solo usamos string para dibujar el tablero visual
+  const [fen, setFen] = useState("start"); 
   
-  // Engañamos a TypeScript para que no se queje de los props personalizados
   const SafeChessboard = Chessboard as any;
 
   useEffect(() => {
@@ -73,10 +67,9 @@ function PracticeArena() {
         if (res.ok) {
           const data = await res.json();
           setLessonData(data);
-          // Cargamos el motor de forma segura
           const safeFen = sanitizeFEN(data.fen);
           engine.current.load(safeFen);
-          setFen(engine.current.fen()); // Le decimos al tablero visual qué dibujar
+          setFen(engine.current.fen());
         }
       } catch (error) {
         console.error("Error de conexión:", error);
@@ -87,7 +80,6 @@ function PracticeArena() {
     fetchLesson();
   }, [lessonId, router]);
 
-  // Vigía de errores para encender la guía
   useEffect(() => {
     if (mistakes >= 3 && lessonData?.solution !== 'FREE_PLAY') {
       setShowGuide(true);
@@ -100,20 +92,19 @@ function PracticeArena() {
     if (engine.current.isGameOver() || status === 'correct' || status === 'gameover') return false;
 
     const moveAttempt = { from: sourceSquare, to: targetSquare, promotion: 'q' };
-
-    // 1. Intentar el movimiento en el motor aislado
     let moveResult = null;
+    
     try {
       moveResult = engine.current.move(moveAttempt);
     } catch (e) {
       return false; // Ilegal, rebota
     }
 
-    if (moveResult === null) return false; // Ilegal, rebota
+    if (moveResult === null) return false;
 
-    // 2. MODO JUEGO LIBRE (IA)
+    // MODO JUEGO LIBRE (IA)
     if (lessonData?.solution === 'FREE_PLAY') {
-      setFen(engine.current.fen()); // Actualiza tablero visual
+      setFen(engine.current.fen());
       setLastMoveSquares({ from: sourceSquare, to: targetSquare });
       setFeedback('La IA está pensando...');
 
@@ -128,7 +119,7 @@ function PracticeArena() {
         const moves = engine.current.moves();
         if (moves.length > 0) {
           const botMove = engine.current.move(moves[Math.floor(Math.random() * moves.length)]);
-          setFen(engine.current.fen()); // Actualiza tablero tras jugada de IA
+          setFen(engine.current.fen());
           if (botMove && typeof botMove === 'object') {
             setLastMoveSquares({ from: botMove.from, to: botMove.to });
           }
@@ -142,7 +133,7 @@ function PracticeArena() {
       return true;
     }
 
-    // 3. MODO PUZZLE ESTRICTO (Smart Validation)
+    // MODO PUZZLE ESTRICTO
     const moveUCI = sourceSquare + targetSquare;
     const moveSAN = moveResult.san;
 
@@ -157,26 +148,24 @@ function PracticeArena() {
       return true;
     } else {
       // ❌ INCORRECTO
-      engine.current.undo(); // Deshacemos el movimiento en el motor para que no se arruine
+      engine.current.undo();
       setMistakes(prev => prev + 1);
       setStatus('wrong');
       setFeedback('Movimiento incorrecto. Analiza bien el tablero.');
-      setFen(engine.current.fen()); // Forzamos sync para el rebote visual
+      setFen(engine.current.fen());
       return false; 
     }
   }
 
-  // Estilos dinámicos (Pistas y último movimiento)
+  // Estilos dinámicos
   const finalSquareStyles = useMemo(() => {
     const styles: Record<string, React.CSSProperties> = {};
     
-    // Resaltar último movimiento libre (Amarillo)
     if (lastMoveSquares.from && lastMoveSquares.to) {
       styles[lastMoveSquares.from] = { backgroundColor: 'rgba(255, 255, 0, 0.4)' };
       styles[lastMoveSquares.to] = { backgroundColor: 'rgba(255, 255, 0, 0.4)' };
     }
 
-    // Dibujar Guía de Ayuda (Verde Esmeralda)
     if (showGuide && lessonData?.solution && lessonData.solution !== 'FREE_PLAY') {
       const fromSq = lessonData.solution.substring(0, 2);
       const toSq = lessonData.solution.substring(2, 4);
@@ -232,7 +221,6 @@ function PracticeArena() {
 
   return (
     <div className="min-h-screen bg-[#0B0F19] text-slate-100 font-sans flex flex-col md:flex-row">
-      {/* PANEL IZQUIERDO */}
       <div className="w-full md:w-[400px] lg:w-[450px] p-6 md:p-8 flex flex-col border-b md:border-b-0 md:border-r border-slate-800 bg-slate-900/80 shadow-2xl z-20 overflow-y-auto">
         <Link href="/dashboard/chess" className="inline-flex items-center gap-2 text-slate-500 hover:text-white mb-8 font-bold text-sm bg-slate-800/50 self-start px-4 py-2 rounded-lg border border-slate-700/50">
           <ArrowLeft size={16} /> Salir al Menú
@@ -275,7 +263,6 @@ function PracticeArena() {
           </div>
         </div>
 
-        {/* BOTONERA */}
         <div className="mt-8 pt-6 border-t border-slate-800 space-y-3 shrink-0">
           {status === 'correct' || status === 'gameover' ? (
             <button onClick={() => router.push('/dashboard/chess')} className="w-full py-4 bg-gradient-to-r from-emerald-500 to-emerald-600 text-slate-950 rounded-xl font-black text-sm uppercase shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
@@ -296,7 +283,6 @@ function PracticeArena() {
         </div>
       </div>
 
-      {/* PANEL DERECHO (TABLERO TITANIUM) */}
       <div className="flex-1 bg-[#0F1523] flex items-center justify-center p-4 md:p-8 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/10 via-transparent to-transparent pointer-events-none"></div>
         <div className="relative z-10 w-full max-w-[600px] lg:max-w-[750px] aspect-square">
@@ -307,10 +293,8 @@ function PracticeArena() {
               position={fen} 
               onPieceDrop={onDrop}
               animationDuration={300}
-              
               customDarkSquareStyle={{ backgroundColor: '#475569' }}
               customLightSquareStyle={{ backgroundColor: '#e2e8f0' }}
-              
               customSquareStyles={finalSquareStyles}
               arePiecesDraggable={status !== 'correct' && status !== 'gameover'}
             />
