@@ -49,7 +49,6 @@ function PracticeArena() {
   // 🔥 SOLUCIÓN MAESTRA: Aislar el motor de ajedrez
   const engine = useRef(new Chess()); 
   const [fen, setFen] = useState("start"); 
-  
   const SafeChessboard = Chessboard as any;
 
   useEffect(() => {
@@ -160,7 +159,6 @@ function PracticeArena() {
   // Estilos dinámicos
   const finalSquareStyles = useMemo(() => {
     const styles: Record<string, React.CSSProperties> = {};
-    
     if (lastMoveSquares.from && lastMoveSquares.to) {
       styles[lastMoveSquares.from] = { backgroundColor: 'rgba(255, 255, 0, 0.4)' };
       styles[lastMoveSquares.to] = { backgroundColor: 'rgba(255, 255, 0, 0.4)' };
@@ -172,7 +170,6 @@ function PracticeArena() {
       styles[fromSq] = { boxShadow: 'inset 0 0 0 4px #34d399' };
       styles[toSq] = { boxShadow: 'inset 0 0 0 4px #34d399' };
     }
-    
     return styles;
   }, [showGuide, lessonData, lastMoveSquares]);
 
@@ -220,8 +217,14 @@ function PracticeArena() {
   const isFreePlay = lessonData.solution === 'FREE_PLAY';
 
   return (
-    <div className="min-h-screen bg-[#0B0F19] text-slate-100 font-sans flex flex-col md:flex-row">
-      <div className="w-full md:w-[400px] lg:w-[450px] p-6 md:p-8 flex flex-col border-b md:border-b-0 md:border-r border-slate-800 bg-slate-900/80 shadow-2xl z-20 overflow-y-auto">
+    <div className="min-h-screen bg-[#0B0F19] text-slate-100 font-sans flex flex-col md:flex-row relative">
+      
+      {/* 🔥 EL CHIVATO: Si no ves esto rojo en tu pantalla, Vercel te está engañando 🔥 */}
+      <div className="absolute top-0 left-0 w-full bg-red-600 text-white text-center text-xl font-black py-2 z-50">
+        NUEVA VERSIÓN TITANIUM ACTIVA
+      </div>
+
+      <div className="w-full md:w-[400px] lg:w-[450px] p-6 md:p-8 pt-16 flex flex-col border-b md:border-b-0 md:border-r border-slate-800 bg-slate-900/80 shadow-2xl z-20 overflow-y-auto">
         <Link href="/dashboard/chess" className="inline-flex items-center gap-2 text-slate-500 hover:text-white mb-8 font-bold text-sm bg-slate-800/50 self-start px-4 py-2 rounded-lg border border-slate-700/50">
           <ArrowLeft size={16} /> Salir al Menú
         </Link>
