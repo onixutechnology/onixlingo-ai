@@ -308,7 +308,6 @@ function PracticeArena() {
               onPieceDrop={onDrop}
               animationDuration={300}
               
-              /* 🔥 ESTILOS NATIVOS TITANIUM 🔥 */
               customDarkSquareStyle={{ backgroundColor: '#475569' }}
               customLightSquareStyle={{ backgroundColor: '#e2e8f0' }}
               
