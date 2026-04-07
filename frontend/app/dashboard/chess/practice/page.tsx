@@ -9,8 +9,10 @@
  * ==============================================================================
  */
 
+// 🔥 DESTRUCTOR DE CACHÉ DE VERCEL 🔥
 export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
+export const revalidate = 0; 
 
 import React, { useState, useEffect, Suspense, useRef, useMemo } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
@@ -127,11 +129,9 @@ function PracticeArena() {
         if (moves.length > 0) {
           const botMove = engine.current.move(moves[Math.floor(Math.random() * moves.length)]);
           setFen(engine.current.fen()); // Actualiza tablero tras jugada de IA
-          
           if (botMove && typeof botMove === 'object') {
-             setLastMoveSquares({ from: botMove.from, to: botMove.to });
+            setLastMoveSquares({ from: botMove.from, to: botMove.to });
           }
-          
           setFeedback('Tu turno.');
           if (engine.current.isGameOver()) {
             setStatus('gameover');
