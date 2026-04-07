@@ -6,6 +6,7 @@ import jwt
 
 from fastapi import APIRouter, Depends, HTTPException, status, Response
 from sqlalchemy.orm import Session
+from sqlalchemy import or_  # 🚀 IMPORTANTE: Para permitir búsqueda múltiple
 from pydantic import BaseModel, EmailStr
 
 from app.database import get_db
@@ -31,7 +32,7 @@ class UserCreate(BaseModel):
     password: str
 
 class UserLogin(BaseModel):
-    username: str
+    username: str # El frontend manda "username", pero ahora puede contener un correo
     password: str
 
 class ForgotPasswordRequest(BaseModel):
@@ -69,8 +70,13 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
 
 @router.post("/login")
 def login(user: UserLogin, response: Response, db: Session = Depends(get_db)):
-    # 1. Buscar usuario
-    db_user = db.query(User).filter(User.username == user.username).first()
+    # 1. Buscar usuario 🚀 (AHORA ACEPTA USERNAME O EMAIL)
+    db_user = db.query(User).filter(
+        or_(
+            User.username == user.username,
+            User.email == user.username
+        )
+    ).first()
     
     # 2. Verificar password
     if not db_user or not verify_password(user.password, db_user.hashed_password):
@@ -79,7 +85,7 @@ def login(user: UserLogin, response: Response, db: Session = Depends(get_db)):
     # 3. Generar Token JWT
     access_token = create_access_token(subject=db_user.username)
 
-    # 4. 🍪 GUARDAR COOKIE (CORREGIDO PARA RENDER -> LOCALHOST/VERCEL)
+    # 4. 🍪 GUARDAR COOKIE
     response.set_cookie(
         key=COOKIE_NAME,
         value=f"Bearer {access_token}",
@@ -94,7 +100,7 @@ def login(user: UserLogin, response: Response, db: Session = Depends(get_db)):
     progress_map = {}
     if db_user.progress:
         progress_map = {p.lesson_id: {"stars": p.stars} for p in db_user.progress}
-    
+        
     return {
         "message": "Autenticado", 
         "username": db_user.username,
@@ -115,6 +121,7 @@ def logout(response: Response):
     )
     return {"message": "Sesión cerrada correctamente"}
 
+
 # ==============================================================================
 # --- ENDPOINTS RECUPERACIÓN DE CONTRASEÑA (RESEND) ---
 # ==============================================================================
@@ -122,7 +129,6 @@ def logout(response: Response):
 @router.post("/forgot-password", status_code=200)
 def forgot_password(request: ForgotPasswordRequest, db: Session = Depends(get_db)):
     """Genera un token de un solo uso y envía el correo mediante Resend"""
-    
     # 1. Buscar si el usuario existe por correo
     user = db.query(User).filter(User.email == request.email).first()
     
@@ -131,7 +137,6 @@ def forgot_password(request: ForgotPasswordRequest, db: Session = Depends(get_db
         return {"message": "Si el correo está registrado, recibirás un enlace de recuperación."}
     
     # 2. Generar un JWT temporal (Expira en 15 minutos)
-    # Usamos el ID del usuario como 'subject' para identificarlo al regresar
     reset_token = create_access_token(
         subject=str(user.id), 
         expires_delta=timedelta(minutes=15)
@@ -139,7 +144,6 @@ def forgot_password(request: ForgotPasswordRequest, db: Session = Depends(get_db
     
     # 3. Enviar el correo
     send_password_reset_email(to_email=user.email, token=reset_token)
-    
     return {"message": "Si el correo está registrado, recibirás un enlace de recuperación."}
 
 
@@ -147,7 +151,7 @@ def forgot_password(request: ForgotPasswordRequest, db: Session = Depends(get_db
 def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db)):
     """Valida el token mágico y cambia la contraseña en la DB"""
     try:
-        # 1. Decodificar el token usando tu clave secreta de Settings
+        # 1. Decodificar el token
         payload = jwt.decode(
             request.token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM]
         )
@@ -160,12 +164,12 @@ def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db))
     except jwt.PyJWTError:
         raise HTTPException(status_code=400, detail="Token inválido o corrupto")
 
-    # 2. Buscar al usuario por el ID recuperado del token
+    # 2. Buscar al usuario
     user = db.query(User).filter(User.id == int(user_id)).first()
     if not user:
         raise HTTPException(status_code=404, detail="Usuario no encontrado")
 
-    # 3. Hashear la nueva contraseña y guardar en la base de datos (Neon)
+    # 3. Hashear la nueva contraseña y guardar
     user.hashed_password = get_password_hash(request.new_password)
     db.commit()
 

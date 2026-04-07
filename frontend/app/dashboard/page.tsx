@@ -5,7 +5,7 @@
  * ONIXLINGO LMS DASHBOARD - STUDENT EDITION (FREE TIER)
  * ==============================================================================
  * RUTA: /dashboard/page.tsx
- * ESTADO: Production Ready (Fix Auth Cookies, Lesson Lock & Cache Busting)
+ * ESTADO: Production Ready (Fix Auth Cookies Cross-Origin)
  * ==============================================================================
  */
 
@@ -127,19 +127,14 @@ const HeaderStats = ({ xp, streak }: { xp: number, streak: number }) => (
 
 const MobileBottomNav = () => (
   <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 px-6 py-3 flex justify-between items-center z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] pb-safe">
-    {/* 1. INICIO */}
     <Link href="/dashboard" className="flex flex-col items-center gap-1 text-indigo-600 hover:text-indigo-700">
       <Home size={24} strokeWidth={2.5} />
       <span className="text-[10px] font-bold">Inicio</span>
     </Link>
-
-    {/* 2. VOCABULARIO */}
     <Link href="/dashboard/vocabulary" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
       <BookA size={24} />
       <span className="text-[10px] font-bold">Vocab</span>
     </Link>
-
-    {/* 3. AJEDREZ (Botón Central Gigante) */}
     <Link href="/dashboard/chess" className="group relative">
       <div className="w-14 h-14 -mt-8 bg-emerald-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-emerald-500/40 border-4 border-slate-50 cursor-pointer transform group-active:scale-95 transition-all">
         <Crown size={28} fill="currentColor" />
@@ -148,14 +143,10 @@ const MobileBottomNav = () => (
         Jugar
       </span>
     </Link>
-
-    {/* 4. LOGROS */}
     <Link href="/dashboard" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
       <Trophy size={24} />
       <span className="text-[10px] font-bold">Logros</span>
     </Link>
-
-    {/* 5. PERFIL */}
     <Link href="/dashboard/profile" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
       <User size={24} />
       <span className="text-[10px] font-bold">Perfil</span>
@@ -173,7 +164,6 @@ const TimelineNode = ({ id, title, status, stars, index, isLast, color, onClick 
       {!isLast && (
         <div className="absolute left-[2.2rem] md:left-[2.7rem] top-[5rem] bottom-[-2rem] w-[3px] bg-slate-100 z-0 rounded-full"></div>
       )}
-
       <div className="relative z-10 mr-4 md:mr-10 flex-shrink-0 pt-2">
         <button
           onClick={() => status !== 'locked' && onClick(id)}
@@ -220,7 +210,6 @@ const TimelineNode = ({ id, title, status, stars, index, isLast, color, onClick 
               {description}
             </p>
           </div>
-
           <div className="flex flex-col items-end gap-3">
             {status === 'completed' && (
               <div className="flex gap-1 bg-amber-50 px-2 md:px-3 py-2 rounded-xl border border-amber-100">
@@ -295,7 +284,7 @@ export default function DashboardPage() {
     }
   }, [mode, router]);
 
-  // 2. CARGA DE DATOS REALES DEL BACKEND TITANIUM CON "CACHE & SYNC FIX" 🚀
+  // 2. CARGA DE DATOS REALES DEL BACKEND TITANIUM CON "CACHE & SYNC FIX" Y CROSS-ORIGIN COOKIES 🚀
   useEffect(() => {
     setIsMounted(true);
     const user = localStorage.getItem('currentUser');
@@ -304,13 +293,13 @@ export default function DashboardPage() {
 
     if (user && token) {
       const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
-      
       fetch(`${BASE_URL}/api/v1/progress/map`, {
-        cache: 'no-store', // 🚀 BUST DE CACHÉ: Ignora la memoria interna de Next.js
+        cache: 'no-store',
+        credentials: 'include', // 🔥 SOLUCIÓN CRÍTICA: Permite enviar cookies en peticiones cruzadas
         headers: {
           'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`,
           'Content-Type': 'application/json',
-          'Cache-Control': 'no-cache, no-store, must-revalidate', // 🚀 BUST DE CACHÉ: Obliga al navegador a pedir datos frescos
+          'Cache-Control': 'no-cache, no-store, must-revalidate', 
           'Pragma': 'no-cache'
         }
       })
@@ -347,29 +336,21 @@ export default function DashboardPage() {
 
   const allLessonsFlat = useMemo(() => CURRICULUM.flatMap(section => section.lessons), []);
 
-  // 🔎 FUNCIÓN CORREGIDA: getLessonState (Auto-unlock 1ra lección)
   const getLessonState = (lessonId: string): LessonStatus => {
     if (!isMounted) return 'locked';
-
     const firstLessonId = CURRICULUM[0]?.lessons[0]?.id;
-
     if (!dashboardData) {
       return lessonId === firstLessonId ? 'active' : 'locked';
     }
-
     const lessonNode = dashboardData.standard?.find((l: any) => l.lesson_id === lessonId);
-
     if (lessonNode) {
       if (lessonNode.status === 'completed') return 'completed';
       if (lessonNode.status === 'active' || lessonNode.is_unlocked) return 'active';
     }
-
     if (lessonId === firstLessonId && !lessonNode) return 'active';
-
     return 'locked';
   };
 
-  // 🔎 FUNCIÓN RESTAURADA: getStars
   const getStars = (lessonId: string) => {
     if (!dashboardData) return 0;
     const lessonNode = dashboardData.standard?.find((l: any) => l.lesson_id === lessonId);
@@ -396,11 +377,11 @@ export default function DashboardPage() {
     if (!currentUser) return alert("Error: No hay usuario activo.");
     const token = Cookies.get('access_token');
     const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
-    
     try {
       const response = await fetch(`${BASE_URL}/api/v1/debug/unlock-all/${currentUser}`, {
         method: 'POST',
-        cache: 'no-store', // 🚀 BUST DE CACHÉ
+        cache: 'no-store',
+        credentials: 'include', // 🔥 SOLUCIÓN CRÍTICA TAMBIÉN AQUÍ
         headers: {
           'Content-Type': 'application/json',
           'Authorization': token || '',
@@ -458,7 +439,6 @@ export default function DashboardPage() {
 
         <div className="flex items-center gap-3 md:gap-6">
           <HeaderStats xp={userStats.xp} streak={userStats.streak} />
-          
           <Link
             href="/dashboard/vocabulary"
             className="hidden md:flex items-center gap-2 bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
@@ -466,7 +446,6 @@ export default function DashboardPage() {
             <BookA size={18} className="text-slate-400 group-hover:text-indigo-500 transition-colors" />
             <span className="text-xs md:text-sm font-bold">Vocabulario</span>
           </Link>
-
           <Link
             href="/dashboard/chess"
             className="hidden md:flex items-center gap-2 bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-emerald-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
@@ -474,7 +453,6 @@ export default function DashboardPage() {
             <Crown size={18} className="text-slate-400 group-hover:text-emerald-500 transition-colors" />
             <span className="text-xs md:text-sm font-bold">Ajedrez</span>
           </Link>
-
           <Link
             href="/dashboard"
             className="hidden md:flex items-center gap-2 bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
@@ -482,7 +460,6 @@ export default function DashboardPage() {
             <Trophy size={18} className="text-slate-400 group-hover:text-indigo-500 transition-colors" />
             <span className="text-xs md:text-sm font-bold">Logros</span>
           </Link>
-
           <Link
             href="/dashboard/profile"
             className="hidden md:flex items-center gap-2 bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
@@ -490,7 +467,6 @@ export default function DashboardPage() {
             <User size={18} className="text-slate-400 group-hover:text-indigo-500 transition-colors" />
             <span className="text-xs md:text-sm font-bold">Perfil</span>
           </Link>
-
           <button
             onClick={toggleProMode}
             className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-3 py-2 md:px-4 md:py-2.5 rounded-xl transition-all shadow-lg hover:shadow-indigo-500/20 active:scale-95"
@@ -498,9 +474,7 @@ export default function DashboardPage() {
             <Briefcase size={18} className="text-indigo-400" />
             <span className="text-xs md:text-sm font-bold">Modo Pro</span>
           </button>
-
           <div className="h-8 w-[1px] bg-slate-200 hidden md:block"></div>
-
           {currentUser ? (
             <div className="hidden md:flex items-center gap-4 cursor-pointer hover:bg-white p-2 rounded-full md:pr-6 border border-transparent hover:border-slate-200 transition-all group" onClick={handleLogout}>
               <div className="w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold text-sm shadow-md group-hover:bg-indigo-600 transition-colors">
@@ -520,7 +494,6 @@ export default function DashboardPage() {
             <p className="text-base md:text-lg text-slate-500 max-w-2xl leading-relaxed mb-6">
               Continúa tu ruta de aprendizaje. Estás a <span className="font-bold text-indigo-600">3 módulos</span> de tu próxima certificación oficial.
             </p>
-
             <button
               onClick={handleUnlockAll}
               className="bg-red-600 text-white font-black py-2 px-4 md:py-3 md:px-6 rounded-xl shadow-lg border-2 border-red-500 hover:bg-red-700 hover:scale-105 transition-all flex items-center gap-3"
@@ -549,7 +522,6 @@ export default function DashboardPage() {
                       <p className="text-xs md:text-sm text-slate-500 font-medium hidden md:block">{section.description}</p>
                     </div>
                   </div>
-
                   <div className="pl-0 md:pl-4">
                     {section.lessons.map((lesson, lIdx) => (
                       <TimelineNode
@@ -583,7 +555,6 @@ export default function DashboardPage() {
                 POWERED BY ETS®
               </span>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <CertCard title="Listening Comprehension" desc="Audio y conversaciones reales." icon={Headphones} href="/lesson/toeic_listening" active={true} color="indigo" />
               <CertCard title="Reading Analysis" desc="Gramática y comprensión lectora." icon={BookOpen} href="/lesson/toeic_reading" color="emerald" />
