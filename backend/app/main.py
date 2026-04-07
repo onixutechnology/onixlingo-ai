@@ -15,6 +15,7 @@ from app.core.settings import settings
 from app.database import create_db, get_db
 from app.services import user_service
 from app.db import models # 🚀 MAGIA: Obligamos a SQLAlchemy a leer las tablas
+from app.datachess.seed_chess import generate_lessons # 🚀 IMPORTAMOS EL SCRIPT DE INYECCIÓN
 
 # --- IMPORTAMOS LOS ROUTERS ---
 from app.api.v1.endpoints import auth, lessons, progress, ai
@@ -43,6 +44,12 @@ async def lifespan(app: FastAPI):
     try:
         create_db()
         logger.info("✅ [DB] Base de datos conectada y esquemas sincronizados.")
+        
+        # 🔥 LA MAGIA OCURRE AQUÍ: Inyección automática sin usar la consola de Render
+        logger.info("⏳ [DB] Verificando e inyectando lecciones de ajedrez...")
+        generate_lessons()
+        logger.info("✅ [DB] Ajedrez sincronizado y listo para jugar.")
+        
     except Exception as e:
         logger.critical(f"❌ [DB] Error crítico al conectar DB: {e}")
     yield
