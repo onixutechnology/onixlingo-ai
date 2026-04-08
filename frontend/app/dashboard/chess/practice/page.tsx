@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Cookies from 'js-cookie';
 import confetti from 'canvas-confetti';
-import Chessboard from 'chessboardjsx';
 import { Chess, type Move, type Square } from 'chess.js';
+import dynamic from 'next/dynamic';
 import {
   AlertTriangle,
   ArrowLeft,
@@ -20,6 +20,10 @@ import {
   Target,
   XCircle,
 } from 'lucide-react';
+
+// 🔥 BLINDAJE TOTAL: Importación dinámica sin SSR y saltando TypeScript estricto
+const DynamicChessboard = dynamic(() => import('chessboardjsx'), { ssr: false });
+const SafeChessboard = DynamicChessboard as any;
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
 const FALLBACK_FEN = '3k4/8/8/3p4/8/8/8/3R2K1 w - - 0 1';
@@ -104,11 +108,9 @@ function PracticeArena() {
 
     try {
       const nextGame = new Chess();
-
       if (safeFen !== 'start') {
         nextGame.load(safeFen);
       }
-
       gameRef.current = nextGame;
       setFen(nextGame.fen());
       setStatus('playing');
@@ -479,8 +481,8 @@ function PracticeArena() {
         <div className="relative z-10 w-full max-w-[600px] lg:max-w-[750px] aspect-square">
           <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500/20 via-slate-800 to-emerald-500/20 rounded-xl blur-2xl opacity-50 pointer-events-none" />
 
-          <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B] p-2">
-            <Chessboard
+          <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B] p-2 flex justify-center items-center">
+            <SafeChessboard
               width={560}
               position={fen}
               onDrop={onDrop}
