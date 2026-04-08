@@ -3,7 +3,7 @@
 import React, { useState, useEffect, Suspense, useRef, useMemo } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Chess, type Square } from 'chess.js';
-import { Chessboard } from 'react-chessboard'; // <-- VOLVEMOS A LA IMPORTACIÓN NATIVA
+import { Chessboard } from 'react-chessboard';
 import confetti from 'canvas-confetti';
 import Link from 'next/link';
 import Cookies from 'js-cookie';
@@ -272,11 +272,9 @@ function PracticeArena() {
           <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500/20 via-slate-800 to-emerald-500/20 rounded-xl blur-2xl opacity-50 pointer-events-none"></div>
           
           <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B]">
-            {/* 🔥 LA SOLUCIÓN NUCLEAR: 'key' obliga a destruir y crear el tablero limpio 🔥 */}
             {isBoardReady && lessonData ? (
               <Chessboard 
                 key={`board-${lessonData.id}-${fen}`} 
-                id={`Board-${lessonData.id}`}
                 position={fen} 
                 onPieceDrop={onDrop}
                 animationDuration={300}
