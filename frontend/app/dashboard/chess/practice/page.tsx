@@ -7,6 +7,8 @@ import Cookies from 'js-cookie';
 import confetti from 'canvas-confetti';
 import { Chess, type Move, type Square } from 'chess.js';
 import dynamic from 'next/dynamic';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import {
   AlertTriangle,
   ArrowLeft,
@@ -504,14 +506,16 @@ function PracticeArena() {
 
 export default function PracticePage() {
   return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen bg-[#0B0F19] flex items-center justify-center text-indigo-500">
-          <Loader2 className="animate-spin" size={48} />
-        </div>
-      }
-    >
-      <PracticeArena />
-    </Suspense>
+    <DndProvider backend={HTML5Backend}>
+      <Suspense
+        fallback={
+          <div className="min-h-screen bg-[#0B0F19] flex items-center justify-center text-indigo-500">
+            <Loader2 className="animate-spin" size={48} />
+          </div>
+        }
+      >
+        <PracticeArena />
+      </Suspense>
+    </DndProvider>
   );
 }
