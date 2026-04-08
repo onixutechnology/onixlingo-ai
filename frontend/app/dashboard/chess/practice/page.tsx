@@ -5,14 +5,14 @@
  * ONIXLINGO CHESS ACADEMY - ENTERPRISE ARENA
  * ==============================================================================
  * RUTA: /dashboard/chess/practice/page.tsx
- * ESTADO: Production Ready (Smart Guide, Auto-Snapback, AI Opponent, Titanium UI)
+ * ESTADO: Production Ready (React 19 / Next 16 Fix)
  * ==============================================================================
  */
 
 import React, { useState, useEffect, Suspense, useRef, useMemo } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Chess, type Square } from 'chess.js';
-import dynamic from 'next/dynamic';
+import { Chessboard } from 'react-chessboard';
 import confetti from 'canvas-confetti';
 import Link from 'next/link';
 import Cookies from 'js-cookie';
@@ -20,8 +20,6 @@ import {
   ArrowLeft, Lightbulb, RotateCcw, CheckCircle2, 
   XCircle, HelpCircle, ChevronRight, Loader2, Target, Bot, AlertTriangle
 } from 'lucide-react';
-
-const Chessboard = dynamic(() => import('react-chessboard').then((mod) => mod.Chessboard), { ssr: false });
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
 
@@ -51,6 +49,7 @@ function PracticeArena() {
   const engine = useRef(new Chess()); 
   const [fen, setFen] = useState("start"); 
   
+  // 🔥 EL SALVAVIDAS: Burlamos a TypeScript estricto de Next.js
   const SafeChessboard = Chessboard as any;
 
   useEffect(() => {
@@ -285,9 +284,10 @@ function PracticeArena() {
           <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500/20 via-slate-800 to-emerald-500/20 rounded-xl blur-2xl opacity-50 pointer-events-none"></div>
           
           <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B]">
-            {isBoardReady && lessonData ? (
+            {/* 🔥 LA SOLUCIÓN NUCLEAR + EL SALVAVIDAS 🔥 */}
+            {isBoardReady && fen !== "start" ? (
               <SafeChessboard 
-                key={`board-${lessonData.id}-${fen}`} 
+                key={fen} 
                 position={fen} 
                 onPieceDrop={onDrop}
                 animationDuration={300}
