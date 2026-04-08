@@ -1,10 +1,14 @@
 'use client';
 
-import { useState } from 'react';
-import { Chess } from 'chess.js';
-import { Chessboard } from 'react-chessboard';
-import { RefreshCw, Lightbulb } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Chess, type Square } from 'chess.js';
+import dynamic from 'next/dynamic';
+import { RefreshCw, Lightbulb, Loader2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+
+// 🔥 BLINDAJE: Importación dinámica sin SSR de la nueva librería
+const DynamicChessboard = dynamic(() => import('chessboardjsx'), { ssr: false });
+const SafeChessboard = DynamicChessboard as any;
 
 // Ejemplo de lección: "Mate en 1 con Torre"
 const LESSON_FEN = "8/8/8/8/8/5k2/8/R4K2 w - - 0 1"; 
@@ -12,38 +16,42 @@ const SOLUTION_MOVE = "Ra8#"; // Torre a a8 es mate
 
 export default function ChessTrainer() {
   const [game, setGame] = useState(new Chess(LESSON_FEN));
+  const [fen, setFen] = useState(LESSON_FEN);
   const [status, setStatus] = useState("Tu turno: Juegan Blancas");
   const [isCompleted, setIsCompleted] = useState(false);
+  
+  // Evitamos que el servidor de Next.js intente dibujar el tablero
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Truco para silenciar a TypeScript: Convertimos el componente a 'any'
-  // Esto hace que acepte CUALQUIER propiedad (como position o id) sin quejarse.
-  const SafeChessboard = Chessboard as any;
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
-  // Función para manejar cuando sueltas una pieza
-  function onDrop(sourceSquare: any, targetSquare: any) {
-    if (isCompleted) return false;
+  // Función para manejar cuando sueltas una pieza (Ajustada para chessboardjsx)
+  function onDrop({ sourceSquare, targetSquare }: { sourceSquare: Square; targetSquare: Square }) {
+    if (isCompleted) return;
 
     try {
       const gameCopy = new Chess(game.fen());
-      
       const move = gameCopy.move({
         from: sourceSquare,
         to: targetSquare, 
         promotion: 'q', 
       });
 
-      if (!move) return false;
+      if (!move) return; // Movimiento ilegal, la pieza regresa sola
 
       if (move.san === SOLUTION_MOVE || (gameCopy.isCheckmate() && SOLUTION_MOVE.includes('#'))) {
         setGame(gameCopy);
+        setFen(gameCopy.fen());
         handleSuccess();
-        return true;
       } else {
         setStatus("Movimiento válido, pero no es el mejor. ¡Intenta buscar el Mate!");
-        return false; 
+        // Forzamos el regreso visual si no es la solución
+        setFen(game.fen()); 
       }
     } catch (error) {
-      return false;
+      setFen(game.fen()); // Snapback en caso de error
     }
   }
 
@@ -54,14 +62,15 @@ export default function ChessTrainer() {
   };
 
   const resetGame = () => {
-    setGame(new Chess(LESSON_FEN));
+    const newGame = new Chess(LESSON_FEN);
+    setGame(newGame);
+    setFen(newGame.fen());
     setStatus("Tu turno: Juegan Blancas");
     setIsCompleted(false);
   };
 
   return (
     <div className="flex flex-col items-center w-full max-w-md mx-auto bg-white p-6 rounded-2xl shadow-xl border border-slate-200">
-      
       {/* Header */}
       <div className="flex justify-between items-center w-full mb-4">
         <h3 className="font-black text-slate-800 text-xl flex items-center gap-2">
@@ -73,15 +82,23 @@ export default function ChessTrainer() {
       </div>
 
       {/* Tablero */}
-      <div className="w-full aspect-square mb-6 border-4 border-slate-800 rounded-lg overflow-hidden shadow-2xl">
-        {/* Usamos SafeChessboard en lugar de Chessboard */}
-        <SafeChessboard 
-          position={game.fen()} 
-          onPieceDrop={onDrop}
-          animationDuration={200}
-          customDarkSquareStyle={{ backgroundColor: '#475569' }} 
-          customLightSquareStyle={{ backgroundColor: '#e2e8f0' }} 
-        />
+      <div className="w-full aspect-square mb-6 border-4 border-slate-800 rounded-lg overflow-hidden shadow-2xl bg-[#475569] flex items-center justify-center p-1">
+        {isMounted ? (
+          <SafeChessboard 
+            width={350}
+            position={fen} 
+            onDrop={onDrop}
+            boardStyle={{
+              borderRadius: '4px',
+              boxShadow: 'none',
+            }}
+            darkSquareStyle={{ backgroundColor: '#475569' }} 
+            lightSquareStyle={{ backgroundColor: '#e2e8f0' }} 
+            draggable={!isCompleted}
+          />
+        ) : (
+          <Loader2 className="animate-spin text-slate-300" size={48} />
+        )}
       </div>
 
       {/* Controles y Status */}
@@ -97,7 +114,6 @@ export default function ChessTrainer() {
           >
             <RefreshCw size={18} /> Reiniciar
           </button>
-          
           {!isCompleted && (
             <button className="px-4 py-3 bg-amber-100 hover:bg-amber-200 text-amber-700 font-bold rounded-xl transition-colors">
               <Lightbulb size={20} />
