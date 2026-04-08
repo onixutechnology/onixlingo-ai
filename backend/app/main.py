@@ -14,8 +14,8 @@ from sqlalchemy.orm import Session
 from app.core.settings import settings
 from app.database import create_db, get_db
 from app.services import user_service
-from app.db import models # 🚀 MAGIA: Obligamos a SQLAlchemy a leer las tablas
-from app.datachess.seed_chess import generate_lessons # 🚀 IMPORTAMOS EL SCRIPT DE INYECCIÓN
+from app.db import models 
+from app.datachess.seed_chess import generate_lessons 
 
 # --- IMPORTAMOS LOS ROUTERS ---
 from app.api.v1.endpoints import auth, lessons, progress, ai
@@ -24,15 +24,11 @@ from app.api import chess
 # 1. CARGA DE ENTORNO
 load_dotenv()
 
-# ==============================================================================
 # 🔐 CONFIGURACIÓN DE STRIPE
-# ==============================================================================
 stripe.api_key = os.getenv("STRIPE_API_KEY")
 ENDPOINT_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET")
 
-# ==============================================================================
 # ⚙️ CONFIGURACIÓN DEL CICLO DE VIDA (LIFESPAN)
-# ==============================================================================
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # --- STARTUP ---
@@ -44,21 +40,16 @@ async def lifespan(app: FastAPI):
     try:
         create_db()
         logger.info("✅ [DB] Base de datos conectada y esquemas sincronizados.")
-        
-        # 🔥 LA MAGIA OCURRE AQUÍ: Inyección automática sin usar la consola de Render
         logger.info("⏳ [DB] Verificando e inyectando lecciones de ajedrez...")
         generate_lessons()
         logger.info("✅ [DB] Ajedrez sincronizado y listo para jugar.")
-        
     except Exception as e:
         logger.critical(f"❌ [DB] Error crítico al conectar DB: {e}")
     yield
     # --- SHUTDOWN ---
     logger.info("🛑 [SYSTEM] Apagando sistema OnixLingo...")
 
-# ==============================================================================
 # 🚀 INICIALIZACIÓN DE LA APP
-# ==============================================================================
 app = FastAPI(
     title=settings.PROJECT_NAME,
     description="OnixLingo Enterprise LMS API",
@@ -67,15 +58,14 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# ==============================================================================
-# 🛡️ MIDDLEWARE CORS (CONFIGURACIÓN ESTRICTA + VERCEL PREVIEWS)
-# ==============================================================================
+# 🛡️ MIDDLEWARE CORS (REFORZADO PARA NUEVO DOMINIO)
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "https://onixlingo.onixu.company", 
     "https://www.onixlingo.onixu.company", 
-    "https://onixlingo-bckend.onrender.com" 
+    "https://onixlingo-bckend.onrender.com",
+    "https://onixlingo-ai.vercel.app" # Backup de Vercel
 ]
 
 app.add_middleware(
@@ -83,13 +73,12 @@ app.add_middleware(
     allow_origins=origins, 
     allow_origin_regex=r"https://.*\.vercel\.app", 
     allow_credentials=True, 
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"], # HEAD es vital para Render
     allow_headers=["*"],
+    expose_headers=["*"]
 )
 
-# ==============================================================================
 # 💳 ROUTER ESPECIAL: STRIPE WEBHOOK
-# ==============================================================================
 @app.post("/api/v1/webhooks/stripe", tags=["Payments"], include_in_schema=False)
 async def stripe_webhook(
     request: Request, 
@@ -116,7 +105,6 @@ async def stripe_webhook(
         session = event['data']['object']
         user_id_str = session.get("metadata", {}).get("userId")
         user_email = session.get("customer_details", {}).get("email")
-        
         logger.info(f"💰 [STRIPE] Pago recibido de: {user_email} (ID: {user_id_str})")
 
         if user_id_str:
@@ -132,30 +120,29 @@ async def stripe_webhook(
 
     return {"status": "success", "event_type": event['type']}
 
-# ==============================================================================
 # 🔗 CONEXIÓN DE RUTAS (ROUTERS)
-# ==============================================================================
 app.include_router(auth.router, prefix="/api/v1/auth", tags=["Authentication"])
 app.include_router(progress.router, prefix="/api/v1/progress", tags=["Analytics & Progress"])
 app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lessons"])
 app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI Engine"])
 app.include_router(chess.router, prefix="/api/v1", tags=["Chess Academy"])
 
-# ==============================================================================
-# 🛠️ UTILIDADES Y ROOT
-# ==============================================================================
+# 🛠️ UTILIDADES Y ROOT (HEALTH CHECK OPTIMIZADO PARA RENDER)
 @app.get("/", tags=["System"])
+@app.head("/", include_in_schema=False)
 def health_check():
     return {
         "system": "OnixLingo Enterprise Kernel",
         "status": "OPERATIONAL 🟢",
-        "version": "Titanium 8.0"
+        "version": "Titanium 8.0",
+        "domain_check": "Verified"
     }
 
 @app.get("/api/v1/voclessons/{lesson_id}", tags=["Lessons"])
 def get_voc_lesson(lesson_id: str):
     base_dir = Path(__file__).resolve().parent 
     file_path = base_dir / "voclessons" / "lessons" / f"{lesson_id}.json"
+    
     if file_path.exists():
         with open(file_path, "r", encoding="utf-8") as f:
             return json.load(f)
