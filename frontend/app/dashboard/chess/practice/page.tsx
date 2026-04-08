@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Cookies from 'js-cookie';
 import confetti from 'canvas-confetti';
-import { Chess, type Square, type Move } from 'chess.js';
+import { Chess, type Move, type Square } from 'chess.js';
 import { Chessboard } from 'react-chessboard';
 import {
   AlertTriangle,
@@ -66,6 +66,7 @@ function PracticeArena() {
   const mountedRef = useRef(true);
 
   const isFreePlay = lessonData?.solution === 'FREE_PLAY';
+  const SafeChessboard = Chessboard as any;
 
   useEffect(() => {
     mountedRef.current = true;
@@ -104,7 +105,11 @@ function PracticeArena() {
 
     try {
       const nextGame = new Chess();
-      if (safeFen !== 'start') nextGame.load(safeFen);
+
+      if (safeFen !== 'start') {
+        nextGame.load(safeFen);
+      }
+
       gameRef.current = nextGame;
       setFen(nextGame.fen());
       setStatus('playing');
@@ -132,6 +137,7 @@ function PracticeArena() {
 
       try {
         const token = Cookies.get('access_token');
+
         if (!token) {
           router.push('/login');
           return;
@@ -152,6 +158,7 @@ function PracticeArena() {
         }
 
         const data: LessonData = await res.json();
+
         if (!mountedRef.current) return;
 
         setLessonData(data);
@@ -183,6 +190,7 @@ function PracticeArena() {
     await new Promise((resolve) => setTimeout(resolve, 400));
 
     const legalMoves = gameRef.current.moves({ verbose: true }) as Move[];
+
     if (legalMoves.length === 0) {
       setIsBotThinking(false);
       setStatus('gameover');
@@ -476,7 +484,7 @@ function PracticeArena() {
             className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B]"
             style={{ touchAction: 'none' }}
           >
-            <Chessboard
+            <SafeChessboard
               position={fen}
               onPieceDrop={onDrop}
               boardWidth={560}
