@@ -6,9 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Cookies from 'js-cookie';
 import confetti from 'canvas-confetti';
 import { Chess, type Move, type Square } from 'chess.js';
-import dynamic from 'next/dynamic';
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
+import CustomChessboard from '@/components/chess/CustomChessboard';
 import {
   AlertTriangle,
   ArrowLeft,
@@ -22,10 +20,6 @@ import {
   Target,
   XCircle,
 } from 'lucide-react';
-
-// 🔥 BLINDAJE TOTAL: Importación dinámica sin SSR y saltando TypeScript estricto
-const DynamicChessboard = dynamic(() => import('chessboardjsx'), { ssr: false });
-const SafeChessboard = DynamicChessboard as any;
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
 const FALLBACK_FEN = '3k4/8/8/3p4/8/8/8/3R2K1 w - - 0 1';
@@ -43,7 +37,6 @@ type ArenaStatus = 'playing' | 'correct' | 'wrong' | 'gameover';
 
 function sanitizeFEN(fen?: string | null): string {
   if (!fen || typeof fen !== 'string' || !fen.trim()) return 'start';
-
   try {
     const test = new Chess();
     test.load(fen.trim());
@@ -107,7 +100,6 @@ function PracticeArena() {
 
   const loadPosition = useCallback((data: LessonData) => {
     const safeFen = sanitizeFEN(data?.fen);
-
     try {
       const nextGame = new Chess();
       if (safeFen !== 'start') {
@@ -137,17 +129,14 @@ function PracticeArena() {
         setIsLoading(false);
         return;
       }
-
       try {
         const token = Cookies.get('access_token');
-
         if (!token) {
           router.push('/login');
           return;
         }
 
         const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
-
         const res = await fetch(`${API_URL}/api/v1/chess/lessons/${lessonId}`, {
           headers: {
             Authorization: safeToken,
@@ -156,14 +145,10 @@ function PracticeArena() {
           },
         });
 
-        if (!res.ok) {
-          throw new Error(`Error ${res.status}`);
-        }
-
+        if (!res.ok) throw new Error(`Error ${res.status}`);
         const data: LessonData = await res.json();
-
+        
         if (!mountedRef.current) return;
-
         setLessonData(data);
         loadPosition(data);
       } catch (error) {
@@ -173,7 +158,6 @@ function PracticeArena() {
         if (mountedRef.current) setIsLoading(false);
       }
     };
-
     fetchLesson();
   }, [lessonId, loadPosition, router]);
 
@@ -191,7 +175,6 @@ function PracticeArena() {
     setFeedback('La IA está pensando...');
 
     await new Promise((resolve) => setTimeout(resolve, 400));
-
     const legalMoves = gameRef.current.moves({ verbose: true }) as Move[];
 
     if (legalMoves.length === 0) {
@@ -203,7 +186,6 @@ function PracticeArena() {
     }
 
     const randomMove = legalMoves[Math.floor(Math.random() * legalMoves.length)];
-
     gameRef.current.move({
       from: randomMove.from,
       to: randomMove.to,
@@ -227,14 +209,9 @@ function PracticeArena() {
 
   const onDrop = useCallback(
     ({ sourceSquare, targetSquare }: { sourceSquare: Square; targetSquare: Square }) => {
-      if (!lessonData) return;
-      if (isBotThinking) return;
-      if (status === 'correct' || status === 'gameover') return;
-      if (!targetSquare) return;
-      if (gameRef.current.isGameOver()) return;
+      if (!lessonData || isBotThinking || status === 'correct' || status === 'gameover' || !targetSquare || gameRef.current.isGameOver()) return;
 
       let moveResult: Move | null = null;
-
       try {
         moveResult = gameRef.current.move({
           from: sourceSquare,
@@ -257,7 +234,6 @@ function PracticeArena() {
           void saveProgress();
           return;
         }
-
         void playBotMove();
         return;
       }
@@ -300,42 +276,19 @@ function PracticeArena() {
     setFeedback('Pista visual activada. Observa los cuadros verdes.');
   }, []);
 
-  const boardStyle = useMemo(() => {
-    const style: Record<string, React.CSSProperties> = {};
-
-    if (lastMoveSquares.from) {
-      style[lastMoveSquares.from] = {
-        background: 'rgba(250, 204, 21, 0.35)',
-      };
-    }
-
-    if (lastMoveSquares.to) {
-      style[lastMoveSquares.to] = {
-        background: 'rgba(250, 204, 21, 0.35)',
-      };
-    }
-
+  // Preparar pista visual de la solución (si showGuide está activo)
+  const solutionHint = useMemo(() => {
     if (showGuide && lessonData?.solution && lessonData.solution !== 'FREE_PLAY') {
-      const solution = (lessonData.solution || '').trim();
-
+      const solution = lessonData.solution.trim();
       if (/^[a-h][1-8][a-h][1-8]$/.test(solution)) {
-        const fromSq = solution.slice(0, 2);
-        const toSq = solution.slice(2, 4);
-
-        style[fromSq] = {
-          ...(style[fromSq] || {}),
-          boxShadow: 'inset 0 0 0 4px #34d399',
-        };
-
-        style[toSq] = {
-          ...(style[toSq] || {}),
-          boxShadow: 'inset 0 0 0 4px #34d399',
+        return {
+          from: solution.slice(0, 2),
+          to: solution.slice(2, 4),
         };
       }
     }
-
-    return style;
-  }, [lastMoveSquares, lessonData, showGuide]);
+    return null;
+  }, [showGuide, lessonData]);
 
   if (isLoading) {
     return (
@@ -351,10 +304,7 @@ function PracticeArena() {
         <Target size={64} className="text-slate-700 mb-6" />
         <h2 className="text-2xl font-bold mb-2">Lección no disponible</h2>
         <p className="text-slate-400 mb-6">No pudimos cargar la práctica de ajedrez.</p>
-        <Link
-          href="/dashboard/chess"
-          className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold"
-        >
+        <Link href="/dashboard/chess" className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold">
           Volver al Menú
         </Link>
       </div>
@@ -364,22 +314,13 @@ function PracticeArena() {
   return (
     <div className="min-h-screen bg-[#0B0F19] text-slate-100 font-sans flex flex-col md:flex-row relative">
       <div className="w-full md:w-[400px] lg:w-[450px] p-6 md:p-8 flex flex-col border-b md:border-b-0 md:border-r border-slate-800 bg-slate-900/80 shadow-2xl z-20 overflow-y-auto">
-        <Link
-          href="/dashboard/chess"
-          className="inline-flex items-center gap-2 text-slate-500 hover:text-white mb-8 font-bold text-sm bg-slate-800/50 self-start px-4 py-2 rounded-lg border border-slate-700/50"
-        >
+        <Link href="/dashboard/chess" className="inline-flex items-center gap-2 text-slate-500 hover:text-white mb-8 font-bold text-sm bg-slate-800/50 self-start px-4 py-2 rounded-lg border border-slate-700/50">
           <ArrowLeft size={16} /> Salir al Menú
         </Link>
 
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
-            <div
-              className={`px-3 py-1 rounded-full border text-[10px] font-black uppercase tracking-widest ${
-                isFreePlay
-                  ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30'
-                  : 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30'
-              }`}
-            >
+            <div className={`px-3 py-1 rounded-full border text-[10px] font-black uppercase tracking-widest ${isFreePlay ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30'}`}>
               {isFreePlay ? 'Sandbox Mode' : 'Tactics Mode'}
             </div>
 
@@ -402,11 +343,7 @@ function PracticeArena() {
 
           <div className="bg-[#131B2C] p-6 rounded-2xl border border-slate-700/50 mb-6 shadow-inner">
             <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 flex items-center gap-2">
-              {isFreePlay ? (
-                <Bot size={14} className="text-emerald-400" />
-              ) : (
-                <HelpCircle size={14} className="text-indigo-400" />
-              )}
+              {isFreePlay ? <Bot size={14} className="text-emerald-400" /> : <HelpCircle size={14} className="text-indigo-400" />}
               Instrucción
             </h3>
             <p className="text-lg font-medium text-slate-200 leading-relaxed">
@@ -414,32 +351,11 @@ function PracticeArena() {
             </p>
           </div>
 
-          <div
-            className={`p-5 rounded-2xl border shadow-lg flex gap-4 transition-colors ${
-              status === 'correct'
-                ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-300'
-                : status === 'wrong'
-                ? 'bg-red-500/10 border-red-500/30 text-red-300'
-                : 'bg-indigo-500/10 border-indigo-500/30 text-indigo-300'
-            }`}
-          >
-            {status === 'correct' ? (
-              <CheckCircle2 className="shrink-0 w-6 h-6" />
-            ) : status === 'wrong' ? (
-              <XCircle className="shrink-0 w-6 h-6" />
-            ) : (
-              <Lightbulb className="shrink-0 w-6 h-6" />
-            )}
-
+          <div className={`p-5 rounded-2xl border shadow-lg flex gap-4 transition-colors ${status === 'correct' ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-300' : status === 'wrong' ? 'bg-red-500/10 border-red-500/30 text-red-300' : 'bg-indigo-500/10 border-indigo-500/30 text-indigo-300'}`}>
+            {status === 'correct' ? <CheckCircle2 className="shrink-0 w-6 h-6" /> : status === 'wrong' ? <XCircle className="shrink-0 w-6 h-6" /> : <Lightbulb className="shrink-0 w-6 h-6" />}
             <div>
               <h4 className="font-bold text-sm mb-1 uppercase tracking-wider">
-                {status === 'correct'
-                  ? '¡Perfecto!'
-                  : status === 'wrong'
-                  ? 'Intenta de Nuevo'
-                  : status === 'gameover'
-                  ? 'Partida Terminada'
-                  : 'Análisis Activo'}
+                {status === 'correct' ? '¡Perfecto!' : status === 'wrong' ? 'Intenta de Nuevo' : status === 'gameover' ? 'Partida Terminada' : 'Análisis Activo'}
               </h4>
               <p className="text-sm opacity-90 leading-relaxed">{feedback}</p>
             </div>
@@ -448,27 +364,17 @@ function PracticeArena() {
 
         <div className="mt-8 pt-6 border-t border-slate-800 space-y-3 shrink-0">
           {status === 'correct' || status === 'gameover' ? (
-            <button
-              onClick={() => router.push('/dashboard/chess')}
-              className="w-full py-4 bg-gradient-to-r from-emerald-500 to-emerald-600 text-slate-950 rounded-xl font-black text-sm uppercase shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2"
-            >
+            <button onClick={() => router.push('/dashboard/chess')} className="w-full py-4 bg-gradient-to-r from-emerald-500 to-emerald-600 text-slate-950 rounded-xl font-black text-sm uppercase shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
               Continuar Ruta <ChevronRight size={18} />
             </button>
           ) : (
             <div className={`grid gap-3 ${isFreePlay ? 'grid-cols-1' : 'grid-cols-2'}`}>
-              <button
-                onClick={handleReset}
-                className="py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl font-bold text-sm border border-slate-700 flex items-center justify-center gap-2"
-              >
+              <button onClick={handleReset} className="py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl font-bold text-sm border border-slate-700 flex items-center justify-center gap-2">
                 <RotateCcw size={16} /> Reiniciar
               </button>
 
               {!isFreePlay && (
-                <button
-                  onClick={forceHint}
-                  disabled={showGuide}
-                  className="py-3 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 rounded-xl font-bold text-sm border border-indigo-500/30 flex items-center justify-center gap-2 disabled:opacity-50"
-                >
+                <button onClick={forceHint} disabled={showGuide} className="py-3 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 rounded-xl font-bold text-sm border border-indigo-500/30 flex items-center justify-center gap-2 disabled:opacity-50">
                   <Lightbulb size={16} /> Ver Guía
                 </button>
               )}
@@ -483,19 +389,14 @@ function PracticeArena() {
         <div className="relative z-10 w-full max-w-[600px] lg:max-w-[750px] aspect-square">
           <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500/20 via-slate-800 to-emerald-500/20 rounded-xl blur-2xl opacity-50 pointer-events-none" />
 
-          <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B] p-2 flex justify-center items-center">
-            <SafeChessboard
-              width={560}
-              position={fen}
+          {/* TABLERO CUSTOM IMPLEMENTADO AQUÍ */}
+          <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex justify-center items-center bg-[#1E293B] p-2 border-[14px] border-[#1E293B]">
+            <CustomChessboard
+              fen={fen}
               onDrop={onDrop}
-              boardStyle={{
-                borderRadius: '6px',
-                boxShadow: 'none',
-              }}
-              lightSquareStyle={{ backgroundColor: '#e2e8f0' }}
-              darkSquareStyle={{ backgroundColor: '#475569' }}
-              squareStyles={boardStyle}
-              draggable={!isBotThinking && status !== 'correct' && status !== 'gameover'}
+              disabled={isBotThinking || status === 'correct' || status === 'gameover'}
+              lastMove={lastMoveSquares}
+              hint={solutionHint}
             />
           </div>
         </div>
@@ -506,16 +407,12 @@ function PracticeArena() {
 
 export default function PracticePage() {
   return (
-    <DndProvider backend={HTML5Backend}>
-      <Suspense
-        fallback={
-          <div className="min-h-screen bg-[#0B0F19] flex items-center justify-center text-indigo-500">
-            <Loader2 className="animate-spin" size={48} />
-          </div>
-        }
-      >
-        <PracticeArena />
-      </Suspense>
-    </DndProvider>
+    <Suspense fallback={
+      <div className="min-h-screen bg-[#0B0F19] flex items-center justify-center text-indigo-500">
+        <Loader2 className="animate-spin" size={48} />
+      </div>
+    }>
+      <PracticeArena />
+    </Suspense>
   );
 }

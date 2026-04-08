@@ -51,7 +51,6 @@ export default function ChessLobbyPage() {
         const token = Cookies.get('access_token');
         if (token) {
           const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
-          
           const res = await fetch(`${API_URL}/api/v1/chess/progress`, {
             headers: { 
               'Authorization': safeToken,
@@ -61,7 +60,6 @@ export default function ChessLobbyPage() {
             },
             cache: 'no-store'
           });
-          
           if (res.ok) {
             const data = await res.json();
             completedLessons = data.completed_lessons || [];
@@ -90,7 +88,6 @@ export default function ChessLobbyPage() {
           elo: 850 + (completedLessons.length * 15), 
           puzzlesSolved: completedLessons.length 
         });
-        
         setIsLoading(false);
       }
     };
@@ -122,7 +119,6 @@ export default function ChessLobbyPage() {
           <Link href="/dashboard" className="inline-flex items-center gap-2 text-slate-400 hover:text-white mb-6 transition-colors font-bold text-sm bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700/50 hover:bg-slate-800">
             <ArrowLeft size={16} /> Volver al LMS
           </Link>
-          
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
             <div>
               <div className="flex items-center gap-3 mb-2">
@@ -222,7 +218,8 @@ export default function ChessLobbyPage() {
                         </span>
                       )}
                     </div>
-                    <p className="text-sm text-slate-400 mb-4 max-w-2xl">{module.description}</p>
+                    {/* Se corrigió module.description a module.desc */}
+                    <p className="text-sm text-slate-400 mb-4 max-w-2xl">{module.desc}</p>
                     
                     {/* Barra de Progreso */}
                     {!module.locked && (
