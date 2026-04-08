@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Cookies from 'js-cookie';
 import confetti from 'canvas-confetti';
 import { Chess, type Move, type Square } from 'chess.js';
-import { Chessboard } from 'react-chessboard';
+import dynamic from 'next/dynamic';
 import {
   AlertTriangle,
   ArrowLeft,
@@ -35,7 +35,17 @@ type LessonData = {
 
 type ArenaStatus = 'playing' | 'correct' | 'wrong' | 'gameover';
 
-function sanitizeFEN(fen?: string | null) {
+// 🔥 TABLERO AISLADO - Evita errores de drag-drop context
+const ChessPracticeBoard = dynamic(() => import('./ChessPracticeBoard'), {
+  ssr: false,
+  loading: () => (
+    <div className="aspect-square flex items-center justify-center bg-[#475569] rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B]">
+      <Loader2 className="animate-spin text-slate-300" size={48} />
+    </div>
+  ),
+});
+
+function sanitizeFEN(fen?: string | null): string {
   if (!fen || typeof fen !== 'string' || !fen.trim()) return 'start';
 
   try {
@@ -66,7 +76,6 @@ function PracticeArena() {
   const mountedRef = useRef(true);
 
   const isFreePlay = lessonData?.solution === 'FREE_PLAY';
-  const SafeChessboard = Chessboard as any;
 
   useEffect(() => {
     mountedRef.current = true;
@@ -105,7 +114,6 @@ function PracticeArena() {
 
     try {
       const nextGame = new Chess();
-
       if (safeFen !== 'start') {
         nextGame.load(safeFen);
       }
@@ -137,7 +145,6 @@ function PracticeArena() {
 
       try {
         const token = Cookies.get('access_token');
-
         if (!token) {
           router.push('/login');
           return;
@@ -158,7 +165,6 @@ function PracticeArena() {
         }
 
         const data: LessonData = await res.json();
-
         if (!mountedRef.current) return;
 
         setLessonData(data);
@@ -190,7 +196,6 @@ function PracticeArena() {
     await new Promise((resolve) => setTimeout(resolve, 400));
 
     const legalMoves = gameRef.current.moves({ verbose: true }) as Move[];
-
     if (legalMoves.length === 0) {
       setIsBotThinking(false);
       setStatus('gameover');
@@ -200,7 +205,6 @@ function PracticeArena() {
     }
 
     const randomMove = legalMoves[Math.floor(Math.random() * legalMoves.length)];
-
     gameRef.current.move({
       from: randomMove.from,
       to: randomMove.to,
@@ -223,14 +227,12 @@ function PracticeArena() {
   }, [isFreePlay, saveProgress, syncFen]);
 
   const onDrop = useCallback(
-    (sourceSquare: Square, targetSquare: Square) => {
-      if (!lessonData) return false;
-      if (isBotThinking) return false;
-      if (status === 'correct' || status === 'gameover') return false;
-      if (gameRef.current.isGameOver()) return false;
+    (sourceSquare: Square, targetSquare: Square): boolean => {
+      if (!lessonData || isBotThinking || status === 'correct' || status === 'gameover' || gameRef.current.isGameOver()) {
+        return false;
+      }
 
       let moveResult: Move | null = null;
-
       try {
         moveResult = gameRef.current.move({
           from: sourceSquare,
@@ -253,14 +255,13 @@ function PracticeArena() {
           void saveProgress();
           return true;
         }
-
         void playBotMove();
         return true;
       }
 
       const moveUci = `${sourceSquare}${targetSquare}`;
-      const moveSan = moveResult.san?.trim();
-      const solution = lessonData.solution?.trim();
+      const moveSan = moveResult.san?.trim() || '';
+      const solution = lessonData.solution?.trim() || '';
 
       if (solution && (solution === moveUci || solution === moveSan)) {
         setStatus('correct');
@@ -313,8 +314,7 @@ function PracticeArena() {
     }
 
     if (showGuide && lessonData?.solution && lessonData.solution !== 'FREE_PLAY') {
-      const solution = lessonData.solution.trim();
-
+      const solution = (lessonData.solution || '').trim();
       if (/^[a-h][1-8][a-h][1-8]$/.test(solution)) {
         const fromSq = solution.slice(0, 2);
         const toSq = solution.slice(2, 4);
@@ -360,6 +360,7 @@ function PracticeArena() {
 
   return (
     <div className="min-h-screen bg-[#0B0F19] text-slate-100 font-sans flex flex-col md:flex-row relative">
+      {/* Sidebar */}
       <div className="w-full md:w-[400px] lg:w-[450px] p-6 md:p-8 flex flex-col border-b md:border-b-0 md:border-r border-slate-800 bg-slate-900/80 shadow-2xl z-20 overflow-y-auto">
         <Link
           href="/dashboard/chess"
@@ -474,30 +475,19 @@ function PracticeArena() {
         </div>
       </div>
 
+      {/* 🔥 TABLERO AISLADO */}
       <div className="flex-1 bg-[#0F1523] flex items-center justify-center p-4 md:p-8 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/10 via-transparent to-transparent pointer-events-none" />
 
         <div className="relative z-10 w-full max-w-[600px] lg:max-w-[750px] aspect-square">
           <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500/20 via-slate-800 to-emerald-500/20 rounded-xl blur-2xl opacity-50 pointer-events-none" />
 
-          <div
-            className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B]"
-            style={{ touchAction: 'none' }}
-          >
-            <SafeChessboard
-              position={fen}
-              onPieceDrop={onDrop}
-              boardWidth={560}
-              animationDuration={250}
-              arePiecesDraggable={status !== 'correct' && status !== 'gameover' && !isBotThinking}
-              boardOrientation="white"
-              autoPromoteToQueen
-              customDarkSquareStyle={{ backgroundColor: '#475569' }}
-              customLightSquareStyle={{ backgroundColor: '#e2e8f0' }}
-              customSquareStyles={finalSquareStyles}
-              customBoardStyle={{ borderRadius: '6px' }}
-            />
-          </div>
+          <ChessPracticeBoard
+            fen={fen}
+            onDrop={onDrop}
+            finalSquareStyles={finalSquareStyles}
+            disabled={status === 'correct' || status === 'gameover' || isBotThinking}
+          />
         </div>
       </div>
     </div>
