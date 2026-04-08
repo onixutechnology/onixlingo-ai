@@ -1,5 +1,3 @@
-# app/datachess/seed_chess.py
-
 import sys
 import os
 from dotenv import load_dotenv
@@ -51,6 +49,7 @@ SPECIFIC_LESSONS = {
 }
 
 def generate_lessons():
+    print("🔄 Iniciando la carga de datos de ajedrez...")
     db = SessionLocal()
     lessons_to_insert = []
 
@@ -79,7 +78,7 @@ def generate_lessons():
         for lesson in lessons_to_insert:
             db.merge(lesson)
         db.commit()
-        print(f"✅ ¡Éxito! Base de datos de Ajedrez perfeccionada e inyectada.")
+        print(f"✅ ¡Éxito! Base de datos de Ajedrez actualizada e inyectada correctamente.")
     except Exception as e:
         print(f"❌ Error inyectando datos: {e}")
         db.rollback()
