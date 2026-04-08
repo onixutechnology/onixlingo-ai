@@ -473,4 +473,39 @@ function PracticeArena() {
           <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500/20 via-slate-800 to-emerald-500/20 rounded-xl blur-2xl opacity-50 pointer-events-none" />
 
           <div
-            className="relative rounded-lg overflow-hidden shado
+            className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B]"
+            style={{ touchAction: 'none' }}
+          >
+            <Chessboard
+              position={fen}
+              onPieceDrop={onDrop}
+              boardWidth={560}
+              animationDuration={250}
+              arePiecesDraggable={status !== 'correct' && status !== 'gameover' && !isBotThinking}
+              boardOrientation="white"
+              autoPromoteToQueen
+              customDarkSquareStyle={{ backgroundColor: '#475569' }}
+              customLightSquareStyle={{ backgroundColor: '#e2e8f0' }}
+              customSquareStyles={finalSquareStyles}
+              customBoardStyle={{ borderRadius: '6px' }}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function PracticePage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-[#0B0F19] flex items-center justify-center text-indigo-500">
+          <Loader2 className="animate-spin" size={48} />
+        </div>
+      }
+    >
+      <PracticeArena />
+    </Suspense>
+  );
+}
