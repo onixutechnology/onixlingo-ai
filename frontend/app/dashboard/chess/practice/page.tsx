@@ -23,7 +23,6 @@ import {
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
 const FALLBACK_FEN = '3k4/8/8/3p4/8/8/8/3R2K1 w - - 0 1';
-const START_FEN = 'start';
 
 type LessonData = {
   id?: string | number;
@@ -37,7 +36,8 @@ type LessonData = {
 type ArenaStatus = 'playing' | 'correct' | 'wrong' | 'gameover';
 
 function sanitizeFEN(fen?: string | null) {
-  if (!fen || typeof fen !== 'string' || !fen.trim()) return START_FEN;
+  if (!fen || typeof fen !== 'string' || !fen.trim()) return 'start';
+
   try {
     const test = new Chess();
     test.load(fen.trim());
@@ -53,7 +53,7 @@ function PracticeArena() {
   const lessonId = params.get('lessonId');
 
   const [lessonData, setLessonData] = useState<LessonData | null>(null);
-  const [fen, setFen] = useState<string>(START_FEN);
+  const [fen, setFen] = useState('start');
   const [status, setStatus] = useState<ArenaStatus>('playing');
   const [feedback, setFeedback] = useState('Analiza el tablero y realiza tu movimiento.');
   const [mistakes, setMistakes] = useState(0);
@@ -72,6 +72,10 @@ function PracticeArena() {
     return () => {
       mountedRef.current = false;
     };
+  }, []);
+
+  const syncFen = useCallback(() => {
+    setFen(gameRef.current.fen());
   }, []);
 
   const saveProgress = useCallback(async () => {
@@ -95,22 +99,14 @@ function PracticeArena() {
     }
   }, [lessonId]);
 
-  const syncBoardFromGame = useCallback(() => {
-    setFen(gameRef.current.fen());
-  }, []);
-
-  const loadLessonPosition = useCallback((data: LessonData) => {
+  const loadPosition = useCallback((data: LessonData) => {
     const safeFen = sanitizeFEN(data?.fen);
 
     try {
-      if (safeFen === START_FEN) {
-        gameRef.current = new Chess();
-      } else {
-        const nextGame = new Chess();
-        nextGame.load(safeFen);
-        gameRef.current = nextGame;
-      }
-      setFen(gameRef.current.fen());
+      const nextGame = new Chess();
+      if (safeFen !== 'start') nextGame.load(safeFen);
+      gameRef.current = nextGame;
+      setFen(nextGame.fen());
       setStatus('playing');
       setMistakes(0);
       setShowGuide(false);
@@ -118,12 +114,12 @@ function PracticeArena() {
       setIsBotThinking(false);
       setFeedback('Analiza el tablero y realiza tu movimiento.');
     } catch (error) {
-      console.error('Error cargando posición:', error);
-      const fallbackGame = new Chess();
-      fallbackGame.load(FALLBACK_FEN);
-      gameRef.current = fallbackGame;
-      setFen(gameRef.current.fen());
-      setFeedback('Se cargó una posición de respaldo por seguridad.');
+      console.error('Error cargando FEN:', error);
+      const fallback = new Chess();
+      fallback.load(FALLBACK_FEN);
+      gameRef.current = fallback;
+      setFen(fallback.fen());
+      setFeedback('Se cargó una posición segura de respaldo.');
     }
   }, []);
 
@@ -131,7 +127,6 @@ function PracticeArena() {
     const fetchLesson = async () => {
       if (!lessonId) {
         setIsLoading(false);
-        setLessonData(null);
         return;
       }
 
@@ -145,7 +140,6 @@ function PracticeArena() {
         const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
 
         const res = await fetch(`${API_URL}/api/v1/chess/lessons/${lessonId}`, {
-          method: 'GET',
           headers: {
             Authorization: safeToken,
             'Cache-Control': 'no-cache',
@@ -154,29 +148,24 @@ function PracticeArena() {
         });
 
         if (!res.ok) {
-          throw new Error(`No se pudo cargar la lección: ${res.status}`);
+          throw new Error(`Error ${res.status}`);
         }
 
         const data: LessonData = await res.json();
-
         if (!mountedRef.current) return;
 
         setLessonData(data);
-        loadLessonPosition(data);
+        loadPosition(data);
       } catch (error) {
         console.error('Error cargando lección:', error);
-        if (mountedRef.current) {
-          setLessonData(null);
-        }
+        if (mountedRef.current) setLessonData(null);
       } finally {
-        if (mountedRef.current) {
-          setIsLoading(false);
-        }
+        if (mountedRef.current) setIsLoading(false);
       }
     };
 
     fetchLesson();
-  }, [lessonId, loadLessonPosition, router]);
+  }, [lessonId, loadPosition, router]);
 
   useEffect(() => {
     if (!isFreePlay && mistakes >= 3) {
@@ -191,7 +180,7 @@ function PracticeArena() {
     setIsBotThinking(true);
     setFeedback('La IA está pensando...');
 
-    await new Promise((resolve) => setTimeout(resolve, 350));
+    await new Promise((resolve) => setTimeout(resolve, 400));
 
     const legalMoves = gameRef.current.moves({ verbose: true }) as Move[];
     if (legalMoves.length === 0) {
@@ -203,6 +192,7 @@ function PracticeArena() {
     }
 
     const randomMove = legalMoves[Math.floor(Math.random() * legalMoves.length)];
+
     gameRef.current.move({
       from: randomMove.from,
       to: randomMove.to,
@@ -210,7 +200,7 @@ function PracticeArena() {
     });
 
     setLastMoveSquares({ from: randomMove.from, to: randomMove.to });
-    syncBoardFromGame();
+    syncFen();
     setIsBotThinking(false);
 
     if (gameRef.current.isGameOver()) {
@@ -222,7 +212,7 @@ function PracticeArena() {
 
     setStatus('playing');
     setFeedback('Tu turno.');
-  }, [isFreePlay, saveProgress, syncBoardFromGame]);
+  }, [isFreePlay, saveProgress, syncFen]);
 
   const onDrop = useCallback(
     (sourceSquare: Square, targetSquare: Square) => {
@@ -246,7 +236,7 @@ function PracticeArena() {
       if (!moveResult) return false;
 
       setLastMoveSquares({ from: sourceSquare, to: targetSquare });
-      syncBoardFromGame();
+      syncFen();
 
       if (isFreePlay) {
         if (gameRef.current.isGameOver()) {
@@ -269,8 +259,8 @@ function PracticeArena() {
         setShowGuide(false);
         setFeedback(lessonData.explanation || '¡Brillante! Solución encontrada.');
         confetti({
-          particleCount: 160,
-          spread: 85,
+          particleCount: 180,
+          spread: 90,
           colors: ['#4ade80', '#818cf8', '#facc15'],
         });
         void saveProgress();
@@ -278,21 +268,21 @@ function PracticeArena() {
       }
 
       gameRef.current.undo();
-      syncBoardFromGame();
+      syncFen();
       setLastMoveSquares({});
       setMistakes((prev) => prev + 1);
       setStatus('wrong');
       setFeedback('Movimiento incorrecto. Analiza bien el tablero.');
       return false;
     },
-    [isBotThinking, isFreePlay, lessonData, playBotMove, saveProgress, status, syncBoardFromGame]
+    [isBotThinking, isFreePlay, lessonData, playBotMove, saveProgress, status, syncFen]
   );
 
   const handleReset = useCallback(() => {
     if (!lessonData) return;
-    loadLessonPosition(lessonData);
+    loadPosition(lessonData);
     setFeedback('Tablero reiniciado. Analiza tu jugada.');
-  }, [lessonData, loadLessonPosition]);
+  }, [lessonData, loadPosition]);
 
   const forceHint = useCallback(() => {
     setShowGuide(true);
@@ -482,40 +472,5 @@ function PracticeArena() {
         <div className="relative z-10 w-full max-w-[600px] lg:max-w-[750px] aspect-square">
           <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500/20 via-slate-800 to-emerald-500/20 rounded-xl blur-2xl opacity-50 pointer-events-none" />
 
-          <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-[14px] border-[#1E293B] bg-[#1E293B]">
-            <Chessboard
-              id="onixlingo-practice-board"
-              position={fen}
-              onPieceDrop={onDrop}
-              boardWidth={560}
-              animationDuration={250}
-              arePiecesDraggable={status !== 'correct' && status !== 'gameover' && !isBotThinking}
-              boardOrientation="white"
-              autoPromoteToQueen
-              customDarkSquareStyle={{ backgroundColor: '#475569' }}
-              customLightSquareStyle={{ backgroundColor: '#e2e8f0' }}
-              customSquareStyles={finalSquareStyles}
-              customBoardStyle={{
-                borderRadius: '6px',
-              }}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default function PracticePage() {
-  return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen bg-[#0B0F19] flex items-center justify-center text-indigo-500">
-          <Loader2 className="animate-spin" size={48} />
-        </div>
-      }
-    >
-      <PracticeArena />
-    </Suspense>
-  );
-}
+          <div
+            className="relative rounded-lg overflow-hidden shado
