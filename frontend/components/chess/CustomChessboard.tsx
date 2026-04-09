@@ -49,7 +49,8 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
   };
 
   return (
-    <div className="w-full max-w-[560px] aspect-square grid grid-cols-8 grid-rows-8 rounded-lg overflow-hidden">
+    // 🚀 SOLUCIÓN DE ARRASTRE: touch-none select-none agregados al contenedor padre
+    <div className="w-full max-w-[560px] aspect-square grid grid-cols-8 grid-rows-8 rounded-lg overflow-hidden touch-none select-none">
       {board.map((row, rowIndex) =>
         row.map((piece, colIndex) => {
           const square = `${files[colIndex]}${ranks[rowIndex]}` as Square;
@@ -63,7 +64,6 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
           // Clases base y de resaltado
           let bgClass = isLight ? 'bg-[#e2e8f0]' : 'bg-[#475569]';
           if (isLastMove) bgClass = 'bg-[#facc15]/40'; // Fondo amarillento para el último movimiento
-          
           let borderClass = '';
           if (isHint) borderClass = 'shadow-[inset_0_0_0_4px_#34d399]'; // Borde interno verde para la pista
 
@@ -72,7 +72,7 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
               key={square}
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, square)}
-              className={`flex items-center justify-center relative select-none ${bgClass} ${borderClass}`}
+              className={`flex items-center justify-center relative ${bgClass} ${borderClass}`}
             >
               {/* Coordenadas */}
               {colIndex === 0 && <span className="absolute top-1 left-1 text-[10px] font-bold opacity-50 text-slate-800">{ranks[rowIndex]}</span>}

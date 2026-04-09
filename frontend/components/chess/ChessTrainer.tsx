@@ -19,15 +19,12 @@ export default function ChessTrainer() {
   const [fen, setFen] = useState(LESSON_FEN);
   const [status, setStatus] = useState("Tu turno: Juegan Blancas");
   const [isCompleted, setIsCompleted] = useState(false);
-  
-  // Evitamos que el servidor de Next.js intente dibujar el tablero
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  // Función para manejar cuando sueltas una pieza (Ajustada para chessboardjsx)
   function onDrop({ sourceSquare, targetSquare }: { sourceSquare: Square; targetSquare: Square }) {
     if (isCompleted) return;
 
@@ -55,10 +52,27 @@ export default function ChessTrainer() {
     }
   }
 
-  const handleSuccess = () => {
+  const handleSuccess = async () => {
     setStatus("¡Jaque Mate! Excelente 🎉");
     setIsCompleted(true);
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+
+    // 🚀 AQUÍ VA LA SOLUCIÓN AL ERROR 304 CUANDO CONECTES AL BACKEND
+    /*
+    try {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/progress/chess`, {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Cache-Control': 'no-cache' // Evita el 304
+        },
+        cache: 'no-store', // Obliga a Next.js a hacer la petición real
+        body: JSON.stringify({ lesson_id: "mod1-les1", status: "completed" })
+      });
+    } catch (error) {
+      console.error("Error guardando progreso:", error);
+    }
+    */
   };
 
   const resetGame = () => {
@@ -81,8 +95,8 @@ export default function ChessTrainer() {
         </span>
       </div>
 
-      {/* Tablero */}
-      <div className="w-full aspect-square mb-6 border-4 border-slate-800 rounded-lg overflow-hidden shadow-2xl bg-[#475569] flex items-center justify-center p-1">
+      {/* 🚀 SOLUCIÓN DE ARRASTRE: touch-none y select-none aquí */}
+      <div className="w-full aspect-square mb-6 border-4 border-slate-800 rounded-lg overflow-hidden shadow-2xl bg-[#475569] flex items-center justify-center p-1 touch-none select-none pointer-events-auto">
         {isMounted ? (
           <SafeChessboard 
             width={350}
