@@ -6,22 +6,26 @@ class Settings(BaseSettings):
     # --- GENERAL ---
     PROJECT_NAME: str = "OnixLingo Enterprise"
     API_V1_STR: str = "/api/v1"
-    
+
     # --- SEGURIDAD ---
     # 👇 ESTA ES LA CLAVE QUE MANDA. Pon una cadena larga y fija.
     SECRET_KEY: str = "CLAVE_MAESTRA_FIJA_SUPER_SECRETA_ONIXLINGO_2026"
     ALGORITHM: str = "HS256"
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 8 # 8 días
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 8  # 8 días
 
     # --- GOOGLE GEMINI ---
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
 
     # --- CORS ---
+    # 🚀 LISTA MAESTRA DE DOMINIOS PERMITIDOS
     CORS_ORIGINS: List[str] = [
         "http://localhost:3000",
         "http://127.0.0.1:3000",
+        "https://onixlingo.onixu.company",
+        "https://www.onixlingo.onixu.company",
+        "https://onixlingo-bckend.onrender.com",
         "https://onixlingo-ai.vercel.app",
-        "https://onixlingo-ai-nknb.vercel.app",
+        "https://onixlingo-ai-nknb.vercel.app"
     ]
 
     # --- CONFIGURACIÓN ---

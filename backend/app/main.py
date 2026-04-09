@@ -11,7 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
 # --- IMPORTACIONES LOCALES ---
-from app.core.settings import settings
+from app.config import settings # 🚀 CORRECCIÓN CRÍTICA: Ahora apunta a tu config.py real
 from app.database import create_db, get_db
 from app.services import user_service
 from app.db import models 
@@ -58,22 +58,13 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# 🛡️ MIDDLEWARE CORS (REFORZADO PARA NUEVO DOMINIO)
-origins = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "https://onixlingo.onixu.company", 
-    "https://www.onixlingo.onixu.company", 
-    "https://onixlingo-bckend.onrender.com",
-    "https://onixlingo-ai.vercel.app" # Backup de Vercel
-]
-
+# 🛡️ MIDDLEWARE CORS (CONECTADO INTELIGENTEMENTE A CONFIG.PY)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins, 
+    allow_origins=settings.BACKEND_CORS_ORIGINS, # 🚀 CORRECCIÓN: Usa la variable de tu config.py
     allow_origin_regex=r"https://.*\.vercel\.app", 
     allow_credentials=True, 
-    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"], # HEAD es vital para Render
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"], 
     allow_headers=["*"],
     expose_headers=["*"]
 )

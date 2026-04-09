@@ -6,12 +6,12 @@ import jwt
 
 from fastapi import APIRouter, Depends, HTTPException, status, Response
 from sqlalchemy.orm import Session
-from sqlalchemy import or_  # 🚀 IMPORTANTE: Para permitir búsqueda múltiple
+from sqlalchemy import or_ # 🚀 IMPORTANTE: Para permitir búsqueda múltiple
 from pydantic import BaseModel, EmailStr
 
 from app.database import get_db
 from app.db.models import User 
-from app.core.settings import settings
+from app.config import settings # 🚀 CORRECCIÓN: Actualizado a app.config
 from app.core.security import verify_password, get_password_hash, create_access_token
 
 # Importamos nuestro nuevo servicio de correos
@@ -48,10 +48,20 @@ class ResetPasswordRequest(BaseModel):
 
 @router.post("/register", status_code=status.HTTP_201_CREATED)
 def register(user: UserCreate, db: Session = Depends(get_db)):
-    # 1. Verificar si existe
-    if db.query(User).filter(User.username == user.username).first():
-        raise HTTPException(status_code=400, detail="El usuario ya existe.")
-    
+    # 1. Verificar si existe el usuario o el correo 🚀 CORRECCIÓN CRÍTICA
+    existing_user = db.query(User).filter(
+        or_(
+            User.username == user.username,
+            User.email == user.email
+        )
+    ).first()
+
+    if existing_user:
+        if existing_user.username == user.username:
+            raise HTTPException(status_code=400, detail="El nombre de usuario ya está en uso.")
+        if existing_user.email == user.email:
+            raise HTTPException(status_code=400, detail="El correo electrónico ya está registrado.")
+
     # 2. Hashear password
     hashed_password = get_password_hash(user.password)
     
@@ -66,7 +76,6 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
         db.rollback()
         logger.error(f"DB Error: {e}")
         raise HTTPException(status_code=500, detail="Error interno del servidor")
-
 
 @router.post("/login")
 def login(user: UserLogin, response: Response, db: Session = Depends(get_db)):
@@ -100,14 +109,12 @@ def login(user: UserLogin, response: Response, db: Session = Depends(get_db)):
     progress_map = {}
     if db_user.progress:
         progress_map = {p.lesson_id: {"stars": p.stars} for p in db_user.progress}
-        
     return {
         "message": "Autenticado", 
         "username": db_user.username,
         "access_token": access_token,
         "progress": progress_map
     }
-
 
 @router.post("/logout")
 def logout(response: Response):
@@ -120,7 +127,6 @@ def logout(response: Response):
         path="/" 
     )
     return {"message": "Sesión cerrada correctamente"}
-
 
 # ==============================================================================
 # --- ENDPOINTS RECUPERACIÓN DE CONTRASEÑA (RESEND) ---
@@ -146,7 +152,6 @@ def forgot_password(request: ForgotPasswordRequest, db: Session = Depends(get_db
     send_password_reset_email(to_email=user.email, token=reset_token)
     return {"message": "Si el correo está registrado, recibirás un enlace de recuperación."}
 
-
 @router.post("/reset-password", status_code=200)
 def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db)):
     """Valida el token mágico y cambia la contraseña en la DB"""
@@ -158,7 +163,6 @@ def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db))
         user_id: str = payload.get("sub")
         if user_id is None:
             raise HTTPException(status_code=400, detail="Token inválido")
-            
     except jwt.ExpiredSignatureError:
         raise HTTPException(status_code=400, detail="El enlace ha expirado. Solicita uno nuevo.")
     except jwt.PyJWTError:
