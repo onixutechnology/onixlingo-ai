@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
-import { Chess, Square } from 'chess.js';
+import React, { useMemo, useState, useEffect } from 'react';
+import { Chess, Square, Move } from 'chess.js';
 
 interface CustomChessboardProps {
   fen: string;
@@ -17,74 +17,107 @@ const PIECE_SYMBOLS: Record<string, string> = {
 };
 
 export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint }: CustomChessboardProps) {
+  // Inicializamos el motor lógico en cada renderizado basado en el FEN actual
   const game = useMemo(() => new Chess(fen), [fen]);
   const board = game.board(); 
 
-  const [draggedSquare, setDraggedSquare] = useState<Square | null>(null);
+  // Estados para el sistema Click-to-Move
+  const [selectedSquare, setSelectedSquare] = useState<Square | null>(null);
+  const [optionSquares, setOptionSquares] = useState<Record<string, Move>>({});
+
+  // Limpiar selección si el tablero cambia desde afuera (ej: reinicio o movimiento)
+  useEffect(() => {
+    setSelectedSquare(null);
+    setOptionSquares({});
+  }, [fen]);
 
   const files = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
   const ranks = ['8', '7', '6', '5', '4', '3', '2', '1'];
 
-  const handleDragStart = (e: React.DragEvent, square: Square) => {
-    if (disabled) {
-      e.preventDefault();
+  // 🚀 LÓGICA CORE: CLIC PARA SELECCIONAR Y MOVER
+  const handleSquareClick = (square: Square) => {
+    if (disabled) return;
+
+    // Si damos clic en la pieza que ya estaba seleccionada, la deseleccionamos
+    if (selectedSquare === square) {
+      setSelectedSquare(null);
+      setOptionSquares({});
       return;
     }
-    setDraggedSquare(square);
-    e.dataTransfer.setData('text/plain', square);
-    e.dataTransfer.effectAllowed = 'move';
-  };
 
-  const handleDrop = (e: React.DragEvent, targetSquare: Square) => {
-    e.preventDefault();
-    if (draggedSquare && draggedSquare !== targetSquare) {
-      onDrop({ sourceSquare: draggedSquare, targetSquare });
+    const piece = game.get(square);
+    const isPieceOfCurrentTurn = piece && piece.color === game.turn();
+
+    // Si ya teníamos una pieza seleccionada y hacemos clic en un movimiento válido: ¡MOVER!
+    if (selectedSquare && optionSquares[square]) {
+      onDrop({ sourceSquare: selectedSquare, targetSquare: square });
+      setSelectedSquare(null);
+      setOptionSquares({});
+      return;
     }
-    setDraggedSquare(null);
-  };
 
-  const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault(); 
-    e.dataTransfer.dropEffect = 'move';
+    // Si hacemos clic en una pieza nuestra, la seleccionamos y calculamos movimientos
+    if (isPieceOfCurrentTurn) {
+      setSelectedSquare(square);
+      // Extraemos los movimientos legales desde esa casilla
+      const moves = game.moves({ square, verbose: true }) as Move[];
+      const options: Record<string, Move> = {};
+      moves.forEach(m => { options[m.to] = m; });
+      setOptionSquares(options);
+    } else {
+      // Si hacemos clic en cualquier otro lado no válido, limpiamos la selección
+      setSelectedSquare(null);
+      setOptionSquares({});
+    }
   };
 
   return (
-    // 🚀 SOLUCIÓN DE ARRASTRE: touch-none select-none agregados al contenedor padre
-    <div className="w-full max-w-[560px] aspect-square grid grid-cols-8 grid-rows-8 rounded-lg overflow-hidden touch-none select-none">
+    <div className="w-full max-w-[560px] aspect-square grid grid-cols-8 grid-rows-8 rounded-lg overflow-hidden touch-none select-none shadow-inner border border-slate-700/50">
       {board.map((row, rowIndex) =>
         row.map((piece, colIndex) => {
           const square = `${files[colIndex]}${ranks[rowIndex]}` as Square;
           const isLight = (rowIndex + colIndex) % 2 === 0;
           const pieceKey = piece ? `${piece.color}${piece.type.toUpperCase()}` : null;
           
-          // Lógica de resaltado
+          // --- ESTADOS VISUALES ---
           const isLastMove = lastMove?.from === square || lastMove?.to === square;
           const isHint = hint?.from === square || hint?.to === square;
+          const isSelected = selectedSquare === square;
+          const isOption = !!optionSquares[square];
+          const isCaptureOption = isOption && piece;
 
-          // Clases base y de resaltado
+          // Colores de fondo dinámicos
           let bgClass = isLight ? 'bg-[#e2e8f0]' : 'bg-[#475569]';
-          if (isLastMove) bgClass = 'bg-[#facc15]/40'; // Fondo amarillento para el último movimiento
+          if (isSelected) bgClass = 'bg-[#60a5fa]/50'; // Azul brillante para la pieza seleccionada
+          else if (isLastMove) bgClass = 'bg-[#facc15]/40'; // Amarillo para el último movimiento
+
+          // Bordes de pista (Verde)
           let borderClass = '';
-          if (isHint) borderClass = 'shadow-[inset_0_0_0_4px_#34d399]'; // Borde interno verde para la pista
+          if (isHint) borderClass = 'shadow-[inset_0_0_0_4px_#34d399]';
 
           return (
             <div
               key={square}
-              onDragOver={handleDragOver}
-              onDrop={(e) => handleDrop(e, square)}
-              className={`flex items-center justify-center relative ${bgClass} ${borderClass}`}
+              onClick={() => handleSquareClick(square)}
+              className={`flex items-center justify-center relative cursor-pointer ${bgClass} ${borderClass}`}
             >
-              {/* Coordenadas */}
-              {colIndex === 0 && <span className="absolute top-1 left-1 text-[10px] font-bold opacity-50 text-slate-800">{ranks[rowIndex]}</span>}
-              {rowIndex === 7 && <span className="absolute bottom-1 right-1 text-[10px] font-bold opacity-50 text-slate-800">{files[colIndex]}</span>}
+              {/* Coordenadas del tablero */}
+              {colIndex === 0 && <span className="absolute top-1 left-1 text-[10px] font-bold opacity-40 text-slate-900 z-0">{ranks[rowIndex]}</span>}
+              {rowIndex === 7 && <span className="absolute bottom-1 right-1 text-[10px] font-bold opacity-40 text-slate-900 z-0">{files[colIndex]}</span>}
+
+              {/* Indicador de movimiento válido (Punto azul o anillo de captura) */}
+              {isOption && !isCaptureOption && (
+                <div className="absolute w-[30%] h-[30%] bg-blue-500/40 rounded-full z-10 pointer-events-none" />
+              )}
+              {isCaptureOption && (
+                <div className="absolute w-[85%] h-[85%] border-[6px] border-blue-500/40 rounded-full z-10 pointer-events-none" />
+              )}
 
               {/* Renderizado de la pieza */}
               {pieceKey && (
                 <div
-                  draggable={!disabled}
-                  onDragStart={(e) => handleDragStart(e, square)}
-                  className={`text-4xl md:text-5xl cursor-grab active:cursor-grabbing hover:scale-110 transition-transform ${
-                    disabled ? 'cursor-not-allowed opacity-80' : ''
+                  className={`text-4xl md:text-5xl transition-transform z-20 ${
+                    disabled ? 'opacity-80' : 'hover:scale-110'
                   }`}
                   style={{ 
                     color: piece.color === 'w' ? 'white' : 'black',

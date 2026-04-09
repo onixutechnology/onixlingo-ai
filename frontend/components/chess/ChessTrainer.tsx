@@ -2,13 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { Chess, type Square } from 'chess.js';
-import dynamic from 'next/dynamic';
 import { RefreshCw, Lightbulb, Loader2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
-
-// 🔥 BLINDAJE: Importación dinámica sin SSR de la nueva librería
-const DynamicChessboard = dynamic(() => import('chessboardjsx'), { ssr: false });
-const SafeChessboard = DynamicChessboard as any;
+import CustomChessboard from './CustomChessboard'; // 👇 IMPORTAMOS NUESTRO TABLERO PREMIUM
 
 // Ejemplo de lección: "Mate en 1 con Torre"
 const LESSON_FEN = "8/8/8/8/8/5k2/8/R4K2 w - - 0 1"; 
@@ -25,6 +21,7 @@ export default function ChessTrainer() {
     setIsMounted(true);
   }, []);
 
+  // Esta función ahora recibe el click final desde nuestro CustomChessboard
   function onDrop({ sourceSquare, targetSquare }: { sourceSquare: Square; targetSquare: Square }) {
     if (isCompleted) return;
 
@@ -36,7 +33,7 @@ export default function ChessTrainer() {
         promotion: 'q', 
       });
 
-      if (!move) return; // Movimiento ilegal, la pieza regresa sola
+      if (!move) return; 
 
       if (move.san === SOLUTION_MOVE || (gameCopy.isCheckmate() && SOLUTION_MOVE.includes('#'))) {
         setGame(gameCopy);
@@ -44,11 +41,10 @@ export default function ChessTrainer() {
         handleSuccess();
       } else {
         setStatus("Movimiento válido, pero no es el mejor. ¡Intenta buscar el Mate!");
-        // Forzamos el regreso visual si no es la solución
         setFen(game.fen()); 
       }
     } catch (error) {
-      setFen(game.fen()); // Snapback en caso de error
+      setFen(game.fen()); 
     }
   }
 
@@ -57,22 +53,21 @@ export default function ChessTrainer() {
     setIsCompleted(true);
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
 
-    // 🚀 AQUÍ VA LA SOLUCIÓN AL ERROR 304 CUANDO CONECTES AL BACKEND
-    /*
+    // API Call para guardar progreso (Con Anti-Caché)
     try {
-      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/progress/chess`, {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+      await fetch(`${API_URL}/api/v1/chess/progress`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
-          'Cache-Control': 'no-cache' // Evita el 304
+          'Cache-Control': 'no-cache' 
         },
-        cache: 'no-store', // Obliga a Next.js a hacer la petición real
+        cache: 'no-store', 
         body: JSON.stringify({ lesson_id: "mod1-les1", status: "completed" })
       });
     } catch (error) {
       console.error("Error guardando progreso:", error);
     }
-    */
   };
 
   const resetGame = () => {
@@ -84,52 +79,47 @@ export default function ChessTrainer() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full max-w-md mx-auto bg-white p-6 rounded-2xl shadow-xl border border-slate-200">
+    <div className="flex flex-col items-center w-full max-w-md mx-auto bg-slate-900/50 p-6 rounded-[2rem] shadow-2xl border border-slate-700/50 backdrop-blur-xl">
       {/* Header */}
-      <div className="flex justify-between items-center w-full mb-4">
-        <h3 className="font-black text-slate-800 text-xl flex items-center gap-2">
+      <div className="flex justify-between items-center w-full mb-6">
+        <h3 className="font-black text-white text-xl flex items-center gap-2">
           ♟️ Táctica Diaria
         </h3>
-        <span className={`px-3 py-1 rounded-full text-xs font-bold ${isCompleted ? 'bg-emerald-100 text-emerald-700' : 'bg-blue-100 text-blue-700'}`}>
+        <span className={`px-4 py-1.5 rounded-full text-xs font-bold border ${isCompleted ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-blue-500/10 text-blue-400 border-blue-500/20'}`}>
           {isCompleted ? 'Completado' : 'En progreso'}
         </span>
       </div>
 
-      {/* 🚀 SOLUCIÓN DE ARRASTRE: touch-none y select-none aquí */}
-      <div className="w-full aspect-square mb-6 border-4 border-slate-800 rounded-lg overflow-hidden shadow-2xl bg-[#475569] flex items-center justify-center p-1 touch-none select-none pointer-events-auto">
+      {/* Tablero Personalizado */}
+      <div className="w-full aspect-square mb-6">
         {isMounted ? (
-          <SafeChessboard 
-            width={350}
-            position={fen} 
+          <CustomChessboard 
+            fen={fen} 
             onDrop={onDrop}
-            boardStyle={{
-              borderRadius: '4px',
-              boxShadow: 'none',
-            }}
-            darkSquareStyle={{ backgroundColor: '#475569' }} 
-            lightSquareStyle={{ backgroundColor: '#e2e8f0' }} 
-            draggable={!isCompleted}
+            disabled={isCompleted}
           />
         ) : (
-          <Loader2 className="animate-spin text-slate-300" size={48} />
+          <div className="w-full h-full flex items-center justify-center bg-slate-800 rounded-lg">
+            <Loader2 className="animate-spin text-slate-500" size={48} />
+          </div>
         )}
       </div>
 
       {/* Controles y Status */}
       <div className="w-full space-y-4">
-        <div className={`p-4 rounded-xl text-center font-bold text-sm transition-colors ${isCompleted ? 'bg-emerald-50 text-emerald-600' : 'bg-slate-50 text-slate-600'}`}>
+        <div className={`p-4 rounded-xl text-center font-bold text-sm transition-colors border ${isCompleted ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-slate-800/50 text-slate-300 border-slate-700/50'}`}>
           {status}
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex gap-3">
           <button 
             onClick={resetGame}
-            className="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold rounded-xl flex items-center justify-center gap-2 transition-colors"
+            className="flex-1 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98] border border-slate-600/50"
           >
             <RefreshCw size={18} /> Reiniciar
           </button>
           {!isCompleted && (
-            <button className="px-4 py-3 bg-amber-100 hover:bg-amber-200 text-amber-700 font-bold rounded-xl transition-colors">
+            <button className="px-5 py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-all active:scale-[0.98] shadow-lg shadow-indigo-500/25 border border-indigo-400/20">
               <Lightbulb size={20} />
             </button>
           )}
