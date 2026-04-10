@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react';
 import { Chess, type Square } from 'chess.js';
 import { RefreshCw, Lightbulb, Loader2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import CustomChessboard from './CustomChessboard'; // 👇 IMPORTAMOS NUESTRO TABLERO PREMIUM
+import CustomChessboard from './CustomChessboard';
 
-// Ejemplo de lección: "Mate en 1 con Torre"
-const LESSON_FEN = "8/8/8/8/8/5k2/8/R4K2 w - - 0 1"; 
-const SOLUTION_MOVE = "Ra8#"; // Torre a a8 es mate
+// 🚀 FEN REAL DE MATE EN 1 (Mate del pasillo)
+const LESSON_FEN = "6k1/5ppp/8/8/8/8/8/4R1K1 w - - 0 1"; 
+const SOLUTION_MOVE = "Re8#"; // La Torre sube a e8 y es Jaque Mate
 
 export default function ChessTrainer() {
   const [game, setGame] = useState(new Chess(LESSON_FEN));
@@ -21,7 +21,6 @@ export default function ChessTrainer() {
     setIsMounted(true);
   }, []);
 
-  // Esta función ahora recibe el click final desde nuestro CustomChessboard
   function onDrop({ sourceSquare, targetSquare }: { sourceSquare: Square; targetSquare: Square }) {
     if (isCompleted) return;
 
@@ -35,13 +34,21 @@ export default function ChessTrainer() {
 
       if (!move) return; 
 
+      // 1. ACTUALIZAMOS EL TABLERO VISUALMENTE SIEMPRE (Para que veas que el clic funcionó)
+      setFen(gameCopy.fen());
+
+      // 2. VERIFICAMOS SI ES LA SOLUCIÓN
       if (move.san === SOLUTION_MOVE || (gameCopy.isCheckmate() && SOLUTION_MOVE.includes('#'))) {
         setGame(gameCopy);
-        setFen(gameCopy.fen());
         handleSuccess();
       } else {
-        setStatus("Movimiento válido, pero no es el mejor. ¡Intenta buscar el Mate!");
-        setFen(game.fen()); 
+        // 3. SI ES INCORRECTO: Mostramos error y regresamos la pieza después de 1 segundo
+        setStatus("❌ Movimiento válido, pero no es la solución.");
+        
+        setTimeout(() => {
+          setFen(game.fen()); // Regresa al FEN original guardado
+          setStatus("Tu turno: Juegan Blancas");
+        }, 1200); // 1.2 segundos de feedback visual
       }
     } catch (error) {
       setFen(game.fen()); 
@@ -53,7 +60,6 @@ export default function ChessTrainer() {
     setIsCompleted(true);
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
 
-    // API Call para guardar progreso (Con Anti-Caché)
     try {
       const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
       await fetch(`${API_URL}/api/v1/chess/progress`, {
@@ -107,7 +113,7 @@ export default function ChessTrainer() {
 
       {/* Controles y Status */}
       <div className="w-full space-y-4">
-        <div className={`p-4 rounded-xl text-center font-bold text-sm transition-colors border ${isCompleted ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-slate-800/50 text-slate-300 border-slate-700/50'}`}>
+        <div className={`p-4 rounded-xl text-center font-bold text-sm transition-colors border ${isCompleted ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : status.includes('❌') ? 'bg-red-500/10 text-red-400 border-red-500/20' : 'bg-slate-800/50 text-slate-300 border-slate-700/50'}`}>
           {status}
         </div>
 
