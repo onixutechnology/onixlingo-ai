@@ -8,10 +8,10 @@ from app.db.models import LessonType
 # .parent.parent = backend/app
 BASE_DIR = Path(__file__).resolve().parent.parent 
 
-# Rutas basadas en tus fotos:
-STANDARD_DIR = BASE_DIR / "data" / "lessons"       # app/data/lessons
-PRO_DIR = BASE_DIR / "datapro" / "lessonspro"      # app/datapro/lessonspro
-VOCAB_DIR = BASE_DIR / "voclessons" / "lessons"    # app/voclessons/lessons
+# 🔥 RUTAS ACTUALIZADAS: Ahora STANDARD_DIR apunta a tus 70 lecciones de ajedrez
+STANDARD_DIR = BASE_DIR / "datachess" / "lessons" 
+PRO_DIR = BASE_DIR / "datapro" / "lessonspro" 
+VOCAB_DIR = BASE_DIR / "voclessons" / "lessons" 
 
 def natural_sort_key(s):
     return [int(text) if text.isdigit() else text.lower()
@@ -21,7 +21,6 @@ def get_all_lessons(folder_path: Path):
     if not folder_path.exists():
         print(f"⚠️ ALERTA: No se encontró la carpeta {folder_path}")
         return []
-    
     # Lee solo archivos .json
     files = [f.stem for f in folder_path.glob("*.json")]
     return sorted(files, key=natural_sort_key)
@@ -54,9 +53,9 @@ def get_next_lesson_id(current_lesson_id: str) -> str | None:
         return None
     return None
 
-# --- SYSTEM CHECK (Verás esto en la consola al guardar) ---
-print("--- ONIXLINGO LESSON LOADER ---")
-print(f"Standard Lessons ({len(_COURSE_CACHE[LessonType.STANDARD])}): {STANDARD_DIR}")
-print(f"Pro Lessons ({len(_COURSE_CACHE[LessonType.PRO])}): {PRO_DIR}")
-print(f"Vocab Lessons ({len(_COURSE_CACHE[LessonType.VOCAB])}): {VOCAB_DIR}")
-print("-------------------------------")
+# --- SYSTEM CHECK (Verás esto en la consola al iniciar tu backend) ---
+print("--- 🚀 ONIXLINGO LESSON LOADER (TITANIUM) ---")
+print(f"♟️  Chess Lessons ({len(_COURSE_CACHE[LessonType.STANDARD])}): {STANDARD_DIR}")
+print(f"⭐  Pro Lessons   ({len(_COURSE_CACHE[LessonType.PRO])}): {PRO_DIR}")
+print(f"📖  Vocab Lessons ({len(_COURSE_CACHE[LessonType.VOCAB])}): {VOCAB_DIR}")
+print("-----------------------------------------------")

@@ -1,7 +1,10 @@
 import sys
 import os
+import json
+from pathlib import Path
 from dotenv import load_dotenv
 
+# Cargar variables de entorno y path
 load_dotenv()
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
@@ -9,6 +12,7 @@ from app.db.session import SessionLocal, engine
 from app.db.base import Base 
 from app.db.models import ChessLesson
 
+# Asegurar tablas
 Base.metadata.create_all(bind=engine)
 
 MODULES_CONFIG = [
@@ -21,56 +25,57 @@ MODULES_CONFIG = [
     {"id": "advanced", "name": "Cálculo Avanzado (Titanium)"}
 ]
 
-SPECIFIC_LESSONS = {
-    "fundamentals-1": {
-        "title": "La Torre: Muros de Piedra",
-        "instruction": "Captura el peón indefenso con tu Torre. Tienes 3 intentos antes de recibir ayuda.",
-        "fen": "3k4/8/8/3p4/8/8/8/3R2K1 w - - 0 1", 
-        "solution": "d1d5",
-        "hint": "La torre se mueve en línea recta.",
-        "explanation": "¡Bien hecho! La torre es una pieza de largo alcance."
-    },
-    "tactics-1-1": {
-        "title": "El Ataque Doble (The Fork)",
-        "instruction": "Encuentra el ataque doble con el Caballo.",
-        "fen": "3k4/8/8/3q4/8/8/1N6/K7 w - - 0 1", 
-        "solution": "b2c4",
-        "hint": "Busca una casilla desde donde el Caballo amenace dos piezas.",
-        "explanation": "¡Excelente! Has ejecutado un 'Fork' clásico."
-    },
-    "checkmates-5": {
-        "title": "Mate Rápido",
-        "instruction": "Da mate en 1 movimiento.",
-        "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
-        "solution": "d1d8",
-        "hint": "Busca la debilidad en la última fila.",
-        "explanation": "¡Mate del pasillo!"
-    }
-}
+# Definir la ruta exacta para la carpeta de JSONs (datachess/lessons)
+CURRENT_DIR = Path(__file__).resolve().parent
+JSON_DIR = CURRENT_DIR / "lessons"
+
+def load_json_lesson(lesson_id):
+    """Busca y carga el archivo JSON correspondiente al lesson_id."""
+    file_path = JSON_DIR / f"{lesson_id}.json"
+    if file_path.exists():
+        with open(file_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return None
 
 def generate_lessons():
-    print("🔄 Iniciando la carga de datos de ajedrez...")
+    print("🔄 Iniciando el motor de inyección de datos (Titanium Seed)...")
     db = SessionLocal()
     lessons_to_insert = []
+    
+    # Crear la carpeta automáticamente si no existe
+    JSON_DIR.mkdir(parents=True, exist_ok=True)
 
-    for mod_idx, module in enumerate(MODULES_CONFIG):
+    for module in MODULES_CONFIG:
         for lesson_num in range(1, 11):
             lesson_id = f"{module['id']}-{lesson_num}"
+            json_data = load_json_lesson(lesson_id)
             
-            if lesson_id in SPECIFIC_LESSONS:
-                data = SPECIFIC_LESSONS[lesson_id]
-                lessons_to_insert.append(ChessLesson(id=lesson_id, module_id=module["id"], **data))
+            if json_data:
+                # 1. Si existe el JSON, cargamos la lección curada
+                lessons_to_insert.append(
+                    ChessLesson(
+                        id=lesson_id, 
+                        module_id=module["id"], 
+                        title=json_data.get("title", f"Lección {lesson_num}"),
+                        instruction=json_data.get("instruction", ""),
+                        fen=json_data.get("fen", "start"),
+                        solution=json_data.get("solution", ""),
+                        hint=json_data.get("hint", ""),
+                        explanation=json_data.get("explanation", "")
+                    )
+                )
             else:
+                # 2. Si no existe, generamos el Fallback (Modo Libre / Sandbox)
                 lessons_to_insert.append(
                     ChessLesson(
                         id=lesson_id,
                         module_id=module["id"],
-                        title=f"{module['name']} - Arena de Práctica",
-                        instruction="Modo Sandbox. Juega libremente contra el motor de Inteligencia Artificial.",
+                        title=f"{module['name']} - Arena",
+                        instruction="Sandbox Mode. Play against the AI to improve your skills (Juega contra la IA para mejorar).",
                         fen="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
                         solution="FREE_PLAY", 
-                        hint="Desarrolla tus piezas y protege al rey.",
-                        explanation="¡Partida completada!"
+                        hint="Develop your pieces (Desarrolla tus piezas) y protege al Rey (King).",
+                        explanation="¡Partida completada! Excelente práctica."
                     )
                 )
 
@@ -78,7 +83,8 @@ def generate_lessons():
         for lesson in lessons_to_insert:
             db.merge(lesson)
         db.commit()
-        print(f"✅ ¡Éxito! Base de datos de Ajedrez actualizada e inyectada correctamente.")
+        print(f"✅ ¡Éxito! Base de datos de Ajedrez actualizada con {len(lessons_to_insert)} lecciones.")
+        print(f"📁 Se buscaron los JSON en: {JSON_DIR}")
     except Exception as e:
         print(f"❌ Error inyectando datos: {e}")
         db.rollback()
