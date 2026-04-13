@@ -11,14 +11,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
 # --- IMPORTACIONES LOCALES ---
-from app.config import settings # 🚀 CORRECCIÓN CRÍTICA: Ahora apunta a tu config.py real
+from app.config import settings
 from app.database import create_db, get_db
 from app.services import user_service
 from app.db import models 
 from app.datachess.seed_chess import generate_lessons 
 
 # --- IMPORTAMOS LOS ROUTERS ---
-from app.api.v1.endpoints import auth, lessons, progress, ai
+# 🔥 Agregados: 'users' (para tu Perfil) y 'speech' (para el Fluency Lab)
+from app.api.v1.endpoints import auth, lessons, progress, ai, users, speech
 from app.api import chess 
 
 # 1. CARGA DE ENTORNO
@@ -58,10 +59,10 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# 🛡️ MIDDLEWARE CORS (CONECTADO INTELIGENTEMENTE A CONFIG.PY)
+# 🛡️ MIDDLEWARE CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.BACKEND_CORS_ORIGINS, # 🚀 CORRECCIÓN: Usa la variable de tu config.py
+    allow_origins=settings.BACKEND_CORS_ORIGINS, 
     allow_origin_regex=r"https://.*\.vercel\.app", 
     allow_credentials=True, 
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"], 
@@ -113,9 +114,11 @@ async def stripe_webhook(
 
 # 🔗 CONEXIÓN DE RUTAS (ROUTERS)
 app.include_router(auth.router, prefix="/api/v1/auth", tags=["Authentication"])
+app.include_router(users.router, prefix="/api/v1/users", tags=["Users Profile"]) # 👈 Agregado para el Perfil
 app.include_router(progress.router, prefix="/api/v1/progress", tags=["Analytics & Progress"])
 app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lessons"])
 app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI Engine"])
+app.include_router(speech.router, prefix="/api/v1/speech", tags=["Speech Analysis"]) # 👈 Agregado para el Fluency Lab
 app.include_router(chess.router, prefix="/api/v1", tags=["Chess Academy"])
 
 # 🛠️ UTILIDADES Y ROOT (HEALTH CHECK OPTIMIZADO PARA RENDER)

@@ -5,22 +5,25 @@
  * ONIXLINGO LMS DASHBOARD - EXECUTIVE HUB (PRO TIER)
  * ==============================================================================
  * RUTA: /dashboard/pro/page.tsx
- * ESTADO: Production Ready (Fix Auth, Cache Busting & Real-time Sync)
+ * ESTADO: Production Ready (Métricas Dinámicas + Bottom Nav + Motor de Voz IA)
  * ==============================================================================
  */
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useUIStore } from '@/store/uiStore';
 import Cookies from 'js-cookie'; 
 
 import { 
   Briefcase, TrendingUp, Globe, Award, Lock, Play, Check, 
   PieChart, Users, Building, LogOut, ArrowLeft, Gem, Star, 
-  Crown, Mic, Volume2, BarChart3, Bell, X, BookOpen, Activity
+  Crown, Mic, Volume2, BarChart3, Bell, X, BookOpen, Activity,
+  Home, BookA, User
 } from 'lucide-react';
 
 import { UpgradeModal } from '@/components/pro/UpgradeModal';
+// 🔥 IMPORTAMOS NUESTRO NUEVO MOTOR DE VOZ IA
+import { ReadingStudio } from '@/components/pro/ReadingStudio';
 
 // --- CONFIGURACIÓN API ---
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
@@ -28,6 +31,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
 // ============================================================================
 // ======================== DATA ESTÁTICA (ESTRUCTURA VISUAL) ===============
 // ============================================================================
+// Nota: En el futuro, idealmente mover esto a un archivo '@/data/proCurriculum.ts'
 
 const PRO_CURRICULUM = [
   {
@@ -150,7 +154,7 @@ const DailyBriefingWidget = ({ briefing }: any) => (
       <p className="text-sm text-slate-300 italic mb-2">{briefing.text}</p>
       <p className="text-[11px] text-slate-500">Pronunciation: {briefing.pronunciation}</p>
     </div>
-    <button className="p-3 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 ml-4">
+    <button className="p-3 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 ml-4 transition-colors">
       <Volume2 size={18} />
     </button>
   </div>
@@ -168,25 +172,49 @@ const SpecializationFilter = ({ selectedIndustry, onFilterChange }: any) => {
   );
 };
 
-const ReadingStudioModal = ({ onClose }: { onClose: () => void }) => (
-  <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4">
-    <div className="bg-slate-900 border border-slate-800 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
-      <div className="sticky top-0 bg-slate-900 border-b border-slate-800 px-8 py-6 flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-white flex items-center gap-3"><BookOpen className="text-amber-400" /> Reading Studio</h2>
-        <button onClick={onClose} className="p-2 hover:bg-slate-800 rounded-lg transition-colors"><X className="text-slate-400" size={24} /></button>
-      </div>
-      <div className="p-8 space-y-8">
-        <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 text-slate-200 leading-relaxed min-h-[150px] text-sm">
-          "Our strategic imperative is to leverage synergistic partnerships..."
+// 📱 BOTTOM NAV TITANIUM (VERSIÓN PRO)
+const MobileProBottomNav = ({ toggleStudentMode }: { toggleStudentMode: () => void }) => {
+  const pathname = usePathname();
+  const isActive = (path: string) => pathname === path;
+
+  return (
+    <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-slate-950/95 backdrop-blur-xl border-t border-slate-800 px-4 sm:px-6 py-3 flex justify-between items-center z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] pb-safe">
+      {/* 1. INICIO (PRO) */}
+      <Link href="/dashboard/pro" className={`flex flex-col items-center gap-1 transition-colors ${isActive('/dashboard/pro') ? 'text-amber-500' : 'text-slate-500 hover:text-amber-400'}`}>
+        <Home size={24} strokeWidth={isActive('/dashboard/pro') ? 2.5 : 2} />
+        <span className="text-[10px] font-bold tracking-wider">Hub</span>
+      </Link>
+
+      {/* 2. DAILY BRIEFING */}
+      <Link href="/dashboard/pro" className="flex flex-col items-center gap-1 transition-colors text-slate-500 hover:text-amber-400">
+        <Mic size={24} strokeWidth={2} />
+        <span className="text-[10px] font-bold tracking-wider">Studio</span>
+      </Link>
+
+      {/* 3. BOTÓN CENTRAL: TITANIUM */}
+      <div className="group relative -mt-8">
+        <div className="w-16 h-16 rounded-full flex items-center justify-center text-slate-950 shadow-lg border-4 border-slate-950 cursor-default bg-gradient-to-br from-amber-300 via-amber-500 to-orange-600 shadow-amber-500/30 ring-2 ring-amber-500/20">
+          <Gem size={28} fill="currentColor" />
         </div>
-        <div className="flex gap-4">
-          <button className="flex-1 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold uppercase tracking-widest"><Volume2 size={18} className="inline mr-2"/> Play Audio</button>
-          <button className="flex-1 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold uppercase tracking-widest"><Mic size={18} className="inline mr-2"/> Start Recording</button>
-        </div>
+        <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-bold text-amber-500 tracking-widest">
+          PRO
+        </span>
       </div>
+
+      {/* 4. MÉTRICAS */}
+      <Link href="/dashboard/pro" className="flex flex-col items-center gap-1 transition-colors text-slate-500 hover:text-amber-400">
+        <BarChart3 size={24} strokeWidth={2} />
+        <span className="text-[10px] font-bold tracking-wider">Stats</span>
+      </Link>
+
+      {/* 5. VOLVER A STUDENT MODE */}
+      <button onClick={toggleStudentMode} className="flex flex-col items-center gap-1 text-slate-500 hover:text-indigo-400 transition-colors active:scale-95">
+        <ArrowLeft size={24} strokeWidth={2} />
+        <span className="text-[10px] font-bold tracking-wider">Student</span>
+      </button>
     </div>
-  </div>
-);
+  );
+};
 
 // ============================================================================
 // ==================== COMPONENTES CON LÓGICA CONECTADA ====================
@@ -194,19 +222,19 @@ const ReadingStudioModal = ({ onClose }: { onClose: () => void }) => (
 
 const ExecutiveKPICard = ({ kpis }: { kpis: any }) => (
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-    <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
+    <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4 shadow-lg shadow-black/20">
       <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-2">Total XP</p>
       <p className="text-2xl font-bold text-amber-400">{kpis.totalXP?.toLocaleString() || 0}</p>
     </div>
-    <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
+    <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4 shadow-lg shadow-black/20">
       <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-2">Level</p>
       <p className="text-2xl font-bold text-emerald-400">{kpis.currentLevel || 1}</p>
     </div>
-    <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
+    <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4 shadow-lg shadow-black/20">
       <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-2">Accuracy</p>
       <p className="text-2xl font-bold text-blue-400">{kpis.accuracy || 0}%</p>
     </div>
-    <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
+    <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4 shadow-lg shadow-black/20">
       <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-2">Fluency</p>
       <p className="text-2xl font-bold text-purple-400">{kpis.fluencyScore || 0}/100</p>
     </div>
@@ -227,7 +255,7 @@ const ProHeaderStats = ({ kpis }: { kpis: any }) => (
       <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400"><BarChart3 size={18} /></div>
       <div>
         <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Accuracy</p>
-        <p className="text-sm font-bold text-white">{kpis.accuracy}%</p>
+        <p className="text-sm font-bold text-white">{kpis.accuracy || 0}%</p>
       </div>
     </div>
   </div>
@@ -236,7 +264,7 @@ const ProHeaderStats = ({ kpis }: { kpis: any }) => (
 const ProTimelineNode = ({ lesson, index, statusData, isLast }: any) => {
   const router = useRouter();
 
-  // 🔥 LÓGICA DE ESTADO REAL (Corregida con is_unlocked)
+  // 🔥 LÓGICA DE ESTADO REAL
   let isLocked = true;
   let isCompleted = false;
   let isActive = false;
@@ -250,7 +278,6 @@ const ProTimelineNode = ({ lesson, index, statusData, isLast }: any) => {
       isLocked = false;
     }
   } else if (lesson.id === 'pro-b1-1') {
-    // La primera lección de la ruta Pro siempre está desbloqueada por defecto
     isActive = true;
     isLocked = false;
   }
@@ -286,7 +313,7 @@ const ProTimelineNode = ({ lesson, index, statusData, isLast }: any) => {
         onClick={handleNavigate}
         className={`
           flex-1 p-5 rounded-xl border transition-all duration-300 flex items-center justify-between
-          ${isLocked ? 'border-slate-900 bg-slate-900/20 cursor-not-allowed' : 'border-slate-800 bg-slate-900/60 hover:border-slate-600 cursor-pointer hover:bg-slate-800'}
+          ${isLocked ? 'border-slate-900 bg-slate-900/20 cursor-not-allowed' : 'border-slate-800 bg-slate-900/60 hover:border-slate-600 cursor-pointer hover:bg-slate-800 shadow-lg shadow-black/10'}
         `}
       >
         <div>
@@ -340,22 +367,18 @@ export default function ProfessionalDashboard() {
           return;
         }
 
-        // 🔥 CORRECCIÓN 1: Formato Bearer 100% seguro
         const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
-        
         const headers = { 
           'Authorization': safeToken,
           'Content-Type': 'application/json',
-          // 🔥 CORRECCIÓN 2: Bust de Caché a nivel navegador y red
           'Cache-Control': 'no-cache, no-store, must-revalidate',
           'Pragma': 'no-cache'
         };
 
         const mapRes = await fetch(`${API_URL}/api/v1/progress/map`, { 
           headers,
-          cache: 'no-store' // 🚀 Bust de Caché a nivel Next.js
+          cache: 'no-store'
         });
-        
         if (mapRes.ok) {
           const mapData = await mapRes.json();
           setProProgress(mapData.pro || []);
@@ -365,14 +388,13 @@ export default function ProfessionalDashboard() {
           headers,
           cache: 'no-store' 
         });
-        
         if (statsRes.ok) {
           const statsData = await statsRes.json();
           setKpis({
             totalXP: statsData.total_xp || 0,
             currentLevel: parseInt(statsData.level_label?.split(' ')[0]) || 1, 
-            accuracy: 88, // TODO: Conectar con backend real cuando esté listo
-            fluencyScore: 82 // TODO: Conectar con backend real cuando esté listo
+            accuracy: statsData.accuracy || 0, 
+            fluencyScore: statsData.fluency_score || 0 
           });
         }
       } catch (error) {
@@ -395,54 +417,60 @@ export default function ProfessionalDashboard() {
   };
 
   if (isLoading) {
-    return <div className="min-h-screen bg-slate-950 flex items-center justify-center text-amber-500 animate-pulse">Cargando Executive Interface...</div>;
+    return (
+      <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center text-amber-500">
+        <Activity className="animate-spin mb-4" size={48} />
+        <span className="uppercase tracking-widest text-xs font-bold animate-pulse">Cargando Executive Interface...</span>
+      </div>
+    );
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-amber-500/30 selection:text-amber-200 relative">
+    <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-amber-500/30 selection:text-amber-200 relative pb-24 md:pb-0">
       {!isUserPremium && <UpgradeModal />}
       
-      {/* HEADER */}
-      <header className="sticky top-0 z-40 px-8 h-24 flex items-center justify-between bg-gradient-to-b from-slate-950 to-transparent pointer-events-none">
-        <div className="pointer-events-auto flex items-center gap-4">
-          <h1 className="text-xl font-light tracking-[0.2em] text-white uppercase">
+      {/* HEADER ESCRITORIO */}
+      <header className="sticky top-0 z-40 px-6 md:px-8 h-20 md:h-24 flex items-center justify-between bg-gradient-to-b from-slate-950 to-slate-950/80 backdrop-blur-md border-b border-slate-900">
+        <div className="flex items-center gap-4">
+          <h1 className="text-xl md:text-2xl font-light tracking-[0.2em] text-white uppercase">
             Onix<span className="font-bold text-amber-500">Pro</span>
           </h1>
-          <span className="hidden md:inline-block px-3 py-1 bg-slate-900/80 border border-slate-800 text-[10px] text-slate-500 rounded-full uppercase tracking-widest backdrop-blur-sm">
+          <span className="hidden md:inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-[10px] text-amber-500 rounded-full uppercase tracking-widest font-bold">
             Titanium
           </span>
         </div>
-        <div className="pointer-events-auto flex items-center gap-6">
-          <button onClick={handleReturnToStudent} className="flex items-center gap-2 text-xs text-slate-500 uppercase tracking-widest hover:text-white transition-colors">
+        <div className="flex items-center gap-6">
+          <button onClick={handleReturnToStudent} className="hidden md:flex items-center gap-2 text-xs text-slate-400 uppercase tracking-widest hover:text-white transition-colors bg-slate-900 px-4 py-2 rounded-xl border border-slate-800 hover:border-slate-600">
             <ArrowLeft size={14} /> Student Mode
           </button>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <ProHeaderStats kpis={kpis} />
           </div>
         </div>
       </header>
 
-      <div className="px-6 md:px-12 max-w-7xl mx-auto pb-32">
+      <div className="px-4 md:px-12 max-w-7xl mx-auto pt-8">
         {/* HERO */}
-        <div className="mb-24 pt-10">
-          <h2 className="text-5xl md:text-6xl font-thin text-white mb-6 tracking-tight">
-            Executive <br/>
+        <div className="mb-12 md:mb-24 md:pt-10">
+          <h2 className="text-4xl md:text-6xl font-thin text-white mb-4 md:mb-6 tracking-tight leading-tight">
+            Executive <br className="hidden md:block"/>
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 drop-shadow-2xl">
               Hub.
             </span>
           </h2>
-          <p className="text-slate-400 text-lg font-light max-w-3xl leading-relaxed border-l-2 border-amber-500/50 pl-6">
+          <p className="text-slate-400 text-base md:text-lg font-light max-w-3xl leading-relaxed border-l-2 border-amber-500/50 pl-4 md:pl-6">
             Bienvenido a su centro de comando. Progreso y métricas en tiempo real.
           </p>
         </div>
 
         <ExecutiveKPICard kpis={kpis} />
+        
         <FluencyLabPanel onOpenStudio={() => setShowReadingStudio(true)} />
 
         <section className="mb-16">
           <div className="flex items-center gap-4 mb-6">
             <Bell className="text-amber-400" size={24} />
-            <h3 className="text-2xl font-bold text-white">Daily Executive Briefing</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">Daily Executive Briefing</h3>
             <div className="h-[1px] flex-1 bg-gradient-to-r from-slate-800 to-transparent"></div>
           </div>
           <div className="space-y-3">
@@ -453,19 +481,19 @@ export default function ProfessionalDashboard() {
         </section>
 
         <div className="mb-8">
-          <h3 className="text-xl font-bold text-white mb-4">Filter Specializations</h3>
+          <h3 className="text-lg md:text-xl font-bold text-white mb-4">Filter Specializations</h3>
           <SpecializationFilter selectedIndustry={selectedIndustry} onFilterChange={setSelectedIndustry} />
         </div>
 
         {/* CURRICULUM CONECTADO */}
         <div className="relative">
           {PRO_CURRICULUM.map((section, sIdx) => (
-            <div key={section.id} className="mb-32 relative">
-              <div className="flex items-center gap-4 mb-12">
-                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-900 border border-slate-800 text-slate-500">
+            <div key={section.id} className="mb-24 relative">
+              <div className="flex items-center gap-4 mb-8 md:mb-12">
+                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-900 border border-slate-800 text-amber-500 shadow-inner">
                   <section.icon size={20} />
                 </div>
-                <h3 className="text-2xl font-bold tracking-tight text-white">{section.title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold tracking-tight text-white">{section.title}</h3>
                 <div className="h-[1px] flex-1 bg-gradient-to-r from-slate-800 to-transparent ml-4"></div>
               </div>
 
@@ -484,7 +512,11 @@ export default function ProfessionalDashboard() {
           ))}
         </div>
       </div>
-      {showReadingStudio && <ReadingStudioModal onClose={() => setShowReadingStudio(false)} />}
+      
+      {/* 🔥 MODAL DE LECTURA (IA) Y BOTTOM NAV */}
+      {showReadingStudio && <ReadingStudio onClose={() => setShowReadingStudio(false)} />}
+      <MobileProBottomNav toggleStudentMode={handleReturnToStudent} />
+      
     </div>
   );
 }

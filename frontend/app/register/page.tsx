@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { User, Mail, Lock, Loader2, AlertCircle, ArrowRight, CheckCircle2, ShieldPlus } from 'lucide-react';
 
-// URL de tu backend en Render
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
 
 export default function RegisterPage() {
@@ -30,7 +29,14 @@ export default function RegisterPage() {
     
     // 1. Validación básica de contraseñas
     if (formData.password !== formData.confirmPassword) {
-      setErrorMessage('Las contraseñas no coinciden.');
+      setErrorMessage('Las contraseñas no coinciden. Verifícalas e intenta de nuevo.');
+      setStatus('error');
+      return;
+    }
+    
+    // 2. Validación de longitud de contraseña
+    if (formData.password.length < 6) {
+      setErrorMessage('La contraseña debe tener al menos 6 caracteres.');
       setStatus('error');
       return;
     }
@@ -53,26 +59,30 @@ export default function RegisterPage() {
 
       if (res.ok) {
         setStatus('success');
-        // Redirigir al login después de 2 segundos para que vean el éxito
+        // Redirigir al login después de 2.5 segundos para que vean el éxito
         setTimeout(() => router.push('/login'), 2500);
       } else {
         setStatus('error');
-        setErrorMessage(data.detail || 'No se pudo crear la cuenta. Intenta con otro usuario o email.');
+        setErrorMessage(data.detail || 'No se pudo crear la cuenta. Es posible que el usuario o email ya existan.');
       }
     } catch (error) {
       setStatus('error');
-      setErrorMessage('Error de conexión con el servidor de OnixLingo.');
+      setErrorMessage('Error de conexión con el servidor. Verifica tu internet o intenta en unos minutos.');
     }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
     <div className="min-h-screen bg-[#0B0F19] flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-indigo-500/30">
       {/* Decoración de fondo */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-indigo-600/5 rounded-full blur-[120px]" />
+        <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-600/10 rounded-full blur-[120px]" />
       </div>
 
-      <div className="sm:mx-auto sm:w-full sm:max-w-md text-center relative z-10">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md text-center relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
         <div className="mx-auto h-14 w-14 bg-gradient-to-br from-indigo-600 to-violet-700 rounded-2xl flex items-center justify-center shadow-xl shadow-indigo-500/20 mb-6 border border-indigo-400/20">
           <ShieldPlus className="text-white" size={32} />
         </div>
@@ -84,16 +94,16 @@ export default function RegisterPage() {
         </p>
       </div>
 
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-md relative z-10">
+      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-md relative z-10 animate-in fade-in zoom-in-95 duration-500 delay-150">
         <div className="bg-[#0F1623]/80 backdrop-blur-xl py-8 px-6 shadow-2xl border border-slate-800/60 rounded-3xl sm:px-10">
           
           {status === 'success' ? (
             <div className="text-center space-y-4 py-8 animate-in zoom-in duration-500">
-              <div className="mx-auto h-20 w-20 bg-emerald-500/10 rounded-full flex items-center justify-center border border-emerald-500/20">
+              <div className="mx-auto h-20 w-20 bg-emerald-500/10 rounded-full flex items-center justify-center border border-emerald-500/20 shadow-[0_0_30px_rgba(16,185,129,0.2)]">
                 <CheckCircle2 className="text-emerald-500" size={48} />
               </div>
               <h3 className="text-2xl font-bold text-white">¡Registro Exitoso!</h3>
-              <p className="text-slate-400">Tu cuenta ha sido creada. Redirigiendo al panel de acceso...</p>
+              <p className="text-slate-400">Tu cuenta ha sido creada. Preparando tu entorno seguro...</p>
             </div>
           ) : (
             <form className="space-y-5" onSubmit={handleRegister}>
@@ -101,13 +111,15 @@ export default function RegisterPage() {
               <div>
                 <label className="block text-sm font-bold text-slate-300 mb-2 ml-1">Usuario</label>
                 <div className="relative group">
-                  <User className="absolute left-3.5 top-3 h-5 w-5 text-slate-500 group-focus-within:text-indigo-500 transition-colors" />
+                  <User className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-500 group-focus-within:text-indigo-400 transition-colors" />
                   <input
                     type="text"
+                    name="username"
                     required
-                    className="w-full pl-11 pr-4 py-3 border border-slate-700 rounded-xl bg-[#0B0F19]/50 text-white placeholder-slate-600 focus:ring-2 focus:ring-indigo-500/50 outline-none transition-all"
+                    disabled={status === 'loading'}
+                    className="w-full pl-12 pr-4 py-3.5 border border-slate-700 rounded-xl bg-[#0B0F19]/50 text-white placeholder-slate-600 focus:ring-2 focus:ring-indigo-500/50 outline-none transition-all disabled:opacity-50"
                     placeholder="Ej: jacob_onix"
-                    onChange={(e) => setFormData({...formData, username: e.target.value})}
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
@@ -116,38 +128,50 @@ export default function RegisterPage() {
               <div>
                 <label className="block text-sm font-bold text-slate-300 mb-2 ml-1">Email Corporativo</label>
                 <div className="relative group">
-                  <Mail className="absolute left-3.5 top-3 h-5 w-5 text-slate-500 group-focus-within:text-indigo-500 transition-colors" />
+                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-500 group-focus-within:text-indigo-400 transition-colors" />
                   <input
                     type="email"
+                    name="email"
                     required
-                    className="w-full pl-11 pr-4 py-3 border border-slate-700 rounded-xl bg-[#0B0F19]/50 text-white placeholder-slate-600 focus:ring-2 focus:ring-indigo-500/50 outline-none transition-all"
-                    placeholder="tu@onixu.company"
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    disabled={status === 'loading'}
+                    className="w-full pl-12 pr-4 py-3.5 border border-slate-700 rounded-xl bg-[#0B0F19]/50 text-white placeholder-slate-600 focus:ring-2 focus:ring-indigo-500/50 outline-none transition-all disabled:opacity-50"
+                    placeholder="tu@empresa.com"
+                    onChange={handleInputChange}
                   />
                 </div>
               </div>
 
               {/* CONTRASEÑAS EN GRID */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
+                <div className="relative group">
                   <label className="block text-sm font-bold text-slate-300 mb-2 ml-1">Contraseña</label>
-                  <input
-                    type="password"
-                    required
-                    className="w-full px-4 py-3 border border-slate-700 rounded-xl bg-[#0B0F19]/50 text-white focus:ring-2 focus:ring-indigo-500/50 outline-none transition-all"
-                    placeholder="••••••••"
-                    onChange={(e) => setFormData({...formData, password: e.target.value})}
-                  />
+                  <div className="relative">
+                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 group-focus-within:text-indigo-400 transition-colors" />
+                    <input
+                      type="password"
+                      name="password"
+                      required
+                      disabled={status === 'loading'}
+                      className="w-full pl-10 pr-4 py-3.5 border border-slate-700 rounded-xl bg-[#0B0F19]/50 text-white focus:ring-2 focus:ring-indigo-500/50 outline-none transition-all disabled:opacity-50 text-sm"
+                      placeholder="••••••••"
+                      onChange={handleInputChange}
+                    />
+                  </div>
                 </div>
-                <div>
+                <div className="relative group">
                   <label className="block text-sm font-bold text-slate-300 mb-2 ml-1">Confirmar</label>
-                  <input
-                    type="password"
-                    required
-                    className="w-full px-4 py-3 border border-slate-700 rounded-xl bg-[#0B0F19]/50 text-white focus:ring-2 focus:ring-indigo-500/50 outline-none transition-all"
-                    placeholder="••••••••"
-                    onChange={(e) => setFormData({...formData, confirmPassword: e.target.value})}
-                  />
+                  <div className="relative">
+                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500 group-focus-within:text-indigo-400 transition-colors" />
+                    <input
+                      type="password"
+                      name="confirmPassword"
+                      required
+                      disabled={status === 'loading'}
+                      className="w-full pl-10 pr-4 py-3.5 border border-slate-700 rounded-xl bg-[#0B0F19]/50 text-white focus:ring-2 focus:ring-indigo-500/50 outline-none transition-all disabled:opacity-50 text-sm"
+                      placeholder="••••••••"
+                      onChange={handleInputChange}
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -162,14 +186,14 @@ export default function RegisterPage() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full flex justify-center items-center gap-2 py-3.5 px-4 rounded-xl shadow-lg shadow-indigo-600/20 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-500 active:scale-[0.98] transition-all disabled:opacity-50"
+                className="w-full flex justify-center items-center gap-2 mt-2 py-3.5 px-4 rounded-xl shadow-lg shadow-indigo-600/20 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-500 active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed group"
               >
                 {status === 'loading' ? (
                   <Loader2 className="animate-spin h-5 w-5" />
                 ) : (
                   <>
                     Crear mi Cuenta
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </>
                 )}
               </button>

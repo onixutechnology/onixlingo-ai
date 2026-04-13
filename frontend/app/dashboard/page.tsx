@@ -5,12 +5,12 @@
  * ONIXLINGO LMS DASHBOARD - STUDENT EDITION (FREE TIER)
  * ==============================================================================
  * RUTA: /dashboard/page.tsx
- * ESTADO: Production Ready (Fix Logic Hole & Fallback URL)
+ * ESTADO: Production Ready (Bottom Nav Inteligente, Premium y Rutas Corregidas)
  * ==============================================================================
  */
 
 import { useState, useEffect, useMemo } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useUIStore } from '@/store/uiStore';
 import Sidebar from '@/components/dashboard/sidebar';
@@ -125,40 +125,55 @@ const HeaderStats = ({ xp, streak }: { xp: number, streak: number }) => (
   </div>
 );
 
-const MobileBottomNav = () => (
-  <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 px-6 py-3 flex justify-between items-center z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] pb-safe">
-    <Link href="/dashboard" className="flex flex-col items-center gap-1 text-indigo-600 hover:text-indigo-700">
-      <Home size={24} strokeWidth={2.5} />
-      <span className="text-[10px] font-bold">Inicio</span>
-    </Link>
-    <Link href="/dashboard/vocabulary" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
-      <BookA size={24} />
-      <span className="text-[10px] font-bold">Vocab</span>
-    </Link>
-    <Link href="/dashboard/chess" className="group relative">
-      <div className="w-14 h-14 -mt-8 bg-emerald-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-emerald-500/40 border-4 border-slate-50 cursor-pointer transform group-active:scale-95 transition-all">
-        <Crown size={28} fill="currentColor" />
-      </div>
-      <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-bold text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity">
-        Jugar
-      </span>
-    </Link>
-    <Link href="/dashboard" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
-      <Trophy size={24} />
-      <span className="text-[10px] font-bold">Logros</span>
-    </Link>
-    <Link href="/dashboard/profile" className="flex flex-col items-center gap-1 text-slate-400 hover:text-indigo-600 transition-colors">
-      <User size={24} />
-      <span className="text-[10px] font-bold">Perfil</span>
-    </Link>
-  </div>
-);
+// 📱 BOTTOM NAV INTELIGENTE
+const MobileBottomNav = ({ toggleProMode, mode }: { toggleProMode: () => void, mode: string }) => {
+  const pathname = usePathname();
+  const isActive = (path: string) => pathname === path;
+
+  return (
+    <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-t border-slate-200 px-4 sm:px-6 py-3 flex justify-between items-center z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] pb-safe">
+      {/* 1. INICIO */}
+      <Link href="/dashboard" className={`flex flex-col items-center gap-1 transition-colors ${isActive('/dashboard') ? 'text-indigo-600' : 'text-slate-400 hover:text-indigo-600'}`}>
+        <Home size={24} strokeWidth={isActive('/dashboard') ? 2.5 : 2} />
+        <span className="text-[10px] font-bold">Inicio</span>
+      </Link>
+
+      {/* 2. VOCABULARIO */}
+      <Link href="/dashboard/vocabulary" className={`flex flex-col items-center gap-1 transition-colors ${isActive('/dashboard/vocabulary') ? 'text-indigo-600' : 'text-slate-400 hover:text-indigo-600'}`}>
+        <BookA size={24} strokeWidth={isActive('/dashboard/vocabulary') ? 2.5 : 2} />
+        <span className="text-[10px] font-bold">Vocab</span>
+      </Link>
+
+      {/* 3. AJEDREZ (BOTÓN CENTRAL PREMIUM) */}
+      <Link href="/dashboard/chess" className="group relative -mt-8">
+        <div className={`w-16 h-16 rounded-full flex items-center justify-center text-white shadow-lg border-4 border-slate-50 cursor-pointer transform active:scale-95 transition-all duration-300 ${isActive('/dashboard/chess') ? 'bg-amber-500 shadow-amber-500/40 scale-105 ring-2 ring-amber-200' : 'bg-emerald-600 shadow-emerald-500/40 group-hover:bg-emerald-500 group-hover:-translate-y-1'}`}>
+          <Crown size={28} fill="currentColor" />
+        </div>
+        <span className={`absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-bold transition-opacity ${isActive('/dashboard/chess') ? 'text-amber-600 opacity-100' : 'text-emerald-600 opacity-0 group-hover:opacity-100'}`}>
+          Ajedrez
+        </span>
+      </Link>
+
+      {/* 4. PERFIL */}
+      <Link href="/dashboard/profile" className={`flex flex-col items-center gap-1 transition-colors ${isActive('/dashboard/profile') ? 'text-indigo-600' : 'text-slate-400 hover:text-indigo-600'}`}>
+        <User size={24} strokeWidth={isActive('/dashboard/profile') ? 2.5 : 2} />
+        <span className="text-[10px] font-bold">Perfil</span>
+      </Link>
+
+      {/* 5. MODO PRO */}
+      <button onClick={toggleProMode} className={`flex flex-col items-center gap-1 transition-colors active:scale-95 ${mode === 'professional' ? 'text-indigo-600' : 'text-slate-400 hover:text-indigo-600'}`}>
+        <Briefcase size={24} strokeWidth={mode === 'professional' ? 2.5 : 2} />
+        <span className="text-[10px] font-bold">Pro</span>
+      </button>
+    </div>
+  );
+};
 
 const TimelineNode = ({ id, title, status, stars, index, isLast, color, onClick }: any) => {
   const theme = getProfessionalTheme(color, status);
   const description = getLessonDescription(title);
   const variant = COLOR_VARIANTS[color] || COLOR_VARIANTS['blue'];
-  
+
   return (
     <div className="relative flex group w-full mb-8">
       {!isLast && (
@@ -293,12 +308,9 @@ export default function DashboardPage() {
     // Si no hay user en localStorage, ponemos uno por defecto para no bloquear la app
     setCurrentUser(user || 'Estudiante');
 
-    console.log("🛠️ DIAGNÓSTICO: Token existe?", !!token);
-
     if (token) {
       const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
-      console.log("📡 Conectando a:", BASE_URL);
-      
+
       fetch(`${BASE_URL}/api/v1/progress/map`, {
         cache: 'no-store',
         credentials: 'include',
@@ -311,7 +323,6 @@ export default function DashboardPage() {
       })
       .then(res => {
         if (res.status === 401) {
-          console.warn("Token inválido, sacando al usuario...");
           Cookies.remove('access_token');
           router.push('/login');
           throw new Error("Sesión expirada");
@@ -320,7 +331,6 @@ export default function DashboardPage() {
         return res.json();
       })
       .then(data => {
-        console.log("✅ Datos recibidos del servidor!", data);
         setDashboardData(data);
         const completedCount = data.standard?.filter((l: any) => l.status === 'completed').length || 0;
         setUserStats({
@@ -334,7 +344,6 @@ export default function DashboardPage() {
         setDashboardData({ standard: [] }); 
       });
     } else {
-      console.warn("No hay token, enviando al login...");
       router.push('/login');
     }
   }, [router]);
@@ -435,6 +444,7 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] via-[#F1F5F9] to-[#E2E8F0] font-sans text-slate-900 pb-32 lg:pb-0 selection:bg-indigo-100 selection:text-indigo-900">
+      
       {/* --- NAVBAR OPTIMIZADA --- */}
       <nav className="sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-slate-200/60 px-4 md:px-10 h-20 md:h-24 flex items-center justify-between shadow-sm transition-all">
         <div className="flex items-center gap-3 md:gap-4">
@@ -449,6 +459,7 @@ export default function DashboardPage() {
 
         <div className="flex items-center gap-3 md:gap-6">
           <HeaderStats xp={userStats.xp} streak={userStats.streak} />
+          
           <Link
             href="/dashboard/vocabulary"
             className="hidden md:flex items-center gap-2 bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
@@ -456,6 +467,7 @@ export default function DashboardPage() {
             <BookA size={18} className="text-slate-400 group-hover:text-indigo-500 transition-colors" />
             <span className="text-xs md:text-sm font-bold">Vocabulario</span>
           </Link>
+          
           <Link
             href="/dashboard/chess"
             className="hidden md:flex items-center gap-2 bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-emerald-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
@@ -463,13 +475,16 @@ export default function DashboardPage() {
             <Crown size={18} className="text-slate-400 group-hover:text-emerald-500 transition-colors" />
             <span className="text-xs md:text-sm font-bold">Ajedrez</span>
           </Link>
+          
+          {/* 🔥 CORRECCIÓN: Apuntando a achievements en Escritorio */}
           <Link
-            href="/dashboard"
+            href="/dashboard/achievements"
             className="hidden md:flex items-center gap-2 bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
           >
             <Trophy size={18} className="text-slate-400 group-hover:text-indigo-500 transition-colors" />
             <span className="text-xs md:text-sm font-bold">Logros</span>
           </Link>
+          
           <Link
             href="/dashboard/profile"
             className="hidden md:flex items-center gap-2 bg-white hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 px-3 py-2 md:px-4 md:py-2.5 rounded-xl border border-slate-200 hover:border-indigo-200 transition-all shadow-sm hover:shadow-md active:scale-95 group"
@@ -477,6 +492,7 @@ export default function DashboardPage() {
             <User size={18} className="text-slate-400 group-hover:text-indigo-500 transition-colors" />
             <span className="text-xs md:text-sm font-bold">Perfil</span>
           </Link>
+          
           <button
             onClick={toggleProMode}
             className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-3 py-2 md:px-4 md:py-2.5 rounded-xl transition-all shadow-lg hover:shadow-indigo-500/20 active:scale-95"
@@ -484,7 +500,9 @@ export default function DashboardPage() {
             <Briefcase size={18} className="text-indigo-400" />
             <span className="text-xs md:text-sm font-bold">Modo Pro</span>
           </button>
+          
           <div className="h-8 w-[1px] bg-slate-200 hidden md:block"></div>
+          
           {currentUser ? (
             <div className="hidden md:flex items-center gap-4 cursor-pointer hover:bg-white p-2 rounded-full md:pr-6 border border-transparent hover:border-slate-200 transition-all group" onClick={handleLogout}>
               <div className="w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold text-sm shadow-md group-hover:bg-indigo-600 transition-colors">
@@ -578,7 +596,9 @@ export default function DashboardPage() {
           <Sidebar userStats={userStats} />
         </div>
       </div>
-      <MobileBottomNav />
+      
+      {/* 🟢 NUEVA BARRA INFERIOR INTEGRADA AQUÍ */}
+      <MobileBottomNav toggleProMode={toggleProMode} mode={mode} />
     </div>
   );
 }
