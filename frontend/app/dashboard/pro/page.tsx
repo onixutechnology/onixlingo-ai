@@ -11,6 +11,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link'; // 🔥 CORRECCIÓN: Importación agregada para Vercel
 import { useUIStore } from '@/store/uiStore';
 import Cookies from 'js-cookie'; 
 
@@ -22,16 +23,29 @@ import {
 } from 'lucide-react';
 
 import { UpgradeModal } from '@/components/pro/UpgradeModal';
-// 🔥 IMPORTAMOS NUESTRO NUEVO MOTOR DE VOZ IA
 import { ReadingStudio } from '@/components/pro/ReadingStudio';
+
+// --- INTERFACES DE TYPESCRIPT (MEJORA DE ROBUSTEZ) ---
+interface KPIStats {
+  totalXP: number;
+  currentLevel: number;
+  accuracy: number;
+  fluencyScore: number;
+}
+
+interface LessonStatus {
+  lesson_id: string;
+  status: 'locked' | 'active' | 'completed';
+  is_unlocked: boolean;
+  score?: number;
+}
 
 // --- CONFIGURACIÓN API ---
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
 
 // ============================================================================
-// ======================== DATA ESTÁTICA (ESTRUCTURA VISUAL) ===============
+// ======================== DATA ESTÁTICA =====================================
 // ============================================================================
-// Nota: En el futuro, idealmente mover esto a un archivo '@/data/proCurriculum.ts'
 
 const PRO_CURRICULUM = [
   {
@@ -144,12 +158,13 @@ const FluencyLabPanel = ({ onOpenStudio }: { onOpenStudio: () => void }) => (
   </section>
 );
 
-const DailyBriefingWidget = ({ briefing }: any) => (
+const DailyBriefingWidget = ({ briefing }: { briefing: any }) => (
   <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-4 flex items-center justify-between hover:border-amber-500/50 transition-colors">
     <div className="flex-1">
       <div className="flex items-center gap-2 mb-2">
         <span className="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Daily Brief</span>
         <span className="text-[10px] px-2 py-1 rounded bg-slate-800 text-slate-400 uppercase">{briefing.difficulty}</span>
+        <span className="text-[10px] px-2 py-1 rounded bg-slate-800/50 border border-slate-700 text-slate-400 uppercase">{briefing.industry}</span>
       </div>
       <p className="text-sm text-slate-300 italic mb-2">{briefing.text}</p>
       <p className="text-[11px] text-slate-500">Pronunciation: {briefing.pronunciation}</p>
@@ -160,13 +175,24 @@ const DailyBriefingWidget = ({ briefing }: any) => (
   </div>
 );
 
-const SpecializationFilter = ({ selectedIndustry, onFilterChange }: any) => {
-  const industries = ['Tech', 'Finance', 'Legal', 'Medical', 'Engineering', 'Sales', 'HR'];
+const SpecializationFilter = ({ selectedIndustry, onFilterChange }: { selectedIndustry: string | null, onFilterChange: (i: string | null) => void }) => {
+  const industries = ['Tech', 'Finance', 'Corporate', 'Medical', 'Engineering', 'Sales', 'HR'];
   return (
     <div className="mb-8 flex flex-wrap gap-3">
-      <button onClick={() => onFilterChange(null)} className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all ${selectedIndustry === null ? 'bg-amber-500 text-slate-950' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}`}>All Industries</button>
+      <button 
+        onClick={() => onFilterChange(null)} 
+        className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all ${selectedIndustry === null ? 'bg-amber-500 text-slate-950' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}`}
+      >
+        All Industries
+      </button>
       {industries.map(industry => (
-        <button key={industry} onClick={() => onFilterChange(industry)} className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all ${selectedIndustry === industry ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}`}>{industry}</button>
+        <button 
+          key={industry} 
+          onClick={() => onFilterChange(industry)} 
+          className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all ${selectedIndustry === industry ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'}`}
+        >
+          {industry}
+        </button>
       ))}
     </div>
   );
@@ -179,19 +205,16 @@ const MobileProBottomNav = ({ toggleStudentMode }: { toggleStudentMode: () => vo
 
   return (
     <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-slate-950/95 backdrop-blur-xl border-t border-slate-800 px-4 sm:px-6 py-3 flex justify-between items-center z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] pb-safe">
-      {/* 1. INICIO (PRO) */}
       <Link href="/dashboard/pro" className={`flex flex-col items-center gap-1 transition-colors ${isActive('/dashboard/pro') ? 'text-amber-500' : 'text-slate-500 hover:text-amber-400'}`}>
         <Home size={24} strokeWidth={isActive('/dashboard/pro') ? 2.5 : 2} />
         <span className="text-[10px] font-bold tracking-wider">Hub</span>
       </Link>
 
-      {/* 2. DAILY BRIEFING */}
       <Link href="/dashboard/pro" className="flex flex-col items-center gap-1 transition-colors text-slate-500 hover:text-amber-400">
         <Mic size={24} strokeWidth={2} />
         <span className="text-[10px] font-bold tracking-wider">Studio</span>
       </Link>
 
-      {/* 3. BOTÓN CENTRAL: TITANIUM */}
       <div className="group relative -mt-8">
         <div className="w-16 h-16 rounded-full flex items-center justify-center text-slate-950 shadow-lg border-4 border-slate-950 cursor-default bg-gradient-to-br from-amber-300 via-amber-500 to-orange-600 shadow-amber-500/30 ring-2 ring-amber-500/20">
           <Gem size={28} fill="currentColor" />
@@ -201,13 +224,11 @@ const MobileProBottomNav = ({ toggleStudentMode }: { toggleStudentMode: () => vo
         </span>
       </div>
 
-      {/* 4. MÉTRICAS */}
       <Link href="/dashboard/pro" className="flex flex-col items-center gap-1 transition-colors text-slate-500 hover:text-amber-400">
         <BarChart3 size={24} strokeWidth={2} />
         <span className="text-[10px] font-bold tracking-wider">Stats</span>
       </Link>
 
-      {/* 5. VOLVER A STUDENT MODE */}
       <button onClick={toggleStudentMode} className="flex flex-col items-center gap-1 text-slate-500 hover:text-indigo-400 transition-colors active:scale-95">
         <ArrowLeft size={24} strokeWidth={2} />
         <span className="text-[10px] font-bold tracking-wider">Student</span>
@@ -220,7 +241,7 @@ const MobileProBottomNav = ({ toggleStudentMode }: { toggleStudentMode: () => vo
 // ==================== COMPONENTES CON LÓGICA CONECTADA ====================
 // ============================================================================
 
-const ExecutiveKPICard = ({ kpis }: { kpis: any }) => (
+const ExecutiveKPICard = ({ kpis }: { kpis: KPIStats }) => (
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
     <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4 shadow-lg shadow-black/20">
       <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-2">Total XP</p>
@@ -241,7 +262,7 @@ const ExecutiveKPICard = ({ kpis }: { kpis: any }) => (
   </div>
 );
 
-const ProHeaderStats = ({ kpis }: { kpis: any }) => (
+const ProHeaderStats = ({ kpis }: { kpis: KPIStats }) => (
   <div className="flex items-center gap-6 bg-slate-900/80 backdrop-blur-md px-6 py-3 border border-slate-800 rounded-xl shadow-2xl">
     <div className="flex items-center gap-3">
       <div className="p-2 bg-amber-500/10 rounded-lg text-amber-400"><Gem size={18} /></div>
@@ -261,10 +282,9 @@ const ProHeaderStats = ({ kpis }: { kpis: any }) => (
   </div>
 );
 
-const ProTimelineNode = ({ lesson, index, statusData, isLast }: any) => {
+const ProTimelineNode = ({ lesson, index, statusData, isLast }: { lesson: any, index: number, statusData: LessonStatus | undefined, isLast: boolean }) => {
   const router = useRouter();
 
-  // 🔥 LÓGICA DE ESTADO REAL
   let isLocked = true;
   let isCompleted = false;
   let isActive = false;
@@ -278,6 +298,7 @@ const ProTimelineNode = ({ lesson, index, statusData, isLast }: any) => {
       isLocked = false;
     }
   } else if (lesson.id === 'pro-b1-1') {
+    // La primera lección siempre está activa por defecto
     isActive = true;
     isLocked = false;
   }
@@ -340,24 +361,21 @@ const ProTimelineNode = ({ lesson, index, statusData, isLast }: any) => {
 };
 
 // ============================================================================
-// ==================== PÁGINA PRINCIPAL (CONEXIÓN AL BACKEND) ==============
+// ==================== PÁGINA PRINCIPAL ======================================
 // ============================================================================
 
 export default function ProfessionalDashboard() {
   const router = useRouter();
-  const { mode, setMode } = useUIStore();
+  const { setMode } = useUIStore();
   
-  // ESTADOS
-  const [proProgress, setProProgress] = useState<any[]>([]);
-  const [kpis, setKpis] = useState({ totalXP: 0, currentLevel: 1, accuracy: 0, fluencyScore: 0 });
+  const [proProgress, setProProgress] = useState<LessonStatus[]>([]);
+  const [kpis, setKpis] = useState<KPIStats>({ totalXP: 0, currentLevel: 1, accuracy: 0, fluencyScore: 0 });
   const [isLoading, setIsLoading] = useState(true);
   const [isUserPremium, setIsUserPremium] = useState(true); 
 
-  // ESTADOS DE UI
   const [showReadingStudio, setShowReadingStudio] = useState(false);
   const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
 
-  // --- EFECTO: CARGAR DATOS REALES CON BUST DE CACHÉ ---
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -375,19 +393,13 @@ export default function ProfessionalDashboard() {
           'Pragma': 'no-cache'
         };
 
-        const mapRes = await fetch(`${API_URL}/api/v1/progress/map`, { 
-          headers,
-          cache: 'no-store'
-        });
+        const mapRes = await fetch(`${API_URL}/api/v1/progress/map`, { headers, cache: 'no-store' });
         if (mapRes.ok) {
           const mapData = await mapRes.json();
           setProProgress(mapData.pro || []);
         }
 
-        const statsRes = await fetch(`${API_URL}/api/v1/progress/stats`, { 
-          headers,
-          cache: 'no-store' 
-        });
+        const statsRes = await fetch(`${API_URL}/api/v1/progress/stats`, { headers, cache: 'no-store' });
         if (statsRes.ok) {
           const statsData = await statsRes.json();
           setKpis({
@@ -416,6 +428,11 @@ export default function ProfessionalDashboard() {
     router.push('/dashboard');
   };
 
+  // 🔥 MEJORA: Filtro real para los Daily Briefings
+  const filteredBriefings = selectedIndustry 
+    ? DAILY_BRIEFINGS.filter(briefing => briefing.industry === selectedIndustry)
+    : DAILY_BRIEFINGS;
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center text-amber-500">
@@ -429,7 +446,6 @@ export default function ProfessionalDashboard() {
     <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-amber-500/30 selection:text-amber-200 relative pb-24 md:pb-0">
       {!isUserPremium && <UpgradeModal />}
       
-      {/* HEADER ESCRITORIO */}
       <header className="sticky top-0 z-40 px-6 md:px-8 h-20 md:h-24 flex items-center justify-between bg-gradient-to-b from-slate-950 to-slate-950/80 backdrop-blur-md border-b border-slate-900">
         <div className="flex items-center gap-4">
           <h1 className="text-xl md:text-2xl font-light tracking-[0.2em] text-white uppercase">
@@ -450,7 +466,6 @@ export default function ProfessionalDashboard() {
       </header>
 
       <div className="px-4 md:px-12 max-w-7xl mx-auto pt-8">
-        {/* HERO */}
         <div className="mb-12 md:mb-24 md:pt-10">
           <h2 className="text-4xl md:text-6xl font-thin text-white mb-4 md:mb-6 tracking-tight leading-tight">
             Executive <br className="hidden md:block"/>
@@ -464,7 +479,6 @@ export default function ProfessionalDashboard() {
         </div>
 
         <ExecutiveKPICard kpis={kpis} />
-        
         <FluencyLabPanel onOpenStudio={() => setShowReadingStudio(true)} />
 
         <section className="mb-16">
@@ -473,19 +487,22 @@ export default function ProfessionalDashboard() {
             <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">Daily Executive Briefing</h3>
             <div className="h-[1px] flex-1 bg-gradient-to-r from-slate-800 to-transparent"></div>
           </div>
+          
+          <div className="mb-6">
+            <SpecializationFilter selectedIndustry={selectedIndustry} onFilterChange={setSelectedIndustry} />
+          </div>
+
           <div className="space-y-3">
-            {DAILY_BRIEFINGS.map((briefing) => (
-              <DailyBriefingWidget key={briefing.id} briefing={briefing} />
-            ))}
+            {filteredBriefings.length > 0 ? (
+              filteredBriefings.map((briefing) => (
+                <DailyBriefingWidget key={briefing.id} briefing={briefing} />
+              ))
+            ) : (
+              <p className="text-slate-500 italic text-sm py-4">No briefings available for this sector today.</p>
+            )}
           </div>
         </section>
 
-        <div className="mb-8">
-          <h3 className="text-lg md:text-xl font-bold text-white mb-4">Filter Specializations</h3>
-          <SpecializationFilter selectedIndustry={selectedIndustry} onFilterChange={setSelectedIndustry} />
-        </div>
-
-        {/* CURRICULUM CONECTADO */}
         <div className="relative">
           {PRO_CURRICULUM.map((section, sIdx) => (
             <div key={section.id} className="mb-24 relative">
@@ -512,11 +529,9 @@ export default function ProfessionalDashboard() {
           ))}
         </div>
       </div>
-      
-      {/* 🔥 MODAL DE LECTURA (IA) Y BOTTOM NAV */}
+
       {showReadingStudio && <ReadingStudio onClose={() => setShowReadingStudio(false)} />}
       <MobileProBottomNav toggleStudentMode={handleReturnToStudent} />
-      
     </div>
   );
 }
