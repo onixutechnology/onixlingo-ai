@@ -1,6 +1,7 @@
 from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Depends
 from app.services.speech_service import SpeechAnalysisService
-from app.api.v1.deps import get_current_user # Asumiendo que tienes esta dependencia de auth
+from app.core.security import get_current_user
+
 
 router = APIRouter()
 speech_service = SpeechAnalysisService()
