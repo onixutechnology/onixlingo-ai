@@ -18,21 +18,17 @@ from app.db import models
 from app.datachess.seed_chess import generate_lessons 
 
 # --- IMPORTAMOS LOS ROUTERS ---
-# 🔥 Agregados: 'users' (para tu Perfil) y 'speech' (para el Fluency Lab)
-from app.api.v1.endpoints import auth, lessons, progress, ai, users, speech
+from app.api.v1.endpoints import auth, lessons, progress, ai, users, speech, billing # 🔥 billing agregado
 from app.api import chess 
 
-# 1. CARGA DE ENTORNO
 load_dotenv()
 
 # 🔐 CONFIGURACIÓN DE STRIPE
 stripe.api_key = os.getenv("STRIPE_API_KEY")
 ENDPOINT_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET")
 
-# ⚙️ CONFIGURACIÓN DEL CICLO DE VIDA (LIFESPAN)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # --- STARTUP ---
     logging.basicConfig(
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
         level=logging.INFO
@@ -47,10 +43,8 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.critical(f"❌ [DB] Error crítico al conectar DB: {e}")
     yield
-    # --- SHUTDOWN ---
     logger.info("🛑 [SYSTEM] Apagando sistema OnixLingo...")
 
-# 🚀 INICIALIZACIÓN DE LA APP
 app = FastAPI(
     title=settings.PROJECT_NAME,
     description="OnixLingo Enterprise LMS API",
@@ -59,7 +53,6 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# 🛡️ MIDDLEWARE CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.BACKEND_CORS_ORIGINS, 
@@ -70,7 +63,6 @@ app.add_middleware(
     expose_headers=["*"]
 )
 
-# 💳 ROUTER ESPECIAL: STRIPE WEBHOOK
 @app.post("/api/v1/webhooks/stripe", tags=["Payments"], include_in_schema=False)
 async def stripe_webhook(
     request: Request, 
@@ -85,9 +77,7 @@ async def stripe_webhook(
         raise HTTPException(status_code=500, detail="Server Configuration Error")
 
     try:
-        event = stripe.Webhook.construct_event(
-            payload, stripe_signature, ENDPOINT_SECRET
-        )
+        event = stripe.Webhook.construct_event(payload, stripe_signature, ENDPOINT_SECRET)
     except ValueError:
         raise HTTPException(status_code=400, detail="Invalid payload")
     except stripe.error.SignatureVerificationError:
@@ -114,14 +104,14 @@ async def stripe_webhook(
 
 # 🔗 CONEXIÓN DE RUTAS (ROUTERS)
 app.include_router(auth.router, prefix="/api/v1/auth", tags=["Authentication"])
-app.include_router(users.router, prefix="/api/v1/users", tags=["Users Profile"]) # 👈 Agregado para el Perfil
+app.include_router(users.router, prefix="/api/v1/users", tags=["Users Profile"])
 app.include_router(progress.router, prefix="/api/v1/progress", tags=["Analytics & Progress"])
 app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lessons"])
 app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI Engine"])
-app.include_router(speech.router, prefix="/api/v1/speech", tags=["Speech Analysis"]) # 👈 Agregado para el Fluency Lab
+app.include_router(speech.router, prefix="/api/v1/speech", tags=["Speech Analysis"])
+app.include_router(billing.router, prefix="/api/v1/billing", tags=["Billing & Referrals"]) # 🔥 Agregado
 app.include_router(chess.router, prefix="/api/v1", tags=["Chess Academy"])
 
-# 🛠️ UTILIDADES Y ROOT (HEALTH CHECK OPTIMIZADO PARA RENDER)
 @app.get("/", tags=["System"])
 @app.head("/", include_in_schema=False)
 def health_check():
@@ -136,11 +126,9 @@ def health_check():
 def get_voc_lesson(lesson_id: str):
     base_dir = Path(__file__).resolve().parent 
     file_path = base_dir / "voclessons" / "lessons" / f"{lesson_id}.json"
-    
     if file_path.exists():
         with open(file_path, "r", encoding="utf-8") as f:
             return json.load(f)
-            
     file_path_alt = base_dir.parent / "app" / "voclessons" / "lessons" / f"{lesson_id}.json"
     if file_path_alt.exists():
         with open(file_path_alt, "r", encoding="utf-8") as f:
