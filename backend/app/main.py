@@ -6,7 +6,7 @@ from pathlib import Path
 from contextlib import asynccontextmanager
 from dotenv import load_dotenv
 
-from fastapi import FastAPI, Request, Header, HTTPException, Depends
+from fastapi import FastAPI, Request, Header, HTTPException, Depends, Query # 🔥 Importamos Query
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
@@ -18,7 +18,7 @@ from app.db import models
 from app.datachess.seed_chess import generate_lessons 
 
 # --- IMPORTAMOS LOS ROUTERS ---
-from app.api.v1.endpoints import auth, lessons, progress, ai, users, speech, billing # 🔥 billing agregado
+from app.api.v1.endpoints import auth, lessons, progress, ai, users, speech, billing 
 from app.api import chess 
 
 load_dotenv()
@@ -109,7 +109,7 @@ app.include_router(progress.router, prefix="/api/v1/progress", tags=["Analytics 
 app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lessons"])
 app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI Engine"])
 app.include_router(speech.router, prefix="/api/v1/speech", tags=["Speech Analysis"])
-app.include_router(billing.router, prefix="/api/v1/billing", tags=["Billing & Referrals"]) # 🔥 Agregado
+app.include_router(billing.router, prefix="/api/v1/billing", tags=["Billing & Referrals"]) 
 app.include_router(chess.router, prefix="/api/v1", tags=["Chess Academy"])
 
 @app.get("/", tags=["System"])
@@ -122,16 +122,25 @@ def health_check():
         "domain_check": "Verified"
     }
 
+# 🌍 NUEVO: Endpoint adaptado para multilenguaje
 @app.get("/api/v1/voclessons/{lesson_id}", tags=["Lessons"])
-def get_voc_lesson(lesson_id: str):
+def get_voc_lesson(
+    lesson_id: str, 
+    lang: str = Query("en", description="Idioma de la lección (en, fr, zh)")
+):
     base_dir = Path(__file__).resolve().parent 
-    file_path = base_dir / "voclessons" / "lessons" / f"{lesson_id}.json"
+    
+    # Intento 1: Busca en app/voclessons/lessons/{idioma}/archivo.json
+    file_path = base_dir / "voclessons" / "lessons" / lang / f"{lesson_id}.json"
     if file_path.exists():
         with open(file_path, "r", encoding="utf-8") as f:
             return json.load(f)
-    file_path_alt = base_dir.parent / "app" / "voclessons" / "lessons" / f"{lesson_id}.json"
+            
+    # Intento 2: Ruta alternativa
+    file_path_alt = base_dir.parent / "app" / "voclessons" / "lessons" / lang / f"{lesson_id}.json"
     if file_path_alt.exists():
         with open(file_path_alt, "r", encoding="utf-8") as f:
             return json.load(f)
 
-    raise HTTPException(status_code=404, detail=f"Lesson {lesson_id} not found")
+    # Si no encuentra el archivo traducido, lanza un error 404
+    raise HTTPException(status_code=404, detail=f"Lesson {lesson_id} not found for language '{lang}'")

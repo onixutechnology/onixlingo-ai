@@ -19,14 +19,23 @@ class User(Base):
     hashed_password = Column(String, nullable=False)
     is_active = Column(Boolean, default=True)
     role = Column(String, default="student")
+    
+    # 🔥 Sistema de Suscripciones y Stripe
     is_pro = Column(Boolean, default=False) 
+    tier = Column(String, default="free") 
+    valid_until = Column(DateTime(timezone=True), nullable=True) 
+    stripe_customer_id = Column(String, unique=True, index=True, nullable=True) 
+    
+    # 🔥 Sistema de Referidos
+    referral_code = Column(String, unique=True, index=True, nullable=True) 
+
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     # Relaciones
     progress = relationship("Progress", back_populates="owner", cascade="all, delete-orphan")
     achievements = relationship("UserAchievement", back_populates="user", cascade="all, delete-orphan")
-    # 🔥 NUEVO: Relación con el progreso de ajedrez
     chess_progress = relationship("ChessProgress", back_populates="user", cascade="all, delete-orphan")
+
 
 class Progress(Base):
     __tablename__ = "progress"
@@ -35,6 +44,9 @@ class Progress(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     lesson_id = Column(String, index=True, nullable=False)
     lesson_type = Column(String, default="standard") 
+    
+    # 🌍 NUEVO: Idioma del progreso (en, fr, zh)
+    language = Column(String, default="en", index=True)
 
     stars = Column(Integer, default=0)
     score = Column(Integer, default=0)
@@ -69,12 +81,12 @@ class UserAchievement(Base):
 class ChessLesson(Base):
     __tablename__ = "chess_lessons"
 
-    id = Column(String, primary_key=True, index=True) # Ej: "mod1-les1"
-    module_id = Column(String, index=True, nullable=False) # Ej: "fundamentals"
+    id = Column(String, primary_key=True, index=True)
+    module_id = Column(String, index=True, nullable=False) 
     title = Column(String, nullable=False)
     instruction = Column(Text, nullable=False)
-    fen = Column(String, nullable=False) # Posición en el tablero
-    solution = Column(String, nullable=False) # Movimiento ganador (ej: e2e4)
+    fen = Column(String, nullable=False) 
+    solution = Column(String, nullable=False) 
     hint = Column(Text)
     explanation = Column(Text)
 
@@ -84,6 +96,10 @@ class ChessProgress(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     lesson_id = Column(String, ForeignKey("chess_lessons.id"), nullable=False)
+    
+    # 🌍 NUEVO: Idioma del progreso de ajedrez
+    language = Column(String, default="en", index=True)
+
     status = Column(String, default="completed")
     earned_xp = Column(Integer, default=25)
     completed_at = Column(DateTime(timezone=True), server_default=func.now())
