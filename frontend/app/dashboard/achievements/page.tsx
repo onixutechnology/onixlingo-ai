@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 // --- CONFIGURACIÓN API ---
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
 
 // 📱 BOTTOM NAV INTELIGENTE
 const MobileBottomNav = ({ toggleProMode, mode }: { toggleProMode: () => void, mode: string }) => {

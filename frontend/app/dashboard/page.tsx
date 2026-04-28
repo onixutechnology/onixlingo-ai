@@ -283,7 +283,7 @@ export default function DashboardPage() {
     setCurrentUser(user || 'Estudiante');
 
     if (token) {
-      const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+      const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
       fetch(`${BASE_URL}/api/v1/progress/map`, {
         cache: 'no-store',
         credentials: 'include',
@@ -363,7 +363,7 @@ export default function DashboardPage() {
   const handleUnlockAll = async () => {
     if (!currentUser) return alert("Error: No hay usuario activo.");
     const token = Cookies.get('access_token');
-    const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+    const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
     try {
       const response = await fetch(`${BASE_URL}/api/v1/debug/unlock-all/${currentUser}`, {
         method: 'POST',

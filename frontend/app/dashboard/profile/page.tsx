@@ -103,7 +103,7 @@ export default function ProfilePage() {
           return;
         }
 
-        const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+        const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
         const headers = { 
           'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -145,7 +145,7 @@ export default function ProfilePage() {
     setSaving(true);
     setSaveStatus('idle');
     const token = Cookies.get('access_token');
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
 
     try {
       // 🔥 Payload conectado a tu nuevo esquema backend
@@ -187,7 +187,7 @@ export default function ProfilePage() {
     setManagingPlan(true);
     try {
       const token = Cookies.get('access_token');
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://onixlingo-bckend.onrender.com';
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
       
       const res = await fetch(`${API_URL}/api/v1/billing/create-portal-session`, {
         method: 'POST',

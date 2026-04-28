@@ -29,7 +29,7 @@ class Settings(BaseSettings):
     BACKEND_CORS_ORIGINS: List[str] = [
         "http://localhost:3000",
         "http://127.0.0.1:3000",
-        "https://onixlingo-bckend.onrender.com",
+        "https://api.onixlingo.onixu.company",
         "https://onixlingo-ai-nknb.vercel.app", 
         "https://onixlingo-ai.vercel.app",
         "https://onixlingo.onixu.company",      # Tu nuevo dominio oficial

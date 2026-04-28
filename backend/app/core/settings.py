@@ -23,7 +23,7 @@ class Settings(BaseSettings):
         "http://127.0.0.1:3000",
         "https://onixlingo.onixu.company",
         "https://www.onixlingo.onixu.company",
-        "https://onixlingo-bckend.onrender.com",
+        "https://api.onixlingo.onixu.company",
         "https://onixlingo-ai.vercel.app",
         "https://onixlingo-ai-nknb.vercel.app"
     ]
