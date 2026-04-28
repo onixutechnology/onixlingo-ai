@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import Cookies from 'js-cookie'; // 👈 IMPORTANTE
+import Cookies from 'js-cookie'; 
 import { 
   Volume2, ArrowRight, XCircle, CheckCircle2, AlertTriangle, Play, RefreshCw, X, 
   Clock, Zap, Check, X as XIcon, Save, BookOpen, Brain, Target, Flame, Award, 
@@ -18,9 +18,8 @@ import { useAvatarStore } from '@/store/avatarStore';
 import { useUIStore } from '@/store/uiStore';
 import { useSearchParams } from 'next/navigation';
 
-const API_URL = process.env.NODE_ENV === 'development'
-  ? 'http://127.0.0.1:8001' 
-  : 'https://onixlingo-bckend.onrender.com';
+// ✅ CORRECCIÓN 1: Apuntamos al backend correcto y unificado
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
 
 // ============================================================================
 // ======================== TIPOS DE DATOS EXPANDIDOS =======================
@@ -109,12 +108,21 @@ export default function LessonRunnerEngine() {
   const params = useParams();
   const router = useRouter();
   const searchParams = useSearchParams(); 
-  const lessonType = searchParams.get('type') || 'standard'; // 'standard', 'pro', 'vocab'
+  const lessonType = searchParams.get('type') || 'standard'; 
   const { setSpeaking } = useAvatarStore();
   const { mode } = useUIStore();
   const isPro = mode === 'professional';
 
-  const userId = "user_123_placeholder";
+  // ✅ CORRECCIÓN 2: El userId ahora es dinámico (Estado real)
+  const [userId, setUserId] = useState<string>('estudiante_anonimo');
+
+  useEffect(() => {
+    // Al cargar la página, leemos quién es el usuario real
+    const storedUser = localStorage.getItem('currentUser');
+    if (storedUser) {
+      setUserId(storedUser);
+    }
+  }, []);
 
   // ========== ESTADOS GLOBALES EXPANDIDOS ==========
   const [loading, setLoading] = useState(true);

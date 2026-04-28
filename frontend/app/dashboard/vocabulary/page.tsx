@@ -9,11 +9,11 @@ import { useUIStore } from '@/store/uiStore';
 import { 
   ArrowLeft, BookA, Search, Play, Brain, 
   Briefcase, Code2, Plane, Users, Coffee, 
-  Lock, CheckCircle2, Loader2, Home, Crown, User
+  Lock, CheckCircle2, Loader2, Home, Crown, User, Languages
 } from 'lucide-react';
 
 // --- CONFIGURACIÓN API ---
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
 
 // 1. CONFIGURACIÓN DE CATEGORÍAS
 const CATEGORIES = [
@@ -69,7 +69,9 @@ const MobileBottomNav = ({ toggleProMode, mode }: { toggleProMode: () => void, m
 
 export default function VocabularyPage() {
   const router = useRouter();
-  const { mode, setMode } = useUIStore();
+  
+  // 🔥 ESTADO GLOBAL (Zustand)
+  const { mode, setMode, activeLanguage, setLanguage } = useUIStore();
   
   // Estados de UI
   const [activeCat, setActiveCat] = useState('basics');
@@ -178,166 +180,192 @@ export default function VocabularyPage() {
           </div>
         </div>
 
-        {/* --- TABS DE NAVEGACIÓN --- */}
-        <div className="max-w-7xl mx-auto px-4 md:px-8 mt-1">
-          <div className="flex overflow-x-auto hide-scrollbar gap-8 pb-0">
-            {CATEGORIES.map((cat) => {
-              const isActive = activeCat === cat.id;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCat(cat.id)}
-                  className={`
-                    pb-4 px-1 flex items-center gap-2.5 text-sm font-bold whitespace-nowrap transition-all border-b-[3px]
-                    ${isActive 
-                      ? `${cat.theme.border} ${cat.theme.text}` 
-                      : 'border-transparent text-slate-400 hover:text-slate-600 hover:border-slate-200'}
-                  `}
-                >
-                  <cat.icon size={18} className={isActive ? 'scale-110 transition-transform' : ''} />
-                  {cat.label}
-                </button>
-              );
-            })}
+        {/* --- TABS DE NAVEGACIÓN (Solo se muestran si el idioma es Inglés) --- */}
+        {activeLanguage === 'en' && (
+          <div className="max-w-7xl mx-auto px-4 md:px-8 mt-1">
+            <div className="flex overflow-x-auto hide-scrollbar gap-8 pb-0">
+              {CATEGORIES.map((cat) => {
+                const isActive = activeCat === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCat(cat.id)}
+                    className={`
+                      pb-4 px-1 flex items-center gap-2.5 text-sm font-bold whitespace-nowrap transition-all border-b-[3px]
+                      ${isActive 
+                        ? `${cat.theme.border} ${cat.theme.text}` 
+                        : 'border-transparent text-slate-400 hover:text-slate-600 hover:border-slate-200'}
+                    `}
+                  >
+                    <cat.icon size={18} className={isActive ? 'scale-110 transition-transform' : ''} />
+                    {cat.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* --- CONTENIDO PRINCIPAL --- */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
         
-        {/* Header de Sección + Buscador */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-black text-slate-800 tracking-tight mb-2">
-              {activeCategoryData.label}
-            </h2>
-            <p className="text-slate-500 text-sm md:text-base font-medium max-w-xl">
-              Domina el vocabulario esencial desde el nivel A1 hasta C1. Palabras técnicas, frases comunes y expresiones nativas.
-            </p>
-          </div>
-
-          <div className="relative w-full md:w-80 group">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-indigo-600 transition-colors" size={18} />
-            <input 
-              type="text"
-              placeholder="Buscar lección..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className={`
-                w-full pl-11 pr-4 py-3.5 bg-white border-2 border-slate-200 rounded-xl outline-none transition-all shadow-sm
-                focus:border-transparent ${Theme.ring} focus:ring-2 font-medium text-sm placeholder:text-slate-400
-              `}
-            />
-          </div>
-        </div>
-
-        {/* --- GRID DE LECCIONES --- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {LEVELS.flatMap((level, levelIndex) => [1, 2, 3, 4].map(part => { 
-            // GENERACIÓN DE ID LÓGICO
-            const moduleNum = (levelIndex * 4) + part; 
-            const moduleStr = moduleNum.toString().padStart(2, '0'); 
-            const lessonId = `${activeCat}_mod_${moduleStr}`;
-            
-            // ESTADO REAL DESDE DB
-            const status = getLessonState(lessonId);
-            const score = getScore(lessonId);
-            const isLocked = status === 'locked';
-
-            // Títulos dinámicos
-            const baseTitle = activeCategoryData.label.split(' ')[0] || "Lesson";
-            const displayTitle = `${baseTitle} Mastery • Level ${level}`;
-            const subTitle = `Part ${part}: Essential Vocabulary & Phrases`;
-            
-            // Filtro de búsqueda
-            if (searchTerm && !displayTitle.toLowerCase().includes(searchTerm.toLowerCase())) return null;
-
-            // 🔥 RENDERIZADO DE TARJETA
-            const CardContent = (
-              <div className={`
-                h-full bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 
-                relative overflow-hidden isolate
-                ${!isLocked ? `hover:border-transparent hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1 cursor-pointer ${Theme.ring} focus:ring-2` : 'opacity-60 cursor-not-allowed bg-slate-50/50'}
-              `}>
-                
-                {/* CAPA 0: Decoración de Fondo */}
-                {!isLocked && (
-                  <div className={`
-                    absolute -right-12 -top-12 w-48 h-48 rounded-full opacity-0 group-hover:opacity-10 transition-all duration-500 ease-out z-0 pointer-events-none
-                    ${Theme.bg} group-hover:scale-150
-                  `} />
-                )}
-
-                {/* CAPA 10: Contenido Superior */}
-                <div className="flex items-start gap-4 mb-6 relative z-10">
-                  <div className={`
-                    w-14 h-14 flex flex-col items-center justify-center rounded-2xl font-black text-lg shrink-0 shadow-sm
-                    ${!isLocked ? `${Theme.text} ${Theme.bg} border border-${Theme.base}-100` : 'bg-slate-200 text-slate-400'}
-                  `}>
-                    {level}
-                    <span className="text-[9px] font-bold opacity-70 uppercase tracking-wider">Part {part}</span>
-                  </div>
-
-                  <div className="flex-1 min-w-0 pt-1">
-                    <h3 className={`font-bold text-lg leading-tight truncate ${!isLocked ? 'text-slate-800' : 'text-slate-400'}`}>
-                      {displayTitle}
-                    </h3>
-                    <p className="text-xs font-medium text-slate-400 mt-1.5 truncate">
-                      {subTitle}
-                    </p>
-                  </div>
-                </div>
-
-                {/* CAPA 10: Footer (Progreso y Botón) */}
-                <div className="flex items-center justify-between mt-auto pt-5 border-t border-slate-100 relative z-10">
-                  {/* Barra de Progreso */}
-                  <div className="flex flex-col gap-1.5 w-[60%]">
-                    <div className="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                      <span>Score</span>
-                      <span className={score > 0 ? Theme.text : ''}>{score}%</span>
-                    </div>
-                    <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                      <div 
-                        className={`h-full ${Theme.bar} rounded-full transition-all duration-1000`} 
-                        style={{ width: `${score}%` }}
-                      ></div>
-                    </div>
-                  </div>
-
-                  {/* Botón de Acción */}
-                  <div className={`
-                    w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-sm relative overflow-hidden
-                    ${isLocked ? 'bg-slate-200 text-slate-400' : 'bg-slate-100 text-slate-600 group-hover:text-white'}
-                  `}>
-                    {!isLocked && <div className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity ${Theme.bar}`} />}
-                    <div className="relative z-10">
-                      {isLocked ? <Lock size={18} /> : (status === 'completed' ? <CheckCircle2 size={18} /> : <Play size={18} fill="currentColor" className="ml-1" />)}
-                    </div>
-                  </div>
-                </div>
+        {/* 🔥 RENDERIZADO DINÁMICO BASADO EN EL IDIOMA */}
+        {activeLanguage === 'en' ? (
+          <>
+            {/* Header de Sección + Buscador */}
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-black text-slate-800 tracking-tight mb-2">
+                  {activeCategoryData.label}
+                </h2>
+                <p className="text-slate-500 text-sm md:text-base font-medium max-w-xl">
+                  Domina el vocabulario esencial desde el nivel A1 hasta C1. Palabras técnicas, frases comunes y expresiones nativas.
+                </p>
               </div>
-            );
 
-            return isLocked ? (
-              <div key={lessonId} className="block h-full">{CardContent}</div>
-            ) : (
-              <Link href={`/lesson/vocabulary/${lessonId}?type=vocab`} key={lessonId} className="group block h-full active:scale-95 transition-transform">
-                {CardContent}
-              </Link>
-            );
-          }))}
-        </div>
-
-        {/* Estado Vacío */}
-        {LEVELS.flatMap(l => [1,2,3,4]).filter(p => !searchTerm || searchTerm.length < 1).length === 0 && (
-          <div className="text-center py-24">
-            <div className="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Search size={32} className="text-slate-300" />
+              <div className="relative w-full md:w-80 group">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-indigo-600 transition-colors" size={18} />
+                <input 
+                  type="text"
+                  placeholder="Buscar lección..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className={`
+                    w-full pl-11 pr-4 py-3.5 bg-white border-2 border-slate-200 rounded-xl outline-none transition-all shadow-sm
+                    focus:border-transparent ${Theme.ring} focus:ring-2 font-medium text-sm placeholder:text-slate-400
+                  `}
+                />
+              </div>
             </div>
-            <p className="text-slate-500 font-medium">No se encontraron lecciones para "{searchTerm}"</p>
-            <button onClick={() => setSearchTerm('')} className="mt-4 text-indigo-600 text-sm font-bold hover:underline">
-              Limpiar búsqueda
+
+            {/* --- GRID DE LECCIONES --- */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+              {LEVELS.flatMap((level, levelIndex) => [1, 2, 3, 4].map(part => { 
+                // GENERACIÓN DE ID LÓGICO
+                const moduleNum = (levelIndex * 4) + part; 
+                const moduleStr = moduleNum.toString().padStart(2, '0'); 
+                const lessonId = `${activeCat}_mod_${moduleStr}`;
+                
+                // ESTADO REAL DESDE DB
+                const status = getLessonState(lessonId);
+                const score = getScore(lessonId);
+                const isLocked = status === 'locked';
+
+                // Títulos dinámicos
+                const baseTitle = activeCategoryData.label.split(' ')[0] || "Lesson";
+                const displayTitle = `${baseTitle} Mastery • Level ${level}`;
+                const subTitle = `Part ${part}: Essential Vocabulary & Phrases`;
+                
+                // Filtro de búsqueda
+                if (searchTerm && !displayTitle.toLowerCase().includes(searchTerm.toLowerCase())) return null;
+
+                // 🔥 RENDERIZADO DE TARJETA
+                const CardContent = (
+                  <div className={`
+                    h-full bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 
+                    relative overflow-hidden isolate
+                    ${!isLocked ? `hover:border-transparent hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1 cursor-pointer ${Theme.ring} focus:ring-2` : 'opacity-60 cursor-not-allowed bg-slate-50/50'}
+                  `}>
+                    
+                    {/* CAPA 0: Decoración de Fondo */}
+                    {!isLocked && (
+                      <div className={`
+                        absolute -right-12 -top-12 w-48 h-48 rounded-full opacity-0 group-hover:opacity-10 transition-all duration-500 ease-out z-0 pointer-events-none
+                        ${Theme.bg} group-hover:scale-150
+                      `} />
+                    )}
+
+                    {/* CAPA 10: Contenido Superior */}
+                    <div className="flex items-start gap-4 mb-6 relative z-10">
+                      <div className={`
+                        w-14 h-14 flex flex-col items-center justify-center rounded-2xl font-black text-lg shrink-0 shadow-sm
+                        ${!isLocked ? `${Theme.text} ${Theme.bg} border border-${Theme.base}-100` : 'bg-slate-200 text-slate-400'}
+                      `}>
+                        {level}
+                        <span className="text-[9px] font-bold opacity-70 uppercase tracking-wider">Part {part}</span>
+                      </div>
+
+                      <div className="flex-1 min-w-0 pt-1">
+                        <h3 className={`font-bold text-lg leading-tight truncate ${!isLocked ? 'text-slate-800' : 'text-slate-400'}`}>
+                          {displayTitle}
+                        </h3>
+                        <p className="text-xs font-medium text-slate-400 mt-1.5 truncate">
+                          {subTitle}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* CAPA 10: Footer (Progreso y Botón) */}
+                    <div className="flex items-center justify-between mt-auto pt-5 border-t border-slate-100 relative z-10">
+                      {/* Barra de Progreso */}
+                      <div className="flex flex-col gap-1.5 w-[60%]">
+                        <div className="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                          <span>Score</span>
+                          <span className={score > 0 ? Theme.text : ''}>{score}%</span>
+                        </div>
+                        <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                          <div 
+                            className={`h-full ${Theme.bar} rounded-full transition-all duration-1000`} 
+                            style={{ width: `${score}%` }}
+                          ></div>
+                        </div>
+                      </div>
+
+                      {/* Botón de Acción */}
+                      <div className={`
+                        w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-sm relative overflow-hidden
+                        ${isLocked ? 'bg-slate-200 text-slate-400' : 'bg-slate-100 text-slate-600 group-hover:text-white'}
+                      `}>
+                        {!isLocked && <div className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity ${Theme.bar}`} />}
+                        <div className="relative z-10">
+                          {isLocked ? <Lock size={18} /> : (status === 'completed' ? <CheckCircle2 size={18} /> : <Play size={18} fill="currentColor" className="ml-1" />)}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+
+                return isLocked ? (
+                  <div key={lessonId} className="block h-full">{CardContent}</div>
+                ) : (
+                  <Link href={`/lesson/vocabulary/${lessonId}?type=vocab`} key={lessonId} className="group block h-full active:scale-95 transition-transform">
+                    {CardContent}
+                  </Link>
+                );
+              }))}
+            </div>
+
+            {/* Estado Vacío */}
+            {LEVELS.flatMap(l => [1,2,3,4]).filter(p => !searchTerm || searchTerm.length < 1).length === 0 && (
+              <div className="text-center py-24">
+                <div className="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Search size={32} className="text-slate-300" />
+                </div>
+                <p className="text-slate-500 font-medium">No se encontraron lecciones para "{searchTerm}"</p>
+                <button onClick={() => setSearchTerm('')} className="mt-4 text-indigo-600 text-sm font-bold hover:underline">
+                  Limpiar búsqueda
+                </button>
+              </div>
+            )}
+          </>
+        ) : (
+          /* 🔥 ESTADO DE SINCRONIZACIÓN PARA FRANCÉS Y CHINO */
+          <div className="bg-white border border-slate-200 rounded-3xl p-12 text-center flex flex-col items-center justify-center mt-8">
+            <div className="w-20 h-20 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 ring-1 ring-indigo-500/20">
+              <Languages size={40} />
+            </div>
+            <h3 className="text-3xl font-black text-slate-800 mb-4 tracking-tight">Glosario en Sincronización</h3>
+            <p className="text-slate-500 max-w-xl mx-auto mb-8 text-lg leading-relaxed">
+              El diccionario interactivo y los módulos de vocabulario específico para <strong>{activeLanguage === 'fr' ? 'Francés' : 'Chino Mandarín'}</strong> están siendo indexados. Pronto podrás expandir tu léxico corporativo en este idioma.
+            </p>
+            <button 
+              onClick={() => {
+                setLanguage('en');
+              }} 
+              className="bg-indigo-600 text-white font-bold px-8 py-3 rounded-xl hover:bg-indigo-500 transition-all active:scale-95 shadow-lg shadow-indigo-600/20"
+            >
+              Regresar a Vocabulario en Inglés
             </button>
           </div>
         )}

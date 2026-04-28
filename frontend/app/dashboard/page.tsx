@@ -5,7 +5,7 @@
  * ONIXLINGO LMS DASHBOARD - STUDENT EDITION (UNIFIED MULTILANGUAGE)
  * ==============================================================================
  * RUTA: /dashboard/page.tsx
- * ESTADO: Production Ready (Track Selector, Bottom Nav Inteligente, Premium)
+ * ESTADO: Production Ready (Zustand Global State para Idiomas)
  * ==============================================================================
  */
 
@@ -31,7 +31,6 @@ import { CURRICULUM } from '@/data/curriculum';
 
 // --- TIPOS ---
 type LessonStatus = 'locked' | 'active' | 'completed';
-type TrackType = 'en' | 'fr' | 'zh';
 
 interface ThemeConfig {
   primary: string;
@@ -255,15 +254,15 @@ const CertCard = ({ title, desc, icon: Icon, href, active = false, color }: any)
 // --- PÁGINA PRINCIPAL ---
 export default function DashboardPage() {
   const router = useRouter();
-  const { mode, setMode } = useUIStore();
+  
+  // 🔥 ESTADO GLOBAL (Sustituye al useState local)
+  const { mode, setMode, activeLanguage, setLanguage, resetUI } = useUIStore();
+  
   const [isMounted, setIsMounted] = useState(false);
   const [currentUser, setCurrentUser] = useState<string | null>(null);
   const [dashboardData, setDashboardData] = useState<any>(null);
   const [userStats, setUserStats] = useState({ xp: 0, lessons: 0, streak: 0 });
   const [showChessLoader, setShowChessLoader] = useState(false);
-  
-  // 🔥 NUEVO ESTADO: CONTROL DE IDIOMA
-  const [activeTrack, setActiveTrack] = useState<TrackType>('en');
 
   useEffect(() => {
     if (dashboardData) return;
@@ -351,8 +350,11 @@ export default function DashboardPage() {
       Cookies.remove('access_token');
       localStorage.removeItem('currentUser');
       localStorage.removeItem('onix_tier');
+      
+      // 🔥 Usamos nuestra nueva función global para limpiar Zustand y LocalStorage
+      resetUI(); 
       localStorage.removeItem('onixlingo-ui-prefs');
-      setMode('student');
+      
       router.push('/login');
       router.refresh();
     }
@@ -453,25 +455,25 @@ export default function DashboardPage() {
               Selecciona el idioma que deseas estudiar hoy. Tu progreso se guarda automáticamente.
             </p>
 
-            {/* 🔥 SELECTOR DE IDIOMAS (PILLS) */}
+            {/* 🔥 SELECTOR DE IDIOMAS (CONECTADO A ZUSTAND) */}
             <div className="flex items-center gap-3 overflow-x-auto pb-4 scrollbar-hide">
               <button 
-                onClick={() => setActiveTrack('en')}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeTrack === 'en' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'}`}
+                onClick={() => setLanguage('en')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeLanguage === 'en' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'}`}
               >
-                🇺🇸 Inglés <span className="bg-white/20 px-2 py-0.5 rounded text-[10px] ml-1">Activo</span>
+                🇺🇸 Inglés {activeLanguage === 'en' && <span className="bg-white/20 px-2 py-0.5 rounded text-[10px] ml-1">Activo</span>}
               </button>
               <button 
-                onClick={() => setActiveTrack('fr')}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeTrack === 'fr' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'}`}
+                onClick={() => setLanguage('fr')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeLanguage === 'fr' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'}`}
               >
-                🇫🇷 Francés
+                🇫🇷 Francés {activeLanguage === 'fr' && <span className="bg-white/20 px-2 py-0.5 rounded text-[10px] ml-1">Activo</span>}
               </button>
               <button 
-                onClick={() => setActiveTrack('zh')}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeTrack === 'zh' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'}`}
+                onClick={() => setLanguage('zh')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeLanguage === 'zh' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'}`}
               >
-                🇨🇳 Chino Mandarín
+                🇨🇳 Chino Mandarín {activeLanguage === 'zh' && <span className="bg-white/20 px-2 py-0.5 rounded text-[10px] ml-1">Activo</span>}
               </button>
             </div>
 
@@ -487,7 +489,7 @@ export default function DashboardPage() {
           {/* --- RENDERIZADO DINÁMICO DEL CURRICULUM --- */}
           <div className="space-y-12 md:space-y-16 mt-8">
             
-            {activeTrack === 'en' && (
+            {activeLanguage === 'en' && (
               CURRICULUM.map((section, sIdx) => {
                 const safeColor = COLOR_VARIANTS[section.color] || COLOR_VARIANTS['blue'];
                 return (
@@ -522,16 +524,16 @@ export default function DashboardPage() {
             )}
 
             {/* ESTADO VACÍO PARA FRANCÉS Y CHINO */}
-            {(activeTrack === 'fr' || activeTrack === 'zh') && (
+            {(activeLanguage === 'fr' || activeLanguage === 'zh') && (
               <div className="bg-white border border-slate-200 rounded-3xl p-12 text-center flex flex-col items-center justify-center">
                 <div className="w-16 h-16 bg-indigo-50 text-indigo-500 rounded-2xl flex items-center justify-center mb-6">
                   <Languages size={32} />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-800 mb-2">Currículum en Sincronización</h3>
                 <p className="text-slate-500 max-w-md mx-auto mb-6">
-                  Nuestros expertos lingüísticos están afinando el contenido de {activeTrack === 'fr' ? 'Francés' : 'Chino Mandarín'}. Este módulo estará disponible en la próxima actualización.
+                  Nuestros expertos lingüísticos están afinando el contenido de {activeLanguage === 'fr' ? 'Francés' : 'Chino Mandarín'}. Este módulo estará disponible en la próxima actualización.
                 </p>
-                <button onClick={() => setActiveTrack('en')} className="bg-indigo-50 text-indigo-700 font-bold px-6 py-2 rounded-full text-sm hover:bg-indigo-100 transition-colors">
+                <button onClick={() => setLanguage('en')} className="bg-indigo-50 text-indigo-700 font-bold px-6 py-2 rounded-full text-sm hover:bg-indigo-100 transition-colors">
                   Volver a Inglés
                 </button>
               </div>

@@ -5,21 +5,22 @@
  * ONIXLINGO CHESS ACADEMY - LOBBY (TITANIUM)
  * ==============================================================================
  * RUTA: /dashboard/chess/page.tsx
- * ESTADO: Production Ready (Failsafe Mode Activado + Reto Diario Dinámico)
+ * ESTADO: Production Ready (Zustand Global State + Reto Diario Dinámico)
  * ==============================================================================
  */
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Cookies from 'js-cookie';
+import { useUIStore } from '@/store/uiStore'; // 🔥 IMPORTAMOS EL CEREBRO GLOBAL
 import { 
   ArrowLeft, Trophy, Zap, Crown, Target, Shield, Flame, 
-  Layers, Sword, Lock, Star, ChevronRight, Play, Loader2
+  Layers, Sword, Lock, Star, ChevronRight, Play, Loader2, Languages
 } from 'lucide-react';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
 
-// 🔥 IDs de las lecciones asignadas a cada día de la semana (Domingo = 0, Sábado = 6)
+// 🔥 IDs de las lecciones asignadas a cada día de la semana
 const DAILY_PUZZLES = [
   'fundamentals-1', // 0: Domingo
   'tactics-1-1',    // 1: Lunes
@@ -54,13 +55,21 @@ const getLessonTitle = (id: string) => {
 };
 
 export default function ChessLobbyPage() {
+  // 🔥 LEEMOS EL IDIOMA ACTUAL
+  const { activeLanguage, setLanguage } = useUIStore();
+
   const [modules, setModules] = useState<any[]>([]);
   const [stats, setStats] = useState({ elo: 0, puzzlesSolved: 0 });
   const [isLoading, setIsLoading] = useState(true);
   const [dailyPuzzleId, setDailyPuzzleId] = useState('tactics-1-1');
 
   useEffect(() => {
-    // ⏰ Establecer el puzzle dinámico según el día actual
+    // Si no es inglés, no hacemos fetch al backend para no gastar recursos
+    if (activeLanguage !== 'en') {
+      setIsLoading(false);
+      return; 
+    }
+
     const today = new Date().getDay();
     setDailyPuzzleId(DAILY_PUZZLES[today] || 'tactics-1-1');
 
@@ -72,6 +81,9 @@ export default function ChessLobbyPage() {
         const token = Cookies.get('access_token');
         if (token) {
           const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
+          
+          // 🔥 EN EL FUTURO: Aquí es donde enviarás el idioma al backend:
+          // fetch(`${API_URL}/api/v1/chess/progress?lang=${activeLanguage}`
           const res = await fetch(`${API_URL}/api/v1/chess/progress`, {
             headers: { 
               'Authorization': safeToken,
@@ -115,7 +127,7 @@ export default function ChessLobbyPage() {
     };
 
     fetchChessData();
-  }, []);
+  }, [activeLanguage]); // 🔥 Volvemos a ejecutar si el usuario cambia el idioma
 
   const calculateProgress = (lessons: any[]) => {
     if (!lessons || lessons.length === 0) return 0;
@@ -132,6 +144,44 @@ export default function ChessLobbyPage() {
     );
   }
 
+  // 🔥 ESTADO DE SINCRONIZACIÓN (Si no es Inglés)
+  if (activeLanguage === 'fr' || activeLanguage === 'zh') {
+    return (
+      <div className="min-h-screen bg-[#070A11] text-slate-100 font-sans flex flex-col items-center justify-center p-6 selection:bg-indigo-500/30">
+        <div className="max-w-2xl w-full bg-white/5 border border-white/10 rounded-3xl p-12 text-center flex flex-col items-center justify-center backdrop-blur-md shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+          
+          <div className="w-24 h-24 bg-gradient-to-br from-amber-500/20 to-orange-600/20 rounded-full flex items-center justify-center mb-8 ring-1 ring-amber-500/30">
+            <Crown size={48} className="text-amber-400 drop-shadow-md" />
+          </div>
+          
+          <h3 className="text-3xl md:text-4xl font-black text-white mb-4 tracking-tight">Academia en Traducción</h3>
+          
+          <p className="text-slate-400 mb-10 text-lg leading-relaxed">
+            Las lecciones magistrales y los puzzles tácticos para <strong>{activeLanguage === 'fr' ? 'Francés' : 'Chino Mandarín'}</strong> están siendo traducidos por nuestros Grandes Maestros. 
+            La terminología exacta del tablero estará disponible pronto.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+            <button 
+              onClick={() => setLanguage('en')} 
+              className="bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-bold px-8 py-3.5 rounded-xl hover:shadow-lg hover:shadow-amber-500/20 transition-all active:scale-95"
+            >
+              Volver a Inglés
+            </button>
+            <Link 
+              href="/dashboard"
+              className="bg-white/5 text-slate-300 border border-white/10 font-bold px-8 py-3.5 rounded-xl hover:bg-white/10 transition-all active:scale-95"
+            >
+              Regresar al Hub
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // --- RENDERIZADO NORMAL DEL AJEDREZ (INGLÉS) ---
   return (
     <div className="min-h-screen bg-[#070A11] text-slate-100 font-sans pb-20 selection:bg-indigo-500/30">
       
