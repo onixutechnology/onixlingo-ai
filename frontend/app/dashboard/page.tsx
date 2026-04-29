@@ -5,7 +5,7 @@
  * ONIXLINGO LMS DASHBOARD - STUDENT EDITION (UNIFIED MULTILANGUAGE)
  * ==============================================================================
  * RUTA: /dashboard/page.tsx
- * ESTADO: Production Ready (Zustand Global State para Idiomas)
+ * ESTADO: Production Ready (Monetizado + Multilenguaje + Sin Dev Mode)
  * ==============================================================================
  */
 
@@ -17,14 +17,14 @@ import Sidebar from '@/components/dashboard/sidebar';
 import Cookies from 'js-cookie';
 import { ServerAwakeLoader } from '@/components/ui/Server/ServerAwakeLoader';
 
-// --- 📢 IMPORTACIÓN DE ANUNCIOS ---
+// --- 📢 IMPORTACIÓN DE ANUNCIOS ADSENSE (Opcional) ---
 import { AdBanner } from '@/components/ads/AdBanner';
 
 import {
   LogOut, ChevronRight, Play, Lock, Check, Home,
   Trophy, Zap, Flame, Headphones, BookOpen, PenTool,
   Mic, Shield, LayoutGrid, User, Loader2, Briefcase,
-  BookA, Crown, Languages, Sparkles
+  BookA, Crown, Languages, Sparkles, ShoppingBag
 } from 'lucide-react';
 
 import { CURRICULUM } from '@/data/curriculum';
@@ -86,6 +86,38 @@ const getLessonDescription = (title: string) => {
 };
 
 // --- COMPONENTES UI ---
+
+// 🛒 TARJETA NATIVA DE AFILIADOS DE AMAZON
+const AmazonAffiliateCard = () => (
+  <div className="relative bg-white border border-slate-200 rounded-3xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-all duration-300 mt-12 mb-8 group overflow-hidden">
+    {/* Fondo decorativo sutil */}
+    <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-transparent pointer-events-none"></div>
+    
+    <div className="absolute top-0 right-6 bg-[#FFB800] text-amber-950 text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-b-lg shadow-sm z-10">
+      Top Ventas
+    </div>
+    
+    <div className="relative z-10 w-20 h-20 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-inner">
+      <BookOpen size={36} strokeWidth={1.5} />
+    </div>
+    
+    <h3 className="relative z-10 text-xl md:text-2xl font-black text-slate-800 mb-2">English Grammar in Use</h3>
+    <p className="relative z-10 text-slate-500 text-sm mb-8 max-w-sm leading-relaxed">
+      La biblia de la gramática. El libro #1 recomendado a nivel mundial para pasar de nivel B1 a B2.
+    </p>
+    
+    {/* Reemplaza el href con tu link real de Amazon Afiliados */}
+    <a 
+      href="https://www.amazon.com/dp/1108457657" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="relative z-10 w-full sm:w-auto px-8 py-4 bg-[#FF9900] hover:bg-[#E38900] text-slate-900 font-bold rounded-xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-md shadow-orange-500/20"
+    >
+      <ShoppingBag size={18} /> Ver precio en Amazon
+    </a>
+  </div>
+);
+
 const HeaderStats = ({ xp, streak }: { xp: number, streak: number }) => (
   <div className="hidden md:flex items-center gap-4 bg-white px-5 py-2 rounded-xl border border-slate-200 shadow-sm">
     <div className="flex items-center gap-3 px-3 border-r border-slate-100">
@@ -255,7 +287,7 @@ const CertCard = ({ title, desc, icon: Icon, href, active = false, color }: any)
 export default function DashboardPage() {
   const router = useRouter();
   
-  // 🔥 ESTADO GLOBAL (Sustituye al useState local)
+  // 🔥 ESTADO GLOBAL
   const { mode, setMode, activeLanguage, setLanguage, resetUI } = useUIStore();
   
   const [isMounted, setIsMounted] = useState(false);
@@ -350,31 +382,10 @@ export default function DashboardPage() {
       Cookies.remove('access_token');
       localStorage.removeItem('currentUser');
       localStorage.removeItem('onix_tier');
-      
-      // 🔥 Usamos nuestra nueva función global para limpiar Zustand y LocalStorage
       resetUI(); 
       localStorage.removeItem('onixlingo-ui-prefs');
-      
       router.push('/login');
       router.refresh();
-    }
-  };
-
-  const handleUnlockAll = async () => {
-    if (!currentUser) return alert("Error: No hay usuario activo.");
-    const token = Cookies.get('access_token');
-    const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
-    try {
-      const response = await fetch(`${BASE_URL}/api/v1/debug/unlock-all/${currentUser}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': token || '' }
-      });
-      if (response.ok) {
-        alert("🔓 MODO DIOS ACTIVADO.");
-        window.location.reload();
-      }
-    } catch (error) {
-      alert(`Error de conexión.`);
     }
   };
 
@@ -476,12 +487,6 @@ export default function DashboardPage() {
                 🇨🇳 Chino Mandarín {activeLanguage === 'zh' && <span className="bg-white/20 px-2 py-0.5 rounded text-[10px] ml-1">Activo</span>}
               </button>
             </div>
-
-            <div className="mt-4">
-              <button onClick={handleUnlockAll} className="bg-white text-slate-400 text-[10px] font-bold uppercase tracking-widest py-1.5 px-3 rounded-md border border-slate-200 hover:text-slate-600 transition-all">
-                🛠 Dev: Desbloquear Todo
-              </button>
-            </div>
           </div>
 
           <AdBanner variant="horizontal" />
@@ -541,8 +546,11 @@ export default function DashboardPage() {
 
           </div>
 
+          {/* 🛒 TARJETA DE AFILIADOS DE AMAZON INYECTADA NATIVAMENTE */}
+          <AmazonAffiliateCard />
+
           {/* --- EXÁMENES Y CERTIFICACIONES --- */}
-          <div className="mt-24 mb-12">
+          <div className="mt-8 mb-12">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6 gap-4">
               <div>
                 <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2 mb-1">
