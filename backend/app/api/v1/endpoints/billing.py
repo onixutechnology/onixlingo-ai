@@ -4,15 +4,15 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from datetime import datetime, timedelta
 from pydantic import BaseModel
-from typing import Optional
 
 from app.database import get_db
 from app.db.models import User
-from app.core.security import get_current_user
+# ✅ CORRECCIÓN: Importamos desde deps.py para usar la lógica segura
+from app.api.deps import get_current_active_user
 
 router = APIRouter()
 
-# Configurar la llave secreta de Stripe
+# Configurar variables de entorno
 stripe.api_key = os.getenv("STRIPE_API_KEY")
 FRONTEND_URL = os.getenv("NEXT_PUBLIC_BASE_URL", "https://onixlingo.onixu.company")
 PRICE_ID_PRO = os.getenv("STRIPE_PRICE_ID_PRO")
@@ -23,7 +23,7 @@ class ReferralApply(BaseModel):
 @router.post("/apply-referral")
 def apply_referral_code(
     payload: ReferralApply,
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(get_current_active_user),
     db: Session = Depends(get_db)
 ):
     """
@@ -43,6 +43,7 @@ def apply_referral_code(
     user_valid_until = current_user.valid_until if current_user.valid_until and current_user.valid_until > now else now
     current_user.valid_until = user_valid_until + timedelta(days=30)
     current_user.is_pro = True
+    current_user.tier = "titanium" # Aseguramos el tier
     
     # Actualizar Referidor
     referrer_valid_until = referrer.valid_until if referrer.valid_until and referrer.valid_until > now else now
@@ -54,7 +55,7 @@ def apply_referral_code(
 
 @router.post("/create-portal-session")
 def create_stripe_session(
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(get_current_active_user),
     db: Session = Depends(get_db)
 ):
     """
@@ -62,6 +63,10 @@ def create_stripe_session(
     o a gestionar su suscripción existente (Billing Portal).
     """
     try:
+        # Validaciones de seguridad para no chocar si faltan las llaves
+        if not stripe.api_key:
+            raise ValueError("Falta configurar STRIPE_API_KEY en el backend.")
+            
         # ESCENARIO 1: El usuario YA es cliente de Stripe (Gestionar Suscripción)
         if current_user.stripe_customer_id:
             session = stripe.billing_portal.Session.create(
@@ -72,6 +77,9 @@ def create_stripe_session(
 
         # ESCENARIO 2: El usuario NUNCA ha pagado (Checkout)
         else:
+            if not PRICE_ID_PRO:
+                raise ValueError("Falta configurar STRIPE_PRICE_ID_PRO en el backend.")
+
             session = stripe.checkout.Session.create(
                 success_url=f"{FRONTEND_URL}/dashboard/pro?success=true",
                 cancel_url=f"{FRONTEND_URL}/dashboard/profile?canceled=true",
@@ -79,6 +87,7 @@ def create_stripe_session(
                 mode="subscription",
                 billing_address_collection="auto",
                 customer_email=current_user.email,
+                client_reference_id=str(current_user.id), # 🔥 CRÍTICO: Esto conecta el pago con el usuario en la DB
                 line_items=[
                     {
                         "price": PRICE_ID_PRO,
@@ -97,5 +106,9 @@ def create_stripe_session(
 
     except stripe.error.StripeError as e:
         raise HTTPException(status_code=400, detail=f"Error de Stripe: {e.user_message}")
+    except ValueError as ve:
+        print(f"⚠️ Error de Configuración: {str(ve)}")
+        raise HTTPException(status_code=500, detail=str(ve))
     except Exception as e:
+        print(f"❌ Error crítico en portal de pagos: {str(e)}")
         raise HTTPException(status_code=500, detail="Error interno del servidor conectando con pagos.")

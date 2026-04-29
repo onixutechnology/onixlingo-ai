@@ -1,4 +1,3 @@
-# backend/app/api/deps.py
 from typing import Generator, Optional
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
@@ -7,7 +6,6 @@ from pydantic import ValidationError
 from sqlalchemy.orm import Session
 import logging
 
-# ✅ CORRECCIÓN: Importamos desde settings.py
 from app.core.settings import settings
 from app.database import get_db
 from app.db import models
@@ -29,7 +27,6 @@ def get_current_user(
         payload = jwt.decode(
             token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM]
         )
-        # En auth.py guardamos el ID en 'sub', así que aquí leemos el ID
         token_sub = payload.get("sub")
         
         if token_sub is None:
@@ -46,21 +43,21 @@ def get_current_user(
             detail=f"No se pudieron validar las credenciales: {str(e)}",
         )
         
-    # ✅ CORRECCIÓN CLAVE: Buscar por ID si 'sub' es un número (lo que envía auth.py)
+    # ✅ SOLUCIÓN AL ERROR 500: Validación estricta del tipo de dato antes de consultar a PostgreSQL
     user = None
+    token_str = str(token_sub)
     
-    # Intentamos convertir a entero porque auth.py envía user.id
-    try:
-        user_id = int(token_sub)
-        user = db.query(models.User).filter(models.User.id == user_id).first()
-    except ValueError:
-        # Si no es número, intentamos por username/email (fallback)
-        user = db.query(models.User).filter(models.User.username == token_sub).first()
+    if token_str.isdigit():
+        # Si el token es un ID numérico puro (ej. "1", "42")
+        user = db.query(models.User).filter(models.User.id == int(token_str)).first()
+    else:
+        # Si el token es un texto (ej. "jacob" o "usuario@email.com")
+        user = db.query(models.User).filter(models.User.username == token_str).first()
         if not user:
-            user = db.query(models.User).filter(models.User.email == token_sub).first()
+            user = db.query(models.User).filter(models.User.email == token_str).first()
     
     if not user:
-        logger.warning(f"⚠️ Usuario ID {token_sub} no encontrado en DB.")
+        logger.warning(f"⚠️ Usuario '{token_sub}' no encontrado en DB.")
         raise HTTPException(status_code=404, detail="Usuario no encontrado")
         
     return user
@@ -69,8 +66,5 @@ def get_current_active_user(
     current_user: models.User = Depends(get_current_user),
 ) -> models.User:
     if not current_user.is_active:
-        # Auto-activación de emergencia (opcional, útil si tienes problemas de activación)
-        # current_user.is_active = True
-        # return current_user
         raise HTTPException(status_code=400, detail="Usuario inactivo")
     return current_user
