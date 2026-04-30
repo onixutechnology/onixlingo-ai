@@ -33,7 +33,7 @@ interface LessonStatus {
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
 
-// 🔥 AHORA SÍ: EL CURRÍCULUM COMPLETO (60 LECCIONES MAPEADAS A TUS JSONs)
+// 🔥 EL CURRÍCULUM COMPLETO (60 LECCIONES MAPEADAS A TUS JSONs)
 const PRO_CURRICULUM = [
   {
     id: 'exec-b1',
@@ -252,7 +252,6 @@ const FluencyLabPanel = ({ onOpenStudio }: { onOpenStudio: () => void }) => (
   </section>
 );
 
-// 📱 BOTTOM NAV CONECTADA (LOS 5 BOTONES FUNCIONALES)
 const MobileProBottomNav = ({ 
   toggleStudentMode, 
   onOpenStudio, 
@@ -315,8 +314,10 @@ export default function ProfessionalDashboard() {
   const [showStatsModal, setShowStatsModal] = useState(false);
   const [managingPlan, setManagingPlan] = useState(false);
 
-  // Módulo B1 abierto por defecto
-  const [expandedSections, setExpandedSections] = useState<string[]>([PRO_CURRICULUM[0].id]);
+  // 🔥 TODOS LOS MÓDULOS ABIERTOS POR DEFECTO Mapeando los IDs
+  const [expandedSections, setExpandedSections] = useState<string[]>(
+    PRO_CURRICULUM.map(section => section.id)
+  );
 
   useEffect(() => {
     document.body.style.backgroundColor = '#020617'; 
@@ -459,7 +460,7 @@ export default function ProfessionalDashboard() {
 
             <FluencyLabPanel onOpenStudio={() => setShowReadingStudio(true)} />
 
-            {/* 🔥 CURRÍCULUM PLEGABLE (AHORA CON 60 LECCIONES) */}
+            {/* 🔥 CURRÍCULUM PLEGABLE CON 60 LECCIONES (AHORA TODAS ABIERTAS POR DEFECTO) */}
             <div className="space-y-6">
               {PRO_CURRICULUM.map((section, sIdx) => {
                 const isExpanded = expandedSections.includes(section.id);

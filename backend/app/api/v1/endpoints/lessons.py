@@ -2,8 +2,11 @@ import json
 import logging
 from pathlib import Path
 from typing import Any, Dict, List, Optional
-from fastapi import APIRouter, HTTPException, status, Path as PathParam, Query
+from fastapi import APIRouter, HTTPException, status, Path as PathParam, Query, Depends
 from pydantic import BaseModel
+
+# 🔥 Importamos la validación base de usuario para saber quién está pidiendo la lección
+from app.api.deps import get_current_active_user
 
 # Configuramos el logger
 logger = logging.getLogger("OnixLingo.ContentDelivery")
@@ -47,12 +50,24 @@ class LessonContent(BaseModel):
     class Config:
         extra = "ignore"
 
-# --- 3. ENDPOINT MULTILENGUAJE ---
+# --- 3. ENDPOINT MULTILENGUAJE CON SEGURIDAD ---
 @router.get("/{lesson_id}", response_model=LessonContent)
 def get_lesson_content(
     lesson_id: str = PathParam(..., title="ID de la lección"),
-    lang: str = Query("en", description="Idioma de la lección (en, fr, zh)") # 🔥 AGREGADO
+    lang: str = Query("en", description="Idioma de la lección (en, fr, zh)"),
+    # 🔥 Identificamos al usuario que hace la petición
+    current_user = Depends(get_current_active_user)
 ):
+    # 🚨 LÓGICA DE SEGURIDAD VIP 🚨
+    # Si la lección es de OnixPro, verificamos que el usuario pague la suscripción.
+    if lesson_id.startswith("pro-"):
+        if not current_user.is_pro and current_user.tier not in ['pro', 'titanium']:
+            logger.warning(f"🔒 Intento de acceso bloqueado a la lección {lesson_id} por el usuario {current_user.username}")
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Esta lección premium requiere una suscripción OnixPro activa."
+            )
+
     filename = f"{lesson_id}.json"
     
     # Decidir si buscamos en la carpeta PRO o NORMAL, agregando el idioma

@@ -43,15 +43,12 @@ def get_current_user(
             detail=f"No se pudieron validar las credenciales: {str(e)}",
         )
         
-    # ✅ SOLUCIÓN AL ERROR 500: Validación estricta del tipo de dato antes de consultar a PostgreSQL
     user = None
     token_str = str(token_sub)
     
     if token_str.isdigit():
-        # Si el token es un ID numérico puro (ej. "1", "42")
         user = db.query(models.User).filter(models.User.id == int(token_str)).first()
     else:
-        # Si el token es un texto (ej. "jacob" o "usuario@email.com")
         user = db.query(models.User).filter(models.User.username == token_str).first()
         if not user:
             user = db.query(models.User).filter(models.User.email == token_str).first()
@@ -67,4 +64,34 @@ def get_current_active_user(
 ) -> models.User:
     if not current_user.is_active:
         raise HTTPException(status_code=400, detail="Usuario inactivo")
+    return current_user
+
+# 🔥 EL "CADENERO" VIP (NUEVO)
+def get_current_pro_user(
+    current_user: models.User = Depends(get_current_active_user),
+) -> models.User:
+    """
+    Verifica que el usuario tenga una suscripción activa (Pro o Titanium).
+    Si es un usuario Free, bloquea la petición con un Error 403.
+    """
+    if not current_user.is_pro and current_user.tier not in ['pro', 'titanium']:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Esta acción requiere una suscripción OnixPro activa."
+        )
+    return current_user
+
+# 🔥 EL "CADENERO" PARA ADMINISTRADORES
+def get_current_admin_user(
+    current_user: models.User = Depends(get_current_active_user),
+) -> models.User:
+    """
+    Verifica que el usuario tenga el rol de 'admin'.
+    Si no lo es, bloquea la petición con un Error 403.
+    """
+    if current_user.role != "admin":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Acceso denegado. Se requieren privilegios de Administrador."
+        )
     return current_user

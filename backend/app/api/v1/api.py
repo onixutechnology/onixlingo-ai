@@ -11,7 +11,8 @@ from app.api.v1.endpoints import (
     speech,
     analytics,
     avatar,
-    exercises
+    exercises,
+    admin # 🔥 NUEVO: Importamos el módulo admin
 )
 
 api_router = APIRouter()
@@ -28,10 +29,13 @@ api_router.include_router(exercises.router, prefix="/exercises", tags=["Exercise
 # 💳 Pagos
 api_router.include_router(billing.router, prefix="/billing", tags=["Billing"])
 
-# 🤖 Inteligencia Artificial y Voz (CRÍTICO PARA EL MODO PRO)
+# 🤖 Inteligencia Artificial y Voz
 api_router.include_router(ai.router, prefix="/ai", tags=["AI"])
 api_router.include_router(speech.router, prefix="/speech", tags=["Speech"])
 
 # 📊 Analíticas y Extras
 api_router.include_router(analytics.router, prefix="/analytics", tags=["Analytics"])
 api_router.include_router(avatar.router, prefix="/avatar", tags=["Avatar"])
+
+# 🛡️ PANEL DE ADMINISTRACIÓN (Acceso restringido)
+api_router.include_router(admin.router, prefix="/admin", tags=["Admin Dashboard"])

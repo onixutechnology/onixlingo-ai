@@ -1,15 +1,16 @@
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, status, Depends
 from pydantic import BaseModel, Field
 from typing import Optional
 from app.services.gemini_service import GeminiService
+
+# 🔥 Importamos el Candado VIP
+from app.api.deps import get_current_pro_user
 
 # Instanciamos el Router y el Servicio
 router = APIRouter()
 gemini_service = GeminiService()
 
 # --- MODELOS DE DATOS (DTOs) ---
-# Definen estrictamente qué entra y qué sale de tu API.
-
 class ChatRequest(BaseModel):
     message: str = Field(..., min_length=1, description="El mensaje del usuario")
     context: str = Field(..., description="Rol del Tutor (Ej: 'CEO de Tech Company')")
@@ -30,7 +31,11 @@ class ChatResponse(BaseModel):
 # --- ENDPOINT ---
 
 @router.post("/chat", response_model=ChatResponse, summary="Interactuar con el Tutor IA")
-async def chat_endpoint(request: ChatRequest):
+async def chat_endpoint(
+    request: ChatRequest,
+    # 🔥 SEGURIDAD VIP: Si el usuario es Free, la petición rebota con un Error 403 aquí mismo
+    current_user = Depends(get_current_pro_user) 
+):
     """
     Endpoint principal para el chat con IA.
     Delega la lógica compleja al GeminiService y valida la respuesta con Pydantic.
@@ -44,7 +49,6 @@ async def chat_endpoint(request: ChatRequest):
     )
 
     # 2. Mapeo y Validación de Respuesta
-    # Si el servicio devuelve datos parciales, Pydantic filtra y asegura la estructura.
     analysis_content = service_response.get("analysis")
     
     analysis_model = None

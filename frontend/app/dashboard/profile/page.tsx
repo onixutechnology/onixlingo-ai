@@ -128,7 +128,7 @@ export default function ProfilePage() {
         }
 
         setUser(finalProfile);
-        setName(finalProfile.full_name);
+        setName(finalProfile.full_name || finalProfile.email); // Usamos email de fallback si no hay nombre
         setEmail(finalProfile.email);
 
       } catch (error) {
@@ -148,7 +148,6 @@ export default function ProfilePage() {
     const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
 
     try {
-      // 🔥 Payload conectado a tu nuevo esquema backend
       const payload = { 
         full_name: name, 
         email: email,
@@ -183,6 +182,7 @@ export default function ProfilePage() {
     }
   };
 
+  // 🔥 NUEVA LÓGICA REAL PARA ABRIR STRIPE
   const handleManagePlan = async () => {
     setManagingPlan(true);
     try {
@@ -198,7 +198,7 @@ export default function ProfilePage() {
         const data = await res.json();
         window.location.href = data.url; 
       } else {
-        alert("El portal de facturación se activará en producción.");
+        alert("El portal de facturación requiere configuración de llaves de Stripe en tu servidor backend.");
       }
     } catch (error) {
       alert("Error conectando con el portal de facturación.");
