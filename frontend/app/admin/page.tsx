@@ -184,7 +184,8 @@ export default function AdminDashboard() {
                     <td className="p-4">
                       <div className="font-bold text-white flex items-center gap-2">
                         {u.username} 
-                        {u.role === 'admin' && <ShieldAlert size={14} className="text-red-400" title="Administrador" />}
+                        {/* 🔥 AQUÍ ESTÁ LA CORRECCIÓN: Envolvemos en un span con title */}
+                        {u.role === 'admin' && <span title="Administrador"><ShieldAlert size={14} className="text-red-400" /></span>}
                       </div>
                       <div className="text-xs text-slate-500">{u.email}</div>
                     </td>
