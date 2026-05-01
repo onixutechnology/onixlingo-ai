@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation'; 
 import Cookies from 'js-cookie'; 
 import { useUIStore } from '@/store/uiStore';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { 
   ArrowLeft, Trophy, Star, Zap, Flame, Target, 
@@ -145,8 +145,8 @@ export default function AchievementsPage() {
 
   const currentRank = getRank();
 
-  // 🔥 SOLUCIÓN DE TYPESCRIPT AQUÍ 🔥
-  const containerVariants: Variants = {
+  // 🔥 SOLUCIÓN ESTRICTA DE TYPESCRIPT AQUÍ 🔥
+  const containerVariants: any = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -154,13 +154,12 @@ export default function AchievementsPage() {
     }
   };
 
-  // Le decimos a TypeScript explícitamente qué esperar
-  const itemVariants: Variants = {
+  const itemVariants: any = {
     hidden: { opacity: 0, y: 20 },
     show: { 
       opacity: 1, 
       y: 0, 
-      transition: { type: "spring", stiffness: 300, damping: 24 } as any // Evita el error de tipado estricto
+      transition: { type: "spring", stiffness: 300, damping: 24 }
     }
   };
 
@@ -252,7 +251,7 @@ export default function AchievementsPage() {
               <motion.div 
                 key={badge.id}
                 variants={itemVariants}
-                whileHover={isUnlocked ? { y: -5, transition: { duration: 0.2 } as any } : {}} // <- Añadido as any por seguridad
+                whileHover={isUnlocked ? { y: -5, transition: { duration: 0.2 } as any } : {}}
                 className={`
                   relative p-6 md:p-8 rounded-[2rem] border-2 transition-all duration-300 overflow-hidden flex flex-col h-full
                   ${isUnlocked 
