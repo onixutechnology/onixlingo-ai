@@ -37,6 +37,7 @@ export default function LoginPage() {
 
       if (res.ok) {
         setStatus('success');
+        
         // Almacenamiento seguro de tokens y sesión
         if (data.access_token) {
           Cookies.set('access_token', data.access_token, { 
@@ -48,11 +49,32 @@ export default function LoginPage() {
         }
         Cookies.set('username', data.username || username, { expires: 1, path: '/' });
         
-        // Pequeña pausa para que el usuario vea el check verde de éxito
-        setTimeout(() => {
-          router.push('/dashboard');
-          router.refresh(); 
-        }, 800);
+        // 🔥 LÓGICA INTELIGENTE: VERIFICAMOS EL ROL ANTES DE REDIRIGIR
+        try {
+          const userRes = await fetch(`${API_URL}/api/v1/users/me`, {
+            headers: { 'Authorization': `Bearer ${data.access_token}` }
+          });
+          
+          if (userRes.ok) {
+            const userData = await userRes.json();
+            
+            setTimeout(() => {
+              // Si es administrador, lo mandamos al Command Center
+              if (userData.role === 'admin') {
+                router.push('/admin');
+              } else {
+                // Si es estudiante normal, va al Hub
+                router.push('/dashboard');
+              }
+              router.refresh(); 
+            }, 800);
+          } else {
+            // Fallback en caso de error en la verificación
+            setTimeout(() => { router.push('/dashboard'); router.refresh(); }, 800);
+          }
+        } catch (roleError) {
+          setTimeout(() => { router.push('/dashboard'); router.refresh(); }, 800);
+        }
 
       } else {
         setStatus('error');
@@ -92,7 +114,7 @@ export default function LoginPage() {
             {/* INPUT USUARIO */}
             <div>
               <label htmlFor="username" className="block text-sm font-bold text-slate-700 mb-2 ml-1">
-                Usuario
+                Usuario o Correo
               </label>
               <div className="relative group">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -106,7 +128,7 @@ export default function LoginPage() {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   className="block w-full pl-12 pr-4 py-3.5 border border-slate-300 rounded-xl bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-600 transition-all sm:text-sm disabled:opacity-50 disabled:bg-slate-50"
-                  placeholder="Tu nombre de usuario"
+                  placeholder="Tu correo o usuario"
                 />
               </div>
             </div>
