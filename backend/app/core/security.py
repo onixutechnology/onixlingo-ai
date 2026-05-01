@@ -43,7 +43,7 @@ def create_access_token(subject: Union[str, Any], expires_delta: Optional[timede
 def get_current_user(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)) -> User:
     """
     Extrae el token de la petición, lo descifra y devuelve el objeto User completo de la base de datos.
-    Esta es la función que te faltaba.
+    Incluye validación robusta para IDs numéricos, usernames o emails.
     """
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
@@ -53,14 +53,28 @@ def get_current_user(db: Session = Depends(get_db), token: str = Depends(oauth2_
     try:
         # Decodificamos el token usando tu SECRET_KEY
         payload = jwt.decode(token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM])
-        user_id: str = payload.get("sub")
-        if user_id is None:
+        token_sub = payload.get("sub")
+        
+        if token_sub is None:
             raise credentials_exception
+            
     except JWTError:
         raise credentials_exception
         
-    # Buscamos al usuario en la base de datos usando el ID extraído del token
-    user = db.query(User).filter(User.id == user_id).first()
+    # 🔥 LÓGICA DE BÚSQUEDA A PRUEBA DE BALAS 🔥
+    # Convertimos a string por seguridad para poder evaluarlo
+    token_sub_str = str(token_sub)
+    user = None
+    
+    # 1. Si el token contiene un número puro (ej. "4"), buscamos por la columna ID
+    if token_sub_str.isdigit():
+        user = db.query(User).filter(User.id == int(token_sub_str)).first()
+        
+    # 2. Si el token tiene letras (ej. "jeico11" o "correo@..."), buscamos por username o email
+    else:
+        user = db.query(User).filter(User.username == token_sub_str).first()
+        if not user:
+            user = db.query(User).filter(User.email == token_sub_str).first()
     
     if user is None:
         raise credentials_exception
