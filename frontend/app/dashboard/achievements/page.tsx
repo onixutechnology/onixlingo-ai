@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation'; 
 import Cookies from 'js-cookie'; 
 import { useUIStore } from '@/store/uiStore';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 import { 
   ArrowLeft, Trophy, Star, Zap, Flame, Target, 
@@ -31,28 +31,28 @@ const MobileBottomNav = ({ toggleProMode, mode }: { toggleProMode: () => void, m
   const isActive = (path: string) => pathname === path;
 
   return (
-    <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-t border-slate-200 px-4 sm:px-6 py-3 flex justify-between items-center z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] pb-safe">
-      <Link href="/dashboard" className={`flex flex-col items-center gap-1 transition-colors ${isActive('/dashboard') ? 'text-indigo-600' : 'text-slate-400 hover:text-indigo-600'}`}>
+    <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#020617]/95 backdrop-blur-xl border-t border-slate-800 px-4 sm:px-6 py-3 flex justify-between items-center z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] pb-safe">
+      <Link href="/dashboard" className={`flex flex-col items-center gap-1 transition-colors ${isActive('/dashboard') ? 'text-indigo-500' : 'text-slate-500 hover:text-indigo-400'}`}>
         <Home size={24} strokeWidth={isActive('/dashboard') ? 2.5 : 2} />
         <span className="text-[10px] font-bold">Inicio</span>
       </Link>
-      <Link href="/dashboard/vocabulary" className={`flex flex-col items-center gap-1 transition-colors ${isActive('/dashboard/vocabulary') ? 'text-indigo-600' : 'text-slate-400 hover:text-indigo-600'}`}>
+      <Link href="/dashboard/vocabulary" className={`flex flex-col items-center gap-1 transition-colors ${isActive('/dashboard/vocabulary') ? 'text-indigo-500' : 'text-slate-500 hover:text-indigo-400'}`}>
         <BookA size={24} strokeWidth={isActive('/dashboard/vocabulary') ? 2.5 : 2} />
         <span className="text-[10px] font-bold">Vocab</span>
       </Link>
       <Link href="/dashboard/chess" className="group relative -mt-8">
-        <div className={`w-16 h-16 rounded-full flex items-center justify-center text-white shadow-lg border-4 border-slate-50 cursor-pointer transform active:scale-95 transition-all duration-300 ${isActive('/dashboard/chess') ? 'bg-amber-500 shadow-amber-500/40 scale-105 ring-2 ring-amber-200' : 'bg-emerald-600 shadow-emerald-500/40 hover:-translate-y-1'}`}>
+        <div className={`w-16 h-16 rounded-full flex items-center justify-center text-white shadow-lg border-4 border-[#020617] cursor-pointer transform active:scale-95 transition-all duration-300 ${isActive('/dashboard/chess') ? 'bg-amber-500 shadow-amber-500/40 scale-105 ring-2 ring-amber-200' : 'bg-slate-800 shadow-slate-900/40 hover:-translate-y-1'}`}>
           <Crown size={28} fill="currentColor" />
         </div>
-        <span className={`absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-bold transition-opacity ${isActive('/dashboard/chess') ? 'text-amber-600 opacity-100' : 'text-emerald-600 opacity-0 group-hover:opacity-100'}`}>
+        <span className={`absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-bold transition-opacity ${isActive('/dashboard/chess') ? 'text-amber-500 opacity-100' : 'text-slate-500 opacity-0 group-hover:opacity-100'}`}>
           Ajedrez
         </span>
       </Link>
-      <Link href="/dashboard/profile" className={`flex flex-col items-center gap-1 transition-colors ${isActive('/dashboard/profile') ? 'text-indigo-600' : 'text-slate-400 hover:text-indigo-600'}`}>
+      <Link href="/dashboard/profile" className={`flex flex-col items-center gap-1 transition-colors ${isActive('/dashboard/profile') ? 'text-indigo-500' : 'text-slate-500 hover:text-indigo-400'}`}>
         <User size={24} strokeWidth={isActive('/dashboard/profile') ? 2.5 : 2} />
         <span className="text-[10px] font-bold">Perfil</span>
       </Link>
-      <button onClick={toggleProMode} className={`flex flex-col items-center gap-1 transition-colors active:scale-95 ${mode === 'professional' ? 'text-indigo-600' : 'text-slate-400 hover:text-indigo-600'}`}>
+      <button onClick={toggleProMode} className={`flex flex-col items-center gap-1 transition-colors active:scale-95 ${mode === 'professional' ? 'text-indigo-500' : 'text-slate-500 hover:text-indigo-400'}`}>
         <Briefcase size={24} strokeWidth={mode === 'professional' ? 2.5 : 2} />
         <span className="text-[10px] font-bold">Pro</span>
       </button>
@@ -145,8 +145,8 @@ export default function AchievementsPage() {
 
   const currentRank = getRank();
 
-  // --- VARIANTES DE ANIMACIÓN ---
-  const containerVariants = {
+  // 🔥 SOLUCIÓN DE TYPESCRIPT AQUÍ 🔥
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -154,9 +154,14 @@ export default function AchievementsPage() {
     }
   };
 
-  const itemVariants = {
+  // Le decimos a TypeScript explícitamente qué esperar
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
+    show: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { type: "spring", stiffness: 300, damping: 24 } as any // Evita el error de tipado estricto
+    }
   };
 
   if (isLoading) {
@@ -247,7 +252,7 @@ export default function AchievementsPage() {
               <motion.div 
                 key={badge.id}
                 variants={itemVariants}
-                whileHover={isUnlocked ? { y: -5, transition: { duration: 0.2 } } : {}}
+                whileHover={isUnlocked ? { y: -5, transition: { duration: 0.2 } as any } : {}} // <- Añadido as any por seguridad
                 className={`
                   relative p-6 md:p-8 rounded-[2rem] border-2 transition-all duration-300 overflow-hidden flex flex-col h-full
                   ${isUnlocked 

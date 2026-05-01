@@ -5,12 +5,12 @@ import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation'; 
 import Cookies from 'js-cookie'; 
 import { useUIStore } from '@/store/uiStore';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 import { 
   ArrowLeft, BookA, Search, Play, Brain, 
   Briefcase, Code2, Plane, Users, Coffee, 
-  Lock, CheckCircle2, Loader2, Home, Crown, User, Languages, Flame, Zap, Star
+  Lock, CheckCircle2, Loader2, Home, Crown, User, Languages, Flame, Zap
 } from 'lucide-react';
 
 // --- CONFIGURACIÓN API ---
@@ -109,7 +109,7 @@ export default function VocabularyPage() {
         if (statsRes && statsRes.ok) {
           const statsData = await statsRes.json();
           setUserStats({
-            streak: 5, // Fallback visual, idealmente vendría de statsData.streak
+            streak: 5, 
             totalXP: statsData.total_xp || 0
           });
         }
@@ -143,15 +143,15 @@ export default function VocabularyPage() {
     return lessonData ? lessonData.score : 0;
   };
 
-  // 🔥 SOLUCIÓN: VARIANTES DE ANIMACIÓN DECLARADAS AQUÍ
-  const containerVariants = {
+  // 🔥 SOLUCIÓN ESTRICTA DE TYPESCRIPT 🔥
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.05 } }
   };
   
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 15 },
-    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
+    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } as any } 
   };
 
   if (isLoading) {
@@ -267,7 +267,7 @@ export default function VocabularyPage() {
             {/* --- HEADER DE CATEGORÍA Y BUSCADOR --- */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
               <motion.div 
-                key={activeCat} // Forza re-animación al cambiar
+                key={activeCat}
                 initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
               >
                 <h2 className="text-3xl md:text-4xl font-black text-slate-800 tracking-tight mb-2">
@@ -298,7 +298,7 @@ export default function VocabularyPage() {
               variants={containerVariants}
               initial="hidden"
               animate="show"
-              key={activeCat} // Resetea la animación cuando cambia la categoría
+              key={activeCat}
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
             >
               {LEVELS.flatMap((level, levelIndex) => [1, 2, 3, 4].map(part => { 
