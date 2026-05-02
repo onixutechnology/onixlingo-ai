@@ -31,8 +31,7 @@ export const ReadingStudio = ({ onClose }: ReadingStudioProps) => {
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
   const streamRef = useRef<MediaStream | null>(null);
-  const animationRef = useRef<number>();
-  const audioContextRef = useRef<AudioContext | null>(null);
+const animationRef = useRef<number | null>(null);  const audioContextRef = useRef<AudioContext | null>(null);
 
   const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
   const targetText = PRACTICE_TEXTS[currentTextIndex];
