@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css"; // <--- ¡ESTA LÍNEA ES LA CLAVE MÁGICA!
+import "./globals.css";
+// IMPORTAMOS EL PADDLE PROVIDER QUE ACABAS DE CREAR
+import { PaddleProvider } from '@/components/providers/PaddleProvider';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* ENVOLVEMOS LA APLICACIÓN CON EL PROVIDER */}
+        <PaddleProvider>
+          {children}
+        </PaddleProvider>
+      </body>
     </html>
   );
 }

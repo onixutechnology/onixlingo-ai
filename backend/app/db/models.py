@@ -20,11 +20,12 @@ class User(Base):
     is_active = Column(Boolean, default=True)
     role = Column(String, default="student")
     
-    # 🔥 Sistema de Suscripciones y Stripe
+    # 🔥 Sistema de Suscripciones (Ahora con Paddle)
     is_pro = Column(Boolean, default=False) 
     tier = Column(String, default="free") 
     valid_until = Column(DateTime(timezone=True), nullable=True) 
-    stripe_customer_id = Column(String, unique=True, index=True, nullable=True) 
+    paddle_customer_id = Column(String, unique=True, index=True, nullable=True) 
+    paddle_subscription_id = Column(String, unique=True, index=True, nullable=True)
     
     # 🔥 Sistema de Referidos
     referral_code = Column(String, unique=True, index=True, nullable=True) 

@@ -2,10 +2,7 @@
 
 /**
  * ==============================================================================
- * ONIXLINGO LMS DASHBOARD - STUDENT EDITION
- * ==============================================================================
- * RUTA: /dashboard/page.tsx
- * ESTADO: Production Ready (Monetizado + Multilenguaje + Sin Dev Mode + Anuncios Dinámicos)
+ * ONIXLINGO LMS DASHBOARD - STUDENT EDITION (ULTRA PREMIUM)
  * ==============================================================================
  */
 
@@ -16,6 +13,7 @@ import { useUIStore } from '@/store/uiStore';
 import Sidebar from '@/components/dashboard/sidebar';
 import Cookies from 'js-cookie';
 import { ServerAwakeLoader } from '@/components/ui/Server/ServerAwakeLoader';
+import { motion, Variants } from 'framer-motion';
 
 // --- 📢 IMPORTACIÓN DE ANUNCIOS ---
 import { AdBanner } from '@/components/ads/AdBanner';
@@ -24,7 +22,8 @@ import {
   LogOut, ChevronRight, Play, Lock, Check, Home,
   Trophy, Zap, Flame, Headphones, BookOpen, PenTool,
   Mic, Shield, LayoutGrid, User, Loader2, Briefcase,
-  BookA, Crown, Languages, Sparkles, ShoppingBag
+  BookA, Crown, Languages, Sparkles, ShoppingBag, ArrowRight,
+  FileText, ShieldCheck 
 } from 'lucide-react';
 
 import { CURRICULUM } from '@/data/curriculum';
@@ -32,28 +31,28 @@ import { CURRICULUM } from '@/data/curriculum';
 type LessonStatus = 'locked' | 'active' | 'completed';
 
 interface ThemeConfig {
-  primary: string; bg: string; border: string; iconBg: string; accent: string; shadow: string; gradient: string;
+  primary: string; bg: string; border: string; iconBg: string; accent: string; shadow: string; gradient: string; glow: string;
 }
 
 const COLOR_VARIANTS: Record<string, { bg: string, text: string, hoverBorder: string, hoverShadow: string }> = {
-  emerald: { bg: 'bg-emerald-100', text: 'text-emerald-600', hoverBorder: 'hover:border-emerald-300', hoverShadow: 'hover:shadow-emerald-100' },
-  blue: { bg: 'bg-blue-100', text: 'text-blue-600', hoverBorder: 'hover:border-blue-300', hoverShadow: 'hover:shadow-blue-100' },
-  orange: { bg: 'bg-orange-100', text: 'text-orange-600', hoverBorder: 'hover:border-orange-300', hoverShadow: 'hover:shadow-orange-100' },
-  purple: { bg: 'bg-purple-100', text: 'text-purple-600', hoverBorder: 'hover:border-purple-300', hoverShadow: 'hover:shadow-purple-100' },
-  indigo: { bg: 'bg-indigo-100', text: 'text-indigo-600', hoverBorder: 'hover:border-indigo-300', hoverShadow: 'hover:shadow-indigo-100' },
-  rose: { bg: 'bg-rose-100', text: 'text-rose-600', hoverBorder: 'hover:border-rose-300', hoverShadow: 'hover:shadow-rose-100' },
-  amber: { bg: 'bg-amber-100', text: 'text-amber-600', hoverBorder: 'hover:border-amber-300', hoverShadow: 'hover:shadow-amber-100' },
+  emerald: { bg: 'bg-emerald-100', text: 'text-emerald-600', hoverBorder: 'hover:border-emerald-300', hoverShadow: 'hover:shadow-emerald-500/20' },
+  blue: { bg: 'bg-blue-100', text: 'text-blue-600', hoverBorder: 'hover:border-blue-300', hoverShadow: 'hover:shadow-blue-500/20' },
+  orange: { bg: 'bg-orange-100', text: 'text-orange-600', hoverBorder: 'hover:border-orange-300', hoverShadow: 'hover:shadow-orange-500/20' },
+  purple: { bg: 'bg-purple-100', text: 'text-purple-600', hoverBorder: 'hover:border-purple-300', hoverShadow: 'hover:shadow-purple-500/20' },
+  indigo: { bg: 'bg-indigo-100', text: 'text-indigo-600', hoverBorder: 'hover:border-indigo-300', hoverShadow: 'hover:shadow-indigo-500/20' },
+  rose: { bg: 'bg-rose-100', text: 'text-rose-600', hoverBorder: 'hover:border-rose-300', hoverShadow: 'hover:shadow-rose-500/20' },
+  amber: { bg: 'bg-amber-100', text: 'text-amber-600', hoverBorder: 'hover:border-amber-300', hoverShadow: 'hover:shadow-amber-500/20' },
 };
 
 const getProfessionalTheme = (colorName: string, status: LessonStatus): ThemeConfig => {
   if (status === 'locked') {
-    return { primary: 'text-slate-400', bg: 'bg-slate-50', border: 'border-slate-200', iconBg: 'bg-slate-100', accent: 'bg-slate-300', shadow: 'shadow-none', gradient: 'from-slate-100 to-slate-50' };
+    return { primary: 'text-slate-400', bg: 'bg-slate-50', border: 'border-slate-200', iconBg: 'bg-slate-100', accent: 'bg-slate-300', shadow: 'shadow-none', gradient: 'from-slate-100 to-slate-50', glow: '' };
   }
   const themes: Record<string, ThemeConfig> = {
-    emerald: { primary: 'text-emerald-700', bg: 'bg-white', border: 'border-emerald-100', iconBg: 'bg-emerald-50', accent: 'bg-emerald-600', shadow: 'shadow-emerald-200/50', gradient: 'from-emerald-500 to-teal-600' },
-    blue: { primary: 'text-blue-700', bg: 'bg-white', border: 'border-blue-100', iconBg: 'bg-blue-50', accent: 'bg-blue-600', shadow: 'shadow-blue-200/50', gradient: 'from-blue-600 to-indigo-600' },
-    orange: { primary: 'text-orange-700', bg: 'bg-white', border: 'border-orange-100', iconBg: 'bg-orange-50', accent: 'bg-orange-600', shadow: 'shadow-orange-200/50', gradient: 'from-orange-500 to-red-500' },
-    purple: { primary: 'text-purple-700', bg: 'bg-white', border: 'border-purple-100', iconBg: 'bg-purple-50', accent: 'bg-purple-600', shadow: 'shadow-purple-200/50', gradient: 'from-purple-600 to-violet-600' },
+    emerald: { primary: 'text-emerald-700', bg: 'bg-white', border: 'border-emerald-100', iconBg: 'bg-emerald-50', accent: 'bg-emerald-600', shadow: 'shadow-emerald-200/50', gradient: 'from-emerald-400 to-teal-500', glow: 'shadow-[0_0_30px_rgba(16,185,129,0.3)]' },
+    blue: { primary: 'text-blue-700', bg: 'bg-white', border: 'border-blue-100', iconBg: 'bg-blue-50', accent: 'bg-blue-600', shadow: 'shadow-blue-200/50', gradient: 'from-blue-500 to-indigo-500', glow: 'shadow-[0_0_30px_rgba(59,130,246,0.3)]' },
+    orange: { primary: 'text-orange-700', bg: 'bg-white', border: 'border-orange-100', iconBg: 'bg-orange-50', accent: 'bg-orange-600', shadow: 'shadow-orange-200/50', gradient: 'from-orange-400 to-red-500', glow: 'shadow-[0_0_30px_rgba(249,115,22,0.3)]' },
+    purple: { primary: 'text-purple-700', bg: 'bg-white', border: 'border-purple-100', iconBg: 'bg-purple-50', accent: 'bg-purple-600', shadow: 'shadow-purple-200/50', gradient: 'from-purple-500 to-violet-600', glow: 'shadow-[0_0_30px_rgba(168,85,247,0.3)]' },
   };
   return themes[colorName] || themes['blue'];
 };
@@ -67,24 +66,23 @@ const getLessonDescription = (title: string) => {
   return "Lección fundamental para avanzar en tu dominio del idioma.";
 };
 
-// 🛒 TARJETA NATIVA DE AFILIADOS DE AMAZON
+// 🛒 TARJETA NATIVA DE AFILIADOS DE AMAZON (Premium)
 const AmazonAffiliateCard = () => (
-  <div className="relative bg-white border border-slate-200 rounded-3xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-all duration-300 mt-12 mb-8 group overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-transparent pointer-events-none"></div>
-    <div className="absolute top-0 right-6 bg-[#FFB800] text-amber-950 text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-b-lg shadow-sm z-10">Top Ventas</div>
-    <div className="relative z-10 w-20 h-20 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-inner">
-      <BookOpen size={36} strokeWidth={1.5} />
+  <div className="relative bg-white/80 backdrop-blur-xl border border-slate-200 rounded-[2rem] p-8 flex flex-col items-center text-center shadow-lg hover:shadow-2xl transition-all duration-500 mt-12 mb-8 group overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-b from-indigo-50/50 to-transparent pointer-events-none"></div>
+    <div className="absolute top-0 right-8 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-b-xl shadow-md z-10">Sugerencia Pro</div>
+    <div className="relative z-10 w-20 h-20 bg-indigo-50 text-indigo-600 rounded-[1.5rem] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500 shadow-inner ring-1 ring-indigo-100">
+      <BookOpen size={36} strokeWidth={2} />
     </div>
-    <h3 className="relative z-10 text-xl md:text-2xl font-black text-slate-800 mb-2">English Grammar in Use</h3>
-    <p className="relative z-10 text-slate-500 text-sm mb-8 max-w-sm leading-relaxed">
-      La biblia de la gramática. El libro #1 recomendado a nivel mundial para pasar de nivel B1 a B2.
+    <h3 className="relative z-10 text-2xl md:text-3xl font-black text-slate-800 mb-2 tracking-tight">English Grammar in Use</h3>
+    <p className="relative z-10 text-slate-500 text-sm mb-8 max-w-sm leading-relaxed font-medium">
+      La biblia de la gramática. El manual #1 recomendado a nivel mundial para saltar del nivel B1 al B2 con confianza.
     </p>
-    {/* 🔥 AQUÍ PONES TU LINK REAL DE AMAZON */}
     <a 
       href="https://www.amazon.com/dp/1108457657" 
       target="_blank" 
       rel="noopener noreferrer"
-      className="relative z-10 w-full sm:w-auto px-8 py-4 bg-[#FF9900] hover:bg-[#E38900] text-slate-900 font-bold rounded-xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-md shadow-orange-500/20"
+      className="relative z-10 w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-xl shadow-slate-900/20"
     >
       <ShoppingBag size={18} /> Ver precio en Amazon
     </a>
@@ -92,14 +90,14 @@ const AmazonAffiliateCard = () => (
 );
 
 const HeaderStats = ({ xp, streak }: { xp: number, streak: number }) => (
-  <div className="hidden md:flex items-center gap-4 bg-white px-5 py-2 rounded-xl border border-slate-200 shadow-sm">
-    <div className="flex items-center gap-3 px-3 border-r border-slate-100">
-      <div className="p-1.5 bg-amber-50 rounded-lg text-amber-500"><Zap size={18} fill="currentColor" /></div>
-      <div><p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Experiencia</p><span className="text-sm font-black text-slate-800">{xp} XP</span></div>
+  <div className="hidden md:flex items-center gap-2 bg-white/80 backdrop-blur-md px-2 py-1.5 rounded-2xl border border-slate-200/60 shadow-sm">
+    <div className="flex items-center gap-3 px-4 border-r border-slate-200/60">
+      <div className="p-1.5 bg-amber-50 rounded-xl text-amber-500 shadow-inner"><Zap size={16} fill="currentColor" /></div>
+      <div><p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest leading-none mb-0.5">XP Total</p><span className="text-sm font-black text-slate-800 leading-none">{xp.toLocaleString()}</span></div>
     </div>
-    <div className="flex items-center gap-3 px-3">
-      <div className="p-1.5 bg-rose-50 rounded-lg text-rose-500"><Flame size={18} fill="currentColor" /></div>
-      <div><p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Racha</p><span className="text-sm font-black text-slate-800">{streak} Días</span></div>
+    <div className="flex items-center gap-3 px-4">
+      <div className="p-1.5 bg-orange-50 rounded-xl text-orange-500 shadow-inner"><Flame size={16} fill="currentColor" /></div>
+      <div><p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest leading-none mb-0.5">Racha</p><span className="text-sm font-black text-slate-800 leading-none">{streak}</span></div>
     </div>
   </div>
 );
@@ -125,32 +123,76 @@ const TimelineNode = ({ id, title, status, stars, index, isLast, color, onClick 
   const theme = getProfessionalTheme(color, status);
   const description = getLessonDescription(title);
   const variant = COLOR_VARIANTS[color] || COLOR_VARIANTS['blue'];
+  
   return (
-    <div className="relative flex group w-full mb-8">
-      {!isLast && (<div className="absolute left-[2.2rem] md:left-[2.7rem] top-[5rem] bottom-[-2rem] w-[2px] bg-slate-200 z-0"></div>)}
-      <div className="relative z-10 mr-4 md:mr-10 flex-shrink-0 pt-2">
+    <div className="relative flex group w-full mb-8 lg:mb-10">
+      {/* Línea conectora */}
+      {!isLast && (
+        <div className="absolute left-[2.2rem] md:left-[2.7rem] top-[5rem] bottom-[-2.5rem] w-1 bg-slate-200/60 z-0 rounded-full">
+          {status === 'completed' && <div className={`w-full h-full bg-gradient-to-b ${theme.gradient} rounded-full`}></div>}
+        </div>
+      )}
+      
+      {/* Nodo Circular */}
+      <div className="relative z-10 mr-4 md:mr-8 flex-shrink-0 pt-2">
         <button
           onClick={() => status !== 'locked' && onClick(id)}
           disabled={status === 'locked'}
-          className={`w-16 h-16 md:w-20 md:h-20 rounded-[1.2rem] flex items-center justify-center border-0 transition-all duration-300 shadow-sm active:scale-95 ${status === 'active' ? `bg-gradient-to-br ${theme.gradient} text-white shadow-xl shadow-indigo-500/20 scale-105 ring-4 ring-white z-20` : ''} ${status === 'completed' ? `bg-white border-2 ${theme.border} ${theme.primary}` : ''} ${status === 'locked' ? 'bg-slate-100 border-2 border-slate-200 text-slate-300' : ''}`}
+          className={`
+            w-16 h-16 md:w-[5.5rem] md:h-[5.5rem] rounded-[1.5rem] flex items-center justify-center border-0 transition-all duration-500 shadow-sm active:scale-95 relative
+            ${status === 'active' ? `bg-gradient-to-br ${theme.gradient} text-white shadow-xl ${theme.glow} scale-110 z-20` : ''} 
+            ${status === 'completed' ? `bg-white border-4 border-${color}-100 ${theme.primary} shadow-md` : ''} 
+            ${status === 'locked' ? 'bg-slate-100 border-2 border-slate-200 text-slate-300' : ''}
+          `}
         >
-          {status === 'locked' && <Lock size={20} />}{status === 'active' && <Play size={28} fill="currentColor" className="ml-1" />}{status === 'completed' && <Check size={32} strokeWidth={3} />}
+          {status === 'active' && <div className="absolute inset-0 rounded-[1.5rem] bg-white opacity-20 animate-ping"></div>}
+          <div className="relative z-10">
+            {status === 'locked' && <Lock size={22} strokeWidth={2.5} />}
+            {status === 'active' && <Play size={30} fill="currentColor" className="ml-1 drop-shadow-md" />}
+            {status === 'completed' && <Check size={34} strokeWidth={3} />}
+          </div>
         </button>
       </div>
-      <div onClick={() => status !== 'locked' && onClick(id)} className={`flex-1 p-5 md:p-6 rounded-3xl border transition-all duration-300 cursor-pointer relative overflow-hidden group/card ${status === 'locked' ? 'bg-transparent border-2 border-dashed border-slate-200 opacity-60 hover:opacity-80' : `bg-white border-slate-200 ${variant.hoverBorder} hover:shadow-xl ${variant.hoverShadow} hover:-translate-y-1`}`}>
-        <div className="flex justify-between items-start gap-4">
+
+      {/* Tarjeta de Contenido */}
+      <div onClick={() => status !== 'locked' && onClick(id)} className={`
+        flex-1 p-6 md:p-8 rounded-[2rem] border transition-all duration-300 cursor-pointer relative overflow-hidden group/card
+        ${status === 'locked' 
+          ? 'bg-transparent border-2 border-dashed border-slate-200 opacity-60 hover:opacity-100 hover:bg-slate-50' 
+          : `bg-white/80 backdrop-blur-md border-slate-200 ${variant.hoverBorder} hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-1`
+        }
+        ${status === 'active' ? 'ring-2 ring-indigo-500/20 shadow-lg' : ''}
+      `}>
+        {/* Glow de fondo en hover */}
+        {status !== 'locked' && (
+          <div className={`absolute -right-20 -top-20 w-48 h-48 rounded-full opacity-0 group-hover/card:opacity-[0.03] transition-all duration-500 z-0 pointer-events-none ${variant.bg} group-hover/card:scale-150`} />
+        )}
+
+        <div className="flex flex-col sm:flex-row justify-between items-start gap-4 relative z-10">
           <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-3 mb-2">
-              <span className={`px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-widest ${status === 'active' ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-100 text-slate-500'}`}>Módulo {index + 1}</span>
-              {status === 'active' && (<span className="flex items-center gap-1 text-[10px] font-bold text-indigo-600 animate-pulse uppercase tracking-widest"><span className="w-1.5 h-1.5 bg-indigo-600 rounded-full"></span> En Curso</span>)}
+            <div className="flex items-center gap-3 mb-3">
+              <span className={`px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest shadow-sm ${status === 'active' ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-500'}`}>
+                Módulo {index + 1}
+              </span>
+              {status === 'active' && (
+                <span className="flex items-center gap-1.5 text-[10px] font-black text-indigo-600 uppercase tracking-widest bg-indigo-50 px-2 py-1 rounded-md">
+                  <span className="w-2 h-2 bg-indigo-600 rounded-full animate-pulse"></span> En Curso
+                </span>
+              )}
             </div>
-            <h3 className={`text-lg md:text-xl font-bold leading-tight mb-1 ${status === 'locked' ? 'text-slate-400' : 'text-slate-800'}`}>{title}</h3>
-            <p className={`text-xs md:text-sm leading-relaxed ${status === 'locked' ? 'text-slate-400' : 'text-slate-500'}`}>{description}</p>
+            <h3 className={`text-xl md:text-2xl font-black tracking-tight leading-tight mb-2 ${status === 'locked' ? 'text-slate-400' : 'text-slate-800 group-hover/card:text-indigo-950 transition-colors'}`}>{title}</h3>
+            <p className={`text-sm leading-relaxed font-medium ${status === 'locked' ? 'text-slate-400' : 'text-slate-500'}`}>{description}</p>
           </div>
-          <div className="flex flex-col items-end gap-3">
+          
+          <div className="flex flex-col items-end justify-between h-full min-w-[80px]">
             {status === 'completed' && (
-              <div className="flex gap-1 bg-amber-50 px-2 py-1.5 rounded-lg border border-amber-100">
-                {[1, 2, 3].map((s) => (<Trophy key={s} size={14} className={s <= stars ? 'text-amber-500 fill-amber-500' : 'text-amber-200'} />))}
+              <div className="flex gap-1 bg-amber-50 px-3 py-2 rounded-xl border border-amber-100 shadow-inner">
+                {[1, 2, 3].map((s) => (<Trophy key={s} size={16} className={s <= stars ? 'text-amber-500 fill-amber-500 drop-shadow-sm' : 'text-amber-200'} />))}
+              </div>
+            )}
+            {status === 'active' && (
+              <div className="mt-4 sm:mt-0 w-10 h-10 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center group-hover/card:bg-indigo-50 group-hover/card:text-indigo-600 transition-colors">
+                <ArrowRight size={20} strokeWidth={2.5} />
               </div>
             )}
           </div>
@@ -164,18 +206,29 @@ const CertCard = ({ title, desc, icon: Icon, href, active = false, color }: any)
   const variant = COLOR_VARIANTS[color] || COLOR_VARIANTS['indigo'];
   return (
     <Link href={href} className="block group h-full">
-      <div className={`relative overflow-hidden rounded-3xl border p-6 transition-all duration-300 h-full flex flex-col ${active ? 'bg-slate-900 border-slate-800 hover:shadow-2xl hover:shadow-indigo-500/20 hover:-translate-y-1' : 'bg-white border-slate-200 hover:border-indigo-200 hover:shadow-lg hover:-translate-y-1'}`}>
-        <div className="flex items-start justify-between mb-4">
-          <div className={`w-12 h-12 rounded-xl flex items-center justify-center shadow-sm ${active ? `bg-${color}-500 text-white` : `${variant.bg} ${variant.text} group-hover:scale-110 transition-transform`}`}><Icon size={24} strokeWidth={2} /></div>
-          {active && (<span className="text-[9px] font-bold bg-indigo-500 text-white px-2 py-1 rounded-md uppercase tracking-widest">Sugerido</span>)}
+      <div className={`relative overflow-hidden rounded-[2rem] border p-8 transition-all duration-500 h-full flex flex-col ${active ? 'bg-slate-900 border-slate-800 hover:shadow-2xl hover:shadow-indigo-500/20 hover:-translate-y-2' : 'bg-white/80 backdrop-blur-md border-slate-200 hover:border-indigo-200 hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-2'}`}>
+        <div className="flex items-start justify-between mb-6 relative z-10">
+          <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shadow-inner border border-white/10 ${active ? `bg-gradient-to-br from-indigo-500 to-violet-600 text-white` : `${variant.bg} ${variant.text} group-hover:scale-110 transition-transform duration-500`}`}><Icon size={28} strokeWidth={2} /></div>
+          {active && (<span className="text-[10px] font-black bg-white/10 text-white border border-white/20 px-3 py-1.5 rounded-lg uppercase tracking-widest backdrop-blur-sm">Sugerido</span>)}
         </div>
-        <div className="mt-auto">
-          <h4 className={`text-base md:text-lg font-bold mb-1 leading-tight ${active ? 'text-white' : 'text-slate-800'}`}>{title}</h4>
-          <p className={`text-xs leading-relaxed ${active ? 'text-slate-400' : 'text-slate-500'}`}>{desc}</p>
+        <div className="mt-auto relative z-10">
+          <h4 className={`text-lg md:text-xl font-black mb-2 tracking-tight ${active ? 'text-white' : 'text-slate-800'}`}>{title}</h4>
+          <p className={`text-sm font-medium leading-relaxed ${active ? 'text-slate-400' : 'text-slate-500'}`}>{desc}</p>
         </div>
       </div>
     </Link>
   );
+};
+
+// --- ANIMATION VARIANTS ---
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.1 } }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, x: -20 },
+  show: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 300, damping: 24 } as any }
 };
 
 // --- PÁGINA PRINCIPAL ---
@@ -192,6 +245,10 @@ export default function DashboardPage() {
   // 🔥 ESTADOS PARA ADS Y PAGOS
   const [isUserPremium, setIsUserPremium] = useState(false);
   const [managingPlan, setManagingPlan] = useState(false);
+
+  // 🔴 AQUÍ PONEMOS EL PRICE ID DE PADDLE. 
+  // Usa el tuyo real: 'pri_01kqnrreqy5gas36g57ca2fazn'
+  const PADDLE_PRICE_ID = 'pri_01kqnrreqy5gas36g57ca2fazn'; 
 
   useEffect(() => {
     if (dashboardData) return;
@@ -216,34 +273,40 @@ export default function DashboardPage() {
       const headers = {
         'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`,
         'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache, no-store, must-revalidate', 
-        'Pragma': 'no-cache'
       };
 
-      // 1. Obtener Progreso
-      fetch(`${BASE_URL}/api/v1/progress/map`, { cache: 'no-store', credentials: 'include', headers })
-      .then(res => {
-        if (res.status === 401) { Cookies.remove('access_token'); router.push('/login'); throw new Error("Sesión expirada"); }
-        if (!res.ok) throw new Error("Error auth o red");
-        return res.json();
-      })
-      .then(data => {
-        setDashboardData(data);
-        const completedCount = data.standard?.filter((l: any) => l.status === 'completed').length || 0;
-        setUserStats({ xp: data.total_xp || completedCount * 150, lessons: completedCount, streak: 5 });
-      })
-      .catch(err => {
-        console.error("⚠️ Error sincronizando map:", err);
-        setDashboardData({ standard: [] }); 
-      });
+      Promise.all([
+        fetch(`${BASE_URL}/api/v1/progress/map`, { headers, cache: 'no-store' }).catch(() => null),
+        fetch(`${BASE_URL}/api/v1/progress/stats`, { headers, cache: 'no-store' }).catch(() => null),
+        fetch(`${BASE_URL}/api/v1/users/me`, { headers }).catch(() => null)
+      ])
+      .then(async ([mapRes, statsRes, userRes]) => {
+        if (mapRes?.status === 401) { Cookies.remove('access_token'); router.push('/login'); throw new Error("Sesión expirada"); }
+        
+        let mapData = { standard: [] };
+        let statsData = { total_xp: 0, streak: 0 };
+        let userData = { is_pro: false, tier: 'free' };
 
-      // 2. 🔥 Obtener Status VIP para quitar anuncios
-      fetch(`${BASE_URL}/api/v1/users/me`, { headers })
-      .then(res => res.json())
-      .then(userData => {
+        if (mapRes && mapRes.ok) mapData = await mapRes.json();
+        if (statsRes && statsRes.ok) statsData = await statsRes.json();
+        if (userRes && userRes.ok) userData = await userRes.json();
+
+        setDashboardData(mapData);
+        
+        const completedCount = mapData.standard?.filter((l: any) => l.status === 'completed').length || 0;
+        
+        setUserStats({ 
+          xp: statsData.total_xp || completedCount * 150, 
+          lessons: completedCount, 
+          streak: statsData.streak || 0
+        });
+
         setIsUserPremium(userData.is_pro || userData.tier === 'titanium');
       })
-      .catch(err => console.error("Error perfil:", err));
+      .catch(err => {
+        console.error("⚠️ Error sincronizando dashboard:", err);
+        setDashboardData({ standard: [] }); 
+      });
 
     } else {
       router.push('/login');
@@ -294,26 +357,41 @@ export default function DashboardPage() {
     }
   };
 
-  // 🔥 LÓGICA PARA EL BOTÓN "ELIMINAR ANUNCIOS"
-  const handleManagePlan = async () => {
+  // 🔥 NUEVA LÓGICA DE PADDLE PARA ABRIR EL CHECKOUT
+  const handleUpgradeToPro = () => {
     setManagingPlan(true);
+    
     try {
-      const token = Cookies.get('access_token');
-      const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
-      const res = await fetch(`${BASE_URL}/api/v1/billing/create-portal-session`, {
-        method: 'POST',
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
-      if (res.ok) {
-        const data = await res.json();
-        window.location.href = data.url; 
+      const paddle = (window as any).Paddle;
+      
+      if (paddle) {
+        // Obtenemos el correo del usuario si está disponible para auto-rellenarlo
+        const email = localStorage.getItem('currentUserEmail') || '';
+        
+        paddle.Checkout.open({
+          items: [
+            {
+              priceId: PADDLE_PRICE_ID,
+              quantity: 1
+            }
+          ],
+          customer: {
+            email: email
+          },
+          // Custom data opcional para que tu backend sepa a qué usuario asignarle el pro
+          customData: {
+            internal_user_id: currentUser // Puedes mandar más datos útiles aquí
+          }
+        });
       } else {
-        alert("El portal de facturación requiere configuración.");
+        console.error("Paddle no está inicializado.");
+        alert("El sistema de pagos se está cargando, por favor intenta en unos segundos.");
       }
     } catch (error) {
-      alert("Error conectando con el portal de pagos.");
+      console.error("Error abriendo checkout de Paddle:", error);
     } finally {
-      setManagingPlan(false);
+      // Damos un pequeño delay antes de quitar el estado de carga
+      setTimeout(() => setManagingPlan(false), 1000);
     }
   };
 
@@ -331,85 +409,113 @@ export default function DashboardPage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50">
         <Loader2 className="animate-spin text-indigo-600 mb-4" size={48} />
-        <p className="text-slate-400 font-bold text-sm tracking-widest uppercase animate-pulse">Sincronizando datos...</p>
+        <p className="text-slate-400 font-bold text-[10px] tracking-widest uppercase animate-pulse">Sincronizando identidad...</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] font-sans text-slate-900 pb-32 lg:pb-0 selection:bg-indigo-100 selection:text-indigo-900">
+    <div className="min-h-screen bg-[#F8FAFC] font-sans text-slate-900 pb-32 lg:pb-0 selection:bg-indigo-100 selection:text-indigo-900 relative overflow-hidden">
       
+      {/* DECORACIÓN DE FONDO PREMIUM */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-indigo-500/5 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-[50vw] h-[50vw] bg-blue-500/5 rounded-full blur-[120px] -translate-x-1/3 translate-y-1/3"></div>
+      </div>
+
       {/* --- NAVBAR --- */}
-      <nav className="sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-slate-200/60 px-4 md:px-8 h-20 flex items-center justify-between shadow-sm transition-all">
+      <nav className="sticky top-0 z-40 bg-white/70 backdrop-blur-2xl border-b border-slate-200/50 px-4 md:px-8 h-20 flex items-center justify-between shadow-[0_4px_30px_rgba(0,0,0,0.03)]">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-600/20">
-            <span className="text-white font-bold text-xl">O</span>
+          <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20 ring-2 ring-indigo-100">
+            <span className="text-white font-black text-xl">O</span>
           </div>
           <div className="hidden sm:block">
-            <h1 className="font-bold text-slate-900 text-lg leading-tight tracking-tight">OnixLingo</h1>
-            <p className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Hub de Estudiante</p>
+            <h1 className="font-black text-slate-900 text-lg leading-tight tracking-tight">OnixLingo</h1>
+            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Hub de Estudiante</p>
           </div>
         </div>
 
         <div className="flex items-center gap-2 md:gap-4">
           <HeaderStats xp={userStats.xp} streak={userStats.streak} />
-          <div className="hidden lg:flex items-center gap-1 border-l border-slate-200 pl-4 ml-2">
-            <Link href="/dashboard/vocabulary" className="flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-600 px-3 py-2 rounded-lg transition-all border border-transparent hover:border-slate-200"><BookA size={16} /> <span className="text-xs font-bold">Vocab</span></Link>
-            <Link href="/dashboard/chess" className="flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-600 px-3 py-2 rounded-lg transition-all border border-transparent hover:border-slate-200"><Crown size={16} /> <span className="text-xs font-bold">Ajedrez</span></Link>
-            <Link href="/dashboard/achievements" className="flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-600 px-3 py-2 rounded-lg transition-all border border-transparent hover:border-slate-200"><Trophy size={16} /> <span className="text-xs font-bold">Logros</span></Link>
-            <Link href="/dashboard/profile" className="flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-600 px-3 py-2 rounded-lg transition-all border border-transparent hover:border-slate-200"><User size={16} /> <span className="text-xs font-bold">Perfil</span></Link>
+          <div className="hidden lg:flex items-center gap-1 border-l border-slate-200/60 pl-4 ml-2">
+            <Link href="/dashboard/vocabulary" className="flex items-center gap-2 bg-transparent hover:bg-slate-100 text-slate-600 px-3 py-2 rounded-xl transition-all"><BookA size={16} strokeWidth={2.5} /> <span className="text-xs font-bold">Vocab</span></Link>
+            <Link href="/dashboard/chess" className="flex items-center gap-2 bg-transparent hover:bg-slate-100 text-slate-600 px-3 py-2 rounded-xl transition-all"><Crown size={16} strokeWidth={2.5} /> <span className="text-xs font-bold">Ajedrez</span></Link>
+            <Link href="/dashboard/achievements" className="flex items-center gap-2 bg-transparent hover:bg-slate-100 text-slate-600 px-3 py-2 rounded-xl transition-all"><Trophy size={16} strokeWidth={2.5} /> <span className="text-xs font-bold">Logros</span></Link>
+            <Link href="/dashboard/profile" className="flex items-center gap-2 bg-transparent hover:bg-slate-100 text-slate-600 px-3 py-2 rounded-xl transition-all"><User size={16} strokeWidth={2.5} /> <span className="text-xs font-bold">Perfil</span></Link>
           </div>
-          <button onClick={toggleProMode} className="flex items-center gap-2 bg-slate-950 hover:bg-slate-800 text-white px-4 py-2.5 rounded-xl transition-all shadow-md active:scale-95 ml-2">
-            <Briefcase size={16} className="text-amber-400" />
-            <span className="text-xs font-bold uppercase tracking-widest hidden sm:block">Modo Pro</span>
+          <button onClick={toggleProMode} className="flex items-center gap-2 bg-slate-950 hover:bg-slate-800 text-white px-5 py-2.5 rounded-[1rem] transition-all shadow-xl shadow-slate-900/20 active:scale-95 ml-2 border border-slate-800">
+            <Briefcase size={16} className="text-amber-400" strokeWidth={2.5} />
+            <span className="text-[10px] font-black uppercase tracking-widest hidden sm:block">Modo Pro</span>
           </button>
           {currentUser && (
-            <div className="hidden md:flex items-center justify-center w-10 h-10 bg-indigo-100 text-indigo-700 rounded-full font-bold text-sm cursor-pointer ml-2 hover:bg-indigo-200 transition-colors" onClick={handleLogout} title="Cerrar Sesión">
+            <div className="hidden md:flex items-center justify-center w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl font-black text-sm cursor-pointer ml-2 hover:bg-indigo-100 transition-colors border border-indigo-100" onClick={handleLogout} title="Cerrar Sesión">
               {currentUser.substring(0, 2).toUpperCase()}
             </div>
           )}
         </div>
       </nav>
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 pt-8 md:pt-12 px-4 sm:px-8">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 pt-8 md:pt-12 px-4 sm:px-8 relative z-10">
         
         <div className="flex-1 min-w-0">
-          {/* --- HERO & TRACK SELECTOR --- */}
-          <div className="mb-10">
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2 tracking-tight">Bienvenido de vuelta, {currentUser || 'Estudiante'}</h1>
-            <p className="text-sm md:text-base text-slate-500 mb-6">Selecciona el idioma que deseas estudiar hoy. Tu progreso se guarda automáticamente.</p>
+          {/* --- HERO & TRACK SELECTOR PREMIUM --- */}
+          <div className="mb-12">
+            <div className="flex items-center gap-3 mb-3">
+              <Sparkles size={20} className="text-amber-500" />
+              <h3 className="text-[10px] font-black uppercase tracking-widest text-slate-400">Panel Principal</h3>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tighter">Bienvenido, {currentUser || 'Estudiante'}</h1>
+            <p className="text-base md:text-lg text-slate-500 mb-8 font-medium max-w-2xl">Selecciona tu enfoque lingüístico de hoy. El currículum se adaptará a tu nivel y guardará tu progreso en la nube.</p>
 
-            <div className="flex items-center gap-3 overflow-x-auto pb-4 scrollbar-hide">
-              <button onClick={() => setLanguage('en')} className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeLanguage === 'en' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'}`}>🇺🇸 Inglés {activeLanguage === 'en' && <span className="bg-white/20 px-2 py-0.5 rounded text-[10px] ml-1">Activo</span>}</button>
-              <button onClick={() => setLanguage('fr')} className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeLanguage === 'fr' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'}`}>🇫🇷 Francés {activeLanguage === 'fr' && <span className="bg-white/20 px-2 py-0.5 rounded text-[10px] ml-1">Activo</span>}</button>
-              <button onClick={() => setLanguage('zh')} className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeLanguage === 'zh' ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'}`}>🇨🇳 Chino Mandarín {activeLanguage === 'zh' && <span className="bg-white/20 px-2 py-0.5 rounded text-[10px] ml-1">Activo</span>}</button>
+            <div className="inline-flex bg-white/50 backdrop-blur-md p-2 rounded-[2rem] border border-slate-200 shadow-sm overflow-x-auto hide-scrollbar max-w-full">
+              <div className="flex items-center gap-2 w-max">
+                <button onClick={() => setLanguage('en')} className={`flex items-center gap-2.5 px-6 py-3.5 rounded-[1.5rem] text-sm font-bold transition-all duration-300 whitespace-nowrap ${activeLanguage === 'en' ? 'bg-slate-900 text-white shadow-lg shadow-slate-900/20' : 'bg-transparent text-slate-500 hover:bg-white hover:text-slate-800 hover:shadow-sm'}`}>🇺🇸 Inglés {activeLanguage === 'en' && <span className="bg-white/20 px-2 py-0.5 rounded-lg text-[9px] uppercase tracking-widest ml-1 border border-white/20">Activo</span>}</button>
+                <button onClick={() => setLanguage('fr')} className={`flex items-center gap-2.5 px-6 py-3.5 rounded-[1.5rem] text-sm font-bold transition-all duration-300 whitespace-nowrap ${activeLanguage === 'fr' ? 'bg-slate-900 text-white shadow-lg shadow-slate-900/20' : 'bg-transparent text-slate-500 hover:bg-white hover:text-slate-800 hover:shadow-sm'}`}>🇫🇷 Francés {activeLanguage === 'fr' && <span className="bg-white/20 px-2 py-0.5 rounded-lg text-[9px] uppercase tracking-widest ml-1 border border-white/20">Activo</span>}</button>
+                <button onClick={() => setLanguage('zh')} className={`flex items-center gap-2.5 px-6 py-3.5 rounded-[1.5rem] text-sm font-bold transition-all duration-300 whitespace-nowrap ${activeLanguage === 'zh' ? 'bg-slate-900 text-white shadow-lg shadow-slate-900/20' : 'bg-transparent text-slate-500 hover:bg-white hover:text-slate-800 hover:shadow-sm'}`}>🇨🇳 Chino Mandarín {activeLanguage === 'zh' && <span className="bg-white/20 px-2 py-0.5 rounded-lg text-[9px] uppercase tracking-widest ml-1 border border-white/20">Activo</span>}</button>
+              </div>
             </div>
           </div>
 
           {/* 🔥 LÓGICA DE MONETIZACIÓN: ADS SOLO PARA USUARIOS FREE */}
           {!isUserPremium && (
-            <div className="flex flex-col items-center w-full mb-8">
+            <div className="flex flex-col items-center w-full mb-10 bg-white/40 p-4 rounded-[2rem] border border-slate-200/50 backdrop-blur-sm">
               <AdBanner variant="horizontal" />
             </div>
           )}
 
-          {/* --- RENDERIZADO DINÁMICO DEL CURRICULUM --- */}
-          <div className="space-y-12 md:space-y-16 mt-8">
+          {/* --- RENDERIZADO DINÁMICO DEL CURRICULUM CON ANIMACIONES --- */}
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            animate="show"
+            className="space-y-12 md:space-y-16 mt-8"
+          >
             {activeLanguage === 'en' && (
               CURRICULUM.map((section, sIdx) => {
                 const safeColor = COLOR_VARIANTS[section.color] || COLOR_VARIANTS['blue'];
                 return (
                   <div key={section.id} className="relative">
-                    <div className="flex items-center gap-4 mb-6 border-b border-slate-200 pb-4">
-                      <div className={`p-2.5 rounded-xl ${safeColor.bg} ${safeColor.text}`}><LayoutGrid size={20} /></div>
+                    <div className="flex items-center gap-5 mb-8 bg-white/60 backdrop-blur-md p-4 rounded-[2rem] border border-slate-200 shadow-sm">
+                      <div className={`p-4 rounded-[1.2rem] shadow-inner ${safeColor.bg} ${safeColor.text} ring-1 ring-white`}><LayoutGrid size={24} strokeWidth={2.5} /></div>
                       <div>
-                        <h2 className="text-xl font-bold text-slate-800 tracking-tight">{section.title}</h2>
-                        <p className="text-xs text-slate-500 font-medium hidden md:block">{section.description}</p>
+                        <h2 className="text-2xl font-black text-slate-800 tracking-tight leading-none mb-1.5">{section.title}</h2>
+                        <p className="text-xs text-slate-500 font-bold uppercase tracking-widest hidden md:block">{section.description}</p>
                       </div>
                     </div>
-                    <div className="pl-0 md:pl-2">
+                    <div className="pl-0 md:pl-4">
                       {section.lessons.map((lesson, lIdx) => (
-                        <TimelineNode key={lesson.id} id={lesson.id} title={lesson.title} status={getLessonState(lesson.id)} stars={getStars(lesson.id)} index={allLessonsFlat.findIndex(l => l.id === lesson.id)} isLast={lIdx === section.lessons.length - 1} color={section.color} onClick={handleLessonClick} />
+                        <motion.div variants={itemVariants} key={lesson.id}>
+                          <TimelineNode 
+                            id={lesson.id} 
+                            title={lesson.title} 
+                            status={getLessonState(lesson.id)} 
+                            stars={getStars(lesson.id)} 
+                            index={allLessonsFlat.findIndex(l => l.id === lesson.id)} 
+                            isLast={lIdx === section.lessons.length - 1} 
+                            color={section.color} 
+                            onClick={handleLessonClick} 
+                          />
+                        </motion.div>
                       ))}
                     </div>
                   </div>
@@ -418,48 +524,66 @@ export default function DashboardPage() {
             )}
 
             {(activeLanguage === 'fr' || activeLanguage === 'zh') && (
-              <div className="bg-white border border-slate-200 rounded-3xl p-12 text-center flex flex-col items-center justify-center">
-                <div className="w-16 h-16 bg-indigo-50 text-indigo-500 rounded-2xl flex items-center justify-center mb-6"><Languages size={32} /></div>
-                <h3 className="text-2xl font-bold text-slate-800 mb-2">Currículum en Sincronización</h3>
-                <p className="text-slate-500 max-w-md mx-auto mb-6">Nuestros expertos lingüísticos están afinando el contenido de {activeLanguage === 'fr' ? 'Francés' : 'Chino Mandarín'}.</p>
-                <button onClick={() => setLanguage('en')} className="bg-indigo-50 text-indigo-700 font-bold px-6 py-2 rounded-full text-sm hover:bg-indigo-100 transition-colors">Volver a Inglés</button>
-              </div>
+              <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="bg-white/80 backdrop-blur-xl border border-slate-200 rounded-[3rem] p-12 text-center flex flex-col items-center justify-center shadow-xl shadow-slate-200/50">
+                <div className="w-20 h-20 bg-indigo-50 text-indigo-500 rounded-[2rem] flex items-center justify-center mb-6 ring-4 ring-indigo-500/10 shadow-inner"><Languages size={40} strokeWidth={2} /></div>
+                <h3 className="text-3xl font-black text-slate-800 mb-4 tracking-tight">Currículum en Sincronización</h3>
+                <p className="text-slate-500 max-w-md mx-auto mb-8 text-lg font-medium">Nuestros expertos lingüísticos están afinando el contenido corporativo de {activeLanguage === 'fr' ? 'Francés' : 'Chino Mandarín'}.</p>
+                <button onClick={() => setLanguage('en')} className="bg-slate-900 text-white font-bold px-8 py-3.5 rounded-2xl hover:bg-slate-800 transition-all active:scale-95 shadow-lg shadow-slate-900/20">Volver a Inglés</button>
+              </motion.div>
             )}
-          </div>
+          </motion.div>
 
           {/* 🔥 LÓGICA DE MONETIZACIÓN: ADS DE AMAZON SOLO PARA USUARIOS FREE */}
           {!isUserPremium && (
-            <div className="flex flex-col items-center w-full mt-12">
+            <div className="flex flex-col items-center w-full mt-16">
               <AmazonAffiliateCard />
               <button 
-                onClick={handleManagePlan}
+                onClick={handleUpgradeToPro} 
                 disabled={managingPlan}
-                className="mt-4 text-[10px] font-bold text-slate-400 hover:text-indigo-600 underline transition-colors uppercase tracking-widest disabled:opacity-50"
+                className="mt-6 text-[10px] font-black text-slate-400 hover:text-indigo-600 transition-colors uppercase tracking-widest disabled:opacity-50 flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-200"
               >
-                {managingPlan ? 'Conectando con Stripe...' : 'Eliminar anuncios con Titanium Pro'}
+                {managingPlan ? <Loader2 size={14} className="animate-spin" /> : <Crown size={14} />}
+                {managingPlan ? 'Abriendo pago...' : 'Eliminar anuncios con Titanium Pro'}
               </button>
             </div>
           )}
 
-          {/* --- EXÁMENES Y CERTIFICACIONES --- */}
-          <div className="mt-16 mb-12">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6 gap-4">
+          {/* --- EXÁMENES Y CERTIFICACIONES PREMIUM --- */}
+          <div className="mt-20 mb-12">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4 px-2">
               <div>
-                <h2 className="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2 mb-1"><Shield className="text-indigo-600" size={24} /> Simulador de Certificaciones</h2>
-                <p className="text-xs text-slate-500">Prepárate para escenarios reales.</p>
+                <h2 className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-3 mb-2 tracking-tight">
+                  <Shield className="text-indigo-600" size={28} strokeWidth={2.5} /> Simulador de Certificaciones
+                </h2>
+                <p className="text-sm text-slate-500 font-medium">Prepárate para escenarios reales y certificaciones internacionales.</p>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <CertCard title="Listening Comprehension" desc="Audio y conversaciones reales." icon={Headphones} href="/lesson/toeic_listening" active={true} color="indigo" />
-              <CertCard title="Reading Analysis" desc="Gramática y comprensión lectora." icon={BookOpen} href="/lesson/toeic_reading" color="emerald" />
-              <CertCard title="Writing Proficiency" desc="Redacción de ensayos y correos." icon={PenTool} href="/lesson/toeic_writing" color="rose" />
-              <CertCard title="Speaking Evaluation" desc="Pruebas de pronunciación." icon={Mic} href="/lesson/toeic_speaking" color="amber" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+              <CertCard title="Listening Comprehension" desc="Audio y conversaciones reales de negocios." icon={Headphones} href="/lesson/toeic_listening" active={true} color="indigo" />
+              <CertCard title="Reading Analysis" desc="Gramática y comprensión lectora técnica." icon={BookOpen} href="/lesson/toeic_reading" color="emerald" />
+              <CertCard title="Writing Proficiency" desc="Redacción de ensayos y correos formales." icon={PenTool} href="/lesson/toeic_writing" color="rose" />
+              <CertCard title="Speaking Evaluation" desc="Pruebas de pronunciación con IA." icon={Mic} href="/lesson/toeic_speaking" color="amber" />
+            </div>
+          </div>
+
+          {/* --- FOOTER LEGAL PREMIUM --- */}
+          <div className="mt-16 pt-8 border-t border-slate-200/60 flex flex-col sm:flex-row items-center justify-between gap-6 text-slate-500 pb-12">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-slate-400 font-black shadow-sm border border-slate-200">O</div>
+              <span className="text-sm font-bold tracking-tight">© {new Date().getFullYear()} Onixu Technology</span>
+            </div>
+            
+            <div className="flex items-center gap-6 text-sm font-bold">
+              <Link href="/legal" className="flex items-center gap-2 hover:text-indigo-600 transition-colors bg-white/50 px-4 py-2 rounded-xl border border-slate-200/50 hover:bg-white hover:shadow-sm">
+                <FileText size={16} /> Términos y Privacidad
+              </Link>
             </div>
           </div>
 
         </div>
 
-        <div className="hidden lg:block w-80 flex-shrink-0">
+        {/* SIDEBAR DERECHO */}
+        <div className="hidden lg:block w-[22rem] flex-shrink-0">
           <div className="sticky top-28">
             <Sidebar userStats={userStats} />
           </div>

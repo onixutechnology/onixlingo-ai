@@ -1,12 +1,14 @@
+# backend/main.py
 import os
 import json
 import logging
 import stripe
+import uuid # 🔥 NUEVO: Necesario para manejar los nuevos IDs de la base de datos
 from pathlib import Path
 from contextlib import asynccontextmanager
 from dotenv import load_dotenv
 
-from fastapi import FastAPI, Request, Header, HTTPException, Depends, Query # 🔥 Importamos Query
+from fastapi import FastAPI, Request, Header, HTTPException, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
@@ -14,7 +16,6 @@ from sqlalchemy.orm import Session
 from app.config import settings
 from app.database import create_db, get_db
 from app.services import user_service
-from app.db import models 
 from app.datachess.seed_chess import generate_lessons 
 
 # --- IMPORTAMOS LOS ROUTERS ---
@@ -35,6 +36,7 @@ async def lifespan(app: FastAPI):
     )
     logger = logging.getLogger("OnixLingo.Core")
     try:
+        # 🔥 Esto leerá el base.py y creará todas las tablas de las Fases 1 y 2
         create_db()
         logger.info("✅ [DB] Base de datos conectada y esquemas sincronizados.")
         logger.info("⏳ [DB] Verificando e inyectando lecciones de ajedrez...")
@@ -91,12 +93,15 @@ async def stripe_webhook(
 
         if user_id_str:
             try:
-                user_id = int(user_id_str)
+                # 🔥 CORRECCIÓN CRÍTICA: Convertimos el string a UUID, no a int()
+                user_id = uuid.UUID(user_id_str)
                 updated_user = user_service.set_pro_status(db, user_id=user_id, is_pro=True)
                 if updated_user:
                     logger.info(f"✅ [UPGRADE] Usuario {user_email} actualizado a PRO exitosamente.")
                 else:
                     logger.warning(f"⚠️ [WARNING] Usuario ID {user_id} pagó pero no se encontró en DB.")
+            except ValueError:
+                logger.error(f"❌ [UUID ERROR] El ID recibido de Stripe no es un UUID válido: {user_id_str}")
             except Exception as e:
                 logger.error(f"❌ [DB ERROR] Fallo al actualizar estado PRO: {e}")
 
@@ -122,7 +127,7 @@ def health_check():
         "domain_check": "Verified"
     }
 
-# 🌍 NUEVO: Endpoint adaptado para multilenguaje
+# 🌍 Endpoint multilenguaje
 @app.get("/api/v1/voclessons/{lesson_id}", tags=["Lessons"])
 def get_voc_lesson(
     lesson_id: str, 
