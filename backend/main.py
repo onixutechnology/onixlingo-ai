@@ -19,7 +19,8 @@ from app.services import user_service
 from app.datachess.seed_chess import generate_lessons 
 
 # --- IMPORTAMOS LOS ROUTERS ---
-from app.api.v1.endpoints import auth, lessons, progress, ai, users, speech, billing 
+# 🔥 CORREGIDO: Quitamos 'billing' temporalmente para evitar el error de Paddle
+from app.api.v1.endpoints import auth, lessons, progress, ai, users, speech, chess_ws 
 from app.api import chess 
 
 load_dotenv()
@@ -114,8 +115,14 @@ app.include_router(progress.router, prefix="/api/v1/progress", tags=["Analytics 
 app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lessons"])
 app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI Engine"])
 app.include_router(speech.router, prefix="/api/v1/speech", tags=["Speech Analysis"])
-app.include_router(billing.router, prefix="/api/v1/billing", tags=["Billing & Referrals"]) 
+
+# 🔥 CORREGIDO: Comentamos la ruta de billing temporalmente
+# app.include_router(billing.router, prefix="/api/v1/billing", tags=["Billing & Referrals"]) 
+
 app.include_router(chess.router, prefix="/api/v1", tags=["Chess Academy"])
+
+# ⚡ NUEVO: WEBSOCKET PARA AJEDREZ EN VIVO
+app.include_router(chess_ws.router, prefix="/ws/chess/matches", tags=["WebSockets"])
 
 @app.get("/", tags=["System"])
 @app.head("/", include_in_schema=False)

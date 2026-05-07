@@ -4,6 +4,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { usePvPStore } from "@/store/usePvPStore";
+import { useAuthStore } from "@/store/useAuthStore";
 import {
     joinMatchmakingQueue,
     leaveMatchmakingQueue,
@@ -160,9 +161,10 @@ function RadarAnimation() {
 
 export default function ChessArenaPage() {
     const router = useRouter();
+    const { user } = useAuthStore();
     const [selectedPreset, setSelectedPreset] = useState<TimePreset>(PRESETS[3]); // 3+2 default
     const [isJoining, setIsJoining] = useState(false);
-    const [localElo] = useState(1200); // TODO: pull from auth/user store
+    const localElo = user?.chess_elo ?? 1200; 
 
     const { matchStatus, matchId, opponent, setMatchStatus, setQueueId, initMatch } = usePvPStore();
     const isQueuing = matchStatus === "queuing";

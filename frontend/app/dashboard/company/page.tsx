@@ -13,10 +13,7 @@ import {
     revokeLicense,
     downloadEmployeeReport,
 } from "@/services/b2bService";
-
-// ── Constants ──────────────────────────────────────────
-// In production, derive from auth context or route params.
-const COMPANY_ID = process.env.NEXT_PUBLIC_DEMO_COMPANY_ID ?? "demo";
+import { useAuthStore } from "@/store/useAuthStore";
 
 // ── Utility helpers ────────────────────────────────────
 
@@ -98,6 +95,9 @@ function ProgressBar({ value, max, colorClass = "bg-indigo-500" }: { value: numb
 // ── Main component ─────────────────────────────────────
 
 export default function CompanyDashboardPage() {
+    const { user } = useAuthStore();
+    const COMPANY_ID = user?.company_id;
+
     const store = useCompanyStore();
     const seatPct = useCompanyStore(selectSeatUsagePct);
     const allSelected = useCompanyStore(selectIsAllSelected);
@@ -115,13 +115,17 @@ export default function CompanyDashboardPage() {
     // ── Bootstrap ───────────────────────────────────────
 
     useEffect(() => {
-        fetchCompany(COMPANY_ID);
-        fetchEmployees(COMPANY_ID);
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+        if (COMPANY_ID) {
+            fetchCompany(COMPANY_ID);
+            fetchEmployees(COMPANY_ID);
+        }
+    }, [COMPANY_ID, fetchCompany, fetchEmployees]);
 
     const reload = useCallback(
-        (overrides?: Partial<typeof filters>) => fetchEmployees(COMPANY_ID, overrides),
-        [fetchEmployees]
+        (overrides?: Partial<typeof filters>) => {
+            if (COMPANY_ID) fetchEmployees(COMPANY_ID, overrides);
+        },
+        [fetchEmployees, COMPANY_ID]
     );
 
     const totalPages = Math.ceil(employeeTotal / filters.page_size);
@@ -129,7 +133,7 @@ export default function CompanyDashboardPage() {
     // ── Bulk actions ────────────────────────────────────
 
     const handleAssign = async () => {
-        if (!selectedCount) return;
+        if (!selectedCount || !COMPANY_ID) return;
         await assignLicenses(COMPANY_ID, { user_ids: [...selectedEmployeeIds] });
         clearSelection();
         reload();
@@ -137,7 +141,7 @@ export default function CompanyDashboardPage() {
     };
 
     const handleRevoke = async () => {
-        if (!selectedCount) return;
+        if (!selectedCount || !COMPANY_ID) return;
         await Promise.all([...selectedEmployeeIds].map((id) => revokeLicense(COMPANY_ID, id)));
         clearSelection();
         reload();
@@ -145,6 +149,7 @@ export default function CompanyDashboardPage() {
     };
 
     const handleCsvDownload = async () => {
+        if (!COMPANY_ID) return;
         const blob = await downloadEmployeeReport(COMPANY_ID);
         const url = URL.createObjectURL(blob);
         Object.assign(document.createElement("a"), { href: url, download: "employees.csv" }).click();
@@ -152,6 +157,18 @@ export default function CompanyDashboardPage() {
     };
 
     // ── Render ──────────────────────────────────────────
+
+    if (!COMPANY_ID) {
+        return (
+            <main className="min-h-screen bg-[#080c14] text-white flex items-center justify-center">
+                <div className="text-center space-y-4 max-w-md mx-auto p-8 border border-red-500/20 bg-red-900/10 rounded-2xl">
+                    <div className="text-4xl">🏢</div>
+                    <h2 className="text-2xl font-bold text-slate-200">No tienes una empresa asignada</h2>
+                    <p className="text-slate-400">Este panel es exclusivo para empleados vinculados a una cuenta corporativa (B2B). Contacta a tu administrador para solicitar acceso.</p>
+                </div>
+            </main>
+        );
+    }
 
     return (
         <main className="min-h-screen bg-[#080c14] text-white">
@@ -196,7 +213,7 @@ export default function CompanyDashboardPage() {
                             ⬇ Export CSV
                         </button>
                         <button
-                            onClick={() => triggerCacheRefresh(COMPANY_ID)}
+                            onClick={() => COMPANY_ID && triggerCacheRefresh(COMPANY_ID)}
                             disabled={isRefreshingCache}
                             className="flex items-center gap-2 rounded-xl border border-indigo-500/40 bg-indigo-600/20 px-4 py-2 text-sm font-semibold text-indigo-300 transition-all hover:bg-indigo-600/30 disabled:opacity-50"
                         >
