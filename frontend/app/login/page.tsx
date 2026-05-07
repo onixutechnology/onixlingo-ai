@@ -6,7 +6,8 @@ import { useRouter } from 'next/navigation';
 import Cookies from 'js-cookie';
 import { User, Lock, Loader2, AlertCircle, ArrowRight, Eye, EyeOff, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
+const RAW_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company/api/v1';
+const API_URL = RAW_URL.endsWith('/api/v1') ? RAW_URL : `${RAW_URL.replace(/\/$/, '')}/api/v1`;
 
 export default function LoginPage() {
   const router = useRouter();
@@ -27,7 +28,7 @@ export default function LoginPage() {
     setErrorMessage('');
 
     try {
-      const res = await fetch(`${API_URL}/api/v1/auth/login`, {
+      const res = await fetch(`${API_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
@@ -51,7 +52,7 @@ export default function LoginPage() {
         
         // 🔥 LÓGICA INTELIGENTE: VERIFICAMOS EL ROL ANTES DE REDIRIGIR
         try {
-          const userRes = await fetch(`${API_URL}/api/v1/users/me`, {
+          const userRes = await fetch(`${API_URL}/users/me`, {
             headers: { 'Authorization': `Bearer ${data.access_token}` }
           });
           

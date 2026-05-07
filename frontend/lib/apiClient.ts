@@ -1,9 +1,12 @@
 // frontend/lib/apiClient.ts
 import axios from 'axios';
 
+const RAW_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company/api/v1';
+const BASE_URL = RAW_URL.endsWith('/api/v1') ? RAW_URL : `${RAW_URL.replace(/\/$/, '')}/api/v1`;
+
 // Creamos la instancia base apuntando a tu FastAPI
 const apiClient = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api/v1',
+    baseURL: BASE_URL,
     headers: {
         'Content-Type': 'application/json',
     },
