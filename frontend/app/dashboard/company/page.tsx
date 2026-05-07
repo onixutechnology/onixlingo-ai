@@ -130,6 +130,11 @@ export default function CompanyDashboardPage() {
 
     const totalPages = Math.ceil(employeeTotal / filters.page_size);
 
+    const handlePageChange = (next: number) => {
+        setFilter("page", next);
+        reload({ page: next });
+    };
+
     // ── Bulk actions ────────────────────────────────────
 
     const handleAssign = async () => {
