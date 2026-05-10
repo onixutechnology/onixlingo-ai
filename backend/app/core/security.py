@@ -1,22 +1,18 @@
 from datetime import datetime, timedelta
 from typing import Optional, Union, Any
 
-# Nuevas importaciones necesarias para validar el usuario
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jose import jwt, JWTError
 from passlib.context import CryptContext 
 from sqlalchemy.orm import Session
 
-# Importaciones de tu app
-from app.core.settings import settings 
+# 🔥 CORRECCIÓN CRÍTICA: Unificamos la importación de settings
+from app.config import settings 
 from app.database import get_db
 from app.db.models import User
 
-# Configuración de Hashing (Passwords)
 pwd_context = CryptContext(schemes=["argon2", "bcrypt"], deprecated="auto")
-
-# Configuración de OAuth2 (Apunta a tu ruta de login para la documentación de FastAPI)
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/login")
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
@@ -28,9 +24,7 @@ def get_password_hash(password: str) -> str:
     return pwd_context.hash(password)
 
 def create_access_token(subject: Union[str, Any], expires_delta: Optional[timedelta] = None) -> str:
-    """
-    Crea el JWT (JSON Web Token) usando la clave de settings.
-    """
+    """Crea el JWT usando la clave unificada de settings."""
     if expires_delta:
         expire = datetime.utcnow() + expires_delta
     else:
@@ -41,17 +35,13 @@ def create_access_token(subject: Union[str, Any], expires_delta: Optional[timede
     return encoded_jwt
 
 def get_current_user(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)) -> User:
-    """
-    Extrae el token de la petición, lo descifra y devuelve el objeto User completo de la base de datos.
-    Incluye validación robusta para IDs numéricos, usernames o emails.
-    """
+    """Extrae y valida el token comprobando contra la base de datos."""
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="No se pudieron validar las credenciales",
         headers={"WWW-Authenticate": "Bearer"},
     )
     try:
-        # Decodificamos el token usando tu SECRET_KEY
         payload = jwt.decode(token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM])
         token_sub = payload.get("sub")
         
@@ -61,16 +51,11 @@ def get_current_user(db: Session = Depends(get_db), token: str = Depends(oauth2_
     except JWTError:
         raise credentials_exception
         
-    # 🔥 LÓGICA DE BÚSQUEDA A PRUEBA DE BALAS 🔥
-    # Convertimos a string por seguridad para poder evaluarlo
     token_sub_str = str(token_sub)
     user = None
     
-    # 1. Si el token contiene un número puro (ej. "4"), buscamos por la columna ID
     if token_sub_str.isdigit():
         user = db.query(User).filter(User.id == int(token_sub_str)).first()
-        
-    # 2. Si el token tiene letras (ej. "jeico11" o "correo@..."), buscamos por username o email
     else:
         user = db.query(User).filter(User.username == token_sub_str).first()
         if not user:
