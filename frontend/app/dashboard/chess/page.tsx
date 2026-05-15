@@ -15,8 +15,8 @@ import {
   Target,
   Swords,
   ChevronRight,
-  ChevronDoubleLeft,
-  ChevronDoubleRight,
+  ChevronsLeft,
+  ChevronsRight,
   X
 } from 'lucide-react';
 import apiClient from '@/lib/apiClient';
