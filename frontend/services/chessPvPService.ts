@@ -97,7 +97,6 @@ export class ChessSocketManager {
 
         this.ws.onopen = () => {
             this.reconnectAttempts = 0;
-            console.log(`[Chess WS] Connected — match ${this.matchId}`);
         };
 
         this.ws.onmessage = (event: MessageEvent) => {
@@ -106,12 +105,11 @@ export class ChessSocketManager {
                 const handler = this.handlers[gameEvent.type];
                 handler?.(gameEvent.payload);
             } catch {
-                console.error("[Chess WS] Failed to parse message", event.data);
+                // Silently handle parse errors
             }
         };
 
         this.ws.onclose = (event) => {
-            console.warn("[Chess WS] Closed", event.code, event.reason);
             if (!event.wasClean && this.reconnectAttempts < this.maxReconnects) {
                 const delay = Math.pow(2, this.reconnectAttempts) * 500;
                 this.reconnectAttempts++;
@@ -120,7 +118,7 @@ export class ChessSocketManager {
         };
 
         this.ws.onerror = (error) => {
-            console.error("[Chess WS] Error", error);
+            // Silently handle WS errors
         };
     }
 
@@ -159,8 +157,6 @@ export class ChessSocketManager {
     private send(type: string, payload: unknown): void {
         if (this.ws?.readyState === WebSocket.OPEN) {
             this.ws.send(JSON.stringify({ type, payload }));
-        } else {
-            console.warn("[Chess WS] Attempted to send while socket not open.");
         }
     }
 

@@ -251,8 +251,10 @@ export async function finishSRSSession(
 
 // ─── Helpers ──────────────────────────────────────────────
 
-/** Retrieve the stored JWT access token from localStorage/cookie. */
+import Cookies from 'js-cookie';
+
+/** Retrieve the stored JWT access token from cookies. */
 function getAccessToken(): string {
-    if (typeof window === "undefined") return "";
-    return localStorage.getItem("onixlingo_access_token") ?? "";
+    return Cookies.get('access_token') ?? "";
 }
+

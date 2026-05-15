@@ -2,6 +2,7 @@
 "use client";
 
 import { useEffect, useCallback } from "react";
+import Image from "next/image";
 import {
     useCompanyStore,
     selectSeatUsagePct,
@@ -193,7 +194,13 @@ export default function CompanyDashboardPage() {
                         ) : (
                             <div className="flex items-center gap-3">
                                 {company?.logo_url && (
-                                    <img src={company.logo_url} alt={company.name} className="h-9 w-9 rounded-lg object-cover" />
+                                    <Image 
+                                        src={company.logo_url} 
+                                        alt={company.name} 
+                                        width={36} 
+                                        height={36} 
+                                        className="rounded-lg object-cover" 
+                                    />
                                 )}
                                 <h1 className="text-2xl font-bold tracking-tight">
                                     {company?.name ?? "—"}

@@ -3,19 +3,38 @@
 import { useUIStore } from '@/store/uiStore';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Briefcase, GraduationCap, ToggleLeft, ToggleRight, Sparkles, Activity, Zap, Target, Flame, Crown } from 'lucide-react';
+import { 
+  GraduationCap, 
+  ToggleLeft, 
+  ToggleRight, 
+  Sparkles, 
+  Activity, 
+  Zap, 
+  Target, 
+  Flame, 
+  Crown,
+  ChevronRight,
+  Briefcase
+} from 'lucide-react';
 
 // --- 📢 1. IMPORTAMOS EL ANUNCIO INTELIGENTE ---
 import { AdBanner } from '@/components/ads/AdBanner';
 
-// Props para recibir datos del usuario
 interface SidebarProps {
   userStats?: { xp: number; lessons: number; streak: number };
 }
 
+const LANGUAGE_COLORS: Record<string, { primary: string, secondary: string, accent: string }> = {
+  en: { primary: 'blue-600', secondary: 'blue-50', accent: 'blue-700' },
+  fr: { primary: 'cyan-500', secondary: 'cyan-50', accent: 'cyan-600' },
+  zh: { primary: 'indigo-800', secondary: 'indigo-50', accent: 'indigo-900' },
+};
+
 export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }: SidebarProps) {
-  const { mode, setMode } = useUIStore();
+  const { mode, setMode, activeLanguage } = useUIStore();
   const router = useRouter();
+
+  const theme = LANGUAGE_COLORS[activeLanguage] || LANGUAGE_COLORS.en;
 
   const handleModeSwitch = () => {
     if (mode === 'student') {
@@ -28,92 +47,116 @@ export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }
   };
 
   return (
-    <aside className="flex flex-col w-full lg:w-96 gap-6 lg:gap-8 lg:sticky lg:top-32 self-start h-fit pb-32 lg:pb-0">
+    <aside className="flex flex-col w-full lg:w-80 gap-4 lg:sticky lg:top-24 self-start h-fit pb-20 lg:pb-0 font-sans selection:bg-amber-100">
       
-      {/* --- ZONA DEL SWITCH MODO PRO/ESTUDIANTE --- */}
-      <div className={`border rounded-2xl p-4 flex items-center justify-between shadow-sm transition-all duration-500 ${mode === 'professional' ? 'bg-slate-900 border-slate-800 shadow-amber-900/20' : 'bg-white border-slate-200'}`}>
-        <div className="flex items-center gap-3">
-          <div className={`p-2.5 rounded-xl shadow-inner ${mode === 'professional' ? 'bg-gradient-to-br from-amber-400 to-orange-600 text-slate-950' : 'bg-indigo-100 text-indigo-600'}`}>
-            {mode === 'professional' ? <Crown size={20} /> : <GraduationCap size={20} />}
+      {/* --- SELECTOR DE MODO CORPORATIVO (CUADRADO) --- */}
+      <div className={`border p-4 flex items-center justify-between transition-all duration-300 rounded-none shadow-sm ${
+        mode === 'professional' ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
+      }`}>
+        <div className={`
+          flex items-center gap-3 px-4 py-3 rounded-none border border-transparent transition-all cursor-pointer group
+          ${mode === 'student' ? `bg-${theme.primary} border-${theme.accent} text-white shadow-md` : 'text-slate-400 hover:bg-slate-50 hover:border-slate-100'}
+        `} onClick={handleModeSwitch}>
+          <GraduationCap size={18} className={mode === 'student' ? 'text-white' : 'text-slate-400'} />
+          <div className="flex-1">
+            <p className={`text-[10px] font-black uppercase tracking-widest ${mode === 'student' ? 'opacity-80' : 'text-slate-400'}`}>Estudiante</p>
+            <p className={`text-xs font-black uppercase tracking-tight ${mode === 'student' ? 'text-white' : 'text-slate-600'}`}>Módulos Base</p>
           </div>
-          <div>
-            <p className={`text-[10px] font-black uppercase tracking-widest ${mode === 'professional' ? 'text-slate-500' : 'text-slate-400'}`}>
-              Modo Actual
-            </p>
-            <p className={`font-black text-sm ${mode === 'professional' ? 'text-amber-500' : 'text-slate-800'}`}>
-              {mode === 'professional' ? 'Ejecutivo (Pro)' : 'Estudiante'}
-            </p>
-          </div>
+          {mode === 'student' && <div className="w-1.5 h-1.5 bg-white"></div>}
         </div>
-        <button onClick={handleModeSwitch} className={`transition-colors active:scale-95 ${mode === 'professional' ? 'text-amber-500 hover:text-amber-400' : 'text-slate-300 hover:text-indigo-600'}`}>
-          {mode === 'student' ? <ToggleLeft size={44} strokeWidth={1.5} /> : <ToggleRight size={44} strokeWidth={1.5} />}
-        </button>
+
+        <div className={`
+          flex items-center gap-3 px-4 py-3 rounded-none border border-transparent transition-all cursor-pointer group
+          ${mode === 'professional' ? 'bg-amber-600 border-amber-700 text-white shadow-md' : 'text-slate-400 hover:bg-slate-50 hover:border-slate-100'}
+        `} onClick={handleModeSwitch}>
+          <Briefcase size={18} className={mode === 'professional' ? 'text-white' : 'text-slate-400'} />
+          <div className="flex-1">
+            <p className={`text-[10px] font-black uppercase tracking-widest ${mode === 'professional' ? 'text-amber-100' : 'text-slate-400'}`}>Professional</p>
+            <p className={`text-xs font-black uppercase tracking-tight ${mode === 'professional' ? 'text-white' : 'text-slate-600'}`}>Executive Skills</p>
+          </div>
+          {mode === 'professional' && <div className="w-1.5 h-1.5 bg-white"></div>}
+        </div>
       </div>
 
-      {/* --- TU WIDGET DE IA --- */}
-      <div className="bg-gradient-to-br from-indigo-600 to-violet-700 rounded-[2.5rem] p-8 text-white shadow-2xl shadow-indigo-900/30 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-500">
-        <div className="absolute -top-10 -right-10 w-40 h-40 bg-white opacity-10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
-        <div className="relative z-10 flex flex-col items-center text-center">
-          <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-3xl flex items-center justify-center mb-6 text-4xl shadow-inner border border-white/20">
-            🤖
+      {/* --- BOTONES DE ACCIÓN --- */}
+      <div className="flex-1 space-y-1 overflow-y-auto hide-scrollbar">
+        <Link href="/dashboard" className={`flex items-center justify-between px-4 py-3 text-slate-500 hover:bg-slate-50 border-l-2 border-transparent hover:border-${theme.primary} group transition-all`}>
+          <div className="flex items-center gap-3">
+            <Activity size={16} />
+            <span className="text-[10px] font-black uppercase tracking-widest">Dashboard Central</span>
           </div>
-          <h3 className="font-black text-2xl mb-3 tracking-tight">Tutor Personal IA</h3>
-          <p className="text-indigo-100 text-sm mb-8 leading-relaxed opacity-90 font-medium">
-            Practica conversaciones de negocios, entrevistas y negociación en tiempo real con voz.
+          <ChevronRight size={14} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
+        </Link>
+
+        <Link href="/dashboard/vocabulary" className={`flex items-center justify-between px-4 py-3 text-slate-500 hover:bg-slate-50 border-l-2 border-transparent hover:border-${theme.primary} group transition-all`}>
+          <div className="flex items-center gap-3">
+            <Target size={16} />
+            <span className="text-[10px] font-black uppercase tracking-widest">Glosario Corporativo</span>
+          </div>
+          <ChevronRight size={14} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
+        </Link>
+      </div>
+
+      {/* --- IA WIDGET (SQUARE) --- */}
+      <div className="mt-auto mb-6 px-4">
+        <div className={`bg-slate-900 p-4 border-l-4 border-${theme.primary} rounded-none shadow-xl relative overflow-hidden group`}>
+          <div className="absolute top-0 right-0 p-1 opacity-20"><Sparkles size={40} className={`text-${theme.primary}`} /></div>
+          <p className={`text-[8px] font-black text-${theme.primary} uppercase tracking-[0.3em] mb-2 flex items-center gap-2`}>
+            <span className={`w-1.5 h-1.5 bg-${theme.primary} animate-pulse`}></span> Neural Advisor Active
           </p>
-          <Link href="/practice" className="w-full">
-            <button className="w-full bg-white text-indigo-700 font-black py-4 rounded-2xl hover:bg-indigo-50 transition-all text-sm shadow-xl flex items-center justify-center gap-2 active:scale-95 hover:shadow-white/20">
-              <Sparkles size={18} /> Iniciar Sesión IA
-            </button>
-          </Link>
+          <p className="text-white text-[10px] font-bold leading-relaxed mb-4 opacity-80">
+            Optimiza tu perfil para entornos de Manufactura 4.0.
+          </p>
+          <button className={`w-full bg-white text-slate-900 py-2 text-[9px] font-black uppercase tracking-widest hover:bg-${theme.primary} hover:text-white transition-all shadow-lg`}>
+            Consultar IA
+          </button>
         </div>
       </div>
 
-      {/* --- TU WIDGET DE STATS --- */}
-      <div className="bg-white border border-slate-200 rounded-[2rem] p-8 shadow-sm">
-        <h4 className="font-bold text-slate-400 text-xs uppercase tracking-widest mb-6 flex items-center gap-2">
-          <Activity size={16} className="text-indigo-500" /> Métricas de Rendimiento
-        </h4>
+      {/* --- MÉTRICAS DE RENDIMIENTO (DENSIDAD ALTA) --- */}
+      <div className="bg-white border border-slate-200 p-6 rounded-none shadow-sm">
+        <div className="flex items-center justify-between mb-6 border-b border-slate-100 pb-3">
+          <h4 className="font-black text-slate-400 text-[9px] uppercase tracking-[0.3em] flex items-center gap-2">
+            <Activity size={14} className={`text-${theme.primary}`} /> Rendimiento
+          </h4>
+          <span className={`text-[8px] font-black text-${theme.primary} bg-${theme.primary}/5 px-2 py-0.5 uppercase`}>Sync Active</span>
+        </div>
         
-        <div className="space-y-4">
+        <div className="space-y-3">
           {/* XP */}
-          <div className="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-slate-200 transition-colors">
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-white rounded-xl shadow-sm text-amber-500"><Zap size={24} fill="currentColor" /></div>
+          <div className="flex items-center justify-between p-3 bg-slate-50 border border-slate-100 group hover:border-slate-200 transition-colors">
+            <div className="flex items-center gap-3">
+              <Zap size={16} className={`text-${theme.primary}`} />
               <div>
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Total XP</p>
-                <p className="text-xl font-black text-slate-800">{userStats.xp.toLocaleString()}</p>
+                <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest">Experiencia Acumulada</p>
+                <p className="text-sm font-black text-slate-800 tracking-tighter">{userStats.xp.toLocaleString()} <span className="text-[8px] text-slate-400 uppercase">XP</span></p>
               </div>
             </div>
           </div>
           
-          {/* RACHA (Agregado) */}
-          <div className="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-slate-200 transition-colors">
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-white rounded-xl shadow-sm text-rose-500"><Flame size={24} fill="currentColor" /></div>
+          {/* STREAK */}
+          <div className="flex items-center justify-between p-3 bg-slate-50 border border-slate-100 group hover:border-amber-200 transition-colors">
+            <div className="flex items-center gap-3">
+              <Flame size={16} className="text-rose-500" />
               <div>
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Racha Activa</p>
-                <p className="text-xl font-black text-slate-800">{userStats.streak} <span className="text-sm text-slate-400 font-medium">Días</span></p>
+                <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest">Consistencia (Streak)</p>
+                <p className="text-sm font-black text-slate-800 tracking-tighter">{userStats.streak} <span className="text-[8px] text-slate-400 uppercase tracking-widest">Días Consecutivos</span></p>
               </div>
             </div>
           </div>
 
-          {/* MÓDULOS */}
-          <div className="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-slate-200 transition-colors">
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-white rounded-xl shadow-sm text-emerald-500"><Target size={24} /></div>
+          {/* PROGRESS */}
+          <div className="flex items-center justify-between p-3 bg-slate-50 border border-slate-100 group hover:border-slate-200 transition-colors">
+            <div className="flex items-center gap-3">
+              <Target size={16} className={`text-${theme.primary}`} />
               <div>
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Módulos</p>
-                <p className="text-xl font-black text-slate-800">{userStats.lessons} <span className="text-sm text-slate-400 font-medium">/ 45</span></p>
+                <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest">Módulos Completados</p>
+                <p className="text-sm font-black text-slate-800 tracking-tighter">{userStats.lessons} <span className="text-[8px] text-slate-400 uppercase">/ 45 Módulos</span></p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* --- 📢 2. ZONA DE PUBLICIDAD --- */}
-      {/* Oculto automáticamente en Modo Pro gracias a la lógica interna de AdBanner */}
-      <AdBanner variant="sidebar" />
 
     </aside>
   );

@@ -4,9 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation'; 
 import { CheckCircle2, ShieldCheck, Zap, ArrowLeft, Loader2, Crown } from 'lucide-react';
 import { useUIStore } from '@/store/uiStore'; 
-import Cookies from 'js-cookie';
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
+import apiClient from '@/lib/apiClient';
 
 export const UpgradeModal = () => {
   const router = useRouter();
@@ -17,38 +15,24 @@ export const UpgradeModal = () => {
   const handleCancel = () => {
     setMode('student'); 
     router.push('/dashboard'); 
+    router.refresh();
   };
 
-  // 💳 Función para iniciar el pago seguro con Stripe
+  // 💳 Función para iniciar el pago seguro con Paddle
   const handleCheckout = async () => {
     try {
       setLoading(true);
-      const token = Cookies.get('access_token');
       
-      if (!token) {
-        router.push('/login');
-        return;
-      }
-
-      // Llamamos a nuestro backend de FastAPI
-      const response = await fetch(`${API_URL}/api/v1/billing/create-portal-session`, {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`
-        }
-      });
+      // Llamamos a nuestro backend de FastAPI para crear la sesión de portal o checkout
+      const response = await apiClient.post('/billing/create-portal-session');
       
-      if (response.ok) {
-        const data = await response.json();
-        // Redirige al portal de Stripe
-        if (data.url) window.location.href = data.url; 
+      if (response.data.url) {
+        window.location.href = response.data.url; 
       } else {
-        const errorData = await response.json();
-        alert(`Error al iniciar pago: ${errorData.detail || 'Falla de conexión'}`);
+        alert("El portal de facturación requiere configuración en el backend.");
       }
       
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error crítico al iniciar pago:", error);
       alert("No se pudo conectar con la pasarela de pagos segura.");
     } finally {
@@ -89,14 +73,14 @@ export const UpgradeModal = () => {
         <button 
           onClick={handleCheckout}
           disabled={loading}
-          className="w-full py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 text-slate-950 font-black rounded-xl transition-all shadow-lg shadow-amber-500/20 active:scale-95 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:active:scale-100 relative z-10"
+          className="w-full py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 text-slate-950 font-black rounded-xl transition-all shadow-lg shadow-amber-500/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:active:scale-100 relative z-10"
         >
           {loading ? (
             <Loader2 size={20} className="animate-spin" />
           ) : (
             <Zap size={20} fill="currentColor" /> 
           )}
-          {loading ? 'CONECTANDO A STRIPE...' : 'INICIAR PRUEBA GRATIS'}
+          {loading ? 'CONECTANDO...' : 'INICIAR PRUEBA GRATIS'}
         </button>
         
         <button 
@@ -110,13 +94,13 @@ export const UpgradeModal = () => {
         <div className="mt-6 text-center border-t border-slate-800 pt-6">
           <p className="text-xs text-slate-500 mb-2 flex items-center justify-center gap-1 font-medium">
             <ShieldCheck size={14} className="text-emerald-500" />
-            Pago seguro procesado por Stripe
+            Pago seguro procesado por Paddle
           </p>
           <p className="text-[10px] text-slate-600 leading-relaxed">
-            ¿Tienes un código VIP? Podrás ingresarlo en la siguiente pantalla.
+            Suscripción segura y encriptada.
           </p>
         </div>
       </div>
     </div>
   );
-};
+};

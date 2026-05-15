@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  onix-db:
+    image: postgres:15-alpine
+    container_name: onix-db
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    # ports:
+    #   - "5432:5432"
+
+  onix-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: onix-backend
+    restart: always
+    depends_on:
+      - onix-db
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      SECRET_KEY: ${SECRET_KEY}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS}
+    ports:
+      - "8000:8000"
+
+  onix-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: onix-frontend
+    restart: always
+    depends_on:
+      - onix-backend
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
+      NEXT_PUBLIC_WS_URL: ${NEXT_PUBLIC_WS_URL}
+    ports:
+      - "3000:3000"
+
+volumes:
+  postgres_data:

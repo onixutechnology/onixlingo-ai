@@ -70,30 +70,33 @@ def get_lesson_content(
 
     filename = f"{lesson_id}.json"
     
-    # Decidir si buscamos en la carpeta PRO o NORMAL, agregando el idioma
-    if lesson_id.startswith("pro-"):
-        target_file = PRO_DIR / lang / filename
-        fallback_file = PRO_DIR / "en" / filename
+    # Definimos las posibles rutas de búsqueda
+    base_dir = PRO_DIR if lesson_id.startswith("pro-") else NORMAL_DIR
+    
+    target_file = base_dir / lang / filename
+    fallback_en = base_dir / "en" / filename
+    root_fallback = base_dir / filename
+
+    logger.info(f"🔍 Buscando '{lesson_id}' en idioma '{lang}'")
+
+    # Lógica de cascada: Idioma solicitado -> Inglés (en/) -> Raíz del directorio
+    if target_file.exists():
+        final_file = target_file
+    elif lang != "en" and fallback_en.exists():
+        logger.warning(f"⚠️ Lección {lesson_id} no está en {lang}. Cargando desde 'en/'.")
+        final_file = fallback_en
+    elif root_fallback.exists():
+        logger.info(f"📂 Lección {lesson_id} encontrada en la raíz del directorio de contenido.")
+        final_file = root_fallback
     else:
-        target_file = NORMAL_DIR / lang / filename
-        fallback_file = NORMAL_DIR / "en" / filename
-
-    logger.info(f"🔍 Buscando '{lesson_id}' en idioma '{lang}': {target_file}")
-
-    # Si no existe en Francés/Chino, hacemos "fallback" a Inglés para no romper la app
-    if not target_file.exists():
-        if lang != "en" and fallback_file.exists():
-            logger.warning(f"⚠️ Lección {lesson_id} no está en {lang}. Cargando en Inglés por defecto.")
-            target_file = fallback_file
-        else:
-            logger.error(f"❌ Archivo no encontrado en absoluto.")
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"Lección no encontrada en el servidor."
-            )
+        logger.error(f"❌ Archivo {lesson_id} no encontrado en ninguna de las rutas intentadas.")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Lección no encontrada en el servidor."
+        )
 
     try:
-        with open(target_file, "r", encoding="utf-8") as f:
+        with open(final_file, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
         return LessonContent(**raw_data)
     except Exception as e:

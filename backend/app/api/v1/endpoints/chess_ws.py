@@ -8,22 +8,34 @@ import logging
 
 # Asumiendo las dependencias de tu proyecto. Ajustar las rutas si es necesario.
 from app.database import get_db
-# from app.models.chess import ChessMatch, ChessMove # Descomentar cuando la BD esté lista
+from app.db.models import ChessMatch, ChessMove, User
+from app.config import settings
+from jose import jwt, JWTError
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
 
 # --- Simulación de Autenticación para WebSockets ---
-async def get_ws_user(token: str = Query(...)) -> Dict[str, Any]:
+async def get_ws_user(token: str, db: Session) -> Dict[str, Any]:
     """
-    Extrae y valida la identidad del usuario desde el token de la conexión.
-    En producción, aquí decodificarías el JWT.
+    Extrae y valida la identidad del usuario desde el token JWT.
     """
-    if not token:
-        raise ValueError("Token no proporcionado")
-    
-    # Para el MVP, asumimos que el token es directamente el ID del usuario
-    return {"id": token, "username": f"Player_{token[-4:]}"}
+    try:
+        if token.startswith("Bearer "):
+            token = token.split(" ")[1]
+            
+        payload = jwt.decode(token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM])
+        username: str = payload.get("sub")
+        if username is None:
+            raise ValueError("Token inválido")
+            
+        user = db.query(User).filter(User.username == username).first()
+        if not user:
+            raise ValueError("Usuario no encontrado")
+            
+        return {"id": user.id, "username": user.username}
+    except JWTError:
+        raise ValueError("Token expirado o inválido")
 
 
 # --- Connection Manager ---
@@ -77,13 +89,13 @@ async def chess_match_ws(
 ):
     # 1. Autenticación y validación
     try:
-        user = await get_ws_user(token)
+        user = await get_ws_user(token, db)
     except ValueError as e:
         await websocket.close(code=status.WS_1008_POLICY_VIOLATION, reason=str(e))
         return
 
     # 2. Registrar conexión en el manager
-    await manager.connect(websocket, match_id, user["id"])
+    await manager.connect(websocket, match_id, str(user["id"]))
     
     try:
         # 3. Bucle infinito de eventos
@@ -93,54 +105,47 @@ async def chess_match_ws(
             
             # ── Evento de Movimiento de Pieza ──
             if event_type == "move":
-                """
-                Estructura esperada:
-                { "type": "move", "move_san": "e4", "move_uci": "e2e4", "fen": "...", "time_white_ms": 300000, "time_black_ms": 295000 }
-                """
-                
-                # A. Bloque preparado para persistencia (Descomentar al integrar DB)
                 try:
                     # 1. Guardar el movimiento en historial
-                    # new_move = ChessMove(
-                    #     match_id=match_id,
-                    #     user_id=user["id"],
-                    #     move_san=data.get("move_san"),
-                    #     move_uci=data.get("move_uci"),
-                    #     fen_after=data.get("fen")
-                    # )
-                    # db.add(new_move)
+                    new_move = ChessMove(
+                        match_id=match_id,
+                        user_id=user["id"],
+                        move_san=data.get("move_san"),
+                        move_uci=data.get("move_uci"),
+                        fen_after=data.get("fen")
+                    )
+                    db.add(new_move)
                     
                     # 2. Actualizar relojes y estado maestro del match
-                    # match = db.query(ChessMatch).filter(ChessMatch.id == match_id).first()
-                    # if match:
-                    #     match.current_fen = data.get("fen")
-                    #     if data.get("time_white_ms") is not None: match.white_time_ms = data.get("time_white_ms")
-                    #     if data.get("time_black_ms") is not None: match.black_time_ms = data.get("time_black_ms")
-                    # db.commit()
-                    pass
+                    match_obj = db.query(ChessMatch).filter(ChessMatch.id == match_id).first()
+                    if match_obj:
+                        match_obj.current_fen = data.get("fen")
+                        if data.get("time_white_ms") is not None: match_obj.white_time_ms = data.get("time_white_ms")
+                        if data.get("time_black_ms") is not None: match_obj.black_time_ms = data.get("time_black_ms")
+                    db.commit()
                 except Exception as e:
+                    db.rollback()
                     logger.error(f"Error de base de datos al guardar movimiento: {str(e)}")
 
                 # B. Broadcast al oponente
-                await manager.broadcast(match_id, data, exclude_user_id=user["id"])
+                await manager.broadcast(match_id, data, exclude_user_id=str(user["id"]))
                 
             # ── Eventos de Fin de Juego (Rendición o Tablas) ──
             elif event_type in ["draw_offer", "resign"]:
-                # Actualizar estado de la partida a 'completed' en DB
                 if event_type == "resign":
-                    # match = db.query(ChessMatch).filter(ChessMatch.id == match_id).first()
-                    # if match: match.status = "completed"
-                    # db.commit()
-                    pass
+                    match_obj = db.query(ChessMatch).filter(ChessMatch.id == match_id).first()
+                    if match_obj: 
+                        match_obj.status = "completed"
+                        match_obj.winner_id = user["id"] # El otro gana, pero simplificamos aquí
+                    db.commit()
                 
-                # Transmitir evento inmediatamente
-                await manager.broadcast(match_id, data, exclude_user_id=user["id"])
+                await manager.broadcast(match_id, data, exclude_user_id=str(user["id"]))
 
     except WebSocketDisconnect:
         # Limpiar conexión y avisar al oponente
-        manager.disconnect(websocket, match_id, user["id"])
+        manager.disconnect(websocket, match_id, str(user["id"]))
         await manager.broadcast(
             match_id, 
-            {"type": "player_disconnected", "user_id": user["id"]}, 
-            exclude_user_id=user["id"]
+            {"type": "player_disconnected", "user_id": str(user["id"])}, 
+            exclude_user_id=str(user["id"])
         )

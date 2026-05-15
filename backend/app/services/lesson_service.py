@@ -8,8 +8,8 @@ from app.db.models import LessonType
 # .parent.parent = backend/app
 BASE_DIR = Path(__file__).resolve().parent.parent 
 
-# 🔥 RUTAS ACTUALIZADAS: Ahora STANDARD_DIR apunta a tus 70 lecciones de ajedrez
-STANDARD_DIR = BASE_DIR / "datachess" / "lessons" 
+# 🔥 RUTAS ACTUALIZADAS: Apuntando a los directorios reales de contenido
+STANDARD_DIR = BASE_DIR / "data" / "lessons" 
 PRO_DIR = BASE_DIR / "datapro" / "lessonspro" 
 VOCAB_DIR = BASE_DIR / "voclessons" / "lessons" 
 
@@ -21,9 +21,9 @@ def get_all_lessons(folder_path: Path):
     if not folder_path.exists():
         print(f"⚠️ ALERTA: No se encontró la carpeta {folder_path}")
         return []
-    # Lee solo archivos .json
-    files = [f.stem for f in folder_path.glob("*.json")]
-    return sorted(files, key=natural_sort_key)
+    # Lee archivos .json recursivamente para captar subcarpetas (fr, zh)
+    files = [f.stem for f in folder_path.rglob("*.json")]
+    return sorted(list(set(files)), key=natural_sort_key)
 
 # Cargar lecciones en memoria al iniciar
 _COURSE_CACHE = {
@@ -45,10 +45,21 @@ def get_next_lesson_id(current_lesson_id: str) -> str | None:
     lesson_type = get_lesson_type_by_id(current_lesson_id)
     lesson_list = _COURSE_CACHE.get(lesson_type, [])
     
+    # 🔥 FILTRO INTELIGENTE: Asegurar que la siguiente lección pertenezca al mismo currículo (en, fr, zh)
+    # Detectamos el prefijo (ej: 'fr-' o 'zh-')
+    prefix = ""
+    if "-" in current_lesson_id:
+        parts = current_lesson_id.split("-")
+        if len(parts) > 2: # Caso fr-a1-1 o zh-a1-1
+            prefix = parts[0] + "-"
+    
+    # Filtramos la lista para que solo contenga lecciones del mismo idioma/prefijo
+    filtered_list = [lid for lid in lesson_list if lid.startswith(prefix)] if prefix else [lid for lid in lesson_list if not any(lid.startswith(p) for p in ["fr-", "zh-"])]
+
     try:
-        current_index = lesson_list.index(current_lesson_id)
-        if current_index + 1 < len(lesson_list):
-            return lesson_list[current_index + 1]
+        current_index = filtered_list.index(current_lesson_id)
+        if current_index + 1 < len(filtered_list):
+            return filtered_list[current_index + 1]
     except ValueError:
         return None
     return None

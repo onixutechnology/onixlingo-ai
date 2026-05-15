@@ -16,21 +16,21 @@ class Settings(BaseSettings):
     DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./onixlingo.db")
 
     # --- PADDLE (Pagos) ---
+    PADDLE_API_KEY: str = os.getenv("PADDLE_API_KEY", "")
     PADDLE_WEBHOOK_SECRET: str = os.getenv("PADDLE_WEBHOOK_SECRET", "")
+    PADDLE_ENVIRONMENT: str = os.getenv("PADDLE_ENVIRONMENT", "sandbox")
     
     # --- URLs ---
     FRONTEND_URL: str = os.getenv("FRONTEND_URL", "https://onixlingo.onixu.company") 
 
     # --- CORS (DOMINIOS PERMITIDOS) ---
-    BACKEND_CORS_ORIGINS: List[str] = [
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "https://api.onixlingo.onixu.company",
-        "https://onixlingo-ai-nknb.vercel.app", 
-        "https://onixlingo-ai.vercel.app",
-        "https://onixlingo.onixu.company",      
-        "https://www.onixlingo.onixu.company"   
-    ]
+    BACKEND_CORS_ORIGINS: List[str] = os.getenv(
+        "ALLOWED_ORIGINS", 
+        "http://localhost:3000,http://127.0.0.1:3000,https://onixlingo.onixu.company,https://api.onixlingo.onixu.company"
+    ).split(",")
+
+    # --- STRIPE ---
+    STRIPE_SECRET_KEY: str = os.getenv("STRIPE_SECRET_KEY", "")
 
     model_config = SettingsConfigDict(
         env_file=".env", 

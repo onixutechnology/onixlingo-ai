@@ -32,15 +32,17 @@ def get_current_user(
         if token_sub is None:
             logger.error("❌ Token inválido: No contiene 'sub'")
             raise HTTPException(
-                status_code=status.HTTP_403_FORBIDDEN,
+                status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Credenciales no válidas (sin sub)",
+                headers={"WWW-Authenticate": "Bearer"},
             )
             
     except (JWTError, ValidationError) as e:
         logger.error(f"❌ Error al decodificar JWT: {e}")
         raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
+            status_code=status.HTTP_401_UNAUTHORIZED,
             detail=f"No se pudieron validar las credenciales: {str(e)}",
+            headers={"WWW-Authenticate": "Bearer"},
         )
         
     user = None
@@ -55,7 +57,7 @@ def get_current_user(
     
     if not user:
         logger.warning(f"⚠️ Usuario '{token_sub}' no encontrado en DB.")
-        raise HTTPException(status_code=404, detail="Usuario no encontrado")
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Usuario no encontrado o sesión inválida")
         
     return user
 

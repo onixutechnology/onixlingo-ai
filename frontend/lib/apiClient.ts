@@ -1,5 +1,6 @@
 // frontend/lib/apiClient.ts
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 const RAW_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company/api/v1';
 const BASE_URL = RAW_URL.endsWith('/api/v1') ? RAW_URL : `${RAW_URL.replace(/\/$/, '')}/api/v1`;
@@ -12,18 +13,33 @@ const apiClient = axios.create({
     },
 });
 
-// Interceptor: Antes de que el mensaje salga, le pegamos el Gafete de Seguridad (Token)
+// Interceptor de Solicitud: Inyectamos el token desde Cookies
 apiClient.interceptors.request.use((config) => {
-    // Asegurarnos de que estamos en el navegador (Next.js)
-    if (typeof window !== 'undefined') {
-        const token = localStorage.getItem('onixlingo_access_token');
-        if (token && config.headers) {
-            config.headers.Authorization = `Bearer ${token}`;
-        }
+    const token = Cookies.get('access_token');
+    if (token && config.headers) {
+        config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
 }, (error) => {
     return Promise.reject(error);
 });
 
-export default apiClient;
+// Interceptor de Respuesta: Manejo global de errores 401 (Sesión expirada)
+apiClient.interceptors.response.use(
+    (response) => response,
+    (error) => {
+        if (error.response && error.response.status === 401) {
+            // Limpiamos las cookies de sesión
+            Cookies.remove('access_token');
+            Cookies.remove('username');
+            
+            // Redirigimos al login si no estamos ya allí
+            if (typeof window !== 'undefined' && !window.location.pathname.includes('/login')) {
+                window.location.href = '/login?expired=true';
+            }
+        }
+        return Promise.reject(error);
+    }
+);
+
+export default apiClient;

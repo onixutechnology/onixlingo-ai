@@ -138,13 +138,14 @@ def login(user: UserLogin, response: Response, db: Session = Depends(get_db)):
     # 3. Generar Token JWT
     access_token = create_access_token(subject=db_user.username)
 
-    # 4. GUARDAR COOKIE
+    # 4. GUARDAR COOKIE (Optimizado para subdominios)
+    # Importante: No usamos httponly=True para que el apiClient pueda leerlo y enviarlo en el header
     response.set_cookie(
         key=COOKIE_NAME,
-        value=f"Bearer {access_token}",
-        httponly=True, 
+        value=access_token,
+        httponly=False, 
         secure=True, 
-        samesite="none", 
+        samesite="lax", 
         path="/", 
         max_age=60 * 60 * 24 # 24 horas
     )
@@ -165,9 +166,9 @@ def logout(response: Response):
     """Elimina la cookie de sesión."""
     response.delete_cookie(
         key=COOKIE_NAME,
-        httponly=True,
+        httponly=False,
         secure=True, 
-        samesite="none", 
+        samesite="lax", 
         path="/" 
     )
     return {"message": "Sesión cerrada correctamente"}
@@ -207,7 +208,12 @@ def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db))
     except jwt.PyJWTError:
         raise HTTPException(status_code=400, detail="Token inválido o corrupto")
 
-    user = db.query(User).filter(User.id == int(user_id)).first()
+    try:
+        uid = int(user_id)
+    except (TypeError, ValueError):
+        raise HTTPException(status_code=400, detail="Identificador de usuario inválido en el token.")
+
+    user = db.query(User).filter(User.id == uid).first()
     if not user:
         raise HTTPException(status_code=404, detail="Usuario no encontrado")
 

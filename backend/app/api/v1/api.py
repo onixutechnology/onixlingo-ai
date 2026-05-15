@@ -12,7 +12,8 @@ from app.api.v1.endpoints import (
     analytics,
     avatar,
     exercises,
-    admin # 🔥 NUEVO: Importamos el módulo admin
+    admin,
+    chess # 🔥 NUEVO: Importamos el módulo chess
 )
 
 api_router = APIRouter()
@@ -25,6 +26,9 @@ api_router.include_router(users.router, prefix="/users", tags=["Users"])
 api_router.include_router(lessons.router, prefix="/lessons", tags=["Lessons"])
 api_router.include_router(progress.router, prefix="/progress", tags=["Progress"])
 api_router.include_router(exercises.router, prefix="/exercises", tags=["Exercises"])
+
+# ♟️ Ajedrez Cognitivo
+api_router.include_router(chess.router, prefix="/chess", tags=["Chess"])
 
 # 💳 Pagos
 api_router.include_router(billing.router, prefix="/billing", tags=["Billing"])

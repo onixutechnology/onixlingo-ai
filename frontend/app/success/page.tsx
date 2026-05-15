@@ -12,11 +12,9 @@ export default function SuccessPage() {
   const router = useRouter();
   const { setMode } = useUIStore(); 
 
-  // 🪄 MAGIA: Activación Inmediata
   useEffect(() => {
     localStorage.setItem('onix_tier', 'TITANIUM');
     setMode('professional');
-    console.log("🏆 ¡Modo Titanium Activado!");
   }, [setMode]);
 
   const handleContinue = () => {

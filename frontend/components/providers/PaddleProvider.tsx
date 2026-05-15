@@ -5,30 +5,51 @@ import { initializePaddle, Paddle } from '@paddle/paddle-js';
 
 export function PaddleProvider({ children }: { children: React.ReactNode }) {
   const [paddleInfo, setPaddleInfo] = useState<Paddle | undefined>();
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     // Evitamos inicializar dos veces
     if (paddleInfo) return;
 
-    initializePaddle({
-      environment: process.env.NEXT_PUBLIC_PADDLE_ENV as 'sandbox' | 'production',
-      token: process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN!,
-      // Esto hace que el checkout herede un poco de los colores de tu marca (opcional)
-      checkout: {
-        settings: {
-          displayMode: 'overlay',
-          theme: 'light',
-          locale: 'es'
+    const init = async () => {
+      try {
+        const paddleInstance = await initializePaddle({
+          environment: (process.env.NEXT_PUBLIC_PADDLE_ENV as 'sandbox' | 'production') || 'sandbox',
+          token: process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN || '',
+          checkout: {
+            settings: {
+              displayMode: 'overlay',
+              theme: 'light',
+              locale: 'es'
+            }
+          }
+        });
+
+        if (paddleInstance) {
+          setPaddleInfo(paddleInstance);
+          (window as any).Paddle = paddleInstance;
+        } else {
+          throw new Error('Paddle instance is undefined');
         }
+      } catch (err) {
+        setError('No se pudo cargar el sistema de pagos. Por favor, desactiva tu AdBlocker e intenta de nuevo.');
       }
-    }).then((paddleInstance) => {
-      if (paddleInstance) {
-        setPaddleInfo(paddleInstance);
-        // Guardamos la instancia de Paddle globalmente en Window para usarla en cualquier botón
-        (window as any).Paddle = paddleInstance;
-      }
-    });
+    };
+
+    init();
   }, [paddleInfo]);
 
-  return <>{children}</>;
-}
+  // Si hay un error crítico (ej. AdBlocker bloqueando el script), podríamos mostrar una alerta sutil
+  return (
+    <>
+      {error && (
+        <div className="fixed bottom-4 right-4 z-[9999] bg-amber-50 border border-amber-200 p-4 rounded-xl shadow-2xl max-w-sm animate-in slide-in-from-right">
+          <p className="text-amber-800 text-sm font-medium">
+            ⚠️ {error}
+          </p>
+        </div>
+      )}
+      {children}
+    </>
+  );
+}

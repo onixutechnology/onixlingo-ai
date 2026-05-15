@@ -31,6 +31,11 @@ class User(Base):
     referral_code = Column(String, unique=True, index=True, nullable=True) 
 
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+    
+    # 🔥 Gamificación: Rachas (Streaks) y Elocuencia
+    streak_days = Column(Integer, default=0)
+    eloquence_points = Column(Integer, default=0)
+    last_activity_at = Column(DateTime(timezone=True), nullable=True)
 
     # Relaciones
     progress = relationship("Progress", back_populates="owner", cascade="all, delete-orphan")
@@ -107,3 +112,32 @@ class ChessProgress(Base):
 
     # Relación inversa
     user = relationship("User", back_populates="chess_progress")
+
+# =====================================================================
+# ♟️ PvP CHESS PERSISTENCE
+# =====================================================================
+
+class ChessMatch(Base):
+    __tablename__ = "chess_matches"
+
+    id = Column(String, primary_key=True, index=True)
+    white_player_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    black_player_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    current_fen = Column(String, default="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1")
+    status = Column(String, default="active") # active, completed, draw
+    winner_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    white_time_ms = Column(Integer, default=600000) # 10 min
+    black_time_ms = Column(Integer, default=600000)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), onupdate=func.now())
+
+class ChessMove(Base):
+    __tablename__ = "chess_moves"
+
+    id = Column(Integer, primary_key=True, index=True)
+    match_id = Column(String, ForeignKey("chess_matches.id"), nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    move_san = Column(String, nullable=False)
+    move_uci = Column(String, nullable=False)
+    fen_after = Column(String, nullable=False)
+    timestamp = Column(DateTime(timezone=True), server_default=func.now())

@@ -2,125 +2,117 @@
 
 /**
  * ==============================================================================
- * ONIXLINGO LMS DASHBOARD - STUDENT EDITION (COMPACT PRO B2B)
+ * ONIXLINGO LMS DASHBOARD - CORPORATE TEAL (ULTRA COMPACT)
  * ==============================================================================
  */
 
 import { useState, useEffect, useMemo } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useUIStore } from '@/store/uiStore';
 import Sidebar from '@/components/dashboard/sidebar';
 import Cookies from 'js-cookie';
+import apiClient from '@/lib/apiClient';
 import { ServerAwakeLoader } from '@/components/ui/Server/ServerAwakeLoader';
+
 import { motion, Variants } from 'framer-motion';
 import { AdBanner } from '@/components/ads/AdBanner';
 
 import {
-  Play, Lock, Check, Home, Trophy, Zap, Flame, Headphones, BookOpen, PenTool,
-  Mic, Shield, LayoutGrid, User, Loader2, Briefcase, BookA, Crown, Languages,
-  Sparkles, ShoppingBag, ArrowRight, FileText
+  Play, Lock, Check, Trophy, Zap, Flame, Headphones, BookOpen, PenTool,
+  Mic, Shield, LayoutGrid, Loader2, Briefcase, ArrowRight, User
 } from 'lucide-react';
 
 import { CURRICULUM } from '@/data/curriculum';
+import { CURRICULUM_FR } from '@/data/curriculum_fr';
+import { CURRICULUM_ZH } from '@/data/curriculum_zh';
 
 type LessonStatus = 'locked' | 'active' | 'completed';
 
-interface ThemeConfig {
-  primary: string; bg: string; border: string; iconBg: string; accent: string; shadow: string; gradient: string; glow: string;
-}
-
-const COLOR_VARIANTS: Record<string, { bg: string, text: string, hoverBorder: string, hoverShadow: string }> = {
-  emerald: { bg: 'bg-emerald-500/10', text: 'text-emerald-400', hoverBorder: 'hover:border-emerald-500/30', hoverShadow: 'hover:shadow-emerald-500/20' },
-  blue: { bg: 'bg-blue-500/10', text: 'text-blue-400', hoverBorder: 'hover:border-blue-500/30', hoverShadow: 'hover:shadow-blue-500/20' },
-  orange: { bg: 'bg-orange-500/10', text: 'text-orange-400', hoverBorder: 'hover:border-orange-500/30', hoverShadow: 'hover:shadow-orange-500/20' },
-  purple: { bg: 'bg-purple-500/10', text: 'text-purple-400', hoverBorder: 'hover:border-purple-500/30', hoverShadow: 'hover:shadow-purple-500/20' },
-  indigo: { bg: 'bg-indigo-500/10', text: 'text-indigo-400', hoverBorder: 'hover:border-indigo-500/30', hoverShadow: 'hover:shadow-indigo-500/20' },
-  rose: { bg: 'bg-rose-500/10', text: 'text-rose-400', hoverBorder: 'hover:border-rose-500/30', hoverShadow: 'hover:shadow-rose-500/20' },
-  amber: { bg: 'bg-amber-500/10', text: 'text-amber-400', hoverBorder: 'hover:border-amber-500/30', hoverShadow: 'hover:shadow-amber-500/20' },
+const COLOR_VARIANTS: Record<string, { bg: string, text: string, hoverBorder: string }> = {
+  emerald: { bg: 'bg-emerald-50', text: 'text-emerald-600', hoverBorder: 'hover:border-emerald-300' },
+  blue: { bg: 'bg-blue-50', text: 'text-blue-600', hoverBorder: 'hover:border-blue-300' },
+  orange: { bg: 'bg-orange-50', text: 'text-orange-600', hoverBorder: 'hover:border-orange-300' },
+  purple: { bg: 'bg-purple-50', text: 'text-purple-600', hoverBorder: 'hover:border-purple-300' },
+  teal: { bg: 'bg-teal-50', text: 'text-teal-600', hoverBorder: 'hover:border-teal-300' },
+  rose: { bg: 'bg-rose-50', text: 'text-rose-600', hoverBorder: 'hover:border-rose-300' },
 };
 
-const getProfessionalTheme = (colorName: string, status: LessonStatus): ThemeConfig => {
-  if (status === 'locked') {
-    return { primary: 'text-slate-500', bg: 'bg-white/5', border: 'border-white/10', iconBg: 'bg-white/5', accent: 'bg-slate-700', shadow: 'shadow-none', gradient: 'from-white/5 to-white/5', glow: '' };
-  }
-  const themes: Record<string, ThemeConfig> = {
-    emerald: { primary: 'text-emerald-400', bg: 'bg-slate-900', border: 'border-emerald-500/30', iconBg: 'bg-emerald-500/10', accent: 'bg-emerald-500', shadow: 'shadow-emerald-900/50', gradient: 'from-emerald-500 to-teal-600', glow: 'shadow-[0_0_15px_rgba(16,185,129,0.3)]' },
-    blue: { primary: 'text-blue-400', bg: 'bg-slate-900', border: 'border-blue-500/30', iconBg: 'bg-blue-500/10', accent: 'bg-blue-500', shadow: 'shadow-blue-900/50', gradient: 'from-blue-500 to-indigo-600', glow: 'shadow-[0_0_15px_rgba(59,130,246,0.3)]' },
-    indigo: { primary: 'text-indigo-400', bg: 'bg-slate-900', border: 'border-indigo-500/30', iconBg: 'bg-indigo-500/10', accent: 'bg-indigo-500', shadow: 'shadow-indigo-900/50', gradient: 'from-indigo-500 to-violet-600', glow: 'shadow-[0_0_15px_rgba(79,70,229,0.3)]' },
-  };
-  return themes[colorName] || themes['indigo'];
+const LANGUAGE_COLORS: Record<string, { primary: string, secondary: string, accent: string, selection: string, bg: string }> = {
+  en: { primary: 'blue-600', secondary: 'blue-50', accent: 'blue-700', selection: 'bg-blue-100', bg: 'text-blue-900' },
+  fr: { primary: 'cyan-500', secondary: 'cyan-50', accent: 'cyan-600', selection: 'bg-cyan-100', bg: 'text-cyan-900' },
+  zh: { primary: 'indigo-800', secondary: 'indigo-50', accent: 'indigo-900', selection: 'bg-indigo-100', bg: 'text-indigo-900' },
 };
 
 const HeaderStats = ({ xp, streak }: { xp: number, streak: number }) => (
-  <div className="hidden md:flex items-center gap-2 bg-white/5 backdrop-blur-md px-2 py-1 rounded-lg border border-white/10 shadow-sm">
-    <div className="flex items-center gap-2 px-3 border-r border-white/10">
-      <div className="text-amber-400"><Zap size={14} fill="currentColor" /></div>
-      <div><p className="text-[8px] text-slate-400 font-bold uppercase tracking-widest leading-none mb-0.5">XP</p><span className="text-xs font-black text-white leading-none">{xp.toLocaleString()}</span></div>
+  <div className="hidden md:flex items-center gap-2 bg-white px-2 py-1 rounded-none border border-slate-200 shadow-none">
+    <div className="flex items-center gap-2 px-3 border-r border-slate-100">
+      <div className="text-amber-500"><Zap size={14} fill="currentColor" /></div>
+      <div><p className="text-[8px] text-slate-400 font-black uppercase tracking-widest leading-none mb-0.5">XP</p><span className="text-xs font-black text-slate-800 leading-none">{xp.toLocaleString()}</span></div>
     </div>
     <div className="flex items-center gap-2 px-3">
-      <div className="text-orange-400"><Flame size={14} fill="currentColor" /></div>
-      <div><p className="text-[8px] text-slate-400 font-bold uppercase tracking-widest leading-none mb-0.5">Racha</p><span className="text-xs font-black text-white leading-none">{streak}</span></div>
+      <div className="text-orange-500"><Flame size={14} fill="currentColor" /></div>
+      <div><p className="text-[8px] text-slate-400 font-black uppercase tracking-widest leading-none mb-0.5">Racha</p><span className="text-xs font-black text-slate-800 leading-none">{streak}</span></div>
     </div>
   </div>
 );
 
-const TimelineNode = ({ id, title, status, stars, index, isLast, color, onClick }: any) => {
-  const theme = getProfessionalTheme(color, status);
-  const variant = COLOR_VARIANTS[color] || COLOR_VARIANTS['indigo'];
+const TimelineNode = ({ id, title, status, stars, index, isLast, color, onClick, theme }: any) => {
+  const isLocked = status === 'locked';
+  const isActive = status === 'active';
+  const isCompleted = status === 'completed';
 
   return (
-    <div className="relative flex group w-full mb-4 lg:mb-5">
+    <div className="relative flex group w-full mb-3 lg:mb-4">
+      {/* Conector */}
       {!isLast && (
-        <div className="absolute left-[1.35rem] md:left-[1.85rem] top-[3.5rem] bottom-[-1.5rem] w-0.5 bg-white/10 z-0">
-          {status === 'completed' && <div className={`w-full h-full bg-gradient-to-b ${theme.gradient} shadow-[0_0_8px_rgba(255,255,255,0.2)]`}></div>}
+        <div className="absolute left-[1.1rem] top-[2.5rem] bottom-[-1.5rem] w-px bg-slate-200 z-0">
+          {isCompleted && <div className={`w-full h-full bg-${theme.primary}`}></div>}
         </div>
       )}
 
-      <div className="relative z-10 mr-4 flex-shrink-0 pt-1">
+      {/* Nodo */}
+      <div className="relative z-10 mr-3 flex-shrink-0 pt-1">
         <button
-          onClick={() => status !== 'locked' && onClick(id)}
-          disabled={status === 'locked'}
+          onClick={() => !isLocked && onClick(id)}
+          disabled={isLocked}
           className={`
-            w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center border-0 transition-all duration-300 shadow-sm active:scale-95 relative
-            ${status === 'active' ? `bg-gradient-to-br ${theme.gradient} text-white shadow-lg ${theme.glow} border border-white/20 z-20` : ''} 
-            ${status === 'completed' ? `bg-slate-900 border border-white/20 ${theme.primary}` : ''} 
-            ${status === 'locked' ? 'bg-white/5 border border-white/10 text-slate-600' : ''}
+            w-9 h-9 rounded-none flex items-center justify-center border transition-all duration-200 shadow-none relative
+            ${isActive ? `bg-${theme.primary} border-${theme.accent} text-white shadow-lg scale-105 z-20` : ''} 
+            ${isCompleted ? `bg-white border-${theme.primary} text-${theme.primary}` : ''} 
+            ${isLocked ? 'bg-slate-50 border-slate-200 text-slate-400' : ''}
           `}
         >
-          {status === 'locked' && <Lock size={16} />}
-          {status === 'active' && <Play size={20} fill="currentColor" className="ml-1" />}
-          {status === 'completed' && <Check size={20} strokeWidth={3} />}
+          {isLocked && <Lock size={14} />}
+          {isActive && <Play size={16} fill="currentColor" className="ml-0.5" />}
+          {isCompleted && <Check size={16} strokeWidth={3} />}
         </button>
       </div>
 
-      <div onClick={() => status !== 'locked' && onClick(id)} className={`
-        flex-1 p-4 md:p-5 rounded-xl border transition-all duration-200 cursor-pointer relative overflow-hidden group/card
-        ${status === 'locked'
-          ? 'bg-transparent border-white/5 opacity-60 hover:opacity-100'
-          : `bg-white/5 backdrop-blur-sm border-white/10 hover:border-white/20 hover:bg-white/10`
-        }
-        ${status === 'active' ? 'ring-1 ring-indigo-500/40 bg-white/10' : ''}
+      {/* Tarjeta */}
+      <div onClick={() => !isLocked && onClick(id)} className={`
+        flex-1 p-4 rounded-none border transition-all duration-200 cursor-pointer bg-white relative overflow-hidden group/card
+        ${isLocked ? 'opacity-60 border-slate-100' : `border-slate-200 hover:border-${theme.primary} hover:shadow-sm`}
+        ${isActive ? `ring-2 ring-${theme.primary}/10 border-${theme.primary} shadow-md` : ''}
       `}>
-        <div className="flex flex-col sm:flex-row justify-between items-start gap-3 relative z-10">
+        <div className="flex flex-col sm:flex-row justify-between items-start gap-2 relative z-10">
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1.5">
-              <span className={`px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider ${status === 'active' ? 'bg-indigo-600 text-white' : 'bg-white/10 text-slate-400'}`}>
+              <span className={`px-2 py-0.5 rounded-none text-[8px] font-black uppercase tracking-[0.2em] ${isActive ? `bg-${theme.primary} text-white` : 'bg-slate-100 text-slate-400'}`}>
                 Módulo {index + 1}
               </span>
             </div>
-            <h3 className={`text-base md:text-lg font-bold tracking-tight mb-1 ${status === 'locked' ? 'text-slate-500' : 'text-white'}`}>{title}</h3>
-            <p className={`text-xs leading-relaxed ${status === 'locked' ? 'text-slate-600' : 'text-slate-400'}`}>{title.includes("Hello") ? "Fundamentos y saludos." : "Vocabulario clave y gramática."}</p>
+            <h3 className={`text-xs font-black tracking-tight leading-tight uppercase ${isLocked ? 'text-slate-400' : 'text-slate-800'}`}>{title}</h3>
           </div>
 
-          <div className="flex flex-col items-end justify-between h-full min-w-[60px]">
-            {status === 'completed' && (
-              <div className="flex gap-0.5">
-                {[1, 2, 3].map((s) => (<Trophy key={s} size={14} className={s <= stars ? 'text-amber-400 fill-amber-400' : 'text-amber-900/30'} />))}
+          <div className="flex flex-col items-end justify-between h-full min-w-[50px]">
+            {isCompleted && (
+              <div className="flex gap-0.5 mt-1">
+                {[1, 2, 3].map((s) => (<Trophy key={s} size={12} className={s <= stars ? `text-${theme.primary} fill-${theme.primary}` : 'text-slate-100'} />))}
               </div>
             )}
-            {status === 'active' && (
-              <div className="mt-2 sm:mt-0 text-slate-400 group-hover/card:text-indigo-400 transition-colors">
+            {isActive && (
+              <div className={`text-${theme.primary} transition-colors mt-1`}>
                 <ArrowRight size={16} />
               </div>
             )}
@@ -132,100 +124,141 @@ const TimelineNode = ({ id, title, status, stars, index, isLast, color, onClick 
 };
 
 const containerVariants: Variants = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.05 } } };
-const itemVariants: Variants = { hidden: { opacity: 0, x: -10 }, show: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 300, damping: 24 } as any } };
+const itemVariants: Variants = { hidden: { opacity: 0, x: -5 }, show: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 300, damping: 24 } as any } };
 
 export default function DashboardPage() {
   const router = useRouter();
-  const { mode, setMode, activeLanguage, setLanguage, resetUI } = useUIStore();
+  const { setMode, activeLanguage, setLanguage } = useUIStore();
 
   const [isMounted, setIsMounted] = useState(false);
   const [currentUser, setCurrentUser] = useState<string | null>(null);
   const [dashboardData, setDashboardData] = useState<any>(null);
   const [userStats, setUserStats] = useState({ xp: 0, lessons: 0, streak: 0 });
   const [isUserPremium, setIsUserPremium] = useState(false);
-  const [managingPlan, setManagingPlan] = useState(false);
+  const [globalProgress, setGlobalProgress] = useState(0);
+
+  const getProgressPercentage = () => globalProgress;
 
   useEffect(() => {
     setIsMounted(true);
-    const user = localStorage.getItem('currentUser');
     const token = Cookies.get('access_token');
-    setCurrentUser(user || 'Estudiante');
+    const storedUsername = Cookies.get('username') || 'Usuario';
+    setCurrentUser(storedUsername);
 
     if (token) {
-      const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
-      const headers = { 'Authorization': token.startsWith('Bearer ') ? token : `Bearer ${token}`, 'Content-Type': 'application/json' };
+      // Usamos el apiClient centralizado para todas las peticiones
+      const fetchData = async () => {
+        try {
+          const [mapRes, statsRes, userRes] = await Promise.all([
+            apiClient.get('/progress/map'),
+            apiClient.get('/progress/stats'),
+            apiClient.get('/users/me')
+          ]);
 
-      Promise.all([
-        fetch(`${BASE_URL}/api/v1/progress/map`, { headers, cache: 'no-store' }).catch(() => null),
-        fetch(`${BASE_URL}/api/v1/progress/stats`, { headers, cache: 'no-store' }).catch(() => null),
-        fetch(`${BASE_URL}/api/v1/users/me`, { headers }).catch(() => null)
-      ]).then(async ([mapRes, statsRes, userRes]) => {
-        if (mapRes?.status === 401) { Cookies.remove('access_token'); router.push('/login'); throw new Error("Sesión expirada"); }
-        let mapData = { standard: [] }; let statsData = { total_xp: 0, streak: 0 }; let userData = { is_pro: false, tier: 'free' };
-        if (mapRes && mapRes.ok) mapData = await mapRes.json();
-        if (statsRes && statsRes.ok) statsData = await statsRes.json();
-        if (userRes && userRes.ok) userData = await userRes.json();
-        setDashboardData(mapData);
-        setUserStats({ xp: statsData.total_xp || 0, lessons: 0, streak: statsData.streak || 0 });
-        setIsUserPremium(userData.is_pro || userData.tier === 'titanium');
-      }).catch(() => setDashboardData({ standard: [] }));
-    } else { router.push('/login'); }
+          setDashboardData(mapRes.data);
+          setUserStats({
+            xp: statsRes.data.total_xp || 0,
+            lessons: statsRes.data.completed_modules || 0,
+            streak: statsRes.data.streak_days || 0
+          });
+          setGlobalProgress(statsRes.data.global_progress || 0);
+          setIsUserPremium(userRes.data.is_pro || userRes.data.tier?.toLowerCase() === 'titanium');
+          
+          // Actualizamos el nombre si el backend tiene uno más preciso
+          if (userRes.data.username) {
+            setCurrentUser(userRes.data.username);
+            Cookies.set('username', userRes.data.username);
+          }
+        } catch (error: any) {
+          console.error("Error fetching dashboard data:", error);
+          // El interceptor global de apiClient ya maneja el 401
+          if (!dashboardData) setDashboardData({ standard: [] });
+        }
+      };
+
+      fetchData();
+    } else {
+      router.push('/login');
+    }
   }, [router]);
 
-  const allLessonsFlat = useMemo(() => CURRICULUM.flatMap(section => section.lessons), []);
+
+  const currentCurriculum = useMemo(() => {
+    if (activeLanguage === 'fr') return CURRICULUM_FR;
+    if (activeLanguage === 'zh') return CURRICULUM_ZH;
+    return CURRICULUM;
+  }, [activeLanguage]);
+
+  const allLessonsFlat = useMemo(() => currentCurriculum.flatMap(section => section.lessons), [currentCurriculum]);
 
   const getLessonState = (lessonId: string): LessonStatus => {
-    if (!isMounted || !dashboardData?.standard?.length) return lessonId === CURRICULUM[0]?.lessons[0]?.id ? 'active' : 'locked';
+    if (!isMounted || !dashboardData?.standard?.length) return lessonId === currentCurriculum[0]?.lessons[0]?.id ? 'active' : 'locked';
     const node = dashboardData.standard.find((l: any) => l.lesson_id === lessonId);
     if (node) return node.status === 'completed' ? 'completed' : 'active';
-    return lessonId === CURRICULUM[0]?.lessons[0]?.id ? 'active' : 'locked';
+    return lessonId === currentCurriculum[0]?.lessons[0]?.id ? 'active' : 'locked';
   };
 
   const getStars = (lessonId: string) => dashboardData?.standard?.find((l: any) => l.lesson_id === lessonId)?.stars || 0;
 
+  const theme = useMemo(() => LANGUAGE_COLORS[activeLanguage] || LANGUAGE_COLORS.en, [activeLanguage]);
+
   if (!isMounted || !dashboardData) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-950">
-        <Loader2 className="animate-spin text-indigo-500 mb-4" size={32} />
-        <p className="text-slate-500 font-bold text-[10px] tracking-widest uppercase">Cargando Entorno...</p>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50">
+        <Loader2 className={`animate-spin text-${theme.primary} mb-3`} size={24} />
+        <p className="text-slate-500 font-semibold text-[10px] tracking-widest uppercase">Cargando Entorno...</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 font-sans text-slate-300 pb-20 lg:pb-0 selection:bg-indigo-500/30 selection:text-indigo-200">
+    <div className={`min-h-screen bg-slate-50 font-sans text-slate-800 pb-20 lg:pb-0 ${theme.selection} selection:${theme.bg}`}>
 
-      {/* NAVBAR COMPACTO */}
-      <nav className="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-md border-b border-white/10 px-6 h-14 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-7 h-7 bg-indigo-600 rounded flex items-center justify-center shadow-[0_0_10px_rgba(79,70,229,0.3)]"><span className="text-white font-bold text-xs">O</span></div>
-          <span className="font-bold text-white text-sm hidden sm:block">OnixLingo</span>
+      {/* NAVBAR CORPORATIVO CUADRADO */}
+      <nav className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 px-6 h-12 flex items-center justify-between shadow-none">
+        <div className="flex items-center gap-2">
+          <div className={`w-5 h-5 bg-${theme.primary} flex items-center justify-center`}><span className="text-white font-black text-[9px]">O</span></div>
+          <span className="font-black text-slate-900 text-[10px] tracking-[0.2em] uppercase hidden sm:block">OnixLingo Hub</span>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <HeaderStats xp={userStats.xp} streak={userStats.streak} />
-          <div className="hidden lg:flex items-center gap-2 border-l border-white/10 pl-3">
-            <Link href="/dashboard/vocabulary" className="text-xs font-semibold text-slate-400 hover:text-white px-2 transition-colors">Vocabulario</Link>
-            <Link href="/dashboard/chess" className="text-xs font-semibold text-slate-400 hover:text-white px-2 transition-colors">Ajedrez</Link>
+          
+          <Link href="/dashboard/leaderboard" className="p-2 hover:bg-slate-100 border border-transparent hover:border-slate-200 transition-all text-slate-600">
+            <Trophy size={18} />
+          </Link>
+
+          <Link href="/dashboard/profile" className="p-2 hover:bg-slate-100 border border-transparent hover:border-slate-200 transition-all text-slate-600">
+            <User size={18} />
+          </Link>
+
+          <div className="hidden lg:flex items-center gap-6 border-l border-slate-100 pl-6 h-6">
+            <Link href="/dashboard/vocabulary" className={`text-[9px] font-black text-slate-400 hover:text-${theme.primary} transition-colors uppercase tracking-widest`}>Vocabulario</Link>
+            <Link href="/dashboard/chess" className={`text-[9px] font-black text-slate-400 hover:text-${theme.primary} transition-colors uppercase tracking-widest`}>Ajedrez</Link>
           </div>
-          <button onClick={() => { setMode('professional'); router.push('/dashboard/pro'); }} className="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-md text-[10px] font-bold uppercase tracking-wider ml-2 border border-indigo-500/50">
-            Modo Pro
+          <button onClick={() => { setMode('professional'); router.push('/dashboard/pro'); }} className={`bg-slate-900 hover:bg-${theme.primary} text-white px-4 py-1.5 rounded-none text-[8px] font-black uppercase tracking-[0.2em] ml-2 transition-all active:scale-95`}>
+            Modo Executive
           </button>
         </div>
       </nav>
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 pt-6 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 pt-6 px-6">
 
-        {/* MAIN COLUMN */}
+        {/* COLUMNA PRINCIPAL */}
         <div className="flex-1 min-w-0">
-          <div className="mb-8">
-            <h1 className="text-2xl font-bold text-white mb-1">Hola, {currentUser}</h1>
-            <p className="text-xs text-slate-400 mb-4">Selecciona tu idioma objetivo para la sesión de hoy.</p>
-            <div className="inline-flex bg-white/5 p-1 rounded-lg border border-white/10">
-              {(['en', 'fr', 'zh'] as const).map((lang) => (
+          
+          <div className="mb-6 bg-white border border-slate-200 p-6 rounded-none shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <h1 className="text-xl font-black text-slate-900 tracking-tighter uppercase leading-none mb-2 font-serif italic">Bienvenido, {currentUser}</h1>
+              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">
+                <span className="text-amber-600">Executive Tier</span> • {activeLanguage === 'en' ? 'Inglés' : activeLanguage === 'fr' ? 'Francés' : 'Chino'} Corporativo
+              </p>
+            </div>
+            <div className="inline-flex bg-slate-50 p-1 border border-slate-200">
+              {(['en', 'fr', 'zh'] as const).map(lang => (
                 <button
                   key={lang}
                   onClick={() => setLanguage(lang as 'en' | 'fr' | 'zh')}
-                  className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all ${activeLanguage === lang ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:bg-white/5'}`}
+                  className={`px-4 py-1.5 rounded-none text-[9px] font-black uppercase tracking-widest transition-all ${activeLanguage === lang ? `bg-${LANGUAGE_COLORS[lang].primary} text-white` : 'text-slate-400 hover:text-slate-600'}`}
                 >
                   {lang === 'en' ? 'Inglés' : lang === 'fr' ? 'Francés' : 'Chino'}
                 </button>
@@ -233,19 +266,34 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {!isUserPremium && <div className="mb-6"><AdBanner variant="horizontal" /></div>}
-
-          <motion.div variants={containerVariants} initial="hidden" animate="show" className="space-y-8">
-            {activeLanguage === 'en' && CURRICULUM.map((section, sIdx) => (
-              <div key={section.id} className="relative">
-                <div className="flex items-center gap-3 mb-4 bg-white/5 p-3 rounded-xl border border-white/10">
-                  <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-400"><LayoutGrid size={16} /></div>
-                  <h2 className="text-sm font-bold text-white uppercase tracking-wider">{section.title}</h2>
+          {/* CURRICULUM RENDER */}
+          <motion.div variants={containerVariants} initial="hidden" animate="show" className="space-y-6">
+            {currentCurriculum.map((section, sIdx) => (
+              <div key={section.id} className="bg-white border border-slate-200 p-6 rounded-none shadow-sm relative">
+                <div className="h-1 bg-slate-100 rounded-none overflow-hidden mb-2">
+                  <div className={`h-full bg-${theme.primary}`} style={{ width: `${getProgressPercentage()}%` }}></div>
                 </div>
-                <div>
+                <div className="flex justify-between text-[8px] font-black uppercase tracking-widest text-slate-400 mb-6">
+                  <span>Progreso Global</span>
+                  <span className={`text-${theme.primary}`}>{getProgressPercentage()}%</span>
+                </div>
+                <div className="flex items-center gap-3 mb-6 border-b border-slate-100 pb-4">
+                  <div className={`p-2 bg-slate-100 text-${theme.primary}`}><LayoutGrid size={16} /></div>
+                  <h2 className="text-[10px] font-black text-slate-900 uppercase tracking-[0.4em] font-serif italic">{section.title}</h2>
+                </div>
+                <div className="pl-1">
                   {section.lessons.map((lesson, lIdx) => (
                     <motion.div variants={itemVariants} key={lesson.id}>
-                      <TimelineNode id={lesson.id} title={lesson.title} status={getLessonState(lesson.id)} stars={getStars(lesson.id)} index={allLessonsFlat.findIndex(l => l.id === lesson.id)} isLast={lIdx === section.lessons.length - 1} color={section.color} onClick={(id: string) => router.push(`/lesson/${id}?type=standard`)} />
+                      <TimelineNode 
+                        id={lesson.id} 
+                        title={lesson.title} 
+                        status={getLessonState(lesson.id)} 
+                        stars={getStars(lesson.id)} 
+                        index={allLessonsFlat.findIndex(l => l.id === lesson.id)} 
+                        isLast={lIdx === section.lessons.length - 1} 
+                        onClick={(id: string) => router.push(`/lesson/${id}?type=standard`)} 
+                        theme={theme}
+                      />
                     </motion.div>
                   ))}
                 </div>
@@ -253,29 +301,31 @@ export default function DashboardPage() {
             ))}
           </motion.div>
 
-          <div className="mt-12 mb-8 border-t border-white/10 pt-6">
-            <h2 className="text-lg font-bold text-white flex items-center gap-2 mb-4"><Shield size={18} className="text-indigo-400" /> Certificaciones</h2>
-            <div className="grid grid-cols-2 gap-4">
-              <Link href="/lesson/toeic_listening" className="bg-white/5 border border-white/10 p-4 rounded-xl hover:bg-white/10 transition-colors">
-                <Headphones size={16} className="text-indigo-400 mb-2" />
-                <h4 className="text-sm font-bold text-white">Listening</h4>
+          {/* EXÁMENES COMPACTOS */}
+          <div className="mt-8 mb-12">
+            <h2 className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] flex items-center gap-2 mb-4">
+              <Shield size={14} className={`text-${theme.primary}`} /> Simuladores Estratégicos
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/lesson/toeic_listening" className={`bg-white border border-slate-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}>
+                <div className={`bg-slate-100 p-3 text-slate-400 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Headphones size={18} /></div>
+                <h4 className="text-[10px] font-black text-slate-800 uppercase tracking-widest">Comprensión Auditiva (Auditoría)</h4>
               </Link>
-              <Link href="/lesson/toeic_reading" className="bg-white/5 border border-white/10 p-4 rounded-xl hover:bg-white/10 transition-colors">
-                <BookOpen size={16} className="text-emerald-400 mb-2" />
-                <h4 className="text-sm font-bold text-white">Reading</h4>
+              <Link href="/lesson/toeic_reading" className={`bg-white border border-slate-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}>
+                <div className={`bg-slate-100 p-3 text-slate-400 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><BookOpen size={18} /></div>
+                <h4 className="text-[10px] font-black text-slate-800 uppercase tracking-widest">Análisis Lector (Reporting)</h4>
               </Link>
             </div>
           </div>
         </div>
 
-        {/* SIDEBAR DERECHO (COMPACTO) */}
-        <div className="hidden lg:block w-[18rem] flex-shrink-0">
-          <div className="sticky top-20">
-            <Sidebar userStats={userStats} />
-          </div>
+        {/* SIDEBAR DERECHO */}
+        <div className="hidden lg:block w-80 flex-shrink-0">
+          <Sidebar userStats={userStats} />
         </div>
 
       </div>
     </div>
+
   );
 }

@@ -124,12 +124,31 @@ def get_user_stats(
         "username": current_user.username,
         "level_label": _calculate_label(modules_count),
         "total_xp": sum(p.score for p in raw_progress),
-        "streak_days": 5, 
+        "streak_days": current_user.streak_days or 0, 
         "completed_modules": modules_count,
         "global_progress": min(int((modules_count / 60) * 100), 100),
         "skills_radar": radar_data,
-        "is_pro": current_user.is_pro 
+        "is_pro": current_user.is_pro,
+        "achievements": [a.achievement_code for a in current_user.achievements]
     }
+
+@router.get("/eloquence-leaderboard")
+def get_eloquence_leaderboard(
+    db: Session = Depends(get_db)
+):
+    """Retorna el ranking global basado en Puntos de Elocuencia"""
+    top_users = db.query(models.User).order_by(models.User.eloquence_points.desc()).limit(20).all()
+    
+    leaderboard = []
+    for idx, user in enumerate(top_users):
+        leaderboard.append({
+            "rank": idx + 1,
+            "username": user.username,
+            "eloquence_points": user.eloquence_points,
+            "is_pro": user.is_pro or user.tier == "titanium"
+        })
+    
+    return {"leaderboard": leaderboard}
 
 def _calculate_label(count: int) -> str:
     if count < 5: return "A1 - Beginner"

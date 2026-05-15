@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { Mic, Square, Loader2, X, Volume2, BookOpen, CheckCircle2, AlertTriangle, ChevronRight, ChevronLeft, RefreshCw, Activity } from 'lucide-react';
-import Cookies from 'js-cookie';
+import apiClient from '@/lib/apiClient';
 
 interface ReadingStudioProps {
   onClose: () => void;
@@ -33,7 +33,6 @@ export const ReadingStudio = ({ onClose }: ReadingStudioProps) => {
   const streamRef = useRef<MediaStream | null>(null);
 const animationRef = useRef<number | null>(null);  const audioContextRef = useRef<AudioContext | null>(null);
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
   const targetText = PRACTICE_TEXTS[currentTextIndex];
 
   // ⏱️ Cronómetro
@@ -131,22 +130,14 @@ const animationRef = useRef<number | null>(null);  const audioContextRef = useRe
 
   // 🧠 ENVIAR A LA IA
   const analyzeAudio = async (audioBlob: Blob) => {
-    const token = Cookies.get('access_token');
     const formData = new FormData();
     formData.append('audio', audioBlob, 'recording.webm');
     formData.append('target_text', targetText);
 
     try {
-      const res = await fetch(`${API_URL}/api/v1/speech/analyze`, {
-        method: 'POST',
-        headers: {
-          ...(token ? { 'Authorization': `Bearer ${token}` } : {})
-        },
-        body: formData,
+      const { data } = await apiClient.post('/speech/analyze', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' }
       });
-
-      if (!res.ok) throw new Error("Error en el análisis de la IA");
-      const data = await res.json();
       setResult(data.data || { score: 85, feedback: "Great pronunciation!", transcription: "Simulated transcription due to backend configuration." });
     } catch (error) {
       console.error(error);
@@ -313,11 +304,26 @@ const animationRef = useRef<number | null>(null);  const audioContextRef = useRe
 
                 <div className="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-left relative z-10 max-w-2xl mx-auto">
                   <p className="text-[10px] text-slate-500 uppercase tracking-widest mb-3 font-bold flex items-center gap-2">
-                    <Mic size={14} /> Transcripción Detectada
+                    <Mic size={14} /> Análisis de Comparativa Visual
                   </p>
-                  <p className="text-slate-300 italic text-lg leading-relaxed">
-                    "{result.transcription}"
-                  </p>
+                  <div className="flex flex-wrap gap-x-2 gap-y-1 text-lg leading-relaxed font-serif">
+                    {(() => {
+                      const targetWords = targetText.toLowerCase().replace(/[^\w\s]/g, '').split(' ');
+                      const transWords = result.transcription.toLowerCase().replace(/[^\w\s]/g, '').split(' ');
+                      
+                      return targetWords.map((word, i) => {
+                        const isCorrect = transWords.includes(word);
+                        return (
+                          <span 
+                            key={i} 
+                            className={`transition-colors duration-500 ${isCorrect ? 'text-emerald-500' : 'text-red-500 underline decoration-dotted decoration-red-900'}`}
+                          >
+                            {targetText.split(' ')[i]}
+                          </span>
+                        );
+                      });
+                    })()}
+                  </div>
                 </div>
               </div>
 

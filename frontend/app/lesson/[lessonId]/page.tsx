@@ -2,11 +2,11 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import Cookies from 'js-cookie'; 
-import { 
-  Volume2, ArrowRight, XCircle, CheckCircle2, AlertTriangle, Play, RefreshCw, X, 
-  Clock, Zap, Check, X as XIcon, Save, BookOpen, Brain, Target, Flame, Award, 
-  Trophy, Lightbulb, Settings, Download, Share2, Eye, EyeOff, BarChart3, 
+import Cookies from 'js-cookie';
+import {
+  Volume2, ArrowRight, XCircle, CheckCircle2, AlertTriangle, Play, RefreshCw, X,
+  Clock, Zap, Check, X as XIcon, Save, BookOpen, Brain, Target, Flame, Award,
+  Trophy, Lightbulb, Settings, Download, Share2, Eye, EyeOff, BarChart3,
   MessageSquare, Mic, MicOff, Pause, SkipForward, HelpCircle, MapPin, Filter,
   TrendingUp, Star, Heart, Lock, Unlock, Copy, ChevronDown, ChevronUp, Menu,
   Radio, Grid, List, Search, Calendar, Users, Repeat2, RotateCw, ChevronRight
@@ -17,9 +17,10 @@ import LessonComplete from '@/components/lesson/LessonComplete';
 import { useAvatarStore } from '@/store/avatarStore';
 import { useUIStore } from '@/store/uiStore';
 import { useSearchParams } from 'next/navigation';
+import apiClient from '@/lib/apiClient';
 
-// ✅ CORRECCIÓN 1: Apuntamos al backend correcto y unificado
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
+
+
 
 // ============================================================================
 // ======================== TIPOS DE DATOS EXPANDIDOS =======================
@@ -107,8 +108,8 @@ interface AnalyticsEvent {
 export default function LessonRunnerEngine() {
   const params = useParams();
   const router = useRouter();
-  const searchParams = useSearchParams(); 
-  const lessonType = searchParams.get('type') || 'standard'; 
+  const searchParams = useSearchParams();
+  const lessonType = searchParams.get('type') || 'standard';
   const { setSpeaking } = useAvatarStore();
   const { mode } = useUIStore();
   const isPro = mode === 'professional';
@@ -146,10 +147,10 @@ export default function LessonRunnerEngine() {
 
   // ========== ESTADOS DE EJERCICIOS ==========
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [feedback, setFeedback] = useState<{ 
-    isCorrect: boolean; 
-    text: string; 
-    explanation?: string; 
+  const [feedback, setFeedback] = useState<{
+    isCorrect: boolean;
+    text: string;
+    explanation?: string;
     correctAnswer?: string;
     responseTime?: number;
   } | null>(null);
@@ -221,7 +222,7 @@ export default function LessonRunnerEngine() {
     try {
       localStorage.setItem(key, JSON.stringify(value));
     } catch (e) {
-      console.error('Error guardando en localStorage:', e);
+      // Error silenciado para producción
     }
   }, []);
 
@@ -231,7 +232,7 @@ export default function LessonRunnerEngine() {
       const item = localStorage.getItem(key);
       return item ? JSON.parse(item) : defaultValue;
     } catch (e) {
-      console.error('Error cargando de localStorage:', e);
+      // Error silenciado para producción
       return defaultValue;
     }
   }, []);
@@ -239,20 +240,20 @@ export default function LessonRunnerEngine() {
   // [FUNCIÓN 6] Reproducir sonido TTS
   const speakText = useCallback((text: string, rate: number = 0.9): void => {
     if (typeof window === 'undefined' || !window.speechSynthesis || !soundEnabled) return;
-    
+
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     const voices = window.speechSynthesis.getVoices();
-    const maleVoice = voices.find(v => 
+    const maleVoice = voices.find(v =>
       v.name.includes('Male') || v.name.includes('David') || v.name.includes('Google US English')
     );
-    
+
     if (maleVoice) utterance.voice = maleVoice;
     utterance.lang = 'en-US';
     utterance.rate = rate * playbackSpeed;
     utterance.onstart = () => setSpeaking(true);
     utterance.onend = () => setSpeaking(false);
-    
+
     window.speechSynthesis.speak(utterance);
   }, [soundEnabled, playbackSpeed, setSpeaking]);
 
@@ -287,7 +288,7 @@ export default function LessonRunnerEngine() {
       await navigator.clipboard.writeText(text);
       trackEvent('copy_text', { text });
     } catch (e) {
-      console.error('Error copiando:', e);
+      // Error silenciado para producción
     }
   }, [trackEvent]);
 
@@ -298,10 +299,10 @@ export default function LessonRunnerEngine() {
   // [PRO 1] Análisis avanzado de respuestas
   const analyzeAnswerPattern = useCallback((questionType: string): string => {
     const relevantAnswers = answerHistory.filter(a => a.type === questionType);
-    const correctRate = relevantAnswers.length > 0 
+    const correctRate = relevantAnswers.length > 0
       ? (relevantAnswers.filter(a => a.isCorrect).length / relevantAnswers.length) * 100
       : 0;
-    
+
     if (correctRate >= 90) return 'Dominado';
     if (correctRate >= 70) return 'Competente';
     if (correctRate >= 50) return 'Desarrollando';
@@ -327,7 +328,7 @@ export default function LessonRunnerEngine() {
   const exportReportPDF = useCallback(async (): Promise<void> => {
     const report = generateDetailedReport();
     // Simulación - en producción usarías jsPDF
-    console.log('📊 Exportando PDF:', report);
+    // Exportación PDF procesada
     trackEvent('export_pdf', { size: report.length });
   }, [generateDetailedReport, trackEvent]);
 
@@ -338,7 +339,7 @@ export default function LessonRunnerEngine() {
       twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}`,
       linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=onixlingo.com`
     };
-    
+
     if (typeof window !== 'undefined') {
       window.open(urls[platform], '_blank');
     }
@@ -348,7 +349,7 @@ export default function LessonRunnerEngine() {
   // [PRO 5] Análisis de patrones de errores
   const identifyWeakAreas = useCallback((): { category: string; weakness: number }[] => {
     const categoryStats: { [key: string]: { correct: number; total: number } } = {};
-    
+
     answerHistory.forEach(answer => {
       const cat = answer.category || 'general';
       if (!categoryStats[cat]) {
@@ -396,7 +397,7 @@ export default function LessonRunnerEngine() {
         return data.position || 0;
       }
     } catch (e) {
-      console.error('Error obteniendo leaderboard:', e);
+      // Error silenciado
     }
     return 0;
   }, [lesson?.id]);
@@ -404,7 +405,7 @@ export default function LessonRunnerEngine() {
   // [PRO 8] Cálculo inteligente de XP con multiplicadores
   const calculateAdvancedXP = useCallback((isCorrect: boolean, difficulty: string, timeSpent: number): number => {
     let baseXP = isCorrect ? 10 : 0;
-    
+
     // Multiplicador por dificultad
     const difficultyMultiplier = {
       easy: 1,
@@ -414,13 +415,13 @@ export default function LessonRunnerEngine() {
 
     // Bonus por velocidad (responder rápido)
     const speedBonus = timeSpent < 10 ? 5 : timeSpent < 20 ? 2 : 0;
-    
+
     // Bonus por racha
     const streakBonus = stats.streakCount > 0 ? Math.min(stats.streakCount * 0.5, 5) : 0;
 
     return Math.round(
-      baseXP * (difficultyMultiplier[difficulty as keyof typeof difficultyMultiplier] || 1) + 
-      speedBonus + 
+      baseXP * (difficultyMultiplier[difficulty as keyof typeof difficultyMultiplier] || 1) +
+      speedBonus +
       streakBonus
     );
   }, [stats.streakCount]);
@@ -452,7 +453,7 @@ export default function LessonRunnerEngine() {
     times.sort((a, b) => a - b);
     const average = Math.round(times.reduce((a, b) => a + b) / times.length);
     const median = times[Math.floor(times.length / 2)];
-    
+
     return {
       average,
       median,
@@ -475,7 +476,7 @@ export default function LessonRunnerEngine() {
   // [PRO 13] Comparativa con sesiones anteriores
   const compareWithPreviousSessions = useCallback(async (): Promise<any> => {
     const previousData = loadFromLocalStorage(`lesson_${lesson?.id}_history`, []);
-    
+
     if (previousData.length === 0) return null;
 
     const lastSession = previousData[previousData.length - 1];
@@ -528,13 +529,13 @@ export default function LessonRunnerEngine() {
   // [PRO 17] Micrófono para pronunciación
   const startPronunciationCheck = useCallback(async (): Promise<void> => {
     if (!('webkitSpeechRecognition' in window)) {
-      console.error('Speech Recognition no soportado');
+      // No soportado
       return;
     }
 
     trackEvent('pronunciation_check_start', {});
     // Implementación completa requeriría Web Speech API
-    console.log('🎤 Iniciando verificación de pronunciación...');
+    // Pronunciación iniciada
   }, [trackEvent]);
 
   // [PRO 18] Editor de notas avanzado con sincronización
@@ -548,7 +549,7 @@ export default function LessonRunnerEngine() {
   // [PRO 19] Sistema de pistas inteligentes (3 niveles)
   const getIntelligentHint = useCallback((question: QuizQuestion, hintLevel: 1 | 2 | 3 = 1): string => {
     const hints = question.hints || [];
-    
+
     if (hints[hintLevel - 1]) return hints[hintLevel - 1];
 
     switch (hintLevel) {
@@ -586,18 +587,18 @@ export default function LessonRunnerEngine() {
         })
       });
     } catch (e) {
-      console.error('Error sincronizando:', e);
+      // Error sincronizando
     }
   }, [userId, lesson, stats, analyticsEvents]);
 
   // [PRO 22] Análisis de patrones de aprendizaje
   const identifyLearningPattern = useCallback((): string => {
     const correctRatio = calculateAccuracy() / 100;
-    
+
     if (correctRatio >= 0.9) return 'Visual Learner - Responde rápido a ejercicios';
     if (stats.averageResponseTime > 30) return 'Analytical Learner - Necesita más tiempo para pensar';
     if (hintsUsed > stats.totalQuestionsAnswered * 0.3) return 'Support Learner - Usa muchas pistas';
-    
+
     return 'Balanced Learner';
   }, [calculateAccuracy, stats, hintsUsed]);
 
@@ -655,7 +656,7 @@ export default function LessonRunnerEngine() {
   // [PRO 27] Sistema de notificaciones push
   const sendPushNotification = useCallback((title: string, message: string): void => {
     if (!('Notification' in window)) return;
-    
+
     if (Notification.permission === 'granted') {
       new Notification(title, { body: message });
     }
@@ -671,9 +672,9 @@ export default function LessonRunnerEngine() {
   // [PRO 29] Predicción de completación
   const predictCompletionTime = useCallback((): number => {
     const avgTimePerQuestion = stats.averageResponseTime || 15;
-    const remainingQuestions = lesson?.stages.reduce((acc, stage) => 
+    const remainingQuestions = lesson?.stages.reduce((acc, stage) =>
       acc + (stage.questions?.length || 0), 0) || 0;
-    
+
     return Math.round((remainingQuestions - stats.totalQuestionsAnswered) * avgTimePerQuestion);
   }, [stats, lesson]);
 
@@ -687,7 +688,7 @@ export default function LessonRunnerEngine() {
   // [PRO 31] Generador de flashcards automáticos
   const generateFlashcards = useCallback((): any[] => {
     const flashcards: any[] = [];
-    
+
     answerHistory.filter(a => !a.isCorrect).forEach(answer => {
       flashcards.push({
         question: answer.question,
@@ -703,14 +704,14 @@ export default function LessonRunnerEngine() {
   const scheduleSpacedRepetition = useCallback((questionId: string): Date => {
     const intervals = [1, 3, 7, 14, 30]; // días
     const lastReview = loadFromLocalStorage(`last_review_${questionId}`, null);
-    
+
     if (!lastReview) {
       return new Date(Date.now() + intervals[0] * 24 * 60 * 60 * 1000);
     }
 
     const daysSinceReview = Math.floor((Date.now() - lastReview) / (24 * 60 * 60 * 1000));
     const nextInterval = intervals.find(i => i > daysSinceReview) || 30;
-    
+
     return new Date(Date.now() + nextInterval * 24 * 60 * 60 * 1000);
   }, [loadFromLocalStorage]);
 
@@ -727,7 +728,7 @@ export default function LessonRunnerEngine() {
       });
       trackEvent('shared_with_group', { groupId });
     } catch (e) {
-      console.error('Error compartiendo:', e);
+      // Error compartiendo
     }
   }, [userId, lesson, stats, trackEvent]);
 
@@ -754,7 +755,7 @@ export default function LessonRunnerEngine() {
   // [PRO 36] Recuperación de sesiones previas
   const recoverPreviousSession = useCallback((): boolean => {
     const saved = loadFromLocalStorage(`session_${lesson?.id}`, null);
-    
+
     if (saved && Date.now() - saved.timestamp < 24 * 60 * 60 * 1000) {
       setCurrentStageIndex(saved.currentStageIndex);
       setCurrentQuestionIndex(saved.currentQuestionIndex);
@@ -781,9 +782,9 @@ export default function LessonRunnerEngine() {
   // [PRO 38] Exportar a formatos múltiples
   const exportInMultipleFormats = useCallback(async (formats: ('json' | 'csv' | 'pdf')[]): Promise<void> => {
     const report = generateDetailedReport();
-    
+
     formats.forEach(format => {
-      console.log(`📤 Exportando en formato: ${format}`);
+      // Exportando formato
       trackEvent(`export_${format}`, {});
     });
   }, [generateDetailedReport, trackEvent]);
@@ -791,11 +792,11 @@ export default function LessonRunnerEngine() {
   // [PRO 39] Integración de gamificación avanzada
   const calculateBadges = useCallback((): string[] => {
     const badges: string[] = [];
-    
+
     if (calculateAccuracy() >= 90) badges.push('🥇 Gold Badge');
     if (stats.streakCount > 20) badges.push('🔥 Streak Master');
     if (stats.perfectStages > lesson?.stages.length! * 0.5) badges.push('⭐ Stage Master');
-    
+
     return badges;
   }, [calculateAccuracy, stats, lesson]);
 
@@ -832,26 +833,26 @@ export default function LessonRunnerEngine() {
   // [PRO 43] Análisis de interferencia de idiomas
   const analyzeLanguageInterference = useCallback((): string => {
     const errorPatterns = answerHistory.filter(a => !a.isCorrect).map(a => a.answer);
-    
+
     if (errorPatterns.some(p => p && p.includes(' '))) {
       return 'Posible interferencia de estructura del español';
     }
-    
+
     return 'Patrones de error normales';
   }, [answerHistory]);
 
   // [PRO 44] Sistema de mentoría
   const requestMentor = useCallback(async (topic: string): Promise<void> => {
     trackEvent('mentor_requested', { topic });
-    console.log(`📞 Solicitando mentor para: ${topic}`);
+    // Mentor solicitado
   }, [trackEvent]);
 
   // [PRO 45] Análisis predictivo de éxito
   const predictSuccessRate = useCallback((): number => {
     if (stats.totalQuestionsAnswered < 10) return 0;
-    
+
     const currentAccuracy = calculateAccuracy();
-    const trend = answerHistory.length > 5 
+    const trend = answerHistory.length > 5
       ? answerHistory.slice(-5).filter(a => a.isCorrect).length / 5
       : 0.5;
 
@@ -874,7 +875,7 @@ export default function LessonRunnerEngine() {
   // [PRO 48] Integración de biometría
   const authenticateWithBiometric = useCallback(async (): Promise<boolean> => {
     if (!window.isSecureContext) return false;
-    
+
     try {
       // Simulación de WebAuthn
       trackEvent('biometric_auth_attempted', {});
@@ -917,8 +918,8 @@ export default function LessonRunnerEngine() {
 
   // [NORMAL 2] Añadir bookmarks
   const addBookmark = useCallback((stageId: string): void => {
-    setBookmarks(prev => 
-      prev.includes(stageId) 
+    setBookmarks(prev =>
+      prev.includes(stageId)
         ? prev.filter(id => id !== stageId)
         : [...prev, stageId]
     );
@@ -1034,7 +1035,7 @@ export default function LessonRunnerEngine() {
   // [NORMAL 18] Reproducción de video de explicación
   const playExplanationVideo = useCallback((videoId: string): void => {
     trackEvent('explanation_video_played', { videoId });
-    console.log(`🎬 Reproduciendo: ${videoId}`);
+    // Reproduciendo
   }, [trackEvent]);
 
   // [NORMAL 19] Limpiar datos locales
@@ -1118,45 +1119,43 @@ export default function LessonRunnerEngine() {
   // ==================== EFECTO PARA CARGA DE LECCIÓN =======================
   // ============================================================================
 
-useEffect(() => {
-  const initLesson = async () => {
-    try {
-      const lessonId = params?.lessonId as string;
-      if (!lessonId) throw new Error("ID inválido");
 
-      const res = await fetch(`${API_URL}/api/v1/lessons/${lessonId}`, { cache: 'no-store' });
-      if (!res.ok) throw new Error(`Error ${res.status}: No se pudo cargar la lección`);
+  useEffect(() => {
+    const initLesson = async () => {
+      try {
+        const lessonId = params?.lessonId as string;
+        if (!lessonId) throw new Error("ID inválido");
 
-      const data = await res.json();
+        const { data } = await apiClient.get(`/lessons/${lessonId}`);
 
-      const normalizedStages = data.stages.map((s: any) => {
-        if (s.type === 'lecture' && s.content && !s.parts) {
-          s.parts = [{ visual: s.content.visual || s.content.text, audio: s.content.audio || "" }];
+        const normalizedStages = data.stages.map((s: any) => {
+          if (s.type === 'lecture' && s.content && !s.parts) {
+            s.parts = [{ visual: s.content.visual || s.content.text, audio: s.content.audio || "" }];
+          }
+          if ((s.type === 'gamified_quiz' || s.type === 'quiz') && s.content?.questions && !s.questions) {
+            s.questions = s.content.questions;
+          }
+          return s;
+        });
+
+        data.stages = normalizedStages;
+        setLesson(data);
+
+        // estas llamadas NO deben meter dependencias nuevas:
+        if (isPro) {
+          recoverPreviousSession(); // useCallback
         }
-        if ((s.type === 'gamified_quiz' || s.type === 'quiz') && s.content?.questions && !s.questions) {
-          s.questions = s.content.questions;
-        }
-        return s;
-      });
-
-      data.stages = normalizedStages;
-      setLesson(data);
-
-      // estas llamadas NO deben meter dependencias nuevas:
-      if (isPro) {
-        recoverPreviousSession(); // useCallback
+        loadSavedBookmarks();       // useCallback
+      } catch (err: any) {
+        setError(err.message || "No se pudo cargar la lección");
+      } finally {
+        setLoading(false);
       }
-      loadSavedBookmarks();       // useCallback
-    } catch (err: any) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
 
-  initLesson();
-  // 👇 IMPORTANTE: sin lesson?.id ni otras refs inestables
-}, [params, isPro]);
+    initLesson();
+    // 👇 IMPORTANTE: sin lesson?.id ni otras refs inestables
+  }, [params, isPro]);
 
 
   // ============================================================================
@@ -1179,7 +1178,7 @@ useEffect(() => {
     }
   }, [currentStageIndex, currentQuestionIndex, lesson]);
 
-// ============================================================================
+  // ============================================================================
   // ==================== FUNCIÓN FINALIZAR LECCIÓN (CONECTADA) =================
   // ============================================================================
 
@@ -1195,43 +1194,23 @@ useEffect(() => {
     const baseXP = lesson?.total_xp || 100;
     const totalXP = baseXP + stats.xpAccumulated; // XP total ganado en esta sesión
 
-    // Datos para el Backend (según tu Schema ProgressUpdate)
-// En finishLesson...
-// ✅ CÓDIGO CORREGIDO
-// 1. Calcular total de preguntas reales
-const totalQuestions = lesson?.stages.reduce((acc, stage) => 
-    acc + (stage.questions ? stage.questions.length : 1), 0) || 1;
+    // 1. Calcular total de preguntas reales
+    const totalQuestions = lesson?.stages.reduce((acc, stage) =>
+      acc + (stage.questions ? stage.questions.length : 1), 0) || 1;
 
-const payload = {
-    lesson_id: lesson?.id,
-    lesson_type: lessonType,
-    current_step: totalQuestions, // Enviamos que completó todo
-    total_steps: totalQuestions,
-    score: accuracy,
-    stars: accuracy >= 90 ? 3 : accuracy >= 70 ? 2 : 1
-};
+    const payload = {
+      lesson_id: lesson?.id,
+      lesson_type: lessonType,
+      current_step: totalQuestions, // Enviamos que completó todo
+      total_steps: totalQuestions,
+      score: accuracy,
+      stars: accuracy >= 90 ? 3 : accuracy >= 70 ? 2 : 1
+    };
 
     try {
-      const token = Cookies.get('access_token');
-      
-      // 1. LLAMADA AL BACKEND PARA GUARDAR Y DESBLOQUEAR
-      if (token) {
-          const res = await fetch(`${API_URL}/api/v1/progress/complete`, {
-            method: 'POST',
-            headers: { 
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            },
-            body: JSON.stringify(payload)
-          });
-
-          if (!res.ok) {
-              console.error("Error guardando en servidor:", await res.text());
-              // No lanzamos error fatal para dejar al usuario ver su resultado localmente
-          } else {
-              console.log("✅ Progreso guardado y siguiente nivel desbloqueado!");
-          }
-      }
+      // LLAMADA AL BACKEND PARA GUARDAR Y DESBLOQUEAR
+      await apiClient.post('/progress/complete', payload);
+      // Progreso guardado
 
       // 2. GUARDADO LOCAL (FALLBACK Y UI RAPIDA)
       const progress: UserProgress = {
@@ -1248,12 +1227,13 @@ const payload = {
       saveToLocalStorage(`progress_${lesson?.id}`, progress);
 
     } catch (error) {
-      console.error("Error crítico al finalizar:", error);
+      // Error crítico manejado
     } finally {
       setIsSaving(false);
       setShowResults(true); // Muestra la pantalla de "Lección Completada"
     }
   };
+
 
   // ============================================================================
   // ==================== FUNCIÓN SIGUIENTE ETAPA ============================
@@ -1306,121 +1286,121 @@ const payload = {
   // ==================== FUNCIÓN VALIDAR RESPUESTA ===========================
   // ============================================================================
 
-const validateAnswer = (question: QuizQuestion) => {
-  let isCorrect = false;
-  const clean = (str: string) => (str ? str.trim() : "");
+  const validateAnswer = (question: QuizQuestion) => {
+    let isCorrect = false;
+    const clean = (str: string) => (str ? str.trim() : "");
 
-  // Tiempo de respuesta en segundos
-  const responseTime = responseStartTime
-    ? Math.floor((Date.now() - responseStartTime) / 1000)
-    : 0;
+    // Tiempo de respuesta en segundos
+    const responseTime = responseStartTime
+      ? Math.floor((Date.now() - responseStartTime) / 1000)
+      : 0;
 
-  // --- 1. LÓGICA DE CORRECCIÓN ---
-  if (
-    question.type === "quiz_choice" ||
-    question.type === "listening_match" ||
-    (!question.type && question.options)
-  ) {
-    isCorrect =
-      normalizeText(selectedOption || "") ===
-      normalizeText(question.correct_answer || "");
-  } else if (question.type === "fill_input") {
-    const answers = question.correct_answers || [question.correct_answer || ""];
-    isCorrect = answers.some(
-      (ans) => normalizeText(ans) === normalizeText(textInput)
-    );
-  } else if (question.type === "order_sentence") {
-    if (question.correct_order) {
+    // --- 1. LÓGICA DE CORRECCIÓN ---
+    if (
+      question.type === "quiz_choice" ||
+      question.type === "listening_match" ||
+      (!question.type && question.options)
+    ) {
       isCorrect =
-        JSON.stringify(sentenceBuilder) ===
-        JSON.stringify(question.correct_order);
-    } else {
-      isCorrect =
-        normalizeText(sentenceBuilder.join(" ")) ===
+        normalizeText(selectedOption || "") ===
         normalizeText(question.correct_answer || "");
+    } else if (question.type === "fill_input") {
+      const answers = question.correct_answers || [question.correct_answer || ""];
+      isCorrect = answers.some(
+        (ans) => normalizeText(ans) === normalizeText(textInput)
+      );
+    } else if (question.type === "order_sentence") {
+      if (question.correct_order) {
+        isCorrect =
+          JSON.stringify(sentenceBuilder) ===
+          JSON.stringify(question.correct_order);
+      } else {
+        isCorrect =
+          normalizeText(sentenceBuilder.join(" ")) ===
+          normalizeText(question.correct_answer || "");
+      }
     }
-  }
 
-  // --- 2. CÁLCULO DE XP ---
-  const xpGained = isPro
-    ? calculateAdvancedXP(isCorrect, question.difficulty || "medium", responseTime)
-    : isCorrect
-    ? 10
-    : 0;
+    // --- 2. CÁLCULO DE XP ---
+    const xpGained = isPro
+      ? calculateAdvancedXP(isCorrect, question.difficulty || "medium", responseTime)
+      : isCorrect
+        ? 10
+        : 0;
 
-  // --- 3. ACTUALIZAR ESTADÍSTICAS ---
-  setStats((prev) => ({
-    correctAnswers: prev.correctAnswers + (isCorrect ? 1 : 0),
-    totalQuestionsAnswered: prev.totalQuestionsAnswered + 1,
-    xpAccumulated: prev.xpAccumulated + xpGained,
-    timeSpent: prev.timeSpent + responseTime,
-    // accuracy se recalcula después, pero si quieres aquí:
-    accuracy:
-      prev.totalQuestionsAnswered + 1 > 0
-        ? Math.round(
+    // --- 3. ACTUALIZAR ESTADÍSTICAS ---
+    setStats((prev) => ({
+      correctAnswers: prev.correctAnswers + (isCorrect ? 1 : 0),
+      totalQuestionsAnswered: prev.totalQuestionsAnswered + 1,
+      xpAccumulated: prev.xpAccumulated + xpGained,
+      timeSpent: prev.timeSpent + responseTime,
+      // accuracy se recalcula después, pero si quieres aquí:
+      accuracy:
+        prev.totalQuestionsAnswered + 1 > 0
+          ? Math.round(
             ((prev.correctAnswers + (isCorrect ? 1 : 0)) /
               (prev.totalQuestionsAnswered + 1)) *
-              100
+            100
           )
-        : 0,
-    streakCount: isCorrect ? prev.streakCount + 1 : 0,
-    perfectStages: prev.perfectStages,
-    averageResponseTime:
-      prev.totalQuestionsAnswered + 1 > 0
-        ? Math.round(
+          : 0,
+      streakCount: isCorrect ? prev.streakCount + 1 : 0,
+      perfectStages: prev.perfectStages,
+      averageResponseTime:
+        prev.totalQuestionsAnswered + 1 > 0
+          ? Math.round(
             (prev.averageResponseTime * prev.totalQuestionsAnswered +
               responseTime) /
-              (prev.totalQuestionsAnswered + 1)
+            (prev.totalQuestionsAnswered + 1)
           )
-        : responseTime,
-  }));
+          : responseTime,
+    }));
 
-  // --- 4. GUARDAR EN HISTORIAL ---
-  setAnswerHistory((prev) => [
-    ...prev,
-    {
-      question: question.question,
-      answer:
-        selectedOption ||
-        textInput ||
-        sentenceBuilder.join(" "),
-      correctAnswer:
-        question.correct_answer ||
-        (question.correct_order
-          ? question.correct_order.join(" ")
-          : ""),
+    // --- 4. GUARDAR EN HISTORIAL ---
+    setAnswerHistory((prev) => [
+      ...prev,
+      {
+        question: question.question,
+        answer:
+          selectedOption ||
+          textInput ||
+          sentenceBuilder.join(" "),
+        correctAnswer:
+          question.correct_answer ||
+          (question.correct_order
+            ? question.correct_order.join(" ")
+            : ""),
+        isCorrect,
+        responseTime,
+        difficulty: question.difficulty,
+        category: question.category,
+        type: question.type,
+      },
+    ]);
+
+    // --- 5. SETEAR FEEDBACK PARA MOSTRAR EN UI ---
+    setFeedback({
       isCorrect,
-      responseTime,
-      difficulty: question.difficulty,
-      category: question.category,
-      type: question.type,
-    },
-  ]);
-
-  // --- 5. SETEAR FEEDBACK PARA MOSTRAR EN UI ---
-  setFeedback({
-    isCorrect,
-    text: isCorrect ? "¡Excelente! 🎉" : "Respuesta Incorrecta",
-    explanation: question.explanation,
-    correctAnswer: isCorrect
-      ? undefined
-      : question.correct_answer ||
+      text: isCorrect ? "¡Excelente! 🎉" : "Respuesta Incorrecta",
+      explanation: question.explanation,
+      correctAnswer: isCorrect
+        ? undefined
+        : question.correct_answer ||
         (question.correct_order
           ? question.correct_order.join(" ")
           : ""),
-    responseTime,
-  });
+      responseTime,
+    });
 
-  // --- 6. AUDIO OPCIONAL ---
-  if (soundEnabled) {
-    speakText(isCorrect ? "Correct!" : "Check the explanation.");
-  }
+    // --- 6. AUDIO OPCIONAL ---
+    if (soundEnabled) {
+      speakText(isCorrect ? "Correct!" : "Check the explanation.");
+    }
 
-  // --- 7. AUTO-SAVE SESIÓN EN PRO ---
-  if (isPro) {
-    saveSessionState();
-  }
-};
+    // --- 7. AUTO-SAVE SESIÓN EN PRO ---
+    if (isPro) {
+      saveSessionState();
+    }
+  };
 
 
   // ============================================================================
@@ -1483,40 +1463,40 @@ const validateAnswer = (question: QuizQuestion) => {
       {isPro ? (
         <header className="h-16 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 px-6 flex items-center justify-between sticky top-0 z-20">
           <div className="flex items-center gap-4">
-            <button onClick={handleExit} className="p-2 hover:bg-white/10 rounded-full transition-colors text-slate-400 hover:text-white">
+            <button onClick={handleExit} className="p-2 hover:bg-white/10 rounded-none transition-colors text-slate-400 hover:text-white">
               <X size={24} />
             </button>
             <div className="hidden md:flex flex-col">
-              <span className="text-[10px] uppercase tracking-widest text-amber-500 font-bold">Titanium Session</span>
-              <div className="flex items-center gap-2 text-indigo-400 text-xs font-bold">
-                <Zap size={12} fill="currentColor" /> {stats.correctAnswers} Aciertos
+              <span className="text-[10px] uppercase tracking-widest text-teal-500 font-black font-serif italic">Titanium Executive</span>
+              <div className="flex items-center gap-2 text-teal-400 text-xs font-black">
+                <Zap size={12} fill="currentColor" /> {stats.correctAnswers} ACIERTOS
               </div>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
             {showAnalytics && (
-              <div className="flex items-center gap-4 bg-slate-800/80 px-4 py-2 rounded-lg border border-slate-700 text-xs">
+              <div className="flex items-center gap-4 bg-slate-800/80 px-4 py-2 rounded-none border border-slate-700 text-[10px] font-black uppercase">
                 <div>⚡ {Math.round(stats.xpAccumulated / Math.max(seconds, 1) * 60)} XP/min</div>
                 <div>📊 {calculateAccuracy()}%</div>
               </div>
             )}
-            <div className="flex items-center gap-3 bg-slate-800/80 px-4 py-2 rounded-full border border-slate-700 shadow-inner">
-              <Clock size={16} className="text-emerald-400 animate-pulse" />
-              <span className="font-mono text-xl font-bold tracking-widest text-emerald-50">{formatTime(seconds)}</span>
+            <div className="flex items-center gap-3 bg-slate-800/80 px-4 py-2 rounded-none border border-slate-700 shadow-inner">
+              <Clock size={16} className="text-teal-400 animate-pulse" />
+              <span className="font-mono text-xl font-black tracking-widest text-teal-50">{formatTime(seconds)}</span>
             </div>
-            <button onClick={() => setShowSettings(!showSettings)} className="p-2 hover:bg-white/10 rounded-full">
+            <button onClick={() => setShowSettings(!showSettings)} className="p-2 hover:bg-white/10 rounded-none border border-transparent hover:border-slate-700">
               <Settings size={20} />
             </button>
           </div>
         </header>
       ) : (
-        <header className="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between sticky top-0 z-20">
-          <button onClick={handleExit} className="text-slate-400 hover:text-slate-600"><XCircle /></button>
-          <div className="w-1/3 h-2 bg-slate-100 rounded-full overflow-hidden">
-            <div className="h-full bg-blue-600 transition-all duration-500" style={{ width: `${getProgressPercentage()}%` }}></div>
+        <header className="h-12 bg-white border-b border-slate-200 px-6 flex items-center justify-between sticky top-0 z-20">
+          <button onClick={handleExit} className="text-slate-400 hover:text-amber-600 transition-colors"><X size={20} /></button>
+          <div className="w-1/3 h-1 bg-slate-100 rounded-none overflow-hidden">
+            <div className="h-full bg-amber-600 transition-all duration-500" style={{ width: `${getProgressPercentage()}%` }}></div>
           </div>
-          <span className="font-bold text-slate-700 hidden sm:block truncate w-32 text-right">{lesson?.title}</span>
+          <span className="font-black text-slate-800 hidden sm:block truncate w-48 text-right text-[10px] uppercase tracking-widest font-serif italic">{lesson?.title}</span>
         </header>
       )}
 
@@ -1578,27 +1558,30 @@ const validateAnswer = (question: QuizQuestion) => {
         {/* MODO 1: LECTURE */}
         {(currentStage.type === 'lecture' || currentStage.type === 'theory') && currentStage.parts && (
           <div className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 animate-in fade-in relative z-10">
-            <div className={`rounded-3xl border-4 shadow-xl relative min-h-[300px] flex items-end justify-center overflow-hidden ${isPro ? 'bg-gradient-to-b from-slate-900 to-indigo-950 border-slate-800' : 'bg-gradient-to-br from-blue-50 to-white border-white'}`}>
+            <div className={`rounded-none border-2 shadow-sm relative min-h-[400px] flex items-end justify-center overflow-hidden ${isPro ? 'bg-slate-900 border-slate-800' : 'bg-slate-100 border-slate-200'}`}>
               <div className="absolute inset-0"><Avatar3D /></div>
             </div>
             <div className="flex flex-col justify-center">
-              <div className={`p-8 rounded-3xl shadow-lg border ${isPro ? 'bg-slate-900/80 border-slate-700 backdrop-blur-md' : 'bg-white border-slate-100'}`}>
-                <h2 className={`text-2xl font-black mb-6 ${isPro ? 'text-white' : 'text-slate-800'}`}>{currentStage.title}</h2>
-                <div className={`prose lg:prose-xl mb-8 whitespace-pre-wrap ${isPro ? 'text-slate-300' : 'text-slate-600'}`}>
+              <div className={`p-8 rounded-none border ${isPro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
+                <div className="flex items-center gap-2 mb-4">
+                   <Zap size={14} className="text-teal-600" />
+                   <h2 className={`text-xs font-black uppercase tracking-[0.3em] font-serif italic ${isPro ? 'text-teal-400' : 'text-slate-800'}`}>{currentStage.title}</h2>
+                </div>
+                <div className={`text-sm font-black uppercase tracking-widest mb-8 leading-relaxed opacity-80 ${isPro ? 'text-slate-400' : 'text-slate-500'}`}>
                   {currentStage.parts[lecturePartIndex]?.visual}
                 </div>
-                <div className="flex gap-4">
-                  <button onClick={() => speakText(currentStage.parts![lecturePartIndex]?.audio)} className={`p-4 rounded-xl transition-colors ${isPro ? 'bg-slate-800 hover:bg-slate-700 text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-800'}`}>
-                    <Volume2 />
+                <div className="flex gap-2">
+                  <button onClick={() => speakText(currentStage.parts![lecturePartIndex]?.audio)} className={`p-4 rounded-none border transition-colors ${isPro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-white' : 'bg-slate-50 border-slate-200 hover:bg-slate-100 text-slate-800'}`}>
+                    <Volume2 size={18} />
                   </button>
                   <button
                     onClick={() => {
                       if (lecturePartIndex < (currentStage.parts?.length || 0) - 1) setLecturePartIndex(prev => prev + 1);
                       else nextStage();
                     }}
-                    className={`flex-1 font-bold py-4 rounded-xl flex justify-center gap-2 shadow-lg ${isPro ? 'bg-indigo-600 hover:bg-indigo-500 shadow-indigo-900/50 text-white' : 'bg-blue-600 hover:bg-blue-700 shadow-blue-200 text-white'}`}
+                    className={`flex-1 font-black py-4 rounded-none flex justify-center gap-3 text-[10px] uppercase tracking-[0.2em] transition-all ${isPro ? 'bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-900/20' : 'bg-amber-600 hover:bg-amber-700 text-white'}`}
                   >
-                    CONTINUAR <ArrowRight />
+                    SIGUIENTE FASE <ArrowRight size={14} />
                   </button>
                 </div>
 
@@ -1617,14 +1600,14 @@ const validateAnswer = (question: QuizQuestion) => {
         {/* MODO 2: QUIZ */}
         {(currentStage.type === 'gamified_quiz' || currentStage.type === 'quiz') && currentStage.questions && (
           <div className="max-w-2xl w-full flex flex-col justify-center animate-in zoom-in-95 relative z-10">
-            <div className={`p-8 rounded-3xl shadow-xl border ${isPro ? 'bg-slate-900/90 border-slate-700 shadow-black/50' : 'bg-white border-slate-100'}`}>
-              <div className="flex justify-between items-center mb-6">
-                <span className={`text-xs font-bold uppercase tracking-widest ${isPro ? 'text-slate-500' : 'text-slate-400'}`}>
-                  Pregunta {currentQuestionIndex + 1} de {currentStage.questions.length}
+            <div className={`p-8 rounded-none border ${isPro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
+              <div className="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
+                <span className={`text-[9px] font-black uppercase tracking-[0.4em] ${isPro ? 'text-slate-500' : 'text-slate-400'}`}>
+                  MOD {currentQuestionIndex + 1} / {currentStage.questions.length}
                 </span>
                 {isPro && (
-                  <div className="flex items-center gap-4 text-xs">
-                    <span>📊 {calculateAccuracy()}%</span>
+                  <div className="flex items-center gap-6 text-[9px] font-black uppercase tracking-widest text-teal-400">
+                    <span>ACC: {calculateAccuracy()}%</span>
                     <span>🔥 {stats.streakCount}</span>
                   </div>
                 )}
@@ -1636,7 +1619,7 @@ const validateAnswer = (question: QuizQuestion) => {
 
                 return (
                   <>
-                    <h2 className={`text-xl font-bold mb-8 ${isPro ? 'text-white' : 'text-slate-800'}`}>{activeQuestion.question}</h2>
+                    <h2 className={`text-sm font-black uppercase tracking-widest mb-10 font-serif italic ${isPro ? 'text-white' : 'text-slate-800'}`}>{activeQuestion.question}</h2>
 
                     {activeQuestion.type === 'listening_match' && (
                       <div className="mb-8 flex justify-center">
@@ -1705,26 +1688,26 @@ const validateAnswer = (question: QuizQuestion) => {
                             key={idx}
                             onClick={() => { setSelectedOption(opt); }}
                             disabled={!!feedback}
-                            className={`w-full p-5 rounded-xl border-2 text-left font-medium transition-all group
+                            className={`w-full p-5 rounded-none border-2 text-left font-black text-[10px] uppercase tracking-widest transition-all group
                               ${selectedOption === opt
-                                ? (isPro ? 'bg-indigo-900/50 border-indigo-500 text-white' : 'bg-blue-100 border-blue-500 text-blue-800')
-                                : (isPro ? 'bg-slate-800 border-slate-700 text-slate-300 hover:border-indigo-500 hover:bg-indigo-900/30' : 'bg-white border-slate-200 text-slate-700 hover:border-blue-400 hover:bg-blue-50')
+                                ? (isPro ? 'bg-amber-900/20 border-amber-600 text-amber-400' : 'bg-amber-50 border-amber-600 text-amber-900')
+                                : (isPro ? 'bg-slate-800 border-slate-700 text-slate-400 hover:border-amber-600' : 'bg-white border-slate-200 text-slate-500 hover:border-amber-400')
                               }
                             `}
                           >
                             <div className="flex justify-between items-center">
                               <span>{opt}</span>
-                              {selectedOption === opt && <div className="w-4 h-4 rounded-full bg-current"></div>}
+                              {selectedOption === opt && <div className="w-2 h-2 bg-amber-600"></div>}
                             </div>
                           </button>
                         ))}
-                        <div className="flex gap-2 pt-4">
-                          <button onClick={() => validateAnswer(activeQuestion)} disabled={!selectedOption || !!feedback} className={`flex-1 mt-4 font-bold py-3 rounded-xl disabled:opacity-50 ${isPro ? 'bg-indigo-600 hover:bg-indigo-500 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}>
-                            CONFIRMAR
+                        <div className="flex gap-2 pt-6">
+                          <button onClick={() => validateAnswer(activeQuestion)} disabled={!selectedOption || !!feedback} className={`flex-1 font-black py-4 rounded-none text-[10px] uppercase tracking-[0.2em] disabled:opacity-50 transition-all ${isPro ? 'bg-amber-600 hover:bg-amber-700 text-white' : 'bg-amber-600 hover:bg-amber-700 text-white'}`}>
+                            VALIDAR RESPUESTA
                           </button>
                           {isPro && (
-                            <button onClick={() => skipQuestion()} className="px-4 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 flex items-center gap-2">
-                              <SkipForward size={18} />
+                            <button onClick={() => skipQuestion()} className="px-5 py-4 rounded-none bg-slate-800 border border-slate-700 hover:bg-slate-700 transition-colors">
+                              <SkipForward size={18} className="text-slate-400" />
                             </button>
                           )}
                         </div>
@@ -1732,26 +1715,19 @@ const validateAnswer = (question: QuizQuestion) => {
                     )}
 
                     {feedback && (
-                      <div className={`mt-6 p-6 rounded-2xl border-2 animate-in slide-in-from-bottom-4 fade-in duration-300 ${feedback.isCorrect ? (isPro ? 'bg-emerald-900/30 border-emerald-500/50 text-emerald-300' : 'bg-green-50 border-green-200 text-green-800') : (isPro ? 'bg-red-900/30 border-red-500/50 text-red-300' : 'bg-red-50 border-red-200 text-red-800')}`}>
-                        <div className="flex items-center gap-3 mb-3">
-                          {feedback.isCorrect ? <CheckCircle2 size={28} /> : <XIcon size={28} />}
-                          <h3 className="text-lg font-black uppercase tracking-wide">{feedback.isCorrect ? "Correcto" : "Incorrecto"}</h3>
-                          {isPro && feedback.responseTime && <span className="ml-auto text-sm">⏱️ {feedback.responseTime}s</span>}
+                      <div className={`mt-8 p-6 rounded-none border-l-4 animate-in slide-in-from-bottom-2 duration-300 ${feedback.isCorrect ? 'bg-amber-900/10 border-amber-600 text-amber-400' : 'bg-red-900/10 border-red-600 text-red-400'}`}>
+                        <div className="flex items-center gap-3 mb-4">
+                          {feedback.isCorrect ? <CheckCircle2 size={24} /> : <XIcon size={24} />}
+                          <h3 className="text-[10px] font-black uppercase tracking-[0.3em]">{feedback.isCorrect ? "Sync Correct" : "Sync Error"}</h3>
                         </div>
                         {!feedback.isCorrect && feedback.correctAnswer && (
-                          <div className="mb-4 text-sm opacity-90">
-                            <span className="font-bold">Respuesta correcta:</span> <br />
-                            <span className="font-mono bg-black/20 px-2 py-1 rounded mt-1 inline-block">{feedback.correctAnswer}</span>
+                          <div className="mb-4 text-[11px] font-bold uppercase tracking-widest opacity-80">
+                            <span className="text-slate-500">Expectativa:</span> <br />
+                            <span className="text-red-400 mt-1 inline-block">{feedback.correctAnswer}</span>
                           </div>
                         )}
-                        {feedback.explanation && (
-                          <div className={`p-4 rounded-xl text-sm leading-relaxed whitespace-pre-line ${isPro ? 'bg-black/30' : 'bg-white/60'}`}>
-                            <span className="font-bold block mb-1">💡 Análisis:</span>
-                            {feedback.explanation}
-                          </div>
-                        )}
-                        <button onClick={nextQuestionOrStage} className={`w-full mt-6 py-4 rounded-xl font-black uppercase tracking-widest shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98] ${feedback.isCorrect ? (isPro ? 'bg-emerald-600 hover:bg-emerald-500 text-white' : 'bg-green-600 hover:bg-green-500 text-white') : (isPro ? 'bg-red-600 hover:bg-red-500 text-white' : 'bg-red-600 hover:bg-red-500 text-white')}`}>
-                          CONTINUAR
+                        <button onClick={nextQuestionOrStage} className={`w-full mt-6 py-4 rounded-none font-black text-[10px] uppercase tracking-[0.3em] transition-all ${feedback.isCorrect ? 'bg-amber-600 hover:bg-amber-700 text-white' : 'bg-red-600 hover:bg-red-700 text-white'}`}>
+                          PROCESAR SIGUIENTE
                         </button>
                       </div>
                     )}
