@@ -52,17 +52,37 @@ export const CURRICULUM_ZH: LevelSection[] = [
   {
     id: 'ZH-A2', title: 'Nivel A2: Operaciones Empresariales', description: 'Comunicación fluida en el entorno laboral chino.', color: 'blue',
     lessons: Array.from({ length: 10 }, (_, i) => ({
-      id: `zh-a2-${i + 1}`, title: `Operaciones Zh Pt. ${i + 1}`, description: 'Comunicación operativa.',
-      type: 'chat', locked: true, completed: false, stars: 0, position: (['center', 'left', 'center', 'right'][i % 4] as any),
-      aiPrompt: 'Handle business operations in China.'
+      id: `zh-a2-${i + 1}`,
+      title: [
+        'Presentación Trabajo', 'Rutina de Oficina', 'Agendar Citas', 
+        '寻求帮助 (Pedir Ayuda)', '汇报过去 (Informar Pasado)', '出差 (Viaje de Negocios)', 
+        '接待客户 (Atender Clientes)', '技术问题 (Soporte Técnico)', '工作安排 (Instrucciones)', 'Examen Final A2'
+      ][i],
+      description: [
+        'Presentarse y describir tu puesto o cargo.', 'Describir tus tareas diarias de oficina.', 'Coordinar fechas y agendar reuniones.',
+        'Cómo solicitar ayuda y hacer preguntas.', 'Informar sobre tareas completadas en el pasado.', 'Reservas de transporte y viajes corporativos.',
+        'Vocabulario para recibir y atender clientes.', 'Reportar fallas técnicas de red y computadoras.', 'Delegación de tareas y confirmación rápida.', 'Evaluación integral y síntesis del nivel A2.'
+      ][i],
+      type: 'lecture', locked: true, completed: false, stars: 0, position: (['center', 'left', 'center', 'right'][i % 4] as any),
+      aiPrompt: `Roleplay for A2 Mandarin: ${['Introduce yourself professionally', 'Describe office routine', 'Coordinate a meeting'][i % 3]}`
     }))
   },
   {
     id: 'ZH-B1', title: 'Nivel B1: Gestión y Guanxi', description: 'Construyendo relaciones y negociando en mandarín.', color: 'emerald',
     lessons: Array.from({ length: 10 }, (_, i) => ({
-      id: `zh-b1-${i + 1}`, title: `Gestión Zh Pt. ${i + 1}`, description: 'Negociación y cultura.',
-      type: 'grammar', locked: true, completed: false, stars: 0, position: (['center', 'left', 'center', 'right'][i % 4] as any),
-      aiPrompt: 'Master the art of Guanxi.'
+      id: `zh-b1-${i + 1}`,
+      title: [
+        '项目计划 (Plan de Proyecto)', '任务分配 (Delegar Tareas)', '主持会议 (Moderar Junta)', 
+        '谈判预算 (Negociar Costos)', '解决冲突 (Resolver Conflictos)', '员工评估 (Feedback)', 
+        '汇报业绩 (Reportar Resultados)', '团队决策 (Decisión en Equipo)', 'Guanxi y Conexiones', 'Examen Final B1'
+      ][i],
+      description: [
+        'Planificación, metas y plazos de proyectos.', 'Asignación de responsabilidades y fechas límites.', 'Conducir una reunión y moderar opiniones.',
+        'Negociar costos, gastos y presupuestos comerciales.', 'Mediar desacuerdos y calmar fricciones de equipo.', 'Brindar retroalimentación anual y elogiar.',
+        'Exponer reportes, estadísticas y crecimiento.', 'Toma de decisiones estratégicas colectivas.', 'Entender y cultivar la red Guanxi profesional.', 'Evaluación integral y síntesis del nivel B1.'
+      ][i],
+      type: 'lecture', locked: true, completed: false, stars: 0, position: (['center', 'left', 'center', 'right'][i % 4] as any),
+      aiPrompt: `Roleplay for B1 Mandarin: ${['Negotiate budget costs', 'Resolve a team conflict', 'Present sales results'][i % 3]}`
     }))
   },
   {

@@ -1,61 +1,385 @@
 {
   "id": "fr-a1-7",
-  "title": "Appels de Base",
-  "total_xp": 100,
+  "title": "L'Espace de Travail",
+  "total_xp": 300,
   "stages": [
     {
       "id": "theory-1",
       "type": "theory",
-      "title": "Appels de Base",
+      "title": "El Espacio de Trabajo",
       "parts": [
         {
-          "visual": "Gérer les appels entrants.",
-          "audio": "Bienvenue dans la leçon sur appels de base."
-        }
-      ]
-    },
-    {
-      "id": "drill-1",
-      "type": "pairing_drill",
-      "title": "Vocabulaire Clé",
-      "pairs": [
-        {
-          "id": "p1",
-          "en": "Office",
-          "es": "Bureau"
+          "visual": "Le bureau (El escritorio o la oficina) y La chaise (La silla). Los muebles base.",
+          "audio": "Le bureau et la chaise."
         },
         {
-          "id": "p2",
-          "en": "Manager",
-          "es": "Directeur"
+          "visual": "L'ordinateur (El ordenador o computadora) y Le document (El documento).",
+          "audio": "L'ordinateur et le document."
         },
         {
-          "id": "p3",
-          "en": "Meeting",
-          "es": "Réunion"
+          "visual": "Le stylo (El bolígrafo/pluma), Le papier (El papel) y La clé (La llave).",
+          "audio": "Le stylo, le papier et la clé."
         },
         {
-          "id": "p4",
-          "en": "File",
-          "es": "Dossier"
+          "visual": "Sur (Sobre / encima de) y Sous (Bajo / debajo de) - Para ubicar objetos.",
+          "audio": "Le stylo est sur la table. Le document est sous la chaise."
+        },
+        {
+          "visual": "Ejemplo práctico de oficina: Mon ordinateur noir est sur mon bureau gris (Mi computadora negra está sobre mi escritorio gris).",
+          "audio": "Mon ordinateur noir est sur mon bureau gris."
         }
       ]
     },
     {
       "id": "quiz-1",
       "type": "quiz",
-      "title": "Compréhension",
+      "title": "Práctica de Oficina",
       "questions": [
         {
           "type": "quiz_choice",
-          "question": "Comment dit-on 'Appels de Base' en français ?",
+          "question": "¿Cómo se dice 'Escritorio' u 'Oficina' en francés?",
           "options": [
-            "Appels de Base",
-            "Autre chose",
-            "Rien"
+            "Bureau",
+            "Chaise",
+            "Stylo"
           ],
-          "correct_answer": "Appels de Base",
-          "explanation": "C'est la base de cette unité."
+          "correct_answer": "Bureau",
+          "explanation": "Bureau significa tanto escritorio como oficina."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Computadora / Ordenador':",
+          "options": [
+            "Ordinateur",
+            "Téléphone",
+            "Document"
+          ],
+          "correct_answer": "Ordinateur",
+          "explanation": "Ordinateur significa computadora/ordenador."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Dónde se sienta uno típicamente?",
+          "options": [
+            "Sur la chaise",
+            "Sous le bureau",
+            "Dans le stylo"
+          ],
+          "correct_answer": "Sur la chaise",
+          "explanation": "Nos sentamos en una silla (sur la chaise)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa la preposición 'Sur' en español?",
+          "options": [
+            "Sobre / Encima de",
+            "Debajo de",
+            "Detrás de"
+          ],
+          "correct_answer": "Sobre / Encima de",
+          "explanation": "Sur significa encima de o sobre."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa 'Sous'?",
+          "options": [
+            "Debajo de",
+            "Encima de",
+            "Dentro de"
+          ],
+          "correct_answer": "Debajo de",
+          "explanation": "Sous significa debajo de / bajo."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Bolígrafo':",
+          "options": [
+            "Stylo",
+            "Papier",
+            "Clé"
+          ],
+          "correct_answer": "Stylo",
+          "explanation": "Stylo significa bolígrafo o pluma."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Llave'?",
+          "options": [
+            "Clé",
+            "Bureau",
+            "Table"
+          ],
+          "correct_answer": "Clé",
+          "explanation": "Clé significa llave."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Papel':",
+          "options": [
+            "Papier",
+            "Stylo",
+            "Clé"
+          ],
+          "correct_answer": "Papier",
+          "explanation": "Papier significa papel."
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el objeto o frase que escuchas:",
+          "tts_text": "L'ordinateur sur la table",
+          "options": [
+            "L'ordinateur sur la table",
+            "La chaise sous le bureau",
+            "Le stylo sur le papier"
+          ],
+          "correct_answer": "L'ordinateur sur la table"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el objeto o frase que escuchas:",
+          "tts_text": "Mon bureau",
+          "options": [
+            "Mon bureau",
+            "Ma chaise",
+            "Mon document"
+          ],
+          "correct_answer": "Mon bureau"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el objeto o frase que escuchas:",
+          "tts_text": "Le stylo noir",
+          "options": [
+            "Le stylo noir",
+            "Le stylo bleu",
+            "Le stylo vert"
+          ],
+          "correct_answer": "Le stylo noir"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el objeto o frase que escuchas:",
+          "tts_text": "La clé de bureau",
+          "options": [
+            "La clé de bureau",
+            "La chaise de bureau",
+            "Le document de bureau"
+          ],
+          "correct_answer": "La clé de bureau"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra o frase que escuchas:",
+          "tts_text": "Sur la table",
+          "options": [
+            "Sur la table",
+            "Sous la table",
+            "Dans la table"
+          ],
+          "correct_answer": "Sur la table"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra o frase que escuchas:",
+          "tts_text": "Sous le bureau",
+          "options": [
+            "Sous le bureau",
+            "Sur le bureau",
+            "Dans le bureau"
+          ],
+          "correct_answer": "Sous le bureau"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra o frase que escuchas:",
+          "tts_text": "Le papier",
+          "options": [
+            "Le papier",
+            "Le stylo",
+            "La clé"
+          ],
+          "correct_answer": "Le papier"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra o frase que escuchas:",
+          "tts_text": "Une chaise",
+          "options": [
+            "Une chaise",
+            "Un bureau",
+            "Une table"
+          ],
+          "correct_answer": "Une chaise"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'La computadora está sobre el escritorio'",
+          "parts": [
+            "L'ordinateur",
+            "est",
+            "sur",
+            "le",
+            "bureau"
+          ],
+          "correct_order": [
+            "L'ordinateur",
+            "est",
+            "sur",
+            "le",
+            "bureau"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'La llave está debajo de la silla'",
+          "parts": [
+            "La",
+            "clé",
+            "est",
+            "sous",
+            "la",
+            "chaise"
+          ],
+          "correct_order": [
+            "La",
+            "clé",
+            "est",
+            "sous",
+            "la",
+            "chaise"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Tengo un documento de papel'",
+          "parts": [
+            "J'ai",
+            "un",
+            "document",
+            "papier"
+          ],
+          "correct_order": [
+            "J'ai",
+            "un",
+            "document",
+            "papier"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'El bolígrafo azul está sobre el papel'",
+          "parts": [
+            "Le",
+            "stylo",
+            "bleu",
+            "est",
+            "sur",
+            "le",
+            "papier"
+          ],
+          "correct_order": [
+            "Le",
+            "stylo",
+            "bleu",
+            "est",
+            "sur",
+            "le",
+            "papier"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Es mi escritorio negro'",
+          "parts": [
+            "C'est",
+            "mon",
+            "bureau",
+            "noir"
+          ],
+          "correct_order": [
+            "C'est",
+            "mon",
+            "bureau",
+            "noir"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Dónde está el teléfono?'",
+          "parts": [
+            "Où",
+            "est",
+            "le",
+            "téléphone"
+          ],
+          "correct_order": [
+            "Où",
+            "est",
+            "le",
+            "téléphone"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Silla' en francés?",
+          "correct_answers": [
+            "Chaise"
+          ],
+          "hints": [
+            "C-H-A-I-S-E"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: L'ordinateur est ___ le bureau (encima de)",
+          "correct_answers": [
+            "sur"
+          ],
+          "hints": [
+            "S-U-R"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Llave' en francés?",
+          "correct_answers": [
+            "Clé",
+            "Cle"
+          ],
+          "hints": [
+            "C-L-É"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Le document est ___ la chaise (debajo de)",
+          "correct_answers": [
+            "sous"
+          ],
+          "hints": [
+            "S-O-U-S"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Papel'?",
+          "correct_answers": [
+            "Papier"
+          ],
+          "hints": [
+            "P-A-P-I-E-R"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Teléfono'?",
+          "correct_answers": [
+            "Téléphone",
+            "telephone"
+          ],
+          "hints": [
+            "T-É-L-É-P-H-O-N-E"
+          ]
         }
       ]
     }

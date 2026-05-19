@@ -1,0 +1,168 @@
+{
+  "id": "toeic_mock",
+  "title": "Simulador Oficial Completo TOEIC®",
+  "level": "B2/C1",
+  "description": "Simulación del examen oficial de certificación TOEIC® (Listening & Reading) con feedback inteligente de IA.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toeic-intro",
+      "type": "lecture",
+      "title": "TOEIC® Simulation: Instructions & Strategy",
+      "parts": [
+        {
+          "visual": "## 📝 Instrucciones del Simulador TOEIC®\n\nEste simulador recrea el examen real de **200 preguntas** dividido en:\n\n1. **Listening Section (Auditiva):** Evalúa tu capacidad de comprender conversaciones profesionales inglesas.\n2. **Reading Section (Lectora/Análisis):** Evalúa tu nivel de gramática, vocabulario y comprensión de documentos corporativos.\n\n*Haz clic en reproducir para escuchar los consejos estratégicos de tu Neural Advisor.*",
+          "audio": "Welcome to the Full TOEIC Simulation. In the real exam, you will have exactly 2 hours to answer 200 questions. Time management is crucial. Remember to skim through reading passages and focus on verb tenses during the listening sections. Good luck!",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "toeic-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (Listening)",
+      "questions": [
+        {
+          "id": "T_L1",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTOGRAPHS]: Look at the business picture showing people around a table in an office. Listen to the options and select the correct description.",
+          "audio_script": "A) They are arguing about the office supplies. B) They are conducting a quarterly team meeting. C) They are leaving the corporate building. D) They are fixing the overhead projector.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement B",
+          "explanation": "La descripción correcta es 'B) They are conducting a quarterly team meeting' ya que se encuentran cooperando de forma profesional alrededor de la mesa."
+        },
+        {
+          "id": "T_L2",
+          "type": "quiz_choice",
+          "question": "[PART 2 - QUESTION-RESPONSE]: Listen to the question and select the most appropriate response.",
+          "audio_script": "Question: When will the marketing budget be finalized? Responses: A) Yes, I finished it. B) By the end of this business week. C) To the local agency.",
+          "options": [
+            "A) Yes, I finished it.",
+            "B) By the end of this business week.",
+            "C) To the local agency."
+          ],
+          "correct_answer": "B) By the end of this business week.",
+          "explanation": "La pregunta inquiere por 'cuándo' (When), por lo tanto, un marco de tiempo como 'By the end of this business week' es la respuesta correcta."
+        },
+        {
+          "id": "T_L3",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATIONS]: Listen to the conversation and answer: What does the woman imply about the client's proposal?",
+          "audio_script": "M: Hi Sarah, did you get a chance to review the shipment contract from Zenith Corp?\nW: I did. Their pricing is competitive, but their delivery window is too narrow for our schedule.\nM: I see. I will call their manager to negotiate an extension.",
+          "options": [
+            "It is too expensive.",
+            "The delivery times are impractical.",
+            "She wants to reject it completely.",
+            "She prefers their old provider."
+          ],
+          "correct_answer": "The delivery times are impractical.",
+          "explanation": "La mujer menciona que 'their delivery window is too narrow for our schedule' (el margen de entrega es muy estrecho para nuestro calendario), lo que implica que es impracticable."
+        },
+        {
+          "id": "T_L4",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATIONS]: Listen to the dialogue again and answer:\n\n**What will the man probably do next?**",
+          "options": [
+            "Sign the contract immediately.",
+            "Contact the Zenith Corp manager to negotiate.",
+            "Cancel the shipment order.",
+            "Look for a new shipping provider."
+          ],
+          "correct_answer": "Contact the Zenith Corp manager to negotiate.",
+          "explanation": "El hombre dice: 'I will call their manager to negotiate an extension' (Llamaré a su gerente para negociar una extensión), lo cual es contactar al gerente."
+        },
+        {
+          "id": "T_L5",
+          "type": "quiz_choice",
+          "question": "[PART 4 - TALKS]: Listen to a corporate announcement and answer:\n\n**What is the main purpose of the talk?**",
+          "audio_script": "Speaker: Attention all personnel. We will be performing an emergency server upgrade tonight starting at 10 PM. Access to the corporate intranet and active databases will be temporarily suspended for approximately three hours. Please ensure all your files are fully synchronized before leaving the building.",
+          "options": [
+            "To recruit database administrators.",
+            "To warn staff about a temporary system downtime tonight.",
+            "To complain about internet speeds.",
+            "To schedule a new training workshop."
+          ],
+          "correct_answer": "To warn staff about a temporary system downtime tonight.",
+          "explanation": "El anuncio advierte que el acceso a la intranet y base de datos estará temporalmente suspendido por actualización del servidor esta noche ('temporary system downtime')."
+        }
+      ]
+    },
+    {
+      "id": "toeic-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (Reading)",
+      "questions": [
+        {
+          "id": "T_R5_1",
+          "type": "quiz_choice",
+          "question": "[PART 5 - INCOMPLETE SENTENCES]: Select the word that best completes the sentence:\n\n\"The management board decides to hire new consultants to inspect the factory ___.\"",
+          "options": [
+            "periodic",
+            "period",
+            "periodical",
+            "periodically"
+          ],
+          "correct_answer": "periodically",
+          "explanation": "Regla gramatical: Necesitamos un adverbio ('periodically') para modificar la acción del verbo 'inspect'."
+        },
+        {
+          "id": "T_R5_2",
+          "type": "quiz_choice",
+          "question": "[PART 5 - INCOMPLETE SENTENCES]: Select the word that best completes the sentence:\n\n\"All employees are strictly required to comply ___ the updated cybersecurity protocols.\"",
+          "options": [
+            "with",
+            "to",
+            "by",
+            "for"
+          ],
+          "correct_answer": "with",
+          "explanation": "Uso idiomático: El verbo 'comply' siempre rige la preposición 'with' (comply with / cumplir con)."
+        },
+        {
+          "id": "T_R5_3",
+          "type": "quiz_choice",
+          "question": "[PART 5 - INCOMPLETE SENTENCES]: Select the word that best completes the sentence:\n\n\"The executive committee congratulated the logistics department on their ___ management of the recent global supply crisis.\"",
+          "options": [
+            "exemplary",
+            "exemplify",
+            "example",
+            "exemplar"
+          ],
+          "correct_answer": "exemplary",
+          "explanation": "Regla de clase de palabras: Se necesita un adjetivo ('exemplary' - ejemplar) para calificar al sustantivo 'management'."
+        },
+        {
+          "id": "T_R7",
+          "type": "quiz_choice",
+          "question": "[PART 7 - READING COMPREHENSION]: Read the following document and answer the question:\n\n**MEMORANDUM**\n\n*To:* Sales Representatives\n*From:* Marcus Vance, Sales Director\n*Date:* May 18\n\n*Subject: CRM Software Transition*\n\nPlease note that starting next Monday, we are officially retiring our legacy sales tool and migrating to ApexCRM. An interactive onboarding session will be held this Thursday at 10:00 AM in Conference Room B. Attendance is mandatory as accounts will be provisioned directly during the workshop.\n\n**Why is attendance at the Thursday session mandatory?**",
+          "options": [
+            "To test the hardware of Conference Room B.",
+            "To receive their user accounts and workspace access directly.",
+            "To debate if ApexCRM is the right choice.",
+            "To meet Marcus Vance in person."
+          ],
+          "correct_answer": "To receive their user accounts and workspace access directly.",
+          "explanation": "El memorando dice explícitamente: 'Attendance is mandatory as accounts will be provisioned directly during the workshop' (Las cuentas serán aprovisionadas directamente durante el taller)."
+        },
+        {
+          "id": "T_R7_2",
+          "type": "quiz_choice",
+          "question": "[PART 7 - MEMORANDUM COMPREHENSION]: Read the memorandum again and answer:\n\n**When will the official migration to ApexCRM occur?**",
+          "options": [
+            "This Thursday at 10:00 AM",
+            "Next Monday",
+            "Today, May 18",
+            "Over the weekend"
+          ],
+          "correct_answer": "Next Monday",
+          "explanation": "El memorando indica que la migración oficial iniciará el próximo lunes ('starting next Monday'), mientras que el taller de capacitación se realizará el jueves."
+        }
+      ]
+    }
+  ]
+}

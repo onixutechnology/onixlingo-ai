@@ -5,13 +5,13 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation'; 
 import Cookies from 'js-cookie'; 
 import { useUIStore } from '@/store/uiStore';
-import { motion, Variants } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import apiClient from '@/lib/apiClient';
 
 import { 
   ArrowLeft, BookA, Search, Play, Brain, 
   Briefcase, Code2, Plane, Users, Coffee, 
-  Lock, CheckCircle2, Loader2, Crown, Languages, Flame, Zap, Sparkles, ChevronRight
+  Lock, CheckCircle2, Loader2, Crown, Languages, Flame, Zap, Sparkles, ChevronRight, X
 } from 'lucide-react';
 
 const CATEGORIES = [
@@ -33,6 +33,7 @@ export default function VocabularyPage() {
   const [vocabProgress, setVocabProgress] = useState<any[]>([]);
   const [userStats, setUserStats] = useState({ streak: 0, totalXP: 0 });
   const [isLoading, setIsLoading] = useState(true);
+  const [showLangModal, setShowLangModal] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -109,14 +110,25 @@ export default function VocabularyPage() {
             </div>
           </div>
           
-          <div className="hidden md:flex items-center gap-4">
-             <div className="flex items-center gap-2 border-r border-slate-100 pr-4">
-                <Flame size={14} className="text-rose-500" />
-                <span className="text-xs font-black">{userStats.streak}</span>
-             </div>
-             <div className="flex items-center gap-2">
-                <Zap size={14} className="text-orange-500" />
-                <span className="text-xs font-black">{userStats.totalXP.toLocaleString()} XP</span>
+          <div className="flex items-center gap-4">
+             {/* Selector rápido de idioma para el vocabulario */}
+             <button 
+               onClick={() => setShowLangModal(true)} 
+               className="flex items-center gap-2 px-3 py-1.5 border border-slate-200 text-slate-600 hover:text-orange-600 hover:border-orange-600 transition-all font-black text-[9px] uppercase tracking-widest bg-white"
+             >
+               <Languages size={14} className="text-orange-600" />
+               <span>Idioma: {activeLanguage === 'en' ? 'Inglés' : activeLanguage === 'fr' ? 'Francés' : 'Chino'}</span>
+             </button>
+
+             <div className="hidden md:flex items-center gap-4">
+                <div className="flex items-center gap-2 border-r border-slate-100 pr-4">
+                   <Flame size={14} className="text-rose-500" />
+                   <span className="text-xs font-black">{userStats.streak}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                   <Zap size={14} className="text-orange-500" />
+                   <span className="text-xs font-black">{userStats.totalXP.toLocaleString()} XP</span>
+                </div>
              </div>
           </div>
         </div>
@@ -278,6 +290,100 @@ export default function VocabularyPage() {
           </>
         )}
       </div>
+
+      {/* --- MODAL DE SELECCIÓN DE IDIOMA CORPORATIVO --- */}
+      <AnimatePresence>
+        {showLangModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md">
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="bg-white border border-slate-200 rounded-none p-8 max-w-2xl w-full shadow-2xl relative overflow-hidden"
+            >
+              {/* Botón de cierre redireccionando al dashboard */}
+              <button 
+                onClick={() => router.push('/dashboard')}
+                className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors p-1"
+                aria-label="Regresar al Dashboard"
+              >
+                <X size={20} />
+              </button>
+              <div className="text-center mb-8">
+                <div className="inline-flex bg-orange-50 text-orange-600 p-3 mb-4 border border-orange-200">
+                  <Languages size={28} />
+                </div>
+                <h2 className="text-2xl font-black text-slate-900 tracking-tighter uppercase font-serif italic mb-2">
+                  Selecciona tu Diccionario Ejecutivo
+                </h2>
+                <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em] max-w-md mx-auto">
+                  Elige el idioma del vocabulario técnico que deseas practicar hoy.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                {[
+                  { id: 'en', label: 'Inglés', native: 'English', flag: '🇬🇧', desc: 'Negocios, tecnología, finanzas y simuladores TOEIC.', color: 'hover:border-blue-600 hover:ring-2 hover:ring-blue-100', iconColor: 'text-blue-600' },
+                  { id: 'fr', label: 'Francés', native: 'Français', flag: '🇫🇷', desc: 'Vocabulario administrativo, gerencial y de relaciones públicas.', color: 'hover:border-cyan-500 hover:ring-2 hover:ring-cyan-100', iconColor: 'text-cyan-600' },
+                  { id: 'zh', label: 'Chino', native: '中文', flag: '🇨🇳', desc: 'Negociaciones comerciales, protocolo ejecutivo y redes Guanxi.', color: 'hover:border-indigo-800 hover:ring-2 hover:ring-indigo-100', iconColor: 'text-indigo-800' }
+                ].map((langOpt) => {
+                  const isCurrent = activeLanguage === langOpt.id;
+                  return (
+                    <button
+                      key={langOpt.id}
+                      onClick={() => {
+                        setLanguage(langOpt.id as any);
+                        setShowLangModal(false);
+                      }}
+                      className={`
+                        p-5 border text-left flex flex-col justify-between h-48 transition-all rounded-none relative group bg-white
+                        ${isCurrent ? 'border-orange-600 ring-2 ring-orange-50 bg-orange-50/10' : 'border-slate-200'}
+                        ${langOpt.color}
+                      `}
+                    >
+                      <div className="flex justify-between items-start w-full">
+                        <span className="text-3xl">{langOpt.flag}</span>
+                        {isCurrent && (
+                          <span className="bg-orange-600 text-white text-[7px] font-black uppercase tracking-widest px-2 py-0.5 rounded-none">
+                            Activo
+                          </span>
+                        )}
+                      </div>
+                      <div>
+                        <h3 className="font-black text-slate-800 text-xs uppercase tracking-tight mb-1 group-hover:text-orange-600 transition-colors">
+                          {langOpt.label}
+                        </h3>
+                        <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest mb-3">
+                          {langOpt.native}
+                        </p>
+                        <p className="text-slate-500 text-[9px] font-bold uppercase tracking-wider leading-snug opacity-80">
+                          {langOpt.desc}
+                        </p>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 border-t border-slate-100 pt-6 mt-4">
+                <button
+                  onClick={() => router.push('/dashboard')}
+                  className="w-full sm:w-auto px-6 py-2.5 border border-slate-200 hover:border-slate-800 text-[10px] font-black text-slate-600 hover:text-slate-900 uppercase tracking-widest transition-all rounded-none bg-white active:scale-[0.98]"
+                >
+                  Regresar al Dashboard Principal
+                </button>
+                <button
+                  onClick={() => setShowLangModal(false)}
+                  className="w-full sm:w-auto px-6 py-2.5 bg-orange-600 hover:bg-orange-700 text-white text-[10px] font-black uppercase tracking-widest transition-all rounded-none active:scale-[0.98]"
+                >
+                  Permanecer en {activeLanguage === 'en' ? 'Inglés' : activeLanguage === 'fr' ? 'Francés' : 'Chino'}
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

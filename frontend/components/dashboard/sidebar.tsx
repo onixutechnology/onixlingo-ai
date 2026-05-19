@@ -78,37 +78,24 @@ export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }
         </div>
       </div>
 
-      {/* --- BOTONES DE ACCIÓN --- */}
-      <div className="flex-1 space-y-1 overflow-y-auto hide-scrollbar">
-        <Link href="/dashboard" className={`flex items-center justify-between px-4 py-3 text-slate-500 hover:bg-slate-50 border-l-2 border-transparent hover:border-${theme.primary} group transition-all`}>
-          <div className="flex items-center gap-3">
-            <Activity size={16} />
-            <span className="text-[10px] font-black uppercase tracking-widest">Dashboard Central</span>
-          </div>
-          <ChevronRight size={14} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
-        </Link>
-
-        <Link href="/dashboard/vocabulary" className={`flex items-center justify-between px-4 py-3 text-slate-500 hover:bg-slate-50 border-l-2 border-transparent hover:border-${theme.primary} group transition-all`}>
-          <div className="flex items-center gap-3">
-            <Target size={16} />
-            <span className="text-[10px] font-black uppercase tracking-widest">Glosario Corporativo</span>
-          </div>
-          <ChevronRight size={14} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
-        </Link>
-      </div>
-
       {/* --- IA WIDGET (SQUARE) --- */}
       <div className="mt-auto mb-6 px-4">
-        <div className={`bg-slate-900 p-4 border-l-4 border-${theme.primary} rounded-none shadow-xl relative overflow-hidden group`}>
-          <div className="absolute top-0 right-0 p-1 opacity-20"><Sparkles size={40} className={`text-${theme.primary}`} /></div>
-          <p className={`text-[8px] font-black text-${theme.primary} uppercase tracking-[0.3em] mb-2 flex items-center gap-2`}>
-            <span className={`w-1.5 h-1.5 bg-${theme.primary} animate-pulse`}></span> Neural Advisor Active
+        <div className="bg-slate-900 p-4 border-l-4 border-amber-500/70 rounded-none shadow-xl relative overflow-hidden group">
+          <div className="absolute top-0 right-0 p-1 opacity-10"><Sparkles size={40} className="text-amber-500" /></div>
+          <p className="text-[8px] font-black text-amber-500 uppercase tracking-[0.3em] mb-2 flex items-center justify-between gap-2">
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 bg-amber-500/50"></span> Neural Advisor
+            </span>
+            <span className="bg-amber-500/10 text-amber-500 border border-amber-500/20 px-1 py-0.5 text-[6px] tracking-widest">PRÓXIMAMENTE</span>
           </p>
-          <p className="text-white text-[10px] font-bold leading-relaxed mb-4 opacity-80">
+          <p className="text-white text-[10px] font-bold leading-relaxed mb-4 opacity-60">
             Optimiza tu perfil para entornos de Manufactura 4.0.
           </p>
-          <button className={`w-full bg-white text-slate-900 py-2 text-[9px] font-black uppercase tracking-widest hover:bg-${theme.primary} hover:text-white transition-all shadow-lg`}>
-            Consultar IA
+          <button 
+            disabled 
+            className="w-full bg-slate-800 text-slate-500 py-2 text-[9px] font-black uppercase tracking-widest cursor-not-allowed border border-slate-700/50 transition-all shadow-none"
+          >
+            Próximamente
           </button>
         </div>
       </div>

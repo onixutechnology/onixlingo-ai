@@ -1,0 +1,180 @@
+{
+  "id": "toefl_mock",
+  "title": "Simulador Oficial Completo TOEFL® iBT",
+  "level": "B2/C1",
+  "description": "Simulación del examen oficial académico TOEFL® iBT con textos científicos, lecciones magistrales universitarias y análisis de destrezas.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toefl-intro",
+      "type": "lecture",
+      "title": "TOEFL® iBT Simulation: Academic Strategy",
+      "parts": [
+        {
+          "visual": "## 🎓 Instrucciones del Simulador TOEFL® iBT\n\nEl examen TOEFL® iBT mide tu habilidad de integrar destrezas en un entorno académico universitario. Se divide en:\n\n1. **Academic Reading:** Comprensión de artículos y papers científicos avanzados.\n2. **Academic Listening:** Comprensión de conferencias magistrales e interacciones universitarias.\n3. **Writing & Grammar Structure:** Destreza en el uso de conectores y coherencia académica.\n\n*Haz clic en reproducir para escuchar los consejos estratégicos de tu Neural Advisor académico.*",
+          "audio": "Welcome to the TOEFL iBT Mock Exam. Unlike the business-focused TOEIC, TOEFL is highly academic. You will be tested on your ability to synthesize information from lectures, graphs, and texts. Focus on vocabulary in context and active listening. Let's begin!",
+          "animation": "analyzing"
+        }
+      ]
+    },
+    {
+      "id": "toefl-reading",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Lectora Académica (Reading)",
+      "questions": [
+        {
+          "id": "TF_R1",
+          "type": "quiz_choice",
+          "question": "Read the following academic text and answer the question:\n\n**The Origin of Earth's Oceans**\n\nFor decades, geologists debated whether the Earth's surface water originated primarily from outgassing—the release of water vapor trapped within the cooling planet's mantle—or from outer space through comet impacts. While gaseous emissions during early volcanic active periods undoubtedly formed a dense primitive atmosphere, recent isotopic analyses of ocean water show a different deuterium-to-hydrogen ratio than that found in most outer-belt comets. This discrepancy strongly suggests that carbonaceous meteorites originating from the asteroid belt, rather than icy comets, were the primary vectors for water delivery during the Late Heavy Bombardment.\n\n**According to the passage, what does the isotopic analysis of ocean water suggest?**",
+          "options": [
+            "Earth's water originated entirely from internal mantle outgassing.",
+            "Icy comets were not the main source of water delivery to early Earth.",
+            "Isotopic ratios are identical between comets and carbonaceous meteorites.",
+            "Volcanic activity did not contribute to forming the primitive atmosphere."
+          ],
+          "correct_answer": "Icy comets were not the main source of water delivery to early Earth.",
+          "explanation": "El texto explica que dado que los cocientes de deuterio/hidrógeno difieren de los de la mayoría de los cometas ('different ratio than that found in most comets'), esto sugiere que los cometas no fueron los vectores principales, apuntando en su lugar a los meteoritos de carbono."
+        },
+        {
+          "id": "TF_R2",
+          "type": "quiz_choice",
+          "question": "Identify the meaning of the word in context:\n\nWhat is the closest meaning of the word **vectors** as used in the reading passage above?",
+          "options": [
+            "Directions",
+            "Carriers / Delivery agents",
+            "Barriers",
+            "Mathematical variables"
+          ],
+          "correct_answer": "Carriers / Delivery agents",
+          "explanation": "En el contexto de la entrega de agua al planeta, 'vectors' se refiere a los transportadores o portadores ('carriers') que trajeron el agua a la Tierra."
+        },
+        {
+          "id": "TF_R3",
+          "type": "quiz_choice",
+          "question": "Read the following passage fragment:\n\n\"While gaseous emissions formed a dense primitive atmosphere, recent isotopic analyses show a different deuterium-to-hydrogen ratio...\"\n\n**Why does the author use the word 'undoubtedly' in the passage?**",
+          "options": [
+            "To express skepticism about the outgassing theory.",
+            "To emphasize that volcanic activity's role in atmosphere creation is widely accepted.",
+            "To prove that comets are the sole source of planetary water.",
+            "To show that geologists have not reached a consensus on primitive climates."
+          ],
+          "correct_answer": "To emphasize that volcanic activity's role in atmosphere creation is widely accepted.",
+          "explanation": "El adverbio 'undoubtedly' (indudablemente) se emplea para resaltar que el papel de las erupciones volcánicas en la formación de la atmósfera primitiva es un hecho aceptado y libre de sospechas."
+        },
+        {
+          "id": "TF_R4",
+          "type": "quiz_choice",
+          "question": "Based on the text about Earth's Oceans:\n\n**Which of the following can be inferred about carbonaceous meteorites?**",
+          "options": [
+            "They have a deuterium-to-hydrogen ratio closer to Earth's ocean water than comets do.",
+            "They contain less water than outer-belt comets.",
+            "They did not hit Earth during the Late Heavy Bombardment.",
+            "They originated from the same orbital region as icy comets."
+          ],
+          "correct_answer": "They have a deuterium-to-hydrogen ratio closer to Earth's ocean water than comets do.",
+          "explanation": "Como la discrepancia con el cociente de los cometas sugiere que los meteoritos de carbono fueron los vectores principales, se infiere lógicamente que su cociente isotopic es más cercano al del agua terrestre."
+        }
+      ]
+    },
+    {
+      "id": "toefl-listening",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Auditiva Académica (Listening)",
+      "questions": [
+        {
+          "id": "TF_L1",
+          "type": "quiz_choice",
+          "question": "[UNIVERSITY LECTURE]: Listen to the professor's lecture excerpt on Marine Biology and answer the question.",
+          "audio_script": "Professor: Now, let's turn our attention to hydrothermal vents. These deep-sea ecosystems thrive in total darkness, miles below the photic zone. You might ask, how is life sustained without photosynthesis? The answer lies in chemosynthesis. Bacteria here oxidize hydrogen sulfide chemical compounds bubbling up from the Earth's crust, converting them into organic matter. This forms the foundation of a highly rich food chain, supporting giant tube worms and blind crabs.",
+          "options": [
+            "How photosynthesis operates in deep ocean trenches.",
+            "How chemosynthesis replaces photosynthesis in deep-sea ecosystems.",
+            "The migration patterns of blind crabs in ocean floor vents.",
+            "The impact of extreme cold temperatures on bacteria."
+          ],
+          "correct_answer": "How chemosynthesis replaces photosynthesis in deep-sea ecosystems.",
+          "explanation": "El profesor explica detalladamente cómo los ecosistemas marinos profundos sobreviven sin luz solar a través de la quimiosíntesis ('chemosynthesis'), la cual oxida compuestos de sulfuro de hidrógeno para generar energía."
+        },
+        {
+          "id": "TF_L2",
+          "type": "quiz_choice",
+          "question": "[UNIVERSITY LECTURE - MARINE BIOLOGY]: Listen again and answer:\n\n**What is the role of bacteria in hydrothermal vent ecosystems?**",
+          "options": [
+            "They consume blind crabs and tube worms.",
+            "They block hydrogen sulfide from escaping the crust.",
+            "They produce organic matter by oxidizing chemical compounds.",
+            "They bring sunlight down to the ocean floor."
+          ],
+          "correct_answer": "They produce organic matter by oxidizing chemical compounds.",
+          "explanation": "Las bacterias oxidan el sulfuro de hidrógeno para convertirlo en materia orgánica ('converting them into organic matter'), sirviendo de base alimenticia para el ecosistema."
+        },
+        {
+          "id": "TF_L3",
+          "type": "quiz_choice",
+          "question": "[UNIVERSITY CHAT]: Listen to a conversation between a student and a chemistry registrar.",
+          "audio_script": "Student: Hi, I'm trying to drop Chemistry 101, but the system says I need written consent from the department head because we are past the second week.\nRegistrar: Yes, that is standard protocol. However, if you are transferring into another science course rather than dropping science altogether, we can bypass that signature with a transfer form.",
+          "options": [
+            "The student needs a signature to drop Chemistry 101.",
+            "The registrar refuses to help the student transfer.",
+            "Written consent is never required past the second week.",
+            "The student is trying to register for a literature course."
+          ],
+          "correct_answer": "The student needs a signature to drop Chemistry 101.",
+          "explanation": "El estudiante indica que el sistema le pide consentimiento firmado ('written consent') por parte del jefe de departamento debido a que ya transcurrieron las primeras dos semanas."
+        }
+      ]
+    },
+    {
+      "id": "toefl-writing-prep",
+      "type": "quiz",
+      "title": "Sección 3: Estructura y Coherencia Académica (Writing Prep)",
+      "questions": [
+        {
+          "id": "TF_W1",
+          "type": "fill_input",
+          "question": "Fill in the blank with the appropriate academic connector that shows contrast (e.g., However, Nevertheless): \n\n\"The outgassing theory is well-supported by internal geology models. ___, isotopic ratios in comets present a major contradiction to this absolute claim.\"",
+          "correct_answers": [
+            "However",
+            "Nevertheless",
+            "nonetheless",
+            "however"
+          ],
+          "hints": [
+            "H-O-W-E-V-E-R"
+          ]
+        },
+        {
+          "id": "TF_W2",
+          "type": "order_sentence",
+          "question": "Structure the academic thesis statement correctly:",
+          "parts": [
+            "chemosynthesis",
+            "provides the basis",
+            "for deep-sea",
+            "biological communities"
+          ],
+          "correct_order": [
+            "chemosynthesis",
+            "provides the basis",
+            "for deep-sea",
+            "biological communities"
+          ]
+        },
+        {
+          "id": "TF_W3",
+          "type": "fill_input",
+          "question": "Complete the scientific sentence with the correct academic cause connector (e.g., Because of, Due to):\n\n\"The scientific community rejected the initial hypothesis ___ the lack of reproducible experimental data.\"",
+          "correct_answers": [
+            "due to",
+            "because of",
+            "Due to",
+            "Because of"
+          ],
+          "hints": [
+            "D-U-E  T-O"
+          ]
+        }
+      ]
+    }
+  ]
+}

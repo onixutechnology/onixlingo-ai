@@ -1,61 +1,373 @@
 {
   "id": "fr-a1-1",
-  "title": "Premier Contact",
-  "total_xp": 100,
+  "title": "L'Alphabet et les Sons",
+  "total_xp": 300,
   "stages": [
     {
       "id": "theory-1",
       "type": "theory",
-      "title": "Premier Contact",
+      "title": "El Alfabeto Francés",
       "parts": [
         {
-          "visual": "Bienvenue. Apprenons à nous présenter.",
-          "audio": "Bienvenue dans la leçon sur premier contact."
-        }
-      ]
-    },
-    {
-      "id": "drill-1",
-      "type": "pairing_drill",
-      "title": "Vocabulaire Clé",
-      "pairs": [
-        {
-          "id": "p1",
-          "en": "Office",
-          "es": "Bureau"
+          "visual": "El alfabeto francés tiene 26 letras, idénticas al español, pero se pronuncian diferente.",
+          "audio": "L'alphabet français compte 26 lettres de A à Z."
         },
         {
-          "id": "p2",
-          "en": "Manager",
-          "es": "Directeur"
+          "visual": "Las vocales en francés son: A, E, I, O, U, Y. Sus sonidos son clave para pronunciar bien.",
+          "audio": "Les voyelles principales sont A, E, I, O, U, Y."
         },
         {
-          "id": "p3",
-          "en": "Meeting",
-          "es": "Réunion"
+          "visual": "Los acentos principales: Agudo (é), Grave (à, è), Circunflejo (â, ê) y Cedilla (ç). Cambian el sonido.",
+          "audio": "Les accents changent la prononciation des lettres."
         },
         {
-          "id": "p4",
-          "en": "File",
-          "es": "Dossier"
+          "visual": "¿Cómo se deletrea? - \"Comment ça s'épelle ?\" Es súper útil para deletrear tu nombre al teléfono.",
+          "audio": "Comment ça s'épelle? C'est indispensable au travail."
+        },
+        {
+          "visual": "Ejemplo de deletreo de marca: O-N-I-X se deletrea o, enne, i, iks en francés.",
+          "audio": "O, N, I, X. C'est l'épellation de notre marque."
         }
       ]
     },
     {
       "id": "quiz-1",
       "type": "quiz",
-      "title": "Compréhension",
+      "title": "Práctica del Alfabeto",
       "questions": [
         {
           "type": "quiz_choice",
-          "question": "Comment dit-on 'Premier Contact' en français ?",
+          "question": "¿Cuántas letras tiene el alfabeto francés?",
           "options": [
-            "Premier Contact",
-            "Autre chose",
-            "Rien"
+            "24",
+            "26",
+            "28"
           ],
-          "correct_answer": "Premier Contact",
-          "explanation": "C'est la base de cette unité."
+          "correct_answer": "26",
+          "explanation": "El alfabeto francés tiene las mismas 26 letras que el español."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cuál de las siguientes letras es una vocal en francés?",
+          "options": [
+            "B",
+            "E",
+            "F"
+          ],
+          "correct_answer": "E",
+          "explanation": "A, E, I, O, U, Y son las vocales en francés."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa la pregunta 'Comment ça s'épelle ?'?",
+          "options": [
+            "¿Cómo se deletrea?",
+            "¿Cómo te llamas?",
+            "¿Cómo estás?"
+          ],
+          "correct_answer": "¿Cómo se deletrea?",
+          "explanation": "Se usa para preguntar cómo se escribe o deletrea una palabra."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué acento se coloca bajo la letra 'C' para hacer el sonido 'S'?",
+          "options": [
+            "Cedilla (Cédille)",
+            "Agudo (Aigu)",
+            "Grave (Grave)"
+          ],
+          "correct_answer": "Cedilla (Cédille)",
+          "explanation": "La cedilla (ç) le da a la C el sonido de una S."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se llama la letra 'é'?",
+          "options": [
+            "Accent aigu",
+            "Accent grave",
+            "Accent circonflexe"
+          ],
+          "correct_answer": "Accent aigu",
+          "explanation": "La é se llama e con acento agudo (accent aigu)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué letra se pronuncia como 'Zed'?",
+          "options": [
+            "X",
+            "Y",
+            "Z"
+          ],
+          "correct_answer": "Z",
+          "explanation": "La letra Z se pronuncia 'zed' en francés."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué letra se pronuncia como 'i grec'?",
+          "options": [
+            "I",
+            "Y",
+            "G"
+          ],
+          "correct_answer": "Y",
+          "explanation": "La letra Y se conoce como i griega (i grec)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué efecto tiene el acento agudo (é) en el sonido de la 'e'?",
+          "options": [
+            "Produce un sonido cerrado 'é'",
+            "Produce un sonido abierto 'è'",
+            "Es silencioso"
+          ],
+          "correct_answer": "Produce un sonido cerrado 'é'",
+          "explanation": "El acento agudo cierra la pronunciación en 'é'."
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la letra o palabra que escuchas:",
+          "tts_text": "L'alphabet",
+          "options": [
+            "L'alphabet",
+            "La lettre",
+            "Le mot"
+          ],
+          "correct_answer": "L'alphabet"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la letra o palabra que escuchas:",
+          "tts_text": "Comment ça s'épelle",
+          "options": [
+            "Comment ça s'épelle",
+            "C'est un mot",
+            "Une voyelle"
+          ],
+          "correct_answer": "Comment ça s'épelle"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la letra o palabra que escuchas:",
+          "tts_text": "Accent aigu",
+          "options": [
+            "Accent aigu",
+            "Accent grave",
+            "Cédille"
+          ],
+          "correct_answer": "Accent aigu"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la letra o palabra que escuchas:",
+          "tts_text": "Une voyelle",
+          "options": [
+            "Une voyelle",
+            "Une consonne",
+            "Un accent"
+          ],
+          "correct_answer": "Une voyelle"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la letra o palabra que escuchas:",
+          "tts_text": "La lettre Z",
+          "options": [
+            "La lettre Z",
+            "La lettre X",
+            "La lettre Y"
+          ],
+          "correct_answer": "La lettre Z"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la letra o palabra que escuchas:",
+          "tts_text": "Le mot",
+          "options": [
+            "Le mot",
+            "Le son",
+            "Le texte"
+          ],
+          "correct_answer": "Le mot"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la letra o palabra que escuchas:",
+          "tts_text": "Cédille",
+          "options": [
+            "Cédille",
+            "Aigu",
+            "Grave"
+          ],
+          "correct_answer": "Cédille"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la letra o palabra que escuchas:",
+          "tts_text": "Une consonne",
+          "options": [
+            "Une consonne",
+            "Une voyelle",
+            "Un accent"
+          ],
+          "correct_answer": "Une consonne"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Cómo se deletrea?'",
+          "parts": [
+            "Comment",
+            "ça",
+            "s'épelle"
+          ],
+          "correct_order": [
+            "Comment",
+            "ça",
+            "s'épelle"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Es una palabra corta'",
+          "parts": [
+            "C'est",
+            "un",
+            "mot",
+            "court"
+          ],
+          "correct_order": [
+            "C'est",
+            "un",
+            "mot",
+            "court"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'El alfabeto tiene vocales'",
+          "parts": [
+            "L'alphabet",
+            "a",
+            "des",
+            "voyelles"
+          ],
+          "correct_order": [
+            "L'alphabet",
+            "a",
+            "des",
+            "voyelles"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Un sonido de letra'",
+          "parts": [
+            "Un",
+            "son",
+            "de",
+            "lettre"
+          ],
+          "correct_order": [
+            "Un",
+            "son",
+            "de",
+            "lettre"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Deletree por favor'",
+          "parts": [
+            "Épelez",
+            "s'il",
+            "vous",
+            "plaît"
+          ],
+          "correct_order": [
+            "Épelez",
+            "s'il",
+            "vous",
+            "plaît"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'El texto tiene palabras'",
+          "parts": [
+            "Le",
+            "texte",
+            "a",
+            "des",
+            "mots"
+          ],
+          "correct_order": [
+            "Le",
+            "texte",
+            "a",
+            "des",
+            "mots"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Palabra' en francés?",
+          "correct_answers": [
+            "Mot"
+          ],
+          "hints": [
+            "M-O-T"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa la vocal que falta en la lista: A, E, I, O, U, ___",
+          "correct_answers": [
+            "Y"
+          ],
+          "hints": [
+            "i grec"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Letra' en francés?",
+          "correct_answers": [
+            "Lettre"
+          ],
+          "hints": [
+            "L-E-T-T-R-E"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Comment ça ___ ? (¿cómo se deletrea?)",
+          "correct_answers": [
+            "s'épelle",
+            "sepelle"
+          ],
+          "hints": [
+            "S-É-P-E-L-L-E"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Qué acento lleva la letra 'ç'? La ___",
+          "correct_answers": [
+            "cédille",
+            "cedille"
+          ],
+          "hints": [
+            "C-É-D-I-L-L-E"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Sonido' en francés?",
+          "correct_answers": [
+            "Son"
+          ],
+          "hints": [
+            "S-O-N"
+          ]
         }
       ]
     }

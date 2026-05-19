@@ -15,11 +15,18 @@ function RegisterForm() {
     username: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    invitedByCode: ''
   });
   
   const [status, setStatus] = useState<'idle' | 'loading' | 'error' | 'success'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    if (refCode) {
+      setFormData(prev => ({ ...prev, invitedByCode: refCode }));
+    }
+  }, [refCode]);
 
   useEffect(() => {
     if (status === 'error') setStatus('idle');
@@ -44,7 +51,7 @@ function RegisterForm() {
         username: formData.username,
         email: formData.email,
         password: formData.password,
-        invited_by_code: refCode
+        invited_by_code: formData.invitedByCode || null
       });
       setStatus('success');
       setTimeout(() => router.push('/login'), 2500);
@@ -138,6 +145,20 @@ function RegisterForm() {
               onChange={handleInputChange}
             />
           </div>
+        </div>
+      </div>
+      <div>
+        <label className="block text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1.5 ml-1">Código de Referencia (Opcional)</label>
+        <div className="relative">
+          <ShieldPlus className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-300" />
+          <input
+            type="text"
+            name="invitedByCode"
+            className="block w-full pl-10 pr-4 py-2.5 border border-slate-200 rounded-none bg-slate-50 text-slate-900 text-[11px] font-bold focus:outline-none focus:border-teal-600 transition-all placeholder-slate-300"
+            placeholder="ONX-YYYY-USR-XXXX"
+            value={formData.invitedByCode}
+            onChange={handleInputChange}
+          />
         </div>
       </div>
 

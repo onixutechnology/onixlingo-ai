@@ -1,32 +1,412 @@
 {
   "id": "fr-b1-1",
-  "title": "Négociation Avancée",
-  "total_xp": 100,
+  "title": "Plan de Projet",
+  "total_xp": 300,
   "stages": [
     {
       "id": "theory-1",
       "type": "theory",
-      "title": "Négociation Avancée",
+      "title": "Planificación y Plazos",
       "parts": [
         {
-          "visual": "L'art de l'accord.",
-          "audio": "Module Négociation Avancée."
+          "visual": "Planificación futura: \"Nous organiserons le projet le mois prochain\" (Organizaremos el proyecto el próximo mes).",
+          "audio": "Nous organiserons le projet le mois prochain."
+        },
+        {
+          "visual": "Hito del proyecto: \"Le premier jalon est en décembre\" (El primer hito es en diciembre).",
+          "audio": "Le premier jalon important est en décembre."
+        },
+        {
+          "visual": "Asignación de recursos: \"Nous ferons l'allocation des ressources\" (Haremos la asignación de recursos).",
+          "audio": "Nous ferons l'allocation des ressources de l'équipe."
+        },
+        {
+          "visual": "Estimación del tiempo: \"L'estimation du temps est réaliste\" (La estimación del tiempo es realista).",
+          "audio": "L'estimation du temps de travail est réaliste."
+        },
+        {
+          "visual": "Validación con el cliente: \"Nous validerons le plan avec le client\" (Validaremos el plan con el cliente).",
+          "audio": "Nous validerons le plan financier avec le client."
         }
       ]
     },
     {
       "id": "quiz-1",
       "type": "quiz",
-      "title": "Check",
+      "title": "Práctica de Planificación",
       "questions": [
         {
           "type": "quiz_choice",
-          "question": "Ok?",
+          "question": "¿Cómo se dice 'Haremos la asignación de recursos'?",
           "options": [
-            "Oui"
+            "Nous ferons l'allocation des ressources",
+            "Nous organiserons le projet",
+            "Nous validerons le plan"
           ],
-          "correct_answer": "Oui",
-          "explanation": "."
+          "correct_answer": "Nous ferons l'allocation des ressources",
+          "explanation": "Allocation des ressources es asignación de recursos."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'El primer hito es en diciembre':",
+          "options": [
+            "Le premier jalon est en décembre",
+            "Le projet finit en décembre",
+            "Nous ferons le jalon"
+          ],
+          "correct_answer": "Le premier jalon est en décembre",
+          "explanation": "Jalon significa hito o fase clave en un proyecto."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa 'L'estimation du temps est réaliste'?",
+          "options": [
+            "La estimación del tiempo es realista",
+            "La factura es muy alta",
+            "La reunión está programada"
+          ],
+          "correct_answer": "La asignación de recursos es realista",
+          "explanation": "Estimation du temps indica estimación de duración."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'El próximo mes'?",
+          "options": [
+            "Le mois prochain",
+            "La semaine dernière",
+            "Chaque jour"
+          ],
+          "correct_answer": "Le mois prochain",
+          "explanation": "Prochain significa próximo o siguiente."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Organizaremos el proyecto':",
+          "options": [
+            "Nous organiserons le projet",
+            "Je prépare le projet",
+            "J'ai fini le projet"
+          ],
+          "correct_answer": "Nous organiserons le projet",
+          "explanation": "Organiserons es el futuro de organizar."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa 'Nous validerons le plan'?",
+          "options": [
+            "Validaremos el plan",
+            "Preparamos el plan",
+            "Enviamos el plan"
+          ],
+          "correct_answer": "Validaremos el plan",
+          "explanation": "Validerons es futuro del verbo valider (validar)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Con el cliente':",
+          "options": [
+            "Avec le client",
+            "Chez le client",
+            "Pour le client"
+          ],
+          "correct_answer": "Avec le client",
+          "explanation": "Avec significa con en francés."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Planificación'?",
+          "options": [
+            "Planification",
+            "Ressources",
+            "Projet"
+          ],
+          "correct_answer": "Planification",
+          "explanation": "Término muy similar al español."
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase que escuchas:",
+          "tts_text": "Nous organiserons le projet",
+          "options": [
+            "Nous organiserons le projet",
+            "Nous validerons le plan",
+            "Nous ferons l'allocation"
+          ],
+          "correct_answer": "Nous organiserons le projet"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase que escuchas:",
+          "tts_text": "Le premier jalon",
+          "options": [
+            "Le premier jalon",
+            "Le deuxième projet",
+            "La première facture"
+          ],
+          "correct_answer": "Le premier jalon"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase que escuchas:",
+          "tts_text": "L'allocation des ressources",
+          "options": [
+            "L'allocation des ressources",
+            "L'estimation du temps",
+            "Le plan de projet"
+          ],
+          "correct_answer": "L'allocation des ressources"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Réaliste",
+          "options": [
+            "Réaliste",
+            "Difficile",
+            "Rapide"
+          ],
+          "correct_answer": "Réaliste"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase que escuchas:",
+          "tts_text": "Avec le client",
+          "options": [
+            "Avec le client",
+            "Chez le client",
+            "Pour le client"
+          ],
+          "correct_answer": "Avec le client"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase que escuchas:",
+          "tts_text": "Le mois prochain",
+          "options": [
+            "Le mois prochain",
+            "La semaine dernière",
+            "Chaque jour"
+          ],
+          "correct_answer": "Le mois prochain"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Planification",
+          "options": [
+            "Planification",
+            "Ressources",
+            "Jalon"
+          ],
+          "correct_answer": "Planification"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase que escuchas:",
+          "tts_text": "Nous validerons le plan",
+          "options": [
+            "Nous validerons le plan",
+            "Nous ferons le projet",
+            "Nous avons fini"
+          ],
+          "correct_answer": "Nous validerons le plan"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Organizaremos el proyecto el próximo mes'",
+          "parts": [
+            "Nous",
+            "organiserons",
+            "le",
+            "projet",
+            "le",
+            "mois",
+            "prochain"
+          ],
+          "correct_order": [
+            "Nous",
+            "organiserons",
+            "le",
+            "projet",
+            "le",
+            "mois",
+            "prochain"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'El primer hito importante es en diciembre'",
+          "parts": [
+            "Le",
+            "premier",
+            "jalon",
+            "important",
+            "est",
+            "en",
+            "décembre"
+          ],
+          "correct_order": [
+            "Le",
+            "premier",
+            "jalon",
+            "important",
+            "est",
+            "en",
+            "décembre"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Haremos la asignación de recursos del equipo'",
+          "parts": [
+            "Nous",
+            "ferons",
+            "l'allocation",
+            "des",
+            "ressources",
+            "de",
+            "l'équipe"
+          ],
+          "correct_order": [
+            "Nous",
+            "ferons",
+            "l'allocation",
+            "des",
+            "ressources",
+            "de",
+            "l'équipe"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'La estimación de tiempo de trabajo es realista'",
+          "parts": [
+            "L'estimation",
+            "du",
+            "temps",
+            "de",
+            "travail",
+            "est",
+            "réaliste"
+          ],
+          "correct_order": [
+            "L'estimation",
+            "du",
+            "temps",
+            "de",
+            "travail",
+            "est",
+            "réaliste"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Validaremos el plan de proyecto con el cliente'",
+          "parts": [
+            "Nous",
+            "validerons",
+            "le",
+            "plan",
+            "de",
+            "projet",
+            "avec",
+            "le",
+            "client"
+          ],
+          "correct_order": [
+            "Nous",
+            "validerons",
+            "le",
+            "plan",
+            "de",
+            "projet",
+            "avec",
+            "le",
+            "client"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Quién es el responsable de la planificación?'",
+          "parts": [
+            "Qui",
+            "est",
+            "le",
+            "responsable",
+            "de",
+            "la",
+            "planification"
+          ],
+          "correct_order": [
+            "Qui",
+            "est",
+            "le",
+            "responsable",
+            "de",
+            "la",
+            "planification"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Próximo' en francés?",
+          "correct_answers": [
+            "Prochain"
+          ],
+          "hints": [
+            "P-R-O-C-H-A-I-N"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Le premier ___ importante (hito)",
+          "correct_answers": [
+            "jalon"
+          ],
+          "hints": [
+            "J-A-L-O-N"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Asignación'?",
+          "correct_answers": [
+            "Allocation",
+            "allocation"
+          ],
+          "hints": [
+            "A-L-L-O-C-A-T-I-O-N"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: L'estimation du ___ est réaliste (tiempo)",
+          "correct_answers": [
+            "temps"
+          ],
+          "hints": [
+            "T-E-M-P-S"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice el verbo 'Validar' en futuro (nosotros)?",
+          "correct_answers": [
+            "Validerons"
+          ],
+          "hints": [
+            "V-A-L-I-D-E-R-O-N-S"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Nous ___ (haremos) la reunión",
+          "correct_answers": [
+            "ferons"
+          ],
+          "hints": [
+            "F-E-R-O-N-S"
+          ]
         }
       ]
     }

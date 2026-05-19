@@ -14,21 +14,28 @@ router = APIRouter()
 class UserUpdate(BaseModel):
     full_name: Optional[str] = None
     email: Optional[EmailStr] = None
-    password: Optional[str] = None  # 🔥 Agregado para actualizar contraseña
+    phone: Optional[str] = None
+    country_code: Optional[str] = None
+    password: Optional[str] = None 
 
 class MembershipSchema(BaseModel):
     tier: str
-    valid_until: datetime
+    valid_until: Optional[datetime]
     status: str
 
 class StatsSchema(BaseModel):
     joined_at: datetime
     total_xp: int
+    streak_days: int
+    eloquence_points: int
 
 class UserProfileResponse(BaseModel):
     id: str
-    full_name: str
+    username: str
+    full_name: Optional[str]
     email: Optional[str]
+    phone: Optional[str]
+    country_code: str
     avatar_url: Optional[str] = None
     membership: MembershipSchema
     referral_code: str
@@ -43,27 +50,33 @@ def read_user_me(
     total_xp = 0
     if current_user.progress:
         for lesson in current_user.progress:
-            total_xp += (lesson.stars * 150)
+            total_xp += lesson.score
 
-    tier_name = "titanium" if getattr(current_user, 'is_pro', False) else "free"
-    # Fallback si el modelo no tiene valid_until
-    valid_until = getattr(current_user, 'valid_until', current_user.created_at + timedelta(days=365))
-    ref_code = getattr(current_user, 'referral_code', f"ONX-{datetime.now().year}-USR{current_user.id}")
+    # Asegurar que tiene un código de referido
+    if not current_user.referral_code:
+        current_user.referral_code = f"ONX-{datetime.now().year}-USR{current_user.id}"
+        db.add(current_user)
+        db.commit()
 
     return {
         "id": str(current_user.id),
-        "full_name": getattr(current_user, 'username', current_user.email.split('@')[0]),
+        "username": current_user.username,
+        "full_name": current_user.full_name,
         "email": current_user.email,
+        "phone": current_user.phone,
+        "country_code": current_user.country_code or "MX",
         "avatar_url": None,
         "membership": {
-            "tier": tier_name,
-            "valid_until": valid_until,
-            "status": "active" if getattr(current_user, 'is_active', True) else "expired"
+            "tier": current_user.tier or "free",
+            "valid_until": current_user.valid_until,
+            "status": "active" if current_user.is_active else "expired"
         },
-        "referral_code": ref_code,
+        "referral_code": current_user.referral_code,
         "stats": {
             "joined_at": current_user.created_at,
-            "total_xp": total_xp
+            "total_xp": total_xp,
+            "streak_days": current_user.streak_days or 0,
+            "eloquence_points": current_user.eloquence_points or 0
         }
     }
 
@@ -80,7 +93,13 @@ def update_user_me(
         current_user.email = user_in.email
 
     if user_in.full_name is not None:
-        current_user.username = user_in.full_name
+        current_user.full_name = user_in.full_name
+
+    if user_in.phone is not None:
+        current_user.phone = user_in.phone
+
+    if user_in.country_code is not None:
+        current_user.country_code = user_in.country_code.upper()
 
     if user_in.password is not None and len(user_in.password) >= 6:
         current_user.hashed_password = get_password_hash(user_in.password)

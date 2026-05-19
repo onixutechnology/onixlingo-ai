@@ -3,148 +3,337 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { 
-  Award, 
-  Lock, 
-  Flame, 
-  BookOpen, 
-  Swords, 
-  ArrowLeft,
-  Calendar,
-  Zap,
-  Target,
-  Trophy
+  Award, Lock, Flame, BookOpen, Swords, ArrowLeft, Calendar, Zap, 
+  Target, Trophy, User, Mail, Phone, Globe, Shield, Copy, Check, Save
 } from 'lucide-react';
 import apiClient from '@/lib/apiClient';
-import Cookies from 'js-cookie';
-
-interface Achievement {
-  id: string;
-  code: string;
-  title: string;
-  description: string;
-  icon: React.ElementType;
-}
-
-const ALL_ACHIEVEMENTS: Achievement[] = [
-  { id: '1', code: 'streak_7', title: 'Racha de 7 Días', description: 'Mantén tu racha de estudio por una semana completa.', icon: Flame },
-  { id: '2', code: 'streak_30', title: 'Racha de 30 Días', description: 'Compromiso total: 30 días de aprendizaje ininterrumpido.', icon: Zap },
-  { id: '3', code: 'master_a1', title: 'Maestro de Nivel A1', description: 'Completa todas las lecciones del nivel A1 en cualquier idioma.', icon: BookOpen },
-  { id: '4', code: 'chess_grandmaster', title: 'Gran Maestro de Ajedrez', description: 'Completa 5 acertijos o lecciones de ajedrez táctico.', icon: Swords },
-  { id: '5', code: 'perfectionist', title: 'Perfeccionista', description: 'Obtén una puntuación de 100 en cualquier lección.', icon: Target },
-];
+import { motion } from 'framer-motion';
 
 export default function ProfilePage() {
   const router = useRouter();
-  const [stats, setStats] = useState<any>(null);
-  const [unlockedCodes, setUnlockedCodes] = useState<string[]>([]);
+  const [profile, setProfile] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const [showAvatarPicker, setShowAvatarPicker] = useState(false);
+
+  // Estados de edición
+  const [formData, setFormData] = useState({
+    full_name: '',
+    email: '',
+    phone: '',
+    country_code: 'MX',
+    avatar_url: '',
+    password: ''
+  });
+
+  const AVATARS = [
+    "https://api.dicebear.com/7.x/fun-emoji/svg?seed=Smile&backgroundColor=b6e3f4",
+    "https://api.dicebear.com/7.x/fun-emoji/svg?seed=Rainbow&backgroundColor=c0aede",
+    "https://api.dicebear.com/7.x/fun-emoji/svg?seed=Heart&backgroundColor=d1d4f9",
+    "https://api.dicebear.com/7.x/fun-emoji/svg?seed=Star&backgroundColor=ffd5dc",
+    "https://api.dicebear.com/7.x/fun-emoji/svg?seed=Rocket&backgroundColor=c2f3e1",
+    "https://api.dicebear.com/7.x/fun-emoji/svg?seed=Sun&backgroundColor=fde68a"
+  ];
+
+  const COUNTRIES = [
+    { code: 'MX', label: 'México', flag: '🇲🇽' },
+    { code: 'ES', label: 'España', flag: '🇪🇸' },
+    { code: 'US', label: 'USA', flag: '🇺🇸' },
+    { code: 'CO', label: 'Colombia', flag: '🇨🇴' },
+    { code: 'AR', label: 'Argentina', flag: '🇦🇷' },
+  ];
 
   useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const res = await apiClient.get('/progress/stats');
-        setStats(res.data);
-        setUnlockedCodes(res.data.achievements || []);
-      } catch (err) {
-        console.error("Error fetching profile stats:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
     fetchProfile();
   }, []);
 
+  const fetchProfile = async () => {
+    try {
+      const { data } = await apiClient.get('/users/me');
+      setProfile(data);
+      setFormData({
+        full_name: data.full_name || '',
+        email: data.email || '',
+        phone: data.phone || '',
+        country_code: data.country_code || 'MX',
+        avatar_url: data.avatar_url || '',
+        password: ''
+      });
+    } catch (err) {
+      console.error("Error fetching profile:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSave = async (updatedFields?: any) => {
+    setSaving(true);
+    try {
+      const updateData: any = { ...formData, ...(updatedFields || {}) };
+      if (!updateData.password) delete updateData.password;
+      
+      await apiClient.put('/users/me', updateData);
+      fetchProfile();
+      if (!updatedFields) alert("Perfil actualizado correctamente");
+    } catch (err) {
+      alert("Error al actualizar el perfil");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const selectAvatar = (url: string) => {
+    setFormData(prev => ({ ...prev, avatar_url: url }));
+    setShowAvatarPicker(false);
+    handleSave({ avatar_url: url });
+  };
+
+  const copyReferral = () => {
+    if (profile?.referral_code) {
+      navigator.clipboard.writeText(profile.referral_code);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
   if (loading) return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50">
-      <div className="w-8 h-8 border-4 border-teal-600 border-t-transparent animate-spin rounded-full"></div>
+    <div className="min-h-screen flex items-center justify-center bg-[#F8FAFC]">
+      <div className="w-10 h-10 border-4 border-slate-950 border-t-teal-500 animate-spin"></div>
     </div>
   );
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 pb-12">
-      {/* Header */}
-      <nav className="sticky top-0 z-40 bg-white border-b border-slate-200 px-6 h-14 flex items-center gap-4">
-        <button onClick={() => router.back()} className="p-2 hover:bg-slate-100 rounded-none transition-colors">
-          <ArrowLeft size={20} />
+    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 pb-20 font-sans">
+      
+      {/* NAVEGACIÓN */}
+      <nav className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200 px-6 h-14 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <button onClick={() => router.back()} className="p-2 hover:bg-slate-100 transition-colors border border-transparent hover:border-slate-200">
+            <ArrowLeft size={18} />
+          </button>
+          <h1 className="font-black text-[10px] tracking-[0.3em] uppercase text-slate-900">Executive <span className="text-teal-600">Profile</span></h1>
+        </div>
+        <button 
+          onClick={() => handleSave()}
+          disabled={saving}
+          className="bg-slate-950 text-white px-6 py-2 text-[9px] font-black uppercase tracking-widest flex items-center gap-2 hover:bg-slate-800 disabled:opacity-50 transition-all"
+        >
+          {saving ? 'Saving...' : <><Save size={12} /> Save Changes</>}
         </button>
-        <h1 className="font-black text-xs tracking-[0.2em] uppercase">Perfil Ejecutivo</h1>
       </nav>
 
-      <div className="max-w-4xl mx-auto px-6 py-10">
+      <div className="max-w-6xl mx-auto px-6 py-12">
         
-        {/* User Card */}
-        <div className="bg-white border border-slate-200 p-8 rounded-none shadow-sm mb-10 flex flex-col md:flex-row items-center gap-8">
-          <div className="w-24 h-24 bg-teal-600 flex items-center justify-center text-white text-4xl font-black rounded-none">
-            {stats?.username?.charAt(0).toUpperCase()}
-          </div>
-          <div className="text-center md:text-left flex-1">
-            <h2 className="text-3xl font-black tracking-tighter mb-1 uppercase">{stats?.username}</h2>
-            <p className="text-[10px] font-black text-teal-600 uppercase tracking-widest mb-4">{stats?.level_label}</p>
-            <div className="flex flex-wrap justify-center md:justify-start gap-4">
-              <div className="bg-slate-50 px-4 py-2 border border-slate-100">
-                <p className="text-[8px] text-slate-400 font-black uppercase tracking-widest mb-0.5">Total XP</p>
-                <p className="text-lg font-black">{stats?.total_xp}</p>
-              </div>
-              <div className="bg-slate-50 px-4 py-2 border border-slate-100">
-                <p className="text-[8px] text-slate-400 font-black uppercase tracking-widest mb-0.5">Días en Racha</p>
-                <div className="flex items-center gap-2">
-                  <Flame size={14} className="text-orange-500 fill-orange-500" />
-                  <p className="text-lg font-black">{stats?.streak_days}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          
+          {/* COLUMNA IZQUIERDA: IDENTIDAD */}
+          <div className="lg:col-span-2 space-y-8">
+            
+            {/* CARD DE IDENTIDAD PRINCIPAL */}
+            <section className="bg-white border border-slate-200 p-8 shadow-sm relative">
+               <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 -rotate-45 translate-x-16 -translate-y-16 opacity-50"></div>
+               
+               <div className="flex flex-col md:flex-row items-center gap-8 relative z-10">
+                  <div className="relative">
+                    <div 
+                      onClick={() => setShowAvatarPicker(!showAvatarPicker)}
+                      className="w-32 h-32 bg-slate-950 flex items-center justify-center text-teal-400 text-5xl font-black cursor-pointer overflow-hidden hover:ring-4 hover:ring-teal-500/20 transition-all"
+                    >
+                      {formData.avatar_url ? (
+                        <img src={formData.avatar_url} alt="Avatar" className="w-full h-full object-cover" />
+                      ) : (
+                        profile?.username?.charAt(0).toUpperCase()
+                      )}
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                         <span className="text-[10px] text-white font-black uppercase">Cambiar</span>
+                      </div>
+                    </div>
 
-        {/* Achievements Section */}
-        <div>
-          <div className="flex items-center gap-3 mb-8">
-            <Trophy size={24} className="text-teal-600" />
-            <h3 className="text-xl font-black tracking-tight uppercase">Logros y Reconocimientos</h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {ALL_ACHIEVEMENTS.map((ach) => {
-              const isUnlocked = unlockedCodes.includes(ach.code);
-              const Icon = ach.icon;
-
-              return (
-                <div 
-                  key={ach.id} 
-                  className={`border p-6 flex items-start gap-5 transition-all ${
-                    isUnlocked 
-                      ? 'bg-white border-teal-200 shadow-sm' 
-                      : 'bg-slate-50 border-slate-200 opacity-70'
-                  }`}
-                >
-                  <div className={`w-14 h-14 flex-shrink-0 flex items-center justify-center border-2 ${
-                    isUnlocked 
-                      ? 'border-teal-600 bg-teal-50 text-teal-600' 
-                      : 'border-slate-300 bg-slate-100 text-slate-400'
-                  }`}>
-                    {isUnlocked ? <Icon size={28} /> : <Lock size={24} />}
-                  </div>
-                  
-                  <div>
-                    <h4 className={`text-sm font-black uppercase tracking-tight mb-1 ${
-                      isUnlocked ? 'text-slate-900' : 'text-slate-500'
-                    }`}>
-                      {ach.title}
-                    </h4>
-                    <p className="text-[10px] text-slate-500 font-bold leading-relaxed">
-                      {ach.description}
-                    </p>
-                    {isUnlocked && (
-                      <div className="mt-3 flex items-center gap-1.5">
-                        <span className="w-2 h-2 bg-teal-600 rounded-full animate-pulse"></span>
-                        <span className="text-[8px] font-black text-teal-600 uppercase tracking-widest">Desbloqueado</span>
+                    {/* Selector de Avatar - Corregido Z-Index y Posición */}
+                    {showAvatarPicker && (
+                      <div className="absolute top-[110%] left-0 p-4 bg-white border border-slate-200 shadow-2xl z-[100] grid grid-cols-3 gap-2 w-52 animate-in fade-in zoom-in duration-200">
+                        {AVATARS.map((url, i) => (
+                          <div 
+                            key={i} 
+                            onClick={() => selectAvatar(url)}
+                            className="w-13 h-13 border border-slate-100 cursor-pointer hover:border-teal-500 hover:scale-105 transition-all bg-slate-50"
+                          >
+                            <img src={url} alt={`Avatar ${i}`} className="w-full h-full object-cover" />
+                          </div>
+                        ))}
                       </div>
                     )}
                   </div>
-                </div>
-              );
-            })}
+
+                  <div className="flex-1 text-center md:text-left">
+                    <h2 className="text-4xl font-black tracking-tighter uppercase mb-1">{profile?.username}</h2>
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-6 flex items-center justify-center md:justify-start gap-2">
+                       <Shield size={12} className="text-teal-600" /> Professional Executive Account
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                       <div className="bg-slate-50 border border-slate-100 px-4 py-2">
+                          <span className="text-[7px] font-black text-slate-400 uppercase tracking-widest block">Eloquence Pts</span>
+                          <span className="text-lg font-black text-slate-900 flex items-center gap-1"><Zap size={14} className="text-teal-500" /> {profile?.stats?.eloquence_points}</span>
+                       </div>
+                       <div className="bg-slate-50 border border-slate-100 px-4 py-2">
+                          <span className="text-[7px] font-black text-slate-400 uppercase tracking-widest block">Active Streak</span>
+                          <span className="text-lg font-black text-slate-900 flex items-center gap-1"><Flame size={14} className="text-orange-500" /> {profile?.stats?.streak_days} Days</span>
+                       </div>
+                    </div>
+                  </div>
+               </div>
+            </section>
+
+            {/* FORMULARIO DE DATOS */}
+            <section className="bg-white border border-slate-200 shadow-sm">
+               <div className="px-8 py-4 bg-slate-50 border-b border-slate-200 flex items-center gap-2">
+                  <User size={14} className="text-slate-400" />
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.2em]">Personal Information</h3>
+               </div>
+               <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="space-y-2">
+                     <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Full Legal Name</label>
+                     <div className="relative">
+                        <User className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-300" size={14} />
+                        <input 
+                           type="text" 
+                           value={formData.full_name}
+                           onChange={(e) => setFormData({...formData, full_name: e.target.value})}
+                           className="w-full bg-slate-50 border border-slate-200 py-3 pl-10 pr-4 text-xs font-bold focus:outline-none focus:border-teal-500 transition-colors"
+                           placeholder="Ej. Jacob Morales"
+                        />
+                     </div>
+                  </div>
+                  <div className="space-y-2">
+                     <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Corporate Email</label>
+                     <div className="relative">
+                        <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-300" size={14} />
+                        <input 
+                           type="email" 
+                           value={formData.email}
+                           onChange={(e) => setFormData({...formData, email: e.target.value})}
+                           className="w-full bg-slate-50 border border-slate-200 py-3 pl-10 pr-4 text-xs font-bold focus:outline-none focus:border-teal-500 transition-colors"
+                        />
+                     </div>
+                  </div>
+                  <div className="space-y-2">
+                     <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Phone Number</label>
+                     <div className="relative">
+                        <Phone className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-300" size={14} />
+                        <input 
+                           type="tel" 
+                           value={formData.phone}
+                           onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                           className="w-full bg-slate-50 border border-slate-200 py-3 pl-10 pr-4 text-xs font-bold focus:outline-none focus:border-teal-500 transition-colors"
+                           placeholder="+52 000 000 0000"
+                        />
+                     </div>
+                  </div>
+                  <div className="space-y-2">
+                     <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Base Region (Country)</label>
+                     <div className="relative">
+                        <Globe className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-300" size={14} />
+                        <select 
+                           value={formData.country_code}
+                           onChange={(e) => setFormData({...formData, country_code: e.target.value})}
+                           className="w-full bg-slate-50 border border-slate-200 py-3 pl-10 pr-4 text-xs font-bold focus:outline-none focus:border-teal-500 appearance-none transition-colors"
+                        >
+                           {COUNTRIES.map(c => <option key={c.code} value={c.code}>{c.flag} {c.label}</option>)}
+                        </select>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+            {/* SEGURIDAD */}
+            <section className="bg-white border border-slate-200 shadow-sm">
+               <div className="px-8 py-4 bg-slate-50 border-b border-slate-200 flex items-center gap-2">
+                  <Lock size={14} className="text-slate-400" />
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.2em]">Security & Privacy</h3>
+               </div>
+               <div className="p-8">
+                  <div className="max-w-md space-y-2">
+                     <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Update Password</label>
+                     <div className="flex gap-2">
+                        <div className="relative flex-1">
+                           <Shield className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-300" size={14} />
+                           <input 
+                              type="password" 
+                              value={formData.password}
+                              onChange={(e) => setFormData({...formData, password: e.target.value})}
+                              className="w-full bg-slate-50 border border-slate-200 py-3 pl-10 pr-4 text-xs font-bold focus:outline-none focus:border-teal-500 transition-colors"
+                              placeholder="Min. 6 characters"
+                           />
+                        </div>
+                     </div>
+                     <p className="text-[8px] text-slate-400 font-bold uppercase italic mt-2">Deja en blanco para mantener la contraseña actual.</p>
+                  </div>
+               </div>
+            </section>
+
           </div>
+
+          {/* COLUMNA DERECHA: REFERIDOS Y LOGROS */}
+          <div className="space-y-8">
+            
+            {/* REFERRAL NETWORK */}
+            <section className="bg-slate-950 text-white p-8 border border-slate-800 shadow-xl relative overflow-hidden">
+               <div className="absolute top-0 right-0 p-4 opacity-10">
+                  <Swords size={80} />
+               </div>
+               <h3 className="text-sm font-black uppercase tracking-[0.3em] mb-2 flex items-center gap-2">
+                  <Award size={16} className="text-teal-400" /> Referral Network
+               </h3>
+               <p className="text-[9px] text-slate-400 font-bold uppercase tracking-tight mb-8 leading-relaxed">
+                  Invita a colegas y gana puntos de elocuencia adicionales por cada suscripción Titanium activada.
+               </p>
+               
+               <div className="bg-white/5 border border-white/10 p-4 mb-4">
+                  <span className="text-[7px] font-black text-teal-500 uppercase tracking-widest block mb-2">Your Personal Code</span>
+                  <div className="flex items-center justify-between gap-4">
+                     <code className="text-lg font-mono font-black tracking-widest text-teal-400">{profile?.referral_code}</code>
+                     <button 
+                        onClick={copyReferral}
+                        className="p-2 bg-white/10 hover:bg-white/20 transition-colors border border-white/5"
+                     >
+                        {copied ? <Check size={16} className="text-teal-400" /> : <Copy size={16} />}
+                     </button>
+                  </div>
+               </div>
+               <p className="text-[8px] text-slate-500 font-black uppercase text-center">Referrals Active: 0</p>
+            </section>
+
+            {/* LOGROS RESUMIDOS */}
+            <section className="bg-white border border-slate-200 shadow-sm">
+               <div className="px-8 py-4 bg-slate-50 border-b border-slate-200 flex items-center gap-2">
+                  <Trophy size={14} className="text-slate-400" />
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.2em]">Achievements</h3>
+               </div>
+               <div className="p-6 space-y-4">
+                  {profile?.stats?.achievements?.length > 0 ? (
+                    profile.stats.achievements.map((a: any) => (
+                       <div key={a} className="flex items-center gap-4 p-3 bg-slate-50 border border-slate-100">
+                          <div className="w-10 h-10 bg-teal-600/10 text-teal-600 flex items-center justify-center border border-teal-600/20">
+                             <Award size={20} />
+                          </div>
+                          <div>
+                             <p className="text-[9px] font-black uppercase text-slate-900 tracking-tight">{a.replace('_', ' ')}</p>
+                             <p className="text-[7px] text-slate-400 font-bold uppercase tracking-widest">Verified Badge</p>
+                          </div>
+                       </div>
+                    ))
+                  ) : (
+                    <div className="text-center py-6">
+                       <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest">No achievements yet</p>
+                    </div>
+                  )}
+               </div>
+            </section>
+
+          </div>
+
         </div>
 
       </div>

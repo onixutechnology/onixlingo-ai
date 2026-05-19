@@ -111,8 +111,12 @@ export default function LessonRunnerEngine() {
   const searchParams = useSearchParams();
   const lessonType = searchParams.get('type') || 'standard';
   const { setSpeaking } = useAvatarStore();
-  const { mode } = useUIStore();
-  const isPro = mode === 'professional';
+  const { mode, activeLanguage } = useUIStore();
+  const isPro = mode === 'professional' || (params?.lessonId as string || '').includes('mock');
+
+  // ⏱️ DETECTAR MODO DE TIEMPO
+  const timeMode = searchParams.get('timeMode') || 'basic';
+  const initialSeconds = timeMode === 'advanced' ? 300 : timeMode === 'intermediate' ? 600 : 0;
 
   // ✅ CORRECCIÓN 2: El userId ahora es dinámico (Estado real)
   const [userId, setUserId] = useState<string>('estudiante_anonimo');
@@ -132,6 +136,13 @@ export default function LessonRunnerEngine() {
   const [currentStageIndex, setCurrentStageIndex] = useState(0);
   const [showResults, setShowResults] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+
+  // ========== ESTADOS DE PAIRING DRILL ==========
+  const [selectedLeft, setSelectedLeft] = useState<{ id: string; word: string } | null>(null);
+  const [selectedRight, setSelectedRight] = useState<{ id: string; word: string } | null>(null);
+  const [matchedPairs, setMatchedPairs] = useState<string[]>([]);
+  const [shuffledLeft, setShuffledLeft] = useState<any[]>([]);
+  const [shuffledRight, setShuffledRight] = useState<any[]>([]);
 
   // ========== ESTADÍSTICAS MEJORADAS ==========
   const [stats, setStats] = useState<LessonStats>({
@@ -162,7 +173,11 @@ export default function LessonRunnerEngine() {
   const [lecturePartIndex, setLecturePartIndex] = useState(0);
 
   // ========== CARACTERÍSTICAS PRO ==========
-  const [seconds, setSeconds] = useState(0);
+  const [seconds, setSeconds] = useState(initialSeconds);
+  
+  // ========== RETOMAR LECCIÓN / PROGRESO GUARDADO ==========
+  const [showResumePrompt, setShowResumePrompt] = useState(false);
+  const [pendingResumeState, setPendingResumeState] = useState<any>(null);
   const [isActive, setIsActive] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(true);
@@ -237,25 +252,104 @@ export default function LessonRunnerEngine() {
     }
   }, []);
 
-  // [FUNCIÓN 6] Reproducir sonido TTS
-  const speakText = useCallback((text: string, rate: number = 0.9): void => {
+  // [FUNCIÓN 6 - FALLBACK] Reproductor local en caso de desconexión
+  const fallbackSpeakText = useCallback((text: string, rate: number = 0.9): void => {
     if (typeof window === 'undefined' || !window.speechSynthesis || !soundEnabled) return;
 
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     const voices = window.speechSynthesis.getVoices();
-    const maleVoice = voices.find(v =>
-      v.name.includes('Male') || v.name.includes('David') || v.name.includes('Google US English')
-    );
+    
+    // Mapear idioma activo para el lector del navegador
+    const langMap: Record<string, string> = { en: 'en-US', fr: 'fr-FR', zh: 'zh-CN' };
+    const targetLang = langMap[activeLanguage] || 'en-US';
+    
+    // Seleccionar una voz que coincida con el idioma objetivo
+    const targetVoice = voices.find(v => v.lang.startsWith(targetLang));
+    if (targetVoice) utterance.voice = targetVoice;
 
-    if (maleVoice) utterance.voice = maleVoice;
-    utterance.lang = 'en-US';
+    utterance.lang = targetLang;
     utterance.rate = rate * playbackSpeed;
     utterance.onstart = () => setSpeaking(true);
     utterance.onend = () => setSpeaking(false);
 
     window.speechSynthesis.speak(utterance);
-  }, [soundEnabled, playbackSpeed, setSpeaking]);
+  }, [soundEnabled, playbackSpeed, activeLanguage, setSpeaking]);
+
+  // [FUNCIÓN 6 - PREMIUM] Reproducir sonido ultra-realista con Google Cloud TTS
+  const speakText = useCallback((text: string, rate: number = 0.9): void => {
+    if (!soundEnabled) return;
+
+    try {
+      // Intentar reproducir voz ultra-realista mediante el backend
+      const baseUrl = apiClient.defaults.baseURL || 'http://localhost:8000';
+      const audioUrl = `${baseUrl}/api/v1/ai/tts?text=${encodeURIComponent(text)}&lang=${activeLanguage}`;
+      
+      const audio = new Audio(audioUrl);
+      audio.playbackRate = playbackSpeed;
+      audio.onplay = () => setSpeaking(true);
+      audio.onended = () => setSpeaking(false);
+      
+      audio.onerror = (e) => {
+        console.warn("⚠️ Google Cloud TTS no disponible o credencial inactiva. Usando sintetizador local:", e);
+        setSpeaking(false);
+        fallbackSpeakText(text, rate);
+      };
+      
+      audio.play().catch(err => {
+        console.warn("⚠️ Reproducción automática bloqueada por el navegador. Usando sintetizador local:", err);
+        fallbackSpeakText(text, rate);
+      });
+      
+    } catch (err) {
+      console.warn("⚠️ Error al inicializar audio premium. Usando sintetizador local:", err);
+      fallbackSpeakText(text, rate);
+    }
+  }, [soundEnabled, playbackSpeed, activeLanguage, setSpeaking, fallbackSpeakText]);
+
+  const handleLeftClick = useCallback((item: { id: string; word: string }) => {
+    if (matchedPairs.includes(item.id)) return;
+    if (selectedLeft?.id === item.id) {
+      setSelectedLeft(null);
+      return;
+    }
+    setSelectedLeft(item);
+    
+    if (selectedRight) {
+      if (item.id === selectedRight.id) {
+        setMatchedPairs(prev => [...prev, item.id]);
+        setSelectedLeft(null);
+        setSelectedRight(null);
+        if (soundEnabled) speakText("Excellent");
+      } else {
+        if (soundEnabled) speakText("Wrong");
+        setSelectedLeft(null);
+        setSelectedRight(null);
+      }
+    }
+  }, [matchedPairs, selectedLeft, selectedRight, soundEnabled, speakText]);
+
+  const handleRightClick = useCallback((item: { id: string; word: string }) => {
+    if (matchedPairs.includes(item.id)) return;
+    if (selectedRight?.id === item.id) {
+      setSelectedRight(null);
+      return;
+    }
+    setSelectedRight(item);
+    
+    if (selectedLeft) {
+      if (item.id === selectedLeft.id) {
+        setMatchedPairs(prev => [...prev, item.id]);
+        setSelectedLeft(null);
+        setSelectedRight(null);
+        if (soundEnabled) speakText("Excellent");
+      } else {
+        if (soundEnabled) speakText("Wrong");
+        setSelectedLeft(null);
+        setSelectedRight(null);
+      }
+    }
+  }, [matchedPairs, selectedLeft, selectedRight, soundEnabled, speakText]);
 
   // [FUNCIÓN 7] Detener reproducción de audio
   const stopSpeech = useCallback((): void => {
@@ -267,10 +361,22 @@ export default function LessonRunnerEngine() {
 
   // [FUNCIÓN 8] Manejar salida de la lección
   const handleExit = useCallback((): void => {
-    if (lessonType === 'vocab') router.push('/dashboard/vocabulary'); // 👈 NUEVO CASO
-    else if (isPro) router.push('/dashboard/pro');
+    // GUARDAR PROGRESO AL SALIR
+    const sessionState = {
+      currentStageIndex,
+      currentQuestionIndex,
+      stats,
+      answerHistory,
+      timestamp: Date.now()
+    };
+    try {
+      localStorage.setItem(`session_${params?.lessonId}`, JSON.stringify(sessionState));
+    } catch(e){}
+
+    if (lessonType === 'vocab') router.push('/dashboard/vocabulary'); 
+    else if (isPro || (params?.lessonId as string || '').includes('mock')) router.push('/dashboard');
     else router.push('/dashboard');
-  }, [router, isPro, lessonType]);
+  }, [router, isPro, lessonType, currentStageIndex, currentQuestionIndex, stats, answerHistory, params?.lessonId]);
 
   // [FUNCIÓN 9] Registrar evento analítico
   const trackEvent = useCallback((eventType: string, data: any): void => {
@@ -1048,8 +1154,54 @@ export default function LessonRunnerEngine() {
 
   // [NORMAL 20] Obtener progreso en porcentaje
   const getProgressPercentage = useCallback((): number => {
-    return lesson ? Math.round(((currentStageIndex + 1) / lesson.stages.length) * 100) : 0;
-  }, [lesson, currentStageIndex]);
+    if (!lesson) return 0;
+    
+    // 1. Calcular total de pasos en toda la lección
+    let total = 0;
+    for (const stage of lesson.stages) {
+      if (stage.type === 'theory' && stage.parts) {
+        total += stage.parts.length;
+      } else if (stage.type === 'pairing_drill') {
+        total += 1;
+      } else if ((stage.type === 'quiz' || stage.type === 'gamified_quiz') && stage.questions) {
+        total += stage.questions.length;
+      } else {
+        total += 1;
+      }
+    }
+    
+    if (total === 0) return 0;
+    
+    // 2. Calcular pasos completados hasta el momento actual
+    let current = 0;
+    for (let i = 0; i < currentStageIndex; i++) {
+      const stage = lesson.stages[i];
+      if (stage.type === 'theory' && stage.parts) {
+        current += stage.parts.length;
+      } else if (stage.type === 'pairing_drill') {
+        current += 1;
+      } else if ((stage.type === 'quiz' || stage.type === 'gamified_quiz') && stage.questions) {
+        current += stage.questions.length;
+      } else {
+        current += 1;
+      }
+    }
+    
+    // Añadir progreso de la etapa actual
+    const currentStage = lesson.stages[currentStageIndex];
+    if (currentStage) {
+      if (currentStage.type === 'theory') {
+        current += lecturePartIndex;
+      } else if (currentStage.type === 'pairing_drill') {
+        const totalPairs = (currentStage as any).pairs?.length || 1;
+        current += matchedPairs.length / totalPairs;
+      } else if ((currentStage.type === 'quiz' || currentStage.type === 'gamified_quiz') && currentStage.questions) {
+        current += currentQuestionIndex;
+      }
+    }
+    
+    return Math.round((current / total) * 100);
+  }, [lesson, currentStageIndex, lecturePartIndex, currentQuestionIndex, matchedPairs.length]);
 
   // [NORMAL 21] Validar entrada de usuario
   const validateUserInput = useCallback((input: string): { valid: boolean; message: string } => {
@@ -1107,13 +1259,24 @@ export default function LessonRunnerEngine() {
 
   useEffect(() => {
     let interval: any = null;
-    if (isActive && isPro) {
+    if (isActive) {
       interval = setInterval(() => {
-        setSeconds(s => s + 1);
+        setSeconds(s => {
+          if (timeMode !== 'basic') {
+            if (s <= 1) {
+              clearInterval(interval);
+              finishLesson(); // Finalizar examen al agotarse el tiempo
+              return 0;
+            }
+            return s - 1;
+          } else {
+            return s + 1;
+          }
+        });
       }, 1000);
     }
     return () => clearInterval(interval);
-  }, [isActive, isPro]);
+  }, [isActive, timeMode]);
 
   // ============================================================================
   // ==================== EFECTO PARA CARGA DE LECCIÓN =======================
@@ -1126,7 +1289,7 @@ export default function LessonRunnerEngine() {
         const lessonId = params?.lessonId as string;
         if (!lessonId) throw new Error("ID inválido");
 
-        const { data } = await apiClient.get(`/lessons/${lessonId}`);
+        const { data } = await apiClient.get(`/lessons/${lessonId}?lang=${activeLanguage}`);
 
         const normalizedStages = data.stages.map((s: any) => {
           if (s.type === 'lecture' && s.content && !s.parts) {
@@ -1142,8 +1305,10 @@ export default function LessonRunnerEngine() {
         setLesson(data);
 
         // estas llamadas NO deben meter dependencias nuevas:
-        if (isPro) {
-          recoverPreviousSession(); // useCallback
+        const savedSession = loadFromLocalStorage(`session_${lessonId}`, null);
+        if (savedSession && Date.now() - savedSession.timestamp < 24 * 60 * 60 * 1000) {
+          setPendingResumeState(savedSession);
+          setShowResumePrompt(true);
         }
         loadSavedBookmarks();       // useCallback
       } catch (err: any) {
@@ -1155,7 +1320,7 @@ export default function LessonRunnerEngine() {
 
     initLesson();
     // 👇 IMPORTANTE: sin lesson?.id ni otras refs inestables
-  }, [params, isPro]);
+  }, [params?.lessonId, isPro, activeLanguage]);
 
 
   // ============================================================================
@@ -1177,6 +1342,26 @@ export default function LessonRunnerEngine() {
       setResponseStartTime(Date.now());
     }
   }, [currentStageIndex, currentQuestionIndex, lesson]);
+
+  // ============================================================================
+  // ==================== EFECTO PARA PAIRING DRILL ===========================
+  // ============================================================================
+
+  useEffect(() => {
+    if (!lesson) return;
+    const stage = lesson.stages[currentStageIndex];
+    if (stage?.type === 'pairing_drill') {
+      const pairs = (stage as any).pairs || [];
+      const leftItems = pairs.map((p: any) => ({ id: p.id, word: p.en }));
+      const rightItems = pairs.map((p: any) => ({ id: p.id, word: p.es || p.fr }));
+      
+      setShuffledLeft([...leftItems].sort(() => Math.random() - 0.5));
+      setShuffledRight([...rightItems].sort(() => Math.random() - 0.5));
+      setSelectedLeft(null);
+      setSelectedRight(null);
+      setMatchedPairs([]);
+    }
+  }, [currentStageIndex, lesson]);
 
   // ============================================================================
   // ==================== FUNCIÓN FINALIZAR LECCIÓN (CONECTADA) =================
@@ -1445,6 +1630,7 @@ export default function LessonRunnerEngine() {
         totalSteps={lesson?.stages.length || 1}
         onRetry={restartLesson} // 👈 Usa la función optimizada que ya creaste
         onExit={handleExit}               // 👈 Conecta tu función de salida
+        answerHistory={answerHistory}     // 👈 NUEVO: historial de respuestas para el reporte y certificado
       />
     );
   }
@@ -1481,9 +1667,9 @@ export default function LessonRunnerEngine() {
                 <div>📊 {calculateAccuracy()}%</div>
               </div>
             )}
-            <div className="flex items-center gap-3 bg-slate-800/80 px-4 py-2 rounded-none border border-slate-700 shadow-inner">
-              <Clock size={16} className="text-teal-400 animate-pulse" />
-              <span className="font-mono text-xl font-black tracking-widest text-teal-50">{formatTime(seconds)}</span>
+            <div className={`flex items-center gap-3 px-4 py-2 rounded-none border shadow-inner transition-colors duration-300 ${timeMode !== 'basic' && seconds < 60 ? 'bg-red-950/80 border-red-800 animate-pulse' : 'bg-slate-800/80 border-slate-700'}`}>
+              <Clock size={16} className={timeMode !== 'basic' && seconds < 60 ? 'text-red-400 animate-bounce' : 'text-teal-400'} />
+              <span className={`font-mono text-xl font-black tracking-widest ${timeMode !== 'basic' && seconds < 60 ? 'text-red-200' : 'text-teal-50'}`}>{formatTime(seconds)}</span>
             </div>
             <button onClick={() => setShowSettings(!showSettings)} className="p-2 hover:bg-white/10 rounded-none border border-transparent hover:border-slate-700">
               <Settings size={20} />
@@ -1492,7 +1678,15 @@ export default function LessonRunnerEngine() {
         </header>
       ) : (
         <header className="h-12 bg-white border-b border-slate-200 px-6 flex items-center justify-between sticky top-0 z-20">
-          <button onClick={handleExit} className="text-slate-400 hover:text-amber-600 transition-colors"><X size={20} /></button>
+          <div className="flex items-center gap-3">
+            <button onClick={handleExit} className="text-slate-400 hover:text-amber-600 transition-colors"><X size={20} /></button>
+            {timeMode !== 'basic' && (
+              <div className={`flex items-center gap-1.5 px-3 py-1 border transition-colors ${seconds < 60 ? 'bg-rose-50 border-rose-200 text-rose-600 animate-pulse' : 'bg-slate-50 border-slate-200 text-slate-700'}`}>
+                <Clock size={12} className="animate-pulse" />
+                <span className="font-mono text-[10px] font-black tracking-wider">{formatTime(seconds)}</span>
+              </div>
+            )}
+          </div>
           <div className="w-1/3 h-1 bg-slate-100 rounded-none overflow-hidden">
             <div className="h-full bg-amber-600 transition-all duration-500" style={{ width: `${getProgressPercentage()}%` }}></div>
           </div>
@@ -1538,6 +1732,46 @@ export default function LessonRunnerEngine() {
 
               <button onClick={() => exportReportPDF()} className="w-full py-2 px-4 rounded-lg bg-amber-600 flex items-center gap-2 justify-center">
                 <Download size={18} /> Exportar PDF
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* DIÁLOGO INTERACTIVO PARA RETOMAR SESIÓN GUARDADA */}
+      {showResumePrompt && pendingResumeState && (
+        <div className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+          <div className="bg-slate-900 border-2 border-amber-950 p-6 md:p-8 max-w-md w-full shadow-2xl text-center rounded-none relative">
+            <div className="absolute top-0 left-0 w-full h-1 bg-amber-500" />
+            <div className="flex justify-center mb-4 text-amber-500">
+              <Sparkles size={40} className="animate-pulse" />
+            </div>
+            <h3 className="text-sm font-serif font-black italic uppercase tracking-wider text-amber-400 mb-2">¿Deseas retomar tu intento?</h3>
+            <p className="text-[10px] text-slate-400 leading-relaxed mb-6">
+              Hemos detectado un progreso guardado del <span className="text-white font-mono font-black">{new Date(pendingResumeState.timestamp).toLocaleDateString()}</span>. ¿Prefieres reanudar tu examen desde la etapa donde estabas o comenzar uno nuevo de cero?
+            </p>
+            <div className="flex flex-col gap-2">
+              <button 
+                onClick={() => {
+                  setCurrentStageIndex(pendingResumeState.currentStageIndex);
+                  setCurrentQuestionIndex(pendingResumeState.currentQuestionIndex);
+                  setStats(pendingResumeState.stats);
+                  setAnswerHistory(pendingResumeState.answerHistory);
+                  setShowResumePrompt(false);
+                }} 
+                className="w-full py-3 bg-amber-600 hover:bg-amber-500 text-white font-black text-[10px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-1.5"
+              >
+                SÍ, REANUDAR EXAMEN <ChevronRight size={14} />
+              </button>
+              <button 
+                onClick={() => {
+                  localStorage.removeItem(`session_${params.lessonId}`);
+                  setSeconds(initialSeconds);
+                  setShowResumePrompt(false);
+                }} 
+                className="w-full py-2.5 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-widest transition-all rounded-none"
+              >
+                NO, COMENZAR DE CERO
               </button>
             </div>
           </div>
@@ -1593,6 +1827,93 @@ export default function LessonRunnerEngine() {
                   </div>
                 )}
               </div>
+            </div>
+          </div>
+        )}
+
+        {/* MODO: PAIRING DRILL */}
+        {currentStage.type === 'pairing_drill' && (
+          <div className="max-w-2xl w-full flex flex-col justify-center animate-in zoom-in-95 relative z-10">
+            <div className={`p-8 rounded-none border ${isPro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
+              <div className="flex items-center gap-2 mb-6 border-b border-slate-100 pb-4">
+                 <Zap size={14} className="text-teal-600" />
+                 <h2 className={`text-xs font-black uppercase tracking-[0.3em] font-serif italic ${isPro ? 'text-teal-400' : 'text-slate-800'}`}>{currentStage.title || "Vocabulario Clé"}</h2>
+              </div>
+              
+              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-8">Empareja cada palabra en inglés con su traducción en francés:</p>
+              
+              <div className="grid grid-cols-2 gap-8 mb-8">
+                {/* Columna Izquierda: Inglés */}
+                <div className="space-y-4">
+                  {shuffledLeft.map((item) => {
+                    const isMatched = matchedPairs.includes(item.id);
+                    const isSelected = selectedLeft?.id === item.id;
+                    return (
+                      <button
+                        key={`left-${item.id}`}
+                        onClick={() => handleLeftClick(item)}
+                        disabled={isMatched}
+                        className={`w-full p-4 border-2 text-center font-bold text-xs uppercase tracking-wider transition-all
+                          ${isMatched 
+                            ? 'bg-emerald-950/20 border-emerald-600 text-emerald-500 opacity-60 cursor-not-allowed'
+                            : isSelected
+                              ? 'bg-amber-900/20 border-amber-600 text-amber-500 scale-[0.98]'
+                              : isPro ? 'bg-slate-800 border-slate-700 text-slate-300 hover:border-amber-600' : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-amber-400'
+                          }
+                        `}
+                      >
+                        {item.word}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Columna Derecha: Francés */}
+                <div className="space-y-4">
+                  {shuffledRight.map((item) => {
+                    const isMatched = matchedPairs.includes(item.id);
+                    const isSelected = selectedRight?.id === item.id;
+                    return (
+                      <button
+                        key={`right-${item.id}`}
+                        onClick={() => handleRightClick(item)}
+                        disabled={isMatched}
+                        className={`w-full p-4 border-2 text-center font-bold text-xs uppercase tracking-wider transition-all
+                          ${isMatched 
+                            ? 'bg-emerald-950/20 border-emerald-600 text-emerald-500 opacity-60 cursor-not-allowed'
+                            : isSelected
+                              ? 'bg-amber-900/20 border-amber-600 text-amber-500 scale-[0.98]'
+                              : isPro ? 'bg-slate-800 border-slate-700 text-slate-300 hover:border-amber-600' : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-amber-400'
+                          }
+                        `}
+                      >
+                        {item.word}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {matchedPairs.length > 0 && matchedPairs.length === ((currentStage as any).pairs?.length || 0) ? (
+                <div className="animate-in fade-in duration-300">
+                  <div className={`p-4 mb-6 rounded-none text-center font-bold text-xs uppercase tracking-wider ${isPro ? 'bg-emerald-950/30 border border-emerald-500 text-emerald-400' : 'bg-emerald-50 border border-emerald-200 text-emerald-800'}`}>
+                    🎉 ¡Perfecto! Todas las parejas han sido emparejadas con éxito.
+                  </div>
+                  <button
+                    onClick={nextStage}
+                    className={`w-full font-black py-4 rounded-none flex justify-center gap-3 text-[10px] uppercase tracking-[0.2em] transition-all bg-amber-600 hover:bg-amber-700 text-white shadow-lg`}
+                  >
+                    CONTINUAR A LA SIGUIENTE FASE <ArrowRight size={14} />
+                  </button>
+                </div>
+              ) : (
+                <button
+                  disabled
+                  className="w-full font-black py-4 rounded-none flex justify-center gap-3 text-[10px] uppercase tracking-[0.2em] bg-slate-800 text-slate-600 cursor-not-allowed"
+                >
+                  EMPAREJA TODO PARA CONTINUAR
+                </button>
+              )}
             </div>
           </div>
         )}

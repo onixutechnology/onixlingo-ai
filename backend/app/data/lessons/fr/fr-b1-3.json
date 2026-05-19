@@ -1,32 +1,403 @@
 {
   "id": "fr-b1-3",
-  "title": "Ventes Directes",
-  "total_xp": 100,
+  "title": "Animer une Réunion",
+  "total_xp": 300,
   "stages": [
     {
       "id": "theory-1",
       "type": "theory",
-      "title": "Ventes Directes",
+      "title": "Conducción y Moderación de Reuniones",
       "parts": [
         {
-          "visual": "Convaincre le client.",
-          "audio": "Module Ventes Directes."
+          "visual": "Dar el turno de habla: \"Je vous donne la parole\" (Le doy la palabra).",
+          "audio": "Je vous donne la parole pour expliquer."
+        },
+        {
+          "visual": "Agenda de la sesión: \"L'ordre du jour est très chargé\" (El orden del día está muy cargado / lleno).",
+          "audio": "L'ordre du jour est très chargé ce matin."
+        },
+        {
+          "visual": "Presentar opiniones propias: \"À mon avis, c'est la meilleure option\" (En mi opinión, es la mejor opción).",
+          "audio": "À mon avis, c'est la meilleure option."
+        },
+        {
+          "visual": "Resumir estatus: \"Pour résumer la situation actuelle...\" (Para resumir la situación actual...).",
+          "audio": "Pour résumer la situation actuelle du projet."
+        },
+        {
+          "visual": "Decisión final: \"Nous prenons une décision aujourd'hui\" (Tomamos una decisión hoy).",
+          "audio": "Nous prenons une décision aujourd'hui."
         }
       ]
     },
     {
       "id": "quiz-1",
       "type": "quiz",
-      "title": "Check",
+      "title": "Práctica de Reuniones",
       "questions": [
         {
           "type": "quiz_choice",
-          "question": "Ok?",
+          "question": "¿Cómo dices formalmente 'Le doy la palabra'?",
           "options": [
-            "Oui"
+            "Je vous donne la parole",
+            "Je vous passe le téléphone",
+            "Ne quittez pas s'il vous plaît"
           ],
-          "correct_answer": "Oui",
-          "explanation": "."
+          "correct_answer": "Je vous donne la parole",
+          "explanation": "Parole es palabra o turno de habla."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'El orden del día está muy cargado':",
+          "options": [
+            "L'ordre du jour est très chargé",
+            "La réunion est finie",
+            "Je propose une réunion"
+          ],
+          "correct_answer": "L'ordre du jour est très chargé",
+          "explanation": "Ordre du jour es la agenda de puntos a tratar."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa 'À mon avis'?",
+          "options": [
+            "En mi opinión",
+            "Por favor",
+            "Lo siento mucho"
+          ],
+          "correct_answer": "En mi opinión",
+          "explanation": "Fórmula pulcra para expresar una perspectiva propia."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Para resumir la situación'?",
+          "options": [
+            "Pour résumer la situation",
+            "Je vous donne la parole",
+            "C'est parfait pour moi"
+          ],
+          "correct_answer": "Pour résumer la situation",
+          "explanation": "Résumer significa resumir o sintetizar."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Tomamos una decisión hoy':",
+          "options": [
+            "Nous prenons une décision aujourd'hui",
+            "Nous ferons un point",
+            "Je vous confirme cela"
+          ],
+          "correct_answer": "Nous prenons une décision aujourd'hui",
+          "explanation": "Prenons es el verbo prendre (tomar)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa la palabra 'Chargé'?",
+          "options": [
+            "Cargado / Lleno",
+            "Lento",
+            "Rápido"
+          ],
+          "correct_answer": "Cargado / Lleno",
+          "explanation": "Indica un volumen elevado de tareas o puntos."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'La mejor opción':",
+          "options": [
+            "La meilleure option",
+            "Une mauvaise idée",
+            "Le statut de projet"
+          ],
+          "correct_answer": "La meilleure option",
+          "explanation": "Meilleure significa mejor en género femenino."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Decisión' en francés?",
+          "options": [
+            "La décision",
+            "Le projet",
+            "Le budget"
+          ],
+          "correct_answer": "La décision",
+          "explanation": "Palabra femenina terminada en -sion."
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de reunión que escuchas:",
+          "tts_text": "Je vous donne la parole",
+          "options": [
+            "Je vous donne la parole",
+            "Je prends un message",
+            "Je vous passe le manager"
+          ],
+          "correct_answer": "Je vous donne la parole"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de reunión que escuchas:",
+          "tts_text": "L'ordre du jour",
+          "options": [
+            "L'ordre du jour",
+            "La date limite",
+            "La semaine dernière"
+          ],
+          "correct_answer": "L'ordre du jour"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de reunión que escuchas:",
+          "tts_text": "À mon avis",
+          "options": [
+            "À mon avis",
+            "C'est parfait",
+            "Ne quittez pas"
+          ],
+          "correct_answer": "À mon avis"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de reunión que escuchas:",
+          "tts_text": "Pour résumer la situation",
+          "options": [
+            "Pour résumer la situation",
+            "Pour réserver le billet",
+            "Pour finir le projet"
+          ],
+          "correct_answer": "Pour résumer la situation"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de reunión que escuchas:",
+          "tts_text": "Prendre une décision",
+          "options": [
+            "Prendre une décision",
+            "Prendre le train",
+            "Prendre un message"
+          ],
+          "correct_answer": "Prendre une décision"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Chargé",
+          "options": [
+            "Chargé",
+            "Désolé",
+            "Bloqué"
+          ],
+          "correct_answer": "Chargé"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase que escuchas:",
+          "tts_text": "La meilleure option",
+          "options": [
+            "La meilleure option",
+            "Le premier jalon",
+            "Une erreur de facture"
+          ],
+          "correct_answer": "La meilleure option"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "La parole",
+          "options": [
+            "La parole",
+            "La tâche",
+            "La gare"
+          ],
+          "correct_answer": "La parole"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Le doy la palabra para comenzar'",
+          "parts": [
+            "Je",
+            "vous",
+            "donne",
+            "la",
+            "parole",
+            "pour",
+            "commencer"
+          ],
+          "correct_order": [
+            "Je",
+            "vous",
+            "donne",
+            "la",
+            "parole",
+            "pour",
+            "commencer"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'El orden del día es muy cargado hoy'",
+          "parts": [
+            "L'ordre",
+            "du",
+            "jour",
+            "est",
+            "très",
+            "chargé",
+            "aujourd'hui"
+          ],
+          "correct_order": [
+            "L'ordre",
+            "du",
+            "jour",
+            "est",
+            "très",
+            "chargé",
+            "aujourd'hui"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'En mi opinión, es la mejor decisión'",
+          "parts": [
+            "À",
+            "mon",
+            "avis",
+            "c'est",
+            "la",
+            "meilleure",
+            "décision"
+          ],
+          "correct_order": [
+            "À",
+            "mon",
+            "avis",
+            "c'est",
+            "la",
+            "meilleure",
+            "décision"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Para resumir la situación del proyecto'",
+          "parts": [
+            "Pour",
+            "résumer",
+            "la",
+            "situation",
+            "du",
+            "projet"
+          ],
+          "correct_order": [
+            "Pour",
+            "résumer",
+            "la",
+            "situation",
+            "du",
+            "projet"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Tomamos una decisión importante en equipo'",
+          "parts": [
+            "Nous",
+            "prenons",
+            "une",
+            "décision",
+            "importante",
+            "en",
+            "équipe"
+          ],
+          "correct_order": [
+            "Nous",
+            "prenons",
+            "une",
+            "décision",
+            "importante",
+            "en",
+            "équipe"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Quién conduce la reunión hoy?'",
+          "parts": [
+            "Qui",
+            "anime",
+            "la",
+            "réunion",
+            "aujourd'hui"
+          ],
+          "correct_order": [
+            "Qui",
+            "anime",
+            "la",
+            "réunion",
+            "aujourd'hui"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Palabra / Turno de habla'?",
+          "correct_answers": [
+            "Parole"
+          ],
+          "hints": [
+            "P-A-R-O-L-E"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa la frase de agenda: L'ordre du ___ (día)",
+          "correct_answers": [
+            "jour"
+          ],
+          "hints": [
+            "J-O-U-R"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa la opinión: À mon ___ , c'est bien (opinión)",
+          "correct_answers": [
+            "avis"
+          ],
+          "hints": [
+            "A-V-I-S"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Pour ___ la situation (resumir)",
+          "correct_answers": [
+            "résumer",
+            "resumer"
+          ],
+          "hints": [
+            "R-É-S-U-M-E-R"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Decisión' en francés?",
+          "correct_answers": [
+            "Décision",
+            "decision"
+          ],
+          "hints": [
+            "D-É-C-I-S-I-O-N"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Nous ___ une décision (tomamos / conjugado de prendre)",
+          "correct_answers": [
+            "prenons"
+          ],
+          "hints": [
+            "P-R-E-N-O-N-S"
+          ]
         }
       ]
     }

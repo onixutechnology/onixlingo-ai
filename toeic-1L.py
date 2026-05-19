@@ -76,6 +76,7 @@ lesson = {
 
 # INTRODUCCIÓN CON AVATAR
 lesson["stages"].append({
+    "id": "intro",
     "type": "lecture",
     "title": "Strategy: Photodescription",
     "parts": [
@@ -88,8 +89,8 @@ lesson["stages"].append({
 })
 
 # EJERCICIOS
-lesson["stages"].append({"type": "quiz", "questions": [gen_part1_photographs(i) for i in range(5)]})
-lesson["stages"].append({"type": "quiz", "questions": [gen_part3_conversations(i) for i in range(5)]})
+lesson["stages"].append({"id": "quiz-part1", "type": "quiz", "questions": [gen_part1_photographs(i) for i in range(5)]})
+lesson["stages"].append({"id": "quiz-part3", "type": "quiz", "questions": [gen_part3_conversations(i) for i in range(5)]})
 
 # GUARDAR
 output_path = "backend/app/data/lessons/toeic_listening.json"

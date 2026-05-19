@@ -134,21 +134,53 @@ def get_user_stats(
 
 @router.get("/eloquence-leaderboard")
 def get_eloquence_leaderboard(
+    country: str = None,
     db: Session = Depends(get_db)
 ):
-    """Retorna el ranking global basado en Puntos de Elocuencia"""
-    top_users = db.query(models.User).order_by(models.User.eloquence_points.desc()).limit(20).all()
+    """Retorna el ranking global o filtrado por país con métricas reales"""
+    # 1. Base query
+    query = db.query(models.User)
+    
+    if country and country != "all":
+        query = query.filter(models.User.country_code == country.upper())
+
+    # 2. Métricas Globales (basadas en el filtro)
+    total_users = query.count()
+    avg_eloquence = db.query(func.avg(models.User.eloquence_points))
+    if country and country != "all":
+        avg_eloquence = avg_eloquence.filter(models.User.country_code == country.upper())
+    
+    avg_val = avg_eloquence.scalar() or 0
+    
+    # 3. Ranking
+    top_users = query.order_by(models.User.eloquence_points.desc()).limit(25).all()
     
     leaderboard = []
     for idx, user in enumerate(top_users):
+        completed_count = db.query(models.Progress).filter(
+            models.Progress.user_id == user.id,
+            models.Progress.status == "completed"
+        ).count()
+
+        display_name = f"{user.username[0].upper()}."
+
         leaderboard.append({
             "rank": idx + 1,
-            "username": user.username,
+            "username": display_name,
+            "country_code": user.country_code or "MX",
             "eloquence_points": user.eloquence_points,
+            "streak_days": user.streak_days or 0,
+            "completed_lessons": completed_count,
             "is_pro": user.is_pro or user.tier == "titanium"
         })
     
-    return {"leaderboard": leaderboard}
+    return {
+        "leaderboard": leaderboard,
+        "stats": {
+            "total_active_users": total_users,
+            "avg_eloquence": round(float(avg_val), 1)
+        }
+    }
 
 def _calculate_label(count: int) -> str:
     if count < 5: return "A1 - Beginner"

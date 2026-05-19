@@ -1,0 +1,96 @@
+{
+  "id": "ielts_mock",
+  "title": "Simulador Oficial Completo IELTS® Academic",
+  "level": "B2/C2",
+  "description": "Simulación del examen oficial IELTS® Academic (Academic Reading, Listening & Writing Task 1/2) con análisis estructural.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "ielts-intro",
+      "type": "lecture",
+      "title": "IELTS® Academic: Format & Core Strategies",
+      "parts": [
+        {
+          "visual": "## 🇬🇧 Instrucciones del Simulador IELTS® Academic\n\nEl examen IELTS® Academic evalúa tu nivel de inglés en entornos de educación superior y registro formal. Se compone de:\n\n1. **Academic Reading:** Tres textos largos tomados de libros, revistas especializadas y periódicos científicos.\n2. **Listening:** Cuatro secciones con grabaciones de nativos en contextos cotidianos y académicos.\n3. **Writing Analysis:** Destreza para describir gráficos de datos y redactar ensayos argumentativos de nivel formal.\n\n*Haz clic en reproducir para escuchar los consejos del Neural Advisor de OnixLingo.*",
+          "audio": "Welcome to the IELTS Academic Simulator. Unlike the TOEFL, which focuses on American academic styles, IELTS features global accents—including British, Australian, and Canadian. Pay close attention to spelling rules and word counts in fill-in-the-blank questions. Let's begin the evaluation.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "ielts-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (IELTS Listening Section 3)",
+      "questions": [
+        {
+          "id": "IE_L1",
+          "type": "quiz_choice",
+          "question": "[ACADEMIC DIALOGUE]: Listen to a university tutor and a student discussing a research project on renewable energy and answer the question.",
+          "audio_script": "Tutor: Hello Liam. I've looked at your outline for the solar farm research. You've detailed the photovoltaic cell technology well. However, you've completely ignored the environmental impact on local bird populations.\nStudent: Oh, I see. I thought that fell under the agricultural assessment phase, not the energy technology module.\nTutor: Actually, in modern assessments, ecosystem integrity must be integrated directly from the initial design phase.",
+          "options": [
+            "Liam should rewrite the section on photovoltaic cell technology.",
+            "Liam needs to incorporate the ecological impact on bird populations into his design phase.",
+            "The project should be moved to the agricultural assessment department.",
+            "The tutor rejects Liam's project proposal completely."
+          ],
+          "correct_answer": "Liam needs to incorporate the ecological impact on bird populations into his design phase.",
+          "explanation": "El tutor indica explícitamente que el impacto ecológico en las poblaciones de aves ('impact on local bird populations') debe ser integrado directamente en la fase de diseño inicial."
+        }
+      ]
+    },
+    {
+      "id": "ielts-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (IELTS Academic Reading)",
+      "questions": [
+        {
+          "id": "IE_R1",
+          "type": "quiz_choice",
+          "question": "Read the following academic text and answer the question:\n\n**The Epigenetics Revolution**\n\nFor nearly a century, classical genetics maintained that the DNA sequence inherited at conception was the absolute blueprint of life, unalterable by environmental factors. However, the emerging field of epigenetics has shattered this paradigm. Epigenetics studies biological mechanisms that switch genes on and off without altering the underlying DNA sequence. These molecular modifications, such as DNA methylation or histone acetylation, are heavily influenced by environmental variables including diet, stress, and pollution. Crucially, research indicates that some epigenetic changes can be passed down to subsequent generations, suggesting that ancestors' environments could shape descendants' health profiles.\n\n**According to the passage, what is the key distinction between classical genetics and epigenetics?**",
+          "options": [
+            "Classical genetics studies unalterable DNA sequences, whereas epigenetics alters the base DNA sequence directly.",
+            "Epigenetics explores chemical modifications that control gene expression without changing the DNA sequence.",
+            "Only classical genetics believes that environmental factors can influence human health profiles.",
+            "Epigenetic changes are completely permanent and cannot be reversed by diet or stress."
+          ],
+          "correct_answer": "Epigenetics explores chemical modifications that control gene expression without changing the DNA sequence.",
+          "explanation": "El texto afirma que la epigenética estudia mecanismos que 'switch genes on and off without altering the underlying DNA sequence' (activan y desactivan genes sin alterar la secuencia de ADN subyacente)."
+        },
+        {
+          "id": "IE_R2",
+          "type": "quiz_choice",
+          "question": "Identify the word meaning in context:\n\nWhat is the closest meaning of the word **blueprint** as used in the genetics passage above?",
+          "options": [
+            "Detailed architectural sketch",
+            "Fundamental plan or guide",
+            "Temporary suggestion",
+            "Chemical catalyst"
+          ],
+          "correct_answer": "Fundamental plan or guide",
+          "explanation": "En este contexto científico, 'blueprint of life' se refiere al plan o guía fundamental e inherente que determina las características biológicas del organismo."
+        }
+      ]
+    },
+    {
+      "id": "ielts-writing",
+      "type": "quiz",
+      "title": "Sección 3: Coherencia y Gramática Académica (IELTS Writing Prep)",
+      "questions": [
+        {
+          "id": "IE_W1",
+          "type": "fill_input",
+          "question": "Complete the academic report sentence with the appropriate formal connector showing cause-and-effect:\n\n\"The factory failed to update its water filtration system. ___, the municipal authorities imposed a severe administrative fine.\"",
+          "correct_answers": [
+            "Consequently",
+            "Therefore",
+            "consequently",
+            "therefore"
+          ],
+          "hints": [
+            "C-O-N-S-E-Q-U-E-N-T-L-Y"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,61 +1,361 @@
 {
   "id": "zh-a1-4",
-  "title": "家 (Jiā)",
-  "total_xp": 100,
+  "title": "家 (Jiā) - Familia y Hogar",
+  "total_xp": 300,
   "stages": [
     {
-      "id": "intro",
+      "id": "theory-1",
       "type": "theory",
-      "title": "家 (Jiā)",
+      "title": "La Familia Básica",
       "parts": [
         {
-          "visual": "家 (Jiā)\n\nFamilia y Hogar\n\nWǒ de jiā zài...",
-          "audio": "Bienvenue à la leçon sur 家 (Jiā)."
+          "visual": "Papá y Mamá: \"爸爸\" (Bàba) y \"妈妈\" (Māma). Muy similar fonéticamente al español.",
+          "audio": "爸爸 妈妈"
+        },
+        {
+          "visual": "Hermano mayor: \"哥哥\" (Gēge). Hermana mayor: \"姐姐\" (Jiějie).",
+          "audio": "哥哥 姐姐"
+        },
+        {
+          "visual": "Tener / Poseer: \"有\" (Yǒu). Ejemplo: \"我有哥哥\" (Tengo un hermano mayor).",
+          "audio": "我有哥哥"
+        },
+        {
+          "visual": "No tener: \"没有\" (Méiyǒu). La negación de tener usa obligatoriamente 没.",
+          "audio": "没有"
+        },
+        {
+          "visual": "Familia / Hogar: \"家\" (Jiā). Representa tu casa o tus seres queridos.",
+          "audio": "我的家"
         }
       ]
     },
     {
-      "id": "drill",
-      "type": "pairing_drill",
-      "title": "Vocabulaire Professionnel",
-      "pairs": [
-        {
-          "id": "p1",
-          "en": "Manager",
-          "es": "经理 (Jīnglǐ)"
-        },
-        {
-          "id": "p2",
-          "en": "Company",
-          "es": "公司 (Gōngsī)"
-        },
-        {
-          "id": "p3",
-          "en": "Work",
-          "es": "工作 (Gōngzuò)"
-        },
-        {
-          "id": "p4",
-          "en": "Hello",
-          "es": "你好 (Nǐ hǎo)"
-        }
-      ]
-    },
-    {
-      "id": "quiz",
+      "id": "quiz-1",
       "type": "quiz",
-      "title": "Vérification",
+      "title": "Práctica de Familia",
       "questions": [
         {
           "type": "quiz_choice",
-          "question": "¿Qué significa '家 (Jiā)'?",
+          "question": "¿Cómo se dice 'Mamá' en caracteres chinos?",
           "options": [
-            "Familia y Hogar",
-            "Otra cosa",
-            "No lo sé"
+            "妈妈 (Māma)",
+            "爸爸 (Bàba)",
+            "姐姐 (Jiějie)"
           ],
-          "correct_answer": "Familia y Hogar",
-          "explanation": "'家 (Jiā)' se refiere a familia y hogar en contexto profesional."
+          "correct_answer": "妈妈 (Māma)",
+          "explanation": "妈妈 representa a la madre."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce el verbo 'Tener':",
+          "options": [
+            "有 (Yǒu)",
+            "没有 (Méiyǒu)",
+            "是 (Shì)"
+          ],
+          "correct_answer": "有 (Yǒu)",
+          "explanation": "有 significa tener o haber."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa '没有 (Méiyǒu)'?",
+          "options": [
+            "No tener",
+            "Tener",
+            "Ser"
+          ],
+          "correct_answer": "No tener",
+          "explanation": "Méi es la negación única para el verbo tener (yǒu)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Hermano mayor'?",
+          "options": [
+            "哥哥 (Gēge)",
+            "姐姐 (Jiějie)",
+            "爸爸 (Bàba)"
+          ],
+          "correct_answer": "哥哥 (Gēge)",
+          "explanation": "哥哥 designa al hermano de mayor edad."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Tengo una hermana mayor':",
+          "options": [
+            "我有姐姐 (Wǒ yǒu jiějie)",
+            "没有姐姐 (Méiyǒu jiějie)",
+            "我是姐姐 (Wǒ shì jiějie)"
+          ],
+          "correct_answer": "我有姐姐 (Wǒ ...yǒu jiějie)",
+          "explanation": "姐姐 es hermana mayor, y yǒu es tener."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa '爸爸 (Bàba)'?",
+          "options": [
+            "Papá",
+            "Mamá",
+            "Hermano"
+          ],
+          "correct_answer": "Papá",
+          "explanation": "Bàba significa padre o papá."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Hogar / Casa / Familia':",
+          "options": [
+            "家 (Jiā)",
+            "名字 (Míngzì)",
+            "公司 (Gōngsī)"
+          ],
+          "correct_answer": "家 (Jiā)",
+          "explanation": "家 representa la familia o el hogar físico."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Hermana mayor'?",
+          "options": [
+            "姐姐 (Jiějie)",
+            "哥哥 (Gēge)",
+            "妈妈 (Māma)"
+          ],
+          "correct_answer": "姐姐 (Jiějie)",
+          "explanation": "姐姐 es la hermana mayor."
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el familiar que escuchas:",
+          "tts_text": "妈妈",
+          "options": [
+            "妈妈 (Māma)",
+            "爸爸 (Bàba)",
+            "哥哥 (Gēge)"
+          ],
+          "correct_answer": "妈妈 (Māma)"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "有",
+          "options": [
+            "有 (Yǒu)",
+            "没有 (Méiyǒu)",
+            "是 (Shì)"
+          ],
+          "correct_answer": "有 (Yǒu)"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "没有",
+          "options": [
+            "没有 (Méiyǒu)",
+            "有 (Yǒu)",
+            "大家 (Dàjiā)"
+          ],
+          "correct_answer": "没有 (Méiyǒu)"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el familiar que escuchas:",
+          "tts_text": "哥哥",
+          "options": [
+            "哥哥 (Gēge)",
+            "姐姐 (Jiějie)",
+            "爸爸 (Bàba)"
+          ],
+          "correct_answer": "哥哥 (Gēge)"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el familiar que escuchas:",
+          "tts_text": "姐姐",
+          "options": [
+            "姐姐 (Jiějie)",
+            "哥哥 (Gēge)",
+            "妈妈 (Māma)"
+          ],
+          "correct_answer": "姐姐 (Jiějie)"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el familiar que escuchas:",
+          "tts_text": "爸爸",
+          "options": [
+            "爸爸 (Bàba)",
+            "妈妈 (Māma)",
+            "大家 (Dàjiā)"
+          ],
+          "correct_answer": "爸爸 (Bàba)"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "家",
+          "options": [
+            "家 (Jiā)",
+            "名字 (Míngzì)",
+            "工作 (Gōngzuò)"
+          ],
+          "correct_answer": "家 (Jiā)"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase que escuchas:",
+          "tts_text": "我有家",
+          "options": [
+            "我有家",
+            "没有家",
+            "我是经理"
+          ],
+          "correct_answer": "我有家"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Tengo hermano mayor (我 有 哥哥)'",
+          "parts": [
+            "我",
+            "有",
+            "哥哥"
+          ],
+          "correct_order": [
+            "我",
+            "有",
+            "哥哥"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'No tengo hermana mayor (我 没有 姐姐)'",
+          "parts": [
+            "我",
+            "没有",
+            "姐姐"
+          ],
+          "correct_order": [
+            "我",
+            "没有",
+            "姐姐"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Papá y Mamá (爸爸 妈妈)'",
+          "parts": [
+            "爸爸",
+            "妈妈"
+          ],
+          "correct_order": [
+            "爸爸",
+            "妈妈"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Tengo una bonita familia (我 有 家)'",
+          "parts": [
+            "我",
+            "have",
+            "家"
+          ],
+          "correct_order": [
+            "我",
+            "have",
+            "家"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Tienes un hermano? (你 有 哥哥 吗)'",
+          "parts": [
+            "你",
+            "有",
+            "哥哥",
+            "吗"
+          ],
+          "correct_order": [
+            "你",
+            "有",
+            "哥哥",
+            "吗"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Mi papá es manager (我 爸爸 是 经理)'",
+          "parts": [
+            "我",
+            "爸爸",
+            "是",
+            "经理"
+          ],
+          "correct_order": [
+            "我",
+            "爸爸",
+            "是",
+            "经理"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se escribe 'Mamá'?",
+          "correct_answers": [
+            "妈妈"
+          ],
+          "hints": [
+            "M-Ā-M-A"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa el verbo tener: 我 ___ 哥哥 (Yǒu)",
+          "correct_answers": [
+            "有"
+          ],
+          "hints": [
+            "Y-O-U"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se escribe 'No tener'?",
+          "correct_answers": [
+            "没有"
+          ],
+          "hints": [
+            "M-É-I-Y-Ǒ-U"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa el familiar: 我爸爸 ___ 妈妈 (y / Hé)",
+          "correct_answers": [
+            "和"
+          ],
+          "hints": [
+            "H-É"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se escribe 'Hermano mayor'?",
+          "correct_answers": [
+            "哥哥"
+          ],
+          "hints": [
+            "G-Ē-G-E"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa el hogar: 我的 ___ (casa / Jiā)",
+          "correct_answers": [
+            "家"
+          ],
+          "hints": [
+            "J-I-Ā"
+          ]
         }
       ]
     }

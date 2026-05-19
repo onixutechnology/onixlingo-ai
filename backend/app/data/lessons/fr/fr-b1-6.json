@@ -1,32 +1,409 @@
 {
   "id": "fr-b1-6",
-  "title": "RH et Recrutement",
-  "total_xp": 100,
+  "title": "Évaluation de Perf",
+  "total_xp": 300,
   "stages": [
     {
       "id": "theory-1",
       "type": "theory",
-      "title": "RH et Recrutement",
+      "title": "Evaluación de Desempeño y Retroalimentación",
       "parts": [
         {
-          "visual": "Trouver les talents.",
-          "audio": "Module RH et Recrutement."
+          "visual": "Felicitar con énfasis: \"Tu as fait un excellent travail\" (Has hecho un excelente trabajo).",
+          "audio": "Tu as fait un excellent travail cette année."
+        },
+        {
+          "visual": "Señalar áreas de crecimiento: \"Tu peux améliorer ton organisation\" (Puedes mejorar tu organización).",
+          "audio": "Tu peux améliorer ton organisation de travail."
+        },
+        {
+          "visual": "Cumplimiento de metas: \"Tes objectifs sont pleinement atteints\" (Tus objetivos están completamente logrados / alcanzados).",
+          "audio": "Tes objectifs professionnels sont pleinement atteints."
+        },
+        {
+          "visual": "Feedback constructivo: \"Je te propose un retour constructif\" (Te propongo un feedback / retroalimentación constructiva).",
+          "audio": "Je te propose un retour constructif pour progresser."
+        },
+        {
+          "visual": "Motivar a futuro: \"Continue comme ça pour l'avenir\" (Continúa de esa forma para el futuro).",
+          "audio": "Continue comme ça pour l'avenir de l'entreprise."
         }
       ]
     },
     {
       "id": "quiz-1",
       "type": "quiz",
-      "title": "Check",
+      "title": "Práctica de Feedback",
       "questions": [
         {
           "type": "quiz_choice",
-          "question": "Ok?",
+          "question": "¿Cómo dices felicitando 'Has hecho un excelente trabajo'?",
           "options": [
-            "Oui"
+            "Tu as fait un excellent travail",
+            "Tu dois travailler plus",
+            "C'est une erreur de travail"
           ],
-          "correct_answer": "Oui",
-          "explanation": "."
+          "correct_answer": "Tu as fait un excellent travail",
+          "explanation": "Excellent travail es excelente trabajo."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Puedes mejorar tu organización':",
+          "options": [
+            "Tu peux améliorer ton organisation",
+            "Tu as une mauvaise organisation",
+            "Je propose de changer l'organisation"
+          ],
+          "correct_answer": "Tu peux améliorer ton organisation",
+          "explanation": "Améliorer significa mejorar o optimizar."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa 'Tes objectifs sont pleinement atteints'?",
+          "options": [
+            "Tus objetivos están plenamente logrados",
+            "No has logrado tus objetivos",
+            "Los objetivos son difíciles"
+          ],
+          "correct_answer": "Tus objetivos están plenamente logrados",
+          "explanation": "Atteints es el participio de atteindre (lograr/alcanzar)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Feedback constructivo'?",
+          "options": [
+            "Retour constructif",
+            "Rapport financier",
+            "Dossier important"
+          ],
+          "correct_answer": "Retour constructif",
+          "explanation": "Retour constructif es retroalimentación útil."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Continúa así para el futuro':",
+          "options": [
+            "Continue comme ça pour l'avenir",
+            "Ne change pas de travail",
+            "Bonne chance pour aujourd'hui"
+          ],
+          "correct_answer": "Continue comme ça pour l'avenir",
+          "explanation": "Avenir significa futuro en francés."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa 'Améliorer'?",
+          "options": [
+            "Mejorar",
+            "Reducir",
+            "Enviar"
+          ],
+          "correct_answer": "Mejorar",
+          "explanation": "Hacer que algo sea superior o más eficaz."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Tus metas / objetivos':",
+          "options": [
+            "Tes objectifs",
+            "Tes tâches",
+            "Tes collègues"
+          ],
+          "correct_answer": "Tes objectifs",
+          "explanation": "Objectifs representa metas profesionales."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Plenamente'?",
+          "options": [
+            "Pleinement",
+            "Souvent",
+            "Toujours"
+          ],
+          "correct_answer": "Pleinement",
+          "explanation": "Adverbio que significa de forma completa."
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de evaluación que escuchas:",
+          "tts_text": "Excellent travail",
+          "options": [
+            "Excellent travail",
+            "Problème technique",
+            "Voyage d'affaires"
+          ],
+          "correct_answer": "Excellent travail"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de evaluación que escuchas:",
+          "tts_text": "Améliorer ton organisation",
+          "options": [
+            "Améliorer ton organisation",
+            "Respecter la date limite",
+            "Réserver un billet"
+          ],
+          "correct_answer": "Améliorer ton organisation"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de evaluación que escuchas:",
+          "tts_text": "Objectifs atteints",
+          "options": [
+            "Objectifs atteints",
+            "Dépenses divisées",
+            "Coûts réduits"
+          ],
+          "correct_answer": "Objectifs atteints"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de evaluación que escuchas:",
+          "tts_text": "Un retour constructif",
+          "options": [
+            "Un retour constructif",
+            "Un appel rapide",
+            "Un budget supplémentaire"
+          ],
+          "correct_answer": "Un retour constructif"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de evaluación que escuchas:",
+          "tts_text": "Pour l'avenir",
+          "options": [
+            "Pour l'avenir",
+            "Pour le projet",
+            "Pour la gare"
+          ],
+          "correct_answer": "Pour l'avenir"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Atteints",
+          "options": [
+            "Atteints",
+            "Notés",
+            "Prêts"
+          ],
+          "correct_answer": "Atteints"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Améliorer",
+          "options": [
+            "Améliorer",
+            "Préparer",
+            "Envoyer"
+          ],
+          "correct_answer": "Améliorer"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Plinement",
+          "options": [
+            "Pleinement",
+            "Souvent",
+            "Parfois"
+          ],
+          "correct_answer": "Pleinement"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Has hecho un excelente trabajo este año'",
+          "parts": [
+            "Tu",
+            "as",
+            "fait",
+            "un",
+            "excellent",
+            "travail",
+            "cette",
+            "année"
+          ],
+          "correct_order": [
+            "Tu",
+            "as",
+            "fait",
+            "un",
+            "excellent",
+            "travail",
+            "cette",
+            "année"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Tú puedes mejorar tu organización laboral'",
+          "parts": [
+            "Tu",
+            "peux",
+            "améliorer",
+            "ton",
+            "organisation",
+            "de",
+            "travail"
+          ],
+          "correct_order": [
+            "Tu",
+            "peux",
+            "améliorer",
+            "ton",
+            "organisation",
+            "de",
+            "travail"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Tus metas profesionales están plenamente logradas'",
+          "parts": [
+            "Tes",
+            "objectifs",
+            "professionnels",
+            "sont",
+            "pleinement",
+            "atteints"
+          ],
+          "correct_order": [
+            "Tes",
+            "objectifs",
+            "professionnels",
+            "sont",
+            "pleinement",
+            "atteints"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Te propongo un feedback constructivo para avanzar'",
+          "parts": [
+            "Je",
+            "te",
+            "propose",
+            "un",
+            "retour",
+            "constructif",
+            "pour",
+            "progresser"
+          ],
+          "correct_order": [
+            "Je",
+            "te",
+            "propose",
+            "un",
+            "retour",
+            "constructif",
+            "pour",
+            "progresser"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Continúa así para el futuro de la empresa'",
+          "parts": [
+            "Continue",
+            "comme",
+            "ça",
+            "pour",
+            "l'avenir",
+            "de",
+            "l'entreprise"
+          ],
+          "correct_order": [
+            "Continue",
+            "comme",
+            "ça",
+            "pour",
+            "l'avenir",
+            "de",
+            "l'entreprise"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Cuál es su evaluación de desempeño?'",
+          "parts": [
+            "Quelle",
+            "est",
+            "votre",
+            "évaluation",
+            "de",
+            "performance"
+          ],
+          "correct_order": [
+            "Quelle",
+            "est",
+            "votre",
+            "évaluation",
+            "de",
+            "performance"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Tu as fait un ___ travail (excelente)",
+          "correct_answers": [
+            "excellent"
+          ],
+          "hints": [
+            "E-X-C-E-L-L-E-N-T"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Tu peux ___ ton travail (mejorar)",
+          "correct_answers": [
+            "améliorer",
+            "ameliorer"
+          ],
+          "hints": [
+            "A-M-É-L-I-O-R-E-R"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Metas / Objetivos' en francés?",
+          "correct_answers": [
+            "Objectifs"
+          ],
+          "hints": [
+            "O-B-J-E-C-T-I-F-S"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Tes objectifs sont ___ atteints (plenamente)",
+          "correct_answers": [
+            "pleinement"
+          ],
+          "hints": [
+            "P-L-E-I-N-E-M-E-N-T"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa la retroalimentación: Un retour ___ (constructivo)",
+          "correct_answers": [
+            "constructif"
+          ],
+          "hints": [
+            "C-O-N-S-T-R-U-C-T-I-F"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'El futuro'?",
+          "correct_answers": [
+            "L'avenir",
+            "avenir"
+          ],
+          "hints": [
+            "A-V-E-N-I-R"
+          ]
         }
       ]
     }

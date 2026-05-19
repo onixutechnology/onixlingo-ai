@@ -1,7 +1,8 @@
-from fastapi import APIRouter, HTTPException, status, Depends
+from fastapi import APIRouter, HTTPException, status, Depends, Response
 from pydantic import BaseModel, Field
 from typing import Optional
 from app.services.gemini_service import GeminiService
+from app.services.gcp_tts_service import GcpTtsService
 
 # 🔥 Importamos el Candado VIP
 from app.api.deps import get_current_pro_user
@@ -9,6 +10,7 @@ from app.api.deps import get_current_pro_user
 # Instanciamos el Router y el Servicio
 router = APIRouter()
 gemini_service = GeminiService()
+tts_service = GcpTtsService()
 
 # --- MODELOS DE DATOS (DTOs) ---
 class ChatRequest(BaseModel):
@@ -65,3 +67,23 @@ async def chat_endpoint(
         gesture=service_response.get("gesture", "neutral"),
         analysis=analysis_model
     )
+
+# --- NUEVO ENDPOINT DE TEXT-TO-SPEECH ---
+@router.get("/tts", summary="Generar audio de alta fidelidad con Google Cloud TTS")
+async def tts_endpoint(text: str, lang: str = "en"):
+    """
+    Sintetiza texto a voz ultra-realista utilizando Google Cloud TTS.
+    Retorna directamente el archivo de audio MP3 para reproducción nativa.
+    """
+    if not text:
+        raise HTTPException(status_code=400, detail="El parámetro 'text' es requerido.")
+        
+    audio_bytes = await tts_service.synthesize_speech(text, lang)
+    
+    if not audio_bytes:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Error al sintetizar el audio con Google Cloud. Verifica la GOOGLE_CLOUD_API_KEY."
+        )
+        
+    return Response(content=audio_bytes, media_type="audio/mpeg")

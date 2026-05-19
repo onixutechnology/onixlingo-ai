@@ -1,19 +1,274 @@
 {
   "id": "basics_mod_01",
-  "title": "Les Bases du Quotidien",
+  "category_id": "basics",
+  "title": "Les Bases du Quotidien A1-1",
+  "description": "Dominio de vocabulario de Life Essentials (Básicos). Nivel A1, Módulo 1.",
+  "level": "A1",
+  "part": 1,
   "total_xp": 500,
+  "status": "locked",
+  "theme": {
+    "icon": "Languages",
+    "color": "orange"
+  },
   "stages": [
     {
-      "id": "drill_01",
+      "id": "drill_basics_mod_01",
       "type": "pairing_drill",
-      "title": "Vocabulaire Essentiel",
+      "title": "Neuro Link: Les Bases du Quotidien",
+      "description": "Asociación rápida e inteligente de conceptos.",
+      "instruction": "Empareja la palabra en Español con su traducción correcta en Francés.",
       "pairs": [
-        { "id": "p1", "en": "Hello", "es": "Bonjour" },
-        { "id": "p2", "en": "Thank you", "es": "Merci" },
-        { "id": "p3", "en": "Please", "es": "S'il vous plaît" },
-        { "id": "p4", "en": "Goodbye", "es": "Au revoir" },
-        { "id": "p5", "en": "Yes", "es": "Oui" },
-        { "id": "p6", "en": "No", "es": "Non" }
+        {
+          "id": "p_01",
+          "en": "Hola",
+          "es": "Bonjour"
+        },
+        {
+          "id": "p_02",
+          "en": "Adiós",
+          "es": "Au revoir"
+        },
+        {
+          "id": "p_03",
+          "en": "Gracias",
+          "es": "Merci"
+        },
+        {
+          "id": "p_04",
+          "en": "Por favor",
+          "es": "S'il vous plaît"
+        },
+        {
+          "id": "p_05",
+          "en": "Sí",
+          "es": "Oui"
+        },
+        {
+          "id": "p_06",
+          "en": "No",
+          "es": "Non"
+        },
+        {
+          "id": "p_07",
+          "en": "Buenas noches",
+          "es": "Bonsoir"
+        },
+        {
+          "id": "p_08",
+          "en": "Buenos días",
+          "es": "Bonne journée"
+        },
+        {
+          "id": "p_09",
+          "en": "¿Cómo estás?",
+          "es": "Comment ça va ?"
+        },
+        {
+          "id": "p_10",
+          "en": "Muy bien",
+          "es": "Très bien"
+        },
+        {
+          "id": "p_11",
+          "en": "Lo siento",
+          "es": "Désolé"
+        },
+        {
+          "id": "p_12",
+          "en": "De nada",
+          "es": "De rien"
+        },
+        {
+          "id": "p_13",
+          "en": "Disculpe",
+          "es": "Excusez-moi"
+        },
+        {
+          "id": "p_14",
+          "en": "Bienvenido",
+          "es": "Bienvenue"
+        },
+        {
+          "id": "p_15",
+          "en": "Hasta luego",
+          "es": "À plus tard"
+        },
+        {
+          "id": "p_16",
+          "en": "Hasta mañana",
+          "es": "À demain"
+        },
+        {
+          "id": "p_17",
+          "en": "Mucho gusto",
+          "es": "Enchanté"
+        },
+        {
+          "id": "p_18",
+          "en": "¿Qué tal?",
+          "es": "Quoi de neuf ?"
+        },
+        {
+          "id": "p_19",
+          "en": "Bien",
+          "es": "Bien"
+        },
+        {
+          "id": "p_20",
+          "en": "Mal",
+          "es": "Mal"
+        },
+        {
+          "id": "p_21",
+          "en": "Señor",
+          "es": "Monsieur"
+        },
+        {
+          "id": "p_22",
+          "en": "Señora",
+          "es": "Madame"
+        },
+        {
+          "id": "p_23",
+          "en": "Amigo",
+          "es": "Ami"
+        },
+        {
+          "id": "p_24",
+          "en": "Nombre",
+          "es": "Nom"
+        },
+        {
+          "id": "p_25",
+          "en": "Apellido",
+          "es": "Prénom"
+        },
+        {
+          "id": "p_26",
+          "en": "¿Cómo te llamas?",
+          "es": "Comment tu t'appelles ?"
+        },
+        {
+          "id": "p_27",
+          "en": "Me llamo",
+          "es": "Je m'appelle"
+        },
+        {
+          "id": "p_28",
+          "en": "Edad",
+          "es": "Âge"
+        },
+        {
+          "id": "p_29",
+          "en": "¿De dónde eres?",
+          "es": "D'où viens-tu ?"
+        },
+        {
+          "id": "p_30",
+          "en": "Soy de",
+          "es": "Je viens de"
+        },
+        {
+          "id": "p_31",
+          "en": "Feliz",
+          "es": "Heureux"
+        },
+        {
+          "id": "p_32",
+          "en": "Triste",
+          "es": "Triste"
+        },
+        {
+          "id": "p_33",
+          "en": "Cansado",
+          "es": "Fatigué"
+        },
+        {
+          "id": "p_34",
+          "en": "Enfermo",
+          "es": "Malade"
+        },
+        {
+          "id": "p_35",
+          "en": "Estudiante",
+          "es": "Étudiant"
+        },
+        {
+          "id": "p_36",
+          "en": "Profesor",
+          "es": "Professeur"
+        },
+        {
+          "id": "p_37",
+          "en": "Trabajo",
+          "es": "Travail"
+        },
+        {
+          "id": "p_38",
+          "en": "Escuela",
+          "es": "École"
+        },
+        {
+          "id": "p_39",
+          "en": "Ciudad",
+          "es": "Ville"
+        },
+        {
+          "id": "p_40",
+          "en": "País",
+          "es": "Pays"
+        },
+        {
+          "id": "p_41",
+          "en": "Casa",
+          "es": "Maison"
+        },
+        {
+          "id": "p_42",
+          "en": "Familia",
+          "es": "Famille"
+        },
+        {
+          "id": "p_43",
+          "en": "Hombre",
+          "es": "Homme"
+        },
+        {
+          "id": "p_44",
+          "en": "Mujer",
+          "es": "Femme"
+        },
+        {
+          "id": "p_45",
+          "en": "Niño",
+          "es": "Enfant"
+        },
+        {
+          "id": "p_46",
+          "en": "Amiga",
+          "es": "Amie"
+        },
+        {
+          "id": "p_47",
+          "en": "Gente",
+          "es": "Gens"
+        },
+        {
+          "id": "p_48",
+          "en": "Amor",
+          "es": "Amour"
+        },
+        {
+          "id": "p_49",
+          "en": "Vida",
+          "es": "Vie"
+        },
+        {
+          "id": "p_50",
+          "en": "Tiempo",
+          "es": "Temps"
+        }
       ]
     }
   ]

@@ -1,61 +1,373 @@
 {
   "id": "zh-a1-3",
-  "title": "我的名字 (Wǒ de míngzì)",
-  "total_xp": 100,
+  "title": "我的名字 (Wǒ de míngzì) - Presentación Personal",
+  "total_xp": 300,
   "stages": [
     {
-      "id": "intro",
+      "id": "theory-1",
       "type": "theory",
-      "title": "我的名字 (Wǒ de míngzì)",
+      "title": "Presentación y Nacionalidad",
       "parts": [
         {
-          "visual": "我的名字 (Wǒ de míngzì)\n\nPresentación Personal\n\nWǒ jiào...",
-          "audio": "Bienvenue à la leçon sur 我的名字 (Wǒ de míngzì)."
+          "visual": "Yo me llamo...: \"我叫...\" (Wǒ jiào...). Se coloca tu nombre después de 我叫.",
+          "audio": "我叫 Pierre"
+        },
+        {
+          "visual": "¿Cómo te llamas?: \"你叫什么名字\" (Nǐ jiào shénme míngzì). Pregunta básica para romper el hielo.",
+          "audio": "你叫什么名字"
+        },
+        {
+          "visual": "Yo soy español: \"我是西班牙人\" (Wǒ shì Xībānyárén). 西班牙 es España, 人 es persona.",
+          "audio": "我是西班牙人"
+        },
+        {
+          "visual": "Yo soy mexicano: \"我是墨西哥人\" (Wǒ shì Mòxīgērén). 墨西哥 es México.",
+          "audio": "我是墨西哥人"
+        },
+        {
+          "visual": "El verbo ser: \"是\" (Shì). Equivale a 'ser/estar' en este contexto.",
+          "audio": "我是"
         }
       ]
     },
     {
-      "id": "drill",
-      "type": "pairing_drill",
-      "title": "Vocabulaire Professionnel",
-      "pairs": [
-        {
-          "id": "p1",
-          "en": "Manager",
-          "es": "经理 (Jīnglǐ)"
-        },
-        {
-          "id": "p2",
-          "en": "Company",
-          "es": "公司 (Gōngsī)"
-        },
-        {
-          "id": "p3",
-          "en": "Work",
-          "es": "工作 (Gōngzuò)"
-        },
-        {
-          "id": "p4",
-          "en": "Hello",
-          "es": "你好 (Nǐ hǎo)"
-        }
-      ]
-    },
-    {
-      "id": "quiz",
+      "id": "quiz-1",
       "type": "quiz",
-      "title": "Vérification",
+      "title": "Práctica de Presentación",
       "questions": [
         {
           "type": "quiz_choice",
-          "question": "¿Qué significa '我的名字 (Wǒ de míngzì)'?",
+          "question": "¿Cómo se dice 'Yo me llamo' en mandarín?",
           "options": [
-            "Presentación Personal",
-            "Otra cosa",
-            "No lo sé"
+            "我叫 (Wǒ jiào)",
+            "我是 (Wǒ shì)",
+            "你叫 (Nǐ jiào)"
           ],
-          "correct_answer": "Presentación Personal",
-          "explanation": "'我的名字 (Wǒ de míngzì)' se refiere a presentación personal en contexto profesional."
+          "correct_answer": "我叫 (Wǒ jiào)",
+          "explanation": "我叫 se traduce como 'yo me llamo'."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Yo soy español':",
+          "options": [
+            "我是西班牙人 (Wǒ shì Xībānyárén)",
+            "我是墨西哥人 (Wǒ shì Mòxīgērén)",
+            "我叫西班牙 (Wǒ jiào Xībānyá)"
+          ],
+          "correct_answer": "我是西班牙人 (Wǒ shì Xībānyárén)",
+          "explanation": "西班牙人 significa español o española."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa '你叫什么名字？'?",
+          "options": [
+            "¿Cómo te llamas?",
+            "¿De dónde eres?",
+            "¿Cuántos años tienes?"
+          ],
+          "correct_answer": "¿Cómo te llamas?",
+          "explanation": "Pregunta universal para el nombre propio."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Yo soy mexicano'?",
+          "options": [
+            "我是墨西哥人 (Wǒ shì Mòxīgērén)",
+            "我是西班牙人 (Wǒ shì Xībānyárén)",
+            "我叫墨西哥 (Wǒ jiào Mòxīgē)"
+          ],
+          "correct_answer": "我是墨西哥人 (Wǒ shì Mòxīgērén)",
+          "explanation": "墨西哥人 significa mexicano o mexicana."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce el verbo 'Ser' (Shì) en caracteres:",
+          "options": [
+            "是 (Shì)",
+            "我 (Wǒ)",
+            "叫 (Jiào)"
+          ],
+          "correct_answer": "是 (Shì)",
+          "explanation": "是 se usa para definir identidad o profesiones."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa '人 (Rén)'?",
+          "options": [
+            "Persona / Ciudadano",
+            "Nombre",
+            "Empresa"
+          ],
+          "correct_answer": "Persona / Ciudadano",
+          "explanation": "人 se coloca al final de un país para indicar nacionalidad."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'España':",
+          "options": [
+            "西班牙 (Xībānyá)",
+            "墨西哥 (Mòxīgē)",
+            "中国 (Zhōngguó)"
+          ],
+          "correct_answer": "西班牙 (Xībānyá)",
+          "explanation": "Nombre fonético adaptado al chino."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Yo' en mandarín?",
+          "options": [
+            "我 (Wǒ)",
+            "你 (Nǐ)",
+            "他 (Tā)"
+          ],
+          "correct_answer": "我 (Wǒ)",
+          "explanation": "我 es la primera persona singular."
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de presentación que escuchas:",
+          "tts_text": "我叫",
+          "options": [
+            "我叫 (Wǒ jiào)",
+            "我是 (Wǒ shì)",
+            "你叫 (Nǐ jiào)"
+          ],
+          "correct_answer": "我叫 (Wǒ jiào)"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de presentación que escuchas:",
+          "tts_text": "你叫什么名字",
+          "options": [
+            "你叫什么名字",
+            "我是西班牙人",
+            "我是墨西哥人"
+          ],
+          "correct_answer": "你叫什么名字"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de presentación que escuchas:",
+          "tts_text": "我是西班牙人",
+          "options": [
+            "我是西班牙人",
+            "我是墨西哥人",
+            "我叫西班牙"
+          ],
+          "correct_answer": "我是西班牙人"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de presentación que escuchas:",
+          "tts_text": "我是墨西哥人",
+          "options": [
+            "我是墨西哥人",
+            "我是西班牙人",
+            "我叫墨西哥"
+          ],
+          "correct_answer": "我是墨西哥人"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "是",
+          "options": [
+            "是 (Shì)",
+            "叫 (Jiào)",
+            "我 (Wǒ)"
+          ],
+          "correct_answer": "...是 (Shì)"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "西班牙",
+          "options": [
+            "西班牙 (Xībānyá)",
+            "墨西哥 (Mòxīgē)",
+            "中国 (Zhōngguó)"
+          ],
+          "correct_answer": "西班牙 (Xībānyá)"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "名字",
+          "options": [
+            "名字 (Míngzì)",
+            "人 (Rén)",
+            "工作 (Gōngzuò)"
+          ],
+          "correct_answer": "名字 (Míngzì)"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "墨西哥",
+          "options": [
+            "墨西哥 (Mòxīgē)",
+            "西班牙 (Xībānyá)",
+            "大家 (Dàjiā)"
+          ],
+          "correct_answer": "墨西哥 (Mòxīgē)"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Yo soy español (我 是 西班牙 人)'",
+          "parts": [
+            "我",
+            "是",
+            "西班牙",
+            "人"
+          ],
+          "correct_order": [
+            "我",
+            "是",
+            "西班牙",
+            "人"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Yo soy mexicano (我 是 墨西哥 人)'",
+          "parts": [
+            "我",
+            "是",
+            "墨西哥",
+            "人"
+          ],
+          "correct_order": [
+            "我",
+            "是",
+            "墨西哥",
+            "人"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Cómo te llamas? (你 叫 什么 名字)'",
+          "parts": [
+            "你",
+            "叫",
+            "什么",
+            "名字"
+          ],
+          "correct_order": [
+            "...你",
+            "叫",
+            "什么",
+            "名字"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Yo me llamo Pierre (我 叫 Pierre)'",
+          "parts": [
+            "我",
+            "叫",
+            "Pierre"
+          ],
+          "correct_order": [
+            "我",
+            "叫",
+            "Pierre"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Hola, yo soy de España (你好 我 是 西班牙 人)'",
+          "parts": [
+            "你好",
+            "我",
+            "是",
+            "西班牙",
+            "人"
+          ],
+          "correct_order": [
+            "你好",
+            "我",
+            "是",
+            "西班牙",
+            "人"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Él es español? (他 是 西班牙 人 吗)'",
+          "parts": [
+            "他",
+            "是",
+            "西班牙",
+            "人",
+            "吗"
+          ],
+          "correct_order": [
+            "他",
+            "是",
+            "西班牙",
+            "人",
+            "吗"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se escribe 'Yo' en caracteres?",
+          "correct_answers": [
+            "我"
+          ],
+          "hints": [
+            "W-Ǒ"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa el verbo ser: 我 ___ 西班牙人 (Shì)",
+          "correct_answers": [
+            "是"
+          ],
+          "hints": [
+            "S-H-I"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se escribe 'Llamarse'?",
+          "correct_answers": [
+            "叫"
+          ],
+          "hints": [
+            "J-I-À-O"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa la nacionalidad: 我是墨西哥 ___ (persona / Rén)",
+          "correct_answers": [
+            "人"
+          ],
+          "hints": [
+            "R-É-N"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se escribe 'Nombre' en mandarín?",
+          "correct_answers": [
+            "名字"
+          ],
+          "hints": [
+            "M-Í-N-G-Z-I"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa el país: 我是 ___ 人 (España / Xībānyá)",
+          "correct_answers": [
+            "西班牙"
+          ],
+          "hints": [
+            "X-Ī-B-Ā-N-Y-Á"
+          ]
         }
       ]
     }

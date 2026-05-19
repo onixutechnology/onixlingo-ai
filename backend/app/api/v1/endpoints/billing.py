@@ -6,12 +6,12 @@ from datetime import datetime, timedelta
 from pydantic import BaseModel
 
 from app.database import get_db
-from app.db.models import User
+from app.db.models import User, PromoCoupon
 from app.api.deps import get_current_active_user
 
 # --- PADDLE SDK IMPORTS ---
 from paddle_billing import Client, Environment, Options
-from paddle_billing.Notifications import Secret, WebhookVerifier
+from paddle_billing.Notifications import Secret, Verifier
 
 router = APIRouter()
 
@@ -32,6 +32,83 @@ else:
 class ReferralApply(BaseModel):
     referral_code: str
 
+
+class CouponRedeem(BaseModel):
+    code: str
+
+
+def seed_coupons_if_empty(db: Session):
+    # Eliminar cupones antiguos simples si existen
+    db.query(PromoCoupon).filter(PromoCoupon.code.like("ONIX-TITANIUM-%")).delete(synchronize_session=False)
+    db.commit()
+    
+    count = db.query(PromoCoupon).count()
+    if count == 0:
+        complex_codes = [
+            "TZ89P2M4QX", "L5V9K1R3WB", "J7C4N8T2FD", "Y3M9P6S1ZG", "H8X2W4B9LQ",
+            "F1K7D3N9RC", "B5V9J4P2MS", "W3S8T2C4NK", "G9Y1M6R3PD", "Q8Z2K4V9LB",
+            "D7F1J3N9TC", "X5P9V2M4SK", "R8W2K4B9YD", "L3V9N1P3MG", "J7C4T8R2KD",
+            "Y9M3S6P1ZF", "N5K7D2P9RC", "V8S2J4B9ML", "A4P8T2C9NK", "E9Y1M6R3PD",
+            "U8Z2K4V9LB", "I7F1J3N9TC", "O5P9V2M4SK", "P8W2K4B9YD", "S3V9N1P3MG",
+            "Z7C4T8R2KD", "K9M3S6P1ZF", "C5K7D2P9RC", "M8S2J4B9ML", "B3P8T2C4NK",
+            "F9Y1M6R3PD", "H8Z2K4V9LB", "L7F1J3N9TC", "W5P9V2M4SK", "Y8W2K4B9YD",
+            "X3V9N1P3MG", "Q7C4T8R2KD", "R9M3S6P1ZF", "D5K7D2P9RC", "G8S2J4B9ML",
+            "P3P8T2C4NK", "T9Y1M6R3PD", "V8Z2K4V9LB", "N7F1J3N9TC", "J5P9V2M4SK",
+            "K8W2K4B9YD", "S3V9N1P3MX", "M7C4T8R2KX", "F9M3S6P1ZX", "H5K7D2P9RX"
+        ]
+        coupons = [PromoCoupon(code=code, is_used=False) for code in complex_codes]
+        db.add_all(coupons)
+        db.commit()
+
+
+@router.post("/redeem-coupon")
+def redeem_coupon(
+    payload: CouponRedeem,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """
+    Canjea un cupón promocional para obtener 30 días de plan Titanium Pro gratis.
+    """
+    # Asegurar auto-seeding
+    seed_coupons_if_empty(db)
+    
+    code_upper = payload.code.strip().upper()
+    coupon = db.query(PromoCoupon).filter(PromoCoupon.code == code_upper).first()
+    
+    if not coupon:
+        raise HTTPException(
+            status_code=404, 
+            detail="El cupón ingresado no es válido o no existe."
+        )
+        
+    if coupon.is_used:
+        raise HTTPException(
+            status_code=400, 
+            detail="Este cupón ya ha sido utilizado."
+        )
+        
+    now = datetime.utcnow()
+    
+    # Marcar cupón como usado
+    coupon.is_used = True
+    coupon.used_by_id = current_user.id
+    coupon.used_at = now
+    
+    # Activar plan Pro / Titanium por 30 días
+    user_valid_until = current_user.valid_until if current_user.valid_until and current_user.valid_until > now else now
+    current_user.valid_until = user_valid_until + timedelta(days=30)
+    current_user.is_pro = True
+    current_user.tier = "titanium"
+    
+    db.commit()
+    
+    return {
+        "message": "¡Cupón canjeado con éxito! Tu plan Titanium Pro se ha activado por 30 días.",
+        "valid_until": current_user.valid_until.strftime("%Y-%m-%d %H:%M:%S")
+    }
+
+
 @router.post("/apply-referral")
 def apply_referral_code(
     payload: ReferralApply,
@@ -40,7 +117,6 @@ def apply_referral_code(
 ):
     """
     Aplica un código de referido. Le da 30 días VIP al invitado y al dueño del código.
-    (La lógica se mantiene intacta)
     """
     referrer = db.query(User).filter(User.referral_code == payload.referral_code).first()
     
@@ -67,19 +143,34 @@ def apply_referral_code(
     return {"message": "¡Código aplicado! Se han añadido 30 días Premium a tu cuenta."}
 
 
+@router.post("/dev-activate-pro")
+def dev_activate_pro(
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """
+    Entorno Local de Desarrollo: Activa instantáneamente el plan Titanium Pro
+    para pruebas sin necesidad de pasarela configurada.
+    """
+    now = datetime.utcnow()
+    current_user.is_pro = True
+    current_user.tier = "titanium"
+    current_user.valid_until = now + timedelta(days=30)
+    db.commit()
+    return {"message": "¡Modo Desarrollo: Plan Titanium Pro activado exitosamente!"}
+
+
 @router.post("/create-portal-session")
 def create_paddle_portal_session(
     current_user: User = Depends(get_current_active_user),
     db: Session = Depends(get_db)
 ):
     """
-    Genera un enlace seguro para que el usuario gestione su suscripción en Paddle 
-    (Cancelar plan, actualizar tarjeta, ver facturas).
+    Genera un enlace seguro para que el usuario gestione su suscripción en Paddle.
     """
     if not paddle_client:
         raise HTTPException(status_code=500, detail="Paddle no está configurado en el servidor.")
 
-    # Extraemos el ID de cliente de Paddle desde la base de datos
     customer_id = getattr(current_user, "paddle_customer_id", None)
 
     if not customer_id:
@@ -88,7 +179,6 @@ def create_paddle_portal_session(
     try:
         from paddle_billing.Resources.CustomerPortalSessions.Operations import CreateCustomerPortalSession
         
-        # Le pedimos a Paddle que nos genere un link seguro de 1 solo uso
         session_data = CreateCustomerPortalSession(
             customer_ids=[customer_id]
         )
@@ -101,20 +191,18 @@ def create_paddle_portal_session(
         raise HTTPException(status_code=500, detail="Error interno conectando con el portal de pagos.")
 
 
-# 🔥 NUEVO ENDPOINT CRÍTICO: WEBHOOKS DE PADDLE
 @router.post("/webhook")
 async def paddle_webhook(request: Request, db: Session = Depends(get_db)):
     """
-    Recibe las notificaciones en tiempo real de Paddle cuando un pago es exitoso,
-    falla o se cancela la suscripción.
+    Recibe las notificaciones en tiempo real de Paddle.
     """
     signature = request.headers.get("Paddle-Signature", "")
     body = await request.body()
     body_str = body.decode("utf-8")
 
     try:
-        # 1. Validar criptográficamente que la petición viene de Paddle y no de un atacante
-        verifier = WebhookVerifier()
+        # 1. Validar firma usando la clase Verifier
+        verifier = Verifier()
         event = verifier.verify(body_str, signature, Secret(PADDLE_WEBHOOK_SECRET))
     except Exception as e:
         print(f"⚠️ Alerta de Seguridad: Firma de Webhook Inválida -> {str(e)}")
@@ -124,33 +212,28 @@ async def paddle_webhook(request: Request, db: Session = Depends(get_db)):
     data = event.data
 
     try:
-        # 2. Buscar usuario en la base de datos
-        # Recuerda que en el frontend pasamos `internal_user_id` en el `customData`
+        # 2. Buscar usuario
         custom_data = getattr(data, "custom_data", {})
         internal_user_id = custom_data.get("internal_user_id") if custom_data else None
 
         user = None
         if internal_user_id:
-            # Primero intentamos por username (si es el que guardaste en localstorage)
             user = db.query(User).filter(User.username == internal_user_id).first()
-            # Si no, intentamos por UUID/String ID
             if not user:
                 user = db.query(User).filter(User.id == internal_user_id).first()
         else:
-            # Fallback: Buscar por el customer_id de Paddle si ya lo teníamos registrado
             customer_id = getattr(data, "customer_id", None)
             if customer_id:
                 user = db.query(User).filter(User.paddle_customer_id == customer_id).first()
 
         if not user:
             print(f"Usuario no encontrado para el evento: {event_type}")
-            return {"status": "User not found, but webhook acknowledged"}
+            return {"status": "User not found"}
 
-        # 3. MANEJO DE ESTADOS DE SUSCRIPCIÓN
+        # 3. Estados de suscripción
         if event_type in ["subscription.created", "subscription.activated", "subscription.updated", "transaction.completed"]:
             user.is_pro = True
             user.tier = "titanium"
-            # Guardamos los IDs de Paddle para poder generarle el portal de cancelación después
             user.paddle_customer_id = getattr(data, "customer_id", user.paddle_customer_id)
             user.paddle_subscription_id = getattr(data, "id", user.paddle_subscription_id)
             
@@ -163,5 +246,4 @@ async def paddle_webhook(request: Request, db: Session = Depends(get_db)):
 
     except Exception as e:
         print(f"❌ Error procesando el webhook: {str(e)}")
-        # Devolvemos 200 OK a Paddle para que no reintente infinitamente si hay un error en nuestra DB
         return {"status": "error_acknowledged"}

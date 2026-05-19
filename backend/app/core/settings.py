@@ -15,6 +15,7 @@ class Settings(BaseSettings):
 
     # --- GOOGLE GEMINI ---
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
+    GOOGLE_CLOUD_API_KEY: str = os.getenv("GOOGLE_CLOUD_API_KEY", "")
 
     # --- CORS ---
     # 🚀 LISTA MAESTRA DE DOMINIOS PERMITIDOS

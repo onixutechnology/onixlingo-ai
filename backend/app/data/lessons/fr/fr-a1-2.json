@@ -1,61 +1,370 @@
 {
   "id": "fr-a1-2",
-  "title": "L'Espace de Travail",
-  "total_xp": 100,
+  "title": "Les Salutations Simples",
+  "total_xp": 300,
   "stages": [
     {
       "id": "theory-1",
       "type": "theory",
-      "title": "L'Espace de Travail",
+      "title": "Saludos y Despedidas",
       "parts": [
         {
-          "visual": "Voici votre nouvel environnement de travail.",
-          "audio": "Bienvenue dans la leçon sur l'espace de travail."
-        }
-      ]
-    },
-    {
-      "id": "drill-1",
-      "type": "pairing_drill",
-      "title": "Vocabulaire Clé",
-      "pairs": [
-        {
-          "id": "p1",
-          "en": "Office",
-          "es": "Bureau"
+          "visual": "¡Bonjour! (Hola / Buenos días) - Es el saludo formal más importante y educado.",
+          "audio": "Bonjour! C'est la salutation la plus importante."
         },
         {
-          "id": "p2",
-          "en": "Manager",
-          "es": "Directeur"
+          "visual": "¡Salut! (Hola / Adiós) - Es más informal y amistoso, para usar con amigos o compañeros de confianza.",
+          "audio": "Salut! Utilisez-le avec des collègues proches."
         },
         {
-          "id": "p3",
-          "en": "Meeting",
-          "es": "Réunion"
+          "visual": "¿Comment ça va? (¿Cómo te va? / ¿Cómo estás?) - Para preguntar cómo está alguien.",
+          "audio": "Comment ça va?"
         },
         {
-          "id": "p4",
-          "en": "File",
-          "es": "Dossier"
+          "visual": "Ça va bien, merci ! (¡Va bien, gracias!) - La respuesta más común.",
+          "audio": "Ça va bien, merci!"
+        },
+        {
+          "visual": "¡Au revoir! (¡Adiós / Hasta la vista!) y ¡Merci! (¡Gracias!).",
+          "audio": "Au revoir et merci pour votre aide."
         }
       ]
     },
     {
       "id": "quiz-1",
       "type": "quiz",
-      "title": "Compréhension",
+      "title": "Práctica de Saludos",
       "questions": [
         {
           "type": "quiz_choice",
-          "question": "Comment dit-on 'L'Espace de Travail' en français ?",
+          "question": "¿Cómo se dice 'Hola' de manera formal y educada?",
           "options": [
-            "L'Espace de Travail",
-            "Autre chose",
-            "Rien"
+            "Bonjour",
+            "Salut",
+            "Merci"
           ],
-          "correct_answer": "L'Espace de Travail",
-          "explanation": "C'est la base de cette unité."
+          "correct_answer": "Bonjour",
+          "explanation": "Bonjour es el saludo estándar y formal."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué saludo es informal?",
+          "options": [
+            "Bonjour",
+            "Salut",
+            "Au revoir"
+          ],
+          "correct_answer": "Salut",
+          "explanation": "Salut se usa de manera informal entre amigos o colegas cercanos."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Adiós' en francés?",
+          "options": [
+            "Au revoir",
+            "Merci",
+            "À bientôt"
+          ],
+          "correct_answer": "Au revoir",
+          "explanation": "Au revoir es la fórmula estándar para despedirse."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa 'Merci' en español?",
+          "options": [
+            "Gracias",
+            "Sí",
+            "No"
+          ],
+          "correct_answer": "Gracias",
+          "explanation": "Merci significa gracias."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se pregunta '¿Cómo estás?' en francés?",
+          "options": [
+            "Comment ça va?",
+            "Au revoir",
+            "Enchanté"
+          ],
+          "correct_answer": "Comment ça va?",
+          "explanation": "Comment ça va? es la pregunta más común."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué respondes si te dicen 'Comment ça va?'?",
+          "options": [
+            "Ça va bien, merci!",
+            "Au revoir",
+            "S'il vous plaît"
+          ],
+          "correct_answer": "Ça va bien, merci!",
+          "explanation": "Es la respuesta estándar positiva."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa 'S'il vous plaît'?",
+          "options": [
+            "Por favor",
+            "Gracias",
+            "Hola"
+          ],
+          "correct_answer": "Por favor",
+          "explanation": "Significa por favor de manera formal."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Buenas noches' (al llegar) en francés?",
+          "options": [
+            "Bonsoir",
+            "Bonjour",
+            "Bonne nuit"
+          ],
+          "correct_answer": "Bonsoir",
+          "explanation": "Bonsoir se usa para saludar por la tarde o noche."
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Bonjour",
+          "options": [
+            "Bonjour",
+            "Salut",
+            "Au revoir"
+          ],
+          "correct_answer": "Bonjour"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Ça va bien",
+          "options": [
+            "Ça va bien",
+            "Comment ça va",
+            "Merci"
+          ],
+          "correct_answer": "Ça va bien"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Merci beaucoup",
+          "options": [
+            "Merci beaucoup",
+            "S'il vous plaît",
+            "Au revoir"
+          ],
+          "correct_answer": "Merci beaucoup"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "À bientôt",
+          "options": [
+            "À bientôt",
+            "Bonjour",
+            "Salut"
+          ],
+          "correct_answer": "À bientôt"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Salut",
+          "options": [
+            "Salut",
+            "Bonjour",
+            "Bonsoir"
+          ],
+          "correct_answer": "Salut"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Bonsoir",
+          "options": [
+            "Bonsoir",
+            "Bonjour",
+            "Au revoir"
+          ],
+          "correct_answer": "Bonsoir"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "S'il vous plaît",
+          "options": [
+            "S'il vous plaît",
+            "Merci",
+            "Oui"
+          ],
+          "correct_answer": "S'il vous plaît"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Au revoir",
+          "options": [
+            "Au revoir",
+            "À bientôt",
+            "Salut"
+          ],
+          "correct_answer": "Au revoir"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Hola, ¿cómo estás?'",
+          "parts": [
+            "Bonjour",
+            "comment",
+            "ça",
+            "va"
+          ],
+          "correct_order": [
+            "Bonjour",
+            "comment",
+            "ça",
+            "va"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Va bien, gracias'",
+          "parts": [
+            "Ça",
+            "va",
+            "bien",
+            "merci"
+          ],
+          "correct_order": [
+            "Ça",
+            "va",
+            "bien",
+            "merci"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Adiós y gracias'",
+          "parts": [
+            "Au",
+            "revoir",
+            "et",
+            "merci"
+          ],
+          "correct_order": [
+            "Au",
+            "revoir",
+            "et",
+            "merci"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Por favor, gracias'",
+          "parts": [
+            "S'il",
+            "vous",
+            "plaît",
+            "merci"
+          ],
+          "correct_order": [
+            "S'il",
+            "vous",
+            "plaît",
+            "merci"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Sí, todo bien'",
+          "parts": [
+            "Oui",
+            "ça",
+            "va",
+            "bien"
+          ],
+          "correct_order": [
+            "Oui",
+            "ça",
+            "va",
+            "bien"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Hola, hasta pronto'",
+          "parts": [
+            "Salut",
+            "à",
+            "bientôt"
+          ],
+          "correct_order": [
+            "Salut",
+            "à",
+            "bientôt"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Hola' (formal)?",
+          "correct_answers": [
+            "Bonjour"
+          ],
+          "hints": [
+            "B-O-N-J-O-U-R"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Comment ___ va? (¿cómo estás?)",
+          "correct_answers": [
+            "ça",
+            "ca"
+          ],
+          "hints": [
+            "Lleva cedilla en la c"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Gracias'?",
+          "correct_answers": [
+            "Merci"
+          ],
+          "hints": [
+            "M-E-R-C-I"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Au ___ (Adiós)",
+          "correct_answers": [
+            "revoir"
+          ],
+          "hints": [
+            "R-E-V-O-I-R"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Sí' en francés?",
+          "correct_answers": [
+            "Oui"
+          ],
+          "hints": [
+            "O-U-I"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'No' en francés?",
+          "correct_answers": [
+            "Non"
+          ],
+          "hints": [
+            "N-O-N"
+          ]
         }
       ]
     }

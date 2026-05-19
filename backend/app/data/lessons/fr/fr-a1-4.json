@@ -1,61 +1,367 @@
 {
   "id": "fr-a1-4",
-  "title": "Gestion du Temps",
-  "total_xp": 100,
+  "title": "Les Couleurs de Base",
+  "total_xp": 300,
   "stages": [
     {
       "id": "theory-1",
       "type": "theory",
-      "title": "Gestion du Temps",
+      "title": "Los Colores de Base",
       "parts": [
         {
-          "visual": "Organisons votre emploi du temps.",
-          "audio": "Bienvenue dans la leçon sur gestion du temps."
-        }
-      ]
-    },
-    {
-      "id": "drill-1",
-      "type": "pairing_drill",
-      "title": "Vocabulaire Clé",
-      "pairs": [
-        {
-          "id": "p1",
-          "en": "Office",
-          "es": "Bureau"
+          "visual": "Los colores primarios: Rouge (Rojo), Bleu (Azul), Vert (Verde), Jaune (Amarillo).",
+          "audio": "Rouge, bleu, vert, jaune."
         },
         {
-          "id": "p2",
-          "en": "Manager",
-          "es": "Directeur"
+          "visual": "Colores neutros: Noir (Negro), Blanc (Blanco), Gris (Gris). Comunes en el mobiliario de oficina.",
+          "audio": "Noir, blanc, gris."
         },
         {
-          "id": "p3",
-          "en": "Meeting",
-          "es": "Réunion"
+          "visual": "Otros colores: Orange (Naranja), Rose (Rosa), Violet (Violeta).",
+          "audio": "Orange, rose, violet."
         },
         {
-          "id": "p4",
-          "en": "File",
-          "es": "Dossier"
+          "visual": "La concordancia: Los colores concuerdan con el género de las cosas: un stylo bleu (masc.), une chaise bleue (fem. lleva una e final).",
+          "audio": "Un stylo bleu, une chaise bleue."
+        },
+        {
+          "visual": "Ejemplo: C'est un bureau noir (Es un escritorio negro) y une chaise rouge (una silla roja).",
+          "audio": "C'est un bureau noir et une chaise rouge."
         }
       ]
     },
     {
       "id": "quiz-1",
       "type": "quiz",
-      "title": "Compréhension",
+      "title": "Práctica de Colores",
       "questions": [
         {
           "type": "quiz_choice",
-          "question": "Comment dit-on 'Gestion du Temps' en français ?",
+          "question": "¿Cómo se dice 'Azul' en francés?",
           "options": [
-            "Gestion du Temps",
-            "Autre chose",
-            "Rien"
+            "Bleu",
+            "Blanc",
+            "Noir"
           ],
-          "correct_answer": "Gestion du Temps",
-          "explanation": "C'est la base de cette unité."
+          "correct_answer": "Bleu",
+          "explanation": "Bleu significa azul."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Rojo':",
+          "options": [
+            "Rouge",
+            "Rose",
+            "Vert"
+          ],
+          "correct_answer": "Rouge",
+          "explanation": "Rouge significa rojo."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cuál es un color neutro?",
+          "options": [
+            "Gris",
+            "Jaune",
+            "Violet"
+          ],
+          "correct_answer": "Gris",
+          "explanation": "Gris es un color neutro muy común."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa 'Noir' en español?",
+          "options": [
+            "Negro",
+            "Blanco",
+            "Gris"
+          ],
+          "correct_answer": "Negro",
+          "explanation": "Noir significa negro."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Verde':",
+          "options": [
+            "Vert",
+            "Bleu",
+            "Rouge"
+          ],
+          "correct_answer": "Vert",
+          "explanation": "Vert significa verde."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa 'Blanc'?",
+          "options": [
+            "Blanco",
+            "Negro",
+            "Rojo"
+          ],
+          "correct_answer": "Blanco",
+          "explanation": "Blanc significa blanco."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Amarillo'?",
+          "options": [
+            "Jaune",
+            "Vert",
+            "Bleu"
+          ],
+          "correct_answer": "Jaune",
+          "explanation": "Jaune significa amarillo."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Rosa':",
+          "options": [
+            "Rose",
+            "Rouge",
+            "Violet"
+          ],
+          "correct_answer": "Rose",
+          "explanation": "Rose significa rosa."
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el color o frase que escuchas:",
+          "tts_text": "Un stylo vert",
+          "options": [
+            "Un stylo vert",
+            "Un stylo bleu",
+            "Un stylo rouge"
+          ],
+          "correct_answer": "Un stylo vert"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el color o frase que escuchas:",
+          "tts_text": "Bleu",
+          "options": [
+            "Bleu",
+            "Blanc",
+            "Noir"
+          ],
+          "correct_answer": "Bleu"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el color o frase que escuchas:",
+          "tts_text": "Gris",
+          "options": [
+            "Gris",
+            "Vert",
+            "Rouge"
+          ],
+          "correct_answer": "Gris"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el color o frase que escuchas:",
+          "tts_text": "Une chaise noire",
+          "options": [
+            "Une chaise noire",
+            "Un bureau noir",
+            "Une clé noire"
+          ],
+          "correct_answer": "Une chaise noire"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el color o frase que escuchas:",
+          "tts_text": "Jaune",
+          "options": [
+            "Jaune",
+            "Vert",
+            "Bleu"
+          ],
+          "correct_answer": "Jaune"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el color o frase que escuchas:",
+          "tts_text": "Rouge",
+          "options": [
+            "Rouge",
+            "Rose",
+            "Orange"
+          ],
+          "correct_answer": "Rouge"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el color o frase que escuchas:",
+          "tts_text": "Une table blanche",
+          "options": [
+            "Une table blanche",
+            "Un papier blanc",
+            "Une chaise blanche"
+          ],
+          "correct_answer": "Une table blanche"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona el color o frase que escuchas:",
+          "tts_text": "Rose",
+          "options": [
+            "Rose",
+            "Rouge",
+            "Bleu"
+          ],
+          "correct_answer": "Rose"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Un bolígrafo azul'",
+          "parts": [
+            "Un",
+            "stylo",
+            "bleu"
+          ],
+          "correct_order": [
+            "Un",
+            "stylo",
+            "bleu"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Una silla roja'",
+          "parts": [
+            "Une",
+            "chaise",
+            "rouge"
+          ],
+          "correct_order": [
+            "Une",
+            "chaise",
+            "rouge"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Es un escritorio negro'",
+          "parts": [
+            "C'est",
+            "un",
+            "bureau",
+            "noir"
+          ],
+          "correct_order": [
+            "C'est",
+            "un",
+            "bureau",
+            "noir"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'El papel es blanco'",
+          "parts": [
+            "Le",
+            "papier",
+            "est",
+            "blanc"
+          ],
+          "correct_order": [
+            "Le",
+            "papier",
+            "est",
+            "blanc"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Tengo un bolso gris'",
+          "parts": [
+            "J'ai",
+            "un",
+            "sac",
+            "gris"
+          ],
+          "correct_order": [
+            "J'ai",
+            "un",
+            "sac",
+            "gris"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Cuál es el color?'",
+          "parts": [
+            "Quelle",
+            "est",
+            "la",
+            "couleur"
+          ],
+          "correct_order": [
+            "Quelle",
+            "est",
+            "la",
+            "couleur"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Rojo' en francés?",
+          "correct_answers": [
+            "Rouge"
+          ],
+          "hints": [
+            "R-O-U-G-E"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa el femenino de azul: Bleu o ___ (femenino)",
+          "correct_answers": [
+            "bleue"
+          ],
+          "hints": [
+            "B-L-E-U-E"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Amarillo'?",
+          "correct_answers": [
+            "Jaune"
+          ],
+          "hints": [
+            "J-A-U-N-E"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Un document ___ (blanco)",
+          "correct_answers": [
+            "blanc"
+          ],
+          "hints": [
+            "B-L-A-N-C"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Negro'?",
+          "correct_answers": [
+            "Noir"
+          ],
+          "hints": [
+            "N-O-I-R"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Naranja'?",
+          "correct_answers": [
+            "Orange"
+          ],
+          "hints": [
+            "O-R-A-N-G-E"
+          ]
         }
       ]
     }

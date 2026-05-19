@@ -1,1 +1,365 @@
-{}
+{
+  "id": "zh-a2-3",
+  "title": "Agendar Citas (安排会议)",
+  "total_xp": 300,
+  "stages": [
+    {
+      "id": "theory-1",
+      "type": "theory",
+      "title": "Coordinar Reuniones y Horarios",
+      "parts": [
+        {
+          "visual": "Coordinar / Agendar: \"安排\" (Ānpái) - Organizar planes o citas.",
+          "audio": "安排会议"
+        },
+        {
+          "visual": "Reunirse / Ver a alguien: \"见面\" (Jiànmiàn) - Encontrarse frente a frente.",
+          "audio": "我们见面"
+        },
+        {
+          "visual": "¿Qué hora es conveniente?: \"什么时候方便\" (Shénme shíhou fāngbiàn) - ¿Cuándo le viene bien?",
+          "audio": "什么时候方便"
+        },
+        {
+          "visual": "Conveniente / Cómodo: \"方便\" (Fāngbiàn) - Que facilita la acción.",
+          "audio": "方便"
+        },
+        {
+          "visual": "Mañana a las dos: \"明天两点\" (Míngtiān liǎng diǎn) - Mañana a las 2 en punto.",
+          "audio": "明天两点"
+        }
+      ]
+    },
+    {
+      "id": "quiz-1",
+      "type": "quiz",
+      "title": "Práctica de Citas",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Agendar / Organizar reuniones'?",
+          "options": [
+            "安排会议 (Ānpái huìyì)",
+            "日常工作 (Rìcháng gōngzuò)",
+            "寻求帮助 (Xúnqiú bāngzhù)"
+          ],
+          "correct_answer": "安排会议 (Ānpái huìyì)",
+          "explanation": "安排 es organizar o agendar, huìyì es reunión."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce '¿Cuándo es conveniente?':",
+          "options": [
+            "什么时候方便 (Shénme shíhou fāngbiàn)",
+            "今天我很忙 (Jīntiān wǒ hěn máng)",
+            "去哪里 (Qù nǎlǐ)"
+          ],
+          "correct_answer": "什么时候方便 (Shénme shíhou fāngbiàn)",
+          "explanation": "什么时候 significa cuándo, fāngbiàn es conveniente."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa '见面 (Jiànmiàn)'?",
+          "options": [
+            "Reunirse / Verse en persona",
+            "Contestar llamadas",
+            "Escribir reportes"
+          ],
+          "correct_answer": "Reunirse / Verse en persona",
+          "explanation": "见面 significa literalmente ver caras / encontrarse."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Mañana a las dos'? (Nota: para el número 2 se usa liǎng antes de medidas)",
+          "options": [
+            "明天两点 (Míngtiān liǎng diǎn)",
+            "明天二点 (Míngtiān èr diǎn)",
+            "今天两点 (Jīntiān liǎng diǎn)"
+          ],
+          "correct_answer": "明天两点 (Míngtiān liǎng diǎn)",
+          "explanation": "Se usa 两 (liǎng) en vez de 二 (èr) para cantidades u horas del reloj."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Conveniente':",
+          "options": [
+            "方便 (Fāngbiàn)",
+            "安排 (Ānpái)",
+            "时间 (Shíjiān)"
+          ],
+          "correct_answer": "方便 (Fāngbiàn)",
+          "explanation": "Fāngbiàn es conveniente o oportuno."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa '什么时候 (Shénme shíhou)'?",
+          "options": [
+            "¿Cuándo? / ¿Qué momento?",
+            "Hola",
+            "Gracias"
+          ],
+          "correct_answer": "¿Cuándo? / ¿Qué momento?",
+          "explanation": "Estructura interrogativa temporal estándar."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Nosotros nos reunimos mañana':",
+          "options": [
+            "我们明天见面 (Wǒmen míngtiān jiànmiàn)",
+            "我们今天开会 (Wǒmen jīntiān kāihuì)",
+            "明天两点 (Míngtiān liǎng diǎn)"
+          ],
+          "correct_answer": "Renunciar a la reunión",
+          "explanation": "Jiànmiàn es reunirse, míngtiān es mañana."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Organizar / Agendar'?",
+          "options": [
+            "安排 (Ānpái)",
+            "见面 (Jiànmiàn)",
+            "开会 (Kāihuì)"
+          ],
+          "correct_answer": "安排 (Ānpái)",
+          "explanation": "安排 significa estructurar o agendar."
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de agenda que escuchas:",
+          "tts_text": "安排会议",
+          "options": [
+            "安排会议",
+            "安排日常",
+            "安排工作"
+          ],
+          "correct_answer": "安排会议"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase temporal que escuchas:",
+          "tts_text": "什么时候方便",
+          "options": [
+            "什么时候方便",
+            "什么时候开会",
+            "什么时候见面"
+          ],
+          "correct_answer": "什么时候方便"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "见面",
+          "options": [
+            "见面",
+            "开会",
+            "工作"
+          ],
+          "correct_answer": "见面"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la hora que escuchas:",
+          "tts_text": "明天两点",
+          "options": [
+            "明天两点",
+            "明天十点",
+            "今天两点"
+          ],
+          "correct_answer": "明天两点"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "方便",
+          "options": [
+            "方便",
+            "安排",
+            "时间"
+          ],
+          "correct_answer": "方便"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra interrogativa que escuchas:",
+          "tts_text": "什么时候",
+          "options": [
+            "什么时候",
+            "什么名字",
+            "去哪里"
+          ],
+          "correct_answer": "什么时候"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase que escuchas:",
+          "tts_text": "我们见面",
+          "options": [
+            "我们见面",
+            "我们开会",
+            "我们工作"
+          ],
+          "correct_answer": "我们见面"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "安排",
+          "options": [
+            "安排",
+            "方便",
+            "时间"
+          ],
+          "correct_answer": "安排"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Cuándo es conveniente reunirse? (什么时候 方便 见面)'",
+          "parts": [
+            "什么时候",
+            "方便",
+            "见面"
+          ],
+          "correct_order": [
+            "什么时候",
+            "方便",
+            "见面"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Nosotros nos reunimos mañana a las dos (我们 明天 两点 见面)'",
+          "parts": [
+            "我们",
+            "明天",
+            "两点",
+            "见面"
+          ],
+          "correct_order": [
+            "我们",
+            "明天",
+            "两点",
+            "见面"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'El gerente agenda la reunión (经理 安排 会议)'",
+          "parts": [
+            "经理",
+            "安排",
+            "会议"
+          ],
+          "correct_order": [
+            "经理",
+            "安排",
+            "会议"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Mañana es conveniente? (明天 方便 吗)'",
+          "parts": [
+            "明天",
+            "方便",
+            "吗"
+          ],
+          "correct_order": [
+            "明天",
+            "方便",
+            "吗"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Hola, nos vemos a las dos (你好 我们 两点 见面)'",
+          "parts": [
+            "你好",
+            "我们",
+            "两点",
+            "见面"
+          ],
+          "correct_order": [
+            "你好",
+            "usando",
+            "两点",
+            "见面"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Organizar el trabajo diario hoy (今天 安排 日常工作)'",
+          "parts": [
+            "今天",
+            "安排",
+            "日常工作"
+          ],
+          "correct_order": [
+            "今天",
+            "安排",
+            "日常工作"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se escribe 'Agendar / Planificar'?",
+          "correct_answers": [
+            "安排"
+          ],
+          "hints": [
+            "Ā-N-P-Á-I"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa la cita: 我们 ___ 面 (Jiàn)",
+          "correct_answers": [
+            "见"
+          ],
+          "hints": [
+            "J-I-À-N"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se escribe 'Conveniente'?",
+          "correct_answers": [
+            "方便"
+          ],
+          "hints": [
+            "F-Ā-N-G-B-I-À-N"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa el número dos (para horas): ___ 点 (Liǎng)",
+          "correct_answers": [
+            "两"
+          ],
+          "hints": [
+            "L-I-Ǎ-N-G"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se escribe 'Reunión / Conferencia' en caracteres?",
+          "correct_answers": [
+            "会议"
+          ],
+          "hints": [
+            "H-U-Ì-Y-Ì"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa la pregunta temporal: 什么 ___ 候 (Shí)",
+          "correct_answers": [
+            "时"
+          ],
+          "hints": [
+            "S-H-Í"
+          ]
+        }
+      ]
+    }
+  ]
+}

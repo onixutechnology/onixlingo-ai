@@ -1,34 +1,387 @@
 {
   "id": "fr-a2-2",
-  "title": "Réunions de Projet",
-  "total_xp": 100,
+  "title": "Décrire ses Tâches",
+  "total_xp": 300,
   "stages": [
     {
       "id": "theory-1",
       "type": "theory",
-      "title": "Réunions de Projet",
+      "title": "Describir las Tareas Diarias",
       "parts": [
         {
-          "visual": "Gérer les réunions avec efficacité.",
-          "audio": "Leçon sur réunions de projet."
+          "visual": "Verbos clave en la oficina: Envoyer (enviar), Répondre (responder) y Préparer (preparar).",
+          "audio": "J'envoie, je réponds et je prépare."
+        },
+        {
+          "visual": "Rutina diaria: \"Chaque jour, je réponds aux e-mails\" (Cada día, respondo a los correos).",
+          "audio": "Chaque jour, je réponds aux e-mails."
+        },
+        {
+          "visual": "Preparar reuniones: \"Je prépare la réunion importante\" (Preparo la reunión importante).",
+          "audio": "Je prépare la réunion importante."
+        },
+        {
+          "visual": "Adverbios de frecuencia: Toujours (siempre), Souvent (seguido / a menudo), Parfois (a veces).",
+          "audio": "Je travaille toujours, je parle souvent."
+        },
+        {
+          "visual": "Enviar facturas: \"J'envoie la facture au client\" (Envío la factura al cliente).",
+          "audio": "J'envoie la facture au client."
         }
       ]
     },
     {
       "id": "quiz-1",
       "type": "quiz",
-      "title": "Pratique",
+      "title": "Práctica de Rutina",
       "questions": [
         {
           "type": "quiz_choice",
-          "question": "Comment s'appelle cette unité ?",
+          "question": "¿Cómo se dice 'Yo envío' en francés?",
           "options": [
-            "Réunions de Projet",
-            "Autre",
-            "N/A"
+            "J'envoie",
+            "Je réponds",
+            "Je prépare"
           ],
-          "correct_answer": "Réunions de Projet",
-          "explanation": "Correct."
+          "correct_answer": "J'envoie",
+          "explanation": "Envoyer es el verbo enviar."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Yo respondo a los correos':",
+          "options": [
+            "Je réponds aux e-mails",
+            "J'envoie des e-mails",
+            "Je prépare des e-mails"
+          ],
+          "correct_answer": "Je réponds aux e-mails",
+          "explanation": "Répondre aux e-mails significa responder a los correos."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa la palabra 'Souvent'?",
+          "options": [
+            "A menudo / Seguido",
+            "Siempre",
+            "Nunca"
+          ],
+          "correct_answer": "A menudo / Seguido",
+          "explanation": "Souvent indica frecuencia habitual."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Siempre' en francés?",
+          "options": [
+            "Toujours",
+            "Souvent",
+            "Parfois"
+          ],
+          "correct_answer": "Toujours",
+          "explanation": "Toujours significa siempre."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Yo preparo la reunión':",
+          "options": [
+            "Je prépare la réunion",
+            "Je réponds à la réunion",
+            "J'envoie la réunion"
+          ],
+          "correct_answer": "Je prépare la réunion",
+          "explanation": "Préparer la réunion es organizar/preparar la sesión."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa 'Parfois'?",
+          "options": [
+            "A veces",
+            "Nunca",
+            "Siempre"
+          ],
+          "correct_answer": "A veces",
+          "explanation": "Parfois indica una frecuencia ocasional."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Cada día':",
+          "options": [
+            "Chaque jour",
+            "Toujours",
+            "La semaine"
+          ],
+          "correct_answer": "Chaque jour",
+          "explanation": "Chaque jour significa cada día."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Enviar una factura'?",
+          "options": [
+            "Envoyer une facture",
+            "Répondre une facture",
+            "Préparer un café"
+          ],
+          "correct_answer": "Envoyer une facture",
+          "explanation": "Facture significa factura."
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la tarea que escuchas:",
+          "tts_text": "J'envoie la facture",
+          "options": [
+            "J'envoie la facture",
+            "Je prépare la réunion",
+            "Je réponds aux e-mails"
+          ],
+          "correct_answer": "J'envoie la facture"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la tarea que escuchas:",
+          "tts_text": "Chaque jour",
+          "options": [
+            "Chaque jour",
+            "Toujours",
+            "Parfois"
+          ],
+          "correct_answer": "Chaque jour"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la tarea que escuchas:",
+          "tts_text": "Je réponds aux e-mails",
+          "options": [
+            "Je réponds aux e-mails",
+            "J'envoie les documents",
+            "Je prépare le bureau"
+          ],
+          "correct_answer": "Je réponds aux e-mails"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Toujours",
+          "options": [
+            "Toujours",
+            "Souvent",
+            "Parfois"
+          ],
+          "correct_answer": "Toujours"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la tarea que escuchas:",
+          "tts_text": "Je prépare la réunion",
+          "options": [
+            "Je prépare la réunion",
+            "J'envoie la facture",
+            "Je parle au client"
+          ],
+          "correct_answer": "Je prépare la réunion"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Souvent",
+          "options": [
+            "Souvent",
+            "Toujours",
+            "Parfois"
+          ],
+          "correct_answer": "Souvent"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la tarea que escuchas:",
+          "tts_text": "Une facture",
+          "options": [
+            "Une facture",
+            "Un document",
+            "Un e-mail"
+          ],
+          "correct_answer": "Une facture"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la tarea que escuchas:",
+          "tts_text": "Je travaille souvent",
+          "options": [
+            "Je travaille souvent",
+            "Je réponds toujours",
+            "Je prépare la table"
+          ],
+          "correct_answer": "Je travaille souvent"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Cada día respondo correos'",
+          "parts": [
+            "Chaque",
+            "jour",
+            "je",
+            "réponds",
+            "aux",
+            "e-mails"
+          ],
+          "correct_order": [
+            "Chaque",
+            "jour",
+            "je",
+            "réponds",
+            "aux",
+            "e-mails"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Envío la factura al cliente'",
+          "parts": [
+            "J'envoie",
+            "la",
+            "facture",
+            "au",
+            "client"
+          ],
+          "correct_order": [
+            "J'envoie",
+            "la",
+            "facture",
+            "au",
+            "client"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Preparo siempre las reuniones'",
+          "parts": [
+            "Je",
+            "prépare",
+            "toujours",
+            "les",
+            "réunions"
+          ],
+          "correct_order": [
+            "Je",
+            "prépare",
+            "toujours",
+            "les",
+            "réunions"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Trabajo a menudo en el proyecto'",
+          "parts": [
+            "Je",
+            "travaille",
+            "souvent",
+            "sur",
+            "le",
+            "projet"
+          ],
+          "correct_order": [
+            "Je",
+            "travaille",
+            "souvent",
+            "sur",
+            "le",
+            "projet"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'A veces envío documentos'",
+          "parts": [
+            "Parfois",
+            "j'envoie",
+            "des",
+            "documents"
+          ],
+          "correct_order": [
+            "Parfois",
+            "j'envoie",
+            "des",
+            "documents"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Cuál es su tarea hoy?'",
+          "parts": [
+            "Quelle",
+            "est",
+            "votre",
+            "tâche",
+            "aujourd'hui"
+          ],
+          "correct_order": [
+            "Quelle",
+            "est",
+            "votre",
+            "tâche",
+            "aujourd'hui"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice el verbo 'Enviar' en francés?",
+          "correct_answers": [
+            "Envoyer"
+          ],
+          "hints": [
+            "E-N-V-O-Y-E-R"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Je ___ (respondo) a los correos",
+          "correct_answers": [
+            "réponds",
+            "reponds"
+          ],
+          "hints": [
+            "R-É-P-O-N-D-S"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Reunión'?",
+          "correct_answers": [
+            "Réunion",
+            "reunion"
+          ],
+          "hints": [
+            "R-É-U-N-I-O-N"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Trabajo ___ (siempre) en la oficina",
+          "correct_answers": [
+            "toujours"
+          ],
+          "hints": [
+            "T-O-U-J-O-U-R-S"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Cliente' en francés?",
+          "correct_answers": [
+            "Client"
+          ],
+          "hints": [
+            "C-L-I-E-N-T"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Trabajo ___ (a menudo / seguido) con él",
+          "correct_answers": [
+            "souvent"
+          ],
+          "hints": [
+            "S-O-U-V-E-N-T"
+          ]
         }
       ]
     }

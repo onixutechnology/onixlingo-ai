@@ -29,12 +29,17 @@ class User(Base):
     
     # 🔥 Sistema de Referidos
     referral_code = Column(String, unique=True, index=True, nullable=True) 
+    
+    # 🔥 Identidad y Contacto
+    full_name = Column(String, nullable=True)
+    phone = Column(String, nullable=True)
 
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     
     # 🔥 Gamificación: Rachas (Streaks) y Elocuencia
     streak_days = Column(Integer, default=0)
     eloquence_points = Column(Integer, default=0)
+    country_code = Column(String, default="MX") # 🔥 NUEVO: Filtro por países
     last_activity_at = Column(DateTime(timezone=True), nullable=True)
 
     # Relaciones
@@ -140,4 +145,15 @@ class ChessMove(Base):
     move_san = Column(String, nullable=False)
     move_uci = Column(String, nullable=False)
     fen_after = Column(String, nullable=False)
-    timestamp = Column(DateTime(timezone=True), server_default=func.now())
+    timestamp = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class PromoCoupon(Base):
+    __tablename__ = "promo_coupons"
+
+    id = Column(Integer, primary_key=True, index=True)
+    code = Column(String, unique=True, index=True, nullable=False)
+    is_used = Column(Boolean, default=False)
+    used_by_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    used_at = Column(DateTime(timezone=True), nullable=True)
+

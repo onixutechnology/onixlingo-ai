@@ -36,6 +36,7 @@ class LessonStage(BaseModel):
     success_criteria: Optional[List[str]] = None      
     items: Optional[List[str]] = None                 
     buckets: Optional[Dict[str, List[str]]] = None    
+    pairs: Optional[List[Dict[str, Any]]] = None      
     class Config:
         extra = "ignore" 
 
@@ -70,6 +71,14 @@ def get_lesson_content(
 
     filename = f"{lesson_id}.json"
     
+    # Si el idioma solicitado es 'en' (por defecto) pero la lección tiene prefijo 'fr-' o 'zh-',
+    # deducimos el idioma correcto automáticamente.
+    if lang == "en":
+        if lesson_id.startswith("fr-"):
+            lang = "fr"
+        elif lesson_id.startswith("zh-"):
+            lang = "zh"
+
     # Definimos las posibles rutas de búsqueda
     base_dir = PRO_DIR if lesson_id.startswith("pro-") else NORMAL_DIR
     

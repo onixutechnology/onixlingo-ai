@@ -19,7 +19,7 @@ import { motion, Variants } from 'framer-motion';
 import { AdBanner } from '@/components/ads/AdBanner';
 
 import {
-  Play, Lock, Check, Trophy, Zap, Flame, Headphones, BookOpen, PenTool,
+  Play, Lock, Check, Trophy, Award, Zap, Flame, Headphones, BookOpen, PenTool,
   Mic, Shield, LayoutGrid, Loader2, Briefcase, ArrowRight, User
 } from 'lucide-react';
 
@@ -136,6 +136,7 @@ export default function DashboardPage() {
   const [userStats, setUserStats] = useState({ xp: 0, lessons: 0, streak: 0 });
   const [isUserPremium, setIsUserPremium] = useState(false);
   const [globalProgress, setGlobalProgress] = useState(0);
+  const [timeMode, setTimeMode] = useState<'basic' | 'intermediate' | 'advanced'>('basic');
 
   const getProgressPercentage = () => globalProgress;
 
@@ -146,7 +147,6 @@ export default function DashboardPage() {
     setCurrentUser(storedUsername);
 
     if (token) {
-      // Usamos el apiClient centralizado para todas las peticiones
       const fetchData = async () => {
         try {
           const [mapRes, statsRes, userRes] = await Promise.all([
@@ -164,14 +164,12 @@ export default function DashboardPage() {
           setGlobalProgress(statsRes.data.global_progress || 0);
           setIsUserPremium(userRes.data.is_pro || userRes.data.tier?.toLowerCase() === 'titanium');
           
-          // Actualizamos el nombre si el backend tiene uno más preciso
           if (userRes.data.username) {
             setCurrentUser(userRes.data.username);
             Cookies.set('username', userRes.data.username);
           }
         } catch (error: any) {
           console.error("Error fetching dashboard data:", error);
-          // El interceptor global de apiClient ya maneja el 401
           if (!dashboardData) setDashboardData({ standard: [] });
         }
       };
@@ -180,7 +178,7 @@ export default function DashboardPage() {
     } else {
       router.push('/login');
     }
-  }, [router]);
+  }, [router, activeLanguage]);
 
 
   const currentCurriculum = useMemo(() => {
@@ -192,10 +190,23 @@ export default function DashboardPage() {
   const allLessonsFlat = useMemo(() => currentCurriculum.flatMap(section => section.lessons), [currentCurriculum]);
 
   const getLessonState = (lessonId: string): LessonStatus => {
-    if (!isMounted || !dashboardData?.standard?.length) return lessonId === currentCurriculum[0]?.lessons[0]?.id ? 'active' : 'locked';
+    // 1. Obtener la primera lección del currículo actual para activarla por defecto
+    const firstLessonId = currentCurriculum?.[0]?.lessons?.[0]?.id;
+    
+    // 2. Si aún no hay datos de progreso, solo activamos la primera
+    if (!dashboardData?.standard || dashboardData.standard.length === 0) {
+      return lessonId === firstLessonId ? 'active' : 'locked';
+    }
+
+    // 3. Buscar progreso específico para este ID de lección
     const node = dashboardData.standard.find((l: any) => l.lesson_id === lessonId);
-    if (node) return node.status === 'completed' ? 'completed' : 'active';
-    return lessonId === currentCurriculum[0]?.lessons[0]?.id ? 'active' : 'locked';
+    
+    if (node) {
+      return node.status === 'completed' ? 'completed' : 'active';
+    }
+
+    // 4. Fallback final
+    return lessonId === firstLessonId ? 'active' : 'locked';
   };
 
   const getStars = (lessonId: string) => dashboardData?.standard?.find((l: any) => l.lesson_id === lessonId)?.stars || 0;
@@ -222,7 +233,7 @@ export default function DashboardPage() {
         </div>
         <div className="flex items-center gap-4">
           <HeaderStats xp={userStats.xp} streak={userStats.streak} />
-          
+
           <Link href="/dashboard/leaderboard" className="p-2 hover:bg-slate-100 border border-transparent hover:border-slate-200 transition-all text-slate-600">
             <Trophy size={18} />
           </Link>
@@ -231,7 +242,7 @@ export default function DashboardPage() {
             <User size={18} />
           </Link>
 
-          <div className="hidden lg:flex items-center gap-6 border-l border-slate-100 pl-6 h-6">
+          <div className="hidden sm:flex items-center gap-6 border-l border-slate-100 pl-6 h-6">
             <Link href="/dashboard/vocabulary" className={`text-[9px] font-black text-slate-400 hover:text-${theme.primary} transition-colors uppercase tracking-widest`}>Vocabulario</Link>
             <Link href="/dashboard/chess" className={`text-[9px] font-black text-slate-400 hover:text-${theme.primary} transition-colors uppercase tracking-widest`}>Ajedrez</Link>
           </div>
@@ -245,7 +256,7 @@ export default function DashboardPage() {
 
         {/* COLUMNA PRINCIPAL */}
         <div className="flex-1 min-w-0">
-          
+
           <div className="mb-6 bg-white border border-slate-200 p-6 rounded-none shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <h1 className="text-xl font-black text-slate-900 tracking-tighter uppercase leading-none mb-2 font-serif italic">Bienvenido, {currentUser}</h1>
@@ -254,20 +265,33 @@ export default function DashboardPage() {
               </p>
             </div>
             <div className="inline-flex bg-slate-50 p-1 border border-slate-200">
-              {(['en', 'fr', 'zh'] as const).map(lang => (
-                <button
-                  key={lang}
-                  onClick={() => setLanguage(lang as 'en' | 'fr' | 'zh')}
-                  className={`px-4 py-1.5 rounded-none text-[9px] font-black uppercase tracking-widest transition-all ${activeLanguage === lang ? `bg-${LANGUAGE_COLORS[lang].primary} text-white` : 'text-slate-400 hover:text-slate-600'}`}
-                >
-                  {lang === 'en' ? 'Inglés' : lang === 'fr' ? 'Francés' : 'Chino'}
-                </button>
-              ))}
+              {(['en', 'fr', 'zh'] as const).map(lang => {
+                const colors = {
+                  en: activeLanguage === 'en' ? 'bg-blue-600 text-white' : 'text-slate-400 hover:text-slate-600',
+                  fr: activeLanguage === 'fr' ? 'bg-cyan-600 text-white' : 'text-slate-400 hover:text-slate-600',
+                  zh: activeLanguage === 'zh' ? 'bg-slate-900 text-white' : 'text-slate-400 hover:text-slate-600',
+                };
+                return (
+                  <button
+                    key={lang}
+                    onClick={() => setLanguage(lang as 'en' | 'fr' | 'zh')}
+                    className={`px-4 py-1.5 rounded-none text-[9px] font-black uppercase tracking-widest transition-all ${colors[lang]}`}
+                  >
+                    {lang === 'en' ? 'Inglés' : lang === 'fr' ? 'Francés' : 'Chino'}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
-          {/* CURRICULUM RENDER */}
-          <motion.div variants={containerVariants} initial="hidden" animate="show" className="space-y-6">
+          {/* CURRICULUM RENDER - La key={activeLanguage} fuerza el refresco al cambiar idioma */}
+          <motion.div 
+            key={activeLanguage}
+            variants={containerVariants} 
+            initial="hidden" 
+            animate="show" 
+            className="space-y-6"
+          >
             {currentCurriculum.map((section, sIdx) => (
               <div key={section.id} className="bg-white border border-slate-200 p-6 rounded-none shadow-sm relative">
                 <div className="h-1 bg-slate-100 rounded-none overflow-hidden mb-2">
@@ -284,14 +308,14 @@ export default function DashboardPage() {
                 <div className="pl-1">
                   {section.lessons.map((lesson, lIdx) => (
                     <motion.div variants={itemVariants} key={lesson.id}>
-                      <TimelineNode 
-                        id={lesson.id} 
-                        title={lesson.title} 
-                        status={getLessonState(lesson.id)} 
-                        stars={getStars(lesson.id)} 
-                        index={allLessonsFlat.findIndex(l => l.id === lesson.id)} 
-                        isLast={lIdx === section.lessons.length - 1} 
-                        onClick={(id: string) => router.push(`/lesson/${id}?type=standard`)} 
+                      <TimelineNode
+                        id={lesson.id}
+                        title={lesson.title}
+                        status={getLessonState(lesson.id)}
+                        stars={getStars(lesson.id)}
+                        index={allLessonsFlat.findIndex(l => l.id === lesson.id)}
+                        isLast={lIdx === section.lessons.length - 1}
+                        onClick={(id: string) => router.push(`/lesson/${id}?type=standard&timeMode=${timeMode}`)}
                         theme={theme}
                       />
                     </motion.div>
@@ -301,19 +325,77 @@ export default function DashboardPage() {
             ))}
           </motion.div>
 
-          {/* EXÁMENES COMPACTOS */}
+          {/* EXÁMENES COMPACTOS (SIMULADORES ESTRATÉGICOS) */}
           <div className="mt-8 mb-12">
-            <h2 className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] flex items-center gap-2 mb-4">
-              <Shield size={14} className={`text-${theme.primary}`} /> Simuladores Estratégicos
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/lesson/toeic_listening" className={`bg-white border border-slate-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}>
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 border-b border-slate-200 pb-4">
+              <h2 className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] flex items-center gap-2">
+                <Shield size={14} className={`text-${theme.primary}`} /> Simuladores Estratégicos
+              </h2>
+              
+              {/* SELECTOR DE MODO DE TIEMPO CORPORATIVO */}
+              <div className="inline-flex bg-slate-100 p-0.5 border border-slate-200">
+                {(['basic', 'intermediate', 'advanced'] as const).map(mode => {
+                  const label = {
+                    basic: 'Básico (Sin Tiempo)',
+                    intermediate: 'Intermedio (10 Min)',
+                    advanced: 'Avanzado (5 Min)'
+                  }[mode];
+                  
+                  const activeColor = {
+                    basic: `bg-${theme.primary} text-white`,
+                    intermediate: 'bg-orange-500 text-white',
+                    advanced: 'bg-rose-600 text-white'
+                  }[mode];
+                  
+                  const isActive = timeMode === mode;
+                  return (
+                    <button
+                      key={mode}
+                      onClick={() => setTimeMode(mode)}
+                      className={`px-3 py-1 rounded-none text-[8px] font-black uppercase tracking-widest transition-all ${isActive ? activeColor : 'text-slate-400 hover:text-slate-700'}`}
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              <Link href={`/lesson/toeic_listening?timeMode=${timeMode}`} className={`bg-white border border-slate-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}>
                 <div className={`bg-slate-100 p-3 text-slate-400 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Headphones size={18} /></div>
-                <h4 className="text-[10px] font-black text-slate-800 uppercase tracking-widest">Comprensión Auditiva (Auditoría)</h4>
+                <div>
+                  <h4 className="text-[9px] font-black text-slate-800 uppercase tracking-widest mb-0.5">TOEIC Listening</h4>
+                  <p className="text-[8px] text-slate-400 uppercase tracking-wider font-bold">Comprensión Auditiva</p>
+                </div>
               </Link>
-              <Link href="/lesson/toeic_reading" className={`bg-white border border-slate-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}>
+              <Link href={`/lesson/toeic_reading?timeMode=${timeMode}`} className={`bg-white border border-slate-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}>
                 <div className={`bg-slate-100 p-3 text-slate-400 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><BookOpen size={18} /></div>
-                <h4 className="text-[10px] font-black text-slate-800 uppercase tracking-widest">Análisis Lector (Reporting)</h4>
+                <div>
+                  <h4 className="text-[9px] font-black text-slate-800 uppercase tracking-widest mb-0.5">TOEIC Reading</h4>
+                  <p className="text-[8px] text-slate-400 uppercase tracking-wider font-bold">Análisis Lector</p>
+                </div>
+              </Link>
+              <Link href={`/lesson/toeic_mock?timeMode=${timeMode}`} className={`bg-white border border-slate-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}>
+                <div className={`bg-slate-100 p-3 text-slate-400 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Trophy size={18} /></div>
+                <div>
+                  <h4 className="text-[9px] font-black text-slate-800 uppercase tracking-widest mb-0.5">Simulador TOEIC®</h4>
+                  <p className="text-[8px] text-purple-600 uppercase tracking-wider font-black font-serif italic">Completo (100% Real)</p>
+                </div>
+              </Link>
+              <Link href={`/lesson/toefl_mock?timeMode=${timeMode}`} className={`bg-white border border-slate-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}>
+                <div className={`bg-slate-100 p-3 text-slate-400 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Award size={18} /></div>
+                <div>
+                  <h4 className="text-[9px] font-black text-slate-800 uppercase tracking-widest mb-0.5">Simulador TOEFL®</h4>
+                  <p className="text-[8px] text-indigo-600 uppercase tracking-wider font-black font-serif italic">iBT Integrated (4 Skills)</p>
+                </div>
+              </Link>
+              <Link href={`/lesson/ielts_mock?timeMode=${timeMode}`} className={`bg-white border border-slate-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}>
+                <div className={`bg-slate-100 p-3 text-slate-400 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Award size={18} /></div>
+                <div>
+                  <h4 className="text-[9px] font-black text-slate-800 uppercase tracking-widest mb-0.5">Simulador IELTS®</h4>
+                  <p className="text-[8px] text-teal-600 uppercase tracking-wider font-black font-serif italic">Academic (Global)</p>
+                </div>
               </Link>
             </div>
           </div>

@@ -18,7 +18,7 @@ from app.services import user_service
 from app.datachess.seed_chess import generate_lessons 
 
 # --- IMPORTAMOS LOS ROUTERS ---
-from app.api.v1.endpoints import auth, lessons, progress, ai, users, speech, chess_ws 
+from app.api.v1.endpoints import auth, lessons, progress, ai, users, speech, chess_ws, billing, avatar, exercises, admin
 from app.api import chess 
 
 @asynccontextmanager
@@ -102,6 +102,10 @@ app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lessons"])
 app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI Engine"])
 app.include_router(speech.router, prefix="/api/v1/speech", tags=["Speech Analysis"])
 app.include_router(chess.router, prefix="/api/v1", tags=["Chess Academy"])
+app.include_router(billing.router, prefix="/api/v1/billing", tags=["Billing & Subscriptions"])
+app.include_router(avatar.router, prefix="/api/v1/avatar", tags=["AI Avatar Engine"])
+app.include_router(exercises.router, prefix="/api/v1/exercises", tags=["Exercises"])
+app.include_router(admin.router, prefix="/api/v1/admin", tags=["Admin Panel"])
 
 # ⚡ NUEVO: WEBSOCKET PARA AJEDREZ EN VIVO
 app.include_router(chess_ws.router, prefix="/ws/chess/matches", tags=["WebSockets"])

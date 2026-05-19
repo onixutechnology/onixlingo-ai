@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // 👈 Importante para animaciones suaves
 import { Check, X, Zap, Volume2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { useUIStore } from '@/store/uiStore';
 
 // --- CONFIGURACIÓN ---
 const BATCH_SIZE = 6; // Número de parejas por ronda (12 cartas en total)
@@ -19,6 +20,8 @@ interface PairingDrillProps {
   onComplete: () => void;
   onError: () => void;
   onCorrect: () => void;
+  initialCompletedIds?: string[];
+  onProgressChange?: (completedIds: string[]) => void;
 }
 
 interface CardItem {
@@ -35,12 +38,19 @@ export default function PairingDrill({
   isPro, 
   onComplete, 
   onError, 
-  onCorrect 
+  onCorrect,
+  initialCompletedIds = [],
+  onProgressChange
 }: PairingDrillProps) {
+  const { activeLanguage } = useUIStore();
+  
+  // Determinamos las etiquetas de idioma dinámicamente
+  const leftLabel = activeLanguage === 'en' ? 'EN' : 'ES';
+  const rightLabel = activeLanguage === 'en' ? 'ES' : (activeLanguage === 'fr' ? 'FR' : 'ZH');
   
   // --- ESTADOS ---
   const [activeCards, setActiveCards] = useState<CardItem[]>([]);
-  const [completedPairIds, setCompletedPairIds] = useState<Set<string>>(new Set());
+  const [completedPairIds, setCompletedPairIds] = useState<Set<string>>(new Set(initialCompletedIds));
   const [selectedCards, setSelectedCards] = useState<CardItem[]>([]);
   const [isProcessing, setIsProcessing] = useState(false);
 
@@ -135,7 +145,11 @@ export default function PairingDrill({
       setIsProcessing(false);
       
       // IMPORTANTE: Esto dispara el useEffect para cargar el siguiente lote si corresponde
-      setCompletedPairIds(prev => new Set(prev).add(pairId));
+      setCompletedPairIds(prev => {
+        const next = new Set(prev).add(pairId);
+        if (onProgressChange) onProgressChange(Array.from(next));
+        return next;
+      });
     }, 500);
   };
 
@@ -238,7 +252,7 @@ export default function PairingDrill({
                         : (isPro ? 'bg-slate-900 text-emerald-500' : 'bg-emerald-50 text-emerald-600')
                     }
                     `}>
-                    {card.type === 'en' ? 'EN' : 'ES'}
+                    {card.type === 'en' ? leftLabel : rightLabel}
                     </span>
 
                     <span className="text-center font-bold leading-tight px-1 text-lg">

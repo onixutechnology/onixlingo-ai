@@ -2,9 +2,10 @@
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { Loader2, AlertTriangle, X, Volume2, VolumeX, RefreshCcw, Home } from 'lucide-react';
+import { Loader2, AlertTriangle, X, Volume2, VolumeX, RefreshCcw, Home, Sparkles, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Cookies from 'js-cookie';
+import { useUIStore } from '@/store/uiStore';
 
 // --- IMPORTACIÓN DE COMPONENTES ---
 import PairingDrill from '@/components/lesson/vocabulary/PairingDrill'; 
@@ -40,6 +41,7 @@ interface VocabularyLesson {
 export default function VocabularyLessonPage() {
   const params = useParams();
   const router = useRouter();
+  const { activeLanguage } = useUIStore();
   
   // Manejo defensivo del ID (Punto 23)
   const lessonId = Array.isArray(params?.id) ? params.id[0] : params?.id;
@@ -55,6 +57,27 @@ export default function VocabularyLessonPage() {
   const [isMuted, setIsMuted] = useState(false); // (Punto 13)
   const [isSaving, setIsSaving] = useState(false);
 
+  // 💾 RETOMAR PROGRESO VOCABULARIO
+  const [savedProgressIds, setSavedProgressIds] = useState<string[]>([]);
+  const [showResumePrompt, setShowResumePrompt] = useState(false);
+  const [pendingResumeState, setPendingResumeState] = useState<any>(null);
+  const [drillKey, setDrillKey] = useState(0);
+
+  useEffect(() => {
+    if (lessonId && lesson && typeof window !== 'undefined') {
+      const saved = localStorage.getItem(`session_vocab_${lessonId}`);
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          if (parsed && parsed.completedIds && parsed.completedIds.length > 0) {
+            setPendingResumeState(parsed);
+            setShowResumePrompt(true);
+          }
+        } catch (e) {}
+      }
+    }
+  }, [lessonId, lesson]);
+
   // --- 1. CARGA DE DATOS ROBUSTA ---
   const fetchLesson = useCallback(async () => {
     if (!lessonId) return;
@@ -67,7 +90,7 @@ export default function VocabularyLessonPage() {
       setLoading(true);
       setError(null);
 
-      const res = await fetch(`${API_URL}/api/v1/voclessons/${lessonId}`, {
+      const res = await fetch(`${API_URL}/api/v1/voclessons/${lessonId}?lang=${activeLanguage}`, {
         signal: controller.signal
       });
       
@@ -134,6 +157,9 @@ export default function VocabularyLessonPage() {
         }
         // (Punto 14) Haptic feedback si es móvil
         if (navigator.vibrate) navigator.vibrate([100, 50, 100]);
+        if (typeof window !== 'undefined') {
+            localStorage.removeItem(`session_vocab_${lessonId}`);
+        }
         
     } catch (e) {
         console.error("Error guardando progreso en background", e);
@@ -143,7 +169,17 @@ export default function VocabularyLessonPage() {
     }
   };
 
-  const handleExit = () => router.push('/dashboard/vocabulary');
+  const handleExit = useCallback(() => {
+    if (!isLessonComplete && lesson && typeof window !== 'undefined') {
+      localStorage.setItem(`session_vocab_${lessonId}`, JSON.stringify({
+        completedIds: savedProgressIds,
+        timestamp: Date.now()
+      }));
+    } else if (typeof window !== 'undefined') {
+      localStorage.removeItem(`session_vocab_${lessonId}`);
+    }
+    router.push('/dashboard/vocabulary');
+  }, [router, isLessonComplete, lesson, lessonId, savedProgressIds]);
 
   // --- DATOS COMPUTADOS (Punto 24) ---
   const currentStage = useMemo(() => {
@@ -267,10 +303,13 @@ export default function VocabularyLessonPage() {
           
           {/* Renderizamos tu componente potente */}
           <PairingDrill 
+              key={drillKey}
               stage={currentStage || { title: 'Drill' }} // Fallback seguro
               pairs={pairs} 
               isPro={true} // Siempre activamos el modo diseño PRO
               onComplete={handleLessonComplete}
+              initialCompletedIds={savedProgressIds}
+              onProgressChange={(ids) => setSavedProgressIds(ids)}
               onCorrect={() => {
                   // (Punto 25) Sonido condicional
                   if (!isMuted) {
@@ -317,6 +356,45 @@ export default function VocabularyLessonPage() {
             </div>
         )}
       </AnimatePresence>
+
+      {/* DIÁLOGO INTERACTIVO PARA RETOMAR SESIÓN GUARDADA */}
+      {showResumePrompt && pendingResumeState && (
+        <div className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+          <div className="bg-slate-900 border-2 border-orange-950 p-6 md:p-8 max-w-md w-full shadow-2xl text-center rounded-none relative">
+            <div className="absolute top-0 left-0 w-full h-1 bg-orange-500" />
+            <div className="flex justify-center mb-4 text-orange-500">
+              <Sparkles size={40} className="animate-pulse" />
+            </div>
+            <h3 className="text-sm font-serif font-black italic uppercase tracking-wider text-orange-400 mb-2">¿Deseas retomar tu vocabulario?</h3>
+            <p className="text-[10px] text-slate-400 leading-relaxed mb-6">
+              Hemos detectado un progreso guardado con <span className="text-white font-mono font-black">{pendingResumeState.completedIds.length} palabras</span> memorizadas. ¿Prefieres reanudar desde donde te quedaste o comenzar de cero?
+            </p>
+            <div className="flex flex-col gap-2">
+              <button 
+                onClick={() => {
+                  setSavedProgressIds(pendingResumeState.completedIds);
+                  setDrillKey(prev => prev + 1); // Forzar recarga con estado
+                  setShowResumePrompt(false);
+                }} 
+                className="w-full py-3 bg-orange-600 hover:bg-orange-500 text-white font-black text-[10px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-1.5"
+              >
+                SÍ, REANUDAR DICCIONARIO <ChevronRight size={14} />
+              </button>
+              <button 
+                onClick={() => {
+                  localStorage.removeItem(`session_vocab_${lessonId}`);
+                  setSavedProgressIds([]);
+                  setDrillKey(prev => prev + 1);
+                  setShowResumePrompt(false);
+                }} 
+                className="w-full py-2.5 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-widest transition-all rounded-none"
+              >
+                NO, COMENZAR DE CERO
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

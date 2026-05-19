@@ -9,14 +9,14 @@ export const CURRICULUM_FR: LevelSection[] = [
     lessons: Array.from({ length: 10 }, (_, i) => ({
       id: `fr-a1-${i + 1}`,
       title: [
-        'Premier Contact', 'L\'Espace de Travail', 'Chiffres et Budgets', 
-        'Gestion du Temps', 'La Routine de Bureau', 'Le Déjeuner d\'Affaires', 
-        'Appels de Base', 'Déplacements Urbains', 'Check-in Hôtel', 'Révision A1'
+        'L\'Alphabet et les Sons', 'Les Salutations Simples', 'Les Premiers Nombres', 
+        'Les Couleurs de Base', 'Les Jours et le Temps', 'Les Pronoms et Être', 
+        'L\'Espace de Travail', 'Chiffres et Budgets', 'La Routine de Bureau', 'Révision Générale A1'
       ][i],
       description: [
-        'Salutations et To Be.', 'Objets du bureau.', 'Prix et quantités.',
-        'Heures et planning.', 'Habitudes quotidiennes.', 'Commander au resto.',
-        'Prendre un message.', 'Itinéraires.', 'Logistique voyage.', 'Bilan du niveau.'
+        'L\'alphabet et l\'épellation de base.', 'Dire bonjour et se présenter.', 'Compter de 1 à 10 au bureau.',
+        'Décrire les objets de travail.', 'Les jours de la semaine.', 'Le verbe Être et les personnes.',
+        'Vocabulaire basique du bureau.', 'Nombres 10-20 et prix simples.', 'Actions quotidiennes simples.', 'Bilan et examen final du niveau A1.'
       ][i],
       type: 'lecture',
       locked: i === 0 ? false : true,
@@ -33,14 +33,22 @@ export const CURRICULUM_FR: LevelSection[] = [
     color: 'blue',
     lessons: Array.from({ length: 10 }, (_, i) => ({
       id: `fr-a2-${i + 1}`,
-      title: `Opérations Pt. ${i + 1}`,
-      description: 'Communication opérationnelle.',
-      type: 'chat',
+      title: [
+        'Se Présenter Pro', 'Décrire ses Tâches', 'Fixer un RDV', 
+        'Demander des Infos', 'Parler du Passé', 'Déplacements Pro', 
+        'Répondre au Tél', 'Problèmes de Bureau', 'Donner des Directives', 'Révision Générale A2'
+      ][i],
+      description: [
+        'Parler de son poste et responsabilités.', 'Décrire la routine et tâches quotidiennes.', 'Organiser des réunions et rendez-vous.',
+        'Poser des questions et demander de l\'aide.', 'Rapporter des projets déjà terminés.', 'Transports et voyages d\'affaires.',
+        'Expressions clés pour appels professionnels.', 'Gérer les pannes et retards simples.', 'Donner des instructions et déléguer.', 'Bilan et examen final du niveau A2.'
+      ][i],
+      type: 'lecture',
       locked: true,
       completed: false,
       stars: 0,
       position: (['center', 'left', 'center', 'right'][i % 4] as any),
-      aiPrompt: 'Handle daily operations in French.'
+      aiPrompt: `Roleplay for A2 French: ${['Introduce yourself professionally', 'Describe your daily tasks', 'Book a meeting'][i % 3]}`
     }))
   },
   {
@@ -50,14 +58,22 @@ export const CURRICULUM_FR: LevelSection[] = [
     color: 'orange',
     lessons: Array.from({ length: 10 }, (_, i) => ({
       id: `fr-b1-${i + 1}`,
-      title: `Management Pt. ${i + 1}`,
-      description: 'Gestion intermédiaire.',
-      type: 'grammar',
+      title: [
+        'Plan de Projet', 'Déléguer des Tâches', 'Animer une Réunion', 
+        'Négocier un Budget', 'Gérer un Conflit', 'Évaluation de Perf', 
+        'Présenter Résultats', 'Décider en Équipe', 'Objectifs Trimestriels', 'Bilan Management B1'
+      ][i],
+      description: [
+        'Planification de projet et délais futurs.', 'Assignation de responsabilités au sein de l\'équipe.', 'Conduire et modérer une réunion d\'équipe.',
+        'Défense et négociation de budget commercial.', 'Médiation et résolution de tensions internes.', 'Feedback constructif et évaluations annuelles.',
+        'Exposition de rapports et résultats de ventes.', 'Prise de décision stratégique collective.', 'Définir les KPIs clés du trimestre.', 'Examen et bilan final du niveau B1.'
+      ][i],
+      type: 'lecture',
       locked: true,
       completed: false,
       stars: 0,
       position: (['center', 'left', 'center', 'right'][i % 4] as any),
-      aiPrompt: 'Manage teams in French.'
+      aiPrompt: `Roleplay for B1 French: ${['Negotiate a budget', 'Handle a team conflict', 'Present financial results'][i % 3]}`
     }))
   },
   {

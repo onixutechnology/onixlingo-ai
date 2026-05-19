@@ -1,32 +1,414 @@
 {
   "id": "fr-b1-5",
-  "title": "Finance Corporative",
-  "total_xp": 100,
+  "title": "Gérer un Conflit",
+  "total_xp": 300,
   "stages": [
     {
       "id": "theory-1",
       "type": "theory",
-      "title": "Finance Corporative",
+      "title": "Resolución de Desacuerdos y Tensiones",
       "parts": [
         {
-          "visual": "Maîtrise des chiffres.",
-          "audio": "Module Finance Corporative."
+          "visual": "Identificar el problema: \"Il y a un désaccord entre collègues\" (Hay un desacuerdo entre compañeros de trabajo).",
+          "audio": "Il y a un désaccord entre collègues de l'équipe."
+        },
+        {
+          "visual": "Escuchar con respeto: \"Je veux écouter votre opinion\" (Quiero escuchar su opinión).",
+          "audio": "Je veux écouter votre opinion professionnelle."
+        },
+        {
+          "visual": "Obligación de solucionar: \"Il faut que nous trouvions une solution\" (Es necesario / imperativo que encontremos una solución).",
+          "audio": "Il faut que nous trouvions une solution aujourd'hui."
+        },
+        {
+          "visual": "Proponer un término medio: \"Je propose un compromis acceptable\" (Propongo un compromiso / acuerdo intermedio aceptable).",
+          "audio": "Je propose un compromis acceptable pour tous."
+        },
+        {
+          "visual": "Calmar el ambiente: \"Restons calmes et professionnels\" (Permanezcamos tranquilos y profesionales).",
+          "audio": "Restons calmes et professionnels s'il vous plaît."
         }
       ]
     },
     {
       "id": "quiz-1",
       "type": "quiz",
-      "title": "Check",
+      "title": "Práctica de Conflictos",
       "questions": [
         {
           "type": "quiz_choice",
-          "question": "Ok?",
+          "question": "¿Cómo se dice 'Hay un desacuerdo'?",
           "options": [
-            "Oui"
+            "Il y a un désaccord",
+            "Il y a une solution",
+            "Il y a une réunion"
           ],
-          "correct_answer": "Oui",
-          "explanation": "."
+          "correct_answer": "Il y a un désaccord",
+          "explanation": "Désaccord indica fricción de posturas."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Es necesario que encontremos una solución':",
+          "options": [
+            "Il faut que nous trouvions une solution",
+            "Je propose une solution",
+            "C'est une bonne solution"
+          ],
+          "correct_answer": "Il faut que nous trouvions une solution",
+          "explanation": "Estructura del subjuntivo para denotar necesidad."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa 'Restons calmes'?",
+          "options": [
+            "Permanezcamos tranquilos",
+            "Vamos a gritar",
+            "Estamos enojados"
+          ],
+          "correct_answer": "Permanezcamos tranquilos",
+          "explanation": "Imperativo para calmar emociones."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Un acuerdo / Compromiso intermedio'?",
+          "options": [
+            "Un compromis",
+            "Un désaccord",
+            "Un budget"
+          ],
+          "correct_answer": "Un compromis",
+          "explanation": "Compromis en francés significa acuerdo medio."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Quiero escuchar su opinión':",
+          "options": [
+            "Je veux écouter votre opinion",
+            "À mon avis c'est bien",
+            "Je vous donne la parole"
+          ],
+          "correct_answer": "Je veux écouter votre opinion",
+          "explanation": "Écouter es el verbo escuchar."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Qué significa la palabra 'Désaccord'?",
+          "options": [
+            "Desacuerdo / Conflicto",
+            "Acuerdo perfecto",
+            "Factura de pago"
+          ],
+          "correct_answer": "Desacuerdo / Conflicto",
+          "explanation": "Antónimo de accord."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Traduce 'Profesionales':",
+          "options": [
+            "Professionnels",
+            "Responsables",
+            "Ingénieurs"
+          ],
+          "correct_answer": "Professionnels",
+          "explanation": "Se escribe con doble 's' y doble 'n' en francés."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "¿Cómo se dice 'Para todos'?",
+          "options": [
+            "Pour tous",
+            "Avec tous",
+            "Chez tous"
+          ],
+          "correct_answer": "Pour tous",
+          "explanation": "Indica alcance general."
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de mediación que escuchas:",
+          "tts_text": "Un désaccord",
+          "options": [
+            "Un désaccord",
+            "Un compromis",
+            "Une solution"
+          ],
+          "correct_answer": "Un désaccord"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de mediación que escuchas:",
+          "tts_text": "Trouver une solution",
+          "options": [
+            "Trouver une solution",
+            "Planifier le projet",
+            "Réduire les coûts"
+          ],
+          "correct_answer": "Trouver une solution"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de mediación que escuchas:",
+          "tts_text": "Restons calmes",
+          "options": [
+            "Restons calmes",
+            "Soyez prêts",
+            "Envoyez le mail"
+          ],
+          "correct_answer": "Restons calmes"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de mediación que escuchas:",
+          "tts_text": "Un compromis acceptable",
+          "options": [
+            "Un compromis acceptable",
+            "Un budget supplémentaire",
+            "Un jalon important"
+          ],
+          "correct_answer": "Un compromis acceptable"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase de mediación que escuchas:",
+          "tts_text": "Écouter votre opinion",
+          "options": [
+            "Écouter votre opinion",
+            "Donner la parole",
+            "Prendre une décision"
+          ],
+          "correct_answer": "Écouter votre opinion"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Professionnels",
+          "options": [
+            "Professionnels",
+            "Responsables",
+            "Managers"
+          ],
+          "correct_answer": "Professionnels"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la frase que escuchas:",
+          "tts_text": "Pour tous",
+          "options": [
+            "Pour tous",
+            "Pour moi",
+            "Pour vous"
+          ],
+          "correct_answer": "Pour tous"
+        },
+        {
+          "type": "listening_match",
+          "question": "Selecciona la palabra que escuchas:",
+          "tts_text": "Calmes",
+          "options": [
+            "Calmes",
+            "Chargés",
+            "Désolés"
+          ],
+          "correct_answer": "Calmes"
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Hay un desacuerdo fuerte entre los dos compañeros'",
+          "parts": [
+            "Il",
+            "y",
+            "a",
+            "un",
+            "désaccord",
+            "fort",
+            "entre",
+            "les",
+            "deux",
+            "collègues"
+          ],
+          "correct_order": [
+            "Il",
+            "y",
+            "a",
+            "un",
+            "désaccord",
+            "fort",
+            "entre",
+            "les",
+            "deux",
+            "collègues"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Es imperativo que encontremos una solución rápidamente'",
+          "parts": [
+            "Il",
+            "faut",
+            "que",
+            "nous",
+            "trouvions",
+            "une",
+            "solution",
+            "rapidement"
+          ],
+          "correct_order": [
+            "Il",
+            "faut",
+            "que",
+            "nous",
+            "trouvions",
+            "une",
+            "solution",
+            "rapidement"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Permanezcamos tranquilos y profesionales en la oficina'",
+          "parts": [
+            "Restons",
+            "calmes",
+            "et",
+            "professionnels",
+            "au",
+            "bureau"
+          ],
+          "correct_order": [
+            "Restons",
+            "calmes",
+            "et",
+            "professionnels",
+            "au",
+            "bureau"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Propongo un compromiso excelente para todos'",
+          "parts": [
+            "Je",
+            "propose",
+            "un",
+            "compromis",
+            "excellent",
+            "pour",
+            "tous"
+          ],
+          "correct_order": [
+            "Je",
+            "propose",
+            "un",
+            "compromis",
+            "excellent",
+            "pour",
+            "tous"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: 'Quiero escuchar con atención su opinión'",
+          "parts": [
+            "Je",
+            "veux",
+            "écouter",
+            "avec",
+            "attention",
+            "votre",
+            "opinion"
+          ],
+          "correct_order": [
+            "Je",
+            "veux",
+            "écouter",
+            "avec",
+            "attention",
+            "votre",
+            "opinion"
+          ]
+        },
+        {
+          "type": "order_sentence",
+          "question": "Ordena la frase: '¿Cuál es la causa del conflicto?'",
+          "parts": [
+            "Quelle",
+            "est",
+            "la",
+            "cause",
+            "du",
+            "conflit"
+          ],
+          "correct_order": [
+            "Quelle",
+            "est",
+            "la",
+            "cause",
+            "du",
+            "conflit"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Desacuerdo' en francés?",
+          "correct_answers": [
+            "Désaccord",
+            "desaccord"
+          ],
+          "hints": [
+            "D-É-S-A-C-C-O-R-D"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa el subjuntivo de Trouver (nosotros): Il faut que nous ___ una solución",
+          "correct_answers": [
+            "trouvions"
+          ],
+          "hints": [
+            "T-R-O-U-V-I-O-N-S"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Restons ___ (tranquilos / calmados)",
+          "correct_answers": [
+            "calmes"
+          ],
+          "hints": [
+            "C-A-L-M-E-S"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "¿Cómo se dice 'Compromiso / Acuerdo medio'?",
+          "correct_answers": [
+            "Compromis"
+          ],
+          "hints": [
+            "C-O-P-R-O-M-I-S"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Restons calmes et ___ (profesionales)",
+          "correct_answers": [
+            "professionnels",
+            "professionnels"
+          ],
+          "hints": [
+            "P-R-O-F-E-S-S-I-O-N-N-E-L-S"
+          ]
+        },
+        {
+          "type": "fill_input",
+          "question": "Completa: Je veux ___ (escuchar) su opinión",
+          "correct_answers": [
+            "écouter",
+            "ecouter"
+          ],
+          "hints": [
+            "É-C-O-U-T-E-R"
+          ]
         }
       ]
     }

@@ -32,12 +32,35 @@ export default function ChessPage() {
   const [winner, setWinner] = useState<string | null>(null);
   const [difficulty, setDifficulty] = useState('manager'); // principiante, manager, ceo
 
+  // 💾 RETOMAR PARTIDA GUARDADA
+  const [showResumePrompt, setShowResumePrompt] = useState(false);
+  const [pendingFen, setPendingFen] = useState<string | null>(null);
+  const [pendingDiff, setPendingDiff] = useState<string | null>(null);
+
+  // Cargar partida al montar
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedFen = localStorage.getItem('onix_chess_fen');
+      const savedDiff = localStorage.getItem('onix_chess_difficulty');
+      if (savedFen) {
+        setPendingFen(savedFen);
+        if (savedDiff) setPendingDiff(savedDiff);
+        setShowResumePrompt(true);
+      }
+    }
+  }, []);
+
   function makeAMove(move: any) {
     const gameCopy = new Chess(game.fen());
     try {
       const result = gameCopy.move(move);
       setGame(gameCopy);
       setMoveHistory(gameCopy.history());
+      
+      // Auto-guardar posición FEN actual
+      localStorage.setItem('onix_chess_fen', gameCopy.fen());
+      localStorage.setItem('onix_chess_difficulty', difficulty);
+      
       return result;
     } catch (e) {
       return null;
@@ -70,17 +93,37 @@ export default function ChessPage() {
         setGame(gameCopy);
         setMoveHistory(gameCopy.history());
         
+        // Auto-guardar posición FEN actual después de la respuesta de la IA
+        localStorage.setItem('onix_chess_fen', gameCopy.fen());
+        localStorage.setItem('onix_chess_difficulty', difficulty);
+        
         if (response.data.game_over) {
           setIsGameOver(true);
-          setWinner(response.data.result === '1-0' ? 'Blancas' : response.data.result === '0-1' ? 'Negras' : 'Tablas');
+          const winVal = response.data.result === '1-0' ? 'Blancas' : response.data.result === '0-1' ? 'Negras' : 'Tablas';
+          setWinner(winVal);
           setStatus('Partida Terminada');
+          localStorage.removeItem('onix_chess_fen');
+          
+          if (winVal === 'Blancas') {
+            localStorage.setItem('onix_chess_won_first', 'true');
+            if (difficulty === 'manager') localStorage.setItem('onix_chess_won_manager', 'true');
+            if (difficulty === 'ceo') localStorage.setItem('onix_chess_won_ceo', 'true');
+          }
         } else {
           setStatus('Su turno');
         }
       } else if (response.data.game_over) {
         setIsGameOver(true);
-        setWinner(response.data.result === '1-0' ? 'Blancas' : response.data.result === '0-1' ? 'Negras' : 'Tablas');
+        const winVal = response.data.result === '1-0' ? 'Blancas' : response.data.result === '0-1' ? 'Negras' : 'Tablas';
+        setWinner(winVal);
         setStatus('Partida Terminada');
+        localStorage.removeItem('onix_chess_fen');
+        
+        if (winVal === 'Blancas') {
+          localStorage.setItem('onix_chess_won_first', 'true');
+          if (difficulty === 'manager') localStorage.setItem('onix_chess_won_manager', 'true');
+          if (difficulty === 'ceo') localStorage.setItem('onix_chess_won_ceo', 'true');
+        }
       }
     } catch (error) {
       console.error("Chess Error:", error);
@@ -98,6 +141,9 @@ export default function ChessPage() {
     setIsGameOver(false);
     setWinner(null);
     setStatus('Su turno');
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('onix_chess_fen');
+    }
   }
 
   return (
@@ -275,6 +321,53 @@ export default function ChessPage() {
                   className="w-full py-3 border border-slate-200 text-slate-600 font-black uppercase tracking-widest text-[10px] hover:bg-slate-50 transition-all"
                 >
                   Return to Dashboard
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+
+        {showResumePrompt && pendingFen && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-6"
+          >
+            <motion.div 
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              className="bg-white max-w-sm w-full p-10 text-center shadow-2xl border-t-4 border-amber-500 rounded-none"
+            >
+              <div className="w-16 h-16 bg-slate-950 text-amber-500 flex items-center justify-center mx-auto mb-6">
+                <Brain size={32} className="animate-pulse" />
+              </div>
+              <h2 className="text-xl font-black text-slate-900 uppercase tracking-tighter mb-2">Partida Detectada ♟️</h2>
+              <p className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-8 leading-relaxed">
+                Hemos encontrado una partida de ajedrez guardada con dificultad <span className="text-slate-900 font-black">{pendingDiff || 'manager'}</span>. ¿Quieres reanudar tu juego o comenzar uno nuevo?
+              </p>
+              <div className="space-y-3">
+                <button 
+                  onClick={() => {
+                    const loadedGame = new Chess(pendingFen);
+                    setGame(loadedGame);
+                    setMoveHistory(loadedGame.history());
+                    if (pendingDiff) setDifficulty(pendingDiff);
+                    setShowResumePrompt(false);
+                  }}
+                  className="w-full py-3 bg-slate-900 text-white font-black uppercase tracking-widest text-[10px] hover:bg-amber-500 transition-all rounded-none"
+                >
+                  Sí, Reanudar Partida
+                </button>
+                <button 
+                  onClick={() => {
+                    localStorage.removeItem('onix_chess_fen');
+                    resetGame();
+                    setShowResumePrompt(false);
+                  }}
+                  className="w-full py-3 border border-slate-200 text-slate-600 font-black uppercase tracking-widest text-[10px] hover:bg-slate-50 transition-all rounded-none"
+                >
+                  No, Iniciar de Cero
                 </button>
               </div>
             </motion.div>
