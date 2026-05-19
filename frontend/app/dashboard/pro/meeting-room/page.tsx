@@ -22,7 +22,8 @@ import {
   Activity,
   Loader2,
   Trophy,
-  ShieldAlert
+  ShieldAlert,
+  Check
 } from 'lucide-react';
 import apiClient from '@/lib/apiClient';
 

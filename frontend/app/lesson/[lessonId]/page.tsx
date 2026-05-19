@@ -9,7 +9,7 @@ import {
   Trophy, Lightbulb, Settings, Download, Share2, Eye, EyeOff, BarChart3,
   MessageSquare, Mic, MicOff, Pause, SkipForward, HelpCircle, MapPin, Filter,
   TrendingUp, Star, Heart, Lock, Unlock, Copy, ChevronDown, ChevronUp, Menu,
-  Radio, Grid, List, Search, Calendar, Users, Repeat2, RotateCw, ChevronRight
+  Radio, Grid, List, Search, Calendar, Users, Repeat2, RotateCw, ChevronRight, Sparkles
 } from 'lucide-react';
 
 import Avatar3D from '@/components/avatar/Avatar3D';
@@ -18,6 +18,8 @@ import { useAvatarStore } from '@/store/avatarStore';
 import { useUIStore } from '@/store/uiStore';
 import { useSearchParams } from 'next/navigation';
 import apiClient from '@/lib/apiClient';
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
 
 
 

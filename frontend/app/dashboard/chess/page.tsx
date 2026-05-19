@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
-import { Chessboard } from 'react-chessboard';
+import CustomChessboard from '@/components/chess/CustomChessboard';
 import { Chess } from 'chess.js';
 import { 
   Trophy, 
@@ -180,12 +180,10 @@ export default function ChessPage() {
         {/* Lado Izquierdo: El Tablero */}
         <div className="flex-1 flex flex-col items-center justify-center gap-6">
           <div className="w-full max-w-[550px] aspect-square shadow-2xl shadow-slate-300 border-8 border-white">
-            <Chessboard 
-              position={game.fen()} 
-              onPieceDrop={onDrop}
-              boardOrientation="white"
-              customDarkSquareStyle={{ backgroundColor: '#1e293b' }}
-              customLightSquareStyle={{ backgroundColor: '#f1f5f9' }}
+            <CustomChessboard 
+              fen={game.fen()} 
+              onDrop={({ sourceSquare, targetSquare }) => onDrop(sourceSquare, targetSquare)}
+              disabled={isGameOver || isLoading}
             />
           </div>
           

@@ -102,7 +102,7 @@ export default function LoginPage() {
                 <label htmlFor="password" className="block text-[9px] font-black text-slate-500 uppercase tracking-widest">
                   Clave de Acceso
                 </label>
-                <Link href="/forgot-password" size={12} className="text-[8px] font-black text-teal-600 hover:text-teal-700 transition-colors uppercase tracking-widest">
+                <Link href="/forgot-password" className="text-[8px] font-black text-teal-600 hover:text-teal-700 transition-colors uppercase tracking-widest">
                   Recuperar
                 </Link>
               </div>
