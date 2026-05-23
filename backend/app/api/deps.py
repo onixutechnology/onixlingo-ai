@@ -83,6 +83,22 @@ def get_current_pro_user(
         )
     return current_user
 
+# 🔥 EL "CADENERO" EXECUTIVE (NUEVO)
+def get_current_executive_user(
+    current_user: models.User = Depends(get_current_active_user),
+) -> models.User:
+    """
+    Verifica que el usuario tenga una suscripción Executive activa.
+    Si no la tiene (Free o Pro), bloquea la petición con un Error 403.
+    """
+    is_admin = getattr(current_user, "role", "student") == "admin"
+    if not is_admin and (current_user.tier != "executive" and current_user.tier != "titanium"):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="La conversación libre con IA (Speech Tutor) requiere la suscripción EXECUTIVE activa."
+        )
+    return current_user
+
 # 🔥 EL "CADENERO" PARA ADMINISTRADORES
 def get_current_admin_user(
     current_user: models.User = Depends(get_current_active_user),

@@ -120,6 +120,17 @@ def get_user_stats(
 
     radar_data = [{"subject": k, "A": min(v, 100), "fullMark": 100} for k, v in skills.items()]
 
+    # Contar usuarios premium en vivo (excluye admin, jeicomorales1, cuentas de prueba y registrados gratis con códigos)
+    premium_count = db.query(models.User).filter(
+        (models.User.is_pro == True) | (models.User.tier == "titanium") | (models.User.tier == "pro") | (models.User.tier == "executive"),
+        models.User.role != "admin",
+        models.User.email != "jeicomorales1@gmail.com",
+        models.User.email != "j2022eico2@gmail.com",
+        models.User.email != "moralesmorenojacob0@gmail.com",
+        models.User.username != "jeicomorales1",
+        models.User.paddle_subscription_id != None
+    ).count()
+
     return {
         "username": current_user.username,
         "level_label": _calculate_label(modules_count),
@@ -129,7 +140,8 @@ def get_user_stats(
         "global_progress": min(int((modules_count / 60) * 100), 100),
         "skills_radar": radar_data,
         "is_pro": current_user.is_pro,
-        "achievements": [a.achievement_code for a in current_user.achievements]
+        "achievements": [a.achievement_code for a in current_user.achievements],
+        "premium_users_count": premium_count
     }
 
 @router.get("/eloquence-leaderboard")

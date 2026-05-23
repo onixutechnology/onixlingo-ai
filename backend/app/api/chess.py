@@ -42,6 +42,22 @@ def save_chess_progress(
     if not lesson:
         raise HTTPException(status_code=404, detail="Lección no encontrada")
 
+    # Validar cuota diaria de ajedrez para usuarios Free
+    user_tier = current_user.tier or "free"
+    is_admin = getattr(current_user, "role", "student") == "admin"
+    if not is_admin and user_tier == "free":
+        from datetime import datetime, time
+        today_start = datetime.combine(datetime.utcnow().date(), time.min)
+        today_completions = db.query(ChessProgress).filter(
+            ChessProgress.user_id == current_user.id,
+            ChessProgress.completed_at >= today_start
+        ).count()
+        if today_completions >= 1:
+            raise HTTPException(
+                status_code=403,
+                detail="Has alcanzado el límite de 1 puzzle diario del plan Free. Sube a PRO o EXECUTIVE para resolver puzzles de forma ilimitada."
+            )
+
     # Validar si ya lo resolvió antes
     existing = db.query(ChessProgress).filter(
         ChessProgress.user_id == current_user.id,
@@ -59,9 +75,16 @@ def save_chess_progress(
         earned_xp=25
     )
     db.add(new_progress)
+
+    # Increment ELO in DB!
+    if current_user.chess_tactical_elo is None:
+        current_user.chess_tactical_elo = 800
+    current_user.chess_tactical_elo += 15
+    db.add(current_user)
+    
     db.commit()
     
-    return {"msg": "Progreso de ajedrez guardado", "xp_added": 25}
+    return {"msg": "Progreso de ajedrez guardado", "xp_added": 25, "new_tactical_elo": current_user.chess_tactical_elo}
 
 @router.get("/progress", response_model=ChessProgressResponse)
 def get_user_chess_progress(

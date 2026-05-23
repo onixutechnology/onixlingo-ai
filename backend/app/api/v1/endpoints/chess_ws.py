@@ -131,13 +131,59 @@ async def chess_match_ws(
                 await manager.broadcast(match_id, data, exclude_user_id=str(user["id"]))
                 
             # ── Eventos de Fin de Juego (Rendición o Tablas) ──
-            elif event_type in ["draw_offer", "resign"]:
+            elif event_type in ["draw_offer", "resign", "game_over"]:
                 if event_type == "resign":
                     match_obj = db.query(ChessMatch).filter(ChessMatch.id == match_id).first()
-                    if match_obj: 
+                    if match_obj and match_obj.status == "active": 
                         match_obj.status = "completed"
-                        match_obj.winner_id = user["id"] # El otro gana, pero simplificamos aquí
+                        if match_obj.white_player_id == user["id"]:
+                            winner_id = match_obj.black_player_id
+                            loser_id = match_obj.white_player_id
+                        else:
+                            winner_id = match_obj.white_player_id
+                            loser_id = match_obj.black_player_id
+                        match_obj.winner_id = winner_id
+
+                        # Adjust ELOs
+                        winner = db.query(User).filter(User.id == winner_id).first()
+                        loser = db.query(User).filter(User.id == loser_id).first()
+                        if winner:
+                            if winner.chess_elo is None: winner.chess_elo = 1200
+                            winner.chess_elo += 15
+                            db.add(winner)
+                        if loser:
+                            if loser.chess_elo is None: loser.chess_elo = 1200
+                            loser.chess_elo = max(100, loser.chess_elo - 15)
+                            db.add(loser)
                     db.commit()
+                elif event_type == "game_over":
+                    match_obj = db.query(ChessMatch).filter(ChessMatch.id == match_id).first()
+                    if match_obj and match_obj.status == "active":
+                        match_obj.status = "completed"
+                        result = data.get("result") # "win" or "draw"
+                        if result == "win":
+                            # The sender won
+                            match_obj.winner_id = user["id"]
+                            if match_obj.white_player_id == user["id"]:
+                                winner_id = match_obj.white_player_id
+                                loser_id = match_obj.black_player_id
+                            else:
+                                winner_id = match_obj.black_player_id
+                                loser_id = match_obj.white_player_id
+
+                            winner = db.query(User).filter(User.id == winner_id).first()
+                            loser = db.query(User).filter(User.id == loser_id).first()
+                            if winner:
+                                if winner.chess_elo is None: winner.chess_elo = 1200
+                                winner.chess_elo += 15
+                                db.add(winner)
+                            if loser:
+                                if loser.chess_elo is None: loser.chess_elo = 1200
+                                loser.chess_elo = max(100, loser.chess_elo - 15)
+                                db.add(loser)
+                        else:
+                            match_obj.status = "draw"
+                        db.commit()
                 
                 await manager.broadcast(match_id, data, exclude_user_id=str(user["id"]))
 

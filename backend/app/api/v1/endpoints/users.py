@@ -40,6 +40,8 @@ class UserProfileResponse(BaseModel):
     membership: MembershipSchema
     referral_code: str
     stats: StatsSchema
+    chess_elo: int
+    chess_tactical_elo: int
 
 # --- ENDPOINTS ---
 @router.get("/me", response_model=UserProfileResponse)
@@ -77,7 +79,9 @@ def read_user_me(
             "total_xp": total_xp,
             "streak_days": current_user.streak_days or 0,
             "eloquence_points": current_user.eloquence_points or 0
-        }
+        },
+        "chess_elo": current_user.chess_elo if current_user.chess_elo is not None else 1200,
+        "chess_tactical_elo": current_user.chess_tactical_elo if current_user.chess_tactical_elo is not None else 800
     }
 
 @router.put("/me", response_model=UserProfileResponse)

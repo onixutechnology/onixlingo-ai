@@ -5,7 +5,7 @@ from app.services.gemini_service import GeminiService
 from app.services.gcp_tts_service import GcpTtsService
 
 # 🔥 Importamos el Candado VIP
-from app.api.deps import get_current_pro_user
+from app.api.deps import get_current_executive_user
 
 # Instanciamos el Router y el Servicio
 router = APIRouter()
@@ -35,8 +35,8 @@ class ChatResponse(BaseModel):
 @router.post("/chat", response_model=ChatResponse, summary="Interactuar con el Tutor IA")
 async def chat_endpoint(
     request: ChatRequest,
-    # 🔥 SEGURIDAD VIP: Si el usuario es Free, la petición rebota con un Error 403 aquí mismo
-    current_user = Depends(get_current_pro_user) 
+    # 🔥 SEGURIDAD VIP: Si el usuario es Free o Pro, la petición rebota con un Error 403 aquí mismo
+    current_user = Depends(get_current_executive_user) 
 ):
     """
     Endpoint principal para el chat con IA.

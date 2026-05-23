@@ -21,7 +21,10 @@ commands = [
     "ALTER TABLE users ADD COLUMN IF NOT EXISTS full_name VARCHAR",
     "ALTER TABLE users ADD COLUMN IF NOT EXISTS phone VARCHAR",
     "ALTER TABLE users ADD COLUMN IF NOT EXISTS country_code VARCHAR DEFAULT 'MX'",
-    "ALTER TABLE users ADD COLUMN IF NOT EXISTS avatar_url VARCHAR"
+    "ALTER TABLE users ADD COLUMN IF NOT EXISTS avatar_url VARCHAR",
+    "ALTER TABLE users ADD COLUMN IF NOT EXISTS chess_elo INTEGER DEFAULT 1200",
+    "ALTER TABLE users ADD COLUMN IF NOT EXISTS chess_tactical_elo INTEGER DEFAULT 800",
+    "ALTER TABLE users ADD COLUMN IF NOT EXISTS beta_code VARCHAR"
 ]
 
 with engine.connect() as conn:

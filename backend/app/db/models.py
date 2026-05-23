@@ -20,6 +20,9 @@ class User(Base):
     is_active = Column(Boolean, default=True)
     role = Column(String, default="student")
     
+    # 🔥 Sistema de Verificación Beta
+    beta_code = Column(String, nullable=True) 
+    
     # 🔥 Sistema de Suscripciones (Ahora con Paddle)
     is_pro = Column(Boolean, default=False) 
     tier = Column(String, default="free") 
@@ -40,6 +43,8 @@ class User(Base):
     streak_days = Column(Integer, default=0)
     eloquence_points = Column(Integer, default=0)
     country_code = Column(String, default="MX") # 🔥 NUEVO: Filtro por países
+    chess_elo = Column(Integer, default=1200, nullable=False)
+    chess_tactical_elo = Column(Integer, default=800, nullable=False)
     last_activity_at = Column(DateTime(timezone=True), nullable=True)
 
     # Relaciones
@@ -156,4 +161,23 @@ class PromoCoupon(Base):
     is_used = Column(Boolean, default=False)
     used_by_id = Column(Integer, ForeignKey("users.id"), nullable=True)
     used_at = Column(DateTime(timezone=True), nullable=True)
+
+
+class BetaCode(Base):
+    __tablename__ = "beta_codes"
+
+    id = Column(Integer, primary_key=True, index=True)
+    code = Column(String, unique=True, index=True, nullable=False)
+    is_used = Column(Boolean, default=False)
+    used_by_email = Column(String, nullable=True)
+    used_at = Column(DateTime(timezone=True), nullable=True)
+
+
+class SpeechPracticeLog(Base):
+    __tablename__ = "speech_practice_logs"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
 

@@ -12,7 +12,7 @@ from sqlalchemy import or_ # 🚀 IMPORTANTE: Para permitir búsqueda múltiple
 from pydantic import BaseModel, EmailStr
 
 from app.database import get_db
-from app.db.models import User 
+from app.db.models import User, BetaCode
 from app.config import settings 
 from app.core.security import verify_password, get_password_hash, create_access_token
 
@@ -41,9 +41,9 @@ def generate_referral_code(username: str) -> str:
 
 class UserCreate(BaseModel):
     username: str
-    email: Optional[EmailStr] = None 
+    email: EmailStr # Correo institucional obligatorio
     password: str
-    invited_by_code: Optional[str] = None # 🔥 NUEVO: Código de quien lo invitó
+    invited_by_code: str # Código de acceso único obligatorio
 
 class UserLogin(BaseModel):
     username: str # El frontend manda "username", pero ahora puede contener un correo
@@ -62,7 +62,27 @@ class ResetPasswordRequest(BaseModel):
 
 @router.post("/register", status_code=status.HTTP_201_CREATED)
 def register(user: UserCreate, db: Session = Depends(get_db)):
-    # 1. Verificar si existe el usuario o el correo
+    # 1. Verificar si el código de acceso único existe y está disponible
+    if not user.invited_by_code:
+        raise HTTPException(
+            status_code=400, 
+            detail="El código de acceso único es obligatorio para registrarse."
+        )
+    
+    beta_code_record = db.query(BetaCode).filter(BetaCode.code == user.invited_by_code).first()
+    if not beta_code_record:
+        raise HTTPException(
+            status_code=400,
+            detail="El código de acceso ingresado no es válido."
+        )
+    
+    if beta_code_record.is_used:
+        raise HTTPException(
+            status_code=400,
+            detail="El código de acceso ingresado ya ha sido utilizado."
+        )
+
+    # 2. Verificar si existe el usuario o el correo
     existing_user = db.query(User).filter(
         or_(
             User.username == user.username,
@@ -76,41 +96,36 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
         if existing_user.email == user.email:
             raise HTTPException(status_code=400, detail="El correo electrónico ya está registrado.")
 
-    # 2. Hashear password y generar código de referido propio
+    # 3. Hashear password y generar código de referido propio
     hashed_password = get_password_hash(user.password)
     new_referral_code = generate_referral_code(user.username)
     
-    # 3. Preparar el nuevo usuario
+    # 4. Preparar el nuevo usuario con acceso Titanium por 1 año
+    now = datetime.utcnow()
     db_user = User(
         username=user.username, 
         email=user.email, 
         hashed_password=hashed_password,
         referral_code=new_referral_code,
-        tier="free",
-        is_pro=False
+        beta_code=user.invited_by_code,
+        tier="pro",
+        is_pro=True,
+        valid_until=now + timedelta(days=365)
     )
 
-    # 🔥 4. LÓGICA DE RECOMPENSAS (Si fue invitado por alguien)
-    if user.invited_by_code:
-        referrer = db.query(User).filter(User.referral_code == user.invited_by_code).first()
-        if referrer:
-            now = datetime.utcnow()
-            
-            # Premiar al que invitó (+30 días)
-            ref_valid = referrer.valid_until if referrer.valid_until and referrer.valid_until > now else now
-            referrer.valid_until = ref_valid + timedelta(days=30)
-            
-            # Premiar al nuevo usuario (Entra como Titanium 30 días)
-            db_user.valid_until = now + timedelta(days=30)
-            db_user.tier = "titanium"
-            db_user.is_pro = True
-            logger.info(f"🎁 Referido aplicado: {referrer.username} y {db_user.username} ganan 30 días.")
-
-    # 5. Guardar en base de datos
+    # 5. Guardar en base de datos y marcar el código como usado
     try:
         db.add(db_user)
+        # Marcar el código de acceso como utilizado
+        beta_code_record.is_used = True
+        beta_code_record.used_by_email = user.email
+        beta_code_record.used_at = now
+        
         db.commit()
         db.refresh(db_user)
+        
+        logger.info(f"🎉 Registro exitoso: Usuario '{db_user.username}' registrado con código de acceso '{user.invited_by_code}'.")
+        
         return {
             "message": "Cuenta creada exitosamente", 
             "user_id": db_user.id,
@@ -118,7 +133,7 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
         }
     except Exception as e:
         db.rollback()
-        logger.error(f"DB Error: {e}")
+        logger.error(f"DB Error durante registro: {e}")
         raise HTTPException(status_code=500, detail="Error interno del servidor")
 
 @router.post("/login")
@@ -134,6 +149,20 @@ def login(user: UserLogin, response: Response, db: Session = Depends(get_db)):
     # 2. Verificar password
     if not db_user or not verify_password(user.password, db_user.hashed_password):
         raise HTTPException(status_code=401, detail="Credenciales inválidas")
+    
+    # 2b. Verificar código de acceso/autorización (beta_code)
+    if not db_user.beta_code:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Este correo institucional no está autorizado para iniciar sesión (no posee un código de acceso válido)."
+        )
+    
+    beta_code_record = db.query(BetaCode).filter(BetaCode.code == db_user.beta_code).first()
+    if not beta_code_record:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="El código de acceso asociado a su cuenta es inválido."
+        )
     
     # 3. Generar Token JWT
     access_token = create_access_token(subject=db_user.username)

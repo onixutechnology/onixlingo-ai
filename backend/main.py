@@ -80,9 +80,24 @@ async def paddle_webhook(
             # Forzamos la conversión a int() tal como lo exige el modelo User
             user_id = int(custom_data.get("internal_user_id"))
             
-            updated_user = user_service.set_pro_status(db, user_id=user_id, is_pro=True)
+            tier = custom_data.get("tier")
+            if not tier:
+                items = data.get("items", [])
+                price_id = ""
+                product_id = ""
+                if items:
+                    price_obj = items[0].get("price", {})
+                    price_id = price_obj.get("id", "").lower()
+                    product_id = price_obj.get("product_id", "").lower()
+                
+                if "exec" in price_id or "exec" in product_id or "titanium" in price_id or "titanium" in product_id:
+                    tier = "executive"
+                else:
+                    tier = "pro"
+            
+            updated_user = user_service.set_pro_status(db, user_id=user_id, is_pro=True, tier=tier)
             if updated_user:
-                logger.info(f"✅ [UPGRADE] Usuario ID {user_id} actualizado a PRO exitosamente vía Paddle.")
+                logger.info(f"✅ [UPGRADE] Usuario ID {user_id} actualizado a {tier.upper()} exitosamente vía Paddle.")
             else:
                 logger.warning(f"⚠️ [WARNING] Usuario ID {user_id} pagó pero no se encontró en DB.")
                 

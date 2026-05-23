@@ -60,14 +60,31 @@ def get_lesson_content(
     current_user = Depends(get_current_active_user)
 ):
     # 🚨 LÓGICA DE SEGURIDAD VIP 🚨
-    # Si la lección es de OnixPro, verificamos que el usuario pague la suscripción.
-    if lesson_id.startswith("pro-"):
-        if not current_user.is_pro and current_user.tier not in ['pro', 'titanium']:
-            logger.warning(f"🔒 Intento de acceso bloqueado a la lección {lesson_id} por el usuario {current_user.username}")
-            raise HTTPException(
-                status_code=status.HTTP_403_FORBIDDEN,
-                detail="Esta lección premium requiere una suscripción OnixPro activa."
-            )
+    user_tier = current_user.tier or "free"
+    is_admin = getattr(current_user, "role", "student") == "admin"
+
+    if not is_admin:
+        if user_tier == "free":
+            if not lesson_id.startswith("a-"):
+                logger.warning(f"🔒 Acceso denegado a lección {lesson_id} para usuario Free: {current_user.username}")
+                raise HTTPException(
+                    status_code=status.HTTP_403_FORBIDDEN,
+                    detail="El plan Free solo incluye acceso a lecciones del nivel A1. Sube a PRO o EXECUTIVE para desbloquear todos los niveles."
+                )
+        elif user_tier == "pro":
+            if lesson_id.startswith("pro-"):
+                logger.warning(f"🔒 Acceso denegado a lección Executive {lesson_id} para usuario Pro: {current_user.username}")
+                raise HTTPException(
+                    status_code=status.HTTP_403_FORBIDDEN,
+                    detail="Las lecciones de Modo Executive requieren el plan EXECUTIVE. Actualiza tu suscripción para acceder."
+                )
+        elif user_tier not in ["executive", "titanium"]:
+            if lesson_id.startswith("pro-") and not current_user.is_pro:
+                logger.warning(f"🔒 Intento de acceso bloqueado a la lección {lesson_id} por el usuario {current_user.username}")
+                raise HTTPException(
+                    status_code=status.HTTP_403_FORBIDDEN,
+                    detail="Esta lección premium requiere una suscripción OnixPro o Executive activa."
+                )
 
     filename = f"{lesson_id}.json"
     

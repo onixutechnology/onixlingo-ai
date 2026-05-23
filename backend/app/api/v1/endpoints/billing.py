@@ -99,7 +99,7 @@ def redeem_coupon(
     user_valid_until = current_user.valid_until if current_user.valid_until and current_user.valid_until > now else now
     current_user.valid_until = user_valid_until + timedelta(days=30)
     current_user.is_pro = True
-    current_user.tier = "titanium"
+    current_user.tier = "pro"
     
     db.commit()
     
@@ -132,7 +132,7 @@ def apply_referral_code(
     user_valid_until = current_user.valid_until if current_user.valid_until and current_user.valid_until > now else now
     current_user.valid_until = user_valid_until + timedelta(days=30)
     current_user.is_pro = True
-    current_user.tier = "titanium" 
+    current_user.tier = "pro" 
     
     # Actualizar Referidor
     referrer_valid_until = referrer.valid_until if referrer.valid_until and referrer.valid_until > now else now
@@ -143,21 +143,25 @@ def apply_referral_code(
     return {"message": "¡Código aplicado! Se han añadido 30 días Premium a tu cuenta."}
 
 
+class DevUpgradeRequest(BaseModel):
+    tier: str = "pro"
+
 @router.post("/dev-activate-pro")
 def dev_activate_pro(
+    payload: DevUpgradeRequest,
     current_user: User = Depends(get_current_active_user),
     db: Session = Depends(get_db)
 ):
     """
-    Entorno Local de Desarrollo: Activa instantáneamente el plan Titanium Pro
+    Entorno Local de Desarrollo: Activa instantáneamente el plan solicitado (pro o executive)
     para pruebas sin necesidad de pasarela configurada.
     """
     now = datetime.utcnow()
     current_user.is_pro = True
-    current_user.tier = "titanium"
+    current_user.tier = payload.tier.lower()
     current_user.valid_until = now + timedelta(days=30)
     db.commit()
-    return {"message": "¡Modo Desarrollo: Plan Titanium Pro activado exitosamente!"}
+    return {"message": f"¡Modo Desarrollo: Plan {payload.tier.upper()} activado exitosamente!"}
 
 
 @router.post("/create-portal-session")
@@ -233,7 +237,34 @@ async def paddle_webhook(request: Request, db: Session = Depends(get_db)):
         # 3. Estados de suscripción
         if event_type in ["subscription.created", "subscription.activated", "subscription.updated", "transaction.completed"]:
             user.is_pro = True
-            user.tier = "titanium"
+            
+            # Determinar el tier dinámicamente
+            price_id = ""
+            product_id = ""
+            
+            # 1. Intentar leer desde custom_data
+            custom_data = getattr(data, "custom_data", {})
+            tier = custom_data.get("tier") if custom_data else None
+            
+            # 2. Intentar leer desde los items del evento
+            if not tier:
+                items = getattr(data, "items", [])
+                if items:
+                    try:
+                        price_id = items[0].price.id.lower()
+                    except Exception:
+                        pass
+                
+                # Intentar leer price_id directo
+                if not price_id:
+                    price_id = getattr(data, "price_id", "").lower() if hasattr(data, "price_id") else ""
+                    
+                if "exec" in price_id or "titanium" in price_id:
+                    tier = "executive"
+                else:
+                    tier = "pro"
+                    
+            user.tier = tier
             user.paddle_customer_id = getattr(data, "customer_id", user.paddle_customer_id)
             user.paddle_subscription_id = getattr(data, "id", user.paddle_subscription_id)
             

@@ -41,6 +41,7 @@ def create_db():
     Genera las tablas si no existen leyendo desde base.py
     """
     from app.db.base import Base # 🔥 Llama a todas tus 150 tablas automáticamente
+    from app.db.models import User, Progress, UserAchievement, ChessLesson, ChessProgress, ChessMatch, ChessMove, PromoCoupon, BetaCode, SpeechPracticeLog
     logger.info("🛠️ Construyendo el esquema de la base de datos...")
     Base.metadata.create_all(bind=engine)
     logger.info("✅ ¡Tablas construidas/verificadas con éxito!")
