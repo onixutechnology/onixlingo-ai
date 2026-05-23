@@ -140,8 +140,9 @@ export default function ProfessionalDashboard() {
           apiClient.get('/progress/stats')
         ]);
 
-        const isPro = userRes.data.is_pro || userRes.data.tier === 'titanium';
-        setIsUserPremium(isPro);
+        const tier = (userRes.data.membership?.tier || userRes.data.tier || 'free').toLowerCase();
+        const isExecutive = tier === 'executive' || tier === 'titanium';
+        setIsUserPremium(isExecutive);
         setProProgress(mapRes.data.pro || []);
         
         const statsData = statsRes.data;

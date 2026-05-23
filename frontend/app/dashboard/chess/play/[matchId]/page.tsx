@@ -21,8 +21,8 @@ export default function PlayMatchPage({ params }: { params: { matchId: string } 
   if (!localPlayer || !opponent) {
     // Renderizado seguro durante hidratación o antes del redirect
     return (
-      <div className="min-h-screen bg-[#060a10] flex items-center justify-center">
-        <div className="w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+      <div className="min-h-screen wood-theme-bg flex items-center justify-center rounded-none">
+        <div className="w-8 h-8 border-4 border-amber-500 border-t-transparent rounded-none animate-spin"></div>
       </div>
     );
   }
@@ -32,43 +32,42 @@ export default function PlayMatchPage({ params }: { params: { matchId: string } 
   const opponentIsWhite = opponent.color === 'white';
 
   return (
-    <div className="min-h-screen bg-[#060a10] flex flex-col items-center justify-center p-4 sm:p-8">
+    <div className="min-h-screen wood-theme-bg flex flex-col items-center justify-center p-4 sm:p-8 rounded-none">
       {/* Decoración de fondo */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600/10 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-violet-600/10 blur-[120px] rounded-full"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-amber-950/10 blur-[120px] rounded-none"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-amber-955/10 blur-[120px] rounded-none"></div>
       </div>
 
       {/* Container principal Titanium Enterprise */}
-      <div className="w-full max-w-[600px] relative z-10 bg-[#0f172a]/70 backdrop-blur-xl border border-white/10 rounded-[2rem] p-4 sm:p-6 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+      <div className="w-full max-w-[600px] relative z-10 wood-panel p-4 sm:p-6 shadow-[0_0_50px_rgba(0,0,0,0.7)] text-[#ecd3b5] rounded-none">
 
         {/* HUD: Oponente (Arriba) */}
-        <div className="flex items-center justify-between bg-slate-900/60 p-3 sm:p-4 rounded-2xl border border-white/5 mb-4 sm:mb-6 shadow-inner">
+        <div className="flex items-center justify-between wood-panel-light p-3 sm:p-4 rounded-none mb-4 sm:mb-6 shadow-inner">
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl border border-white/10 flex items-center justify-center shadow-lg relative overflow-hidden">
-              <div className="absolute inset-0 bg-white/5"></div>
-              <User className="text-slate-400 relative z-10" size={20} />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#25140b] rounded-none border border-[#3c1e0a] flex items-center justify-center shadow-lg relative overflow-hidden">
+              <User className="text-[#ecd3b5]/60 relative z-10" size={20} />
             </div>
             <div>
               <h3 className="text-white font-bold text-base sm:text-lg flex items-center gap-2">
                 {opponent.username}
-                <span className={`hidden sm:inline-block px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider border ${opponentIsWhite ? 'bg-white/10 text-white border-white/20' : 'bg-black/30 text-slate-400 border-black/50'}`}>
+                <span className={`hidden sm:inline-block px-2 py-0.5 rounded-none text-[9px] font-black uppercase tracking-wider border ${opponentIsWhite ? 'bg-amber-950/60 text-amber-300 border-amber-800/40' : 'bg-[#130a04] text-[#ecd3b5]/60 border-[#3c1e0a]'}`}>
                   {opponentIsWhite ? 'Blancas' : 'Negras'}
                 </span>
               </h3>
               <div className="flex items-center gap-1.5 text-slate-400 text-xs sm:text-sm font-medium">
-                <Shield size={14} className="text-indigo-400" />
-                <span>ELO: {opponent.elo}</span>
+                <Shield size={14} className="text-amber-400" />
+                <span className="text-[#ecd3b5]/70">ELO: {opponent.elo}</span>
               </div>
             </div>
           </div>
-          <div className="hidden sm:flex px-3 py-1.5 bg-slate-800/50 rounded-lg border border-white/5">
-            <span className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Oponente</span>
+          <div className="hidden sm:flex px-3 py-1.5 bg-[#25140b] rounded-none border border-[#3c1e0a]">
+            <span className="text-[#ecd3b5]/60 text-[10px] font-bold uppercase tracking-widest">Oponente</span>
           </div>
         </div>
 
         {/* Tablero en el centro */}
-        <div className="mb-4 sm:mb-6 w-full max-w-[500px] mx-auto">
+        <div className="mb-4 sm:mb-6 w-full max-w-[500px] mx-auto rounded-none">
           <LiveChessboard
             matchId={matchId}
             token={localPlayer.userId}
@@ -77,31 +76,31 @@ export default function PlayMatchPage({ params }: { params: { matchId: string } 
         </div>
 
         {/* HUD: Jugador Local (Abajo) */}
-        <div className="flex items-center justify-between bg-slate-900/60 p-3 sm:p-4 rounded-2xl border border-indigo-500/20 shadow-[0_0_20px_rgba(99,102,241,0.1)] relative overflow-hidden">
-          <div className="absolute inset-0 bg-indigo-500/5"></div>
+        <div className="flex items-center justify-between wood-panel-light p-3 sm:p-4 rounded-none shadow-[0_0_20px_rgba(0,0,0,0.5)] relative overflow-hidden">
           <div className="flex items-center gap-3 sm:gap-4 relative z-10">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-indigo-600 to-violet-600 rounded-xl border border-white/10 flex items-center justify-center shadow-lg shadow-indigo-500/30">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#25140b] rounded-none border border-[#3c1e0a] flex items-center justify-center shadow-lg">
               <User className="text-white" size={20} />
             </div>
             <div>
               <h3 className="text-white font-bold text-base sm:text-lg flex items-center gap-2">
                 {localPlayer.username}
-                <span className={`hidden sm:inline-block px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-wider border ${localIsWhite ? 'bg-white/10 text-white border-white/20' : 'bg-black/30 text-slate-400 border-black/50'}`}>
+                <span className={`hidden sm:inline-block px-2 py-0.5 rounded-none text-[9px] font-black uppercase tracking-wider border ${localIsWhite ? 'bg-amber-950/60 text-amber-300 border-amber-800/40' : 'bg-[#130a04] text-[#ecd3b5]/60 border-[#3c1e0a]'}`}>
                   {localIsWhite ? 'Blancas' : 'Negras'}
                 </span>
               </h3>
-              <div className="flex items-center gap-1.5 text-slate-300 text-xs sm:text-sm font-medium">
+              <div className="flex items-center gap-1.5 text-slate-350 text-xs sm:text-sm font-medium">
                 <Zap size={14} className="text-amber-400" />
-                <span>ELO: {localPlayer.elo}</span>
+                <span className="text-amber-300">ELO: {localPlayer.elo}</span>
               </div>
             </div>
           </div>
-          <div className="hidden sm:flex px-3 py-1.5 bg-indigo-500/10 rounded-lg border border-indigo-500/20 relative z-10">
-            <span className="text-indigo-400 text-[10px] font-bold uppercase tracking-widest">Tú</span>
+          <div className="hidden sm:flex px-3 py-1.5 bg-[#25140b] rounded-none border border-[#3c1e0a] relative z-10">
+            <span className="text-amber-400 text-[10px] font-bold uppercase tracking-widest">Tú</span>
           </div>
         </div>
 
       </div>
     </div>
+
   );
 }

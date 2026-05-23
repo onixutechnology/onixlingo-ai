@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { usePvPStore } from "@/store/usePvPStore";
 import { useAuthStore } from "@/store/useAuthStore";
+import apiClient from "@/lib/apiClient";
 import {
     joinMatchmakingQueue,
     leaveMatchmakingQueue,
@@ -114,20 +115,20 @@ function PresetCard({
     return (
         <button
             onClick={onSelect}
-            className={`group relative flex flex-col items-center gap-2 rounded-2xl border p-5 text-center transition-all duration-200
+            className={`group relative flex flex-col items-center gap-2 rounded-none border-2 p-5 text-center transition-all duration-200
         ${selected
-                    ? `${preset.borderColor} bg-gradient-to-br ${preset.accentFrom}/20 ${preset.accentTo}/10 shadow-lg ${preset.glow}`
-                    : "border-white/8 bg-slate-800/50 hover:border-white/20 hover:bg-slate-800/80"
+                    ? "border-amber-500 bg-[#462614] text-[#ecd3b5] shadow-lg shadow-amber-950/50"
+                    : "border-[#502b16] bg-[#361d0f] text-[#ecd3b5]/80 hover:border-[#62351b] hover:bg-[#462614]"
                 }`}
         >
             {selected && (
-                <span className="absolute right-3 top-3 flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-[10px] text-white">✓</span>
+                <span className="absolute right-3 top-3 flex h-5 w-5 items-center justify-center rounded-none bg-amber-500/20 text-[10px] text-amber-300 border border-amber-500/40">✓</span>
             )}
             <span className="text-3xl">{preset.icon}</span>
-            <span className={`text-2xl font-bold tracking-tight ${selected ? "text-white" : "text-slate-200"}`}>
+            <span className={`text-2xl font-bold tracking-tight ${selected ? "text-white" : "text-[#ecd3b5]"}`}>
                 {preset.label}
             </span>
-            <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${selected ? "bg-white/20 text-white" : "bg-slate-700 text-slate-400"}`}>
+            <span className={`rounded-none px-2.5 py-0.5 text-xs font-semibold ${selected ? "bg-amber-950/60 text-amber-300 border border-amber-800/40" : "bg-[#25140b] text-[#ecd3b5]/60 border border-[#3c1e0a]"}`}>
                 {preset.sub}
             </span>
         </button>
@@ -141,17 +142,17 @@ function RadarAnimation() {
             {[0, 1, 2].map((i) => (
                 <span
                     key={i}
-                    className="absolute inset-0 rounded-full border border-indigo-500/40 animate-ping"
+                    className="absolute inset-0 rounded-none border border-amber-600/40 animate-ping"
                     style={{ animationDelay: `${i * 0.5}s`, animationDuration: "2s" }}
                 />
             ))}
             {/* Static outer ring */}
-            <span className="absolute inset-0 rounded-full border border-indigo-500/20" />
+            <span className="absolute inset-0 rounded-none border border-amber-800/20" />
             {/* Sweep */}
-            <span className="absolute inset-4 rounded-full border border-indigo-400/30 animate-spin" style={{ animationDuration: "3s" }} />
+            <span className="absolute inset-4 rounded-none border border-amber-500/30 animate-spin" style={{ animationDuration: "3s" }} />
             {/* Core */}
-            <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-indigo-600 to-violet-700 shadow-2xl shadow-indigo-500/40">
-                <span className="text-3xl">♟</span>
+            <div className="relative flex h-20 w-20 items-center justify-center rounded-none bg-gradient-to-br from-[#462614] to-[#25140b] border-2 border-[#62351b] shadow-2xl shadow-amber-950/50">
+                <span className="text-3xl text-amber-400">♟</span>
             </div>
         </div>
     );
@@ -161,7 +162,7 @@ function RadarAnimation() {
 
 export default function ChessArenaPage() {
     const router = useRouter();
-    const { user } = useAuthStore();
+    const { user, updateUser } = useAuthStore();
     const [selectedPreset, setSelectedPreset] = useState<TimePreset>(PRESETS[3]); // 3+2 default
     const [isJoining, setIsJoining] = useState(false);
     const localElo = user?.chess_elo ?? 1200; 
@@ -170,6 +171,21 @@ export default function ChessArenaPage() {
     const isQueuing = matchStatus === "queuing";
     const isMatched = matchStatus === "matched";
     const elapsed = useElapsedTimer(isQueuing);
+
+    useEffect(() => {
+        const fetchUserData = async () => {
+            try {
+                const userRes = await apiClient.get('/users/me');
+                updateUser({
+                    chess_elo: userRes.data.chess_elo,
+                    chess_tactical_elo: userRes.data.chess_tactical_elo,
+                });
+            } catch (e) {
+                console.error("⚠️ Error syncing user ELO in arena:", e);
+            }
+        };
+        fetchUserData();
+    }, [updateUser]);
 
     // ── Redirect when a match is confirmed ──────────────
     useEffect(() => {
@@ -216,38 +232,54 @@ export default function ChessArenaPage() {
     // ─────────────────────────────────────────────────────
 
     return (
-        <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#060a10] text-white">
+        <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden wood-theme-bg text-[#ecd3b5] rounded-none">
+            <style>{`
+                .wood-theme-bg {
+                    background-color: #130a04;
+                    background-image: 
+                        repeating-linear-gradient(90deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 160px, rgba(0,0,0,0.3) 160px, rgba(0,0,0,0.3) 162px),
+                        repeating-linear-gradient(0deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 90px, rgba(0,0,0,0.25) 90px, rgba(0,0,0,0.25) 92px),
+                        linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+                }
+                .wood-panel {
+                    background: #25140b;
+                    border: 3px solid #3c1e0a;
+                    box-shadow: inset 0 2px 5px rgba(255,255,255,0.03), inset 0 -4px 10px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.6);
+                }
+                .wood-panel-light {
+                    background: #361d0f;
+                    border: 2px solid #502b16;
+                    box-shadow: inset 0 1px 3px rgba(255,255,255,0.03), inset 0 -2px 5px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.4);
+                }
+            `}</style>
 
             {/* Ambient glow */}
             <div className="pointer-events-none fixed inset-0">
-                <div className="absolute left-1/2 top-1/4 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-700/10 blur-3xl" />
-                <div className="absolute left-1/4 bottom-0 h-80 w-80 rounded-full bg-violet-700/8 blur-3xl" />
+                <div className="absolute left-1/2 top-1/4 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-none bg-amber-950/10 blur-3xl" />
+                <div className="absolute left-1/4 bottom-0 h-80 w-80 rounded-none bg-amber-950/5 blur-3xl" />
             </div>
 
             {/* ══════════ MATCHED OVERLAY ══════════ */}
             {isMatched && opponent && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md">
-                    <div className="relative flex flex-col items-center gap-6 rounded-3xl border border-white/10 bg-slate-900/90 p-10 shadow-2xl">
-                        {/* Glow ring */}
-                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-600/20 to-violet-600/10" />
-
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md">
+                    <div className="relative flex flex-col items-center gap-6 wood-panel p-10 shadow-2xl rounded-none w-full max-w-md">
                         <div className="relative flex flex-col items-center gap-3 text-center">
                             <span className="text-5xl animate-bounce">♟</span>
                             <h2 className="text-3xl font-black tracking-tight text-white">
-                                Opponent Found!
+                                ¡Oponente Encontrado!
                             </h2>
-                            <p className="text-slate-400">Prepare to play…</p>
+                            <p className="text-amber-200/80">Prepárate para jugar...</p>
                         </div>
 
                         {/* Opponent card */}
-                        <div className="relative flex items-center gap-4 rounded-2xl border border-white/10 bg-slate-800/60 px-6 py-4">
-                            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-rose-500 to-pink-600 text-2xl font-bold shadow-lg">
+                        <div className="relative flex items-center gap-4 rounded-none border border-[#502b16] bg-[#361d0f] px-6 py-4 w-full">
+                            <div className="flex h-14 w-14 items-center justify-center rounded-none bg-[#ecd3b5] text-[#1e130c] text-2xl font-bold shadow-lg border border-[#fbf8f0]">
                                 {opponent.username.charAt(0).toUpperCase()}
                             </div>
                             <div>
                                 <p className="text-xl font-bold text-white">{opponent.username}</p>
-                                <p className="text-sm text-slate-400">
-                                    ELO <span className="font-semibold text-amber-300">{opponent.elo}</span>
+                                <p className="text-sm text-slate-300">
+                                    ELO <span className="font-semibold text-amber-400">{opponent.elo}</span>
                                     {" · "}
                                     {CATEGORY_LABELS[selectedPreset.category]}
                                 </p>
@@ -255,13 +287,13 @@ export default function ChessArenaPage() {
                         </div>
 
                         {/* Progress bar countdown */}
-                        <div className="w-full overflow-hidden rounded-full bg-slate-700 h-1.5">
+                        <div className="w-full overflow-hidden rounded-none bg-[#130a04] border border-[#3c1e0a] h-2">
                             <div
-                                className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 animate-[grow_2.2s_linear_forwards]"
+                                className="h-full bg-gradient-to-r from-amber-600 to-amber-400 animate-[grow_2.2s_linear_forwards]"
                                 style={{ width: "0%" }}
                             />
                         </div>
-                        <p className="text-xs text-slate-500">Launching game board…</p>
+                        <p className="text-xs text-amber-200/50">Iniciando tablero de juego...</p>
                     </div>
                 </div>
             )}
@@ -273,20 +305,20 @@ export default function ChessArenaPage() {
 
                     <div className="space-y-2">
                         <h1 className="text-3xl font-black tracking-tight text-white">
-                            Searching for Opponent
+                            Buscando Oponente
                         </h1>
-                        <p className="text-slate-400">
+                        <p className="text-slate-300">
                             {CATEGORY_LABELS[selectedPreset.category]}
                             {" · "}
                             {selectedPreset.label}
                             {" · "}
-                            ELO ±150 of {localElo}
+                            ELO ±150 de {localElo}
                         </p>
                     </div>
 
                     {/* Elapsed timer */}
-                    <div className="flex items-center gap-2 rounded-full border border-white/10 bg-slate-800/60 px-5 py-2.5">
-                        <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+                    <div className="flex items-center gap-2 rounded-none border border-[#502b16] bg-[#361d0f] px-5 py-2.5">
+                        <span className="h-2 w-2 animate-pulse rounded-none bg-emerald-400" />
                         <span className="font-mono text-xl font-bold tabular-nums text-white">
                             {formatElapsed(elapsed)}
                         </span>
@@ -297,7 +329,7 @@ export default function ChessArenaPage() {
                         {[0, 1, 2].map((i) => (
                             <span
                                 key={i}
-                                className="h-2 w-2 rounded-full bg-indigo-400 animate-bounce"
+                                className="h-2 w-2 rounded-none bg-amber-500 animate-bounce"
                                 style={{ animationDelay: `${i * 0.15}s` }}
                             />
                         ))}
@@ -305,9 +337,9 @@ export default function ChessArenaPage() {
 
                     <button
                         onClick={handleCancel}
-                        className="mt-2 rounded-xl border border-red-500/30 bg-red-900/20 px-8 py-3 text-sm font-semibold text-red-300 transition-all hover:bg-red-900/40 hover:text-white"
+                        className="mt-2 rounded-none border border-red-800/40 bg-red-950/60 px-8 py-3 text-sm font-semibold text-red-300 transition-all hover:bg-red-900/50 hover:text-white"
                     >
-                        ✕ Cancel Search
+                        ✕ Cancelar Búsqueda
                     </button>
                 </div>
             )}
@@ -318,21 +350,21 @@ export default function ChessArenaPage() {
 
                     {/* Page header */}
                     <div className="text-center space-y-2">
-                        <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-900/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-indigo-300">
+                        <div className="inline-flex items-center gap-2 rounded-none border border-amber-850 bg-amber-950/40 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400">
                             ♟ Chess Arena
                         </div>
                         <h1 className="text-4xl font-black tracking-tight text-white md:text-5xl">
-                            Find Your Match
+                            Encuentra tu Partida
                         </h1>
-                        <p className="text-slate-400">
-                            Choose your time control and enter the arena.
+                        <p className="text-slate-300">
+                            Elige el control de tiempo y entra a la arena de combate.
                         </p>
                     </div>
 
                     {/* Time control groups */}
                     {categories.map((cat) => (
                         <div key={cat} className="space-y-3">
-                            <p className="text-xs font-bold uppercase tracking-widest text-slate-500">
+                            <p className="text-xs font-bold uppercase tracking-widest text-amber-200/40">
                                 {CATEGORY_LABELS[cat]}
                             </p>
                             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -349,35 +381,31 @@ export default function ChessArenaPage() {
                     ))}
 
                     {/* Selected summary + CTA */}
-                    <div className="rounded-2xl border border-white/10 bg-slate-800/50 p-5">
-                        <div className="flex items-center justify-between">
-                            <div className="space-y-0.5">
-                                <p className="text-xs text-slate-500 uppercase tracking-wider">Selected</p>
+                    <div className="wood-panel p-5 rounded-none">
+                        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+                            <div className="space-y-0.5 text-center sm:text-left">
+                                <p className="text-xs text-amber-200/40 uppercase tracking-wider">Seleccionado</p>
                                 <p className="text-lg font-bold text-white">
                                     {selectedPreset.sub} · {selectedPreset.label}
                                 </p>
-                                <p className="text-sm text-slate-400">
+                                <p className="text-sm text-slate-300">
                                     {selectedPreset.initialSec / 60} min
-                                    {selectedPreset.incrementSec > 0 ? ` + ${selectedPreset.incrementSec}s increment` : ""}
-                                    {" · "}Your ELO: <span className="font-semibold text-amber-300">{localElo}</span>
+                                    {selectedPreset.incrementSec > 0 ? ` + ${selectedPreset.incrementSec}s de incremento` : ""}
+                                    {" · "}Tu ELO: <span className="font-semibold text-amber-400">{localElo}</span>
                                 </p>
                             </div>
 
                             <button
                                 onClick={handlePlay}
                                 disabled={isJoining}
-                                className={`relative flex items-center gap-3 overflow-hidden rounded-2xl px-8 py-4 text-base font-black tracking-wide text-white shadow-xl transition-all duration-200
-                  bg-gradient-to-r ${selectedPreset.accentFrom} ${selectedPreset.accentTo}
-                  hover:scale-105 hover:shadow-2xl disabled:opacity-60 disabled:scale-100`}
+                                className="relative flex items-center gap-3 overflow-hidden rounded-none px-8 py-4 text-base font-black tracking-wide text-[#1e130c] shadow-xl transition-all duration-200 bg-[#ecd3b5] border-2 border-[#fbf8f0] hover:bg-[#fbf8f0] hover:scale-105 disabled:opacity-60 disabled:scale-100 w-full sm:w-auto justify-center"
                             >
                                 {isJoining ? (
-                                    <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                                    <span className="inline-block h-5 w-5 animate-spin rounded-none border-2 border-[#1e130c] border-t-transparent" />
                                 ) : (
                                     <span className="text-xl">{selectedPreset.icon}</span>
                                 )}
-                                {isJoining ? "Entering…" : "Play Now"}
-                                {/* Shimmer */}
-                                <span className="pointer-events-none absolute inset-0 -skew-x-12 translate-x-[-150%] bg-white/10 transition-transform duration-700 group-hover:translate-x-[150%]" />
+                                {isJoining ? "Ingresando..." : "Jugar Ahora"}
                             </button>
                         </div>
                     </div>
@@ -388,10 +416,10 @@ export default function ChessArenaPage() {
                             <button
                                 key={p.id}
                                 onClick={() => setSelectedPreset(p)}
-                                className={`rounded-full border px-3 py-1 text-xs font-semibold transition-all
+                                className={`rounded-none border px-3 py-1 text-xs font-semibold transition-all
                   ${selectedPreset.id === p.id
-                                        ? `${p.borderColor} bg-white/10 text-white`
-                                        : "border-white/10 text-slate-500 hover:border-white/20 hover:text-slate-300"
+                                        ? "border-amber-500 bg-[#462614] text-[#ecd3b5]"
+                                        : "border-[#502b16] bg-[#361d0f] text-amber-200/50 hover:bg-[#462614] hover:text-[#ecd3b5]"
                                     }`}
                             >
                                 {p.icon} {p.label}

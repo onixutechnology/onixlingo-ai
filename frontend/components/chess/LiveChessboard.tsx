@@ -67,6 +67,13 @@ export default function LiveChessboard({
         } else if (data.type === 'resign') {
            setStatus("El oponente se ha rendido. ¡Ganaste!");
            setIsGameOver(true);
+        } else if (data.type === 'game_over') {
+           if (data.result === 'win') {
+              setStatus("El oponente ganó por Jaque Mate.");
+           } else {
+              setStatus("Partida terminada en tablas.");
+           }
+           setIsGameOver(true);
         } else if (data.type === 'draw_offer') {
            setStatus("El oponente ofrece tablas.");
         } else if (data.type === 'player_disconnected') {
@@ -113,6 +120,9 @@ export default function LiveChessboard({
       if (gameCopy.isCheckmate()) {
          setStatus("¡Jaque Mate! Ganaste 🎉");
          setIsGameOver(true);
+      } else if (gameCopy.isDraw()) {
+         setStatus("Partida terminada en tablas.");
+         setIsGameOver(true);
       } else {
          setStatus("Esperando al oponente...");
       }
@@ -127,6 +137,18 @@ export default function LiveChessboard({
           time_white_ms: whiteTime,
           time_black_ms: blackTime
         }));
+
+        if (gameCopy.isCheckmate()) {
+          wsRef.current.send(JSON.stringify({
+            type: "game_over",
+            result: "win"
+          }));
+        } else if (gameCopy.isDraw()) {
+          wsRef.current.send(JSON.stringify({
+            type: "game_over",
+            result: "draw"
+          }));
+        }
       }
     } catch (e) {
       console.warn("Movimiento inválido", e);
@@ -157,23 +179,23 @@ export default function LiveChessboard({
   };
 
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full rounded-none">
       {/* Status Bar: Conexión y Reloj Oponente */}
       <div className="flex justify-between items-center w-full mb-4 px-2">
         <div className="flex items-center gap-2">
-          <span className={`w-2.5 h-2.5 rounded-full ${isConnected ? 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]' : 'bg-red-500'} ${isConnected ? 'animate-pulse' : ''}`} />
+          <span className={`w-2.5 h-2.5 rounded-none ${isConnected ? 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]' : 'bg-red-500'} ${isConnected ? 'animate-pulse' : ''}`} />
           <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider hidden sm:block">Conexión Segura</span>
         </div>
-        <div className="font-mono text-2xl font-black text-white bg-slate-900/80 px-4 py-1 rounded-xl border border-white/10 shadow-inner">
+        <div className="font-mono text-2xl font-black text-amber-400 wood-panel-light px-4 py-1 rounded-none border border-[#502b16] shadow-inner">
           {formatTime(playerColor === 'w' ? blackTime : whiteTime)}
         </div>
       </div>
 
       {/* Tablero */}
-      <div className="w-full aspect-square mb-6">
+      <div className="w-full aspect-square mb-6 rounded-none">
         {!isConnected && !fen ? (
-          <div className="w-full h-full flex flex-col items-center justify-center bg-slate-800/50 rounded-lg border border-slate-700/30 gap-4">
-            <Loader2 className="animate-spin text-indigo-500" size={48} />
+          <div className="w-full h-full flex flex-col items-center justify-center bg-[#130a04] rounded-none border border-[#3c1e0a] gap-4">
+            <Loader2 className="animate-spin text-amber-500" size={48} />
             <p className="text-slate-400 font-medium animate-pulse">Conectando a la sala...</p>
           </div>
         ) : (
@@ -186,13 +208,13 @@ export default function LiveChessboard({
       </div>
 
       {/* Info Local & Controles */}
-      <div className="w-full space-y-4">
+      <div className="w-full space-y-4 rounded-none">
         {/* Status y reloj local */}
-        <div className="flex justify-between items-center bg-slate-800/40 p-3 sm:p-4 rounded-xl border border-white/5 shadow-inner">
-          <div className="text-xs sm:text-sm font-bold text-slate-300 max-w-[60%]">
+        <div className="flex justify-between items-center wood-panel-light p-3 sm:p-4 rounded-none shadow-inner">
+          <div className="text-xs sm:text-sm font-bold text-slate-350 max-w-[60%]">
             {status}
           </div>
-          <div className="font-mono text-2xl font-black text-indigo-400 bg-slate-900 px-4 py-1 rounded-xl border border-indigo-500/20 shadow-[0_0_15px_rgba(99,102,241,0.15)]">
+          <div className="font-mono text-2xl font-black text-amber-300 bg-[#130a04] px-4 py-1 rounded-none border border-[#3c1e0a] shadow-[0_0_15px_rgba(0,0,0,0.3)]">
             {formatTime(playerColor === 'w' ? whiteTime : blackTime)}
           </div>
         </div>
@@ -202,19 +224,20 @@ export default function LiveChessboard({
           <button 
             onClick={handleResign}
             disabled={isGameOver || !isConnected}
-            className="flex-1 py-3 bg-red-500/10 hover:bg-red-500/20 text-red-400 font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98] border border-red-500/20 disabled:opacity-30 disabled:active:scale-100"
+            className="flex-1 py-3 bg-red-950/40 hover:bg-red-900/40 text-red-400 font-bold rounded-none flex items-center justify-center gap-2 transition-all active:scale-[0.98] border border-red-900/30 disabled:opacity-30 disabled:active:scale-100 text-xs sm:text-sm"
           >
             <Flag size={18} /> Rendirse
           </button>
           <button 
             onClick={handleDrawOffer}
             disabled={isGameOver || !isConnected}
-            className="flex-1 py-3 bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98] border border-blue-500/20 disabled:opacity-30 disabled:active:scale-100"
+            className="flex-1 py-3 bg-amber-950/30 hover:bg-amber-900/30 text-amber-400 font-bold rounded-none flex items-center justify-center gap-2 transition-all active:scale-[0.98] border border-amber-800/30 disabled:opacity-30 disabled:active:scale-100 text-xs sm:text-sm"
           >
             <Handshake size={18} /> Tablas
           </button>
         </div>
       </div>
     </div>
+
   );
 }

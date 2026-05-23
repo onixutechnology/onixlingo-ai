@@ -26,7 +26,11 @@ const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
 
 export default function VocabularyPage() {
   const router = useRouter();
-  const { mode, activeLanguage, setLanguage } = useUIStore();
+  const { mode, activeLanguage, setLanguage, userTier, energy, checkAndResetDailyLimits } = useUIStore();
+
+  useEffect(() => {
+    checkAndResetDailyLimits();
+  }, [checkAndResetDailyLimits]);
   
   const [activeCat, setActiveCat] = useState('basics');
   const [searchTerm, setSearchTerm] = useState('');
@@ -120,16 +124,45 @@ export default function VocabularyPage() {
                <span>Idioma: {activeLanguage === 'en' ? 'Inglés' : activeLanguage === 'fr' ? 'Francés' : 'Chino'}</span>
              </button>
 
-             <div className="hidden md:flex items-center gap-4">
-                <div className="flex items-center gap-2 border-r border-slate-100 pr-4">
-                   <Flame size={14} className="text-rose-500" />
-                   <span className="text-xs font-black">{userStats.streak}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                   <Zap size={14} className="text-orange-500" />
-                   <span className="text-xs font-black">{userStats.totalXP.toLocaleString()} XP</span>
-                </div>
-             </div>
+              <div className="hidden md:flex items-center gap-4">
+                 <div className="flex items-center gap-2 border-r border-slate-100 pr-4">
+                    <Flame size={14} className="text-rose-500" />
+                    <span className="text-xs font-black">{userStats.streak}</span>
+                 </div>
+                 <div className="flex items-center gap-2 border-r border-slate-100 pr-4">
+                    <Zap size={14} className="text-orange-500" />
+                    <span className="text-xs font-black">{userStats.totalXP.toLocaleString()} XP</span>
+                 </div>
+                  {/* ⚡ ENERGÍA (Batería Premium) */}
+                  <div className="flex items-center gap-2">
+                    {userTier === 'free' ? (
+                      <div className="flex items-center gap-1">
+                        {/* Cuerpo de la Batería */}
+                        <div className="flex items-center">
+                          <div className="relative w-14 h-5 bg-slate-950 rounded-[4px] border border-slate-700 p-0.5 flex items-center shadow-[inset_0_1.5px_4px_rgba(0,0,0,0.8)] overflow-hidden">
+                            <div 
+                              className={`h-full rounded-[2px] transition-all duration-500 ${
+                                energy > 50 
+                                  ? 'bg-gradient-to-r from-emerald-500 to-teal-400 shadow-[0_0_10px_rgba(16,185,129,0.5)]' 
+                                  : energy > 20 
+                                    ? 'bg-gradient-to-r from-amber-500 to-yellow-400 shadow-[0_0_10px_rgba(245,158,11,0.5)]' 
+                                    : 'bg-gradient-to-r from-rose-600 to-rose-400 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.6)]'
+                              }`}
+                              style={{ width: `${energy}%` }}
+                            />
+                            <span className="absolute inset-0 flex items-center justify-center text-[9px] font-black text-white font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
+                              {energy}%
+                            </span>
+                          </div>
+                          {/* Polo Positivo */}
+                          <div className="w-[3px] h-2.5 bg-slate-700 rounded-r-[2px] -ml-[1px] shadow-sm shrink-0" />
+                        </div>
+                      </div>
+                    ) : (
+                      <span className="text-[9px] font-black uppercase tracking-wider text-emerald-600">Energía Ilimitada</span>
+                    )}
+                  </div>
+              </div>
           </div>
         </div>
       </div>

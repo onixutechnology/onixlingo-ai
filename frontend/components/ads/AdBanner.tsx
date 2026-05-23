@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { ExternalLink, ShoppingBag, BookOpen } from 'lucide-react';
+import { useUIStore } from '@/store/uiStore';
 
 // ⚙️ CONFIGURACIÓN DE TUS ANUNCIOS
 const AD_CONFIG = {
@@ -32,14 +33,16 @@ const AD_CONFIG = {
 
 export const AdBanner = ({ variant = 'horizontal' }: { variant?: 'horizontal' | 'sidebar' }) => {
   const [shouldShow, setShouldShow] = useState(false);
+  const { userTier } = useUIStore();
 
   useEffect(() => {
-    // Si NO es Titanium, mostramos anuncios
-    const tier = localStorage.getItem('onix_tier');
-    if (tier !== 'TITANIUM') {
+    // Mostrar anuncios únicamente a usuarios del plan Free
+    if (userTier === 'free') {
       setShouldShow(true);
+    } else {
+      setShouldShow(false);
     }
-  }, []);
+  }, [userTier]);
 
   if (!shouldShow) return null;
 

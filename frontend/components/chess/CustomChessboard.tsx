@@ -11,8 +11,10 @@ interface CustomChessboardProps {
   hint?: { from?: string; to?: string } | null;
 }
 
+// Usamos símbolos rellenos sólidos (los de tipo 'black') para ambas piezas.
+// Así podemos colorearlas uniformemente como Ivory y Ebony.
 const PIECE_SYMBOLS: Record<string, string> = {
-  wP: '♙', wN: '♘', wB: '♗', wR: '♖', wQ: '♕', wK: '♔',
+  wP: '♟', wN: '♞', wB: '♝', wR: '♜', wQ: '♛', wK: '♚',
   bP: '♟', bN: '♞', bB: '♝', bR: '♜', bQ: '♛', bK: '♚'
 };
 
@@ -72,7 +74,7 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
   };
 
   return (
-    <div className="w-full max-w-[560px] aspect-square grid grid-cols-8 grid-rows-8 rounded-lg overflow-hidden touch-none select-none shadow-inner border border-slate-700/50">
+    <div className="w-full max-w-[560px] aspect-square grid grid-cols-8 grid-rows-8 rounded-none overflow-hidden touch-none select-none shadow-2xl border-8 border-[#3d200c] bg-[#3d200c]">
       {board.map((row, rowIndex) =>
         row.map((piece, colIndex) => {
           const square = `${files[colIndex]}${ranks[rowIndex]}` as Square;
@@ -86,31 +88,50 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
           const isOption = !!optionSquares[square];
           const isCaptureOption = isOption && piece;
 
-          // Colores de fondo dinámicos
-          let bgClass = isLight ? 'bg-[#e2e8f0]' : 'bg-[#475569]';
-          if (isSelected) bgClass = 'bg-[#60a5fa]/50'; // Azul brillante para la pieza seleccionada
-          else if (isLastMove) bgClass = 'bg-[#facc15]/40'; // Amarillo para el último movimiento
+          // Colores de fondo de madera premium
+          // Light Maple: #ecd3b5, Dark Walnut/Rosewood: #8a5229
+          const baseColor = isLight ? '#ecd3b5' : '#8a5229';
+
+          // Color de coordenadas premium
+          const coordColor = isLight ? 'text-amber-950/60' : 'text-amber-100/60';
 
           // Bordes de pista (Verde)
-          let borderClass = '';
-          if (isHint) borderClass = 'shadow-[inset_0_0_0_4px_#34d399]';
+          let borderClass = 'border border-amber-950/15';
+          if (isHint) borderClass += ' shadow-[inset_0_0_0_4px_#34d399]';
 
           return (
             <div
               key={square}
               onClick={() => handleSquareClick(square)}
-              className={`flex items-center justify-center relative cursor-pointer ${bgClass} ${borderClass}`}
+              className={`flex items-center justify-center relative cursor-pointer ${borderClass}`}
+              style={{ backgroundColor: baseColor }}
             >
-              {/* Coordenadas del tablero */}
-              {colIndex === 0 && <span className="absolute top-1 left-1 text-[10px] font-bold opacity-40 text-slate-900 z-0">{ranks[rowIndex]}</span>}
-              {rowIndex === 7 && <span className="absolute bottom-1 right-1 text-[10px] font-bold opacity-40 text-slate-900 z-0">{files[colIndex]}</span>}
+              {/* Capas de selección y último movimiento (Preserva textura inferior de madera) */}
+              {isSelected && (
+                <div className="absolute inset-0 bg-amber-600/30 z-10 pointer-events-none" />
+              )}
+              {isLastMove && (
+                <div className="absolute inset-0 bg-amber-400/30 z-10 pointer-events-none" />
+              )}
 
-              {/* Indicador de movimiento válido (Punto azul o anillo de captura) */}
+              {/* Coordenadas del tablero */}
+              {colIndex === 0 && (
+                <span className={`absolute top-1 left-1 text-[10px] font-extrabold ${coordColor} z-0 select-none`}>
+                  {ranks[rowIndex]}
+                </span>
+              )}
+              {rowIndex === 7 && (
+                <span className={`absolute bottom-1 right-1 text-[10px] font-extrabold ${coordColor} z-0 select-none`}>
+                  {files[colIndex]}
+                </span>
+              )}
+
+              {/* Indicador de movimiento válido (Punto ámbar o anillo de captura) */}
               {isOption && !isCaptureOption && (
-                <div className="absolute w-[30%] h-[30%] bg-blue-500/40 rounded-full z-10 pointer-events-none" />
+                <div className="absolute w-[30%] h-[30%] bg-amber-500/40 rounded-full z-10 pointer-events-none" />
               )}
               {isCaptureOption && (
-                <div className="absolute w-[85%] h-[85%] border-[6px] border-blue-500/40 rounded-full z-10 pointer-events-none" />
+                <div className="absolute w-[85%] h-[85%] border-[6px] border-amber-500/40 rounded-full z-10 pointer-events-none" />
               )}
 
               {/* Renderizado de la pieza */}
@@ -120,8 +141,10 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
                     disabled ? 'opacity-80' : 'hover:scale-110'
                   }`}
                   style={{ 
-                    color: piece.color === 'w' ? 'white' : 'black',
-                    textShadow: piece.color === 'w' ? '0 2px 4px rgba(0,0,0,0.4)' : '0 1px 2px rgba(255,255,255,0.4)'
+                    color: piece.color === 'w' ? '#fbf8f0' : '#1e130c',
+                    textShadow: piece.color === 'w' 
+                      ? '1px 1.5px 3px rgba(0,0,0,0.45), 0px 0px 1px rgba(0,0,0,0.5)' 
+                      : '1px 1.5px 3px rgba(0,0,0,0.75), 0px 0px 1px rgba(255,255,255,0.15)'
                   }}
                 >
                   {PIECE_SYMBOLS[pieceKey]}

@@ -34,6 +34,11 @@ function RegisterForm() {
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formData.invitedByCode || !formData.invitedByCode.trim()) {
+      setErrorMessage('El Código de Acceso Institucional es obligatorio.');
+      setStatus('error');
+      return;
+    }
     if (formData.password !== formData.confirmPassword) {
       setErrorMessage('Discrepancia en contraseñas.');
       setStatus('error');
@@ -51,7 +56,7 @@ function RegisterForm() {
         username: formData.username,
         email: formData.email,
         password: formData.password,
-        invited_by_code: formData.invitedByCode || null
+        invited_by_code: formData.invitedByCode.trim()
       });
       setStatus('success');
       setTimeout(() => router.push('/login'), 2500);
@@ -148,18 +153,22 @@ function RegisterForm() {
         </div>
       </div>
       <div>
-        <label className="block text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1.5 ml-1">Código de Referencia (Opcional)</label>
+        <label className="block text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1.5 ml-1">Código de Acceso Institucional</label>
         <div className="relative">
-          <ShieldPlus className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-300" />
+          <ShieldPlus className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-teal-600" />
           <input
             type="text"
             name="invitedByCode"
+            required
             className="block w-full pl-10 pr-4 py-2.5 border border-slate-200 rounded-none bg-slate-50 text-slate-900 text-[11px] font-bold focus:outline-none focus:border-teal-600 transition-all placeholder-slate-300"
             placeholder="ONX-YYYY-USR-XXXX"
             value={formData.invitedByCode}
             onChange={handleInputChange}
           />
         </div>
+        <p className="mt-1 text-[8px] font-black text-slate-400 uppercase tracking-[0.15em] leading-normal">
+          Requerido para activar tu correo institucional y desbloquear el acceso al sistema.
+        </p>
       </div>
 
       {status === 'error' && (

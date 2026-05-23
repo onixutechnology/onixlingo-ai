@@ -9,7 +9,10 @@ export interface UserProfile {
     company_id?: string;
     role?: string;
     chess_elo: number;
+    chess_tactical_elo?: number;
     avatar_url?: string;
+    tier?: string;
+    is_pro?: boolean;
 }
 
 interface AuthState {
@@ -46,9 +49,16 @@ export const useAuthStore = create<AuthState>()(
                 logout: () => set({ user: null, token: null, isAuthenticated: false }),
                 
                 updateUser: (data) => 
-                    set((state) => ({ 
-                        user: state.user ? { ...state.user, ...data } : null 
-                    })),
+                    set((state) => {
+                        const baseUser = state.user || {
+                            id: "user-1234",
+                            username: "Usuario",
+                            email: "",
+                            chess_elo: 1200,
+                            chess_tactical_elo: 800,
+                        };
+                        return { user: { ...baseUser, ...data } };
+                    }),
             }),
             {
                 name: "titanium-auth",

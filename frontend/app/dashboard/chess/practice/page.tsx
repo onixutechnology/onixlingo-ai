@@ -7,6 +7,7 @@ import Cookies from 'js-cookie';
 import confetti from 'canvas-confetti';
 import { Chess, type Move, type Square } from 'chess.js';
 import CustomChessboard from '@/components/chess/CustomChessboard';
+import { useUIStore } from '@/store/uiStore';
 import {
   AlertTriangle,
   ArrowLeft,
@@ -50,6 +51,11 @@ function PracticeArena() {
   const params = useSearchParams();
   const router = useRouter();
   const lessonId = params.get('lessonId');
+  const { userTier, energy, chessPuzzlesToday, checkAndResetDailyLimits } = useUIStore();
+
+  useEffect(() => {
+    checkAndResetDailyLimits();
+  }, [checkAndResetDailyLimits]);
 
   const [lessonData, setLessonData] = useState<LessonData | null>(null);
   const [fen, setFen] = useState('start');
@@ -80,6 +86,13 @@ function PracticeArena() {
   const saveProgress = useCallback(async () => {
     const token = Cookies.get('access_token');
     if (!token || !lessonId) return;
+
+    // Consume 10% de energía si es plan gratuito e incrementa el contador
+    const { consumeEnergy, addChessPuzzle, userTier } = useUIStore.getState();
+    if (userTier === 'free') {
+      consumeEnergy(10);
+      addChessPuzzle();
+    }
 
     try {
       await fetch(`${API_URL}/api/v1/chess/progress`, {
@@ -290,9 +303,59 @@ function PracticeArena() {
     return null;
   }, [showGuide, lessonData]);
 
+  if (userTier === 'free' && (chessPuzzlesToday >= 2 || energy < 10)) {
+    return (
+      <div className="min-h-screen wood-theme-bg flex items-center justify-center text-[#ecd3b5] p-6 relative overflow-hidden font-sans">
+        <style>{`
+          .wood-theme-bg {
+            background-color: #130a04;
+            background-image: 
+              repeating-linear-gradient(90deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 160px, rgba(0,0,0,0.3) 160px, rgba(0,0,0,0.3) 162px),
+              repeating-linear-gradient(0deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 90px, rgba(0,0,0,0.25) 90px, rgba(0,0,0,0.25) 92px),
+              linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+          }
+          .wood-panel {
+            background: #25140b;
+            border: 3px solid #3c1e0a;
+            box-shadow: inset 0 2px 5px rgba(255,255,255,0.03), inset 0 -4px 10px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.6);
+          }
+        `}</style>
+        
+        <div className="wood-panel p-10 max-w-md w-full shadow-2xl rounded-none text-center relative z-10 animate-in fade-in">
+          <div className="w-16 h-16 bg-[#3c1e0a] border border-[#502b16] text-amber-500 flex items-center justify-center mx-auto mb-6">
+            <Target size={32} className="animate-pulse" />
+          </div>
+          <h2 className="text-xl font-serif font-black italic uppercase tracking-wider text-amber-400 mb-2">
+            {chessPuzzlesToday >= 2 ? "Límite Diario de Puzzles" : "Energía Insuficiente"}
+          </h2>
+          <p className="text-[10px] text-slate-350 leading-relaxed mb-8 uppercase tracking-wider">
+            {chessPuzzlesToday >= 2 
+              ? "En el Plan Free estás limitado a resolver 2 puzzles de ajedrez al día." 
+              : `Cada puzzle de ajedrez consume 10% de energía. Tu energía actual es de ${energy}%.`}
+          </p>
+          
+          <div className="flex flex-col gap-3">
+            <button 
+              onClick={() => router.push('/dashboard/pricing')}
+              className="w-full py-4 bg-[#ecd3b5] hover:bg-[#fbf8f0] text-[#1e130c] font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none border border-[#fbf8f0] shadow-lg shadow-black/40"
+            >
+              Subir a Pro / Executive
+            </button>
+            <button 
+              onClick={() => router.push('/dashboard/chess')}
+              className="w-full py-3 border border-[#502b16] bg-transparent text-slate-450 hover:text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none"
+            >
+              Volver al Menú
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-[#0B0F19] flex items-center justify-center text-indigo-500">
+      <div className="min-h-screen bg-[#1c0d02] flex items-center justify-center text-amber-500">
         <Loader2 className="animate-spin" size={48} />
       </div>
     );
@@ -300,11 +363,20 @@ function PracticeArena() {
 
   if (!lessonData) {
     return (
-      <div className="min-h-screen bg-[#0B0F19] flex flex-col items-center justify-center text-white px-6 text-center">
-        <Target size={64} className="text-slate-700 mb-6" />
+      <div className="min-h-screen wood-theme-bg flex flex-col items-center justify-center text-[#ecd3b5] px-6 text-center rounded-none">
+        <style>{`
+          .wood-theme-bg {
+            background-color: #130a04;
+            background-image: 
+              repeating-linear-gradient(90deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 160px, rgba(0,0,0,0.3) 160px, rgba(0,0,0,0.3) 162px),
+              repeating-linear-gradient(0deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 90px, rgba(0,0,0,0.25) 90px, rgba(0,0,0,0.25) 92px),
+              linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+          }
+        `}</style>
+        <Target size={64} className="text-[#3c1e0a] mb-6" />
         <h2 className="text-2xl font-bold mb-2">Lección no disponible</h2>
-        <p className="text-slate-400 mb-6">No pudimos cargar la práctica de ajedrez.</p>
-        <Link href="/dashboard/chess" className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold">
+        <p className="text-slate-300 mb-6">No pudimos cargar la práctica de ajedrez.</p>
+        <Link href="/dashboard/chess" className="px-6 py-3 bg-[#ecd3b5] text-[#1e130c] border border-[#fbf8f0] rounded-none font-bold">
           Volver al Menú
         </Link>
       </div>
@@ -312,26 +384,72 @@ function PracticeArena() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0B0F19] text-slate-100 font-sans flex flex-col md:flex-row relative">
-      <div className="w-full md:w-[400px] lg:w-[450px] p-6 md:p-8 flex flex-col border-b md:border-b-0 md:border-r border-slate-800 bg-slate-900/80 shadow-2xl z-20 overflow-y-auto">
-        <Link href="/dashboard/chess" className="inline-flex items-center gap-2 text-slate-500 hover:text-white mb-8 font-bold text-sm bg-slate-800/50 self-start px-4 py-2 rounded-lg border border-slate-700/50">
-          <ArrowLeft size={16} /> Salir al Menú
-        </Link>
+    <div className="min-h-screen wood-theme-bg text-[#ecd3b5] font-sans flex flex-col md:flex-row relative rounded-none">
+      <style>{`
+        .wood-theme-bg {
+          background-color: #130a04;
+          background-image: 
+            repeating-linear-gradient(90deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 160px, rgba(0,0,0,0.3) 160px, rgba(0,0,0,0.3) 162px),
+            repeating-linear-gradient(0deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 90px, rgba(0,0,0,0.25) 90px, rgba(0,0,0,0.25) 92px),
+            linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+        }
+        .wood-panel {
+          background: #25140b;
+          border: 3px solid #3c1e0a;
+          box-shadow: inset 0 2px 5px rgba(255,255,255,0.03), inset 0 -4px 10px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.6);
+        }
+        .wood-panel-light {
+          background: #361d0f;
+          border: 2px solid #502b16;
+          box-shadow: inset 0 1px 3px rgba(255,255,255,0.03), inset 0 -2px 5px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.4);
+        }
+      `}</style>
+
+      <div className="w-full md:w-[400px] lg:w-[450px] p-6 md:p-8 flex flex-col border-b md:border-b-0 md:border-r border-[#3c1e0a]/60 bg-[#25140b]/90 shadow-2xl z-20 overflow-y-auto rounded-none">
+        <div className="flex items-center justify-between mb-8">
+          <Link href="/dashboard/chess" className="inline-flex items-center gap-2 text-[#ecd3b5] hover:text-white font-bold text-sm bg-[#361d0f] px-4 py-2 rounded-none border border-[#502b16]">
+            <ArrowLeft size={16} /> Salir al Menú
+          </Link>
+          {userTier === 'free' ? (
+            <div className="flex items-center">
+              {/* Cuerpo de la Batería */}
+              <div className="relative w-14 h-5 bg-slate-950 rounded-[4px] border border-slate-700 p-0.5 flex items-center shadow-[inset_0_1.5px_4px_rgba(0,0,0,0.8)] overflow-hidden">
+                <div 
+                  className={`h-full rounded-[2px] transition-all duration-500 ${
+                    energy > 50 
+                      ? 'bg-gradient-to-r from-emerald-500 to-teal-400 shadow-[0_0_10px_rgba(16,185,129,0.5)]' 
+                      : energy > 20 
+                        ? 'bg-gradient-to-r from-amber-500 to-yellow-400 shadow-[0_0_10px_rgba(245,158,11,0.5)]' 
+                        : 'bg-gradient-to-r from-rose-600 to-rose-400 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.6)]'
+                  }`}
+                  style={{ width: `${energy}%` }}
+                />
+                <span className="absolute inset-0 flex items-center justify-center text-[9px] font-black text-white font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
+                  {energy}%
+                </span>
+              </div>
+              {/* Polo Positivo */}
+              <div className="w-[3px] h-2.5 bg-slate-700 rounded-r-[2px] -ml-[1px] shadow-sm shrink-0" />
+            </div>
+          ) : (
+            <span className="text-[8px] font-black uppercase tracking-wider text-emerald-400">Energía Ilimitada</span>
+          )}
+        </div>
 
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
-            <div className={`px-3 py-1 rounded-full border text-[10px] font-black uppercase tracking-widest ${isFreePlay ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30'}`}>
+            <div className={`px-3 py-1 rounded-none border text-[10px] font-black uppercase tracking-widest ${isFreePlay ? 'bg-emerald-950/60 text-emerald-350 border-emerald-800/40' : 'bg-amber-950/60 text-amber-300 border-amber-800/40'}`}>
               {isFreePlay ? 'Sandbox Mode' : 'Tactics Mode'}
             </div>
 
             {!isFreePlay && mistakes > 0 && (
-              <div className="px-3 py-1 rounded-full bg-red-500/20 text-red-300 border border-red-500/30 text-[10px] font-bold flex items-center gap-1">
+              <div className="px-3 py-1 rounded-none bg-red-955/60 text-red-300 border border-red-800/40 text-[10px] font-bold flex items-center gap-1">
                 <AlertTriangle size={12} /> {mistakes} Errores
               </div>
             )}
 
             {isBotThinking && (
-              <div className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold flex items-center gap-1">
+              <div className="px-3 py-1 rounded-none bg-amber-955/60 text-amber-300 border border-amber-800/40 text-[10px] font-bold flex items-center gap-1">
                 <Loader2 size={12} className="animate-spin" /> IA pensando
               </div>
             )}
@@ -341,9 +459,9 @@ function PracticeArena() {
             {lessonData.title || 'Chess Practice'}
           </h1>
 
-          <div className="bg-[#131B2C] p-6 rounded-2xl border border-slate-700/50 mb-6 shadow-inner">
-            <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 flex items-center gap-2">
-              {isFreePlay ? <Bot size={14} className="text-emerald-400" /> : <HelpCircle size={14} className="text-indigo-400" />}
+          <div className="bg-[#130a04] p-6 rounded-none border border-[#3c1e0a] mb-6 shadow-inner">
+            <h3 className="text-xs font-bold text-amber-200/40 uppercase tracking-wider mb-3 flex items-center gap-2">
+              {isFreePlay ? <Bot size={14} className="text-emerald-400" /> : <HelpCircle size={14} className="text-amber-400" />}
               Instrucción
             </h3>
             <p className="text-lg font-medium text-slate-200 leading-relaxed">
@@ -351,7 +469,7 @@ function PracticeArena() {
             </p>
           </div>
 
-          <div className={`p-5 rounded-2xl border shadow-lg flex gap-4 transition-colors ${status === 'correct' ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-300' : status === 'wrong' ? 'bg-red-500/10 border-red-500/30 text-red-300' : 'bg-indigo-500/10 border-indigo-500/30 text-indigo-300'}`}>
+          <div className={`p-5 rounded-none border shadow-lg flex gap-4 transition-colors ${status === 'correct' ? 'bg-emerald-950/60 border-emerald-800/40 text-emerald-300' : status === 'wrong' ? 'bg-red-955/60 border-red-800/40 text-red-300' : 'bg-[#361d0f] border-[#502b16] text-[#ecd3b5]'}`}>
             {status === 'correct' ? <CheckCircle2 className="shrink-0 w-6 h-6" /> : status === 'wrong' ? <XCircle className="shrink-0 w-6 h-6" /> : <Lightbulb className="shrink-0 w-6 h-6" />}
             <div>
               <h4 className="font-bold text-sm mb-1 uppercase tracking-wider">
@@ -362,19 +480,19 @@ function PracticeArena() {
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-slate-800 space-y-3 shrink-0">
+        <div className="mt-8 pt-6 border-t border-[#3c1e0a] space-y-3 shrink-0">
           {status === 'correct' || status === 'gameover' ? (
-            <button onClick={() => router.push('/dashboard/chess')} className="w-full py-4 bg-gradient-to-r from-emerald-500 to-emerald-600 text-slate-950 rounded-xl font-black text-sm uppercase shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
+            <button onClick={() => router.push('/dashboard/chess')} className="w-full py-4 bg-[#ecd3b5] hover:bg-[#fbf8f0] text-[#1e130c] rounded-none font-black text-sm uppercase shadow-lg border border-[#fbf8f0] flex items-center justify-center gap-2">
               Continuar Ruta <ChevronRight size={18} />
             </button>
           ) : (
             <div className={`grid gap-3 ${isFreePlay ? 'grid-cols-1' : 'grid-cols-2'}`}>
-              <button onClick={handleReset} className="py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl font-bold text-sm border border-slate-700 flex items-center justify-center gap-2">
+              <button onClick={handleReset} className="py-3 bg-[#361d0f] hover:bg-[#462614] text-[#ecd3b5] rounded-none font-bold text-sm border border-[#502b16] flex items-center justify-center gap-2">
                 <RotateCcw size={16} /> Reiniciar
               </button>
 
               {!isFreePlay && (
-                <button onClick={forceHint} disabled={showGuide} className="py-3 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 rounded-xl font-bold text-sm border border-indigo-500/30 flex items-center justify-center gap-2 disabled:opacity-50">
+                <button onClick={forceHint} disabled={showGuide} className="py-3 bg-amber-955/60 hover:bg-[#462614] text-amber-400 rounded-none font-bold text-sm border border-amber-800/40 flex items-center justify-center gap-2 disabled:opacity-50">
                   <Lightbulb size={16} /> Ver Guía
                 </button>
               )}
@@ -383,14 +501,14 @@ function PracticeArena() {
         </div>
       </div>
 
-      <div className="flex-1 bg-[#0F1523] flex items-center justify-center p-4 md:p-8 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/10 via-transparent to-transparent pointer-events-none" />
+      <div className="flex-1 bg-[#130a04] flex items-center justify-center p-4 md:p-8 relative overflow-hidden rounded-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-950/10 via-transparent to-transparent pointer-events-none" />
 
-        <div className="relative z-10 w-full max-w-[600px] lg:max-w-[750px] aspect-square">
-          <div className="absolute -inset-2 bg-gradient-to-br from-indigo-500/20 via-slate-800 to-emerald-500/20 rounded-xl blur-2xl opacity-50 pointer-events-none" />
+        <div className="relative z-10 w-full max-w-[600px] lg:max-w-[750px] aspect-square rounded-none">
+          <div className="absolute -inset-2 bg-gradient-to-br from-amber-500/5 via-[#25140b] to-amber-500/5 rounded-none blur-3xl opacity-40 pointer-events-none" />
 
           {/* TABLERO CUSTOM IMPLEMENTADO AQUÍ */}
-          <div className="relative rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex justify-center items-center bg-[#1E293B] p-2 border-[14px] border-[#1E293B]">
+          <div className="relative rounded-none overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.7)] flex justify-center items-center bg-[#3c1e0a] p-2 border-[14px] border-[#3c1e0a]">
             <CustomChessboard
               fen={fen}
               onDrop={onDrop}
@@ -408,7 +526,7 @@ function PracticeArena() {
 export default function PracticePage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-[#0B0F19] flex items-center justify-center text-indigo-500">
+      <div className="min-h-screen bg-[#1c0d02] flex items-center justify-center text-amber-500 rounded-none">
         <Loader2 className="animate-spin" size={48} />
       </div>
     }>

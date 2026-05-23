@@ -41,8 +41,12 @@ interface VocabularyLesson {
 export default function VocabularyLessonPage() {
   const params = useParams();
   const router = useRouter();
-  const { activeLanguage } = useUIStore();
+  const { activeLanguage, userTier, energy, vocabLessonsToday, checkAndResetDailyLimits } = useUIStore();
   
+  useEffect(() => {
+    checkAndResetDailyLimits();
+  }, [checkAndResetDailyLimits]);
+
   // Manejo defensivo del ID (Punto 23)
   const lessonId = Array.isArray(params?.id) ? params.id[0] : params?.id;
 
@@ -136,6 +140,13 @@ export default function VocabularyLessonPage() {
     if (!lesson) return;
     setIsSaving(true);
 
+    // Consume energía y actualiza el contador diario si es plan gratuito
+    const { consumeEnergy, addVocabLesson, userTier } = useUIStore.getState();
+    if (userTier === 'free') {
+      consumeEnergy(30);
+      addVocabLesson();
+    }
+
     try {
         const token = Cookies.get('access_token'); // (Punto 27)
         if (token) {
@@ -195,6 +206,45 @@ export default function VocabularyLessonPage() {
   // =========================================================
   // RENDERS DE ESTADO (Skeleton & Error mejorados)
   // =========================================================
+
+  if (userTier === 'free' && (vocabLessonsToday >= 1 || energy < 30)) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-6 relative overflow-hidden font-sans">
+        {/* Gradients */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-indigo-500"></div>
+        
+        <div className="bg-slate-950/80 border border-slate-800 p-10 max-w-md w-full shadow-2xl rounded-none text-center relative z-10 backdrop-blur-md">
+          <div className="w-16 h-16 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center mx-auto mb-6">
+            <Sparkles size={32} className="animate-pulse" />
+          </div>
+          <h2 className="text-xl font-serif font-black italic uppercase tracking-wider text-indigo-400 mb-2">
+            {vocabLessonsToday >= 1 ? "Límite Diario Alcanzado" : "Energía Insuficiente"}
+          </h2>
+          <p className="text-[10px] text-slate-400 leading-relaxed mb-8 uppercase tracking-wider">
+            {vocabLessonsToday >= 1 
+              ? "En el Plan Free estás limitado a 1 lección de vocabulario (bloque de 50 palabras) al día." 
+              : `Completar una lección de vocabulario consume 30% de energía. Tu energía actual es de ${energy}%.`}
+          </p>
+          
+          <div className="flex flex-col gap-3">
+            <button 
+              onClick={() => router.push('/dashboard/pricing')}
+              className="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none shadow-lg shadow-indigo-600/30"
+            >
+              Subir a Pro / Executive
+            </button>
+            <button 
+              onClick={() => router.push('/dashboard')}
+              className="w-full py-3 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none"
+            >
+              Volver al Dashboard
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (loading) return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 relative overflow-hidden">

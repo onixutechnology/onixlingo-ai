@@ -155,9 +155,9 @@ export default function Home() {
            </div>
            <div className="flex gap-10 text-[8px] font-black text-slate-400 uppercase tracking-[0.3em]">
               <Link href="/ventas" className="hover:text-teal-600 transition-colors">Ventas</Link>
-              <a href="#" className="hover:text-teal-600 transition-colors">Privacidad</a>
-              <a href="#" className="hover:text-teal-600 transition-colors">Términos</a>
-              <a href="#" className="hover:text-teal-600 transition-colors">Soporte</a>
+              <Link href="/legal/privacy" className="hover:text-teal-600 transition-colors">Privacidad</Link>
+              <Link href="/legal/terms" className="hover:text-teal-600 transition-colors">Términos</Link>
+              <Link href="/legal/support" className="hover:text-teal-600 transition-colors">Soporte</Link>
            </div>
            <p className="text-[8px] font-black text-slate-300 uppercase tracking-[0.4em]">
              © 2026 ONIXU TECHNOLOGY PARTNERS.

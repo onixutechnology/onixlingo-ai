@@ -47,72 +47,96 @@ export default function VentasPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-slate-200 bg-white">
           
           {/* FREE */}
-          <div className="p-10 border-r border-b md:border-b-0 border-slate-200 hover:bg-slate-50 transition-colors">
-            <div className="mb-8">
-              <h3 className="text-[8px] font-black text-slate-400 uppercase tracking-widest mb-1">Plan Base</h3>
-              <p className="text-lg font-black text-slate-900 uppercase font-serif italic">Standard</p>
-            </div>
-            <div className="flex items-baseline gap-1 mb-8">
-              <span className="text-3xl font-black text-slate-900">$0</span>
-              <span className="text-slate-400 font-bold uppercase text-[8px] tracking-widest">MXN / Acceso Base</span>
-            </div>
-            <ul className="space-y-4 mb-10 border-t border-slate-100 pt-6">
-              {['30 Módulos de estudio', 'Motor de IA Básico', 'Reportes de Avance'].map((f) => (
-                <li key={f} className="flex items-center gap-3 text-[10px] font-bold text-slate-500 uppercase tracking-tight">
-                  <Check size={14} className="text-teal-500" /> {f}
+          <div className="p-10 border-r border-b md:border-b-0 border-slate-200 hover:bg-slate-50 transition-colors flex flex-col justify-between">
+            <div>
+              <div className="mb-8">
+                <h3 className="text-[8px] font-black text-slate-400 uppercase tracking-widest mb-1">Plan Base</h3>
+                <p className="text-lg font-black text-slate-900 uppercase font-serif italic">Free</p>
+              </div>
+              <div className="flex items-baseline gap-1 mb-8">
+                <span className="text-3xl font-black text-slate-900">$0</span>
+                <span className="text-slate-400 font-bold uppercase text-[8px] tracking-widest">MXN / mes</span>
+              </div>
+              <ul className="space-y-4 mb-10 border-t border-slate-100 pt-6">
+                <li className="flex items-start gap-3 text-[10px] font-bold text-slate-500 uppercase tracking-tight leading-relaxed">
+                  <Check size={14} className="text-teal-500 shrink-0 mt-0.5" /> <span>Lecciones A1 (Inglés)</span>
                 </li>
-              ))}
-            </ul>
+                <li className="flex items-start gap-3 text-[10px] font-bold text-slate-500 uppercase tracking-tight leading-relaxed">
+                  <Check size={14} className="text-teal-500 shrink-0 mt-0.5" /> <span>Vocabulario: 1 lección al día (Inglés)</span>
+                </li>
+                <li className="flex items-start gap-3 text-[10px] font-bold text-slate-500 uppercase tracking-tight leading-relaxed">
+                  <Check size={14} className="text-teal-500 shrink-0 mt-0.5" /> <span>Ajedrez: 2 puzzles al día (Inglés)</span>
+                </li>
+              </ul>
+            </div>
             <Link href="/register" className="block w-full py-4 bg-slate-100 border border-slate-200 text-slate-900 text-center font-black rounded-none text-[9px] uppercase tracking-widest hover:bg-slate-200 transition-colors">
               Iniciar Registro
             </Link>
           </div>
-
+ 
           {/* PRO */}
-          <div className="p-10 border-r border-b md:border-b-0 border-slate-200 bg-slate-50 relative">
+          <div className="p-10 border-r border-b md:border-b-0 border-slate-200 bg-slate-50 relative flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-1 bg-teal-600"></div>
-            <div className="mb-8">
-              <h3 className="text-[8px] font-black text-teal-600 uppercase tracking-widest mb-1">Alto Rendimiento</h3>
-              <p className="text-lg font-black text-slate-900 uppercase font-serif italic">OnixLingo Pro</p>
+            <div>
+              <div className="mb-8">
+                <h3 className="text-[8px] font-black text-teal-600 uppercase tracking-widest mb-1">Alto Rendimiento</h3>
+                <p className="text-lg font-black text-slate-900 uppercase font-serif italic">OnixLingo Pro</p>
+              </div>
+              <div className="flex items-baseline gap-1 mb-1">
+                <span className="text-sm text-slate-500 line-through mr-1">$199</span><span className="text-3xl font-black text-slate-900">$129</span>
+                <span className="text-slate-400 font-bold uppercase text-[8px] tracking-widest">MXN / mes</span>
+              </div>
+              <p className="text-[7px] text-emerald-600 font-black uppercase mb-8 tracking-[0.2em]">Suscripción con Garantía Onixu</p>
+              <ul className="space-y-4 mb-10 border-t border-slate-100 pt-6">
+                  {[
+                    'Acceso ilimitado a las 900 lecciones (A1 a C1)',
+                    'Vocabulario y ajedrez ilimitados',
+                    'Sin anuncios publicitarios',
+                    'Idiomas: Español, Francés, Chino',
+                    'Acceso a sorteos premium según número de usuarios'
+                  ].map((f) => (
+                    <li key={f} className="flex items-start gap-3 text-[10px] font-black text-slate-800 uppercase tracking-tight leading-relaxed">
+                      <Check size={14} className="text-teal-600 shrink-0 mt-0.5" /> <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
             </div>
-            <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-3xl font-black text-slate-900">$49</span>
-              <span className="text-slate-400 font-bold uppercase text-[8px] tracking-widest">MXN / Mensual</span>
-            </div>
-            <p className="text-[7px] text-emerald-600 font-black uppercase mb-8 tracking-[0.2em]">Suscripción con Garantía Onixu</p>
-            <ul className="space-y-4 mb-10 border-t border-slate-200 pt-6">
-              {['Lecciones de Negocio', 'Análisis Fonético', 'IA Pro Sin Límites', 'Soporte Directo'].map((f) => (
-                <li key={f} className="flex items-center gap-3 text-[10px] font-black text-slate-800 uppercase tracking-tight">
-                  <Check size={14} className="text-teal-600" /> {f}
-                </li>
-              ))}
-            </ul>
             <Link href="/register?tier=pro" className="block w-full py-4 bg-teal-600 text-white text-center font-black rounded-none text-[9px] uppercase tracking-widest hover:bg-teal-700 transition-all shadow-lg shadow-teal-600/20 active:scale-95">
               Contratar Plan Pro
             </Link>
           </div>
-
-          {/* CORPORATE */}
-          <div className="p-10 hover:bg-slate-50 transition-colors">
-            <div className="mb-8">
-              <h3 className="text-[8px] font-black text-slate-500 uppercase tracking-widest mb-1">Soluciones B2B</h3>
-              <p className="text-lg font-black text-slate-900 uppercase font-serif italic">Enterprise</p>
+ 
+          {/* EXECUTIVE */}
+          <div className="p-10 hover:bg-slate-50 transition-colors flex flex-col justify-between relative">
+            <div className="absolute top-0 left-0 w-full h-1 bg-amber-500"></div>
+            <div>
+              <div className="mb-8">
+                <h3 className="text-[8px] font-black text-amber-500 uppercase tracking-widest mb-1">Máxima Inversión</h3>
+                <p className="text-lg font-black text-slate-900 uppercase font-serif italic">Executive</p>
+              </div>
+              <div className="flex items-baseline gap-1 mb-1">
+                <span className="text-sm text-slate-500 line-through mr-1">$399</span><span className="text-3xl font-black text-slate-900">$249</span>
+                <span className="text-slate-400 font-bold uppercase text-[8px] tracking-widest">MXN / mes</span>
+              </div>
+              <p className="text-[7px] text-amber-600 font-black uppercase mb-8 tracking-[0.2em]">Acceso Titanium Elite</p>
+              <ul className="space-y-4 mb-10 border-t border-slate-100 pt-6">
+                  {[
+                    'Desbloqueo de TODO el sistema',
+                    'Temario Executive de Negocios',
+                    'Tutoría conversacional ilimitada por IA',
+                    'Idiomas: Español, Francés, Chino',
+                    'Acceso ilimitado a sorteos premium'
+                  ].map((f) => (
+                    <li key={f} className="flex items-start gap-3 text-[10px] font-bold text-slate-500 uppercase tracking-tight leading-relaxed">
+                      <Check size={14} className="text-amber-500 shrink-0 mt-0.5" /> <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
             </div>
-            <div className="flex items-baseline gap-1 mb-8 text-slate-900">
-              <span className="text-xl font-black uppercase tracking-widest font-serif italic">A Medida</span>
-            </div>
-            <ul className="space-y-4 mb-10 border-t border-slate-100 pt-6">
-              {['Dashboard Corporativo', 'Volumen de Usuarios', 'Consultoría Técnica', 'Acuerdos de SLA'].map((f) => (
-                <li key={f} className="flex items-center gap-3 text-[10px] font-bold text-slate-400 uppercase tracking-tight">
-                  <Check size={14} className="text-slate-300" /> {f}
-                </li>
-              ))}
-            </ul>
-            <button className="w-full py-4 bg-slate-900 text-white text-center font-black rounded-none text-[9px] uppercase tracking-widest hover:bg-black transition-colors">
-              Contactar Ventas
-            </button>
+            <Link href="/register?tier=executive" className="block w-full py-4 bg-slate-900 text-white text-center font-black rounded-none text-[9px] uppercase tracking-widest hover:bg-teal-600 transition-colors">
+              Adquirir Executive
+            </Link>
           </div>
-
         </div>
 
       </main>

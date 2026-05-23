@@ -23,8 +23,12 @@ export default function PracticePage() {
   const router = useRouter();
   
   // 1. Estados Globales y UI
-  const { mode } = useUIStore();
+  const { mode, userTier, checkAndResetDailyLimits } = useUIStore();
   const isPro = mode === 'professional';
+
+  useEffect(() => {
+    checkAndResetDailyLimits();
+  }, [checkAndResetDailyLimits]);
   
   // 2. Stores Separados (Solución del Error)
   const { setGesture, setSpeaking, isSpeaking } = useAvatarStore(); 
@@ -112,6 +116,42 @@ export default function PracticePage() {
       handleSend();
     }
   };
+
+  if (userTier === 'free') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-955 text-white p-6 relative overflow-hidden font-sans">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-indigo-500"></div>
+        
+        <div className="bg-slate-900/80 border border-slate-800 p-10 max-w-md w-full shadow-2xl rounded-none text-center relative z-10 backdrop-blur-md">
+          <div className="w-16 h-16 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center mx-auto mb-6">
+            <Mic size={32} className="animate-pulse" />
+          </div>
+          <h2 className="text-xl font-serif font-black italic uppercase tracking-wider text-indigo-400 mb-2">
+            Función Premium
+          </h2>
+          <p className="text-[10px] text-slate-400 leading-relaxed mb-8 uppercase tracking-wider">
+            Las prácticas de conversación libre con Inteligencia Artificial (Speech Tutor) no están disponibles en el Plan Free.
+          </p>
+          
+          <div className="flex flex-col gap-3">
+            <button 
+              onClick={() => router.push('/dashboard/pricing')}
+              className="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none shadow-lg shadow-indigo-600/30"
+            >
+              Subir a Pro / Executive
+            </button>
+            <button 
+              onClick={() => router.push('/dashboard')}
+              className="w-full py-3 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none"
+            >
+              Volver al Dashboard
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`min-h-screen flex flex-col transition-colors duration-500 ${isPro ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>

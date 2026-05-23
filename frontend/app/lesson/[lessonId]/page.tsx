@@ -113,7 +113,12 @@ export default function LessonRunnerEngine() {
   const searchParams = useSearchParams();
   const lessonType = searchParams.get('type') || 'standard';
   const { setSpeaking } = useAvatarStore();
-  const { mode, activeLanguage } = useUIStore();
+  const { mode, activeLanguage, userTier, energy, checkAndResetDailyLimits } = useUIStore();
+  
+  useEffect(() => {
+    checkAndResetDailyLimits();
+  }, [checkAndResetDailyLimits]);
+
   const isPro = mode === 'professional' || (params?.lessonId as string || '').includes('mock');
 
   // ⏱️ DETECTAR MODO DE TIEMPO
@@ -1373,6 +1378,12 @@ export default function LessonRunnerEngine() {
     setIsActive(false);
     setIsSaving(true);
 
+    // Consume 50% de energía si es plan gratuito
+    const { consumeEnergy, userTier } = useUIStore.getState();
+    if (userTier === 'free') {
+      consumeEnergy(50);
+    }
+
     // Calcular métricas finales
     const accuracy = stats.totalQuestionsAnswered > 0
       ? Math.round((stats.correctAnswers / stats.totalQuestionsAnswered) * 100)
@@ -1594,6 +1605,42 @@ export default function LessonRunnerEngine() {
   // ==================== RENDERS CONDICIONALES ==============================
   // ============================================================================
 
+  if (userTier === 'free' && energy < 50) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-6 relative overflow-hidden font-sans">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-teal-500/20 via-transparent to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-teal-500"></div>
+        
+        <div className="bg-slate-950/80 border border-slate-800 p-10 max-w-md w-full shadow-2xl rounded-none text-center relative z-10 backdrop-blur-md">
+          <div className="w-16 h-16 bg-teal-500/10 border border-teal-500/30 text-teal-400 flex items-center justify-center mx-auto mb-6">
+            <Zap size={32} className="animate-pulse" />
+          </div>
+          <h2 className="text-xl font-serif font-black italic uppercase tracking-wider text-teal-400 mb-2">
+            Energía Insuficiente
+          </h2>
+          <p className="text-[10px] text-slate-400 leading-relaxed mb-8 uppercase tracking-wider">
+            Completar una lección normal consume 50% de energía. Tu energía actual es de {energy}%.
+          </p>
+          
+          <div className="flex flex-col gap-3">
+            <button 
+              onClick={() => router.push('/dashboard/pricing')}
+              className="w-full py-4 bg-teal-600 hover:bg-teal-500 text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none shadow-lg shadow-teal-600/30"
+            >
+              Subir a Pro / Executive
+            </button>
+            <button 
+              onClick={() => router.push('/dashboard')}
+              className="w-full py-3 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none"
+            >
+              Volver al Dashboard
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (loading) return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white font-bold animate-pulse">
       <Zap className="mr-3 animate-spin" /> Cargando Lección...
@@ -1682,6 +1729,28 @@ export default function LessonRunnerEngine() {
         <header className="h-12 bg-white border-b border-slate-200 px-6 flex items-center justify-between sticky top-0 z-20">
           <div className="flex items-center gap-3">
             <button onClick={handleExit} className="text-slate-400 hover:text-amber-600 transition-colors"><X size={20} /></button>
+            {userTier === 'free' && (
+              <div className="flex items-center">
+                {/* Cuerpo de la Batería */}
+                <div className="relative w-12 h-4 bg-slate-950 rounded-[4px] border border-slate-700 p-0.5 flex items-center shadow-[inset_0_1.5px_4px_rgba(0,0,0,0.8)] overflow-hidden">
+                  <div 
+                    className={`h-full rounded-[2px] transition-all duration-500 ${
+                      energy > 50 
+                        ? 'bg-gradient-to-r from-emerald-500 to-teal-400 shadow-[0_0_10px_rgba(16,185,129,0.5)]' 
+                        : energy > 20 
+                          ? 'bg-gradient-to-r from-amber-500 to-yellow-400 shadow-[0_0_10px_rgba(245,158,11,0.5)]' 
+                          : 'bg-gradient-to-r from-rose-600 to-rose-400 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.6)]'
+                    }`}
+                    style={{ width: `${energy}%` }}
+                  />
+                  <span className="absolute inset-0 flex items-center justify-center text-[8px] font-black text-white font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
+                    {energy}%
+                  </span>
+                </div>
+                {/* Polo Positivo */}
+                <div className="w-[2px] h-2 bg-slate-700 rounded-r-[1.5px] -ml-[1px] shadow-sm shrink-0" />
+              </div>
+            )}
             {timeMode !== 'basic' && (
               <div className={`flex items-center gap-1.5 px-3 py-1 border transition-colors ${seconds < 60 ? 'bg-rose-50 border-rose-200 text-rose-600 animate-pulse' : 'bg-slate-50 border-slate-200 text-slate-700'}`}>
                 <Clock size={12} className="animate-pulse" />

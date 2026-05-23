@@ -4,10 +4,12 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { 
   Award, Lock, Flame, BookOpen, Swords, ArrowLeft, Calendar, Zap, 
-  Target, Trophy, User, Mail, Phone, Globe, Shield, Copy, Check, Save
+  Target, Trophy, User, Mail, Phone, Globe, Shield, Copy, Check, Save, LogOut
 } from 'lucide-react';
 import apiClient from '@/lib/apiClient';
 import { motion } from 'framer-motion';
+import Cookies from 'js-cookie';
+import { UpgradeModal } from '@/components/pro/UpgradeModal';
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -16,6 +18,19 @@ export default function ProfilePage() {
   const [saving, setSaving] = useState(false);
   const [copied, setCopied] = useState(false);
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+
+  const handleLogout = async () => {
+    try {
+      await apiClient.post('/auth/logout');
+    } catch (err) {
+      console.error("Logout error:", err);
+    }
+    Cookies.remove('access_token', { path: '/' });
+    Cookies.remove('username', { path: '/' });
+    router.push('/login');
+    router.refresh();
+  };
 
   // Estados de edición
   const [formData, setFormData] = useState({
@@ -114,13 +129,21 @@ export default function ProfilePage() {
           </button>
           <h1 className="font-black text-[10px] tracking-[0.3em] uppercase text-slate-900">Executive <span className="text-teal-600">Profile</span></h1>
         </div>
-        <button 
-          onClick={() => handleSave()}
-          disabled={saving}
-          className="bg-slate-950 text-white px-6 py-2 text-[9px] font-black uppercase tracking-widest flex items-center gap-2 hover:bg-slate-800 disabled:opacity-50 transition-all"
-        >
-          {saving ? 'Saving...' : <><Save size={12} /> Save Changes</>}
-        </button>
+        <div className="flex items-center gap-2">
+          <button 
+            onClick={handleLogout}
+            className="border border-slate-300 hover:bg-red-50 hover:border-red-200 text-slate-700 hover:text-red-700 px-4 py-2 text-[9px] font-black uppercase tracking-widest transition-all"
+          >
+            Cerrar Sesión
+          </button>
+          <button 
+            onClick={() => handleSave()}
+            disabled={saving}
+            className="bg-slate-950 text-white px-6 py-2 text-[9px] font-black uppercase tracking-widest flex items-center gap-2 hover:bg-slate-800 disabled:opacity-50 transition-all"
+          >
+            {saving ? 'Saving...' : <><Save size={12} /> Save Changes</>}
+          </button>
+        </div>
       </nav>
 
       <div className="max-w-6xl mx-auto px-6 py-12">
@@ -169,7 +192,7 @@ export default function ProfilePage() {
                   <div className="flex-1 text-center md:text-left">
                     <h2 className="text-4xl font-black tracking-tighter uppercase mb-1">{profile?.username}</h2>
                     <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-6 flex items-center justify-center md:justify-start gap-2">
-                       <Shield size={12} className="text-teal-600" /> Professional Executive Account
+                       <Shield size={12} className={profile?.is_pro ? "text-teal-600" : "text-slate-400"} /> {profile?.is_pro ? "Professional Executive Account" : "Standard Student Account"}
                     </p>
                     
                     <div className="flex flex-wrap gap-4 justify-center md:justify-start">
@@ -184,9 +207,94 @@ export default function ProfilePage() {
                     </div>
                   </div>
                </div>
-            </section>
+             </section>
 
-            {/* FORMULARIO DE DATOS */}
+             {/* CARD DE PLAN Y SUSCRIPCIÓN */}
+             {(() => {
+                const rawTier = profile?.membership?.tier?.toLowerCase() || 'free';
+                const userTier = rawTier === 'titanium' ? 'executive' : rawTier;
+                return (
+                  <section className="bg-white border border-slate-200 shadow-sm overflow-hidden">
+                     <div className="px-8 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                           <Shield size={14} className="text-slate-400" />
+                           <h3 className="text-[10px] font-black uppercase tracking-[0.2em]">Detalles de Suscripción</h3>
+                        </div>
+                        {userTier !== 'executive' && (
+                           <button 
+                              onClick={() => setShowUpgradeModal(true)}
+                              className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1 text-[8px] font-black uppercase tracking-widest rounded-none transition-colors"
+                            >
+                               Hacer Upgrade
+                            </button>
+                        )}
+                     </div>
+                     
+                     <div className="p-8">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                           <div className="p-4 bg-slate-50 border border-slate-100 flex flex-col justify-between">
+                              <span className="text-[7px] font-black text-slate-400 uppercase tracking-widest block mb-1">Plan de Cuenta</span>
+                              <div>
+                                 <span className={`px-2.5 py-1 text-[9px] font-black uppercase tracking-widest border inline-block ${
+                                    userTier === 'executive'
+                                       ? 'bg-amber-50 border-amber-200 text-amber-800'
+                                       : userTier === 'pro'
+                                          ? 'bg-teal-50 border-teal-200 text-teal-800'
+                                          : 'bg-slate-50 border-slate-200 text-slate-600'
+                                 }`}>
+                                    {userTier.toUpperCase()}
+                                 </span>
+                              </div>
+                           </div>
+                           
+                           <div className="p-4 bg-slate-50 border border-slate-100 flex flex-col justify-between">
+                              <span className="text-[7px] font-black text-slate-400 uppercase tracking-widest block mb-1">Estatus del Plan</span>
+                              <div>
+                                 <span className={`px-2.5 py-1 text-[9px] font-black uppercase tracking-widest border inline-block ${
+                                    profile?.membership?.status === 'active'
+                                       ? 'bg-emerald-50 border-emerald-200 text-emerald-800'
+                                       : 'bg-rose-50 border-rose-200 text-rose-800'
+                                 }`}>
+                                    {profile?.membership?.status === 'active' ? 'ACTIVA' : 'INACTIVA/VENCIDA'}
+                                 </span>
+                              </div>
+                           </div>
+
+                           <div className="p-4 bg-slate-50 border border-slate-100 flex flex-col justify-between">
+                              <span className="text-[7px] font-black text-slate-400 uppercase tracking-widest block mb-1">Fecha de Vencimiento</span>
+                              <div>
+                                 <span className="text-xs font-black text-slate-800 flex items-center gap-1">
+                                    <Calendar size={12} className="text-slate-400" />
+                                    {profile?.membership?.valid_until 
+                                       ? new Date(profile.membership.valid_until).toLocaleDateString('es-MX', {
+                                             year: 'numeric',
+                                             month: 'short',
+                                             day: 'numeric'
+                                          })
+                                       : userTier === 'free' ? 'No vence (Gratuito)' : 'Ilimitado'}
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+
+                        {/* Detalle adicional de los beneficios */}
+                        <div className="mt-6 p-4 bg-slate-50 border border-slate-100 rounded-none">
+                           <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Alcance de tu nivel</p>
+                           <p className="text-[9px] text-slate-500 leading-snug">
+                              {userTier === 'executive'
+                                 ? 'Cuentas con acceso ilimitado a todo el catálogo de 900 lecciones, el temario de negocios Executive, el tutor de voz libre e ilimitada con IA (Speech Tutor) y la arena de ajedrez completa.'
+                                 : userTier === 'pro'
+                                    ? 'Tu suscripción incluye acceso a las 900 lecciones del catálogo estándar (A1-C1) y prácticas de ajedrez ilimitadas. Sube al plan Executive para temarios de negocios y tutoría por IA conversacional.'
+                                    : 'Estás en el plan Free (100% de energía diaria). Tu consumo es: lección normal (50% de energía), vocabulario (30% de energía, límite 1 lección/día) y ajedrez (10% de energía, límite 2 puzzles/día). Sin prácticas conversacionales por IA. Sube a PRO o EXECUTIVE para desbloquear lecciones avanzadas, energía ilimitada y quitar anuncios.'
+                              }
+                           </p>
+                        </div>
+                     </div>
+                  </section>
+                );
+             })()}
+
+             {/* FORMULARIO DE DATOS */}
             <section className="bg-white border border-slate-200 shadow-sm">
                <div className="px-8 py-4 bg-slate-50 border-b border-slate-200 flex items-center gap-2">
                   <User size={14} className="text-slate-400" />
@@ -337,6 +445,8 @@ export default function ProfilePage() {
         </div>
 
       </div>
+
+      {showUpgradeModal && <UpgradeModal onClose={() => setShowUpgradeModal(false)} />}
     </div>
   );
 }
