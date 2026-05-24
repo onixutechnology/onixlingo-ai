@@ -166,9 +166,8 @@ export const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
               <p className="text-xs text-slate-500 leading-relaxed mb-6">Para arrancar tus bases de forma guiada.</p>
               
               <div className="flex items-baseline gap-1 text-white mb-6">
-                <span className="text-sm text-slate-500 line-through mr-1">$399</span>
-                <span className="text-3xl font-black text-white">$249</span>
-                <span className="text-slate-400 font-bold uppercase text-[8px] tracking-widest">MXN / mes</span>
+                <span className="text-3xl font-black">$0</span>
+                <span className="text-slate-500 text-xs font-semibold">MXN / mes</span>
               </div>
               
               <hr className="border-slate-800/50 mb-6" />
@@ -193,10 +192,6 @@ export const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
                 <li className="flex gap-2.5 items-start">
                   <Check className="text-teal-400 shrink-0 mt-0.5" size={14} />
                   <span>Idiomas: Español, Francés, Chino</span>
-                </li>
-                <li className="flex gap-2.5 items-start text-slate-500">
-                  <Info className="shrink-0 mt-0.5 text-slate-600" size={14} />
-                  <span>Energía máxima de 100% (recarga automática diaria).</span>
                 </li>
               </ul>
             </div>
@@ -289,7 +284,10 @@ export const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
               <p className="text-xs text-slate-400 leading-relaxed mb-6">El desbloqueo definitivo. Inglés de negocios y tutoría avanzada.</p>
               
               <div className="flex items-baseline gap-1 text-white mb-6">
-                <span className="text-3xl font-black">
+                <span className="text-sm text-slate-500 line-through mr-1">
+                  {billingPeriod === 'monthly' ? '$399' : '$2,999'}
+                </span>
+                <span className="text-3xl font-black text-white">
                   {billingPeriod === 'monthly' ? '$249' : '$1,499'}
                 </span>
                 <span className="text-slate-400 text-xs font-semibold">MXN / {billingPeriod === 'monthly' ? 'mes' : 'año'}</span>

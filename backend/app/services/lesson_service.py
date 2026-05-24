@@ -65,8 +65,8 @@ def get_next_lesson_id(current_lesson_id: str) -> str | None:
     return None
 
 # --- SYSTEM CHECK (Verás esto en la consola al iniciar tu backend) ---
-print("--- 🚀 ONIXLINGO LESSON LOADER (TITANIUM) ---")
-print(f"♟️  Chess Lessons ({len(_COURSE_CACHE[LessonType.STANDARD])}): {STANDARD_DIR}")
-print(f"⭐  Pro Lessons   ({len(_COURSE_CACHE[LessonType.PRO])}): {PRO_DIR}")
-print(f"📖  Vocab Lessons ({len(_COURSE_CACHE[LessonType.VOCAB])}): {VOCAB_DIR}")
+print("--- ONIXLINGO LESSON LOADER (TITANIUM) ---")
+print(f"[-] Chess Lessons ({len(_COURSE_CACHE[LessonType.STANDARD])}): {STANDARD_DIR}")
+print(f"[-] Pro Lessons   ({len(_COURSE_CACHE[LessonType.PRO])}): {PRO_DIR}")
+print(f"[-] Vocab Lessons ({len(_COURSE_CACHE[LessonType.VOCAB])}): {VOCAB_DIR}")
 print("-----------------------------------------------")
