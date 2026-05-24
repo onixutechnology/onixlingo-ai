@@ -1,45 +1,272 @@
 {
   "id": "travel_mod_03",
-  "title": "World Explorer A1-3",
-  "description": "Mastering travel vocabulary. Level A1, Part 3.",
+  "category_id": "travel",
+  "title": "Global Travel • A1 - Part 3",
+  "description": "Master executive vocabulary. Level A1, Module 3 of 10.",
   "level": "A1",
+  "part": 3,
   "total_xp": 100,
+  "status": "locked",
+  "theme": {
+    "icon": "Plane",
+    "color": "sky"
+  },
   "stages": [
     {
       "id": "drill_travel_mod_03",
       "type": "pairing_drill",
-      "title": "Neuro Link: Travel",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: A1 Vocabulary",
+      "description": "Interactive pairing association.",
       "pairs": [
         {
-          "id": "p_0",
-          "en": "Wait",
-          "es": "Esperar"
+          "id": "p_01",
+          "en": "Tren",
+          "es": "Tren"
         },
         {
-          "id": "p_1",
-          "en": "City",
-          "es": "Ciudad"
+          "id": "p_02",
+          "en": "Autobús",
+          "es": "Autobús"
         },
         {
-          "id": "p_2",
-          "en": "Town",
-          "es": "Pueblo"
+          "id": "p_03",
+          "en": "Coche",
+          "es": "Coche"
         },
         {
-          "id": "p_3",
-          "en": "Road",
-          "es": "Camino"
+          "id": "p_04",
+          "en": "Bicicleta",
+          "es": "Bicicleta"
         },
         {
-          "id": "p_4",
-          "en": "Street",
-          "es": "Calle"
+          "id": "p_05",
+          "en": "Metro",
+          "es": "Metro"
         },
         {
-          "id": "p_5",
-          "en": "Park",
-          "es": "Parque"
+          "id": "p_06",
+          "en": "Taxi",
+          "es": "Taxi"
+        },
+        {
+          "id": "p_07",
+          "en": "Motocicleta",
+          "es": "Motocicleta"
+        },
+        {
+          "id": "p_08",
+          "en": "Tranvía",
+          "es": "Tranvía"
+        },
+        {
+          "id": "p_09",
+          "en": "Barco",
+          "es": "Barco"
+        },
+        {
+          "id": "p_10",
+          "en": "Ferry",
+          "es": "Ferry"
+        },
+        {
+          "id": "p_11",
+          "en": "Estación de tren",
+          "es": "Estación de tren"
+        },
+        {
+          "id": "p_12",
+          "en": "Parada de autobús",
+          "es": "Parada de autobús"
+        },
+        {
+          "id": "p_13",
+          "en": "Conductor",
+          "es": "Conductor"
+        },
+        {
+          "id": "p_14",
+          "en": "Pasajero",
+          "es": "Pasajero"
+        },
+        {
+          "id": "p_15",
+          "en": "Boleto de viaje",
+          "es": "Boleto de viaje"
+        },
+        {
+          "id": "p_16",
+          "en": "Tarifa",
+          "es": "Tarifa"
+        },
+        {
+          "id": "p_17",
+          "en": "Horario",
+          "es": "Horario"
+        },
+        {
+          "id": "p_18",
+          "en": "Línea",
+          "es": "Línea"
+        },
+        {
+          "id": "p_19",
+          "en": "Ruta",
+          "es": "Ruta"
+        },
+        {
+          "id": "p_20",
+          "en": "Mapa de rutas",
+          "es": "Mapa de rutas"
+        },
+        {
+          "id": "p_21",
+          "en": "Taquilla",
+          "es": "Taquilla"
+        },
+        {
+          "id": "p_22",
+          "en": "Máquina expendedora",
+          "es": "Máquina expendedora"
+        },
+        {
+          "id": "p_23",
+          "en": "Andén",
+          "es": "Andén"
+        },
+        {
+          "id": "p_24",
+          "en": "Vía",
+          "es": "Vía"
+        },
+        {
+          "id": "p_25",
+          "en": "Destino",
+          "es": "Destino"
+        },
+        {
+          "id": "p_26",
+          "en": "Origen",
+          "es": "Origen"
+        },
+        {
+          "id": "p_27",
+          "en": "Viaje de ida",
+          "es": "Viaje de ida"
+        },
+        {
+          "id": "p_28",
+          "en": "Viaje de ida y vuelta",
+          "es": "Viaje de ida y vuelta"
+        },
+        {
+          "id": "p_29",
+          "en": "Alquiler de coches",
+          "es": "Alquiler de coches"
+        },
+        {
+          "id": "p_30",
+          "en": "Licencia de conducir",
+          "es": "Licencia de conducir"
+        },
+        {
+          "id": "p_31",
+          "en": "Gasolinera",
+          "es": "Gasolinera"
+        },
+        {
+          "id": "p_32",
+          "en": "Carretera",
+          "es": "Carretera"
+        },
+        {
+          "id": "p_33",
+          "en": "Autopista",
+          "es": "Autopista"
+        },
+        {
+          "id": "p_34",
+          "en": "Tráfico",
+          "es": "Tráfico"
+        },
+        {
+          "id": "p_35",
+          "en": "Semáforo",
+          "es": "Semáforo"
+        },
+        {
+          "id": "p_36",
+          "en": "Paso de peatones",
+          "es": "Paso de peatones"
+        },
+        {
+          "id": "p_37",
+          "en": "Peaje",
+          "es": "Peaje"
+        },
+        {
+          "id": "p_38",
+          "en": "Aparcamiento",
+          "es": "Aparcamiento"
+        },
+        {
+          "id": "p_39",
+          "en": "Conducir",
+          "es": "Conducir"
+        },
+        {
+          "id": "p_40",
+          "en": "Caminar",
+          "es": "Caminar"
+        },
+        {
+          "id": "p_41",
+          "en": "Perder el autobús",
+          "es": "Perder el autobús"
+        },
+        {
+          "id": "p_42",
+          "en": "Subir al tren",
+          "es": "Subir al tren"
+        },
+        {
+          "id": "p_43",
+          "en": "Bajar del tren",
+          "es": "Bajar del tren"
+        },
+        {
+          "id": "p_44",
+          "en": "Transbordo",
+          "es": "Transbordo"
+        },
+        {
+          "id": "p_45",
+          "en": "A tiempo",
+          "es": "A tiempo"
+        },
+        {
+          "id": "p_46",
+          "en": "Retrasado",
+          "es": "Retrasado"
+        },
+        {
+          "id": "p_47",
+          "en": "Cancelado",
+          "es": "Cancelado"
+        },
+        {
+          "id": "p_48",
+          "en": "Asiento reservado",
+          "es": "Asiento reservado"
+        },
+        {
+          "id": "p_49",
+          "en": "Equipaje de mano",
+          "es": "Equipaje de mano"
+        },
+        {
+          "id": "p_50",
+          "en": "Viajero",
+          "es": "Viajero"
         }
       ]
     }

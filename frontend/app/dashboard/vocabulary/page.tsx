@@ -10,19 +10,25 @@ import apiClient from '@/lib/apiClient';
 
 import { 
   ArrowLeft, BookA, Search, Play, Brain, 
-  Briefcase, Code2, Plane, Users, Coffee, 
-  Lock, CheckCircle2, Loader2, Crown, Languages, Flame, Zap, Sparkles, ChevronRight, X
+  Briefcase, Plane, Users, Coffee, 
+  Lock, CheckCircle2, Loader2, Crown, Languages, Flame, Zap, Sparkles, ChevronRight, X,
+  MessageSquare, Coins, Handshake, Lightbulb
 } from 'lucide-react';
 
 const CATEGORIES = [
   { id: 'basics', label: 'Life Essentials', icon: Coffee },
+  { id: 'travel', label: 'Global Travel', icon: Plane },
   { id: 'business', label: 'Business & Career', icon: Briefcase },
   { id: 'marketing', label: 'Marketing & Growth', icon: Users },
-  { id: 'tech', label: 'Technology & Dev', icon: Code2 },
-  { id: 'travel', label: 'Global Travel', icon: Plane },
+  { id: 'networking', label: 'Social & Networking', icon: MessageSquare },
+  { id: 'leadership', label: 'Executive Leadership', icon: Crown },
+  { id: 'finance', label: 'Finance & Wealth', icon: Coins },
+  { id: 'negotiation', label: 'Negotiation & Deals', icon: Handshake },
+  { id: 'lifestyle', label: 'Lifestyle & Wellness', icon: Sparkles },
+  { id: 'innovation', label: 'Science & AI', icon: Lightbulb }
 ];
 
-const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
+const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
 export default function VocabularyPage() {
   const router = useRouter();
@@ -37,7 +43,16 @@ export default function VocabularyPage() {
   const [vocabProgress, setVocabProgress] = useState<any[]>([]);
   const [userStats, setUserStats] = useState({ streak: 0, totalXP: 0 });
   const [isLoading, setIsLoading] = useState(true);
-  const [showLangModal, setShowLangModal] = useState(true);
+  const [showLangModal, setShowLangModal] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const seen = localStorage.getItem('vocab_lang_modal_seen');
+      if (!seen) {
+        setShowLangModal(true);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -244,17 +259,47 @@ export default function VocabularyPage() {
               key={activeCat}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
             >
-              {LEVELS.flatMap((level, levelIndex) => [1, 2, 3, 4].map(part => { 
-                const moduleNum = (levelIndex * 4) + part; 
-                const moduleStr = moduleNum.toString().padStart(2, '0'); 
-                const lessonId = `${activeCat}_mod_${moduleStr}`;
+              {LEVELS.flatMap((level, levelIndex) => {
+                const partsCount = 10;
+                const partsArray = Array.from({ length: partsCount }, (_, i) => i + 1);
                 
-                const status = getLessonState(lessonId);
-                const score = getScore(lessonId);
-                const isLocked = status === 'locked';
+                return partsArray.map(part => {
+                  const moduleNum = (levelIndex * partsCount) + part;
+                  const moduleStr = moduleNum.toString().padStart(2, '0');
+                  const lessonId = `${activeCat}_mod_${moduleStr}`;
+                  
+                  const status = getLessonState(lessonId);
+                  const score = getScore(lessonId);
+                  const isLocked = status === 'locked';
 
-                const displayTitle = `${activeCat.toUpperCase()} Mastery • ${level}`;
-                const subTitle = `Part ${part}: Technical Assets`;
+                  const categoryNames: Record<string, string> = {
+                    basics: 'Life Essentials',
+                    travel: 'Global Travel',
+                    business: 'Business & Career',
+                    marketing: 'Marketing & Growth',
+                    networking: 'Social & Networking',
+                    leadership: 'Executive Leadership',
+                    finance: 'Finance & Wealth',
+                    negotiation: 'Negotiation & Deals',
+                    lifestyle: 'Lifestyle & Wellness',
+                    innovation: 'Science & AI'
+                  };
+                  
+                  const categorySubtitles: Record<string, string> = {
+                    basics: 'Core Assets',
+                    travel: 'Transit Assets',
+                    business: 'Executive Assets',
+                    marketing: 'Growth Assets',
+                    networking: 'Social Assets',
+                    leadership: 'Rhetoric Assets',
+                    finance: 'Wealth Assets',
+                    negotiation: 'Bargaining Assets',
+                    lifestyle: 'Wellness Assets',
+                    innovation: 'Future Assets'
+                  };
+
+                  const displayTitle = `${categoryNames[activeCat] || activeCat.toUpperCase()} • ${level}`;
+                  const subTitle = `Part ${part}: ${categorySubtitles[activeCat] || 'Technical Assets'}`;
                 
                 if (searchTerm && !displayTitle.toLowerCase().includes(searchTerm.toLowerCase())) return null;
 
@@ -318,7 +363,8 @@ export default function VocabularyPage() {
                     )}
                   </motion.div>
                 );
-              }))}
+                });
+              })}
             </motion.div>
           </>
         )}
@@ -368,6 +414,7 @@ export default function VocabularyPage() {
                       onClick={() => {
                         setLanguage(langOpt.id as any);
                         setShowLangModal(false);
+                        localStorage.setItem('vocab_lang_modal_seen', 'true');
                       }}
                       className={`
                         p-5 border text-left flex flex-col justify-between h-48 transition-all rounded-none relative group bg-white
@@ -407,7 +454,10 @@ export default function VocabularyPage() {
                   Regresar al Dashboard Principal
                 </button>
                 <button
-                  onClick={() => setShowLangModal(false)}
+                  onClick={() => {
+                    setShowLangModal(false);
+                    localStorage.setItem('vocab_lang_modal_seen', 'true');
+                  }}
                   className="w-full sm:w-auto px-6 py-2.5 bg-orange-600 hover:bg-orange-700 text-white text-[10px] font-black uppercase tracking-widest transition-all rounded-none active:scale-[0.98]"
                 >
                   Permanecer en {activeLanguage === 'en' ? 'Inglés' : activeLanguage === 'fr' ? 'Francés' : 'Chino'}

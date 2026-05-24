@@ -32,7 +32,8 @@ def update_lesson_progress(
     score: int, 
     steps_completed: int, 
     total_steps: int, 
-    lesson_type: str = "standard"
+    lesson_type: str = "standard",
+    difficulty_completed: str = "easy"
 ):
     # 1. Obtener o Crear Progreso Actual
     progress = get_user_progress(db, user_id, lesson_id)
@@ -44,6 +45,7 @@ def update_lesson_progress(
     progress.total_steps = total_steps
     progress.score = max(progress.score, score) 
     progress.status = "active"
+    progress.difficulty_completed = difficulty_completed
     progress.updated_at = datetime.now()
 
     # 3. Calcular Estrellas
@@ -57,6 +59,17 @@ def update_lesson_progress(
 
     if passed:
         progress.status = "completed"
+        
+        # 🔥 Calcular boletos para sorteo (Vocabulario)
+        if lesson_type == "vocab":
+            user = db.query(models.User).filter(models.User.id == user_id).first()
+            if user:
+                is_premium_tier = user.is_pro or (user.tier in ["pro", "executive"])
+                if difficulty_completed == "pro" and is_premium_tier:
+                    progress.tickets_earned = 5
+                else:
+                    progress.tickets_earned = 1
+
         # Intentar desbloquear siguiente nivel
         _unlock_next_content(db, user_id, lesson_id, lesson_type)
         _check_achievements(db, user_id, score)

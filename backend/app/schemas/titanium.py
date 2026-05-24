@@ -14,6 +14,7 @@ class ProgressUpdate(BaseModel):
     
     score: int        # 0 a 100
     stars: Optional[int] = 0
+    difficulty_completed: Optional[str] = "easy"
 
 # ==============================================================================
 # 2. OUTPUT: Lo que envías al Frontend (Lectura inteligente)
@@ -30,6 +31,8 @@ class ProgressRead(BaseModel):
     
     current_step: int
     total_steps: int
+    difficulty_completed: Optional[str] = "easy"
+    tickets_earned: Optional[int] = 1
     updated_at: Optional[datetime] = None
 
     # --- CAMPOS COMPUTADOS (El frontend los espera, pero la DB no los tiene) ---

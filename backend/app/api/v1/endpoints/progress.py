@@ -39,7 +39,8 @@ def complete_lesson(
             score=data.score,
             steps_completed=data.current_step,
             total_steps=data.total_steps, 
-            lesson_type=data.lesson_type 
+            lesson_type=data.lesson_type,
+            difficulty_completed=data.difficulty_completed
         )
         return progress
     except Exception as e:

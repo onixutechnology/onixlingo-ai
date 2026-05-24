@@ -1,45 +1,272 @@
 {
   "id": "travel_mod_18",
-  "title": "World Explorer C1-2",
-  "description": "Mastering travel vocabulary. Level C1, Part 2.",
-  "level": "C1",
-  "total_xp": 180,
+  "category_id": "travel",
+  "title": "Global Travel • A2 - Part 8",
+  "description": "Master executive vocabulary. Level A2, Module 8 of 10.",
+  "level": "A2",
+  "part": 8,
+  "total_xp": 150,
+  "status": "locked",
+  "theme": {
+    "icon": "Plane",
+    "color": "sky"
+  },
   "stages": [
     {
       "id": "drill_travel_mod_18",
       "type": "pairing_drill",
-      "title": "Neuro Link: Travel",
-      "description": "Rapid association drill.",
+      "title": "Neuro Link: A2 Vocabulary",
+      "description": "Interactive pairing association.",
       "pairs": [
         {
-          "id": "p_0",
-          "en": "Stopover",
-          "es": "Parada técnica"
+          "id": "p_01",
+          "en": "Fly the national customs in the city center",
+          "es": "Volar la aduana nacional en el centro de la ciudad"
         },
         {
-          "id": "p_1",
-          "en": "Amenities",
-          "es": "Servicios"
+          "id": "p_02",
+          "en": "Visit the departures terminal at the beach",
+          "es": "Visitar la terminal de salidas en la playa"
         },
         {
-          "id": "p_2",
-          "en": "Concierge",
-          "es": "Conserje"
+          "id": "p_03",
+          "en": "Travel the train station at the station",
+          "es": "Viajar la estación de tren en la estación"
         },
         {
-          "id": "p_3",
-          "en": "Valet",
-          "es": "Aparcacoches"
+          "id": "p_04",
+          "en": "Visit the carry-on baggage during the flight",
+          "es": "Visitar el equipaje de mano durante el vuelo"
         },
         {
-          "id": "p_4",
-          "en": "Suite",
-          "es": "Suite"
+          "id": "p_05",
+          "en": "Buy the tour guide with the passport",
+          "es": "Comprar el guía turístico con el pasaporte"
         },
         {
-          "id": "p_5",
-          "en": "Upgrade",
-          "es": "Mejora"
+          "id": "p_06",
+          "en": "Take off the flight ticket during the flight",
+          "es": "Despegar el billete de avión durante el vuelo"
+        },
+        {
+          "id": "p_07",
+          "en": "Check in the travel insurance abroad",
+          "es": "Facturar el seguro de viaje en el extranjero"
+        },
+        {
+          "id": "p_08",
+          "en": "Land the boarding pass during the flight",
+          "es": "Aterrizar la tarjeta de embarque durante el vuelo"
+        },
+        {
+          "id": "p_09",
+          "en": "Take off the carry-on baggage during the flight",
+          "es": "Despegar el equipaje de mano durante el vuelo"
+        },
+        {
+          "id": "p_10",
+          "en": "Travel the boarding pass at the station",
+          "es": "Viajar la tarjeta de embarque en la estación"
+        },
+        {
+          "id": "p_11",
+          "en": "Buy the departures terminal with locals",
+          "es": "Comprar la terminal de salidas con los locales"
+        },
+        {
+          "id": "p_12",
+          "en": "Change / Exchange the flight ticket at the station",
+          "es": "Cambiar el billete de avión en la estación"
+        },
+        {
+          "id": "p_13",
+          "en": "Explore the local bus at the hotel",
+          "es": "Explorar el autobús local en el hotel"
+        },
+        {
+          "id": "p_14",
+          "en": "Navigate / Sail the departures terminal at the station",
+          "es": "Navegar la terminal de salidas en la estación"
+        },
+        {
+          "id": "p_15",
+          "en": "Declare the train station at the beach",
+          "es": "Declarar la estación de tren en la playa"
+        },
+        {
+          "id": "p_16",
+          "en": "Navigate / Sail the tour guide at the airport",
+          "es": "Navegar el guía turístico en el aeropuerto"
+        },
+        {
+          "id": "p_17",
+          "en": "Navigate / Sail the carry-on baggage with locals",
+          "es": "Navegar el equipaje de mano con los locales"
+        },
+        {
+          "id": "p_18",
+          "en": "Declare the tourist visa with locals",
+          "es": "Declarar la visa de turista con los locales"
+        },
+        {
+          "id": "p_19",
+          "en": "Rent the boarding pass with locals",
+          "es": "Alquilar la tarjeta de embarque con los locales"
+        },
+        {
+          "id": "p_20",
+          "en": "Check in the luxury hotel in ancient ruins",
+          "es": "Facturar el hotel de lujo en las ruinas antiguas"
+        },
+        {
+          "id": "p_21",
+          "en": "Visit the travel insurance at the hotel",
+          "es": "Visitar el seguro de viaje en el hotel"
+        },
+        {
+          "id": "p_22",
+          "en": "Visit the foreign currency at the hotel",
+          "es": "Visitar la moneda extranjera en el hotel"
+        },
+        {
+          "id": "p_23",
+          "en": "Buy the local bus at the hotel",
+          "es": "Comprar el autobús local en el hotel"
+        },
+        {
+          "id": "p_24",
+          "en": "Board the train station at the hotel",
+          "es": "Embarcar la estación de tren en el hotel"
+        },
+        {
+          "id": "p_25",
+          "en": "Book / Reserve the luxury hotel with the passport",
+          "es": "Reservar el hotel de lujo con el pasaporte"
+        },
+        {
+          "id": "p_26",
+          "en": "Book / Reserve the luxury hotel with locals",
+          "es": "Reservar el hotel de lujo con los locales"
+        },
+        {
+          "id": "p_27",
+          "en": "Board the rental car abroad",
+          "es": "Embarcar el coche de alquiler en el extranjero"
+        },
+        {
+          "id": "p_28",
+          "en": "Change / Exchange the luxury hotel at the hotel",
+          "es": "Cambiar el hotel de lujo en el hotel"
+        },
+        {
+          "id": "p_29",
+          "en": "Explore the flight ticket with the passport",
+          "es": "Explorar el billete de avión con el pasaporte"
+        },
+        {
+          "id": "p_30",
+          "en": "Check in the local bus in ancient ruins",
+          "es": "Facturar el autobús local en las ruinas antiguas"
+        },
+        {
+          "id": "p_31",
+          "en": "Book / Reserve the luxury hotel at the airport",
+          "es": "Reservar el hotel de lujo en el aeropuerto"
+        },
+        {
+          "id": "p_32",
+          "en": "Drive the local bus abroad",
+          "es": "Conducir el autobús local en el extranjero"
+        },
+        {
+          "id": "p_33",
+          "en": "Declare the flight ticket in ancient ruins",
+          "es": "Declarar el billete de avión en las ruinas antiguas"
+        },
+        {
+          "id": "p_34",
+          "en": "Fly the departures terminal with the passport",
+          "es": "Volar la terminal de salidas con el pasaporte"
+        },
+        {
+          "id": "p_35",
+          "en": "Take off the valid passport with the passport",
+          "es": "Despegar el pasaporte vigente con el pasaporte"
+        },
+        {
+          "id": "p_36",
+          "en": "Board the valid passport in the city center",
+          "es": "Embarcar el pasaporte vigente en el centro de la ciudad"
+        },
+        {
+          "id": "p_37",
+          "en": "Declare the luxury hotel in the city center",
+          "es": "Declarar el hotel de lujo en el centro de la ciudad"
+        },
+        {
+          "id": "p_38",
+          "en": "Check in the travel itinerary abroad",
+          "es": "Facturar el itinerario de viaje en el extranjero"
+        },
+        {
+          "id": "p_39",
+          "en": "Navigate / Sail the flight ticket with locals",
+          "es": "Navegar el billete de avión con los locales"
+        },
+        {
+          "id": "p_40",
+          "en": "Take off the travel itinerary in the city center",
+          "es": "Despegar el itinerario de viaje en el centro de la ciudad"
+        },
+        {
+          "id": "p_41",
+          "en": "Rent the rental car during the flight",
+          "es": "Alquilar el coche de alquiler durante el vuelo"
+        },
+        {
+          "id": "p_42",
+          "en": "Travel the travel itinerary during the flight",
+          "es": "Viajar el itinerario de viaje durante el vuelo"
+        },
+        {
+          "id": "p_43",
+          "en": "Check in the rental car abroad",
+          "es": "Facturar el coche de alquiler en el extranjero"
+        },
+        {
+          "id": "p_44",
+          "en": "Check in the luxury hotel in the city center",
+          "es": "Facturar el hotel de lujo en el centro de la ciudad"
+        },
+        {
+          "id": "p_45",
+          "en": "Check in the foreign currency at the hotel",
+          "es": "Facturar la moneda extranjera en el hotel"
+        },
+        {
+          "id": "p_46",
+          "en": "Check in the travel itinerary at the station",
+          "es": "Facturar el itinerario de viaje en la estación"
+        },
+        {
+          "id": "p_47",
+          "en": "Change / Exchange the valid passport with locals",
+          "es": "Cambiar el pasaporte vigente con los locales"
+        },
+        {
+          "id": "p_48",
+          "en": "Change / Exchange the tour guide in ancient ruins",
+          "es": "Cambiar el guía turístico en las ruinas antiguas"
+        },
+        {
+          "id": "p_49",
+          "en": "Explore the rental car in ancient ruins",
+          "es": "Explorar el coche de alquiler en las ruinas antiguas"
+        },
+        {
+          "id": "p_50",
+          "en": "Travel the local bus in ancient ruins",
+          "es": "Viajar el autobús local en las ruinas antiguas"
         }
       ]
     }

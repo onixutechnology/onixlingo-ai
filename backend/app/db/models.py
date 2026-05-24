@@ -69,6 +69,8 @@ class Progress(Base):
     current_step = Column(Integer, default=0)
     total_steps = Column(Integer, default=1)
     status = Column(String, default="locked") 
+    difficulty_completed = Column(String, default="easy")
+    tickets_earned = Column(Integer, default=1)
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
     owner = relationship("User", back_populates="progress")
 

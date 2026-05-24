@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { Loader2, AlertTriangle, X, Volume2, VolumeX, RefreshCcw, Home, Sparkles, ChevronRight } from 'lucide-react';
+import { Loader2, AlertTriangle, X, Volume2, VolumeX, RefreshCcw, Home, Sparkles, ChevronRight, ArrowLeft, Clock } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Cookies from 'js-cookie';
 import { useUIStore } from '@/store/uiStore';
@@ -66,6 +66,37 @@ export default function VocabularyLessonPage() {
   const [showResumePrompt, setShowResumePrompt] = useState(false);
   const [pendingResumeState, setPendingResumeState] = useState<any>(null);
   const [drillKey, setDrillKey] = useState(0);
+
+  // --- DIFICULTAD Y TIEMPO ---
+  const [difficulty, setDifficulty] = useState<'easy' | 'medium' | 'pro'>('easy');
+  const [hasSelectedDifficulty, setHasSelectedDifficulty] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(0); 
+  const [timerActive, setTimerActive] = useState(false);
+  const [showTimeUpModal, setShowTimeUpModal] = useState(false);
+
+  // Countdown timer effect
+  useEffect(() => {
+    let intervalId: any;
+    if (timerActive && timeLeft > 0) {
+      intervalId = setInterval(() => {
+        setTimeLeft(prev => {
+          if (prev <= 1) {
+            setTimerActive(false);
+            setShowTimeUpModal(true);
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    }
+    return () => clearInterval(intervalId);
+  }, [timerActive, timeLeft]);
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  };
 
   useEffect(() => {
     if (lessonId && lesson && typeof window !== 'undefined') {
@@ -137,6 +168,7 @@ export default function VocabularyLessonPage() {
 
   // --- 3. FINALIZAR LECCIÓN & GUARDADO (Punto 26) ---
   const handleLessonComplete = async () => {
+    setTimerActive(false); // Parar temporizador
     if (!lesson) return;
     setIsSaving(true);
 
@@ -162,7 +194,8 @@ export default function VocabularyLessonPage() {
                     current_step: 1,      // Vocabulario suele ser 1 etapa grande
                     total_steps: 1,
                     score: 100,           // Vocabulario se completa o no (no hay nota parcial)
-                    stars: 3
+                    stars: 3,
+                    difficulty_completed: difficulty // 🔥 Enviamos dificultad elegida
                 })
             });
         }
@@ -302,6 +335,114 @@ export default function VocabularyLessonPage() {
     />
   );
 
+  // Pantalla de Selección de Dificultad
+  if (!hasSelectedDifficulty && lesson) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-6 relative overflow-hidden font-sans">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-indigo-500"></div>
+        
+        <motion.div 
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          className="bg-slate-955 border border-slate-800 p-8 max-w-xl w-full shadow-2xl rounded-none relative z-10 backdrop-blur-md"
+        >
+          <div className="flex justify-between items-start mb-6">
+            <button 
+              onClick={() => router.push('/dashboard/vocabulary')}
+              className="p-2 border border-slate-800 text-slate-400 hover:text-white transition-all rounded-none"
+            >
+              <ArrowLeft size={16} />
+            </button>
+            <div className="text-center">
+              <span className="text-[8px] font-black uppercase tracking-[0.3em] text-indigo-400">Selector de Nivel</span>
+              <h2 className="text-lg font-serif font-black italic uppercase tracking-wider text-white mt-1">
+                {lesson.title}
+              </h2>
+            </div>
+            <div className="w-8"></div>
+          </div>
+
+          <p className="text-[10px] text-slate-400 text-center leading-relaxed mb-8 uppercase tracking-widest">
+            Selecciona la dificultad del Neuro Link. Elige sabiamente, la velocidad premiará a los valientes.
+          </p>
+
+          <div className="space-y-4 mb-8">
+            {[
+              { 
+                id: 'easy', 
+                title: 'Nivel Fácil (Easy)', 
+                time: 'Sin tiempo límite', 
+                desc: 'Aprende y asocia palabras sin presión. Excelente para practicar.',
+                badge: '1 Boleto de Sorteo',
+                badgeColor: 'bg-slate-900 text-slate-400 border-slate-800'
+              },
+              { 
+                id: 'medium', 
+                title: 'Nivel Medio (Medium)', 
+                time: 'Límite de 5 Minutos', 
+                desc: 'Pon a prueba tu rapidez mental básica bajo el reloj (5:00 min).',
+                badge: '1 Boleto de Sorteo',
+                badgeColor: 'bg-indigo-950/40 text-indigo-400 border-indigo-900/50'
+              },
+              { 
+                id: 'pro', 
+                title: 'Nivel Pro (Rápido y Furioso)', 
+                time: 'Límite de 2 Minutos', 
+                desc: 'Para maestros. ¡Si tienes cuenta PRO o EXECUTIVE, este módulo VALE POR 5 BOLETOS para el sorteo de recompensas!',
+                badge: 'x5 Boletos (PRO/Exec)',
+                badgeColor: 'bg-emerald-950/40 text-emerald-400 border-emerald-900/50'
+              }
+            ].map((opt) => {
+              const isSelected = difficulty === opt.id;
+              return (
+                <button
+                  key={opt.id}
+                  onClick={() => setDifficulty(opt.id as any)}
+                  className={`
+                    w-full p-4 border text-left flex flex-col justify-between transition-all rounded-none relative
+                    ${isSelected 
+                      ? 'border-indigo-500 bg-indigo-955 ring-1 ring-indigo-500' 
+                      : 'border-slate-800 bg-slate-900/40 hover:border-slate-700'}
+                  `}
+                >
+                  <div className="flex justify-between items-start w-full mb-1">
+                    <h3 className={`font-black text-[11px] uppercase tracking-wider ${isSelected ? 'text-indigo-400' : 'text-slate-200'}`}>
+                      {opt.title}
+                    </h3>
+                    <span className={`text-[8px] font-black uppercase tracking-wider px-2 py-0.5 border rounded-none ${opt.badgeColor}`}>
+                      {opt.badge}
+                    </span>
+                  </div>
+                  <span className="text-[9px] font-mono font-black text-slate-400 mb-2">{opt.time}</span>
+                  <p className="text-[9px] text-slate-500 font-bold uppercase tracking-wider leading-relaxed">
+                    {opt.desc}
+                  </p>
+                </button>
+              );
+            })}
+          </div>
+
+          <button 
+            onClick={() => {
+              setHasSelectedDifficulty(true);
+              if (difficulty === 'medium') {
+                setTimeLeft(300);
+                setTimerActive(true);
+              } else if (difficulty === 'pro') {
+                setTimeLeft(120);
+                setTimerActive(true);
+              }
+            }}
+            className="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[10px] uppercase tracking-[0.2em] transition-all rounded-none shadow-lg shadow-indigo-600/30"
+          >
+            Sincronizar y Comenzar
+          </button>
+        </motion.div>
+      </div>
+    );
+  }
+
   // =========================================================
   // RENDER PRINCIPAL
   // =========================================================
@@ -337,8 +478,14 @@ export default function VocabularyLessonPage() {
             </button>
           </div>
 
-          <div className="font-bold text-slate-700 truncate max-w-[150px] md:max-w-md text-center">
-              {lesson.title}
+          <div className="font-bold text-slate-700 truncate max-w-[150px] md:max-w-md text-center flex flex-col items-center">
+              <span className="text-sm font-black truncate max-w-[150px] md:max-w-md">{lesson.title}</span>
+              {(difficulty === 'medium' || difficulty === 'pro') && (
+                <span className={`text-[10px] font-mono font-black mt-0.5 px-2 py-0.5 border flex items-center gap-1.5 ${timeLeft <= 20 ? 'bg-red-50 text-red-600 border-red-200 animate-pulse animate-bounce' : 'bg-indigo-50 text-indigo-600 border-indigo-200'}`}>
+                  <Clock size={10} className={timeLeft <= 20 ? 'animate-bounce' : ''} />
+                  {formatTime(timeLeft)}
+                </span>
+              )}
           </div>
 
           <div className="w-[88px] flex justify-end"> {/* Espaciador para equilibrar el header */}
@@ -363,9 +510,9 @@ export default function VocabularyLessonPage() {
               onCorrect={() => {
                   // (Punto 25) Sonido condicional
                   if (!isMuted) {
-                      const audio = new Audio('/sounds/correct.mp3'); // Asegúrate de tener este archivo o usa Speech
+                      const audio = new Audio('/sounds/correct.mp3');
                       audio.volume = 0.5;
-                      audio.play().catch(() => {}); // Ignora error si no hay interacción previa
+                      audio.play().catch(() => {});
                   }
               }} 
               onError={() => {
@@ -376,38 +523,36 @@ export default function VocabularyLessonPage() {
         </main>
       </motion.div>
 
-      {/* (Punto 11) MODAL DE CONFIRMACIÓN DE SALIDA */}
       <AnimatePresence>
         {showExitConfirm && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm">
-                <motion.div 
-                    initial={{ scale: 0.95, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.95, opacity: 0 }}
-                    className="bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full border border-slate-100"
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm">
+            <motion.div 
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full border border-slate-100"
+            >
+              <h3 className="text-xl font-black text-slate-800 mb-2">¿Abandonar lección?</h3>
+              <p className="text-slate-500 mb-6 text-sm">Perderás el progreso de esta sesión si sales ahora.</p>
+              <div className="flex gap-3">
+                <button 
+                  onClick={() => setShowExitConfirm(false)}
+                  className="flex-1 py-3 font-bold text-slate-600 bg-slate-100 rounded-xl hover:bg-slate-200 transition-colors"
                 >
-                    <h3 className="text-xl font-black text-slate-800 mb-2">¿Abandonar lección?</h3>
-                    <p className="text-slate-500 mb-6 text-sm">Perderás el progreso de esta sesión si sales ahora.</p>
-                    <div className="flex gap-3">
-                        <button 
-                            onClick={() => setShowExitConfirm(false)}
-                            className="flex-1 py-3 font-bold text-slate-600 bg-slate-100 rounded-xl hover:bg-slate-200 transition-colors"
-                        >
-                            Quedarse
-                        </button>
-                        <button 
-                            onClick={handleExit}
-                            className="flex-1 py-3 font-bold text-white bg-red-500 rounded-xl hover:bg-red-600 transition-colors shadow-lg shadow-red-500/20"
-                        >
-                            Salir
-                        </button>
-                    </div>
-                </motion.div>
-            </div>
+                  Quedarse
+                </button>
+                <button 
+                  onClick={handleExit}
+                  className="flex-1 py-3 font-bold text-white bg-red-500 rounded-xl hover:bg-red-600 transition-colors shadow-lg shadow-red-500/20"
+                >
+                  Salir
+                </button>
+              </div>
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
 
-      {/* DIÁLOGO INTERACTIVO PARA RETOMAR SESIÓN GUARDADA */}
       {showResumePrompt && pendingResumeState && (
         <div className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
           <div className="bg-slate-900 border-2 border-orange-950 p-6 md:p-8 max-w-md w-full shadow-2xl text-center rounded-none relative">
@@ -423,7 +568,7 @@ export default function VocabularyLessonPage() {
               <button 
                 onClick={() => {
                   setSavedProgressIds(pendingResumeState.completedIds);
-                  setDrillKey(prev => prev + 1); // Forzar recarga con estado
+                  setDrillKey(prev => prev + 1);
                   setShowResumePrompt(false);
                 }} 
                 className="w-full py-3 bg-orange-600 hover:bg-orange-500 text-white font-black text-[10px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-1.5"
@@ -445,6 +590,52 @@ export default function VocabularyLessonPage() {
           </div>
         </div>
       )}
+
+      <AnimatePresence>
+        {showTimeUpModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-955/90 backdrop-blur-md">
+            <motion.div 
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              className="bg-slate-900 border-2 border-red-950 p-8 max-w-md w-full shadow-2xl text-center rounded-none relative"
+            >
+              <div className="absolute top-0 left-0 w-full h-1 bg-red-600" />
+              <div className="w-16 h-16 bg-red-955/40 text-red-500 border border-red-800 flex items-center justify-center mx-auto mb-6">
+                <Clock size={32} className="animate-pulse" />
+              </div>
+              <h3 className="text-sm font-serif font-black italic uppercase tracking-wider text-red-400 mb-2">¡Tiempo Agotado!</h3>
+              <p className="text-[10px] text-slate-400 leading-relaxed mb-8 uppercase tracking-wider">
+                El tiempo límite para el nivel de dificultad <strong className="text-white">{difficulty.toUpperCase()}</strong> ha expirado. El Neuro Link se ha desconectado.
+              </p>
+              <div className="flex flex-col gap-2">
+                <button 
+                  onClick={() => {
+                    setShowTimeUpModal(false);
+                    setDrillKey(prev => prev + 1);
+                    setSavedProgressIds([]);
+                    if (difficulty === 'medium') {
+                      setTimeLeft(300);
+                      setTimerActive(true);
+                    } else if (difficulty === 'pro') {
+                      setTimeLeft(120);
+                      setTimerActive(true);
+                    }
+                  }}
+                  className="w-full py-3 bg-red-600 hover:bg-red-500 text-white font-black text-[10px] uppercase tracking-widest transition-all rounded-none shadow-lg shadow-red-600/30"
+                >
+                  REINTENTAR DIFICULTAD
+                </button>
+                <button 
+                  onClick={handleExit}
+                  className="w-full py-2.5 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-widest transition-all rounded-none"
+                >
+                  SALIR AL DASHBOARD
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
     </div>
   );
