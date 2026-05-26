@@ -4,6 +4,8 @@ import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { User, Mail, Lock, Loader2, AlertCircle, ArrowRight, CheckCircle2, ShieldPlus } from 'lucide-react';
+import Cookies from 'js-cookie';
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import apiClient from '@/lib/apiClient';
 
 function RegisterForm() {
@@ -32,13 +34,37 @@ function RegisterForm() {
     if (status === 'error') setStatus('idle');
   }, [formData]);
 
+  const handleGoogleSuccess = async (credentialResponse: any) => {
+    setStatus('loading');
+    setErrorMessage('');
+    
+    try {
+      const { data } = await apiClient.post('/auth/google', {
+        token: credentialResponse.credential
+      });
+
+      setStatus('success');
+      
+      if (data.access_token) {
+        Cookies.set('access_token', data.access_token, { 
+          expires: 1, 
+          secure: true, 
+          sameSite: 'lax',
+          path: '/'
+        });
+      }
+      Cookies.set('username', data.username, { expires: 1, path: '/' });
+      
+      router.push('/dashboard');
+      router.refresh();
+    } catch (error: any) {
+      setStatus('error');
+      setErrorMessage(error.response?.data?.detail || 'Fallo de autenticación con Google.');
+    }
+  };
+
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.invitedByCode || !formData.invitedByCode.trim()) {
-      setErrorMessage('El Código de Acceso Institucional es obligatorio.');
-      setStatus('error');
-      return;
-    }
     if (formData.password !== formData.confirmPassword) {
       setErrorMessage('Discrepancia en contraseñas.');
       setStatus('error');
@@ -153,21 +179,20 @@ function RegisterForm() {
         </div>
       </div>
       <div>
-        <label className="block text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1.5 ml-1">Código de Acceso Institucional</label>
+        <label className="block text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1.5 ml-1">Código de Acceso Institucional (Opcional)</label>
         <div className="relative">
           <ShieldPlus className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-teal-600" />
           <input
             type="text"
             name="invitedByCode"
-            required
             className="block w-full pl-10 pr-4 py-2.5 border border-slate-200 rounded-none bg-slate-50 text-slate-900 text-[11px] font-bold focus:outline-none focus:border-teal-600 transition-all placeholder-slate-300"
-            placeholder="ONX-YYYY-USR-XXXX"
+            placeholder="ONX-YYYY-USR-XXXX (Opcional)"
             value={formData.invitedByCode}
             onChange={handleInputChange}
           />
         </div>
         <p className="mt-1 text-[8px] font-black text-slate-400 uppercase tracking-[0.15em] leading-normal">
-          Requerido para activar tu correo institucional y desbloquear el acceso al sistema.
+          Opcional. Si dispones de un código de acceso o invitación institucional, ingrésalo aquí.
         </p>
       </div>
 
@@ -189,42 +214,65 @@ function RegisterForm() {
           <>REGISTRAR NUEVO USUARIO <ArrowRight size={14} /></>
         )}
       </button>
+
+      {/* Divisor Google */}
+      <div className="relative my-6 flex items-center justify-center">
+        <div className="border-t border-slate-200 w-full"></div>
+        <span className="bg-white px-3 text-[9px] text-slate-400 font-bold uppercase tracking-wider absolute">o inscríbete con</span>
+      </div>
+
+      {/* Botón de Google */}
+      <div className="flex justify-center w-full">
+        <GoogleLogin
+          onSuccess={handleGoogleSuccess}
+          onError={() => {
+            setStatus('error');
+            setErrorMessage('Error al conectar con Google.');
+          }}
+          theme="outline"
+          shape="square"
+          text="signup_with"
+          width="360"
+        />
+      </div>
     </form>
   );
 }
 
 export default function RegisterPage() {
   return (
-    <div className="min-h-screen bg-slate-100 flex flex-col justify-center py-12 px-4 font-sans selection:bg-teal-100 selection:text-teal-900 relative">
-      
-      <div className="sm:mx-auto sm:w-full sm:max-w-[440px] text-center relative z-10 mb-8">
-        <div className="mx-auto h-10 w-10 bg-teal-600 flex items-center justify-center mb-4">
-          <ShieldPlus className="text-white" size={20} />
+    <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ""}>
+      <div className="min-h-screen bg-slate-100 flex flex-col justify-center py-12 px-4 font-sans selection:bg-teal-100 selection:text-teal-900 relative">
+        
+        <div className="sm:mx-auto sm:w-full sm:max-w-[440px] text-center relative z-10 mb-8">
+          <div className="mx-auto h-10 w-10 bg-teal-600 flex items-center justify-center mb-4">
+            <ShieldPlus className="text-white" size={20} />
+          </div>
+          <h2 className="text-2xl font-black text-slate-900 tracking-tighter uppercase font-serif italic leading-none">
+            Inscripción Onix<span className="text-teal-600">Lingo</span>
+          </h2>
+          <p className="mt-2 text-[8px] font-black text-slate-400 uppercase tracking-[0.4em]">
+            Alta de Cuenta Institucional
+          </p>
         </div>
-        <h2 className="text-2xl font-black text-slate-900 tracking-tighter uppercase font-serif italic leading-none">
-          Inscripción Onix<span className="text-teal-600">Lingo</span>
-        </h2>
-        <p className="mt-2 text-[8px] font-black text-slate-400 uppercase tracking-[0.4em]">
-          Alta de Cuenta Institucional
-        </p>
-      </div>
 
-      <div className="sm:mx-auto sm:w-full sm:max-w-[440px] relative z-10">
-        <div className="bg-white border border-slate-200 p-10 shadow-none rounded-none">
-          <Suspense fallback={<div className="flex justify-center py-8"><Loader2 className="animate-spin text-teal-600 h-6 w-6" /></div>}>
-            <RegisterForm />
-          </Suspense>
+        <div className="sm:mx-auto sm:w-full sm:max-w-[440px] relative z-10">
+          <div className="bg-white border border-slate-200 p-10 shadow-none rounded-none">
+            <Suspense fallback={<div className="flex justify-center py-8"><Loader2 className="animate-spin text-teal-600 h-6 w-6" /></div>}>
+              <RegisterForm />
+            </Suspense>
 
-          <div className="mt-8 pt-8 border-t border-slate-100 text-center">
-            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">
-              ¿Registro previo completado?{' '}
-              <Link href="/login" className="text-teal-600 hover:text-teal-700 transition-colors">
-                Iniciar Sesión
-              </Link>
-            </p>
+            <div className="mt-8 pt-8 border-t border-slate-100 text-center">
+              <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">
+                ¿Registro previo completado?{' '}
+                <Link href="/login" className="text-teal-600 hover:text-teal-700 transition-colors">
+                  Iniciar Sesión
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </GoogleOAuthProvider>
   );
 }

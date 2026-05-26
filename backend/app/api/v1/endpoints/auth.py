@@ -10,6 +10,8 @@ from fastapi import APIRouter, Depends, HTTPException, status, Response
 from sqlalchemy.orm import Session
 from sqlalchemy import or_ # 🚀 IMPORTANTE: Para permitir búsqueda múltiple
 from pydantic import BaseModel, EmailStr
+from google.oauth2 import id_token
+from google.auth.transport import requests
 
 from app.database import get_db
 from app.db.models import User, BetaCode
@@ -43,11 +45,14 @@ class UserCreate(BaseModel):
     username: str
     email: EmailStr # Correo institucional obligatorio
     password: str
-    invited_by_code: str # Código de acceso único obligatorio
+    invited_by_code: Optional[str] = None # Código de acceso único opcional
 
 class UserLogin(BaseModel):
     username: str # El frontend manda "username", pero ahora puede contener un correo
     password: str
+
+class GoogleAuthRequest(BaseModel):
+    token: str
 
 class ForgotPasswordRequest(BaseModel):
     email: EmailStr
@@ -62,25 +67,23 @@ class ResetPasswordRequest(BaseModel):
 
 @router.post("/register", status_code=status.HTTP_201_CREATED)
 def register(user: UserCreate, db: Session = Depends(get_db)):
-    # 1. Verificar si el código de acceso único existe y está disponible
-    if not user.invited_by_code:
-        raise HTTPException(
-            status_code=400, 
-            detail="El código de acceso único es obligatorio para registrarse."
-        )
+    # 1. Verificar si el código de acceso único existe y está disponible (si fue provisto)
+    beta_code_record = None
+    clean_code = user.invited_by_code.strip() if user.invited_by_code else None
     
-    beta_code_record = db.query(BetaCode).filter(BetaCode.code == user.invited_by_code).first()
-    if not beta_code_record:
-        raise HTTPException(
-            status_code=400,
-            detail="El código de acceso ingresado no es válido."
-        )
-    
-    if beta_code_record.is_used:
-        raise HTTPException(
-            status_code=400,
-            detail="El código de acceso ingresado ya ha sido utilizado."
-        )
+    if clean_code:
+        beta_code_record = db.query(BetaCode).filter(BetaCode.code == clean_code).first()
+        if not beta_code_record:
+            raise HTTPException(
+                status_code=400,
+                detail="El código de acceso ingresado no es válido."
+            )
+        
+        if beta_code_record.is_used:
+            raise HTTPException(
+                status_code=400,
+                detail="El código de acceso ingresado ya ha sido utilizado."
+            )
 
     # 2. Verificar si existe el usuario o el correo
     existing_user = db.query(User).filter(
@@ -107,7 +110,7 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
         email=user.email, 
         hashed_password=hashed_password,
         referral_code=new_referral_code,
-        beta_code=user.invited_by_code,
+        beta_code=clean_code,
         tier="pro",
         is_pro=True,
         valid_until=now + timedelta(days=365)
@@ -116,15 +119,16 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
     # 5. Guardar en base de datos y marcar el código como usado
     try:
         db.add(db_user)
-        # Marcar el código de acceso como utilizado
-        beta_code_record.is_used = True
-        beta_code_record.used_by_email = user.email
-        beta_code_record.used_at = now
+        # Marcar el código de acceso como utilizado si fue provisto
+        if beta_code_record:
+            beta_code_record.is_used = True
+            beta_code_record.used_by_email = user.email
+            beta_code_record.used_at = now
         
         db.commit()
         db.refresh(db_user)
         
-        logger.info(f"🎉 Registro exitoso: Usuario '{db_user.username}' registrado con código de acceso '{user.invited_by_code}'.")
+        logger.info(f"🎉 Registro exitoso: Usuario '{db_user.username}' registrado{' con código de acceso ' + clean_code if clean_code else ' sin código de acceso'}.")
         
         return {
             "message": "Cuenta creada exitosamente", 
@@ -150,20 +154,6 @@ def login(user: UserLogin, response: Response, db: Session = Depends(get_db)):
     if not db_user or not verify_password(user.password, db_user.hashed_password):
         raise HTTPException(status_code=401, detail="Credenciales inválidas")
     
-    # 2b. Verificar código de acceso/autorización (beta_code)
-    if not db_user.beta_code:
-        raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail="Este correo institucional no está autorizado para iniciar sesión (no posee un código de acceso válido)."
-        )
-    
-    beta_code_record = db.query(BetaCode).filter(BetaCode.code == db_user.beta_code).first()
-    if not beta_code_record:
-        raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail="El código de acceso asociado a su cuenta es inválido."
-        )
-    
     # 3. Generar Token JWT
     access_token = create_access_token(subject=db_user.username)
 
@@ -185,6 +175,127 @@ def login(user: UserLogin, response: Response, db: Session = Depends(get_db)):
         progress_map = {p.lesson_id: {"stars": p.stars} for p in db_user.progress}
     return {
         "message": "Autenticado", 
+        "username": db_user.username,
+        "access_token": access_token,
+        "progress": progress_map
+    }
+
+@router.post("/google")
+def authenticate_google(payload: GoogleAuthRequest, response: Response, db: Session = Depends(get_db)):
+    google_client_id = os.getenv("GOOGLE_CLIENT_ID")
+    if not google_client_id:
+        logger.error("❌ GOOGLE_CLIENT_ID no configurado en las variables de entorno.")
+        raise HTTPException(
+            status_code=500,
+            detail="Error de configuración en el servidor de autenticación."
+        )
+
+    try:
+        id_info = id_token.verify_oauth2_token(
+            payload.token,
+            requests.Request(),
+            google_client_id
+        )
+        if id_info["iss"] not in ["accounts.google.com", "https://accounts.google.com"]:
+            raise ValueError("Issuer inválido.")
+    except Exception as e:
+        logger.warning(f"⚠️ Error al verificar token de Google: {e}")
+        raise HTTPException(
+            status_code=401,
+            detail="Token de Google inválido o expirado."
+        )
+
+    email = id_info.get("email")
+    name = id_info.get("name")
+    
+    if not email:
+        raise HTTPException(
+            status_code=400,
+            detail="El token de Google no contiene un correo electrónico válido."
+        )
+
+    db_user = db.query(User).filter(User.email == email).first()
+    now = datetime.utcnow()
+
+    if not db_user:
+        base_username = email.split("@")[0].lower()
+        username_suggested = base_username
+        col_index = 1
+        while db.query(User).filter(User.username == username_suggested).first():
+            username_suggested = f"{base_username}{col_index}"
+            col_index += 1
+
+        google_beta_code = f"GOOGLE-OAUTH-{username_suggested.upper()}"
+        beta_code_record = db.query(BetaCode).filter(BetaCode.code == google_beta_code).first()
+        if not beta_code_record:
+            beta_code_record = BetaCode(
+                code=google_beta_code,
+                is_used=True,
+                used_by_email=email,
+                used_at=now
+            )
+            db.add(beta_code_record)
+        else:
+            beta_code_record.is_used = True
+            beta_code_record.used_by_email = email
+            beta_code_record.used_at = now
+
+        db_user = User(
+            username=username_suggested,
+            email=email,
+            hashed_password="OAUTH_LOGIN_GOOGLE_ACCOUNT",
+            full_name=name,
+            referral_code=generate_referral_code(username_suggested),
+            beta_code=google_beta_code,
+            tier="pro",
+            is_pro=True,
+            valid_until=now + timedelta(days=365)
+        )
+        db.add(db_user)
+        try:
+            db.commit()
+            db.refresh(db_user)
+            logger.info(f"🎉 Registro de Google automático exitoso: Usuario '{db_user.username}'.")
+        except Exception as db_err:
+            db.rollback()
+            logger.error(f"Error al registrar usuario de Google en DB: {db_err}")
+            raise HTTPException(
+                status_code=500,
+                detail="Error interno al crear cuenta de usuario."
+            )
+    else:
+        if not db_user.beta_code:
+            google_beta_code = f"GOOGLE-OAUTH-{db_user.username.upper()}"
+            beta_code_record = db.query(BetaCode).filter(BetaCode.code == google_beta_code).first()
+            if not beta_code_record:
+                beta_code_record = BetaCode(
+                    code=google_beta_code,
+                    is_used=True,
+                    used_by_email=email,
+                    used_at=now
+                )
+                db.add(beta_code_record)
+            db_user.beta_code = google_beta_code
+            db.commit()
+
+    access_token = create_access_token(subject=db_user.username)
+
+    response.set_cookie(
+        key=COOKIE_NAME,
+        value=access_token,
+        httponly=False,
+        secure=True,
+        samesite="lax",
+        path="/",
+        max_age=60 * 60 * 24
+    )
+
+    progress_map = {}
+    if db_user.progress:
+        progress_map = {p.lesson_id: {"stars": p.stars} for p in db_user.progress}
+
+    return {
+        "message": "Autenticado",
         "username": db_user.username,
         "access_token": access_token,
         "progress": progress_map

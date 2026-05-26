@@ -113,22 +113,22 @@ export const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl max-w-5xl w-full p-6 sm:p-10 relative shadow-[0_0_80px_rgba(20,184,166,0.15)] my-8">
+      <div className="bg-slate-900 border border-slate-800 rounded-none max-w-5xl w-full p-6 sm:p-10 relative shadow-[0_0_80px_rgba(20,184,166,0.15)] my-8">
         
         {/* Botón de cerrar */}
         <button 
           onClick={handleCancel}
-          className="absolute top-5 right-5 text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 p-2 rounded-full transition-all"
+          className="absolute top-5 right-5 text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 p-2 rounded-none transition-all"
         >
           <X size={18} />
         </button>
 
         {/* Decoraciones de fondo */}
-        <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-teal-500/5 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-amber-500/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-teal-500/5 rounded-none blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-amber-500/5 rounded-none blur-[100px] pointer-events-none" />
         
         <div className="text-center mb-8 relative z-10">
-          <span className="bg-teal-500/10 text-teal-400 text-[9px] font-black uppercase tracking-[0.25em] px-3 py-1 rounded-full border border-teal-500/20">
+          <span className="bg-teal-500/10 text-teal-400 text-[9px] font-black uppercase tracking-[0.25em] px-3 py-1 rounded-none border border-teal-500/20">
             Membresía Comercial
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-white mt-3 tracking-tighter uppercase font-serif italic">
@@ -145,9 +145,9 @@ export const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
             </span>
             <button 
               onClick={() => setBillingPeriod(p => p === 'monthly' ? 'annual' : 'monthly')}
-              className="w-12 h-6 bg-slate-800 rounded-full p-0.5 relative transition-all border border-slate-700"
+              className="w-12 h-6 bg-slate-800 rounded-none p-0.5 relative transition-all border border-slate-700"
             >
-              <div className={`w-5 h-5 bg-teal-500 rounded-full transition-all ${billingPeriod === 'annual' ? 'translate-x-6 bg-amber-500' : ''}`} />
+              <div className={`w-5 h-5 bg-teal-500 rounded-none transition-all ${billingPeriod === 'annual' ? 'translate-x-6 bg-amber-500' : ''}`} />
             </button>
             <span className={`text-[10px] font-black uppercase tracking-wider flex items-center gap-1.5 ${billingPeriod === 'annual' ? 'text-amber-400' : 'text-slate-400'}`}>
               Anual <span className="bg-emerald-500/10 text-emerald-400 text-[8px] px-1.5 py-0.5 border border-emerald-500/20 rounded-none font-black uppercase">Ahorra hasta 50%</span>
@@ -159,7 +159,7 @@ export const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10 items-stretch mb-10">
           
           {/* Tarjeta 1: FREE */}
-          <div className="bg-slate-950/80 border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition-all">
+          <div className="bg-slate-950/80 border border-slate-800/80 rounded-none p-6 flex flex-col justify-between hover:border-slate-700 transition-all">
             <div>
               <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">BÁSICO</div>
               <h3 className="text-lg font-bold text-white mb-2">FREE</h3>
@@ -199,7 +199,7 @@ export const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
             <div className="mt-8">
               <button 
                 disabled 
-                className="w-full py-3 bg-slate-800 text-slate-400 text-[10px] font-black uppercase tracking-widest rounded-xl cursor-default"
+                className="w-full py-3 bg-slate-800 text-slate-400 text-[10px] font-black uppercase tracking-widest rounded-none cursor-default"
               >
                 Plan Activo por Defecto
               </button>
@@ -207,7 +207,7 @@ export const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
           </div>
 
           {/* Tarjeta 2: PRO */}
-          <div className="bg-slate-950/90 border border-teal-500/20 rounded-2xl p-6 flex flex-col justify-between hover:border-teal-500/40 transition-all relative shadow-lg">
+          <div className="bg-slate-950/90 border border-teal-500/20 rounded-none p-6 flex flex-col justify-between hover:border-teal-500/40 transition-all relative shadow-lg">
             <div className="absolute top-0 right-6 -translate-y-1/2 bg-teal-500 text-slate-950 text-[7px] font-black uppercase tracking-[0.2em] px-2.5 py-1 rounded-none">
               RECOMENDADO
             </div>
@@ -264,7 +264,7 @@ export const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
               <button 
                 onClick={() => handleSelectPlan('pro')}
                 disabled={loading || couponLoading}
-                className="w-full py-3 bg-teal-500 hover:bg-teal-400 text-slate-950 font-black text-[10px] uppercase tracking-widest rounded-xl transition-all active:scale-95 flex items-center justify-center gap-1.5"
+                className="w-full py-3 bg-teal-500 hover:bg-teal-400 text-slate-950 font-black text-[10px] uppercase tracking-widest rounded-none transition-all active:scale-95 flex items-center justify-center gap-1.5"
               >
                 {loading ? <Loader2 size={12} className="animate-spin" /> : <Zap size={12} fill="currentColor" />}
                 ADQUIRIR PLAN PRO
@@ -273,7 +273,7 @@ export const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
           </div>
 
           {/* Tarjeta 3: EXECUTIVE */}
-          <div className="bg-slate-950 border border-amber-500/30 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-all relative shadow-[0_0_30px_rgba(245,158,11,0.08)]">
+          <div className="bg-slate-950 border border-amber-500/30 rounded-none p-6 flex flex-col justify-between hover:border-amber-500/50 transition-all relative shadow-[0_0_30px_rgba(245,158,11,0.08)]">
             <div className="absolute top-0 right-6 -translate-y-1/2 bg-amber-500 text-slate-950 text-[7px] font-black uppercase tracking-[0.2em] px-2.5 py-1 rounded-none flex items-center gap-1">
               <Crown size={8} /> C-SUITE ELITE
             </div>
@@ -334,7 +334,7 @@ export const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
               <button 
                 onClick={() => handleSelectPlan('executive')}
                 disabled={loading || couponLoading}
-                className="w-full py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-[10px] uppercase tracking-widest rounded-xl transition-all active:scale-95 flex items-center justify-center gap-1.5 shadow-lg shadow-amber-500/10"
+                className="w-full py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-[10px] uppercase tracking-widest rounded-none transition-all active:scale-95 flex items-center justify-center gap-1.5 shadow-lg shadow-amber-500/10"
               >
                 {loading ? <Loader2 size={12} className="animate-spin" /> : <Crown size={12} fill="currentColor" />}
                 ADQUIRIR PLAN EXECUTIVE
@@ -359,12 +359,12 @@ export const UpgradeModal = ({ onClose }: UpgradeModalProps) => {
               value={couponCode}
               onChange={(e) => setCouponCode(e.target.value)}
               disabled={couponLoading || loading}
-              className="flex-1 bg-slate-950 border border-slate-800 text-white rounded-xl px-4 py-2.5 text-xs placeholder:text-slate-700 focus:outline-none focus:border-teal-500/50 transition-colors uppercase font-medium tracking-wider"
+              className="flex-1 bg-slate-950 border border-slate-800 text-white rounded-none px-4 py-2.5 text-xs placeholder:text-slate-700 focus:outline-none focus:border-teal-500/50 transition-colors uppercase font-medium tracking-wider"
             />
             <button
               type="submit"
               disabled={couponLoading || loading || !couponCode.trim()}
-              className="bg-slate-800 hover:bg-slate-700 text-teal-400 font-bold px-4 py-2.5 rounded-xl text-xs transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1 border border-slate-700 active:scale-95"
+              className="bg-slate-800 hover:bg-slate-700 text-teal-400 font-bold px-4 py-2.5 rounded-none text-xs transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1 border border-slate-700 active:scale-95"
             >
               {couponLoading ? (
                 <Loader2 size={14} className="animate-spin" />
