@@ -142,7 +142,8 @@ def get_user_stats(
         "skills_radar": radar_data,
         "is_pro": current_user.is_pro,
         "achievements": [a.achievement_code for a in current_user.achievements],
-        "premium_users_count": premium_count
+        "premium_users_count": premium_count,
+        "total_tickets": sum(p.tickets_earned for p in raw_progress if p.tickets_earned)
     }
 
 @router.get("/eloquence-leaderboard")

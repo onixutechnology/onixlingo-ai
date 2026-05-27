@@ -453,11 +453,12 @@ export default function Home() {
             </div>
             <p className="text-xs">Ecosistema Educativo de Alta Disponibilidad</p>
           </div>
-          <div className="flex gap-8 font-medium">
+          <div className="flex gap-8 font-medium flex-wrap">
             <Link href="/ventas" className="hover:text-indigo-600 transition-colors">Ventas B2C / Precios</Link>
-            <a href="#" className="hover:text-indigo-600 transition-colors">Privacidad</a>
-            <a href="#" className="hover:text-indigo-600 transition-colors">Términos</a>
-            <a href="#" className="hover:text-indigo-600 transition-colors">Soporte</a>
+            <Link href="/legal/privacy" className="hover:text-indigo-600 transition-colors">Privacidad</Link>
+            <Link href="/legal/terms" className="hover:text-indigo-600 transition-colors">Términos</Link>
+            <Link href="/legal/refunds" className="hover:text-indigo-600 transition-colors">Reembolsos</Link>
+            <Link href="/legal/support" className="hover:text-indigo-600 transition-colors">Soporte</Link>
           </div>
           <p className="text-xs">© 2026 OnixuTechnology.</p>
         </div>

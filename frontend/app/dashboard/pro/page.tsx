@@ -2,21 +2,23 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link'; 
+import Link from 'next/link';
 import { useUIStore } from '@/store/uiStore';
-import Cookies from 'js-cookie'; 
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { 
-  Briefcase, TrendingUp, Globe, Award, Lock, Play, Check, 
-  PieChart, Users, Building, ArrowLeft, Gem, Star, 
+import {
+  Briefcase, TrendingUp, Globe, Award, Lock, Play, Check,
+  PieChart, Users, Building, ArrowLeft, Gem, Star,
   Crown, Mic, Volume2, Trophy, BarChart3, Bell, X, BookOpen, Activity,
   Home, User, Languages, ChevronDown, Loader2,
-  Rocket, Shield, Video, MessageSquare, Target, Zap
+  Rocket, Shield, Video, MessageSquare, Target, Zap, ChevronRight,
+  Ticket, Sparkles
 } from 'lucide-react';
 
 import { UpgradeModal } from '@/components/pro/UpgradeModal';
 import { ReadingStudio } from '@/components/pro/ReadingStudio';
+import { ExecutiveStatsModal } from '@/components/pro/ExecutiveStatsModal';
+import { RaffleModal } from '@/components/pro/RaffleModal';
 import apiClient from '@/lib/apiClient';
 import { PRO_CURRICULUM_FR } from '@/data/curriculum_pro_fr';
 
@@ -25,6 +27,9 @@ interface KPIStats {
   currentLevel: number;
   accuracy: number;
   fluencyScore: number;
+  totalTickets: number;
+  streakDays: number;
+  completedModules: number;
 }
 
 interface LessonStatus {
@@ -34,97 +39,200 @@ interface LessonStatus {
   score?: number;
 }
 
+const LEVEL_CONFIG: Record<string, { gradient: string; badge: string; badgeText: string; glow: string; border: string; iconBg: string; iconColor: string }> = {
+  B1: {
+    gradient: 'from-sky-600 to-blue-700',
+    badge: 'bg-sky-50 text-sky-700 border-sky-200',
+    badgeText: 'Foundation',
+    glow: 'shadow-sky-500/5',
+    border: 'border-sky-200',
+    iconBg: 'bg-sky-100',
+    iconColor: 'text-sky-600',
+  },
+  B2: {
+    gradient: 'from-blue-600 to-indigo-700',
+    badge: 'bg-blue-50 text-blue-700 border-blue-200',
+    badgeText: 'Management',
+    glow: 'shadow-blue-500/5',
+    border: 'border-blue-200',
+    iconBg: 'bg-blue-100',
+    iconColor: 'text-blue-600',
+  },
+  C1: {
+    gradient: 'from-indigo-600 to-violet-700',
+    badge: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+    badgeText: 'Advanced',
+    glow: 'shadow-indigo-500/5',
+    border: 'border-indigo-200',
+    iconBg: 'bg-indigo-100',
+    iconColor: 'text-indigo-600',
+  },
+  C2: {
+    gradient: 'from-violet-600 to-purple-700',
+    badge: 'bg-violet-50 text-violet-700 border-violet-200',
+    badgeText: 'Executive',
+    glow: 'shadow-violet-500/5',
+    border: 'border-violet-200',
+    iconBg: 'bg-violet-100',
+    iconColor: 'text-violet-600',
+  },
+  Exec: {
+    gradient: 'from-amber-500 to-orange-600',
+    badge: 'bg-amber-50 text-amber-700 border-amber-200',
+    badgeText: 'Boardroom',
+    glow: 'shadow-amber-500/5',
+    border: 'border-amber-200',
+    iconBg: 'bg-amber-100',
+    iconColor: 'text-amber-600',
+  },
+  Mastery: {
+    gradient: 'from-rose-500 to-pink-700',
+    badge: 'bg-rose-50 text-rose-700 border-rose-200',
+    badgeText: 'Mastery',
+    glow: 'shadow-rose-500/5',
+    border: 'border-rose-200',
+    iconBg: 'bg-rose-100',
+    iconColor: 'text-rose-600',
+  },
+};
+
 const PRO_CURRICULUM = [
   {
     id: 'exec-b1',
-    title: 'Executive Foundation (B1)',
+    title: 'Executive Foundation',
     level: 'B1',
-    color: 'slate',
     icon: Users,
     description: 'Fundamentos de comunicación corporativa, etiqueta y networking esencial.',
-    lessons: Array.from({ length: 10 }, (_, i) => ({
-      id: `pro-b1-${i + 1}`, 
-      title: i === 0 ? 'Professional Introductions' : i === 1 ? 'Formal Emailing' : i === 2 ? 'Business Travel' : i === 9 ? 'B1 Milestone Review' : `Corporate Communication Pt. ${i}`, 
-      desc: 'Habilidades esenciales para el día a día corporativo.'
-    }))
+    lessons: [
+      { id: 'pro-b1-1', title: 'Professional Introductions' },
+      { id: 'pro-b1-2', title: 'Formal Emailing' },
+      { id: 'pro-b1-3', title: 'Business Travel' },
+      { id: 'pro-b1-4', title: 'Corporate Communication Pt. 4' },
+      { id: 'pro-b1-5', title: 'Corporate Communication Pt. 5' },
+      { id: 'pro-b1-6', title: 'Corporate Communication Pt. 6' },
+      { id: 'pro-b1-7', title: 'Corporate Communication Pt. 7' },
+      { id: 'pro-b1-8', title: 'Corporate Communication Pt. 8' },
+      { id: 'pro-b1-9', title: 'Corporate Communication Pt. 9' },
+      { id: 'pro-b1-10', title: 'B1 Milestone Review' },
+    ],
   },
   {
     id: 'exec-b2',
-    title: 'Management Skills (B2)',
+    title: 'Management Skills',
     level: 'B2',
-    color: 'blue',
     icon: PieChart,
     description: 'Gestión de equipos, liderazgo intermedio y resolución de conflictos.',
-    lessons: Array.from({ length: 10 }, (_, i) => ({
-      id: `pro-b2-${i + 1}`, 
-      title: i === 0 ? 'Leading Effective Meetings' : i === 1 ? 'Negotiation Fundamentals' : i === 9 ? 'B2 Milestone Review' : `Team Management Pt. ${i}`, 
-      desc: 'Habilidades para mandos intermedios y gerencia.'
-    }))
+    lessons: [
+      { id: 'pro-b2-1', title: 'Leading Effective Meetings' },
+      { id: 'pro-b2-2', title: 'Negotiation Fundamentals' },
+      { id: 'pro-b2-3', title: 'Team Management Pt. 3' },
+      { id: 'pro-b2-4', title: 'Team Management Pt. 4' },
+      { id: 'pro-b2-5', title: 'Team Management Pt. 5' },
+      { id: 'pro-b2-6', title: 'Team Management Pt. 6' },
+      { id: 'pro-b2-7', title: 'Team Management Pt. 7' },
+      { id: 'pro-b2-8', title: 'Team Management Pt. 8' },
+      { id: 'pro-b2-9', title: 'Team Management Pt. 9' },
+      { id: 'pro-b2-10', title: 'B2 Milestone Review' },
+    ],
   },
   {
     id: 'exec-c1',
-    title: 'Advanced Corporate (C1)',
+    title: 'Advanced Corporate',
     level: 'C1',
-    color: 'indigo',
     icon: Briefcase,
     description: 'Negociaciones de alto nivel, persuasión y presentaciones a inversionistas.',
-    lessons: Array.from({ length: 10 }, (_, i) => ({
-      id: `pro-c1-${i + 1}`, 
-      title: i === 0 ? 'Pitching to Investors' : i === 1 ? 'Crisis Management Comms' : i === 9 ? 'C1 Milestone Review' : `Advanced Strategy Pt. ${i}`, 
-      desc: 'Dominio avanzado del inglés de negocios.'
-    }))
+    lessons: [
+      { id: 'pro-c1-1', title: 'Pitching to Investors' },
+      { id: 'pro-c1-2', title: 'Crisis Management Comms' },
+      { id: 'pro-c1-3', title: 'Advanced Strategy Pt. 3' },
+      { id: 'pro-c1-4', title: 'Advanced Strategy Pt. 4' },
+      { id: 'pro-c1-5', title: 'Advanced Strategy Pt. 5' },
+      { id: 'pro-c1-6', title: 'Advanced Strategy Pt. 6' },
+      { id: 'pro-c1-7', title: 'Advanced Strategy Pt. 7' },
+      { id: 'pro-c1-8', title: 'Advanced Strategy Pt. 8' },
+      { id: 'pro-c1-9', title: 'Advanced Strategy Pt. 9' },
+      { id: 'pro-c1-10', title: 'C1 Milestone Review' },
+    ],
   },
   {
     id: 'exec-c2',
-    title: 'Executive Presence (C2)',
+    title: 'Executive Presence',
     level: 'C2',
-    color: 'purple',
     icon: Crown,
     description: 'Dominio total del idioma, diplomacia corporativa y oratoria ejecutiva.',
-    lessons: Array.from({ length: 10 }, (_, i) => ({
-      id: `pro-c2-${i + 1}`, 
-      title: i === 0 ? 'Public Speaking for CEOs' : i === 1 ? 'Diplomatic Phrasing' : i === 9 ? 'C2 Milestone Review' : `Executive Eloquence Pt. ${i}`, 
-      desc: 'El nivel más alto de elocuencia y fluidez.'
-    }))
+    lessons: [
+      { id: 'pro-c2-1', title: 'Public Speaking for CEOs' },
+      { id: 'pro-c2-2', title: 'Diplomatic Phrasing' },
+      { id: 'pro-c2-3', title: 'Executive Eloquence Pt. 3' },
+      { id: 'pro-c2-4', title: 'Executive Eloquence Pt. 4' },
+      { id: 'pro-c2-5', title: 'Executive Eloquence Pt. 5' },
+      { id: 'pro-c2-6', title: 'Executive Eloquence Pt. 6' },
+      { id: 'pro-c2-7', title: 'Executive Eloquence Pt. 7' },
+      { id: 'pro-c2-8', title: 'Executive Eloquence Pt. 8' },
+      { id: 'pro-c2-9', title: 'Executive Eloquence Pt. 9' },
+      { id: 'pro-c2-10', title: 'C2 Milestone Review' },
+    ],
   },
   {
     id: 'exec-exec',
-    title: 'Boardroom Dynamics (Exec)',
+    title: 'Boardroom Dynamics',
     level: 'Exec',
-    color: 'amber',
     icon: Building,
     description: 'Inglés especializado para juntas directivas, M&A y estrategia global.',
-    lessons: Array.from({ length: 10 }, (_, i) => ({
-      id: `pro-exec-${i + 1}`, 
-      title: i === 0 ? 'Mergers & Acquisitions Vocab' : i === 1 ? 'Board of Directors Meetings' : i === 9 ? 'Exec Milestone Review' : `Boardroom Tactics Pt. ${i}`, 
-      desc: 'Casos reales de la alta dirección empresarial.'
-    }))
+    lessons: [
+      { id: 'pro-exec-1', title: 'Mergers & Acquisitions Vocab' },
+      { id: 'pro-exec-2', title: 'Board of Directors Meetings' },
+      { id: 'pro-exec-3', title: 'Boardroom Tactics Pt. 3' },
+      { id: 'pro-exec-4', title: 'Boardroom Tactics Pt. 4' },
+      { id: 'pro-exec-5', title: 'Boardroom Tactics Pt. 5' },
+      { id: 'pro-exec-6', title: 'Boardroom Tactics Pt. 6' },
+      { id: 'pro-exec-7', title: 'Boardroom Tactics Pt. 7' },
+      { id: 'pro-exec-8', title: 'Boardroom Tactics Pt. 8' },
+      { id: 'pro-exec-9', title: 'Boardroom Tactics Pt. 9' },
+      { id: 'pro-exec-10', title: 'Exec Milestone Review' },
+    ],
   },
   {
     id: 'exec-mastery',
-    title: 'Global Leadership (Mastery)',
+    title: 'Global Leadership',
     level: 'Mastery',
-    color: 'rose',
     icon: Globe,
     description: 'El grado máximo. Comunicación intercultural y expansión internacional.',
-    lessons: Array.from({ length: 10 }, (_, i) => ({
-      id: `pro-mastery-${i + 1}`, 
-      title: i === 0 ? 'Cross-Cultural Leadership' : i === 1 ? 'Global Market Expansion' : i === 9 ? 'Final Mastery Evaluation' : `Global Business Pt. ${i}`, 
-      desc: 'Conquista el mercado internacional sin barreras.'
-    }))
-  }
+    lessons: [
+      { id: 'pro-mastery-1', title: 'Cross-Cultural Leadership' },
+      { id: 'pro-mastery-2', title: 'Global Market Expansion' },
+      { id: 'pro-mastery-3', title: 'Global Business Pt. 3' },
+      { id: 'pro-mastery-4', title: 'Global Business Pt. 4' },
+      { id: 'pro-mastery-5', title: 'Global Business Pt. 5' },
+      { id: 'pro-mastery-6', title: 'Global Business Pt. 6' },
+      { id: 'pro-mastery-7', title: 'Global Business Pt. 7' },
+      { id: 'pro-mastery-8', title: 'Global Business Pt. 8' },
+      { id: 'pro-mastery-9', title: 'Global Business Pt. 9' },
+      { id: 'pro-mastery-10', title: 'Final Mastery Evaluation' },
+    ],
+  },
 ];
 
-export default function ProfessionalDashboard() {
+export default function ExecutiveDashboard() {
   const router = useRouter();
   const { setMode, activeLanguage } = useUIStore();
-  
+
   const [proProgress, setProProgress] = useState<LessonStatus[]>([]);
-  const [kpis, setKpis] = useState<KPIStats>({ totalXP: 0, currentLevel: 1, accuracy: 0, fluencyScore: 0 });
+  const [kpis, setKpis] = useState<KPIStats>({ 
+    totalXP: 0, 
+    currentLevel: 1, 
+    accuracy: 92, 
+    fluencyScore: 85,
+    totalTickets: 0,
+    streakDays: 0,
+    completedModules: 0
+  });
   const [isLoading, setIsLoading] = useState(true);
-  const [isUserPremium, setIsUserPremium] = useState(false); 
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const [isUserPremium, setIsUserPremium] = useState(false);
+  const [expandedSection, setExpandedSection] = useState<string | null>('exec-b1');
   const [showReadingStudio, setShowReadingStudio] = useState(false);
+  const [showStatsModal, setShowStatsModal] = useState(false);
+  const [showRaffleModal, setShowRaffleModal] = useState(false);
 
   const currentCurriculum = useMemo(() => {
     if (activeLanguage === 'fr') return PRO_CURRICULUM_FR;
@@ -144,16 +252,19 @@ export default function ProfessionalDashboard() {
         const isExecutive = tier === 'executive' || tier === 'titanium';
         setIsUserPremium(isExecutive);
         setProProgress(mapRes.data.pro || []);
-        
+
         const statsData = statsRes.data;
         setKpis({
           totalXP: statsData.total_xp || 0,
-          currentLevel: 1, 
-          accuracy: statsData.accuracy || 92, 
-          fluencyScore: statsData.fluency_score || 85 
+          currentLevel: 1,
+          accuracy: statsData.accuracy || 92,
+          fluencyScore: statsData.fluency_score || 85,
+          totalTickets: statsData.total_tickets || 0,
+          streakDays: statsData.streak_days || 0,
+          completedModules: statsData.completed_modules || 0
         });
       } catch (error) {
-        console.error("Error fetching pro data:", error);
+        console.error('Error fetching executive data:', error);
       } finally {
         setIsLoading(false);
       }
@@ -162,195 +273,410 @@ export default function ProfessionalDashboard() {
   }, []);
 
   const toggleSection = (id: string) => {
-    setExpandedSections(prev => 
-      prev.includes(id) ? prev.filter(s => s !== id) : [...prev, id]
-    );
+    setExpandedSection(prev => (prev === id ? null : id));
   };
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center text-amber-500">
-        <Loader2 className="animate-spin mb-4" size={48} />
-        <span className="uppercase tracking-[0.3em] text-[10px] font-black animate-pulse">Initializing Titanium Interface...</span>
+      <div className="min-h-screen flex flex-col items-center justify-center"
+        style={{ background: 'linear-gradient(135deg, #f2faf9 0%, #e0f5f3 30%, #caefea 70%, #aee3dd 100%)' }}>
+        <div className="relative">
+          <div className="w-16 h-16 border-4 border-teal-600/10 border-t-teal-600 rounded-full animate-spin" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Crown size={20} className="text-teal-600" />
+          </div>
+        </div>
+        <span className="mt-6 uppercase tracking-[0.3em] text-[10px] font-bold text-teal-800 animate-pulse">
+          Initializing Executive Interface...
+        </span>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-amber-500/30 selection:text-amber-200 pb-20">
-      
+    <div
+      className="min-h-screen text-slate-800 font-sans selection:bg-teal-400/30 selection:text-teal-900 pb-24"
+      style={{
+        background: 'linear-gradient(135deg, #f2faf9 0%, #e0f5f3 30%, #caefea 70%, #aee3dd 100%)',
+      }}
+    >
+      {/* Ambient glow layer */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-teal-200/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-cyan-200/10 rounded-full blur-[100px]" />
+      </div>
+
       {!isUserPremium && <UpgradeModal />}
 
-      {/* --- PREMIUM NAVBAR --- */}
-      <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800 px-6 h-14 flex items-center justify-between">
+      {/* ─── NAVBAR ─── */}
+      <nav className="sticky top-0 z-50 border-b border-teal-850 px-6 h-14 flex items-center justify-between backdrop-blur-xl"
+        style={{ background: 'rgba(13, 76, 70, 0.95)' }}>
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-amber-500 flex items-center justify-center">
-              <Crown size={14} className="text-slate-950" />
+          <div className="flex items-center gap-2.5">
+            <div className="w-7 h-7 bg-gradient-to-br from-teal-300 to-cyan-500 flex items-center justify-center shadow-lg shadow-teal-400/30">
+              <Crown size={14} className="text-white" />
             </div>
-            <span className="font-black text-white text-xs tracking-[0.2em] uppercase">Onix<span className="text-amber-500">Pro</span></span>
+            <span className="font-black text-white text-sm tracking-tight">
+              OnixLingo <span className="text-cyan-200">Executive</span>
+            </span>
           </div>
-          <div className="hidden md:flex items-center gap-2 px-3 py-1 bg-slate-900 border border-slate-800 text-[10px] font-black text-amber-500 uppercase tracking-widest">
-            <Shield size={12} /> Titanium Status
+          <div className="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-sm border border-white/30 bg-white/10 text-[10px] font-black text-white uppercase tracking-widest">
+            <Gem size={11} />
+            Titanium Status
           </div>
         </div>
 
         <div className="flex items-center gap-6">
-          <div className="hidden md:flex items-center gap-4 text-[10px] font-black text-slate-500 uppercase tracking-widest">
-            <span className="flex items-center gap-1.5"><Trophy size={14} className="text-amber-500" /> {kpis.totalXP} XP</span>
-            <span className="flex items-center gap-1.5"><Activity size={14} className="text-emerald-500" /> {kpis.accuracy}% ACC</span>
+          <div className="hidden md:flex items-center gap-5 text-[11px] font-black text-white/70 uppercase tracking-widest">
+            <span className="flex items-center gap-1.5 text-amber-300">
+              <Trophy size={13} /> {kpis.totalXP} XP
+            </span>
+            <span className="flex items-center gap-1.5 text-white">
+              <Activity size={13} /> {kpis.accuracy}% ACC
+            </span>
           </div>
-          <div className="flex items-center gap-4 border-l border-slate-800 pl-6">
-            <Link href="/dashboard/leaderboard" className="text-[10px] font-black text-slate-400 hover:text-amber-500 transition-colors uppercase tracking-widest flex items-center gap-2">
-              <Trophy size={14} /> Ranking
-            </Link>
-            <button 
-              onClick={() => { setMode('student'); router.push('/dashboard'); }}
-              className="text-[10px] font-black text-slate-400 hover:text-white transition-colors uppercase tracking-widest"
+          <div className="flex items-center gap-4 border-l border-white/20 pl-5">
+            <Link
+              href="/dashboard/leaderboard"
+              className="text-[10px] font-black text-white/70 hover:text-white transition-colors uppercase tracking-widest flex items-center gap-1.5"
             >
-              Exit Pro
+              <Trophy size={13} /> Ranking
+            </Link>
+            <button
+              onClick={() => { setMode('student'); router.push('/dashboard'); }}
+              className="text-[10px] font-black text-white/70 hover:text-white transition-colors uppercase tracking-widest"
+            >
+              Exit Executive
             </button>
           </div>
         </div>
       </nav>
 
-      <main className="max-w-6xl mx-auto px-6 py-10">
-        
-        {/* --- HERO SECTION --- */}
-        <header className="mb-12">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-2"
-          >
-            Executive <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-500 to-orange-600">Command Center.</span>
-          </motion.h1>
-          <p className="text-xs text-slate-500 font-bold uppercase tracking-[0.3em]">Titanium-Grade Enterprise Training Platform</p>
-        </header>
+      <main className="max-w-5xl mx-auto px-6 py-12 relative z-10">
 
-        {/* --- MAIN HUB GRID --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
-          
-          {/* 🤝 MEETING SIMULATOR */}
-          <Link href="/dashboard/pro/meeting-room" className="group relative bg-slate-900 border border-slate-800 p-8 hover:border-amber-500/50 transition-all overflow-hidden">
-            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Users size={80} />
+        {/* ─── HERO ─── */}
+        <motion.header
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-14 text-center"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-teal-800/20 bg-white/40 text-[10px] font-bold text-teal-950 uppercase tracking-[0.25em] mb-5">
+            <Gem size={11} className="text-teal-700" /> Titanium-Grade Enterprise Training Platform
+          </div>
+          <h1 className="text-5xl md:text-6xl font-black tracking-tighter leading-none mb-3 text-slate-900">
+            Executive{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-800 via-teal-700 to-teal-900">
+              Command Center.
+            </span>
+          </h1>
+          <p className="text-slate-700 text-sm font-semibold max-w-xl mx-auto">
+            60 módulos de élite diseñados para la alta dirección. Dominando inglés en contextos corporativos reales.
+          </p>
+        </motion.header>
+
+        {/* ─── PREMIUM KPI METRIC CARDS ─── */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10"
+        >
+          {/* XP Metric Card */}
+          <div 
+            onClick={() => setShowStatsModal(true)}
+            className="group relative overflow-hidden rounded-2xl border border-amber-500/20 bg-gradient-to-br from-amber-500/5 to-amber-500/10 p-6 backdrop-blur-md shadow-lg shadow-amber-500/2 transition-all hover:scale-[1.02] hover:border-amber-500/40 hover:bg-gradient-to-br hover:from-amber-500/10 hover:to-amber-500/20 cursor-pointer"
+          >
+            <div className="absolute right-0 top-0 -mr-6 -mt-6 p-10 opacity-[0.03] transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12">
+              <Trophy size={120} className="text-amber-500" />
+            </div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2.5 bg-amber-500/10 border border-amber-500/20 rounded-xl text-amber-500 shadow-sm">
+                <Trophy size={20} />
+              </div>
+              <div>
+                <h4 className="text-[10px] font-black text-amber-600 uppercase tracking-widest leading-none">Command Status</h4>
+                <p className="text-xs font-bold text-slate-700 mt-1">Puntos de Experiencia</p>
+              </div>
+            </div>
+            <div className="mt-2">
+              <span className="text-3xl font-black text-slate-900 tracking-tight">{kpis.totalXP.toLocaleString()}</span>
+              <span className="text-xs font-black text-amber-600 ml-2 tracking-wide uppercase">XP Acumulados</span>
+            </div>
+            <div className="mt-4 pt-3 border-t border-amber-500/10 flex items-center justify-between text-[9px] font-extrabold text-amber-700 uppercase tracking-widest">
+              <span>Ver Ranking Global</span>
+              <ChevronRight size={12} className="transition-transform group-hover:translate-x-0.5" />
+            </div>
+          </div>
+
+          {/* Pronunciation Accuracy / Speech Analytics Card */}
+          <div 
+            onClick={() => setShowReadingStudio(true)}
+            className="group relative overflow-hidden rounded-2xl border border-teal-500/20 bg-gradient-to-br from-teal-500/5 to-teal-500/10 p-6 backdrop-blur-md shadow-lg shadow-teal-500/2 transition-all hover:scale-[1.02] hover:border-teal-500/40 hover:bg-gradient-to-br hover:from-teal-500/10 hover:to-teal-500/20 cursor-pointer"
+          >
+            <div className="absolute right-0 top-0 -mr-6 -mt-6 p-10 opacity-[0.03] transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12">
+              <Activity size={120} className="text-teal-500" />
+            </div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2.5 bg-teal-500/10 border border-teal-500/20 rounded-xl text-teal-600 shadow-sm">
+                <Mic size={20} />
+              </div>
+              <div>
+                <h4 className="text-[10px] font-black text-teal-600 uppercase tracking-widest leading-none">Speech Calibration</h4>
+                <p className="text-xs font-bold text-slate-700 mt-1">Precisión Fonética</p>
+              </div>
+            </div>
+            <div className="mt-2">
+              <span className="text-3xl font-black text-slate-900 tracking-tight">{kpis.accuracy}%</span>
+              <span className="text-xs font-black text-teal-600 ml-2 tracking-wide uppercase">{kpis.fluencyScore} Fluidez</span>
+            </div>
+            <div className="mt-4 pt-3 border-t border-teal-500/10 flex items-center justify-between text-[9px] font-extrabold text-teal-700 uppercase tracking-widest">
+              <span>Abrir Reading Studio</span>
+              <ChevronRight size={12} className="transition-transform group-hover:translate-x-0.5" />
+            </div>
+          </div>
+
+          {/* Raffle Tickets Card */}
+          <div 
+            onClick={() => setShowRaffleModal(true)}
+            className="group relative overflow-hidden rounded-2xl border border-rose-500/20 bg-gradient-to-br from-rose-500/5 to-rose-500/10 p-6 backdrop-blur-md shadow-lg shadow-rose-500/2 transition-all hover:scale-[1.02] hover:border-rose-500/40 hover:bg-gradient-to-br hover:from-rose-500/10 hover:to-rose-500/20 cursor-pointer"
+          >
+            <div className="absolute right-0 top-0 -mr-6 -mt-6 p-10 opacity-[0.03] transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12">
+              <Ticket size={120} className="text-rose-500" />
+            </div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2.5 bg-rose-500/10 border border-rose-500/20 rounded-xl text-rose-500 shadow-sm">
+                <Ticket size={20} />
+              </div>
+              <div>
+                <h4 className="text-[10px] font-black text-rose-600 uppercase tracking-widest leading-none">VIP Raffle</h4>
+                <p className="text-xs font-bold text-slate-700 mt-1">Sorteo Ejecutivo Activo</p>
+              </div>
+            </div>
+            <div className="mt-2">
+              <span className="text-3xl font-black text-slate-900 tracking-tight">{kpis.totalTickets}</span>
+              <span className="text-xs font-black text-rose-600 ml-2 tracking-wide uppercase">Boletos VIP</span>
+            </div>
+            <div className="mt-4 pt-3 border-t border-rose-500/10 flex items-center justify-between text-[9px] font-extrabold text-rose-700 uppercase tracking-widest">
+              <span>Revisar mis Boletos</span>
+              <ChevronRight size={12} className="transition-transform group-hover:translate-x-0.5" />
+            </div>
+          </div>
+        </motion.div>
+
+        {/* ─── QUICK ACCESS TOOLS ─── */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14">
+          <Link
+            href="/dashboard/pro/meeting-room"
+            className="group relative border border-teal-800/15 bg-white/40 p-6 hover:border-teal-700/40 hover:bg-white/60 transition-all overflow-hidden backdrop-blur-sm shadow-sm"
+          >
+            <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
+              <Users size={72} />
             </div>
             <div className="relative z-10">
-              <div className="w-12 h-12 bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 mb-6 group-hover:scale-110 transition-transform">
-                <Video size={24} />
+              <div className="w-11 h-11 bg-teal-600/10 border border-teal-600/20 flex items-center justify-center text-teal-850 mb-5 group-hover:scale-110 transition-transform">
+                <Video size={22} />
               </div>
-              <h3 className="text-xl font-black text-white mb-2 uppercase tracking-tight">Boardroom Simulator</h3>
-              <p className="text-xs text-slate-400 leading-relaxed mb-6">Ejercicios en tiempo real con una junta directiva de IA. Práctica de toma de decisiones y persuasión.</p>
-              <div className="flex items-center gap-2 text-[10px] font-black text-amber-500 uppercase tracking-widest">
-                Enter Room <ArrowLeft size={14} className="rotate-180" />
+              <h3 className="text-base font-black text-slate-900 mb-1.5 uppercase tracking-tight">Boardroom Simulator</h3>
+              <p className="text-xs text-slate-700 font-medium leading-relaxed mb-4">Ejercicios en tiempo real con una junta directiva de IA.</p>
+              <div className="flex items-center gap-1.5 text-[10px] font-bold text-teal-800 uppercase tracking-widest">
+                Enter Room <ChevronRight size={12} />
               </div>
             </div>
           </Link>
 
-          {/* 🎙️ SPEECH ANALYSIS */}
-          <div onClick={() => setShowReadingStudio(true)} className="group relative bg-slate-900 border border-slate-800 p-8 hover:border-blue-500/50 transition-all cursor-pointer overflow-hidden">
-            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Mic size={80} />
+          <div
+            onClick={() => setShowReadingStudio(true)}
+            className="group relative border border-teal-800/15 bg-white/40 p-6 hover:border-teal-700/40 hover:bg-white/60 transition-all cursor-pointer overflow-hidden backdrop-blur-sm shadow-sm"
+          >
+            <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
+              <BarChart3 size={72} />
             </div>
             <div className="relative z-10">
-              <div className="w-12 h-12 bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
-                <BarChart3 size={24} />
+              <div className="w-11 h-11 bg-cyan-600/10 border border-cyan-600/20 flex items-center justify-center text-cyan-850 mb-5 group-hover:scale-110 transition-transform">
+                <Mic size={22} />
               </div>
-              <h3 className="text-xl font-black text-white mb-2 uppercase tracking-tight">Speech Analytics</h3>
-              <p className="text-xs text-slate-400 leading-relaxed mb-6">Análisis fonético avanzado. Evalúa tu fluidez, entonación y claridad ejecutiva en cada frase.</p>
-              <div className="flex items-center gap-2 text-[10px] font-black text-blue-400 uppercase tracking-widest">
-                Launch Studio <ArrowLeft size={14} className="rotate-180" />
+              <h3 className="text-base font-black text-slate-900 mb-1.5 uppercase tracking-tight">Speech Analytics</h3>
+              <p className="text-xs text-slate-700 font-medium leading-relaxed mb-4">Análisis fonético avanzado. Evalúa tu fluidez ejecutiva.</p>
+              <div className="flex items-center gap-1.5 text-[10px] font-bold text-cyan-800 uppercase tracking-widest">
+                Launch Studio <ChevronRight size={12} />
               </div>
             </div>
           </div>
 
-          {/* 🏢 B2B INTERVIEW */}
-          <Link href="/lesson/pro-b1-1?type=pro" className="group relative bg-slate-900 border border-slate-800 p-8 hover:border-emerald-500/50 transition-all overflow-hidden">
-            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Building size={80} />
+          <Link
+            href="/lesson/pro-b1-1?type=pro"
+            className="group relative border border-teal-800/15 bg-white/40 p-6 hover:border-teal-700/40 hover:bg-white/60 transition-all overflow-hidden backdrop-blur-sm shadow-sm"
+          >
+            <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
+              <MessageSquare size={72} />
             </div>
             <div className="relative z-10">
-              <div className="w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
-                <MessageSquare size={24} />
+              <div className="w-11 h-11 bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-850 mb-5 group-hover:scale-110 transition-transform">
+                <Briefcase size={22} />
               </div>
-              <h3 className="text-xl font-black text-white mb-2 uppercase tracking-tight">B2B Negotiations</h3>
-              <p className="text-xs text-slate-400 leading-relaxed mb-6">Simulaciones de ventas y alianzas estratégicas. Domina el cierre de contratos en el mercado global.</p>
-              <div className="flex items-center gap-2 text-[10px] font-black text-emerald-400 uppercase tracking-widest">
-                Start Simulation <ArrowLeft size={14} className="rotate-180" />
+              <h3 className="text-base font-black text-slate-900 mb-1.5 uppercase tracking-tight">B2B Negotiations</h3>
+              <p className="text-xs text-slate-700 font-medium leading-relaxed mb-4">Simulaciones de ventas y alianzas estratégicas globales.</p>
+              <div className="flex items-center gap-1.5 text-[10px] font-bold text-teal-800 uppercase tracking-widest">
+                Start Simulation <ChevronRight size={12} />
               </div>
             </div>
           </Link>
-
         </div>
 
-        {/* --- CURRICULUM GRID --- */}
-        <div className="mb-8 flex items-center justify-between border-b border-slate-800 pb-4">
-          <h2 className="text-lg font-black text-white uppercase tracking-widest flex items-center gap-3">
-            <BookOpen size={20} className="text-amber-500" /> Titanium Curriculum
+        {/* ─── CURRICULUM SECTION HEADER ─── */}
+        <div className="flex items-center justify-between mb-6 pb-4 border-b border-teal-800/20">
+          <h2 className="text-lg font-black text-slate-900 uppercase tracking-widest flex items-center gap-3">
+            <BookOpen size={18} className="text-teal-800" />
+            Titanium Curriculum
           </h2>
-          <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">60 Premium Modules</span>
+          <span className="text-[10px] font-bold text-slate-700 uppercase tracking-widest">
+            {currentCurriculum.length * 10} Premium Modules
+          </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {currentCurriculum.map((section) => (
-            <div key={section.id} className="bg-slate-900 border border-slate-800 overflow-hidden">
-              <div 
-                onClick={() => toggleSection(section.id)}
-                className="p-5 flex items-center justify-between cursor-pointer hover:bg-slate-800 transition-colors"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-slate-950 border border-slate-800 flex items-center justify-center text-amber-500">
-                    <section.icon size={20} />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-black text-white uppercase tracking-tight">{section.title}</h3>
-                    <p className="text-[9px] text-slate-500 font-bold uppercase tracking-widest">{section.level} • 10 Units</p>
-                  </div>
-                </div>
-                <ChevronDown size={16} className={`text-slate-500 transition-transform ${expandedSections.includes(section.id) ? 'rotate-180' : ''}`} />
-              </div>
+        {/* ─── ACCORDION LIST (single column — no layout break) ─── */}
+        <div className="flex flex-col gap-3">
+          {currentCurriculum.map((section, sectionIndex) => {
+            const cfg = LEVEL_CONFIG[section.level] || LEVEL_CONFIG['B1'];
+            const isOpen = expandedSection === section.id;
+            const completedCount = section.lessons.filter(
+              l => proProgress.find(p => p.lesson_id === l.id)?.status === 'completed'
+            ).length;
+            const progressPct = Math.round((completedCount / section.lessons.length) * 100);
 
-              <AnimatePresence>
-                {expandedSections.includes(section.id) && (
-                  <motion.div 
-                    initial={{ height: 0 }}
-                    animate={{ height: 'auto' }}
-                    exit={{ height: 0 }}
-                    className="overflow-hidden bg-slate-950/50"
-                  >
-                    <div className="p-4 grid grid-cols-1 gap-1">
-                      {section.lessons.map((lesson, idx) => {
-                        const status = proProgress.find(p => p.lesson_id === lesson.id)?.status || (lesson.id === 'pro-b1-1' ? 'active' : 'locked');
-                        const isLocked = status === 'locked';
-                        
-                        return (
-                          <div 
-                            key={lesson.id}
-                            onClick={() => !isLocked && router.push(`/lesson/${lesson.id}?type=pro`)}
-                            className={`flex items-center justify-between p-3 border border-transparent hover:border-slate-800 transition-all ${isLocked ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer hover:bg-slate-900'}`}
-                          >
-                            <div className="flex items-center gap-3">
-                              <div className={`w-6 h-6 flex items-center justify-center text-[10px] font-black ${status === 'completed' ? 'text-emerald-500' : 'text-slate-500'}`}>
-                                {status === 'completed' ? <Check size={14} /> : isLocked ? <Lock size={12} /> : idx + 1}
-                              </div>
-                              <span className="text-[11px] font-bold text-slate-300 uppercase tracking-tight">{lesson.title}</span>
-                            </div>
-                            <Play size={12} className={isLocked ? 'text-slate-700' : 'text-amber-500'} />
-                          </div>
-                        );
-                      })}
+            return (
+              <motion.div
+                key={section.id}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: sectionIndex * 0.06 }}
+                className={`border border-teal-800/15 bg-white/40 backdrop-blur-sm overflow-hidden transition-all duration-300 shadow-sm hover:bg-white/50 ${isOpen ? 'shadow-md border-teal-700/40 bg-white/65' : ''}`}
+              >
+                {/* ACCORDION HEADER */}
+                <button
+                  onClick={() => toggleSection(section.id)}
+                  className="w-full p-5 flex items-center justify-between hover:bg-white/20 transition-colors text-left"
+                >
+                  <div className="flex items-center gap-4 min-w-0">
+                    {/* Level color stripe */}
+                    <div className={`w-1 h-12 bg-gradient-to-b ${cfg.gradient} flex-shrink-0`} />
+
+                    <div className={`w-11 h-11 ${cfg.iconBg} border ${cfg.border} flex items-center justify-center flex-shrink-0 shadow-sm`}>
+                      <section.icon size={20} className={cfg.iconColor} />
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
+
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-3 flex-wrap">
+                        <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight leading-none">
+                          {section.title}
+                        </h3>
+                        <span className={`px-2 py-0.5 text-[9px] font-black uppercase tracking-widest border ${cfg.badge} shadow-xs`}>
+                          {section.level}
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-slate-700 font-medium mt-1 truncate max-w-sm">{section.description}</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4 flex-shrink-0 ml-4">
+                    <div className="hidden md:flex flex-col items-end gap-1">
+                      <span className="text-[9px] font-bold text-slate-700 uppercase tracking-widest">
+                        {completedCount}/{section.lessons.length} completadas
+                      </span>
+                      <div className="w-24 h-1 bg-slate-200 rounded-none">
+                        <div
+                          className={`h-full bg-gradient-to-r ${cfg.gradient} transition-all duration-500`}
+                          style={{ width: `${progressPct}%` }}
+                        />
+                      </div>
+                    </div>
+
+                    <ChevronDown
+                      size={16}
+                      className={`text-teal-800 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                    />
+                  </div>
+                </button>
+
+                {/* ACCORDION BODY */}
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      className="overflow-hidden"
+                    >
+                      <div className="border-t border-slate-200 p-4 grid grid-cols-1 sm:grid-cols-2 gap-1.5 bg-white/20">
+                        {section.lessons.map((lesson, idx) => {
+                          const lessonStatus = proProgress.find(p => p.lesson_id === lesson.id)?.status
+                            || (lesson.id === 'pro-b1-1' ? 'active' : 'locked');
+                          const isLocked = lessonStatus === 'locked';
+                          const isCompleted = lessonStatus === 'completed';
+
+                          return (
+                            <button
+                              key={lesson.id}
+                              onClick={() => !isLocked && router.push(`/lesson/${lesson.id}?type=pro`)}
+                              disabled={isLocked}
+                              className={`flex items-center justify-between px-4 py-3 border transition-all text-left group/lesson
+                                ${isLocked
+                                  ? 'border-transparent bg-white/5 opacity-60 cursor-not-allowed'
+                                  : isCompleted
+                                    ? 'border-emerald-600/20 bg-emerald-600/5 cursor-pointer hover:bg-emerald-600/10'
+                                    : 'border-transparent hover:border-teal-800/15 hover:bg-white/60 cursor-pointer'
+                                }`}
+                            >
+                              <div className="flex items-center gap-3">
+                                <div className={`w-6 h-6 flex items-center justify-center flex-shrink-0 text-[10px] font-black
+                                  ${isCompleted ? 'text-emerald-600' : isLocked ? 'text-slate-400' : 'text-teal-700'}`}>
+                                  {isCompleted
+                                    ? <Check size={13} />
+                                    : isLocked
+                                      ? <Lock size={11} />
+                                      : <span>{idx + 1}</span>
+                                  }
+                                </div>
+                                <span className={`text-[11px] font-bold uppercase tracking-tight
+                                  ${isLocked ? 'text-slate-400 font-medium' : isCompleted ? 'text-emerald-700' : 'text-slate-800 group-hover/lesson:text-slate-900'}`}>
+                                  {lesson.title}
+                                </span>
+                              </div>
+                              <Play
+                                size={11}
+                                className={`flex-shrink-0 transition-transform group-hover/lesson:translate-x-0.5
+                                  ${isLocked ? 'text-slate-300' : 'text-teal-600'}`}
+                              />
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            );
+          })}
         </div>
 
       </main>
 
       {showReadingStudio && <ReadingStudio onClose={() => setShowReadingStudio(false)} />}
+      {showStatsModal && (
+        <ExecutiveStatsModal 
+          onClose={() => setShowStatsModal(false)} 
+          kpis={kpis} 
+          completedLessons={kpis.completedModules} 
+        />
+      )}
+      {showRaffleModal && (
+        <RaffleModal 
+          onClose={() => setShowRaffleModal(false)} 
+          totalTickets={kpis.totalTickets} 
+        />
+      )}
     </div>
   );
 }

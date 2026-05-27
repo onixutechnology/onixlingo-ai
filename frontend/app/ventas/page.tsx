@@ -156,9 +156,12 @@ export default function VentasPage() {
       <footer className="bg-white border-t border-slate-200 py-16 px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-[8px] text-slate-400 font-black uppercase tracking-[0.4em]">© 2026 ONIXLINGO ACADEMY. TODOS LOS DERECHOS RESERVADOS.</p>
-          <div className="flex gap-10">
+          <div className="flex gap-6 flex-wrap">
             <Link href="/" className="text-[8px] font-black text-slate-400 uppercase tracking-widest hover:text-teal-600 transition-colors">Inicio</Link>
-            <Link href="/login" className="text-[8px] font-black text-slate-400 uppercase tracking-widest hover:text-teal-600 transition-colors">Ingresar</Link>
+            <Link href="/legal/privacy" className="text-[8px] font-black text-slate-400 uppercase tracking-widest hover:text-teal-600 transition-colors">Privacidad</Link>
+            <Link href="/legal/terms" className="text-[8px] font-black text-slate-400 uppercase tracking-widest hover:text-teal-600 transition-colors">Términos</Link>
+            <Link href="/legal/refunds" className="text-[8px] font-black text-slate-400 uppercase tracking-widest hover:text-teal-600 transition-colors">Reembolsos</Link>
+            <Link href="/legal/support" className="text-[8px] font-black text-slate-400 uppercase tracking-widest hover:text-teal-600 transition-colors">Soporte</Link>
           </div>
         </div>
       </footer>
