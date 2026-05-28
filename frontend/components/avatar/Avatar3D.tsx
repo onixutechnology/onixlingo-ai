@@ -13,74 +13,126 @@ function HumanModel() {
   const { scene } = useGLTF('/models/avatar.glb');
   const { nodes } = useGraph(scene);
 
-  // Mapeo de huesos
+  // Mapeo de huesos corporales completos
   const bones = useMemo(() => {
     const findBone = (names: string[]) => {
+      // 1. Primer paso: Coincidencias exactas o terminaciones (evita falsos positivos como asociar LeftHandIndex1 a LeftHand)
       for (const name of names) {
-        const found = Object.values(nodes).find(n => n.name.toLowerCase().includes(name.toLowerCase()) && n.type === 'Bone');
+        const target = name.toLowerCase();
+        const found = Object.values(nodes).find(n => {
+          const nodeName = n.name.toLowerCase();
+          const isBone = n.type === 'Bone' || (n as any).isBone;
+          return isBone && (nodeName === target || nodeName.endsWith(target) || nodeName.endsWith('_' + target));
+        });
+        if (found) return found as THREE.Bone;
+      }
+      // 2. Segundo paso: Coincidencia por subcadena como respaldo
+      for (const name of names) {
+        const target = name.toLowerCase();
+        const found = Object.values(nodes).find(n => {
+          const isBone = n.type === 'Bone' || (n as any).isBone;
+          return isBone && n.name.toLowerCase().includes(target);
+        });
         if (found) return found as THREE.Bone;
       }
       return null;
     };
-    return {
+    const resolved = {
       head: findBone(['Head', 'mixamorigHead', 'def_head']),
       neck: findBone(['Neck', 'mixamorigNeck', 'def_neck']),
       spine: findBone(['Spine', 'Spine1', 'mixamorigSpine', 'def_spine']),
       jaw: findBone(['Jaw', 'Teeth', 'Mouth']),
+      leftArm: findBone(['LeftArm', 'mixamorigLeftArm', 'LeftUpArm', 'mixamorigLeftUpArm']),
+      rightArm: findBone(['RightArm', 'mixamorigRightArm', 'RightUpArm', 'mixamorigRightUpArm']),
+      leftForeArm: findBone(['LeftForeArm', 'mixamorigLeftForeArm']),
+      rightForeArm: findBone(['RightForeArm', 'mixamorigRightForeArm']),
+      leftHand: findBone(['LeftHand', 'mixamorigLeftHand']),
+      rightHand: findBone(['RightHand', 'mixamorigRightHand']),
     };
+    console.log("RESOLVED BONES:", Object.fromEntries(Object.entries(resolved).map(([k, v]) => [k, v ? { name: v.name, type: v.type } : null])));
+    return resolved;
   }, [nodes]);
 
   const currentLook = useRef(new THREE.Vector2(0, 0));
   const jawOpen = useRef(0);
+  
+  // Referencias para amortiguación de extremidades (Inicializados en pose de reposo recta hacia abajo)
+  const currentLeftArmX = useRef(1.25);
+  const currentRightArmX = useRef(1.25);
+  const currentLeftArmZ = useRef(-0.06);
+  const currentRightArmZ = useRef(0.06);
+  const currentLeftForeArmX = useRef(0.02);
+  const currentRightForeArmX = useRef(0.02);
+  const currentLeftForeArmY = useRef(0.13);
+  const currentRightForeArmY = useRef(-0.13);
 
   useFrame((state, delta) => {
     const t = state.clock.getElapsedTime();
 
-    // 1. MIRADA (Head Tracking)
-    let targetLookX = 0;
-    let targetLookY = 0;
-
-    if (gesture === 'idle' || gesture === 'listening' || isListening) {
-      targetLookX = state.mouse.x * 0.3; // Movimiento más sutil
-      targetLookY = state.mouse.y * 0.2;
-    } else if (gesture === 'thinking') {
-      targetLookX = -0.3; targetLookY = 0.3;
-    }
-
-    // Suavizado (Damping)
-    currentLook.current.x = MathUtils.damp(currentLook.current.x, targetLookX, 2, delta);
-    currentLook.current.y = MathUtils.damp(currentLook.current.y, targetLookY, 2, delta);
-
+    // 1. MIRADA (Head Tracking deshabilitado para dejar al mono estático y mirando al frente)
     if (bones.neck && bones.head) {
-      // Distribuir rotación entre cuello y cabeza para naturalidad
-      bones.neck.rotation.y = MathUtils.damp(bones.neck.rotation.y, currentLook.current.x * 0.5, 3, delta);
-      bones.neck.rotation.x = MathUtils.damp(bones.neck.rotation.x, -currentLook.current.y * 0.3, 3, delta);
-      bones.head.rotation.y = MathUtils.damp(bones.head.rotation.y, currentLook.current.x * 0.3, 3, delta);
-      bones.head.rotation.x = MathUtils.damp(bones.head.rotation.x, -currentLook.current.y * 0.2, 3, delta);
+      bones.neck.rotation.set(0, 0, 0);
+      bones.head.rotation.set(0, 0, 0);
     }
 
-    // 2. RESPIRACIÓN
+    // 2. RESPIRACIÓN CORPORAL (Deshabilitada para dejar al mono estático)
     if (bones.spine) {
-      bones.spine.rotation.x = Math.sin(t * 0.7) * 0.02;
+      bones.spine.rotation.set(0, 0, 0);
     }
 
-    // 3. MOVIMIENTO DE BOCA (Lip Sync Simulado)
+    // 3. MOVIMIENTO DE BOCA (Lip Sync Simulado - El único movimiento dinámico al hablar)
     let targetJaw = 0;
     if (isSpeaking) {
-      targetJaw = ((Math.sin(t * 20) + 1) / 2) * 0.15;
+      targetJaw = ((Math.sin(t * 22) + 1) / 2) * 0.16;
     }
-    jawOpen.current = MathUtils.damp(jawOpen.current, targetJaw, 15, delta);
+    jawOpen.current = MathUtils.damp(jawOpen.current, targetJaw, 16, delta);
 
     if (bones.jaw) {
       bones.jaw.rotation.x = jawOpen.current;
-    } else if (isSpeaking && bones.head) {
-      bones.head.rotation.x += Math.sin(t * 18) * 0.015;
+    }
+
+    // Pose por defecto estática: Brazos y manos colgando completamente rectos y relajados hacia abajo
+    let targetLeftArmX = 1.25; // Ángulo natural de caída lateral de hombro
+    let targetRightArmX = 1.25; 
+    let targetLeftArmZ = -0.06; // Alineado snug al cuerpo
+    let targetRightArmZ = 0.06; 
+    let targetLeftForeArmY = 0.13; // Rotación neutral de codos
+    let targetRightForeArmY = -0.13;
+    let targetLeftForeArmX = 0.02; // Prácticamente recto hacia abajo
+    let targetRightForeArmX = 0.02;
+
+    // Suavizado (Damping) de poses
+    currentLeftArmZ.current = MathUtils.damp(currentLeftArmZ.current, targetLeftArmZ, 4, delta);
+    currentRightArmZ.current = MathUtils.damp(currentRightArmZ.current, targetRightArmZ, 4, delta);
+    currentLeftArmX.current = MathUtils.damp(currentLeftArmX.current, targetLeftArmX, 4, delta);
+    currentRightArmX.current = MathUtils.damp(currentRightArmX.current, targetRightArmX, 4, delta);
+    currentLeftForeArmY.current = MathUtils.damp(currentLeftForeArmY.current, targetLeftForeArmY, 4, delta);
+    currentRightForeArmY.current = MathUtils.damp(currentRightForeArmY.current, targetRightForeArmY, 4, delta);
+    currentLeftForeArmX.current = MathUtils.damp(currentLeftForeArmX.current, targetLeftForeArmX, 4, delta);
+    currentRightForeArmX.current = MathUtils.damp(currentRightForeArmX.current, targetRightForeArmX, 4, delta);
+
+    if (bones.leftArm && bones.rightArm) {
+      bones.leftArm.rotation.z = currentLeftArmZ.current;
+      bones.rightArm.rotation.z = currentRightArmZ.current;
+      bones.leftArm.rotation.x = currentLeftArmX.current;
+      bones.rightArm.rotation.x = currentRightArmX.current;
+    }
+
+    if (bones.leftForeArm && bones.rightForeArm) {
+      bones.leftForeArm.rotation.y = currentLeftForeArmY.current;
+      bones.rightForeArm.rotation.y = currentRightForeArmY.current;
+      bones.leftForeArm.rotation.x = currentLeftForeArmX.current;
+      bones.rightForeArm.rotation.x = currentRightForeArmX.current;
+    }
+
+    // Rotación de muñecas y manos estática colgando perfectamente hacia abajo
+    if (bones.leftHand && bones.rightHand) {
+      bones.leftHand.rotation.set(0, 0, 0);
+      bones.rightHand.rotation.set(0, 0, 0);
     }
   });
 
   // --- POSICIÓN CORRECTIVA ---
-  // Scale 1.5: Tamaño estándar.
-  // Y = -2.2: Bajamos mucho el modelo. Como la cámara está lejos, esto centra la parte superior del cuerpo.
   return <primitive object={scene} scale={1.5} position={[0, -2.2, 0]} />;
 }
 

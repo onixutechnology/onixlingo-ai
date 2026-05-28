@@ -18,6 +18,7 @@ import { useAvatarStore } from '@/store/avatarStore';
 import { useUIStore } from '@/store/uiStore';
 import { useSearchParams } from 'next/navigation';
 import apiClient from '@/lib/apiClient';
+import confetti from 'canvas-confetti';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
 
@@ -112,7 +113,7 @@ export default function LessonRunnerEngine() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const lessonType = searchParams.get('type') || 'standard';
-  const { setSpeaking } = useAvatarStore();
+  const { setSpeaking, setGesture } = useAvatarStore();
   const { mode, activeLanguage, userTier, energy, checkAndResetDailyLimits } = useUIStore();
   
   useEffect(() => {
@@ -260,7 +261,7 @@ export default function LessonRunnerEngine() {
   }, []);
 
   // [FUNCIÓN 6 - FALLBACK] Reproductor local en caso de desconexión
-  const fallbackSpeakText = useCallback((text: string, rate: number = 0.9): void => {
+  const fallbackSpeakText = useCallback((text: string, rate: number = 0.9, langOverride?: string): void => {
     if (typeof window === 'undefined' || !window.speechSynthesis || !soundEnabled) return;
 
     window.speechSynthesis.cancel();
@@ -268,8 +269,8 @@ export default function LessonRunnerEngine() {
     const voices = window.speechSynthesis.getVoices();
     
     // Mapear idioma activo para el lector del navegador
-    const langMap: Record<string, string> = { en: 'en-US', fr: 'fr-FR', zh: 'zh-CN' };
-    const targetLang = langMap[activeLanguage] || 'en-US';
+    const langMap: Record<string, string> = { en: 'en-US', fr: 'fr-FR', zh: 'zh-CN', es: 'es-ES' };
+    const targetLang = langOverride || langMap[activeLanguage] || 'en-US';
     
     // Seleccionar una voz que coincida con el idioma objetivo
     const targetVoice = voices.find(v => v.lang.startsWith(targetLang));
@@ -284,13 +285,18 @@ export default function LessonRunnerEngine() {
   }, [soundEnabled, playbackSpeed, activeLanguage, setSpeaking]);
 
   // [FUNCIÓN 6 - PREMIUM] Reproducir sonido ultra-realista con Google Cloud TTS
-  const speakText = useCallback((text: string, rate: number = 0.9): void => {
+  const speakText = useCallback((text: string, rate: number = 0.9, langOverride?: string, translateTo?: string): void => {
     if (!soundEnabled) return;
+
+    const speechLang = langOverride || activeLanguage;
 
     try {
       // Intentar reproducir voz ultra-realista mediante el backend
       const baseUrl = apiClient.defaults.baseURL || 'http://localhost:8000';
-      const audioUrl = `${baseUrl}/api/v1/ai/tts?text=${encodeURIComponent(text)}&lang=${activeLanguage}`;
+      let audioUrl = `${baseUrl}/api/v1/ai/tts?text=${encodeURIComponent(text)}&lang=${speechLang}`;
+      if (translateTo) {
+        audioUrl += `&translate_to=${translateTo}`;
+      }
       
       const audio = new Audio(audioUrl);
       audio.playbackRate = playbackSpeed;
@@ -300,17 +306,17 @@ export default function LessonRunnerEngine() {
       audio.onerror = (e) => {
         console.warn("⚠️ Google Cloud TTS no disponible o credencial inactiva. Usando sintetizador local:", e);
         setSpeaking(false);
-        fallbackSpeakText(text, rate);
+        fallbackSpeakText(text, rate, speechLang === 'es' ? 'es-ES' : undefined);
       };
       
       audio.play().catch(err => {
         console.warn("⚠️ Reproducción automática bloqueada por el navegador. Usando sintetizador local:", err);
-        fallbackSpeakText(text, rate);
+        fallbackSpeakText(text, rate, speechLang === 'es' ? 'es-ES' : undefined);
       });
       
     } catch (err) {
       console.warn("⚠️ Error al inicializar audio premium. Usando sintetizador local:", err);
-      fallbackSpeakText(text, rate);
+      fallbackSpeakText(text, rate, speechLang === 'es' ? 'es-ES' : undefined);
     }
   }, [soundEnabled, playbackSpeed, activeLanguage, setSpeaking, fallbackSpeakText]);
 
@@ -1329,6 +1335,47 @@ export default function LessonRunnerEngine() {
     // 👇 IMPORTANTE: sin lesson?.id ni otras refs inestables
   }, [params?.lessonId, isPro, activeLanguage]);
 
+  // ============================================================================
+  // ==================== EFECTO PARA INSTRUCCIONES EN ESPAÑOL (VOZ AVATAR) ====
+  // ============================================================================
+
+  useEffect(() => {
+    if (!lesson) return;
+    const stage = lesson.stages[currentStageIndex];
+    if (!stage) return;
+
+    if (stage.type === "lecture" || stage.type === "theory") {
+      const part = stage.parts ? stage.parts[lecturePartIndex] : null;
+      if (part && part.visual) {
+        const timer = setTimeout(() => {
+          // Solicitamos traducción y lectura por el avatar de la explicación técnica completa
+          speakText(part.visual, 0.95, "es", "es");
+        }, 700);
+        return () => clearTimeout(timer);
+      }
+    } else {
+      let instruction = "";
+
+      if (stage.type === "quiz") {
+        if (currentQuestionIndex === 0) {
+          instruction = `Comenzamos la sección de comprensión ejecutiva. Responde las siguientes quince preguntas con el vocabulario estratégico.`;
+        }
+      } else if (stage.type === "gamified_quiz") {
+        if (currentQuestionIndex === 0) {
+          instruction = `Iniciamos los ejercicios de sintaxis y estructura. Reordena las frases y completa los textos con precisión formal.`;
+        }
+      } else if (stage.type === "pairing_drill") {
+        instruction = `Empareja las palabras del vocabulario clave en inglés con su traducción correspondiente en francés.`;
+      }
+
+      if (instruction) {
+        const timer = setTimeout(() => {
+          speakText(instruction, 0.95, "es");
+        }, 700);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [currentStageIndex, lecturePartIndex, currentQuestionIndex, lesson, speakText]);
 
   // ============================================================================
   // ==================== EFECTO PARA INICIALIZAR PREGUNTA ====================
@@ -1454,6 +1501,7 @@ export default function LessonRunnerEngine() {
 
   const nextQuestionOrStage = () => {
     setFeedback(null);
+    setGesture('idle'); // Restablecemos el gesto del avatar a reposo
     if (lesson?.stages[currentStageIndex].questions && currentQuestionIndex < (lesson.stages[currentStageIndex].questions!.length - 1)) {
       setCurrentQuestionIndex(prev => prev + 1);
     } else {
@@ -1589,6 +1637,18 @@ export default function LessonRunnerEngine() {
       responseTime,
     });
 
+    if (isCorrect) {
+      setGesture('happy');
+      confetti({
+        particleCount: 120,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ['#0f766e', '#d97706', '#0284c7', '#10b981'] // Paleta OnixLingo Premium (teal, amber, blue, emerald)
+      });
+    } else {
+      setGesture('confused');
+    }
+
     // --- 6. AUDIO OPCIONAL ---
     if (soundEnabled) {
       speakText(isCorrect ? "Correct!" : "Check the explanation.");
@@ -1692,18 +1752,18 @@ export default function LessonRunnerEngine() {
   // ============================================================================
 
   return (
-    <div className={`min-h-screen flex flex-col transition-colors duration-500 ${isPro ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`} style={{ fontSize: `${fontSize}px` }}>
+    <div className={`min-h-screen flex flex-col transition-colors duration-500 bg-slate-50 text-slate-900`} style={{ fontSize: `${fontSize}px` }}>
 
       {/* HEADER */}
       {isPro ? (
-        <header className="h-16 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 px-6 flex items-center justify-between sticky top-0 z-20">
+        <header className="h-16 bg-white/90 backdrop-blur-md border-b border-slate-200 px-6 flex items-center justify-between sticky top-0 z-20">
           <div className="flex items-center gap-4">
-            <button onClick={handleExit} className="p-2 hover:bg-white/10 rounded-none transition-colors text-slate-400 hover:text-white">
+            <button onClick={handleExit} className="p-2 hover:bg-slate-100 rounded-none transition-colors text-slate-500 hover:text-slate-900">
               <X size={24} />
             </button>
             <div className="hidden md:flex flex-col">
               <span className="text-[10px] uppercase tracking-widest text-teal-500 font-black font-serif italic">Titanium Executive</span>
-              <div className="flex items-center gap-2 text-teal-400 text-xs font-black">
+              <div className="flex items-center gap-2 text-teal-600 text-xs font-black">
                 <Zap size={12} fill="currentColor" /> {stats.correctAnswers} ACIERTOS
               </div>
             </div>
@@ -1711,16 +1771,16 @@ export default function LessonRunnerEngine() {
 
           <div className="flex items-center gap-4">
             {showAnalytics && (
-              <div className="flex items-center gap-4 bg-slate-800/80 px-4 py-2 rounded-none border border-slate-700 text-[10px] font-black uppercase">
+              <div className="flex items-center gap-4 bg-slate-50 px-4 py-2 rounded-none border border-slate-200 text-[10px] font-black uppercase text-slate-700">
                 <div>⚡ {Math.round(stats.xpAccumulated / Math.max(seconds, 1) * 60)} XP/min</div>
                 <div>📊 {calculateAccuracy()}%</div>
               </div>
             )}
-            <div className={`flex items-center gap-3 px-4 py-2 rounded-none border shadow-inner transition-colors duration-300 ${timeMode !== 'basic' && seconds < 60 ? 'bg-red-950/80 border-red-800 animate-pulse' : 'bg-slate-800/80 border-slate-700'}`}>
-              <Clock size={16} className={timeMode !== 'basic' && seconds < 60 ? 'text-red-400 animate-bounce' : 'text-teal-400'} />
-              <span className={`font-mono text-xl font-black tracking-widest ${timeMode !== 'basic' && seconds < 60 ? 'text-red-200' : 'text-teal-50'}`}>{formatTime(seconds)}</span>
+            <div className={`flex items-center gap-3 px-4 py-2 rounded-none border shadow-sm transition-colors duration-300 ${timeMode !== 'basic' && seconds < 60 ? 'bg-red-50 border-red-200 animate-pulse' : 'bg-white border-slate-200'}`}>
+              <Clock size={16} className={timeMode !== 'basic' && seconds < 60 ? 'text-red-600 animate-bounce' : 'text-teal-600'} />
+              <span className={`font-mono text-xl font-black tracking-widest ${timeMode !== 'basic' && seconds < 60 ? 'text-red-700' : 'text-teal-850'}`}>{formatTime(seconds)}</span>
             </div>
-            <button onClick={() => setShowSettings(!showSettings)} className="p-2 hover:bg-white/10 rounded-none border border-transparent hover:border-slate-700">
+            <button onClick={() => setShowSettings(!showSettings)} className="p-2 hover:bg-slate-100 rounded-none border border-transparent hover:border-slate-200 text-slate-600 hover:text-slate-900">
               <Settings size={20} />
             </button>
           </div>
@@ -1819,7 +1879,7 @@ export default function LessonRunnerEngine() {
             </div>
             <h3 className="text-sm font-serif font-black italic uppercase tracking-wider text-amber-400 mb-2">¿Deseas retomar tu intento?</h3>
             <p className="text-[10px] text-slate-400 leading-relaxed mb-6">
-              Hemos detectado un progreso guardado del <span className="text-white font-mono font-black">{new Date(pendingResumeState.timestamp).toLocaleDateString()}</span>. ¿Prefieres reanudar tu examen desde la etapa donde estabas o comenzar uno nuevo de cero?
+              Hemos detectado un progreso guardado del <span className="text-white font-mono font-black">{new Date(pendingResumeState.timestamp).toLocaleDateString()}</span>. ¿Prefieres reanudar tu lección desde la etapa donde estabas o comenzar uno nuevo de cero?
             </p>
             <div className="flex flex-col gap-2">
               <button 
@@ -1832,7 +1892,7 @@ export default function LessonRunnerEngine() {
                 }} 
                 className="w-full py-3 bg-amber-600 hover:bg-amber-500 text-white font-black text-[10px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-1.5"
               >
-                SÍ, REANUDAR EXAMEN <ChevronRight size={14} />
+                SÍ, REANUDAR LECCIÓN <ChevronRight size={14} />
               </button>
               <button 
                 onClick={() => {
@@ -1855,28 +1915,28 @@ export default function LessonRunnerEngine() {
         {/* Efectos de fondo Pro */}
         {isPro && (
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] animate-pulse"></div>
-            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-amber-600/5 rounded-full blur-[120px] animate-pulse delay-700"></div>
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-600/5 rounded-full blur-[120px] animate-pulse"></div>
+            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-amber-600/3 rounded-full blur-[120px] animate-pulse delay-700"></div>
           </div>
         )}
 
         {/* MODO 1: LECTURE */}
         {(currentStage.type === 'lecture' || currentStage.type === 'theory') && currentStage.parts && (
           <div className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 animate-in fade-in relative z-10">
-            <div className={`rounded-none border-2 shadow-sm relative min-h-[400px] flex items-end justify-center overflow-hidden ${isPro ? 'bg-slate-900 border-slate-800' : 'bg-slate-100 border-slate-200'}`}>
+            <div className="rounded-none border-2 shadow-sm relative min-h-[400px] flex items-end justify-center overflow-hidden bg-slate-100 border-slate-200">
               <div className="absolute inset-0"><Avatar3D /></div>
             </div>
             <div className="flex flex-col justify-center">
-              <div className={`p-8 rounded-none border ${isPro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
+              <div className="p-8 rounded-none border bg-white border-slate-200 shadow-sm">
                 <div className="flex items-center gap-2 mb-4">
                    <Zap size={14} className="text-teal-600" />
-                   <h2 className={`text-xs font-black uppercase tracking-[0.3em] font-serif italic ${isPro ? 'text-teal-400' : 'text-slate-800'}`}>{currentStage.title}</h2>
+                   <h2 className={`text-xs font-black uppercase tracking-[0.3em] font-serif italic ${isPro ? 'text-teal-700' : 'text-slate-800'}`}>{currentStage.title}</h2>
                 </div>
-                <div className={`text-sm font-black uppercase tracking-widest mb-8 leading-relaxed opacity-80 ${isPro ? 'text-slate-400' : 'text-slate-500'}`}>
+                <div className={`text-sm font-black uppercase tracking-widest mb-8 leading-relaxed opacity-90 ${isPro ? 'text-slate-800' : 'text-slate-700'}`}>
                   {currentStage.parts[lecturePartIndex]?.visual}
                 </div>
                 <div className="flex gap-2">
-                  <button onClick={() => speakText(currentStage.parts![lecturePartIndex]?.audio)} className={`p-4 rounded-none border transition-colors ${isPro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-white' : 'bg-slate-50 border-slate-200 hover:bg-slate-100 text-slate-800'}`}>
+                  <button onClick={() => speakText(currentStage.parts![lecturePartIndex]?.visual, 0.95, "es", "es")} className="p-4 rounded-none border transition-colors bg-slate-50 border-slate-200 hover:bg-slate-100 text-slate-800">
                     <Volume2 size={18} />
                   </button>
                   <button
@@ -1892,7 +1952,7 @@ export default function LessonRunnerEngine() {
 
                 {isPro && (
                   <div className="mt-6 flex gap-2">
-                    <button onClick={() => addBookmark(currentStage.id)} className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 text-sm ${bookmarks.includes(currentStage.id) ? 'bg-amber-600' : 'bg-slate-700'}`}>
+                    <button onClick={() => addBookmark(currentStage.id)} className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 text-sm ${bookmarks.includes(currentStage.id) ? 'bg-amber-600 text-white' : 'bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200'}`}>
                       <Heart size={16} /> {bookmarks.includes(currentStage.id) ? 'Guardado' : 'Guardar'}
                     </button>
                   </div>
@@ -1905,10 +1965,10 @@ export default function LessonRunnerEngine() {
         {/* MODO: PAIRING DRILL */}
         {currentStage.type === 'pairing_drill' && (
           <div className="max-w-2xl w-full flex flex-col justify-center animate-in zoom-in-95 relative z-10">
-            <div className={`p-8 rounded-none border ${isPro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
+            <div className="p-8 rounded-none border bg-white border-slate-200 shadow-sm">
               <div className="flex items-center gap-2 mb-6 border-b border-slate-100 pb-4">
                  <Zap size={14} className="text-teal-600" />
-                 <h2 className={`text-xs font-black uppercase tracking-[0.3em] font-serif italic ${isPro ? 'text-teal-400' : 'text-slate-800'}`}>{currentStage.title || "Vocabulario Clé"}</h2>
+                 <h2 className={`text-xs font-black uppercase tracking-[0.3em] font-serif italic ${isPro ? 'text-teal-700' : 'text-slate-800'}`}>{currentStage.title || "Vocabulario Clé"}</h2>
               </div>
               
               <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-8">Empareja cada palabra en inglés con su traducción en francés:</p>
@@ -1926,10 +1986,10 @@ export default function LessonRunnerEngine() {
                         disabled={isMatched}
                         className={`w-full p-4 border-2 text-center font-bold text-xs uppercase tracking-wider transition-all
                           ${isMatched 
-                            ? 'bg-emerald-950/20 border-emerald-600 text-emerald-500 opacity-60 cursor-not-allowed'
+                            ? 'bg-emerald-50 border-emerald-300 text-emerald-700 opacity-60 cursor-not-allowed'
                             : isSelected
-                              ? 'bg-amber-900/20 border-amber-600 text-amber-500 scale-[0.98]'
-                              : isPro ? 'bg-slate-800 border-slate-700 text-slate-300 hover:border-amber-600' : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-amber-400'
+                              ? 'bg-amber-50 border-amber-500 text-amber-700 scale-[0.98]'
+                              : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-amber-400 hover:bg-slate-100/50'
                           }
                         `}
                       >
@@ -1951,10 +2011,10 @@ export default function LessonRunnerEngine() {
                         disabled={isMatched}
                         className={`w-full p-4 border-2 text-center font-bold text-xs uppercase tracking-wider transition-all
                           ${isMatched 
-                            ? 'bg-emerald-950/20 border-emerald-600 text-emerald-500 opacity-60 cursor-not-allowed'
+                            ? 'bg-emerald-50 border-emerald-300 text-emerald-700 opacity-60 cursor-not-allowed'
                             : isSelected
-                              ? 'bg-amber-900/20 border-amber-600 text-amber-500 scale-[0.98]'
-                              : isPro ? 'bg-slate-800 border-slate-700 text-slate-300 hover:border-amber-600' : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-amber-400'
+                              ? 'bg-amber-50 border-amber-500 text-amber-700 scale-[0.98]'
+                              : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-amber-400 hover:bg-slate-100/50'
                           }
                         `}
                       >
@@ -1967,7 +2027,7 @@ export default function LessonRunnerEngine() {
 
               {matchedPairs.length > 0 && matchedPairs.length === ((currentStage as any).pairs?.length || 0) ? (
                 <div className="animate-in fade-in duration-300">
-                  <div className={`p-4 mb-6 rounded-none text-center font-bold text-xs uppercase tracking-wider ${isPro ? 'bg-emerald-950/30 border border-emerald-500 text-emerald-400' : 'bg-emerald-50 border border-emerald-200 text-emerald-800'}`}>
+                  <div className="p-4 mb-6 rounded-none text-center font-bold text-xs uppercase tracking-wider bg-emerald-50 border border-emerald-200 text-emerald-800">
                     🎉 ¡Perfecto! Todas las parejas han sido emparejadas con éxito.
                   </div>
                   <button
@@ -1980,7 +2040,7 @@ export default function LessonRunnerEngine() {
               ) : (
                 <button
                   disabled
-                  className="w-full font-black py-4 rounded-none flex justify-center gap-3 text-[10px] uppercase tracking-[0.2em] bg-slate-800 text-slate-600 cursor-not-allowed"
+                  className="w-full font-black py-4 rounded-none flex justify-center gap-3 text-[10px] uppercase tracking-[0.2em] bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200"
                 >
                   EMPAREJA TODO PARA CONTINUAR
                 </button>
@@ -1992,13 +2052,13 @@ export default function LessonRunnerEngine() {
         {/* MODO 2: QUIZ */}
         {(currentStage.type === 'gamified_quiz' || currentStage.type === 'quiz') && currentStage.questions && (
           <div className="max-w-2xl w-full flex flex-col justify-center animate-in zoom-in-95 relative z-10">
-            <div className={`p-8 rounded-none border ${isPro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
+            <div className="p-8 rounded-none border bg-white border-slate-200 shadow-sm">
               <div className="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
-                <span className={`text-[9px] font-black uppercase tracking-[0.4em] ${isPro ? 'text-slate-500' : 'text-slate-400'}`}>
+                <span className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-400">
                   MOD {currentQuestionIndex + 1} / {currentStage.questions.length}
                 </span>
                 {isPro && (
-                  <div className="flex items-center gap-6 text-[9px] font-black uppercase tracking-widest text-teal-400">
+                  <div className="flex items-center gap-6 text-[9px] font-black uppercase tracking-widest text-teal-600">
                     <span>ACC: {calculateAccuracy()}%</span>
                     <span>🔥 {stats.streakCount}</span>
                   </div>
@@ -2011,7 +2071,7 @@ export default function LessonRunnerEngine() {
 
                 return (
                   <>
-                    <h2 className={`text-sm font-black uppercase tracking-widest mb-10 font-serif italic ${isPro ? 'text-white' : 'text-slate-800'}`}>{activeQuestion.question}</h2>
+                    <h2 className="text-sm font-black uppercase tracking-widest mb-10 font-serif italic text-slate-800">{activeQuestion.question}</h2>
 
                     {activeQuestion.type === 'listening_match' && (
                       <div className="mb-8 flex justify-center">
@@ -2026,17 +2086,17 @@ export default function LessonRunnerEngine() {
 
                     {activeQuestion.type === 'order_sentence' && (
                       <div className="space-y-6">
-                        <div className={`min-h-[80px] p-4 border-2 border-dashed rounded-xl flex flex-wrap gap-2 items-center transition-colors ${isPro ? 'bg-slate-800/50 border-slate-600' : 'bg-slate-50 border-slate-300'}`}>
+                        <div className="min-h-[80px] p-4 border-2 border-dashed rounded-xl flex flex-wrap gap-2 items-center transition-colors bg-slate-50 border-slate-300">
                           {sentenceBuilder.length === 0 && <span className="text-slate-500 text-sm italic">Toca las palabras abajo...</span>}
                           {sentenceBuilder.map((word, idx) => (
-                            <button key={`built-${idx}`} onClick={() => handleWordClick(word, idx, false)} className={`px-4 py-2 font-bold rounded-lg shadow-md transition-colors animate-in zoom-in ${isPro ? 'bg-indigo-600 text-white' : 'bg-blue-600 text-white'}`}>
+                            <button key={`built-${idx}`} onClick={() => handleWordClick(word, idx, false)} className="px-4 py-2 font-bold rounded-lg shadow-md transition-colors animate-in zoom-in bg-blue-600 text-white">
                               {word}
                             </button>
                           ))}
                         </div>
                         <div className="flex flex-wrap gap-3 justify-center">
                           {wordPool.map((word, idx) => (
-                            <button key={`pool-${idx}`} onClick={() => handleWordClick(word, idx, true)} className={`px-4 py-2 border-2 font-medium rounded-lg hover:-translate-y-1 transition-all shadow-sm ${isPro ? 'bg-slate-800 border-slate-700 text-slate-200 hover:border-indigo-500' : 'bg-white border-slate-200 text-slate-700 hover:border-blue-400'}`}>
+                            <button key={`pool-${idx}`} onClick={() => handleWordClick(word, idx, true)} className="px-4 py-2 border-2 font-medium rounded-lg hover:-translate-y-1 transition-all shadow-sm bg-white border-slate-200 text-slate-700 hover:border-blue-400">
                               {word}
                             </button>
                           ))}
@@ -2046,7 +2106,7 @@ export default function LessonRunnerEngine() {
                             <RefreshCw size={14} /> REINICIAR
                           </button>
                         </div>
-                        <button onClick={() => validateAnswer(activeQuestion)} disabled={sentenceBuilder.length === 0 || !!feedback} className={`w-full font-bold py-3 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed shadow-lg ${isPro ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-900/50' : 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200'}`}>
+                        <button onClick={() => validateAnswer(activeQuestion)} disabled={sentenceBuilder.length === 0 || !!feedback} className="w-full font-bold py-3 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed shadow-lg bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200">
                           COMPROBAR ORDEN
                         </button>
                       </div>
@@ -2054,18 +2114,18 @@ export default function LessonRunnerEngine() {
 
                     {activeQuestion.type === 'fill_input' && (
                       <div className="space-y-4">
-                        <input type="text" value={textInput} onChange={(e) => setTextInput(e.target.value)} placeholder="Escribe tu respuesta aquí..." className={`w-full p-4 text-lg border-2 rounded-xl outline-none transition-all ${isPro ? 'bg-slate-800 border-slate-700 text-white focus:border-indigo-500' : 'bg-white border-slate-300 text-slate-900 focus:border-blue-500'}`} disabled={!!feedback} autoFocus onKeyDown={(e) => { if (e.key === 'Enter' && !feedback) validateAnswer(activeQuestion); }} />
+                        <input type="text" value={textInput} onChange={(e) => setTextInput(e.target.value)} placeholder="Escribe tu respuesta aquí..." className="w-full p-4 text-lg border-2 rounded-xl outline-none transition-all bg-white border-slate-300 text-slate-900 focus:border-blue-500" disabled={!!feedback} autoFocus onKeyDown={(e) => { if (e.key === 'Enter' && !feedback) validateAnswer(activeQuestion); }} />
                         {isPro && showHints && (
-                          <div className="p-3 rounded-lg bg-amber-900/30 border border-amber-500 text-amber-200 text-sm">
+                          <div className="p-3 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-sm">
                             💡 {getIntelligentHint(activeQuestion, 1)}
                           </div>
                         )}
                         <div className="flex gap-2">
-                          <button onClick={() => validateAnswer(activeQuestion)} disabled={!textInput.trim() || !!feedback} className={`flex-1 font-bold py-3 rounded-xl disabled:opacity-50 ${isPro ? 'bg-indigo-600 hover:bg-indigo-500 text-white' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}>
+                          <button onClick={() => validateAnswer(activeQuestion)} disabled={!textInput.trim() || !!feedback} className="flex-1 font-bold py-3 rounded-xl disabled:opacity-50 bg-blue-600 hover:bg-blue-700 text-white">
                             COMPROBAR
                           </button>
                           {isPro && (
-                            <button onClick={() => { setShowHints(!showHints); setHintsUsed(prev => prev + 1); }} className="px-4 py-3 rounded-xl bg-slate-700 hover:bg-slate-600">
+                            <button onClick={() => { setShowHints(!showHints); setHintsUsed(prev => prev + 1); }} className="px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-250">
                               💡
                             </button>
                           )}
@@ -2082,8 +2142,8 @@ export default function LessonRunnerEngine() {
                             disabled={!!feedback}
                             className={`w-full p-5 rounded-none border-2 text-left font-black text-[10px] uppercase tracking-widest transition-all group
                               ${selectedOption === opt
-                                ? (isPro ? 'bg-amber-900/20 border-amber-600 text-amber-400' : 'bg-amber-50 border-amber-600 text-amber-900')
-                                : (isPro ? 'bg-slate-800 border-slate-700 text-slate-400 hover:border-amber-600' : 'bg-white border-slate-200 text-slate-500 hover:border-amber-400')
+                                ? 'bg-amber-50 border-amber-600 text-amber-900'
+                                : 'bg-white border-slate-200 text-slate-500 hover:border-amber-400'
                               }
                             `}
                           >
@@ -2094,12 +2154,12 @@ export default function LessonRunnerEngine() {
                           </button>
                         ))}
                         <div className="flex gap-2 pt-6">
-                          <button onClick={() => validateAnswer(activeQuestion)} disabled={!selectedOption || !!feedback} className={`flex-1 font-black py-4 rounded-none text-[10px] uppercase tracking-[0.2em] disabled:opacity-50 transition-all ${isPro ? 'bg-amber-600 hover:bg-amber-700 text-white' : 'bg-amber-600 hover:bg-amber-700 text-white'}`}>
+                          <button onClick={() => validateAnswer(activeQuestion)} disabled={!selectedOption || !!feedback} className="flex-1 font-black py-4 rounded-none text-[10px] uppercase tracking-[0.2em] disabled:opacity-50 transition-all bg-amber-600 hover:bg-amber-700 text-white">
                             VALIDAR RESPUESTA
                           </button>
                           {isPro && (
-                            <button onClick={() => skipQuestion()} className="px-5 py-4 rounded-none bg-slate-800 border border-slate-700 hover:bg-slate-700 transition-colors">
-                              <SkipForward size={18} className="text-slate-400" />
+                            <button onClick={() => skipQuestion()} className="px-5 py-4 rounded-none bg-slate-100 border border-slate-200 hover:bg-slate-200 transition-colors">
+                              <SkipForward size={18} className="text-slate-500" />
                             </button>
                           )}
                         </div>
@@ -2107,18 +2167,29 @@ export default function LessonRunnerEngine() {
                     )}
 
                     {feedback && (
-                      <div className={`mt-8 p-6 rounded-none border-l-4 animate-in slide-in-from-bottom-2 duration-300 ${feedback.isCorrect ? 'bg-amber-900/10 border-amber-600 text-amber-400' : 'bg-red-900/10 border-red-600 text-red-400'}`}>
+                      <div className={`mt-8 p-6 rounded-none border-l-4 animate-in slide-in-from-bottom-2 duration-300 ${feedback.isCorrect ? 'bg-amber-50 border-amber-600 text-amber-900' : 'bg-red-50 border-red-600 text-red-900'}`}>
                         <div className="flex items-center gap-3 mb-4">
-                          {feedback.isCorrect ? <CheckCircle2 size={24} /> : <XIcon size={24} />}
-                          <h3 className="text-[10px] font-black uppercase tracking-[0.3em]">{feedback.isCorrect ? "Sync Correct" : "Sync Error"}</h3>
+                          {feedback.isCorrect ? <CheckCircle2 size={24} className="text-amber-600" /> : <XIcon size={24} className="text-red-600" />}
+                          <h3 className={`text-[10px] font-black uppercase tracking-[0.3em] ${feedback.isCorrect ? 'text-amber-800' : 'text-red-800'}`}>{feedback.isCorrect ? "Sync Correct" : "Sync Error"}</h3>
                         </div>
+                        
+                        {/* 1. MOSTRAR RESPUESTA CORRECTA CON ALTO CONTRASTE */}
                         {!feedback.isCorrect && feedback.correctAnswer && (
-                          <div className="mb-4 text-[11px] font-bold uppercase tracking-widest opacity-80">
-                            <span className="text-slate-500">Expectativa:</span> <br />
-                            <span className="text-red-400 mt-1 inline-block">{feedback.correctAnswer}</span>
+                          <div className="mb-4 p-4 bg-white/70 border border-red-200 text-[11px] font-bold uppercase tracking-widest rounded-none">
+                            <span className="text-slate-500 block mb-1">Respuesta Correcta:</span>
+                            <span className="text-red-700 font-extrabold text-sm block">{feedback.correctAnswer}</span>
                           </div>
                         )}
-                        <button onClick={nextQuestionOrStage} className={`w-full mt-6 py-4 rounded-none font-black text-[10px] uppercase tracking-[0.3em] transition-all ${feedback.isCorrect ? 'bg-amber-600 hover:bg-amber-700 text-white' : 'bg-red-600 hover:bg-red-700 text-white'}`}>
+
+                        {/* 2. MOSTRAR EVALUACIÓN Y ANÁLISIS DE LA DIAPOSITIVA */}
+                        {feedback.explanation && (
+                          <div className="mb-4 p-4 bg-white/80 border border-slate-200 text-[11px] leading-relaxed uppercase tracking-wider text-slate-700 rounded-none">
+                            <span className="font-black text-[9px] tracking-widest text-teal-700 block mb-1">Análisis de la Diapositiva / Evaluación:</span>
+                            {feedback.explanation}
+                          </div>
+                        )}
+
+                        <button onClick={nextQuestionOrStage} className={`w-full mt-6 py-4 rounded-none font-black text-[10px] uppercase tracking-[0.3em] transition-all ${feedback.isCorrect ? 'bg-amber-600 hover:bg-amber-700 text-white shadow-md' : 'bg-red-600 hover:bg-red-700 text-white shadow-md'}`}>
                           PROCESAR SIGUIENTE
                         </button>
                       </div>

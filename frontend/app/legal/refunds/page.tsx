@@ -18,16 +18,35 @@ export default function RefundsPage() {
         <strong>Efecto de la Cancelación:</strong> Al cancelar la suscripción, usted conservará el acceso a las características de pago contratadas hasta la fecha de finalización del periodo de facturación actual (ya sea mensual o anual). No se le volverá a realizar ningún cargo automático futuro.
       </p>
 
-      <h3 className="text-xl font-bold mt-8 mb-4">2. Términos de Reembolso</h3>
+      <h3 className="text-xl font-bold mt-8 mb-4">2. Política de Reembolso — 14 Días</h3>
+
+      <div className="bg-teal-50 p-6 rounded-xl border border-teal-200 text-teal-900 font-medium my-6">
+        <p className="mb-0 text-base">
+          <strong>Garantía de 14 días:</strong> Si no está satisfecho con su suscripción de OnixLingo por cualquier motivo, puede solicitar un reembolso completo dentro de los <strong>14 días calendario</strong> siguientes a la fecha de su primer pago o renovación. No se requiere justificación alguna para ejercer este derecho.
+        </p>
+      </div>
+
       <p className="mb-4 leading-relaxed">
-        Debido a la naturaleza digital de nuestro producto y a que ponemos a disposición del usuario un nivel de acceso gratuito (Plan Free) y pruebas iniciales para evaluar la calidad y el funcionamiento de las herramientas antes de la compra, establecemos los siguientes criterios de reembolso:
+        Esta política cumple con los <strong>Buyer Terms de Paddle.com</strong>, nuestro Merchant of Record. Para solicitar un reembolso dentro del período de 14 días, contáctenos en <strong>soporte@onixu.company</strong> indicando su correo de registro y número de transacción.
       </p>
+
       <ul className="list-disc pl-6 mb-4 space-y-2 text-sm text-slate-600">
-        <li><strong>Pagos Mensuales:</strong> No se ofrecen reembolsos por meses de suscripción ya transcurridos o ciclos mensuales parcialmente utilizados.</li>
-        <li><strong>Cargos Erróneos o Duplicados:</strong> Si se identifica un cargo doble o erróneo debido a un fallo en el sistema de pagos, se procesará la devolución del importe excedente de manera inmediata tras la validación técnica del caso.</li>
+        <li><strong>Planes Mensuales:</strong> Reembolso completo disponible dentro de los primeros 14 días naturales desde la fecha de cargo.</li>
+        <li><strong>Planes Anuales:</strong> Reembolso completo disponible dentro de los primeros 14 días naturales desde la fecha de cargo. Transcurrido dicho periodo, el reembolso será proporcional al tiempo no utilizado, evaluado caso a caso.</li>
+        <li><strong>Cargos Erróneos o Duplicados:</strong> Si se identifica un cargo doble o erróneo debido a un fallo en el sistema de pagos, se procesará la devolución del importe excedente de manera inmediata tras la validación técnica del caso, independientemente del período transcurrido.</li>
       </ul>
 
-      <h3 className="text-xl font-bold mt-8 mb-4">3. Gestión de Devoluciones a través de Paddle</h3>
+      <h3 className="text-xl font-bold mt-8 mb-4">3. Cómo Solicitar un Reembolso</h3>
+      <p className="mb-4 leading-relaxed">
+        Para solicitar un reembolso dentro del período de 14 días, siga estos pasos:
+      </p>
+      <ol className="list-decimal pl-6 mb-4 space-y-2 text-sm text-slate-600">
+        <li>Envíe un correo electrónico a <strong>soporte@onixu.company</strong> con el asunto: <em>"Solicitud de Reembolso"</em>.</li>
+        <li>Incluya su nombre completo, correo de registro y el número de transacción o recibo de pago.</li>
+        <li>Nuestro equipo procesará su solicitud en un plazo máximo de <strong>2 días hábiles</strong>.</li>
+      </ol>
+
+      <h3 className="text-xl font-bold mt-8 mb-4">4. Gestión de Devoluciones a través de Paddle</h3>
       <div className="bg-amber-50 p-6 rounded-xl border border-amber-100 text-amber-900 font-medium my-6">
         <p className="mb-3">
           <strong>Procesamiento por Merchant of Record:</strong> Al ser <strong>Paddle.com</strong> nuestro Merchant of Record (Vendedor Oficial), todas las solicitudes de reembolso aprobadas formalmente son ejecutadas y devueltas a su método de pago original a través de su infraestructura de transacciones.
@@ -37,7 +56,7 @@ export default function RefundsPage() {
         </p>
       </div>
 
-      <h3 className="text-xl font-bold mt-8 mb-4">4. Disputas de Pago</h3>
+      <h3 className="text-xl font-bold mt-8 mb-4">5. Disputas de Pago</h3>
       <p className="mb-4 leading-relaxed">
         Le recomendamos encarecidamente ponerse en contacto con nuestro departamento de soporte técnico y facturación en <strong>soporte@onixu.company</strong> antes de iniciar una disputa o contracargo con su banco. Nuestro equipo trabajará de manera expedita junto con Paddle para resolver cualquier inconveniente con sus cobros.
       </p>

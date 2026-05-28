@@ -17,10 +17,12 @@ import {
 
 import { UpgradeModal } from '@/components/pro/UpgradeModal';
 import { ReadingStudio } from '@/components/pro/ReadingStudio';
-import { ExecutiveStatsModal } from '@/components/pro/ExecutiveStatsModal';
+import { B2BNegotiations } from '@/components/pro/B2BNegotiations';
+import { ExecutiveCommandCenter } from '@/components/pro/ExecutiveCommandCenter';
+import { SpeechCalibrateModal } from '@/components/pro/SpeechCalibrateModal';
 import { RaffleModal } from '@/components/pro/RaffleModal';
 import apiClient from '@/lib/apiClient';
-import { PRO_CURRICULUM_FR } from '@/data/curriculum_pro_fr';
+import { PRO_CURRICULUM, PRO_CURRICULUM_FR } from '@/data/curriculum_pro_fr';
 
 interface KPIStats {
   totalXP: number;
@@ -96,122 +98,7 @@ const LEVEL_CONFIG: Record<string, { gradient: string; badge: string; badgeText:
   },
 };
 
-const PRO_CURRICULUM = [
-  {
-    id: 'exec-b1',
-    title: 'Executive Foundation',
-    level: 'B1',
-    icon: Users,
-    description: 'Fundamentos de comunicación corporativa, etiqueta y networking esencial.',
-    lessons: [
-      { id: 'pro-b1-1', title: 'Professional Introductions' },
-      { id: 'pro-b1-2', title: 'Formal Emailing' },
-      { id: 'pro-b1-3', title: 'Business Travel' },
-      { id: 'pro-b1-4', title: 'Corporate Communication Pt. 4' },
-      { id: 'pro-b1-5', title: 'Corporate Communication Pt. 5' },
-      { id: 'pro-b1-6', title: 'Corporate Communication Pt. 6' },
-      { id: 'pro-b1-7', title: 'Corporate Communication Pt. 7' },
-      { id: 'pro-b1-8', title: 'Corporate Communication Pt. 8' },
-      { id: 'pro-b1-9', title: 'Corporate Communication Pt. 9' },
-      { id: 'pro-b1-10', title: 'B1 Milestone Review' },
-    ],
-  },
-  {
-    id: 'exec-b2',
-    title: 'Management Skills',
-    level: 'B2',
-    icon: PieChart,
-    description: 'Gestión de equipos, liderazgo intermedio y resolución de conflictos.',
-    lessons: [
-      { id: 'pro-b2-1', title: 'Leading Effective Meetings' },
-      { id: 'pro-b2-2', title: 'Negotiation Fundamentals' },
-      { id: 'pro-b2-3', title: 'Team Management Pt. 3' },
-      { id: 'pro-b2-4', title: 'Team Management Pt. 4' },
-      { id: 'pro-b2-5', title: 'Team Management Pt. 5' },
-      { id: 'pro-b2-6', title: 'Team Management Pt. 6' },
-      { id: 'pro-b2-7', title: 'Team Management Pt. 7' },
-      { id: 'pro-b2-8', title: 'Team Management Pt. 8' },
-      { id: 'pro-b2-9', title: 'Team Management Pt. 9' },
-      { id: 'pro-b2-10', title: 'B2 Milestone Review' },
-    ],
-  },
-  {
-    id: 'exec-c1',
-    title: 'Advanced Corporate',
-    level: 'C1',
-    icon: Briefcase,
-    description: 'Negociaciones de alto nivel, persuasión y presentaciones a inversionistas.',
-    lessons: [
-      { id: 'pro-c1-1', title: 'Pitching to Investors' },
-      { id: 'pro-c1-2', title: 'Crisis Management Comms' },
-      { id: 'pro-c1-3', title: 'Advanced Strategy Pt. 3' },
-      { id: 'pro-c1-4', title: 'Advanced Strategy Pt. 4' },
-      { id: 'pro-c1-5', title: 'Advanced Strategy Pt. 5' },
-      { id: 'pro-c1-6', title: 'Advanced Strategy Pt. 6' },
-      { id: 'pro-c1-7', title: 'Advanced Strategy Pt. 7' },
-      { id: 'pro-c1-8', title: 'Advanced Strategy Pt. 8' },
-      { id: 'pro-c1-9', title: 'Advanced Strategy Pt. 9' },
-      { id: 'pro-c1-10', title: 'C1 Milestone Review' },
-    ],
-  },
-  {
-    id: 'exec-c2',
-    title: 'Executive Presence',
-    level: 'C2',
-    icon: Crown,
-    description: 'Dominio total del idioma, diplomacia corporativa y oratoria ejecutiva.',
-    lessons: [
-      { id: 'pro-c2-1', title: 'Public Speaking for CEOs' },
-      { id: 'pro-c2-2', title: 'Diplomatic Phrasing' },
-      { id: 'pro-c2-3', title: 'Executive Eloquence Pt. 3' },
-      { id: 'pro-c2-4', title: 'Executive Eloquence Pt. 4' },
-      { id: 'pro-c2-5', title: 'Executive Eloquence Pt. 5' },
-      { id: 'pro-c2-6', title: 'Executive Eloquence Pt. 6' },
-      { id: 'pro-c2-7', title: 'Executive Eloquence Pt. 7' },
-      { id: 'pro-c2-8', title: 'Executive Eloquence Pt. 8' },
-      { id: 'pro-c2-9', title: 'Executive Eloquence Pt. 9' },
-      { id: 'pro-c2-10', title: 'C2 Milestone Review' },
-    ],
-  },
-  {
-    id: 'exec-exec',
-    title: 'Boardroom Dynamics',
-    level: 'Exec',
-    icon: Building,
-    description: 'Inglés especializado para juntas directivas, M&A y estrategia global.',
-    lessons: [
-      { id: 'pro-exec-1', title: 'Mergers & Acquisitions Vocab' },
-      { id: 'pro-exec-2', title: 'Board of Directors Meetings' },
-      { id: 'pro-exec-3', title: 'Boardroom Tactics Pt. 3' },
-      { id: 'pro-exec-4', title: 'Boardroom Tactics Pt. 4' },
-      { id: 'pro-exec-5', title: 'Boardroom Tactics Pt. 5' },
-      { id: 'pro-exec-6', title: 'Boardroom Tactics Pt. 6' },
-      { id: 'pro-exec-7', title: 'Boardroom Tactics Pt. 7' },
-      { id: 'pro-exec-8', title: 'Boardroom Tactics Pt. 8' },
-      { id: 'pro-exec-9', title: 'Boardroom Tactics Pt. 9' },
-      { id: 'pro-exec-10', title: 'Exec Milestone Review' },
-    ],
-  },
-  {
-    id: 'exec-mastery',
-    title: 'Global Leadership',
-    level: 'Mastery',
-    icon: Globe,
-    description: 'El grado máximo. Comunicación intercultural y expansión internacional.',
-    lessons: [
-      { id: 'pro-mastery-1', title: 'Cross-Cultural Leadership' },
-      { id: 'pro-mastery-2', title: 'Global Market Expansion' },
-      { id: 'pro-mastery-3', title: 'Global Business Pt. 3' },
-      { id: 'pro-mastery-4', title: 'Global Business Pt. 4' },
-      { id: 'pro-mastery-5', title: 'Global Business Pt. 5' },
-      { id: 'pro-mastery-6', title: 'Global Business Pt. 6' },
-      { id: 'pro-mastery-7', title: 'Global Business Pt. 7' },
-      { id: 'pro-mastery-8', title: 'Global Business Pt. 8' },
-      { id: 'pro-mastery-9', title: 'Global Business Pt. 9' },
-      { id: 'pro-mastery-10', title: 'Final Mastery Evaluation' },
-    ],
-  },
-];
+// PRO_CURRICULUM (600 lecciones en inglés) importado desde @/data/curriculum_pro_fr
 
 export default function ExecutiveDashboard() {
   const router = useRouter();
@@ -231,7 +118,9 @@ export default function ExecutiveDashboard() {
   const [isUserPremium, setIsUserPremium] = useState(false);
   const [expandedSection, setExpandedSection] = useState<string | null>('exec-b1');
   const [showReadingStudio, setShowReadingStudio] = useState(false);
-  const [showStatsModal, setShowStatsModal] = useState(false);
+  const [showB2BNegotiations, setShowB2BNegotiations] = useState(false);
+  const [showCommandCenter, setShowCommandCenter] = useState(false);
+  const [showSpeechCalibrate, setShowSpeechCalibrate] = useState(false);
   const [showRaffleModal, setShowRaffleModal] = useState(false);
 
   const currentCurriculum = useMemo(() => {
@@ -371,7 +260,9 @@ export default function ExecutiveDashboard() {
             </span>
           </h1>
           <p className="text-slate-700 text-sm font-semibold max-w-xl mx-auto">
-            60 módulos de élite diseñados para la alta dirección. Dominando inglés en contextos corporativos reales.
+            {activeLanguage === 'fr'
+              ? '600 leçons professionnelles de haut niveau pour les dirigeants. Maîtrisez la communication en entreprise.'
+              : '600 lecciones profesionales de élite diseñadas para la alta dirección. Dominando la comunicación en contextos corporativos reales.'}
           </p>
         </motion.header>
 
@@ -382,62 +273,127 @@ export default function ExecutiveDashboard() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10"
         >
-          {/* XP Metric Card */}
-          <div 
-            onClick={() => setShowStatsModal(true)}
-            className="group relative overflow-hidden rounded-2xl border border-amber-500/20 bg-gradient-to-br from-amber-500/5 to-amber-500/10 p-6 backdrop-blur-md shadow-lg shadow-amber-500/2 transition-all hover:scale-[1.02] hover:border-amber-500/40 hover:bg-gradient-to-br hover:from-amber-500/10 hover:to-amber-500/20 cursor-pointer"
+          {/* ── CARD 1: COMMAND STATUS (Executive Level + XP) ── */}
+          <div
+            onClick={() => setShowCommandCenter(true)}
+            className="group relative overflow-hidden rounded-2xl border border-amber-500/25 bg-gradient-to-br from-amber-500/8 via-yellow-500/5 to-orange-500/8 p-6 backdrop-blur-md shadow-lg cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:border-amber-500/50 hover:shadow-amber-500/10 hover:shadow-xl"
           >
-            <div className="absolute right-0 top-0 -mr-6 -mt-6 p-10 opacity-[0.03] transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12">
-              <Trophy size={120} className="text-amber-500" />
+            {/* Background glyph */}
+            <div className="absolute right-0 top-0 -mr-4 -mt-4 opacity-[0.04] transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6 pointer-events-none">
+              <Crown size={110} className="text-amber-500" />
             </div>
+            {/* Level badge */}
+            <div className="absolute top-3 right-3">
+              <span className="px-2 py-0.5 bg-amber-500/15 border border-amber-500/30 text-amber-600 text-[8px] font-black uppercase rounded-full tracking-widest">
+                LVL {Math.floor(kpis.totalXP / 500) + 1}
+              </span>
+            </div>
+            {/* Header */}
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2.5 bg-amber-500/10 border border-amber-500/20 rounded-xl text-amber-500 shadow-sm">
-                <Trophy size={20} />
+              <div className="p-2.5 bg-amber-500/12 border border-amber-500/25 rounded-xl shadow-sm group-hover:bg-amber-500/20 transition-colors">
+                <Trophy size={20} className="text-amber-500" />
               </div>
               <div>
-                <h4 className="text-[10px] font-black text-amber-600 uppercase tracking-widest leading-none">Command Status</h4>
-                <p className="text-xs font-bold text-slate-700 mt-1">Puntos de Experiencia</p>
+                <h4 className="text-[9px] font-black text-amber-600 uppercase tracking-widest leading-none">Command Status</h4>
+                <p className="text-[10px] font-bold text-slate-600 mt-0.5">
+                  {kpis.streakDays > 0 ? `🔥 ${kpis.streakDays}-day streak` : 'Start your streak'}
+                </p>
               </div>
             </div>
-            <div className="mt-2">
-              <span className="text-3xl font-black text-slate-900 tracking-tight">{kpis.totalXP.toLocaleString()}</span>
-              <span className="text-xs font-black text-amber-600 ml-2 tracking-wide uppercase">XP Acumulados</span>
+            {/* XP Display */}
+            <div className="mb-3">
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-slate-900 tracking-tight tabular-nums">{kpis.totalXP.toLocaleString()}</span>
+                <span className="text-[9px] font-black text-amber-600 uppercase tracking-wide">XP</span>
+              </div>
+              <p className="text-[9px] text-slate-500 font-semibold mt-0.5">
+                {kpis.completedModules} módulos · {kpis.accuracy}% accuracy
+              </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-amber-500/10 flex items-center justify-between text-[9px] font-extrabold text-amber-700 uppercase tracking-widest">
-              <span>Ver Ranking Global</span>
-              <ChevronRight size={12} className="transition-transform group-hover:translate-x-0.5" />
+            {/* XP Level Progress Bar */}
+            <div className="mb-4">
+              <div className="flex justify-between text-[7px] font-black text-slate-500 uppercase mb-1">
+                <span>Level {Math.floor(kpis.totalXP / 500) + 1}</span>
+                <span>{Math.round(((kpis.totalXP % 500) / 500) * 100)}% to next</span>
+              </div>
+              <div className="relative h-1.5 bg-amber-100 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full transition-all duration-700"
+                  style={{ width: `${Math.round(((kpis.totalXP % 500) / 500) * 100)}%` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
+              </div>
+            </div>
+            <div className="pt-3 border-t border-amber-500/12 flex items-center justify-between text-[9px] font-extrabold text-amber-700 uppercase tracking-widest">
+              <span>Ver Analytics Completo</span>
+              <ChevronRight size={12} className="transition-transform group-hover:translate-x-1" />
             </div>
           </div>
 
-          {/* Pronunciation Accuracy / Speech Analytics Card */}
-          <div 
-            onClick={() => setShowReadingStudio(true)}
-            className="group relative overflow-hidden rounded-2xl border border-teal-500/20 bg-gradient-to-br from-teal-500/5 to-teal-500/10 p-6 backdrop-blur-md shadow-lg shadow-teal-500/2 transition-all hover:scale-[1.02] hover:border-teal-500/40 hover:bg-gradient-to-br hover:from-teal-500/10 hover:to-teal-500/20 cursor-pointer"
+          {/* ── CARD 2: SPEECH CALIBRATION (Phonetic Lab) ── */}
+          <div
+            onClick={() => setShowSpeechCalibrate(true)}
+            className="group relative overflow-hidden rounded-2xl border border-teal-500/25 bg-gradient-to-br from-teal-500/8 via-cyan-500/5 to-emerald-500/8 p-6 backdrop-blur-md shadow-lg cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:border-teal-500/50 hover:shadow-teal-500/10 hover:shadow-xl"
           >
-            <div className="absolute right-0 top-0 -mr-6 -mt-6 p-10 opacity-[0.03] transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12">
-              <Activity size={120} className="text-teal-500" />
+            <div className="absolute right-0 top-0 -mr-4 -mt-4 opacity-[0.04] transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-6 pointer-events-none">
+              <Zap size={110} className="text-teal-500" />
             </div>
+            {/* CEFR Badge */}
+            <div className="absolute top-3 right-3">
+              <span className="px-2 py-0.5 bg-teal-500/15 border border-teal-500/30 text-teal-600 text-[8px] font-black uppercase rounded-full tracking-widest">
+                {kpis.accuracy >= 88 ? 'C1' : kpis.accuracy >= 78 ? 'B2' : 'B1'}
+              </span>
+            </div>
+            {/* Header */}
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2.5 bg-teal-500/10 border border-teal-500/20 rounded-xl text-teal-600 shadow-sm">
-                <Mic size={20} />
+              <div className="relative p-2.5 bg-teal-500/12 border border-teal-500/25 rounded-xl shadow-sm group-hover:bg-teal-500/20 transition-colors">
+                <Mic size={20} className="text-teal-600" />
+                <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-white animate-pulse" />
               </div>
               <div>
-                <h4 className="text-[10px] font-black text-teal-600 uppercase tracking-widest leading-none">Speech Calibration</h4>
-                <p className="text-xs font-bold text-slate-700 mt-1">Precisión Fonética</p>
+                <h4 className="text-[9px] font-black text-teal-600 uppercase tracking-widest leading-none">Speech Calibration</h4>
+                <p className="text-[10px] font-bold text-slate-600 mt-0.5">Phonetic Analytics Lab</p>
               </div>
             </div>
-            <div className="mt-2">
-              <span className="text-3xl font-black text-slate-900 tracking-tight">{kpis.accuracy}%</span>
-              <span className="text-xs font-black text-teal-600 ml-2 tracking-wide uppercase">{kpis.fluencyScore} Fluidez</span>
+            {/* Accuracy Display */}
+            <div className="mb-3">
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-slate-900 tracking-tight tabular-nums">{kpis.accuracy}%</span>
+                <span className="text-[9px] font-black text-teal-600 uppercase tracking-wide">Accuracy</span>
+              </div>
+              <div className="flex items-center gap-3 mt-1">
+                <span className="text-[9px] text-slate-500 font-semibold">Fluency: <span className="text-teal-600 font-black">{kpis.fluencyScore}</span></span>
+                <span className="text-slate-300">·</span>
+                <span className="text-[9px] text-slate-500">{kpis.accuracy >= 90 ? '🏆 Elite' : kpis.accuracy >= 80 ? '⭐ Senior' : '📊 Dev'}</span>
+              </div>
             </div>
-            <div className="mt-4 pt-3 border-t border-teal-500/10 flex items-center justify-between text-[9px] font-extrabold text-teal-700 uppercase tracking-widest">
-              <span>Abrir Reading Studio</span>
-              <ChevronRight size={12} className="transition-transform group-hover:translate-x-0.5" />
+            {/* Dual metric bars */}
+            <div className="space-y-2 mb-4">
+              <div>
+                <div className="flex justify-between text-[7px] font-black text-slate-500 uppercase mb-0.5">
+                  <span>Pronunciation</span><span>{kpis.accuracy}%</span>
+                </div>
+                <div className="h-1.5 bg-teal-100 rounded-full overflow-hidden">
+                  <div className="h-full bg-gradient-to-r from-teal-500 to-cyan-400 rounded-full transition-all duration-700" style={{ width: `${kpis.accuracy}%` }} />
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between text-[7px] font-black text-slate-500 uppercase mb-0.5">
+                  <span>Fluency</span><span>{kpis.fluencyScore}%</span>
+                </div>
+                <div className="h-1.5 bg-teal-100 rounded-full overflow-hidden">
+                  <div className="h-full bg-gradient-to-r from-cyan-500 to-emerald-400 rounded-full transition-all duration-700" style={{ width: `${kpis.fluencyScore}%` }} />
+                </div>
+              </div>
+            </div>
+            <div className="pt-3 border-t border-teal-500/12 flex items-center justify-between text-[9px] font-extrabold text-teal-700 uppercase tracking-widest">
+              <span>Calibration Lab</span>
+              <ChevronRight size={12} className="transition-transform group-hover:translate-x-1" />
             </div>
           </div>
 
-          {/* Raffle Tickets Card */}
-          <div 
+          {/* ── CARD 3: VIP RAFFLE (unchanged per user request) ── */}
+          <div
             onClick={() => setShowRaffleModal(true)}
             className="group relative overflow-hidden rounded-2xl border border-rose-500/20 bg-gradient-to-br from-rose-500/5 to-rose-500/10 p-6 backdrop-blur-md shadow-lg shadow-rose-500/2 transition-all hover:scale-[1.02] hover:border-rose-500/40 hover:bg-gradient-to-br hover:from-rose-500/10 hover:to-rose-500/20 cursor-pointer"
           >
@@ -504,9 +460,9 @@ export default function ExecutiveDashboard() {
             </div>
           </div>
 
-          <Link
-            href="/lesson/pro-b1-1?type=pro"
-            className="group relative border border-teal-800/15 bg-white/40 p-6 hover:border-teal-700/40 hover:bg-white/60 transition-all overflow-hidden backdrop-blur-sm shadow-sm"
+          <div
+            onClick={() => setShowB2BNegotiations(true)}
+            className="group relative border border-teal-800/15 bg-white/40 p-6 hover:border-teal-700/40 hover:bg-white/60 transition-all cursor-pointer overflow-hidden backdrop-blur-sm shadow-sm"
           >
             <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
               <MessageSquare size={72} />
@@ -521,7 +477,7 @@ export default function ExecutiveDashboard() {
                 Start Simulation <ChevronRight size={12} />
               </div>
             </div>
-          </Link>
+          </div>
         </div>
 
         {/* ─── CURRICULUM SECTION HEADER ─── */}
@@ -531,7 +487,7 @@ export default function ExecutiveDashboard() {
             Titanium Curriculum
           </h2>
           <span className="text-[10px] font-bold text-slate-700 uppercase tracking-widest">
-            {currentCurriculum.length * 10} Premium Modules
+            {currentCurriculum.reduce((acc, s) => acc + s.lessons.length, 0)} Premium Modules
           </span>
         </div>
 
@@ -664,11 +620,19 @@ export default function ExecutiveDashboard() {
       </main>
 
       {showReadingStudio && <ReadingStudio onClose={() => setShowReadingStudio(false)} />}
-      {showStatsModal && (
-        <ExecutiveStatsModal 
-          onClose={() => setShowStatsModal(false)} 
-          kpis={kpis} 
-          completedLessons={kpis.completedModules} 
+      {showB2BNegotiations && <B2BNegotiations onClose={() => setShowB2BNegotiations(false)} />}
+      {showCommandCenter && (
+        <ExecutiveCommandCenter
+          onClose={() => setShowCommandCenter(false)}
+          kpis={kpis}
+          completedLessons={kpis.completedModules}
+        />
+      )}
+      {showSpeechCalibrate && (
+        <SpeechCalibrateModal
+          onClose={() => setShowSpeechCalibrate(false)}
+          initialAccuracy={kpis.accuracy}
+          initialFluency={kpis.fluencyScore}
         />
       )}
       {showRaffleModal && (

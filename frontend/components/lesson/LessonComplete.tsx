@@ -269,7 +269,9 @@ export default function LessonComplete({
       return {
         strengths: ['Comprensión auditiva general', 'Agilidad de respuesta'],
         weaknesses: ['Refuerzo de gramática académica', 'Vocabulario contextual avanzado'],
-        tips: 'Te recomendamos repetir el simulador para familiarizarte con el formato oficial del examen.'
+        tips: isExamMock 
+          ? 'Te recomendamos repetir el simulador para familiarizarte con el formato oficial del examen.' 
+          : 'Te recomendamos seguir repasando los ejercicios para afianzar los conceptos clave de la lección.'
       };
     }
 
@@ -344,7 +346,9 @@ export default function LessonComplete({
       else weaknesses.push('Vocabulario Formal en Reportes (Consequently, Therefore)');
 
       if (weaknesses.length === 0) {
-        tips = '¡Impecable! Tienes un nivel excepcional. Estás listo para presentarte al examen real de certificación con plenas garantías.';
+        tips = isExamMock 
+          ? '¡Impecable! Tienes un nivel excepcional. Estás listo para presentarte al examen real de certificación con plenas garantías.' 
+          : '¡Impecable! Tienes un dominio excepcional de los contenidos. Estás listo para continuar con la siguiente lección curricular.';
       } else {
         tips = 'Tip del Asesor: Familiarízate con la modulación de acentos británicos y australianos en grabaciones académicas. Práctica ortografía precisa para evitar errores en completar espacios.';
       }
@@ -471,7 +475,7 @@ export default function LessonComplete({
 
             {!isSuccess && (
               <button onClick={onExit} className="w-full py-2 text-slate-500 hover:text-slate-300 text-center font-bold text-[9px] uppercase tracking-widest">
-                Abandonar examen
+                {isExamMock ? 'Abandonar examen' : 'Abandonar lección'}
               </button>
             )}
           </div>
@@ -646,7 +650,7 @@ export default function LessonComplete({
                       {analytics.weaknesses.length === 0 && (
                         <div className="bg-emerald-950/15 border border-emerald-900/30 p-3 flex items-start gap-2.5 rounded-none">
                           <Sparkles size={12} className="text-emerald-400 mt-0.5 flex-shrink-0" />
-                          <span className="text-xs text-emerald-300">¡Ninguna! Has completado el examen de forma perfecta.</span>
+                          <span className="text-xs text-emerald-300">¡Ninguna! Has completado {isExamMock ? 'el examen' : 'la lección'} de forma perfecta.</span>
                         </div>
                       )}
                     </div>
