@@ -28,23 +28,40 @@ body {
   background-color: #94a3b8;
 }
 
-/* Wood Theme Styles */
+/* Wood Theme Styles - Lighter Polished Golden-Oak Wood Grain with Subtle Dark Lines */
 .wood-theme-bg {
-  background-color: #130a04 !important;
+  background-color: #e5cfb3 !important;
   background-image: 
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 160px, rgba(0,0,0,0.3) 160px, rgba(0,0,0,0.3) 162px),
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 90px, rgba(0,0,0,0.25) 90px, rgba(0,0,0,0.25) 92px),
-    linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5)) !important;
+    radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.3) 0%, transparent 60%),
+    radial-gradient(circle at 85% 75%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+    url('/light-wood-texture.png') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  box-shadow: inset 0 0 100px rgba(92, 59, 29, 0.25) !important;
 }
 
 .wood-panel {
-  background: #25140b !important;
-  border: 3px solid #3c1e0a !important;
-  box-shadow: inset 0 2px 5px rgba(255,255,255,0.03), inset 0 -4px 10px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.6) !important;
+  background: #3e2617 !important;
+  background-image: 
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 100%),
+    radial-gradient(ellipse at 50% 0%, rgba(255, 223, 128, 0.08) 0%, transparent 70%),
+    url('/dark-mahogany-texture.png') !important;
+  background-size: cover !important;
+  border: 3px solid #5d3922 !important;
+  border-top-color: #72482c !important;
+  border-bottom-color: #40230f !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.5) !important;
 }
 
 .wood-panel-light {
-  background: #361d0f !important;
-  border: 2px solid #502b16 !important;
-  box-shadow: inset 0 1px 3px rgba(255,255,255,0.03), inset 0 -2px 5px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.4) !important;
+  background: #543725 !important;
+  background-image: 
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%),
+    url('/dark-mahogany-texture.png') !important;
+  background-size: cover !important;
+  border: 2px solid #73482c !important;
+  border-top-color: #8c5836 !important;
+  border-bottom-color: #55321b !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 6px 16px rgba(0, 0, 0, 0.35) !important;
 }

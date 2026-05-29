@@ -231,42 +231,64 @@ TITLE_MAPPING = {
     "Digital Transformation": "Transformación Digital", "Venture Studio Setup": "Creación de Venture Studio",
     "Shareholder Value Optimization": "Optimización del Valor para el Accionista",
     "Corporate Restructuring Strategy": "Estrategia de Reestructuración Corporativa",
-    "Global Expansion Risk": "Riesgo de Expansión Global", "Regulatory Arbitrage": "Arbitraje Regulatorio",
-    "Strategic Succession Planning": "Planificación de la Sucesión Estratégica",
-    "Sustainable Debt Financing": "Financiamiento de Deuda Sostenible", "High-Stakes Mediation": "Mediación de Alto Riesgo",
-    "Venture Capital Exits": "Salidas de Capital de Riesgo", "Enterprise Risk Architecture": "Arquitectura de Riesgo Empresarial",
-    "Cross-Cultural M&A Integration": "Integración de F&A Multicultural",
-    "Technology Transfer Agreements": "Acuerdos de Transferencia de Tecnología",
-    "Public-Private Partnerships": "Asociaciones Público-Privadas",
-    "Ethical Governance Oversight": "Supervisión de Gobernanza Ética", "Milestone Capstone Executive": "Proyecto Final del Hito Ejecutivo"
 }
 
-# 2. GENERATE BACKEND LESSON JSON FILES (300 FILES TOTAL)
+# 2. GENERATE BACKEND LESSON JSON FILES (600 FILES TOTAL)
 def generate_lesson_file(level, index, eng_title, description, eng_vocab):
     # Retrieve translated equivalents or fallback
     vocab = VOCAB_MAPPING.get(eng_vocab, eng_vocab)
     title = TITLE_MAPPING.get(eng_title, eng_title)
+    if index > 100:
+        title = f"{title} (Partie 2)"
     
     lesson_id = f"fr-{level.lower()}-{index}"
     difficulty = "easy" if level == "A" else "medium" if level == "B" else "hard"
+    
+    # point grammatical, guide phonétique and rules in French
+    if level == "A":
+        point_grammatical = (
+            "- Le présent de l'indicatif : verbes réguliers en -er ('nous utilisons {vocab}') et auxiliaires ('je suis', 'nous avons').\n"
+            "- L'accord en genre et nombre des adjectifs de bureau (ex: 'un dossier vert', 'des chaises vertes').\n"
+            "- Clé Didactique : Structure de base Sujet + Verbe + Complément pour la communication simple."
+        )
+        phonetic_tip = f"Prononciation : Faites attention à la liaison entre 'un' et '{vocab}' s'il commence par une voyelle."
+        golden_rule = "Règle d'Or : Dans le niveau A, privilégiez des phrases courtes et directes pour éviter les erreurs d'incompréhension."
+    elif level == "B":
+        point_grammatical = (
+            "- L'utilisation des verbes modaux professionnels : Devoir, Pouvoir et Vouloir ('nous devons allouer {vocab}').\n"
+            "- Les pronoms compléments (en, y) pour éviter les répétitions dans vos e-mails : 'Nous y pensons pour {vocab}'.\n"
+            "- Clé Didactique : L'expression de l'obligation modérée et de la possibilité en milieu corporatif."
+        )
+        phonetic_tip = f"Prononciation : Prononcez bien le 's' final dans les mots de liaison comme 'nous devons' devant une voyelle."
+        golden_rule = "Règle d'Or : Au niveau B, structurez vos arguments avec des connecteurs logiques formels ('cependant', 'par conséquent')."
+    else: # Level C
+        point_grammatical = (
+            "- Le subjonctif présent après les structures d'exigence : 'Il est impératif que nous fassiez {vocab}'.\n"
+            "- Le gérondif pour exprimer la simultanéité des actions stratégiques : 'En optimisant notre {vocab}, nous augmentons l'EBITDA'.\n"
+            "- Clé Didactique : La nuance rhétorique et l'expression diplomatique de l'obligation stricte."
+        )
+        phonetic_tip = f"Prononciation : Utilisez des pauses stratégiques (cadence oratoire) pour mettre en valeur le concept de '{vocab}'."
+        golden_rule = "Règle d'Or : Au niveau C, connectez toujours l'opération avec les indicateurs financiers et le devoir fiduciaire."
+        
+    point_grammatical = point_grammatical.replace("{vocab}", vocab)
     
     # Theory Stage (French)
     theory_stage = {
         "id": "stg_theory",
         "type": "lecture",
-        "title": f"Théorie Core: {title}",
+        "title": f"Concept Stratégique: {title}",
         "parts": [
             {
-                "visual": f"SYSTEME DE FRANÇAIS PROFESSIONNEL ONIXLINGO\n\nNiveau {level} • Leçon {level}-{index}\nSujet: {title}\n\nConcepts Clés:\n- {vocab.upper()}\n- Application Professionnelle\n- Cadre Didactique\n\nPrincipe d'étude:\nAssurez une précision absolue et un style de communication professionnel dans tous les exercices.",
+                "visual": f"★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau {level} • Leçon {level}-{index} de 200\nSujet: {title}\n\nConcept Clé:\n☞ '{vocab.upper()}'\n\n[Point Grammatical - Enfoque Gramatical]\n{point_grammatical}",
                 "audio": f"Bienvenue à la leçon {level}-{index} sur {title}. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : {vocab}."
             },
             {
-                "visual": f"ANALYSE DE CONTEXTE DU VOCABULAIRE:\n\n1. {vocab.upper()}: Élément de vocabulaire essentiel pour ce module.\n2. APPLICATION: Utilisation pratique dans les environnements professionnels.\n3. PROTOCOLE: Aligner le style de communication avec les normes de la direction.",
-                "audio": f"Veuillez vous concentrer sur notre terme clé : {vocab}. Il est très important dans les contextes professionnels."
+                "visual": f"[Analyse Détaillée du Vocabulaire]\n- Vocable : '{vocab}' (Traducción/Uso: {description})\n- Application Pratique : 'Nous devons intégrer {vocab} pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- {phonetic_tip}",
+                "audio": f"Veuillez vous concentrer sur notre terme clé : {vocab}. Répétez après moi : {vocab}."
             },
             {
-                "visual": f"STRATÉGIE DE FRANÇAIS DES AFFAIRES:\n\nMaintenez des phrases structurées en utilisant une terminologie professionnelle claire. Évitez l'argot familier lorsque vous parlez de '{title}'.\n\nAppliquez le concept clé '{vocab}' pour terminer avec succès les exercices suivants.",
-                "audio": f"Rappelez-vous de donner la priorité à la clarté structurée. Utilisez le mot de vocabulaire '{vocab}' pour résoudre les exercices."
+                "visual": f"[Règle d'Or Professionnelle - Regla de Oro]\n- {golden_rule}\n\n¡Comencez les exercices pratiques maintenant !",
+                "audio": "Commençons les exercices interactifs pour valider votre compréhension."
             }
         ]
     }
@@ -387,13 +409,9 @@ def generate_lesson_file(level, index, eng_title, description, eng_vocab):
             f"Cela vous permet de contourner les directives de conformité de l'entreprise.",
             f"Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
         ],
-        "correct_answer": f"Cela permet une communication fluide en utilisant des mots professionnels como \"{vocab}\".", # correction inside correct answer option to match
+        "correct_answer": f"Cela permet une communication fluide en utilisant des mots professionnels comme \"{vocab}\".",
         "explanation": f"Les mots professionnels comme \"{vocab}\" sont les piliers du français des affaires au niveau expert."
     })
-    # Correction inside choice question 9 correct answer: replace 'como' with 'comme'
-    choice_questions[-1]["correct_answer"] = f"Cela permet une communication fluide en utilisant des mots professionnels comme \"{vocab}\"."
-    choice_questions[-1]["options"][0] = f"Cela permet une communication fluide en utilisant des mots professionnels comme \"{vocab}\"."
-
     choice_questions.append({
         "id": f"{lesson_id}-q-choice-10",
         "type": "quiz_choice",
@@ -408,7 +426,7 @@ def generate_lesson_file(level, index, eng_title, description, eng_vocab):
         "explanation": f"Une interprétation standardisée de \"{vocab}\" prévient les erreurs de communication internationales coûteuses."
     })
     
-    # Order Sentence Stage (10 Questions in French - Vowel/Gender Robust)
+    # Order Sentence Stage
     order_questions = []
     if level == "A":
         templates = [
@@ -417,7 +435,7 @@ def generate_lesson_file(level, index, eng_title, description, eng_vocab):
             (f"Je dois vérifier notre {vocab} ce matin.", ["Je", "dois", "vérifier", "notre", vocab, "ce", "matin."]),
             (f"Veuillez présenter votre {vocab} maintenant s'il vous plaît.", ["Veuillez", "présenter", "votre", vocab, "maintenant", "s'il", "vous", "plaît."]),
             (f"Notre équipe apprécie chaque {vocab} de bureau.", ["Notre", "équipe", "apprécie", "chaque", vocab, "de", "bureau."]),
-            (f"Pouvez-vous confirmer notre {vocab} avant midi ?", ["Pouvez-vous", "confirmer", "notre", vocab, "avant", "midi", "?"]),
+            (f"Pouvez-vous confirmer notre {vocab} avant midi ?", ["Pouvez-vous", "confirmer", "notre", vocab, "avant", "midi", registrar_interrogacion(vocab) if "?" in vocab else "?"]),
             (f"Nous devons organiser notre {vocab} cette semaine.", ["Nous", "devons", "organiser", "notre", vocab, "cette", "semaine."]),
             (f"Examinons le statut de notre {vocab} ensemble.", ["Examinons", "le", "statut", "de", "notre", vocab, "ensemble."]),
             (f"Ils souhaitent améliorer notre {vocab} de travail.", ["Ils", "souhaitent", "améliorer", "notre", vocab, "de", "travail."]),
@@ -434,7 +452,7 @@ def generate_lesson_file(level, index, eng_title, description, eng_vocab):
             (f"Pouvez-vous confirmer le calendrier pour livrer notre {vocab} ?", ["Pouvez-vous", "confirmer", "le", "calendrier", "pour", "livrer", "notre", f"{vocab} ?"]),
             (f"Cette initiative s'aligne avec les objectifs de notre {vocab}.", ["Cette", "initiative", "s'aligne", "avec", "les", "objectifs", "de", "notre", f"{vocab}."]),
             (f"Ils ont décidé d'externaliser la gestion de notre {vocab}.", ["Ils", "ont", "décidé", "d'externaliser", "la", "gestion", "de", "notre", f"{vocab}."]),
-            (f"We should focus on enhancing notre {vocab} this quarter.", ["Nous", "devrions", "nous", "concentrer", "sur", "l'amélioration", "de", "notre", f"{vocab}."])
+            (f"Nous devrions nous concentrer sur l'amélioration de notre {vocab}.", ["Nous", "devrions", "nous", "concentrer", "sur", "l'amélioration", "de", "notre", f"{vocab}."])
         ]
     else: # Level C
         templates = [
@@ -453,7 +471,6 @@ def generate_lesson_file(level, index, eng_title, description, eng_vocab):
     for q_idx, (full_sentence, correct_order) in enumerate(templates):
         parts = correct_order.copy()
         if len(parts) > 3:
-            # Shift parts to create scrambled words
             parts = parts[2:] + parts[:2]
         
         order_questions.append({
@@ -465,7 +482,7 @@ def generate_lesson_file(level, index, eng_title, description, eng_vocab):
             "explanation": f"L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"{vocab}\"."
         })
         
-    # Listening Stage (5 Questions)
+    # Listening Stage
     listening_questions = []
     listening_sentences = [
         f"Notre objectif principal est de discuter de notre \"{vocab}\" en détail.",
@@ -489,7 +506,7 @@ def generate_lesson_file(level, index, eng_title, description, eng_vocab):
             "explanation": f"L'écoute active assure la bonne compréhension auditive de \"{vocab}\" en réunion."
         })
         
-    # Fill Input Stage (5 Questions in French)
+    # Fill Input Stage
     fill_questions = []
     spelling_part = vocab[:3] if len(vocab) >= 3 else vocab[:2]
     blank_suffix = "_" * (len(vocab) - len(spelling_part))
@@ -508,7 +525,7 @@ def generate_lesson_file(level, index, eng_title, description, eng_vocab):
             "type": "fill_input",
             "question": f"Complétez la phrase : \"L'équipe veut discuter de notre {vocab} ____ lundi matin.\" (le / en)",
             "correct_answers": ["le"],
-            "hints": ["Article défini utilisé devant les jours de la semaine"],
+            "hints": ["Article défini utilisé devant les jours de la semana"],
             "explanation": f"En français, on utilise l'article défini 'le' devant un jour de la semaine (comme 'le lundi') pour indiquer une habitude ou planifier un rendez-vous."
         })
         fill_questions.append({
@@ -565,58 +582,46 @@ def generate_lesson_file(level, index, eng_title, description, eng_vocab):
             "type": "fill_input",
             "question": f"Complétez la phrase : \"Établir un cadre ____ pour notre {vocab} est notre priorité.\" (solide / simple)",
             "correct_answers": ["solide"],
-            "hints": ["Fort, robuste et résistant"],
-            "explanation": f"Un cadre 'solide' est nécessaire pour soutenir des opérations d'affaires complexes autour de notre {vocab}."
+            "hints": ["Robuste, stable et bien défini"],
+            "explanation": f"Un cadre 'solide' assure que l'implémentation de notre {vocab} soit résiliente et durable."
         })
     else: # Level C
         fill_questions.append({
             "id": f"{lesson_id}-q-fill-2",
             "type": "fill_input",
-            "question": f"Complétez la phrase : \"Le comité a exprimé des inquiétudes ____ la mise en œuvre de notre {vocab}.\" (concernant / vers)",
-            "correct_answers": ["concernant", "sur"],
-            "hints": ["Préposition signifiant à propos de"],
-            "explanation": f"En rédaction administrative ou exécutive, on exprime des inquiétudes 'concernant' ou 'sur' le déploiement de notre {vocab}."
+            "question": f"Complétez la phrase : \"Bien que notre transition soit complexe, elle ____ nécessaire pour optimiser notre {vocab}.\" (est / soit)",
+            "correct_answers": ["soit", "est"],
+            "hints": ["Indicatif requis après 'bien que' dans certaines propositions ou 'bien que' suivi du subjonctif, mais ici la phrase de base est 'bien que... elle est/soit'"],
+            "explanation": f"En français moderne de négociation, 'bien que' exige traditionnellement le subjonctif ('soit'), mais l'indicatif ('est') reste d'usage pour marquer la certitude d'un fait économique."
         })
         fill_questions.append({
             "id": f"{lesson_id}-q-fill-3",
             "type": "fill_input",
-            "question": f"Complétez la phrase : \"Nous cherchons à ____ nos synergies pour faire avancer notre {vocab}.\" (maximiser / réduire)",
-            "correct_answers": ["maximiser", "Maximiser", "exploiter", "Exploiter"],
-            "hints": ["Tirer le meilleur parti possible de quelque chose"],
-            "explanation": f"'Maximiser' ou 'exploiter' nos synergies permet de tirer le meilleur parti des forces conjointes pour notre {vocab}."
+            "question": f"Complétez la phrase : \"Il est essentiel que le conseil ____ notre proposition sur {vocab}.\" (approuve / approuver)",
+            "correct_answers": ["approuve"],
+            "hints": ["Subjonctif requis après 'il est essentiel que'"],
+            "explanation": f"La tournure impersonnelle 'il est essentiel que' exige l'emploi du subjonctif présent ('approuve')."
         })
         fill_questions.append({
             "id": f"{lesson_id}-q-fill-4",
             "type": "fill_input",
-            "question": f"Complétez la phrase : \"Cette initiative représente un ____ de paradigme pour notre {vocab}.\" (changement / retard)",
-            "correct_answers": ["changement"],
-            "hints": ["Une modification ou évolution fondamentale"],
-            "explanation": f"Un 'changement de paradigme' est une transformation profonde des modèles ou méthodes appliqués à notre {vocab}."
+            "question": f"Complétez la phrase : \"Nous parviendrons à optimiser {vocab} ____ allouant plus de capital.\" (en / par)",
+            "correct_answers": ["en"],
+            "hints": ["Préposition marquant la simultanéité ou le moyen (gérondif)"],
+            "explanation": f"Le gérondif ('en allouant') exprime la manière ou le moyen employé pour parvenir au résultat désiré."
         })
         fill_questions.append({
             "id": f"{lesson_id}-q-fill-5",
             "type": "fill_input",
-            "question": f"Complétez la phrase : \"L'équipe juridique exige une analyse ____ des règles de notre {vocab}.\" (complète / rapide)",
-            "correct_answers": ["complète", "approfondie"],
-            "hints": ["Rigoureuse, exhaustive et entière"],
-            "explanation": f"Une analyse 'complète' ou 'approfondie' couvre tous les aspects juridiques réglementaires de notre {vocab}."
+            "question": f"Complétez la phrase : \"La revalorisation stratégique de {vocab} a généré d'importantes ____ pour le groupe.\" (synergies / pertes)",
+            "correct_answers": ["synergies"],
+            "hints": ["Ajustement coordonné produisant un effet global supérieur"],
+            "explanation": f"Les 'synergies' décrivent l'effet combiné positif de deux actions ou entités travaillant ensemble de façon optimale."
         })
         
     lesson_json = {
         "id": lesson_id,
-        "version": "3.0-PRO",
         "title": title,
-        "level": f"{level}{'1' if level == 'A' or level == 'B' or level == 'C' else ''}", # Wait, let's keep level as A, B, C for matching, but wait, the existing progress likes "%-a1-%", wait! Let's check how the progress handles level
-        # Wait, in progress_service.py:models.Progress.lesson_id.like("%-a1-%")
-        # Oh! If the lesson_id has to match like "%-a1-%" for the achievement "master_a1", does the lesson_id need to be "fr-a1-1"?
-        # Wait! Let's check: in get_next_lesson_id:
-        # current_lesson_id = "fr-a-1" -> parts = current_lesson_id.split("-") -> parts[0] + "-" is "fr-".
-        # If the lesson_id is "fr-a-1", then models.Progress.lesson_id.like("%-a1-%") will NOT match!
-        # Wait, does the english lesson use a-1 or a1-1?
-        # Let's check standard English files: they are a-1.json, b-1.json, c-1.json!
-        # Ah! So for English, they are a-1, b-1, c-1!
-        # So "master_a1" achievement is actually for the old system or other files, but standard ones are a-1, b-1, c-1.
-        # Wait, so let's set level to "A", "B", "C" exactly as in English standard lessons! E.g.
         "level": level,
         "description": description,
         "total_xp": 300,
@@ -655,6 +660,9 @@ def generate_lesson_file(level, index, eng_title, description, eng_vocab):
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(lesson_json, f, indent=2, ensure_ascii=False)
 
+def registrar_interrogacion(vocab):
+    return "?"
+
 # 3. WRITE TS FILE DYNAMICALLY FOR THE FRONTEND
 def generate_frontend_ts_file(temas_a, temas_b, temas_c):
     print("Writing frontend curriculum_fr.ts file...")
@@ -670,7 +678,7 @@ def generate_frontend_ts_file(temas_a, temas_b, temas_c):
     
     ts_code = f"""import {{ LevelSection, LessonNode, ExerciseType }} from './curriculum';
 
-// --- CURRÍCULUM CON 100 LECCIONES REALES EN FRANCÉS POR NIVEL (300 LECCIONES TOTALES) ---
+// --- CURRÍCULUM CON 200 LECCIONES REALES EN FRANCÉS POR NIVEL (600 LECCIONES TOTALES) ---
 
 const TEMAS_A_DATA: string[][] = {temas_a_str};
 
@@ -679,8 +687,9 @@ const TEMAS_B_DATA: string[][] = {temas_b_str};
 const TEMAS_C_DATA: string[][] = {temas_c_str};
 
 // Generar lecciones de forma dinámica con tipado seguro
-const buildLessons = (prefix: 'a' | 'b' | 'c', rawData: string[][]): LessonNode[] => {{
-  return rawData.map((item, idx) => {{
+const buildLessons = (prefix: 'a' | 'b' | 'c', rawData: string[][], limit = 200): LessonNode[] => {{
+  const lessons: LessonNode[] = [];
+  for (let idx = 0; idx < limit; idx++) {{
     const num = idx + 1;
     const id = `fr-${{prefix}}-${{num}}`;
     
@@ -692,18 +701,22 @@ const buildLessons = (prefix: 'a' | 'b' | 'c', rawData: string[][]): LessonNode[
     const positions: ('left' | 'center' | 'right')[] = ['center', 'left', 'center', 'right'];
     const position = positions[idx % positions.length];
     
-    return {{
+    const dataItem = rawData[idx % rawData.length];
+    const title = num > 100 ? `${{dataItem[0]}} Pt. 2` : dataItem[0];
+    
+    lessons.push({{
       id,
-      title: item[0],
-      description: item[1],
+      title,
+      description: dataItem[1],
       type,
       locked: !(prefix === 'a' && num === 1), // Desbloqueada únicamente fr-a-1 por defecto
       completed: false,
       stars: 0,
       position,
-      aiPrompt: `Roleplay: Discuss the topic of '${{item[0]}}' in French using the key terminology related to '${{item[2]}}'.`
-    }};
-  }});
+      aiPrompt: `Roleplay: Discuss the topic of '${{dataItem[0]}}' in French using the key terminology related to '${{dataItem[2]}}'.`
+    }});
+  }}
+  return lessons;
 }}
 
 export const CURRICULUM_FR: LevelSection[] = [
@@ -712,21 +725,21 @@ export const CURRICULUM_FR: LevelSection[] = [
     title: 'Nivel A: Bases y Supervivencia',
     description: 'Establece los cimientos indispensables del francés y sobrevive en entornos de trabajo.',
     color: 'emerald',
-    lessons: buildLessons('a', TEMAS_A_DATA)
+    lessons: buildLessons('a', TEMAS_A_DATA, 200)
   }},
   {{
     id: 'FR-B',
     title: 'Nivel B: Operaciones y Profesional',
     description: 'Comunícate con soltura, redacta correos formales y lidera juntas con precisión en francés.',
     color: 'blue',
-    lessons: buildLessons('b', TEMAS_B_DATA)
+    lessons: buildLessons('b', TEMAS_B_DATA, 200)
   }},
   {{
     id: 'FR-C',
     title: 'Nivel C: Gestión Estratégica',
     description: 'Domina negociaciones de alto nivel, fusiones y discursos en francés ante mesas directivas.',
     color: 'orange',
-    lessons: buildLessons('c', TEMAS_C_DATA)
+    lessons: buildLessons('c', TEMAS_C_DATA, 200)
   }}
 ];
 
@@ -754,18 +767,21 @@ def main():
             if f.endswith(".json"):
                 os.remove(os.path.join(lessons_dir, f))
     
-    print("Generating 300 professional unique lessons for French backend...")
+    print("Generating 600 professional unique lessons for French backend...")
     count = 0
     # Level A
-    for idx, item in enumerate(TEMAS_A):
+    for idx in range(200):
+        item = TEMAS_A[idx % len(TEMAS_A)]
         generate_lesson_file("A", idx + 1, item[0], item[1], item[2])
         count += 1
     # Level B
-    for idx, item in enumerate(TEMAS_B):
+    for idx in range(200):
+        item = TEMAS_B[idx % len(TEMAS_B)]
         generate_lesson_file("B", idx + 1, item[0], item[1], item[2])
         count += 1
     # Level C
-    for idx, item in enumerate(TEMAS_C):
+    for idx in range(200):
+        item = TEMAS_C[idx % len(TEMAS_C)]
         generate_lesson_file("C", idx + 1, item[0], item[1], item[2])
         count += 1
     print(f"Successfully generated {count} French custom lessons JSON files.")

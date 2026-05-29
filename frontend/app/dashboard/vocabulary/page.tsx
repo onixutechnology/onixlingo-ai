@@ -15,6 +15,7 @@ import {
   MessageSquare, Coins, Handshake, Lightbulb
 } from 'lucide-react';
 
+
 const CATEGORIES = [
   { id: 'basics', label: 'Life Essentials', icon: Coffee },
   { id: 'travel', label: 'Global Travel', icon: Plane },
@@ -184,6 +185,56 @@ export default function VocabularyPage() {
 
       <div className="max-w-7xl mx-auto px-6 py-10">
         
+        {/* --- PANEL DE CONTROL DE VOCABULARIO (OPTIMIZADO PARA PAREJAS DE PALABRAS Y SEGUIMIENTO) --- */}
+        <div className="mb-10 bg-slate-900 border-l-4 border-orange-600 p-6 shadow-xl text-white relative overflow-hidden group">
+          <div className="absolute top-0 right-0 p-1 opacity-10"><BookA size={70} className="text-orange-600 animate-pulse" /></div>
+          
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+            <div>
+              <p className="text-[8px] font-black text-orange-500 uppercase tracking-[0.3em] mb-2 flex items-center gap-1.5">
+                <Zap size={12} className="text-orange-500" />
+                Word Association Training System
+              </p>
+              <h2 className="text-2xl font-black uppercase tracking-tight font-serif italic mb-1.5">
+                Estadísticas de Asociación de Vocabulario
+              </h2>
+              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest leading-relaxed max-w-xl">
+                Métricas de retención y asociación de parejas de palabras registradas de forma interactiva en tu cuenta.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full lg:w-auto shrink-0">
+              
+              <div className="p-3.5 bg-slate-950/60 border border-slate-800 text-center min-w-[120px]">
+                <p className="text-[8px] text-slate-500 font-black uppercase tracking-wider mb-1">Parejas Completadas</p>
+                <p className="text-xs font-black text-orange-400 tracking-tight leading-none mt-1.5 font-mono">
+                  {vocabProgress.filter(p => p.status === 'completed').length * 5} parejas
+                </p>
+              </div>
+
+              <div className="p-3.5 bg-slate-950/60 border border-slate-800 text-center min-w-[120px]">
+                <p className="text-[8px] text-slate-500 font-black uppercase tracking-wider mb-1">Racha de Días</p>
+                <p className="text-xs font-black text-white font-mono leading-none mt-1.5">
+                  {userStats.streak} {userStats.streak === 1 ? 'día' : 'días'}
+                </p>
+              </div>
+
+              <div className="p-3.5 bg-slate-950/60 border border-slate-800 text-center min-w-[120px]">
+                <p className="text-[8px] text-slate-500 font-black uppercase tracking-wider mb-1">Promedio de Acierto</p>
+                <p className="text-xs font-black text-emerald-400 font-mono leading-none mt-1.5">
+                  {(() => {
+                    const completed = vocabProgress.filter(p => p.status === 'completed');
+                    return completed.length > 0
+                      ? Math.round(completed.reduce((acc, curr) => acc + (curr.score || 0), 0) / completed.length)
+                      : 0;
+                  })()}%
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
         {/* --- SINCRONIZACIÓN --- */}
         {(activeLanguage !== 'en' && activeLanguage !== 'fr' && activeLanguage !== 'zh') ? (
           <div className="bg-white border border-slate-200 p-12 text-center flex flex-col items-center justify-center shadow-sm">

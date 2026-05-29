@@ -108,8 +108,8 @@ export default function ExecutiveDashboard() {
   const [kpis, setKpis] = useState<KPIStats>({ 
     totalXP: 0, 
     currentLevel: 1, 
-    accuracy: 92, 
-    fluencyScore: 85,
+    accuracy: 0, 
+    fluencyScore: 0,
     totalTickets: 0,
     streakDays: 0,
     completedModules: 0
@@ -146,8 +146,8 @@ export default function ExecutiveDashboard() {
         setKpis({
           totalXP: statsData.total_xp || 0,
           currentLevel: 1,
-          accuracy: statsData.accuracy || 92,
-          fluencyScore: statsData.fluency_score || 85,
+          accuracy: statsData.accuracy || 0,
+          fluencyScore: statsData.fluency_score || 0,
           totalTickets: statsData.total_tickets || 0,
           streakDays: statsData.streak_days || 0,
           completedModules: statsData.completed_modules || 0
@@ -392,30 +392,40 @@ export default function ExecutiveDashboard() {
             </div>
           </div>
 
-          {/* ── CARD 3: VIP RAFFLE (unchanged per user request) ── */}
+          {/* ── CARD 3: VIP RAFFLE (PRÓXIMAMENTE) ── */}
           <div
-            onClick={() => setShowRaffleModal(true)}
-            className="group relative overflow-hidden rounded-2xl border border-rose-500/20 bg-gradient-to-br from-rose-500/5 to-rose-500/10 p-6 backdrop-blur-md shadow-lg shadow-rose-500/2 transition-all hover:scale-[1.02] hover:border-rose-500/40 hover:bg-gradient-to-br hover:from-rose-500/10 hover:to-rose-500/20 cursor-pointer"
+            className="group relative overflow-hidden rounded-2xl border border-rose-500/10 bg-gradient-to-br from-rose-500/2 to-rose-500/5 p-6 backdrop-blur-md shadow-lg shadow-rose-500/1 opacity-80 cursor-default"
           >
-            <div className="absolute right-0 top-0 -mr-6 -mt-6 p-10 opacity-[0.03] transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12">
+            {/* Background glyph */}
+            <div className="absolute right-0 top-0 -mr-6 -mt-6 p-10 opacity-[0.02]">
               <Ticket size={120} className="text-rose-500" />
             </div>
+            {/* Coming soon badge */}
+            <div className="absolute top-3 right-3">
+              <span className="px-2.5 py-0.5 bg-rose-500/15 border border-rose-500/30 text-rose-600 text-[8px] font-black uppercase rounded-full tracking-widest">
+                PRÓXIMAMENTE
+              </span>
+            </div>
+            {/* Header */}
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2.5 bg-rose-500/10 border border-rose-500/20 rounded-xl text-rose-500 shadow-sm">
+              <div className="p-2.5 bg-rose-500/5 border border-rose-500/10 rounded-xl text-rose-400 shadow-sm">
                 <Ticket size={20} />
               </div>
               <div>
-                <h4 className="text-[10px] font-black text-rose-600 uppercase tracking-widest leading-none">VIP Raffle</h4>
-                <p className="text-xs font-bold text-slate-700 mt-1">Sorteo Ejecutivo Activo</p>
+                <h4 className="text-[10px] font-black text-rose-400/80 uppercase tracking-widest leading-none">VIP Raffle</h4>
+                <p className="text-xs font-bold text-slate-500 mt-1">Sorteos de Mentorías</p>
               </div>
             </div>
-            <div className="mt-2">
-              <span className="text-3xl font-black text-slate-900 tracking-tight">{kpis.totalTickets}</span>
-              <span className="text-xs font-black text-rose-600 ml-2 tracking-wide uppercase">Boletos VIP</span>
+            {/* Body */}
+            <div className="mb-3">
+              <h5 className="text-sm font-black text-slate-800 uppercase tracking-wide leading-tight">Mentorías & Premios</h5>
+              <p className="text-[10px] text-slate-500 font-semibold mt-1 leading-relaxed">
+                Obtén boletos completando lecciones ejecutivas. Sorteos mensuales de iPads y sesiones 1-a-1.
+              </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-rose-500/10 flex items-center justify-between text-[9px] font-extrabold text-rose-700 uppercase tracking-widest">
-              <span>Revisar mis Boletos</span>
-              <ChevronRight size={12} className="transition-transform group-hover:translate-x-0.5" />
+            <div className="pt-3 border-t border-rose-500/10 flex items-center justify-between text-[9px] font-extrabold text-rose-400/60 uppercase tracking-widest">
+              <span>Sorteos y Privilegios</span>
+              <Lock size={11} className="text-rose-400/60" />
             </div>
           </div>
         </motion.div>

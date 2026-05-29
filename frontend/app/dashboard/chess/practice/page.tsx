@@ -90,7 +90,7 @@ function PracticeArena() {
     // Consume 10% de energía si es plan gratuito e incrementa el contador
     const { consumeEnergy, addChessPuzzle, userTier } = useUIStore.getState();
     if (userTier === 'free') {
-      consumeEnergy(10);
+      consumeEnergy(20);
       addChessPuzzle();
     }
 
@@ -303,7 +303,7 @@ function PracticeArena() {
     return null;
   }, [showGuide, lessonData]);
 
-  if (userTier === 'free' && (chessPuzzlesToday >= 2 || energy < 10)) {
+  if (userTier === 'free' && (chessPuzzlesToday >= 5 || energy < 20)) {
     return (
       <div className="min-h-screen wood-theme-bg flex items-center justify-center text-[#ecd3b5] p-6 relative overflow-hidden font-sans">
         <style>{`
@@ -326,12 +326,12 @@ function PracticeArena() {
             <Target size={32} className="animate-pulse" />
           </div>
           <h2 className="text-xl font-serif font-black italic uppercase tracking-wider text-amber-400 mb-2">
-            {chessPuzzlesToday >= 2 ? "Límite Diario de Puzzles" : "Energía Insuficiente"}
+            {chessPuzzlesToday >= 5 ? "Límite Diario de Puzzles" : "Energía Insuficiente"}
           </h2>
           <p className="text-[10px] text-slate-350 leading-relaxed mb-8 uppercase tracking-wider">
-            {chessPuzzlesToday >= 2 
-              ? "En el Plan Free estás limitado a resolver 2 puzzles de ajedrez al día." 
-              : `Cada puzzle de ajedrez consume 10% de energía. Tu energía actual es de ${energy}%.`}
+            {chessPuzzlesToday >= 5 
+              ? "En el Plan Free estás limitado a resolver 5 puzzles de ajedrez al día." 
+              : `Cada puzzle de ajedrez consume 20% de energía. Tu energía actual es de ${energy}%.`}
           </p>
           
           <div className="flex flex-col gap-3">

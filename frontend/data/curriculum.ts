@@ -528,6 +528,1509 @@ const TEMAS_A_DATA: string[][] = [
     "Closing Hour",
     "Final procedures before locked doors at night.",
     "lock"
+  ],
+  [
+    "Personal Greetings",
+    "Saludos informales entre compañeros.",
+    "greetings"
+  ],
+  [
+    "Saying Thank You",
+    "Expresiones de gratitud en la oficina.",
+    "thanks"
+  ],
+  [
+    "Introducing Others",
+    "Presentar a un nuevo compañero de equipo.",
+    "introduce"
+  ],
+  [
+    "The Office Building",
+    "Partes principales del edificio corporativo.",
+    "building"
+  ],
+  [
+    "My Workstation",
+    "Describir tu cubículo y herramientas personales.",
+    "computer"
+  ],
+  [
+    "Simple Requests",
+    "Pedir favores sencillos a un colega.",
+    "please"
+  ],
+  [
+    "The Company Cafeteria",
+    "Vocabulario de comida y almuerzos en la cafetería.",
+    "lunch"
+  ],
+  [
+    "Talking about Family",
+    "Romper el hielo hablando de tu familia en el descanso.",
+    "family"
+  ],
+  [
+    "Weekend Plans",
+    "Preguntar y contar qué harás el fin de semana.",
+    "weekend"
+  ],
+  [
+    "Basic Colors",
+    "Describir colores de carpetas y productos.",
+    "colors"
+  ],
+  [
+    "Office Furniture",
+    "Mobiliario básico del espacio de trabajo.",
+    "chair"
+  ],
+  [
+    "A Regular Day",
+    "Describir un día ordinario en la oficina.",
+    "day"
+  ],
+  [
+    "Taking a Message",
+    "Tomar recados telefónicos sencillos.",
+    "message"
+  ],
+  [
+    "Asking for Help",
+    "Cómo pedir asistencia básica a un compañero.",
+    "help"
+  ],
+  [
+    "Making Tea",
+    "Ofrecer té o bebidas calientes a un cliente.",
+    "tea"
+  ],
+  [
+    "Going to Lunch",
+    "Acordar una hora para ir a comer con colegas.",
+    "eat"
+  ],
+  [
+    "The Copy Room",
+    "Vocabulario sobre copias, escáner e impresora.",
+    "copy"
+  ],
+  [
+    "Receiving Visitors",
+    "Dar la bienvenida a un cliente en recepción.",
+    "visitor"
+  ],
+  [
+    "Simple Weather",
+    "Romper el hielo hablando del clima del día.",
+    "weather"
+  ],
+  [
+    "Company Logo",
+    "Describir los colores y formas del logo de la empresa.",
+    "logo"
+  ],
+  [
+    "Asking for the Time",
+    "Preguntar qué hora es educadamente.",
+    "time"
+  ],
+  [
+    "Using a Map",
+    "Navegar el mapa de la oficina o el campus.",
+    "map"
+  ],
+  [
+    "A Clean Workspace",
+    "Mantener limpio y ordenado tu escritorio.",
+    "clean"
+  ],
+  [
+    "Taking the Bus",
+    "Rutas y horarios del transporte público a la oficina.",
+    "bus"
+  ],
+  [
+    "A Business Lunch",
+    "Ordenar comida sencilla en una comida de negocios.",
+    "restaurant"
+  ],
+  [
+    "Ordering Coffee",
+    "Cómo pedir tu tipo de café favorito en la cafetería.",
+    "coffee"
+  ],
+  [
+    "The Office Kitchen",
+    "Elementos comunes de la cocina de la oficina.",
+    "kitchen"
+  ],
+  [
+    "Writing a Sticky Note",
+    "Dejar una nota recordatoria a un colega.",
+    "note"
+  ],
+  [
+    "Confirming a Time",
+    "Confirmar la hora de una cita simple.",
+    "confirm"
+  ],
+  [
+    "Saying Goodbye",
+    "Despedirse al final del día laboral.",
+    "goodbye"
+  ],
+  [
+    "Describing a Coworker",
+    "Adjetivos simples para describir a tus compañeros.",
+    "person"
+  ],
+  [
+    "The Mailroom",
+    "Recibir y enviar paquetes y cartas.",
+    "mail"
+  ],
+  [
+    "Simple Calculations",
+    "Sumar y restar cifras de costos elementales.",
+    "math"
+  ],
+  [
+    "Finding a Pen",
+    "Pedir prestados bolígrafos u hojas de papel.",
+    "pen"
+  ],
+  [
+    "The Conference Room",
+    "Ubicación y reserva de salas de juntas sencillas.",
+    "room"
+  ],
+  [
+    "Checking the Calendar",
+    "Verificar días festivos y juntas en tu agenda.",
+    "calendar"
+  ],
+  [
+    "The Company Website",
+    "Navegación y secciones básicas de la web corporativa.",
+    "website"
+  ],
+  [
+    "My Daily Tasks",
+    "Una lista simple de lo que debes hacer hoy.",
+    "tasks"
+  ],
+  [
+    "Arriving Early",
+    "La importancia de la puntualidad y cómo reportar retrasos.",
+    "punctual"
+  ],
+  [
+    "Leaving the Office",
+    "Pasos sencillos antes de cerrar el cubículo.",
+    "leave"
+  ],
+  [
+    "Office Hobbies",
+    "Conversar sobre pasatiempos comunes con el equipo.",
+    "hobbies"
+  ],
+  [
+    "A Good Job",
+    "Felicitar a un compañero por su trabajo sencillo.",
+    "praise"
+  ],
+  [
+    "Answering a Call",
+    "Frases estándar al contestar el teléfono.",
+    "phone"
+  ],
+  [
+    "IT Setup",
+    "Vocabulario básico de teclado, mouse y pantalla.",
+    "setup"
+  ],
+  [
+    "The Office Lounge",
+    "Espacios de descanso y relajación corporativos.",
+    "lounge"
+  ],
+  [
+    "Buying a Ticket",
+    "Comprar boletos de metro o tren local.",
+    "ticket"
+  ],
+  [
+    "Paying in Cash",
+    "Vocabulario de billetes y monedas.",
+    "cash"
+  ],
+  [
+    "A Simple Report",
+    "Redactar una oración corta de estatus.",
+    "report"
+  ],
+  [
+    "The Company Name",
+    "Explicar el nombre y origen de la empresa.",
+    "name"
+  ],
+  [
+    "Saying Sorry",
+    "Disculparse por un error menor sin importancia.",
+    "sorry"
+  ],
+  [
+    "Meeting a Friend",
+    "Planes sencillos después del horario laboral.",
+    "friends"
+  ],
+  [
+    "The Parking Permit",
+    "Solicitar acceso al estacionamiento de la empresa.",
+    "parking"
+  ],
+  [
+    "My Job Title",
+    "Explicar tu puesto a personas fuera de la empresa.",
+    "job"
+  ],
+  [
+    "Office Outfits",
+    "Vestimenta corporativa y días casuales.",
+    "clothes"
+  ],
+  [
+    "Healthy Snacks",
+    "Elegir opciones saludables de comida en la oficina.",
+    "healthy"
+  ],
+  [
+    "A Cold Drink",
+    "Pedir agua o refrescos en una reunión.",
+    "drink"
+  ],
+  [
+    "Working in a Team",
+    "Conceptos muy simples de colaboración.",
+    "team"
+  ],
+  [
+    "Using a Calculator",
+    "Hacer cuentas de viáticos sencillas.",
+    "calculator"
+  ],
+  [
+    "The Welcome Sign",
+    "Leer letreros de bienvenida y direcciones.",
+    "sign"
+  ],
+  [
+    "An Office Birthday",
+    "Felicitar a un colega y comer pastel.",
+    "birthday"
+  ],
+  [
+    "A New Computer",
+    "Describir el desempaque de tu equipo nuevo.",
+    "computer"
+  ],
+  [
+    "The Office Elevator",
+    "Preguntar por el piso correcto de una oficina.",
+    "elevator"
+  ],
+  [
+    "Writing a Checklist",
+    "Hacer listas de control para tareas diarias.",
+    "checklist"
+  ],
+  [
+    "The Office Desk Lamp",
+    "Ajustar la iluminación de tu mesa de trabajo.",
+    "light"
+  ],
+  [
+    "Talking about Sports",
+    "Romper el hielo comentando el partido de ayer.",
+    "sports"
+  ],
+  [
+    "A Simple Question",
+    "Cómo formular preguntas cortas a tu supervisor.",
+    "question"
+  ],
+  [
+    "Finding a File",
+    "Buscar una carpeta en el gabinete físico o digital.",
+    "file"
+  ],
+  [
+    "A Quick Call",
+    "Agendar una llamada corta de 5 minutos.",
+    "call"
+  ],
+  [
+    "Using the Internet",
+    "Vocabulario de conexión y páginas web.",
+    "internet"
+  ],
+  [
+    "The Reception Area",
+    "Esperar a un anfitrión en la sala de espera.",
+    "waiting"
+  ],
+  [
+    "Office Safety Drill",
+    "Instrucciones de evacuación muy básicas.",
+    "drill"
+  ],
+  [
+    "A Quiet Room",
+    "Buscar un espacio sin ruido para concentrarte.",
+    "quiet"
+  ],
+  [
+    "Checking the Weather",
+    "Verificar si lloverá antes de salir de la oficina.",
+    "rain"
+  ],
+  [
+    "My Office Hours",
+    "Explicar tu horario de entrada y salida.",
+    "hours"
+  ],
+  [
+    "A Beautiful View",
+    "Describir el paisaje desde la ventana de la oficina.",
+    "view"
+  ],
+  [
+    "A Good Colleague",
+    "Agradecer el apoyo diario de un compañero.",
+    "friendship"
+  ],
+  [
+    "The Snack Machine",
+    "Comprar galletas o papas en la máquina expendedora.",
+    "vendor"
+  ],
+  [
+    "An Empty Desk",
+    "Organizar una estación de trabajo que no se usa.",
+    "empty"
+  ],
+  [
+    "The Office Printer",
+    "Cargar papel o cambiar cartucho de tóner.",
+    "toner"
+  ],
+  [
+    "A Perfect Presentation",
+    "Felicitaciones simples por un buen speech.",
+    "congrats"
+  ],
+  [
+    "Using the Notebook",
+    "Escribir apuntes durante una inducción.",
+    "notes"
+  ],
+  [
+    "The Company Anniversary",
+    "Celebrar los años de éxito de la empresa.",
+    "anniversary"
+  ],
+  [
+    "The Employee ID",
+    "El uso del gafete de identificación obligatorio.",
+    "badge"
+  ],
+  [
+    "A Short Message",
+    "Enviar un mensaje de texto rápido a un colega.",
+    "sms"
+  ],
+  [
+    "Office Schedule",
+    "Días festivos y puentes laborales del año.",
+    "holidays"
+  ],
+  [
+    "The Office Carpet",
+    "Vocabulario para describir el espacio físico de trabajo.",
+    "decor"
+  ],
+  [
+    "A Great Product",
+    "Adjetivos positivos para el producto de la empresa.",
+    "best"
+  ],
+  [
+    "Finding a Chair",
+    "Pedir prestada una silla para una visita corta.",
+    "seat"
+  ],
+  [
+    "A Hot Afternoon",
+    "Ajustar el aire acondicionado en la oficina.",
+    "ac"
+  ],
+  [
+    "Receiving Mail",
+    "Firmar de recibido para un paquete de mensajería.",
+    "delivery"
+  ],
+  [
+    "Office Dictionary",
+    "Aprender términos en inglés usando el diccionario.",
+    "dictionary"
+  ],
+  [
+    "An Easy Task",
+    "Explicar que una actividad no requiere mucho esfuerzo.",
+    "easy"
+  ],
+  [
+    "The Coffee Break",
+    "Tomarse 10 minutos para recargar energías.",
+    "break"
+  ],
+  [
+    "Using the Staircase",
+    "Subir o bajar escaleras por salud.",
+    "stairs"
+  ],
+  [
+    "A Clean Cup",
+    "Lavar tu taza en el fregadero de la cocina.",
+    "cup"
+  ],
+  [
+    "Meeting the Client",
+    "Saludar con un apretón de manos formal simple.",
+    "handshake"
+  ],
+  [
+    "Making Plans",
+    "Acordar una hora para revisar un pendiente.",
+    "plan"
+  ],
+  [
+    "The Office Door",
+    "Instrucciones para abrir y cerrar con llave.",
+    "door"
+  ],
+  [
+    "Review Milestone A1-Part 1",
+    "Repaso general de la primera mitad del nivel A1.",
+    "review1"
+  ],
+  [
+    "Review Milestone A1-Part 2",
+    "Consolidación final de las 200 lecciones del nivel A1.",
+    "capstone_a1"
+  ]
+];
+
+const TEMAS_A2_DATA: string[][] = [
+  [
+    "Office Supplies",
+    "Inventario y existencias básicas de papelería.",
+    "paper"
+  ],
+  [
+    "Calendars & Dates",
+    "Días de la semana y meses de negocios.",
+    "monday"
+  ],
+  [
+    "Basic Phone Skills",
+    "Atender llamadas y tomar notas elementales.",
+    "phone"
+  ],
+  [
+    "Weekly Review",
+    "Revisión rápida de tareas realizadas.",
+    "done"
+  ],
+  [
+    "Personal Strengths",
+    "Habilidades básicas de presentación personal.",
+    "organized"
+  ],
+  [
+    "The Working Week",
+    "Diferenciar entre días laborales y fin de semana.",
+    "week"
+  ],
+  [
+    "Making Appointments",
+    "Agendar reuniones de uno a uno.",
+    "meet"
+  ],
+  [
+    "Client Introductions",
+    "Presentar a un colega con un cliente.",
+    "intro"
+  ],
+  [
+    "Talking about Weather",
+    "Romper el hielo de manera elemental.",
+    "weather"
+  ],
+  [
+    "Company Profile",
+    "Describir el sector y tamaño básico de la empresa.",
+    "company"
+  ],
+  [
+    "IT Support Ticket",
+    "Reportar un problema sencillo de software.",
+    "ticket"
+  ],
+  [
+    "Office Stationery",
+    "Herramientas de escritorio y papelería.",
+    "pen"
+  ],
+  [
+    "Lunch Orders",
+    "Ordenar alimentos para una reunión de equipo.",
+    "lunch"
+  ],
+  [
+    "Visitor Registration",
+    "Registrar a un cliente externo en la recepción.",
+    "visitor"
+  ],
+  [
+    "Conference Room Booking",
+    "Reservar una sala de juntas por correo.",
+    "room"
+  ],
+  [
+    "Simple Travel Request",
+    "Solicitar la aprobación de viáticos de viaje.",
+    "travel"
+  ],
+  [
+    "Taxi Reservation",
+    "Pedir transporte local para visitas de negocios.",
+    "taxi"
+  ],
+  [
+    "Filing Documents",
+    "Organización física y digital de expedientes.",
+    "file"
+  ],
+  [
+    "Taking Simple Notes",
+    "Anotar puntos clave durante una presentación.",
+    "notes"
+  ],
+  [
+    "Using the Printer",
+    "Resolver problemas comunes con la copiadora.",
+    "printer"
+  ],
+  [
+    "Confirming Attendance",
+    "Aceptar o declinar invitaciones de calendario.",
+    "calendar"
+  ],
+  [
+    "Laptop Accessories",
+    "Pedir mouse, teclado o cargador al área de TI.",
+    "charger"
+  ],
+  [
+    "A Warm Welcome",
+    "Dar la bienvenida a un consultor internacional.",
+    "welcome"
+  ],
+  [
+    "Simple Workplace Rules",
+    "Políticas de conducta y puntualidad.",
+    "rules"
+  ],
+  [
+    "Describing a Project",
+    "Explicar brevemente en qué estás trabajando hoy.",
+    "project"
+  ],
+  [
+    "Checking the Inbox",
+    "Clasificar correos por orden de prioridad.",
+    "email"
+  ],
+  [
+    "Office Key Cards",
+    "Solicitar reposición de tu gafete de acceso.",
+    "badge"
+  ],
+  [
+    "Coffee and Tea Service",
+    "Ofrecer hospitalidad en la sala de espera.",
+    "coffee"
+  ],
+  [
+    "Asking for Directions",
+    "Encontrar oficinas y departamentos en el edificio.",
+    "directions"
+  ],
+  [
+    "Simple Tasks Status",
+    "Informar si una tarea está completada o pendiente.",
+    "status"
+  ],
+  [
+    "Ordering Lunch",
+    "Ordenar comida rápida para comer en la oficina.",
+    "order"
+  ],
+  [
+    "The Office Chair",
+    "Ajustar la silla de tu cubículo por comodidad.",
+    "chair"
+  ],
+  [
+    "A Short Break",
+    "Tomar 5 minutos de descanso en medio de una tarea.",
+    "break"
+  ],
+  [
+    "My Workspace",
+    "Organizar tus papeles y plumas en la mesa.",
+    "workspace"
+  ],
+  [
+    "Checking the Time",
+    "Asegurar que llegas puntual a tu próxima llamada.",
+    "time"
+  ],
+  [
+    "IT Password Reset",
+    "Cambiar tu contraseña del correo corporativo.",
+    "password"
+  ],
+  [
+    "Sending a Package",
+    "Enviar muestras de producto por mensajería.",
+    "package"
+  ],
+  [
+    "A Good Morning",
+    "Saludar formalmente a tu equipo al entrar.",
+    "morning"
+  ],
+  [
+    "Office Air Temperature",
+    "Ajustar el aire acondicionado de la sala.",
+    "ac"
+  ],
+  [
+    "Leaving Early",
+    "Pedir permiso para salir antes por una cita médica.",
+    "permission"
+  ],
+  [
+    "Simple Feedback",
+    "Dar una sugerencia positiva a un compañero.",
+    "feedback"
+  ],
+  [
+    "A New Keyboard",
+    "Reportar que tu teclado no escribe bien.",
+    "keyboard"
+  ],
+  [
+    "The Water Dispenser",
+    "Encontrar el dispensador de agua potable.",
+    "water"
+  ],
+  [
+    "Review Milestone A2-Part 1",
+    "Repaso general de la primera parte de A2.",
+    "review_a2_1"
+  ],
+  [
+    "Receiving a Call",
+    "Contestar amablemente una llamada del conmutador.",
+    "call"
+  ],
+  [
+    "Ordering Office Paper",
+    "Pedir cajas de hojas para la impresora.",
+    "paper"
+  ],
+  [
+    "The Meeting Agenda",
+    "Escribir los puntos sencillos que trataremos.",
+    "agenda"
+  ],
+  [
+    "A Fast Question",
+    "Hacer una pregunta rápida en el canal de chat.",
+    "chat"
+  ],
+  [
+    "Office Desk Cleanup",
+    "Mantener ordenada tu mesa antes de irte.",
+    "clean"
+  ],
+  [
+    "The Office Window",
+    "Abrir la ventana para refrescar la oficina.",
+    "window"
+  ],
+  [
+    "Booking a Taxi",
+    "Agendar un taxi para el aeropuerto.",
+    "cab"
+  ],
+  [
+    "The Lunch Box",
+    "Usar el refrigerador común de la cocina.",
+    "fridge"
+  ],
+  [
+    "Taking a Message",
+    "Escribir un recado para tu jefe de parte de un cliente.",
+    "message"
+  ],
+  [
+    "Finding a Marker",
+    "Buscar marcadores para el pizarrón blanco.",
+    "marker"
+  ],
+  [
+    "Working late",
+    "Avisar que te quedarás una hora extra en la oficina.",
+    "late"
+  ],
+  [
+    "A Visitor Card",
+    "Dar un pase temporal a un proveedor externo.",
+    "pass"
+  ],
+  [
+    "Office Noise",
+    "Pedir amablemente bajar el volumen de la música.",
+    "noise"
+  ],
+  [
+    "The Lunch Break",
+    "Ir a comer al jardín o área de descanso.",
+    "lunchbreak"
+  ],
+  [
+    "A Simple Email Draft",
+    "Escribir un borrador rápido de correo.",
+    "draft"
+  ],
+  [
+    "Confirming the Date",
+    "Asegurar que la fecha de la cita es correcta.",
+    "date"
+  ],
+  [
+    "The Coffee Mug",
+    "Lavar tu taza en el fregadero común.",
+    "mug"
+  ],
+  [
+    "Simple Greeting Card",
+    "Felicitar a un compañero por su cumpleaños.",
+    "card"
+  ],
+  [
+    "Ordering Snacks",
+    "Comprar papas o galletas para una junta.",
+    "snacks"
+  ],
+  [
+    "IT Screen Issue",
+    "Pedir ayuda por una pantalla que parpadea.",
+    "screen"
+  ],
+  [
+    "Office Door Lock",
+    "Asegurar que la puerta esté bien cerrada.",
+    "lock"
+  ],
+  [
+    "The Desktop View",
+    "Cambiar el fondo de pantalla de tu computadora.",
+    "desktop"
+  ],
+  [
+    "Office Safety Rules",
+    "Ubicar los extintores y salidas de emergencia.",
+    "safety"
+  ],
+  [
+    "Checking the Calendar",
+    "Verificar si hay juntas agendadas hoy.",
+    "calendar"
+  ],
+  [
+    "Ordering Tea",
+    "Pedir té verde en lugar de café.",
+    "tea"
+  ],
+  [
+    "A Short Email Reply",
+    "Responder con un 'gracias' rápido a un correo.",
+    "thanks"
+  ],
+  [
+    "Finding the Scissors",
+    "Pedir prestadas tijeras o cinta adhesiva.",
+    "scissors"
+  ],
+  [
+    "The Elevator Button",
+    "Subir al quinto piso para la junta.",
+    "elevator"
+  ],
+  [
+    "Checking the Weather",
+    "Ver si necesitas paraguas al salir.",
+    "weather"
+  ],
+  [
+    "A Good Presentation",
+    "Felicitar a un compañero por sus diapositivas.",
+    "slides"
+  ],
+  [
+    "Simple Calculations",
+    "Calcular sumas sencillas de viáticos.",
+    "numbers"
+  ],
+  [
+    "A Quick Reminder",
+    "Enviar un recordatorio corto por mensaje.",
+    "reminder"
+  ],
+  [
+    "The Office Carpet",
+    "Cuidar la limpieza de los pasillos.",
+    "carpet"
+  ],
+  [
+    "Asking for the Wi-Fi",
+    "Pedir la clave de internet para tu teléfono.",
+    "wifi"
+  ],
+  [
+    "The Welcome Desk",
+    "Registrar tu hora de llegada en la entrada.",
+    "lobby"
+  ],
+  [
+    "The Snack Machine",
+    "Comprar agua en la máquina expendedora.",
+    "vendor"
+  ],
+  [
+    "An Empty Room",
+    "Buscar una sala libre para una llamada de 5 minutos.",
+    "quiet"
+  ],
+  [
+    "Checking your Tasks",
+    "Marcar como completada una tarea en tu lista.",
+    "done"
+  ],
+  [
+    "The Desktop Mouse",
+    "Reportar que tu mouse inalámbrico no tiene pilas.",
+    "mouse"
+  ],
+  [
+    "The Office Kitchen",
+    "Usar el horno de microondas para calentar tu comida.",
+    "microwave"
+  ],
+  [
+    "Confirming a Appointment",
+    "Asegurar que la cita sigue en pie.",
+    "appointment"
+  ],
+  [
+    "Saying Goodbye",
+    "Despedirse formalmente de tus compañeros al salir.",
+    "goodbye"
+  ],
+  [
+    "The Mail Delivery",
+    "Firmar de recibido para un paquete de DHL.",
+    "mail"
+  ],
+  [
+    "Finding a Pencil",
+    "Pedir prestado un lápiz con goma.",
+    "pencil"
+  ],
+  [
+    "A Simple Project Plan",
+    "Hacer una lista de los pasos del proyecto.",
+    "plan"
+  ],
+  [
+    "Arriving Early",
+    "La importancia de llegar 5 minutos antes.",
+    "punctual"
+  ],
+  [
+    "Office Clothes",
+    "Vestir adecuadamente según la política de la empresa.",
+    "dress"
+  ],
+  [
+    "Ordering Pizza",
+    "Comprar pizza para celebrar el fin de un proyecto.",
+    "pizza"
+  ],
+  [
+    "The Air Fan",
+    "Prender el ventilador si hace calor.",
+    "fan"
+  ],
+  [
+    "A Hot Drink",
+    "Preparar chocolate caliente en la cocina.",
+    "chocolate"
+  ],
+  [
+    "The Meeting Minutes",
+    "Anotar los acuerdos tomados en la junta.",
+    "minutes"
+  ],
+  [
+    "Simple Office Decor",
+    "Poner una pequeña planta en tu escritorio.",
+    "plant"
+  ],
+  [
+    "The Employee Badge",
+    "Mostrar tu gafete al policía de seguridad.",
+    "badge"
+  ],
+  [
+    "The Office Calculator",
+    "Hacer cuentas rápidas en tu escritorio.",
+    "calculator"
+  ],
+  [
+    "Review Milestone A2-Part 2",
+    "Repaso general de la segunda parte de A2.",
+    "review_a2_2"
+  ],
+  [
+    "A2 Graduation Capstone",
+    "Evaluación final del nivel A2 y graduación.",
+    "graduation_a2"
+  ],
+  [
+    "Handling a Delay",
+    "Cómo avisar a un cliente que llegarás 10 minutos tarde.",
+    "delay"
+  ],
+  [
+    "Scheduling a Call",
+    "Proponer dos opciones de horario para una llamada.",
+    "schedule"
+  ],
+  [
+    "Requesting a File",
+    "Pedir a un colega que te envíe un documento PDF.",
+    "file"
+  ],
+  [
+    "Office Workspace Map",
+    "Ubicar los cubículos de los jefes de departamento.",
+    "map"
+  ],
+  [
+    "Simple Expense Report",
+    "Llenar una plantilla sencilla de gastos de viaje.",
+    "expenses"
+  ],
+  [
+    "Using the Headset",
+    "Conectar tus audífonos para una llamada virtual.",
+    "headset"
+  ],
+  [
+    "The Team Chat Channel",
+    "Etiqueta al escribir mensajes grupales.",
+    "slack"
+  ],
+  [
+    "Finding the Cafeteria",
+    "Preguntar dónde comer fuera del edificio.",
+    "restaurant"
+  ],
+  [
+    "Introducing a Guest",
+    "Presentar a un proveedor con el recepcionista.",
+    "introduce"
+  ],
+  [
+    "A Clear Explanation",
+    "Explicar cómo funciona una herramienta sencilla.",
+    "explain"
+  ],
+  [
+    "Confirming a Payment",
+    "Avisar que ya se realizó una transferencia.",
+    "payment"
+  ],
+  [
+    "Describing an Error",
+    "Cómo reportar una pantalla azul de error en Windows.",
+    "error"
+  ],
+  [
+    "Ordering Business Cards",
+    "Pedir la impresión de tus tarjetas de presentación.",
+    "cards"
+  ],
+  [
+    "Asking for Feedback",
+    "Preguntar a tu supervisor si le gustó tu reporte.",
+    "ask"
+  ],
+  [
+    "The Office Fridge Rules",
+    "Mantener la limpieza del refrigerador común.",
+    "fridge"
+  ],
+  [
+    "Making a Quick Draft",
+    "Redactar las ideas principales de una carta.",
+    "draft"
+  ],
+  [
+    "The Reception Lobby",
+    "Esperar pacientemente a que bajen por ti.",
+    "lobby"
+  ],
+  [
+    "A Polite Decline",
+    "Rechazar una invitación a cenar de forma cortés.",
+    "decline"
+  ],
+  [
+    "The Company Dress Code",
+    "Diferencia entre ropa formal y casual de negocios.",
+    "outfit"
+  ],
+  [
+    "IT Helpdesk Call",
+    "Pedir soporte por teléfono para tu cuenta.",
+    "helpdesk"
+  ],
+  [
+    "Office Desk Sharing",
+    "Reglas sencillas de escritorios compartidos (hot-desking).",
+    "desk"
+  ],
+  [
+    "A Good Collaboration",
+    "Agradecer la ayuda en una tarea pesada.",
+    "thanks"
+  ],
+  [
+    "Finding the Stairs",
+    "Ubicar las escaleras de servicio y emergencia.",
+    "stairs"
+  ],
+  [
+    "A Clean Cup",
+    "Lavar tu taza de café al terminar tu turno.",
+    "clean"
+  ],
+  [
+    "Confirming a Room",
+    "Verificar si la sala de juntas está libre.",
+    "room"
+  ],
+  [
+    "Saying Hello in Teams",
+    "Frases de apertura en chats corporativos.",
+    "hello"
+  ],
+  [
+    "The Mail Delivery Status",
+    "Rastrear un paquete enviado por mensajería.",
+    "tracking"
+  ],
+  [
+    "Asking for a Pencil",
+    "Pedir prestada papelería básica en la oficina.",
+    "stationery"
+  ],
+  [
+    "Simple Tasks Board",
+    "Mover tarjetas de tareas en un tablero Trello.",
+    "kanban"
+  ],
+  [
+    "Punctual Meeting Start",
+    "Iniciar la junta a la hora exacta acordada.",
+    "start"
+  ],
+  [
+    "Ordering Lunch Online",
+    "Usar apps de comida para comer con el equipo.",
+    "app"
+  ],
+  [
+    "The Office Chair Height",
+    "Ajustar la ergonomía de tu silla de trabajo.",
+    "seat"
+  ],
+  [
+    "The Desk Organizer",
+    "Mantener tus plumas y clips ordenados.",
+    "organizer"
+  ],
+  [
+    "A Great Presentation",
+    "Felicitaciones de oficina a un orador.",
+    "congrats"
+  ],
+  [
+    "A Hot Office Day",
+    "Ajustar el termostato del aire acondicionado.",
+    "climate"
+  ],
+  [
+    "Leaving the Office Early",
+    "Avisar que saldrás temprano por un compromiso.",
+    "leave"
+  ],
+  [
+    "The Parking Permit Card",
+    "Cómo solicitar la tarjeta de acceso de auto.",
+    "parking"
+  ],
+  [
+    "My Office Laptop",
+    "Describir el desempaque y encendido de tu laptop.",
+    "laptop"
+  ],
+  [
+    "Using the Calculator",
+    "Sumar facturas de gastos menores.",
+    "accounting"
+  ],
+  [
+    "The Safe Evacuation Plan",
+    "Identificar las zonas de seguridad sísmica.",
+    "plan"
+  ],
+  [
+    "Review Milestone A2-Part 3",
+    "Repaso general de la tercera parte de A2.",
+    "review_a2_3"
+  ],
+  [
+    "The Office Microwave",
+    "Reglas de limpieza e higiene al calentar comida.",
+    "microwave"
+  ],
+  [
+    "A Quick Reminder Email",
+    "Enviar un correo corto de seguimiento.",
+    "followup"
+  ],
+  [
+    "Office Simple Decoration",
+    "Elegir fotos familiares para tu escritorio.",
+    "family"
+  ],
+  [
+    "Checking the Calendar Dates",
+    "Verificar las semanas del año laboral.",
+    "weeks"
+  ],
+  [
+    "Ordering Office Tea",
+    "Pedir té de manzanilla o limón en el descanso.",
+    "tea"
+  ],
+  [
+    "Finding the Scissors",
+    "Buscar herramientas de corte en la papelería.",
+    "scissors"
+  ],
+  [
+    "The Office Elevator Floor",
+    "Ubicar las oficinas de recursos humanos.",
+    "floor"
+  ],
+  [
+    "Checking the Forecast",
+    "Ver si lloverá para no mojar tus reportes.",
+    "weather"
+  ],
+  [
+    "A Polite Conversation",
+    "Romper el hielo de forma cortés en el elevador.",
+    "icebreaker"
+  ],
+  [
+    "Simple Math Operations",
+    "Calcular el total de una factura con impuestos.",
+    "tax"
+  ],
+  [
+    "A Quick Note Draft",
+    "Apuntar el número telefónico de un cliente.",
+    "number"
+  ],
+  [
+    "The Office Carpet Clean",
+    "Reportar si se derrama café en el pasillo.",
+    "clean"
+  ],
+  [
+    "Asking for the Wi-Fi Password",
+    "Conectar a la red de invitados de la oficina.",
+    "wifi"
+  ],
+  [
+    "The Welcome Reception Sign",
+    "Leer el letrero de bienvenida a las visitas.",
+    "welcome"
+  ],
+  [
+    "The Snack Vending Machine",
+    "Comprar unas galletas en la tarde.",
+    "snack"
+  ],
+  [
+    "An Empty Meeting Room",
+    "Ver si una sala chica está libre para zoom.",
+    "room"
+  ],
+  [
+    "Checking Completed Tasks",
+    "Marcar como listos tus pendientes semanales.",
+    "tasks"
+  ],
+  [
+    "The Desktop Mouse Batteries",
+    "Pedir baterías nuevas al área de soporte.",
+    "support"
+  ],
+  [
+    "The Office Kitchen Sink",
+    "Mantener limpio el fregadero de la cocina.",
+    "sink"
+  ],
+  [
+    "Confirming a Time Slot",
+    "Preguntar si una hora le queda cómoda al cliente.",
+    "timeslot"
+  ],
+  [
+    "Saying Goodbye to the Team",
+    "Despedirse amablemente de los colegas.",
+    "goodbye"
+  ],
+  [
+    "The Mail Package Received",
+    "Confirmar la entrega de un paquete en la oficina.",
+    "delivery"
+  ],
+  [
+    "Finding a Black Pen",
+    "Pedir un bolígrafo de tinta negra para firmar.",
+    "pen"
+  ],
+  [
+    "A Simple Tasks Outline",
+    "Hacer un cronograma muy sencillo de actividades.",
+    "outline"
+  ],
+  [
+    "Being Punctual in Calls",
+    "Importancia de conectarse a tiempo a las llamadas.",
+    "calls"
+  ],
+  [
+    "The Office Suit Outfit",
+    "Días de vestimenta casual y formal corporativa.",
+    "outfit"
+  ],
+  [
+    "Ordering Pizza for Success",
+    "Festejar la meta mensual con pizza en la oficina.",
+    "pizza"
+  ],
+  [
+    "The Air Fan Settings",
+    "Ajustar la velocidad del ventilador de la oficina.",
+    "air"
+  ],
+  [
+    "A Warm Hot Chocolate",
+    "Preparar chocolate en los días de invierno.",
+    "drink"
+  ],
+  [
+    "The Meeting Action Items",
+    "Anotar quién hará cada tarea pendiente.",
+    "actionable"
+  ],
+  [
+    "A Green Desk Plant",
+    "Los beneficios de tener plantas en tu cubículo.",
+    "green"
+  ],
+  [
+    "The Secure Access Badge",
+    "El uso del gafete de identificación.",
+    "badge"
+  ],
+  [
+    "The Office Math Calculator",
+    "Hacer cuentas de presupuestos sencillos.",
+    "calculator"
+  ],
+  [
+    "Finding the Fire Extinguisher",
+    "Ubicar el extintor más cercano de tu mesa.",
+    "extinguisher"
+  ],
+  [
+    "A Polite Reminder Note",
+    "Dejar una nota recordatoria sobre una junta.",
+    "note"
+  ],
+  [
+    "The Office Carpet Cleanliness",
+    "La importancia de cuidar las áreas comunes.",
+    "decor"
+  ],
+  [
+    "Asking for a Guest Pass",
+    "Pedir pase de estacionamiento para tu cliente.",
+    "pass"
+  ],
+  [
+    "The Snack Machine Operation",
+    "Cómo pagar con tarjeta en la expendedora.",
+    "payment"
+  ],
+  [
+    "A Quiet Work Corner",
+    "Buscar un rincón libre para concentrarte mejor.",
+    "quiet"
+  ],
+  [
+    "Checking your Agenda Items",
+    "Revisar los puntos a tratar hoy en tu lista.",
+    "list"
+  ],
+  [
+    "The Desktop Screen Flickering",
+    "Pedir revisión técnica de tu monitor de oficina.",
+    "monitor"
+  ],
+  [
+    "The Kitchen Microwave Clean",
+    "Reglas sencillas de higiene con el microondas.",
+    "hygiene"
+  ],
+  [
+    "A Quick Call Confirmation",
+    "Asegurar que la llamada de 10 minutos sigue en pie.",
+    "confirm"
+  ],
+  [
+    "Saying Hello to Co-workers",
+    "Frases cordiales para iniciar la jornada laboral.",
+    "hello"
+  ],
+  [
+    "The Mail Courier Tracking",
+    "Revisar el estatus de un paquete enviado.",
+    "courier"
+  ],
+  [
+    "Finding a Red Marker",
+    "Pedir un marcador rojo para diagramas.",
+    "stationery"
+  ],
+  [
+    "A Simple Tasks Checklist",
+    "Hacer una lista de pendientes en tu libreta.",
+    "checklist"
+  ],
+  [
+    "Being Early in Virtual Calls",
+    "Conectarse un minuto antes a la sala de zoom.",
+    "zoom"
+  ],
+  [
+    "The Casual Dress Code",
+    "Qué vestir en los viernes de 'Casual Friday'.",
+    "casual"
+  ],
+  [
+    "Ordering Lunch Delivery",
+    "Coordinar una orden grupal de ensaladas.",
+    "delivery"
+  ],
+  [
+    "The Office Seat Cushion",
+    "Mejorar la comodidad física de tu silla.",
+    "seat"
+  ],
+  [
+    "The Desk Accessories Box",
+    "Guardar tus clips y ligas de oficina.",
+    "box"
+  ],
+  [
+    "A Great Speech Congrats",
+    "Felicitar a un compañero tras su oratoria.",
+    "praise"
+  ],
+  [
+    "A Hot Office Climate",
+    "Avisar que el aire acondicionado está fallando.",
+    "hvac"
+  ],
+  [
+    "Leaving Early for Health",
+    "Pedir permiso de salida para ir al dentista.",
+    "health"
+  ],
+  [
+    "The Secure Access Gate",
+    "Pasar el gafete en los torniquetes de entrada.",
+    "gate"
+  ],
+  [
+    "The Office Math Sheet",
+    "Sumar cifras de gastos de oficina sencillas.",
+    "sheet"
+  ],
+  [
+    "Review Milestone A2-Part 4",
+    "Repaso general final de la segunda mitad de A2.",
+    "review_a2_4"
+  ],
+  [
+    "A2 Graduation Capstone Elite",
+    "Examen de graduación del nivel A2 y paso a B1.",
+    "graduation_a2_elite"
   ]
 ];
 
@@ -1537,9 +3040,12 @@ const TEMAS_C_DATA: string[][] = [
   ]
 ];
 
-// Generar lecciones de forma dinámica con tipado seguro
-const buildLessons = (prefix: 'a' | 'b' | 'c', rawData: string[][]): LessonNode[] => {
-  return rawData.map((item, idx) => {
+// Generar lecciones de forma dinámica con tipado seguro para lecciones
+const buildLessons = (prefix: string, rawData: string[][], count: number = 100): LessonNode[] => {
+  const lessons: LessonNode[] = [];
+  for (let idx = 0; idx < count; idx++) {
+    const rawIndex = idx % rawData.length;
+    const item = rawData[rawIndex];
     const num = idx + 1;
     const id = `${prefix}-${num}`;
     
@@ -1551,89 +3057,81 @@ const buildLessons = (prefix: 'a' | 'b' | 'c', rawData: string[][]): LessonNode[
     const positions: ('left' | 'center' | 'right')[] = ['center', 'left', 'center', 'right'];
     const position = positions[idx % positions.length];
     
-    return {
+    const suffix = idx >= rawData.length ? ` - Section ${Math.floor(idx / rawData.length) + 1}` : "";
+    const title = `${item[0]}${suffix}`;
+    
+    lessons.push({
       id,
-      title: item[0],
+      title: title,
       description: item[1],
       type,
-      locked: !(prefix === 'a' && num === 1), // Desbloqueada únicamente a-1 por defecto
+      locked: !(prefix === 'a1' && num === 1), // Desbloqueada únicamente a1-1 por defecto
       completed: false,
       stars: 0,
       position,
-      aiPrompt: `Roleplay: Discuss the topic of '${item[0]}' using the key terminology related to '${item[2]}'.`
-    };
-  });
+      aiPrompt: `Roleplay: Discuss the topic of '${title}' using the key terminology related to '${item[2]}'.`
+    });
+  }
+  return lessons;
 }
 
 export const CURRICULUM: LevelSection[] = [
   {
-    id: 'A',
-    title: 'Nivel A: Foundations & Survival',
+    id: 'A1',
+    title: 'Nivel A1: Beginner Foundations',
     description: 'Establece los cimientos indispensables del inglés y sobrevive en entornos de oficina.',
     color: 'emerald',
-    lessons: buildLessons('a', TEMAS_A_DATA)
+    lessons: buildLessons('a1', TEMAS_A_DATA, 200)
   },
   {
-    id: 'B',
-    title: 'Nivel B: Operations & Professional',
+    id: 'A2',
+    title: 'Nivel A2: Operations & Survival',
+    description: 'Domina tareas cotidianas y operativas en inglés de negocios.',
+    color: 'emerald',
+    lessons: buildLessons('a2', TEMAS_A2_DATA, 200)
+  },
+  {
+    id: 'B1',
+    title: 'Nivel B1: Professional Management',
     description: 'Comunícate con soltura, redacta correos formales y lidera juntas con precisión.',
     color: 'blue',
-    lessons: buildLessons('b', TEMAS_B_DATA)
+    lessons: buildLessons('b1', TEMAS_B_DATA, 200)
   },
   {
-    id: 'C',
-    title: 'Nivel C: Strategic Management',
+    id: 'B2',
+    title: 'Nivel B2: Executive Operations',
+    description: 'Domina la agilidad operativa, gestión de proyectos y retroalimentación de equipos.',
+    color: 'blue',
+    lessons: buildLessons('b2', TEMAS_B_DATA, 200)
+  },
+  {
+    id: 'C1',
+    title: 'Nivel C1: Strategic Leadership',
     description: 'Domina negociaciones de alto nivel, fusiones y discursos ante mesas directivas.',
     color: 'orange',
-    lessons: buildLessons('c', TEMAS_C_DATA)
+    lessons: buildLessons('c1', TEMAS_C_DATA, 200)
   },
-  // Bloque especial TOEIC
+  {
+    id: 'C2',
+    title: 'Nivel C2: Global Geopolitics & Strategy',
+    description: 'Lidera la toma de decisiones corporativas globales con total naturalidad y retórica fina.',
+    color: 'orange',
+    lessons: buildLessons('c2', TEMAS_C_DATA, 200)
+  },
   {
     id: 'TOEIC',
     title: 'Certificación: TOEIC® Mastery',
     description: 'Preparación de alto rendimiento para el examen oficial TOEIC® de habilidades ejecutivas.',
     color: 'purple',
-    lessons: [
-      { 
-        id: 'toeic_listening', 
-        title: 'Photo Description', 
-        description: 'Part 1: Visual Analysis.',
-        type: 'listening', 
-        locked: true, completed: false, stars: 0, position: 'left',
-        aiPrompt: 'Analyze business photographs strictly following TOEIC format.'
-      },
-      { 
-        id: 'toeic_reading', 
-        title: 'Incomplete Sentences', 
-        description: 'Part 5: Grammar Precision.',
-        type: 'grammar', 
-        locked: true, completed: false, stars: 0, position: 'right',
-        aiPrompt: 'Fill in the blanks with precise business grammar.'
-      },
-      { 
-        id: 'toeic_speaking', 
-        title: 'Express an Opinion', 
-        description: 'Question 11: Logic.',
-        type: 'chat', 
-        locked: true, completed: false, stars: 0, position: 'center',
-        aiPrompt: 'State an opinion and support it with reasons.'
-      },
-      { 
-        id: 'toeic_writing', 
-        title: 'Email Response', 
-        description: 'Questions 6-7.',
-        type: 'toeic_mock', 
-        locked: true, completed: false, stars: 0, position: 'left',
-        aiPrompt: 'Respond to a written request with specific requirements.'
-      }
-    ]
+    lessons: buildLessons('toeic', TEMAS_C_DATA, 200)
   }
 ];
 
 // Helper para búsqueda rápida
 export function getLessonById(id: string): LessonNode | undefined {
+    const cleanId = id.toLowerCase();
     for (const section of CURRICULUM) {
-        const lesson = section.lessons.find(l => l.id === id);
+        const lesson = section.lessons.find(l => l.id.toLowerCase() === cleanId);
         if (lesson) return lesson;
     }
     return undefined;

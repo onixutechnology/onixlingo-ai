@@ -337,63 +337,79 @@ export default function VocabularyLessonPage() {
 
   // Pantalla de Selección de Dificultad
   if (!hasSelectedDifficulty && lesson) {
+    const isPremium = userTier === 'pro' || userTier === 'executive';
+
+    const difficultyOptions = [
+      { 
+        id: 'easy', 
+        title: 'Nivel Fácil (Easy)', 
+        time: 'Sin tiempo límite', 
+        desc: isPremium 
+          ? 'Aprende y asocia palabras sin presión. Otorga 1 boleto para el sorteo mensual.'
+          : 'Aprende y asocia palabras sin presión. Excelente para practicar.',
+        badge: isPremium ? '1 Boleto de Sorteo' : '0 Boletos (Plan Free)',
+        badgeColor: isPremium 
+          ? 'bg-amber-50 text-amber-800 border-amber-200' 
+          : 'bg-slate-100 text-slate-500 border-slate-200'
+      },
+      { 
+        id: 'medium', 
+        title: 'Nivel Medio (Medium)', 
+        time: 'Límite de 3 Minutos', 
+        desc: isPremium
+          ? 'Pon a prueba tu rapidez mental básica bajo el reloj. Otorga 2 boletos para el sorteo.'
+          : 'Pon a prueba tu rapidez mental básica bajo el reloj (3:00 min).',
+        badge: isPremium ? '2 Boletos de Sorteo' : '0 Boletos (Plan Free)',
+        badgeColor: isPremium 
+          ? 'bg-amber-50 text-amber-800 border-amber-200'
+          : 'bg-slate-100 text-slate-500 border-slate-200'
+      },
+      { 
+        id: 'pro', 
+        title: 'Nivel Pro (Rápido)', 
+        time: 'Límite de 1 Minuto 30 Segundos', 
+        desc: isPremium
+          ? 'Para maestros del vocabulario. ¡Vale por 5 BOLETOS para el sorteo de recompensas!'
+          : 'Para maestros del vocabulario. Módulo avanzado con límite de tiempo estricto (1:30 min).',
+        badge: isPremium ? '5 Boletos (PRO/Exec)' : '0 Boletos (Plan Free)',
+        badgeColor: isPremium 
+          ? 'bg-amber-100 text-amber-800 border-amber-300'
+          : 'bg-slate-100 text-slate-500 border-slate-200'
+      }
+    ];
+
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-6 relative overflow-hidden font-sans">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent"></div>
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-indigo-500"></div>
+      <div className="min-h-screen flex items-center justify-center bg-amber-50/95 text-slate-900 p-6 relative overflow-hidden font-sans">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-200/40 via-transparent to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-amber-500"></div>
         
         <motion.div 
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          className="bg-slate-955 border border-slate-800 p-8 max-w-xl w-full shadow-2xl rounded-none relative z-10 backdrop-blur-md"
+          className="bg-white border border-amber-100 p-8 max-w-xl w-full shadow-2xl rounded-none relative z-10 backdrop-blur-md"
         >
           <div className="flex justify-between items-start mb-6">
             <button 
               onClick={() => router.push('/dashboard/vocabulary')}
-              className="p-2 border border-slate-800 text-slate-400 hover:text-white transition-all rounded-none"
+              className="p-2 border border-slate-200 text-slate-500 hover:text-amber-700 hover:border-amber-500 transition-all rounded-none bg-white"
             >
               <ArrowLeft size={16} />
             </button>
             <div className="text-center">
-              <span className="text-[8px] font-black uppercase tracking-[0.3em] text-indigo-400">Selector de Nivel</span>
-              <h2 className="text-lg font-serif font-black italic uppercase tracking-wider text-white mt-1">
+              <span className="text-[8px] font-black uppercase tracking-[0.3em] text-amber-600">Selector de Nivel</span>
+              <h2 className="text-lg font-serif font-black italic uppercase tracking-wider text-slate-900 mt-1">
                 {lesson.title}
               </h2>
             </div>
             <div className="w-8"></div>
           </div>
 
-          <p className="text-[10px] text-slate-400 text-center leading-relaxed mb-8 uppercase tracking-widest">
+          <p className="text-[10px] text-slate-500 text-center leading-relaxed mb-8 uppercase tracking-widest">
             Selecciona la dificultad del Neuro Link. Elige sabiamente, la velocidad premiará a los valientes.
           </p>
 
           <div className="space-y-4 mb-8">
-            {[
-              { 
-                id: 'easy', 
-                title: 'Nivel Fácil (Easy)', 
-                time: 'Sin tiempo límite', 
-                desc: 'Aprende y asocia palabras sin presión. Excelente para practicar.',
-                badge: '1 Boleto de Sorteo',
-                badgeColor: 'bg-slate-900 text-slate-400 border-slate-800'
-              },
-              { 
-                id: 'medium', 
-                title: 'Nivel Medio (Medium)', 
-                time: 'Límite de 5 Minutos', 
-                desc: 'Pon a prueba tu rapidez mental básica bajo el reloj (5:00 min).',
-                badge: '1 Boleto de Sorteo',
-                badgeColor: 'bg-indigo-950/40 text-indigo-400 border-indigo-900/50'
-              },
-              { 
-                id: 'pro', 
-                title: 'Nivel Pro (Rápido y Furioso)', 
-                time: 'Límite de 2 Minutos', 
-                desc: 'Para maestros. ¡Si tienes cuenta PRO o EXECUTIVE, este módulo VALE POR 5 BOLETOS para el sorteo de recompensas!',
-                badge: 'x5 Boletos (PRO/Exec)',
-                badgeColor: 'bg-emerald-950/40 text-emerald-400 border-emerald-900/50'
-              }
-            ].map((opt) => {
+            {difficultyOptions.map((opt) => {
               const isSelected = difficulty === opt.id;
               return (
                 <button
@@ -402,19 +418,19 @@ export default function VocabularyLessonPage() {
                   className={`
                     w-full p-4 border text-left flex flex-col justify-between transition-all rounded-none relative
                     ${isSelected 
-                      ? 'border-indigo-500 bg-indigo-955 ring-1 ring-indigo-500' 
-                      : 'border-slate-800 bg-slate-900/40 hover:border-slate-700'}
+                      ? 'border-amber-500 bg-amber-50 ring-1 ring-amber-500' 
+                      : 'border-slate-200 bg-white hover:border-amber-350'}
                   `}
                 >
                   <div className="flex justify-between items-start w-full mb-1">
-                    <h3 className={`font-black text-[11px] uppercase tracking-wider ${isSelected ? 'text-indigo-400' : 'text-slate-200'}`}>
+                    <h3 className={`font-black text-[11px] uppercase tracking-wider ${isSelected ? 'text-amber-700' : 'text-slate-800'}`}>
                       {opt.title}
                     </h3>
                     <span className={`text-[8px] font-black uppercase tracking-wider px-2 py-0.5 border rounded-none ${opt.badgeColor}`}>
                       {opt.badge}
                     </span>
                   </div>
-                  <span className="text-[9px] font-mono font-black text-slate-400 mb-2">{opt.time}</span>
+                  <span className="text-[9px] font-mono font-black text-slate-500 mb-2">{opt.time}</span>
                   <p className="text-[9px] text-slate-500 font-bold uppercase tracking-wider leading-relaxed">
                     {opt.desc}
                   </p>
@@ -427,14 +443,14 @@ export default function VocabularyLessonPage() {
             onClick={() => {
               setHasSelectedDifficulty(true);
               if (difficulty === 'medium') {
-                setTimeLeft(300);
+                setTimeLeft(180);
                 setTimerActive(true);
               } else if (difficulty === 'pro') {
-                setTimeLeft(120);
+                setTimeLeft(90);
                 setTimerActive(true);
               }
             }}
-            className="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[10px] uppercase tracking-[0.2em] transition-all rounded-none shadow-lg shadow-indigo-600/30"
+            className="w-full py-4 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[10px] uppercase tracking-[0.2em] transition-all rounded-none shadow-lg shadow-amber-500/10 active:scale-[0.98]"
           >
             Sincronizar y Comenzar
           </button>
@@ -614,10 +630,10 @@ export default function VocabularyLessonPage() {
                     setDrillKey(prev => prev + 1);
                     setSavedProgressIds([]);
                     if (difficulty === 'medium') {
-                      setTimeLeft(300);
+                      setTimeLeft(180);
                       setTimerActive(true);
                     } else if (difficulty === 'pro') {
-                      setTimeLeft(120);
+                      setTimeLeft(90);
                       setTimerActive(true);
                     }
                   }}

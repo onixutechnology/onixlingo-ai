@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useUIStore } from '@/store/uiStore';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -20,6 +21,30 @@ import {
 // --- 📢 1. IMPORTAMOS EL ANUNCIO INTELIGENTE ---
 import { AdBanner } from '@/components/ads/AdBanner';
 
+const ADVISOR_TIPS: Record<string, string[]> = {
+  en: [
+    "Proyección de Oratoria: Para maximizar el impacto en su Series B Pitch ante inversores, reemplace verbos pasivos por métricas de tracción activa (ej: leverage operational margins).",
+    "Mitigación de Conflictos: En negociaciones bilaterales, introduzca cláusulas de contingencia diplomática utilizando condicionales compuestos ('Should any operational deviations arise...').",
+    "Influencia Ejecutiva: Aumente la modulación tonal en juntas de accionistas; reduzca la velocidad en un 15% para proyectar soberanía en momentos de volatilidad del mercado.",
+    "Persuasión C-Suite: Utilice 'Due Diligence' en lugar de 'Investigation' para denotar un análisis formal con rigor metodológico y validez legal.",
+    "Presentaciones Financieras: Al reportar gastos amortizados (I+D), enfatice el 'multiplicador de valor a largo plazo' para blindar el margen neto operativo."
+  ],
+  fr: [
+    "Métrica de Negociación: Emplee el término 'Consensus' tras estructurar un acuerdo bilateral, atenuando riesgos contractuales con elegancia corporativa.",
+    "Sutileza Corporativa: Prefiera 'Atouts stratégiques' sobre 'Points forts' para referirse a los activos y ventajas corporativas clave de OnixCorp.",
+    "Gestión de Alianzas: Al interactuar con contrapartes francesas, use giros pasivos educados ('Il convient de noter...') para sugerir modificaciones sin confrontación.",
+    "Finanzas de Fusión: En juntas de M&A, justifique la 'rentabilité globale' destacando la amortización a largo plazo y las sinergias operativas estimadas.",
+    "Oratoria C-Suite: Domine la entonación descendente al final de cada frase para consolidar autoridad ante un comité directivo francófono."
+  ],
+  zh: [
+    "Etiqueta Directiva: Al dirigirse a directivos en Shanghái, justifique sus márgenes utilizando '核心竞争力' (competitividad núcleo) para alinear visiones estratégicas.",
+    "Negociación Táctica: Introduzca propuestas complejas usando '协同效应' (efecto sinérgico) para resaltar los beneficios compartidos y facilitar consensos.",
+    "Soberanía Lingüística: En rondas de inversión en China, use el término de jerga '愿景' (visión prospectiva) para consolidar su autoridad y liderazgo.",
+    "Discurso bajo Estrés: Frente a preguntas de auditoría, mantenga un tono pausado y estructurado con '稳健发展' (desarrollo estable y seguro).",
+    "Fusiones y Adquisiciones: Justifique valoraciones utilizando '杠杆效应' (efecto apalancamiento estratégico) para mitigar el escepticismo del panel."
+  ]
+};
+
 interface SidebarProps {
   userStats?: { xp: number; lessons: number; streak: number };
 }
@@ -35,6 +60,20 @@ export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }
   const router = useRouter();
 
   const theme = LANGUAGE_COLORS[activeLanguage] || LANGUAGE_COLORS.en;
+
+  const [tipIndex, setTipIndex] = useState(0);
+  const [isRotating, setIsRotating] = useState(false);
+
+  const tips = ADVISOR_TIPS[activeLanguage] || ADVISOR_TIPS.en;
+  const currentTip = tips[tipIndex % tips.length];
+
+  const handleNextTip = () => {
+    setIsRotating(true);
+    setTimeout(() => {
+      setTipIndex(prev => prev + 1);
+      setIsRotating(false);
+    }, 300);
+  };
 
   const handleModeSwitch = () => {
     if (mode === 'student') {
@@ -78,24 +117,31 @@ export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }
         </div>
       </div>
 
-      {/* --- IA WIDGET (SQUARE) --- */}
-      <div className="mt-auto mb-6 px-4">
-        <div className="bg-slate-900 p-4 border-l-4 border-amber-500/70 rounded-none shadow-xl relative overflow-hidden group">
-          <div className="absolute top-0 right-0 p-1 opacity-10"><Sparkles size={40} className="text-amber-500" /></div>
-          <p className="text-[8px] font-black text-amber-500 uppercase tracking-[0.3em] mb-2 flex items-center justify-between gap-2">
+      {/* --- IA WIDGET: NEURAL ADVISOR INTERACTIVO --- */}
+      <div className="mb-2 px-4">
+        <div className="bg-slate-950 p-5 border-l-4 border-amber-500 rounded-none shadow-xl relative overflow-hidden group">
+          <div className="absolute top-0 right-0 p-1 opacity-10">
+            <Sparkles size={40} className="text-amber-500" />
+          </div>
+          
+          <p className="text-[8px] font-black text-amber-500 uppercase tracking-[0.3em] mb-2.5 flex items-center justify-between gap-2">
             <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 bg-amber-500/50"></span> Neural Advisor
+              <span className="w-1.5 h-1.5 bg-amber-500 animate-pulse"></span> Neural Advisor IA
             </span>
-            <span className="bg-amber-500/10 text-amber-500 border border-amber-500/20 px-1 py-0.5 text-[6px] tracking-widest">PRÓXIMAMENTE</span>
+            <span className="bg-amber-500/10 text-amber-500 border border-amber-500/20 px-1 py-0.5 text-[6px] tracking-widest font-black">ACTIVO</span>
           </p>
-          <p className="text-white text-[10px] font-bold leading-relaxed mb-4 opacity-60">
-            Optimiza tu perfil para entornos de Manufactura 4.0.
-          </p>
+
+          <div className={`transition-all duration-300 min-h-[90px] ${isRotating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
+            <p className="text-white text-[10px] font-bold leading-relaxed mb-4">
+              "{currentTip}"
+            </p>
+          </div>
+
           <button 
-            disabled 
-            className="w-full bg-slate-800 text-slate-500 py-2 text-[9px] font-black uppercase tracking-widest cursor-not-allowed border border-slate-700/50 transition-all shadow-none"
+            onClick={handleNextTip}
+            className="w-full bg-slate-900 hover:bg-amber-500 text-slate-300 hover:text-slate-950 py-2.5 text-[8px] font-black uppercase tracking-widest border border-slate-800 hover:border-amber-600 transition-all shadow-md active:scale-95 flex items-center justify-center gap-1.5"
           >
-            Próximamente
+            <Sparkles size={10} /> Generar Consejo Ejecutivo
           </button>
         </div>
       </div>

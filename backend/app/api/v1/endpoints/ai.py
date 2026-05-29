@@ -70,15 +70,24 @@ async def chat_endpoint(
 
 # --- NUEVO ENDPOINT DE TEXT-TO-SPEECH ---
 @router.get("/tts", summary="Generar audio de alta fidelidad con Google Cloud TTS")
-async def tts_endpoint(text: str, lang: str = "en"):
+async def tts_endpoint(text: str, lang: str = "en", translate_to: Optional[str] = None):
     """
     Sintetiza texto a voz ultra-realista utilizando Google Cloud TTS.
+    Opcionalmente traduce el texto de entrada al idioma 'translate_to' mediante Gemini antes de la síntesis.
     Retorna directamente el archivo de audio MP3 para reproducción nativa.
     """
     if not text:
         raise HTTPException(status_code=400, detail="El parámetro 'text' es requerido.")
+    
+    text_to_speak = text
+    synthesis_lang = lang
+
+    if translate_to:
+        target_name = "español" if translate_to.lower() == "es" else "francés" if translate_to.lower() == "fr" else translate_to
+        text_to_speak = await gemini_service.translate_text(text, target_name)
+        synthesis_lang = translate_to
         
-    audio_bytes = await tts_service.synthesize_speech(text, lang)
+    audio_bytes = await tts_service.synthesize_speech(text_to_speak, synthesis_lang)
     
     if not audio_bytes:
         raise HTTPException(

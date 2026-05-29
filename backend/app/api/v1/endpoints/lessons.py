@@ -65,7 +65,12 @@ def get_lesson_content(
 
     if not is_admin:
         if user_tier == "free":
-            if not lesson_id.startswith("a-"):
+            is_free_lesson = (
+                lesson_id.startswith("a-") or 
+                lesson_id.startswith("fr-a1-") or 
+                lesson_id.startswith("zh-a-")
+            )
+            if not is_free_lesson:
                 logger.warning(f"🔒 Acceso denegado a lección {lesson_id} para usuario Free: {current_user.username}")
                 raise HTTPException(
                     status_code=status.HTTP_403_FORBIDDEN,
@@ -115,6 +120,19 @@ def get_lesson_content(
         logger.info(f"📂 Lección {lesson_id} encontrada en la raíz del directorio de contenido.")
         final_file = root_fallback
     else:
+        # DYNAMIC GENERATION FALLBACK FOR COOLIFY/STATELESS CONTAINERS
+        try:
+            from app.services.curriculum_factory import generate_dynamic_lesson, CATALOG
+            # Verify if this is a standard level ID or in catalog
+            clean_id = lesson_id.lower()
+            is_standard = any(clean_id.startswith(lvl + "-") for lvl in ["a1", "a2", "b1", "b2", "c1", "c2", "toeic"])
+            if clean_id in CATALOG or is_standard:
+                logger.info(f"✨ Generando lección {lesson_id} dinámicamente sobre la marcha.")
+                dynamic_data = generate_dynamic_lesson(lesson_id)
+                return LessonContent(**dynamic_data)
+        except Exception as dy_err:
+            logger.error(f"🔥 Error al generar lección dinámicamente: {dy_err}")
+
         logger.error(f"❌ Archivo {lesson_id} no encontrado en ninguna de las rutas intentadas.")
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,

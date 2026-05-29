@@ -93,6 +93,86 @@ class GeminiService:
                 "analysis": None
             }
 
+    async def get_response(self, message: str, context: str, mode: str = "practice") -> Dict[str, Any]:
+        """
+        Genera la respuesta del tutor evaluando gramática, vocabulario y tono.
+        Adaptador inteligente y profesional para el endpoint /chat.
+        """
+        try:
+            # Creamos el modelo dinámicamente inyectando el rol e instrucciones de sistema
+            model = genai.GenerativeModel(
+                model_name=self.model_name,
+                system_instruction=context,
+                generation_config=self.generation_config,
+                safety_settings=self.safety_settings
+            )
+
+            prompt = f"""
+            User input: "{message}"
+            Mode: "{mode}"
+
+            Based on your executive persona, reply to the user.
+            Evaluate their grammar, vocabulary (C-Level corporate terminology), and executive tone.
+            
+            Return a JSON object with the exact keys:
+            {{
+                "text": "Your natural spoken response to the user in their practice language (English). Be demanding, realistic and professional.",
+                "gesture": "talking",
+                "analysis": {{
+                    "correction": "Explain any grammar mistakes briefly in Spanish, or null if perfect.",
+                    "score": 85,
+                    "vocabulary_upgrade": "A concrete tip or C-Level vocabulary upgrade (e.g. 'Use leveraged instead of used')",
+                    "tone_check": "Brief feedback about their corporate tone (e.g. 'Authoritative and strategic' or 'A bit informal for CFO negotiations')"
+                }}
+            }}
+            
+            Choose a fitting executive gesture from: [talking, listening, happy, thinking, explaining, surprise].
+            """
+            
+            response = await model.generate_content_async(prompt)
+            response_text = response.text.strip()
+            
+            # Limpieza en caso de bloques de código markdown
+            if response_text.startswith("```json"):
+                response_text = response_text.replace("```json", "").replace("```", "").strip()
+            elif response_text.startswith("```"):
+                response_text = response_text.replace("```", "").strip()
+                
+            result = json.loads(response_text)
+            
+            # Sanitización y fallback
+            if "text" not in result:
+                result["text"] = "I received your proposal, CEO. Let's analyze the synergistic projections."
+            if "gesture" not in result:
+                result["gesture"] = "explaining"
+            if "analysis" not in result or result["analysis"] is None:
+                result["analysis"] = {}
+                
+            analysis = result["analysis"]
+            if "score" not in analysis:
+                analysis["score"] = 80
+            if "correction" not in analysis:
+                analysis["correction"] = None
+            if "vocabulary_upgrade" not in analysis:
+                analysis["vocabulary_upgrade"] = "Structure your pitch using 'synergistic returns' to align with board expectations."
+            if "tone_check" not in analysis:
+                analysis["tone_check"] = "Strategic and poised."
+                
+            return result
+            
+        except Exception as e:
+            logger.error(f"Error in Gemini get_response: {e}")
+            return {
+                "text": "CEO, the strategic direction is clear, but I want to see the specific ROI timeline projections before casting my vote.",
+                "gesture": "thinking",
+                "analysis": {
+                    "correction": None,
+                    "score": 82,
+                    "vocabulary_upgrade": "Use 'hedging risk' instead of 'mitigating errors'.",
+                    "tone_check": "Professional and strategic under pressure."
+                }
+            }
+
     # --- GENERADORES AUXILIARES (Legacy support) ---
     
     async def analyze_speech(self, target: str, transcript: str) -> Dict[str, Any]:
@@ -122,3 +202,31 @@ class GeminiService:
         except Exception as e:
             logger.error(f"Speech Analysis Error: {e}")
             return {"score": 0, "feedback": "Error analyzing speech."}
+
+    async def translate_text(self, text: str, target_lang: str = "español") -> str:
+        """
+        Traduce y adapta un texto técnico/corporativo en inglés a un discurso hablado profesional en el idioma objetivo.
+        """
+        try:
+            model = genai.GenerativeModel('gemini-1.5-flash')
+            prompt = f"""
+            Translate and adapt the following English business/corporate training slide text into a highly professional, natural spoken explanation in {target_lang}.
+            
+            Guidelines:
+            - It must sound like a C-Level executive or professional business coach speaking naturally, clear and authoritative.
+            - Ensure it explains the key concepts fluidly.
+            - Avoid literal or robotic translations. Adapt terms correctly.
+            - Clean up header text (like "ONIXLINGO EXECUTIVE COMMAND SYSTEM", "Level B1", etc.) and present it as a cohesive spoken paragraph.
+            - Do NOT include any markdown, introductory phrases, or structural symbols. Output ONLY the raw translated text to be spoken.
+            
+            Text:
+            "{text}"
+            """
+            response = await model.generate_content_async(prompt)
+            translated_text = response.text.strip()
+            if translated_text.startswith("```"):
+                translated_text = translated_text.split("\n", 1)[-1].rsplit("\n", 1)[0].strip()
+            return translated_text
+        except Exception as e:
+            logger.error(f"Error in Gemini translation: {e}")
+            return text

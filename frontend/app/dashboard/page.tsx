@@ -433,7 +433,7 @@ export default function DashboardPage() {
                   {/* ENCABEZADO INTERACTIVO DEL MÓDULO (ACCORDION TOGGLE) */}
                   <div 
                     onClick={() => {
-                      if (userTier === 'free' && section.id !== 'A') {
+                      if (userTier === 'free' && sIdx !== 0) {
                         setShowUpgradeModal(true);
                       } else {
                         toggleSection(section.id);
@@ -442,17 +442,17 @@ export default function DashboardPage() {
                     className={`
                       flex items-center justify-between p-4 cursor-pointer transition-all border-b select-none
                       ${isExpanded ? 'bg-slate-50 border-slate-200' : 'bg-white hover:bg-slate-50 border-transparent'}
-                      ${userTier === 'free' && section.id !== 'A' ? 'opacity-70 bg-slate-50/50 hover:bg-slate-100/50' : ''}
+                      ${userTier === 'free' && sIdx !== 0 ? 'opacity-70 bg-slate-50/50 hover:bg-slate-100/50' : ''}
                     `}
                   >
                     <div className="flex items-center gap-3">
-                      <div className={`p-2 bg-slate-100 text-${userTier === 'free' && section.id !== 'A' ? 'slate-400' : theme.primary}`}>
-                        {userTier === 'free' && section.id !== 'A' ? <Lock size={16} /> : <LayoutGrid size={16} />}
+                      <div className={`p-2 bg-slate-100 text-${userTier === 'free' && sIdx !== 0 ? 'slate-400' : theme.primary}`}>
+                        {userTier === 'free' && sIdx !== 0 ? <Lock size={16} /> : <LayoutGrid size={16} />}
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
                           <h2 className="text-[10px] font-black text-slate-900 uppercase tracking-[0.2em] font-serif italic">{section.title}</h2>
-                          {userTier === 'free' && section.id !== 'A' && (
+                          {userTier === 'free' && sIdx !== 0 && (
                             <span className="bg-amber-100 text-amber-800 text-[7px] font-black uppercase tracking-widest px-1.5 py-0.5 border border-amber-200">
                               PREMIUM
                             </span>
@@ -464,7 +464,7 @@ export default function DashboardPage() {
 
                     <div className="flex items-center gap-4">
                       {/* Progreso del nivel */}
-                      {!(userTier === 'free' && section.id !== 'A') ? (
+                      {!(userTier === 'free' && sIdx !== 0) ? (
                         <div className="text-right hidden sm:block">
                           <span className="text-[8px] font-black uppercase tracking-wider text-slate-400">Completado: </span>
                           <span className={`text-[9px] font-black text-${theme.primary}`}>
@@ -480,7 +480,7 @@ export default function DashboardPage() {
                       )}
                       
                       {/* Chevron con rotación o candado */}
-                      {!(userTier === 'free' && section.id !== 'A') ? (
+                      {!(userTier === 'free' && sIdx !== 0) ? (
                         <motion.div
                           animate={{ rotate: isExpanded ? 180 : 0 }}
                           transition={{ duration: 0.2 }}

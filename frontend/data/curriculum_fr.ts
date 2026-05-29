@@ -1,1573 +1,685 @@
 import { LevelSection, LessonNode, ExerciseType } from './curriculum';
 
-// --- CURRÍCULUM CON 100 LECCIONES REALES EN FRANCÉS POR NIVEL (300 LECCIONES TOTALES) ---
+// ================================================================
+// ONIXLINGO CURRICULUM FR - 10 NIVELES × 200 LECCIONES = 2,000 TOTAL
+// Cada nivel tiene su propio dataset de temas único y progresivo.
+// ================================================================
 
-const TEMAS_A_DATA: string[][] = [
-  [
-    "Primeras Impresiones",
-    "Presentaciones básicas y saludos ejecutivos.",
-    "bonjour"
-  ],
-  [
-    "El Escritorio de Oficina",
-    "Objetos de oficina y vocabulario de trabajo elemental.",
-    "bureau"
-  ],
-  [
-    "Rutinas Diarias",
-    "Hábitos de productividad diarios.",
-    "travail"
-  ],
-  [
-    "Decir la Hora",
-    "Programación de horarios simples.",
-    "horloge"
-  ],
-  [
-    "Números y Precios",
-    "Cálculos básicos de costos y dinero.",
-    "euros"
-  ],
-  [
-    "Direcciones Simples",
-    "Ubicación física en las oficinas.",
-    "gauche"
-  ],
-  [
-    "Conocer al Equipo",
-    "Estructura jerárquica básica del equipo.",
-    "directeur"
-  ],
-  [
-    "Comida y Bebida",
-    "Ordenar alimentos en almuerzos de negocios rápidos.",
-    "café"
-  ],
-  [
-    "Viajes de Negocios Básicos",
-    "Logística elemental de aeropuertos.",
-    "billet"
-  ],
-  [
-    "Registro en el Hotel",
-    "Registrarse en recepciones de hotel.",
-    "chambre"
-  ],
-  [
-    "Redactar Correos Simples",
-    "Saludos y firmas de correo ejecutivo.",
-    "courriel"
-  ],
-  [
-    "Describir un Producto",
-    "Adjetivos simples de productos.",
-    "bon"
-  ],
-  [
-    "Suministros de Oficina",
-    "Inventario y existencias básicas de papelería.",
-    "papier"
-  ],
-  [
-    "Calendarios y Fechas",
-    "Días de la semana y meses de negocios.",
-    "lundi"
-  ],
-  [
-    "Habilidades Telefónicas Básicas",
-    "Atender llamadas y tomar notas elementales.",
-    "téléphone"
-  ],
-  [
-    "Revisión Semanal",
-    "Revisión rápida de tareas realizadas.",
-    "fini"
-  ],
-  [
-    "Fortalezas Personales",
-    "Habilidades básicas de presentación personal.",
-    "ordonné"
-  ],
-  [
-    "La Semana Laboral",
-    "Diferenciar entre días laborales y fin de semana.",
-    "semaine"
-  ],
-  [
-    "Agendar Citas",
-    "Agendar reuniones de uno a uno.",
-    "réunion"
-  ],
-  [
-    "Presentación de Clientes",
-    "Presentar a un colega con un cliente.",
-    "accueil"
-  ],
-  [
-    "Hablar del Clima",
-    "Romper el hielo de manera elemental.",
-    "temps"
-  ],
-  [
-    "Perfil de la Empresa",
-    "Describir el sector y tamaño básico de la empresa.",
-    "société"
-  ],
-  [
-    "En el Banco",
-    "Transacciones y pagos simples.",
-    "banque"
-  ],
-  [
-    "Conceptos de Emergencia",
-    "Reportar incidentes sencillos de oficina.",
-    "aide"
-  ],
-  [
-    "Títulos de Puestos",
-    "Nombres de puestos en el organigrama corporativo.",
-    "responsable"
-  ],
-  [
-    "Socializar en el Trabajo",
-    "Conversar con compañeros en la cafetería.",
-    "famille"
-  ],
-  [
-    "Soporte Técnico Básico",
-    "Describir problemas simples de computadora.",
-    "ordinateur"
-  ],
-  [
-    "Distribución de la Oficina",
-    "Zonas comunes de la oficina.",
-    "plan"
-  ],
-  [
-    "Pedidos Simples",
-    "Solicitudes directas a proveedores.",
-    "commande"
-  ],
-  [
-    "Viaje al Trabajo",
-    "Medios de transporte diarios.",
-    "métro"
-  ],
-  [
-    "Historia de la Empresa",
-    "Hablar de la fundación en pasado simple elemental.",
-    "histoire"
-  ],
-  [
-    "Acuerdos Básicos",
-    "Aceptar y rechazar propuestas sencillas.",
-    "accord"
-  ],
-  [
-    "Reglas de la Oficina",
-    "Políticas elementales de vestimenta y conducta.",
-    "règles"
-  ],
-  [
-    "Hito de Revisión A",
-    "Consolidación de todo el vocabulario del Nivel A.",
-    "résumé"
-  ],
-  [
-    "Papelería de Oficina",
-    "Vocabulario básico para herramientas de escritura y papelería.",
-    "stylo"
-  ],
-  [
-    "Silla Ergonómica",
-    "Discussing office furniture and comfortable seating.",
-    "chaise"
-  ],
-  [
-    "Descanso del Mediodía",
-    "Vocabulario esencial para ordenar almuerzos rápidos.",
-    "déjeuner"
-  ],
-  [
-    "Horario Diario",
-    "Organización y lectura de horarios básicos de trabajo.",
-    "heure"
-  ],
-  [
-    "Crear una Agenda",
-    "Cómo enlistar los puntos a tratar en una reunión.",
-    "agenda"
-  ],
-  [
-    "Escribir una Nota",
-    "Dejar recordatorios breves en el escritorio de un colega.",
-    "note"
-  ],
-  [
-    "Archivador",
-    "Organización física de carpetas y documentos.",
-    "dossier"
-  ],
-  [
-    "Responder Llamadas",
-    "Tomar mensajes de voz sencillos en el teléfono de la oficina.",
-    "téléphoner"
-  ],
-  [
-    "Enviar Correos",
-    "Estructura básica para enviar correos rápidos.",
-    "envoyer"
-  ],
-  [
-    "Recibir una Respuesta",
-    "Checking your inbox for simple confirmations.",
-    "réponse"
-  ],
-  [
-    "Seguridad de Documentos",
-    "Almacenar archivos confidenciales de forma segura.",
-    "sûreté"
-  ],
-  [
-    "Ventanas de la Oficina",
-    "Describir el entorno físico de la oficina.",
-    "fenêtre"
-  ],
-  [
-    "Charla de Pasillo",
-    "Conversaciones casuales y breves de pasillo.",
-    "eau"
-  ],
-  [
-    "Té de la Tarde",
-    "Breve descanso para recargar energías.",
-    "thé"
-  ],
-  [
-    "Opciones de Almuerzo",
-    "Healthy options for eating at the workplace.",
-    "panier"
-  ],
-  [
-    "Descanso Corto",
-    "Managing small pauses during high-productivity hours.",
-    "goûter"
-  ],
-  [
-    "Sincronización de Equipo",
-    "Short standing meetings to align daily tasks.",
-    "synchro"
-  ],
-  [
-    "Llegar al Trabajo",
-    "Describing your morning commute and arrival times.",
-    "arriver"
-  ],
-  [
-    "Salir de la Oficina",
-    "Saying goodbye to colleagues at the end of the day.",
-    "partir"
-  ],
-  [
-    "Iniciar un Proyecto",
-    "First steps and simple discussions about new tasks.",
-    "début"
-  ],
-  [
-    "Terminar Tareas",
-    "How to report that a daily assignment is completed.",
-    "finir"
-  ],
-  [
-    "Reporte Semanal",
-    "Simple summary of your accomplishments.",
-    "rapport"
-  ],
-  [
-    "Hacer Copias",
-    "Using the office printer and copier machines.",
-    "copie"
-  ],
-  [
-    "Pantalla de Escritorio",
-    "Describing your computer monitor and setup.",
-    "écran"
-  ],
-  [
-    "Atajos de Teclado",
-    "Basic typing skills to save time at work.",
-    "clavier"
-  ],
-  [
-    "Acceso a Internet",
-    "Simple phrases to report connection issues.",
-    "internet"
-  ],
-  [
-    "Credenciales de Acceso",
-    "Setting up passwords and usernames securely.",
-    "connexion"
-  ],
-  [
-    "Acceso Denegado",
-    "Reporting IT blockages and login errors.",
-    "code"
-  ],
-  [
-    "Mesa de Oficina",
-    "Arranging physical desks for collaborative work.",
-    "table"
-  ],
-  [
-    "Servicio de Taxi",
-    "Ordering transportation for local business visits.",
-    "taxi"
-  ],
-  [
-    "Estación de Tren",
-    "Navigating public transit for your daily commute.",
-    "train"
-  ],
-  [
-    "Parada de Autobús",
-    "Understanding public bus routes near the office.",
-    "bus"
-  ],
-  [
-    "Reservación de Hotel",
-    "Simple vocabulary to confirm a room booking.",
-    "hôtel"
-  ],
-  [
-    "Control de Pasaportes",
-    "Basic travel logistics at international borders.",
-    "passeport"
-  ],
-  [
-    "Abordaje de Vuelo",
-    "Understanding airport gate announcements.",
-    "porte"
-  ],
-  [
-    "Llaves de la Oficina",
-    "Requesting access badges and physical keys.",
-    "clé"
-  ],
-  [
-    "Salas de Reunión",
-    "Booking empty spaces for team discussions.",
-    "salle"
-  ],
-  [
-    "Máquina de Café",
-    "How to make or order coffee in the lounge.",
-    "cafetière"
-  ],
-  [
-    "Organizador de Escritorio",
-    "Keeping your working area clean and tidy.",
-    "classeur"
-  ],
-  [
-    "Herramientas de Escritura",
-    "Basic office supplies for drafting diagrams.",
-    "crayon"
-  ],
-  [
-    "Notas en el Cuaderno",
-    "Jotting down quick ideas during a presentation.",
-    "cahier"
-  ],
-  [
-    "Notas Adhesivas",
-    "Color-coded reminders for short-term tasks.",
-    "autocollant"
-  ],
-  [
-    "Uso de la Calculadora",
-    "Basic math operations for daily cost estimation.",
-    "calculatrice"
-  ],
-  [
-    "Reloj de la Oficina",
-    "Checking elapsed time during business meetings.",
-    "pendule"
-  ],
-  [
-    "Gafete de Visitante",
-    "Registering external guests at the lobby.",
-    "visiteur"
-  ],
-  [
-    "Espacio de Estacionamiento",
-    "Asking for corporate parking permits and spots.",
-    "parking"
-  ],
-  [
-    "Piso del Ascensor",
-    "Navigating high-rise office buildings.",
-    "ascenseur"
-  ],
-  [
-    "Botiquín de Primeros Auxilios",
-    "Locating emergency medical supplies at work.",
-    "pansement"
-  ],
-  [
-    "Aire Acondicionado de la Oficina",
-    "Adjusting temperature and ventilation controls.",
-    "ventilateur"
-  ],
-  [
-    "Menú de Almuerzo",
-    "Reading cafeteria options and selecting dishes.",
-    "menu"
-  ],
-  [
-    "Recibo de Pago",
-    "Asking for simple bills and transaction vouchers.",
-    "reçu"
-  ],
-  [
-    "Compra en la Tienda",
-    "Buying urgent equipment for a presentation.",
-    "achat"
-  ],
-  [
-    "Lámpara de Escritorio",
-    "Ensuring proper lighting at your workspace.",
-    "lampe"
-  ],
-  [
-    "Eliminación de Basura",
-    "Simple recycling policies and waste bins.",
-    "poubelle"
-  ],
-  [
-    "Taza Corporativa",
-    "Branded items and simple office kitchen supplies.",
-    "tasse"
-  ],
-  [
-    "Cargador de Laptop",
-    "Reporting low battery and power issues.",
-    "chargeur"
-  ],
-  [
-    "Conector de Auriculares",
-    "Using audio gear for virtual conference calls.",
-    "casque"
-  ],
-  [
-    "Foto de Equipo",
-    "Building workplace memories and simple events.",
-    "photo"
-  ],
-  [
-    "Escritorio Limpio",
-    "Basic hygiene and maintenance of work areas.",
-    "propre"
-  ],
-  [
-    "Planta de Oficina",
-    "Describing green spaces that improve productivity.",
-    "plante"
-  ],
-  [
-    "Calendario de Pared",
-    "Tracking upcoming holidays and corporate events.",
-    "calendrier"
-  ],
-  [
-    "Artículo del Portafolios",
-    "Essential tools you bring to work every day.",
-    "sac"
-  ],
-  [
-    "Archivar Reportes",
-    "Organizing paper files in structured categories.",
-    "fichier"
-  ],
-  [
-    "Recepción de Bienvenida",
-    "Greeting visitors at the main reception area.",
-    "hall"
-  ],
-  [
-    "Barra de Snacks",
-    "Selecting quick food items between meetings.",
-    "fruit"
-  ],
-  [
-    "Hora de Cierre",
-    "Final procedures before locked doors at night.",
-    "verrou"
-  ]
+const TEMAS_A1_DATA: string[][] = [
+  ['Saludos Iniciales', 'Presentaciones básicas y protocolos de cortesía francesa.', 'bonjour'],
+  ['El Escritorio de Oficina', 'Objetos esenciales del espacio de trabajo.', 'bureau'],
+  ['Rutinas Diarias', 'Descripción de actividades cotidianas elementales.', 'routine'],
+  ['Decir la Hora', 'Programación de horarios simples en contexto profesional.', 'heure'],
+  ['Números y Precios', 'Cálculos básicos y manejo de dinero cotidiano.', 'euros'],
+  ['Direcciones Simples', 'Ubicarse y orientar a otros en la oficina.', 'gauche'],
+  ['Conocer al Equipo', 'Presentar la estructura básica del equipo.', 'collègue'],
+  ['Comida y Bebida', 'Ordenar alimentos en almuerzos de negocios rápidos.', 'café'],
+  ['Viajes de Negocios Básicos', 'Logística elemental de aeropuertos y transportes.', 'billet'],
+  ['Registro en el Hotel', 'Registrarse en recepción y gestionar la estadía.', 'chambre'],
+  ['Redactar Correos Simples', 'Saludos y firmas de correo ejecutivo básico.', 'courriel'],
+  ['Describir un Producto', 'Adjetivos simples para presentar productos.', 'bon'],
+  ['Suministros de Oficina', 'Inventario básico de papelería y material.', 'papier'],
+  ['Calendarios y Fechas', 'Días, meses y manejo de agenda básica.', 'lundi'],
+  ['Habilidades Telefónicas Básicas', 'Atender llamadas y tomar mensajes elementales.', 'téléphone'],
+  ['Revisión Semanal', 'Resumen rápido de tareas completadas.', 'fini'],
+  ['Fortalezas Personales', 'Presentación básica de habilidades propias.', 'ordonné'],
+  ['La Semana Laboral', 'Diferenciar días laborales y fin de semana.', 'semaine'],
+  ['Agendar Citas', 'Coordinar reuniones sencillas de calendario.', 'réunion'],
+  ['Presentación de Clientes', 'Introducir a un colega ante un cliente.', 'accueil'],
+  ['Hablar del Clima', 'Romper el hielo con pequeña charla elemental.', 'temps'],
+  ['Perfil de la Empresa', 'Describir el sector y tamaño básico de la empresa.', 'société'],
+  ['En el Banco', 'Transacciones y pagos básicos en francés.', 'banque'],
+  ['Conceptos de Emergencia', 'Reportar incidentes sencillos de oficina.', 'aide'],
+  ['Títulos de Puestos', 'Nombres básicos de puestos corporativos.', 'responsable'],
+  ['Socializar en el Trabajo', 'Conversar con compañeros en la cafetería.', 'famille'],
+  ['Soporte Técnico Básico', 'Describir problemas simples de computadora.', 'ordinateur'],
+  ['Distribución de la Oficina', 'Zonas comunes del espacio de trabajo.', 'plan'],
+  ['Pedidos Simples', 'Solicitudes directas a proveedores básicos.', 'commande'],
+  ['Viaje al Trabajo', 'Medios de transporte diarios habituales.', 'métro'],
+  ['Historia de la Empresa', 'Describir la fundación en pasado simple.', 'histoire'],
+  ['Acuerdos Básicos', 'Aceptar y rechazar propuestas sencillas.', 'accord'],
+  ['Reglas de la Oficina', 'Políticas elementales de conducta y vestimenta.', 'règles'],
+  ['Papelería Corporativa', 'Herramientas de escritura y materiales básicos.', 'stylo'],
+  ['Horario Diario', 'Organización de la jornada laboral básica.', 'agenda'],
+  ['Escribir una Nota', 'Dejar recordatorios breves a un colega.', 'note'],
+  ['Archivador', 'Organización física de carpetas y documentos.', 'dossier'],
+  ['Responder Llamadas', 'Tomar mensajes de voz en el teléfono fijo.', 'téléphoner'],
+  ['Enviar Correos', 'Estructura básica para mensajes de correo.', 'envoyer'],
+  ['Seguridad de Documentos', 'Almacenar archivos confidenciales básicos.', 'sûreté'],
+  ['Charla de Pasillo', 'Conversaciones casuales de pasillo.', 'couloir'],
+  ['Descanso Corto', 'Manejo de pausas en horas de alta productividad.', 'pause'],
+  ['Sincronización de Equipo', 'Reuniones breves para alinear tareas diarias.', 'synchro'],
+  ['Llegar al Trabajo', 'Describir el trayecto y hora de llegada.', 'arriver'],
+  ['Salir de la Oficina', 'Despedirse de colegas al fin del día.', 'partir'],
+  ['Iniciar un Proyecto', 'Primeros pasos para discutir nuevas tareas.', 'début'],
+  ['Terminar Tareas', 'Reportar que una asignación está completada.', 'finir'],
+  ['Reporte Semanal', 'Resumen simple de logros de la semana.', 'rapport'],
+  ['Hacer Copias', 'Usar la impresora y fotocopiadora de oficina.', 'copie'],
+  ['Pantalla de Escritorio', 'Describir la configuración del puesto de trabajo.', 'écran'],
+  ['Atajos de Teclado', 'Habilidades básicas de tipeo para ahorrar tiempo.', 'clavier'],
+  ['Acceso a Internet', 'Frases para reportar problemas de conexión.', 'internet'],
+  ['Credenciales de Acceso', 'Configurar contraseñas y usuarios básicos.', 'connexion'],
+  ['Salas de Reunión', 'Reservar espacios para discusiones de equipo.', 'salle'],
+  ['Máquina de Café', 'Preparar o pedir café en el área de descanso.', 'cafetière'],
+  ['Notas en el Cuaderno', 'Anotar ideas rápidas durante una presentación.', 'cahier'],
+  ['Uso de la Calculadora', 'Operaciones matemáticas básicas de costeo.', 'calculatrice'],
+  ['Gafete de Visitante', 'Registrar invitados externos en recepción.', 'visiteur'],
+  ['Espacio de Estacionamiento', 'Solicitar permisos de estacionamiento corporativo.', 'parking'],
+  ['Piso del Ascensor', 'Navegar edificios de oficinas de varios pisos.', 'ascenseur'],
+  ['Recibo de Pago', 'Pedir facturas y comprobantes de transacción.', 'reçu'],
+  ['Compra en la Tienda', 'Adquirir material urgente para una presentación.', 'achat'],
+  ['Eliminación de Basura', 'Políticas básicas de reciclaje en la oficina.', 'poubelle'],
+  ['Cargador de Laptop', 'Reportar problemas de batería y alimentación.', 'chargeur'],
+  ['Foto de Equipo', 'Crear recuerdos de trabajo y eventos sencillos.', 'photo'],
+  ['Planta de Oficina', 'Describir espacios verdes que mejoran la productividad.', 'plante'],
+  ['Calendario de Pared', 'Registrar días festivos y eventos corporativos.', 'calendrier'],
+  ['Archivar Reportes', 'Organizar archivos en categorías estructuradas.', 'fichier'],
+  ['Recepción de Bienvenida', 'Recibir visitantes en el área principal.', 'hall'],
+  ['Hora de Cierre', 'Procedimientos finales antes de cerrar la oficina.', 'verrou'],
 ];
 
-const TEMAS_B_DATA: string[][] = [
-  [
-    "Liderar una Sincronización de Equipo",
-    "Cómo estructurar juntas operativas semanales.",
-    "animateur"
-  ],
-  [
-    "Habilidades de Negociación Básicas",
-    "Conceptos básicos para cerrar acuerdos.",
-    "offre"
-  ],
-  [
-    "Redacción de Correos Formales",
-    "Uso de conectores lógicos profesionales.",
-    "formel"
-  ],
-  [
-    "Programación Estratégica",
-    "Negociar horarios de juntas globales.",
-    "fuseau"
-  ],
-  [
-    "Hitos del Proyecto",
-    "Definición y seguimiento de entregables.",
-    "jalon"
-  ],
-  [
-    "Dar Retroalimentación",
-    "Metodologías de feedback constructivo.",
-    "retour"
-  ],
-  [
-    "Describir Tendencias de Datos",
-    "Comparación de gráficos y estadísticas.",
-    "hausse"
-  ],
-  [
-    "Manejar Objeciones del Cliente",
-    "Fórmulas de diplomacia ejecutiva.",
-    "client"
-  ],
-  [
-    "Entrevistas de Trabajo",
-    "Responder preguntas de comportamiento laboral.",
-    "expérience"
-  ],
-  [
-    "Logística del Viaje de Negocios",
-    "Coordinación avanzada de itinerarios.",
-    "vol"
-  ],
-  [
-    "Estrategia de Marketing",
-    "Estudio de las 4Ps del marketing.",
-    "stratégie"
-  ],
-  [
-    "Planificación del Presupuesto",
-    "Estructuración de presupuestos anuales.",
-    "budget"
-  ],
-  [
-    "Dominio del Soporte Técnico",
-    "Solución guiada de incidentes de IT.",
-    "redémarrage"
-  ],
-  [
-    "Valores Corporativos",
-    "Definición de visión, misión y ética corporativa.",
-    "intégrité"
-  ],
-  [
-    "Etiqueta Telefónica",
-    "Manejar transferencias y llamadas complejas.",
-    "transfert"
-  ],
-  [
-    "Disculparse Profesionalmente",
-    "Redacción de disculpas formales ante fallos.",
-    "excuser"
-  ],
-  [
-    "Resolución de Conflictos",
-    "Herramientas de mediación y empatía corporativa.",
-    "conflit"
-  ],
-  [
-    "Subcontratación Estratégica",
-    "Evaluación de proveedores externos.",
-    "fournisseur"
-  ],
-  [
-    "Lanzamiento de Producto",
-    "Estrategia Go-to-Market.",
-    "lancement"
-  ],
-  [
-    "Conceptos Básicos de la Cadena de Suministro",
-    "Logística y flujo de mercancías.",
-    "inventaire"
-  ],
-  [
-    "Satisfacción del Cliente",
-    "Métricas NPS y análisis de reseñas.",
-    "satisfaction"
-  ],
-  [
-    "Gestión del Tiempo",
-    "Priorización de tareas urgentes vs importantes.",
-    "prioriser"
-  ],
-  [
-    "Evaluación Comparativa Estratégica",
-    "Comparar rendimientos contra competidores.",
-    "comparatif"
-  ],
-  [
-    "Negociaciones de Contrato",
-    "Revisión de términos clave en contratos.",
-    "contrat"
-  ],
-  [
-    "Evaluación de Riesgos",
-    "Identificar amenazas de operación básicas.",
-    "risque"
-  ],
-  [
-    "Acciones y Participaciones",
-    "Introducción al financiamiento corporativo.",
-    "actions"
-  ],
-  [
-    "Reuniones Virtuales",
-    "Comandos verbales para Zoom/Teams.",
-    "sourdine"
-  ],
-  [
-    "Red de Contactos Profesionales",
-    "Discursos de elevador y conexiones en LinkedIn.",
-    "réseautage"
-  ],
-  [
-    "Investigación de Mercado",
-    "Análisis DAFO/SWOT en inglés.",
-    "recherche"
-  ],
-  [
-    "Adquisición de Talento",
-    "Políticas de reclutamiento y onboarding.",
-    "embauche"
-  ],
-  [
-    "Dominio del Discurso de Ventas",
-    "Técnicas de venta directa y persuasión.",
-    "argumentaire"
-  ],
-  [
-    "Ergonomía en la Oficina",
-    "Salud ocupacional y productividad.",
-    "posture"
-  ],
-  [
-    "Hito de Revisión B",
-    "Evaluación de competencias gerenciales del Nivel B.",
-    "progrès"
-  ],
-  [
-    "Sincronización de Hitos del Proyecto",
-    "Definición y seguimiento de entregables específicos.",
-    "horaires"
-  ],
-  [
-    "Retroalimentación Constructiva",
-    "Metodologías de feedback para el desarrollo del equipo.",
-    "constructif"
-  ],
-  [
-    "Interpretación de Datos",
-    "Análisis de gráficos de barras y tendencias.",
-    "tendances"
-  ],
-  [
-    "Objeciones de Clientes",
-    "Manejo de objeciones comerciales con tacto profesional.",
-    "objections"
-  ],
-  [
-    "Programación Ejecutiva",
-    "Negociación de agendas y zonas horarias en juntas.",
-    "planification"
-  ],
-  [
-    "Tareas Pendientes",
-    "Asignación clara de tareas pendientes tras una reunión.",
-    "actionnable"
-  ],
-  [
-    "Actualización de Estado",
-    "Presentar avances en el desarrollo de un proyecto.",
-    "actualisation"
-  ],
-  [
-    "Demostración de Producto",
-    "Presentar las características y beneficios de un software.",
-    "démonstration"
-  ],
-  [
-    "Atención al Cliente",
-    "Políticas de servicio al cliente y resolución de quejas.",
-    "support"
-  ],
-  [
-    "Acuerdo de Nivel de Servicio",
-    "Introducción a los contratos de nivel de servicio SLA.",
-    "normes"
-  ],
-  [
-    "Auditoría de Inventario",
-    "Control periódico de stock y materias primas.",
-    "stock"
-  ],
-  [
-    "Análisis de Mercado",
-    "Estudiar la competencia y demanda de un producto.",
-    "marché"
-  ],
-  [
-    "Estrategia de Marca",
-    "Desarrollo de identidad y posicionamiento de marca.",
-    "image"
-  ],
-  [
-    "Canal de Ventas",
-    "Etapas de conversión de leads en clientes reales.",
-    "processus"
-  ],
-  [
-    "Generación de Prospectos",
-    "Estrategias para atraer clientes potenciales.",
-    "prospect"
-  ],
-  [
-    "Eficiencia Operativa",
-    "Reducción de cuellos de botella en la producción.",
-    "efficacité"
-  ],
-  [
-    "Planificación de Capacidad",
-    "Estimación de recursos y mano de obra necesaria.",
-    "capacité"
-  ],
-  [
-    "Ética Corporativa",
-    "Políticas internas anticorrupción y de transparencia.",
-    "éthique"
-  ],
-  [
-    "Oficina Sostenible",
-    "Iniciativas para reducir la huella de carbono laboral.",
-    "écologique"
-  ],
-  [
-    "Protocolos de Seguridad",
-    "Normas de seguridad ocupacional en la planta.",
-    "sécurité"
-  ],
-  [
-    "Manejo del Estrés",
-    "Técnicas de bienestar corporativo y productividad.",
-    "bien-être"
-  ],
-  [
-    "Lluvia de Ideas Creativa",
-    "Generación colectiva de ideas innovadoras.",
-    "idéation"
-  ],
-  [
-    "Delegación de Tareas",
-    "Cómo asignar responsabilidades según habilidades.",
-    "déléguer"
-  ],
-  [
-    "Alineación de Objetivos",
-    "Sincronizar metas individuales con las corporativas.",
-    "alignement"
-  ],
-  [
-    "Presupuesto del Proyecto",
-    "Estructurar costos y gastos de una campaña.",
-    "coûts"
-  ],
-  [
-    "Asignación de Costos",
-    "Distribución de gastos entre diferentes áreas.",
-    "dépenses"
-  ],
-  [
-    "Fuentes de Ingresos",
-    "Identificar las fuentes principales de ingresos.",
-    "revenus"
-  ],
-  [
-    "Modelo de Precios",
-    "Estrategias de precios según la demanda del mercado.",
-    "tarification"
-  ],
-  [
-    "Cronograma de Lanzamiento",
-    "Cronograma estratégico para un nuevo producto.",
-    "délais"
-  ],
-  [
-    "Riesgos de Subcontratación",
-    "Ventajas y riesgos de contratar servicios externos.",
-    "prestataire"
-  ],
-  [
-    "Rotación de Personal",
-    "Análisis de rotación de personal y retención.",
-    "rotation"
-  ],
-  [
-    "Guía de Onboarding",
-    "Integración efectiva de nuevos talentos al equipo.",
-    "intégration"
-  ],
-  [
-    "Matriz de Habilidades",
-    "Evaluación de competencias dentro de un departamento.",
-    "compétences"
-  ],
-  [
-    "Cultura Corporativa",
-    "Valores y hábitos de convivencia en la organización.",
-    "culture"
-  ],
-  [
-    "Programa de Mentoría",
-    "Guía y desarrollo de profesionales junior.",
-    "mentor"
-  ],
-  [
-    "Mediación de Conflictos",
-    "Resolución diplomática de tensiones internas.",
-    "médiation"
-  ],
-  [
-    "Marco Metodológico Ágil",
-    "Introducción a la metodología Scrum en proyectos.",
-    "mêlée"
-  ],
-  [
-    "Planificación del Sprint",
-    "Juntas de planeación de tareas a corto plazo.",
-    "sprint"
-  ],
-  [
-    "Reunión Diaria Corta",
-    "Reuniones cortas diarias para actualizar avances.",
-    "point"
-  ],
-  [
-    "Evaluación del Desempeño",
-    "Evaluación de KPIs y cumplimiento de objetivos.",
-    "bilan"
-  ],
-  [
-    "Plan de Carrera",
-    "Estructuración de planes de crecimiento interno.",
-    "promotion"
-  ],
-  [
-    "Colaboración Remota",
-    "Herramientas y etiqueta para el trabajo en casa.",
-    "télétravail"
-  ],
-  [
-    "Herramientas Virtuales",
-    "Uso eficiente de plataformas de videoconferencia.",
-    "conférence"
-  ],
-  [
-    "Etiqueta de Correo Electrónico",
-    "Reglas no escritas de la correspondencia formal.",
-    "étiquette"
-  ],
-  [
-    "Conceptos Básicos de Pitch Deck",
-    "Estructura de diapositivas para convencer inversores.",
-    "diaporama"
-  ],
-  [
-    "Discurso de Elevador",
-    "Presentación de tu proyecto en menos de un minuto.",
-    "concis"
-  ],
-  [
-    "Eventos de Networking",
-    "Cómo romper el hielo y construir contactos valiosos.",
-    "contacts"
-  ],
-  [
-    "Tarjetas de Presentación",
-    "Intercambio de datos e información de contacto.",
-    "carte"
-  ],
-  [
-    "Marca Personal en LinkedIn",
-    "Optimización del perfil profesional en redes.",
-    "profil"
-  ],
-  [
-    "Análisis de Encuestas",
-    "Diseño e interpretación de encuestas de satisfacción.",
-    "enquête"
-  ],
-  [
-    "Métricas del NPS",
-    "Medición de lealtad de clientes mediante Net Promoter Score.",
-    "promoteur"
-  ],
-  [
-    "Perfil del Cliente Ideal",
-    "Perfil representativo del cliente ideal.",
-    "personnage"
-  ],
-  [
-    "Experiencia del Usuario",
-    "Introducción al diseño centrado en el usuario.",
-    "expérience-utilisateur"
-  ],
-  [
-    "Control de Calidad",
-    "Normas básicas de inspección y estándares ISO.",
-    "qualité"
-  ],
-  [
-    "Mitigación de Riesgos",
-    "Estrategias sencillas para evitar pérdidas en proyectos.",
-    "atténuer"
-  ],
-  [
-    "Respaldo de Datos",
-    "Políticas de resguardo de información crítica.",
-    "sauvegarde"
-  ],
-  [
-    "Gestión de Tickets de TI",
-    "Reportar y dar seguimiento a fallas del sistema.",
-    "ticket"
-  ],
-  [
-    "Actualización de Software",
-    "Programación de mantenimiento informático.",
-    "correctif"
-  ],
-  [
-    "Migración de Servidores",
-    "Traslado seguro de bases de datos locales.",
-    "base"
-  ],
-  [
-    "Ergonomía de Oficina Profesional",
-    "Diseño del espacio para evitar lesiones físicas.",
-    "ergonomie"
-  ],
-  [
-    "Gestión de Instalaciones",
-    "Mantenimiento y servicios del edificio de oficinas.",
-    "maintenance"
-  ],
-  [
-    "Seguridad en el Lugar de Trabajo",
-    "Prevención de riesgos laborales en el día a día.",
-    "prévention"
-  ],
-  [
-    "Gastos de Viaje",
-    "Comprobación y reembolso de viáticos de viaje.",
-    "remboursement"
-  ],
-  [
-    "Planificación de Itinerarios",
-    "Coordinación detallada de vuelos y hospedaje.",
-    "itinéraire"
-  ],
-  [
-    "Reservación de Conferencias",
-    "Reservación de stands en eventos internacionales.",
-    "stand"
-  ],
-  [
-    "Integración del Equipo",
-    "Planificación de dinámicas y eventos para fortalecer al equipo.",
-    "cohésion"
-  ],
-  [
-    "Hito de Revisión B2",
-    "Evaluación de competencias operativas y de gestión.",
-    "évaluation"
-  ]
+const TEMAS_A2_DATA: string[][] = [
+  ['Descripción de Funciones', 'Explicar las responsabilidades del puesto de trabajo.', 'poste'],
+  ['Llamada de Confirmación', 'Confirmar citas y reservaciones por teléfono.', 'confirmation'],
+  ['Solicitar Información', 'Pedir datos y aclaraciones de forma elemental.', 'information'],
+  ['Comparar Productos', 'Usar adjetivos comparativos para evaluar opciones.', 'comparaison'],
+  ['Hacer una Queja Simple', 'Expresar insatisfacción básica de forma educada.', 'plainte'],
+  ['Transporte Público Avanzado', 'Usar el metro, autobús y tren en ciudades francófonas.', 'transport'],
+  ['Reservación de Restaurante', 'Reservar mesa y gestionar pedidos de negocios.', 'restaurant'],
+  ['Pagar la Cuenta', 'Dividir o pagar la cuenta en un almuerzo de trabajo.', 'addition'],
+  ['Vocabulario de Cifras', 'Leer y escribir cifras grandes en contexto fiscal.', 'chiffres'],
+  ['Describir Problemas Técnicos', 'Explicar fallos de equipo al soporte técnico.', 'panne'],
+  ['Confirmar Pedidos', 'Verificar órdenes de compra y existencias.', 'vérification'],
+  ['Enviar un Fax o PDF', 'Procedimientos básicos de envío de documentos.', 'document'],
+  ['Revisión de Contrato Simple', 'Identificar términos clave en contratos elementales.', 'termes'],
+  ['Instrucciones de Trabajo', 'Dar y seguir instrucciones operativas paso a paso.', 'instructions'],
+  ['Reportar una Ausencia', 'Notificar al supervisor una ausencia justificada.', 'absence'],
+  ['Solicitar un Permiso', 'Pedir días libres o permisos de forma adecuada.', 'permission'],
+  ['Hablar de Experiencia Laboral', 'Describir empleos anteriores en entrevistas básicas.', 'expérience'],
+  ['Entender una Nómina', 'Identificar componentes básicos de un recibo de sueldo.', 'salaire'],
+  ['Vocabulario de RR.HH.', 'Términos esenciales del área de recursos humanos.', 'ressources'],
+  ['La Reunión de Equipo', 'Participar activamente en juntas de equipo.', 'réunion'],
+  ['Aprobar o Rechazar Ideas', 'Expresar acuerdo o desacuerdo de forma neutra.', 'avis'],
+  ['Hablar de Metas', 'Describir objetivos personales y profesionales.', 'objectifs'],
+  ['Dar Instrucciones a un Proveedor', 'Comunicar especificaciones a un proveedor externo.', 'fournisseur'],
+  ['Describir Resultados', 'Presentar resultados de ventas o producción básicos.', 'résultats'],
+  ['Vacaciones y Días Festivos', 'Planear el calendario de vacaciones del equipo.', 'vacances'],
+  ['Correo de Seguimiento', 'Hacer seguimiento formal a un acuerdo previo.', 'suivi'],
+  ['Hablar del Progreso', 'Actualizar el estado de avance de una tarea.', 'avancement'],
+  ['Solicitar Retroalimentación', 'Pedir comentarios constructivos sobre el trabajo.', 'retour'],
+  ['Comparar Precios', 'Evaluar cotizaciones de diferentes proveedores.', 'prix'],
+  ['Servicios Bancarios Básicos', 'Abrir cuentas y gestionar operaciones bancarias.', 'compte'],
+  ['Pagos en Línea', 'Realizar transacciones digitales de forma segura.', 'paiement'],
+  ['Solicitar Factura Fiscal', 'Pedir comprobantes fiscales a proveedores.', 'facture'],
+  ['Vocabulario de Seguros', 'Términos básicos de seguros corporativos.', 'assurance'],
+  ['Servicio al Cliente Básico', 'Atender reclamaciones elementales de clientes.', 'réclamation'],
+  ['El Organigrama', 'Explicar la jerarquía y estructura departamental.', 'organigramme'],
+  ['Reunión de Inducción', 'Vocabulario para orientar a un nuevo empleado.', 'induction'],
+  ['Formulario de Solicitud', 'Completar formularios de trabajo básicos.', 'formulaire'],
+  ['El Plan de Trabajo', 'Describir el plan semanal o mensual de actividades.', 'planification'],
+  ['Uso de Videoconferencia', 'Comandos básicos para reuniones virtuales.', 'visioconférence'],
+  ['Presentar Datos Simples', 'Mostrar cifras básicas en una tabla o gráfico.', 'données'],
+  ['Hablar de Tendencias', 'Describir tendencias simples del mercado.', 'tendance'],
+  ['Vocabulario de Logística', 'Términos básicos de envío y recepción.', 'livraison'],
+  ['Describir el Proceso de Venta', 'Etapas elementales del ciclo de ventas.', 'vente'],
+  ['Hablar de Beneficios', 'Describir las prestaciones del empleo.', 'avantages'],
+  ['Vocabulario de Capacitación', 'Términos usados en cursos y entrenamientos.', 'formation'],
+  ['El Informe de Gastos', 'Registrar y reportar gastos de trabajo.', 'dépenses'],
+  ['Carta de Presentación', 'Redactar una carta de presentación básica.', 'candidature'],
+  ['CV y Perfil Profesional', 'Describir el perfil profesional en francés.', 'curriculum'],
+  ['Anuncio de Empleo', 'Interpretar ofertas de trabajo en francés.', 'offre-emploi'],
+  ['Vocabulario de Seguridad', 'Normas de seguridad e higiene en el trabajo.', 'sécurité'],
 ];
 
-const TEMAS_C_DATA: string[][] = [
-  [
-    "Análisis del Mercado Global",
-    "Evaluación macroeconómica y geopolítica de mercados.",
-    "macroéconomique"
-  ],
-  [
-    "Gestión de Crisis",
-    "Comunicación ante desastres de marca y relaciones públicas.",
-    "crise"
-  ],
-  [
-    "Reporte de Resultados Financieros",
-    "EBITDA, balances generales y reportes de dividendos.",
-    "ebitda"
-  ],
-  [
-    "Fusiones y Adquisiciones",
-    "Fusiones de corporativos y debida diligencia.",
-    "fusion"
-  ],
-  [
-    "Dominio de la Oratoria",
-    "Tácticas de retórica y persuasión ante audiencias masivas.",
-    "rhétorique"
-  ],
-  [
-    "Negociación con Matices",
-    "Negociar concesiones difíciles bajo presión.",
-    "concession"
-  ],
-  [
-    "Redacción de Contratos Legales",
-    "Comprensión fina de cláusulas penales e indemnizaciones.",
-    "indemnité"
-  ],
-  [
-    "ESG y Sostenibilidad Corporativa",
-    "Gobernanza corporativa, huella de carbono y RSE.",
-    "durabilité"
-  ],
-  [
-    "Estrategia y Pivote Corporativo",
-    "Reestructuración estratégica e innovación abierta.",
-    "pivot"
-  ],
-  [
-    "OPI y Estrategias de Salida",
-    "Salir a bolsa o estructurar adquisiciones hostiles.",
-    "introduction"
-  ],
-  [
-    "Filosofía de Liderazgo",
-    "Modelos de liderazgo exponencial y mentoría.",
-    "leadership"
-  ],
-  [
-    "Gestión del Cambio",
-    "Gestionar transiciones organizacionales globales.",
-    "transition"
-  ],
-  [
-    "Relaciones con Inversores",
-    "Cómo dar discursos convincentes ante accionistas VIP.",
-    "actionnaires"
-  ],
-  [
-    "Gobernanza Corporativa",
-    "Políticas anticorrupción y cumplimiento normativo.",
-    "conformité"
-  ],
-  [
-    "Planificación de la Sucesión",
-    "Elegir líderes sucesores en mesas directivas.",
-    "successeur"
-  ],
-  [
-    "Disrupción Tecnológica e IA",
-    "Impacto de IA generativa en la cadena de valor.",
-    "technologie"
-  ],
-  [
-    "Fintech y Blockchain",
-    "Descentralización financiera y criptoactivos en tesorería.",
-    "fintech"
-  ],
-  [
-    "Innovaciones Biotecnológicas",
-    "Desarrollo farmacéutico y patentes científicas.",
-    "brevets"
-  ],
-  [
-    "Transición a Energías Limpias",
-    "Migrar operaciones corporativas a fuentes limpias.",
-    "renouvelable"
-  ],
-  [
-    "Resiliencia de la Cadena de Suministro",
-    "Asegurar la cadena logística contra eventos de fuerza mayor.",
-    "résilience"
-  ],
-  [
-    "Gestión de Marcas de Lujo",
-    "Mercadotecnia de alta gama y valor percibido.",
-    "luxe"
-  ],
-  [
-    "Inversión en Bienes Raíces",
-    "Fideicomisos y portafolios de bienes raíces.",
-    "foncière"
-  ],
-  [
-    "Presentaciones para Capital de Riesgo",
-    "Levantar rondas de inversión Serie A/B.",
-    "capital-risque"
-  ],
-  [
-    "Protocolos de Ciberseguridad",
-    "Políticas corporativas contra ataques de ransomware.",
-    "rançongiciel"
-  ],
-  [
-    "Alianzas Estratégicas",
-    "Crear joint ventures estratégicos.",
-    "alliance"
-  ],
-  [
-    "Propiedad Intelectual",
-    "Litigios marcarios y registros de derechos de autor.",
-    "marque"
-  ],
-  [
-    "Redacción Fantasma Ejecutiva",
-    "Redactar discursos para directores ejecutivos.",
-    "rédaction"
-  ],
-  [
-    "Comunicación Diplomática",
-    "Mitigar hostilidades y manejar preguntas incómodas.",
-    "diplomatique"
-  ],
-  [
-    "El Poder del Silencio",
-    "Uso estratégico de pausas en alta negociación.",
-    "silence"
-  ],
-  [
-    "Estrategia de Diversidad e Inclusión",
-    "Políticas corporativas de equidad y pertenencia.",
-    "inclusion"
-  ],
-  [
-    "Escalamiento del Comercio Electrónico",
-    "Logística transfronteriza y marketing automatizado.",
-    "commerce"
-  ],
-  [
-    "Economía del Comportamiento",
-    "Cómo influyen los sesgos cognitivos en el consumo.",
-    "comportemental"
-  ],
-  [
-    "Proyecto Final del Hito C",
-    "Evaluación de competencias directivas globales.",
-    "synthèse"
-  ],
-  [
-    "Reestructuración Corporativa",
-    "Rediseño organizacional para mejorar rentabilidad.",
-    "restructuration"
-  ],
-  [
-    "Cumplimiento Regulatorio",
-    "Normas estrictas de cumplimiento legal y ambiental.",
-    "réglementaire"
-  ],
-  [
-    "Regulaciones Antimonopolio",
-    "Leyes de competencia y prevención de monopolios.",
-    "antimonopole"
-  ],
-  [
-    "Gestión de Litigios",
-    "Gestión de disputas legales y demandas marcarias.",
-    "litige"
-  ],
-  [
-    "Protección de Patentes",
-    "Registro de patentes y defensa de propiedad intelectual.",
-    "brevet"
-  ],
-  [
-    "Disputas de Marcas Registradas",
-    "Resolución de conflictos de marcas registradas.",
-    "différends"
-  ],
-  [
-    "Junta Directiva",
-    "Dinámica y responsabilidades de la junta directiva.",
-    "conseil"
-  ],
-  [
-    "Activismo de los Accionistas",
-    "Relación con accionistas que presionan por cambios.",
-    "actionnaire"
-  ],
-  [
-    "Compensación Ejecutiva",
-    "Estructuración de bonos y opciones sobre acciones.",
-    "rémunération"
-  ],
-  [
-    "Roadshow de OPI",
-    "Presentación ante inversionistas previo a salir a bolsa.",
-    "tournée"
-  ],
-  [
-    "Estrategia de Salida",
-    "Vías de salida: adquisiciones, fusiones o liquidación.",
-    "sortie"
-  ],
-  [
-    "Adquisición Hostil",
-    "Estrategias de defensa ante compras hostiles de acciones.",
-    "rachat"
-  ],
-  [
-    "Rondas de Capital de Riesgo",
-    "Levantamiento de capital de riesgo Serie A y B.",
-    "financement"
-  ],
-  [
-    "Capital Privado",
-    "Inversión institucional en empresas de alto potencial.",
-    "capitaux"
-  ],
-  [
-    "Auditoría de Debida Diligencia",
-    "Auditoría exhaustiva previa a la adquisición de activos.",
-    "diligence"
-  ],
-  [
-    "Sinergias de Fusión",
-    "Estimación de ahorros operativos tras una fusión.",
-    "synergies"
-  ],
-  [
-    "Creación de Alianzas Estratégicas",
-    "Acuerdos de cooperación conjunta entre corporativos.",
-    "coopération"
-  ],
-  [
-    "Creación de Coempresas",
-    "Creación de una nueva entidad compartida.",
-    "coentreprise"
-  ],
-  [
-    "Fusiones y Adquisiciones Transfronterizas",
-    "Fusiones transfronterizas y barreras regulatorias.",
-    "transfrontalier"
-  ],
-  [
-    "Huella de Carbono",
-    "Estrategias para alcanzar la neutralidad de carbono.",
-    "décarbonation"
-  ],
-  [
-    "Responsabilidad Social",
-    "Programas de impacto social y filantropía.",
-    "philanthropie"
-  ],
-  [
-    "Comunicación de Crisis",
-    "Estrategias de relaciones públicas ante escándalos de marca.",
-    "relations-publiques"
-  ],
-  [
-    "Gestión de la Reputación",
-    "Medición y protección del valor de la marca.",
-    "réputation"
-  ],
-  [
-    "Entrenamiento de Medios",
-    "Preparación de directivos para interviews de prensa.",
-    "entretien"
-  ],
-  [
-    "Retórica de la Oratoria Pública",
-    "Tácticas avanzadas de oratoria y persuasión de masas.",
-    "oratoire"
-  ],
-  [
-    "Discurso Magistral",
-    "Discursos magistrales en convenciones globales.",
-    "discours"
-  ],
-  [
-    "Deber Fiduciario",
-    "Responsabilidad legal y financiera ante los inversores.",
-    "fiduciaire"
-  ],
-  [
-    "Asignación de Capital",
-    "Decidir la reinversión de utilidades en la empresa.",
-    "allocation"
-  ],
-  [
-    "Gestión de Tesorería",
-    "Control de liquidez, divisas y flujo de caja global.",
-    "trésorerie"
-  ],
-  [
-    "Estrategias de Cobertura",
-    "Uso de derivados para protegerse contra fluctuaciones.",
-    "couverture"
-  ],
-  [
-    "Valoración de Activos",
-    "Modelos matemáticos para calcular el precio de activos.",
-    "valorisation"
-  ],
-  [
-    "Política de Dividendos",
-    "Decidir el reparto de utilidades a los accionistas.",
-    "dividende"
-  ],
-  [
-    "Reestructuración de Deuda",
-    "Negociar nuevos plazos de pago con bancos acreedores.",
-    "dette"
-  ],
-  [
-    "Cadena de Suministro Global",
-    "Asegurar el abasto internacional contra contingencias.",
-    "chaîne"
-  ],
-  [
-    "Resiliencia Logística",
-    "Resiliencia ante cuellos de botella en puertos globales.",
-    "resilience"
-  ],
-  [
-    "Estrategia de Subcontratación",
-    "Decisión estratégica de fabricar o externalizar.",
-    "délocalisation"
-  ],
-  [
-    "Estrategia Geopolítica",
-    "Adaptar operaciones ante guerras comerciales y aranceles.",
-    "géopolitique"
-  ],
-  [
-    "Disrupción del Mercado",
-    "Innovaciones tecnológicas que cambian las reglas del juego.",
-    "disruption"
-  ],
-  [
-    "Integración de IA",
-    "Automatización y adopción de IA generativa en la empresa.",
-    "automatisation"
-  ],
-  [
-    "Leyes de Privacidad de Datos",
-    "Cumplimiento de regulaciones estrictas como GDPR.",
-    "confidentialité"
-  ],
-  [
-    "Capital Intelectual",
-    "Retener talento clave tras reestructuraciones.",
-    "intellectuel"
-  ],
-  [
-    "Alineación Cultural",
-    "Fusionar culturas corporativas de distintos países.",
-    "alignement-culturel"
-  ],
-  [
-    "Valoración de Marca",
-    "Estimar el valor monetario intangible de una marca.",
-    "valeur"
-  ],
-  [
-    "Marketing de Alta Gama",
-    "Estrategias de posicionamiento en mercados de lujo.",
-    "haut-de-gamme"
-  ],
-  [
-    "Escalamiento de Franquicias",
-    "Modelos de expansión a través de franquicias globales.",
-    "franchise"
-  ],
-  [
-    "Logística Transfronteriza",
-    "Aduanas, aranceles y envíos transfronterizos.",
-    "tarifs"
-  ],
-  [
-    "Heurística del Comportamiento",
-    "Cómo influyen los sesgos cognitivos en el consumo.",
-    "heuristique"
-  ],
-  [
-    "Inelasticidad de Precios",
-    "Estudiar la sensibilidad del precio en el cliente.",
-    "élasticité"
-  ],
-  [
-    "Valor del Ciclo de Vida del Cliente",
-    "Optimización del valor a largo plazo de los clientes.",
-    "valeur-client"
-  ],
-  [
-    "Costo de Adquisición",
-    "Métricas del costo de adquisición de clientes (CAC).",
-    "acquisition"
-  ],
-  [
-    "Inteligencia de Negocios",
-    "Uso estratégico de Big Data para toma de decisiones.",
-    "métriques"
-  ],
-  [
-    "Transformación Digital",
-    "Migrar sistemas tradicionales a arquitecturas cloud.",
-    "nuage"
-  ],
-  [
-    "Creación de Venture Studio",
-    "Creación de incubadoras internas de startups corporativas.",
-    "incubateur"
-  ],
-  [
-    "Optimización del Valor para el Accionista",
-    "Maximización de la rentabilidad a largo plazo para inversores.",
-    "profitabilité"
-  ],
-  [
-    "Estrategia de Reestructuración Corporativa",
-    "Planificación de escisiones y reorganización corporativa.",
-    "scission"
-  ],
-  [
-    "Riesgo de Expansión Global",
-    "Evaluación de riesgos al ingresar a nuevos mercados soberanos.",
-    "souverain"
-  ],
-  [
-    "Arbitraje Regulatorio",
-    "Aprovechamiento estratégico de diferencias regulatorias globales.",
-    "arbitrage"
-  ],
-  [
-    "Planificación de la Sucesión Estratégica",
-    "Planificación sistemática para la transición del liderazgo ejecutivo.",
-    "nomination"
-  ],
-  [
-    "Financiamiento de Deuda Sostenible",
-    "Emisión de bonos verdes y financiamiento de proyectos ecológicos.",
-    "obligations"
-  ],
-  [
-    "Mediación de Alto Riesgo",
-    "Mediación diplomática y arbitraje en disputas comerciales.",
-    "conciliation"
-  ],
-  [
-    "Salidas de Capital de Riesgo",
-    "Estrategias de salida y liquidación para inversiones de capital.",
-    "liquidation"
-  ],
-  [
-    "Arquitectura de Riesgo Empresarial",
-    "Diseño de marcos integrales de gestión de riesgos corporativos.",
-    "entreprise"
-  ],
-  [
-    "Integración de F&A Multicultural",
-    "Integración posterior a la fusión de equipos globales diversos.",
-    "multiculturel"
-  ],
-  [
-    "Acuerdos de Transferencia de Tecnología",
-    "Acuerdos de licenciamiento y transferencia de tecnología patentada.",
-    "licenciement"
-  ],
-  [
-    "Asociaciones Público-Privadas",
-    "Estructuración de contratos de concesión con entidades gubernamentales.",
-    "partenariat"
-  ],
-  [
-    "Supervisión de Gobernanza Ética",
-    "Supervisión de comités de auditoría y ética en la junta directiva.",
-    "surveillance"
-  ],
-  [
-    "Proyecto Final del Hito Ejecutivo",
-    "Evaluación de competencias directivas de alta gerencia.",
-    "dirigeant"
-  ]
+const TEMAS_B1_DATA: string[][] = [
+  ['Liderar una Sincronización de Equipo', 'Estructurar juntas operativas semanales eficaces.', 'animateur'],
+  ['Habilidades de Negociación Básicas', 'Conceptos fundamentales para cerrar acuerdos.', 'offre'],
+  ['Redacción de Correos Formales', 'Uso de conectores lógicos profesionales.', 'formel'],
+  ['Programación Estratégica', 'Negociar horarios de juntas a diferentes zonas horarias.', 'fuseau'],
+  ['Hitos del Proyecto', 'Definición y seguimiento de entregables.', 'jalon'],
+  ['Dar Retroalimentación Constructiva', 'Metodologías de feedback efectivo.', 'retour'],
+  ['Describir Tendencias de Datos', 'Comparar gráficos y estadísticas de negocio.', 'hausse'],
+  ['Manejar Objeciones del Cliente', 'Fórmulas de diplomacia ejecutiva.', 'client'],
+  ['Entrevistas de Trabajo Avanzadas', 'Responder preguntas de comportamiento laboral.', 'expérience'],
+  ['Logística del Viaje de Negocios', 'Coordinación avanzada de itinerarios corporativos.', 'vol'],
+  ['Estrategia de Marketing', 'Estudio de las 4Ps y segmentación de mercado.', 'stratégie'],
+  ['Planificación del Presupuesto', 'Estructuración de presupuestos departamentales.', 'budget'],
+  ['Dominio del Soporte Técnico', 'Guía de solución de incidentes de IT.', 'redémarrage'],
+  ['Valores Corporativos', 'Definición de visión, misión y ética corporativa.', 'intégrité'],
+  ['Etiqueta Telefónica Avanzada', 'Manejar transferencias y llamadas complejas.', 'transfert'],
+  ['Disculparse Profesionalmente', 'Redacción de disculpas formales ante fallos.', 'excuser'],
+  ['Resolución de Conflictos', 'Herramientas de mediación y empatía corporativa.', 'conflit'],
+  ['Subcontratación Estratégica', 'Evaluación y gestión de proveedores externos.', 'fournisseur'],
+  ['Lanzamiento de Producto', 'Estrategia Go-to-Market completa.', 'lancement'],
+  ['Conceptos de Cadena de Suministro', 'Logística y flujo de mercancías.', 'inventaire'],
+  ['Satisfacción del Cliente', 'Métricas NPS y análisis de retroalimentación.', 'satisfaction'],
+  ['Gestión del Tiempo Ejecutivo', 'Priorización de tareas urgentes vs importantes.', 'prioriser'],
+  ['Evaluación Comparativa Estratégica', 'Comparar rendimientos contra competidores.', 'comparatif'],
+  ['Negociaciones de Contrato', 'Revisión de términos clave en contratos.', 'contrat'],
+  ['Evaluación de Riesgos Operativos', 'Identificar amenazas de operación básicas.', 'risque'],
+  ['Acciones y Participaciones', 'Introducción al financiamiento corporativo.', 'actions'],
+  ['Reuniones Virtuales Avanzadas', 'Comandos verbales para Zoom/Teams/Meet.', 'sourdine'],
+  ['Red de Contactos Profesionales', 'Discursos de elevador y conexiones ejecutivas.', 'réseautage'],
+  ['Investigación de Mercado', 'Análisis DAFO/SWOT en contexto real.', 'recherche'],
+  ['Adquisición de Talento', 'Políticas de reclutamiento y onboarding.', 'embauche'],
+  ['Dominio del Discurso de Ventas', 'Técnicas de venta directa y persuasión.', 'argumentaire'],
+  ['Ergonomía en la Oficina', 'Salud ocupacional y productividad sostenida.', 'posture'],
+  ['Retroalimentación del Equipo', 'Evaluación de competencias gerenciales.', 'progrès'],
+  ['Interpretación de Datos', 'Análisis de gráficos de barras y tendencias.', 'tendances'],
+  ['Programación Ejecutiva', 'Negociación de agendas y zonas horarias.', 'planification'],
+  ['Tareas y Acciones Post-Reunión', 'Asignación clara de tareas tras una junta.', 'actionnable'],
+  ['Actualización de Estado de Proyecto', 'Presentar avances del desarrollo.', 'actualisation'],
+  ['Demostración de Producto', 'Presentar características y beneficios.', 'démonstration'],
+  ['Políticas de Servicio al Cliente', 'Resolución eficaz de quejas y reclamaciones.', 'support'],
+  ['Acuerdo de Nivel de Servicio (SLA)', 'Contratos SLA y métricas de calidad.', 'normes'],
+  ['Auditoría de Inventario', 'Control periódico de stock y materias primas.', 'stock'],
+  ['Análisis de Mercado Competitivo', 'Estudiar la competencia y demanda del producto.', 'marché'],
+  ['Estrategia de Marca', 'Desarrollo de identidad y posicionamiento.', 'image'],
+  ['Canal de Ventas', 'Etapas de conversión de leads a clientes.', 'processus'],
+  ['Eficiencia Operativa', 'Reducción de cuellos de botella en producción.', 'efficacité'],
+  ['Planificación de Capacidad', 'Estimación de recursos y mano de obra.', 'capacité'],
+  ['Ética Corporativa', 'Políticas anticorrupción y transparencia interna.', 'éthique'],
+  ['Marco Metodológico Ágil', 'Introducción a Scrum en proyectos reales.', 'mêlée'],
+  ['Planificación del Sprint', 'Juntas de planeación a corto plazo.', 'sprint'],
+  ['Evaluación del Desempeño', 'KPIs y cumplimiento de objetivos.', 'bilan'],
+  ['Plan de Carrera Profesional', 'Estructuración de planes de crecimiento interno.', 'promotion'],
+];
+
+const TEMAS_B2_DATA: string[][] = [
+  ['Gestión de Proyectos Complejos', 'Metodologías PMI y Agile en proyectos multinacionales.', 'gestion'],
+  ['Control de Presupuesto Ejecutivo', 'Análisis de varianzas y control de costos.', 'budget'],
+  ['Liderazgo de Equipos Multifuncionales', 'Gestionar equipos de distintas áreas sin autoridad directa.', 'transversal'],
+  ['Comunicación Estratégica', 'Alinear mensajes corporativos con la estrategia de negocio.', 'alignement'],
+  ['Gestión del Rendimiento', 'KPIs, OKRs y evaluación de objetivos clave.', 'performance'],
+  ['Análisis de Riesgo Empresarial', 'Matrices de riesgo y planes de contingencia.', 'risque'],
+  ['Negociación con Stakeholders', 'Alinear intereses de múltiples partes involucradas.', 'parties-prenantes'],
+  ['Planificación de Recursos', 'Asignación eficiente de personal y presupuesto.', 'ressources'],
+  ['Gestión del Cambio Organizacional', 'Liderar transiciones con mínima resistencia.', 'changement'],
+  ['Cultura de Alto Desempeño', 'Construir equipos orientados a resultados.', 'culture'],
+  ['Estrategia de Expansión', 'Análisis de mercados para entrada estratégica.', 'expansion'],
+  ['Diseño de Procesos de Negocio', 'Mapear y optimizar procesos clave.', 'processus'],
+  ['Gestión de Talento Ejecutivo', 'Retener y desarrollar el talento de alto potencial.', 'talent'],
+  ['Revisión Financiera Trimestral', 'Preparar y presentar resultados trimestrales.', 'trimestriel'],
+  ['Diseño de Estructura Organizacional', 'Definir jerarquías y flujos de reporte.', 'structure'],
+  ['Coordinación de Proveedores Globales', 'Gestionar contratos y relaciones con proveedores.', 'fournisseurs'],
+  ['Gestión de Calidad Total', 'Estándares ISO y mejora continua.', 'qualité'],
+  ['Análisis de la Competencia', 'Estudiar ventajas competitivas y posicionamiento.', 'compétitivité'],
+  ['Planificación Estratégica Anual', 'Crear el plan estratégico de la organización.', 'stratégie'],
+  ['Gestión de Contratos Complejos', 'Revisar contratos de servicios profesionales.', 'contrat'],
+  ['Sistemas de Seguimiento de Proyectos', 'Uso de herramientas como Jira, MS Project, Asana.', 'suivi'],
+  ['Auditoría Operativa Interna', 'Verificar el cumplimiento de procedimientos internos.', 'audit'],
+  ['Comunicación Ejecutiva Escrita', 'Redactar informes ejecutivos y presentaciones.', 'rédaction'],
+  ['Gestión de la Experiencia del Cliente', 'Customer journey y diseño de experiencias.', 'parcours'],
+  ['Análisis de Datos con BI', 'Power BI, Tableau y herramientas de análisis.', 'analytique'],
+  ['Gestión de la Cadena de Suministro', 'Optimización logística y gestión de inventarios.', 'chaîne'],
+  ['Inversión y ROI de Proyectos', 'Calcular retorno sobre inversión de iniciativas.', 'rentabilité'],
+  ['Presentaciones Ejecutivas', 'Preparar y entregar presentaciones de alto impacto.', 'présentation'],
+  ['Gestión de Crisis Operativas', 'Responder a fallos críticos de operación.', 'urgence'],
+  ['Digitalización de Procesos', 'Automatizar workflows con herramientas digitales.', 'automatisation'],
+  ['Compliance y Regulación', 'Cumplir normativas locales e internacionales.', 'conformité'],
+  ['Gestión de Equipos Remotos', 'Liderar equipos distribuidos globalmente.', 'télétravail'],
+  ['Estrategia de Precios', 'Modelos de precios basados en valor y mercado.', 'tarification'],
+  ['Comunicación en Situaciones de Crisis', 'Mensajes de calma y acción ante emergencias.', 'crise'],
+  ['Gestión de Marca Corporativa', 'Proteger y desarrollar la reputación de la marca.', 'marque'],
+  ['Modelo de Negocio Canvas', 'Diseñar y ajustar el modelo de negocio.', 'modèle'],
+  ['Gestión de Alianzas Estratégicas', 'Negociar y mantener acuerdos de colaboración.', 'alliance'],
+  ['Control de Gestión', 'Dashboard de indicadores y control de gestión.', 'contrôle'],
+  ['Diseño de Incentivos y Compensación', 'Estructurar paquetes salariales motivadores.', 'compensation'],
+  ['Gestión de la Innovación', 'Fomentar la innovación sistemática en la organización.', 'innovation'],
+  ['Integración de Adquisiciones', 'Integrar empresas adquiridas al flujo corporativo.', 'intégration'],
+  ['Liderazgo en Situaciones Ambiguas', 'Tomar decisiones con información incompleta.', 'ambiguïté'],
+  ['Plan de Recuperación de Desastres', 'Continuidad del negocio ante eventos críticos.', 'continuité'],
+  ['Comunicación Intercultural', 'Adaptar el estilo comunicativo a diferentes culturas.', 'interculturel'],
+  ['Evaluación de Proyectos de Inversión', 'Análisis VPN, TIR y payback de inversiones.', 'investissement'],
+  ['Gestión del Conocimiento Organizacional', 'Capturar y transferir el conocimiento institucional.', 'connaissance'],
+  ['Estrategia de Retención de Clientes', 'Programas de lealtad y retención.', 'fidélisation'],
+  ['Optimización de la Fuerza de Ventas', 'Gestionar y motivar al equipo comercial.', 'commercial'],
+  ['Reporting Financiero Internacional', 'IFRS, GAAP y reporte financiero globalizado.', 'normes-ifrs'],
+  ['Plan de Transición de Liderazgo', 'Preparar la sucesión de puestos clave.', 'succession'],
+];
+
+const TEMAS_C1_DATA: string[][] = [
+  ['Estrategia Corporativa de Alto Nivel', 'Formular la dirección estratégica a 5 años.', 'vision'],
+  ['Negociación de Alto Impacto', 'Técnicas avanzadas para cerrar acuerdos complejos.', 'concession'],
+  ['Discurso Ante la Junta Directiva', 'Presentar estrategia y resultados al consejo.', 'conseil'],
+  ['Comunicación de Crisis a Nivel C-Suite', 'Gestionar comunicación en situaciones críticas.', 'dirigeant'],
+  ['Filosofía de Liderazgo Transformacional', 'Inspirar y motivar equipos de alto rendimiento.', 'leadership'],
+  ['Pensamiento Sistémico', 'Analizar problemas complejos e interdependientes.', 'systémique'],
+  ['Toma de Decisiones Bajo Incertidumbre', 'Marcos para decidir con datos limitados.', 'décision'],
+  ['Gestión del Legado Ejecutivo', 'Construir un legado duradero como líder.', 'héritage'],
+  ['Diplomacia Corporativa', 'Manejar relaciones sensibles con tacto y elegancia.', 'diplomatie'],
+  ['Estrategia de Innovación Disruptiva', 'Fomentar disrupciones antes que la competencia.', 'disruption'],
+  ['Liderazgo en Crisis Organizacional', 'Estabilizar organizaciones en situaciones caóticas.', 'stabilisation'],
+  ['Narrativa Ejecutiva', 'Construir relatos poderosos que inspiran acción.', 'narration'],
+  ['Gestión de la Ambigüedad Estratégica', 'Operar con eficacia en entornos inciertos.', 'incertitude'],
+  ['Alineación de Cultura y Estrategia', 'Alinear la cultura interna con los objetivos.', 'culture'],
+  ['Negociación en Contextos Multiculturales', 'Adaptar estrategias a diferentes culturas.', 'interculturel'],
+  ['Presentación de Resultados Anuales', 'Comunicar el desempeño anual a inversores.', 'actionnaires'],
+  ['Diseño de Estrategia de Salida', 'Planificar la venta o IPO de la empresa.', 'sortie'],
+  ['Gestión de Stakeholders Críticos', 'Manejar expectativas de partes clave.', 'parties'],
+  ['Liderazgo de Transformación Digital', 'Dirigir la migración hacia modelos digitales.', 'transformation'],
+  ['Estrategia ESG Ejecutiva', 'Integrar criterios ambientales, sociales y de gobernanza.', 'durabilité'],
+  ['Arquitectura de Decisión Corporativa', 'Diseñar procesos de toma de decisión claros.', 'architecture'],
+  ['Influencia sin Autoridad', 'Liderar iniciativas sin poder jerárquico formal.', 'influence'],
+  ['Gestión de la Reputación Ejecutiva', 'Proteger la imagen pública del líder.', 'réputation'],
+  ['Presentaciones para Inversores', 'Pitch ejecutivo ante fondos de inversión.', 'pitch'],
+  ['Estrategia de Alianzas Globales', 'Forjar y gestionar alianzas estratégicas internacionales.', 'alliance'],
+  ['Gobernanza Corporativa Avanzada', 'Políticas de junta directiva y comités de auditoría.', 'gouvernance'],
+  ['Planificación de la Sucesión Ejecutiva', 'Identificar y desarrollar futuros líderes.', 'successeur'],
+  ['Comunicación con Reguladores', 'Interactuar con autoridades regulatorias.', 'régulateur'],
+  ['Liderazgo Ético y Responsable', 'Tomar decisiones con integridad bajo presión.', 'éthique'],
+  ['Gestión de Capital Humano Estratégico', 'Alinear personas con la estrategia organizacional.', 'humain'],
+  ['Análisis del Entorno Competitivo Global', 'Porter 5 fuerzas en mercados internacionales.', 'compétition'],
+  ['Estrategia de Comunicación Corporativa', 'Definir el mensaje de la empresa al mercado.', 'message'],
+  ['Medición del Impacto Estratégico', 'Métricas que reflejan el éxito estratégico.', 'impact'],
+  ['Resiliencia Organizacional', 'Construir organizaciones resilientes al cambio.', 'résilience'],
+  ['Innovación Abierta', 'Colaborar con el ecosistema para co-crear.', 'open-innovation'],
+  ['Estrategia de Portafolio de Negocios', 'Gestionar múltiples unidades de negocio.', 'portefeuille'],
+  ['Gestión de la Junta Directiva', 'Facilitar y liderar reuniones de junta.', 'conseil-admin'],
+  ['Análisis de Escenarios Estratégicos', 'Construir y evaluar futuros posibles.', 'scénarios'],
+  ['Estrategia de Expansión Internacional', 'Ingresar a nuevos mercados internacionales.', 'expansion'],
+  ['Diseño Organizacional para la Escala', 'Estructurar la empresa para el crecimiento.', 'structure'],
+  ['Gestión del Riesgo Reputacional', 'Anticipar y mitigar riesgos de imagen.', 'image'],
+  ['Presentación Magistral en Conferencia', 'Hablar ante grandes audiencias corporativas.', 'conférence'],
+  ['Liderazgo de Ecosistemas', 'Orquestar redes de partners y aliados.', 'écosystème'],
+  ['Gestión de la Incertidumbre Macroeconómica', 'Navegar volatilidad económica global.', 'macroéconomie'],
+  ['Estrategia de Precios Premium', 'Posicionamiento de precio alto y defensa.', 'premium'],
+  ['Comunicación de Visión a la Organización', 'Inspirar con claridad a todos los niveles.', 'vision-comm'],
+  ['Gestión de Proyectos Estratégicos', 'Liderar programas de transformación.', 'programme'],
+  ['Evaluación del Desempeño del CEO', 'Métricas y criterios para evaluar al CEO.', 'évaluation-ceo'],
+  ['Liderazgo en Períodos de Austeridad', 'Gestionar recortes sin perder el talento.', 'austérité'],
+  ['Modelo de Toma de Decisiones Ética', 'Frameworks para decisiones moralmente difíciles.', 'cadre-éthique'],
+];
+
+const TEMAS_C2_DATA: string[][] = [
+  ['Análisis del Mercado Global', 'Evaluación macroeconómica y geopolítica de mercados.', 'macroéconomique'],
+  ['Gestión de Crisis de Alto Nivel', 'Comunicación ante desastres de marca y reputación.', 'crise'],
+  ['Reporte de Resultados Financieros', 'EBITDA, balances generales y dividendos.', 'ebitda'],
+  ['Fusiones y Adquisiciones Globales', 'Due diligence y cierre de operaciones corporativas.', 'fusion'],
+  ['Dominio de la Oratoria', 'Tácticas de retórica y persuasión ante audiencias masivas.', 'rhétorique'],
+  ['Negociación con Matices Culturales', 'Concesiones difíciles bajo presión y diversidad cultural.', 'concession'],
+  ['Redacción de Contratos Legales', 'Cláusulas penales e indemnizaciones internacionales.', 'indemnité'],
+  ['ESG y Sostenibilidad Global', 'Gobernanza corporativa, huella de carbono y RSE.', 'durabilité'],
+  ['Estrategia de Pivote Corporativo', 'Reestructuración e innovación abierta global.', 'pivot'],
+  ['OPI y Estrategias de Salida Global', 'Salir a bolsa o estructurar adquisiciones hostiles.', 'introduction'],
+  ['Filosofía del Liderazgo Global', 'Modelos de liderazgo exponencial y mentoría.', 'leadership'],
+  ['Gestión del Cambio Organizacional', 'Transiciones organizacionales globales.', 'transition'],
+  ['Relaciones con Inversores Globales', 'Discursos convincentes ante accionistas VIP.', 'actionnaires'],
+  ['Gobernanza Corporativa Internacional', 'Políticas anticorrupción y cumplimiento normativo.', 'conformité'],
+  ['Planificación de la Sucesión Global', 'Elegir líderes sucesores en mesas directivas.', 'successeur'],
+  ['Disrupción Tecnológica e IA', 'Impacto de IA generativa en la cadena de valor.', 'technologie'],
+  ['Fintech y Blockchain Empresarial', 'Descentralización financiera y criptoactivos.', 'fintech'],
+  ['Innovaciones Biotecnológicas', 'Desarrollo farmacéutico y patentes científicas.', 'brevets'],
+  ['Transición a Energías Limpias', 'Migrar operaciones corporativas a fuentes limpias.', 'renouvelable'],
+  ['Resiliencia de la Cadena de Suministro', 'Asegurar la cadena logística contra fuerza mayor.', 'résilience'],
+  ['Gestión de Marcas de Lujo', 'Mercadotecnia de alta gama y valor percibido.', 'luxe'],
+  ['Inversión en Bienes Raíces', 'Fideicomisos y portafolios inmobiliarios.', 'foncière'],
+  ['Presentaciones para Capital de Riesgo', 'Levantar rondas de inversión Serie A/B.', 'capital-risque'],
+  ['Protocolos de Ciberseguridad', 'Políticas corporativas contra ataques de ransomware.', 'rançongiciel'],
+  ['Alianzas Estratégicas Globales', 'Crear joint ventures estratégicos multinacionales.', 'alliance'],
+  ['Propiedad Intelectual Internacional', 'Litigios marcarios y derechos de autor globales.', 'marque'],
+  ['Redacción de Discursos Ejecutivos', 'Ghostwriting de discursos para CEOs.', 'rédaction'],
+  ['Comunicación Diplomática Avanzada', 'Mitigar hostilidades y preguntas incómodas.', 'diplomatique'],
+  ['El Poder del Silencio Estratégico', 'Uso táctico de pausas en alta negociación.', 'silence'],
+  ['Estrategia de Diversidad e Inclusión', 'Políticas corporativas de equidad y pertenencia.', 'inclusion'],
+  ['Escalamiento del Comercio Electrónico', 'Logística transfronteriza y marketing automatizado.', 'commerce'],
+  ['Economía del Comportamiento', 'Sesgos cognitivos en la toma de decisiones.', 'comportemental'],
+  ['Reestructuración Corporativa Global', 'Rediseño organizacional para mejorar rentabilidad.', 'restructuration'],
+  ['Cumplimiento Regulatorio Internacional', 'GDPR, SOX, Basel III y normativas globales.', 'réglementaire'],
+  ['Regulaciones Antimonopolio', 'Leyes de competencia y prevención de monopolios.', 'antimonopole'],
+  ['Gestión de Litigios Corporativos', 'Disputas legales y demandas marcarias internacionales.', 'litige'],
+  ['Protección de Patentes Globales', 'Registro y defensa de propiedad intelectual.', 'brevet'],
+  ['Junta Directiva Internacional', 'Dinámica y responsabilidades del consejo global.', 'conseil'],
+  ['Activismo de los Accionistas', 'Relación con accionistas que presionan cambios.', 'actionnaire'],
+  ['Compensación Ejecutiva Global', 'Estructuración de bonos y opciones sobre acciones.', 'rémunération'],
+  ['Roadshow de OPI Global', 'Presentación ante inversores previo a salir a bolsa.', 'tournée'],
+  ['Estrategia de Salida Corporativa', 'Adquisiciones, fusiones o liquidación estratégica.', 'sortie'],
+  ['Adquisición Hostil y Defensa', 'Estrategias de defensa ante compras hostiles.', 'rachat'],
+  ['Capital Privado Internacional', 'Inversión institucional en empresas de alto potencial.', 'capitaux'],
+  ['Auditoría de Debida Diligencia', 'Auditoría exhaustiva previa a adquisición.', 'diligence'],
+  ['Sinergias de Fusión y Adquisición', 'Estimación de ahorros operativos tras fusión.', 'synergies'],
+  ['Creación de Coempresas Globales', 'Joint ventures con nuevas entidades compartidas.', 'coentreprise'],
+  ['Huella de Carbono Corporativa', 'Estrategias para alcanzar neutralidad de carbono.', 'décarbonation'],
+  ['Deber Fiduciario Global', 'Responsabilidad legal y financiera ante inversores.', 'fiduciaire'],
+  ['Asignación de Capital Estratégico', 'Decidir la reinversión de utilidades.', 'allocation'],
+];
+
+const TEMAS_TFI_DATA: string[][] = [
+  ['Compréhension Écrite: Textes Journalistiques', 'Leer y comprender artículos de prensa en francés.', 'presse'],
+  ['Compréhension Orale: Dialogues Professionnels', 'Escuchar y entender conversaciones de oficina.', 'écoute'],
+  ['Expression Écrite: Rédiger un Mémo', 'Redactar memos internos con estructura TFI.', 'mémo'],
+  ['Vocabulaire TFI: Niveau B2', 'Vocabulario de alta frecuencia para el examen TFI.', 'vocabulaire'],
+  ['Grammaire: Le Subjonctif', 'Uso del subjuntivo en contextos profesionales.', 'subjonctif'],
+  ['Phonétique: Intonation Professionnelle', 'Entonación y pronunciación para nivel C1.', 'intonation'],
+  ['Lecture: Articles Académiques', 'Leer y analizar textos académicos complejos.', 'académique'],
+  ['Écoute: Conférences et Discours', 'Comprensión de conferencias y discursos formales.', 'discours'],
+  ['Rédaction: Synthèse de Documents', 'Sintetizar múltiples documentos en francés.', 'synthèse'],
+  ['Compréhension: Textes Littéraires', 'Interpretar extractos literarios en examen.', 'littérature'],
+  ['Grammaire: Les Temps Composés', 'Dominar tiempos compuestos: passé composé, plus-que-parfait.', 'temps'],
+  ['Vocabulaire: Connecteurs Logiques', 'Usar conectores formales para coherencia textual.', 'connecteurs'],
+  ['Expression Orale: Exposé Professionnel', 'Presentar un tema con claridad y fluidez.', 'exposé'],
+  ['Écoute: Émissions Radio', 'Escuchar y comprender programas de radio francesa.', 'radio'],
+  ['Lecture: Documents Officiels', 'Leer y analizar documentos oficiales y legales.', 'officiel'],
+  ['Rédaction: Lettre Formelle', 'Redactar cartas formales con estructura correcta.', 'lettre'],
+  ['Vocabulaire: Domaine Économique', 'Vocabulario económico y financiero avanzado.', 'économie'],
+  ['Grammaire: Le Conditionnel', 'Uso del condicional en contextos hipotéticos.', 'conditionnel'],
+  ['Compréhension: Tableaux et Graphiques', 'Interpretar datos de tablas y gráficos estadísticos.', 'graphique'],
+  ['Écoute: Débats et Discussions', 'Seguir debates y discusiones con múltiples interlocutores.', 'débat'],
+  ['Expression Écrite: Rapport Analytique', 'Redactar reportes analíticos con argumentación.', 'rapport'],
+  ['Lecture: Textes Techniques', 'Leer manuales y textos técnicos en francés.', 'technique'],
+  ['Vocabulaire: Domaine Juridique', 'Vocabulario legal y contractual avanzado.', 'juridique'],
+  ['Grammaire: Les Pronoms Relatifs', 'Uso de pronombres relativos complejos.', 'pronoms'],
+  ['Écoute: Présentations Académiques', 'Comprender presentaciones académicas formales.', 'académique'],
+  ['Expression Orale: Débat Structuré', 'Argumentar y contra-argumentar en debate formal.', 'argumentation'],
+  ['Lecture: Articles de Presse Spécialisée', 'Leer prensa especializada sectorial.', 'spécialisé'],
+  ['Vocabulaire: Ressources Humaines', 'Terminología avanzada de RR.HH. en francés.', 'ressources'],
+  ['Grammaire: La Voix Passive', 'Uso y transformación de voz pasiva en textos.', 'passif'],
+  ['Compréhension: Instructions Complexes', 'Seguir instrucciones de múltiples pasos.', 'instructions'],
+  ['Écoute: Entretiens d\'Embauche', 'Comprender y participar en entrevistas laborales.', 'entretien'],
+  ['Rédaction: E-mail Professionnel Avancé', 'Correos profesionales con registro avanzado.', 'professionnel'],
+  ['Lecture: Normes ISO et Qualité', 'Interpretar documentos de normas de calidad.', 'qualité'],
+  ['Vocabulaire: Commerce International', 'Términos de comercio exterior y aduanas.', 'commerce'],
+  ['Grammaire: Le Discours Indirect', 'Transformar y usar el estilo indirecto.', 'indirect'],
+  ['Expression Écrite: Article de Presse', 'Redactar artículos de prensa en estilo periodístico.', 'journalisme'],
+  ['Écoute: Réunions de Travail', 'Comprender reuniones de trabajo complejas.', 'réunion'],
+  ['Lecture: Plans Stratégiques', 'Analizar planes estratégicos corporativos.', 'stratégique'],
+  ['Vocabulaire: Technologies de l\'Information', 'Vocabulario IT y transformación digital.', 'informatique'],
+  ['Grammaire: L\'Expression de la Cause', 'Expresar causa, consecuencia y finalidad.', 'cause'],
+  ['Expression Orale: Négociation Simulée', 'Simulacro de negociación en formato TFI.', 'négociation'],
+  ['Compréhension: Documents Authentiques', 'Trabajar con materiales auténticos del examen.', 'authentique'],
+  ['Écoute: Entretiens Journalistiques', 'Comprender entrevistas periodísticas formales.', 'journaliste'],
+  ['Rédaction: Compte-rendu de Réunion', 'Redactar actas de reuniones con precisión.', 'compte-rendu'],
+  ['Vocabulaire: Environnement et Durabilité', 'Vocabulario de sostenibilidad y medio ambiente.', 'environnement'],
+  ['Grammaire: Les Adverbes Complexes', 'Uso avanzado de adverbios de modo y lugar.', 'adverbes'],
+  ['Lecture: Études de Cas', 'Analizar estudios de caso empresariales.', 'étude-de-cas'],
+  ['Expression Écrite: Portfolio de Documents', 'Construir un portafolio escrito de examen.', 'portfolio'],
+  ['Écoute: Messages Téléphoniques Complexes', 'Transcribir y comprender mensajes de voz.', 'messagerie'],
+  ['Révision Intégrale TFI', 'Repaso integral de todas las competencias del examen.', 'révision'],
+];
+
+const TEMAS_M1_DATA: string[][] = [
+  ['Fundamentos de Relaciones Públicas', 'Principios básicos de RRPP en contexto francófono.', 'relations'],
+  ['Estrategia de Comunicación de Crisis', 'Planificar la respuesta ante crisis de marca.', 'crise'],
+  ['Portavoz Corporativo', 'Entrenar directivos para medios de comunicación.', 'porte-parole'],
+  ['Monitoreo de Medios', 'Herramientas de seguimiento de cobertura mediática.', 'veille'],
+  ['Notas de Prensa Efectivas', 'Redactar comunicados de prensa de alto impacto.', 'communiqué'],
+  ['Gestión de Redes Sociales en Crisis', 'Responder en Twitter/LinkedIn durante una crisis.', 'réseaux'],
+  ['Análisis de Sentimiento', 'Medir la percepción pública de la marca.', 'sentiment'],
+  ['Plan de Comunicación de Crisis', 'Estructurar un plan de respuesta ante emergencias.', 'plan'],
+  ['Conferencia de Prensa', 'Organizar y moderar una conferencia de prensa.', 'conférence'],
+  ['Manejo de Rumores Corporativos', 'Desmentir rumores con evidencia y transparencia.', 'rumeur'],
+  ['Reputación Online y SEO', 'Gestionar la imagen digital de la empresa.', 'réputation'],
+  ['Stakeholder Mapping', 'Identificar y priorizar audiencias clave.', 'cartographie'],
+  ['Comunicación Interna en Crisis', 'Mantener informados a los empleados durante crisis.', 'interne'],
+  ['Mensajes Clave de Crisis', 'Desarrollar los mensajes principales de respuesta.', 'messages'],
+  ['Relaciones con Medios', 'Construir relaciones duraderas con periodistas.', 'journalistes'],
+  ['Manual de Crisis Corporativa', 'Crear el playbook de gestión de crisis.', 'guide'],
+  ['Evaluación Post-Crisis', 'Analizar la gestión de crisis y aprender.', 'évaluation'],
+  ['Comunicación Transparente', 'Principios de transparencia ante el público.', 'transparence'],
+  ['Lobby y Relaciones Gubernamentales', 'Interactuar con autoridades y reguladores.', 'gouvernement'],
+  ['Gestión de Escándalos Corporativos', 'Manejar escándalos de dirección ejecutiva.', 'scandale'],
+  ['Comunicación con Empleados en Crisis', 'Retener talento durante reestructuraciones.', 'talent'],
+  ['Branding en Crisis', 'Proteger y recuperar el valor de marca.', 'marque'],
+  ['Análisis de Cobertura Mediática', 'Medir el impacto de la cobertura de prensa.', 'couverture'],
+  ['Comunicación Multicanal', 'Coordinar mensajes en todos los canales.', 'omnicanal'],
+  ['Relaciones con Inversores en Crisis', 'Mantener la confianza de accionistas en crisis.', 'actionnaires'],
+  ['Comunicación de RSE', 'Comunicar iniciativas de responsabilidad social.', 'rse'],
+  ['Estrategia de Relanzamiento de Marca', 'Relanzar una marca después de una crisis.', 'relance'],
+  ['Vocería en Redes Sociales', 'Gestionar cuentas corporativas en redes.', 'social'],
+  ['Análisis de Competidores en RRPP', 'Monitorear las estrategias de comunicación rivales.', 'concurrents'],
+  ['Presupuesto de Comunicación', 'Planificar el presupuesto de RRPP y comunicación.', 'budget-comm'],
+  ['Auditoría de Comunicación', 'Evaluar la efectividad de la comunicación corporativa.', 'audit-comm'],
+  ['Patrocinios Estratégicos', 'Seleccionar patrocinios alineados a la marca.', 'parrainage'],
+  ['Eventos Corporativos de Alto Impacto', 'Organizar eventos que refuercen la reputación.', 'événement'],
+  ['Gestión de la Percepción del CEO', 'Construir la imagen del líder en medios.', 'image-ceo'],
+  ['Comunicación en Fusiones', 'Gestionar la comunicación durante una fusión.', 'fusion-comm'],
+  ['Plan de Comunicación Financiera', 'Comunicar resultados financieros al mercado.', 'financière'],
+  ['Medición de ROI en Comunicación', 'Calcular el retorno de la inversión en RRPP.', 'roi-comm'],
+  ['Gestion des Crises Alimentaires', 'Comunicar retiros de producto en industria alimentaria.', 'alimentaire'],
+  ['Comunicación en Sector Farmacéutico', 'RRPP en contexto regulado de salud.', 'pharma'],
+  ['Innovación en Comunicación Digital', 'Podcasts, webinars y nuevos formatos de RRPP.', 'digital'],
+  ['Comunicación ESG para Inversores', 'Reportar criterios ESG de forma atractiva.', 'esg'],
+  ['Gestión de Influencers Corporativos', 'Trabajar con embajadores de marca.', 'influenceurs'],
+  ['Comunicación en Mercados Emergentes', 'Adaptar la estrategia a mercados en desarrollo.', 'émergents'],
+  ['Manual del Vocero Ejecutivo', 'Preparar a directivos para entrevistas complejas.', 'media-training'],
+  ['Análisis de Riesgo Reputacional', 'Identificar amenazas latentes a la reputación.', 'risque-réputation'],
+  ['Comunicación en Sectores Regulados', 'RRPP en banca, energía y telecomunicaciones.', 'régulé'],
+  ['Campañas de Opinión Pública', 'Influir en la opinión pública con datos.', 'opinion'],
+  ['Relaciones Comunitarias', 'Gestionar la relación con comunidades locales.', 'communauté'],
+  ['Reporte Anual Corporativo', 'Diseñar y redactar el informe anual de la empresa.', 'rapport-annuel'],
+  ['Estrategia de Comunicación Global', 'Coordinar mensajes en múltiples países y culturas.', 'global'],
+];
+
+const TEMAS_M2_DATA: string[][] = [
+  ['Fundamentos de Fusiones y Adquisiciones', 'Conceptos básicos de M&A en contexto francófono.', 'fusion'],
+  ['Due Diligence Financiero', 'Análisis financiero exhaustivo de la empresa objetivo.', 'diligence'],
+  ['Due Diligence Legal', 'Revisión de contratos, litigios y riesgos legales.', 'légal'],
+  ['Valoración de Empresas', 'Métodos de valoración: DCF, múltiplos, activos.', 'valorisation'],
+  ['Estructura de la Transacción', 'Diseñar la estructura óptima de la operación.', 'structure'],
+  ['Negociación de Precio y Condiciones', 'Técnicas de negociación de precio en M&A.', 'prix'],
+  ['El Proceso de M&A: Etapas', 'Fases de una transacción desde LOI hasta cierre.', 'processus'],
+  ['Memorándum de Información Confidencial', 'Preparar el CIM para atraer compradores.', 'mémorandum'],
+  ['Cartas de Intención (LOI)', 'Redactar y negociar las LOI iniciales.', 'lettre-intention'],
+  ['Contratos de Compraventa (SPA)', 'Cláusulas clave de un Share Purchase Agreement.', 'spa'],
+  ['Ajustes de Precio Post-Cierre', 'Mecanismos de ajuste de precio tras el cierre.', 'ajustement'],
+  ['Representaciones y Garantías', 'Reps & Warranties en transacciones de M&A.', 'garanties'],
+  ['Indemnizaciones y Escrow', 'Gestionar reclamos y fondos de garantía.', 'indemnité'],
+  ['Regulación Antimonopolio en M&A', 'Aprobaciones regulatorias para fusiones.', 'antimonopole'],
+  ['Integración Post-Fusión (PMI)', 'Integrar operaciones tras el cierre.', 'intégration'],
+  ['Comunicación en Fusiones', 'Gestionar la comunicación interna y externa.', 'communication'],
+  ['Finanzas Estructuradas en M&A', 'LBO, MBO y financiamiento leveraged.', 'structuré'],
+  ['Capital Privado en M&A', 'El rol del private equity en adquisiciones.', 'private-equity'],
+  ['M&A Transfronterizo', 'Retos específicos de las fusiones internacionales.', 'transfrontalier'],
+  ['Sinergias en M&A', 'Identificar y valorar sinergias operativas.', 'synergies'],
+  ['Plan de 100 Días Post-Fusión', 'Primeras acciones críticas tras el cierre.', 'cent-jours'],
+  ['Gestión del Talento en M&A', 'Retener talento clave durante la integración.', 'talent'],
+  ['Integración Tecnológica', 'Fusionar sistemas IT y plataformas digitales.', 'technologie'],
+  ['Cultura Corporativa en M&A', 'Unificar culturas de dos organizaciones distintas.', 'culture'],
+  ['Gestión de Clientes en M&A', 'Mantener relaciones con clientes durante transición.', 'clients'],
+  ['Proveedores y Cadena de Suministro', 'Gestionar contratos de proveedores en fusiones.', 'fournisseurs'],
+  ['Reporting Financiero Post-Fusión', 'Consolidar estados financieros tras la fusión.', 'consolidation'],
+  ['Gobernanza Post-Fusión', 'Rediseñar la estructura de gobierno corporativo.', 'gouvernance'],
+  ['Brand Strategy en M&A', 'Decidir la estrategia de marca tras la fusión.', 'marque'],
+  ['Carve-out y Desinversiones', 'Vender unidades de negocio estratégicamente.', 'cession'],
+  ['Compras Apalancadas (LBO)', 'Estructurar adquisiciones con deuda.', 'lbo'],
+  ['Venture Capital en M&A', 'Rol de fondos VC en transacciones corporativas.', 'venture'],
+  ['Análisis de Mercado para M&A', 'Identificar y calificar objetivos de adquisición.', 'marché'],
+  ['Gestión del Proceso M&A', 'Liderar el proceso de transacción eficientemente.', 'processus-ma'],
+  ['Acuerdos de Confidencialidad (NDA)', 'Redactar y gestionar NDAs en M&A.', 'nda'],
+  ['Comité de M&A Ejecutivo', 'Gestionar el comité interno de M&A.', 'comité'],
+  ['Relaciones con Bancos de Inversión', 'Trabajar con asesores financieros y bankers.', 'banque-inv'],
+  ['Factores de Éxito en M&A', 'Claves para una integración exitosa.', 'succès'],
+  ['Fracasos Comunes en M&A', 'Lecciones de las fusiones que fallaron.', 'échecs'],
+  ['M&A en Sector Tecnológico', 'Particularidades de las fusiones tech.', 'tech-ma'],
+  ['M&A en Sector Financiero', 'Fusiones en bancos y aseguradoras.', 'financier-ma'],
+  ['M&A en Sector Industrial', 'Consolidación en manufactura e industria pesada.', 'industriel'],
+  ['M&A en Sector Salud', 'Adquisiciones en pharma y dispositivos médicos.', 'santé'],
+  ['Ética en M&A', 'Consideraciones éticas en procesos de fusión.', 'éthique-ma'],
+  ['Impuesto en M&A', 'Implicaciones fiscales de distintas estructuras.', 'fiscal'],
+  ['Gestión de la Incertidumbre en M&A', 'Navegar la ambigüedad durante transacciones.', 'incertitude'],
+  ['Modelo de Integración Operativa', 'Frameworks para la integración de operaciones.', 'opérationnel'],
+  ['KPIs de Integración', 'Métricas para medir el éxito de la integración.', 'kpi'],
+  ['Comunicación con la Bolsa en M&A', 'Obligaciones de revelación ante mercados públicos.', 'bourse'],
+  ['Cierre de la Transacción', 'Gestionar el día de cierre del deal.', 'clôture'],
+];
+
+const TEMAS_PRO_DATA: string[][] = [
+  ['Fundamentos de Gobernanza Corporativa', 'Principios esenciales de government corporativo.', 'gouvernance'],
+  ['El Papel del Consejo de Administración', 'Funciones y responsabilidades del board.', 'conseil'],
+  ['Comité de Auditoría', 'Supervisión de la auditoría financiera y riesgos.', 'audit'],
+  ['Comité de Remuneración', 'Diseñar la política de compensación ejecutiva.', 'rémunération'],
+  ['Comité de Nombramientos', 'Seleccionar y recomendar directivos y consejeros.', 'nominations'],
+  ['Comité de Riesgos', 'Supervisión integral del riesgo corporativo.', 'risques'],
+  ['Deber Fiduciario del Consejo', 'Responsabilidades legales de los consejeros.', 'fiduciaire'],
+  ['Conflictos de Interés en el Consejo', 'Identificar y gestionar conflictos de interés.', 'conflits'],
+  ['Activismo Accionarial', 'Responder a presiones de accionistas activistas.', 'activisme'],
+  ['Asamblea General de Accionistas', 'Preparar y dirigir la asamblea anual.', 'assemblée'],
+  ['Planificación de la Sucesión del CEO', 'Identificar y preparar al sucesor del CEO.', 'successeur-ceo'],
+  ['Evaluación del Desempeño del Consejo', 'Métricas para evaluar al consejo directivo.', 'évaluation'],
+  ['Gobernanza ESG', 'Supervisión de criterios ambientales, sociales y de gobernanza.', 'esg'],
+  ['Informes de Sostenibilidad', 'Preparar reportes de sostenibilidad para inversores.', 'durabilité'],
+  ['Gobernanza de la Ciberseguridad', 'Supervisión del riesgo cibernético a nivel consejo.', 'cyber'],
+  ['Regulación y Cumplimiento Global', 'Normas de compliance internacional para directorios.', 'compliance'],
+  ['Gobernanza en Mercados Emergentes', 'Retos de gobernanza en economías en desarrollo.', 'émergents'],
+  ['Transparencia e Información Pública', 'Obligaciones de divulgación ante mercados.', 'transparence'],
+  ['Gobernanza de Empresas Familiares', 'Estructuras de gobernanza para empresas familiares.', 'familiale'],
+  ['Gobernanza de Startups', 'Gobernanza adecuada para empresas en etapa temprana.', 'startup'],
+  ['Gobierno Corporativo en Empresas Públicas', 'Obligaciones de empresas cotizadas en bolsa.', 'cotée'],
+  ['Relaciones Consejo-Dirección', 'Equilibrar el rol del consejo y la dirección.', 'direction'],
+  ['Independencia del Consejo', 'Garantizar la independencia y diversidad del board.', 'indépendance'],
+  ['Diversidad en el Consejo', 'Promover diversidad de género, origen y pensamiento.', 'diversité'],
+  ['Remuneración Ejecutiva Sostenible', 'Vincular compensación a criterios ESG.', 'rémunération-esg'],
+  ['Gobernanza del Riesgo Reputacional', 'Supervisar la reputación de la empresa.', 'réputation'],
+  ['Gobernanza de la Innovación', 'Supervisar la estrategia de innovación corporativa.', 'innovation'],
+  ['Código de Ética Corporativa', 'Diseñar e implementar el código de conducta.', 'éthique'],
+  ['Whistleblowing y Canales de Denuncia', 'Implementar canales seguros de denuncia interna.', 'signalement'],
+  ['Gobernanza de Datos', 'Protección de datos y privacidad a nivel corporativo.', 'données'],
+  ['Supervisión de la Auditoría Interna', 'Gestionar la relación con el auditor interno.', 'interne'],
+  ['Relación con Auditores Externos', 'Supervisar al auditor externo independiente.', 'externe'],
+  ['Gobernanza de Filiales', 'Estructura de gobernanza para subsidiarias.', 'filiales'],
+  ['Gestión de Crisis a Nivel de Consejo', 'Respuesta del consejo ante crisis corporativas.', 'crise-conseil'],
+  ['Reporting al Consejo', 'Estructura y frecuencia del reporting ejecutivo.', 'reporting'],
+  ['Manual del Consejero', 'Guía de responsabilidades y protocolos del board.', 'guide-conseil'],
+  ['Onboarding de Nuevos Consejeros', 'Inducción de nuevos miembros al consejo.', 'induction-conseil'],
+  ['Dinámica del Consejo', 'Facilitar deliberaciones efectivas en el board.', 'dynamique'],
+  ['Agenda del Consejo', 'Estructura de la agenda de reuniones del board.', 'ordre-du-jour'],
+  ['Actas del Consejo', 'Redactar actas precisas y legalmente válidas.', 'procès-verbal'],
+  ['Gobernanza de la Transformación Digital', 'Supervisión digital a nivel de consejo.', 'numérique'],
+  ['Supervisión de M&A por el Consejo', 'Rol del consejo en operaciones de fusiones.', 'ma-conseil'],
+  ['Gobernanza de Joint Ventures', 'Supervisión de coempresas y alianzas estratégicas.', 'coentreprise'],
+  ['Marco de Control Interno', 'COSO y marcos de control interno corporativo.', 'contrôle'],
+  ['Gobernanza Fiscal Responsable', 'Supervisión de la estrategia fiscal corporativa.', 'fiscal'],
+  ['Legado y Propósito Corporativo', 'Articular el propósito de largo plazo de la empresa.', 'mission'],
+  ['Gobernanza en Entornos Volátiles', 'Adaptar la gobernanza ante incertidumbre global.', 'volatilité'],
+  ['Responsabilidad del Presidente del Consejo', 'Rol y funciones del Chairman.', 'président'],
+  ['Relación con Reguladores', 'Gestionar la relación institucional con reguladores.', 'régulateurs'],
+  ['Revisión Estratégica del Consejo', 'El consejo como facilitador de la estrategia.', 'stratégie-conseil'],
 ];
 
 // Generar lecciones de forma dinámica con tipado seguro
-const buildLessons = (prefix: 'a' | 'b' | 'c', rawData: string[][]): LessonNode[] => {
-  return rawData.map((item, idx) => {
+const EXERCISE_TYPES: ExerciseType[] = ['lecture', 'grammar', 'chat', 'listening'];
+const POSITIONS: ('left' | 'center' | 'right')[] = ['center', 'left', 'center', 'right'];
+
+const LEVEL_PREFIXES: Record<string, string> = {
+  'a1': 'a1',
+  'a2': 'a2',
+  'b1': 'b1',
+  'b2': 'b2',
+  'c1': 'c1',
+  'c2': 'c2',
+  'tfi': 'tfi',
+  'm1': 'm1',
+  'm2': 'm2',
+  'pro': 'pro',
+};
+
+function buildLessons(prefix: string, rawData: string[][], limit = 200): LessonNode[] {
+  const lessons: LessonNode[] = [];
+  const total = rawData.length;
+  for (let idx = 0; idx < limit; idx++) {
     const num = idx + 1;
     const id = `fr-${prefix}-${num}`;
-    
-    // Alternar tipos de ejercicio
-    const types: ExerciseType[] = ['lecture', 'grammar', 'chat', 'listening'];
-    const type = types[idx % types.length];
-    
-    // Posición para diseño en zigzag serpentine
-    const positions: ('left' | 'center' | 'right')[] = ['center', 'left', 'center', 'right'];
-    const position = positions[idx % positions.length];
-    
-    return {
+    const type = EXERCISE_TYPES[idx % EXERCISE_TYPES.length];
+    const position = POSITIONS[idx % POSITIONS.length];
+    const dataItem = rawData[idx % total];
+    const progression = Math.floor(idx / total);
+    const progressionLabels = ['', ' — Práctica', ' — Aplicación', ' — Maestría'];
+    const suffix = progressionLabels[Math.min(progression, progressionLabels.length - 1)];
+    const title = `${dataItem[0]}${suffix}`;
+    lessons.push({
       id,
-      title: item[0],
-      description: item[1],
+      title,
+      description: dataItem[1],
       type,
-      locked: !(prefix === 'a' && num === 1), // Desbloqueada únicamente fr-a-1 por defecto
+      locked: !(prefix === 'a1' && num === 1),
       completed: false,
       stars: 0,
       position,
-      aiPrompt: `Roleplay: Discuss the topic of '${item[0]}' in French using the key terminology related to '${item[2]}'.`
-    };
-  });
+      aiPrompt: `Contexte professionnel francophone : Discutez du sujet '${dataItem[0]}' en utilisant le vocabulaire clé '${dataItem[2]}' au niveau approprié.`,
+    });
+  }
+  return lessons;
 }
 
 export const CURRICULUM_FR: LevelSection[] = [
   {
-    id: 'FR-A',
-    title: 'Nivel A: Bases y Supervivencia',
-    description: 'Establece los cimientos indispensables del francés y sobrevive en entornos de trabajo.',
+    id: 'FR-A1',
+    title: 'Nivel A1: Bases y Supervivencia',
+    description: 'Establece los cimientos del francés: saludos, números, rutinas básicas de oficina.',
     color: 'emerald',
-    lessons: buildLessons('a', TEMAS_A_DATA)
+    lessons: buildLessons('a1', TEMAS_A1_DATA, 200)
   },
   {
-    id: 'FR-B',
-    title: 'Nivel B: Operaciones y Profesional',
-    description: 'Comunícate con soltura, redacta correos formales y lidera juntas con precisión en francés.',
+    id: 'FR-A2',
+    title: 'Nivel A2: Comunicación Cotidiana',
+    description: 'Interactúa en situaciones elementales: pedidos, correos básicos, desplazamientos.',
+    color: 'emerald',
+    lessons: buildLessons('a2', TEMAS_A2_DATA, 200)
+  },
+  {
+    id: 'FR-B1',
+    title: 'Nivel B1: Autonomía Profesional',
+    description: 'Redacta correos formales, lidera juntas y expresa opiniones con soltura.',
     color: 'blue',
-    lessons: buildLessons('b', TEMAS_B_DATA)
+    lessons: buildLessons('b1', TEMAS_B1_DATA, 200)
   },
   {
-    id: 'FR-C',
-    title: 'Nivel C: Gestión Estratégica',
-    description: 'Domina negociaciones de alto nivel, fusiones y discursos en francés ante mesas directivas.',
+    id: 'FR-B2',
+    title: 'Nivel B2: Operaciones Ejecutivas',
+    description: 'Domina la gestión de proyectos, equipos y presupuestos en francés de negocios.',
+    color: 'blue',
+    lessons: buildLessons('b2', TEMAS_B2_DATA, 200)
+  },
+  {
+    id: 'FR-C1',
+    title: 'Nivel C1: Liderazgo Estratégico',
+    description: 'Lidera negociaciones de alto nivel, discursos corporativos y estrategia organizacional.',
     color: 'orange',
-    lessons: buildLessons('c', TEMAS_C_DATA)
-  }
+    lessons: buildLessons('c1', TEMAS_C1_DATA, 200)
+  },
+  {
+    id: 'FR-C2',
+    title: 'Nivel C2: Geopolítica Global',
+    description: 'Domina retórica ejecutiva, geopolítica corporativa y toma de decisiones globales.',
+    color: 'orange',
+    lessons: buildLessons('c2', TEMAS_C2_DATA, 200)
+  },
+  {
+    id: 'FR-TFI',
+    title: 'Nivel TFI: Certificación TFI®',
+    description: 'Preparación intensiva para el examen oficial TFI® con ejercicios del formato real.',
+    color: 'purple',
+    lessons: buildLessons('tfi', TEMAS_TFI_DATA, 200)
+  },
+  {
+    id: 'FR-M1',
+    title: 'Nivel M1: RRPP y Gestión de Crisis',
+    description: 'Gestiona la comunicación de crisis, relaciones públicas y reputación de marca.',
+    color: 'purple',
+    lessons: buildLessons('m1', TEMAS_M1_DATA, 200)
+  },
+  {
+    id: 'FR-M2',
+    title: 'Nivel M2: Fusiones y Adquisiciones',
+    description: 'Lidera integraciones corporativas y negociaciones de F&A transfronterizas.',
+    color: 'purple',
+    lessons: buildLessons('m2', TEMAS_M2_DATA, 200)
+  },
+  {
+    id: 'FR-PRO',
+    title: 'Nivel PRO: Pro Executive: Gobernanza',
+    description: 'Domina la supervisión del consejo, auditoría ética y sucesión ejecutiva global.',
+    color: 'purple',
+    lessons: buildLessons('pro', TEMAS_PRO_DATA, 200)
+  },
 ];
 
 // Helper para búsqueda rápida
 export function getFrenchLessonById(id: string): LessonNode | undefined {
-    for (const section of CURRICULUM_FR) {
-        const lesson = section.lessons.find(l => l.id === id);
-        if (lesson) return lesson;
-    }
-    return undefined;
+  const cleanId = id.toLowerCase();
+  for (const section of CURRICULUM_FR) {
+    const lesson = section.lessons.find(l => l.id.toLowerCase() === cleanId);
+    if (lesson) return lesson;
+  }
+  return undefined;
 }

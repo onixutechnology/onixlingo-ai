@@ -27,6 +27,9 @@ class GcpTtsService:
         elif lang == "zh":
             language_code = "zh-CN"
             voice_name = "zh-CN-Neural2-B"  # Voz Neural2 premium masculina en chino mandarín
+        elif lang == "es":
+            language_code = "es-ES"
+            voice_name = "es-ES-Neural2-F"  # Voz Neural2 premium masculina en español de España
         else:
             language_code = "en-US"
             voice_name = "en-US-Neural2-J"  # Voz Neural2 premium masculina en inglés americano

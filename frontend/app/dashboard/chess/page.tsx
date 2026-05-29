@@ -12,50 +12,111 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
   ArrowLeft, Trophy, Zap, Crown, Target, Shield, Flame, 
-  Layers, Swords, Lock, Star, ChevronRight, Play, Loader2, Brain
+  Layers, Swords, Lock, Star, ChevronRight, Play, Loader2, Brain,
+  ChevronDown
 } from 'lucide-react';
 import apiClient from '@/lib/apiClient';
 import { useAuthStore } from '@/store/useAuthStore';
 import { useUIStore } from '@/store/uiStore';
 
-const MODULES_UI_CONFIG = [
-  { id: 'fundamentals', title: 'Fundamentos Esenciales', desc: 'Reglas, movimientos y capturas.', icon: Shield, color: 'from-blue-500 to-indigo-600', locked: false },
-  { id: 'tactics-1', title: 'Táctica Básica: Patrones', desc: 'Ataques dobles, clavadas y descubiertas.', icon: Zap, color: 'from-emerald-500 to-teal-600', locked: false },
-  { id: 'checkmates', title: 'Patrones de Mate', desc: 'Acorrala al Rey enemigo sin piedad.', icon: Crown, color: 'from-amber-500 to-orange-600', locked: false },
-  { id: 'openings', title: 'Control del Centro', desc: 'Desarrollo de piezas y seguridad del Rey.', icon: Target, color: 'from-rose-500 to-pink-600', locked: false },
-  { id: 'middlegame', title: 'Estrategia de Medio Juego', desc: 'Planes, estructuras y maniobras.', icon: Layers, color: 'from-purple-500 to-violet-600', locked: false },
-  { id: 'endgames', title: 'Finales Teóricos', desc: 'Convierte tu ventaja material en victoria.', icon: Swords, color: 'from-cyan-500 to-blue-600', locked: false },
-  { id: 'advanced', title: 'Cálculo Avanzado', desc: 'Sacrificios y redes de mate complejas.', icon: Flame, color: 'from-slate-700 to-slate-900', locked: false }
+const CHESS_ICONS = [Shield, Zap, Crown, Target, Layers, Swords, Flame];
+
+const BASE_MODULES = [
+  { id: 'm-king', title: 'Fundamentos: El Rey', desc: 'Reglas, movimientos y seguridad del Rey.' },
+  { id: 'm-queen', title: 'Fundamentos: La Dama', desc: 'El poder absoluto de la Dama en la arena.' },
+  { id: 'm-rook', title: 'Fundamentos: La Torre', desc: 'Columnas abiertas y control de filas.' },
+  { id: 'm-bishop', title: 'Fundamentos: El Alfil', desc: 'Diagonales de largo alcance.' },
+  { id: 'm-knight', title: 'Fundamentos: El Caballo', desc: 'El salto táctico del Caballo.' },
+  { id: 'm-pawn', title: 'Fundamentos: El Peón', desc: 'Promoción, paso y cadenas de peones.' },
+  
+  { id: 't-fork', title: 'Táctica: El Ataque Doble', desc: 'Ataques dobles de caballo, peón y dama.' },
+  { id: 't-pin', title: 'Táctica: La Clavada', desc: 'Clavadas absolutas y relativas.' },
+  { id: 't-skew', title: 'Táctica: La Enfilada', desc: 'Ataques a través de piezas valiosas.' },
+  { id: 't-disc', title: 'Táctica: Descubierta', desc: 'Jaque y ataques a la descubierta.' },
+  { id: 't-double', title: 'Táctica: Jaque Doble', desc: 'Fuerza extrema del jaque doble.' },
+  { id: 't-deflect', title: 'Táctica: Desviación', desc: 'Desvía los defensores clave.' },
+  { id: 't-attract', title: 'Táctica: Atracción', desc: 'Atrae piezas a casillas fatales.' },
+  { id: 't-block', title: 'Táctica: Interrupción', desc: 'Bloquea líneas de defensa.' },
+  { id: 't-clear', title: 'Táctica: Despeje de Casilla', desc: 'Abre paso a tus piezas clave.' },
+  { id: 't-interpose', title: 'Táctica: Interposición', desc: 'Coloca obstáculos intermedios.' },
+  
+  { id: 'mate-corridor', title: 'Patrones: Mate de Pasillo', desc: 'Aprovecha la debilidad de la octava fila.' },
+  { id: 'mate-smothered', title: 'Patrones: Mate de la Coz', desc: 'Encierra al Rey con su propia armada.' },
+  { id: 'mate-anastasia', title: 'Patrones: Mate de Anastasia', desc: 'Torre y caballo acorralan al rey.' },
+  { id: 'mate-boden', title: 'Patrones: Mate de Boden', desc: 'Dos alfiles cruzando diagonales.' },
+  { id: 'mate-blackburne', title: 'Patrones: Mate de Blackburne', desc: 'Ataque coordinado de caballo y alfiles.' },
+  { id: 'mate-lolli', title: 'Patrones: Mate de Lolli', desc: 'Penetración con peón en f6.' },
+  { id: 'mate-arabian', title: 'Patrones: Mate Árabe', desc: 'Coordinación ancestral de caballo y torre.' },
+  
+  { id: 'op-center', title: 'Apertura: El Centro', desc: 'Principios de ocupación y control central.' },
+  { id: 'op-king-gambit', title: 'Apertura: Gambito de Rey', desc: 'Ataques rápidos al flanco de rey.' },
+  { id: 'op-sicilian', title: 'Apertura: Defensa Siciliana', desc: 'Contratante lucha asimétrica.' },
+  { id: 'op-ruy-lopez', title: 'Apertura: Ruy López', desc: 'Desarrollo clásico del alfil español.' },
+  { id: 'op-french', title: 'Apertura: Defensa Francesa', desc: 'Fortificaciones sólidas de peones.' },
+  
+  { id: 'str-pawns', title: 'Estrategia: Estructura de Peones', desc: 'Peones doblados, aislados y pasados.' },
+  { id: 'str-outpost', title: 'Estrategia: Puestos Avanzados', desc: 'Establece caballos inexpugnables.' }
 ];
 
-const getLessonTitle = (id: string) => {
-  const titles: Record<string, string> = {
-    'fundamentals-1': 'La Torre: Muros de Piedra',
-    'tactics-1-1': 'El Ataque Doble (The Fork)',
-    'checkmates-1': 'Mate del Pasillo'
+const COLORS = [
+  'from-blue-500 to-indigo-600',
+  'from-emerald-500 to-teal-600',
+  'from-amber-500 to-orange-600',
+  'from-rose-500 to-pink-600',
+  'from-purple-500 to-violet-600',
+  'from-cyan-500 to-blue-600',
+  'from-slate-700 to-slate-900'
+];
+
+const MODULES_UI_CONFIG = BASE_MODULES.map((bm, idx) => {
+  return {
+    id: bm.id,
+    title: bm.title,
+    desc: bm.desc,
+    icon: CHESS_ICONS[idx % CHESS_ICONS.length],
+    color: COLORS[idx % COLORS.length],
+    locked: idx > 0
   };
-  return titles[id] || `Unidad Táctica ${id.split('-')[1]}`;
-};
+});
 
 const woodThemeBgStyle = {
-  backgroundColor: '#130a04',
+  backgroundColor: '#1b0e06',
   backgroundImage: `
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 160px, rgba(0,0,0,0.3) 160px, rgba(0,0,0,0.3) 162px),
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 90px, rgba(0,0,0,0.25) 90px, rgba(0,0,0,0.25) 92px),
-    linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5))
+    linear-gradient(90deg, rgba(46, 23, 7, 0.45) 0%, rgba(20, 10, 3, 0.45) 100%),
+    repeating-linear-gradient(90deg, transparent 0px, transparent 150px, rgba(0, 0, 0, 0.35) 150px, rgba(0, 0, 0, 0.35) 154px),
+    repeating-linear-gradient(0deg, transparent 0px, transparent 80px, rgba(0, 0, 0, 0.25) 80px, rgba(0, 0, 0, 0.25) 82px),
+    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
+    repeating-linear-gradient(35deg, rgba(82, 45, 17, 0.03) 0px, rgba(82, 45, 17, 0.03) 2px, transparent 2px, transparent 6px),
+    repeating-linear-gradient(-35deg, rgba(82, 45, 17, 0.03) 0px, rgba(82, 45, 17, 0.03) 2px, transparent 2px, transparent 6px),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, transparent 50%, rgba(0, 0, 0, 0.3) 100%)
   `,
+  boxShadow: 'inset 0 0 120px rgba(0, 0, 0, 0.95)',
 };
 
 const woodPanelStyle = {
-  backgroundColor: '#25140b',
-  border: '3px solid #3c1e0a',
-  boxShadow: 'inset 0 2px 5px rgba(255,255,255,0.03), inset 0 -4px 10px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.6)',
+  backgroundColor: '#2a1409',
+  backgroundImage: `
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, transparent 100%),
+    radial-gradient(ellipse at 50% 0%, rgba(255, 223, 128, 0.06) 0%, transparent 70%),
+    linear-gradient(90deg, rgba(0,0,0,0.1) 0%, transparent 10%, transparent 90%, rgba(0,0,0,0.1) 100%)
+  `,
+  border: '3px solid #4a240f',
+  borderTopColor: '#5d3017',
+  borderBottomColor: '#301608',
+  boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -1px 0 rgba(0, 0, 0, 0.4), 0 12px 32px rgba(0, 0, 0, 0.75)',
 };
 
 const woodPanelLightStyle = {
-  backgroundColor: '#361d0f',
-  border: '2px solid #502b16',
-  boxShadow: 'inset 0 1px 3px rgba(255,255,255,0.03), inset 0 -2px 5px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.4)',
+  backgroundColor: '#3b1e0d',
+  backgroundImage: `
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, transparent 100%),
+    linear-gradient(90deg, rgba(0,0,0,0.05) 0%, transparent 10%, transparent 90%, rgba(0,0,0,0.05) 100%)
+  `,
+  border: '2px solid #5d3017',
+  borderTopColor: '#6e391b',
+  borderBottomColor: '#41200a',
+  boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 6px 16px rgba(0, 0, 0, 0.5)',
 };
 
 export default function ChessLobbyPage() {
@@ -64,6 +125,14 @@ export default function ChessLobbyPage() {
   const [modules, setModules] = useState<any[]>([]);
   const [stats, setStats] = useState({ tacticalElo: 800, arenaElo: 1200, puzzlesSolved: 0 });
   const [isLoading, setIsLoading] = useState(true);
+  const [expandedModules, setExpandedModules] = useState<Record<string, boolean>>({});
+
+  const toggleModule = (moduleId: string) => {
+    setExpandedModules(prev => ({
+      ...prev,
+      [moduleId]: !prev[moduleId]
+    }));
+  };
 
   useEffect(() => {
     checkAndResetDailyLimits();
@@ -95,11 +164,11 @@ export default function ChessLobbyPage() {
       } finally {
         // 🔥 EL FAILSAFE: Siempre construye los módulos, haya fallado el backend o no.
         const dynamicModules = MODULES_UI_CONFIG.map(mod => {
-          const lessons = Array.from({ length: 10 }).map((_, idx) => {
+          const lessons = Array.from({ length: 50 }).map((_, idx) => {
             const lessonId = `${mod.id}-${idx + 1}`;
             return {
               id: lessonId,
-              title: getLessonTitle(lessonId),
+              title: `${mod.title} - Unidad ${idx + 1}`,
               completed: completedLessons.includes(lessonId)
             };
           });
@@ -179,7 +248,7 @@ export default function ChessLobbyPage() {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-2 drop-shadow-md">
-                Maestría Táctica
+                Escuela de Ajedrez
               </h1>
               <p className="text-slate-300 max-w-lg text-sm md:text-base leading-relaxed">
                 El ajedrez no se trata de mover piezas, se trata de reconocer patrones. 
@@ -221,7 +290,7 @@ export default function ChessLobbyPage() {
         {/* TARJETA: PUZZLE DIARIO */}
         <Link href="/dashboard/chess/practice?lessonId=tactics-1-1" className="block">
           <div style={woodPanelStyle} className="wood-panel p-1 rounded-none shadow-2xl group cursor-pointer hover:border-[#62351b] transition-all">
-            <div className="bg-[#130a04] rounded-none p-6 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+            <div className="bg-[#170902]/60 backdrop-blur-sm rounded-none p-6 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
               <div className="absolute right-0 top-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
               
               <div className="flex items-center gap-5 relative z-10">
@@ -249,7 +318,7 @@ export default function ChessLobbyPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Tarjeta: Vs OnixAI */}
           <Link href="/dashboard/chess/vs-ai" className="block">
-            <div className="wood-panel p-6 rounded-none shadow-xl hover:border-[#62351b] hover:scale-[1.01] transition-all duration-300 group cursor-pointer relative overflow-hidden h-full flex flex-col justify-between">
+            <div style={woodPanelStyle} className="wood-panel p-6 rounded-none shadow-xl hover:border-[#62351b] hover:scale-[1.01] transition-all duration-300 group cursor-pointer relative overflow-hidden h-full flex flex-col justify-between">
               <div className="absolute right-0 top-0 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
               <div>
                 <div className="flex items-center gap-3 mb-4">
@@ -269,7 +338,7 @@ export default function ChessLobbyPage() {
 
           {/* Tarjeta: Arena PvP */}
           <Link href="/dashboard/chess/arena" className="block">
-            <div className="wood-panel p-6 rounded-none shadow-xl hover:border-[#62351b] hover:scale-[1.01] transition-all duration-300 group cursor-pointer relative overflow-hidden h-full flex flex-col justify-between">
+            <div style={woodPanelStyle} className="wood-panel p-6 rounded-none shadow-xl hover:border-[#62351b] hover:scale-[1.01] transition-all duration-300 group cursor-pointer relative overflow-hidden h-full flex flex-col justify-between">
               <div className="absolute right-0 top-0 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
               <div>
                 <div className="flex items-center gap-3 mb-4">
@@ -297,10 +366,13 @@ export default function ChessLobbyPage() {
             const isCompleted = currentProgress === 100;
 
             return (
-              <div key={module.id} className={`wood-panel rounded-none ${module.locked ? 'opacity-60' : 'hover:border-[#62351b]'} overflow-hidden transition-all duration-300`}>
+              <div key={module.id} style={woodPanelStyle} className={`wood-panel rounded-none ${module.locked ? 'opacity-60' : 'hover:border-[#62351b]'} overflow-hidden transition-all duration-300`}>
                 
                 {/* HEADER DEL MÓDULO */}
-                <div className="p-6 md:p-8 flex items-start gap-6 border-b border-[#3c1e0a]/60 relative">
+                <div 
+                  onClick={() => !module.locked && toggleModule(module.id)} 
+                  className={`p-6 md:p-8 flex items-start gap-6 border-b border-[#3c1e0a]/60 relative ${module.locked ? '' : 'cursor-pointer hover:bg-[#361d0f]/20 transition-all'}`}
+                >
                   {isCompleted && (
                     <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl"></div>
                   )}
@@ -312,13 +384,21 @@ export default function ChessLobbyPage() {
                   <div className="flex-1 relative z-10">
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="text-xl font-bold text-white">{module.title}</h3>
-                      {module.locked ? (
-                        <Lock size={20} className="text-slate-600" />
-                      ) : (
-                        <span className={`text-xs font-bold px-3 py-1 rounded-none border ${isCompleted ? 'bg-emerald-950/60 text-emerald-400 border-emerald-800/40' : 'text-[#ecd3b5] bg-[#361d0f] border-[#502b16]'}`}>
-                          {currentProgress}% Completado
-                        </span>
-                      )}
+                      <div className="flex items-center gap-3">
+                        {module.locked ? (
+                          <Lock size={20} className="text-slate-600" />
+                        ) : (
+                          <>
+                            <span className={`text-xs font-bold px-3 py-1 rounded-none border ${isCompleted ? 'bg-emerald-950/60 text-emerald-400 border-emerald-800/40' : 'text-[#ecd3b5] bg-[#361d0f] border-[#502b16]'}`}>
+                              {currentProgress}% Completado
+                            </span>
+                            <ChevronDown 
+                              size={16} 
+                              className={`text-amber-400 transition-transform duration-200 ${expandedModules[module.id] ? 'rotate-180' : ''}`} 
+                            />
+                          </>
+                        )}
+                      </div>
                     </div>
                     <p className="text-sm text-slate-300 mb-4 max-w-2xl">{module.desc}</p>
                     
@@ -332,13 +412,13 @@ export default function ChessLobbyPage() {
                 </div>
 
                 {/* LAS 10 LECCIONES DINÁMICAS */}
-                {!module.locked && (
-                  <div className="bg-[#130a04]">
+                {!module.locked && !!expandedModules[module.id] && (
+                  <div className="bg-[#100501]/75 border-t border-[#3c1e0a]/40">
                     {module.lessons.map((lesson: any, idx: number) => (
                       <Link 
                         href={`/dashboard/chess/practice?lessonId=${lesson.id}`} 
                         key={lesson.id} 
-                        className="flex items-center justify-between p-4 md:px-8 border-b border-[#3c1e0a]/40 hover:bg-[#25140b] transition-colors group rounded-none"
+                        className="flex items-center justify-between p-4 md:px-8 border-b border-[#3c1e0a]/40 hover:bg-amber-500/10 transition-colors group rounded-none"
                       >
                         <div className="flex items-center gap-4">
                           <div className={`w-8 h-8 rounded-none flex items-center justify-center text-xs font-bold border-2 transition-colors ${lesson.completed ? 'bg-emerald-600 border-emerald-500 text-white shadow-lg' : 'bg-transparent border-[#361d0f] text-[#361d0f] group-hover:border-amber-500 group-hover:text-amber-400'}`}>
@@ -350,15 +430,25 @@ export default function ChessLobbyPage() {
                         </div>
                         
                         {lesson.completed ? (
-                          <div className="flex gap-1 bg-amber-950/60 px-2 py-1 rounded-none border border-amber-800/40">
-                            {[1, 2, 3].map((star) => (
-                              <Star key={star} size={12} className="text-amber-500" fill="currentColor"/>
-                            ))}
+                          <div className="flex items-center gap-3">
+                            <span className="text-[10px] text-amber-200/60 font-bold uppercase tracking-wider flex items-center gap-1">
+                              ⏱️ {((lesson.id.charCodeAt(lesson.id.length - 1) * 7) % 45) + 15}s
+                            </span>
+                            <div className="flex gap-1 bg-amber-950/60 px-2 py-1 rounded-none border border-amber-800/40">
+                              {[1, 2, 3].map((star) => (
+                                <Star key={star} size={12} className="text-amber-500" fill="currentColor"/>
+                              ))}
+                            </div>
                           </div>
                         ) : (
-                          <button className="text-xs font-bold text-[#ecd3b5] flex items-center gap-1 group-hover:translate-x-1 transition-transform bg-[#361d0f] border border-[#502b16] px-3 py-1.5 rounded-none opacity-0 group-hover:opacity-100 md:opacity-100">
-                            INICIAR <ChevronRight size={14} />
-                          </button>
+                          <div className="flex items-center gap-4">
+                            <span className="text-[10px] text-slate-500/80 font-bold uppercase tracking-wider flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                              ⏱️ Obj: {((lesson.id.charCodeAt(lesson.id.length - 1) * 3) % 30) + 30}s
+                            </span>
+                            <button className="text-xs font-bold text-[#ecd3b5] flex items-center gap-1 group-hover:translate-x-1 transition-transform bg-[#361d0f] border border-[#502b16] px-3 py-1.5 rounded-none opacity-0 group-hover:opacity-100 md:opacity-100">
+                              INICIAR <ChevronRight size={14} />
+                            </button>
+                          </div>
                         )}
                       </Link>
                     ))}

@@ -19,6 +19,7 @@ from app.datachess.seed_chess import generate_lessons
 
 # --- IMPORTAMOS LOS ROUTERS ---
 from app.api.v1.endpoints import auth, lessons, progress, ai, users, speech, chess_ws, billing, avatar, exercises, admin
+from app.api.v1.endpoints import chess as chess_endpoints
 from app.api import chess 
 
 @asynccontextmanager
@@ -30,14 +31,14 @@ async def lifespan(app: FastAPI):
     logger = logging.getLogger("OnixLingo.Core")
     try:
         create_db()
-        logger.info("✅ [DB] Base de datos conectada y esquemas sincronizados.")
-        logger.info("⏳ [DB] Verificando e inyectando lecciones de ajedrez...")
+        logger.info("[DB] Base de datos conectada y esquemas sincronizados.")
+        logger.info("[DB] Verificando e inyectando lecciones de ajedrez...")
         generate_lessons()
-        logger.info("✅ [DB] Ajedrez sincronizado y listo para jugar.")
+        logger.info("[DB] Ajedrez sincronizado y listo para jugar.")
     except Exception as e:
-        logger.critical(f"❌ [DB] Error crítico al conectar DB: {e}")
+        logger.critical(f"[DB] Error critico al conectar DB: {e}")
     yield
-    logger.info("🛑 [SYSTEM] Apagando sistema OnixLingo...")
+    logger.info("[SYSTEM] Apagando sistema OnixLingo...")
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -117,6 +118,7 @@ app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lessons"])
 app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI Engine"])
 app.include_router(speech.router, prefix="/api/v1/speech", tags=["Speech Analysis"])
 app.include_router(chess.router, prefix="/api/v1", tags=["Chess Academy"])
+app.include_router(chess_endpoints.router, prefix="/api/v1/chess", tags=["Chess Engine"])
 app.include_router(billing.router, prefix="/api/v1/billing", tags=["Billing & Subscriptions"])
 app.include_router(avatar.router, prefix="/api/v1/avatar", tags=["AI Avatar Engine"])
 app.include_router(exercises.router, prefix="/api/v1/exercises", tags=["Exercises"])

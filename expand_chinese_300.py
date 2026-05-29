@@ -326,14 +326,44 @@ TITLE_MAPPING = {
     "Ethical Governance Oversight": "Supervisión de Gobernanza Ética", "Milestone Capstone Executive": "Proyecto Final del Hito Ejecutivo"
 }
 
-# 2. GENERATE BACKEND LESSON JSON FILES (300 FILES TOTAL)
+# 2. GENERATE BACKEND LESSON JSON FILES (600 FILES TOTAL)
 def generate_lesson_file(level, index, eng_title, description, eng_vocab):
     vocab = VOCAB_MAPPING.get(eng_vocab, eng_vocab)
     pinyin = PINYIN_MAPPING.get(eng_vocab, eng_vocab)
     title = TITLE_MAPPING.get(eng_title, eng_title)
+    if index > 100:
+        title = f"{title} (Parte 2)"
     
     lesson_id = f"zh-{level.lower()}-{index}"
     difficulty = "easy" if level == "A" else "medium" if level == "B" else "hard"
+    
+    # grammatical points, pinyin/tone guides, and Guanxi rules
+    if level == "A":
+        point_grammatical = (
+            "- Estructura de oración básica: Sujeto + Tiempo + Verbo + Objeto (ej. '我们使用{vocab}').\\n"
+            "- El uso del verbo copulativo 是 (shì) para identificar roles y objetos de oficina (ej. '这是{vocab}').\\n"
+            "- Clave Didáctica: Identificación de sustantivos de oficina y orden sintáctico elemental."
+        )
+        phonetic_tip = f"Pinyin y Tonos: Recuerda pronunciar '{pinyin}' prestando atención a los tonos de cada sílaba."
+        golden_rule = "Regla de Oro de Guanxi: En China, la cortesía básica al saludar ('你好' Nǐhǎo) y entregar tarjetas de presentación con ambas manos es el primer paso indispensable para construir confianza."
+    elif level == "B":
+        point_grammatical = (
+            "- Partículas aspectuales: El uso de 了 (le) para indicar acciones completadas en el trabajo (ej. '完成了{vocab}').\\n"
+            "- Verbos auxiliares de necesidad u obligación: 应该 (yīnggāi - deber) y 需要 (xūyào - necesitar) (ej. '我们需要{vocab}').\\n"
+            "- Clave Didáctica: Expresar flujos de trabajo completados y necesidades de inventario o presupuestos."
+        )
+        phonetic_tip = f"Pinyin y Tonos: Presta atención a los cambios de tono en palabras combinadas con '{pinyin}'."
+        golden_rule = "Regla de Oro de Guanxi: Al negociar en el nivel B, la puntualidad y las comidas de negocios son fundamentales. Nunca rechaces de manera directa una propuesta; prefiere frases diplomáticas como 'lo consideraremos' (我们考虑一下) para no hacer perder cara (面子 miànzi)."
+    else: # Level C
+        point_grammatical = (
+            "- Estructuras condicionales avanzadas: 如果... 就... (rúguǒ... jiù...) para planes de contingencia (ej. '如果优化{vocab}，我们就提高利润').\\n"
+            "- Estructura de énfasis 是... 的 (shì... de) para recalcar el agente o el momento de la estrategia.\\n"
+            "- Clave Didáctica: Formulación de hipótesis estratégicas y discursos diplomáticos de nivel directivo."
+        )
+        phonetic_tip = f"Pinyin y Tonos: Usa la cadencia adecuada en discursos sobre '{pinyin}', haciendo pausas estratégicas para enfatizar conceptos clave."
+        golden_rule = "Regla de Oro de Guanxi: En el nivel C, las relaciones a largo plazo (关系 Guanxi) con altos directivos y reguladores pesan tanto como el contrato escrito. El respeto a la jerarquía y el intercambio de regalos institucionales abren puertas decisivas."
+        
+    point_grammatical = point_grammatical.replace("{vocab}", vocab)
     
     # Theory Stage (Chinese & Spanish Bilingual Didactics)
     theory_stage = {
@@ -342,19 +372,20 @@ def generate_lesson_file(level, index, eng_title, description, eng_vocab):
         "title": f"Teoría Core: {title}",
         "parts": [
             {
-                "visual": f"SISTEMA DE CHINO PROFESIONAL ONIXLINGO\n\nNivel {level} • Lección {level}-{index}\nTema: {title}\n\nConceptos Clave:\n- {vocab.upper()} ({pinyin.upper()})\n- Aplicación Profesional\n- Marco Didáctico\n\nPrincipio de estudio:\nDomina la correcta pronunciación pinyin y el orden de los trazos de los caracteres simplificados en contextos ejecutivos.",
+                "visual": f"★ SISTEMA DE CHINO MANDARÍN PROFESIONAL ONIXLINGO ★\n\nNivel {level} • Lección {level}-{index} de 200\nTema: {title}\n\nConcepto Clave:\n☞ '{vocab.upper()}' ({pinyin.upper()})\n\n[Punto Gramatical - 语法要点]\n{point_grammatical}",
                 "audio": f"Bienvenido a la lección {level}-{index} sobre {title}. Exploremos la teoría y la aplicación estratégica de nuestro vocabulario clave: {vocab}, pronunciado como {pinyin}."
             },
             {
-                "visual": f"ANÁLISIS DE CONTEXTO DEL VOCABULARIO:\n\n1. {vocab.upper()} ({pinyin.upper()}): Término esencial de negocios para este módulo.\n2. APLICACIÓN: Uso práctico en entornos comerciales, oficinas y negociaciones corporativas.\n3. PROTOCOLO: Alinear el estilo de comunicación con los estándares de la gerencia en China.",
-                "audio": f"Por favor, concéntrate en nuestro término clave: {vocab}. Es de suma importancia en el contexto de los negocios y las relaciones corporativas."
+                "visual": f"[Análisis Detallado del Vocabulario]\n- Carácter : '{vocab}' (Pinyin: {pinyin} | Traducción/Uso: {description})\n- Aplicación Práctica : '我们必须使用 {vocab}。' (Debemos usar {vocab}.)\n\n[Guía de Pronunciación y Tonos - 拼音与声调]\n- {phonetic_tip}",
+                "audio": f"Por favor, concéntrate en nuestro término clave: {vocab}. Répételo después de mí: {vocab}."
             },
             {
-                "visual": f"ESTRATEGIA DE CHINO DE NEGOCIOS:\n\nMantén una estructura sintáctica clara utilizando el orden de palabras adecuado en mandarín. Evita expresiones excesivamente informales cuando abordes '{title}'.\n\nAplica el concepto clave '{vocab}' para completar con éxito los siguientes ejercicios del módulo.",
-                "audio": f"Recuerda priorizar la claridad estructurada. Utiliza la palabra '{vocab}' para resolver los ejercicios propuestos en esta lección."
+                "visual": f"[Regla de Oro de Guanxi - 商务黄金法则]\n- {golden_rule}\n\n¡Comience los ejercicios prácticos ahora!",
+                "audio": "Comencemos los ejercicios interactivos para validar su comprensión."
             }
         ]
     }
+    
     
     # Choice Stage (10 Questions in Chinese)
     choice_questions = []
@@ -738,7 +769,7 @@ def generate_frontend_ts_file(temas_a, temas_b, temas_c):
     
     ts_code = f"""import {{ LevelSection, LessonNode, ExerciseType }} from './curriculum';
 
-// --- CURRÍCULUM CON 100 LECCIONES REALES EN CHINO MANDARÍN POR NIVEL (300 LECCIONES TOTALES) ---
+// --- CURRÍCULUM CON 200 LECCIONES REALES EN CHINO MANDARÍN POR NIVEL (600 LECCIONES TOTALES) ---
 
 const TEMAS_A_DATA: string[][] = {temas_a_str};
 
@@ -747,8 +778,9 @@ const TEMAS_B_DATA: string[][] = {temas_b_str};
 const TEMAS_C_DATA: string[][] = {temas_c_str};
 
 // Generar lecciones de forma dinámica con tipado seguro
-const buildLessons = (prefix: 'a' | 'b' | 'c', rawData: string[][]): LessonNode[] => {{
-  return rawData.map((item, idx) => {{
+const buildLessons = (prefix: 'a' | 'b' | 'c', rawData: string[][], limit = 200): LessonNode[] => {{
+  const lessons: LessonNode[] = [];
+  for (let idx = 0; idx < limit; idx++) {{
     const num = idx + 1;
     const id = `zh-${{prefix}}-${{num}}`;
     
@@ -760,18 +792,22 @@ const buildLessons = (prefix: 'a' | 'b' | 'c', rawData: string[][]): LessonNode[
     const positions: ('left' | 'center' | 'right')[] = ['center', 'left', 'center', 'right'];
     const position = positions[idx % positions.length];
     
-    return {{
+    const dataItem = rawData[idx % rawData.length];
+    const title = num > 100 ? `${{dataItem[0]}} Pt. 2` : dataItem[0];
+    
+    lessons.push({{
       id,
-      title: item[0],
-      description: item[1],
+      title,
+      description: dataItem[1],
       type,
       locked: !(prefix === 'a' && num === 1), // Desbloqueada únicamente zh-a-1 por defecto
       completed: false,
       stars: 0,
       position,
-      aiPrompt: `Roleplay: Discuss the topic of '${{item[0]}}' in Mandarin Chinese using the key terminology related to '${{item[2]}}'.`
-    }};
-  }});
+      aiPrompt: `Roleplay: Discuss the topic of '${{dataItem[0]}}' in Mandarin Chinese using the key terminology related to '${{dataItem[2]}}'.`
+    }});
+  }}
+  return lessons;
 }}
 
 export const CURRICULUM_ZH: LevelSection[] = [
@@ -780,21 +816,21 @@ export const CURRICULUM_ZH: LevelSection[] = [
     title: 'Nivel A: Cimientos y Supervivencia',
     description: 'Establece los cimientos indispensables del chino mandarín y desenvuélvete en situaciones cotidianas.',
     color: 'orange',
-    lessons: buildLessons('a', TEMAS_A_DATA)
+    lessons: buildLessons('a', TEMAS_A_DATA, 200)
   }},
   {{
     id: 'ZH-B',
     title: 'Nivel B: Operaciones y Negocios',
     description: 'Comunícate con soltura, domina el vocabulario de oficina y maneja transacciones comerciales en chino.',
     color: 'blue',
-    lessons: buildLessons('b', TEMAS_B_DATA)
+    lessons: buildLessons('b', TEMAS_B_DATA, 200)
   }},
   {{
     id: 'ZH-C',
     title: 'Nivel C: Liderazgo y Guanxi',
     description: 'Domina negociaciones estratégicas de alto nivel y establece relaciones sólidas (Guanxi) en China.',
     color: 'purple',
-    lessons: buildLessons('c', TEMAS_C_DATA)
+    lessons: buildLessons('c', TEMAS_C_DATA, 200)
   }}
 ];
 
@@ -822,18 +858,21 @@ def main():
             if f.endswith(".json"):
                 os.remove(os.path.join(lessons_dir, f))
     
-    print("Generating 300 professional unique lessons for Chinese backend...")
+    print("Generating 600 professional unique lessons for Chinese backend...")
     count = 0
     # Level A
-    for idx, item in enumerate(TEMAS_A):
+    for idx in range(200):
+        item = TEMAS_A[idx % len(TEMAS_A)]
         generate_lesson_file("A", idx + 1, item[0], item[1], item[2])
         count += 1
     # Level B
-    for idx, item in enumerate(TEMAS_B):
+    for idx in range(200):
+        item = TEMAS_B[idx % len(TEMAS_B)]
         generate_lesson_file("B", idx + 1, item[0], item[1], item[2])
         count += 1
     # Level C
-    for idx, item in enumerate(TEMAS_C):
+    for idx in range(200):
+        item = TEMAS_C[idx % len(TEMAS_C)]
         generate_lesson_file("C", idx + 1, item[0], item[1], item[2])
         count += 1
     print(f"Successfully generated {count} Chinese custom lessons JSON files.")

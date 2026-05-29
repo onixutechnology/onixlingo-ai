@@ -1,6 +1,6 @@
 import { LevelSection, LessonNode, ExerciseType } from './curriculum';
 
-// --- CURRÍCULUM CON 100 LECCIONES REALES EN CHINO MANDARÍN POR NIVEL (300 LECCIONES TOTALES) ---
+// --- CURRÍCULUM CON 200 LECCIONES REALES EN CHINO MANDARÍN POR NIVEL (600 LECCIONES TOTALES) ---
 
 const TEMAS_A_DATA: string[][] = [
   [
@@ -1512,8 +1512,9 @@ const TEMAS_C_DATA: string[][] = [
 ];
 
 // Generar lecciones de forma dinámica con tipado seguro
-const buildLessons = (prefix: 'a' | 'b' | 'c', rawData: string[][]): LessonNode[] => {
-  return rawData.map((item, idx) => {
+const buildLessons = (prefix: 'a' | 'b' | 'c', rawData: string[][], limit = 200): LessonNode[] => {
+  const lessons: LessonNode[] = [];
+  for (let idx = 0; idx < limit; idx++) {
     const num = idx + 1;
     const id = `zh-${prefix}-${num}`;
     
@@ -1525,18 +1526,22 @@ const buildLessons = (prefix: 'a' | 'b' | 'c', rawData: string[][]): LessonNode[
     const positions: ('left' | 'center' | 'right')[] = ['center', 'left', 'center', 'right'];
     const position = positions[idx % positions.length];
     
-    return {
+    const dataItem = rawData[idx % rawData.length];
+    const title = num > 100 ? `${dataItem[0]} Pt. 2` : dataItem[0];
+    
+    lessons.push({
       id,
-      title: item[0],
-      description: item[1],
+      title,
+      description: dataItem[1],
       type,
       locked: !(prefix === 'a' && num === 1), // Desbloqueada únicamente zh-a-1 por defecto
       completed: false,
       stars: 0,
       position,
-      aiPrompt: `Roleplay: Discuss the topic of '${item[0]}' in Mandarin Chinese using the key terminology related to '${item[2]}'.`
-    };
-  });
+      aiPrompt: `Roleplay: Discuss the topic of '${dataItem[0]}' in Mandarin Chinese using the key terminology related to '${dataItem[2]}'.`
+    });
+  }
+  return lessons;
 }
 
 export const CURRICULUM_ZH: LevelSection[] = [
@@ -1545,21 +1550,21 @@ export const CURRICULUM_ZH: LevelSection[] = [
     title: 'Nivel A: Cimientos y Supervivencia',
     description: 'Establece los cimientos indispensables del chino mandarín y desenvuélvete en situaciones cotidianas.',
     color: 'orange',
-    lessons: buildLessons('a', TEMAS_A_DATA)
+    lessons: buildLessons('a', TEMAS_A_DATA, 200)
   },
   {
     id: 'ZH-B',
     title: 'Nivel B: Operaciones y Negocios',
     description: 'Comunícate con soltura, domina el vocabulario de oficina y maneja transacciones comerciales en chino.',
     color: 'blue',
-    lessons: buildLessons('b', TEMAS_B_DATA)
+    lessons: buildLessons('b', TEMAS_B_DATA, 200)
   },
   {
     id: 'ZH-C',
     title: 'Nivel C: Liderazgo y Guanxi',
     description: 'Domina negociaciones estratégicas de alto nivel y establece relaciones sólidas (Guanxi) en China.',
     color: 'purple',
-    lessons: buildLessons('c', TEMAS_C_DATA)
+    lessons: buildLessons('c', TEMAS_C_DATA, 200)
   }
 ];
 

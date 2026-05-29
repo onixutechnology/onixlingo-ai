@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import CustomChessboard from '@/components/chess/CustomChessboard';
 import { Chess } from 'chess.js';
@@ -28,6 +28,88 @@ export default function ChessVsAIPage() {
   const [isGameOver, setIsGameOver] = useState(false);
   const [winner, setWinner] = useState<string | null>(null);
   const [difficulty, setDifficulty] = useState('manager'); // principiante, manager, ceo
+
+  // 🧠 MOTOR DE ANÁLISIS COGNITIVO EN TIEMPO REAL (Real-time decision analytics)
+  const cognitiveMetrics = useMemo(() => {
+    const playerMoves = moveHistory.filter((_, idx) => idx % 2 === 0);
+    const totalMoves = playerMoves.length;
+
+    if (totalMoves === 0) {
+      return {
+        accuracy: 0,
+        control: 0,
+        style: 'Analizando Apertura...',
+        desc: 'Realiza tu primer movimiento para iniciar el análisis cognitivo táctico y posicional en tiempo real.'
+      };
+    }
+
+    // --- CÁLCULO DE PRECISIÓN TÁCTICA ---
+    let accuracyScore = 85;
+    const captures = playerMoves.filter(m => m.includes('x')).length;
+    const checks = playerMoves.filter(m => m.includes('+') || m.includes('#')).length;
+    const castles = playerMoves.filter(m => m.includes('O-O') || m.includes('O-O-O')).length;
+    const majorPieces = playerMoves.filter(m => /^[QR]/.test(m)).length;
+    const minorPieces = playerMoves.filter(m => /^[NB]/.test(m)).length;
+    const pawnMoves = playerMoves.filter(m => /^[a-h]/.test(m)).length;
+
+    if (castles > 0) accuracyScore += 5;
+    if (totalMoves > 6 && (pawnMoves / totalMoves) > 0.6) {
+      accuracyScore -= 10;
+    }
+    accuracyScore += (checks * 3);
+
+    if (difficulty === 'manager') {
+      accuracyScore -= (totalMoves * 0.4);
+    } else if (difficulty === 'ceo') {
+      accuracyScore -= (totalMoves * 0.8);
+    } else {
+      accuracyScore += (totalMoves * 0.2);
+    }
+
+    accuracyScore = Math.max(35, Math.min(98, Math.round(accuracyScore)));
+
+    // --- CÁLCULO DE CONTROL DE POSICIÓN ---
+    let controlScore = 50;
+    if (castles > 0) controlScore += 15;
+    const developmentRatio = totalMoves > 0 ? (minorPieces / totalMoves) : 0;
+    controlScore += Math.round(developmentRatio * 20);
+    controlScore += (captures * 2);
+
+    const earlyQueenMoves = playerMoves.slice(0, 5).filter(m => m.startsWith('Q')).length;
+    if (earlyQueenMoves > 1) {
+      controlScore -= 15;
+    }
+
+    controlScore = Math.max(20, Math.min(95, Math.round(controlScore)));
+
+    // --- DETERMINACIÓN DEL ESTILO DE JUEGO ---
+    let style = 'Equilibrado';
+    let desc = 'Tu juego muestra un excelente balance entre el control posicional y la iniciativa táctica.';
+
+    if (totalMoves < 3) {
+      style = 'Apertura Teórica';
+      desc = 'Estás estableciendo tu estructura de peones inicial y desarrollando tus primeras piezas.';
+    } else if (checks > 0 || captures > (0.4 * totalMoves)) {
+      style = 'Agresivo - Táctico';
+      desc = 'Buscas activamente amenazas tácticas, intercambios dinámicos y jaques constantes al rey rival.';
+    } else if (castles > 0 && minorPieces > (0.4 * totalMoves)) {
+      style = 'Sólido - Posicional';
+      desc = 'Priorizas la seguridad del rey, la estructura sólida de peones y la armonía de tus piezas antes de atacar.';
+    } else if (majorPieces > (0.3 * totalMoves)) {
+      style = 'Dinámico - Ofensivo';
+      desc = 'Utilizas tus piezas mayores pesadas para presionar líneas abiertas e infiltrar el campo enemigo.';
+    } else if (pawnMoves > (0.5 * totalMoves)) {
+      style = 'Estratégico de Peones';
+      desc = 'Te enfocas en el control de casillas clave mediante cadenas de peones, controlando el espacio lentamente.';
+    }
+
+    return {
+      accuracy: accuracyScore,
+      control: controlScore,
+      style,
+      desc
+    };
+  }, [moveHistory, difficulty]);
 
   // 💾 RETOMAR PARTIDA GUARDADA
   const [showResumePrompt, setShowResumePrompt] = useState(false);
@@ -67,31 +149,50 @@ export default function ChessVsAIPage() {
   async function onDrop(sourceSquare: string, targetSquare: string) {
     if (isGameOver || isLoading) return false;
 
-    const move = makeAMove({
-      from: sourceSquare,
-      to: targetSquare,
-      promotion: 'q', 
-    });
+    // Crear clon local sincrónico basado en el FEN actual
+    const gameCopy = new Chess(game.fen());
+    let move = null;
+    try {
+      move = gameCopy.move({
+        from: sourceSquare,
+        to: targetSquare,
+        promotion: 'q', 
+      });
+    } catch (e) {
+      return false;
+    }
 
     if (move === null) return false;
+
+    // Actualizar inmediatamente el estado del usuario en el frontend
+    setGame(gameCopy);
+    setMoveHistory(gameCopy.history());
+    
+    // Auto-guardar posición FEN actual del movimiento del usuario
+    localStorage.setItem('onix_chess_fen', gameCopy.fen());
+    localStorage.setItem('onix_chess_difficulty', difficulty);
 
     setIsLoading(true);
     setStatus('OnixAI pensando...');
 
+    // Capturamos el FEN exacto del movimiento del usuario para evitar cierres stale
+    const userMoveFen = gameCopy.fen();
+
     try {
       const response = await apiClient.post('/chess/engine-move', {
-        fen: game.fen(),
+        fen: userMoveFen,
         difficulty: difficulty
       });
 
       if (response.data.move_uci) {
-        const gameCopy = new Chess(game.fen());
-        gameCopy.move(response.data.move_uci);
-        setGame(gameCopy);
-        setMoveHistory(gameCopy.history());
+        // Clonar el tablero después del movimiento del usuario para aplicar la jugada de la IA
+        const aiGameCopy = new Chess(userMoveFen);
+        aiGameCopy.move(response.data.move_uci);
+        setGame(aiGameCopy);
+        setMoveHistory(aiGameCopy.history());
         
         // Auto-guardar posición FEN actual después de la respuesta de la IA
-        localStorage.setItem('onix_chess_fen', gameCopy.fen());
+        localStorage.setItem('onix_chess_fen', aiGameCopy.fen());
         localStorage.setItem('onix_chess_difficulty', difficulty);
         
         if (response.data.game_over) {
@@ -192,11 +293,11 @@ export default function ChessVsAIPage() {
         </div>
       </nav>
 
-      <main className="flex-1 max-w-7xl mx-auto w-full p-6 flex flex-col lg:flex-row gap-8 overflow-hidden">
+      <main className="flex-1 max-w-7xl mx-auto w-full p-6 flex flex-col lg:flex-row gap-8">
         
         {/* Lado Izquierdo: El Tablero */}
         <div className="flex-1 flex flex-col items-center justify-center gap-6">
-          <div className="w-full max-w-[550px] aspect-square shadow-2xl shadow-black/80 border-8 border-[#3d200c] rounded-none">
+          <div className="w-full max-w-[550px] aspect-square shadow-2xl shadow-black/80 rounded-none">
             <CustomChessboard 
               fen={game.fen()} 
               onDrop={({ sourceSquare, targetSquare }) => onDrop(sourceSquare, targetSquare)}
@@ -274,39 +375,39 @@ export default function ChessVsAIPage() {
              </div>
           </div>
 
-          {/* Tarjeta de Métricas Cognitivas */}
-          <div className="wood-panel p-6 shadow-lg relative overflow-hidden rounded-none">
-             <div className="absolute top-0 right-0 p-4 opacity-5 text-amber-400">
-                <Brain size={80} />
+           {/* Tarjeta de Métricas Cognitivas */}
+           <div className="wood-panel p-6 shadow-lg relative overflow-hidden rounded-none">
+              <div className="absolute top-0 right-0 p-4 opacity-5 text-amber-400">
+                 <Brain size={80} />
+               </div>
+               <div className="relative z-10">
+                 <h3 className="text-[10px] font-black uppercase tracking-[0.2em] mb-4 text-amber-400">Cognitive Analysis</h3>
+                 <div className="space-y-4">
+                    <div>
+                       <div className="flex justify-between items-end mb-1">
+                          <p className="text-[9px] font-black uppercase tracking-widest text-amber-200/60">Tactical Accuracy</p>
+                          <p className="text-xs font-black text-[#ecd3b5]">{cognitiveMetrics.accuracy}%</p>
+                       </div>
+                       <div className="h-1 bg-[#130a04] border border-[#3c1e0a] rounded-none overflow-hidden">
+                          <div className="h-full bg-emerald-500 transition-all duration-500" style={{ width: `${cognitiveMetrics.accuracy}%` }}></div>
+                       </div>
+                    </div>
+                    <div>
+                       <div className="flex justify-between items-end mb-1">
+                          <p className="text-[9px] font-black uppercase tracking-widest text-amber-200/60">Position Control</p>
+                          <p className="text-xs font-black text-[#ecd3b5]">{cognitiveMetrics.control}%</p>
+                       </div>
+                       <div className="h-1 bg-[#130a04] border border-[#3c1e0a] rounded-none overflow-hidden">
+                          <div className="h-full bg-amber-500 transition-all duration-500" style={{ width: `${cognitiveMetrics.control}%` }}></div>
+                       </div>
+                    </div>
+                 </div>
+                 <div className="mt-6 flex items-center gap-3 p-3 bg-[#130a04] border border-[#3c1e0a] rounded-none">
+                    <Zap size={14} className="text-amber-500 flex-shrink-0" />
+                    <p className="text-[9px] font-bold text-slate-300 leading-tight">Tu estilo de juego es <span className="text-[#ecd3b5] font-bold">{cognitiveMetrics.style}</span>. {cognitiveMetrics.desc}</p>
+                 </div>
               </div>
-              <div className="relative z-10">
-                <h3 className="text-[10px] font-black uppercase tracking-[0.2em] mb-4 text-amber-400">Cognitive Analysis</h3>
-                <div className="space-y-4">
-                   <div>
-                      <div className="flex justify-between items-end mb-1">
-                         <p className="text-[9px] font-black uppercase tracking-widest text-amber-200/60">Tactical Accuracy</p>
-                         <p className="text-xs font-black text-[#ecd3b5]">84%</p>
-                      </div>
-                      <div className="h-1 bg-[#130a04] border border-[#3c1e0a] rounded-none overflow-hidden">
-                         <div className="h-full bg-emerald-500 w-[84%]"></div>
-                      </div>
-                   </div>
-                   <div>
-                      <div className="flex justify-between items-end mb-1">
-                         <p className="text-[9px] font-black uppercase tracking-widest text-amber-200/60">Position Control</p>
-                         <p className="text-xs font-black text-[#ecd3b5]">62%</p>
-                      </div>
-                      <div className="h-1 bg-[#130a04] border border-[#3c1e0a] rounded-none overflow-hidden">
-                         <div className="h-full bg-amber-500 w-[62%]"></div>
-                      </div>
-                   </div>
-                </div>
-                <div className="mt-6 flex items-center gap-3 p-3 bg-[#130a04] border border-[#3c1e0a] rounded-none">
-                   <Zap size={14} className="text-amber-500" />
-                   <p className="text-[9px] font-bold text-slate-300 leading-tight">Tu estilo de juego es <span className="text-[#ecd3b5] font-bold">Agresivo - Táctico</span>. Estás mejorando tu capacidad de respuesta bajo presión.</p>
-                </div>
-             </div>
-          </div>
+           </div>
 
         </div>
 

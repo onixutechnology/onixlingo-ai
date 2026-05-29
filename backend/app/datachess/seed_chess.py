@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from app.db.session import SessionLocal, engine 
+from app.database import SessionLocal, engine 
 from app.db.base import Base 
 from app.db.models import ChessLesson
 
@@ -38,15 +38,26 @@ def load_json_lesson(lesson_id):
     return None
 
 def generate_lessons():
-    print("🔄 Iniciando el motor de inyección de datos (Titanium Seed)...")
+    print("[i] Iniciando el motor de inyección de datos (Titanium Seed)...")
     db = SessionLocal()
+    
+    # 🚀 OPTIMIZACIÓN TEMIBLE (Bypass de Red para PostgreSQL remoto)
+    try:
+        existing_count = db.query(ChessLesson).count()
+        if existing_count >= 700:
+            print(f"[+] Las lecciones de ajedrez ya están sembradas en la DB ({existing_count} registros). Omitiendo inyección lenta...")
+            db.close()
+            return
+    except Exception as e:
+        print(f"[-] Error al verificar lecciones existentes: {e}")
+        
     lessons_to_insert = []
     
     # Crear la carpeta automáticamente si no existe
     JSON_DIR.mkdir(parents=True, exist_ok=True)
 
     for module in MODULES_CONFIG:
-        for lesson_num in range(1, 11):
+        for lesson_num in range(1, 101):
             lesson_id = f"{module['id']}-{lesson_num}"
             json_data = load_json_lesson(lesson_id)
             
@@ -83,10 +94,10 @@ def generate_lessons():
         for lesson in lessons_to_insert:
             db.merge(lesson)
         db.commit()
-        print(f"✅ ¡Éxito! Base de datos de Ajedrez actualizada con {len(lessons_to_insert)} lecciones.")
-        print(f"📁 Se buscaron los JSON en: {JSON_DIR}")
+        print(f"[+] ¡Éxito! Base de datos de Ajedrez actualizada con {len(lessons_to_insert)} lecciones.")
+        print(f"[*] Se buscaron los JSON en: {JSON_DIR}")
     except Exception as e:
-        print(f"❌ Error inyectando datos: {e}")
+        print(f"[-] Error inyectando datos: {e}")
         db.rollback()
     finally:
         db.close()

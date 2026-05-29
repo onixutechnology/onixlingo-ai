@@ -203,8 +203,7 @@ TEMAS_MASTERY = [
     ("Cybersecurity Protocols", "cryptography", "infosec", "Implement zero-trust security architecture."),
     ("Mastery Capstone: Building a Unicorn", "exponential", "scalability", "Scale the startup to unicorn valuation.")
 ] + [
-    (f"Global Leadership Topic {i}", f"vocab_mastery_{i}", f"concept_mastery_{i}", f"Assertive leadership statement Mastery Pt. {i}") 
-    for i in range(11, 101)
+    (f"Global Leadership Topic {i}", f"vocab_mastery_{i}", f"concept_mastery_{i}", f"Assertive leadership statement Mastery Pt. {i}")    for i in range(11, 101)
 ]
 
 
@@ -222,7 +221,7 @@ TEMPLATES_QUIZ = [
             "By delegating strategic oversight to third-party vendors."
         ],
         "ans": "By aligning our core deliverables and reducing structural redundancies through {vocab}.",
-        "exp": "Applying {vocab} ensures our organizational focus maps directly to our long-term timeline."
+        "exp": "¡Correcto! La integración de '{vocab}' permite alinear los entregables clave del departamento y eliminar redundancias, lo cual optimiza la ejecución de '{title}'."
     },
     # 1: Diplomacia y Boardroom
     {
@@ -234,7 +233,7 @@ TEMPLATES_QUIZ = [
             "Use aggressive terms to force consensus on '{vocab}'."
         ],
         "ans": "Articulate '{vocab}' with data-backed metrics that justify resource allocation.",
-        "exp": "Data-driven clarity is the hallmark of professional board-level diplomacy."
+        "exp": "¡Excelente! Presentar '{vocab}' con métricas respaldadas por datos es la forma más diplomática y efectiva de convencer a la mesa directiva en el marco de '{title}'."
     },
     # 2: Mitigación de Riesgos
     {
@@ -246,7 +245,7 @@ TEMPLATES_QUIZ = [
             "Faster turnaround times on client-facing deliverables."
         ],
         "ans": "Severe operational bottlenecks and strategic misalignment on our {vocab} target.",
-        "exp": "Neglecting {vocab} often compromises the integrity of our execution workflow."
+        "exp": "¡Correcto! Ignorar '{vocab}' en la gestión de '{title}' suele ocasionar cuellos de botella severos y desalineación estratégica con respecto a los objetivos clave de la empresa."
     },
     # 3: Liderazgo y Cambio
     {
@@ -258,7 +257,7 @@ TEMPLATES_QUIZ = [
             "By ignoring feedback from department heads."
         ],
         "ans": "By communicating the change transparently and utilizing '{vocab}' as a clear benchmark.",
-        "exp": "Effective change management requires transparent indicators like {vocab}."
+        "exp": "¡Correcto! Un liderazgo sólido utiliza la comunicación transparente y define '{vocab}' como un estándar claro de referencia durante los cambios organizacionales en '{title}'."
     },
     # 4: Optimización Financiera
     {
@@ -270,7 +269,7 @@ TEMPLATES_QUIZ = [
             "By assuming zero growth contribution from the project."
         ],
         "ans": "By factoring in scalability metrics and ROI targets tied to '{vocab}'.",
-        "exp": "Strategic investments should always be measured against ROI and scalability parameters."
+        "exp": "¡Excelente elección! La planeación financiera en '{title}' debe incluir métricas de escalabilidad y retorno de inversión (ROI) directamente vinculados a '{vocab}'."
     },
     # 5: Toma de Decisiones
     {
@@ -282,7 +281,7 @@ TEMPLATES_QUIZ = [
             "Avoiding consultation with our legal compliance officers."
         ],
         "ans": "Assessing the long-term impact on our {vocab} capabilities and market positioning.",
-        "exp": "A successful pivot balances short-term adaptability with long-term strategic positioning."
+        "exp": "¡Correcto! Toda decisión de pivotar en '{title}' exige evaluar el impacto a largo plazo sobre nuestras capacidades de '{vocab}' y el posicionamiento en el mercado."
     }
 ]
 
@@ -290,32 +289,42 @@ TEMPLATES_SYNTAX = [
     # 0: Condicional Gerencial
     {
         "order": ["If", "we", "integrate", "{vocab},", "we", "will", "optimize", "efficiency."],
+        "order_exp": "Estructura del primer condicional en inglés de negocios: 'If' + presente simple ('we integrate...'), seguido de futuro con 'will' ('we will optimize...'). Esta estructura expresa una consecuencia lógica y probable.",
         "fill_q": "If we implement this strategic change, we will secure a substantial return ____ investment. (on / at)",
-        "fill_ans": "on"
+        "fill_ans": "on",
+        "fill_exp": "Uso de preposiciones comerciales: En inglés de negocios, la frase estándar es siempre 'return ON investment' (retorno de inversión o ROI). No se utiliza 'at'."
     },
     # 1: Colocación Corporativa
     {
         "order": ["We", "must", "allocate", "resources", "to", "support", "{vocab}."],
+        "order_exp": "Construcción formal con verbo modal: Sujeto ('We') + modal de obligación ('must') + verbo principal ('allocate') + objeto ('resources') + infinitivo de propósito ('to support {vocab}').",
         "fill_q": "The board reached a consensus ____ the proposed budget allocations. (on / about)",
-        "fill_ans": "on"
+        "fill_ans": "on",
+        "fill_exp": "Colocación verbal avanzada: Aunque coloquialmente se escucha 'consensus about', la preposición formal y preferida en la junta directiva es 'consensus ON' para indicar acuerdo sobre un tema."
     },
     # 2: Conector Formal
     {
         "order": ["Furthermore,", "strategic", "alignment", "accelerates", "{vocab}", "milestones."],
+        "order_exp": "Uso de adverbios de transición: 'Furthermore' (Además / Es más) inicia la oración seguido de una coma para añadir un argumento de peso sobre la alineación estratégica ('strategic alignment').",
         "fill_q": "We must mitigate this liability; ______, we must audit our vendors. (therefore / but)",
-        "fill_ans": "therefore"
+        "fill_ans": "therefore",
+        "fill_exp": "Conectores lógicos: Se utiliza 'therefore' (por lo tanto) precedido de un punto y coma y seguido de una coma para expresar una consecuencia lógica y formal en la toma de decisiones."
     },
     # 3: Voz Pasiva Directiva
     {
         "order": ["Our", "{vocab}", "targets", "were", "approved", "by", "the", "board."],
+        "order_exp": "Voz pasiva en tiempo pasado: Sujeto paciente ('Our {vocab} targets') + verbo 'to be' en pasado ('were') + participio pasado ('approved') + agente ('by the board'). Se usa para enfatizar el resultado de la acción.",
         "fill_q": "All deliverables must be completed ____ the end of the fiscal quarter. (by / in)",
-        "fill_ans": "by"
+        "fill_ans": "by",
+        "fill_exp": "Preposiciones de tiempo límite: En contextos corporativos, se utiliza 'by' para indicar una fecha o límite temporal estricto (no más tarde de)."
     },
     # 4: Enfoque de Solución
     {
         "order": ["To", "mitigate", "exposure,", "we", "have", "enhanced", "{vocab}."],
+        "order_exp": "Cláusula de propósito al inicio: 'To' + verbo en infinitivo ('To mitigate exposure') introduce la acción preventiva, seguida de la oración principal en presente perfecto ('we have enhanced {vocab}').",
         "fill_q": "We need to leverage our core competencies to gain a competitive ______. (advantage / loss)",
-        "fill_ans": "advantage"
+        "fill_ans": "advantage",
+        "fill_exp": "Colocación comercial estándar: La expresión común es 'gain a competitive advantage' (obtener una ventaja competitiva) para describir la posición favorable de una empresa frente a sus competidores."
     }
 ]
 
@@ -387,33 +396,105 @@ def build_lesson_json(lesson_id, title, level, vocab, concept, speak_pitch, inde
         
     else: # English
         intro_text = f"Welcome to the {level.upper()} executive module: {title}."
+        
+        # Generar Grammar Spotlight en español para cada nivel
+        lvl_lower = level.lower()
+        if lvl_lower == "b1":
+            grammar_spotlight = (
+                "- Reported Speech (Estilo Indirecto): 'She confirmed that the team completed the {vocab} tasks.' "
+                "(Ella confirmó que el equipo completó las tareas de {vocab}.)\n"
+                "- Voz Pasiva: 'The project is managed by our lead coordinator.' (El proyecto es gestionado por nuestro coordinador principal.)\n"
+                "- Clave de Gestión: Expresar reportes e instrucciones de manera indirecta para suavizar el tono corporativo."
+            )
+            phonetic_tip = f"Pronunciación: Enfócate en la entonación descendente al final de las afirmaciones operativas sobre '{vocab}'."
+            golden_rule = "Regla de Oro: En el nivel B1, prefiere la claridad y estructuración de oraciones cortas antes de usar conectores complejos."
+        elif lvl_lower == "b2":
+            grammar_spotlight = (
+                "- Verbos Modales en Pasado: 'We should have optimized the {vocab} flow last quarter.' "
+                "(Deberíamos haber optimizado el flujo de {vocab} el trimestre pasado.)\n"
+                "- Cláusulas de Concesión: 'Although the transition was complex, the results were highly favorable.' "
+                "(Aunque la transición fue compleja, los resultados fueron sumamente favorables.)\n"
+                "- Clave de Gestión: Expresar arrepentimiento o recomendaciones sobre decisiones pasadas de forma diplomática."
+            )
+            phonetic_tip = f"Pronunciación: Une los sonidos en 'should have' (/ʃʊd əv/) al proponer mejoras sobre '{vocab}'."
+            golden_rule = "Regla de Oro: En el nivel B2, utiliza conectores de contraste ('although', 'despite') para ponderar pros y contras."
+        elif lvl_lower == "c1":
+            grammar_spotlight = (
+                "- Inversión de Sujeto y Verbo para Énfasis: 'Not only did we merge the departments, but we also leveraged {vocab}.' "
+                "(No sólo fusionamos los departamentos, sino que también aprovechamos {vocab}.)\n"
+                "- Subjuntivo Ejecutivo: 'The board demands that the director implement {vocab} immediately.' "
+                "(La junta exige que el director implemente {vocab} de inmediato.)\n"
+                "- Clave de Gestión: Utilizar la inversión para dar mayor dramatismo y convicción en discursos de alta dirección."
+            )
+            phonetic_tip = f"Pronunciación: Realiza pausas enfáticas después de conectores invertidos para captar la atención sobre '{vocab}'."
+            golden_rule = "Regla de Oro: En el nivel C1, tus explicaciones deben conectar la operación con metas de rentabilidad y EBITDA."
+        elif lvl_lower == "c2":
+            grammar_spotlight = (
+                "- Cláusulas de Concesión Avanzadas: 'Notwithstanding the market fluctuations, our focus on {vocab} remains absolute.' "
+                "(A pesar de las fluctuaciones del mercado, nuestro enfoque en {vocab} sigue siendo absoluto.)\n"
+                "- Condicionales de Contingencia Extrema: 'Should any dispute arise, we will protect our market share.' "
+                "(En caso de que surja alguna disputa, protegeremos nuestra participación de mercado.)\n"
+                "- Clave de Gestión: Uso de terminología legal y retórica de alto impacto para juntas directivas globales."
+            )
+            phonetic_tip = f"Pronunciación: Proyecta la voz con cadencia pausada al enunciar contingencias complejas sobre '{vocab}'."
+            golden_rule = "Regla de Oro: En el nivel C2, la sutileza, el tono diplomático y la oratoria persuasiva son tus mayores activos."
+        elif lvl_lower == "exec":
+            grammar_spotlight = (
+                "- Subjuntivo para Mandatos Fiduciarios: 'It is vital that each board member endorse the {vocab} restructuring.' "
+                "(Es vital que cada miembro de la junta respalde la reestructuración de {vocab}.)\n"
+                "- Condicionales Mixtos: 'If they had aligned the stakeholders earlier, we would not face this liability today.' "
+                "(Si hubieran alineado a las partes interesadas antes, hoy no enfrentaríamos esta responsabilidad.)\n"
+                "- Clave de Gestión: Expresar mandatos obligatorios y evaluar escenarios pasados con consecuencias actuales."
+            )
+            phonetic_tip = f"Pronunciación: Vocaliza las consonantes finales con precisión para proyectar autoridad al discutir '{vocab}'."
+            golden_rule = "Regla de Oro: Como ejecutivo, tu comunicación debe ser asertiva, enfocada en la gobernanza y la mitigación de riesgos."
+        else: # mastery
+            grammar_spotlight = (
+                "- Nominalización Compleja: 'The systematic deployment of automated {vocab} structures facilitates scaling.' "
+                "(El despliegue sistemático de estructuras automatizadas de {vocab} facilita el escalamiento.)\n"
+                "- Cláusulas de Participio: 'Having secured the Series B round, the company accelerated its logistics rollout.' "
+                "(Habiendo asegurado la ronda Serie B, la empresa aceleró su despliegue logístico.)\n"
+                "- Clave de Gestión: Densidad conceptual y elegancia sintáctica para la oratoria de fundadores de Unicornios."
+            )
+            phonetic_tip = f"Pronunciación: Mantén un ritmo regular (stress-timed rhythm) al presentar tu pitch estratégico de '{vocab}'."
+            golden_rule = "Regla de Oro: En el módulo Mastery, enfoca tu discurso en la visión global, escalabilidad exponencial y tecnología disruptiva."
+
+        grammar_spotlight = grammar_spotlight.replace("{vocab}", vocab)
+
         theory_visual = (
-            f"ONIXLINGO EXECUTIVE COMMAND SYSTEM\n\n"
-            f"Level {level.upper()} • Lesson {lesson_id}\n"
-            f"Topic: {title}\n\n"
-            f"Key Concepts:\n"
-            f"- {vocab.upper()} (Core Strategic Term)\n"
-            f"- Practical corporate application and high-fidelity etiquette.\n\n"
-            f"Executive Principle:\n"
-            f"A true leader does not just convey details; "
-            f"they project strategic intent. Apply '{vocab}' to complete this session successfully."
+            f"★ ONIXLINGO SISTEMA PROFESIONAL DE INGLÉS ★\n\n"
+            f"Nivel {level.upper()} • Lección {lesson_id}\n"
+            f"Tema: {title}\n\n"
+            f"Concepto Clave:\n"
+            f"☞ '{vocab.upper()}'\n\n"
+            f"[Grammar Spotlight - Enfoque Gramatical]\n"
+            f"{grammar_spotlight}\n\n"
+            f"[Vocabulary Deep Dive - Análisis de Vocabulario]\n"
+            f"- Vocablo: '{vocab}' (Traducción/Uso: {concept})\n"
+            f"- Aplicación Práctica: '{speak_pitch}'\n\n"
+            f"[Pronunciation Guide - Guía de Pronunciación]\n"
+            f"- {phonetic_tip}\n\n"
+            f"[Business Tip & Golden Rule - Regla de Oro]\n"
+            f"- {golden_rule}\n\n"
+            f"¡Comienza los ejercicios prácticos ahora!"
         )
+        
         theory_audio = f"{intro_text} Let us master the strategic details of {vocab} together."
-        theory_title = f"Strategic Concept: {title}"
-        quiz_title = "Executive Comprehension"
-        syntax_title = "Syntax & Structure Drill"
-        speaking_title = "Speech & Oratory Practice"
+        theory_title = f"Concepto Estratégico: {title}"
+        quiz_title = "Comprensión Ejecutiva"
+        syntax_title = "Práctica de Sintaxis y Estructura"
+        speaking_title = "Práctica de Oratoria y Pronunciación"
         
         # Preguntas Quiz Choice (Fase 2)
         q1_text = quiz_tpl_1["q"].format(vocab=vocab, title=title)
         q1_opts = [o.format(vocab=vocab) for o in quiz_tpl_1["opts"]]
         q1_ans = quiz_tpl_1["ans"].format(vocab=vocab)
-        q1_exp = quiz_tpl_1["exp"].format(vocab=vocab)
+        q1_exp = quiz_tpl_1["exp"].format(vocab=vocab, title=title)
         
         q2_text = quiz_tpl_2["q"].format(vocab=vocab, title=title)
         q2_opts = [o.format(vocab=vocab) for o in quiz_tpl_2["opts"]]
         q2_ans = quiz_tpl_2["ans"].format(vocab=vocab)
-        q2_exp = quiz_tpl_2["exp"].format(vocab=vocab)
+        q2_exp = quiz_tpl_2["exp"].format(vocab=vocab, title=title)
         
         # Drills (Fase 3)
         drill_order_text = f"Arrange the strategic sentence for {title}:"
@@ -421,11 +502,14 @@ def build_lesson_json(lesson_id, title, level, vocab, concept, speak_pitch, inde
         
         drill_fill_text = f"Complete the sentence for {title.lower()}:\n\"{syntax_tpl_1['fill_q']}\""
         drill_fill_ans = syntax_tpl_1["fill_ans"]
-        drill_fill_exp = f"This grammatical point ensures high written precision in executive correspondence."
+        drill_fill_exp = syntax_tpl_1["fill_exp"].format(vocab=vocab)
         
         # Vocalizaciones (Fase 4)
-        vocal_text = f"Vocalize the following pitch clearly to assert leadership:\n\"{speak_pitch}\""
-        vocal_exp = "Maintain a steady pace, ensure strong intonation, and stress active corporate verbs."
+        vocal_text = f"Vocaliza la siguiente frase estratégica con claridad y tono profesional de liderazgo:\n\"{speak_pitch}\""
+        vocal_exp = (
+            f"¡Excelente! Practicar la pronunciación de '{vocab}' ayuda a asimilar su acentuación fonética. "
+            f"Mantén un ritmo pausado, enfatiza los verbos de acción y cuida la entonación corporativa."
+        )
 
     stages = [
         # Fase 1: Teoría (1 Ejercicio)
@@ -473,7 +557,7 @@ def build_lesson_json(lesson_id, title, level, vocab, concept, speak_pitch, inde
                 question_body = tpl["q"].format(vocab=vocab, title=title)
                 options = [o.format(vocab=vocab) for o in tpl["opts"]]
                 correct = tpl["ans"].format(vocab=vocab)
-                explanation = tpl["exp"].format(vocab=vocab)
+                explanation = tpl["exp"].format(vocab=vocab, title=title)
             
         quiz_questions.append({
             "id": f"q-choice-{q_idx+1}",
@@ -504,8 +588,10 @@ def build_lesson_json(lesson_id, title, level, vocab, concept, speak_pitch, inde
             if lang == "fr":
                 q_text = f"Ordonnez la phrase stratégique en français pour {title} :"
                 parts = ["Nous", "devons", "prioriser", vocab, "dans", "nos", "livrables."]
+                explanation = f"Proper word order is vital to communicate concepts related to '{vocab}' clearly."
             else:
                 q_text = f"Arrange the strategic sentence for {title}:"
+                explanation = tpl_s["order_exp"].format(vocab=vocab)
                 
             syntax_questions.append({
                 "id": f"q-syntax-{s_idx+1}",
@@ -513,7 +599,7 @@ def build_lesson_json(lesson_id, title, level, vocab, concept, speak_pitch, inde
                 "question": q_text,
                 "parts": parts,
                 "correct_order": parts,
-                "explanation": f"Proper word order is vital to communicate concepts related to '{vocab}' clearly."
+                "explanation": explanation
             })
         else:
             if lang == "fr":
@@ -523,7 +609,7 @@ def build_lesson_json(lesson_id, title, level, vocab, concept, speak_pitch, inde
             else:
                 q_text = f"Complete the sentence for {title.lower()}:\n\"{tpl_s['fill_q']}\""
                 answers = [tpl_s["fill_ans"], tpl_s["fill_ans"].lower(), tpl_s["fill_ans"].capitalize()]
-                exp = f"Mastering professional prepositions improves the authority of your emails."
+                exp = tpl_s["fill_exp"].format(vocab=vocab)
                 
             syntax_questions.append({
                 "id": f"q-syntax-{s_idx+1}",

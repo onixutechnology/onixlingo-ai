@@ -38,10 +38,10 @@ export default function Home() {
           </div>
           
           <div className="hidden md:flex gap-8 items-center text-sm font-semibold text-slate-600">
-            <a href="#features" className="hover:text-indigo-600 transition-colors">Características</a>
-            <a href="#vocabulary" className="hover:text-indigo-600 transition-colors">Vocabulario</a>
-            <a href="#executive" className="hover:text-indigo-600 transition-colors">Programa Ejecutivo</a>
-            <a href="#pricing" className="hover:text-indigo-600 transition-colors">Planes</a>
+            <Link href="/caracteristicas" className="hover:text-indigo-600 transition-colors">Características</Link>
+            <Link href="/vocabulario" className="hover:text-indigo-600 transition-colors">Vocabulario</Link>
+            <Link href="/programa-ejecutivo" className="hover:text-indigo-600 transition-colors">Programa Ejecutivo</Link>
+            <Link href="/planes" className="hover:text-indigo-600 transition-colors">Planes</Link>
           </div>
 
           <div className="flex gap-8 items-center">
@@ -69,11 +69,11 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
-            El multiverso de los idiomas.
+            Ecosistema de Cognición y Oratoria C-Suite.
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light">
-            No es solo inglés. Es una arquitectura completa con tutoría en tiempo real para dominar Inglés, Francés, Chino, y agudizar tu mente con Ajedrez estratégico.
+            Infraestructura integral de simulación lingüística y análisis acústico en tiempo real para el dominio técnico del Inglés, Francés y Chino Mandarín, potenciada por entrenamiento estratégico cognitivo de alta precisión.
           </p>
 
           {/* Quick Metrics */}
@@ -115,9 +115,9 @@ export default function Home() {
       <section id="features" className="py-24 bg-[#edf7f2] relative z-10 border-t border-emerald-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 md:text-center max-w-3xl mx-auto space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">Un Ecosistema Completo</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">Arquitectura Holística de Aprendizaje</h2>
             <p className="text-slate-600 text-xl font-light">
-              Diferentes módulos diseñados para adaptarse a tu nivel, tus objetivos y tu estilo de aprendizaje.
+              Módulos altamente especializados y calibrados algorítmicamente para optimizar el rendimiento y el desarrollo cognitivo-lingüístico ejecutivo.
             </p>
           </div>
 
@@ -131,9 +131,9 @@ export default function Home() {
               <div className="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-none flex items-center justify-center mb-6">
                 <Languages size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Multilingüe Dinámico</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Soberanía Multilingüe</h3>
               <p className="text-slate-600 leading-relaxed mb-6 max-w-md relative z-10">
-                Cursos completos de Inglés, Francés y Chino Mandarín adaptados a las normativas del MCER. Interacciones con avatares nativos y corrección gramatical instantánea.
+                Instrucción rigurosa de Inglés, Francés y Chino Mandarín adaptada a los estándares de competencia del MCER. Interacción acústica con avatares nativos y retroalimentación de pronunciación instantánea.
               </p>
               <div className="flex gap-2 relative z-10">
                 <span className="px-3 py-1 bg-slate-50 border border-slate-200 rounded-none text-xs font-bold text-slate-600 shadow-sm">🇺🇸🇬🇧 Inglés</span>
@@ -147,9 +147,9 @@ export default function Home() {
               <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-none flex items-center justify-center mb-6">
                 <Crown size={24} />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Ajedrez Cognitivo</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Ajedrez Estratégico</h3>
               <p className="text-slate-600 leading-relaxed text-sm">
-                Desarrolla el pensamiento estratégico. Aprende aperturas, tácticas y resolución de problemas interactuando con nuestra IA. Incluye 2 puzzles diarios gratis o acceso ilimitado para planes de suscripción.
+                Potenciación de procesos de toma de decisiones bajo presión directiva. Análisis táctico de aperturas, patrones complejos y problemas de flujo adaptativo guiados por nuestro tutor neuronal interactivo.
               </p>
             </div>
 
@@ -158,14 +158,14 @@ export default function Home() {
               <div className="w-12 h-12 bg-pink-100 text-pink-600 rounded-none flex items-center justify-center mb-6">
                 <BookOpen size={24} />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Vocabulario Inteligente</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Expansión Léxica Activa</h3>
               <p className="text-slate-600 leading-relaxed text-sm mb-4">
-                Expansión léxica acelerada con 60 bloques de 50 palabras sin repetición por idioma (A1 a C2).
+                Asimilación e incorporación permanente de terminología ejecutiva avanzada mediante 60 bloques temáticos sin solapamiento por idioma (A1 a C2).
               </p>
               <div className="space-y-1.5 text-[10px] text-slate-500 font-bold uppercase">
-                <div className="flex items-center gap-1.5"><Clock size={12} className="text-teal-600" /> Fácil: Sin Tiempo</div>
-                <div className="flex items-center gap-1.5"><Clock size={12} className="text-teal-600" /> Medio: 5 Minutos</div>
-                <div className="flex items-center gap-1.5"><Clock size={12} className="text-amber-500" /> Pro: 2 Minutos</div>
+                <div className="flex items-center gap-1.5"><Clock size={12} className="text-teal-600" /> Fácil: Sin límite temporal</div>
+                <div className="flex items-center gap-1.5"><Clock size={12} className="text-teal-600" /> Medio: Umbral de 5 Minutos</div>
+                <div className="flex items-center gap-1.5"><Clock size={12} className="text-amber-500" /> Pro: Umbral de 2 Minutos</div>
               </div>
             </div>
 
@@ -177,10 +177,10 @@ export default function Home() {
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
                   <h3 className="text-2xl font-bold text-white">Membresías Pro & Executive</h3>
-                  <span className="px-2 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30 text-[10px] font-bold uppercase tracking-widest rounded-none">Beneficios Especiales</span>
+                  <span className="px-2 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30 text-[10px] font-bold uppercase tracking-widest rounded-none">Licenciamiento Premium</span>
                 </div>
                 <p className="text-slate-300 leading-relaxed max-w-3xl">
-                  Acceso completo a lecciones avanzadas, vocabulario y ajedrez ilimitados, simuladores de voz y un **multiplicador de boletos x5** para los sorteos mensuales de recompensas físicas del hub al completar bloques de vocabulario en dificultad **Pro**.
+                  Acceso irrestricto a currícula avanzada, vocabulario y ajedrez ilimitados, simuladores acústicos de voz y un **multiplicador de boletos x5** para sorteos mensuales de hardware corporativo al completar bloques de vocabulario en dificultad **Pro**.
                 </p>
               </div>
               <div>
@@ -203,27 +203,27 @@ export default function Home() {
             <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-none flex items-center justify-center mb-2 shadow-sm">
               <BrainCircuit size={28} />
             </div>
-            <h4 className="text-xl font-bold text-slate-900">Motor Neuronal Cero Latencia</h4>
+            <h4 className="text-xl font-bold text-slate-900">Motor Inferencia Neuronal de Baja Latencia</h4>
             <p className="text-slate-600 leading-relaxed text-sm">
-              Conversaciones fluidas y naturales. Nuestro sistema procesa tus respuestas y adapta la dificultad en milisegundos.
+              Modelos optimizados localmente a nivel Edge para una interacción conversacional de respuesta inmediata.
             </p>
           </div>
           <div className="flex flex-col items-center text-center space-y-4">
             <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-none flex items-center justify-center mb-2 shadow-sm">
               <Mic size={28} />
             </div>
-            <h4 className="text-xl font-bold text-slate-900">Análisis Fonético (IA)</h4>
+            <h4 className="text-xl font-bold text-slate-900">Análisis Fonométrico de Precisión</h4>
             <p className="text-slate-600 leading-relaxed text-sm">
-              Detección de pronunciación y Speech Analytics en tiempo real. Te decimos exactamente qué sonido ajustar para sonar como un nativo.
+              Evaluación acústica de formantes y mapa fonético para una corrección articulatoria instantánea de nivel nativo.
             </p>
           </div>
           <div id="executive" className="flex flex-col items-center text-center space-y-4">
             <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-none flex items-center justify-center mb-2 shadow-sm">
               <Sparkles size={28} />
             </div>
-            <h4 className="text-xl font-bold text-slate-900">Programa de Negociación Executive</h4>
+            <h4 className="text-xl font-bold text-slate-900">Simulador Boardroom y Negociación C-Suite</h4>
             <p className="text-slate-600 leading-relaxed text-sm">
-              Boardroom Simulator y 60 unidades de especialización corporativa (fusiones, finanzas, oratoria ejecutiva para CEOs y diplomacia).
+              Inmersión directiva en 60 escenarios simulados de fusiones, rondas de inversión, roadshows y diplomacia corporativa.
             </p>
           </div>
         </div>
@@ -310,7 +310,7 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <Link href="/ventas">
+              <Link href="/register?tier=pro">
                 <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-none transition-all shadow-md shadow-indigo-600/10">
                   Adquirir Plan Pro
                 </button>
@@ -351,7 +351,7 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <Link href="/ventas" className="relative z-10">
+              <Link href="/register?tier=executive" className="relative z-10">
                 <button className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold py-3 px-6 rounded-none transition-all shadow-lg shadow-amber-500/10">
                   Adquirir Executive
                 </button>
@@ -454,7 +454,7 @@ export default function Home() {
             <p className="text-xs">Ecosistema Educativo de Alta Disponibilidad</p>
           </div>
           <div className="flex gap-8 font-medium flex-wrap">
-            <Link href="/ventas" className="hover:text-indigo-600 transition-colors">Ventas B2C / Precios</Link>
+            <Link href="/planes" className="hover:text-indigo-600 transition-colors">Planes y Precios</Link>
             <Link href="/legal/privacy" className="hover:text-indigo-600 transition-colors">Privacidad</Link>
             <Link href="/legal/terms" className="hover:text-indigo-600 transition-colors">Términos</Link>
             <Link href="/legal/refunds" className="hover:text-indigo-600 transition-colors">Reembolsos</Link>
