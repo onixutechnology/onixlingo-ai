@@ -72,15 +72,44 @@ for level in levels:
     for idx in range(1, limit):
         dynamic_standard_lessons.append(f"{level}-{idx}")
 
-# Cargar lecciones en memoria al iniciar
+# Generate dynamic PRO lesson IDs (30 blocks × 100 lessons = 3000)
+dynamic_pro_lessons = []
+PRO_BLOCK_IDS = [
+    'exec-b1', 'exec-b2', 'exec-c1', 'exec-c2', 'exec-exec', 'exec-mastery',
+    'exec-crisis', 'exec-ma', 'exec-vc', 'exec-fintech', 'exec-pr', 'exec-rhetoric',
+    'exec-esg', 'exec-ai', 'exec-logistics', 'exec-negotiation', 'exec-compliance', 'exec-media',
+    'exec-finance', 'exec-sourcing', 'exec-shareholders', 'exec-launch', 'exec-investors', 'exec-transformation',
+    'exec-hr', 'exec-legal', 'exec-risk', 'exec-ipo', 'exec-macro', 'exec-thesis'
+]
+for block in PRO_BLOCK_IDS:
+    for idx in range(1, 101):
+        dynamic_pro_lessons.append(f"pro-{block}-{idx}")
+
+def pro_sort_key(lid: str):
+    parts = lid.lower().split("-")
+    if len(parts) >= 3:
+        try:
+            num = int(parts[-1])
+        except ValueError:
+            num = 9999
+        block_id = "-".join(parts[1:-1])
+        try:
+            block_idx = PRO_BLOCK_IDS.index(block_id)
+        except ValueError:
+            block_idx = 999
+        return (block_idx, num)
+    return (999, 999)
+
+# Cargar lecciones en memoria al iniciar (Optimizacion extrema para evitar crasheo por timeout en uvicorn)
 _COURSE_CACHE = {
-    LessonType.STANDARD: list(set(get_all_lessons(STANDARD_DIR) + dynamic_standard_lessons)),
-    LessonType.PRO: get_all_lessons(PRO_DIR),
+    LessonType.STANDARD: dynamic_standard_lessons,
+    LessonType.PRO: dynamic_pro_lessons,
     LessonType.VOCAB: get_all_lessons(VOCAB_DIR)
 }
 
-# Sort list using custom curriculum key
-_COURSE_CACHE[LessonType.STANDARD] = sorted(_COURSE_CACHE[LessonType.STANDARD], key=lesson_sort_key)
+# Sort list using custom curriculum keys
+_COURSE_CACHE[LessonType.STANDARD] = sorted(list(set(_COURSE_CACHE[LessonType.STANDARD])), key=lesson_sort_key)
+_COURSE_CACHE[LessonType.PRO] = sorted(list(set(_COURSE_CACHE[LessonType.PRO])), key=pro_sort_key)
 
 def get_lesson_type_by_id(lesson_id: str) -> LessonType:
     if lesson_id.startswith("pro-"):

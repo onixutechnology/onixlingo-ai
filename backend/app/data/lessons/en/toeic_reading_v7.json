@@ -1,0 +1,54 @@
+{
+  "id": "toeic_reading_v7",
+  "title": "TOEIC® Reading - Versión 7: IT Infrastructure & Server Support",
+  "level": "B2/C1",
+  "description": "Evaluación lectora de gramática, vocabulario y correspondencia formal para Starlight Inc.",
+  "total_xp": 100,
+  "stages": [
+    {
+      "id": "reading-intro",
+      "type": "lecture",
+      "title": "TOEIC Reading: Strategy & Context",
+      "parts": [
+        {
+          "visual": "## 📖 Simulación Lectora: Starlight Inc\n\nAnalizaremos el memorándum oficial redactado por **the IT Director** para la transición del software **CloudCRM**.\n\nLee el documento con sumo cuidado.",
+          "audio": "Welcome to the Reading Section. Focus on prepositions, vocabulary in context, and direct information inside the memorandum.",
+          "animation": "analyzing"
+        }
+      ]
+    },
+    {
+      "id": "reading-quiz",
+      "type": "quiz",
+      "title": "Parte 5 y 7: Incomplete Sentences & Documents",
+      "questions": [
+        {
+          "id": "TR5_v7",
+          "type": "quiz_choice",
+          "question": "[PART 5]: Choose the word that best completes the sentence:\n\n\"The management board at Starlight Inc decided to inspect the factory ___ to ensure high compliance.\"",
+          "options": [
+            "periodically",
+            "periodic",
+            "periodical",
+            "period"
+          ],
+          "correct_answer": "periodically",
+          "explanation": "Se necesita el adverbio 'periodically' para modificar la acción de inspeccionar (inspect)."
+        },
+        {
+          "id": "TR7_v7",
+          "type": "quiz_choice",
+          "question": "[PART 7]: Read the following document and answer: **What is the mandatory event's goal?**\n\n**MEMORANDUM**\n\n*To:* Systems Engineers\n*From:* IT Department\n*Subject: Network Migration & CloudCRM Permissions*\n\nPlease note that starting next Monday, we are migrating to our new fiber database. A security setup session will be held this Sunday at 4:30 PM in the Conference Annex Room.",
+          "options": [
+            "To test the internet speed in the office rooms.",
+            "To undergo training and receive user accounts for the new software.",
+            "To debate if they should stay with the old software.",
+            "To meet their supplier for lunch."
+          ],
+          "correct_answer": "To undergo training and receive user accounts for the new software.",
+          "explanation": "El memorando indica que la sesión es obligatoria porque las cuentas se aprovisionarán directamente ('accounts will be provisioned directly during the workshop')."
+        }
+      ]
+    }
+  ]
+}

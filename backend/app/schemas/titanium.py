@@ -33,6 +33,7 @@ class ProgressRead(BaseModel):
     total_steps: int
     difficulty_completed: Optional[str] = "easy"
     tickets_earned: Optional[int] = 1
+    language: Optional[str] = "en"
     updated_at: Optional[datetime] = None
 
     # --- CAMPOS COMPUTADOS (El frontend los espera, pero la DB no los tiene) ---

@@ -1,0 +1,89 @@
+{
+  "id": "toeic_mock_v10",
+  "title": "Simulador Oficial Completo TOEIC® - Versión 10",
+  "level": "B2/C1",
+  "description": "Simulador completo real de Listening & Reading enfocado en Summit Media y el líder the CEO.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toeic-intro",
+      "type": "lecture",
+      "title": "TOEIC® Summit Media Simulation: Instructions",
+      "parts": [
+        {
+          "visual": "## 📝 Simulador Oficial TOEIC® (Versión 10)\n\nEvaluación de **Listening & Reading** en tiempo real:\n\n1. **Listening Section**: Evalúa tu comprensión en Summit Media usando ActiveCRM.\n2. **Reading Section**: Mide tu análisis gramatical de memorandos emitidos por the CEO.\n\n*Inicia tu prueba simulada oficial.*",
+          "audio": "Welcome to the Full TOEIC Simulation. Manage your time efficiently across both listening and reading stages. Let's begin.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "toeic-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (Listening)",
+      "questions": [
+        {
+          "id": "T_L1_v10",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTO]: Select the best description of Summit Media's office photo.",
+          "audio_script": "A) They are drawing the organizational chart. B) They are leaving the executive boardroom. C) The strategy office is empty. D) They are reviewing the corporate acquisition plan.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement D",
+          "explanation": "Se observa a la mesa directiva analizando el organigrama y el dossier de adquisición estratégica."
+        },
+        {
+          "id": "T_L3_v10",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the dialogue and answer: What does the man agree to do next?",
+          "audio_script": "M: Hi Robert, did you review the expansion plan from Summit Media?\nW: Yes, the CEO sent it. All departmental goals must be mapped under ActiveCRM.\nM: I will synchronize the task boards today.",
+          "options": [
+            "Sign the contract as currently written.",
+            "Call the manager to negotiate an extension of the delivery window.",
+            "Cancel the order immediately.",
+            "Write a new memorandum to sales staff."
+          ],
+          "correct_answer": "Call the manager to negotiate an extension of the delivery window.",
+          "explanation": "El hombre dice: 'I will call their manager to negotiate an extension'."
+        }
+      ]
+    },
+    {
+      "id": "toeic-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (Reading)",
+      "questions": [
+        {
+          "id": "T_R5_v10",
+          "type": "quiz_choice",
+          "question": "[PART 5]: Complete the business sentence correctly:\n\n\"All employees are strictly required to comply ___ the updated security rules in ActiveCRM.\"",
+          "options": [
+            "with",
+            "to",
+            "by",
+            "for"
+          ],
+          "correct_answer": "with",
+          "explanation": "El verbo 'comply' rige gramaticalmente la preposición 'with' (comply with / cumplir con)."
+        },
+        {
+          "id": "T_R7_v10",
+          "type": "quiz_choice",
+          "question": "[PART 7]: Read the memorandum and answer: **When will the migration to ActiveCRM officially occur?**\n\n**MEMORANDUM**\n\n*To:* Division Heads\n*From:* Chief Executive Officer\n*Subject: Corporate Strategy & ActiveCRM Targets*\n\nPlease note that starting next Monday, all quarterly key performance indicators must be logged in ActiveCRM. An alignment meeting will be held this weekend at 5:00 PM in the Conference West Wing.",
+          "options": [
+            "This next Monday at 5:00 PM",
+            "Next next Monday",
+            "Immediately today",
+            "Over the upcoming weekend"
+          ],
+          "correct_answer": "Next next Monday",
+          "explanation": "El memorando dice: 'starting next next Monday, we are officially retiring our legacy sales tool and migrating to ActiveCRM'."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "ielts_mock_v8",
+  "title": "Simulador Oficial Completo IELTS® Academic - Versión 8",
+  "level": "B2/C2",
+  "description": "Simulador académico completo de IELTS® con lecturas y audios sobre: Historia de la Economía.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "ielts-intro",
+      "type": "lecture",
+      "title": "IELTS® Academic Simulation: Historia de la Economía",
+      "parts": [
+        {
+          "visual": "## 🇬🇧 Simulador IELTS® Academic (Versión 8)\n\nTemas académicos globales evaluados:\n\n- **Academic Reading**: *Economía: El Surgimiento de los Bancos en Venecia*\n- **Academic Listening Lecture**\n- **Academic Writing Task Integration**\n\n*Comienza tu examen simulado.*",
+          "audio": "Welcome to the IELTS Academic Simulator. Focus on precise spelling, syntax structure, and vocabulary diversity. Let's begin.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "ielts-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (IELTS Listening)",
+      "questions": [
+        {
+          "id": "IE_L1_v8",
+          "type": "quiz_choice",
+          "question": "[ACADEMIC LECTURE]: Listen to the dialogue and answer: **What is the central focus?**\n\n*(Transcription)*:\n\nProfessor: The Silk Road was not a single highway, but a vast network of land and sea routes. To secure safety, merchants formed coalitions known as caravan guilds. These guilds negotiated protection rights with local rulers along the route, showing that early economic institutions were focused on minimizing risks and securing security.",
+          "options": [
+            "To map new geography in central Asia.",
+            "To negotiate safety and protection rights for merchants.",
+            "To construct high-speed stone roads for military use.",
+            "To monopolize the production of silk fabrics."
+          ],
+          "correct_answer": "To negotiate safety and protection rights for merchants.",
+          "explanation": "El profesor explica que los gremios (caravan guilds) negociaban derechos de protección ('protection rights') con gobernantes locales para asegurar el viaje."
+        }
+      ]
+    },
+    {
+      "id": "ielts-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (IELTS Reading)",
+      "questions": [
+        {
+          "id": "IE_R1_v8",
+          "type": "quiz_choice",
+          "question": "Read the academic article and answer the question:\n\n**Venetian Finance and Commercial Expansion**\n\nDuring the high Middle Ages, the Republic of Venice established a commercial monopoly across the Mediterranean, making it the wealthiest city-state in Europe. To facilitate international trade, Venetian merchants developed sophisticated banking networks. Rather than carrying heavy gold and silver coins across dangerous trade routes, merchants deposited their funds in Venice and received bills of exchange. These early paper documents allowed merchants to travel abroad and withdraw equivalent local currencies in foreign ports. This system minimized the risk of robbery and dramatically accelerated transaction speeds, serving as the direct precursor to modern paper currency.",
+          "options": [
+            "It allowed them to trade without paying any local taxes.",
+            "It eliminated the risk of carrying heavy coins on dangerous routes.",
+            "It prevented foreign ports from changing currency rates.",
+            "It allowed merchants to buy ships using digital gold."
+          ],
+          "correct_answer": "It eliminated the risk of carrying heavy coins on dangerous routes.",
+          "explanation": "El texto explica que en lugar de llevar pesadas monedas ('rather than carrying heavy coins across dangerous routes'), los comerciantes usaban letras de cambio."
+        },
+        {
+          "id": "IE_R2_v8",
+          "type": "quiz_choice",
+          "question": "What is the closest meaning of the highlighted term in context?",
+          "options": [
+            "Hinder",
+            "Simulate",
+            "Ease / Assist",
+            "Investigate"
+          ],
+          "correct_answer": "Ease / Assist",
+          "explanation": "En el contexto de hacer más sencillo o viable el comercio internacional, 'facilitate' significa facilitar, asistir o aliviar ('ease')."
+        }
+      ]
+    },
+    {
+      "id": "ielts-writing",
+      "type": "quiz",
+      "title": "Sección 3: Coherencia y Gramática Académica (IELTS Writing Prep)",
+      "questions": [
+        {
+          "id": "IE_W1_v8",
+          "type": "fill_input",
+          "question": "Complete the sentence with the appropriate formal connector showing cause-and-effect:\n\nComplete the scientific sentence: \"Bills of exchange minimized the risk of robbery. ___, they accelerated international transaction speeds.\"",
+          "correct_answers": [
+            "Furthermore",
+            "Moreover",
+            "furthermore",
+            "moreover"
+          ],
+          "hints": [
+            "Check spelling and casing."
+          ]
+        }
+      ]
+    }
+  ]
+}

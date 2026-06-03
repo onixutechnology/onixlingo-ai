@@ -1,0 +1,95 @@
+{
+  "id": "toefl_mock_v2",
+  "title": "Simulador Oficial Completo TOEFL® iBT - Versión 2",
+  "level": "B2/C1",
+  "description": "Simulador académico completo de TOEFL® con lecturas y conferencias sobre: Civilizaciones del Pasado.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toefl-intro",
+      "type": "lecture",
+      "title": "TOEFL® iBT Simulation: Civilizaciones del Pasado",
+      "parts": [
+        {
+          "visual": "## 🎓 Simulador TOEFL® iBT (Versión 2)\n\nTemas académicos oficiales evaluados:\n\n- **Reading Article**: *Arqueología: El Cemento de la Antigua Roma*\n- **Academic Lecture**: *Lecture on Archaeological Surveying Techniques*\n- **Writing structure & Integration**\n\n*Comienza tu examen académico.*",
+          "audio": "Welcome to the Integrated TOEFL iBT simulation. You will be tested on your ability to synthesize information from complex academic sources. Let's start.",
+          "animation": "analyzing"
+        }
+      ]
+    },
+    {
+      "id": "toefl-reading",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Lectora Académica (Reading)",
+      "questions": [
+        {
+          "id": "TF_R1_v2",
+          "type": "quiz_choice",
+          "question": "Read the academic article and answer the question:\n\n**The Longevity of Roman Marine Concrete**\n\nWhile modern concrete structures frequently degrade in saltwater environments within decades, ancient Roman harbor structures have survived intact for over two millennia. For decades, archaeologists and materials scientists were puzzled by this durability. Mineralogical analysis of Roman marine concrete—composed of volcanic ash, quicklime, and seawater—reveals the formation of a rare mineral called aluminous tobermorite. When seawater penetrates the concrete, it dissolves the volcanic crystals and precipitates tobermorite. This mineral crystallization actually reinforces the concrete matrix over time, turning seawater from a corrosive agent into a catalyst for structural structural integrity.",
+          "options": [
+            "It is sealed with an impermeable modern chemical coating.",
+            "Seawater penetration causes the growth of reinforcing minerals like tobermorite.",
+            "It completely prevents any water from entering the inner chambers.",
+            "The concrete is kept in dry, arid underground environments."
+          ],
+          "correct_answer": "Seawater penetration causes the growth of reinforcing minerals like tobermorite.",
+          "explanation": "El texto explica que cuando el agua marina penetra, disuelve los cristales y precipita tobermorita ('precipitates tobermorite'), reforzando la estructura."
+        },
+        {
+          "id": "TF_R2_v2",
+          "type": "quiz_choice",
+          "question": "What is the closest meaning of the target word in this academic context?",
+          "options": [
+            "Fragility",
+            "Endurance / Longevity",
+            "Aesthetic value",
+            "Porosity"
+          ],
+          "correct_answer": "Endurance / Longevity",
+          "explanation": "En el contexto de estructuras que sobreviven miles de años, 'durability' se refiere a la longevidad y resistencia estructural."
+        }
+      ]
+    },
+    {
+      "id": "toefl-listening",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Auditiva Académica (Listening)",
+      "questions": [
+        {
+          "id": "TF_L1_v2",
+          "type": "quiz_choice",
+          "question": "[UNIVERSITY LECTURE]: Listen to the professor's explanation and answer: **What is the main topic?**\n\n*(Transcription)*:\n\nProfessor: Let's focus on LiDAR, which stands for Light Detection and Ranging. LiDAR uses laser pulses emitted from an airplane to map the topography of the forest floor. By measuring the time it takes for laser beams to bounce back, scientists can create highly precise 3D maps. This technology has revolutionized archaeology by revealing hidden Roman roads and settlements deep beneath thick forest canopies without the need for manual excavation.",
+          "options": [
+            "To describe the history of Roman road construction.",
+            "To explain how laser pulse technology maps hidden archaeological ruins.",
+            "To criticize manual excavations in tropical environments.",
+            "To analyze the cost of hiring mapping airplanes."
+          ],
+          "correct_answer": "To explain how laser pulse technology maps hidden archaeological ruins.",
+          "explanation": "El profesor describe el uso de pulsos láser (LiDAR) para mapear la topografía del bosque y revelar calzadas y asentamientos antiguos ocultos."
+        }
+      ]
+    },
+    {
+      "id": "toefl-writing-prep",
+      "type": "quiz",
+      "title": "Sección 3: Estructura y Coherencia Académica (Writing Prep)",
+      "questions": [
+        {
+          "id": "TF_W1_v2",
+          "type": "fill_input",
+          "question": "Fill in the blank with the appropriate academic connector that best completes the logical flow:\n\nComplete the scientific sentence: \"Roman harbor ruins survived for two millennia. ___, modern concrete structures degrade in decades.\"",
+          "correct_answers": [
+            "In contrast",
+            "Conversely",
+            "in contrast",
+            "conversely"
+          ],
+          "hints": [
+            "Check punctuation and capitalization."
+          ]
+        }
+      ]
+    }
+  ]
+}

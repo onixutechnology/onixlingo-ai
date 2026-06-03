@@ -155,6 +155,19 @@ class ChessMove(Base):
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
 
 
+class MatchmakingQueue(Base):
+    __tablename__ = "matchmaking_queue"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), unique=True, nullable=False, index=True)
+    time_control = Column(String, nullable=False)  # bullet, blitz, rapid, classical
+    elo_rating = Column(Integer, nullable=False)
+    elo_range = Column(Integer, default=100)
+    queued_at = Column(DateTime(timezone=True), server_default=func.now(), index=True)
+
+    user = relationship("User", foreign_keys=[user_id])
+
+
 class PromoCoupon(Base):
     __tablename__ = "promo_coupons"
 
@@ -181,5 +194,20 @@ class SpeechPracticeLog(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class ExamAttempt(Base):
+    __tablename__ = "exam_attempts"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    exam_id = Column(String, index=True, nullable=False)
+    started_at = Column(DateTime(timezone=True), server_default=func.now())
+    finished_at = Column(DateTime(timezone=True), nullable=True)
+    score = Column(Integer, default=0)
+    time_limit_seconds = Column(Integer, default=7200) 
+    status = Column(String, default="active") # active, completed, expired
+
+    user = relationship("User")
 
 

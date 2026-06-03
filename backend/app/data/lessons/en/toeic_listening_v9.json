@@ -1,0 +1,56 @@
+{
+  "id": "toeic_listening_v9",
+  "title": "TOEIC® Listening - Versión 9: Supply Chain & Procurement Contracts",
+  "level": "B2/C1",
+  "description": "Prueba intensiva de comprensión auditiva TOEIC® enfocada en el contexto de Titan Logistics con the Procurement Director.",
+  "total_xp": 100,
+  "stages": [
+    {
+      "id": "listening-intro",
+      "type": "lecture",
+      "title": "TOEIC Part 1: Strategy & Warm-up",
+      "parts": [
+        {
+          "visual": "## 📸 Simulación de Auditiva: Titan Logistics\n\nEvaluaremos tu destreza auditiva en el contexto de **Titan Logistics** (Líder a cargo: **the Procurement Director**).\n\nConcéntrate plenamente en las descripciones y los audios corporativos.",
+          "audio": "Welcome to this specialized TOEIC Listening drill. Listen closely to the speaker options and pick the best description of the workspace. Good luck!",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "listening-quiz",
+      "type": "quiz",
+      "title": "Parte 1: Photodescription & Conversations",
+      "questions": [
+        {
+          "id": "TL1_v9",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTOGRAPH]: Look at the business picture of Titan Logistics's office staff. Select the correct description.",
+          "audio_script": "A) They are signing the supplier agreement. B) They are inspecting raw materials. C) The shipping container is being loaded. D) They are negotiating the purchase orders.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement D",
+          "explanation": "Los ejecutivos están sentados discutiendo las cláusulas y montos de las órdenes de compra de materias primas."
+        },
+        {
+          "id": "TL3_v9",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the conversation and answer: What is the main issue discussed by the speakers?",
+          "audio_script": "M: Hi John, did the procurement team at Titan Logistics approve the contract?\nW: Yes. The Procurement Director wants us to submit the finalized purchase orders in FlexCRM.\nM: I will handle the system upload right away.",
+          "options": [
+            "The contract pricing is too high.",
+            "The delivery window is too narrow for their schedule.",
+            "They want to cancel the shipment.",
+            "The company wants to buy ApexCRM."
+          ],
+          "correct_answer": "The delivery window is too narrow for their schedule.",
+          "explanation": "La mujer menciona explícitamente: 'pricing is competitive, but their delivery window is too narrow for our schedule'."
+        }
+      ]
+    }
+  ]
+}

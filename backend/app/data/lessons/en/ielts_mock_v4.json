@@ -1,0 +1,95 @@
+{
+  "id": "ielts_mock_v4",
+  "title": "Simulador Oficial Completo IELTS® Academic - Versión 4",
+  "level": "B2/C2",
+  "description": "Simulador académico completo de IELTS® con lecturas y audios sobre: Dinámicas de Conducta.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "ielts-intro",
+      "type": "lecture",
+      "title": "IELTS® Academic Simulation: Dinámicas de Conducta",
+      "parts": [
+        {
+          "visual": "## 🇬🇧 Simulador IELTS® Academic (Versión 4)\n\nTemas académicos globales evaluados:\n\n- **Academic Reading**: *Psicología: El Aprendizaje Social en Primates*\n- **Academic Listening Lecture**\n- **Academic Writing Task Integration**\n\n*Comienza tu examen simulado.*",
+          "audio": "Welcome to the IELTS Academic Simulator. Focus on precise spelling, syntax structure, and vocabulary diversity. Let's begin.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "ielts-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (IELTS Listening)",
+      "questions": [
+        {
+          "id": "IE_L1_v4",
+          "type": "quiz_choice",
+          "question": "[ACADEMIC LECTURE]: Listen to the dialogue and answer: **What is the central focus?**\n\n*(Transcription)*:\n\nProfessor: We previously believed animal calls were purely emotional responses. However, recent recordings of vervet monkeys show semantic communication. Vervet monkeys produce distinct alarm calls depending on the predator. An aerial alarm call for eagles causes the troop to look up and run into low bushes, while a terrestrial alarm for leopards makes them climb high branches. This shows referential signaling, where calls represent external objects.",
+          "options": [
+            "Their alarm calls are identical across all types of threats.",
+            "They communicate semantic warnings that describe specific predators.",
+            "They learn to imitate human voices in university research labs.",
+            "They do not rely on vocal signals to maintain safety."
+          ],
+          "correct_answer": "They communicate semantic warnings that describe specific predators.",
+          "explanation": "El profesor detalla que emiten llamados de alarma distintos según el depredador ('distinct alarm calls depending on the predator'), lo cual representa comunicación semántica."
+        }
+      ]
+    },
+    {
+      "id": "ielts-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (IELTS Reading)",
+      "questions": [
+        {
+          "id": "IE_R1_v4",
+          "type": "quiz_choice",
+          "question": "Read the academic article and answer the question:\n\n**Cognitive Mechanisms of Social Transmission**\n\nFor decades, cognitive psychologists believed that complex imitation was a uniquely human developmental trait. However, comparative studies of primate behavior have demonstrated that chimpanzees display sophisticated social transmission protocols. When a alpha member in a group invents a new foraging technique—such as using a modified twig to extract termites from a mound—other members observe the action and replicate the exact motor sequences. This is not simple associative learning; rather, it involves active cognitive mapping, where the observer understands the goal of the model and modifies their physical behavior to match it, forming a primitive cultural lineage.",
+          "options": [
+            "Simple associative learning that occurs purely by chance.",
+            "Active cognitive mapping of another member's goal and actions.",
+            "Physical migration to new territories to find safety equipment.",
+            "A complete lack of cultural lineage or developmental traits."
+          ],
+          "correct_answer": "Active cognitive mapping of another member's goal and actions.",
+          "explanation": "El texto explica que no es un simple aprendizaje asociativo, sino que implica un mapa cognitivo activo ('active cognitive mapping') para entender la meta."
+        },
+        {
+          "id": "IE_R2_v4",
+          "type": "quiz_choice",
+          "question": "What is the closest meaning of the highlighted term in context?",
+          "options": [
+            "Ignore",
+            "Alter",
+            "Copy / Duplicate",
+            "Explain"
+          ],
+          "correct_answer": "Copy / Duplicate",
+          "explanation": "El texto dice que observan y replican ('replicate') las secuencias motoras, lo que significa duplicar o copiar la acción."
+        }
+      ]
+    },
+    {
+      "id": "ielts-writing",
+      "type": "quiz",
+      "title": "Sección 3: Coherencia y Gramática Académica (IELTS Writing Prep)",
+      "questions": [
+        {
+          "id": "IE_W1_v4",
+          "type": "fill_input",
+          "question": "Complete the sentence with the appropriate formal connector showing cause-and-effect:\n\nComplete the scientific sentence: \"Chimpanzees actively observe foraging techniques. ___, they can copy the exact motor sequences.\"",
+          "correct_answers": [
+            "As a result",
+            "Thus",
+            "as a result",
+            "thus"
+          ],
+          "hints": [
+            "Check spelling and casing."
+          ]
+        }
+      ]
+    }
+  ]
+}

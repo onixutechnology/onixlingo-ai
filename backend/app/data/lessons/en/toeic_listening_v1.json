@@ -1,0 +1,56 @@
+{
+  "id": "toeic_listening_v1",
+  "title": "TOEIC® Listening - Versión 1: Meetings & CRM Transition",
+  "level": "B2/C1",
+  "description": "Prueba intensiva de comprensión auditiva TOEIC® enfocada en el contexto de Zenith Corp con the Sales Director.",
+  "total_xp": 100,
+  "stages": [
+    {
+      "id": "listening-intro",
+      "type": "lecture",
+      "title": "TOEIC Part 1: Strategy & Warm-up",
+      "parts": [
+        {
+          "visual": "## 📸 Simulación de Auditiva: Zenith Corp\n\nEvaluaremos tu destreza auditiva en el contexto de **Zenith Corp** (Líder a cargo: **the Sales Director**).\n\nConcéntrate plenamente en las descripciones y los audios corporativos.",
+          "audio": "Welcome to this specialized TOEIC Listening drill. Listen closely to the speaker options and pick the best description of the workspace. Good luck!",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "listening-quiz",
+      "type": "quiz",
+      "title": "Parte 1: Photodescription & Conversations",
+      "questions": [
+        {
+          "id": "TL1_v1",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTOGRAPH]: Look at the business picture of Zenith Corp's office staff. Select the correct description.",
+          "audio_script": "A) They are discussing the CRM dashboard. B) They are leaving the main lobby. C) The server room is closed. D) They are filing paper documents.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement A",
+          "explanation": "La descripción correcta es la A, ya que se observa a los representantes analizando el panel del CRM."
+        },
+        {
+          "id": "TL3_v1",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the conversation and answer: What is the main issue discussed by the speakers?",
+          "audio_script": "M: Hi Sarah, did you get a chance to review the shipment contract from Zenith Corp?\nW: I did. Their pricing is competitive, but their delivery window is too narrow for our schedule.\nM: I see. I will call the Sales Director to negotiate an extension.",
+          "options": [
+            "The contract pricing is too high.",
+            "The delivery window is too narrow for their schedule.",
+            "They want to cancel the shipment.",
+            "The company wants to buy ApexCRM."
+          ],
+          "correct_answer": "The delivery window is too narrow for their schedule.",
+          "explanation": "La mujer menciona explícitamente: 'pricing is competitive, but their delivery window is too narrow for our schedule'."
+        }
+      ]
+    }
+  ]
+}

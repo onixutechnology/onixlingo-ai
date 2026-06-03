@@ -1,0 +1,56 @@
+{
+  "id": "toeic_listening_v2",
+  "title": "TOEIC® Listening - Versión 2: Logistics & International Shipping",
+  "level": "B2/C1",
+  "description": "Prueba intensiva de comprensión auditiva TOEIC® enfocada en el contexto de ApexCorp con the Operations Chief.",
+  "total_xp": 100,
+  "stages": [
+    {
+      "id": "listening-intro",
+      "type": "lecture",
+      "title": "TOEIC Part 1: Strategy & Warm-up",
+      "parts": [
+        {
+          "visual": "## 📸 Simulación de Auditiva: ApexCorp\n\nEvaluaremos tu destreza auditiva en el contexto de **ApexCorp** (Líder a cargo: **the Operations Chief**).\n\nConcéntrate plenamente en las descripciones y los audios corporativos.",
+          "audio": "Welcome to this specialized TOEIC Listening drill. Listen closely to the speaker options and pick the best description of the workspace. Good luck!",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "listening-quiz",
+      "type": "quiz",
+      "title": "Parte 1: Photodescription & Conversations",
+      "questions": [
+        {
+          "id": "TL1_v2",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTOGRAPH]: Look at the business picture of ApexCorp's office staff. Select the correct description.",
+          "audio_script": "A) They are loading packages onto the truck. B) They are signing the shipping invoices. C) The warehouse doors are closed. D) They are reviewing the freight shipping terms.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement D",
+          "explanation": "La descripción correcta es la D, ya que se ve a los agentes de logística revisando las cláusulas del flete marítimo."
+        },
+        {
+          "id": "TL3_v2",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the conversation and answer: What is the main issue discussed by the speakers?",
+          "audio_script": "M: Hi Emily, did you get a chance to review the logistics invoice from ApexCorp?\nW: Yes. The freight rates are reasonable, but the port clearance fee is higher than expected.\nM: Let's call the Operations Chief to request a waiver.",
+          "options": [
+            "The contract pricing is too high.",
+            "The delivery window is too narrow for their schedule.",
+            "They want to cancel the shipment.",
+            "The company wants to buy ApexCRM."
+          ],
+          "correct_answer": "The delivery window is too narrow for their schedule.",
+          "explanation": "La mujer menciona explícitamente: 'pricing is competitive, but their delivery window is too narrow for our schedule'."
+        }
+      ]
+    }
+  ]
+}

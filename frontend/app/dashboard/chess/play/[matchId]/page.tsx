@@ -1,15 +1,17 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, use } from 'react';
 import { useRouter } from 'next/navigation';
 import { usePvPStore } from '@/store/usePvPStore';
+import { useAuthStore } from '@/store/useAuthStore';
 import LiveChessboard from '@/components/chess/LiveChessboard';
 import { User, Shield, Zap } from 'lucide-react';
 
-export default function PlayMatchPage({ params }: { params: { matchId: string } }) {
-  const { matchId } = params;
+export default function PlayMatchPage({ params }: { params: Promise<{ matchId: string }> }) {
+  const { matchId } = use(params);
   const router = useRouter();
   const { localPlayer, opponent, matchStatus } = usePvPStore();
+  const { token: jwtToken } = useAuthStore();
 
   useEffect(() => {
     // Si recargan la página y se pierde el store, los mandamos al lobby
@@ -70,7 +72,7 @@ export default function PlayMatchPage({ params }: { params: { matchId: string } 
         <div className="mb-4 sm:mb-6 w-full max-w-[500px] mx-auto rounded-none">
           <LiveChessboard
             matchId={matchId}
-            token={localPlayer.userId}
+            token={jwtToken || localPlayer.userId}
             playerColor={localIsWhite ? 'w' : 'b'}
           />
         </div>

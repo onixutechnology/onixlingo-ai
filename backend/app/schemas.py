@@ -46,6 +46,7 @@ class ProgressRead(BaseModel):
     current_step: int
     total_steps: int
     percentage: int       # 0 a 100
+    language: Optional[str] = "en"
 
     # Configuración para leer desde SQLAlchemy
     model_config = ConfigDict(from_attributes=True) 

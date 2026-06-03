@@ -1,0 +1,89 @@
+{
+  "id": "toeic_mock_v1",
+  "title": "Simulador Oficial Completo TOEIC® - Versión 1",
+  "level": "B2/C1",
+  "description": "Simulador completo real de Listening & Reading enfocado en Zenith Corp y el líder the Sales Director.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toeic-intro",
+      "type": "lecture",
+      "title": "TOEIC® Zenith Corp Simulation: Instructions",
+      "parts": [
+        {
+          "visual": "## 📝 Simulador Oficial TOEIC® (Versión 1)\n\nEvaluación de **Listening & Reading** en tiempo real:\n\n1. **Listening Section**: Evalúa tu comprensión en Zenith Corp usando ApexCRM.\n2. **Reading Section**: Mide tu análisis gramatical de memorandos emitidos por the Sales Director.\n\n*Inicia tu prueba simulada oficial.*",
+          "audio": "Welcome to the Full TOEIC Simulation. Manage your time efficiently across both listening and reading stages. Let's begin.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "toeic-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (Listening)",
+      "questions": [
+        {
+          "id": "T_L1_v1",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTO]: Select the best description of Zenith Corp's office photo.",
+          "audio_script": "A) They are discussing the CRM dashboard. B) They are leaving the main lobby. C) The server room is closed. D) They are filing paper documents.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement A",
+          "explanation": "La descripción correcta es la A, ya que se observa a los representantes analizando el panel del CRM."
+        },
+        {
+          "id": "T_L3_v1",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the dialogue and answer: What does the man agree to do next?",
+          "audio_script": "M: Hi Sarah, did you get a chance to review the shipment contract from Zenith Corp?\nW: I did. Their pricing is competitive, but their delivery window is too narrow for our schedule.\nM: I see. I will call the Sales Director to negotiate an extension.",
+          "options": [
+            "Sign the contract as currently written.",
+            "Call the manager to negotiate an extension of the delivery window.",
+            "Cancel the order immediately.",
+            "Write a new memorandum to sales staff."
+          ],
+          "correct_answer": "Call the manager to negotiate an extension of the delivery window.",
+          "explanation": "El hombre dice: 'I will call their manager to negotiate an extension'."
+        }
+      ]
+    },
+    {
+      "id": "toeic-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (Reading)",
+      "questions": [
+        {
+          "id": "T_R5_v1",
+          "type": "quiz_choice",
+          "question": "[PART 5]: Complete the business sentence correctly:\n\n\"All employees are strictly required to comply ___ the updated security rules in ApexCRM.\"",
+          "options": [
+            "with",
+            "to",
+            "by",
+            "for"
+          ],
+          "correct_answer": "with",
+          "explanation": "El verbo 'comply' rige gramaticalmente la preposición 'with' (comply with / cumplir con)."
+        },
+        {
+          "id": "T_R7_v1",
+          "type": "quiz_choice",
+          "question": "[PART 7]: Read the memorandum and answer: **When will the migration to ApexCRM officially occur?**\n\n**MEMORANDUM**\n\n*To:* Sales Representatives\n*From:* Sales Department\n*Subject: CRM Software Transition*\n\nPlease note that starting next Monday, we are officially retiring our legacy sales tool and migrating to ApexCRM. An interactive onboarding session will be held this Thursday at 10:00 AM in Conference Room B. Attendance is mandatory.",
+          "options": [
+            "This Monday at 10:00 AM",
+            "Next Monday",
+            "Immediately today",
+            "Over the upcoming weekend"
+          ],
+          "correct_answer": "Next Monday",
+          "explanation": "El memorando dice: 'starting next Monday, we are officially retiring our legacy sales tool and migrating to ApexCRM'."
+        }
+      ]
+    }
+  ]
+}

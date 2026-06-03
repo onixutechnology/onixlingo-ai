@@ -63,6 +63,19 @@ def get_lesson_content(
     user_tier = current_user.tier or "free"
     is_admin = getattr(current_user, "role", "student") == "admin"
 
+    # Protección de simuladores oficiales de examen (Solo Executive/Titanium)
+    clean_id = lesson_id.lower()
+    is_simulator = (
+        clean_id in ["toeic_listening", "toeic_reading", "toeic_mock", "toefl_mock", "ielts_mock"] or
+        any(clean_id.startswith(p + "_v") for p in ["toeic_listening", "toeic_reading", "toeic_mock", "toefl_mock", "ielts_mock"])
+    )
+    if is_simulator and not is_admin and user_tier not in ["executive", "titanium"]:
+        logger.warning(f"🔒 Acceso denegado al simulador {lesson_id} para usuario {user_tier}: {current_user.username}")
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Los simuladores oficiales de preparación (TOEIC, TOEFL, IELTS) son exclusivos de OnixLingo EXECUTIVE. Actualiza tu suscripción para acceder."
+        )
+
     if not is_admin:
         if user_tier == "free":
             is_free_lesson = (
@@ -92,6 +105,31 @@ def get_lesson_content(
                 )
 
     filename = f"{lesson_id}.json"
+    
+    # ─── DYNAMIC MAPPING FOR C-SUITE 30 PREMIUM BLOCKS ───
+    is_pro_lesson = lesson_id.startswith("pro-")
+    mapped_pro_id = None
+    
+    if is_pro_lesson:
+        parts = lesson_id.split("-")
+        if len(parts) >= 3:
+            num_part = parts[-1]
+            block_id = "-".join(parts[1:-1])  # e.g., 'exec-crisis'
+            
+            PRO_BLOCK_IDS = [
+                'exec-b1', 'exec-b2', 'exec-c1', 'exec-c2', 'exec-exec', 'exec-mastery',
+                'exec-crisis', 'exec-ma', 'exec-vc', 'exec-fintech', 'exec-pr', 'exec-rhetoric',
+                'exec-esg', 'exec-ai', 'exec-logistics', 'exec-negotiation', 'exec-compliance', 'exec-media',
+                'exec-finance', 'exec-sourcing', 'exec-shareholders', 'exec-launch', 'exec-investors', 'exec-transformation',
+                'exec-hr', 'exec-legal', 'exec-risk', 'exec-ipo', 'exec-macro', 'exec-thesis'
+            ]
+            
+            if block_id in PRO_BLOCK_IDS:
+                block_idx = PRO_BLOCK_IDS.index(block_id)
+                physical_prefixes = ["b1", "b2", "c1", "c2", "exec", "mastery"]
+                mapped_prefix = physical_prefixes[block_idx % 6]
+                filename = f"pro-{mapped_prefix}-{num_part}.json"
+                mapped_pro_id = lesson_id
     
     # Si el idioma solicitado es 'en' (por defecto) pero la lección tiene prefijo 'fr-' o 'zh-',
     # deducimos el idioma correcto automáticamente.
@@ -142,6 +180,16 @@ def get_lesson_content(
     try:
         with open(final_file, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
+        if mapped_pro_id:
+            raw_data["id"] = mapped_pro_id
+            parts = mapped_pro_id.split("-")
+            block_id = "-".join(parts[1:-1])
+            num_part = parts[-1]
+            if block_id in PRO_BLOCK_IDS and PRO_BLOCK_IDS.index(block_id) >= 6:
+                original_title = raw_data.get("title", "")
+                if "topic" in original_title.lower() or "sujet" in original_title.lower():
+                    clean_domain = block_id.replace("exec-", "").upper()
+                    raw_data["title"] = f"{clean_domain} Scenario {num_part}"
         return LessonContent(**raw_data)
     except Exception as e:
         logger.error(f"🔥 Error leyendo archivo: {e}")

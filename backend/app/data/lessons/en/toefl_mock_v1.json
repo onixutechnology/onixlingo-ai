@@ -1,0 +1,95 @@
+{
+  "id": "toefl_mock_v1",
+  "title": "Simulador Oficial Completo TOEFL® iBT - Versión 1",
+  "level": "B2/C1",
+  "description": "Simulador académico completo de TOEFL® con lecturas y conferencias sobre: Ciencias y Cosmos.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toefl-intro",
+      "type": "lecture",
+      "title": "TOEFL® iBT Simulation: Ciencias y Cosmos",
+      "parts": [
+        {
+          "visual": "## 🎓 Simulador TOEFL® iBT (Versión 1)\n\nTemas académicos oficiales evaluados:\n\n- **Reading Article**: *Astronomía: La Habitabilidad de Kepler-186f*\n- **Academic Lecture**: *Lecture on Stellar Evolution & Solar Wind Impact*\n- **Writing structure & Integration**\n\n*Comienza tu examen académico.*",
+          "audio": "Welcome to the Integrated TOEFL iBT simulation. You will be tested on your ability to synthesize information from complex academic sources. Let's start.",
+          "animation": "analyzing"
+        }
+      ]
+    },
+    {
+      "id": "toefl-reading",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Lectora Académica (Reading)",
+      "questions": [
+        {
+          "id": "TF_R1_v1",
+          "type": "quiz_choice",
+          "question": "Read the academic article and answer the question:\n\n**The Habitability of Kepler-186f**\n\nIn recent stellar astrobiology, astronomers have focused on Kepler-186f, the first validated Earth-size planet orbiting within the habitable zone of an M-dwarf star. M-dwarfs, or red dwarfs, constitute nearly seventy percent of all stars in the Milky Way, making planetary systems around them highly common. While red dwarfs undergo intense stellar flares that release high-energy ultraviolet radiation, recent atmosphere models show that Kepler-186f's dense atmospheric carbon dioxide could serve as a protective barrier. This atmospheric retention suggests that liquid water could stably exist on the planetary surface under convective atmospheric conditions, presenting a major vector for extrasolar biosignature research.",
+          "options": [
+            "It is the largest planet discovered in the Milky Way.",
+            "It is the first Earth-size planet found in a red dwarf's habitable zone.",
+            "It emits stellar flares that help sustain volcanic outgassing.",
+            "It lacks any protective atmospheric carbon dioxide."
+          ],
+          "correct_answer": "It is the first Earth-size planet found in a red dwarf's habitable zone.",
+          "explanation": "El texto menciona directamente que Kepler-186f es 'the first validated Earth-size planet orbiting within the habitable zone of an M-dwarf star'."
+        },
+        {
+          "id": "TF_R2_v1",
+          "type": "quiz_choice",
+          "question": "What is the closest meaning of the target word in this academic context?",
+          "options": [
+            "Exclusion",
+            "Loss",
+            "Maintenance / Preservation",
+            "Fluctuation"
+          ],
+          "correct_answer": "Maintenance / Preservation",
+          "explanation": "En el contexto de la retención atmosférica ('atmospheric retention'), se refiere a la preservación o mantenimiento de la atmósfera protectora."
+        }
+      ]
+    },
+    {
+      "id": "toefl-listening",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Auditiva Académica (Listening)",
+      "questions": [
+        {
+          "id": "TF_L1_v1",
+          "type": "quiz_choice",
+          "question": "[UNIVERSITY LECTURE]: Listen to the professor's explanation and answer: **What is the main topic?**\n\n*(Transcription)*:\n\nProfessor: Today we discuss stellar winds in red dwarf systems. These winds are streams of charged particles ejected from the star's corona. M-dwarfs exhibit persistent coronal mass ejections that are far more intense than those of our Sun. These charged particles strike orbiting planets and can cause atmospheric stripping. However, if a planet possesses a strong intrinsic magnetic field, this field acts as a shield, deflecting the solar wind and preventing the loss of volatile water compounds.",
+          "options": [
+            "The composition of our Sun's coronal mass ejections.",
+            "How stellar winds interact with planetary atmospheres and magnetic fields.",
+            "The migration of gas giants in red dwarf systems.",
+            "The role of volcanic eruptions in creating water fields."
+          ],
+          "correct_answer": "How stellar winds interact with planetary atmospheres and magnetic fields.",
+          "explanation": "El profesor detalla los vientos estelares ('stellar winds'), la pérdida de atmósfera ('stripping') y cómo el campo magnético sirve de escudo protector."
+        }
+      ]
+    },
+    {
+      "id": "toefl-writing-prep",
+      "type": "quiz",
+      "title": "Sección 3: Estructura y Coherencia Académica (Writing Prep)",
+      "questions": [
+        {
+          "id": "TF_W1_v1",
+          "type": "fill_input",
+          "question": "Fill in the blank with the appropriate academic connector that best completes the logical flow:\n\nComplete the scientific sentence: \"Kepler-186f orbits in the habitable zone. ___, stellar flares present a major risk to life.\"",
+          "correct_answers": [
+            "However",
+            "Nevertheless",
+            "however",
+            "nevertheless"
+          ],
+          "hints": [
+            "Check punctuation and capitalization."
+          ]
+        }
+      ]
+    }
+  ]
+}

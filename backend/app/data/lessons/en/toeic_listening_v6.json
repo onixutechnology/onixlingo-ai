@@ -1,0 +1,56 @@
+{
+  "id": "toeic_listening_v6",
+  "title": "TOEIC® Listening - Versión 6: Quality Control & Factory Operations",
+  "level": "B2/C1",
+  "description": "Prueba intensiva de comprensión auditiva TOEIC® enfocada en el contexto de Vortex Ltd con the Operations Director.",
+  "total_xp": 100,
+  "stages": [
+    {
+      "id": "listening-intro",
+      "type": "lecture",
+      "title": "TOEIC Part 1: Strategy & Warm-up",
+      "parts": [
+        {
+          "visual": "## 📸 Simulación de Auditiva: Vortex Ltd\n\nEvaluaremos tu destreza auditiva en el contexto de **Vortex Ltd** (Líder a cargo: **the Operations Director**).\n\nConcéntrate plenamente en las descripciones y los audios corporativos.",
+          "audio": "Welcome to this specialized TOEIC Listening drill. Listen closely to the speaker options and pick the best description of the workspace. Good luck!",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "listening-quiz",
+      "type": "quiz",
+      "title": "Parte 1: Photodescription & Conversations",
+      "questions": [
+        {
+          "id": "TL1_v6",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTOGRAPH]: Look at the business picture of Vortex Ltd's office staff. Select the correct description.",
+          "audio_script": "A) They are wearing safety helmets on the factory floor. B) They are purchasing safety equipment online. C) The assembly line is fully automated. D) They are repairing the conveyor belt.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement A",
+          "explanation": "Los operarios llevan equipo de protección reglamentario (cascos y chalecos) en la planta industrial."
+        },
+        {
+          "id": "TL3_v6",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the conversation and answer: What is the main issue discussed by the speakers?",
+          "audio_script": "M: Hi Michael, did you receive the safety audit from Vortex Ltd?\nW: Yes, the Operations Director sent it. The plant compliance is high, but we need to log the metrics in VortexCRM.\nM: I will schedule a follow-up with the safety inspector.",
+          "options": [
+            "The contract pricing is too high.",
+            "The delivery window is too narrow for their schedule.",
+            "They want to cancel the shipment.",
+            "The company wants to buy ApexCRM."
+          ],
+          "correct_answer": "The delivery window is too narrow for their schedule.",
+          "explanation": "La mujer menciona explícitamente: 'pricing is competitive, but their delivery window is too narrow for our schedule'."
+        }
+      ]
+    }
+  ]
+}

@@ -69,30 +69,45 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
-            Ecosistema de Cognición y Oratoria C-Suite.
+            Aprende Inglés, Francés, Chino y Ajedrez en una misma plataforma.
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light">
-            Infraestructura integral de simulación lingüística y análisis acústico en tiempo real para el dominio técnico del Inglés, Francés y Chino Mandarín, potenciada por entrenamiento estratégico cognitivo de alta precisión.
+            El primer simulador de conversación ejecutiva y análisis de pronunciación en tiempo real. Desarrolla fluidez, confianza y vocabulario de negocios para destacar en el mercado global.
           </p>
 
           {/* Quick Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto pt-6">
-            <div className="bg-white border border-slate-200 rounded-none p-4 shadow-sm">
-              <p className="text-2xl font-bold text-slate-900">900+</p>
-              <p className="text-xs text-slate-500 font-medium">Lecciones Activas</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6">
+            <div className="bg-white border border-slate-200 rounded-none p-5 shadow-sm flex flex-col justify-between text-left">
+              <div>
+                <p className="text-3xl font-extrabold text-slate-900">3,000+</p>
+                <p className="text-xs font-bold text-indigo-600 uppercase tracking-wider mt-1">Lecciones Totales</p>
+              </div>
+              <p className="text-[11px] text-slate-500 mt-2 font-medium">Lecciones completas de Inglés, Francés y Chino Mandarín (A1 a C2)</p>
             </div>
-            <div className="bg-white border border-slate-200 rounded-none p-4 shadow-sm">
-              <p className="text-2xl font-bold text-indigo-600">3</p>
-              <p className="text-xs text-slate-500 font-medium">Idiomas Globales</p>
+            
+            <div className="bg-white border border-slate-200 rounded-none p-5 shadow-sm flex flex-col justify-between text-left">
+              <div>
+                <p className="text-3xl font-extrabold text-slate-900">3,000+</p>
+                <p className="text-xs font-bold text-emerald-600 uppercase tracking-wider mt-1">Retos de Ajedrez</p>
+              </div>
+              <p className="text-[11px] text-slate-500 mt-2 font-medium">Puzzles tácticos, aperturas y finales estratégicos asistidos por IA</p>
             </div>
-            <div className="bg-white border border-slate-200 rounded-none p-4 shadow-sm">
-              <p className="text-2xl font-bold text-amber-600">60</p>
-              <p className="text-xs text-slate-500 font-medium">Temas Ejecutivos</p>
+
+            <div className="bg-white border border-slate-200 rounded-none p-5 shadow-sm flex flex-col justify-between text-left">
+              <div>
+                <p className="text-3xl font-extrabold text-slate-900">1,400+</p>
+                <p className="text-xs font-bold text-amber-600 uppercase tracking-wider mt-1">Contextos de Aprendizaje</p>
+              </div>
+              <p className="text-[11px] text-slate-500 mt-2 font-medium">Temas reales cubriendo situaciones de negocios, finanzas, C-Suite y vida diaria</p>
             </div>
-            <div className="bg-white border border-slate-200 rounded-none p-4 shadow-sm">
-              <p className="text-2xl font-bold text-slate-900">100%</p>
-              <p className="text-xs text-slate-500 font-medium">Feedback de Voz IA</p>
+
+            <div className="bg-white border border-slate-200 rounded-none p-5 shadow-sm flex flex-col justify-between text-left">
+              <div>
+                <p className="text-3xl font-extrabold text-slate-900">100%</p>
+                <p className="text-xs font-bold text-slate-700 uppercase tracking-wider mt-1">Feedback de Voz</p>
+              </div>
+              <p className="text-[11px] text-slate-500 mt-2 font-medium">Análisis de pronunciación y fluidez conversacional</p>
             </div>
           </div>
 
@@ -259,7 +274,7 @@ export default function Home() {
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-3 text-slate-700 text-sm">
-                    <CheckCircle2 size={18} className="text-indigo-500 shrink-0" /> Lecciones A1 (Inglés)
+                    <CheckCircle2 size={18} className="text-indigo-500 shrink-0" /> Lecciones Básicas (A1)
                   </li>
                   <li className="flex items-center gap-3 text-slate-700 text-sm">
                     <CheckCircle2 size={18} className="text-indigo-500 shrink-0" /> Vocabulario: 1 bloque al día
@@ -268,7 +283,7 @@ export default function Home() {
                     <CheckCircle2 size={18} className="text-indigo-500 shrink-0" /> Ajedrez: 2 puzzles al día
                   </li>
                   <li className="flex items-center gap-3 text-slate-700 text-sm">
-                    <CheckCircle2 size={18} className="text-indigo-500 shrink-0" /> Idiomas: ES, FR, CN
+                    <CheckCircle2 size={18} className="text-indigo-500 shrink-0" /> Idiomas: EN, FR, ZH
                   </li>
                 </ul>
               </div>
@@ -297,7 +312,7 @@ export default function Home() {
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-3 text-slate-700 text-sm">
-                    <CheckCircle2 size={18} className="text-indigo-500 shrink-0" /> 900+ lecciones (A1 a C1)
+                    <CheckCircle2 size={18} className="text-indigo-500 shrink-0" /> 3,000+ lecciones (A1 a C2)
                   </li>
                   <li className="flex items-center gap-3 text-slate-700 text-sm">
                     <CheckCircle2 size={18} className="text-indigo-500 shrink-0" /> Vocabulario y ajedrez ilimitados
@@ -306,7 +321,7 @@ export default function Home() {
                     <CheckCircle2 size={18} className="text-indigo-500 shrink-0" /> Sin anuncios publicitarios
                   </li>
                   <li className="flex items-center gap-3 text-slate-700 text-sm">
-                    <CheckCircle2 size={18} className="text-indigo-500 shrink-0" /> Idiomas: ES, FR, CN
+                    <CheckCircle2 size={18} className="text-indigo-500 shrink-0" /> Idiomas: EN, FR, ZH
                   </li>
                 </ul>
               </div>
@@ -389,34 +404,70 @@ export default function Home() {
           
           <div className="flex-1 w-full">
             <div className="bg-slate-900 border border-slate-800 rounded-none p-6 md:p-8 shadow-2xl relative">
-              <div className="flex items-center justify-between mb-8 border-b border-slate-800 pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-red-500"></div>
-                  <div className="w-3 h-3 bg-amber-500"></div>
-                  <div className="w-3 h-3 bg-emerald-500"></div>
+              <div className="flex items-center justify-between mb-6 border-b border-slate-800 pb-4">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Módulo de Ajedrez con IA</span>
+                </div>
+                <div className="flex items-center gap-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 text-[10px] font-bold uppercase">
+                  <Trophy size={10} /> Tutor Activo
                 </div>
               </div>
               
-              <div className="space-y-6 font-mono text-sm">
-                <div className="flex flex-col gap-1 border-l-2 border-slate-700 pl-3">
-                  <span className="text-slate-400 text-xs font-bold font-sans">Boardroom Simulator (AI Coach) &gt;</span>
-                  <span className="text-slate-300">"Welcome to the C-Suite simulation. Let's practice presenting the quarterly growth projection to the shareholders. Start with an opening statement."</span>
+              <div className="space-y-6">
+                {/* Chess Feature 1 */}
+                <div className="flex gap-4 items-start border-b border-slate-800/60 pb-4">
+                  <div className="w-10 h-10 rounded-none bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/20">
+                    <Crown size={20} />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-white text-base">Entrenamiento de Aperturas Avanzadas</h5>
+                    <p className="text-slate-400 text-sm leading-relaxed mt-1">
+                      Algoritmos avanzados que analizan tus jugadas iniciales y sugieren variantes del libro en tiempo real.
+                    </p>
+                  </div>
                 </div>
-                <div className="flex flex-col gap-1 border-l-2 border-amber-500 pl-3">
-                  <span className="text-amber-400 text-xs font-bold font-sans">Student (CEO) &gt;</span>
-                  <span className="text-slate-100">"Our company grew a lot last quarter and we hope to make more next year."</span>
+
+                {/* Chess Feature 2 */}
+                <div className="flex gap-4 items-start border-b border-slate-800/60 pb-4">
+                  <div className="w-10 h-10 rounded-none bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0 border border-indigo-500/20">
+                    <BrainCircuit size={20} />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-white text-base">Análisis de Errores y Blunders</h5>
+                    <p className="text-slate-400 text-sm leading-relaxed mt-1">
+                      Retroalimentación inmediata de IA que desglosa la táctica detrás de cada imprecisión o jugada dudosa.
+                    </p>
+                  </div>
                 </div>
-                <div className="flex flex-col gap-1 border-l-2 border-slate-700 pl-3">
-                  <span className="text-slate-400 text-xs font-bold font-sans">AI Feedback & Speech Analytics &gt;</span>
-                  <span className="text-slate-300">"Grammatically correct, but let's upgrade the vocabulary for an executive audience. Try saying: **'Our organization recorded substantial growth this quarter, and we project a strong upward trajectory for the upcoming fiscal year.'**"</span>
+
+                {/* Chess Feature 3 */}
+                <div className="flex gap-4 items-start">
+                  <div className="w-10 h-10 rounded-none bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
+                    <Zap size={20} />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-white text-base">Puzzles y Táctica Adaptativa</h5>
+                    <p className="text-slate-400 text-sm leading-relaxed mt-1">
+                      Generación de problemas dinámicos basados en tu nivel de juego para potenciar tu cálculo bajo presión.
+                    </p>
+                  </div>
                 </div>
-                <div className="flex flex-col gap-1 border-l-2 border-emerald-500 pl-3 opacity-90">
-                  <span className="text-emerald-400 text-xs font-bold font-sans">Student (CEO) &gt;</span>
-                  <span className="text-slate-100">"Our organization recorded substantial growth this quarter, and we project a strong upward trajectory for the upcoming fiscal year."</span>
-                </div>
-                <div className="flex flex-col gap-1 border-l-2 border-teal-500 pl-3">
-                  <span className="text-teal-400 text-xs font-bold font-sans">Speech Analysis &gt;</span>
-                  <span className="text-emerald-400 font-bold">✓ Pronunciation: 98% • Fluency: 95% • Tone: Confident & Authoritative</span>
+
+                {/* Stats Dashboard */}
+                <div className="mt-8 bg-slate-950 p-4 border border-slate-800/80 rounded-none grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <span className="text-[10px] text-slate-500 font-bold uppercase block">Nivel Actual</span>
+                    <span className="text-emerald-400 font-extrabold text-lg mt-0.5 block">1,850 ELO</span>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-slate-500 font-bold uppercase block">Precisión</span>
+                    <span className="text-indigo-400 font-extrabold text-lg mt-0.5 block">84.5%</span>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-slate-500 font-bold uppercase block">Puzzles Resueltos</span>
+                    <span className="text-amber-400 font-extrabold text-lg mt-0.5 block">128 / 150</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -445,22 +496,25 @@ export default function Home() {
       </section>
 
       {/* --- FOOTER --- */}
-      <footer className="bg-[#e2efe7] py-12 px-6 text-sm text-slate-600 border-t border-emerald-100">
+      <footer className="bg-[#e2efe7] py-12 px-6 text-sm text-slate-655 border-t border-emerald-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <span className="font-bold text-slate-900 text-lg">OnixLingo</span>
             </div>
-            <p className="text-xs">Ecosistema Educativo de Alta Disponibilidad</p>
+            <p className="text-xs text-slate-500">Ecosistema Educativo de Alta Disponibilidad</p>
           </div>
-          <div className="flex gap-8 font-medium flex-wrap">
-            <Link href="/planes" className="hover:text-indigo-600 transition-colors">Planes y Precios</Link>
+          <div className="flex gap-6 font-medium flex-wrap">
+            <Link href="/planes" className="hover:text-indigo-600 transition-colors">Planes</Link>
             <Link href="/legal/privacy" className="hover:text-indigo-600 transition-colors">Privacidad</Link>
             <Link href="/legal/terms" className="hover:text-indigo-600 transition-colors">Términos</Link>
             <Link href="/legal/refunds" className="hover:text-indigo-600 transition-colors">Reembolsos</Link>
             <Link href="/legal/support" className="hover:text-indigo-600 transition-colors">Soporte</Link>
           </div>
-          <p className="text-xs">© 2026 OnixuTechnology.</p>
+          <div className="text-left md:text-right text-xs space-y-1">
+            <p>© 2026 OnixuTechnology.</p>
+            <p className="text-[10px] text-slate-550 font-light">Pagos procesados por Paddle, nuestro Merchant of Record.</p>
+          </div>
         </div>
       </footer>
 

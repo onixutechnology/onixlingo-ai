@@ -1,0 +1,89 @@
+{
+  "id": "toeic_mock_v4",
+  "title": "Simulador Oficial Completo TOEIC® - Versión 4",
+  "level": "B2/C1",
+  "description": "Simulador completo real de Listening & Reading enfocado en Nova Solutions y el líder the PR Director.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toeic-intro",
+      "type": "lecture",
+      "title": "TOEIC® Nova Solutions Simulation: Instructions",
+      "parts": [
+        {
+          "visual": "## 📝 Simulador Oficial TOEIC® (Versión 4)\n\nEvaluación de **Listening & Reading** en tiempo real:\n\n1. **Listening Section**: Evalúa tu comprensión en Nova Solutions usando QuantumCRM.\n2. **Reading Section**: Mide tu análisis gramatical de memorandos emitidos por the PR Director.\n\n*Inicia tu prueba simulada oficial.*",
+          "audio": "Welcome to the Full TOEIC Simulation. Manage your time efficiently across both listening and reading stages. Let's begin.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "toeic-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (Listening)",
+      "questions": [
+        {
+          "id": "T_L1_v4",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTO]: Select the best description of Nova Solutions's office photo.",
+          "audio_script": "A) They are recording a television commercial. B) They are discussing the brand logo on the display screen. C) They are distributing marketing leaflets. D) The design agency is closed.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement B",
+          "explanation": "Se observa al equipo de diseño analizando la tipografía y el logotipo de la marca en la pantalla."
+        },
+        {
+          "id": "T_L3_v4",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the dialogue and answer: What does the man agree to do next?",
+          "audio_script": "M: Hi Amanda, did the PR firm Nova Solutions approve the press release?\nW: Yes. The PR Director wants us to coordinate the release of the campaign data through QuantumCRM.\nM: Great, let's schedule a conference to finalize this.",
+          "options": [
+            "Sign the contract as currently written.",
+            "Call the manager to negotiate an extension of the delivery window.",
+            "Cancel the order immediately.",
+            "Write a new memorandum to sales staff."
+          ],
+          "correct_answer": "Call the manager to negotiate an extension of the delivery window.",
+          "explanation": "El hombre dice: 'I will call their manager to negotiate an extension'."
+        }
+      ]
+    },
+    {
+      "id": "toeic-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (Reading)",
+      "questions": [
+        {
+          "id": "T_R5_v4",
+          "type": "quiz_choice",
+          "question": "[PART 5]: Complete the business sentence correctly:\n\n\"All employees are strictly required to comply ___ the updated security rules in QuantumCRM.\"",
+          "options": [
+            "with",
+            "to",
+            "by",
+            "for"
+          ],
+          "correct_answer": "with",
+          "explanation": "El verbo 'comply' rige gramaticalmente la preposición 'with' (comply with / cumplir con)."
+        },
+        {
+          "id": "T_R7_v4",
+          "type": "quiz_choice",
+          "question": "[PART 7]: Read the memorandum and answer: **When will the migration to QuantumCRM officially occur?**\n\n**MEMORANDUM**\n\n*To:* Marketing Associates\n*From:* Public Relations Department\n*Subject: Campaign Rollout & QuantumCRM Sync*\n\nPlease note that starting next Friday, all digital advertising metrics must be synchronized with QuantumCRM. A alignment session will take place this Thursday at 1:00 PM in Conference Suite 4.",
+          "options": [
+            "This Thursday at 1:00 PM",
+            "Next Thursday",
+            "Immediately today",
+            "Over the upcoming weekend"
+          ],
+          "correct_answer": "Next Thursday",
+          "explanation": "El memorando dice: 'starting next Thursday, we are officially retiring our legacy sales tool and migrating to QuantumCRM'."
+        }
+      ]
+    }
+  ]
+}

@@ -103,7 +103,7 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
     hashed_password = get_password_hash(user.password)
     new_referral_code = generate_referral_code(user.username)
     
-    # 4. Preparar el nuevo usuario con acceso Titanium por 1 año
+    # 4. Preparar el nuevo usuario con acceso Executive por 1 año
     now = datetime.utcnow()
     db_user = User(
         username=user.username, 
@@ -111,7 +111,7 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
         hashed_password=hashed_password,
         referral_code=new_referral_code,
         beta_code=clean_code,
-        tier="pro",
+        tier="executive",
         is_pro=True,
         valid_until=now + timedelta(days=365)
     )
@@ -247,7 +247,7 @@ def authenticate_google(payload: GoogleAuthRequest, response: Response, db: Sess
             full_name=name,
             referral_code=generate_referral_code(username_suggested),
             beta_code=google_beta_code,
-            tier="pro",
+            tier="executive",
             is_pro=True,
             valid_until=now + timedelta(days=365)
         )

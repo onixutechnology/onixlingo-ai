@@ -1,0 +1,89 @@
+{
+  "id": "toeic_mock_v2",
+  "title": "Simulador Oficial Completo TOEIC® - Versión 2",
+  "level": "B2/C1",
+  "description": "Simulador completo real de Listening & Reading enfocado en ApexCorp y el líder the Operations Chief.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toeic-intro",
+      "type": "lecture",
+      "title": "TOEIC® ApexCorp Simulation: Instructions",
+      "parts": [
+        {
+          "visual": "## 📝 Simulador Oficial TOEIC® (Versión 2)\n\nEvaluación de **Listening & Reading** en tiempo real:\n\n1. **Listening Section**: Evalúa tu comprensión en ApexCorp usando NexusCRM.\n2. **Reading Section**: Mide tu análisis gramatical de memorandos emitidos por the Operations Chief.\n\n*Inicia tu prueba simulada oficial.*",
+          "audio": "Welcome to the Full TOEIC Simulation. Manage your time efficiently across both listening and reading stages. Let's begin.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "toeic-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (Listening)",
+      "questions": [
+        {
+          "id": "T_L1_v2",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTO]: Select the best description of ApexCorp's office photo.",
+          "audio_script": "A) They are loading packages onto the truck. B) They are signing the shipping invoices. C) The warehouse doors are closed. D) They are reviewing the freight shipping terms.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement D",
+          "explanation": "La descripción correcta es la D, ya que se ve a los agentes de logística revisando las cláusulas del flete marítimo."
+        },
+        {
+          "id": "T_L3_v2",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the dialogue and answer: What does the man agree to do next?",
+          "audio_script": "M: Hi Emily, did you get a chance to review the logistics invoice from ApexCorp?\nW: Yes. The freight rates are reasonable, but the port clearance fee is higher than expected.\nM: Let's call the Operations Chief to request a waiver.",
+          "options": [
+            "Sign the contract as currently written.",
+            "Call the manager to negotiate an extension of the delivery window.",
+            "Cancel the order immediately.",
+            "Write a new memorandum to sales staff."
+          ],
+          "correct_answer": "Call the manager to negotiate an extension of the delivery window.",
+          "explanation": "El hombre dice: 'I will call their manager to negotiate an extension'."
+        }
+      ]
+    },
+    {
+      "id": "toeic-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (Reading)",
+      "questions": [
+        {
+          "id": "T_R5_v2",
+          "type": "quiz_choice",
+          "question": "[PART 5]: Complete the business sentence correctly:\n\n\"All employees are strictly required to comply ___ the updated security rules in NexusCRM.\"",
+          "options": [
+            "with",
+            "to",
+            "by",
+            "for"
+          ],
+          "correct_answer": "with",
+          "explanation": "El verbo 'comply' rige gramaticalmente la preposición 'with' (comply with / cumplir con)."
+        },
+        {
+          "id": "T_R7_v2",
+          "type": "quiz_choice",
+          "question": "[PART 7]: Read the memorandum and answer: **When will the migration to NexusCRM officially occur?**\n\n**MEMORANDUM**\n\n*To:* Logistics Partners\n*From:* Operations Department\n*Subject: Port Freight Clearance & NexusCRM Integration*\n\nPlease note that starting next Tuesday, all bills of lading must be logged through NexusCRM. Training is scheduled for this Friday at 9:00 AM in Conference Room A.",
+          "options": [
+            "This Tuesday at 9:00 AM",
+            "Next Tuesday",
+            "Immediately today",
+            "Over the upcoming weekend"
+          ],
+          "correct_answer": "Next Tuesday",
+          "explanation": "El memorando dice: 'starting next Tuesday, we are officially retiring our legacy sales tool and migrating to NexusCRM'."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "toeic_mock_v8",
+  "title": "Simulador Oficial Completo TOEIC® - Versión 8",
+  "level": "B2/C1",
+  "description": "Simulador completo real de Listening & Reading enfocado en Horizon Enterprise y el líder the Client Services VP.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toeic-intro",
+      "type": "lecture",
+      "title": "TOEIC® Horizon Enterprise Simulation: Instructions",
+      "parts": [
+        {
+          "visual": "## 📝 Simulador Oficial TOEIC® (Versión 8)\n\nEvaluación de **Listening & Reading** en tiempo real:\n\n1. **Listening Section**: Evalúa tu comprensión en Horizon Enterprise usando EliteCRM.\n2. **Reading Section**: Mide tu análisis gramatical de memorandos emitidos por the Client Services VP.\n\n*Inicia tu prueba simulada oficial.*",
+          "audio": "Welcome to the Full TOEIC Simulation. Manage your time efficiently across both listening and reading stages. Let's begin.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "toeic-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (Listening)",
+      "questions": [
+        {
+          "id": "T_L1_v8",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTO]: Select the best description of Horizon Enterprise's office photo.",
+          "audio_script": "A) They are answering calls at the service center. B) They are sorting client refund claims. C) The customer care division is closed. D) They are training new support executives.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement A",
+          "explanation": "Se observa a los agentes de atención al cliente con diademas atendiendo llamadas de soporte en vivo."
+        },
+        {
+          "id": "T_L3_v8",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the dialogue and answer: What does the man agree to do next?",
+          "audio_script": "M: Hi James, did Horizon Enterprise send the new SLA terms?\nW: Yes. The Client Services VP wants all client satisfaction rates logged under EliteCRM.\nM: Perfect, let's make sure our support team is fully aligned.",
+          "options": [
+            "Sign the contract as currently written.",
+            "Call the manager to negotiate an extension of the delivery window.",
+            "Cancel the order immediately.",
+            "Write a new memorandum to sales staff."
+          ],
+          "correct_answer": "Call the manager to negotiate an extension of the delivery window.",
+          "explanation": "El hombre dice: 'I will call their manager to negotiate an extension'."
+        }
+      ]
+    },
+    {
+      "id": "toeic-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (Reading)",
+      "questions": [
+        {
+          "id": "T_R5_v8",
+          "type": "quiz_choice",
+          "question": "[PART 5]: Complete the business sentence correctly:\n\n\"All employees are strictly required to comply ___ the updated security rules in EliteCRM.\"",
+          "options": [
+            "with",
+            "to",
+            "by",
+            "for"
+          ],
+          "correct_answer": "with",
+          "explanation": "El verbo 'comply' rige gramaticalmente la preposición 'with' (comply with / cumplir con)."
+        },
+        {
+          "id": "T_R7_v8",
+          "type": "quiz_choice",
+          "question": "[PART 7]: Read the memorandum and answer: **When will the migration to EliteCRM officially occur?**\n\n**MEMORANDUM**\n\n*To:* Support Supervisors\n*From:* Client Services\n*Subject: SLA Protocol & EliteCRM Training*\n\nPlease note that starting next Friday, all customer incident tickets must be logged in EliteCRM. A review session will take place this next Friday at 8:00 AM in Conference Room 302.",
+          "options": [
+            "This next Friday at 8:00 AM",
+            "Next next Friday",
+            "Immediately today",
+            "Over the upcoming weekend"
+          ],
+          "correct_answer": "Next next Friday",
+          "explanation": "El memorando dice: 'starting next next Friday, we are officially retiring our legacy sales tool and migrating to EliteCRM'."
+        }
+      ]
+    }
+  ]
+}

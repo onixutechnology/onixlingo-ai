@@ -1,0 +1,54 @@
+{
+  "id": "toeic_reading_v4",
+  "title": "TOEIC® Reading - Versión 4: Digital Marketing & PR Campaigns",
+  "level": "B2/C1",
+  "description": "Evaluación lectora de gramática, vocabulario y correspondencia formal para Nova Solutions.",
+  "total_xp": 100,
+  "stages": [
+    {
+      "id": "reading-intro",
+      "type": "lecture",
+      "title": "TOEIC Reading: Strategy & Context",
+      "parts": [
+        {
+          "visual": "## 📖 Simulación Lectora: Nova Solutions\n\nAnalizaremos el memorándum oficial redactado por **the PR Director** para la transición del software **QuantumCRM**.\n\nLee el documento con sumo cuidado.",
+          "audio": "Welcome to the Reading Section. Focus on prepositions, vocabulary in context, and direct information inside the memorandum.",
+          "animation": "analyzing"
+        }
+      ]
+    },
+    {
+      "id": "reading-quiz",
+      "type": "quiz",
+      "title": "Parte 5 y 7: Incomplete Sentences & Documents",
+      "questions": [
+        {
+          "id": "TR5_v4",
+          "type": "quiz_choice",
+          "question": "[PART 5]: Choose the word that best completes the sentence:\n\n\"The management board at Nova Solutions decided to inspect the factory ___ to ensure high compliance.\"",
+          "options": [
+            "periodically",
+            "periodic",
+            "periodical",
+            "period"
+          ],
+          "correct_answer": "periodically",
+          "explanation": "Se necesita el adverbio 'periodically' para modificar la acción de inspeccionar (inspect)."
+        },
+        {
+          "id": "TR7_v4",
+          "type": "quiz_choice",
+          "question": "[PART 7]: Read the following document and answer: **What is the mandatory event's goal?**\n\n**MEMORANDUM**\n\n*To:* Marketing Associates\n*From:* Public Relations Department\n*Subject: Campaign Rollout & QuantumCRM Sync*\n\nPlease note that starting next Friday, all digital advertising metrics must be synchronized with QuantumCRM. A alignment session will take place this Thursday at 1:00 PM in Conference Suite 4.",
+          "options": [
+            "To test the internet speed in the office rooms.",
+            "To undergo training and receive user accounts for the new software.",
+            "To debate if they should stay with the old software.",
+            "To meet their supplier for lunch."
+          ],
+          "correct_answer": "To undergo training and receive user accounts for the new software.",
+          "explanation": "El memorando indica que la sesión es obligatoria porque las cuentas se aprovisionarán directamente ('accounts will be provisioned directly during the workshop')."
+        }
+      ]
+    }
+  ]
+}

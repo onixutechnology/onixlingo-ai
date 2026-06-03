@@ -67,16 +67,37 @@ export default function LeaderboardPage() {
           ? '/progress/eloquence-leaderboard'
           : `/progress/eloquence-leaderboard?country=${activeCountry}`;
 
-        const [leaderboardRes, statsRes, mapRes] = await Promise.all([
+        const results = await Promise.allSettled([
           apiClient.get(url),
-          apiClient.get('/progress/stats').catch(() => ({ data: { total_xp: 0, streak_days: 0, completed_modules: 0 } })),
-          apiClient.get('/progress/map').catch(() => ({ data: { standard: [] } })),
+          apiClient.get('/progress/stats'),
+          apiClient.get('/progress/map')
         ]);
 
-        setLeaderboard(leaderboardRes.data.leaderboard || []);
-        setGlobalStats(leaderboardRes.data.stats || { total_active_users: 0, avg_eloquence: 0 });
-        setUserStats(statsRes.data || {});
-        setCompletedLessons(mapRes.data.standard || []);
+        const [leaderboardRes, statsRes, mapRes] = results;
+
+        if (leaderboardRes.status === 'rejected') {
+          const err = leaderboardRes.reason;
+          const isAbort = err?.code === 'ERR_CANCELED' || err?.message === 'canceled' || err?.message?.includes('aborted') || err?.name === 'AbortError';
+          const is401 = err?.response?.status === 401;
+          if (!isAbort && !is401) {
+            throw err;
+          }
+          return; // Salir silenciosamente
+        }
+
+        const leaderboardData = (leaderboardRes as PromiseFulfilledResult<any>).value.data;
+        setLeaderboard(leaderboardData.leaderboard || []);
+        setGlobalStats(leaderboardData.stats || { total_active_users: 0, avg_eloquence: 0 });
+
+        const statsData = statsRes.status === 'fulfilled' 
+          ? (statsRes as PromiseFulfilledResult<any>).value.data 
+          : { total_xp: 0, streak_days: 0, completed_modules: 0 };
+        setUserStats(statsData);
+
+        const mapData = mapRes.status === 'fulfilled' 
+          ? (mapRes as PromiseFulfilledResult<any>).value.data 
+          : { standard: [] };
+        setCompletedLessons(mapData.standard || []);
       } catch (e) {
         console.error('Error fetching leaderboard:', e);
       } finally {

@@ -1,0 +1,95 @@
+{
+  "id": "toefl_mock_v9",
+  "title": "Simulador Oficial Completo TOEFL® iBT - Versión 9",
+  "level": "B2/C1",
+  "description": "Simulador académico completo de TOEFL® con lecturas y conferencias sobre: Genética y Biología Molecular.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toefl-intro",
+      "type": "lecture",
+      "title": "TOEFL® iBT Simulation: Genética y Biología Molecular",
+      "parts": [
+        {
+          "visual": "## 🎓 Simulador TOEFL® iBT (Versión 9)\n\nTemas académicos oficiales evaluados:\n\n- **Reading Article**: *Biología: El Sistema CRISPR-Cas9 y la Edición Genética*\n- **Academic Lecture**: *Lecture on Ribosomes & Protein Synthesis*\n- **Writing structure & Integration**\n\n*Comienza tu examen académico.*",
+          "audio": "Welcome to the Integrated TOEFL iBT simulation. You will be tested on your ability to synthesize information from complex academic sources. Let's start.",
+          "animation": "analyzing"
+        }
+      ]
+    },
+    {
+      "id": "toefl-reading",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Lectora Académica (Reading)",
+      "questions": [
+        {
+          "id": "TF_R1_v9",
+          "type": "quiz_choice",
+          "question": "Read the academic article and answer the question:\n\n**CRISPR-Cas9 as a Molecular Scissor**\n\nThe development of the CRISPR-Cas9 gene editing platform represents a monumental breakthrough in biotechnology. Derived from a primitive immune system in bacteria, CRISPR uses a guide RNA molecule to locate a highly specific sequence of DNA within a genome. Once the target sequence is identified, the Cas9 enzyme acts as a molecular scissor, creating a double-strand break in the DNA. The cell's natural repair mechanisms then mend the break, during which scientists can delete, insert, or modify genes. While this technology holds immense potential to cure hereditary genetic diseases, it raises ethical concerns regarding off-target mutations and germline modifications.",
+          "options": [
+            "It floods the cell nucleus with synthetic volcanic ash to mutate genes.",
+            "It uses guide RNA to find a DNA sequence, and Cas9 cuts it to allow repair.",
+            "It permanently blocks the cell from performing chemical outgassing.",
+            "It replaces the entire cell genome with guide RNA molecules."
+          ],
+          "correct_answer": "It uses guide RNA to find a DNA sequence, and Cas9 cuts it to allow repair.",
+          "explanation": "El texto explica que el CRISPR usa un ARN guía para localizar la secuencia ('guide RNA molecule to locate') y la enzima Cas9 la corta ('Cas9 enzyme acts as a scissor')."
+        },
+        {
+          "id": "TF_R2_v9",
+          "type": "quiz_choice",
+          "question": "What is the closest meaning of the target word in this academic context?",
+          "options": [
+            "Failure",
+            "Major discovery / Milestone",
+            "Hereditary illness",
+            "Temporary setup"
+          ],
+          "correct_answer": "Major discovery / Milestone",
+          "explanation": "Al referirse a un logro o avance revolucionario e histórico en la biotecnología, 'breakthrough' significa un gran descubrimiento o hito ('major discovery')."
+        }
+      ]
+    },
+    {
+      "id": "toefl-listening",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Auditiva Académica (Listening)",
+      "questions": [
+        {
+          "id": "TF_L1_v9",
+          "type": "quiz_choice",
+          "question": "[UNIVERSITY LECTURE]: Listen to the professor's explanation and answer: **What is the main topic?**\n\n*(Transcription)*:\n\nProfessor: Ribosomes are the cell's molecular factories. They read messenger RNA and assemble amino acids into complex protein chains. This translation process is highly precise. However, if a single nucleotide mutation is present, the ribosome may produce a dysfunctional protein, which is the root cause of many genetic disorders.",
+          "options": [
+            "They duplicate DNA double strands during cell division.",
+            "They read messenger RNA to synthesize protein chains.",
+            "They act as Guide RNA to detect viruses.",
+            "They dissolve carbonic acid inside the cell mitochondria."
+          ],
+          "correct_answer": "They read messenger RNA to synthesize protein chains.",
+          "explanation": "El profesor detalla que los ribosomas actúan como fábricas celulares que leen el ARN mensajero y ensamblan aminoácidos para sintetizar proteínas."
+        }
+      ]
+    },
+    {
+      "id": "toefl-writing-prep",
+      "type": "quiz",
+      "title": "Sección 3: Estructura y Coherencia Académica (Writing Prep)",
+      "questions": [
+        {
+          "id": "TF_W1_v9",
+          "type": "fill_input",
+          "question": "Fill in the blank with the appropriate academic connector that best completes the logical flow:\n\nComplete the scientific sentence: \"CRISPR-Cas9 can cure genetic diseases. ___, off-target mutations remain a major safety concern.\"",
+          "correct_answers": [
+            "However",
+            "Nevertheless",
+            "however",
+            "nevertheless"
+          ],
+          "hints": [
+            "Check punctuation and capitalization."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -124,7 +124,30 @@ export default function LessonRunnerEngine() {
 
   // ⏱️ DETECTAR MODO DE TIEMPO
   const timeMode = searchParams.get('timeMode') || 'basic';
-  const initialSeconds = timeMode === 'advanced' ? 300 : timeMode === 'intermediate' ? 600 : 0;
+
+  const isSimulator = useMemo(() => {
+    const lid = (params?.lessonId as string || '').toLowerCase();
+    return ['toeic_listening', 'toeic_reading', 'toeic_mock', 'toefl_mock', 'ielts_mock'].includes(lid) ||
+           ['toeic_listening_v', 'toeic_reading_v', 'toeic_mock_v', 'toefl_mock_v', 'ielts_mock_v'].some(prefix => lid.startsWith(prefix));
+  }, [params?.lessonId]);
+
+  const defaultExamSeconds = useMemo(() => {
+    const lid = (params?.lessonId as string || '').toLowerCase();
+    const baseLid = lid.split('_v')[0];
+    const limits: Record<string, number> = {
+      toeic_listening: 2700,
+      toeic_reading: 4500,
+      toeic_mock: 7200,
+      toefl_mock: 10800,
+      ielts_mock: 10200
+    };
+    return limits[baseLid] || 7200;
+  }, [params?.lessonId]);
+
+  const initialSeconds = useMemo(() => {
+    if (isSimulator) return defaultExamSeconds;
+    return timeMode === 'advanced' ? 300 : timeMode === 'intermediate' ? 600 : 0;
+  }, [isSimulator, defaultExamSeconds, timeMode]);
 
   // ✅ CORRECCIÓN 2: El userId ahora es dinámico (Estado real)
   const [userId, setUserId] = useState<string>('estudiante_anonimo');
@@ -181,7 +204,24 @@ export default function LessonRunnerEngine() {
   const [lecturePartIndex, setLecturePartIndex] = useState(0);
 
   // ========== CARACTERÍSTICAS PRO ==========
-  const [seconds, setSeconds] = useState(initialSeconds);
+  const [seconds, setSeconds] = useState(() => {
+    const lid = (params?.lessonId as string || '').toLowerCase();
+    const isSim = ['toeic_listening', 'toeic_reading', 'toeic_mock', 'toefl_mock', 'ielts_mock'].includes(lid) ||
+                  ['toeic_listening_v', 'toeic_reading_v', 'toeic_mock_v', 'toefl_mock_v', 'ielts_mock_v'].some(prefix => lid.startsWith(prefix));
+    if (isSim) {
+      const baseLid = lid.split('_v')[0];
+      const limits: Record<string, number> = {
+        toeic_listening: 2700,
+        toeic_reading: 4500,
+        toeic_mock: 7200,
+        toefl_mock: 10800,
+        ielts_mock: 10200
+      };
+      return limits[baseLid] || 7200;
+    }
+    const modeVal = searchParams.get('timeMode') || 'basic';
+    return modeVal === 'advanced' ? 300 : modeVal === 'intermediate' ? 600 : 0;
+  });
   
   // ========== RETOMAR LECCIÓN / PROGRESO GUARDADO ==========
   const [showResumePrompt, setShowResumePrompt] = useState(false);
@@ -224,8 +264,12 @@ export default function LessonRunnerEngine() {
 
   // [FUNCIÓN 1] Formatear tiempo
   const formatTime = useCallback((secs: number): string => {
-    const mins = Math.floor(secs / 60);
+    const hours = Math.floor(secs / 3600);
+    const mins = Math.floor((secs % 3600) / 60);
     const rs = secs % 60;
+    if (hours > 0) {
+      return `${hours}:${mins < 10 ? '0' : ''}${mins}:${rs < 10 ? '0' : ''}${rs}`;
+    }
     return `${mins}:${rs < 10 ? '0' : ''}${rs}`;
   }, []);
 
@@ -333,14 +377,14 @@ export default function LessonRunnerEngine() {
         setMatchedPairs(prev => [...prev, item.id]);
         setSelectedLeft(null);
         setSelectedRight(null);
-        if (soundEnabled) speakText("Excellent");
+        if (soundEnabled && !isSimulator) speakText("Excellent");
       } else {
-        if (soundEnabled) speakText("Wrong");
+        if (soundEnabled && !isSimulator) speakText("Wrong");
         setSelectedLeft(null);
         setSelectedRight(null);
       }
     }
-  }, [matchedPairs, selectedLeft, selectedRight, soundEnabled, speakText]);
+  }, [matchedPairs, selectedLeft, selectedRight, soundEnabled, speakText, isSimulator]);
 
   const handleRightClick = useCallback((item: { id: string; word: string }) => {
     if (matchedPairs.includes(item.id)) return;
@@ -355,14 +399,14 @@ export default function LessonRunnerEngine() {
         setMatchedPairs(prev => [...prev, item.id]);
         setSelectedLeft(null);
         setSelectedRight(null);
-        if (soundEnabled) speakText("Excellent");
+        if (soundEnabled && !isSimulator) speakText("Excellent");
       } else {
-        if (soundEnabled) speakText("Wrong");
+        if (soundEnabled && !isSimulator) speakText("Wrong");
         setSelectedLeft(null);
         setSelectedRight(null);
       }
     }
-  }, [matchedPairs, selectedLeft, selectedRight, soundEnabled, speakText]);
+  }, [matchedPairs, selectedLeft, selectedRight, soundEnabled, speakText, isSimulator]);
 
   // [FUNCIÓN 7] Detener reproducción de audio
   const stopSpeech = useCallback((): void => {
@@ -1275,7 +1319,7 @@ export default function LessonRunnerEngine() {
     if (isActive) {
       interval = setInterval(() => {
         setSeconds(s => {
-          if (timeMode !== 'basic') {
+          if (timeMode !== 'basic' || isSimulator) {
             if (s <= 1) {
               clearInterval(interval);
               finishLesson(); // Finalizar examen al agotarse el tiempo
@@ -1289,7 +1333,7 @@ export default function LessonRunnerEngine() {
       }, 1000);
     }
     return () => clearInterval(interval);
-  }, [isActive, timeMode]);
+  }, [isActive, timeMode, isSimulator]);
 
   // ============================================================================
   // ==================== EFECTO PARA CARGA DE LECCIÓN =======================
@@ -1301,6 +1345,29 @@ export default function LessonRunnerEngine() {
       try {
         const lessonId = params?.lessonId as string;
         if (!lessonId) throw new Error("ID inválido");
+
+        const isSim = ['toeic_listening', 'toeic_reading', 'toeic_mock', 'toefl_mock', 'ielts_mock'].includes(lessonId.toLowerCase()) ||
+                      ['toeic_listening_v', 'toeic_reading_v', 'toeic_mock_v', 'toefl_mock_v', 'ielts_mock_v'].some(prefix => lessonId.toLowerCase().startsWith(prefix));
+        if (isSim) {
+          // Protection check
+          if (userTier !== 'executive') {
+            setError("Los simuladores oficiales de preparación (TOEIC, TOEFL, IELTS) son exclusivos de OnixLingo EXECUTIVE. Actualiza tu suscripción para acceder.");
+            setLoading(false);
+            return;
+          }
+
+          // Start or resume exam session on backend
+          try {
+            const startRes = await apiClient.post(`/progress/exam/${lessonId}/start`);
+            if (startRes.data?.remaining_seconds) {
+              setSeconds(startRes.data.remaining_seconds);
+            }
+          } catch (startErr: any) {
+            setError(startErr.response?.data?.detail || "No se pudo iniciar la sesión del simulador de examen.");
+            setLoading(false);
+            return;
+          }
+        }
 
         const { data } = await apiClient.get(`/lessons/${lessonId}?lang=${activeLanguage}`);
 
@@ -1318,10 +1385,12 @@ export default function LessonRunnerEngine() {
         setLesson(data);
 
         // estas llamadas NO deben meter dependencias nuevas:
-        const savedSession = loadFromLocalStorage(`session_${lessonId}`, null);
-        if (savedSession && Date.now() - savedSession.timestamp < 24 * 60 * 60 * 1000) {
-          setPendingResumeState(savedSession);
-          setShowResumePrompt(true);
+        if (!isSim) {
+          const savedSession = loadFromLocalStorage(`session_${lessonId}`, null);
+          if (savedSession && Date.now() - savedSession.timestamp < 24 * 60 * 60 * 1000) {
+            setPendingResumeState(savedSession);
+            setShowResumePrompt(true);
+          }
         }
         loadSavedBookmarks();       // useCallback
       } catch (err: any) {
@@ -1333,14 +1402,14 @@ export default function LessonRunnerEngine() {
 
     initLesson();
     // 👇 IMPORTANTE: sin lesson?.id ni otras refs inestables
-  }, [params?.lessonId, isPro, activeLanguage]);
+  }, [params?.lessonId, isPro, activeLanguage, userTier]);
 
   // ============================================================================
   // ==================== EFECTO PARA INSTRUCCIONES EN ESPAÑOL (VOZ AVATAR) ====
   // ============================================================================
 
   useEffect(() => {
-    if (!lesson) return;
+    if (!lesson || isSimulator) return;
     const stage = lesson.stages[currentStageIndex];
     if (!stage) return;
 
@@ -1449,10 +1518,18 @@ export default function LessonRunnerEngine() {
       current_step: totalQuestions, // Enviamos que completó todo
       total_steps: totalQuestions,
       score: accuracy,
-      stars: accuracy >= 90 ? 3 : accuracy >= 70 ? 2 : 1
+      stars: accuracy >= 90 ? 3 : accuracy >= 70 ? 2 : 1,
+      language: activeLanguage
     };
 
     try {
+      if (isSimulator) {
+        try {
+          await apiClient.post(`/progress/exam/${lesson?.id}/submit?score=${accuracy}`);
+        } catch (exSubmitErr) {
+          console.error("Error submitting exam to backend:", exSubmitErr);
+        }
+      }
       // LLAMADA AL BACKEND PARA GUARDAR Y DESBLOQUEAR
       await apiClient.post('/progress/complete', payload);
       // Progreso guardado
@@ -1620,8 +1697,18 @@ export default function LessonRunnerEngine() {
         difficulty: question.difficulty,
         category: question.category,
         type: question.type,
+        explanation: question.explanation,
       },
     ]);
+
+    // --- 4.5 SIMULATOR BYPASS ---
+    if (isSimulator) {
+      if (isPro) {
+        saveSessionState();
+      }
+      nextQuestionOrStage();
+      return;
+    }
 
     // --- 5. SETEAR FEEDBACK PARA MOSTRAR EN UI ---
     setFeedback({
@@ -2107,7 +2194,7 @@ export default function LessonRunnerEngine() {
                           </button>
                         </div>
                         <button onClick={() => validateAnswer(activeQuestion)} disabled={sentenceBuilder.length === 0 || !!feedback} className="w-full font-bold py-3 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed shadow-lg bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200">
-                          COMPROBAR ORDEN
+                          {isSimulator ? "SIGUIENTE PREGUNTA" : "COMPROBAR ORDEN"}
                         </button>
                       </div>
                     )}
@@ -2122,7 +2209,7 @@ export default function LessonRunnerEngine() {
                         )}
                         <div className="flex gap-2">
                           <button onClick={() => validateAnswer(activeQuestion)} disabled={!textInput.trim() || !!feedback} className="flex-1 font-bold py-3 rounded-xl disabled:opacity-50 bg-blue-600 hover:bg-blue-700 text-white">
-                            COMPROBAR
+                            {isSimulator ? "SIGUIENTE PREGUNTA" : "COMPROBAR"}
                           </button>
                           {isPro && (
                             <button onClick={() => { setShowHints(!showHints); setHintsUsed(prev => prev + 1); }} className="px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-250">
@@ -2155,7 +2242,7 @@ export default function LessonRunnerEngine() {
                         ))}
                         <div className="flex gap-2 pt-6">
                           <button onClick={() => validateAnswer(activeQuestion)} disabled={!selectedOption || !!feedback} className="flex-1 font-black py-4 rounded-none text-[10px] uppercase tracking-[0.2em] disabled:opacity-50 transition-all bg-amber-600 hover:bg-amber-700 text-white">
-                            VALIDAR RESPUESTA
+                            {isSimulator ? "SIGUIENTE PREGUNTA" : "VALIDAR RESPUESTA"}
                           </button>
                           {isPro && (
                             <button onClick={() => skipQuestion()} className="px-5 py-4 rounded-none bg-slate-100 border border-slate-200 hover:bg-slate-200 transition-colors">

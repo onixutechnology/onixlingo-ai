@@ -1,0 +1,56 @@
+{
+  "id": "toeic_listening_v4",
+  "title": "TOEIC® Listening - Versión 4: Digital Marketing & PR Campaigns",
+  "level": "B2/C1",
+  "description": "Prueba intensiva de comprensión auditiva TOEIC® enfocada en el contexto de Nova Solutions con the PR Director.",
+  "total_xp": 100,
+  "stages": [
+    {
+      "id": "listening-intro",
+      "type": "lecture",
+      "title": "TOEIC Part 1: Strategy & Warm-up",
+      "parts": [
+        {
+          "visual": "## 📸 Simulación de Auditiva: Nova Solutions\n\nEvaluaremos tu destreza auditiva en el contexto de **Nova Solutions** (Líder a cargo: **the PR Director**).\n\nConcéntrate plenamente en las descripciones y los audios corporativos.",
+          "audio": "Welcome to this specialized TOEIC Listening drill. Listen closely to the speaker options and pick the best description of the workspace. Good luck!",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "listening-quiz",
+      "type": "quiz",
+      "title": "Parte 1: Photodescription & Conversations",
+      "questions": [
+        {
+          "id": "TL1_v4",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTOGRAPH]: Look at the business picture of Nova Solutions's office staff. Select the correct description.",
+          "audio_script": "A) They are recording a television commercial. B) They are discussing the brand logo on the display screen. C) They are distributing marketing leaflets. D) The design agency is closed.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement B",
+          "explanation": "Se observa al equipo de diseño analizando la tipografía y el logotipo de la marca en la pantalla."
+        },
+        {
+          "id": "TL3_v4",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the conversation and answer: What is the main issue discussed by the speakers?",
+          "audio_script": "M: Hi Amanda, did the PR firm Nova Solutions approve the press release?\nW: Yes. The PR Director wants us to coordinate the release of the campaign data through QuantumCRM.\nM: Great, let's schedule a conference to finalize this.",
+          "options": [
+            "The contract pricing is too high.",
+            "The delivery window is too narrow for their schedule.",
+            "They want to cancel the shipment.",
+            "The company wants to buy ApexCRM."
+          ],
+          "correct_answer": "The delivery window is too narrow for their schedule.",
+          "explanation": "La mujer menciona explícitamente: 'pricing is competitive, but their delivery window is too narrow for our schedule'."
+        }
+      ]
+    }
+  ]
+}

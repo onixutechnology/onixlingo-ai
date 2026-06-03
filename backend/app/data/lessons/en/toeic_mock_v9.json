@@ -1,0 +1,89 @@
+{
+  "id": "toeic_mock_v9",
+  "title": "Simulador Oficial Completo TOEIC® - Versión 9",
+  "level": "B2/C1",
+  "description": "Simulador completo real de Listening & Reading enfocado en Titan Logistics y el líder the Procurement Director.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toeic-intro",
+      "type": "lecture",
+      "title": "TOEIC® Titan Logistics Simulation: Instructions",
+      "parts": [
+        {
+          "visual": "## 📝 Simulador Oficial TOEIC® (Versión 9)\n\nEvaluación de **Listening & Reading** en tiempo real:\n\n1. **Listening Section**: Evalúa tu comprensión en Titan Logistics usando FlexCRM.\n2. **Reading Section**: Mide tu análisis gramatical de memorandos emitidos por the Procurement Director.\n\n*Inicia tu prueba simulada oficial.*",
+          "audio": "Welcome to the Full TOEIC Simulation. Manage your time efficiently across both listening and reading stages. Let's begin.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "toeic-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (Listening)",
+      "questions": [
+        {
+          "id": "T_L1_v9",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTO]: Select the best description of Titan Logistics's office photo.",
+          "audio_script": "A) They are signing the supplier agreement. B) They are inspecting raw materials. C) The shipping container is being loaded. D) They are negotiating the purchase orders.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement D",
+          "explanation": "Los ejecutivos están sentados discutiendo las cláusulas y montos de las órdenes de compra de materias primas."
+        },
+        {
+          "id": "T_L3_v9",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the dialogue and answer: What does the man agree to do next?",
+          "audio_script": "M: Hi John, did the procurement team at Titan Logistics approve the contract?\nW: Yes. The Procurement Director wants us to submit the finalized purchase orders in FlexCRM.\nM: I will handle the system upload right away.",
+          "options": [
+            "Sign the contract as currently written.",
+            "Call the manager to negotiate an extension of the delivery window.",
+            "Cancel the order immediately.",
+            "Write a new memorandum to sales staff."
+          ],
+          "correct_answer": "Call the manager to negotiate an extension of the delivery window.",
+          "explanation": "El hombre dice: 'I will call their manager to negotiate an extension'."
+        }
+      ]
+    },
+    {
+      "id": "toeic-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (Reading)",
+      "questions": [
+        {
+          "id": "T_R5_v9",
+          "type": "quiz_choice",
+          "question": "[PART 5]: Complete the business sentence correctly:\n\n\"All employees are strictly required to comply ___ the updated security rules in FlexCRM.\"",
+          "options": [
+            "with",
+            "to",
+            "by",
+            "for"
+          ],
+          "correct_answer": "with",
+          "explanation": "El verbo 'comply' rige gramaticalmente la preposición 'with' (comply with / cumplir con)."
+        },
+        {
+          "id": "T_R7_v9",
+          "type": "quiz_choice",
+          "question": "[PART 7]: Read the memorandum and answer: **When will the migration to FlexCRM officially occur?**\n\n**MEMORANDUM**\n\n*To:* Purchasing Agents\n*From:* Procurement Department\n*Subject: Vendor Contracts & FlexCRM Registry*\n\nPlease note that starting this weekend, all supplier agreements must be recorded in FlexCRM. An interactive review session will be held this next Friday at 12:00 PM in Conference Room 101.",
+          "options": [
+            "This next Friday at 12:00 PM",
+            "Next next Friday",
+            "Immediately today",
+            "Over the upcoming weekend"
+          ],
+          "correct_answer": "Next next Friday",
+          "explanation": "El memorando dice: 'starting next next Friday, we are officially retiring our legacy sales tool and migrating to FlexCRM'."
+        }
+      ]
+    }
+  ]
+}

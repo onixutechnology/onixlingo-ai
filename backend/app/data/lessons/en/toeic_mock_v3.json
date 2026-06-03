@@ -1,0 +1,89 @@
+{
+  "id": "toeic_mock_v3",
+  "title": "Simulador Oficial Completo TOEIC® - Versión 3",
+  "level": "B2/C1",
+  "description": "Simulador completo real de Listening & Reading enfocado en Nexus Industries y el líder the HR Director.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toeic-intro",
+      "type": "lecture",
+      "title": "TOEIC® Nexus Industries Simulation: Instructions",
+      "parts": [
+        {
+          "visual": "## 📝 Simulador Oficial TOEIC® (Versión 3)\n\nEvaluación de **Listening & Reading** en tiempo real:\n\n1. **Listening Section**: Evalúa tu comprensión en Nexus Industries usando NovaCRM.\n2. **Reading Section**: Mide tu análisis gramatical de memorandos emitidos por the HR Director.\n\n*Inicia tu prueba simulada oficial.*",
+          "audio": "Welcome to the Full TOEIC Simulation. Manage your time efficiently across both listening and reading stages. Let's begin.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "toeic-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (Listening)",
+      "questions": [
+        {
+          "id": "T_L1_v3",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTO]: Select the best description of Nexus Industries's office photo.",
+          "audio_script": "A) They are interviewing a job applicant. B) The HR offices are being painted. C) They are printing employee contracts. D) They are leaving the training hall.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement A",
+          "explanation": "La descripción B es errónea; la A es correcta porque representa una entrevista formal de selección."
+        },
+        {
+          "id": "T_L3_v3",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the dialogue and answer: What does the man agree to do next?",
+          "audio_script": "M: Hi Jessica, did you see the new HR guidelines from Nexus Industries?\nW: Yes, they focus on payroll integration and onboarding. The HR Director sent the draft.\nM: I will email the HR team to schedule our onboarding walkthrough.",
+          "options": [
+            "Sign the contract as currently written.",
+            "Call the manager to negotiate an extension of the delivery window.",
+            "Cancel the order immediately.",
+            "Write a new memorandum to sales staff."
+          ],
+          "correct_answer": "Call the manager to negotiate an extension of the delivery window.",
+          "explanation": "El hombre dice: 'I will call their manager to negotiate an extension'."
+        }
+      ]
+    },
+    {
+      "id": "toeic-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (Reading)",
+      "questions": [
+        {
+          "id": "T_R5_v3",
+          "type": "quiz_choice",
+          "question": "[PART 5]: Complete the business sentence correctly:\n\n\"All employees are strictly required to comply ___ the updated security rules in NovaCRM.\"",
+          "options": [
+            "with",
+            "to",
+            "by",
+            "for"
+          ],
+          "correct_answer": "with",
+          "explanation": "El verbo 'comply' rige gramaticalmente la preposición 'with' (comply with / cumplir con)."
+        },
+        {
+          "id": "T_R7_v3",
+          "type": "quiz_choice",
+          "question": "[PART 7]: Read the memorandum and answer: **When will the migration to NovaCRM officially occur?**\n\n**MEMORANDUM**\n\n*To:* Hiring Managers\n*From:* HR Department\n*Subject: Onboarding and NovaCRM Setup*\n\nPlease note that starting next Thursday, all candidate evaluation files must be uploaded to NovaCRM. A workshop will be held this Wednesday at 11:30 AM in Conference Room C.",
+          "options": [
+            "This Wednesday at 11:30 AM",
+            "Next Wednesday",
+            "Immediately today",
+            "Over the upcoming weekend"
+          ],
+          "correct_answer": "Next Wednesday",
+          "explanation": "El memorando dice: 'starting next Wednesday, we are officially retiring our legacy sales tool and migrating to NovaCRM'."
+        }
+      ]
+    }
+  ]
+}

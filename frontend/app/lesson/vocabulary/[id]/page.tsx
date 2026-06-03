@@ -195,7 +195,8 @@ export default function VocabularyLessonPage() {
                     total_steps: 1,
                     score: 100,           // Vocabulario se completa o no (no hay nota parcial)
                     stars: 3,
-                    difficulty_completed: difficulty // 🔥 Enviamos dificultad elegida
+                    difficulty_completed: difficulty, // 🔥 Enviamos dificultad elegida
+                    language: activeLanguage
                 })
             });
         }
@@ -609,14 +610,14 @@ export default function VocabularyLessonPage() {
 
       <AnimatePresence>
         {showTimeUpModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-955/90 backdrop-blur-md">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md">
             <motion.div 
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               className="bg-slate-900 border-2 border-red-950 p-8 max-w-md w-full shadow-2xl text-center rounded-none relative"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-red-600" />
-              <div className="w-16 h-16 bg-red-955/40 text-red-500 border border-red-800 flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-red-950/40 text-red-500 border border-red-800 flex items-center justify-center mx-auto mb-6">
                 <Clock size={32} className="animate-pulse" />
               </div>
               <h3 className="text-sm font-serif font-black italic uppercase tracking-wider text-red-400 mb-2">¡Tiempo Agotado!</h3>

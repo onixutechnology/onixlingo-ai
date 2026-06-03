@@ -49,6 +49,28 @@ export default function TermsPage() {
       <p className="mb-4 leading-relaxed">
         Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento para adaptarlos a novedades legislativas o mejoras operativas del servicio. El uso continuo de la plataforma posterior a dichas modificaciones constituirá la aceptación de los nuevos términos.
       </p>
+
+      <h3 className="text-xl font-bold mt-8 mb-4">7. Sorteos Especiales por Metas de Suscriptores Premium</h3>
+      <p className="mb-4 leading-relaxed">
+        OnixLingo organiza sorteos automáticos para suscriptores premium conforme se alcanzan ciertas metas acumulativas de usuarios activos en los planes de pago. La plataforma sorteará los siguientes premios correspondientes a cada meta lograda:
+      </p>
+      <ul className="list-disc pl-6 mb-4 space-y-2 text-sm text-slate-600">
+        <li><strong>Meta 100 suscriptores:</strong> Sorteo de una Gift Card de $500.</li>
+        <li><strong>Meta 300 suscriptores:</strong> Sorteo de unos AirPods 4.</li>
+        <li><strong>Meta 500 suscriptores:</strong> Sorteo de un iPad Mini a elegir.</li>
+        <li><strong>Meta 700 suscriptores:</strong> Sorteo de un Galaxy S25.</li>
+        <li><strong>Meta 900 suscriptores:</strong> Sorteo de un iPhone.</li>
+        <li><strong>Meta 1,500 suscriptores:</strong> Sorteo de una MacBook.</li>
+      </ul>
+      <p className="mb-4 leading-relaxed">
+        Estos sorteos especiales se rigen bajo los siguientes lineamientos específicos:
+      </p>
+      <ul className="list-disc pl-6 mb-6 space-y-2 text-sm text-slate-600">
+        <li><strong>Elegibilidad Geográfica:</strong> Podrán participar suscriptores activos de cualquier país del mundo (cobertura global).</li>
+        <li><strong>Confirmación de Metas:</strong> Los sorteos se activarán y ejecutarán única y exclusivamente cuando la cantidad de suscriptores requerida para cada meta esté debidamente confirmada, facturada y conciliada por Onixu Technology.</li>
+        <li><strong>Planes Elegibles:</strong> Para efectos del conteo de las metas y de la participación en los sorteos, únicamente serán elegibles los usuarios con suscripciones activas y de pago en los planes <strong>PRO</strong> o <strong>Executive</strong>. Los usuarios del nivel gratuito (Free) quedan expresamente excluidos de esta dinámica.</li>
+        <li><strong>Logística y Entrega:</strong> El envío y despacho de los premios físicos o digitales se realizará a través de un proveedor logístico o distribuidor externo autorizado. Los términos de entrega, dirección de envío y plazos se acordarán de forma directa e de mutuo acuerdo con el usuario ganador tras su notificación.</li>
+      </ul>
     </div>
   );
 }

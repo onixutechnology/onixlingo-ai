@@ -5,20 +5,22 @@ from datetime import datetime
 # ✅ Importamos la lógica de la siguiente lección
 from app.services.lesson_service import get_next_lesson_id 
 
-def get_user_progress(db: Session, user_id: int, lesson_id: str):
+def get_user_progress(db: Session, user_id: int, lesson_id: str, language: str = "en"):
     return db.query(models.Progress).filter(
         models.Progress.user_id == user_id, 
-        models.Progress.lesson_id == lesson_id
+        models.Progress.lesson_id == lesson_id,
+        models.Progress.language == language
     ).first()
 
-def initialize_progress(db: Session, user_id: int, lesson_id: str, lesson_type: str, total_steps: int):
+def initialize_progress(db: Session, user_id: int, lesson_id: str, lesson_type: str, total_steps: int, language: str = "en"):
     new_prog = models.Progress(
         user_id=user_id,
         lesson_id=lesson_id,
         lesson_type=lesson_type,
         status="locked", 
         current_step=0,
-        total_steps=total_steps
+        total_steps=total_steps,
+        language=language
     )
     db.add(new_prog)
     db.commit()
@@ -33,12 +35,13 @@ def update_lesson_progress(
     steps_completed: int, 
     total_steps: int, 
     lesson_type: str = "standard",
-    difficulty_completed: str = "easy"
+    difficulty_completed: str = "easy",
+    language: str = "en"
 ):
     # 1. Obtener o Crear Progreso Actual
-    progress = get_user_progress(db, user_id, lesson_id)
+    progress = get_user_progress(db, user_id, lesson_id, language)
     if not progress:
-        progress = initialize_progress(db, user_id, lesson_id, lesson_type, total_steps)
+        progress = initialize_progress(db, user_id, lesson_id, lesson_type, total_steps, language)
 
     # 2. Actualizar métricas
     progress.current_step = steps_completed
@@ -71,7 +74,7 @@ def update_lesson_progress(
                     progress.tickets_earned = 1
 
         # Intentar desbloquear siguiente nivel
-        _unlock_next_content(db, user_id, lesson_id, lesson_type)
+        _unlock_next_content(db, user_id, lesson_id, lesson_type, language)
         _check_achievements(db, user_id, score)
         
         # 🔥 Actualizar Racha (Streak)
@@ -86,15 +89,15 @@ def update_lesson_progress(
     db.refresh(progress)
     return progress
 
-def _unlock_next_content(db: Session, user_id: int, current_lesson_id: str, current_type: str):
+def _unlock_next_content(db: Session, user_id: int, current_lesson_id: str, current_type: str, language: str = "en"):
     """
     Busca la siguiente lección y la desbloquea cambiando el status a 'active'.
     """
     next_id = get_next_lesson_id(current_lesson_id)
-    print(f"🔓 [LOGICA] Leccion terminada: {current_lesson_id} | Siguiente detectada: {next_id}")
+    print(f"🔓 [LOGICA] Leccion terminada: {current_lesson_id} | Siguiente detectada: {next_id} | Idioma: {language}")
 
     if next_id:
-        next_progress = get_user_progress(db, user_id, next_id)
+        next_progress = get_user_progress(db, user_id, next_id, language)
         
         if not next_progress:
             # Crear registro nuevo con status 'active' (desbloqueado)
@@ -106,16 +109,17 @@ def _unlock_next_content(db: Session, user_id: int, current_lesson_id: str, curr
                 stars=0,
                 score=0,
                 current_step=0,
-                total_steps=10 
+                total_steps=10,
+                language=language
             )
             db.add(new_unlock)
-            print(f" -> ✅ Nueva lección creada y desbloqueada: {next_id}")
+            print(f" -> ✅ Nueva lección creada y desbloqueada: {next_id} ({language})")
             
         else:
             # Si ya existía, asegurarse de que se marque como desbloqueada
             if next_progress.status == "locked":
                 next_progress.status = "active"
-                print(f" -> ✅ Lección existente desbloqueada: {next_id}")
+                print(f" -> ✅ Lección existente desbloqueada: {next_id} ({language})")
 
 def _check_achievements(db: Session, user_id: int, current_score: int):
     if current_score == 100:

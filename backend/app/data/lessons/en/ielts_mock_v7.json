@@ -1,0 +1,95 @@
+{
+  "id": "ielts_mock_v7",
+  "title": "Simulador Oficial Completo IELTS® Academic - Versión 7",
+  "level": "B2/C2",
+  "description": "Simulador académico completo de IELTS® con lecturas y audios sobre: Expresión e Historia Artística.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "ielts-intro",
+      "type": "lecture",
+      "title": "IELTS® Academic Simulation: Expresión e Historia Artística",
+      "parts": [
+        {
+          "visual": "## 🇬🇧 Simulador IELTS® Academic (Versión 7)\n\nTemas académicos globales evaluados:\n\n- **Academic Reading**: *Historia del Arte: La Técnica del Claroscuro en Caravaggio*\n- **Academic Listening Lecture**\n- **Academic Writing Task Integration**\n\n*Comienza tu examen simulado.*",
+          "audio": "Welcome to the IELTS Academic Simulator. Focus on precise spelling, syntax structure, and vocabulary diversity. Let's begin.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "ielts-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (IELTS Listening)",
+      "questions": [
+        {
+          "id": "IE_L1_v7",
+          "type": "quiz_choice",
+          "question": "[ACADEMIC LECTURE]: Listen to the dialogue and answer: **What is the central focus?**\n\n*(Transcription)*:\n\nProfessor: Unlike oil painting, fresco painting requires laying down plaster on a wall and painting directly on it while it is wet. The chemical reaction between the calcium hydroxide in the plaster and the pigments binds the paint permanently to the wall. This requires extreme speed, as the artist must complete the section before the plaster dries.",
+          "options": [
+            "Mixing oil pigments with saltwater solutions.",
+            "Painting on wet plaster before it dries and sets.",
+            "Removing the dried paint from stone walls.",
+            "Carving deep channels to hold the plaster brackets."
+          ],
+          "correct_answer": "Painting on wet plaster before it dries and sets.",
+          "explanation": "El profesor detalla que pintar al fresco exige pintar sobre el yeso húmedo ('painting directly on it while it is wet') antes de que se seque."
+        }
+      ]
+    },
+    {
+      "id": "ielts-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (IELTS Reading)",
+      "questions": [
+        {
+          "id": "IE_R1_v7",
+          "type": "quiz_choice",
+          "question": "Read the academic article and answer the question:\n\n**The Revolution of Tenebrism in Baroque Painting**\n\nIn late Renaissance and early Baroque painting, artists shifted from balanced classical lighting to dramatic high-contrast techniques. The pioneer of this revolution was Michelangelo Merisi da Caravaggio, who perfected the technique of chiaroscuro, often referred to as tenebrism. Tenebrism uses deep, absolute shadows to swallow the background, while a single intense shaft of light illuminates the main figures. This dramatic contrast creates a theatrical environment that focuses the viewer's eye on the raw physical and emotional reality of the scene. Rather than idealizing figures, Caravaggio depicted saints with dirty feet and wrinkled skin, breaking Renaissance taboos.",
+          "options": [
+            "It makes the background look extremely bright and colorful.",
+            "It focuses attention on raw emotional reality through dramatic high-contrast lighting.",
+            "It creates symmetrical geometric shapes common in classical Greek art.",
+            "It completely hides the main figures in deep, absolute shadows."
+          ],
+          "correct_answer": "It focuses attention on raw emotional reality through dramatic high-contrast lighting.",
+          "explanation": "El texto explica que el claroscuro/tenebrismo usa contrastes dramáticos ('dramatic contrast') para centrar el ojo en la cruda realidad física y emocional."
+        },
+        {
+          "id": "IE_R2_v7",
+          "type": "quiz_choice",
+          "question": "What is the closest meaning of the highlighted term in context?",
+          "options": [
+            "Follower",
+            "Trailblazer / Innovator",
+            "Opponent",
+            "Historian"
+          ],
+          "correct_answer": "Trailblazer / Innovator",
+          "explanation": "Al ser el iniciador y perfeccionador de una nueva técnica artística revolucionaria, 'pioneer' significa pionero, innovador o precursor ('trailblazer')."
+        }
+      ]
+    },
+    {
+      "id": "ielts-writing",
+      "type": "quiz",
+      "title": "Sección 3: Coherencia y Gramática Académica (IELTS Writing Prep)",
+      "questions": [
+        {
+          "id": "IE_W1_v7",
+          "type": "fill_input",
+          "question": "Complete the sentence with the appropriate formal connector showing cause-and-effect:\n\nComplete the scientific sentence: \"Oil paintings can be retouched for weeks. ___, frescoes must be painted quickly before the plaster dries.\"",
+          "correct_answers": [
+            "In contrast",
+            "Conversely",
+            "in contrast",
+            "conversely"
+          ],
+          "hints": [
+            "Check spelling and casing."
+          ]
+        }
+      ]
+    }
+  ]
+}

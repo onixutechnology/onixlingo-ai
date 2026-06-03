@@ -22,6 +22,13 @@ export function PaddleProvider({ children }: { children: React.ReactNode }) {
               theme: 'light',
               locale: 'es'
             }
+          },
+          eventCallback: (event) => {
+            if (event.name === 'checkout.completed') {
+              // Recarga la página automáticamente para que el frontend 
+              // descargue el nuevo estado (PRO/EXECUTIVE) de la base de datos
+              window.location.href = '/dashboard?payment=success';
+            }
           }
         });
 

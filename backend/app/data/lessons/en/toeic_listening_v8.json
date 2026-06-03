@@ -1,0 +1,56 @@
+{
+  "id": "toeic_listening_v8",
+  "title": "TOEIC® Listening - Versión 8: Customer Service & Service Level Agreements",
+  "level": "B2/C1",
+  "description": "Prueba intensiva de comprensión auditiva TOEIC® enfocada en el contexto de Horizon Enterprise con the Client Services VP.",
+  "total_xp": 100,
+  "stages": [
+    {
+      "id": "listening-intro",
+      "type": "lecture",
+      "title": "TOEIC Part 1: Strategy & Warm-up",
+      "parts": [
+        {
+          "visual": "## 📸 Simulación de Auditiva: Horizon Enterprise\n\nEvaluaremos tu destreza auditiva en el contexto de **Horizon Enterprise** (Líder a cargo: **the Client Services VP**).\n\nConcéntrate plenamente en las descripciones y los audios corporativos.",
+          "audio": "Welcome to this specialized TOEIC Listening drill. Listen closely to the speaker options and pick the best description of the workspace. Good luck!",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "listening-quiz",
+      "type": "quiz",
+      "title": "Parte 1: Photodescription & Conversations",
+      "questions": [
+        {
+          "id": "TL1_v8",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTOGRAPH]: Look at the business picture of Horizon Enterprise's office staff. Select the correct description.",
+          "audio_script": "A) They are answering calls at the service center. B) They are sorting client refund claims. C) The customer care division is closed. D) They are training new support executives.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement A",
+          "explanation": "Se observa a los agentes de atención al cliente con diademas atendiendo llamadas de soporte en vivo."
+        },
+        {
+          "id": "TL3_v8",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the conversation and answer: What is the main issue discussed by the speakers?",
+          "audio_script": "M: Hi James, did Horizon Enterprise send the new SLA terms?\nW: Yes. The Client Services VP wants all client satisfaction rates logged under EliteCRM.\nM: Perfect, let's make sure our support team is fully aligned.",
+          "options": [
+            "The contract pricing is too high.",
+            "The delivery window is too narrow for their schedule.",
+            "They want to cancel the shipment.",
+            "The company wants to buy ApexCRM."
+          ],
+          "correct_answer": "The delivery window is too narrow for their schedule.",
+          "explanation": "La mujer menciona explícitamente: 'pricing is competitive, but their delivery window is too narrow for our schedule'."
+        }
+      ]
+    }
+  ]
+}

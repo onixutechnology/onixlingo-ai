@@ -27,7 +27,7 @@ const features = [
     description: 'Nuestro núcleo de inteligencia artificial procesa cada respuesta en milisegundos. El sistema analiza tu nivel en tiempo real y recalibra la dificultad de cada ejercicio de forma automática, garantizando que siempre estés en tu zona óptima de aprendizaje.',
     bullets: [
       'Ajuste de dificultad en tiempo real por sesión',
-      'Modelos de lenguaje especializados en educación MCER',
+      'Modelos de lenguaje alineados con el estándar MCER',
       'Memoria de sesión: recuerda tus errores previos',
       'Análisis de patrones de aprendizaje individual',
     ],
@@ -40,7 +40,7 @@ const features = [
     color: 'emerald',
     tag: 'Speech Analytics',
     title: 'Análisis Fonético con IA en Tiempo Real',
-    description: 'Pronuncia, recibe feedback inmediato y corrige. Nuestro sistema de Speech Analytics descompone tu voz en métricas de accuracy, fluency, intonation, rhythm, pace y confidence. No solo te dice si es correcto — te dice exactamente qué ajustar.',
+    description: 'Pronuncia, recibe feedback inmediato y corrige. Nuestro sistema de Speech Analytics descompone tu voz en métricas de precisión, fluidez, entonación, ritmo, ritmo y confianza. No solo te dice si es correcto — te dice exactamente qué ajustar.',
     bullets: [
       'Detección de 8 dimensiones fonéticas simultáneas',
       'Benchmark CEFR (B1/B2/C1/C2) por sesión',
@@ -58,9 +58,9 @@ const features = [
     title: 'Ecosistema de 3 Idiomas Globales',
     description: 'Inglés, Francés y Chino Mandarín en un solo ecosistema integrado. Cada idioma cuenta con currículum completo desde A1 hasta C2, avatares nativos para conversación, y currícula especializadas para contextos de negocios internacionales.',
     bullets: [
-      'Inglés: 900+ lecciones con acento americano y británico',
-      'Francés: Currículum DELF/DALF alineado',
-      'Chino Mandarín: Sistema Pinyin + caracteres HSK',
+      'Inglés: 1,000+ lecciones con acento americano y británico',
+      'Francés: Currículum DELF/DALF alineado con 2,000+ lecciones',
+      'Chino Mandarín: Sistema Pinyin + 600+ lecciones HSK',
       'Traducción contextual y gramática comparativa',
     ],
     stat: '3', statLabel: 'Idiomas Globales',
@@ -72,14 +72,14 @@ const features = [
     color: 'amber',
     tag: 'Ajedrez Cognitivo',
     title: 'Entrenamiento de Pensamiento Estratégico',
-    description: 'El ajedrez no es un juego — es una herramienta de desarrollo cognitivo. La misma arquitectura mental que usa un jugador de alto nivel para anticipar movimientos es la que uses para estructurar argumentos en negociaciones ejecutivas.',
+    description: 'El ajedrez no es un juego — es una herramienta de desarrollo cognitivo. La misma arquitectura mental que usa un jugador de alto nivel para anticipar movimientos es la que usas para estructurar argumentos en negociaciones ejecutivas.',
     bullets: [
       'Puzzles tácticos adaptados a tu Elo estimado',
       'Aperturas clásicas: Ruy López, Siciliana, Caro-Kann',
-      '2 puzzles diarios gratis / Ilimitado en planes Pro+',
+      '3,000+ retos dinámicos y lecciones en la biblioteca',
       'Tutor IA que explica cada decisión táctica',
     ],
-    stat: '500+', statLabel: 'Puzzles en biblioteca',
+    stat: '3,000+', statLabel: 'Puzzles y Retos',
     extraDetails: 'Puzzles indexados dinámicamente según la teoría del flujo cognitivo. El motor evalúa el árbol de decisiones estratégico y te entrena para justificar cada jugada en inglés, fomentando el pensamiento racional bajo presión extrema.',
     interactiveMetric: 'chess'
   },
@@ -118,7 +118,7 @@ const features = [
 ];
 
 const techStack = [
-  { icon: Cpu, label: 'Motor de IA propio', sub: 'Entrenado para educación MCER' },
+  { icon: Cpu, label: 'Motor de IA propio', sub: 'Alineado con el estándar MCER' },
   { icon: Radio, label: 'Streaming de audio real', sub: 'WebRTC + análisis fonético' },
   { icon: Shield, label: 'Datos cifrados E2E', sub: 'SOC2 compliant infrastructure' },
   { icon: Activity, label: 'Uptime 99.9%', sub: 'Infraestructura multi-región' },
@@ -127,19 +127,18 @@ const techStack = [
 ];
 
 const colorMap: Record<string, { bg: string; text: string; border: string; icon: string; tag: string; btn: string }> = {
-  indigo: { bg: 'bg-indigo-50', text: 'text-indigo-600', border: 'border-indigo-200', icon: 'bg-indigo-100 text-indigo-600', tag: 'bg-indigo-100 text-indigo-700', btn: 'bg-indigo-600 hover:bg-indigo-700' },
-  emerald: { bg: 'bg-emerald-50', text: 'text-emerald-600', border: 'border-emerald-200', icon: 'bg-emerald-100 text-emerald-600', tag: 'bg-emerald-100 text-emerald-700', btn: 'bg-emerald-600 hover:bg-emerald-700' },
-  blue: { bg: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-200', icon: 'bg-blue-100 text-blue-600', tag: 'bg-blue-100 text-blue-700', btn: 'bg-blue-600 hover:bg-blue-700' },
-  amber: { bg: 'bg-amber-50', text: 'text-amber-600', border: 'border-amber-200', icon: 'bg-amber-100 text-amber-600', tag: 'bg-amber-100 text-amber-700', btn: 'bg-amber-600 hover:bg-amber-700' },
-  pink: { bg: 'bg-pink-50', text: 'text-pink-600', border: 'border-pink-200', icon: 'bg-pink-100 text-pink-600', tag: 'bg-pink-100 text-pink-700', btn: 'bg-pink-600 hover:bg-pink-700' },
-  violet: { bg: 'bg-violet-50', text: 'text-violet-600', border: 'border-violet-200', icon: 'bg-violet-100 text-violet-600', tag: 'bg-violet-100 text-violet-700', btn: 'bg-violet-600 hover:bg-violet-700' },
+  indigo: { bg: 'bg-indigo-50/50', text: 'text-indigo-600', border: 'border-indigo-200', icon: 'bg-indigo-100 text-indigo-600', tag: 'bg-indigo-100 text-indigo-700', btn: 'bg-indigo-600 hover:bg-indigo-700' },
+  emerald: { bg: 'bg-emerald-50/50', text: 'text-emerald-600', border: 'border-emerald-200', icon: 'bg-emerald-100 text-emerald-600', tag: 'bg-emerald-100 text-emerald-700', btn: 'bg-emerald-600 hover:bg-emerald-700' },
+  blue: { bg: 'bg-blue-50/50', text: 'text-blue-600', border: 'border-blue-200', icon: 'bg-blue-100 text-blue-600', tag: 'bg-blue-100 text-blue-700', btn: 'bg-blue-600 hover:bg-blue-700' },
+  amber: { bg: 'bg-amber-50/50', text: 'text-amber-600', border: 'border-amber-200', icon: 'bg-amber-100 text-amber-600', tag: 'bg-amber-100 text-amber-700', btn: 'bg-amber-600 hover:bg-amber-700' },
+  pink: { bg: 'bg-pink-50/50', text: 'text-pink-600', border: 'border-pink-200', icon: 'bg-pink-100 text-pink-600', tag: 'bg-pink-100 text-pink-700', btn: 'bg-pink-600 hover:bg-pink-700' },
+  violet: { bg: 'bg-violet-50/50', text: 'text-violet-600', border: 'border-violet-200', icon: 'bg-violet-100 text-violet-600', tag: 'bg-violet-100 text-violet-700', btn: 'bg-violet-600 hover:bg-violet-700' },
 };
 
 export default function CaracteristicasPage() {
   const [activeFeature, setActiveFeature] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   
-  // Interactive mini-calculator variables inside features modal
   const [inputText, setInputText] = useState('Our operational synergies are in perfect alignment for the upcoming quarterly board presentation.');
   const [speechWpm, setSpeechWpm] = useState(135);
   const [wordsKnown, setWordsKnown] = useState(25);
@@ -157,7 +156,7 @@ export default function CaracteristicasPage() {
     <div className="min-h-screen bg-[#edf7f2] font-sans text-slate-800 selection:bg-indigo-500/20 selection:text-indigo-900">
 
       {/* NAVBAR */}
-      <nav className="fixed w-full bg-[#edf7f2]/95 backdrop-blur-xl border-b border-emerald-100 z-50">
+      <nav className="fixed w-full bg-[#edf7f2]/90 backdrop-blur-xl border-b border-emerald-100 z-50">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <div className="w-8 h-8 bg-indigo-600 flex items-center justify-center text-white font-bold shadow-lg shadow-indigo-600/20">
@@ -166,7 +165,7 @@ export default function CaracteristicasPage() {
             <span className="font-bold text-slate-900 tracking-tight text-xl">OnixLingo</span>
           </Link>
           <div className="hidden md:flex gap-8 items-center text-sm font-semibold text-slate-600">
-            <Link href="/caracteristicas" className="text-indigo-600 border-b-2 border-indigo-600 pb-0.5">Características</Link>
+            <Link href="/caracteristicas" className="text-indigo-600 border-b-2 border-indigo-600 pb-1">Características</Link>
             <Link href="/vocabulario" className="hover:text-indigo-600 transition-colors">Vocabulario</Link>
             <Link href="/programa-ejecutivo" className="hover:text-indigo-600 transition-colors">Programa Ejecutivo</Link>
             <Link href="/planes" className="hover:text-indigo-600 transition-colors">Planes</Link>
@@ -174,7 +173,7 @@ export default function CaracteristicasPage() {
           <div className="flex gap-4 items-center">
             <Link href="/login" className="hidden md:block text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors">Iniciar Sesión</Link>
             <Link href="/register">
-              <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 px-6 transition-all shadow-md shadow-indigo-600/20">
+              <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 px-6 transition-all shadow-md shadow-indigo-600/20 hover:scale-105">
                 Crear Cuenta Gratis
               </button>
             </Link>
@@ -183,62 +182,61 @@ export default function CaracteristicasPage() {
       </nav>
 
       {/* HERO */}
-      <section className="pt-40 pb-20 px-6 relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-indigo-100 blur-[140px] opacity-50 pointer-events-none" />
+      <section className="pt-36 pb-16 px-6 relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-indigo-100/50 blur-[130px] opacity-40 pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-widest shadow-sm">
-            <Sparkles size={12} className="text-indigo-600" />
-            Tecnología de Alto Rendimiento
+            <Sparkles size={12} className="text-indigo-600 animate-pulse" />
+            Ecosistema Tecnológico de Vanguardia
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.08]">
-            Características que<br />
-            <span className="text-indigo-600">redefinen el aprendizaje.</span>
+          <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Tecnología Avanzada para un<br />
+            <span className="text-indigo-600">Aprendizaje sin Fricciones.</span>
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light">
-            OnixLingo no es una app de frases. Es una arquitectura de aprendizaje de demostración diseñada para producir resultados medibles en tiempo real.
+          <p className="text-lg text-slate-650 max-w-3xl mx-auto leading-relaxed font-light">
+            OnixLingo integra inteligencia artificial cognitiva, motores de análisis fonométrico en tiempo real y dinámicas de ajedrez estratégico para asegurar un desarrollo cognitivo premium.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
+          <div className="flex justify-center gap-4 pt-2">
             <Link href="/register">
               <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-8 transition-all shadow-lg shadow-indigo-600/20 flex items-center gap-2 hover:-translate-y-0.5">
-                Empezar Gratis <ArrowRight size={18} />
+                Comenzar Demo <ArrowRight size={18} />
               </button>
             </Link>
             <Link href="/planes">
-              <button className="bg-white border border-slate-200 hover:border-indigo-400 text-slate-700 hover:text-indigo-600 font-semibold py-3.5 px-8 transition-all">
-                Ver Planes
+              <button className="bg-white border border-slate-200 hover:border-indigo-400 hover:text-indigo-600 text-slate-700 font-semibold py-3.5 px-8 transition-all">
+                Explorar Planes
               </button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* QUICK STATS */}
-      <section className="py-12 px-6 border-t border-emerald-100 bg-white/60">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      {/* DETAILED STATS GRID */}
+      <section className="py-10 px-6 border-t border-emerald-100 bg-white/40 backdrop-blur-sm">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
-            { val: '900+', label: 'Lecciones activas', color: 'text-slate-900' },
-            { val: '3', label: 'Idiomas globales', color: 'text-indigo-600' },
-            { val: '60', label: 'Módulos executive', color: 'text-amber-600' },
-            { val: '< 80ms', label: 'Latencia de respuesta IA', color: 'text-emerald-600' },
+            { val: '3,000+', label: 'Lecciones de Idiomas', color: 'text-slate-900' },
+            { val: '3,000+', label: 'Retos de Ajedrez', color: 'text-indigo-650' },
+            { val: '1,400+', label: 'Temas y Contextos', color: 'text-amber-600' },
+            { val: '< 80ms', label: 'Latencia de IA', color: 'text-emerald-600' },
           ].map((s, i) => (
-            <div key={i} className="text-center p-6 bg-white border border-slate-100 shadow-sm">
-              <p className={`text-3xl font-extrabold ${s.color}`}>{s.val}</p>
-              <p className="text-xs text-slate-500 font-semibold mt-1 uppercase tracking-wide">{s.label}</p>
+            <div key={i} className="p-5 bg-white border border-slate-100 shadow-sm flex flex-col justify-center">
+              <p className={`text-3xl font-black ${s.color}`}>{s.val}</p>
+              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-1">{s.label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* FEATURE DETAIL SECTION */}
-      <section className="py-24 px-6 border-t border-emerald-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 space-y-3">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">Un ecosistema. Seis módulos de élite.</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">Cada característica fue construida desde cero para ser la mejor en su categoría, no un complemento.</p>
+      {/* INTERACTIVE MODULE TABS */}
+      <section className="py-20 px-6 border-t border-emerald-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 space-y-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Estructura Modular del Ecosistema</h2>
+            <p className="text-slate-500 text-sm max-w-xl mx-auto">Seis pilares estratégicos diseñados con tecnología propietaria para maximizar el rendimiento.</p>
           </div>
 
-          {/* Feature tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mb-16">
+          <div className="flex flex-wrap justify-center gap-2 mb-10">
             {features.map((f, i) => {
               const c = colorMap[f.color];
               const Icon = f.icon;
@@ -246,7 +244,7 @@ export default function CaracteristicasPage() {
                 <button
                   key={i}
                   onClick={() => setActiveFeature(i)}
-                  className={`flex items-center gap-2 px-4 py-2.5 text-sm font-bold transition-all border ${activeFeature === i ? `${c.icon} ${c.border} shadow-sm` : 'bg-white border-slate-200 text-slate-500 hover:border-slate-300'}`}
+                  className={`flex items-center gap-2 px-5 py-3 text-xs font-bold transition-all border ${activeFeature === i ? `${c.icon} ${c.border} bg-white shadow-sm ring-1 ring-slate-900/5` : 'bg-white border-slate-200 text-slate-500 hover:border-slate-350 hover:text-slate-700'}`}
                 >
                   <Icon size={14} />
                   {f.tag}
@@ -255,76 +253,81 @@ export default function CaracteristicasPage() {
             })}
           </div>
 
-          {/* Active feature card */}
-          {features.map((f, i) => {
-            if (i !== activeFeature) return null;
-            const c = colorMap[f.color];
-            const Icon = f.icon;
-            return (
-              <div key={i} className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center border ${c.border} ${c.bg} p-10 md:p-16`}>
-                <div className="space-y-6">
-                  <span className={`inline-block px-3 py-1 text-xs font-black uppercase tracking-widest ${c.tag}`}>{f.tag}</span>
-                  <h3 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">{f.title}</h3>
-                  <p className="text-slate-600 leading-relaxed text-base">{f.description}</p>
-                  <ul className="space-y-3">
-                    {f.bullets.map((b, j) => (
-                      <li key={j} className="flex items-start gap-3 text-sm text-slate-700">
-                        <CheckCircle2 size={16} className={`${c.text} mt-0.5 shrink-0`} />
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="flex gap-4">
-                    <button 
-                      onClick={() => handleOpenDetails(i)}
-                      className={`flex items-center gap-2 px-6 py-3 font-bold text-sm transition-all shadow-md text-white ${c.btn}`}
-                    >
-                      Ver detalles <ChevronRight size={16} />
-                    </button>
-                    <Link href="/register">
-                      <button className="border border-slate-300 hover:border-slate-400 bg-white text-slate-700 font-semibold px-6 py-3 text-sm">
-                        Probar Demo
+          {/* Active Card */}
+          <div className="max-w-4xl mx-auto">
+            {features.map((f, i) => {
+              if (i !== activeFeature) return null;
+              const c = colorMap[f.color];
+              const Icon = f.icon;
+              return (
+                <div key={i} className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center border ${c.border} ${c.bg} p-8 md:p-12 shadow-md relative overflow-hidden`}>
+                  <div className="md:col-span-8 space-y-5">
+                    <span className={`inline-block px-2.5 py-1 text-[10px] font-black uppercase tracking-wider ${c.tag}`}>{f.tag}</span>
+                    <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight">{f.title}</h3>
+                    <p className="text-slate-650 leading-relaxed text-sm">{f.description}</p>
+                    <ul className="space-y-2">
+                      {f.bullets.map((b, j) => (
+                        <li key={j} className="flex items-start gap-2.5 text-xs text-slate-750 font-medium">
+                          <CheckCircle2 size={15} className={`${c.text} mt-0.5 shrink-0`} />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <div className="flex gap-3 pt-3">
+                      <button 
+                        onClick={() => handleOpenDetails(i)}
+                        className={`flex items-center gap-1.5 px-6 py-3 font-bold text-xs uppercase tracking-widest text-white shadow-md ${c.btn}`}
+                      >
+                        Panel de Simulación <ChevronRight size={14} />
                       </button>
-                    </Link>
+                      <Link href="/register">
+                        <button className="border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-semibold px-6 py-3 text-xs uppercase tracking-widest">
+                          Iniciar Demo
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                  
+                  <div className="md:col-span-4 flex flex-col items-center justify-center gap-4 py-4 md:border-l md:border-slate-200/50">
+                    <div className={`w-32 h-32 ${c.icon} flex items-center justify-center shadow-lg rounded-none border border-white/20`}>
+                      <Icon size={56} />
+                    </div>
+                    <div className="text-center">
+                      <p className={`text-4xl font-black ${c.text}`}>{f.stat}</p>
+                      <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">{f.statLabel}</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex flex-col items-center justify-center gap-6">
-                  <div className={`w-40 h-40 ${c.icon} flex items-center justify-center shadow-xl`}>
-                    <Icon size={72} />
-                  </div>
-                  <div className="text-center">
-                    <p className={`text-5xl font-black ${c.text}`}>{f.stat}</p>
-                    <p className="text-xs text-slate-500 font-bold uppercase tracking-widest mt-1">{f.statLabel}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* ALL FEATURES GRID */}
-      <section className="py-24 px-6 bg-white border-t border-emerald-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 space-y-3">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Todo incluido en cada plan</h2>
-            <p className="text-slate-500 text-base max-w-xl mx-auto">Haz clic en cualquier tarjeta para abrir la ventana de detalles interactiva.</p>
+      {/* CAPABILITIES GRID */}
+      <section className="py-20 px-6 bg-white border-t border-emerald-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 space-y-2">
+            <h2 className="text-3xl font-bold text-slate-900">Tecnologías Integradas</h2>
+            <p className="text-slate-500 text-sm max-w-xl mx-auto">Capas de infraestructura optimizadas para una experiencia sin interrupciones.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((f, i) => {
               const c = colorMap[f.color];
               const Icon = f.icon;
               return (
-                <div key={i} onClick={() => handleOpenDetails(i)} className={`group p-8 border ${c.border} bg-white hover:${c.bg} transition-all cursor-pointer shadow-sm hover:shadow-md`}>
-                  <div className={`w-12 h-12 ${c.icon} flex items-center justify-center mb-5`}>
-                    <Icon size={24} />
+                <div key={i} onClick={() => handleOpenDetails(i)} className={`group p-6 border ${c.border} bg-white hover:${c.bg} transition-all cursor-pointer shadow-sm hover:shadow-md flex flex-col justify-between min-h-[220px]`}>
+                  <div>
+                    <div className={`w-10 h-10 ${c.icon} flex items-center justify-center mb-4`}>
+                      <Icon size={20} />
+                    </div>
+                    <span className={`text-[9px] font-black uppercase tracking-widest ${c.text} block mb-1`}>{f.tag}</span>
+                    <h4 className="text-base font-bold text-slate-900 leading-tight mb-2">{f.title}</h4>
+                    <p className="text-slate-500 text-xs leading-relaxed">{f.description.substring(0, 110)}...</p>
                   </div>
-                  <span className={`text-[10px] font-black uppercase tracking-widest ${c.text} block mb-2`}>{f.tag}</span>
-                  <h4 className="text-lg font-bold text-slate-900 mb-3 leading-tight">{f.title}</h4>
-                  <p className="text-slate-500 text-sm leading-relaxed">{f.description.substring(0, 120)}...</p>
-                  <div className={`flex items-center gap-1 mt-4 text-xs font-bold ${c.text}`}>
-                    Ver detalles <ChevronRight size={12} />
+                  <div className={`flex items-center gap-1 mt-4 text-[10px] font-bold uppercase tracking-wider ${c.text}`}>
+                    Diagnóstico <ChevronRight size={10} />
                   </div>
                 </div>
               );
@@ -333,24 +336,26 @@ export default function CaracteristicasPage() {
         </div>
       </section>
 
-      {/* TECH STACK */}
-      <section className="py-24 px-6 bg-slate-900 border-t border-slate-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 space-y-3">
-            <span className="text-xs font-black text-amber-400 uppercase tracking-widest">Infraestructura</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">Construido para escala y precisión</h2>
-            <p className="text-slate-400 text-base max-w-xl mx-auto">Cada capa técnica fue diseñada con un objetivo: que el usuario nunca experimente fricción en su aprendizaje.</p>
+      {/* TECH ARCHITECTURE */}
+      <section className="py-20 px-6 bg-slate-900 border-t border-slate-800">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 space-y-2">
+            <span className="text-xs font-black text-amber-400 uppercase tracking-widest">Infraestructura Directa</span>
+            <h2 className="text-3xl font-bold text-white">Construido para Escala e Inferencia</h2>
+            <p className="text-slate-400 text-sm max-w-xl mx-auto">Optimización fonométrica y WebRTC redundante a nivel global.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {techStack.map((t, i) => {
               const Icon = t.icon;
               return (
-                <div key={i} className="p-6 border border-slate-800 bg-slate-800/40 hover:border-indigo-500/40 transition-all group">
-                  <div className="w-10 h-10 bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4 group-hover:bg-indigo-500/20 transition-colors">
-                    <Icon size={20} />
+                <div key={i} className="p-5 border border-slate-800 bg-slate-800/30 hover:border-indigo-500/30 transition-all group flex items-start gap-4">
+                  <div className="w-10 h-10 bg-indigo-500/10 text-indigo-400 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors shrink-0">
+                    <Icon size={18} />
                   </div>
-                  <h4 className="text-white font-bold mb-1">{t.label}</h4>
-                  <p className="text-slate-500 text-xs">{t.sub}</p>
+                  <div>
+                    <h4 className="text-white text-sm font-bold">{t.label}</h4>
+                    <p className="text-slate-500 text-[11px] mt-0.5 leading-normal">{t.sub}</p>
+                  </div>
                 </div>
               );
             })}
@@ -358,51 +363,44 @@ export default function CaracteristicasPage() {
         </div>
       </section>
 
-      {/* FEATURE INTERACTIVE DETAILS OVERLAY MODAL */}
+      {/* INTERACTIVE MODAL */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-slate-950/80 backdrop-blur-md">
-          <div className="bg-white max-w-2xl w-full border border-slate-200 shadow-2xl relative flex flex-col justify-between max-h-[85vh] overflow-y-auto">
+          <div className="bg-white max-w-2xl w-full border border-slate-200 shadow-2xl relative flex flex-col justify-between max-h-[85vh] overflow-y-auto rounded-none">
             
-            {/* Modal Header */}
-            <div className="p-6 border-b border-slate-100 flex items-center justify-between">
+            <div className="p-5 border-b border-slate-100 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <span className={`px-2 py-0.5 text-[10px] font-black uppercase ${activeColor.tag}`}>{activeFeatureDetail.tag}</span>
-                <h3 className="font-bold text-slate-900 text-lg">Detalles del Módulo</h3>
+                <span className={`px-2 py-0.5 text-[9px] font-black uppercase ${activeColor.tag}`}>{activeFeatureDetail.tag}</span>
+                <h3 className="font-bold text-slate-900 text-base">Consola de Diagnóstico</h3>
               </div>
-              <button 
-                onClick={() => setIsModalOpen(false)}
-                className="text-slate-400 hover:text-slate-900 transition-colors p-1"
-              >
+              <button onClick={() => setIsModalOpen(false)} className="text-slate-400 hover:text-slate-900 transition-colors p-1">
                 <X size={20} />
               </button>
             </div>
 
-            {/* Modal Body */}
             <div className="p-6 space-y-6">
-              
-              {/* Access Warning (Critical Requirement) */}
-              <div className="p-4 bg-amber-50 border border-amber-200 text-amber-900 flex gap-3 text-xs">
+              <div className="p-4 bg-amber-50 border border-amber-200 text-amber-900 flex gap-3 text-xs leading-normal">
                 <AlertTriangle size={18} className="shrink-0 mt-0.5 text-amber-600" />
                 <div>
-                  <p className="font-extrabold uppercase tracking-wide text-[10px] mb-1">Módulo de Exploración y Prueba Rápida</p>
-                  <p className="font-light">Esta sección corresponde a la demostración pública para visitantes no registrados. Las herramientas avanzadas completas del panel de producción **Pro/Executive** real están integradas y son privadas del dashboard de tu cuenta.</p>
+                  <p className="font-extrabold uppercase text-[9px] tracking-wider text-amber-700 mb-0.5">Demostración de Inferencia e IA</p>
+                  <p className="font-light">Las herramientas completas de Speech Analytics, simuladores acústicos de voz y persistencia en la base de datos están habilitadas en tu panel privado tras registrarte.</p>
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <h4 className="text-xl font-bold text-slate-900">{activeFeatureDetail.title}</h4>
-                <p className="text-slate-650 leading-relaxed text-sm font-light">{activeFeatureDetail.description}</p>
-                <p className="text-slate-500 leading-normal text-xs italic">{activeFeatureDetail.extraDetails}</p>
+              <div className="space-y-2">
+                <h4 className="text-lg font-bold text-slate-900">{activeFeatureDetail.title}</h4>
+                <p className="text-slate-600 text-xs leading-relaxed">{activeFeatureDetail.description}</p>
+                <p className="text-slate-400 text-[11px] italic leading-normal">{activeFeatureDetail.extraDetails}</p>
               </div>
 
-              {/* Dynamic Interactive Mini calculators / Visualizers built using the 100 new functions */}
+              {/* Dynamic Interactive Calculators */}
               <div className="p-5 bg-slate-50 border border-slate-200 space-y-4">
-                <div className="flex justify-between items-center">
-                  <h4 className="text-xs font-bold text-slate-700 uppercase tracking-widest flex items-center gap-1.5">
-                    <Sparkles size={12} className="text-indigo-600 animate-spin" />
-                    Simulador Analítico Rápido
+                <div className="flex justify-between items-center border-b border-slate-200/60 pb-2">
+                  <h4 className="text-[10px] font-black text-slate-700 uppercase tracking-widest flex items-center gap-1.5">
+                    <Sparkles size={12} className="text-indigo-650 animate-spin" />
+                    Simulación Rápida de Entrada
                   </h4>
-                  <span className="text-[9px] bg-indigo-50 border border-indigo-100 text-indigo-700 px-2 py-0.5 font-bold">Diagnóstico</span>
+                  <span className="text-[9px] bg-indigo-50 border border-indigo-100 text-indigo-700 px-2 py-0.5 font-bold uppercase">Sandbox</span>
                 </div>
 
                 {activeFeatureDetail.interactiveMetric === 'density' && (
@@ -411,17 +409,17 @@ export default function CaracteristicasPage() {
                     <textarea 
                       value={inputText}
                       onChange={(e) => setInputText(e.target.value)}
-                      className="w-full text-xs p-2.5 bg-white border border-slate-200 focus:border-indigo-400 outline-none font-light"
+                      className="w-full text-xs p-2.5 bg-white border border-slate-200 focus:border-indigo-400 outline-none font-mono"
                       rows={3}
                     />
-                    <div className="grid grid-cols-2 gap-3 text-[11px] font-bold text-slate-650">
-                      <div className="p-2.5 bg-white border border-slate-200">
-                        <p className="text-slate-400 uppercase text-[9px]">Densidad Léxica</p>
-                        <p className="text-indigo-600 text-sm mt-0.5 font-mono">{Math.round(fn101_calcLexicalDensity(inputText))}%</p>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="p-3 bg-white border border-slate-200 text-center">
+                        <p className="text-slate-400 uppercase text-[9px] font-bold">Densidad Léxica</p>
+                        <p className="text-indigo-600 text-lg font-black mt-0.5 font-mono">{Math.round(fn101_calcLexicalDensity(inputText))}%</p>
                       </div>
-                      <div className="p-2.5 bg-white border border-slate-200">
-                        <p className="text-slate-400 uppercase text-[9px]">Jargon Detectado</p>
-                        <p className="text-slate-900 text-sm mt-0.5 font-mono">{Math.round(fn110_detectJargonDensity(inputText, ['synergy', 'alignment', 'quarterly', 'board']))}%</p>
+                      <div className="p-3 bg-white border border-slate-200 text-center">
+                        <p className="text-slate-400 uppercase text-[9px] font-bold">Jargon Detectado</p>
+                        <p className="text-slate-900 text-lg font-black mt-0.5 font-mono">{Math.round(fn110_detectJargonDensity(inputText, ['synergy', 'alignment', 'quarterly', 'board']))}%</p>
                       </div>
                     </div>
                   </div>
@@ -429,26 +427,23 @@ export default function CaracteristicasPage() {
 
                 {activeFeatureDetail.interactiveMetric === 'speech' && (
                   <div className="space-y-3">
-                    <label className="text-xs text-slate-500 block font-medium">Estimar confianza vocal ejecutiva basada en WPM:</label>
+                    <label className="text-xs text-slate-500 block font-medium">Confianza vocal estimada según velocidad de lectura (WPM):</label>
                     <div className="flex items-center gap-4">
                       <input 
-                        type="range"
-                        min="50"
-                        max="240"
-                        value={speechWpm}
+                        type="range" min="50" max="240" value={speechWpm}
                         onChange={(e) => setSpeechWpm(parseInt(e.target.value))}
                         className="flex-1 accent-emerald-500"
                       />
                       <span className="font-mono text-xs text-slate-900 font-bold bg-white px-2 py-1 border border-slate-200 shrink-0">{speechWpm} WPM</span>
                     </div>
-                    <div className="grid grid-cols-2 gap-3 text-[11px] font-bold text-slate-650">
-                      <div className="p-2.5 bg-white border border-slate-200">
-                        <p className="text-slate-400 uppercase text-[9px]">Calificación Ritmo</p>
-                        <p className="text-emerald-600 text-xs mt-0.5 leading-normal">{fn122_classifyWpmPace(speechWpm)}</p>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="p-3 bg-white border border-slate-200 text-center">
+                        <p className="text-slate-400 uppercase text-[9px] font-bold">Calificación Ritmo</p>
+                        <p className="text-emerald-600 text-xs font-bold mt-1 leading-normal">{fn122_classifyWpmPace(speechWpm)}</p>
                       </div>
-                      <div className="p-2.5 bg-white border border-slate-200">
-                        <p className="text-slate-400 uppercase text-[9px]">Confianza Estimada</p>
-                        <p className="text-slate-900 text-sm mt-0.5 font-mono">{fn130_calculateVocalConfidence(90, speechWpm, 1)}%</p>
+                      <div className="p-3 bg-white border border-slate-200 text-center">
+                        <p className="text-slate-400 uppercase text-[9px] font-bold">Confianza Estimada</p>
+                        <p className="text-slate-900 text-lg font-black mt-0.5 font-mono">{fn130_calculateVocalConfidence(90, speechWpm, 1)}%</p>
                       </div>
                     </div>
                   </div>
@@ -456,19 +451,19 @@ export default function CaracteristicasPage() {
 
                 {activeFeatureDetail.interactiveMetric === 'languages' && (
                   <div className="space-y-3">
-                    <label className="text-xs text-slate-500 block font-medium">Pronunciación comparada del usuario (Simulado):</label>
+                    <label className="text-xs text-slate-500 block font-medium">Comparativa fonética del motor de traducción:</label>
                     <div className="grid grid-cols-1 gap-2 text-xs">
-                      <div className="p-3 bg-white border border-slate-200">
-                        <p className="text-[9px] text-slate-400 uppercase font-bold">Frase Objetivo:</p>
-                        <p className="font-mono font-semibold text-slate-700">"This project is ready for implementation."</p>
+                      <div className="p-2.5 bg-white border border-slate-200">
+                        <p className="text-[8px] text-slate-400 uppercase font-bold">Frase Objetivo:</p>
+                        <p className="font-mono font-semibold text-slate-700 text-xs mt-0.5">"This project is ready for implementation."</p>
                       </div>
-                      <div className="p-3 bg-white border border-slate-200">
-                        <p className="text-[9px] text-slate-400 uppercase font-bold">Tu Pronunciación detectada:</p>
-                        <p className="font-mono font-semibold text-slate-600">"Dees project is ready for implamentation."</p>
+                      <div className="p-2.5 bg-white border border-slate-200">
+                        <p className="text-[8px] text-slate-400 uppercase font-bold">Tu Entrada Acústica:</p>
+                        <p className="font-mono font-semibold text-slate-500 text-xs mt-0.5">"Dees project is ready for implamentation."</p>
                       </div>
                     </div>
                     <div className="p-3 bg-white border border-slate-200 text-center">
-                      <p className="text-[9px] text-slate-400 uppercase font-bold">Precisión Fonética Estimada</p>
+                      <p className="text-[9px] text-slate-400 uppercase font-bold">Alineación Silábica Estimada</p>
                       <p className="text-lg font-black text-blue-600 mt-1 font-mono">
                         {fn113_estimatePronunciationMatch("This project is ready for implementation.", "Dees project is ready for implamentation.")}%
                       </p>
@@ -478,26 +473,25 @@ export default function CaracteristicasPage() {
 
                 {activeFeatureDetail.interactiveMetric === 'chess' && (
                   <div className="space-y-3">
-                    <label className="text-xs text-slate-500 block font-medium">Calculadora de impacto cognitivo en ELO estimado:</label>
+                    <label className="text-xs text-slate-500 block font-medium">Ajuste de ELO cognitivo en biblioteca táctica:</label>
                     <div className="flex gap-2">
                       {[1000, 1200, 1400, 1600].map(elo => (
                         <button
-                          key={elo}
-                          onClick={() => setChessElo(elo)}
-                          className={`flex-1 py-1.5 text-xs font-bold border transition-colors ${chessElo === elo ? 'border-amber-500 bg-amber-50 text-amber-700' : 'bg-white border-slate-200'}`}
+                          key={elo} onClick={() => setChessElo(elo)}
+                          className={`flex-1 py-1.5 text-xs font-bold border transition-colors ${chessElo === elo ? 'border-amber-500 bg-amber-50 text-amber-700' : 'bg-white border-slate-200 hover:border-slate-350'}`}
                         >
                           {elo} ELO
                         </button>
                       ))}
                     </div>
-                    <div className="grid grid-cols-2 gap-3 text-[11px] font-bold text-slate-650">
-                      <div className="p-2.5 bg-white border border-slate-200">
-                        <p className="text-slate-400 uppercase text-[9px]">Ganancia si Aciertas</p>
-                        <p className="text-amber-600 text-sm mt-0.5 font-mono">+{16} ELO</p>
+                    <div className="grid grid-cols-2 gap-3 text-center">
+                      <div className="p-3 bg-white border border-slate-200">
+                        <p className="text-slate-400 uppercase text-[9px] font-bold">Acierto Estimado</p>
+                        <p className="text-amber-600 text-lg font-black mt-0.5 font-mono">+{16} ELO</p>
                       </div>
-                      <div className="p-2.5 bg-white border border-slate-200">
-                        <p className="text-slate-400 uppercase text-[9px]">Pérdida si Fallas</p>
-                        <p className="text-slate-950 text-sm mt-0.5 font-mono">-{16} ELO</p>
+                      <div className="p-3 bg-white border border-slate-200">
+                        <p className="text-slate-400 uppercase text-[9px] font-bold">Fallo Estimado</p>
+                        <p className="text-slate-900 text-lg font-black mt-0.5 font-mono">-{16} ELO</p>
                       </div>
                     </div>
                   </div>
@@ -505,33 +499,30 @@ export default function CaracteristicasPage() {
 
                 {activeFeatureDetail.interactiveMetric === 'vocab' && (
                   <div className="space-y-3">
-                    <label className="text-xs text-slate-500 block font-medium">Calculadora de Riqueza de Vocabulario por Nivel:</label>
+                    <label className="text-xs text-slate-500 block font-medium">Estimador de Riqueza Léxica en niveles avanzados:</label>
                     <div className="flex items-center gap-4">
                       <input 
-                        type="range"
-                        min="5"
-                        max="80"
-                        value={wordsKnown}
+                        type="range" min="5" max="80" value={wordsKnown}
                         onChange={(e) => setWordsKnown(parseInt(e.target.value))}
                         className="flex-1 accent-pink-500"
                       />
                       <span className="font-mono text-xs text-slate-900 font-bold bg-white px-2 py-1 border border-slate-200 shrink-0">{wordsKnown} palabras</span>
                     </div>
                     <div className="p-3 bg-white border border-slate-200 text-center">
-                      <p className="text-[9px] text-slate-400 uppercase font-bold">Riqueza Estimada en Nivel C2</p>
-                      <p className="text-lg font-black text-pink-600 mt-1 font-mono">{fn145_calculateVocabularyWealth(wordsKnown, 'C2')} puntos léxicos</p>
+                      <p className="text-[9px] text-slate-400 uppercase font-bold">Puntaje Léxico C2 Relativo</p>
+                      <p className="text-lg font-black text-pink-600 mt-1 font-mono">{fn145_calculateVocabularyWealth(wordsKnown, 'C2')} pts</p>
                     </div>
                   </div>
                 )}
 
                 {activeFeatureDetail.interactiveMetric === 'executive' && (
                   <div className="space-y-3">
-                    <label className="text-xs text-slate-500 block font-medium">Ejemplo de análisis de discurso ejecutivo en junta:</label>
-                    <div className="p-3 bg-white border border-slate-200 text-[11px] leading-relaxed text-slate-650 font-light italic">
+                    <label className="text-xs text-slate-500 block font-medium">Ejemplo de análisis diplomático de discurso:</label>
+                    <div className="p-2.5 bg-white border border-slate-200 text-xs leading-relaxed text-slate-600 font-light italic">
                       "I believe our strategy mitigates risk while creating collaborative synergy across departments."
                     </div>
                     <div className="p-3 bg-white border border-slate-200 text-center">
-                      <p className="text-[9px] text-slate-400 uppercase font-bold">Índice de Diplomacia C-Suite Estimado</p>
+                      <p className="text-[9px] text-slate-400 uppercase font-bold">Índice de Diplomacia C-Suite</p>
                       <p className="text-lg font-black text-violet-600 mt-1 font-mono">
                         {fn125_estimateDiplomacyScore("I believe our strategy mitigates risk while creating collaborative synergy across departments.")}%
                       </p>
@@ -542,41 +533,36 @@ export default function CaracteristicasPage() {
               </div>
             </div>
 
-            {/* Modal Footer */}
-            <div className="p-6 border-t border-slate-100 flex gap-4 justify-end">
-              <button 
-                onClick={() => setIsModalOpen(false)}
-                className="bg-slate-100 hover:bg-slate-250 text-slate-700 font-bold py-2.5 px-6 text-xs uppercase tracking-wider transition-colors"
-              >
-                Cerrar Ventana
+            <div className="p-5 border-t border-slate-100 flex gap-3 justify-end">
+              <button onClick={() => setIsModalOpen(false)} className="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2.5 px-5 text-xs uppercase tracking-wider transition-colors">
+                Cerrar
               </button>
               <Link href="/register">
-                <button className={`text-white font-bold py-2.5 px-6 text-xs uppercase tracking-widest ${activeColor.btn}`}>
-                  Probar Demo Completa
+                <button className={`text-white font-bold py-2.5 px-5 text-xs uppercase tracking-widest ${activeColor.btn}`}>
+                  Demo Completa
                 </button>
               </Link>
             </div>
 
           </div>
         </div>
-
       )}
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-[#edf7f2] border-t border-emerald-100 text-center">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <h2 className="text-4xl font-bold text-slate-900">¿Listo para experimentarlo?</h2>
-          <p className="text-slate-500 text-lg">Crea tu cuenta gratis y accede a todas las características del ecosistema desde el primer día.</p>
+      <section className="py-20 px-6 bg-[#edf7f2] border-t border-emerald-100 text-center">
+        <div className="max-w-2xl mx-auto space-y-6">
+          <h2 className="text-3xl font-bold text-slate-900">¿Listo para comenzar?</h2>
+          <p className="text-slate-500 text-sm">Crea tu cuenta gratis hoy mismo y accede al simulador interactivo de lecciones.</p>
           <Link href="/register">
-            <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 text-lg transition-all shadow-xl shadow-indigo-600/20 hover:scale-105">
-              Comenzar Ahora — Es Gratis
+            <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 text-sm uppercase tracking-widest transition-all shadow-xl shadow-indigo-600/20 hover:scale-105">
+              Comenzar Ahora
             </button>
           </Link>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#e2efe7] py-10 px-6 text-sm text-slate-600 border-t border-emerald-100">
+      <footer className="bg-[#e2efe7] py-10 px-6 text-sm text-slate-655 border-t border-emerald-100">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <span className="font-bold text-slate-900">OnixLingo</span>
           <div className="flex gap-6 font-medium flex-wrap">
@@ -584,8 +570,12 @@ export default function CaracteristicasPage() {
             <Link href="/legal/privacy" className="hover:text-indigo-600 transition-colors">Privacidad</Link>
             <Link href="/legal/terms" className="hover:text-indigo-600 transition-colors">Términos</Link>
             <Link href="/legal/refunds" className="hover:text-indigo-600 transition-colors">Reembolsos</Link>
+            <Link href="/legal/support" className="hover:text-indigo-600 transition-colors">Soporte</Link>
           </div>
-          <p className="text-xs">© 2026 OnixuTechnology.</p>
+          <div className="text-left md:text-right text-xs space-y-1">
+            <p>© 2026 OnixuTechnology.</p>
+            <p className="text-[10px] text-slate-550 font-light">Pagos procesados por Paddle, nuestro Merchant of Record.</p>
+          </div>
         </div>
       </footer>
     </div>

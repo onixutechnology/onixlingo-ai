@@ -1,0 +1,89 @@
+{
+  "id": "toeic_mock_v6",
+  "title": "Simulador Oficial Completo TOEIC® - Versión 6",
+  "level": "B2/C1",
+  "description": "Simulador completo real de Listening & Reading enfocado en Vortex Ltd y el líder the Operations Director.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toeic-intro",
+      "type": "lecture",
+      "title": "TOEIC® Vortex Ltd Simulation: Instructions",
+      "parts": [
+        {
+          "visual": "## 📝 Simulador Oficial TOEIC® (Versión 6)\n\nEvaluación de **Listening & Reading** en tiempo real:\n\n1. **Listening Section**: Evalúa tu comprensión en Vortex Ltd usando VortexCRM.\n2. **Reading Section**: Mide tu análisis gramatical de memorandos emitidos por the Operations Director.\n\n*Inicia tu prueba simulada oficial.*",
+          "audio": "Welcome to the Full TOEIC Simulation. Manage your time efficiently across both listening and reading stages. Let's begin.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "toeic-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (Listening)",
+      "questions": [
+        {
+          "id": "T_L1_v6",
+          "type": "quiz_choice",
+          "question": "[PART 1 - PHOTO]: Select the best description of Vortex Ltd's office photo.",
+          "audio_script": "A) They are wearing safety helmets on the factory floor. B) They are purchasing safety equipment online. C) The assembly line is fully automated. D) They are repairing the conveyor belt.",
+          "options": [
+            "Statement A",
+            "Statement B",
+            "Statement C",
+            "Statement D"
+          ],
+          "correct_answer": "Statement A",
+          "explanation": "Los operarios llevan equipo de protección reglamentario (cascos y chalecos) en la planta industrial."
+        },
+        {
+          "id": "T_L3_v6",
+          "type": "quiz_choice",
+          "question": "[PART 3 - CONVERSATION]: Listen to the dialogue and answer: What does the man agree to do next?",
+          "audio_script": "M: Hi Michael, did you receive the safety audit from Vortex Ltd?\nW: Yes, the Operations Director sent it. The plant compliance is high, but we need to log the metrics in VortexCRM.\nM: I will schedule a follow-up with the safety inspector.",
+          "options": [
+            "Sign the contract as currently written.",
+            "Call the manager to negotiate an extension of the delivery window.",
+            "Cancel the order immediately.",
+            "Write a new memorandum to sales staff."
+          ],
+          "correct_answer": "Call the manager to negotiate an extension of the delivery window.",
+          "explanation": "El hombre dice: 'I will call their manager to negotiate an extension'."
+        }
+      ]
+    },
+    {
+      "id": "toeic-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (Reading)",
+      "questions": [
+        {
+          "id": "T_R5_v6",
+          "type": "quiz_choice",
+          "question": "[PART 5]: Complete the business sentence correctly:\n\n\"All employees are strictly required to comply ___ the updated security rules in VortexCRM.\"",
+          "options": [
+            "with",
+            "to",
+            "by",
+            "for"
+          ],
+          "correct_answer": "with",
+          "explanation": "El verbo 'comply' rige gramaticalmente la preposición 'with' (comply with / cumplir con)."
+        },
+        {
+          "id": "T_R7_v6",
+          "type": "quiz_choice",
+          "question": "[PART 7]: Read the memorandum and answer: **When will the migration to VortexCRM officially occur?**\n\n**MEMORANDUM**\n\n*To:* Plant Supervisors\n*From:* Operations Department\n*Subject: Quality Inspections & VortexCRM Registration*\n\nPlease note that starting next Sunday, all equipment inspection logs must be recorded in VortexCRM. A review session will be held this Saturday at 3:00 PM in the Conference Boardroom.",
+          "options": [
+            "This Saturday at 3:00 PM",
+            "Next Saturday",
+            "Immediately today",
+            "Over the upcoming weekend"
+          ],
+          "correct_answer": "Next Saturday",
+          "explanation": "El memorando dice: 'starting next Saturday, we are officially retiring our legacy sales tool and migrating to VortexCRM'."
+        }
+      ]
+    }
+  ]
+}

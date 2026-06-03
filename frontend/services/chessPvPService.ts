@@ -12,14 +12,23 @@ export interface JoinQueuePayload {
 }
 
 export interface QueueResponse {
-    id: string;
-    user_id: string;
+    id: string | number;
+    user_id: string | number;
     time_control: TimeControl;
     elo_rating: number;
     elo_range: number;
     queued_at: string;
     status: "queued" | "matched" | "cancelled";
 }
+
+export interface QueueStatusResponse {
+    status: "queued" | "matched" | "idle";
+    match_id?: string;
+    your_color?: "white" | "black";
+    opponent_username?: string;
+    opponent_elo?: number;
+}
+
 
 export interface MatchFoundPayload {
     match_id: string;
@@ -186,12 +195,13 @@ export async function leaveMatchmakingQueue(): Promise<void> {
 }
 
 /** Poll queue status (fallback when WebSocket is unavailable). */
-export async function pollQueueStatus(): Promise<QueueResponse> {
-    const { data } = await apiClient.get<QueueResponse>(
+export async function pollQueueStatus(): Promise<QueueStatusResponse> {
+    const { data } = await apiClient.get<QueueStatusResponse>(
         "/chess/matchmaking/status"
     );
     return data;
 }
+
 
 /** Fetch a completed match record for post-game analysis. */
 export async function getMatchById(matchId: string): Promise<{

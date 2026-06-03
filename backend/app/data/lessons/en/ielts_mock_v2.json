@@ -1,0 +1,95 @@
+{
+  "id": "ielts_mock_v2",
+  "title": "Simulador Oficial Completo IELTS® Academic - Versión 2",
+  "level": "B2/C2",
+  "description": "Simulador académico completo de IELTS® con lecturas y audios sobre: Civilizaciones del Pasado.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "ielts-intro",
+      "type": "lecture",
+      "title": "IELTS® Academic Simulation: Civilizaciones del Pasado",
+      "parts": [
+        {
+          "visual": "## 🇬🇧 Simulador IELTS® Academic (Versión 2)\n\nTemas académicos globales evaluados:\n\n- **Academic Reading**: *Arqueología: El Cemento de la Antigua Roma*\n- **Academic Listening Lecture**\n- **Academic Writing Task Integration**\n\n*Comienza tu examen simulado.*",
+          "audio": "Welcome to the IELTS Academic Simulator. Focus on precise spelling, syntax structure, and vocabulary diversity. Let's begin.",
+          "animation": "teacher_pointing"
+        }
+      ]
+    },
+    {
+      "id": "ielts-listening",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Auditiva (IELTS Listening)",
+      "questions": [
+        {
+          "id": "IE_L1_v2",
+          "type": "quiz_choice",
+          "question": "[ACADEMIC LECTURE]: Listen to the dialogue and answer: **What is the central focus?**\n\n*(Transcription)*:\n\nProfessor: Let's focus on LiDAR, which stands for Light Detection and Ranging. LiDAR uses laser pulses emitted from an airplane to map the topography of the forest floor. By measuring the time it takes for laser beams to bounce back, scientists can create highly precise 3D maps. This technology has revolutionized archaeology by revealing hidden Roman roads and settlements deep beneath thick forest canopies without the need for manual excavation.",
+          "options": [
+            "To describe the history of Roman road construction.",
+            "To explain how laser pulse technology maps hidden archaeological ruins.",
+            "To criticize manual excavations in tropical environments.",
+            "To analyze the cost of hiring mapping airplanes."
+          ],
+          "correct_answer": "To explain how laser pulse technology maps hidden archaeological ruins.",
+          "explanation": "El profesor describe el uso de pulsos láser (LiDAR) para mapear la topografía del bosque y revelar calzadas y asentamientos antiguos ocultos."
+        }
+      ]
+    },
+    {
+      "id": "ielts-reading",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Lectora (IELTS Reading)",
+      "questions": [
+        {
+          "id": "IE_R1_v2",
+          "type": "quiz_choice",
+          "question": "Read the academic article and answer the question:\n\n**The Longevity of Roman Marine Concrete**\n\nWhile modern concrete structures frequently degrade in saltwater environments within decades, ancient Roman harbor structures have survived intact for over two millennia. For decades, archaeologists and materials scientists were puzzled by this durability. Mineralogical analysis of Roman marine concrete—composed of volcanic ash, quicklime, and seawater—reveals the formation of a rare mineral called aluminous tobermorite. When seawater penetrates the concrete, it dissolves the volcanic crystals and precipitates tobermorite. This mineral crystallization actually reinforces the concrete matrix over time, turning seawater from a corrosive agent into a catalyst for structural structural integrity.",
+          "options": [
+            "It is sealed with an impermeable modern chemical coating.",
+            "Seawater penetration causes the growth of reinforcing minerals like tobermorite.",
+            "It completely prevents any water from entering the inner chambers.",
+            "The concrete is kept in dry, arid underground environments."
+          ],
+          "correct_answer": "Seawater penetration causes the growth of reinforcing minerals like tobermorite.",
+          "explanation": "El texto explica que cuando el agua marina penetra, disuelve los cristales y precipita tobermorita ('precipitates tobermorite'), reforzando la estructura."
+        },
+        {
+          "id": "IE_R2_v2",
+          "type": "quiz_choice",
+          "question": "What is the closest meaning of the highlighted term in context?",
+          "options": [
+            "Fragility",
+            "Endurance / Longevity",
+            "Aesthetic value",
+            "Porosity"
+          ],
+          "correct_answer": "Endurance / Longevity",
+          "explanation": "En el contexto de estructuras que sobreviven miles de años, 'durability' se refiere a la longevidad y resistencia estructural."
+        }
+      ]
+    },
+    {
+      "id": "ielts-writing",
+      "type": "quiz",
+      "title": "Sección 3: Coherencia y Gramática Académica (IELTS Writing Prep)",
+      "questions": [
+        {
+          "id": "IE_W1_v2",
+          "type": "fill_input",
+          "question": "Complete the sentence with the appropriate formal connector showing cause-and-effect:\n\nComplete the scientific sentence: \"Roman harbor ruins survived for two millennia. ___, modern concrete structures degrade in decades.\"",
+          "correct_answers": [
+            "In contrast",
+            "Conversely",
+            "in contrast",
+            "conversely"
+          ],
+          "hints": [
+            "Check spelling and casing."
+          ]
+        }
+      ]
+    }
+  ]
+}

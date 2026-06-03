@@ -35,13 +35,13 @@ export default function LessonComplete({
   onExit,
   answerHistory = []
 }: Props) {
-  const { mode } = useUIStore();
+  const { mode, activeLanguage } = useUIStore();
   const isPro = mode === 'professional' || lessonType === 'pro' || lessonId.includes('mock');
   
   const [isSaving, setIsSaving] = useState(true); 
   const [saveError, setSaveError] = useState<string | null>(null);
   const [studentName, setStudentName] = useState<string>('Estudiante OnixLingo');
-  const [activeTab, setActiveTab] = useState<'cert' | 'report'>('cert');
+  const [activeTab, setActiveTab] = useState<'cert' | 'report' | 'review'>('cert');
   const [certHash, setCertHash] = useState<string>('ONIX-XXXXXX');
 
   const isSuccess = accuracy >= 50; 
@@ -116,7 +116,8 @@ export default function LessonComplete({
           score: accuracy, 
           current_step: totalSteps,
           total_steps: totalSteps,
-          stars: stars
+          stars: stars,
+          language: activeLanguage
         };
 
         const res = await fetch(`${API_URL}/api/v1/progress/complete`, {
@@ -438,6 +439,14 @@ export default function LessonComplete({
               >
                 <FileText size={16} /> 📊 Reporte & IA Asesor
               </button>
+              {answerHistory && answerHistory.length > 0 && (
+                <button 
+                  onClick={() => setActiveTab('review')}
+                  className={`w-full py-3 px-4 flex items-center gap-3 text-left transition-all rounded-none text-xs font-black uppercase tracking-wider border-l-2 ${activeTab === 'review' ? 'bg-amber-600/10 border-amber-500 text-amber-400' : 'border-transparent text-slate-400 hover:bg-white/5 hover:text-white'}`}
+                >
+                  <BookOpen size={16} /> 🔍 Revisión Detalle
+                </button>
+              )}
             </div>
 
             {/* Tarjeta de XP y Precisión rápida */}
@@ -671,6 +680,74 @@ export default function LessonComplete({
                   </p>
                 </div>
 
+              </motion.div>
+            )}
+
+            {activeTab === 'review' && (
+              <motion.div
+                key="review-view"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="space-y-6 max-h-[500px] overflow-y-auto pr-2"
+              >
+                <div>
+                  <h2 className="text-xl font-serif font-black italic tracking-wide text-amber-500 uppercase">
+                    Revisión Detallada de Preguntas
+                  </h2>
+                  <p className="text-[10px] text-slate-400 uppercase tracking-widest font-mono mt-0.5">HISTORIAL DE RESPUESTAS Y EXPLICACIONES</p>
+                </div>
+
+                <div className="space-y-4">
+                  {answerHistory.map((ans, idx) => (
+                    <div 
+                      key={idx} 
+                      className={`p-5 border rounded-none ${
+                        ans.isCorrect 
+                          ? 'bg-emerald-950/10 border-emerald-900/20 text-emerald-100' 
+                          : 'bg-rose-950/10 border-rose-900/20 text-rose-100'
+                      }`}
+                    >
+                      <div className="flex justify-between items-start gap-4 mb-3">
+                        <span className="text-[9px] font-black uppercase tracking-wider font-mono text-slate-400">
+                          PREGUNTA {idx + 1}
+                        </span>
+                        <span className={`text-[9px] font-black uppercase tracking-widest font-mono px-2 py-0.5 rounded-none ${
+                          ans.isCorrect 
+                            ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' 
+                            : 'bg-rose-500/10 text-rose-400 border border-rose-500/20'
+                        }`}>
+                          {ans.isCorrect ? 'Correcta' : 'Incorrecta'}
+                        </span>
+                      </div>
+                      
+                      <p className="text-sm font-black text-slate-200 uppercase tracking-wide leading-relaxed mb-4">{ans.question}</p>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs mb-4">
+                        <div className="bg-slate-950 border border-slate-850 p-3 rounded-none">
+                          <span className="text-slate-500 block text-[8px] uppercase tracking-wider font-mono font-bold mb-1">Tu Respuesta:</span>
+                          <span className={`${ans.isCorrect ? 'text-emerald-400' : 'text-rose-400'} font-extrabold`}>{ans.answer || '(Sin respuesta)'}</span>
+                        </div>
+                        {!ans.isCorrect && (
+                          <div className="bg-slate-950 border border-slate-850 p-3 rounded-none">
+                            <span className="text-slate-500 block text-[8px] uppercase tracking-wider font-mono font-bold mb-1">Respuesta Correcta:</span>
+                            <span className="text-emerald-400 font-extrabold">{ans.correctAnswer}</span>
+                          </div>
+                        )}
+                      </div>
+
+                      {ans.explanation && (
+                        <div className="p-4 bg-slate-950/60 border border-slate-850 text-[10px] leading-relaxed uppercase tracking-wider text-slate-400 rounded-none">
+                          <span className="font-black text-[8px] tracking-widest text-teal-500 block mb-1">Análisis de la Diapositiva / Evaluación:</span>
+                          {ans.explanation}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                  {answerHistory.length === 0 && (
+                    <p className="text-xs text-slate-500 italic text-center py-8">No hay respuestas registradas para revisar.</p>
+                  )}
+                </div>
               </motion.div>
             )}
 

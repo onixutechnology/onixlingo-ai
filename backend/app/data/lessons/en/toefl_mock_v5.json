@@ -1,0 +1,95 @@
+{
+  "id": "toefl_mock_v5",
+  "title": "Simulador Oficial Completo TOEFL® iBT - Versión 5",
+  "level": "B2/C1",
+  "description": "Simulador académico completo de TOEFL® con lecturas y conferencias sobre: Paleontología y Orígenes.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toefl-intro",
+      "type": "lecture",
+      "title": "TOEFL® iBT Simulation: Paleontología y Orígenes",
+      "parts": [
+        {
+          "visual": "## 🎓 Simulador TOEFL® iBT (Versión 5)\n\nTemas académicos oficiales evaluados:\n\n- **Reading Article**: *Paleobiología: La Termorregulación de los Dinosaurios*\n- **Academic Lecture**: *Lecture on Feather Preservation in fossil records*\n- **Writing structure & Integration**\n\n*Comienza tu examen académico.*",
+          "audio": "Welcome to the Integrated TOEFL iBT simulation. You will be tested on your ability to synthesize information from complex academic sources. Let's start.",
+          "animation": "analyzing"
+        }
+      ]
+    },
+    {
+      "id": "toefl-reading",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Lectora Académica (Reading)",
+      "questions": [
+        {
+          "id": "TF_R1_v5",
+          "type": "quiz_choice",
+          "question": "Read the academic article and answer the question:\n\n**Endothermy vs. Ectothermy in the Mesozoic**\n\nThe metabolic status of Mesozoic dinosaurs has been a major debate in paleobiology. Historically, dinosaurs were classified as slow, cold-blooded ectotherms, similar to modern reptiles. However, histological analysis of fossilized dinosaur bones has revealed dense networks of Haversian canals and blood vessels, which are characteristic of fast-growing, warm-blooded endotherms. Furthermore, oxygen isotope ratios preserved in dinosaur tooth enamel show minimal variation across different seasons, suggesting they maintained a stable internal core temperature. This combination of vascular structure and isotopic evidence indicates they possessed an intermediate active metabolism, often termed mesothermy.",
+          "options": [
+            "They had no blood vessels or vascular structures.",
+            "They had slow, sluggish metabolic rates similar to modern lizards.",
+            "They possessed dense bone canals indicating warm-blooded endothermy.",
+            "They could change their internal temperature during winter seasons."
+          ],
+          "correct_answer": "They possessed dense bone canals indicating warm-blooded endothermy.",
+          "explanation": "El análisis histológico revela densos canales de Haversian y vasos sanguíneos ('dense networks of Haversian canals'), típicos de endotermos."
+        },
+        {
+          "id": "TF_R2_v5",
+          "type": "quiz_choice",
+          "question": "What is the closest meaning of the target word in this academic context?",
+          "options": [
+            "Fluctuating",
+            "Consistent / Unvarying",
+            "Fragile",
+            "External"
+          ],
+          "correct_answer": "Consistent / Unvarying",
+          "explanation": "En el contexto de mantener la misma temperatura del núcleo corporal a lo largo de las estaciones, 'stable' significa consistente o invariable."
+        }
+      ]
+    },
+    {
+      "id": "toefl-listening",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Auditiva Académica (Listening)",
+      "questions": [
+        {
+          "id": "TF_L1_v5",
+          "type": "quiz_choice",
+          "question": "[UNIVERSITY LECTURE]: Listen to the professor's explanation and answer: **What is the main topic?**\n\n*(Transcription)*:\n\nProfessor: The discovery of non-avian theropod fossils with preserved feather structures has revolutionized paleontology. These proto-feathers were not designed for flight, as they lacked the asymmetrical design required for aerodynamic lift. Instead, they served as insulation to prevent heat loss, supporting the hypothesis that these predatory dinosaurs had warm-blooded, active metabolisms.",
+          "options": [
+            "They allowed massive theropods to fly over forests.",
+            "They provided thermal insulation to maintain body heat.",
+            "They acted as sensory organs to detect prey movements.",
+            "They helped dinosaurs swim across deep ocean trenches."
+          ],
+          "correct_answer": "They provided thermal insulation to maintain body heat.",
+          "explanation": "El profesor indica que servían de aislamiento térmico para prevenir la pérdida de calor ('insulation to prevent heat loss')."
+        }
+      ]
+    },
+    {
+      "id": "toefl-writing-prep",
+      "type": "quiz",
+      "title": "Sección 3: Estructura y Coherencia Académica (Writing Prep)",
+      "questions": [
+        {
+          "id": "TF_W1_v5",
+          "type": "fill_input",
+          "question": "Fill in the blank with the appropriate academic connector that best completes the logical flow:\n\nComplete the scientific sentence: \"Proto-feathers prevented heat loss. ___, they supported active metabolic rates.\"",
+          "correct_answers": [
+            "Therefore",
+            "Consequently",
+            "therefore",
+            "consequently"
+          ],
+          "hints": [
+            "Check punctuation and capitalization."
+          ]
+        }
+      ]
+    }
+  ]
+}

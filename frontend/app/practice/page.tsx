@@ -119,7 +119,7 @@ export default function PracticePage() {
 
   if (userTier === 'free') {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-955 text-white p-6 relative overflow-hidden font-sans">
+      <div className="min-h-screen flex items-center justify-center bg-slate-950 text-white p-6 relative overflow-hidden font-sans">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent"></div>
         <div className="absolute top-0 left-0 w-full h-[1px] bg-indigo-500"></div>
         

@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Cookies from 'js-cookie';
 import { useUIStore } from '@/store/uiStore';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -23,6 +24,22 @@ import { SpeechCalibrateModal } from '@/components/pro/SpeechCalibrateModal';
 import { RaffleModal } from '@/components/pro/RaffleModal';
 import apiClient from '@/lib/apiClient';
 import { PRO_CURRICULUM, PRO_CURRICULUM_FR } from '@/data/curriculum_pro_fr';
+import PracticeReminderWidget from '@/components/dashboard/PracticeReminderWidget';
+
+const calculateLevel = (xp: number): number => {
+  if (xp < 100) return 1;
+  if (xp < 500) return 2;
+  if (xp < 1000) return 3;
+  return 4 + Math.floor((xp - 1000) / 2000);
+};
+
+const getLevelProgress = (xp: number): number => {
+  if (xp < 100) return Math.min(100, Math.round((xp / 100) * 100));
+  if (xp < 500) return Math.min(100, Math.round(((xp - 100) / 400) * 100));
+  if (xp < 1000) return Math.min(100, Math.round(((xp - 500) / 500) * 100));
+  const excess = xp - 1000;
+  return Math.min(100, Math.round(((excess % 2000) / 2000) * 100));
+};
 
 interface KPIStats {
   totalXP: number;
@@ -39,6 +56,7 @@ interface LessonStatus {
   status: 'locked' | 'active' | 'completed';
   is_unlocked: boolean;
   score?: number;
+  language?: string;
 }
 
 const LEVEL_CONFIG: Record<string, { gradient: string; badge: string; badgeText: string; glow: string; border: string; iconBg: string; iconColor: string }> = {
@@ -114,9 +132,10 @@ export default function ExecutiveDashboard() {
     streakDays: 0,
     completedModules: 0
   });
+  const [leaderboard, setLeaderboard] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isUserPremium, setIsUserPremium] = useState(false);
-  const [expandedSection, setExpandedSection] = useState<string | null>('exec-b1');
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [showReadingStudio, setShowReadingStudio] = useState(false);
   const [showB2BNegotiations, setShowB2BNegotiations] = useState(false);
   const [showCommandCenter, setShowCommandCenter] = useState(false);
@@ -131,21 +150,45 @@ export default function ExecutiveDashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [userRes, mapRes, statsRes] = await Promise.all([
+        const results = await Promise.allSettled([
           apiClient.get('/users/me'),
           apiClient.get('/progress/map'),
-          apiClient.get('/progress/stats')
+          apiClient.get('/progress/stats'),
+          apiClient.get('/progress/leaderboard')
         ]);
+
+        // Si alguna petición falló de forma crítica (no cancelada ni 401), lanzamos el error
+        const rejected = results.filter((r): r is PromiseRejectedResult => r.status === 'rejected');
+        if (rejected.length > 0) {
+          const firstRealError = rejected.find(r => {
+            const err = r.reason;
+            const isAbort = err?.code === 'ERR_CANCELED' || err?.message === 'canceled' || err?.message?.includes('aborted') || err?.name === 'AbortError';
+            const is401 = err?.response?.status === 401;
+            return !isAbort && !is401;
+          });
+          if (firstRealError) {
+            throw firstRealError.reason;
+          }
+          return; // Salir silenciosamente si son errores esperados de navegación/sesión
+        }
+
+        // Todas las peticiones fueron exitosas (status === 'fulfilled')
+        const [userRes, mapRes, statsRes, leaderboardRes] = results.map(
+          r => (r as PromiseFulfilledResult<any>).value
+        );
 
         const tier = (userRes.data.membership?.tier || userRes.data.tier || 'free').toLowerCase();
         const isExecutive = tier === 'executive' || tier === 'titanium';
         setIsUserPremium(isExecutive);
         setProProgress(mapRes.data.pro || []);
+        setLeaderboard(leaderboardRes.data.leaderboard || []);
 
         const statsData = statsRes.data;
+        const totalXP = statsData.total_xp || 0;
+        const currentLevel = statsData.level || calculateLevel(totalXP);
         setKpis({
-          totalXP: statsData.total_xp || 0,
-          currentLevel: 1,
+          totalXP,
+          currentLevel,
           accuracy: statsData.accuracy || 0,
           fluencyScore: statsData.fluency_score || 0,
           totalTickets: statsData.total_tickets || 0,
@@ -159,7 +202,30 @@ export default function ExecutiveDashboard() {
       }
     };
     fetchData();
-  }, []);
+  }, [activeLanguage]);
+
+  // Real database leaderboard rankings only
+  const getProLeaderboard = () => {
+    const list = [...leaderboard];
+    
+    if (!list.some(item => item.isMe)) {
+      list.push({
+        rank: '-',
+        alias: Cookies.get('username') || 'Tú',
+        xp: kpis.totalXP,
+        isMe: true
+      });
+    }
+
+    return list
+      .sort((a, b) => b.xp - a.xp)
+      .map((item, idx) => ({
+        rank: item.rank === '-' ? '-' : idx + 1,
+        name: item.alias,
+        count: `${(item.xp || 0).toLocaleString()} XP`,
+        isMe: item.isMe
+      }));
+  };
 
   const toggleSection = (id: string) => {
     setExpandedSection(prev => (prev === id ? null : id));
@@ -217,6 +283,9 @@ export default function ExecutiveDashboard() {
 
         <div className="flex items-center gap-6">
           <div className="hidden md:flex items-center gap-5 text-[11px] font-black text-white/70 uppercase tracking-widest">
+            <span className="flex items-center gap-1.5 text-purple-300">
+              <Crown size={13} className="fill-purple-300/20 text-purple-300" /> LEVEL {kpis.currentLevel}
+            </span>
             <span className="flex items-center gap-1.5 text-amber-300">
               <Trophy size={13} /> {kpis.totalXP} XP
             </span>
@@ -261,8 +330,8 @@ export default function ExecutiveDashboard() {
           </h1>
           <p className="text-slate-700 text-sm font-semibold max-w-xl mx-auto">
             {activeLanguage === 'fr'
-              ? '600 leçons professionnelles de haut niveau pour les dirigeants. Maîtrisez la communication en entreprise.'
-              : '600 lecciones profesionales de élite diseñadas para la alta dirección. Dominando la comunicación en contextos corporativos reales.'}
+              ? '3 000 leçons professionnelles de haut niveau pour les dirigeants. Maîtrisez la communication en entreprise.'
+              : '3,000 lecciones profesionales de élite diseñadas para la alta dirección. Dominando la comunicación en contextos corporativos reales.'}
           </p>
         </motion.header>
 
@@ -285,7 +354,7 @@ export default function ExecutiveDashboard() {
             {/* Level badge */}
             <div className="absolute top-3 right-3">
               <span className="px-2 py-0.5 bg-amber-500/15 border border-amber-500/30 text-amber-600 text-[8px] font-black uppercase rounded-full tracking-widest">
-                LVL {Math.floor(kpis.totalXP / 500) + 1}
+                LVL {kpis.currentLevel}
               </span>
             </div>
             {/* Header */}
@@ -313,13 +382,13 @@ export default function ExecutiveDashboard() {
             {/* XP Level Progress Bar */}
             <div className="mb-4">
               <div className="flex justify-between text-[7px] font-black text-slate-500 uppercase mb-1">
-                <span>Level {Math.floor(kpis.totalXP / 500) + 1}</span>
-                <span>{Math.round(((kpis.totalXP % 500) / 500) * 100)}% to next</span>
+                <span>Level {kpis.currentLevel}</span>
+                <span>{getLevelProgress(kpis.totalXP)}% to next</span>
               </div>
               <div className="relative h-1.5 bg-amber-100 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full transition-all duration-700"
-                  style={{ width: `${Math.round(((kpis.totalXP % 500) / 500) * 100)}%` }}
+                  style={{ width: `${getLevelProgress(kpis.totalXP)}%` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
               </div>
@@ -490,6 +559,83 @@ export default function ExecutiveDashboard() {
           </div>
         </div>
 
+        {/* PANEL DE EXCELENCIA CORPORATIVA */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+          {/* Columna 1: Recordatorios C-Suite */}
+          <PracticeReminderWidget themeColor="teal" />
+
+          {/* Columna 2: Ranking Executive */}
+          <div className="bg-white/40 border border-teal-800/15 p-5 rounded-none backdrop-blur-sm shadow-sm flex flex-col justify-between relative overflow-hidden group text-slate-800">
+            <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity"><Trophy size={60} className="text-teal-800" /></div>
+            <div className="relative z-10 space-y-3">
+              <div>
+                <div className="flex items-center gap-1.5 mb-1">
+                  <Sparkles size={11} className="text-teal-800" />
+                  <span className="text-[8px] font-black uppercase tracking-[0.2em] text-teal-800/60">C-Suite Performance</span>
+                </div>
+                <h3 className="text-xs font-black uppercase tracking-tight text-slate-900 leading-none">Ranking Executive</h3>
+                <p className="text-[9px] text-slate-600 font-semibold leading-none mt-1.5">Top ejecutivos con mayor puntuación acumulada.</p>
+              </div>
+
+              <div className="space-y-1.5 pt-2">
+                {getProLeaderboard().map((item, index) => (
+                  <div 
+                    key={index}
+                    className={`flex items-center justify-between p-2 text-[10px] font-bold border ${item.isMe ? 'border-teal-500/40 bg-teal-50/20 text-teal-900' : 'border-teal-800/10 text-slate-700'}`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className={`w-4 h-4 flex items-center justify-center font-mono text-[9px] font-black ${index === 0 ? 'bg-amber-500 text-white' : index === 1 ? 'bg-slate-350 text-slate-800' : 'bg-amber-700 text-white'}`}>
+                        {index + 1}
+                      </span>
+                      <span>{item.name}</span>
+                    </div>
+                    <span className="font-mono text-[9px] font-black">{item.count}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Columna 3: Trofeos de Liderazgo */}
+          <div className="bg-white/40 border border-teal-800/15 p-5 rounded-none backdrop-blur-sm shadow-sm flex flex-col justify-between relative overflow-hidden group text-slate-800">
+            <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity"><Award size={60} className="text-teal-800" /></div>
+            <div className="relative z-10 space-y-3">
+              <div>
+                <div className="flex items-center gap-1.5 mb-1">
+                  <Sparkles size={11} className="text-teal-800" />
+                  <span className="text-[8px] font-black uppercase tracking-[0.2em] text-teal-800/60">Milestones C-Level</span>
+                </div>
+                <h3 className="text-xs font-black uppercase tracking-tight text-slate-900 leading-none">Trofeos de Liderazgo</h3>
+                <p className="text-[9px] text-slate-600 font-semibold leading-none mt-1.5">Completa desafíos ejecutivos para ganar insignias.</p>
+              </div>
+
+              <div className="space-y-1.5 pt-1">
+                {[
+                  { title: 'Orador C-Suite', desc: 'Precisión de pronunciación >= 80%', unlocked: kpis.accuracy >= 80 },
+                  { title: 'Líder Global', desc: 'Acumula más de 1,000 XP en tu carrera', unlocked: kpis.totalXP >= 1000 },
+                  { title: 'Negociador de Élite', desc: 'Completa al menos 1 módulo premium', unlocked: kpis.completedModules >= 1 }
+                ].map((badge, idx) => (
+                  <div 
+                    key={idx}
+                    className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-500/30 bg-emerald-50/20 text-emerald-800' : 'border-teal-800/10 text-slate-400 opacity-60'}`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <Award size={12} className={badge.unlocked ? 'text-emerald-600' : 'text-slate-400'} />
+                      <div className="text-left">
+                        <p className="text-[9px] font-black leading-none">{badge.title}</p>
+                        <p className="text-[7px] font-bold text-slate-500 mt-0.5 leading-none">{badge.desc}</p>
+                      </div>
+                    </div>
+                    <span className="text-[7px] font-black uppercase tracking-widest">
+                      {badge.unlocked ? 'Desbloqueado' : 'Bloqueado'}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* ─── CURRICULUM SECTION HEADER ─── */}
         <div className="flex items-center justify-between mb-6 pb-4 border-b border-teal-800/20">
           <h2 className="text-lg font-black text-slate-900 uppercase tracking-widest flex items-center gap-3">
@@ -507,7 +653,7 @@ export default function ExecutiveDashboard() {
             const cfg = LEVEL_CONFIG[section.level] || LEVEL_CONFIG['B1'];
             const isOpen = expandedSection === section.id;
             const completedCount = section.lessons.filter(
-              l => proProgress.find(p => p.lesson_id === l.id)?.status === 'completed'
+              l => proProgress.find(p => p.lesson_id === l.id && (p.language === activeLanguage || (!p.language && activeLanguage === 'en')))?.status === 'completed'
             ).length;
             const progressPct = Math.round((completedCount / section.lessons.length) * 100);
 
@@ -577,8 +723,8 @@ export default function ExecutiveDashboard() {
                     >
                       <div className="border-t border-slate-200 p-4 grid grid-cols-1 sm:grid-cols-2 gap-1.5 bg-white/20">
                         {section.lessons.map((lesson, idx) => {
-                          const lessonStatus = proProgress.find(p => p.lesson_id === lesson.id)?.status
-                            || (lesson.id === 'pro-b1-1' ? 'active' : 'locked');
+                          const lessonStatus = proProgress.find(p => p.lesson_id === lesson.id && (p.language === activeLanguage || (!p.language && activeLanguage === 'en')))?.status
+                            || (lesson.id === 'pro-exec-b1-1' || lesson.id === 'pro-b1-1' ? 'active' : 'locked');
                           const isLocked = lessonStatus === 'locked';
                           const isCompleted = lessonStatus === 'completed';
 

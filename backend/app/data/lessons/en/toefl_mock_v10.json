@@ -1,0 +1,95 @@
+{
+  "id": "toefl_mock_v10",
+  "title": "Simulador Oficial Completo TOEFL® iBT - Versión 10",
+  "level": "B2/C1",
+  "description": "Simulador académico completo de TOEFL® con lecturas y conferencias sobre: Cómputo e Inteligencia Artificial.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toefl-intro",
+      "type": "lecture",
+      "title": "TOEFL® iBT Simulation: Cómputo e Inteligencia Artificial",
+      "parts": [
+        {
+          "visual": "## 🎓 Simulador TOEFL® iBT (Versión 10)\n\nTemas académicos oficiales evaluados:\n\n- **Reading Article**: *Tecnología: Redes Neuronales y Aprendizaje Profundo*\n- **Academic Lecture**: *Lecture on Quantum Computing Principles*\n- **Writing structure & Integration**\n\n*Comienza tu examen académico.*",
+          "audio": "Welcome to the Integrated TOEFL iBT simulation. You will be tested on your ability to synthesize information from complex academic sources. Let's start.",
+          "animation": "analyzing"
+        }
+      ]
+    },
+    {
+      "id": "toefl-reading",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Lectora Académica (Reading)",
+      "questions": [
+        {
+          "id": "TF_R1_v10",
+          "type": "quiz_choice",
+          "question": "Read the academic article and answer the question:\n\n**Deep Learning and Artificial Neural Networks**\n\nArtificial neural networks are computational models loosely inspired by the structure of the human brain. These networks consist of thousands of interconnected nodes, or artificial neurons, arranged in multiple hidden layers. In a deep learning framework, data is passed through these layers, where each connection is assigned a specific weight. During the training phase, the network adjusts these weights using a process called backpropagation to minimize errors. Through this iterative feedback loop, deep neural networks can identify incredibly subtle patterns in high-dimensional datasets, enabling major breakthroughs in voice recognition, computer vision, and predictive analytics.",
+          "options": [
+            "They increase the physical speed of the computer processor.",
+            "They adjust connection weights using backpropagation to minimize errors.",
+            "They delete the hidden layers to make the network structure flat.",
+            "They rely on human programmers to manually rewrite the weights."
+          ],
+          "correct_answer": "They adjust connection weights using backpropagation to minimize errors.",
+          "explanation": "El texto explica que durante el entrenamiento la red ajusta los pesos ('adjusts these weights') usando retropropagación ('backpropagation') para minimizar errores."
+        },
+        {
+          "id": "TF_R2_v10",
+          "type": "quiz_choice",
+          "question": "What is the closest meaning of the target word in this academic context?",
+          "options": [
+            "Obvious",
+            "Faint / Elusive",
+            "Harmful",
+            "Unilateral"
+          ],
+          "correct_answer": "Faint / Elusive",
+          "explanation": "En el contexto de detectar patrones sumamente difíciles de percibir o sutiles en bases de datos complejas, 'subtle' significa tenue, elusivo o poco evidente ('faint')."
+        }
+      ]
+    },
+    {
+      "id": "toefl-listening",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Auditiva Académica (Listening)",
+      "questions": [
+        {
+          "id": "TF_L1_v10",
+          "type": "quiz_choice",
+          "question": "[UNIVERSITY LECTURE]: Listen to the professor's explanation and answer: **What is the main topic?**\n\n*(Transcription)*:\n\nProfessor: Unlike classical computers that store data in bits as either zeros or ones, quantum computers use qubits. Qubits can exist in a superposition of both states simultaneously. This superposition allows a quantum machine to perform massive parallel calculations, solving complex optimization problems in minutes that would take classical computers thousands of years.",
+          "options": [
+            "They require less electricity to store data.",
+            "They can exist in superposition to allow massive parallel processing.",
+            "They are built from biological cells to prevent hardware errors.",
+            "They completely eliminate the need for backpropagation algorithms."
+          ],
+          "correct_answer": "They can exist in superposition to allow massive parallel processing.",
+          "explanation": "El profesor explica que los qubits pueden existir en superposición cuántica simultánea, permitiendo cálculos paralelos masivos de alta velocidad."
+        }
+      ]
+    },
+    {
+      "id": "toefl-writing-prep",
+      "type": "quiz",
+      "title": "Sección 3: Estructura y Coherencia Académica (Writing Prep)",
+      "questions": [
+        {
+          "id": "TF_W1_v10",
+          "type": "fill_input",
+          "question": "Fill in the blank with the appropriate academic connector that best completes the logical flow:\n\nComplete the scientific sentence: \"Superposition enables massive parallel processing. ___, entanglement binds qubits for fast calculation.\"",
+          "correct_answers": [
+            "Furthermore",
+            "Moreover",
+            "furthermore",
+            "moreover"
+          ],
+          "hints": [
+            "Check punctuation and capitalization."
+          ]
+        }
+      ]
+    }
+  ]
+}

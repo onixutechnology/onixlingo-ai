@@ -1,0 +1,95 @@
+{
+  "id": "toefl_mock_v3",
+  "title": "Simulador Oficial Completo TOEFL® iBT - Versión 3",
+  "level": "B2/C1",
+  "description": "Simulador académico completo de TOEFL® con lecturas y conferencias sobre: Conservación del Medio.",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "toefl-intro",
+      "type": "lecture",
+      "title": "TOEFL® iBT Simulation: Conservación del Medio",
+      "parts": [
+        {
+          "visual": "## 🎓 Simulador TOEFL® iBT (Versión 3)\n\nTemas académicos oficiales evaluados:\n\n- **Reading Article**: *Ecología: La Acidificación de los Océanos*\n- **Academic Lecture**: *Lecture on Reef Restoration & Coral Bleaching*\n- **Writing structure & Integration**\n\n*Comienza tu examen académico.*",
+          "audio": "Welcome to the Integrated TOEFL iBT simulation. You will be tested on your ability to synthesize information from complex academic sources. Let's start.",
+          "animation": "analyzing"
+        }
+      ]
+    },
+    {
+      "id": "toefl-reading",
+      "type": "quiz",
+      "title": "Sección 1: Comprensión Lectora Académica (Reading)",
+      "questions": [
+        {
+          "id": "TF_R1_v3",
+          "type": "quiz_choice",
+          "question": "Read the academic article and answer the question:\n\n**The Chemistry of Ocean Acidification**\n\nOcean acidification is often termed 'the other carbon dioxide problem,' representing a major threat to global marine ecosystems. As human activities release massive quantities of carbon dioxide (CO2) into the atmosphere, nearly thirty percent is absorbed by the world's oceans. When CO2 dissolves in seawater, it reacts to form carbonic acid, which subsequently releases hydrogen ions. These free hydrogen ions combine with carbonate ions, reducing their availability for calcifying organisms. Organisms such as corals, clams, and microscopic plankton rely on carbonate to build their protective calcium carbonate shells, meaning acidification directly hinders their growth and weakens marine food webs.",
+          "options": [
+            "Corals absorb excessive amounts of volatile hydrogen gas.",
+            "Free hydrogen ions deplete the carbonate ions needed to build shells.",
+            "Carbonic acid dissolves the volcanic quicklime in coral reef bases.",
+            "Microscopic plankton convert carbon dioxide into oxygen bubbles."
+          ],
+          "correct_answer": "Free hydrogen ions deplete the carbonate ions needed to build shells.",
+          "explanation": "El texto detalla que los iones de hidrógeno libre se combinan con los de carbonato ('hydrogen ions combine with carbonate ions'), reduciendo su disponibilidad para hacer caparazones."
+        },
+        {
+          "id": "TF_R2_v3",
+          "type": "quiz_choice",
+          "question": "What is the closest meaning of the target word in this academic context?",
+          "options": [
+            "Accelerates",
+            "Promotes",
+            "Obstructs / Impedes",
+            "Validates"
+          ],
+          "correct_answer": "Obstructs / Impedes",
+          "explanation": "En el contexto de dificultar el crecimiento de conchas y corales, 'hinders' significa obstruir, impedir o dificultar ('obstructs')."
+        }
+      ]
+    },
+    {
+      "id": "toefl-listening",
+      "type": "quiz",
+      "title": "Sección 2: Comprensión Auditiva Académica (Listening)",
+      "questions": [
+        {
+          "id": "TF_L1_v3",
+          "type": "quiz_choice",
+          "question": "[UNIVERSITY LECTURE]: Listen to the professor's explanation and answer: **What is the main topic?**\n\n*(Transcription)*:\n\nProfessor: Marine biologists are using micro-fragmentation to restore dying reefs. Scientists cut live coral colonies into tiny pieces, which stimulates rapid growth rates up to forty times faster than normal. These micro-fragments are grown in labs and then transplanted onto degraded ocean reefs. This technique helps rebuild habitats that were bleached by rising seawater temperatures.",
+          "options": [
+            "Importing cold water from deep-sea hydrothermal vents.",
+            "Rebuilding reefs using micro-fragments of live corals.",
+            "Spraying chemical solutions to lower the ocean's acidity.",
+            "Introducing new species of calcifying clams to the ecosystem."
+          ],
+          "correct_answer": "Rebuilding reefs using micro-fragments of live corals.",
+          "explanation": "El profesor detalla la técnica de micro-fragmentación, la cual corta corales vivos en pedazos pequeños para acelerar su crecimiento y trasplantarlos."
+        }
+      ]
+    },
+    {
+      "id": "toefl-writing-prep",
+      "type": "quiz",
+      "title": "Sección 3: Estructura y Coherencia Académica (Writing Prep)",
+      "questions": [
+        {
+          "id": "TF_W1_v3",
+          "type": "fill_input",
+          "question": "Fill in the blank with the appropriate academic connector that best completes the logical flow:\n\nComplete the scientific sentence: \"Ocean acidification depletes carbonate ions. ___, calcifying corals struggle to grow.\"",
+          "correct_answers": [
+            "Consequently",
+            "Therefore",
+            "consequently",
+            "therefore"
+          ],
+          "hints": [
+            "Check punctuation and capitalization."
+          ]
+        }
+      ]
+    }
+  ]
+}
