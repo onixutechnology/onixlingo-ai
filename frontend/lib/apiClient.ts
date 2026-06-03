@@ -6,7 +6,7 @@ let RAW_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.co
 
 // Autodetección para usar el backend local si el frontend corre en localhost
 if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
-  RAW_URL = 'http://127.0.0.1:8001/api/v1';
+    RAW_URL = 'http://127.0.0.1:8001/api/v1';
 }
 
 const BASE_URL = RAW_URL.endsWith('/api/v1') ? RAW_URL : `${RAW_URL.replace(/\/$/, '')}/api/v1`;
@@ -38,7 +38,7 @@ apiClient.interceptors.response.use(
             // Limpiamos las cookies de sesión
             Cookies.remove('access_token');
             Cookies.remove('username');
-            
+
             // Redirigimos al login si no estamos ya allí
             if (typeof window !== 'undefined' && !window.location.pathname.includes('/login')) {
                 window.location.href = '/login?expired=true';
@@ -48,4 +48,4 @@ apiClient.interceptors.response.use(
     }
 );
 
-export default apiClient;
+export default apiClient;

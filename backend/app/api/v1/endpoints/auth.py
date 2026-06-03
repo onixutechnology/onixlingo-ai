@@ -19,7 +19,7 @@ from app.config import settings
 from app.core.security import verify_password, get_password_hash, create_access_token
 
 # Importamos nuestro nuevo servicio de correos
-from app.services.email_service import send_password_reset_email
+from app.services.email_service import send_password_reset_email, send_welcome_email
 
 router = APIRouter()
 logger = logging.getLogger("OnixLingo.Auth")
@@ -105,15 +105,24 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
     
     # 4. Preparar el nuevo usuario con acceso Executive por 1 año
     now = datetime.utcnow()
+    tier_value = "free"
+    is_pro_value = False
+    valid_until_value = None
+    
+    if clean_code:
+        tier_value = "executive"
+        is_pro_value = True
+        valid_until_value = now + timedelta(days=365)
+
     db_user = User(
         username=user.username, 
         email=user.email, 
         hashed_password=hashed_password,
         referral_code=new_referral_code,
         beta_code=clean_code,
-        tier="executive",
-        is_pro=True,
-        valid_until=now + timedelta(days=365)
+        tier=tier_value,
+        is_pro=is_pro_value,
+        valid_until=valid_until_value
     )
 
     # 5. Guardar en base de datos y marcar el código como usado
@@ -129,6 +138,9 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
         db.refresh(db_user)
         
         logger.info(f"🎉 Registro exitoso: Usuario '{db_user.username}' registrado{' con código de acceso ' + clean_code if clean_code else ' sin código de acceso'}.")
+        
+        # Enviar correo de bienvenida (no bloquea el registro si falla)
+        send_welcome_email(to_email=db_user.email, username=db_user.username)
         
         return {
             "message": "Cuenta creada exitosamente", 
@@ -247,15 +259,18 @@ def authenticate_google(payload: GoogleAuthRequest, response: Response, db: Sess
             full_name=name,
             referral_code=generate_referral_code(username_suggested),
             beta_code=google_beta_code,
-            tier="executive",
-            is_pro=True,
-            valid_until=now + timedelta(days=365)
+            tier="free",
+            is_pro=False,
+            valid_until=None
         )
         db.add(db_user)
         try:
             db.commit()
             db.refresh(db_user)
             logger.info(f"🎉 Registro de Google automático exitoso: Usuario '{db_user.username}'.")
+            
+            # Enviar correo de bienvenida
+            send_welcome_email(to_email=db_user.email, username=db_user.username)
         except Exception as db_err:
             db.rollback()
             logger.error(f"Error al registrar usuario de Google en DB: {db_err}")
