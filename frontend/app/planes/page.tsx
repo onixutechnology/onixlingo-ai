@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import {
-  Check, Shield, Zap, HelpCircle, ArrowRight, Percent, Calculator
+  Check, Shield, Zap, HelpCircle, ArrowRight, Percent, Calculator, Menu, X
 } from 'lucide-react';
 
 const plans = [
@@ -74,6 +74,7 @@ export default function PlanesPage() {
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('yearly');
   const [employeeCount, setEmployeeCount] = useState(15);
   const [b2bPlanType, setB2bPlanType] = useState<'pro' | 'executive'>('executive');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const getB2bDiscount = (count: number) => {
     if (count < 5) return 0;
@@ -118,12 +119,28 @@ export default function PlanesPage() {
           <div className="flex gap-4 items-center">
             <Link href="/login" className="hidden md:block text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors">Iniciar Sesión</Link>
             <Link href="/register">
-              <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 px-6 transition-all shadow-md shadow-indigo-600/20 hover:scale-105">
-                Crear Cuenta Gratis
+              <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 px-4 md:px-6 transition-all shadow-md shadow-indigo-600/20 hover:scale-105">
+                Crear Cuenta
               </button>
             </Link>
+            {/* Botón menú móvil */}
+            <button className="md:hidden p-2 text-slate-600" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Menú Móvil Desplegable */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-white border-b border-emerald-100 shadow-lg px-6 py-4 flex flex-col gap-4 text-sm font-semibold text-slate-600">
+            <Link href="/caracteristicas" className="hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Características</Link>
+            <Link href="/vocabulario" className="hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Vocabulario</Link>
+            <Link href="/programa-ejecutivo" className="hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Programa Ejecutivo</Link>
+            <Link href="/planes" className="text-indigo-600" onClick={() => setIsMenuOpen(false)}>Planes</Link>
+            <div className="h-px bg-slate-200 my-2"></div>
+            <Link href="/login" className="hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Iniciar Sesión</Link>
+          </div>
+        )}
       </nav>
 
       {/* HERO */}

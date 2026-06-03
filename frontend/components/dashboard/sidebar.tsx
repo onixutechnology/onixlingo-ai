@@ -60,6 +60,7 @@ export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }
   const { mode, setMode, activeLanguage } = useUIStore();
   const router = useRouter();
   const [showStatsModal, setShowStatsModal] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const theme = LANGUAGE_COLORS[activeLanguage] || LANGUAGE_COLORS.en;
 
@@ -88,7 +89,35 @@ export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }
   };
 
   return (
-    <aside className="flex flex-col w-full lg:w-80 gap-4 lg:sticky lg:top-24 self-start h-fit pb-20 lg:pb-0 font-sans selection:bg-amber-100">
+    <>
+      {/* Botón Flotante Móvil */}
+      <button 
+        onClick={() => setIsMobileOpen(!isMobileOpen)}
+        className="lg:hidden fixed bottom-6 right-6 z-50 bg-sky-950 text-white p-4 rounded-full shadow-2xl flex items-center justify-center border-2 border-sky-400 active:scale-95 transition-transform"
+      >
+        <Briefcase size={24} />
+      </button>
+
+      {/* Backdrop Móvil */}
+      {isMobileOpen && (
+        <div 
+          className="lg:hidden fixed inset-0 bg-sky-950/40 backdrop-blur-sm z-40 transition-opacity"
+          onClick={() => setIsMobileOpen(false)}
+        />
+      )}
+
+      <aside className={`
+        flex flex-col w-[300px] lg:w-80 gap-4 font-sans selection:bg-amber-100
+        fixed lg:sticky top-0 lg:top-24 right-0 z-50 lg:z-auto h-[100dvh] lg:h-fit bg-sky-50 lg:bg-transparent px-4 lg:px-0 py-6 lg:py-0 overflow-y-auto lg:overflow-visible shadow-[0_0_40px_rgba(0,0,0,0.1)] lg:shadow-none transition-transform duration-300
+        ${isMobileOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'}
+      `}>
+        {/* Encabezado Móvil para el Menú */}
+        <div className="lg:hidden flex items-center justify-between mb-2">
+          <h3 className="font-black text-sky-950 uppercase tracking-widest text-xs">Menú Ejecutivo</h3>
+          <button onClick={() => setIsMobileOpen(false)} className="p-2 text-sky-600 bg-sky-100 rounded-full">
+            <span className="font-bold text-lg leading-none">&times;</span>
+          </button>
+        </div>
       
       {/* --- SELECTOR DE MODO CORPORATIVO (CUADRADO) --- */}
       <div className={`p-1.5 flex items-center gap-1.5 transition-all duration-300 rounded-xl shadow-[0_10px_40px_rgba(14,165,233,0.08)] border ${
@@ -207,6 +236,7 @@ export default function Sidebar({ userStats = { xp: 0, lessons: 0, streak: 0 } }
           onClose={() => setShowStatsModal(false)} 
         />
       )}
-    </aside>
+      </aside>
+    </>
   );
 }

@@ -20,10 +20,13 @@ import {
   Zap,
   Clock,
   Trophy,
-  X
+  X,
+  Menu
 } from 'lucide-react';
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
   return (
     <div className="min-h-screen bg-[#edf7f2] font-sans text-slate-800 selection:bg-indigo-500/30 selection:text-indigo-900">
       
@@ -44,17 +47,33 @@ export default function Home() {
             <Link href="/planes" className="hover:text-indigo-600 transition-colors">Planes</Link>
           </div>
 
-          <div className="flex gap-8 items-center">
+          <div className="flex gap-4 items-center">
             <Link href="/login" className="hidden md:block text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors">
               Iniciar Sesión
             </Link>
             <Link href="/register">
-              <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 px-6 rounded-none transition-all shadow-md shadow-indigo-600/20 hover:shadow-lg hover:scale-105 active:scale-95">
-                Crear Cuenta Gratis
+              <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 px-4 md:px-6 rounded-none transition-all shadow-md shadow-indigo-600/20 hover:shadow-lg hover:scale-105 active:scale-95">
+                Crear Cuenta
               </button>
             </Link>
+            {/* Botón menú móvil */}
+            <button className="md:hidden p-2 text-slate-600" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Menú Móvil Desplegable */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-white border-b border-emerald-100 shadow-lg px-6 py-4 flex flex-col gap-4 text-sm font-semibold text-slate-600">
+            <Link href="/caracteristicas" className="hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Características</Link>
+            <Link href="/vocabulario" className="hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Vocabulario</Link>
+            <Link href="/programa-ejecutivo" className="hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Programa Ejecutivo</Link>
+            <Link href="/planes" className="hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Planes</Link>
+            <div className="h-px bg-slate-200 my-2"></div>
+            <Link href="/login" className="hover:text-indigo-600 transition-colors" onClick={() => setIsMenuOpen(false)}>Iniciar Sesión</Link>
+          </div>
+        )}
       </nav>
 
       {/* --- HERO SECTION --- */}
@@ -136,10 +155,10 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
             {/* Standard English & Multilang */}
-            <div className="md:col-span-2 group bg-white p-8 rounded-none border border-slate-200 hover:border-indigo-300 transition-all duration-300 overflow-hidden relative">
+            <div className="lg:col-span-2 group bg-white p-6 md:p-8 rounded-none border border-slate-200 hover:border-indigo-300 transition-all duration-300 overflow-hidden relative">
               <div className="absolute right-[-5%] top-[-10%] opacity-5 group-hover:opacity-10 transition-opacity text-slate-900">
                 <Globe size={200} />
               </div>

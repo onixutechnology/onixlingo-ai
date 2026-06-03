@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 // IMPORTAMOS EL PADDLE PROVIDER QUE ACABAS DE CREAR
@@ -6,12 +6,27 @@ import { PaddleProvider } from '@/components/providers/PaddleProvider';
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const viewport: Viewport = {
+  themeColor: "#4f46e5",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
     default: "OnixLingo | AI-Powered Enterprise Language Training",
     template: "%s | OnixLingo"
   },
   description: "Plataforma de aprendizaje de idiomas de alto rendimiento impulsada por Inteligencia Artificial para ejecutivos y profesionales de OnixCorp.",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "OnixLingo",
+  },
+  formatDetection: {
+    telephone: false,
+  },
   keywords: ["idiomas", "IA", "ejecutivos", "B2B", "English training", "Ajedrez PvP", "OnixLingo"],
   authors: [{ name: "OnixCorp Engineering" }],
   openGraph: {
