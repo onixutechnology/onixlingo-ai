@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 // IMPORTAMOS EL PADDLE PROVIDER QUE ACABAS DE CREAR
 import { PaddleProvider } from '@/components/providers/PaddleProvider';
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -69,6 +70,7 @@ export default function RootLayout({
         <PaddleProvider>
           {children}
         </PaddleProvider>
+        <PwaInstallPrompt />
       </body>
     </html>
   );
