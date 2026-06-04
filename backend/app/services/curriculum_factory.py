@@ -1,5 +1,25 @@
 import os
+import json
+import logging
+import warnings
 from typing import Dict, Any, List
+
+# Suppress FutureWarning from deprecated google.generativeai package
+warnings.filterwarnings("ignore", category=FutureWarning, module="google.generativeai")
+
+try:
+    import google.generativeai as genai
+    _GENAI_AVAILABLE = True
+except ImportError:
+    genai = None  # type: ignore
+    _GENAI_AVAILABLE = False
+
+try:
+    from app.core.settings import settings as _app_settings
+except Exception:
+    _app_settings = None  # type: ignore
+
+logger = logging.getLogger("OnixLingo.CurriculumFactory")
 
 # Curriculum topics definition
 TEMAS_A1 = [
@@ -711,8 +731,9 @@ def load_catalog():
 
 load_catalog()
 
-def generate_dynamic_lesson(lesson_id: str) -> Dict[str, Any]:
-    """Generates complete premium lesson content dynamically in memory with highly didactical details."""
+
+async def generate_dynamic_lesson(lesson_id: str, lang: str = "es") -> Dict[str, Any]:
+    """Generates complete premium lesson content dynamically via AI to ensure perfect grammar and multi-language UI."""
     meta = CATALOG.get(lesson_id.lower())
     if not meta:
         # Fallback dynamic logic for arbitrary IDs
@@ -731,589 +752,144 @@ def generate_dynamic_lesson(lesson_id: str) -> Dict[str, Any]:
     desc = meta["description"]
     vocab = meta["vocab"]
     level = meta["level"]
-    index = meta["index"]
-    
-    # Check if this is Level A1/A2/B1/B2/C1/C2/TOEIC to inject our massive didactical improvements (4,000 improvements total)
-    is_didactic = level.lower() in ["a1", "a2", "b1", "b2", "c1", "c2", "toeic"]
-    level_cat = "beginner" if level.lower() in ["a1", "a2"] else "intermediate" if level.lower() in ["b1", "b2"] else "advanced"
-    
-    # 1. Lecture Core with Grammar Spotlight and Spanish help
-    if is_didactic:
-        if level.lower() == "toeic":
-            g_topic = TOEIC_GRAMMAR_TOPICS[index % len(TOEIC_GRAMMAR_TOPICS)]
-            grammar_text = f"Preparación Oficial TOEIC® Mastery • Tema: {g_topic[0]}\n[Grammar Spotlight - Enfoque Gramatical]\n{g_topic[1]}"
-        elif level.lower() == "c2":
-            grammar_text = f"En el Nivel C2, dominamos la geopolítica global y la alta retórica estratégica.\n[Grammar Spotlight - Enfoque Gramatical]\n- Subjuntivo de Alta Retórica: 'It is imperative that the sovereign nation align its policies.' (Es imperativo que la nación soberana alinee sus políticas.)\n- Cláusulas de Concesión Avanzada: 'Notwithstanding the tariff fluctuations, the strategic capital allocation remains robust.' (A pesar de las fluctuaciones arancelarias, la asignación estratégica de capital sigue siendo robusta.)\n- Condicionales de Contingencia Extrema: 'Should any border disputes escalate, we will activate the protocol.' (En caso de que se intensifique cualquier disputa fronteriza, activaremos el protocolo.)"
-        elif level.lower() == "c1":
-            grammar_text = f"En el Nivel C1, dominamos la dirección y la estrategia ejecutiva avanzada.\n[Grammar Spotlight - Enfoque Gramatical]\n- Inversión de Sujeto y Verbo para Énfasis: 'Not only did we complete the merger, but we also exceeded forecasts.' (No sólo completamos la fusión, sino que también superamos las previsiones.)\n- Subjuntivo en Demandas Ejecutivas: 'The board demands that the CEO resign immediately.' (La junta exige que el director ejecutivo renuncie inmediatamente.)\n- Condicional Mixto: 'If we had acquired the patent last year, we would be leading today.' (Si hubiéramos adquirido la patente el año pasado, hoy estaríamos liderando.)"
-        elif level.lower() == "b2":
-            grammar_text = f"En el Nivel B2, dominamos la agilidad operativa y liderazgo ejecutivo.\n[Grammar Spotlight - Enfoque Gramatical]\n- Tercer Condicional: 'If we had optimized the {vocab}, we would have succeeded.' (Si hubiéramos optimizado el {vocab}, habríamos tenido éxito.)\n- Verbos Modales en Pasado: 'We should have launched the {vocab} earlier.' (Deberíamos haber lanzado el {vocab} antes.)\n- Cláusulas de Concesión: 'Although the {vocab} was costly, it improved efficiency.' (Aunque el {vocab} fue costoso, mejoró la eficiencia.)"
-        elif level.lower() == "b1":
-            grammar_text = f"En el Nivel B1, dominamos la gestión y el liderazgo intermedio.\n[Grammar Spotlight - Enfoque Gramatical]\n- Reported Speech (Estilo Indirecto): 'She said that she managed the {vocab}.' (Ella dijo que gestionaba el {vocab}.)\n- Voz Pasiva: 'The {vocab} is analyzed by the team.' (El {vocab} es analizado por el equipo.)\n- Condicional Profesional: 'If we optimize the {vocab}, we will save time.' (Si optimizamos el {vocab}, ahorraremos tiempo.)"
-        elif level.lower() == "a2":
-            grammar_text = f"En el Nivel A2, dominamos operaciones sencillas.\n[Grammar Spotlight - Enfoque Gramatical]\n- Presente Continuo: Sujeto + am/is/are + Verbo-ing.\n  Ejemplo: 'I am using the {vocab}.' (Estoy usando el {vocab}.)\n- Modales de Cortesía: 'Could you please check the {vocab}?' (¿Podrías por favor verificar el {vocab}?)"
-        else:
-            grammar_text = f"En inglés, la estructura básica de una oración es siempre:\nSUJETO + VERBO + COMPLEMENTO.\n\nEjemplo sencillo:\n'I have a {vocab}.' (Yo tengo un {vocab}.)\n'We use the {vocab} today.' (Nosotros usamos el {vocab} hoy.)"
 
-        if level.lower() == "toeic":
-            deep_dive_text = f"[Vocabulary Deep Dive - Análisis de Vocabulario]\n\nVocablo: '{vocab.upper()}'\nSignificado clave en TOEIC: Término de alto rendimiento para la evaluación de comprensión lectora (Reading) y auditiva (Listening) en el contexto de '{title}'.\n\n[Pronunciation & Phonetic Guide - Guía Fonética]\nVocaliza la palabra '{vocab}' con énfasis en la sílaba correcta. En el TOEIC Listening, escucharás acentos americanos, británicos, canadienses y australianos. Familiarízate con la pronunciación estándar."
-            tip_text = f"[TOEIC® Strategic Rule - Regla de Oro del Examen]\n\n1. Gestión del Tiempo: En la sección de Reading, dispones de 75 minutos para 100 preguntas. No dediques más de 30 segundos a las preguntas de gramática corta.\n2. Contexto de Negocios: El TOEIC® no evalúa inglés académico; todas las situaciones ocurren en aeropuertos, oficinas, restaurantes o fábricas. Utiliza '{vocab}' en ese contexto.\n\n¡Comienza los drills oficiales del TOEIC® ahora!"
-        elif level_cat == "beginner":
-            deep_dive_text = f"[Vocabulary Deep Dive - Análisis de Vocabulario]\n\nVocablo: '{vocab}'\nTraducción aproximada: Se adapta como parte del concepto de '{title}'.\nUso en la oficina: Es una palabra fundamental que te servirá para comunicarte en llamadas y correos sencillos.\n\n[Pronunciation Guide - Guía de Pronunciación]\nIntenta pronunciar despacio, vocalizando cada sílaba con claridad. ¡No tengas miedo de practicar en voz alta!"
-            tip_text = f"[Business Tip & Golden Rule - Consejos Prácticos]\n\n1. Mantenlo simple: Como principiante de nivel {level}, prefiere siempre oraciones cortas y directas.\n2. Cortesía corporativa: Utiliza siempre palabras amables como 'Please' (por favor) y 'Thank you' (gracias).\n\n¡Estás listo para iniciar los ejercicios prácticos de esta lección! Responde cada drill con calma."
-        elif level_cat == "intermediate":
-            deep_dive_text = f"[Vocabulary Deep Dive - Análisis de Vocabulario]\n\nVocablo: '{vocab}'\nTraducción aproximada: Término operativo clave para la gestión de '{title}'.\nUso en la oficina: Esencial para estructurar reportes de estatus, delegar tareas y colaborar eficientemente en Teams/Slack.\n\n[Pronunciation Guide - Guía de Pronunciación]\nPronuncia con fluidez profesional, enlazando las palabras clave con entonación asertiva de gestión."
-            tip_text = f"[Business Tip & Golden Rule - Consejos Prácticos]\n\n1. Enfoque de gestión: En el nivel {level}, evita la vaguedad y prefiere datos operativos claros.\n2. Cortesía estructurada: Utiliza un tono constructivo al dar retroalimentación al equipo y comunicarte con tu superior.\n\n¡Estás listo para iniciar los ejercicios prácticos de esta lección! Responde cada drill con calma."
-        else: # advanced (C1, C2)
-            deep_dive_text = f"[Vocabulary Deep Dive - Análisis de Vocabulario]\n\nVocablo: '{vocab.upper()}'\nTraducción e impacto: Elemento estratégico de alta dirección para el análisis de '{title}'.\nUso directivo: Vital para discursos ante accionistas, negociaciones de fusiones y adquisiciones (M&A) o evaluaciones internacionales oficiales como el TOEIC®.\n\n[Pronunciation Guide - Guía de Pronunciación]\nVocaliza con proyección y pausas estratégicas. En la alta dirección, la cadencia y el control tonal transmiten autoridad."
-            tip_text = f"[Business Tip & Golden Rule - Consejos Prácticos]\n\n1. Retórica ejecutiva: En este nivel, tus argumentos deben conectar la operación directamente con el EBITDA y el valor de los accionistas.\n2. Diplomacia estratégica: El uso preciso de condicionales y el estilo indirecto mitiga riesgos de comunicación en negociaciones globales.\n\n¡Comienza los drills de evaluación ahora! Responde con máxima precisión profesional."
+    if not _GENAI_AVAILABLE or not _app_settings or not _app_settings.GEMINI_API_KEY:
+        logger.error("GEMINI_API_KEY missing or google.generativeai unavailable.")
+        return {"id": lesson_id, "title": "API Error", "stages": []}
 
-        theory_stage = {
-            "id": "stg_theory",
-            "type": "lecture",
-            "title": f"Clase Teórica: {title}",
-            "parts": [
-                {
-                    "visual": f"★ ONIXLINGO SISTEMA PROFESIONAL DE INGLÉS ★\n\nNivel {level} • Lección {index} de 200\nTema: {title}\n\nConcepto Clave:\n☞ '{vocab.upper()}'\n\n[Grammar Spotlight - Enfoque Gramatical]\n{grammar_text}",
-                    "audio": f"Welcome to Lesson {index} of level {level}. Today we are learning about '{title}'. Focus on the key vocabulary word '{vocab}'."
-                },
-                {
-                    "visual": deep_dive_text,
-                    "audio": f"Please repeat the target word: {vocab}. Excellent job. Let's practice saying it again: {vocab}."
-                },
-                {
-                    "visual": tip_text,
-                    "audio": "Remember the Golden Rule of corporate courtesy. Let us proceed to the interactive exercises."
-                }
-            ]
-        }
-    else:
-        theory_stage = {
-            "id": "stg_theory",
-            "type": "lecture",
-            "title": f"Theory Core: {title}",
-            "parts": [
-                {
-                    "visual": f"ONIXLINGO PROFESSIONAL ENGLISH SYSTEM\n\nNivel {level} • Lesson {lesson_id}\nTopic: {title}\n\nKey Concepts:\n- {vocab.upper()}\n- Professional Application\n- Step-by-step Framework\n\nStudy Principle:\nEnsure absolute precision and professional communication style in all exercises.",
-                    "audio": f"Welcome to Lesson {lesson_id} covering {title}. Let us explore the theory and strategic application of our core vocabulary word: {vocab}."
-                },
-                {
-                    "visual": f"VOCABULARY CONTEXTUAL DEEP DIVE:\n\n1. {vocab.upper()}: Essential vocabulary element for this module.\n2. APPLICATION: Practical usage in professional environments.\n3. PROTOCOL: Aligning communication style with executive standards.",
-                    "audio": f"Please focus on our key term: {vocab}. It is highly important in professional contexts."
-                },
-                {
-                    "visual": f"BUSINESS ENGLISH STRATEGY:\n\nMaintain structured sentences using clear professional terminology. Avoid casual slang when discussing '{title}'.\n\nApply the key concept '{vocab}' to complete the subsequent exercises successfully.",
-                    "audio": f"Remember to prioritize structured clarity. Use the vocabulary word '{vocab}' to solve the drills."
-                }
-            ]
-        }
+    genai.configure(api_key=_app_settings.GEMINI_API_KEY)
     
-    # 2. 10 Quiz Choice Questions with enriched translations and didactic explanations
-    choice_questions = []
-    for q_idx in range(1, 11):
-        if is_didactic:
-            if level.lower() == "toeic":
-                if q_idx == 1:
-                    q = f"The board of directors requires a _______ report regarding the '{vocab}' analysis."
-                    opts = [f"{vocab}", "comprehensively", "comprehensive", "comprehend"]
-                    ans = "comprehensive"
-                    explanation = f"¡Correcto! En la gramática TOEIC, se requiere un adjetivo ('comprehensive') para modificar al sustantivo 'report'. 'Comprehensively' es un adverbio y 'comprehend' es un verbo."
-                elif q_idx == 2:
-                    q = f"_______ the recent merger, the strategic implementation of '{vocab}' has been postponed."
-                    opts = ["Due to", "Although", "Because", "Despite"]
-                    ans = "Due to"
-                    explanation = f"¡Perfecto! 'Due to' (debido a) es una preposición compuesta seguida de una frase sustantiva ('the recent merger') para expresar causa. 'Although' y 'Because' requieren una cláusula completa."
-                elif q_idx == 3:
-                    q = f"Neither the supervisor nor the senior managers _______ authorized to change the '{vocab}' protocol."
-                    opts = ["is", "are", "was", "has"]
-                    ans = "are"
-                    explanation = f"¡Correcto! En concordancia de sujeto-verbo de nivel TOEIC, con 'neither... nor...', el verbo concuerda con el sujeto más cercano ('managers', plural), por lo que se usa 'are'."
-                elif q_idx == 4:
-                    q = f"The regional marketing director handles the corporate publicity of '{vocab}' _______."
-                    opts = ["himself", "his", "he", "him"]
-                    ans = "himself"
-                    explanation = f"¡Excelente! Se requiere el pronombre reflexivo de énfasis ('himself') para denotar que el director lo hace de forma autónoma."
-                elif q_idx == 5:
-                    q = f"If we had acquired the patented '{vocab}' last quarter, we _______ leading the regional market today."
-                    opts = ["would be", "will be", "had been", "would have been"]
-                    ans = "would be"
-                    explanation = f"¡Correcto! Esta estructura es un condicional mixto en inglés de negocios: una condición en pasado ('If we had acquired...') con consecuencia en el presente ('we would be...')."
-                elif q_idx == 6:
-                    q = f"The executive committee was extremely _______ in the projected growth metrics of '{vocab}'."
-                    opts = ["interest", "interested", "interesting", "interestingly"]
-                    ans = "interested"
-                    explanation = f"¡Correcto! El participio en '-ed' ('interested') describe el sentimiento o estado del sujeto (el comité), mientras que '-ing' describe la causa."
-                elif q_idx == 7:
-                    q = f"We must _______ a definitive decision regarding the budget allocation for '{vocab}'."
-                    opts = ["make", "do", "take", "give"]
-                    ans = "make"
-                    explanation = f"¡Correcto! 'Make a decision' es la colocación verbal estándar en inglés corporativo para la toma de decisiones."
-                elif q_idx == 8:
-                    q = f"The new corporate guidelines for '{vocab}' _______ by the audit committee next Tuesday."
-                    opts = ["will review", "will be reviewed", "are reviewing", "have reviewed"]
-                    ans = "will be reviewed"
-                    explanation = f"¡Correcto! Se requiere la voz pasiva en futuro simple ('will be reviewed') ya que el sujeto ('guidelines') es paciente y recibe la acción."
-                elif q_idx == 9:
-                    q = f"The senior vice president suggested _______ the official rollout of the '{vocab}' system."
-                    opts = ["to postpone", "postponing", "postponed", "postpone"]
-                    ans = "postponing"
-                    explanation = f"¡Excelente! En gerundios vs infinitivos de nivel profesional, el verbo 'suggest' exige ser seguido por un gerundio ('postponing')."
-                else:
-                    q = f"All personnel _______ wear their security badges when accessing the '{vocab}' storage area."
-                    opts = ["must", "might", "could", "would"]
-                    ans = "must"
-                    explanation = f"¡Correcto! Se utiliza 'must' para indicar una obligación corporativa o mandato de seguridad ineludible."
-            elif level_cat == "beginner":
-                if q_idx % 2 == 0:
-                    q = f"How do we say the word '{vocab}' in a simple business sentence?"
-                    opts = [
-                        f"I need the {vocab}, please.",
-                        f"I very yesterday {vocab}.",
-                        f"Desk {vocab} red book.",
-                        f"No {vocab} like tomorrow."
-                    ]
-                    ans = f"I need the {vocab}, please."
-                    explanation = f"¡Correcto! 'I need the {vocab}, please' sigue la estructura Sujeto (I) + Verbo (need) + Complemento (the {vocab}) + palabra de cortesía (please). Las otras opciones carecen de estructura gramatical coherente."
-                else:
-                    q = f"What is the best way to explain the concept of '{title}' to a colleague?"
-                    opts = [
-                        f"It relates to our office work and the term '{vocab}'.",
-                        f"It is a complicated code we do not use.",
-                        f"It is a game we play during breaks.",
-                        f"It does not matter in business English."
-                    ]
-                    ans = f"It relates to our office work and the term '{vocab}'."
-                    explanation = f"¡Perfecto! '{title}' es un tema esencial para principiantes en la oficina que se conecta con la palabra clave '{vocab}'."
-            elif level_cat == "intermediate":
-                if q_idx % 2 == 0:
-                    q = f"What is the most appropriate way to utilize '{vocab}' in a professional context?"
-                    opts = [
-                        f"We should integrate '{vocab}' to streamline our team's daily operations.",
-                        f"I want to buy '{vocab}' today for myself.",
-                        f"Office red '{vocab}' is on the floor.",
-                        f"No '{vocab}' is useful here."
-                    ]
-                    ans = f"We should integrate '{vocab}' to streamline our team's daily operations."
-                    explanation = f"¡Correcto! En el nivel {level}, estructuramos oraciones profesionales que muestran cómo '{vocab}' optimiza el flujo de trabajo operativo."
-                else:
-                    q = f"What does the management concept of '{title}' primarily focus on?"
-                    opts = [
-                        f"Aligning department metrics and leveraging '{vocab}' for operational efficiency.",
-                        f"Playing casual games during core office hours.",
-                        f"Avoiding standard team collaboration altogether.",
-                        f"Focusing on personal hobbies unrelated to the company."
-                    ]
-                    ans = f"Aligning department metrics and leveraging '{vocab}' for operational efficiency."
-                    explanation = f"¡Excelente! En el nivel {level}, '{title}' se enfoca en la coordinación y eficiencia, usando términos clave como '{vocab}'."
-            else: # advanced (C1, C2)
-                if q_idx % 2 == 0:
-                    q = f"From an executive perspective, how is '{vocab}' strategically leveraged within '{title}'?"
-                    opts = [
-                        f"To align corporate deliverables, mitigate risks, and optimize strategic outcomes.",
-                        f"To write short, unstructured notes to random employees.",
-                        f"To bypass official compliance protocols and legal regulations.",
-                        f"To replace all senior leadership positions with temporary interns."
-                    ]
-                    ans = f"To align corporate deliverables, mitigate risks, and optimize strategic outcomes."
-                    explanation = f"¡Correcto! A nivel directivo, '{vocab}' se utiliza como un catalizador estratégico para la mitigación de riesgos y la alineación global."
-                else:
-                    q = f"What is the primary objective of mastering '{title}' at the C-Suite or certification level?"
-                    opts = [
-                        f"To command authority, influence stakeholders, and communicate complex concepts like '{vocab}' with precision.",
-                        f"To memorize simple spelling rules for beginner words.",
-                        f"To avoid presenting data during board of directors meetings.",
-                        f"To speak as fast as possible without considering target audience feedback."
-                    ]
-                    ans = f"To command authority, influence stakeholders, and communicate complex concepts like '{vocab}' with precision."
-                    explanation = f"¡Excelente! En alta dirección ({level}), la precisión y la elocuencia al discutir '{vocab}' e influir en los stakeholders es fundamental."
-        else:
-            q = f"Question {q_idx}: In the context of '{title}', what is the primary business implication of '{vocab}'?"
-            opts = [
-                f"It optimizes executive operations and strategic alignment regarding {vocab}.",
-                f"It is an informal slang word not recommended for professional meetings.",
-                f"It represents an obsolete administrative concept.",
-                f"It decreases overall department efficiency."
-            ]
-            ans = f"It optimizes executive operations and strategic alignment regarding {vocab}."
-            explanation = f"Understanding the role of '{vocab}' is vital for achieving successful outcomes in '{title}'."
-            
-        choice_questions.append({
-            "id": f"{lesson_id}-q-choice-{q_idx}",
-            "type": "quiz_choice",
-            "question": q,
-            "options": opts,
-            "correct_answer": ans,
-            "explanation": explanation
-        })
-        
-    # 3. 10 Order Sentence Questions
-    order_questions = []
-    if is_didactic:
-        if level.lower() == "toeic":
-            templates = [
-                (f"We must implement {vocab} to optimize our current operations.", ["We", "must", "implement", vocab, "to", "optimize", "our", "current", "operations."]),
-                (f"The manager demands that the team review the {vocab} report.", ["The", "manager", "demands", "that", "the", "team", "review", "the", f"{vocab}", "report."]),
-                (f"Neither the director nor the employees analyzed the new {vocab}.", ["Neither", "the", "director", "nor", "the", "employees", "analyzed", "the", "new", f"{vocab}."]),
-                (f"If we allocate capital to {vocab}, we will succeed.", ["If", "we", "allocate", "capital", "to", f"{vocab},", "we", "will", "succeed."]),
-                (f"Not only did we merge, but we also integrated {vocab}.", ["Not", "only", "did", "we", "merge,", "but", "we", "also", "integrated", f"{vocab}."]),
-                (f"The guidelines for {vocab} will be updated by the committee.", ["The", "guidelines", "for", vocab, "will", "be", "updated", "by", "the", "committee."]),
-                (f"He suggested postponing the official launch of the new {vocab}.", ["He", "suggested", "postponing", "the", "official", "launch", "of", "the", "new", f"{vocab}."]),
-                (f"We are committed to improving our strategic {vocab} metrics.", ["We", "are", "committed", "to", "improving", "our", "strategic", vocab, "metrics."]),
-                (f"The executive board requires a comprehensive study of {vocab}.", ["The", "executive", "board", "requires", "a", "comprehensive", "study", "of", f"{vocab}."]),
-                (f"Please coordinate with the regional office regarding the {vocab}.", ["Please", "coordinate", "with", "the", "regional", "office", "regarding", "the", f"{vocab}."])
-            ]
-        elif level_cat == "beginner":
-            templates = [
-                (f"I need a new {vocab}.", ["I", "need", "a", "new", f"{vocab}."]),
-                (f"Please help me with {vocab}.", ["Please", "help", "me", "with", f"{vocab}."]),
-                (f"We check the {vocab} today.", ["We", "check", "the", vocab, "today."]),
-                (f"The red folder has the {vocab}.", ["The", "red", "folder", "has", "the", f"{vocab}."]),
-                (f"Is this your {vocab}?", ["Is", "this", "your", f"{vocab}?"]),
-                (f"They work with {vocab} now.", ["They", "work", "with", vocab, "now."]),
-                (f"I see the {vocab} on the table.", ["I", "see", "the", vocab, "on", "the", "table."]),
-                (f"She likes her new {vocab}.", ["She", "likes", "her", "new", f"{vocab}."]),
-                (f"We can use the {vocab}.", ["We", "can", "use", "the", f"{vocab}."]),
-                (f"Thank you for the {vocab}.", ["Thank", "you", "for", "the", f"{vocab}."])
-            ]
-        elif level_cat == "intermediate":
-            templates = [
-                (f"We must implement {vocab} to optimize operations.", ["We", "must", "implement", vocab, "to", "optimize", "operations."]),
-                (f"Our current strategy prioritizes {vocab} for the client.", ["Our", "current", "strategy", "prioritizes", vocab, "for", "the", "client."]),
-                (f"Please coordinate with the team regarding {vocab}.", ["Please", "coordinate", "with", "the", "team", "regarding", f"{vocab}."]),
-                (f"Let us schedule a meeting to discuss {vocab}.", ["Let", "us", "schedule", "a", "meeting", "to", "discuss", f"{vocab}."]),
-                (f"The project manager requires a report on {vocab}.", ["The", "project", "manager", "requires", "a", "report", "on", f"{vocab}."]),
-                (f"We need to analyze how {vocab} affects our budget.", ["We", "need", "to", "analyze", "how", vocab, "affects", "our", "budget."]),
-                (f"Can you confirm the timeline for {vocab} delivery?", ["Can", "you", "confirm", "the", "timeline", "for", vocab, "delivery?"]),
-                (f"This new initiative aligns with our {vocab} targets.", ["This", "new", "initiative", "aligns", "with", "our", vocab, "targets."]),
-                (f"They have decided to outsource our {vocab} management.", ["They", "have", "decided", "to", "outsource", "our", vocab, "management."]),
-                (f"We should focus on enhancing {vocab} in this quarter.", ["We", "should", "focus", "on", "enhancing", vocab, "in", "this", "quarter."])
-            ]
-        else: # advanced
-            templates = [
-                (f"Strategic alignment requires compliance with {vocab} protocols.", ["Strategic", "alignment", "requires", "compliance", "with", vocab, "protocols."]),
-                (f"We are leveraging {vocab} to mitigate macroeconomic risks.", ["We", "are", "leveraging", vocab, "to", "mitigate", "macroeconomic", "risks."]),
-                (f"The board prioritized {vocab} in the annual report.", ["The", "board", "prioritized", vocab, "in", "the", "annual", "report."]),
-                (f"Our digital transformation relies heavily on {vocab}.", ["Our", "digital", "transformation", "relies", "heavily", "on", f"{vocab}."]),
-                (f"A comprehensive audit revealed gaps in {vocab} management.", ["A", "comprehensive", "audit", "revealed", "gaps", "in", vocab, "management."]),
-                (f"We must renegotiate contract clauses to safeguard {vocab}.", ["We", "must", "renegotiate", "contract", "clauses", "to", "safeguard", f"{vocab}."]),
-                (f"The merger is designed to generate synergies in {vocab}.", ["The", "merger", "is", "designed", "to", "generate", "synergies", "in", f"{vocab}."]),
-                (f"He delivered a persuasive speech regarding {vocab} sustainability.", ["He", "delivered", "a", "persuasive", "speech", "regarding", vocab, "sustainability."]),
-                (f"Our joint venture will focus primarily on {vocab} innovation.", ["Our", "joint", "venture", "will", "focus", "primarily", "on", vocab, "innovation."]),
-                (f"Regulatory compliance dictates that we secure {vocab} immediately.", ["Regulatory", "compliance", "dictates", "that", "we", "secure", vocab, "immediately."])
-            ]
-    else:
-        templates = [
-            (f"We must implement {vocab} to optimize operations.", ["We", "must", "implement", vocab, "to", "optimize", "operations."]),
-            (f"Our current strategy prioritizes {vocab} for the client.", ["Our", "current", "strategy", "prioritizes", vocab, "for", "the", "client."]),
-            (f"Please coordinate with the team regarding {vocab}.", ["Please", "coordinate", "with", "the", "team", "regarding", f"{vocab}."]),
-            (f"Let us schedule a meeting to discuss {vocab}.", ["Let", "us", "schedule", "a", "meeting", "to", "discuss", f"{vocab}."]),
-            (f"The project manager requires a report on {vocab}.", ["The", "project", "manager", "requires", "a", "report", "on", f"{vocab}."]),
-            (f"We need to analyze how {vocab} affects our budget.", ["We", "need", "to", "analyze", "how", vocab, "affects", "our", "budget."]),
-            (f"Can you confirm the timeline for {vocab} delivery?", ["Can", "you", "confirm", "the", "timeline", "for", vocab, "delivery?"]),
-            (f"This new initiative aligns with our {vocab} targets.", ["This", "new", "initiative", "aligns", "with", "our", vocab, "targets."]),
-            (f"They have decided to outsource our {vocab} management.", ["They", "have", "decided", "to", "outsource", "our", vocab, "management."]),
-            (f"We should focus on enhancing {vocab} in this quarter.", ["We", "should", "focus", "on", "enhancing", vocab, "in", "this", "quarter."])
-        ]
-        
-    for q_idx, (full_sentence, correct_order) in enumerate(templates):
-        if is_didactic:
-            if level.lower() == "toeic":
-                explanation = f"Sintaxis Certificación TOEIC: Construcción de oraciones profesionales de nivel avanzado. Domina la subordinación, cláusulas relativas y concordancia formal sobre '{vocab}'."
-            elif level_cat == "beginner":
-                explanation = f"Explicación sintáctica: En inglés, la oración inicia con Sujeto o palabra cortés ('I', 'We', 'Please'), seguido del verbo ('need', 'help', 'check') y el complemento que contiene el vocabulario clave '{vocab}'."
-            elif level_cat == "intermediate":
-                explanation = f"Análisis de estructura: Estructura de nivel intermedio con verbos modales ('must', 'should') o infinitivos de propósito ('to optimize'). Asegura cohesión formal sobre '{vocab}'."
-            else: # advanced
-                explanation = f"Sintaxis Ejecutiva Avanzada: Estructura compleja con nominalización arquetípica ('Strategic alignment', 'Regulatory compliance') y verbos de alto nivel directivo. Domina la formalidad sobre '{vocab}'."
-        else:
-            explanation = f"Correct word order is vital to communicate concepts related to '{vocab}' clearly."
-            
-        order_questions.append({
-            "id": f"{lesson_id}-q-order-{q_idx+1}",
-            "type": "order_sentence",
-            "question": f"Arrange the words to make a professional sentence about '{vocab}':" if not is_didactic else f"Ordena las palabras para formar una oración en inglés sobre '{vocab}':",
-            "parts": correct_order[::-1], # Shuffled
-            "correct_order": correct_order,
-            "explanation": explanation
-        })
-        
-    # 4. 5 Listening Questions
-    listening_questions = []
-    if is_didactic and level.lower() == "toeic":
-        listening_sentences = [
-            f"The committee will make a decision regarding the {vocab}.",
-            f"Could you please confirm the delivery date of the {vocab}?",
-            f"The new guidelines for {vocab} have already been implemented.",
-            f"Neither the manager nor the staff members approved the {vocab}.",
-            f"We are leveraging our strategic synergies to enhance {vocab}."
-        ]
-    elif is_didactic and level_cat == "beginner":
-        listening_sentences = [
-            f"Please show me the {vocab}.",
-            f"We have a meeting about {vocab} today.",
-            f"Can I use this {vocab} here?",
-            f"I see the {vocab} on your desk.",
-            f"Thank you for explaining {vocab}."
-        ]
-    else:
-        listening_sentences = [
-            f"Our primary objective is to discuss '{vocab}' in detail.",
-            f"Could you please clarify the status of '{vocab}'?",
-            f"We are committed to improving our '{vocab}' metrics.",
-            f"The client gave positive feedback about '{vocab}'.",
-            f"Let's align our schedule to focus on '{vocab}'."
-        ]
-        
-    for q_idx, text in enumerate(listening_sentences):
-        if is_didactic:
-            if level.lower() == "toeic":
-                explanation = f"Comprensión Auditiva TOEIC: Identificación y mapeo de audio profesional. Reconoce estructuras de voz pasiva, colocaciones complejas y concordancia verbal sobre '{vocab}'."
-            elif level_cat == "beginner":
-                explanation = f"Traducción didáctica: '{text}' significa una idea simple en la oficina en el nivel {level}. Escuchar con atención las palabras clave como '{vocab}' entrena tu oído de manera efectiva."
-            elif level_cat == "intermediate":
-                explanation = f"Comprensión de gestión: '{text}' se traduce como una solicitud u objetivo operativo del equipo. Desarrollar la atención auditiva para '{vocab}' optimiza la toma de decisiones en juntas."
-            else: # advanced
-                explanation = f"Comprensión estratégica: '{text}' expresa una directriz ejecutiva de alto impacto sobre '{vocab}'. La precisión auditiva es fundamental en negociaciones internacionales de nivel directivo."
-        else:
-            explanation = f"Listening accuracy ensures correct auditory comprehension of '{vocab}' in meetings."
-            
-        listening_questions.append({
-            "id": f"{lesson_id}-q-listening-{q_idx+1}",
-            "type": "listening_match",
-            "question": "Select exactly what you hear in the audio feed:" if not is_didactic else "Selecciona exactamente la frase en inglés que escuchas en el audio:",
-            "tts_text": text,
-            "options": [
-                text,
-                f"An alternative incorrect statement about '{vocab}'." if not is_didactic else f"Una frase incorrecta sobre '{vocab}' en inglés.",
-                "A generic business statement unrelated to the topic." if not is_didactic else "Una frase de oficina totalmente diferente."
-            ],
-            "correct_answer": text,
-            "explanation": explanation
-        })
-        
-    # 5. 5 Fill Input Questions
-    fill_questions = []
-    if is_didactic:
-        if level.lower() == "toeic":
-            spelling_part = vocab[:3] if len(vocab) >= 3 else vocab[:2]
-            blank_suffix = "_" * (len(vocab) - len(spelling_part))
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-1",
-                "type": "fill_input",
-                "question": f"Completa la ortografía del término examinado en TOEIC: '{spelling_part}{blank_suffix}' (Refiere a '{vocab}'):",
-                "correct_answers": [vocab, vocab.capitalize(), vocab.lower()],
-                "hints": [f"Empieza con '{spelling_part}'"],
-                "explanation": f"Escribir correctamente '{vocab}' asegura tu precisión ortográfica en la sección de redacción del TOEIC."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-2",
-                "type": "fill_input",
-                "question": f"Completa con la preposición/conjunción de contraste correcta: '_______ the high cost, the board approved the {vocab} plan.' (Despite / Although)",
-                "correct_answers": ["Despite", "despite"],
-                "hints": ["Preposición que significa 'a pesar de' y precede a un sustantivo."],
-                "explanation": "Gramática TOEIC: 'Despite' es una preposición y precede a una frase sustantiva ('the high cost'). 'Although' es una conjunción y requiere un sujeto y un verbo."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-3",
-                "type": "fill_input",
-                "question": f"Completa con la forma verbal correcta (Subjuntivo): 'The director demands that he _______ the {vocab} protocol.' (review / reviews / reviewed)",
-                "correct_answers": ["review"],
-                "hints": ["Estructura de subjuntivo demandada por 'demand that'."],
-                "explanation": "Gramática TOEIC: Tras verbos de demanda o mandato ('demand that', 'insist that', 'require that'), se utiliza el subjuntivo en inglés, que emplea la forma base del verbo ('review' en lugar de 'reviews')."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-4",
-                "type": "fill_input",
-                "question": f"Completa con el pronombre correcto: 'The board members solved the {vocab} issue by _______.' (themselves / their / them)",
-                "correct_answers": ["themselves"],
-                "hints": ["Pronombre reflexivo plural."],
-                "explanation": "Gramática TOEIC: Se usa el pronombre reflexivo 'themselves' para indicar que ellos mismos (el consejo) resolvieron el problema."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-5",
-                "type": "fill_input",
-                "question": f"Completa con el participio adjetival adecuado: 'The CEO was extremely _______ with the results of {vocab}.' (satisfied / satisfying)",
-                "correct_answers": ["satisfied"],
-                "hints": ["Participio pasivo que describe el estado emocional de una persona."],
-                "explanation": "Gramática TOEIC: Usamos 'satisfied' (satisfecho) para describir cómo se siente una persona. 'Satisfying' (satisfactorio) describiría la cualidad de una cosa."
-            })
-        elif level_cat == "beginner":
-            spelling_part = vocab[:3] if len(vocab) >= 3 else vocab[:2]
-            blank_suffix = "_" * (len(vocab) - len(spelling_part))
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-1",
-                "type": "fill_input",
-                "question": f"Completa la ortografía en inglés de la palabra clave: '{spelling_part}{blank_suffix}' (Refiere a '{vocab}'):",
-                "correct_answers": [vocab, vocab.capitalize(), vocab.lower()],
-                "hints": [f"Empieza con '{spelling_part}'"],
-                "explanation": f"Escribir correctamente '{vocab}' afianza tu memoria ortográfica. ¡Excelente práctica!"
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-2",
-                "type": "fill_input",
-                "question": f"Completa con la preposición correcta: 'The meeting about {vocab} is ____ Monday.' (on / at / in)",
-                "correct_answers": ["on"],
-                "hints": ["Usamos 'on' para días específicos de la semana."],
-                "explanation": "Regla gramatical: Con los días de la semana (Monday, Tuesday, etc.) siempre se utiliza la preposición 'on'."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-3",
-                "type": "fill_input",
-                "question": f"Completa el verbo básico: 'I ____ to check the {vocab} now.' (need / has / red)",
-                "correct_answers": ["need", "want"],
-                "hints": ["Significa 'necesitar' en inglés."],
-                "explanation": "El verbo de necesidad común en la oficina es 'need' seguido del infinitivo 'to check'."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-4",
-                "type": "fill_input",
-                "question": f"Completa con el artículo indefinido correcto: 'She has ____ new {vocab}.' (a / an)",
-                "correct_answers": ["a"],
-                "hints": ["Usamos 'a' antes de sonido consonántico ('new')."],
-                "explanation": "Regla gramatical: Como 'new' comienza con sonido consonántico, usamos el artículo indefinido 'a'."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-5",
-                "type": "fill_input",
-                "question": f"Completa con el pronombre posesivo: 'We love ____ office work and our {vocab}.' (our / us)",
-                "correct_answers": ["our"],
-                "hints": ["Significa 'nuestro' en inglés."],
-                "explanation": "El pronombre posesivo correspondiente a 'We' (nosotros) es 'our' (nuestro/a)."
-            })
-        elif level_cat == "intermediate":
-            spelling_part = vocab[:3] if len(vocab) >= 3 else vocab[:2]
-            blank_suffix = "_" * (len(vocab) - len(spelling_part))
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-1",
-                "type": "fill_input",
-                "question": f"Completa la ortografía en inglés del concepto operativo: '{spelling_part}{blank_suffix}' (Refiere a '{vocab}'):",
-                "correct_answers": [vocab, vocab.capitalize(), vocab.lower()],
-                "hints": [f"Empieza con '{spelling_part}'"],
-                "explanation": f"Escribir correctamente '{vocab}' afianza tu memoria ortográfica. ¡Excelente práctica!"
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-2",
-                "type": "fill_input",
-                "question": f"Completa con la preposición correcta para verbos corporativos: 'Our plans regarding {vocab} depend ____ team coordination.' (on / at)",
-                "correct_answers": ["on"],
-                "hints": ["El verbo 'depend' siempre requiere esta preposición para indicar dependencia."],
-                "explanation": "Regla gramatical de nivel intermedio: El verbo 'depend' se complementa invariablemente con la preposición 'on'."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-3",
-                "type": "fill_input",
-                "question": f"Completa con el verbo profesional: 'We must ____ our resources to support the {vocab} project.' (allocate / ignore)",
-                "correct_answers": ["allocate"],
-                "hints": ["Significa distribuir o asignar recursos estratégicamente."],
-                "explanation": "Vocabulario de gestión: 'allocate' es el verbo ejecutivo preciso para la asignación y distribución de presupuestos o recursos."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-4",
-                "type": "fill_input",
-                "question": f"Completa con el sustantivo correcto de oficina: 'The manager requested a detailed ____ on the {vocab} status.' (update / break)",
-                "correct_answers": ["update", "report"],
-                "hints": ["Significa informe de estado o actualización."],
-                "explanation": "Vocabulario de gestión: Solicitar un 'update' o 'report' es el estándar operativo para conocer el avance de una tarea."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-5",
-                "type": "fill_input",
-                "question": f"Completa con el adjetivo formal: 'Establishing a ____ framework for {vocab} is our top priority.' (robust / simple)",
-                "correct_answers": ["robust"],
-                "hints": ["Significa sólido, fuerte y resistente."],
-                "explanation": "Vocabulario de negocios: Un marco de trabajo 'robust' (sólido/robusto) garantiza que los procesos aguanten la escalabilidad corporativa."
-            })
-        else: # advanced (C1, C2)
-            spelling_part = vocab[:3] if len(vocab) >= 3 else vocab[:2]
-            blank_suffix = "_" * (len(vocab) - len(spelling_part))
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-1",
-                "type": "fill_input",
-                "question": f"Completa la ortografía del término estratégico avanzado: '{spelling_part}{blank_suffix}' (Refiere a '{vocab}'):",
-                "correct_answers": [vocab, vocab.capitalize(), vocab.lower()],
-                "hints": [f"Empieza con '{spelling_part}'"],
-                "explanation": f"Escribir correctamente '{vocab}' consolida tu precisión léxica directiva."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-2",
-                "type": "fill_input",
-                "question": f"Completa con la preposición correcta: 'The executive board expressed concerns ____ the implementation of {vocab}.' (about / to)",
-                "correct_answers": ["about", "over"],
-                "hints": ["Se utiliza para indicar preocupación o dudas con respecto a un tema corporativo."],
-                "explanation": "Regla gramatical avanzada: Expresar 'concern about' u 'over' es la fórmula retórica estándar para manifestar reservas en juntas de alto nivel."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-3",
-                "type": "fill_input",
-                "question": f"Completa con el verbo estratégico de nivel C: 'We aim to ____ key synergies to drive {vocab} forward.' (leverage / reduce)",
-                "correct_answers": ["leverage"],
-                "hints": ["Significa potenciar o apalancar recursos/sinergias al máximo."],
-                "explanation": "Vocabulario C-Suite: 'leverage' (apalancar/potenciar) es un verbo imprescindible que denota el uso óptimo de una ventaja competitiva."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-4",
-                "type": "fill_input",
-                "question": f"Completa con el sustantivo ejecutivo avanzado: 'This strategic initiative represents a major ____ shift in our {vocab} model.' (paradigm / delay)",
-                "correct_answers": ["paradigm"],
-                "hints": ["Significa un cambio fundamental en el modelo o enfoque de negocios."],
-                "explanation": "Vocabulario C-Suite: Un 'paradigm shift' (cambio de paradigma) es la terminología formal para indicar una transformación disruptiva."
-            })
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-5",
-                "type": "fill_input",
-                "question": f"Completa con el adjetivo ejecutivo: 'The legal team requires a ____ analysis of the {vocab} regulations.' (comprehensive / quick)",
-                "correct_answers": ["comprehensive", "thorough"],
-                "hints": ["Significa exhaustivo, completo y detallado."],
-                "explanation": "Vocabulario de negocios: Un análisis 'comprehensive' o 'thorough' (exhaustivo/detallado) garantiza la cobertura de todos los riesgos legales."
-            })
-    else:
-        for q_idx in range(1, 6):
-            fill_questions.append({
-                "id": f"{lesson_id}-q-fill-{q_idx}",
-                "type": "fill_input",
-                "question": f"Complete the sentence with the key vocabulary: 'The organization must focus on its primary ____ to succeed.' (Correct: {vocab})",
-                "correct_answers": [vocab, vocab.capitalize(), vocab.lower()],
-                "hints": [f"Starts with '{vocab[:2]}'"],
-                "explanation": f"This exercise tests your active spelling and contextual recall of '{vocab}'."
-            })
-        
-    # Assemble complete lesson
-    return {
-        "id": lesson_id,
-        "title": title,
-        "version": "3.0-PRO" if is_didactic else "2.0",
-        "level": level,
-        "total_xp": 300 if is_didactic else 100,
-        "tags": [level, "Dynamic", "Didactic" if is_didactic else "Production-Ready"],
-        "stages": [
-            theory_stage,
-            {
-                "id": "stg_quiz_choice",
+    model = genai.GenerativeModel(
+        model_name="gemini-1.5-flash",
+        system_instruction="You are an elite C-Level Executive English Curriculum Designer. You design flawless, highly professional JSON lessons for a corporate language app.",
+        generation_config={
+            "temperature": 0.5,
+            "top_p": 0.95,
+            "max_output_tokens": 8192,
+            "response_mime_type": "application/json"
+        }
+    )
+    
+    prompt = f"""
+    Create a highly professional interactive English lesson in JSON format.
+    
+    Lesson Details:
+    - ID: {lesson_id}
+    - Level: {level}
+    - Topic: {title} ({desc})
+    - Core Vocabulary Word: "{vocab}"
+    - Target UI Language for Explanations/Hints: {lang} (If 'es', write explanations in Spanish; if 'fr', French; if 'zh', Chinese; if 'en', English).
+    
+    Rules for the exercises:
+    1. Sentences MUST be grammatically perfect. Pay attention to whether "{vocab}" is a noun, verb, or adjective, and use it correctly.
+    2. Distractor options must look like realistic grammatical or corporate mistakes. DO NOT generate nonsensical distractors.
+    3. The English sentences must be highly professional and corporate, appropriate for the level {level}.
+    4. Explanations must strictly be in the target UI language '{lang}'.
+    5. Generate EXACTLY 10 quiz_choice, 10 order_sentence, 5 listening_match, and 5 fill_input questions.
+    
+    Output JSON Schema:
+    {{
+      "id": "{lesson_id}",
+      "title": "{title}",
+      "version": "4.0-AI",
+      "level": "{level}",
+      "total_xp": 300,
+      "tags": ["{level}", "Dynamic", "AI-Generated"],
+      "stages": [
+        {{
+          "id": "stg_theory",
+          "type": "lecture",
+          "title": "Theoretical Concept (translate to {lang})",
+          "parts": [
+            {{ "visual": "Text introducing the {vocab} and {title} in {lang}", "audio": "Welcome to the lesson... in English" }},
+            {{ "visual": "Grammar and usage tip in {lang}", "audio": "Please note how we use {vocab}... in English" }}
+          ]
+        }},
+        {{
+          "id": "stg_quiz_choice",
+          "type": "quiz_choice",
+          "title": "Interactive Quiz (translate to {lang})",
+          "description": "Select the correct response (translate to {lang})",
+          "questions": [
+             {{
+                "id": "{lesson_id}-q-choice-1",
                 "type": "quiz_choice",
-                "title": "Interactive Quizzes" if not is_didactic else "Cuestionario Interactivo",
-                "description": "Select the correct professional responses." if not is_didactic else "Selecciona las respuestas correctas en base a la teoría.",
-                "questions": choice_questions
-            },
-            {
-                "id": "stg_order_sentence",
+                "question": "A professional English question testing the usage of '{vocab}'. Can have a blank ____.",
+                "options": ["Correct Option", "Realistic Distractor 1", "Realistic Distractor 2", "Realistic Distractor 3"],
+                "correct_answer": "Correct Option",
+                "explanation": "Explanation of why it's correct in {lang}."
+             }}
+          ]
+        }},
+        {{
+          "id": "stg_order_sentence",
+          "type": "order_sentence",
+          "title": "Syntax Reconstruction (translate to {lang})",
+          "description": "Order the words to form a sentence (translate to {lang})",
+          "questions": [
+             {{
+                "id": "{lesson_id}-q-order-1",
                 "type": "order_sentence",
-                "title": "Syntax Reconstruction" if not is_didactic else "Estructura de Oraciones",
-                "description": "Order the words to build executive statements." if not is_didactic else "Ordena las palabras para formar frases corporativas simples.",
-                "questions": order_questions
-            },
-            {
-                "id": "stg_listening",
+                "question": "Arrange the words (translate to {lang}):",
+                "parts": ["randomized", "array", "of", "words"],
+                "correct_order": ["The", "correct", "ordered", "words"],
+                "explanation": "Syntax explanation in {lang}."
+             }}
+          ]
+        }},
+        {{
+          "id": "stg_listening",
+          "type": "listening_match",
+          "title": "Listening Comprehension (translate to {lang})",
+          "description": "Select the exact phrase you hear (translate to {lang})",
+          "questions": [
+             {{
+                "id": "{lesson_id}-q-listen-1",
                 "type": "listening_match",
-                "title": "Auditory Analysis" if not is_didactic else "Comprensión Auditiva",
-                "description": "Listen to the audio feed and identify key phrases." if not is_didactic else "Escucha con atención e identifica la frase exacta en inglés.",
-                "questions": listening_questions
-            },
-            {
-                "id": "stg_fill",
+                "question": "Select the exact phrase you hear (translate to {lang}):",
+                "tts_text": "A highly professional English sentence using '{vocab}'.",
+                "options": [
+                   "The exact sentence.",
+                   "A grammatically similar but incorrect sentence.",
+                   "Another realistic distractor."
+                ],
+                "correct_answer": "The exact sentence.",
+                "explanation": "Listening tip in {lang}."
+             }}
+          ]
+        }},
+        {{
+          "id": "stg_fill",
+          "type": "fill_input",
+          "title": "Vocabulary Mastery (translate to {lang})",
+          "description": "Type the missing word (translate to {lang})",
+          "questions": [
+             {{
+                "id": "{lesson_id}-q-fill-1",
                 "type": "fill_input",
-                "title": "Vocabulary Mastery" if not is_didactic else "Dominio de Vocabulario",
-                "description": "Complete the missing business terms." if not is_didactic else "Escribe las palabras correctas para completar las frases.",
-                "questions": fill_questions
-            }
-        ]
-    }
+                "question": "Complete the sentence: The team will ____ the new protocol tomorrow. (Translate instructions to {lang})",
+                "correct_answers": ["implement", "Implement"],
+                "hints": ["Hint in {lang}"],
+                "explanation": "Grammar explanation in {lang}."
+             }}
+          ]
+        }}
+      ]
+    }}
+    """
+    
+    try:
+        response = await model.generate_content_async(prompt)
+        return json.loads(response.text)
+    except Exception as e:
+        logger.error(f"Gemini AI generation failed: {e}")
+        return {
+            "id": lesson_id,
+            "title": f"Generation Error - {title}",
+            "version": "1.0",
+            "level": level,
+            "total_xp": 100,
+            "tags": ["Error"],
+            "stages": []
+        }
+

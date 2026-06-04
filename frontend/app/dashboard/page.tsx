@@ -986,12 +986,17 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <Link
                   href={`/lesson/toeic_listening`}
                   onClick={(e) => handleSimulatorClick(e, 'toeic_listening')}
-                  className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}
+                  className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group relative overflow-hidden`}
                 >
+                  {userTier !== 'executive' && (
+                    <div className="absolute top-0 right-0 bg-amber-100 text-amber-700 px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-amber-200 z-10 shadow-sm">
+                      <Lock size={8} /> EXECUTIVE
+                    </div>
+                  )}
                   <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Headphones size={18} /></div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-[9px] font-black text-sky-950 uppercase tracking-widest mb-0.5 truncate">TOEIC Listening</h4>
@@ -1011,8 +1016,13 @@ export default function DashboardPage() {
                 <Link
                   href={`/lesson/toeic_reading`}
                   onClick={(e) => handleSimulatorClick(e, 'toeic_reading')}
-                  className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}
+                  className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group relative overflow-hidden`}
                 >
+                  {userTier !== 'executive' && (
+                    <div className="absolute top-0 right-0 bg-amber-100 text-amber-700 px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-amber-200 z-10 shadow-sm">
+                      <Lock size={8} /> EXECUTIVE
+                    </div>
+                  )}
                   <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><BookOpen size={18} /></div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-[9px] font-black text-sky-950 uppercase tracking-widest mb-0.5 truncate">TOEIC Reading</h4>
@@ -1032,8 +1042,13 @@ export default function DashboardPage() {
                 <Link
                   href={`/lesson/toeic_mock`}
                   onClick={(e) => handleSimulatorClick(e, 'toeic_mock')}
-                  className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}
+                  className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group relative overflow-hidden`}
                 >
+                  {userTier !== 'executive' && (
+                    <div className="absolute top-0 right-0 bg-amber-100 text-amber-700 px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-amber-200 z-10 shadow-sm">
+                      <Lock size={8} /> EXECUTIVE
+                    </div>
+                  )}
                   <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Trophy size={18} /></div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-[9px] font-black text-sky-950 uppercase tracking-widest mb-0.5 truncate">Simulador TOEIC®</h4>
@@ -1053,8 +1068,13 @@ export default function DashboardPage() {
                 <Link
                   href={`/lesson/toefl_mock`}
                   onClick={(e) => handleSimulatorClick(e, 'toefl_mock')}
-                  className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}
+                  className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group relative overflow-hidden`}
                 >
+                  {userTier !== 'executive' && (
+                    <div className="absolute top-0 right-0 bg-amber-100 text-amber-700 px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-amber-200 z-10 shadow-sm">
+                      <Lock size={8} /> EXECUTIVE
+                    </div>
+                  )}
                   <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Award size={18} /></div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-[9px] font-black text-sky-950 uppercase tracking-widest mb-0.5 truncate">Simulador TOEFL®</h4>
@@ -1074,8 +1094,13 @@ export default function DashboardPage() {
                 <Link
                   href={`/lesson/ielts_mock`}
                   onClick={(e) => handleSimulatorClick(e, 'ielts_mock')}
-                  className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group`}
+                  className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group relative overflow-hidden`}
                 >
+                  {userTier !== 'executive' && (
+                    <div className="absolute top-0 right-0 bg-amber-100 text-amber-700 px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-amber-200 z-10 shadow-sm">
+                      <Lock size={8} /> EXECUTIVE
+                    </div>
+                  )}
                   <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Award size={18} /></div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-[9px] font-black text-sky-950 uppercase tracking-widest mb-0.5 truncate">Simulador IELTS®</h4>

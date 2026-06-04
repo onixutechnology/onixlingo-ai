@@ -337,7 +337,7 @@ export default function LessonRunnerEngine() {
     try {
       // Intentar reproducir voz ultra-realista mediante el backend
       const baseUrl = apiClient.defaults.baseURL || 'http://localhost:8000';
-      let audioUrl = `${baseUrl}/api/v1/ai/tts?text=${encodeURIComponent(text)}&lang=${speechLang}`;
+      let audioUrl = `${baseUrl}/ai/tts?text=${encodeURIComponent(text)}&lang=${speechLang}`;
       if (translateTo) {
         audioUrl += `&translate_to=${translateTo}`;
       }

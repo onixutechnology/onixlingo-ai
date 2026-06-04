@@ -53,7 +53,7 @@ class LessonContent(BaseModel):
 
 # --- 3. ENDPOINT MULTILENGUAJE CON SEGURIDAD ---
 @router.get("/{lesson_id}", response_model=LessonContent)
-def get_lesson_content(
+async def get_lesson_content(
     lesson_id: str = PathParam(..., title="ID de la lección"),
     lang: str = Query("en", description="Idioma de la lección (en, fr, zh)"),
     # 🔥 Identificamos al usuario que hace la petición
@@ -179,8 +179,18 @@ def get_lesson_content(
             clean_id = lesson_id.lower()
             is_standard = any(clean_id.startswith(lvl + "-") for lvl in ["a1", "a2", "b1", "b2", "c1", "c2", "toeic"])
             if clean_id in CATALOG or is_standard:
-                logger.info(f"✨ Generando lección {lesson_id} dinámicamente sobre la marcha.")
-                dynamic_data = generate_dynamic_lesson(lesson_id)
+                logger.info(f"✨ Generando lección {lesson_id} en {lang} dinámicamente sobre la marcha.")
+                dynamic_data = await generate_dynamic_lesson(lesson_id, lang=lang)
+                
+                # 🔥 LOCAL CACHING: Save it to target_file to avoid re-generating
+                try:
+                    target_file.parent.mkdir(parents=True, exist_ok=True)
+                    with open(target_file, "w", encoding="utf-8") as f:
+                        json.dump(dynamic_data, f, ensure_ascii=False, indent=2)
+                    logger.info(f"💾 Lección {lesson_id} guardada en caché local: {target_file}")
+                except Exception as cache_err:
+                    logger.warning(f"⚠️ No se pudo guardar caché para {lesson_id}: {cache_err}")
+                
                 return LessonContent(**dynamic_data)
         except Exception as dy_err:
             logger.error(f"🔥 Error al generar lección dinámicamente: {dy_err}")
