@@ -6,7 +6,7 @@ let RAW_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.co
 
 // Autodetección para usar el backend local si el frontend corre en localhost
 if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
-    RAW_URL = 'http://127.0.0.1:8001/api/v1';
+    RAW_URL = 'http://127.0.0.1:8000/api/v1';
 }
 
 const BASE_URL = RAW_URL.endsWith('/api/v1') ? RAW_URL : `${RAW_URL.replace(/\/$/, '')}/api/v1`;

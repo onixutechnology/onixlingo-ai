@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 export default function PwaInstallPrompt() {
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [showPrompt, setShowPrompt] = useState(false);
+  const [hasInitiallyShown, setHasInitiallyShown] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -23,21 +24,29 @@ export default function PwaInstallPrompt() {
   }, []);
 
   useEffect(() => {
-    // Only show if we have the install event available
     if (!deferredPrompt) return;
 
     const token = Cookies.get("access_token");
     const isAuthPage = pathname?.includes('/login') || pathname?.includes('/register');
 
-    // Show after login (when token exists and not on auth pages)
-    if (token && !isAuthPage) {
-      // Small delay for a better user experience after page load
-      const timer = setTimeout(() => setShowPrompt(true), 2000);
-      return () => clearTimeout(timer);
-    } else {
+    if (!token || isAuthPage) {
       setShowPrompt(false);
+      return;
     }
-  }, [deferredPrompt, pathname]);
+
+    if (!hasInitiallyShown) {
+      // Mostrar por primera vez después de 2 segundos
+      const timer = setTimeout(() => {
+        setShowPrompt(true);
+        setHasInitiallyShown(true);
+      }, 2000);
+      return () => clearTimeout(timer);
+    } else if (!showPrompt) {
+      // Reaparecer cada 3 minutos (180000 ms) si está cerrado
+      const timer = setTimeout(() => setShowPrompt(true), 180000);
+      return () => clearTimeout(timer);
+    }
+  }, [deferredPrompt, pathname, showPrompt, hasInitiallyShown]);
 
   if (!showPrompt) return null;
 
@@ -59,27 +68,27 @@ export default function PwaInstallPrompt() {
   };
 
   return (
-    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-[100] w-[90%] max-w-md bg-slate-900 border border-teal-500/50 rounded-xl shadow-2xl p-4 flex flex-col sm:flex-row items-center gap-4 text-white animate-in slide-in-from-bottom-10 fade-in duration-500">
-      <div className="bg-teal-500/20 p-3 rounded-full text-teal-400 shrink-0">
-        <Download size={24} />
+    <div className="fixed bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 sm:left-auto sm:right-6 sm:translate-x-0 z-[100] w-[90%] max-w-[340px] bg-white border border-gray-200 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-3 flex flex-row items-center gap-3 text-slate-800 animate-in slide-in-from-bottom-10 fade-in duration-500">
+      <div className="bg-teal-50 text-teal-600 p-2.5 rounded-xl shrink-0">
+        <Download size={20} strokeWidth={2.5} />
       </div>
-      <div className="flex-1 text-center sm:text-left">
-        <h4 className="font-bold text-sm sm:text-base text-teal-50">¡Lleva OnixLingo contigo!</h4>
-        <p className="text-xs sm:text-sm text-slate-300 mt-1">Instala nuestra aplicación y vive la experiencia profesional desde tu escritorio o móvil.</p>
+      <div className="flex-1 text-left">
+        <h4 className="font-bold text-sm text-slate-900 tracking-tight">¡Lleva OnixLingo contigo!</h4>
+        <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">Instala la app y úsala directo desde tu inicio.</p>
       </div>
-      <div className="flex gap-2 mt-3 sm:mt-0 w-full sm:w-auto">
+      <div className="flex gap-1.5 shrink-0 items-center">
         <button 
           onClick={handleInstall}
-          className="flex-1 sm:flex-none bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-teal-500/20 active:scale-95"
+          className="bg-teal-600 hover:bg-teal-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all shadow-sm active:scale-95"
         >
           Instalar
         </button>
         <button 
           onClick={() => setShowPrompt(false)}
-          className="bg-slate-800 hover:bg-slate-700 p-2.5 rounded-lg text-slate-400 transition-colors active:scale-95"
+          className="hover:bg-gray-100 p-1.5 rounded-lg text-gray-400 hover:text-gray-600 transition-colors active:scale-95"
           aria-label="Cerrar"
         >
-          <X size={20} />
+          <X size={16} strokeWidth={2.5} />
         </button>
       </div>
     </div>

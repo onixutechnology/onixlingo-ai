@@ -760,7 +760,13 @@ export default function VocabularyPage() {
                 })}
               </div>
 
-              <div className="flex justify-end gap-3 border-t border-orange-100 pt-4">
+              <div className="flex justify-between items-center gap-3 border-t border-orange-100 pt-4">
+                <button
+                  onClick={() => router.push('/dashboard')}
+                  className="px-4 py-2 border border-orange-200 hover:border-orange-600 hover:bg-orange-50 text-orange-800 text-[9px] font-black uppercase tracking-widest transition-all rounded-xl active:scale-[0.98]"
+                >
+                  Regresar al Dashboard
+                </button>
                 <button
                   onClick={() => setShowLangModal(false)}
                   className="px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white text-[9px] font-black uppercase tracking-widest transition-all rounded-xl active:scale-[0.98]"

@@ -78,16 +78,30 @@ def get_lesson_content(
 
     if not is_admin:
         if user_tier == "free":
+            is_free_vocab = False
+            if "_mod_" in lesson_id:
+                try:
+                    mod_str = lesson_id.split("_mod_")[1].split("-")[0]
+                    mod_num = int(mod_str)
+                    if mod_num <= 18:
+                        is_free_vocab = True
+                except Exception:
+                    pass
+
             is_free_lesson = (
                 lesson_id.startswith("a-") or 
+                lesson_id.startswith("a1-") or 
+                lesson_id.startswith("a2-") or 
                 lesson_id.startswith("fr-a1-") or 
-                lesson_id.startswith("zh-a-")
+                lesson_id.startswith("fr-a2-") or 
+                lesson_id.startswith("zh-a-") or
+                is_free_vocab
             )
             if not is_free_lesson:
                 logger.warning(f"🔒 Acceso denegado a lección {lesson_id} para usuario Free: {current_user.username}")
                 raise HTTPException(
                     status_code=status.HTTP_403_FORBIDDEN,
-                    detail="El plan Free solo incluye acceso a lecciones del nivel A1. Sube a PRO o EXECUTIVE para desbloquear todos los niveles."
+                    detail="El plan Free solo incluye acceso a los primeros 18 módulos. Sube a PRO o EXECUTIVE para desbloquear todos los niveles."
                 )
         elif user_tier == "pro":
             if lesson_id.startswith("pro-"):
