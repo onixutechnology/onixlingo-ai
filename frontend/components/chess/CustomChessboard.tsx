@@ -13,9 +13,10 @@ interface CustomChessboardProps {
 
 // Usamos símbolos rellenos sólidos (los de tipo 'black') para ambas piezas.
 // Así podemos colorearlas uniformemente como Ivory y Ebony.
+// El sufijo \uFE0E fuerza a Windows/iOS a renderizarlos como texto y no como emojis morados.
 const PIECE_SYMBOLS: Record<string, string> = {
-  wP: '♟', wN: '♞', wB: '♝', wR: '♜', wQ: '♛', wK: '♚',
-  bP: '♟', bN: '♞', bB: '♝', bR: '♜', bQ: '♛', bK: '♚'
+  wP: '♟\uFE0E', wN: '♞\uFE0E', wB: '♝\uFE0E', wR: '♜\uFE0E', wQ: '♛\uFE0E', wK: '♚\uFE0E',
+  bP: '♟\uFE0E', bN: '♞\uFE0E', bB: '♝\uFE0E', bR: '♜\uFE0E', bQ: '♛\uFE0E', bK: '♚\uFE0E'
 };
 
 export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint }: CustomChessboardProps) {

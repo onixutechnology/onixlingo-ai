@@ -15,6 +15,7 @@ import {
   Layers, Swords, Lock, Star, ChevronRight, Play, Loader2, Brain,
   ChevronDown, Sparkles, Award
 } from 'lucide-react';
+import { BASE_MODULES, LOGICAL_MODULES, CHESS_LEVELS } from './chess-data';
 import apiClient from '@/lib/apiClient';
 import { useAuthStore } from '@/store/useAuthStore';
 import { useUIStore } from '@/store/uiStore';
@@ -23,99 +24,7 @@ import PracticeReminderWidget from '@/components/dashboard/PracticeReminderWidge
 
 const CHESS_ICONS = [Shield, Zap, Crown, Target, Layers, Swords, Flame];
 
-const BASE_MODULES = [
-  // 1-6. Fundamentos
-  { id: 'm-king', title: 'Fundamentos: El Rey', desc: 'Reglas, movimientos y seguridad del Rey.' },
-  { id: 'm-queen', title: 'Fundamentos: La Dama', desc: 'El poder absoluto de la Dama en la arena.' },
-  { id: 'm-rook', title: 'Fundamentos: La Torre', desc: 'Columnas abiertas y control de filas.' },
-  { id: 'm-bishop', title: 'Fundamentos: El Alfil', desc: 'Diagonales de largo alcance.' },
-  { id: 'm-knight', title: 'Fundamentos: El Caballo', desc: 'El salto táctico del Caballo.' },
-  { id: 'm-pawn', title: 'Fundamentos: El Peón', desc: 'Promoción, paso y cadenas de peones.' },
-  
-  // 7-26. Táctica (10 Originales + 10 Nuevos)
-  { id: 't-fork', title: 'Táctica: El Ataque Doble', desc: 'Ataques dobles de caballo, peón y dama.' },
-  { id: 't-pin', title: 'Táctica: La Clavada', desc: 'Clavadas absolutas y relativas.' },
-  { id: 't-skew', title: 'Táctica: La Enfilada', desc: 'Ataques a través de piezas valiosas.' },
-  { id: 't-disc', title: 'Táctica: Descubierta', desc: 'Jaque y ataques a la descubierta.' },
-  { id: 't-double', title: 'Táctica: Jaque Doble', desc: 'Fuerza extrema del jaque doble.' },
-  { id: 't-deflect', title: 'Táctica: Desviación', desc: 'Desvía los defensores clave.' },
-  { id: 't-attract', title: 'Táctica: Atracción', desc: 'Atrae piezas a casillas fatales.' },
-  { id: 't-block', title: 'Táctica: Interrupción', desc: 'Bloquea líneas de defensa.' },
-  { id: 't-clear', title: 'Táctica: Despeje de Casilla', desc: 'Abre paso a tus piezas clave.' },
-  { id: 't-interpose', title: 'Táctica: Interposición', desc: 'Coloca obstáculos intermedios.' },
-  { id: 't-desperado', title: 'Táctica: El Recurso Desperado', desc: 'Sacrifica una pieza condenada a cambio de un mayor valor.' },
-  { id: 't-xray', title: 'Táctica: Ataque de Rayos X', desc: 'Influencia de piezas de largo alcance a través de barreras.' },
-  { id: 't-overload', title: 'Táctica: Sobrecarga Defensiva', desc: 'Satura las tareas de defensa de una pieza enemiga.' },
-  { id: 't-windmill', title: 'Táctica: El Molino de Viento', desc: 'Jaques descubiertos sucesivos y capturas masivas.' },
-  { id: 't-zwischenzug', title: 'Táctica: Movimiento Intermedio', desc: 'Intercala una amenaza inesperada antes de retomar.' },
-  { id: 't-interference', title: 'Táctica: Interferencia de Líneas', desc: 'Corta los canales de comunicación de las piezas enemigas.' },
-  { id: 't-undermining', title: 'Táctica: Socavamiento del Soporte', desc: 'Destruye los cimientos que anclan la defensa rival.' },
-  { id: 't-backrank-adv', title: 'Táctica: Fila Trasera Avanzada', desc: 'Explotación compleja de la debilidad en la octava fila.' },
-  { id: 't-pos-sacrifice', title: 'Táctica: Sacrificio Posicional', desc: 'Entrega material a cambio de control a largo plazo.' },
-  { id: 't-desperado-queen', title: 'Táctica: Dama Desperado', desc: 'Sacrificio supremo de la Dama para forzar tablas o contrajuego.' },
 
-  // 27-43. Patrones de Mate (7 Originales + 10 Nuevos)
-  { id: 'mate-corridor', title: 'Patrones: Mate de Pasillo', desc: 'Aprovecha la debilidad de la octava fila.' },
-  { id: 'mate-smothered', title: 'Patrones: Mate de la Coz', desc: 'Encierra al Rey con su propia armada.' },
-  { id: 'mate-anastasia', title: 'Patrones: Mate de Anastasia', desc: 'Torre y caballo acorralan al rey.' },
-  { id: 'mate-boden', title: 'Patrones: Mate de Boden', desc: 'Dos alfiles cruzando diagonales.' },
-  { id: 'mate-blackburne', title: 'Patrones: Mate de Blackburne', desc: 'Ataque coordinado de caballo y alfiles.' },
-  { id: 'mate-lolli', title: 'Patrones: Mate de Lolli', desc: 'Penetración con peón en f6.' },
-  { id: 'mate-arabian', title: 'Patrones: Mate Árabe', desc: 'Coordinación ancestral de caballo y torre.' },
-  { id: 'mate-damiano', title: 'Patrones: Mate de Damiano', desc: 'Infiltración letal de dama apoyada por peón o alfil.' },
-  { id: 'mate-greco', title: 'Patrones: Mate de Greco', desc: 'Ataque al flanco con alfil en la diagonal letal.' },
-  { id: 'mate-legal', title: 'Patrones: Mate de Légal', desc: 'Sacrificio de dama para dar un mate veloz con piezas menores.' },
-  { id: 'mate-morphy', title: 'Patrones: Mate de Morphy', desc: 'Combinación destructiva de torre y alfil contra rey enrocado.' },
-  { id: 'mate-reti', title: 'Patrones: Mate de Réti', desc: 'Encierro prematuro del rey mediante alfil y piezas aliadas.' },
-  { id: 'mate-pillsbury', title: 'Patrones: Mate de Pillsbury', desc: 'Coordinación letal de torre y alfil barriendo la columna g.' },
-  { id: 'mate-fool', title: 'Patrones: Mate del Loco', desc: 'El mate más rápido en la historia de la apertura.' },
-  { id: 'mate-scholar', title: 'Patrones: Mate del Pastor', desc: 'Ataque relámpago a la debilidad del peón de f7.' },
-  { id: 'mate-smothered-adv', title: 'Patrones: Mate de la Coz Avanzado', desc: 'Asfixia compleja combinando sacrificios forzados.' },
-  { id: 'mate-double-bishop', title: 'Patrones: Mate de Alfiles Cruzados', desc: 'Dominio de diagonales paralelas cruzando el tablero.' },
-
-  // 44-63. Apertura (5 Originales + 15 Nuevos)
-  { id: 'op-center', title: 'Apertura: El Centro', desc: 'Principios de ocupación y control central.' },
-  { id: 'op-king-gambit', title: 'Apertura: Gambito de Rey', desc: 'Ataques rápidos al flanco de rey.' },
-  { id: 'op-sicilian', title: 'Apertura: Defensa Siciliana', desc: 'Contratante lucha asimétrica.' },
-  { id: 'op-ruy-lopez', title: 'Apertura: Ruy López', desc: 'Desarrollo clásico del alfil español.' },
-  { id: 'op-french', title: 'Apertura: Defensa Francesa', desc: 'Fortificaciones sólidas de peones.' },
-  { id: 'op-carokann', title: 'Apertura: Defensa Caro-Kann', desc: 'Estructura asimétrica y segura contra peón de rey.' },
-  { id: 'op-scandinavian', title: 'Apertura: Defensa Escandinava', desc: 'Ruptura central directa e inmediata desde la jugada 1.' },
-  { id: 'op-slav', title: 'Apertura: Defensa Eslava', desc: 'Soporte robusto al centro en el Gambito de Dama.' },
-  { id: 'op-gruenfeld', title: 'Apertura: Defensa Grünfeld', desc: 'Contrataque dinámico e hipermoderno contra el centro blanco.' },
-  { id: 'op-kings-indian', title: 'Apertura: Defensa India de Rey', desc: 'Fianchetto defensivo para lanzar un asalto lateral tardío.' },
-  { id: 'op-nimzo', title: 'Apertura: Defensa Nimzoindia', desc: 'Clavada posicional y control indirecto del centro.' },
-  { id: 'op-qga', title: 'Apertura: Gambito de Dama Aceptado', desc: 'Captura del peón lateral para ganar dinamismo.' },
-  { id: 'op-qgd', title: 'Apertura: Gambito de Dama Rehusado', desc: 'Lucha de trincheras clásica por el control posicional.' },
-  { id: 'op-catalan', title: 'Apertura: Apertura Catalana', desc: 'Combinación de fianchetto y presión central posicional.' },
-  { id: 'op-london', title: 'Apertura: El Sistema Londres', desc: 'Esquema universal robusto y flexible para blancas.' },
-  { id: 'op-english', title: 'Apertura: Apertura Inglesa', desc: 'Control lateral e hipermoderno del espacio con 1.c4.' },
-  { id: 'op-alekhine', title: 'Apertura: Defensa Alekhine', desc: 'Provoca el avance de los peones blancos para socavarlos.' },
-  { id: 'op-pirc', title: 'Apertura: Defensa Pirc', desc: 'Estructura flexible para contraatacar el centro de rey.' },
-  { id: 'op-bird', title: 'Apertura: Apertura Bird', desc: 'Ataque de flanco agresivo con la columna f abierta.' },
-  { id: 'op-benoni', title: 'Apertura: Defensa Benoni', desc: 'Lucha asimétrica y aguda de peón cerrado.' },
-
-  // 64-75. Estrategia (2 Originales + 10 Nuevos)
-  { id: 'str-pawns', title: 'Estrategia: Estructura de Peones', desc: 'Peones doblados, aislados y pasados.' },
-  { id: 'str-outpost', title: 'Estrategia: Puestos Avanzados', desc: 'Establece caballos inexpugnables.' },
-  { id: 'str-passed-pawn', title: 'Estrategia: Peón Pasado Protegido', desc: 'Creación y defensa del peón pasado hacia la victoria.' },
-  { id: 'str-weak-squares', title: 'Estrategia: Casillas Débiles', desc: 'Infiltración en los agujeros de la posición enemiga.' },
-  { id: 'str-bad-bishop', title: 'Estrategia: Alfil Bueno vs Alfil Malo', desc: 'Optimiza tus alfiles según las cadenas de peones.' },
-  { id: 'str-bishop-pair', title: 'Estrategia: Pareja de Alfiles', desc: 'Explotación del poder de los dos alfiles en posiciones abiertas.' },
-  { id: 'str-semiopen-file', title: 'Estrategia: Columnas Semiabiertas', desc: 'Presión constante sobre peones enemigos retrasados.' },
-  { id: 'str-queenside-maj', title: 'Estrategia: Mayoría en Flanco de Dama', desc: 'Creación de peones pasados alejados del rey.' },
-  { id: 'str-carlsbad', title: 'Estrategia: Estructura Carlsbad', desc: 'Planes estratégicos clásicos con peón de dama y ataque de minorías.' },
-  { id: 'str-prophylaxis', title: 'Estrategia: Pensamiento Profiláctico', desc: 'Prevención estricta de las amenazas del rival antes de que ocurran.' },
-  { id: 'str-isolated-pawn', title: 'Estrategia: Peón de Dama Aislado', desc: 'Dinámica de ataque activo contra debilidad estática.' },
-  { id: 'str-pawn-chain', title: 'Estrategia: Cadenas de Peones', desc: 'Ataque a la base y ruptura de cadenas cerradas.' },
-
-  // 76-80. Finales (5 Nuevos)
-  { id: 'end-opposition', title: 'Finales: La Oposición de Reyes', desc: 'Toma el control de casillas clave mediante la oposición directa.' },
-  { id: 'end-square', title: 'Finales: La Regla del Cuadrado', desc: 'Cálculo geométrico veloz para la persecución de peones.' },
-  { id: 'end-lucena', title: 'Finales: La Posición de Lucena', desc: 'Construcción del puente de torre para coronar peones.' },
-  { id: 'end-philidor', title: 'Finales: La Posición de Philidor', desc: 'Establecimiento del muro defensivo para forzar tablas.' },
-  { id: 'end-triangulation', title: 'Finales: Triangulación de Rey', desc: 'Maniobra de rey para ceder el turno al oponente y ganar espacio.' }
-];
 
 const COLORS = [
   'from-blue-500 to-indigo-600',
@@ -128,254 +37,26 @@ const COLORS = [
 ];
 
 // DATASETS DE TÉRMINOS REALES Y EXCLUSIVOS PARA GARANTIZAR NO REPETICIÓN
-const lvl1Terms = [
-  "Coordinación de Alfil y Dama", "Seguridad del Enroque Corto", "Control del Centro del Tablero",
-  "Estructura de Peones Inicial", "Desarrollo de Piezas Menores", "El Valor Relativo del Material",
-  "Mates de Pasillo Elementales", "Clavadas Básicas de Alfil", "Ataques Dobles de Peón",
-  "Aperturas Clásicas Italianas", "Reglas del Enroque Largo", "El Peón Pasado en Acción",
-  "Stalemate y Tablas por Ahogado", "Triple Repetición de Posición", "Ajedrez por Correspondencia",
-  "Columnas Abiertas para Principiantes", "Diagonales Libres para Alfil", "Casillas Fuertes y Puestos Avanzados",
-  "La Ventaja de Desarrollo Rápido", "Evitar Pérdidas de Turno Tempranas", "Captura al Paso Posicional",
-  "Protección del Caballo Centralizado", "El Doble Ataque de la Dama", "Mate del Pastor Defensivo",
-  "Prevención de Clavadas en g5/g4", "Interposición de Piezas Menores", "El Rey Activo en el Medio Juego",
-  "La Fuerza de las Torres Duplicadas", "Estrategia del Enroque Opuesto", "La Cadena de Peones en f7/g7/h7",
-  "Control del Espacio del Flanco", "La Pareja de Alfiles Básica", "Peón Retrasado como Debilidad",
-  "Ataques de Mate en h7", "Defensa de la Primera Fila", "Maniobra de Caballo en d2-f3",
-  "Alfil del Fianchetto Activo", "Presión en la Séptima Fila", "Apertura Española Moderna",
-  "Defensa Siciliana Abierta", "Gambito de Dama Declinado", "Defensa Caro-Kann Sólida",
-  "El Caballo en la Banda del Tablero", "Soporte de Peones Conectados", "Seguridad de la Dama Expuesta",
-  "Ataques de Descubierta Simples", "Enfiladas Cruzadas en Flanco", "Molino de Viento Básico",
-  "Zugzwang Posicional Elemental", "Profilaxis ante Avances de Peón", "Interferencia Física de Peones",
-  "Socavamiento de Peón de d4", "Mate de la Coz Elemental", "Mate de Anastasia Básico",
-  "Mate de Boden Cruzado", "Mate de Blackburne Coordinado", "Mate de Lolli f6",
-  "Mate Árabe Ancestral", "Apertura Escandinava Central", "Defensa Francesa Clásica",
-  "Peón Pasado Protegido Básico", "Casillas Débiles en el Enroque", "Alfil Bueno contra Malo Inicial",
-  "Pareja de Alfiles Abierta", "Columnas Semiabiertas de Torre", "Mayoría en Flanco de Dama",
-  "Estructura Carlsbad Inicial", "Ajedrez a la Ciega Elemental", "Toma de Decisiones bajo Reloj",
-  "Oposición de Reyes Básica"
-];
-
-const lvl2Terms = [
-  "Molino de Viento con Jaque Doble", "Sacrificio de Desvío Temático", "Atracción al Rey Enrocado",
-  "Interferencia en Columnas Abiertas", "Despeje de Casilla para Caballo", "Clavadas Absolutas en e-file",
-  "Rayos X sobre la Dama", "El Recurso Desperado de Torre", "Mate de la Coz con Sacrificio",
-  "Mate de Anastasia en g-file", "Mate de Boden con Sacrificio de Dama", "Mate de Blackburne Cruzado",
-  "Mate de Lolli con Dama en g7", "Mate Árabe de Caballo y Torre", "Mate de Damiano con Peón en f6",
-  "Mate de Greco en Diagonal Abierta", "Mate de Légal con Pseudo-Sacrificio", "Mate de Morphy en Columna Abierta",
-  "Mate de Réti Centralizado", "Mate de Pillsbury en g7", "Mate del Pastor Avanzado",
-  "Mate del Loco en Diagonal Letal", "Mate de la Coz Doble", "Mate de Alfiles Cruzados Letal",
-  "Ataques Dobles de Dama y Caballo", "Clavadas Complejas de Torres", "Enfiladas Cruzadas de Alfil",
-  "Descubiertas con Ganancia de Dama", "Jaques Dobles Destructivos", "Desvío Defensivo del Alfil",
-  "Atracción en la Octava Fila", "Interposición de Torres en f4", "Despeje de Diagonal para Alfil",
-  "Interposición de Caballo Defensor", "El Desperado de Alfil Condenado", "Rayos X de Torre y Dama",
-  "Sobrecarga del Caballo Defensor", "Molinos Sucesivos de Dos Torres", "Zwischenzug con Jaque Intermedio",
-  "Interferencia de Alfil en c6", "Socavamiento de la Estructura de f3", "Mate de la Coz por Desvío",
-  "Ataques Dobles de Peón en e5", "Clavadas Relativas del Caballo", "Enfiladas de Dama en el Centro",
-  "Descubierta de Torre con Jaque", "Jaque Doble de Caballo y Alfil", "Desvío del Rey de la Casilla f7",
-  "Atracción de Dama a Casilla g8", "Interposición de Peón en d5", "Despeje de Casilla para Alfil",
-  "Interposición de Alfil en e2", "El Desperado de Caballo Perdido", "Rayos X sobre el Rey Enrocado",
-  "Sobrecarga de la Dama Defensora", "Molino de Viento en g7/f7", "Zwischenzug con Amenaza de Mate",
-  "Interferencia de Dama en b7", "Socavamiento del Caballo en c3", "Mate de la Coz con Dama Kamikaze",
-  "Ataques Dobles de Alfil y Caballo", "Clavadas en la Diagonal Corta", "Enfiladas en la Octava Fila",
-  "Descubiertas de Alfil con Jaque", "Jaque Doble con Torre y Alfil", "Desvío de la Torre Defensora Lateral",
-  "Atracción de Rey al Centro del Tablero", "Interposición de Caballo en d4", "Despeje de Línea para Torre",
-  "Interposición de Peón en f5", "El Desperado de Dama Acabada", "Rayos X Cruzados de Dos Alfiles",
-  "Sobrecarga del Alfil de Casillas Blancas", "Molino de Viento de Torre y Caballo", "Zwischenzug de Captura Intermedia",
-  "Interferencia en la Diagonal Central", "Socavamiento de Peones Conectados", "Mate de la Coz en d8",
-  "Ataques Dobles de Torre y Alfil", "Clavadas en la Diagonal de Casillas Negras"
-];
-
-const lvl3Terms = [
-  "Defensa Siciliana Dragón Acelerado", "Defensa Francesa Tarrasch", "Ruy López Berlín Posicional",
-  "Caro-Kann de Avance Aguda", "Gambito de Dama Rehusado Ortodoxo", "Defensa Grünfeld del Cambio",
-  "Defensa India de Rey Sämisch", "Sistema Londres con e3 y Ad3", "Apertura Inglesa Symmetrical",
-  "Defensa Nimzoindia Clásica", "Gambito de Dama Aceptado Moderno", "Defensa Semi-Eslava Merano",
-  "Defensa Eslava Clásica", "Defensa India de Dama Posicional", "Defensa Holandesa Stonewall",
-  "Apertura Catalana Abierta", "Apertura Réti Clásica", "Apertura Bird de Ataque",
-  "Defensa Benoni Moderna", "Gambito Volga con b5", "Ataque Trompowsky 2.Ag5",
-  "Gambito Budapest Agudo", "Defensa Alekhine de Avance", "Defensa Pirc Ataque Austriaco",
-  "Trampa de Noah's Ark Ruy López", "Trampa del Légal Italiana", "Trampa del Elefante Gambito de Dama",
-  "Trampa de la Caña de Pescar", "Transposiciones de Siciliana a Francesa", "Orden de Jugadas en la Caro-Kann",
-  "Control de Transposiciones en la Eslava", "Evitar el Ataque Fegatello", "Trampa Siberiana Gambito Morra",
-  "Contrarrestar el Ataque Grob 1.g4", "Trampa del Gambito Englund", "Prevención de Ataques de Dama Rápidos",
-  "Defensa Siciliana Najdorf", "Defensa Siciliana Scheveningen", "Defensa Siciliana Paulsen",
-  "Defensa Siciliana Kan", "Defensa Siciliana Taimanov", "Defensa Siciliana Alapin",
-  "Defensa Siciliana Cerrada", "Defensa Siciliana Grand Prix", "Defensa Francesa Winawer",
-  "Defensa Francesa de Avance", "Defensa Francesa Rubinstein", "Defensa Francesa MacCutcheon",
-  "Ruy López Variación de Cambio", "Ruy López Variación Abierta", "Ruy López Variación Cerrada",
-  "Ruy López Variación Marshall", "Ruy López Defensa Steinitz", "Apertura Italiana Evans Gambit",
-  "Apertura Italiana Giuoco Piano", "Gambito de Rey Aceptado Muzio", "Gambito de Rey Rehusado Falkbeer",
-  "Defensa Petroff Sólida", "Defensa de los Dos Caballos Fegatello", "Defensa Philidor Anticuada",
-  "Apertura Escocesa Clásica", "Apertura de los Cuatro Caballos Central", "Gambito Morra Aceptado",
-  "Defensa Siciliana Dragón Variación Yugoslavia", "Defensa Francesa Clásica Steinitz", "Defensa Caro-Kann Clásica",
-  "Defensa Caro-Kann Variación del Cambio", "Defensa Escandinava de Dama Retirada", "Defensa Escandinava con Cf6",
-  "Defensa Eslava Variación del Cambio", "Defensa Semi-Eslava Variación Botvinnik", "Defensa Grünfeld con Af4",
-  "Defensa India de Rey Variación Clásica", "Defensa India de Rey Variación de Cuatro Peones", "Defensa Nimzoindia Variación Rubinstein",
-  "Defensa Nimzoindia Variación Kmoch", "Defensa India de Dama Variación Fianchetto", "Apertura Catalana Cerrada",
-  "Sistema Colle-Koltanowski Central", "Ataque Torre Posicional", "Apertura Inglesa Variación Siciliana Invertida",
-  "Apertura Inglesa de Doble Fianchetto", "Apertura Réti de Doble Fianchetto", "Apertura Bird Estructuras Holandesas Invertidas",
-  "Defensa Benoni Cerrada"
-];
-
-const lvl4Terms = [
-  "Peón de Dama Aislado Dinámico", "Ataque de Minorías Carlsbad", "Profilaxis al Estilo Petrosian",
-  "Pareja de Alfiles en Finales Abiertos", "Finales de Torre y Peón de Lucena", "Defensa de Philidor Sólida",
-  "Triangulación de Rey en e5", "Zugzwang Corporativo de Mercado", "El Gambito de Marca Corporativo",
-  "La Fortaleza de Peones C-Suite", "Iniciativa y Gestión del Riesgo", "Evaluación Estática del Portafolio",
-  "Pensamiento Esquemático Posicional", "Toma de Decisiones bajo Presión de Tiempo", "Ajedrez a la Ciega C-Suite",
-  "Simetría Competitiva en el Tablero", "El Arte de la Defensa de Recursos", "El Gambito Corporativo",
-  "La Oposición de Mercado de Marcas", "Estructura de Peones Organizacionales", "La Cadena de Peones en Logística",
-  "Profilaxis ante Competencia Disruptiva", "Simplificación de Portafolios Financieros", "El Puente de Lucena Operativo",
-  "La Defensa Philidor en Crisis", "Triangulación en Negociaciones de M&A", "Puestos Avanzados de Distribución",
-  "Alfil Bueno contra Malo en Capital Humano", "Pareja de Alfiles en Liderazgo Compartido", "Columnas Abiertas en Flujo de Información",
-  "Mayoría en Flanco de Dama Comercial", "Zugzwang de Ofertas y Licitaciones", "Sacrificio de Calidad en Capital de Trabajo",
-  "El Molino de Viento de Ventas Recurrentes", "Interferencia en Distribución de Competencia", "Sobrecarga de Capacidad de Producción",
-  "El Recurso Desperado ante Quiebra Financiera", "Rayos X en Auditorías de Cumplimiento", "Ataques Dobles en Campañas de Marketing",
-  "La Clavada en Contratos de Exclusividad", "La Enfilada de Precios Bajos Disruptivos", "El Jaque Descubierto en Innovación de Productos",
-  "Peones Colgantes en el Centro Posicional", "Casillas Débiles Permanentes y Puestos Avanzados", "Profilaxis Dinámica del Método Karpov",
-  "Control de Diagonales Abiertas y Fianchettos", "Maniobras de Caballos en Posiciones Cerradas", "El Arte de la Defensa Posicional Extrema",
-  "Cambios Estratégicos de Piezas Menores", "La Ventaja de Espacio y Asfixia del Rival", "La Iniciativa a Largo Plazo sin Ventaja Material",
-  "Sacrificios Posicionales de Calidad en d5", "Oposición de Reyes Distante y Marcha Activa", "Regla del Cuadrado en Finales de Peones",
-  "Final de Alfil de Casillas Blancas del Color Erróneo", "Finales de Alfiles de Diferente Color - Tablas Teóricas", "Finales de Alfiles del Mismo Color - Explotación de Debilidades",
-  "Finales de Caballo contra Peón Pasado Distante", "Finales de Caballo y Peón contra Caballo Solo", "Finales de Torre y Peón contra Torre Avanzado",
-  "Finales de Dama contra Peón en Séptima Fila", "Finales de Dama contra Torre - Método del Triángulo", "Finales de Dos Alfiles contra Rey Solitario",
-  "Finales de Caballo y Alfil contra Rey Solitario", "Finales de Peones Doblados y Aislados en el Flanco", "Marcha Triunfal del Rey Activo en el Final",
-  "Peones Pasados Distantes en Finales de Caballos", "Peones Pasados Conectados en Finales de Torres", "La Regla de Tarrasch de Torres Detrás de Peones",
-  "Fortalezas Inexpugnables en Finales de Dama", "Finales Prácticos de Magnus Carlsen - Presión al Límite", "Finales de Torres con Alfiles de Diferente Color",
-  "Estructuras Carlsbad con Ataque de Minorías", "Zugzwang de Bloqueo de Alfil", "Sacrificios Posicionales en f5",
-  "Profilaxis ante Expansión de Flanco Enemigo", "La Cadena de Peones en d5/e4", "El Puente de Lucena y Apoyos de Torre",
-  "La Defensa Philidor con Corte en Quinta Fila", "Triangulación en Finales de Alfiles", "Puestos Avanzados de Caballo en d5/d4",
-  "Alfil Bueno contra Malo con Peones Fijos", "Pareja de Alfiles Dominando el Flanco de Rey", "Columnas Abiertas y Control de la Octava Fila",
-  "Finales de Dama y Peón de Caballo en Séptima Fila"
-];
-
-const lvl1Descs = [
-  "Estudio teórico y práctica interactiva sobre el control y coordinación coordinada.",
-  "Aprende a proteger tu rey mediante estructuras sólidas de peones en el enroque.",
-  "Domina el control de las casillas centrales e4, d4, e5, d5 en tus aperturas.",
-  "Estrategias de peones para principiantes enfocadas en la solidez defensiva.",
-  "Principios de desarrollo rápido para evitar pérdidas de tiempo en la apertura.",
-  "Evalúa la fuerza de tus piezas según su movilidad y posición en el tablero.",
-  "Evita amenazas tempranas y asesta mates sorpresivos en la octava fila.",
-  "Inmoviliza las piezas del oponente clavándolas contra sus piezas mayores.",
-  "Bifurca tus amenazas atacando dos objetivos clave a la vez con tus peones.",
-  "Sistemas de juego clásicos de la apertura italiana para ganar espacio."
-];
-
-const lvl2Descs = [
-  "Cálculo táctico preciso para desatar molinos de viento demoledores sobre el rey.",
-  "Identifica el momento exacto para desviar los defensores clave del rival mediante sacrificios.",
-  "Atrae al monarca enemigo a casillas desprotegidas mediante la entrega forzada de piezas.",
-  "Corta los canales de comunicación y defensa de las piezas enemigas en el flanco.",
-  "Libera la casilla clave para propinar un jaque de caballo decisivo en el centro.",
-  "Inmoviliza al oponente explotando la clavada absoluta de su pieza en la columna abierta.",
-  "Presiona indirectamente a la dama rival a través de piezas interpuestas en el e-file.",
-  "Ejecuta capturas desesperadas para ganar la máxima compensación antes de perder tu pieza.",
-  "Asesta el clásico mate ahogado de la coz sacrificando tu dama de forma brillante.",
-  "Acorrala al rey con el caballo en e7 coordinado con la torre en la columna h abierta."
-];
-
-const lvl3Descs = [
-  "Estudio posicional y líneas agudas de la Siciliana Dragón Acelerado.",
-  "Control del centro y desarrollo armonioso en la variante Tarrasch de la Francesa.",
-  "La solidez del muro de Berlín frente al asedio posicional de las blancas en la española.",
-  "Líneas de ataque directo y rupturas con c5 en la Caro-Kann de avance.",
-  "Defensa de trinchera clásica y estructura posicional robusta en el Gambito de Dama.",
-  "Combate el centro blanco de forma dinámica e hipermoderna en la Grünfeld.",
-  "Estructura sólida y planes de contraataque agudos en la India de Rey Sämisch.",
-  "Un esquema de desarrollo flexible y universal para blancas con e3 y Ad3.",
-  "Control espacial del centro desde los flancos mediante la variante simétrica.",
-  "Clavadas posicionales y control indirecto de e4 en la Nimzoindia clásica."
-];
-
-const lvl4Descs = [
-  "Aprende a transformar la debilidad estática del IQP en iniciativa y ataque directo.",
-  "Ejecuta ataques de minorías para inducir debilidades estructurales permanentes en el rival.",
-  "Implementa profilaxis estricta para neutralizar las ideas tácticas del rival antes de que nazcan.",
-  "Saca el máximo provecho a tus dos alfiles dominando las diagonales libres del tablero.",
-  "Construye el puente de torre para lograr la coronación segura de tu peón pasado en finales.",
-  "Técnicas de defensa precisas para asegurar tablas en finales de torre con peón de desventaja.",
-  "Maniobra con tu rey perdiendo tiempos estratégicos para forzar al oponente a abandonar su casilla.",
-  "Aprende a inducir Zugzwang en el portafolio de tu competidor restringiendo sus opciones.",
-  "Sacrifica marcas secundarias para asegurar una posición de mercado dominante a largo plazo.",
-  "Construye fortificaciones defensivas impenetrables ante intentos de ofertas hostiles del rival."
-];
-
-// GENERADOR DINÁMICO DE 400 MÓDULOS DE AJEDREZ NO REPETITIVOS
-const generateAllModules = () => {
-  const lvl1Base = BASE_MODULES.slice(0, 30);
-  const lvl2Base = BASE_MODULES.slice(30, 50);
-  const lvl3Base = BASE_MODULES.slice(50, 65);
-  const lvl4Base = BASE_MODULES.slice(65, 80);
+const MODULES_UI_CONFIG = LOGICAL_MODULES.map((mod, idx) => {
+  const lessons = mod.lessonIds.map(l_id => {
+    const base = BASE_MODULES.find(b => b.id === l_id);
+    return {
+      id: base?.id || l_id,
+      title: base?.title || l_id,
+      desc: base?.desc || '',
+      completed: false
+    };
+  });
   
-  const all: any[] = [];
-  
-  // LEVEL I: 100 Módulos (30 estáticos + 70 programados)
-  lvl1Base.forEach(m => all.push({ ...m, level: 1 }));
-  for (let i = 31; i <= 100; i++) {
-    const term = lvl1Terms[(i - 31) % lvl1Terms.length];
-    const desc = lvl1Descs[(i - 31) % lvl1Descs.length];
-    all.push({
-      id: `lvl1-gen-${i}`,
-      title: `Fundamentos: ${term}`,
-      desc: `${desc} Unidad de refuerzo cognitivo ${i}.`,
-      level: 1
-    });
-  }
-  
-  // LEVEL II: 100 Módulos (20 estáticos + 80 programados)
-  lvl2Base.forEach(m => all.push({ ...m, level: 2 }));
-  for (let i = 21; i <= 100; i++) {
-    const term = lvl2Terms[(i - 21) % lvl2Terms.length];
-    const desc = lvl2Descs[(i - 21) % lvl2Descs.length];
-    all.push({
-      id: `lvl2-gen-${i}`,
-      title: `Táctica & Patrones: ${term}`,
-      desc: `${desc} Práctica interactiva de alto nivel ${i}.`,
-      level: 2
-    });
-  }
-  
-  // LEVEL III: 100 Módulos (15 estáticos + 85 programados)
-  lvl3Base.forEach(m => all.push({ ...m, level: 3 }));
-  for (let i = 16; i <= 100; i++) {
-    const term = lvl3Terms[(i - 16) % lvl3Terms.length];
-    const desc = lvl3Descs[(i - 16) % lvl3Descs.length];
-    all.push({
-      id: `lvl3-gen-${i}`,
-      title: `Apertura & Defensas: ${term}`,
-      desc: `${desc} Análisis estratégico y variantes teóricas ${i}.`,
-      level: 3
-    });
-  }
-  
-  // LEVEL IV: 100 Módulos (15 estáticos + 85 programados)
-  lvl4Base.forEach(m => all.push({ ...m, level: 4 }));
-  for (let i = 16; i <= 100; i++) {
-    const term = lvl4Terms[(i - 16) % lvl4Terms.length];
-    const desc = lvl4Descs[(i - 16) % lvl4Descs.length];
-    all.push({
-      id: `lvl4-gen-${i}`,
-      title: `Estrategia & Finales: ${term}`,
-      desc: `${desc} Entrenamiento para la toma de decisiones C-Suite ${i}.`,
-      level: 4
-    });
-  }
-  
-  return all;
-};
-
-const ALL_MODULES = generateAllModules();
-
-const MODULES_UI_CONFIG = ALL_MODULES.map((bm, idx) => {
   return {
-    id: bm.id,
-    title: bm.title,
-    desc: bm.desc,
-    level: bm.level,
+    id: mod.id,
+    title: mod.title,
+    desc: mod.desc,
+    level: mod.level,
     icon: CHESS_ICONS[idx % CHESS_ICONS.length],
     color: COLORS[idx % COLORS.length],
-    locked: idx > 0
+    locked: idx > 0,
+    lessons
   };
 });
 
@@ -487,12 +168,11 @@ export default function ChessLobbyPage() {
         console.error("⚠️ Error de conexión con el backend:", e);
       } finally {
         const dynamicModules = MODULES_UI_CONFIG.map((mod, index) => {
-          const lessons = Array.from({ length: 100 }).map((_, idx) => {
-            const lessonId = `${mod.id}-${idx + 1}`;
+          const lessons = mod.lessons.map((lesson) => {
             return {
-              id: lessonId,
-              title: `${mod.title} - Unidad ${idx + 1}`,
-              completed: completedLessons.includes(lessonId)
+              id: lesson.id,
+              title: lesson.title,
+              completed: completedLessons.includes(lesson.id)
             };
           });
           const isModuleLocked = userTier === 'free' && index > 0;
@@ -731,7 +411,7 @@ export default function ChessLobbyPage() {
       <div className="max-w-5xl mx-auto px-6 -mt-8 relative z-20 space-y-8">
         
         {/* TARJETA: PUZZLE DIARIO */}
-        <Link href="/dashboard/chess/practice?lessonId=tactics-1-1" className="block">
+        <Link href="/dashboard/chess/practice?lessonId=daily-puzzle" className="block">
           <div style={woodPanelStyle} className="wood-panel p-1 rounded-none shadow-2xl group cursor-pointer hover:border-[#62351b] transition-all">
             <div className="bg-[#170902]/60 backdrop-blur-sm rounded-none p-6 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
               <div className="absolute right-0 top-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -741,7 +421,7 @@ export default function ChessLobbyPage() {
                   <Star size={32} fill="currentColor" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-1 group-hover:text-amber-300 transition-colors">Reto Diario: Ataque Doble</h3>
+                  <h3 className="text-xl font-bold text-white mb-1 group-hover:text-amber-300 transition-colors">Reto Diario: Entrenamiento de Élite</h3>
                   <p className="text-sm text-slate-300">Resuelve el problema de hoy para mantener tu racha.</p>
                   <div className="flex gap-2 mt-2">
                     <span className="text-[10px] bg-red-950/60 text-red-400 px-2 py-0.5 rounded-none border border-red-800/40 font-bold">DIFÍCIL</span>
@@ -889,12 +569,7 @@ export default function ChessLobbyPage() {
             </span>
           </div>
 
-          {[
-            { id: 1, title: 'Nivel I: Iniciación y Fundamentos', desc: 'Aprende los movimientos de las piezas, mates elementales y reglas básicas (Módulos 1 - 100).' },
-            { id: 2, title: 'Nivel II: Tácticas de Combate y Patrones de Mate', desc: 'Domina clavadas, ataques dobles, molinos y redes de mate avanzadas (Módulos 101 - 200).' },
-            { id: 3, title: 'Nivel III: Aperturas y Defensas de Élite', desc: 'Construye un repertorio sólido con las principales aperturas teóricas (Módulos 201 - 300).' },
-            { id: 4, title: 'Nivel IV: Estrategia de Medio Juego y Finales C-Suite', desc: 'Estrategia de medio juego compleja, finales teóricos y toma de decisiones C-Suite (Módulos 301 - 400).' }
-          ].map((level) => {
+          {CHESS_LEVELS.map((level) => {
             const isLevelExpanded = expandedLevel === level.id;
             const levelModules = modules.filter(m => m.level === level.id);
 

@@ -51,7 +51,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.BACKEND_CORS_ORIGINS, 
-    allow_origin_regex=r"https://.*\.vercel\.app", 
+    allow_origin_regex=r"(https://.*\.vercel\.app|http://localhost:\d+|http://127\.0\.0\.1:\d+)", 
     allow_credentials=True, 
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"], 
     allow_headers=["*"],
@@ -117,8 +117,7 @@ app.include_router(progress.router, prefix="/api/v1/progress", tags=["Analytics 
 app.include_router(lessons.router, prefix="/api/v1/lessons", tags=["Lessons"])
 app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI Engine"])
 app.include_router(speech.router, prefix="/api/v1/speech", tags=["Speech Analysis"])
-app.include_router(chess.router, prefix="/api/v1", tags=["Chess Academy"])
-app.include_router(chess_endpoints.router, prefix="/api/v1/chess", tags=["Chess Engine"])
+app.include_router(chess_endpoints.router, prefix="/api/v1/chess", tags=["Chess Academy"])
 app.include_router(billing.router, prefix="/api/v1/billing", tags=["Billing & Subscriptions"])
 app.include_router(avatar.router, prefix="/api/v1/avatar", tags=["AI Avatar Engine"])
 app.include_router(exercises.router, prefix="/api/v1/exercises", tags=["Exercises"])
@@ -163,3 +162,7 @@ def get_voc_lesson(
                 continue
 
     raise HTTPException(status_code=404, detail=f"Lesson {lesson_id} not found.")
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8020, reload=True)

@@ -5,7 +5,8 @@ from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 from typing import Optional
 from app.api.deps import get_current_active_user
-
+from app.services.chess_catalog import get_lesson_data
+from app.services.gemini_service import GeminiService
 router = APIRouter()
 
 class ChessMoveRequest(BaseModel):
@@ -152,7 +153,27 @@ def engine_move(
     except Exception as e: raise HTTPException(status_code=400, detail=str(e))
 
 
-from app.db.models import MatchmakingQueue, ChessMatch, User
+from app.db.models import MatchmakingQueue, ChessMatch, User, ChessProgress
+from app.schemas.chess import MatchmakingQueueCreate, MatchmakingQueueResponse, MatchmakingStatusResponse
+from sqlalchemy import func
+import uuid
+from datetime import datetime, timezone
+
+@router.get("/progress")
+def get_chess_progress(
+    db: Session = Depends(get_db),
+    current_user = Depends(get_current_active_user)
+):
+    try:
+        progress_records = db.query(ChessProgress).filter(
+            ChessProgress.user_id == current_user.id,
+            ChessProgress.status == "completed"
+        ).all()
+        completed_lessons = [p.lesson_id for p in progress_records]
+        return {"completed_lessons": completed_lessons}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 from app.schemas.chess import MatchmakingQueueCreate, MatchmakingQueueResponse, MatchmakingStatusResponse
 from sqlalchemy import func
 import uuid
@@ -336,3 +357,33 @@ def matchmaking_status(
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
+@router.get("/lessons/{lesson_id}")
+async def get_chess_lesson(
+    lesson_id: str,
+    current_user = Depends(get_current_active_user)
+):
+    """
+    Retorna la data de una lección de ajedrez (FEN, solución) y genera la instrucción/explicación dinámicamente con IA.
+    """
+    try:
+        # 1. Obtener la data estática segura (FEN y solución UCI)
+        data = get_lesson_data(lesson_id)
+        fen = data.get("fen", "start")
+        solution = data.get("solution", "")
+        theme = data.get("theme", lesson_id)
+        
+        # 2. Generar el componente instruccional con IA
+        gemini = GeminiService()
+        ai_content = await gemini.generate_chess_lesson_content(theme)
+        
+        # 3. Ensamblar la respuesta
+        return {
+            "id": lesson_id,
+            "title": ai_content.get("title", f"Lección {lesson_id}"),
+            "instruction": ai_content.get("instruction", "Analiza la posición y encuentra el mejor movimiento."),
+            "explanation": ai_content.get("explanation", "Excelente jugada táctica."),
+            "fen": fen,
+            "solution": solution
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

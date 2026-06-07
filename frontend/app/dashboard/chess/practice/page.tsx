@@ -8,6 +8,7 @@ import confetti from 'canvas-confetti';
 import { Chess, type Move, type Square } from 'chess.js';
 import CustomChessboard from '@/components/chess/CustomChessboard';
 import { useUIStore } from '@/store/uiStore';
+import { BASE_MODULES } from '../chess-data';
 import {
   AlertTriangle,
   ArrowLeft,
@@ -20,6 +21,8 @@ import {
   RotateCcw,
   Target,
   XCircle,
+  BookOpen,
+  Sparkles
 } from 'lucide-react';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
@@ -161,6 +164,16 @@ function PracticeArena() {
         if (!res.ok) throw new Error(`Error ${res.status}`);
         const data: LessonData = await res.json();
         
+        // REEMPLAZAR TEXTOS GENÉRICOS DE IA POR NUESTROS NOMBRES PROCEDURALES PERFECTOS
+        const baseLesson = BASE_MODULES.find(b => b.id === lessonId);
+        if (baseLesson) {
+          data.title = baseLesson.title;
+          data.instruction = baseLesson.desc;
+        } else if (lessonId === 'daily-puzzle') {
+          data.title = "Reto Diario: Entrenamiento de Élite";
+          data.instruction = "Resuelve el rompecabezas táctico del día para mantener tu racha.";
+        }
+
         if (!mountedRef.current) return;
         setLessonData(data);
         loadPosition(data);
@@ -439,7 +452,7 @@ function PracticeArena() {
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
             <div className={`px-3 py-1 rounded-none border text-[10px] font-black uppercase tracking-widest ${isFreePlay ? 'bg-emerald-950/60 text-emerald-350 border-emerald-800/40' : 'bg-amber-950/60 text-amber-300 border-amber-800/40'}`}>
-              {isFreePlay ? 'Sandbox Mode' : 'Tactics Mode'}
+              {isFreePlay ? 'Sandbox Mode' : 'Entrenamiento Táctico'}
             </div>
 
             {!isFreePlay && mistakes > 0 && (
@@ -455,27 +468,32 @@ function PracticeArena() {
             )}
           </div>
 
-          <h1 className="text-3xl lg:text-4xl font-black text-white mb-6 leading-tight tracking-tight">
+          <h1 className="text-2xl lg:text-3xl font-black text-white mb-6 leading-tight tracking-tight border-l-4 border-amber-500 pl-4 py-1">
             {lessonData.title || 'Chess Practice'}
           </h1>
 
-          <div className="bg-[#130a04] p-6 rounded-none border border-[#3c1e0a] mb-6 shadow-inner">
-            <h3 className="text-xs font-bold text-amber-200/40 uppercase tracking-wider mb-3 flex items-center gap-2">
-              {isFreePlay ? <Bot size={14} className="text-emerald-400" /> : <HelpCircle size={14} className="text-amber-400" />}
-              Instrucción
-            </h3>
-            <p className="text-lg font-medium text-slate-200 leading-relaxed">
-              {lessonData.instruction || 'Juega la posición mostrada en el tablero.'}
-            </p>
+          <div className="wood-panel-light p-6 rounded-none shadow-xl mb-6 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <BookOpen size={64} className="text-amber-500" />
+            </div>
+            <div className="relative z-10">
+              <h3 className="text-[10px] font-black text-amber-400 uppercase tracking-[0.2em] mb-3 flex items-center gap-2">
+                {isFreePlay ? <Bot size={14} className="text-emerald-400" /> : <Sparkles size={14} className="text-amber-400" />}
+                Objetivo de la Lección
+              </h3>
+              <p className="text-sm md:text-base font-medium text-slate-200 leading-relaxed italic border-l-2 border-[#502b16] pl-3">
+                "{lessonData.instruction || 'Juega la posición mostrada en el tablero.'}"
+              </p>
+            </div>
           </div>
 
-          <div className={`p-5 rounded-none border shadow-lg flex gap-4 transition-colors ${status === 'correct' ? 'bg-emerald-950/60 border-emerald-800/40 text-emerald-300' : status === 'wrong' ? 'bg-red-955/60 border-red-800/40 text-red-300' : 'bg-[#361d0f] border-[#502b16] text-[#ecd3b5]'}`}>
-            {status === 'correct' ? <CheckCircle2 className="shrink-0 w-6 h-6" /> : status === 'wrong' ? <XCircle className="shrink-0 w-6 h-6" /> : <Lightbulb className="shrink-0 w-6 h-6" />}
+          <div className={`p-5 rounded-none border shadow-lg flex items-start gap-4 transition-colors ${status === 'correct' ? 'bg-emerald-950/60 border-emerald-800/40 text-emerald-300' : status === 'wrong' ? 'bg-red-955/60 border-red-800/40 text-red-300' : 'bg-[#361d0f]/80 border-[#502b16] text-[#ecd3b5]'}`}>
+            {status === 'correct' ? <CheckCircle2 className="shrink-0 w-6 h-6 mt-0.5" /> : status === 'wrong' ? <XCircle className="shrink-0 w-6 h-6 mt-0.5" /> : <Lightbulb className="shrink-0 w-6 h-6 mt-0.5" />}
             <div>
-              <h4 className="font-bold text-sm mb-1 uppercase tracking-wider">
-                {status === 'correct' ? '¡Perfecto!' : status === 'wrong' ? 'Intenta de Nuevo' : status === 'gameover' ? 'Partida Terminada' : 'Análisis Activo'}
+              <h4 className="font-black text-xs mb-1 uppercase tracking-widest text-white">
+                {status === 'correct' ? '¡Brillante!' : status === 'wrong' ? 'Movimiento Incorrecto' : status === 'gameover' ? 'Partida Terminada' : 'Análisis Activo'}
               </h4>
-              <p className="text-sm opacity-90 leading-relaxed">{feedback}</p>
+              <p className="text-sm font-medium opacity-90 leading-relaxed">{feedback}</p>
             </div>
           </div>
         </div>

@@ -7,9 +7,9 @@
   "license": "ISC",
   "scripts": {
     "test": "exit 0",
-    "dev": "next dev --turbo",
+    "dev": "next dev -p 3000 --turbo",
     "build": "next build --webpack",
-    "start": "next start",
+    "start": "next start -p 3022",
     "lint": "next lint"
   },
   "dependencies": {

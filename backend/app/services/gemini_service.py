@@ -230,3 +230,42 @@ class GeminiService:
         except Exception as e:
             logger.error(f"Error in Gemini translation: {e}")
             return text
+
+    async def generate_chess_lesson_content(self, theme: str) -> Dict[str, str]:
+        """
+        Genera la instrucción y explicación pedagógica para un puzzle de ajedrez usando IA.
+        """
+        try:
+            model = genai.GenerativeModel(
+                model_name=self.model_name,
+                generation_config=self.generation_config
+            )
+            
+            prompt = f"""
+            Actúa como un Gran Maestro de ajedrez y entrenador de alto rendimiento.
+            Estoy enseñando la lección sobre: "{theme}".
+            Genera un JSON con tres campos para acompañar un puzzle táctico sobre este tema:
+            
+            {{
+                "title": "String (Un título impactante y motivador de 3 a 5 palabras, ej: 'El Ataque Doble Letal')",
+                "instruction": "String (La instrucción para el alumno antes de hacer la jugada. Sé directo y profesional. Máx 15 palabras. Ej: 'Encuentra la bifurcación de caballo que destruye las defensas.')",
+                "explanation": "String (La explicación que aparece cuando el alumno ACERTA la jugada. Explica por qué ese concepto táctico fue brillante o clave posicionalmente en 2 oraciones, usando lenguaje avanzado pero pedagógico. Ej: '¡Brillante! El salto a f7 no solo rompe la cadena, sino que colapsa la estructura material del rival.')"
+            }}
+            """
+            response = await model.generate_content_async(prompt)
+            response_text = response.text.strip()
+            
+            if response_text.startswith("```json"):
+                response_text = response_text.replace("```json", "").replace("```", "").strip()
+            elif response_text.startswith("```"):
+                response_text = response_text.replace("```", "").strip()
+                
+            return json.loads(response_text)
+        except Exception as e:
+            logger.error(f"Error generando contenido de ajedrez: {e}")
+            # Fallback robusto en caso de fallo
+            return {
+                "title": "Táctica Avanzada",
+                "instruction": "Analiza la posición y encuentra el mejor movimiento crítico.",
+                "explanation": "¡Excelente jugada! Has encontrado la táctica ganadora en la posición."
+            }

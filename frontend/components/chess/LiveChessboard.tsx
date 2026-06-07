@@ -31,7 +31,7 @@ export default function LiveChessboard({
 
   useEffect(() => {
     // Configuración de la URL del WebSocket
-    const wsBaseUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8000/ws';
+    const wsBaseUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8020/ws';
     const wsUrl = `${wsBaseUrl}/chess/matches/${matchId}?token=${token}`;
 
     const ws = new WebSocket(wsUrl);
