@@ -327,7 +327,7 @@ export const BASE_MODULES: ChessLessonBase[] = [
   { id: 'lvl1-mod10-lsn27', title: 'Lección 27: El sacrificio definitivo', desc: 'Abrir líneas con fuego.' },
   { id: 'lvl1-mod10-lsn28', title: 'Lección 28: Ataques al flanco rey', desc: 'Combinando todas las piezas.' },
   { id: 'lvl1-mod10-lsn29', title: 'Lección 29: Precisión milimétrica', desc: 'El orden correcto de las jugadas para el mate.' },
-  { id: 'lvl1-mod10-lsn30', title: 'Lección 30: Graduación Nivel A1', desc: 'Reconoce y ejecuta el jaque mate con confianza.' }
+  { id: 'lvl1-mod10-lsn30', title: 'Lección 30: Graduación Nivel A1', desc: 'Reconoce y ejecuta el jaque mate con confianza.' },
   // ==========================================
   // BLOQUE II: TÁCTICA DE NIVEL A2
   // ==========================================
@@ -1309,7 +1309,7 @@ export const LOGICAL_MODULES: ChessLogicalModule[] = [
   { id: 'lvl1-mod7', title: 'Unidad 7: La Caballería Estratégica', desc: 'Saltos tácticos', level: 1, lessonIds: Array.from({length:30}, (_,i)=> `lvl1-mod7-lsn${i+1}`) },
   { id: 'lvl1-mod8', title: 'Unidad 8: El Enroque y Seguridad', desc: 'Castillos y protección', level: 1, lessonIds: Array.from({length:30}, (_,i)=> `lvl1-mod8-lsn${i+1}`) },
   { id: 'lvl1-mod9', title: 'Unidad 9: Principios de Intercambio', desc: 'Las matemáticas del ajedrez', level: 1, lessonIds: Array.from({length:30}, (_,i)=> `lvl1-mod9-lsn${i+1}`) },
-  { id: 'lvl1-mod10', title: 'Unidad 10: Mates Básicos (Checkmates)', desc: 'Terminando la partida', level: 1, lessonIds: Array.from({length:30}, (_,i)=> `lvl1-mod10-lsn${i+1}`) }
+  { id: 'lvl1-mod10', title: 'Unidad 10: Mates Básicos (Checkmates)', desc: 'Terminando la partida', level: 1, lessonIds: Array.from({length:30}, (_,i)=> `lvl1-mod10-lsn${i+1}`) },
   // BLOQUE II
   { id: 'lvl2-mod11', title: 'Unidad 11: La Clavada Absoluta', desc: 'Ejercicios donde inmovilizamos una pieza enemiga frente a su Rey.', level: 2, lessonIds: Array.from({length:30}, (_,i)=> `lvl2-mod11-lsn${i+1}`) },
   { id: 'lvl2-mod12', title: 'Unidad 12: La Clavada Relativa', desc: 'Inmovilizar piezas frente a la Dama enemiga.', level: 2, lessonIds: Array.from({length:30}, (_,i)=> `lvl2-mod12-lsn${i+1}`) },

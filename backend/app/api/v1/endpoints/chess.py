@@ -153,8 +153,8 @@ def engine_move(
     except Exception as e: raise HTTPException(status_code=400, detail=str(e))
 
 
-from app.db.models import MatchmakingQueue, ChessMatch, User, ChessProgress
-from app.schemas.chess import MatchmakingQueueCreate, MatchmakingQueueResponse, MatchmakingStatusResponse
+from app.db.models import MatchmakingQueue, ChessMatch, User, ChessProgress, UserAchievement
+from app.schemas.chess import MatchmakingQueueCreate, MatchmakingQueueResponse, MatchmakingStatusResponse, ChessProgressCreate
 from sqlalchemy import func
 import uuid
 from datetime import datetime, timezone
@@ -172,6 +172,56 @@ def get_chess_progress(
         completed_lessons = [p.lesson_id for p in progress_records]
         return {"completed_lessons": completed_lessons}
     except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/progress")
+def save_chess_progress(
+    payload: ChessProgressCreate,
+    db: Session = Depends(get_db),
+    current_user = Depends(get_current_active_user)
+):
+    try:
+        from app.services.progress_service import _update_user_streak, grant_eloquence_points
+        
+        # Verificar si ya está completada
+        existing = db.query(ChessProgress).filter(
+            ChessProgress.user_id == current_user.id,
+            ChessProgress.lesson_id == payload.lesson_id
+        ).first()
+
+        if existing:
+            existing.status = payload.status
+        else:
+            new_prog = ChessProgress(
+                user_id=current_user.id,
+                lesson_id=payload.lesson_id,
+                status=payload.status,
+                earned_xp=25
+            )
+            db.add(new_prog)
+            # Otorgar puntos de elocuencia por completarlo por primera vez
+            grant_eloquence_points(db, current_user.id, 25)
+            
+        # Actualizar racha diaria
+        _update_user_streak(db, current_user.id)
+        
+        # Revisar logro Grandmaster (5 lecciones)
+        chess_completed = db.query(ChessProgress).filter(
+            ChessProgress.user_id == current_user.id,
+            ChessProgress.status == "completed"
+        ).count()
+        
+        if chess_completed >= 5:
+            exists_ach = db.query(UserAchievement).filter_by(
+                user_id=current_user.id, achievement_code="chess_grandmaster"
+            ).first()
+            if not exists_ach:
+                db.add(UserAchievement(user_id=current_user.id, achievement_code="chess_grandmaster"))
+
+        db.commit()
+        return {"msg": "Progreso guardado correctamente"}
+    except Exception as e:
+        db.rollback()
         raise HTTPException(status_code=500, detail=str(e))
 
 from app.schemas.chess import MatchmakingQueueCreate, MatchmakingQueueResponse, MatchmakingStatusResponse
@@ -366,24 +416,19 @@ async def get_chess_lesson(
     Retorna la data de una lección de ajedrez (FEN, solución) y genera la instrucción/explicación dinámicamente con IA.
     """
     try:
-        # 1. Obtener la data estática segura (FEN y solución UCI)
+        # 1. Obtener la data estática segura
         data = get_lesson_data(lesson_id)
         fen = data.get("fen", "start")
         solution = data.get("solution", "")
-        theme = data.get("theme", lesson_id)
         
-        # 2. Generar el componente instruccional con IA
-        gemini = GeminiService()
-        ai_content = await gemini.generate_chess_lesson_content(theme)
-        
-        # 3. Ensamblar la respuesta
+        # 2. Usar la data estática curada en lugar de Gemini
         return {
             "id": lesson_id,
-            "title": ai_content.get("title", f"Lección {lesson_id}"),
-            "instruction": ai_content.get("instruction", "Analiza la posición y encuentra el mejor movimiento."),
-            "explanation": ai_content.get("explanation", "Excelente jugada táctica."),
             "fen": fen,
-            "solution": solution
+            "solution": solution,
+            "title": data.get("title", f"Lección: {lesson_id}"),
+            "instruction": data.get("instruction", "Encuentra el mejor movimiento."),
+            "explanation": data.get("explanation", "¡Excelente jugada!")
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

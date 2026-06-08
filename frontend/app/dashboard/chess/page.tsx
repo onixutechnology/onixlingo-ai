@@ -562,11 +562,7 @@ export default function ChessLobbyPage() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-amber-900/30 pb-4">
             <div>
               <h2 className="text-xl font-bold font-serif italic text-white">Ruta del Aprendizaje</h2>
-              <p className="text-xs text-amber-250/50 uppercase tracking-[0.2em] mt-1">{modules.length} Módulos Totales • 40,000 Ejercicios</p>
             </div>
-            <span className="px-3 py-1 rounded-none bg-emerald-950/60 text-emerald-400 border border-emerald-800/40 text-[10px] font-black uppercase tracking-wider animate-pulse">
-              Contenido 100% Curado
-            </span>
           </div>
 
           {CHESS_LEVELS.map((level) => {
@@ -670,7 +666,7 @@ export default function ChessLobbyPage() {
                                 }
                               `}</style>
                               {module.lessons.map((lesson: any, idx: number) => {
-                                const isLessonLocked = userTier === 'free' && lesson.id !== 'm-king-1';
+                                const isLessonLocked = userTier === 'free' && module.id !== 'lvl1-mod1';
                                 
                                 const content = (
                                   <div 
