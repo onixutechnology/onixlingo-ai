@@ -1,0 +1,101 @@
+{
+  "id": "c2-36",
+  "title": "Inversion for Effect",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Grammar", "Inversion", "Writing", "Formal"],
+  "completion_message": "¡Magistral! La 'Inversión' es quizás la estructura gramatical más literaria y dramática del inglés. Usarla en un discurso o ensayo te otorga una autoridad y elocuencia que pocos hablantes no nativos logran alcanzar.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Inversión para Efecto Dramático (C2)",
+      "parts": [
+        { "visual": "En inglés muy formal, literario o para discursos, usamos la 'Inversión' para dar énfasis dramático. \nSi comenzamos una oración con una palabra NEGATIVA o RESTRICTIVA (Rarely, Never, Little, Under no circumstances), debemos INVERTIR el sujeto y el verbo auxiliar (como si fuera una pregunta). \n\n1. Never / Rarely / Seldom (Nunca / Rara vez): \nNormal: I have never seen such incompetence. \nInversion: NEVER HAVE I seen such incompetence. \n\n2. Little (Poco / No saber): \nNormal: We knew little about the danger. \nInversion: LITTLE DID WE KNOW about the danger. (Usamos 'did' como auxiliar del pasado).", "audio": "Welcome to Inversion for Dramatic Effect. In highly formal English, speeches, or literature, we use inversion for emphasis. If we start a sentence with a negative or restrictive word, we must invert the subject and the auxiliary verb, exactly as if we were asking a question. Number 1: Never, Rarely, or Seldom. Normal sentence: I have never seen such incompetence. Inverted for drama: NEVER HAVE I seen such incompetence. Number 2: Little, which implies not knowing. Normal: We knew little about the danger. Inverted: LITTLE DID WE KNOW about the danger. Notice we had to add the auxiliary 'did'." },
+        { "visual": "3. Not only... but also (No solo... sino también): \nNormal: He didn't only lose the client, but he also insulted them. \nInversion: NOT ONLY DID HE LOSE the client, but he also insulted them. \n\n4. Under no circumstances (Bajo ninguna circunstancia): \nNormal: You should not sign this contract under any circumstances. \nInversion: UNDER NO CIRCUMSTANCES SHOULD YOU sign this contract. \n\n5. Only then / Only later (Solo entonces / Solo más tarde): \nNormal: I realized my mistake only later. \nInversion: ONLY LATER DID I REALIZE my mistake. \n\nNota: Si no hay auxiliar en la oración original (presente o pasado simple), usa do/does/did.", "audio": "Number 3: Not only... but also. Normal: He didn't only lose the client, but he also insulted them. Inverted: NOT ONLY DID HE LOSE the client, but he also insulted them. Number 4: Under no circumstances. Normal: You should not sign this contract under any circumstances. Inverted: UNDER NO CIRCUMSTANCES SHOULD YOU sign this contract. Number 5: Only then, or Only later. Normal: I realized my mistake only later. Inverted: ONLY LATER DID I REALIZE my mistake. Remember, if there is no auxiliary verb in the original sentence, you must add do, does, or did, just like making a question." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma invertida correcta.",
+      "questions": [
+        { "id": "c2-36-q1", "type": "quiz_choice", "question": "Normal: I have never heard such a ridiculous excuse. -> Inversion: Never ____ such a ridiculous excuse.", "options": ["have I heard", "I have heard", "did I heard", "I heard"], "correct_answer": "have I heard", "explanation": "Inversión con auxiliar 'have': Never have I heard." },
+        { "id": "c2-36-q2", "type": "quiz_choice", "question": "Normal: They rarely complain about the workload. -> Inversion: Rarely ____ about the workload.", "options": ["do they complain", "they complain", "complain they", "are they complain"], "correct_answer": "do they complain", "explanation": "Presente simple necesita 'do': Rarely do they complain." },
+        { "id": "c2-36-q3", "type": "quiz_choice", "question": "Normal: We knew little about the financial problems. -> Inversion: Little ____ about the financial problems.", "options": ["did we know", "we knew", "knew we", "had we known"], "correct_answer": "did we know", "explanation": "Pasado simple necesita 'did': Little did we know." },
+        { "id": "c2-36-q4", "type": "quiz_choice", "question": "Normal: You should not open this file under any circumstances. -> Inversion: Under no circumstances ____ this file.", "options": ["should you open", "you should open", "you open", "open you"], "correct_answer": "should you open", "explanation": "Inversión del modal 'should': Under no circumstances should you open." },
+        { "id": "c2-36-q5", "type": "quiz_choice", "question": "Normal: He not only stole the money, but he also lied. -> Inversion: Not only ____ the money, but he also lied.", "options": ["did he steal", "he stole", "stole he", "does he steal"], "correct_answer": "did he steal", "explanation": "Pasado simple necesita 'did': Not only did he steal." },
+        { "id": "c2-36-q6", "type": "quiz_choice", "question": "Normal: I understood the plan only later. -> Inversion: Only later ____ the plan.", "options": ["did I understand", "I understood", "understood I", "do I understand"], "correct_answer": "did I understand", "explanation": "Pasado simple necesita 'did': Only later did I understand." },
+        { "id": "c2-36-q7", "type": "quiz_choice", "question": "Normal: I had hardly arrived when it started raining. -> Inversion: Hardly ____ when it started raining.", "options": ["had I arrived", "I had arrived", "did I arrived", "arrived I"], "correct_answer": "had I arrived", "explanation": "Pasado perfecto usa 'had': Hardly had I arrived." },
+        { "id": "c2-36-q8", "type": "quiz_choice", "question": "Normal: You will not find a better deal anywhere. -> Inversion: Nowhere ____ a better deal.", "options": ["will you find", "you will find", "find you", "do you find"], "correct_answer": "will you find", "explanation": "Inversión con modal 'will': Nowhere will you find." },
+        { "id": "c2-36-q9", "type": "quiz_choice", "question": "Normal: I realized the truth only then. -> Inversion: Only then ____ the truth.", "options": ["did I realize", "I realized", "realized I", "had I realized"], "correct_answer": "did I realize", "explanation": "Pasado simple necesita 'did': Only then did I realize." },
+        { "id": "c2-36-q10", "type": "quiz_choice", "question": "Normal: She is not only brilliant, but she is also hardworking. -> Inversion: Not only ____ brilliant, but she is also hardworking.", "options": ["is she", "she is", "does she", "she does"], "correct_answer": "is she", "explanation": "Inversión del verbo 'to be': Not only is she." },
+        { "id": "c2-36-q11", "type": "quiz_choice", "question": "Normal: The CEO seldom visits the factory. -> Inversion: Seldom ____ the factory.", "options": ["does the CEO visit", "the CEO visits", "visits the CEO", "did the CEO visit"], "correct_answer": "does the CEO visit", "explanation": "Presente simple (he/she/it) necesita 'does': Seldom does the CEO visit." },
+        { "id": "c2-36-q12", "type": "quiz_choice", "question": "Normal: I had no sooner closed the door than the phone rang. -> Inversion: No sooner ____ the door than the phone rang.", "options": ["had I closed", "I had closed", "did I closed", "closed I"], "correct_answer": "had I closed", "explanation": "Pasado perfecto usa 'had': No sooner had I closed." },
+        { "id": "c2-36-q13", "type": "quiz_choice", "question": "Normal: You cannot leave the building on any account. -> Inversion: On no account ____ the building.", "options": ["can you leave", "you can leave", "leave you", "do you leave"], "correct_answer": "can you leave", "explanation": "Inversión con modal 'can': On no account can you leave." },
+        { "id": "c2-36-q14", "type": "quiz_choice", "question": "Normal: The manager did not apologize once. -> Inversion: Not once ____.", "options": ["did the manager apologize", "the manager apologized", "apologized the manager", "the manager did apologize"], "correct_answer": "did the manager apologize", "explanation": "Pasado simple usa 'did': Not once did the manager apologize." },
+        { "id": "c2-36-q15", "type": "quiz_choice", "question": "Normal: I have seldom seen such a beautiful painting. -> Inversion: Seldom ____ such a beautiful painting.", "options": ["have I seen", "I have seen", "did I see", "saw I"], "correct_answer": "have I seen", "explanation": "Presente perfecto usa 'have': Seldom have I seen." },
+        { "id": "c2-36-q16", "type": "quiz_choice", "question": "Normal: The team not only won the match, but they also broke the record. -> Inversion: Not only ____ the match, but they also broke the record.", "options": ["did the team win", "the team won", "won the team", "had the team won"], "correct_answer": "did the team win", "explanation": "Pasado simple usa 'did': Not only did the team win." },
+        { "id": "c2-36-q17", "type": "quiz_choice", "question": "Normal: I will never make that mistake again. -> Inversion: Never again ____ that mistake.", "options": ["will I make", "I will make", "do I make", "make I"], "correct_answer": "will I make", "explanation": "Inversión del modal 'will': Never again will I make." },
+        { "id": "c2-36-q18", "type": "quiz_choice", "question": "Normal: We expected little help from the government. -> Inversion: Little ____ from the government.", "options": ["did we expect", "we expected", "expected we", "had we expected"], "correct_answer": "did we expect", "explanation": "Pasado simple usa 'did': Little did we expect." },
+        { "id": "c2-36-q19", "type": "quiz_choice", "question": "Normal: You must not press this button under any condition. -> Inversion: Under no condition ____ this button.", "options": ["must you press", "you must press", "do you press", "press you"], "correct_answer": "must you press", "explanation": "Inversión del modal 'must': Under no condition must you press." },
+        { "id": "c2-36-q20", "type": "quiz_choice", "question": "¿Qué oración usa la inversión de manera incorrecta?", "options": ["Rarely he goes to the office.", "Rarely does he go to the office.", "Never have I seen that.", "Little did we know."], "correct_answer": "Rarely he goes to the office.", "explanation": "Incorrecta: Falta el auxiliar 'does'. Debería ser 'Rarely does he go'." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el auxiliar de inversión (have, did, do, does, will, is, etc).",
+      "questions": [
+        { "id": "c2-36-f1", "type": "fill_input", "question": "Never ____ I seen such a thing! (Present perfect)", "correct_answer": "have", "explanation": "have." },
+        { "id": "c2-36-f2", "type": "fill_input", "question": "Little ____ we know about the risk. (Past simple)", "correct_answer": "did", "explanation": "did." },
+        { "id": "c2-36-f3", "type": "fill_input", "question": "Not only ____ he lose the money, but he also lied. (Past simple)", "correct_answer": "did", "explanation": "did." },
+        { "id": "c2-36-f4", "type": "fill_input", "question": "Under no circumstances ____ you sign that! (Modal)", "correct_answer": "should", "explanation": "should." },
+        { "id": "c2-36-f5", "type": "fill_input", "question": "Rarely ____ they complain. (Present simple, they)", "correct_answer": "do", "explanation": "do." },
+        { "id": "c2-36-f6", "type": "fill_input", "question": "Seldom ____ the boss smile. (Present simple, the boss)", "correct_answer": "does", "explanation": "does." },
+        { "id": "c2-36-f7", "type": "fill_input", "question": "Nowhere ____ you find a better price! (Modal de futuro)", "correct_answer": "will", "explanation": "will." },
+        { "id": "c2-36-f8", "type": "fill_input", "question": "Only later ____ she understand the problem. (Past simple)", "correct_answer": "did", "explanation": "did." },
+        { "id": "c2-36-f9", "type": "fill_input", "question": "Not only ____ she brilliant, she is also kind. (Verbo To Be presente)", "correct_answer": "is", "explanation": "is." },
+        { "id": "c2-36-f10", "type": "fill_input", "question": "Hardly ____ I arrived when it rained. (Past perfect)", "correct_answer": "had", "explanation": "had." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Inversion Match",
+      "pairs": [
+        {"id": "c2-36-p1", "source": "Never have I seen", "target": "Nunca he visto (Invertido)"},
+        {"id": "c2-36-p2", "source": "Little did we know", "target": "Poco sabíamos (No sabíamos)"},
+        {"id": "c2-36-p3", "source": "Not only did he fail", "target": "No solo fracasó"},
+        {"id": "c2-36-p4", "source": "Under no circumstances should you", "target": "Bajo ninguna circunstancia deberías"},
+        {"id": "c2-36-p5", "source": "Rarely do they complain", "target": "Rara vez se quejan"},
+        {"id": "c2-36-p6", "source": "Only later did I realize", "target": "Solo más tarde me di cuenta"},
+        {"id": "c2-36-p7", "source": "Hardly had I arrived", "target": "Apenas había llegado"},
+        {"id": "c2-36-p8", "source": "Nowhere will you find", "target": "En ningún lugar encontrarás"},
+        {"id": "c2-36-p9", "source": "Seldom does she visit", "target": "Rara vez ella visita"},
+        {"id": "c2-36-p10", "source": "Not once did he apologize", "target": "Ni una sola vez se disculpó"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración invertida correcta.",
+      "questions": [
+        { "id": "c2-36-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Never have I seen such a thing.", "options": ["Never have I seen such a thing.", "Never I have seen such a thing.", "Never did I see such a thing.", "Never had I seen such a thing."], "correct_answer": "Never have I seen such a thing.", "explanation": "Audio exacto." },
+        { "id": "c2-36-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Little did we know about it.", "options": ["Little did we know about it.", "Little we knew about it.", "Little do we know about it.", "Little had we known about it."], "correct_answer": "Little did we know about it.", "explanation": "Audio exacto." },
+        { "id": "c2-36-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Not only did he lie, he stole.", "options": ["Not only did he lie, he stole.", "Not only he lied, he stole.", "Not only does he lie, he stole.", "Not only had he lied, he stole."], "correct_answer": "Not only did he lie, he stole.", "explanation": "Audio exacto." },
+        { "id": "c2-36-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Under no circumstances should you go.", "options": ["Under no circumstances should you go.", "Under no circumstances you should go.", "Under no circumstances do you go.", "Under no circumstances will you go."], "correct_answer": "Under no circumstances should you go.", "explanation": "Audio exacto." },
+        { "id": "c2-36-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Rarely do they agree on anything.", "options": ["Rarely do they agree on anything.", "Rarely they agree on anything.", "Rarely did they agree on anything.", "Rarely are they agree on anything."], "correct_answer": "Rarely do they agree on anything.", "explanation": "Audio exacto." },
+        { "id": "c2-36-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Only later did I understand.", "options": ["Only later did I understand.", "Only later I understood.", "Only later do I understand.", "Only later had I understood."], "correct_answer": "Only later did I understand.", "explanation": "Audio exacto." },
+        { "id": "c2-36-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Nowhere will you find a better price.", "options": ["Nowhere will you find a better price.", "Nowhere you will find a better price.", "Nowhere do you find a better price.", "Nowhere did you find a better price."], "correct_answer": "Nowhere will you find a better price.", "explanation": "Audio exacto." },
+        { "id": "c2-36-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Hardly had I arrived when it rained.", "options": ["Hardly had I arrived when it rained.", "Hardly I had arrived when it rained.", "Hardly did I arrived when it rained.", "Hardly have I arrived when it rained."], "correct_answer": "Hardly had I arrived when it rained.", "explanation": "Audio exacto." },
+        { "id": "c2-36-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Seldom does he visit the office.", "options": ["Seldom does he visit the office.", "Seldom he visits the office.", "Seldom do he visit the office.", "Seldom did he visit the office."], "correct_answer": "Seldom does he visit the office.", "explanation": "Audio exacto." },
+        { "id": "c2-36-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Not once did she complain.", "options": ["Not once did she complain.", "Not once she complained.", "Not once does she complain.", "Not once had she complained."], "correct_answer": "Not once did she complain.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

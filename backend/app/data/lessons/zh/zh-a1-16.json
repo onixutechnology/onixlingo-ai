@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-16",
+  "title": "La Familia",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Family", "Vocabulary", "Grammar"],
+  "completion_message": "¡Excelente! Ahora ya sabes cómo referirte a tu familia y por qué no necesitas tratarlos como 'objetos' que te pertenecen.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Los Lazos Familiares",
+      "parts": [
+        {
+          "visual": "Vocabulario de Familia Básica:\n\nLos nombres familiares en chino suelen repetir la misma sílaba dos veces. La primera lleva el tono fuerte y la segunda es neutra (suave y corta).\n\n- Papá: 爸爸 (bàba) - 4to tono + neutro.\n- Mamá: 妈妈 (māma) - 1er tono + neutro.\n- Hermano mayor: 哥哥 (gēge) - 1er tono + neutro.\n- Hermana mayor: 姐姐 (jiějie) - 3er tono + neutro.\n\nEn la cultura china, la edad es muy importante. No existe una palabra única para 'hermano', siempre debes especificar si es mayor o menor. Por ahora, aprenderemos a los mayores.",
+          "audio": "Comencemos el bloque cuatro aprendiendo sobre la familia. En chino, la mayoría de los nombres de familiares cercanos son una sílaba repetida. La primera sílaba lleva el tono y la segunda es muy suave. Papá se dice bàba. Fuerte hacia abajo. Bàba. Mamá se dice māma. Tono alto y plano. Māma. Para los hermanos, la cultura china es muy estricta con la edad. No puedes simplemente decir 'hermano', tienes que especificar si es mayor o menor que tú. El hermano mayor se dice gēge. Y la hermana mayor se dice jiějie."
+        },
+        {
+          "visual": "La Omisión de la Posesión Íntima:\n\n¿Recuerdas la partícula posesiva 的 (de)?\nMi libro = 我的书 (Wǒ de shū).\n\n¡CUIDADO! Cuando hablamos de familiares cercanos (o amigos íntimos), los chinos suelen OMITIR el 的.\nLa razón cultural es que un papá no es un objeto que te pertenece como un libro, es una relación íntima e inalienable.\n\n- Mi papá: 我爸爸 (Wǒ bàba) -> Mucho más natural que Wǒ de bàba.\n- Su mamá (de él): 他妈妈 (Tā māma).\n- ¿Es tu hermano mayor?: 是你哥哥吗？(Shì nǐ gēge ma?).",
+          "audio": "Aquí hay un secreto gramatical que te hará sonar como un nativo. Ya sabes que para decir 'Mi libro' dices 'Wǒ de shū'. Usas la partícula 'de'. Pero cuando hablas de tu papá, tu mamá, o personas muy cercanas, los chinos quitan el 'de'. ¿Por qué? Porque un padre no es un objeto que te pertenece, es una relación íntima. Así que decir 'Wǒ de bàba' suena un poco robótico y frío. Es mucho más cálido y natural decir simplemente 'Wǒ bàba'. Yo papá. 'Tā māma', él mamá. Esto aplica para toda la familia y amigos muy cercanos."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que conoces a la familia china.",
+      "questions": [
+        { "id": "zh-a1-16-q1", "type": "quiz_choice", "question": "¿Cómo se dice 'Papá' en mandarín?", "options": ["Bàba (爸爸).", "Māma (妈妈).", "Gēge (哥哥).", "Jiějie (姐姐)."], "correct_answer": "Bàba (爸爸).", "explanation": "Bàba significa Papá." },
+        { "id": "zh-a1-16-q2", "type": "quiz_choice", "question": "¿Cómo se dice 'Mamá' en mandarín?", "options": ["Māma (妈妈).", "Jiějie (姐姐).", "Bàba (爸爸).", "Gēge (哥哥)."], "correct_answer": "Māma (妈妈).", "explanation": "Māma significa Mamá." },
+        { "id": "zh-a1-16-q3", "type": "quiz_choice", "question": "¿Qué particularidad tiene el idioma chino al hablar de los hermanos?", "options": ["Debes especificar siempre si son mayores o menores que tú.", "No hay palabras para hermanos.", "Solo se puede hablar del hermano mayor.", "Se usa el mismo nombre para hombres y mujeres."], "correct_answer": "Debes especificar siempre si son mayores o menores que tú.", "explanation": "La jerarquía de edad es vital en la cultura confuciana. Gēge y Jiějie son para hermanos mayores." },
+        { "id": "zh-a1-16-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Hermano mayor'?", "options": ["Gēge (哥哥).", "Bàba (爸爸).", "Jiějie (姐姐).", "Māma (妈妈)."], "correct_answer": "Gēge (哥哥).", "explanation": "Gēge es el hermano mayor." },
+        { "id": "zh-a1-16-q5", "type": "quiz_choice", "question": "¿Cómo se dice 'Hermana mayor'?", "options": ["Jiějie (姐姐).", "Māma (妈妈).", "Gēge (哥哥).", "Bàba (爸爸)."], "correct_answer": "Jiějie (姐姐).", "explanation": "Jiějie es la hermana mayor." },
+        { "id": "zh-a1-16-q6", "type": "quiz_choice", "question": "Gramática nativa: ¿Cuál es la forma más natural de decir 'Mi papá'?", "options": ["Wǒ bàba (我爸爸).", "Wǒ de bàba (我的爸爸).", "Bàba de wǒ (爸爸的我).", "Wǒ shì bàba (我是爸爸)."], "correct_answer": "Wǒ bàba (我爸爸).", "explanation": "Se omite la partícula posesiva 'de' con familiares para denotar intimidad." },
+        { "id": "zh-a1-16-q7", "type": "quiz_choice", "question": "¿Por qué los chinos omiten el 'de' (的) con la familia?", "options": ["Porque los familiares no son objetos que se poseen; indica una relación íntima.", "Porque es más corto de escribir.", "Porque la familia es sagrada y no puede llevar partículas.", "Porque es una regla aleatoria."], "correct_answer": "Porque los familiares no son objetos que se poseen; indica una relación íntima.", "explanation": "El 'de' crea distancia (esto es mi propiedad). Omitirlo crea cercanía." },
+        { "id": "zh-a1-16-q8", "type": "quiz_choice", "question": "Traduce: 'Tā māma qù Zhōngguó' (他妈妈去中国).", "options": ["Su mamá (de él) va a China.", "Él y su mamá van a China.", "La mamá de China va a él.", "Su mamá (de él) fue a China."], "correct_answer": "Su mamá (de él) va a China.", "explanation": "Tā (Él) + māma (mamá) = Su mamá. Qù Zhōngguó = va a China." },
+        { "id": "zh-a1-16-q9", "type": "quiz_choice", "question": "Traduce: 'Wǒ gēge bú qù' (我哥哥不去).", "options": ["Mi hermano mayor no va.", "Mi hermano mayor no fue.", "Mi hermano mayor no viene.", "Mi papá no va."], "correct_answer": "Mi hermano mayor no va.", "explanation": "Mi hermano mayor (wǒ gēge) + no va (bú qù)." },
+        { "id": "zh-a1-16-q10", "type": "quiz_choice", "question": "Si quieres decir 'Amo a mi mamá', la forma más natural es:", "options": ["Wǒ ài wǒ māma. (我爱我妈妈)", "Wǒ ài wǒ de māma. (我爱我的妈妈)", "Wǒ māma ài wǒ. (我妈妈爱我)", "Wǒ xǐhuan māma. (我喜欢妈妈)"], "correct_answer": "Wǒ ài wǒ māma. (我爱我妈妈)", "explanation": "Sujeto (Wǒ) + Verbo (ài) + Objeto íntimo (wǒ māma)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correcto para los miembros de la familia. Sin tonos.",
+      "questions": [
+        { "id": "zh-a1-16-f1", "type": "fill_input", "question": "Papá: ____ (baba)", "correct_answer": "baba", "explanation": "baba" },
+        { "id": "zh-a1-16-f2", "type": "fill_input", "question": "Mamá: ____ (mama)", "correct_answer": "mama", "explanation": "mama" },
+        { "id": "zh-a1-16-f3", "type": "fill_input", "question": "Hermano mayor: ____ (gege)", "correct_answer": "gege", "explanation": "gege" },
+        { "id": "zh-a1-16-f4", "type": "fill_input", "question": "Hermana mayor: ____ (jiejie)", "correct_answer": "jiejie", "explanation": "jiejie" },
+        { "id": "zh-a1-16-f5", "type": "fill_input", "question": "Mi papá (natural): wo ____ (baba)", "correct_answer": "baba", "explanation": "baba" },
+        { "id": "zh-a1-16-f6", "type": "fill_input", "question": "Su mamá (de él): ta ____ (mama)", "correct_answer": "mama", "explanation": "mama" },
+        { "id": "zh-a1-16-f7", "type": "fill_input", "question": "Tu hermano mayor: ni ____ (gege)", "correct_answer": "gege", "explanation": "gege" },
+        { "id": "zh-a1-16-f8", "type": "fill_input", "question": "Mi hermana mayor va a China: wo ____ qu zhongguo (jiejie)", "correct_answer": "jiejie", "explanation": "jiejie" },
+        { "id": "zh-a1-16-f9", "type": "fill_input", "question": "¿Quién es tu papá?: shei shi ni ____", "correct_answer": "baba", "explanation": "baba" },
+        { "id": "zh-a1-16-f10", "type": "fill_input", "question": "Amo a mi mamá: wo ai wo ____", "correct_answer": "mama", "explanation": "mama" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y selecciona a la persona mencionada.",
+      "questions": [
+        { "id": "zh-a1-16-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "爸爸", "options": ["Papá", "Mamá", "Hermano mayor", "Hermana mayor"], "correct_answer": "Papá", "explanation": "El audio dice: bàba." },
+        { "id": "zh-a1-16-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "妈妈", "options": ["Mamá", "Papá", "Hermana mayor", "Casa"], "correct_answer": "Mamá", "explanation": "El audio dice: māma." },
+        { "id": "zh-a1-16-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "哥哥", "options": ["Hermano mayor", "Hermana mayor", "Papá", "Amigo"], "correct_answer": "Hermano mayor", "explanation": "El audio dice: gēge." },
+        { "id": "zh-a1-16-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "姐姐", "options": ["Hermana mayor", "Hermano mayor", "Mamá", "Té"], "correct_answer": "Hermana mayor", "explanation": "El audio dice: jiějie." },
+        { "id": "zh-a1-16-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我爸爸不去", "options": ["Mi papá no va", "Mi papá no fue", "Mi hermano no va", "Tu papá no va"], "correct_answer": "Mi papá no va", "explanation": "El audio dice: Wǒ bàba bú qù." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Family Members",
+      "pairs": [
+        {"id": "zh-a1-16-p1", "source": "爸爸 (bàba)", "target": "Papá"},
+        {"id": "zh-a1-16-p2", "source": "妈妈 (māma)", "target": "Mamá"},
+        {"id": "zh-a1-16-p3", "source": "哥哥 (gēge)", "target": "Hermano mayor"},
+        {"id": "zh-a1-16-p4", "source": "姐姐 (jiějie)", "target": "Hermana mayor"},
+        {"id": "zh-a1-16-p5", "source": "我爸爸 (wǒ bàba)", "target": "Mi papá"},
+        {"id": "zh-a1-16-p6", "source": "他妈妈 (tā māma)", "target": "Su mamá (de él)"},
+        {"id": "zh-a1-16-p7", "source": "你哥哥 (nǐ gēge)", "target": "Tu hermano mayor"},
+        {"id": "zh-a1-16-p8", "source": "我爱我妈妈 (wǒ ài wǒ māma)", "target": "Amo a mi mamá"},
+        {"id": "zh-a1-16-p9", "source": "谁是你爸爸？(shéi shì nǐ bàba?)", "target": "¿Quién es tu papá?"},
+        {"id": "zh-a1-16-p10", "source": "我哥哥去中国 (wǒ gēge qù zhōngguó)", "target": "Mi hermano mayor va a China"}
+      ]
+    }
+  ]
+}

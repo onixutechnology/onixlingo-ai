@@ -1,0 +1,101 @@
+{
+  "id": "a2-40",
+  "title": "A2 Milestone 4: Final Exam",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 1000,
+  "tags": ["A2", "Review", "Milestone", "Final Exam", "Grammar", "Vocabulary", "Business"],
+  "completion_message": "¡Felicidades! Has completado el Nivel A2 (Pre-Intermedio). Has demostrado que puedes comunicarte en un entorno corporativo. ¡Prepárate para el nivel B1!",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "A2 Final Exam: El Gran Reto",
+      "parts": [
+        { "visual": "En este examen final evaluaremos tu dominio del Nivel A2: \n- Emails (Reply all, attach) \n- Reported Speech (He said he was busy) \n- Online Meetings (You are on mute, share screen)", "audio": "Welcome to your A2 Final Exam. We will evaluate your mastery of emails, reported speech, and online meetings." },
+        { "visual": "- Too vs Enough (Too expensive, big enough) \n- Departments & Roles (HR, IT, CEO, Manager) \n- Office Supplies (Printer, stapler) \n- Obligation & Prohibition (Have to, mustn't) \n- Trends (Go up, slight decrease) \n- Relative Clauses (who, which, where)", "audio": "We will also test you on quantifiers, company structure, office supplies, modals of obligation, describing trends, and relative clauses. Good luck!" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Final Quiz",
+      "description": "Elige la respuesta correcta. Este es tu examen final para el nivel A2.",
+      "questions": [
+        { "id": "a2-40-q1", "type": "quiz_choice", "question": "Could you ____ this email to the CEO? (Reenviar).", "options": ["forward", "reply", "attach", "send back"], "correct_answer": "forward", "explanation": "Forward = reenviar." },
+        { "id": "a2-40-q2", "type": "quiz_choice", "question": "Please find ____ the report. (Adjunto).", "options": ["attached", "attach", "attachment", "inside"], "correct_answer": "attached", "explanation": "Please find attached." },
+        { "id": "a2-40-q3", "type": "quiz_choice", "question": "Direct: 'I am busy'. \nReported: He said that he ____ busy.", "options": ["was", "is", "were", "am"], "correct_answer": "was", "explanation": "'Am' cambia a 'was'." },
+        { "id": "a2-40-q4", "type": "quiz_choice", "question": "She ____ me that the meeting was cancelled. (Me dijo).", "options": ["told", "said", "tells", "says"], "correct_answer": "told", "explanation": "Con persona (me) usamos 'told'." },
+        { "id": "a2-40-q5", "type": "quiz_choice", "question": "I can't hear you. You are on ____. (Silencio).", "options": ["mute", "silent", "quiet", "stop"], "correct_answer": "mute", "explanation": "You are on mute." },
+        { "id": "a2-40-q6", "type": "quiz_choice", "question": "Let me ____ my screen with you. (Compartir).", "options": ["share", "show", "put", "send"], "correct_answer": "share", "explanation": "Share my screen." },
+        { "id": "a2-40-q7", "type": "quiz_choice", "question": "The software is ____ complicated. I don't understand it. (Demasiado).", "options": ["too", "enough", "very", "much"], "correct_answer": "too", "explanation": "Antes de adjetivo = too." },
+        { "id": "a2-40-q8", "type": "quiz_choice", "question": "We don't have ____ money to buy a new printer. (Suficiente).", "options": ["enough", "too", "much", "many"], "correct_answer": "enough", "explanation": "Antes de sustantivo = enough." },
+        { "id": "a2-40-q9", "type": "quiz_choice", "question": "If your computer is broken, call ____. (El departamento de sistemas).", "options": ["IT", "HR", "PR", "Sales"], "correct_answer": "IT", "explanation": "IT = Information Technology." },
+        { "id": "a2-40-q10", "type": "quiz_choice", "question": "The ____ hires new employees. (Recursos Humanos).", "options": ["HR", "IT", "CEO", "CFO"], "correct_answer": "HR", "explanation": "HR = Human Resources." },
+        { "id": "a2-40-q11", "type": "quiz_choice", "question": "The highest position in the company is the ____. (Director Ejecutivo).", "options": ["CEO", "CFO", "Manager", "Assistant"], "correct_answer": "CEO", "explanation": "CEO = Chief Executive Officer." },
+        { "id": "a2-40-q12", "type": "quiz_choice", "question": "I need to print this. Is the ____ working? (Impresora).", "options": ["printer", "shredder", "stapler", "copier"], "correct_answer": "printer", "explanation": "Printer = impresora." },
+        { "id": "a2-40-q13", "type": "quiz_choice", "question": "Destroy these documents in the ____. (Trituradora).", "options": ["shredder", "printer", "folder", "envelope"], "correct_answer": "shredder", "explanation": "Shredder = trituradora de papel." },
+        { "id": "a2-40-q14", "type": "quiz_choice", "question": "You ____ wear a uniform here. It's mandatory. (Tienes que).", "options": ["have to", "don't have to", "mustn't", "has to"], "correct_answer": "have to", "explanation": "Obligación = have to." },
+        { "id": "a2-40-q15", "type": "quiz_choice", "question": "You ____ smoke in the office. It's illegal. (Prohibido/No debes).", "options": ["mustn't", "don't have to", "haven't to", "doesn't have to"], "correct_answer": "mustn't", "explanation": "Prohibición = mustn't." },
+        { "id": "a2-40-q16", "type": "quiz_choice", "question": "Sales ____ significantly last year. (Subieron - Pasado de go up).", "options": ["went up", "went down", "remained", "fell"], "correct_answer": "went up", "explanation": "Go up (pasado went up) = subir." },
+        { "id": "a2-40-q17", "type": "quiz_choice", "question": "There was a ____ drop in profits. (Fuerte/Pronunciada).", "options": ["sharp", "slight", "stable", "gradual"], "correct_answer": "sharp", "explanation": "Sharp = fuerte/pronunciado." },
+        { "id": "a2-40-q18", "type": "quiz_choice", "question": "The man ____ called you is my manager. (Quien/Que).", "options": ["who", "which", "where", "whom"], "correct_answer": "who", "explanation": "Persona = who." },
+        { "id": "a2-40-q19", "type": "quiz_choice", "question": "This is the office ____ we work. (Donde).", "options": ["where", "which", "who", "that"], "correct_answer": "where", "explanation": "Lugar = where." },
+        { "id": "a2-40-q20", "type": "quiz_choice", "question": "The laptop ____ I bought is broken. (Que/La cual).", "options": ["which", "who", "where", "whom"], "correct_answer": "which", "explanation": "Cosa = which." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave del nivel A2.",
+      "questions": [
+        { "id": "a2-40-f1", "type": "fill_input", "question": "What is the ____ of the email? (Asunto)", "correct_answer": "subject", "explanation": "subject." },
+        { "id": "a2-40-f2", "type": "fill_input", "question": "He ____ that he was tired. (Dijo - pasado de say)", "correct_answer": "said", "explanation": "said." },
+        { "id": "a2-40-f3", "type": "fill_input", "question": "She ____ me that she liked it. (Dijo - pasado de tell)", "correct_answer": "told", "explanation": "told." },
+        { "id": "a2-40-f4", "type": "fill_input", "question": "It's ____ expensive. (Demasiado)", "correct_answer": "too", "explanation": "too." },
+        { "id": "a2-40-f5", "type": "fill_input", "question": "Not big ____. (Suficiente)", "correct_answer": "enough", "explanation": "enough." },
+        { "id": "a2-40-f6", "type": "fill_input", "question": "Where is the ____? (Engrapadora)", "correct_answer": "stapler", "explanation": "stapler." },
+        { "id": "a2-40-f7", "type": "fill_input", "question": "You ____ to wear a uniform. (Tienes que - obligación)", "correct_answer": "have", "explanation": "have." },
+        { "id": "a2-40-f8", "type": "fill_input", "question": "You ____ smoke here. (No debes - prohibición)", "correct_answer": "mustn't", "explanation": "mustn't." },
+        { "id": "a2-40-f9", "type": "fill_input", "question": "Profits ____ sharply. (Cayeron - pasado de fall)", "correct_answer": "fell", "explanation": "fell." },
+        { "id": "a2-40-f10", "type": "fill_input", "question": "The man ____ called is the boss. (Quien)", "correct_answer": "who", "explanation": "who." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "A2 Mega Match",
+      "pairs": [
+        {"id": "a2-40-p1", "source": "Forward an email", "target": "Reenviar un correo"},
+        {"id": "a2-40-p2", "source": "He told me", "target": "Él me dijo"},
+        {"id": "a2-40-p3", "source": "You are on mute", "target": "Estás en silencio"},
+        {"id": "a2-40-p4", "source": "Too much money", "target": "Demasiado dinero"},
+        {"id": "a2-40-p5", "source": "HR / IT / CEO", "target": "Recursos Humanos / Sistemas / Director"},
+        {"id": "a2-40-p6", "source": "Printer / Stapler", "target": "Impresora / Engrapadora"},
+        {"id": "a2-40-p7", "source": "Have to vs Mustn't", "target": "Obligación vs Prohibición"},
+        {"id": "a2-40-p8", "source": "Go up / Go down", "target": "Subir / Bajar"},
+        {"id": "a2-40-p9", "source": "Who / Which", "target": "Quien (Personas) / El cual (Cosas)"},
+        {"id": "a2-40-p10", "source": "A sharp drop", "target": "Una caída fuerte/pronunciada"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de tu examen final.",
+      "questions": [
+        { "id": "a2-40-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please find attached the report.", "options": ["Please find attached the report.", "Please attach the report.", "Find attached the report.", "Please find the report attached."], "correct_answer": "Please find attached the report.", "explanation": "Audio exacto." },
+        { "id": "a2-40-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He said that he was busy.", "options": ["He said that he was busy.", "He told me he was busy.", "He said he is busy.", "She said that she was busy."], "correct_answer": "He said that he was busy.", "explanation": "Audio exacto." },
+        { "id": "a2-40-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let me share my screen.", "options": ["Let me share my screen.", "I will share my screen.", "Can I share my screen?", "Let me show my screen."], "correct_answer": "Let me share my screen.", "explanation": "Audio exacto." },
+        { "id": "a2-40-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We don't have enough money.", "options": ["We don't have enough money.", "We do not have enough money.", "They don't have enough money.", "I don't have enough money."], "correct_answer": "We don't have enough money.", "explanation": "Audio exacto." },
+        { "id": "a2-40-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is the CEO of the company.", "options": ["She is the CEO of the company.", "He is the CEO of the company.", "She is the CFO of the company.", "She is a CEO of the company."], "correct_answer": "She is the CEO of the company.", "explanation": "Audio exacto." },
+        { "id": "a2-40-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Is the printer working?", "options": ["Is the printer working?", "Is the printer broken?", "Are the printers working?", "Is the photocopier working?"], "correct_answer": "Is the printer working?", "explanation": "Audio exacto." },
+        { "id": "a2-40-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You mustn't smoke in the office.", "options": ["You mustn't smoke in the office.", "You don't have to smoke in the office.", "You must not smoke in the office.", "They mustn't smoke in the office."], "correct_answer": "You mustn't smoke in the office.", "explanation": "Audio exacto." },
+        { "id": "a2-40-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sales went up last year.", "options": ["Sales went up last year.", "Sales went down last year.", "Profits went up last year.", "Prices went up last year."], "correct_answer": "Sales went up last year.", "explanation": "Audio exacto." },
+        { "id": "a2-40-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The laptop which I bought is fast.", "options": ["The laptop which I bought is fast.", "The laptop that I bought is fast.", "The laptop which I buy is fast.", "A laptop which I bought is fast."], "correct_answer": "The laptop which I bought is fast.", "explanation": "Audio exacto." },
+        { "id": "a2-40-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Congratulations, you passed the exam.", "options": ["Congratulations, you passed the exam.", "Congratulations, you pass the exam.", "Congratulations on passing the exam.", "You passed the final exam."], "correct_answer": "Congratulations, you passed the exam.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

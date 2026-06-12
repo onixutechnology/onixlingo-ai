@@ -1,0 +1,101 @@
+{
+  "id": "a2-9",
+  "title": "Meetings: Interruptions & Opinions",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Vocabulary", "Meetings", "Polite", "Opinions"],
+  "completion_message": "¡Excelente! Ya sabes cómo interrumpir educadamente y pedir opiniones en una reunión.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Reuniones: Interrupciones y Opiniones",
+      "parts": [
+        { "visual": "Interrumpir con educación: 'Sorry to interrupt, but...' (Perdón por interrumpir, pero...). 'Can I add something here?' (¿Puedo agregar algo aquí?). 'Excuse me, could I say something?' (Disculpe, ¿podría decir algo?).", "audio": "Polite interruptions. Sorry to interrupt, but... Can I add something here? Excuse me, could I say something?" },
+        { "visual": "Pedir opiniones: 'What do you think about this?' (¿Qué piensas sobre esto?). 'How do you feel about this idea?' (¿Qué opinas de esta idea?). 'Any thoughts on this?' (¿Alguna idea/opinión sobre esto?).", "audio": "Asking for opinions. What do you think about this? How do you feel about this idea? Any thoughts on this?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para completar la frase de la reunión.",
+      "questions": [
+        { "id": "a2-9-q1", "type": "quiz_choice", "question": "Sorry to ____, but we have a problem. (Interrumpir).", "options": ["interrupt", "stop", "break", "cut"], "correct_answer": "interrupt", "explanation": "Sorry to interrupt = perdón por interrumpir." },
+        { "id": "a2-9-q2", "type": "quiz_choice", "question": "Can I ____ something here? (Agregar/Añadir).", "options": ["add", "put", "say", "speak"], "correct_answer": "add", "explanation": "Can I add something here? = ¿Puedo agregar/añadir algo aquí?" },
+        { "id": "a2-9-q3", "type": "quiz_choice", "question": "Excuse me, could I ____ something? (Decir).", "options": ["say", "tell", "speak", "talk"], "correct_answer": "say", "explanation": "Could I say something? = ¿Podría decir algo?" },
+        { "id": "a2-9-q4", "type": "quiz_choice", "question": "What do you ____ about the new budget? (Pensar/Opinar).", "options": ["think", "believe", "know", "feel"], "correct_answer": "think", "explanation": "What do you think about...? = ¿Qué opinas sobre...?" },
+        { "id": "a2-9-q5", "type": "quiz_choice", "question": "How do you ____ about this strategy? (Opinar/Sentir).", "options": ["feel", "think", "believe", "say"], "correct_answer": "feel", "explanation": "How do you feel about...? es otra forma común de pedir opinión." },
+        { "id": "a2-9-q6", "type": "quiz_choice", "question": "Any ____ on this issue? (Pensamientos/Ideas/Opiniones).", "options": ["thoughts", "thinkings", "ideas", "brains"], "correct_answer": "thoughts", "explanation": "Any thoughts? = ¿Alguna opinión/idea?" },
+        { "id": "a2-9-q7", "type": "quiz_choice", "question": "If I could just ____ in for a second... (Intervenir/Entrar).", "options": ["jump", "walk", "run", "go"], "correct_answer": "jump", "explanation": "Jump in = intervenir en una conversación." },
+        { "id": "a2-9-q8", "type": "quiz_choice", "question": "Before we move ____, I'd like to say something. (Avanzar).", "options": ["on", "in", "up", "out"], "correct_answer": "on", "explanation": "Move on = pasar al siguiente tema/avanzar." },
+        { "id": "a2-9-q9", "type": "quiz_choice", "question": "I'd like to get your ____ on this. (Opinión/Perspectiva - Input).", "options": ["input", "output", "put", "say"], "correct_answer": "input", "explanation": "Get someone's input = recibir la opinión/perspectiva de alguien." },
+        { "id": "a2-9-q10", "type": "quiz_choice", "question": "Does anyone have anything to ____? (Añadir/Agregar).", "options": ["add", "say", "speak", "tell"], "correct_answer": "add", "explanation": "Have anything to add = tener algo que agregar." },
+        { "id": "a2-9-q11", "type": "quiz_choice", "question": "In my ____, this is a bad idea. (Opinión).", "options": ["opinion", "think", "mind", "head"], "correct_answer": "opinion", "explanation": "In my opinion = En mi opinión." },
+        { "id": "a2-9-q12", "type": "quiz_choice", "question": "From my point of ____, we should wait. (Punto de vista).", "options": ["view", "look", "see", "watch"], "correct_answer": "view", "explanation": "Point of view = punto de vista." },
+        { "id": "a2-9-q13", "type": "quiz_choice", "question": "I completely ____ with you. (Estoy de acuerdo).", "options": ["agree", "am agree", "agreed", "agrees"], "correct_answer": "agree", "explanation": "Agree es un verbo en inglés, no se usa con el verbo To Be. (I agree, NO I am agree)." },
+        { "id": "a2-9-q14", "type": "quiz_choice", "question": "I'm afraid I ____ with that. (No estoy de acuerdo).", "options": ["disagree", "don't agree", "am not agree", "disagrees"], "correct_answer": "disagree", "explanation": "I disagree = no estoy de acuerdo." },
+        { "id": "a2-9-q15", "type": "quiz_choice", "question": "That's a good ____. (Punto/Observación).", "options": ["point", "dot", "mark", "idea"], "correct_answer": "point", "explanation": "That's a good point = es un buen punto / buena observación." },
+        { "id": "a2-9-q16", "type": "quiz_choice", "question": "Could you ____ on that? (Explicar más/Expandir).", "options": ["elaborate", "talk", "speak", "say"], "correct_answer": "elaborate", "explanation": "Elaborate = explicar en más detalle." },
+        { "id": "a2-9-q17", "type": "quiz_choice", "question": "Let's ____ back to the main topic. (Volver).", "options": ["get", "go", "return", "move"], "correct_answer": "get", "explanation": "Get back to = volver a (un tema)." },
+        { "id": "a2-9-q18", "type": "quiz_choice", "question": "May I ____ a question? (Hacer una pregunta).", "options": ["ask", "make", "do", "say"], "correct_answer": "ask", "explanation": "Ask a question = hacer una pregunta." },
+        { "id": "a2-9-q19", "type": "quiz_choice", "question": "What's your ____ on this? (Postura/Opinión - Take).", "options": ["take", "make", "give", "have"], "correct_answer": "take", "explanation": "What's your take on this? = ¿Cuál es tu postura/opinión al respecto?" },
+        { "id": "a2-9-q20", "type": "quiz_choice", "question": "Just to ____, you want us to delay the launch? (Aclarar).", "options": ["clarify", "clear", "clean", "explain"], "correct_answer": "clarify", "explanation": "Clarify = aclarar." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave para cada frase de reunión.",
+      "questions": [
+        { "id": "a2-9-f1", "type": "fill_input", "question": "Sorry to ____, but... (Interrumpir)", "correct_answer": "interrupt", "explanation": "interrupt." },
+        { "id": "a2-9-f2", "type": "fill_input", "question": "Can I ____ something here? (Agregar)", "correct_answer": "add", "explanation": "add." },
+        { "id": "a2-9-f3", "type": "fill_input", "question": "What do you ____ about this? (Pensar/Opinar)", "correct_answer": "think", "explanation": "think." },
+        { "id": "a2-9-f4", "type": "fill_input", "question": "How do you ____ about this? (Sentir/Opinar)", "correct_answer": "feel", "explanation": "feel." },
+        { "id": "a2-9-f5", "type": "fill_input", "question": "Any ____ on this? (Ideas/Opiniones)", "correct_answer": "thoughts", "explanation": "thoughts." },
+        { "id": "a2-9-f6", "type": "fill_input", "question": "I'd like to get your ____. (Aporte/Opinión - input)", "correct_answer": "input", "explanation": "input." },
+        { "id": "a2-9-f7", "type": "fill_input", "question": "In my ____, it is too expensive. (Opinión)", "correct_answer": "opinion", "explanation": "opinion." },
+        { "id": "a2-9-f8", "type": "fill_input", "question": "I completely ____ with you. (Estoy de acuerdo)", "correct_answer": "agree", "explanation": "agree." },
+        { "id": "a2-9-f9", "type": "fill_input", "question": "That's a good ____. (Punto/Observación)", "correct_answer": "point", "explanation": "point." },
+        { "id": "a2-9-f10", "type": "fill_input", "question": "Just to ____... (Aclarar)", "correct_answer": "clarify", "explanation": "clarify." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-9-p1", "source": "Sorry to interrupt", "target": "Perdón por interrumpir"},
+        {"id": "a2-9-p2", "source": "Can I add something?", "target": "¿Puedo agregar algo?"},
+        {"id": "a2-9-p3", "source": "What do you think?", "target": "¿Qué piensas / opinas?"},
+        {"id": "a2-9-p4", "source": "How do you feel about...?", "target": "¿Qué opinas de...?"},
+        {"id": "a2-9-p5", "source": "Any thoughts?", "target": "¿Alguna idea / opinión?"},
+        {"id": "a2-9-p6", "source": "In my opinion", "target": "En mi opinión"},
+        {"id": "a2-9-p7", "source": "I completely agree", "target": "Estoy totalmente de acuerdo"},
+        {"id": "a2-9-p8", "source": "I disagree", "target": "No estoy de acuerdo"},
+        {"id": "a2-9-p9", "source": "That's a good point", "target": "Ese es un buen punto"},
+        {"id": "a2-9-p10", "source": "Just to clarify", "target": "Solo para aclarar"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a2-9-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sorry to interrupt, but we have a problem.", "options": ["Sorry to interrupt, but we have a problem.", "Sorry to interrupt, but we have an issue.", "Excuse me to interrupt, but we have a problem.", "Sorry to interrupt you, but we have a problem."], "correct_answer": "Sorry to interrupt, but we have a problem.", "explanation": "Audio exacto." },
+        { "id": "a2-9-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I add something here?", "options": ["Can I add something here?", "Could I add something here?", "May I add something here?", "Can you add something here?"], "correct_answer": "Can I add something here?", "explanation": "Audio exacto." },
+        { "id": "a2-9-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What do you think about this?", "options": ["What do you think about this?", "What do you think about it?", "What do you think of this?", "How do you think about this?"], "correct_answer": "What do you think about this?", "explanation": "Audio exacto." },
+        { "id": "a2-9-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How do you feel about this strategy?", "options": ["How do you feel about this strategy?", "What do you feel about this strategy?", "How do you feel about the strategy?", "How do you feel about this plan?"], "correct_answer": "How do you feel about this strategy?", "explanation": "Audio exacto." },
+        { "id": "a2-9-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Any thoughts on this?", "options": ["Any thoughts on this?", "Any ideas on this?", "Any thoughts about this?", "Do you have any thoughts on this?"], "correct_answer": "Any thoughts on this?", "explanation": "Audio exacto." },
+        { "id": "a2-9-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If I could just jump in for a second.", "options": ["If I could just jump in for a second.", "If I can just jump in for a second.", "Could I just jump in for a second?", "If I could jump in for a second."], "correct_answer": "If I could just jump in for a second.", "explanation": "Audio exacto." },
+        { "id": "a2-9-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I'd like to get your input on this.", "options": ["I'd like to get your input on this.", "I would like to get your input on this.", "I'd like to get your opinion on this.", "I want to get your input on this."], "correct_answer": "I'd like to get your input on this.", "explanation": "Audio exacto." },
+        { "id": "a2-9-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I completely agree with you.", "options": ["I completely agree with you.", "I totally agree with you.", "I agree with you.", "I am completely agree with you."], "correct_answer": "I completely agree with you.", "explanation": "Audio exacto." },
+        { "id": "a2-9-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "That's a good point.", "options": ["That's a good point.", "That is a good point.", "It's a good point.", "That's a great point."], "correct_answer": "That's a good point.", "explanation": "Audio exacto." },
+        { "id": "a2-9-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Just to clarify, you want us to delay?", "options": ["Just to clarify, you want us to delay?", "Just to clarify, do you want us to delay?", "To clarify, you want us to delay?", "Just to clarify, you want to delay?"], "correct_answer": "Just to clarify, you want us to delay?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

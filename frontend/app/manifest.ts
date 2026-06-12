@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'OnixLingo Enterprise Language Training',
     short_name: 'OnixLingo',
-    description: 'Plataforma de aprendizaje de idiomas de alto rendimiento impulsada por Inteligencia Artificial para ejecutivos y profesionales de OnixCorp.',
+    description: 'Plataforma de aprendizaje de idiomas de alto rendimiento impulsada por Inteligencia Artificial para ejecutivos y profesionales de OnixLingo.',
     start_url: '/',
     display: 'standalone',
     background_color: '#edf7f2',

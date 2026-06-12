@@ -1,0 +1,101 @@
+{
+  "id": "c2-18",
+  "title": "C-Suite & Boardroom Politics",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Business", "Politics", "C-Suite", "Management"],
+  "completion_message": "¡Excelente! La política de la sala de juntas (Boardroom Politics) es implacable. Conceptos como 'Glass ceiling', 'Golden parachute' o 'Stakeholder' te dan la profundidad necesaria para entender y participar en el juego de tronos del mundo corporativo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Política en la Sala de Juntas (C2)",
+      "parts": [
+        { "visual": "1. The C-Suite (La alta dirección): \n- Refiere a los altos ejecutivos cuyos títulos empiezan con 'C' (Chief): CEO, CFO, COO, CTO. \nEj: The decision must be approved by the C-Suite. \n\n2. Board of Directors / The Board (Junta Directiva): \n- Grupo elegido por los accionistas (shareholders) para supervisar la empresa. \n\n3. Stakeholder vs Shareholder: \n- Shareholder: Accionista (dueño de acciones). \n- Stakeholder: Parte interesada (cualquiera afectado por la empresa: empleados, clientes, comunidad). \nEj: We must consider the impact on all stakeholders, not just the shareholders.", "audio": "Welcome to Boardroom Politics. Number 1: The C-Suite. This refers to the top senior executives whose titles start with 'Chief', like CEO, CFO, COO, and CTO. Number 2: The Board of Directors, or simply 'The Board'. This is the group elected by shareholders to oversee the company. Number 3: Stakeholder versus Shareholder. A 'shareholder' owns shares of the company. A 'stakeholder' is anyone affected by the company, including employees, customers, and the community. For example: We must consider the impact on all stakeholders, not just the shareholders." },
+        { "visual": "Términos Políticos Corporativos: \n\n4. Golden parachute (Paracaídas de oro): \n- Una gran compensación financiera garantizada a un ejecutivo si es despedido o la empresa es vendida. \nEj: The CEO left with a $20 million golden parachute. \n\n5. Glass ceiling (Techo de cristal): \n- Una barrera invisible que impide a ciertos grupos (frecuentemente mujeres o minorías) ascender a los puestos más altos. \nEj: She finally broke the glass ceiling and became the first female CEO. \n\n6. Nepotism / Cronyism (Nepotismo / Amiguismo): \n- Contratar o ascender a familiares (nepotism) o amigos (cronyism) sin importar el mérito.", "audio": "Corporate Political Terms. Number 4: Golden parachute. This is a massive financial compensation guaranteed to an executive if they are fired or the company is sold. For example: The CEO left with a twenty million dollar golden parachute. Number 5: Glass ceiling. An invisible barrier that prevents certain demographics, often women or minorities, from rising to the highest levels. For example: She finally broke the glass ceiling and became the first female CEO. Number 6: Nepotism and Cronyism. 'Nepotism' is favoring relatives, while 'Cronyism' is favoring friends, regardless of their actual merit." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término correcto sobre política corporativa.",
+      "questions": [
+        { "id": "c2-18-q1", "type": "quiz_choice", "question": "The group of top senior executives (CEO, CFO, CTO) is collectively known as the ____-Suite.", "options": ["C", "A", "Top", "Exec"], "correct_answer": "C", "explanation": "C-Suite = alta dirección (Chiefs)." },
+        { "id": "c2-18-q2", "type": "quiz_choice", "question": "A person who owns shares in a company is a ____.", "options": ["shareholder", "stakeholder", "bondholder", "director"], "correct_answer": "shareholder", "explanation": "Shareholder = accionista." },
+        { "id": "c2-18-q3", "type": "quiz_choice", "question": "Anyone who has an interest in or is affected by the company (employees, customers, local community) is a ____.", "options": ["stakeholder", "shareholder", "stockholder", "owner"], "correct_answer": "stakeholder", "explanation": "Stakeholder = parte interesada." },
+        { "id": "c2-18-q4", "type": "quiz_choice", "question": "The CEO was fired, but he received a massive ____ parachute as part of his severance package.", "options": ["golden", "silver", "diamond", "bronze"], "correct_answer": "golden", "explanation": "Golden parachute = indemnización millonaria garantizada." },
+        { "id": "c2-18-q5", "type": "quiz_choice", "question": "Many women in the corporate world still struggle to break through the ____ ceiling.", "options": ["glass", "iron", "steel", "wood"], "correct_answer": "glass", "explanation": "Glass ceiling = techo de cristal." },
+        { "id": "c2-18-q6", "type": "quiz_choice", "question": "The manager was accused of ____ because he hired his unqualified nephew for the job.", "options": ["nepotism", "cronyism", "favoritism", "corruption"], "correct_answer": "nepotism", "explanation": "Nepotism = favoritismo hacia familiares." },
+        { "id": "c2-18-q7", "type": "quiz_choice", "question": "Promoting his unqualified college friend over experienced employees is a clear case of ____. (Amiguismo).", "options": ["cronyism", "nepotism", "lobbying", "bribery"], "correct_answer": "cronyism", "explanation": "Cronyism = favoritismo hacia amigos (amiguismo)." },
+        { "id": "c2-18-q8", "type": "quiz_choice", "question": "The group elected by shareholders to oversee the company is the ____ of Directors.", "options": ["Board", "Council", "Committee", "Panel"], "correct_answer": "Board", "explanation": "Board of Directors = Junta Directiva." },
+        { "id": "c2-18-q9", "type": "quiz_choice", "question": "A secret agreement or cooperation between competitors to fix prices or cheat others is called ____. (Colusión).", "options": ["collusion", "collision", "collection", "connection"], "correct_answer": "collusion", "explanation": "Collusion = colusión / acuerdo ilícito." },
+        { "id": "c2-18-q10", "type": "quiz_choice", "question": "An attempt by an outside company to take over a target company against the wishes of its management is a ____ takeover.", "options": ["hostile", "friendly", "aggressive", "violent"], "correct_answer": "hostile", "explanation": "Hostile takeover = OPA hostil / toma de control hostil." },
+        { "id": "c2-18-q11", "type": "quiz_choice", "question": "When an executive uses confidential company information to buy or sell stock illegally, it's called ____ trading.", "options": ["insider", "outsider", "secret", "illegal"], "correct_answer": "insider", "explanation": "Insider trading = uso de información privilegiada." },
+        { "id": "c2-18-q12", "type": "quiz_choice", "question": "An employee who publicly exposes illegal or unethical practices within their own company is a ____. (Denunciante).", "options": ["whistleblower", "loudspeaker", "complainer", "snitch"], "correct_answer": "whistleblower", "explanation": "Whistleblower = denunciante de irregularidades." },
+        { "id": "c2-18-q13", "type": "quiz_choice", "question": "A strategy used by a target company to prevent a hostile takeover by making its stock less attractive is a ____ pill. (Píldora envenenada).", "options": ["poison", "bitter", "toxic", "deadly"], "correct_answer": "poison", "explanation": "Poison pill = píldora envenenada (estrategia anti-OPA hostil)." },
+        { "id": "c2-18-q14", "type": "quiz_choice", "question": "The Chief ____ Officer (CFO) is responsible for managing the financial risks of the corporation.", "options": ["Financial", "Funding", "Fiscal", "Fiduciary"], "correct_answer": "Financial", "explanation": "CFO = Chief Financial Officer." },
+        { "id": "c2-18-q15", "type": "quiz_choice", "question": "The Chief ____ Officer (COO) oversees the daily operations of the company.", "options": ["Operating", "Organizing", "Official", "Ordering"], "correct_answer": "Operating", "explanation": "COO = Chief Operating Officer." },
+        { "id": "c2-18-q16", "type": "quiz_choice", "question": "A company that holds a controlling interest in other companies (subsidiaries) is called a ____ company. (Empresa matriz/holding).", "options": ["holding", "keeping", "master", "parent"], "correct_answer": "holding", "explanation": "Holding company (o parent company)." },
+        { "id": "c2-18-q17", "type": "quiz_choice", "question": "A situation in which a person is in a position to derive personal benefit from actions or decisions made in their official capacity is a ____ of interest.", "options": ["conflict", "clash", "fight", "battle"], "correct_answer": "conflict", "explanation": "Conflict of interest = conflicto de intereses." },
+        { "id": "c2-18-q18", "type": "quiz_choice", "question": "When the board forces the CEO to resign but disguises it as a voluntary 'retirement', he was effectively ____ out. (Expulsado/Empujado).", "options": ["pushed", "pulled", "thrown", "kicked"], "correct_answer": "pushed", "explanation": "Pushed out = presionado para renunciar." },
+        { "id": "c2-18-q19", "type": "quiz_choice", "question": "When a company separates part of its business into a completely new, independent company, it's called a ____.", "options": ["spin-off", "cut-off", "break-off", "split-off"], "correct_answer": "spin-off", "explanation": "Spin-off = escisión / creación de una nueva empresa a partir de otra." },
+        { "id": "c2-18-q20", "type": "quiz_choice", "question": "An individual who is appointed to the board but is not an employee of the company is an ____ director. (Director independiente).", "options": ["outside", "inside", "external", "foreign"], "correct_answer": "outside", "explanation": "Outside director (o independent director)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra corporativa correcta.",
+      "questions": [
+        { "id": "c2-18-f1", "type": "fill_input", "question": "The ____-Suite. (Alta dirección con C)", "correct_answer": "C", "explanation": "C." },
+        { "id": "c2-18-f2", "type": "fill_input", "question": "The ____ of Directors. (Junta Directiva con B)", "correct_answer": "Board", "explanation": "Board." },
+        { "id": "c2-18-f3", "type": "fill_input", "question": "A ____holder owns stock. (Accionista con S)", "correct_answer": "share", "explanation": "share (shareholder)." },
+        { "id": "c2-18-f4", "type": "fill_input", "question": "A ____holder is affected by the company. (Parte interesada con S)", "correct_answer": "stake", "explanation": "stake (stakeholder)." },
+        { "id": "c2-18-f5", "type": "fill_input", "question": "A ____ parachute. (Indemnización millonaria con G)", "correct_answer": "golden", "explanation": "golden." },
+        { "id": "c2-18-f6", "type": "fill_input", "question": "The ____ ceiling. (Techo invisible con G)", "correct_answer": "glass", "explanation": "glass." },
+        { "id": "c2-18-f7", "type": "fill_input", "question": "Hiring family is ____. (Nepotismo con N)", "correct_answer": "nepotism", "explanation": "nepotism." },
+        { "id": "c2-18-f8", "type": "fill_input", "question": "Hiring friends is ____. (Amiguismo con C)", "correct_answer": "cronyism", "explanation": "cronyism." },
+        { "id": "c2-18-f9", "type": "fill_input", "question": "A hostile ____. (Toma de control hostil con T)", "correct_answer": "takeover", "explanation": "takeover." },
+        { "id": "c2-18-f10", "type": "fill_input", "question": "A corporate ____. (Denunciante con W)", "correct_answer": "whistleblower", "explanation": "whistleblower." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Corporate Politics Match",
+      "pairs": [
+        {"id": "c2-18-p1", "source": "C-Suite", "target": "La alta dirección (CEO, CFO, etc.)"},
+        {"id": "c2-18-p2", "source": "Board of Directors", "target": "Junta Directiva"},
+        {"id": "c2-18-p3", "source": "Shareholder", "target": "Accionista (dueño)"},
+        {"id": "c2-18-p4", "source": "Stakeholder", "target": "Parte interesada / Afectada"},
+        {"id": "c2-18-p5", "source": "Golden parachute", "target": "Indemnización millonaria al despido"},
+        {"id": "c2-18-p6", "source": "Glass ceiling", "target": "Barrera invisible al ascenso (mujeres/minorías)"},
+        {"id": "c2-18-p7", "source": "Nepotism", "target": "Favoritismo a familiares"},
+        {"id": "c2-18-p8", "source": "Cronyism", "target": "Amiguismo"},
+        {"id": "c2-18-p9", "source": "Hostile takeover", "target": "Toma de control hostil"},
+        {"id": "c2-18-p10", "source": "Whistleblower", "target": "Denunciante de irregularidades"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase corporativa correcta.",
+      "questions": [
+        { "id": "c2-18-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Present it to the C-Suite.", "options": ["Present it to the C-Suite.", "Present it to the CEO suite.", "Present it to the sea suite.", "Present it to the C-Sweet."], "correct_answer": "Present it to the C-Suite.", "explanation": "Audio exacto." },
+        { "id": "c2-18-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The Board of Directors agreed.", "options": ["The Board of Directors agreed.", "The Board of Directors agree.", "A Board of Directors agreed.", "The Board of Director agreed."], "correct_answer": "The Board of Directors agreed.", "explanation": "Audio exacto." },
+        { "id": "c2-18-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must protect our shareholders.", "options": ["We must protect our shareholders.", "We must protect our stakeholders.", "We must protect the shareholders.", "They must protect our shareholders."], "correct_answer": "We must protect our shareholders.", "explanation": "Audio exacto." },
+        { "id": "c2-18-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Employees are key stakeholders.", "options": ["Employees are key stakeholders.", "Employees are key shareholders.", "The employees are key stakeholders.", "Employers are key stakeholders."], "correct_answer": "Employees are key stakeholders.", "explanation": "Audio exacto." },
+        { "id": "c2-18-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He got a golden parachute.", "options": ["He got a golden parachute.", "She got a golden parachute.", "He gets a golden parachute.", "He got the golden parachute."], "correct_answer": "He got a golden parachute.", "explanation": "Audio exacto." },
+        { "id": "c2-18-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She broke the glass ceiling.", "options": ["She broke the glass ceiling.", "He broke the glass ceiling.", "She breaks the glass ceiling.", "She broke a glass ceiling."], "correct_answer": "She broke the glass ceiling.", "explanation": "Audio exacto." },
+        { "id": "c2-18-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "That is pure nepotism.", "options": ["That is pure nepotism.", "This is pure nepotism.", "That was pure nepotism.", "That is pure cronyism."], "correct_answer": "That is pure nepotism.", "explanation": "Audio exacto." },
+        { "id": "c2-18-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a hostile takeover.", "options": ["It was a hostile takeover.", "It is a hostile takeover.", "This was a hostile takeover.", "It was a friendly takeover."], "correct_answer": "It was a hostile takeover.", "explanation": "Audio exacto." },
+        { "id": "c2-18-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The whistleblower contacted the press.", "options": ["The whistleblower contacted the press.", "A whistleblower contacted the press.", "The whistleblower contacts the press.", "The whistleblower contacted the police."], "correct_answer": "The whistleblower contacted the press.", "explanation": "Audio exacto." },
+        { "id": "c2-18-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He was accused of insider trading.", "options": ["He was accused of insider trading.", "She was accused of insider trading.", "He is accused of insider trading.", "He was accused of outsider trading."], "correct_answer": "He was accused of insider trading.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

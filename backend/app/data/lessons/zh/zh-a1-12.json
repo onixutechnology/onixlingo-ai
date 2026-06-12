@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-12",
+  "title": "¿A Dónde Vas?",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Places", "Questions", "Vocabulary"],
+  "completion_message": "¡Misión cumplida! Ya eres capaz de navegar por el mundo usando el chino mandarín. ¡Siguiente parada: China!",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Lugares y Destinos",
+      "parts": [
+        {
+          "visual": "Vocabulario de Lugares:\n\n- China: 中国 (Zhōngguó). Literalmente: País (guó) del Centro (zhōng). Los antiguos chinos creían que su país estaba en el centro del mundo.\n- Escuela: 学校 (Xuéxiào).\n- Casa / Familia: 家 (Jiā). El carácter original muestra un techo con un cerdo debajo, porque en la antigüedad, tener un cerdo bajo techo significaba tener un hogar próspero.\n\nEjemplos con el verbo Ir (去 - qù):\n- Yo voy a China: 我去中国 (Wǒ qù Zhōngguó).\n- Yo voy a la escuela: 我去学校 (Wǒ qù xuéxiào).",
+          "audio": "Es hora de aprender nuestros primeros destinos. La palabra para China es fascinante: Zhōngguó. Zhōng significa 'Centro', y guó significa 'País'. Para los chinos, su nación era el 'País del Centro' del mundo. Escuela se dice Xuéxiào. Y casa o familia se dice Jiā. El símbolo de Jiā es hermoso: tiene un techo en la parte superior y un cerdo en la parte inferior. Para los antiguos chinos, tener un techo y comida significaba tener un hogar. Para decir que vas a estos lugares, solo usas el verbo qù que aprendimos antes. Wǒ qù Zhōngguó. Yo voy a China."
+        },
+        {
+          "visual": "La Pregunta Abierta: ¿Dónde? (哪里 - nǎlǐ)\n\n¿Recuerdas que en chino las palabras de pregunta NUNCA se mueven de lugar?\n\nSi quieres preguntar '¿A dónde vas tú?', la estructura debe ser: Tú + vas + dónde.\n- Chino: 你去哪里？ (Nǐ qù nǎlǐ?).\n\nRespuesta:\n- Yo voy a casa: 我去家 (Wǒ qù jiā).\n\n¡CUIDADO! Como 哪里 (nǎlǐ) ya es una palabra de pregunta abierta, JAMÁS debes poner 吗 (ma) al final de la oración.",
+          "audio": "Para preguntar 'Dónde', usamos la palabra Nǎlǐ. Y aplicamos la misma regla de oro que aprendimos con 'Qué' y 'Quién'. La palabra 'Dónde' no se mueve al principio de la frase. Se queda exactamente en el lugar del destino. Así que en lugar de decir '¿A dónde vas?', un chino dice literalmente 'Tú vas dónde'. Nǐ qù nǎlǐ. Y por el amor de Buda, recuerda no ponerle la partícula 'ma' al final. Las preguntas abiertas nunca llevan 'ma'. Solo di 'Nǐ qù nǎlǐ'."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa tu conocimiento sobre lugares y direcciones.",
+      "questions": [
+        { "id": "zh-a1-12-q1", "type": "quiz_choice", "question": "¿Qué significa literalmente el nombre de China, 中国 (Zhōngguó)?", "options": ["País del Centro.", "Tierra Grande.", "País del Dragón.", "Nación Roja."], "correct_answer": "País del Centro.", "explanation": "Zhōng (Centro) + Guó (País). Refleja la visión cosmológica china antigua." },
+        { "id": "zh-a1-12-q2", "type": "quiz_choice", "question": "¿Qué significa el carácter 家 (jiā)?", "options": ["Casa / Familia.", "Escuela.", "Tienda.", "Hospital."], "correct_answer": "Casa / Familia.", "explanation": "Jiā representa tanto la estructura física (casa) como la institución (familia)." },
+        { "id": "zh-a1-12-q3", "type": "quiz_choice", "question": "La palabra 学校 (xuéxiào) significa:", "options": ["Escuela.", "Restaurante.", "China.", "Oficina."], "correct_answer": "Escuela.", "explanation": "Xuéxiào es escuela. 'Xué' significa estudiar/aprender." },
+        { "id": "zh-a1-12-q4", "type": "quiz_choice", "question": "¿Qué significa la palabra interrogativa 哪里 (nǎlǐ)?", "options": ["Dónde.", "Quién.", "Qué.", "Cuándo."], "correct_answer": "Dónde.", "explanation": "Nǎlǐ se usa para preguntar por lugares." },
+        { "id": "zh-a1-12-q5", "type": "quiz_choice", "question": "¿Cómo se pregunta '¿A dónde vas (tú)?' en mandarín?", "options": ["Nǐ qù nǎlǐ? (你去哪里？)", "Nǎlǐ nǐ qù? (哪里你去？)", "Nǐ qù nǎlǐ ma? (你去哪里吗？)", "Nǐ nǎlǐ qù? (你哪里去？)"], "correct_answer": "Nǐ qù nǎlǐ? (你去哪里？)", "explanation": "Tú (nǐ) + vas (qù) + dónde (nǎlǐ). La palabra de pregunta va al final, en el lugar del destino." },
+        { "id": "zh-a1-12-q6", "type": "quiz_choice", "question": "¿Es correcto decir 'Nǐ qù nǎlǐ ma?' (你去哪里吗？)?", "options": ["No, es un error gramatical.", "Sí, es completamente normal.", "Sí, pero es muy formal.", "Solo si preguntas en pasado."], "correct_answer": "No, es un error gramatical.", "explanation": "Nǎlǐ (Dónde) ya hace que la oración sea una pregunta. Agregar 吗 (ma) es un error grave." },
+        { "id": "zh-a1-12-q7", "type": "quiz_choice", "question": "¿Cómo dirías 'Nosotros vamos a China'?", "options": ["Wǒmen qù Zhōngguó. (我们去中国)", "Zhōngguó qù wǒmen. (中国去我们)", "Wǒmen Zhōngguó qù. (我们中国去)", "Wǒ qù Zhōngguó. (我去中国)"], "correct_answer": "Wǒmen qù Zhōngguó. (我们去中国)", "explanation": "Sujeto (Wǒmen) + Verbo (qù) + Destino (Zhōngguó)." },
+        { "id": "zh-a1-12-q8", "type": "quiz_choice", "question": "Imagina esta conversación. Persona A dice: 'Nǐ qù nǎlǐ?'. ¿Qué puede responder la persona B?", "options": ["Wǒ qù xuéxiào. (Voy a la escuela).", "Wǒ shì xuésheng. (Soy estudiante).", "Wǒ yǒu chá. (Tengo té).", "Wǒmen shì. (Nosotros somos)."], "correct_answer": "Wǒ qù xuéxiào. (Voy a la escuela).", "explanation": "A la pregunta '¿A dónde vas?', se responde con el verbo ir y un destino." },
+        { "id": "zh-a1-12-q9", "type": "quiz_choice", "question": "¿Cómo se diría 'Ellos NO van a la escuela'?", "options": ["Tāmen bú qù xuéxiào. (他们不去学校)", "Tāmen méiyǒu qù xuéxiào. (他们没有去学校)", "Tāmen qù bù xuéxiào. (他们去不学校)", "Bú qù tāmen xuéxiào. (不去他们学校)"], "correct_answer": "Tāmen bú qù xuéxiào. (他们不去学校)", "explanation": "Se niega el verbo ir (qù) usando bú." },
+        { "id": "zh-a1-12-q10", "type": "quiz_choice", "question": "La palabra 中国 (Zhōngguó) se compone de dos caracteres. ¿Qué significa el primero, 中 (Zhōng)?", "options": ["Centro / Medio.", "País.", "Grande.", "Rojo."], "correct_answer": "Centro / Medio.", "explanation": "El carácter 中 es literalmente un bloque atravesado justo por la mitad, representando el centro." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correcto. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-12-f1", "type": "fill_input", "question": "China: zhong____", "correct_answer": "guo", "explanation": "guo" },
+        { "id": "zh-a1-12-f2", "type": "fill_input", "question": "Escuela: xue____", "correct_answer": "xiao", "explanation": "xiao" },
+        { "id": "zh-a1-12-f3", "type": "fill_input", "question": "Casa / Familia: ____ (jia)", "correct_answer": "jia", "explanation": "jia" },
+        { "id": "zh-a1-12-f4", "type": "fill_input", "question": "Dónde: na____", "correct_answer": "li", "explanation": "li" },
+        { "id": "zh-a1-12-f5", "type": "fill_input", "question": "Yo voy a China: wo qu zhong____", "correct_answer": "guo", "explanation": "guo" },
+        { "id": "zh-a1-12-f6", "type": "fill_input", "question": "¿Tú vas a dónde?: ni qu na____", "correct_answer": "li", "explanation": "li" },
+        { "id": "zh-a1-12-f7", "type": "fill_input", "question": "Él va a la escuela: ta qu xue____", "correct_answer": "xiao", "explanation": "xiao" },
+        { "id": "zh-a1-12-f8", "type": "fill_input", "question": "Yo no voy a casa: wo bu qu ____ (jia)", "correct_answer": "jia", "explanation": "jia" },
+        { "id": "zh-a1-12-f9", "type": "fill_input", "question": "¿Ellos van a China?: tamen qu zhongguo ____", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-12-f10", "type": "fill_input", "question": "Dónde: ____ (nali)", "correct_answer": "nali", "explanation": "nali" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y selecciona la traducción del lugar o pregunta.",
+      "questions": [
+        { "id": "zh-a1-12-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "中国", "options": ["China", "Escuela", "Casa", "Dónde"], "correct_answer": "China", "explanation": "El audio dice: Zhōngguó." },
+        { "id": "zh-a1-12-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "家", "options": ["Casa / Familia", "China", "Escuela", "Qué"], "correct_answer": "Casa / Familia", "explanation": "El audio dice: jiā." },
+        { "id": "zh-a1-12-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "学校", "options": ["Escuela", "China", "Casa", "Dónde"], "correct_answer": "Escuela", "explanation": "El audio dice: xuéxiào." },
+        { "id": "zh-a1-12-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你去哪里？", "options": ["¿A dónde vas?", "¿Quién eres?", "¿Qué quieres?", "¿Tú vas a China?"], "correct_answer": "¿A dónde vas?", "explanation": "El audio dice: Nǐ qù nǎlǐ?" },
+        { "id": "zh-a1-12-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我不去学校", "options": ["Yo no voy a la escuela", "Yo voy a la escuela", "Él no va a la escuela", "Yo no voy a China"], "correct_answer": "Yo no voy a la escuela", "explanation": "El audio dice: Wǒ bú qù xuéxiào." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Places and Grammar",
+      "pairs": [
+        {"id": "zh-a1-12-p1", "source": "中国 (Zhōngguó)", "target": "China (País del Centro)"},
+        {"id": "zh-a1-12-p2", "source": "学校 (xuéxiào)", "target": "Escuela"},
+        {"id": "zh-a1-12-p3", "source": "家 (jiā)", "target": "Casa / Familia"},
+        {"id": "zh-a1-12-p4", "source": "哪里 (nǎlǐ)", "target": "Dónde"},
+        {"id": "zh-a1-12-p5", "source": "你去哪里？ (nǐ qù nǎlǐ?)", "target": "¿A dónde vas?"},
+        {"id": "zh-a1-12-p6", "source": "我去中国 (wǒ qù zhōngguó)", "target": "Yo voy a China"},
+        {"id": "zh-a1-12-p7", "source": "他去学校 (tā qù xuéxiào)", "target": "Él va a la escuela"},
+        {"id": "zh-a1-12-p8", "source": "我不去家 (wǒ bú qù jiā)", "target": "Yo no voy a casa"},
+        {"id": "zh-a1-12-p9", "source": "你去中国吗？(nǐ qù zhōngguó ma?)", "target": "¿Tú vas a China?"},
+        {"id": "zh-a1-12-p10", "source": "中 (zhōng)", "target": "Centro"}
+      ]
+    }
+  ]
+}

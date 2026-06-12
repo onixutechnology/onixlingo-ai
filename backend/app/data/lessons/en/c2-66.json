@@ -1,0 +1,101 @@
+{
+  "id": "c2-66",
+  "title": "The Subjunctive",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Grammar", "Subjunctive", "Formal", "Writing"],
+  "completion_message": "¡Sublime! Has dominado el Subjuntivo en inglés. Esta estructura sutil, usada casi exclusivamente en inglés corporativo, diplomático y legal, marca la diferencia entre un hablante avanzado y un experto absoluto.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Modo Subjuntivo en Inglés (C2)",
+      "parts": [
+        { "visual": "En inglés moderno, el Subjuntivo es raro, pero se usa en contextos muy formales y corporativos para expresar demandas, sugerencias o necesidades. \n\nRegla de Oro: \nEn el Subjuntivo, el verbo siempre va en su forma BASE (infinitivo sin 'to'), sin importar el sujeto (ni siquiera para He/She/It en presente). \n\n1. Con verbos de Demanda/Sugerencia (demand, insist, suggest, recommend, require): \n- Incorrecto: I demand that he RESIGNS. \n- Correcto: I demand that he RESIGN. \n- Incorrecto: They insisted that she PAYS the fine. \n- Correcto: They insisted that she PAY the fine.", "audio": "Welcome to The Subjunctive Mood. In modern English, the subjunctive is rare, but it is heavily used in very formal, corporate, and legal contexts to express demands, suggestions, or necessity. The golden rule is this: In the subjunctive, the verb is always in its BASE form, without 'to'. This means no 's' for he, she, or it, and no past tense. Let's look at Number 1: With verbs of demand or suggestion like demand, insist, suggest, or recommend. Incorrect: I demand that he RESIGNS. Correct subjunctive: I demand that he RESIGN. Incorrect: They insisted that she PAYS the fine. Correct: They insisted that she PAY the fine." },
+        { "visual": "2. Con adjetivos de Necesidad/Importancia (It is crucial, vital, important, essential that...): \n- Incorrecto: It is vital that he IS informed immediately. \n- Correcto: It is vital that he BE informed immediately. \n- Incorrecto: It is essential that the CEO ATTENDS the meeting. \n- Correcto: It is essential that the CEO ATTEND the meeting. \n\n3. Subjuntivo Negativo (solo añade 'not' antes de la forma base): \n- Correcto: I recommend that you NOT SIGN the contract. \n- Correcto: It is crucial that he NOT KNOW about the merger.", "audio": "Number 2: With adjectives of necessity or importance, such as It is crucial, vital, important, or essential. Incorrect: It is vital that he IS informed immediately. Correct subjunctive: It is vital that he BE informed immediately. Notice we use 'be', not 'is'. Incorrect: It is essential that the CEO ATTENDS the meeting. Correct: It is essential that the CEO ATTEND the meeting. Number 3: The negative subjunctive. Do not use 'don't' or 'doesn't'. Just add 'not' before the base verb. Correct: I recommend that you NOT SIGN the contract. Correct: It is crucial that he NOT KNOW about the merger." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma verbal correcta (modo subjuntivo) para contextos muy formales.",
+      "questions": [
+        { "id": "c2-66-q1", "type": "quiz_choice", "question": "The board of directors demands that the CEO ____ immediately.", "options": ["resign", "resigns", "resigned", "to resign"], "correct_answer": "resign", "explanation": "Demands that he RESIGN (forma base, sin 's')." },
+        { "id": "c2-66-q2", "type": "quiz_choice", "question": "It is absolutely vital that she ____ informed of the lawsuit.", "options": ["be", "is", "was", "has been"], "correct_answer": "be", "explanation": "It is vital that she BE informed (forma base de 'to be')." },
+        { "id": "c2-66-q3", "type": "quiz_choice", "question": "I strongly suggest that he ____ a lawyer before talking to the press.", "options": ["hire", "hires", "hired", "is hiring"], "correct_answer": "hire", "explanation": "Suggest that he HIRE." },
+        { "id": "c2-66-q4", "type": "quiz_choice", "question": "It is essential that the new policy ____ applied fairly to all employees.", "options": ["be", "is", "are", "will be"], "correct_answer": "be", "explanation": "It is essential that it BE applied." },
+        { "id": "c2-66-q5", "type": "quiz_choice", "question": "Subjuntivo Negativo: My lawyer recommended that I ____ answer their questions.", "options": ["not answer", "don't answer", "didn't answer", "am not answering"], "correct_answer": "not answer", "explanation": "Negativo: 'not' + base verb -> not answer." },
+        { "id": "c2-66-q6", "type": "quiz_choice", "question": "The contract requires that the supplier ____ the materials by Friday.", "options": ["deliver", "delivers", "delivered", "will deliver"], "correct_answer": "deliver", "explanation": "Requires that the supplier DELIVER." },
+        { "id": "c2-66-q7", "type": "quiz_choice", "question": "Subjuntivo Negativo: It is crucial that the press ____ find out about the data breach.", "options": ["not find", "doesn't find", "don't find", "didn't find"], "correct_answer": "not find", "explanation": "Crucial that they NOT FIND out." },
+        { "id": "c2-66-q8", "type": "quiz_choice", "question": "We insisted that the manager ____ us a full refund.", "options": ["give", "gives", "gave", "has given"], "correct_answer": "give", "explanation": "Insisted that he GIVE (siempre forma base, incluso si la frase está en pasado 'insisted')." },
+        { "id": "c2-66-q9", "type": "quiz_choice", "question": "It is imperative that everyone ____ on time for the negotiation.", "options": ["arrive", "arrives", "arrived", "will arrive"], "correct_answer": "arrive", "explanation": "Imperative that everyone ARRIVE." },
+        { "id": "c2-66-q10", "type": "quiz_choice", "question": "The judge ordered that the prisoner ____ released immediately.", "options": ["be", "is", "was", "has been"], "correct_answer": "be", "explanation": "Ordered that he BE released." },
+        { "id": "c2-66-q11", "type": "quiz_choice", "question": "It was suggested that the meeting ____ postponed until next week.", "options": ["be", "is", "was", "will be"], "correct_answer": "be", "explanation": "Suggested that it BE postponed (voz pasiva del subjuntivo)." },
+        { "id": "c2-66-q12", "type": "quiz_choice", "question": "Subjuntivo Negativo: I insist that he ____ fired. He deserves a second chance.", "options": ["not be", "isn't", "isn't be", "doesn't be"], "correct_answer": "not be", "explanation": "Negativo con verbo to be: NOT BE fired." },
+        { "id": "c2-66-q13", "type": "quiz_choice", "question": "The company policy mandates that every employee ____ two weeks of notice before resigning.", "options": ["provide", "provides", "provided", "will provide"], "correct_answer": "provide", "explanation": "Mandates that every employee PROVIDE." },
+        { "id": "c2-66-q14", "type": "quiz_choice", "question": "It is highly recommended that she ____ the job offer.", "options": ["accept", "accepts", "accepted", "is accepting"], "correct_answer": "accept", "explanation": "Recommended that she ACCEPT." },
+        { "id": "c2-66-q15", "type": "quiz_choice", "question": "They requested that the deadline ____ extended.", "options": ["be", "is", "was", "will be"], "correct_answer": "be", "explanation": "Requested that it BE extended." },
+        { "id": "c2-66-q16", "type": "quiz_choice", "question": "My accountant advised that I ____ my taxes immediately to avoid a penalty.", "options": ["pay", "paid", "pays", "will pay"], "correct_answer": "pay", "explanation": "Advised that I PAY." },
+        { "id": "c2-66-q17", "type": "quiz_choice", "question": "¿Cuál de estas oraciones es INCORRECTA (no usa subjuntivo formal)?", "options": ["I suggest that he talks to the manager.", "I suggest that he talk to the manager.", "I suggest that he not talk to the manager.", "It is vital that he talk to the manager."], "correct_answer": "I suggest that he talks to the manager.", "explanation": "Incorrecta en inglés muy formal. Debería ser 'he talk' sin la 's'." },
+        { "id": "c2-66-q18", "type": "quiz_choice", "question": "Subjuntivo en pasado (Irreal): I wouldn't do that if I ____ you.", "options": ["were", "was", "am", "have been"], "correct_answer": "were", "explanation": "If I WERE you (subjuntivo condicional)." },
+        { "id": "c2-66-q19", "type": "quiz_choice", "question": "Subjuntivo en pasado: I wish it ____ Friday today.", "options": ["were", "was", "is", "be"], "correct_answer": "were", "explanation": "I wish it WERE Friday." },
+        { "id": "c2-66-q20", "type": "quiz_choice", "question": "Subjuntivo Negativo: It is critical that the server ____ go offline during the broadcast.", "options": ["not", "doesn't", "don't", "didn't"], "correct_answer": "not", "explanation": "Critical that the server NOT go offline." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo en modo subjuntivo formal.",
+      "questions": [
+        { "id": "c2-66-f1", "type": "fill_input", "question": "I demand that he ____ (resign).", "correct_answer": "resign", "explanation": "resign." },
+        { "id": "c2-66-f2", "type": "fill_input", "question": "It is vital that she ____ (be) informed.", "correct_answer": "be", "explanation": "be." },
+        { "id": "c2-66-f3", "type": "fill_input", "question": "I suggest that he ____ (hire) a lawyer.", "correct_answer": "hire", "explanation": "hire." },
+        { "id": "c2-66-f4", "type": "fill_input", "question": "It is essential that it ____ (be) applied.", "correct_answer": "be", "explanation": "be." },
+        { "id": "c2-66-f5", "type": "fill_input", "question": "I recommend that you ____ (not / sign) it.", "correct_answer": "not sign", "explanation": "not sign." },
+        { "id": "c2-66-f6", "type": "fill_input", "question": "It is crucial that he ____ (not / know).", "correct_answer": "not know", "explanation": "not know." },
+        { "id": "c2-66-f7", "type": "fill_input", "question": "We insist that the manager ____ (give) a refund.", "correct_answer": "give", "explanation": "give." },
+        { "id": "c2-66-f8", "type": "fill_input", "question": "I ordered that the prisoner ____ (be) released.", "correct_answer": "be", "explanation": "be." },
+        { "id": "c2-66-f9", "type": "fill_input", "question": "It is imperative that he ____ (arrive) on time.", "correct_answer": "arrive", "explanation": "arrive." },
+        { "id": "c2-66-f10", "type": "fill_input", "question": "If I ____ (be) you, I would leave.", "correct_answer": "were", "explanation": "were." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Subjunctive Match",
+      "pairs": [
+        {"id": "c2-66-p1", "source": "I demand that he resign", "target": "Exijo que él renuncie"},
+        {"id": "c2-66-p2", "source": "It is vital that she be informed", "target": "Es vital que ella sea informada"},
+        {"id": "c2-66-p3", "source": "I suggest that he hire", "target": "Sugiero que él contrate"},
+        {"id": "c2-66-p4", "source": "It is essential that it be applied", "target": "Es esencial que se aplique"},
+        {"id": "c2-66-p5", "source": "I recommend that you not sign", "target": "Recomiendo que no firmes"},
+        {"id": "c2-66-p6", "source": "It is crucial that he not know", "target": "Es crucial que él no lo sepa"},
+        {"id": "c2-66-p7", "source": "We insist that the manager give", "target": "Insistimos en que el gerente dé"},
+        {"id": "c2-66-p8", "source": "I ordered that the prisoner be released", "target": "Ordené que el prisionero sea liberado"},
+        {"id": "c2-66-p9", "source": "If I were you", "target": "Si yo fuera tú"},
+        {"id": "c2-66-p10", "source": "I wish it were Friday", "target": "Ojalá fuera viernes"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración correcta en subjuntivo.",
+      "questions": [
+        { "id": "c2-66-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I demand that he resign.", "options": ["I demand that he resign.", "I demand that he resigns.", "I demanded that he resigns.", "I demand that he resigning."], "correct_answer": "I demand that he resign.", "explanation": "Audio exacto." },
+        { "id": "c2-66-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is vital that she be informed.", "options": ["It is vital that she be informed.", "It is vital that she is informed.", "It is vital that she was informed.", "It was vital that she is informed."], "correct_answer": "It is vital that she be informed.", "explanation": "Audio exacto." },
+        { "id": "c2-66-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I suggest that he hire a lawyer.", "options": ["I suggest that he hire a lawyer.", "I suggest that he hires a lawyer.", "I suggested that he hires a lawyer.", "I suggest that he hiring a lawyer."], "correct_answer": "I suggest that he hire a lawyer.", "explanation": "Audio exacto." },
+        { "id": "c2-66-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is essential that it be applied.", "options": ["It is essential that it be applied.", "It is essential that it is applied.", "It was essential that it is applied.", "It is essential that it applied."], "correct_answer": "It is essential that it be applied.", "explanation": "Audio exacto." },
+        { "id": "c2-66-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I recommend that you not sign.", "options": ["I recommend that you not sign.", "I recommend that you don't sign.", "I recommend that you didn't sign.", "I recommended that you not sign."], "correct_answer": "I recommend that you not sign.", "explanation": "Audio exacto." },
+        { "id": "c2-66-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is crucial that he not know.", "options": ["It is crucial that he not know.", "It is crucial that he doesn't know.", "It is crucial that he didn't know.", "It was crucial that he not know."], "correct_answer": "It is crucial that he not know.", "explanation": "Audio exacto." },
+        { "id": "c2-66-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We insist that the manager give a refund.", "options": ["We insist that the manager give a refund.", "We insist that the manager gives a refund.", "We insisted that the manager gives a refund.", "We insist that the manager gave a refund."], "correct_answer": "We insist that the manager give a refund.", "explanation": "Audio exacto." },
+        { "id": "c2-66-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I ordered that the prisoner be released.", "options": ["I ordered that the prisoner be released.", "I ordered that the prisoner is released.", "I ordered that the prisoner was released.", "I order that the prisoner is released."], "correct_answer": "I ordered that the prisoner be released.", "explanation": "Audio exacto." },
+        { "id": "c2-66-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If I were you.", "options": ["If I were you.", "If I was you.", "If I am you.", "If I be you."], "correct_answer": "If I were you.", "explanation": "Audio exacto." },
+        { "id": "c2-66-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I wish it were Friday.", "options": ["I wish it were Friday.", "I wish it was Friday.", "I wish it is Friday.", "I wish it be Friday."], "correct_answer": "I wish it were Friday.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

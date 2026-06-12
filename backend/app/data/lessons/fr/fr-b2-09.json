@@ -1,0 +1,95 @@
+{
+  "id": "fr-b2-09",
+  "title": "L'Expression de la Conséquence",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Consequence", "Connectors", "Subjunctive"],
+  "completion_message": "¡Magnífico! Ahora puedes hilar tus ideas de principio a fin, conectando la causa con la consecuencia como un auténtico diplomático francés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Las Consecuencias de tus Actos (B2)",
+      "parts": [
+        {
+          "visual": "Conectores de Consecuencia (Forma Estándar y Oral):\n\n1. C'est pourquoi / C'est la raison pour laquelle (Por eso / Es la razón por la cual):\n- Il pleut, C'EST POURQUOI je reste. (Llueve, por eso me quedo).\n- Variante más elegante: C'est la raison pour laquelle je reste.\n\n2. Par conséquent / En conséquence (Por consiguiente / En consecuencia):\n- Nivel muy formal o escrito.\n- Il a triché, PAR CONSÉQUENT il est renvoyé. (Hizo trampa, por consiguiente está expulsado).\n\n3. Du coup (Entonces / Así que):\n- El conector MÁS USADO en el francés oral moderno (B2 callejero).\n- J'ai raté mon train, DU COUP je suis en retard. (Perdí el tren, así que estoy llegando tarde).",
+          "audio": "Hasta ahora has usado 'Donc' o 'Alors' para decir 'Entonces' o expresar una consecuencia. En el nivel B2 te presento el arsenal pesado. Empecemos con lo elegante: si escribes un correo profesional, en lugar de 'Donc', usa 'C'est pourquoi', que significa 'Por eso'. Si quieres sonar aún más distinguido, usa 'C'est la raison pour laquelle', que literalmente es 'Es la razón por la cual'. Si estás en un juicio o dictando sentencia, dices 'Par conséquent' (Por consiguiente). ¡Pero atención al francés de la calle! Si estás hablando con amigos en París, no vas a decir 'Par conséquent'. Vas a decir 'Du coup'. 'Du coup' se ha vuelto la muletilla más famosa de Francia. 'Perdí el tren, DU COUP llego tarde'. Significa 'así que' o 'entonces', pero suena extremadamente nativo."
+        },
+        {
+          "visual": "La Trampa del B2: Consecuencia vs. Objetivo\n\nLos conectores 'De sorte que' y 'De façon que' (De modo que) cambian de modo verbal según la intención:\n\n1. Con INDICATIVO (Si la consecuencia ya ocurrió o es un hecho):\n- Il a crié, DE SORTE QUE tout le monde l'A ENTENDU. (Gritó, de modo que todos lo escucharon - Ya pasó).\n\n2. Con SUBJUNTIVO (Si la consecuencia es un objetivo a futuro):\n- Parle fort, DE SORTE QUE tout le monde t'ENTENDE. (Habla fuerte, de modo que todos te escuchen - Aún no ha pasado).\n\n3. Si bien que (De tal manera que):\n- Siempre usa Indicativo.\n- Il a plu, SI BIEN QUE la rue est inondée. (Llovió, de tal manera que la calle está inundada).",
+          "audio": "Para terminar, veamos la trampa del subjuntivo aplicada a las consecuencias. Hay una expresión que significa 'De modo que' o 'De tal manera que', y es 'De sorte que'. ¿Lleva indicativo o subjuntivo? ¡Ambos! Depende de lo que quieras decir. Si estás narrando un hecho real del pasado: 'Él gritó, de modo que todos lo ESCUCHARON', usas indicativo porque ya sucedió: 'De sorte que tout le monde l'A ENTENDU'. Pero si estás dando una orden para que algo ocurra en el futuro: 'Grita, de modo que todos te ESCUCHEN', usas subjuntivo, porque es un deseo, un objetivo que aún no se cumple: 'De sorte que tout le monde t'ENTENDE'. Esta pequeña diferencia marca el salto definitivo entre un estudiante intermedio y uno verdaderamente avanzado."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el conector o la forma verbal correcta.",
+      "questions": [
+        { "id": "frb2-09-q1", "type": "quiz_choice", "question": "Je suis malade, ____ je reste à la maison. (POR ESO).", "options": ["c'est pourquoi", "parce que", "comme", "vu que"], "correct_answer": "c'est pourquoi", "explanation": "'C'est pourquoi' introduce una consecuencia (por eso)." },
+        { "id": "frb2-09-q2", "type": "quiz_choice", "question": "Il n'y avait plus de bus. ____, j'ai pris un taxi. (ASÍ QUE / ENTONCES - Oral muy común).", "options": ["Du coup", "Étant donné que", "C'est la raison", "Grâce à"], "correct_answer": "Du coup", "explanation": "'Du coup' es la expresión reina del francés moderno hablado para decir 'así que'." },
+        { "id": "frb2-09-q3", "type": "quiz_choice", "question": "L'entreprise a fait faillite, ____ 100 employés sont licenciés. (POR CONSIGUIENTE - Formal).", "options": ["par conséquent", "du coup", "parce que", "au lieu de"], "correct_answer": "par conséquent", "explanation": "'Par conséquent' es la forma formal/escrita de introducir una consecuencia." },
+        { "id": "frb2-09-q4", "type": "quiz_choice", "question": "Il a caché l'argent, de sorte que personne ne l'____. (DE MODO QUE nadie lo ENCONTRÓ - Hecho del pasado).", "options": ["a trouvé", "trouve", "trouvât", "ait trouvé"], "correct_answer": "a trouvé", "explanation": "Consecuencia real que ya sucedió -> Indicativo (a trouvé)." },
+        { "id": "frb2-09-q5", "type": "quiz_choice", "question": "Cache l'argent, de sorte que personne ne le ____. (DE MODO QUE nadie lo ENCUENTRE - Objetivo a futuro).", "options": ["trouve", "a trouvé", "trouvait", "trouvera"], "correct_answer": "trouve", "explanation": "Consecuencia deseada / Objetivo -> Subjuntivo (trouve)." },
+        { "id": "frb2-09-q6", "type": "quiz_choice", "question": "J'étais fatigué, ____ je me suis couché tôt. (ES LA RAZÓN POR LA CUAL).", "options": ["c'est la raison pour laquelle", "parce que", "c'est la cause", "pourquoi"], "correct_answer": "c'est la raison pour laquelle", "explanation": "'C'est la raison pour laquelle' es la variante elegante de 'c'est pourquoi'." },
+        { "id": "frb2-09-q7", "type": "quiz_choice", "question": "Il a beaucoup étudié, ____ il a réussi son examen. (DE TAL MANERA QUE).", "options": ["si bien qu'", "bien qu'", "tandis qu'", "de peur qu'"], "correct_answer": "si bien qu'", "explanation": "'Si bien que' significa 'de modo que / así que' y toma indicativo." },
+        { "id": "frb2-09-q8", "type": "quiz_choice", "question": "¿Qué modo verbal exige la frase 'si bien que' (de tal manera que)?", "options": ["Siempre Indicativo", "Siempre Subjuntivo", "Depende de la duda"], "correct_answer": "Siempre Indicativo", "explanation": "'Si bien que' siempre expresa una consecuencia real, por lo que toma indicativo." },
+        { "id": "frb2-09-q9", "type": "quiz_choice", "question": "Parlez plus fort de façon que tout le monde vous ____. (DE FORMA QUE todos los ESCUCHEN - Objetivo).", "options": ["entende", "entend", "a entendu", "entendra"], "correct_answer": "entende", "explanation": "Objetivo/Deseo -> Subjuntivo (entende)." },
+        { "id": "frb2-09-q10", "type": "quiz_choice", "question": "Il a parlé très fort de façon que tout le monde l'____. (DE FORMA QUE todos lo ESCUCHARON - Hecho).", "options": ["a entendu", "entende", "entendra", "entend"], "correct_answer": "a entendu", "explanation": "Hecho ya realizado -> Indicativo (a entendu)." },
+        { "id": "frb2-09-q11", "type": "quiz_choice", "question": "Le suspect a avoué ; ____, l'affaire est close. (EN CONSECUENCIA - Formal).", "options": ["en conséquence", "du coup", "alors que", "parce que"], "correct_answer": "en conséquence", "explanation": "Sinónimo de par conséquent -> en conséquence." },
+        { "id": "frb2-09-q12", "type": "quiz_choice", "question": "Je n'avais pas mon téléphone, ____ je n'ai pas vu ton message. (ASÍ QUE - Oral familiar).", "options": ["du coup", "c'est la raison", "par conséquent", "si bien que"], "correct_answer": "du coup", "explanation": "La forma oral moderna por excelencia -> du coup." },
+        { "id": "frb2-09-q13", "type": "quiz_choice", "question": "Il ne voulait pas venir, ____ il est resté chez lui. (POR ESO).", "options": ["c'est pourquoi", "comme", "vu que", "étant donné que"], "correct_answer": "c'est pourquoi", "explanation": "Conector de consecuencia lógica -> c'est pourquoi." },
+        { "id": "frb2-09-q14", "type": "quiz_choice", "question": "La route était bloquée, ____ nous avons fait demi-tour. (ES LA RAZÓN POR LA CUAL).", "options": ["c'est la raison pour laquelle", "c'est parce que", "de sorte que", "bien que"], "correct_answer": "c'est la raison pour laquelle", "explanation": "Expresión formal para indicar consecuencia." },
+        { "id": "frb2-09-q15", "type": "quiz_choice", "question": "Réparez la machine de manière que nous ____ continuer. (DE MANERA QUE PODAMOS - Objetivo).", "options": ["puissions", "pouvons", "pouvions", "pourrons"], "correct_answer": "puissions", "explanation": "Objetivo a lograr -> Subjuntivo de pouvoir (puissions)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el conector adecuado o conjuga el verbo (indicativo vs subjuntivo).",
+      "questions": [
+        { "id": "frb2-09-f1", "type": "fill_input", "question": "Il pleut, ____ (por eso) je ne sors pas.", "correct_answer": "c'est pourquoi", "explanation": "c'est pourquoi" },
+        { "id": "frb2-09-f2", "type": "fill_input", "question": "J'ai oublié mes clés, ____ (así que - oral) je suis bloqué dehors.", "correct_answer": "du coup", "explanation": "du coup" },
+        { "id": "frb2-09-f3", "type": "fill_input", "question": "Le vol est annulé, ____ (por consiguiente) vous serez remboursés.", "correct_answer": "par conséquent", "explanation": "par conséquent (o en conséquence)" },
+        { "id": "frb2-09-f4", "type": "fill_input", "question": "Fais attention de sorte qu'il n'y ____ (avoir) pas de problème. (Objetivo -> Subjuntivo).", "correct_answer": "ait", "explanation": "ait" },
+        { "id": "frb2-09-f5", "type": "fill_input", "question": "Il a fait attention de sorte qu'il n'y a pas ____ (avoir) de problème. (Hecho pasado -> Participio).", "correct_answer": "eu", "explanation": "eu" },
+        { "id": "frb2-09-f6", "type": "fill_input", "question": "Il travaillait trop, ____ (es la razón por la cual) il a fait un burn-out.", "correct_answer": "c'est la raison pour laquelle", "explanation": "c'est la raison pour laquelle" },
+        { "id": "frb2-09-f7", "type": "fill_input", "question": "Agissez de façon que tout ____ (être) prêt demain. (Objetivo -> Subjuntivo).", "correct_answer": "soit", "explanation": "soit" },
+        { "id": "frb2-09-f8", "type": "fill_input", "question": "Il a menti, ____ (de tal manera qu') il a perdu sa crédibilité. (Ojo: si bien...).", "correct_answer": "si bien qu'", "explanation": "si bien qu'" },
+        { "id": "frb2-09-f9", "type": "fill_input", "question": "J'ai faim, ____ (así que - oral) je vais manger.", "correct_answer": "du coup", "explanation": "du coup" },
+        { "id": "frb2-09-f10", "type": "fill_input", "question": "Il est malade. ____ (En consecuencia), il est absent.", "correct_answer": "En conséquence", "explanation": "En conséquence" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Consequence Match",
+      "pairs": [
+        {"id": "frb2-09-p1", "source": "C'est pourquoi", "target": "Por eso"},
+        {"id": "frb2-09-p2", "source": "C'est la raison pour laquelle", "target": "Es la razón por la cual"},
+        {"id": "frb2-09-p3", "source": "Par conséquent", "target": "Por consiguiente"},
+        {"id": "frb2-09-p4", "source": "Du coup", "target": "Así que / Entonces (Oral)"},
+        {"id": "frb2-09-p5", "source": "De sorte qu'il vient", "target": "De modo que viene (Hecho)"},
+        {"id": "frb2-09-p6", "source": "De sorte qu'il vienne", "target": "De modo que venga (Objetivo)"},
+        {"id": "frb2-09-p7", "source": "Si bien que", "target": "De tal manera que"},
+        {"id": "frb2-09-p8", "source": "Donc", "target": "Por lo tanto (Estándar)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica el conector de consecuencia.",
+      "questions": [
+        { "id": "frb2-09-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "J'ai faim, du coup je mange", "options": ["J'ai faim, du coup je mange", "J'ai faim, par conséquent je mange", "J'ai faim, c'est pourquoi je mange", "J'ai faim, donc je mange"], "correct_answer": "J'ai faim, du coup je mange", "explanation": "Audio dice: J'ai faim, du coup je mange." },
+        { "id": "frb2-09-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "C'est la raison pour laquelle", "options": ["C'est la raison pour laquelle", "C'est pourquoi", "Par conséquent", "Si bien que"], "correct_answer": "C'est la raison pour laquelle", "explanation": "Audio dice: C'est la raison pour laquelle." },
+        { "id": "frb2-09-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il pleut, par conséquent je reste", "options": ["Il pleut, par conséquent je reste", "Il pleut, c'est pourquoi je reste", "Il pleut, du coup je reste", "Il pleut, si bien que je reste"], "correct_answer": "Il pleut, par conséquent je reste", "explanation": "Audio dice: Il pleut, par conséquent je reste." },
+        { "id": "frb2-09-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "De sorte qu'il comprenne", "options": ["De sorte qu'il comprenne", "De sorte qu'il a compris", "De sorte qu'il comprend", "Si bien qu'il comprend"], "correct_answer": "De sorte qu'il comprenne", "explanation": "Audio dice: De sorte qu'il comprenne (Objetivo -> Subjuntivo)." },
+        { "id": "frb2-09-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "C'est pourquoi il est triste", "options": ["C'est pourquoi il est triste", "Par conséquent il est triste", "C'est la raison pour laquelle", "Du coup il est triste"], "correct_answer": "C'est pourquoi il est triste", "explanation": "Audio dice: C'est pourquoi il est triste." }
+      ]
+    }
+  ]
+}

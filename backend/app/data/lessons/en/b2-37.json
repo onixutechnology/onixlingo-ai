@@ -1,0 +1,101 @@
+{
+  "id": "b2-37",
+  "title": "Wish & If Only",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Wish", "If Only", "Business"],
+  "completion_message": "¡Excelente! 'Wish' y 'If Only' son estructuras sofisticadas para expresar arrepentimientos pasados, deseos de cambiar el presente o quejas sobre el comportamiento de otros.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Wish & If Only (Deseos y Lamentos)",
+      "parts": [
+        { "visual": "1. Deseos sobre el PRESENTE (Situaciones irreales ahora): \nEstructura: Wish / If only + Past Simple. \nEj: I wish I HAD more time. (Ojalá tuviera más tiempo). \nEj: If only he KNEW the truth. (Si tan solo él supiera la verdad). \n*Nota: Con el verbo To Be, se usa 'were' para todas las personas. \nEj: I wish I WERE the boss.", "audio": "Wishes about the present. To express a desire to change a present situation, use 'Wish' or 'If only' plus the Past Simple. For example: I wish I had more time. Or: If only he knew the truth. Note that with the verb To Be, we use 'were' for all subjects. For example: I wish I were the boss." },
+        { "visual": "2. Arrepentimientos del PASADO (Lamentar algo que ya ocurrió): \nEstructura: Wish / If only + Past Perfect. \nEj: I wish I HAD BOUGHT that stock. (Ojalá hubiera comprado esa acción). \n3. Quejas sobre el comportamiento de otros (Molestias): \nEstructura: Wish / If only + would + infinitivo. \nEj: I wish you WOULD STOP talking. (Ojalá dejaras de hablar).", "audio": "Regrets about the past. To regret something that already happened, use 'Wish' or 'If only' plus the Past Perfect. For example: I wish I had bought that stock. For complaints about someone's behavior, use 'would' plus infinitive. For example: I wish you would stop talking. This means 'I am annoyed and I want you to change your behavior'." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta después de 'Wish' o 'If only'.",
+      "questions": [
+        { "id": "b2-37-q1", "type": "quiz_choice", "question": "I wish I ____ more about finance. (Ojalá supiera - presente).", "options": ["knew", "know", "had known", "would know"], "correct_answer": "knew", "explanation": "Deseo sobre el presente: Past Simple (knew)." },
+        { "id": "b2-37-q2", "type": "quiz_choice", "question": "If only we ____ that contract last year. (Si tan solo hubiéramos firmado - pasado).", "options": ["had signed", "signed", "sign", "would sign"], "correct_answer": "had signed", "explanation": "Arrepentimiento del pasado: Past Perfect (had signed)." },
+        { "id": "b2-37-q3", "type": "quiz_choice", "question": "I wish the manager ____ shouting at everyone! (Ojalá dejara de gritar - queja sobre comportamiento).", "options": ["would stop", "stopped", "had stopped", "stops"], "correct_answer": "would stop", "explanation": "Queja sobre alguien más: would + infinitivo." },
+        { "id": "b2-37-q4", "type": "quiz_choice", "question": "I wish I ____ in charge of this project. (Ojalá estuviera al mando - presente).", "options": ["were", "am", "have been", "would be"], "correct_answer": "were", "explanation": "Deseo presente con To Be: se usa 'were' (I wish I were)." },
+        { "id": "b2-37-q5", "type": "quiz_choice", "question": "If only I ____ a backup of my files before the computer crashed! (Si tan solo hubiera hecho).", "options": ["had made", "made", "make", "would make"], "correct_answer": "had made", "explanation": "Pasado: had made." },
+        { "id": "b2-37-q6", "type": "quiz_choice", "question": "I wish it ____ raining. We can't go out. (Ojalá dejara de llover - queja sobre la situación actual/clima).", "options": ["would stop", "stopped", "had stopped", "stops"], "correct_answer": "would stop", "explanation": "Queja/deseo de cambio de comportamiento (incluso del clima): would stop." },
+        { "id": "b2-37-q7", "type": "quiz_choice", "question": "Do you ever wish you ____ your own business? (¿Deseas tener - presente?).", "options": ["had", "have", "had had", "would have"], "correct_answer": "had", "explanation": "Presente: Past Simple (had)." },
+        { "id": "b2-37-q8", "type": "quiz_choice", "question": "I wish I ____ that to the client. Now he is very angry. (Ojalá no le hubiera dicho).", "options": ["hadn't said", "didn't say", "wouldn't say", "haven't said"], "correct_answer": "hadn't said", "explanation": "Pasado: Past Perfect (hadn't said)." },
+        { "id": "b2-37-q9", "type": "quiz_choice", "question": "If only they ____ us more time to finish the report! (Ojalá nos dieran - deseo presente/futuro que no depende de nosotros).", "options": ["would give", "will give", "have given", "give"], "correct_answer": "would give", "explanation": "Queja/Deseo sobre acción de otros: would give. (También 'gave' es posible para presente, pero 'would give' enfatiza la voluntad de ellos)." },
+        { "id": "b2-37-q10", "type": "quiz_choice", "question": "I wish I ____ speak Japanese fluently. (Ojalá pudiera).", "options": ["could", "can", "would", "am able to"], "correct_answer": "could", "explanation": "Para habilidad en presente se usa 'could' (el pasado de can)." },
+        { "id": "b2-37-q11", "type": "quiz_choice", "question": "She wishes she ____ to university when she was younger. (Ojalá hubiera ido).", "options": ["had gone", "went", "would go", "has gone"], "correct_answer": "had gone", "explanation": "Pasado: had gone." },
+        { "id": "b2-37-q12", "type": "quiz_choice", "question": "If only I ____ a million dollars right now! (Si tan solo tuviera).", "options": ["had", "have", "had had", "would have"], "correct_answer": "had", "explanation": "Presente: had." },
+        { "id": "b2-37-q13", "type": "quiz_choice", "question": "I wish you ____ me you were going to be late! (Ojalá me hubieras dicho).", "options": ["had told", "told", "would tell", "have told"], "correct_answer": "had told", "explanation": "Pasado: had told." },
+        { "id": "b2-37-q14", "type": "quiz_choice", "question": "I wish my computer ____ so slow. (Ojalá no fuera - presente).", "options": ["weren't", "isn't", "wouldn't be", "hasn't been"], "correct_answer": "weren't", "explanation": "Presente: weren't (pasado irreal del To Be)." },
+        { "id": "b2-37-q15", "type": "quiz_choice", "question": "I wish they ____ complaining all the time. It's annoying. (Ojalá dejaran de).", "options": ["would stop", "stopped", "had stopped", "stop"], "correct_answer": "would stop", "explanation": "Queja: would stop." },
+        { "id": "b2-37-q16", "type": "quiz_choice", "question": "If only we ____ the map, we wouldn't be lost now. (Si tan solo hubiéramos traído).", "options": ["had brought", "brought", "would bring", "bring"], "correct_answer": "had brought", "explanation": "Pasado: had brought." },
+        { "id": "b2-37-q17", "type": "quiz_choice", "question": "I wish I ____ work tomorrow, but I have a lot to do. (Ojalá no tuviera que - presente).", "options": ["didn't have to", "don't have to", "hadn't had to", "wouldn't have to"], "correct_answer": "didn't have to", "explanation": "Presente/Futuro irreal: Past Simple (didn't have to)." },
+        { "id": "b2-37-q18", "type": "quiz_choice", "question": "He wishes he ____ that expensive car last month. (Ojalá no hubiera comprado).", "options": ["hadn't bought", "didn't buy", "wouldn't buy", "hasn't bought"], "correct_answer": "hadn't bought", "explanation": "Pasado: hadn't bought." },
+        { "id": "b2-37-q19", "type": "quiz_choice", "question": "I wish you ____ listen to me when I am speaking! (Ojalá me escucharas - queja).", "options": ["would", "will", "had", "did"], "correct_answer": "would", "explanation": "Queja sobre el comportamiento de otra persona: would." },
+        { "id": "b2-37-q20", "type": "quiz_choice", "question": "If only I ____ the CEO of this company! (Si tan solo fuera).", "options": ["were", "am", "would be", "have been"], "correct_answer": "were", "explanation": "Presente irreal: were." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo en la forma correcta después de Wish/If only.",
+      "questions": [
+        { "id": "b2-37-f1", "type": "fill_input", "question": "I wish I ____ (have) more money now. (Presente)", "correct_answer": "had", "explanation": "had." },
+        { "id": "b2-37-f2", "type": "fill_input", "question": "I wish I ____ (know) the answer. (Presente)", "correct_answer": "knew", "explanation": "knew." },
+        { "id": "b2-37-f3", "type": "fill_input", "question": "I wish I ____ (buy) Bitcoin in 2010. (Pasado)", "correct_answer": "had bought", "explanation": "had bought." },
+        { "id": "b2-37-f4", "type": "fill_input", "question": "If only we ____ (sign) the contract yesterday. (Pasado)", "correct_answer": "had signed", "explanation": "had signed." },
+        { "id": "b2-37-f5", "type": "fill_input", "question": "I wish you ____ (stop) doing that! (Queja con would)", "correct_answer": "would stop", "explanation": "would stop." },
+        { "id": "b2-37-f6", "type": "fill_input", "question": "I wish I ____ (be) the boss. (To be en presente irreal)", "correct_answer": "were", "explanation": "were." },
+        { "id": "b2-37-f7", "type": "fill_input", "question": "I wish he ____ (listen) to me! (Queja con would)", "correct_answer": "would listen", "explanation": "would listen." },
+        { "id": "b2-37-f8", "type": "fill_input", "question": "If only I ____ (not / say) that to her last night. (Pasado - no hubiera dicho)", "correct_answer": "hadn't said", "explanation": "hadn't said." },
+        { "id": "b2-37-f9", "type": "fill_input", "question": "I wish I ____ (can) help you. (Habilidad presente - pasado de can)", "correct_answer": "could", "explanation": "could." },
+        { "id": "b2-37-f10", "type": "fill_input", "question": "If only I ____ (live) in Paris right now. (Presente)", "correct_answer": "lived", "explanation": "lived." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Wish Match",
+      "pairs": [
+        {"id": "b2-37-p1", "source": "I wish I knew", "target": "Ojalá supiera (ahora)"},
+        {"id": "b2-37-p2", "source": "I wish I had known", "target": "Ojalá hubiera sabido (pasado)"},
+        {"id": "b2-37-p3", "source": "I wish you would know", "target": "Ojalá quisieras saber (queja/voluntad)"},
+        {"id": "b2-37-p4", "source": "If only I were", "target": "Si tan solo yo fuera (ahora)"},
+        {"id": "b2-37-p5", "source": "If only I had been", "target": "Si tan solo hubiera sido (pasado)"},
+        {"id": "b2-37-p6", "source": "I wish you would stop", "target": "Ojalá dejaras de hacer eso"},
+        {"id": "b2-37-p7", "source": "I wish I could help", "target": "Ojalá pudiera ayudar (ahora)"},
+        {"id": "b2-37-p8", "source": "I wish I didn't have to", "target": "Ojalá no tuviera que (ahora/futuro)"},
+        {"id": "b2-37-p9", "source": "If only she had called", "target": "Si tan solo ella hubiera llamado (pasado)"},
+        {"id": "b2-37-p10", "source": "I wish it would rain", "target": "Ojalá lloviera (deseo de cambio en el clima)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la expresión con 'Wish' o 'If only' correcta.",
+      "questions": [
+        { "id": "b2-37-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I wish I knew the answer.", "options": ["I wish I knew the answer.", "I wish I know the answer.", "I wish I had known the answer.", "I wish I would know the answer."], "correct_answer": "I wish I knew the answer.", "explanation": "Audio exacto." },
+        { "id": "b2-37-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If only I had bought it.", "options": ["If only I had bought it.", "If only I bought it.", "If only I would buy it.", "If only I have bought it."], "correct_answer": "If only I had bought it.", "explanation": "Audio exacto." },
+        { "id": "b2-37-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I wish you would stop talking.", "options": ["I wish you would stop talking.", "I wish you stopped talking.", "I wish you will stop talking.", "I wish you had stopped talking."], "correct_answer": "I wish you would stop talking.", "explanation": "Audio exacto." },
+        { "id": "b2-37-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I wish I were the boss.", "options": ["I wish I were the boss.", "I wish I was the boss.", "I wish I am the boss.", "I wish I would be the boss."], "correct_answer": "I wish I were the boss.", "explanation": "Audio exacto." },
+        { "id": "b2-37-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If only he had called me.", "options": ["If only he had called me.", "If only he called me.", "If only he would call me.", "If only he has called me."], "correct_answer": "If only he had called me.", "explanation": "Audio exacto." },
+        { "id": "b2-37-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I wish I could speak French.", "options": ["I wish I could speak French.", "I wish I can speak French.", "I wish I would speak French.", "I wish I spoke French."], "correct_answer": "I wish I could speak French.", "explanation": "Audio exacto." },
+        { "id": "b2-37-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I wish it would stop raining.", "options": ["I wish it would stop raining.", "I wish it stopped raining.", "I wish it had stopped raining.", "I wish it will stop raining."], "correct_answer": "I wish it would stop raining.", "explanation": "Audio exacto." },
+        { "id": "b2-37-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I wish I hadn't said that.", "options": ["I wish I hadn't said that.", "I wish I didn't say that.", "I wish I wouldn't say that.", "I wish I haven't said that."], "correct_answer": "I wish I hadn't said that.", "explanation": "Audio exacto." },
+        { "id": "b2-37-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If only I didn't have to work.", "options": ["If only I didn't have to work.", "If only I don't have to work.", "If only I hadn't had to work.", "If only I wouldn't have to work."], "correct_answer": "If only I didn't have to work.", "explanation": "Audio exacto." },
+        { "id": "b2-37-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I wish they would listen.", "options": ["I wish they would listen.", "I wish they listened.", "I wish they had listened.", "I wish they will listen."], "correct_answer": "I wish they would listen.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

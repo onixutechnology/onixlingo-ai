@@ -1,0 +1,92 @@
+{
+  "id": "zh-a2-46",
+  "title": "¿Cómo Te Llamas?",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Introductions", "Vocabulary", "Questions"],
+  "completion_message": "¡Un gusto conocerte! Ahora ya puedes presentarte formalmente a cualquier persona en el mundo hispanohablante... digo, en el mundo chino.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Nombres y Llamados",
+      "parts": [
+        {
+          "visual": "Llamarse: 叫 (jiào)\n\nEl verbo para 'llamarse' (o ser llamado) es 叫 (jiào - 4to tono).\nCuriosamente, también significa 'gritar' o 'llamar a alguien'.\n\n- Yo me llamo Pedro: 我叫 Pedro (Wǒ jiào Pedro).\n- Ella se llama María: 她叫 María (Tā jiào María).\n\nPara preguntar el nombre, usamos la palabra 'Nombre', que se dice 名字 (míngzi - 2do tono y neutro).",
+          "audio": "Hasta ahora sabes decir 'Yo soy de España' o 'Yo soy mexicano', pero no sabes decir tu propio nombre. En chino, el verbo 'llamarse' se dice Jiào. Cuarto tono fuerte. Jiào. Es un verbo muy directo. Para decir 'Yo me llamo David', simplemente dices: Wǒ jiào David. Ella se llama Ana: Tā jiào Ana. Literalmente significa 'Yo soy llamado'. Como dato curioso, este mismo verbo se usa para cuando alguien te grita o te llama desde lejos. La palabra para decir 'Nombre', como sustantivo, es Míngzi. Míngzi."
+        },
+        {
+          "visual": "¿Cómo te llamas?\n\nJuntemos todo lo que sabemos para armar la pregunta clásica:\nTú (Nǐ) + llamarte (jiào) + qué (shénme) + nombre (míngzi).\n\n- ¿Cómo te llamas?: 你叫什么名字？(Nǐ jiào shénme míngzi?).\nLiteralmente: ¿Tú te llamas qué nombre?\n\n- ¿Cómo se llama él?: 他叫什么名字？(Tā jiào shénme míngzi?).\n\nEs una de las frases más importantes y musicales del mandarín. ¡Apréndetela de memoria!",
+          "audio": "Ahora vamos a armar la pregunta del millón. ¿Cómo le preguntas a alguien su nombre? En español decimos 'Cómo', pero en mandarín, la lógica es distinta. Ellos preguntan '¿Qué nombre te llamas?'. Empezamos con Tú: Nǐ. Llamarte: jiào. Qué: shénme. Nombre: míngzi. Júntalo todo y obtienes una de las frases más famosas y musicales de China: Nǐ jiào shénme míngzi? Literalmente, ¿Tú te llamas qué nombre? Si quieres saber el nombre de otra persona que está lejos, simplemente cambias el 'tú' por 'él'. Tā jiào shénme míngzi? Y él te responderá: Wǒ jiào Juan."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que tienes buenos modales y sabes presentarte.",
+      "questions": [
+        { "id": "zh-a2-46-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Cuál es el verbo 'Llamarse' (ser llamado)?", "options": ["Jiào (叫).", "Shuō (说).", "Shì (是).", "Zài (在)."], "correct_answer": "Jiào (叫).", "explanation": "Jiào (4to tono) es el verbo principal para los nombres." },
+        { "id": "zh-a2-46-q2", "type": "quiz_choice", "question": "Vocabulario: ¿Cómo se dice la palabra 'Nombre'?", "options": ["Míngzi (名字).", "Yīfu (衣服).", "Hànyǔ (汉语).", "Xuéxiào (学校)."], "correct_answer": "Míngzi (名字).", "explanation": "Míngzi significa nombre." },
+        { "id": "zh-a2-46-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo me llamo Luis'?", "options": ["Wǒ jiào Luis (我叫Luis).", "Wǒ shì Luis (我是Luis).", "Wǒ míngzi Luis (我名字Luis).", "Wǒ de jiào Luis (我的叫Luis)."], "correct_answer": "Wǒ jiào Luis (我叫Luis).", "explanation": "Yo (Wǒ) + me llamo (jiào) + Nombre." },
+        { "id": "zh-a2-46-q4", "type": "quiz_choice", "question": "¿Cómo se pregunta '¿Cómo te llamas?' en mandarín?", "options": ["Nǐ jiào shénme míngzi? (你叫什么名字？).", "Nǐ shì shénme míngzi? (你是什么名字？).", "Nǐ míngzi shì shénme? (你名字是什么？).", "Nǐ de jiào shénme? (你的叫什么？)."], "correct_answer": "Nǐ jiào shénme míngzi? (你叫什么名字？).", "explanation": "Tú (nǐ) + te llamas (jiào) + qué (shénme) + nombre (míngzi)." },
+        { "id": "zh-a2-46-q5", "type": "quiz_choice", "question": "Traduce: 'Tā jiào shénme míngzi?' (他叫什么名字？).", "options": ["¿Cómo se llama él?", "¿Cómo te llamas tú?", "¿Cuál es mi nombre?", "¿Quién es él?"], "correct_answer": "¿Cómo se llama él?", "explanation": "Él (tā) + se llama (jiào) + qué (shénme) + nombre (míngzi)." },
+        { "id": "zh-a2-46-q6", "type": "quiz_choice", "question": "Gramática: ¿Por qué no usamos el verbo 'Ser' (shì) para decir nuestro nombre (Ej. Wǒ shì Luis)?", "options": ["En realidad sí se puede usar 'shì', pero 'jiào' es la forma tradicional, propia y más natural de presentarse.", "Porque 'shì' es solo para animales.", "Porque Luis no es chino.", "Es ilegal usar 'shì' con nombres propios."], "correct_answer": "En realidad sí se puede usar 'shì', pero 'jiào' es la forma tradicional, propia y más natural de presentarse.", "explanation": "Decir 'Wǒ shì Luis' (Yo soy Luis) es correcto, pero 'Wǒ jiào Luis' (Me llamo Luis) es lo que dicen los nativos al presentarse por primera vez." },
+        { "id": "zh-a2-46-q7", "type": "quiz_choice", "question": "¿Qué otro significado tiene el verbo 叫 (jiào)?", "options": ["Llamar a alguien o gritar.", "Comprar.", "Vender.", "Llorar."], "correct_answer": "Llamar a alguien o gritar.", "explanation": "Si alguien grita tu nombre desde la calle, puedes decir 'Él me está llamando' usando el mismo verbo: Tā jiào wǒ." },
+        { "id": "zh-a2-46-q8", "type": "quiz_choice", "question": "Imagina que un niño te pregunta el nombre de tu perro. ¿Cómo responderías 'Él se llama Max'?", "options": ["Tā jiào Max (他叫Max).", "Tā shì Max (他是Max).", "Tā míngzi Max (他名字Max).", "Wǒ jiào Max (我叫Max)."], "correct_answer": "Tā jiào Max (他叫Max).", "explanation": "Él (tā) + se llama (jiào) + Max." },
+        { "id": "zh-a2-46-q9", "type": "quiz_choice", "question": "Traduce: 'Wǒ de dìdi jiào Carlos' (我的弟弟叫Carlos).", "options": ["Mi hermano menor se llama Carlos.", "Yo me llamo Carlos.", "Tu hermano mayor se llama Carlos.", "Él es el hermano de Carlos."], "correct_answer": "Mi hermano menor se llama Carlos.", "explanation": "Mi hermano menor (wǒ de dìdi / wǒ dìdi) + se llama (jiào) + Carlos." },
+        { "id": "zh-a2-46-q10", "type": "quiz_choice", "question": "Ordena la pregunta: Nombre / Qué / Te llamas / Tú", "options": ["Nǐ jiào shénme míngzi?", "Shénme míngzi nǐ jiào?", "Nǐ míngzi shénme jiào?", "Nǐ shénme jiào míngzi?"], "correct_answer": "Nǐ jiào shénme míngzi?", "explanation": "Tú te llamas qué nombre. Es la estructura estándar." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe las palabras de presentación en pinyin. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a2-46-f1", "type": "fill_input", "question": "Llamarse: ____ (jiao)", "correct_answer": "jiao", "explanation": "jiao" },
+        { "id": "zh-a2-46-f2", "type": "fill_input", "question": "Nombre: ming ____ (zi)", "correct_answer": "zi", "explanation": "zi" },
+        { "id": "zh-a2-46-f3", "type": "fill_input", "question": "¿Qué?: shen ____ (me)", "correct_answer": "me", "explanation": "me" },
+        { "id": "zh-a2-46-f4", "type": "fill_input", "question": "Yo me llamo: wo ____", "correct_answer": "jiao", "explanation": "jiao" },
+        { "id": "zh-a2-46-f5", "type": "fill_input", "question": "Tú te llamas: ni ____", "correct_answer": "jiao", "explanation": "jiao" },
+        { "id": "zh-a2-46-f6", "type": "fill_input", "question": "Qué nombre: shen me ming ____", "correct_answer": "zi", "explanation": "zi" },
+        { "id": "zh-a2-46-f7", "type": "fill_input", "question": "¿Cómo te llamas?: ni jiao shen me ming ____", "correct_answer": "zi", "explanation": "zi" },
+        { "id": "zh-a2-46-f8", "type": "fill_input", "question": "¿Cómo se llama él?: ta ____ shen me ming zi", "correct_answer": "jiao", "explanation": "jiao" },
+        { "id": "zh-a2-46-f9", "type": "fill_input", "question": "Él se llama Pedro: ta ____ Pedro", "correct_answer": "jiao", "explanation": "jiao" },
+        { "id": "zh-a2-46-f10", "type": "fill_input", "question": "Mi hermana menor se llama Ana: wo meimei ____ Ana", "correct_answer": "jiao", "explanation": "jiao" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha las presentaciones y empareja correctamente.",
+      "questions": [
+        { "id": "zh-a2-46-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "叫", "options": ["Llamarse", "Nombre", "Ser", "Querer"], "correct_answer": "Llamarse", "explanation": "El audio dice: Jiào." },
+        { "id": "zh-a2-46-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "名字", "options": ["Nombre", "Llamarse", "Ropa", "Escuela"], "correct_answer": "Nombre", "explanation": "El audio dice: Míngzi." },
+        { "id": "zh-a2-46-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我叫大卫", "options": ["Yo me llamo David (Dàwèi)", "Él se llama David", "Tú te llamas David", "¿Cómo te llamas?"], "correct_answer": "Yo me llamo David (Dàwèi)", "explanation": "El audio dice: Wǒ jiào Dàwèi." },
+        { "id": "zh-a2-46-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你叫什么名字？", "options": ["¿Cómo te llamas?", "¿Quién eres?", "¿Cómo se llama él?", "¿Cuál es tu nombre? (Literal)"], "correct_answer": "¿Cómo te llamas?", "explanation": "El audio dice: Nǐ jiào shénme míngzi?" },
+        { "id": "zh-a2-46-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他叫什么名字？", "options": ["¿Cómo se llama él?", "¿Cómo te llamas tú?", "¿Quién es él?", "Él no tiene nombre"], "correct_answer": "¿Cómo se llama él?", "explanation": "El audio dice: Tā jiào shénme míngzi?" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Introductions",
+      "pairs": [
+        {"id": "zh-a2-46-p1", "source": "叫 (jiào)", "target": "Llamarse (Ser llamado)"},
+        {"id": "zh-a2-46-p2", "source": "名字 (míngzi)", "target": "Nombre"},
+        {"id": "zh-a2-46-p3", "source": "什么名字 (shénme míngzi)", "target": "Qué nombre"},
+        {"id": "zh-a2-46-p4", "source": "我叫 (wǒ jiào)", "target": "Yo me llamo"},
+        {"id": "zh-a2-46-p5", "source": "他叫 (tā jiào)", "target": "Él se llama"},
+        {"id": "zh-a2-46-p6", "source": "你叫什么名字？(nǐ jiào shénme míngzi?)", "target": "¿Cómo te llamas?"},
+        {"id": "zh-a2-46-p7", "source": "他叫什么名字？(tā jiào shénme míngzi?)", "target": "¿Cómo se llama él?"},
+        {"id": "zh-a2-46-p8", "source": "我妹妹叫 (wǒ mèimei jiào)", "target": "Mi hermana menor se llama"},
+        {"id": "zh-a2-46-p9", "source": "我不叫 (wǒ bú jiào)", "target": "Yo no me llamo..."},
+        {"id": "zh-a2-46-p10", "source": "我是 (wǒ shì)", "target": "Yo soy (Válido pero menos natural para decir tu nombre inicial)"}
+      ]
+    }
+  ]
+}

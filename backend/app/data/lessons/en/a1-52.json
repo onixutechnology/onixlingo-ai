@@ -1,0 +1,101 @@
+{
+  "id": "a1-52",
+  "title": "Office Furniture & Layout",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Office", "Furniture"],
+  "completion_message": "¡Excelente! Ya conoces el vocabulario para describir el mobiliario y la distribución de una oficina.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Mobiliario de Oficina",
+      "parts": [
+        { "visual": "Mobiliario básico: Desk (escritorio), Chair (silla), Filing cabinet (archivero), Bookshelf (librero).", "audio": "Basic furniture: Desk, Chair, Filing cabinet, Bookshelf." },
+        { "visual": "Distribución: Open plan (oficina abierta), Cubicle (cubículo), Private office (oficina privada).", "audio": "Layout: Open plan, Cubicle, Private office." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para el mobiliario o espacio.",
+      "questions": [
+        { "id": "a1-52-q1", "type": "quiz_choice", "question": "I sit at my ____ all day.", "options": ["desk", "disk", "dusk", "deck"], "correct_answer": "desk", "explanation": "Escritorio (desk)." },
+        { "id": "a1-52-q2", "type": "quiz_choice", "question": "This ____ is very uncomfortable.", "options": ["chair", "hair", "share", "cheer"], "correct_answer": "chair", "explanation": "Silla (chair)." },
+        { "id": "a1-52-q3", "type": "quiz_choice", "question": "Put the documents in the filing ____.", "options": ["cabinet", "cabin", "cable", "table"], "correct_answer": "cabinet", "explanation": "Archivero (filing cabinet)." },
+        { "id": "a1-52-q4", "type": "quiz_choice", "question": "We work in an ____ plan office (abierta).", "options": ["open", "close", "door", "window"], "correct_answer": "open", "explanation": "Oficina de planta abierta (open plan)." },
+        { "id": "a1-52-q5", "type": "quiz_choice", "question": "I have my own ____ (cubículo).", "options": ["cubicle", "cube", "cable", "room"], "correct_answer": "cubicle", "explanation": "Cubículo (cubicle)." },
+        { "id": "a1-52-q6", "type": "quiz_choice", "question": "The boss has a ____ office.", "options": ["private", "public", "open", "free"], "correct_answer": "private", "explanation": "Oficina privada (private)." },
+        { "id": "a1-52-q7", "type": "quiz_choice", "question": "Put the books on the ____.", "options": ["bookshelf", "book", "shelf", "table"], "correct_answer": "bookshelf", "explanation": "Librero / Estante de libros (bookshelf)." },
+        { "id": "a1-52-q8", "type": "quiz_choice", "question": "We need a bigger meeting ____.", "options": ["table", "cable", "chair", "desk"], "correct_answer": "table", "explanation": "Mesa de reuniones (meeting table)." },
+        { "id": "a1-52-q9", "type": "quiz_choice", "question": "The ____ is in the break room (sofá).", "options": ["sofa", "bed", "chair", "desk"], "correct_answer": "sofa", "explanation": "Sofá / sillón (sofa o couch)." },
+        { "id": "a1-52-q10", "type": "quiz_choice", "question": "Throw the paper in the ____ bin.", "options": ["trash", "crash", "cash", "flash"], "correct_answer": "trash", "explanation": "Papelera / basurero (trash bin o wastebasket)." },
+        { "id": "a1-52-q11", "type": "quiz_choice", "question": "Close the ____ (persianas).", "options": ["blinds", "blind", "window", "door"], "correct_answer": "blinds", "explanation": "Persianas (blinds)." },
+        { "id": "a1-52-q12", "type": "quiz_choice", "question": "Open the ____ (ventana).", "options": ["window", "door", "wind", "wall"], "correct_answer": "window", "explanation": "Ventana (window)." },
+        { "id": "a1-52-q13", "type": "quiz_choice", "question": "Turn on the ____ (lámpara).", "options": ["lamp", "light", "fire", "sun"], "correct_answer": "lamp", "explanation": "Lámpara de escritorio (lamp)." },
+        { "id": "a1-52-q14", "type": "quiz_choice", "question": "The ____ is locked (puerta).", "options": ["door", "floor", "wall", "window"], "correct_answer": "door", "explanation": "Puerta (door)." },
+        { "id": "a1-52-q15", "type": "quiz_choice", "question": "There is a new ____ on the floor (alfombra).", "options": ["carpet", "car", "pet", "mat"], "correct_answer": "carpet", "explanation": "Alfombra (carpet)." },
+        { "id": "a1-52-q16", "type": "quiz_choice", "question": "Keep your desk ____ (limpio/ordenado).", "options": ["clean", "dirty", "messy", "bad"], "correct_answer": "clean", "explanation": "Limpio (clean) o tidy (ordenado)." },
+        { "id": "a1-52-q17", "type": "quiz_choice", "question": "My chair is ____ (rota).", "options": ["broken", "break", "breaking", "broke"], "correct_answer": "broken", "explanation": "Rota (broken)." },
+        { "id": "a1-52-q18", "type": "quiz_choice", "question": "We share a ____ (espacio de trabajo).", "options": ["workspace", "work", "space", "place"], "correct_answer": "workspace", "explanation": "Espacio de trabajo (workspace)." },
+        { "id": "a1-52-q19", "type": "quiz_choice", "question": "The reception ____ is at the entrance.", "options": ["desk", "table", "chair", "board"], "correct_answer": "desk", "explanation": "Mostrador/escritorio de recepción (reception desk)." },
+        { "id": "a1-52-q20", "type": "quiz_choice", "question": "Write it on the white____.", "options": ["board", "bored", "bird", "beard"], "correct_answer": "board", "explanation": "Pizarrón blanco (whiteboard)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta para el mobiliario.",
+      "questions": [
+        { "id": "a1-52-f1", "type": "fill_input", "question": "Sit at the ____ (Escritorio).", "correct_answer": "desk", "explanation": "Desk." },
+        { "id": "a1-52-f2", "type": "fill_input", "question": "An office ____ (Silla).", "correct_answer": "chair", "explanation": "Chair." },
+        { "id": "a1-52-f3", "type": "fill_input", "question": "Filing ____ (Archivero).", "correct_answer": "cabinet", "explanation": "Cabinet." },
+        { "id": "a1-52-f4", "type": "fill_input", "question": "____ plan office (Abierta).", "correct_answer": "open", "explanation": "Open." },
+        { "id": "a1-52-f5", "type": "fill_input", "question": "I work in a ____ (Cubículo).", "correct_answer": "cubicle", "explanation": "Cubicle." },
+        { "id": "a1-52-f6", "type": "fill_input", "question": "____ office (Privada).", "correct_answer": "private", "explanation": "Private." },
+        { "id": "a1-52-f7", "type": "fill_input", "question": "The book is on the ____ (Librero).", "correct_answer": "bookshelf", "explanation": "Bookshelf." },
+        { "id": "a1-52-f8", "type": "fill_input", "question": "Meeting ____ (Mesa).", "correct_answer": "table", "explanation": "Table." },
+        { "id": "a1-52-f9", "type": "fill_input", "question": "Trash ____ (Basurero).", "correct_answer": "bin", "explanation": "Bin." },
+        { "id": "a1-52-f10", "type": "fill_input", "question": "Write on the white____ (Pizarrón).", "correct_answer": "board", "explanation": "Board." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-52-p1", "source": "Desk", "target": "Escritorio"},
+        {"id": "a1-52-p2", "source": "Chair", "target": "Silla"},
+        {"id": "a1-52-p3", "source": "Cabinet", "target": "Archivero / Gabinete"},
+        {"id": "a1-52-p4", "source": "Open plan", "target": "Planta abierta"},
+        {"id": "a1-52-p5", "source": "Cubicle", "target": "Cubículo"},
+        {"id": "a1-52-p6", "source": "Private office", "target": "Oficina privada"},
+        {"id": "a1-52-p7", "source": "Table", "target": "Mesa"},
+        {"id": "a1-52-p8", "source": "Trash bin", "target": "Basurero"},
+        {"id": "a1-52-p9", "source": "Blinds", "target": "Persianas"},
+        {"id": "a1-52-p10", "source": "Whiteboard", "target": "Pizarrón blanco"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-52-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I sit at my desk.", "options": ["I sit at my desk.", "I sit on my desk.", "He sits at his desk.", "I work at my desk."], "correct_answer": "I sit at my desk.", "explanation": "Audio exacto." },
+        { "id": "a1-52-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The chair is broken.", "options": ["The chair is broken.", "My chair is broken.", "A chair is broken.", "The chair is bad."], "correct_answer": "The chair is broken.", "explanation": "Audio exacto." },
+        { "id": "a1-52-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Filing cabinet.", "options": ["Filing cabinet.", "File cabinet.", "Filling cabinet.", "File table."], "correct_answer": "Filing cabinet.", "explanation": "Audio exacto." },
+        { "id": "a1-52-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Open plan office.", "options": ["Open plan office.", "Open door office.", "Private plan office.", "An open plan office."], "correct_answer": "Open plan office.", "explanation": "Audio exacto." },
+        { "id": "a1-52-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My own cubicle.", "options": ["My own cubicle.", "My cubicle.", "His own cubicle.", "An old cubicle."], "correct_answer": "My own cubicle.", "explanation": "Audio exacto." },
+        { "id": "a1-52-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Private office.", "options": ["Private office.", "A private office.", "Public office.", "Open office."], "correct_answer": "Private office.", "explanation": "Audio exacto." },
+        { "id": "a1-52-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A big meeting table.", "options": ["A big meeting table.", "A meeting table.", "The big meeting table.", "A small meeting table."], "correct_answer": "A big meeting table.", "explanation": "Audio exacto." },
+        { "id": "a1-52-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Trash bin.", "options": ["Trash bin.", "Trash can.", "Ash bin.", "Cash bin."], "correct_answer": "Trash bin.", "explanation": "Audio exacto." },
+        { "id": "a1-52-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Close the blinds.", "options": ["Close the blinds.", "Open the blinds.", "Close the door.", "Close the window."], "correct_answer": "Close the blinds.", "explanation": "Audio exacto." },
+        { "id": "a1-52-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Write it on the whiteboard.", "options": ["Write it on the whiteboard.", "Write on the whiteboard.", "Write it on the board.", "Put it on the whiteboard."], "correct_answer": "Write it on the whiteboard.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

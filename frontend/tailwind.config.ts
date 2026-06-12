@@ -12,6 +12,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Times New Roman"', 'Times', 'serif'],
+      },
       colors: {
         // Nuestra paleta de marca amigable (Índigo/Violeta)
         brand: {
@@ -37,6 +40,35 @@ const config: Config = {
         // Sombras suaves y "gorditas" para botones
         'soft': '0 4px 6px -1px rgba(99, 102, 241, 0.1), 0 2px 4px -1px rgba(99, 102, 241, 0.06)',
         'button': '0 4px 0 0 #4338ca', // Sombra sólida estilo botón 3D (opcional)
+      },
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'fade-in-down': {
+          '0%': { opacity: '0', transform: 'translateY(-20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'fade-in-right': {
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        'scale-in': {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        }
+      },
+      animation: {
+        'fade-in': 'fade-in 0.6s ease-out forwards',
+        'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+        'fade-in-down': 'fade-in-down 0.8s ease-out forwards',
+        'fade-in-right': 'fade-in-right 0.8s ease-out forwards',
+        'scale-in': 'scale-in 0.5s ease-out forwards',
       }
     },
   },

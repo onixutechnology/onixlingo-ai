@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-11",
+  "title": "Ir y Venir",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Verbs", "Movement", "Grammar"],
+  "completion_message": "¡Excelente! Has dominado el movimiento en chino. Ya no hay preposiciones que te detengan.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Movimiento Directo",
+      "parts": [
+        {
+          "visual": "Ir: 去 (qù)\nVenir: 来 (lái)\n\nAprendamos los dos verbos de movimiento más importantes.\n- Ir se dice 'qù' (Cuarto tono fuerte hacia abajo). Ojo: La 'q' en pinyin suena como una 'ch' muy suave y afilada (como 'chü').\n- Venir se dice 'lái' (Segundo tono que sube).\n\nEjemplos simples:\n- Yo voy: 我去 (Wǒ qù).\n- Él viene: 他来 (Tā lái).",
+          "audio": "Es hora de movernos. Para decir 'Ir', usamos el verbo qù. En pinyin, la letra Q no suena como una C, suena como una CH muy suave, con los dientes cerrados. Qù. Cuarto tono. Para decir 'Venir', usamos el verbo lái. Segundo tono, subiendo. Lái. Como siempre, no hay conjugaciones. Así que si quiero decir 'Yo voy', digo simplemente 'Wǒ qù'. Si quiero decir 'Tú vienes', digo 'Nǐ lái'."
+        },
+        {
+          "visual": "La Magia de No Usar Preposiciones:\n\nEn español decimos 'Yo voy A China'. Esa letra 'A' es una preposición de dirección.\n¡En chino mandarín no usamos preposiciones para ir a un lugar!\n\nLa estructura es directa: Sujeto + Ir/Venir + Lugar.\n\nLiteralmente hablas como un cavernícola eficiente:\n- Español: Yo voy a China.\n- Chino: Yo + ir + China.\n\nNegación normal con 不 (bù):\n- Yo NO voy: 我不去 (Wǒ bú qù) -> Ojo al cambio de tono (bú qù).\n- Él NO viene: 他不来 (Tā bù lái).",
+          "audio": "Aquí hay una regla que te ahorrará muchísimos dolores de cabeza. En español, cuando nos movemos, necesitamos preposiciones. Decimos Voy A la escuela. Vengo DE la casa. En chino, la dirección ya está implícita en el verbo. No necesitas decir 'a' ni 'hacia'. Simplemente dices el verbo e inmediatamente después el lugar. Literalmente dices 'Yo ir China'. 'Tú venir casa'. Es un sistema increíblemente eficiente. Y si quieres negar el movimiento, simplemente usas nuestra vieja amiga 'bù'. 'Wǒ bú qù', Yo no voy. 'Tā bù lái', Él no viene."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa tu comprensión de los verbos de movimiento.",
+      "questions": [
+        { "id": "zh-a1-11-q1", "type": "quiz_choice", "question": "¿Qué significa el verbo 去 (qù)?", "options": ["Ir.", "Venir.", "Tener.", "Querer."], "correct_answer": "Ir.", "explanation": "去 (qù) significa Ir." },
+        { "id": "zh-a1-11-q2", "type": "quiz_choice", "question": "¿Qué significa el verbo 来 (lái)?", "options": ["Venir.", "Ir.", "Ser.", "Comer."], "correct_answer": "Venir.", "explanation": "来 (lái) significa Venir." },
+        { "id": "zh-a1-11-q3", "type": "quiz_choice", "question": "¿Cómo se pronuncia la letra 'q' en el pinyin de 去 (qù)?", "options": ["Como una 'ch' suave y afilada.", "Como la 'c' en casa.", "Como una 'k'.", "Como una 's'."], "correct_answer": "Como una 'ch' suave y afilada.", "explanation": "La 'q' en pinyin no suena como k, sino como un sonido palatal similar a la 'ch'." },
+        { "id": "zh-a1-11-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo voy' en mandarín?", "options": ["Wǒ qù (我去).", "Wǒ lái (我来).", "Wǒ yào (我要).", "Nǐ qù (你去)."], "correct_answer": "Wǒ qù (我去).", "explanation": "Wǒ (Yo) + qù (ir)." },
+        { "id": "zh-a1-11-q5", "type": "quiz_choice", "question": "¿Qué preposición usas en chino para decir 'Voy A [lugar]'?", "options": ["¡Ninguna! Se dice 'Yo ir lugar' directamente.", "Se usa 'de' (的).", "Se usa 'ma' (吗).", "Se usa 'a'."], "correct_answer": "¡Ninguna! Se dice 'Yo ir lugar' directamente.", "explanation": "El chino es eficiente y omite preposiciones direccionales innecesarias tras el verbo ir." },
+        { "id": "zh-a1-11-q6", "type": "quiz_choice", "question": "¿Cómo se niega el verbo ir para decir 'No voy'?", "options": ["Bú qù (不去).", "Méi qù (没去).", "Bù lái (不来).", "Méiyǒu qù (没有去)."], "correct_answer": "Bú qù (不去).", "explanation": "Se niega con 不 (bù). Cambia a segundo tono (bú) porque qù es cuarto tono." },
+        { "id": "zh-a1-11-q7", "type": "quiz_choice", "question": "¿Cómo se pregunta '¿Tú vienes?'?", "options": ["Nǐ lái ma? (你来吗？)", "Nǐ qù ma? (你去吗？)", "Nǐ lái shénme? (你来什么？)", "Nǐ yǒu lái? (你有来？)"], "correct_answer": "Nǐ lái ma? (你来吗？)", "explanation": "Tú (nǐ) + venir (lái) + partícula de pregunta (ma)." },
+        { "id": "zh-a1-11-q8", "type": "quiz_choice", "question": "Alguien te pregunta 'Nǐ qù ma?' (¿Vas?). Quieres responder que SÍ. ¿Qué dices?", "options": ["Qù (去).", "Lái (来).", "Shì (是).", "Yǒu (有)."], "correct_answer": "Qù (去).", "explanation": "En chino respondes afirmando el verbo que te preguntaron." },
+        { "id": "zh-a1-11-q9", "type": "quiz_choice", "question": "Alguien te pregunta 'Nǐ lái ma?' (¿Vienes?). Quieres responder que NO. ¿Qué dices?", "options": ["Bù lái (不来).", "Bú qù (不去).", "Méiyǒu (没有).", "Bú shì (不是)."], "correct_answer": "Bù lái (不来).", "explanation": "Niegas el verbo venir (lái) usando bù." },
+        { "id": "zh-a1-11-q10", "type": "quiz_choice", "question": "¿Cómo dirías 'Nosotros no vamos'?", "options": ["Wǒmen bú qù (我们不去).", "Wǒ bú qù (我不去).", "Wǒmen bù lái (我们不来).", "Nǐmen bú qù (你们不去)."], "correct_answer": "Wǒmen bú qù (我们不去).", "explanation": "Nosotros (wǒmen) + no vamos (bú qù)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para los verbos de movimiento. Recuerda usar minúsculas y omitir los tonos.",
+      "questions": [
+        { "id": "zh-a1-11-f1", "type": "fill_input", "question": "Ir: ____ (qu)", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-a1-11-f2", "type": "fill_input", "question": "Venir: ____ (lai)", "correct_answer": "lai", "explanation": "lai" },
+        { "id": "zh-a1-11-f3", "type": "fill_input", "question": "Yo voy: wo ____", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-a1-11-f4", "type": "fill_input", "question": "Tú vienes: ni ____", "correct_answer": "lai", "explanation": "lai" },
+        { "id": "zh-a1-11-f5", "type": "fill_input", "question": "Él NO va: ta bu ____", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-a1-11-f6", "type": "fill_input", "question": "¿Tú vas?: ni qu ____", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-11-f7", "type": "fill_input", "question": "¿Él viene?: ta lai ____", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-11-f8", "type": "fill_input", "question": "Responder SÍ (al verbo ir): ____ (qu)", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-a1-11-f9", "type": "fill_input", "question": "Responder NO (al verbo venir): bu ____ (lai)", "correct_answer": "lai", "explanation": "lai" },
+        { "id": "zh-a1-11-f10", "type": "fill_input", "question": "¿Quién va?: shei ____ (qu)", "correct_answer": "qu", "explanation": "qu" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha e identifica el verbo de movimiento correcto.",
+      "questions": [
+        { "id": "zh-a1-11-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "去", "options": ["Ir", "Venir", "Ser", "Tener"], "correct_answer": "Ir", "explanation": "El audio dice: qù." },
+        { "id": "zh-a1-11-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "来", "options": ["Venir", "Ir", "Querer", "Día"], "correct_answer": "Venir", "explanation": "El audio dice: lái." },
+        { "id": "zh-a1-11-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我不去", "options": ["Yo no voy", "Yo no vengo", "Yo voy", "Tú no vas"], "correct_answer": "Yo no voy", "explanation": "El audio dice: Wǒ bú qù." },
+        { "id": "zh-a1-11-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他来吗？", "options": ["¿Él viene?", "¿Él va?", "¿Tú vienes?", "Él no viene"], "correct_answer": "¿Él viene?", "explanation": "El audio dice: Tā lái ma?" },
+        { "id": "zh-a1-11-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "谁去？", "options": ["¿Quién va?", "¿Quién viene?", "¿A dónde vas?", "Yo voy"], "correct_answer": "¿Quién va?", "explanation": "El audio dice: Shéi qù?" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Movement Verbs",
+      "pairs": [
+        {"id": "zh-a1-11-p1", "source": "去 (qù)", "target": "Ir"},
+        {"id": "zh-a1-11-p2", "source": "来 (lái)", "target": "Venir"},
+        {"id": "zh-a1-11-p3", "source": "我去 (wǒ qù)", "target": "Yo voy"},
+        {"id": "zh-a1-11-p4", "source": "我不去 (wǒ bú qù)", "target": "Yo no voy"},
+        {"id": "zh-a1-11-p5", "source": "他来 (tā lái)", "target": "Él viene"},
+        {"id": "zh-a1-11-p6", "source": "他不来 (tā bù lái)", "target": "Él no viene"},
+        {"id": "zh-a1-11-p7", "source": "你去吗？(nǐ qù ma?)", "target": "¿Tú vas?"},
+        {"id": "zh-a1-11-p8", "source": "他来吗？(tā lái ma?)", "target": "¿Él viene?"},
+        {"id": "zh-a1-11-p9", "source": "谁去？(shéi qù?)", "target": "¿Quién va?"},
+        {"id": "zh-a1-11-p10", "source": "谁来？(shéi lái?)", "target": "¿Quién viene?"}
+      ]
+    }
+  ]
+}

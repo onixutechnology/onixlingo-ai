@@ -76,7 +76,7 @@ const LEVEL_CONFIG: Record<string, { gradient: string; badge: string; badgeText:
     glow: 'shadow-blue-500/5',
     border: 'border-blue-200',
     iconBg: 'bg-blue-100',
-    iconColor: 'text-blue-600',
+    iconColor: 'text-[#D4AF37]',
   },
   C1: {
     gradient: 'from-indigo-600 to-violet-700',
@@ -85,7 +85,7 @@ const LEVEL_CONFIG: Record<string, { gradient: string; badge: string; badgeText:
     glow: 'shadow-indigo-500/5',
     border: 'border-indigo-200',
     iconBg: 'bg-indigo-100',
-    iconColor: 'text-indigo-600',
+    iconColor: 'text-[#D4AF37]',
   },
   C2: {
     gradient: 'from-violet-600 to-purple-700',
@@ -98,21 +98,21 @@ const LEVEL_CONFIG: Record<string, { gradient: string; badge: string; badgeText:
   },
   Exec: {
     gradient: 'from-amber-500 to-orange-600',
-    badge: 'bg-amber-50 text-amber-700 border-amber-200',
-    badgeText: 'Boardroom',
+    badge: 'bg-[#D4AF37]/10 text-[#D4AF37] border-[#D4AF37]/30',
+    badgeText: 'Corporativo',
     glow: 'shadow-amber-500/5',
-    border: 'border-amber-200',
+    border: 'border-[#D4AF37]/30',
     iconBg: 'bg-amber-100',
-    iconColor: 'text-amber-600',
+    iconColor: 'text-[#D4AF37]',
   },
   Mastery: {
     gradient: 'from-rose-500 to-pink-700',
-    badge: 'bg-rose-50 text-rose-700 border-rose-200',
+    badge: 'bg-[#D4AF37]/10 text-rose-700 border-[#D4AF37]/30',
     badgeText: 'Mastery',
     glow: 'shadow-rose-500/5',
-    border: 'border-rose-200',
+    border: 'border-[#D4AF37]/30',
     iconBg: 'bg-rose-100',
-    iconColor: 'text-rose-600',
+    iconColor: 'text-[#D4AF37]',
   },
 };
 
@@ -233,12 +233,11 @@ export default function ExecutiveDashboard() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center"
-        style={{ background: 'linear-gradient(135deg, #f2faf9 0%, #e0f5f3 30%, #caefea 70%, #aee3dd 100%)' }}>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white">
         <div className="relative">
           <div className="w-16 h-16 border-4 border-teal-600/10 border-t-teal-600 rounded-full animate-spin" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <Crown size={20} className="text-teal-600" />
+            <Crown size={20} className="text-[#D4AF37]" />
           </div>
         </div>
         <span className="mt-6 uppercase tracking-[0.3em] text-[10px] font-bold text-teal-800 animate-pulse">
@@ -250,10 +249,7 @@ export default function ExecutiveDashboard() {
 
   return (
     <div
-      className="min-h-screen text-slate-800 font-sans selection:bg-teal-400/30 selection:text-teal-900 pb-24"
-      style={{
-        background: 'linear-gradient(135deg, #f2faf9 0%, #e0f5f3 30%, #caefea 70%, #aee3dd 100%)',
-      }}
+      className="min-h-screen text-slate-900 font-sans selection:bg-teal-400/30 selection:text-teal-900 pb-24 bg-white"
     >
       {/* Ambient glow layer */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -268,41 +264,41 @@ export default function ExecutiveDashboard() {
         style={{ background: 'rgba(13, 76, 70, 0.95)' }}>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 bg-gradient-to-br from-teal-300 to-cyan-500 flex items-center justify-center shadow-lg shadow-teal-400/30">
-              <Crown size={14} className="text-white" />
+            <div className="w-7 h-7 bg-gradient-to-br from-teal-300 to-cyan-500 flex items-center justify-center shadow-none shadow-teal-400/30">
+              <Crown size={14} className="text-slate-900" />
             </div>
-            <span className="font-black text-white text-sm tracking-tight">
+            <span className="font-black text-slate-900 text-sm tracking-tight">
               OnixLingo <span className="text-cyan-200">Executive</span>
             </span>
           </div>
-          <div className="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-sm border border-white/30 bg-white/10 text-[10px] font-black text-white uppercase tracking-widest">
+          <div className="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-sm border border-white/30 bg-white/10 text-[10px] font-black text-slate-900 uppercase tracking-widest">
             <Gem size={11} />
             Titanium Status
           </div>
         </div>
 
         <div className="flex items-center gap-6">
-          <div className="hidden md:flex items-center gap-5 text-[11px] font-black text-white/70 uppercase tracking-widest">
+          <div className="hidden md:flex items-center gap-5 text-[11px] font-black text-slate-900/70 uppercase tracking-widest">
             <span className="flex items-center gap-1.5 text-purple-300">
               <Crown size={13} className="fill-purple-300/20 text-purple-300" /> LEVEL {kpis.currentLevel}
             </span>
             <span className="flex items-center gap-1.5 text-amber-300">
               <Trophy size={13} /> {kpis.totalXP} XP
             </span>
-            <span className="flex items-center gap-1.5 text-white">
+            <span className="flex items-center gap-1.5 text-slate-900">
               <Activity size={13} /> {kpis.accuracy}% ACC
             </span>
           </div>
           <div className="flex items-center gap-4 border-l border-white/20 pl-5">
             <Link
               href="/dashboard/leaderboard"
-              className="text-[10px] font-black text-white/70 hover:text-white transition-colors uppercase tracking-widest flex items-center gap-1.5"
+              className="text-[10px] font-black text-slate-900/70 hover:text-slate-900 transition-colors uppercase tracking-widest flex items-center gap-1.5"
             >
               <Trophy size={13} /> Ranking
             </Link>
             <button
               onClick={() => { setMode('student'); router.push('/dashboard'); }}
-              className="text-[10px] font-black text-white/70 hover:text-white transition-colors uppercase tracking-widest"
+              className="text-[10px] font-black text-slate-900/70 hover:text-slate-900 transition-colors uppercase tracking-widest"
             >
               Exit Executive
             </button>
@@ -345,25 +341,25 @@ export default function ExecutiveDashboard() {
           {/* ── CARD 1: COMMAND STATUS (Executive Level + XP) ── */}
           <div
             onClick={() => setShowCommandCenter(true)}
-            className="group relative overflow-hidden rounded-2xl border border-amber-500/25 bg-gradient-to-br from-amber-500/8 via-yellow-500/5 to-orange-500/8 p-6 backdrop-blur-md shadow-lg cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:border-amber-500/50 hover:shadow-amber-500/10 hover:shadow-xl"
+            className="group relative overflow-hidden rounded-none border border-[#D4AF37]/30/25 bg-gradient-to-br from-amber-500/8 via-yellow-500/5 to-orange-500/8 p-6 backdrop-blur-md shadow-none cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:border-[#D4AF37]/30/50 hover:shadow-amber-500/10 hover:shadow-xl"
           >
             {/* Background glyph */}
             <div className="absolute right-0 top-0 -mr-4 -mt-4 opacity-[0.04] transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6 pointer-events-none">
-              <Crown size={110} className="text-amber-500" />
+              <Crown size={110} className="text-[#D4AF37]" />
             </div>
             {/* Level badge */}
             <div className="absolute top-3 right-3">
-              <span className="px-2 py-0.5 bg-amber-500/15 border border-amber-500/30 text-amber-600 text-[8px] font-black uppercase rounded-full tracking-widest">
+              <span className="px-2 py-0.5 bg-[#D4AF37]/20/15 border border-[#D4AF37]/30/30 text-[#D4AF37] text-[8px] font-black uppercase rounded-full tracking-widest">
                 LVL {kpis.currentLevel}
               </span>
             </div>
             {/* Header */}
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2.5 bg-amber-500/12 border border-amber-500/25 rounded-xl shadow-sm group-hover:bg-amber-500/20 transition-colors">
-                <Trophy size={20} className="text-amber-500" />
+              <div className="p-2.5 bg-[#D4AF37]/20/12 border border-[#D4AF37]/30/25 rounded-none shadow-none group-hover:bg-[#D4AF37]/20/20 transition-colors">
+                <Trophy size={20} className="text-[#D4AF37]" />
               </div>
               <div>
-                <h4 className="text-[9px] font-black text-amber-600 uppercase tracking-widest leading-none">Command Status</h4>
+                <h4 className="text-[9px] font-black text-[#D4AF37] uppercase tracking-widest leading-none">Command Status</h4>
                 <p className="text-[10px] font-bold text-slate-600 mt-0.5">
                   {kpis.streakDays > 0 ? `🔥 ${kpis.streakDays}-day streak` : 'Start your streak'}
                 </p>
@@ -373,15 +369,15 @@ export default function ExecutiveDashboard() {
             <div className="mb-3">
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl font-black text-slate-900 tracking-tight tabular-nums">{kpis.totalXP.toLocaleString()}</span>
-                <span className="text-[9px] font-black text-amber-600 uppercase tracking-wide">XP</span>
+                <span className="text-[9px] font-black text-[#D4AF37] uppercase tracking-wide">XP</span>
               </div>
-              <p className="text-[9px] text-slate-500 font-semibold mt-0.5">
+              <p className="text-[9px] text-slate-600 font-semibold mt-0.5">
                 {kpis.completedModules} módulos · {kpis.accuracy}% accuracy
               </p>
             </div>
             {/* XP Level Progress Bar */}
             <div className="mb-4">
-              <div className="flex justify-between text-[7px] font-black text-slate-500 uppercase mb-1">
+              <div className="flex justify-between text-[7px] font-black text-slate-600 uppercase mb-1">
                 <span>Level {kpis.currentLevel}</span>
                 <span>{getLevelProgress(kpis.totalXP)}% to next</span>
               </div>
@@ -393,7 +389,7 @@ export default function ExecutiveDashboard() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
               </div>
             </div>
-            <div className="pt-3 border-t border-amber-500/12 flex items-center justify-between text-[9px] font-extrabold text-amber-700 uppercase tracking-widest">
+            <div className="pt-3 border-t border-[#D4AF37]/30/12 flex items-center justify-between text-[9px] font-extrabold text-[#D4AF37] uppercase tracking-widest">
               <span>Ver Analytics Completo</span>
               <ChevronRight size={12} className="transition-transform group-hover:translate-x-1" />
             </div>
@@ -402,25 +398,25 @@ export default function ExecutiveDashboard() {
           {/* ── CARD 2: SPEECH CALIBRATION (Phonetic Lab) ── */}
           <div
             onClick={() => setShowSpeechCalibrate(true)}
-            className="group relative overflow-hidden rounded-2xl border border-teal-500/25 bg-gradient-to-br from-teal-500/8 via-cyan-500/5 to-emerald-500/8 p-6 backdrop-blur-md shadow-lg cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:border-teal-500/50 hover:shadow-teal-500/10 hover:shadow-xl"
+            className="group relative overflow-hidden rounded-none border border-teal-500/25 bg-gradient-to-br from-teal-500/8 via-cyan-500/5 to-emerald-500/8 p-6 backdrop-blur-md shadow-none cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:border-teal-500/50 hover:shadow-teal-500/10 hover:shadow-xl"
           >
             <div className="absolute right-0 top-0 -mr-4 -mt-4 opacity-[0.04] transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-6 pointer-events-none">
-              <Zap size={110} className="text-teal-500" />
+              <Zap size={110} className="text-[#D4AF37]" />
             </div>
             {/* CEFR Badge */}
             <div className="absolute top-3 right-3">
-              <span className="px-2 py-0.5 bg-teal-500/15 border border-teal-500/30 text-teal-600 text-[8px] font-black uppercase rounded-full tracking-widest">
+              <span className="px-2 py-0.5 bg-[#D4AF37]/20/15 border border-teal-500/30 text-[#D4AF37] text-[8px] font-black uppercase rounded-full tracking-widest">
                 {kpis.accuracy >= 88 ? 'C1' : kpis.accuracy >= 78 ? 'B2' : 'B1'}
               </span>
             </div>
             {/* Header */}
             <div className="flex items-center gap-3 mb-4">
-              <div className="relative p-2.5 bg-teal-500/12 border border-teal-500/25 rounded-xl shadow-sm group-hover:bg-teal-500/20 transition-colors">
-                <Mic size={20} className="text-teal-600" />
+              <div className="relative p-2.5 bg-[#D4AF37]/20/12 border border-teal-500/25 rounded-none shadow-none group-hover:bg-[#D4AF37]/20/20 transition-colors">
+                <Mic size={20} className="text-[#D4AF37]" />
                 <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-white animate-pulse" />
               </div>
               <div>
-                <h4 className="text-[9px] font-black text-teal-600 uppercase tracking-widest leading-none">Speech Calibration</h4>
+                <h4 className="text-[9px] font-black text-[#D4AF37] uppercase tracking-widest leading-none">Speech Calibration</h4>
                 <p className="text-[10px] font-bold text-slate-600 mt-0.5">Phonetic Analytics Lab</p>
               </div>
             </div>
@@ -428,18 +424,18 @@ export default function ExecutiveDashboard() {
             <div className="mb-3">
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl font-black text-slate-900 tracking-tight tabular-nums">{kpis.accuracy}%</span>
-                <span className="text-[9px] font-black text-teal-600 uppercase tracking-wide">Accuracy</span>
+                <span className="text-[9px] font-black text-[#D4AF37] uppercase tracking-wide">Accuracy</span>
               </div>
               <div className="flex items-center gap-3 mt-1">
-                <span className="text-[9px] text-slate-500 font-semibold">Fluency: <span className="text-teal-600 font-black">{kpis.fluencyScore}</span></span>
+                <span className="text-[9px] text-slate-600 font-semibold">Fluency: <span className="text-[#D4AF37] font-black">{kpis.fluencyScore}</span></span>
                 <span className="text-slate-300">·</span>
-                <span className="text-[9px] text-slate-500">{kpis.accuracy >= 90 ? '🏆 Elite' : kpis.accuracy >= 80 ? '⭐ Senior' : '📊 Dev'}</span>
+                <span className="text-[9px] text-slate-600">{kpis.accuracy >= 90 ? '🏆 Elite' : kpis.accuracy >= 80 ? '⭐ Senior' : '📊 Dev'}</span>
               </div>
             </div>
             {/* Dual metric bars */}
             <div className="space-y-2 mb-4">
               <div>
-                <div className="flex justify-between text-[7px] font-black text-slate-500 uppercase mb-0.5">
+                <div className="flex justify-between text-[7px] font-black text-slate-600 uppercase mb-0.5">
                   <span>Pronunciation</span><span>{kpis.accuracy}%</span>
                 </div>
                 <div className="h-1.5 bg-teal-100 rounded-full overflow-hidden">
@@ -447,7 +443,7 @@ export default function ExecutiveDashboard() {
                 </div>
               </div>
               <div>
-                <div className="flex justify-between text-[7px] font-black text-slate-500 uppercase mb-0.5">
+                <div className="flex justify-between text-[7px] font-black text-slate-600 uppercase mb-0.5">
                   <span>Fluency</span><span>{kpis.fluencyScore}%</span>
                 </div>
                 <div className="h-1.5 bg-teal-100 rounded-full overflow-hidden">
@@ -463,7 +459,7 @@ export default function ExecutiveDashboard() {
 
           {/* ── CARD 3: VIP RAFFLE (PRÓXIMAMENTE) ── */}
           <div
-            className="group relative overflow-hidden rounded-2xl border border-rose-500/10 bg-gradient-to-br from-rose-500/2 to-rose-500/5 p-6 backdrop-blur-md shadow-lg shadow-rose-500/1 opacity-80 cursor-default"
+            className="group relative overflow-hidden rounded-none border border-rose-500/10 bg-gradient-to-br from-rose-500/2 to-rose-500/5 p-6 backdrop-blur-md shadow-none shadow-rose-500/1 opacity-80 cursor-default"
           >
             {/* Background glyph */}
             <div className="absolute right-0 top-0 -mr-6 -mt-6 p-10 opacity-[0.02]">
@@ -471,24 +467,24 @@ export default function ExecutiveDashboard() {
             </div>
             {/* Coming soon badge */}
             <div className="absolute top-3 right-3">
-              <span className="px-2.5 py-0.5 bg-rose-500/15 border border-rose-500/30 text-rose-600 text-[8px] font-black uppercase rounded-full tracking-widest">
+              <span className="px-2.5 py-0.5 bg-[#D4AF37]/100/15 border border-rose-500/30 text-[#D4AF37] text-[8px] font-black uppercase rounded-full tracking-widest">
                 PRÓXIMAMENTE
               </span>
             </div>
             {/* Header */}
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2.5 bg-rose-500/5 border border-rose-500/10 rounded-xl text-rose-400 shadow-sm">
+              <div className="p-2.5 bg-[#D4AF37]/100/5 border border-rose-500/10 rounded-none text-rose-400 shadow-none">
                 <Ticket size={20} />
               </div>
               <div>
                 <h4 className="text-[10px] font-black text-rose-400/80 uppercase tracking-widest leading-none">VIP Raffle</h4>
-                <p className="text-xs font-bold text-slate-500 mt-1">Sorteos de Mentorías</p>
+                <p className="text-xs font-bold text-slate-600 mt-1">Sorteos de Mentorías</p>
               </div>
             </div>
             {/* Body */}
             <div className="mb-3">
-              <h5 className="text-sm font-black text-slate-800 uppercase tracking-wide leading-tight">Mentorías & Premios</h5>
-              <p className="text-[10px] text-slate-500 font-semibold mt-1 leading-relaxed">
+              <h5 className="text-sm font-black text-slate-900 uppercase tracking-wide leading-tight">Mentorías & Premios</h5>
+              <p className="text-[10px] text-slate-600 font-semibold mt-1 leading-relaxed">
                 Obtén boletos completando lecciones ejecutivas. Sorteos mensuales de iPads y sesiones 1-a-1.
               </p>
             </div>
@@ -503,16 +499,16 @@ export default function ExecutiveDashboard() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14">
           <Link
             href="/dashboard/pro/meeting-room"
-            className="group relative border border-teal-800/15 bg-white/40 p-6 hover:border-teal-700/40 hover:bg-white/60 transition-all overflow-hidden backdrop-blur-sm shadow-sm"
+            className="group relative border border-teal-800/15 bg-white/40 p-6 hover:border-teal-700/40 hover:bg-white/60 transition-all overflow-hidden backdrop-blur-sm shadow-none"
           >
             <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
               <Users size={72} />
             </div>
             <div className="relative z-10">
-              <div className="w-11 h-11 bg-teal-600/10 border border-teal-600/20 flex items-center justify-center text-teal-850 mb-5 group-hover:scale-110 transition-transform">
+              <div className="w-11 h-11 bg-[#D4AF37]/20/10 border border-teal-600/20 flex items-center justify-center text-teal-850 mb-5 group-hover:scale-110 transition-transform">
                 <Video size={22} />
               </div>
-              <h3 className="text-base font-black text-slate-900 mb-1.5 uppercase tracking-tight">Boardroom Simulator</h3>
+              <h3 className="text-base font-black text-slate-900 mb-1.5 uppercase tracking-tight">Corporativo Simulator</h3>
               <p className="text-xs text-slate-700 font-medium leading-relaxed mb-4">Ejercicios en tiempo real con una junta directiva de IA.</p>
               <div className="flex items-center gap-1.5 text-[10px] font-bold text-teal-800 uppercase tracking-widest">
                 Enter Room <ChevronRight size={12} />
@@ -522,7 +518,7 @@ export default function ExecutiveDashboard() {
 
           <div
             onClick={() => setShowReadingStudio(true)}
-            className="group relative border border-teal-800/15 bg-white/40 p-6 hover:border-teal-700/40 hover:bg-white/60 transition-all cursor-pointer overflow-hidden backdrop-blur-sm shadow-sm"
+            className="group relative border border-teal-800/15 bg-white/40 p-6 hover:border-teal-700/40 hover:bg-white/60 transition-all cursor-pointer overflow-hidden backdrop-blur-sm shadow-none"
           >
             <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
               <BarChart3 size={72} />
@@ -541,13 +537,13 @@ export default function ExecutiveDashboard() {
 
           <div
             onClick={() => setShowB2BNegotiations(true)}
-            className="group relative border border-teal-800/15 bg-white/40 p-6 hover:border-teal-700/40 hover:bg-white/60 transition-all cursor-pointer overflow-hidden backdrop-blur-sm shadow-sm"
+            className="group relative border border-teal-800/15 bg-white/40 p-6 hover:border-teal-700/40 hover:bg-white/60 transition-all cursor-pointer overflow-hidden backdrop-blur-sm shadow-none"
           >
             <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
               <MessageSquare size={72} />
             </div>
             <div className="relative z-10">
-              <div className="w-11 h-11 bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-850 mb-5 group-hover:scale-110 transition-transform">
+              <div className="w-11 h-11 bg-[#D4AF37]/20/10 border border-teal-500/20 flex items-center justify-center text-teal-850 mb-5 group-hover:scale-110 transition-transform">
                 <Briefcase size={22} />
               </div>
               <h3 className="text-base font-black text-slate-900 mb-1.5 uppercase tracking-tight">B2B Negotiations</h3>
@@ -561,17 +557,17 @@ export default function ExecutiveDashboard() {
 
         {/* PANEL DE EXCELENCIA CORPORATIVA */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-          {/* Columna 1: Recordatorios C-Suite */}
+          {/* Columna 1: Recordatorios Alta Dirección */}
           <PracticeReminderWidget themeColor="teal" />
 
           {/* Columna 2: Ranking Executive */}
-          <div className="bg-white/40 border border-teal-800/15 p-5 rounded-none backdrop-blur-sm shadow-sm flex flex-col justify-between relative overflow-hidden group text-slate-800">
+          <div className="bg-white/40 border border-teal-800/15 p-5 rounded-none backdrop-blur-sm shadow-none flex flex-col justify-between relative overflow-hidden group text-slate-900">
             <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity"><Trophy size={60} className="text-teal-800" /></div>
             <div className="relative z-10 space-y-3">
               <div>
                 <div className="flex items-center gap-1.5 mb-1">
                   <Sparkles size={11} className="text-teal-800" />
-                  <span className="text-[8px] font-black uppercase tracking-[0.2em] text-teal-800/60">C-Suite Performance</span>
+                  <span className="text-[8px] font-black uppercase tracking-[0.2em] text-teal-800/60">Alta Dirección Performance</span>
                 </div>
                 <h3 className="text-xs font-black uppercase tracking-tight text-slate-900 leading-none">Ranking Executive</h3>
                 <p className="text-[9px] text-slate-600 font-semibold leading-none mt-1.5">Top ejecutivos con mayor puntuación acumulada.</p>
@@ -584,7 +580,7 @@ export default function ExecutiveDashboard() {
                     className={`flex items-center justify-between p-2 text-[10px] font-bold border ${item.isMe ? 'border-teal-500/40 bg-teal-50/20 text-teal-900' : 'border-teal-800/10 text-slate-700'}`}
                   >
                     <div className="flex items-center gap-2">
-                      <span className={`w-4 h-4 flex items-center justify-center font-mono text-[9px] font-black ${index === 0 ? 'bg-amber-500 text-white' : index === 1 ? 'bg-slate-350 text-slate-800' : 'bg-amber-700 text-white'}`}>
+                      <span className={`w-4 h-4 flex items-center justify-center font-mono text-[9px] font-black ${index === 0 ? 'bg-[#D4AF37]/20 text-slate-900' : index === 1 ? 'bg-slate-300 text-slate-900' : 'bg-amber-700 text-slate-900'}`}>
                         {index + 1}
                       </span>
                       <span>{item.name}</span>
@@ -597,7 +593,7 @@ export default function ExecutiveDashboard() {
           </div>
 
           {/* Columna 3: Trofeos de Liderazgo */}
-          <div className="bg-white/40 border border-teal-800/15 p-5 rounded-none backdrop-blur-sm shadow-sm flex flex-col justify-between relative overflow-hidden group text-slate-800">
+          <div className="bg-white/40 border border-teal-800/15 p-5 rounded-none backdrop-blur-sm shadow-none flex flex-col justify-between relative overflow-hidden group text-slate-900">
             <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity"><Award size={60} className="text-teal-800" /></div>
             <div className="relative z-10 space-y-3">
               <div>
@@ -611,19 +607,19 @@ export default function ExecutiveDashboard() {
 
               <div className="space-y-1.5 pt-1">
                 {[
-                  { title: 'Orador C-Suite', desc: 'Precisión de pronunciación >= 80%', unlocked: kpis.accuracy >= 80 },
+                  { title: 'Orador Alta Dirección', desc: 'Precisión de pronunciación >= 80%', unlocked: kpis.accuracy >= 80 },
                   { title: 'Líder Global', desc: 'Acumula más de 1,000 XP en tu carrera', unlocked: kpis.totalXP >= 1000 },
                   { title: 'Negociador de Élite', desc: 'Completa al menos 1 módulo premium', unlocked: kpis.completedModules >= 1 }
                 ].map((badge, idx) => (
                   <div 
                     key={idx}
-                    className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-500/30 bg-emerald-50/20 text-emerald-800' : 'border-teal-800/10 text-slate-400 opacity-60'}`}
+                    className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-500/30 bg-[#D4AF37]/10/20 text-[#D4AF37]' : 'border-teal-800/10 text-slate-500 opacity-60'}`}
                   >
                     <div className="flex items-center gap-2">
-                      <Award size={12} className={badge.unlocked ? 'text-emerald-600' : 'text-slate-400'} />
+                      <Award size={12} className={badge.unlocked ? 'text-[#D4AF37]' : 'text-slate-500'} />
                       <div className="text-left">
                         <p className="text-[9px] font-black leading-none">{badge.title}</p>
-                        <p className="text-[7px] font-bold text-slate-500 mt-0.5 leading-none">{badge.desc}</p>
+                        <p className="text-[7px] font-bold text-slate-600 mt-0.5 leading-none">{badge.desc}</p>
                       </div>
                     </div>
                     <span className="text-[7px] font-black uppercase tracking-widest">
@@ -663,7 +659,7 @@ export default function ExecutiveDashboard() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: sectionIndex * 0.06 }}
-                className={`border border-teal-800/15 bg-white/40 backdrop-blur-sm overflow-hidden transition-all duration-300 shadow-sm hover:bg-white/50 ${isOpen ? 'shadow-md border-teal-700/40 bg-white/65' : ''}`}
+                className={`border border-teal-800/15 bg-white/40 backdrop-blur-sm overflow-hidden transition-all duration-300 shadow-none hover:bg-white/50 ${isOpen ? 'shadow-none border-teal-700/40 bg-white/65' : ''}`}
               >
                 {/* ACCORDION HEADER */}
                 <button
@@ -674,7 +670,7 @@ export default function ExecutiveDashboard() {
                     {/* Level color stripe */}
                     <div className={`w-1 h-12 bg-gradient-to-b ${cfg.gradient} flex-shrink-0`} />
 
-                    <div className={`w-11 h-11 ${cfg.iconBg} border ${cfg.border} flex items-center justify-center flex-shrink-0 shadow-sm`}>
+                    <div className={`w-11 h-11 ${cfg.iconBg} border ${cfg.border} flex items-center justify-center flex-shrink-0 shadow-none`}>
                       <section.icon size={20} className={cfg.iconColor} />
                     </div>
 
@@ -696,7 +692,7 @@ export default function ExecutiveDashboard() {
                       <span className="text-[9px] font-bold text-slate-700 uppercase tracking-widest">
                         {completedCount}/{section.lessons.length} completadas
                       </span>
-                      <div className="w-24 h-1 bg-slate-200 rounded-none">
+                      <div className="w-24 h-1 bg-white rounded-none">
                         <div
                           className={`h-full bg-gradient-to-r ${cfg.gradient} transition-all duration-500`}
                           style={{ width: `${progressPct}%` }}
@@ -743,7 +739,7 @@ export default function ExecutiveDashboard() {
                             >
                               <div className="flex items-center gap-3">
                                 <div className={`w-6 h-6 flex items-center justify-center flex-shrink-0 text-[10px] font-black
-                                  ${isCompleted ? 'text-emerald-600' : isLocked ? 'text-slate-400' : 'text-teal-700'}`}>
+                                  ${isCompleted ? 'text-[#D4AF37]' : isLocked ? 'text-slate-500' : 'text-teal-700'}`}>
                                   {isCompleted
                                     ? <Check size={13} />
                                     : isLocked
@@ -752,14 +748,14 @@ export default function ExecutiveDashboard() {
                                   }
                                 </div>
                                 <span className={`text-[11px] font-bold uppercase tracking-tight
-                                  ${isLocked ? 'text-slate-400 font-medium' : isCompleted ? 'text-emerald-700' : 'text-slate-800 group-hover/lesson:text-slate-900'}`}>
+                                  ${isLocked ? 'text-slate-500 font-medium' : isCompleted ? 'text-[#D4AF37]' : 'text-slate-900 group-hover/lesson:text-slate-900'}`}>
                                   {lesson.title}
                                 </span>
                               </div>
                               <Play
                                 size={11}
                                 className={`flex-shrink-0 transition-transform group-hover/lesson:translate-x-0.5
-                                  ${isLocked ? 'text-slate-300' : 'text-teal-600'}`}
+                                  ${isLocked ? 'text-slate-300' : 'text-[#D4AF37]'}`}
                               />
                             </button>
                           );

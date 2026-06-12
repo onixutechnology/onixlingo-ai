@@ -17,11 +17,13 @@ const nextConfig: NextConfig = {
     ],
   },
   async rewrites() {
+    if (process.env.NODE_ENV === 'production') {
+      return [];
+    }
     return [
       {
         source: '/api/v1/:path*',
-        // 👇 ASEGURA QUE DIGA 8020 AQUÍ TAMBIÉN
-        destination: 'http://127.0.0.1:8020/api/v1/:path*', 
+        destination: 'http://127.0.0.1:5000/api/v1/:path*', 
       },
     ]
   },

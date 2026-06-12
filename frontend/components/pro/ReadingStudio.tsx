@@ -162,8 +162,8 @@ export const ReadingStudio = ({ onClose }: ReadingStudioProps) => {
   const fn14 = (jc: number, wc: number) => wc > 0 ? Math.round((jc / wc) * 100) : 0;
   const fn15 = (dens: number) => dens > 15 ? "Outstanding executive vocabulary" : "Standard business terminology";
   const fn16 = (g: number, t: number, v: number) => Math.round((g * 0.4) + (t * 0.3) + (v * 0.3));
-  const fn17 = (sc: number) => sc >= 90 ? "Boardroom Approved (Elite)" : sc >= 75 ? "Approved with minor remarks" : "Reconsider Strategic Argumentation";
-  const fn18 = (score: number) => score >= 90 ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-amber-500/20 text-amber-400 border border-amber-500/30";
+  const fn17 = (sc: number) => sc >= 90 ? "Corporativo Approved (Elite)" : sc >= 75 ? "Approved with minor remarks" : "Reconsider Strategic Argumentation";
+  const fn18 = (score: number) => score >= 90 ? "bg-[#D4AF37]/100/20 text-emerald-400 border border-emerald-500/30" : "bg-[#D4AF37]/20/20 text-amber-400 border border-[#D4AF37]/30/30";
   const fn19 = (id: string) => EXECUTIVE_PRACTICE_PROMPTS.find(p => p.id === id)?.theme || "Corporate Pitch";
   const fn20 = (text: string) => text.length;
   const fn21 = (text: string) => text.replace(/\s+/g, '').length;
@@ -208,9 +208,9 @@ export const ReadingStudio = ({ onClose }: ReadingStudioProps) => {
   const fn54 = (xp: number) => (Math.floor(xp / 500) + 1) * 500;
   const fn55 = (xp: number) => Math.round(((xp % 500) / 500) * 100);
   const fn56 = (lvl: number) => lvl >= 5 ? "Managing Director" : lvl === 4 ? "Executive Director" : lvl === 3 ? "Senior Strategy Advisor" : "Accredited Manager";
-  const fn57 = (level: string) => level === 'C2' ? "Strategic Boardroom Leader" : level === 'C1' ? "Senior Corporate Partner" : "Business Professional";
+  const fn57 = (level: string) => level === 'C2' ? "Strategic Corporativo Leader" : level === 'C1' ? "Senior Corporate Partner" : "Business Professional";
   const fn58 = (diff: number) => diff > 90 ? "EXTREME PITCH" : diff > 75 ? "HARD CHALLENGE" : "MEDIUM DRILL";
-  const fn59 = (diff: number) => diff > 90 ? "border-red-500/30 bg-red-500/20 text-red-400" : diff > 75 ? "border-orange-500/30 bg-orange-500/20 text-orange-400" : "border-blue-500/30 bg-blue-500/20 text-blue-400";
+  const fn59 = (diff: number) => diff > 90 ? "border-red-500/30 bg-[#D4AF37]/100/20 text-red-400" : diff > 75 ? "border-orange-500/30 bg-orange-500/20 text-orange-400" : "border-blue-500/30 bg-[#D4AF37]/20/20 text-blue-400";
   const fn60 = (text: string) => text.toLowerCase().split(' ').filter(w => ['would', 'should', 'could', 'were', 'if'].includes(w)).length;
   const fn61 = (condCount: number) => condCount > 0 ? "Leveraged high-impact strategic conditionals" : "Factual stance. Use conditional frames to mitigate risk.";
   const fn62 = (text: string) => text.toLowerCase().split(' ').filter(w => ['synergy', 'synergistic'].includes(w)).length;
@@ -587,7 +587,7 @@ export const ReadingStudio = ({ onClose }: ReadingStudioProps) => {
   const fn408 = () => getHistoricalAverageScore();
   const fn409 = () => getJargonProficiencyLevel();
   const fn410 = () => getObjectionDefenseStatus();
-  const fn411 = (score: number) => saveBoardroomSessionHistory(score);
+  const fn411 = (score: number) => saveCorporativoSessionHistory(score);
   const fn412 = () => loadSessionHistory();
   const fn413 = () => clearSessionHistory();
   const fn414 = () => analyzeImprovementTrend();
@@ -676,7 +676,7 @@ export const ReadingStudio = ({ onClose }: ReadingStudioProps) => {
   const fn497 = (text: string) => text.toLowerCase().split(' ').filter(w => w === 'due' || w === 'diligence').length;
   const fn498 = (text: string) => text.toLowerCase().split(' ').filter(w => w === 'regulatory' || w === 'compliance').length;
   const fn499 = (text: string) => text.toLowerCase().split(' ').filter(w => w === 'cloud' || w === 'migration').length;
-  const fn500 = () => alert("All 500 titanium C-Suite analytics operations fully initialized.");
+  const fn500 = () => alert("All 500 titanium Alta Dirección analytics operations fully initialized.");
 
   const evaluateToneAggressiveness = (text: string) => {
     const list = ['assertive', 'forceful', 'aggressive', 'imperative', 'demanding'];
@@ -768,7 +768,7 @@ export const ReadingStudio = ({ onClose }: ReadingStudioProps) => {
         answer: "Synergistic integration across highly volatile emerging markets."
       },
       {
-        question: "Define 'Hedging risk' in C-Suite boardroom negotiations:",
+        question: "Define 'Hedging risk' in Alta Dirección boardroom negotiations:",
         options: [
           "Establishing financial redundancies to cap legal and operational exposure.",
           "Ignoring short-term compliance audits.",
@@ -785,7 +785,7 @@ export const ReadingStudio = ({ onClose }: ReadingStudioProps) => {
     const correct = getJargonQuizQuestion().answer;
     if (ans === correct) {
       setExecutiveXP(prev => prev + 250);
-      setQuizFeedbackMessage("Accredited Choice! +250 C-Suite XP Awarded.");
+      setQuizFeedbackMessage("Accredited Choice! +250 Alta Dirección XP Awarded.");
       triggerAccreditationConfetti();
     } else {
       setQuizFeedbackMessage("Incorrect choice. Review regulatory due diligence blueprints.");
@@ -813,7 +813,7 @@ export const ReadingStudio = ({ onClose }: ReadingStudioProps) => {
   };
 
   // Diagnostic log mock helpers
-  const saveBoardroomSessionHistory = (score: number) => {
+  const saveCorporativoSessionHistory = (score: number) => {
     const entry = {
       title: activePrompt.theme,
       trust: score,
@@ -849,7 +849,7 @@ export const ReadingStudio = ({ onClose }: ReadingStudioProps) => {
   const generateDigitalCertificate = () => {
     return `
 ===================================================
-    C-SUITE PLATINUM ACCREDITATION CERTIFICATE
+    ALTA DIRECCIÓN PLATINUM ACCREDITATION CERTIFICATE
 ===================================================
 This certifies that the candidate has successfully
 graduated from the Titanium Speech Analytics Laboratory.
@@ -857,7 +857,7 @@ graduated from the Titanium Speech Analytics Laboratory.
 Executive Rank: ${getBestRankTitle()}
 CEFR Alignment: ${fn57(exerciseLevel)}
 Strategic Terminology Index: ${getJargonProficiencyLevel()}
-Boardroom Trust Score: ${getHistoricalAverageScore()}%
+Corporativo Trust Score: ${getHistoricalAverageScore()}%
 Authentication ID: ONIX-CERT-${Math.floor(100000 + Math.random() * 900000)}
 ===================================================
      BOARDROOM DIRECTORS OF ONIXLINGO ACADEMY
@@ -1018,7 +1018,7 @@ Average Duration: ${getAverageSessionDuration()} seconds
       });
 
       // Save to logs
-      saveBoardroomSessionHistory(score);
+      saveCorporativoSessionHistory(score);
       setExecutiveXP(prev => prev + score * 3);
 
     } catch (error) {
@@ -1030,7 +1030,7 @@ Average Duration: ${getAverageSessionDuration()} seconds
         transcription: targetText
       });
 
-      saveBoardroomSessionHistory(mockScore);
+      saveCorporativoSessionHistory(mockScore);
       setExecutiveXP(prev => prev + mockScore * 3);
     } finally {
       setIsAnalyzing(false);
@@ -1054,31 +1054,31 @@ Average Duration: ${getAverageSessionDuration()} seconds
   };
 
   return (
-    <div className="fixed inset-0 bg-slate-950/90 backdrop-blur-xl z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
-      <div className="bg-gradient-to-br from-orange-600 via-amber-800 to-stone-950 border border-orange-500/20 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col text-slate-100 font-sans">
+    <div className="fixed inset-0 bg-slate-50/90 backdrop-blur-xl z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
+      <div className="bg-gradient-to-br from-orange-600 via-amber-800 to-stone-950 border border-orange-500/20 rounded-none max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col text-slate-100 font-sans">
         
         {/* HEADER */}
-        <div className="sticky top-0 bg-black/40 backdrop-blur-md border-b border-orange-500/25 px-6 md:px-10 py-5 flex items-center justify-between z-10">
+        <div className="sticky top-0 bg-white/40 backdrop-blur-md border-b border-orange-500/25 px-6 md:px-10 py-5 flex items-center justify-between z-10">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-white/10 rounded-xl text-orange-200 ring-1 ring-white/10">
+            <div className="p-3 bg-white/10 rounded-none text-orange-200 ring-1 ring-white/10">
               <BookOpen size={24} className="animate-pulse" />
             </div>
             <div>
-              <h2 className="text-2xl font-black text-white tracking-tight uppercase">Titanium Fluency Lab</h2>
+              <h2 className="text-2xl font-black text-slate-900 tracking-tight uppercase">Titanium Fluency Lab</h2>
               <p className="text-[10px] text-orange-300 uppercase tracking-widest font-black">Executive Speech Analytics Engine</p>
             </div>
           </div>
           <button 
             onClick={onClose} 
             disabled={isRecording}
-            className="p-2.5 bg-white/5 hover:bg-white/15 text-orange-300 hover:text-white rounded-full transition-colors active:scale-95 disabled:opacity-50"
+            className="p-2.5 bg-white/5 hover:bg-white/15 text-orange-300 hover:text-slate-900 rounded-full transition-colors active:scale-95 disabled:opacity-50"
           >
             <X size={18} />
           </button>
         </div>
 
         {/* TAB NAVIGATION */}
-        <div className="flex border-b border-orange-500/10 bg-black/30">
+        <div className="flex border-b border-orange-500/10 bg-white/30">
           {[
             { id: 'teleprompter', label: 'Teleprompter', icon: Activity },
             { id: 'drills', label: 'Jargon Drills', icon: Zap },
@@ -1094,10 +1094,10 @@ Average Duration: ${getAverageSessionDuration()} seconds
                 className={`flex-1 py-4 flex flex-col items-center justify-center gap-1 border-b-2 text-[10px] font-black uppercase tracking-wider transition-all ${
                   isActive 
                     ? 'border-orange-500 text-orange-400 bg-orange-950/15' 
-                    : 'border-transparent text-slate-500 hover:text-slate-300 hover:bg-white/5'
+                    : 'border-transparent text-slate-600 hover:text-slate-300 hover:bg-white/5'
                 }`}
               >
-                <Icon size={14} className={isActive ? 'text-orange-400' : 'text-slate-500'} />
+                <Icon size={14} className={isActive ? 'text-orange-400' : 'text-slate-600'} />
                 {tab.label}
               </button>
             );
@@ -1107,8 +1107,8 @@ Average Duration: ${getAverageSessionDuration()} seconds
         <div className="p-6 md:p-10 flex-1 flex flex-col overflow-y-auto">
           
           {error && (
-            <div className="mb-6 p-4 bg-red-950/40 border border-red-500/30 rounded-xl flex items-start gap-3 text-red-200">
-              <AlertTriangle className="shrink-0 mt-0.5 text-red-500 animate-bounce" size={20} />
+            <div className="mb-6 p-4 bg-red-950/40 border border-red-500/30 rounded-none flex items-start gap-3 text-red-200">
+              <AlertTriangle className="shrink-0 mt-0.5 text-[#D4AF37] animate-bounce" size={20} />
               <p className="text-xs font-bold leading-normal">{error}</p>
             </div>
           )}
@@ -1126,10 +1126,10 @@ Average Duration: ${getAverageSessionDuration()} seconds
                       setExerciseLevel(lvl);
                       setCurrentTextIndex(0);
                     }}
-                    className={`py-2 px-3 text-[10px] font-black uppercase rounded-lg border transition-all ${
+                    className={`py-2 px-3 text-[10px] font-black uppercase rounded-none border transition-all ${
                       exerciseLevel === lvl 
-                        ? 'bg-orange-500 border-orange-400 text-slate-950 shadow-md' 
-                        : 'bg-black/40 border-orange-950/50 text-slate-400 hover:bg-black/60'
+                        ? 'bg-orange-500 border-orange-400 text-slate-950 shadow-none' 
+                        : 'bg-white/40 border-orange-950/50 text-slate-500 hover:bg-white/60'
                     }`}
                   >
                     Level {lvl}
@@ -1139,20 +1139,20 @@ Average Duration: ${getAverageSessionDuration()} seconds
 
               <div className="flex justify-between items-end mb-4">
                 <p className="text-[10px] font-black text-orange-300 uppercase tracking-widest">
-                  Topic: <span className="text-white font-extrabold">{activePrompt.theme}</span> ({promptIndex + 1}/{activePrompts.length})
+                  Topic: <span className="text-slate-900 font-extrabold">{activePrompt.theme}</span> ({promptIndex + 1}/{activePrompts.length})
                 </p>
                 <div className="flex gap-2">
                   <button 
                     onClick={() => setCurrentTextIndex(prev => Math.max(0, prev - 1))}
                     disabled={promptIndex === 0 || isRecording || isAnalyzing}
-                    className="p-2 bg-black/40 border border-orange-950/50 rounded-lg text-slate-400 hover:text-white disabled:opacity-30 transition-colors"
+                    className="p-2 bg-white/40 border border-orange-950/50 rounded-none text-slate-500 hover:text-slate-900 disabled:opacity-30 transition-colors"
                   >
                     <ChevronLeft size={14} />
                   </button>
                   <button 
                     onClick={() => setCurrentTextIndex(prev => prev + 1)}
                     disabled={promptIndex === activePrompts.length - 1 || isRecording || isAnalyzing}
-                    className="p-2 bg-black/40 border border-orange-950/50 rounded-lg text-slate-400 hover:text-white disabled:opacity-30 transition-colors"
+                    className="p-2 bg-white/40 border border-orange-950/50 rounded-none text-slate-500 hover:text-slate-900 disabled:opacity-30 transition-colors"
                   >
                     <ChevronRight size={14} />
                   </button>
@@ -1160,10 +1160,10 @@ Average Duration: ${getAverageSessionDuration()} seconds
               </div>
 
               {/* Glowing teleprompter card */}
-              <div className="bg-black/60 border border-orange-500/20 p-8 md:p-12 shadow-2xl relative backdrop-blur-xl rounded-2xl flex-1 flex items-center justify-center text-center overflow-hidden min-h-[160px]">
+              <div className="bg-white/60 border border-orange-500/20 p-8 md:p-12 shadow-2xl relative backdrop-blur-xl rounded-none flex-1 flex items-center justify-center text-center overflow-hidden min-h-[160px]">
                 {isRecording && (
-                  <div className="absolute top-4 left-4 flex items-center gap-2 text-red-500 bg-red-500/10 px-3 py-1.5 rounded-full border border-red-500/20">
-                    <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+                  <div className="absolute top-4 left-4 flex items-center gap-2 text-[#D4AF37] bg-[#D4AF37]/100/10 px-3 py-1.5 rounded-full border border-red-500/20">
+                    <div className="w-2 h-2 rounded-full bg-[#D4AF37]/100 animate-pulse"></div>
                     <span className="text-[9px] font-black tracking-widest uppercase font-sans">REC {formatTime(recordingTime)}</span>
                   </div>
                 )}
@@ -1174,7 +1174,7 @@ Average Duration: ${getAverageSessionDuration()} seconds
               </div>
 
               {/* Dynamic volume waveforms */}
-              <div className="h-14 flex items-center justify-center gap-1.5 mt-6 bg-black/20 rounded-xl border border-orange-950/40 px-6">
+              <div className="h-14 flex items-center justify-center gap-1.5 mt-6 bg-white/20 rounded-none border border-orange-950/40 px-6">
                 {isRecording ? (
                   Array.from({ length: 24 }).map((_, i) => {
                     const height = Math.max(8, Math.random() * volume * 1.6);
@@ -1195,30 +1195,30 @@ Average Duration: ${getAverageSessionDuration()} seconds
 
               {/* Sliders and calibrations */}
               <div className="grid grid-cols-2 gap-4 mt-6">
-                <div className="p-4 bg-black/40 border border-orange-950/50 rounded-xl space-y-3">
-                  <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block border-b border-orange-950 pb-2">TTS Settings</span>
+                <div className="p-4 bg-white/40 border border-orange-950/50 rounded-none space-y-3">
+                  <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest block border-b border-orange-950 pb-2">TTS Settings</span>
                   
                   <div className="space-y-1">
-                    <div className="flex justify-between text-[8px] font-bold text-slate-500 uppercase">
+                    <div className="flex justify-between text-[8px] font-bold text-slate-600 uppercase">
                       <span>Rate</span>
                       <span className="text-orange-400">{customSpeed.toFixed(1)}x</span>
                     </div>
                     <input 
                       type="range" min="0.5" max="2.0" step="0.1" value={customSpeed}
                       onChange={(e) => setCustomSpeed(parseFloat(e.target.value))}
-                      className="w-full accent-orange-500 bg-slate-950 h-1 rounded appearance-none cursor-pointer"
+                      className="w-full accent-orange-500 bg-slate-50 h-1 rounded appearance-none cursor-pointer"
                     />
                   </div>
                   
                   <div className="space-y-1">
-                    <div className="flex justify-between text-[8px] font-bold text-slate-500 uppercase">
+                    <div className="flex justify-between text-[8px] font-bold text-slate-600 uppercase">
                       <span>Accent</span>
                       <span className="text-orange-400">{customAccent}</span>
                     </div>
                     <select
                       value={customAccent}
                       onChange={(e) => setCustomAccent(e.target.value as any)}
-                      className="w-full bg-slate-950 border border-slate-900 rounded p-1.5 text-[10px] font-bold text-white focus:outline-none"
+                      className="w-full bg-slate-50 border border-slate-900 rounded p-1.5 text-[10px] font-bold text-slate-900 focus:outline-none"
                     >
                       <option value="US">American</option>
                       <option value="UK">British</option>
@@ -1227,16 +1227,16 @@ Average Duration: ${getAverageSessionDuration()} seconds
                   </div>
                 </div>
 
-                <div className="p-4 bg-black/40 border border-orange-950/50 rounded-xl flex flex-col justify-between">
+                <div className="p-4 bg-white/40 border border-orange-950/50 rounded-none flex flex-col justify-between">
                   <div>
-                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block border-b border-orange-950 pb-2">Vocal Challenge</span>
+                    <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest block border-b border-orange-950 pb-2">Vocal Challenge</span>
                     <p className="text-[10px] font-bold text-slate-300 mt-2 leading-relaxed">
                       Pronounce jargon terms correctly under 15 seconds. Maintain steady amplitude stability.
                     </p>
                   </div>
                   <button 
                     onClick={toggleSystemDiagnostics}
-                    className="w-full mt-2 py-2 bg-white/5 border border-orange-500/20 text-white hover:bg-white/10 transition-colors font-black uppercase text-[8px] rounded"
+                    className="w-full mt-2 py-2 bg-white/5 border border-orange-500/20 text-slate-900 hover:bg-white/10 transition-colors font-black uppercase text-[8px] rounded"
                   >
                     Verify Diagnostics Connection
                   </button>
@@ -1248,7 +1248,7 @@ Average Duration: ${getAverageSessionDuration()} seconds
                 <button 
                   onClick={playReferenceAudio}
                   disabled={isRecording || isAnalyzing}
-                  className="flex-1 py-3.5 rounded-xl bg-black/40 hover:bg-slate-900 text-white font-extrabold uppercase tracking-widest text-[10px] transition-colors flex items-center justify-center gap-3 disabled:opacity-50 border border-orange-500/20"
+                  className="flex-1 py-3.5 rounded-none bg-white/40 hover:bg-slate-50 text-slate-900 font-extrabold uppercase tracking-widest text-[10px] transition-colors flex items-center justify-center gap-3 disabled:opacity-50 border border-orange-500/20"
                 >
                   <Volume2 size={16} /> Listen Native
                 </button>
@@ -1257,7 +1257,7 @@ Average Duration: ${getAverageSessionDuration()} seconds
                   <button 
                     onClick={startRecording}
                     disabled={isAnalyzing}
-                    className="flex-[2] py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-black uppercase tracking-widest text-[10px] transition-all flex items-center justify-center gap-3 shadow-lg shadow-emerald-950/50 disabled:opacity-50 active:scale-95"
+                    className="flex-[2] py-3.5 rounded-none bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-slate-900 font-black uppercase tracking-widest text-[10px] transition-all flex items-center justify-center gap-3 shadow-none shadow-emerald-950/50 disabled:opacity-50 active:scale-95"
                   >
                     {isAnalyzing ? (
                       <><Loader2 className="animate-spin" size={16} /> ANALYZING SPEECH...</>
@@ -1268,7 +1268,7 @@ Average Duration: ${getAverageSessionDuration()} seconds
                 ) : (
                   <button 
                     onClick={stopRecording}
-                    className="flex-[2] py-3.5 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-black uppercase tracking-widest text-[10px] transition-all flex items-center justify-center gap-3 shadow-lg shadow-red-950/50 animate-pulse active:scale-95"
+                    className="flex-[2] py-3.5 rounded-none bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-slate-900 font-black uppercase tracking-widest text-[10px] transition-all flex items-center justify-center gap-3 shadow-none shadow-red-950/50 animate-pulse active:scale-95"
                   >
                     <Square size={14} fill="currentColor" /> STOP AND DIAGNOSE
                   </button>
@@ -1281,16 +1281,16 @@ Average Duration: ${getAverageSessionDuration()} seconds
           {/* TAB 2: DRILLS */}
           {analyticsTab === 'drills' && (
             <div className="space-y-6">
-              <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-xl">
+              <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-none">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-[10px] font-black text-orange-400 uppercase tracking-widest">Phoneme Syllable Alignment Drill</span>
-                  <span className="text-[10px] font-bold text-slate-400">{getJargonQuizProgress()}% completed</span>
+                  <span className="text-[10px] font-bold text-slate-500">{getJargonQuizProgress()}% completed</span>
                 </div>
-                <div className="w-full bg-slate-950 h-1 rounded-full overflow-hidden mb-4">
+                <div className="w-full bg-slate-50 h-1 rounded-full overflow-hidden mb-4">
                   <div className="bg-orange-500 h-full transition-all duration-300" style={{ width: `${getJargonQuizProgress()}%` }}></div>
                 </div>
                 
-                <h4 className="text-xs font-bold text-white leading-relaxed mb-4">
+                <h4 className="text-xs font-bold text-slate-900 leading-relaxed mb-4">
                   {getJargonQuizQuestion().question}
                 </h4>
                 
@@ -1303,14 +1303,14 @@ Average Duration: ${getAverageSessionDuration()} seconds
                         key={i}
                         onClick={() => !quizAnswerSelected && checkJargonQuizAnswer(opt)}
                         disabled={!!quizAnswerSelected}
-                        className={`w-full p-3 rounded-lg text-left text-xs font-bold border transition-all ${
+                        className={`w-full p-3 rounded-none text-left text-xs font-bold border transition-all ${
                           quizAnswerSelected 
                             ? isCorrect 
-                              ? 'bg-emerald-500/20 border-emerald-500 text-emerald-300' 
+                              ? 'bg-[#D4AF37]/100/20 border-emerald-500 text-emerald-300' 
                               : isSelected 
-                                ? 'bg-red-500/20 border-red-500 text-red-300' 
-                                : 'bg-slate-950 border-slate-900 text-slate-600'
-                            : 'bg-slate-900 hover:bg-slate-800 border-slate-800 text-slate-300 hover:text-white'
+                                ? 'bg-[#D4AF37]/100/20 border-red-500 text-red-300' 
+                                : 'bg-slate-50 border-slate-900 text-slate-600'
+                            : 'bg-slate-50 hover:bg-slate-50 border-slate-800 text-slate-300 hover:text-slate-900'
                         }`}
                       >
                         {opt}
@@ -1320,10 +1320,10 @@ Average Duration: ${getAverageSessionDuration()} seconds
                 </div>
                 
                 {quizFeedbackMessage && (
-                  <div className={`mt-4 p-3 rounded-lg text-[10px] font-bold ${
+                  <div className={`mt-4 p-3 rounded-none text-[10px] font-bold ${
                     quizFeedbackMessage.includes('Accredited') 
-                      ? 'bg-emerald-500/10 border border-emerald-500/20 text-emerald-400' 
-                      : 'bg-red-500/10 border border-red-500/20 text-red-400'
+                      ? 'bg-[#D4AF37]/100/10 border border-emerald-500/20 text-emerald-400' 
+                      : 'bg-[#D4AF37]/100/10 border border-red-500/20 text-red-400'
                   }`}>
                     {quizFeedbackMessage}
                   </div>
@@ -1332,15 +1332,15 @@ Average Duration: ${getAverageSessionDuration()} seconds
                 {quizAnswerSelected && (
                   <button
                     onClick={nextJargonQuizQuestion}
-                    className="w-full mt-4 py-2.5 bg-white text-slate-950 hover:bg-orange-500 transition-all font-black uppercase tracking-widest text-[9px] rounded-lg"
+                    className="w-full mt-4 py-2.5 bg-white text-slate-950 hover:bg-orange-500 transition-all font-black uppercase tracking-widest text-[9px] rounded-none"
                   >
                     Next Challenge
                   </button>
                 )}
               </div>
 
-              <div className="p-4 bg-black/40 border border-orange-950 rounded-xl">
-                <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-2">Lexical Target Syllables</span>
+              <div className="p-4 bg-white/40 border border-orange-950 rounded-none">
+                <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest block mb-2">Lexical Target Syllables</span>
                 <div className="flex flex-wrap gap-1.5">
                   {getJargonBadges().map((badge, idx) => (
                     <span key={idx} className="px-2 py-0.5 bg-orange-500/10 border border-orange-500/20 text-orange-300 text-[8px] font-bold uppercase rounded">
@@ -1358,26 +1358,26 @@ Average Duration: ${getAverageSessionDuration()} seconds
               
               {/* Main Score stats */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-xl">
+                <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-none">
                   <span className="text-[8px] font-bold text-orange-300 uppercase">Fluency Average</span>
-                  <h4 className="text-2xl font-black text-white mt-1">{getHistoricalAverageScore()}%</h4>
+                  <h4 className="text-2xl font-black text-slate-900 mt-1">{getHistoricalAverageScore()}%</h4>
                 </div>
-                <div className="p-4 bg-black/40 border border-orange-950/50 rounded-xl">
-                  <span className="text-[8px] font-bold text-slate-400 uppercase">Max Trust</span>
-                  <h4 className="text-2xl font-black text-white mt-1">{getHistoricalMaxTrust()}%</h4>
+                <div className="p-4 bg-white/40 border border-orange-950/50 rounded-none">
+                  <span className="text-[8px] font-bold text-slate-500 uppercase">Max Trust</span>
+                  <h4 className="text-2xl font-black text-slate-900 mt-1">{getHistoricalMaxTrust()}%</h4>
                 </div>
-                <div className="p-4 bg-black/40 border border-orange-950/50 rounded-xl">
-                  <span className="text-[8px] font-bold text-slate-400 uppercase">Flesch Grade</span>
-                  <h4 className="text-2xl font-black text-white mt-1">{fn107(targetText)}</h4>
+                <div className="p-4 bg-white/40 border border-orange-950/50 rounded-none">
+                  <span className="text-[8px] font-bold text-slate-500 uppercase">Flesch Grade</span>
+                  <h4 className="text-2xl font-black text-slate-900 mt-1">{fn107(targetText)}</h4>
                 </div>
-                <div className="p-4 bg-black/40 border border-orange-950/50 rounded-xl">
-                  <span className="text-[8px] font-bold text-slate-400 uppercase">Lexicon Range</span>
-                  <h4 className="text-xs font-black text-white truncate mt-1">{getJargonProficiencyLevel()}</h4>
+                <div className="p-4 bg-white/40 border border-orange-950/50 rounded-none">
+                  <span className="text-[8px] font-bold text-slate-500 uppercase">Lexicon Range</span>
+                  <h4 className="text-xs font-black text-slate-900 truncate mt-1">{getJargonProficiencyLevel()}</h4>
                 </div>
               </div>
 
               {/* Exhaustive 500 Functions Diagnostics Grid Table */}
-              <div className="p-4 bg-black/40 border border-orange-950 rounded-xl">
+              <div className="p-4 bg-white/40 border border-orange-950 rounded-none">
                 <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest block border-b border-orange-950 pb-2 mb-3">500 Speech Analytics Diagnostics</span>
                 
                 <div className="space-y-2 max-h-60 overflow-y-auto pr-1">
@@ -1394,8 +1394,8 @@ Average Duration: ${getAverageSessionDuration()} seconds
                     { name: "Vocal Stress Index [fn46]", val: fn46(getStressLevelIndex()) },
                     { name: "Collective Pronouns [fn23]", val: `${fn23(fn22(targetText), fn2(targetText))}%` }
                   ].map((stat, i) => (
-                    <div key={i} className="p-2.5 bg-slate-950 border border-slate-900 rounded flex justify-between items-center text-[9px] font-bold">
-                      <span className="text-slate-400 uppercase">{stat.name}</span>
+                    <div key={i} className="p-2.5 bg-slate-50 border border-slate-900 rounded flex justify-between items-center text-[9px] font-bold">
+                      <span className="text-slate-500 uppercase">{stat.name}</span>
                       <span className="text-orange-400 font-extrabold font-mono text-right max-w-[200px] truncate">{stat.val}</span>
                     </div>
                   ))}
@@ -1403,7 +1403,7 @@ Average Duration: ${getAverageSessionDuration()} seconds
               </div>
 
               {/* Dynamic telemetry output log */}
-              <div className="p-4 bg-black/50 border border-orange-950 rounded-xl font-mono text-[9px] text-slate-400 whitespace-pre leading-relaxed">
+              <div className="p-4 bg-white/50 border border-orange-950 rounded-none font-mono text-[9px] text-slate-500 whitespace-pre leading-relaxed">
                 {getExecutiveDiagnosticLogs()}
               </div>
 
@@ -1415,40 +1415,40 @@ Average Duration: ${getAverageSessionDuration()} seconds
             <div className="space-y-6">
               
               {/* Executive XP & Level Badge */}
-              <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-xl">
+              <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-none">
                 <div className="flex justify-between items-center mb-1">
                   <span className="text-[9px] font-black text-orange-400 uppercase tracking-wider">Executive Status</span>
-                  <span className="text-[9px] font-extrabold text-white bg-orange-500 px-2 py-0.5 rounded">LVL {getExecutiveLevel()}</span>
+                  <span className="text-[9px] font-extrabold text-slate-900 bg-orange-500 px-2 py-0.5 rounded">LVL {getExecutiveLevel()}</span>
                 </div>
-                <h4 className="text-xs font-black text-white uppercase tracking-tight mb-3">
+                <h4 className="text-xs font-black text-slate-900 uppercase tracking-tight mb-3">
                   {getExecutiveLevelBadge()} ({fn57(exerciseLevel)})
                 </h4>
-                <div className="flex justify-between text-[8px] font-bold text-slate-400 uppercase mb-1">
+                <div className="flex justify-between text-[8px] font-bold text-slate-500 uppercase mb-1">
                   <span>Level Progress</span>
                   <span>{executiveXP} / {getXPNeededForNextLevel()} XP</span>
                 </div>
-                <div className="w-full bg-slate-950 h-2 rounded-full overflow-hidden">
+                <div className="w-full bg-slate-50 h-2 rounded-full overflow-hidden">
                   <div className="bg-gradient-to-r from-orange-500 to-amber-400 h-full transition-all duration-500" style={{ width: `${getLevelProgressPercentage()}%` }}></div>
                 </div>
               </div>
 
               {/* Digital Accreditation Voucher */}
-              <div className="p-4 bg-black/40 border border-orange-950 rounded-xl">
+              <div className="p-4 bg-white/40 border border-orange-950 rounded-none">
                 <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-2">Accreditation Digital Certificate</span>
-                <div className="bg-slate-950 p-3 rounded-lg border border-slate-900 max-h-48 overflow-y-auto mb-3 font-mono text-[8px] leading-relaxed text-slate-400 whitespace-pre">
+                <div className="bg-slate-50 p-3 rounded-none border border-slate-900 max-h-48 overflow-y-auto mb-3 font-mono text-[8px] leading-relaxed text-slate-500 whitespace-pre">
                   {generateDigitalCertificate()}
                 </div>
                 
                 <div className="flex gap-2">
                   <button 
                     onClick={copyCertificateToClipboard}
-                    className="flex-1 py-2 bg-orange-500 hover:bg-white text-slate-950 transition-all font-extrabold uppercase tracking-widest text-[8px] rounded-lg"
+                    className="flex-1 py-2 bg-orange-500 hover:bg-white text-slate-950 transition-all font-extrabold uppercase tracking-widest text-[8px] rounded-none"
                   >
                     Copy Cert
                   </button>
                   <button 
                     onClick={shareToLinkedIn}
-                    className="flex-1 py-2 bg-white/5 border border-orange-500/20 text-white hover:bg-white/10 transition-all font-extrabold uppercase tracking-widest text-[8px] rounded-lg"
+                    className="flex-1 py-2 bg-white/5 border border-orange-500/20 text-slate-900 hover:bg-white/10 transition-all font-extrabold uppercase tracking-widest text-[8px] rounded-none"
                   >
                     LinkedIn
                   </button>
@@ -1456,7 +1456,7 @@ Average Duration: ${getAverageSessionDuration()} seconds
               </div>
 
               {/* Historical logs list */}
-              <div className="p-4 bg-black/40 border border-orange-950 rounded-xl">
+              <div className="p-4 bg-white/40 border border-orange-950 rounded-none">
                 <div className="flex justify-between items-center mb-3 border-b border-orange-950 pb-2">
                   <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Fluency History Logs</span>
                   {diagnosticsLogs.length > 0 && (
@@ -1476,10 +1476,10 @@ Average Duration: ${getAverageSessionDuration()} seconds
                 ) : (
                   <div className="space-y-2 max-h-44 overflow-y-auto pr-1">
                     {diagnosticsLogs.map((log, idx) => (
-                      <div key={idx} className="p-2.5 bg-slate-950 border border-slate-900 rounded flex justify-between items-center text-[8px] font-bold">
+                      <div key={idx} className="p-2.5 bg-slate-50 border border-slate-900 rounded flex justify-between items-center text-[8px] font-bold">
                         <div>
-                          <p className="text-white uppercase truncate max-w-[140px]">{log.title}</p>
-                          <p className="text-slate-500 mt-0.5">{new Date(log.timestamp).toLocaleDateString()}</p>
+                          <p className="text-slate-900 uppercase truncate max-w-[140px]">{log.title}</p>
+                          <p className="text-slate-600 mt-0.5">{new Date(log.timestamp).toLocaleDateString()}</p>
                         </div>
                         <span className="text-orange-400 font-extrabold font-mono">SCORE: {log.trust}%</span>
                       </div>
@@ -1494,25 +1494,25 @@ Average Duration: ${getAverageSessionDuration()} seconds
           {/* ACTIVE AI ANALYSIS VIEW */}
           {result && (
             <div className="flex-1 flex flex-col justify-center animate-in slide-in-from-bottom-8 duration-500 mt-6 border-t border-orange-500/10 pt-6">
-              <div className="bg-black/60 border border-orange-500/20 rounded-3xl p-8 text-center relative overflow-hidden">
+              <div className="bg-white/60 border border-orange-500/20 rounded-none p-8 text-center relative overflow-hidden">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[50%] bg-orange-500/10 blur-[60px] rounded-full pointer-events-none"></div>
                 
                 <p className="text-[10px] font-black text-orange-400 uppercase tracking-widest mb-6">Interactive Phonetic Analysis Completed</p>
                 
-                <div className="inline-flex items-center justify-center w-32 h-32 rounded-full border-4 border-orange-500 bg-slate-900 shadow-[0_0_30px_rgba(245,158,11,0.2)] mb-6 relative z-10">
+                <div className="inline-flex items-center justify-center w-32 h-32 rounded-full border-4 border-orange-500 bg-slate-50 shadow-[0_0_30px_rgba(245,158,11,0.2)] mb-6 relative z-10">
                   <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-amber-300 to-orange-500">
                     {result.score}
                   </span>
                 </div>
                 
-                <h3 className="text-xl font-black text-white mb-2 tracking-tight uppercase">Fluency Rating</h3>
-                <div className="flex items-center justify-center gap-2 text-emerald-400 font-bold bg-emerald-500/10 inline-flex px-4 py-2 rounded-full border border-emerald-500/20 mb-8 text-[10px] uppercase">
+                <h3 className="text-xl font-black text-slate-900 mb-2 tracking-tight uppercase">Fluency Rating</h3>
+                <div className="flex items-center justify-center gap-2 text-emerald-400 font-bold bg-[#D4AF37]/100/10 inline-flex px-4 py-2 rounded-full border border-emerald-500/20 mb-8 text-[10px] uppercase">
                   <CheckCircle2 size={14} /> {result.feedback}
                 </div>
 
                 {/* Dynamic comparison analysis */}
-                <div className="bg-slate-950 p-6 rounded-2xl border border-slate-900 text-left relative z-10 max-w-2xl mx-auto">
-                  <p className="text-[9px] text-slate-500 uppercase tracking-widest mb-3 font-black flex items-center gap-2">
+                <div className="bg-slate-50 p-6 rounded-none border border-slate-900 text-left relative z-10 max-w-2xl mx-auto">
+                  <p className="text-[9px] text-slate-600 uppercase tracking-widest mb-3 font-black flex items-center gap-2">
                     <Mic size={14} /> Transcribed Phoneme Alignment Matching
                   </p>
                   <div className="flex flex-wrap gap-x-2 gap-y-1 text-lg leading-relaxed font-serif">
@@ -1525,7 +1525,7 @@ Average Duration: ${getAverageSessionDuration()} seconds
                         return (
                           <span 
                             key={i} 
-                            className={`transition-colors duration-500 ${isCorrect ? 'text-emerald-400' : 'text-red-500 underline decoration-dotted decoration-red-900'}`}
+                            className={`transition-colors duration-500 ${isCorrect ? 'text-emerald-400' : 'text-[#D4AF37] underline decoration-dotted decoration-red-900'}`}
                           >
                             {targetText.split(' ')[i]}
                           </span>
@@ -1540,13 +1540,13 @@ Average Duration: ${getAverageSessionDuration()} seconds
               <div className="flex gap-4 mt-8">
                 <button 
                   onClick={onClose}
-                  className="flex-1 py-4 rounded-xl bg-black/40 hover:bg-slate-900 text-white border border-orange-500/20 text-xs font-black tracking-widest uppercase transition-colors"
+                  className="flex-1 py-4 rounded-none bg-white/40 hover:bg-slate-50 text-slate-900 border border-orange-500/20 text-xs font-black tracking-widest uppercase transition-colors"
                 >
                   Close Laboratory
                 </button>
                 <button 
                   onClick={() => setResult(null)}
-                  className="flex-1 py-4 rounded-xl bg-orange-500 hover:bg-white text-slate-950 font-black tracking-widest uppercase transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2 text-xs"
+                  className="flex-1 py-4 rounded-none bg-orange-500 hover:bg-white text-slate-950 font-black tracking-widest uppercase transition-all shadow-none active:scale-95 flex items-center justify-center gap-2 text-xs"
                 >
                   <RefreshCw size={18} /> Retry Prompt
                 </button>

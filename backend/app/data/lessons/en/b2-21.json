@@ -1,0 +1,101 @@
+{
+  "id": "b2-21",
+  "title": "Cleft Sentences",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Cleft Sentences", "Business"],
+  "completion_message": "¡Excelente! Has dominado las Cleft Sentences. Ahora puedes dirigir la atención de tus oyentes exactamente hacia donde tú quieres en una negociación o presentación.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Cleft Sentences (Oraciones Hendidas)",
+      "parts": [
+        { "visual": "Usamos Cleft Sentences para enfatizar una parte específica de la oración. \nNormal: The CEO fired John yesterday. \nÉnfasis en la persona (It was... who/that): \nEj: IT WAS the CEO WHO fired John yesterday. (Fue el CEO quien despidió a John).", "audio": "We use Cleft Sentences to emphasize a specific part of a sentence. Normal sentence: The CEO fired John yesterday. To emphasize the person, use 'It was', plus the person, plus 'who' or 'that'. For example: It was the CEO who fired John yesterday." },
+        { "visual": "Énfasis en la acción o la cosa (What... is/was): \nNormal: We need more time. \nEj: WHAT we need IS more time. (Lo que necesitamos es más tiempo). \nNormal: I hated his attitude. \nEj: WHAT I hated WAS his attitude. (Lo que odié fue su actitud).", "audio": "To emphasize the action or the thing, use 'What', plus the subject and verb, plus 'is' or 'was'. Normal sentence: We need more time. Emphasized: What we need is more time. Normal sentence: I hated his attitude. Emphasized: What I hated was his attitude." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta de completar la oración enfática.",
+      "questions": [
+        { "id": "b2-21-q1", "type": "quiz_choice", "question": "Normal: Sarah found the error. \nEnfática: ____ was Sarah who found the error.", "options": ["It", "What", "That", "There"], "correct_answer": "It", "explanation": "It was [persona] who..." },
+        { "id": "b2-21-q2", "type": "quiz_choice", "question": "Normal: I want a refund. \nEnfática: ____ I want is a refund.", "options": ["What", "That", "It", "Which"], "correct_answer": "What", "explanation": "What [sujeto + verbo] is [cosa]." },
+        { "id": "b2-21-q3", "type": "quiz_choice", "question": "____ is the lack of communication that worries me. (Lo que me preocupa es / ES la falta...).", "options": ["It", "What", "There", "Which"], "correct_answer": "It", "explanation": "It is [la falta de comunicación] that..." },
+        { "id": "b2-21-q4", "type": "quiz_choice", "question": "____ we really need right now is a new marketing strategy.", "options": ["What", "It", "That", "Which"], "correct_answer": "What", "explanation": "What we need is..." },
+        { "id": "b2-21-q5", "type": "quiz_choice", "question": "It was in Paris ____ they signed the contract. (Enfocando el lugar).", "options": ["where", "that", "which", "when"], "correct_answer": "where", "explanation": "También se acepta 'that', pero 'where' es común para lugares (It was in Paris where...). Aquí la opción que contrasta con that puede generar duda, pero ambas son aceptables. Usualmente enseñamos: It was [lugar] that/where." },
+        { "id": "b2-21-q6", "type": "quiz_choice", "question": "____ happened was that the server crashed completely.", "options": ["What", "It", "That", "Which"], "correct_answer": "What", "explanation": "What happened was..." },
+        { "id": "b2-21-q7", "type": "quiz_choice", "question": "It wasn't me ____ made the mistake, it was John! (El que).", "options": ["who", "which", "whom", "what"], "correct_answer": "who", "explanation": "It wasn't me who..." },
+        { "id": "b2-21-q8", "type": "quiz_choice", "question": "____ the boss wants is better results. (Lo que).", "options": ["What", "It", "That", "Which"], "correct_answer": "What", "explanation": "What the boss wants is..." },
+        { "id": "b2-21-q9", "type": "quiz_choice", "question": "It was the marketing budget ____ they decided to cut.", "options": ["that", "what", "who", "whom"], "correct_answer": "that", "explanation": "It was [la cosa] that..." },
+        { "id": "b2-21-q10", "type": "quiz_choice", "question": "____ I admire most about her is her leadership style.", "options": ["What", "It", "That", "Who"], "correct_answer": "What", "explanation": "What I admire is..." },
+        { "id": "b2-21-q11", "type": "quiz_choice", "question": "It is money ____ drives this industry.", "options": ["that", "what", "who", "whom"], "correct_answer": "that", "explanation": "It is money that..." },
+        { "id": "b2-21-q12", "type": "quiz_choice", "question": "____ they did was totally unacceptable.", "options": ["What", "It", "That", "Which"], "correct_answer": "What", "explanation": "What they did was..." },
+        { "id": "b2-21-q13", "type": "quiz_choice", "question": "It was only yesterday ____ I found out about the merger.", "options": ["that", "what", "which", "whom"], "correct_answer": "that", "explanation": "It was [cuándo] that..." },
+        { "id": "b2-21-q14", "type": "quiz_choice", "question": "____ we have to do now is wait for their response.", "options": ["What", "It", "That", "Why"], "correct_answer": "What", "explanation": "What we have to do is..." },
+        { "id": "b2-21-q15", "type": "quiz_choice", "question": "It was because of the rain ____ the flight was delayed.", "options": ["that", "why", "which", "what"], "correct_answer": "that", "explanation": "It was [por la lluvia] that..." },
+        { "id": "b2-21-q16", "type": "quiz_choice", "question": "____ surprised me the most was his calm reaction.", "options": ["What", "It", "That", "Which"], "correct_answer": "What", "explanation": "What surprised me was..." },
+        { "id": "b2-21-q17", "type": "quiz_choice", "question": "No, it ____ Steve who lost the file. It was Mark.", "options": ["wasn't", "isn't", "didn't", "hasn't"], "correct_answer": "wasn't", "explanation": "It wasn't Steve who..." },
+        { "id": "b2-21-q18", "type": "quiz_choice", "question": "____ you need is a long vacation.", "options": ["What", "It", "All what", "That"], "correct_answer": "What", "explanation": "What you need is... (También se usa 'All you need is...', pero 'All what' es incorrecto)." },
+        { "id": "b2-21-q19", "type": "quiz_choice", "question": "It was the CFO ____ discovered the fraud.", "options": ["who", "what", "which", "whom"], "correct_answer": "who", "explanation": "It was the CFO who..." },
+        { "id": "b2-21-q20", "type": "quiz_choice", "question": "____ I am trying to say is that we need a new plan.", "options": ["What", "It", "That", "Which"], "correct_answer": "What", "explanation": "What I'm trying to say is..." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe 'It' o 'What' para completar la cleft sentence.",
+      "questions": [
+        { "id": "b2-21-f1", "type": "fill_input", "question": "____ was the CEO who fired him. (Fue)", "correct_answer": "It", "explanation": "It." },
+        { "id": "b2-21-f2", "type": "fill_input", "question": "____ we need is more money. (Lo que)", "correct_answer": "What", "explanation": "What." },
+        { "id": "b2-21-f3", "type": "fill_input", "question": "____ was yesterday that he called. (Fue)", "correct_answer": "It", "explanation": "It." },
+        { "id": "b2-21-f4", "type": "fill_input", "question": "____ I want is a refund. (Lo que)", "correct_answer": "What", "explanation": "What." },
+        { "id": "b2-21-f5", "type": "fill_input", "question": "____ is the system that failed. (Es)", "correct_answer": "It", "explanation": "It." },
+        { "id": "b2-21-f6", "type": "fill_input", "question": "____ happened was a disaster. (Lo que)", "correct_answer": "What", "explanation": "What." },
+        { "id": "b2-21-f7", "type": "fill_input", "question": "____ was Sarah who solved it. (Fue)", "correct_answer": "It", "explanation": "It." },
+        { "id": "b2-21-f8", "type": "fill_input", "question": "____ surprised me was his attitude. (Lo que)", "correct_answer": "What", "explanation": "What." },
+        { "id": "b2-21-f9", "type": "fill_input", "question": "____ was in Paris where we met. (Fue)", "correct_answer": "It", "explanation": "It." },
+        { "id": "b2-21-f10", "type": "fill_input", "question": "____ they did is illegal. (Lo que)", "correct_answer": "What", "explanation": "What." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Cleft Match",
+      "pairs": [
+        {"id": "b2-21-p1", "source": "It was John who...", "target": "Fue John quien..."},
+        {"id": "b2-21-p2", "source": "What we need is...", "target": "Lo que necesitamos es..."},
+        {"id": "b2-21-p3", "source": "It was yesterday that...", "target": "Fue ayer que..."},
+        {"id": "b2-21-p4", "source": "What happened was...", "target": "Lo que pasó fue..."},
+        {"id": "b2-21-p5", "source": "It wasn't me who...", "target": "No fui yo quien..."},
+        {"id": "b2-21-p6", "source": "What I want is...", "target": "Lo que quiero es..."},
+        {"id": "b2-21-p7", "source": "It is money that...", "target": "Es el dinero lo que..."},
+        {"id": "b2-21-p8", "source": "What surprised me was...", "target": "Lo que me sorprendió fue..."},
+        {"id": "b2-21-p9", "source": "It was the boss who...", "target": "Fue el jefe quien..."},
+        {"id": "b2-21-p10", "source": "What they did was...", "target": "Lo que ellos hicieron fue..."}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración enfática correcta.",
+      "questions": [
+        { "id": "b2-21-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was the CEO who fired him.", "options": ["It was the CEO who fired him.", "It was the CEO that fired him.", "What the CEO did was fire him.", "The CEO fired him."], "correct_answer": "It was the CEO who fired him.", "explanation": "Audio exacto." },
+        { "id": "b2-21-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What we need is more time.", "options": ["What we need is more time.", "It is more time that we need.", "We need more time.", "What we needed was more time."], "correct_answer": "What we need is more time.", "explanation": "Audio exacto." },
+        { "id": "b2-21-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was yesterday that she called.", "options": ["It was yesterday that she called.", "What happened yesterday was she called.", "She called yesterday.", "It was yesterday when she called."], "correct_answer": "It was yesterday that she called.", "explanation": "Audio exacto." },
+        { "id": "b2-21-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What happened was a disaster.", "options": ["What happened was a disaster.", "It was a disaster that happened.", "What happens is a disaster.", "A disaster happened."], "correct_answer": "What happened was a disaster.", "explanation": "Audio exacto." },
+        { "id": "b2-21-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It wasn't me who made the mistake.", "options": ["It wasn't me who made the mistake.", "It isn't me who makes the mistake.", "What I didn't do was make the mistake.", "I didn't make the mistake."], "correct_answer": "It wasn't me who made the mistake.", "explanation": "Audio exacto." },
+        { "id": "b2-21-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What I want is a refund.", "options": ["What I want is a refund.", "It is a refund that I want.", "I want a refund.", "What I wanted was a refund."], "correct_answer": "What I want is a refund.", "explanation": "Audio exacto." },
+        { "id": "b2-21-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is money that drives this industry.", "options": ["It is money that drives this industry.", "What drives this industry is money.", "Money drives this industry.", "It was money that drove this industry."], "correct_answer": "It is money that drives this industry.", "explanation": "Audio exacto." },
+        { "id": "b2-21-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What surprised me was his attitude.", "options": ["What surprised me was his attitude.", "It was his attitude that surprised me.", "His attitude surprised me.", "What surprises me is his attitude."], "correct_answer": "What surprised me was his attitude.", "explanation": "Audio exacto." },
+        { "id": "b2-21-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was Sarah who solved the problem.", "options": ["It was Sarah who solved the problem.", "What Sarah did was solve the problem.", "Sarah solved the problem.", "It is Sarah who solves the problem."], "correct_answer": "It was Sarah who solved the problem.", "explanation": "Audio exacto." },
+        { "id": "b2-21-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What they did is illegal.", "options": ["What they did is illegal.", "It is illegal what they did.", "They did something illegal.", "What they do is illegal."], "correct_answer": "What they did is illegal.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

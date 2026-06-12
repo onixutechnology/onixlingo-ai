@@ -2,15 +2,15 @@ import React from 'react';
 
 export default function PrivacyPage() {
   return (
-    <div className="prose prose-slate max-w-none">
-      <h2 className="text-3xl font-black mb-6 text-slate-900">Política de Privacidad</h2>
-      <p className="text-sm text-slate-500 mb-8">Última actualización: Mayo 2026</p>
+    <div className="prose prose-invert max-w-none text-slate-700">
+      <h2 className="text-3xl font-black mb-6 text-slate-900 font-serif italic">Política de Privacidad</h2>
+      <p className="text-sm text-[#D4AF37] mb-8 font-bold uppercase tracking-widest">Última actualización: Mayo 2026</p>
 
       <p className="mb-6 leading-relaxed">
         En <strong>Onixu Technology</strong>, valoramos y respetamos su privacidad. Esta Política de Privacidad describe cómo recopilamos, utilizamos, compartimos y protegemos la información personal obtenida a través de la plataforma <strong>OnixLingo</strong>.
       </p>
 
-      <h3 className="text-xl font-bold mt-8 mb-4">1. Datos Personales que Recopilamos</h3>
+      <h3 className="text-xl font-bold mt-8 mb-4 text-[#D4AF37]">1. Datos Personales que Recopilamos</h3>
       <p className="mb-4 leading-relaxed">
         Recopilamos la información estrictamente necesaria para proveer y optimizar la experiencia de aprendizaje:
       </p>
@@ -20,8 +20,8 @@ export default function PrivacyPage() {
         <li><strong>Información Técnica:</strong> Dirección IP, tipo de navegador e identificadores de dispositivo recopilados de manera automática para fines de seguridad y analítica básica.</li>
       </ul>
 
-      <h3 className="text-xl font-bold mt-8 mb-4">2. Protección y Cifrado de Datos Financieros</h3>
-      <div className="bg-emerald-50 p-6 rounded-xl border border-emerald-100 text-emerald-900 font-medium my-6">
+      <h3 className="text-xl font-bold mt-8 mb-4 text-[#D4AF37]">2. Protección y Cifrado de Datos Financieros</h3>
+      <div className="bg-[#D4AF37]/10 p-6 rounded-none border border-[#D4AF37]/30 text-slate-900 font-medium my-6">
         <p className="mb-3">
           <strong>Garantía de Seguridad Financiera:</strong> OnixLingo y Onixu Technology no recopilan, almacenan ni procesan información de tarjetas de crédito o débito en sus servidores.
         </p>
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
         </p>
       </div>
 
-      <h3 className="text-xl font-bold mt-8 mb-4">3. Uso de la Información</h3>
+      <h3 className="text-xl font-bold mt-8 mb-4 text-[#D4AF37]">3. Uso de la Información</h3>
       <p className="mb-4 leading-relaxed">
         Utilizamos la información recolectada únicamente para:
       </p>
@@ -41,12 +41,12 @@ export default function PrivacyPage() {
         <li>Prevenir fraudes y asegurar el correcto funcionamiento del software.</li>
       </ul>
 
-      <h3 className="text-xl font-bold mt-8 mb-4">4. Transferencia de Datos a Terceros</h3>
+      <h3 className="text-xl font-bold mt-8 mb-4 text-[#D4AF37]">4. Transferencia de Datos a Terceros</h3>
       <p className="mb-4 leading-relaxed">
         No vendemos ni alquilamos su información personal a terceros. Compartimos datos únicamente con proveedores de servicios de confianza necesarios para operar la Plataforma (por ejemplo, Paddle para el procesamiento de pagos e infraestructuras de hosting en la nube como Google Cloud y Vercel), quienes están obligados a mantener la confidencialidad de la información.
       </p>
 
-      <h3 className="text-xl font-bold mt-8 mb-4">5. Derechos del Usuario (Acceso y Eliminación)</h3>
+      <h3 className="text-xl font-bold mt-8 mb-4 text-[#D4AF37]">5. Derechos del Usuario (Acceso y Eliminación)</h3>
       <p className="mb-4 leading-relaxed">
         Usted tiene derecho a acceder, corregir o solicitar la eliminación total de sus datos personales de nuestros sistemas en cualquier momento. Para ejercer estos derechos, puede enviar una solicitud formal a nuestro equipo a través del correo <strong>soporte@onixu.company</strong>.
       </p>

@@ -1,0 +1,101 @@
+{
+  "id": "a1-35",
+  "title": "Expressing Opinions",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Communication", "Opinions"],
+  "completion_message": "¡Excelente! Ahora puedes compartir tus ideas y puntos de vista en las reuniones.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Expresando Opiniones",
+      "parts": [
+        { "visual": "Usa 'I think' (yo creo/pienso) o 'In my opinion' para dar tu punto de vista de forma amable.", "audio": "Use I think or In my opinion to give your point of view politely." },
+        { "visual": "Para estar de acuerdo, di 'I agree'. Para no estar de acuerdo, di 'I disagree'.", "audio": "To agree, say I agree. To disagree, say I disagree." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la expresión correcta.",
+      "questions": [
+        { "id": "a1-35-q1", "type": "quiz_choice", "question": "I ____ this is a good idea.", "options": ["think", "thinks", "thinking", "thought"], "correct_answer": "think", "explanation": "Creo que esto es una buena idea (I think)." },
+        { "id": "a1-35-q2", "type": "quiz_choice", "question": "In my ____, we need more time.", "options": ["opinion", "idea", "mind", "head"], "correct_answer": "opinion", "explanation": "En mi opinión." },
+        { "id": "a1-35-q3", "type": "quiz_choice", "question": "I completely ____ with you.", "options": ["agree", "agrees", "agreeing", "agreed"], "correct_answer": "agree", "explanation": "Estoy de acuerdo." },
+        { "id": "a1-35-q4", "type": "quiz_choice", "question": "I'm sorry, but I ____.", "options": ["disagree", "not agree", "don't agree", "am disagree"], "correct_answer": "disagree", "explanation": "I disagree (No estoy de acuerdo)." },
+        { "id": "a1-35-q5", "type": "quiz_choice", "question": "What do you ____ about this?", "options": ["think", "believe", "agree", "idea"], "correct_answer": "think", "explanation": "¿Qué piensas sobre esto?" },
+        { "id": "a1-35-q6", "type": "quiz_choice", "question": "I ____ believe that is correct.", "options": ["don't", "not", "am not", "doesn't"], "correct_answer": "don't", "explanation": "I don't believe (no creo)." },
+        { "id": "a1-35-q7", "type": "quiz_choice", "question": "From my point of ____...", "options": ["view", "see", "look", "eyes"], "correct_answer": "view", "explanation": "Desde mi punto de vista (point of view)." },
+        { "id": "a1-35-q8", "type": "quiz_choice", "question": "I ____ we should wait.", "options": ["feel", "feeling", "feels", "felt"], "correct_answer": "feel", "explanation": "Siento (creo) que deberíamos esperar." },
+        { "id": "a1-35-q9", "type": "quiz_choice", "question": "You are right, I ____.", "options": ["agree", "think", "opinion", "idea"], "correct_answer": "agree", "explanation": "Tienes razón, estoy de acuerdo." },
+        { "id": "a1-35-q10", "type": "quiz_choice", "question": "I don't ____ so.", "options": ["think", "thinks", "thinking", "thought"], "correct_answer": "think", "explanation": "No lo creo (I don't think so)." },
+        { "id": "a1-35-q11", "type": "quiz_choice", "question": "____ my opinion, it's too expensive.", "options": ["In", "On", "At", "For"], "correct_answer": "In", "explanation": "In my opinion." },
+        { "id": "a1-35-q12", "type": "quiz_choice", "question": "I ____ that is a mistake.", "options": ["believe", "believes", "believing", "believed"], "correct_answer": "believe", "explanation": "Creo (believe)." },
+        { "id": "a1-35-q13", "type": "quiz_choice", "question": "That's exactly what I ____.", "options": ["think", "thinks", "thinking", "thought"], "correct_answer": "think", "explanation": "Eso es exactamente lo que pienso." },
+        { "id": "a1-35-q14", "type": "quiz_choice", "question": "I ____ your point.", "options": ["see", "look", "watch", "view"], "correct_answer": "see", "explanation": "Entiendo tu punto (I see your point)." },
+        { "id": "a1-35-q15", "type": "quiz_choice", "question": "I'm not ____ about that.", "options": ["sure", "know", "think", "agree"], "correct_answer": "sure", "explanation": "No estoy seguro (I'm not sure)." },
+        { "id": "a1-35-q16", "type": "quiz_choice", "question": "Let's ____ on this plan.", "options": ["agree", "think", "opinion", "idea"], "correct_answer": "agree", "explanation": "Vamos a acordar este plan." },
+        { "id": "a1-35-q17", "type": "quiz_choice", "question": "I ____ to differ.", "options": ["beg", "ask", "want", "need"], "correct_answer": "beg", "explanation": "I beg to differ (difiero, respetuosamente)." },
+        { "id": "a1-35-q18", "type": "quiz_choice", "question": "It ____ to me that we are late.", "options": ["seems", "seem", "seeming", "seemed"], "correct_answer": "seems", "explanation": "Me parece que (It seems to me)." },
+        { "id": "a1-35-q19", "type": "quiz_choice", "question": "I ____ understand why.", "options": ["don't", "not", "doesn't", "am not"], "correct_answer": "don't", "explanation": "No entiendo por qué." },
+        { "id": "a1-35-q20", "type": "quiz_choice", "question": "Do you ____?", "options": ["agree", "agrees", "agreed", "agreeing"], "correct_answer": "agree", "explanation": "¿Estás de acuerdo?" }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra para expresar tu opinión.",
+      "questions": [
+        { "id": "a1-35-f1", "type": "fill_input", "question": "I ____ it's a good idea (Pienso).", "correct_answer": "think", "explanation": "Think." },
+        { "id": "a1-35-f2", "type": "fill_input", "question": "In my ____ (Opinión).", "correct_answer": "opinion", "explanation": "Opinion." },
+        { "id": "a1-35-f3", "type": "fill_input", "question": "I ____ with you (Estoy de acuerdo).", "correct_answer": "agree", "explanation": "Agree." },
+        { "id": "a1-35-f4", "type": "fill_input", "question": "I ____ (No estoy de acuerdo, 1 palabra).", "correct_answer": "disagree", "explanation": "Disagree." },
+        { "id": "a1-35-f5", "type": "fill_input", "question": "I don't ____ so (No lo creo).", "correct_answer": "think", "explanation": "Think." },
+        { "id": "a1-35-f6", "type": "fill_input", "question": "I ____ that is correct (Creo).", "correct_answer": "believe", "explanation": "Believe." },
+        { "id": "a1-35-f7", "type": "fill_input", "question": "From my point of ____ (Vista).", "correct_answer": "view", "explanation": "View." },
+        { "id": "a1-35-f8", "type": "fill_input", "question": "I ____ we should wait (Siento/Opino).", "correct_answer": "feel", "explanation": "Feel." },
+        { "id": "a1-35-f9", "type": "fill_input", "question": "I ____ your point (Entiendo/Veo).", "correct_answer": "see", "explanation": "See." },
+        { "id": "a1-35-f10", "type": "fill_input", "question": "I am not ____ (Seguro).", "correct_answer": "sure", "explanation": "Sure." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-35-p1", "source": "I think", "target": "Yo pienso"},
+        {"id": "a1-35-p2", "source": "In my opinion", "target": "En mi opinión"},
+        {"id": "a1-35-p3", "source": "I agree", "target": "Estoy de acuerdo"},
+        {"id": "a1-35-p4", "source": "I disagree", "target": "No estoy de acuerdo"},
+        {"id": "a1-35-p5", "source": "Point of view", "target": "Punto de vista"},
+        {"id": "a1-35-p6", "source": "I believe", "target": "Yo creo"},
+        {"id": "a1-35-p7", "source": "I feel", "target": "Yo siento (opino)"},
+        {"id": "a1-35-p8", "source": "I see your point", "target": "Entiendo tu punto"},
+        {"id": "a1-35-p9", "source": "I am not sure", "target": "No estoy seguro/a"},
+        {"id": "a1-35-p10", "source": "It seems to me", "target": "Me parece que"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-35-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I think it is a good idea.", "options": ["I think it is a good idea.", "I think it was a good idea.", "He thinks it is a good idea.", "I thought it is a good idea."], "correct_answer": "I think it is a good idea.", "explanation": "Audio exacto." },
+        { "id": "a1-35-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In my opinion.", "options": ["In my opinion.", "In his opinion.", "Is my opinion.", "On my opinion."], "correct_answer": "In my opinion.", "explanation": "Audio exacto." },
+        { "id": "a1-35-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I agree with you.", "options": ["I agree with you.", "I agree with him.", "I disagreed with you.", "He agrees with you."], "correct_answer": "I agree with you.", "explanation": "Audio exacto." },
+        { "id": "a1-35-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I disagree.", "options": ["I disagree.", "I agree.", "He disagrees.", "I don't agree."], "correct_answer": "I disagree.", "explanation": "Audio exacto." },
+        { "id": "a1-35-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What do you think?", "options": ["What do you think?", "What did you think?", "What does he think?", "Why do you think?"], "correct_answer": "What do you think?", "explanation": "Audio exacto." },
+        { "id": "a1-35-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I don't think so.", "options": ["I don't think so.", "I don't think that.", "He doesn't think so.", "I didn't think so."], "correct_answer": "I don't think so.", "explanation": "Audio exacto." },
+        { "id": "a1-35-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "From my point of view.", "options": ["From my point of view.", "For my point of view.", "From his point of view.", "From my view."], "correct_answer": "From my point of view.", "explanation": "Audio exacto." },
+        { "id": "a1-35-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I believe that is correct.", "options": ["I believe that is correct.", "I believe it is correct.", "He believes that is correct.", "I believed that was correct."], "correct_answer": "I believe that is correct.", "explanation": "Audio exacto." },
+        { "id": "a1-35-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I see your point.", "options": ["I see your point.", "I saw your point.", "He sees your point.", "I see the point."], "correct_answer": "I see your point.", "explanation": "Audio exacto." },
+        { "id": "a1-35-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am not sure.", "options": ["I am not sure.", "I was not sure.", "He is not sure.", "I am sure."], "correct_answer": "I am not sure.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

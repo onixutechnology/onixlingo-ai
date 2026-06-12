@@ -1,0 +1,101 @@
+{
+  "id": "a2-26",
+  "title": "Business Travel",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Vocabulary", "Travel", "Business Trip", "Airport"],
+  "completion_message": "¡Buen viaje! Ya conoces el vocabulario para moverte con seguridad en tus viajes de negocios.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Viajes de Negocios (Business Travel)",
+      "parts": [
+        { "visual": "En el aeropuerto: Flight (Vuelo). Boarding pass (Pase de abordar). Gate (Puerta de embarque). Luggage / Baggage (Equipaje). Delay (Retraso). Check-in (Registrarse).", "audio": "At the airport. Flight. Boarding pass. Gate. Luggage or Baggage. Delay. Check-in." },
+        { "visual": "En el hotel y oficina: Reservation / Booking (Reserva). Single room (Habitación sencilla). Conference room (Sala de conferencias). Expense report (Reporte de gastos). Receipt (Recibo).", "audio": "At the hotel and office. Reservation or Booking. Single room. Conference room. Expense report. Receipt." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para situaciones de viaje corporativo.",
+      "questions": [
+        { "id": "a2-26-q1", "type": "quiz_choice", "question": "I am going on a business ____ next week. (Viaje).", "options": ["trip", "travel", "journey", "fly"], "correct_answer": "trip", "explanation": "Business trip = viaje de negocios." },
+        { "id": "a2-26-q2", "type": "quiz_choice", "question": "What time is your ____ to London? (Vuelo).", "options": ["flight", "fly", "flying", "airplane"], "correct_answer": "flight", "explanation": "Flight = vuelo." },
+        { "id": "a2-26-q3", "type": "quiz_choice", "question": "You need to show your passport and ____ pass at the gate. (Pase de abordar).", "options": ["boarding", "board", "flying", "ticket"], "correct_answer": "boarding", "explanation": "Boarding pass = pase de abordar." },
+        { "id": "a2-26-q4", "type": "quiz_choice", "question": "Please proceed to ____ number 5 for boarding. (Puerta).", "options": ["gate", "door", "entry", "exit"], "correct_answer": "gate", "explanation": "Gate = puerta de embarque en un aeropuerto." },
+        { "id": "a2-26-q5", "type": "quiz_choice", "question": "I only have carry-on ____. I don't need to check any bags. (Equipaje).", "options": ["luggage", "bags", "boxes", "cases"], "correct_answer": "luggage", "explanation": "Carry-on luggage = equipaje de mano. (También se dice baggage)." },
+        { "id": "a2-26-q6", "type": "quiz_choice", "question": "The flight is ____ by two hours due to bad weather. (Retrasado).", "options": ["delayed", "late", "stopped", "waiting"], "correct_answer": "delayed", "explanation": "Delayed = retrasado/demorado." },
+        { "id": "a2-26-q7", "type": "quiz_choice", "question": "I need to make a hotel ____ for three nights. (Reserva).", "options": ["reservation", "reserve", "book", "renting"], "correct_answer": "reservation", "explanation": "Make a reservation = hacer una reserva. (También: Make a booking)." },
+        { "id": "a2-26-q8", "type": "quiz_choice", "question": "I would like a ____ room, please. Just for me. (Sencilla).", "options": ["single", "one", "solo", "simple"], "correct_answer": "single", "explanation": "Single room = habitación sencilla (para 1 persona)." },
+        { "id": "a2-26-q9", "type": "quiz_choice", "question": "What time is ____ at the hotel? (Hora de salida).", "options": ["check-out", "check-in", "leave", "exit"], "correct_answer": "check-out", "explanation": "Check-out = hora de registro de salida." },
+        { "id": "a2-26-q10", "type": "quiz_choice", "question": "Remember to keep all your ____ for the company. (Recibos).", "options": ["receipts", "invoices", "papers", "tickets"], "correct_answer": "receipts", "explanation": "Receipts = recibos (comprobantes de pago menores)." },
+        { "id": "a2-26-q11", "type": "quiz_choice", "question": "You must submit an ____ report when you return. (Reporte de gastos).", "options": ["expense", "money", "spend", "cost"], "correct_answer": "expense", "explanation": "Expense report = reporte de gastos." },
+        { "id": "a2-26-q12", "type": "quiz_choice", "question": "Is breakfast ____ in the room rate? (Incluido).", "options": ["included", "inside", "added", "put"], "correct_answer": "included", "explanation": "Included = incluido." },
+        { "id": "a2-26-q13", "type": "quiz_choice", "question": "I need to rent a ____ at the airport. (Auto/Coche).", "options": ["car", "taxi", "bus", "train"], "correct_answer": "car", "explanation": "Rent a car = alquilar/rentar un auto." },
+        { "id": "a2-26-q14", "type": "quiz_choice", "question": "Where is the ____ claim area? (Reclamo de equipaje).", "options": ["baggage", "box", "purse", "backpack"], "correct_answer": "baggage", "explanation": "Baggage claim = reclamo de equipaje (donde recoges las maletas)." },
+        { "id": "a2-26-q15", "type": "quiz_choice", "question": "The ____ attendant will give you instructions. (Asistente de vuelo/Sobrecargo).", "options": ["flight", "plane", "sky", "air"], "correct_answer": "flight", "explanation": "Flight attendant = asistente de vuelo." },
+        { "id": "a2-26-q16", "type": "quiz_choice", "question": "Can I have an ____ seat, please? I don't like the window. (Asiento de pasillo).", "options": ["aisle", "middle", "front", "back"], "correct_answer": "aisle", "explanation": "Aisle seat = asiento de pasillo. (Se pronuncia 'ail')." },
+        { "id": "a2-26-q17", "type": "quiz_choice", "question": "The company pays for the ____ class tickets. (Clase ejecutiva).", "options": ["business", "first", "economy", "coach"], "correct_answer": "business", "explanation": "Business class = clase ejecutiva." },
+        { "id": "a2-26-q18", "type": "quiz_choice", "question": "We have a meeting in the ____ room on the 3rd floor. (Sala de conferencias).", "options": ["conference", "talking", "speaking", "big"], "correct_answer": "conference", "explanation": "Conference room = sala de conferencias." },
+        { "id": "a2-26-q19", "type": "quiz_choice", "question": "Could you arrange a ____ to pick me up from the airport? (Taxi/Transporte).", "options": ["taxi", "bus", "train", "plane"], "correct_answer": "taxi", "explanation": "Arrange a taxi = organizar un taxi." },
+        { "id": "a2-26-q20", "type": "quiz_choice", "question": "I missed my ____ flight! (Vuelo de conexión).", "options": ["connecting", "second", "next", "after"], "correct_answer": "connecting", "explanation": "Connecting flight = vuelo de conexión." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de viaje correcta.",
+      "questions": [
+        { "id": "a2-26-f1", "type": "fill_input", "question": "I am on a business ____. (Viaje)", "correct_answer": "trip", "explanation": "trip." },
+        { "id": "a2-26-f2", "type": "fill_input", "question": "What time is your ____? (Vuelo)", "correct_answer": "flight", "explanation": "flight." },
+        { "id": "a2-26-f3", "type": "fill_input", "question": "Here is my ____ pass. (Pase de abordar)", "correct_answer": "boarding", "explanation": "boarding." },
+        { "id": "a2-26-f4", "type": "fill_input", "question": "Go to ____ 5. (Puerta de embarque)", "correct_answer": "gate", "explanation": "gate." },
+        { "id": "a2-26-f5", "type": "fill_input", "question": "Where is my ____? (Equipaje - empieza con L)", "correct_answer": "luggage", "explanation": "luggage." },
+        { "id": "a2-26-f6", "type": "fill_input", "question": "The flight is ____. (Retrasado)", "correct_answer": "delayed", "explanation": "delayed." },
+        { "id": "a2-26-f7", "type": "fill_input", "question": "I have a hotel ____. (Reserva - empieza con R)", "correct_answer": "reservation", "explanation": "reservation." },
+        { "id": "a2-26-f8", "type": "fill_input", "question": "Keep all your ____. (Recibos)", "correct_answer": "receipts", "explanation": "receipts." },
+        { "id": "a2-26-f9", "type": "fill_input", "question": "Submit an ____ report. (Reporte de gastos)", "correct_answer": "expense", "explanation": "expense." },
+        { "id": "a2-26-f10", "type": "fill_input", "question": "I want an ____ seat. (Pasillo)", "correct_answer": "aisle", "explanation": "aisle." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-26-p1", "source": "Business trip", "target": "Viaje de negocios"},
+        {"id": "a2-26-p2", "source": "Flight", "target": "Vuelo"},
+        {"id": "a2-26-p3", "source": "Boarding pass", "target": "Pase de abordar"},
+        {"id": "a2-26-p4", "source": "Gate", "target": "Puerta de embarque"},
+        {"id": "a2-26-p5", "source": "Luggage / Baggage", "target": "Equipaje"},
+        {"id": "a2-26-p6", "source": "Delayed", "target": "Retrasado"},
+        {"id": "a2-26-p7", "source": "Reservation / Booking", "target": "Reserva"},
+        {"id": "a2-26-p8", "source": "Expense report", "target": "Reporte de gastos"},
+        {"id": "a2-26-p9", "source": "Receipt", "target": "Recibo"},
+        {"id": "a2-26-p10", "source": "Aisle seat", "target": "Asiento de pasillo"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta sobre viajes.",
+      "questions": [
+        { "id": "a2-26-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am going on a business trip next week.", "options": ["I am going on a business trip next week.", "I am going on a business travel next week.", "We are going on a business trip next week.", "I will go on a business trip next week."], "correct_answer": "I am going on a business trip next week.", "explanation": "Audio exacto." },
+        { "id": "a2-26-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What time is your flight?", "options": ["What time is your flight?", "What time is the flight?", "When is your flight?", "What time does your flight leave?"], "correct_answer": "What time is your flight?", "explanation": "Audio exacto." },
+        { "id": "a2-26-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Here is my boarding pass.", "options": ["Here is my boarding pass.", "This is my boarding pass.", "Here is the boarding pass.", "Where is my boarding pass?"], "correct_answer": "Here is my boarding pass.", "explanation": "Audio exacto." },
+        { "id": "a2-26-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please proceed to gate five.", "options": ["Please proceed to gate five.", "Please go to gate five.", "Please proceed to gate nine.", "Go to gate five, please."], "correct_answer": "Please proceed to gate five.", "explanation": "Audio exacto." },
+        { "id": "a2-26-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I only have carry-on luggage.", "options": ["I only have carry-on luggage.", "I only have carry-on baggage.", "I have carry-on luggage.", "I only have a carry-on bag."], "correct_answer": "I only have carry-on luggage.", "explanation": "Audio exacto." },
+        { "id": "a2-26-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The flight is delayed.", "options": ["The flight is delayed.", "The flight is late.", "My flight is delayed.", "The plane is delayed."], "correct_answer": "The flight is delayed.", "explanation": "Audio exacto." },
+        { "id": "a2-26-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need to make a hotel reservation.", "options": ["I need to make a hotel reservation.", "I need to make a reservation.", "I want to make a hotel reservation.", "I need a hotel reservation."], "correct_answer": "I need to make a hotel reservation.", "explanation": "Audio exacto." },
+        { "id": "a2-26-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Remember to keep all your receipts.", "options": ["Remember to keep all your receipts.", "Remember to save all your receipts.", "Keep all your receipts.", "Please keep all your receipts."], "correct_answer": "Remember to keep all your receipts.", "explanation": "Audio exacto." },
+        { "id": "a2-26-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You must submit an expense report.", "options": ["You must submit an expense report.", "You have to submit an expense report.", "You must send an expense report.", "Submit an expense report."], "correct_answer": "You must submit an expense report.", "explanation": "Audio exacto." },
+        { "id": "a2-26-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I missed my connecting flight.", "options": ["I missed my connecting flight.", "I missed my connection flight.", "I missed the connecting flight.", "I lost my connecting flight."], "correct_answer": "I missed my connecting flight.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

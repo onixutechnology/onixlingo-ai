@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-9",
+  "title": "Lo Mío y Lo Tuyo",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Possession", "Grammar", "Particles"],
+  "completion_message": "¡Felicidades! Acabas de dominar una de las partículas más usadas en todo el idioma chino. Todo te pertenece ahora.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "La Posesión en Chino",
+      "parts": [
+        {
+          "visual": "La Partícula Posesiva: 的 (de)\n\nEl chino no tiene palabras separadas para decir 'Mi', 'Tu', o 'Su'.\nEn su lugar, usamos una fórmula matemática simple:\n\nPronombre + 的 = Posesivo\n\n- 我 (Yo) + 的 = 我的 (Wǒ de) -> Mi / Mío.\n- 你 (Tú) + 的 = 你的 (Nǐ de) -> Tu / Tuyo.\n- 他 (Él) + 的 = 他的 (Tā de) -> Su / Suyo (de él).\n- 我们 (Nosotros) + 的 = 我们的 (Wǒmen de) -> Nuestro.\n\nLa partícula 'de' no tiene tono (es neutra).",
+          "audio": "En español tenemos que memorizar muchas palabras diferentes para indicar posesión: Yo, mi, mío. Tú, tu, tuyo. En chino, volvemos a la lógica matemática. Para decir que algo es tuyo, simplemente tomas el pronombre original y le pegas la sílaba 'de' al final. 'De' es la partícula de posesión. Si 'Yo' se dice Wǒ, entonces 'Mío' se dice 'Wǒ de'. Si 'Tú' se dice Nǐ, entonces 'Tuyo' se dice 'Nǐ de'. Así de simple. La partícula 'de' actúa exactamente igual que el apóstrofe con la letra S en inglés."
+        },
+        {
+          "visual": "Estructura de la Posesión:\n\nDueño + 的 (de) + Objeto\n\nVocabulario nuevo:\n- Libro: 书 (shū) - Primer tono (Alto y plano).\n- Amigo: 朋友 (péngyou) - Segundo tono + Neutro.\n\nEjemplos:\n- Mi libro: 我的书 (Wǒ de shū). Literalmente: Yo 'de' libro.\n- Tu amigo: 你的朋友 (Nǐ de péngyou).\n- El libro de él: 他的书 (Tā de shū).\n\nTambién funciona con nombres:\n- El libro de María: María 的书 (María de shū).",
+          "audio": "Para construir una frase, siempre pones al dueño primero, luego la partícula 'de', y finalmente la cosa que le pertenece. Imagina que el 'de' es un gancho que une al dueño con su propiedad. Aprendamos dos palabras nuevas. Libro se dice 'shū', en primer tono. Y amigo se dice 'péngyou'. Si quieres decir 'Mi libro', dirás 'Wǒ de shū'. El libro de mi propiedad. Si quieres decir 'Tu amigo', dirás 'Nǐ de péngyou'. Y esto aplica también para nombres propios. Si quieres decir 'El amigo de David', simplemente dices 'David de péngyou'. El dueño siempre va primero."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa tu comprensión sobre cómo expresar posesión.",
+      "questions": [
+        { "id": "zh-a1-9-q1", "type": "quiz_choice", "question": "¿Cuál es la función principal de la partícula 的 (de)?", "options": ["Indicar posesión o pertenencia.", "Negar un verbo.", "Hacer una pregunta de Sí/No.", "Convertir un sustantivo en plural."], "correct_answer": "Indicar posesión o pertenencia.", "explanation": "La partícula 的 une al dueño con lo que le pertenece." },
+        { "id": "zh-a1-9-q2", "type": "quiz_choice", "question": "¿Cómo se dice 'Mi / Mío' en mandarín?", "options": ["Wǒ de (我的).", "Nǐ de (你的).", "Wǒmen (我们).", "Wǒ shì (我是)."], "correct_answer": "Wǒ de (我的).", "explanation": "Wǒ (Yo) + de (posesión)." },
+        { "id": "zh-a1-9-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Tu / Tuyo' en mandarín?", "options": ["Nǐ de (你的).", "Wǒ de (我的).", "Nǐmen (你们).", "Nǐ shì (你是)."], "correct_answer": "Nǐ de (你的).", "explanation": "Nǐ (Tú) + de (posesión)." },
+        { "id": "zh-a1-9-q4", "type": "quiz_choice", "question": "La palabra 'Libro' se dice 书 (shū). ¿Cómo dirías 'Mi libro'?", "options": ["Wǒ de shū (我的书).", "Shū de wǒ (书的我).", "Wǒ shū (我书).", "Wǒmen shū (我们书)."], "correct_answer": "Wǒ de shū (我的书).", "explanation": "Dueño (Wǒ) + 的 (de) + Objeto (shū)." },
+        { "id": "zh-a1-9-q5", "type": "quiz_choice", "question": "La palabra 'Amigo' se dice 朋友 (péngyou). ¿Cómo dirías 'Su amigo (de él)'?", "options": ["Tā de péngyou (他的朋友).", "Tā péngyou (他朋友).", "Péngyou de tā (朋友的他).", "Tāmen péngyou (他们朋友)."], "correct_answer": "Tā de péngyou (他的朋友).", "explanation": "Él (Tā) + 的 (de) + Amigo (péngyou)." },
+        { "id": "zh-a1-9-q6", "type": "quiz_choice", "question": "¿Cómo se dice 'Nuestro' en mandarín?", "options": ["Wǒmen de (我们的).", "Nǐmen de (你们的).", "Wǒ de (我的).", "Wǒmen (我们)."], "correct_answer": "Wǒmen de (我们的).", "explanation": "Nosotros (Wǒmen) + de (posesión) = Nuestro." },
+        { "id": "zh-a1-9-q7", "type": "quiz_choice", "question": "¿Qué significa la oración 'Zhè shì wǒ de shū' (Esto es + wǒ de shū)?", "options": ["Esto es mi libro.", "Yo tengo un libro.", "Yo leo un libro.", "Este es su libro."], "correct_answer": "Esto es mi libro.", "explanation": "wǒ de shū significa 'mi libro'." },
+        { "id": "zh-a1-9-q8", "type": "quiz_choice", "question": "Si quieres decir 'El té de María', ¿cuál es el orden correcto?", "options": ["María de chá (María的茶).", "Chá de María (茶的María).", "María chá (María茶).", "María yào chá (María要茶)."], "correct_answer": "María de chá (María的茶).", "explanation": "El dueño (María) siempre va primero, luego 'de', luego el objeto (té)." },
+        { "id": "zh-a1-9-q9", "type": "quiz_choice", "question": "¿Qué pasa si olvidas poner 'de' y solo dices 'wǒ shū'?", "options": ["Suena como si dijeras 'Yo libro' (estilo cavernícola).", "Es correcto, el 'de' es opcional.", "Significa 'Nosotros leemos'.", "Significa 'Yo no tengo libro'."], "correct_answer": "Suena como si dijeras 'Yo libro' (estilo cavernícola).", "explanation": "Sin la partícula posesiva, solo estás listando dos sustantivos inconexos." },
+        { "id": "zh-a1-9-q10", "type": "quiz_choice", "question": "¿Cómo preguntarías '¿Es tu amigo?'", "options": ["Shì nǐ de péngyou ma? (是你的朋友吗？)", "Shì wǒ de péngyou ma? (是我的朋友吗？)", "Nǐ yǒu péngyou ma? (你有朋友吗？)", "Nǐ shì péngyou ma? (你是朋友吗？)"], "correct_answer": "Shì nǐ de péngyou ma? (是你的朋友吗？)", "explanation": "Es (shì) + tu amigo (nǐ de péngyou) + pregunta (ma)?" }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para completar la posesión. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-9-f1", "type": "fill_input", "question": "Partícula posesiva ('de'): ____", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a1-9-f2", "type": "fill_input", "question": "Libro: ____ (shu)", "correct_answer": "shu", "explanation": "shu" },
+        { "id": "zh-a1-9-f3", "type": "fill_input", "question": "Amigo: ____ (pengyou)", "correct_answer": "pengyou", "explanation": "pengyou" },
+        { "id": "zh-a1-9-f4", "type": "fill_input", "question": "Mi / Mío: wo ____", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a1-9-f5", "type": "fill_input", "question": "Tu / Tuyo: ____ de (ni)", "correct_answer": "ni", "explanation": "ni" },
+        { "id": "zh-a1-9-f6", "type": "fill_input", "question": "Su (de él): ta ____", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a1-9-f7", "type": "fill_input", "question": "Mi libro: wo de ____", "correct_answer": "shu", "explanation": "shu" },
+        { "id": "zh-a1-9-f8", "type": "fill_input", "question": "Tu amigo: ni ____ pengyou", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a1-9-f9", "type": "fill_input", "question": "Nuestro: women ____", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a1-9-f10", "type": "fill_input", "question": "¿Es tuyo?: shi ni de ____", "correct_answer": "ma", "explanation": "ma" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y selecciona la traducción de las frases posesivas.",
+      "questions": [
+        { "id": "zh-a1-9-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我的", "options": ["Mío", "Tuyo", "Suyo", "Nuestro"], "correct_answer": "Mío", "explanation": "El audio dice: wǒ de." },
+        { "id": "zh-a1-9-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你的书", "options": ["Tu libro", "Mi libro", "Tu amigo", "Su libro"], "correct_answer": "Tu libro", "explanation": "El audio dice: nǐ de shū." },
+        { "id": "zh-a1-9-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他的朋友", "options": ["Su amigo (de él)", "Mi amigo", "Tu amigo", "Su libro (de él)"], "correct_answer": "Su amigo (de él)", "explanation": "El audio dice: tā de péngyou." },
+        { "id": "zh-a1-9-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我们的", "options": ["Nuestro", "Mío", "De ellos", "De ustedes"], "correct_answer": "Nuestro", "explanation": "El audio dice: wǒmen de." },
+        { "id": "zh-a1-9-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "谁的书？", "options": ["¿De quién es el libro?", "¿Mi libro?", "¿Tu libro?", "¿Qué libro?"], "correct_answer": "¿De quién es el libro?", "explanation": "El audio dice: shéi de shū? (De quién libro)." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Possessions",
+      "pairs": [
+        {"id": "zh-a1-9-p1", "source": "的 (de)", "target": "Partícula posesiva"},
+        {"id": "zh-a1-9-p2", "source": "我的 (wǒ de)", "target": "Mi / Mío"},
+        {"id": "zh-a1-9-p3", "source": "你的 (nǐ de)", "target": "Tu / Tuyo"},
+        {"id": "zh-a1-9-p4", "source": "他的 (tā de)", "target": "Su / Suyo"},
+        {"id": "zh-a1-9-p5", "source": "我们的 (wǒmen de)", "target": "Nuestro"},
+        {"id": "zh-a1-9-p6", "source": "书 (shū)", "target": "Libro"},
+        {"id": "zh-a1-9-p7", "source": "朋友 (péngyou)", "target": "Amigo"},
+        {"id": "zh-a1-9-p8", "source": "我的书 (wǒ de shū)", "target": "Mi libro"},
+        {"id": "zh-a1-9-p9", "source": "你的朋友 (nǐ de péngyou)", "target": "Tu amigo"},
+        {"id": "zh-a1-9-p10", "source": "谁的 (shéi de)", "target": "De quién (De quién es)"}
+      ]
+    }
+  ]
+}

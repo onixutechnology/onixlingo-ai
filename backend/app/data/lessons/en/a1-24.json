@@ -1,0 +1,101 @@
+{
+  "id": "a1-24",
+  "title": "Office Furniture",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Furniture", "Office"],
+  "completion_message": "¡Excelente! Ya conoces el vocabulario para referirte a los muebles y espacios físicos de la oficina.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Muebles de Oficina",
+      "parts": [
+        { "visual": "Usa 'desk' para escritorio y 'chair' para silla. 'My desk is near the window'.", "audio": "Use desk for escritorio and chair for silla. My desk is near the window." },
+        { "visual": "Para muebles de almacenamiento usamos 'cabinet' o 'shelf'.", "audio": "For storage furniture we use cabinet or shelf." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona el mueble correcto.",
+      "questions": [
+        { "id": "a1-24-q1", "type": "quiz_choice", "question": "My computer is on the ____.", "options": ["desk", "chair", "ceiling", "wall"], "correct_answer": "desk", "explanation": "El escritorio (desk)." },
+        { "id": "a1-24-q2", "type": "quiz_choice", "question": "I need a comfortable ____ to sit on.", "options": ["chair", "desk", "table", "board"], "correct_answer": "chair", "explanation": "Silla (chair)." },
+        { "id": "a1-24-q3", "type": "quiz_choice", "question": "Put the files in the filing ____.", "options": ["cabinet", "cabin", "cable", "table"], "correct_answer": "cabinet", "explanation": "Archivero (filing cabinet)." },
+        { "id": "a1-24-q4", "type": "quiz_choice", "question": "We have a big ____ in the meeting room.", "options": ["table", "tablet", "cable", "chair"], "correct_answer": "table", "explanation": "Mesa (table)." },
+        { "id": "a1-24-q5", "type": "quiz_choice", "question": "Write the ideas on the white____.", "options": ["board", "bored", "bird", "boat"], "correct_answer": "board", "explanation": "Pizarrón blanco (whiteboard)." },
+        { "id": "a1-24-q6", "type": "quiz_choice", "question": "Put the books on the ____.", "options": ["shelf", "self", "shell", "shape"], "correct_answer": "shelf", "explanation": "Estante (shelf)." },
+        { "id": "a1-24-q7", "type": "quiz_choice", "question": "My ____ is broken.", "options": ["chair", "hair", "share", "cheer"], "correct_answer": "chair", "explanation": "Silla rota." },
+        { "id": "a1-24-q8", "type": "quiz_choice", "question": "There is a ____ in the reception area.", "options": ["sofa", "safe", "soft", "surf"], "correct_answer": "sofa", "explanation": "Sofá." },
+        { "id": "a1-24-q9", "type": "quiz_choice", "question": "Please turn on the ____.", "options": ["lamp", "lamb", "lump", "limp"], "correct_answer": "lamp", "explanation": "Lámpara." },
+        { "id": "a1-24-q10", "type": "quiz_choice", "question": "The trash goes in the ____.", "options": ["bin", "pin", "win", "tin"], "correct_answer": "bin", "explanation": "Basurero (trash bin)." },
+        { "id": "a1-24-q11", "type": "quiz_choice", "question": "We have new office ____.", "options": ["furniture", "furnish", "future", "nature"], "correct_answer": "furniture", "explanation": "Mobiliario (furniture, incontable)." },
+        { "id": "a1-24-q12", "type": "quiz_choice", "question": "Lock the ____.", "options": ["drawer", "draw", "drawing", "driver"], "correct_answer": "drawer", "explanation": "Cajón (drawer)." },
+        { "id": "a1-24-q13", "type": "quiz_choice", "question": "Is this your ____?", "options": ["desk", "disc", "dish", "dusk"], "correct_answer": "desk", "explanation": "Tu escritorio." },
+        { "id": "a1-24-q14", "type": "quiz_choice", "question": "Sit at the ____.", "options": ["table", "tablet", "cable", "label"], "correct_answer": "table", "explanation": "Siéntate a la mesa." },
+        { "id": "a1-24-q15", "type": "quiz_choice", "question": "We need more ____.", "options": ["chairs", "chair", "hair", "hairs"], "correct_answer": "chairs", "explanation": "Plural, más sillas." },
+        { "id": "a1-24-q16", "type": "quiz_choice", "question": "The ____ is locked.", "options": ["cabinet", "cab", "cable", "table"], "correct_answer": "cabinet", "explanation": "El archivero está bajo llave." },
+        { "id": "a1-24-q17", "type": "quiz_choice", "question": "Look at the ____.", "options": ["board", "boarder", "bored", "bird"], "correct_answer": "board", "explanation": "Mira el pizarrón." },
+        { "id": "a1-24-q18", "type": "quiz_choice", "question": "The lamp is on the ____.", "options": ["desk", "disk", "dusk", "dust"], "correct_answer": "desk", "explanation": "Lámpara sobre el escritorio." },
+        { "id": "a1-24-q19", "type": "quiz_choice", "question": "Open the top ____.", "options": ["drawer", "draw", "drawing", "driver"], "correct_answer": "drawer", "explanation": "Cajón superior." },
+        { "id": "a1-24-q20", "type": "quiz_choice", "question": "Put it in the trash ____.", "options": ["can", "cant", "cap", "cat"], "correct_answer": "can", "explanation": "Bote de basura (trash can/bin)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el nombre del mueble exacto.",
+      "questions": [
+        { "id": "a1-24-f1", "type": "fill_input", "question": "My computer is on the ____ (Escritorio).", "correct_answer": "desk", "explanation": "Desk." },
+        { "id": "a1-24-f2", "type": "fill_input", "question": "A comfortable ____ (Silla).", "correct_answer": "chair", "explanation": "Chair." },
+        { "id": "a1-24-f3", "type": "fill_input", "question": "Filing ____ (Archivero).", "correct_answer": "cabinet", "explanation": "Cabinet." },
+        { "id": "a1-24-f4", "type": "fill_input", "question": "Meeting ____ (Mesa).", "correct_answer": "table", "explanation": "Table." },
+        { "id": "a1-24-f5", "type": "fill_input", "question": "White____ (Pizarrón).", "correct_answer": "board", "explanation": "Board." },
+        { "id": "a1-24-f6", "type": "fill_input", "question": "Book ____ (Estante).", "correct_answer": "shelf", "explanation": "Shelf." },
+        { "id": "a1-24-f7", "type": "fill_input", "question": "A comfortable ____ (Sofá).", "correct_answer": "sofa", "explanation": "Sofa." },
+        { "id": "a1-24-f8", "type": "fill_input", "question": "Desk ____ (Lámpara).", "correct_answer": "lamp", "explanation": "Lamp." },
+        { "id": "a1-24-f9", "type": "fill_input", "question": "Top ____ (Cajón).", "correct_answer": "drawer", "explanation": "Drawer." },
+        { "id": "a1-24-f10", "type": "fill_input", "question": "Trash ____ (Basurero, 3 letras).", "correct_answer": "bin", "explanation": "Bin." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-24-p1", "source": "Desk", "target": "Escritorio"},
+        {"id": "a1-24-p2", "source": "Chair", "target": "Silla"},
+        {"id": "a1-24-p3", "source": "Cabinet", "target": "Archivero"},
+        {"id": "a1-24-p4", "source": "Table", "target": "Mesa"},
+        {"id": "a1-24-p5", "source": "Board", "target": "Pizarrón"},
+        {"id": "a1-24-p6", "source": "Shelf", "target": "Estante"},
+        {"id": "a1-24-p7", "source": "Sofa", "target": "Sofá"},
+        {"id": "a1-24-p8", "source": "Lamp", "target": "Lámpara"},
+        {"id": "a1-24-p9", "source": "Drawer", "target": "Cajón"},
+        {"id": "a1-24-p10", "source": "Bin", "target": "Basurero"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el mueble correcto.",
+      "questions": [
+        { "id": "a1-24-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "On the desk.", "options": ["On the desk.", "On the disk.", "On the dust.", "In the desk."], "correct_answer": "On the desk.", "explanation": "Audio exacto." },
+        { "id": "a1-24-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A comfortable chair.", "options": ["A comfortable chair.", "A comfortable hair.", "The comfortable chair.", "Comfortable chairs."], "correct_answer": "A comfortable chair.", "explanation": "Audio exacto." },
+        { "id": "a1-24-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Filing cabinet.", "options": ["Filing cabinet.", "Filing cabin.", "Filling cabinet.", "Find cabinet."], "correct_answer": "Filing cabinet.", "explanation": "Audio exacto." },
+        { "id": "a1-24-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Meeting table.", "options": ["Meeting table.", "Meeting tablet.", "Meeting cable.", "Meet the table."], "correct_answer": "Meeting table.", "explanation": "Audio exacto." },
+        { "id": "a1-24-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The whiteboard.", "options": ["The whiteboard.", "The white bird.", "A whiteboard.", "The white boat."], "correct_answer": "The whiteboard.", "explanation": "Audio exacto." },
+        { "id": "a1-24-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "On the shelf.", "options": ["On the shelf.", "On the self.", "In the shelf.", "On a shelf."], "correct_answer": "On the shelf.", "explanation": "Audio exacto." },
+        { "id": "a1-24-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The reception sofa.", "options": ["The reception sofa.", "A reception sofa.", "The reception safe.", "Reception sofa."], "correct_answer": "The reception sofa.", "explanation": "Audio exacto." },
+        { "id": "a1-24-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Desk lamp.", "options": ["Desk lamp.", "Desk lamb.", "Disk lamp.", "Desk camp."], "correct_answer": "Desk lamp.", "explanation": "Audio exacto." },
+        { "id": "a1-24-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The top drawer.", "options": ["The top drawer.", "The top draw.", "A top drawer.", "The tall drawer."], "correct_answer": "The top drawer.", "explanation": "Audio exacto." },
+        { "id": "a1-24-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Trash bin.", "options": ["Trash bin.", "Trash pin.", "Trash tin.", "Trash win."], "correct_answer": "Trash bin.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

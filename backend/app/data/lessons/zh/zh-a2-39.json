@@ -1,0 +1,92 @@
+{
+  "id": "zh-a2-39",
+  "title": "¿Qué Hora Es?",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Time", "Numbers", "Questions"],
+  "completion_message": "¡Llegaste justo a tiempo! Ahora puedes coordinar citas y saber exactamente cuándo suceden las cosas en China.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Los Puntos del Reloj",
+      "parts": [
+        {
+          "visual": "La Hora en Punto: 点 (diǎn)\n\nEn mandarín, la palabra para decir 'la hora' es 点 (diǎn - 3er tono). Literalmente significa 'punto' o 'gota'.\nPara decir la hora, simplemente dices el número + diǎn.\n\n- Las 8 en punto: 八点 (Bā diǎn).\n- Las 10 en punto: 十点 (Shí diǎn).\n\nPreguntar la hora: \nPara preguntar '¿Qué hora es?', usamos la palabra 几 (jǐ - cuántos).\n- ¿Qué hora es?: 几点？(Jǐ diǎn?). Literalmente: ¿Cuántos puntos?\n- ¿Qué hora es ahora mismo?: 现在几点？(Xiànzài jǐ diǎn?).",
+          "audio": "Es hora de aprender a leer el reloj. En español decimos 'Son las ocho'. En mandarín, imaginan que el reloj tiene marcas o puntos. La palabra para decir la hora es 'diǎn'. Tercer tono. Diǎn. Literalmente significa punto. Así que para decir 'Las ocho en punto', dices Ocho Puntos: Bā diǎn. Y si quieres preguntarle la hora a alguien en la calle, usas nuestra palabra mágica 'jǐ' que aprendimos para preguntar cantidades pequeñas. Jǐ diǎn? ¿Cuántos puntos? Es decir, ¿Qué hora es? Si le agregas la palabra 'Ahora' (Xiànzài), dices: Xiànzài jǐ diǎn. ¿Qué hora es ahora mismo?"
+        },
+        {
+          "visual": "Y Media y el Dos Especial\n\n1. Y Media (Mitad): 半 (bàn)\nPara decir 'y media' (30 minutos), usamos la palabra 半 (bàn - 4to tono).\n- Las 8 y media: 八点半 (Bā diǎn bàn). (Ocho puntos y mitad).\n\n2. ¡Cuidado con las Dos!\nLa palabra 点 (diǎn) funciona como un clasificador de horas. Y ya sabemos qué pasa cuando el número 2 se encuentra con un clasificador... ¡El 'Èr' está PROHIBIDO!\nPara decir 'Las dos en punto', debes usar el Dos Especial (Liǎng).\n- Las 2 en punto: 两点 (Liǎng diǎn).\n- Las 2 y media: 两点半 (Liǎng diǎn bàn).\n¡Decir 'Èr diǎn' lastimará los oídos de todos a tu alrededor!",
+          "audio": "Aquí vienen dos trucos vitales. Primero, las y media. La palabra para mitad es bàn. Cuarto tono seco. Bàn. Así que las ocho y media se dice Bā diǎn bàn. Ocho puntos y mitad. Segundo truco, y el más peligroso. Ya aprendiste que cuando contamos cosas no usamos Èr, usamos Liǎng. Bueno, resulta que la palabra 'diǎn' cuenta como un clasificador. Así que está estrictamente prohibido decir 'Èr diǎn' para las dos en punto. Suena horrible. Tienes que usar el dos especial. Las dos en punto se dice Liǎng diǎn. Y las dos y media, Liǎng diǎn bàn. ¡Nunca lo olvides!"
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que dominas el tiempo y no llegas tarde.",
+      "questions": [
+        { "id": "zh-a2-39-q1", "type": "quiz_choice", "question": "¿Qué palabra se usa para indicar 'la hora en punto'?", "options": ["Diǎn (点).", "Bàn (半).", "Yuè (月).", "Hào (号)."], "correct_answer": "Diǎn (点).", "explanation": "Diǎn significa 'punto' y se usa para marcar la hora del reloj." },
+        { "id": "zh-a2-39-q2", "type": "quiz_choice", "question": "¿Cómo se pregunta '¿Qué hora es?'", "options": ["Jǐ diǎn? (几点？).", "Duōshao diǎn? (多少点？).", "Shénme diǎn? (什么点？).", "Nǎlǐ diǎn? (哪里点？)."], "correct_answer": "Jǐ diǎn? (几点？).", "explanation": "Jǐ (cuántos) + diǎn (puntos/horas)." },
+        { "id": "zh-a2-39-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Las ocho en punto'?", "options": ["Bā diǎn (八点).", "Diǎn bā (点八).", "Bā hào (八号).", "Bā yuè (八月)."], "correct_answer": "Bā diǎn (八点).", "explanation": "Número (8 - Bā) + Hora (diǎn)." },
+        { "id": "zh-a2-39-q4", "type": "quiz_choice", "question": "¿Qué significa la palabra 半 (bàn)?", "options": ["Mitad / Y media.", "Minuto.", "Hora.", "Punto."], "correct_answer": "Mitad / Y media.", "explanation": "Bàn (4to tono) significa mitad. Se usa para las 'y media'." },
+        { "id": "zh-a2-39-q5", "type": "quiz_choice", "question": "¿Cómo se dice 'Las 9 y media'?", "options": ["Jiǔ diǎn bàn (九点半).", "Bàn jiǔ diǎn (半九点).", "Jiǔ bàn diǎn (九半点).", "Jiǔ diǎn sān shí (九点三十)."], "correct_answer": "Jiǔ diǎn bàn (九点半).", "explanation": "Nueve (jiǔ) + puntos (diǎn) + mitad (bàn)." },
+        { "id": "zh-a2-39-q6", "type": "quiz_choice", "question": "El gran desafío: ¿Cómo se dice 'Las dos en punto'?", "options": ["Liǎng diǎn (两点).", "Èr diǎn (二点).", "Diǎn liǎng (点两).", "Diǎn èr (点二)."], "correct_answer": "Liǎng diǎn (两点).", "explanation": "¡Regla del dos especial! Como 'diǎn' actúa como clasificador, se DEBE usar Liǎng, NUNCA èr." },
+        { "id": "zh-a2-39-q7", "type": "quiz_choice", "question": "¿Y cómo dirías 'Las dos y media'?", "options": ["Liǎng diǎn bàn (两点半).", "Èr diǎn bàn (二点半).", "Liǎng bàn diǎn (两半点).", "Bàn liǎng diǎn (半两点)."], "correct_answer": "Liǎng diǎn bàn (两点半).", "explanation": "Liǎng (dos especial) + diǎn (hora) + bàn (y media)." },
+        { "id": "zh-a2-39-q8", "type": "quiz_choice", "question": "¿Cómo se dice 'Las doce en punto'?", "options": ["Shí èr diǎn (十二点).", "Shí liǎng diǎn (十二点).", "Èr shí diǎn (二十点).", "Liǎng shí diǎn (两十点)."], "correct_answer": "Shí èr diǎn (十二点).", "explanation": "Cuidado aquí: el 12 es 'diez-dos' (matemático). La regla del Liǎng SOLO aplica al número 2 solitario. Para 12 se usa Shí èr." },
+        { "id": "zh-a2-39-q9", "type": "quiz_choice", "question": "Traduce: 'Nǐ jǐ diǎn qù?' (你几点去？).", "options": ["¿A qué hora vas?", "¿Cuántas horas te vas?", "¿Dónde vas?", "¿Qué vas a hacer?"], "correct_answer": "¿A qué hora vas?", "explanation": "Tú (Nǐ) + qué hora (jǐ diǎn) + vas (qù)." },
+        { "id": "zh-a2-39-q10", "type": "quiz_choice", "question": "Traduce: 'Wǒmen bā diǎn bàn chī fàn' (我们八点半吃饭).", "options": ["Nosotros comemos a las 8 y media.", "Nosotros comemos 8 platos y medio.", "Nosotros vamos a comer a las 8.", "Nosotros no comemos a las 8."], "correct_answer": "Nosotros comemos a las 8 y media.", "explanation": "El tiempo va antes del verbo. Nosotros (wǒmen) + 8 y media (bā diǎn bàn) + comer comida (chī fàn)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Ajusta tu reloj y escribe el pinyin. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a2-39-f1", "type": "fill_input", "question": "Hora en punto (Punto/gota): ____ (dian)", "correct_answer": "dian", "explanation": "dian" },
+        { "id": "zh-a2-39-f2", "type": "fill_input", "question": "¿Qué hora es?: ji ____", "correct_answer": "dian", "explanation": "dian" },
+        { "id": "zh-a2-39-f3", "type": "fill_input", "question": "Las 8: ba ____", "correct_answer": "dian", "explanation": "dian" },
+        { "id": "zh-a2-39-f4", "type": "fill_input", "question": "Y media (Mitad): ____ (ban)", "correct_answer": "ban", "explanation": "ban" },
+        { "id": "zh-a2-39-f5", "type": "fill_input", "question": "Las 10 y media: shi dian ____", "correct_answer": "ban", "explanation": "ban" },
+        { "id": "zh-a2-39-f6", "type": "fill_input", "question": "Las 2 en punto (Con Dos Especial): ____ dian (liang)", "correct_answer": "liang", "explanation": "liang" },
+        { "id": "zh-a2-39-f7", "type": "fill_input", "question": "Las 2 y media: liang dian ____", "correct_answer": "ban", "explanation": "ban" },
+        { "id": "zh-a2-39-f8", "type": "fill_input", "question": "Las 12 (Aquí sí se usa er): shi ____ dian", "correct_answer": "er", "explanation": "er" },
+        { "id": "zh-a2-39-f9", "type": "fill_input", "question": "¿A qué hora vas?: ni ____ dian qu", "correct_answer": "ji", "explanation": "ji" },
+        { "id": "zh-a2-39-f10", "type": "fill_input", "question": "¿Qué hora es AHORA?: xian zai ji ____ (dian)", "correct_answer": "dian", "explanation": "dian" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y marca la hora correcta en tu reloj.",
+      "questions": [
+        { "id": "zh-a2-39-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "几点？", "options": ["¿Qué hora es?", "¿Qué día es?", "¿Qué mes es?", "¿Cuántos años tienes?"], "correct_answer": "¿Qué hora es?", "explanation": "El audio dice: Jǐ diǎn?" },
+        { "id": "zh-a2-39-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "八点", "options": ["Las 8:00", "Las 2:00", "Las 10:00", "Las 8:30"], "correct_answer": "Las 8:00", "explanation": "El audio dice: Bā diǎn." },
+        { "id": "zh-a2-39-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "十点半", "options": ["Las 10:30", "Las 10:00", "Las 4:30", "Las 8:30"], "correct_answer": "Las 10:30", "explanation": "El audio dice: Shí diǎn bàn." },
+        { "id": "zh-a2-39-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "两点", "options": ["Las 2:00", "Las 12:00", "Las 2:30", "Las 20:00"], "correct_answer": "Las 2:00", "explanation": "El audio dice: Liǎng diǎn." },
+        { "id": "zh-a2-39-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你几点去？", "options": ["¿A qué hora vas?", "¿A dónde vas?", "¿Cuándo regresas?", "¿Qué hora es ahora?"], "correct_answer": "¿A qué hora vas?", "explanation": "El audio dice: Nǐ jǐ diǎn qù?" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Clock",
+      "pairs": [
+        {"id": "zh-a2-39-p1", "source": "点 (diǎn)", "target": "Hora en punto (Punto)"},
+        {"id": "zh-a2-39-p2", "source": "半 (bàn)", "target": "Y media (Mitad)"},
+        {"id": "zh-a2-39-p3", "source": "几点？(jǐ diǎn?)", "target": "¿Qué hora es?"},
+        {"id": "zh-a2-39-p4", "source": "十点 (shí diǎn)", "target": "Las 10:00"},
+        {"id": "zh-a2-39-p5", "source": "八点半 (bā diǎn bàn)", "target": "Las 8:30"},
+        {"id": "zh-a2-39-p6", "source": "两点 (liǎng diǎn)", "target": "Las 2:00 (Dos Especial)"},
+        {"id": "zh-a2-39-p7", "source": "十二点 (shí èr diǎn)", "target": "Las 12:00 (Usa èr normal)"},
+        {"id": "zh-a2-39-p8", "source": "你几点去？(nǐ jǐ diǎn qù?)", "target": "¿A qué hora vas?"},
+        {"id": "zh-a2-39-p9", "source": "现在 (xiànzài)", "target": "Ahora"},
+        {"id": "zh-a2-39-p10", "source": "二点 (❌ Error)", "target": "Prohibido para decir las 2:00"}
+      ]
+    }
+  ]
+}

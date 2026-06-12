@@ -1,0 +1,101 @@
+{
+  "id": "a1-94",
+  "title": "Reading Basic Charts and Graphs",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Business", "Charts", "Data", "Presentations"],
+  "completion_message": "¡Muy bien! Ahora tienes el vocabulario esencial para describir gráficas y datos en inglés en cualquier reunión o presentación.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Describir Gráficas",
+      "parts": [
+        { "visual": "Tipos de gráficas: Bar chart (gráfico de barras), Line chart (gráfico de líneas), Pie chart (gráfico circular). Ejes: X-axis (eje horizontal), Y-axis (eje vertical).", "audio": "Types of charts: Bar chart, Line chart, Pie chart. Axes: X-axis, which is horizontal, and Y-axis, which is vertical." },
+        { "visual": "Tendencias: Go up / Rise / Increase (subir). Go down / Fall / Decrease (bajar). Stay the same / Remain stable (mantenerse estable). Reach a peak (alcanzar el máximo).", "audio": "Trends: Go up, rise, or increase means to go higher. Go down, fall, or decrease means to go lower. Stay the same or remain stable. Reach a peak means to reach the highest point." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el vocabulario correcto para describir gráficas.",
+      "questions": [
+        { "id": "a1-94-q1", "type": "quiz_choice", "question": "A graph with bars is called a ____ chart.", "options": ["bar", "line", "pie", "column"], "correct_answer": "bar", "explanation": "Bar chart = gráfico de barras." },
+        { "id": "a1-94-q2", "type": "quiz_choice", "question": "A graph that shows parts of a circle is a ____ chart.", "options": ["pie", "line", "bar", "area"], "correct_answer": "pie", "explanation": "Pie chart = gráfico circular." },
+        { "id": "a1-94-q3", "type": "quiz_choice", "question": "Sales ____ last month. (subieron).", "options": ["went up", "went down", "stayed the same", "fell"], "correct_answer": "went up", "explanation": "Went up = subieron." },
+        { "id": "a1-94-q4", "type": "quiz_choice", "question": "Costs ____ in Q3. (bajaron).", "options": ["decreased", "increased", "rose", "grew"], "correct_answer": "decreased", "explanation": "Decreased = bajaron." },
+        { "id": "a1-94-q5", "type": "quiz_choice", "question": "Revenue ____ stable all year. (permaneció).", "options": ["remained", "went", "fell", "rose"], "correct_answer": "remained", "explanation": "Remained stable = permaneció estable." },
+        { "id": "a1-94-q6", "type": "quiz_choice", "question": "Sales ____ a peak in December. (alcanzaron el máximo).", "options": ["reached", "hit", "got", "made"], "correct_answer": "reached", "explanation": "Reached a peak = alcanzaron el máximo." },
+        { "id": "a1-94-q7", "type": "quiz_choice", "question": "The horizontal line at the bottom is the ____.", "options": ["X-axis", "Y-axis", "line", "bar"], "correct_answer": "X-axis", "explanation": "X-axis = eje horizontal." },
+        { "id": "a1-94-q8", "type": "quiz_choice", "question": "The vertical line on the left is the ____.", "options": ["Y-axis", "X-axis", "column", "bar"], "correct_answer": "Y-axis", "explanation": "Y-axis = eje vertical." },
+        { "id": "a1-94-q9", "type": "quiz_choice", "question": "The graph ____ an increase in Q2. (muestra).", "options": ["shows", "tell", "says", "explains"], "correct_answer": "shows", "explanation": "The graph shows = la gráfica muestra." },
+        { "id": "a1-94-q10", "type": "quiz_choice", "question": "Sales ____ sharply in January. (cayeron bruscamente).", "options": ["fell", "rose", "went up", "stayed"], "correct_answer": "fell", "explanation": "Fell = cayeron (fall -> fell)." },
+        { "id": "a1-94-q11", "type": "quiz_choice", "question": "The ____ shows the months of the year. (eje X).", "options": ["X-axis", "Y-axis", "legend", "title"], "correct_answer": "X-axis", "explanation": "El eje X suele mostrar el tiempo." },
+        { "id": "a1-94-q12", "type": "quiz_choice", "question": "The figure ____ by 20%. (aumentó).", "options": ["rose", "fell", "stayed", "decreased"], "correct_answer": "rose", "explanation": "Rose = aumentó (rise -> rose)." },
+        { "id": "a1-94-q13", "type": "quiz_choice", "question": "The chart shows a downward ____. (tendencia).", "options": ["trend", "line", "bar", "axis"], "correct_answer": "trend", "explanation": "Trend = tendencia." },
+        { "id": "a1-94-q14", "type": "quiz_choice", "question": "According to the data, Q4 was the ____. (el mejor).", "options": ["best", "worst", "highest", "biggest"], "correct_answer": "best", "explanation": "The best quarter." },
+        { "id": "a1-94-q15", "type": "quiz_choice", "question": "The numbers ____ from 100 to 500. (van / van de).", "options": ["range", "go", "jump", "include"], "correct_answer": "range", "explanation": "Range from X to Y = van de X a Y." },
+        { "id": "a1-94-q16", "type": "quiz_choice", "question": "The key that explains the colors is the ____.", "options": ["legend", "title", "axis", "label"], "correct_answer": "legend", "explanation": "Legend = leyenda de la gráfica." },
+        { "id": "a1-94-q17", "type": "quiz_choice", "question": "As you can see in this ____, sales are growing. (gráfico).", "options": ["chart", "chart", "picture", "image"], "correct_answer": "chart", "explanation": "Chart = gráfico." },
+        { "id": "a1-94-q18", "type": "quiz_choice", "question": "The data ____ a clear pattern. (revela).", "options": ["reveals", "says", "tells", "shows"], "correct_answer": "reveals", "explanation": "Reveals = revela." },
+        { "id": "a1-94-q19", "type": "quiz_choice", "question": "Sales ____ in February but recovered in March. (bajaron - simple).", "options": ["dropped", "drop", "dropping", "drops"], "correct_answer": "dropped", "explanation": "Dropped = cayeron (drop -> dropped)." },
+        { "id": "a1-94-q20", "type": "quiz_choice", "question": "The ____ of the chart is 'Annual Sales'. (título).", "options": ["title", "legend", "axis", "label"], "correct_answer": "title", "explanation": "Title = título de la gráfica." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término correcto para describir gráficas.",
+      "questions": [
+        { "id": "a1-94-f1", "type": "fill_input", "question": "Gráfico de barras = ____ chart.", "correct_answer": "bar", "explanation": "bar." },
+        { "id": "a1-94-f2", "type": "fill_input", "question": "Gráfico circular = ____ chart.", "correct_answer": "pie", "explanation": "pie." },
+        { "id": "a1-94-f3", "type": "fill_input", "question": "Subir = go ____.", "correct_answer": "up", "explanation": "up." },
+        { "id": "a1-94-f4", "type": "fill_input", "question": "Bajar = go ____.", "correct_answer": "down", "explanation": "down." },
+        { "id": "a1-94-f5", "type": "fill_input", "question": "Permanecer estable = remain ____.", "correct_answer": "stable", "explanation": "stable." },
+        { "id": "a1-94-f6", "type": "fill_input", "question": "Eje horizontal = ____-axis.", "correct_answer": "X", "explanation": "X." },
+        { "id": "a1-94-f7", "type": "fill_input", "question": "Eje vertical = ____-axis.", "correct_answer": "Y", "explanation": "Y." },
+        { "id": "a1-94-f8", "type": "fill_input", "question": "Tendencia = ____.", "correct_answer": "trend", "explanation": "trend." },
+        { "id": "a1-94-f9", "type": "fill_input", "question": "Leyenda = ____.", "correct_answer": "legend", "explanation": "legend." },
+        { "id": "a1-94-f10", "type": "fill_input", "question": "The graph ____ an increase. (muestra).", "correct_answer": "shows", "explanation": "shows." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-94-p1", "source": "Bar chart", "target": "Gráfico de barras"},
+        {"id": "a1-94-p2", "source": "Pie chart", "target": "Gráfico circular"},
+        {"id": "a1-94-p3", "source": "Line chart", "target": "Gráfico de líneas"},
+        {"id": "a1-94-p4", "source": "Go up / Rise", "target": "Subir / Aumentar"},
+        {"id": "a1-94-p5", "source": "Go down / Fall", "target": "Bajar / Caer"},
+        {"id": "a1-94-p6", "source": "Remain stable", "target": "Mantenerse estable"},
+        {"id": "a1-94-p7", "source": "Reach a peak", "target": "Alcanzar el máximo"},
+        {"id": "a1-94-p8", "source": "X-axis", "target": "Eje horizontal"},
+        {"id": "a1-94-p9", "source": "Y-axis", "target": "Eje vertical"},
+        {"id": "a1-94-p10", "source": "The chart shows", "target": "La gráfica muestra"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-94-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This is a bar chart.", "options": ["This is a bar chart.", "This is a pie chart.", "This is a line chart.", "That is a bar chart."], "correct_answer": "This is a bar chart.", "explanation": "Audio exacto." },
+        { "id": "a1-94-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sales went up last month.", "options": ["Sales went up last month.", "Sales went down last month.", "Costs went up last month.", "Sales went up this month."], "correct_answer": "Sales went up last month.", "explanation": "Audio exacto." },
+        { "id": "a1-94-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Costs decreased in Q3.", "options": ["Costs decreased in Q3.", "Costs increased in Q3.", "Sales decreased in Q3.", "Costs fell in Q3."], "correct_answer": "Costs decreased in Q3.", "explanation": "Audio exacto." },
+        { "id": "a1-94-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Revenue remained stable all year.", "options": ["Revenue remained stable all year.", "Revenue increased all year.", "Costs remained stable all year.", "Revenue was stable last year."], "correct_answer": "Revenue remained stable all year.", "explanation": "Audio exacto." },
+        { "id": "a1-94-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sales reached a peak in December.", "options": ["Sales reached a peak in December.", "Sales hit a peak in December.", "Costs reached a peak in December.", "Sales reached a low in December."], "correct_answer": "Sales reached a peak in December.", "explanation": "Audio exacto." },
+        { "id": "a1-94-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The chart shows an increase.", "options": ["The chart shows an increase.", "The data shows an increase.", "The chart shows a decrease.", "The graph shows an increase."], "correct_answer": "The chart shows an increase.", "explanation": "Audio exacto." },
+        { "id": "a1-94-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The X-axis shows the months.", "options": ["The X-axis shows the months.", "The Y-axis shows the months.", "The X-axis shows the years.", "The axis shows the months."], "correct_answer": "The X-axis shows the months.", "explanation": "Audio exacto." },
+        { "id": "a1-94-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sales fell sharply in January.", "options": ["Sales fell sharply in January.", "Sales rose sharply in January.", "Costs fell sharply in January.", "Sales dropped in January."], "correct_answer": "Sales fell sharply in January.", "explanation": "Audio exacto." },
+        { "id": "a1-94-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The figures range from one hundred to five hundred.", "options": ["The figures range from one hundred to five hundred.", "The figures go from one hundred to five hundred.", "The numbers range from one hundred to five hundred.", "The figures range from two hundred to five hundred."], "correct_answer": "The figures range from one hundred to five hundred.", "explanation": "Audio exacto." },
+        { "id": "a1-94-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The data reveals a clear trend.", "options": ["The data reveals a clear trend.", "The chart reveals a clear trend.", "The data shows a clear trend.", "The data reveals an upward trend."], "correct_answer": "The data reveals a clear trend.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

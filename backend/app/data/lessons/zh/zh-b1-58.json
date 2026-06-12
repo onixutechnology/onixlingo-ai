@@ -1,0 +1,92 @@
+{
+  "id": "zh-b1-58",
+  "title": "Navegando la Ciudad",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "City", "Places", "Vocabulary"],
+  "completion_message": "¡Ya no te perderás! Dominar los lugares básicos te da el poder de moverte libremente por cualquier ciudad de habla hispana... digo, china.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Edificios y Sombras Eléctricas",
+      "parts": [
+        {
+          "visual": "Hospital: 医院 (yīyuàn)\n- Yī significa 'medicina' (como en yīshēng - médico).\n- Yuàn significa 'patio' o 'institución'.\n\nBanco: 银行 (yínháng)\n- Yín significa 'plata'.\n- Háng significa 'firma/empresa'.\n\nUsando el verbo Ir (qù):\n- Yo voy al hospital: 我去医院 (Wǒ qù yīyuàn).\n- Yo tengo que ir al banco: 我得去银行 (Wǒ děi qù yínháng).",
+          "audio": "Aprender vocabulario en chino es como armar legos. Las palabras nuevas se construyen con bloques que ya conoces. Por ejemplo, Hospital se dice Yīyuàn. La primera sílaba, Yī, significa medicina, la misma que usas en yīshēng, médico. Yuàn significa institución o patio. Banco se dice Yínháng. Yín significa plata, y Háng firma. La firma de la plata. Si combinas esto con tus verbos de obligación, puedes decir: Wǒ děi qù yīyuàn. Yo tengo que ir al hospital."
+        },
+        {
+          "visual": "Película: 电影 (diànyǐng)\n- Diàn = Electricidad.\n- Yǐng = Sombra.\n- Literalmente: 'Sombra Eléctrica'.\n\nCine (Edificio): 电影院 (diànyǐngyuàn)\n- Se le añade 'yuàn' (institución) al final de película.\n\nEl verbo Ver / Mirar: 看 (kàn)\n- Ver una película: 看电影 (Kàn diànyǐng).\n- Yo voy al cine a ver una película: 我去电影院看电影 (Wǒ qù diànyǐngyuàn kàn diànyǐng).",
+          "audio": "La palabra para Película es mi favorita en todo el idioma chino. Se dice Diànyǐng. Diàn es electricidad. Yǐng es sombra. Sombras eléctricas. Es hermoso. Si quieres referirte al edificio, al cine, le pones el bloque de institución 'yuàn' al final: Diànyǐngyuàn. Ahora, el verbo para Ver o Mirar, ya sea una película, la tele o un libro, es Kàn. Cuarto tono. Kàn. Si tu amigo te pregunta qué vas a hacer hoy, puedes responder: Wǒ qù diànyǐngyuàn kàn diànyǐng. Yo voy al cine a ver sombras eléctricas."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Encuentra tu camino en la ciudad de las sombras eléctricas.",
+      "questions": [
+        { "id": "zh-b1-58-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 医院 (yīyuàn)?", "options": ["Hospital.", "Banco.", "Cine.", "Escuela."], "correct_answer": "Hospital.", "explanation": "Yī (medicina) + yuàn (institución/patio)." },
+        { "id": "zh-b1-58-q2", "type": "quiz_choice", "question": "Lógica china: ¿Qué significa literalmente 银行 (yínháng - Banco)?", "options": ["La firma de la plata.", "La casa del dinero.", "El edificio de oro.", "El patio de billetes."], "correct_answer": "La firma de la plata.", "explanation": "Yín (plata) + háng (firma/industria)." },
+        { "id": "zh-b1-58-q3", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 电影 (diànyǐng)?", "options": ["Película (Sombra eléctrica).", "Cine (El edificio).", "Televisión.", "Teléfono."], "correct_answer": "Película (Sombra eléctrica).", "explanation": "Diàn (electricidad) + yǐng (sombra). Se refiere a la obra en sí, no al lugar." },
+        { "id": "zh-b1-58-q4", "type": "quiz_choice", "question": "Y si 电影 es la película, ¿cómo se dice el lugar físico, el Cine?", "options": ["Diànyǐngyuàn (电影院).", "Diànyǐng jiā (电影家).", "Diànyǐng háng (电影行).", "Diànyǐng diàn (电影店)."], "correct_answer": "Diànyǐngyuàn (电影院).", "explanation": "Añadimos 'yuàn' (institución/patio), igual que en el hospital (yīyuàn)." },
+        { "id": "zh-b1-58-q5", "type": "quiz_choice", "question": "Vocabulario: ¿Qué verbo se utiliza para 'Ver / Mirar'?", "options": ["Kàn (看).", "Zuò (做).", "Qù (去).", "Kāi (开)."], "correct_answer": "Kàn (看).", "explanation": "Kàn se usa para ver películas, televisión, libros y personas." },
+        { "id": "zh-b1-58-q6", "type": "quiz_choice", "question": "Traduce esta rutina: 'Wǒ chángcháng kàn diànyǐng' (我常常看电影).", "options": ["Yo a menudo veo películas.", "Yo a veces voy al cine.", "Yo quiero ver una película.", "Yo nunca veo películas."], "correct_answer": "Yo a menudo veo películas.", "explanation": "Yo (wǒ) + a menudo (chángcháng) + veo película (kàn diànyǐng)." },
+        { "id": "zh-b1-58-q7", "type": "quiz_choice", "question": "Traduce la necesidad: 'Wǒ děi qù yínháng' (我得去银行).", "options": ["Tengo que ir al banco.", "Debería ir al banco.", "Quiero ir al banco.", "Voy a menudo al banco."], "correct_answer": "Tengo que ir al banco.", "explanation": "Yo (wǒ) + tengo que (děi) + ir al banco (qù yínháng)." },
+        { "id": "zh-b1-58-q8", "type": "quiz_choice", "question": "Estás enfermo. Le dices a tu amigo: 'Wǒ yīnggāi qù yīyuàn ma?' (我应该去医院吗？). ¿Qué le estás preguntando?", "options": ["¿Debería ir al hospital? (Le pides un consejo).", "¿Tienes que ir al hospital?", "¿Puedes ir al hospital?", "¿Dónde está el hospital?"], "correct_answer": "¿Debería ir al hospital? (Le pides un consejo).", "explanation": "Yo (wǒ) + debería (yīnggāi) + ir al hospital (qù yīyuàn) + ma." },
+        { "id": "zh-b1-58-q9", "type": "quiz_choice", "question": "En español decimos 'Voy al cine a ver una película'. En chino se conectan dos acciones. ¿Cómo se dice?", "options": ["Wǒ qù diànyǐngyuàn kàn diànyǐng (我去电影院看电影).", "Wǒ kàn diànyǐng qù diànyǐngyuàn (我看电影去电影院).", "Wǒ qù diànyǐng kàn (我去电影看).", "Wǒ qù kàn diànyǐngyuàn (我去看电影院)."], "correct_answer": "Wǒ qù diànyǐngyuàn kàn diànyǐng (我去电影院看电影).", "explanation": "Orden cronológico: Primero vas al lugar (qù diànyǐngyuàn) y luego haces la acción (kàn diànyǐng)." },
+        { "id": "zh-b1-58-q10", "type": "quiz_choice", "question": "¿Puedes usar el verbo 'Kàn' (看) para decir 'Ver al médico'?", "options": ["Sí, Kàn yīshēng (看医生) significa literalmente 'Ver al médico' o 'Ir a una consulta'.", "No, los médicos no se pueden ver.", "Sí, pero significa 'estudiar medicina'.", "No, se debe usar 'qù'."], "correct_answer": "Sí, Kàn yīshēng (看医生) significa literalmente 'Ver al médico' o 'Ir a una consulta'.", "explanation": "El verbo Kàn es muy versátil. Ver al médico es la forma estándar de decir que vas a una cita médica." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe los lugares y acciones en pinyin. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-b1-58-f1", "type": "fill_input", "question": "Hospital (Patio de medicina): yi ____ (yuan)", "correct_answer": "yuan", "explanation": "yuan" },
+        { "id": "zh-b1-58-f2", "type": "fill_input", "question": "Banco (Firma de plata): yin ____ (hang)", "correct_answer": "hang", "explanation": "hang" },
+        { "id": "zh-b1-58-f3", "type": "fill_input", "question": "Tengo que ir al banco: wo dei qu yin ____", "correct_answer": "hang", "explanation": "hang" },
+        { "id": "zh-b1-58-f4", "type": "fill_input", "question": "Película (Sombra eléctrica): dian ____ (ying)", "correct_answer": "ying", "explanation": "ying" },
+        { "id": "zh-b1-58-f5", "type": "fill_input", "question": "Cine (Edificio): dian ying ____ (yuan)", "correct_answer": "yuan", "explanation": "yuan" },
+        { "id": "zh-b1-58-f6", "type": "fill_input", "question": "Ver / Mirar: ____ (kan)", "correct_answer": "kan", "explanation": "kan" },
+        { "id": "zh-b1-58-f7", "type": "fill_input", "question": "Ver película: ____ dian ying (kan)", "correct_answer": "kan", "explanation": "kan" },
+        { "id": "zh-b1-58-f8", "type": "fill_input", "question": "Ver al médico: kan yi ____ (sheng)", "correct_answer": "sheng", "explanation": "sheng" },
+        { "id": "zh-b1-58-f9", "type": "fill_input", "question": "Deberías ir al hospital: ni ying gai qu yi ____", "correct_answer": "yuan", "explanation": "yuan" },
+        { "id": "zh-b1-58-f10", "type": "fill_input", "question": "Yo a menudo veo películas: wo chang chang ____ dian ying (kan)", "correct_answer": "kan", "explanation": "kan" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha hacia dónde va la gente y emparéjalo.",
+      "questions": [
+        { "id": "zh-b1-58-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "医院", "options": ["Hospital", "Banco", "Cine", "Escuela"], "correct_answer": "Hospital", "explanation": "El audio dice: Yīyuàn." },
+        { "id": "zh-b1-58-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "银行", "options": ["Banco", "Hospital", "Película", "Plata"], "correct_answer": "Banco", "explanation": "El audio dice: Yínháng." },
+        { "id": "zh-b1-58-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "看电影", "options": ["Ver una película", "Ir al cine", "El cine", "Sombras"], "correct_answer": "Ver una película", "explanation": "El audio dice: Kàn diànyǐng." },
+        { "id": "zh-b1-58-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我去医院", "options": ["Yo voy al hospital", "Yo voy al banco", "Yo voy al cine", "Yo soy médico"], "correct_answer": "Yo voy al hospital", "explanation": "El audio dice: Wǒ qù yīyuàn." },
+        { "id": "zh-b1-58-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "电影院", "options": ["Cine (el lugar)", "Película", "Ver", "Hospital"], "correct_answer": "Cine (el lugar)", "explanation": "El audio dice: Diànyǐngyuàn." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the City Places",
+      "pairs": [
+        {"id": "zh-b1-58-p1", "source": "医院 (yīyuàn)", "target": "Hospital"},
+        {"id": "zh-b1-58-p2", "source": "银行 (yínháng)", "target": "Banco"},
+        {"id": "zh-b1-58-p3", "source": "电影 (diànyǐng)", "target": "Película (Sombra eléctrica)"},
+        {"id": "zh-b1-58-p4", "source": "电影院 (diànyǐngyuàn)", "target": "Cine (El lugar)"},
+        {"id": "zh-b1-58-p5", "source": "看 (kàn)", "target": "Ver / Mirar"},
+        {"id": "zh-b1-58-p6", "source": "看电影 (kàn diànyǐng)", "target": "Ver una película"},
+        {"id": "zh-b1-58-p7", "source": "看医生 (kàn yīshēng)", "target": "Ver al médico (ir a consulta)"},
+        {"id": "zh-b1-58-p8", "source": "我得去医院 (wǒ děi qù yīyuàn)", "target": "Tengo que ir al hospital"},
+        {"id": "zh-b1-58-p9", "source": "去电影院 (qù diànyǐngyuàn)", "target": "Ir al cine"},
+        {"id": "zh-b1-58-p10", "source": "常常 (chángcháng)", "target": "A menudo"}
+      ]
+    }
+  ]
+}

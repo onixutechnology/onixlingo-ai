@@ -1,0 +1,101 @@
+{
+  "id": "c1-18",
+  "title": "Human Resources & Talent",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "HR", "Human Resources", "Talent", "Business"],
+  "completion_message": "¡Perfecto! El vocabulario de Recursos Humanos es esencial para cualquier ejecutivo. Ahora puedes hablar con propiedad sobre procesos de selección, retención de talento, evaluaciones de desempeño y reestructuración organizacional.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Recursos Humanos y Gestión del Talento (C1)",
+      "parts": [
+        { "visual": "Procesos de RRHH: \n- Onboarding (Proceso de integración / El proceso de incorporar a un nuevo empleado a la empresa). \nEj: Our onboarding process takes three weeks. \n- Performance review (Evaluación de desempeño / Reunión formal para evaluar el trabajo de un empleado). \nEj: I have my annual performance review tomorrow. \n- Retention (Retención / La capacidad de mantener a los empleados en la empresa). \nEj: High salaries improve employee retention.", "audio": "Human Resources Processes. 'Onboarding' is the process of integrating a new employee into a company. For example: Our onboarding process takes three weeks. A 'Performance review' is a formal assessment of an employee's work. For example: I have my annual performance review tomorrow. 'Retention' refers to the ability of an organization to keep its employees. For example: High salaries improve employee retention." },
+        { "visual": "Compensación y Salida: \n- Severance package (Indemnización / Compensación económica que se le da a un empleado al ser despedido). \nEj: After being laid off, he received a generous severance package. \n- Redundancy (Despido por reestructuración / Cuando un puesto de trabajo ya no es necesario). \nEj: Due to automation, 50 jobs were made redundant. \n- Headhunter (Cazatalentos / Un reclutador especializado que busca candidatos para posiciones directivas). \nEj: A headhunter contacted her about a VP role at Google.", "audio": "Compensation and Exit. A 'Severance package' is a payment or other compensation offered to an employee upon dismissal. For example: After being laid off, he received a generous severance package. 'Redundancy' occurs when a job is no longer needed, often due to restructuring. For example: Due to automation, 50 jobs were made redundant. A 'Headhunter' is a recruiter who specializes in finding candidates for senior positions. For example: A headhunter contacted her about a VP role at Google." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de Recursos Humanos correcto.",
+      "questions": [
+        { "id": "c1-18-q1", "type": "quiz_choice", "question": "The process of welcoming and integrating new employees into the company is called ____. (Incorporación).", "options": ["onboarding", "boarding", "enrollment", "induction"], "correct_answer": "onboarding", "explanation": "Onboarding = proceso de integración de nuevos empleados." },
+        { "id": "c1-18-q2", "type": "quiz_choice", "question": "My manager will assess my progress in my annual ____ review. (Evaluación de desempeño).", "options": ["performance", "perform", "professional", "personnel"], "correct_answer": "performance", "explanation": "Performance review = evaluación de desempeño." },
+        { "id": "c1-18-q3", "type": "quiz_choice", "question": "Offering flexible working hours is a great strategy to improve employee ____. (Retención).", "options": ["retention", "attention", "detention", "contention"], "correct_answer": "retention", "explanation": "Employee retention = retención de empleados." },
+        { "id": "c1-18-q4", "type": "quiz_choice", "question": "After 15 years at the company, he was laid off with a generous ____ package. (Indemnización).", "options": ["severance", "several", "severe", "service"], "correct_answer": "severance", "explanation": "Severance package = paquete de indemnización por despido." },
+        { "id": "c1-18-q5", "type": "quiz_choice", "question": "The factory closed and 200 positions were made ____. (Innecesarios / Suprimidos).", "options": ["redundant", "reduced", "resigned", "retired"], "correct_answer": "redundant", "explanation": "Made redundant = suprimido (el puesto ya no existe)." },
+        { "id": "c1-18-q6", "type": "quiz_choice", "question": "A ____ called me to offer me a C-suite position at a rival firm. (Cazatalentos).", "options": ["headhunter", "recruiter", "employer", "HR manager"], "correct_answer": "headhunter", "explanation": "Headhunter = cazatalentos (busca perfiles ejecutivos)." },
+        { "id": "c1-18-q7", "type": "quiz_choice", "question": "A special bonus paid to retain key executives is called a retention ____. (Bonificación de retención).", "options": ["bonus", "package", "scheme", "policy"], "correct_answer": "bonus", "explanation": "Retention bonus = bonificación para que el empleado no se vaya a otra empresa." },
+        { "id": "c1-18-q8", "type": "quiz_choice", "question": "The company needs to hire more people. HR is going to ____ 50 new employees. (Reclutar).", "options": ["recruit", "require", "request", "retain"], "correct_answer": "recruit", "explanation": "Recruit = reclutar, contratar." },
+        { "id": "c1-18-q9", "type": "quiz_choice", "question": "When someone voluntarily leaves their job, they ____. (Renunciar).", "options": ["resign", "retire", "dismiss", "quit"], "correct_answer": "resign", "explanation": "Resign = renunciar formalmente a un puesto." },
+        { "id": "c1-18-q10", "type": "quiz_choice", "question": "The ability of an employee to grow in their career within a company is called career ____. (Desarrollo profesional).", "options": ["development", "progress", "growth", "advancement"], "correct_answer": "development", "explanation": "Career development = desarrollo de carrera." },
+        { "id": "c1-18-q11", "type": "quiz_choice", "question": "The company issued a ____ notice telling 50 employees they would lose their jobs. (Aviso de despido).", "options": ["redundancy", "resign", "retirement", "reduction"], "correct_answer": "redundancy", "explanation": "Redundancy notice = aviso formal de despido por reestructuración." },
+        { "id": "c1-18-q12", "type": "quiz_choice", "question": "The total value of an employee's salary, bonuses, and benefits is called the ____ package. (Paquete de compensación).", "options": ["compensation", "salary", "payroll", "benefit"], "correct_answer": "compensation", "explanation": "Compensation package = paquete de compensación total." },
+        { "id": "c1-18-q13", "type": "quiz_choice", "question": "A ____ is the target an employee must achieve to earn their bonus. (Meta de desempeño / Objetivo).", "options": ["KPI", "CEO", "OKR", "ROI"], "correct_answer": "KPI", "explanation": "KPI = Key Performance Indicator (Indicador Clave de Desempeño)." },
+        { "id": "c1-18-q14", "type": "quiz_choice", "question": "When a company fires many employees at once to cut costs, this is called a ____. (Despido masivo).", "options": ["layoff", "lockout", "leave", "layover"], "correct_answer": "layoff", "explanation": "Layoff = despido masivo por causas económicas, no disciplinarias." },
+        { "id": "c1-18-q15", "type": "quiz_choice", "question": "Allowing employees to work from home is called ____ work. (Trabajo remoto).", "options": ["remote", "virtual", "flexible", "digital"], "correct_answer": "remote", "explanation": "Remote work = trabajo remoto / a distancia." },
+        { "id": "c1-18-q16", "type": "quiz_choice", "question": "A company's written set of rules and guidelines for employees is the employee ____. (Manual del empleado).", "options": ["handbook", "manual", "guidebook", "rulebook"], "correct_answer": "handbook", "explanation": "Employee handbook = manual del empleado." },
+        { "id": "c1-18-q17", "type": "quiz_choice", "question": "The rate at which employees leave and are replaced is called staff ____. (Rotación de personal).", "options": ["turnover", "rotation", "replacement", "exit"], "correct_answer": "turnover", "explanation": "Staff turnover = rotación de personal (qué tan frecuente se remplaza gente)." },
+        { "id": "c1-18-q18", "type": "quiz_choice", "question": "A program to help an employee improve before potential dismissal is a ____ improvement plan. (Plan de mejora de desempeño).", "options": ["performance", "personal", "professional", "productivity"], "correct_answer": "performance", "explanation": "Performance Improvement Plan (PIP) = plan formal de mejora de desempeño." },
+        { "id": "c1-18-q19", "type": "quiz_choice", "question": "When an employee leaves voluntarily to work for a competitor, it is called ____. (Fuga de talento).", "options": ["brain drain", "talent loss", "staff exit", "head loss"], "correct_answer": "brain drain", "explanation": "Brain drain = fuga de cerebros/talento (a otra empresa o país)." },
+        { "id": "c1-18-q20", "type": "quiz_choice", "question": "The department responsible for managing employees, contracts, and payroll is called ____. (Recursos Humanos).", "options": ["Human Resources", "General Affairs", "Staff Management", "People Operations"], "correct_answer": "Human Resources", "explanation": "Human Resources (HR) = Recursos Humanos." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término de RRHH correcto.",
+      "questions": [
+        { "id": "c1-18-f1", "type": "fill_input", "question": "Employee ____. (Incorporación de nuevos con O)", "correct_answer": "onboarding", "explanation": "onboarding." },
+        { "id": "c1-18-f2", "type": "fill_input", "question": "____ review. (Evaluación de desempeño con P)", "correct_answer": "Performance", "explanation": "Performance." },
+        { "id": "c1-18-f3", "type": "fill_input", "question": "Employee ____. (Retención con R)", "correct_answer": "retention", "explanation": "retention." },
+        { "id": "c1-18-f4", "type": "fill_input", "question": "____ package. (Indemnización con S)", "correct_answer": "Severance", "explanation": "Severance." },
+        { "id": "c1-18-f5", "type": "fill_input", "question": "Made ____. (Suprimido/Innecesario con R)", "correct_answer": "redundant", "explanation": "redundant." },
+        { "id": "c1-18-f6", "type": "fill_input", "question": "A ____. (Cazatalentos con H)", "correct_answer": "headhunter", "explanation": "headhunter." },
+        { "id": "c1-18-f7", "type": "fill_input", "question": "A mass ____. (Despido masivo con L)", "correct_answer": "layoff", "explanation": "layoff." },
+        { "id": "c1-18-f8", "type": "fill_input", "question": "Staff ____. (Rotación de personal con T)", "correct_answer": "turnover", "explanation": "turnover." },
+        { "id": "c1-18-f9", "type": "fill_input", "question": "Brain ____. (Fuga de talento con D)", "correct_answer": "drain", "explanation": "drain." },
+        { "id": "c1-18-f10", "type": "fill_input", "question": "Human ____. (Recursos Humanos con R)", "correct_answer": "Resources", "explanation": "Resources." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "HR Terms Match",
+      "pairs": [
+        {"id": "c1-18-p1", "source": "Onboarding", "target": "Integración de nuevos empleados"},
+        {"id": "c1-18-p2", "source": "Performance review", "target": "Evaluación de desempeño"},
+        {"id": "c1-18-p3", "source": "Employee retention", "target": "Retención de personal"},
+        {"id": "c1-18-p4", "source": "Severance package", "target": "Indemnización por despido"},
+        {"id": "c1-18-p5", "source": "Made redundant", "target": "Puesto suprimido / Despido por reestructuración"},
+        {"id": "c1-18-p6", "source": "Headhunter", "target": "Cazatalentos"},
+        {"id": "c1-18-p7", "source": "Layoff", "target": "Despido masivo por razones económicas"},
+        {"id": "c1-18-p8", "source": "Staff turnover", "target": "Rotación de personal"},
+        {"id": "c1-18-p9", "source": "Brain drain", "target": "Fuga de cerebros / talento"},
+        {"id": "c1-18-p10", "source": "KPI", "target": "Indicador Clave de Desempeño"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término de RRHH correcto.",
+      "questions": [
+        { "id": "c1-18-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our onboarding takes three weeks.", "options": ["Our onboarding takes three weeks.", "Their onboarding takes three weeks.", "Our onboarding took three weeks.", "Our induction takes three weeks."], "correct_answer": "Our onboarding takes three weeks.", "explanation": "Audio exacto." },
+        { "id": "c1-18-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My performance review is tomorrow.", "options": ["My performance review is tomorrow.", "My performance review was tomorrow.", "My annual review is tomorrow.", "Your performance review is tomorrow."], "correct_answer": "My performance review is tomorrow.", "explanation": "Audio exacto." },
+        { "id": "c1-18-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Employee retention is crucial.", "options": ["Employee retention is crucial.", "Staff retention is crucial.", "Employee retention was crucial.", "Employee retention is critical."], "correct_answer": "Employee retention is crucial.", "explanation": "Audio exacto." },
+        { "id": "c1-18-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He received a severance package.", "options": ["He received a severance package.", "She received a severance package.", "He received the severance package.", "He got a severance package."], "correct_answer": "He received a severance package.", "explanation": "Audio exacto." },
+        { "id": "c1-18-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Fifty jobs were made redundant.", "options": ["Fifty jobs were made redundant.", "Five jobs were made redundant.", "Fifty staff were made redundant.", "Fifty jobs are made redundant."], "correct_answer": "Fifty jobs were made redundant.", "explanation": "Audio exacto." },
+        { "id": "c1-18-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A headhunter called me yesterday.", "options": ["A headhunter called me yesterday.", "The headhunter called me yesterday.", "A recruiter called me yesterday.", "A headhunter called her yesterday."], "correct_answer": "A headhunter called me yesterday.", "explanation": "Audio exacto." },
+        { "id": "c1-18-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company announced a major layoff.", "options": ["The company announced a major layoff.", "The company announced a mass layoff.", "The company announced a major layoff.", "The firm announced a major layoff."], "correct_answer": "The company announced a major layoff.", "explanation": "Audio exacto." },
+        { "id": "c1-18-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "High staff turnover is a problem.", "options": ["High staff turnover is a problem.", "High staff turnover was a problem.", "Low staff turnover is a problem.", "High employee turnover is a problem."], "correct_answer": "High staff turnover is a problem.", "explanation": "Audio exacto." },
+        { "id": "c1-18-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This causes a brain drain.", "options": ["This causes a brain drain.", "This caused a brain drain.", "That causes a brain drain.", "This creates a brain drain."], "correct_answer": "This causes a brain drain.", "explanation": "Audio exacto." },
+        { "id": "c1-18-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "HR handles all contracts.", "options": ["HR handles all contracts.", "HR managed all contracts.", "HR handles some contracts.", "The HR handles all contracts."], "correct_answer": "HR handles all contracts.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

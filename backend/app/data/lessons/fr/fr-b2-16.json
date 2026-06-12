@@ -1,602 +1,81 @@
 {
   "id": "fr-b2-16",
-  "title": "Disculparse Profesionalmente",
+  "title": "La Voix Passive",
+  "version": "4.0-ARTISAN",
   "level": "B2",
-  "description": "Redacción de disculpas formales ante fallos.",
-  "total_xp": 300,
-  "difficulty": "medium",
-  "tags": [
-    "b2",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Passive Voice", "Journalism"],
+  "completion_message": "¡Excelente! Has dominado la voz pasiva. Ahora puedes escribir informes formales y reportajes periodísticos como un verdadero profesional francófono.",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Disculparse Profesionalmente",
+      "title": "El Estilo Periodístico (B2)",
       "parts": [
         {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau B2 • Leçon B2-16 de 200\nSujet: Disculparse Profesionalmente\n\nConcept Clé:\n☞ 'EXCUSER'\n\n[Point Grammatical - Enfoque Gramatical]\n- Le futur simple pour les projections professionnelles ('nous développerons excuser').\\n- Le conditionnel présent pour formuler des demandes polies ou suggestions ('je voudrais revoir excuser').\\n- Clé Didactique : Formulation de plans à moyen terme et requêtes formelles auprès des clients.",
-          "audio": "Bienvenue à la leçon B2-16 sur Disculparse Profesionalmente. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : excuser."
+          "visual": "La Voix Passive (La Voz Pasiva):\n\nSe usa para darle importancia al OBJETO que recibe la acción, en lugar de quien la hace. Es muy común en las noticias.\n\nFórmula:\nSujeto Paciente + ÊTRE (en el tiempo de la acción) + PARTICIPE PASSÉ + (Par / De + Agente).\n\nEjemplos con el verbo Vendre (Vender):\n- Presente: La maison EST vendue. (La casa es vendida).\n- Passé Composé: La maison A ÉTÉ vendue. (Ha sido vendida).\n- Imperfecto: La maison ÉTAIT vendue. (Era vendida).\n- Futuro: La maison SERA vendue. (Será vendida).\n\n¡OJO! El participio pasado SIEMPRE concuerda en género y número con el nuevo sujeto. (Maison es femenino -> vendue).",
+          "audio": "En el francés de la calle, la gente casi siempre usa la voz activa: 'El gato se comió al ratón' (Le chat a mangé la souris). Pero en el nivel B2 te preparas para leer periódicos, redactar informes y hablar en un contexto profesional. Ahí domina la Voz Pasiva: 'El ratón fue comido por el gato' (La souris a été mangée par le chat). Para formar la pasiva, el verbo ÊTRE absorbe el tiempo original. Si la acción ocurrió en el pasado (Passé Composé), dices 'A ÉTÉ'. Si ocurrirá en el futuro, dices 'SERA'. Y la regla de oro, la que nunca puedes olvidar: como usas el verbo Être, el participio final siempre, siempre tiene que concordar con el sujeto. Si la casa fue vendida, casa es femenina, así que 'vendue' lleva una 'e' extra."
         },
         {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'excuser' (Traducción/Uso: Redacción de disculpas formales ante fallos.)\n- Application Pratique : 'Nous devons intégrer excuser pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : Le son de la lettre 'r' en français se prononce au fond de la gorge pour 'excuser'.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : excuser. Répétez après moi : excuser."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Au niveau B2, soignez l'étiquette téléphonique en commençant vos appels par des salutations formelles et claires.\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
+          "visual": "El Agente: ¿PAR o DE?\n\n¿Cómo decimos 'POR' en francés en la voz pasiva?\n\n1. Usamos PAR para acciones físicas y precisas:\n- La banque a été braquée PAR des voleurs. (El banco fue asaltado por ladrones).\n- Le livre a été écrit PAR Victor Hugo. (El libro fue escrito por...)\n\n2. Usamos DE para sentimientos, descripciones o estados prolongados:\n- Le professeur est respecté DE tous ses élèves. (Es respetado por todos sus alumnos).\n- La montagne est couverte DE neige. (Está cubierta de nieve).\n- Il est aimé DE sa famille. (Es amado por su familia).",
+          "audio": "Ahora viene el detalle avanzado. Cuando quieres mencionar quién hizo la acción, normalmente usas la palabra PAR. 'El banco fue asaltado POR ladrones' (Par des voleurs). 'El libro fue escrito POR Victor Hugo' (Par Victor Hugo). Esto aplica para el 90% de los casos, siempre que sea una acción física o un evento puntual. Sin embargo, hay una excepción muy elegante. Si el verbo expresa un sentimiento, como amar, odiar o respetar, los franceses no usan PAR, usan DE. 'El profesor es respetado POR sus alumnos' se dice 'Le professeur est respecté DE ses élèves'. Y lo mismo aplica para descripciones físicas estáticas: 'La montaña está cubierta DE nieve' (couverte de neige). Dominar cuándo usar PAR y cuándo usar DE es lo que delata tu nivel B2."
         }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Transforma las oraciones a voz pasiva y elige la preposición correcta.",
       "questions": [
-        {
-          "id": "fr-b2-16-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"excuser\" dans le contexte de \"Disculparse Profesionalmente\" ?",
-          "options": [
-            "Le concept professionnel principal de excuser utilisé dans Disculparse Profesionalmente.",
-            "Un terme familier à éviter dans Disculparse Profesionalmente.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Disculparse Profesionalmente."
-          ],
-          "correct_answer": "Le concept professionnel principal de excuser utilisé dans Disculparse Profesionalmente.",
-          "explanation": "Comprendre la définition de \"excuser\" est fondamental pour maîtriser \"Disculparse Profesionalmente\"."
-        },
-        {
-          "id": "fr-b2-16-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"excuser\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Disculparse Profesionalmente\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"excuser\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Disculparse Profesionalmente\" aux parties prenantes.",
-          "explanation": "Aborder \"excuser\" dans les présentations professionnelles améliore la communication globale concernant \"Disculparse Profesionalmente\"."
-        },
-        {
-          "id": "fr-b2-16-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Disculparse Profesionalmente\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"excuser\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"excuser\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"excuser\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"excuser\" sont los piliers d'une exécution réussie de \"Disculparse Profesionalmente\"."
-        },
-        {
-          "id": "fr-b2-16-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Disculparse Profesionalmente\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"excuser\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"excuser\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"excuser\" conduit souvent à des résultats inefficaces dans \"Disculparse Profesionalmente\"."
-        },
-        {
-          "id": "fr-b2-16-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"excuser\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"excuser\" adapté à l'environnement de \"Disculparse Profesionalmente\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"excuser\" adapté à l'environnement de \"Disculparse Profesionalmente\".",
-          "explanation": "Traduire ou adapter \"excuser\" nécessite de comprendre son application commerciale pratique dans \"Disculparse Profesionalmente\"."
-        },
-        {
-          "id": "fr-b2-16-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"excuser\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Disculparse Profesionalmente\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Disculparse Profesionalmente\".",
-          "explanation": "Utiliser \"excuser\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-b2-16-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Disculparse Profesionalmente\", comment un cadre doit-il présenter \"excuser\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"excuser\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-b2-16-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"excuser\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"excuser\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"excuser\".",
-          "explanation": "Définir les jalons liés à \"excuser\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-b2-16-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Disculparse Profesionalmente\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"excuser\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"excuser\".",
-          "explanation": "Les mots professionnels comme \"excuser\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-b2-16-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"excuser\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"excuser\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "frb2-16-q1", "type": "quiz_choice", "question": "Activa: La police arrête le voleur. (Presente). \nPasiva: Le voleur ____ par la police.", "options": ["est arrêté", "a été arrêté", "sera arrêté", "était arrêté"], "correct_answer": "est arrêté", "explanation": "El verbo original está en presente, así que la pasiva usa Être en presente (est) + participio (arrêté)." },
+        { "id": "frb2-16-q2", "type": "quiz_choice", "question": "Activa: La police A ARRÊTÉ le voleur. (Passé composé). \nPasiva: Le voleur ____ par la police.", "options": ["a été arrêté", "est arrêté", "avait été arrêté", "fut arrêté"], "correct_answer": "a été arrêté", "explanation": "El verbo original está en Passé Composé, Être pasa a 'a été'." },
+        { "id": "frb2-16-q3", "type": "quiz_choice", "question": "Activa: L'architecte CONSTRUIRA la maison. (Futuro). \nPasiva: La maison ____ par l'architecte.", "options": ["sera construite", "est construite", "a été construite", "serait construite"], "correct_answer": "sera construite", "explanation": "El verbo original está en futuro, Être pasa a futuro (sera). ¡Ojo con la concordancia: construite (fem)!" },
+        { "id": "frb2-16-q4", "type": "quiz_choice", "question": "Activa: Le vent DÉTRUISAIT les arbres. (Imperfecto). \nPasiva: Les arbres ____ par le vent.", "options": ["étaient détruits", "sont détruits", "ont été détruits", "seront détruits"], "correct_answer": "étaient détruits", "explanation": "El verbo original está en imperfecto, Être pasa a imperfecto (étaient)." },
+        { "id": "frb2-16-q5", "type": "quiz_choice", "question": "Le président est très respecté ____ citoyens. (Sentimiento / Actitud general).", "options": ["de ses", "par ses", "à ses", "pour ses"], "correct_answer": "de ses", "explanation": "Los verbos de sentimiento o actitud (aimé, respecté, détesté) toman la preposición 'de'." },
+        { "id": "frb2-16-q6", "type": "quiz_choice", "question": "Le tableau a été peint ____ Picasso. (Acción física específica).", "options": ["par", "de", "pour", "à"], "correct_answer": "par", "explanation": "Acciones específicas y creadores toman 'par'." },
+        { "id": "frb2-16-q7", "type": "quiz_choice", "question": "La route est bordée ____ grands arbres. (Descripción estática).", "options": ["de", "par", "avec", "en"], "correct_answer": "de", "explanation": "Las descripciones físicas de estado (bordé de, entouré de, rempli de) toman 'de'." },
+        { "id": "frb2-16-q8", "type": "quiz_choice", "question": "La lettre ____ (escribir - Passé Composé) par la secrétaire.", "options": ["a été écrite", "a été écrit", "est écrit", "était écrite"], "correct_answer": "a été écrite", "explanation": "Passé composé (a été) + concordancia con 'La lettre' (écrite)." },
+        { "id": "frb2-16-q9", "type": "quiz_choice", "question": "Les résultats ____ (anunciar - Futuro) demain matin.", "options": ["seront annoncés", "seront annoncé", "sont annoncés", "ont été annoncés"], "correct_answer": "seront annoncés", "explanation": "Futuro (seront) + concordancia con 'Les résultats' masc pl (annoncés)." },
+        { "id": "frb2-16-q10", "type": "quiz_choice", "question": "La voiture ____ (reparar - Plus-que-parfait) avant mon arrivée.", "options": ["avait été réparée", "a été réparée", "était réparée", "avait réparé"], "correct_answer": "avait été réparée", "explanation": "Plus-que-parfait (avait été) + concordancia con 'La voiture' (réparée)." },
+        { "id": "frb2-16-q11", "type": "quiz_choice", "question": "Cet acteur est connu ____ monde entier. (Estado / Descripción general).", "options": ["du", "par le", "au", "pour le"], "correct_answer": "du", "explanation": "Connu DE (de + le = du)." },
+        { "id": "frb2-16-q12", "type": "quiz_choice", "question": "Les lois ____ (votar - Presente) par l'Assemblée.", "options": ["sont votées", "est votées", "sont voté", "ont été votées"], "correct_answer": "sont votées", "explanation": "Presente (sont) + concordancia fem pl (votées)." },
+        { "id": "frb2-16-q13", "type": "quiz_choice", "question": "Activa: On a trouvé les clés. (Se encontraron las llaves - Passé composé).\nPasiva: Les clés ____.", "options": ["ont été trouvées", "sont trouvées", "ont trouvé", "avaient été trouvées"], "correct_answer": "ont été trouvées", "explanation": "Passé composé (ont été) + concordancia fem pl (trouvées)." },
+        { "id": "frb2-16-q14", "type": "quiz_choice", "question": "La ville est entourée ____ montagnes. (Rodeada DE).", "options": ["de", "par", "des", "aux"], "correct_answer": "de", "explanation": "Descripción física pasiva (entouré de)." },
+        { "id": "frb2-16-q15", "type": "quiz_choice", "question": "Il a été mordu ____ un chien. (Acción física específica).", "options": ["par", "de", "avec", "pour"], "correct_answer": "par", "explanation": "Acción física -> par." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Conjuga el verbo en voz pasiva o escribe la preposición correcta (par / de).",
       "questions": [
-        {
-          "id": "fr-b2-16-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"excuser\" (Exercice 1) :",
-          "parts": [
-            "implémenter",
-            "votre",
-            "excuser",
-            "pour",
-            "optimiser",
-            "le",
-            "travail.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "implémenter",
-            "votre",
-            "excuser",
-            "pour",
-            "optimiser",
-            "le",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"excuser\"."
-        },
-        {
-          "id": "fr-b2-16-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"excuser\" (Exercice 2) :",
-          "parts": [
-            "actuelle",
-            "privilégie",
-            "votre",
-            "excuser",
-            "pour",
-            "le",
-            "client.",
-            "Notre",
-            "stratégie"
-          ],
-          "correct_order": [
-            "Notre",
-            "stratégie",
-            "actuelle",
-            "privilégie",
-            "votre",
-            "excuser",
-            "pour",
-            "le",
-            "client."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"excuser\"."
-        },
-        {
-          "id": "fr-b2-16-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"excuser\" (Exercice 3) :",
-          "parts": [
-            "coordonner",
-            "avec",
-            "l'équipe",
-            "concernant",
-            "notre",
-            "excuser.",
-            "Veuillez",
-            "vous"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "vous",
-            "coordonner",
-            "avec",
-            "l'équipe",
-            "concernant",
-            "notre",
-            "excuser."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"excuser\"."
-        },
-        {
-          "id": "fr-b2-16-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"excuser\" (Exercice 4) :",
-          "parts": [
-            "réunion",
-            "rapide",
-            "pour",
-            "discuter",
-            "de",
-            "notre",
-            "excuser.",
-            "Planifions",
-            "une"
-          ],
-          "correct_order": [
-            "Planifions",
-            "une",
-            "réunion",
-            "rapide",
-            "pour",
-            "discuter",
-            "de",
-            "notre",
-            "excuser."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"excuser\"."
-        },
-        {
-          "id": "fr-b2-16-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"excuser\" (Exercice 5) :",
-          "parts": [
-            "de",
-            "projet",
-            "demande",
-            "un",
-            "rapport",
-            "sur",
-            "notre",
-            "excuser.",
-            "Le",
-            "chef"
-          ],
-          "correct_order": [
-            "Le",
-            "chef",
-            "de",
-            "projet",
-            "demande",
-            "un",
-            "rapport",
-            "sur",
-            "notre",
-            "excuser."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"excuser\"."
-        },
-        {
-          "id": "fr-b2-16-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"excuser\" (Exercice 6) :",
-          "parts": [
-            "analyser",
-            "comment",
-            "notre",
-            "excuser",
-            "influence",
-            "le",
-            "budget.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "analyser",
-            "comment",
-            "notre",
-            "excuser",
-            "influence",
-            "le",
-            "budget."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"excuser\"."
-        },
-        {
-          "id": "fr-b2-16-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"excuser\" (Exercice 7) :",
-          "parts": [
-            "le",
-            "calendrier",
-            "pour",
-            "livrer",
-            "notre",
-            "excuser ?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "le",
-            "calendrier",
-            "pour",
-            "livrer",
-            "notre",
-            "excuser ?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"excuser\"."
-        },
-        {
-          "id": "fr-b2-16-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"excuser\" (Exercice 8) :",
-          "parts": [
-            "s'aligne",
-            "avec",
-            "les",
-            "objectifs",
-            "de",
-            "notre",
-            "excuser.",
-            "Cette",
-            "initiative"
-          ],
-          "correct_order": [
-            "Cette",
-            "initiative",
-            "s'aligne",
-            "avec",
-            "les",
-            "objectifs",
-            "de",
-            "notre",
-            "excuser."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"excuser\"."
-        },
-        {
-          "id": "fr-b2-16-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"excuser\" (Exercice 9) :",
-          "parts": [
-            "décidé",
-            "d'externaliser",
-            "la",
-            "gestion",
-            "de",
-            "notre",
-            "excuser.",
-            "Ils",
-            "ont"
-          ],
-          "correct_order": [
-            "Ils",
-            "ont",
-            "décidé",
-            "d'externaliser",
-            "la",
-            "gestion",
-            "de",
-            "notre",
-            "excuser."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"excuser\"."
-        },
-        {
-          "id": "fr-b2-16-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"excuser\" (Exercice 10) :",
-          "parts": [
-            "nous",
-            "concentrer",
-            "sur",
-            "l'amélioration",
-            "de",
-            "notre",
-            "excuser.",
-            "Nous",
-            "devrions"
-          ],
-          "correct_order": [
-            "Nous",
-            "devrions",
-            "nous",
-            "concentrer",
-            "sur",
-            "l'amélioration",
-            "de",
-            "notre",
-            "excuser."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"excuser\"."
-        }
+        { "id": "frb2-16-f1", "type": "fill_input", "question": "La porte a ____ (être en Passé Composé) fermée par le gardien.", "correct_answer": "été", "explanation": "été" },
+        { "id": "frb2-16-f2", "type": "fill_input", "question": "Les murs ____ (être en Futuro) peints demain.", "correct_answer": "seront", "explanation": "seront" },
+        { "id": "frb2-16-f3", "type": "fill_input", "question": "La pomme est ____ (manger - ¡Haz la concordancia!) par l'enfant.", "correct_answer": "mangée", "explanation": "mangée" },
+        { "id": "frb2-16-f4", "type": "fill_input", "question": "Les maisons ont été ____ (détruire - concordancia fem. pl.) par la tempête.", "correct_answer": "détruites", "explanation": "détruites" },
+        { "id": "frb2-16-f5", "type": "fill_input", "question": "Il est détesté ____ tous ses collègues. (Preposición de sentimiento).", "correct_answer": "de", "explanation": "de" },
+        { "id": "frb2-16-f6", "type": "fill_input", "question": "Le colis a été livré ____ le facteur. (Preposición de acción física).", "correct_answer": "par", "explanation": "par" },
+        { "id": "frb2-16-f7", "type": "fill_input", "question": "La table est couverte ____ poussière. (Descripción de estado).", "correct_answer": "de", "explanation": "de" },
+        { "id": "frb2-16-f8", "type": "fill_input", "question": "Ce livre a été écrit ____ mon auteur préféré.", "correct_answer": "par", "explanation": "par" },
+        { "id": "frb2-16-f9", "type": "fill_input", "question": "Les fenêtres ____ (être en Imperfecto) ouvertes.", "correct_answer": "étaient", "explanation": "étaient" },
+        { "id": "frb2-16-f10", "type": "fill_input", "question": "Les billets ____ (être en Plus-que-parfait) vendus avant midi.", "correct_answer": "avaient été", "explanation": "avaient été" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-b2-16-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"excuser\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"excuser\" en détail.",
-            "Une autre déclaration sur notre \"excuser\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"excuser\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"excuser\" en réunion."
-        },
-        {
-          "id": "fr-b2-16-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"excuser\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"excuser\" ?",
-            "Une autre déclaration sur notre \"excuser\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"excuser\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"excuser\" en réunion."
-        },
-        {
-          "id": "fr-b2-16-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"excuser\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"excuser\" cette année.",
-            "Une autre déclaration sur notre \"excuser\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"excuser\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"excuser\" en réunion."
-        },
-        {
-          "id": "fr-b2-16-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"excuser\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"excuser\".",
-            "Une autre déclaration sur notre \"excuser\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"excuser\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"excuser\" en réunion."
-        },
-        {
-          "id": "fr-b2-16-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"excuser\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"excuser\".",
-            "Une autre déclaration sur notre \"excuser\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"excuser\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"excuser\" en réunion."
-        }
-      ]
-    },
-    {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
-      "questions": [
-        {
-          "id": "fr-b2-16-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"exc____\" (Indice : désigne \"excuser\")",
-          "correct_answers": [
-            "excuser",
-            "Excuser"
-          ],
-          "hints": [
-            "Commence par 'exc'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"excuser\"."
-        },
-        {
-          "id": "fr-b2-16-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Notre stratégie actuelle concernant notre excuser dépend ____ l'équipe.\" (de / par)",
-          "correct_answers": [
-            "de",
-            "d'"
-          ],
-          "hints": [
-            "Préposition après le verbe dépendre"
-          ],
-          "explanation": "Le verbe dépendre se construit avec la préposition de."
-        },
-        {
-          "id": "fr-b2-16-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons ____ nos ressources pour améliorer notre excuser.\" (allouer / ignorer)",
-          "correct_answers": [
-            "allouer",
-            "Allouer"
-          ],
-          "hints": [
-            "Distribuer ou attribuer des ressources"
-          ],
-          "explanation": "Allouer des ressources signifie les dédier stratégiquement."
-        },
-        {
-          "id": "fr-b2-16-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Le responsable de département a demandé une ____ sur notre excuser.\" (mise à jour / pause)",
-          "correct_answers": [
-            "mise à jour",
-            "analyse",
-            "évaluation"
-          ],
-          "hints": [
-            "Dernières informations sur l'état d'avancement"
-          ],
-          "explanation": "Une 'mise à jour' est essentielle pour suivre le statut d'un projet."
-        },
-        {
-          "id": "fr-b2-16-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Établir un cadre ____ pour notre excuser est notre priorité.\" (solide / simple)",
-          "correct_answers": [
-            "solide"
-          ],
-          "hints": [
-            "Robuste, stable et bien défini"
-          ],
-          "explanation": "Un cadre 'solide' prévient les risques et dérives futures."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Passive Tense Match",
+      "pairs": [
+        {"id": "frb2-16-p1", "source": "La maison est vendue", "target": "La casa es vendida (Presente)"},
+        {"id": "frb2-16-p2", "source": "La maison a été vendue", "target": "La casa ha sido vendida (Passé Composé)"},
+        {"id": "frb2-16-p3", "source": "La maison sera vendue", "target": "La casa será vendida (Futuro)"},
+        {"id": "frb2-16-p4", "source": "La maison était vendue", "target": "La casa era vendida (Imperfecto)"},
+        {"id": "frb2-16-p5", "source": "Aimé de", "target": "Amado por (Sentimiento)"},
+        {"id": "frb2-16-p6", "source": "Construit par", "target": "Construido por (Acción)"},
+        {"id": "frb2-16-p7", "source": "Entouré de", "target": "Rodeado de (Estado)"},
+        {"id": "frb2-16-p8", "source": "Les lettres sont écrites", "target": "Las cartas son escritas (Concordancia)"}
       ]
     }
   ]

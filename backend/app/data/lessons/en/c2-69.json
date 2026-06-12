@@ -1,0 +1,101 @@
+{
+  "id": "c2-69",
+  "title": "Diplomacy & Conflict",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Diplomacy", "Communication", "Management"],
+  "completion_message": "¡Excelente! Resolver conflictos y calmar ánimos es la habilidad suprema de un director. Ya sabes cómo 'verter aceite sobre aguas turbulentas' y desescalar cualquier bomba en la oficina.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Diplomacia y Resolución de Conflictos (C2)",
+      "parts": [
+        { "visual": "Los negocios internacionales a menudo involucran choques de ego y tensión. Un líder de nivel C2 sabe cómo desescalar. \n\n1. De-escalate (Desescalar / Reducir la tensión): \n- Disminuir la intensidad de un conflicto. \nEj: The manager stepped in to DE-ESCALATE the argument between the engineers. \n\n2. Pour oil on troubled waters (Calmar las aguas): \n- Hacer o decir algo para calmar una situación tensa. \nEj: She tried to POUR OIL ON TROUBLED WATERS by offering a compromise. \n\n3. Let cooler heads prevail (Dejar que la calma prevalezca): \n- Esperar a que la gente se tranquilice y piense lógicamente en lugar de actuar con ira. \nEj: We shouldn't reply to their angry email today. Let's LET COOLER HEADS PREVAIL.", "audio": "Welcome to Diplomacy and Defusing Conflict. International business often involves ego clashes and high tension. A C2-level leader knows how to defuse it. Number 1: De-escalate. To decrease the intensity, magnitude, or tension of a conflict. For example: The manager stepped in to DE-ESCALATE the argument between the engineers. Number 2: Pour oil on troubled waters. An idiom meaning to do or say something to calm a tense or angry situation. For example: She tried to POUR OIL ON TROUBLED WATERS by offering a compromise. Number 3: Let cooler heads prevail. This means to wait for people to calm down and think logically instead of acting in anger. For example: We shouldn't reply to their angry email today. Let's LET COOLER HEADS PREVAIL." },
+        { "visual": "4. Find common ground (Encontrar puntos en común): \n- Encontrar intereses compartidos para empezar a negociar. \nEj: We disagree on the price, but let's FIND COMMON GROUND on the delivery date. \n\n5. Meet in the middle / Meet halfway (Llegar a un punto medio): \n- Hacer concesiones mutuas. \nEj: Since we can't agree, let's just MEET IN THE MIDDLE. \n\n6. Bury the hatchet (Enterrar el hacha de guerra): \n- Hacer las paces y olvidar viejos rencores. \nEj: After years of corporate rivalry, Apple and Microsoft BURIED THE HATCHET. \n\n7. Play devil's advocate (Ser el abogado del diablo): \n- Expresar una opinión contraria solo para provocar debate y probar la fuerza del argumento original. \nEj: I agree with you, but let me PLAY DEVIL'S ADVOCATE for a moment.", "audio": "Number 4: Find common ground. To find shared interests or opinions to start a negotiation or end an argument. For example: We disagree on the price, but let's FIND COMMON GROUND on the delivery date. Number 5: Meet in the middle, or meet halfway. To compromise by making mutual concessions. For example: Since we can't agree, let's just MEET IN THE MIDDLE. Number 6: Bury the hatchet. To make peace and forget old grudges or rivalries. For example: After years of corporate rivalry, Apple and Microsoft BURIED THE HATCHET. Finally, Number 7: Play devil's advocate. To express a contrary opinion, not because you believe it, but to provoke debate and test the strength of the original argument. For example: I agree with you, but let me PLAY DEVIL'S ADVOCATE for a moment." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la expresión diplomática correcta.",
+      "questions": [
+        { "id": "c2-69-q1", "type": "quiz_choice", "question": "The argument in the boardroom was getting violent, so the CEO stepped in to ____ the situation. (Desescalar).", "options": ["de-escalate", "escalate", "elevate", "reduce"], "correct_answer": "de-escalate", "explanation": "De-escalate = reducir la tensión." },
+        { "id": "c2-69-q2", "type": "quiz_choice", "question": "The team was furious about the bonus cuts. The HR director tried to pour ____ on troubled waters by offering extra vacation days.", "options": ["oil", "water", "salt", "fire"], "correct_answer": "oil", "explanation": "Pour oil on troubled waters = calmar los ánimos." },
+        { "id": "c2-69-q3", "type": "quiz_choice", "question": "Everyone is shouting. Let's take a 10-minute break and let cooler heads ____. (Prevalecer/Calmarse).", "options": ["prevail", "win", "fail", "stop"], "correct_answer": "prevail", "explanation": "Let cooler heads prevail = dejar que la calma y la lógica ganen." },
+        { "id": "c2-69-q4", "type": "quiz_choice", "question": "We have very different political views, but we can find common ____ when it comes to the economy. (Puntos en común).", "options": ["ground", "earth", "land", "soil"], "correct_answer": "ground", "explanation": "Find common ground = encontrar terreno común." },
+        { "id": "c2-69-q5", "type": "quiz_choice", "question": "You want the contract to last 5 years, I want 1 year. Let's meet in the ____ and sign for 3 years. (Llegar a un punto medio).", "options": ["middle", "center", "half", "core"], "correct_answer": "middle", "explanation": "Meet in the middle = llegar a un acuerdo cediendo ambas partes." },
+        { "id": "c2-69-q6", "type": "quiz_choice", "question": "The two founders hated each other for a decade, but they finally agreed to bury the ____ and start a new company together.", "options": ["hatchet", "sword", "gun", "knife"], "correct_answer": "hatchet", "explanation": "Bury the hatchet = enterrar el hacha de guerra (hacer las paces)." },
+        { "id": "c2-69-q7", "type": "quiz_choice", "question": "Just to play ____'s advocate, what if our main supplier goes bankrupt tomorrow? Do we have a backup plan?", "options": ["devil", "demon", "angel", "god"], "correct_answer": "devil", "explanation": "Play devil's advocate = abogado del diablo (cuestionar para probar)." },
+        { "id": "c2-69-q8", "type": "quiz_choice", "question": "When someone is very angry and you speak to them calmly to reduce their anger, you ____ them. (Apaciguar).", "options": ["placate", "ignore", "provoke", "insult"], "correct_answer": "placate", "explanation": "Placate = apaciguar, calmar a alguien enojado." },
+        { "id": "c2-69-q9", "type": "quiz_choice", "question": "To give someone exactly what they want in order to avoid a conflict, even if it's unreasonable, is to ____ them. (Apaciguar cediendo/Conceder).", "options": ["appease", "please", "tease", "freeze"], "correct_answer": "appease", "explanation": "Appease = apaciguar cediendo a demandas (a menudo tiene connotación negativa, como mostrar debilidad)." },
+        { "id": "c2-69-q10", "type": "quiz_choice", "question": "A mediator's job is to resolve the ____ between the union and the management. (Disputa/Conflicto).", "options": ["dispute", "debate", "talk", "chat"], "correct_answer": "dispute", "explanation": "Dispute = disputa, controversia." },
+        { "id": "c2-69-q11", "type": "quiz_choice", "question": "When both sides agree to make concessions, they reach a ____. (Compromiso/Acuerdo mutuo).", "options": ["compromise", "promise", "premise", "prize"], "correct_answer": "compromise", "explanation": "Compromise = acuerdo mediante concesiones mutuas (falso amigo: no significa obligación, sino arreglo)." },
+        { "id": "c2-69-q12", "type": "quiz_choice", "question": "Instead of fighting in court, they decided to hire an independent third party for ____. (Arbitraje).", "options": ["arbitration", "investigation", "litigation", "legislation"], "correct_answer": "arbitration", "explanation": "Arbitration = arbitraje (resolución privada de conflictos)." },
+        { "id": "c2-69-q13", "type": "quiz_choice", "question": "To accidentally or intentionally make a bad situation even worse is to add ____ to the fire.", "options": ["fuel", "wood", "water", "wind"], "correct_answer": "fuel", "explanation": "Add fuel to the fire = echar leña al fuego." },
+        { "id": "c2-69-q14", "type": "quiz_choice", "question": "I know you are angry, but please don't burn your ____. You might need a recommendation from this company in the future. (Quemar los puentes).", "options": ["bridges", "boats", "houses", "roads"], "correct_answer": "bridges", "explanation": "Burn your bridges = destruir las relaciones permanentemente al irte." },
+        { "id": "c2-69-q15", "type": "quiz_choice", "question": "He has a massive ego, so you have to walk on ____ when you tell him his idea is bad. (Andar con pies de plomo/cuidado extremo).", "options": ["eggshells", "glass", "ice", "fire"], "correct_answer": "eggshells", "explanation": "Walk on eggshells = ser extremadamente cuidadoso para no ofender (caminar sobre cáscaras de huevo)." },
+        { "id": "c2-69-q16", "type": "quiz_choice", "question": "To clear up a misunderstanding and restore a good relationship is to mend ____. (Reparar las cercas/relaciones).", "options": ["fences", "walls", "doors", "windows"], "correct_answer": "fences", "explanation": "Mend fences = arreglar una relación dañada." },
+        { "id": "c2-69-q17", "type": "quiz_choice", "question": "When a negotiation is completely stuck and no progress can be made, it has reached an ____. (Callejón sin salida/Punto muerto).", "options": ["impasse", "pass", "stop", "end"], "correct_answer": "impasse", "explanation": "Impasse = punto muerto (un término francés muy usado en inglés formal)." },
+        { "id": "c2-69-q18", "type": "quiz_choice", "question": "To avoid answering a direct question by talking about something else is to ____ the issue. (Evadir).", "options": ["dodge", "jump", "hit", "block"], "correct_answer": "dodge", "explanation": "Dodge the issue (o dodge the question) = evadir la pregunta." },
+        { "id": "c2-69-q19", "type": "quiz_choice", "question": "If you are the one who caused the problem, you should swallow your ____ and apologize. (Tragarse el orgullo).", "options": ["pride", "words", "ego", "anger"], "correct_answer": "pride", "explanation": "Swallow your pride = tragarse el orgullo." },
+        { "id": "c2-69-q20", "type": "quiz_choice", "question": "In diplomacy, offering an 'olive ____' means making a gesture of peace or reconciliation.", "options": ["branch", "tree", "leaf", "fruit"], "correct_answer": "branch", "explanation": "Offer an olive branch = ofrecer una rama de olivo (gesto de paz)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave de resolución de conflictos.",
+      "questions": [
+        { "id": "c2-69-f1", "type": "fill_input", "question": "____ the situation. (Desescalar con D)", "correct_answer": "De-escalate", "explanation": "De-escalate." },
+        { "id": "c2-69-f2", "type": "fill_input", "question": "Pour ____ on troubled waters. (Calmar los ánimos con O)", "correct_answer": "oil", "explanation": "oil." },
+        { "id": "c2-69-f3", "type": "fill_input", "question": "Let cooler heads ____. (Prevalecer/Calmarse con P)", "correct_answer": "prevail", "explanation": "prevail." },
+        { "id": "c2-69-f4", "type": "fill_input", "question": "Find common ____. (Puntos en común con G)", "correct_answer": "ground", "explanation": "ground." },
+        { "id": "c2-69-f5", "type": "fill_input", "question": "Bury the ____. (Hacer las paces/Enterrar el hacha con H)", "correct_answer": "hatchet", "explanation": "hatchet." },
+        { "id": "c2-69-f6", "type": "fill_input", "question": "Play ____'s advocate. (Abogado del diablo con D)", "correct_answer": "devil", "explanation": "devil." },
+        { "id": "c2-69-f7", "type": "fill_input", "question": "Reach a ____. (Compromiso/Acuerdo mutuo con C)", "correct_answer": "compromise", "explanation": "compromise." },
+        { "id": "c2-69-f8", "type": "fill_input", "question": "Walk on ____. (Andar con mucho cuidado/pies de plomo con E)", "correct_answer": "eggshells", "explanation": "eggshells." },
+        { "id": "c2-69-f9", "type": "fill_input", "question": "Reach an ____. (Punto muerto/Callejón sin salida con I)", "correct_answer": "impasse", "explanation": "impasse." },
+        { "id": "c2-69-f10", "type": "fill_input", "question": "Offer an olive ____. (Gesto de paz/Rama de olivo con B)", "correct_answer": "branch", "explanation": "branch." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Diplomacy Match",
+      "pairs": [
+        {"id": "c2-69-p1", "source": "De-escalate", "target": "Reducir la tensión de un conflicto"},
+        {"id": "c2-69-p2", "source": "Pour oil on troubled waters", "target": "Calmar una situación muy tensa"},
+        {"id": "c2-69-p3", "source": "Let cooler heads prevail", "target": "Esperar a que se calmen para pensar lógicamente"},
+        {"id": "c2-69-p4", "source": "Bury the hatchet", "target": "Enterrar el hacha de guerra (hacer las paces)"},
+        {"id": "c2-69-p5", "source": "Play devil's advocate", "target": "Defender lo opuesto para probar el argumento"},
+        {"id": "c2-69-p6", "source": "Placate", "target": "Apaciguar a alguien enojado"},
+        {"id": "c2-69-p7", "source": "Compromise", "target": "Llegar a un acuerdo haciendo concesiones"},
+        {"id": "c2-69-p8", "source": "Burn your bridges", "target": "Destruir permanentemente una relación"},
+        {"id": "c2-69-p9", "source": "Walk on eggshells", "target": "Actuar con extremo cuidado para no ofender"},
+        {"id": "c2-69-p10", "source": "Impasse", "target": "Punto muerto en una negociación"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase diplomática.",
+      "questions": [
+        { "id": "c2-69-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must de-escalate the situation.", "options": ["We must de-escalate the situation.", "They must de-escalate the situation.", "We must escalate the situation.", "We must de-escalating the situation."], "correct_answer": "We must de-escalate the situation.", "explanation": "Audio exacto." },
+        { "id": "c2-69-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Pour oil on troubled waters.", "options": ["Pour oil on troubled waters.", "Poured oil on troubled waters.", "Pouring oil on troubled waters.", "Pour oil on the troubled waters."], "correct_answer": "Pour oil on troubled waters.", "explanation": "Audio exacto." },
+        { "id": "c2-69-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let cooler heads prevail.", "options": ["Let cooler heads prevail.", "Let's cooler heads prevail.", "Let cooler head prevail.", "Letting cooler heads prevail."], "correct_answer": "Let cooler heads prevail.", "explanation": "Audio exacto." },
+        { "id": "c2-69-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We found common ground.", "options": ["We found common ground.", "They found common ground.", "We find common ground.", "We found a common ground."], "correct_answer": "We found common ground.", "explanation": "Audio exacto." },
+        { "id": "c2-69-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's bury the hatchet.", "options": ["Let's bury the hatchet.", "Let us bury the hatchet.", "Let's bury a hatchet.", "Let's buried the hatchet."], "correct_answer": "Let's bury the hatchet.", "explanation": "Audio exacto." },
+        { "id": "c2-69-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will play devil's advocate.", "options": ["I will play devil's advocate.", "He will play devil's advocate.", "I would play devil's advocate.", "I will play the devil's advocate."], "correct_answer": "I will play devil's advocate.", "explanation": "Audio exacto." },
+        { "id": "c2-69-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We reached a compromise.", "options": ["We reached a compromise.", "They reached a compromise.", "We reach a compromise.", "We reached the compromise."], "correct_answer": "We reached a compromise.", "explanation": "Audio exacto." },
+        { "id": "c2-69-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do not burn your bridges.", "options": ["Do not burn your bridges.", "Don't burn your bridges.", "Did not burn your bridges.", "Do not burn the bridges."], "correct_answer": "Do not burn your bridges.", "explanation": "Audio exacto." },
+        { "id": "c2-69-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are at an impasse.", "options": ["We are at an impasse.", "They are at an impasse.", "We were at an impasse.", "We are in an impasse."], "correct_answer": "We are at an impasse.", "explanation": "Audio exacto." },
+        { "id": "c2-69-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He offered an olive branch.", "options": ["He offered an olive branch.", "She offered an olive branch.", "He offers an olive branch.", "He offered the olive branch."], "correct_answer": "He offered an olive branch.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

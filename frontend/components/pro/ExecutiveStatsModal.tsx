@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { X, BarChart3, Trophy, Activity, Loader2 } from 'lucide-react';
 import Cookies from 'js-cookie';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:5000';
 
 interface KPIStats {
   totalXP: number;
@@ -63,18 +63,18 @@ export const ExecutiveStatsModal = ({ onClose, kpis, completedLessons }: Executi
   }, [kpis.totalXP]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4 animate-in fade-in duration-300">
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl shadow-black">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-50/80 backdrop-blur-sm p-4 animate-in fade-in duration-300">
+      <div className="bg-slate-50 border border-slate-800 rounded-none w-full max-w-lg overflow-hidden shadow-2xl shadow-black">
         
         {/* HEADER */}
-        <div className="p-6 border-b border-slate-800 flex justify-between items-center bg-slate-900/50">
+        <div className="p-6 border-b border-slate-800 flex justify-between items-center bg-slate-50/50">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400">
+            <div className="p-2 bg-[#D4AF37]/20/10 rounded-none text-blue-400">
               <BarChart3 size={20} />
             </div>
-            <h2 className="text-xl font-bold text-white tracking-tight">Executive Analytics</h2>
+            <h2 className="text-xl font-bold text-slate-900 tracking-tight">Executive Analytics</h2>
           </div>
-          <button onClick={onClose} className="text-slate-400 hover:text-white transition-colors p-2 bg-slate-800 rounded-full active:scale-95">
+          <button onClick={onClose} className="text-slate-500 hover:text-slate-900 transition-colors p-2 bg-slate-50 rounded-full active:scale-95">
             <X size={20} />
           </button>
         </div>
@@ -83,43 +83,43 @@ export const ExecutiveStatsModal = ({ onClose, kpis, completedLessons }: Executi
           
           {/* MÉTRICAS PERSONALES (Vienen de page.tsx que ya son reales) */}
           <div>
-            <h3 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Uso de la Plataforma</h3>
+            <h3 className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-4">Uso de la Plataforma</h3>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-slate-950 border border-slate-800 p-4 rounded-2xl flex flex-col justify-center items-center text-center">
+              <div className="bg-slate-50 border border-slate-800 p-4 rounded-none flex flex-col justify-center items-center text-center">
                 <p className="text-3xl font-black text-amber-400 mb-1">{completedLessons}</p>
-                <p className="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Unidades Completadas</p>
+                <p className="text-[10px] text-slate-600 uppercase tracking-wider font-bold">Unidades Completadas</p>
               </div>
-              <div className="bg-slate-950 border border-slate-800 p-4 rounded-2xl flex flex-col justify-center items-center text-center">
+              <div className="bg-slate-50 border border-slate-800 p-4 rounded-none flex flex-col justify-center items-center text-center">
                 <p className="text-3xl font-black text-emerald-400 mb-1">{kpis.accuracy}%</p>
-                <p className="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Precisión Promedio</p>
+                <p className="text-[10px] text-slate-600 uppercase tracking-wider font-bold">Precisión Promedio</p>
               </div>
             </div>
           </div>
 
           {/* RANKING GLOBAL (Ahora conectado a la DB) */}
           <div>
-            <h3 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center gap-2">
-              <Trophy size={14} className="text-amber-500" /> Global Executive Ranking
+            <h3 className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-4 flex items-center gap-2">
+              <Trophy size={14} className="text-[#D4AF37]" /> Global Executive Ranking
             </h3>
-            <div className="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden min-h-[150px] relative">
+            <div className="bg-slate-50 border border-slate-800 rounded-none overflow-hidden min-h-[150px] relative">
               
               {isLoadingRanking ? (
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-500">
-                  <Activity className="animate-spin mb-2 text-indigo-500" size={24} />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-600">
+                  <Activity className="animate-spin mb-2 text-[#D4AF37]" size={24} />
                   <span className="text-[10px] font-bold uppercase tracking-widest">Sincronizando Ranking...</span>
                 </div>
               ) : (
                 leaderboard.map((user, idx) => (
-                  <div key={idx} className={`flex items-center justify-between p-4 border-b border-slate-800/50 last:border-0 ${user.isMe ? 'bg-amber-500/10' : ''}`}>
+                  <div key={idx} className={`flex items-center justify-between p-4 border-b border-slate-800/50 last:border-0 ${user.isMe ? 'bg-[#D4AF37]/20/10' : ''}`}>
                     <div className="flex items-center gap-4">
-                      <span className={`font-black text-lg ${user.rank === 1 ? 'text-amber-400' : user.rank === 2 ? 'text-slate-300' : user.rank === 3 ? 'text-amber-700' : 'text-slate-600'}`}>
+                      <span className={`font-black text-lg ${user.rank === 1 ? 'text-amber-400' : user.rank === 2 ? 'text-slate-300' : user.rank === 3 ? 'text-[#D4AF37]' : 'text-slate-600'}`}>
                         #{user.rank}
                       </span>
                       <span className={`font-bold text-sm ${user.isMe ? 'text-amber-400 flex items-center gap-2' : 'text-slate-300'}`}>
-                        {user.alias} {user.isMe && <span className="text-[9px] bg-amber-500/20 px-2 py-0.5 rounded uppercase tracking-widest border border-amber-500/30">Tú</span>}
+                        {user.alias} {user.isMe && <span className="text-[9px] bg-[#D4AF37]/20/20 px-2 py-0.5 rounded uppercase tracking-widest border border-[#D4AF37]/30/30">Tú</span>}
                       </span>
                     </div>
-                    <span className="text-xs font-bold text-slate-500">{user.xp.toLocaleString()} XP</span>
+                    <span className="text-xs font-bold text-slate-600">{user.xp.toLocaleString()} XP</span>
                   </div>
                 ))
               )}

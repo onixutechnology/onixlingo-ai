@@ -1,0 +1,95 @@
+{
+  "id": "fr-b2-08",
+  "title": "L'Expression de la Cause",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Cause", "Connectors", "Vocabulary"],
+  "completion_message": "¡Excelente! Has dominado el arte de dar explicaciones formales, excusas y justificaciones lógicas. Ya no necesitas depender siempre del simple 'parce que'.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Mucho más que 'Parce que' (B2)",
+      "parts": [
+        {
+          "visual": "La Causa Evidente o Indiscutible:\n\n1. Comme (Como): SIEMPRE va al principio de la frase.\n- COMME il pleut, je reste ici. (Como llueve, me quedo aquí).\n\n2. Puisque (Ya que / Dado que): Se usa para una causa que la otra persona ya conoce o es obvia.\n- Ne crie pas, PUISQUE je suis juste à côté. (No grites, ya que estoy justo al lado).\n\n3. Étant donné que / Vu que (Dado que / Visto que): Causas muy formales, basadas en hechos indiscutibles. Muy usadas en el trabajo.\n- ÉTANT DONNÉ QUE l'entreprise est en crise, il n'y aura pas de bonus. (Dado que la empresa está en crisis...)",
+          "audio": "En niveles anteriores te acostumbramos a usar 'Parce que' para todo. Pero en el nivel B2, tu vocabulario debe expandirse. Si quieres poner la causa al principio de la frase, usas 'Comme', que significa 'Como'. Por ejemplo: 'Como llueve, me quedo aquí', dices 'COMME il pleut, je reste ici'. Si quieres dar una explicación obvia, o justificar algo que el otro ya sabe, usas 'Puisque', que es nuestro 'Ya que'. Y si estás en un ambiente profesional y vas a dar una razón técnica o indiscutible, tus mejores amigos son 'Étant donné que' y 'Vu que'. Significan 'Dado que' o 'Visto que'. Suenan increíblemente elegantes y maduros."
+        },
+        {
+          "visual": "Excusas, Faltas y Causas Oficiales:\n\n1. Sous prétexte que (Con el pretexto de que):\n- Indica que la causa es una EXCUSA o es falsa.\n- Il est parti SOUS PRÉTEXTE QU'il était fatigué. (Se fue con el pretexto de que estaba cansado - pero sabemos que es mentira).\n\n2. Faute de (A falta de):\n- Se usa sin artículo antes de un sustantivo.\n- FAUTE DE temps, je n'ai pas fini. (A falta de tiempo...)\n\n3. En raison de (Debido a):\n- La versión profesional y neutra de 'À cause de' (que suele ser negativo).\n- Le vol est annulé EN RAISON DE la tempête. (Debido a la tormenta).",
+          "audio": "También tenemos herramientas para juzgar las causas de otros. Si alguien te da una excusa mala, puedes usar 'Sous prétexte que', que significa 'Bajo el pretexto de que'. Es una forma educada de decirle a alguien que sabes que está mintiendo. 'Se fue bajo el pretexto de que estaba enfermo'. Otra muy útil es 'Faute de', que significa 'A falta de'. Se usa sin artículos: 'A falta de dinero', dices 'Faute de' argent; 'a falta de tiempo', 'Faute de temps'. Finalmente, seguro recuerdas que 'À cause de' significa 'A causa de' o 'Por culpa de'. Es una expresión negativa. Pero si estás dando un aviso oficial por altavoz en un aeropuerto, usas la versión formal y neutral: 'En raison de', que significa 'Debido a'. 'El vuelo ha sido cancelado debido al clima': 'Le vol est annulé EN RAISON DE la météo'."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el conector de causa más adecuado para cada situación.",
+      "questions": [
+        { "id": "frb2-08-q1", "type": "quiz_choice", "question": "____ je suis malade, je ne vais pas au travail. (COMO estoy enfermo - Al principio de la frase).", "options": ["Comme", "Parce que", "Puisque", "Faute de"], "correct_answer": "Comme", "explanation": "'Comme' (Como) siempre se usa al inicio de la frase para introducir la causa." },
+        { "id": "frb2-08-q2", "type": "quiz_choice", "question": "Arrête de pleurer, ____ ce n'est pas grave ! (YA QUE no es grave - Razón obvia).", "options": ["puisque", "comme", "sous prétexte que", "grâce à"], "correct_answer": "puisque", "explanation": "'Puisque' introduce una causa evidente o conocida por el interlocutor." },
+        { "id": "frb2-08-q3", "type": "quiz_choice", "question": "Il n'est pas venu ____ il avait trop de travail. (BAJO EL PRETEXTO DE QUE - Excusa dudosa).", "options": ["sous prétexte qu'", "puisqu'", "comme", "étant donné qu'"], "correct_answer": "sous prétexte qu'", "explanation": "Indica una causa que el hablante considera falsa o una mera excusa." },
+        { "id": "frb2-08-q4", "type": "quiz_choice", "question": "____ preuves, le suspect a été relâché. (A FALTA DE pruebas).", "options": ["Faute de", "En raison de", "À cause de", "Grâce à"], "correct_answer": "Faute de", "explanation": "'Faute de' (A falta de) va seguido de sustantivo sin artículo." },
+        { "id": "frb2-08-q5", "type": "quiz_choice", "question": "L'école est fermée ____ la neige. (DEBIDO A - Aviso oficial formal).", "options": ["en raison de", "parce que", "puisque", "faute de"], "correct_answer": "en raison de", "explanation": "La versión neutral y profesional de 'à cause de' es 'en raison de'." },
+        { "id": "frb2-08-q6", "type": "quiz_choice", "question": "____ vous êtes tous là, nous pouvons commencer la réunion. (DADO QUE - Formal).", "options": ["Étant donné que", "Faute de", "Sous prétexte que", "En raison de"], "correct_answer": "Étant donné que", "explanation": "Causa objetiva formal -> Étant donné que (o Vu que)." },
+        { "id": "frb2-08-q7", "type": "quiz_choice", "question": "¿Puedes usar 'Parce que' al inicio de una frase en francés escrito formal?", "options": ["No, se debe usar 'Comme' o 'Puisque'.", "Sí, es lo más elegante."], "correct_answer": "No, se debe usar 'Comme' o 'Puisque'.", "explanation": "'Parce que' no debe usarse al comienzo de una oración en contextos formales (solo como respuesta directa a 'Pourquoi')." },
+        { "id": "frb2-08-q8", "type": "quiz_choice", "question": "J'ai réussi cet examen ____ ton aide. (GRACIAS A - Causa positiva).", "options": ["grâce à", "à cause de", "faute de", "en raison de"], "correct_answer": "grâce à", "explanation": "Causa positiva -> Grâce à." },
+        { "id": "frb2-08-q9", "type": "quiz_choice", "question": "J'ai raté le train ____ toi ! (POR CULPA DE - Causa negativa).", "options": ["à cause de", "grâce à", "en raison de", "faute de"], "correct_answer": "à cause de", "explanation": "Causa negativa personal -> À cause de." },
+        { "id": "frb2-08-q10", "type": "quiz_choice", "question": "____ budget, le projet a été annulé. (A FALTA DE presupuesto).", "options": ["Faute de", "Vu que", "Comme", "Sous prétexte de"], "correct_answer": "Faute de", "explanation": "Falta de algo + sustantivo sin artículo -> Faute de." },
+        { "id": "frb2-08-q11", "type": "quiz_choice", "question": "Il a refusé l'invitation ____ il devait étudier. (CON EL PRETEXTO DE QUE - No le creo).", "options": ["sous prétexte qu'", "vu qu'", "puisqu'", "étant donné qu'"], "correct_answer": "sous prétexte qu'", "explanation": "Duda sobre la causa -> sous prétexte que." },
+        { "id": "frb2-08-q12", "type": "quiz_choice", "question": "Mange ton repas ____ je l'ai cuisiné pour toi ! (YA QUE - Es obvio).", "options": ["puisque", "comme", "faute de", "en raison de"], "correct_answer": "puisque", "explanation": "Apelar a la lógica del otro -> puisque." },
+        { "id": "frb2-08-q13", "type": "quiz_choice", "question": "Le match est reporté ____ mauvais temps. (DEBIDO AL).", "options": ["en raison du", "en raison de la", "faute du", "grâce au"], "correct_answer": "en raison du", "explanation": "En raison de + le = en raison du." },
+        { "id": "frb2-08-q14", "type": "quiz_choice", "question": "____ son manque d'expérience, il n'a pas eu le poste. (VISTO QUE / DADO QUE).", "options": ["Vu", "Comme", "Puisque", "Faute de"], "correct_answer": "Vu", "explanation": "'Vu' o 'Étant donné' seguidos de sustantivo (son manque)." },
+        { "id": "frb2-08-q15", "type": "quiz_choice", "question": "Je vais prendre un taxi ____ il est déjà minuit. (DADO QUE - Formal).", "options": ["étant donné qu'", "sous prétexte qu'", "faute d'", "parce qu'"], "correct_answer": "étant donné qu'", "explanation": "Justificación objetiva formal -> étant donné que." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el conector adecuado (Comme, Puisque, Faute de, etc.).",
+      "questions": [
+        { "id": "frb2-08-f1", "type": "fill_input", "question": "____ (Como) il n'y avait plus de pain, j'ai acheté des croissants. (Al inicio de la frase).", "correct_answer": "Comme", "explanation": "Comme" },
+        { "id": "frb2-08-f2", "type": "fill_input", "question": "Tu peux partir, ____ (ya que) tu as fini ton travail.", "correct_answer": "puisque", "explanation": "puisque" },
+        { "id": "frb2-08-f3", "type": "fill_input", "question": "____ (A falta de) temps, nous parlerons de cela demain.", "correct_answer": "Faute de", "explanation": "Faute de" },
+        { "id": "frb2-08-f4", "type": "fill_input", "question": "Le train est en retard ____ (debido a) la neige. (Formal).", "correct_answer": "en raison de", "explanation": "en raison de" },
+        { "id": "frb2-08-f5", "type": "fill_input", "question": "Il n'a pas aidé ____ (bajo el pretexto de qu') il avait mal au dos.", "correct_answer": "sous prétexte qu'", "explanation": "sous prétexte qu'" },
+        { "id": "frb2-08-f6", "type": "fill_input", "question": "____ (Dado que) les conditions sont mauvaises, nous annulons. (Ojo: Étant...)", "correct_answer": "Étant donné que", "explanation": "Étant donné que" },
+        { "id": "frb2-08-f7", "type": "fill_input", "question": "J'ai gagné ____ (gracias a) toi.", "correct_answer": "grâce à", "explanation": "grâce à" },
+        { "id": "frb2-08-f8", "type": "fill_input", "question": "J'ai tout perdu ____ (por culpa de) ton erreur.", "correct_answer": "à cause de", "explanation": "à cause de" },
+        { "id": "frb2-08-f9", "type": "fill_input", "question": "____ (Como - al inicio) tu es là, aide-moi.", "correct_answer": "Comme", "explanation": "Comme" },
+        { "id": "frb2-08-f10", "type": "fill_input", "question": "____ (A falta de) mieux, je prendrai le menu le moins cher.", "correct_answer": "Faute de", "explanation": "Faute de" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Cause Connectors Match",
+      "pairs": [
+        {"id": "frb2-08-p1", "source": "Comme", "target": "Como (Siempre al inicio)"},
+        {"id": "frb2-08-p2", "source": "Puisque", "target": "Ya que / Puesto que"},
+        {"id": "frb2-08-p3", "source": "Étant donné que", "target": "Dado que"},
+        {"id": "frb2-08-p4", "source": "Vu que", "target": "Visto que / Dado que"},
+        {"id": "frb2-08-p5", "source": "Faute de", "target": "A falta de"},
+        {"id": "frb2-08-p6", "source": "Sous prétexte que", "target": "Con el pretexto de que"},
+        {"id": "frb2-08-p7", "source": "En raison de", "target": "Debido a (Formal)"},
+        {"id": "frb2-08-p8", "source": "Grâce à", "target": "Gracias a (Positivo)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica el conector de causa.",
+      "questions": [
+        { "id": "frb2-08-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Comme il pleut, je reste", "options": ["Comme il pleut, je reste", "Puisqu'il pleut, je reste", "Parce qu'il pleut, je reste", "Vu qu'il pleut, je reste"], "correct_answer": "Comme il pleut, je reste", "explanation": "Audio dice: Comme il pleut, je reste." },
+        { "id": "frb2-08-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Puisque tu es là", "options": ["Puisque tu es là", "Comme tu es là", "Parce que tu es là", "Vu que tu es là"], "correct_answer": "Puisque tu es là", "explanation": "Audio dice: Puisque tu es là (Ya que estás aquí)." },
+        { "id": "frb2-08-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Sous prétexte qu'il est fatigué", "options": ["Sous prétexte qu'il est fatigué", "Parce qu'il est fatigué", "Puisqu'il est fatigué", "Étant donné qu'il est fatigué"], "correct_answer": "Sous prétexte qu'il est fatigué", "explanation": "Audio dice: Sous prétexte qu'il est fatigué (Con la excusa de que...)." },
+        { "id": "frb2-08-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Faute de temps", "options": ["Faute de temps", "En raison du temps", "À cause du temps", "Grâce au temps"], "correct_answer": "Faute de temps", "explanation": "Audio dice: Faute de temps (A falta de tiempo)." },
+        { "id": "frb2-08-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "En raison de la grève", "options": ["En raison de la grève", "À cause de la grève", "Faute de grève", "Grâce à la grève"], "correct_answer": "En raison de la grève", "explanation": "Audio dice: En raison de la grève (Debido a la huelga)." }
+      ]
+    }
+  ]
+}

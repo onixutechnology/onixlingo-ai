@@ -1,0 +1,101 @@
+{
+  "id": "c1-19",
+  "title": "Mergers & Acquisitions",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "M&A", "Mergers", "Acquisitions", "Finance", "Business"],
+  "completion_message": "¡Impresionante! El mundo de las Fusiones y Adquisiciones es uno de los más complejos y de mayor impacto en los negocios globales. Dominar esta terminología te posiciona como un profesional de finanzas corporativas de élite.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Fusiones y Adquisiciones (M&A) (C1)",
+      "parts": [
+        { "visual": "Términos Clave de M&A: \n- Merger (Fusión / Cuando dos empresas se unen para formar una nueva empresa). \nEj: The merger of the two airlines created the world's largest carrier. \n- Acquisition (Adquisición / Cuando una empresa compra a otra). \nEj: Google's acquisition of YouTube in 2006 changed media forever. \n- Due diligence (Diligencia debida / La investigación exhaustiva que se hace antes de cerrar un trato). \nEj: We need three months to complete our due diligence.", "audio": "Key M and A Terms. A 'Merger' occurs when two companies combine to form a new entity. For example: The merger of the two airlines created the world's largest carrier. An 'Acquisition' occurs when one company purchases another. For example: Google's acquisition of YouTube in 2006 changed media forever. 'Due diligence' is the thorough research and investigation performed before completing a deal. For example: We need three months to complete our due diligence." },
+        { "visual": "Estrategias Agresivas: \n- Hostile takeover (Adquisición hostil / Cuando una empresa adquiere a otra en contra de la voluntad del consejo). \nEj: The board rejected the bid, leading to a hostile takeover attempt. \n- Synergy (Sinergia / El beneficio adicional que se obtiene al combinar dos empresas). \nEj: The main synergy expected from this merger is cost reduction. \n- Leverage (Apalancamiento / Uso de deuda para financiar una inversión). \nEj: They used significant leverage to fund the buyout.", "audio": "Aggressive Strategies. A 'Hostile takeover' occurs when an acquiring company makes a bid for a target company that is rejected by its management. For example: The board rejected the bid, leading to a hostile takeover attempt. 'Synergy' is the concept that the combined value of two companies is greater than the sum of their separate values. For example: The main synergy expected from this merger is cost reduction. 'Leverage' refers to the use of borrowed capital to increase the potential return of an investment. For example: They used significant leverage to fund the buyout." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de M&A correcto.",
+      "questions": [
+        { "id": "c1-19-q1", "type": "quiz_choice", "question": "When two equal companies join to form one, this is called a ____. (Fusión).", "options": ["merger", "acquisition", "takeover", "partnership"], "correct_answer": "merger", "explanation": "Merger = fusión (dos empresas de tamaño similar se unen)." },
+        { "id": "c1-19-q2", "type": "quiz_choice", "question": "When one company buys another and takes control, this is an ____. (Adquisición).", "options": ["acquisition", "merger", "alliance", "purchase"], "correct_answer": "acquisition", "explanation": "Acquisition = adquisición (una compra a la otra)." },
+        { "id": "c1-19-q3", "type": "quiz_choice", "question": "Before signing the deal, the team spent weeks doing ____ ____. (Diligencia debida).", "options": ["due diligence", "due research", "deep research", "diligence check"], "correct_answer": "due diligence", "explanation": "Due diligence = investigación exhaustiva previa al cierre de un trato." },
+        { "id": "c1-19-q4", "type": "quiz_choice", "question": "The board refused to sell, but the competitor launched a ____ takeover. (Hostil).", "options": ["hostile", "friendly", "aggressive", "forced"], "correct_answer": "hostile", "explanation": "Hostile takeover = adquisición hostil (contra la voluntad del consejo)." },
+        { "id": "c1-19-q5", "type": "quiz_choice", "question": "The main benefit expected from combining the two companies is the ____. (Sinergia).", "options": ["synergy", "efficiency", "benefit", "profit"], "correct_answer": "synergy", "explanation": "Synergy = sinergia (1+1=3 en términos de valor)." },
+        { "id": "c1-19-q6", "type": "quiz_choice", "question": "They took out huge loans to fund the deal. This is called financial ____. (Apalancamiento).", "options": ["leverage", "leakage", "levering", "lend"], "correct_answer": "leverage", "explanation": "Leverage = apalancamiento (usar deuda para financiar una operación)." },
+        { "id": "c1-19-q7", "type": "quiz_choice", "question": "A formal offer to buy a company's shares at a specific price is called a ____. (Oferta de adquisición).", "options": ["bid", "offer", "proposal", "tender"], "correct_answer": "bid", "explanation": "Bid = oferta formal de adquisición." },
+        { "id": "c1-19-q8", "type": "quiz_choice", "question": "When a company buys back its shares from the market, it is a share ____. (Recompra de acciones).", "options": ["buyback", "purchase", "repurchase", "retrieval"], "correct_answer": "buyback", "explanation": "Share buyback = recompra de acciones propias." },
+        { "id": "c1-19-q9", "type": "quiz_choice", "question": "A payment made to shareholders over and above the market price to get them to sell is a takeover ____. (Prima de adquisición).", "options": ["premium", "bonus", "incentive", "price"], "correct_answer": "premium", "explanation": "Takeover premium = prima que se paga por encima del precio de mercado para convencer a los accionistas." },
+        { "id": "c1-19-q10", "type": "quiz_choice", "question": "When a private equity firm buys a company using mostly borrowed money, this is a leveraged ____. (Compra apalancada).", "options": ["buyout", "purchase", "buy-in", "acquisition"], "correct_answer": "buyout", "explanation": "Leveraged buyout (LBO) = compra apalancada." },
+        { "id": "c1-19-q11", "type": "quiz_choice", "question": "When management buys the company they work for, this is a management ____. (Compra por la dirección).", "options": ["buyout", "purchase", "acquisition", "takeover"], "correct_answer": "buyout", "explanation": "Management buyout (MBO) = los directivos compran la empresa." },
+        { "id": "c1-19-q12", "type": "quiz_choice", "question": "The company was considered an attractive ____ for a larger competitor. (Objetivo de adquisición).", "options": ["target", "victim", "acquisition", "prey"], "correct_answer": "target", "explanation": "Acquisition target = empresa objetivo de una adquisición." },
+        { "id": "c1-19-q13", "type": "quiz_choice", "question": "After the acquisition, many overlapping departments were merged in a process of ____. (Consolidación).", "options": ["consolidation", "integration", "merger", "reduction"], "correct_answer": "consolidation", "explanation": "Consolidation = consolidación de funciones duplicadas post-fusión." },
+        { "id": "c1-19-q14", "type": "quiz_choice", "question": "When a company sells off a non-core business unit, this is called a ____. (Desinversión).", "options": ["divestiture", "sale", "spin-off", "exit"], "correct_answer": "divestiture", "explanation": "Divestiture = desinversión (venta de una unidad de negocio no esencial)." },
+        { "id": "c1-19-q15", "type": "quiz_choice", "question": "The regulator blocked the deal, citing anti-____ concerns. (Antimonopolio).", "options": ["trust", "competitive", "monopoly", "market"], "correct_answer": "trust", "explanation": "Antitrust concerns = preocupaciones antimonopolio." },
+        { "id": "c1-19-q16", "type": "quiz_choice", "question": "After the hostile bid, the board used a ____ pill to make the acquisition too expensive. (Píldora envenenada).", "options": ["poison", "shark", "golden", "defense"], "correct_answer": "poison", "explanation": "Poison pill = estrategia defensiva contra adquisiciones hostiles." },
+        { "id": "c1-19-q17", "type": "quiz_choice", "question": "The agreement signed after negotiations confirmed the terms and conditions of the deal. This is the ____ agreement. (Definitivo).", "options": ["definitive", "final", "closing", "binding"], "correct_answer": "definitive", "explanation": "Definitive agreement = acuerdo definitivo que formaliza el trato." },
+        { "id": "c1-19-q18", "type": "quiz_choice", "question": "The process of officially combining two companies after the deal closes is called ____. (Integración post-fusión).", "options": ["integration", "consolidation", "merging", "alignment"], "correct_answer": "integration", "explanation": "Post-merger integration = proceso de fusionar dos culturas y operaciones." },
+        { "id": "c1-19-q19", "type": "quiz_choice", "question": "A company that buys a majority of shares in another company has a controlling ____. (Participación mayoritaria).", "options": ["stake", "share", "interest", "control"], "correct_answer": "stake", "explanation": "Controlling stake = participación mayoritaria (más del 50%)." },
+        { "id": "c1-19-q20", "type": "quiz_choice", "question": "The estimated total value of the deal at the time it was announced was the deal's ____. (Valuación).", "options": ["valuation", "evaluation", "value", "worth"], "correct_answer": "valuation", "explanation": "Deal valuation = valoración total del trato." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término de M&A correcto.",
+      "questions": [
+        { "id": "c1-19-f1", "type": "fill_input", "question": "A company ____. (Fusión con M)", "correct_answer": "merger", "explanation": "merger." },
+        { "id": "c1-19-f2", "type": "fill_input", "question": "A company ____. (Adquisición con A)", "correct_answer": "acquisition", "explanation": "acquisition." },
+        { "id": "c1-19-f3", "type": "fill_input", "question": "Due ____. (Diligencia debida con D)", "correct_answer": "diligence", "explanation": "diligence." },
+        { "id": "c1-19-f4", "type": "fill_input", "question": "____ takeover. (Hostil con H)", "correct_answer": "Hostile", "explanation": "Hostile." },
+        { "id": "c1-19-f5", "type": "fill_input", "question": "Cost ____. (Sinergia con S)", "correct_answer": "synergy", "explanation": "synergy." },
+        { "id": "c1-19-f6", "type": "fill_input", "question": "Financial ____. (Apalancamiento con L)", "correct_answer": "leverage", "explanation": "leverage." },
+        { "id": "c1-19-f7", "type": "fill_input", "question": "Leveraged ____. (Compra apalancada con B)", "correct_answer": "buyout", "explanation": "buyout." },
+        { "id": "c1-19-f8", "type": "fill_input", "question": "Acquisition ____. (Objetivo con T)", "correct_answer": "target", "explanation": "target." },
+        { "id": "c1-19-f9", "type": "fill_input", "question": "Poison ____. (Estrategia defensiva con P)", "correct_answer": "pill", "explanation": "pill." },
+        { "id": "c1-19-f10", "type": "fill_input", "question": "A controlling ____. (Participación mayoritaria con S)", "correct_answer": "stake", "explanation": "stake." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "M&A Match",
+      "pairs": [
+        {"id": "c1-19-p1", "source": "Merger", "target": "Fusión (dos empresas se unen)"},
+        {"id": "c1-19-p2", "source": "Acquisition", "target": "Adquisición (una compra la otra)"},
+        {"id": "c1-19-p3", "source": "Due diligence", "target": "Investigación exhaustiva pre-acuerdo"},
+        {"id": "c1-19-p4", "source": "Hostile takeover", "target": "Adquisición contra la voluntad del consejo"},
+        {"id": "c1-19-p5", "source": "Synergy", "target": "Valor adicional de unir dos empresas"},
+        {"id": "c1-19-p6", "source": "Leverage", "target": "Apalancamiento financiero (uso de deuda)"},
+        {"id": "c1-19-p7", "source": "Leveraged buyout (LBO)", "target": "Compra de empresa financiada con deuda"},
+        {"id": "c1-19-p8", "source": "Poison pill", "target": "Defensa anti-adquisición hostil"},
+        {"id": "c1-19-p9", "source": "Controlling stake", "target": "Participación mayoritaria (>50%)"},
+        {"id": "c1-19-p10", "source": "Divestiture", "target": "Desinversión / Venta de unidad de negocio"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término de M&A correcto.",
+      "questions": [
+        { "id": "c1-19-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The merger was announced today.", "options": ["The merger was announced today.", "The acquisition was announced today.", "The merger is announced today.", "A merger was announced today."], "correct_answer": "The merger was announced today.", "explanation": "Audio exacto." },
+        { "id": "c1-19-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Google completed the acquisition.", "options": ["Google completed the acquisition.", "Apple completed the acquisition.", "Google announced the acquisition.", "Google completed an acquisition."], "correct_answer": "Google completed the acquisition.", "explanation": "Audio exacto." },
+        { "id": "c1-19-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to do due diligence.", "options": ["We need to do due diligence.", "They need to do due diligence.", "We need to perform due diligence.", "We need to do our due diligence."], "correct_answer": "We need to do due diligence.", "explanation": "Audio exacto." },
+        { "id": "c1-19-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a hostile takeover.", "options": ["It was a hostile takeover.", "It is a hostile takeover.", "It was a friendly takeover.", "It was a hostile acquisition."], "correct_answer": "It was a hostile takeover.", "explanation": "Audio exacto." },
+        { "id": "c1-19-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The main synergy is cost reduction.", "options": ["The main synergy is cost reduction.", "The main synergy was cost reduction.", "The key synergy is cost reduction.", "The main synergy is profit increase."], "correct_answer": "The main synergy is cost reduction.", "explanation": "Audio exacto." },
+        { "id": "c1-19-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They used high leverage.", "options": ["They used high leverage.", "We used high leverage.", "They use high leverage.", "They used strong leverage."], "correct_answer": "They used high leverage.", "explanation": "Audio exacto." },
+        { "id": "c1-19-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a leveraged buyout.", "options": ["It was a leveraged buyout.", "It was a management buyout.", "It is a leveraged buyout.", "It was a leveraged buy-in."], "correct_answer": "It was a leveraged buyout.", "explanation": "Audio exacto." },
+        { "id": "c1-19-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They used a poison pill defense.", "options": ["They used a poison pill defense.", "We used a poison pill defense.", "They used a golden pill defense.", "They use a poison pill defense."], "correct_answer": "They used a poison pill defense.", "explanation": "Audio exacto." },
+        { "id": "c1-19-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They bought a controlling stake.", "options": ["They bought a controlling stake.", "We bought a controlling stake.", "They bought a majority stake.", "They buy a controlling stake."], "correct_answer": "They bought a controlling stake.", "explanation": "Audio exacto." },
+        { "id": "c1-19-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The deal valuation was ten billion.", "options": ["The deal valuation was ten billion.", "The deal value was ten billion.", "The deal valuation is ten billion.", "The total valuation was ten billion."], "correct_answer": "The deal valuation was ten billion.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

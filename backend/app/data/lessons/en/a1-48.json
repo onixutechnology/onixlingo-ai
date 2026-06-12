@@ -1,0 +1,101 @@
+{
+  "id": "a1-48",
+  "title": "The Human Body & Health",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Health", "Body", "Vocabulary"],
+  "completion_message": "¡Muy bien! Ya sabes cómo expresar malestares básicos y pedir tiempo libre por salud.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Salud y Cuerpo",
+      "parts": [
+        { "visual": "Partes del cuerpo básicas: Head (cabeza), Back (espalda), Stomach (estómago).", "audio": "Basic body parts: Head, Back, Stomach." },
+        { "visual": "Para expresar dolor usa 'ache' al final de la palabra: 'I have a headache' (Tengo dolor de cabeza) o 'I have a stomachache'.", "audio": "To express pain use ache: I have a headache, or I have a stomachache." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra de salud o parte del cuerpo correcta.",
+      "questions": [
+        { "id": "a1-48-q1", "type": "quiz_choice", "question": "I can't work today. I am ____.", "options": ["sick", "health", "sickness", "healthy"], "correct_answer": "sick", "explanation": "Enfermo (sick)." },
+        { "id": "a1-48-q2", "type": "quiz_choice", "question": "I need to take a sick ____.", "options": ["leave", "leave's", "live", "leaf"], "correct_answer": "leave", "explanation": "Licencia por enfermedad (sick leave)." },
+        { "id": "a1-48-q3", "type": "quiz_choice", "question": "I have a terrible ____ (dolor de cabeza).", "options": ["headache", "headpain", "head", "ache"], "correct_answer": "headache", "explanation": "Headache." },
+        { "id": "a1-48-q4", "type": "quiz_choice", "question": "My ____ hurts (espalda).", "options": ["back", "bag", "pack", "body"], "correct_answer": "back", "explanation": "Espalda (back)." },
+        { "id": "a1-48-q5", "type": "quiz_choice", "question": "I have a ____ (dolor de estómago).", "options": ["stomachache", "stomach", "stomachpain", "bellyache"], "correct_answer": "stomachache", "explanation": "Stomachache." },
+        { "id": "a1-48-q6", "type": "quiz_choice", "question": "I need to go to the ____.", "options": ["doctor", "doc", "hospital", "clinic"], "correct_answer": "doctor", "explanation": "Médico (doctor)." },
+        { "id": "a1-48-q7", "type": "quiz_choice", "question": "I have a ____ (resfriado/gripa).", "options": ["cold", "cool", "chill", "freeze"], "correct_answer": "cold", "explanation": "Resfriado (a cold)." },
+        { "id": "a1-48-q8", "type": "quiz_choice", "question": "I have a ____ (fiebre).", "options": ["fever", "fire", "hot", "temperature"], "correct_answer": "fever", "explanation": "Fiebre (fever)." },
+        { "id": "a1-48-q9", "type": "quiz_choice", "question": "My ____ hurts from typing all day (mano).", "options": ["hand", "arm", "head", "leg"], "correct_answer": "hand", "explanation": "Mano (hand)." },
+        { "id": "a1-48-q10", "type": "quiz_choice", "question": "My ____ are tired from looking at the screen (ojos).", "options": ["eyes", "ears", "arms", "legs"], "correct_answer": "eyes", "explanation": "Ojos (eyes)." },
+        { "id": "a1-48-q11", "type": "quiz_choice", "question": "I feel ____ (mareado).", "options": ["dizzy", "dizzying", "daisy", "busy"], "correct_answer": "dizzy", "explanation": "Mareado (dizzy)." },
+        { "id": "a1-48-q12", "type": "quiz_choice", "question": "I need some ____ (medicina).", "options": ["medicine", "medical", "medic", "pills"], "correct_answer": "medicine", "explanation": "Medicina (medicine)." },
+        { "id": "a1-48-q13", "type": "quiz_choice", "question": "Please take a ____ (descanso).", "options": ["rest", "sleep", "break", "nap"], "correct_answer": "rest", "explanation": "Descanso (rest)." },
+        { "id": "a1-48-q14", "type": "quiz_choice", "question": "I have a sore ____ (garganta).", "options": ["throat", "mouth", "neck", "tongue"], "correct_answer": "throat", "explanation": "Garganta irritada (sore throat)." },
+        { "id": "a1-48-q15", "type": "quiz_choice", "question": "Can I work from ____ today?", "options": ["home", "house", "room", "bed"], "correct_answer": "home", "explanation": "Trabajar desde casa (work from home)." },
+        { "id": "a1-48-q16", "type": "quiz_choice", "question": "I am not feeling ____ today.", "options": ["well", "good", "better", "fine"], "correct_answer": "well", "explanation": "Sentirse bien (feel well)." },
+        { "id": "a1-48-q17", "type": "quiz_choice", "question": "Get ____ soon!", "options": ["well", "better", "good", "fine"], "correct_answer": "well", "explanation": "Que te mejores (Get well soon)." },
+        { "id": "a1-48-q18", "type": "quiz_choice", "question": "I have a ____ in my arm (dolor).", "options": ["pain", "hurt", "ache", "sore"], "correct_answer": "pain", "explanation": "Dolor (pain)." },
+        { "id": "a1-48-q19", "type": "quiz_choice", "question": "I broke my ____ (pierna).", "options": ["leg", "foot", "toe", "knee"], "correct_answer": "leg", "explanation": "Pierna (leg)." },
+        { "id": "a1-48-q20", "type": "quiz_choice", "question": "He had a ____ attack (corazón).", "options": ["heart", "hard", "chest", "head"], "correct_answer": "heart", "explanation": "Ataque al corazón (heart attack)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta relacionada con la salud o el cuerpo.",
+      "questions": [
+        { "id": "a1-48-f1", "type": "fill_input", "question": "I am ____ (Enfermo).", "correct_answer": "sick", "explanation": "Sick." },
+        { "id": "a1-48-f2", "type": "fill_input", "question": "Sick ____ (Licencia médica).", "correct_answer": "leave", "explanation": "Leave." },
+        { "id": "a1-48-f3", "type": "fill_input", "question": "I have a ____ (Dolor de cabeza).", "correct_answer": "headache", "explanation": "Headache." },
+        { "id": "a1-48-f4", "type": "fill_input", "question": "My ____ hurts (Espalda).", "correct_answer": "back", "explanation": "Back." },
+        { "id": "a1-48-f5", "type": "fill_input", "question": "Go to the ____ (Doctor).", "correct_answer": "doctor", "explanation": "Doctor." },
+        { "id": "a1-48-f6", "type": "fill_input", "question": "I have a ____ (Resfriado).", "correct_answer": "cold", "explanation": "Cold." },
+        { "id": "a1-48-f7", "type": "fill_input", "question": "I have a ____ (Fiebre).", "correct_answer": "fever", "explanation": "Fever." },
+        { "id": "a1-48-f8", "type": "fill_input", "question": "My ____ hurts (Mano).", "correct_answer": "hand", "explanation": "Hand." },
+        { "id": "a1-48-f9", "type": "fill_input", "question": "Not feeling ____ (Bien).", "correct_answer": "well", "explanation": "Well." },
+        { "id": "a1-48-f10", "type": "fill_input", "question": "I need ____ (Medicina).", "correct_answer": "medicine", "explanation": "Medicine." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-48-p1", "source": "Sick", "target": "Enfermo"},
+        {"id": "a1-48-p2", "source": "Headache", "target": "Dolor de cabeza"},
+        {"id": "a1-48-p3", "source": "Back", "target": "Espalda"},
+        {"id": "a1-48-p4", "source": "Stomachache", "target": "Dolor de estómago"},
+        {"id": "a1-48-p5", "source": "Cold", "target": "Resfriado"},
+        {"id": "a1-48-p6", "source": "Fever", "target": "Fiebre"},
+        {"id": "a1-48-p7", "source": "Medicine", "target": "Medicina"},
+        {"id": "a1-48-p8", "source": "Doctor", "target": "Doctor / Médico"},
+        {"id": "a1-48-p9", "source": "Sick leave", "target": "Permiso por enfermedad"},
+        {"id": "a1-48-p10", "source": "Get well soon", "target": "Que te mejores pronto"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-48-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am sick.", "options": ["I am sick.", "He is sick.", "I am six.", "I was sick."], "correct_answer": "I am sick.", "explanation": "Audio exacto." },
+        { "id": "a1-48-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have a headache.", "options": ["I have a headache.", "I had a headache.", "He has a headache.", "I have a stomachache."], "correct_answer": "I have a headache.", "explanation": "Audio exacto." },
+        { "id": "a1-48-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My back hurts.", "options": ["My back hurts.", "His back hurts.", "My bag hurts.", "My back hurt."], "correct_answer": "My back hurts.", "explanation": "Audio exacto." },
+        { "id": "a1-48-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need to go to the doctor.", "options": ["I need to go to the doctor.", "I have to go to the doctor.", "He needs to go to the doctor.", "I need a doctor."], "correct_answer": "I need to go to the doctor.", "explanation": "Audio exacto." },
+        { "id": "a1-48-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have a cold.", "options": ["I have a cold.", "I have a coat.", "He has a cold.", "I had a cold."], "correct_answer": "I have a cold.", "explanation": "Audio exacto." },
+        { "id": "a1-48-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have a fever.", "options": ["I have a fever.", "I have a favor.", "He has a fever.", "I had a fever."], "correct_answer": "I have a fever.", "explanation": "Audio exacto." },
+        { "id": "a1-48-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am not feeling well.", "options": ["I am not feeling well.", "I am feeling well.", "He is not feeling well.", "I am not feeling good."], "correct_answer": "I am not feeling well.", "explanation": "Audio exacto." },
+        { "id": "a1-48-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Get well soon.", "options": ["Get well soon.", "Get better soon.", "Go well soon.", "Feel well soon."], "correct_answer": "Get well soon.", "explanation": "Audio exacto." },
+        { "id": "a1-48-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need some medicine.", "options": ["I need some medicine.", "I want some medicine.", "He needs some medicine.", "I need my medicine."], "correct_answer": "I need some medicine.", "explanation": "Audio exacto." },
+        { "id": "a1-48-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have a stomachache.", "options": ["I have a stomachache.", "I have a headache.", "He has a stomachache.", "I had a stomachache."], "correct_answer": "I have a stomachache.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

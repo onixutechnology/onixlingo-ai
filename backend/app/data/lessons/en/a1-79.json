@@ -1,0 +1,101 @@
+{
+  "id": "a1-79",
+  "title": "Months and Dates",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Time", "Dates", "Months"],
+  "completion_message": "¡Excelente! Has aprendido a identificar y pronunciar los meses del año y a dar fechas en inglés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Meses y Fechas",
+      "parts": [
+        { "visual": "Los meses en inglés siempre se escriben con mayúscula inicial: January, February, March...", "audio": "Months in English are always capitalized: January, February, March." },
+        { "visual": "Para decir fechas usamos números ordinales: May 1st (first), May 2nd (second), May 3rd (third), May 4th (fourth).", "audio": "For dates we use ordinal numbers: May 1st, May 2nd, May 3rd, May 4th." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el mes o la fecha correcta.",
+      "questions": [
+        { "id": "a1-79-q1", "type": "quiz_choice", "question": "The first month of the year is ____.", "options": ["January", "February", "March", "December"], "correct_answer": "January", "explanation": "Enero (January)." },
+        { "id": "a1-79-q2", "type": "quiz_choice", "question": "The second month is ____.", "options": ["February", "January", "April", "March"], "correct_answer": "February", "explanation": "Febrero (February)." },
+        { "id": "a1-79-q3", "type": "quiz_choice", "question": "The third month is ____.", "options": ["March", "May", "April", "June"], "correct_answer": "March", "explanation": "Marzo (March)." },
+        { "id": "a1-79-q4", "type": "quiz_choice", "question": "The fourth month is ____.", "options": ["April", "August", "March", "May"], "correct_answer": "April", "explanation": "Abril (April)." },
+        { "id": "a1-79-q5", "type": "quiz_choice", "question": "The fifth month is ____.", "options": ["May", "March", "June", "July"], "correct_answer": "May", "explanation": "Mayo (May)." },
+        { "id": "a1-79-q6", "type": "quiz_choice", "question": "The sixth month is ____.", "options": ["June", "July", "January", "May"], "correct_answer": "June", "explanation": "Junio (June)." },
+        { "id": "a1-79-q7", "type": "quiz_choice", "question": "The seventh month is ____.", "options": ["July", "June", "August", "January"], "correct_answer": "July", "explanation": "Julio (July)." },
+        { "id": "a1-79-q8", "type": "quiz_choice", "question": "The eighth month is ____.", "options": ["August", "April", "Autumn", "October"], "correct_answer": "August", "explanation": "Agosto (August)." },
+        { "id": "a1-79-q9", "type": "quiz_choice", "question": "The ninth month is ____.", "options": ["September", "October", "November", "December"], "correct_answer": "September", "explanation": "Septiembre (September)." },
+        { "id": "a1-79-q10", "type": "quiz_choice", "question": "The tenth month is ____.", "options": ["October", "November", "December", "September"], "correct_answer": "October", "explanation": "Octubre (October)." },
+        { "id": "a1-79-q11", "type": "quiz_choice", "question": "The eleventh month is ____.", "options": ["November", "December", "October", "September"], "correct_answer": "November", "explanation": "Noviembre (November)." },
+        { "id": "a1-79-q12", "type": "quiz_choice", "question": "The last month of the year is ____.", "options": ["December", "November", "January", "October"], "correct_answer": "December", "explanation": "Diciembre (December)." },
+        { "id": "a1-79-q13", "type": "quiz_choice", "question": "My birthday is on May ____ (1).", "options": ["1st", "1th", "1nd", "1rd"], "correct_answer": "1st", "explanation": "Primero (First -> 1st)." },
+        { "id": "a1-79-q14", "type": "quiz_choice", "question": "The meeting is on June ____ (2).", "options": ["2nd", "2th", "2st", "2rd"], "correct_answer": "2nd", "explanation": "Segundo (Second -> 2nd)." },
+        { "id": "a1-79-q15", "type": "quiz_choice", "question": "I have an appointment on July ____ (3).", "options": ["3rd", "3th", "3nd", "3st"], "correct_answer": "3rd", "explanation": "Tercero (Third -> 3rd)." },
+        { "id": "a1-79-q16", "type": "quiz_choice", "question": "The deadline is August ____ (4).", "options": ["4th", "4st", "4nd", "4rd"], "correct_answer": "4th", "explanation": "Cuarto (Fourth -> 4th)." },
+        { "id": "a1-79-q17", "type": "quiz_choice", "question": "We launch the product on September ____ (15).", "options": ["15th", "15st", "15nd", "15rd"], "correct_answer": "15th", "explanation": "Quinceavo (Fifteenth -> 15th)." },
+        { "id": "a1-79-q18", "type": "quiz_choice", "question": "What is the ____ today? (fecha).", "options": ["date", "day", "time", "month"], "correct_answer": "date", "explanation": "Fecha (date)." },
+        { "id": "a1-79-q19", "type": "quiz_choice", "question": "My vacation starts on October ____ (21).", "options": ["21st", "21th", "21nd", "21rd"], "correct_answer": "21st", "explanation": "Veintiuno (Twenty-first -> 21st)." },
+        { "id": "a1-79-q20", "type": "quiz_choice", "question": "The event is on November ____ (22).", "options": ["22nd", "22th", "22st", "22rd"], "correct_answer": "22nd", "explanation": "Veintidós (Twenty-second -> 22nd)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el mes en inglés (con mayúscula).",
+      "questions": [
+        { "id": "a1-79-f1", "type": "fill_input", "question": "Month 1: ____", "correct_answer": "January", "explanation": "January." },
+        { "id": "a1-79-f2", "type": "fill_input", "question": "Month 2: ____", "correct_answer": "February", "explanation": "February." },
+        { "id": "a1-79-f3", "type": "fill_input", "question": "Month 3: ____", "correct_answer": "March", "explanation": "March." },
+        { "id": "a1-79-f4", "type": "fill_input", "question": "Month 4: ____", "correct_answer": "April", "explanation": "April." },
+        { "id": "a1-79-f5", "type": "fill_input", "question": "Month 5: ____", "correct_answer": "May", "explanation": "May." },
+        { "id": "a1-79-f6", "type": "fill_input", "question": "Month 6: ____", "correct_answer": "June", "explanation": "June." },
+        { "id": "a1-79-f7", "type": "fill_input", "question": "Month 7: ____", "correct_answer": "July", "explanation": "July." },
+        { "id": "a1-79-f8", "type": "fill_input", "question": "Month 8: ____", "correct_answer": "August", "explanation": "August." },
+        { "id": "a1-79-f9", "type": "fill_input", "question": "Month 11: ____", "correct_answer": "November", "explanation": "November." },
+        { "id": "a1-79-f10", "type": "fill_input", "question": "Month 12: ____", "correct_answer": "December", "explanation": "December." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-79-p1", "source": "January", "target": "Enero"},
+        {"id": "a1-79-p2", "source": "February", "target": "Febrero"},
+        {"id": "a1-79-p3", "source": "March", "target": "Marzo"},
+        {"id": "a1-79-p4", "source": "April", "target": "Abril"},
+        {"id": "a1-79-p5", "source": "May", "target": "Mayo"},
+        {"id": "a1-79-p6", "source": "June", "target": "Junio"},
+        {"id": "a1-79-p7", "source": "July", "target": "Julio"},
+        {"id": "a1-79-p8", "source": "August", "target": "Agosto"},
+        {"id": "a1-79-p9", "source": "September", "target": "Septiembre"},
+        {"id": "a1-79-p10", "source": "October", "target": "Octubre"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-79-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The first month is January.", "options": ["The first month is January.", "The month is January.", "First month is January.", "January is the first month."], "correct_answer": "The first month is January.", "explanation": "Audio exacto." },
+        { "id": "a1-79-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My birthday is in February.", "options": ["My birthday is in February.", "My birthday is on February.", "His birthday is in February.", "Your birthday is in February."], "correct_answer": "My birthday is in February.", "explanation": "Audio exacto." },
+        { "id": "a1-79-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The project starts in March.", "options": ["The project starts in March.", "The project starts on March.", "A project starts in March.", "The project started in March."], "correct_answer": "The project starts in March.", "explanation": "Audio exacto." },
+        { "id": "a1-79-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have a meeting in April.", "options": ["We have a meeting in April.", "We have a meeting on April.", "I have a meeting in April.", "They have a meeting in April."], "correct_answer": "We have a meeting in April.", "explanation": "Audio exacto." },
+        { "id": "a1-79-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The deadline is May first.", "options": ["The deadline is May first.", "The deadline is May one.", "The deadline is in May first.", "A deadline is May first."], "correct_answer": "The deadline is May first.", "explanation": "Audio exacto." },
+        { "id": "a1-79-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I go on vacation in June.", "options": ["I go on vacation in June.", "I go on vacation in July.", "He goes on vacation in June.", "I went on vacation in June."], "correct_answer": "I go on vacation in June.", "explanation": "Audio exacto." },
+        { "id": "a1-79-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The office is closed in August.", "options": ["The office is closed in August.", "The office is closed in July.", "Our office is closed in August.", "An office is closed in August."], "correct_answer": "The office is closed in August.", "explanation": "Audio exacto." },
+        { "id": "a1-79-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We launch the product in September.", "options": ["We launch the product in September.", "We launch the product in October.", "They launch the product in September.", "I launch the product in September."], "correct_answer": "We launch the product in September.", "explanation": "Audio exacto." },
+        { "id": "a1-79-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The event is in November.", "options": ["The event is in November.", "The event is on November.", "An event is in November.", "The event was in November."], "correct_answer": "The event is in November.", "explanation": "Audio exacto." },
+        { "id": "a1-79-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The last month is December.", "options": ["The last month is December.", "The last month is November.", "December is the last month.", "A last month is December."], "correct_answer": "The last month is December.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

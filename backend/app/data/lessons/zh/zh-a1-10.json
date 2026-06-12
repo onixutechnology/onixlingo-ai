@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-10",
+  "title": "Ayer, Hoy y Mañana",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Time", "Grammar", "Syntax"],
+  "completion_message": "¡Felicidades! Acabas de terminar el Bloque 2. Ahora sabes cómo dominar el tiempo sin conjugar ni un solo verbo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Secreto del Tiempo",
+      "parts": [
+        {
+          "visual": "Ayer, Hoy y Mañana:\n\n- Hoy: 今天 (jīntiān).\n- Mañana: 明天 (míngtiān).\n- Ayer: 昨天 (zuótiān).\n\nEn chino, la palabra para 'Día' o 'Cielo' es 天 (tiān).\nPor eso, todas estas palabras terminan en 'tiān'.\n- Jīn = Actual (Día actual = Hoy).\n- Míng = Brillante/Siguiente (Día siguiente = Mañana).\n- Zuó = Pasado (Día pasado = Ayer).",
+          "audio": "Vamos a viajar en el tiempo. Como ya sabes, los verbos en chino nunca cambian. No existe el pasado ni el futuro en los verbos. Entonces, ¿cómo sabemos cuándo pasó algo? Usamos palabras de tiempo. Para decir 'Hoy', decimos 'Jīntiān'. El día actual. Para decir 'Mañana', decimos 'Míngtiān'. El día siguiente. Y para decir 'Ayer', decimos 'Zuótiān'. El día pasado. Nota que todas terminan en 'tiān', que significa 'día' o 'cielo'."
+        },
+        {
+          "visual": "La Regla de Oro del Tiempo:\n\nEn español, solemos poner el tiempo al final: 'Yo quiero té hoy'.\n¡En chino mandarín esto es un ERROR FATAL!\n\nRegla estricta:\nLa palabra de tiempo SIEMPRE va antes o inmediatamente después del Sujeto. ¡Nunca al final!\n\n- Correcto: 我今天想喝茶 (Wǒ jīntiān yào chá) -> Yo hoy quiero té.\n- Correcto: 今天我要茶 (Jīntiān wǒ yào chá) -> Hoy yo quiero té.\n- ERROR ❌: 我要茶今天 (Wǒ yào chá jīntiān) -> Yo quiero té hoy.",
+          "audio": "Presta mucha atención, porque este es el error número uno de los occidentales. En español o inglés, nos encanta dejar el tiempo para el final de la oración. Decimos 'Yo voy a comer carne MAÑANA'. En la cultura china, el tiempo es lo más importante, así que debe decirse primero. El tiempo siempre, pero siempre, se coloca al principio de la oración, justo antes o después de la persona. Debes hablar como el maestro Yoda. 'Yo hoy carne quiero'. 'Wǒ jīntiān yào ròu'. O 'Hoy yo carne quiero'. Ambas son correctas. Pero jamás, nunca, dejes el tiempo para el final."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa tu dominio sobre la estructura del tiempo en mandarín.",
+      "questions": [
+        { "id": "zh-a1-10-q1", "type": "quiz_choice", "question": "¿Qué significa la palabra 今天 (jīntiān)?", "options": ["Hoy.", "Mañana.", "Ayer.", "Día."], "correct_answer": "Hoy.", "explanation": "Jīn (actual) + tiān (día) = Hoy." },
+        { "id": "zh-a1-10-q2", "type": "quiz_choice", "question": "¿Qué significa la palabra 明天 (míngtiān)?", "options": ["Mañana.", "Ayer.", "Hoy.", "Tarde."], "correct_answer": "Mañana.", "explanation": "Míng (siguiente/brillante) + tiān (día) = Mañana." },
+        { "id": "zh-a1-10-q3", "type": "quiz_choice", "question": "¿Qué significa la palabra 昨天 (zuótiān)?", "options": ["Ayer.", "Hoy.", "Mañana.", "Semana."], "correct_answer": "Ayer.", "explanation": "Zuó (pasado) + tiān (día) = Ayer." },
+        { "id": "zh-a1-10-q4", "type": "quiz_choice", "question": "¡Regla de Oro! ¿Dónde se coloca la palabra de tiempo en una oración china?", "options": ["Antes o inmediatamente después del Sujeto (al principio).", "Siempre al final de la oración.", "Entre el verbo y el objeto.", "No importa el orden."], "correct_answer": "Antes o inmediatamente después del Sujeto (al principio).", "explanation": "El tiempo debe establecerse al inicio para dar contexto a la acción." },
+        { "id": "zh-a1-10-q5", "type": "quiz_choice", "question": "¿Es correcto decir 'Wǒ yào chá jīntiān' (Yo quiero té hoy)?", "options": ["No, es un error fatal de sintaxis.", "Sí, es completamente natural.", "Solo es correcto si estás enojado.", "Sí, pero significa 'Ayer quise té'."], "correct_answer": "No, es un error fatal de sintaxis.", "explanation": "En chino NUNCA se pone el tiempo al final. Debe ser 'Wǒ jīntiān yào chá'." },
+        { "id": "zh-a1-10-q6", "type": "quiz_choice", "question": "¿Cómo dirías 'Hoy quiero agua' de forma correcta?", "options": ["Wǒ jīntiān yào shuǐ. (我今天要水)", "Wǒ yào shuǐ jīntiān. (我要水今天)", "Jīntiān yào shuǐ wǒ. (今天要水我)", "Yào shuǐ wǒ jīntiān. (要水我今天)"], "correct_answer": "Wǒ jīntiān yào shuǐ. (我今天要水)", "explanation": "Sujeto (wǒ) + Tiempo (jīntiān) + Verbo (yào) + Objeto (shuǐ)." },
+        { "id": "zh-a1-10-q7", "type": "quiz_choice", "question": "¿Cuál es otra posición gramaticalmente correcta para el tiempo en 'Hoy quiero agua'?", "options": ["Jīntiān wǒ yào shuǐ. (今天我要水)", "Wǒ yào jīntiān shuǐ. (我要今天水)", "Wǒ yào shuǐ jīntiān. (我要水今天)", "Yào jīntiān wǒ shuǐ. (要今天我水)"], "correct_answer": "Jīntiān wǒ yào shuǐ. (今天我要水)", "explanation": "El tiempo puede ir justo ANTES del sujeto: Jīntiān wǒ... (Hoy yo...)." },
+        { "id": "zh-a1-10-q8", "type": "quiz_choice", "question": "Si los verbos chinos no se conjugan, ¿cómo sabes si una oración ocurrió en el pasado?", "options": ["Por la palabra de tiempo (ej. Ayer - zuótiān).", "Por el tono del verbo.", "Porque se usa la negación 'bù'.", "Es imposible saberlo."], "correct_answer": "Por la palabra de tiempo (ej. Ayer - zuótiān).", "explanation": "La partícula de tiempo es la que define el marco temporal de la oración." },
+        { "id": "zh-a1-10-q9", "type": "quiz_choice", "question": "¿Qué tienen en común las palabras jīntiān, míngtiān y zuótiān?", "options": ["Todas terminan en tiān (Día / Cielo).", "Todas significan lo mismo.", "Todas se usan al final de la frase.", "Todas son pronombres."], "correct_answer": "Todas terminan en tiān (Día / Cielo).", "explanation": "El sufijo tiān (天) significa día." },
+        { "id": "zh-a1-10-q10", "type": "quiz_choice", "question": "Traduce: 'Él tiene té hoy' (Él hoy tiene té).", "options": ["Tā jīntiān yǒu chá. (他今天有茶)", "Tā yǒu chá jīntiān. (他有茶今天)", "Jīntiān yǒu chá tā. (今天有茶他)", "Tā yǒu jīntiān chá. (他有今天茶)"], "correct_answer": "Tā jīntiān yǒu chá. (他今天有茶)", "explanation": "Sujeto + Tiempo + Verbo + Objeto." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correcto para el tiempo. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-10-f1", "type": "fill_input", "question": "Día / Cielo: ____ (tian)", "correct_answer": "tian", "explanation": "tian" },
+        { "id": "zh-a1-10-f2", "type": "fill_input", "question": "Hoy: jin____ (tian)", "correct_answer": "tian", "explanation": "tian" },
+        { "id": "zh-a1-10-f3", "type": "fill_input", "question": "Mañana: ming____ (tian)", "correct_answer": "tian", "explanation": "tian" },
+        { "id": "zh-a1-10-f4", "type": "fill_input", "question": "Ayer: zuo____ (tian)", "correct_answer": "tian", "explanation": "tian" },
+        { "id": "zh-a1-10-f5", "type": "fill_input", "question": "Yo HOY quiero té: wo ____ yao cha (jintian)", "correct_answer": "jintian", "explanation": "jintian" },
+        { "id": "zh-a1-10-f6", "type": "fill_input", "question": "Tú MAÑANA quieres agua: ni ____ yao shui (mingtian)", "correct_answer": "mingtian", "explanation": "mingtian" },
+        { "id": "zh-a1-10-f7", "type": "fill_input", "question": "Él AYER tenía té: ta ____ you cha (zuotian)", "correct_answer": "zuotian", "explanation": "zuotian" },
+        { "id": "zh-a1-10-f8", "type": "fill_input", "question": "Hoy: ____tian (jin)", "correct_answer": "jin", "explanation": "jin" },
+        { "id": "zh-a1-10-f9", "type": "fill_input", "question": "Mañana: ____tian (ming)", "correct_answer": "ming", "explanation": "ming" },
+        { "id": "zh-a1-10-f10", "type": "fill_input", "question": "Ayer: ____tian (zuo)", "correct_answer": "zuo", "explanation": "zuo" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha e identifica de qué día se está hablando.",
+      "questions": [
+        { "id": "zh-a1-10-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "今天", "options": ["Hoy", "Mañana", "Ayer", "Día"], "correct_answer": "Hoy", "explanation": "El audio dice: jīntiān." },
+        { "id": "zh-a1-10-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "明天", "options": ["Mañana", "Hoy", "Ayer", "Año"], "correct_answer": "Mañana", "explanation": "El audio dice: míngtiān." },
+        { "id": "zh-a1-10-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "昨天", "options": ["Ayer", "Hoy", "Mañana", "Mes"], "correct_answer": "Ayer", "explanation": "El audio dice: zuótiān." },
+        { "id": "zh-a1-10-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我今天有", "options": ["Yo hoy tengo", "Yo mañana tengo", "Yo ayer tenía", "Tú hoy tienes"], "correct_answer": "Yo hoy tengo", "explanation": "El audio dice: Wǒ jīntiān yǒu." },
+        { "id": "zh-a1-10-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他明天要水", "options": ["Él mañana quiere agua", "Él hoy quiere agua", "Él ayer quería agua", "Él mañana quiere té"], "correct_answer": "Él mañana quiere agua", "explanation": "El audio dice: Tā míngtiān yào shuǐ." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Time and Position",
+      "pairs": [
+        {"id": "zh-a1-10-p1", "source": "天 (tiān)", "target": "Día / Cielo"},
+        {"id": "zh-a1-10-p2", "source": "今天 (jīntiān)", "target": "Hoy"},
+        {"id": "zh-a1-10-p3", "source": "明天 (míngtiān)", "target": "Mañana"},
+        {"id": "zh-a1-10-p4", "source": "昨天 (zuótiān)", "target": "Ayer"},
+        {"id": "zh-a1-10-p5", "source": "我今天要茶 (wǒ jīntiān yào chá)", "target": "Yo hoy quiero té"},
+        {"id": "zh-a1-10-p6", "source": "今天我要水 (jīntiān wǒ yào shuǐ)", "target": "Hoy yo quiero agua"},
+        {"id": "zh-a1-10-p7", "source": "我要水今天 (wǒ yào shuǐ jīntiān)", "target": "Error sintáctico grave"},
+        {"id": "zh-a1-10-p8", "source": "他明天要 (tā míngtiān yào)", "target": "Él mañana quiere"},
+        {"id": "zh-a1-10-p9", "source": "你昨天有吗？ (nǐ zuótiān yǒu ma?)", "target": "¿Tú ayer tenías?"},
+        {"id": "zh-a1-10-p10", "source": "我昨天没有 (wǒ zuótiān méiyǒu)", "target": "Yo ayer no tenía"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "a1-85",
+  "title": "Daily Work Routine",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Routine", "Daily", "Work"],
+  "completion_message": "¡Excelente! Ya puedes describir tu rutina laboral diaria paso a paso en inglés usando el Presente Simple.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Rutina Diaria de Trabajo",
+      "parts": [
+        { "visual": "Usamos el Presente Simple para hablar de hábitos y rutinas: I start work at 9 AM (Empiezo a trabajar a las 9 AM). I have lunch at 1 PM (Almuerzo a la 1 PM).", "audio": "We use the Simple Present for habits and routines: I start work at 9 AM. I have lunch at 1 PM." },
+        { "visual": "Expresiones de frecuencia: Always (siempre), usually (normalmente), often (frecuentemente), sometimes (a veces), never (nunca). I usually check my emails first (Normalmente reviso mis correos primero).", "audio": "Frequency expressions: always, usually, often, sometimes, never. I usually check my emails first." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra o frase correcta para describir una rutina laboral.",
+      "questions": [
+        { "id": "a1-85-q1", "type": "quiz_choice", "question": "I ____ work at 9 AM (empiezo).", "options": ["start", "starts", "starting", "started"], "correct_answer": "start", "explanation": "Simple present I -> start." },
+        { "id": "a1-85-q2", "type": "quiz_choice", "question": "She ____ work at 8:30 AM (empieza).", "options": ["starts", "start", "starting", "started"], "correct_answer": "starts", "explanation": "She/He/It -> verbo + s." },
+        { "id": "a1-85-q3", "type": "quiz_choice", "question": "I usually ____ my emails first (reviso).", "options": ["check", "checks", "checking", "checked"], "correct_answer": "check", "explanation": "I + check." },
+        { "id": "a1-85-q4", "type": "quiz_choice", "question": "I ____ lunch at 1 PM (almuerzo).", "options": ["have", "has", "having", "had"], "correct_answer": "have", "explanation": "I + have." },
+        { "id": "a1-85-q5", "type": "quiz_choice", "question": "I ____ work at 6 PM (termino).", "options": ["finish", "finishes", "finishing", "finished"], "correct_answer": "finish", "explanation": "I + finish." },
+        { "id": "a1-85-q6", "type": "quiz_choice", "question": "I ____ attend the team meeting on Mondays (normalmente).", "options": ["usually", "always", "never", "sometimes"], "correct_answer": "usually", "explanation": "Usually = normalmente." },
+        { "id": "a1-85-q7", "type": "quiz_choice", "question": "I ____ work late on Fridays (nunca).", "options": ["never", "always", "usually", "often"], "correct_answer": "never", "explanation": "Never = nunca." },
+        { "id": "a1-85-q8", "type": "quiz_choice", "question": "I ____ go to the gym before work (a veces).", "options": ["sometimes", "always", "never", "rarely"], "correct_answer": "sometimes", "explanation": "Sometimes = a veces." },
+        { "id": "a1-85-q9", "type": "quiz_choice", "question": "I ____ answer calls immediately (siempre).", "options": ["always", "never", "sometimes", "usually"], "correct_answer": "always", "explanation": "Always = siempre." },
+        { "id": "a1-85-q10", "type": "quiz_choice", "question": "I ____ emails in the morning (escribo).", "options": ["write", "writes", "writing", "wrote"], "correct_answer": "write", "explanation": "I + write." },
+        { "id": "a1-85-q11", "type": "quiz_choice", "question": "I ____ a coffee break at 10 AM (me tomo).", "options": ["take", "takes", "taking", "took"], "correct_answer": "take", "explanation": "Take a break = tomar un descanso." },
+        { "id": "a1-85-q12", "type": "quiz_choice", "question": "I ____ my reports in the afternoon (completo).", "options": ["complete", "completes", "completing", "completed"], "correct_answer": "complete", "explanation": "I + complete." },
+        { "id": "a1-85-q13", "type": "quiz_choice", "question": "I ____ the office at 7 AM (llego).", "options": ["arrive at", "arrive in", "arrive to", "arrive on"], "correct_answer": "arrive at", "explanation": "Arrive at + lugar específico." },
+        { "id": "a1-85-q14", "type": "quiz_choice", "question": "I ____ from home on Fridays (trabajo).", "options": ["work", "works", "working", "worked"], "correct_answer": "work", "explanation": "Work from home = trabajar desde casa." },
+        { "id": "a1-85-q15", "type": "quiz_choice", "question": "I ____ lunch with my team on Tuesdays (almuerzo).", "options": ["have", "has", "having", "had"], "correct_answer": "have", "explanation": "Have lunch = almorzar." },
+        { "id": "a1-85-q16", "type": "quiz_choice", "question": "After lunch, I ____ my task list (reviso/actualizo).", "options": ["review", "reviews", "reviewing", "reviewed"], "correct_answer": "review", "explanation": "Review = revisar." },
+        { "id": "a1-85-q17", "type": "quiz_choice", "question": "I ____ my manager every morning (le actualizo a).", "options": ["update", "updates", "updating", "updated"], "correct_answer": "update", "explanation": "Update someone = actualizarle/informarle." },
+        { "id": "a1-85-q18", "type": "quiz_choice", "question": "I ____ my computer at the end of the day (apago).", "options": ["shut down", "shut", "start up", "open"], "correct_answer": "shut down", "explanation": "Shut down = apagar el ordenador." },
+        { "id": "a1-85-q19", "type": "quiz_choice", "question": "How ____ do you check your emails? (¿Con qué frecuencia?).", "options": ["often", "many", "much", "long"], "correct_answer": "often", "explanation": "How often = ¿Con qué frecuencia?." },
+        { "id": "a1-85-q20", "type": "quiz_choice", "question": "I ____ the daily stand-up at 9:30 (asisto a).", "options": ["attend", "attends", "attending", "attended"], "correct_answer": "attend", "explanation": "Attend = asistir a." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo o la palabra de frecuencia correcta.",
+      "questions": [
+        { "id": "a1-85-f1", "type": "fill_input", "question": "I ____ work at 9 AM (Empiezo).", "correct_answer": "start", "explanation": "start." },
+        { "id": "a1-85-f2", "type": "fill_input", "question": "I usually ____ my emails first (Reviso).", "correct_answer": "check", "explanation": "check." },
+        { "id": "a1-85-f3", "type": "fill_input", "question": "I ____ lunch at 1 PM (Almuerzo).", "correct_answer": "have", "explanation": "have." },
+        { "id": "a1-85-f4", "type": "fill_input", "question": "I ____ work at 6 PM (Termino).", "correct_answer": "finish", "explanation": "finish." },
+        { "id": "a1-85-f5", "type": "fill_input", "question": "I ____ answer late (Nunca).", "correct_answer": "never", "explanation": "never." },
+        { "id": "a1-85-f6", "type": "fill_input", "question": "I ____ emails in the morning (Escribo).", "correct_answer": "write", "explanation": "write." },
+        { "id": "a1-85-f7", "type": "fill_input", "question": "I ____ a break at 10 AM (Me tomo).", "correct_answer": "take", "explanation": "take." },
+        { "id": "a1-85-f8", "type": "fill_input", "question": "I work ____ home (Desde).", "correct_answer": "from", "explanation": "from." },
+        { "id": "a1-85-f9", "type": "fill_input", "question": "I ____ my computer at the end (Apago).", "correct_answer": "shut down", "explanation": "shut down." },
+        { "id": "a1-85-f10", "type": "fill_input", "question": "How ____ do you check emails? (Frecuencia).", "correct_answer": "often", "explanation": "often." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-85-p1", "source": "I start work at 9", "target": "Empiezo a trabajar a las 9"},
+        {"id": "a1-85-p2", "source": "I check my emails", "target": "Reviso mis correos"},
+        {"id": "a1-85-p3", "source": "I have lunch", "target": "Almuerzo"},
+        {"id": "a1-85-p4", "source": "I finish work at 6", "target": "Termino de trabajar a las 6"},
+        {"id": "a1-85-p5", "source": "Always", "target": "Siempre"},
+        {"id": "a1-85-p6", "source": "Usually", "target": "Normalmente"},
+        {"id": "a1-85-p7", "source": "Sometimes", "target": "A veces"},
+        {"id": "a1-85-p8", "source": "Never", "target": "Nunca"},
+        {"id": "a1-85-p9", "source": "Work from home", "target": "Trabajar desde casa"},
+        {"id": "a1-85-p10", "source": "Shut down", "target": "Apagar el ordenador"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-85-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I start work at nine AM.", "options": ["I start work at nine AM.", "She starts work at nine AM.", "I start work at eight AM.", "I finish work at nine AM."], "correct_answer": "I start work at nine AM.", "explanation": "Audio exacto." },
+        { "id": "a1-85-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I usually check my emails first.", "options": ["I usually check my emails first.", "I always check my emails first.", "She usually checks her emails first.", "I usually read my emails first."], "correct_answer": "I usually check my emails first.", "explanation": "Audio exacto." },
+        { "id": "a1-85-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have lunch at one PM.", "options": ["I have lunch at one PM.", "She has lunch at one PM.", "I have lunch at two PM.", "I eat lunch at one PM."], "correct_answer": "I have lunch at one PM.", "explanation": "Audio exacto." },
+        { "id": "a1-85-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I take a coffee break at ten.", "options": ["I take a coffee break at ten.", "She takes a coffee break at ten.", "I take a break at ten.", "I have a coffee break at ten."], "correct_answer": "I take a coffee break at ten.", "explanation": "Audio exacto." },
+        { "id": "a1-85-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I never work late on Fridays.", "options": ["I never work late on Fridays.", "I always work late on Fridays.", "She never works late on Fridays.", "I never work late on Mondays."], "correct_answer": "I never work late on Fridays.", "explanation": "Audio exacto." },
+        { "id": "a1-85-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I write emails in the morning.", "options": ["I write emails in the morning.", "She writes emails in the morning.", "I read emails in the morning.", "I write emails in the afternoon."], "correct_answer": "I write emails in the morning.", "explanation": "Audio exacto." },
+        { "id": "a1-85-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I work from home on Fridays.", "options": ["I work from home on Fridays.", "She works from home on Fridays.", "I work at home on Fridays.", "I work from home on Mondays."], "correct_answer": "I work from home on Fridays.", "explanation": "Audio exacto." },
+        { "id": "a1-85-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I arrive at the office at seven.", "options": ["I arrive at the office at seven.", "She arrives at the office at seven.", "I arrive in the office at seven.", "I arrive at the office at eight."], "correct_answer": "I arrive at the office at seven.", "explanation": "Audio exacto." },
+        { "id": "a1-85-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How often do you check your emails?", "options": ["How often do you check your emails?", "How many times do you check?", "How much do you check emails?", "How often does she check emails?"], "correct_answer": "How often do you check your emails?", "explanation": "Audio exacto." },
+        { "id": "a1-85-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I shut down my computer at the end.", "options": ["I shut down my computer at the end.", "She shuts down the computer at the end.", "I turn off my computer at the end.", "I shut my computer at the end."], "correct_answer": "I shut down my computer at the end.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

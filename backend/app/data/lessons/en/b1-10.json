@@ -1,0 +1,101 @@
+{
+  "id": "b1-10",
+  "title": "B1 Milestone 2: Review Test",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 750,
+  "tags": ["B1", "Review", "Milestone", "Test", "Grammar", "Vocabulary", "Business"],
+  "completion_message": "¡Felicidades! Has superado el Segundo Hito del Nivel B1. Estás dominando el vocabulario de reuniones, finanzas y consejos profesionales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "B1 Milestone 2: Repaso del Bloque",
+      "parts": [
+        { "visual": "En esta prueba repasaremos las lecciones 6 a 9 del nivel B1: \n- Giving Advice (Should vs Ought to). \n- Meetings & Interruptions (May I interrupt? Hold on, wrap up).", "audio": "In this test we will review lessons 6 to 9 of the B1 level: Giving advice using Should and Ought to, and vocabulary for Meetings and Interruptions." },
+        { "visual": "- Present Perfect: For vs Since (I have worked here for 2 years / since 2020). \n- Company Performance (Revenue, profit, loss, bankrupt, break even). \n¡Buena suerte!", "audio": "We will also review the use of For and Since with the Present Perfect, and vocabulary about Company Performance. Good luck!" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Milestone Quiz",
+      "description": "Elige la respuesta correcta en este desafío integrador (Lecciones 6-9).",
+      "questions": [
+        { "id": "b1-10-q1", "type": "quiz_choice", "question": "You ____ send that email. It's too aggressive. (No deberías).", "options": ["shouldn't", "should", "ought", "mustn't to"], "correct_answer": "shouldn't", "explanation": "Consejo negativo = shouldn't." },
+        { "id": "b1-10-q2", "type": "quiz_choice", "question": "We ____ to hire more staff before the summer. (Deberíamos - formal).", "options": ["ought", "should", "must", "can"], "correct_answer": "ought", "explanation": "Como está el 'to', la única opción correcta es 'ought' (ought to)." },
+        { "id": "b1-10-q3", "type": "quiz_choice", "question": "May I ____ for a moment? (¿Puedo interrumpir...?).", "options": ["interrupt", "stop", "break", "interruption"], "correct_answer": "interrupt", "explanation": "Interrupt = interrumpir." },
+        { "id": "b1-10-q4", "type": "quiz_choice", "question": "Let's get back to the ____. (Tema principal).", "options": ["point", "talk", "agenda", "word"], "correct_answer": "point", "explanation": "Get back to the point = volver al punto/tema central." },
+        { "id": "b1-10-q5", "type": "quiz_choice", "question": "We are getting ____. (Desviándonos del tema).", "options": ["sidetracked", "lost", "away", "out"], "correct_answer": "sidetracked", "explanation": "Get sidetracked." },
+        { "id": "b1-10-q6", "type": "quiz_choice", "question": "Could you speak ____? I can't hear you. (Más alto).", "options": ["up", "loud", "out", "high"], "correct_answer": "up", "explanation": "Speak up = hablar más fuerte." },
+        { "id": "b1-10-q7", "type": "quiz_choice", "question": "Let's ____ up the meeting now. (Concluir/Terminar).", "options": ["wrap", "finish", "end", "close"], "correct_answer": "wrap", "explanation": "Wrap up = concluir/envolver." },
+        { "id": "b1-10-q8", "type": "quiz_choice", "question": "I have worked in this company ____ five years. (Por 5 años).", "options": ["for", "since", "during", "in"], "correct_answer": "for", "explanation": "Duración de tiempo = for." },
+        { "id": "b1-10-q9", "type": "quiz_choice", "question": "She has been the CEO ____ 2018. (Desde 2018).", "options": ["since", "for", "from", "in"], "correct_answer": "since", "explanation": "Punto de inicio = since." },
+        { "id": "b1-10-q10", "type": "quiz_choice", "question": "We have been waiting ____ two hours. (Por 2 horas).", "options": ["for", "since", "at", "during"], "correct_answer": "for", "explanation": "Cantidad de tiempo = for." },
+        { "id": "b1-10-q11", "type": "quiz_choice", "question": "I haven't seen him ____ Monday. (Desde el lunes).", "options": ["since", "for", "on", "from"], "correct_answer": "since", "explanation": "Día exacto de inicio = since." },
+        { "id": "b1-10-q12", "type": "quiz_choice", "question": "Our total income from sales is our ____. (Ingresos brutos).", "options": ["revenue", "profit", "loss", "expense"], "correct_answer": "revenue", "explanation": "Revenue = ingresos brutos." },
+        { "id": "b1-10-q13", "type": "quiz_choice", "question": "After paying expenses, the remaining money is the ____. (Ganancia neta).", "options": ["profit", "revenue", "loss", "tax"], "correct_answer": "profit", "explanation": "Profit = ganancia/beneficio." },
+        { "id": "b1-10-q14", "type": "quiz_choice", "question": "We didn't make money, but we didn't lose any. We broke ____. (Punto de equilibrio).", "options": ["even", "out", "in", "up"], "correct_answer": "even", "explanation": "Break even." },
+        { "id": "b1-10-q15", "type": "quiz_choice", "question": "The small store went ____ during the crisis. (A la quiebra).", "options": ["bankrupt", "broke", "lost", "bad"], "correct_answer": "bankrupt", "explanation": "Go bankrupt." },
+        { "id": "b1-10-q16", "type": "quiz_choice", "question": "We need to reduce our ____ to make a profit. (Gastos).", "options": ["expenses", "revenues", "profits", "sales"], "correct_answer": "expenses", "explanation": "Expenses = gastos." },
+        { "id": "b1-10-q17", "type": "quiz_choice", "question": "____ I talk to human resources about this? (¿Debería yo...?).", "options": ["Should", "Ought", "Do", "Must"], "correct_answer": "Should", "explanation": "Should I...? para pedir consejo." },
+        { "id": "b1-10-q18", "type": "quiz_choice", "question": "Can I ____ something here? (Agregar/Añadir a la conversación).", "options": ["add", "say", "put", "make"], "correct_answer": "add", "explanation": "Add something." },
+        { "id": "b1-10-q19", "type": "quiz_choice", "question": "Please let me ____. (Terminar de hablar).", "options": ["finish", "stop", "end", "talk"], "correct_answer": "finish", "explanation": "Let me finish." },
+        { "id": "b1-10-q20", "type": "quiz_choice", "question": "The company's shares dropped, meaning we are operating at a ____. (Pérdida).", "options": ["loss", "profit", "revenue", "even"], "correct_answer": "loss", "explanation": "Operate at a loss = operar con pérdidas." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Completa el repaso escribiendo la palabra correcta.",
+      "questions": [
+        { "id": "b1-10-f1", "type": "fill_input", "question": "You ____ complain. (Deberías - modal más común)", "correct_answer": "should", "explanation": "should." },
+        { "id": "b1-10-f2", "type": "fill_input", "question": "We ____ to hire him. (Deberíamos - formal)", "correct_answer": "ought", "explanation": "ought." },
+        { "id": "b1-10-f3", "type": "fill_input", "question": "May I ____? (Interrumpir)", "correct_answer": "interrupt", "explanation": "interrupt." },
+        { "id": "b1-10-f4", "type": "fill_input", "question": "Let's wrap ____. (Concluir la reunión)", "correct_answer": "up", "explanation": "up." },
+        { "id": "b1-10-f5", "type": "fill_input", "question": "I've been here ____ ten years. (Por)", "correct_answer": "for", "explanation": "for." },
+        { "id": "b1-10-f6", "type": "fill_input", "question": "She's been manager ____ 2020. (Desde)", "correct_answer": "since", "explanation": "since." },
+        { "id": "b1-10-f7", "type": "fill_input", "question": "Total income is ____. (Ingresos brutos)", "correct_answer": "revenue", "explanation": "revenue." },
+        { "id": "b1-10-f8", "type": "fill_input", "question": "Net income is ____. (Ganancia)", "correct_answer": "profit", "explanation": "profit." },
+        { "id": "b1-10-f9", "type": "fill_input", "question": "We made a huge ____. (Pérdida)", "correct_answer": "loss", "explanation": "loss." },
+        { "id": "b1-10-f10", "type": "fill_input", "question": "They went ____. (A la quiebra)", "correct_answer": "bankrupt", "explanation": "bankrupt." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "B1 Mega Match 2",
+      "pairs": [
+        {"id": "b1-10-p1", "source": "You should / ought to", "target": "Deberías"},
+        {"id": "b1-10-p2", "source": "May I interrupt?", "target": "¿Puedo interrumpir?"},
+        {"id": "b1-10-p3", "source": "Get back to the point", "target": "Volver al tema"},
+        {"id": "b1-10-p4", "source": "Wrap up", "target": "Concluir la reunión"},
+        {"id": "b1-10-p5", "source": "For five years", "target": "Por 5 años (Duración)"},
+        {"id": "b1-10-p6", "source": "Since 2020", "target": "Desde 2020 (Inicio exacto)"},
+        {"id": "b1-10-p7", "source": "Revenue", "target": "Ingresos brutos"},
+        {"id": "b1-10-p8", "source": "Profit / Loss", "target": "Ganancia / Pérdida"},
+        {"id": "b1-10-p9", "source": "Break even", "target": "Punto de equilibrio"},
+        {"id": "b1-10-p10", "source": "Go bankrupt", "target": "Ir a la quiebra"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de tu examen final.",
+      "questions": [
+        { "id": "b1-10-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You shouldn't send that email.", "options": ["You shouldn't send that email.", "You should send that email.", "You shouldn't read that email.", "I shouldn't send that email."], "correct_answer": "You shouldn't send that email.", "explanation": "Audio exacto." },
+        { "id": "b1-10-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We ought to hire more staff.", "options": ["We ought to hire more staff.", "We should hire more staff.", "They ought to hire more staff.", "We ought to fire more staff."], "correct_answer": "We ought to hire more staff.", "explanation": "Audio exacto." },
+        { "id": "b1-10-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "May I interrupt for a moment?", "options": ["May I interrupt for a moment?", "Can I interrupt for a moment?", "Must I interrupt for a moment?", "Should I interrupt for a moment?"], "correct_answer": "May I interrupt for a moment?", "explanation": "Audio exacto." },
+        { "id": "b1-10-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's wrap up the meeting.", "options": ["Let's wrap up the meeting.", "Let's wrap the meeting up.", "We need to wrap up the meeting.", "Let's finish the meeting."], "correct_answer": "Let's wrap up the meeting.", "explanation": "Audio exacto." },
+        { "id": "b1-10-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have worked here for five years.", "options": ["I have worked here for five years.", "I have worked here since five years.", "I work here for five years.", "I worked here for five years."], "correct_answer": "I have worked here for five years.", "explanation": "Audio exacto." },
+        { "id": "b1-10-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have worked here since 2018.", "options": ["I have worked here since 2018.", "I have worked here for 2018.", "I work here since 2018.", "I worked here since 2018."], "correct_answer": "I have worked here since 2018.", "explanation": "Audio exacto." },
+        { "id": "b1-10-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We made a huge profit this year.", "options": ["We made a huge profit this year.", "We made a huge loss this year.", "They made a huge profit this year.", "We make a huge profit this year."], "correct_answer": "We made a huge profit this year.", "explanation": "Audio exacto." },
+        { "id": "b1-10-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company went bankrupt.", "options": ["The company went bankrupt.", "The business went bankrupt.", "Our company went bankrupt.", "The company goes bankrupt."], "correct_answer": "The company went bankrupt.", "explanation": "Audio exacto." },
+        { "id": "b1-10-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We hope to break even soon.", "options": ["We hope to break even soon.", "I hope to break even soon.", "We hope they break even soon.", "We hope to break out soon."], "correct_answer": "We hope to break even soon.", "explanation": "Audio exacto." },
+        { "id": "b1-10-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must reduce our expenses.", "options": ["We must reduce our expenses.", "We should reduce our expenses.", "They must reduce their expenses.", "We must reduce the expenses."], "correct_answer": "We must reduce our expenses.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

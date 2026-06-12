@@ -1,565 +1,94 @@
 {
   "id": "fr-a2-14",
-  "title": "Calendarios y Fechas",
+  "title": "Les Adverbes en -MENT",
+  "version": "4.0-ARTISAN",
   "level": "A2",
-  "description": "Días de la semana y meses de negocios.",
-  "total_xp": 300,
-  "difficulty": "easy",
-  "tags": [
-    "a2",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Adverbs", "MENT", "Vocabulary"],
+  "completion_message": "¡Fantástico! Ahora puedes describir no solo *qué* haces, sino *cómo* lo haces. Los adverbios en -MENT le darán mucho color a tu francés.",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Calendarios y Fechas",
+      "title": "El Arte del CÓMO (-MENT)",
       "parts": [
         {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau A2 • Leçon A2-14 de 200\nSujet: Calendarios y Fechas\n\nConcept Clé:\n☞ 'LUNDI'\n\n[Point Grammatical - Enfoque Gramatical]\n- Le passé composé avec l'auxiliaire avoir et être (ex: 'nous avons reçu lundi').\\n- Les adjectifs possessifs (mon, ton, son, notre, votre, leur).\\n- Clé Didactique : Raconter des événements passés et des activités de bureau quotidiennes.",
-          "audio": "Bienvenue à la leçon A2-14 sur Calendarios y Fechas. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : lundi."
+          "visual": "En español, para decir CÓMO hacemos algo, usamos '-mente' (Lentamente, Rápidamente).\nEn francés, el equivalente exacto es '-MENT'.\n\n¿Cómo se construyen?\nRegla General:\n1. Toma el adjetivo y ponlo en FEMENINO.\n2. Añádele '-MENT'.\n\nEjemplo 1 (Lento -> Lentamente):\n- Masculino: Lent\n- Femenino: LentE\n- Adverbio: LenteMENT\n\nEjemplo 2 (Feliz -> Felizmente / Afortunadamente):\n- Masculino: Heureux\n- Femenino: HeureusE\n- Adverbio: HeureuseMENT",
+          "audio": "Hasta ahora sabes decir cosas como 'Yo como', o 'Yo camino'. Pero, ¿cómo caminas? ¿Rápido, lento, felizmente? Para describir CÓMO hacemos una acción, usamos los adverbios de modo. En español los formamos añadiendo 'mente' al final de la palabra, como en 'lentamente'. En francés es exactamente igual, pero usamos la terminación M E N T. La regla de oro es: primero pasa el adjetivo a femenino, y luego le pegas MENT. Por ejemplo, lento se dice 'Lent'. Su femenino es 'Lente'. Si le pegas MENT, obtienes 'Lentement', que significa lentamente."
         },
         {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'lundi' (Traducción/Uso: Días de la semana y meses de negocios.)\n- Application Pratique : 'Nous devons intégrer lundi pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : La lettre 'e' finale dans 'lundi' est généralement muette.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : lundi. Répétez après moi : lundi."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Au niveau A2, la ponctualité est essentielle en France; arriver 5 minutes avant l'heure démontre du professionnalisme.\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
+          "visual": "Las dos excepciones más comunes:\n\nExcepción 1: Si el adjetivo masculino ya termina en una VOCAL, NO lo pasas a femenino. Le pegas '-MENT' directamente.\n- Vrai (Verdadero) -> VraiMENT (Verdaderamente / Realmente)\n- Rapide (Rápido) -> RapideMENT (Rápidamente)\n- Absolu (Absoluto) -> AbsoluMENT (Absolutamente)\n\nExcepción 2: Si el adjetivo termina en -ENT o -ANT, se cambia a -EMMENT o -AMMENT (Ambos se pronuncian 'A-MENT').\n- RécENT (Reciente) -> RécEMMENT (Recientemente)\n- CourANT (Corriente) -> CourAMMENT (Corrientemente / Con fluidez)\n(Ej: Je parle français couramment).",
+          "audio": "Como siempre, hay excepciones. La primera excepción es que si la palabra original ya termina en una vocal, como la letra I o la letra U, no necesitas buscar su lado femenino. Le pegas MENT directamente. Por ejemplo, verdadero se dice 'Vrai'. Si le pegas MENT, tienes 'Vraiment', que significa Verdaderamente, o Realmente. La segunda excepción es para palabras que terminan en E N T. Por ejemplo 'Récent'. No dices 'Recentement'. Simplemente cambias el final por doble M, formando 'Récemment', que significa recientemente. ¡Presta atención a estas excepciones en los ejercicios!"
         }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Transforma los adjetivos en adverbios de modo (-MENT).",
       "questions": [
-        {
-          "id": "fr-a2-14-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"lundi\" dans le contexte de \"Calendarios y Fechas\" ?",
-          "options": [
-            "Le concept professionnel principal de lundi utilisé dans Calendarios y Fechas.",
-            "Un terme familier à éviter dans Calendarios y Fechas.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Calendarios y Fechas."
-          ],
-          "correct_answer": "Le concept professionnel principal de lundi utilisé dans Calendarios y Fechas.",
-          "explanation": "Comprendre la définition de \"lundi\" est fondamental pour maîtriser \"Calendarios y Fechas\"."
-        },
-        {
-          "id": "fr-a2-14-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"lundi\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Calendarios y Fechas\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"lundi\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Calendarios y Fechas\" aux parties prenantes.",
-          "explanation": "Aborder \"lundi\" dans les présentations professionnelles améliore la communication globale concernant \"Calendarios y Fechas\"."
-        },
-        {
-          "id": "fr-a2-14-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Calendarios y Fechas\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"lundi\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"lundi\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"lundi\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"lundi\" sont los piliers d'une exécution réussie de \"Calendarios y Fechas\"."
-        },
-        {
-          "id": "fr-a2-14-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Calendarios y Fechas\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"lundi\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"lundi\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"lundi\" conduit souvent à des résultats inefficaces dans \"Calendarios y Fechas\"."
-        },
-        {
-          "id": "fr-a2-14-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"lundi\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"lundi\" adapté à l'environnement de \"Calendarios y Fechas\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"lundi\" adapté à l'environnement de \"Calendarios y Fechas\".",
-          "explanation": "Traduire ou adapter \"lundi\" nécessite de comprendre son application commerciale pratique dans \"Calendarios y Fechas\"."
-        },
-        {
-          "id": "fr-a2-14-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"lundi\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Calendarios y Fechas\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Calendarios y Fechas\".",
-          "explanation": "Utiliser \"lundi\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-a2-14-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Calendarios y Fechas\", comment un cadre doit-il présenter \"lundi\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"lundi\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-a2-14-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"lundi\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"lundi\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"lundi\".",
-          "explanation": "Définir les jalons liés à \"lundi\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-a2-14-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Calendarios y Fechas\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"lundi\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"lundi\".",
-          "explanation": "Les mots professionnels comme \"lundi\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-a2-14-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"lundi\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"lundi\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "fra2-14-q1", "type": "quiz_choice", "question": "¿A qué equivale la terminación '-MENT' en español?", "options": ["A la terminación '-mente' (Ej: Lentamente)", "A la terminación '-ísimo' (Ej: Lenísimo)", "A la palabra 'Muy'", "Al verbo Ser"], "correct_answer": "A la terminación '-mente' (Ej: Lentamente)", "explanation": "Lentement = Lentamente. Heureusement = Felizmente." },
+        { "id": "fra2-14-q2", "type": "quiz_choice", "question": "¿Cuál es la REGLA GENERAL para formar un adverbio en -MENT?", "options": ["Tomar el adjetivo en FEMENINO y añadir -MENT", "Añadir -MENT al infinitivo", "Añadir -MENT al verbo conjugado", "Añadir -MENT al sustantivo plural"], "correct_answer": "Tomar el adjetivo en FEMENINO y añadir -MENT", "explanation": "Se usa siempre la base femenina (Lent -> Lente -> Lentement)." },
+        { "id": "fra2-14-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Lentamente'?", "options": ["Lentement", "Lentment", "Lentament", "Lentemente"], "correct_answer": "Lentement", "explanation": "Femenino 'lente' + ment = lentement." },
+        { "id": "fra2-14-q4", "type": "quiz_choice", "question": "El adjetivo 'Heureux' (Feliz) tiene como femenino 'Heureuse'. ¿Cómo se dice 'Afortunadamente / Felizmente'?", "options": ["Heureusement", "Heureuxment", "Heureuse", "Très heureux"], "correct_answer": "Heureusement", "explanation": "Heureuse + ment = Heureusement." },
+        { "id": "fra2-14-q5", "type": "quiz_choice", "question": "El adjetivo masculino 'Vrai' (Verdadero) termina en vocal. ¿Cómo se forma 'Realmente / Verdaderamente'?", "options": ["Vraiment", "Vraiement", "Vraissement", "Vraient"], "correct_answer": "Vraiment", "explanation": "Si termina en vocal, se añade -MENT directamente: Vrai -> Vraiment." },
+        { "id": "fra2-14-q6", "type": "quiz_choice", "question": "¿Cómo se dice 'Rápidamente'? (Rapide ya termina en vocal)", "options": ["Rapidement", "Rapidiement", "Rapidment", "Plus rapide"], "correct_answer": "Rapidement", "explanation": "Rapide + ment = Rapidement." },
+        { "id": "fra2-14-q7", "type": "quiz_choice", "question": "¿Cómo se dice 'Absolutamente'? (Absolu termina en vocal)", "options": ["Absolument", "Absoluement", "Absoliment", "Très absolu"], "correct_answer": "Absolument", "explanation": "Absolu + ment = Absolument." },
+        { "id": "fra2-14-q8", "type": "quiz_choice", "question": "El adjetivo 'Doux' (Suave/Dulce) tiene como femenino 'Douce'. ¿Cómo se dice 'Suavemente'?", "options": ["Doucement", "Douxment", "Douxcement", "Très doux"], "correct_answer": "Doucement", "explanation": "Douce + ment = Doucement (Suavemente, también significa 'Despacio' o 'Con cuidado')." },
+        { "id": "fra2-14-q9", "type": "quiz_choice", "question": "¿Qué pasa con los adjetivos que terminan en -ENT (Ej: Récent)?", "options": ["Cambian a -EMMENT (Récemment)", "Se les añade -MENT (Récentment)", "Pasan a femenino (Récentement)", "No se pueden hacer adverbios"], "correct_answer": "Cambian a -EMMENT (Récemment)", "explanation": "Récent -> Récemment." },
+        { "id": "fra2-14-q10", "type": "quiz_choice", "question": "¿Cómo se dice 'Corrientemente / Con fluidez'? (Adjetivo: Courant)", "options": ["Couramment", "Courantement", "Courantment", "Courant"], "correct_answer": "Couramment", "explanation": "Courant -> Couramment." },
+        { "id": "fra2-14-q11", "type": "quiz_choice", "question": "Je parle français ____ (Con fluidez).", "options": ["couramment", "courantement", "vraiement", "rapidement"], "correct_answer": "couramment", "explanation": "Hablar un idioma 'couramment' es hablarlo con fluidez." },
+        { "id": "fra2-14-q12", "type": "quiz_choice", "question": "Completa: Il marche ____ (Lentamente).", "options": ["lentement", "lentment", "douce", "vrai"], "correct_answer": "lentement", "explanation": "Caminar lentamente = lentement." },
+        { "id": "fra2-14-q13", "type": "quiz_choice", "question": "¿Cómo se dice 'Naturalmente'? (Naturel -> Naturelle)", "options": ["Naturellement", "Naturelment", "Naturelement", "Très naturel"], "correct_answer": "Naturellement", "explanation": "Naturelle + ment = Naturellement." },
+        { "id": "fra2-14-q14", "type": "quiz_choice", "question": "Completa: C'est ____ difficile ! (Es REALMENTE difícil).", "options": ["vraiment", "vrai", "vraiement", "vraite"], "correct_answer": "vraiment", "explanation": "Realmente = Vraiment." },
+        { "id": "fra2-14-q15", "type": "quiz_choice", "question": "¿Cómo se dice 'Frecuentemente'? (Fréquent)", "options": ["Fréquemment", "Fréquentement", "Fréquentment", "Fréquent"], "correct_answer": "Fréquemment", "explanation": "Fréquent -> Fréquemment." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el adverbio completo (Añade -ment, -emment, etc).",
       "questions": [
-        {
-          "id": "fr-a2-14-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"lundi\" (Exercice 1) :",
-          "parts": [
-            "notre",
-            "lundi",
-            "pendant",
-            "les",
-            "réunions.",
-            "Nous",
-            "utilisons"
-          ],
-          "correct_order": [
-            "Nous",
-            "utilisons",
-            "notre",
-            "lundi",
-            "pendant",
-            "les",
-            "réunions."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"lundi\"."
-        },
-        {
-          "id": "fr-a2-14-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"lundi\" (Exercice 2) :",
-          "parts": [
-            "lundi",
-            "pour",
-            "le",
-            "projet.",
-            "Voici",
-            "notre"
-          ],
-          "correct_order": [
-            "Voici",
-            "notre",
-            "lundi",
-            "pour",
-            "le",
-            "projet."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"lundi\"."
-        },
-        {
-          "id": "fr-a2-14-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"lundi\" (Exercice 3) :",
-          "parts": [
-            "vérifier",
-            "notre",
-            "lundi",
-            "ce",
-            "matin.",
-            "Je",
-            "dois"
-          ],
-          "correct_order": [
-            "Je",
-            "dois",
-            "vérifier",
-            "notre",
-            "lundi",
-            "ce",
-            "matin."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"lundi\"."
-        },
-        {
-          "id": "fr-a2-14-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"lundi\" (Exercice 4) :",
-          "parts": [
-            "votre",
-            "lundi",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît.",
-            "Veuillez",
-            "présenter"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "présenter",
-            "votre",
-            "lundi",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"lundi\"."
-        },
-        {
-          "id": "fr-a2-14-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"lundi\" (Exercice 5) :",
-          "parts": [
-            "apprécie",
-            "chaque",
-            "lundi",
-            "de",
-            "bureau.",
-            "Notre",
-            "équipe"
-          ],
-          "correct_order": [
-            "Notre",
-            "équipe",
-            "apprécie",
-            "chaque",
-            "lundi",
-            "de",
-            "bureau."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"lundi\"."
-        },
-        {
-          "id": "fr-a2-14-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"lundi\" (Exercice 6) :",
-          "parts": [
-            "notre",
-            "lundi",
-            "avant",
-            "midi",
-            "?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "notre",
-            "lundi",
-            "avant",
-            "midi",
-            "?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"lundi\"."
-        },
-        {
-          "id": "fr-a2-14-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"lundi\" (Exercice 7) :",
-          "parts": [
-            "organiser",
-            "notre",
-            "lundi",
-            "cette",
-            "semaine.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "organiser",
-            "notre",
-            "lundi",
-            "cette",
-            "semaine."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"lundi\"."
-        },
-        {
-          "id": "fr-a2-14-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"lundi\" (Exercice 8) :",
-          "parts": [
-            "statut",
-            "de",
-            "notre",
-            "lundi",
-            "ensemble.",
-            "Examinons",
-            "le"
-          ],
-          "correct_order": [
-            "Examinons",
-            "le",
-            "statut",
-            "de",
-            "notre",
-            "lundi",
-            "ensemble."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"lundi\"."
-        },
-        {
-          "id": "fr-a2-14-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"lundi\" (Exercice 9) :",
-          "parts": [
-            "améliorer",
-            "notre",
-            "lundi",
-            "de",
-            "travail.",
-            "Ils",
-            "souhaitent"
-          ],
-          "correct_order": [
-            "Ils",
-            "souhaitent",
-            "améliorer",
-            "notre",
-            "lundi",
-            "de",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"lundi\"."
-        },
-        {
-          "id": "fr-a2-14-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"lundi\" (Exercice 10) :",
-          "parts": [
-            "avec",
-            "notre",
-            "lundi",
-            "tous",
-            "les",
-            "jours.",
-            "Elle",
-            "travaille"
-          ],
-          "correct_order": [
-            "Elle",
-            "travaille",
-            "avec",
-            "notre",
-            "lundi",
-            "tous",
-            "les",
-            "jours."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"lundi\"."
-        }
+        { "id": "fra2-14-f1", "type": "fill_input", "question": "Lent (Femenino: Lente) -> ____ (Lentamente)", "correct_answer": "Lentement", "explanation": "Lentement" },
+        { "id": "fra2-14-f2", "type": "fill_input", "question": "Heureux (Femenino: Heureuse) -> ____ (Felizmente / Afortunadamente)", "correct_answer": "Heureusement", "explanation": "Heureusement" },
+        { "id": "fra2-14-f3", "type": "fill_input", "question": "Vrai (Verdadero) -> ____ (Verdaderamente / Realmente)", "correct_answer": "Vraiment", "explanation": "Vraiment" },
+        { "id": "fra2-14-f4", "type": "fill_input", "question": "Rapide -> ____ (Rápidamente)", "correct_answer": "Rapidement", "explanation": "Rapidement" },
+        { "id": "fra2-14-f5", "type": "fill_input", "question": "Doux (Femenino: Douce) -> ____ (Suavemente / Despacio)", "correct_answer": "Doucement", "explanation": "Doucement" },
+        { "id": "fra2-14-f6", "type": "fill_input", "question": "Absolu -> ____ (Absolutamente)", "correct_answer": "Absolument", "explanation": "Absolument" },
+        { "id": "fra2-14-f7", "type": "fill_input", "question": "Récent -> ____ (Recientemente)", "correct_answer": "Récemment", "explanation": "Récemment" },
+        { "id": "fra2-14-f8", "type": "fill_input", "question": "Courant -> ____ (Con fluidez / Corrientemente)", "correct_answer": "Couramment", "explanation": "Couramment" },
+        { "id": "fra2-14-f9", "type": "fill_input", "question": "Naturel (Femenino: Naturelle) -> ____ (Naturalmente)", "correct_answer": "Naturellement", "explanation": "Naturellement" },
+        { "id": "fra2-14-f10", "type": "fill_input", "question": "Fréquent -> ____ (Frecuentemente)", "correct_answer": "Fréquemment", "explanation": "Fréquemment" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-a2-14-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"lundi\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"lundi\" en détail.",
-            "Une autre déclaration sur notre \"lundi\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"lundi\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"lundi\" en réunion."
-        },
-        {
-          "id": "fr-a2-14-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"lundi\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"lundi\" ?",
-            "Une autre déclaration sur notre \"lundi\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"lundi\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"lundi\" en réunion."
-        },
-        {
-          "id": "fr-a2-14-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"lundi\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"lundi\" cette année.",
-            "Une autre déclaration sur notre \"lundi\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"lundi\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"lundi\" en réunion."
-        },
-        {
-          "id": "fr-a2-14-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"lundi\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"lundi\".",
-            "Une autre déclaration sur notre \"lundi\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"lundi\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"lundi\" en réunion."
-        },
-        {
-          "id": "fr-a2-14-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"lundi\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"lundi\".",
-            "Une autre déclaration sur notre \"lundi\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"lundi\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"lundi\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "fra2-14-p1", "source": "Lentement", "target": "Lentamente"},
+        {"id": "fra2-14-p2", "source": "Rapidement", "target": "Rápidamente"},
+        {"id": "fra2-14-p3", "source": "Vraiment", "target": "Realmente / Verdaderamente"},
+        {"id": "fra2-14-p4", "source": "Heureusement", "target": "Afortunadamente"},
+        {"id": "fra2-14-p5", "source": "Doucement", "target": "Suavemente / Despacio"},
+        {"id": "fra2-14-p6", "source": "Absolument", "target": "Absolutamente"},
+        {"id": "fra2-14-p7", "source": "Récemment", "target": "Recientemente"},
+        {"id": "fra2-14-p8", "source": "Couramment", "target": "Con fluidez"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha los adverbios y relaciónalos con su forma escrita.",
       "questions": [
-        {
-          "id": "fr-a2-14-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"lun__\" (Indice : désigne \"lundi\")",
-          "correct_answers": [
-            "lundi",
-            "Lundi"
-          ],
-          "hints": [
-            "Commence par 'lun'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"lundi\"."
-        },
-        {
-          "id": "fr-a2-14-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"L'équipe veut discuter de notre lundi ____ lundi matin.\" (le / en)",
-          "correct_answers": [
-            "le"
-          ],
-          "hints": [
-            "Article défini utilisé devant les jours de la semaine"
-          ],
-          "explanation": "En français, on utilise l'article défini 'le' devant un jour de la semana pour indiquer un rendez-vous habituel ou fixe."
-        },
-        {
-          "id": "fr-a2-14-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Veuillez ____ attention à ne pas faire d'erreur sur notre lundi.\" (faire / prendre)",
-          "correct_answers": [
-            "faire",
-            "Faire"
-          ],
-          "hints": [
-            "Verbe signifiant effectuer ou prêter attention"
-          ],
-          "explanation": "L'expression 'faire attention' est une collocation standard en français."
-        },
-        {
-          "id": "fr-a2-14-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons organiser une ____ pour revoir notre lundi.\" (réunion / carte)",
-          "correct_answers": [
-            "réunion",
-            "discussion",
-            "session"
-          ],
-          "hints": [
-            "Un rassemblement de personnes pour travailler ensemble"
-          ],
-          "explanation": "Une 'réunion' est le terme standard pour un meeting professionnel."
-        },
-        {
-          "id": "fr-a2-14-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Il nous faut un rapport ____ sur le statut de notre lundi.\" (clair / lent)",
-          "correct_answers": [
-            "clair"
-          ],
-          "hints": [
-            "Facile à comprendre et bien structuré"
-          ],
-          "explanation": "Un rapport 'clair' est indispensable pour assurer l'alignement."
-        }
+        { "id": "fra2-14-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Vraiment", "options": ["Vraiment", "Vrai", "Récemment", "Absolument"], "correct_answer": "Vraiment", "explanation": "Audio dice: Vraiment (Realmente)." },
+        { "id": "fra2-14-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Heureusement", "options": ["Heureusement", "Heureuse", "Lentement", "Doucement"], "correct_answer": "Heureusement", "explanation": "Audio dice: Heureusement (Afortunadamente)." },
+        { "id": "fra2-14-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Doucement", "options": ["Doucement", "Lentement", "Rapidement", "Couramment"], "correct_answer": "Doucement", "explanation": "Audio dice: Doucement (Suavemente / Despacio)." },
+        { "id": "fra2-14-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Couramment", "options": ["Couramment", "Courant", "Récemment", "Vraiment"], "correct_answer": "Couramment", "explanation": "Audio dice: Couramment (Con fluidez)." },
+        { "id": "fra2-14-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Lentement", "options": ["Lentement", "Doucement", "Rapidement", "Vraiment"], "correct_answer": "Lentement", "explanation": "Audio dice: Lentement (Lentamente)." }
       ]
     }
   ]

@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-8",
+  "title": "El Verbo Querer y las Bebidas",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Verbs", "Food", "Wants"],
+  "completion_message": "¡Excelente! Ahora ya no te morirás de sed en China. Sabes exactamente cómo pedir lo que quieres.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Expresando Deseos",
+      "parts": [
+        {
+          "visual": "El Verbo Querer: 要 (yào)\n\nEl tercer gran verbo del chino es 要 (yào), que significa 'querer' o 'desear'. Es un cuarto tono (fuerte hacia abajo).\n\n- Yo quiero: 我要 (Wǒ yào).\n- Tú quieres: 你要 (Nǐ yào).\n\nPodemos combinarlo con objetos directamente:\n- Té: 茶 (chá) - Segundo tono (Sube).\n- Agua: 水 (shuǐ) - Tercer tono (Baja y sube).\n\nEjemplo:\n- Yo quiero té: 我要茶 (Wǒ yào chá).\n- ¿Tú quieres agua?: 你要水吗？(Nǐ yào shuǐ ma?)",
+          "audio": "Hasta ahora sabemos Ser y Tener. Hoy vamos a aprender a pedir cosas. El verbo 'Querer' se dice Yào. Es un cuarto tono intenso, casi como si estuvieras dando una orden. Yào. Para decir 'Yo quiero', decimos 'Wǒ yào'. Si vas a un restaurante en Beijing y quieres pedir té, que en chino se dice chá, simplemente dices 'Wǒ yào chá'. Así de directo. Si prefieres agua, que se dice shuǐ, dirás 'Wǒ yào shuǐ'. Es la fórmula más rápida para sobrevivir en China."
+        },
+        {
+          "visual": "La Negación: 不要 (bú yào)\n\nComo aprendimos antes, la palabra universal para 'NO' es 不 (bù).\nComo 要 (yào) NO ES el verbo 'tener', se niega de manera normal con 不.\n\nSin embargo, ¡aplica la Regla del Camaleón!\nComo 要 (yào) tiene cuarto tono, el 不 (bù) cambia a bú (segundo tono) para fluir mejor.\n\n- Yo NO quiero: 我不要 (Wǒ bú yào).\n- Yo NO quiero té: 我不要茶 (Wǒ bú yào chá).\n\nSolo el verbo 'Tener' (有 - yǒu) se negaba con 'méi'. Todos los demás verbos se niegan con 'bù'.",
+          "audio": "Para decir que NO quieres algo, vamos a usar nuestra negación universal 'bù'. Recuerda, el único verbo rebelde que usa 'méi' es el verbo tener. Todos los demás verbos del universo usan 'bù'. Así que 'no quiero' sería 'bù yào'. Pero, ¿recuerdas la regla del camaleón? Como yào es fuerte hacia abajo, y bù también, chocan. Así que suavizamos la negación subiéndola un poco. Decimos 'bú yào'. Si te ofrecen algo en la calle y no lo quieres, levantas la mano y dices amablemente 'bú yào'. No, gracias."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que sabes pedir y rechazar cosas en mandarín.",
+      "questions": [
+        { "id": "zh-a1-8-q1", "type": "quiz_choice", "question": "¿Qué significa el verbo 要 (yào)?", "options": ["Querer / Desear.", "Tener.", "Ser.", "Ir."], "correct_answer": "Querer / Desear.", "explanation": "要 (yào) es el verbo querer." },
+        { "id": "zh-a1-8-q2", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo quiero' en mandarín?", "options": ["Wǒ yào (我要).", "Wǒ yǒu (我有).", "Wǒ shì (我是).", "Nǐ yào (你要)."], "correct_answer": "Wǒ yào (我要).", "explanation": "Wǒ (Yo) + yào (quiero)." },
+        { "id": "zh-a1-8-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Té' en mandarín?", "options": ["Chá (茶).", "Shuǐ (水).", "Yào (要).", "Mā (妈)."], "correct_answer": "Chá (茶).", "explanation": "Chá es té (de ahí viene la palabra 'chai')." },
+        { "id": "zh-a1-8-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Agua' en mandarín?", "options": ["Shuǐ (水).", "Chá (茶).", "Yào (要).", "Bù (不)."], "correct_answer": "Shuǐ (水).", "explanation": "Shuǐ significa agua." },
+        { "id": "zh-a1-8-q5", "type": "quiz_choice", "question": "¿Cómo dirías 'Yo quiero té'?", "options": ["Wǒ yào chá (我要茶).", "Wǒ chá yào (我茶要).", "Chá wǒ yào (茶我要).", "Wǒ yǒu chá (我有茶)."], "correct_answer": "Wǒ yào chá (我要茶).", "explanation": "Sujeto + Verbo (yào) + Objeto (chá)." },
+        { "id": "zh-a1-8-q6", "type": "quiz_choice", "question": "¿Con qué palabra niegas el verbo 要 (yào) para decir 'No quiero'?", "options": ["Con 不 (bú).", "Con 没 (méi).", "Con 吗 (ma).", "Con 是 (shì)."], "correct_answer": "Con 不 (bú).", "explanation": "Solo el verbo 'tener' usa 没. Todos los demás, incluido 'querer', usan 不 (bù/bú)." },
+        { "id": "zh-a1-8-q7", "type": "quiz_choice", "question": "¿Por qué se pronuncia 'bú yào' en lugar de 'bù yào'?", "options": ["Por la regla del cambio de tono, porque yào ya tiene el cuarto tono (hacia abajo).", "Porque es una excepción aleatoria.", "Porque 'bú' significa 'sí'.", "Porque está en pasado."], "correct_answer": "Por la regla del cambio de tono, porque yào ya tiene el cuarto tono (hacia abajo).", "explanation": "Dos cuartos tonos seguidos son difíciles de pronunciar fluidamente." },
+        { "id": "zh-a1-8-q8", "type": "quiz_choice", "question": "¿Cómo se pregunta '¿Tú quieres agua?'?", "options": ["Nǐ yào shuǐ ma? (你要水吗？)", "Nǐ shuǐ yào ma? (你水要吗？)", "Nǐ yào shénme shuǐ? (你要什么水？)", "Nǐ yǒu shuǐ ma? (你有水吗？)"], "correct_answer": "Nǐ yào shuǐ ma? (你要水吗？)", "explanation": "Nǐ yào shuǐ (Tú quieres agua) + ma (¿?)." },
+        { "id": "zh-a1-8-q9", "type": "quiz_choice", "question": "Si te preguntan '¿Nǐ yào chá ma?' (¿Quieres té?), ¿cómo respondes que NO?", "options": ["Bú yào (不要).", "Méiyǒu (没有).", "Bú shì (不是).", "Bù (不)."], "correct_answer": "Bú yào (不要).", "explanation": "Se responde negando el verbo de la pregunta." },
+        { "id": "zh-a1-8-q10", "type": "quiz_choice", "question": "¿Cómo se pregunta '¿Qué quieres?' usando las reglas de preguntas abiertas de la lección pasada?", "options": ["Nǐ yào shénme? (你要什么？)", "Nǐ shénme yào? (你什么要？)", "Nǐ yào shénme ma? (你要什么吗？)", "Nǐ yào shéi? (你要谁？)"], "correct_answer": "Nǐ yào shénme? (你要什么？)", "explanation": "Tú + quieres + qué (sin 'ma')." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correcto para pedir y rechazar bebidas. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-8-f1", "type": "fill_input", "question": "Querer: ____ (yao)", "correct_answer": "yao", "explanation": "yao" },
+        { "id": "zh-a1-8-f2", "type": "fill_input", "question": "Té: ____ (cha)", "correct_answer": "cha", "explanation": "cha" },
+        { "id": "zh-a1-8-f3", "type": "fill_input", "question": "Agua: ____ (shui)", "correct_answer": "shui", "explanation": "shui" },
+        { "id": "zh-a1-8-f4", "type": "fill_input", "question": "Yo quiero: wo ____", "correct_answer": "yao", "explanation": "yao" },
+        { "id": "zh-a1-8-f5", "type": "fill_input", "question": "Yo NO quiero: wo bu ____", "correct_answer": "yao", "explanation": "yao" },
+        { "id": "zh-a1-8-f6", "type": "fill_input", "question": "Yo quiero té: wo yao ____", "correct_answer": "cha", "explanation": "cha" },
+        { "id": "zh-a1-8-f7", "type": "fill_input", "question": "Tú quieres agua: ni yao ____", "correct_answer": "shui", "explanation": "shui" },
+        { "id": "zh-a1-8-f8", "type": "fill_input", "question": "¿Tú quieres?: ni yao ____", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-8-f9", "type": "fill_input", "question": "¿Qué quieres tú?: ni yao shen____", "correct_answer": "me", "explanation": "me" },
+        { "id": "zh-a1-8-f10", "type": "fill_input", "question": "¿Quién quiere?: ____ yao (shei)", "correct_answer": "shei", "explanation": "shei" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y selecciona la traducción correcta de lo que acabas de oír.",
+      "questions": [
+        { "id": "zh-a1-8-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "要", "options": ["Querer", "Tener", "Ser", "Ir"], "correct_answer": "Querer", "explanation": "El audio dice: yào." },
+        { "id": "zh-a1-8-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "不要", "options": ["No querer", "No tener", "No ser", "Querer"], "correct_answer": "No querer", "explanation": "El audio dice: bú yào." },
+        { "id": "zh-a1-8-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我要茶", "options": ["Yo quiero té", "Yo quiero agua", "Tú quieres té", "Yo tengo té"], "correct_answer": "Yo quiero té", "explanation": "El audio dice: Wǒ yào chá." },
+        { "id": "zh-a1-8-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你要水吗？", "options": ["¿Tú quieres agua?", "¿Tú quieres té?", "¿Qué quieres?", "Yo quiero agua"], "correct_answer": "¿Tú quieres agua?", "explanation": "El audio dice: Nǐ yào shuǐ ma?" },
+        { "id": "zh-a1-8-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你要什么？", "options": ["¿Qué quieres?", "¿Quién quieres?", "¿Tú quieres?", "Yo no quiero nada"], "correct_answer": "¿Qué quieres?", "explanation": "El audio dice: Nǐ yào shénme?" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Wants and Needs",
+      "pairs": [
+        {"id": "zh-a1-8-p1", "source": "要 (yào)", "target": "Querer"},
+        {"id": "zh-a1-8-p2", "source": "不要 (bú yào)", "target": "No querer"},
+        {"id": "zh-a1-8-p3", "source": "茶 (chá)", "target": "Té"},
+        {"id": "zh-a1-8-p4", "source": "水 (shuǐ)", "target": "Agua"},
+        {"id": "zh-a1-8-p5", "source": "我要茶 (wǒ yào chá)", "target": "Yo quiero té"},
+        {"id": "zh-a1-8-p6", "source": "你要水吗？(nǐ yào shuǐ ma?)", "target": "¿Tú quieres agua?"},
+        {"id": "zh-a1-8-p7", "source": "你要什么？(nǐ yào shénme?)", "target": "¿Qué quieres?"},
+        {"id": "zh-a1-8-p8", "source": "他不要水 (tā bú yào shuǐ)", "target": "Él no quiere agua"},
+        {"id": "zh-a1-8-p9", "source": "谁要茶？(shéi yào chá?)", "target": "¿Quién quiere té?"},
+        {"id": "zh-a1-8-p10", "source": "什么 (shénme)", "target": "Qué"}
+      ]
+    }
+  ]
+}

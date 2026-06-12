@@ -1,0 +1,101 @@
+{
+  "id": "b2-38",
+  "title": "Finance & Investment",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Vocabulary", "Finance", "Investment", "Business"],
+  "completion_message": "¡Soberbio! El vocabulario financiero es el idioma de los negocios. Ahora puedes leer reportes y hablar de inversiones y rentabilidad con la confianza de un banquero o CFO.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Vocabulario de Finanzas e Inversiones",
+      "parts": [
+        { "visual": "Términos de Inversión y Ganancias: \n- ROI (Return on Investment / Retorno de la inversión). \nEj: What is the expected ROI for this project? \n- Equity (Capital / Acciones de una empresa privada). \nEj: He owns 10% equity in the startup. \n- Dividend (Dividendo / Parte de las ganancias repartida a los accionistas). \nEj: The company pays an annual dividend.", "audio": "Investment and Profit terms. R O I stands for Return on Investment. It measures the profitability of an investment. For example: What is the expected R O I for this project? 'Equity' refers to ownership in a company, usually in the form of shares. For example: He owns 10% equity in the startup. A 'Dividend' is a portion of the company's profit paid to its shareholders. For example: The company pays an annual dividend." },
+        { "visual": "Mercado y Riesgo: \n- Stock market (Bolsa de valores). \nEj: She made a fortune investing in the stock market. \n- Bankruptcy (Bancarrota / Quiebra). \nEj: If we don't increase sales, we will face bankruptcy. \n- Liability (Pasivo / Deuda legal u obligación). \nEj: The company has more liabilities than assets (activos).", "audio": "Market and Risk. 'Stock market' is where shares of public companies are bought and sold. For example: She made a fortune investing in the stock market. 'Bankruptcy' is a legal status of a person or company that cannot repay its debts. For example: If we don't increase sales, we will face bankruptcy. 'Liability' is a legal debt or obligation. For example: The company has more liabilities than assets." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término financiero correcto.",
+      "questions": [
+        { "id": "b2-38-q1", "type": "quiz_choice", "question": "Before funding the project, the investors want to know the expected ____. (Retorno de Inversión).", "options": ["ROI", "CEO", "VIP", "UFO"], "correct_answer": "ROI", "explanation": "ROI = Return on Investment." },
+        { "id": "b2-38-q2", "type": "quiz_choice", "question": "I would like 5% ____ in your startup in exchange for my $100,000. (Capital / Participación accionaria).", "options": ["equity", "equality", "equation", "equator"], "correct_answer": "equity", "explanation": "Equity = participación en el capital de una empresa." },
+        { "id": "b2-38-q3", "type": "quiz_choice", "question": "Apple pays a ____ to its shareholders every quarter. (Dividendo).", "options": ["dividend", "divide", "division", "driver"], "correct_answer": "dividend", "explanation": "Dividend = dividendo (parte de las ganancias repartidas)." },
+        { "id": "b2-38-q4", "type": "quiz_choice", "question": "He lost all his savings playing the ____ market. (Bolsa de valores).", "options": ["stock", "sock", "stick", "stack"], "correct_answer": "stock", "explanation": "Stock market = bolsa de valores." },
+        { "id": "b2-38-q5", "type": "quiz_choice", "question": "Due to massive debts, the airline had to declare ____. (Bancarrota).", "options": ["bankruptcy", "bankrupt", "banking", "robbery"], "correct_answer": "bankruptcy", "explanation": "Declare bankruptcy = declararse en bancarrota." },
+        { "id": "b2-38-q6", "type": "quiz_choice", "question": "In accounting, properties and cash are ____, while loans and debts are ____. (Activos / Pasivos).", "options": ["assets / liabilities", "liabilities / assets", "profits / losses", "incomes / outcomes"], "correct_answer": "assets / liabilities", "explanation": "Assets (Activos) / Liabilities (Pasivos)." },
+        { "id": "b2-38-q7", "type": "quiz_choice", "question": "If you don't pay your mortgage, the bank will seize your ____. (Colateral / Garantía).", "options": ["collateral", "collection", "college", "colleague"], "correct_answer": "collateral", "explanation": "Collateral = garantía (normalmente un bien físico) que respalda un préstamo." },
+        { "id": "b2-38-q8", "type": "quiz_choice", "question": "A ____ market means stock prices are falling and investors are pessimistic. (Mercado bajista).", "options": ["bear", "bull", "lion", "wolf"], "correct_answer": "bear", "explanation": "Bear market = mercado a la baja. (Bull market = al alza)." },
+        { "id": "b2-38-q9", "type": "quiz_choice", "question": "A ____ market means stock prices are rising and the economy is strong. (Mercado alcista).", "options": ["bull", "bear", "cow", "horse"], "correct_answer": "bull", "explanation": "Bull market = mercado al alza." },
+        { "id": "b2-38-q10", "type": "quiz_choice", "question": "When a private company offers shares to the public for the first time, it's called an ____. (Oferta Pública Inicial).", "options": ["IPO", "CEO", "CFO", "ROI"], "correct_answer": "IPO", "explanation": "IPO (Initial Public Offering) = Oferta pública inicial (salir a bolsa)." },
+        { "id": "b2-38-q11", "type": "quiz_choice", "question": "We need to secure ____ capital to open the new factory. (Capital semilla/de riesgo).", "options": ["venture", "adventure", "nature", "feature"], "correct_answer": "venture", "explanation": "Venture capital = capital de riesgo." },
+        { "id": "b2-38-q12", "type": "quiz_choice", "question": "Our total ____ for the year were $1 million, but our net profit was only $100k. (Ingresos / Facturación).", "options": ["revenue", "revenge", "reserve", "return"], "correct_answer": "revenue", "explanation": "Revenue = ingresos brutos (facturación)." },
+        { "id": "b2-38-q13", "type": "quiz_choice", "question": "A bond's ____ date is when the principal amount must be paid back. (Fecha de vencimiento).", "options": ["maturity", "mature", "nature", "ending"], "correct_answer": "maturity", "explanation": "Maturity date = fecha de vencimiento (de un bono o préstamo)." },
+        { "id": "b2-38-q14", "type": "quiz_choice", "question": "Because of ____, the cost of living goes up every year. (Inflación).", "options": ["inflation", "deflation", "infection", "infraction"], "correct_answer": "inflation", "explanation": "Inflation = inflación." },
+        { "id": "b2-38-q15", "type": "quiz_choice", "question": "Our profit ____ is too thin. We need to increase prices. (Margen de ganancia).", "options": ["margin", "border", "line", "limit"], "correct_answer": "margin", "explanation": "Profit margin = margen de ganancia." },
+        { "id": "b2-38-q16", "type": "quiz_choice", "question": "The company decided to ____ its operations to reduce costs. (Externalizar / Subcontratar).", "options": ["outsource", "insource", "source", "resource"], "correct_answer": "outsource", "explanation": "Outsource = subcontratar a terceros." },
+        { "id": "b2-38-q17", "type": "quiz_choice", "question": "A ____ is a person who buys and sells shares for clients. (Corredor de bolsa).", "options": ["broker", "breaker", "baker", "banker"], "correct_answer": "broker", "explanation": "Broker = corredor, agente de bolsa." },
+        { "id": "b2-38-q18", "type": "quiz_choice", "question": "We are operating at a ____. We spend more than we earn. (Déficit / Pérdida).", "options": ["deficit", "surplus", "profit", "benefit"], "correct_answer": "deficit", "explanation": "Deficit = déficit (o también 'operating at a loss')." },
+        { "id": "b2-38-q19", "type": "quiz_choice", "question": "After deducting all taxes and expenses, the ____ profit was $50,000. (Ganancia neta).", "options": ["net", "gross", "total", "web"], "correct_answer": "net", "explanation": "Net profit = ganancia neta. (Gross profit = bruta)." },
+        { "id": "b2-38-q20", "type": "quiz_choice", "question": "If you don't pay your debts, you will ruin your credit ____. (Calificación crediticia).", "options": ["score", "points", "grade", "level"], "correct_answer": "score", "explanation": "Credit score / Credit rating = calificación o puntaje crediticio." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término financiero correcto.",
+      "questions": [
+        { "id": "b2-38-f1", "type": "fill_input", "question": "Return on Investment. (Acrónimo de 3 letras)", "correct_answer": "ROI", "explanation": "ROI." },
+        { "id": "b2-38-f2", "type": "fill_input", "question": "____ market. (Bolsa de valores con S)", "correct_answer": "Stock", "explanation": "Stock." },
+        { "id": "b2-38-f3", "type": "fill_input", "question": "Declare ____. (Bancarrota con B)", "correct_answer": "bankruptcy", "explanation": "bankruptcy." },
+        { "id": "b2-38-f4", "type": "fill_input", "question": "5% ____. (Participación/Capital con E)", "correct_answer": "equity", "explanation": "equity." },
+        { "id": "b2-38-f5", "type": "fill_input", "question": "Pay a ____. (Dividendo con D)", "correct_answer": "dividend", "explanation": "dividend." },
+        { "id": "b2-38-f6", "type": "fill_input", "question": "____ and liabilities. (Activos con A)", "correct_answer": "Assets", "explanation": "Assets." },
+        { "id": "b2-38-f7", "type": "fill_input", "question": "A ____ market. (Mercado bajista con B de oso)", "correct_answer": "bear", "explanation": "bear." },
+        { "id": "b2-38-f8", "type": "fill_input", "question": "A ____ market. (Mercado alcista con B de toro)", "correct_answer": "bull", "explanation": "bull." },
+        { "id": "b2-38-f9", "type": "fill_input", "question": "Total ____. (Ingresos/Facturación con R)", "correct_answer": "revenue", "explanation": "revenue." },
+        { "id": "b2-38-f10", "type": "fill_input", "question": "Profit ____. (Margen con M)", "correct_answer": "margin", "explanation": "margin." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Finance Match",
+      "pairs": [
+        {"id": "b2-38-p1", "source": "ROI", "target": "Retorno de Inversión"},
+        {"id": "b2-38-p2", "source": "Equity", "target": "Capital / Participación en una empresa"},
+        {"id": "b2-38-p3", "source": "Dividend", "target": "Parte de ganancia para accionistas"},
+        {"id": "b2-38-p4", "source": "Stock market", "target": "Bolsa de valores"},
+        {"id": "b2-38-p5", "source": "Bankruptcy", "target": "Bancarrota / Quiebra"},
+        {"id": "b2-38-p6", "source": "Assets", "target": "Activos (Bienes y dinero)"},
+        {"id": "b2-38-p7", "source": "Liabilities", "target": "Pasivos (Deudas y obligaciones)"},
+        {"id": "b2-38-p8", "source": "Bear market", "target": "Mercado bajista (pesimista)"},
+        {"id": "b2-38-p9", "source": "Bull market", "target": "Mercado alcista (optimista)"},
+        {"id": "b2-38-p10", "source": "Revenue", "target": "Ingresos brutos / Facturación"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase financiera correcta.",
+      "questions": [
+        { "id": "b2-38-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is the expected ROI?", "options": ["What is the expected ROI?", "What is the unexpected ROI?", "Where is the expected ROI?", "What is the expected CEO?"], "correct_answer": "What is the expected ROI?", "explanation": "Audio exacto." },
+        { "id": "b2-38-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He wants equity in the company.", "options": ["He wants equity in the company.", "She wants equity in the company.", "He wants quality in the company.", "They want equity in the company."], "correct_answer": "He wants equity in the company.", "explanation": "Audio exacto." },
+        { "id": "b2-38-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They pay an annual dividend.", "options": ["They pay an annual dividend.", "We pay an annual dividend.", "They paid an annual dividend.", "They play an annual dividend."], "correct_answer": "They pay an annual dividend.", "explanation": "Audio exacto." },
+        { "id": "b2-38-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He invests in the stock market.", "options": ["He invests in the stock market.", "She invests in the stock market.", "He invested in the stock market.", "He invests in the block market."], "correct_answer": "He invests in the stock market.", "explanation": "Audio exacto." },
+        { "id": "b2-38-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They declared bankruptcy.", "options": ["They declared bankruptcy.", "We declared bankruptcy.", "They declare bankruptcy.", "He declared bankruptcy."], "correct_answer": "They declared bankruptcy.", "explanation": "Audio exacto." },
+        { "id": "b2-38-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have more assets than liabilities.", "options": ["We have more assets than liabilities.", "They have more assets than liabilities.", "We have more access than liabilities.", "We had more assets than liabilities."], "correct_answer": "We have more assets than liabilities.", "explanation": "Audio exacto." },
+        { "id": "b2-38-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a bull market right now.", "options": ["It is a bull market right now.", "It is a bear market right now.", "It was a bull market right now.", "Is it a bull market right now?"], "correct_answer": "It is a bull market right now.", "explanation": "Audio exacto." },
+        { "id": "b2-38-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to increase our revenue.", "options": ["We need to increase our revenue.", "They need to increase our revenue.", "We need to decrease our revenue.", "We needed to increase our revenue."], "correct_answer": "We need to increase our revenue.", "explanation": "Audio exacto." },
+        { "id": "b2-38-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our profit margin is low.", "options": ["Our profit margin is low.", "Your profit margin is low.", "Our profit margin is slow.", "Our profit margin was low."], "correct_answer": "Our profit margin is low.", "explanation": "Audio exacto." },
+        { "id": "b2-38-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is your credit score?", "options": ["What is your credit score?", "Where is your credit score?", "What was your credit score?", "What is your debit score?"], "correct_answer": "What is your credit score?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

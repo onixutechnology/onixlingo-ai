@@ -1,0 +1,102 @@
+{
+  "id": "a2-17",
+  "title": "Indefinite Pronouns",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Pronouns", "Indefinite", "Business"],
+  "completion_message": "¡Excelente! Has dominado el uso de los pronombres indefinidos.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Pronombres Indefinidos",
+      "parts": [
+        { "visual": "SOME (Afirmativas): Someone / Somebody (Alguien), Something (Algo), Somewhere (En algún lugar). Ej: Someone called you (Alguien te llamó).", "audio": "SOME is used in affirmative sentences. Someone or somebody means 'alguien'. Something means 'algo'. Somewhere means 'en algún lugar'. Example: Someone called you." },
+        { "visual": "ANY (Preguntas y Negativas): Anyone / Anybody (Alguien/Nadie), Anything (Algo/Nada), Anywhere (En algún/ningún lugar). Ej: Is anyone here? (¿Hay alguien aquí?). I don't know anything (No sé nada).", "audio": "ANY is used in questions and negative sentences. Anyone or anybody. Anything. Anywhere. Examples: Is anyone here? I don't know anything." },
+        { "visual": "NO (Negativas sin 'not'): No one / Nobody (Nadie), Nothing (Nada), Nowhere (En ningún lugar). Ej: Nobody knows (Nadie sabe). I have nothing to say (No tengo nada que decir). EVERY (Todos): Everyone, Everything, Everywhere.", "audio": "NO is used for negative meanings, but the verb must be affirmative. No one or nobody means 'nadie'. Nothing means 'nada'. Nowhere means 'en ningún lugar'. Examples: Nobody knows. I have nothing to say. Finally, EVERY means all. Everyone, Everything, Everywhere." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el pronombre indefinido correcto para cada situación en la oficina.",
+      "questions": [
+        { "id": "a2-17-q1", "type": "quiz_choice", "question": "I need to tell you ____ important. (Algo - Afirmativa).", "options": ["something", "anything", "nothing", "everything"], "correct_answer": "something", "explanation": "Oración afirmativa: something (algo)." },
+        { "id": "a2-17-q2", "type": "quiz_choice", "question": "Does ____ have a pen I can borrow? (¿Alguien? - Pregunta).", "options": ["anyone", "someone", "no one", "nothing"], "correct_answer": "anyone", "explanation": "En preguntas usamos 'any': anyone (alguien)." },
+        { "id": "a2-17-q3", "type": "quiz_choice", "question": "I'm sorry, there is ____ I can do. (Nada - verbo en afirmativo).", "options": ["nothing", "anything", "something", "everything"], "correct_answer": "nothing", "explanation": "'There is nothing' = No hay nada. (Doble negación es incorrecta en inglés)." },
+        { "id": "a2-17-q4", "type": "quiz_choice", "question": "I don't know ____ about the new project. (Nada - verbo en negativo).", "options": ["anything", "nothing", "something", "everywhere"], "correct_answer": "anything", "explanation": "Con el verbo negativo 'don't know', usamos 'anything'." },
+        { "id": "a2-17-q5", "type": "quiz_choice", "question": "____ is ready for the presentation. We can start. (Todo).", "options": ["Everything", "Something", "Nothing", "Anything"], "correct_answer": "Everything", "explanation": "Everything = todo (todas las cosas)." },
+        { "id": "a2-17-q6", "type": "quiz_choice", "question": "____ left their laptop on the desk. (Alguien - Afirmativa).", "options": ["Someone", "Anyone", "No one", "Everyone"], "correct_answer": "Someone", "explanation": "Afirmativa: someone (alguien)." },
+        { "id": "a2-17-q7", "type": "quiz_choice", "question": "We looked ____ for the missing document. (En todos lados).", "options": ["everywhere", "somewhere", "anywhere", "nowhere"], "correct_answer": "everywhere", "explanation": "Everywhere = en todas partes." },
+        { "id": "a2-17-q8", "type": "quiz_choice", "question": "I can't find my keys ____. (En ningún lugar - verbo negativo).", "options": ["anywhere", "nowhere", "somewhere", "everywhere"], "correct_answer": "anywhere", "explanation": "Con verbo negativo (can't), usamos 'any': anywhere." },
+        { "id": "a2-17-q9", "type": "quiz_choice", "question": "____ wants to work on Sunday. (Nadie - verbo afirmativo).", "options": ["Nobody", "Anybody", "Somebody", "Everybody"], "correct_answer": "Nobody", "explanation": "Nobody = nadie. (Nobody wants = Nadie quiere)." },
+        { "id": "a2-17-q10", "type": "quiz_choice", "question": "Did you see ____ in the meeting room? (¿A alguien? - Pregunta).", "options": ["anybody", "somebody", "nobody", "everybody"], "correct_answer": "anybody", "explanation": "Pregunta: anybody (o anyone)." },
+        { "id": "a2-17-q11", "type": "quiz_choice", "question": "I have ____ to go for lunch. Let's eat here. (Ningún lugar).", "options": ["nowhere", "anywhere", "somewhere", "everywhere"], "correct_answer": "nowhere", "explanation": "Verbo afirmativo (have) + nowhere = No tengo ningún lugar." },
+        { "id": "a2-17-q12", "type": "quiz_choice", "question": "Hello? Is ____ there? (¿Hay alguien ahí?).", "options": ["anyone", "someone", "no one", "everyone"], "correct_answer": "anyone", "explanation": "Pregunta = anyone." },
+        { "id": "a2-17-q13", "type": "quiz_choice", "question": "____ agreed with the CEO's decision. (Todos).", "options": ["Everyone", "Someone", "Anyone", "No one"], "correct_answer": "Everyone", "explanation": "Everyone = todos (todas las personas)." },
+        { "id": "a2-17-q14", "type": "quiz_choice", "question": "Let's go ____ quiet to talk. (A algún lugar - Afirmativa).", "options": ["somewhere", "anywhere", "nowhere", "everywhere"], "correct_answer": "somewhere", "explanation": "Afirmativa: somewhere (a algún lugar)." },
+        { "id": "a2-17-q15", "type": "quiz_choice", "question": "There is ____ wrong with the server. It's offline. (Algo).", "options": ["something", "anything", "nothing", "everything"], "correct_answer": "something", "explanation": "Afirmativa: something (algo está mal)." },
+        { "id": "a2-17-q16", "type": "quiz_choice", "question": "I knocked on the door, but ____ answered. (Nadie).", "options": ["no one", "anyone", "someone", "everyone"], "correct_answer": "no one", "explanation": "No one = nadie (tambié se puede usar nobody)." },
+        { "id": "a2-17-q17", "type": "quiz_choice", "question": "Do you need ____ from the store? (¿Algo? - Pregunta).", "options": ["anything", "something", "nothing", "everything"], "correct_answer": "anything", "explanation": "Pregunta = anything." },
+        { "id": "a2-17-q18", "type": "quiz_choice", "question": "The office is empty. ____ has gone home. (Todos).", "options": ["Everybody", "Somebody", "Anybody", "Nobody"], "correct_answer": "Everybody", "explanation": "Everybody = everyone (todos)." },
+        { "id": "a2-17-q19", "type": "quiz_choice", "question": "There isn't ____ milk in the fridge. (Nada - verbo negativo).", "options": ["any", "some", "no", "every"], "correct_answer": "any", "explanation": "Con sustantivos incontables, 'any' significa 'nada de' en oraciones negativas." },
+        { "id": "a2-17-q20", "type": "quiz_choice", "question": "We have ____ time to lose. (Nada de - verbo afirmativo).", "options": ["no", "any", "some", "every"], "correct_answer": "no", "explanation": "Have no time = no tener tiempo (no time to lose)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el pronombre indefinido (someone, anything, nothing, etc.).",
+      "questions": [
+        { "id": "a2-17-f1", "type": "fill_input", "question": "I have ____ to tell you. (Algo)", "correct_answer": "something", "explanation": "something." },
+        { "id": "a2-17-f2", "type": "fill_input", "question": "Does ____ have a pen? (¿Alguien?)", "correct_answer": "anyone", "explanation": "anyone." },
+        { "id": "a2-17-f3", "type": "fill_input", "question": "There is ____ I can do. (Nada - verbo afirmativo)", "correct_answer": "nothing", "explanation": "nothing." },
+        { "id": "a2-17-f4", "type": "fill_input", "question": "I don't know ____. (Nada - verbo negativo)", "correct_answer": "anything", "explanation": "anything." },
+        { "id": "a2-17-f5", "type": "fill_input", "question": "____ is ready. (Todo)", "correct_answer": "Everything", "explanation": "Everything." },
+        { "id": "a2-17-f6", "type": "fill_input", "question": "____ left their laptop here. (Alguien)", "correct_answer": "Someone", "explanation": "Someone." },
+        { "id": "a2-17-f7", "type": "fill_input", "question": "I looked ____ for the file. (En todas partes)", "correct_answer": "everywhere", "explanation": "everywhere." },
+        { "id": "a2-17-f8", "type": "fill_input", "question": "I can't find it ____. (En ningún lado - verbo negativo)", "correct_answer": "anywhere", "explanation": "anywhere." },
+        { "id": "a2-17-f9", "type": "fill_input", "question": "____ wants to work on Sunday. (Nadie - verbo afirmativo)", "correct_answer": "Nobody", "explanation": "Nobody." },
+        { "id": "a2-17-f10", "type": "fill_input", "question": "____ agreed with the boss. (Todos)", "correct_answer": "Everyone", "explanation": "Everyone." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-17-p1", "source": "Someone", "target": "Alguien (Afirmativa)"},
+        {"id": "a2-17-p2", "source": "Anyone", "target": "Alguien? / Nadie (Pregunta / Negativa)"},
+        {"id": "a2-17-p3", "source": "No one / Nobody", "target": "Nadie"},
+        {"id": "a2-17-p4", "source": "Everyone / Everybody", "target": "Todos"},
+        {"id": "a2-17-p5", "source": "Something", "target": "Algo (Afirmativa)"},
+        {"id": "a2-17-p6", "source": "Anything", "target": "Algo? / Nada (Pregunta / Negativa)"},
+        {"id": "a2-17-p7", "source": "Nothing", "target": "Nada"},
+        {"id": "a2-17-p8", "source": "Everything", "target": "Todo"},
+        {"id": "a2-17-p9", "source": "Somewhere", "target": "En algún lugar"},
+        {"id": "a2-17-p10", "source": "Everywhere", "target": "En todas partes / En todos lados"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a2-17-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need to tell you something.", "options": ["I need to tell you something.", "I need to ask you something.", "I have to tell you something.", "I want to tell you something."], "correct_answer": "I need to tell you something.", "explanation": "Audio exacto." },
+        { "id": "a2-17-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Does anyone have a pen?", "options": ["Does anyone have a pen?", "Does someone have a pen?", "Does anybody have a pen?", "Do you have a pen?"], "correct_answer": "Does anyone have a pen?", "explanation": "Audio exacto." },
+        { "id": "a2-17-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is nothing I can do.", "options": ["There is nothing I can do.", "I can do nothing.", "There is something I can do.", "There isn't anything I can do."], "correct_answer": "There is nothing I can do.", "explanation": "Audio exacto." },
+        { "id": "a2-17-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I don't know anything about the project.", "options": ["I don't know anything about the project.", "I know nothing about the project.", "I don't know something about the project.", "I don't know anything about it."], "correct_answer": "I don't know anything about the project.", "explanation": "Audio exacto." },
+        { "id": "a2-17-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Everything is ready.", "options": ["Everything is ready.", "Everyone is ready.", "Something is ready.", "Everything is prepared."], "correct_answer": "Everything is ready.", "explanation": "Audio exacto." },
+        { "id": "a2-17-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Someone left their laptop.", "options": ["Someone left their laptop.", "Anyone left their laptop.", "Somebody left their laptop.", "Someone left the laptop."], "correct_answer": "Someone left their laptop.", "explanation": "Audio exacto." },
+        { "id": "a2-17-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I can't find my keys anywhere.", "options": ["I can't find my keys anywhere.", "I can find my keys nowhere.", "I can't find my keys everywhere.", "I can't find it anywhere."], "correct_answer": "I can't find my keys anywhere.", "explanation": "Audio exacto." },
+        { "id": "a2-17-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Nobody wants to work on Sunday.", "options": ["Nobody wants to work on Sunday.", "No one wants to work on Sunday.", "Anybody wants to work on Sunday.", "Nobody wants to work today."], "correct_answer": "Nobody wants to work on Sunday.", "explanation": "Audio exacto." },
+        { "id": "a2-17-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Did you see anybody in the room?", "options": ["Did you see anybody in the room?", "Did you see anyone in the room?", "Did you see somebody in the room?", "Did you see nobody in the room?"], "correct_answer": "Did you see anybody in the room?", "explanation": "Audio exacto." },
+        { "id": "a2-17-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Everyone agreed with the decision.", "options": ["Everyone agreed with the decision.", "Everybody agreed with the decision.", "Someone agreed with the decision.", "Everyone agrees with the decision."], "correct_answer": "Everyone agreed with the decision.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

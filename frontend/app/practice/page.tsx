@@ -17,7 +17,7 @@ import { useUIStore } from '@/store/uiStore';
 import Avatar3D from '@/components/avatar/Avatar3D';
 
 // --- CONFIGURACIÓN API (Ajústalo a tu backend real) ---
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:5000';
 
 export default function PracticePage() {
   const router = useRouter();
@@ -119,31 +119,31 @@ export default function PracticePage() {
 
   if (userTier === 'free') {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-950 text-white p-6 relative overflow-hidden font-sans">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent"></div>
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-indigo-500"></div>
+      <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-900 p-6 relative overflow-hidden font-sans">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/20 via-transparent to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-[#D4AF37]"></div>
         
-        <div className="bg-slate-900/80 border border-slate-800 p-10 max-w-md w-full shadow-2xl rounded-none text-center relative z-10 backdrop-blur-md">
-          <div className="w-16 h-16 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center mx-auto mb-6">
+        <div className="bg-white border border-slate-200 p-10 max-w-md w-full shadow-2xl rounded-none text-center relative z-10 backdrop-blur-md">
+          <div className="w-16 h-16 bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center mx-auto mb-6">
             <Mic size={32} className="animate-pulse" />
           </div>
-          <h2 className="text-xl font-serif font-black italic uppercase tracking-wider text-indigo-400 mb-2">
+          <h2 className="text-xl font-serif font-black italic uppercase tracking-wider text-[#D4AF37] mb-2">
             Función Premium
           </h2>
-          <p className="text-[10px] text-slate-400 leading-relaxed mb-8 uppercase tracking-wider">
+          <p className="text-[10px] text-slate-600 leading-relaxed mb-8 uppercase tracking-wider font-bold">
             Las prácticas de conversación libre con Inteligencia Artificial (Speech Tutor) no están disponibles en el Plan Free.
           </p>
           
           <div className="flex flex-col gap-3">
             <button 
               onClick={() => router.push('/dashboard/pricing')}
-              className="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none shadow-lg shadow-indigo-600/30"
+              className="w-full py-4 bg-[#D4AF37] hover:bg-[#b5952f] text-black font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none shadow-none shadow-[#D4AF37]/30"
             >
               Subir a Pro / Executive
             </button>
             <button 
               onClick={() => router.push('/dashboard')}
-              className="w-full py-3 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none"
+              className="w-full py-3 border border-gray-700 bg-transparent text-slate-600 hover:text-slate-900 font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none"
             >
               Volver al Dashboard
             </button>
@@ -154,29 +154,29 @@ export default function PracticePage() {
   }
 
   return (
-    <div className={`min-h-screen flex flex-col transition-colors duration-500 ${isPro ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
+    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
       
       {/* --- HEADER --- */}
-      <header className={`h-16 px-6 flex items-center justify-between sticky top-0 z-20 backdrop-blur-md border-b ${isPro ? 'bg-slate-900/80 border-slate-800' : 'bg-white/80 border-slate-200'}`}>
+      <header className="h-16 px-6 flex items-center justify-between sticky top-0 z-20 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="flex items-center gap-4">
             <Link href={isPro ? "/dashboard/pro" : "/dashboard"}>
-                <button className={`p-2 rounded-full transition-colors ${isPro ? 'hover:bg-white/10 text-slate-400 hover:text-white' : 'hover:bg-slate-100 text-slate-500 hover:text-slate-900'}`}>
+                <button className="p-2 rounded-none transition-colors hover:bg-white/10 text-slate-600 hover:text-slate-900">
                     <ArrowLeft size={24} />
                 </button>
             </Link>
             <div>
-                <h1 className={`text-lg font-bold tracking-tight ${isPro ? 'text-white' : 'text-slate-800'}`}>
-                    AI Tutor <span className={isPro ? 'text-amber-500' : 'text-indigo-600'}>Live</span>
+                <h1 className="text-lg font-black tracking-tight text-slate-900 font-serif italic">
+                    AI Tutor <span className="text-[#D4AF37]">Live</span>
                 </h1>
                 <p className="text-[10px] opacity-60 uppercase tracking-widest font-bold">Conversation Mode</p>
             </div>
         </div>
         
         {/* Indicador de Status */}
-        <div className={`px-3 py-1 rounded-full text-xs font-bold border flex items-center gap-2 ${isPro ? 'bg-slate-800 border-slate-700 text-emerald-400' : 'bg-white border-slate-200 text-emerald-600'}`}>
+        <div className="px-3 py-1 rounded-none text-xs font-bold border flex items-center gap-2 bg-white border-slate-200 text-[#D4AF37]">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
             </span>
             ONLINE
         </div>
@@ -186,10 +186,10 @@ export default function PracticePage() {
       <main className="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
         
         {/* COLUMNA IZQUIERDA: AVATAR 3D */}
-        <section className={`relative flex-1 min-h-[40vh] lg:min-h-auto flex items-center justify-center overflow-hidden ${isPro ? 'bg-gradient-to-b from-slate-900 to-indigo-950' : 'bg-gradient-to-b from-blue-50 to-white'}`}>
+        <section className="relative flex-1 min-h-[40vh] lg:min-h-auto flex items-center justify-center overflow-hidden bg-white">
             
             {/* Efectos de Fondo */}
-            <div className={`absolute inset-0 opacity-30 ${isPro ? 'bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent' : 'bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-400/20 via-transparent to-transparent'}`}></div>
+            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/20 via-transparent to-transparent"></div>
             
             {/* El Avatar */}
             <div className="w-full h-full relative z-10">
@@ -198,14 +198,10 @@ export default function PracticePage() {
 
             {/* Subtítulos Flotantes (Respuesta de IA) */}
             <div className="absolute bottom-8 left-6 right-6 text-center z-20">
-                <div className={`inline-block px-6 py-4 rounded-3xl shadow-xl backdrop-blur-md max-w-2xl text-lg font-medium transition-all ${
-                    isPro 
-                        ? 'bg-black/60 text-white border border-white/10' 
-                        : 'bg-white/80 text-slate-800 border border-white shadow-blue-900/5'
-                }`}>
+                <div className="inline-block px-6 py-4 rounded-none shadow-xl backdrop-blur-md max-w-2xl text-lg transition-all bg-[#D4AF37]/20 text-slate-900 border border-[#D4AF37]/30 font-bold">
                     {loading ? (
-                        <div className="flex items-center gap-2 justify-center text-sm opacity-80">
-                            <Sparkles size={16} className="animate-spin" /> Thinking...
+                        <div className="flex items-center gap-2 justify-center text-sm opacity-80 uppercase tracking-widest">
+                            <Sparkles size={16} className="animate-spin text-[#D4AF37]" /> Pensando...
                         </div>
                     ) : (
                         <p>{response}</p>
@@ -215,18 +211,18 @@ export default function PracticePage() {
         </section>
 
         {/* COLUMNA DERECHA: INTERACCIÓN */}
-        <section className={`w-full lg:w-[450px] flex flex-col border-l z-20 ${isPro ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-200'}`}>
+        <section className="w-full lg:w-[450px] flex flex-col border-l z-20 bg-slate-50 border-slate-200">
             
             {/* Chat Area (Placeholder visual) */}
             <div className="flex-1 p-6 flex flex-col items-center justify-center text-center opacity-40">
-                <div className={`p-6 rounded-full mb-4 ${isPro ? 'bg-slate-900' : 'bg-slate-100'}`}>
-                    <MessageSquare size={40} />
+                <div className="p-6 rounded-none mb-4 bg-white border border-slate-200">
+                    <MessageSquare size={40} className="text-[#D4AF37]" />
                 </div>
-                <p className="text-sm">Historial de conversación disponible en la versión completa.</p>
+                <p className="text-[10px] uppercase font-bold tracking-widest">Historial de conversación disponible en la versión completa.</p>
             </div>
 
             {/* Input Area */}
-            <div className={`p-6 border-t ${isPro ? 'border-slate-800 bg-slate-900' : 'border-slate-100 bg-slate-50'}`}>
+            <div className="p-6 border-t border-slate-200 bg-white">
                 
                 {/* Botones de Acción Rápida */}
                 <div className="flex gap-2 mb-4 overflow-x-auto pb-2 scrollbar-hide">
@@ -234,11 +230,7 @@ export default function PracticePage() {
                         <button 
                             key={prompt}
                             onClick={() => { setInput(prompt); }}
-                            className={`whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold border transition-all ${
-                                isPro 
-                                    ? 'border-slate-700 hover:bg-slate-800 text-slate-300' 
-                                    : 'border-slate-200 hover:bg-white hover:shadow-sm text-slate-600'
-                            }`}
+                            className="whitespace-nowrap px-4 py-2 rounded-none text-[9px] uppercase tracking-widest font-black border transition-all bg-[#D4AF37]/10 border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37]/20"
                         >
                             {prompt}
                         </button>
@@ -246,24 +238,20 @@ export default function PracticePage() {
                 </div>
 
                 <div className="flex items-end gap-3">
-                    <div className={`flex-1 relative rounded-2xl border-2 transition-all focus-within:ring-2 ${
-                        isPro 
-                            ? 'bg-slate-950 border-slate-700 focus-within:border-amber-500 focus-within:ring-amber-500/20' 
-                            : 'bg-white border-slate-200 focus-within:border-indigo-500 focus-within:ring-indigo-200'
-                    }`}>
+                    <div className="flex-1 relative rounded-none border-2 transition-all focus-within:ring-2 bg-slate-50 border-slate-200 focus-within:border-[#D4AF37] focus-within:ring-[#D4AF37]/20">
                         <textarea 
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             onKeyDown={handleKeyDown}
                             placeholder="Escribe tu respuesta..."
-                            className={`w-full bg-transparent p-4 outline-none resize-none h-[60px] ${isPro ? 'text-white placeholder:text-slate-600' : 'text-slate-800 placeholder:text-slate-400'}`}
+                            className="w-full bg-transparent p-4 outline-none resize-none h-[60px] text-slate-900 placeholder:text-gray-600 text-xs font-bold"
                         />
                         <button 
                             onClick={handleMicToggle}
-                            className={`absolute right-3 bottom-3 p-2 rounded-full transition-colors ${
+                            className={`absolute right-3 bottom-3 p-2 rounded-none transition-colors ${
                                 isRecording 
-                                    ? 'bg-red-500 text-white animate-pulse' 
-                                    : (isPro ? 'text-slate-500 hover:text-white' : 'text-slate-400 hover:text-indigo-600')
+                                    ? 'bg-[#D4AF37]/100 text-slate-900 animate-pulse' 
+                                    : 'text-slate-500 hover:text-slate-900'
                             }`}
                         >
                             <Mic size={20} />
@@ -273,19 +261,15 @@ export default function PracticePage() {
                     <button 
                         onClick={handleSend}
                         disabled={loading || !input.trim()}
-                        className={`h-[60px] w-[60px] rounded-2xl flex items-center justify-center shadow-lg transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed ${
-                            isPro 
-                                ? 'bg-amber-500 text-slate-900 shadow-amber-900/20' 
-                                : 'bg-indigo-600 text-white shadow-indigo-200'
-                        }`}
+                        className="h-[60px] w-[60px] rounded-none flex items-center justify-center shadow-none transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed bg-[#D4AF37] text-black shadow-[#D4AF37]/20"
                     >
                         {loading ? <Loader2 size={24} className="animate-spin" /> : <Send size={24} />}
                     </button>
                 </div>
                 
-                <div className="mt-3 flex justify-between items-center text-[10px] uppercase font-bold tracking-widest opacity-50">
+                <div className="mt-3 flex justify-between items-center text-[10px] uppercase font-black tracking-widest text-slate-500">
                     <span>Press Enter to send</span>
-                    <span className="flex items-center gap-1"><MonitorPlay size={10} /> {isPro ? 'GPT-4 Turbo' : 'Standard Model'}</span>
+                    <span className="flex items-center gap-1"><MonitorPlay size={10} className="text-[#D4AF37]"/> {isPro ? 'GPT-4 Turbo' : 'Standard Model'}</span>
                 </div>
             </div>
         </section>

@@ -1,0 +1,101 @@
+{
+  "id": "a1-37",
+  "title": "Present Simple vs Continuous",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Tenses"],
+  "completion_message": "¡Felicidades! Has aprendido a diferenciar entre lo que haces habitualmente y lo que estás haciendo justo ahora.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Simple vs Continuous",
+      "parts": [
+        { "visual": "Usa Present Simple para rutinas: 'I usually write emails' (Normalmente escribo correos).", "audio": "Use Present Simple for routines: I usually write emails." },
+        { "visual": "Usa Present Continuous para el momento actual: 'Right now, I am writing a report' (Justo ahora, estoy escribiendo un reporte).", "audio": "Use Present Continuous for the current moment: Right now, I am writing a report." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el tiempo verbal correcto según el contexto.",
+      "questions": [
+        { "id": "a1-37-q1", "type": "quiz_choice", "question": "I usually ____ at 9 AM.", "options": ["start", "am starting", "starts", "starting"], "correct_answer": "start", "explanation": "Rutina (usually) -> Presente Simple." },
+        { "id": "a1-37-q2", "type": "quiz_choice", "question": "Right now, I ____ an email.", "options": ["am writing", "write", "writing", "writes"], "correct_answer": "am writing", "explanation": "En este momento (right now) -> Continuo." },
+        { "id": "a1-37-q3", "type": "quiz_choice", "question": "She ____ coffee every morning.", "options": ["drinks", "is drinking", "drink", "drinking"], "correct_answer": "drinks", "explanation": "Hábito (every morning)." },
+        { "id": "a1-37-q4", "type": "quiz_choice", "question": "Look! The boss ____ here.", "options": ["is coming", "comes", "come", "coming"], "correct_answer": "is coming", "explanation": "Acción que está ocurriendo mientras hablas (Look!)." },
+        { "id": "a1-37-q5", "type": "quiz_choice", "question": "We normally ____ meetings on Fridays.", "options": ["have", "are having", "having", "has"], "correct_answer": "have", "explanation": "Rutina (normally)." },
+        { "id": "a1-37-q6", "type": "quiz_choice", "question": "Today, we ____ a meeting on Thursday.", "options": ["are having", "have", "having", "has"], "correct_answer": "are having", "explanation": "Excepción a la regla (hoy)." },
+        { "id": "a1-37-q7", "type": "quiz_choice", "question": "He ____ to work by bus every day.", "options": ["goes", "is going", "go", "going"], "correct_answer": "goes", "explanation": "Rutina (every day)." },
+        { "id": "a1-37-q8", "type": "quiz_choice", "question": "But today he ____ by car.", "options": ["is going", "goes", "go", "going"], "correct_answer": "is going", "explanation": "Acción temporal de hoy." },
+        { "id": "a1-37-q9", "type": "quiz_choice", "question": "I always ____ my computer before leaving.", "options": ["turn off", "am turning off", "turning off", "turns off"], "correct_answer": "turn off", "explanation": "Rutina (always)." },
+        { "id": "a1-37-q10", "type": "quiz_choice", "question": "Shh! The manager ____.", "options": ["is talking", "talks", "talk", "talking"], "correct_answer": "is talking", "explanation": "Acción en progreso ahora mismo (Shh!)." },
+        { "id": "a1-37-q11", "type": "quiz_choice", "question": "They ____ English fluently.", "options": ["speak", "are speaking", "speaks", "speaking"], "correct_answer": "speak", "explanation": "Hecho general o habilidad permanente." },
+        { "id": "a1-37-q12", "type": "quiz_choice", "question": "They ____ English in the meeting right now.", "options": ["are speaking", "speak", "speaks", "speaking"], "correct_answer": "are speaking", "explanation": "En este preciso instante." },
+        { "id": "a1-37-q13", "type": "quiz_choice", "question": "My phone ____ a lot of memory.", "options": ["has", "is having", "have", "having"], "correct_answer": "has", "explanation": "Posesión es un estado, no usa -ing (usualmente)." },
+        { "id": "a1-37-q14", "type": "quiz_choice", "question": "I ____ a lot of fun at this office party.", "options": ["am having", "have", "having", "has"], "correct_answer": "am having", "explanation": "Experimentando algo ahora mismo." },
+        { "id": "a1-37-q15", "type": "quiz_choice", "question": "____ you like your job?", "options": ["Do", "Are", "Is", "Does"], "correct_answer": "Do", "explanation": "Gustos y preferencias usan Presente Simple." },
+        { "id": "a1-37-q16", "type": "quiz_choice", "question": "____ you working on the presentation?", "options": ["Are", "Do", "Is", "Does"], "correct_answer": "Are", "explanation": "Acción en progreso (working)." },
+        { "id": "a1-37-q17", "type": "quiz_choice", "question": "She never ____ late.", "options": ["arrives", "is arriving", "arrive", "arriving"], "correct_answer": "arrives", "explanation": "Rutina (never)." },
+        { "id": "a1-37-q18", "type": "quiz_choice", "question": "Why ____ she arriving so late today?", "options": ["is", "does", "do", "are"], "correct_answer": "is", "explanation": "Por qué está llegando tarde hoy (temporal)." },
+        { "id": "a1-37-q19", "type": "quiz_choice", "question": "It ____ in London very often.", "options": ["rains", "is raining", "rain", "raining"], "correct_answer": "rains", "explanation": "Hecho general." },
+        { "id": "a1-37-q20", "type": "quiz_choice", "question": "Take an umbrella, it ____.", "options": ["is raining", "rains", "rain", "raining"], "correct_answer": "is raining", "explanation": "Está lloviendo ahora." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo en la forma correcta.",
+      "questions": [
+        { "id": "a1-37-f1", "type": "fill_input", "question": "I usually ____ (start).", "correct_answer": "start", "explanation": "Start." },
+        { "id": "a1-37-f2", "type": "fill_input", "question": "Right now, I am ____ (write).", "correct_answer": "writing", "explanation": "Writing." },
+        { "id": "a1-37-f3", "type": "fill_input", "question": "She ____ coffee every morning (drink).", "correct_answer": "drinks", "explanation": "Drinks." },
+        { "id": "a1-37-f4", "type": "fill_input", "question": "Look! The boss is ____ (come).", "correct_answer": "coming", "explanation": "Coming." },
+        { "id": "a1-37-f5", "type": "fill_input", "question": "We normally ____ meetings (have).", "correct_answer": "have", "explanation": "Have." },
+        { "id": "a1-37-f6", "type": "fill_input", "question": "Today we are ____ a meeting (have).", "correct_answer": "having", "explanation": "Having." },
+        { "id": "a1-37-f7", "type": "fill_input", "question": "He ____ by bus every day (go).", "correct_answer": "goes", "explanation": "Goes." },
+        { "id": "a1-37-f8", "type": "fill_input", "question": "Today he is ____ by car (go).", "correct_answer": "going", "explanation": "Going." },
+        { "id": "a1-37-f9", "type": "fill_input", "question": "Shh! The manager is ____ (talk).", "correct_answer": "talking", "explanation": "Talking." },
+        { "id": "a1-37-f10", "type": "fill_input", "question": "____ you like your job? (Auxiliar)", "correct_answer": "Do", "explanation": "Do." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-37-p1", "source": "Usually", "target": "Usualmente"},
+        {"id": "a1-37-p2", "source": "Right now", "target": "Ahora mismo"},
+        {"id": "a1-37-p3", "source": "Every day", "target": "Todos los días"},
+        {"id": "a1-37-p4", "source": "Today", "target": "Hoy"},
+        {"id": "a1-37-p5", "source": "Start", "target": "Empezar (Rutina)"},
+        {"id": "a1-37-p6", "source": "Am starting", "target": "Estoy empezando"},
+        {"id": "a1-37-p7", "source": "Work", "target": "Trabajar (Rutina)"},
+        {"id": "a1-37-p8", "source": "Am working", "target": "Estoy trabajando"},
+        {"id": "a1-37-p9", "source": "Look!", "target": "¡Mira!"},
+        {"id": "a1-37-p10", "source": "Shh!", "target": "¡Silencio!"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-37-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I usually start at nine.", "options": ["I usually start at nine.", "I am starting at nine.", "He usually starts at nine.", "I always start at nine."], "correct_answer": "I usually start at nine.", "explanation": "Audio exacto." },
+        { "id": "a1-37-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am writing an email.", "options": ["I am writing an email.", "I write an email.", "He is writing an email.", "I am reading an email."], "correct_answer": "I am writing an email.", "explanation": "Audio exacto." },
+        { "id": "a1-37-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She drinks coffee every morning.", "options": ["She drinks coffee every morning.", "She is drinking coffee.", "He drinks coffee every morning.", "She drank coffee every morning."], "correct_answer": "She drinks coffee every morning.", "explanation": "Audio exacto." },
+        { "id": "a1-37-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Look, the boss is coming.", "options": ["Look, the boss is coming.", "The boss is coming.", "Look, the boss comes.", "The boss comes."], "correct_answer": "Look, the boss is coming.", "explanation": "Audio exacto." },
+        { "id": "a1-37-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We normally have meetings.", "options": ["We normally have meetings.", "We are having meetings.", "They normally have meetings.", "We never have meetings."], "correct_answer": "We normally have meetings.", "explanation": "Audio exacto." },
+        { "id": "a1-37-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Today we are having a meeting.", "options": ["Today we are having a meeting.", "Today we have a meeting.", "We are having a meeting.", "They are having a meeting."], "correct_answer": "Today we are having a meeting.", "explanation": "Audio exacto." },
+        { "id": "a1-37-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He goes by bus every day.", "options": ["He goes by bus every day.", "He is going by bus.", "She goes by bus every day.", "He goes by car every day."], "correct_answer": "He goes by bus every day.", "explanation": "Audio exacto." },
+        { "id": "a1-37-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Today he is going by car.", "options": ["Today he is going by car.", "Today he goes by car.", "He is going by car.", "Today she is going by car."], "correct_answer": "Today he is going by car.", "explanation": "Audio exacto." },
+        { "id": "a1-37-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I turn off my computer.", "options": ["I turn off my computer.", "I am turning off my computer.", "He turns off his computer.", "I turn on my computer."], "correct_answer": "I turn off my computer.", "explanation": "Audio exacto." },
+        { "id": "a1-37-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The manager is talking.", "options": ["The manager is talking.", "The manager talks.", "A manager is talking.", "The manager is walking."], "correct_answer": "The manager is talking.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

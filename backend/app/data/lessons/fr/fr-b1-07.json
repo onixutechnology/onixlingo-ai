@@ -1,0 +1,95 @@
+{
+  "id": "fr-b1-07",
+  "title": "Les Hypothèses avec 'Si'",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Hypothesis", "Si Clauses"],
+  "completion_message": "¡Fabuloso! Has desbloqueado el poder de especular. Ahora puedes hablar de tus planes a futuro y de tus mayores fantasías condicionales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Juego de las Hipótesis (B1)",
+      "parts": [
+        {
+          "visual": "En francés, usamos la palabra 'SI' para establecer condiciones. Hay dos grandes reglas de oro que debes tatuarte en la memoria:\n\nRegla 1: La Hipótesis Real (Muy probable)\nEstructura: SI + PRÉSENT -> FUTUR\n\n- Si j'étudie, je réussirai. (Si estudio, aprobaré).\n- S'il pleut, nous n'irons pas. (Si llueve, no iremos).",
+          "audio": "Hoy vamos a jugar al juego de 'Qué pasaría si...'. Para hacer hipótesis en francés, la clave es dominar qué tiempos verbales se combinan con la palabra SI. Nuestra primera regla es la Hipótesis Real, es decir, cosas que son muy probables que sucedan. La fórmula matemática es sencilla: usas SI, luego un verbo en presente, y la consecuencia va en futuro simple. Por ejemplo: 'Si estudio, aprobaré'. En francés sería: 'Si j'étudie, je réussirai'."
+        },
+        {
+          "visual": "Regla 2: La Hipótesis Irreal (Fantasía o poco probable)\nEstructura: SI + IMPARFAIT -> CONDITIONNEL\n\n- Si j'étais riche, j'achèterais un bateau. (Si yo fuera rico, compraría un barco).\n- Si tu avais le temps, tu voyagerais. (Si tú tuvieras tiempo, viajarías).\n\n¡OJO! NUNCA puedes poner un verbo en futuro o condicional directamente después de la palabra 'Si'.\nIncorrecto: Si je serais riche...\nCorrecto: Si j'étais riche...",
+          "audio": "La segunda regla es para la Hipótesis Irreal, es decir, fantasías o cosas que no son verdad ahora mismo. Aquí la fórmula cambia. Usas SI, luego un verbo en Imparfait, y la consecuencia va en Condicional. Por ejemplo, 'Si yo fuera rico' se dice 'Si j'étais riche' (usando el imparfait de Être). Y la consecuencia, 'compraría un barco', va en condicional: 'j'achèterais un bateau'. El error más grave que puedes cometer, y por el que los franceses te mirarán feo, es poner un condicional justo después de la palabra SI. Jamás digas 'Si je serais riche'. ¡Eso es ilegal en francés! Siempre es 'Si j'étais'."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el tiempo verbal correcto para completar la hipótesis.",
+      "questions": [
+        { "id": "frb1-07-q1", "type": "quiz_choice", "question": "¿Cuál es la estructura de una hipótesis real o probable?", "options": ["Si + Présent -> Futur", "Si + Imparfait -> Conditionnel", "Si + Futur -> Présent", "Si + Conditionnel -> Futur"], "correct_answer": "Si + Présent -> Futur", "explanation": "Si (condición en presente) -> Consecuencia (futuro)." },
+        { "id": "frb1-07-q2", "type": "quiz_choice", "question": "¿Cuál es la estructura de una hipótesis irreal o fantasía?", "options": ["Si + Imparfait -> Conditionnel", "Si + Présent -> Futur", "Si + Passé Composé -> Présent", "Si + Futur -> Conditionnel"], "correct_answer": "Si + Imparfait -> Conditionnel", "explanation": "Ej: Si j'étais riche, j'achèterais..." },
+        { "id": "frb1-07-q3", "type": "quiz_choice", "question": "Si j'ai faim (presente), je ____ (comer - futuro).", "options": ["mangerai", "mangeais", "mangerais", "mange"], "correct_answer": "mangerai", "explanation": "Si + Présent -> Futur (mangerai)." },
+        { "id": "frb1-07-q4", "type": "quiz_choice", "question": "S'il pleut (presente), nous ____ (ir - futuro) au cinéma.", "options": ["irons", "allons", "irions", "allions"], "correct_answer": "irons", "explanation": "Si + Présent -> Futur (irons)." },
+        { "id": "frb1-07-q5", "type": "quiz_choice", "question": "Si j'étais riche (imparfait), j'____ (comprar - condicional) un château.", "options": ["achèterais", "achèterai", "achetais", "achète"], "correct_answer": "achèterais", "explanation": "Si + Imparfait -> Condicional (achèterais)." },
+        { "id": "frb1-07-q6", "type": "quiz_choice", "question": "Si tu avais le temps (imparfait), tu ____ (viajar - condicional).", "options": ["voyagerais", "voyageras", "voyageais", "voyages"], "correct_answer": "voyagerais", "explanation": "Si + Imparfait -> Condicional (voyagerais)." },
+        { "id": "frb1-07-q7", "type": "quiz_choice", "question": "¿Es correcta la frase: 'Si j'aurais le temps, je viendrais'?", "options": ["Falso, NUNCA se pone condicional después de 'Si'", "Verdadero, es correcto"], "correct_answer": "Falso, NUNCA se pone condicional después de 'Si'", "explanation": "Debe ser: 'Si j'AVAIS le temps' (Imparfait)." },
+        { "id": "frb1-07-q8", "type": "quiz_choice", "question": "Si vous ____ (terminar - presente) tôt, nous sortirons ce soir.", "options": ["finissez", "finirez", "finissiez", "finissezs"], "correct_answer": "finissez", "explanation": "La consecuencia 'sortirons' está en futuro, así que la condición exige PRESENTE -> finissez." },
+        { "id": "frb1-07-q9", "type": "quiz_choice", "question": "Je ____ (ir - condicional) à Paris, si je parlais français (imparfait).", "options": ["irais", "irai", "allais", "vais"], "correct_answer": "irais", "explanation": "La condición es Imparfait, por lo que el verbo principal debe ser Condicional -> irais." },
+        { "id": "frb1-07-q10", "type": "quiz_choice", "question": "Si elle a le temps (presente), elle t'____ (ayudar - futuro).", "options": ["aidera", "aiderait", "aidait", "aide"], "correct_answer": "aidera", "explanation": "Si + Présent -> Futur (aidera)." },
+        { "id": "frb1-07-q11", "type": "quiz_choice", "question": "Si nous ____ (saber - imparfait) la vérité, nous dirions tout.", "options": ["savions", "saurions", "savons", "saurons"], "correct_answer": "savions", "explanation": "La consecuencia 'dirions' está en condicional. Exige IMPARFAIT -> savions." },
+        { "id": "frb1-07-q12", "type": "quiz_choice", "question": "Si tu ____ (venir - presente), je serai très content.", "options": ["viens", "viendras", "venais", "viendrais"], "correct_answer": "viens", "explanation": "La consecuencia 'serai' es futuro. Exige PRESENTE -> viens." },
+        { "id": "frb1-07-q13", "type": "quiz_choice", "question": "¿Qué palabra se usa en francés para decir 'SI' (condicional)?", "options": ["Si", "Oui", "Que", "Quand"], "correct_answer": "Si", "explanation": "Si (se apostrofa solo delante de 'il' y 'ils')." },
+        { "id": "frb1-07-q14", "type": "quiz_choice", "question": "____ ils viennent, je pars. (SI ellos vienen, yo me voy).", "options": ["S'ils", "Si ils", "S'elles", "Si elles"], "correct_answer": "S'ils", "explanation": "Si + ils = S'ils." },
+        { "id": "frb1-07-q15", "type": "quiz_choice", "question": "Si j'étais un animal, je ____ (ser - condicional) un chat.", "options": ["serais", "serai", "étais", "suis"], "correct_answer": "serais", "explanation": "Si + Imparfait -> Condicional (serais)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Conjuga el verbo en Futuro o Condicional dependiendo de la palabra SI.",
+      "questions": [
+        { "id": "frb1-07-f1", "type": "fill_input", "question": "Si j'étudie, je ____ (réussir). (Futuro).", "correct_answer": "réussirai", "explanation": "réussirai" },
+        { "id": "frb1-07-f2", "type": "fill_input", "question": "Si j'étudiais, je ____ (réussir). (Condicional).", "correct_answer": "réussirais", "explanation": "réussirais" },
+        { "id": "frb1-07-f3", "type": "fill_input", "question": "S'il pleut, je ne ____ (sortir) pas. (Futuro).", "correct_answer": "sortirai", "explanation": "sortirai" },
+        { "id": "frb1-07-f4", "type": "fill_input", "question": "S'il pleuvait, je ne ____ (sortir) pas. (Condicional).", "correct_answer": "sortirais", "explanation": "sortirais" },
+        { "id": "frb1-07-f5", "type": "fill_input", "question": "Si j'avais de l'argent, j'____ (acheter) un avion. (Condicional).", "correct_answer": "achèterais", "explanation": "achèterais" },
+        { "id": "frb1-07-f6", "type": "fill_input", "question": "Si tu viens, nous ____ (aller) au parc. (Futuro).", "correct_answer": "irons", "explanation": "irons" },
+        { "id": "frb1-07-f7", "type": "fill_input", "question": "Si tu venais, nous ____ (aller) au parc. (Condicional).", "correct_answer": "irions", "explanation": "irions" },
+        { "id": "frb1-07-f8", "type": "fill_input", "question": "Si elle est libre, elle ____ (venir). (Futuro).", "correct_answer": "viendra", "explanation": "viendra" },
+        { "id": "frb1-07-f9", "type": "fill_input", "question": "Si elle était libre, elle ____ (venir). (Condicional).", "correct_answer": "viendrait", "explanation": "viendrait" },
+        { "id": "frb1-07-f10", "type": "fill_input", "question": "Si vous finissez tôt, nous ____ (manger) ensemble. (Futuro).", "correct_answer": "mangerons", "explanation": "mangerons" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Hypothesis Match",
+      "pairs": [
+        {"id": "frb1-07-p1", "source": "Si j'ai le temps", "target": "Si tengo tiempo"},
+        {"id": "frb1-07-p2", "source": "Si j'avais le temps", "target": "Si tuviera tiempo"},
+        {"id": "frb1-07-p3", "source": "Je le ferai", "target": "Lo haré"},
+        {"id": "frb1-07-p4", "source": "Je le ferais", "target": "Lo haría"},
+        {"id": "frb1-07-p5", "source": "S'il pleut", "target": "Si llueve"},
+        {"id": "frb1-07-p6", "source": "S'il pleuvait", "target": "Si lloviera"},
+        {"id": "frb1-07-p7", "source": "J'irai", "target": "Iré"},
+        {"id": "frb1-07-p8", "source": "J'irais", "target": "Iría"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica si la consecuencia está en Futuro (hipótesis real) o Condicional (hipótesis irreal).",
+      "questions": [
+        { "id": "frb1-07-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Si j'étudie, je réussirai", "options": ["Si j'étudie, je réussirai", "Si j'étudiais, je réussirais", "Je réussirai", "Si j'étudie, j'ai réussi"], "correct_answer": "Si j'étudie, je réussirai", "explanation": "Audio dice: Si j'étudie, je réussirai (Real)." },
+        { "id": "frb1-07-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Si j'étudiais, je réussirais", "options": ["Si j'étudiais, je réussirais", "Si j'étudie, je réussirai", "Je réussirais", "Si j'étudie, je réussis"], "correct_answer": "Si j'étudiais, je réussirais", "explanation": "Audio dice: Si j'étudiais, je réussirais (Irreal)." },
+        { "id": "frb1-07-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Si j'avais de l'argent, j'irais", "options": ["Si j'avais de l'argent, j'irais", "Si j'ai de l'argent, j'irai", "J'irais", "Si j'avais de l'argent, je vais"], "correct_answer": "Si j'avais de l'argent, j'irais", "explanation": "Audio dice: Si j'avais de l'argent, j'irais." },
+        { "id": "frb1-07-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Si tu viens, nous irons", "options": ["Si tu viens, nous irons", "Si tu venais, nous irions", "Nous irons", "Si tu viens, nous allons"], "correct_answer": "Si tu viens, nous irons", "explanation": "Audio dice: Si tu viens, nous irons." },
+        { "id": "frb1-07-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "S'il pleuvait, je resterais", "options": ["S'il pleuvait, je resterais", "S'il pleut, je resterai", "Je resterais", "S'il pleut, je reste"], "correct_answer": "S'il pleuvait, je resterais", "explanation": "Audio dice: S'il pleuvait, je resterais." }
+      ]
+    }
+  ]
+}

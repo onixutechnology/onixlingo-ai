@@ -1,0 +1,101 @@
+{
+  "id": "a1-10",
+  "title": "Hotel Check-in",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Hotel", "Travel"],
+  "completion_message": "¡Llave en mano! Ya tienes el inglés necesario para registrarte en cualquier hotel corporativo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Habitaciones de Hotel",
+      "parts": [
+        { "visual": "La palabra clave al registrarte es 'room' (habitación).", "audio": "The key word when checking in is room." },
+        { "visual": "Aprende a decir: 'I have a reservation for a single room'.", "audio": "Learn to say: I have a reservation for a single room." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la opción correcta.",
+      "questions": [
+        { "id": "a1-10-q1", "type": "quiz_choice", "question": "I would like a single ____, please.", "options": ["room", "rooms", "rooming", "space"], "correct_answer": "room", "explanation": "Habitación individual." },
+        { "id": "a1-10-q2", "type": "quiz_choice", "question": "What is my ____ number?", "options": ["room", "room's", "rooms", "house"], "correct_answer": "room", "explanation": "Número de habitación (Room number)." },
+        { "id": "a1-10-q3", "type": "quiz_choice", "question": "Here is your ____ key.", "options": ["room", "rooms", "door", "hotel"], "correct_answer": "room", "explanation": "Llave de la habitación." },
+        { "id": "a1-10-q4", "type": "quiz_choice", "question": "Is breakfast included with the ____?", "options": ["room", "rooms", "sleep", "bed"], "correct_answer": "room", "explanation": "Incluido con la habitación." },
+        { "id": "a1-10-q5", "type": "quiz_choice", "question": "I booked a double ____.", "options": ["room", "rooms", "bed", "suite"], "correct_answer": "room", "explanation": "Habitación doble." },
+        { "id": "a1-10-q6", "type": "quiz_choice", "question": "Could you clean my ____?", "options": ["room", "rooms", "space", "house"], "correct_answer": "room", "explanation": "Limpiar mi habitación." },
+        { "id": "a1-10-q7", "type": "quiz_choice", "question": "We have no ____ available.", "options": ["rooms", "room", "beds", "hotels"], "correct_answer": "rooms", "explanation": "Habitaciones (Plural)." },
+        { "id": "a1-10-q8", "type": "quiz_choice", "question": "The ____ has a nice view.", "options": ["room", "rooms", "bed", "window"], "correct_answer": "room", "explanation": "La habitación tiene vista." },
+        { "id": "a1-10-q9", "type": "quiz_choice", "question": "Order ____ service.", "options": ["room", "rooms", "food", "bed"], "correct_answer": "room", "explanation": "Servicio a la habitación (Room service)." },
+        { "id": "a1-10-q10", "type": "quiz_choice", "question": "I left my laptop in the ____.", "options": ["room", "rooms", "lobby", "desk"], "correct_answer": "room", "explanation": "Dejé la laptop en la habitación." },
+        { "id": "a1-10-q11", "type": "quiz_choice", "question": "Can I change my ____?", "options": ["room", "rooms", "bed", "hotel"], "correct_answer": "room", "explanation": "Cambiar de habitación." },
+        { "id": "a1-10-q12", "type": "quiz_choice", "question": "Your ____ is on the third floor.", "options": ["room", "rooms", "door", "bed"], "correct_answer": "room", "explanation": "Tu habitación está en el tercer piso." },
+        { "id": "a1-10-q13", "type": "quiz_choice", "question": "We need a meeting ____.", "options": ["room", "rooms", "space", "place"], "correct_answer": "room", "explanation": "Sala de reuniones (Meeting room)." },
+        { "id": "a1-10-q14", "type": "quiz_choice", "question": "The ____ rate is $100 per night.", "options": ["room", "rooms", "hotel", "bed"], "correct_answer": "room", "explanation": "Tarifa de habitación." },
+        { "id": "a1-10-q15", "type": "quiz_choice", "question": "Is this ____ non-smoking?", "options": ["room", "rooms", "hotel", "bed"], "correct_answer": "room", "explanation": "Habitación para no fumadores." },
+        { "id": "a1-10-q16", "type": "quiz_choice", "question": "Leave the towels in the ____.", "options": ["room", "rooms", "bathroom", "bed"], "correct_answer": "room", "explanation": "Dejar las toallas en la habitación." },
+        { "id": "a1-10-q17", "type": "quiz_choice", "question": "How many ____ do you need?", "options": ["rooms", "room", "beds", "hotels"], "correct_answer": "rooms", "explanation": "Cuántas habitaciones (Plural)." },
+        { "id": "a1-10-q18", "type": "quiz_choice", "question": "I will wait in my ____.", "options": ["room", "rooms", "bed", "hotel"], "correct_answer": "room", "explanation": "Esperar en mi habitación." },
+        { "id": "a1-10-q19", "type": "quiz_choice", "question": "The ____ is very quiet.", "options": ["room", "rooms", "hotel", "bed"], "correct_answer": "room", "explanation": "La habitación es muy silenciosa." },
+        { "id": "a1-10-q20", "type": "quiz_choice", "question": "Check-out time for the ____ is 11 AM.", "options": ["room", "rooms", "hotel", "bed"], "correct_answer": "room", "explanation": "Hora de salida para la habitación." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta.",
+      "questions": [
+        { "id": "a1-10-f1", "type": "fill_input", "question": "I need a single ____.", "correct_answer": "room", "explanation": "Habitación." },
+        { "id": "a1-10-f2", "type": "fill_input", "question": "What is my ____ number?", "correct_answer": "room", "explanation": "Número de habitación." },
+        { "id": "a1-10-f3", "type": "fill_input", "question": "Here is your ____ key.", "correct_answer": "room", "explanation": "Llave." },
+        { "id": "a1-10-f4", "type": "fill_input", "question": "We have no ____.", "correct_answer": "rooms", "explanation": "Plural." },
+        { "id": "a1-10-f5", "type": "fill_input", "question": "Order ____ service.", "correct_answer": "room", "explanation": "Room service." },
+        { "id": "a1-10-f6", "type": "fill_input", "question": "A double ____.", "correct_answer": "room", "explanation": "Habitación doble." },
+        { "id": "a1-10-f7", "type": "fill_input", "question": "Clean my ____.", "correct_answer": "room", "explanation": "Limpiar habitación." },
+        { "id": "a1-10-f8", "type": "fill_input", "question": "A meeting ____.", "correct_answer": "room", "explanation": "Sala de reuniones." },
+        { "id": "a1-10-f9", "type": "fill_input", "question": "The ____ is on floor 3.", "correct_answer": "room", "explanation": "Singular." },
+        { "id": "a1-10-f10", "type": "fill_input", "question": "Two ____, please.", "correct_answer": "rooms", "explanation": "Plural." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-10-p1", "source": "Room", "target": "Habitación"},
+        {"id": "a1-10-p2", "source": "Key", "target": "Llave"},
+        {"id": "a1-10-p3", "source": "Bed", "target": "Cama"},
+        {"id": "a1-10-p4", "source": "Hotel", "target": "Hotel"},
+        {"id": "a1-10-p5", "source": "Lobby", "target": "Recepción"},
+        {"id": "a1-10-p6", "source": "Breakfast", "target": "Desayuno"},
+        {"id": "a1-10-p7", "source": "Floor", "target": "Piso"},
+        {"id": "a1-10-p8", "source": "Check-in", "target": "Registro"},
+        {"id": "a1-10-p9", "source": "Reservation", "target": "Reserva"},
+        {"id": "a1-10-p10", "source": "Service", "target": "Servicio"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-10-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need a room.", "options": ["I need a room.", "I need the room.", "I want a room.", "I need rooms."], "correct_answer": "I need a room.", "explanation": "Audio exacto." },
+        { "id": "a1-10-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My room number.", "options": ["My room number.", "The room number.", "A room number.", "His room number."], "correct_answer": "My room number.", "explanation": "Audio exacto." },
+        { "id": "a1-10-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Here is the room key.", "options": ["Here is the room key.", "Here is your room key.", "There is the room key.", "Here are the room keys."], "correct_answer": "Here is the room key.", "explanation": "Audio exacto." },
+        { "id": "a1-10-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Room service.", "options": ["Room service.", "Room services.", "The room service.", "A room service."], "correct_answer": "Room service.", "explanation": "Audio exacto." },
+        { "id": "a1-10-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A double room.", "options": ["A double room.", "The double room.", "A single room.", "Double rooms."], "correct_answer": "A double room.", "explanation": "Audio exacto." },
+        { "id": "a1-10-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Clean my room.", "options": ["Clean my room.", "Clean the room.", "Clean his room.", "Cleaned my room."], "correct_answer": "Clean my room.", "explanation": "Audio exacto." },
+        { "id": "a1-10-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have no rooms.", "options": ["We have no rooms.", "We have no room.", "They have no rooms.", "We had no rooms."], "correct_answer": "We have no rooms.", "explanation": "Audio exacto." },
+        { "id": "a1-10-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The meeting room.", "options": ["The meeting room.", "A meeting room.", "The waiting room.", "The meeting rooms."], "correct_answer": "The meeting room.", "explanation": "Audio exacto." },
+        { "id": "a1-10-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Change my room.", "options": ["Change my room.", "Change the room.", "Change his room.", "Changed my room."], "correct_answer": "Change my room.", "explanation": "Audio exacto." },
+        { "id": "a1-10-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Go to your room.", "options": ["Go to your room.", "Go to the room.", "Come to your room.", "Go to his room."], "correct_answer": "Go to your room.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "c2-74",
+  "title": "Future Tech",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Technology", "Innovation", "Future"],
+  "completion_message": "¡Fascinante! Hablas de la tecnología del futuro como un visionario de Silicon Valley. Sabes diferenciar entre una simple tendencia y una verdadera disrupción.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Innovación y Tecnología del Futuro (C2)",
+      "parts": [
+        { "visual": "El vocabulario de la innovación radical y el futuro. \n\n1. Bleeding-edge (Tecnología de punta / Experimental): \n- Más nuevo que 'cutting-edge'. Tan nuevo que tiene alto riesgo de fallar (te hace 'sangrar'). \nEj: They invest heavily in BLEEDING-EDGE artificial intelligence. \n\n2. Obsolescence (Obsolescencia): \n- El proceso de volverse obsoleto o inútil. \nEj: Planned OBSOLESCENCE is a strategy to force people to buy new phones. \n\n3. Disruptor (Disruptor): \n- Una empresa o tecnología que cambia completamente las reglas de una industria. \nEj: Uber was a massive DISRUPTOR in the taxi industry.", "audio": "Welcome to Innovation and Future Tech. Number 1: Bleeding-edge. This means technology that is so new and experimental that it has a high risk of unreliability. It is newer than 'cutting-edge'. For example: They invest heavily in BLEEDING-EDGE artificial intelligence. Number 2: Obsolescence. The process of becoming obsolete or no longer used. For example: Planned OBSOLESCENCE is a strategy to force people to buy new phones. Number 3: Disruptor. A company or technology that radically changes how an industry operates, usually by making the old way obsolete. For example: Uber was a massive DISRUPTOR in the taxi industry." },
+        { "visual": "4. Singularity (La Singularidad): \n- El punto hipotético futuro donde la Inteligencia Artificial superará a la humana. \nEj: Experts debate when the technological SINGULARITY will happen. \n\n5. Autonomous (Autónomo): \n- Que opera de forma independiente sin control humano. \nEj: The streets will soon be filled with AUTONOMOUS vehicles. \n\n6. Scalability (Escalabilidad): \n- La capacidad de un sistema para crecer y manejar más demanda sin colapsar. \nEj: Cloud computing provides infinite SCALABILITY for startups. \n\n7. State-of-the-art (Lo más avanzado): \n- La mejor tecnología disponible actualmente. \nEj: The laboratory is equipped with STATE-OF-THE-ART machinery.", "audio": "Number 4: Singularity. The hypothetical future point in time when artificial intelligence will surpass human intelligence and radically change civilization. For example: Experts debate when the technological SINGULARITY will happen. Number 5: Autonomous. Operating independently without human control. For example: The streets will soon be filled with AUTONOMOUS vehicles. Number 6: Scalability. The capacity of a system to be changed in size or scale to meet new demands. For example: Cloud computing provides infinite SCALABILITY for startups. Finally, Number 7: State-of-the-art. The most recent and highest level of development in a device or field. For example: The laboratory is equipped with STATE-OF-THE-ART machinery." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término tecnológico y de innovación correcto.",
+      "questions": [
+        { "id": "c2-74-q1", "type": "quiz_choice", "question": "This software is so new that it still crashes sometimes. It is ____-edge technology.", "options": ["bleeding", "cutting", "leading", "sharp"], "correct_answer": "bleeding", "explanation": "Bleeding-edge = tecnología tan nueva que aún es inestable (más que cutting-edge)." },
+        { "id": "c2-74-q2", "type": "quiz_choice", "question": "Many believe that companies use planned ____ to make phones slow down after two years, forcing you to buy a new one.", "options": ["obsolescence", "destruction", "failure", "decay"], "correct_answer": "obsolescence", "explanation": "Planned obsolescence = obsolescencia programada." },
+        { "id": "c2-74-q3", "type": "quiz_choice", "question": "Netflix was a major ____ in the entertainment industry, destroying the traditional video rental business.", "options": ["disruptor", "creator", "destroyer", "invader"], "correct_answer": "disruptor", "explanation": "Disruptor = empresa o tecnología que altera completamente una industria." },
+        { "id": "c2-74-q4", "type": "quiz_choice", "question": "The technological ____ is the hypothetical point when AI becomes smarter than humans and uncontrollable.", "options": ["singularity", "plurality", "infinity", "eternity"], "correct_answer": "singularity", "explanation": "Singularity = la Singularidad tecnológica." },
+        { "id": "c2-74-q5", "type": "quiz_choice", "question": "Tesla is investing billions in developing fully ____ vehicles that can drive themselves with zero human input.", "options": ["autonomous", "automatic", "automated", "autocratic"], "correct_answer": "autonomous", "explanation": "Autonomous = autónomo (que toma sus propias decisiones, no solo automático)." },
+        { "id": "c2-74-q6", "type": "quiz_choice", "question": "The app works fine for 100 users, but if a million people download it, the servers will crash. We have a problem with ____.", "options": ["scalability", "stability", "security", "speed"], "correct_answer": "scalability", "explanation": "Scalability = escalabilidad." },
+        { "id": "c2-74-q7", "type": "quiz_choice", "question": "This hospital uses ____-of-the-art robotic surgery equipment. (Lo más avanzado/vanguardia).", "options": ["state", "art", "top", "best"], "correct_answer": "state", "explanation": "State-of-the-art = el estado del arte, lo más moderno disponible." },
+        { "id": "c2-74-q8", "type": "quiz_choice", "question": "Using biological data like fingerprints or iris scans to unlock devices is called ____ security.", "options": ["biometric", "biological", "bionic", "botanic"], "correct_answer": "biometric", "explanation": "Biometric = biométrico." },
+        { "id": "c2-74-q9", "type": "quiz_choice", "question": "A decentralized, secure digital ledger used to record cryptocurrency transactions is the ____.", "options": ["blockchain", "blocknet", "blockweb", "blocklink"], "correct_answer": "blockchain", "explanation": "Blockchain = cadena de bloques." },
+        { "id": "c2-74-q10", "type": "quiz_choice", "question": "When a physical machine or tool is replaced by software or a digital version, it is called ____. (Digitalización/Desmaterialización).", "options": ["dematerialization", "destruction", "vaporization", "ghosting"], "correct_answer": "dematerialization", "explanation": "Dematerialization (o digitization) = desmaterialización (ej. la cámara física ahora es software en el móvil)." },
+        { "id": "c2-74-q11", "type": "quiz_choice", "question": "An early, testable model of a new product built to test a concept or process is a ____.", "options": ["prototype", "stereotype", "archetype", "monotype"], "correct_answer": "prototype", "explanation": "Prototype = prototipo." },
+        { "id": "c2-74-q12", "type": "quiz_choice", "question": "To use a computer system to imitate a real-world process or situation for testing or training is to run a ____.", "options": ["simulation", "stimulation", "calculation", "mutation"], "correct_answer": "simulation", "explanation": "Simulation = simulación." },
+        { "id": "c2-74-q13", "type": "quiz_choice", "question": "When computing power and data storage are delivered over the internet on-demand, it is called ____ computing.", "options": ["cloud", "sky", "air", "wind"], "correct_answer": "cloud", "explanation": "Cloud computing = computación en la nube." },
+        { "id": "c2-74-q14", "type": "quiz_choice", "question": "The science of making extremely small devices and materials at the atomic or molecular scale is ____.", "options": ["nanotechnology", "microtechnology", "picotechnology", "quantumtech"], "correct_answer": "nanotechnology", "explanation": "Nanotechnology = nanotecnología." },
+        { "id": "c2-74-q15", "type": "quiz_choice", "question": "A sudden, dramatic, and important discovery or technological advancement is a ____.", "options": ["breakthrough", "breakdown", "breakout", "breakup"], "correct_answer": "breakthrough", "explanation": "Breakthrough = avance importante, descubrimiento rompedor." },
+        { "id": "c2-74-q16", "type": "quiz_choice", "question": "To secretly enter someone else's computer system or network without permission is to ____ it.", "options": ["hack", "crack", "smash", "break"], "correct_answer": "hack", "explanation": "Hack = hackear." },
+        { "id": "c2-74-q17", "type": "quiz_choice", "question": "The network of physical objects (fridges, cars, lights) that are embedded with sensors and connected to the internet is the IoT, or the Internet of ____.", "options": ["Things", "Technology", "Tools", "Toys"], "correct_answer": "Things", "explanation": "Internet of Things (IoT) = el Internet de las Cosas." },
+        { "id": "c2-74-q18", "type": "quiz_choice", "question": "A type of machine learning where artificial neural networks learn from massive amounts of unstructured data is ____ learning.", "options": ["deep", "hard", "heavy", "complex"], "correct_answer": "deep", "explanation": "Deep learning = aprendizaje profundo." },
+        { "id": "c2-74-q19", "type": "quiz_choice", "question": "Superimposing computer-generated images on top of the user's view of the real world is AR, or ____ Reality.", "options": ["Augmented", "Artificial", "Alternative", "Actual"], "correct_answer": "Augmented", "explanation": "Augmented Reality (AR) = Realidad Aumentada." },
+        { "id": "c2-74-q20", "type": "quiz_choice", "question": "When a system or AI can improve itself over time without human programming, it is ____-improving.", "options": ["self", "auto", "machine", "robot"], "correct_answer": "self", "explanation": "Self-improving = que se mejora a sí mismo." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra tecnológica clave.",
+      "questions": [
+        { "id": "c2-74-f1", "type": "fill_input", "question": "____-edge. (Tecnología muy nueva y experimental con B)", "correct_answer": "Bleeding", "explanation": "Bleeding." },
+        { "id": "c2-74-f2", "type": "fill_input", "question": "Planned ____. (Obsolescencia programada con O)", "correct_answer": "obsolescence", "explanation": "obsolescence." },
+        { "id": "c2-74-f3", "type": "fill_input", "question": "A massive ____. (Disruptor en la industria con D)", "correct_answer": "disruptor", "explanation": "disruptor." },
+        { "id": "c2-74-f4", "type": "fill_input", "question": "The technological ____. (La Singularidad de la IA con S)", "correct_answer": "singularity", "explanation": "singularity." },
+        { "id": "c2-74-f5", "type": "fill_input", "question": "____ vehicles. (Vehículos autónomos con A)", "correct_answer": "Autonomous", "explanation": "Autonomous." },
+        { "id": "c2-74-f6", "type": "fill_input", "question": "We need infinite ____. (Escalabilidad con S)", "correct_answer": "scalability", "explanation": "scalability." },
+        { "id": "c2-74-f7", "type": "fill_input", "question": "____-of-the-art. (De vanguardia/lo mejor con S)", "correct_answer": "State", "explanation": "State." },
+        { "id": "c2-74-f8", "type": "fill_input", "question": "____ Reality. (Realidad Aumentada con A)", "correct_answer": "Augmented", "explanation": "Augmented." },
+        { "id": "c2-74-f9", "type": "fill_input", "question": "Internet of ____. (Internet de las cosas con T)", "correct_answer": "Things", "explanation": "Things." },
+        { "id": "c2-74-f10", "type": "fill_input", "question": "A major ____. (Avance científico rompedor con B)", "correct_answer": "breakthrough", "explanation": "breakthrough." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Tech Match",
+      "pairs": [
+        {"id": "c2-74-p1", "source": "Bleeding-edge", "target": "Tecnología tan nueva que es riesgosa"},
+        {"id": "c2-74-p2", "source": "Obsolescence", "target": "El proceso de volverse obsoleto"},
+        {"id": "c2-74-p3", "source": "Disruptor", "target": "Tecnología que altera una industria"},
+        {"id": "c2-74-p4", "source": "Singularity", "target": "Punto donde la IA supera a los humanos"},
+        {"id": "c2-74-p5", "source": "Autonomous", "target": "Que opera sin control humano directo"},
+        {"id": "c2-74-p6", "source": "Scalability", "target": "Capacidad de crecer sin colapsar"},
+        {"id": "c2-74-p7", "source": "State-of-the-art", "target": "La tecnología más moderna disponible"},
+        {"id": "c2-74-p8", "source": "Augmented Reality", "target": "Superponer datos digitales al mundo real"},
+        {"id": "c2-74-p9", "source": "Breakthrough", "target": "Un avance científico monumental"},
+        {"id": "c2-74-p10", "source": "Prototype", "target": "Modelo de prueba inicial"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término tecnológico.",
+      "questions": [
+        { "id": "c2-74-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Bleeding-edge technology.", "options": ["Bleeding-edge technology.", "Cutting-edge technology.", "Leading-edge technology.", "Bleed-edge technology."], "correct_answer": "Bleeding-edge technology.", "explanation": "Audio exacto." },
+        { "id": "c2-74-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Planned obsolescence.", "options": ["Planned obsolescence.", "Plant obsolescence.", "Planning obsolescence.", "Plan obsolescence."], "correct_answer": "Planned obsolescence.", "explanation": "Audio exacto." },
+        { "id": "c2-74-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A massive industry disruptor.", "options": ["A massive industry disruptor.", "The massive industry disruptor.", "A mass industry disruptor.", "Massive industry disruptors."], "correct_answer": "A massive industry disruptor.", "explanation": "Audio exacto." },
+        { "id": "c2-74-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The technological singularity.", "options": ["The technological singularity.", "A technological singularity.", "The technology singularity.", "Their technological singularity."], "correct_answer": "The technological singularity.", "explanation": "Audio exacto." },
+        { "id": "c2-74-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Fully autonomous vehicles.", "options": ["Fully autonomous vehicles.", "Full autonomous vehicles.", "Fully automatic vehicles.", "Fully autonomous vehicle."], "correct_answer": "Fully autonomous vehicles.", "explanation": "Audio exacto." },
+        { "id": "c2-74-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Infinite scalability.", "options": ["Infinite scalability.", "Infinity scalability.", "Infinite capability.", "Infinite scale."], "correct_answer": "Infinite scalability.", "explanation": "Audio exacto." },
+        { "id": "c2-74-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "State-of-the-art equipment.", "options": ["State-of-the-art equipment.", "State-of-art equipment.", "State-of-the-art equipments.", "A state-of-the-art equipment."], "correct_answer": "State-of-the-art equipment.", "explanation": "Audio exacto." },
+        { "id": "c2-74-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Augmented Reality.", "options": ["Augmented Reality.", "Artificial Reality.", "Argument Reality.", "Augmenting Reality."], "correct_answer": "Augmented Reality.", "explanation": "Audio exacto." },
+        { "id": "c2-74-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Internet of Things.", "options": ["Internet of Things.", "Internet of Thing.", "The Internet of Things.", "Internet for Things."], "correct_answer": "Internet of Things.", "explanation": "Audio exacto." },
+        { "id": "c2-74-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A scientific breakthrough.", "options": ["A scientific breakthrough.", "The scientific breakthrough.", "A science breakthrough.", "Scientific breakthroughs."], "correct_answer": "A scientific breakthrough.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

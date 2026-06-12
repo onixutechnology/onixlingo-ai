@@ -1,0 +1,92 @@
+{
+  "id": "zh-b1-72",
+  "title": "Comer Medicina",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Health", "Vocabulary", "Verbs"],
+  "completion_message": "¡Buena salud! Ahora puedes sobrevivir a un resfriado en China y pedir ayuda médica.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Sobreviviendo en la Clínica",
+      "parts": [
+        {
+          "visual": "Enfermo / Enfermedad: 病 (bìng)\nEstar enfermo (Engendrar enfermedad): 生病 (shēngbìng)\n\nEl verbo para 'enfermarse' se compone de 'dar a luz/engendrar' (shēng) y 'enfermedad' (bìng).\n- Yo estoy enfermo: 我生病了 (Wǒ shēngbìng le). Se añade 'le' para indicar el cambio de estado (antes estaba sano).\n- Él no está enfermo: 他没有生病 (Tā méiyǒu shēngbìng).\n\nRecuerda el lugar y la persona de la lección 56:\n- Hospital: 医院 (yīyuàn).\n- Médico: 医生 (yīshēng). (Literalmente: el que cura la vida/enfermedad).",
+          "audio": "Esperemos que nunca tengas que usar esta lección, pero es mejor prevenir. La palabra para enfermedad es Bìng. Cuarto tono. Bìng. Para decir 'estoy enfermo', los chinos dicen 'He engendrado una enfermedad'. Usan el verbo Shēng y le añaden la partícula 'le' al final para indicar que es una situación nueva. Wǒ shēngbìng le. Estoy enfermo. Si esto pasa, tendrás que ir al Yīyuàn, el hospital, a ver al Yīshēng, el médico."
+        },
+        {
+          "visual": "Medicina: 药 (yào)\nEn chino, la medicina tradicional se hacía con hierbas y raíces sólidas, por lo que la medicina NO se 'toma' ni se 'bebe'. ¡Se come!\n\n- Tomar medicina (Comer medicina): 吃药 (Chī yào).\n\nInstrucciones médicas:\n- Tienes que tomar medicina: 你得吃药 (Nǐ děi chī yào).\n- Si estás enfermo, debes ver al médico: 生病了，得看医生 (Shēngbìng le, děi kàn yīshēng).",
+          "audio": "El gran choque cultural de la salud en China es la medicina. La palabra para medicina es Yào. Cuarto tono. Yào. Como la medicina tradicional china consistía en masticar hierbas y raíces amargas, el verbo que se usa no es beber ni tomar. Es comer. Chī. Así que para decir 'tomar medicina', debes decir 'Comer medicina'. Chī yào. El médico te dirá: Nǐ děi chī yào. Tienes que comer medicina. Si le dices que quieres 'beber' medicina, pensará que estás loco."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "El examen médico del vocabulario.",
+      "questions": [
+        { "id": "zh-b1-72-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 生病 (shēngbìng)?", "options": ["Estar enfermo / Enfermarse.", "Tener hambre.", "Estar ocupado.", "Estar cansado."], "correct_answer": "Estar enfermo / Enfermarse.", "explanation": "Shēng (engendrar/producir) + bìng (enfermedad)." },
+        { "id": "zh-b1-72-q2", "type": "quiz_choice", "question": "¿Por qué se añade 'le' al final de 'Wǒ shēngbìng le' (我生病了)?", "options": ["Para indicar un cambio de estado (ahora estoy enfermo, antes no).", "Para decir que fue en el pasado remoto.", "Porque es obligatorio en todas las frases.", "Para hacerlo sonar más cortés."], "correct_answer": "Para indicar un cambio de estado (ahora estoy enfermo, antes no).", "explanation": "La partícula 'le' es clave para los cambios de salud o clima." },
+        { "id": "zh-b1-72-q3", "type": "quiz_choice", "question": "Llamas a la oficina. 'Yo hoy estoy enfermo, no puedo ir a trabajar'.", "options": ["Wǒ jīntiān shēngbìng le, bù néng qù gōngzuò (我今天生病了，不能去工作).", "Wǒ jīntiān máng, qù gōngzuò (我今天忙，去工作).", "Wǒ jīntiān bù shēngbìng, bù qù (我今天不生病，不去).", "Wǒ jīntiān lèi, bù néng chī (我今天累，不能吃)."], "correct_answer": "Wǒ jīntiān shēngbìng le, bù néng qù gōngzuò (我今天生病了，不能去工作).", "explanation": "La excusa médica perfecta." },
+        { "id": "zh-b1-72-q4", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 药 (yào)?", "options": ["Medicina / Medicamento.", "Médico.", "Hospital.", "Enfermedad."], "correct_answer": "Medicina / Medicamento.", "explanation": "Yào (4to tono) es cualquier tipo de medicamento." },
+        { "id": "zh-b1-72-q5", "type": "quiz_choice", "question": "Lógica china: ¿Cómo se dice 'Tomar la medicina'?", "options": ["Chī yào (吃药 - Comer medicina).", "Hē yào (喝药 - Beber medicina).", "Kàn yào (看药 - Ver medicina).", "Zuò yào (做药 - Hacer medicina)."], "correct_answer": "Chī yào (吃药 - Comer medicina).", "explanation": "Históricamente las medicinas chinas se masticaban (hierbas)." },
+        { "id": "zh-b1-72-q6", "type": "quiz_choice", "question": "El doctor te receta y te dice: 'Tú tienes que tomar medicina'.", "options": ["Nǐ děi chī yào (你得吃药).", "Nǐ bù chī yào (你不吃药).", "Nǐ xiǎng chī yào (你想吃药).", "Nǐ huì chī yào (你会吃药)."], "correct_answer": "Nǐ děi chī yào (你得吃药).", "explanation": "Tú tienes que/debes (nǐ děi) + comer medicina (chī yào)." },
+        { "id": "zh-b1-72-q7", "type": "quiz_choice", "question": "Repaso de B1: ¿Cómo se dice Hospital?", "options": ["Yīyuàn (医院).", "Yīshēng (医生).", "Xuéxiào (学校).", "Diànyǐngyuàn (电影院)."], "correct_answer": "Yīyuàn (医院).", "explanation": "Yīyuàn es el lugar." },
+        { "id": "zh-b1-72-q8", "type": "quiz_choice", "question": "Tu amigo está tosiendo mucho. Le dices: 'Tienes que ir al hospital a ver al médico'.", "options": ["Nǐ děi qù yīyuàn kàn yīshēng (你得去医院看医生).", "Nǐ děi qù yīshēng kàn yīyuàn (你得去医生看医院).", "Nǐ děi qù chī yào kàn yīshēng (你得去吃药看医生).", "Nǐ bù néng qù yīyuàn (你不能去医院)."], "correct_answer": "Nǐ děi qù yīyuàn kàn yīshēng (你得去医院看医生).", "explanation": "Ir al hospital (qù yīyuàn) para ver al médico (kàn yīshēng)." },
+        { "id": "zh-b1-72-q9", "type": "quiz_choice", "question": "¿Cómo responderías a '¿Estás enfermo?' (Nǐ shēngbìng le ma?) si estás sano?", "options": ["Wǒ méiyǒu shēngbìng (我没有生病).", "Wǒ bù shēngbìng le (我不生病了).", "Wǒ chī yào (我吃药).", "Wǒ hěn máng (我很忙)."], "correct_answer": "Wǒ méiyǒu shēngbìng (我没有生病).", "explanation": "Para negar un cambio de estado en el pasado/presente, usamos 'méiyǒu'." },
+        { "id": "zh-b1-72-q10", "type": "quiz_choice", "question": "Traduce esta advertencia: 'La medicina es muy cara'.", "options": ["Yào hěn guì (药很贵).", "Yào hěn máng (药很忙).", "Yào hěn lèi (药很累).", "Yào tài kuài le (药太快了)."], "correct_answer": "Yào hěn guì (药很贵).", "explanation": "Medicina (yào) + muy (hěn) + caro (guì)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el vocabulario médico en pinyin. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-b1-72-f1", "type": "fill_input", "question": "Estar enfermo: sheng ____ (bing)", "correct_answer": "bing", "explanation": "bing" },
+        { "id": "zh-b1-72-f2", "type": "fill_input", "question": "Estoy enfermo (Cambio de estado): wo sheng bing ____ (le)", "correct_answer": "le", "explanation": "le" },
+        { "id": "zh-b1-72-f3", "type": "fill_input", "question": "Medicina: ____ (yao)", "correct_answer": "yao", "explanation": "yao" },
+        { "id": "zh-b1-72-f4", "type": "fill_input", "question": "Tomar (comer) medicina: ____ yao (chi)", "correct_answer": "chi", "explanation": "chi" },
+        { "id": "zh-b1-72-f5", "type": "fill_input", "question": "Hospital: yi ____ (yuan)", "correct_answer": "yuan", "explanation": "yuan" },
+        { "id": "zh-b1-72-f6", "type": "fill_input", "question": "Médico: yi ____ (sheng)", "correct_answer": "sheng", "explanation": "sheng" },
+        { "id": "zh-b1-72-f7", "type": "fill_input", "question": "Tienes que tomar medicina: ni dei chi ____ (yao)", "correct_answer": "yao", "explanation": "yao" },
+        { "id": "zh-b1-72-f8", "type": "fill_input", "question": "Ver al médico: ____ yi sheng (kan)", "correct_answer": "kan", "explanation": "kan" },
+        { "id": "zh-b1-72-f9", "type": "fill_input", "question": "Hoy estoy enfermo, no puedo ir: jin tian wo sheng bing le, bu ____ qu (neng)", "correct_answer": "neng", "explanation": "neng" },
+        { "id": "zh-b1-72-f10", "type": "fill_input", "question": "No estoy enfermo: wo mei you sheng ____ (bing)", "correct_answer": "bing", "explanation": "bing" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha las recomendaciones del doctor.",
+      "questions": [
+        { "id": "zh-b1-72-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "生病", "options": ["Estar enfermo", "Medicina", "Hospital", "Ocupado"], "correct_answer": "Estar enfermo", "explanation": "El audio dice: Shēngbìng." },
+        { "id": "zh-b1-72-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我生病了", "options": ["Estoy enfermo", "No estoy enfermo", "Tengo que tomar medicina", "Estoy cansado"], "correct_answer": "Estoy enfermo", "explanation": "El audio dice: Wǒ shēngbìng le." },
+        { "id": "zh-b1-72-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "吃药", "options": ["Tomar (comer) medicina", "Comprar medicina", "Hacer ejercicio", "Beber agua"], "correct_answer": "Tomar (comer) medicina", "explanation": "El audio dice: Chī yào." },
+        { "id": "zh-b1-72-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "看医生", "options": ["Ver al médico", "Ver el hospital", "Echar un vistazo", "Esperar un momento"], "correct_answer": "Ver al médico", "explanation": "El audio dice: Kàn yīshēng." },
+        { "id": "zh-b1-72-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你得去医院", "options": ["Tienes que ir al hospital", "Tú vas al hospital", "Tú no puedes ir al hospital", "El hospital está muy lejos"], "correct_answer": "Tienes que ir al hospital", "explanation": "El audio dice: Nǐ děi qù yīyuàn." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Medical Terms",
+      "pairs": [
+        {"id": "zh-b1-72-p1", "source": "生病 (shēngbìng)", "target": "Estar enfermo"},
+        {"id": "zh-b1-72-p2", "source": "药 (yào)", "target": "Medicina"},
+        {"id": "zh-b1-72-p3", "source": "吃药 (chī yào)", "target": "Tomar (comer) medicina"},
+        {"id": "zh-b1-72-p4", "source": "医院 (yīyuàn)", "target": "Hospital"},
+        {"id": "zh-b1-72-p5", "source": "医生 (yīshēng)", "target": "Médico"},
+        {"id": "zh-b1-72-p6", "source": "看医生 (kàn yīshēng)", "target": "Ver al médico"},
+        {"id": "zh-b1-72-p7", "source": "得 (děi)", "target": "Tener que / Deber"},
+        {"id": "zh-b1-72-p8", "source": "事情 (shìqing)", "target": "Asunto / Problema"},
+        {"id": "zh-b1-72-p9", "source": "忙 (máng)", "target": "Ocupado"},
+        {"id": "zh-b1-72-p10", "source": "累 (lèi)", "target": "Cansado"}
+      ]
+    }
+  ]
+}

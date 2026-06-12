@@ -1,0 +1,101 @@
+{
+  "id": "b1-7",
+  "title": "Meetings & Interruptions",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Vocabulary", "Meetings", "Business"],
+  "completion_message": "¡Excelente! Ahora sabes cómo interrumpir educadamente y mantener el control de una reunión.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Reuniones: Interrupciones y Control (Meetings & Interruptions)",
+      "parts": [
+        { "visual": "Para interrumpir educadamente: \n- May I interrupt for a moment? (¿Puedo interrumpir un momento?). \n- Sorry to interrupt, but... (Siento interrumpir, pero...). \n- Can I add something here? (¿Puedo agregar algo aquí?).", "audio": "To interrupt politely, you can say: May I interrupt for a moment? Sorry to interrupt, but... Or, Can I add something here?" },
+        { "visual": "Para retomar el control: \n- Let's get back to the point (Volvamos al tema principal). \n- Hold on, please (Espera, por favor). \n- Please let me finish (Por favor, déjame terminar).", "audio": "To keep control of the meeting, you can say: Let's get back to the point. Hold on, please. Or, Please let me finish." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la expresión correcta para gestionar la comunicación en una reunión.",
+      "questions": [
+        { "id": "b1-7-q1", "type": "quiz_choice", "question": "May I ____ for a moment? (¿Puedo interrumpir...?).", "options": ["interrupt", "interruption", "stop", "break"], "correct_answer": "interrupt", "explanation": "Interrupt = interrumpir." },
+        { "id": "b1-7-q2", "type": "quiz_choice", "question": "____ to interrupt, but we have a problem. (Siento/Perdón).", "options": ["Sorry", "Apologize", "Excuse", "Bad"], "correct_answer": "Sorry", "explanation": "Sorry to interrupt = siento interrumpir." },
+        { "id": "b1-7-q3", "type": "quiz_choice", "question": "Can I ____ something here? (Agregar / Añadir).", "options": ["add", "put", "say", "talk"], "correct_answer": "add", "explanation": "Add something = agregar algo (una idea o comentario)." },
+        { "id": "b1-7-q4", "type": "quiz_choice", "question": "Before we move on, I'd like to ____ a point. (Hacer un comentario/punto).", "options": ["make", "do", "have", "take"], "correct_answer": "make", "explanation": "Make a point = exponer un argumento / hacer un comentario." },
+        { "id": "b1-7-q5", "type": "quiz_choice", "question": "Let's get back to the ____. (Volvamos al tema/punto principal).", "options": ["point", "talk", "word", "idea"], "correct_answer": "point", "explanation": "Get back to the point = volver al tema." },
+        { "id": "b1-7-q6", "type": "quiz_choice", "question": "Hold ____, please. Let him speak. (Espera / Aguarda un momento).", "options": ["on", "in", "up", "out"], "correct_answer": "on", "explanation": "Hold on = espera." },
+        { "id": "b1-7-q7", "type": "quiz_choice", "question": "Please let me ____. (Déjame terminar).", "options": ["finish", "end", "stop", "done"], "correct_answer": "finish", "explanation": "Let me finish = déjame terminar (de hablar)." },
+        { "id": "b1-7-q8", "type": "quiz_choice", "question": "We are getting ____. (Nos estamos desviando del tema).", "options": ["sidetracked", "lost", "away", "out"], "correct_answer": "sidetracked", "explanation": "Get sidetracked = desviarse del tema principal." },
+        { "id": "b1-7-q9", "type": "quiz_choice", "question": "Let's stick to the ____. (Apeguémonos a la agenda).", "options": ["agenda", "paper", "list", "notes"], "correct_answer": "agenda", "explanation": "Stick to the agenda = seguir/apegarse a la agenda de la reunión." },
+        { "id": "b1-7-q10", "type": "quiz_choice", "question": "Excuse me, could you speak ____? I can't hear you. (Más alto).", "options": ["up", "loud", "high", "more"], "correct_answer": "up", "explanation": "Speak up = hablar más alto." },
+        { "id": "b1-7-q11", "type": "quiz_choice", "question": "Could you ____ that, please? (Repetir).", "options": ["repeat", "say again", "tell", "speak"], "correct_answer": "repeat", "explanation": "Repeat = repetir (say again también es posible, pero repeat es una sola palabra muy común)." },
+        { "id": "b1-7-q12", "type": "quiz_choice", "question": "I didn't quite ____ that. (No entendí/capté eso bien).", "options": ["catch", "take", "hold", "grab"], "correct_answer": "catch", "explanation": "Catch = entender o escuchar claramente en este contexto (I didn't catch that)." },
+        { "id": "b1-7-q13", "type": "quiz_choice", "question": "What do you ____ by that? (¿Qué quieres decir con eso?).", "options": ["mean", "say", "think", "tell"], "correct_answer": "mean", "explanation": "What do you mean? = ¿qué quieres decir? / ¿a qué te refieres?" },
+        { "id": "b1-7-q14", "type": "quiz_choice", "question": "Could you ____ on that point? (Expandir / Dar más detalles).", "options": ["elaborate", "talk", "say", "explain"], "correct_answer": "elaborate", "explanation": "Elaborate on = dar más detalles sobre algo." },
+        { "id": "b1-7-q15", "type": "quiz_choice", "question": "We are running out of ____. (Se nos acaba el tiempo).", "options": ["time", "minutes", "hours", "clock"], "correct_answer": "time", "explanation": "Run out of time = quedarse sin tiempo." },
+        { "id": "b1-7-q16", "type": "quiz_choice", "question": "Let's wrap ____ the meeting. (Terminar / Concluir).", "options": ["up", "out", "in", "off"], "correct_answer": "up", "explanation": "Wrap up = concluir, cerrar (una reunión o evento)." },
+        { "id": "b1-7-q17", "type": "quiz_choice", "question": "I agree with you up to a ____. (Estoy de acuerdo hasta cierto punto).", "options": ["point", "moment", "time", "level"], "correct_answer": "point", "explanation": "Up to a point = hasta cierto punto." },
+        { "id": "b1-7-q18", "type": "quiz_choice", "question": "That's a valid ____, but I disagree. (Es un argumento/punto válido).", "options": ["point", "word", "talk", "idea"], "correct_answer": "point", "explanation": "A valid point." },
+        { "id": "b1-7-q19", "type": "quiz_choice", "question": "Let's move ____ to the next topic. (Pasemos al...).", "options": ["on", "in", "up", "out"], "correct_answer": "on", "explanation": "Move on = avanzar, pasar a lo siguiente." },
+        { "id": "b1-7-q20", "type": "quiz_choice", "question": "Does anyone have any ____ questions? (Más / Alguna otra).", "options": ["more", "other", "another", "much"], "correct_answer": "more", "explanation": "Any more questions = ¿alguna pregunta más?" }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave para la frase de la reunión.",
+      "questions": [
+        { "id": "b1-7-f1", "type": "fill_input", "question": "May I ____? (Interrumpir)", "correct_answer": "interrupt", "explanation": "interrupt." },
+        { "id": "b1-7-f2", "type": "fill_input", "question": "Sorry to ____. (Interrumpir)", "correct_answer": "interrupt", "explanation": "interrupt." },
+        { "id": "b1-7-f3", "type": "fill_input", "question": "Can I ____ something? (Añadir/Agregar)", "correct_answer": "add", "explanation": "add." },
+        { "id": "b1-7-f4", "type": "fill_input", "question": "Let's get back to the ____. (Punto/Tema)", "correct_answer": "point", "explanation": "point." },
+        { "id": "b1-7-f5", "type": "fill_input", "question": "Hold ____, please. (Espera)", "correct_answer": "on", "explanation": "on." },
+        { "id": "b1-7-f6", "type": "fill_input", "question": "Please let me ____. (Terminar)", "correct_answer": "finish", "explanation": "finish." },
+        { "id": "b1-7-f7", "type": "fill_input", "question": "Stick to the ____. (Agenda/Temario)", "correct_answer": "agenda", "explanation": "agenda." },
+        { "id": "b1-7-f8", "type": "fill_input", "question": "Could you speak ____? (Más alto)", "correct_answer": "up", "explanation": "up." },
+        { "id": "b1-7-f9", "type": "fill_input", "question": "Let's move ____. (Avanzar/Pasar al siguiente tema)", "correct_answer": "on", "explanation": "on." },
+        { "id": "b1-7-f10", "type": "fill_input", "question": "Let's wrap ____. (Terminar/Concluir)", "correct_answer": "up", "explanation": "up." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Meetings Match",
+      "pairs": [
+        {"id": "b1-7-p1", "source": "May I interrupt?", "target": "¿Puedo interrumpir?"},
+        {"id": "b1-7-p2", "source": "Sorry to interrupt", "target": "Siento interrumpir"},
+        {"id": "b1-7-p3", "source": "Can I add something?", "target": "¿Puedo agregar algo?"},
+        {"id": "b1-7-p4", "source": "Get back to the point", "target": "Volver al tema"},
+        {"id": "b1-7-p5", "source": "Hold on", "target": "Espera (un momento)"},
+        {"id": "b1-7-p6", "source": "Let me finish", "target": "Déjame terminar"},
+        {"id": "b1-7-p7", "source": "Get sidetracked", "target": "Desviarse del tema"},
+        {"id": "b1-7-p8", "source": "Speak up", "target": "Hablar más alto"},
+        {"id": "b1-7-p9", "source": "Wrap up", "target": "Concluir / Terminar la reunión"},
+        {"id": "b1-7-p10", "source": "Move on", "target": "Pasar al siguiente tema"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase que escuchas.",
+      "questions": [
+        { "id": "b1-7-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "May I interrupt for a moment?", "options": ["May I interrupt for a moment?", "Can I interrupt for a moment?", "Must I interrupt for a moment?", "Should I interrupt for a moment?"], "correct_answer": "May I interrupt for a moment?", "explanation": "Audio exacto." },
+        { "id": "b1-7-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sorry to interrupt, but we have a problem.", "options": ["Sorry to interrupt, but we have a problem.", "Sorry to interrupt, but I have a problem.", "Sorry to interrupt, but we need to talk.", "Sorry for the interruption, but we have a problem."], "correct_answer": "Sorry to interrupt, but we have a problem.", "explanation": "Audio exacto." },
+        { "id": "b1-7-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I add something here?", "options": ["Can I add something here?", "Could I add something here?", "May I add something here?", "Can I say something here?"], "correct_answer": "Can I add something here?", "explanation": "Audio exacto." },
+        { "id": "b1-7-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's get back to the point.", "options": ["Let's get back to the point.", "We need to get back to the point.", "Let us get back to the point.", "Let's get back to the agenda."], "correct_answer": "Let's get back to the point.", "explanation": "Audio exacto." },
+        { "id": "b1-7-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Hold on, please.", "options": ["Hold on, please.", "Wait a minute, please.", "Hold on a second, please.", "Please hold on."], "correct_answer": "Hold on, please.", "explanation": "Audio exacto." },
+        { "id": "b1-7-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please let me finish.", "options": ["Please let me finish.", "Let me finish, please.", "Could you let me finish?", "Please let me talk."], "correct_answer": "Please let me finish.", "explanation": "Audio exacto." },
+        { "id": "b1-7-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are getting sidetracked.", "options": ["We are getting sidetracked.", "They are getting sidetracked.", "You are getting sidetracked.", "We got sidetracked."], "correct_answer": "We are getting sidetracked.", "explanation": "Audio exacto." },
+        { "id": "b1-7-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Could you speak up?", "options": ["Could you speak up?", "Can you speak up?", "Could you speak louder?", "Would you speak up?"], "correct_answer": "Could you speak up?", "explanation": "Audio exacto." },
+        { "id": "b1-7-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's move on to the next topic.", "options": ["Let's move on to the next topic.", "Let's move to the next topic.", "We should move on to the next topic.", "Let's move on to the next point."], "correct_answer": "Let's move on to the next topic.", "explanation": "Audio exacto." },
+        { "id": "b1-7-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's wrap up the meeting.", "options": ["Let's wrap up the meeting.", "Let's wrap the meeting up.", "We need to wrap up the meeting.", "Let's finish the meeting."], "correct_answer": "Let's wrap up the meeting.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

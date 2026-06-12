@@ -1,0 +1,101 @@
+{
+  "id": "c1-23",
+  "title": "Investment & Capital Markets",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "Investment", "Capital Markets", "Finance", "Business"],
+  "completion_message": "¡Excelente! El vocabulario de Inversión y Mercados de Capitales te permite entender informes financieros complejos, discutir opciones de financiamiento y participar en reuniones de alto nivel con inversores y analistas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Inversión y Mercados de Capitales (C1)",
+      "parts": [
+        { "visual": "Términos Clave de Inversión: \n- Equity (Capital / Acciones / Valor neto): Propiedad en una empresa. \nEj: The founders own 60% of the company's equity. \n- IPO (Initial Public Offering / Oferta Pública Inicial): Cuando una empresa privada vende acciones al público por primera vez. \nEj: The tech startup raised $500 million in its IPO. \n- Dividend (Dividendo): Parte de las ganancias de una empresa pagada a los accionistas. \nEj: The board approved a quarterly dividend of $0.50 per share.", "audio": "Key Investment Terms. 'Equity' refers to ownership in a company, often represented by shares. For example: The founders own 60% of the company's equity. An 'I P O' or Initial Public Offering is when a private company sells shares to the public for the first time. For example: The tech startup raised $500 million in its I P O. A 'Dividend' is a sum of money paid regularly by a company to its shareholders out of its profits. For example: The board approved a quarterly dividend of $0.50 per share." },
+        { "visual": "Estrategias y Fondos: \n- Hedge fund (Fondo de cobertura): Fondo de inversión privado que utiliza estrategias agresivas y de alto riesgo. \nEj: The hedge fund shorted the housing market and made billions. \n- Portfolio (Portafolio / Cartera de inversiones): El conjunto de inversiones de una persona o institución. \nEj: You should diversify your portfolio to minimize risk. \n- Yield (Rendimiento): Los ingresos generados por una inversión, expresados en porcentaje. \nEj: Government bonds currently offer a very low yield.", "audio": "Strategies and Funds. A 'Hedge fund' is a private investment fund that uses aggressive strategies to generate high returns. For example: The hedge fund shorted the housing market and made billions. A 'Portfolio' is a range of investments held by a person or organization. For example: You should diversify your portfolio to minimize risk. 'Yield' refers to the income returned on an investment, usually expressed as an annual percentage. For example: Government bonds currently offer a very low yield." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término financiero correcto.",
+      "questions": [
+        { "id": "c1-23-q1", "type": "quiz_choice", "question": "The founders gave away 20% of the company's ____ to venture capitalists. (Capital / Acciones).", "options": ["equity", "equality", "equator", "equities"], "correct_answer": "equity", "explanation": "Equity = capital accionarial, propiedad de la empresa." },
+        { "id": "c1-23-q2", "type": "quiz_choice", "question": "The company became public yesterday through a highly successful ____. (Oferta Pública Inicial).", "options": ["IPO", "CEO", "CFO", "ROI"], "correct_answer": "IPO", "explanation": "IPO = Initial Public Offering (Oferta Pública Inicial)." },
+        { "id": "c1-23-q3", "type": "quiz_choice", "question": "Instead of reinvesting the profits, the company paid a generous ____ to its shareholders. (Dividendo).", "options": ["dividend", "division", "divide", "bonus"], "correct_answer": "dividend", "explanation": "Dividend = dividendo pagado a los accionistas." },
+        { "id": "c1-23-q4", "type": "quiz_choice", "question": "To manage risk, it is important not to put all your money in one stock; you must diversify your ____. (Cartera).", "options": ["portfolio", "profile", "folder", "briefcase"], "correct_answer": "portfolio", "explanation": "Portfolio = cartera o portafolio de inversiones." },
+        { "id": "c1-23-q5", "type": "quiz_choice", "question": "The annual income returned on an investment, expressed as a percentage, is the ____. (Rendimiento).", "options": ["yield", "shield", "field", "profit"], "correct_answer": "yield", "explanation": "Yield = rendimiento o rentabilidad de una inversión." },
+        { "id": "c1-23-q6", "type": "quiz_choice", "question": "A private investment partnership that uses aggressive strategies to maximize returns is a ____ fund. (Fondo de cobertura).", "options": ["hedge", "edge", "bridge", "pledge"], "correct_answer": "hedge", "explanation": "Hedge fund = fondo de cobertura / inversión alternativa." },
+        { "id": "c1-23-q7", "type": "quiz_choice", "question": "When a market is experiencing a prolonged period of rising prices, it is called a ____ market. (Mercado alcista).", "options": ["bull", "bear", "cow", "lion"], "correct_answer": "bull", "explanation": "Bull market = mercado alcista." },
+        { "id": "c1-23-q8", "type": "quiz_choice", "question": "When a market is experiencing falling prices and pessimism, it is a ____ market. (Mercado bajista).", "options": ["bear", "bull", "wolf", "tiger"], "correct_answer": "bear", "explanation": "Bear market = mercado bajista." },
+        { "id": "c1-23-q9", "type": "quiz_choice", "question": "A fixed-income instrument that represents a loan made by an investor to a borrower (typically corporate or governmental) is a ____. (Bono).", "options": ["bond", "bind", "band", "bill"], "correct_answer": "bond", "explanation": "Bond = bono (instrumento de deuda)." },
+        { "id": "c1-23-q10", "type": "quiz_choice", "question": "An investor who provides capital for a business start-up in exchange for convertible debt or equity is an ____ investor. (Inversor ángel).", "options": ["angel", "devil", "spirit", "ghost"], "correct_answer": "angel", "explanation": "Angel investor = inversor ángel (invierte en etapas tempranas)." },
+        { "id": "c1-23-q11", "type": "quiz_choice", "question": "Firms that invest in startups with high growth potential in exchange for equity are ____ capital firms. (Capital de riesgo).", "options": ["venture", "adventure", "nature", "feature"], "correct_answer": "venture", "explanation": "Venture capital (VC) = capital de riesgo." },
+        { "id": "c1-23-q12", "type": "quiz_choice", "question": "When an investor borrows shares and sells them, hoping the price will drop so they can buy them back cheaper, they ____ the stock. (Vender en corto).", "options": ["short", "long", "sell", "drop"], "correct_answer": "short", "explanation": "Short a stock = vender en corto (apostar a que el precio bajará)." },
+        { "id": "c1-23-q13", "type": "quiz_choice", "question": "A measure of how much the price of an asset fluctuates over time is its ____. (Volatilidad).", "options": ["volatility", "volume", "velocity", "value"], "correct_answer": "volatility", "explanation": "Volatility = volatilidad." },
+        { "id": "c1-23-q14", "type": "quiz_choice", "question": "The total value of all a company's outstanding shares of stock is its market ____. (Capitalización de mercado).", "options": ["capitalization", "capital", "capacity", "cap"], "correct_answer": "capitalization", "explanation": "Market capitalization (market cap) = capitalización bursátil." },
+        { "id": "c1-23-q15", "type": "quiz_choice", "question": "The ease with which an asset can be converted into cash without affecting its price is called ____. (Liquidez).", "options": ["liquidity", "liquid", "fluidity", "cash"], "correct_answer": "liquidity", "explanation": "Liquidity = liquidez." },
+        { "id": "c1-23-q16", "type": "quiz_choice", "question": "Assets that cannot be easily or quickly converted into cash are described as ____. (Ilíquidos).", "options": ["illiquid", "liquid", "solid", "frozen"], "correct_answer": "illiquid", "explanation": "Illiquid assets = activos ilíquidos (difíciles de vender rápido, como inmuebles)." },
+        { "id": "c1-23-q17", "type": "quiz_choice", "question": "A financial contract whose value is dependent upon an underlying asset (like a stock or commodity) is a ____. (Derivado).", "options": ["derivative", "derive", "deviation", "dividend"], "correct_answer": "derivative", "explanation": "Derivative = derivado financiero (opciones, futuros, etc.)." },
+        { "id": "c1-23-q18", "type": "quiz_choice", "question": "An investment fund that trades on exchanges and tracks an index is an ____. (Fondo cotizado).", "options": ["ETF", "IPO", "KPI", "ROI"], "correct_answer": "ETF", "explanation": "ETF = Exchange-Traded Fund (fondo cotizado en bolsa)." },
+        { "id": "c1-23-q19", "type": "quiz_choice", "question": "The practice of buying and selling an asset simultaneously in different markets to profit from a price difference is ____. (Arbitraje).", "options": ["arbitrage", "arbitration", "trade", "exchange"], "correct_answer": "arbitrage", "explanation": "Arbitrage = arbitraje financiero." },
+        { "id": "c1-23-q20", "type": "quiz_choice", "question": "A company's first time offering its shares to the public is the IPO, but a subsequent offering of shares is called a ____ offering. (Oferta secundaria/consecuente).", "options": ["secondary", "second", "follow-on", "next"], "correct_answer": "secondary", "explanation": "Secondary offering (o follow-on offering) = oferta secundaria de acciones." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término financiero correcto.",
+      "questions": [
+        { "id": "c1-23-f1", "type": "fill_input", "question": "Company ____. (Capital/propiedad con E)", "correct_answer": "equity", "explanation": "equity." },
+        { "id": "c1-23-f2", "type": "fill_input", "question": "An ____. (Oferta Pública Inicial, siglas)", "correct_answer": "IPO", "explanation": "IPO." },
+        { "id": "c1-23-f3", "type": "fill_input", "question": "A quarterly ____. (Dividendo con D)", "correct_answer": "dividend", "explanation": "dividend." },
+        { "id": "c1-23-f4", "type": "fill_input", "question": "Investment ____. (Cartera con P)", "correct_answer": "portfolio", "explanation": "portfolio." },
+        { "id": "c1-23-f5", "type": "fill_input", "question": "High ____. (Rendimiento con Y)", "correct_answer": "yield", "explanation": "yield." },
+        { "id": "c1-23-f6", "type": "fill_input", "question": "A ____ fund. (Fondo de cobertura con H)", "correct_answer": "hedge", "explanation": "hedge." },
+        { "id": "c1-23-f7", "type": "fill_input", "question": "A ____ market. (Mercado alcista con B)", "correct_answer": "bull", "explanation": "bull." },
+        { "id": "c1-23-f8", "type": "fill_input", "question": "A ____ market. (Mercado bajista con B)", "correct_answer": "bear", "explanation": "bear." },
+        { "id": "c1-23-f9", "type": "fill_input", "question": "Venture ____. (Capital de riesgo con C)", "correct_answer": "capital", "explanation": "capital." },
+        { "id": "c1-23-f10", "type": "fill_input", "question": "Market ____. (Volatilidad con V)", "correct_answer": "volatility", "explanation": "volatility." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Investment Terms Match",
+      "pairs": [
+        {"id": "c1-23-p1", "source": "Equity", "target": "Capital / Propiedad de la empresa"},
+        {"id": "c1-23-p2", "source": "IPO", "target": "Oferta Pública Inicial"},
+        {"id": "c1-23-p3", "source": "Dividend", "target": "Pago a los accionistas"},
+        {"id": "c1-23-p4", "source": "Portfolio", "target": "Cartera de inversiones"},
+        {"id": "c1-23-p5", "source": "Yield", "target": "Rendimiento de una inversión"},
+        {"id": "c1-23-p6", "source": "Hedge fund", "target": "Fondo de cobertura (alto riesgo)"},
+        {"id": "c1-23-p7", "source": "Bull market", "target": "Mercado al alza / optimista"},
+        {"id": "c1-23-p8", "source": "Bear market", "target": "Mercado a la baja / pesimista"},
+        {"id": "c1-23-p9", "source": "Short selling", "target": "Vender en corto (apostar a la baja)"},
+        {"id": "c1-23-p10", "source": "Liquidity", "target": "Liquidez (facilidad de conversión a efectivo)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término financiero correcto.",
+      "questions": [
+        { "id": "c1-23-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They own twenty percent equity.", "options": ["They own twenty percent equity.", "We own twenty percent equity.", "They owned twenty percent equity.", "They own thirty percent equity."], "correct_answer": "They own twenty percent equity.", "explanation": "Audio exacto." },
+        { "id": "c1-23-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The IPO was highly successful.", "options": ["The IPO was highly successful.", "The IPO is highly successful.", "The CEO was highly successful.", "An IPO was highly successful."], "correct_answer": "The IPO was highly successful.", "explanation": "Audio exacto." },
+        { "id": "c1-23-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They announced a quarterly dividend.", "options": ["They announced a quarterly dividend.", "We announced a quarterly dividend.", "They announce a quarterly dividend.", "They announced a yearly dividend."], "correct_answer": "They announced a quarterly dividend.", "explanation": "Audio exacto." },
+        { "id": "c1-23-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You must diversify your portfolio.", "options": ["You must diversify your portfolio.", "We must diversify your portfolio.", "You must diversify the portfolio.", "You should diversify your portfolio."], "correct_answer": "You must diversify your portfolio.", "explanation": "Audio exacto." },
+        { "id": "c1-23-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The bonds offer a high yield.", "options": ["The bonds offer a high yield.", "The bonds offered a high yield.", "These bonds offer a high yield.", "The bonds offer a low yield."], "correct_answer": "The bonds offer a high yield.", "explanation": "Audio exacto." },
+        { "id": "c1-23-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is managed by a hedge fund.", "options": ["It is managed by a hedge fund.", "It was managed by a hedge fund.", "He is managed by a hedge fund.", "It is managed by the hedge fund."], "correct_answer": "It is managed by a hedge fund.", "explanation": "Audio exacto." },
+        { "id": "c1-23-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are in a bull market.", "options": ["We are in a bull market.", "They are in a bull market.", "We were in a bull market.", "We are in a bear market."], "correct_answer": "We are in a bull market.", "explanation": "Audio exacto." },
+        { "id": "c1-23-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He decided to short the stock.", "options": ["He decided to short the stock.", "She decided to short the stock.", "He decides to short the stock.", "He decided to sell the stock."], "correct_answer": "He decided to short the stock.", "explanation": "Audio exacto." },
+        { "id": "c1-23-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Market volatility is increasing.", "options": ["Market volatility is increasing.", "Market volatility was increasing.", "The market volatility is increasing.", "Market liquidity is increasing."], "correct_answer": "Market volatility is increasing.", "explanation": "Audio exacto." },
+        { "id": "c1-23-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Liquidity is our main concern.", "options": ["Liquidity is our main concern.", "Liquidity was our main concern.", "Volatility is our main concern.", "Liquidity is their main concern."], "correct_answer": "Liquidity is our main concern.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

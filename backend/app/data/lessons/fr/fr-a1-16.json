@@ -1,565 +1,81 @@
 {
   "id": "fr-a1-16",
-  "title": "Revisión Semanal",
+  "title": "Les Couleurs",
+  "version": "4.0-ARTISAN",
   "level": "A1",
-  "description": "Revisión rápida de tareas realizadas.",
-  "total_xp": 300,
-  "difficulty": "easy",
-  "tags": [
-    "a1",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Grammar", "French", "Colors"],
+  "completion_message": "¡Bravo! Ya conoces los colores en francés y la regla de concordancia del adjetivo con el género. ¡Tu vocabulario descriptivo acaba de explotar!",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Revisión Semanal",
+      "title": "Los Colores y la Concordancia del Adjetivo (A1)",
       "parts": [
-        {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau A1 • Leçon A1-16 de 200\nSujet: Revisión Semanal\n\nConcept Clé:\n☞ 'FINI'\n\n[Point Grammatical - Enfoque Gramatical]\n- Le présent de l'indicatif : verbes réguliers en -er ('nous utilisons fini') et auxiliaires ('je suis', 'nous avons').\\n- L'accord en genre et nombre des adjectifs de bureau (ex: 'un dossier vert', 'des chaises vertes').\\n- Clé Didactique : Structure de base Sujet + Verbe + Complément pour la communication simple.",
-          "audio": "Bienvenue à la leçon A1-16 sur Revisión Semanal. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : fini."
-        },
-        {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'fini' (Traducción/Uso: Revisión rápida de tareas realizadas.)\n- Application Pratique : 'Nous devons intégrer fini pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : Faites attention à la liaison entre 'un' et 'fini' s'il commence par une voyelle.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : fini. Répétez après moi : fini."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Dans le niveau A1, privilégiez des phrases courtes et directes pour éviter les erreurs d'incompréhension.\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
-        }
+        { "visual": "Los colores en francés (Les couleurs): \n\n- Blanc / Blanche (Blanco / Blanca) \n- Noir / Noire (Negro / Negra) \n- Rouge (Rojo/a) \n- Bleu / Bleue (Azul - masc/fem) \n- Vert / Verte (Verde - masc/fem) \n- Jaune (Amarillo/a) \n- Orange (Naranja - invariable) \n- Violet / Violette (Violeta - masc/fem) \n- Gris / Grise (Gris - masc/fem) \n- Rose (Rosa - invariable)", "audio": "Hoy aprenderemos los colores. Escucha y repite: Blanc para blanco masculino, y Blanche para blanco femenino. Noir para negro masculino, Noire para negro femenino. Rouge, que no cambia, es rojo para ambos géneros. Bleu para azul masculino, Bleue para azul femenino. Vert para verde masculino, Verte para verde femenino. Jaune es amarillo y tampoco cambia. Orange es naranja y tampoco cambia. Violet para violeta masculino, Violette para femenino." },
+        { "visual": "La regla de los adjetivos en francés: \n\nLos adjetivos SIEMPRE concuerdan en GÉNERO y NÚMERO con el sustantivo que describen. \n\n- Masculino singular: C'est un chat NOIR. \n- Femenino singular: C'est une voiture NOIRE. \n- Masculino plural: Ce sont des chats NOIRS. \n- Femenino plural: Ce sont des voitures NOIRES. \n\nPosición del adjetivo: \nEn francés, la mayoría de los adjetivos van DESPUÉS del sustantivo (lo contrario que en español). \nEj: Un livre rouge (Un libro rojo - NO: Un rouge livre).", "audio": "La regla más importante sobre los adjetivos en francés es que deben concordar con el sustantivo. Si el sustantivo es femenino, el adjetivo toma la forma femenina. Si es plural, el adjetivo toma la forma plural. Por ejemplo: Un chat noir, un gato negro. Pero: Une voiture noire, un coche negro, donde el adjetivo cambia a su forma femenina. Y muy importante: en francés la mayoría de los adjetivos van después del sustantivo. Se dice 'un livre rouge', no 'un rouge livre'." }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el color o la forma correcta del adjetivo.",
       "questions": [
-        {
-          "id": "fr-a1-16-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"fini\" dans le contexte de \"Revisión Semanal\" ?",
-          "options": [
-            "Le concept professionnel principal de fini utilisé dans Revisión Semanal.",
-            "Un terme familier à éviter dans Revisión Semanal.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Revisión Semanal."
-          ],
-          "correct_answer": "Le concept professionnel principal de fini utilisé dans Revisión Semanal.",
-          "explanation": "Comprendre la définition de \"fini\" est fondamental pour maîtriser \"Revisión Semanal\"."
-        },
-        {
-          "id": "fr-a1-16-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"fini\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Revisión Semanal\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"fini\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Revisión Semanal\" aux parties prenantes.",
-          "explanation": "Aborder \"fini\" dans les présentations professionnelles améliore la communication globale concernant \"Revisión Semanal\"."
-        },
-        {
-          "id": "fr-a1-16-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Revisión Semanal\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"fini\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"fini\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"fini\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"fini\" sont los piliers d'une exécution réussie de \"Revisión Semanal\"."
-        },
-        {
-          "id": "fr-a1-16-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Revisión Semanal\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"fini\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"fini\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"fini\" conduit souvent à des résultats inefficaces dans \"Revisión Semanal\"."
-        },
-        {
-          "id": "fr-a1-16-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"fini\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"fini\" adapté à l'environnement de \"Revisión Semanal\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"fini\" adapté à l'environnement de \"Revisión Semanal\".",
-          "explanation": "Traduire ou adapter \"fini\" nécessite de comprendre son application commerciale pratique dans \"Revisión Semanal\"."
-        },
-        {
-          "id": "fr-a1-16-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"fini\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Revisión Semanal\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Revisión Semanal\".",
-          "explanation": "Utiliser \"fini\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-a1-16-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Revisión Semanal\", comment un cadre doit-il présenter \"fini\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"fini\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-a1-16-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"fini\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"fini\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"fini\".",
-          "explanation": "Définir les jalons liés à \"fini\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-a1-16-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Revisión Semanal\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"fini\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"fini\".",
-          "explanation": "Les mots professionnels comme \"fini\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-a1-16-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"fini\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"fini\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "fra1-16-q1", "type": "quiz_choice", "question": "¿Cómo se dice 'Un coche negro' sabiendo que 'voiture' (coche) es femenino?", "options": ["Une voiture noire", "Une voiture noir", "Un voiture noir", "Une noire voiture"], "correct_answer": "Une voiture noire", "explanation": "Voiture es femenino, el adjetivo toma forma femenina: noire." },
+        { "id": "fra1-16-q2", "type": "quiz_choice", "question": "¿Cuál es el femenino de 'Blanc'?", "options": ["Blanche", "Blance", "Blanc", "Blanque"], "correct_answer": "Blanche", "explanation": "Blanc (masc.) → Blanche (fem.)." },
+        { "id": "fra1-16-q3", "type": "quiz_choice", "question": "¿Qué colores son 'invariables' (no cambian según el género)?", "options": ["Orange y Rose", "Bleu y Vert", "Noir y Blanc", "Violet y Gris"], "correct_answer": "Orange y Rose", "explanation": "Orange y Rose son invariables: une robe orange, une fleur rose." },
+        { "id": "fra1-16-q4", "type": "quiz_choice", "question": "Un livre ____. (Un libro rojo).", "options": ["rouge", "rouges", "verte", "noir"], "correct_answer": "rouge", "explanation": "Livre es masculino singular: un livre rouge." },
+        { "id": "fra1-16-q5", "type": "quiz_choice", "question": "En francés, ¿dónde va normalmente el adjetivo de color?", "options": ["Después del sustantivo", "Antes del sustantivo", "Al principio de la oración", "Al final de la oración"], "correct_answer": "Después del sustantivo", "explanation": "Un livre rouge (NO: un rouge livre)." },
+        { "id": "fra1-16-q6", "type": "quiz_choice", "question": "Des voitures ____. (Unos coches verdes - voiture es femenino).", "options": ["vertes", "vert", "verts", "verte"], "correct_answer": "vertes", "explanation": "Femenino plural: vertes." },
+        { "id": "fra1-16-q7", "type": "quiz_choice", "question": "¿Cuál es el femenino de 'Bleu' (azul)?", "options": ["Bleue", "Bleue", "Bleus", "Bleu"], "correct_answer": "Bleue", "explanation": "Bleu (masc.) → Bleue (fem.), añade una 'e'." },
+        { "id": "fra1-16-q8", "type": "quiz_choice", "question": "Un chat ____. (Un gato gris).", "options": ["gris", "grise", "grises", "grius"], "correct_answer": "gris", "explanation": "Chat es masculino singular: gris." },
+        { "id": "fra1-16-q9", "type": "quiz_choice", "question": "Une robe ____. (Un vestido naranja - robe es femenino, orange es invariable).", "options": ["orange", "orangée", "oranges", "oranger"], "correct_answer": "orange", "explanation": "Orange es invariable: une robe orange." },
+        { "id": "fra1-16-q10", "type": "quiz_choice", "question": "Des chats ____. (Unos gatos negros).", "options": ["noirs", "noir", "noire", "noirer"], "correct_answer": "noirs", "explanation": "Masculino plural: noirs (añade -s)." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el color en la forma correcta (masculino, femenino o plural).",
       "questions": [
-        {
-          "id": "fr-a1-16-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 1) :",
-          "parts": [
-            "notre",
-            "fini",
-            "pendant",
-            "les",
-            "réunions.",
-            "Nous",
-            "utilisons"
-          ],
-          "correct_order": [
-            "Nous",
-            "utilisons",
-            "notre",
-            "fini",
-            "pendant",
-            "les",
-            "réunions."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a1-16-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 2) :",
-          "parts": [
-            "fini",
-            "pour",
-            "le",
-            "projet.",
-            "Voici",
-            "notre"
-          ],
-          "correct_order": [
-            "Voici",
-            "notre",
-            "fini",
-            "pour",
-            "le",
-            "projet."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a1-16-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 3) :",
-          "parts": [
-            "vérifier",
-            "notre",
-            "fini",
-            "ce",
-            "matin.",
-            "Je",
-            "dois"
-          ],
-          "correct_order": [
-            "Je",
-            "dois",
-            "vérifier",
-            "notre",
-            "fini",
-            "ce",
-            "matin."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a1-16-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 4) :",
-          "parts": [
-            "votre",
-            "fini",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît.",
-            "Veuillez",
-            "présenter"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "présenter",
-            "votre",
-            "fini",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a1-16-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 5) :",
-          "parts": [
-            "apprécie",
-            "chaque",
-            "fini",
-            "de",
-            "bureau.",
-            "Notre",
-            "équipe"
-          ],
-          "correct_order": [
-            "Notre",
-            "équipe",
-            "apprécie",
-            "chaque",
-            "fini",
-            "de",
-            "bureau."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a1-16-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 6) :",
-          "parts": [
-            "notre",
-            "fini",
-            "avant",
-            "midi",
-            "?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "notre",
-            "fini",
-            "avant",
-            "midi",
-            "?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a1-16-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 7) :",
-          "parts": [
-            "organiser",
-            "notre",
-            "fini",
-            "cette",
-            "semaine.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "organiser",
-            "notre",
-            "fini",
-            "cette",
-            "semaine."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a1-16-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 8) :",
-          "parts": [
-            "statut",
-            "de",
-            "notre",
-            "fini",
-            "ensemble.",
-            "Examinons",
-            "le"
-          ],
-          "correct_order": [
-            "Examinons",
-            "le",
-            "statut",
-            "de",
-            "notre",
-            "fini",
-            "ensemble."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a1-16-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 9) :",
-          "parts": [
-            "améliorer",
-            "notre",
-            "fini",
-            "de",
-            "travail.",
-            "Ils",
-            "souhaitent"
-          ],
-          "correct_order": [
-            "Ils",
-            "souhaitent",
-            "améliorer",
-            "notre",
-            "fini",
-            "de",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a1-16-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 10) :",
-          "parts": [
-            "avec",
-            "notre",
-            "fini",
-            "tous",
-            "les",
-            "jours.",
-            "Elle",
-            "travaille"
-          ],
-          "correct_order": [
-            "Elle",
-            "travaille",
-            "avec",
-            "notre",
-            "fini",
-            "tous",
-            "les",
-            "jours."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        }
+        { "id": "fra1-16-f1", "type": "fill_input", "question": "Un chat ____ (negro - masc.)", "correct_answer": "noir", "explanation": "noir" },
+        { "id": "fra1-16-f2", "type": "fill_input", "question": "Une voiture ____ (negra - fem.)", "correct_answer": "noire", "explanation": "noire" },
+        { "id": "fra1-16-f3", "type": "fill_input", "question": "Un livre ____ (rojo - masc.)", "correct_answer": "rouge", "explanation": "rouge" },
+        { "id": "fra1-16-f4", "type": "fill_input", "question": "Une maison ____ (blanca - fem.)", "correct_answer": "blanche", "explanation": "blanche" },
+        { "id": "fra1-16-f5", "type": "fill_input", "question": "Des chats ____ (grises - fem. plural)", "correct_answer": "grises", "explanation": "grises" },
+        { "id": "fra1-16-f6", "type": "fill_input", "question": "Un stylo ____ (azul - masc.)", "correct_answer": "bleu", "explanation": "bleu" },
+        { "id": "fra1-16-f7", "type": "fill_input", "question": "Une fleur ____ (rosa - invariable)", "correct_answer": "rose", "explanation": "rose" },
+        { "id": "fra1-16-f8", "type": "fill_input", "question": "Des herbes ____ (verdes - fem. plural)", "correct_answer": "vertes", "explanation": "vertes" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-a1-16-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"fini\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"fini\" en détail.",
-            "Une autre déclaration sur notre \"fini\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"fini\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"fini\" en réunion."
-        },
-        {
-          "id": "fr-a1-16-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"fini\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"fini\" ?",
-            "Une autre déclaration sur notre \"fini\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"fini\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"fini\" en réunion."
-        },
-        {
-          "id": "fr-a1-16-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"fini\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"fini\" cette année.",
-            "Une autre déclaration sur notre \"fini\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"fini\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"fini\" en réunion."
-        },
-        {
-          "id": "fr-a1-16-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"fini\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"fini\".",
-            "Une autre déclaration sur notre \"fini\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"fini\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"fini\" en réunion."
-        },
-        {
-          "id": "fr-a1-16-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"fini\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"fini\".",
-            "Une autre déclaration sur notre \"fini\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"fini\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"fini\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Colors Match",
+      "pairs": [
+        {"id": "fra1-16-p1", "source": "Blanc / Blanche", "target": "Blanco / Blanca"},
+        {"id": "fra1-16-p2", "source": "Noir / Noire", "target": "Negro / Negra"},
+        {"id": "fra1-16-p3", "source": "Rouge", "target": "Rojo / Roja (invariable)"},
+        {"id": "fra1-16-p4", "source": "Bleu / Bleue", "target": "Azul (masc./fem.)"},
+        {"id": "fra1-16-p5", "source": "Vert / Verte", "target": "Verde (masc./fem.)"},
+        {"id": "fra1-16-p6", "source": "Jaune", "target": "Amarillo (invariable)"},
+        {"id": "fra1-16-p7", "source": "Orange", "target": "Naranja (invariable)"},
+        {"id": "fra1-16-p8", "source": "Violet / Violette", "target": "Violeta (masc./fem.)"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el color correcto.",
       "questions": [
-        {
-          "id": "fr-a1-16-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"fin_\" (Indice : désigne \"fini\")",
-          "correct_answers": [
-            "fini",
-            "Fini"
-          ],
-          "hints": [
-            "Commence par 'fin'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"fini\"."
-        },
-        {
-          "id": "fr-a1-16-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"L'équipe veut discuter de notre fini ____ lundi matin.\" (le / en)",
-          "correct_answers": [
-            "le"
-          ],
-          "hints": [
-            "Article défini utilisé devant les jours de la semaine"
-          ],
-          "explanation": "En français, on utilise l'article défini 'le' devant un jour de la semana pour indiquer un rendez-vous habituel ou fixe."
-        },
-        {
-          "id": "fr-a1-16-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Veuillez ____ attention à ne pas faire d'erreur sur notre fini.\" (faire / prendre)",
-          "correct_answers": [
-            "faire",
-            "Faire"
-          ],
-          "hints": [
-            "Verbe signifiant effectuer ou prêter attention"
-          ],
-          "explanation": "L'expression 'faire attention' est une collocation standard en français."
-        },
-        {
-          "id": "fr-a1-16-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons organiser une ____ pour revoir notre fini.\" (réunion / carte)",
-          "correct_answers": [
-            "réunion",
-            "discussion",
-            "session"
-          ],
-          "hints": [
-            "Un rassemblement de personnes pour travailler ensemble"
-          ],
-          "explanation": "Une 'réunion' est le terme standard pour un meeting professionnel."
-        },
-        {
-          "id": "fr-a1-16-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Il nous faut un rapport ____ sur le statut de notre fini.\" (clair / lent)",
-          "correct_answers": [
-            "clair"
-          ],
-          "hints": [
-            "Facile à comprendre et bien structuré"
-          ],
-          "explanation": "Un rapport 'clair' est indispensable pour assurer l'alignement."
-        }
+        { "id": "fra1-16-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Un chat noir", "options": ["Un chat noir", "Un chat blanc", "Une voiture noire", "Des chats noirs"], "correct_answer": "Un chat noir", "explanation": "Audio dice: Un chat noir." },
+        { "id": "fra1-16-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Une voiture rouge", "options": ["Une voiture rouge", "Un livre rouge", "Une voiture verte", "Un chat rouge"], "correct_answer": "Une voiture rouge", "explanation": "Audio dice: Une voiture rouge." },
+        { "id": "fra1-16-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Des maisons blanches", "options": ["Des maisons blanches", "Des maisons noires", "Une maison blanche", "Des livres blancs"], "correct_answer": "Des maisons blanches", "explanation": "Audio dice: Des maisons blanches." },
+        { "id": "fra1-16-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Bleu", "options": ["Bleu", "Blanche", "Vert", "Jaune"], "correct_answer": "Bleu", "explanation": "Audio dice: Bleu." },
+        { "id": "fra1-16-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Orange", "options": ["Orange", "Rose", "Rouge", "Violet"], "correct_answer": "Orange", "explanation": "Audio dice: Orange." }
       ]
     }
   ]

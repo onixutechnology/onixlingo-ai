@@ -1,0 +1,101 @@
+{
+  "id": "c1-12",
+  "title": "Advanced Passives",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Grammar", "Passives", "Formal Writing", "Business"],
+  "completion_message": "¡Excelente! Has dominado las 'Advanced Passives'. Usar estructuras como 'It is reported that...' o 'He is believed to be...' te permite comunicar información objetiva y profesional, ocultando al sujeto para mantener la diplomacia en los negocios.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Voz Pasiva Avanzada (Impersonal Passives)",
+      "parts": [
+        { "visual": "En nivel C1, usamos la Voz Pasiva Impersonal para reportar hechos, rumores o creencias sin decir quién lo dijo, ideal para periodismo o informes corporativos. \nEstructura 1 (It + passive + that clause): \n- Activa: People say that the company is bankrupt. \n- Pasiva: IT IS SAID THAT the company is bankrupt. \n- Activa: Experts expect that profits will fall. \n- Pasiva: IT IS EXPECTED THAT profits will fall.", "audio": "At the C1 level, we use the Impersonal Passive Voice to report facts, rumors, or beliefs without saying who said them. This is ideal for journalism or corporate reports. Structure 1 uses 'It' plus a passive reporting verb plus a 'that' clause. Active sentence: People say that the company is bankrupt. Passive C1 version: It is said that the company is bankrupt. Active: Experts expect that profits will fall. Passive: It is expected that profits will fall." },
+        { "visual": "Estructura 2 (Sujeto + passive + to infinitive): \nEs aún más formal que la Estructura 1. Se enfoca directamente en la persona o cosa de la que se habla. \n- Activa: People say that the CEO is resigning. \n- Pasiva (Estructura 1): It is said that the CEO is resigning. \n- Pasiva (Estructura 2): THE CEO IS SAID TO BE resigning. \n- Activa: They report that the merger has failed. \n- Pasiva: THE MERGER IS REPORTED TO HAVE FAILED.", "audio": "Structure 2 uses the Subject plus a passive verb plus a 'to' infinitive. This is even more formal than Structure 1. Active sentence: People say that the CEO is resigning. Structure 1: It is said that the CEO is resigning. Structure 2: The CEO is said to be resigning. Another example. Active: They report that the merger has failed. Passive Structure 2: The merger is reported to have failed." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la estructura de voz pasiva avanzada correcta.",
+      "questions": [
+        { "id": "c1-12-q1", "type": "quiz_choice", "question": "People say that he is a millionaire. -> ____ is said that he is a millionaire.", "options": ["It", "He", "There", "That"], "correct_answer": "It", "explanation": "Estructura impersonal: It is said that..." },
+        { "id": "c1-12-q2", "type": "quiz_choice", "question": "People say that he is a millionaire. -> He is said ____ a millionaire.", "options": ["to be", "being", "is", "that he is"], "correct_answer": "to be", "explanation": "Estructura sujeto + pasiva + infinitivo: He is said to be..." },
+        { "id": "c1-12-q3", "type": "quiz_choice", "question": "Journalists report that the bank lost $1 billion. -> ____ is reported that the bank lost $1 billion.", "options": ["It", "The bank", "There", "He"], "correct_answer": "It", "explanation": "Impersonal: It is reported that..." },
+        { "id": "c1-12-q4", "type": "quiz_choice", "question": "Journalists report that the bank lost $1 billion. -> The bank is reported ____ $1 billion.", "options": ["to have lost", "to lose", "losing", "that lost"], "correct_answer": "to have lost", "explanation": "Acción pasada (lost): to have + participio (to have lost)." },
+        { "id": "c1-12-q5", "type": "quiz_choice", "question": "Experts expect that the economy will recover next year. -> ____ is expected that the economy will recover.", "options": ["It", "The economy", "There", "They"], "correct_answer": "It", "explanation": "Impersonal: It is expected that..." },
+        { "id": "c1-12-q6", "type": "quiz_choice", "question": "Experts expect that the economy will recover next year. -> The economy is expected ____ next year.", "options": ["to recover", "recovering", "will recover", "to have recovered"], "correct_answer": "to recover", "explanation": "Acción futura/presente: infinitivo simple (to recover)." },
+        { "id": "c1-12-q7", "type": "quiz_choice", "question": "They believe that the CEO stole the money. -> The CEO is believed ____ the money.", "options": ["to have stolen", "to steal", "stealing", "that he stole"], "correct_answer": "to have stolen", "explanation": "Acción en el pasado (stole): to have stolen (Perfect Infinitive)." },
+        { "id": "c1-12-q8", "type": "quiz_choice", "question": "Many think that the project is a disaster. -> ____ is thought that the project is a disaster.", "options": ["It", "The project", "There", "He"], "correct_answer": "It", "explanation": "Impersonal: It is thought that..." },
+        { "id": "c1-12-q9", "type": "quiz_choice", "question": "Many think that the project is a disaster. -> The project is thought ____ a disaster.", "options": ["to be", "is", "being", "to have been"], "correct_answer": "to be", "explanation": "Estado presente (is): infinitivo simple (to be)." },
+        { "id": "c1-12-q10", "type": "quiz_choice", "question": "Police know that the hackers are operating from Russia. -> The hackers are known ____ from Russia.", "options": ["to be operating", "to operate", "operating", "are operating"], "correct_answer": "to be operating", "explanation": "Acción en progreso (are operating): Continuous Infinitive (to be operating)." },
+        { "id": "c1-12-q11", "type": "quiz_choice", "question": "We estimate that 500 people will attend. -> ____ is estimated that 500 people will attend.", "options": ["It", "500 people", "There", "He"], "correct_answer": "It", "explanation": "Impersonal: It is estimated that..." },
+        { "id": "c1-12-q12", "type": "quiz_choice", "question": "We estimate that 500 people will attend. -> 500 people are estimated ____.", "options": ["to attend", "attending", "will attend", "to have attended"], "correct_answer": "to attend", "explanation": "Acción futura: to attend." },
+        { "id": "c1-12-q13", "type": "quiz_choice", "question": "Rumors say that the company is being sold. -> The company is rumored ____ sold.", "options": ["to be being", "to be", "being", "is being"], "correct_answer": "to be being", "explanation": "Voz pasiva continua (is being sold): to be being sold." },
+        { "id": "c1-12-q14", "type": "quiz_choice", "question": "People consider him to be the best leader. -> He is considered ____ the best leader.", "options": ["to be", "being", "is", "was"], "correct_answer": "to be", "explanation": "He is considered to be..." },
+        { "id": "c1-12-q15", "type": "quiz_choice", "question": "They alleged that she forged the signature. -> She was alleged ____ the signature.", "options": ["to have forged", "to forge", "forging", "forged"], "correct_answer": "to have forged", "explanation": "Acción pasada: to have forged." },
+        { "id": "c1-12-q16", "type": "quiz_choice", "question": "It ____ that the new model will cost $1000. (Se espera).", "options": ["is expected", "expects", "expected", "is expecting"], "correct_answer": "is expected", "explanation": "It is expected that..." },
+        { "id": "c1-12-q17", "type": "quiz_choice", "question": "The suspect is known ____ a criminal record. (Tener).", "options": ["to have", "having", "has", "had"], "correct_answer": "to have", "explanation": "is known to have (se sabe que tiene)." },
+        { "id": "c1-12-q18", "type": "quiz_choice", "question": "It is widely ____ that climate change is accelerating. (Creído / Se cree).", "options": ["believed", "believe", "believing", "belief"], "correct_answer": "believed", "explanation": "It is widely believed that..." },
+        { "id": "c1-12-q19", "type": "quiz_choice", "question": "The virus is thought ____ originally in Asia. (Haberse originado).", "options": ["to have originated", "to originate", "originating", "originated"], "correct_answer": "to have originated", "explanation": "Acción pasada: to have originated." },
+        { "id": "c1-12-q20", "type": "quiz_choice", "question": "The building is reported ____ severely damaged in the earthquake. (Haber sido).", "options": ["to have been", "to be", "being", "been"], "correct_answer": "to have been", "explanation": "Pasado pasivo (was damaged): to have been damaged." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe las palabras faltantes en la estructura pasiva.",
+      "questions": [
+        { "id": "c1-12-f1", "type": "fill_input", "question": "____ is said that he is rich. (Se dice que...)", "correct_answer": "It", "explanation": "It is said that." },
+        { "id": "c1-12-f2", "type": "fill_input", "question": "He is said ____ ____ rich. (Ser - 2 palabras)", "correct_answer": "to be", "explanation": "to be." },
+        { "id": "c1-12-f3", "type": "fill_input", "question": "____ is reported that the company failed. (Se reporta que...)", "correct_answer": "It", "explanation": "It." },
+        { "id": "c1-12-f4", "type": "fill_input", "question": "The company is reported ____ ____ failed. (Haber fallado - 2 palabras)", "correct_answer": "to have", "explanation": "to have failed." },
+        { "id": "c1-12-f5", "type": "fill_input", "question": "____ is expected that profits will rise. (Se espera que...)", "correct_answer": "It", "explanation": "It." },
+        { "id": "c1-12-f6", "type": "fill_input", "question": "Profits are expected ____ rise. (Subir - 1 palabra)", "correct_answer": "to", "explanation": "to rise." },
+        { "id": "c1-12-f7", "type": "fill_input", "question": "____ is known that she lied. (Se sabe que...)", "correct_answer": "It", "explanation": "It." },
+        { "id": "c1-12-f8", "type": "fill_input", "question": "She is known ____ ____ lied. (Haber mentido - 2 palabras)", "correct_answer": "to have", "explanation": "to have lied." },
+        { "id": "c1-12-f9", "type": "fill_input", "question": "The CEO is believed ____ ____ resigning. (Estar renunciando - 2 palabras)", "correct_answer": "to be", "explanation": "to be resigning." },
+        { "id": "c1-12-f10", "type": "fill_input", "question": "____ is thought that they won. (Se piensa que...)", "correct_answer": "It", "explanation": "It." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Passives Match",
+      "pairs": [
+        {"id": "c1-12-p1", "source": "It is said that...", "target": "Se dice que..."},
+        {"id": "c1-12-p2", "source": "He is said to be...", "target": "Se dice que él es/está..."},
+        {"id": "c1-12-p3", "source": "It is reported that...", "target": "Se reporta que..."},
+        {"id": "c1-12-p4", "source": "The bank is reported to have lost...", "target": "Se reporta que el banco ha perdido..."},
+        {"id": "c1-12-p5", "source": "It is expected that...", "target": "Se espera que..."},
+        {"id": "c1-12-p6", "source": "Profits are expected to fall...", "target": "Se espera que las ganancias caigan..."},
+        {"id": "c1-12-p7", "source": "It is believed that...", "target": "Se cree que..."},
+        {"id": "c1-12-p8", "source": "She is believed to have stolen...", "target": "Se cree que ella ha robado..."},
+        {"id": "c1-12-p9", "source": "It is thought that...", "target": "Se piensa que..."},
+        {"id": "c1-12-p10", "source": "They are thought to be operating...", "target": "Se piensa que están operando..."}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración con voz pasiva avanzada.",
+      "questions": [
+        { "id": "c1-12-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is said that he is rich.", "options": ["It is said that he is rich.", "He is said that he is rich.", "It was said that he is rich.", "There is said that he is rich."], "correct_answer": "It is said that he is rich.", "explanation": "Audio exacto." },
+        { "id": "c1-12-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is said to be rich.", "options": ["He is said to be rich.", "He is say to be rich.", "It is said to be rich.", "He is said to being rich."], "correct_answer": "He is said to be rich.", "explanation": "Audio exacto." },
+        { "id": "c1-12-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is reported that they won.", "options": ["It is reported that they won.", "It was reported that they won.", "It is report that they won.", "They are reported that they won."], "correct_answer": "It is reported that they won.", "explanation": "Audio exacto." },
+        { "id": "c1-12-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They are reported to have won.", "options": ["They are reported to have won.", "They are reported to win.", "It is reported to have won.", "They were reported to have won."], "correct_answer": "They are reported to have won.", "explanation": "Audio exacto." },
+        { "id": "c1-12-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is expected to rain.", "options": ["It is expected to rain.", "It was expected to rain.", "He is expected to rain.", "It is expect to rain."], "correct_answer": "It is expected to rain.", "explanation": "Audio exacto." },
+        { "id": "c1-12-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is expected to resign.", "options": ["She is expected to resign.", "He is expected to resign.", "She was expected to resign.", "She is expecting to resign."], "correct_answer": "She is expected to resign.", "explanation": "Audio exacto." },
+        { "id": "c1-12-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is believed that he left.", "options": ["It is believed that he left.", "He is believed that he left.", "It was believed that he left.", "It is believe that he left."], "correct_answer": "It is believed that he left.", "explanation": "Audio exacto." },
+        { "id": "c1-12-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is believed to have left.", "options": ["He is believed to have left.", "He is believed to leave.", "It is believed to have left.", "He was believed to have left."], "correct_answer": "He is believed to have left.", "explanation": "Audio exacto." },
+        { "id": "c1-12-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is known that they failed.", "options": ["It is known that they failed.", "It was known that they failed.", "They are known that they failed.", "It is know that they failed."], "correct_answer": "It is known that they failed.", "explanation": "Audio exacto." },
+        { "id": "c1-12-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They are known to have failed.", "options": ["They are known to have failed.", "They are known to fail.", "They were known to have failed.", "It is known to have failed."], "correct_answer": "They are known to have failed.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

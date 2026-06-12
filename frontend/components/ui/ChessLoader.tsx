@@ -87,7 +87,7 @@ export const ChessLoader = () => {
             onClick={() => handleSquareClick(r, c)}
             className={`
               w-full h-8 sm:h-10 flex items-center justify-center text-xl cursor-pointer transition-all hover:opacity-80
-              ${isBlack ? 'bg-slate-400' : 'bg-slate-200'}
+              ${isBlack ? 'bg-slate-400' : 'bg-white'}
               ${isPieceHere ? 'cursor-default' : ''}
             `}
           >
@@ -114,8 +114,8 @@ export const ChessLoader = () => {
         <div className="flex items-center gap-2">
             <span className="text-4xl">{PIECES[activePiece].icon}</span>
             <div className="text-left">
-                <p className="font-bold text-slate-800 text-sm">Mueve el {PIECES[activePiece].name}</p>
-                <p className="text-xs text-slate-500 max-w-[180px] leading-tight">{PIECES[activePiece].hint}</p>
+                <p className="font-bold text-slate-900 text-sm">Mueve el {PIECES[activePiece].name}</p>
+                <p className="text-xs text-slate-600 max-w-[180px] leading-tight">{PIECES[activePiece].hint}</p>
             </div>
         </div>
         <div className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full font-bold text-sm flex items-center gap-1">
@@ -124,12 +124,12 @@ export const ChessLoader = () => {
       </div>
 
       {/* Tablero */}
-      <div className="grid grid-cols-8 border-4 border-slate-700 rounded-lg overflow-hidden shadow-xl w-full max-w-[320px]">
+      <div className="grid grid-cols-8 border-4 border-slate-700 rounded-none overflow-hidden shadow-xl w-full max-w-[320px]">
         {renderBoard()}
       </div>
 
       {/* Feedback Mensaje */}
-      <p className={`mt-3 text-xs font-bold h-4 ${message.includes('Oops') ? 'text-rose-500' : 'text-emerald-600'}`}>
+      <p className={`mt-3 text-xs font-bold h-4 ${message.includes('Oops') ? 'text-rose-500' : 'text-[#D4AF37]'}`}>
         {message}
       </p>
     </div>

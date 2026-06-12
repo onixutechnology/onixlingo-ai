@@ -1,0 +1,101 @@
+{
+  "id": "c2-71",
+  "title": "Public Speaking",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Presentations", "Communication", "Leadership"],
+  "completion_message": "¡Excelente! Un líder no solo tiene buenas ideas, sabe cómo venderlas. Ahora tienes el vocabulario para dominar el escenario y cautivar a cualquier audiencia.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Hablar en Público y Presentaciones (C2)",
+      "parts": [
+        { "visual": "Para liderar, debes saber hablar frente a multitudes. \n\n1. Captivate the audience (Cautivar a la audiencia): \n- Atraer y mantener completamente la atención del público. \nEj: A great speaker knows how to CAPTIVATE THE AUDIENCE from the first second. \n\n2. Cut to the chase (Ir al grano): \n- Dejar de dar rodeos y llegar al punto importante. \nEj: We only have 5 minutes, so let me CUT TO THE CHASE. \n\n3. Anecdote (Anécdota): \n- Una historia corta y personal usada para ilustrar un punto. \nEj: He started his speech with a funny ANECDOTE about his first job.", "audio": "Welcome to Public Speaking and Presentations. To lead, you must know how to speak to crowds. Number 1: Captivate the audience. To attract and hold the interest and attention of the public completely. For example: A great speaker knows how to CAPTIVATE THE AUDIENCE from the first second. Number 2: Cut to the chase. To stop talking about unimportant details and get to the main point immediately. For example: We only have 5 minutes, so let me CUT TO THE CHASE. Number 3: Anecdote. A short, interesting, and often personal story about a real incident, used to illustrate a point. For example: He started his speech with a funny ANECDOTE about his first job." },
+        { "visual": "4. Rhetorical question (Pregunta retórica): \n- Una pregunta que se hace para crear efecto, no para recibir una respuesta. \nEj: Asking 'Are we ready for the future?' is a powerful RHETORICAL QUESTION. \n\n5. Rule of three (Regla de tres): \n- El principio de que las ideas presentadas en grupos de tres son más memorables (ej: Blood, sweat, and tears). \nEj: Steve Jobs always used the RULE OF THREE in his presentations. \n\n6. Handout (Folleto / Material impreso): \n- Papeles entregados a la audiencia con información extra. \nEj: I have prepared a HANDOUT with the financial graphs. \n\n7. Q&A session (Sesión de preguntas y respuestas): \n- El momento al final donde el público hace preguntas. \nEj: We will have a 10-minute Q&A SESSION at the end.", "audio": "Number 4: Rhetorical question. A question asked in order to create a dramatic effect or to make a point, rather than to get an answer. For example: Asking 'Are we ready for the future?' is a powerful RHETORICAL QUESTION. Number 5: Rule of three. The writing principle that suggests that things presented in threes are funnier, more satisfying, and more memorable. Like 'Blood, sweat, and tears'. For example: Steve Jobs always used the RULE OF THREE in his presentations. Number 6: Handout. A printed document provided to the audience containing extra information. For example: I have prepared a HANDOUT with the financial graphs. Finally, Number 7: Q&A session. Question and Answer session at the end of a talk. For example: We will have a 10-minute Q&A SESSION at the end." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de presentaciones correcto.",
+      "questions": [
+        { "id": "c2-71-q1", "type": "quiz_choice", "question": "The CEO's speech was so boring that half the room fell asleep. He completely failed to ____ the audience. (Cautivar).", "options": ["captivate", "capture", "catch", "control"], "correct_answer": "captivate", "explanation": "Captivate the audience = cautivar a la audiencia." },
+        { "id": "c2-71-q2", "type": "quiz_choice", "question": "I know you have a lot of slides, but we are running out of time. Please just cut to the ____. (Ir al grano).", "options": ["chase", "race", "run", "point"], "correct_answer": "chase", "explanation": "Cut to the chase = ir al grano." },
+        { "id": "c2-71-q3", "type": "quiz_choice", "question": "Instead of showing boring statistics, she started with a personal ____ about her grandfather. (Anécdota).", "options": ["anecdote", "antidote", "analogy", "article"], "correct_answer": "anecdote", "explanation": "Anecdote = anécdota (historia corta)." },
+        { "id": "c2-71-q4", "type": "quiz_choice", "question": "When he asked the crowd, 'Do you want to work forever?', he didn't want them to answer. It was a ____ question.", "options": ["rhetorical", "logical", "historical", "theoretical"], "correct_answer": "rhetorical", "explanation": "Rhetorical question = pregunta retórica." },
+        { "id": "c2-71-q5", "type": "quiz_choice", "question": "Humans remember patterns. Grouping your ideas like 'Veni, vidi, vici' utilizes the Rule of ____.", "options": ["three", "two", "four", "five"], "correct_answer": "three", "explanation": "Rule of three = la regla de tres (grupos de tres elementos)." },
+        { "id": "c2-71-q6", "type": "quiz_choice", "question": "Don't write everything on the slides. I will give you a printed ____ with all the technical details later. (Folleto/Material impreso).", "options": ["handout", "handbook", "handshake", "handover"], "correct_answer": "handout", "explanation": "Handout = material impreso que se reparte." },
+        { "id": "c2-71-q7", "type": "quiz_choice", "question": "If you have any doubts, please save them for the ____ session at the end of my speech. (Preguntas y respuestas).", "options": ["Q&A", "A&Q", "R&D", "P&L"], "correct_answer": "Q&A", "explanation": "Q&A = Questions & Answers." },
+        { "id": "c2-71-q8", "type": "quiz_choice", "question": "When you lose your train of thought and forget what you were going to say, you 'go ____'. (Quedarse en blanco).", "options": ["blank", "empty", "white", "blind"], "correct_answer": "blank", "explanation": "Go blank = quedarse en blanco (olvidar todo)." },
+        { "id": "c2-71-q9", "type": "quiz_choice", "question": "To speak without preparation, making it up as you go, is to ____ it. (Improvisar).", "options": ["wing", "fly", "bird", "jump"], "correct_answer": "wing", "explanation": "Wing it = improvisar, hacerlo sobre la marcha." },
+        { "id": "c2-71-q10", "type": "quiz_choice", "question": "A short, memorable phrase used in marketing or politics (like 'Just Do It') is a ____. (Eslogan / Frase gancho).", "options": ["catchphrase", "catchword", "catchline", "catchall"], "correct_answer": "catchphrase", "explanation": "Catchphrase (o slogan) = frase célebre o eslogan." },
+        { "id": "c2-71-q11", "type": "quiz_choice", "question": "A very brief, extracted audio clip of someone speaking, used by the news media, is a sound ____.", "options": ["bite", "clip", "cut", "piece"], "correct_answer": "bite", "explanation": "Sound bite = clip de audio corto e impactante para las noticias." },
+        { "id": "c2-71-q12", "type": "quiz_choice", "question": "Speaking louder so the people in the back can hear you is called ____ your voice. (Proyectar).", "options": ["projecting", "throwing", "pushing", "shouting"], "correct_answer": "projecting", "explanation": "Project your voice = proyectar la voz." },
+        { "id": "c2-71-q13", "type": "quiz_choice", "question": "If you speak too fast or quietly, you might ____ your words, making them impossible to understand. (Murmurar/Masticar las palabras).", "options": ["mumble", "hum", "sing", "chew"], "correct_answer": "mumble", "explanation": "Mumble = murmurar o hablar entre dientes." },
+        { "id": "c2-71-q14", "type": "quiz_choice", "question": "The visual aids you show on screen (PowerPoint, Keynote) are generally called your ____. (Diapositivas).", "options": ["slides", "pictures", "pages", "boards"], "correct_answer": "slides", "explanation": "Slides = diapositivas." },
+        { "id": "c2-71-q15", "type": "quiz_choice", "question": "A presenter who reads word-for-word from their notes without looking at the audience lacks ____ contact. (Contacto visual).", "options": ["eye", "face", "look", "vision"], "correct_answer": "eye", "explanation": "Eye contact = contacto visual." },
+        { "id": "c2-71-q16", "type": "quiz_choice", "question": "The physical position and movements of your body while speaking is your ____ language. (Lenguaje corporal).", "options": ["body", "physical", "gesture", "muscle"], "correct_answer": "body", "explanation": "Body language = lenguaje corporal." },
+        { "id": "c2-71-q17", "type": "quiz_choice", "question": "To give a short overview or summary of what you are going to talk about is to give an ____. (Resumen/Esquema).", "options": ["outline", "underline", "inline", "headline"], "correct_answer": "outline", "explanation": "Outline = esquema o resumen general." },
+        { "id": "c2-71-q18", "type": "quiz_choice", "question": "The device that slowly scrolls the text of a speech so the speaker can read it while looking at the camera is a ____. (Teleprónter).", "options": ["teleprompter", "monitor", "screen", "reader"], "correct_answer": "teleprompter", "explanation": "Teleprompter = teleprónter." },
+        { "id": "c2-71-q19", "type": "quiz_choice", "question": "If the microphone suddenly makes a loud, high-pitched ringing noise, that is audio ____. (Acople/Retroalimentación).", "options": ["feedback", "noise", "echo", "return"], "correct_answer": "feedback", "explanation": "Audio feedback = acople (el ruido agudo del micrófono)." },
+        { "id": "c2-71-q20", "type": "quiz_choice", "question": "To finish your presentation by repeating the most important message is to summarize your key ____. (Conclusiones principales).", "options": ["takeaways", "giveaways", "throwaways", "runaways"], "correct_answer": "takeaways", "explanation": "Key takeaways = los puntos clave que el público debe llevarse a casa." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término de presentaciones.",
+      "questions": [
+        { "id": "c2-71-f1", "type": "fill_input", "question": "____ the audience. (Cautivar con C)", "correct_answer": "Captivate", "explanation": "Captivate." },
+        { "id": "c2-71-f2", "type": "fill_input", "question": "Cut to the ____. (Ir al grano con C)", "correct_answer": "chase", "explanation": "chase." },
+        { "id": "c2-71-f3", "type": "fill_input", "question": "A funny ____. (Anécdota con A)", "correct_answer": "anecdote", "explanation": "anecdote." },
+        { "id": "c2-71-f4", "type": "fill_input", "question": "A ____ question. (Pregunta retórica con R)", "correct_answer": "rhetorical", "explanation": "rhetorical." },
+        { "id": "c2-71-f5", "type": "fill_input", "question": "The Rule of ____. (Regla de tres con T)", "correct_answer": "three", "explanation": "three." },
+        { "id": "c2-71-f6", "type": "fill_input", "question": "A printed ____. (Folleto informativo con H)", "correct_answer": "handout", "explanation": "handout." },
+        { "id": "c2-71-f7", "type": "fill_input", "question": "A 10-minute ____ session. (Preguntas y respuestas con Q)", "correct_answer": "Q&A", "explanation": "Q&A." },
+        { "id": "c2-71-f8", "type": "fill_input", "question": "My mind went ____. (Me quedé en blanco con B)", "correct_answer": "blank", "explanation": "blank." },
+        { "id": "c2-71-f9", "type": "fill_input", "question": "I didn't practice, I'll just ____ it. (Improvisar con W)", "correct_answer": "wing", "explanation": "wing." },
+        { "id": "c2-71-f10", "type": "fill_input", "question": "Summarize your key ____. (Puntos clave/conclusiones con T)", "correct_answer": "takeaways", "explanation": "takeaways." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Presentation Match",
+      "pairs": [
+        {"id": "c2-71-p1", "source": "Captivate the audience", "target": "Atraer la atención del público"},
+        {"id": "c2-71-p2", "source": "Cut to the chase", "target": "Ir directo al grano"},
+        {"id": "c2-71-p3", "source": "Anecdote", "target": "Historia corta personal"},
+        {"id": "c2-71-p4", "source": "Rhetorical question", "target": "Pregunta que no busca respuesta"},
+        {"id": "c2-71-p5", "source": "Handout", "target": "Material impreso repartido"},
+        {"id": "c2-71-p6", "source": "Q&A session", "target": "Sesión de preguntas y respuestas"},
+        {"id": "c2-71-p7", "source": "Go blank", "target": "Olvidar todo (quedarse en blanco)"},
+        {"id": "c2-71-p8", "source": "Wing it", "target": "Improvisar sin preparación"},
+        {"id": "c2-71-p9", "source": "Mumble", "target": "Murmurar o hablar entre dientes"},
+        {"id": "c2-71-p10", "source": "Key takeaways", "target": "Conclusiones principales a recordar"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de oratoria.",
+      "questions": [
+        { "id": "c2-71-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Captivate the audience.", "options": ["Captivate the audience.", "Capture the audience.", "Captivate an audience.", "Captivating the audience."], "correct_answer": "Captivate the audience.", "explanation": "Audio exacto." },
+        { "id": "c2-71-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's cut to the chase.", "options": ["Let's cut to the chase.", "Let us cut to the chase.", "Let's cut to the point.", "Let's cutting to the chase."], "correct_answer": "Let's cut to the chase.", "explanation": "Audio exacto." },
+        { "id": "c2-71-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He told a funny anecdote.", "options": ["He told a funny anecdote.", "She told a funny anecdote.", "He tells a funny anecdote.", "He told a funny antidote."], "correct_answer": "He told a funny anecdote.", "explanation": "Audio exacto." },
+        { "id": "c2-71-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a rhetorical question.", "options": ["It was a rhetorical question.", "It is a rhetorical question.", "This was a rhetorical question.", "It was rhetorical question."], "correct_answer": "It was a rhetorical question.", "explanation": "Audio exacto." },
+        { "id": "c2-71-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Use the rule of three.", "options": ["Use the rule of three.", "Uses the rule of three.", "Use a rule of three.", "Using the rule of three."], "correct_answer": "Use the rule of three.", "explanation": "Audio exacto." },
+        { "id": "c2-71-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I prepared a handout.", "options": ["I prepared a handout.", "I prepare a handout.", "He prepared a handout.", "I prepared the handout."], "correct_answer": "I prepared a handout.", "explanation": "Audio exacto." },
+        { "id": "c2-71-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will have a Q&A.", "options": ["We will have a Q&A.", "We would have a Q&A.", "They will have a Q&A.", "We will have the Q&A."], "correct_answer": "We will have a Q&A.", "explanation": "Audio exacto." },
+        { "id": "c2-71-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My mind went blank.", "options": ["My mind went blank.", "His mind went blank.", "My mind goes blank.", "My brain went blank."], "correct_answer": "My mind went blank.", "explanation": "Audio exacto." },
+        { "id": "c2-71-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will just wing it.", "options": ["I will just wing it.", "He will just wing it.", "I would just wing it.", "I will just win it."], "correct_answer": "I will just wing it.", "explanation": "Audio exacto." },
+        { "id": "c2-71-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Remember the key takeaways.", "options": ["Remember the key takeaways.", "Remembering the key takeaways.", "Remember your key takeaways.", "Remember the key takeaway."], "correct_answer": "Remember the key takeaways.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

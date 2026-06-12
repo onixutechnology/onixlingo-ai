@@ -1,0 +1,101 @@
+{
+  "id": "b2-19",
+  "title": "Advanced Legal & Contracts",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Vocabulary", "Legal", "Contracts", "Business"],
+  "completion_message": "¡Excelente! Has dominado términos legales complejos. Entender los contratos y la jerga legal te protegerá y te dará ventaja en los negocios internacionales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Inglés Legal Avanzado para Negocios",
+      "parts": [
+        { "visual": "Términos de Contratos: \n- Loophole (Vacío legal / Escapatoria). \n- Null and void (Nulo y sin valor). \n- Breach of contract (Incumplimiento de contrato). \nEj: If you find a loophole, the agreement might become null and void, leading to a breach of contract.", "audio": "Contract Terms. A loophole is an ambiguity or inadequacy in the law or a set of rules. Null and void means having no legal force. Breach of contract is failing to perform any term of a contract. For example: If you find a loophole, the agreement might become null and void, leading to a breach of contract." },
+        { "visual": "Responsabilidad y Propiedad: \n- Liable (Responsable legalmente / Sujeto a pagar daños). \n- Intellectual Property / IP (Propiedad intelectual). \n- Non-disclosure agreement / NDA (Acuerdo de confidencialidad). \nEj: To protect our intellectual property, everyone must sign an NDA, otherwise they are liable for damages.", "audio": "Liability and Property. Liable means legally responsible. Intellectual Property, or I P, refers to creations of the mind like inventions or designs. A non-disclosure agreement, or N D A, is a confidentiality contract. For example: To protect our intellectual property, everyone must sign an N D A, otherwise they are liable for damages." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término legal correcto.",
+      "questions": [
+        { "id": "b2-19-q1", "type": "quiz_choice", "question": "The lawyer found a ____ in the tax laws that saved the company millions. (Vacío legal / Escapatoria).", "options": ["loophole", "blackhole", "door", "window"], "correct_answer": "loophole", "explanation": "Loophole = vacío legal." },
+        { "id": "b2-19-q2", "type": "quiz_choice", "question": "Because it wasn't signed by both parties, the contract is null and ____. (Sin valor / Nulo).", "options": ["void", "empty", "blank", "zero"], "correct_answer": "void", "explanation": "Null and void = nulo y sin efecto legal." },
+        { "id": "b2-19-q3", "type": "quiz_choice", "question": "If you don't deliver the goods on time, it will be considered a ____ of contract. (Incumplimiento).", "options": ["breach", "break", "smash", "crash"], "correct_answer": "breach", "explanation": "Breach of contract = incumplimiento de contrato." },
+        { "id": "b2-19-q4", "type": "quiz_choice", "question": "The company was found ____ for the damages caused by the defective product. (Responsable legalmente).", "options": ["liable", "reliable", "guilty", "charged"], "correct_answer": "liable", "explanation": "Liable = responsable a nivel legal o financiero." },
+        { "id": "b2-19-q5", "type": "quiz_choice", "question": "Before I show you the prototype, you must sign an ____ (Non-Disclosure Agreement). (Acuerdo de confidencialidad).", "options": ["NDA", "CEO", "ROI", "CFO"], "correct_answer": "NDA", "explanation": "NDA = Non-Disclosure Agreement." },
+        { "id": "b2-19-q6", "type": "quiz_choice", "question": "We need to patent our algorithm to protect our Intellectual ____. (Propiedad intelectual).", "options": ["Property", "Asset", "Thing", "Mind"], "correct_answer": "Property", "explanation": "Intellectual Property (IP) = propiedad intelectual." },
+        { "id": "b2-19-q7", "type": "quiz_choice", "question": "The fine print in the contract contains many hidden ____. (Cláusulas).", "options": ["clauses", "sentences", "words", "lines"], "correct_answer": "clauses", "explanation": "Clause = cláusula." },
+        { "id": "b2-19-q8", "type": "quiz_choice", "question": "They threatened to ____ us if we didn't pay the compensation. (Demandarnos).", "options": ["sue", "jail", "arrest", "call"], "correct_answer": "sue", "explanation": "Sue = demandar." },
+        { "id": "b2-19-q9", "type": "quiz_choice", "question": "A ____ action lawsuit was filed by thousands of affected customers. (Demanda colectiva).", "options": ["class", "group", "mass", "big"], "correct_answer": "class", "explanation": "Class action lawsuit = demanda colectiva." },
+        { "id": "b2-19-q10", "type": "quiz_choice", "question": "This document is legally ____. You cannot back out now. (Vinculante / Obligatorio).", "options": ["binding", "tying", "holding", "sticking"], "correct_answer": "binding", "explanation": "Legally binding = legalmente vinculante/obligatorio." },
+        { "id": "b2-19-q11", "type": "quiz_choice", "question": "We need to ____ a contract before we start the project. (Redactar).", "options": ["draft", "draw", "paint", "write"], "correct_answer": "draft", "explanation": "Draft a contract = redactar un contrato." },
+        { "id": "b2-19-q12", "type": "quiz_choice", "question": "The two parties reached a ____ out of court. (Acuerdo / Arreglo).", "options": ["settlement", "peace", "contract", "word"], "correct_answer": "settlement", "explanation": "Settlement = arreglo o acuerdo extrajudicial." },
+        { "id": "b2-19-q13", "type": "quiz_choice", "question": "We had to pay $50,000 in ____ to the injured worker. (Daños / Indemnización).", "options": ["damages", "hurts", "pains", "injuries"], "correct_answer": "damages", "explanation": "Damages = indemnización por daños y perjuicios." },
+        { "id": "b2-19-q14", "type": "quiz_choice", "question": "A patent ____ gives you the exclusive right to use the invention. (Infracción - NO, la correcta es que la patente da el derecho. Si alguien la viola es infringement. La frase correcta sería: 'They committed copyright ____'). (Infracción).", "options": ["infringement", "break", "crime", "steal"], "correct_answer": "infringement", "explanation": "Infringement = infracción (de derechos de autor, patentes, etc)." },
+        { "id": "b2-19-q15", "type": "quiz_choice", "question": "If they don't comply, we will take legal ____. (Acción / Medidas).", "options": ["action", "movement", "step", "walk"], "correct_answer": "action", "explanation": "Take legal action = tomar medidas legales." },
+        { "id": "b2-19-q16", "type": "quiz_choice", "question": "He was accused of corporate ____, stealing secrets for a rival. (Espionaje).", "options": ["espionage", "spying", "looking", "watching"], "correct_answer": "espionage", "explanation": "Corporate espionage = espionaje corporativo." },
+        { "id": "b2-19-q17", "type": "quiz_choice", "question": "A ____ is a person who exposes illegal activity within a company. (Denunciante / Soplon).", "options": ["whistleblower", "shouter", "teller", "speaker"], "correct_answer": "whistleblower", "explanation": "Whistleblower = informante o denunciante (quien 'toca el silbato')." },
+        { "id": "b2-19-q18", "type": "quiz_choice", "question": "They filed a ____ claiming we copied their design. (Demanda).", "options": ["lawsuit", "paper", "book", "letter"], "correct_answer": "lawsuit", "explanation": "Lawsuit = demanda judicial." },
+        { "id": "b2-19-q19", "type": "quiz_choice", "question": "The contract was signed under ____, so it is not valid. (Coacción / Presión).", "options": ["duress", "force", "stress", "power"], "correct_answer": "duress", "explanation": "Under duress = bajo coacción o amenaza." },
+        { "id": "b2-19-q20", "type": "quiz_choice", "question": "To avoid a trial, they agreed to ____. (Arbitraje).", "options": ["arbitration", "judge", "court", "fight"], "correct_answer": "arbitration", "explanation": "Arbitration = arbitraje (resolución de conflictos por un tercero neutral sin ir a juicio)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra legal correcta.",
+      "questions": [
+        { "id": "b2-19-f1", "type": "fill_input", "question": "A legal ____. (Vacío legal con L)", "correct_answer": "loophole", "explanation": "loophole." },
+        { "id": "b2-19-f2", "type": "fill_input", "question": "Null and ____. (Sin valor con V)", "correct_answer": "void", "explanation": "void." },
+        { "id": "b2-19-f3", "type": "fill_input", "question": "____ of contract. (Incumplimiento con B)", "correct_answer": "Breach", "explanation": "Breach." },
+        { "id": "b2-19-f4", "type": "fill_input", "question": "We are legally ____. (Responsables legales con L)", "correct_answer": "liable", "explanation": "liable." },
+        { "id": "b2-19-f5", "type": "fill_input", "question": "Non-Disclosure Agreement is ____. (Acrónimo)", "correct_answer": "NDA", "explanation": "NDA." },
+        { "id": "b2-19-f6", "type": "fill_input", "question": "Intellectual ____. (Propiedad con P)", "correct_answer": "Property", "explanation": "Property." },
+        { "id": "b2-19-f7", "type": "fill_input", "question": "To ____ someone. (Demandar con S)", "correct_answer": "sue", "explanation": "sue." },
+        { "id": "b2-19-f8", "type": "fill_input", "question": "Legally ____. (Vinculante con B)", "correct_answer": "binding", "explanation": "binding." },
+        { "id": "b2-19-f9", "type": "fill_input", "question": "To reach a ____. (Acuerdo extrajudicial con S)", "correct_answer": "settlement", "explanation": "settlement." },
+        { "id": "b2-19-f10", "type": "fill_input", "question": "Copyright ____. (Infracción con I)", "correct_answer": "infringement", "explanation": "infringement." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Legal Match",
+      "pairs": [
+        {"id": "b2-19-p1", "source": "Loophole", "target": "Vacío legal / Escapatoria"},
+        {"id": "b2-19-p2", "source": "Null and void", "target": "Nulo y sin efecto"},
+        {"id": "b2-19-p3", "source": "Breach of contract", "target": "Incumplimiento de contrato"},
+        {"id": "b2-19-p4", "source": "Liable", "target": "Responsable (legal/financiero)"},
+        {"id": "b2-19-p5", "source": "NDA", "target": "Acuerdo de confidencialidad"},
+        {"id": "b2-19-p6", "source": "Intellectual Property (IP)", "target": "Propiedad intelectual"},
+        {"id": "b2-19-p7", "source": "Sue", "target": "Demandar"},
+        {"id": "b2-19-p8", "source": "Legally binding", "target": "Legalmente vinculante"},
+        {"id": "b2-19-p9", "source": "Settlement", "target": "Arreglo extrajudicial"},
+        {"id": "b2-19-p10", "source": "Whistleblower", "target": "Informante / Denunciante interno"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración legal correcta.",
+      "questions": [
+        { "id": "b2-19-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He found a loophole.", "options": ["He found a loophole.", "She found a loophole.", "He found a blackhole.", "He finds a loophole."], "correct_answer": "He found a loophole.", "explanation": "Audio exacto." },
+        { "id": "b2-19-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The contract is null and void.", "options": ["The contract is null and void.", "The contact is null and void.", "The contract was null and void.", "The contract is dull and void."], "correct_answer": "The contract is null and void.", "explanation": "Audio exacto." },
+        { "id": "b2-19-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a breach of contract.", "options": ["It is a breach of contract.", "It was a breach of contract.", "Is it a breach of contract?", "It is a break of contract."], "correct_answer": "It is a breach of contract.", "explanation": "Audio exacto." },
+        { "id": "b2-19-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are not liable.", "options": ["We are not liable.", "They are not liable.", "We are liable.", "We are not reliable."], "correct_answer": "We are not liable.", "explanation": "Audio exacto." },
+        { "id": "b2-19-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please sign the NDA.", "options": ["Please sign the NDA.", "Please read the NDA.", "They signed the NDA.", "Please sign the DNA."], "correct_answer": "Please sign the NDA.", "explanation": "Audio exacto." },
+        { "id": "b2-19-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Protect our intellectual property.", "options": ["Protect our intellectual property.", "Respect our intellectual property.", "Protect the intellectual property.", "Protect our intellectual assets."], "correct_answer": "Protect our intellectual property.", "explanation": "Audio exacto." },
+        { "id": "b2-19-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will sue them.", "options": ["We will sue them.", "They will sue us.", "We will see them.", "I will sue them."], "correct_answer": "We will sue them.", "explanation": "Audio exacto." },
+        { "id": "b2-19-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is legally binding.", "options": ["It is legally binding.", "It is locally binding.", "It was legally binding.", "Is it legally binding?"], "correct_answer": "It is legally binding.", "explanation": "Audio exacto." },
+        { "id": "b2-19-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We reached a settlement.", "options": ["We reached a settlement.", "They reached a settlement.", "We need a settlement.", "We reach a settlement."], "correct_answer": "We reached a settlement.", "explanation": "Audio exacto." },
+        { "id": "b2-19-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They filed a lawsuit.", "options": ["They filed a lawsuit.", "We filed a lawsuit.", "They found a lawsuit.", "He filed a lawsuit."], "correct_answer": "They filed a lawsuit.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "zh-a2-31",
+  "title": "Doce Lunas",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Time", "Numbers", "Months"],
+  "completion_message": "¡Excelente! Otra victoria para la lógica matemática china. Ya puedes dominar todo el calendario de los meses sin esfuerzo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "La Luna y los Meses",
+      "parts": [
+        {
+          "visual": "Mes = Luna: 月 (yuè)\n\nEl calendario chino tradicional era lunar. Por eso, la palabra para 'Mes' y la palabra para 'Luna' son exactamente la misma: 月 (yuè - cuarto tono).\n\nPara formar los meses del año, usamos la misma lógica matemática que con los días de la semana, PERO con una diferencia crucial en el orden:\n- Días de la semana: Semana + Número (ej. Semana 1 = Lunes).\n- Meses del año: Número + Mes (ej. 1 Mes = Enero).\n\nLos 12 meses:\n- Enero (Mes 1): 一月 (yī yuè).\n- Febrero (Mes 2): 二月 (èr yuè).\n- Marzo (Mes 3): 三月 (sān yuè).\n... y así hasta ...\n- Noviembre (Mes 11): 十一月 (shí yī yuè).\n- Diciembre (Mes 12): 十二月 (shí èr yuè).",
+          "audio": "En la última lección aprendiste que los días de la semana son solo la palabra 'semana' seguida de un número. Ahora aprenderemos los meses del año, que es exactamente igual de lógico, pero al revés. La palabra para Mes es 'yuè', que significa Luna. Y para decir los meses, simplemente pones el número ANTES de la palabra mes. Enero es el mes uno: Yī yuè. Febrero es el mes dos: Èr yuè. Diciembre es el mes doce: Shí èr yuè. Si sabes contar del uno al doce, ya te sabes todos los meses del año en chino mandarín."
+        },
+        {
+          "visual": "¿Qué mes es?: 几 (jǐ)\n\nPara preguntar '¿Cuánto/Cuántos?' pero para cantidades pequeñas (generalmente menores a 10 o 12), NO usamos 'duōshao' (que es para dinero o cantidades grandes).\nUsamos la palabra 几 (jǐ - tercer tono).\n\n- ¿Qué mes? (¿Cuál mes?): 几月？ (Jǐ yuè?).\n\nEl Verbo Ser (shì) no es necesario:\nAl igual que con los días de la semana, al hablar de meses o fechas no se usa el verbo ser.\n- Hoy (es) Enero: 今天一月 (Jīntiān yī yuè).",
+          "audio": "Para preguntar en qué mes estamos, necesitamos una palabra nueva. Ya aprendiste 'Duōshao' para preguntar 'Cuánto' en precios y dinero. Pero para números pequeños, como meses, horas o miembros de una familia, usamos una palabra cortita: 'jǐ'. Jǐ significa 'cuántos' pero para grupos pequeños. Así que para preguntar '¿Qué mes es?', simplemente dices 'Jǐ yuè'. ¿Cuántos meses? o ¿Cuál mes? Y recuerda la regla de oro: al responder, no uses el verbo ser. Simplemente di Jīntiān yī yuè. Hoy (es) Enero."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra tu control del tiempo y los meses lunares.",
+      "questions": [
+        { "id": "zh-a2-31-q1", "type": "quiz_choice", "question": "¿Qué significa la palabra 月 (yuè)?", "options": ["Mes o Luna.", "Día o Sol.", "Semana o Estrella.", "Año o Tierra."], "correct_answer": "Mes o Luna.", "explanation": "Yuè significa Luna y, por extensión en el calendario, Mes." },
+        { "id": "zh-a2-31-q2", "type": "quiz_choice", "question": "Gramática matemática: ¿Cuál es la estructura correcta para decir los meses del año?", "options": ["Número + Mes (ej. 1 + Mes = Enero).", "Mes + Número (ej. Mes + 1 = Enero).", "Tienen nombres únicos que hay que memorizar.", "Se combinan con los días de la semana."], "correct_answer": "Número + Mes (ej. 1 + Mes = Enero).", "explanation": "A diferencia de la semana (donde el número va después), para los meses el número va primero." },
+        { "id": "zh-a2-31-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Enero' en chino?", "options": ["Yī yuè (一月).", "Yuè yī (月一).", "Xīngqī yī (星期一).", "Yī tiān (一天)."], "correct_answer": "Yī yuè (一月).", "explanation": "Uno (yī) + Mes (yuè)." },
+        { "id": "zh-a2-31-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Diciembre'?", "options": ["Shí èr yuè (十二月).", "Shí yī yuè (十一月).", "Yuè shí èr (月十二).", "Èr yuè (二月)."], "correct_answer": "Shí èr yuè (十二月).", "explanation": "Doce (shí èr) + Mes (yuè)." },
+        { "id": "zh-a2-31-q5", "type": "quiz_choice", "question": "¿Qué mes es 八月 (bā yuè)?", "options": ["Agosto (Mes 8).", "Septiembre (Mes 9).", "Julio (Mes 7).", "Octubre (Mes 10)."], "correct_answer": "Agosto (Mes 8).", "explanation": "Ocho (bā) + mes (yuè)." },
+        { "id": "zh-a2-31-q6", "type": "quiz_choice", "question": "Vocabulario interrogativo: ¿Qué palabra se usa para preguntar 'Cuántos' (para cantidades pequeñas, como los meses)?", "options": ["Jǐ (几).", "Duōshao (多少).", "Shéi (谁).", "Nǎlǐ (哪里)."], "correct_answer": "Jǐ (几).", "explanation": "Jǐ (3er tono) se usa para números que generalmente se cuentan con los dedos (del 1 al 12)." },
+        { "id": "zh-a2-31-q7", "type": "quiz_choice", "question": "¿Cómo preguntas '¿Qué mes (es)?' o '¿En qué mes estamos?'", "options": ["Jǐ yuè? (几月？).", "Duōshao yuè? (多少月？).", "Yuè jǐ? (月几？).", "Jǐ tiān? (几天？)."], "correct_answer": "Jǐ yuè? (几月？).", "explanation": "Cuántos (jǐ) + mes (yuè)." },
+        { "id": "zh-a2-31-q8", "type": "quiz_choice", "question": "Diferencia crítica: ¿Qué significa 星期三 (xīngqī sān) y qué significa 三月 (sān yuè)?", "options": ["Xīngqī sān = Miércoles / Sān yuè = Marzo.", "Xīngqī sān = Marzo / Sān yuè = Miércoles.", "Xīngqī sān = Semana 3 / Sān yuè = Luna 3.", "Son exactamente lo mismo."], "correct_answer": "Xīngqī sān = Miércoles / Sān yuè = Marzo.", "explanation": "Semana + 3 = Miércoles. 3 + Mes = Marzo." },
+        { "id": "zh-a2-31-q9", "type": "quiz_choice", "question": "¿Cómo dirías 'Hoy es Abril' (forma más natural)?", "options": ["Jīntiān sì yuè (今天四月).", "Jīntiān shì sì yuè (今天是四月).", "Jīntiān xīngqī sì (今天星期四).", "Sì yuè shì jīntiān (四月是今天)."], "correct_answer": "Jīntiān sì yuè (今天四月).", "explanation": "Hoy (Jīntiān) + Abril (Sì yuè). Se omite el verbo ser." },
+        { "id": "zh-a2-31-q10", "type": "quiz_choice", "question": "Traduce: 'Wǒmen wǔ yuè qù Zhōngguó' (我们五月去中国).", "options": ["Nosotros vamos a China en Mayo.", "Nosotros cinco vamos a China.", "Nosotros vamos a China el viernes.", "Nosotros vamos a China por cinco meses."], "correct_answer": "Nosotros vamos a China en Mayo.", "explanation": "Nosotros (wǒmen) + en mayo (wǔ yuè - el tiempo va antes del verbo) + vamos a China (qù Zhōngguó)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para los meses. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a2-31-f1", "type": "fill_input", "question": "Mes / Luna: ____ (yue)", "correct_answer": "yue", "explanation": "yue" },
+        { "id": "zh-a2-31-f2", "type": "fill_input", "question": "Enero (Mes 1): yi ____", "correct_answer": "yue", "explanation": "yue" },
+        { "id": "zh-a2-31-f3", "type": "fill_input", "question": "Febrero (Mes 2): ____ yue (er)", "correct_answer": "er", "explanation": "er" },
+        { "id": "zh-a2-31-f4", "type": "fill_input", "question": "Marzo (Mes 3): ____ yue (san)", "correct_answer": "san", "explanation": "san" },
+        { "id": "zh-a2-31-f5", "type": "fill_input", "question": "Septiembre (Mes 9): ____ yue (jiu)", "correct_answer": "jiu", "explanation": "jiu" },
+        { "id": "zh-a2-31-f6", "type": "fill_input", "question": "Diciembre (Mes 12): shi er ____", "correct_answer": "yue", "explanation": "yue" },
+        { "id": "zh-a2-31-f7", "type": "fill_input", "question": "Cuántos (Para números < 12): ____ (ji)", "correct_answer": "ji", "explanation": "ji" },
+        { "id": "zh-a2-31-f8", "type": "fill_input", "question": "¿Qué mes?: ji ____", "correct_answer": "yue", "explanation": "yue" },
+        { "id": "zh-a2-31-f9", "type": "fill_input", "question": "Hoy es mayo (Mes 5): jin tian ____ yue (wu)", "correct_answer": "wu", "explanation": "wu" },
+        { "id": "zh-a2-31-f10", "type": "fill_input", "question": "Octubre (Mes 10): ____ yue (shi)", "correct_answer": "shi", "explanation": "shi" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y determina de qué mes están hablando.",
+      "questions": [
+        { "id": "zh-a2-31-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "一月", "options": ["Enero", "Lunes", "Febrero", "Un mes"], "correct_answer": "Enero", "explanation": "El audio dice: Yī yuè (1 mes)." },
+        { "id": "zh-a2-31-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "二月", "options": ["Febrero", "Martes", "Dos meses", "Marzo"], "correct_answer": "Febrero", "explanation": "El audio dice: Èr yuè (2 mes)." },
+        { "id": "zh-a2-31-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "十二月", "options": ["Diciembre", "Noviembre", "Diez meses", "Enero"], "correct_answer": "Diciembre", "explanation": "El audio dice: Shí èr yuè (12 mes)." },
+        { "id": "zh-a2-31-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "几月？", "options": ["¿Qué mes?", "¿Qué día?", "¿Cuántos años?", "¿Cuánto dinero?"], "correct_answer": "¿Qué mes?", "explanation": "El audio dice: Jǐ yuè? (¿Cuántos meses?)." },
+        { "id": "zh-a2-31-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "今天八月", "options": ["Hoy es Agosto", "Hoy es Septiembre", "Hoy es Julio", "Mañana es Agosto"], "correct_answer": "Hoy es Agosto", "explanation": "El audio dice: Jīntiān bā yuè." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Months",
+      "pairs": [
+        {"id": "zh-a2-31-p1", "source": "月 (yuè)", "target": "Mes / Luna"},
+        {"id": "zh-a2-31-p2", "source": "几 (jǐ)", "target": "Cuántos (Para números menores a 12)"},
+        {"id": "zh-a2-31-p3", "source": "一月 (yī yuè)", "target": "Enero"},
+        {"id": "zh-a2-31-p4", "source": "三月 (sān yuè)", "target": "Marzo"},
+        {"id": "zh-a2-31-p5", "source": "六月 (liù yuè)", "target": "Junio"},
+        {"id": "zh-a2-31-p6", "source": "八月 (bā yuè)", "target": "Agosto"},
+        {"id": "zh-a2-31-p7", "source": "十月 (shí yuè)", "target": "Octubre"},
+        {"id": "zh-a2-31-p8", "source": "十二月 (shí èr yuè)", "target": "Diciembre"},
+        {"id": "zh-a2-31-p9", "source": "几月？(jǐ yuè?)", "target": "¿Qué mes (es)?"},
+        {"id": "zh-a2-31-p10", "source": "今天二月 (jīntiān èr yuè)", "target": "Hoy es Febrero"}
+      ]
+    }
+  ]
+}

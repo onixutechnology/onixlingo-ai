@@ -1,0 +1,101 @@
+{
+  "id": "a1-42",
+  "title": "Days & Months",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Calendar", "Days", "Months"],
+  "completion_message": "¡Magnífico! Ya puedes manejar fechas, días y meses en el calendario de tu empresa.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Días y Meses",
+      "parts": [
+        { "visual": "Los días de la semana: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. Siempre van con mayúscula.", "audio": "The days of the week are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. They are always capitalized." },
+        { "visual": "Los meses también van con mayúscula inicial: January, February... December.", "audio": "Months also start with a capital letter: January, February... December." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona el día o mes correcto.",
+      "questions": [
+        { "id": "a1-42-q1", "type": "quiz_choice", "question": "The first day of the work week is ____.", "options": ["Monday", "Sunday", "Friday", "Tuesday"], "correct_answer": "Monday", "explanation": "Lunes (Monday)." },
+        { "id": "a1-42-q2", "type": "quiz_choice", "question": "The meeting is on ____ (Martes).", "options": ["Tuesday", "Thursday", "Wednesday", "Today"], "correct_answer": "Tuesday", "explanation": "Martes es Tuesday." },
+        { "id": "a1-42-q3", "type": "quiz_choice", "question": "Hump day is ____ (Miércoles).", "options": ["Wednesday", "Thursday", "Tuesday", "Friday"], "correct_answer": "Wednesday", "explanation": "Miércoles (Wednesday)." },
+        { "id": "a1-42-q4", "type": "quiz_choice", "question": "We have a deadline on ____ (Jueves).", "options": ["Thursday", "Tuesday", "Friday", "Saturday"], "correct_answer": "Thursday", "explanation": "Jueves es Thursday." },
+        { "id": "a1-42-q5", "type": "quiz_choice", "question": "Casual ____ (Viernes).", "options": ["Friday", "Friday's", "Free day", "Monday"], "correct_answer": "Friday", "explanation": "Viernes casual." },
+        { "id": "a1-42-q6", "type": "quiz_choice", "question": "The first month of the year is ____.", "options": ["January", "February", "June", "July"], "correct_answer": "January", "explanation": "Enero (January)." },
+        { "id": "a1-42-q7", "type": "quiz_choice", "question": "Valentine's Day is in ____.", "options": ["February", "March", "April", "May"], "correct_answer": "February", "explanation": "Febrero (February)." },
+        { "id": "a1-42-q8", "type": "quiz_choice", "question": "The spring starts in ____ (Marzo).", "options": ["March", "May", "April", "June"], "correct_answer": "March", "explanation": "Marzo." },
+        { "id": "a1-42-q9", "type": "quiz_choice", "question": "Taxes are due in ____ (Abril).", "options": ["April", "August", "March", "May"], "correct_answer": "April", "explanation": "Abril." },
+        { "id": "a1-42-q10", "type": "quiz_choice", "question": "Labor Day in many countries is in ____ (Mayo).", "options": ["May", "March", "Monday", "June"], "correct_answer": "May", "explanation": "Mayo." },
+        { "id": "a1-42-q11", "type": "quiz_choice", "question": "Half of the year is ____ (Junio).", "options": ["June", "July", "January", "May"], "correct_answer": "June", "explanation": "Junio." },
+        { "id": "a1-42-q12", "type": "quiz_choice", "question": "Summer vacation is in ____ (Julio).", "options": ["July", "June", "January", "August"], "correct_answer": "July", "explanation": "Julio." },
+        { "id": "a1-42-q13", "type": "quiz_choice", "question": "My birthday is in ____ (Agosto).", "options": ["August", "Autumn", "April", "September"], "correct_answer": "August", "explanation": "Agosto." },
+        { "id": "a1-42-q14", "type": "quiz_choice", "question": "Back to school in ____ (Septiembre).", "options": ["September", "October", "November", "December"], "correct_answer": "September", "explanation": "Septiembre." },
+        { "id": "a1-42-q15", "type": "quiz_choice", "question": "Halloween is in ____ (Octubre).", "options": ["October", "November", "August", "September"], "correct_answer": "October", "explanation": "Octubre." },
+        { "id": "a1-42-q16", "type": "quiz_choice", "question": "Thanksgiving is in ____ (Noviembre).", "options": ["November", "December", "October", "September"], "correct_answer": "November", "explanation": "Noviembre." },
+        { "id": "a1-42-q17", "type": "quiz_choice", "question": "Christmas is in ____ (Diciembre).", "options": ["December", "November", "January", "October"], "correct_answer": "December", "explanation": "Diciembre." },
+        { "id": "a1-42-q18", "type": "quiz_choice", "question": "The ____ is Saturday and Sunday.", "options": ["weekend", "week", "workday", "weekday"], "correct_answer": "weekend", "explanation": "Fin de semana (weekend)." },
+        { "id": "a1-42-q19", "type": "quiz_choice", "question": "I don't work on ____ (Domingos).", "options": ["Sundays", "Mondays", "Sunday", "Sunny"], "correct_answer": "Sundays", "explanation": "Domingos (plural, para hábito)." },
+        { "id": "a1-42-q20", "type": "quiz_choice", "question": "See you on ____ (Lunes).", "options": ["Monday", "monday", "Month", "Morning"], "correct_answer": "Monday", "explanation": "Siempre con mayúscula inicial." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el día o mes exacto en inglés (con mayúscula inicial).",
+      "questions": [
+        { "id": "a1-42-f1", "type": "fill_input", "question": "The first day is ____ (Lunes).", "correct_answer": "Monday", "explanation": "Monday." },
+        { "id": "a1-42-f2", "type": "fill_input", "question": "See you on ____ (Martes).", "correct_answer": "Tuesday", "explanation": "Tuesday." },
+        { "id": "a1-42-f3", "type": "fill_input", "question": "Meeting on ____ (Miércoles).", "correct_answer": "Wednesday", "explanation": "Wednesday." },
+        { "id": "a1-42-f4", "type": "fill_input", "question": "Deadline on ____ (Jueves).", "correct_answer": "Thursday", "explanation": "Thursday." },
+        { "id": "a1-42-f5", "type": "fill_input", "question": "Casual ____ (Viernes).", "correct_answer": "Friday", "explanation": "Friday." },
+        { "id": "a1-42-f6", "type": "fill_input", "question": "Month 1 is ____ (Enero).", "correct_answer": "January", "explanation": "January." },
+        { "id": "a1-42-f7", "type": "fill_input", "question": "Month 2 is ____ (Febrero).", "correct_answer": "February", "explanation": "February." },
+        { "id": "a1-42-f8", "type": "fill_input", "question": "Month 6 is ____ (Junio).", "correct_answer": "June", "explanation": "June." },
+        { "id": "a1-42-f9", "type": "fill_input", "question": "Month 12 is ____ (Diciembre).", "correct_answer": "December", "explanation": "December." },
+        { "id": "a1-42-f10", "type": "fill_input", "question": "The ____ (Fin de semana).", "correct_answer": "weekend", "explanation": "weekend." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-42-p1", "source": "Monday", "target": "Lunes"},
+        {"id": "a1-42-p2", "source": "Tuesday", "target": "Martes"},
+        {"id": "a1-42-p3", "source": "Wednesday", "target": "Miércoles"},
+        {"id": "a1-42-p4", "source": "Thursday", "target": "Jueves"},
+        {"id": "a1-42-p5", "source": "Friday", "target": "Viernes"},
+        {"id": "a1-42-p6", "source": "January", "target": "Enero"},
+        {"id": "a1-42-p7", "source": "June", "target": "Junio"},
+        {"id": "a1-42-p8", "source": "August", "target": "Agosto"},
+        {"id": "a1-42-p9", "source": "December", "target": "Diciembre"},
+        {"id": "a1-42-p10", "source": "Weekend", "target": "Fin de semana"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-42-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "On Monday.", "options": ["On Monday.", "In Monday.", "At Monday.", "On Sundays."], "correct_answer": "On Monday.", "explanation": "Audio exacto." },
+        { "id": "a1-42-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Next Tuesday.", "options": ["Next Tuesday.", "Next Thursday.", "This Tuesday.", "Next week."], "correct_answer": "Next Tuesday.", "explanation": "Audio exacto." },
+        { "id": "a1-42-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Every Wednesday.", "options": ["Every Wednesday.", "Every Tuesday.", "This Wednesday.", "Next Wednesday."], "correct_answer": "Every Wednesday.", "explanation": "Audio exacto." },
+        { "id": "a1-42-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "See you on Thursday.", "options": ["See you on Thursday.", "See you on Tuesday.", "See you on Friday.", "See you tomorrow."], "correct_answer": "See you on Thursday.", "explanation": "Audio exacto." },
+        { "id": "a1-42-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Casual Friday.", "options": ["Casual Friday.", "Casual Monday.", "Visual Friday.", "Actual Friday."], "correct_answer": "Casual Friday.", "explanation": "Audio exacto." },
+        { "id": "a1-42-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In January.", "options": ["In January.", "On January.", "At January.", "In February."], "correct_answer": "In January.", "explanation": "Audio exacto." },
+        { "id": "a1-42-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In February.", "options": ["In February.", "In January.", "In March.", "On February."], "correct_answer": "In February.", "explanation": "Audio exacto." },
+        { "id": "a1-42-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In June and July.", "options": ["In June and July.", "In July and August.", "In June or July.", "In May and June."], "correct_answer": "In June and July.", "explanation": "Audio exacto." },
+        { "id": "a1-42-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In December.", "options": ["In December.", "In November.", "In September.", "In October."], "correct_answer": "In December.", "explanation": "Audio exacto." },
+        { "id": "a1-42-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Have a good weekend.", "options": ["Have a good weekend.", "Have a good week.", "Have a good day.", "Have a good work."], "correct_answer": "Have a good weekend.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

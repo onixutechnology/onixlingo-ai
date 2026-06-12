@@ -128,7 +128,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
       setCheckoutStatusText("Transmitiendo token corporativo...");
       await new Promise(resolve => setTimeout(resolve, 600));
       
-      setCheckoutStatusText("Registrando credenciales C-Suite...");
+      setCheckoutStatusText("Registrando credenciales Alta Dirección...");
       await apiClient.post('/dev-activate-pro', { tier: simulatedCheckoutTier, billing_period: billingPeriod });
       
       setCheckoutSuccess(true);
@@ -142,7 +142,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
 
   return (
     <div className={isEmbedded ? "w-full my-8" : "fixed inset-0 z-[100] flex items-center justify-center p-4 bg-sky-950/40 backdrop-blur-md overflow-y-auto"}>
-      <div className={`bg-sky-50 border border-sky-200 rounded-xl max-w-5xl w-full p-6 sm:p-10 relative ${isEmbedded ? 'shadow-[0_10px_40px_rgba(14,165,233,0.1)] mx-auto' : 'shadow-[0_20px_80px_rgba(14,165,233,0.15)] my-8 transform scale-[0.70] origin-center'}`}>
+      <div className={`bg-sky-50 border border-sky-200 rounded-none max-w-5xl w-full p-6 sm:p-10 relative ${isEmbedded ? 'shadow-[0_10px_40px_rgba(14,165,233,0.1)] mx-auto' : 'shadow-[0_20px_80px_rgba(14,165,233,0.15)] my-8 transform scale-[0.70] origin-center'}`}>
         
         {/* Botón de cerrar */}
         {!isEmbedded && (
@@ -178,10 +178,10 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
               onClick={() => setBillingPeriod(p => p === 'monthly' ? 'annual' : 'monthly')}
               className="w-12 h-6 bg-sky-200 rounded-full p-0.5 relative transition-all border border-sky-300"
             >
-              <div className={`w-5 h-5 bg-sky-600 rounded-full transition-all ${billingPeriod === 'annual' ? 'translate-x-6 bg-amber-500' : ''}`} />
+              <div className={`w-5 h-5 bg-sky-600 rounded-full transition-all ${billingPeriod === 'annual' ? 'translate-x-6 bg-[#D4AF37]/20' : ''}`} />
             </button>
-            <span className={`text-[10px] font-black uppercase tracking-wider flex items-center gap-1.5 ${billingPeriod === 'annual' ? 'text-amber-600' : 'text-sky-400'}`}>
-              Anual <span className="bg-emerald-100 text-emerald-700 text-[8px] px-1.5 py-0.5 border border-emerald-200 rounded-full font-black uppercase">Ahorra hasta 50%</span>
+            <span className={`text-[10px] font-black uppercase tracking-wider flex items-center gap-1.5 ${billingPeriod === 'annual' ? 'text-[#D4AF37]' : 'text-sky-400'}`}>
+              Anual <span className="bg-emerald-100 text-[#D4AF37] text-[8px] px-1.5 py-0.5 border border-[#D4AF37]/30 rounded-full font-black uppercase">Ahorra hasta 50%</span>
             </span>
           </div>
         </div>
@@ -190,11 +190,11 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10 items-stretch mb-10">
           
           {/* Tarjeta 1: FREE */}
-          <div className="bg-white border border-sky-200 rounded-xl p-6 flex flex-col justify-between hover:border-sky-300 transition-all shadow-sm">
+          <div className="bg-white border border-sky-200 rounded-none p-6 flex flex-col justify-between hover:border-sky-300 transition-all shadow-none">
             <div>
               <div className="text-[10px] font-black text-sky-500 uppercase tracking-widest mb-1">BÁSICO</div>
               <h3 className="text-lg font-bold text-sky-950 mb-2">FREE</h3>
-              <p className="text-xs text-sky-600/80 leading-relaxed mb-6">Para arrancar tus bases de forma guiada.</p>
+              <p className="text-sm text-slate-900 font-medium leading-relaxed mb-6">Para arrancar tus bases de forma guiada.</p>
               
               <div className="flex items-baseline gap-1 text-sky-950 mb-6">
                 <span className="text-3xl font-black">$0</span>
@@ -203,7 +203,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
               
               <hr className="border-sky-100 mb-6" />
               
-              <ul className="space-y-3.5 text-xs text-sky-800">
+              <ul className="space-y-3.5 text-sm text-slate-900">
                 <li className="flex gap-2.5 items-start">
                   <Check className="text-sky-500 shrink-0 mt-0.5" size={14} />
                   <span>Lecciones generales del nivel A1 (Inglés)</span>
@@ -230,7 +230,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
             <div className="mt-8">
               <button 
                 disabled 
-                className="w-full py-3 bg-sky-50 text-sky-400 border border-sky-100 text-[10px] font-black uppercase tracking-widest rounded-lg cursor-default"
+                className="w-full py-3 bg-sky-50 text-sky-400 border border-sky-100 text-[10px] font-black uppercase tracking-widest rounded-none cursor-default"
               >
                 Plan Activo por Defecto
               </button>
@@ -238,28 +238,28 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
           </div>
 
           {/* Tarjeta 2: PRO */}
-          <div className="bg-sky-50 border-2 border-sky-300 rounded-xl p-6 flex flex-col justify-between hover:border-sky-400 transition-all relative shadow-lg">
-            <div className="absolute top-0 right-6 -translate-y-1/2 bg-sky-500 text-white text-[7px] font-black uppercase tracking-[0.2em] px-2.5 py-1 rounded-full shadow-sm">
+          <div className="bg-sky-50 border-2 border-sky-300 rounded-none p-6 flex flex-col justify-between hover:border-sky-400 transition-all relative shadow-none">
+            <div className="absolute top-0 right-6 -translate-y-1/2 bg-sky-500 text-slate-900 text-[7px] font-black uppercase tracking-[0.2em] px-2.5 py-1 rounded-full shadow-none">
               RECOMENDADO
             </div>
             
             <div>
               <div className="text-[10px] font-black text-sky-600 uppercase tracking-widest mb-1">ESTÁNDAR</div>
               <h3 className="text-lg font-bold text-sky-950 mb-2">PRO</h3>
-              <p className="text-xs text-sky-700 leading-relaxed mb-6">Acceso completo a todos los niveles estándar del idioma.</p>
+              <p className="text-sm text-slate-900 font-medium leading-relaxed mb-6">Acceso completo a todos los niveles estándar del idioma.</p>
               
               <div className="flex items-baseline gap-1 text-sky-950 mb-6">
                 <span className="text-sm text-sky-400 line-through mr-1">{billingPeriod === 'monthly' ? '$199' : '$1499'}</span>
                 <span className="text-3xl font-black text-sky-900">{billingPeriod === 'monthly' ? '$129' : '$799'}</span>
                 <span className="text-sky-500 font-bold uppercase text-[8px] tracking-widest">MXN / {billingPeriod === 'monthly' ? 'mes' : 'año'}</span>
                 {billingPeriod === 'annual' && (
-                  <span className="text-[8px] text-emerald-600 font-bold ml-2">(Equivale a $66 MXN/mes)</span>
+                  <span className="text-[8px] text-[#D4AF37] font-bold ml-2">(Equivale a $66 MXN/mes)</span>
                 )}
               </div>
               
               <hr className="border-sky-200 mb-6" />
               
-              <ul className="space-y-3.5 text-xs text-sky-800">
+              <ul className="space-y-3.5 text-sm text-slate-900">
                 <li className="flex gap-2.5 items-start">
                   <Check className="text-sky-600 shrink-0 mt-0.5" size={14} />
                   <span><strong>Acceso ilimitado a las 900 lecciones</strong> (A1 a C1).</span>
@@ -291,7 +291,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
               <button 
                 onClick={() => handleSelectPlan('pro')}
                 disabled={loading || couponLoading}
-                className="w-full py-3 bg-sky-500 hover:bg-sky-600 text-white font-black text-[10px] uppercase tracking-widest rounded-lg transition-all active:scale-95 flex items-center justify-center gap-1.5 shadow-md shadow-sky-500/20"
+                className="w-full py-3 bg-sky-500 hover:bg-sky-600 text-slate-900 font-black text-[10px] uppercase tracking-widest rounded-none transition-all active:scale-95 flex items-center justify-center gap-1.5 shadow-none shadow-sky-500/20"
               >
                 {loading ? <Loader2 size={12} className="animate-spin" /> : <Zap size={12} fill="currentColor" />}
                 ADQUIRIR PLAN PRO
@@ -300,15 +300,15 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
           </div>
 
           {/* Tarjeta 3: EXECUTIVE */}
-          <div className="bg-[#f0f7ff] border-2 border-amber-300 rounded-xl p-6 flex flex-col justify-between hover:border-amber-400 transition-all relative shadow-lg">
-            <div className="absolute top-0 right-6 -translate-y-1/2 bg-amber-500 text-white text-[7px] font-black uppercase tracking-[0.2em] px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
-              <Crown size={8} /> C-SUITE ELITE
+          <div className="bg-[#f0f7ff] border-2 border-amber-300 rounded-none p-6 flex flex-col justify-between hover:border-amber-400 transition-all relative shadow-none">
+            <div className="absolute top-0 right-6 -translate-y-1/2 bg-[#D4AF37]/20 text-slate-900 text-[7px] font-black uppercase tracking-[0.2em] px-2.5 py-1 rounded-full flex items-center gap-1 shadow-none">
+              <Crown size={8} /> ALTA DIRECCIÓN ELITE
             </div>
 
             <div>
-              <div className="text-[10px] font-black text-amber-600 uppercase tracking-widest mb-1">TITANIUM</div>
+              <div className="text-[10px] font-black text-[#D4AF37] uppercase tracking-widest mb-1">TITANIUM</div>
               <h3 className="text-lg font-bold text-sky-950 mb-2">EXECUTIVE</h3>
-              <p className="text-xs text-sky-700 leading-relaxed mb-6">El desbloqueo definitivo. Inglés de negocios y tutoría avanzada.</p>
+              <p className="text-sm text-slate-900 font-medium leading-relaxed mb-6">El desbloqueo definitivo. Inglés de negocios y tutoría avanzada.</p>
               
               <div className="flex items-baseline gap-1 text-sky-950 mb-6">
                 <span className="text-sm text-sky-400 line-through mr-1">
@@ -319,31 +319,31 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                 </span>
                 <span className="text-sky-500 text-xs font-semibold">MXN / {billingPeriod === 'monthly' ? 'mes' : 'año'}</span>
                 {billingPeriod === 'annual' && (
-                  <span className="text-[8px] text-amber-600 font-bold ml-2">(Equivale a $125 MXN/mes)</span>
+                  <span className="text-[8px] text-[#D4AF37] font-bold ml-2">(Equivale a $125 MXN/mes)</span>
                 )}
               </div>
               
               <hr className="border-sky-200 mb-6" />
               
-              <ul className="space-y-3.5 text-xs text-sky-800">
+              <ul className="space-y-3.5 text-sm text-slate-900">
                 <li className="flex gap-2.5 items-start">
-                  <Check className="text-amber-500 shrink-0 mt-0.5" size={14} />
+                  <Check className="text-[#D4AF37] shrink-0 mt-0.5" size={14} />
                   <span><strong>Desbloqueo de TODO el sistema</strong> sin restricciones.</span>
                 </li>
                 <li className="flex gap-2.5 items-start">
-                  <Check className="text-amber-500 shrink-0 mt-0.5" size={14} />
+                  <Check className="text-[#D4AF37] shrink-0 mt-0.5" size={14} />
                   <span><strong>Temario Executive completo</strong> (negociaciones, finanzas).</span>
                 </li>
                 <li className="flex gap-2.5 items-start">
-                  <Check className="text-amber-500 shrink-0 mt-0.5" size={14} />
+                  <Check className="text-[#D4AF37] shrink-0 mt-0.5" size={14} />
                   <span><strong>Tutoría conversacional ilimitada por IA</strong>.</span>
                 </li>
                 <li className="flex gap-2.5 items-start">
-                  <Check className="text-amber-500 shrink-0 mt-0.5" size={14} />
+                  <Check className="text-[#D4AF37] shrink-0 mt-0.5" size={14} />
                   <span><strong>Acceso prioritario a sorteos premium</strong> físicos.</span>
                 </li>
                 <li className="flex gap-2.5 items-start">
-                  <Check className="text-amber-500 shrink-0 mt-0.5" size={14} />
+                  <Check className="text-[#D4AF37] shrink-0 mt-0.5" size={14} />
                   <span><strong>Certificación oficial</strong> de OnixLingo.</span>
                 </li>
               </ul>
@@ -353,7 +353,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
               <button 
                 onClick={() => handleSelectPlan('executive')}
                 disabled={loading || couponLoading}
-                className="w-full py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-white font-black text-[10px] uppercase tracking-widest rounded-lg transition-all active:scale-95 flex items-center justify-center gap-1.5 shadow-md shadow-amber-500/20"
+                className="w-full py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-900 font-black text-[10px] uppercase tracking-widest rounded-none transition-all active:scale-95 flex items-center justify-center gap-1.5 shadow-none shadow-amber-500/20"
               >
                 {loading ? <Loader2 size={12} className="animate-spin" /> : <Crown size={12} fill="currentColor" />}
                 ADQUIRIR PLAN EXECUTIVE
@@ -378,12 +378,12 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
               value={couponCode}
               onChange={(e) => setCouponCode(e.target.value)}
               disabled={couponLoading || loading}
-              className="flex-1 bg-white border border-sky-200 text-sky-950 rounded-lg px-4 py-2.5 text-xs placeholder:text-sky-400 focus:outline-none focus:border-sky-500/50 transition-colors uppercase font-medium tracking-wider shadow-sm"
+              className="flex-1 bg-white border border-sky-200 text-sky-950 rounded-none px-4 py-2.5 text-xs placeholder:text-sky-400 focus:outline-none focus:border-sky-500/50 transition-colors uppercase font-medium tracking-wider shadow-none"
             />
             <button
               type="submit"
               disabled={couponLoading || loading || !couponCode.trim()}
-              className="bg-sky-600 hover:bg-sky-700 text-white font-bold px-4 py-2.5 rounded-lg text-xs transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1 shadow-sm active:scale-95"
+              className="bg-sky-600 hover:bg-sky-700 text-slate-900 font-bold px-4 py-2.5 rounded-none text-xs transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1 shadow-none active:scale-95"
             >
               {couponLoading ? (
                 <Loader2 size={14} className="animate-spin" />
@@ -396,13 +396,13 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
             <p className="text-center text-[10px] text-rose-500 font-medium mt-2 animate-pulse">⚠️ {couponError}</p>
           )}
           {couponSuccess && (
-            <p className="text-center text-[10px] text-emerald-600 font-semibold mt-2 animate-pulse">🎉 {couponSuccess}</p>
+            <p className="text-center text-[10px] text-[#D4AF37] font-semibold mt-2 animate-pulse">🎉 {couponSuccess}</p>
           )}
         </div>
 
         <div className="mt-8 text-center border-t border-sky-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <span className="text-[10px] text-sky-600 flex items-center gap-1 font-medium">
-            <ShieldCheck size={14} className="text-emerald-500" />
+            <ShieldCheck size={14} className="text-[#D4AF37]" />
             Transacciones seguras encriptadas SSL por Paddle.
           </span>
           {!isEmbedded && (
@@ -421,7 +421,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
       {/* ─── PASARELA DE CHECKOUT DE SIMULACIÓN PREMIUM ─── */}
       {simulatedCheckoutTier && (
         <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-sky-950/70 backdrop-blur-md animate-fade-in">
-          <div className="bg-sky-50 border border-sky-200 max-w-4xl w-full p-6 md:p-8 relative shadow-[0_20px_60px_rgba(14,165,233,0.2)] flex flex-col md:flex-row gap-8 rounded-xl transform scale-[0.80] origin-center">
+          <div className="bg-sky-50 border border-sky-200 max-w-4xl w-full p-6 md:p-8 relative shadow-[0_20px_60px_rgba(14,165,233,0.2)] flex flex-col md:flex-row gap-8 rounded-none transform scale-[0.80] origin-center">
             
             {/* Botón de cerrar */}
             <button 
@@ -446,7 +446,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
               <div className="w-full text-center py-10 flex flex-col items-center justify-center">
                 <div className="relative mb-6">
                   <div className="w-20 h-20 bg-amber-100 border border-amber-300 flex items-center justify-center rounded-full shadow-[0_0_40px_rgba(245,158,11,0.2)]">
-                    <Crown className="text-amber-500" size={40} />
+                    <Crown className="text-[#D4AF37]" size={40} />
                   </div>
                   <div className="absolute -top-1 -right-1 text-sky-500 animate-pulse">
                     <Sparkles size={20} />
@@ -457,12 +457,12 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                   ¡Membresía Activada con Éxito!
                 </h3>
                 <p className="text-xs text-sky-700 max-w-md mx-auto leading-relaxed mb-8">
-                  Tu cuenta ha sido promovida al rango <strong className="text-amber-600 font-bold">{simulatedCheckoutTier.toUpperCase()}</strong> en nuestro entorno de desarrollo. Ahora tienes acceso ilimitado a todo el material académico y simuladores en tiempo real.
+                  Tu cuenta ha sido promovida al rango <strong className="text-[#D4AF37] font-bold">{simulatedCheckoutTier.toUpperCase()}</strong> en nuestro entorno de desarrollo. Ahora tienes acceso ilimitado a todo el material académico y simuladores en tiempo real.
                 </p>
 
                 <button
                   onClick={() => window.location.reload()}
-                  className="px-8 py-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black text-xs uppercase tracking-widest transition-all active:scale-95 shadow-lg shadow-sky-500/20 rounded-lg"
+                  className="px-8 py-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-slate-900 font-black text-xs uppercase tracking-widest transition-all active:scale-95 shadow-none shadow-sky-500/20 rounded-none"
                 >
                   Comenzar Entrenamiento
                 </button>
@@ -483,7 +483,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                       Membresía comercial {billingPeriod === 'annual' ? 'anual de pago único' : 'mensual recurrente'}.
                     </p>
 
-                    <div className="mt-4 bg-white p-4 border border-sky-100 rounded-lg shadow-sm">
+                    <div className="mt-4 bg-white p-4 border border-sky-100 rounded-none shadow-none">
                       <div className="flex justify-between text-xs text-sky-700">
                         <span>Membresía base</span>
                         <span className="font-semibold text-sky-950">
@@ -504,32 +504,32 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                   </div>
 
                   {/* MOCKUP INTERACTIVO DE TARJETA */}
-                  <div className="mt-8 relative w-full aspect-[1.586/1] bg-gradient-to-br from-blue-800 to-sky-900 border border-blue-700/80 p-5 flex flex-col justify-between shadow-xl overflow-hidden rounded-xl">
+                  <div className="mt-8 relative w-full aspect-[1.586/1] bg-gradient-to-br from-blue-800 to-sky-900 border border-blue-700/80 p-5 flex flex-col justify-between shadow-xl overflow-hidden rounded-none">
                     <div className="flex justify-between items-start">
-                      <div className="w-10 h-8 bg-gradient-to-br from-amber-200 via-amber-300 to-yellow-500 rounded-md border border-amber-100/50 shadow-inner p-1 flex flex-col justify-between">
+                      <div className="w-10 h-8 bg-gradient-to-br from-amber-200 via-amber-300 to-yellow-500 rounded-none border border-amber-100/50 shadow-inner p-1 flex flex-col justify-between">
                         <div className="border-b border-amber-800/10 h-1"></div>
                         <div className="border-b border-amber-800/10 h-1"></div>
                         <div className="border-b border-amber-800/10 h-1"></div>
                       </div>
-                      <span className="text-white font-bold italic tracking-tighter text-sm uppercase drop-shadow-md">
+                      <span className="text-slate-900 font-bold italic tracking-tighter text-sm uppercase drop-shadow-none">
                         {cardNumber.startsWith('4') ? 'Visa Pro' : cardNumber.startsWith('5') ? 'Mastercard' : 'Bank Card'}
                       </span>
                     </div>
 
-                    <div className="text-lg md:text-xl font-mono text-white tracking-widest text-center my-4 font-black drop-shadow-md">
+                    <div className="text-lg md:text-xl font-mono text-slate-900 tracking-widest text-center my-4 font-black drop-shadow-none">
                       {cardNumber || '•••• •••• •••• ••••'}
                     </div>
 
                     <div className="flex justify-between items-end">
-                      <div className="text-left drop-shadow-md">
+                      <div className="text-left drop-shadow-none">
                         <p className="text-[7px] text-sky-200 uppercase tracking-wider font-semibold">Titular</p>
-                        <p className="text-[10px] text-white font-bold tracking-wide truncate max-w-[120px] uppercase font-mono">
-                          {cardName || 'JOHN DOE'}
+                        <p className="text-[10px] text-slate-900 font-bold tracking-wide truncate max-w-[120px] uppercase font-mono">
+                          {cardName || 'NOMBRE DEL TITULAR'}
                         </p>
                       </div>
-                      <div className="text-right drop-shadow-md">
+                      <div className="text-right drop-shadow-none">
                         <p className="text-[7px] text-sky-200 uppercase tracking-wider font-semibold">Vence</p>
-                        <p className="text-[10px] text-white font-bold font-mono">
+                        <p className="text-[10px] text-slate-900 font-bold font-mono">
                           {cardExpiry || 'MM/YY'}
                         </p>
                       </div>
@@ -552,7 +552,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                             value={cardName}
                             onChange={(e) => setCardName(e.target.value.toUpperCase())}
                             disabled={checkoutProcessing}
-                            className="w-full bg-white border border-sky-200 text-sky-950 px-3 py-2 text-xs rounded-lg shadow-sm focus:outline-none focus:border-sky-500 transition-colors uppercase font-mono tracking-wider"
+                            className="w-full bg-white border border-sky-200 text-sky-950 px-3 py-2 text-xs rounded-none shadow-none focus:outline-none focus:border-sky-500 transition-colors uppercase font-mono tracking-wider"
                           />
                         </div>
 
@@ -580,7 +580,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                                 }
                               }}
                               disabled={checkoutProcessing}
-                              className="w-full bg-white border border-sky-200 text-sky-950 px-3 py-2 text-xs rounded-lg shadow-sm focus:outline-none focus:border-sky-500 transition-colors font-mono tracking-widest pl-8"
+                              className="w-full bg-white border border-sky-200 text-sky-950 px-3 py-2 text-xs rounded-none shadow-none focus:outline-none focus:border-sky-500 transition-colors font-mono tracking-widest pl-8"
                             />
                             <CreditCard size={14} className="absolute left-2.5 top-2.5 text-sky-400" />
                           </div>
@@ -604,7 +604,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                                 }
                               }}
                               disabled={checkoutProcessing}
-                              className="w-full bg-white border border-sky-200 text-sky-950 px-3 py-2 text-xs rounded-lg shadow-sm focus:outline-none focus:border-sky-500 transition-colors font-mono text-center tracking-widest"
+                              className="w-full bg-white border border-sky-200 text-sky-950 px-3 py-2 text-xs rounded-none shadow-none focus:outline-none focus:border-sky-500 transition-colors font-mono text-center tracking-widest"
                             />
                           </div>
                           <div>
@@ -617,7 +617,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                               value={cardCvv}
                               onChange={(e) => setCardCvv(e.target.value.replace(/[^0-9]/g, ''))}
                               disabled={checkoutProcessing}
-                              className="w-full bg-white border border-sky-200 text-sky-950 px-3 py-2 text-xs rounded-lg shadow-sm focus:outline-none focus:border-sky-500 transition-colors font-mono text-center tracking-widest"
+                              className="w-full bg-white border border-sky-200 text-sky-950 px-3 py-2 text-xs rounded-none shadow-none focus:outline-none focus:border-sky-500 transition-colors font-mono text-center tracking-widest"
                             />
                           </div>
                         </div>
@@ -629,7 +629,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                     )}
 
                     {checkoutProcessing ? (
-                      <div className="w-full py-3 bg-sky-50 border border-sky-200 rounded-lg flex flex-col items-center justify-center gap-2">
+                      <div className="w-full py-3 bg-sky-50 border border-sky-200 rounded-none flex flex-col items-center justify-center gap-2">
                         <Loader2 size={16} className="animate-spin text-sky-500" />
                         <span className="text-[9px] font-black text-sky-600 uppercase tracking-widest animate-pulse">
                           {checkoutStatusText}
@@ -638,7 +638,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                     ) : (
                       <button
                         type="submit"
-                        className="w-full py-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black text-[10px] uppercase tracking-widest transition-all active:scale-95 flex items-center justify-center gap-1.5 shadow-lg shadow-sky-500/20 rounded-lg"
+                        className="w-full py-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-slate-900 font-black text-[10px] uppercase tracking-widest transition-all active:scale-95 flex items-center justify-center gap-1.5 shadow-none shadow-sky-500/20 rounded-none"
                       >
                         <Lock size={12} />
                         Simular Pago Autorizado
@@ -648,7 +648,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
 
                   <div className="mt-6 text-center border-t border-sky-200 pt-4">
                     <span className="text-[8px] text-sky-600 flex items-center justify-center gap-1 font-semibold uppercase tracking-wider">
-                      <ShieldCheck size={11} className="text-emerald-500" />
+                      <ShieldCheck size={11} className="text-[#D4AF37]" />
                       Conexión Simulada Segura SSL de Grado Bancario.
                     </span>
                   </div>

@@ -1,565 +1,94 @@
 {
   "id": "fr-a2-16",
-  "title": "Revisión Semanal",
+  "title": "L'Impératif",
+  "version": "4.0-ARTISAN",
   "level": "A2",
-  "description": "Revisión rápida de tareas realizadas.",
-  "total_xp": 300,
-  "difficulty": "easy",
-  "tags": [
-    "a2",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Imperative", "Orders", "Advice"],
+  "completion_message": "¡Excelente! Ahora sabes dar órdenes y consejos como un verdadero capitán. ¡Sigue adelante!",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Revisión Semanal",
+      "title": "Dando Órdenes (A2)",
       "parts": [
         {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau A2 • Leçon A2-16 de 200\nSujet: Revisión Semanal\n\nConcept Clé:\n☞ 'FINI'\n\n[Point Grammatical - Enfoque Gramatical]\n- Le passé composé avec l'auxiliaire avoir et être (ex: 'nous avons reçu fini').\\n- Les adjectifs possessifs (mon, ton, son, notre, votre, leur).\\n- Clé Didactique : Raconter des événements passés et des activités de bureau quotidiennes.",
-          "audio": "Bienvenue à la leçon A2-16 sur Revisión Semanal. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : fini."
+          "visual": "L'Impératif (El Imperativo) se usa para dar órdenes, consejos o instrucciones.\n\nReglas básicas:\n1. Solo existe para 3 personas: TU (Tú), NOUS (Nosotros), VOUS (Usted/Vosotros).\n2. ¡NUNCA se escribe el pronombre!\n\nEjemplo con el verbo Finir (Terminar):\n- Presente: Tu finis -> Imperativo: Finis ! (¡Termina!)\n- Presente: Nous finissons -> Imperativo: Finissons ! (¡Terminemos!)\n- Presente: Vous finissez -> Imperativo: Finissez ! (¡Terminad / Terminen!)",
+          "audio": "Hoy aprenderemos a dar órdenes en francés. Para hacerlo, usamos un modo llamado el Imperativo. Es muy sencillo, porque solo funciona con tres personas: Tú, Nosotros, y Ustedes. La regla más importante de todas es que en el imperativo, ¡se prohíbe escribir el pronombre! Si en presente dices 'Tu finis', que significa 'Tú terminas', en imperativo simplemente gritas: '¡Finis!', que significa '¡Termina!'. Y si quieres decir 'Terminemos', dices simplemente: 'Finissons!'."
         },
         {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'fini' (Traducción/Uso: Revisión rápida de tareas realizadas.)\n- Application Pratique : 'Nous devons intégrer fini pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : La lettre 'e' finale dans 'fini' est généralement muette.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : fini. Répétez après moi : fini."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Au niveau A2, la ponctualité est essentielle en France; arriver 5 minutes avant l'heure démontre du professionnalisme.\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
+          "visual": "¡Atención a la regla de la 'S' rebelde!\n\nPara los verbos del PRIMER GRUPO (los que terminan en -ER, como Parler o Manger), la forma de 'TU' pierde la 's' final en el imperativo.\n\nEjemplo con Parler:\n- Presente: Tu parles\n- Imperativo: Parle ! (¡Habla! - sin 's')\n\nLos 3 Irregulares que debes memorizar:\n1. ÊTRE (Ser/Estar): Sois ! (¡Sé!), Soyons ! (¡Seamos!), Soyez ! (¡Sean!)\n2. AVOIR (Tener): Aie ! (¡Ten!), Ayons ! (¡Tengamos!), Ayez ! (¡Tengan!)\n3. SAVOIR (Saber): Sache ! (¡Sabe!), Sachons ! (¡Sepamos!), Sachez ! (¡Sepan!)",
+          "audio": "¡Cuidado con la regla de la S rebelde! Para los verbos que terminan en E R, como Parler o Manger, la forma de 'Tú' pierde la S final. En presente escribimos 'Tu parles' con S, pero si le vas a dar una orden a un amigo, debes escribir 'Parle' SIN la S. Además, tenemos tres verbos irregulares muy famosos. El verbo Être, que se convierte en 'Sois' para decir 'Sé tú mismo'. El verbo Avoir que se convierte en 'Aie', muy usado para decir 'Aie confiance', ¡ten confianza! Y el verbo saber."
         }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa si sabes dar órdenes correctamente.",
       "questions": [
-        {
-          "id": "fr-a2-16-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"fini\" dans le contexte de \"Revisión Semanal\" ?",
-          "options": [
-            "Le concept professionnel principal de fini utilisé dans Revisión Semanal.",
-            "Un terme familier à éviter dans Revisión Semanal.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Revisión Semanal."
-          ],
-          "correct_answer": "Le concept professionnel principal de fini utilisé dans Revisión Semanal.",
-          "explanation": "Comprendre la définition de \"fini\" est fondamental pour maîtriser \"Revisión Semanal\"."
-        },
-        {
-          "id": "fr-a2-16-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"fini\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Revisión Semanal\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"fini\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Revisión Semanal\" aux parties prenantes.",
-          "explanation": "Aborder \"fini\" dans les présentations professionnelles améliore la communication globale concernant \"Revisión Semanal\"."
-        },
-        {
-          "id": "fr-a2-16-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Revisión Semanal\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"fini\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"fini\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"fini\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"fini\" sont los piliers d'une exécution réussie de \"Revisión Semanal\"."
-        },
-        {
-          "id": "fr-a2-16-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Revisión Semanal\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"fini\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"fini\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"fini\" conduit souvent à des résultats inefficaces dans \"Revisión Semanal\"."
-        },
-        {
-          "id": "fr-a2-16-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"fini\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"fini\" adapté à l'environnement de \"Revisión Semanal\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"fini\" adapté à l'environnement de \"Revisión Semanal\".",
-          "explanation": "Traduire ou adapter \"fini\" nécessite de comprendre son application commerciale pratique dans \"Revisión Semanal\"."
-        },
-        {
-          "id": "fr-a2-16-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"fini\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Revisión Semanal\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Revisión Semanal\".",
-          "explanation": "Utiliser \"fini\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-a2-16-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Revisión Semanal\", comment un cadre doit-il présenter \"fini\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"fini\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-a2-16-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"fini\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"fini\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"fini\".",
-          "explanation": "Définir les jalons liés à \"fini\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-a2-16-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Revisión Semanal\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"fini\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"fini\".",
-          "explanation": "Les mots professionnels comme \"fini\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-a2-16-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"fini\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"fini\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "fra2-16-q1", "type": "quiz_choice", "question": "¿Cuáles son los TRES únicos pronombres con los que existe el imperativo?", "options": ["Tu, Nous, Vous", "Je, Tu, Il", "Vous, Ils, Elles", "Je, Nous, Vous"], "correct_answer": "Tu, Nous, Vous", "explanation": "Las órdenes se dan a ti (Tu), a nosotros mismos (Nous) o a ustedes/vosotros (Vous)." },
+        { "id": "fra2-16-q2", "type": "quiz_choice", "question": "¿Cuál es la regla de oro del Imperativo sobre los pronombres (Tu, Nous, Vous)?", "options": ["NUNCA se escriben", "SIEMPRE se escriben", "Se escriben al final de la frase", "Solo se escribe 'Tu'"], "correct_answer": "NUNCA se escriben", "explanation": "No decimos 'Tu mange!', decimos simplemente 'Mange!'." },
+        { "id": "fra2-16-q3", "type": "quiz_choice", "question": "¿Qué le pasa a la 'S' final en la forma 'Tu' de los verbos en -ER (ej: Parler)?", "options": ["Desaparece (Parle !)", "Se mantiene (Parles !)", "Se convierte en Z (Parlez !)", "Se le pone acento (Parlés !)"], "correct_answer": "Desaparece (Parle !)", "explanation": "Los verbos en -ER pierden la 's' final en la segunda persona del singular del imperativo." },
+        { "id": "fra2-16-q4", "type": "quiz_choice", "question": "¿Cómo se dice '¡Habla!' a un amigo (informal)?", "options": ["Parle !", "Parles !", "Parlez !", "Tu parles !"], "correct_answer": "Parle !", "explanation": "Pierde la S por ser verbo en -ER: Parle!" },
+        { "id": "fra2-16-q5", "type": "quiz_choice", "question": "¿Cómo se dice '¡Hablen!' a un grupo de personas (formal / plural)?", "options": ["Parlez !", "Parlez-vous !", "Vous parlez !", "Parlons !"], "correct_answer": "Parlez !", "explanation": "Es la forma de Vous sin el pronombre: Parlez !" },
+        { "id": "fra2-16-q6", "type": "quiz_choice", "question": "¿Cómo se dice '¡Vamos!' (del verbo Aller)?", "options": ["Allons !", "Allez !", "Va !", "Nous allons !"], "correct_answer": "Allons !", "explanation": "Forma de Nous (Nosotros vamos): Allons !" },
+        { "id": "fra2-16-q7", "type": "quiz_choice", "question": "¿Qué verbo pierde la 'S' en la forma Tu?", "options": ["Los verbos en -ER (y Aller)", "Los verbos en -IR", "Los verbos en -RE", "Todos los verbos"], "correct_answer": "Los verbos en -ER (y Aller)", "explanation": "Solo los del primer grupo (y aller: Va!) pierden la s." },
+        { "id": "fra2-16-q8", "type": "quiz_choice", "question": "El verbo Finir es del segundo grupo. ¿Cómo se dice '¡Termina!' a un amigo?", "options": ["Finis !", "Fini !", "Finissez !", "Tu finis !"], "correct_answer": "Finis !", "explanation": "Al no ser en -ER, SÍ conserva la 'S': Finis!" },
+        { "id": "fra2-16-q9", "type": "quiz_choice", "question": "¿Cómo se dice '¡Sé feliz!' (Verbo Être con 'Tu')?", "options": ["Sois heureux !", "Es heureux !", "Soit heureux !", "Sois-tu heureux !"], "correct_answer": "Sois heureux !", "explanation": "Être es irregular. Para Tu es 'Sois'." },
+        { "id": "fra2-16-q10", "type": "quiz_choice", "question": "¿Cómo se dice '¡Sean amables!' (Verbo Être con 'Vous')?", "options": ["Soyez gentils !", "Êtes gentils !", "Sont gentils !", "Soyons gentils !"], "correct_answer": "Soyez gentils !", "explanation": "Être para Ustedes es 'Soyez'." },
+        { "id": "fra2-16-q11", "type": "quiz_choice", "question": "¿Cómo se dice '¡Ten paciencia!' (Verbo Avoir con 'Tu')?", "options": ["Aie de la patience !", "As de la patience !", "Avoir de la patience !", "Aies de la patience !"], "correct_answer": "Aie de la patience !", "explanation": "Avoir es irregular. Para Tu es 'Aie'." },
+        { "id": "fra2-16-q12", "type": "quiz_choice", "question": "Verbo Savoir (Saber). ¿Cómo se dice '¡Sepan que...!'?", "options": ["Sachez que... !", "Savez que... !", "Sachons que... !", "Savons que... !"], "correct_answer": "Sachez que... !", "explanation": "Savoir es irregular. Para Vous es 'Sachez'." },
+        { "id": "fra2-16-q13", "type": "quiz_choice", "question": "¿Cómo se dice '¡Escucha!' (Écouter)?", "options": ["Écoute !", "Écoutes !", "Écoutez !", "Écoutons !"], "correct_answer": "Écoute !", "explanation": "Écouter termina en -ER, así que pierde la S: Écoute!" },
+        { "id": "fra2-16-q14", "type": "quiz_choice", "question": "¿Cómo dirías '¡No hables!' en imperativo negativo?", "options": ["Ne parle pas !", "Parle ne pas !", "Tu ne parles pas !", "Ne pas parle !"], "correct_answer": "Ne parle pas !", "explanation": "Ne + verbo en imperativo + pas." },
+        { "id": "fra2-16-q15", "type": "quiz_choice", "question": "¿Cuál es la orden correcta para 'Prendre' (Tomar) dirigida a Usted?", "options": ["Prenez !", "Prend !", "Prendre !", "Prenons !"], "correct_answer": "Prenez !", "explanation": "Forma de Usted: Prenez !" }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo en imperativo (recuerda la regla de la S para verbos -ER).",
       "questions": [
-        {
-          "id": "fr-a2-16-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 1) :",
-          "parts": [
-            "notre",
-            "fini",
-            "pendant",
-            "les",
-            "réunions.",
-            "Nous",
-            "utilisons"
-          ],
-          "correct_order": [
-            "Nous",
-            "utilisons",
-            "notre",
-            "fini",
-            "pendant",
-            "les",
-            "réunions."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a2-16-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 2) :",
-          "parts": [
-            "fini",
-            "pour",
-            "le",
-            "projet.",
-            "Voici",
-            "notre"
-          ],
-          "correct_order": [
-            "Voici",
-            "notre",
-            "fini",
-            "pour",
-            "le",
-            "projet."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a2-16-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 3) :",
-          "parts": [
-            "vérifier",
-            "notre",
-            "fini",
-            "ce",
-            "matin.",
-            "Je",
-            "dois"
-          ],
-          "correct_order": [
-            "Je",
-            "dois",
-            "vérifier",
-            "notre",
-            "fini",
-            "ce",
-            "matin."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a2-16-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 4) :",
-          "parts": [
-            "votre",
-            "fini",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît.",
-            "Veuillez",
-            "présenter"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "présenter",
-            "votre",
-            "fini",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a2-16-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 5) :",
-          "parts": [
-            "apprécie",
-            "chaque",
-            "fini",
-            "de",
-            "bureau.",
-            "Notre",
-            "équipe"
-          ],
-          "correct_order": [
-            "Notre",
-            "équipe",
-            "apprécie",
-            "chaque",
-            "fini",
-            "de",
-            "bureau."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a2-16-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 6) :",
-          "parts": [
-            "notre",
-            "fini",
-            "avant",
-            "midi",
-            "?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "notre",
-            "fini",
-            "avant",
-            "midi",
-            "?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a2-16-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 7) :",
-          "parts": [
-            "organiser",
-            "notre",
-            "fini",
-            "cette",
-            "semaine.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "organiser",
-            "notre",
-            "fini",
-            "cette",
-            "semaine."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a2-16-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 8) :",
-          "parts": [
-            "statut",
-            "de",
-            "notre",
-            "fini",
-            "ensemble.",
-            "Examinons",
-            "le"
-          ],
-          "correct_order": [
-            "Examinons",
-            "le",
-            "statut",
-            "de",
-            "notre",
-            "fini",
-            "ensemble."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a2-16-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 9) :",
-          "parts": [
-            "améliorer",
-            "notre",
-            "fini",
-            "de",
-            "travail.",
-            "Ils",
-            "souhaitent"
-          ],
-          "correct_order": [
-            "Ils",
-            "souhaitent",
-            "améliorer",
-            "notre",
-            "fini",
-            "de",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        },
-        {
-          "id": "fr-a2-16-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"fini\" (Exercice 10) :",
-          "parts": [
-            "avec",
-            "notre",
-            "fini",
-            "tous",
-            "les",
-            "jours.",
-            "Elle",
-            "travaille"
-          ],
-          "correct_order": [
-            "Elle",
-            "travaille",
-            "avec",
-            "notre",
-            "fini",
-            "tous",
-            "les",
-            "jours."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"fini\"."
-        }
+        { "id": "fra2-16-f1", "type": "fill_input", "question": "¡Habla! (A un amigo) = ____ !", "correct_answer": "Parle", "explanation": "Parle" },
+        { "id": "fra2-16-f2", "type": "fill_input", "question": "¡Hablen! (A ustedes) = ____ !", "correct_answer": "Parlez", "explanation": "Parlez" },
+        { "id": "fra2-16-f3", "type": "fill_input", "question": "¡Termina! (Finir, a un amigo) = ____ !", "correct_answer": "Finis", "explanation": "Finis" },
+        { "id": "fra2-16-f4", "type": "fill_input", "question": "¡Vamos! (Aller) = ____ !", "correct_answer": "Allons", "explanation": "Allons" },
+        { "id": "fra2-16-f5", "type": "fill_input", "question": "¡Come! (Manger, a un amigo) = ____ !", "correct_answer": "Mange", "explanation": "Mange" },
+        { "id": "fra2-16-f6", "type": "fill_input", "question": "¡Escucha! (Écouter, a un amigo) = ____ !", "correct_answer": "Écoute", "explanation": "Écoute" },
+        { "id": "fra2-16-f7", "type": "fill_input", "question": "¡Sé feliz! (Être, a un amigo) = ____ heureux !", "correct_answer": "Sois", "explanation": "Sois" },
+        { "id": "fra2-16-f8", "type": "fill_input", "question": "¡Sean felices! (Être, a ustedes) = ____ heureux !", "correct_answer": "Soyez", "explanation": "Soyez" },
+        { "id": "fra2-16-f9", "type": "fill_input", "question": "¡Ten paciencia! (Avoir, a un amigo) = ____ de la patience !", "correct_answer": "Aie", "explanation": "Aie" },
+        { "id": "fra2-16-f10", "type": "fill_input", "question": "¡Miren! (Regarder, a ustedes) = ____ !", "correct_answer": "Regardez", "explanation": "Regardez" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-a2-16-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"fini\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"fini\" en détail.",
-            "Une autre déclaration sur notre \"fini\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"fini\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"fini\" en réunion."
-        },
-        {
-          "id": "fr-a2-16-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"fini\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"fini\" ?",
-            "Une autre déclaration sur notre \"fini\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"fini\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"fini\" en réunion."
-        },
-        {
-          "id": "fr-a2-16-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"fini\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"fini\" cette année.",
-            "Une autre déclaration sur notre \"fini\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"fini\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"fini\" en réunion."
-        },
-        {
-          "id": "fr-a2-16-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"fini\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"fini\".",
-            "Une autre déclaration sur notre \"fini\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"fini\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"fini\" en réunion."
-        },
-        {
-          "id": "fr-a2-16-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"fini\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"fini\".",
-            "Une autre déclaration sur notre \"fini\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"fini\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"fini\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "fra2-16-p1", "source": "Parle !", "target": "¡Habla!"},
+        {"id": "fra2-16-p2", "source": "Parlez !", "target": "¡Hablen!"},
+        {"id": "fra2-16-p3", "source": "Allons !", "target": "¡Vamos!"},
+        {"id": "fra2-16-p4", "source": "Finis !", "target": "¡Termina!"},
+        {"id": "fra2-16-p5", "source": "Sois fort !", "target": "¡Sé fuerte!"},
+        {"id": "fra2-16-p6", "source": "Soyez prudents !", "target": "¡Sean prudentes!"},
+        {"id": "fra2-16-p7", "source": "Aie confiance !", "target": "¡Ten confianza!"},
+        {"id": "fra2-16-p8", "source": "Ne mange pas !", "target": "¡No comas!"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha atentamente las órdenes.",
       "questions": [
-        {
-          "id": "fr-a2-16-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"fin_\" (Indice : désigne \"fini\")",
-          "correct_answers": [
-            "fini",
-            "Fini"
-          ],
-          "hints": [
-            "Commence par 'fin'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"fini\"."
-        },
-        {
-          "id": "fr-a2-16-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"L'équipe veut discuter de notre fini ____ lundi matin.\" (le / en)",
-          "correct_answers": [
-            "le"
-          ],
-          "hints": [
-            "Article défini utilisé devant les jours de la semaine"
-          ],
-          "explanation": "En français, on utilise l'article défini 'le' devant un jour de la semana pour indiquer un rendez-vous habituel ou fixe."
-        },
-        {
-          "id": "fr-a2-16-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Veuillez ____ attention à ne pas faire d'erreur sur notre fini.\" (faire / prendre)",
-          "correct_answers": [
-            "faire",
-            "Faire"
-          ],
-          "hints": [
-            "Verbe signifiant effectuer ou prêter attention"
-          ],
-          "explanation": "L'expression 'faire attention' est une collocation standard en français."
-        },
-        {
-          "id": "fr-a2-16-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons organiser une ____ pour revoir notre fini.\" (réunion / carte)",
-          "correct_answers": [
-            "réunion",
-            "discussion",
-            "session"
-          ],
-          "hints": [
-            "Un rassemblement de personnes pour travailler ensemble"
-          ],
-          "explanation": "Une 'réunion' est le terme standard pour un meeting professionnel."
-        },
-        {
-          "id": "fr-a2-16-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Il nous faut un rapport ____ sur le statut de notre fini.\" (clair / lent)",
-          "correct_answers": [
-            "clair"
-          ],
-          "hints": [
-            "Facile à comprendre et bien structuré"
-          ],
-          "explanation": "Un rapport 'clair' est indispensable pour assurer l'alignement."
-        }
+        { "id": "fra2-16-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Parle !", "options": ["Parle !", "Parlez !", "Parlons !", "Je parle"], "correct_answer": "Parle !", "explanation": "Audio dice: Parle ! (¡Habla!)." },
+        { "id": "fra2-16-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Allons !", "options": ["Allons !", "Allez !", "Va !", "Nous allons"], "correct_answer": "Allons !", "explanation": "Audio dice: Allons ! (¡Vamos!)." },
+        { "id": "fra2-16-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Sois fort !", "options": ["Sois fort !", "Soyez fort !", "Soyons forts !", "Il est fort"], "correct_answer": "Sois fort !", "explanation": "Audio dice: Sois fort ! (¡Sé fuerte!)." },
+        { "id": "fra2-16-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Aie confiance !", "options": ["Aie confiance !", "Ayez confiance !", "Ayons confiance !", "J'ai confiance"], "correct_answer": "Aie confiance !", "explanation": "Audio dice: Aie confiance ! (¡Ten confianza!)." },
+        { "id": "fra2-16-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Ne regarde pas !", "options": ["Ne regarde pas !", "Regarde !", "Regardez !", "Je ne regarde pas"], "correct_answer": "Ne regarde pas !", "explanation": "Audio dice: Ne regarde pas ! (¡No mires!)." }
       ]
     }
   ]

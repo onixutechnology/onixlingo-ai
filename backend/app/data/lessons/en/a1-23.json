@@ -1,0 +1,101 @@
+{
+  "id": "a1-23",
+  "title": "Clothing in the Office",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Clothing", "Dress Code"],
+  "completion_message": "¡Perfecto! El 'Dress Code' corporativo ya no es un misterio para ti.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Código de Vestimenta",
+      "parts": [
+        { "visual": "Para decir lo que llevas puesto usamos el verbo 'wear': 'I am wearing a suit' (Llevo puesto un traje).", "audio": "To say what you are wearing we use the verb wear: I am wearing a suit." },
+        { "visual": "En negocios hablamos mucho de 'dress code' (código de vestimenta): 'casual', 'formal', o 'business casual'.", "audio": "In business we talk a lot about dress code: casual, formal, or business casual." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la prenda o verbo correcto.",
+      "questions": [
+        { "id": "a1-23-q1", "type": "quiz_choice", "question": "He is ____ a blue shirt.", "options": ["wearing", "wear", "wears", "wore"], "correct_answer": "wearing", "explanation": "Present continuous para lo que lleva puesto ahora." },
+        { "id": "a1-23-q2", "type": "quiz_choice", "question": "I need to buy a new ____ for the interview.", "options": ["suit", "suite", "sweat", "sweet"], "correct_answer": "suit", "explanation": "Traje (suit)." },
+        { "id": "a1-23-q3", "type": "quiz_choice", "question": "You must wear a ____ with that suit.", "options": ["tie", "tying", "tire", "time"], "correct_answer": "tie", "explanation": "Corbata." },
+        { "id": "a1-23-q4", "type": "quiz_choice", "question": "Fridays are business ____.", "options": ["casual", "casualty", "case", "formal"], "correct_answer": "casual", "explanation": "Business casual." },
+        { "id": "a1-23-q5", "type": "quiz_choice", "question": "She is wearing a black ____.", "options": ["skirt", "shirt", "short", "sky"], "correct_answer": "skirt", "explanation": "Falda." },
+        { "id": "a1-23-q6", "type": "quiz_choice", "question": "Please wear comfortable ____.", "options": ["shoes", "shoe", "shows", "shooting"], "correct_answer": "shoes", "explanation": "Zapatos en plural." },
+        { "id": "a1-23-q7", "type": "quiz_choice", "question": "He forgot his ____.", "options": ["jacket", "jack", "jackets", "jet"], "correct_answer": "jacket", "explanation": "Chaqueta." },
+        { "id": "a1-23-q8", "type": "quiz_choice", "question": "What is the company dress ____?", "options": ["code", "rule", "law", "order"], "correct_answer": "code", "explanation": "Código de vestimenta (dress code)." },
+        { "id": "a1-23-q9", "type": "quiz_choice", "question": "I am wearing a white ____.", "options": ["shirt", "skirt", "short", "sheet"], "correct_answer": "shirt", "explanation": "Camisa." },
+        { "id": "a1-23-q10", "type": "quiz_choice", "question": "Those ____ are too casual for the office.", "options": ["jeans", "jean", "genes", "pants"], "correct_answer": "jeans", "explanation": "Jeans (pantalones de mezclilla)." },
+        { "id": "a1-23-q11", "type": "quiz_choice", "question": "She has a beautiful ____.", "options": ["dress", "dressings", "dressed", "dressing"], "correct_answer": "dress", "explanation": "Vestido." },
+        { "id": "a1-23-q12", "type": "quiz_choice", "question": "He wears ____ pants.", "options": ["formal", "formally", "former", "form"], "correct_answer": "formal", "explanation": "Pantalones formales." },
+        { "id": "a1-23-q13", "type": "quiz_choice", "question": "Do I have to wear a ____?", "options": ["uniform", "uni", "unify", "universe"], "correct_answer": "uniform", "explanation": "Uniforme." },
+        { "id": "a1-23-q14", "type": "quiz_choice", "question": "It's cold, take your ____.", "options": ["coat", "cost", "cat", "cart"], "correct_answer": "coat", "explanation": "Abrigo." },
+        { "id": "a1-23-q15", "type": "quiz_choice", "question": "Are you ____ a tie?", "options": ["wearing", "wear", "wears", "wore"], "correct_answer": "wearing", "explanation": "Llevando puesto." },
+        { "id": "a1-23-q16", "type": "quiz_choice", "question": "I need new ____ for the presentation.", "options": ["clothes", "cloth", "clothing", "clothe"], "correct_answer": "clothes", "explanation": "Ropa (plural form)." },
+        { "id": "a1-23-q17", "type": "quiz_choice", "question": "He is wearing a ____.", "options": ["belt", "bell", "belly", "build"], "correct_answer": "belt", "explanation": "Cinturón." },
+        { "id": "a1-23-q18", "type": "quiz_choice", "question": "My ____ is too big.", "options": ["hat", "hut", "hit", "hot"], "correct_answer": "hat", "explanation": "Sombrero." },
+        { "id": "a1-23-q19", "type": "quiz_choice", "question": "Wear formal ____.", "options": ["attire", "tires", "tired", "tiring"], "correct_answer": "attire", "explanation": "Atuendo (attire)." },
+        { "id": "a1-23-q20", "type": "quiz_choice", "question": "I am not ____ a jacket today.", "options": ["wearing", "wear", "wears", "wore"], "correct_answer": "wearing", "explanation": "Negative present continuous." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta.",
+      "questions": [
+        { "id": "a1-23-f1", "type": "fill_input", "question": "He is ____ a shirt (Llevando).", "correct_answer": "wearing", "explanation": "Wearing." },
+        { "id": "a1-23-f2", "type": "fill_input", "question": "A new ____ (Traje).", "correct_answer": "suit", "explanation": "Suit." },
+        { "id": "a1-23-f3", "type": "fill_input", "question": "Wear a ____ (Corbata).", "correct_answer": "tie", "explanation": "Tie." },
+        { "id": "a1-23-f4", "type": "fill_input", "question": "Business ____ (Casual).", "correct_answer": "casual", "explanation": "Casual." },
+        { "id": "a1-23-f5", "type": "fill_input", "question": "A black ____ (Falda).", "correct_answer": "skirt", "explanation": "Skirt." },
+        { "id": "a1-23-f6", "type": "fill_input", "question": "Comfortable ____ (Zapatos).", "correct_answer": "shoes", "explanation": "Shoes." },
+        { "id": "a1-23-f7", "type": "fill_input", "question": "Forgot his ____ (Chaqueta).", "correct_answer": "jacket", "explanation": "Jacket." },
+        { "id": "a1-23-f8", "type": "fill_input", "question": "Dress ____ (Código).", "correct_answer": "code", "explanation": "Code." },
+        { "id": "a1-23-f9", "type": "fill_input", "question": "A white ____ (Camisa).", "correct_answer": "shirt", "explanation": "Shirt." },
+        { "id": "a1-23-f10", "type": "fill_input", "question": "Beautiful ____ (Vestido).", "correct_answer": "dress", "explanation": "Dress." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-23-p1", "source": "Wear", "target": "Llevar puesto"},
+        {"id": "a1-23-p2", "source": "Suit", "target": "Traje"},
+        {"id": "a1-23-p3", "source": "Tie", "target": "Corbata"},
+        {"id": "a1-23-p4", "source": "Shirt", "target": "Camisa"},
+        {"id": "a1-23-p5", "source": "Skirt", "target": "Falda"},
+        {"id": "a1-23-p6", "source": "Dress", "target": "Vestido"},
+        {"id": "a1-23-p7", "source": "Shoes", "target": "Zapatos"},
+        {"id": "a1-23-p8", "source": "Jacket", "target": "Chaqueta"},
+        {"id": "a1-23-p9", "source": "Coat", "target": "Abrigo"},
+        {"id": "a1-23-p10", "source": "Code", "target": "Código"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la prenda correcta.",
+      "questions": [
+        { "id": "a1-23-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am wearing a suit.", "options": ["I am wearing a suit.", "I am wearing a shirt.", "He is wearing a suit.", "I was wearing a suit."], "correct_answer": "I am wearing a suit.", "explanation": "Audio exacto." },
+        { "id": "a1-23-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He wears a tie.", "options": ["He wears a tie.", "He wears a die.", "She wears a tie.", "We wear a tie."], "correct_answer": "He wears a tie.", "explanation": "Audio exacto." },
+        { "id": "a1-23-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Business casual.", "options": ["Business casual.", "Business class.", "Business castle.", "Business careful."], "correct_answer": "Business casual.", "explanation": "Audio exacto." },
+        { "id": "a1-23-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A black skirt.", "options": ["A black skirt.", "A black shirt.", "A black dirt.", "A black shoe."], "correct_answer": "A black skirt.", "explanation": "Audio exacto." },
+        { "id": "a1-23-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Comfortable shoes.", "options": ["Comfortable shoes.", "Comfortable shows.", "Comfortable shirts.", "Comfort shoes."], "correct_answer": "Comfortable shoes.", "explanation": "Audio exacto." },
+        { "id": "a1-23-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Forgot his jacket.", "options": ["Forgot his jacket.", "Forgot his ticket.", "Forgot the jacket.", "Forgot his pocket."], "correct_answer": "Forgot his jacket.", "explanation": "Audio exacto." },
+        { "id": "a1-23-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Dress code.", "options": ["Dress code.", "Dress coat.", "Press code.", "Dress cold."], "correct_answer": "Dress code.", "explanation": "Audio exacto." },
+        { "id": "a1-23-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A white shirt.", "options": ["A white shirt.", "A white skirt.", "A white shoe.", "A white short."], "correct_answer": "A white shirt.", "explanation": "Audio exacto." },
+        { "id": "a1-23-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Formal pants.", "options": ["Formal pants.", "Formal plans.", "Formal plants.", "Normal pants."], "correct_answer": "Formal pants.", "explanation": "Audio exacto." },
+        { "id": "a1-23-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Take your coat.", "options": ["Take your coat.", "Take your boat.", "Take your cost.", "Take your cat."], "correct_answer": "Take your coat.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "a1-30",
+  "title": "Basic Tech Support",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "IT Support", "Problems"],
+  "completion_message": "¡Excelente! Ahora puedes comunicar los problemas técnicos más comunes en la oficina.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Problemas Técnicos",
+      "parts": [
+        { "visual": "Para decir que algo no funciona, usamos 'doesn't work' o 'is broken'.", "audio": "To say something is not working, we use doesn't work or is broken." },
+        { "visual": "Si el internet falla, decimos 'The Wi-Fi is down' (El Wi-Fi está caído).", "audio": "If the internet fails, we say The Wi-Fi is down." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la palabra técnica correcta.",
+      "questions": [
+        { "id": "a1-30-q1", "type": "quiz_choice", "question": "My computer ____ work.", "options": ["doesn't", "don't", "isn't", "aren't"], "correct_answer": "doesn't", "explanation": "Computer (it) usa 'doesn't'." },
+        { "id": "a1-30-q2", "type": "quiz_choice", "question": "The screen is ____.", "options": ["frozen", "freeze", "freezing", "freezes"], "correct_answer": "frozen", "explanation": "La pantalla está congelada." },
+        { "id": "a1-30-q3", "type": "quiz_choice", "question": "I have no ____ connection.", "options": ["internet", "internal", "inside", "net"], "correct_answer": "internet", "explanation": "Conexión a internet." },
+        { "id": "a1-30-q4", "type": "quiz_choice", "question": "The Wi-Fi is ____.", "options": ["down", "under", "low", "off"], "correct_answer": "down", "explanation": "La red está caída (down)." },
+        { "id": "a1-30-q5", "type": "quiz_choice", "question": "I can't ____ into my account.", "options": ["log", "lock", "look", "luck"], "correct_answer": "log", "explanation": "Log in (iniciar sesión)." },
+        { "id": "a1-30-q6", "type": "quiz_choice", "question": "I forgot my ____.", "options": ["password", "pass", "word", "passing"], "correct_answer": "password", "explanation": "Contraseña." },
+        { "id": "a1-30-q7", "type": "quiz_choice", "question": "The printer is ____.", "options": ["broken", "break", "breaking", "breaks"], "correct_answer": "broken", "explanation": "Está rota / descompuesta." },
+        { "id": "a1-30-q8", "type": "quiz_choice", "question": "It says '____ error'.", "options": ["system", "systemic", "systems", "syndrome"], "correct_answer": "system", "explanation": "Error de sistema." },
+        { "id": "a1-30-q9", "type": "quiz_choice", "question": "Try to ____ the computer.", "options": ["restart", "start", "stop", "end"], "correct_answer": "restart", "explanation": "Reiniciar." },
+        { "id": "a1-30-q10", "type": "quiz_choice", "question": "The battery is ____.", "options": ["dead", "die", "dying", "died"], "correct_answer": "dead", "explanation": "Batería agotada (muerta)." },
+        { "id": "a1-30-q11", "type": "quiz_choice", "question": "The file ____ open.", "options": ["won't", "will", "do", "does"], "correct_answer": "won't", "explanation": "El archivo no (quiere) abrirse." },
+        { "id": "a1-30-q12", "type": "quiz_choice", "question": "I accidentally ____ the document.", "options": ["deleted", "delete", "deleting", "deletes"], "correct_answer": "deleted", "explanation": "Borrado por accidente." },
+        { "id": "a1-30-q13", "type": "quiz_choice", "question": "Call IT ____.", "options": ["support", "supporter", "supporting", "supports"], "correct_answer": "support", "explanation": "Soporte técnico." },
+        { "id": "a1-30-q14", "type": "quiz_choice", "question": "The keyboard isn't ____.", "options": ["working", "work", "works", "worked"], "correct_answer": "working", "explanation": "No está funcionando." },
+        { "id": "a1-30-q15", "type": "quiz_choice", "question": "There is a ____ in the system.", "options": ["bug", "insect", "spider", "fly"], "correct_answer": "bug", "explanation": "Un bug (error de software)." },
+        { "id": "a1-30-q16", "type": "quiz_choice", "question": "I need to ____ the software.", "options": ["update", "updates", "updating", "updated"], "correct_answer": "update", "explanation": "Actualizar." },
+        { "id": "a1-30-q17", "type": "quiz_choice", "question": "The mouse is ____.", "options": ["unplugged", "unplug", "unplugs", "plug"], "correct_answer": "unplugged", "explanation": "Desconectado." },
+        { "id": "a1-30-q18", "type": "quiz_choice", "question": "Please ____ your screen.", "options": ["share", "shares", "sharing", "shared"], "correct_answer": "share", "explanation": "Compartir la pantalla." },
+        { "id": "a1-30-q19", "type": "quiz_choice", "question": "My audio is ____.", "options": ["muted", "mute", "muting", "mutes"], "correct_answer": "muted", "explanation": "Silenciado." },
+        { "id": "a1-30-q20", "type": "quiz_choice", "question": "Can you hear the ____?", "options": ["echo", "sound", "voice", "noise"], "correct_answer": "echo", "explanation": "Eco en la llamada." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta.",
+      "questions": [
+        { "id": "a1-30-f1", "type": "fill_input", "question": "It ____ work (No funciona).", "correct_answer": "doesn't", "explanation": "Doesn't." },
+        { "id": "a1-30-f2", "type": "fill_input", "question": "Screen is ____ (Congelada).", "correct_answer": "frozen", "explanation": "Frozen." },
+        { "id": "a1-30-f3", "type": "fill_input", "question": "Wi-Fi is ____ (Caído).", "correct_answer": "down", "explanation": "Down." },
+        { "id": "a1-30-f4", "type": "fill_input", "question": "____ in (Iniciar sesión).", "correct_answer": "Log", "explanation": "Log." },
+        { "id": "a1-30-f5", "type": "fill_input", "question": "Printer is ____ (Rota).", "correct_answer": "broken", "explanation": "Broken." },
+        { "id": "a1-30-f6", "type": "fill_input", "question": "____ the computer (Reiniciar).", "correct_answer": "Restart", "explanation": "Restart." },
+        { "id": "a1-30-f7", "type": "fill_input", "question": "Battery is ____ (Muerta).", "correct_answer": "dead", "explanation": "Dead." },
+        { "id": "a1-30-f8", "type": "fill_input", "question": "IT ____ (Soporte).", "correct_answer": "support", "explanation": "Support." },
+        { "id": "a1-30-f9", "type": "fill_input", "question": "System ____ (Fallo/Bug).", "correct_answer": "bug", "explanation": "Bug." },
+        { "id": "a1-30-f10", "type": "fill_input", "question": "____ the software (Actualizar).", "correct_answer": "Update", "explanation": "Update." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-30-p1", "source": "Doesn't work", "target": "No funciona"},
+        {"id": "a1-30-p2", "source": "Frozen", "target": "Congelado"},
+        {"id": "a1-30-p3", "source": "Down", "target": "Caído"},
+        {"id": "a1-30-p4", "source": "Log in", "target": "Iniciar sesión"},
+        {"id": "a1-30-p5", "source": "Broken", "target": "Roto"},
+        {"id": "a1-30-p6", "source": "Restart", "target": "Reiniciar"},
+        {"id": "a1-30-p7", "source": "Dead", "target": "Muerto / Agotado"},
+        {"id": "a1-30-p8", "source": "Deleted", "target": "Borrado"},
+        {"id": "a1-30-p9", "source": "Update", "target": "Actualizar"},
+        {"id": "a1-30-p10", "source": "Muted", "target": "Silenciado"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el problema técnico exacto.",
+      "questions": [
+        { "id": "a1-30-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It doesn't work.", "options": ["It doesn't work.", "It didn't work.", "He doesn't work.", "I don't work."], "correct_answer": "It doesn't work.", "explanation": "Audio exacto." },
+        { "id": "a1-30-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The screen is frozen.", "options": ["The screen is frozen.", "The stream is frozen.", "A screen is frozen.", "My screen is frozen."], "correct_answer": "The screen is frozen.", "explanation": "Audio exacto." },
+        { "id": "a1-30-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The Wi-Fi is down.", "options": ["The Wi-Fi is down.", "The Wi-Fi is on.", "My Wi-Fi is down.", "The Wi-Fi is slow."], "correct_answer": "The Wi-Fi is down.", "explanation": "Audio exacto." },
+        { "id": "a1-30-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I can't log in.", "options": ["I can't log in.", "I can log in.", "He can't log in.", "I can't log out."], "correct_answer": "I can't log in.", "explanation": "Audio exacto." },
+        { "id": "a1-30-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The printer is broken.", "options": ["The printer is broken.", "A printer is broken.", "The winter is broken.", "The printer is working."], "correct_answer": "The printer is broken.", "explanation": "Audio exacto." },
+        { "id": "a1-30-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Restart the computer.", "options": ["Restart the computer.", "Start the computer.", "Restart my computer.", "Restart a computer."], "correct_answer": "Restart the computer.", "explanation": "Audio exacto." },
+        { "id": "a1-30-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The battery is dead.", "options": ["The battery is dead.", "A battery is dead.", "My battery is dead.", "The battery is red."], "correct_answer": "The battery is dead.", "explanation": "Audio exacto." },
+        { "id": "a1-30-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Call IT support.", "options": ["Call IT support.", "Call the support.", "Call my support.", "I call IT support."], "correct_answer": "Call IT support.", "explanation": "Audio exacto." },
+        { "id": "a1-30-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Update the software.", "options": ["Update the software.", "Update my software.", "Upload the software.", "Update a software."], "correct_answer": "Update the software.", "explanation": "Audio exacto." },
+        { "id": "a1-30-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My audio is muted.", "options": ["My audio is muted.", "My video is muted.", "Your audio is muted.", "My audio is loud."], "correct_answer": "My audio is muted.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

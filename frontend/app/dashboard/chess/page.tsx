@@ -226,7 +226,7 @@ export default function ChessLobbyPage() {
 
   if (isLoading) {
     return (
-      <div style={woodThemeBgStyle} className="wood-theme-bg min-h-screen flex flex-col items-center justify-center text-amber-500 rounded-none">
+      <div style={woodThemeBgStyle} className="wood-theme-bg min-h-screen flex flex-col items-center justify-center text-[#D4AF37] rounded-none">
         <Loader2 className="animate-spin mb-4" size={48} />
         <p className="font-bold text-amber-200 tracking-widest uppercase text-sm">Cargando Titanium Academy...</p>
       </div>
@@ -240,13 +240,13 @@ export default function ChessLobbyPage() {
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-amber-500/5 via-transparent to-transparent"></div>
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="flex items-center justify-between mb-6">
-            <Link href="/dashboard" className="inline-flex items-center gap-2 text-[#ecd3b5] hover:text-white transition-colors font-bold text-sm bg-[#361d0f] px-4 py-2 rounded-none border border-[#502b16] hover:bg-[#462614]">
+            <Link href="/dashboard" className="inline-flex items-center gap-2 text-[#ecd3b5] hover:text-slate-900 transition-colors font-bold text-sm bg-[#361d0f] px-4 py-2 rounded-none border border-[#502b16] hover:bg-[#462614]">
               <ArrowLeft size={16} /> Volver al LMS
             </Link>
             {userTier === 'free' ? (
               <div className="flex items-center">
                 {/* Cuerpo de la Batería */}
-                <div className="relative w-16 h-5 bg-slate-950 rounded-[4px] border border-slate-700 p-0.5 flex items-center shadow-[inset_0_1.5px_4px_rgba(0,0,0,0.8)] overflow-hidden">
+                <div className="relative w-16 h-5 bg-slate-50 rounded-[4px] border border-slate-700 p-0.5 flex items-center shadow-[inset_0_1.5px_4px_rgba(0,0,0,0.8)] overflow-hidden">
                   <div 
                     className={`h-full rounded-[2px] transition-all duration-500 ${
                       energy > 50 
@@ -257,12 +257,12 @@ export default function ChessLobbyPage() {
                     }`}
                     style={{ width: `${energy}%` }}
                   />
-                  <span className="absolute inset-0 flex items-center justify-center text-[9px] font-black text-white font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
+                  <span className="absolute inset-0 flex items-center justify-center text-[9px] font-black text-slate-900 font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
                     {energy}%
                   </span>
                 </div>
                 {/* Polo Positivo */}
-                <div className="w-[3px] h-2.5 bg-slate-700 rounded-r-[2px] -ml-[1px] shadow-sm shrink-0" />
+                <div className="w-[3px] h-2.5 bg-slate-700 rounded-r-[2px] -ml-[1px] shadow-none shrink-0" />
               </div>
             ) : (
               <span className="text-[9px] font-black uppercase tracking-wider text-emerald-400">Energía Ilimitada</span>
@@ -277,7 +277,7 @@ export default function ChessLobbyPage() {
                     <Crown size={12} /> Titanium Chess Academy
                   </span>
                 </div>
-                <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-2 drop-shadow-md">
+                <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-2 drop-shadow-none">
                   Escuela de Ajedrez
                 </h1>
                 <p className="text-slate-300 max-w-2xl text-sm md:text-base leading-relaxed">
@@ -290,7 +290,7 @@ export default function ChessLobbyPage() {
             {/* 8 Métricas de Rendimiento Chess Academy */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full mt-4">
               {/* 1. ELO Táctico */}
-              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-lg flex flex-col justify-between h-full group hover:border-amber-500/40 transition-colors">
+              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-none flex flex-col justify-between h-full group hover:border-[#D4AF37]/30/40 transition-colors">
                 <div>
                   <div className="flex items-center justify-between text-amber-400 mb-1">
                     <span className="font-black text-xl sm:text-2xl leading-none">{user?.chess_tactical_elo ?? stats.tacticalElo}</span>
@@ -304,7 +304,7 @@ export default function ChessLobbyPage() {
               </div>
 
               {/* 2. ELO Arena */}
-              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-lg flex flex-col justify-between h-full group hover:border-amber-500/40 transition-colors">
+              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-none flex flex-col justify-between h-full group hover:border-[#D4AF37]/30/40 transition-colors">
                 <div>
                   <div className="flex items-center justify-between text-amber-300 mb-1">
                     <span className="font-black text-xl sm:text-2xl leading-none">{user?.chess_elo ?? stats.arenaElo}</span>
@@ -318,7 +318,7 @@ export default function ChessLobbyPage() {
               </div>
 
               {/* 3. Resueltos */}
-              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-lg flex flex-col justify-between h-full group hover:border-amber-500/40 transition-colors">
+              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-none flex flex-col justify-between h-full group hover:border-[#D4AF37]/30/40 transition-colors">
                 <div>
                   <div className="flex items-center justify-between text-emerald-400 mb-1">
                     <span className="font-black text-xl sm:text-2xl leading-none">{stats.puzzlesSolved}</span>
@@ -332,7 +332,7 @@ export default function ChessLobbyPage() {
               </div>
 
               {/* 4. Racha Activa */}
-              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-lg flex flex-col justify-between h-full group hover:border-amber-500/40 transition-colors">
+              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-none flex flex-col justify-between h-full group hover:border-[#D4AF37]/30/40 transition-colors">
                 <div>
                   <div className="flex items-center justify-between text-orange-400 mb-1">
                     <span className="font-black text-xl sm:text-2xl leading-none">{stats.puzzlesSolved > 0 ? "5 Días" : "0 Días"}</span>
@@ -346,9 +346,9 @@ export default function ChessLobbyPage() {
               </div>
 
               {/* 5. Rango Ejecutivo */}
-              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-lg flex flex-col justify-between h-full group hover:border-amber-500/40 transition-colors">
+              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-none flex flex-col justify-between h-full group hover:border-[#D4AF37]/30/40 transition-colors">
                 <div>
-                  <div className="flex items-center justify-between text-amber-500 mb-1">
+                  <div className="flex items-center justify-between text-[#D4AF37] mb-1">
                     <span className="font-bold text-xs sm:text-sm uppercase tracking-tight truncate max-w-[80px] block leading-none pt-1">
                       {(user?.chess_elo ?? stats.arenaElo) >= 1600 ? "CEO" : (user?.chess_elo ?? stats.arenaElo) >= 1400 ? "Manager" : "Asociado"}
                     </span>
@@ -362,7 +362,7 @@ export default function ChessLobbyPage() {
               </div>
 
               {/* 6. Experiencia (XP) */}
-              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-lg flex flex-col justify-between h-full group hover:border-amber-500/40 transition-colors">
+              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-none flex flex-col justify-between h-full group hover:border-[#D4AF37]/30/40 transition-colors">
                 <div>
                   <div className="flex items-center justify-between text-cyan-400 mb-1">
                     <span className="font-black text-xl sm:text-2xl leading-none">{stats.puzzlesSolved * 15 + 320}</span>
@@ -376,7 +376,7 @@ export default function ChessLobbyPage() {
               </div>
 
               {/* 7. Tasa de Victoria */}
-              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-lg flex flex-col justify-between h-full group hover:border-amber-500/40 transition-colors">
+              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-none flex flex-col justify-between h-full group hover:border-[#D4AF37]/30/40 transition-colors">
                 <div>
                   <div className="flex items-center justify-between text-rose-400 mb-1">
                     <span className="font-black text-xl sm:text-2xl leading-none">{stats.puzzlesSolved > 0 ? "58%" : "100%"}</span>
@@ -390,7 +390,7 @@ export default function ChessLobbyPage() {
               </div>
 
               {/* 8. Precisión Táctica */}
-              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-lg flex flex-col justify-between h-full group hover:border-amber-500/40 transition-colors">
+              <div style={woodPanelLightStyle} className="wood-panel-light p-3.5 rounded-none shadow-none flex flex-col justify-between h-full group hover:border-[#D4AF37]/30/40 transition-colors">
                 <div>
                   <div className="flex items-center justify-between text-purple-400 mb-1">
                     <span className="font-black text-xl sm:text-2xl leading-none">{stats.puzzlesSolved > 0 ? "84%" : "100%"}</span>
@@ -414,14 +414,14 @@ export default function ChessLobbyPage() {
         <Link href="/dashboard/chess/practice?lessonId=daily-puzzle" className="block">
           <div style={woodPanelStyle} className="wood-panel p-1 rounded-none shadow-2xl group cursor-pointer hover:border-[#62351b] transition-all">
             <div className="bg-[#170902]/60 backdrop-blur-sm rounded-none p-6 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
-              <div className="absolute right-0 top-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+              <div className="absolute right-0 top-0 w-64 h-64 bg-[#D4AF37]/20/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
               
               <div className="flex items-center gap-5 relative z-10">
-                <div className="w-16 h-16 rounded-none bg-[#361d0f] border border-[#502b16] flex items-center justify-center text-amber-400 shadow-lg group-hover:scale-115 group-hover:rotate-3 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-none bg-[#361d0f] border border-[#502b16] flex items-center justify-center text-amber-400 shadow-none group-hover:scale-115 group-hover:rotate-3 transition-transform duration-300">
                   <Star size={32} fill="currentColor" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-1 group-hover:text-amber-300 transition-colors">Reto Diario: Entrenamiento de Élite</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-1 group-hover:text-amber-300 transition-colors">Reto Diario: Entrenamiento de Élite</h3>
                   <p className="text-sm text-slate-300">Resuelve el problema de hoy para mantener tu racha.</p>
                   <div className="flex gap-2 mt-2">
                     <span className="text-[10px] bg-red-950/60 text-red-400 px-2 py-0.5 rounded-none border border-red-800/40 font-bold">DIFÍCIL</span>
@@ -430,7 +430,7 @@ export default function ChessLobbyPage() {
                 </div>
               </div>
               
-              <div className="relative z-10 bg-[#ecd3b5] text-[#1e130c] px-6 py-3 rounded-none font-black text-sm hover:bg-[#fbf8f0] transition-colors flex items-center gap-2 shadow-lg w-full md:w-auto justify-center">
+              <div className="relative z-10 bg-[#ecd3b5] text-[#1e130c] px-6 py-3 rounded-none font-black text-sm hover:bg-[#fbf8f0] transition-colors flex items-center gap-2 shadow-none w-full md:w-auto justify-center">
                 <Play size={16} fill="currentColor" /> RESOLVER AHORA
               </div>
             </div>
@@ -442,7 +442,7 @@ export default function ChessLobbyPage() {
           {/* Tarjeta: Vs OnixAI */}
           <Link href="/dashboard/chess/vs-ai" className="block">
             <div style={woodPanelStyle} className="wood-panel p-6 rounded-none shadow-xl hover:border-[#62351b] hover:scale-[1.01] transition-all duration-300 group cursor-pointer relative overflow-hidden h-full flex flex-col justify-between">
-              <div className="absolute right-0 top-0 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+              <div className="absolute right-0 top-0 w-32 h-32 bg-[#D4AF37]/20/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-[#361d0f] text-amber-400 rounded-none border border-[#502b16] flex items-center justify-center">
@@ -450,7 +450,7 @@ export default function ChessLobbyPage() {
                   </div>
                   <span className="text-[10px] font-black uppercase tracking-wider text-amber-400">Cognitive Engine</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">Jugar contra OnixAI</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-amber-300 transition-colors">Jugar contra OnixAI</h3>
                 <p className="text-sm text-slate-300 mb-6">Pon a prueba tu pensamiento estratégico en tiempo real contra OnixAI con 3 niveles ejecutivos: Principiante, Manager y CEO.</p>
               </div>
               <div className="flex items-center gap-2 text-amber-400 text-xs font-black uppercase tracking-widest mt-auto">
@@ -462,7 +462,7 @@ export default function ChessLobbyPage() {
           {/* Tarjeta: Arena PvP */}
           <Link href="/dashboard/chess/arena" className="block">
             <div style={woodPanelStyle} className="wood-panel p-6 rounded-none shadow-xl hover:border-[#62351b] hover:scale-[1.01] transition-all duration-300 group cursor-pointer relative overflow-hidden h-full flex flex-col justify-between">
-              <div className="absolute right-0 top-0 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+              <div className="absolute right-0 top-0 w-32 h-32 bg-[#D4AF37]/20/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-[#361d0f] text-amber-400 rounded-none border border-[#502b16] flex items-center justify-center">
@@ -470,7 +470,7 @@ export default function ChessLobbyPage() {
                   </div>
                   <span className="text-[10px] font-black uppercase tracking-wider text-amber-400">Matchmaking Realtime</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">Arena PvP (Multijugador)</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-amber-300 transition-colors">Arena PvP (Multijugador)</h3>
                 <p className="text-sm text-slate-300 mb-6">Enfréntate en vivo a otros estudiantes de la academia. Control de tiempo Bullet, Blitz y Rapid con emparejamiento por ELO.</p>
               </div>
               <div className="flex items-center gap-2 text-amber-400 text-xs font-black uppercase tracking-widest mt-auto">
@@ -487,14 +487,14 @@ export default function ChessLobbyPage() {
 
           {/* Columna 2: Ranking de la Arena */}
           <div style={woodPanelStyle} className="wood-panel p-5 rounded-none shadow-xl flex flex-col justify-between relative overflow-hidden group text-[#ecd3b5]">
-            <div className="absolute top-0 right-0 p-1 opacity-5"><Trophy size={60} className="text-amber-500" /></div>
+            <div className="absolute top-0 right-0 p-1 opacity-5"><Trophy size={60} className="text-[#D4AF37]" /></div>
             <div className="relative z-10 space-y-3">
               <div>
                 <div className="flex items-center gap-1.5 mb-1">
-                  <Sparkles size={11} className="text-amber-500" />
+                  <Sparkles size={11} className="text-[#D4AF37]" />
                   <span className="text-[8px] font-black uppercase tracking-[0.2em] text-amber-200/50">Titanium Arena</span>
                 </div>
-                <h3 className="text-xs font-black uppercase tracking-tight text-white leading-none">Ranking de la Arena</h3>
+                <h3 className="text-xs font-black uppercase tracking-tight text-slate-900 leading-none">Ranking de la Arena</h3>
                 <p className="text-[9px] text-slate-300 font-semibold leading-none mt-1.5">Top alumnos con mayor ELO acumulado en la Arena.</p>
               </div>
 
@@ -502,10 +502,10 @@ export default function ChessLobbyPage() {
                 {getChessLeaderboard().map((item, index) => (
                   <div 
                     key={index}
-                    className={`flex items-center justify-between p-2 text-[10px] font-bold border ${item.isMe ? 'border-amber-500/40 bg-[#361d0f]/50 text-white' : 'border-[#3c1e0a]/50 text-[#ecd3b5]'}`}
+                    className={`flex items-center justify-between p-2 text-[10px] font-bold border ${item.isMe ? 'border-[#D4AF37]/30/40 bg-[#361d0f]/50 text-slate-900' : 'border-[#3c1e0a]/50 text-[#ecd3b5]'}`}
                   >
                     <div className="flex items-center gap-2">
-                      <span className={`w-4 h-4 flex items-center justify-center font-mono text-[9px] font-black ${index === 0 ? 'bg-amber-500 text-white' : index === 1 ? 'bg-slate-400 text-slate-900' : 'bg-amber-800 text-white'}`}>
+                      <span className={`w-4 h-4 flex items-center justify-center font-mono text-[9px] font-black ${index === 0 ? 'bg-[#D4AF37]/20 text-slate-900' : index === 1 ? 'bg-slate-400 text-slate-900' : 'bg-amber-800 text-slate-900'}`}>
                         {index + 1}
                       </span>
                       <span>{item.name}</span>
@@ -519,14 +519,14 @@ export default function ChessLobbyPage() {
 
           {/* Columna 3: Trofeos de Ajedrez */}
           <div style={woodPanelStyle} className="wood-panel p-5 rounded-none shadow-xl flex flex-col justify-between relative overflow-hidden group text-[#ecd3b5]">
-            <div className="absolute top-0 right-0 p-1 opacity-5"><Award size={60} className="text-amber-500" /></div>
+            <div className="absolute top-0 right-0 p-1 opacity-5"><Award size={60} className="text-[#D4AF37]" /></div>
             <div className="relative z-10 space-y-3">
               <div>
                 <div className="flex items-center gap-1.5 mb-1">
-                  <Sparkles size={11} className="text-amber-500" />
+                  <Sparkles size={11} className="text-[#D4AF37]" />
                   <span className="text-[8px] font-black uppercase tracking-[0.2em] text-amber-200/50">Logros de Combate</span>
                 </div>
-                <h3 className="text-xs font-black uppercase tracking-tight text-white leading-none">Trofeos de Ajedrez</h3>
+                <h3 className="text-xs font-black uppercase tracking-tight text-slate-900 leading-none">Trofeos de Ajedrez</h3>
                 <p className="text-[9px] text-slate-300 font-semibold leading-none mt-1.5">Conquista lecciones tácticas y PvP para desbloquear.</p>
               </div>
 
@@ -538,10 +538,10 @@ export default function ChessLobbyPage() {
                 ].map((badge, idx) => (
                   <div 
                     key={idx}
-                    className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-500/40 bg-emerald-950/20 text-emerald-400' : 'border-[#3c1e0a]/50 text-slate-450 opacity-60'}`}
+                    className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-500/40 bg-emerald-950/20 text-emerald-400' : 'border-[#3c1e0a]/50 text-slate-500 opacity-60'}`}
                   >
                     <div className="flex items-center gap-2">
-                      <Award size={12} className={badge.unlocked ? 'text-emerald-400' : 'text-slate-500'} />
+                      <Award size={12} className={badge.unlocked ? 'text-emerald-400' : 'text-slate-600'} />
                       <div className="text-left">
                         <p className="text-[9px] font-black leading-none">{badge.title}</p>
                         <p className="text-[7px] font-bold text-amber-200/60 mt-0.5 leading-none">{badge.desc}</p>
@@ -561,7 +561,7 @@ export default function ChessLobbyPage() {
         <div className="space-y-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-amber-900/30 pb-4">
             <div>
-              <h2 className="text-xl font-bold font-serif italic text-white">Ruta del Aprendizaje</h2>
+              <h2 className="text-xl font-bold font-serif italic text-slate-900">Ruta del Aprendizaje</h2>
             </div>
           </div>
 
@@ -595,7 +595,7 @@ export default function ChessLobbyPage() {
                       const isCompleted = currentProgress === 100;
 
                       return (
-                        <div key={module.id} style={woodPanelStyle} className={`wood-panel rounded-none ${module.locked ? 'opacity-65' : 'hover:border-[#62351b]'} overflow-hidden transition-all duration-300 shadow-lg`}>
+                        <div key={module.id} style={woodPanelStyle} className={`wood-panel rounded-none ${module.locked ? 'opacity-65' : 'hover:border-[#62351b]'} overflow-hidden transition-all duration-300 shadow-none`}>
                           
                           {/* HEADER DEL MÓDULO */}
                           <div 
@@ -609,20 +609,20 @@ export default function ChessLobbyPage() {
                             className="p-5 md:p-6 flex items-start gap-5 border-b border-[#3c1e0a]/60 relative cursor-pointer hover:bg-[#361d0f]/20 transition-all"
                           >
                             {isCompleted && (
-                              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl"></div>
+                              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/100/5 rounded-full blur-3xl"></div>
                             )}
 
-                            <div className={`w-12 h-12 rounded-none bg-gradient-to-br ${module.color} flex items-center justify-center text-white shadow-lg shrink-0 border border-black/30 ${module.locked ? 'grayscale' : ''}`}>
+                            <div className={`w-12 h-12 rounded-none bg-gradient-to-br ${module.color} flex items-center justify-center text-slate-900 shadow-none shrink-0 border border-black/30 ${module.locked ? 'grayscale' : ''}`}>
                               <module.icon size={24} />
                             </div>
                             
                             <div className="flex-1 relative z-10">
                               <div className="flex justify-between items-start mb-2 flex-wrap gap-2">
-                                <h4 className="text-lg font-bold text-white leading-tight">{module.title}</h4>
+                                <h4 className="text-lg font-bold text-slate-900 leading-tight">{module.title}</h4>
                                 <div className="flex items-center gap-3">
                                   {module.locked ? (
-                                    <div className="flex items-center gap-2 text-slate-550 font-bold text-[10px] bg-[#221006]/85 border border-[#3c1e0a]/40 px-2 py-1 rounded-none animate-pulse">
-                                      <Lock size={12} className="text-amber-500" fill="currentColor" /> Bloqueado
+                                    <div className="flex items-center gap-2 text-slate-600 font-bold text-[10px] bg-[#221006]/85 border border-[#3c1e0a]/40 px-2 py-1 rounded-none animate-pulse">
+                                      <Lock size={12} className="text-[#D4AF37]" fill="currentColor" /> Bloqueado
                                     </div>
                                   ) : (
                                     <>
@@ -671,7 +671,7 @@ export default function ChessLobbyPage() {
                                 const content = (
                                   <div 
                                     className={`flex items-center justify-between p-3 md:px-6 border-b border-[#3c1e0a]/40 transition-colors group rounded-none w-full
-                                      ${isLessonLocked ? 'opacity-40 cursor-not-allowed bg-slate-950/20' : 'hover:bg-amber-500/10 cursor-pointer'}`}
+                                      ${isLessonLocked ? 'opacity-40 cursor-not-allowed bg-slate-50/20' : 'hover:bg-[#D4AF37]/20/10 cursor-pointer'}`}
                                     onClick={(e) => {
                                       if (isLessonLocked) {
                                         e.preventDefault();
@@ -681,11 +681,11 @@ export default function ChessLobbyPage() {
                                   >
                                     <div className="flex items-center gap-3">
                                       <div className={`w-7 h-7 rounded-none flex items-center justify-center text-[10px] font-bold border transition-colors 
-                                        ${lesson.completed ? 'bg-emerald-600 border-emerald-500 text-white shadow-lg' : 
-                                          isLessonLocked ? 'border-slate-800 text-slate-500' : 'bg-transparent border-[#361d0f] text-[#361d0f] group-hover:border-amber-500 group-hover:text-amber-400'}`}>
-                                        {lesson.completed ? <Shield size={12} fill="currentColor"/> : isLessonLocked ? <Lock size={10} className="text-slate-500" /> : idx + 1}
+                                        ${lesson.completed ? 'bg-emerald-600 border-emerald-500 text-slate-900 shadow-none' : 
+                                          isLessonLocked ? 'border-slate-800 text-slate-600' : 'bg-transparent border-[#361d0f] text-[#361d0f] group-hover:border-[#D4AF37]/30 group-hover:text-amber-400'}`}>
+                                        {lesson.completed ? <Shield size={12} fill="currentColor"/> : isLessonLocked ? <Lock size={10} className="text-slate-600" /> : idx + 1}
                                       </div>
-                                      <span className={`font-bold text-xs ${lesson.completed ? 'text-slate-500 line-through decoration-slate-700' : isLessonLocked ? 'text-slate-500' : 'text-[#ecd3b5] group-hover:text-white'}`}>
+                                      <span className={`font-bold text-xs ${lesson.completed ? 'text-slate-600 line-through decoration-slate-700' : isLessonLocked ? 'text-slate-600' : 'text-[#ecd3b5] group-hover:text-slate-900'}`}>
                                         {lesson.title}
                                       </span>
                                     </div>
@@ -697,17 +697,17 @@ export default function ChessLobbyPage() {
                                         </span>
                                         <div className="flex gap-0.5 bg-amber-950/60 px-1.5 py-0.5 rounded-none border border-amber-800/40">
                                           {[1, 2, 3].map((star) => (
-                                            <Star key={star} size={10} className="text-amber-500" fill="currentColor"/>
+                                            <Star key={star} size={10} className="text-[#D4AF37]" fill="currentColor"/>
                                           ))}
                                         </div>
                                       </div>
                                     ) : isLessonLocked ? (
-                                      <div className="flex items-center gap-1.5 text-slate-550 text-[10px] font-black uppercase tracking-widest mr-1">
+                                      <div className="flex items-center gap-1.5 text-slate-600 text-[10px] font-black uppercase tracking-widest mr-1">
                                         <Lock size={10} /> Locked
                                       </div>
                                     ) : (
                                       <div className="flex items-center gap-3">
-                                        <span className="text-[9px] text-slate-550 font-bold uppercase tracking-wider flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <span className="text-[9px] text-slate-600 font-bold uppercase tracking-wider flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
                                           ⏱️ Obj: {((lesson.id.charCodeAt(lesson.id.length - 1) * 3) % 30) + 30}s
                                         </span>
                                         <button className="text-[10px] font-bold text-[#ecd3b5] flex items-center gap-0.5 group-hover:translate-x-0.5 transition-transform bg-[#361d0f] border border-[#502b16] px-2 py-1 rounded-none opacity-0 group-hover:opacity-100 md:opacity-100">

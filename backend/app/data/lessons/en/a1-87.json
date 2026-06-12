@@ -1,0 +1,101 @@
+{
+  "id": "a1-87",
+  "title": "Simple Past: Regular Verbs",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Past Tense", "Regular Verbs"],
+  "completion_message": "¡Excelente! Ahora puedes narrar acciones pasadas completadas usando verbos regulares en su forma -ed.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Pasado Simple Regular",
+      "parts": [
+        { "visual": "Los verbos regulares en pasado añaden '-ed': Work -> Worked. Finish -> Finished. Talk -> Talked. Negativo: I didn't work (No trabajé). Pregunta: Did you work?", "audio": "Regular verbs in the past add -ed: Work becomes worked. Finish becomes finished. Talk becomes talked. Negative: I didn't work. Question: Did you work?" },
+        { "visual": "Si el verbo termina en 'e', se agrega solo 'd': Decide -> Decided. Si termina en consonante + 'y', cambia a 'ied': Study -> Studied.", "audio": "If the verb ends in e, just add d: Decide becomes decided. If it ends in consonant plus y, change to ied: Study becomes studied." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del verbo en pasado.",
+      "questions": [
+        { "id": "a1-87-q1", "type": "quiz_choice", "question": "I ____ the report yesterday. (finish).", "options": ["finished", "finish", "finishing", "finishes"], "correct_answer": "finished", "explanation": "Finish + ed = finished." },
+        { "id": "a1-87-q2", "type": "quiz_choice", "question": "She ____ the client last Monday. (call).", "options": ["called", "call", "calling", "calls"], "correct_answer": "called", "explanation": "Call + ed = called." },
+        { "id": "a1-87-q3", "type": "quiz_choice", "question": "We ____ the project on time. (complete).", "options": ["completed", "complete", "completing", "completes"], "correct_answer": "completed", "explanation": "Complete + d = completed." },
+        { "id": "a1-87-q4", "type": "quiz_choice", "question": "He ____ to the manager. (talk).", "options": ["talked", "talk", "talking", "talks"], "correct_answer": "talked", "explanation": "Talk + ed = talked." },
+        { "id": "a1-87-q5", "type": "quiz_choice", "question": "They ____ the contract. (sign).", "options": ["signed", "sign", "signing", "signs"], "correct_answer": "signed", "explanation": "Sign + ed = signed." },
+        { "id": "a1-87-q6", "type": "quiz_choice", "question": "I ____ the proposal. (prepare).", "options": ["prepared", "prepare", "preparing", "prepares"], "correct_answer": "prepared", "explanation": "Prepare + d = prepared." },
+        { "id": "a1-87-q7", "type": "quiz_choice", "question": "She ____ the budget. (review).", "options": ["reviewed", "review", "reviewing", "reviews"], "correct_answer": "reviewed", "explanation": "Review + ed = reviewed." },
+        { "id": "a1-87-q8", "type": "quiz_choice", "question": "The team ____ the problem. (solve).", "options": ["solved", "solve", "solving", "solves"], "correct_answer": "solved", "explanation": "Solve + d = solved." },
+        { "id": "a1-87-q9", "type": "quiz_choice", "question": "I ____ the email. (forward).", "options": ["forwarded", "forward", "forwarding", "forwards"], "correct_answer": "forwarded", "explanation": "Forward + ed = forwarded." },
+        { "id": "a1-87-q10", "type": "quiz_choice", "question": "He ____ the data. (analyze).", "options": ["analyzed", "analyze", "analyzing", "analyzes"], "correct_answer": "analyzed", "explanation": "Analyze + d = analyzed." },
+        { "id": "a1-87-q11", "type": "quiz_choice", "question": "I ____ finish the report. (negativo).", "options": ["didn't", "wasn't", "don't", "am not"], "correct_answer": "didn't", "explanation": "Negativo pasado: didn't + infinitivo." },
+        { "id": "a1-87-q12", "type": "quiz_choice", "question": "She ____ attend the meeting. (negativo).", "options": ["didn't", "wasn't", "doesn't", "can't"], "correct_answer": "didn't", "explanation": "Negativo pasado: didn't + infinitivo." },
+        { "id": "a1-87-q13", "type": "quiz_choice", "question": "____ you send the email? (Pregunta).", "options": ["Did", "Was", "Do", "Have"], "correct_answer": "Did", "explanation": "Pregunta pasado: Did + sujeto + infinitivo?" },
+        { "id": "a1-87-q14", "type": "quiz_choice", "question": "____ they complete the task? (Pregunta).", "options": ["Did", "Were", "Do", "Have"], "correct_answer": "Did", "explanation": "Did they?" },
+        { "id": "a1-87-q15", "type": "quiz_choice", "question": "Yes, I ____. (Respuesta corta positiva).", "options": ["did", "was", "do", "have"], "correct_answer": "did", "explanation": "Yes, I did." },
+        { "id": "a1-87-q16", "type": "quiz_choice", "question": "No, I ____. (Respuesta corta negativa).", "options": ["didn't", "wasn't", "don't", "can't"], "correct_answer": "didn't", "explanation": "No, I didn't." },
+        { "id": "a1-87-q17", "type": "quiz_choice", "question": "We ____ the meeting. (cancel).", "options": ["cancelled", "cancel", "cancelling", "cancels"], "correct_answer": "cancelled", "explanation": "Cancel + led = cancelled." },
+        { "id": "a1-87-q18", "type": "quiz_choice", "question": "I ____ in English. (study).", "options": ["studied", "study", "studying", "studies"], "correct_answer": "studied", "explanation": "Study -> studied (y -> ied)." },
+        { "id": "a1-87-q19", "type": "quiz_choice", "question": "She ____ the invoice. (check).", "options": ["checked", "check", "checking", "checks"], "correct_answer": "checked", "explanation": "Check + ed = checked." },
+        { "id": "a1-87-q20", "type": "quiz_choice", "question": "They ____ the new system. (implement).", "options": ["implemented", "implement", "implementing", "implements"], "correct_answer": "implemented", "explanation": "Implement + ed = implemented." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el pasado simple del verbo indicado.",
+      "questions": [
+        { "id": "a1-87-f1", "type": "fill_input", "question": "I ____ (finish) the report.", "correct_answer": "finished", "explanation": "finished." },
+        { "id": "a1-87-f2", "type": "fill_input", "question": "She ____ (call) the client.", "correct_answer": "called", "explanation": "called." },
+        { "id": "a1-87-f3", "type": "fill_input", "question": "We ____ (complete) the project.", "correct_answer": "completed", "explanation": "completed." },
+        { "id": "a1-87-f4", "type": "fill_input", "question": "They ____ (sign) the contract.", "correct_answer": "signed", "explanation": "signed." },
+        { "id": "a1-87-f5", "type": "fill_input", "question": "I ____ (prepare) the proposal.", "correct_answer": "prepared", "explanation": "prepared." },
+        { "id": "a1-87-f6", "type": "fill_input", "question": "He ____ (analyze) the data.", "correct_answer": "analyzed", "explanation": "analyzed." },
+        { "id": "a1-87-f7", "type": "fill_input", "question": "I ____ finish. (Negativo: No terminé).", "correct_answer": "didn't", "explanation": "didn't." },
+        { "id": "a1-87-f8", "type": "fill_input", "question": "____ you send it? (Pregunta).", "correct_answer": "Did", "explanation": "Did." },
+        { "id": "a1-87-f9", "type": "fill_input", "question": "I ____ (study) English.", "correct_answer": "studied", "explanation": "studied." },
+        { "id": "a1-87-f10", "type": "fill_input", "question": "Yes, I ____. (Respuesta corta positiva).", "correct_answer": "did", "explanation": "did." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-87-p1", "source": "Finished", "target": "Terminé / Terminó"},
+        {"id": "a1-87-p2", "source": "Called", "target": "Llamé / Llamó"},
+        {"id": "a1-87-p3", "source": "Completed", "target": "Completé / Completó"},
+        {"id": "a1-87-p4", "source": "Signed", "target": "Firmé / Firmó"},
+        {"id": "a1-87-p5", "source": "Prepared", "target": "Preparé / Preparó"},
+        {"id": "a1-87-p6", "source": "Solved", "target": "Resolví / Resolvió"},
+        {"id": "a1-87-p7", "source": "I didn't finish", "target": "No terminé"},
+        {"id": "a1-87-p8", "source": "Did you send it?", "target": "¿Lo enviaste?"},
+        {"id": "a1-87-p9", "source": "Studied", "target": "Estudié / Estudió"},
+        {"id": "a1-87-p10", "source": "Implemented", "target": "Implementé / Implementó"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-87-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I finished the report yesterday.", "options": ["I finished the report yesterday.", "She finished the report yesterday.", "I finish the report today.", "I completed the report yesterday."], "correct_answer": "I finished the report yesterday.", "explanation": "Audio exacto." },
+        { "id": "a1-87-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She called the client.", "options": ["She called the client.", "He called the client.", "She calls the client.", "She emailed the client."], "correct_answer": "She called the client.", "explanation": "Audio exacto." },
+        { "id": "a1-87-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We completed the project on time.", "options": ["We completed the project on time.", "They completed the project on time.", "We finished the project on time.", "We completed the project in time."], "correct_answer": "We completed the project on time.", "explanation": "Audio exacto." },
+        { "id": "a1-87-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They signed the contract.", "options": ["They signed the contract.", "We signed the contract.", "They signed the document.", "They sign the contract."], "correct_answer": "They signed the contract.", "explanation": "Audio exacto." },
+        { "id": "a1-87-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I didn't finish the report.", "options": ["I didn't finish the report.", "She didn't finish the report.", "I didn't complete the report.", "I don't finish the report."], "correct_answer": "I didn't finish the report.", "explanation": "Audio exacto." },
+        { "id": "a1-87-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Did you send the email?", "options": ["Did you send the email?", "Did she send the email?", "Do you send the email?", "Did you read the email?"], "correct_answer": "Did you send the email?", "explanation": "Audio exacto." },
+        { "id": "a1-87-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Yes, I did.", "options": ["Yes, I did.", "No, I didn't.", "Yes, she did.", "Yes, I do."], "correct_answer": "Yes, I did.", "explanation": "Audio exacto." },
+        { "id": "a1-87-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The team solved the problem.", "options": ["The team solved the problem.", "The team solves the problem.", "My team solved the problem.", "The team solved a problem."], "correct_answer": "The team solved the problem.", "explanation": "Audio exacto." },
+        { "id": "a1-87-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I studied English last year.", "options": ["I studied English last year.", "She studied English last year.", "I study English last year.", "I studied French last year."], "correct_answer": "I studied English last year.", "explanation": "Audio exacto." },
+        { "id": "a1-87-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They implemented the new system.", "options": ["They implemented the new system.", "We implemented the new system.", "They implement the new system.", "They installed the new system."], "correct_answer": "They implemented the new system.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

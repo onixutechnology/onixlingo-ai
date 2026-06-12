@@ -1,0 +1,101 @@
+{
+  "id": "c2-62",
+  "title": "Legal English",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Law", "Business", "Contracts"],
+  "completion_message": "¡Excelente! 'El diablo está en los detalles', especialmente en los contratos. Ya puedes navegar por los laberintos legales y proteger a tu empresa de demandas millonarias.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Inglés Legal y Contratos (C2)",
+      "parts": [
+        { "visual": "Los negocios a nivel ejecutivo requieren dominar la jerga legal. \n\n1. Breach of contract (Incumplimiento de contrato): \n- Violar los términos de un acuerdo. \nEj: If they don't deliver by Friday, it's a BREACH OF CONTRACT. \n\n2. Liability (Responsabilidad civil/legal): \n- La obligación legal de pagar por daños o deudas. \nEj: We need insurance to protect the company from legal LIABILITY. \n\n3. Fine print (Letra pequeña): \n- Las condiciones ocultas o difíciles de leer en un contrato. \nEj: Always read the FINE PRINT before signing.", "audio": "Welcome to Legal English and Contracts. Executive business requires mastering legal jargon. Number 1: Breach of contract. This means violating or failing to follow the terms of an agreement. For example: If they don't deliver by Friday, it's a BREACH OF CONTRACT. Number 2: Liability. The legal responsibility to pay for damages, debts, or injuries. For example: We need insurance to protect the company from legal LIABILITY. Number 3: Fine print. The hidden or difficult-to-read conditions and clauses in a contract, often containing unpleasant surprises. For example: Always read the FINE PRINT before signing." },
+        { "visual": "4. Loophole (Vacío legal): \n- Un error u omisión en la ley o contrato que permite evadir una obligación. \nEj: The lawyers found a LOOPHOLE to avoid paying the taxes. \n\n5. Litigation (Litigio / Demanda judicial): \n- El proceso de llevar una disputa a los tribunales. \nEj: We want to settle this privately to avoid costly LITIGATION. \n\n6. Clause (Cláusula): \n- Una sección específica de un contrato. \nEj: The non-compete CLAUSE prevents you from working for our rivals. \n\n7. Binding (Vinculante): \n- Algo que obliga legalmente. Un contrato firmado es 'legally binding'. \nEj: This email agreement is a legally BINDING contract.", "audio": "Number 4: Loophole. An error, omission, or ambiguity in a law or contract that allows someone to avoid an obligation. For example: The lawyers found a LOOPHOLE to avoid paying the taxes. Number 5: Litigation. The process of taking a dispute to a court of law. For example: We want to settle this privately to avoid costly LITIGATION. Number 6: Clause. A specific section or provision of a legal contract. For example: The non-compete CLAUSE prevents you from working for our rivals. Finally, Number 7: Binding. Something that forces you to obey by law. A signed document is legally binding. For example: This email agreement is a legally BINDING contract." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término legal correcto.",
+      "questions": [
+        { "id": "c2-62-q1", "type": "quiz_choice", "question": "Because they delivered the materials three weeks late, we are suing them for ____ of contract. (Incumplimiento).", "options": ["breach", "break", "burst", "bleed"], "correct_answer": "breach", "explanation": "Breach of contract = incumplimiento de contrato." },
+        { "id": "c2-62-q2", "type": "quiz_choice", "question": "If a customer gets injured using our product, the company has complete legal ____ and will have to pay millions. (Responsabilidad legal/civil).", "options": ["liability", "responsibility", "duty", "fault"], "correct_answer": "liability", "explanation": "Liability = responsabilidad legal o civil." },
+        { "id": "c2-62-q3", "type": "quiz_choice", "question": "The offer looked amazing, but when I read the ____ print, I saw all the hidden fees. (Letra pequeña).", "options": ["fine", "small", "tiny", "hidden"], "correct_answer": "fine", "explanation": "Fine print = la letra pequeña del contrato." },
+        { "id": "c2-62-q4", "type": "quiz_choice", "question": "The billionaire pays almost zero taxes legally because his accountants found a brilliant ____ in the tax code. (Vacío legal).", "options": ["loophole", "blackhole", "wormhole", "keyhole"], "correct_answer": "loophole", "explanation": "Loophole = vacío legal." },
+        { "id": "c2-62-q5", "type": "quiz_choice", "question": "Going to court is slow and expensive. We prefer to solve disputes through arbitration, avoiding ____. (Litigio/Juicio).", "options": ["litigation", "investigation", "legislation", "accusation"], "correct_answer": "litigation", "explanation": "Litigation = litigio (proceso judicial en un tribunal)." },
+        { "id": "c2-62-q6", "type": "quiz_choice", "question": "Once both parties sign the document, it becomes a legally ____ contract. You cannot escape it. (Vinculante).", "options": ["binding", "tying", "holding", "locking"], "correct_answer": "binding", "explanation": "Legally binding = legalmente vinculante." },
+        { "id": "c2-62-q7", "type": "quiz_choice", "question": "Check Section 4, ____ 2. It clearly states the penalty for late payment. (Cláusula).", "options": ["clause", "line", "rule", "law"], "correct_answer": "clause", "explanation": "Clause = cláusula (sección de un contrato)." },
+        { "id": "c2-62-q8", "type": "quiz_choice", "question": "We do not want to go to court. We want to ____ out of court by paying them $100,000. (Llegar a un acuerdo).", "options": ["settle", "solve", "finish", "pay"], "correct_answer": "settle", "explanation": "Settle (out of court) = llegar a un acuerdo extrajudicial." },
+        { "id": "c2-62-q9", "type": "quiz_choice", "question": "To force someone to stop doing something (like using your trademark), you send them a '____ and desist' letter.", "options": ["cease", "stop", "halt", "pause"], "correct_answer": "cease", "explanation": "Cease and desist = cese y desista (orden para detener una actividad)." },
+        { "id": "c2-62-q10", "type": "quiz_choice", "question": "The company filed a ____ against its competitor for stealing trade secrets. (Demanda civil).", "options": ["lawsuit", "complaint", "claim", "charge"], "correct_answer": "lawsuit", "explanation": "Lawsuit = demanda civil." },
+        { "id": "c2-62-q11", "type": "quiz_choice", "question": "Instead of waiting for them to sue us, our legal counsel advised us to ____-sue them. (Contrademandar).", "options": ["countersue", "antisue", "backsue", "resue"], "correct_answer": "countersue", "explanation": "Countersue = contrademandar." },
+        { "id": "c2-62-q12", "type": "quiz_choice", "question": "The contract is completely ____ and void because it was signed under pressure. (Nulo e inválido).", "options": ["null", "empty", "blank", "zero"], "correct_answer": "null", "explanation": "Null and void = nulo e inválido / sin valor legal." },
+        { "id": "c2-62-q13", "type": "quiz_choice", "question": "An unforeseeable, unavoidable event (like an earthquake) that prevents fulfilling a contract is called Force ____. (Fuerza mayor).", "options": ["Majeure", "Major", "Maximum", "Massive"], "correct_answer": "Majeure", "explanation": "Force Majeure = fuerza mayor (un término del francés usado en inglés legal)." },
+        { "id": "c2-62-q14", "type": "quiz_choice", "question": "When a company formally declares that it cannot pay its debts, it files for ____. (Bancarrota).", "options": ["bankruptcy", "poverty", "ruin", "debt"], "correct_answer": "bankruptcy", "explanation": "Bankruptcy = bancarrota." },
+        { "id": "c2-62-q15", "type": "quiz_choice", "question": "Intellectual Property (IP) includes patents, copyrights, and ____. (Marcas registradas).", "options": ["trademarks", "watermarks", "landmarks", "hallmarks"], "correct_answer": "trademarks", "explanation": "Trademarks = marcas registradas." },
+        { "id": "c2-62-q16", "type": "quiz_choice", "question": "Using someone's patented technology without permission is patent ____. (Infracción/Violación).", "options": ["infringement", "breaking", "stealing", "robbing"], "correct_answer": "infringement", "explanation": "Infringement = infracción (violación de derechos de autor, patente o marca)." },
+        { "id": "c2-62-q17", "type": "quiz_choice", "question": "If you don't pay the mortgage, the bank has a ____ on your property, meaning they have the legal right to take it. (Derecho de retención / Embargo).", "options": ["lien", "hold", "lock", "grab"], "correct_answer": "lien", "explanation": "Lien = derecho de retención o gravamen sobre una propiedad." },
+        { "id": "c2-62-q18", "type": "quiz_choice", "question": "To write the first version of a contract is to ____ it. (Redactar).", "options": ["draft", "draw", "write", "paint"], "correct_answer": "draft", "explanation": "Draft a contract = redactar un contrato (o el borrador)." },
+        { "id": "c2-62-q19", "type": "quiz_choice", "question": "We need our lawyers to carefully ____ the contract before we sign it. (Revisar detalladamente).", "options": ["review", "watch", "look", "see"], "correct_answer": "review", "explanation": "Review a contract = revisarlo." },
+        { "id": "c2-62-q20", "type": "quiz_choice", "question": "A clause that prevents an ex-employee from working for a competitor for a period of time is a non-____ clause.", "options": ["compete", "work", "rival", "fight"], "correct_answer": "compete", "explanation": "Non-compete clause = cláusula de no competencia." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término legal correcto.",
+      "questions": [
+        { "id": "c2-62-f1", "type": "fill_input", "question": "____ of contract. (Incumplimiento con B)", "correct_answer": "Breach", "explanation": "Breach." },
+        { "id": "c2-62-f2", "type": "fill_input", "question": "Legal ____. (Responsabilidad civil con L)", "correct_answer": "liability", "explanation": "liability." },
+        { "id": "c2-62-f3", "type": "fill_input", "question": "Read the ____ print. (Letra pequeña con F)", "correct_answer": "fine", "explanation": "fine." },
+        { "id": "c2-62-f4", "type": "fill_input", "question": "A tax ____. (Vacío legal con L)", "correct_answer": "loophole", "explanation": "loophole." },
+        { "id": "c2-62-f5", "type": "fill_input", "question": "Avoid costly ____. (Litigios/Demandas con L)", "correct_answer": "litigation", "explanation": "litigation." },
+        { "id": "c2-62-f6", "type": "fill_input", "question": "Legally ____. (Vinculante con B)", "correct_answer": "binding", "explanation": "binding." },
+        { "id": "c2-62-f7", "type": "fill_input", "question": "A non-compete ____. (Cláusula con C)", "correct_answer": "clause", "explanation": "clause." },
+        { "id": "c2-62-f8", "type": "fill_input", "question": "____ out of court. (Llegar a un acuerdo con S)", "correct_answer": "Settle", "explanation": "Settle." },
+        { "id": "c2-62-f9", "type": "fill_input", "question": "File a ____. (Demanda con L)", "correct_answer": "lawsuit", "explanation": "lawsuit." },
+        { "id": "c2-62-f10", "type": "fill_input", "question": "____ and void. (Nulo con N)", "correct_answer": "Null", "explanation": "Null." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Legal Match",
+      "pairs": [
+        {"id": "c2-62-p1", "source": "Breach of contract", "target": "Incumplimiento de contrato"},
+        {"id": "c2-62-p2", "source": "Liability", "target": "Responsabilidad legal / civil"},
+        {"id": "c2-62-p3", "source": "Fine print", "target": "Letra pequeña (condiciones ocultas)"},
+        {"id": "c2-62-p4", "source": "Loophole", "target": "Vacío legal en una ley o contrato"},
+        {"id": "c2-62-p5", "source": "Litigation", "target": "Litigio / Proceso judicial"},
+        {"id": "c2-62-p6", "source": "Legally binding", "target": "Legalmente vinculante (obligatorio)"},
+        {"id": "c2-62-p7", "source": "Clause", "target": "Cláusula de un documento"},
+        {"id": "c2-62-p8", "source": "Settle out of court", "target": "Llegar a un acuerdo extrajudicial"},
+        {"id": "c2-62-p9", "source": "Lawsuit", "target": "Demanda judicial o civil"},
+        {"id": "c2-62-p10", "source": "Null and void", "target": "Nulo e inválido"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase legal.",
+      "questions": [
+        { "id": "c2-62-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a breach of contract.", "options": ["It is a breach of contract.", "It was a breach of contract.", "This is a breach of contract.", "It is a break of contract."], "correct_answer": "It is a breach of contract.", "explanation": "Audio exacto." },
+        { "id": "c2-62-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have zero liability.", "options": ["We have zero liability.", "They have zero liability.", "We had zero liability.", "We have zero reliability."], "correct_answer": "We have zero liability.", "explanation": "Audio exacto." },
+        { "id": "c2-62-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Always read the fine print.", "options": ["Always read the fine print.", "Always reading the fine print.", "Always read the tiny print.", "Always read fine print."], "correct_answer": "Always read the fine print.", "explanation": "Audio exacto." },
+        { "id": "c2-62-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They found a tax loophole.", "options": ["They found a tax loophole.", "We found a tax loophole.", "They find a tax loophole.", "They found the tax loophole."], "correct_answer": "They found a tax loophole.", "explanation": "Audio exacto." },
+        { "id": "c2-62-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Avoid costly litigation.", "options": ["Avoid costly litigation.", "Avoiding costly litigation.", "Avoids costly litigation.", "Avoid costly investigation."], "correct_answer": "Avoid costly litigation.", "explanation": "Audio exacto." },
+        { "id": "c2-62-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The contract is legally binding.", "options": ["The contract is legally binding.", "This contract is legally binding.", "The contract was legally binding.", "The contract is legal binding."], "correct_answer": "The contract is legally binding.", "explanation": "Audio exacto." },
+        { "id": "c2-62-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Check the non-compete clause.", "options": ["Check the non-compete clause.", "Checked the non-compete clause.", "Checking the non-compete clause.", "Check a non-compete clause."], "correct_answer": "Check the non-compete clause.", "explanation": "Audio exacto." },
+        { "id": "c2-62-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will settle out of court.", "options": ["We will settle out of court.", "They will settle out of court.", "We would settle out of court.", "We will solve out of court."], "correct_answer": "We will settle out of court.", "explanation": "Audio exacto." },
+        { "id": "c2-62-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They filed a lawsuit.", "options": ["They filed a lawsuit.", "We filed a lawsuit.", "They file a lawsuit.", "She filed a lawsuit."], "correct_answer": "They filed a lawsuit.", "explanation": "Audio exacto." },
+        { "id": "c2-62-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is null and void.", "options": ["It is null and void.", "It was null and void.", "This is null and void.", "It is null and zero."], "correct_answer": "It is null and void.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

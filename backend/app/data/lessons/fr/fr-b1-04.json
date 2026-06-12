@@ -1,0 +1,95 @@
+{
+  "id": "fr-b1-04",
+  "title": "Les Pronoms Relatifs Composés",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Relative Pronouns"],
+  "completion_message": "¡Excelente! Has dominado 'lequel', 'laquelle' y sus amigos. Ahora tus frases son más largas, elegantes y conectadas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Cual y La Cual (B1)",
+      "parts": [
+        {
+          "visual": "En español decimos: 'La mesa SOBRE LA CUAL escribo'.\nEn francés usamos los Pronombres Relativos Compuestos después de preposiciones (sur, sous, pour, avec, dans...).\n\nPara elegirlos, debes fijarte en el GÉNERO y NÚMERO de la palabra que estás reemplazando:\n- Masculino Singular -> LEQUEL (el cual)\n- Femenino Singular -> LAQUELLE (la cual)\n- Masculino Plural -> LESQUELS (los cuales)\n- Femenino Plural -> LESQUELLES (las cuales)",
+          "audio": "En el nivel A2 aprendiste a usar los pronombres relativos simples: Qui, Que y Où. Hoy vamos a subir el nivel con los Pronombres Relativos Compuestos. ¿Para qué sirven? Sirven para conectar frases justo después de una preposición, como 'sobre', 'debajo de' o 'con'. Por ejemplo, imagina que dices: 'El amigo CON EL CUAL viajo'. Ese 'el cual' o 'la cual' depende de si la palabra es masculina o femenina. Si es 'el amigo', masculino singular, dices 'lequel'. Entonces queda: L'ami avec LEQUEL je voyage. Si fuera 'la mesa', femenino singular, dirías 'laquelle'. La table sur LAQUELLE j'écris."
+        },
+        {
+          "visual": "¡Atención a las contracciones!\nSi la preposición es À (a) o DE (de), el pronombre se fusiona (se contrae) exactamente igual que los artículos definidos.\n\nCon À:\n- à + lequel = AUQUEL (al cual)\n- à + laquelle = à laquelle (no cambia)\n- à + lesquels = AUXQUELS (a los cuales)\n- à + lesquelles = AUXQUELLES (a las cuales)\n\nCon DE:\n- de + lequel = DUQUEL (del cual)\n- de + laquelle = de laquelle\n- de + lesquels = DESQUELS (de los cuales)\n- de + lesquelles = DESQUELLES",
+          "audio": "Ahora viene la parte divertida. ¿Recuerdas que en francés no podemos decir 'à le' sino que decimos 'au'? Pues esa misma regla aplica aquí. Si la preposición que usas es 'À' y quieres decir 'a el cual' (à lequel), ¡eso explota! Tienes que contraerlo y decir 'AUQUEL'. Y si es plural, 'AUXQUELS'. Lo mismo pasa con la preposición 'DE'. No puedes decir 'de lequel'. Tienes que contraerlo y decir 'DUQUEL' (del cual). Pero tranquilo, si es femenino singular ('à laquelle' o 'de laquelle'), no se contrae y se queda igual."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el pronombre relativo compuesto correcto.",
+      "questions": [
+        { "id": "frb1-04-q1", "type": "quiz_choice", "question": "¿Cuándo usamos los pronombres relativos compuestos (lequel, laquelle...)?", "options": ["Generalmente después de una preposición (sur, avec, pour, etc.)", "Solo al principio de la oración", "Solo para reemplazar verbos", "En lugar del pronombre 'Que' siempre"], "correct_answer": "Generalmente después de una preposición (sur, avec, pour, etc.)", "explanation": "Se usan para referirse a algo/alguien después de una preposición." },
+        { "id": "frb1-04-q2", "type": "quiz_choice", "question": "Le livre (masc). El libro para EL CUAL... -> Le livre pour ____.", "options": ["lequel", "laquelle", "lesquels", "lesquelles"], "correct_answer": "lequel", "explanation": "Masculino singular = lequel." },
+        { "id": "frb1-04-q3", "type": "quiz_choice", "question": "La chaise (fem). La silla sobre LA CUAL... -> La chaise sur ____.", "options": ["laquelle", "lequel", "lesquelles", "lesquels"], "correct_answer": "laquelle", "explanation": "Femenino singular = laquelle." },
+        { "id": "frb1-04-q4", "type": "quiz_choice", "question": "Les documents (masc. plur). Los documentos sin LOS CUALES... -> Les documents sans ____.", "options": ["lesquels", "lesquelles", "lequel", "laquelle"], "correct_answer": "lesquels", "explanation": "Masculino plural = lesquels." },
+        { "id": "frb1-04-q5", "type": "quiz_choice", "question": "Les filles (fem. plur). Las chicas con LAS CUALES... -> Les filles avec ____.", "options": ["lesquelles", "lesquels", "laquelle", "lequel"], "correct_answer": "lesquelles", "explanation": "Femenino plural = lesquelles." },
+        { "id": "frb1-04-q6", "type": "quiz_choice", "question": "¿Cuál es la contracción correcta de 'à + lequel'?", "options": ["auquel", "à lequel", "auxquel", "alquel"], "correct_answer": "auquel", "explanation": "à + le = au -> à + lequel = auquel." },
+        { "id": "frb1-04-q7", "type": "quiz_choice", "question": "Le projet (masc). El proyecto AL CUAL pienso... -> Le projet ____ je pense.", "options": ["auquel", "à lequel", "duquel", "lequel"], "correct_answer": "auquel", "explanation": "Penser à (pensar en) -> à + lequel = auquel." },
+        { "id": "frb1-04-q8", "type": "quiz_choice", "question": "La réunion (fem). La reunión A LA CUAL asisto... -> La réunion ____ j'assiste.", "options": ["à laquelle", "auquelle", "à lequel", "laquelle"], "correct_answer": "à laquelle", "explanation": "Femenino singular con 'à' no se contrae -> à laquelle." },
+        { "id": "frb1-04-q9", "type": "quiz_choice", "question": "Les problèmes (masc. plur). Los problemas A LOS CUALES nos enfrentamos -> Les problèmes ____ nous faisons face.", "options": ["auxquels", "à lesquels", "auquels", "lesquels"], "correct_answer": "auxquels", "explanation": "à + lesquels = auxquels." },
+        { "id": "frb1-04-q10", "type": "quiz_choice", "question": "¿Cuál es la contracción correcta de 'de + lequel'?", "options": ["duquel", "de lequel", "desquel", "delquel"], "correct_answer": "duquel", "explanation": "de + le = du -> de + lequel = duquel." },
+        { "id": "frb1-04-q11", "type": "quiz_choice", "question": "Le chien (masc). El perro cerca DEL CUAL estoy... -> Le chien près ____ je suis.", "options": ["duquel", "de lequel", "auquel", "lequel"], "correct_answer": "duquel", "explanation": "près de + lequel = duquel." },
+        { "id": "frb1-04-q12", "type": "quiz_choice", "question": "La maison (fem). La casa al lado DE LA CUAL vivo... -> La maison à côté ____ j'habite.", "options": ["de laquelle", "duquelle", "de lequel", "laquelle"], "correct_answer": "de laquelle", "explanation": "Femenino singular con 'de' no se contrae -> de laquelle." },
+        { "id": "frb1-04-q13", "type": "quiz_choice", "question": "L'ordinateur (masc). El ordenador CON EL CUAL trabajo... -> L'ordinateur avec ____ je travaille.", "options": ["lequel", "auquel", "duquel", "laquelle"], "correct_answer": "lequel", "explanation": "'avec' no se contrae con lequel. Queda: avec lequel." },
+        { "id": "frb1-04-q14", "type": "quiz_choice", "question": "Les amis (masc. plur) ____ je sors. (Los amigos CON LOS CUALES salgo).", "options": ["avec lesquels", "avec auxquels", "avec lequel", "lesquels"], "correct_answer": "avec lesquels", "explanation": "Avec + lesquels." },
+        { "id": "frb1-04-q15", "type": "quiz_choice", "question": "Les raisons (fem. plur) POUR ____ je pars. (Las razones POR LAS CUALES me voy).", "options": ["lesquelles", "lesquels", "laquelle", "lequel"], "correct_answer": "lesquelles", "explanation": "Raison es femenino -> Pour lesquelles." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el pronombre relativo compuesto correcto (lequel, laquelle, auquel, duquel, etc.).",
+      "questions": [
+        { "id": "frb1-04-f1", "type": "fill_input", "question": "Le stylo (masc). Le stylo avec ____ j'écris. (Con el cual)", "correct_answer": "lequel", "explanation": "lequel" },
+        { "id": "frb1-04-f2", "type": "fill_input", "question": "La table (fem). La table sur ____ il dort. (Sobre la cual)", "correct_answer": "laquelle", "explanation": "laquelle" },
+        { "id": "frb1-04-f3", "type": "fill_input", "question": "Les enfants (masc. pl). Les enfants pour ____ je travaille. (Para los cuales)", "correct_answer": "lesquels", "explanation": "lesquels" },
+        { "id": "frb1-04-f4", "type": "fill_input", "question": "Les filles (fem. pl). Les filles avec ____ je joue. (Con las cuales)", "correct_answer": "lesquelles", "explanation": "lesquelles" },
+        { "id": "frb1-04-f5", "type": "fill_input", "question": "Le sport (masc). Le sport ____ je m'intéresse. (Al cual: s'intéresser À).", "correct_answer": "auquel", "explanation": "auquel" },
+        { "id": "frb1-04-f6", "type": "fill_input", "question": "La femme (fem). La femme ____ je parle. (A la cual: parler À).", "correct_answer": "à laquelle", "explanation": "à laquelle" },
+        { "id": "frb1-04-f7", "type": "fill_input", "question": "Le mur (masc). Le mur près ____ je suis. (Cerca DEL CUAL: près DE).", "correct_answer": "duquel", "explanation": "duquel" },
+        { "id": "frb1-04-f8", "type": "fill_input", "question": "Les documents (masc. pl) ____ il pense. (A los cuales: penser À).", "correct_answer": "auxquels", "explanation": "auxquels" },
+        { "id": "frb1-04-f9", "type": "fill_input", "question": "La ville (fem). La ville au centre ____ nous sommes. (En el centro DE LA CUAL).", "correct_answer": "de laquelle", "explanation": "de laquelle" },
+        { "id": "frb1-04-f10", "type": "fill_input", "question": "Les questions (fem. pl) ____ je réponds. (A las cuales: répondre À).", "correct_answer": "auxquelles", "explanation": "auxquelles" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Mastery Match",
+      "pairs": [
+        {"id": "frb1-04-p1", "source": "Lequel", "target": "El cual"},
+        {"id": "frb1-04-p2", "source": "Laquelle", "target": "La cual"},
+        {"id": "frb1-04-p3", "source": "Lesquels", "target": "Los cuales"},
+        {"id": "frb1-04-p4", "source": "Lesquelles", "target": "Las cuales"},
+        {"id": "frb1-04-p5", "source": "Auquel", "target": "Al cual (à + lequel)"},
+        {"id": "frb1-04-p6", "source": "À laquelle", "target": "A la cual"},
+        {"id": "frb1-04-p7", "source": "Duquel", "target": "Del cual (de + lequel)"},
+        {"id": "frb1-04-p8", "source": "De laquelle", "target": "De la cual"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y distingue el pronombre relativo.",
+      "questions": [
+        { "id": "frb1-04-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "C'est l'homme avec lequel je travaille", "options": ["C'est l'homme avec lequel je travaille", "C'est la femme avec laquelle je travaille", "C'est l'homme pour lequel je travaille", "C'est l'ami auquel je parle"], "correct_answer": "C'est l'homme avec lequel je travaille", "explanation": "Audio dice: C'est l'homme avec lequel je travaille." },
+        { "id": "frb1-04-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "La réunion à laquelle j'assiste", "options": ["La réunion à laquelle j'assiste", "Le projet auquel j'assiste", "La réunion de laquelle je parle", "Les réunions auxquelles j'assiste"], "correct_answer": "La réunion à laquelle j'assiste", "explanation": "Audio dice: La réunion à laquelle j'assiste." },
+        { "id": "frb1-04-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Le parc près duquel j'habite", "options": ["Le parc près duquel j'habite", "La maison près de laquelle j'habite", "Le parc auquel je vais", "Le parc dans lequel je marche"], "correct_answer": "Le parc près duquel j'habite", "explanation": "Audio dice: Le parc près duquel j'habite." },
+        { "id": "frb1-04-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Les amis avec lesquels je sors", "options": ["Les amis avec lesquels je sors", "L'ami avec lequel je sors", "Les amis auxquels je parle", "Les amies avec lesquelles je sors"], "correct_answer": "Les amis avec lesquels je sors", "explanation": "Audio dice: Les amis avec lesquels je sors." },
+        { "id": "frb1-04-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Le document auquel je pense", "options": ["Le document auquel je pense", "Le document duquel je parle", "Les documents auxquels je pense", "La lettre à laquelle je pense"], "correct_answer": "Le document auquel je pense", "explanation": "Audio dice: Le document auquel je pense." }
+      ]
+    }
+  ]
+}

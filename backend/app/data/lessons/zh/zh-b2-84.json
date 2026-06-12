@@ -1,0 +1,92 @@
+{
+  "id": "zh-b2-84",
+  "title": "Déjame Hacerlo",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Verbs", "Causative"],
+  "completion_message": "¡Lo lograste! Ahora puedes delegar tareas, pedir permiso y explicar quién te obligó a hacer qué. Eres el dueño de la acción.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Permitir y Obligar",
+      "parts": [
+        {
+          "visual": "Dejar / Permitir: 让 (ràng)\n\nEl verbo 让 (ràng) se traduce como 'dejar' o 'permitir' que alguien haga algo. Es fundamental para pedir permiso o delegar.\n\n- Déjame ver: 让我看 (Ràng wǒ kàn).\n- Déjame ir: 让我去 (Ràng wǒ qù).\n- Él no me deja ir: 他不让我去 (Tā bù ràng wǒ qù).",
+          "audio": "En chino, si quieres ofrecerte de voluntario para algo o pedir permiso, necesitas el verbo Ràng. Cuarto tono. Ràng. Significa dejar o permitir. Si alguien está leyendo una carta misteriosa, tú le dices: Ràng wǒ kàn. Déjame ver. Si tus amigos organizan un viaje y tus padres se oponen, tú dices: Tāmen bù ràng wǒ qù. Ellos no me dejan ir. Es una estructura súper útil para establecer límites."
+        },
+        {
+          "visual": "Hacer que alguien... (El uso causativo):\n\nRàng también significa 'Hacer que' alguien haga algo (obligar o causar que la acción suceda).\n\n- Mamá me hizo tomar la medicina: 妈妈让我吃药 (Māma ràng wǒ chī yào).\n- El jefe me hizo trabajar: 老板让我工作 (Lǎobǎn ràng wǒ gōngzuò).\n- El profesor nos dejó/hizo ir: 老师让我们去 (Lǎoshī ràng wǒmen qù).",
+          "audio": "El segundo uso de Ràng es aún más interesante. Sirve para expresar que alguien causó que tú hicieras algo. En español diríamos 'Mamá me obligó a tomar la medicina' o 'El jefe me hizo trabajar'. En chino, todo esto se cubre con la misma palabra: Ràng. Māma ràng wǒ chī yào. Mamá hizo que yo comiera medicina. Lǎobǎn ràng wǒ gōngzuò. El jefe hizo que yo trabajara. El contexto dirá si fue un permiso amable o una orden estricta."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Descubre quién hace qué.",
+      "questions": [
+        { "id": "zh-b2-84-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 让 (ràng)?", "options": ["Dejar / Permitir / Hacer que alguien haga algo.", "Querer / Desear.", "Esperar (Tiempo).", "Deber (Consejo)."], "correct_answer": "Dejar / Permitir / Hacer que alguien haga algo.", "explanation": "Ràng es un verbo causativo y permisivo." },
+        { "id": "zh-b2-84-q2", "type": "quiz_choice", "question": "Quieres ver algo que tu amigo tiene en las manos. Le dices:", "options": ["Ràng wǒ kàn (让我看 - Déjame ver).", "Wǒ kàn ràng (我看让).", "Wǒ yīnggāi kàn (我应该看 - Yo debería ver).", "Wǒ kàn wán (我看完 - Yo terminé de ver)."], "correct_answer": "Ràng wǒ kàn (让我看 - Déjame ver).", "explanation": "Dejar (ràng) + yo (wǒ) + ver (kàn)." },
+        { "id": "zh-b2-84-q3", "type": "quiz_choice", "question": "Te ofreces de voluntario para una tarea peligrosa. 'Déjame ir a mí'.", "options": ["Ràng wǒ qù (让我去).", "Wǒ ràng qù (我让去).", "Qù ràng wǒ (去让我).", "Wǒ qù ràng (我去让)."], "correct_answer": "Ràng wǒ qù (让我去).", "explanation": "Dejar (ràng) + a mí (wǒ) + ir (qù)." },
+        { "id": "zh-b2-84-q4", "type": "quiz_choice", "question": "Quejándote con tus amigos: 'Mi madre no me deja ir'.", "options": ["Wǒ māma bù ràng wǒ qù (我妈妈不让我去).", "Wǒ māma méi ràng wǒ qù (我妈妈没让我去 - Mi madre no me dejó ir [pasado]).", "Las dos primeras opciones son correctas dependiendo si hablas en general o de un evento pasado.", "Wǒ māma ràng bù wǒ qù (我妈妈让不我去)."], "correct_answer": "Las dos primeras opciones son correctas dependiendo si hablas en general o de un evento pasado.", "explanation": "Bù ràng (no deja habitualmente) vs Méi ràng (no dejó en una ocasión específica)." },
+        { "id": "zh-b2-84-q5", "type": "quiz_choice", "question": "Traduce el sentido causativo: 'El jefe me hizo trabajar'. (Jefe = lǎobǎn).", "options": ["Lǎobǎn ràng wǒ gōngzuò (老板让我工作).", "Wǒ ràng lǎobǎn gōngzuò (我让老板工作 - Yo hice trabajar al jefe).", "Lǎobǎn gōngzuò ràng wǒ (老板工作让我).", "Lǎobǎn yīnggāi gōngzuò (老板应该工作 - El jefe debería trabajar)."], "correct_answer": "Lǎobǎn ràng wǒ gōngzuò (老板让我工作).", "explanation": "Jefe (lǎobǎn) + causar (ràng) + yo (wǒ) + trabajar (gōngzuò)." },
+        { "id": "zh-b2-84-q6", "type": "quiz_choice", "question": "Conecta con la salud (Lección 72): 'El médico me hizo tomar medicina'.", "options": ["Yīshēng ràng wǒ chī yào (医生让我吃药).", "Yīshēng děi wǒ chī yào (医生得我吃药).", "Wǒ ràng yīshēng chī yào (我让医生吃药 - Yo hice que el doctor tomara medicina).", "Yīshēng bù ràng wǒ chī yào (医生不让我吃药 - El doctor no me deja tomar medicina)."], "correct_answer": "Yīshēng ràng wǒ chī yào (医生让我吃药).", "explanation": "Médico (Yīshēng) + causar/indicar (ràng) + yo (wǒ) + comer medicina (chī yào)." },
+        { "id": "zh-b2-84-q7", "type": "quiz_choice", "question": "Si alguien te dice: 'Qǐng ràng yíxià' (Por favor deje un momento). En la calle, esto significa:", "options": ["Permítame pasar (Con permiso).", "Déjeme ver.", "Déjeme ir.", "Déjeme comer."], "correct_answer": "Permítame pasar (Con permiso).", "explanation": "Ràng también significa 'ceder el paso'. Es la forma más común de pedir permiso en el metro." },
+        { "id": "zh-b2-84-q8", "type": "quiz_choice", "question": "Conecta con Causa y Efecto: 'Porque llueve, por lo tanto mamá no me deja ir'.", "options": ["Yīnwèi xiàyǔ, suǒyǐ māma bù ràng wǒ qù (因为下雨，所以妈妈不让我去).", "Suǒyǐ xiàyǔ, yīnwèi māma bù ràng wǒ qù (所以下雨，因为妈妈不让我去).", "Yīnwèi māma bù ràng wǒ qù, suǒyǐ xiàyǔ (因为妈妈不让我去，所以下雨).", "Yīnwèi xiàyǔ, suǒyǐ wǒ bù ràng māma qù (因为下雨，所以我不让妈妈去)."], "correct_answer": "Yīnwèi xiàyǔ, suǒyǐ māma bù ràng wǒ qù (因为下雨，所以妈妈不让我去).", "explanation": "Causa: llueve (xiàyǔ). Efecto: mamá no me deja ir (māma bù ràng wǒ qù)." },
+        { "id": "zh-b2-84-q9", "type": "quiz_choice", "question": "¿Es posible usar 'ràng' con un estado emocional? Ej: 'Ella me hace estar muy feliz' (Tā ràng wǒ hěn kuàilè).", "options": ["Sí, 'ràng' causa tanto acciones como estados emocionales.", "No, solo causa acciones físicas.", "Sí, pero solo para emociones negativas.", "No, se debe usar 'dǒng'."], "correct_answer": "Sí, 'ràng' causa tanto acciones como estados emocionales.", "explanation": "Hacer sentir a alguien de cierta manera se dice con Ràng." },
+        { "id": "zh-b2-84-q10", "type": "quiz_choice", "question": "Traduce esta frase protectora: 'Yo no te dejo ir a China'.", "options": ["Wǒ bù ràng nǐ qù Zhōngguó (我不让你去中国).", "Wǒ yīnggāi bù qù Zhōngguó (我应该不去中国).", "Wǒ ràng nǐ qù Zhōngguó (我让你去中国).", "Nǐ bù ràng wǒ qù Zhōngguó (你不让我去中国)."], "correct_answer": "Wǒ bù ràng nǐ qù Zhōngguó (我不让你去中国).", "explanation": "Yo (wǒ) + no dejo/permito (bù ràng) + tú vayas a China (nǐ qù Zhōngguó)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe las palabras de permiso y causatividad.",
+      "questions": [
+        { "id": "zh-b2-84-f1", "type": "fill_input", "question": "Dejar / Permitir / Causar que: ____ (rang)", "correct_answer": "rang", "explanation": "rang" },
+        { "id": "zh-b2-84-f2", "type": "fill_input", "question": "Déjame ver: rang wo ____ (kan)", "correct_answer": "kan", "explanation": "kan" },
+        { "id": "zh-b2-84-f3", "type": "fill_input", "question": "Déjame ir: rang wo ____ (qu)", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-b2-84-f4", "type": "fill_input", "question": "No me deja ir: bu rang wo ____ (qu)", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-b2-84-f5", "type": "fill_input", "question": "Mamá me hizo tomar medicina: ma ma rang wo chi ____ (yao)", "correct_answer": "yao", "explanation": "yao" },
+        { "id": "zh-b2-84-f6", "type": "fill_input", "question": "El jefe me hace trabajar: lao ban rang wo gong ____ (zuo)", "correct_answer": "zuo", "explanation": "zuo" },
+        { "id": "zh-b2-84-f7", "type": "fill_input", "question": "Con permiso (Deje un momento): qing rang yi ____ (xia)", "correct_answer": "xia", "explanation": "xia" },
+        { "id": "zh-b2-84-f8", "type": "fill_input", "question": "Yo no te dejo hacerlo: wo bu rang ni ____ (zuo)", "correct_answer": "zuo", "explanation": "zuo" },
+        { "id": "zh-b2-84-f9", "type": "fill_input", "question": "Ella me hace muy feliz: ta rang wo hen kuai ____ (le)", "correct_answer": "le", "explanation": "le" },
+        { "id": "zh-b2-84-f10", "type": "fill_input", "question": "Aunque..., pero... (Repaso de lección anterior): sui ran... dan ____ (shi)", "correct_answer": "shi", "explanation": "shi" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha quién da el permiso.",
+      "questions": [
+        { "id": "zh-b2-84-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "让", "options": ["Dejar / Permitir", "Entender", "Cada", "Debería"], "correct_answer": "Dejar / Permitir", "explanation": "El audio dice: Ràng." },
+        { "id": "zh-b2-84-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "让我看", "options": ["Déjame ver", "Déjame ir", "No me dejes", "Yo veo"], "correct_answer": "Déjame ver", "explanation": "El audio dice: Ràng wǒ kàn." },
+        { "id": "zh-b2-84-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他不让我去", "options": ["Él no me deja ir", "Yo no lo dejo ir", "Él no me deja ver", "Él quiere ir"], "correct_answer": "Él no me deja ir", "explanation": "El audio dice: Tā bù ràng wǒ qù." },
+        { "id": "zh-b2-84-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "医生让我吃药", "options": ["El médico me hizo tomar medicina", "El médico me hizo ir", "Yo hice que el médico tomara medicina", "El médico no me deja tomar medicina"], "correct_answer": "El médico me hizo tomar medicina", "explanation": "El audio dice: Yīshēng ràng wǒ chī yào." },
+        { "id": "zh-b2-84-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我不让你走", "options": ["Yo no te dejo irte", "Tú no me dejas irme", "Yo no quiero irme", "Tú te fuiste"], "correct_answer": "Yo no te dejo irte", "explanation": "El audio dice: Wǒ bù ràng nǐ zǒu." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Causation",
+      "pairs": [
+        {"id": "zh-b2-84-p1", "source": "让 (ràng)", "target": "Dejar / Permitir"},
+        {"id": "zh-b2-84-p2", "source": "让我看 (ràng wǒ kàn)", "target": "Déjame ver"},
+        {"id": "zh-b2-84-p3", "source": "让他去 (ràng tā qù)", "target": "Déjalo ir"},
+        {"id": "zh-b2-84-p4", "source": "不让我去 (bù ràng wǒ qù)", "target": "No me deja ir"},
+        {"id": "zh-b2-84-p5", "source": "让我吃药 (ràng wǒ chī yào)", "target": "Me hizo tomar medicina"},
+        {"id": "zh-b2-84-p6", "source": "虽然 (suīrán)", "target": "Aunque"},
+        {"id": "zh-b2-84-p7", "source": "但是 (dànshì)", "target": "Pero"},
+        {"id": "zh-b2-84-p8", "source": "因为 (yīnwèi)", "target": "Porque"},
+        {"id": "zh-b2-84-p9", "source": "所以 (suǒyǐ)", "target": "Por lo tanto"},
+        {"id": "zh-b2-84-p10", "source": "应该 (yīnggāi)", "target": "Debería"}
+      ]
+    }
+  ]
+}

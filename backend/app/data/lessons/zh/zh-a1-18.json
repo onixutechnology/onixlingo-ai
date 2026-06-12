@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-18",
+  "title": "Saber y Poder",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Verbs", "Skills", "Grammar"],
+  "completion_message": "¡Lo lograste! Ahora puedes presumir de tus habilidades en chino mandarín ante el mundo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Habilidades Aprendidas",
+      "parts": [
+        {
+          "visual": "Saber/Poder: 会 (huì)\n\nEn español tenemos el verbo 'Saber' (Saber un idioma) y el verbo 'Poder' (Poder nadar).\nEn chino, usamos el verbo 会 (huì) para AMBOS casos, siempre y cuando sea una habilidad que se APRENDE.\n\n- Idioma Chino: 汉语 (Hànyǔ).\n\nEjemplos:\n- Yo sé chino: 我会汉语 (Wǒ huì Hànyǔ).\n- ¿Tú sabes chino?: 你会汉语吗？(Nǐ huì Hànyǔ ma?).",
+          "audio": "Vamos a aprender un verbo muy útil: huì. Cuarto tono. Huì. Este verbo significa 'Saber' o 'Poder', pero con una condición muy estricta: solo se usa para cosas que has aprendido a hacer. Habilidades adquiridas. Por ejemplo, hablar un idioma, nadar, o conducir un auto. El idioma chino se dice Hànyǔ. Literalmente 'el idioma de la etnia Han'. Si quieres decir 'Yo sé chino' o 'Yo puedo hablar chino', dices 'Wǒ huì Hànyǔ'. Tú sabes chino. Nǐ huì Hànyǔ."
+        },
+        {
+          "visual": "La Negación de Habilidades:\n\nSi no sabes hacer algo, es porque no lo has aprendido. Usamos la negación en presente 不 (bù).\n\n¡Alerta de Camaleón! 🦎\nComo 会 (huì) es un cuarto tono fuerte hacia abajo, el 不 (bù) choca con él.\nPor lo tanto, la negación se pronuncia: 不会 (bú huì).\n\n- Yo NO sé chino: 我不会汉语 (Wǒ bú huì Hànyǔ).\n- Él NO sabe chino: 他不会汉语 (Tā bú huì Hànyǔ).\n\nOjo: ¡No uses 'huì' para pedir permiso (ej. ¿Puedo ir al baño?)! Solo es para habilidades.",
+          "audio": "Si quieres decir que no sabes hacer algo, usas nuestra negación universal bù. Pero cuidado, porque huì es un verbo de cuarto tono. Así que la negación tiene que subir. Decimos bú huì. Yo no sé chino. Wǒ bú huì Hànyǔ. Esta negación es súper útil cuando viajas a China y alguien te empieza a hablar súper rápido. Simplemente levantas las manos y dices 'Wǒ bú huì Hànyǔ', no sé chino, y te dejarán en paz. Recuerda, nunca uses huì para pedir permiso para hacer algo, solo úsalo para presumir o negar tus talentos."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa tu comprensión sobre cómo expresar habilidades.",
+      "questions": [
+        { "id": "zh-a1-18-q1", "type": "quiz_choice", "question": "¿Qué significa el verbo 会 (huì)?", "options": ["Saber / Poder (hacer algo aprendido).", "Querer / Desear.", "Ir a un lugar.", "Tener algo."], "correct_answer": "Saber / Poder (hacer algo aprendido).", "explanation": "会 (huì) se usa para habilidades adquiridas mediante aprendizaje." },
+        { "id": "zh-a1-18-q2", "type": "quiz_choice", "question": "¿Cómo se dice 'Idioma chino' (Mandarín) en chino?", "options": ["Hànyǔ (汉语).", "Zhōngguó (中国).", "Rén (人).", "Chá (茶)."], "correct_answer": "Hànyǔ (汉语).", "explanation": "Hànyǔ es el idioma de la etnia Han (la mayoría en China)." },
+        { "id": "zh-a1-18-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo sé chino'?", "options": ["Wǒ huì Hànyǔ (我会汉语).", "Wǒ shì Hànyǔ (我是汉语).", "Wǒ yǒu Hànyǔ (我有汉语).", "Wǒ yào Hànyǔ (我要汉语)."], "correct_answer": "Wǒ huì Hànyǔ (我会汉语).", "explanation": "Yo (wǒ) + sé (huì) + chino (Hànyǔ)." },
+        { "id": "zh-a1-18-q4", "type": "quiz_choice", "question": "¿Cómo se pregunta '¿Tú sabes chino?'?", "options": ["Nǐ huì Hànyǔ ma? (你会汉语吗？)", "Nǐ shì Hànyǔ ma? (你是汉语吗？)", "Nǐ huì Zhōngguó rén ma? (你会中国人吗？)", "Hànyǔ nǐ huì ma? (汉语你会吗？)"], "correct_answer": "Nǐ huì Hànyǔ ma? (你会汉语吗？)", "explanation": "Tú (nǐ) + sabes (huì) + chino (Hànyǔ) + ma (¿?)." },
+        { "id": "zh-a1-18-q5", "type": "quiz_choice", "question": "Regla gramatical: ¿Qué clase de verbo es 会 (huì)?", "options": ["Un verbo de habilidad (para cosas que se aprenden).", "Un verbo de movimiento.", "Un verbo de tiempo.", "Una preposición."], "correct_answer": "Un verbo de habilidad (para cosas que se aprenden).", "explanation": "No se puede usar 'huì' para cosas instintivas o pedir permisos (ej: ¿Puedo comer?)." },
+        { "id": "zh-a1-18-q6", "type": "quiz_choice", "question": "¿Cómo se niega el verbo 会 (huì) para decir 'No sé'?", "options": ["Bú huì (不会).", "Bù huì (不会).", "Méi huì (没会).", "Bú shì (不是)."], "correct_answer": "Bú huì (不会).", "explanation": "Se usa 不. Por la regla del camaleón, bù + cuarto tono = bú huì." },
+        { "id": "zh-a1-18-q7", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo NO sé chino'?", "options": ["Wǒ bú huì Hànyǔ (我不会汉语).", "Wǒ méi huì Hànyǔ (我没会汉语).", "Wǒ bú shì Hànyǔ (我不是汉语).", "Wǒ bù yào Hànyǔ (我不要汉语)."], "correct_answer": "Wǒ bú huì Hànyǔ (我不会汉语).", "explanation": "Yo (wǒ) + no sé (bú huì) + chino (Hànyǔ)." },
+        { "id": "zh-a1-18-q8", "type": "quiz_choice", "question": "Imagina que alguien en la calle te empieza a hablar chino muy rápido y quieres decirle 'Yo no soy chino y no sé chino'. ¿Cómo lo dirías?", "options": ["Wǒ bú shì Zhōngguó rén, wǒ bú huì Hànyǔ.", "Wǒ méi shì Zhōngguó rén, wǒ méi huì Hànyǔ.", "Wǒ bù shì Zhōngguó, wǒ bú qù Hànyǔ.", "Wǒ bú yào Zhōngguó rén, wǒ bù yào Hànyǔ."], "correct_answer": "Wǒ bú shì Zhōngguó rén, wǒ bú huì Hànyǔ.", "explanation": "Yo no soy (bú shì) persona de China (Zhōngguó rén), yo no sé (bú huì) chino (Hànyǔ)." },
+        { "id": "zh-a1-18-q9", "type": "quiz_choice", "question": "Traduce: 'Māma huì Hànyǔ' (妈妈会汉语).", "options": ["Mamá sabe chino.", "Mamá es china.", "Mamá quiere chino.", "Mamá tiene chino."], "correct_answer": "Mamá sabe chino.", "explanation": "Mamá (māma) + sabe (huì) + chino (Hànyǔ)." },
+        { "id": "zh-a1-18-q10", "type": "quiz_choice", "question": "Si alguien te pregunta '¿Nǐ huì ma?' (¿Tú sabes?), ¿cómo respondes que SÍ?", "options": ["Huì (会).", "Shì (是).", "Qù (去).", "Hànyǔ (汉语)."], "correct_answer": "Huì (会).", "explanation": "Respondes confirmando el verbo de la pregunta." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para las habilidades. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-18-f1", "type": "fill_input", "question": "Saber/Poder (habilidad): ____ (hui)", "correct_answer": "hui", "explanation": "hui" },
+        { "id": "zh-a1-18-f2", "type": "fill_input", "question": "Idioma chino: han____", "correct_answer": "yu", "explanation": "yu" },
+        { "id": "zh-a1-18-f3", "type": "fill_input", "question": "Yo sé chino: wo ____ hanyu", "correct_answer": "hui", "explanation": "hui" },
+        { "id": "zh-a1-18-f4", "type": "fill_input", "question": "¿Tú sabes chino?: ni hui hanyu ____ (ma)", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-18-f5", "type": "fill_input", "question": "No saber: ____ hui (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a1-18-f6", "type": "fill_input", "question": "Yo NO sé: wo ____ hui", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a1-18-f7", "type": "fill_input", "question": "Yo no sé chino: wo bu hui han____", "correct_answer": "yu", "explanation": "yu" },
+        { "id": "zh-a1-18-f8", "type": "fill_input", "question": "¿Él sabe?: ta ____ ma (hui)", "correct_answer": "hui", "explanation": "hui" },
+        { "id": "zh-a1-18-f9", "type": "fill_input", "question": "Mi papá sabe chino: wo baba hui ____yu", "correct_answer": "han", "explanation": "han" },
+        { "id": "zh-a1-18-f10", "type": "fill_input", "question": "¿Quién sabe?: ____ hui (shei)", "correct_answer": "shei", "explanation": "shei" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y evalúa el nivel de habilidad.",
+      "questions": [
+        { "id": "zh-a1-18-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "会", "options": ["Saber / Poder (habilidad)", "Tener", "Ser", "Querer"], "correct_answer": "Saber / Poder (habilidad)", "explanation": "El audio dice: huì." },
+        { "id": "zh-a1-18-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "汉语", "options": ["Idioma chino", "Persona china", "China", "Té"], "correct_answer": "Idioma chino", "explanation": "El audio dice: Hànyǔ." },
+        { "id": "zh-a1-18-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我会汉语", "options": ["Yo sé chino", "Yo soy chino", "Yo no sé chino", "Tú sabes chino"], "correct_answer": "Yo sé chino", "explanation": "El audio dice: Wǒ huì Hànyǔ." },
+        { "id": "zh-a1-18-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我不会", "options": ["Yo no sé / no puedo", "Yo no soy", "Yo no tengo", "Yo no voy"], "correct_answer": "Yo no sé / no puedo", "explanation": "El audio dice: Wǒ bú huì." },
+        { "id": "zh-a1-18-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你会吗？", "options": ["¿Tú sabes?", "¿Tú eres?", "¿Tú vienes?", "Tú sabes"], "correct_answer": "¿Tú sabes?", "explanation": "El audio dice: Nǐ huì ma?" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Skills",
+      "pairs": [
+        {"id": "zh-a1-18-p1", "source": "会 (huì)", "target": "Saber / Poder (habilidad)"},
+        {"id": "zh-a1-18-p2", "source": "汉语 (hànyǔ)", "target": "Idioma chino"},
+        {"id": "zh-a1-18-p3", "source": "我会汉语 (wǒ huì hànyǔ)", "target": "Yo sé chino"},
+        {"id": "zh-a1-18-p4", "source": "不会 (bú huì)", "target": "No saber / No poder"},
+        {"id": "zh-a1-18-p5", "source": "我不会汉语 (wǒ bú huì hànyǔ)", "target": "Yo no sé chino"},
+        {"id": "zh-a1-18-p6", "source": "你会汉语吗？(nǐ huì hànyǔ ma?)", "target": "¿Tú sabes chino?"},
+        {"id": "zh-a1-18-p7", "source": "我会，但是他不会 (wǒ huì, dànshì tā bú huì)", "target": "Yo sé, pero él no sabe"},
+        {"id": "zh-a1-18-p8", "source": "哥哥会汉语 (gēge huì hànyǔ)", "target": "Mi hermano mayor sabe chino"},
+        {"id": "zh-a1-18-p9", "source": "中国人会汉语 (zhōngguó rén huì hànyǔ)", "target": "Los chinos saben chino"},
+        {"id": "zh-a1-18-p10", "source": "谁会？(shéi huì?)", "target": "¿Quién sabe?"}
+      ]
+    }
+  ]
+}

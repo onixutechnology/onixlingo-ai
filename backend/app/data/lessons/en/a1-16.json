@@ -1,0 +1,101 @@
+{
+  "id": "a1-16",
+  "title": "Job Titles",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Jobs", "Corporate"],
+  "completion_message": "¡Excelente! Conoces los títulos de trabajo más comunes en un entorno de oficina.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Puestos de Trabajo",
+      "parts": [
+        { "visual": "Usamos los artículos 'a' o 'an' antes de la profesión: 'I am a developer', 'She is an engineer'.", "audio": "We use the articles a or an before the profession: I am a developer." },
+        { "visual": "Al preguntar a qué se dedica alguien decimos: 'What do you do?'.", "audio": "To ask about someone's job we say: What do you do?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona el artículo o la profesión correcta.",
+      "questions": [
+        { "id": "a1-16-q1", "type": "quiz_choice", "question": "I am ____ developer.", "options": ["a", "an", "the", "some"], "correct_answer": "a", "explanation": "Comienza con consonante, usamos 'a'." },
+        { "id": "a1-16-q2", "type": "quiz_choice", "question": "She is ____ engineer.", "options": ["an", "a", "the", "some"], "correct_answer": "an", "explanation": "Comienza con vocal, usamos 'an'." },
+        { "id": "a1-16-q3", "type": "quiz_choice", "question": "He works as a ____ assistant.", "options": ["virtual", "virtually", "virtuals", "virtual's"], "correct_answer": "virtual", "explanation": "Asistente virtual." },
+        { "id": "a1-16-q4", "type": "quiz_choice", "question": "What ____ you do?", "options": ["do", "does", "doing", "did"], "correct_answer": "do", "explanation": "Para preguntar la profesión: What do you do?" },
+        { "id": "a1-16-q5", "type": "quiz_choice", "question": "He is the new ____ manager.", "options": ["project", "projects", "projecting", "projected"], "correct_answer": "project", "explanation": "Gerente de proyecto." },
+        { "id": "a1-16-q6", "type": "quiz_choice", "question": "Are you an ____?", "options": ["accountant", "accounting", "account", "accounts"], "correct_answer": "accountant", "explanation": "Contador (profesión)." },
+        { "id": "a1-16-q7", "type": "quiz_choice", "question": "I am an IT ____.", "options": ["specialist", "special", "specially", "specialize"], "correct_answer": "specialist", "explanation": "Especialista de TI." },
+        { "id": "a1-16-q8", "type": "quiz_choice", "question": "The CEO is the ____ boss.", "options": ["big", "biggest", "large", "huge"], "correct_answer": "big", "explanation": "El gran jefe." },
+        { "id": "a1-16-q9", "type": "quiz_choice", "question": "We need a graphic ____.", "options": ["designer", "design", "designing", "designs"], "correct_answer": "designer", "explanation": "Diseñador gráfico." },
+        { "id": "a1-16-q10", "type": "quiz_choice", "question": "My brother is a software ____.", "options": ["engineer", "engine", "engineering", "engineers"], "correct_answer": "engineer", "explanation": "Ingeniero de software." },
+        { "id": "a1-16-q11", "type": "quiz_choice", "question": "She is the Human Resources ____.", "options": ["director", "direct", "directs", "direction"], "correct_answer": "director", "explanation": "Directora de RRHH." },
+        { "id": "a1-16-q12", "type": "quiz_choice", "question": "I work ____ a consultant.", "options": ["as", "like", "for", "in"], "correct_answer": "as", "explanation": "Trabajo COMO consultor ('work as')." },
+        { "id": "a1-16-q13", "type": "quiz_choice", "question": "He is a financial ____.", "options": ["analyst", "analysis", "analyze", "analyzing"], "correct_answer": "analyst", "explanation": "Analista financiero." },
+        { "id": "a1-16-q14", "type": "quiz_choice", "question": "Are they ____?", "options": ["lawyers", "lawyer", "law", "laws"], "correct_answer": "lawyers", "explanation": "En plural no se usa 'a/an'." },
+        { "id": "a1-16-q15", "type": "quiz_choice", "question": "The ____ answered the phone.", "options": ["receptionist", "reception", "receive", "receiver"], "correct_answer": "receptionist", "explanation": "Recepcionista." },
+        { "id": "a1-16-q16", "type": "quiz_choice", "question": "We hired a new data ____.", "options": ["scientist", "science", "sciences", "scientifically"], "correct_answer": "scientist", "explanation": "Científico de datos." },
+        { "id": "a1-16-q17", "type": "quiz_choice", "question": "She is a marketing ____.", "options": ["executive", "execute", "executing", "execution"], "correct_answer": "executive", "explanation": "Ejecutiva de marketing." },
+        { "id": "a1-16-q18", "type": "quiz_choice", "question": "He is my ____.", "options": ["supervisor", "supervise", "supervising", "supervision"], "correct_answer": "supervisor", "explanation": "Supervisor." },
+        { "id": "a1-16-q19", "type": "quiz_choice", "question": "I am ____ trainee.", "options": ["a", "an", "the", "some"], "correct_answer": "a", "explanation": "Trainee (aprendiz) comienza con consonante." },
+        { "id": "a1-16-q20", "type": "quiz_choice", "question": "What is his ____ title?", "options": ["job", "work", "task", "duty"], "correct_answer": "job", "explanation": "Título del puesto (Job title)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta.",
+      "questions": [
+        { "id": "a1-16-f1", "type": "fill_input", "question": "I am ____ developer.", "correct_answer": "a", "explanation": "Artículo." },
+        { "id": "a1-16-f2", "type": "fill_input", "question": "She is ____ engineer.", "correct_answer": "an", "explanation": "Artículo antes de vocal." },
+        { "id": "a1-16-f3", "type": "fill_input", "question": "What ____ you do?", "correct_answer": "do", "explanation": "Auxiliar." },
+        { "id": "a1-16-f4", "type": "fill_input", "question": "He is an ____ (Contador).", "correct_answer": "accountant", "explanation": "Accountant." },
+        { "id": "a1-16-f5", "type": "fill_input", "question": "I work ____ a consultant.", "correct_answer": "as", "explanation": "Como." },
+        { "id": "a1-16-f6", "type": "fill_input", "question": "The graphic ____.", "correct_answer": "designer", "explanation": "Diseñador." },
+        { "id": "a1-16-f7", "type": "fill_input", "question": "A financial ____ (Analista).", "correct_answer": "analyst", "explanation": "Analyst." },
+        { "id": "a1-16-f8", "type": "fill_input", "question": "The ____ answered (Recepcionista).", "correct_answer": "receptionist", "explanation": "Recepcionista." },
+        { "id": "a1-16-f9", "type": "fill_input", "question": "A data ____ (Científico).", "correct_answer": "scientist", "explanation": "Científico." },
+        { "id": "a1-16-f10", "type": "fill_input", "question": "My job ____ (Título).", "correct_answer": "title", "explanation": "Título del puesto." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-16-p1", "source": "Developer", "target": "Desarrollador"},
+        {"id": "a1-16-p2", "source": "Engineer", "target": "Ingeniero"},
+        {"id": "a1-16-p3", "source": "Accountant", "target": "Contador"},
+        {"id": "a1-16-p4", "source": "Designer", "target": "Diseñador"},
+        {"id": "a1-16-p5", "source": "Director", "target": "Director"},
+        {"id": "a1-16-p6", "source": "Analyst", "target": "Analista"},
+        {"id": "a1-16-p7", "source": "Lawyer", "target": "Abogado"},
+        {"id": "a1-16-p8", "source": "Receptionist", "target": "Recepcionista"},
+        {"id": "a1-16-p9", "source": "Scientist", "target": "Científico"},
+        {"id": "a1-16-p10", "source": "Supervisor", "target": "Supervisor"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la profesión correcta.",
+      "questions": [
+        { "id": "a1-16-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am a developer.", "options": ["I am a developer.", "I am an engineer.", "He is a developer.", "I was a developer."], "correct_answer": "I am a developer.", "explanation": "Audio exacto." },
+        { "id": "a1-16-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is an engineer.", "options": ["She is an engineer.", "He is an engineer.", "She is a designer.", "She was an engineer."], "correct_answer": "She is an engineer.", "explanation": "Audio exacto." },
+        { "id": "a1-16-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What do you do?", "options": ["What do you do?", "What did you do?", "What does he do?", "How do you do?"], "correct_answer": "What do you do?", "explanation": "Audio exacto." },
+        { "id": "a1-16-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am an accountant.", "options": ["I am an accountant.", "I am an assistant.", "He is an accountant.", "I am a consultant."], "correct_answer": "I am an accountant.", "explanation": "Audio exacto." },
+        { "id": "a1-16-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A graphic designer.", "options": ["A graphic designer.", "The graphic designer.", "A traffic designer.", "A graphic design."], "correct_answer": "A graphic designer.", "explanation": "Audio exacto." },
+        { "id": "a1-16-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Financial analyst.", "options": ["Financial analyst.", "Financial analysis.", "Finance analyst.", "Financial account."], "correct_answer": "Financial analyst.", "explanation": "Audio exacto." },
+        { "id": "a1-16-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is a lawyer.", "options": ["He is a lawyer.", "She is a lawyer.", "He is a liar.", "He is lawyer."], "correct_answer": "He is a lawyer.", "explanation": "Audio exacto." },
+        { "id": "a1-16-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Data scientist.", "options": ["Data scientist.", "Data science.", "Database scientist.", "Data analyst."], "correct_answer": "Data scientist.", "explanation": "Audio exacto." },
+        { "id": "a1-16-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I work as a consultant.", "options": ["I work as a consultant.", "I walk as a consultant.", "I work as consultant.", "He works as a consultant."], "correct_answer": "I work as a consultant.", "explanation": "Audio exacto." },
+        { "id": "a1-16-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Job title.", "options": ["Job title.", "Job timer.", "Work title.", "Top title."], "correct_answer": "Job title.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

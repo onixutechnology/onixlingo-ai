@@ -1,0 +1,101 @@
+{
+  "id": "b1-21",
+  "title": "Reported Speech Basics",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Reported Speech", "Business"],
+  "completion_message": "¡Excelente! Ahora puedes reportar lo que otros dijeron en reuniones y correos electrónicos como un profesional.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Estilo Indirecto (Reported Speech)",
+      "parts": [
+        { "visual": "Usamos el Reported Speech para contar lo que otra persona dijo sin usar sus palabras exactas. \nRegla general: El verbo principal cambia 'un paso hacia el pasado'.", "audio": "We use Reported Speech to tell someone what another person said, without using their exact words. General rule: The main verb changes one step back into the past." },
+        { "visual": "Directo (Presente): 'I am busy' (Estoy ocupado). \nIndirecto (Pasado): He said that he WAS busy (Él dijo que estaba ocupado). \nDirecto (Will): 'We will send the report'. \nIndirecto (Would): They said that they WOULD send the report.", "audio": "Direct quote in present: I am busy. Indirect quote in past: He said that he was busy. Direct quote with Will: We will send the report. Indirect quote with Would: They said that they would send the report." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta para reportar lo que dijeron.",
+      "questions": [
+        { "id": "b1-21-q1", "type": "quiz_choice", "question": "Directo: 'I am tired.' -> Indirecto: He said that he ____ tired. (Estaba).", "options": ["was", "is", "am", "were"], "correct_answer": "was", "explanation": "Presente (am) cambia a pasado (was)." },
+        { "id": "b1-21-q2", "type": "quiz_choice", "question": "Directo: 'We work in London.' -> Indirecto: They told me that they ____ in London. (Trabajaban).", "options": ["worked", "work", "are working", "working"], "correct_answer": "worked", "explanation": "Presente (work) cambia a pasado simple (worked)." },
+        { "id": "b1-21-q3", "type": "quiz_choice", "question": "Directo: 'I will call the client.' -> Indirecto: She said she ____ call the client. (Llamaría).", "options": ["would", "will", "did", "do"], "correct_answer": "would", "explanation": "Will cambia a would en reported speech." },
+        { "id": "b1-21-q4", "type": "quiz_choice", "question": "Directo: 'We don't have the budget.' -> Indirecto: The manager said they ____ have the budget. (No tenían).", "options": ["didn't", "don't", "won't", "wasn't"], "correct_answer": "didn't", "explanation": "Don't (presente negativo) cambia a didn't (pasado negativo)." },
+        { "id": "b1-21-q5", "type": "quiz_choice", "question": "Directo: 'I can finish it today.' -> Indirecto: He said he ____ finish it that day. (Podía).", "options": ["could", "can", "would", "did"], "correct_answer": "could", "explanation": "Can cambia a could en reported speech." },
+        { "id": "b1-21-q6", "type": "quiz_choice", "question": "Directo: 'The system is broken.' -> Indirecto: IT told us that the system ____ broken. (Estaba).", "options": ["was", "is", "were", "did"], "correct_answer": "was", "explanation": "Is (presente) cambia a was (pasado)." },
+        { "id": "b1-21-q7", "type": "quiz_choice", "question": "Directo: 'I am writing the email now.' -> Indirecto: She said she ____ writing the email then. (Estaba escribiendo).", "options": ["was", "is", "were", "did"], "correct_answer": "was", "explanation": "Presente continuo (am writing) cambia a pasado continuo (was writing)." },
+        { "id": "b1-21-q8", "type": "quiz_choice", "question": "Directo: 'We will delay the launch.' -> Indirecto: They announced that they ____ delay the launch. (Retrasarían).", "options": ["would", "will", "did", "could"], "correct_answer": "would", "explanation": "Will cambia a would." },
+        { "id": "b1-21-q9", "type": "quiz_choice", "question": "Diferencia entre Say y Tell: He ____ me that he was sick. (Me dijo).", "options": ["told", "said", "say", "talked"], "correct_answer": "told", "explanation": "'Tell' necesita un objeto directo (told ME). 'Say' no lo lleva inmediatamente (said THAT he was sick)." },
+        { "id": "b1-21-q10", "type": "quiz_choice", "question": "She ____ that the meeting was canceled. (Dijo).", "options": ["said", "told", "say", "saying"], "correct_answer": "said", "explanation": "Usamos 'said' porque no hay un objeto (me/him/us) inmediatamente después." },
+        { "id": "b1-21-q11", "type": "quiz_choice", "question": "Directo: 'I need more time.' -> Indirecto: The designer said he ____ more time. (Necesitaba).", "options": ["needed", "need", "needs", "needing"], "correct_answer": "needed", "explanation": "Presente (need) cambia a pasado (needed)." },
+        { "id": "b1-21-q12", "type": "quiz_choice", "question": "Directo: 'The prices are too high.' -> Indirecto: The customer complained that the prices ____ too high. (Eran).", "options": ["were", "are", "was", "be"], "correct_answer": "were", "explanation": "Are (plural presente) cambia a were (plural pasado)." },
+        { "id": "b1-21-q13", "type": "quiz_choice", "question": "Directo: 'I won't accept the offer.' -> Indirecto: He told us he ____ accept the offer. (No aceptaría).", "options": ["wouldn't", "won't", "didn't", "don't"], "correct_answer": "wouldn't", "explanation": "Won't (will not) cambia a wouldn't (would not)." },
+        { "id": "b1-21-q14", "type": "quiz_choice", "question": "Directo: 'We cannot sign this.' -> Indirecto: They said they ____ sign it. (No podían).", "options": ["couldn't", "cannot", "didn't", "wouldn't"], "correct_answer": "couldn't", "explanation": "Cannot cambia a couldn't." },
+        { "id": "b1-21-q15", "type": "quiz_choice", "question": "Directo: 'I have a meeting.' -> Indirecto: She said she ____ a meeting. (Tenía).", "options": ["had", "has", "have", "would have"], "correct_answer": "had", "explanation": "Have (presente) cambia a had (pasado)." },
+        { "id": "b1-21-q16", "type": "quiz_choice", "question": "The CEO ____ the team that the results were excellent. (Dijo al equipo).", "options": ["told", "said", "spoke", "talked"], "correct_answer": "told", "explanation": "Tiene objeto ('the team'), así que usamos 'told'." },
+        { "id": "b1-21-q17", "type": "quiz_choice", "question": "They ____ that they were ready to start. (Dijeron).", "options": ["said", "told", "saying", "tell"], "correct_answer": "said", "explanation": "No hay objeto después del verbo, usamos 'said'." },
+        { "id": "b1-21-q18", "type": "quiz_choice", "question": "Directo: 'I don't know the password.' -> Indirecto: He said he ____ know the password. (No sabía).", "options": ["didn't", "don't", "doesn't", "wasn't"], "correct_answer": "didn't", "explanation": "Don't cambia a didn't." },
+        { "id": "b1-21-q19", "type": "quiz_choice", "question": "Directo: 'We are expanding to Asia.' -> Indirecto: They announced they ____ expanding to Asia. (Estaban).", "options": ["were", "are", "was", "will be"], "correct_answer": "were", "explanation": "Are (presente) cambia a were (pasado plural)." },
+        { "id": "b1-21-q20", "type": "quiz_choice", "question": "She told ____ that the report was ready. (Me dijo a mí).", "options": ["me", "to me", "I", "my"], "correct_answer": "me", "explanation": "Tell (told) va seguido directamente por el objeto: told ME (sin 'to')." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Cambia el verbo del estilo directo al indirecto.",
+      "questions": [
+        { "id": "b1-21-f1", "type": "fill_input", "question": "'I am busy.' -> He said he ____ busy. (Estaba)", "correct_answer": "was", "explanation": "was." },
+        { "id": "b1-21-f2", "type": "fill_input", "question": "'I will call.' -> She said she ____ call. (Llamaría)", "correct_answer": "would", "explanation": "would." },
+        { "id": "b1-21-f3", "type": "fill_input", "question": "'We work hard.' -> They said they ____ hard. (Trabajaban)", "correct_answer": "worked", "explanation": "worked." },
+        { "id": "b1-21-f4", "type": "fill_input", "question": "'I can do it.' -> He said he ____ do it. (Podía)", "correct_answer": "could", "explanation": "could." },
+        { "id": "b1-21-f5", "type": "fill_input", "question": "'I don't know.' -> She said she ____ know. (No sabía)", "correct_answer": "didn't", "explanation": "didn't." },
+        { "id": "b1-21-f6", "type": "fill_input", "question": "'We are ready.' -> They said they ____ ready. (Estaban plural)", "correct_answer": "were", "explanation": "were." },
+        { "id": "b1-21-f7", "type": "fill_input", "question": "'I have time.' -> He said he ____ time. (Tenía)", "correct_answer": "had", "explanation": "had." },
+        { "id": "b1-21-f8", "type": "fill_input", "question": "'I won't accept.' -> She said she ____ accept. (No aceptaría)", "correct_answer": "wouldn't", "explanation": "wouldn't." },
+        { "id": "b1-21-f9", "type": "fill_input", "question": "He ____ me that he was tired. (Dijo - usa tell/told)", "correct_answer": "told", "explanation": "told." },
+        { "id": "b1-21-f10", "type": "fill_input", "question": "He ____ that he was tired. (Dijo - usa say/said)", "correct_answer": "said", "explanation": "said." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Reported Speech Match",
+      "pairs": [
+        {"id": "b1-21-p1", "source": "'I am' changes to", "target": "He/she was"},
+        {"id": "b1-21-p2", "source": "'We are' changes to", "target": "They were"},
+        {"id": "b1-21-p3", "source": "'I will' changes to", "target": "He/she would"},
+        {"id": "b1-21-p4", "source": "'I won't' changes to", "target": "He/she wouldn't"},
+        {"id": "b1-21-p5", "source": "'I can' changes to", "target": "He/she could"},
+        {"id": "b1-21-p6", "source": "'I work' changes to", "target": "He/she worked"},
+        {"id": "b1-21-p7", "source": "'I don't' changes to", "target": "He/she didn't"},
+        {"id": "b1-21-p8", "source": "'I have' changes to", "target": "He/she had"},
+        {"id": "b1-21-p9", "source": "He told me...", "target": "Él me dijo... (con objeto)"},
+        {"id": "b1-21-p10", "source": "He said that...", "target": "Él dijo que... (sin objeto)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración en estilo indirecto.",
+      "questions": [
+        { "id": "b1-21-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He said that he was busy.", "options": ["He said that he was busy.", "He said that he is busy.", "He told that he was busy.", "He said me that he was busy."], "correct_answer": "He said that he was busy.", "explanation": "Audio exacto." },
+        { "id": "b1-21-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She said she would call the client.", "options": ["She said she would call the client.", "She said she will call the client.", "She told she would call the client.", "She says she would call the client."], "correct_answer": "She said she would call the client.", "explanation": "Audio exacto." },
+        { "id": "b1-21-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They told me that they worked in London.", "options": ["They told me that they worked in London.", "They said me that they worked in London.", "They told me that they work in London.", "They told I that they worked in London."], "correct_answer": "They told me that they worked in London.", "explanation": "Audio exacto." },
+        { "id": "b1-21-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He said he could finish it today.", "options": ["He said he could finish it today.", "He said he can finish it today.", "He told he could finish it today.", "He said he would finish it today."], "correct_answer": "He said he could finish it today.", "explanation": "Audio exacto." },
+        { "id": "b1-21-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The manager said they didn't have the budget.", "options": ["The manager said they didn't have the budget.", "The manager said they don't have the budget.", "The manager told they didn't have the budget.", "The manager said they hadn't the budget."], "correct_answer": "The manager said they didn't have the budget.", "explanation": "Audio exacto." },
+        { "id": "b1-21-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She said she had a meeting.", "options": ["She said she had a meeting.", "She said she has a meeting.", "She told she had a meeting.", "She said she would have a meeting."], "correct_answer": "She said she had a meeting.", "explanation": "Audio exacto." },
+        { "id": "b1-21-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They announced that they would delay the launch.", "options": ["They announced that they would delay the launch.", "They announced that they will delay the launch.", "They announced that they could delay the launch.", "They announced they delay the launch."], "correct_answer": "They announced that they would delay the launch.", "explanation": "Audio exacto." },
+        { "id": "b1-21-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He told us he wouldn't accept the offer.", "options": ["He told us he wouldn't accept the offer.", "He said us he wouldn't accept the offer.", "He told us he won't accept the offer.", "He told we he wouldn't accept the offer."], "correct_answer": "He told us he wouldn't accept the offer.", "explanation": "Audio exacto." },
+        { "id": "b1-21-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She told me that the report was ready.", "options": ["She told me that the report was ready.", "She said me that the report was ready.", "She told to me that the report was ready.", "She told me that the report is ready."], "correct_answer": "She told me that the report was ready.", "explanation": "Audio exacto." },
+        { "id": "b1-21-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The customer complained that prices were too high.", "options": ["The customer complained that prices were too high.", "The customer complained that prices are too high.", "The customer complained that prices was too high.", "The customer complains that prices were too high."], "correct_answer": "The customer complained that prices were too high.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "c2-16",
+  "title": "Advanced Relative Clauses",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Grammar", "Relative Clauses", "Formal", "Writing"],
+  "completion_message": "¡Excelente! El dominio de los pronombres relativos avanzados (como 'whom' o 'of which') transforma un texto común en una obra maestra de precisión legal y corporativa. Estás estructurando oraciones al más alto nivel.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Cláusulas Relativas Avanzadas (C2)",
+      "parts": [
+        { "visual": "1. Whom (A quien / De quien): \n- Se usa en contextos MUY formales cuando el pronombre relativo es el OBJETO de la oración o va después de una preposición. \nEj: The manager TO WHOM I reported has resigned. (A quien). \nEj: The candidate WHOM we interviewed was excellent. (A quien entrevistamos). \n\n2. Of which / Of whom (De los cuales / De quienes): \n- Para indicar posesión o cantidad de un grupo. \nEj: We have 50 employees, most OF WHOM work remotely. \nEj: The company owns several buildings, the roof OF WHICH needs repair. (El techo de los cuales).", "audio": "Welcome to Advanced Relative Clauses. Number 1: Whom. 'Whom' is used in very formal contexts when the relative pronoun is the OBJECT of the sentence, or after a preposition. For example: The manager TO WHOM I reported has resigned. Or: The candidate WHOM we interviewed was excellent. Number 2: Of which, and Of whom. We use these to indicate possession or a quantity from a group. For example: We have 50 employees, most OF WHOM work remotely. Or for things: The company owns several buildings, the roof OF WHICH needs repair." },
+        { "visual": "3. Preposiciones antes del Pronombre Relativo: \nEn C2 y en inglés escrito formal, no dejamos la preposición al final de la oración (stranding). La movemos antes de 'whom' o 'which'. \nInformal: The project which we are working ON is confidential. \nFormal C2: The project ON WHICH we are working is confidential. \n\nInformal: The people who I work WITH are experts. \nFormal C2: The people WITH WHOM I work are experts. \n\n4. Whereby (Por el cual / Mediante el cual): \n- Se usa mucho en contratos y negocios. \nEj: We signed an agreement WHEREBY they will supply the parts.", "audio": "Number 3: Prepositions before the Relative Pronoun. In C2 and formal written English, we do not leave the preposition at the end of the sentence. We move it before 'whom' or 'which'. Informal: The project which we are working ON is confidential. Formal C2: The project ON WHICH we are working is confidential. Informal: The people who I work WITH. Formal C2: The people WITH WHOM I work. Number 4: Whereby. This means 'by which' or 'through which'. It is very common in contracts and business. For example: We signed an agreement WHEREBY they will supply the parts." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el pronombre relativo formal correcto.",
+      "questions": [
+        { "id": "c2-16-q1", "type": "quiz_choice", "question": "The CEO, ____ I respect deeply, is stepping down next month. (A quien respeto - objeto).", "options": ["whom", "who", "which", "whose"], "correct_answer": "whom", "explanation": "Whom: porque es el objeto de 'respect'." },
+        { "id": "c2-16-q2", "type": "quiz_choice", "question": "The board members, most of ____ are lawyers, opposed the merger. (De los cuales).", "options": ["whom", "who", "which", "them"], "correct_answer": "whom", "explanation": "Most of whom (después de preposición referida a personas se usa whom)." },
+        { "id": "c2-16-q3", "type": "quiz_choice", "question": "The committee submitted three proposals, none of ____ was accepted. (De los cuales - cosas).", "options": ["which", "what", "whom", "them"], "correct_answer": "which", "explanation": "None of which (cosas)." },
+        { "id": "c2-16-q4", "type": "quiz_choice", "question": "Informal: The company which he applied to. -> Formal C2: The company ____ he applied.", "options": ["to which", "which to", "where to", "to what"], "correct_answer": "to which", "explanation": "To which (preposición antes del pronombre)." },
+        { "id": "c2-16-q5", "type": "quiz_choice", "question": "Informal: The person who I spoke with. -> Formal C2: The person ____ I spoke.", "options": ["with whom", "whom with", "who with", "with who"], "correct_answer": "with whom", "explanation": "With whom (preposición + whom para personas)." },
+        { "id": "c2-16-q6", "type": "quiz_choice", "question": "We established a partnership ____ both companies share resources. (Mediante la cual/Por la cual).", "options": ["whereby", "thereby", "hereby", "which"], "correct_answer": "whereby", "explanation": "Whereby = por el cual / mediante el cual." },
+        { "id": "c2-16-q7", "type": "quiz_choice", "question": "The candidate ____ we selected has a PhD in Economics. (A quien seleccionamos).", "options": ["whom", "who", "which", "whose"], "correct_answer": "whom", "explanation": "Whom (es el objeto directo de 'selected')." },
+        { "id": "c2-16-q8", "type": "quiz_choice", "question": "We have 10 servers, the capacity of ____ is nearly full. (La capacidad de los cuales).", "options": ["which", "whom", "them", "what"], "correct_answer": "which", "explanation": "The capacity of which." },
+        { "id": "c2-16-q9", "type": "quiz_choice", "question": "The extent ____ the market has changed is unprecedented.", "options": ["to which", "which to", "of which", "at which"], "correct_answer": "to which", "explanation": "The extent TO which (el grado en el cual)." },
+        { "id": "c2-16-q10", "type": "quiz_choice", "question": "The contract includes a clause ____ the buyer can cancel within 30 days. (Por la cual).", "options": ["whereby", "thereby", "hereby", "why"], "correct_answer": "whereby", "explanation": "Whereby." },
+        { "id": "c2-16-q11", "type": "quiz_choice", "question": "The department ____ she is responsible is currently under audit.", "options": ["for which", "which for", "to which", "of which"], "correct_answer": "for which", "explanation": "Responsible FOR -> The department FOR which." },
+        { "id": "c2-16-q12", "type": "quiz_choice", "question": "They invited several experts, none of ____ could solve the problem.", "options": ["whom", "who", "which", "them"], "correct_answer": "whom", "explanation": "None of whom (para personas)." },
+        { "id": "c2-16-q13", "type": "quiz_choice", "question": "The basis ____ we made this decision is strictly confidential.", "options": ["on which", "in which", "for which", "at which"], "correct_answer": "on which", "explanation": "Basis ON which (la base sobre la cual)." },
+        { "id": "c2-16-q14", "type": "quiz_choice", "question": "He presented three arguments, all of ____ were quickly dismantled by the board.", "options": ["which", "what", "whom", "those"], "correct_answer": "which", "explanation": "All of which (para cosas/argumentos)." },
+        { "id": "c2-16-q15", "type": "quiz_choice", "question": "The investor ____ whom we relied withdrew his funding. (En quien confiábamos).", "options": ["on", "in", "for", "at"], "correct_answer": "on", "explanation": "Rely ON -> The investor ON whom we relied." },
+        { "id": "c2-16-q16", "type": "quiz_choice", "question": "We bought a new software system, the primary function of ____ is data encryption.", "options": ["which", "whom", "what", "that"], "correct_answer": "which", "explanation": "The primary function of which." },
+        { "id": "c2-16-q17", "type": "quiz_choice", "question": "The meeting ____ which the incident occurred was held in private.", "options": ["during", "while", "where", "for"], "correct_answer": "during", "explanation": "During which (durante la cual)." },
+        { "id": "c2-16-q18", "type": "quiz_choice", "question": "They devised a system ____ all employees receive equal bonuses. (Mediante el cual).", "options": ["whereby", "therefore", "whenever", "whereof"], "correct_answer": "whereby", "explanation": "Whereby." },
+        { "id": "c2-16-q19", "type": "quiz_choice", "question": "The colleagues ____ whom I traveled to Tokyo were extremely professional.", "options": ["with", "for", "by", "to"], "correct_answer": "with", "explanation": "Travel WITH -> The colleagues WITH whom." },
+        { "id": "c2-16-q20", "type": "quiz_choice", "question": "The exact date ____ which the agreement comes into effect is still unconfirmed.", "options": ["on", "in", "at", "by"], "correct_answer": "on", "explanation": "On a date -> The date ON which." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra (pronombre o preposición) correcta.",
+      "questions": [
+        { "id": "c2-16-f1", "type": "fill_input", "question": "The person ____ I met. (A quien - formal)", "correct_answer": "whom", "explanation": "whom." },
+        { "id": "c2-16-f2", "type": "fill_input", "question": "Two cars, both of ____ are red. (De los cuales)", "correct_answer": "which", "explanation": "which." },
+        { "id": "c2-16-f3", "type": "fill_input", "question": "Two men, both of ____ are doctors. (De los cuales/quienes)", "correct_answer": "whom", "explanation": "whom." },
+        { "id": "c2-16-f4", "type": "fill_input", "question": "The project ____ which I worked. (Preposición para 'trabajó en')", "correct_answer": "on", "explanation": "on." },
+        { "id": "c2-16-f5", "type": "fill_input", "question": "The person ____ whom I spoke. (Preposición para 'hablé con')", "correct_answer": "with", "explanation": "with (o to)." },
+        { "id": "c2-16-f6", "type": "fill_input", "question": "A system ____ we save money. (Por/Mediante el cual con W)", "correct_answer": "whereby", "explanation": "whereby." },
+        { "id": "c2-16-f7", "type": "fill_input", "question": "The extent ____ which he lied. (Preposición: el grado EN o HASTA el cual)", "correct_answer": "to", "explanation": "to." },
+        { "id": "c2-16-f8", "type": "fill_input", "question": "The city ____ which he was born. (Preposición de lugar dentro)", "correct_answer": "in", "explanation": "in." },
+        { "id": "c2-16-f9", "type": "fill_input", "question": "The reason ____ which he left. (Preposición para 'razón POR')", "correct_answer": "for", "explanation": "for." },
+        { "id": "c2-16-f10", "type": "fill_input", "question": "Three ideas, none of ____ worked. (De las cuales)", "correct_answer": "which", "explanation": "which." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Relative Clauses Match",
+      "pairs": [
+        {"id": "c2-16-p1", "source": "Whom I respect", "target": "A quien respeto (objeto)"},
+        {"id": "c2-16-p2", "source": "Most of whom", "target": "La mayoría de los cuales (personas)"},
+        {"id": "c2-16-p3", "source": "None of which", "target": "Ninguno de los cuales (cosas)"},
+        {"id": "c2-16-p4", "source": "To which", "target": "A lo cual / Al cual"},
+        {"id": "c2-16-p5", "source": "With whom", "target": "Con quien (formal)"},
+        {"id": "c2-16-p6", "source": "Whereby", "target": "Mediante el cual / Por el cual"},
+        {"id": "c2-16-p7", "source": "The extent to which", "target": "El grado en el cual / Hasta qué punto"},
+        {"id": "c2-16-p8", "source": "The basis on which", "target": "La base sobre la cual"},
+        {"id": "c2-16-p9", "source": "The company for which", "target": "La empresa para la cual"},
+        {"id": "c2-16-p10", "source": "The period during which", "target": "El período durante el cual"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la cláusula relativa correcta.",
+      "questions": [
+        { "id": "c2-16-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The manager whom I trust.", "options": ["The manager whom I trust.", "The manager who I trust.", "The manager which I trust.", "The manager whose I trust."], "correct_answer": "The manager whom I trust.", "explanation": "Audio exacto." },
+        { "id": "c2-16-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Ten people, most of whom left.", "options": ["Ten people, most of whom left.", "Ten people, most of who left.", "Ten people, most of which left.", "Ten people, most of them left."], "correct_answer": "Ten people, most of whom left.", "explanation": "Audio exacto." },
+        { "id": "c2-16-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Three cars, none of which work.", "options": ["Three cars, none of which work.", "Three cars, none of what work.", "Three cars, none of them work.", "Three cars, none of whom work."], "correct_answer": "Three cars, none of which work.", "explanation": "Audio exacto." },
+        { "id": "c2-16-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The project on which we work.", "options": ["The project on which we work.", "The project in which we work.", "The project for which we work.", "The project which we work on."], "correct_answer": "The project on which we work.", "explanation": "Audio exacto." },
+        { "id": "c2-16-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The client with whom I spoke.", "options": ["The client with whom I spoke.", "The client who I spoke with.", "The client with who I spoke.", "The client whom I spoke with."], "correct_answer": "The client with whom I spoke.", "explanation": "Audio exacto." },
+        { "id": "c2-16-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A deal whereby both win.", "options": ["A deal whereby both win.", "A deal thereby both win.", "A deal hereby both win.", "A deal where both win."], "correct_answer": "A deal whereby both win.", "explanation": "Audio exacto." },
+        { "id": "c2-16-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The extent to which he lied.", "options": ["The extent to which he lied.", "The extent in which he lied.", "The extent of which he lied.", "The extent on which he lied."], "correct_answer": "The extent to which he lied.", "explanation": "Audio exacto." },
+        { "id": "c2-16-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The date on which it starts.", "options": ["The date on which it starts.", "The date in which it starts.", "The date at which it starts.", "The date which it starts on."], "correct_answer": "The date on which it starts.", "explanation": "Audio exacto." },
+        { "id": "c2-16-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The basis on which we agree.", "options": ["The basis on which we agree.", "The basis in which we agree.", "The basis for which we agree.", "The basis which we agree on."], "correct_answer": "The basis on which we agree.", "explanation": "Audio exacto." },
+        { "id": "c2-16-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The reason for which he left.", "options": ["The reason for which he left.", "The reason by which he left.", "The reason in which he left.", "The reason on which he left."], "correct_answer": "The reason for which he left.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

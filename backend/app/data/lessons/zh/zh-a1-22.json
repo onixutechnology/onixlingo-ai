@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-22",
+  "title": "El Paso del Tiempo",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Age", "Numbers", "Syntax"],
+  "completion_message": "¡Felicidades! Ahora nadie podrá engañarte con su edad. Has aprendido una de las estructuras más especiales del mandarín.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Los Años de Edad",
+      "parts": [
+        {
+          "visual": "Años de edad: 岁 (suì)\n\nLa palabra 岁 (suì) significa 'año de edad'. Se usa exclusivamente para la edad, no para el año del calendario.\n\n¡ALERTA GRAMATICAL ROJA! 🚨\nEn español decimos 'Yo TENGO 20 años'. Usamos el verbo tener.\nEn inglés dicen 'I AM 20 years old'. Usan el verbo ser.\n\n¡En chino mandarín NO SE USA NINGÚN VERBO para decir la edad!\nLa estructura es directa:\nSujeto + Número + 岁 (suì).\n\n- Yo 20 años: 我二十岁 (Wǒ èr shí suì).\n- Él 18 años: 他十八岁 (Tā shí bā suì).",
+          "audio": "Hoy vamos a hablar de la edad. La palabra para 'año de edad' es suì. Cuarto tono. Suì. Presta muchísima atención a esta regla porque es donde el 90 por ciento de los hispanohablantes se equivocan. En español, usamos el verbo tener para la edad. Decimos 'Yo tengo 20 años'. Si intentas decir esto en chino, Wǒ yǒu èr shí suì, un chino te mirará muy confundido. En mandarín, la edad no es algo que 'tienes', ni algo que 'eres'. Simplemente se dice el sujeto, el número y la palabra suì. Sin verbo. Wǒ èr shí suì. Literalmente 'Yo veinte años'. Es todo lo que necesitas."
+        },
+        {
+          "visual": "Preguntar la Edad: 多大 (duō dà)\n\nPara preguntarle la edad a un adulto o a alguien de tu misma edad, se usa la expresión 多大 (duō dà), que literalmente significa '¿Qué tan grande?'.\n\n- ¿Cuántos años tienes? (¿Tú qué tan grande?): 你多大？(Nǐ duō dà?).\n\nRespuesta:\n- Yo 25 años: 我二十五岁 (Wǒ èr shí wǔ suì).\n\n(Nota: Si le preguntas a un niño pequeño, se usa 你几岁？ Nǐ jǐ suì? - '¿Tú cuántos años?').",
+          "audio": "Para preguntarle la edad a alguien de tu edad o mayor, la forma más común no incluye la palabra 'años'. Le preguntas '¿Qué tan grande eres?'. En chino esto se dice 'Duō dà'. Duō es 'qué tanto', y dà es 'grande'. Así que simplemente dices: Nǐ duō dà. ¿Tú qué tan grande? Y la persona te responderá con la fórmula que ya vimos: Sujeto, número, suì. Wǒ èr shí wǔ suì. Yo veinticinco años. Existe otra forma para preguntarle a los niños pequeños, que es 'Nǐ jǐ suì', pero por ahora enfócate en usar Duō dà con los adultos."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que dominas la lógica de la edad en chino.",
+      "questions": [
+        { "id": "zh-a1-22-q1", "type": "quiz_choice", "question": "¿Qué significa la palabra 岁 (suì)?", "options": ["Año de edad.", "Año del calendario.", "Tiempo.", "Tener."], "correct_answer": "Año de edad.", "explanation": "岁 (suì) es el clasificador específico para contar años de vida." },
+        { "id": "zh-a1-22-q2", "type": "quiz_choice", "question": "Regla de oro: ¿Qué verbo se utiliza en chino para decir la edad (ej: Yo tengo 20 años)?", "options": ["¡Ninguno! Se dice directamente Sujeto + Número + Años.", "El verbo Tener (有 - yǒu).", "El verbo Ser (是 - shì).", "El verbo Ir (去 - qù)."], "correct_answer": "¡Ninguno! Se dice directamente Sujeto + Número + Años.", "explanation": "En chino, la edad se expresa con un predicado nominal, sin necesidad de verbos como ser o tener." },
+        { "id": "zh-a1-22-q3", "type": "quiz_choice", "question": "¿Cómo se dice correctamente 'Yo tengo 20 años'?", "options": ["Wǒ èr shí suì (我二十岁).", "Wǒ yǒu èr shí suì (我有二十岁).", "Wǒ shì èr shí suì (我是二十岁).", "Èr shí suì wǒ (二十岁我)."], "correct_answer": "Wǒ èr shí suì (我二十岁).", "explanation": "Yo (Wǒ) + 20 (èr shí) + años (suì). Sin el verbo tener." },
+        { "id": "zh-a1-22-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Él tiene 15 años'?", "options": ["Tā shí wǔ suì (他十五岁).", "Tā yǒu shí wǔ suì (他有十五岁).", "Tā wǔ shí suì (他五十岁).", "Tā shí suì (他十岁)."], "correct_answer": "Tā shí wǔ suì (他十五岁).", "explanation": "Él (tā) + 15 (shí wǔ) + años (suì)." },
+        { "id": "zh-a1-22-q5", "type": "quiz_choice", "question": "Para preguntarle la edad a un adulto, ¿qué frase se usa comúnmente?", "options": ["Nǐ duō dà? (你多大？ - ¿Tú qué tan grande?).", "Nǐ yǒu suì ma? (你有岁吗？ - ¿Tú tienes edad?).", "Nǐ shì suì? (你是岁？ - ¿Tú eres edad?).", "Nǐ suì duō? (你岁多？ - ¿Tú edad mucha?)."], "correct_answer": "Nǐ duō dà? (你多大？ - ¿Tú qué tan grande?).", "explanation": "Duō dà (qué tan grande) es la forma estándar de preguntar la edad a jóvenes y adultos." },
+        { "id": "zh-a1-22-q6", "type": "quiz_choice", "question": "¿Qué número representa 三十 (sān shí)?", "options": ["30.", "13.", "3.", "33."], "correct_answer": "30.", "explanation": "Tres (sān) x Diez (shí) = 30." },
+        { "id": "zh-a1-22-q7", "type": "quiz_choice", "question": "Traduce: 'Wǒ bàba wǔ shí suì' (我爸爸五十岁).", "options": ["Mi papá tiene 50 años.", "Mi papá tiene 15 años.", "Mi papá tiene 5 años.", "A mi papá le gusta el 50."], "correct_answer": "Mi papá tiene 50 años.", "explanation": "Mi papá (wǒ bàba) + 50 (wǔ shí) + años (suì)." },
+        { "id": "zh-a1-22-q8", "type": "quiz_choice", "question": "Si alguien te pregunta 'Nǐ duō dà?', y tienes 28 años, respondes:", "options": ["Wǒ èr shí bā suì (我二十八岁).", "Wǒ yǒu èr shí bā suì (我有二十八岁).", "Wǒ bā shí èr suì (我八十二岁).", "Wǒ shì èr shí bā suì (我是二十八岁)."], "correct_answer": "Wǒ èr shí bā suì (我二十八岁).", "explanation": "Yo (wǒ) + 28 (èr shí bā) + años (suì)." },
+        { "id": "zh-a1-22-q9", "type": "quiz_choice", "question": "Traduce: 'Mi hermano mayor tiene 32 años'.", "options": ["Wǒ gēge sān shí èr suì. (我哥哥三十二岁)", "Wǒ gēge yǒu sān shí èr suì.", "Wǒ jiějie sān shí èr suì.", "Wǒ gēge èr shí sān suì."], "correct_answer": "Wǒ gēge sān shí èr suì. (我哥哥三十二岁)", "explanation": "Hermano mayor (gēge) + 32 (sān shí èr) + suì." },
+        { "id": "zh-a1-22-q10", "type": "quiz_choice", "question": "A nivel gramatical, ¿por qué decir 'Wǒ yǒu 20 suì' (Yo tengo 20 años) es un error tan común en hispanohablantes?", "options": ["Porque traducen literalmente la palabra 'tener' de su idioma materno a una estructura que en chino no lo requiere.", "Porque no saben contar hasta 20.", "Porque 'yǒu' significa 'ser' en chino.", "Porque la edad en chino se dice en pasado."], "correct_answer": "Porque traducen literalmente la palabra 'tener' de su idioma materno a una estructura que en chino no lo requiere.", "explanation": "La traducción literal (palabra por palabra) suele destruir la sintaxis original del mandarín." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para expresar la edad. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-22-f1", "type": "fill_input", "question": "Años (de edad): ____ (sui)", "correct_answer": "sui", "explanation": "sui" },
+        { "id": "zh-a1-22-f2", "type": "fill_input", "question": "¿Qué tan grande? (Para la edad): ____ da (duo)", "correct_answer": "duo", "explanation": "duo" },
+        { "id": "zh-a1-22-f3", "type": "fill_input", "question": "¿Cuántos años tienes?: ni duo ____", "correct_answer": "da", "explanation": "da" },
+        { "id": "zh-a1-22-f4", "type": "fill_input", "question": "18: shi ____ (ba)", "correct_answer": "ba", "explanation": "ba" },
+        { "id": "zh-a1-22-f5", "type": "fill_input", "question": "Yo tengo 18 años: wo shi ba ____", "correct_answer": "sui", "explanation": "sui" },
+        { "id": "zh-a1-22-f6", "type": "fill_input", "question": "20: ____ shi (er)", "correct_answer": "er", "explanation": "er" },
+        { "id": "zh-a1-22-f7", "type": "fill_input", "question": "Él tiene 20 años: ta er shi ____", "correct_answer": "sui", "explanation": "sui" },
+        { "id": "zh-a1-22-f8", "type": "fill_input", "question": "40: ____ shi (si)", "correct_answer": "si", "explanation": "si" },
+        { "id": "zh-a1-22-f9", "type": "fill_input", "question": "Mi papá tiene 40 años: wo baba si shi ____", "correct_answer": "sui", "explanation": "sui" },
+        { "id": "zh-a1-22-f10", "type": "fill_input", "question": "Yo NO uso el verbo 'tener' (you) para la edad: ____ (you)", "correct_answer": "you", "explanation": "you" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y deduce qué edad se está diciendo.",
+      "questions": [
+        { "id": "zh-a1-22-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "岁", "options": ["Años (de edad)", "Días", "Meses", "Años (calendario)"], "correct_answer": "Años (de edad)", "explanation": "El audio dice: suì." },
+        { "id": "zh-a1-22-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你多大？", "options": ["¿Cuántos años tienes?", "¿Quién eres?", "¿A dónde vas?", "¿Tú sabes chino?"], "correct_answer": "¿Cuántos años tienes?", "explanation": "El audio dice: Nǐ duō dà?" },
+        { "id": "zh-a1-22-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我二十岁", "options": ["Tengo 20 años", "Tengo 12 años", "Tengo 21 años", "Tengo 2 años"], "correct_answer": "Tengo 20 años", "explanation": "El audio dice: Wǒ èr shí suì." },
+        { "id": "zh-a1-22-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他十五岁", "options": ["Él tiene 15 años", "Él tiene 50 años", "Yo tengo 15 años", "Él tiene 5 años"], "correct_answer": "Él tiene 15 años", "explanation": "El audio dice: Tā shí wǔ suì." },
+        { "id": "zh-a1-22-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我爸爸四十岁", "options": ["Mi papá tiene 40 años", "Mi papá tiene 14 años", "Mi mamá tiene 40 años", "Mi hermano tiene 40 años"], "correct_answer": "Mi papá tiene 40 años", "explanation": "El audio dice: Wǒ bàba sì shí suì." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Age and Sentences",
+      "pairs": [
+        {"id": "zh-a1-22-p1", "source": "岁 (suì)", "target": "Años (de edad)"},
+        {"id": "zh-a1-22-p2", "source": "多大 (duō dà)", "target": "Qué tan grande (Cuántos años)"},
+        {"id": "zh-a1-22-p3", "source": "你多大？(nǐ duō dà?)", "target": "¿Cuántos años tienes?"},
+        {"id": "zh-a1-22-p4", "source": "我二十岁 (wǒ èr shí suì)", "target": "Tengo 20 años"},
+        {"id": "zh-a1-22-p5", "source": "他三十岁 (tā sān shí suì)", "target": "Él tiene 30 años"},
+        {"id": "zh-a1-22-p6", "source": "我有二十岁 (❌ Error)", "target": "Uso incorrecto del verbo 'Tener'"},
+        {"id": "zh-a1-22-p7", "source": "我爸爸五十岁 (wǒ bàba wǔ shí suì)", "target": "Mi papá tiene 50 años"},
+        {"id": "zh-a1-22-p8", "source": "我哥哥十八岁 (wǒ gēge shí bā suì)", "target": "Mi hermano mayor tiene 18 años"},
+        {"id": "zh-a1-22-p9", "source": "他多大？(tā duō dà?)", "target": "¿Cuántos años tiene él?"},
+        {"id": "zh-a1-22-p10", "source": "九十九岁 (jiǔ shí jiǔ suì)", "target": "99 años"}
+      ]
+    }
+  ]
+}

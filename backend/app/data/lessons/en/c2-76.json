@@ -1,0 +1,101 @@
+{
+  "id": "c2-76",
+  "title": "Advanced Legal 2",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Legal", "Corporate", "Law"],
+  "completion_message": "¡Veredicto a tu favor! Tienes un dominio del inglés legal que rivaliza con cualquier abogado corporativo de Nueva York. Tu vocabulario es a prueba de demandas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Inglés Legal Avanzado II (C2)",
+      "parts": [
+        { "visual": "Como ejecutivo, interactuarás con abogados constantemente. Conoce su jerga: \n\n1. Subpoena (Citación judicial): \n- Una orden oficial para asistir a la corte o entregar documentos (se pronuncia 'suh-PEE-nuh'). \nEj: The CEO received a SUBPOENA to testify before Congress. \n\n2. Perjury (Perjurio): \n- El crimen de mentir bajo juramento en la corte. \nEj: He was sentenced to 5 years in prison for PERJURY. \n\n3. Affidavit (Declaración jurada por escrito): \n- Un documento escrito donde juras que la información es cierta. \nEj: You must sign this AFFIDAVIT confirming your identity.", "audio": "Welcome to Advanced Legal English, Part 2. As an executive, you will interact with lawyers constantly. Know their jargon. Number 1: Subpoena. An official order to attend court or surrender documents. Notice the pronunciation: suh-PEE-nuh. For example: The CEO received a SUBPOENA to testify before Congress. Number 2: Perjury. The crime of lying under oath in court. For example: He was sentenced to 5 years in prison for PERJURY. Number 3: Affidavit. A written document in which you swear that the information is true. For example: You must sign this AFFIDAVIT confirming your identity." },
+        { "visual": "4. Indemnify (Indemnizar / Eximir de responsabilidad): \n- Proteger financieramente a alguien contra futuras pérdidas, o compensar por daño. \nEj: The contract states that they will INDEMNIFY us against any lawsuits. \n\n5. Intellectual Property (IP - Propiedad Intelectual): \n- Creaciones de la mente (patentes, marcas, derechos de autor). \nEj: Our most valuable asset is our INTELLECTUAL PROPERTY. \n\n6. Non-Disclosure Agreement (NDA - Acuerdo de confidencialidad): \n- Contrato para no compartir secretos comerciales. \nEj: Before I show you the prototype, you must sign an NDA. \n\n7. Severance package (Paquete de indemnización por despido): \n- El dinero y beneficios dados a un empleado cuando es despedido sin causa justificada. \nEj: When the CEO was fired, he received a $10 million SEVERANCE PACKAGE.", "audio": "Number 4: Indemnify. To protect someone financially against future losses, or to compensate them for harm or loss. For example: The contract states that they will INDEMNIFY us against any lawsuits. Number 5: Intellectual Property, or IP. Creations of the mind, such as patents, trademarks, and copyrights. For example: Our most valuable asset is our INTELLECTUAL PROPERTY. Number 6: Non-Disclosure Agreement, commonly known as an NDA. A legal contract to protect trade secrets. For example: Before I show you the prototype, you must sign an NDA. Finally, Number 7: Severance package. Pay and benefits given to an employee when they are fired or laid off. For example: When the CEO was fired, he received a $10 million SEVERANCE PACKAGE." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término legal corporativo correcto.",
+      "questions": [
+        { "id": "c2-76-q1", "type": "quiz_choice", "question": "The judge issued a ____ forcing the company to hand over all its financial records.", "options": ["subpoena", "ticket", "bill", "invoice"], "correct_answer": "subpoena", "explanation": "Subpoena (citación/orden judicial)." },
+        { "id": "c2-76-q2", "type": "quiz_choice", "question": "Lying to the FBI during an official investigation is a serious crime called ____.", "options": ["perjury", "forgery", "robbery", "bribery"], "correct_answer": "perjury", "explanation": "Perjury (perjurio/falso testimonio)." },
+        { "id": "c2-76-q3", "type": "quiz_choice", "question": "The lawyer asked the witness to write down what he saw and sign an ____ in front of a notary.", "options": ["affidavit", "article", "essay", "email"], "correct_answer": "affidavit", "explanation": "Affidavit (declaración jurada escrita)." },
+        { "id": "c2-76-q4", "type": "quiz_choice", "question": "The software company agreed to ____ the client, meaning they will pay the legal fees if the client is sued for using the software.", "options": ["indemnify", "punish", "sue", "prosecute"], "correct_answer": "indemnify", "explanation": "Indemnify (indemnizar/proteger financieramente contra demandas)." },
+        { "id": "c2-76-q5", "type": "quiz_choice", "question": "Patents, trademarks, and copyrights are all forms of IP, which stands for Intellectual ____.", "options": ["Property", "Power", "Program", "Protocol"], "correct_answer": "Property", "explanation": "Intellectual Property (Propiedad Intelectual)." },
+        { "id": "c2-76-q6", "type": "quiz_choice", "question": "I can't tell you what the new iPhone looks like because I signed an ____ (Non-Disclosure Agreement).", "options": ["NDA", "DNA", "NCA", "NPA"], "correct_answer": "NDA", "explanation": "NDA = Acuerdo de Confidencialidad." },
+        { "id": "c2-76-q7", "type": "quiz_choice", "question": "When the company laid off 500 workers, it gave them each a ____ package containing 3 months of salary.", "options": ["severance", "welcome", "starter", "survival"], "correct_answer": "severance", "explanation": "Severance package (indemnización por despido/cesantía)." },
+        { "id": "c2-76-q8", "type": "quiz_choice", "question": "A lawyer who represents a client in court during a trial is a ____. (Litigante).", "options": ["litigator", "mediator", "arbitrator", "judge"], "correct_answer": "litigator", "explanation": "Litigator = abogado litigante." },
+        { "id": "c2-76-q9", "type": "quiz_choice", "question": "When a company goes bankrupt, the court appoints a ____ to manage the sale of the assets and pay the creditors.", "options": ["liquidator", "destroyer", "buyer", "seller"], "correct_answer": "liquidator", "explanation": "Liquidator (o trustee) = el liquidador designado." },
+        { "id": "c2-76-q10", "type": "quiz_choice", "question": "A clause in a contract that frees one party from liability if damages are caused by unpredictable, unavoidable natural disasters is Force ____.", "options": ["Majeure", "Nature", "Major", "Power"], "correct_answer": "Majeure", "explanation": "Force Majeure (Fuerza mayor)." },
+        { "id": "c2-76-q11", "type": "quiz_choice", "question": "To secretly make illegal copies of a trademarked product and sell it as real is to create ____ goods. (Falsificaciones).", "options": ["counterfeit", "perfect", "custom", "tailored"], "correct_answer": "counterfeit", "explanation": "Counterfeit = falsificado." },
+        { "id": "c2-76-q12", "type": "quiz_choice", "question": "If you use a song in your commercial without permission from the artist, it is copyright ____. (Infracción).", "options": ["infringement", "agreement", "alignment", "arrangement"], "correct_answer": "infringement", "explanation": "Copyright infringement = infracción de derechos de autor." },
+        { "id": "c2-76-q13", "type": "quiz_choice", "question": "When you sign a contract, it is legally ____, meaning you must obey it by law. (Vinculante).", "options": ["binding", "holding", "locking", "tying"], "correct_answer": "binding", "explanation": "Legally binding = legalmente vinculante." },
+        { "id": "c2-76-q14", "type": "quiz_choice", "question": "A written rule or law passed by a legislative body is a ____. (Estatuto / Ley).", "options": ["statute", "statue", "status", "statement"], "correct_answer": "statute", "explanation": "Statute = estatuto legal, ley." },
+        { "id": "c2-76-q15", "type": "quiz_choice", "question": "To start legal action against someone is to ____ them. (Demandar).", "options": ["sue", "see", "say", "set"], "correct_answer": "sue", "explanation": "Sue = demandar civilmente." },
+        { "id": "c2-76-q16", "type": "quiz_choice", "question": "The person or company that is being sued or accused in court is the ____. (Acusado / Demandado).", "options": ["defendant", "plaintiff", "judge", "jury"], "correct_answer": "defendant", "explanation": "Defendant = el demandado / acusado." },
+        { "id": "c2-76-q17", "type": "quiz_choice", "question": "The person who brings a case against another in a court of law is the ____. (Demandante).", "options": ["plaintiff", "defendant", "lawyer", "clerk"], "correct_answer": "plaintiff", "explanation": "Plaintiff = demandante." },
+        { "id": "c2-76-q18", "type": "quiz_choice", "question": "To drop a lawsuit because the two sides agreed on a private payment is to ____ out of court.", "options": ["settle", "fix", "solve", "finish"], "correct_answer": "settle", "explanation": "Settle out of court = llegar a un acuerdo extrajudicial." },
+        { "id": "c2-76-q19", "type": "quiz_choice", "question": "An amount of money paid to a victim to punish the defendant and deter future bad behavior is ____ damages. (Daños punitivos).", "options": ["punitive", "rewarding", "positive", "helpful"], "correct_answer": "punitive", "explanation": "Punitive damages = daños punitivos." },
+        { "id": "c2-76-q20", "type": "quiz_choice", "question": "If you fail to do what the contract requires, you are in ____ of contract. (Incumplimiento).", "options": ["breach", "break", "burst", "burn"], "correct_answer": "breach", "explanation": "Breach of contract = incumplimiento de contrato." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término legal.",
+      "questions": [
+        { "id": "c2-76-f1", "type": "fill_input", "question": "A court ____. (Citación judicial con S)", "correct_answer": "subpoena", "explanation": "subpoena." },
+        { "id": "c2-76-f2", "type": "fill_input", "question": "Guilty of ____. (Perjurio/Mentir al juez con P)", "correct_answer": "perjury", "explanation": "perjury." },
+        { "id": "c2-76-f3", "type": "fill_input", "question": "Sign this ____. (Declaración jurada con A)", "correct_answer": "affidavit", "explanation": "affidavit." },
+        { "id": "c2-76-f4", "type": "fill_input", "question": "We will ____ you. (Indemnizar/proteger con I)", "correct_answer": "indemnify", "explanation": "indemnify." },
+        { "id": "c2-76-f5", "type": "fill_input", "question": "Intellectual ____. (Propiedad intelectual con P)", "correct_answer": "Property", "explanation": "Property." },
+        { "id": "c2-76-f6", "type": "fill_input", "question": "Sign an ____. (Acuerdo de confidencialidad de 3 letras)", "correct_answer": "NDA", "explanation": "NDA." },
+        { "id": "c2-76-f7", "type": "fill_input", "question": "A ____ package. (Paquete de cesantía/despido con S)", "correct_answer": "severance", "explanation": "severance." },
+        { "id": "c2-76-f8", "type": "fill_input", "question": "Force ____. (Fuerza mayor con M)", "correct_answer": "Majeure", "explanation": "Majeure." },
+        { "id": "c2-76-f9", "type": "fill_input", "question": "____ goods. (Bienes falsificados con C)", "correct_answer": "Counterfeit", "explanation": "Counterfeit." },
+        { "id": "c2-76-f10", "type": "fill_input", "question": "Copyright ____. (Infracción de derechos con I)", "correct_answer": "infringement", "explanation": "infringement." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Legal Match",
+      "pairs": [
+        {"id": "c2-76-p1", "source": "Subpoena", "target": "Orden de presentarse ante un juez"},
+        {"id": "c2-76-p2", "source": "Perjury", "target": "Delito de mentir bajo juramento"},
+        {"id": "c2-76-p3", "source": "Affidavit", "target": "Declaración escrita y jurada"},
+        {"id": "c2-76-p4", "source": "Indemnify", "target": "Proteger financieramente contra daños o demandas"},
+        {"id": "c2-76-p5", "source": "Intellectual Property", "target": "Patentes, marcas y derechos de autor"},
+        {"id": "c2-76-p6", "source": "NDA", "target": "Contrato de confidencialidad secreta"},
+        {"id": "c2-76-p7", "source": "Severance package", "target": "Dinero de indemnización por despido"},
+        {"id": "c2-76-p8", "source": "Force Majeure", "target": "Cláusula de desastres naturales imprevisibles"},
+        {"id": "c2-76-p9", "source": "Counterfeit", "target": "Falsificado, copia ilegal"},
+        {"id": "c2-76-p10", "source": "Infringement", "target": "Infracción o violación de un derecho"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase legal.",
+      "questions": [
+        { "id": "c2-76-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I received a subpoena.", "options": ["I received a subpoena.", "He received a subpoena.", "I received the subpoena.", "I receive a subpoena."], "correct_answer": "I received a subpoena.", "explanation": "Audio exacto." },
+        { "id": "c2-76-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Guilty of perjury.", "options": ["Guilty of perjury.", "Guilty for perjury.", "He is guilty of perjury.", "Guilty of a perjury."], "correct_answer": "Guilty of perjury.", "explanation": "Audio exacto." },
+        { "id": "c2-76-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sign the affidavit.", "options": ["Sign the affidavit.", "Signed the affidavit.", "Signing the affidavit.", "Sign an affidavit."], "correct_answer": "Sign the affidavit.", "explanation": "Audio exacto." },
+        { "id": "c2-76-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will indemnify you.", "options": ["We will indemnify you.", "They will indemnify you.", "We will identify you.", "We would indemnify you."], "correct_answer": "We will indemnify you.", "explanation": "Audio exacto." },
+        { "id": "c2-76-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Intellectual property theft.", "options": ["Intellectual property theft.", "Intellectual property laws.", "Intellectual property rights.", "Intellectual properties theft."], "correct_answer": "Intellectual property theft.", "explanation": "Audio exacto." },
+        { "id": "c2-76-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Did you sign the NDA?", "options": ["Did you sign the NDA?", "Do you sign the NDA?", "Did you sign an NDA?", "Have you signed the NDA?"], "correct_answer": "Did you sign the NDA?", "explanation": "Audio exacto." },
+        { "id": "c2-76-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A huge severance package.", "options": ["A huge severance package.", "The huge severance package.", "A big severance package.", "A huge severance pay."], "correct_answer": "A huge severance package.", "explanation": "Audio exacto." },
+        { "id": "c2-76-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is force majeure.", "options": ["It is force majeure.", "It was force majeure.", "This is force majeure.", "Is it force majeure?"], "correct_answer": "It is force majeure.", "explanation": "Audio exacto." },
+        { "id": "c2-76-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Selling counterfeit goods.", "options": ["Selling counterfeit goods.", "Sell counterfeit goods.", "Selling a counterfeit good.", "Sold counterfeit goods."], "correct_answer": "Selling counterfeit goods.", "explanation": "Audio exacto." },
+        { "id": "c2-76-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Copyright infringement.", "options": ["Copyright infringement.", "Copyright infringements.", "A copyright infringement.", "Copyright agreement."], "correct_answer": "Copyright infringement.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

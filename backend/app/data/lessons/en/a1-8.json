@@ -1,0 +1,101 @@
+{
+  "id": "a1-8",
+  "title": "Food & Drink",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Food", "Coffee", "Meetings"],
+  "completion_message": "¡Excelente! Ordenar café o comida durante una reunión será ahora muy fácil para ti.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Alimentos y Bebidas",
+      "parts": [
+        { "visual": "El 'coffee' (café) es el centro social de la mayoría de los negocios corporativos.", "audio": "Coffee is the social center of most corporate businesses." },
+        { "visual": "Usamos 'would like' (me gustaría) para pedir formalmente, por ejemplo: 'I would like a coffee'.", "audio": "We use 'would like' to ask formally, for example: I would like a coffee." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la respuesta correcta.",
+      "questions": [
+        { "id": "a1-8-q1", "type": "quiz_choice", "question": "I would like a cup of ____, please.", "options": ["coffee", "coffees", "café", "cafe"], "correct_answer": "coffee", "explanation": "'Coffee' es la palabra correcta en inglés." },
+        { "id": "a1-8-q2", "type": "quiz_choice", "question": "Do you take sugar in your ____?", "options": ["coffee", "tea", "water", "juice"], "correct_answer": "coffee", "explanation": "El azúcar es común en el café." },
+        { "id": "a1-8-q3", "type": "quiz_choice", "question": "Let's discuss this over ____.", "options": ["coffee", "coffees", "coffing", "coughs"], "correct_answer": "coffee", "explanation": "Expresión de negocios para conversar." },
+        { "id": "a1-8-q4", "type": "quiz_choice", "question": "Can I get you some ____?", "options": ["coffee", "coffees", "a coffee", "one coffee"], "correct_answer": "coffee", "explanation": "Se usa como incontable aquí." },
+        { "id": "a1-8-q5", "type": "quiz_choice", "question": "I drink my ____ black.", "options": ["coffee", "water", "milk", "soda"], "correct_answer": "coffee", "explanation": "Black coffee = sin leche ni azúcar." },
+        { "id": "a1-8-q6", "type": "quiz_choice", "question": "The ____ machine is in the kitchen.", "options": ["coffee", "tea", "drink", "water"], "correct_answer": "coffee", "explanation": "Coffee machine (Cafetera)." },
+        { "id": "a1-8-q7", "type": "quiz_choice", "question": "We need a ____ break.", "options": ["coffee", "time", "work", "rest"], "correct_answer": "coffee", "explanation": "Coffee break (descanso para tomar algo)." },
+        { "id": "a1-8-q8", "type": "quiz_choice", "question": "Would you like a ____?", "options": ["coffee", "coffees", "water", "tea"], "correct_answer": "coffee", "explanation": "Refiriéndose a una taza de café." },
+        { "id": "a1-8-q9", "type": "quiz_choice", "question": "He poured me a cup of ____.", "options": ["coffee", "café", "food", "cake"], "correct_answer": "coffee", "explanation": "Servir una taza." },
+        { "id": "a1-8-q10", "type": "quiz_choice", "question": "The ____ shop is downstairs.", "options": ["coffee", "coffees", "drink", "water"], "correct_answer": "coffee", "explanation": "Coffee shop (cafetería)." },
+        { "id": "a1-8-q11", "type": "quiz_choice", "question": "Are we meeting for ____ or lunch?", "options": ["coffee", "dinner", "breakfast", "meal"], "correct_answer": "coffee", "explanation": "Contrastar con una comida completa." },
+        { "id": "a1-8-q12", "type": "quiz_choice", "question": "I had too much ____ today.", "options": ["coffee", "coffees", "water", "apples"], "correct_answer": "coffee", "explanation": "Incontable." },
+        { "id": "a1-8-q13", "type": "quiz_choice", "question": "Bring me a strong ____.", "options": ["coffee", "water", "milk", "tea"], "correct_answer": "coffee", "explanation": "Strong coffee (cargado)." },
+        { "id": "a1-8-q14", "type": "quiz_choice", "question": "We bought fresh ____ beans.", "options": ["coffee", "water", "sugar", "tea"], "correct_answer": "coffee", "explanation": "Granos de café." },
+        { "id": "a1-8-q15", "type": "quiz_choice", "question": "It's time for morning ____.", "options": ["coffee", "lunch", "dinner", "wine"], "correct_answer": "coffee", "explanation": "De la mañana." },
+        { "id": "a1-8-q16", "type": "quiz_choice", "question": "She offered me a ____.", "options": ["coffee", "coffees", "water", "drink"], "correct_answer": "coffee", "explanation": "Una taza de café." },
+        { "id": "a1-8-q17", "type": "quiz_choice", "question": "Make sure we have enough ____.", "options": ["coffee", "cups", "mugs", "water"], "correct_answer": "coffee", "explanation": "Incontable." },
+        { "id": "a1-8-q18", "type": "quiz_choice", "question": "Hot ____ keeps me awake.", "options": ["coffee", "water", "milk", "soda"], "correct_answer": "coffee", "explanation": "Bebida estimulante." },
+        { "id": "a1-8-q19", "type": "quiz_choice", "question": "Let's grab a quick ____.", "options": ["coffee", "meal", "dinner", "food"], "correct_answer": "coffee", "explanation": "Agarrar un café rápido." },
+        { "id": "a1-8-q20", "type": "quiz_choice", "question": "Does anyone want ____?", "options": ["coffee", "coffees", "a coffees", "the coffees"], "correct_answer": "coffee", "explanation": "Pregunta general." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta.",
+      "questions": [
+        { "id": "a1-8-f1", "type": "fill_input", "question": "I want a cup of ____.", "correct_answer": "coffee", "explanation": "Café." },
+        { "id": "a1-8-f2", "type": "fill_input", "question": "Let's take a ____ break.", "correct_answer": "coffee", "explanation": "Pausa." },
+        { "id": "a1-8-f3", "type": "fill_input", "question": "I like black ____.", "correct_answer": "coffee", "explanation": "Sin leche." },
+        { "id": "a1-8-f4", "type": "fill_input", "question": "The ____ machine is broken.", "correct_answer": "coffee", "explanation": "Máquina." },
+        { "id": "a1-8-f5", "type": "fill_input", "question": "Let's meet for ____.", "correct_answer": "coffee", "explanation": "Reunión." },
+        { "id": "a1-8-f6", "type": "fill_input", "question": "I need more ____.", "correct_answer": "coffee", "explanation": "Más café." },
+        { "id": "a1-8-f7", "type": "fill_input", "question": "Do you drink ____?", "correct_answer": "coffee", "explanation": "Verbo beber." },
+        { "id": "a1-8-f8", "type": "fill_input", "question": "Grab a ____.", "correct_answer": "coffee", "explanation": "Taza." },
+        { "id": "a1-8-f9", "type": "fill_input", "question": "She ordered ____.", "correct_answer": "coffee", "explanation": "Ordenar." },
+        { "id": "a1-8-f10", "type": "fill_input", "question": "A strong cup of ____.", "correct_answer": "coffee", "explanation": "Cargado." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-8-p1", "source": "Coffee", "target": "Café"},
+        {"id": "a1-8-p2", "source": "Tea", "target": "Té"},
+        {"id": "a1-8-p3", "source": "Water", "target": "Agua"},
+        {"id": "a1-8-p4", "source": "Sugar", "target": "Azúcar"},
+        {"id": "a1-8-p5", "source": "Milk", "target": "Leche"},
+        {"id": "a1-8-p6", "source": "Cup", "target": "Taza"},
+        {"id": "a1-8-p7", "source": "Machine", "target": "Máquina"},
+        {"id": "a1-8-p8", "source": "Break", "target": "Descanso"},
+        {"id": "a1-8-p9", "source": "Lunch", "target": "Almuerzo"},
+        {"id": "a1-8-p10", "source": "Drink", "target": "Bebida"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-8-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I would like a coffee.", "options": ["I would like a coffee.", "I will like a coffee.", "I want a coffee.", "I would like a tea."], "correct_answer": "I would like a coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-8-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's get some coffee.", "options": ["Let's get some coffee.", "Let's get a coffee.", "Let us get some coffee.", "Let's have some coffee."], "correct_answer": "Let's get some coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-8-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do you want coffee?", "options": ["Do you want coffee?", "Do you want a coffee?", "Did you want coffee?", "Do you need coffee?"], "correct_answer": "Do you want coffee?", "explanation": "Audio exacto." },
+        { "id": "a1-8-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Black coffee please.", "options": ["Black coffee please.", "A black coffee please.", "Black coffee yes.", "White coffee please."], "correct_answer": "Black coffee please.", "explanation": "Audio exacto." },
+        { "id": "a1-8-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A coffee break.", "options": ["A coffee break.", "The coffee break.", "A coffee maker.", "A coffee mug."], "correct_answer": "A coffee break.", "explanation": "Audio exacto." },
+        { "id": "a1-8-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Where is the coffee?", "options": ["Where is the coffee?", "Where is a coffee?", "Here is the coffee.", "Where is the tea?"], "correct_answer": "Where is the coffee?", "explanation": "Audio exacto." },
+        { "id": "a1-8-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need a coffee.", "options": ["I need a coffee.", "I want a coffee.", "I need coffee.", "I had a coffee."], "correct_answer": "I need a coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-8-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Meet me for coffee.", "options": ["Meet me for coffee.", "Meet him for coffee.", "Meet me with coffee.", "Meet us for coffee."], "correct_answer": "Meet me for coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-8-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This coffee is hot.", "options": ["This coffee is hot.", "The coffee is hot.", "This coffee is cold.", "His coffee is hot."], "correct_answer": "This coffee is hot.", "explanation": "Audio exacto." },
+        { "id": "a1-8-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We sell coffee.", "options": ["We sell coffee.", "They sell coffee.", "We smell coffee.", "We buy coffee."], "correct_answer": "We sell coffee.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "c2-41",
+  "title": "Advanced Conditionals",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Grammar", "Conditionals", "Writing", "Formal"],
+  "completion_message": "¡Brillante! Has dominado las estructuras condicionales más avanzadas del inglés. Usar Inversión Condicional y Mixed Conditionals te permite expresar arrepentimientos financieros y escenarios hipotéticos con una elegancia absoluta.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Condicionales Avanzados (C2)",
+      "parts": [
+        { "visual": "En C2, dejamos de usar 'If' en escenarios muy formales, usando la 'Inversión Condicional'. \n\n1. Inversión del 3er Condicional (Pasado irreal): \nNormal: If I had known about the risk, I wouldn't have invested. \nInversión: HAD I KNOWN about the risk, I wouldn't have invested. \n(Simplemente quitamos 'If' y ponemos 'Had' al principio). \n\n2. Inversión del 2do Condicional (Presente/Futuro irreal): \nUsamos 'Were' + sujeto + to + verbo base. \nNormal: If he resigned, the stock would crash. \nInversión: WERE HE TO RESIGN, the stock would crash.", "audio": "Welcome to Advanced Conditionals. In the C2 level, we often drop the word 'If' in highly formal contexts by using Conditional Inversion. Number 1: Inversion of the Third Conditional, which deals with unreal past events. Normal sentence: If I had known about the risk, I wouldn't have invested. Inversion: HAD I KNOWN about the risk, I wouldn't have invested. We just drop 'If' and put 'Had' at the beginning. Number 2: Inversion of the Second Conditional, for unreal present or future events. Normal: If he resigned, the stock would crash. Inversion: WERE HE TO RESIGN, the stock would crash. Notice we use 'Were' plus the subject plus 'to' and the base verb." },
+        { "visual": "3. Inversión del 1er Condicional (Posibilidad real futura): \nUsamos 'Should'. Significa 'Por si acaso' o 'En el improbable caso de que'. \nNormal: If you need further assistance, please contact me. \nInversión: SHOULD YOU NEED further assistance, please contact me. \n\n4. Mixed Conditionals (Condicionales Mixtos): \nMezclamos el 3er y 2do condicional cuando el pasado afecta al presente. \nPasado -> Presente: \nIf I HAD BOUGHT (pasado) Bitcoin in 2010, I WOULD BE (presente) a millionaire now. \n(No se dice 'would have been' porque sigues siendo millonario AHORA).", "audio": "Number 3: Inversion of the First Conditional, for real future possibilities. We use 'Should', meaning 'just in case' or 'in the unlikely event that'. Normal: If you need further assistance, please contact me. Inversion: SHOULD YOU NEED further assistance, please contact me. Number 4: Mixed Conditionals. We mix the third and second conditionals when an unreal past event affects the present. For example: If I HAD BOUGHT Bitcoin in 2010, I WOULD BE a millionaire now. We use 'had bought' for the past, but 'would be' for the present, because the result is happening right now, not in the past." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma condicional avanzada correcta.",
+      "questions": [
+        { "id": "c2-41-q1", "type": "quiz_choice", "question": "Normal: If I had seen the email, I would have replied. -> Inversion: ____ the email, I would have replied.", "options": ["Had I seen", "Did I see", "Have I seen", "If had I seen"], "correct_answer": "Had I seen", "explanation": "Inversión del 3er condicional: Had I seen = If I had seen." },
+        { "id": "c2-41-q2", "type": "quiz_choice", "question": "Normal: If you require more information, call this number. -> Inversion: ____ more information, call this number.", "options": ["Should you require", "Do you require", "Will you require", "Would you require"], "correct_answer": "Should you require", "explanation": "Inversión del 1er condicional: Should you require = If you require." },
+        { "id": "c2-41-q3", "type": "quiz_choice", "question": "Normal: If the company failed, thousands would lose their jobs. -> Inversion: ____, thousands would lose their jobs.", "options": ["Were the company to fail", "Was the company to fail", "Did the company fail", "Had the company failed"], "correct_answer": "Were the company to fail", "explanation": "Inversión del 2do condicional: Were + sujeto + to + verbo." },
+        { "id": "c2-41-q4", "type": "quiz_choice", "question": "Mixed Conditional (Past condition -> Present result): If I ____ harder at university, I would have a better job now.", "options": ["had studied", "studied", "would study", "have studied"], "correct_answer": "had studied", "explanation": "Si yo HUBIERA estudiado (pasado perfecto) -> tendría (presente)." },
+        { "id": "c2-41-q5", "type": "quiz_choice", "question": "Mixed Conditional: If he had taken my advice last year, he ____ in bankruptcy court right now.", "options": ["would not be", "would not have been", "will not be", "is not"], "correct_answer": "would not be", "explanation": "Consecuencia presente: él NO ESTARÍA (would not be) ahora." },
+        { "id": "c2-41-q6", "type": "quiz_choice", "question": "____ you have any questions, please do not hesitate to contact our legal team.", "options": ["Should", "Would", "Had", "Were"], "correct_answer": "Should", "explanation": "Should you have = If you have (en caso de que tengas)." },
+        { "id": "c2-41-q7", "type": "quiz_choice", "question": "____ it not been for your help, the company would have gone bankrupt. (Si no hubiera sido por...)", "options": ["Had", "If", "Were", "Did"], "correct_answer": "Had", "explanation": "Had it not been for = Si no hubiera sido por." },
+        { "id": "c2-41-q8", "type": "quiz_choice", "question": "Mixed Conditional (Present condition -> Past result): If I ____ a more patient person, I wouldn't have shouted at the client yesterday.", "options": ["were", "had been", "am", "would be"], "correct_answer": "were", "explanation": "Condición permanente en el presente (If I were = Si yo fuera) afectando una acción pasada." },
+        { "id": "c2-41-q9", "type": "quiz_choice", "question": "____ the board to reject the proposal, the CEO would resign immediately.", "options": ["Were", "Was", "Had", "Should"], "correct_answer": "Were", "explanation": "Were the board to reject = If the board rejected." },
+        { "id": "c2-41-q10", "type": "quiz_choice", "question": "____ we known about the impending crisis, we wouldn't have expanded into Europe.", "options": ["Had", "If", "Have", "Did"], "correct_answer": "Had", "explanation": "Had we known = If we had known." },
+        { "id": "c2-41-q11", "type": "quiz_choice", "question": "Mixed: If they hadn't lost that massive contract, they ____ firing people today.", "options": ["wouldn't be", "wouldn't have been", "aren't", "won't be"], "correct_answer": "wouldn't be", "explanation": "Consecuencia en el presente ('today'): wouldn't be (no estarían)." },
+        { "id": "c2-41-q12", "type": "quiz_choice", "question": "____ an emergency arise, press the red button to stop the machinery.", "options": ["Should", "If", "Would", "Had"], "correct_answer": "Should", "explanation": "Should an emergency arise = If an emergency arises." },
+        { "id": "c2-41-q13", "type": "quiz_choice", "question": "____ I you, I would seriously reconsider signing that contract. (Si yo fuera tú).", "options": ["Were", "Was", "Had", "Am"], "correct_answer": "Were", "explanation": "Were I you = If I were you (Condicional 2 invertido)." },
+        { "id": "c2-41-q14", "type": "quiz_choice", "question": "____ the negotiations failed, we would have lost millions. (Negativa invertida).", "options": ["Had", "If", "Were", "Should"], "correct_answer": "Had", "explanation": "Had the negotiations failed = If the negotiations had failed." },
+        { "id": "c2-41-q15", "type": "quiz_choice", "question": "Mixed: If I wasn't so terrified of flying, I ____ to London for the conference last week.", "options": ["would have flown", "would fly", "flew", "had flown"], "correct_answer": "would have flown", "explanation": "Condición presente (miedo a volar) -> Resultado pasado (habría volado)." },
+        { "id": "c2-41-q16", "type": "quiz_choice", "question": "But for the government bailout, the bank ____. (A no ser por... el banco habría colapsado).", "options": ["would have collapsed", "would collapse", "collapsed", "had collapsed"], "correct_answer": "would have collapsed", "explanation": "But for = If it hadn't been for. Consecuencia pasada: would have collapsed." },
+        { "id": "c2-41-q17", "type": "quiz_choice", "question": "____ anyone call while I'm in the meeting, tell them I'll call back later.", "options": ["Should", "If", "Would", "Do"], "correct_answer": "Should", "explanation": "Should anyone call = Si alguien llamara (poco probable)." },
+        { "id": "c2-41-q18", "type": "quiz_choice", "question": "____ he to offer you a bribe, what would you do?", "options": ["Were", "Was", "Had", "Should"], "correct_answer": "Were", "explanation": "Were he to offer = If he offered." },
+        { "id": "c2-41-q19", "type": "quiz_choice", "question": "Mixed: If she had signed the non-compete clause, she ____ working for our rival right now.", "options": ["wouldn't be", "wouldn't have been", "isn't", "hasn't been"], "correct_answer": "wouldn't be", "explanation": "Consecuencia presente ('right now'): she wouldn't be." },
+        { "id": "c2-41-q20", "type": "quiz_choice", "question": "____ I realized how difficult this project was going to be, I would never have accepted it.", "options": ["Had", "If", "Have", "Did"], "correct_answer": "Had", "explanation": "Had I realized = If I had realized." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave de la Inversión Condicional (Had, Should, Were).",
+      "questions": [
+        { "id": "c2-41-f1", "type": "fill_input", "question": "____ I known the truth, I wouldn't have gone.", "correct_answer": "Had", "explanation": "Had." },
+        { "id": "c2-41-f2", "type": "fill_input", "question": "____ you need help, please call me.", "correct_answer": "Should", "explanation": "Should." },
+        { "id": "c2-41-f3", "type": "fill_input", "question": "____ she to quit, we would be in trouble. (If she quit)", "correct_answer": "Were", "explanation": "Were." },
+        { "id": "c2-41-f4", "type": "fill_input", "question": "____ it not been for your advice, I would have failed.", "correct_answer": "Had", "explanation": "Had." },
+        { "id": "c2-41-f5", "type": "fill_input", "question": "____ anyone ask, tell them I am out.", "correct_answer": "Should", "explanation": "Should." },
+        { "id": "c2-41-f6", "type": "fill_input", "question": "If I had bought it, I ____ be rich now. (Mixed conditional)", "correct_answer": "would", "explanation": "would." },
+        { "id": "c2-41-f7", "type": "fill_input", "question": "____ I you, I would not accept the deal. (If I were you)", "correct_answer": "Were", "explanation": "Were." },
+        { "id": "c2-41-f8", "type": "fill_input", "question": "____ we seen the error, we would have fixed it.", "correct_answer": "Had", "explanation": "Had." },
+        { "id": "c2-41-f9", "type": "fill_input", "question": "____ the economy to crash, gold prices would rise.", "correct_answer": "Were", "explanation": "Were." },
+        { "id": "c2-41-f10", "type": "fill_input", "question": "____ you require further details, see the attachment.", "correct_answer": "Should", "explanation": "Should." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Conditional Match",
+      "pairs": [
+        {"id": "c2-41-p1", "source": "Had I known", "target": "Si yo hubiera sabido"},
+        {"id": "c2-41-p2", "source": "Should you need", "target": "En caso de que necesites"},
+        {"id": "c2-41-p3", "source": "Were he to resign", "target": "Si él renunciara"},
+        {"id": "c2-41-p4", "source": "Had it not been for", "target": "Si no hubiera sido por"},
+        {"id": "c2-41-p5", "source": "Were I you", "target": "Si yo fuera tú"},
+        {"id": "c2-41-p6", "source": "I would be rich now", "target": "Sería rico ahora (Resultado presente)"},
+        {"id": "c2-41-p7", "source": "I would have flown", "target": "Habría volado (Resultado pasado)"},
+        {"id": "c2-41-p8", "source": "Should an emergency arise", "target": "En caso de que surja una emergencia"},
+        {"id": "c2-41-p9", "source": "Had we realized", "target": "Si nos hubiéramos dado cuenta"},
+        {"id": "c2-41-p10", "source": "Were the board to reject it", "target": "Si la junta lo rechazara"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la estructura condicional avanzada correcta.",
+      "questions": [
+        { "id": "c2-41-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Had I known, I would have stopped it.", "options": ["Had I known, I would have stopped it.", "If I known, I would have stopped it.", "Had I know, I would have stopped it.", "Have I known, I would have stopped it."], "correct_answer": "Had I known, I would have stopped it.", "explanation": "Audio exacto." },
+        { "id": "c2-41-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Should you need help, call me.", "options": ["Should you need help, call me.", "Would you need help, call me.", "If you needs help, call me.", "Should you needed help, call me."], "correct_answer": "Should you need help, call me.", "explanation": "Audio exacto." },
+        { "id": "c2-41-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Were he to resign, stocks would crash.", "options": ["Were he to resign, stocks would crash.", "Was he to resign, stocks would crash.", "Were he resigning, stocks would crash.", "Were he to resigns, stocks would crash."], "correct_answer": "Were he to resign, stocks would crash.", "explanation": "Audio exacto." },
+        { "id": "c2-41-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Had it not been for you, we would have failed.", "options": ["Had it not been for you, we would have failed.", "Had it not be for you, we would have failed.", "Has it not been for you, we would have failed.", "Had it not been for you, we will have failed."], "correct_answer": "Had it not been for you, we would have failed.", "explanation": "Audio exacto." },
+        { "id": "c2-41-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If I had bought it, I would be rich now.", "options": ["If I had bought it, I would be rich now.", "If I had bought it, I would have been rich now.", "If I bought it, I would be rich now.", "If I had buy it, I would be rich now."], "correct_answer": "If I had bought it, I would be rich now.", "explanation": "Audio exacto." },
+        { "id": "c2-41-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Were I you, I would not accept it.", "options": ["Were I you, I would not accept it.", "Was I you, I would not accept it.", "Were I you, I will not accept it.", "Where I you, I would not accept it."], "correct_answer": "Were I you, I would not accept it.", "explanation": "Audio exacto." },
+        { "id": "c2-41-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Had we seen the error, we would have fixed it.", "options": ["Had we seen the error, we would have fixed it.", "Had we see the error, we would have fixed it.", "Have we seen the error, we would have fixed it.", "Had we saw the error, we would have fixed it."], "correct_answer": "Had we seen the error, we would have fixed it.", "explanation": "Audio exacto." },
+        { "id": "c2-41-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Should an emergency arise, press the button.", "options": ["Should an emergency arise, press the button.", "Should an emergency arises, press the button.", "Should an emergency arose, press the button.", "Would an emergency arise, press the button."], "correct_answer": "Should an emergency arise, press the button.", "explanation": "Audio exacto." },
+        { "id": "c2-41-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Were the board to reject it, he would leave.", "options": ["Were the board to reject it, he would leave.", "Were the board to rejects it, he would leave.", "Was the board to reject it, he would leave.", "Were the board to rejected it, he would leave."], "correct_answer": "Were the board to reject it, he would leave.", "explanation": "Audio exacto." },
+        { "id": "c2-41-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If she hadn't signed, she wouldn't be working here.", "options": ["If she hadn't signed, she wouldn't be working here.", "If she hadn't sign, she wouldn't be working here.", "If she hadn't signed, she wouldn't have been working here.", "If she didn't signed, she wouldn't be working here."], "correct_answer": "If she hadn't signed, she wouldn't be working here.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

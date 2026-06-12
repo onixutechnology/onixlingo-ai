@@ -1,0 +1,387 @@
+{
+  "id": "a1-1",
+  "title": "First Impressions",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Greetings", "Business Basics"],
+  "completion_message": "¡Excelente! Has dominado las presentaciones ejecutivas básicas. El nivel A1 te espera.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Saludos Corporativos",
+      "parts": [
+        {
+          "visual": "En el entorno corporativo de Estados Unidos, un 'First Impression' sólido define la relación comercial.",
+          "audio": "In the US corporate environment, a solid first impression defines the business relationship."
+        },
+        {
+          "visual": "Aprende a usar 'hello' y presentarte formalmente.",
+          "audio": "Learn how to use 'hello' and introduce yourself formally."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la respuesta correcta",
+      "questions": [
+        {
+          "id": "a1-1-q-choice-1",
+          "type": "quiz_choice",
+          "question": "____, my name is John. I am the new project manager.",
+          "options": ["Hello", "Goodness", "Byebye", "Which"],
+          "correct_answer": "Hello",
+          "explanation": "'Hello' es el saludo formal y universal en negocios."
+        },
+        {
+          "id": "a1-1-q-choice-2",
+          "type": "quiz_choice",
+          "question": "Nice to meet you. ____ are you from?",
+          "options": ["Where", "Who", "Why", "When"],
+          "correct_answer": "Where",
+          "explanation": "'Where' se usa para preguntar el origen o ubicación."
+        },
+        {
+          "id": "a1-1-q-choice-3",
+          "type": "quiz_choice",
+          "question": "We ____ a meeting at 10 AM.",
+          "options": ["have", "has", "having", "is having"],
+          "correct_answer": "have",
+          "explanation": "Con el pronombre 'We', se usa la forma base 'have'."
+        },
+        {
+          "id": "a1-1-q-choice-4",
+          "type": "quiz_choice",
+          "question": "____ is the CEO of the company?",
+          "options": ["Who", "What", "When", "Which"],
+          "correct_answer": "Who",
+          "explanation": "'Who' se refiere a personas (¿Quién?)."
+        },
+        {
+          "id": "a1-1-q-choice-5",
+          "type": "quiz_choice",
+          "question": "Our headquarters ____ located in New York.",
+          "options": ["is", "are", "am", "be"],
+          "correct_answer": "is",
+          "explanation": "'Headquarters' como sede corporativa única toma verbo singular 'is'."
+        },
+        {
+          "id": "a1-1-q-choice-6",
+          "type": "quiz_choice",
+          "question": "Please send the report ____ Friday.",
+          "options": ["by", "in", "at", "on"],
+          "correct_answer": "by",
+          "explanation": "Se usa 'by' para establecer límites de tiempo (a más tardar el viernes)."
+        },
+        {
+          "id": "a1-1-q-choice-7",
+          "type": "quiz_choice",
+          "question": "I look forward to ____ with you.",
+          "options": ["working", "work", "worked", "works"],
+          "correct_answer": "working",
+          "explanation": "Después de 'look forward to' el verbo lleva '-ing'."
+        },
+        {
+          "id": "a1-1-q-choice-8",
+          "type": "quiz_choice",
+          "question": "Can I have your ____ card?",
+          "options": ["business", "busyness", "boss", "busy"],
+          "correct_answer": "business",
+          "explanation": "'Business card' es la tarjeta de presentación."
+        },
+        {
+          "id": "a1-1-q-choice-9",
+          "type": "quiz_choice",
+          "question": "He is the new ____ of sales.",
+          "options": ["director", "directs", "direction", "directed"],
+          "correct_answer": "director",
+          "explanation": "'Director' es el sustantivo correcto para el puesto."
+        },
+        {
+          "id": "a1-1-q-choice-10",
+          "type": "quiz_choice",
+          "question": "____ you have any questions?",
+          "options": ["Do", "Are", "Is", "Does"],
+          "correct_answer": "Do",
+          "explanation": "'Do' es el auxiliar para preguntas en presente simple con 'you'."
+        },
+        {
+          "id": "a1-1-q-choice-11",
+          "type": "quiz_choice",
+          "question": "Welcome ____ OnixLingo Enterprises.",
+          "options": ["to", "in", "at", "for"],
+          "correct_answer": "to",
+          "explanation": "'Welcome to' es la estructura correcta para dar bienvenida a un lugar."
+        },
+        {
+          "id": "a1-1-q-choice-12",
+          "type": "quiz_choice",
+          "question": "She ____ Spanish and English fluently.",
+          "options": ["speaks", "speak", "speaking", "is speak"],
+          "correct_answer": "speaks",
+          "explanation": "Con 'She' en presente simple, el verbo lleva 's'."
+        },
+        {
+          "id": "a1-1-q-choice-13",
+          "type": "quiz_choice",
+          "question": "Let me ____ my colleague, Sarah.",
+          "options": ["introduce", "introduces", "introducing", "introduced"],
+          "correct_answer": "introduce",
+          "explanation": "Después de 'Let me', el verbo va en su forma base."
+        },
+        {
+          "id": "a1-1-q-choice-14",
+          "type": "quiz_choice",
+          "question": "What does your company ____?",
+          "options": ["do", "does", "doing", "did"],
+          "correct_answer": "do",
+          "explanation": "Con el auxiliar 'does', el verbo principal vuelve a su forma base 'do'."
+        },
+        {
+          "id": "a1-1-q-choice-15",
+          "type": "quiz_choice",
+          "question": "The meeting is ____ the third floor.",
+          "options": ["on", "in", "at", "by"],
+          "correct_answer": "on",
+          "explanation": "Usamos 'on' para pisos de edificios."
+        },
+        {
+          "id": "a1-1-q-choice-16",
+          "type": "quiz_choice",
+          "question": "We offer excellent customer ____.",
+          "options": ["service", "serves", "serving", "servant"],
+          "correct_answer": "service",
+          "explanation": "'Customer service' (servicio al cliente) es un término corporativo estándar."
+        },
+        {
+          "id": "a1-1-q-choice-17",
+          "type": "quiz_choice",
+          "question": "____ is the agenda for today's meeting.",
+          "options": ["Here", "There", "Where", "Hear"],
+          "correct_answer": "Here",
+          "explanation": "'Here is' se usa para presentar o entregar un documento."
+        },
+        {
+          "id": "a1-1-q-choice-18",
+          "type": "quiz_choice",
+          "question": "I ____ from the London office.",
+          "options": ["am", "is", "are", "be"],
+          "correct_answer": "am",
+          "explanation": "'I am' es la conjugación del verbo 'To Be'."
+        },
+        {
+          "id": "a1-1-q-choice-19",
+          "type": "quiz_choice",
+          "question": "Could you ____ spell your last name?",
+          "options": ["please", "pleased", "pleasing", "pleads"],
+          "correct_answer": "please",
+          "explanation": "'Please' es el marcador formal de cortesía."
+        },
+        {
+          "id": "a1-1-q-choice-20",
+          "type": "quiz_choice",
+          "question": "Thank you for ____ time.",
+          "options": ["your", "you", "yours", "you're"],
+          "correct_answer": "your",
+          "explanation": "'Your' es el posesivo para 'tu tiempo'."
+        }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta para completar la frase.",
+      "questions": [
+        {
+          "id": "a1-1-q-fill-1",
+          "type": "fill_input",
+          "question": "____, my name is Alex from Marketing.",
+          "correct_answer": "Hello",
+          "explanation": "El saludo inicial básico en inglés corporativo."
+        },
+        {
+          "id": "a1-1-q-fill-2",
+          "type": "fill_input",
+          "question": "Nice to ____ you.",
+          "correct_answer": "meet",
+          "explanation": "'Nice to meet you' significa 'un placer conocerte'."
+        },
+        {
+          "id": "a1-1-q-fill-3",
+          "type": "fill_input",
+          "question": "I am the new project ____.",
+          "correct_answer": "manager",
+          "explanation": "'Manager' significa gerente."
+        },
+        {
+          "id": "a1-1-q-fill-4",
+          "type": "fill_input",
+          "question": "Welcome ____ our corporate office.",
+          "correct_answer": "to",
+          "explanation": "Se usa 'to' después de 'Welcome'."
+        },
+        {
+          "id": "a1-1-q-fill-5",
+          "type": "fill_input",
+          "question": "Please take a ____.",
+          "correct_answer": "seat",
+          "explanation": "'Take a seat' es la forma profesional de decir 'toma asiento'."
+        },
+        {
+          "id": "a1-1-q-fill-6",
+          "type": "fill_input",
+          "question": "Here is my business ____.",
+          "correct_answer": "card",
+          "explanation": "La tarjeta de negocios se llama 'business card'."
+        },
+        {
+          "id": "a1-1-q-fill-7",
+          "type": "fill_input",
+          "question": "Could you repeat that, ____?",
+          "correct_answer": "please",
+          "explanation": "Siempre añade 'please' al pedir clarificaciones."
+        },
+        {
+          "id": "a1-1-q-fill-8",
+          "type": "fill_input",
+          "question": "What is your phone ____?",
+          "correct_answer": "number",
+          "explanation": "Solicitar el número de contacto es crucial en negocios."
+        },
+        {
+          "id": "a1-1-q-fill-9",
+          "type": "fill_input",
+          "question": "We ____ a great team here.",
+          "correct_answer": "have",
+          "explanation": "'Tenemos' se traduce como 'have'."
+        },
+        {
+          "id": "a1-1-q-fill-10",
+          "type": "fill_input",
+          "question": "Thank you very ____.",
+          "correct_answer": "much",
+          "explanation": "La expresión completa es 'Thank you very much'."
+        }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-1-p1", "source": "Hello", "target": "Hola"},
+        {"id": "a1-1-p2", "source": "Manager", "target": "Gerente"},
+        {"id": "a1-1-p3", "source": "Company", "target": "Empresa"},
+        {"id": "a1-1-p4", "source": "Meeting", "target": "Reunión"},
+        {"id": "a1-1-p5", "source": "Office", "target": "Oficina"},
+        {"id": "a1-1-p6", "source": "Colleague", "target": "Colega"},
+        {"id": "a1-1-p7", "source": "Card", "target": "Tarjeta"},
+        {"id": "a1-1-p8", "source": "Welcome", "target": "Bienvenido"},
+        {"id": "a1-1-p9", "source": "Team", "target": "Equipo"},
+        {"id": "a1-1-p10", "source": "Business", "target": "Negocios"}
+      ]
+    },
+    {
+      "id": "stg_listening",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        {
+          "id": "a1-1-q-listen-1",
+          "type": "listening_match",
+          "question": "Listen carefully.",
+          "tts_text": "Hello, my name is Sarah.",
+          "options": ["Hello, my name is Sarah.", "Hello, her name is Sarah.", "Hi, my name is Sarah.", "Hello, my name is Tara."],
+          "correct_answer": "Hello, my name is Sarah.",
+          "explanation": "El audio dice 'Hello, my name is Sarah'."
+        },
+        {
+          "id": "a1-1-q-listen-2",
+          "type": "listening_match",
+          "question": "Listen carefully.",
+          "tts_text": "Nice to meet you.",
+          "options": ["Nice to meet you.", "Nice to see you.", "Good to meet you.", "Nice to meeting you."],
+          "correct_answer": "Nice to meet you.",
+          "explanation": "El saludo es 'Nice to meet you'."
+        },
+        {
+          "id": "a1-1-q-listen-3",
+          "type": "listening_match",
+          "question": "Listen carefully.",
+          "tts_text": "Welcome to our company.",
+          "options": ["Welcome to our company.", "Welcome to the company.", "Welcome to our country.", "Welcome in our company."],
+          "correct_answer": "Welcome to our company.",
+          "explanation": "La frase exacta es 'Welcome to our company'."
+        },
+        {
+          "id": "a1-1-q-listen-4",
+          "type": "listening_match",
+          "question": "Listen carefully.",
+          "tts_text": "Here is my business card.",
+          "options": ["Here is my business card.", "There is my business card.", "Here is my credit card.", "Here are my business cards."],
+          "correct_answer": "Here is my business card.",
+          "explanation": "Ofrece su tarjeta diciendo 'Here is my business card'."
+        },
+        {
+          "id": "a1-1-q-listen-5",
+          "type": "listening_match",
+          "question": "Listen carefully.",
+          "tts_text": "I am the new manager.",
+          "options": ["I am the new manager.", "He is the new manager.", "I am a new manager.", "I am the old manager."],
+          "correct_answer": "I am the new manager.",
+          "explanation": "Se presenta como 'I am the new manager'."
+        },
+        {
+          "id": "a1-1-q-listen-6",
+          "type": "listening_match",
+          "question": "Listen carefully.",
+          "tts_text": "Please take a seat.",
+          "options": ["Please take a seat.", "Please have a seat.", "Please take a seal.", "Please take your seat."],
+          "correct_answer": "Please take a seat.",
+          "explanation": "La invitación a sentarse es 'Please take a seat'."
+        },
+        {
+          "id": "a1-1-q-listen-7",
+          "type": "listening_match",
+          "question": "Listen carefully.",
+          "tts_text": "We have a great team.",
+          "options": ["We have a great team.", "You have a great team.", "We have a green team.", "We had a great team."],
+          "correct_answer": "We have a great team.",
+          "explanation": "Describe al equipo: 'We have a great team'."
+        },
+        {
+          "id": "a1-1-q-listen-8",
+          "type": "listening_match",
+          "question": "Listen carefully.",
+          "tts_text": "Where are you from?",
+          "options": ["Where are you from?", "Who are you from?", "Where do you from?", "Where are you coming?"],
+          "correct_answer": "Where are you from?",
+          "explanation": "Pregunta de origen: 'Where are you from?'."
+        },
+        {
+          "id": "a1-1-q-listen-9",
+          "type": "listening_match",
+          "question": "Listen carefully.",
+          "tts_text": "I look forward to working with you.",
+          "options": ["I look forward to working with you.", "I look forward to work with you.", "I look forward working with you.", "I looked forward to working with you."],
+          "correct_answer": "I look forward to working with you.",
+          "explanation": "Frase de cierre corporativa: 'I look forward to working with you'."
+        },
+        {
+          "id": "a1-1-q-listen-10",
+          "type": "listening_match",
+          "question": "Listen carefully.",
+          "tts_text": "Thank you very much.",
+          "options": ["Thank you very much.", "Thanks you very much.", "Thank you very many.", "Thank very much."],
+          "correct_answer": "Thank you very much.",
+          "explanation": "Agradecimiento formal: 'Thank you very much'."
+        }
+      ]
+    }
+  ]
+}

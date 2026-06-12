@@ -1,0 +1,247 @@
+{
+  "id": "a1-2",
+  "title": "The Office Desk",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Office Supplies", "Workspace"],
+  "completion_message": "¡Felicidades! Has aprendido a identificar tu espacio de trabajo. Sigue así.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Objetos de Oficina",
+      "parts": [
+        {
+          "visual": "Tu escritorio ('desk') es tu centro de operaciones. Conocer los nombres de los objetos básicos es esencial.",
+          "audio": "Your desk is your command center. Knowing the basic objects is essential."
+        },
+        {
+          "visual": "Aprende a pedir materiales de oficina usando 'I need a...'.",
+          "audio": "Learn how to ask for office supplies using 'I need a...'."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona el objeto o verbo correcto.",
+      "questions": [
+        {
+          "id": "a1-2-q-1",
+          "type": "quiz_choice",
+          "question": "I need a ____ to print the report.",
+          "options": ["printer", "print", "printing", "printed"],
+          "correct_answer": "printer",
+          "explanation": "'Printer' es la impresora."
+        },
+        {
+          "id": "a1-2-q-2",
+          "type": "quiz_choice",
+          "question": "Can I borrow your ____ to write this down?",
+          "options": ["pen", "pan", "pin", "pun"],
+          "correct_answer": "pen",
+          "explanation": "'Pen' es bolígrafo."
+        },
+        {
+          "id": "a1-2-q-3",
+          "type": "quiz_choice",
+          "question": "The computer ____ is on the desk.",
+          "options": ["monitor", "monitors", "monitoring", "monitored"],
+          "correct_answer": "monitor",
+          "explanation": "El sustantivo correcto es 'monitor' (pantalla)."
+        },
+        {
+          "id": "a1-2-q-4",
+          "type": "quiz_choice",
+          "question": "Please put the documents in the ____.",
+          "options": ["folder", "fold", "folding", "folded"],
+          "correct_answer": "folder",
+          "explanation": "'Folder' significa carpeta."
+        },
+        {
+          "id": "a1-2-q-5",
+          "type": "quiz_choice",
+          "question": "My office ____ is very comfortable.",
+          "options": ["chair", "chairs", "cheer", "choir"],
+          "correct_answer": "chair",
+          "explanation": "'Chair' es silla."
+        },
+        {
+          "id": "a1-2-q-6",
+          "type": "quiz_choice",
+          "question": "Turn on your ____ for the Zoom meeting.",
+          "options": ["laptop", "lap", "top", "laps"],
+          "correct_answer": "laptop",
+          "explanation": "'Laptop' es la computadora portátil."
+        },
+        {
+          "id": "a1-2-q-7",
+          "type": "quiz_choice",
+          "question": "We are out of printer ____.",
+          "options": ["paper", "papers", "papel", "pepper"],
+          "correct_answer": "paper",
+          "explanation": "'Paper' es papel; es un sustantivo incontable en este contexto."
+        },
+        {
+          "id": "a1-2-q-8",
+          "type": "quiz_choice",
+          "question": "Use the ____ to staple these pages.",
+          "options": ["stapler", "staple", "staples", "stapling"],
+          "correct_answer": "stapler",
+          "explanation": "'Stapler' es la engrapadora."
+        },
+        {
+          "id": "a1-2-q-9",
+          "type": "quiz_choice",
+          "question": "I left my ____ on my desk.",
+          "options": ["notebook", "note", "book", "noting"],
+          "correct_answer": "notebook",
+          "explanation": "'Notebook' es cuaderno o libreta de notas."
+        },
+        {
+          "id": "a1-2-q-10",
+          "type": "quiz_choice",
+          "question": "Check your email on the ____.",
+          "options": ["computer", "compute", "computing", "computed"],
+          "correct_answer": "computer",
+          "explanation": "'Computer' es computadora."
+        },
+        {
+          "id": "a1-2-q-11",
+          "type": "quiz_choice",
+          "question": "My ____ has three drawers.",
+          "options": ["desk", "disk", "dusk", "dock"],
+          "correct_answer": "desk",
+          "explanation": "'Desk' es el escritorio de trabajo."
+        },
+        {
+          "id": "a1-2-q-12",
+          "type": "quiz_choice",
+          "question": "Use a ____ to highlight the text.",
+          "options": ["marker", "mark", "marking", "marked"],
+          "correct_answer": "marker",
+          "explanation": "'Marker' o resaltador."
+        },
+        {
+          "id": "a1-2-q-13",
+          "type": "quiz_choice",
+          "question": "The ____ rings all day.",
+          "options": ["telephone", "telephones", "phoning", "phoned"],
+          "correct_answer": "telephone",
+          "explanation": "Sustantivo singular para teléfono de oficina."
+        },
+        {
+          "id": "a1-2-q-14",
+          "type": "quiz_choice",
+          "question": "Throw the trash in the ____.",
+          "options": ["bin", "ban", "bun", "bone"],
+          "correct_answer": "bin",
+          "explanation": "'Bin' (trash bin) es el bote de basura."
+        },
+        {
+          "id": "a1-2-q-15",
+          "type": "quiz_choice",
+          "question": "I need a ____ to stick these papers.",
+          "options": ["clip", "clap", "clop", "clips"],
+          "correct_answer": "clip",
+          "explanation": "'Paper clip' o 'clip' para sujetar hojas."
+        },
+        {
+          "id": "a1-2-q-16",
+          "type": "quiz_choice",
+          "question": "Write the date on the ____.",
+          "options": ["calendar", "calendars", "calender", "date"],
+          "correct_answer": "calendar",
+          "explanation": "El calendario físico de oficina."
+        },
+        {
+          "id": "a1-2-q-17",
+          "type": "quiz_choice",
+          "question": "The ____ is broken; we can't make copies.",
+          "options": ["copier", "copy", "copies", "copying"],
+          "correct_answer": "copier",
+          "explanation": "'Copier' es la máquina fotocopiadora."
+        },
+        {
+          "id": "a1-2-q-18",
+          "type": "quiz_choice",
+          "question": "Store the files in the ____.",
+          "options": ["cabinet", "cabin", "cab", "cable"],
+          "correct_answer": "cabinet",
+          "explanation": "'Filing cabinet' o archivero."
+        },
+        {
+          "id": "a1-2-q-19",
+          "type": "quiz_choice",
+          "question": "I type fast on my ____.",
+          "options": ["keyboard", "keys", "board", "keying"],
+          "correct_answer": "keyboard",
+          "explanation": "'Keyboard' es el teclado."
+        },
+        {
+          "id": "a1-2-q-20",
+          "type": "quiz_choice",
+          "question": "Click with the ____.",
+          "options": ["mouse", "mice", "mouth", "month"],
+          "correct_answer": "mouse",
+          "explanation": "El ratón de computadora."
+        }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta.",
+      "questions": [
+        { "id": "a1-2-f1", "type": "fill_input", "question": "I sit at my ____.", "correct_answer": "desk", "explanation": "Escritorio." },
+        { "id": "a1-2-f2", "type": "fill_input", "question": "Write with a ____.", "correct_answer": "pen", "explanation": "Bolígrafo." },
+        { "id": "a1-2-f3", "type": "fill_input", "question": "Look at the ____.", "correct_answer": "monitor", "explanation": "Pantalla." },
+        { "id": "a1-2-f4", "type": "fill_input", "question": "Type on the ____.", "correct_answer": "keyboard", "explanation": "Teclado." },
+        { "id": "a1-2-f5", "type": "fill_input", "question": "Print on ____.", "correct_answer": "paper", "explanation": "Papel." },
+        { "id": "a1-2-f6", "type": "fill_input", "question": "Sit in your ____.", "correct_answer": "chair", "explanation": "Silla." },
+        { "id": "a1-2-f7", "type": "fill_input", "question": "Save the file in a ____.", "correct_answer": "folder", "explanation": "Carpeta." },
+        { "id": "a1-2-f8", "type": "fill_input", "question": "Bring your ____ to the meeting.", "correct_answer": "laptop", "explanation": "Computadora portátil." },
+        { "id": "a1-2-f9", "type": "fill_input", "question": "The ____ is out of ink.", "correct_answer": "printer", "explanation": "Impresora." },
+        { "id": "a1-2-f10", "type": "fill_input", "question": "Answer the ____.", "correct_answer": "telephone", "explanation": "Teléfono." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-2-p1", "source": "Desk", "target": "Escritorio"},
+        {"id": "a1-2-p2", "source": "Chair", "target": "Silla"},
+        {"id": "a1-2-p3", "source": "Pen", "target": "Bolígrafo"},
+        {"id": "a1-2-p4", "source": "Folder", "target": "Carpeta"},
+        {"id": "a1-2-p5", "source": "Printer", "target": "Impresora"},
+        {"id": "a1-2-p6", "source": "Keyboard", "target": "Teclado"},
+        {"id": "a1-2-p7", "source": "Mouse", "target": "Ratón"},
+        {"id": "a1-2-p8", "source": "Screen", "target": "Pantalla"},
+        {"id": "a1-2-p9", "source": "Paper", "target": "Papel"},
+        {"id": "a1-2-p10", "source": "Stapler", "target": "Engrapadora"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Selecciona el audio correcto.",
+      "questions": [
+        { "id": "a1-2-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need a pen.", "options": ["I need a pen.", "I need a pan.", "I need a pin.", "I need ten."], "correct_answer": "I need a pen.", "explanation": "Audio: I need a pen." },
+        { "id": "a1-2-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My desk is clean.", "options": ["My desk is clean.", "My desk is clear.", "My disk is clean.", "My task is clean."], "correct_answer": "My desk is clean.", "explanation": "Audio: My desk is clean." },
+        { "id": "a1-2-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Open the folder.", "options": ["Open the folder.", "Open the file.", "Open the folder up.", "Open a folder."], "correct_answer": "Open the folder.", "explanation": "Audio: Open the folder." },
+        { "id": "a1-2-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Print the report.", "options": ["Print the report.", "Print the paper.", "Bring the report.", "Print a report."], "correct_answer": "Print the report.", "explanation": "Audio: Print the report." },
+        { "id": "a1-2-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Use the stapler.", "options": ["Use the stapler.", "Use the staple.", "Use a stapler.", "You see the stapler."], "correct_answer": "Use the stapler.", "explanation": "Audio: Use the stapler." },
+        { "id": "a1-2-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Answer the phone.", "options": ["Answer the phone.", "Answer the door.", "Answer the boss.", "Answer the phones."], "correct_answer": "Answer the phone.", "explanation": "Audio: Answer the phone." },
+        { "id": "a1-2-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Bring your laptop.", "options": ["Bring your laptop.", "Bring the laptop.", "Bring your tablet.", "Bring your desktop."], "correct_answer": "Bring your laptop.", "explanation": "Audio: Bring your laptop." },
+        { "id": "a1-2-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Empty the bin.", "options": ["Empty the bin.", "Empty the trash.", "Empty the box.", "Empty a bin."], "correct_answer": "Empty the bin.", "explanation": "Audio: Empty the bin." },
+        { "id": "a1-2-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This is my chair.", "options": ["This is my chair.", "That is my chair.", "This is my hair.", "This is a chair."], "correct_answer": "This is my chair.", "explanation": "Audio: This is my chair." },
+        { "id": "a1-2-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Type on the keyboard.", "options": ["Type on the keyboard.", "Tap on the keyboard.", "Type on the board.", "Type in the keyboard."], "correct_answer": "Type on the keyboard.", "explanation": "Audio: Type on the keyboard." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "c1-24",
+  "title": "Corporate Strategy",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "Strategy", "Corporate", "Business", "Management"],
+  "completion_message": "¡Soberbio! El lenguaje de la Estrategia Corporativa es el idioma de los CEOs y las juntas directivas. Con términos como 'Blue ocean', 'Core competency' y 'Paradigm shift', puedes articular la visión a largo plazo de cualquier organización.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Estrategia Corporativa (C1)",
+      "parts": [
+        { "visual": "Conceptos Estratégicos I: \n- Core competency (Competencia central / Habilidad principal que da ventaja a una empresa). \nEj: Apple's core competency is design and user experience. \n- Competitive advantage (Ventaja competitiva / Lo que te hace mejor que la competencia). \nEj: Their vast distribution network is their main competitive advantage. \n- Blue ocean strategy (Estrategia de océano azul / Crear un mercado nuevo sin competencia). \nEj: Instead of fighting in a crowded market, they sought a blue ocean.", "audio": "Strategic Concepts Part 1. 'Core competency' is a defining capability or advantage that distinguishes an enterprise from its competitors. For example: Apple's core competency is design and user experience. 'Competitive advantage' is a condition or circumstance that puts a company in a favorable or superior business position. For example: Their vast distribution network is their main competitive advantage. 'Blue ocean strategy' refers to creating a new, uncontested market space. For example: Instead of fighting in a crowded market, they sought a blue ocean." },
+        { "visual": "Conceptos Estratégicos II: \n- Economies of scale (Economías de escala / Reducción de costos al producir en grandes cantidades). \nEj: Amazon achieves massive economies of scale. \n- Paradigm shift (Cambio de paradigma / Un cambio fundamental en la forma de pensar o hacer las cosas). \nEj: The invention of the smartphone caused a paradigm shift in computing. \n- Bottleneck (Cuello de botella / Un punto de congestión que retrasa un proceso). \nEj: The lack of microchips became a major bottleneck in production.", "audio": "Strategic Concepts Part 2. 'Economies of scale' refers to the cost advantages that enterprises obtain due to their scale of operation. For example: Amazon achieves massive economies of scale. A 'Paradigm shift' is a fundamental change in approach or underlying assumptions. For example: The invention of the smartphone caused a paradigm shift in computing. A 'Bottleneck' is a point of congestion in a system that slows down the overall process. For example: The lack of microchips became a major bottleneck in production." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de estrategia corporativa correcto.",
+      "questions": [
+        { "id": "c1-24-q1", "type": "quiz_choice", "question": "The unique ability that gives a company an advantage over competitors is its core ____. (Competencia central).", "options": ["competency", "competition", "compete", "competence"], "correct_answer": "competency", "explanation": "Core competency = competencia/habilidad central distintiva." },
+        { "id": "c1-24-q2", "type": "quiz_choice", "question": "Lower costs, better quality, and brand loyalty are examples of a competitive ____. (Ventaja).", "options": ["advantage", "advance", "benefit", "profit"], "correct_answer": "advantage", "explanation": "Competitive advantage = ventaja competitiva." },
+        { "id": "c1-24-q3", "type": "quiz_choice", "question": "Creating a completely new market space with no competitors is called a ____ ocean strategy.", "options": ["blue", "red", "deep", "clear"], "correct_answer": "blue", "explanation": "Blue ocean strategy = estrategia de océano azul (vs. océano rojo = muy competitivo)." },
+        { "id": "c1-24-q4", "type": "quiz_choice", "question": "When the cost per unit decreases as the volume of production increases, a company achieves economies of ____. (Escala).", "options": ["scale", "size", "volume", "mass"], "correct_answer": "scale", "explanation": "Economies of scale = economías de escala." },
+        { "id": "c1-24-q5", "type": "quiz_choice", "question": "A fundamental change in the way an industry operates is called a ____ shift. (Paradigma).", "options": ["paradigm", "parallel", "pattern", "system"], "correct_answer": "paradigm", "explanation": "Paradigm shift = cambio de paradigma." },
+        { "id": "c1-24-q6", "type": "quiz_choice", "question": "A step in the production process that is too slow and delays everything else is a ____. (Cuello de botella).", "options": ["bottleneck", "blockage", "barrier", "hurdle"], "correct_answer": "bottleneck", "explanation": "Bottleneck = cuello de botella." },
+        { "id": "c1-24-q7", "type": "quiz_choice", "question": "A strategic planning technique used to identify Strengths, Weaknesses, Opportunities, and Threats is a ____ analysis.", "options": ["SWOT", "PEST", "SMART", "KPI"], "correct_answer": "SWOT", "explanation": "SWOT analysis = análisis FODA o DAFO." },
+        { "id": "c1-24-q8", "type": "quiz_choice", "question": "The proportion of total sales in a market that is controlled by a specific company is its market ____. (Cuota de mercado).", "options": ["share", "part", "portion", "slice"], "correct_answer": "share", "explanation": "Market share = cuota/participación de mercado." },
+        { "id": "c1-24-q9", "type": "quiz_choice", "question": "When a company expands its operations by entering new, unrelated industries, it is called ____. (Diversificación).", "options": ["diversification", "division", "expansion", "growth"], "correct_answer": "diversification", "explanation": "Diversification = diversificación (ej. entrar en sectores nuevos)." },
+        { "id": "c1-24-q10", "type": "quiz_choice", "question": "When a company contracts out a business process to a third party, this is ____. (Subcontratación).", "options": ["outsourcing", "insourcing", "freelancing", "contracting"], "correct_answer": "outsourcing", "explanation": "Outsourcing = externalización, subcontratación." },
+        { "id": "c1-24-q11", "type": "quiz_choice", "question": "Relocating a business process from one country to another (usually to reduce costs) is called ____. (Deslocalización).", "options": ["offshoring", "exporting", "transferring", "shipping"], "correct_answer": "offshoring", "explanation": "Offshoring = deslocalización internacional." },
+        { "id": "c1-24-q12", "type": "quiz_choice", "question": "The main goal or purpose of a company, explaining why it exists, is its ____ statement. (Misión).", "options": ["mission", "vision", "value", "goal"], "correct_answer": "mission", "explanation": "Mission statement = declaración de misión." },
+        { "id": "c1-24-q13", "type": "quiz_choice", "question": "A company's aspirational description of what it wants to achieve in the future is its ____ statement. (Visión).", "options": ["vision", "mission", "future", "target"], "correct_answer": "vision", "explanation": "Vision statement = declaración de visión (futuro)." },
+        { "id": "c1-24-q14", "type": "quiz_choice", "question": "A newly introduced product or service that completely changes an industry is called a ____. (Disruptor).", "options": ["disruptor", "destroyer", "changer", "creator"], "correct_answer": "disruptor", "explanation": "Disruptor / Disruptive innovation = innovación disruptiva." },
+        { "id": "c1-24-q15", "type": "quiz_choice", "question": "To ensure long-term success, we must align our daily operations with our overall ____. (Estrategia).", "options": ["strategy", "tactic", "plan", "method"], "correct_answer": "strategy", "explanation": "Strategy = estrategia general (vs tactics = acciones específicas)." },
+        { "id": "c1-24-q16", "type": "quiz_choice", "question": "The difference between the value of a business and the value of its individual assets (often related to brand reputation) is called ____. (Fondo de comercio).", "options": ["goodwill", "bonus", "premium", "extra"], "correct_answer": "goodwill", "explanation": "Goodwill = fondo de comercio (valor intangible como la marca)." },
+        { "id": "c1-24-q17", "type": "quiz_choice", "question": "The set of activities that a firm operating in a specific industry performs in order to deliver a valuable product is the value ____. (Cadena de valor).", "options": ["chain", "line", "process", "cycle"], "correct_answer": "chain", "explanation": "Value chain = cadena de valor." },
+        { "id": "c1-24-q18", "type": "quiz_choice", "question": "When a company buys its suppliers to control the supply chain, it is called backward ____. (Integración hacia atrás).", "options": ["integration", "merger", "control", "takeover"], "correct_answer": "integration", "explanation": "Vertical integration (backward/forward) = integración vertical." },
+        { "id": "c1-24-q19", "type": "quiz_choice", "question": "A company that serves a very small, specialized segment of the market is operating in a ____ market. (Nicho).", "options": ["niche", "narrow", "small", "target"], "correct_answer": "niche", "explanation": "Niche market = mercado nicho." },
+        { "id": "c1-24-q20", "type": "quiz_choice", "question": "The cost of passing up the next best choice when making a decision is the ____ cost. (Costo de oportunidad).", "options": ["opportunity", "alternative", "option", "choice"], "correct_answer": "opportunity", "explanation": "Opportunity cost = costo de oportunidad." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término estratégico correcto.",
+      "questions": [
+        { "id": "c1-24-f1", "type": "fill_input", "question": "Core ____. (Competencia central con C)", "correct_answer": "competency", "explanation": "competency." },
+        { "id": "c1-24-f2", "type": "fill_input", "question": "Competitive ____. (Ventaja competitiva con A)", "correct_answer": "advantage", "explanation": "advantage." },
+        { "id": "c1-24-f3", "type": "fill_input", "question": "Blue ____ strategy. (Océano azul con O)", "correct_answer": "ocean", "explanation": "ocean." },
+        { "id": "c1-24-f4", "type": "fill_input", "question": "Economies of ____. (Escala con S)", "correct_answer": "scale", "explanation": "scale." },
+        { "id": "c1-24-f5", "type": "fill_input", "question": "A paradigm ____. (Cambio de paradigma con S)", "correct_answer": "shift", "explanation": "shift." },
+        { "id": "c1-24-f6", "type": "fill_input", "question": "A production ____. (Cuello de botella con B)", "correct_answer": "bottleneck", "explanation": "bottleneck." },
+        { "id": "c1-24-f7", "type": "fill_input", "question": "Market ____. (Cuota de mercado con S)", "correct_answer": "share", "explanation": "share." },
+        { "id": "c1-24-f8", "type": "fill_input", "question": "Product ____. (Diversificación con D)", "correct_answer": "diversification", "explanation": "diversification." },
+        { "id": "c1-24-f9", "type": "fill_input", "question": "IT ____. (Subcontratación con O)", "correct_answer": "outsourcing", "explanation": "outsourcing." },
+        { "id": "c1-24-f10", "type": "fill_input", "question": "A ____ market. (Mercado nicho con N)", "correct_answer": "niche", "explanation": "niche." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Strategy Match",
+      "pairs": [
+        {"id": "c1-24-p1", "source": "Core competency", "target": "Habilidad principal / distintiva"},
+        {"id": "c1-24-p2", "source": "Competitive advantage", "target": "Ventaja competitiva"},
+        {"id": "c1-24-p3", "source": "Blue ocean", "target": "Mercado nuevo sin competencia"},
+        {"id": "c1-24-p4", "source": "Economies of scale", "target": "Reducción de costos por volumen"},
+        {"id": "c1-24-p5", "source": "Paradigm shift", "target": "Cambio fundamental de modelo"},
+        {"id": "c1-24-p6", "source": "Bottleneck", "target": "Cuello de botella / retraso"},
+        {"id": "c1-24-p7", "source": "Market share", "target": "Cuota de mercado"},
+        {"id": "c1-24-p8", "source": "Outsourcing", "target": "Externalización / subcontratación"},
+        {"id": "c1-24-p9", "source": "Offshoring", "target": "Deslocalización internacional"},
+        {"id": "c1-24-p10", "source": "Opportunity cost", "target": "Costo de oportunidad"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término estratégico correcto.",
+      "questions": [
+        { "id": "c1-24-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Design is our core competency.", "options": ["Design is our core competency.", "Design is our core competence.", "Design was our core competency.", "Quality is our core competency."], "correct_answer": "Design is our core competency.", "explanation": "Audio exacto." },
+        { "id": "c1-24-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need a competitive advantage.", "options": ["We need a competitive advantage.", "They need a competitive advantage.", "We needed a competitive advantage.", "We have a competitive advantage."], "correct_answer": "We need a competitive advantage.", "explanation": "Audio exacto." },
+        { "id": "c1-24-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's a blue ocean strategy.", "options": ["It's a blue ocean strategy.", "It was a blue ocean strategy.", "It is a red ocean strategy.", "It is the blue ocean strategy."], "correct_answer": "It's a blue ocean strategy.", "explanation": "Audio exacto." },
+        { "id": "c1-24-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We achieved economies of scale.", "options": ["We achieved economies of scale.", "They achieved economies of scale.", "We achieve economies of scale.", "We achieved economy of scale."], "correct_answer": "We achieved economies of scale.", "explanation": "Audio exacto." },
+        { "id": "c1-24-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It caused a paradigm shift.", "options": ["It caused a paradigm shift.", "It causes a paradigm shift.", "This caused a paradigm shift.", "That caused a paradigm shift."], "correct_answer": "It caused a paradigm shift.", "explanation": "Audio exacto." },
+        { "id": "c1-24-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Identify the main bottleneck.", "options": ["Identify the main bottleneck.", "Identified the main bottleneck.", "Find the main bottleneck.", "Identify the production bottleneck."], "correct_answer": "Identify the main bottleneck.", "explanation": "Audio exacto." },
+        { "id": "c1-24-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our market share is growing.", "options": ["Our market share is growing.", "Their market share is growing.", "Our market share was growing.", "Our market share is dropping."], "correct_answer": "Our market share is growing.", "explanation": "Audio exacto." },
+        { "id": "c1-24-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are outsourcing IT services.", "options": ["We are outsourcing IT services.", "They are outsourcing IT services.", "We are offshoring IT services.", "We were outsourcing IT services."], "correct_answer": "We are outsourcing IT services.", "explanation": "Audio exacto." },
+        { "id": "c1-24-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a highly profitable niche.", "options": ["It is a highly profitable niche.", "It was a highly profitable niche.", "It is a highly profitable market.", "This is a highly profitable niche."], "correct_answer": "It is a highly profitable niche.", "explanation": "Audio exacto." },
+        { "id": "c1-24-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Consider the opportunity cost.", "options": ["Consider the opportunity cost.", "Considered the opportunity cost.", "Think of the opportunity cost.", "Consider the opportunity costs."], "correct_answer": "Consider the opportunity cost.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

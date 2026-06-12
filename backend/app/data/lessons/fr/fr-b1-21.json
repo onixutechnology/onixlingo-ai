@@ -1,602 +1,94 @@
 {
   "id": "fr-b1-21",
-  "title": "Satisfacción del Cliente",
+  "title": "Le Subjonctif Passé",
+  "version": "4.0-ARTISAN",
   "level": "B1",
-  "description": "Métricas NPS y análisis de reseñas.",
-  "total_xp": 300,
-  "difficulty": "medium",
-  "tags": [
-    "b1",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Subjunctive", "Past Tense"],
+  "completion_message": "¡Excelente! Ahora puedes opinar sobre cosas que ya sucedieron usando la máxima elegancia del Subjuntivo Pasado.",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Satisfacción del Cliente",
+      "title": "Lágrimas por el Pasado (B1)",
       "parts": [
         {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau B1 • Leçon B1-21 de 200\nSujet: Satisfacción del Cliente\n\nConcept Clé:\n☞ 'SATISFACTION'\n\n[Point Grammatical - Enfoque Gramatical]\n- L'utilisation des verbes modaux professionnels : Devoir, Pouvoir et Vouloir ('nous devons allouer satisfaction').\\n- Les pronoms compléments (en, y) pour éviter les répétitions dans vos e-mails : 'Nous y pensons pour satisfaction'.\\n- Clé Didactique : L'expression de l'obligation modérée et de la possibilité en milieu corporatif.",
-          "audio": "Bienvenue à la leçon B1-21 sur Satisfacción del Cliente. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : satisfaction."
+          "visual": "Le Subjonctif Passé\n\nYa sabes usar el subjuntivo para emociones presentes ('Estoy feliz de que VENGAS' -> que tu viennes). ¿Pero qué pasa si la acción ya ocurrió en el pasado? ('Estoy feliz de que HAYAS VENIDO').\n\nAhí usas el Subjuntivo Pasado. Se forma igual que el Passé Composé, pero el auxiliar (Être o Avoir) va en subjuntivo:\n\n1. Auxiliar en subjuntivo (que j'aie / que je sois)\n2. Participio Pasado (mangé, fini, venu)\n\nEj: Je suis content que tu AIES FINI. (Estoy feliz de que hayas terminado).",
+          "audio": "En francés, el subjuntivo es el modo de las emociones. Si hoy estás feliz por algo que está pasando ahora, dices: 'Estoy feliz de que tú estés aquí' (Je suis content que tu sois là). Usas el subjuntivo presente. Pero, ¿qué pasa si hoy estás feliz por algo que pasó AYER? Por ejemplo: 'Estoy feliz de que tú HAYAS VENIDO a mi fiesta'. Como la fiesta ya pasó, necesitas el Subjuntivo Pasado. Y el truco es facilísimo si ya conoces el Passé Composé. Solo tomas el verbo auxiliar, Avoir o Être, lo pones en subjuntivo, y le pegas el verbo normal en pasado. Para decir 'hayas terminado', tomas el auxiliar Avoir en subjuntivo ('que tu aies') y le agregas 'fini'. Queda: 'Je suis content que tu aies fini'."
         },
         {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'satisfaction' (Traducción/Uso: Métricas NPS y análisis de reseñas.)\n- Application Pratique : 'Nous devons intégrer satisfaction pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : Prononcez bien le 's' final dans les mots de liaison comme 'nous devons' devant une voyelle.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : satisfaction. Répétez après moi : satisfaction."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Au niveau B1, structurez vos arguments avec des connecteurs logiques formels ('cependant', 'par conséquent').\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
+          "visual": "Recordatorio de los Auxiliares en Subjuntivo:\n\nAVOIR (La mayoría de los verbos):\nQue j'aie, que tu aies, qu'il ait, que nous ayons, que vous ayez, qu'ils aient.\nEj: Je crains qu'il AIT PERDU ses clés. (Temo que haya perdido sus llaves).\n\nÊTRE (Verbos de movimiento y reflexivos):\nQue je sois, que tu sois, qu'il soit, que nous soyons, que vous soyez, qu'ils soient.\nEj: Je regrette qu'elle SOIT PARTIE. (Lamento que se haya ido). ¡Atención a la concordancia (partie) con Être!",
+          "audio": "Para dominar el subjuntivo pasado, necesitas tener tatuados en tu mente los verbos Avoir y Être en subjuntivo. Si vas a usar un verbo normal como comer o perder, usas Avoir: 'Temo que él HAYA PERDIDO sus llaves'. En francés: 'Je crains qu'il AIT PERDU ses clés'. 'Ait' es el subjuntivo de Avoir para él. Ahora, si es un verbo de movimiento como ir o salir, usas Être. 'Lamento que ella se HAYA IDO'. Dices 'Je regrette qu'elle SOIT PARTIE'. 'Soit' es el subjuntivo de Être. Y mucho ojo: como estás usando Être, el verbo 'partie' tiene que llevar una 'e' extra porque es ella. ¡Las reglas de concordancia del pasado siguen vivas en el subjuntivo!"
         }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Forma el subjuntivo pasado eligiendo el auxiliar y el participio correctos.",
       "questions": [
-        {
-          "id": "fr-b1-21-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"satisfaction\" dans le contexte de \"Satisfacción del Cliente\" ?",
-          "options": [
-            "Le concept professionnel principal de satisfaction utilisé dans Satisfacción del Cliente.",
-            "Un terme familier à éviter dans Satisfacción del Cliente.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Satisfacción del Cliente."
-          ],
-          "correct_answer": "Le concept professionnel principal de satisfaction utilisé dans Satisfacción del Cliente.",
-          "explanation": "Comprendre la définition de \"satisfaction\" est fondamental pour maîtriser \"Satisfacción del Cliente\"."
-        },
-        {
-          "id": "fr-b1-21-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"satisfaction\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Satisfacción del Cliente\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"satisfaction\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Satisfacción del Cliente\" aux parties prenantes.",
-          "explanation": "Aborder \"satisfaction\" dans les présentations professionnelles améliore la communication globale concernant \"Satisfacción del Cliente\"."
-        },
-        {
-          "id": "fr-b1-21-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Satisfacción del Cliente\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"satisfaction\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"satisfaction\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"satisfaction\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"satisfaction\" sont los piliers d'une exécution réussie de \"Satisfacción del Cliente\"."
-        },
-        {
-          "id": "fr-b1-21-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Satisfacción del Cliente\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"satisfaction\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"satisfaction\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"satisfaction\" conduit souvent à des résultats inefficaces dans \"Satisfacción del Cliente\"."
-        },
-        {
-          "id": "fr-b1-21-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"satisfaction\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"satisfaction\" adapté à l'environnement de \"Satisfacción del Cliente\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"satisfaction\" adapté à l'environnement de \"Satisfacción del Cliente\".",
-          "explanation": "Traduire ou adapter \"satisfaction\" nécessite de comprendre son application commerciale pratique dans \"Satisfacción del Cliente\"."
-        },
-        {
-          "id": "fr-b1-21-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"satisfaction\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Satisfacción del Cliente\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Satisfacción del Cliente\".",
-          "explanation": "Utiliser \"satisfaction\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-b1-21-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Satisfacción del Cliente\", comment un cadre doit-il présenter \"satisfaction\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"satisfaction\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-b1-21-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"satisfaction\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"satisfaction\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"satisfaction\".",
-          "explanation": "Définir les jalons liés à \"satisfaction\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-b1-21-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Satisfacción del Cliente\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"satisfaction\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"satisfaction\".",
-          "explanation": "Les mots professionnels comme \"satisfaction\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-b1-21-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"satisfaction\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"satisfaction\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "frb1-21-q1", "type": "quiz_choice", "question": "¿Cómo se forma el Subjuntivo Pasado?", "options": ["Auxiliar (Être/Avoir) en subjuntivo + Participio Pasado", "Auxiliar (Être/Avoir) en presente + Verbo en infinitivo", "Verbo principal terminado en -ais, -ait"], "correct_answer": "Auxiliar (Être/Avoir) en subjuntivo + Participio Pasado", "explanation": "Ejemplo: que tu aies mangé, qu'il soit venu." },
+        { "id": "frb1-21-q2", "type": "quiz_choice", "question": "Je suis content que tu ____ (venir). (ESTOY FELIZ de que HAYAS VENIDO).", "options": ["sois venu", "es venu", "aies venu", "viennes"], "correct_answer": "sois venu", "explanation": "Venir usa Être. Subjuntivo de tu -> sois. sois venu." },
+        { "id": "frb1-21-q3", "type": "quiz_choice", "question": "Je regrette qu'il ____ (oublier) mon anniversaire. (LAMENTO que HAYA OLVIDADO...).", "options": ["ait oublié", "a oublié", "soit oublié", "oublie"], "correct_answer": "ait oublié", "explanation": "Oublier usa Avoir. Subjuntivo de il -> ait. ait oublié." },
+        { "id": "frb1-21-q4", "type": "quiz_choice", "question": "¿Cuál es la forma correcta del auxiliar AVOIR para 'nous' en subjuntivo?", "options": ["que nous ayons", "que nous avons", "que nous aillons", "que nous soyons"], "correct_answer": "que nous ayons", "explanation": "que nous ayons." },
+        { "id": "frb1-21-q5", "type": "quiz_choice", "question": "Je doute que nous ____ (comprendre) la leçon. (DUDO que HAYAMOS ENTENDIDO...).", "options": ["ayons compris", "avons compris", "soyons compris", "comprenions"], "correct_answer": "ayons compris", "explanation": "Comprendre usa Avoir. -> ayons compris." },
+        { "id": "frb1-21-q6", "type": "quiz_choice", "question": "Il est triste qu'elle ____ (partir). (Él está triste de que ella SE HAYA IDO).", "options": ["soit partie", "soit parti", "ait partie", "ait parti"], "correct_answer": "soit partie", "explanation": "Partir usa Être. Como es 'elle' (ella), el participio lleva 'e' -> soit partie." },
+        { "id": "frb1-21-q7", "type": "quiz_choice", "question": "¿Cuál es la forma correcta del auxiliar ÊTRE para 'ils' en subjuntivo?", "options": ["qu'ils soient", "qu'ils sont", "qu'ils aillent", "qu'ils aient"], "correct_answer": "qu'ils soient", "explanation": "qu'ils soient." },
+        { "id": "frb1-21-q8", "type": "quiz_choice", "question": "J'ai peur qu'ils ____ (avoir) un accident. (TENGO MIEDO de que HAYAN TENIDO un accidente).", "options": ["aient eu", "aient", "ont eu", "soient eu"], "correct_answer": "aient eu", "explanation": "Avoir usa Avoir. Subjuntivo -> aient + eu." },
+        { "id": "frb1-21-q9", "type": "quiz_choice", "question": "Je suis surpris que vous ____ (réussir). (ESTOY SORPRENDIDO de que HAYAN TENIDO ÉXITO).", "options": ["ayez réussi", "avez réussi", "soyez réussi", "réussissez"], "correct_answer": "ayez réussi", "explanation": "Réussir usa Avoir. -> ayez réussi." },
+        { "id": "frb1-21-q10", "type": "quiz_choice", "question": "Elle est ravie qu'ils ____ (naître) en bonne santé. (ENCANTADA de que HAYAN NACIDO...).", "options": ["soient nés", "soient né", "aient nés", "sont nés"], "correct_answer": "soient nés", "explanation": "Naître usa Être. Plural -> nés. -> soient nés." },
+        { "id": "frb1-21-q11", "type": "quiz_choice", "question": "Il faut que j'____ (finir) avant midi. (Es necesario que HAYA TERMINADO antes del mediodía).", "options": ["aie fini", "ai fini", "sois fini", "finisse"], "correct_answer": "aie fini", "explanation": "Terminar en el pasado de la acción (antes de mediodía) -> aie fini." },
+        { "id": "frb1-21-q12", "type": "quiz_choice", "question": "Je suis désolé que tu ____ (ne pas voir) le film. (SIENTO que NO HAYAS VISTO...).", "options": ["n'aies pas vu", "ne sois pas vu", "n'a pas vu", "n'aies vu pas"], "correct_answer": "n'aies pas vu", "explanation": "La negación abraza al auxiliar: n' aies pas vu." },
+        { "id": "frb1-21-q13", "type": "quiz_choice", "question": "Je crains que la lettre ____ (se perdre). (TEMO que la carta SE HAYA PERDIDO).", "options": ["se soit perdue", "se soit perdu", "s'ait perdue", "s'est perdue"], "correct_answer": "se soit perdue", "explanation": "Verbo pronominal (se perdre) usa Être. Lettre es femenino -> se soit perdue." },
+        { "id": "frb1-21-q14", "type": "quiz_choice", "question": "Bien qu'il ____ (étudier), il a échoué. (AUNQUE HAYA ESTUDIADO...).", "options": ["ait étudié", "a étudié", "soit étudié", "étudie"], "correct_answer": "ait étudié", "explanation": "Bien que exige subjuntivo. Como ya reprobó, el estudio fue antes -> ait étudié." },
+        { "id": "frb1-21-q15", "type": "quiz_choice", "question": "¿Qué diferencia hay entre 'Je veux qu'il vienne' y 'Je suis content qu'il soit venu'?", "options": ["'Vienne' es subjuntivo presente (deseo que venga ahora o futuro) y 'Soit venu' es subjuntivo pasado (me alegra que ya vino)", "No hay diferencia, significan lo mismo", "'Soit venu' es voz pasiva"], "correct_answer": "'Vienne' es subjuntivo presente (deseo que venga ahora o futuro) y 'Soit venu' es subjuntivo pasado (me alegra que ya vino)", "explanation": "El subjuntivo pasado se usa para acciones ya completadas." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el subjuntivo pasado conjugando el auxiliar y el participio pasado.",
       "questions": [
-        {
-          "id": "fr-b1-21-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"satisfaction\" (Exercice 1) :",
-          "parts": [
-            "implémenter",
-            "votre",
-            "satisfaction",
-            "pour",
-            "optimiser",
-            "le",
-            "travail.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "implémenter",
-            "votre",
-            "satisfaction",
-            "pour",
-            "optimiser",
-            "le",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"satisfaction\"."
-        },
-        {
-          "id": "fr-b1-21-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"satisfaction\" (Exercice 2) :",
-          "parts": [
-            "actuelle",
-            "privilégie",
-            "votre",
-            "satisfaction",
-            "pour",
-            "le",
-            "client.",
-            "Notre",
-            "stratégie"
-          ],
-          "correct_order": [
-            "Notre",
-            "stratégie",
-            "actuelle",
-            "privilégie",
-            "votre",
-            "satisfaction",
-            "pour",
-            "le",
-            "client."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"satisfaction\"."
-        },
-        {
-          "id": "fr-b1-21-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"satisfaction\" (Exercice 3) :",
-          "parts": [
-            "coordonner",
-            "avec",
-            "l'équipe",
-            "concernant",
-            "notre",
-            "satisfaction.",
-            "Veuillez",
-            "vous"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "vous",
-            "coordonner",
-            "avec",
-            "l'équipe",
-            "concernant",
-            "notre",
-            "satisfaction."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"satisfaction\"."
-        },
-        {
-          "id": "fr-b1-21-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"satisfaction\" (Exercice 4) :",
-          "parts": [
-            "réunion",
-            "rapide",
-            "pour",
-            "discuter",
-            "de",
-            "notre",
-            "satisfaction.",
-            "Planifions",
-            "une"
-          ],
-          "correct_order": [
-            "Planifions",
-            "une",
-            "réunion",
-            "rapide",
-            "pour",
-            "discuter",
-            "de",
-            "notre",
-            "satisfaction."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"satisfaction\"."
-        },
-        {
-          "id": "fr-b1-21-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"satisfaction\" (Exercice 5) :",
-          "parts": [
-            "de",
-            "projet",
-            "demande",
-            "un",
-            "rapport",
-            "sur",
-            "notre",
-            "satisfaction.",
-            "Le",
-            "chef"
-          ],
-          "correct_order": [
-            "Le",
-            "chef",
-            "de",
-            "projet",
-            "demande",
-            "un",
-            "rapport",
-            "sur",
-            "notre",
-            "satisfaction."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"satisfaction\"."
-        },
-        {
-          "id": "fr-b1-21-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"satisfaction\" (Exercice 6) :",
-          "parts": [
-            "analyser",
-            "comment",
-            "notre",
-            "satisfaction",
-            "influence",
-            "le",
-            "budget.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "analyser",
-            "comment",
-            "notre",
-            "satisfaction",
-            "influence",
-            "le",
-            "budget."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"satisfaction\"."
-        },
-        {
-          "id": "fr-b1-21-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"satisfaction\" (Exercice 7) :",
-          "parts": [
-            "le",
-            "calendrier",
-            "pour",
-            "livrer",
-            "notre",
-            "satisfaction ?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "le",
-            "calendrier",
-            "pour",
-            "livrer",
-            "notre",
-            "satisfaction ?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"satisfaction\"."
-        },
-        {
-          "id": "fr-b1-21-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"satisfaction\" (Exercice 8) :",
-          "parts": [
-            "s'aligne",
-            "avec",
-            "les",
-            "objectifs",
-            "de",
-            "notre",
-            "satisfaction.",
-            "Cette",
-            "initiative"
-          ],
-          "correct_order": [
-            "Cette",
-            "initiative",
-            "s'aligne",
-            "avec",
-            "les",
-            "objectifs",
-            "de",
-            "notre",
-            "satisfaction."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"satisfaction\"."
-        },
-        {
-          "id": "fr-b1-21-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"satisfaction\" (Exercice 9) :",
-          "parts": [
-            "décidé",
-            "d'externaliser",
-            "la",
-            "gestion",
-            "de",
-            "notre",
-            "satisfaction.",
-            "Ils",
-            "ont"
-          ],
-          "correct_order": [
-            "Ils",
-            "ont",
-            "décidé",
-            "d'externaliser",
-            "la",
-            "gestion",
-            "de",
-            "notre",
-            "satisfaction."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"satisfaction\"."
-        },
-        {
-          "id": "fr-b1-21-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"satisfaction\" (Exercice 10) :",
-          "parts": [
-            "nous",
-            "concentrer",
-            "sur",
-            "l'amélioration",
-            "de",
-            "notre",
-            "satisfaction.",
-            "Nous",
-            "devrions"
-          ],
-          "correct_order": [
-            "Nous",
-            "devrions",
-            "nous",
-            "concentrer",
-            "sur",
-            "l'amélioration",
-            "de",
-            "notre",
-            "satisfaction."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"satisfaction\"."
-        }
+        { "id": "frb1-21-f1", "type": "fill_input", "question": "Je suis content que tu ____ (venir).", "correct_answer": "sois venu", "explanation": "sois venu" },
+        { "id": "frb1-21-f2", "type": "fill_input", "question": "Je suis content qu'elle ____ (venir). (Atención al femenino).", "correct_answer": "soit venue", "explanation": "soit venue" },
+        { "id": "frb1-21-f3", "type": "fill_input", "question": "Je regrette qu'il ____ (oublier).", "correct_answer": "ait oublié", "explanation": "ait oublié" },
+        { "id": "frb1-21-f4", "type": "fill_input", "question": "Je doute que nous ____ (comprendre). (Subjuntivo de avoir para nous).", "correct_answer": "ayons compris", "explanation": "ayons compris" },
+        { "id": "frb1-21-f5", "type": "fill_input", "question": "Il craint qu'elles ne ____ (partir). (Atención al plural femenino).", "correct_answer": "soient parties", "explanation": "soient parties" },
+        { "id": "frb1-21-f6", "type": "fill_input", "question": "Je suis triste que vous ____ (perdre) le match.", "correct_answer": "ayez perdu", "explanation": "ayez perdu" },
+        { "id": "frb1-21-f7", "type": "fill_input", "question": "Bien qu'il ____ (pleuvoir), nous sommes sortis. (Aunque haya llovido).", "correct_answer": "ait plu", "explanation": "ait plu" },
+        { "id": "frb1-21-f8", "type": "fill_input", "question": "Je suis surpris qu'il ____ (dire) ça. (Haya dicho).", "correct_answer": "ait dit", "explanation": "ait dit" },
+        { "id": "frb1-21-f9", "type": "fill_input", "question": "J'ai peur qu'elle ne ____ (tomber). (Se haya caído).", "correct_answer": "soit tombée", "explanation": "soit tombée" },
+        { "id": "frb1-21-f10", "type": "fill_input", "question": "Il faut que j'____ (finir) mon travail. (Haya terminado).", "correct_answer": "aie fini", "explanation": "aie fini" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-b1-21-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"satisfaction\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"satisfaction\" en détail.",
-            "Une autre déclaration sur notre \"satisfaction\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"satisfaction\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"satisfaction\" en réunion."
-        },
-        {
-          "id": "fr-b1-21-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"satisfaction\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"satisfaction\" ?",
-            "Une autre déclaration sur notre \"satisfaction\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"satisfaction\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"satisfaction\" en réunion."
-        },
-        {
-          "id": "fr-b1-21-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"satisfaction\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"satisfaction\" cette année.",
-            "Une autre déclaration sur notre \"satisfaction\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"satisfaction\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"satisfaction\" en réunion."
-        },
-        {
-          "id": "fr-b1-21-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"satisfaction\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"satisfaction\".",
-            "Une autre déclaration sur notre \"satisfaction\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"satisfaction\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"satisfaction\" en réunion."
-        },
-        {
-          "id": "fr-b1-21-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"satisfaction\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"satisfaction\".",
-            "Une autre déclaration sur notre \"satisfaction\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"satisfaction\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"satisfaction\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Past Subjunctive Match",
+      "pairs": [
+        {"id": "frb1-21-p1", "source": "Que tu aies mangé", "target": "Que hayas comido"},
+        {"id": "frb1-21-p2", "source": "Qu'il soit venu", "target": "Que él haya venido"},
+        {"id": "frb1-21-p3", "source": "Que nous ayons vu", "target": "Que hayamos visto"},
+        {"id": "frb1-21-p4", "source": "Qu'elles soient parties", "target": "Que ellas se hayan ido"},
+        {"id": "frb1-21-p5", "source": "Qu'il ait dit", "target": "Que él haya dicho"},
+        {"id": "frb1-21-p6", "source": "Que vous ayez fait", "target": "Que hayan hecho"},
+        {"id": "frb1-21-p7", "source": "Qu'elle soit tombée", "target": "Que ella se haya caído"},
+        {"id": "frb1-21-p8", "source": "Que tu sois allé", "target": "Que hayas ido"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica el subjuntivo pasado.",
       "questions": [
-        {
-          "id": "fr-b1-21-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"sat_________\" (Indice : désigne \"satisfaction\")",
-          "correct_answers": [
-            "satisfaction",
-            "Satisfaction"
-          ],
-          "hints": [
-            "Commence par 'sat'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"satisfaction\"."
-        },
-        {
-          "id": "fr-b1-21-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Notre stratégie actuelle concernant notre satisfaction dépend ____ l'équipe.\" (de / par)",
-          "correct_answers": [
-            "de",
-            "d'"
-          ],
-          "hints": [
-            "Préposition après le verbe dépendre"
-          ],
-          "explanation": "Le verbe dépendre se construit avec la préposition de."
-        },
-        {
-          "id": "fr-b1-21-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons ____ nos ressources pour améliorer notre satisfaction.\" (allouer / ignorer)",
-          "correct_answers": [
-            "allouer",
-            "Allouer"
-          ],
-          "hints": [
-            "Distribuer ou attribuer des ressources"
-          ],
-          "explanation": "Allouer des ressources signifie les dédier stratégiquement."
-        },
-        {
-          "id": "fr-b1-21-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Le responsable de département a demandé une ____ sur notre satisfaction.\" (mise à jour / pause)",
-          "correct_answers": [
-            "mise à jour",
-            "analyse",
-            "évaluation"
-          ],
-          "hints": [
-            "Dernières informations sur l'état d'avancement"
-          ],
-          "explanation": "Une 'mise à jour' est essentielle pour suivre le statut d'un projet."
-        },
-        {
-          "id": "fr-b1-21-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Établir un cadre ____ pour notre satisfaction est notre priorité.\" (solide / simple)",
-          "correct_answers": [
-            "solide"
-          ],
-          "hints": [
-            "Robuste, stable et bien défini"
-          ],
-          "explanation": "Un cadre 'solide' prévient les risques et dérives futures."
-        }
+        { "id": "frb1-21-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je suis ravi qu'il soit venu", "options": ["Je suis ravi qu'il soit venu", "Je suis ravi qu'il vienne", "Je suis ravi qu'il est venu", "Je suis ravi qu'il aille"], "correct_answer": "Je suis ravi qu'il soit venu", "explanation": "Audio dice: Je suis ravi qu'il soit venu (feliz de que HAYA VENIDO)." },
+        { "id": "frb1-21-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je doute qu'il ait compris", "options": ["Je doute qu'il ait compris", "Je doute qu'il a compris", "Je doute qu'il comprenne", "Je doute qu'il ait fait"], "correct_answer": "Je doute qu'il ait compris", "explanation": "Audio dice: Je doute qu'il ait compris." },
+        { "id": "frb1-21-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Bien qu'elle soit partie", "options": ["Bien qu'elle soit partie", "Bien qu'elle parte", "Bien qu'il soit parti", "Bien qu'elle est partie"], "correct_answer": "Bien qu'elle soit partie", "explanation": "Audio dice: Bien qu'elle soit partie." },
+        { "id": "frb1-21-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je regrette que tu aies perdu", "options": ["Je regrette que tu aies perdu", "Je regrette que tu perdes", "Je regrette que tu aies pris", "Je regrette que j'aie perdu"], "correct_answer": "Je regrette que tu aies perdu", "explanation": "Audio dice: Je regrette que tu aies perdu." },
+        { "id": "frb1-21-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il craint que nous ayons oublié", "options": ["Il craint que nous ayons oublié", "Il craint que nous oubliions", "Il craint qu'ils aient oublié", "Il croit que nous avons oublié"], "correct_answer": "Il craint que nous ayons oublié", "explanation": "Audio dice: Il craint que nous ayons oublié." }
       ]
     }
   ]

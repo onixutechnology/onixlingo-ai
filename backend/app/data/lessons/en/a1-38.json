@@ -1,0 +1,101 @@
+{
+  "id": "a1-38",
+  "title": "Office Equipment & Tech",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Technology", "Equipment"],
+  "completion_message": "¡Excelente! Ya puedes identificar y nombrar correctamente el hardware y equipo tecnológico de tu oficina.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Equipo Tecnológico",
+      "parts": [
+        { "visual": "Los equipos básicos incluyen: 'monitor' (pantalla), 'keyboard' (teclado), y 'mouse' (ratón).", "audio": "Basic equipment includes monitor, keyboard, and mouse." },
+        { "visual": "En reuniones usamos el 'projector' (proyector) y el 'server' (servidor) almacena los datos.", "audio": "In meetings we use the projector, and the server stores the data." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona el equipo correcto.",
+      "questions": [
+        { "id": "a1-38-q1", "type": "quiz_choice", "question": "I type on the ____.", "options": ["keyboard", "key", "board", "typing"], "correct_answer": "keyboard", "explanation": "Teclado (keyboard)." },
+        { "id": "a1-38-q2", "type": "quiz_choice", "question": "I look at the ____.", "options": ["monitor", "mouse", "keyboard", "cable"], "correct_answer": "monitor", "explanation": "Monitor / pantalla." },
+        { "id": "a1-38-q3", "type": "quiz_choice", "question": "Click with the ____.", "options": ["mouse", "rat", "keyboard", "screen"], "correct_answer": "mouse", "explanation": "Ratón (mouse)." },
+        { "id": "a1-38-q4", "type": "quiz_choice", "question": "The presentation is on the ____.", "options": ["projector", "project", "projection", "monitor"], "correct_answer": "projector", "explanation": "Proyector (projector)." },
+        { "id": "a1-38-q5", "type": "quiz_choice", "question": "All files are on the company ____.", "options": ["server", "serve", "service", "servant"], "correct_answer": "server", "explanation": "Servidor (server)." },
+        { "id": "a1-38-q6", "type": "quiz_choice", "question": "I need to plug in the ____.", "options": ["cable", "table", "cable's", "wire"], "correct_answer": "cable", "explanation": "Cable." },
+        { "id": "a1-38-q7", "type": "quiz_choice", "question": "Can I borrow your ____ to charge my phone?", "options": ["charger", "charge", "charging", "charged"], "correct_answer": "charger", "explanation": "Cargador (charger)." },
+        { "id": "a1-38-q8", "type": "quiz_choice", "question": "Put on your ____ for the video call.", "options": ["headphones", "head", "phones", "audio"], "correct_answer": "headphones", "explanation": "Auriculares (headphones)." },
+        { "id": "a1-38-q9", "type": "quiz_choice", "question": "The ____ is printing the documents.", "options": ["printer", "print", "printing", "prints"], "correct_answer": "printer", "explanation": "Impresora (printer)." },
+        { "id": "a1-38-q10", "type": "quiz_choice", "question": "I use a ____ for business trips.", "options": ["laptop", "lap", "top", "computer"], "correct_answer": "laptop", "explanation": "Computadora portátil (laptop)." },
+        { "id": "a1-38-q11", "type": "quiz_choice", "question": "The ____ helps me scan documents.", "options": ["scanner", "scan", "scanning", "scanned"], "correct_answer": "scanner", "explanation": "Escáner (scanner)." },
+        { "id": "a1-38-q12", "type": "quiz_choice", "question": "We need a new ____ for the projector.", "options": ["bulb", "ball", "bowl", "build"], "correct_answer": "bulb", "explanation": "Bombilla/foco (bulb)." },
+        { "id": "a1-38-q13", "type": "quiz_choice", "question": "Please turn on the ____.", "options": ["microphone", "micro", "phone", "audio"], "correct_answer": "microphone", "explanation": "Micrófono." },
+        { "id": "a1-38-q14", "type": "quiz_choice", "question": "The ____ is ringing.", "options": ["telephone", "tele", "phone's", "call"], "correct_answer": "telephone", "explanation": "Teléfono." },
+        { "id": "a1-38-q15", "type": "quiz_choice", "question": "I have an external ____ drive.", "options": ["hard", "soft", "solid", "heavy"], "correct_answer": "hard", "explanation": "Disco duro (hard drive)." },
+        { "id": "a1-38-q16", "type": "quiz_choice", "question": "Save the file to the ____ drive.", "options": ["flash", "flesh", "flush", "fast"], "correct_answer": "flash", "explanation": "Memoria USB (flash drive)." },
+        { "id": "a1-38-q17", "type": "quiz_choice", "question": "We use a ____ to cut paper.", "options": ["shredder", "shred", "shredding", "cut"], "correct_answer": "shredder", "explanation": "Trituradora (shredder)." },
+        { "id": "a1-38-q18", "type": "quiz_choice", "question": "Connect to the wireless ____.", "options": ["router", "route", "routing", "root"], "correct_answer": "router", "explanation": "Enrutador / Router." },
+        { "id": "a1-38-q19", "type": "quiz_choice", "question": "My ____ has two screens.", "options": ["setup", "set", "setting", "sets"], "correct_answer": "setup", "explanation": "Configuración de equipo (setup)." },
+        { "id": "a1-38-q20", "type": "quiz_choice", "question": "The ____ needs more ink.", "options": ["cartridge", "cart", "card", "ridge"], "correct_answer": "cartridge", "explanation": "Cartucho de tinta." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta de tecnología.",
+      "questions": [
+        { "id": "a1-38-f1", "type": "fill_input", "question": "Type on the ____ (Teclado).", "correct_answer": "keyboard", "explanation": "Keyboard." },
+        { "id": "a1-38-f2", "type": "fill_input", "question": "Look at the ____ (Monitor).", "correct_answer": "monitor", "explanation": "Monitor." },
+        { "id": "a1-38-f3", "type": "fill_input", "question": "Click with the ____ (Ratón).", "correct_answer": "mouse", "explanation": "Mouse." },
+        { "id": "a1-38-f4", "type": "fill_input", "question": "Use the ____ (Proyector).", "correct_answer": "projector", "explanation": "Projector." },
+        { "id": "a1-38-f5", "type": "fill_input", "question": "Company ____ (Servidor).", "correct_answer": "server", "explanation": "Server." },
+        { "id": "a1-38-f6", "type": "fill_input", "question": "Phone ____ (Cargador).", "correct_answer": "charger", "explanation": "Charger." },
+        { "id": "a1-38-f7", "type": "fill_input", "question": "Put on ____ (Auriculares).", "correct_answer": "headphones", "explanation": "Headphones." },
+        { "id": "a1-38-f8", "type": "fill_input", "question": "A portable ____ (Laptop).", "correct_answer": "laptop", "explanation": "Laptop." },
+        { "id": "a1-38-f9", "type": "fill_input", "question": "Hard ____ (Disco duro).", "correct_answer": "drive", "explanation": "Drive." },
+        { "id": "a1-38-f10", "type": "fill_input", "question": "Paper ____ (Trituradora).", "correct_answer": "shredder", "explanation": "Shredder." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-38-p1", "source": "Keyboard", "target": "Teclado"},
+        {"id": "a1-38-p2", "source": "Monitor", "target": "Pantalla / Monitor"},
+        {"id": "a1-38-p3", "source": "Mouse", "target": "Ratón"},
+        {"id": "a1-38-p4", "source": "Projector", "target": "Proyector"},
+        {"id": "a1-38-p5", "source": "Server", "target": "Servidor"},
+        {"id": "a1-38-p6", "source": "Charger", "target": "Cargador"},
+        {"id": "a1-38-p7", "source": "Headphones", "target": "Auriculares"},
+        {"id": "a1-38-p8", "source": "Laptop", "target": "Portátil"},
+        {"id": "a1-38-p9", "source": "Hard drive", "target": "Disco duro"},
+        {"id": "a1-38-p10", "source": "Shredder", "target": "Trituradora de papel"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la palabra o frase exacta.",
+      "questions": [
+        { "id": "a1-38-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The keyboard.", "options": ["The keyboard.", "A keyboard.", "The key board.", "My keyboard."], "correct_answer": "The keyboard.", "explanation": "Audio exacto." },
+        { "id": "a1-38-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The monitor.", "options": ["The monitor.", "A monitor.", "My monitor.", "The money."], "correct_answer": "The monitor.", "explanation": "Audio exacto." },
+        { "id": "a1-38-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The mouse.", "options": ["The mouse.", "A mouse.", "My mouse.", "The mouth."], "correct_answer": "The mouse.", "explanation": "Audio exacto." },
+        { "id": "a1-38-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The projector.", "options": ["The projector.", "A projector.", "The project.", "My projector."], "correct_answer": "The projector.", "explanation": "Audio exacto." },
+        { "id": "a1-38-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The server.", "options": ["The server.", "A server.", "The service.", "My server."], "correct_answer": "The server.", "explanation": "Audio exacto." },
+        { "id": "a1-38-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My charger.", "options": ["My charger.", "The charger.", "A charger.", "His charger."], "correct_answer": "My charger.", "explanation": "Audio exacto." },
+        { "id": "a1-38-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Headphones.", "options": ["Headphones.", "The headphones.", "My headphones.", "Telephones."], "correct_answer": "Headphones.", "explanation": "Audio exacto." },
+        { "id": "a1-38-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My laptop.", "options": ["My laptop.", "The laptop.", "A laptop.", "His laptop."], "correct_answer": "My laptop.", "explanation": "Audio exacto." },
+        { "id": "a1-38-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Hard drive.", "options": ["Hard drive.", "The hard drive.", "A hard drive.", "Soft drive."], "correct_answer": "Hard drive.", "explanation": "Audio exacto." },
+        { "id": "a1-38-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The shredder.", "options": ["The shredder.", "A shredder.", "My shredder.", "The shed."], "correct_answer": "The shredder.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

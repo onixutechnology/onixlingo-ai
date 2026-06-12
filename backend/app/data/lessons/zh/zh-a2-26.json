@@ -1,0 +1,92 @@
+{
+  "id": "zh-a2-26",
+  "title": "Esto es Mío",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Possession", "Grammar", "Particles"],
+  "completion_message": "¡Bienvenido al Nivel A2! Has dominado el arte de la posesión. Lo tuyo es tuyo, y lo de los demás... bueno, ¡ahora sabes cómo decirlo!",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "La Posesión Invertida",
+      "parts": [
+        {
+          "visual": "La Partícula Posesiva: 的 (de)\n\n¡Bienvenido al Nivel A2! Empezamos fuerte con una de las partículas más usadas en todo el idioma: 的 (de).\nEs de tono neutro y sirve para conectar al DUEÑO con lo POSEÍDO.\n\nEn español decimos: 'El libro DE Juan'. (Objeto + de + Dueño).\n¡En chino mandarín el orden es EXACTAMENTE AL REVÉS!\n\nFórmula Mágica: DUEÑO + 的 (de) + OBJETO.\n\nNuevo vocabulario:\n- Libro: 书 (shū) - 1er tono.\n\nEjemplos:\n- Mi libro: 我的书 (Wǒ de shū). Literalmente: Yo 'de' libro.\n- Tu té: 你的茶 (Nǐ de chá). Literalmente: Tú 'de' té.\n- La comida de él: 他的饭 (Tā de fàn).",
+          "audio": "¡Bienvenido al nivel A2! Prepárate para subir de categoría. Vamos a empezar aprendiendo a reclamar lo que es nuestro. La palabra más importante para la posesión es la partícula 'de'. Tono neutro. Al español solemos traducirla como 'de', pero ten mucho cuidado, porque funciona como un espejo invertido. En español dices 'El libro DE Juan'. Primero el objeto, luego el dueño. En chino, la jerarquía manda: primero el Dueño, luego la partícula 'de', y por último el objeto. Así que para decir 'Mi libro', Literalmente dices 'Yo de Libro'. Wǒ de shū. Para decir 'Tu té', dices 'Tú de Té'. Nǐ de chá. Quien posee siempre va primero."
+        },
+        {
+          "visual": "Recordatorio del Nivel A1: La Excepción de Intimidad\n\n¿Recuerdas cuando vimos la familia en el A1?\nHay una regla de oro: Si el 'objeto poseído' es un familiar íntimo (papá, mamá, hermano) o una relación inalienable (como tu país), se PUEDE y se DEBE omitir el 的 (de).\n\n- Mi papá: 我爸爸 (Wǒ bàba). Suena natural y cercano.\n- Mi libro: 我的书 (Wǒ de shū). Aquí el 'de' es OBLIGATORIO porque un libro es un objeto material.\n\nPara todo lo material, abstracto, o relaciones distantes, debes usar siempre el 的 (de).",
+          "audio": "Es posible que recuerdes algo del nivel A1 que te haga pensar: ¡Espera! Cuando hablábamos de la familia, decíamos 'Wǒ bàba', 'Mi papá', sin usar la partícula 'de'. Tienes excelente memoria. Esa es la excepción de intimidad. En la cultura china, un padre no es un objeto que posees, por lo tanto, quitar el 'de' demuestra cariño y cercanía. Pero un libro, el té, o una casa, sí son objetos materiales. En esos casos, la partícula 'de' es estrictamente obligatoria. No puedes decir 'Wǒ shū' porque sonarías como un cavernícola. Tienes que decir 'Wǒ de shū'."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que sabes a quién le pertenecen las cosas.",
+      "questions": [
+        { "id": "zh-a2-26-q1", "type": "quiz_choice", "question": "¿Qué función principal tiene la partícula 的 (de)?", "options": ["Indica posesión, conectando al dueño con el objeto.", "Indica una acción pasada.", "Sirve para hacer preguntas de Sí/No.", "Significa 'También'."], "correct_answer": "Indica posesión, conectando al dueño con el objeto.", "explanation": "的 (de) es el equivalente principal a 'de' (posesivo) o al apóstrofo 's' del inglés." },
+        { "id": "zh-a2-26-q2", "type": "quiz_choice", "question": "¿Cuál es la fórmula correcta para expresar posesión en mandarín?", "options": ["Dueño + 的 (de) + Objeto poseído.", "Objeto poseído + 的 (de) + Dueño.", "Dueño + Objeto poseído + 的 (de).", "的 (de) + Dueño + Objeto poseído."], "correct_answer": "Dueño + 的 (de) + Objeto poseído.", "explanation": "Siempre de mayor jerarquía a menor: Primero el dueño, luego el objeto." },
+        { "id": "zh-a2-26-q3", "type": "quiz_choice", "question": "Vocabulario: ¿Cómo se dice 'Libro' en mandarín?", "options": ["Shū (书).", "Fàn (饭).", "Chá (茶).", "Rén (人)."], "correct_answer": "Shū (书).", "explanation": "Shū significa libro." },
+        { "id": "zh-a2-26-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Mi libro'?", "options": ["Wǒ de shū (我的书).", "Shū de wǒ (书的我).", "Wǒ shū (我书).", "Shū wǒ de (书我的)."], "correct_answer": "Wǒ de shū (我的书).", "explanation": "Yo (Wǒ) + de (的) + libro (shū)." },
+        { "id": "zh-a2-26-q5", "type": "quiz_choice", "question": "¿Cómo se dice 'El té de él' (Su té)?", "options": ["Tā de chá (他的茶).", "Chá de tā (茶的他).", "Tā chá (他茶).", "Tāmen de chá (他们的茶)."], "correct_answer": "Tā de chá (他的茶).", "explanation": "Él (tā) + de (的) + té (chá)." },
+        { "id": "zh-a2-26-q6", "type": "quiz_choice", "question": "¿Por qué es incorrecto decir 'Wǒ shū' para decir 'Mi libro'?", "options": ["Porque un libro es un objeto material; se requiere el posesivo 'de' (的) para conectar.", "Porque falta el verbo tener.", "Porque el libro va primero.", "En realidad es correcto y muy común."], "correct_answer": "Porque un libro es un objeto material; se requiere el posesivo 'de' (的) para conectar.", "explanation": "A diferencia de la familia, los objetos requieren el 'de' para establecer posesión." },
+        { "id": "zh-a2-26-q7", "type": "quiz_choice", "question": "¿Cuándo se suele OMITIR la partícula 的 (de)?", "options": ["Cuando se habla de familiares cercanos o instituciones a las que se pertenece.", "Cuando se habla de objetos caros.", "Cuando se habla en pasado.", "Nunca se debe omitir."], "correct_answer": "Cuando se habla de familiares cercanos o instituciones a las que se pertenece.", "explanation": "Omitir el 'de' con la familia (ej. Wǒ bàba) indica intimidad." },
+        { "id": "zh-a2-26-q8", "type": "quiz_choice", "question": "Imagina a alguien llamado Māo (Gato). ¿Cómo dirías 'El libro de Mao'?", "options": ["Māo de shū.", "Shū de Māo.", "Māo shū.", "Shū Māo."], "correct_answer": "Māo de shū.", "explanation": "Dueño (Māo) + de (的) + Objeto (shū)." },
+        { "id": "zh-a2-26-q9", "type": "quiz_choice", "question": "Traduce: 'Zhōngguó rén de chá' (中国人的茶).", "options": ["El té de los chinos.", "Los chinos beben té.", "Té de China.", "Chinos que venden té."], "correct_answer": "El té de los chinos.", "explanation": "Dueño: Chinos (Zhōngguó rén) + de + Objeto: té (chá)." },
+        { "id": "zh-a2-26-q10", "type": "quiz_choice", "question": "Traduce la frase completa: 'A mí me gusta el libro de él'.", "options": ["Wǒ xǐhuan tā de shū. (我喜欢他的书)", "Wǒ xǐhuan shū de tā.", "Tā de shū xǐhuan wǒ.", "Wǒ de shū xǐhuan tā."], "correct_answer": "Wǒ xǐhuan tā de shū. (我喜欢他的书)", "explanation": "Yo (wǒ) + gusto (xǐhuan) + el libro de él (tā de shū)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para expresar la posesión. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a2-26-f1", "type": "fill_input", "question": "Partícula posesiva ('de'): ____ (de)", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a2-26-f2", "type": "fill_input", "question": "Libro: ____ (shu)", "correct_answer": "shu", "explanation": "shu" },
+        { "id": "zh-a2-26-f3", "type": "fill_input", "question": "Mi libro: wo ____ shu", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a2-26-f4", "type": "fill_input", "question": "Tu té: ni ____ cha", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a2-26-f5", "type": "fill_input", "question": "La comida de él (Su comida): ta ____ fan", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a2-26-f6", "type": "fill_input", "question": "El té de mamá: mama ____ cha", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a2-26-f7", "type": "fill_input", "question": "¿Tu libro?: ni de ____ (shu)", "correct_answer": "shu", "explanation": "shu" },
+        { "id": "zh-a2-26-f8", "type": "fill_input", "question": "Me gusta tu libro: wo xihuan ni ____ shu", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a2-26-f9", "type": "fill_input", "question": "El libro de ellos: tamen ____ shu", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a2-26-f10", "type": "fill_input", "question": "Excepción íntima (Mi papá, sin 'de'): wo ____ (baba)", "correct_answer": "baba", "explanation": "baba" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha e identifica a quién le pertenece el objeto.",
+      "questions": [
+        { "id": "zh-a2-26-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我的", "options": ["Mío", "Tuyo", "Suyo", "De nosotros"], "correct_answer": "Mío", "explanation": "El audio dice: Wǒ de (Mío)." },
+        { "id": "zh-a2-26-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你的书", "options": ["Tu libro", "Mi libro", "Su libro", "El libro de ellos"], "correct_answer": "Tu libro", "explanation": "El audio dice: Nǐ de shū." },
+        { "id": "zh-a2-26-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他的饭", "options": ["La comida de él", "Mi comida", "La comida de ella", "La comida de todos"], "correct_answer": "La comida de él", "explanation": "El audio dice: Tā de fàn." },
+        { "id": "zh-a2-26-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "妈妈的茶", "options": ["El té de mamá", "El té de papá", "Mi té", "Té chino"], "correct_answer": "El té de mamá", "explanation": "El audio dice: Māma de chá." },
+        { "id": "zh-a2-26-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "中国人的书", "options": ["El libro de los chinos", "El libro de China", "Mi libro chino", "El té de los chinos"], "correct_answer": "El libro de los chinos", "explanation": "El audio dice: Zhōngguó rén de shū." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Possessions",
+      "pairs": [
+        {"id": "zh-a2-26-p1", "source": "的 (de)", "target": "Partícula de posesión ('de' invertido)"},
+        {"id": "zh-a2-26-p2", "source": "书 (shū)", "target": "Libro"},
+        {"id": "zh-a2-26-p3", "source": "我的 (wǒ de)", "target": "Mío / Mi"},
+        {"id": "zh-a2-26-p4", "source": "你的书 (nǐ de shū)", "target": "Tu libro"},
+        {"id": "zh-a2-26-p5", "source": "他的茶 (tā de chá)", "target": "El té de él"},
+        {"id": "zh-a2-26-p6", "source": "我的饭 (wǒ de fàn)", "target": "Mi comida / Mi arroz"},
+        {"id": "zh-a2-26-p7", "source": "我哥哥的书 (wǒ gēge de shū)", "target": "El libro de mi hermano mayor"},
+        {"id": "zh-a2-26-p8", "source": "我爸爸 (wǒ bàba)", "target": "Mi papá (Intimidad: sin 'de')"},
+        {"id": "zh-a2-26-p9", "source": "我喜欢你的书 (wǒ xǐhuan nǐ de shū)", "target": "Me gusta tu libro"},
+        {"id": "zh-a2-26-p10", "source": "他们的 (tāmen de)", "target": "De ellos / Suyo (plural)"}
+      ]
+    }
+  ]
+}

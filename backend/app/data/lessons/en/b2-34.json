@@ -1,0 +1,101 @@
+{
+  "id": "b2-34",
+  "title": "Marketing & Sales",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Vocabulary", "Marketing", "Sales", "Business"],
+  "completion_message": "¡Excelente! Ahora posees el vocabulario técnico necesario para presentar campañas de marketing, cerrar ventas y entender el mercado como un verdadero ejecutivo comercial.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Vocabulario de Marketing y Ventas",
+      "parts": [
+        { "visual": "Audiencia y Posicionamiento: \n- Target audience (Público objetivo / Target). \nEj: Our target audience is young professionals. \n- Brand awareness (Reconocimiento de marca). \nEj: The campaign is designed to increase brand awareness. \n- Niche market (Mercado nicho / Especializado). \nEj: We sell vegan cosmetics, which is a niche market.", "audio": "Audience and Positioning. 'Target audience' means the specific group of people you want to reach. For example: Our target audience is young professionals. 'Brand awareness' is how well consumers recognize your brand. For example: The campaign is designed to increase brand awareness. A 'niche market' is a small, specialized market. For example: We sell vegan cosmetics, which is a niche market." },
+        { "visual": "Técnicas de Venta: \n- Cold calling (Llamadas en frío a clientes potenciales que no te conocen). \nEj: I hate doing cold calling. \n- Sales pitch / Pitch (Discurso de venta o presentación corta). \nEj: She gave a brilliant pitch to the investors. \n- Conversion rate (Tasa de conversión / Porcentaje de visitantes que compran). \nEj: Our website has a 5% conversion rate.", "audio": "Sales Techniques. 'Cold calling' is calling potential customers who haven't asked to be contacted. For example: I hate doing cold calling. A 'Pitch' or 'Sales pitch' is a short presentation to persuade someone to buy or invest. For example: She gave a brilliant pitch to the investors. 'Conversion rate' is the percentage of visitors who actually buy something. For example: Our website has a 5 percent conversion rate." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de marketing o ventas correcto.",
+      "questions": [
+        { "id": "b2-34-q1", "type": "quiz_choice", "question": "The people we are trying to sell our product to are our ____ audience. (Público objetivo).", "options": ["target", "bullseye", "goal", "aim"], "correct_answer": "target", "explanation": "Target audience = público objetivo." },
+        { "id": "b2-34-q2", "type": "quiz_choice", "question": "We need to increase brand ____ so more people recognize our logo. (Reconocimiento de marca).", "options": ["awareness", "knowing", "seeing", "knowledge"], "correct_answer": "awareness", "explanation": "Brand awareness = reconocimiento de marca." },
+        { "id": "b2-34-q3", "type": "quiz_choice", "question": "He spent all morning doing cold ____ to find new clients. (Llamadas en frío).", "options": ["calling", "phoning", "ringing", "speaking"], "correct_answer": "calling", "explanation": "Cold calling = llamadas en frío a clientes que no lo han solicitado." },
+        { "id": "b2-34-q4", "type": "quiz_choice", "question": "The CEO loved your sales ____. He wants to invest! (Discurso de venta / Presentación corta).", "options": ["pitch", "talk", "words", "speak"], "correct_answer": "pitch", "explanation": "Sales pitch (o solo pitch) = discurso o presentación para persuadir." },
+        { "id": "b2-34-q5", "type": "quiz_choice", "question": "We are targeting a ____ market: people who own pet iguanas. (Mercado nicho / Especializado).", "options": ["niche", "small", "tiny", "corner"], "correct_answer": "niche", "explanation": "Niche market = segmento de mercado muy especializado." },
+        { "id": "b2-34-q6", "type": "quiz_choice", "question": "100 people visited the site, but only 2 bought something. The ____ rate is 2%. (Tasa de conversión).", "options": ["conversion", "buying", "sales", "client"], "correct_answer": "conversion", "explanation": "Conversion rate = tasa de conversión (porcentaje de usuarios que realizan una acción deseada)." },
+        { "id": "b2-34-q7", "type": "quiz_choice", "question": "To get more customers, we are going to launch an advertising ____. (Campaña).", "options": ["campaign", "battle", "war", "mission"], "correct_answer": "campaign", "explanation": "Advertising campaign = campaña publicitaria." },
+        { "id": "b2-34-q8", "type": "quiz_choice", "question": "Our main ____ in this market is Apple. (Competidor).", "options": ["competitor", "enemy", "rivalry", "opponent"], "correct_answer": "competitor", "explanation": "Competitor = competidor (empresa rival)." },
+        { "id": "b2-34-q9", "type": "quiz_choice", "question": "This feature gives us a competitive ____ over other brands. (Ventaja competitiva).", "options": ["edge", "border", "side", "corner"], "correct_answer": "edge", "explanation": "Competitive edge / advantage = ventaja competitiva." },
+        { "id": "b2-34-q10", "type": "quiz_choice", "question": "We sent out a ____ to ask customers about their preferences. (Encuesta/Cuestionario).", "options": ["survey", "test", "exam", "paper"], "correct_answer": "survey", "explanation": "Survey / Questionnaire = encuesta." },
+        { "id": "b2-34-q11", "type": "quiz_choice", "question": "The ____ line shows our total revenue before expenses. (Línea superior / Ingresos brutos).", "options": ["top", "first", "start", "high"], "correct_answer": "top", "explanation": "Top line = ingresos brutos / ventas totales (bottom line = ganancia neta)." },
+        { "id": "b2-34-q12", "type": "quiz_choice", "question": "A free trial is a great way to generate ____ for our software. (Contactos/Posibles clientes).", "options": ["leads", "people", "names", "emails"], "correct_answer": "leads", "explanation": "Generate leads = generar prospectos / clientes potenciales." },
+        { "id": "b2-34-q13", "type": "quiz_choice", "question": "Our ____ is what makes us different from everyone else. (Unique Selling Proposition).", "options": ["USP", "UFO", "USB", "CEO"], "correct_answer": "USP", "explanation": "USP (Unique Selling Proposition) = propuesta única de venta." },
+        { "id": "b2-34-q14", "type": "quiz_choice", "question": "Word-of-____ marketing is very effective because people trust their friends. (Boca a boca).", "options": ["mouth", "lips", "teeth", "tongue"], "correct_answer": "mouth", "explanation": "Word-of-mouth = boca a boca." },
+        { "id": "b2-34-q15", "type": "quiz_choice", "question": "We need to do more market ____ before launching the product. (Investigación).", "options": ["research", "study", "looking", "finding"], "correct_answer": "research", "explanation": "Market research = investigación de mercado." },
+        { "id": "b2-34-q16", "type": "quiz_choice", "question": "The physical products a company sells are called ____ goods. (Bienes de consumo).", "options": ["consumer", "customer", "client", "buyer"], "correct_answer": "consumer", "explanation": "Consumer goods = bienes de consumo." },
+        { "id": "b2-34-q17", "type": "quiz_choice", "question": "B2B means Business to ____. (Empresa a Empresa).", "options": ["Business", "Buyer", "Boss", "Bank"], "correct_answer": "Business", "explanation": "B2B = Business to Business." },
+        { "id": "b2-34-q18", "type": "quiz_choice", "question": "B2C means Business to ____. (Empresa a Consumidor).", "options": ["Consumer", "Client", "Customer", "Company"], "correct_answer": "Consumer", "explanation": "B2C = Business to Consumer." },
+        { "id": "b2-34-q19", "type": "quiz_choice", "question": "Giving out free ____ is a great way to let people test the food. (Muestras).", "options": ["samples", "examples", "pieces", "bites"], "correct_answer": "samples", "explanation": "Samples = muestras gratuitas." },
+        { "id": "b2-34-q20", "type": "quiz_choice", "question": "A celebrity ____ can boost sales significantly. (Respaldo / Promoción por un famoso).", "options": ["endorsement", "backing", "support", "help"], "correct_answer": "endorsement", "explanation": "Endorsement = respaldo público, a menudo pagado, por parte de una celebridad." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término correcto de Marketing/Ventas.",
+      "questions": [
+        { "id": "b2-34-f1", "type": "fill_input", "question": "____ audience. (Público objetivo con T)", "correct_answer": "Target", "explanation": "Target." },
+        { "id": "b2-34-f2", "type": "fill_input", "question": "Brand ____. (Reconocimiento con A)", "correct_answer": "awareness", "explanation": "awareness." },
+        { "id": "b2-34-f3", "type": "fill_input", "question": "____ market. (Mercado especializado con N)", "correct_answer": "Niche", "explanation": "Niche." },
+        { "id": "b2-34-f4", "type": "fill_input", "question": "Cold ____. (Llamadas en frío con C)", "correct_answer": "calling", "explanation": "calling." },
+        { "id": "b2-34-f5", "type": "fill_input", "question": "Sales ____. (Discurso de venta con P)", "correct_answer": "pitch", "explanation": "pitch." },
+        { "id": "b2-34-f6", "type": "fill_input", "question": "____ rate. (Tasa de conversión con C)", "correct_answer": "Conversion", "explanation": "Conversion." },
+        { "id": "b2-34-f7", "type": "fill_input", "question": "Word of ____. (Boca a boca con M)", "correct_answer": "mouth", "explanation": "mouth." },
+        { "id": "b2-34-f8", "type": "fill_input", "question": "Generate ____. (Clientes potenciales/Contactos con L)", "correct_answer": "leads", "explanation": "leads." },
+        { "id": "b2-34-f9", "type": "fill_input", "question": "Market ____. (Investigación con R)", "correct_answer": "research", "explanation": "research." },
+        { "id": "b2-34-f10", "type": "fill_input", "question": "Free ____. (Muestras con S)", "correct_answer": "samples", "explanation": "samples." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Marketing Match",
+      "pairs": [
+        {"id": "b2-34-p1", "source": "Target audience", "target": "Público objetivo"},
+        {"id": "b2-34-p2", "source": "Brand awareness", "target": "Reconocimiento de marca"},
+        {"id": "b2-34-p3", "source": "Cold calling", "target": "Llamadas de venta en frío"},
+        {"id": "b2-34-p4", "source": "Sales pitch", "target": "Discurso o presentación de ventas"},
+        {"id": "b2-34-p5", "source": "Conversion rate", "target": "Tasa de conversión"},
+        {"id": "b2-34-p6", "source": "Word of mouth", "target": "Recomendación boca a boca"},
+        {"id": "b2-34-p7", "source": "Niche market", "target": "Mercado especializado"},
+        {"id": "b2-34-p8", "source": "Generate leads", "target": "Generar contactos / prospectos"},
+        {"id": "b2-34-p9", "source": "Market research", "target": "Investigación de mercado"},
+        {"id": "b2-34-p10", "source": "Endorsement", "target": "Respaldo (de un famoso)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de marketing correcta.",
+      "questions": [
+        { "id": "b2-34-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Who is our target audience?", "options": ["Who is our target audience?", "Where is our target audience?", "Who is your target audience?", "What is our target audience?"], "correct_answer": "Who is our target audience?", "explanation": "Audio exacto." },
+        { "id": "b2-34-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need brand awareness.", "options": ["We need brand awareness.", "They need brand awareness.", "We need broad awareness.", "We need brand designers."], "correct_answer": "We need brand awareness.", "explanation": "Audio exacto." },
+        { "id": "b2-34-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He gave a great sales pitch.", "options": ["He gave a great sales pitch.", "She gave a great sales pitch.", "He gave a bad sales pitch.", "They gave a great sales pitch."], "correct_answer": "He gave a great sales pitch.", "explanation": "Audio exacto." },
+        { "id": "b2-34-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our conversion rate is five percent.", "options": ["Our conversion rate is five percent.", "Our conversion rate is ten percent.", "Your conversion rate is five percent.", "The conversion rate is five percent."], "correct_answer": "Our conversion rate is five percent.", "explanation": "Audio exacto." },
+        { "id": "b2-34-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a niche market.", "options": ["It is a niche market.", "It was a niche market.", "Is it a niche market?", "It is a new market."], "correct_answer": "It is a niche market.", "explanation": "Audio exacto." },
+        { "id": "b2-34-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I hate cold calling.", "options": ["I hate cold calling.", "He hates cold calling.", "I love cold calling.", "I hated cold calling."], "correct_answer": "I hate cold calling.", "explanation": "Audio exacto." },
+        { "id": "b2-34-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Word of mouth is very powerful.", "options": ["Word of mouth is very powerful.", "Word of mouth is not powerful.", "Words of mouth are very powerful.", "Word of mouth was very powerful."], "correct_answer": "Word of mouth is very powerful.", "explanation": "Audio exacto." },
+        { "id": "b2-34-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to generate leads.", "options": ["We need to generate leads.", "They need to generate leads.", "We need to generate sales.", "We needed to generate leads."], "correct_answer": "We need to generate leads.", "explanation": "Audio exacto." },
+        { "id": "b2-34-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They launched an ad campaign.", "options": ["They launched an ad campaign.", "We launched an ad campaign.", "They launched a bad campaign.", "She launched an ad campaign."], "correct_answer": "They launched an ad campaign.", "explanation": "Audio exacto." },
+        { "id": "b2-34-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We offer free samples.", "options": ["We offer free samples.", "They offer free samples.", "We offered free samples.", "We offer three samples."], "correct_answer": "We offer free samples.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

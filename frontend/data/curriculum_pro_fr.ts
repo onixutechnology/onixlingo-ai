@@ -246,7 +246,7 @@ export const PRO_CURRICULUM = [
   },
   {
     id: 'exec-exec',
-    title: 'Boardroom Dynamics',
+    title: 'Corporativo Dynamics',
     level: 'Exec',
     icon: ICON_MAP['Building'],
     description: 'Inglés especializado para juntas directivas, M&A y estrategia global.',
@@ -446,7 +446,7 @@ export const PRO_CURRICULUM = [
   },
   {
     id: 'exec-thesis',
-    title: 'C-Suite Master Thesis',
+    title: 'Alta Dirección Master Thesis',
     level: 'Mastery',
     icon: ICON_MAP['Globe'],
     description: 'Evaluación directiva final. Presentación de tesis ejecutiva ante consejo global.',
@@ -689,7 +689,7 @@ export const PRO_CURRICULUM_FR = [
   },
   {
     id: 'exec-fr-thesis',
-    title: 'Thèse de Master C-Suite',
+    title: 'Thèse de Master Alta Dirección',
     level: 'Mastery',
     icon: ICON_MAP['Globe'],
     description: 'Évaluation exécutive finale. Présentation de la thèse devant un comité global.',

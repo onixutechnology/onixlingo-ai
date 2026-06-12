@@ -1,0 +1,101 @@
+{
+  "id": "c1-33",
+  "title": "Crisis Management & PR",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "Crisis Management", "Public Relations", "Business"],
+  "completion_message": "¡Excelente! La Gestión de Crisis y las Relaciones Públicas son áreas de máxima tensión. Manejar vocabulario como 'damage control', 'mitigate' y 'product recall' te capacita para liderar comunicaciones en los momentos más difíciles de una empresa.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Gestión de Crisis y RR.PP. (C1)",
+      "parts": [
+        { "visual": "Términos Clave de Crisis: \n- Damage control (Control de daños / Medidas para minimizar el impacto negativo). \nEj: The PR team went into damage control after the scandal. \n- Backlash (Reacción negativa violenta del público o clientes). \nEj: They faced severe backlash over their new pricing policy. \n- Mitigate (Mitigar / Reducir la gravedad de algo). \nEj: We must take immediate steps to mitigate the risks.", "audio": "Key Crisis Terms. 'Damage control' refers to measures taken to offset or minimize damage to reputation or operations. For example: The P R team went into damage control after the scandal. 'Backlash' is a strong negative reaction by a large number of people. For example: They faced severe backlash over their new pricing policy. To 'Mitigate' means to make something less severe or painful. For example: We must take immediate steps to mitigate the risks." },
+        { "visual": "Relaciones Públicas y Acciones: \n- Product recall (Retirada de un producto del mercado por defectos). \nEj: The car manufacturer issued a massive product recall. \n- Transparency (Transparencia / Honestidad y apertura en la información). \nEj: In a crisis, transparency is the best policy. \n- Scapegoat (Chivo expiatorio / Persona a la que se culpa por los errores de otros). \nEj: The marketing manager became the scapegoat for the failed launch.", "audio": "Public Relations and Actions. A 'Product recall' is a request to return a product after the discovery of safety issues or product defects. For example: The car manufacturer issued a massive product recall. 'Transparency' implies operating in such a way that it is easy for others to see what actions are performed. For example: In a crisis, transparency is the best policy. A 'Scapegoat' is a person who is blamed for the wrongdoings, mistakes, or faults of others. For example: The marketing manager became the scapegoat for the failed launch." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de Crisis o PR correcto.",
+      "questions": [
+        { "id": "c1-33-q1", "type": "quiz_choice", "question": "After the CEO's controversial tweet, the PR department had to do some serious ____. (Control de daños).", "options": ["damage control", "damage limit", "loss control", "risk limit"], "correct_answer": "damage control", "explanation": "Damage control = control de daños." },
+        { "id": "c1-33-q2", "type": "quiz_choice", "question": "The company faced a massive public ____ when they announced the layoffs. (Reacción negativa).", "options": ["backlash", "backfire", "backtrack", "backup"], "correct_answer": "backlash", "explanation": "Backlash = reacción negativa y fuerte del público." },
+        { "id": "c1-33-q3", "type": "quiz_choice", "question": "We need to find ways to ____ the impact of the supply chain disruption. (Mitigar / Reducir).", "options": ["mitigate", "litigate", "instigate", "investigate"], "correct_answer": "mitigate", "explanation": "Mitigate = mitigar, reducir el daño o impacto." },
+        { "id": "c1-33-q4", "type": "quiz_choice", "question": "Due to a faulty battery, the electronics company issued a worldwide product ____. (Retirada del mercado).", "options": ["recall", "return", "refund", "reject"], "correct_answer": "recall", "explanation": "Product recall = retirada de un producto del mercado por defectos." },
+        { "id": "c1-33-q5", "type": "quiz_choice", "question": "The public demands complete ____ regarding how the data was leaked. (Transparencia).", "options": ["transparency", "visibility", "clarity", "honesty"], "correct_answer": "transparency", "explanation": "Transparency = transparencia corporativa." },
+        { "id": "c1-33-q6", "type": "quiz_choice", "question": "Instead of taking responsibility, the board used the CFO as a ____. (Chivo expiatorio).", "options": ["scapegoat", "black sheep", "victim", "target"], "correct_answer": "scapegoat", "explanation": "Scapegoat = chivo expiatorio." },
+        { "id": "c1-33-q7", "type": "quiz_choice", "question": "A statement made to the media to clarify a situation is a press ____. (Comunicado de prensa).", "options": ["release", "report", "news", "statement"], "correct_answer": "release", "explanation": "Press release = comunicado de prensa." },
+        { "id": "c1-33-q8", "type": "quiz_choice", "question": "A professional whose job is to represent an organization and speak to the media is a ____. (Portavoz).", "options": ["spokesperson", "speaker", "announcer", "talker"], "correct_answer": "spokesperson", "explanation": "Spokesperson = portavoz." },
+        { "id": "c1-33-q9", "type": "quiz_choice", "question": "To repair their public image, the company hired a top-tier ____ firm. (Relaciones Públicas).", "options": ["PR", "HR", "IT", "R&D"], "correct_answer": "PR", "explanation": "PR = Public Relations." },
+        { "id": "c1-33-q10", "type": "quiz_choice", "question": "The company's reputation was severely ____ by the scandal. (Manchada / Dañada).", "options": ["tarnished", "dirty", "broken", "scratched"], "correct_answer": "tarnished", "explanation": "To tarnish a reputation = manchar o dañar la reputación." },
+        { "id": "c1-33-q11", "type": "quiz_choice", "question": "When a situation gets worse quickly, we say it has ____. (Escalado / Empeorado).", "options": ["escalated", "elevated", "raised", "grown"], "correct_answer": "escalated", "explanation": "Escalate = escalar, empeorar rápidamente." },
+        { "id": "c1-33-q12", "type": "quiz_choice", "question": "A sudden, unpredictable event that threatens the organization is a ____. (Crisis).", "options": ["crisis", "critic", "crime", "crash"], "correct_answer": "crisis", "explanation": "Crisis (plural: crises)." },
+        { "id": "c1-33-q13", "type": "quiz_choice", "question": "The company had to ____ the rumors that they were going bankrupt. (Desmentir / Negar).", "options": ["deny", "refuse", "reject", "ignore"], "correct_answer": "deny", "explanation": "Deny = negar o desmentir afirmaciones." },
+        { "id": "c1-33-q14", "type": "quiz_choice", "question": "We need to prepare a contingency ____ in case the primary servers fail. (Plan de contingencia).", "options": ["plan", "idea", "scheme", "map"], "correct_answer": "plan", "explanation": "Contingency plan = plan de contingencia (Plan B)." },
+        { "id": "c1-33-q15", "type": "quiz_choice", "question": "To express deep regret for a mistake publicly is to issue an ____. (Disculpa).", "options": ["apology", "excuse", "pardon", "forgiveness"], "correct_answer": "apology", "explanation": "Issue an apology = emitir una disculpa formal." },
+        { "id": "c1-33-q16", "type": "quiz_choice", "question": "An attempt to hide a mistake or illegal activity is a ____. (Encubrimiento).", "options": ["cover-up", "hide-out", "secret", "cover"], "correct_answer": "cover-up", "explanation": "Cover-up = encubrimiento." },
+        { "id": "c1-33-q17", "type": "quiz_choice", "question": "A person who exposes any kind of information or activity that is deemed illegal or unethical within an organization is a ____. (Denunciante interno).", "options": ["whistleblower", "spy", "informer", "reporter"], "correct_answer": "whistleblower", "explanation": "Whistleblower = denunciante / informante interno." },
+        { "id": "c1-33-q18", "type": "quiz_choice", "question": "To limit the spread of negative information, PR teams often engage in ____ control. (Control de rumores/narrativa).", "options": ["spin", "turn", "twist", "narrative"], "correct_answer": "spin", "explanation": "Spin (o spin control) = manipular la narrativa o información para dar un sesgo favorable." },
+        { "id": "c1-33-q19", "type": "quiz_choice", "question": "When public trust in a brand is lost, it is very difficult to ____ it. (Recuperar / Restaurar).", "options": ["restore", "replace", "remake", "return"], "correct_answer": "restore", "explanation": "Restore trust = restaurar la confianza." },
+        { "id": "c1-33-q20", "type": "quiz_choice", "question": "The crisis was handled poorly due to a lack of ____ at the executive level. (Previsión).", "options": ["foresight", "hindsight", "sight", "vision"], "correct_answer": "foresight", "explanation": "Foresight = previsión / visión de futuro." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término de Crisis Management correcto.",
+      "questions": [
+        { "id": "c1-33-f1", "type": "fill_input", "question": "Damage ____. (Control con C)", "correct_answer": "control", "explanation": "control." },
+        { "id": "c1-33-f2", "type": "fill_input", "question": "Public ____. (Reacción negativa con B)", "correct_answer": "backlash", "explanation": "backlash." },
+        { "id": "c1-33-f3", "type": "fill_input", "question": "To ____ risks. (Mitigar con M)", "correct_answer": "mitigate", "explanation": "mitigate." },
+        { "id": "c1-33-f4", "type": "fill_input", "question": "A product ____. (Retirada con R)", "correct_answer": "recall", "explanation": "recall." },
+        { "id": "c1-33-f5", "type": "fill_input", "question": "Total ____. (Transparencia con T)", "correct_answer": "transparency", "explanation": "transparency." },
+        { "id": "c1-33-f6", "type": "fill_input", "question": "A ____. (Chivo expiatorio con S)", "correct_answer": "scapegoat", "explanation": "scapegoat." },
+        { "id": "c1-33-f7", "type": "fill_input", "question": "A press ____. (Comunicado con R)", "correct_answer": "release", "explanation": "release." },
+        { "id": "c1-33-f8", "type": "fill_input", "question": "A company ____. (Portavoz con S)", "correct_answer": "spokesperson", "explanation": "spokesperson." },
+        { "id": "c1-33-f9", "type": "fill_input", "question": "A ____ plan. (Contingencia con C)", "correct_answer": "contingency", "explanation": "contingency." },
+        { "id": "c1-33-f10", "type": "fill_input", "question": "A corporate ____. (Denunciante con W)", "correct_answer": "whistleblower", "explanation": "whistleblower." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Crisis Management Match",
+      "pairs": [
+        {"id": "c1-33-p1", "source": "Damage control", "target": "Control de daños"},
+        {"id": "c1-33-p2", "source": "Backlash", "target": "Reacción pública negativa"},
+        {"id": "c1-33-p3", "source": "Mitigate", "target": "Mitigar / Reducir la gravedad"},
+        {"id": "c1-33-p4", "source": "Product recall", "target": "Retirada de un producto por defecto"},
+        {"id": "c1-33-p5", "source": "Transparency", "target": "Transparencia informativa"},
+        {"id": "c1-33-p6", "source": "Scapegoat", "target": "Chivo expiatorio"},
+        {"id": "c1-33-p7", "source": "Press release", "target": "Comunicado de prensa"},
+        {"id": "c1-33-p8", "source": "Spokesperson", "target": "Portavoz oficial"},
+        {"id": "c1-33-p9", "source": "Whistleblower", "target": "Denunciante interno"},
+        {"id": "c1-33-p10", "source": "Contingency plan", "target": "Plan de contingencia (Plan B)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término de crisis correcto.",
+      "questions": [
+        { "id": "c1-33-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are in damage control mode.", "options": ["We are in damage control mode.", "They are in damage control mode.", "We were in damage control mode.", "We are in damage control now."], "correct_answer": "We are in damage control mode.", "explanation": "Audio exacto." },
+        { "id": "c1-33-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They faced a massive public backlash.", "options": ["They faced a massive public backlash.", "We faced a massive public backlash.", "They face a massive public backlash.", "They faced a massive public backslash."], "correct_answer": "They faced a massive public backlash.", "explanation": "Audio exacto." },
+        { "id": "c1-33-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must mitigate the risks.", "options": ["We must mitigate the risks.", "They must mitigate the risks.", "We must mitigate the risk.", "We must litigate the risks."], "correct_answer": "We must mitigate the risks.", "explanation": "Audio exacto." },
+        { "id": "c1-33-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It resulted in a product recall.", "options": ["It resulted in a product recall.", "It results in a product recall.", "This resulted in a product recall.", "It resulted in a product return."], "correct_answer": "It resulted in a product recall.", "explanation": "Audio exacto." },
+        { "id": "c1-33-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Transparency is our main priority.", "options": ["Transparency is our main priority.", "Transparency is our top priority.", "Transparency was our main priority.", "Transparency is their main priority."], "correct_answer": "Transparency is our main priority.", "explanation": "Audio exacto." },
+        { "id": "c1-33-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Don't make him the scapegoat.", "options": ["Don't make him the scapegoat.", "Don't make her the scapegoat.", "Didn't make him the scapegoat.", "Don't take him as the scapegoat."], "correct_answer": "Don't make him the scapegoat.", "explanation": "Audio exacto." },
+        { "id": "c1-33-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Read the official press release.", "options": ["Read the official press release.", "Read our official press release.", "Read the official press release now.", "Write the official press release."], "correct_answer": "Read the official press release.", "explanation": "Audio exacto." },
+        { "id": "c1-33-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our spokesperson will answer questions.", "options": ["Our spokesperson will answer questions.", "The spokesperson will answer questions.", "Our spokesperson will ask questions.", "Our spokesperson answered questions."], "correct_answer": "Our spokesperson will answer questions.", "explanation": "Audio exacto." },
+        { "id": "c1-33-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need a contingency plan.", "options": ["We need a contingency plan.", "They need a contingency plan.", "We needed a contingency plan.", "We need the contingency plan."], "correct_answer": "We need a contingency plan.", "explanation": "Audio exacto." },
+        { "id": "c1-33-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The whistleblower exposed the cover-up.", "options": ["The whistleblower exposed the cover-up.", "A whistleblower exposed the cover-up.", "The whistleblower exposed the truth.", "The whistleblower exposes the cover-up."], "correct_answer": "The whistleblower exposed the cover-up.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

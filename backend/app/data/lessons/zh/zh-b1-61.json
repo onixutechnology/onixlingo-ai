@@ -1,0 +1,92 @@
+{
+  "id": "zh-b1-61",
+  "title": "El Precio de Todo",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Shopping", "Money", "Vocabulary"],
+  "completion_message": "¡Ya puedes ir de compras! Negociar es un arte en China, y ahora tienes las herramientas básicas para no pagar de más.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Dinero y Negociación",
+      "parts": [
+        {
+          "visual": "Dinero: 钱 (qián)\n\n¿Cuánto cuesta? (¿Cuánto dinero?): 多少钱？(Duōshao qián?)\n- 多少 (Duōshao) significa 'Cuánto' para cantidades mayores a 10. Se forma juntando 'Mucho' (duō) y 'Poco' (shao).\n- Para preguntar el precio simplemente señalas el objeto y dices: ¿Esto cuánto cuesta? 这个多少钱？(Zhège duōshao qián?).",
+          "audio": "En el nivel A1 aprendiste a comprar cosas, pero no sabías cómo preguntar el precio. Hoy solucionamos eso. La palabra para dinero es Qián. Segundo tono. Qián. Para preguntar el precio, los chinos dicen literalmente '¿Cuánto dinero?'. ¿Y cómo se dice cuánto? Duōshao. Que es la combinación de la palabra Mucho y la palabra Poco. Mucho-poco dinero. Duōshao qián. Si estás en una tienda, solo tienes que señalar el artículo y decir: Zhège duōshao qián? ¿Esto cuánto cuesta?"
+        },
+        {
+          "visual": "Caro: 贵 (guì)\n\nEn China, el regateo (negociar el precio) es casi un deporte nacional en los mercados.\nLa queja más común cuando te dicen el precio es usar el 'Sándwich del Extremo' (Tài... le) que aprendimos en la lección 49:\n\n- ¡Es demasiado caro!: 太贵了！(Tài guì le!).\n- Muy caro: 很贵 (Hěn guì).\n- No es caro: 不贵 (Bú guì).\n\nPara negociar puedes pedir que lo rebajen un poco usando la palabra de la lección pasada (yìdiǎnr):\n- Más barato un poco (lit. Pequeño un poco): 小一点儿 (Xiǎo yìdiǎnr).",
+          "audio": "En los mercados tradicionales de China, el primer precio que te dan nunca es el real. Tienes que negociar. Para eso necesitas la palabra Caro, que se dice Guì. Cuarto tono. Guì. Cuando el vendedor te diga el precio, tú tienes que abrir los ojos con sorpresa y usar el sándwich exclamativo que aprendimos hace poco: ¡Tài guì le! ¡Es demasiado caro! Y si quieres que te baje el precio, puedes apuntar a tu billetera y decirle Xiǎo yìdiǎnr, un poco más pequeño."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra tus dotes de negociador en el mercado de la seda.",
+      "questions": [
+        { "id": "zh-b1-61-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 钱 (qián)?", "options": ["Dinero.", "Caro.", "Comprar.", "Vender."], "correct_answer": "Dinero.", "explanation": "Qián es la moneda, el dinero en general." },
+        { "id": "zh-b1-61-q2", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 多少 (duōshao)?", "options": ["Cuánto (Para cantidades grandes).", "Qué.", "Dónde.", "Por qué."], "correct_answer": "Cuánto (Para cantidades grandes).", "explanation": "La combinación de mucho (duō) y poco (shao) crea el concepto de 'cuánta cantidad'." },
+        { "id": "zh-b1-61-q3", "type": "quiz_choice", "question": "¿Cómo preguntas '¿Cuánto cuesta?' (¿Cuánto dinero?)", "options": ["Duōshao qián? (多少钱？).", "Shénme qián? (什么钱？).", "Jǐ qián? (几钱？).", "Duō dà qián? (多大钱？)."], "correct_answer": "Duōshao qián? (多少钱？).", "explanation": "Cuánto (duōshao) + dinero (qián)." },
+        { "id": "zh-b1-61-q4", "type": "quiz_choice", "question": "Señalas una taza de té y preguntas: '¿Esto cuánto cuesta?'", "options": ["Zhège duōshao qián? (这个多少钱？).", "Nàge duōshao qián? (那个多少钱？).", "Zhège shì qián? (这个是钱？).", "Wǒ yào qián (我要钱)."], "correct_answer": "Zhège duōshao qián? (这个多少钱？).", "explanation": "Esto/Este (Zhège) + cuánto dinero (duōshao qián)." },
+        { "id": "zh-b1-61-q5", "type": "quiz_choice", "question": "Vocabulario: ¿Cómo se dice 'Caro'?", "options": ["Guì (贵).", "Qián (钱).", "Hǎo (好).", "Dà (大)."], "correct_answer": "Guì (贵).", "explanation": "Guì (4to tono) es el terror de las billeteras." },
+        { "id": "zh-b1-61-q6", "type": "quiz_choice", "question": "El vendedor te dice que la camiseta cuesta 500 dólares. Tú exclamas escandalizado:", "options": ["Tài guì le! (太贵了！).", "Hěn guì (很贵).", "Bú guì (不贵).", "Tài hǎo le! (太好了！)."], "correct_answer": "Tài guì le! (太贵了！).", "explanation": "Sándwich exclamativo: Demasiado (Tài) + caro (guì) + le." },
+        { "id": "zh-b1-61-q7", "type": "quiz_choice", "question": "Si vas a una tienda muy económica, puedes decir: 'Zhège bú guì' (这个不贵). ¿Qué significa?", "options": ["Esto no es caro.", "Esto no es mío.", "Yo no lo compro.", "Esto no tiene precio."], "correct_answer": "Esto no es caro.", "explanation": "Esto (zhège) + no es caro (bú guì)." },
+        { "id": "zh-b1-61-q8", "type": "quiz_choice", "question": "¿Por qué no se usa 'Jǐ' (几) para preguntar precios, sino 'Duōshao' (多少)?", "options": ["Porque 'Jǐ' se usa para números pequeños (generalmente menores a 10), y los precios suelen ser mayores.", "Porque 'Jǐ' solo se usa para la edad.", "Porque 'Jǐ' significa barato.", "Se pueden usar los dos indistintamente."], "correct_answer": "Porque 'Jǐ' se usa para números pequeños (generalmente menores a 10), y los precios suelen ser mayores.", "explanation": "Recuerda que con la edad usábamos Nǐ jǐ suì para niños y Nǐ duō dà para adultos. 'Duōshao' es para cantidades indefinidas grandes." },
+        { "id": "zh-b1-61-q9", "type": "quiz_choice", "question": "Traduce la interacción: A: Zhège duōshao qián? B: Tài guì le!", "options": ["A: ¿Esto cuánto cuesta? B: ¡Es demasiado caro!", "A: ¿Dónde está el dinero? B: Yo no tengo.", "A: ¿Cuánto dinero tienes? B: Muy poco.", "A: ¿Quieres comprar esto? B: Es muy grande."], "correct_answer": "A: ¿Esto cuánto cuesta? B: ¡Es demasiado caro!", "explanation": "La negociación clásica." },
+        { "id": "zh-b1-61-q10", "type": "quiz_choice", "question": "Combina con verbos modales. 'Tengo que comprar ropa, pero es demasiado cara'.", "options": ["Wǒ děi mǎi yīfu, tài guì le (我得买衣服，太贵了).", "Wǒ xiǎng mǎi yīfu, bú guì (我想买衣服，不贵).", "Wǒ yīnggāi mǎi yīfu, hěn hǎo (我应该买衣服，很好).", "Wǒ huì mǎi yīfu, tài dà le (我会买衣服，太大了)."], "correct_answer": "Wǒ děi mǎi yīfu, tài guì le (我得买衣服，太贵了).", "explanation": "Tengo que (děi) + comprar (mǎi) + ropa (yīfu). ¡Demasiado caro! (tài guì le)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe las palabras de dinero y regateo en pinyin. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-b1-61-f1", "type": "fill_input", "question": "Dinero: ____ (qian)", "correct_answer": "qian", "explanation": "qian" },
+        { "id": "zh-b1-61-f2", "type": "fill_input", "question": "Cuánto (Mucho-poco): duo ____ (shao)", "correct_answer": "shao", "explanation": "shao" },
+        { "id": "zh-b1-61-f3", "type": "fill_input", "question": "¿Cuánto cuesta? (Cuánto dinero): duo shao ____", "correct_answer": "qian", "explanation": "qian" },
+        { "id": "zh-b1-61-f4", "type": "fill_input", "question": "¿Esto cuánto cuesta?: zhe ge duo shao ____", "correct_answer": "qian", "explanation": "qian" },
+        { "id": "zh-b1-61-f5", "type": "fill_input", "question": "Caro: ____ (gui)", "correct_answer": "gui", "explanation": "gui" },
+        { "id": "zh-b1-61-f6", "type": "fill_input", "question": "¡Demasiado caro!: tai ____ le", "correct_answer": "gui", "explanation": "gui" },
+        { "id": "zh-b1-61-f7", "type": "fill_input", "question": "Muy caro (neutral): hen ____", "correct_answer": "gui", "explanation": "gui" },
+        { "id": "zh-b1-61-f8", "type": "fill_input", "question": "No es caro: bu ____", "correct_answer": "gui", "explanation": "gui" },
+        { "id": "zh-b1-61-f9", "type": "fill_input", "question": "Yo no tengo dinero: wo mei you ____ (qian)", "correct_answer": "qian", "explanation": "qian" },
+        { "id": "zh-b1-61-f10", "type": "fill_input", "question": "¿Ese cuánto cuesta? (Aquel): na ge duo shao ____", "correct_answer": "qian", "explanation": "qian" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha al vendedor y al cliente negociar.",
+      "questions": [
+        { "id": "zh-b1-61-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "钱", "options": ["Dinero", "Caro", "Cuánto", "Comprar"], "correct_answer": "Dinero", "explanation": "El audio dice: Qián." },
+        { "id": "zh-b1-61-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "多少钱？", "options": ["¿Cuánto cuesta?", "¿Qué es esto?", "¿Dónde está el dinero?", "¿Tienes dinero?"], "correct_answer": "¿Cuánto cuesta?", "explanation": "El audio dice: Duōshao qián?" },
+        { "id": "zh-b1-61-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "这个多少钱？", "options": ["¿Esto cuánto cuesta?", "¿Ese cuánto cuesta?", "Esto es caro", "Yo quiero esto"], "correct_answer": "¿Esto cuánto cuesta?", "explanation": "El audio dice: Zhège duōshao qián?" },
+        { "id": "zh-b1-61-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "太贵了", "options": ["¡Demasiado caro!", "Muy bien", "Demasiado grande", "No es caro"], "correct_answer": "¡Demasiado caro!", "explanation": "El audio dice: Tài guì le." },
+        { "id": "zh-b1-61-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "不贵", "options": ["No es caro", "Muy caro", "Demasiado caro", "Yo no compro"], "correct_answer": "No es caro", "explanation": "El audio dice: Bú guì." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Market Phrases",
+      "pairs": [
+        {"id": "zh-b1-61-p1", "source": "钱 (qián)", "target": "Dinero"},
+        {"id": "zh-b1-61-p2", "source": "多少 (duōshao)", "target": "Cuánto (Lit: Mucho-poco)"},
+        {"id": "zh-b1-61-p3", "source": "多少钱 (duōshao qián)", "target": "¿Cuánto cuesta? (Cuánto dinero)"},
+        {"id": "zh-b1-61-p4", "source": "这个多少钱 (zhège duōshao qián)", "target": "¿Esto cuánto cuesta?"},
+        {"id": "zh-b1-61-p5", "source": "贵 (guì)", "target": "Caro"},
+        {"id": "zh-b1-61-p6", "source": "太贵了 (tài guì le)", "target": "¡Demasiado caro!"},
+        {"id": "zh-b1-61-p7", "source": "很贵 (hěn guì)", "target": "Muy caro"},
+        {"id": "zh-b1-61-p8", "source": "不贵 (bú guì)", "target": "No es caro / Barato"},
+        {"id": "zh-b1-61-p9", "source": "买 (mǎi)", "target": "Comprar"},
+        {"id": "zh-b1-61-p10", "source": "一点儿 (yìdiǎnr)", "target": "Un poco"}
+      ]
+    }
+  ]
+}

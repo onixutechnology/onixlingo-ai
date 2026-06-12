@@ -1,0 +1,101 @@
+{
+  "id": "b1-19",
+  "title": "Job Interviews",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Vocabulary", "HR", "Business", "Interviews"],
+  "completion_message": "¡Contratado! Estás listo para enfrentar entrevistas de trabajo en inglés con total confianza.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Entrevistas de Trabajo (Job Interviews)",
+      "parts": [
+        { "visual": "El candidato ideal: \n- Candidate / Applicant (Candidato). \n- Background (Experiencia previa / Antecedentes). \n- Strengths and Weaknesses (Fortalezas y debilidades). \nEj: What are your greatest strengths? (¿Cuáles son tus mayores fortalezas?).", "audio": "The ideal candidate. Candidate or Applicant means the person applying for the job. Background refers to your past experience and education. Strengths are things you are good at, and weaknesses are things you need to improve. For example: What are your greatest strengths?" },
+        { "visual": "El proceso: \n- Recruit (Reclutar). \n- Hire (Contratar). \n- Fire / Let go (Despedir). \n- Resign (Renunciar). \nEj: We want to hire a new software engineer next month.", "audio": "The process. Recruit means to find new people to join a company. Hire means to give someone a job. Fire or let go means to terminate someone's employment. Resign means to quit your job voluntarily. For example: We want to hire a new software engineer." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra de Recursos Humanos correcta.",
+      "questions": [
+        { "id": "b1-19-q1", "type": "quiz_choice", "question": "Could you tell me about your educational ____? (Experiencia / Antecedentes).", "options": ["background", "history", "past", "behind"], "correct_answer": "background", "explanation": "Background = antecedentes, formación, experiencia previa." },
+        { "id": "b1-19-q2", "type": "quiz_choice", "question": "What are your greatest ____? (Fortalezas).", "options": ["strengths", "strongs", "powers", "skills"], "correct_answer": "strengths", "explanation": "Strengths = fortalezas (puntos fuertes)." },
+        { "id": "b1-19-q3", "type": "quiz_choice", "question": "What is your biggest ____? (Debilidad).", "options": ["weakness", "weak", "bad", "problem"], "correct_answer": "weakness", "explanation": "Weakness = debilidad (punto a mejorar)." },
+        { "id": "b1-19-q4", "type": "quiz_choice", "question": "We interviewed five ____ for the position. (Candidatos).", "options": ["candidates", "people", "workers", "applies"], "correct_answer": "candidates", "explanation": "Candidates (o applicants) = candidatos." },
+        { "id": "b1-19-q5", "type": "quiz_choice", "question": "We decided to ____ him because of his excellent resume. (Contratar).", "options": ["hire", "fire", "rent", "take"], "correct_answer": "hire", "explanation": "Hire = contratar." },
+        { "id": "b1-19-q6", "type": "quiz_choice", "question": "Unfortunately, the company had to ____ 50 employees. (Despedir).", "options": ["fire", "hire", "resign", "quit"], "correct_answer": "fire", "explanation": "Fire = despedir (también se usa 'lay off' si es por recorte de personal)." },
+        { "id": "b1-19-q7", "type": "quiz_choice", "question": "He decided to ____ from his job to travel the world. (Renunciar).", "options": ["resign", "fire", "hire", "retire"], "correct_answer": "resign", "explanation": "Resign = renunciar voluntariamente. Retire es jubilarse." },
+        { "id": "b1-19-q8", "type": "quiz_choice", "question": "Why do you want to work for this ____? (Empresa).", "options": ["company", "office", "job", "work"], "correct_answer": "company", "explanation": "Company = empresa/compañía." },
+        { "id": "b1-19-q9", "type": "quiz_choice", "question": "I have five years of ____ in marketing. (Experiencia).", "options": ["experience", "experiencing", "work", "time"], "correct_answer": "experience", "explanation": "Experience = experiencia." },
+        { "id": "b1-19-q10", "type": "quiz_choice", "question": "What are your salary ____? (Expectativas).", "options": ["expectations", "hopes", "wishes", "dreams"], "correct_answer": "expectations", "explanation": "Salary expectations = expectativas salariales." },
+        { "id": "b1-19-q11", "type": "quiz_choice", "question": "She is the best ____ for the job. (Solicitante / Candidato).", "options": ["applicant", "apply", "worker", "human"], "correct_answer": "applicant", "explanation": "Applicant = solicitante (el que aplica al trabajo)." },
+        { "id": "b1-19-q12", "type": "quiz_choice", "question": "Please attach your ____ to the email. (Currículum).", "options": ["resume", "paper", "history", "record"], "correct_answer": "resume", "explanation": "Resume (o CV) = currículum." },
+        { "id": "b1-19-q13", "type": "quiz_choice", "question": "They are going to ____ new graduates from the university. (Reclutar).", "options": ["recruit", "catch", "find", "bring"], "correct_answer": "recruit", "explanation": "Recruit = reclutar." },
+        { "id": "b1-19-q14", "type": "quiz_choice", "question": "I am looking for a full-time ____. (Puesto / Posición).", "options": ["position", "sit", "place", "chair"], "correct_answer": "position", "explanation": "Position (o role) = puesto de trabajo." },
+        { "id": "b1-19-q15", "type": "quiz_choice", "question": "Do you have any ____ for me? (Preguntas).", "options": ["questions", "doubts", "problems", "talks"], "correct_answer": "questions", "explanation": "En entrevistas siempre preguntan: Do you have any questions for us?" },
+        { "id": "b1-19-q16", "type": "quiz_choice", "question": "I am a quick ____ and I adapt easily. (Aprendiz).", "options": ["learner", "learn", "student", "study"], "correct_answer": "learner", "explanation": "Quick learner = alguien que aprende rápido." },
+        { "id": "b1-19-q17", "type": "quiz_choice", "question": "We offer excellent benefits and health ____. (Seguro).", "options": ["insurance", "assure", "secure", "care"], "correct_answer": "insurance", "explanation": "Health insurance = seguro médico." },
+        { "id": "b1-19-q18", "type": "quiz_choice", "question": "Are you willing to ____? (Mudarte / Trasladarte de ciudad).", "options": ["relocate", "move house", "travel", "go"], "correct_answer": "relocate", "explanation": "Relocate = reubicarse/mudarse por trabajo." },
+        { "id": "b1-19-q19", "type": "quiz_choice", "question": "I have excellent communication ____. (Habilidades).", "options": ["skills", "powers", "talents", "ways"], "correct_answer": "skills", "explanation": "Skills = habilidades." },
+        { "id": "b1-19-q20", "type": "quiz_choice", "question": "We will ____ you next week with our decision. (Contactar).", "options": ["contact", "call", "say", "talk"], "correct_answer": "contact", "explanation": "Contact you = contactarte." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de entrevista correcta.",
+      "questions": [
+        { "id": "b1-19-f1", "type": "fill_input", "question": "Your educational ____. (Antecedentes con B)", "correct_answer": "background", "explanation": "background." },
+        { "id": "b1-19-f2", "type": "fill_input", "question": "Your greatest ____. (Fortaleza con S)", "correct_answer": "strength", "explanation": "strength." },
+        { "id": "b1-19-f3", "type": "fill_input", "question": "Your biggest ____. (Debilidad con W)", "correct_answer": "weakness", "explanation": "weakness." },
+        { "id": "b1-19-f4", "type": "fill_input", "question": "We want to ____ you. (Contratar con H)", "correct_answer": "hire", "explanation": "hire." },
+        { "id": "b1-19-f5", "type": "fill_input", "question": "He was ____. (Despedido con F)", "correct_answer": "fired", "explanation": "fired." },
+        { "id": "b1-19-f6", "type": "fill_input", "question": "She wants to ____. (Renunciar con R)", "correct_answer": "resign", "explanation": "resign." },
+        { "id": "b1-19-f7", "type": "fill_input", "question": "Send your ____. (Currículum con R)", "correct_answer": "resume", "explanation": "resume." },
+        { "id": "b1-19-f8", "type": "fill_input", "question": "Salary ____. (Expectativas con E)", "correct_answer": "expectations", "explanation": "expectations." },
+        { "id": "b1-19-f9", "type": "fill_input", "question": "Communication ____. (Habilidades con S)", "correct_answer": "skills", "explanation": "skills." },
+        { "id": "b1-19-f10", "type": "fill_input", "question": "The best ____ for the job. (Candidato con C)", "correct_answer": "candidate", "explanation": "candidate." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Interview Match",
+      "pairs": [
+        {"id": "b1-19-p1", "source": "Background", "target": "Experiencia previa / Antecedentes"},
+        {"id": "b1-19-p2", "source": "Strengths", "target": "Fortalezas"},
+        {"id": "b1-19-p3", "source": "Weaknesses", "target": "Debilidades"},
+        {"id": "b1-19-p4", "source": "Hire", "target": "Contratar"},
+        {"id": "b1-19-p5", "source": "Fire / Let go", "target": "Despedir"},
+        {"id": "b1-19-p6", "source": "Resign", "target": "Renunciar voluntariamente"},
+        {"id": "b1-19-p7", "source": "Candidate / Applicant", "target": "Candidato"},
+        {"id": "b1-19-p8", "source": "Resume", "target": "Currículum"},
+        {"id": "b1-19-p9", "source": "Salary expectations", "target": "Expectativas salariales"},
+        {"id": "b1-19-p10", "source": "Skills", "target": "Habilidades"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la pregunta/frase de entrevista.",
+      "questions": [
+        { "id": "b1-19-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Could you tell me about your background?", "options": ["Could you tell me about your background?", "Can you tell me about your background?", "Could you talk about your background?", "Would you tell me about your background?"], "correct_answer": "Could you tell me about your background?", "explanation": "Audio exacto." },
+        { "id": "b1-19-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What are your greatest strengths?", "options": ["What are your greatest strengths?", "What are your great strengths?", "What are your greatest skills?", "Where are your greatest strengths?"], "correct_answer": "What are your greatest strengths?", "explanation": "Audio exacto." },
+        { "id": "b1-19-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is your biggest weakness?", "options": ["What is your biggest weakness?", "What is your biggest problem?", "What is a big weakness?", "Where is your biggest weakness?"], "correct_answer": "What is your biggest weakness?", "explanation": "Audio exacto." },
+        { "id": "b1-19-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We decided to hire him.", "options": ["We decided to hire him.", "We decide to hire him.", "They decided to hire him.", "We decided to fire him."], "correct_answer": "We decided to hire him.", "explanation": "Audio exacto." },
+        { "id": "b1-19-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She decided to resign from her job.", "options": ["She decided to resign from her job.", "He decided to resign from his job.", "She decides to resign from her job.", "They decided to resign from the job."], "correct_answer": "She decided to resign from her job.", "explanation": "Audio exacto." },
+        { "id": "b1-19-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What are your salary expectations?", "options": ["What are your salary expectations?", "What are your salary hopes?", "What is your salary expectation?", "Where are your salary expectations?"], "correct_answer": "What are your salary expectations?", "explanation": "Audio exacto." },
+        { "id": "b1-19-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please attach your resume.", "options": ["Please attach your resume.", "Please send your resume.", "Please bring your resume.", "Attach your resume please."], "correct_answer": "Please attach your resume.", "explanation": "Audio exacto." },
+        { "id": "b1-19-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do you have any questions for me?", "options": ["Do you have any questions for me?", "Do you have any questions for us?", "Do you have a question for me?", "Does she have any questions for me?"], "correct_answer": "Do you have any questions for me?", "explanation": "Audio exacto." },
+        { "id": "b1-19-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am a quick learner.", "options": ["I am a quick learner.", "I am a fast learner.", "He is a quick learner.", "I am a good learner."], "correct_answer": "I am a quick learner.", "explanation": "Audio exacto." },
+        { "id": "b1-19-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will contact you next week.", "options": ["We will contact you next week.", "I will contact you next week.", "They will contact you next week.", "We contact you next week."], "correct_answer": "We will contact you next week.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "a1-73",
+  "title": "There is / There are (Affirmative)",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "There is", "There are"],
+  "completion_message": "¡Excelente! Has aprendido a describir qué cosas existen o se encuentran en un lugar usando 'There is' y 'There are'.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: There is / There are",
+      "parts": [
+        { "visual": "'There is' significa 'Hay' para cosas en singular o incontables: There is a meeting. There is some water.", "audio": "There is means there exists for singular or uncountable things: There is a meeting. There is some water." },
+        { "visual": "'There are' significa 'Hay' para cosas en plural: There are two computers. There are many people.", "audio": "There are means there exist for plural things: There are two computers. There are many people." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige 'There is' o 'There are' según corresponda.",
+      "questions": [
+        { "id": "a1-73-q1", "type": "quiz_choice", "question": "____ a meeting at 10 AM.", "options": ["There is", "There are", "They are", "It is"], "correct_answer": "There is", "explanation": "Una reunión (singular) -> There is." },
+        { "id": "a1-73-q2", "type": "quiz_choice", "question": "____ two computers on the desk.", "options": ["There are", "There is", "They are", "Are there"], "correct_answer": "There are", "explanation": "Dos computadoras (plural) -> There are." },
+        { "id": "a1-73-q3", "type": "quiz_choice", "question": "____ some coffee in the kitchen.", "options": ["There is", "There are", "It is", "They are"], "correct_answer": "There is", "explanation": "Café (incontable) usa There is." },
+        { "id": "a1-73-q4", "type": "quiz_choice", "question": "____ five people in the team.", "options": ["There are", "There is", "They are", "It is"], "correct_answer": "There are", "explanation": "Cinco personas (plural) -> There are." },
+        { "id": "a1-73-q5", "type": "quiz_choice", "question": "____ a problem with the printer.", "options": ["There is", "There are", "It is", "They are"], "correct_answer": "There is", "explanation": "Un problema (singular) -> There is." },
+        { "id": "a1-73-q6", "type": "quiz_choice", "question": "____ many chairs in the room.", "options": ["There are", "There is", "They are", "Are there"], "correct_answer": "There are", "explanation": "Muchas sillas (plural) -> There are." },
+        { "id": "a1-73-q7", "type": "quiz_choice", "question": "____ an email from the boss.", "options": ["There is", "There are", "They are", "It is"], "correct_answer": "There is", "explanation": "Un correo (singular) -> There is." },
+        { "id": "a1-73-q8", "type": "quiz_choice", "question": "____ some documents to sign.", "options": ["There are", "There is", "They are", "Is there"], "correct_answer": "There are", "explanation": "Documentos (plural) -> There are." },
+        { "id": "a1-73-q9", "type": "quiz_choice", "question": "____ a lot of time left.", "options": ["There is", "There are", "It is", "They are"], "correct_answer": "There is", "explanation": "Tiempo (incontable) -> There is." },
+        { "id": "a1-73-q10", "type": "quiz_choice", "question": "____ new employees starting today.", "options": ["There are", "There is", "They are", "Are there"], "correct_answer": "There are", "explanation": "Nuevos empleados (plural) -> There are." },
+        { "id": "a1-73-q11", "type": "quiz_choice", "question": "____ some water on the floor.", "options": ["There is", "There are", "It is", "They are"], "correct_answer": "There is", "explanation": "Agua (incontable) -> There is." },
+        { "id": "a1-73-q12", "type": "quiz_choice", "question": "____ a new message for you.", "options": ["There is", "There are", "It is", "They are"], "correct_answer": "There is", "explanation": "Un mensaje (singular) -> There is." },
+        { "id": "a1-73-q13", "type": "quiz_choice", "question": "____ three managers in this department.", "options": ["There are", "There is", "They are", "It is"], "correct_answer": "There are", "explanation": "Tres gerentes (plural) -> There are." },
+        { "id": "a1-73-q14", "type": "quiz_choice", "question": "____ a lot of noise outside.", "options": ["There is", "There are", "They are", "It is"], "correct_answer": "There is", "explanation": "Ruido (incontable) -> There is." },
+        { "id": "a1-73-q15", "type": "quiz_choice", "question": "____ some pens in the drawer.", "options": ["There are", "There is", "They are", "Are there"], "correct_answer": "There are", "explanation": "Bolígrafos (plural) -> There are." },
+        { "id": "a1-73-q16", "type": "quiz_choice", "question": "____ a presentation tomorrow.", "options": ["There is", "There are", "It is", "They are"], "correct_answer": "There is", "explanation": "Una presentación (singular) -> There is." },
+        { "id": "a1-73-q17", "type": "quiz_choice", "question": "____ some good news.", "options": ["There is", "There are", "They are", "It is"], "correct_answer": "There is", "explanation": "News (noticias) en inglés es incontable y va con singular -> There is." },
+        { "id": "a1-73-q18", "type": "quiz_choice", "question": "____ ten boxes in the storage room.", "options": ["There are", "There is", "They are", "Is there"], "correct_answer": "There are", "explanation": "Diez cajas (plural) -> There are." },
+        { "id": "a1-73-q19", "type": "quiz_choice", "question": "____ a mistake in this report.", "options": ["There is", "There are", "It is", "They are"], "correct_answer": "There is", "explanation": "Un error (singular) -> There is." },
+        { "id": "a1-73-q20", "type": "quiz_choice", "question": "____ a lot of people in the cafeteria.", "options": ["There are", "There is", "It is", "They are"], "correct_answer": "There are", "explanation": "People (personas) es plural -> There are." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe is o are para completar la oración afirmativa.",
+      "questions": [
+        { "id": "a1-73-f1", "type": "fill_input", "question": "There ____ a meeting (Hay, singular).", "correct_answer": "is", "explanation": "is." },
+        { "id": "a1-73-f2", "type": "fill_input", "question": "There ____ two computers (Hay, plural).", "correct_answer": "are", "explanation": "are." },
+        { "id": "a1-73-f3", "type": "fill_input", "question": "There ____ some coffee (Hay, incontable).", "correct_answer": "is", "explanation": "is." },
+        { "id": "a1-73-f4", "type": "fill_input", "question": "There ____ five people (Hay, plural).", "correct_answer": "are", "explanation": "are." },
+        { "id": "a1-73-f5", "type": "fill_input", "question": "There ____ a problem (Hay, singular).", "correct_answer": "is", "explanation": "is." },
+        { "id": "a1-73-f6", "type": "fill_input", "question": "There ____ many chairs (Hay, plural).", "correct_answer": "are", "explanation": "are." },
+        { "id": "a1-73-f7", "type": "fill_input", "question": "There ____ an email (Hay, singular).", "correct_answer": "is", "explanation": "is." },
+        { "id": "a1-73-f8", "type": "fill_input", "question": "There ____ some pens (Hay, plural).", "correct_answer": "are", "explanation": "are." },
+        { "id": "a1-73-f9", "type": "fill_input", "question": "There ____ some water (Hay, incontable).", "correct_answer": "is", "explanation": "is." },
+        { "id": "a1-73-f10", "type": "fill_input", "question": "There ____ a mistake (Hay, singular).", "correct_answer": "is", "explanation": "is." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-73-p1", "source": "There is", "target": "Hay (singular/incontable)"},
+        {"id": "a1-73-p2", "source": "There are", "target": "Hay (plural)"},
+        {"id": "a1-73-p3", "source": "There is a meeting", "target": "Hay una reunión"},
+        {"id": "a1-73-p4", "source": "There are two computers", "target": "Hay dos computadoras"},
+        {"id": "a1-73-p5", "source": "There is some coffee", "target": "Hay algo de café"},
+        {"id": "a1-73-p6", "source": "There are many people", "target": "Hay muchas personas"},
+        {"id": "a1-73-p7", "source": "There is a problem", "target": "Hay un problema"},
+        {"id": "a1-73-p8", "source": "There are some pens", "target": "Hay algunos bolígrafos"},
+        {"id": "a1-73-p9", "source": "There is an email", "target": "Hay un correo"},
+        {"id": "a1-73-p10", "source": "There is some news", "target": "Hay algunas noticias"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-73-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is a meeting.", "options": ["There is a meeting.", "There are a meeting.", "It is a meeting.", "There's the meeting."], "correct_answer": "There is a meeting.", "explanation": "Audio exacto." },
+        { "id": "a1-73-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There are two computers.", "options": ["There are two computers.", "There is two computers.", "They are two computers.", "Are there two computers?"], "correct_answer": "There are two computers.", "explanation": "Audio exacto." },
+        { "id": "a1-73-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is some coffee.", "options": ["There is some coffee.", "There are some coffee.", "Is there some coffee?", "There is a coffee."], "correct_answer": "There is some coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-73-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There are five people.", "options": ["There are five people.", "There is five people.", "There are some people.", "They are five people."], "correct_answer": "There are five people.", "explanation": "Audio exacto." },
+        { "id": "a1-73-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is a problem.", "options": ["There is a problem.", "There are a problem.", "It is a problem.", "There is the problem."], "correct_answer": "There is a problem.", "explanation": "Audio exacto." },
+        { "id": "a1-73-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There are many chairs.", "options": ["There are many chairs.", "There is many chairs.", "They are many chairs.", "Are there many chairs?"], "correct_answer": "There are many chairs.", "explanation": "Audio exacto." },
+        { "id": "a1-73-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is an email.", "options": ["There is an email.", "There are an email.", "It is an email.", "There is a email."], "correct_answer": "There is an email.", "explanation": "Audio exacto." },
+        { "id": "a1-73-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There are some pens.", "options": ["There are some pens.", "There is some pens.", "They are some pens.", "Are there some pens?"], "correct_answer": "There are some pens.", "explanation": "Audio exacto." },
+        { "id": "a1-73-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is some water.", "options": ["There is some water.", "There are some water.", "Is there some water?", "There is a water."], "correct_answer": "There is some water.", "explanation": "Audio exacto." },
+        { "id": "a1-73-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is a mistake.", "options": ["There is a mistake.", "There are a mistake.", "It is a mistake.", "Is there a mistake?"], "correct_answer": "There is a mistake.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

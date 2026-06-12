@@ -1,0 +1,101 @@
+{
+  "id": "a1-44",
+  "title": "Making an Appointment",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Communication", "Appointments"],
+  "completion_message": "¡Excelente! Ahora eres capaz de agendar y acordar reuniones en inglés de forma natural.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Agendar una Reunión",
+      "parts": [
+        { "visual": "Para invitar a alguien, pregunta: 'Are you free on Monday?' (¿Estás libre el lunes?).", "audio": "To invite someone, ask: Are you free on Monday?" },
+        { "visual": "Para proponer una hora: 'Let's meet at 10 AM' (Reunámonos a las 10 AM) o 'How about 2 PM?' (¿Qué tal a las 2 PM?).", "audio": "To propose a time: Let's meet at 10 AM or How about 2 PM?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la frase correcta para agendar.",
+      "questions": [
+        { "id": "a1-44-q1", "type": "quiz_choice", "question": "Are you ____ on Monday?", "options": ["free", "freedom", "freely", "freeze"], "correct_answer": "free", "explanation": "¿Estás libre?" },
+        { "id": "a1-44-q2", "type": "quiz_choice", "question": "____ meet at 10 AM.", "options": ["Let's", "Lets", "Let", "Leave"], "correct_answer": "Let's", "explanation": "Let's meet (Reunámonos)." },
+        { "id": "a1-44-q3", "type": "quiz_choice", "question": "How ____ 2 PM?", "options": ["about", "is", "for", "with"], "correct_answer": "about", "explanation": "¿Qué tal a las 2 PM? (How about...)." },
+        { "id": "a1-44-q4", "type": "quiz_choice", "question": "What ____ works for you?", "options": ["time", "hour", "clock", "watch"], "correct_answer": "time", "explanation": "¿A qué hora te viene bien?" },
+        { "id": "a1-44-q5", "type": "quiz_choice", "question": "I am ____ on Tuesday.", "options": ["busy", "business", "bus", "busily"], "correct_answer": "busy", "explanation": "Estoy ocupado (busy)." },
+        { "id": "a1-44-q6", "type": "quiz_choice", "question": "Can we ____ tomorrow?", "options": ["meet", "meeting", "met", "meets"], "correct_answer": "meet", "explanation": "Verbo en forma base después de 'Can'." },
+        { "id": "a1-44-q7", "type": "quiz_choice", "question": "That time ____ for me.", "options": ["works", "work", "working", "worked"], "correct_answer": "works", "explanation": "Esa hora me viene bien (That time works para it)." },
+        { "id": "a1-44-q8", "type": "quiz_choice", "question": "I have an ____ with the dentist.", "options": ["appointment", "appoint", "appointing", "date"], "correct_answer": "appointment", "explanation": "Cita (appointment)." },
+        { "id": "a1-44-q9", "type": "quiz_choice", "question": "See you ____ Monday.", "options": ["on", "in", "at", "to"], "correct_answer": "on", "explanation": "On Monday." },
+        { "id": "a1-44-q10", "type": "quiz_choice", "question": "Let's schedule a ____.", "options": ["meeting", "meet", "met", "meets"], "correct_answer": "meeting", "explanation": "Programemos una reunión (meeting)." },
+        { "id": "a1-44-q11", "type": "quiz_choice", "question": "Are you ____ next week?", "options": ["available", "avail", "availability", "availing"], "correct_answer": "available", "explanation": "¿Estás disponible?" },
+        { "id": "a1-44-q12", "type": "quiz_choice", "question": "I need to ____ our meeting.", "options": ["cancel", "cancels", "canceling", "canceled"], "correct_answer": "cancel", "explanation": "Cancelar." },
+        { "id": "a1-44-q13", "type": "quiz_choice", "question": "Can we ____ it for Friday?", "options": ["reschedule", "schedule", "meeting", "free"], "correct_answer": "reschedule", "explanation": "Reagendar (reschedule)." },
+        { "id": "a1-44-q14", "type": "quiz_choice", "question": "Sorry, I am completely ____ today.", "options": ["booked", "book", "booking", "books"], "correct_answer": "booked", "explanation": "Completamente ocupado / agendado (booked)." },
+        { "id": "a1-44-q15", "type": "quiz_choice", "question": "Is 3 PM ____ for you?", "options": ["okay", "okays", "goodly", "fine"], "correct_answer": "okay", "explanation": "Is 3 PM okay? (¿Está bien a las 3?)." },
+        { "id": "a1-44-q16", "type": "quiz_choice", "question": "Yes, 3 PM is ____.", "options": ["perfect", "perfectly", "perfection", "perfects"], "correct_answer": "perfect", "explanation": "Es perfecto." },
+        { "id": "a1-44-q17", "type": "quiz_choice", "question": "Let's talk ____ lunch.", "options": ["over", "under", "in", "on"], "correct_answer": "over", "explanation": "Hablemos durante el almuerzo (over lunch)." },
+        { "id": "a1-44-q18", "type": "quiz_choice", "question": "I'll send you a calendar ____.", "options": ["invite", "invites", "inviting", "invited"], "correct_answer": "invite", "explanation": "Invitación de calendario (calendar invite)." },
+        { "id": "a1-44-q19", "type": "quiz_choice", "question": "Please ____ the invitation.", "options": ["accept", "accepts", "accepting", "accepted"], "correct_answer": "accept", "explanation": "Aceptar." },
+        { "id": "a1-44-q20", "type": "quiz_choice", "question": "Let me ____ my calendar.", "options": ["check", "checks", "checking", "checked"], "correct_answer": "check", "explanation": "Déjame revisar (check)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta.",
+      "questions": [
+        { "id": "a1-44-f1", "type": "fill_input", "question": "Are you ____? (Libre).", "correct_answer": "free", "explanation": "Free." },
+        { "id": "a1-44-f2", "type": "fill_input", "question": "____ meet at 10 (Reunámonos).", "correct_answer": "Let's", "explanation": "Let's." },
+        { "id": "a1-44-f3", "type": "fill_input", "question": "How ____ 2 PM? (Qué tal).", "correct_answer": "about", "explanation": "About." },
+        { "id": "a1-44-f4", "type": "fill_input", "question": "I am ____ (Ocupado).", "correct_answer": "busy", "explanation": "Busy." },
+        { "id": "a1-44-f5", "type": "fill_input", "question": "Can we ____ tomorrow? (Reunirnos).", "correct_answer": "meet", "explanation": "Meet." },
+        { "id": "a1-44-f6", "type": "fill_input", "question": "That time ____ (Funciona/viene bien).", "correct_answer": "works", "explanation": "Works." },
+        { "id": "a1-44-f7", "type": "fill_input", "question": "An ____ (Cita).", "correct_answer": "appointment", "explanation": "Appointment." },
+        { "id": "a1-44-f8", "type": "fill_input", "question": "Are you ____? (Disponible).", "correct_answer": "available", "explanation": "Available." },
+        { "id": "a1-44-f9", "type": "fill_input", "question": "I need to ____ (Cancelar).", "correct_answer": "cancel", "explanation": "Cancel." },
+        { "id": "a1-44-f10", "type": "fill_input", "question": "Let me ____ my calendar (Revisar).", "correct_answer": "check", "explanation": "Check." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-44-p1", "source": "Free", "target": "Libre"},
+        {"id": "a1-44-p2", "source": "Busy", "target": "Ocupado"},
+        {"id": "a1-44-p3", "source": "Let's meet", "target": "Reunámonos"},
+        {"id": "a1-44-p4", "source": "How about...?", "target": "¿Qué tal...?"},
+        {"id": "a1-44-p5", "source": "Appointment", "target": "Cita"},
+        {"id": "a1-44-p6", "source": "Available", "target": "Disponible"},
+        {"id": "a1-44-p7", "source": "Cancel", "target": "Cancelar"},
+        {"id": "a1-44-p8", "source": "Reschedule", "target": "Reagendar"},
+        {"id": "a1-44-p9", "source": "Booked", "target": "Ocupado / Lleno"},
+        {"id": "a1-44-p10", "source": "Check", "target": "Revisar"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-44-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Are you free on Monday?", "options": ["Are you free on Monday?", "Are you busy on Monday?", "Are you free on Friday?", "Are you available on Monday?"], "correct_answer": "Are you free on Monday?", "explanation": "Audio exacto." },
+        { "id": "a1-44-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's meet at ten.", "options": ["Let's meet at ten.", "Let's meet at two.", "Let's meet tomorrow.", "Let's eat at ten."], "correct_answer": "Let's meet at ten.", "explanation": "Audio exacto." },
+        { "id": "a1-44-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How about two PM?", "options": ["How about two PM?", "How about three PM?", "What about two PM?", "How about tomorrow?"], "correct_answer": "How about two PM?", "explanation": "Audio exacto." },
+        { "id": "a1-44-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am busy.", "options": ["I am busy.", "I am free.", "He is busy.", "I am booking."], "correct_answer": "I am busy.", "explanation": "Audio exacto." },
+        { "id": "a1-44-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "That time works for me.", "options": ["That time works for me.", "That time works for you.", "This time works for me.", "The time works for me."], "correct_answer": "That time works for me.", "explanation": "Audio exacto." },
+        { "id": "a1-44-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have an appointment.", "options": ["I have an appointment.", "I had an appointment.", "He has an appointment.", "I have a meeting."], "correct_answer": "I have an appointment.", "explanation": "Audio exacto." },
+        { "id": "a1-44-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Are you available?", "options": ["Are you available?", "Is he available?", "Are you busy?", "Are you free?"], "correct_answer": "Are you available?", "explanation": "Audio exacto." },
+        { "id": "a1-44-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need to cancel.", "options": ["I need to cancel.", "I need to reschedule.", "He needs to cancel.", "I need to check."], "correct_answer": "I need to cancel.", "explanation": "Audio exacto." },
+        { "id": "a1-44-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let me check my calendar.", "options": ["Let me check my calendar.", "Let me check the calendar.", "Let him check his calendar.", "I check my calendar."], "correct_answer": "Let me check my calendar.", "explanation": "Audio exacto." },
+        { "id": "a1-44-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am completely booked.", "options": ["I am completely booked.", "I am fully booked.", "He is completely booked.", "I am completely busy."], "correct_answer": "I am completely booked.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

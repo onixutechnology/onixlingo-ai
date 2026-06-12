@@ -1,0 +1,101 @@
+{
+  "id": "a2-33",
+  "title": "Online Meetings",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Vocabulary", "Meetings", "Online", "Business"],
+  "completion_message": "¡Perfecto! Ya estás preparado para manejar cualquier situación en una reunión virtual en inglés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Reuniones Virtuales (Online Meetings)",
+      "parts": [
+        { "visual": "Problemas de audio/video: You are on mute (Estás en silencio). The connection is bad (La conexión es mala). Your screen is frozen (Tu pantalla está congelada). Background noise (Ruido de fondo).", "audio": "Audio and video issues. You are on mute. The connection is bad. Your screen is frozen. Background noise." },
+        { "visual": "Acciones comunes: Share my screen (Compartir mi pantalla). Turn on/off the camera (Encender/apagar la cámara). Join the meeting (Unirse a la reunión). Send the link (Enviar el enlace).", "audio": "Common actions. Share my screen. Turn on or off the camera. Join the meeting. Send the link." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra o frase correcta para reuniones virtuales.",
+      "questions": [
+        { "id": "a2-33-q1", "type": "quiz_choice", "question": "I can't hear you. I think you are on ____. (En silencio/muteado).", "options": ["mute", "quiet", "silent", "silence"], "correct_answer": "mute", "explanation": "You are on mute = tienes el micrófono silenciado." },
+        { "id": "a2-33-q2", "type": "quiz_choice", "question": "Let me ____ my screen with you. (Compartir).", "options": ["share", "show", "give", "send"], "correct_answer": "share", "explanation": "Share my screen = compartir mi pantalla." },
+        { "id": "a2-33-q3", "type": "quiz_choice", "question": "Please turn ____ your camera. I want to see you. (Encender).", "options": ["on", "off", "up", "down"], "correct_answer": "on", "explanation": "Turn on = encender." },
+        { "id": "a2-33-q4", "type": "quiz_choice", "question": "There is a lot of background ____. Please mute your mic. (Ruido).", "options": ["noise", "sound", "music", "voices"], "correct_answer": "noise", "explanation": "Background noise = ruido de fondo." },
+        { "id": "a2-33-q5", "type": "quiz_choice", "question": "I think your screen is ____. You are not moving. (Congelada).", "options": ["frozen", "broken", "stopped", "cold"], "correct_answer": "frozen", "explanation": "Frozen = congelado (cuando el video se pausa por mala conexión)." },
+        { "id": "a2-33-q6", "type": "quiz_choice", "question": "The ____ is very bad today. I can't hear you well. (Conexión).", "options": ["connection", "connect", "internet", "line"], "correct_answer": "connection", "explanation": "The connection = la conexión a internet." },
+        { "id": "a2-33-q7", "type": "quiz_choice", "question": "Can you send me the ____ to the meeting? (Enlace/Link).", "options": ["link", "address", "button", "page"], "correct_answer": "link", "explanation": "Send the link = enviar el enlace (URL)." },
+        { "id": "a2-33-q8", "type": "quiz_choice", "question": "I can't ____ the meeting. It asks for a password. (Unirme a).", "options": ["join", "enter", "go", "attend"], "correct_answer": "join", "explanation": "Join a meeting = unirse a una reunión." },
+        { "id": "a2-33-q9", "type": "quiz_choice", "question": "Could you ____ that, please? I lost my connection for a second. (Repetir).", "options": ["repeat", "say", "tell", "speak"], "correct_answer": "repeat", "explanation": "Repeat = repetir." },
+        { "id": "a2-33-q10", "type": "quiz_choice", "question": "I will put the document in the ____ box. (Caja de chat).", "options": ["chat", "message", "text", "write"], "correct_answer": "chat", "explanation": "Chat box = la ventana/caja del chat de la videollamada." },
+        { "id": "a2-33-q11", "type": "quiz_choice", "question": "You are breaking ____. I can only hear parts of your sentence. (Te estás cortando).", "options": ["up", "down", "off", "out"], "correct_answer": "up", "explanation": "Breaking up = cortarse (el audio de la llamada)." },
+        { "id": "a2-33-q12", "type": "quiz_choice", "question": "Wait a minute, I need to ____ my headphones. (Conectar/Enchufar).", "options": ["plug in", "put in", "turn on", "turn in"], "correct_answer": "plug in", "explanation": "Plug in = conectar/enchufar (auriculares, cargador)." },
+        { "id": "a2-33-q13", "type": "quiz_choice", "question": "Can everyone ____ my screen? (Ver).", "options": ["see", "look", "watch", "view"], "correct_answer": "see", "explanation": "Can you see my screen? = ¿pueden ver mi pantalla?" },
+        { "id": "a2-33-q14", "type": "quiz_choice", "question": "I'm going to ____ the meeting now so we can review it later. (Grabar).", "options": ["record", "save", "video", "keep"], "correct_answer": "record", "explanation": "Record = grabar (en video/audio)." },
+        { "id": "a2-33-q15", "type": "quiz_choice", "question": "Who is the ____ of this meeting? They need to let me in. (Anfitrión).", "options": ["host", "boss", "leader", "owner"], "correct_answer": "host", "explanation": "Host = anfitrión (quien creó la reunión en Zoom/Teams)." },
+        { "id": "a2-33-q16", "type": "quiz_choice", "question": "Please ____ your hand if you have a question. (Levantar).", "options": ["raise", "rise", "lift", "put"], "correct_answer": "raise", "explanation": "Raise your hand = levantar la mano (física o virtualmente)." },
+        { "id": "a2-33-q17", "type": "quiz_choice", "question": "I have to jump to another ____ now. Bye! (Llamada/Reunión).", "options": ["call", "phone", "ring", "talk"], "correct_answer": "call", "explanation": "Jump to another call = saltar a otra llamada (reunión)." },
+        { "id": "a2-33-q18", "type": "quiz_choice", "question": "We are waiting for John to ____. (Conectarse/Entrar).", "options": ["log in", "log out", "log on", "sign out"], "correct_answer": "log in", "explanation": "Log in = iniciar sesión / conectarse." },
+        { "id": "a2-33-q19", "type": "quiz_choice", "question": "My internet is very ____ today. (Lento).", "options": ["slow", "low", "bad", "late"], "correct_answer": "slow", "explanation": "Slow = lento." },
+        { "id": "a2-33-q20", "type": "quiz_choice", "question": "I got ____ off the meeting. Let me join again. (Desconectado/Echado).", "options": ["kicked", "thrown", "pushed", "pulled"], "correct_answer": "kicked", "explanation": "I got kicked off = me desconectó (el sistema me echó)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta para la videollamada.",
+      "questions": [
+        { "id": "a2-33-f1", "type": "fill_input", "question": "You are on ____. (En silencio)", "correct_answer": "mute", "explanation": "mute." },
+        { "id": "a2-33-f2", "type": "fill_input", "question": "Let me ____ my screen. (Compartir)", "correct_answer": "share", "explanation": "share." },
+        { "id": "a2-33-f3", "type": "fill_input", "question": "Turn ____ your camera. (Encender)", "correct_answer": "on", "explanation": "on." },
+        { "id": "a2-33-f4", "type": "fill_input", "question": "There is background ____. (Ruido)", "correct_answer": "noise", "explanation": "noise." },
+        { "id": "a2-33-f5", "type": "fill_input", "question": "Your video is ____. (Congelado)", "correct_answer": "frozen", "explanation": "frozen." },
+        { "id": "a2-33-f6", "type": "fill_input", "question": "The ____ is bad today. (Conexión)", "correct_answer": "connection", "explanation": "connection." },
+        { "id": "a2-33-f7", "type": "fill_input", "question": "Please send the ____. (Enlace/Link)", "correct_answer": "link", "explanation": "link." },
+        { "id": "a2-33-f8", "type": "fill_input", "question": "I can't ____ the meeting. (Unirme)", "correct_answer": "join", "explanation": "join." },
+        { "id": "a2-33-f9", "type": "fill_input", "question": "You are breaking ____. (Cortándote - con up)", "correct_answer": "up", "explanation": "up." },
+        { "id": "a2-33-f10", "type": "fill_input", "question": "I will ____ the meeting. (Grabar)", "correct_answer": "record", "explanation": "record." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-33-p1", "source": "You are on mute", "target": "Estás en silencio"},
+        {"id": "a2-33-p2", "source": "Share my screen", "target": "Compartir mi pantalla"},
+        {"id": "a2-33-p3", "source": "Turn on camera", "target": "Encender la cámara"},
+        {"id": "a2-33-p4", "source": "Background noise", "target": "Ruido de fondo"},
+        {"id": "a2-33-p5", "source": "Screen is frozen", "target": "La pantalla está congelada"},
+        {"id": "a2-33-p6", "source": "Bad connection", "target": "Mala conexión"},
+        {"id": "a2-33-p7", "source": "Send the link", "target": "Enviar el enlace"},
+        {"id": "a2-33-p8", "source": "Join the meeting", "target": "Unirse a la reunión"},
+        {"id": "a2-33-p9", "source": "You are breaking up", "target": "Te estás cortando (audio)"},
+        {"id": "a2-33-p10", "source": "Record the meeting", "target": "Grabar la reunión"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta sobre videollamadas.",
+      "questions": [
+        { "id": "a2-33-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You are on mute.", "options": ["You are on mute.", "You are mute.", "You put on mute.", "Are you on mute?"], "correct_answer": "You are on mute.", "explanation": "Audio exacto." },
+        { "id": "a2-33-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let me share my screen.", "options": ["Let me share my screen.", "I will share my screen.", "Can I share my screen?", "Let me show my screen."], "correct_answer": "Let me share my screen.", "explanation": "Audio exacto." },
+        { "id": "a2-33-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please turn on your camera.", "options": ["Please turn on your camera.", "Turn on your camera.", "Please turn off your camera.", "Can you turn on your camera?"], "correct_answer": "Please turn on your camera.", "explanation": "Audio exacto." },
+        { "id": "a2-33-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is a lot of background noise.", "options": ["There is a lot of background noise.", "There is some background noise.", "We hear background noise.", "I hear a lot of background noise."], "correct_answer": "There is a lot of background noise.", "explanation": "Audio exacto." },
+        { "id": "a2-33-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Your screen is frozen.", "options": ["Your screen is frozen.", "My screen is frozen.", "The screen is frozen.", "Your video is frozen."], "correct_answer": "Your screen is frozen.", "explanation": "Audio exacto." },
+        { "id": "a2-33-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The connection is bad today.", "options": ["The connection is bad today.", "My connection is bad today.", "The connection is very bad today.", "The internet is bad today."], "correct_answer": "The connection is bad today.", "explanation": "Audio exacto." },
+        { "id": "a2-33-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you send me the link?", "options": ["Can you send me the link?", "Could you send me the link?", "Please send me the link.", "Can I have the link?"], "correct_answer": "Can you send me the link?", "explanation": "Audio exacto." },
+        { "id": "a2-33-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I can't join the meeting.", "options": ["I can't join the meeting.", "I cannot join the meeting.", "He can't join the meeting.", "We can't join the meeting."], "correct_answer": "I can't join the meeting.", "explanation": "Audio exacto." },
+        { "id": "a2-33-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You are breaking up.", "options": ["You are breaking up.", "You are breaking.", "Your audio is breaking up.", "We are breaking up."], "correct_answer": "You are breaking up.", "explanation": "Audio exacto." },
+        { "id": "a2-33-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am going to record the meeting.", "options": ["I am going to record the meeting.", "I will record the meeting.", "We are going to record the meeting.", "Please record the meeting."], "correct_answer": "I am going to record the meeting.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "b1-14",
+  "title": "Business Travel",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Vocabulary", "Travel", "Business"],
+  "completion_message": "¡Buen viaje! Has aprendido el vocabulario clave para manejar viajes de negocios y viáticos.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Viajes de Negocios (Business Travel)",
+      "parts": [
+        { "visual": "Términos en el aeropuerto: \n- Itinerary (Itinerario). \n- Boarding pass (Pase de abordar). \n- Layover (Escala). \n- Delay (Retraso). \nEj: My flight has a two-hour layover in Paris (Mi vuelo tiene una escala de dos horas en París).", "audio": "Airport terms. Itinerary. Boarding pass. Layover means a stop between flights. Delay means the flight is late. For example: My flight has a two-hour layover in Paris." },
+        { "visual": "Términos financieros del viaje: \n- Expenses (Viáticos / Gastos). \n- Receipt (Recibo / Factura). \n- Reimbursement (Reembolso de gastos). \nEj: Keep your receipts to get reimbursement for your travel expenses.", "audio": "Financial terms for travel. Expenses are the money you spend. Receipt is the paper proving you paid. Reimbursement is when the company pays you back. For example: Keep your receipts to get reimbursement for your travel expenses." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta relacionada con viajes de negocios.",
+      "questions": [
+        { "id": "b1-14-q1", "type": "quiz_choice", "question": "I need to check my ____ to see what time the meeting starts. (Itinerario).", "options": ["itinerary", "schedule", "plan", "time"], "correct_answer": "itinerary", "explanation": "Itinerary = itinerario (plan detallado del viaje)." },
+        { "id": "b1-14-q2", "type": "quiz_choice", "question": "Please show your ID and your ____ pass at the gate. (Pase de abordar).", "options": ["boarding", "board", "flight", "plane"], "correct_answer": "boarding", "explanation": "Boarding pass = pase de abordar." },
+        { "id": "b1-14-q3", "type": "quiz_choice", "question": "There is no direct flight. We have a ____ in Frankfurt. (Escala).", "options": ["layover", "stop", "break", "pause"], "correct_answer": "layover", "explanation": "Layover = escala (parada entre vuelos)." },
+        { "id": "b1-14-q4", "type": "quiz_choice", "question": "Due to bad weather, there is a two-hour ____. (Retraso).", "options": ["delay", "late", "wait", "slow"], "correct_answer": "delay", "explanation": "Delay = retraso / demora." },
+        { "id": "b1-14-q5", "type": "quiz_choice", "question": "Don't forget to keep all your ____ for the hotel and meals. (Recibos / Comprobantes).", "options": ["receipts", "papers", "tickets", "bills"], "correct_answer": "receipts", "explanation": "Receipts = recibos (comprobantes de pago)." },
+        { "id": "b1-14-q6", "type": "quiz_choice", "question": "You need to submit your travel ____ report by Friday. (Gastos / Viáticos).", "options": ["expenses", "money", "costs", "spend"], "correct_answer": "expenses", "explanation": "Travel expenses = gastos de viaje / viáticos." },
+        { "id": "b1-14-q7", "type": "quiz_choice", "question": "The company will process your ____ next week. (Reembolso de gastos).", "options": ["reimbursement", "refund", "pay", "return"], "correct_answer": "reimbursement", "explanation": "Reimbursement = reembolso (específicamente devolver el dinero que un empleado gastó de su bolsillo)." },
+        { "id": "b1-14-q8", "type": "quiz_choice", "question": "I need to book my ____ in advance to get a good price. (Vuelo).", "options": ["flight", "plane", "fly", "trip"], "correct_answer": "flight", "explanation": "Flight = vuelo." },
+        { "id": "b1-14-q9", "type": "quiz_choice", "question": "Our flight ____ from terminal 3. (Sale / Parte).", "options": ["departs", "leaves", "goes", "starts"], "correct_answer": "departs", "explanation": "Depart = partir / salir (término oficial de aeropuerto)." },
+        { "id": "b1-14-q10", "type": "quiz_choice", "question": "What is the estimated time of ____? (Llegada).", "options": ["arrival", "arrive", "coming", "landing"], "correct_answer": "arrival", "explanation": "Arrival = llegada." },
+        { "id": "b1-14-q11", "type": "quiz_choice", "question": "Did you ____ into the hotel yet? (Registrarte).", "options": ["check", "log", "sign", "enter"], "correct_answer": "check", "explanation": "Check in = registrarse (en hotel o aeropuerto)." },
+        { "id": "b1-14-q12", "type": "quiz_choice", "question": "I prefer an ____ seat so I can get up easily. (Asiento de pasillo).", "options": ["aisle", "window", "middle", "door"], "correct_answer": "aisle", "explanation": "Aisle (se pronuncia 'ail') = pasillo. Aisle seat = asiento de pasillo." },
+        { "id": "b1-14-q13", "type": "quiz_choice", "question": "I will wait for you at the baggage ____ area. (Reclamo de equipaje).", "options": ["claim", "take", "get", "bags"], "correct_answer": "claim", "explanation": "Baggage claim = reclamo de equipaje." },
+        { "id": "b1-14-q14", "type": "quiz_choice", "question": "Is breakfast included in the room ____? (Tarifa).", "options": ["rate", "price", "cost", "money"], "correct_answer": "rate", "explanation": "Room rate = tarifa de la habitación." },
+        { "id": "b1-14-q15", "type": "quiz_choice", "question": "The ____ desk will help you rent a car. (Recepción / Conserjería).", "options": ["concierge", "front", "help", "info"], "correct_answer": "concierge", "explanation": "Concierge = conserje (ayuda con reservas, autos, restaurantes en el hotel)." },
+        { "id": "b1-14-q16", "type": "quiz_choice", "question": "I only have one piece of ____ luggage. (Equipaje de mano).", "options": ["carry-on", "hand", "small", "take-on"], "correct_answer": "carry-on", "explanation": "Carry-on = equipaje de mano." },
+        { "id": "b1-14-q17", "type": "quiz_choice", "question": "The flight is ____. There are no seats left. (Sobrevendido).", "options": ["overbooked", "full", "completed", "packed"], "correct_answer": "overbooked", "explanation": "Overbooked = sobrevendido." },
+        { "id": "b1-14-q18", "type": "quiz_choice", "question": "I need to take a ____ to the airport. It's cheaper than a taxi. (Transporte del hotel/aeropuerto).", "options": ["shuttle", "bus", "car", "train"], "correct_answer": "shuttle", "explanation": "Shuttle = autobús de enlace / transporte de cortesía." },
+        { "id": "b1-14-q19", "type": "quiz_choice", "question": "We usually fly in ____ class to save money. (Clase turista/económica).", "options": ["economy", "business", "first", "tourist"], "correct_answer": "economy", "explanation": "Economy class = clase económica." },
+        { "id": "b1-14-q20", "type": "quiz_choice", "question": "I'm travelling on ____. (Por negocios).", "options": ["business", "work", "job", "company"], "correct_answer": "business", "explanation": "Travel on business = viajar por negocios." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de viajes de negocios.",
+      "questions": [
+        { "id": "b1-14-f1", "type": "fill_input", "question": "Check your ____. (Itinerario con I)", "correct_answer": "itinerary", "explanation": "itinerary." },
+        { "id": "b1-14-f2", "type": "fill_input", "question": "____ pass. (Pase de abordar)", "correct_answer": "Boarding", "explanation": "Boarding." },
+        { "id": "b1-14-f3", "type": "fill_input", "question": "A two-hour ____. (Escala con L)", "correct_answer": "layover", "explanation": "layover." },
+        { "id": "b1-14-f4", "type": "fill_input", "question": "Flight ____. (Retraso con D)", "correct_answer": "delay", "explanation": "delay." },
+        { "id": "b1-14-f5", "type": "fill_input", "question": "Keep your ____. (Recibos con R)", "correct_answer": "receipts", "explanation": "receipts." },
+        { "id": "b1-14-f6", "type": "fill_input", "question": "Travel ____. (Gastos/Viáticos con E)", "correct_answer": "expenses", "explanation": "expenses." },
+        { "id": "b1-14-f7", "type": "fill_input", "question": "Ask for a ____. (Reembolso de gastos con R)", "correct_answer": "reimbursement", "explanation": "reimbursement." },
+        { "id": "b1-14-f8", "type": "fill_input", "question": "Time of ____. (Llegada con A)", "correct_answer": "arrival", "explanation": "arrival." },
+        { "id": "b1-14-f9", "type": "fill_input", "question": "____ luggage. (Equipaje de mano - con guion)", "correct_answer": "carry-on", "explanation": "carry-on." },
+        { "id": "b1-14-f10", "type": "fill_input", "question": "____ seat. (Asiento de pasillo con A)", "correct_answer": "Aisle", "explanation": "Aisle." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Travel Match",
+      "pairs": [
+        {"id": "b1-14-p1", "source": "Itinerary", "target": "Itinerario"},
+        {"id": "b1-14-p2", "source": "Boarding pass", "target": "Pase de abordar"},
+        {"id": "b1-14-p3", "source": "Layover", "target": "Escala"},
+        {"id": "b1-14-p4", "source": "Delay", "target": "Retraso"},
+        {"id": "b1-14-p5", "source": "Receipt", "target": "Recibo / Comprobante"},
+        {"id": "b1-14-p6", "source": "Expenses", "target": "Viáticos / Gastos"},
+        {"id": "b1-14-p7", "source": "Reimbursement", "target": "Reembolso de gastos"},
+        {"id": "b1-14-p8", "source": "Carry-on", "target": "Equipaje de mano"},
+        {"id": "b1-14-p9", "source": "Aisle seat", "target": "Asiento de pasillo"},
+        {"id": "b1-14-p10", "source": "Shuttle", "target": "Transporte de enlace"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de viaje de negocios.",
+      "questions": [
+        { "id": "b1-14-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need to check my itinerary.", "options": ["I need to check my itinerary.", "I need to print my itinerary.", "We need to check the itinerary.", "I need to check my schedule."], "correct_answer": "I need to check my itinerary.", "explanation": "Audio exacto." },
+        { "id": "b1-14-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please show your boarding pass.", "options": ["Please show your boarding pass.", "Please show your passport.", "Please print your boarding pass.", "Please show me your boarding pass."], "correct_answer": "Please show your boarding pass.", "explanation": "Audio exacto." },
+        { "id": "b1-14-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have a layover in Frankfurt.", "options": ["We have a layover in Frankfurt.", "I have a layover in Frankfurt.", "They have a layover in Frankfurt.", "We had a layover in Frankfurt."], "correct_answer": "We have a layover in Frankfurt.", "explanation": "Audio exacto." },
+        { "id": "b1-14-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is a two-hour delay.", "options": ["There is a two-hour delay.", "There was a two-hour delay.", "There is a two-hour layover.", "We have a two-hour delay."], "correct_answer": "There is a two-hour delay.", "explanation": "Audio exacto." },
+        { "id": "b1-14-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Keep all your receipts.", "options": ["Keep all your receipts.", "Keep all your papers.", "Please keep all your receipts.", "Save all your receipts."], "correct_answer": "Keep all your receipts.", "explanation": "Audio exacto." },
+        { "id": "b1-14-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Submit your travel expenses.", "options": ["Submit your travel expenses.", "Submit your travel report.", "Send your travel expenses.", "Submit your expenses."], "correct_answer": "Submit your travel expenses.", "explanation": "Audio exacto." },
+        { "id": "b1-14-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company will process your reimbursement.", "options": ["The company will process your reimbursement.", "The company will process your refund.", "They will process your reimbursement.", "We will process your reimbursement."], "correct_answer": "The company will process your reimbursement.", "explanation": "Audio exacto." },
+        { "id": "b1-14-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I prefer an aisle seat.", "options": ["I prefer an aisle seat.", "I prefer a window seat.", "He prefers an aisle seat.", "I prefer the aisle seat."], "correct_answer": "I prefer an aisle seat.", "explanation": "Audio exacto." },
+        { "id": "b1-14-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I only have carry-on luggage.", "options": ["I only have carry-on luggage.", "I only have a carry-on.", "She only has carry-on luggage.", "I have carry-on luggage."], "correct_answer": "I only have carry-on luggage.", "explanation": "Audio exacto." },
+        { "id": "b1-14-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am traveling on business.", "options": ["I am traveling on business.", "I am traveling for business.", "He is traveling on business.", "We are traveling on business."], "correct_answer": "I am traveling on business.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

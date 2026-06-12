@@ -267,16 +267,16 @@ export default function ChessVsAIPage() {
       `}</style>
 
       {/* Header Corporativo */}
-      <nav className="h-14 border-b-2 border-[#3c1e0a] px-6 flex items-center justify-between bg-[#25140b] shadow-md z-40 text-[#ecd3b5] rounded-none">
+      <nav className="h-14 border-b-2 border-[#3c1e0a] px-6 flex items-center justify-between bg-[#25140b] shadow-none z-40 text-[#ecd3b5] rounded-none">
         <div className="flex items-center gap-4">
-          <button onClick={() => router.back()} className="p-2 hover:bg-[#361d0f] hover:text-white transition-colors text-[#ecd3b5] rounded-none">
+          <button onClick={() => router.back()} className="p-2 hover:bg-[#361d0f] hover:text-slate-900 transition-colors text-[#ecd3b5] rounded-none">
             <ChevronLeft size={20} />
           </button>
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 bg-[#3d200c] border border-[#502b16] flex items-center justify-center">
               <Swords size={14} className="text-[#ecd3b5]" />
             </div>
-            <h1 className="font-black text-[10px] tracking-[0.2em] uppercase text-white">Onix Chess <span className="text-amber-400 font-bold">Cognitive Lab</span></h1>
+            <h1 className="font-black text-[10px] tracking-[0.2em] uppercase text-slate-900">Onix Chess <span className="text-amber-400 font-bold">Cognitive Lab</span></h1>
           </div>
         </div>
         
@@ -284,7 +284,7 @@ export default function ChessVsAIPage() {
           <div className="hidden md:flex items-center gap-6 px-6 border-x border-[#3c1e0a]">
             <div className="text-center">
               <p className="text-[8px] text-amber-200/50 font-black uppercase tracking-widest leading-none mb-1">Status</p>
-              <p className={`text-[10px] font-black uppercase ${isLoading ? 'text-amber-400 animate-pulse' : 'text-white'}`}>{status}</p>
+              <p className={`text-[10px] font-black uppercase ${isLoading ? 'text-amber-400 animate-pulse' : 'text-slate-900'}`}>{status}</p>
             </div>
           </div>
           <button onClick={resetGame} className="flex items-center gap-2 px-4 py-1.5 bg-[#ecd3b5] text-[#1e130c] text-[9px] font-black uppercase tracking-widest hover:bg-[#fbf8f0] transition-all active:scale-95 rounded-none">
@@ -305,7 +305,7 @@ export default function ChessVsAIPage() {
             />
           </div>
           
-          <div className="w-full max-w-[550px] flex items-center justify-between wood-panel-light p-4 shadow-md rounded-none">
+          <div className="w-full max-w-[550px] flex items-center justify-between wood-panel-light p-4 shadow-none rounded-none">
              <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-[#25140b] border border-[#3c1e0a] flex items-center justify-center text-amber-400 rounded-none">
                    <Target size={18} />
@@ -335,7 +335,7 @@ export default function ChessVsAIPage() {
                    <span className="text-[9px] font-black text-amber-300 uppercase tracking-widest">{difficulty === 'principiante' ? 'Lvl 1' : difficulty === 'manager' ? 'Lvl 5' : 'Lvl 10'}</span>
                 </div>
                 <p className="text-[9px] text-amber-200/50 font-bold uppercase tracking-wider">
-                  Tu ELO Táctico: <span className="text-white font-black">{user?.chess_tactical_elo ?? 800}</span>
+                  Tu ELO Táctico: <span className="text-slate-900 font-black">{user?.chess_tactical_elo ?? 800}</span>
                 </p>
              </div>
           </div>
@@ -345,7 +345,7 @@ export default function ChessVsAIPage() {
         <div className="w-full lg:w-96 flex flex-col gap-6">
           
           {/* Tarjeta de Historial */}
-          <div className="flex-1 wood-panel shadow-md flex flex-col overflow-hidden rounded-none">
+          <div className="flex-1 wood-panel shadow-none flex flex-col overflow-hidden rounded-none">
              <div className="p-4 border-b border-[#3c1e0a] bg-[#1a0d04] flex items-center justify-between text-[#ecd3b5]">
                 <div className="flex items-center gap-2">
                    <History size={16} className="text-amber-400" />
@@ -363,8 +363,8 @@ export default function ChessVsAIPage() {
                    }, []).map((pair, i) => (
                       <React.Fragment key={i}>
                          <div className="flex items-center gap-3 py-1.5 border-b border-[#3c1e0a]/30">
-                            <span className="text-[10px] font-black text-amber-500/60 w-4">{i + 1}.</span>
-                            <span className="text-[11px] font-black text-white uppercase tracking-tight">{pair[0]}</span>
+                            <span className="text-[10px] font-black text-[#D4AF37]/60 w-4">{i + 1}.</span>
+                            <span className="text-[11px] font-black text-slate-900 uppercase tracking-tight">{pair[0]}</span>
                          </div>
                          <div className="flex items-center gap-3 py-1.5 border-b border-[#3c1e0a]/30">
                             {pair[1] && <span className="text-[11px] font-black text-[#ecd3b5]/80 uppercase tracking-tight">{pair[1]}</span>}
@@ -376,7 +376,7 @@ export default function ChessVsAIPage() {
           </div>
 
            {/* Tarjeta de Métricas Cognitivas */}
-           <div className="wood-panel p-6 shadow-lg relative overflow-hidden rounded-none">
+           <div className="wood-panel p-6 shadow-none relative overflow-hidden rounded-none">
               <div className="absolute top-0 right-0 p-4 opacity-5 text-amber-400">
                  <Brain size={80} />
                </div>
@@ -389,7 +389,7 @@ export default function ChessVsAIPage() {
                           <p className="text-xs font-black text-[#ecd3b5]">{cognitiveMetrics.accuracy}%</p>
                        </div>
                        <div className="h-1 bg-[#130a04] border border-[#3c1e0a] rounded-none overflow-hidden">
-                          <div className="h-full bg-emerald-500 transition-all duration-500" style={{ width: `${cognitiveMetrics.accuracy}%` }}></div>
+                          <div className="h-full bg-[#D4AF37]/100 transition-all duration-500" style={{ width: `${cognitiveMetrics.accuracy}%` }}></div>
                        </div>
                     </div>
                     <div>
@@ -398,12 +398,12 @@ export default function ChessVsAIPage() {
                           <p className="text-xs font-black text-[#ecd3b5]">{cognitiveMetrics.control}%</p>
                        </div>
                        <div className="h-1 bg-[#130a04] border border-[#3c1e0a] rounded-none overflow-hidden">
-                          <div className="h-full bg-amber-500 transition-all duration-500" style={{ width: `${cognitiveMetrics.control}%` }}></div>
+                          <div className="h-full bg-[#D4AF37]/20 transition-all duration-500" style={{ width: `${cognitiveMetrics.control}%` }}></div>
                        </div>
                     </div>
                  </div>
                  <div className="mt-6 flex items-center gap-3 p-3 bg-[#130a04] border border-[#3c1e0a] rounded-none">
-                    <Zap size={14} className="text-amber-500 flex-shrink-0" />
+                    <Zap size={14} className="text-[#D4AF37] flex-shrink-0" />
                     <p className="text-[9px] font-bold text-slate-300 leading-tight">Tu estilo de juego es <span className="text-[#ecd3b5] font-bold">{cognitiveMetrics.style}</span>. {cognitiveMetrics.desc}</p>
                  </div>
               </div>
@@ -430,8 +430,8 @@ export default function ChessVsAIPage() {
               <div className="w-16 h-16 bg-[#130a04] border border-[#3c1e0a] text-amber-400 flex items-center justify-center mx-auto mb-6 rounded-none">
                 <Trophy size={32} />
               </div>
-              <h2 className="text-2xl font-black text-white uppercase tracking-tighter mb-2">¡Jaque Mate!</h2>
-              <p className="text-xs text-amber-200/60 font-bold uppercase tracking-widest mb-8">Ganador: <span className="text-white">{winner}</span></p>
+              <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tighter mb-2">¡Jaque Mate!</h2>
+              <p className="text-xs text-amber-200/60 font-bold uppercase tracking-widest mb-8">Ganador: <span className="text-slate-900">{winner}</span></p>
               <div className="space-y-3">
                 <button 
                   onClick={resetGame}
@@ -460,14 +460,14 @@ export default function ChessVsAIPage() {
             <motion.div 
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
-              className="bg-[#25140b] border-2 border-[#3c1e0a] max-w-sm w-full p-10 text-center shadow-2xl border-t-4 border-amber-500 rounded-none text-[#ecd3b5]"
+              className="bg-[#25140b] border-2 border-[#3c1e0a] max-w-sm w-full p-10 text-center shadow-2xl border-t-4 border-[#D4AF37]/30 rounded-none text-[#ecd3b5]"
             >
               <div className="w-16 h-16 bg-[#130a04] border border-[#3c1e0a] text-amber-400 flex items-center justify-center mx-auto mb-6 rounded-none">
                 <Brain size={32} className="animate-pulse" />
               </div>
-              <h2 className="text-xl font-black text-white uppercase tracking-tighter mb-2">Partida Detectada ♟️</h2>
+              <h2 className="text-xl font-black text-slate-900 uppercase tracking-tighter mb-2">Partida Detectada ♟️</h2>
               <p className="text-xs text-slate-300 font-bold uppercase tracking-widest mb-8 leading-relaxed">
-                Hemos encontrado una partida de ajedrez guardada con dificultad <span className="text-white font-black">{pendingDiff || 'manager'}</span>. ¿Quieres reanudar tu juego o comenzar uno nuevo?
+                Hemos encontrado una partida de ajedrez guardada con dificultad <span className="text-slate-900 font-black">{pendingDiff || 'manager'}</span>. ¿Quieres reanudar tu juego o comenzar uno nuevo?
               </p>
               <div className="space-y-3">
                 <button 

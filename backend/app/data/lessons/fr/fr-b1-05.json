@@ -1,0 +1,89 @@
+{
+  "id": "fr-b1-05",
+  "title": "B1 Milestone 1",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 1500,
+  "tags": ["B1", "Milestone", "Exam", "Subjunctive", "Conditional", "Plus-que-parfait"],
+  "completion_message": "¡Misión cumplida! Has superado el primer hito del nivel B1. Tu capacidad para manejar el subjuntivo, los tiempos compuestos y el condicional es digna de un hablante avanzado.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Milestone 1: Evaluación B1",
+      "parts": [
+        {
+          "visual": "¡Es hora de demostrar lo que has aprendido en el inicio del nivel B1!\n\nEn este examen intensivo evaluaremos:\n1. Le Subjonctif Présent: 'Il faut que je fasse...'\n2. Le Plus-que-parfait: 'J'avais déjà mangé...'\n3. Le Conditionnel Présent: 'Je voudrais... / Tu devrais...'\n4. Les Pronoms Relatifs Composés: 'Lequel, auquel, duquel...'",
+          "audio": "¡Bienvenido a tu primera gran prueba del nivel intermedio B1! Hasta ahora hemos estudiado herramientas muy poderosas para expresar subjetividad y precisión en el tiempo. Hoy tendrás que demostrar que sabes diferenciar entre lo que debes hacer (usando el subjuntivo), lo que harías si pudieras (usando el condicional), y lo que ya habías hecho en el pasado (usando el plus-que-parfait). Además, evaluaremos tu elegancia al conectar frases con los pronombres relativos compuestos."
+        },
+        {
+          "visual": "Reglas de oro para recordar:\n- El Subjuntivo se usa después de expresar obligaciones ('Il faut que'). Sus terminaciones para 'nous' y 'vous' son como el Imparfait (-ions, -iez).\n- El Plus-que-parfait es el pasado del pasado (Auxiliar en Imparfait + Participio).\n- El Condicional es la raíz del futuro con las terminaciones del Imparfait.\n- Los pronombres compuestos se contraen con À y DE (auquel, duquel).\n\n¡Respira hondo y comienza!",
+          "audio": "Antes de empezar, un rápido repaso mental. Recuerda que el subjuntivo es para las necesidades, el condicional es para la cortesía o las hipótesis, y el plus-que-parfait es para contar historias antiguas. Lee cuidadosamente cada oración para descubrir el contexto. ¡Buena suerte!"
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Milestone Quiz",
+      "description": "Demuestra tu dominio de la gramática B1 avanzada.",
+      "questions": [
+        { "id": "frb1-05-q1", "type": "quiz_choice", "question": "Il faut que je ____ (partir). (Subjuntivo).", "options": ["parte", "part", "partes", "partis"], "correct_answer": "parte", "explanation": "Raíz part- + e = que je parte." },
+        { "id": "frb1-05-q2", "type": "quiz_choice", "question": "Je ____ (manger) avant de venir. (Yo HABÍA comido antes de venir).", "options": ["avais mangé", "ai mangé", "mangeais", "aurais mangé"], "correct_answer": "avais mangé", "explanation": "Plus-que-parfait: avais + mangé." },
+        { "id": "frb1-05-q3", "type": "quiz_choice", "question": "Si j'avais de l'argent, j'____ (acheter) une voiture. (Compraría).", "options": ["achèterais", "achèterai", "achetais", "achète"], "correct_answer": "achèterais", "explanation": "Condicional para hipótesis." },
+        { "id": "frb1-05-q4", "type": "quiz_choice", "question": "La chaise sur ____ je suis assis. (La silla sobre LA CUAL estoy sentado).", "options": ["laquelle", "lequel", "lesquelles", "lesquels"], "correct_answer": "laquelle", "explanation": "La chaise = femenino singular." },
+        { "id": "frb1-05-q5", "type": "quiz_choice", "question": "Il faut que nous ____ (parler) sérieusement.", "options": ["parlions", "parlons", "parlerions", "parliez"], "correct_answer": "parlions", "explanation": "Subjuntivo 'nous' -> parlions." },
+        { "id": "frb1-05-q6", "type": "quiz_choice", "question": "Elle ____ (aller) au supermarché avant moi. (Ella HABÍA ido).", "options": ["était allée", "avait allée", "est allée", "allait"], "correct_answer": "était allée", "explanation": "Aller usa Être -> était allée." },
+        { "id": "frb1-05-q7", "type": "quiz_choice", "question": "Le livre (masc). Le livre ____ je pense. (AL CUAL pienso).", "options": ["auquel", "à lequel", "duquel", "lequel"], "correct_answer": "auquel", "explanation": "penser à + lequel = auquel." },
+        { "id": "frb1-05-q8", "type": "quiz_choice", "question": "Tu ____ (devoir) faire attention. (Deberías).", "options": ["devrais", "dois", "devras", "devais"], "correct_answer": "devrais", "explanation": "Condicional -> devrais." },
+        { "id": "frb1-05-q9", "type": "quiz_choice", "question": "Il faut qu'ils ____ (finir) leur travail.", "options": ["finissent", "finissez", "finisse", "finissaient"], "correct_answer": "finissent", "explanation": "Subjuntivo plural -> finissent." },
+        { "id": "frb1-05-q10", "type": "quiz_choice", "question": "Nous ____ (voir) le film. (HABÍAMOS visto).", "options": ["avions vu", "avons vu", "avions voir", "étions vus"], "correct_answer": "avions vu", "explanation": "avions + vu." },
+        { "id": "frb1-05-q11", "type": "quiz_choice", "question": "Je ____ (vouloir) un verre d'eau. (Quisiera).", "options": ["voudrais", "veux", "voudrai", "voulais"], "correct_answer": "voudrais", "explanation": "Condicional de cortesía -> voudrais." },
+        { "id": "frb1-05-q12", "type": "quiz_choice", "question": "Les documents sans ____ je ne peux pas travailler. (Sin LOS CUALES).", "options": ["lesquels", "lesquelles", "lequel", "laquelle"], "correct_answer": "lesquels", "explanation": "Documents es masculino plural -> lesquels." },
+        { "id": "frb1-05-q13", "type": "quiz_choice", "question": "Il faut que tu ____ (écouter) le professeur.", "options": ["écoutes", "écoute", "écoutez", "écoutais"], "correct_answer": "écoutes", "explanation": "Subjuntivo 'tu' -> écoutes." },
+        { "id": "frb1-05-q14", "type": "quiz_choice", "question": "Ils ____ (se réveiller). (Ellos se HABÍAN despertado).", "options": ["s'étaient réveillés", "s'avaient réveillés", "se sont réveillés", "s'étaient réveillé"], "correct_answer": "s'étaient réveillés", "explanation": "Reflexivos usan Être -> s'étaient." },
+        { "id": "frb1-05-q15", "type": "quiz_choice", "question": "Je ____ (être) très heureux de te voir. (ESTARÍA).", "options": ["serais", "étais", "serai", "suis"], "correct_answer": "serais", "explanation": "Condicional de Être -> serais." },
+        { "id": "frb1-05-q16", "type": "quiz_choice", "question": "La fille près ____ je suis. (Cerca DE LA CUAL).", "options": ["de laquelle", "duquelle", "de lequel", "laquelle"], "correct_answer": "de laquelle", "explanation": "de + laquelle no se contrae -> de laquelle." },
+        { "id": "frb1-05-q17", "type": "quiz_choice", "question": "Il faut que vous ____ (regarder) ceci.", "options": ["regardiez", "regardez", "regardions", "regardent"], "correct_answer": "regardiez", "explanation": "Subjuntivo 'vous' -> regardiez." },
+        { "id": "frb1-05-q18", "type": "quiz_choice", "question": "J'____ (aller) au Japon si je pouvais. (IRÍA).", "options": ["irais", "allais", "irai", "vais"], "correct_answer": "irais", "explanation": "Condicional de Aller -> irais." },
+        { "id": "frb1-05-q19", "type": "quiz_choice", "question": "Tu ____ (comprendre) la leçon. (HABÍAS comprendido).", "options": ["avais compris", "as compris", "avais comprendre", "étais compris"], "correct_answer": "avais compris", "explanation": "avais + compris." },
+        { "id": "frb1-05-q20", "type": "quiz_choice", "question": "Les raisons pour ____ je suis ici. (Por LAS CUALES).", "options": ["lesquelles", "lesquels", "laquelle", "lequel"], "correct_answer": "lesquelles", "explanation": "Raison = fem. plur -> lesquelles." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Conjuga el verbo según la regla solicitada, o escribe el pronombre relativo.",
+      "questions": [
+        { "id": "frb1-05-f1", "type": "fill_input", "question": "Subjonctif: Il faut que je ____ (parler).", "correct_answer": "parle", "explanation": "parle" },
+        { "id": "frb1-05-f2", "type": "fill_input", "question": "Plus-que-parfait: J'____ ____ (manger).", "correct_answer": "avais mangé", "explanation": "avais mangé" },
+        { "id": "frb1-05-f3", "type": "fill_input", "question": "Conditionnel: Je ____ (vouloir) un café.", "correct_answer": "voudrais", "explanation": "voudrais" },
+        { "id": "frb1-05-f4", "type": "fill_input", "question": "Pronom Relatif: Le chien avec ____ je joue. (Con el cual)", "correct_answer": "lequel", "explanation": "lequel" },
+        { "id": "frb1-05-f5", "type": "fill_input", "question": "Subjonctif: Il faut que nous ____ (manger).", "correct_answer": "mangions", "explanation": "mangions" },
+        { "id": "frb1-05-f6", "type": "fill_input", "question": "Plus-que-parfait: Elle ____ ____ (partir).", "correct_answer": "était partie", "explanation": "était partie" },
+        { "id": "frb1-05-f7", "type": "fill_input", "question": "Conditionnel: Tu ____ (devoir) dormir.", "correct_answer": "devrais", "explanation": "devrais" },
+        { "id": "frb1-05-f8", "type": "fill_input", "question": "Pronom Relatif: La table sur ____ je mange. (Sobre la cual)", "correct_answer": "laquelle", "explanation": "laquelle" },
+        { "id": "frb1-05-f9", "type": "fill_input", "question": "Subjonctif: Il faut qu'ils ____ (finir).", "correct_answer": "finissent", "explanation": "finissent" },
+        { "id": "frb1-05-f10", "type": "fill_input", "question": "Plus-que-parfait: Nous ____ ____ (voir).", "correct_answer": "avions vu", "explanation": "avions vu" },
+        { "id": "frb1-05-f11", "type": "fill_input", "question": "Conditionnel: J'____ (aller) au cinéma. (Iría).", "correct_answer": "irais", "explanation": "irais" },
+        { "id": "frb1-05-f12", "type": "fill_input", "question": "Pronom Relatif: Le projet ____ je pense. (Al cual: à + lequel).", "correct_answer": "auquel", "explanation": "auquel" },
+        { "id": "frb1-05-f13", "type": "fill_input", "question": "Subjonctif: Il faut que vous ____ (parler).", "correct_answer": "parliez", "explanation": "parliez" },
+        { "id": "frb1-05-f14", "type": "fill_input", "question": "Conditionnel: Je ____ (ser) heureux.", "correct_answer": "serais", "explanation": "serais" },
+        { "id": "frb1-05-f15", "type": "fill_input", "question": "Pronom Relatif: Les amis avec ____ je sors. (Con los cuales).", "correct_answer": "lesquels", "explanation": "lesquels" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Grammar Match",
+      "pairs": [
+        {"id": "frb1-05-p1", "source": "Je parlerais", "target": "Condicional"},
+        {"id": "frb1-05-p2", "source": "Que je parle", "target": "Subjuntivo"},
+        {"id": "frb1-05-p3", "source": "J'avais parlé", "target": "Plus-que-parfait"},
+        {"id": "frb1-05-p4", "source": "Lequel", "target": "Relativo Compuesto"},
+        {"id": "frb1-05-p5", "source": "J'ai parlé", "target": "Passé Composé"}
+      ]
+    }
+  ]
+}

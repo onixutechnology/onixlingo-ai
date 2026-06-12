@@ -1,0 +1,101 @@
+{
+  "id": "a1-134",
+  "title": "Emails and Correspondence Vocabulary",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Emails", "Correspondence", "Office"],
+  "completion_message": "¡Excelente! Ahora dominas el vocabulario esencial para redactar y manejar correos electrónicos corporativos.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Vocabulario de Emails",
+      "parts": [
+        { "visual": "Partes de un email: To (para), From (de), Subject (asunto/tema principal), CC (con copia), BCC (con copia oculta), Attachment (archivo adjunto).", "audio": "Parts of an email: To, From, Subject, CC, BCC, and Attachment, which is the file you send with the email." },
+        { "visual": "Acciones comunes: To reply (responder), To reply all (responder a todos), To forward (reenviar), To attach (adjuntar), To delete (borrar), To draft (redactar/borrador).", "audio": "Common actions: To reply, to reply all, to forward, to attach, to delete, and to draft." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta relacionada con correos electrónicos.",
+      "questions": [
+        { "id": "a1-134-q1", "type": "quiz_choice", "question": "Write the topic in the ____ line. (Asunto).", "options": ["subject", "to", "cc", "attachment"], "correct_answer": "subject", "explanation": "Subject = asunto o tema del correo." },
+        { "id": "a1-134-q2", "type": "quiz_choice", "question": "Please find the report in the ____. (Archivo adjunto).", "options": ["attachment", "subject", "forward", "reply"], "correct_answer": "attachment", "explanation": "Attachment = archivo adjunto." },
+        { "id": "a1-134-q3", "type": "quiz_choice", "question": "I will ____ this email to the manager. (Reenviar).", "options": ["forward", "reply", "attach", "delete"], "correct_answer": "forward", "explanation": "Forward = reenviar." },
+        { "id": "a1-134-q4", "type": "quiz_choice", "question": "Don't forget to ____ the manager in this email. (Poner con copia).", "options": ["cc", "bcc", "to", "subject"], "correct_answer": "cc", "explanation": "CC (carbon copy) = poner con copia." },
+        { "id": "a1-134-q5", "type": "quiz_choice", "question": "I need to ____ to her email right now. (Responder).", "options": ["reply", "forward", "attach", "draft"], "correct_answer": "reply", "explanation": "Reply = responder." },
+        { "id": "a1-134-q6", "type": "quiz_choice", "question": "Please don't ____ to everyone in the company. (Responder a todos).", "options": ["reply all", "reply", "forward", "cc"], "correct_answer": "reply all", "explanation": "Reply all = responder a todos." },
+        { "id": "a1-134-q7", "type": "quiz_choice", "question": "I need to ____ a PDF file to the message. (Adjuntar).", "options": ["attach", "forward", "reply", "subject"], "correct_answer": "attach", "explanation": "Attach = adjuntar (verbo)." },
+        { "id": "a1-134-q8", "type": "quiz_choice", "question": "The message is saved in my ____. (Borradores).", "options": ["drafts", "inbox", "sent", "trash"], "correct_answer": "drafts", "explanation": "Drafts = borradores (mensajes no enviados)." },
+        { "id": "a1-134-q9", "type": "quiz_choice", "question": "I have 50 unread emails in my ____. (Bandeja de entrada).", "options": ["inbox", "outbox", "drafts", "trash"], "correct_answer": "inbox", "explanation": "Inbox = bandeja de entrada." },
+        { "id": "a1-134-q10", "type": "quiz_choice", "question": "If you don't need it, just ____ it. (Bórralo).", "options": ["delete", "forward", "reply", "attach"], "correct_answer": "delete", "explanation": "Delete = borrar / eliminar." },
+        { "id": "a1-134-q11", "type": "quiz_choice", "question": "You can find deleted emails in the ____. (Papelera).", "options": ["trash", "inbox", "drafts", "sent"], "correct_answer": "trash", "explanation": "Trash / Bin = papelera." },
+        { "id": "a1-134-q12", "type": "quiz_choice", "question": "The email is in the ____ folder. (Enviados).", "options": ["sent", "inbox", "drafts", "trash"], "correct_answer": "sent", "explanation": "Sent = enviados (pasado de send)." },
+        { "id": "a1-134-q13", "type": "quiz_choice", "question": "I think the email went to the ____ folder. (Correo no deseado).", "options": ["spam", "inbox", "drafts", "sent"], "correct_answer": "spam", "explanation": "Spam / Junk = correo no deseado." },
+        { "id": "a1-134-q14", "type": "quiz_choice", "question": "Use ____ if you want to hide the recipient's email address. (Copia oculta).", "options": ["bcc", "cc", "to", "subject"], "correct_answer": "bcc", "explanation": "BCC (blind carbon copy) = copia oculta." },
+        { "id": "a1-134-q15", "type": "quiz_choice", "question": "Could you ____ the invoice to this email? (Adjuntar).", "options": ["attach", "reply", "forward", "delete"], "correct_answer": "attach", "explanation": "Attach = adjuntar." },
+        { "id": "a1-134-q16", "type": "quiz_choice", "question": "I will ____ your request to the IT department. (Reenviar).", "options": ["forward", "reply", "attach", "cc"], "correct_answer": "forward", "explanation": "Forward = reenviar/pasar a otro." },
+        { "id": "a1-134-q17", "type": "quiz_choice", "question": "Please leave the ____ line clear and concise. (Asunto).", "options": ["subject", "to", "from", "cc"], "correct_answer": "subject", "explanation": "Subject line = línea de asunto." },
+        { "id": "a1-134-q18", "type": "quiz_choice", "question": "Did you ____ my last email? (Recibir).", "options": ["receive", "send", "forward", "reply"], "correct_answer": "receive", "explanation": "Receive = recibir." },
+        { "id": "a1-134-q19", "type": "quiz_choice", "question": "I need to ____ an email to the client right now. (Enviar).", "options": ["send", "receive", "reply", "attach"], "correct_answer": "send", "explanation": "Send = enviar." },
+        { "id": "a1-134-q20", "type": "quiz_choice", "question": "Sorry, I forgot the ____. Here is the file. (Archivo adjunto).", "options": ["attachment", "subject", "forward", "draft"], "correct_answer": "attachment", "explanation": "Attachment = el archivo adjunto en sí." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta en inglés.",
+      "questions": [
+        { "id": "a1-134-f1", "type": "fill_input", "question": "Write the topic in the ____. (Asunto).", "correct_answer": "subject", "explanation": "subject." },
+        { "id": "a1-134-f2", "type": "fill_input", "question": "Please find the report in the ____. (Archivo adjunto).", "correct_answer": "attachment", "explanation": "attachment." },
+        { "id": "a1-134-f3", "type": "fill_input", "question": "I will ____ this email to IT. (Reenviar).", "correct_answer": "forward", "explanation": "forward." },
+        { "id": "a1-134-f4", "type": "fill_input", "question": "Please ____ to the client. (Responder).", "correct_answer": "reply", "explanation": "reply." },
+        { "id": "a1-134-f5", "type": "fill_input", "question": "Don't ____ ____ to everyone. (Responder a todos).", "correct_answer": "reply all", "explanation": "reply all." },
+        { "id": "a1-134-f6", "type": "fill_input", "question": "I need to ____ a PDF file. (Adjuntar - verbo).", "correct_answer": "attach", "explanation": "attach." },
+        { "id": "a1-134-f7", "type": "fill_input", "question": "It's saved in my ____. (Borradores).", "correct_answer": "drafts", "explanation": "drafts." },
+        { "id": "a1-134-f8", "type": "fill_input", "question": "I have 50 emails in my ____. (Bandeja de entrada).", "correct_answer": "inbox", "explanation": "inbox." },
+        { "id": "a1-134-f9", "type": "fill_input", "question": "If you don't need it, ____ it. (Bórralo).", "correct_answer": "delete", "explanation": "delete." },
+        { "id": "a1-134-f10", "type": "fill_input", "question": "Maybe it went to the ____ folder. (Correo no deseado).", "correct_answer": "spam", "explanation": "spam." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-134-p1", "source": "Subject", "target": "Asunto"},
+        {"id": "a1-134-p2", "source": "Attachment", "target": "Archivo adjunto (el objeto)"},
+        {"id": "a1-134-p3", "source": "To attach", "target": "Adjuntar (el verbo)"},
+        {"id": "a1-134-p4", "source": "To forward", "target": "Reenviar"},
+        {"id": "a1-134-p5", "source": "To reply / Reply all", "target": "Responder / Responder a todos"},
+        {"id": "a1-134-p6", "source": "Inbox", "target": "Bandeja de entrada"},
+        {"id": "a1-134-p7", "source": "Drafts", "target": "Borradores"},
+        {"id": "a1-134-p8", "source": "Spam", "target": "Correo no deseado"},
+        {"id": "a1-134-p9", "source": "Sent folder", "target": "Carpeta de enviados"},
+        {"id": "a1-134-p10", "source": "To delete", "target": "Borrar / Eliminar"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-134-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Write the topic in the subject line.", "options": ["Write the topic in the subject line.", "Write the message in the subject line.", "Read the topic in the subject line.", "Write the topic in the email line."], "correct_answer": "Write the topic in the subject line.", "explanation": "Audio exacto." },
+        { "id": "a1-134-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please find the report in the attachment.", "options": ["Please find the report in the attachment.", "Please read the report in the attachment.", "Please find the file in the attachment.", "Please find the report in the email."], "correct_answer": "Please find the report in the attachment.", "explanation": "Audio exacto." },
+        { "id": "a1-134-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will forward this email to the manager.", "options": ["I will forward this email to the manager.", "I will send this email to the manager.", "I will reply this email to the manager.", "She will forward this email to the manager."], "correct_answer": "I will forward this email to the manager.", "explanation": "Audio exacto." },
+        { "id": "a1-134-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need to reply to her email right now.", "options": ["I need to reply to her email right now.", "I need to answer her email right now.", "I need to reply to his email right now.", "I need to forward her email right now."], "correct_answer": "I need to reply to her email right now.", "explanation": "Audio exacto." },
+        { "id": "a1-134-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please don't reply all.", "options": ["Please don't reply all.", "Please don't reply to all.", "Please don't send to all.", "Please don't forward all."], "correct_answer": "Please don't reply all.", "explanation": "Audio exacto." },
+        { "id": "a1-134-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need to attach a PDF file.", "options": ["I need to attach a PDF file.", "I need to send a PDF file.", "I need to open a PDF file.", "I need to attach a word file."], "correct_answer": "I need to attach a PDF file.", "explanation": "Audio exacto." },
+        { "id": "a1-134-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The message is saved in my drafts.", "options": ["The message is saved in my drafts.", "The email is saved in my drafts.", "The file is saved in my drafts.", "The message is saved in my inbox."], "correct_answer": "The message is saved in my drafts.", "explanation": "Audio exacto." },
+        { "id": "a1-134-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have fifty unread emails in my inbox.", "options": ["I have fifty unread emails in my inbox.", "I have fifteen unread emails in my inbox.", "I have fifty emails in my inbox.", "I have fifty unread messages in my inbox."], "correct_answer": "I have fifty unread emails in my inbox.", "explanation": "Audio exacto." },
+        { "id": "a1-134-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If you don't need it, just delete it.", "options": ["If you don't need it, just delete it.", "If you don't read it, just delete it.", "If you don't want it, just delete it.", "If you don't need it, please delete it."], "correct_answer": "If you don't need it, just delete it.", "explanation": "Audio exacto." },
+        { "id": "a1-134-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sorry, I forgot the attachment.", "options": ["Sorry, I forgot the attachment.", "Sorry, I missed the attachment.", "Sorry, I forgot the file.", "Sorry, I didn't send the attachment."], "correct_answer": "Sorry, I forgot the attachment.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

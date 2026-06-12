@@ -1,0 +1,101 @@
+{
+  "id": "a2-29",
+  "title": "Passive Voice (Past)",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Passive Voice", "Past Simple", "Business"],
+  "completion_message": "¡Excelente! Has dominado la Voz Pasiva en Pasado, una estructura clave para narrar historias y reportes de la empresa.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Voz Pasiva en Pasado Simple",
+      "parts": [
+        { "visual": "Usamos la Voz Pasiva en Pasado cuando la acción (qué pasó) es más importante que quién la hizo. \nEstructura: Objeto + verbo To Be en pasado (WAS / WERE) + verbo en Participio.", "audio": "We use the Passive Voice in the past when the action is more important than who did it. Structure: The object, plus WAS or WERE, plus the main verb in past participle." },
+        { "visual": "Ejemplos: Activa: Shakespeare wrote Hamlet. \nPasiva: Hamlet WAS WRITTEN by Shakespeare. (Fue escrito). \nNegocios: The company WAS FOUNDED in 1990 (La compañía fue fundada). The emails WERE SENT yesterday (Los correos fueron enviados).", "audio": "Examples. Active: Shakespeare wrote Hamlet. Passive: Hamlet WAS WRITTEN by Shakespeare. In business: The company WAS FOUNDED in 1990. The emails WERE SENT yesterday." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta de la voz pasiva en pasado (was/were + participio).",
+      "questions": [
+        { "id": "a2-29-q1", "type": "quiz_choice", "question": "The company ____ founded in 1990. (Fue fundada).", "options": ["was", "were", "is", "did"], "correct_answer": "was", "explanation": "The company (singular) = was." },
+        { "id": "a2-29-q2", "type": "quiz_choice", "question": "The emails ____ sent yesterday morning. (Fueron enviados).", "options": ["were", "was", "are", "have"], "correct_answer": "were", "explanation": "The emails (plural) = were." },
+        { "id": "a2-29-q3", "type": "quiz_choice", "question": "The contract was ____ by the CEO. (Firmado - participio).", "options": ["signed", "sign", "signing", "signs"], "correct_answer": "signed", "explanation": "Verbo regular en participio = signed." },
+        { "id": "a2-29-q4", "type": "quiz_choice", "question": "The meeting ____ cancelled because of the snow. (Fue cancelada).", "options": ["was", "were", "is", "did"], "correct_answer": "was", "explanation": "The meeting (singular) = was." },
+        { "id": "a2-29-q5", "type": "quiz_choice", "question": "Two new employees ____ hired last week. (Fueron contratados).", "options": ["were", "was", "are", "have"], "correct_answer": "were", "explanation": "Employees (plural) = were." },
+        { "id": "a2-29-q6", "type": "quiz_choice", "question": "The report was ____ in two hours. (Escrito - participio irregular).", "options": ["written", "wrote", "write", "writing"], "correct_answer": "written", "explanation": "Participio de write = written." },
+        { "id": "a2-29-q7", "type": "quiz_choice", "question": "My computer ____ stolen from my car! (Fue robada).", "options": ["was", "were", "is", "did"], "correct_answer": "was", "explanation": "Computer (singular) = was." },
+        { "id": "a2-29-q8", "type": "quiz_choice", "question": "The office was ____ yesterday. (Limpiada - participio).", "options": ["cleaned", "clean", "cleaning", "cleans"], "correct_answer": "cleaned", "explanation": "Participio regular = cleaned." },
+        { "id": "a2-29-q9", "type": "quiz_choice", "question": "All the tickets ____ sold out in five minutes. (Fueron vendidos).", "options": ["were", "was", "are", "have"], "correct_answer": "were", "explanation": "Tickets (plural) = were." },
+        { "id": "a2-29-q10", "type": "quiz_choice", "question": "The bridge was ____ in 2005. (Construido - participio de build).", "options": ["built", "build", "building", "builds"], "correct_answer": "built", "explanation": "Participio de build = built." },
+        { "id": "a2-29-q11", "type": "quiz_choice", "question": "I ____ asked to lead the project. (Me pidieron / Fui pedido).", "options": ["was", "were", "am", "did"], "correct_answer": "was", "explanation": "I = was (I was asked = me pidieron)." },
+        { "id": "a2-29-q12", "type": "quiz_choice", "question": "The boxes ____ delivered on time. (No fueron entregadas - Negativo).", "options": ["weren't", "wasn't", "didn't", "aren't"], "correct_answer": "weren't", "explanation": "Boxes (plural) = were not (weren't)." },
+        { "id": "a2-29-q13", "type": "quiz_choice", "question": "The money ____ refunded to the client. (No fue devuelto).", "options": ["wasn't", "weren't", "didn't", "isn't"], "correct_answer": "wasn't", "explanation": "Money (incontable/singular) = was not (wasn't)." },
+        { "id": "a2-29-q14", "type": "quiz_choice", "question": "We ____ invited to the conference. (Fueron/Fuimos invitados).", "options": ["were", "was", "are", "have"], "correct_answer": "were", "explanation": "We = were." },
+        { "id": "a2-29-q15", "type": "quiz_choice", "question": "When ____ the telephone invented? (¿Fue inventado? - Pregunta singular).", "options": ["was", "were", "did", "is"], "correct_answer": "was", "explanation": "Telephone (singular) = When was the telephone...?" },
+        { "id": "a2-29-q16", "type": "quiz_choice", "question": "Where ____ these products made? (¿Fueron fabricados? - Pregunta plural).", "options": ["were", "was", "did", "are"], "correct_answer": "were", "explanation": "Products (plural) = Where were these products...?" },
+        { "id": "a2-29-q17", "type": "quiz_choice", "question": "The problem was ____ very quickly. (Resuelto - participio).", "options": ["solved", "solve", "solving", "solves"], "correct_answer": "solved", "explanation": "Participio regular = solved." },
+        { "id": "a2-29-q18", "type": "quiz_choice", "question": "The files were ____ by mistake. (Borrados - participio).", "options": ["deleted", "delete", "deleting", "deletes"], "correct_answer": "deleted", "explanation": "Participio regular = deleted." },
+        { "id": "a2-29-q19", "type": "quiz_choice", "question": "A terrible mistake ____ made. (Fue cometido).", "options": ["was", "were", "did", "is"], "correct_answer": "was", "explanation": "Mistake (singular) = was made." },
+        { "id": "a2-29-q20", "type": "quiz_choice", "question": "The employees were ____ a bonus. (Se les dio - participio de give).", "options": ["given", "gave", "give", "giving"], "correct_answer": "given", "explanation": "Participio de give = given." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe 'was' o 'were', seguido del verbo en participio.",
+      "questions": [
+        { "id": "a2-29-f1", "type": "fill_input", "question": "The company ____ founded in 1990. (Fue - singular)", "correct_answer": "was", "explanation": "was." },
+        { "id": "a2-29-f2", "type": "fill_input", "question": "The emails ____ sent. (Fueron - plural)", "correct_answer": "were", "explanation": "were." },
+        { "id": "a2-29-f3", "type": "fill_input", "question": "The contract was ____. (Firmado - participio de sign)", "correct_answer": "signed", "explanation": "signed." },
+        { "id": "a2-29-f4", "type": "fill_input", "question": "The report was ____. (Escrito - participio de write)", "correct_answer": "written", "explanation": "written." },
+        { "id": "a2-29-f5", "type": "fill_input", "question": "Two employees ____ hired. (Fueron - plural)", "correct_answer": "were", "explanation": "were." },
+        { "id": "a2-29-f6", "type": "fill_input", "question": "The bridge was ____. (Construido - participio de build)", "correct_answer": "built", "explanation": "built." },
+        { "id": "a2-29-f7", "type": "fill_input", "question": "I ____ asked to do it. (Fui - I)", "correct_answer": "was", "explanation": "was." },
+        { "id": "a2-29-f8", "type": "fill_input", "question": "They ____ given a bonus. (Fueron - they)", "correct_answer": "were", "explanation": "were." },
+        { "id": "a2-29-f9", "type": "fill_input", "question": "The files were ____. (Borrados - participio de delete)", "correct_answer": "deleted", "explanation": "deleted." },
+        { "id": "a2-29-f10", "type": "fill_input", "question": "The boxes ____ delivered. (No fueron - plural contraído)", "correct_answer": "weren't", "explanation": "weren't." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-29-p1", "source": "It was founded", "target": "Fue fundada"},
+        {"id": "a2-29-p2", "source": "They were sent", "target": "Fueron enviados"},
+        {"id": "a2-29-p3", "source": "It was signed", "target": "Fue firmado"},
+        {"id": "a2-29-p4", "source": "It was written", "target": "Fue escrito"},
+        {"id": "a2-29-p5", "source": "They were hired", "target": "Fueron contratados"},
+        {"id": "a2-29-p6", "source": "It was built", "target": "Fue construido"},
+        {"id": "a2-29-p7", "source": "I was asked", "target": "Me pidieron (Fui pedido)"},
+        {"id": "a2-29-p8", "source": "They were given", "target": "A ellos se les dio"},
+        {"id": "a2-29-p9", "source": "It wasn't refunded", "target": "No fue reembolsado"},
+        {"id": "a2-29-p10", "source": "They weren't delivered", "target": "No fueron entregados"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración en voz pasiva en pasado.",
+      "questions": [
+        { "id": "a2-29-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company was founded in 1990.", "options": ["The company was founded in 1990.", "The company is founded in 1990.", "They founded the company in 1990.", "The company was found in 1990."], "correct_answer": "The company was founded in 1990.", "explanation": "Audio exacto." },
+        { "id": "a2-29-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The emails were sent yesterday.", "options": ["The emails were sent yesterday.", "The emails are sent yesterday.", "The email was sent yesterday.", "They sent the emails yesterday."], "correct_answer": "The emails were sent yesterday.", "explanation": "Audio exacto." },
+        { "id": "a2-29-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The contract was signed.", "options": ["The contract was signed.", "The contract is signed.", "He signed the contract.", "The contract was sign."], "correct_answer": "The contract was signed.", "explanation": "Audio exacto." },
+        { "id": "a2-29-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The meeting was cancelled.", "options": ["The meeting was cancelled.", "The meetings were cancelled.", "They cancelled the meeting.", "The meeting is cancelled."], "correct_answer": "The meeting was cancelled.", "explanation": "Audio exacto." },
+        { "id": "a2-29-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Two employees were hired.", "options": ["Two employees were hired.", "Two employees are hired.", "One employee was hired.", "They hired two employees."], "correct_answer": "Two employees were hired.", "explanation": "Audio exacto." },
+        { "id": "a2-29-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The report was written in two hours.", "options": ["The report was written in two hours.", "The report was wrote in two hours.", "The reports were written in two hours.", "She wrote the report in two hours."], "correct_answer": "The report was written in two hours.", "explanation": "Audio exacto." },
+        { "id": "a2-29-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I was asked to lead the project.", "options": ["I was asked to lead the project.", "He was asked to lead the project.", "They asked me to lead the project.", "I am asked to lead the project."], "correct_answer": "I was asked to lead the project.", "explanation": "Audio exacto." },
+        { "id": "a2-29-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The boxes weren't delivered on time.", "options": ["The boxes weren't delivered on time.", "The boxes wasn't delivered on time.", "The box wasn't delivered on time.", "They didn't deliver the boxes on time."], "correct_answer": "The boxes weren't delivered on time.", "explanation": "Audio exacto." },
+        { "id": "a2-29-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "When was the telephone invented?", "options": ["When was the telephone invented?", "When were the telephones invented?", "When did they invent the telephone?", "When is the telephone invented?"], "correct_answer": "When was the telephone invented?", "explanation": "Audio exacto." },
+        { "id": "a2-29-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The files were deleted.", "options": ["The files were deleted.", "The file was deleted.", "The files are deleted.", "They deleted the files."], "correct_answer": "The files were deleted.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

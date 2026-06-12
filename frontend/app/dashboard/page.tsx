@@ -36,7 +36,7 @@ type LessonStatus = 'locked' | 'active' | 'completed';
 const LANGUAGE_COLORS: Record<string, { primary: string, secondary: string, accent: string, selection: string, bg: string }> = {
   en: { primary: 'blue-600', secondary: 'blue-50', accent: 'blue-700', selection: 'bg-blue-100', bg: 'text-blue-900' },
   fr: { primary: 'cyan-500', secondary: 'cyan-50', accent: 'cyan-600', selection: 'bg-cyan-100', bg: 'text-cyan-900' },
-  zh: { primary: 'indigo-800', secondary: 'indigo-50', accent: 'indigo-900', selection: 'bg-indigo-100', bg: 'text-indigo-900' },
+  zh: { primary: 'indigo-200', secondary: 'indigo-50', accent: 'indigo-300', selection: 'bg-indigo-100', bg: 'text-indigo-900' },
 };
 
 const calculateLevel = (xp: number): number => {
@@ -62,7 +62,7 @@ const HeaderStats = ({ xp, streak, onOpenStats }: { xp: number, streak: number, 
   };
 
   return (
-    <div className="flex items-center gap-2 bg-white px-2 py-1 rounded-xl border border-sky-200 shadow-none">
+    <div className="flex items-center gap-2 bg-white px-2 py-1 rounded-none border border-sky-200 shadow-none">
       <button onClick={onOpenStats} className="hidden md:flex items-center gap-2 px-3 border-r border-sky-100 hover:bg-sky-50 transition-colors text-left outline-none cursor-pointer">
         <div className="text-purple-650"><Crown size={14} className="fill-purple-100" /></div>
         <div>
@@ -71,7 +71,7 @@ const HeaderStats = ({ xp, streak, onOpenStats }: { xp: number, streak: number, 
         </div>
       </button>
       <button onClick={onOpenStats} className="hidden md:flex items-center gap-2 px-3 border-r border-sky-100 hover:bg-sky-50 transition-colors text-left outline-none cursor-pointer">
-        <div className="text-amber-500"><Zap size={14} fill="currentColor" /></div>
+        <div className="text-[#D4AF37]"><Zap size={14} fill="currentColor" /></div>
         <div>
           <p className="text-[8px] text-sky-600 font-black uppercase tracking-widest leading-none mb-0.5">XP</p>
           <span className="text-xs font-black text-sky-950 leading-none">{xp.toLocaleString()}</span>
@@ -90,7 +90,7 @@ const HeaderStats = ({ xp, streak, onOpenStats }: { xp: number, streak: number, 
         {userTier === 'free' ? (
           <div className="flex items-center gap-2">
             {/* Icono de energía con brillo */}
-            <div className="text-amber-500 drop-shadow-[0_0_4px_rgba(245,158,11,0.4)] animate-pulse shrink-0">
+            <div className="text-[#D4AF37] drop-shadow-[0_0_4px_rgba(245,158,11,0.4)] animate-pulse shrink-0">
               <Zap size={13} fill="currentColor" />
             </div>
 
@@ -103,7 +103,7 @@ const HeaderStats = ({ xp, streak, onOpenStats }: { xp: number, streak: number, 
                 />
 
                 {/* Porcentaje de texto legible */}
-                <span className="absolute inset-0 flex items-center justify-center text-[9px] font-black text-white font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
+                <span className="absolute inset-0 flex items-center justify-center text-[9px] font-black text-slate-900 font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
                   {energy}%
                 </span>
               </div>
@@ -117,8 +117,8 @@ const HeaderStats = ({ xp, streak, onOpenStats }: { xp: number, streak: number, 
             </div>
           </div>
         ) : (
-          <div className="flex items-center gap-1.5 text-emerald-600">
-            <ShieldCheck size={12} className="fill-emerald-50 text-emerald-600 shrink-0" />
+          <div className="flex items-center gap-1.5 text-[#D4AF37]">
+            <ShieldCheck size={12} className="fill-emerald-50 text-[#D4AF37] shrink-0" />
             <div className="text-left hidden md:block">
               <p className="text-[8px] text-sky-600 font-black uppercase tracking-widest leading-none mb-0.5">Energía</p>
               <span className="text-[9px] font-black uppercase tracking-wider">Ilimitada</span>
@@ -339,7 +339,7 @@ export default function DashboardPage() {
 
   // Real database leaderboard rankings only
   const getDynamicLeaderboard = () => {
-    const list = [...leaderboard];
+    let list = [...leaderboard].filter(item => item.alias?.toLowerCase() !== 'diana');
 
     if (!list.some(item => item.isMe)) {
       list.push({
@@ -456,7 +456,7 @@ export default function DashboardPage() {
       {/* NAVBAR CORPORATIVO CUADRADO */}
       <nav className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-sky-200 px-6 h-12 flex items-center justify-between shadow-none">
         <div className="flex items-center gap-2">
-          <div className={`w-5 h-5 bg-${theme.primary} flex items-center justify-center`}><span className="text-white font-black text-[9px]">O</span></div>
+          <div className={`w-5 h-5 bg-${theme.primary} flex items-center justify-center`}><span className="text-slate-900 font-black text-[9px]">O</span></div>
           <span className="font-black text-sky-950 text-[10px] tracking-[0.2em] uppercase hidden sm:block">OnixLingo Hub</span>
         </div>
         <div className="flex items-center gap-4">
@@ -474,27 +474,41 @@ export default function DashboardPage() {
             <Link href="/dashboard/vocabulary" className={`text-[9px] font-black text-sky-600 hover:text-${theme.primary} transition-colors uppercase tracking-widest`}>Vocabulario</Link>
             <Link href="/dashboard/chess" className={`text-[9px] font-black text-sky-600 hover:text-${theme.primary} transition-colors uppercase tracking-widest`}>Ajedrez</Link>
           </div>
-          <button onClick={() => { setMode('professional'); router.push('/dashboard/pro'); }} className={`bg-sky-950 hover:bg-${theme.primary} text-white px-4 py-1.5 rounded-xl text-[8px] font-black uppercase tracking-[0.2em] ml-2 transition-all active:scale-95`}>
+          <button onClick={() => { setMode('professional'); router.push('/dashboard/pro'); }} className={`bg-white hover:bg-slate-100 text-slate-900 border border-slate-900 px-4 py-1.5 rounded-none text-[8px] font-black uppercase tracking-[0.2em] ml-2 transition-all active:scale-95`}>
             Modo Executive
           </button>
         </div>
       </nav>
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 pt-6 px-6">
+      {/* WRAPPER PRINCIPAL CON ANUNCIOS */}
+      <div className="max-w-[1700px] mx-auto flex flex-col 2xl:flex-row gap-6 pt-6 px-4">
+        
+        {/* --- ESPACIO PUBLICITARIO IZQUIERDO --- */}
+        <div className="hidden 2xl:block w-[160px] shrink-0">
+          <div className="sticky top-20 flex justify-center">
+             <div className="w-[160px] h-[600px] bg-sky-100/50 border-2 border-dashed border-sky-300 flex flex-col items-center justify-center text-sky-600 text-center p-4 rounded-none shadow-sm">
+                <span className="font-black text-[10px] uppercase tracking-widest mb-2">AdSense Izquierdo</span>
+                <span className="text-[9px] leading-tight font-bold">160x600 Vertical</span>
+             </div>
+          </div>
+        </div>
+
+        {/* CONTENEDOR CENTRAL (DASHBOARD ACTUAL) */}
+        <div className="flex-1 min-w-0 max-w-7xl mx-auto w-full flex flex-col lg:flex-row gap-6">
 
         {/* COLUMNA PRINCIPAL */}
         <div className="flex-1 min-w-0">
 
           {/* MENÚ BIENVENIDA - SIEMPRE FREE TIER / INGLÉS GENERAL EN RUTA STANDARDS */}
-          <div className="mb-6 bg-white border border-sky-200 p-6 rounded-xl shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="mb-6 bg-white border border-sky-200 p-6 rounded-none shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-fade-in-up">
             <div>
-              <h1 className="text-xl font-black text-sky-950 tracking-tighter uppercase leading-none mb-2 font-serif italic">Bienvenido, {currentUser}</h1>
-              <p className="text-[10px] font-black text-sky-600 uppercase tracking-widest leading-none">
+              <h1 className="text-xl font-black text-slate-900 tracking-tighter uppercase leading-none mb-2 font-serif italic">Bienvenido, {currentUser}</h1>
+              <p className="text-[10px] font-black text-slate-900 uppercase tracking-widest leading-none">
                 <span className={`font-black uppercase tracking-wider ${userTier === 'executive'
-                    ? 'text-amber-600'
+                    ? 'text-[#D4AF37]'
                     : userTier === 'pro'
-                      ? 'text-teal-600'
-                      : 'text-sky-700'
+                      ? 'text-[#D4AF37]'
+                      : 'text-slate-900'
                   }`}>
                   {userTier === 'executive' ? 'Executive Tier' : userTier === 'pro' ? 'Pro Tier' : 'Free Tier'}
                 </span> • {activeLanguage === 'en' ? 'Inglés' : activeLanguage === 'fr' ? 'Francés' : 'Chino'} General
@@ -503,15 +517,15 @@ export default function DashboardPage() {
             <div className="inline-flex bg-sky-50 p-1 border border-sky-200">
               {(['en', 'fr', 'zh'] as const).map(lang => {
                 const colors = {
-                  en: activeLanguage === 'en' ? 'bg-blue-600 text-white' : 'text-sky-600 hover:text-sky-800',
-                  fr: activeLanguage === 'fr' ? 'bg-cyan-600 text-white' : 'text-sky-600 hover:text-sky-800',
-                  zh: activeLanguage === 'zh' ? 'bg-sky-950 text-white' : 'text-sky-600 hover:text-sky-800',
+                  en: activeLanguage === 'en' ? 'bg-sky-200 text-slate-900 shadow-none' : 'text-sky-600 hover:bg-sky-100 hover:text-sky-900',
+                  fr: activeLanguage === 'fr' ? 'bg-cyan-200 text-slate-900 shadow-none' : 'text-sky-600 hover:bg-sky-100 hover:text-sky-900',
+                  zh: activeLanguage === 'zh' ? 'bg-indigo-200 text-slate-900 shadow-none' : 'text-sky-600 hover:bg-sky-100 hover:text-sky-900',
                 };
                 return (
                   <button
                     key={lang}
                     onClick={() => setLanguage(lang as 'en' | 'fr' | 'zh')}
-                    className={`px-4 py-1.5 rounded-xl text-[9px] font-black uppercase tracking-widest transition-all ${colors[lang]}`}
+                    className={`px-4 py-1.5 rounded-none text-[9px] font-black uppercase tracking-widest transition-all ${colors[lang]}`}
                   >
                     {lang === 'en' ? 'Inglés' : lang === 'fr' ? 'Francés' : 'Chino'}
                   </button>
@@ -524,13 +538,13 @@ export default function DashboardPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 
             {/* PROGRESO DEL CURSO */}
-            <div className="bg-white border border-sky-200 p-5 rounded-xl shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col justify-between">
+            <div className="bg-white border border-sky-200 p-5 rounded-none shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col justify-between animate-fade-in-up opacity-0 [animation-delay:100ms]">
               <div>
-                <div className="flex justify-between items-center text-[9px] font-black uppercase tracking-[0.15em] text-sky-600 mb-3">
+                <div className="flex justify-between items-center text-[9px] font-black uppercase tracking-[0.15em] text-slate-900 mb-3">
                   <span className="flex items-center gap-1.5"><Trophy size={12} className={`text-${theme.primary}`} /> Progreso General del Curso</span>
                   <span className={`text-${theme.primary} font-black text-xs`}>{getProgressPercentage()}%</span>
                 </div>
-                <div className="h-2 bg-sky-100 rounded-xl overflow-hidden border border-sky-200 mb-4">
+                <div className="h-2 bg-sky-100 rounded-none overflow-hidden border border-sky-200 mb-4">
                   <motion.div
                     className={`h-full bg-${theme.primary}`}
                     initial={{ width: 0 }}
@@ -539,24 +553,24 @@ export default function DashboardPage() {
                   />
                 </div>
               </div>
-              <div className="bg-sky-50 border border-sky-100 p-3 rounded-xl">
-                <p className="text-[8px] font-black text-sky-600 uppercase tracking-widest leading-none mb-1">Cálculo de XP y Racha</p>
-                <p className="text-[9px] text-sky-700 leading-snug">
+              <div className="bg-sky-50 border border-sky-100 p-3 rounded-none">
+                <p className="text-[8px] font-black text-slate-900 uppercase tracking-widest leading-none mb-1">Cálculo de XP y Racha</p>
+                <p className="text-[9px] text-slate-600 leading-snug">
                   Tu XP es la suma de tus mejores puntajes por lección. Tu racha se activa al completar al menos una lección diaria consecutiva. ¡Sigue aprendiendo!
                 </p>
               </div>
             </div>
 
             {/* SORTEOS CORPORATIVOS */}
-            <div className="bg-white border border-sky-200 p-5 rounded-xl shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col justify-between relative overflow-hidden group">
+            <div className="bg-white border border-sky-200 p-5 rounded-none shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col justify-between relative overflow-hidden group animate-fade-in-up opacity-0 [animation-delay:200ms]">
               <div>
-                <div className="flex justify-between items-center text-[9px] font-black uppercase tracking-[0.15em] text-sky-600 mb-2">
-                  <span className="flex items-center gap-1.5"><Zap size={12} className="text-amber-500 animate-pulse" /> Sorteos por Suscriptores Premium</span>
-                  <span className="text-amber-600 font-black text-xs">{(userStats.premiumCount || 0).toLocaleString()} / 1500 Premium</span>
+                <div className="flex justify-between items-center text-[9px] font-black uppercase tracking-[0.15em] text-slate-900 mb-2">
+                  <span className="flex items-center gap-1.5"><Zap size={12} className="text-[#D4AF37] animate-pulse" /> Sorteos por Suscriptores Premium</span>
+                  <span className="text-[#D4AF37] font-black text-xs">{(userStats.premiumCount || 0).toLocaleString()} / 1500 Premium</span>
                 </div>
-                <div className="h-2 bg-sky-100 rounded-xl overflow-hidden border border-sky-200 mb-3 relative">
+                <div className="h-2 bg-sky-100 rounded-none overflow-hidden border border-sky-200 mb-3 relative">
                   <motion.div
-                    className="h-full bg-amber-500"
+                    className="h-full bg-[#D4AF37]/20"
                     initial={{ width: 0 }}
                     animate={{ width: `${Math.min(((userStats.premiumCount || 0) / 1500) * 100, 100)}%` }}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -582,24 +596,24 @@ export default function DashboardPage() {
                   return (
                     <div
                       key={idx}
-                      className={`border p-2 text-center rounded-xl relative transition-all duration-200 select-none group/item hover:scale-105
+                      className={`border p-2 text-center rounded-none relative transition-all duration-200 select-none group/item hover:scale-105
                         ${unlocked
-                          ? 'border-emerald-200 bg-emerald-50/30 text-emerald-700'
+                          ? 'border-[#D4AF37]/30 bg-[#D4AF37]/10/30 text-[#D4AF37]'
                           : active
-                            ? 'border-amber-200 bg-amber-50/20 text-amber-600 animate-pulse'
+                            ? 'border-[#D4AF37]/30 bg-[#D4AF37]/10/20 text-[#D4AF37] animate-pulse'
                             : 'border-sky-100 bg-sky-50/50 text-sky-500'
                         }
                       `}
                     >
                       <div className="text-[9px] font-black leading-none mb-1">{item.text}</div>
                       <div className="flex justify-center text-[12px] mb-1">
-                        {item.icon === 'Gift' && <Gift size={10} className={unlocked ? "text-emerald-600" : active ? "text-amber-500" : "text-sky-500"} />}
-                        {item.icon === 'Headphones' && <Headphones size={10} className={unlocked ? "text-emerald-600" : active ? "text-amber-500" : "text-sky-500"} />}
-                        {item.icon === 'Tablet' && <Tablet size={10} className={unlocked ? "text-emerald-600" : active ? "text-amber-500" : "text-sky-500"} />}
-                        {item.icon === 'Smartphone' && <Smartphone size={10} className={unlocked ? "text-emerald-600" : active ? "text-amber-500" : "text-sky-500"} />}
-                        {item.icon === 'Laptop' && <Laptop size={10} className={unlocked ? "text-emerald-600" : active ? "text-amber-500" : "text-sky-500"} />}
+                        {item.icon === 'Gift' && <Gift size={10} className={unlocked ? "text-[#D4AF37]" : active ? "text-[#D4AF37]" : "text-sky-500"} />}
+                        {item.icon === 'Headphones' && <Headphones size={10} className={unlocked ? "text-[#D4AF37]" : active ? "text-[#D4AF37]" : "text-sky-500"} />}
+                        {item.icon === 'Tablet' && <Tablet size={10} className={unlocked ? "text-[#D4AF37]" : active ? "text-[#D4AF37]" : "text-sky-500"} />}
+                        {item.icon === 'Smartphone' && <Smartphone size={10} className={unlocked ? "text-[#D4AF37]" : active ? "text-[#D4AF37]" : "text-sky-500"} />}
+                        {item.icon === 'Laptop' && <Laptop size={10} className={unlocked ? "text-[#D4AF37]" : active ? "text-[#D4AF37]" : "text-sky-500"} />}
                       </div>
-                      <div className="absolute inset-0 bg-sky-950/95 text-white p-1 text-[7px] font-black uppercase flex flex-col justify-center items-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-150 rounded-xl z-30">
+                      <div className="absolute inset-0 bg-sky-950/95 text-slate-900 p-1 text-[7px] font-black uppercase flex flex-col justify-center items-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-150 rounded-none z-30">
                         <span className="text-center">{item.prize}</span>
                         <span className="text-[5px] text-amber-400 mt-0.5 uppercase tracking-widest font-black">
                           {unlocked ? '¡Sorteado!' : active ? 'Siguiente' : 'Bloqueado'}
@@ -610,10 +624,10 @@ export default function DashboardPage() {
                 })}
               </div>
 
-              <div className="bg-sky-50 border border-sky-100 p-2.5 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div className="bg-sky-50 border border-sky-100 p-2.5 rounded-none flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div className="flex items-center justify-between sm:justify-start gap-4 w-full sm:w-auto">
                   <span className="text-[8px] font-black text-sky-600 uppercase tracking-widest leading-none">Estatus de Sorteo</span>
-                  <span className="text-[8px] font-black text-amber-500 uppercase tracking-widest leading-none">
+                  <span className="text-[8px] font-black text-[#D4AF37] uppercase tracking-widest leading-none">
                     {(() => {
                       const premiumCount = userStats.premiumCount || 0;
                       const limits = [100, 300, 500, 700, 900, 1500];
@@ -624,7 +638,7 @@ export default function DashboardPage() {
                     })()}
                   </span>
                 </div>
-                <Link href="/legal/terms" className="text-[8px] font-black text-teal-600 hover:text-teal-700 uppercase tracking-widest leading-none underline text-right">
+                <Link href="/legal/terms" className="text-[8px] font-black text-[#D4AF37] hover:text-teal-700 uppercase tracking-widest leading-none underline text-right">
                   Términos y Condiciones
                 </Link>
               </div>
@@ -638,15 +652,15 @@ export default function DashboardPage() {
             <PracticeReminderWidget themeColor="blue" />
 
             {/* Columna 2: Ranking Global */}
-            <div className="bg-white border border-sky-200 p-5 rounded-xl shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col justify-between relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-1 opacity-5"><Trophy size={60} className="text-blue-600" /></div>
+            <div className="bg-white border border-sky-200 p-5 rounded-none shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col justify-between relative overflow-hidden group animate-fade-in-up opacity-0 [animation-delay:300ms]">
+              <div className="absolute top-0 right-0 p-1 opacity-5"><Trophy size={60} className="text-[#D4AF37]" /></div>
               <div className="relative z-10 space-y-3">
                 <div>
                   <div className="flex items-center gap-1.5 mb-1">
-                    <Sparkles size={11} className="text-blue-600" />
-                    <span className="text-[8px] font-black uppercase tracking-[0.2em] text-sky-600">Competencia Global</span>
+                    <Sparkles size={11} className="text-[#D4AF37]" />
+                    <span className="text-[8px] font-black uppercase tracking-[0.2em] text-slate-900">Competencia Global</span>
                   </div>
-                  <h3 className="text-xs font-black uppercase tracking-tight text-sky-950 leading-none">Ranking Global</h3>
+                  <h3 className="text-xs font-black uppercase tracking-tight text-slate-900 leading-none">Ranking Global</h3>
                   <p className="text-[9px] text-sky-700 font-semibold leading-none mt-1.5">Top alumnos con mayor puntaje de XP acumulado.</p>
                 </div>
 
@@ -657,7 +671,7 @@ export default function DashboardPage() {
                       className={`flex items-center justify-between p-2 text-[10px] font-bold border ${item.isMe ? 'border-blue-200 bg-blue-50/20 text-blue-800' : 'border-sky-100 text-sky-950'}`}
                     >
                       <div className="flex items-center gap-2">
-                        <span className={`w-4 h-4 flex items-center justify-center font-mono text-[9px] font-black ${index === 0 ? 'bg-amber-500 text-white' : index === 1 ? 'bg-sky-300 text-sky-950' : 'bg-amber-700 text-white'}`}>
+                        <span className={`w-4 h-4 flex items-center justify-center font-mono text-[9px] font-black ${index === 0 ? 'bg-[#D4AF37]/20 text-slate-900' : index === 1 ? 'bg-slate-300 text-slate-900' : 'bg-amber-700 text-white'}`}>
                           {index + 1}
                         </span>
                         <span>{item.name}</span>
@@ -670,15 +684,15 @@ export default function DashboardPage() {
             </div>
 
             {/* Columna 3: Trofeos y Logros */}
-            <div className="bg-white border border-sky-200 p-5 rounded-xl shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col justify-between relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-1 opacity-5"><Award size={60} className="text-blue-600" /></div>
+            <div className="bg-white border border-sky-200 p-5 rounded-none shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col justify-between relative overflow-hidden group animate-fade-in-up opacity-0 [animation-delay:400ms]">
+              <div className="absolute top-0 right-0 p-1 opacity-5"><Award size={60} className="text-[#D4AF37]" /></div>
               <div className="relative z-10 space-y-3">
                 <div>
                   <div className="flex items-center gap-1.5 mb-1">
-                    <Sparkles size={11} className="text-blue-600" />
-                    <span className="text-[8px] font-black uppercase tracking-[0.2em] text-sky-600">Hitos de Logros</span>
+                    <Sparkles size={11} className="text-[#D4AF37]" />
+                    <span className="text-[8px] font-black uppercase tracking-[0.2em] text-slate-900">Hitos de Logros</span>
                   </div>
-                  <h3 className="text-xs font-black uppercase tracking-tight text-sky-950 leading-none">Trofeos Generales ({getGeneralTrophies().filter(t => t.unlocked).length}/200)</h3>
+                  <h3 className="text-xs font-black uppercase tracking-tight text-slate-900 leading-none">Trofeos Generales ({getGeneralTrophies().filter(t => t.unlocked).length}/200)</h3>
                   <p className="text-[9px] text-sky-700 font-semibold leading-none mt-1.5">Consigue metas para desbloquear tus insignias.</p>
                 </div>
 
@@ -686,13 +700,13 @@ export default function DashboardPage() {
                   {getGeneralTrophies().map((badge, idx) => (
                     <div
                       key={idx}
-                      className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-250 bg-emerald-50/20 text-emerald-800' : 'border-sky-100 text-sky-650 opacity-60'}`}
+                      className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-250 bg-[#D4AF37]/10/20 text-[#D4AF37]' : 'border-sky-100 text-sky-650 opacity-60'}`}
                     >
                       <div className="flex items-center gap-2">
-                        {badge.icon === 'Crown' && <Crown size={12} className={badge.unlocked ? 'text-emerald-600' : 'text-sky-600'} />}
-                        {badge.icon === 'Flame' && <Flame size={12} className={badge.unlocked ? 'text-emerald-600' : 'text-sky-600'} />}
-                        {badge.icon === 'Award' && <Award size={12} className={badge.unlocked ? 'text-emerald-600' : 'text-sky-600'} />}
-                        {badge.icon === 'Sparkles' && <Sparkles size={12} className={badge.unlocked ? 'text-emerald-600' : 'text-sky-600'} />}
+                        {badge.icon === 'Crown' && <Crown size={12} className={badge.unlocked ? 'text-[#D4AF37]' : 'text-sky-600'} />}
+                        {badge.icon === 'Flame' && <Flame size={12} className={badge.unlocked ? 'text-[#D4AF37]' : 'text-sky-600'} />}
+                        {badge.icon === 'Award' && <Award size={12} className={badge.unlocked ? 'text-[#D4AF37]' : 'text-sky-600'} />}
+                        {badge.icon === 'Sparkles' && <Sparkles size={12} className={badge.unlocked ? 'text-[#D4AF37]' : 'text-sky-600'} />}
 
                         <div className="text-left">
                           <p className="text-[9px] font-black leading-none">{badge.title}</p>
@@ -723,7 +737,7 @@ export default function DashboardPage() {
               const isExpanded = !!expandedSections[section.id];
 
               return (
-                <div key={section.id} className="bg-white border border-sky-200 rounded-xl shadow-[0_10px_40px_rgba(14,165,233,0.08)] overflow-hidden">
+                <div key={section.id} className="bg-white border border-sky-200 rounded-none shadow-[0_10px_40px_rgba(14,165,233,0.08)] overflow-hidden">
 
                   {/* ENCABEZADO INTERACTIVO DEL MÓDULO (ACCORDION TOGGLE) */}
                   <div
@@ -748,7 +762,7 @@ export default function DashboardPage() {
                         <div className="flex items-center gap-2">
                           <h2 className="text-[10px] font-black text-sky-950 uppercase tracking-[0.2em] font-serif italic">{section.title}</h2>
                           {userTier === 'free' && sIdx !== 0 && (
-                            <span className="bg-amber-100 text-amber-800 text-[7px] font-black uppercase tracking-widest px-1.5 py-0.5 border border-amber-200">
+                            <span className="bg-amber-100 text-[#D4AF37] text-[7px] font-black uppercase tracking-widest px-1.5 py-0.5 border border-[#D4AF37]/30">
                               PREMIUM
                             </span>
                           )}
@@ -768,7 +782,7 @@ export default function DashboardPage() {
                         </div>
                       ) : (
                         <div className="text-right hidden sm:block">
-                          <span className="text-[8px] font-black uppercase tracking-widest text-teal-600 bg-teal-50 border border-teal-100 px-2.5 py-1">
+                          <span className="text-[8px] font-black uppercase tracking-widest text-[#D4AF37] bg-teal-50 border border-teal-100 px-2.5 py-1">
                             Sube a PRO por $129 MXN
                           </span>
                         </div>
@@ -822,20 +836,20 @@ export default function DashboardPage() {
                             <div
                               onClick={() => !isLocked && router.push(`/lesson/${lesson.id}?type=standard&timeMode=${timeMode}`)}
                               className={`
-                                w-full max-w-[420px] p-4 rounded-xl border transition-all duration-200 cursor-pointer bg-white relative overflow-hidden group/card
+                                w-full max-w-[420px] p-4 rounded-none border transition-all duration-200 cursor-pointer bg-white relative overflow-hidden group/card
                                 ${isLocked ? 'opacity-60 border-sky-100' : `border-sky-200 hover:border-${theme.primary} hover:shadow-[0_10px_40px_rgba(14,165,233,0.08)]`}
-                                ${isActive ? `ring-2 ring-${theme.primary}/10 border-${theme.primary} shadow-md` : ''}
+                                ${isActive ? `ring-2 ring-${theme.primary}/10 border-${theme.primary} shadow-none` : ''}
                               `}
                             >
                               <div className="flex flex-col sm:flex-row justify-between items-start gap-2 relative z-10">
                                 <div className="flex-1 min-w-0">
                                   <div className="flex items-center gap-2 mb-1.5">
-                                    <span className={`px-2 py-0.5 rounded-xl text-[8px] font-black uppercase tracking-[0.2em] ${isActive ? `bg-${theme.primary} text-white` : 'bg-sky-100 text-sky-600'}`}>
+                                    <span className={`px-2 py-0.5 rounded-none text-[8px] font-black uppercase tracking-[0.2em] ${isActive ? `bg-${theme.primary} text-slate-900` : 'bg-sky-100 text-slate-900'}`}>
                                       Módulo {globalIndex + 1}
                                     </span>
                                   </div>
-                                  <h3 className={`text-xs font-black tracking-tight leading-tight uppercase ${isLocked ? 'text-sky-600' : 'text-sky-950'}`}>{lesson.title}</h3>
-                                  <p className="text-[9px] text-sky-600 mt-1 leading-snug">{lesson.description}</p>
+                                  <h3 className={`text-xs font-black tracking-tight leading-tight uppercase ${isLocked ? 'text-slate-500' : 'text-slate-900'}`}>{lesson.title}</h3>
+                                  <p className="text-[9px] text-slate-600 mt-1 leading-snug">{lesson.description}</p>
                                 </div>
                                 <div className="flex flex-col items-end justify-between h-full min-w-[50px]">
                                   {isCompleted && (
@@ -871,7 +885,7 @@ export default function DashboardPage() {
                                   disabled={isLocked}
                                   className={`
                                     w-9 h-9 rounded-full flex items-center justify-center border transition-all duration-200 shadow-none relative
-                                    ${isActive ? `bg-${theme.primary} border-${theme.accent} text-white shadow-lg scale-110 z-20 ring-4 ring-${theme.primary}/20` : ''} 
+                                    ${isActive ? `bg-${theme.primary} border-${theme.accent} text-slate-900 shadow-none scale-110 z-20 ring-4 ring-${theme.primary}/20` : ''} 
                                     ${isCompleted ? `bg-white border-${theme.primary} text-${theme.primary} hover:bg-${theme.secondary}` : ''} 
                                     ${isLocked ? 'bg-sky-50 border-sky-200 text-sky-600' : ''}
                                   `}
@@ -884,34 +898,34 @@ export default function DashboardPage() {
 
                               {/* Bloque de Tiempos (Columna Espaciadora) */}
                               <div className={`hidden md:flex w-full md:w-[calc(50%-3rem)] flex-col justify-center ${isEven ? 'items-start pl-6' : 'items-end pr-6'}`}>
-                                <div className={`flex flex-col gap-2 p-3.5 bg-white/60 backdrop-blur-sm rounded-xl border border-sky-100 shadow-[0_4px_15px_rgba(14,165,233,0.05)] w-48 ${isEven ? 'text-left' : 'text-right'}`}>
+                                <div className={`flex flex-col gap-2 p-3.5 bg-white/60 backdrop-blur-sm rounded-none border border-sky-100 shadow-[0_4px_15px_rgba(14,165,233,0.05)] w-48 ${isEven ? 'text-left' : 'text-right'}`}>
                                   {/* Tiempo Estimado */}
-                                  <div className={`flex items-center gap-2 text-[9px] font-black uppercase tracking-widest ${isLocked ? 'text-sky-500' : 'text-sky-700'}`}>
+                                  <div className={`flex items-center gap-2 text-[9px] font-black uppercase tracking-widest ${isLocked ? 'text-slate-500' : 'text-slate-900'}`}>
                                     {isEven ? (
                                       <>
-                                        <Clock size={12} className={isLocked ? 'opacity-50' : 'text-sky-600'} />
+                                        <Clock size={12} className={isLocked ? 'opacity-50' : 'text-slate-900'} />
                                         <span>Estimado: 15m</span>
                                       </>
                                     ) : (
                                       <>
                                         <span>Estimado: 15m</span>
-                                        <Clock size={12} className={isLocked ? 'opacity-50' : 'text-sky-600'} />
+                                        <Clock size={12} className={isLocked ? 'opacity-50' : 'text-slate-900'} />
                                       </>
                                     )}
                                   </div>
                                   
                                   {/* Tiempo Real (Completado) */}
                                   {isCompleted && (
-                                    <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-emerald-600">
+                                    <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-[#D4AF37]">
                                       {isEven ? (
                                         <>
-                                          <CheckCircle2 size={12} className="text-emerald-500" />
+                                          <CheckCircle2 size={12} className="text-[#D4AF37]" />
                                           <span>Real: {Math.floor(Math.random() * 5) + 10}m {Math.floor(Math.random() * 59)}s</span>
                                         </>
                                       ) : (
                                         <>
                                           <span>Real: {Math.floor(Math.random() * 5) + 10}m {Math.floor(Math.random() * 59)}s</span>
-                                          <CheckCircle2 size={12} className="text-emerald-500" />
+                                          <CheckCircle2 size={12} className="text-[#D4AF37]" />
                                         </>
                                       )}
                                     </div>
@@ -919,7 +933,7 @@ export default function DashboardPage() {
 
                                   {/* Tiempo En Curso */}
                                   {isActive && (
-                                    <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-amber-500 animate-pulse">
+                                    <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-[#D4AF37] animate-pulse">
                                       {isEven ? (
                                         <>
                                           <Timer size={12} />
@@ -950,8 +964,7 @@ export default function DashboardPage() {
           </motion.div>
 
           {/* EXÁMENES COMPACTOS (SIMULADORES ESTRATÉGICOS) */}
-          {activeLanguage === 'en' && (
-            <div className="mt-8 mb-12">
+          <div className="mt-8 mb-12">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 border-b border-sky-200 pb-4">
                 <h2 className="text-[9px] font-black text-sky-600 uppercase tracking-[0.3em] flex items-center gap-2">
                   <Shield size={14} className={`text-${theme.primary}`} /> Simuladores Estratégicos
@@ -967,9 +980,9 @@ export default function DashboardPage() {
                     }[mode];
 
                     const activeColor = {
-                      basic: `bg-${theme.primary} text-white`,
-                      intermediate: 'bg-orange-500 text-white',
-                      advanced: 'bg-rose-600 text-white'
+                      basic: `bg-sky-200 text-slate-900 border border-sky-400`,
+                      intermediate: 'bg-orange-200 text-slate-900 border border-orange-400',
+                      advanced: 'bg-rose-200 text-slate-900 border border-rose-400'
                     }[mode];
 
                     const isActive = timeMode === mode;
@@ -977,7 +990,7 @@ export default function DashboardPage() {
                       <button
                         key={mode}
                         onClick={() => setTimeMode(mode)}
-                        className={`px-3 py-1 rounded-xl text-[8px] font-black uppercase tracking-widest transition-all ${isActive ? activeColor : 'text-sky-600 hover:text-sky-950'}`}
+                        className={`px-3 py-1 rounded-none text-[8px] font-black uppercase tracking-widest transition-all ${isActive ? activeColor : 'text-sky-600 hover:text-sky-950'}`}
                       >
                         {label}
                       </button>
@@ -993,18 +1006,18 @@ export default function DashboardPage() {
                   className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group relative overflow-hidden`}
                 >
                   {userTier !== 'executive' && (
-                    <div className="absolute top-0 right-0 bg-amber-100 text-amber-700 px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-amber-200 z-10 shadow-sm">
+                    <div className="absolute top-0 right-0 bg-amber-100 text-[#D4AF37] px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-[#D4AF37]/30 z-10 shadow-none">
                       <Lock size={8} /> EXECUTIVE
                     </div>
                   )}
-                  <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Headphones size={18} /></div>
+                  <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-slate-900 transition-colors`}><Headphones size={18} /></div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-[9px] font-black text-sky-950 uppercase tracking-widest mb-0.5 truncate">TOEIC Listening</h4>
                     <p className="text-[8px] text-sky-600 uppercase tracking-wider font-bold mb-1">Comprensión Auditiva</p>
                     {(() => {
                       const completedCount = getCompletedCount('toeic_listening');
                       return completedCount > 0 ? (
-                        <span className="inline-block bg-emerald-50 text-emerald-800 text-[7px] font-black uppercase px-1.5 py-0.5 border border-emerald-200">
+                        <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[7px] font-black uppercase px-1.5 py-0.5 border border-[#D4AF37]/30">
                           {completedCount === 10 ? '✓ COMPLETO (10/10)' : `${completedCount}/10 COMPLETADO`}
                         </span>
                       ) : (
@@ -1019,18 +1032,18 @@ export default function DashboardPage() {
                   className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group relative overflow-hidden`}
                 >
                   {userTier !== 'executive' && (
-                    <div className="absolute top-0 right-0 bg-amber-100 text-amber-700 px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-amber-200 z-10 shadow-sm">
+                    <div className="absolute top-0 right-0 bg-amber-100 text-[#D4AF37] px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-[#D4AF37]/30 z-10 shadow-none">
                       <Lock size={8} /> EXECUTIVE
                     </div>
                   )}
-                  <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><BookOpen size={18} /></div>
+                  <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-slate-900 transition-colors`}><BookOpen size={18} /></div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-[9px] font-black text-sky-950 uppercase tracking-widest mb-0.5 truncate">TOEIC Reading</h4>
                     <p className="text-[8px] text-sky-600 uppercase tracking-wider font-bold mb-1">Análisis Lector</p>
                     {(() => {
                       const completedCount = getCompletedCount('toeic_reading');
                       return completedCount > 0 ? (
-                        <span className="inline-block bg-emerald-50 text-emerald-800 text-[7px] font-black uppercase px-1.5 py-0.5 border border-emerald-200">
+                        <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[7px] font-black uppercase px-1.5 py-0.5 border border-[#D4AF37]/30">
                           {completedCount === 10 ? '✓ COMPLETO (10/10)' : `${completedCount}/10 COMPLETADO`}
                         </span>
                       ) : (
@@ -1045,18 +1058,18 @@ export default function DashboardPage() {
                   className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group relative overflow-hidden`}
                 >
                   {userTier !== 'executive' && (
-                    <div className="absolute top-0 right-0 bg-amber-100 text-amber-700 px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-amber-200 z-10 shadow-sm">
+                    <div className="absolute top-0 right-0 bg-amber-100 text-[#D4AF37] px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-[#D4AF37]/30 z-10 shadow-none">
                       <Lock size={8} /> EXECUTIVE
                     </div>
                   )}
-                  <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Trophy size={18} /></div>
+                  <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-slate-900 transition-colors`}><Trophy size={18} /></div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-[9px] font-black text-sky-950 uppercase tracking-widest mb-0.5 truncate">Simulador TOEIC®</h4>
                     <p className="text-[8px] text-purple-600 uppercase tracking-wider font-black font-serif italic mb-1">Listening & Reading</p>
                     {(() => {
                       const completedCount = getCompletedCount('toeic_mock');
                       return completedCount > 0 ? (
-                        <span className="inline-block bg-emerald-50 text-emerald-800 text-[7px] font-black uppercase px-1.5 py-0.5 border border-emerald-200">
+                        <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[7px] font-black uppercase px-1.5 py-0.5 border border-[#D4AF37]/30">
                           {completedCount === 10 ? '✓ COMPLETO (10/10)' : `${completedCount}/10 COMPLETADO`}
                         </span>
                       ) : (
@@ -1071,18 +1084,18 @@ export default function DashboardPage() {
                   className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group relative overflow-hidden`}
                 >
                   {userTier !== 'executive' && (
-                    <div className="absolute top-0 right-0 bg-amber-100 text-amber-700 px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-amber-200 z-10 shadow-sm">
+                    <div className="absolute top-0 right-0 bg-amber-100 text-[#D4AF37] px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-[#D4AF37]/30 z-10 shadow-none">
                       <Lock size={8} /> EXECUTIVE
                     </div>
                   )}
-                  <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Award size={18} /></div>
+                  <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-slate-900 transition-colors`}><Award size={18} /></div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-[9px] font-black text-sky-950 uppercase tracking-widest mb-0.5 truncate">Simulador TOEFL®</h4>
-                    <p className="text-[8px] text-indigo-600 uppercase tracking-wider font-black font-serif italic mb-1">iBT Integrated (4 Skills)</p>
+                    <p className="text-[8px] text-[#D4AF37] uppercase tracking-wider font-black font-serif italic mb-1">iBT Integrated (4 Skills)</p>
                     {(() => {
                       const completedCount = getCompletedCount('toefl_mock');
                       return completedCount > 0 ? (
-                        <span className="inline-block bg-emerald-50 text-emerald-800 text-[7px] font-black uppercase px-1.5 py-0.5 border border-emerald-200">
+                        <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[7px] font-black uppercase px-1.5 py-0.5 border border-[#D4AF37]/30">
                           {completedCount === 10 ? '✓ COMPLETO (10/10)' : `${completedCount}/10 COMPLETADO`}
                         </span>
                       ) : (
@@ -1097,18 +1110,18 @@ export default function DashboardPage() {
                   className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group relative overflow-hidden`}
                 >
                   {userTier !== 'executive' && (
-                    <div className="absolute top-0 right-0 bg-amber-100 text-amber-700 px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-amber-200 z-10 shadow-sm">
+                    <div className="absolute top-0 right-0 bg-amber-100 text-[#D4AF37] px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-[#D4AF37]/30 z-10 shadow-none">
                       <Lock size={8} /> EXECUTIVE
                     </div>
                   )}
-                  <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-white transition-colors`}><Award size={18} /></div>
+                  <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-slate-900 transition-colors`}><Award size={18} /></div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-[9px] font-black text-sky-950 uppercase tracking-widest mb-0.5 truncate">Simulador IELTS®</h4>
-                    <p className="text-[8px] text-teal-600 uppercase tracking-wider font-black font-serif italic mb-1">Academic (Global)</p>
+                    <p className="text-[8px] text-[#D4AF37] uppercase tracking-wider font-black font-serif italic mb-1">Academic (Global)</p>
                     {(() => {
                       const completedCount = getCompletedCount('ielts_mock');
                       return completedCount > 0 ? (
-                        <span className="inline-block bg-emerald-50 text-emerald-800 text-[7px] font-black uppercase px-1.5 py-0.5 border border-emerald-200">
+                        <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[7px] font-black uppercase px-1.5 py-0.5 border border-[#D4AF37]/30">
                           {completedCount === 10 ? '✓ COMPLETO (10/10)' : `${completedCount}/10 COMPLETADO`}
                         </span>
                       ) : (
@@ -1119,21 +1132,31 @@ export default function DashboardPage() {
                 </Link>
               </div>
             </div>
-          )}
         </div>
 
         {/* SIDEBAR DERECHO */}
         <div className="hidden lg:block w-80 flex-shrink-0">
           <Sidebar userStats={userStats} />
         </div>
+        </div> {/* CIERRE CONTENEDOR CENTRAL */}
 
-      </div>
+        {/* --- ESPACIO PUBLICITARIO DERECHO --- */}
+        <div className="hidden 2xl:block w-[160px] shrink-0">
+          <div className="sticky top-20 flex justify-center">
+             <div className="w-[160px] h-[600px] bg-sky-100/50 border-2 border-dashed border-sky-300 flex flex-col items-center justify-center text-sky-600 text-center p-4 rounded-none shadow-sm">
+                <span className="font-black text-[10px] uppercase tracking-widest mb-2">AdSense Derecho</span>
+                <span className="text-[9px] leading-tight font-bold">160x600 Vertical</span>
+             </div>
+          </div>
+        </div>
+
+      </div> {/* CIERRE WRAPPER PRINCIPAL CON ANUNCIOS */}
 
       {showUpgradeModal && <UpgradeModal onClose={() => setShowUpgradeModal(false)} />}
 
       {showVersionModal && selectedSimulator && (
         <div className="fixed inset-0 bg-green-950/40 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-in fade-in duration-200">
-          <div className="bg-gradient-to-br from-green-50 via-green-100/95 to-green-50/80 border-2 border-green-300 p-6 md:p-8 max-w-3xl w-full shadow-[0_20px_50px_rgba(20,83,45,0.25)] rounded-2xl relative animate-in zoom-in-95 duration-200 backdrop-blur-lg">
+          <div className="bg-gradient-to-br from-green-50 via-green-100/95 to-green-50/80 border-2 border-green-300 p-6 md:p-8 max-w-3xl w-full shadow-[0_20px_50px_rgba(20,83,45,0.25)] rounded-none relative animate-in zoom-in-95 duration-200 backdrop-blur-lg">
             <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-green-500 via-emerald-400 to-green-600 rounded-t-2xl" />
             
             <div className="flex justify-between items-center mb-4">
@@ -1174,7 +1197,7 @@ export default function DashboardPage() {
                         setShowVersionModal(false);
                         router.push(`/lesson/${versionId}?type=standard&timeMode=${timeMode}`);
                       }}
-                      className={`p-4 text-left border transition-all duration-200 relative group/card flex flex-col justify-between hover:scale-[1.01] hover:shadow-md rounded-xl min-h-[100px] ${
+                      className={`p-4 text-left border transition-all duration-200 relative group/card flex flex-col justify-between hover:scale-[1.01] hover:shadow-none rounded-none min-h-[100px] ${
                         isCompleted 
                           ? 'bg-green-200/70 border-green-400 text-green-950 hover:bg-green-300/50 hover:border-green-600 shadow-[0_10px_40px_rgba(14,165,233,0.08)] ring-1 ring-green-400/30' 
                           : 'bg-white border-green-200 text-green-900 hover:bg-green-50 hover:border-green-500'
@@ -1185,11 +1208,11 @@ export default function DashboardPage() {
                           {verMeta.title}
                         </span>
                         {isCompleted ? (
-                          <span className="flex items-center gap-1 bg-green-600 text-white text-[8px] font-black uppercase px-2 py-0.5 tracking-wider rounded-md border border-green-700 shadow-[0_10px_40px_rgba(14,165,233,0.08)]">
+                          <span className="flex items-center gap-1 bg-green-600 text-slate-900 text-[8px] font-black uppercase px-2 py-0.5 tracking-wider rounded-none border border-green-700 shadow-[0_10px_40px_rgba(14,165,233,0.08)]">
                             <Check size={8} strokeWidth={4} /> Completado
                           </span>
                         ) : (
-                          <span className="bg-green-50 border border-green-200 text-green-800 text-[8px] font-black uppercase px-2 py-0.5 tracking-wider rounded-md">
+                          <span className="bg-green-50 border border-green-200 text-green-800 text-[8px] font-black uppercase px-2 py-0.5 tracking-wider rounded-none">
                             Pendiente
                           </span>
                         )}

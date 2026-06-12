@@ -1,0 +1,95 @@
+{
+  "id": "fr-b1-08",
+  "title": "L'Expression du But",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Subjunctive", "Purpose"],
+  "completion_message": "¡Bravo! Ahora puedes explicar tus motivos y propósitos con la elegancia que caracteriza al idioma francés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Propósito: Para Qué (B1)",
+      "parts": [
+        {
+          "visual": "¿Cómo dices 'Hago esto PARA QUE tú seas feliz'?\nEn francés usamos conectores de propósito:\n\n1. POUR QUE (Para que - Informal/Estándar)\n2. AFIN QUE (A fin de que / Para que - Formal/Escrito)\n\n¡Alerta Roja!\nAmbas expresiones SIEMPRE, sin excepción, exigen el uso del SUBJUNTIVO después de ellas.\n\n- Je parle fort POUR QUE tu m'entendes. (Hablo fuerte PARA QUE tú me escuches).",
+          "audio": "Ha llegado el momento de usar el subjuntivo fuera de la frase 'Il faut que'. Otra situación donde el subjuntivo es obligatorio es cuando expresamos un propósito o un objetivo. Si quieres decir 'Te llamo PARA QUE me ayudes', necesitas usar el conector POUR QUE (para que). Y atención: la frase que viene después de POUR QUE siempre debe ir en subjuntivo. Así que dices: 'Je t'appelle POUR QUE tu m'aides'. Si estás escribiendo un ensayo o un correo muy formal, puedes usar AFIN QUE, que significa exactamente lo mismo pero suena súper elegante."
+        },
+        {
+          "visual": "Un detalle importante: POUR vs POUR QUE.\n\n- Si el sujeto de ambas acciones es EL MISMO, usamos POUR + Infinitivo.\nEj: Je travaille POUR gagner de l'argent. (YO trabajo para que YO gane dinero).\n\n- Si hay DOS SUJETOS diferentes, usamos POUR QUE + Subjuntivo.\nEj: Je travaille POUR QUE mon fils puisse étudier. (YO trabajo para que MI HIJO pueda estudiar).",
+          "audio": "Hay una trampa en la que caen muchos estudiantes. No siempre usamos POUR QUE. Si tú eres el protagonista de ambas acciones, es decir, tú haces el esfuerzo y tú recibes el beneficio, simplemente usas POUR seguido de un infinitivo. Por ejemplo: 'Yo como PARA vivir'. Dices 'Je mange pour vivre'. Fin de la historia, no hay subjuntivo. PERO, si tú haces la acción para que OTRA persona haga algo, tienes dos sujetos diferentes. Ahí es obligatorio usar POUR QUE seguido de subjuntivo. Por ejemplo: 'Yo cocino PARA QUE tú comas'. Dices: 'Je cuisine POUR QUE tu manges'."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta para expresar el propósito.",
+      "questions": [
+        { "id": "frb1-08-q1", "type": "quiz_choice", "question": "¿Qué significa 'Pour que'?", "options": ["Para que", "Por qué", "Porque", "A fin de"], "correct_answer": "Para que", "explanation": "Pour que = Para que." },
+        { "id": "frb1-08-q2", "type": "quiz_choice", "question": "¿Qué tiempo verbal es OBLIGATORIO después de 'Pour que' y 'Afin que'?", "options": ["El Subjuntivo", "El Presente del Indicativo", "El Futuro", "El Imparfait"], "correct_answer": "El Subjuntivo", "explanation": "Estas expresiones de propósito exigen el subjuntivo." },
+        { "id": "frb1-08-q3", "type": "quiz_choice", "question": "Je te donne la clé pour que tu ____ (pouvoir) entrer. (Poder - subjuntivo).", "options": ["puisses", "peux", "pourras", "pouvais"], "correct_answer": "puisses", "explanation": "Pouvoir en subjuntivo es irregular: puisses." },
+        { "id": "frb1-08-q4", "type": "quiz_choice", "question": "Je parle lentement pour que vous ____ (comprendre). (Comprender - subjuntivo).", "options": ["compreniez", "comprenez", "comprendrez", "comprenaient"], "correct_answer": "compreniez", "explanation": "Subjuntivo de vous = compreniez." },
+        { "id": "frb1-08-q5", "type": "quiz_choice", "question": "Il cache le cadeau afin qu'elle ne le ____ (trouver) pas.", "options": ["trouve", "trouvera", "trouvait", "trouves"], "correct_answer": "trouve", "explanation": "Subjuntivo de 'elle' = trouve." },
+        { "id": "frb1-08-q6", "type": "quiz_choice", "question": "Elige la opción correcta (1 sujeto vs 2 sujetos): Je travaille pour ____ une voiture.", "options": ["acheter", "que j'achète", "qu'achète", "j'acheter"], "correct_answer": "acheter", "explanation": "Mismo sujeto (Yo trabajo, yo compro) -> Pour + Infinitivo." },
+        { "id": "frb1-08-q7", "type": "quiz_choice", "question": "Je travaille pour que ma fille ____ (pouvoir) étudier. (2 sujetos).", "options": ["puisse", "peut", "pourra", "pouvait"], "correct_answer": "puisse", "explanation": "Dos sujetos (Yo / Mi hija) -> Pour que + Subjuntivo (puisse)." },
+        { "id": "frb1-08-q8", "type": "quiz_choice", "question": "¿Cuál es la diferencia entre 'Pour que' y 'Afin que'?", "options": ["Afin que es más formal y se usa mucho por escrito", "Pour que usa subjuntivo y Afin que usa indicativo", "Afin que es para el pasado", "No hay diferencia, son idénticos en formalidad"], "correct_answer": "Afin que es más formal y se usa mucho por escrito", "explanation": "Ambos significan lo mismo y usan subjuntivo, pero 'Afin que' es lenguaje sostenido/escrito." },
+        { "id": "frb1-08-q9", "type": "quiz_choice", "question": "J'ai mis un manteau pour qu'il n'____ (avoir) pas froid. (Subjuntivo de avoir).", "options": ["ait", "a", "aie", "aura"], "correct_answer": "ait", "explanation": "Avoir para 'il' en subjuntivo -> ait." },
+        { "id": "frb1-08-q10", "type": "quiz_choice", "question": "Nous partons tôt pour ____ arriver à l'heure.", "options": ["arriver", "que nous arrivions", "qu'arriver", "nous arriver"], "correct_answer": "arriver", "explanation": "Mismo sujeto (Nosotros salimos, nosotros llegamos) -> Pour + Infinitivo." },
+        { "id": "frb1-08-q11", "type": "quiz_choice", "question": "Nous partons tôt pour que vous ____ (arriver) à l'heure.", "options": ["arriviez", "arrivez", "arriverez", "arriviezs"], "correct_answer": "arriviez", "explanation": "Dos sujetos (Nosotros / Ustedes) -> Pour que + Subjuntivo (arriviez)." },
+        { "id": "frb1-08-q12", "type": "quiz_choice", "question": "Afin que vous ____ (être) satisfaits, nous ferons de notre mieux. (Subjuntivo de être).", "options": ["soyez", "êtes", "serez", "étiez"], "correct_answer": "soyez", "explanation": "Être para 'vous' en subjuntivo -> soyez." },
+        { "id": "frb1-08-q13", "type": "quiz_choice", "question": "Je te donne mon numéro afin que tu m'____ (appeler). (Llamar).", "options": ["appelles", "appelles", "appelleras", "appelais"], "correct_answer": "appelles", "explanation": "Subjuntivo 'tu' -> appelles." },
+        { "id": "frb1-08-q14", "type": "quiz_choice", "question": "Il fait des efforts pour qu'elle le ____ (remarquer). (Para que ella lo note).", "options": ["remarque", "remarquera", "remarquait", "remarques"], "correct_answer": "remarque", "explanation": "Subjuntivo 'elle' -> remarque." },
+        { "id": "frb1-08-q15", "type": "quiz_choice", "question": "Viens ici pour que je te ____ (voir).", "options": ["voie", "vois", "verrai", "voyais"], "correct_answer": "voie", "explanation": "Voir en subjuntivo 'je' -> voie." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo en Subjuntivo o elige entre Pour/Pour que.",
+      "questions": [
+        { "id": "frb1-08-f1", "type": "fill_input", "question": "Je parle fort pour que tu m'____ (entendre).", "correct_answer": "entendes", "explanation": "entendes" },
+        { "id": "frb1-08-f2", "type": "fill_input", "question": "Je travaille dur pour que vous ____ (être) fiers.", "correct_answer": "soyez", "explanation": "soyez" },
+        { "id": "frb1-08-f3", "type": "fill_input", "question": "Il part (1 sujeto) ____ dormir.", "correct_answer": "pour", "explanation": "pour" },
+        { "id": "frb1-08-f4", "type": "fill_input", "question": "Il part (2 sujetos) ____ tu dormes.", "correct_answer": "pour que", "explanation": "pour que" },
+        { "id": "frb1-08-f5", "type": "fill_input", "question": "Je t'aide afin que tu ____ (pouvoir) finir.", "correct_answer": "puisses", "explanation": "puisses" },
+        { "id": "frb1-08-f6", "type": "fill_input", "question": "Elle crie pour qu'il la ____ (regarder).", "correct_answer": "regarde", "explanation": "regarde" },
+        { "id": "frb1-08-f7", "type": "fill_input", "question": "J'étudie ____ (para) avoir un bon travail.", "correct_answer": "pour", "explanation": "pour" },
+        { "id": "frb1-08-f8", "type": "fill_input", "question": "Je te l'explique pour que tu ____ (savoir) la vérité.", "correct_answer": "saches", "explanation": "saches (irregular de savoir)" },
+        { "id": "frb1-08-f9", "type": "fill_input", "question": "Nous courons afin qu'ils ne nous ____ (rattraper) pas. (Atrapar).", "correct_answer": "rattrapent", "explanation": "rattrapent" },
+        { "id": "frb1-08-f10", "type": "fill_input", "question": "Afin que tout le monde ____ (comprendre), je répète.", "correct_answer": "comprenne", "explanation": "comprenne (tout le monde es singular)" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Purpose Match",
+      "pairs": [
+        {"id": "frb1-08-p1", "source": "Pour que", "target": "Para que (estándar)"},
+        {"id": "frb1-08-p2", "source": "Afin que", "target": "A fin de que (formal)"},
+        {"id": "frb1-08-p3", "source": "Pour", "target": "Para (mismo sujeto)"},
+        {"id": "frb1-08-p4", "source": "Pour que tu sois", "target": "Para que tú seas"},
+        {"id": "frb1-08-p5", "source": "Pour qu'il ait", "target": "Para que él tenga"},
+        {"id": "frb1-08-p6", "source": "Pour que nous puissions", "target": "Para que podamos"},
+        {"id": "frb1-08-p7", "source": "Pour que vous sachiez", "target": "Para que ustedes sepan"},
+        {"id": "frb1-08-p8", "source": "Pour que je fasse", "target": "Para que yo haga"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y distingue el uso del propósito.",
+      "questions": [
+        { "id": "frb1-08-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je le fais pour toi", "options": ["Je le fais pour toi", "Je le fais pour que tu", "Je fais pour moi", "Tu le fais pour moi"], "correct_answer": "Je le fais pour toi", "explanation": "Audio dice: Je le fais pour toi." },
+        { "id": "frb1-08-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Pour que tu sois heureux", "options": ["Pour que tu sois heureux", "Pour que je sois heureux", "Afin que tu sois heureux", "Pour tu sois heureux"], "correct_answer": "Pour que tu sois heureux", "explanation": "Audio dice: Pour que tu sois heureux." },
+        { "id": "frb1-08-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Afin qu'il comprenne", "options": ["Afin qu'il comprenne", "Pour qu'il comprenne", "Afin que tu comprennes", "Afin qu'elle comprenne"], "correct_answer": "Afin qu'il comprenne", "explanation": "Audio dice: Afin qu'il comprenne." },
+        { "id": "frb1-08-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je travaille pour manger", "options": ["Je travaille pour manger", "Je travaille pour que je mange", "Tu travailles pour manger", "Je travaille pour qu'il mange"], "correct_answer": "Je travaille pour manger", "explanation": "Audio dice: Je travaille pour manger." },
+        { "id": "frb1-08-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Pour que vous sachiez", "options": ["Pour que vous sachiez", "Afin que vous sachiez", "Pour que nous sachions", "Pour vous savez"], "correct_answer": "Pour que vous sachiez", "explanation": "Audio dice: Pour que vous sachiez." }
+      ]
+    }
+  ]
+}

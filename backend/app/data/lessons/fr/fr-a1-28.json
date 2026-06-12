@@ -1,565 +1,81 @@
 {
   "id": "fr-a1-28",
-  "title": "Distribución de la Oficina",
+  "title": "Au Restaurant",
+  "version": "4.0-ARTISAN",
   "level": "A1",
-  "description": "Zonas comunes de la oficina.",
-  "total_xp": 300,
-  "difficulty": "easy",
-  "tags": [
-    "a1",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["A1", "Conversation", "French", "Restaurant"],
+  "completion_message": "¡Magnifique! Ya tienes todo el vocabulario necesario para reservar una mesa, pedir comida educadamente y pagar la cuenta en cualquier restaurante de Francia.",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Distribución de la Oficina",
+      "title": "En el Restaurante (A1)",
       "parts": [
-        {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau A1 • Leçon A1-28 de 200\nSujet: Distribución de la Oficina\n\nConcept Clé:\n☞ 'PLAN'\n\n[Point Grammatical - Enfoque Gramatical]\n- Le présent de l'indicatif : verbes réguliers en -er ('nous utilisons plan') et auxiliaires ('je suis', 'nous avons').\\n- L'accord en genre et nombre des adjectifs de bureau (ex: 'un dossier vert', 'des chaises vertes').\\n- Clé Didactique : Structure de base Sujet + Verbe + Complément pour la communication simple.",
-          "audio": "Bienvenue à la leçon A1-28 sur Distribución de la Oficina. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : plan."
-        },
-        {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'plan' (Traducción/Uso: Zonas comunes de la oficina.)\n- Application Pratique : 'Nous devons intégrer plan pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : Faites attention à la liaison entre 'un' et 'plan' s'il commence par une voyelle.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : plan. Répétez après moi : plan."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Dans le niveau A1, privilégiez des phrases courtes et directes pour éviter les erreurs d'incompréhension.\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
-        }
+        { "visual": "Frases para llegar al restaurante:\n\n1. Bonjour, une table pour deux personnes, s'il vous plaît. (Hola, una mesa para dos personas, por favor).\n2. J'ai une réservation. (Tengo una reserva).\n3. La carte, s'il vous plaît. (El menú, por favor).\n\nPara pedir educadamente (La regla de oro):\nNUNCA digas 'Je veux' (Yo quiero), suena muy rudo en francés. Usa SIEMPRE:\n- Je voudrais... (Me gustaría / Quisiera...)\nEj: Je voudrais un café. Je voudrais de la viande.", "audio": "¡Vamos al restaurante! Al llegar, debes pedir una mesa: Bonjour, une table pour deux personnes, s'il vous plaît. Si ya llamaste antes, dices: J'ai une réservation. Para pedir el menú, dices: La carte, s'il vous plaît. Ahora, la regla de oro en Francia: nunca pidas diciendo 'Je veux', que significa yo quiero. Suena muy maleducado. Siempre debes usar 'Je voudrais', que significa 'Me gustaría' o 'Quisiera'. Je voudrais un café." },
+        { "visual": "Al final de la comida:\n\n1. L'addition, s'il vous plaît. (La cuenta, por favor).\n2. Où sont les toilettes ? (¿Dónde están los baños?).\n\nVocabulario extra:\n- L'entrée (La entrada / El primer plato).\n- Le plat principal (El plato principal).\n- Le dessert (El postre).\n- Un verre d'eau (Un vaso de agua).\n- Une carafe d'eau (Una jarra de agua del grifo - ¡Es gratis en Francia!).", "audio": "Cuando termines de comer y quieras pagar, no pidas 'la cuenta' traduciendo literal. Se dice: L'addition, s'il vous plaît. L'addition. Si necesitas ir al baño, preguntas: Où sont les toilettes ? Y un súper consejo para ahorrar dinero en Francia: si pides 'une carafe d'eau', te traerán una jarra de agua del grifo, que es de excelente calidad y totalmente gratis." }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la respuesta correcta para tu visita al restaurante.",
       "questions": [
-        {
-          "id": "fr-a1-28-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"plan\" dans le contexte de \"Distribución de la Oficina\" ?",
-          "options": [
-            "Le concept professionnel principal de plan utilisé dans Distribución de la Oficina.",
-            "Un terme familier à éviter dans Distribución de la Oficina.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Distribución de la Oficina."
-          ],
-          "correct_answer": "Le concept professionnel principal de plan utilisé dans Distribución de la Oficina.",
-          "explanation": "Comprendre la définition de \"plan\" est fondamental pour maîtriser \"Distribución de la Oficina\"."
-        },
-        {
-          "id": "fr-a1-28-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"plan\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Distribución de la Oficina\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"plan\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Distribución de la Oficina\" aux parties prenantes.",
-          "explanation": "Aborder \"plan\" dans les présentations professionnelles améliore la communication globale concernant \"Distribución de la Oficina\"."
-        },
-        {
-          "id": "fr-a1-28-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Distribución de la Oficina\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"plan\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"plan\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"plan\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"plan\" sont los piliers d'une exécution réussie de \"Distribución de la Oficina\"."
-        },
-        {
-          "id": "fr-a1-28-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Distribución de la Oficina\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"plan\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"plan\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"plan\" conduit souvent à des résultats inefficaces dans \"Distribución de la Oficina\"."
-        },
-        {
-          "id": "fr-a1-28-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"plan\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"plan\" adapté à l'environnement de \"Distribución de la Oficina\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"plan\" adapté à l'environnement de \"Distribución de la Oficina\".",
-          "explanation": "Traduire ou adapter \"plan\" nécessite de comprendre son application commerciale pratique dans \"Distribución de la Oficina\"."
-        },
-        {
-          "id": "fr-a1-28-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"plan\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Distribución de la Oficina\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Distribución de la Oficina\".",
-          "explanation": "Utiliser \"plan\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-a1-28-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Distribución de la Oficina\", comment un cadre doit-il présenter \"plan\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"plan\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-a1-28-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"plan\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"plan\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"plan\".",
-          "explanation": "Définir les jalons liés à \"plan\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-a1-28-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Distribución de la Oficina\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"plan\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"plan\".",
-          "explanation": "Les mots professionnels comme \"plan\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-a1-28-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"plan\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"plan\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "fra1-28-q1", "type": "quiz_choice", "question": "¿Cómo pides una mesa para dos personas?", "options": ["Une table pour deux personnes, s'il vous plaît", "Une chaise pour deux", "Je voudrais deux tables", "Deux personnes, merci"], "correct_answer": "Une table pour deux personnes, s'il vous plaît", "explanation": "Une table pour deux = Una mesa para dos." },
+        { "id": "fra1-28-q2", "type": "quiz_choice", "question": "¿Por qué es un error pedir la comida diciendo 'Je veux...'?", "options": ["Porque suena rudo y maleducado", "Porque significa 'yo no quiero'", "Porque es plural", "No es un error, es correcto"], "correct_answer": "Porque suena rudo y maleducado", "explanation": "Je veux es muy directo. Se debe usar 'Je voudrais' (Me gustaría)." },
+        { "id": "fra1-28-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Me gustaría...' para pedir educadamente?", "options": ["Je voudrais...", "Je veux...", "J'aime...", "Je suis..."], "correct_answer": "Je voudrais...", "explanation": "Je voudrais = Me gustaría / Quisiera." },
+        { "id": "fra1-28-q4", "type": "quiz_choice", "question": "¿Cómo pides 'La cuenta, por favor'?", "options": ["L'addition, s'il vous plaît", "La compte, s'il vous plaît", "L'argent, s'il vous plaît", "Le menu, s'il vous plaît"], "correct_answer": "L'addition, s'il vous plaît", "explanation": "La cuenta se llama l'addition (la suma)." },
+        { "id": "fra1-28-q5", "type": "quiz_choice", "question": "¿Qué pides en Francia si quieres agua de grifo gratis?", "options": ["Une carafe d'eau", "Une bouteille d'eau", "L'eau chère", "Un vin d'eau"], "correct_answer": "Une carafe d'eau", "explanation": "Une carafe d'eau es la jarra de agua del grifo gratuita por ley en los restaurantes franceses." },
+        { "id": "fra1-28-q6", "type": "quiz_choice", "question": "¿Qué significa 'La carte'?", "options": ["El menú", "La tarjeta de crédito", "El mapa de la ciudad", "La cuenta"], "correct_answer": "El menú", "explanation": "La carte = El menú del restaurante." },
+        { "id": "fra1-28-q7", "type": "quiz_choice", "question": "¿Cómo preguntas '¿Dónde están los baños?'", "options": ["Où sont les toilettes ?", "Où est le bain ?", "Où est la toilette ?", "Où sont les bains ?"], "correct_answer": "Où sont les toilettes ?", "explanation": "En francés siempre se pregunta en plural: les toilettes." },
+        { "id": "fra1-28-q8", "type": "quiz_choice", "question": "El camarero te pregunta si quieres postre. ¿Cómo respondes 'Me gustaría un postre'?", "options": ["Je voudrais un dessert", "Je veux un dessert", "J'ai un dessert", "Je suis un dessert"], "correct_answer": "Je voudrais un dessert", "explanation": "Je voudrais + un dessert." },
+        { "id": "fra1-28-q9", "type": "quiz_choice", "question": "¿Qué es 'L'entrée' en un restaurante francés?", "options": ["El primer plato / La entrada", "La puerta principal", "El postre", "La cuenta"], "correct_answer": "El primer plato / La entrada", "explanation": "L'entrée es el plato de inicio." },
+        { "id": "fra1-28-q10", "type": "quiz_choice", "question": "¿Cómo se dice 'Tengo una reserva'?", "options": ["J'ai une réservation", "Je suis une réservation", "J'ai réservé", "Une table réservée"], "correct_answer": "J'ai une réservation", "explanation": "J'ai (yo tengo) une réservation (una reserva)." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta (Cuidado con los acentos).",
       "questions": [
-        {
-          "id": "fr-a1-28-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"plan\" (Exercice 1) :",
-          "parts": [
-            "notre",
-            "plan",
-            "pendant",
-            "les",
-            "réunions.",
-            "Nous",
-            "utilisons"
-          ],
-          "correct_order": [
-            "Nous",
-            "utilisons",
-            "notre",
-            "plan",
-            "pendant",
-            "les",
-            "réunions."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"plan\"."
-        },
-        {
-          "id": "fr-a1-28-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"plan\" (Exercice 2) :",
-          "parts": [
-            "plan",
-            "pour",
-            "le",
-            "projet.",
-            "Voici",
-            "notre"
-          ],
-          "correct_order": [
-            "Voici",
-            "notre",
-            "plan",
-            "pour",
-            "le",
-            "projet."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"plan\"."
-        },
-        {
-          "id": "fr-a1-28-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"plan\" (Exercice 3) :",
-          "parts": [
-            "vérifier",
-            "notre",
-            "plan",
-            "ce",
-            "matin.",
-            "Je",
-            "dois"
-          ],
-          "correct_order": [
-            "Je",
-            "dois",
-            "vérifier",
-            "notre",
-            "plan",
-            "ce",
-            "matin."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"plan\"."
-        },
-        {
-          "id": "fr-a1-28-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"plan\" (Exercice 4) :",
-          "parts": [
-            "votre",
-            "plan",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît.",
-            "Veuillez",
-            "présenter"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "présenter",
-            "votre",
-            "plan",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"plan\"."
-        },
-        {
-          "id": "fr-a1-28-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"plan\" (Exercice 5) :",
-          "parts": [
-            "apprécie",
-            "chaque",
-            "plan",
-            "de",
-            "bureau.",
-            "Notre",
-            "équipe"
-          ],
-          "correct_order": [
-            "Notre",
-            "équipe",
-            "apprécie",
-            "chaque",
-            "plan",
-            "de",
-            "bureau."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"plan\"."
-        },
-        {
-          "id": "fr-a1-28-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"plan\" (Exercice 6) :",
-          "parts": [
-            "notre",
-            "plan",
-            "avant",
-            "midi",
-            "?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "notre",
-            "plan",
-            "avant",
-            "midi",
-            "?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"plan\"."
-        },
-        {
-          "id": "fr-a1-28-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"plan\" (Exercice 7) :",
-          "parts": [
-            "organiser",
-            "notre",
-            "plan",
-            "cette",
-            "semaine.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "organiser",
-            "notre",
-            "plan",
-            "cette",
-            "semaine."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"plan\"."
-        },
-        {
-          "id": "fr-a1-28-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"plan\" (Exercice 8) :",
-          "parts": [
-            "statut",
-            "de",
-            "notre",
-            "plan",
-            "ensemble.",
-            "Examinons",
-            "le"
-          ],
-          "correct_order": [
-            "Examinons",
-            "le",
-            "statut",
-            "de",
-            "notre",
-            "plan",
-            "ensemble."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"plan\"."
-        },
-        {
-          "id": "fr-a1-28-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"plan\" (Exercice 9) :",
-          "parts": [
-            "améliorer",
-            "notre",
-            "plan",
-            "de",
-            "travail.",
-            "Ils",
-            "souhaitent"
-          ],
-          "correct_order": [
-            "Ils",
-            "souhaitent",
-            "améliorer",
-            "notre",
-            "plan",
-            "de",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"plan\"."
-        },
-        {
-          "id": "fr-a1-28-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"plan\" (Exercice 10) :",
-          "parts": [
-            "avec",
-            "notre",
-            "plan",
-            "tous",
-            "les",
-            "jours.",
-            "Elle",
-            "travaille"
-          ],
-          "correct_order": [
-            "Elle",
-            "travaille",
-            "avec",
-            "notre",
-            "plan",
-            "tous",
-            "les",
-            "jours."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"plan\"."
-        }
+        { "id": "fra1-28-f1", "type": "fill_input", "question": "Je ____ un café. (Me gustaría / Quisiera).", "correct_answer": "voudrais", "explanation": "voudrais" },
+        { "id": "fra1-28-f2", "type": "fill_input", "question": "L'____, s'il vous plaît. (La cuenta).", "correct_answer": "addition", "explanation": "addition" },
+        { "id": "fra1-28-f3", "type": "fill_input", "question": "La ____, s'il vous plaît. (El menú).", "correct_answer": "carte", "explanation": "carte" },
+        { "id": "fra1-28-f4", "type": "fill_input", "question": "Une table pour ____ personnes. (dos).", "correct_answer": "deux", "explanation": "deux" },
+        { "id": "fra1-28-f5", "type": "fill_input", "question": "Où sont les ____ ? (¿Dónde están los baños?).", "correct_answer": "toilettes", "explanation": "toilettes" },
+        { "id": "fra1-28-f6", "type": "fill_input", "question": "J'____ une réservation. (Tengo).", "correct_answer": "ai", "explanation": "ai" },
+        { "id": "fra1-28-f7", "type": "fill_input", "question": "Une ____ d'eau. (Una jarra de agua - gratis).", "correct_answer": "carafe", "explanation": "carafe" },
+        { "id": "fra1-28-f8", "type": "fill_input", "question": "Le plat ____. (El plato principal).", "correct_answer": "principal", "explanation": "principal" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-a1-28-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"plan\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"plan\" en détail.",
-            "Une autre déclaration sur notre \"plan\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"plan\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"plan\" en réunion."
-        },
-        {
-          "id": "fr-a1-28-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"plan\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"plan\" ?",
-            "Une autre déclaration sur notre \"plan\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"plan\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"plan\" en réunion."
-        },
-        {
-          "id": "fr-a1-28-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"plan\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"plan\" cette année.",
-            "Une autre déclaration sur notre \"plan\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"plan\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"plan\" en réunion."
-        },
-        {
-          "id": "fr-a1-28-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"plan\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"plan\".",
-            "Une autre déclaration sur notre \"plan\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"plan\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"plan\" en réunion."
-        },
-        {
-          "id": "fr-a1-28-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"plan\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"plan\".",
-            "Une autre déclaration sur notre \"plan\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"plan\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"plan\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Restaurant Match",
+      "pairs": [
+        {"id": "fra1-28-p1", "source": "Une table", "target": "Una mesa"},
+        {"id": "fra1-28-p2", "source": "La carte", "target": "El menú"},
+        {"id": "fra1-28-p3", "source": "L'addition", "target": "La cuenta"},
+        {"id": "fra1-28-p4", "source": "Je voudrais", "target": "Me gustaría / Quisiera"},
+        {"id": "fra1-28-p5", "source": "Les toilettes", "target": "Los baños"},
+        {"id": "fra1-28-p6", "source": "Une carafe d'eau", "target": "Una jarra de agua"},
+        {"id": "fra1-28-p7", "source": "J'ai une réservation", "target": "Tengo una reserva"},
+        {"id": "fra1-28-p8", "source": "L'entrée", "target": "La entrada (plato)"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase.",
       "questions": [
-        {
-          "id": "fr-a1-28-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"pla_\" (Indice : désigne \"plan\")",
-          "correct_answers": [
-            "plan",
-            "Plan"
-          ],
-          "hints": [
-            "Commence par 'pla'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"plan\"."
-        },
-        {
-          "id": "fr-a1-28-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"L'équipe veut discuter de notre plan ____ lundi matin.\" (le / en)",
-          "correct_answers": [
-            "le"
-          ],
-          "hints": [
-            "Article défini utilisé devant les jours de la semaine"
-          ],
-          "explanation": "En français, on utilise l'article défini 'le' devant un jour de la semana pour indiquer un rendez-vous habituel ou fixe."
-        },
-        {
-          "id": "fr-a1-28-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Veuillez ____ attention à ne pas faire d'erreur sur notre plan.\" (faire / prendre)",
-          "correct_answers": [
-            "faire",
-            "Faire"
-          ],
-          "hints": [
-            "Verbe signifiant effectuer ou prêter attention"
-          ],
-          "explanation": "L'expression 'faire attention' est une collocation standard en français."
-        },
-        {
-          "id": "fr-a1-28-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons organiser une ____ pour revoir notre plan.\" (réunion / carte)",
-          "correct_answers": [
-            "réunion",
-            "discussion",
-            "session"
-          ],
-          "hints": [
-            "Un rassemblement de personnes pour travailler ensemble"
-          ],
-          "explanation": "Une 'réunion' est le terme standard pour un meeting professionnel."
-        },
-        {
-          "id": "fr-a1-28-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Il nous faut un rapport ____ sur le statut de notre plan.\" (clair / lent)",
-          "correct_answers": [
-            "clair"
-          ],
-          "hints": [
-            "Facile à comprendre et bien structuré"
-          ],
-          "explanation": "Un rapport 'clair' est indispensable pour assurer l'alignement."
-        }
+        { "id": "fra1-28-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je voudrais un café", "options": ["Je voudrais un café", "Je veux un café", "J'ai un café", "L'addition s'il vous plaît"], "correct_answer": "Je voudrais un café", "explanation": "Audio dice: Je voudrais un café." },
+        { "id": "fra1-28-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "L'addition s'il vous plaît", "options": ["L'addition s'il vous plaît", "La carte s'il vous plaît", "Une carafe d'eau", "Où sont les toilettes"], "correct_answer": "L'addition s'il vous plaît", "explanation": "Audio dice: L'addition s'il vous plaît." },
+        { "id": "fra1-28-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "La carte s'il vous plaît", "options": ["La carte s'il vous plaît", "L'addition s'il vous plaît", "J'ai une réservation", "Je voudrais la carte"], "correct_answer": "La carte s'il vous plaît", "explanation": "Audio dice: La carte s'il vous plaît." },
+        { "id": "fra1-28-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Où sont les toilettes ?", "options": ["Où sont les toilettes ?", "Où est la carte ?", "Où est le restaurant ?", "Où est l'addition ?"], "correct_answer": "Où sont les toilettes ?", "explanation": "Audio dice: Où sont les toilettes ?" },
+        { "id": "fra1-28-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "J'ai une réservation", "options": ["J'ai une réservation", "Je voudrais une réservation", "Une table pour deux", "Je n'ai pas de réservation"], "correct_answer": "J'ai une réservation", "explanation": "Audio dice: J'ai une réservation." }
       ]
     }
   ]

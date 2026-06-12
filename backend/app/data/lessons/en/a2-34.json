@@ -1,0 +1,101 @@
+{
+  "id": "a2-34",
+  "title": "Too vs. Enough",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Quantifiers", "Business"],
+  "completion_message": "¡Magnífico! Ya sabes cómo usar 'too' y 'enough' para hablar sobre cantidades y grados.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Too vs. Enough (Demasiado vs. Suficiente)",
+      "parts": [
+        { "visual": "Too = Demasiado (más de lo necesario, generalmente negativo). \nVa ANTES del adjetivo: Too expensive (Demasiado caro). Too late (Demasiado tarde).", "audio": "Too means more than necessary. It is usually negative. It goes BEFORE the adjective. For example: The project is too expensive. We are too late." },
+        { "visual": "Enough = Suficiente (la cantidad necesaria). \nVa DESPUÉS del adjetivo: The office is big enough (Es lo suficientemente grande). \nVa ANTES del sustantivo: We don't have enough time (No tenemos suficiente tiempo).", "audio": "Enough means the necessary amount. It goes AFTER the adjective, for example: The office is big enough. And it goes BEFORE the noun, for example: We don't have enough time." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige 'too' o 'enough' para completar la oración correctamente.",
+      "questions": [
+        { "id": "a2-34-q1", "type": "quiz_choice", "question": "This software is ____ complicated. I don't understand it. (Demasiado).", "options": ["too", "enough", "very", "much"], "correct_answer": "too", "explanation": "Antes de adjetivo = too (demasiado)." },
+        { "id": "a2-34-q2", "type": "quiz_choice", "question": "We don't have ____ money for this project. (Suficiente).", "options": ["enough", "too", "many", "very"], "correct_answer": "enough", "explanation": "Antes de sustantivo (money) = enough." },
+        { "id": "a2-34-q3", "type": "quiz_choice", "question": "The meeting room is not big ____ for 20 people. (Lo suficientemente grande).", "options": ["enough", "too", "much", "very"], "correct_answer": "enough", "explanation": "Después de adjetivo (big) = enough." },
+        { "id": "a2-34-q4", "type": "quiz_choice", "question": "He speaks ____ fast. I can't follow him. (Demasiado rápido).", "options": ["too", "enough", "many", "a lot"], "correct_answer": "too", "explanation": "Antes de adverbio (fast) = too." },
+        { "id": "a2-34-q5", "type": "quiz_choice", "question": "Do we have ____ chairs for everyone? (Suficientes).", "options": ["enough", "too", "much", "too much"], "correct_answer": "enough", "explanation": "Antes de sustantivo (chairs) = enough." },
+        { "id": "a2-34-q6", "type": "quiz_choice", "question": "It's ____ late to call the client now. (Demasiado tarde).", "options": ["too", "enough", "much", "very"], "correct_answer": "too", "explanation": "Too late = demasiado tarde." },
+        { "id": "a2-34-q7", "type": "quiz_choice", "question": "Is the coffee hot ____ for you? (Lo suficientemente caliente).", "options": ["enough", "too", "much", "very"], "correct_answer": "enough", "explanation": "Después de adjetivo (hot) = enough." },
+        { "id": "a2-34-q8", "type": "quiz_choice", "question": "We have ____ many meetings today. (Demasiadas).", "options": ["too", "enough", "very", "a lot"], "correct_answer": "too", "explanation": "Too many = demasiados (para contables)." },
+        { "id": "a2-34-q9", "type": "quiz_choice", "question": "They spend ____ much time on social media. (Demasiado).", "options": ["too", "enough", "very", "a lot"], "correct_answer": "too", "explanation": "Too much = demasiado (para incontables)." },
+        { "id": "a2-34-q10", "type": "quiz_choice", "question": "I am not experienced ____ for this position. (Lo suficientemente experimentado).", "options": ["enough", "too", "much", "very"], "correct_answer": "enough", "explanation": "Después de adjetivo (experienced) = enough." },
+        { "id": "a2-34-q11", "type": "quiz_choice", "question": "The deadline is ____ close. We need an extension. (Demasiado).", "options": ["too", "enough", "much", "very"], "correct_answer": "too", "explanation": "Antes de adjetivo (close) = too." },
+        { "id": "a2-34-q12", "type": "quiz_choice", "question": "We don't have ____ information to make a decision. (Suficiente).", "options": ["enough", "too", "very", "much"], "correct_answer": "enough", "explanation": "Antes de sustantivo (information) = enough." },
+        { "id": "a2-34-q13", "type": "quiz_choice", "question": "He is not professional ____. (Lo suficientemente profesional).", "options": ["enough", "too", "much", "very"], "correct_answer": "enough", "explanation": "Después del adjetivo = enough." },
+        { "id": "a2-34-q14", "type": "quiz_choice", "question": "The printer is ____ slow. (Demasiado).", "options": ["too", "enough", "much", "very"], "correct_answer": "too", "explanation": "Antes del adjetivo = too." },
+        { "id": "a2-34-q15", "type": "quiz_choice", "question": "Did you buy ____ paper? (Suficiente).", "options": ["enough", "too", "much", "many"], "correct_answer": "enough", "explanation": "Antes de sustantivo = enough." },
+        { "id": "a2-34-q16", "type": "quiz_choice", "question": "There are ____ many mistakes in this report. (Demasiados).", "options": ["too", "enough", "very", "much"], "correct_answer": "too", "explanation": "Too many mistakes = demasiados errores." },
+        { "id": "a2-34-q17", "type": "quiz_choice", "question": "I didn't sleep ____ last night. (Suficiente).", "options": ["enough", "too", "much", "many"], "correct_answer": "enough", "explanation": "Como adverbio al final de frase = enough." },
+        { "id": "a2-34-q18", "type": "quiz_choice", "question": "The CEO's speech was ____ long. (Demasiado largo).", "options": ["too", "enough", "much", "very"], "correct_answer": "too", "explanation": "Antes del adjetivo = too." },
+        { "id": "a2-34-q19", "type": "quiz_choice", "question": "Is the budget large ____? (Lo suficientemente grande).", "options": ["enough", "too", "much", "very"], "correct_answer": "enough", "explanation": "Después del adjetivo = enough." },
+        { "id": "a2-34-q20", "type": "quiz_choice", "question": "We are spending ____ much money on advertising. (Demasiado).", "options": ["too", "enough", "very", "a lot"], "correct_answer": "too", "explanation": "Too much money = demasiado dinero." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe 'too' o 'enough' según corresponda.",
+      "questions": [
+        { "id": "a2-34-f1", "type": "fill_input", "question": "It is ____ expensive. (Demasiado)", "correct_answer": "too", "explanation": "too." },
+        { "id": "a2-34-f2", "type": "fill_input", "question": "We don't have ____ time. (Suficiente)", "correct_answer": "enough", "explanation": "enough." },
+        { "id": "a2-34-f3", "type": "fill_input", "question": "It is not big ____. (Lo suficientemente)", "correct_answer": "enough", "explanation": "enough." },
+        { "id": "a2-34-f4", "type": "fill_input", "question": "She speaks ____ fast. (Demasiado)", "correct_answer": "too", "explanation": "too." },
+        { "id": "a2-34-f5", "type": "fill_input", "question": "We have ____ many meetings. (Demasiadas)", "correct_answer": "too", "explanation": "too." },
+        { "id": "a2-34-f6", "type": "fill_input", "question": "Are there ____ chairs? (Suficientes)", "correct_answer": "enough", "explanation": "enough." },
+        { "id": "a2-34-f7", "type": "fill_input", "question": "It's ____ late. (Demasiado)", "correct_answer": "too", "explanation": "too." },
+        { "id": "a2-34-f8", "type": "fill_input", "question": "Is it hot ____? (Lo suficientemente)", "correct_answer": "enough", "explanation": "enough." },
+        { "id": "a2-34-f9", "type": "fill_input", "question": "He has ____ much work. (Demasiado - incontable)", "correct_answer": "too", "explanation": "too." },
+        { "id": "a2-34-f10", "type": "fill_input", "question": "I didn't sleep ____. (Suficiente)", "correct_answer": "enough", "explanation": "enough." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-34-p1", "source": "Too expensive", "target": "Demasiado caro"},
+        {"id": "a2-34-p2", "source": "Big enough", "target": "Lo suficientemente grande"},
+        {"id": "a2-34-p3", "source": "Enough time", "target": "Suficiente tiempo"},
+        {"id": "a2-34-p4", "source": "Too many", "target": "Demasiados (Contables)"},
+        {"id": "a2-34-p5", "source": "Too much", "target": "Demasiado (Incontables)"},
+        {"id": "a2-34-p6", "source": "Too fast", "target": "Demasiado rápido"},
+        {"id": "a2-34-p7", "source": "Good enough", "target": "Lo suficientemente bueno"},
+        {"id": "a2-34-p8", "source": "Too late", "target": "Demasiado tarde"},
+        {"id": "a2-34-p9", "source": "Enough money", "target": "Suficiente dinero"},
+        {"id": "a2-34-p10", "source": "Not fast enough", "target": "No lo suficientemente rápido"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta sobre cantidades.",
+      "questions": [
+        { "id": "a2-34-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This software is too complicated.", "options": ["This software is too complicated.", "The software is too complicated.", "This software is very complicated.", "This system is too complicated."], "correct_answer": "This software is too complicated.", "explanation": "Audio exacto." },
+        { "id": "a2-34-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We don't have enough money.", "options": ["We don't have enough money.", "We do not have enough money.", "They don't have enough money.", "We don't have much money."], "correct_answer": "We don't have enough money.", "explanation": "Audio exacto." },
+        { "id": "a2-34-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The room is not big enough.", "options": ["The room is not big enough.", "The meeting room is not big enough.", "The office is not big enough.", "This room is not big enough."], "correct_answer": "The room is not big enough.", "explanation": "Audio exacto." },
+        { "id": "a2-34-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He speaks too fast.", "options": ["He speaks too fast.", "She speaks too fast.", "He speaks very fast.", "They speak too fast."], "correct_answer": "He speaks too fast.", "explanation": "Audio exacto." },
+        { "id": "a2-34-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do we have enough chairs?", "options": ["Do we have enough chairs?", "Do you have enough chairs?", "Are there enough chairs?", "We don't have enough chairs."], "correct_answer": "Do we have enough chairs?", "explanation": "Audio exacto." },
+        { "id": "a2-34-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is too late to call the client.", "options": ["It is too late to call the client.", "It's too late to call the client.", "It is very late to call the client.", "Is it too late to call the client?"], "correct_answer": "It is too late to call the client.", "explanation": "Audio exacto." },
+        { "id": "a2-34-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have too many meetings today.", "options": ["We have too many meetings today.", "They have too many meetings today.", "We had too many meetings today.", "I have too many meetings today."], "correct_answer": "We have too many meetings today.", "explanation": "Audio exacto." },
+        { "id": "a2-34-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We don't have enough information.", "options": ["We don't have enough information.", "They don't have enough information.", "We don't have much information.", "I don't have enough information."], "correct_answer": "We don't have enough information.", "explanation": "Audio exacto." },
+        { "id": "a2-34-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The deadline is too close.", "options": ["The deadline is too close.", "The deadline is very close.", "Our deadline is too close.", "The deadline is too near."], "correct_answer": "The deadline is too close.", "explanation": "Audio exacto." },
+        { "id": "a2-34-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I didn't sleep enough last night.", "options": ["I didn't sleep enough last night.", "We didn't sleep enough last night.", "I don't sleep enough.", "I didn't sleep much last night."], "correct_answer": "I didn't sleep enough last night.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

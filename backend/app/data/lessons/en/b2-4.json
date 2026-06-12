@@ -1,0 +1,101 @@
+{
+  "id": "b2-4",
+  "title": "Meetings & Presentations",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Vocabulary", "Meetings", "Presentations", "Business"],
+  "completion_message": "¡Excelente! Dirigir reuniones y presentaciones en inglés con este vocabulario proyectará un liderazgo absoluto.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Gestión de Reuniones y Presentaciones",
+      "parts": [
+        { "visual": "Controlando la reunión: \n- Take the floor (Tomar la palabra). \n- Address an issue (Abordar un problema / Tratar un tema). \n- Get sidetracked (Desviarse del tema). \nEj: We are getting sidetracked. Let's take the floor back to the main agenda and address the budget issue.", "audio": "Controlling the meeting. Take the floor means to start speaking. Address an issue means to talk about a specific problem. Get sidetracked means to lose focus on the main topic. For example: We are getting sidetracked. Let's take the floor back to the main agenda and address the budget issue." },
+        { "visual": "Finalizando: \n- Wrap up (Resumir / Concluir / Terminar). \n- Action items (Tareas asignadas al final de la reunión). \n- Any other business / AOB (¿Algún otro asunto?). \nEj: Let's wrap up the meeting. Here are the action items for next week.", "audio": "Finishing up. Wrap up means to finish or summarize the meeting. Action items are specific tasks assigned to people. A O B stands for Any Other Business. For example: Let's wrap up the meeting. Here are the action items for next week." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para dirigir la reunión.",
+      "questions": [
+        { "id": "b2-4-q1", "type": "quiz_choice", "question": "I'd like to take the ____ to introduce our new marketing strategy. (La palabra / El turno de hablar).", "options": ["floor", "room", "stage", "ground"], "correct_answer": "floor", "explanation": "Take the floor = tomar la palabra." },
+        { "id": "b2-4-q2", "type": "quiz_choice", "question": "We have a lot to cover today, so let's stick to the ____. (La agenda / El orden del día).", "options": ["agenda", "schedule", "list", "paper"], "correct_answer": "agenda", "explanation": "Stick to the agenda = apegarse a la orden del día." },
+        { "id": "b2-4-q3", "type": "quiz_choice", "question": "We need to ____ the issue of declining sales immediately. (Abordar / Tratar).", "options": ["address", "talk", "speak", "look"], "correct_answer": "address", "explanation": "Address an issue = abordar, tratar un problema." },
+        { "id": "b2-4-q4", "type": "quiz_choice", "question": "We are getting ____. Let's return to the main topic. (Desviándonos del tema).", "options": ["sidetracked", "lost", "away", "outside"], "correct_answer": "sidetracked", "explanation": "Get sidetracked = desviarse del tema principal." },
+        { "id": "b2-4-q5", "type": "quiz_choice", "question": "I think we've covered everything. Let's ____ up the meeting. (Terminar / Resumir).", "options": ["wrap", "finish", "close", "pack"], "correct_answer": "wrap", "explanation": "Wrap up = concluir, terminar o resumir (una reunión/evento)." },
+        { "id": "b2-4-q6", "type": "quiz_choice", "question": "Before we finish, is there any ____ other business? (Algún otro asunto).", "options": ["any", "some", "more", "other"], "correct_answer": "any", "explanation": "Any other business (AOB) = ¿Algún otro asunto a tratar?" },
+        { "id": "b2-4-q7", "type": "quiz_choice", "question": "Here is the list of ____ items we need to complete by Friday. (Tareas asignadas).", "options": ["action", "work", "do", "task"], "correct_answer": "action", "explanation": "Action items = tareas o acciones a realizar derivadas de la reunión." },
+        { "id": "b2-4-q8", "type": "quiz_choice", "question": "I will send you the ____ of the meeting this afternoon. (El acta / El resumen escrito).", "options": ["minutes", "seconds", "hours", "notes"], "correct_answer": "minutes", "explanation": "Minutes (of a meeting) = el acta de la reunión." },
+        { "id": "b2-4-q9", "type": "quiz_choice", "question": "Sarah will ____ the meeting while I am away. (Presidir / Dirigir).", "options": ["chair", "table", "lead", "run"], "correct_answer": "chair", "explanation": "Chair a meeting = presidir o dirigir una reunión." },
+        { "id": "b2-4-q10", "type": "quiz_choice", "question": "Can everyone please ____ their microphones? There is a lot of background noise. (Silenciar).", "options": ["mute", "quiet", "stop", "close"], "correct_answer": "mute", "explanation": "Mute = silenciar (muy usado en videollamadas)." },
+        { "id": "b2-4-q11", "type": "quiz_choice", "question": "Sorry to ____, but I have a question about the budget. (Interrumpir).", "options": ["interrupt", "stop", "break", "cut"], "correct_answer": "interrupt", "explanation": "Interrupt = interrumpir." },
+        { "id": "b2-4-q12", "type": "quiz_choice", "question": "Let's move ____ to the next item on the agenda. (Pasar a).", "options": ["on", "in", "up", "out"], "correct_answer": "on", "explanation": "Move on = pasar a (lo siguiente)." },
+        { "id": "b2-4-q13", "type": "quiz_choice", "question": "To ____ up, our profits have increased by 15%. (Resumiendo).", "options": ["sum", "wrap", "make", "add"], "correct_answer": "sum", "explanation": "To sum up = en resumen, resumiendo." },
+        { "id": "b2-4-q14", "type": "quiz_choice", "question": "Could you please ____ that point? I didn't understand. (Aclarar / Explicar más).", "options": ["clarify", "clear", "clean", "open"], "correct_answer": "clarify", "explanation": "Clarify = aclarar, explicar más detalladamente." },
+        { "id": "b2-4-q15", "type": "quiz_choice", "question": "I agree with you ____ a certain extent, but not completely. (Hasta cierto punto).", "options": ["to", "at", "in", "with"], "correct_answer": "to", "explanation": "To a certain extent = hasta cierto punto." },
+        { "id": "b2-4-q16", "type": "quiz_choice", "question": "Let me ____ the screen so you can see the presentation. (Compartir).", "options": ["share", "show", "give", "put"], "correct_answer": "share", "explanation": "Share the screen = compartir pantalla." },
+        { "id": "b2-4-q17", "type": "quiz_choice", "question": "We need to ____ a meeting to discuss the new project. (Fijar / Agendar).", "options": ["schedule", "make", "do", "take"], "correct_answer": "schedule", "explanation": "Schedule a meeting = agendar una reunión." },
+        { "id": "b2-4-q18", "type": "quiz_choice", "question": "Does anyone have any input they would like to ____? (Añadir).", "options": ["add", "put", "give", "say"], "correct_answer": "add", "explanation": "Add = añadir (input = aportaciones/comentarios)." },
+        { "id": "b2-4-q19", "type": "quiz_choice", "question": "I think we are going around in ____. We are not deciding anything. (Dando vueltas en círculos).", "options": ["circles", "squares", "lines", "loops"], "correct_answer": "circles", "explanation": "Go around in circles = dar vueltas en círculos sin avanzar." },
+        { "id": "b2-4-q20", "type": "quiz_choice", "question": "Thank you all for ____ today. Have a great weekend. (Asistir).", "options": ["attending", "coming", "going", "being"], "correct_answer": "attending", "explanation": "Attend = asistir (a un evento o reunión)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta para la reunión.",
+      "questions": [
+        { "id": "b2-4-f1", "type": "fill_input", "question": "Take the ____. (Tomar la palabra con F)", "correct_answer": "floor", "explanation": "floor." },
+        { "id": "b2-4-f2", "type": "fill_input", "question": "Stick to the ____. (Agenda con A)", "correct_answer": "agenda", "explanation": "agenda." },
+        { "id": "b2-4-f3", "type": "fill_input", "question": "To ____ an issue. (Abordar/Tratar con A)", "correct_answer": "address", "explanation": "address." },
+        { "id": "b2-4-f4", "type": "fill_input", "question": "Get ____. (Desviarse del tema con S)", "correct_answer": "sidetracked", "explanation": "sidetracked." },
+        { "id": "b2-4-f5", "type": "fill_input", "question": "Let's ____ up. (Resumir/Terminar con W)", "correct_answer": "wrap", "explanation": "wrap." },
+        { "id": "b2-4-f6", "type": "fill_input", "question": "____ items. (Tareas a realizar con A)", "correct_answer": "action", "explanation": "action." },
+        { "id": "b2-4-f7", "type": "fill_input", "question": "The ____ of the meeting. (El acta escrita con M plural)", "correct_answer": "minutes", "explanation": "minutes." },
+        { "id": "b2-4-f8", "type": "fill_input", "question": "To ____ a meeting. (Presidir con C)", "correct_answer": "chair", "explanation": "chair." },
+        { "id": "b2-4-f9", "type": "fill_input", "question": "To ____ the screen. (Compartir con S)", "correct_answer": "share", "explanation": "share." },
+        { "id": "b2-4-f10", "type": "fill_input", "question": "Thank you for ____. (Asistir con A terminación ing)", "correct_answer": "attending", "explanation": "attending." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Meeting Match",
+      "pairs": [
+        {"id": "b2-4-p1", "source": "Take the floor", "target": "Tomar la palabra"},
+        {"id": "b2-4-p2", "source": "Stick to the agenda", "target": "Apegarse al orden del día"},
+        {"id": "b2-4-p3", "source": "Address an issue", "target": "Abordar un problema"},
+        {"id": "b2-4-p4", "source": "Get sidetracked", "target": "Desviarse del tema principal"},
+        {"id": "b2-4-p5", "source": "Wrap up", "target": "Concluir / Resumir (reunión)"},
+        {"id": "b2-4-p6", "source": "Action items", "target": "Tareas asignadas a realizar"},
+        {"id": "b2-4-p7", "source": "The minutes", "target": "El acta de la reunión"},
+        {"id": "b2-4-p8", "source": "Chair a meeting", "target": "Presidir / Dirigir una reunión"},
+        {"id": "b2-4-p9", "source": "Clarify a point", "target": "Aclarar un punto"},
+        {"id": "b2-4-p10", "source": "To sum up", "target": "En resumen / Para resumir"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración para dirigir una reunión.",
+      "questions": [
+        { "id": "b2-4-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I'd like to take the floor.", "options": ["I'd like to take the floor.", "I like to take the floor.", "I would like to take the room.", "He'd like to take the floor."], "correct_answer": "I'd like to take the floor.", "explanation": "Audio exacto." },
+        { "id": "b2-4-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's stick to the agenda.", "options": ["Let's stick to the agenda.", "Let's read the agenda.", "Let's stick on the agenda.", "Let's go to the agenda."], "correct_answer": "Let's stick to the agenda.", "explanation": "Audio exacto." },
+        { "id": "b2-4-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to address this issue.", "options": ["We need to address this issue.", "We need to talk this issue.", "We need to address the problem.", "We must address this issue."], "correct_answer": "We need to address this issue.", "explanation": "Audio exacto." },
+        { "id": "b2-4-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are getting sidetracked.", "options": ["We are getting sidetracked.", "They are getting sidetracked.", "We are getting lost.", "Are we getting sidetracked?"], "correct_answer": "We are getting sidetracked.", "explanation": "Audio exacto." },
+        { "id": "b2-4-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's wrap up the meeting.", "options": ["Let's wrap up the meeting.", "Let's finish up the meeting.", "Let's close the meeting.", "Let's wrap the meeting."], "correct_answer": "Let's wrap up the meeting.", "explanation": "Audio exacto." },
+        { "id": "b2-4-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Here are the action items.", "options": ["Here are the action items.", "Here is the action item.", "These are the action items.", "Where are the action items?"], "correct_answer": "Here are the action items.", "explanation": "Audio exacto." },
+        { "id": "b2-4-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will send the minutes.", "options": ["I will send the minutes.", "I will send the notes.", "I will send the meeting minutes.", "He will send the minutes."], "correct_answer": "I will send the minutes.", "explanation": "Audio exacto." },
+        { "id": "b2-4-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sarah will chair the meeting.", "options": ["Sarah will chair the meeting.", "Sarah will lead the meeting.", "Sarah will start the meeting.", "She will chair the meeting."], "correct_answer": "Sarah will chair the meeting.", "explanation": "Audio exacto." },
+        { "id": "b2-4-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Could you clarify that point?", "options": ["Could you clarify that point?", "Can you clarify that point?", "Could you clear that point?", "Would you clarify that point?"], "correct_answer": "Could you clarify that point?", "explanation": "Audio exacto." },
+        { "id": "b2-4-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Thank you all for attending.", "options": ["Thank you all for attending.", "Thank you for attending.", "Thanks for attending today.", "Thank you all for coming."], "correct_answer": "Thank you all for attending.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "b2-32",
+  "title": "Advanced Inversion",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Inversion", "Business"],
+  "completion_message": "¡Soberbio! Has dominado la Inversión Avanzada. Esta es la marca definitiva de un inglés de altísimo nivel, muy utilizado en discursos, presentaciones y escritura corporativa formal.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Inversión Avanzada con Negativos",
+      "parts": [
+        { "visual": "Para dar mucho énfasis o en contextos muy formales, ponemos un adverbio negativo al principio de la oración. Al hacerlo, debemos invertir el sujeto y el verbo auxiliar (como en una pregunta). \nNormal: We have NEVER seen such profits. \nInversión: NEVER HAVE WE seen such profits. (NUNCA HEMOS visto tales ganancias). \nNormal: You should contact the press under NO circumstances. \nInversión: UNDER NO CIRCUMSTANCES SHOULD YOU contact the press.", "audio": "To add strong emphasis or in very formal contexts, we put a negative adverb at the beginning of the sentence. When we do this, we must invert the subject and the auxiliary verb, just like in a question. Normal sentence: We have never seen such profits. Inversion: Never have we seen such profits. Another example: Under no circumstances should you contact the press." },
+        { "visual": "Otras expresiones comunes de inversión: \n- Hardly / Scarcely ... when (Apenas... cuando). \nEj: HARDLY HAD I arrived WHEN the meeting started. (Apenas había llegado cuando...). \n- Not only ... but also (No solo... sino también). \nEj: NOT ONLY IS HE the CEO, BUT he ALSO owns the company. \n- Little (Poco / Nada). \nEj: LITTLE DID WE know that the market would crash. (Poco sabíamos que...).", "audio": "Other common inversion expressions. Hardly or Scarcely followed by 'when' means 'apenas... cuando'. For example: Hardly had I arrived when the meeting started. 'Not only... but also'. For example: Not only is he the C E O, but he also owns the company. 'Little' means 'poco'. For example: Little did we know that the market would crash. Notice how 'Little we knew' becomes 'Little did we know'." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la estructura invertida correcta para dar un tono formal y enfático.",
+      "questions": [
+        { "id": "b2-32-q1", "type": "quiz_choice", "question": "Never ____ such a terrible mistake in my life. (Nunca he cometido).", "options": ["have I made", "I have made", "did I make", "made I"], "correct_answer": "have I made", "explanation": "Inversión de Present Perfect: Never + have I + participio." },
+        { "id": "b2-32-q2", "type": "quiz_choice", "question": "Under no circumstances ____ open this confidential file. (Bajo ninguna circunstancia debes tú).", "options": ["should you", "you should", "do you", "you do"], "correct_answer": "should you", "explanation": "Inversión de modal: Under no circumstances + should + you + open." },
+        { "id": "b2-32-q3", "type": "quiz_choice", "question": "Not only ____ late, but he also forgot the presentation. (No solo llegó tarde).", "options": ["did he arrive", "he arrived", "has he arrive", "arrived he"], "correct_answer": "did he arrive", "explanation": "Inversión en Past Simple: Not only + did + he + arrive." },
+        { "id": "b2-32-q4", "type": "quiz_choice", "question": "Hardly ____ the office when the phone rang. (Apenas había yo llegado).", "options": ["had I reached", "I had reached", "did I reach", "I reached"], "correct_answer": "had I reached", "explanation": "Hardly suele usarse con Past Perfect: Hardly + had I + participio." },
+        { "id": "b2-32-q5", "type": "quiz_choice", "question": "Little ____ that the company was going bankrupt. (Poco sabíamos nosotros).", "options": ["did we know", "we knew", "have we known", "knew we"], "correct_answer": "did we know", "explanation": "Inversión con 'Little' en pasado: Little + did + we + know." },
+        { "id": "b2-32-q6", "type": "quiz_choice", "question": "Rarely ____ such dedication in a new employee. (Raramente vemos).", "options": ["do we see", "we see", "we do see", "see we"], "correct_answer": "do we see", "explanation": "Inversión en Present Simple: Rarely + do + we + see." },
+        { "id": "b2-32-q7", "type": "quiz_choice", "question": "No sooner ____ the deal than the market crashed. (Apenas habíamos firmado... cuando).", "options": ["had we signed", "we had signed", "did we sign", "we signed"], "correct_answer": "had we signed", "explanation": "No sooner + had + sujeto + participio." },
+        { "id": "b2-32-q8", "type": "quiz_choice", "question": "At no time ____ informed about the risks. (En ningún momento fui yo informado).", "options": ["was I", "I was", "did I", "I did"], "correct_answer": "was I", "explanation": "Inversión con verbo To Be: At no time + was I + participio pasivo." },
+        { "id": "b2-32-q9", "type": "quiz_choice", "question": "Not until last week ____ that the CEO had resigned. (No fue hasta la semana pasada que descubrimos).", "options": ["did we discover", "we discovered", "have we discovered", "discovered we"], "correct_answer": "did we discover", "explanation": "Not until [tiempo] + did + sujeto + infinitivo." },
+        { "id": "b2-32-q10", "type": "quiz_choice", "question": "Only then ____ how serious the problem was. (Solo entonces me di cuenta).", "options": ["did I realize", "I realized", "do I realize", "I realize"], "correct_answer": "did I realize", "explanation": "Only then + did + sujeto + infinitivo." },
+        { "id": "b2-32-q11", "type": "quiz_choice", "question": "On no account ____ to anyone about this project. (Bajo ningún concepto debes tú hablar).", "options": ["must you speak", "you must speak", "do you speak", "speak you"], "correct_answer": "must you speak", "explanation": "On no account + modal + sujeto." },
+        { "id": "b2-32-q12", "type": "quiz_choice", "question": "Not only ____ our main competitor, but they also stole our clients. (No solo compraron).", "options": ["did they buy", "they bought", "have they buy", "bought they"], "correct_answer": "did they buy", "explanation": "Inversión en Pasado Simple: Not only + did they buy." },
+        { "id": "b2-32-q13", "type": "quiz_choice", "question": "Hardly had we started the meeting ____ the fire alarm went off. (Apenas... cuando).", "options": ["when", "than", "then", "that"], "correct_answer": "when", "explanation": "La estructura correcta es: Hardly... when. (No sooner usa 'than')." },
+        { "id": "b2-32-q14", "type": "quiz_choice", "question": "No sooner had he left the room ____ people started talking about him. (Apenas... cuando/que).", "options": ["than", "when", "then", "that"], "correct_answer": "than", "explanation": "La estructura correcta es: No sooner... than." },
+        { "id": "b2-32-q15", "type": "quiz_choice", "question": "Scarcely ____ the project when the budget was cut. (Apenas habíamos empezado).", "options": ["had we begun", "we had begun", "did we begin", "we began"], "correct_answer": "had we begun", "explanation": "Scarcely + had + sujeto + participio (igual que Hardly)." },
+        { "id": "b2-32-q16", "type": "quiz_choice", "question": "In no way ____ responsible for this failure. (De ninguna manera soy yo).", "options": ["am I", "I am", "do I", "I do"], "correct_answer": "am I", "explanation": "In no way + verbo to be + sujeto: am I." },
+        { "id": "b2-32-q17", "type": "quiz_choice", "question": "Only by working hard ____ this goal. (Solo trabajando duro lograremos).", "options": ["will we achieve", "we will achieve", "do we achieve", "achieve we"], "correct_answer": "will we achieve", "explanation": "Only by [acción] + auxiliar + sujeto: will we achieve." },
+        { "id": "b2-32-q18", "type": "quiz_choice", "question": "Never before ____ such an arrogant person! (Nunca antes he conocido).", "options": ["have I met", "I have met", "did I meet", "I met"], "correct_answer": "have I met", "explanation": "Never before + Present Perfect." },
+        { "id": "b2-32-q19", "type": "quiz_choice", "question": "Not a single word ____ during the entire meeting. (Ni una sola palabra dijo ella).", "options": ["did she say", "she said", "has she say", "said she"], "correct_answer": "did she say", "explanation": "Not a single word + did she say." },
+        { "id": "b2-32-q20", "type": "quiz_choice", "question": "Little ____ that his email was being monitored. (Poco sospechaba él).", "options": ["did he suspect", "he suspected", "does he suspect", "suspected he"], "correct_answer": "did he suspect", "explanation": "Little + did he + infinitivo." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe las palabras auxiliares invertidas. Ejemplo: 'did I' o 'have we'.",
+      "questions": [
+        { "id": "b2-32-f1", "type": "fill_input", "question": "Never ____ seen this. (he yo - Present Perfect)", "correct_answer": "have I", "explanation": "have I." },
+        { "id": "b2-32-f2", "type": "fill_input", "question": "Under no circumstances ____ open it. (debes tú - Modal)", "correct_answer": "should you", "explanation": "should you." },
+        { "id": "b2-32-f3", "type": "fill_input", "question": "Not only ____ arrive late, but... (él llegó - Past Simple con D)", "correct_answer": "did he", "explanation": "did he." },
+        { "id": "b2-32-f4", "type": "fill_input", "question": "Hardly ____ arrived when... (había yo - Past Perfect)", "correct_answer": "had I", "explanation": "had I." },
+        { "id": "b2-32-f5", "type": "fill_input", "question": "Little ____ know. (sabíamos nosotros - Past Simple)", "correct_answer": "did we", "explanation": "did we." },
+        { "id": "b2-32-f6", "type": "fill_input", "question": "Rarely ____ see such things. (vemos nosotros - Present Simple)", "correct_answer": "do we", "explanation": "do we." },
+        { "id": "b2-32-f7", "type": "fill_input", "question": "At no time ____ informed. (fui yo - To Be en pasado)", "correct_answer": "was I", "explanation": "was I." },
+        { "id": "b2-32-f8", "type": "fill_input", "question": "Only then ____ realize. (me di cuenta yo - Past Simple)", "correct_answer": "did I", "explanation": "did I." },
+        { "id": "b2-32-f9", "type": "fill_input", "question": "In no way ____ responsible. (soy yo - To Be en presente)", "correct_answer": "am I", "explanation": "am I." },
+        { "id": "b2-32-f10", "type": "fill_input", "question": "Only by trying ____ win. (ganaremos nosotros - Future will)", "correct_answer": "will we", "explanation": "will we." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Advanced Inversion Match",
+      "pairs": [
+        {"id": "b2-32-p1", "source": "Never have I seen...", "target": "Nunca he visto... (Énfasis)"},
+        {"id": "b2-32-p2", "source": "Under no circumstances should you...", "target": "Bajo ninguna circunstancia debes..."},
+        {"id": "b2-32-p3", "source": "Not only did he win...", "target": "No solo ganó él..."},
+        {"id": "b2-32-p4", "source": "Hardly had I arrived when...", "target": "Apenas había llegado cuando..."},
+        {"id": "b2-32-p5", "source": "No sooner had we finished than...", "target": "Nada más terminar..."},
+        {"id": "b2-32-p6", "source": "Little did we know...", "target": "Poco sabíamos nosotros..."},
+        {"id": "b2-32-p7", "source": "Rarely do we see...", "target": "Raramente vemos nosotros..."},
+        {"id": "b2-32-p8", "source": "At no time was I...", "target": "En ningún momento fui/estuve..."},
+        {"id": "b2-32-p9", "source": "Only then did I realize...", "target": "Solo entonces me di cuenta..."},
+        {"id": "b2-32-p10", "source": "In no way am I...", "target": "De ninguna manera soy/estoy..."}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la estructura de inversión correcta.",
+      "questions": [
+        { "id": "b2-32-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Never have I seen such a mistake.", "options": ["Never have I seen such a mistake.", "Never I have seen such a mistake.", "Never did I see such a mistake.", "Never I saw such a mistake."], "correct_answer": "Never have I seen such a mistake.", "explanation": "Audio exacto." },
+        { "id": "b2-32-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Under no circumstances should you tell him.", "options": ["Under no circumstances should you tell him.", "Under no circumstances you should tell him.", "Under no circumstances do you tell him.", "Under no circumstances you tell him."], "correct_answer": "Under no circumstances should you tell him.", "explanation": "Audio exacto." },
+        { "id": "b2-32-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Not only did he arrive late, but he forgot his laptop.", "options": ["Not only did he arrive late, but he forgot his laptop.", "Not only he arrived late, but he forgot his laptop.", "Not only does he arrive late, but he forgot his laptop.", "Not only has he arrived late, but he forgot his laptop."], "correct_answer": "Not only did he arrive late, but he forgot his laptop.", "explanation": "Audio exacto." },
+        { "id": "b2-32-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Hardly had I started when the phone rang.", "options": ["Hardly had I started when the phone rang.", "Hardly I had started when the phone rang.", "Hardly did I start when the phone rang.", "Hardly have I started when the phone rang."], "correct_answer": "Hardly had I started when the phone rang.", "explanation": "Audio exacto." },
+        { "id": "b2-32-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Little did we know the truth.", "options": ["Little did we know the truth.", "Little we knew the truth.", "Little do we know the truth.", "Little we know the truth."], "correct_answer": "Little did we know the truth.", "explanation": "Audio exacto." },
+        { "id": "b2-32-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Rarely do we see such profits.", "options": ["Rarely do we see such profits.", "Rarely we see such profits.", "Rarely are we seeing such profits.", "Rarely did we see such profits."], "correct_answer": "Rarely do we see such profits.", "explanation": "Audio exacto." },
+        { "id": "b2-32-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "At no time was I informed.", "options": ["At no time was I informed.", "At no time I was informed.", "At no time am I informed.", "At no time did I informed."], "correct_answer": "At no time was I informed.", "explanation": "Audio exacto." },
+        { "id": "b2-32-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Only then did I realize the problem.", "options": ["Only then did I realize the problem.", "Only then I realized the problem.", "Only then do I realize the problem.", "Only then I realize the problem."], "correct_answer": "Only then did I realize the problem.", "explanation": "Audio exacto." },
+        { "id": "b2-32-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In no way am I responsible.", "options": ["In no way am I responsible.", "In no way I am responsible.", "In no way was I responsible.", "In no way I was responsible."], "correct_answer": "In no way am I responsible.", "explanation": "Audio exacto." },
+        { "id": "b2-32-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "No sooner had we signed than it crashed.", "options": ["No sooner had we signed than it crashed.", "No sooner we had signed than it crashed.", "No sooner did we sign than it crashed.", "No sooner we signed than it crashed."], "correct_answer": "No sooner had we signed than it crashed.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

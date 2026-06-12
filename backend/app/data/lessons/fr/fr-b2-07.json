@@ -1,0 +1,95 @@
+{
+  "id": "fr-b2-07",
+  "title": "L'Accord du Participe Passé",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Past Participle", "Exceptions", "Spelling"],
+  "completion_message": "¡Felicidades! Acabas de dominar la regla gramatical con la que hasta los propios franceses se equivocan. ¡Tu ortografía B2 es impecable!",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "La Pesadilla de los Franceses (B2)",
+      "parts": [
+        {
+          "visual": "Verbos Pronominales (Se lavar, Se duchar, Se hablar):\n\nLa regla general de A2 dice que todos los verbos reflexivos usan ÊTRE y concuerdan con el sujeto:\n- Elle s'est lavéE. (Ella se lavó).\n- Ils se sont douchéS. (Ellos se ducharon).\n\n¡La Trampa B2! (Las Partes del Cuerpo):\nSi el objeto directo (la cosa lavada) está ESCRITA DESPUÉS del verbo, el participio SE QUEDA CONGELADO (sin 'e', sin 's').\n- Elle s'est lavé LES MAINS. (NO 'lavée').\n- Ils se sont lavé LE VISAGE. (NO 'lavés').\n\nLógica: Ella se lavó a sí misma (lavée). Ella lavó las manos (las manos van después, así que 'lavé' no cambia).",
+          "audio": "Bienvenido a la lección que hace sudar a los propios franceses: la concordancia del participio pasado. En A2 aprendiste que los verbos reflexivos usan Être y siempre concuerdan. Si digo 'Ella se lavó', le pongo una 'E' al final: 'Elle s'est lavéE'. Perfecto. Pero aquí viene la trampa de nivel experto. ¿Qué pasa si digo 'Ella se lavó LAS MANOS'? Como estoy escribiendo la palabra 'manos' DESPUÉS del verbo, el participio se asusta y se congela. Se queda en su forma base, sin 'e' y sin 's'. Tienes que escribir: 'Elle s'est LAVÉ les mains'. Si escribes 'lavées', tu profesor de francés tendrá un infarto. Así que recuerda: si mencionas una parte del cuerpo o un objeto después del verbo reflexivo, ¡nada de concordancia!"
+        },
+        {
+          "visual": "Verbos Recíprocos (Se hablar, Se llamar):\n\nRegla avanzada: Si el verbo exige la preposición 'À' en su forma normal, NUNCA hay concordancia.\n- Verbos clave: Parler à, Téléphoner à, Sourire à, Écrire à.\n\nEjemplos (Ellas se hablaron por teléfono):\n- Elles se sont TÉLÉPHONÉ. (NO 'téléphonées').\n- Ils se sont PARLÉ. (NO 'parlés').\n- Elles se sont SOURI. (NO 'souries').\n\n¿Por qué? Porque se hablan 'A' sí mismas (objeto indirecto), y el participio con Être solo concuerda con objetos directos.",
+          "audio": "La segunda trampa involucra a los verbos recíprocos, es decir, cuando dos personas se hacen algo mutuamente. Si digo 'Ellas se miraron', el verbo es 'Regarder'. Como no necesita preposición (yo miro algo), sí concuerda: 'Elles se sont regardéES'. Pero, ¿qué pasa con el verbo Hablar? En francés dices 'Parler À quelqu'un' (Hablar A alguien). Esa preposición 'À' arruina todo. Significa que es un objeto indirecto. La regla estricta dice que si el verbo lleva 'À', jamás hay concordancia. Por lo tanto, 'Ellas se hablaron' se escribe 'Elles se sont PARLÉ', sin 'E' y sin 'S'. Pasa lo mismo con telefonear o sonreír: 'Elles se sont téléphoné', 'Elles se sont souri'. Todo sin concordancia. ¡Anotalo en tu cuaderno!"
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del participio pasado (con o sin concordancia).",
+      "questions": [
+        { "id": "frb2-07-q1", "type": "quiz_choice", "question": "Elle s'est ____. (Ella se lavó).", "options": ["lavée", "lavé", "lavés", "laver"], "correct_answer": "lavée", "explanation": "Verbo reflexivo normal, concuerda con el sujeto femenino (Elle) -> lavée." },
+        { "id": "frb2-07-q2", "type": "quiz_choice", "question": "Elle s'est ____ les mains. (Ella se lavó LAS MANOS).", "options": ["lavé", "lavées", "lavée", "laver"], "correct_answer": "lavé", "explanation": "'Les mains' viene DESPUÉS del verbo, por lo tanto se bloquea la concordancia -> lavé." },
+        { "id": "frb2-07-q3", "type": "quiz_choice", "question": "Elles se sont ____. (Ellas se miraron - verbo: regarder quelqu'un).", "options": ["regardées", "regardé", "regardés", "regarder"], "correct_answer": "regardées", "explanation": "'Regarder' es directo (sin 'à'), concuerda con Elles (fem. pl) -> regardées." },
+        { "id": "frb2-07-q4", "type": "quiz_choice", "question": "Elles se sont ____. (Ellas se hablaron - verbo: parler À quelqu'un).", "options": ["parlé", "parlées", "parlés", "parlée"], "correct_answer": "parlé", "explanation": "Trampa B2. 'Parler à' toma objeto indirecto, no hay concordancia -> parlé." },
+        { "id": "frb2-07-q5", "type": "quiz_choice", "question": "Ils se sont ____ hier soir. (Ellos se llamaron - verbo: téléphoner À quelqu'un).", "options": ["téléphoné", "téléphonés", "téléphonées", "téléphoner"], "correct_answer": "téléphoné", "explanation": "'Téléphoner à' = indirecto = sin concordancia -> téléphoné." },
+        { "id": "frb2-07-q6", "type": "quiz_choice", "question": "Marie s'est ____ les dents. (Marie se cepilló los dientes).", "options": ["brossé", "brossée", "brossées", "brosser"], "correct_answer": "brossé", "explanation": "Parte del cuerpo después del verbo -> bloquea la concordancia -> brossé." },
+        { "id": "frb2-07-q7", "type": "quiz_choice", "question": "Nous nous sommes ____ dans la rue. (Nos encontramos - verbo: rencontrer quelqu'un).", "options": ["rencontrés", "rencontré", "rencontrées", "rencontrer"], "correct_answer": "rencontrés", "explanation": "Rencontrer es directo (sin à), concuerda con Nous -> rencontrés." },
+        { "id": "frb2-07-q8", "type": "quiz_choice", "question": "Elles se sont ____ des lettres. (Ellas se escribieron CARTAS - verbo: écrire À quelqu'un).", "options": ["écrit", "écrites", "écrite", "écrits"], "correct_answer": "écrit", "explanation": "Écrire À quelqu'un = sin concordancia -> écrit." },
+        { "id": "frb2-07-q9", "type": "quiz_choice", "question": "¿Por qué escribimos 'Elle s'est coupée' pero 'Elle s'est coupé le doigt'?", "options": ["Porque 'le doigt' (el dedo) aparece después del verbo.", "Porque es un verbo irregular.", "Porque 'le doigt' es masculino."], "correct_answer": "Porque 'le doigt' (el dedo) aparece después del verbo.", "explanation": "Si el objeto directo (la cosa afectada) va después, no hay concordancia." },
+        { "id": "frb2-07-q10", "type": "quiz_choice", "question": "Ils se sont ____ (Sonreír - verbo: sourire À quelqu'un).", "options": ["souri", "souris", "souries", "sourire"], "correct_answer": "souri", "explanation": "Sourire À = sin concordancia -> souri." },
+        { "id": "frb2-07-q11", "type": "quiz_choice", "question": "Elle s'est ____ les cheveux. (Ella se lavó EL CABELLO).", "options": ["lavé", "lavée", "lavés", "lavées"], "correct_answer": "lavé", "explanation": "Parte del cuerpo después -> sin concordancia (lavé)." },
+        { "id": "frb2-07-q12", "type": "quiz_choice", "question": "Les filles se sont ____ prêtes. (Las chicas se prepararon).", "options": ["préparées", "préparé", "préparés", "préparée"], "correct_answer": "préparées", "explanation": "Reflexivo normal sin objeto directo después -> concuerda con les filles -> préparées." },
+        { "id": "frb2-07-q13", "type": "quiz_choice", "question": "Ils se sont ____ bonjour. (Ellos se dijeron hola - verbo: dire À quelqu'un).", "options": ["dit", "dits", "dites", "dire"], "correct_answer": "dit", "explanation": "Dire À quelqu'un = sin concordancia -> dit." },
+        { "id": "frb2-07-q14", "type": "quiz_choice", "question": "Elle s'est ____ endormie. (Ella se durmió - s'endormir).", "options": ["endormie", "endormi", "endormis", "endormies"], "correct_answer": "endormie", "explanation": "Verbo reflexivo puro, concuerda con el sujeto femenino -> endormie." },
+        { "id": "frb2-07-q15", "type": "quiz_choice", "question": "Lucie s'est ____ le bras. (Lucie se rompió EL BRAZO).", "options": ["cassé", "cassée", "cassés", "casser"], "correct_answer": "cassé", "explanation": "Parte del cuerpo después del verbo -> sin concordancia -> cassé." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el participio pasado con o sin concordancia según las trampas de nivel B2.",
+      "questions": [
+        { "id": "frb2-07-f1", "type": "fill_input", "question": "Elle s'est ____ (laver).", "correct_answer": "lavée", "explanation": "lavée" },
+        { "id": "frb2-07-f2", "type": "fill_input", "question": "Elle s'est ____ (laver) le visage.", "correct_answer": "lavé", "explanation": "lavé" },
+        { "id": "frb2-07-f3", "type": "fill_input", "question": "Elles se sont ____ (regarder). (Regarder es directo).", "correct_answer": "regardées", "explanation": "regardées" },
+        { "id": "frb2-07-f4", "type": "fill_input", "question": "Elles se sont ____ (parler). (Parler à = no cambia).", "correct_answer": "parlé", "explanation": "parlé" },
+        { "id": "frb2-07-f5", "type": "fill_input", "question": "Marie s'est ____ (casser) la jambe.", "correct_answer": "cassé", "explanation": "cassé" },
+        { "id": "frb2-07-f6", "type": "fill_input", "question": "Marie s'est ____ (réveiller).", "correct_answer": "réveillée", "explanation": "réveillée" },
+        { "id": "frb2-07-f7", "type": "fill_input", "question": "Ils se sont ____ (téléphoner). (Téléphoner à = no cambia).", "correct_answer": "téléphoné", "explanation": "téléphoné" },
+        { "id": "frb2-07-f8", "type": "fill_input", "question": "Les deux amis se sont ____ (rencontrer). (Rencontrer es directo).", "correct_answer": "rencontrés", "explanation": "rencontrés" },
+        { "id": "frb2-07-f9", "type": "fill_input", "question": "Elles se sont ____ (sourire). (Sourire à = no cambia).", "correct_answer": "souri", "explanation": "souri" },
+        { "id": "frb2-07-f10", "type": "fill_input", "question": "Elle s'est ____ (brosser) les dents.", "correct_answer": "brossé", "explanation": "brossé" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Participle Match",
+      "pairs": [
+        {"id": "frb2-07-p1", "source": "Elle s'est lavée", "target": "Ella se lavó (Concordancia)"},
+        {"id": "frb2-07-p2", "source": "Elle s'est lavé les mains", "target": "Ella se lavó las manos (Sin concordancia)"},
+        {"id": "frb2-07-p3", "source": "Elles se sont regardées", "target": "Ellas se miraron (Concordancia)"},
+        {"id": "frb2-07-p4", "source": "Elles se sont parlé", "target": "Ellas se hablaron (Sin concordancia)"},
+        {"id": "frb2-07-p5", "source": "Elles se sont téléphoné", "target": "Ellas se llamaron (Sin concordancia)"},
+        {"id": "frb2-07-p6", "source": "Ils se sont rencontrés", "target": "Ellos se encontraron (Concordancia)"},
+        {"id": "frb2-07-p7", "source": "Elle s'est cassé le bras", "target": "Ella se rompió el brazo (Sin concordancia)"},
+        {"id": "frb2-07-p8", "source": "Elle s'est endormie", "target": "Ella se durmió (Concordancia)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica la frase con la ortografía correcta.",
+      "questions": [
+        { "id": "frb2-07-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Elle s'est lavé les mains", "options": ["Elle s'est lavé les mains", "Elle s'est lavées les mains", "Elle s'est lavée les mains", "Elle s'est lavés les mains"], "correct_answer": "Elle s'est lavé les mains", "explanation": "No hay concordancia de sonido, pero ortográficamente es 'lavé' porque 'les mains' va después." },
+        { "id": "frb2-07-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Elles se sont parlé", "options": ["Elles se sont parlé", "Elles se sont parlées", "Elles se sont parlés", "Elles se sont parler"], "correct_answer": "Elles se sont parlé", "explanation": "Parler à = sin concordancia." },
+        { "id": "frb2-07-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Ils se sont téléphoné", "options": ["Ils se sont téléphoné", "Ils se sont téléphonés", "Ils se sont téléphonées", "Il se sont téléphoné"], "correct_answer": "Ils se sont téléphoné", "explanation": "Téléphoner à = sin concordancia." },
+        { "id": "frb2-07-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Elle s'est réveillée", "options": ["Elle s'est réveillée", "Elle s'est réveillé", "Elle s'est réveillés", "Elle se réveillée"], "correct_answer": "Elle s'est réveillée", "explanation": "Reflexivo puro = Concuerda." },
+        { "id": "frb2-07-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Elles se sont regardées", "options": ["Elles se sont regardées", "Elles se sont regardé", "Elles se sont regardés", "Elle s'est regardée"], "correct_answer": "Elles se sont regardées", "explanation": "Regarder (directo) = Concuerda." }
+      ]
+    }
+  ]
+}

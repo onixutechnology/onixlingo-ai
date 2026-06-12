@@ -1,0 +1,101 @@
+{
+  "id": "b1-29",
+  "title": "Project Management",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Vocabulary", "Management", "Business"],
+  "completion_message": "¡Excelente! Ahora dominas el vocabulario clave para liderar y gestionar proyectos internacionales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Gestión de Proyectos (Project Management)",
+      "parts": [
+        { "visual": "Tiempos y Plazos: \n- Deadline (Fecha límite). \n- Milestone (Hito / Etapa importante). \n- Schedule (Cronograma). \nEj: We must meet the deadline. The next milestone is in two weeks.", "audio": "Time and deadlines. Deadline is the final date to finish something. Milestone is a very important stage in a project. Schedule is the plan for when things happen. For example: We must meet the deadline. The next milestone is in two weeks." },
+        { "visual": "Estado del proyecto: \n- On track (En camino / Según lo planeado). \n- Behind schedule (Atrasado). \n- Allocate resources (Asignar recursos). \nEj: We are currently behind schedule, so we need to allocate more resources to get back on track.", "audio": "Project status. On track means everything is going according to plan. Behind schedule means you are late. Allocate resources means to assign time, money, or people to a task. For example: We are currently behind schedule, so we need to allocate more resources to get back on track." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta de gestión de proyectos.",
+      "questions": [
+        { "id": "b1-29-q1", "type": "quiz_choice", "question": "Friday is the ____ for this report. We can't be late. (Fecha límite).", "options": ["deadline", "end", "finish", "timeline"], "correct_answer": "deadline", "explanation": "Deadline = fecha límite." },
+        { "id": "b1-29-q2", "type": "quiz_choice", "question": "Reaching 10,000 users was a huge ____ for our startup. (Hito / Etapa clave).", "options": ["milestone", "rock", "step", "mark"], "correct_answer": "milestone", "explanation": "Milestone = hito, meta intermedia importante." },
+        { "id": "b1-29-q3", "type": "quiz_choice", "question": "Let me check the ____ to see when the meeting is. (Cronograma / Horario).", "options": ["schedule", "time", "clock", "date"], "correct_answer": "schedule", "explanation": "Schedule = cronograma o agenda." },
+        { "id": "b1-29-q4", "type": "quiz_choice", "question": "Good news! The project is exactly on ____. (En camino / Según lo planeado).", "options": ["track", "train", "road", "way"], "correct_answer": "track", "explanation": "On track = en camino, avanzando bien." },
+        { "id": "b1-29-q5", "type": "quiz_choice", "question": "We are two weeks behind ____. We need to work faster. (Atrasados en el cronograma).", "options": ["schedule", "time", "plan", "date"], "correct_answer": "schedule", "explanation": "Behind schedule = atrasado (respecto al plan)." },
+        { "id": "b1-29-q6", "type": "quiz_choice", "question": "We finished the task ahead of ____. We have extra time now! (Adelantados).", "options": ["schedule", "time", "track", "plan"], "correct_answer": "schedule", "explanation": "Ahead of schedule = adelantado al plan." },
+        { "id": "b1-29-q7", "type": "quiz_choice", "question": "The manager needs to ____ more budget to the marketing team. (Asignar).", "options": ["allocate", "give", "put", "place"], "correct_answer": "allocate", "explanation": "Allocate = asignar (presupuesto, recursos)." },
+        { "id": "b1-29-q8", "type": "quiz_choice", "question": "Our main ____ is a lack of developers. (Cuello de botella / Obstáculo).", "options": ["bottleneck", "bottle", "problem", "wall"], "correct_answer": "bottleneck", "explanation": "Bottleneck = cuello de botella (lo que retrasa un proceso)." },
+        { "id": "b1-29-q9", "type": "quiz_choice", "question": "We must ____ the deadline, or the client will be angry. (Cumplir con la fecha).", "options": ["meet", "do", "make", "catch"], "correct_answer": "meet", "explanation": "Meet a deadline = cumplir una fecha límite." },
+        { "id": "b1-29-q10", "type": "quiz_choice", "question": "I'm sorry, we are going to ____ the deadline. We need two more days. (Incumplir / Pasarse de la fecha).", "options": ["miss", "lose", "drop", "pass"], "correct_answer": "miss", "explanation": "Miss a deadline = no cumplir con la fecha límite." },
+        { "id": "b1-29-q11", "type": "quiz_choice", "question": "Can you give me a status ____ on the project? (Actualización).", "options": ["update", "news", "report", "talk"], "correct_answer": "update", "explanation": "Status update = actualización de estado." },
+        { "id": "b1-29-q12", "type": "quiz_choice", "question": "The ____ phase of the project is complete. Now we start building. (Planificación).", "options": ["planning", "plan", "thinking", "starting"], "correct_answer": "planning", "explanation": "Planning phase = fase de planificación." },
+        { "id": "b1-29-q13", "type": "quiz_choice", "question": "We need to set clear ____ for this quarter. (Objetivos / Metas).", "options": ["goals", "ends", "points", "marks"], "correct_answer": "goals", "explanation": "Goals (u objectives) = metas, objetivos." },
+        { "id": "b1-29-q14", "type": "quiz_choice", "question": "Who is ____ charge of this project? (A cargo).", "options": ["in", "on", "at", "with"], "correct_answer": "in", "explanation": "In charge of = a cargo de." },
+        { "id": "b1-29-q15", "type": "quiz_choice", "question": "We are running ____ of budget. We need to cut costs. (Quedándonos sin).", "options": ["out", "off", "away", "low"], "correct_answer": "out", "explanation": "Run out of = quedarse sin (dinero, tiempo)." },
+        { "id": "b1-29-q16", "type": "quiz_choice", "question": "Please ____ sure everyone knows what to do. (Asegurarse).", "options": ["make", "do", "take", "be"], "correct_answer": "make", "explanation": "Make sure = asegurarse." },
+        { "id": "b1-29-q17", "type": "quiz_choice", "question": "What is the ____ of the project? (Alcance).", "options": ["scope", "size", "area", "field"], "correct_answer": "scope", "explanation": "Scope = el alcance (qué incluye y qué no incluye el proyecto)." },
+        { "id": "b1-29-q18", "type": "quiz_choice", "question": "We need to delegate some ____ to the junior team. (Tareas).", "options": ["tasks", "jobs", "works", "things"], "correct_answer": "tasks", "explanation": "Tasks = tareas (una unidad de trabajo)." },
+        { "id": "b1-29-q19", "type": "quiz_choice", "question": "The project was completely successful. It was a great ____. (Logro).", "options": ["achievement", "achieve", "win", "prize"], "correct_answer": "achievement", "explanation": "Achievement = logro." },
+        { "id": "b1-29-q20", "type": "quiz_choice", "question": "Let's organize a ____ meeting to start the project. (Reunión inicial).", "options": ["kick-off", "start", "begin", "first"], "correct_answer": "kick-off", "explanation": "Kick-off meeting = reunión de inicio o lanzamiento." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de gestión de proyectos.",
+      "questions": [
+        { "id": "b1-29-f1", "type": "fill_input", "question": "The project ____. (Fecha límite con D)", "correct_answer": "deadline", "explanation": "deadline." },
+        { "id": "b1-29-f2", "type": "fill_input", "question": "An important ____. (Hito con M)", "correct_answer": "milestone", "explanation": "milestone." },
+        { "id": "b1-29-f3", "type": "fill_input", "question": "Check the ____. (Cronograma con S)", "correct_answer": "schedule", "explanation": "schedule." },
+        { "id": "b1-29-f4", "type": "fill_input", "question": "We are on ____. (En camino con T)", "correct_answer": "track", "explanation": "track." },
+        { "id": "b1-29-f5", "type": "fill_input", "question": "We are behind ____. (Atrasados - palabra larga con S)", "correct_answer": "schedule", "explanation": "schedule." },
+        { "id": "b1-29-f6", "type": "fill_input", "question": "To ____ resources. (Asignar con A)", "correct_answer": "allocate", "explanation": "allocate." },
+        { "id": "b1-29-f7", "type": "fill_input", "question": "A status ____. (Actualización con U)", "correct_answer": "update", "explanation": "update." },
+        { "id": "b1-29-f8", "type": "fill_input", "question": "The project ____. (Alcance con S)", "correct_answer": "scope", "explanation": "scope." },
+        { "id": "b1-29-f9", "type": "fill_input", "question": "To ____ a deadline. (Cumplir con M)", "correct_answer": "meet", "explanation": "meet." },
+        { "id": "b1-29-f10", "type": "fill_input", "question": "To ____ a deadline. (Incumplir con M)", "correct_answer": "miss", "explanation": "miss." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Project Match",
+      "pairs": [
+        {"id": "b1-29-p1", "source": "Deadline", "target": "Fecha límite"},
+        {"id": "b1-29-p2", "source": "Milestone", "target": "Hito / Etapa importante"},
+        {"id": "b1-29-p3", "source": "Schedule", "target": "Cronograma / Agenda"},
+        {"id": "b1-29-p4", "source": "On track", "target": "Avanzando según lo planeado"},
+        {"id": "b1-29-p5", "source": "Behind schedule", "target": "Atrasado respecto al plan"},
+        {"id": "b1-29-p6", "source": "Ahead of schedule", "target": "Adelantado respecto al plan"},
+        {"id": "b1-29-p7", "source": "Allocate resources", "target": "Asignar recursos"},
+        {"id": "b1-29-p8", "source": "Bottleneck", "target": "Cuello de botella"},
+        {"id": "b1-29-p9", "source": "Meet the deadline", "target": "Cumplir la fecha límite"},
+        {"id": "b1-29-p10", "source": "Miss the deadline", "target": "Incumplir la fecha límite"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de gestión.",
+      "questions": [
+        { "id": "b1-29-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must meet the deadline.", "options": ["We must meet the deadline.", "We will miss the deadline.", "We must make the deadline.", "We meet the deadline."], "correct_answer": "We must meet the deadline.", "explanation": "Audio exacto." },
+        { "id": "b1-29-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The next milestone is in two weeks.", "options": ["The next milestone is in two weeks.", "The last milestone was in two weeks.", "The next milestone is in a week.", "The next meeting is in two weeks."], "correct_answer": "The next milestone is in two weeks.", "explanation": "Audio exacto." },
+        { "id": "b1-29-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are currently behind schedule.", "options": ["We are currently behind schedule.", "We are currently on schedule.", "We are currently ahead of schedule.", "They are currently behind schedule."], "correct_answer": "We are currently behind schedule.", "explanation": "Audio exacto." },
+        { "id": "b1-29-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The project is on track.", "options": ["The project is on track.", "The project is in track.", "The project was on track.", "Our project is on track."], "correct_answer": "The project is on track.", "explanation": "Audio exacto." },
+        { "id": "b1-29-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to allocate more resources.", "options": ["We need to allocate more resources.", "We need to allocate resources.", "They need to allocate more resources.", "We have to allocate more resources."], "correct_answer": "We need to allocate more resources.", "explanation": "Audio exacto." },
+        { "id": "b1-29-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Give me a status update.", "options": ["Give me a status update.", "Give him a status update.", "Send me a status update.", "I need a status update."], "correct_answer": "Give me a status update.", "explanation": "Audio exacto." },
+        { "id": "b1-29-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is the scope of the project?", "options": ["What is the scope of the project?", "What is the size of the project?", "What is the schedule of the project?", "What was the scope of the project?"], "correct_answer": "What is the scope of the project?", "explanation": "Audio exacto." },
+        { "id": "b1-29-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are running out of budget.", "options": ["We are running out of budget.", "We ran out of budget.", "We are running out of time.", "They are running out of budget."], "correct_answer": "We are running out of budget.", "explanation": "Audio exacto." },
+        { "id": "b1-29-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Who is in charge of this?", "options": ["Who is in charge of this?", "Who was in charge of this?", "Who is in charge of it?", "Who is in charge here?"], "correct_answer": "Who is in charge of this?", "explanation": "Audio exacto." },
+        { "id": "b1-29-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We finished ahead of schedule.", "options": ["We finished ahead of schedule.", "We finished behind schedule.", "We finished on schedule.", "They finished ahead of schedule."], "correct_answer": "We finished ahead of schedule.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

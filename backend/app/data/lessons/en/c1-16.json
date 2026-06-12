@@ -1,0 +1,101 @@
+{
+  "id": "c1-16",
+  "title": "Cleft Sentences",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Grammar", "Cleft Sentences", "Emphasis", "Formal Writing"],
+  "completion_message": "¡Magnífico! Las Cleft Sentences son la herramienta de énfasis más sofisticada del inglés. Usarlas correctamente te permitirá resaltar exactamente la información que quieres que tu audiencia recuerde, ya sea en discursos, presentaciones o correos formales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Cleft Sentences (Oraciones Escindidas)",
+      "parts": [
+        { "visual": "Las Cleft Sentences se usan para dar énfasis a una parte específica de una oración. Es como poner esa información 'bajo un foco'. \n1. It-Cleft (IT + BE + elemento enfatizado + THAT/WHO): \nNormal: John signed the contract. (Hecho neutro). \nCleft (énfasis en quién): IT WAS JOHN WHO signed the contract. (Fue JOHN quien firmó). \nCleft (énfasis en qué): IT WAS THE CONTRACT THAT John signed. (Fue EL CONTRATO lo que John firmó).", "audio": "Cleft Sentences are used to give emphasis to a specific part of a sentence. It is like putting that information under a spotlight. The first type is the It-Cleft. Structure: It, plus Be, plus the emphasized element, plus 'that' or 'who'. Normal sentence: John signed the contract. Cleft with emphasis on WHO: It was John who signed the contract. Cleft with emphasis on WHAT: It was the contract that John signed." },
+        { "visual": "2. What-Cleft (WHAT + sujeto + verbo + IS/WAS + el énfasis): \nLa cláusula con 'What' actúa como sujeto. Es muy formal y contundente. \nNormal: I need more time to finish this. \nCleft: WHAT I NEED IS more time to finish this. (Lo que necesito ES más tiempo). \nNormal: He wants a promotion. \nCleft: WHAT HE WANTS IS a promotion. (Lo que él quiere ES un ascenso).", "audio": "The second type is the What-Cleft. Structure: What, plus subject, plus verb, plus Is or Was, plus the emphasis. The 'What' clause acts as the subject. It is very formal and emphatic. Normal sentence: I need more time to finish this. Cleft: What I need is more time to finish this. Normal: He wants a promotion. Cleft: What he wants is a promotion." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la Cleft Sentence correcta según el tipo (It-Cleft o What-Cleft).",
+      "questions": [
+        { "id": "c1-16-q1", "type": "quiz_choice", "question": "Normal: Sarah submitted the report. -> It was Sarah ____ submitted the report. (Énfasis en QUIÉN).", "options": ["who", "that", "which", "whom"], "correct_answer": "who", "explanation": "It-Cleft con persona: It was Sarah WHO submitted..." },
+        { "id": "c1-16-q2", "type": "quiz_choice", "question": "Normal: I need your support right now. -> ____ I need is your support right now. (What-Cleft).", "options": ["What", "That", "It", "Which"], "correct_answer": "What", "explanation": "What-Cleft: What I need is..." },
+        { "id": "c1-16-q3", "type": "quiz_choice", "question": "Normal: The board approved the merger. -> It was the merger ____ the board approved. (Énfasis en QUÉ - cosa).", "options": ["that", "who", "which", "whom"], "correct_answer": "that", "explanation": "It-Cleft con cosa (merger): It was the merger THAT the board approved." },
+        { "id": "c1-16-q4", "type": "quiz_choice", "question": "Normal: The client wants a 20% discount. -> What the client ____ is a 20% discount. (What-Cleft).", "options": ["wants", "want", "is wanting", "wanted"], "correct_answer": "wants", "explanation": "What the client wants is... (tiempo presente del verbo)." },
+        { "id": "c1-16-q5", "type": "quiz_choice", "question": "Normal: The CEO fired him last Tuesday. -> It was last Tuesday ____ the CEO fired him. (Énfasis en CUÁNDO).", "options": ["that", "when", "who", "which"], "correct_answer": "that", "explanation": "Para énfasis en tiempo/lugar/cosa siempre usamos THAT en It-Cleft." },
+        { "id": "c1-16-q6", "type": "quiz_choice", "question": "Normal: We need to cut costs, not raise prices. -> What we need to do is ____ costs, not raise prices. (Reducir).", "options": ["cut", "cutting", "to cut", "cuts"], "correct_answer": "cut", "explanation": "What... is + infinitivo sin 'to'. What we need to do is CUT costs." },
+        { "id": "c1-16-q7", "type": "quiz_choice", "question": "Normal: The director resigned because of the scandal. -> It was the scandal ____ caused the director to resign. (Énfasis en la CAUSA).", "options": ["that", "who", "what", "which"], "correct_answer": "that", "explanation": "It was the scandal THAT caused..." },
+        { "id": "c1-16-q8", "type": "quiz_choice", "question": "Normal: He really wants recognition, not money. -> What he really ____ is recognition, not money.", "options": ["wants", "want", "needed", "is wanting"], "correct_answer": "wants", "explanation": "What he really wants is recognition." },
+        { "id": "c1-16-q9", "type": "quiz_choice", "question": "Normal: The London office received the package. -> It was the London office ____ received the package.", "options": ["that", "which", "who", "whose"], "correct_answer": "that", "explanation": "Office = cosa, lugar: It was the London office THAT received..." },
+        { "id": "c1-16-q10", "type": "quiz_choice", "question": "Normal: The team solved the problem. -> It was the team ____ solved the problem. (El equipo = un grupo de personas).", "options": ["that", "who", "which", "whose"], "correct_answer": "that", "explanation": "Para grupos/objetos se puede usar THAT. It was the team THAT solved it." },
+        { "id": "c1-16-q11", "type": "quiz_choice", "question": "Normal: She called me, not my assistant. -> It was ____ she called, not my assistant.", "options": ["me", "I", "myself", "mine"], "correct_answer": "me", "explanation": "It was ME she called. (pronombre objeto)." },
+        { "id": "c1-16-q12", "type": "quiz_choice", "question": "Normal: The company really needs a new strategy. -> What the company really needs ____ a new strategy.", "options": ["is", "are", "was", "be"], "correct_answer": "is", "explanation": "What + singular subject + verb + IS... (verbo SER en singular)." },
+        { "id": "c1-16-q13", "type": "quiz_choice", "question": "Normal: They launched the product in January. -> It was in January ____ they launched the product.", "options": ["that", "when", "which", "who"], "correct_answer": "that", "explanation": "Para tiempo y lugar en It-Cleft: THAT." },
+        { "id": "c1-16-q14", "type": "quiz_choice", "question": "Normal: I find the lack of communication frustrating. -> What I find frustrating ____ the lack of communication.", "options": ["is", "are", "was", "it is"], "correct_answer": "is", "explanation": "What I find frustrating IS... (el verbo ser debe concordar con el sujeto real)." },
+        { "id": "c1-16-q15", "type": "quiz_choice", "question": "Normal: He destroyed the company with his ego. -> It was his ego ____ destroyed the company.", "options": ["that", "who", "which", "what"], "correct_answer": "that", "explanation": "It was his ego THAT destroyed..." },
+        { "id": "c1-16-q16", "type": "quiz_choice", "question": "Normal: We should focus on quality, not speed. -> What we should focus on ____ quality, not speed.", "options": ["is", "are", "it is", "was"], "correct_answer": "is", "explanation": "What we should focus on IS quality..." },
+        { "id": "c1-16-q17", "type": "quiz_choice", "question": "Normal: The new regulation caused the delays. -> It was the new regulation ____ caused the delays.", "options": ["that", "who", "which", "when"], "correct_answer": "that", "explanation": "It was the new regulation THAT caused..." },
+        { "id": "c1-16-q18", "type": "quiz_choice", "question": "Normal: I like the honesty of this team. -> What I ____ about this team is their honesty.", "options": ["like", "likes", "am liking", "liked"], "correct_answer": "like", "explanation": "What I like about... (sujeto yo = like)." },
+        { "id": "c1-16-q19", "type": "quiz_choice", "question": "Normal: Tom invented this algorithm. -> It was Tom ____ invented this algorithm.", "options": ["who", "that", "which", "whose"], "correct_answer": "who", "explanation": "Tom = persona, enfatizamos QUIÉN: WHO." },
+        { "id": "c1-16-q20", "type": "quiz_choice", "question": "Normal: The investors need transparency. -> What the investors need ____ transparency.", "options": ["is", "are", "was", "need"], "correct_answer": "is", "explanation": "What the investors need IS transparency." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra que falta para completar la Cleft Sentence.",
+      "questions": [
+        { "id": "c1-16-f1", "type": "fill_input", "question": "It was John ____ called. (Quién - persona)", "correct_answer": "who", "explanation": "who." },
+        { "id": "c1-16-f2", "type": "fill_input", "question": "It was the contract ____ we signed. (Que - cosa)", "correct_answer": "that", "explanation": "that." },
+        { "id": "c1-16-f3", "type": "fill_input", "question": "____ I need is more time. (Lo que - What-Cleft)", "correct_answer": "What", "explanation": "What." },
+        { "id": "c1-16-f4", "type": "fill_input", "question": "What she wants ____ a promotion. (Verbo ser)", "correct_answer": "is", "explanation": "is." },
+        { "id": "c1-16-f5", "type": "fill_input", "question": "It was in March ____ they launched. (Tiempo)", "correct_answer": "that", "explanation": "that." },
+        { "id": "c1-16-f6", "type": "fill_input", "question": "What we need to do is ____ costs. (Cut - sin to)", "correct_answer": "cut", "explanation": "cut." },
+        { "id": "c1-16-f7", "type": "fill_input", "question": "It was ____ ego that ruined it. (Su - His)", "correct_answer": "his", "explanation": "his." },
+        { "id": "c1-16-f8", "type": "fill_input", "question": "What I like about you ____ your honesty. (Verbo ser)", "correct_answer": "is", "explanation": "is." },
+        { "id": "c1-16-f9", "type": "fill_input", "question": "It was the CEO ____ approved it. (Persona)", "correct_answer": "who", "explanation": "who." },
+        { "id": "c1-16-f10", "type": "fill_input", "question": "____ bothers me is the lack of respect. (Lo que - What-Cleft)", "correct_answer": "What", "explanation": "What." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Cleft Sentences Match",
+      "pairs": [
+        {"id": "c1-16-p1", "source": "John signed it.", "target": "It was John WHO signed it."},
+        {"id": "c1-16-p2", "source": "The contract was signed.", "target": "It was the contract THAT was signed."},
+        {"id": "c1-16-p3", "source": "I need more time.", "target": "What I need is more time."},
+        {"id": "c1-16-p4", "source": "She wants a promotion.", "target": "What she wants is a promotion."},
+        {"id": "c1-16-p5", "source": "They launched in January.", "target": "It was in January that they launched."},
+        {"id": "c1-16-p6", "source": "We should cut costs.", "target": "What we should do is cut costs."},
+        {"id": "c1-16-p7", "source": "His ego destroyed the company.", "target": "It was his ego that destroyed the company."},
+        {"id": "c1-16-p8", "source": "I like their honesty.", "target": "What I like about them is their honesty."},
+        {"id": "c1-16-p9", "source": "The scandal caused it.", "target": "It was the scandal that caused it."},
+        {"id": "c1-16-p10", "source": "They need transparency.", "target": "What they need is transparency."}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la Cleft Sentence correcta.",
+      "questions": [
+        { "id": "c1-16-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was John who signed it.", "options": ["It was John who signed it.", "It was John that signed it.", "It is John who signed it.", "It was John who sign it."], "correct_answer": "It was John who signed it.", "explanation": "Audio exacto." },
+        { "id": "c1-16-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What I need is more time.", "options": ["What I need is more time.", "What I need are more time.", "That I need is more time.", "What I needed is more time."], "correct_answer": "What I need is more time.", "explanation": "Audio exacto." },
+        { "id": "c1-16-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was the merger that failed.", "options": ["It was the merger that failed.", "It was the merger which failed.", "It was the merger who failed.", "It is the merger that failed."], "correct_answer": "It was the merger that failed.", "explanation": "Audio exacto." },
+        { "id": "c1-16-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What she wants is a raise.", "options": ["What she wants is a raise.", "What he wants is a raise.", "What she needs is a raise.", "What she wants was a raise."], "correct_answer": "What she wants is a raise.", "explanation": "Audio exacto." },
+        { "id": "c1-16-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was in Paris that we met.", "options": ["It was in Paris that we met.", "It was in London that we met.", "It is in Paris that we met.", "It was in Paris when we met."], "correct_answer": "It was in Paris that we met.", "explanation": "Audio exacto." },
+        { "id": "c1-16-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What we need to do is cut costs.", "options": ["What we need to do is cut costs.", "What we need to do is to cut costs.", "What we should do is cut costs.", "What we need is cut costs."], "correct_answer": "What we need to do is cut costs.", "explanation": "Audio exacto." },
+        { "id": "c1-16-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was Mary who approved the deal.", "options": ["It was Mary who approved the deal.", "It was Mary that approved the deal.", "It was John who approved the deal.", "It was Mary who approves the deal."], "correct_answer": "It was Mary who approved the deal.", "explanation": "Audio exacto." },
+        { "id": "c1-16-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What I find annoying is the noise.", "options": ["What I find annoying is the noise.", "What I find annoying are the noise.", "That I find annoying is the noise.", "What she finds annoying is the noise."], "correct_answer": "What I find annoying is the noise.", "explanation": "Audio exacto." },
+        { "id": "c1-16-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was the board that decided.", "options": ["It was the board that decided.", "It was the board who decided.", "It was the board which decided.", "It is the board that decided."], "correct_answer": "It was the board that decided.", "explanation": "Audio exacto." },
+        { "id": "c1-16-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What they need is transparency.", "options": ["What they need is transparency.", "What we need is transparency.", "What they need was transparency.", "That they need is transparency."], "correct_answer": "What they need is transparency.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

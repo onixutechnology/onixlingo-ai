@@ -339,7 +339,7 @@ export const fn149_calcOratoryScore = (clarity: number, confidence: number, stre
 };
 
 export const fn150_classifySpeechAudienceEffect = (oratoryScore: number): string => {
-  if (oratoryScore > 90) return 'Gran Cautivación C-Suite';
+  if (oratoryScore > 90) return 'Gran Cautivación Alta Dirección';
   if (oratoryScore > 75) return 'Persuasivo y Profesional';
   if (oratoryScore > 50) return 'Moderado / Requiere Mayor Matiz';
   return 'Monótono o Poco Convincente';

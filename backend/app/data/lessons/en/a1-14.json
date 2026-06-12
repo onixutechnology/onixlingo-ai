@@ -1,0 +1,101 @@
+{
+  "id": "a1-14",
+  "title": "Emails: Greetings & Sign-offs",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Email", "Writing"],
+  "completion_message": "¡Excelente! Ahora puedes escribir correos corporativos profesionales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Escribir Correos",
+      "parts": [
+        { "visual": "Usa 'Dear' (Estimado/a) para abrir un correo formal.", "audio": "Use Dear to open a formal email." },
+        { "visual": "Para despedirte, 'Best regards' (Saludos cordiales) es la opción más segura en el mundo corporativo.", "audio": "To sign off, Best regards is the safest option in the corporate world." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la palabra correcta para el correo.",
+      "questions": [
+        { "id": "a1-14-q1", "type": "quiz_choice", "question": "____ Mr. Smith,", "options": ["Dear", "Deer", "Dare", "Darling"], "correct_answer": "Dear", "explanation": "Estimado Sr. Smith." },
+        { "id": "a1-14-q2", "type": "quiz_choice", "question": "Best ____,", "options": ["regards", "regard", "wishes", "looking"], "correct_answer": "regards", "explanation": "Saludos cordiales." },
+        { "id": "a1-14-q3", "type": "quiz_choice", "question": "To ____ it may concern,", "options": ["whom", "who", "whose", "which"], "correct_answer": "whom", "explanation": "A quien corresponda." },
+        { "id": "a1-14-q4", "type": "quiz_choice", "question": "____ forward to hearing from you.", "options": ["Looking", "Look", "Looked", "Looks"], "correct_answer": "Looking", "explanation": "Quedo a la espera de sus noticias." },
+        { "id": "a1-14-q5", "type": "quiz_choice", "question": "Please find the document ____.", "options": ["attached", "attach", "attaching", "attachment"], "correct_answer": "attached", "explanation": "Documento adjunto." },
+        { "id": "a1-14-q6", "type": "quiz_choice", "question": "Kind ____,", "options": ["regards", "regard", "wishes", "words"], "correct_answer": "regards", "explanation": "Saludos amables." },
+        { "id": "a1-14-q7", "type": "quiz_choice", "question": "Thank you in ____.", "options": ["advance", "advanced", "before", "front"], "correct_answer": "advance", "explanation": "Gracias de antemano." },
+        { "id": "a1-14-q8", "type": "quiz_choice", "question": "I am writing to ____ you...", "options": ["inform", "tell", "say", "speak"], "correct_answer": "inform", "explanation": "Le escribo para informarle..." },
+        { "id": "a1-14-q9", "type": "quiz_choice", "question": "Sincerely ____,", "options": ["yours", "your", "you", "yourself"], "correct_answer": "yours", "explanation": "Atentamente." },
+        { "id": "a1-14-q10", "type": "quiz_choice", "question": "Could you please ____ the file?", "options": ["send", "sending", "sends", "sent"], "correct_answer": "send", "explanation": "Por favor enviar." },
+        { "id": "a1-14-q11", "type": "quiz_choice", "question": "Let me ____ if you have questions.", "options": ["know", "knowing", "knew", "known"], "correct_answer": "know", "explanation": "Házmelo saber." },
+        { "id": "a1-14-q12", "type": "quiz_choice", "question": "As per our ____ conversation...", "options": ["previous", "before", "past", "old"], "correct_answer": "previous", "explanation": "Según nuestra conversación previa." },
+        { "id": "a1-14-q13", "type": "quiz_choice", "question": "I apologize for the ____.", "options": ["delay", "late", "lateness", "delayed"], "correct_answer": "delay", "explanation": "Me disculpo por la demora." },
+        { "id": "a1-14-q14", "type": "quiz_choice", "question": "Feel ____ to contact me.", "options": ["free", "freedom", "open", "clear"], "correct_answer": "free", "explanation": "Siéntase libre de contactarme." },
+        { "id": "a1-14-q15", "type": "quiz_choice", "question": "I am out of the ____ until Monday.", "options": ["office", "desk", "room", "company"], "correct_answer": "office", "explanation": "Fuera de la oficina." },
+        { "id": "a1-14-q16", "type": "quiz_choice", "question": "Please ____ the meeting time.", "options": ["confirm", "confirms", "confirming", "confirmed"], "correct_answer": "confirm", "explanation": "Confirmar la hora." },
+        { "id": "a1-14-q17", "type": "quiz_choice", "question": "See ____ below.", "options": ["email", "mail", "message", "letter"], "correct_answer": "email", "explanation": "Ver correo abajo." },
+        { "id": "a1-14-q18", "type": "quiz_choice", "question": "I have copied John on this ____.", "options": ["email", "letter", "note", "word"], "correct_answer": "email", "explanation": "Copiado en este correo." },
+        { "id": "a1-14-q19", "type": "quiz_choice", "question": "We received your ____.", "options": ["request", "require", "asking", "question"], "correct_answer": "request", "explanation": "Recibimos su solicitud." },
+        { "id": "a1-14-q20", "type": "quiz_choice", "question": "Have a great ____.", "options": ["weekend", "week", "day", "all"], "correct_answer": "weekend", "explanation": "Buen fin de semana (cierre casual)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta.",
+      "questions": [
+        { "id": "a1-14-f1", "type": "fill_input", "question": "____ Mr. Davis,", "correct_answer": "Dear", "explanation": "Estimado." },
+        { "id": "a1-14-f2", "type": "fill_input", "question": "Best ____,", "correct_answer": "regards", "explanation": "Saludos." },
+        { "id": "a1-14-f3", "type": "fill_input", "question": "Please find ____ the report.", "correct_answer": "attached", "explanation": "Adjunto." },
+        { "id": "a1-14-f4", "type": "fill_input", "question": "Let me ____.", "correct_answer": "know", "explanation": "Saber." },
+        { "id": "a1-14-f5", "type": "fill_input", "question": "Thank you in ____.", "correct_answer": "advance", "explanation": "Antemano." },
+        { "id": "a1-14-f6", "type": "fill_input", "question": "To ____ it may concern,", "correct_answer": "whom", "explanation": "A quien." },
+        { "id": "a1-14-f7", "type": "fill_input", "question": "____ regards,", "correct_answer": "Kind", "explanation": "Amables saludos." },
+        { "id": "a1-14-f8", "type": "fill_input", "question": "Out of ____.", "correct_answer": "office", "explanation": "Oficina." },
+        { "id": "a1-14-f9", "type": "fill_input", "question": "____ yours,", "correct_answer": "Sincerely", "explanation": "Sinceramente." },
+        { "id": "a1-14-f10", "type": "fill_input", "question": "I will ____ you later.", "correct_answer": "email", "explanation": "Enviar correo." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-14-p1", "source": "Dear", "target": "Estimado"},
+        {"id": "a1-14-p2", "source": "Regards", "target": "Saludos"},
+        {"id": "a1-14-p3", "source": "Attached", "target": "Adjunto"},
+        {"id": "a1-14-p4", "source": "Advance", "target": "Antemano"},
+        {"id": "a1-14-p5", "source": "Sincerely", "target": "Atentamente"},
+        {"id": "a1-14-p6", "source": "Inform", "target": "Informar"},
+        {"id": "a1-14-p7", "source": "Request", "target": "Solicitud"},
+        {"id": "a1-14-p8", "source": "Delay", "target": "Demora"},
+        {"id": "a1-14-p9", "source": "Confirm", "target": "Confirmar"},
+        {"id": "a1-14-p10", "source": "Previous", "target": "Previo"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-14-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Dear Mr. Smith.", "options": ["Dear Mr. Smith.", "Dear Mrs. Smith.", "Dear Miss Smith.", "Hear Mr. Smith."], "correct_answer": "Dear Mr. Smith.", "explanation": "Audio exacto." },
+        { "id": "a1-14-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Best regards.", "options": ["Best regards.", "Kind regards.", "Warm regards.", "Test regards."], "correct_answer": "Best regards.", "explanation": "Audio exacto." },
+        { "id": "a1-14-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please find attached.", "options": ["Please find attached.", "Please find attach.", "Please send attached.", "Please bind attached."], "correct_answer": "Please find attached.", "explanation": "Audio exacto." },
+        { "id": "a1-14-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let me know.", "options": ["Let me know.", "Let me go.", "Let him know.", "Get me now."], "correct_answer": "Let me know.", "explanation": "Audio exacto." },
+        { "id": "a1-14-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Thank you in advance.", "options": ["Thank you in advance.", "Thank you in a dance.", "Thanks in advance.", "Thank you advanced."], "correct_answer": "Thank you in advance.", "explanation": "Audio exacto." },
+        { "id": "a1-14-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sincerely yours.", "options": ["Sincerely yours.", "Sincerely your.", "Sincerely you.", "Sincerely young."], "correct_answer": "Sincerely yours.", "explanation": "Audio exacto." },
+        { "id": "a1-14-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Out of office.", "options": ["Out of office.", "Out of order.", "Out of offers.", "In the office."], "correct_answer": "Out of office.", "explanation": "Audio exacto." },
+        { "id": "a1-14-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Feel free.", "options": ["Feel free.", "Feel tree.", "Feel three.", "Fall free."], "correct_answer": "Feel free.", "explanation": "Audio exacto." },
+        { "id": "a1-14-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Confirm the time.", "options": ["Confirm the time.", "Confirm the line.", "Confirm a time.", "Conform the time."], "correct_answer": "Confirm the time.", "explanation": "Audio exacto." },
+        { "id": "a1-14-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I apologize for the delay.", "options": ["I apologize for the delay.", "I apologize for a delay.", "I apologize for the day.", "I apologize for delay."], "correct_answer": "I apologize for the delay.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

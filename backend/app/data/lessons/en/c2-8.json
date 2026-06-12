@@ -1,0 +1,101 @@
+{
+  "id": "c2-8",
+  "title": "High-Level Finance & Accounting",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Finance", "Accounting", "Business", "Formal"],
+  "completion_message": "¡Formidable! El vocabulario de finanzas a nivel C2 (como 'EBITDA', 'Liquidity' o 'Amortization') es el idioma universal de los directores generales y grandes inversores. Dominarlo demuestra tu total capacidad para gestionar y evaluar empresas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Finanzas y Contabilidad de Alto Nivel (C2)",
+      "parts": [
+        { "visual": "1. Revenue vs Profit vs Margin: \n- Revenue (Ingresos/Facturación total): Total amount of money brought in. \n- Profit / Net Income (Beneficio neto): What remains after all expenses are paid. \n- Profit margin (Margen de beneficio): Profit expressed as a percentage of revenue. \n\n2. Overhead (Gastos generales/fijos): \n- Ongoing business expenses not directly attributed to creating a product (rent, utilities, insurance). \nEj: We need to reduce our overhead to increase profitability.", "audio": "Welcome to High-Level Finance. Number 1: Revenue versus Profit versus Margin. 'Revenue' is the total amount of money brought in by a company's operations. 'Profit' or 'Net Income' is the money left over after all expenses are paid. The 'Profit margin' is the profit expressed as a percentage of the revenue. Number 2: Overhead. 'Overhead' refers to ongoing business expenses not directly attributed to creating a product or service, such as rent, utilities, and insurance. For example: We need to reduce our overhead to increase profitability." },
+        { "visual": "3. EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization): \n- Métrica clave de la rentabilidad operativa de una empresa. \n\n4. Liquidity & Cash Flow (Liquidez y flujo de caja): \n- Liquidity: The ability of a company to pay off its short-term debts. \n- Cash flow: The net amount of cash moving into and out of a business. \n\n5. Amortization vs Depreciation (Amortización vs Depreciación): \n- Amortization: Spreading the cost of an INTANGIBLE asset over its useful life (e.g., a patent). \n- Depreciation: Spreading the cost of a TANGIBLE asset over its useful life (e.g., machinery).", "audio": "Number 3: E B I T D A. This stands for Earnings Before Interest, Taxes, Depreciation, and Amortization. It is a key metric used to evaluate a company's operating performance. Number 4: Liquidity and Cash Flow. 'Liquidity' measures a company's ability to pay off its short-term debt obligations. 'Cash flow' is the net amount of cash moving into and out of a business. Number 5: Amortization versus Depreciation. 'Amortization' is the practice of spreading an INTANGIBLE asset's cost over its useful life, like a patent. 'Depreciation' applies to TANGIBLE assets, like machinery or vehicles." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término financiero correcto.",
+      "questions": [
+        { "id": "c2-8-q1", "type": "quiz_choice", "question": "The total amount of money brought in by a company's operations, before any expenses are deducted, is called ____. (Ingresos totales).", "options": ["revenue", "profit", "margin", "dividend"], "correct_answer": "revenue", "explanation": "Revenue = ingresos totales / facturación." },
+        { "id": "c2-8-q2", "type": "quiz_choice", "question": "The money a business makes after accounting for all the expenses is the net ____. (Beneficio neto).", "options": ["profit", "revenue", "overhead", "turnover"], "correct_answer": "profit", "explanation": "Net profit (o net income) = beneficio neto." },
+        { "id": "c2-8-q3", "type": "quiz_choice", "question": "Ongoing business expenses that cannot be directly attributed to creating a specific product (e.g., rent, administrative salaries) are called ____. (Gastos generales).", "options": ["overhead", "revenue", "margin", "assets"], "correct_answer": "overhead", "explanation": "Overhead = gastos generales o fijos." },
+        { "id": "c2-8-q4", "type": "quiz_choice", "question": "A key metric of a company's operating performance is ____, which excludes interest, taxes, depreciation, and amortization.", "options": ["EBITDA", "ROI", "KPI", "GDP"], "correct_answer": "EBITDA", "explanation": "EBITDA = Earnings Before Interest, Taxes, Depreciation, and Amortization." },
+        { "id": "c2-8-q5", "type": "quiz_choice", "question": "The ability of a company to quickly convert its assets into cash to pay off short-term debt is its ____. (Liquidez).", "options": ["liquidity", "solvency", "profitability", "equity"], "correct_answer": "liquidity", "explanation": "Liquidity = liquidez." },
+        { "id": "c2-8-q6", "type": "quiz_choice", "question": "The total movement of money in and out of a business is the ____ flow. (Flujo de caja).", "options": ["cash", "money", "capital", "fund"], "correct_answer": "cash", "explanation": "Cash flow = flujo de caja / efectivo." },
+        { "id": "c2-8-q7", "type": "quiz_choice", "question": "Spreading the cost of a TANGIBLE asset (like a delivery truck) over its useful life is ____.", "options": ["depreciation", "amortization", "inflation", "deflation"], "correct_answer": "depreciation", "explanation": "Depreciation = depreciación (para activos físicos/tangibles)." },
+        { "id": "c2-8-q8", "type": "quiz_choice", "question": "Spreading the cost of an INTANGIBLE asset (like a patent or software) over its useful life is ____.", "options": ["amortization", "depreciation", "liquidation", "inflation"], "correct_answer": "amortization", "explanation": "Amortization = amortización (para activos intangibles)." },
+        { "id": "c2-8-q9", "type": "quiz_choice", "question": "Things of value that a company owns (property, cash, patents) are its ____. (Activos).", "options": ["assets", "liabilities", "debts", "loans"], "correct_answer": "assets", "explanation": "Assets = activos." },
+        { "id": "c2-8-q10", "type": "quiz_choice", "question": "Money that a company owes to others (loans, accounts payable) are its ____. (Pasivos/Deudas).", "options": ["liabilities", "assets", "equities", "revenues"], "correct_answer": "liabilities", "explanation": "Liabilities = pasivos u obligaciones." },
+        { "id": "c2-8-q11", "type": "quiz_choice", "question": "The difference between the value of the assets and the cost of the liabilities of something owned is ____. (Patrimonio neto/Capital).", "options": ["equity", "debt", "margin", "interest"], "correct_answer": "equity", "explanation": "Equity = patrimonio neto o capital contable." },
+        { "id": "c2-8-q12", "type": "quiz_choice", "question": "A financial statement that summarizes a company's assets, liabilities, and shareholders' equity at a specific point in time is the ____ sheet. (Balance general).", "options": ["balance", "profit", "cash", "income"], "correct_answer": "balance", "explanation": "Balance sheet = balance general." },
+        { "id": "c2-8-q13", "type": "quiz_choice", "question": "A financial statement showing the revenue and expenses over a specific period is the ____ statement (also known as P&L). (Estado de resultados).", "options": ["income", "balance", "asset", "liability"], "correct_answer": "income", "explanation": "Income statement (o Profit and Loss statement) = estado de resultados." },
+        { "id": "c2-8-q14", "type": "quiz_choice", "question": "The profit made on an investment, expressed as a percentage of the cost, is the Return on ____ (ROI).", "options": ["Investment", "Income", "Interest", "Inflation"], "correct_answer": "Investment", "explanation": "ROI = Return on Investment (Retorno de Inversión)." },
+        { "id": "c2-8-q15", "type": "quiz_choice", "question": "When a company legally declares its inability to pay its debts, it files for ____. (Bancarrota).", "options": ["bankruptcy", "liquidation", "merger", "IPO"], "correct_answer": "bankruptcy", "explanation": "Bankruptcy = bancarrota / quiebra." },
+        { "id": "c2-8-q16", "type": "quiz_choice", "question": "A sum of money paid regularly by a company to its shareholders out of its profits is a ____. (Dividendo).", "options": ["dividend", "bonus", "salary", "wage"], "correct_answer": "dividend", "explanation": "Dividend = dividendo." },
+        { "id": "c2-8-q17", "type": "quiz_choice", "question": "The process of bringing a private company to the stock market for the first time is an ____ (Initial Public Offering).", "options": ["IPO", "ROI", "P&L", "NDA"], "correct_answer": "IPO", "explanation": "IPO = Initial Public Offering (Oferta Pública Inicial)." },
+        { "id": "c2-8-q18", "type": "quiz_choice", "question": "Funds provided by investors to startup firms with long-term growth potential is ____ capital. (Capital de riesgo).", "options": ["venture", "working", "human", "fixed"], "correct_answer": "venture", "explanation": "Venture capital = capital de riesgo." },
+        { "id": "c2-8-q19", "type": "quiz_choice", "question": "An official inspection of an individual's or organization's accounts, typically by an independent body, is an ____. (Auditoría).", "options": ["audit", "inspection", "review", "check"], "correct_answer": "audit", "explanation": "Audit = auditoría financiera." },
+        { "id": "c2-8-q20", "type": "quiz_choice", "question": "Capital used in a company's day-to-day trading operations is ____ capital. (Capital de trabajo).", "options": ["working", "venture", "fixed", "human"], "correct_answer": "working", "explanation": "Working capital = capital de trabajo (activos corrientes menos pasivos corrientes)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término financiero correcto.",
+      "questions": [
+        { "id": "c2-8-f1", "type": "fill_input", "question": "Total ____. (Ingresos/Facturación con R)", "correct_answer": "revenue", "explanation": "revenue." },
+        { "id": "c2-8-f2", "type": "fill_input", "question": "Net ____. (Beneficio con P)", "correct_answer": "profit", "explanation": "profit." },
+        { "id": "c2-8-f3", "type": "fill_input", "question": "Reduce ____. (Gastos generales con O)", "correct_answer": "overhead", "explanation": "overhead." },
+        { "id": "c2-8-f4", "type": "fill_input", "question": "Positive cash ____. (Flujo de caja)", "correct_answer": "flow", "explanation": "flow." },
+        { "id": "c2-8-f5", "type": "fill_input", "question": "____ of a tangible asset. (Depreciación con D)", "correct_answer": "Depreciation", "explanation": "Depreciation." },
+        { "id": "c2-8-f6", "type": "fill_input", "question": "____ of an intangible asset. (Amortización con A)", "correct_answer": "Amortization", "explanation": "Amortization." },
+        { "id": "c2-8-f7", "type": "fill_input", "question": "Company ____. (Activos con A)", "correct_answer": "assets", "explanation": "assets." },
+        { "id": "c2-8-f8", "type": "fill_input", "question": "Company ____. (Pasivos/Deudas con L)", "correct_answer": "liabilities", "explanation": "liabilities." },
+        { "id": "c2-8-f9", "type": "fill_input", "question": "____ sheet. (Balance general con B)", "correct_answer": "Balance", "explanation": "Balance." },
+        { "id": "c2-8-f10", "type": "fill_input", "question": "File for ____. (Bancarrota con B)", "correct_answer": "bankruptcy", "explanation": "bankruptcy." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Finance Match",
+      "pairs": [
+        {"id": "c2-8-p1", "source": "Revenue", "target": "Ingresos brutos / Facturación"},
+        {"id": "c2-8-p2", "source": "Net Profit", "target": "Beneficio neto"},
+        {"id": "c2-8-p3", "source": "Overhead", "target": "Gastos generales (alquiler, luz)"},
+        {"id": "c2-8-p4", "source": "Liquidity", "target": "Liquidez (capacidad de pago a corto plazo)"},
+        {"id": "c2-8-p5", "source": "Depreciation", "target": "Depreciación (activos físicos)"},
+        {"id": "c2-8-p6", "source": "Amortization", "target": "Amortización (activos intangibles)"},
+        {"id": "c2-8-p7", "source": "Assets", "target": "Activos (lo que posee la empresa)"},
+        {"id": "c2-8-p8", "source": "Liabilities", "target": "Pasivos (lo que debe la empresa)"},
+        {"id": "c2-8-p9", "source": "Balance sheet", "target": "Balance general"},
+        {"id": "c2-8-p10", "source": "Dividend", "target": "Dividendo (pago a accionistas)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término contable/financiero correcto.",
+      "questions": [
+        { "id": "c2-8-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Revenue increased this quarter.", "options": ["Revenue increased this quarter.", "Profit increased this quarter.", "Margin increased this quarter.", "Income increased this quarter."], "correct_answer": "Revenue increased this quarter.", "explanation": "Audio exacto." },
+        { "id": "c2-8-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must reduce overhead.", "options": ["We must reduce overhead.", "We must reduce overheads.", "They must reduce overhead.", "We must reduce our overhead."], "correct_answer": "We must reduce overhead.", "explanation": "Audio exacto." },
+        { "id": "c2-8-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is our EBITDA?", "options": ["What is our EBITDA?", "What was our EBITDA?", "Where is our EBITDA?", "What is their EBITDA?"], "correct_answer": "What is our EBITDA?", "explanation": "Audio exacto." },
+        { "id": "c2-8-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Liquidity is a major concern.", "options": ["Liquidity is a major concern.", "Liquidity was a major concern.", "Liability is a major concern.", "Equity is a major concern."], "correct_answer": "Liquidity is a major concern.", "explanation": "Audio exacto." },
+        { "id": "c2-8-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Calculate the depreciation.", "options": ["Calculate the depreciation.", "Calculated the depreciation.", "Calculate the amortization.", "Calculate our depreciation."], "correct_answer": "Calculate the depreciation.", "explanation": "Audio exacto." },
+        { "id": "c2-8-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "List the assets and liabilities.", "options": ["List the assets and liabilities.", "List our assets and liabilities.", "Listed the assets and liabilities.", "Listen to the assets and liabilities."], "correct_answer": "List the assets and liabilities.", "explanation": "Audio exacto." },
+        { "id": "c2-8-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Look at the balance sheet.", "options": ["Look at the balance sheet.", "Look at our balance sheet.", "Looked at the balance sheet.", "Look at the income sheet."], "correct_answer": "Look at the balance sheet.", "explanation": "Audio exacto." },
+        { "id": "c2-8-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They filed for bankruptcy.", "options": ["They filed for bankruptcy.", "We filed for bankruptcy.", "He filed for bankruptcy.", "They file for bankruptcy."], "correct_answer": "They filed for bankruptcy.", "explanation": "Audio exacto." },
+        { "id": "c2-8-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The board approved a dividend.", "options": ["The board approved a dividend.", "The board approves a dividend.", "Our board approved a dividend.", "The board approved the dividend."], "correct_answer": "The board approved a dividend.", "explanation": "Audio exacto." },
+        { "id": "c2-8-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need more working capital.", "options": ["We need more working capital.", "They need more working capital.", "We needed more working capital.", "We need more venture capital."], "correct_answer": "We need more working capital.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

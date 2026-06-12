@@ -24,7 +24,7 @@ export default function PlayMatchPage({ params }: { params: Promise<{ matchId: s
     // Renderizado seguro durante hidratación o antes del redirect
     return (
       <div className="min-h-screen wood-theme-bg flex items-center justify-center rounded-none">
-        <div className="w-8 h-8 border-4 border-amber-500 border-t-transparent rounded-none animate-spin"></div>
+        <div className="w-8 h-8 border-4 border-[#D4AF37]/30 border-t-transparent rounded-none animate-spin"></div>
       </div>
     );
   }
@@ -47,17 +47,17 @@ export default function PlayMatchPage({ params }: { params: Promise<{ matchId: s
         {/* HUD: Oponente (Arriba) */}
         <div className="flex items-center justify-between wood-panel-light p-3 sm:p-4 rounded-none mb-4 sm:mb-6 shadow-inner">
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#25140b] rounded-none border border-[#3c1e0a] flex items-center justify-center shadow-lg relative overflow-hidden">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#25140b] rounded-none border border-[#3c1e0a] flex items-center justify-center shadow-none relative overflow-hidden">
               <User className="text-[#ecd3b5]/60 relative z-10" size={20} />
             </div>
             <div>
-              <h3 className="text-white font-bold text-base sm:text-lg flex items-center gap-2">
+              <h3 className="text-slate-900 font-bold text-base sm:text-lg flex items-center gap-2">
                 {opponent.username}
                 <span className={`hidden sm:inline-block px-2 py-0.5 rounded-none text-[9px] font-black uppercase tracking-wider border ${opponentIsWhite ? 'bg-amber-950/60 text-amber-300 border-amber-800/40' : 'bg-[#130a04] text-[#ecd3b5]/60 border-[#3c1e0a]'}`}>
                   {opponentIsWhite ? 'Blancas' : 'Negras'}
                 </span>
               </h3>
-              <div className="flex items-center gap-1.5 text-slate-400 text-xs sm:text-sm font-medium">
+              <div className="flex items-center gap-1.5 text-slate-500 text-xs sm:text-sm font-medium">
                 <Shield size={14} className="text-amber-400" />
                 <span className="text-[#ecd3b5]/70">ELO: {opponent.elo}</span>
               </div>
@@ -80,17 +80,17 @@ export default function PlayMatchPage({ params }: { params: Promise<{ matchId: s
         {/* HUD: Jugador Local (Abajo) */}
         <div className="flex items-center justify-between wood-panel-light p-3 sm:p-4 rounded-none shadow-[0_0_20px_rgba(0,0,0,0.5)] relative overflow-hidden">
           <div className="flex items-center gap-3 sm:gap-4 relative z-10">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#25140b] rounded-none border border-[#3c1e0a] flex items-center justify-center shadow-lg">
-              <User className="text-white" size={20} />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#25140b] rounded-none border border-[#3c1e0a] flex items-center justify-center shadow-none">
+              <User className="text-slate-900" size={20} />
             </div>
             <div>
-              <h3 className="text-white font-bold text-base sm:text-lg flex items-center gap-2">
+              <h3 className="text-slate-900 font-bold text-base sm:text-lg flex items-center gap-2">
                 {localPlayer.username}
                 <span className={`hidden sm:inline-block px-2 py-0.5 rounded-none text-[9px] font-black uppercase tracking-wider border ${localIsWhite ? 'bg-amber-950/60 text-amber-300 border-amber-800/40' : 'bg-[#130a04] text-[#ecd3b5]/60 border-[#3c1e0a]'}`}>
                   {localIsWhite ? 'Blancas' : 'Negras'}
                 </span>
               </h3>
-              <div className="flex items-center gap-1.5 text-slate-350 text-xs sm:text-sm font-medium">
+              <div className="flex items-center gap-1.5 text-slate-300 text-xs sm:text-sm font-medium">
                 <Zap size={14} className="text-amber-400" />
                 <span className="text-amber-300">ELO: {localPlayer.elo}</span>
               </div>

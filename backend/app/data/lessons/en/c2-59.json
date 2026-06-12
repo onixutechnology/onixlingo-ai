@@ -1,0 +1,101 @@
+{
+  "id": "c2-59",
+  "title": "Crisis Communication",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "PR", "Communication", "Management"],
+  "completion_message": "¡Excelente! Una crisis mal manejada puede destruir una corporación. Con este vocabulario, sabrás cómo las empresas controlan los daños, emiten comunicados y superan escándalos de relaciones públicas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Comunicación de Crisis y Relaciones Públicas (C2)",
+      "parts": [
+        { "visual": "Toda empresa enfrenta escándalos o desastres. El 'PR' (Public Relations) es cómo lo manejan. \n\n1. Damage control (Control de daños): \n- Las acciones inmediatas para minimizar el impacto negativo de una crisis. \nEj: The PR team is doing DAMAGE CONTROL after the CEO's offensive tweet. \n\n2. Backlash (Reacción negativa fuerte): \n- La furia pública contra una decisión de la empresa. \nEj: We faced a massive BACKLASH when we raised the prices by 50%. \n\n3. Press release (Comunicado de prensa): \n- Una declaración oficial escrita enviada a los medios de comunicación. \nEj: We will issue a PRESS RELEASE apologizing for the server outage.", "audio": "Welcome to Crisis Communication and Public Relations, known as PR. Every company faces scandals or disasters. How they manage it is crucial. Number 1: Damage control. Immediate actions taken to minimize the negative impact of a crisis. For example: The PR team is doing DAMAGE CONTROL after the CEO's offensive tweet. Number 2: Backlash. A strong and negative public reaction against a decision or action. For example: We faced a massive BACKLASH when we raised the prices by 50 percent. Number 3: Press release. An official written statement sent to the media to provide information. For example: We will issue a PRESS RELEASE apologizing for the server outage." },
+        { "visual": "4. To downplay (Minimizar la importancia): \n- Tratar de hacer que un problema parezca menos grave de lo que es. \nEj: The company tried to DOWNPLAY the severity of the data breach. \n\n5. Scapegoat (Chivo expiatorio): \n- Una persona a la que se culpa injustamente para proteger a los verdaderos culpables. \nEj: The junior developer was used as a SCAPEGOAT for the system failure. \n\n6. Cover-up (Encubrimiento): \n- Un intento ilegal o antiético de ocultar un error o crimen. \nEj: The scandal wasn't the mistake itself, it was the COVER-UP. \n\n7. To clear the air (Aclarar las cosas): \n- Hablar abiertamente para eliminar malentendidos o tensión. \nEj: We held a town hall meeting to CLEAR THE AIR regarding the rumors.", "audio": "Number 4: To downplay. Trying to make a problem seem less important or severe than it really is. For example: The company tried to DOWNPLAY the severity of the data breach. Number 5: Scapegoat. A person who is unfairly blamed for something that others have done, to protect the real culprits. For example: The junior developer was used as a SCAPEGOAT for the system failure. Number 6: Cover-up. An unethical or illegal attempt to hide a mistake, crime, or scandal. For example: The scandal wasn't the mistake itself, it was the COVER-UP. Number 7: To clear the air. To speak openly in order to remove tension or misunderstandings. For example: We held a town hall meeting to CLEAR THE AIR regarding the rumors." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de relaciones públicas correcto.",
+      "questions": [
+        { "id": "c2-59-q1", "type": "quiz_choice", "question": "After the defective product caught fire on live TV, the PR team went into immediate ____ control. (Control de daños).", "options": ["damage", "danger", "fire", "risk"], "correct_answer": "damage", "explanation": "Damage control = control de daños." },
+        { "id": "c2-59-q2", "type": "quiz_choice", "question": "The decision to charge users for previously free features resulted in a massive customer ____. (Reacción negativa furiosa).", "options": ["backlash", "backfire", "backstab", "backtrack"], "correct_answer": "backlash", "explanation": "Backlash = reacción negativa fuerte del público." },
+        { "id": "c2-59-q3", "type": "quiz_choice", "question": "To formally announce the resignation of the CEO to the newspapers, we will issue a ____ release. (Comunicado de prensa).", "options": ["press", "news", "media", "print"], "correct_answer": "press", "explanation": "Press release = comunicado de prensa." },
+        { "id": "c2-59-q4", "type": "quiz_choice", "question": "The executives knew the cars were unsafe, but they tried to ____ the danger in their public statements. (Minimizar la importancia).", "options": ["downplay", "downsize", "downgrade", "downfall"], "correct_answer": "downplay", "explanation": "Downplay = restar importancia, minimizar (hacer ver menos grave)." },
+        { "id": "c2-59-q5", "type": "quiz_choice", "question": "The board of directors made the terrible decision, but they fired the marketing manager as a ____ to calm the public. (Chivo expiatorio).", "options": ["scapegoat", "black sheep", "sacrificial lamb", "fall guy"], "correct_answer": "scapegoat", "explanation": "Scapegoat = chivo expiatorio (a quien se le echa la culpa)." },
+        { "id": "c2-59-q6", "type": "quiz_choice", "question": "The financial fraud was bad, but the illegal ____ orchestrated by the lawyers is what sent them to prison. (Encubrimiento).", "options": ["cover-up", "hide-out", "shut-down", "close-up"], "correct_answer": "cover-up", "explanation": "Cover-up = encubrimiento (ocultar el crimen)." },
+        { "id": "c2-59-q7", "type": "quiz_choice", "question": "There have been many false rumors about layoffs. We need to hold a meeting to ____ the air. (Aclarar las cosas).", "options": ["clear", "clean", "fresh", "breathe"], "correct_answer": "clear", "explanation": "Clear the air = aclarar rumores o aliviar tensiones." },
+        { "id": "c2-59-q8", "type": "quiz_choice", "question": "When a company tries to make itself look environmentally friendly without actually doing anything, it's called ____-washing.", "options": ["green", "eco", "white", "clean"], "correct_answer": "green", "explanation": "Greenwashing = lavado de imagen verde (falsa ecología)." },
+        { "id": "c2-59-q9", "type": "quiz_choice", "question": "The strategy to reverse a negative public image and present a positive one is a PR ____. (Giro/Enfoque manipulado).", "options": ["spin", "turn", "twist", "flip"], "correct_answer": "spin", "explanation": "Spin = darle la vuelta a una noticia (manipular el enfoque)." },
+        { "id": "c2-59-q10", "type": "quiz_choice", "question": "A PR professional whose job is specifically to manipulate the media to present a positive 'spin' on events is called a ____ doctor.", "options": ["spin", "news", "media", "word"], "correct_answer": "spin", "explanation": "Spin doctor = experto en relaciones públicas que manipula noticias a favor." },
+        { "id": "c2-59-q11", "type": "quiz_choice", "question": "During a crisis, you must strictly follow the talking ____ provided by the legal department. (Puntos clave a decir).", "options": ["points", "words", "lines", "scripts"], "correct_answer": "points", "explanation": "Talking points = puntos clave o guion preparado para hablar." },
+        { "id": "c2-59-q12", "type": "quiz_choice", "question": "The politician refused to answer the journalist's questions, giving only a generic 'no ____' statement. (Sin comentarios).", "options": ["comment", "answer", "words", "speaking"], "correct_answer": "comment", "explanation": "No comment = sin comentarios." },
+        { "id": "c2-59-q13", "type": "quiz_choice", "question": "We are currently dealing with the ____ from the failed merger. (Consecuencias negativas/Radioactividad).", "options": ["fallout", "dropoff", "breakdown", "spillover"], "correct_answer": "fallout", "explanation": "Fallout = las consecuencias o efectos residuales negativos." },
+        { "id": "c2-59-q14", "type": "quiz_choice", "question": "To repair his image, the celebrity hired a top PR ____. (Agencia/Firma).", "options": ["firm", "shop", "store", "group"], "correct_answer": "firm", "explanation": "PR firm = agencia de relaciones públicas." },
+        { "id": "c2-59-q15", "type": "quiz_choice", "question": "Instead of waiting for the scandal to break in the news, we need to get ____ of the story. (Adelantarse a).", "options": ["ahead", "front", "before", "top"], "correct_answer": "ahead", "explanation": "Get ahead of the story = adelantarse a la noticia (dar tu versión primero)." },
+        { "id": "c2-59-q16", "type": "quiz_choice", "question": "When an employee secretly reports illegal activity within their own company to the authorities, they are a ____. (Denunciante).", "options": ["whistleblower", "bellringer", "alarmist", "traitor"], "correct_answer": "whistleblower", "explanation": "Whistleblower = denunciante (quien 'toca el silbato')." },
+        { "id": "c2-59-q17", "type": "quiz_choice", "question": "To throw someone under the ____ means to selfishly blame them to save yourself. (Echarle la culpa / Tirar bajo el autobús).", "options": ["bus", "train", "car", "truck"], "correct_answer": "bus", "explanation": "Throw someone under the bus = culpar a otro para salvarse uno mismo." },
+        { "id": "c2-59-q18", "type": "quiz_choice", "question": "If you speak to a journalist but demand that they do not publish your name, you are speaking off the ____. (Extraoficialmente).", "options": ["record", "book", "tape", "script"], "correct_answer": "record", "explanation": "Off the record = extraoficialmente, sin que se pueda publicar el nombre." },
+        { "id": "c2-59-q19", "type": "quiz_choice", "question": "A massive, unorganized attack by internet users (often on social media) destroying a brand's reputation is a public ____. (Linchamiento/Indignación).", "options": ["outrage", "anger", "fury", "storm"], "correct_answer": "outrage", "explanation": "Public outrage = indignación pública masiva." },
+        { "id": "c2-59-q20", "type": "quiz_choice", "question": "In a severe crisis, the CEO should issue a public and unconditional ____. (Disculpa).", "options": ["apology", "excuse", "forgiveness", "pardon"], "correct_answer": "apology", "explanation": "Public apology = disculpa pública (debe ser 'unconditional' para funcionar)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término de crisis/PR.",
+      "questions": [
+        { "id": "c2-59-f1", "type": "fill_input", "question": "Doing ____ control. (Control de daños con D)", "correct_answer": "damage", "explanation": "damage." },
+        { "id": "c2-59-f2", "type": "fill_input", "question": "Face a massive ____. (Reacción negativa furiosa con B)", "correct_answer": "backlash", "explanation": "backlash." },
+        { "id": "c2-59-f3", "type": "fill_input", "question": "Issue a ____ release. (Comunicado de prensa con P)", "correct_answer": "press", "explanation": "press." },
+        { "id": "c2-59-f4", "type": "fill_input", "question": "Try to ____ the issue. (Minimizar importancia con D)", "correct_answer": "downplay", "explanation": "downplay." },
+        { "id": "c2-59-f5", "type": "fill_input", "question": "He was a ____. (Chivo expiatorio con S)", "correct_answer": "scapegoat", "explanation": "scapegoat." },
+        { "id": "c2-59-f6", "type": "fill_input", "question": "An illegal ____-up. (Encubrimiento con C)", "correct_answer": "cover", "explanation": "cover." },
+        { "id": "c2-59-f7", "type": "fill_input", "question": "____ the air. (Aclarar malentendidos con C)", "correct_answer": "Clear", "explanation": "Clear." },
+        { "id": "c2-59-f8", "type": "fill_input", "question": "A PR ____ doctor. (Manipulador de noticias con S)", "correct_answer": "spin", "explanation": "spin." },
+        { "id": "c2-59-f9", "type": "fill_input", "question": "The ____ from the scandal. (Consecuencias residuales con F)", "correct_answer": "fallout", "explanation": "fallout." },
+        { "id": "c2-59-f10", "type": "fill_input", "question": "An internal ____. (Denunciante de fraude interno con W)", "correct_answer": "whistleblower", "explanation": "whistleblower." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "PR Match",
+      "pairs": [
+        {"id": "c2-59-p1", "source": "Damage control", "target": "Acciones para minimizar el desastre"},
+        {"id": "c2-59-p2", "source": "Backlash", "target": "Reacción pública muy negativa"},
+        {"id": "c2-59-p3", "source": "Press release", "target": "Comunicado oficial a los medios"},
+        {"id": "c2-59-p4", "source": "Downplay", "target": "Minimizar la gravedad de algo"},
+        {"id": "c2-59-p5", "source": "Scapegoat", "target": "Chivo expiatorio (culpar a un inocente)"},
+        {"id": "c2-59-p6", "source": "Cover-up", "target": "Encubrimiento ilegal o antiético"},
+        {"id": "c2-59-p7", "source": "Clear the air", "target": "Aclarar malentendidos y aliviar tensión"},
+        {"id": "c2-59-p8", "source": "Spin", "target": "Manipular el enfoque de una noticia"},
+        {"id": "c2-59-p9", "source": "Whistleblower", "target": "Denunciante interno de corrupción"},
+        {"id": "c2-59-p10", "source": "Off the record", "target": "Extraoficialmente (sin publicar nombre)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de relaciones públicas.",
+      "questions": [
+        { "id": "c2-59-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are doing damage control.", "options": ["We are doing damage control.", "They are doing damage control.", "We were doing damage control.", "We are doing danger control."], "correct_answer": "We are doing damage control.", "explanation": "Audio exacto." },
+        { "id": "c2-59-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We faced a massive backlash.", "options": ["We faced a massive backlash.", "They faced a massive backlash.", "We face a massive backlash.", "We faced massive backlash."], "correct_answer": "We faced a massive backlash.", "explanation": "Audio exacto." },
+        { "id": "c2-59-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Issue a press release.", "options": ["Issue a press release.", "Issued a press release.", "Issuing a press release.", "Issue the press release."], "correct_answer": "Issue a press release.", "explanation": "Audio exacto." },
+        { "id": "c2-59-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do not downplay the risk.", "options": ["Do not downplay the risk.", "Do not downplay the risks.", "Did not downplay the risk.", "Do not downgrade the risk."], "correct_answer": "Do not downplay the risk.", "explanation": "Audio exacto." },
+        { "id": "c2-59-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is just a scapegoat.", "options": ["He is just a scapegoat.", "She is just a scapegoat.", "He was just a scapegoat.", "He's just a scapegoat."], "correct_answer": "He is just a scapegoat.", "explanation": "Audio exacto." },
+        { "id": "c2-59-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a massive cover-up.", "options": ["It was a massive cover-up.", "It is a massive cover-up.", "This was a massive cover-up.", "It was massive cover-up."], "correct_answer": "It was a massive cover-up.", "explanation": "Audio exacto." },
+        { "id": "c2-59-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's clear the air.", "options": ["Let's clear the air.", "Let us clear the air.", "Let's clean the air.", "Let's clear the airs."], "correct_answer": "Let's clear the air.", "explanation": "Audio exacto." },
+        { "id": "c2-59-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need a PR spin.", "options": ["We need a PR spin.", "We need a PR firm.", "They need a PR spin.", "We needed a PR spin."], "correct_answer": "We need a PR spin.", "explanation": "Audio exacto." },
+        { "id": "c2-59-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The whistleblower spoke out.", "options": ["The whistleblower spoke out.", "The whistleblower speaks out.", "A whistleblower spoke out.", "The whistleblower spoken out."], "correct_answer": "The whistleblower spoke out.", "explanation": "Audio exacto." },
+        { "id": "c2-59-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are speaking off the record.", "options": ["We are speaking off the record.", "They are speaking off the record.", "We were speaking off the record.", "We are speaking off record."], "correct_answer": "We are speaking off the record.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "a1-12",
+  "title": "Months & Dates",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Time", "Calendar", "Deadlines"],
+  "completion_message": "¡Excelente! Manejar meses y fechas es crucial para cumplir con los 'deadlines' de tu empresa.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Meses y Fechas",
+      "parts": [
+        { "visual": "Los meses del año también se escriben con mayúscula inicial (January, February).", "audio": "Months of the year are also capitalized." },
+        { "visual": "Usamos 'in' para meses ('in January') y 'on' para fechas completas ('on January 1st').", "audio": "We use in for months and on for full dates." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona el mes o preposición correcta.",
+      "questions": [
+        { "id": "a1-12-q1", "type": "quiz_choice", "question": "The project starts ____ January.", "options": ["in", "on", "at", "by"], "correct_answer": "in", "explanation": "Con meses solos usamos 'in'." },
+        { "id": "a1-12-q2", "type": "quiz_choice", "question": "The meeting is ____ March 5th.", "options": ["on", "in", "at", "for"], "correct_answer": "on", "explanation": "Para fechas completas usamos 'on'." },
+        { "id": "a1-12-q3", "type": "quiz_choice", "question": "My vacation is in ____.", "options": ["August", "august", "Agust", "Augst"], "correct_answer": "August", "explanation": "Agosto con mayúscula." },
+        { "id": "a1-12-q4", "type": "quiz_choice", "question": "The first month is ____.", "options": ["January", "February", "March", "December"], "correct_answer": "January", "explanation": "Enero es el primer mes." },
+        { "id": "a1-12-q5", "type": "quiz_choice", "question": "Christmas is in ____.", "options": ["December", "december", "November", "October"], "correct_answer": "December", "explanation": "Diciembre." },
+        { "id": "a1-12-q6", "type": "quiz_choice", "question": "We launch the product ____ April.", "options": ["in", "on", "at", "by"], "correct_answer": "in", "explanation": "Mes solo." },
+        { "id": "a1-12-q7", "type": "quiz_choice", "question": "Her birthday is ____ May 10th.", "options": ["on", "in", "at", "of"], "correct_answer": "on", "explanation": "Fecha específica." },
+        { "id": "a1-12-q8", "type": "quiz_choice", "question": "The second month is ____.", "options": ["February", "Febuary", "Feburary", "Febrary"], "correct_answer": "February", "explanation": "Febrero, se escribe February." },
+        { "id": "a1-12-q9", "type": "quiz_choice", "question": "The deadline is in ____.", "options": ["June", "june", "Jun", "Juny"], "correct_answer": "June", "explanation": "Junio." },
+        { "id": "a1-12-q10", "type": "quiz_choice", "question": "Our fiscal year ends in ____.", "options": ["July", "july", "Juli", "Jully"], "correct_answer": "July", "explanation": "Julio." },
+        { "id": "a1-12-q11", "type": "quiz_choice", "question": "School starts in ____.", "options": ["September", "september", "Septmber", "Setember"], "correct_answer": "September", "explanation": "Septiembre." },
+        { "id": "a1-12-q12", "type": "quiz_choice", "question": "Halloween is in ____.", "options": ["October", "october", "Ocktober", "Oktaber"], "correct_answer": "October", "explanation": "Octubre." },
+        { "id": "a1-12-q13", "type": "quiz_choice", "question": "Thanksgiving is in ____.", "options": ["November", "november", "Nuvember", "Novmber"], "correct_answer": "November", "explanation": "Noviembre." },
+        { "id": "a1-12-q14", "type": "quiz_choice", "question": "The conference is ____ November 2nd.", "options": ["on", "in", "at", "for"], "correct_answer": "on", "explanation": "Fecha completa." },
+        { "id": "a1-12-q15", "type": "quiz_choice", "question": "I was born ____ 1990.", "options": ["in", "on", "at", "from"], "correct_answer": "in", "explanation": "Para años solos usamos 'in'." },
+        { "id": "a1-12-q16", "type": "quiz_choice", "question": "The report is due ____ March.", "options": ["in", "on", "at", "by"], "correct_answer": "in", "explanation": "Mes solo." },
+        { "id": "a1-12-q17", "type": "quiz_choice", "question": "We met ____ 2022.", "options": ["in", "on", "at", "by"], "correct_answer": "in", "explanation": "Año solo." },
+        { "id": "a1-12-q18", "type": "quiz_choice", "question": "He joined the company ____ May.", "options": ["in", "on", "at", "since"], "correct_answer": "in", "explanation": "Mes solo." },
+        { "id": "a1-12-q19", "type": "quiz_choice", "question": "Next month is ____.", "options": ["May", "may", "Mai", "Mey"], "correct_answer": "May", "explanation": "Mayo." },
+        { "id": "a1-12-q20", "type": "quiz_choice", "question": "The payment is ____ the 1st of the month.", "options": ["on", "in", "at", "by"], "correct_answer": "on", "explanation": "Día específico." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el mes, año o preposición.",
+      "questions": [
+        { "id": "a1-12-f1", "type": "fill_input", "question": "The meeting is ____ January.", "correct_answer": "in", "explanation": "Preposición para mes." },
+        { "id": "a1-12-f2", "type": "fill_input", "question": "It is ____ March 5th.", "correct_answer": "on", "explanation": "Preposición para fecha." },
+        { "id": "a1-12-f3", "type": "fill_input", "question": "The first month is ____.", "correct_answer": "January", "explanation": "Enero." },
+        { "id": "a1-12-f4", "type": "fill_input", "question": "The second month is ____.", "correct_answer": "February", "explanation": "Febrero." },
+        { "id": "a1-12-f5", "type": "fill_input", "question": "The third month is ____.", "correct_answer": "March", "explanation": "Marzo." },
+        { "id": "a1-12-f6", "type": "fill_input", "question": "The fourth month is ____.", "correct_answer": "April", "explanation": "Abril." },
+        { "id": "a1-12-f7", "type": "fill_input", "question": "The last month is ____.", "correct_answer": "December", "explanation": "Diciembre." },
+        { "id": "a1-12-f8", "type": "fill_input", "question": "Born ____ 1995.", "correct_answer": "in", "explanation": "Año." },
+        { "id": "a1-12-f9", "type": "fill_input", "question": "Deadline is in ____ (Julio).", "correct_answer": "July", "explanation": "Julio." },
+        { "id": "a1-12-f10", "type": "fill_input", "question": "We launch in ____ (Agosto).", "correct_answer": "August", "explanation": "Agosto." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-12-p1", "source": "January", "target": "Enero"},
+        {"id": "a1-12-p2", "source": "February", "target": "Febrero"},
+        {"id": "a1-12-p3", "source": "March", "target": "Marzo"},
+        {"id": "a1-12-p4", "source": "April", "target": "Abril"},
+        {"id": "a1-12-p5", "source": "May", "target": "Mayo"},
+        {"id": "a1-12-p6", "source": "June", "target": "Junio"},
+        {"id": "a1-12-p7", "source": "July", "target": "Julio"},
+        {"id": "a1-12-p8", "source": "August", "target": "Agosto"},
+        {"id": "a1-12-p9", "source": "September", "target": "Septiembre"},
+        {"id": "a1-12-p10", "source": "October", "target": "Octubre"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la fecha mencionada.",
+      "questions": [
+        { "id": "a1-12-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In January.", "options": ["In January.", "On January.", "In February.", "At January."], "correct_answer": "In January.", "explanation": "Audio exacto." },
+        { "id": "a1-12-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "On March 5th.", "options": ["On March 5th.", "In March 5th.", "On March 4th.", "On May 5th."], "correct_answer": "On March 5th.", "explanation": "Audio exacto." },
+        { "id": "a1-12-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In December.", "options": ["In December.", "In November.", "On December.", "In September."], "correct_answer": "In December.", "explanation": "Audio exacto." },
+        { "id": "a1-12-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Next April.", "options": ["Next April.", "Next August.", "In April.", "Last April."], "correct_answer": "Next April.", "explanation": "Audio exacto." },
+        { "id": "a1-12-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In 2022.", "options": ["In 2022.", "On 2022.", "In 2020.", "At 2022."], "correct_answer": "In 2022.", "explanation": "Audio exacto." },
+        { "id": "a1-12-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "On July 1st.", "options": ["On July 1st.", "On June 1st.", "In July 1st.", "On July 2nd."], "correct_answer": "On July 1st.", "explanation": "Audio exacto." },
+        { "id": "a1-12-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Since February.", "options": ["Since February.", "In February.", "Since January.", "For February."], "correct_answer": "Since February.", "explanation": "Audio exacto." },
+        { "id": "a1-12-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "By September.", "options": ["By September.", "In September.", "By November.", "On September."], "correct_answer": "By September.", "explanation": "Audio exacto." },
+        { "id": "a1-12-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Before May.", "options": ["Before May.", "Before March.", "After May.", "By May."], "correct_answer": "Before May.", "explanation": "Audio exacto." },
+        { "id": "a1-12-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In October.", "options": ["In October.", "On October.", "In November.", "At October."], "correct_answer": "In October.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -22,10 +22,12 @@ interface UIState {
   // 🔥 NUEVA LÓGICA DE ENERGÍA Y LÍMITES DIARIOS PARA EL PLAN FREE
   energy: number;
   lastActiveDate: string;
+  lastEnergyUpdateTimestamp: number;
   vocabLessonsToday: number;
   chessPuzzlesToday: number;
   
   setEnergy: (energy: number) => void;
+  regenerateEnergy: () => void;
   consumeEnergy: (amount: number) => boolean;
   addVocabLesson: () => void;
   addChessPuzzle: () => void;
@@ -57,10 +59,33 @@ export const useUIStore = create<UIState>()(
       // 🔥 4. Lógica de Energía y Límites Diarios (Plan Free)
       energy: 100,
       lastActiveDate: '',
+      lastEnergyUpdateTimestamp: Date.now(),
       vocabLessonsToday: 0,
       chessPuzzlesToday: 0,
 
-      setEnergy: (energy) => set({ energy: Math.max(0, Math.min(100, energy)) }),
+      setEnergy: (energy) => set({ 
+        energy: Math.max(0, Math.min(100, energy)),
+        lastEnergyUpdateTimestamp: Date.now()
+      }),
+      
+      regenerateEnergy: () => {
+        const lastUpdate = get().lastEnergyUpdateTimestamp || Date.now();
+        const now = Date.now();
+        const minutesPassed = Math.floor((now - lastUpdate) / 60000);
+        
+        if (minutesPassed > 0) {
+          const currentEnergy = get().energy;
+          if (currentEnergy < 100) {
+            const newEnergy = Math.min(100, currentEnergy + minutesPassed);
+            set({ 
+              energy: newEnergy,
+              lastEnergyUpdateTimestamp: lastUpdate + (minutesPassed * 60000)
+            });
+          } else {
+             set({ lastEnergyUpdateTimestamp: now });
+          }
+        }
+      },
       
       consumeEnergy: (amount) => {
         if (get().userTier !== 'free') {
@@ -68,10 +93,15 @@ export const useUIStore = create<UIState>()(
         }
         
         get().checkAndResetDailyLimits(); // Asegurar límites al día
+        get().regenerateEnergy(); // Regenerar energía antes de consumir
+
         const currentEnergy = get().energy;
         
         if (currentEnergy >= amount) {
-          set({ energy: currentEnergy - amount });
+          set({ 
+            energy: currentEnergy - amount,
+            lastEnergyUpdateTimestamp: Date.now()
+          });
           return true;
         }
         return false;
@@ -91,7 +121,7 @@ export const useUIStore = create<UIState>()(
         }));
       },
 
-      refillEnergy: () => set({ energy: 100 }),
+      refillEnergy: () => set({ energy: 100, lastEnergyUpdateTimestamp: Date.now() }),
 
       checkAndResetDailyLimits: () => {
         const today = new Date().toISOString().split('T')[0];
@@ -100,7 +130,8 @@ export const useUIStore = create<UIState>()(
             lastActiveDate: today,
             vocabLessonsToday: 0,
             chessPuzzlesToday: 0,
-            energy: 100 // Se recarga a 100 al iniciar un nuevo día
+            energy: 100, // Se recarga a 100 al iniciar un nuevo día
+            lastEnergyUpdateTimestamp: Date.now()
           });
         }
       },
@@ -113,6 +144,7 @@ export const useUIStore = create<UIState>()(
           userTier: 'free',
           energy: 100,
           lastActiveDate: '',
+          lastEnergyUpdateTimestamp: Date.now(),
           vocabLessonsToday: 0,
           chessPuzzlesToday: 0
         }); 

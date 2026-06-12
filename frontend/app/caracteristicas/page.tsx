@@ -1,4 +1,6 @@
 'use client';
+import LandingFooter from '@/components/LandingFooter';
+import LandingNavbar from '@/components/LandingNavbar';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -32,7 +34,7 @@ const features = [
       'Análisis de patrones de aprendizaje individual',
     ],
     stat: '< 80ms', statLabel: 'Latencia de respuesta',
-    extraDetails: 'El motor neuronal utiliza arquitecturas Transformers optimizadas localmente en los nodos Edge de OnixCorp. Mediante técnicas de cuantización de parámetros a 4 bits, logramos tiempos de inferencia sub-80ms sobre flujos de audio continuos WebRTC.',
+    extraDetails: 'El motor neuronal utiliza arquitecturas Transformers optimizadas localmente en los nodos Edge de OnixLingo. Mediante técnicas de cuantización de parámetros a 4 bits, logramos tiempos de inferencia sub-80ms sobre flujos de audio continuos WebRTC.',
     interactiveMetric: 'density'
   },
   {
@@ -64,7 +66,7 @@ const features = [
       'Traducción contextual y gramática comparativa',
     ],
     stat: '3', statLabel: 'Idiomas Globales',
-    extraDetails: 'Currícula desarrollada en conjunto por directores académicos de OnixCorp y el British Council. El motor de traducción contextual y gramática comparativa resalta las diferencias sintácticas clave para evitar calcos lingüísticos.',
+    extraDetails: 'Currícula desarrollada en conjunto por directores académicos de OnixLingo y el British Council. El motor de traducción contextual y gramática comparativa resalta las diferencias sintácticas clave para evitar calcos lingüísticos.',
     interactiveMetric: 'languages'
   },
   {
@@ -103,8 +105,8 @@ const features = [
     icon: Building2,
     color: 'violet',
     tag: 'Executive Program',
-    title: 'Boardroom Simulator & Negociación Corporativa',
-    description: 'El módulo más avanzado de OnixLingo. Simulaciones en tiempo real de escenarios corporativos de alto nivel: presentaciones ante inversores, fusiones y adquisiciones, negociaciones de contrato internacional y oratoria para C-Suite.',
+    title: 'Corporativo Simulator & Negociación Corporativa',
+    description: 'El módulo más avanzado de OnixLingo. Simulaciones en tiempo real de escenarios corporativos de alto nivel: presentaciones ante inversores, fusiones y adquisiciones, negociaciones de contrato internacional y oratoria para Alta Dirección.',
     bullets: [
       '60 unidades de especialización ejecutiva',
       'Simulación de juntas directivas, pitch de VC y IPO',
@@ -112,7 +114,7 @@ const features = [
       'Certification badge: Executive Speech Standard',
     ],
     stat: '60', statLabel: 'Unidades Executive',
-    extraDetails: 'Nuestra gema de la corona. Simulaciones realistas que evalúan factores como la densidad de C-Suite Jargon, el índice de diplomacia y la velocidad de respuesta, otorgando credenciales validadas en la red de OnixCorp.',
+    extraDetails: 'Nuestra gema de la corona. Simulaciones realistas que evalúan factores como la densidad de Alta Dirección Jargon, el índice de diplomacia y la velocidad de respuesta, otorgando credenciales validadas en la red de OnixLingo.',
     interactiveMetric: 'executive'
   },
 ];
@@ -127,10 +129,10 @@ const techStack = [
 ];
 
 const colorMap: Record<string, { bg: string; text: string; border: string; icon: string; tag: string; btn: string }> = {
-  indigo: { bg: 'bg-indigo-50/50', text: 'text-indigo-600', border: 'border-indigo-200', icon: 'bg-indigo-100 text-indigo-600', tag: 'bg-indigo-100 text-indigo-700', btn: 'bg-indigo-600 hover:bg-indigo-700' },
-  emerald: { bg: 'bg-emerald-50/50', text: 'text-emerald-600', border: 'border-emerald-200', icon: 'bg-emerald-100 text-emerald-600', tag: 'bg-emerald-100 text-emerald-700', btn: 'bg-emerald-600 hover:bg-emerald-700' },
-  blue: { bg: 'bg-blue-50/50', text: 'text-blue-600', border: 'border-blue-200', icon: 'bg-blue-100 text-blue-600', tag: 'bg-blue-100 text-blue-700', btn: 'bg-blue-600 hover:bg-blue-700' },
-  amber: { bg: 'bg-amber-50/50', text: 'text-amber-600', border: 'border-amber-200', icon: 'bg-amber-100 text-amber-600', tag: 'bg-amber-100 text-amber-700', btn: 'bg-amber-600 hover:bg-amber-700' },
+  indigo: { bg: 'bg-indigo-50/50', text: 'text-black', border: 'border-indigo-200', icon: 'bg-indigo-100 text-black', tag: 'bg-indigo-100 text-gray-900', btn: 'bg-white hover:bg-slate-50' },
+  emerald: { bg: 'bg-white/50', text: 'text-[#D4AF37]', border: 'border-[#D4AF37]/30', icon: 'bg-gray-200 text-[#D4AF37]', tag: 'bg-gray-200 text-[#D4AF37]', btn: 'bg-emerald-600 hover:bg-emerald-700' },
+  blue: { bg: 'bg-blue-50/50', text: 'text-[#D4AF37]', border: 'border-blue-200', icon: 'bg-blue-100 text-[#D4AF37]', tag: 'bg-blue-100 text-blue-700', btn: 'bg-[#D4AF37]/20 hover:bg-blue-700' },
+  amber: { bg: 'bg-[#D4AF37]/10/50', text: 'text-[#D4AF37]', border: 'border-[#D4AF37]/30', icon: 'bg-amber-100 text-[#D4AF37]', tag: 'bg-amber-100 text-[#D4AF37]', btn: 'bg-[#D4AF37]/20 hover:bg-amber-700' },
   pink: { bg: 'bg-pink-50/50', text: 'text-pink-600', border: 'border-pink-200', icon: 'bg-pink-100 text-pink-600', tag: 'bg-pink-100 text-pink-700', btn: 'bg-pink-600 hover:bg-pink-700' },
   violet: { bg: 'bg-violet-50/50', text: 'text-violet-600', border: 'border-violet-200', icon: 'bg-violet-100 text-violet-600', tag: 'bg-violet-100 text-violet-700', btn: 'bg-violet-600 hover:bg-violet-700' },
 };
@@ -153,57 +155,34 @@ export default function CaracteristicasPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#edf7f2] font-sans text-slate-800 selection:bg-indigo-500/20 selection:text-indigo-900">
+    <div className="min-h-screen bg-white font-sans text-gray-800 selection:bg-[#D4AF37]/30 selection:text-black">
 
       {/* NAVBAR */}
-      <nav className="fixed w-full bg-[#edf7f2]/90 backdrop-blur-xl border-b border-emerald-100 z-50">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-indigo-600 flex items-center justify-center text-white font-bold shadow-lg shadow-indigo-600/20">
-              <span>O</span>
-            </div>
-            <span className="font-bold text-slate-900 tracking-tight text-xl">OnixLingo</span>
-          </Link>
-          <div className="hidden md:flex gap-8 items-center text-sm font-semibold text-slate-600">
-            <Link href="/caracteristicas" className="text-indigo-600 border-b-2 border-indigo-600 pb-1">Características</Link>
-            <Link href="/vocabulario" className="hover:text-indigo-600 transition-colors">Vocabulario</Link>
-            <Link href="/programa-ejecutivo" className="hover:text-indigo-600 transition-colors">Programa Ejecutivo</Link>
-            <Link href="/planes" className="hover:text-indigo-600 transition-colors">Planes</Link>
-          </div>
-          <div className="flex gap-4 items-center">
-            <Link href="/login" className="hidden md:block text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors">Iniciar Sesión</Link>
-            <Link href="/register">
-              <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 px-6 transition-all shadow-md shadow-indigo-600/20 hover:scale-105">
-                Crear Cuenta Gratis
-              </button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <LandingNavbar />
 
-      {/* HERO */}
-      <section className="pt-36 pb-16 px-6 relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-indigo-100/50 blur-[130px] opacity-40 pointer-events-none" />
+      {/* HERO (BLACK) */}
+      <section className="pt-36 pb-16 px-6 relative overflow-hidden bg-slate-50">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#D4AF37]/20/10 blur-[130px] opacity-40 pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10 space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-widest shadow-sm">
-            <Sparkles size={12} className="text-indigo-600 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-bold uppercase tracking-widest shadow-none">
+            <Sparkles size={12} className="text-[#D4AF37] animate-pulse" />
             Ecosistema Tecnológico de Vanguardia
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Tecnología Avanzada para un<br />
-            <span className="text-indigo-600">Aprendizaje sin Fricciones.</span>
+            <span className="text-slate-900">Aprendizaje sin Fricciones.</span>
           </h1>
-          <p className="text-lg text-slate-650 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed font-light">
             OnixLingo integra inteligencia artificial cognitiva, motores de análisis fonométrico en tiempo real y dinámicas de ajedrez estratégico para asegurar un desarrollo cognitivo premium.
           </p>
           <div className="flex justify-center gap-4 pt-2">
             <Link href="/register">
-              <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-8 transition-all shadow-lg shadow-indigo-600/20 flex items-center gap-2 hover:-translate-y-0.5">
+              <button className="bg-[#D4AF37] hover:bg-[#b5952f] text-black font-bold py-3.5 px-8 transition-all shadow-none shadow-[#D4AF37]/20 flex items-center gap-2 hover:-translate-y-0.5">
                 Comenzar Demo <ArrowRight size={18} />
               </button>
             </Link>
             <Link href="/planes">
-              <button className="bg-white border border-slate-200 hover:border-indigo-400 hover:text-indigo-600 text-slate-700 font-semibold py-3.5 px-8 transition-all">
+              <button className="bg-transparent border border-[#D4AF37] hover:bg-[#D4AF37] hover:text-black text-slate-900 font-semibold py-3.5 px-8 transition-all">
                 Explorar Planes
               </button>
             </Link>
@@ -211,29 +190,29 @@ export default function CaracteristicasPage() {
         </div>
       </section>
 
-      {/* DETAILED STATS GRID */}
-      <section className="py-10 px-6 border-t border-emerald-100 bg-white/40 backdrop-blur-sm">
+      {/* DETAILED STATS GRID (WHITE) */}
+      <section className="py-10 px-6 border-y border-black bg-white">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
-            { val: '3,000+', label: 'Lecciones de Idiomas', color: 'text-slate-900' },
-            { val: '3,000+', label: 'Retos de Ajedrez', color: 'text-indigo-650' },
-            { val: '1,400+', label: 'Temas y Contextos', color: 'text-amber-600' },
-            { val: '< 80ms', label: 'Latencia de IA', color: 'text-emerald-600' },
+            { val: '3,000+', label: 'Lecciones de Idiomas', color: 'text-black' },
+            { val: '3,000+', label: 'Retos de Ajedrez', color: 'text-[#D4AF37]' },
+            { val: '1,400+', label: 'Temas y Contextos', color: 'text-black' },
+            { val: '< 80ms', label: 'Latencia de IA', color: 'text-black' },
           ].map((s, i) => (
-            <div key={i} className="p-5 bg-white border border-slate-100 shadow-sm flex flex-col justify-center">
+            <div key={i} className="p-5 bg-white border border-black shadow-none flex flex-col justify-center">
               <p className={`text-3xl font-black ${s.color}`}>{s.val}</p>
-              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-1">{s.label}</p>
+              <p className="text-[10px] text-gray-800 font-bold uppercase tracking-wider mt-1">{s.label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* INTERACTIVE MODULE TABS */}
-      <section className="py-20 px-6 border-t border-emerald-100">
+      {/* INTERACTIVE MODULE TABS (GOLD 20%) */}
+      <section className="py-20 px-6 border-t border-black bg-[#D4AF37]/20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 space-y-2">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Estructura Modular del Ecosistema</h2>
-            <p className="text-slate-500 text-sm max-w-xl mx-auto">Seis pilares estratégicos diseñados con tecnología propietaria para maximizar el rendimiento.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-black tracking-tight">Estructura Modular del Ecosistema</h2>
+            <p className="text-black text-sm max-w-xl mx-auto font-medium">Seis pilares estratégicos diseñados con tecnología propietaria para maximizar el rendimiento.</p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-2 mb-10">
@@ -244,7 +223,7 @@ export default function CaracteristicasPage() {
                 <button
                   key={i}
                   onClick={() => setActiveFeature(i)}
-                  className={`flex items-center gap-2 px-5 py-3 text-xs font-bold transition-all border ${activeFeature === i ? `${c.icon} ${c.border} bg-white shadow-sm ring-1 ring-slate-900/5` : 'bg-white border-slate-200 text-slate-500 hover:border-slate-350 hover:text-slate-700'}`}
+                  className={`flex items-center gap-2 px-5 py-3 text-xs font-bold transition-all border ${activeFeature === i ? `${c.icon} ${c.border} bg-white shadow-none ring-1 ring-black/5` : 'bg-white border-slate-200 text-slate-500 hover:border-slate-200 hover:text-slate-700'}`}
                 >
                   <Icon size={14} />
                   {f.tag}
@@ -260,14 +239,14 @@ export default function CaracteristicasPage() {
               const c = colorMap[f.color];
               const Icon = f.icon;
               return (
-                <div key={i} className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center border ${c.border} ${c.bg} p-8 md:p-12 shadow-md relative overflow-hidden`}>
+                <div key={i} className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center border border-white/40 bg-white p-8 md:p-12 shadow-none relative overflow-hidden`}>
                   <div className="md:col-span-8 space-y-5">
                     <span className={`inline-block px-2.5 py-1 text-[10px] font-black uppercase tracking-wider ${c.tag}`}>{f.tag}</span>
-                    <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight">{f.title}</h3>
-                    <p className="text-slate-650 leading-relaxed text-sm">{f.description}</p>
+                    <h3 className="text-2xl md:text-3xl font-extrabold text-black leading-tight">{f.title}</h3>
+                    <p className="text-slate-600 leading-relaxed text-sm">{f.description}</p>
                     <ul className="space-y-2">
                       {f.bullets.map((b, j) => (
-                        <li key={j} className="flex items-start gap-2.5 text-xs text-slate-750 font-medium">
+                        <li key={j} className="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
                           <CheckCircle2 size={15} className={`${c.text} mt-0.5 shrink-0`} />
                           {b}
                         </li>
@@ -277,12 +256,12 @@ export default function CaracteristicasPage() {
                     <div className="flex gap-3 pt-3">
                       <button 
                         onClick={() => handleOpenDetails(i)}
-                        className={`flex items-center gap-1.5 px-6 py-3 font-bold text-xs uppercase tracking-widest text-white shadow-md ${c.btn}`}
+                        className={`flex items-center gap-1.5 px-6 py-3 font-bold text-xs uppercase tracking-widest text-slate-900 shadow-none bg-white hover:bg-slate-50`}
                       >
                         Panel de Simulación <ChevronRight size={14} />
                       </button>
                       <Link href="/register">
-                        <button className="border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-semibold px-6 py-3 text-xs uppercase tracking-widest">
+                        <button className="border border-black bg-white hover:bg-white text-black font-semibold px-6 py-3 text-xs uppercase tracking-widest">
                           Iniciar Demo
                         </button>
                       </Link>
@@ -290,12 +269,12 @@ export default function CaracteristicasPage() {
                   </div>
                   
                   <div className="md:col-span-4 flex flex-col items-center justify-center gap-4 py-4 md:border-l md:border-slate-200/50">
-                    <div className={`w-32 h-32 ${c.icon} flex items-center justify-center shadow-lg rounded-none border border-white/20`}>
+                    <div className={`w-32 h-32 ${c.icon} flex items-center justify-center shadow-none rounded-none border border-white/20`}>
                       <Icon size={56} />
                     </div>
                     <div className="text-center">
                       <p className={`text-4xl font-black ${c.text}`}>{f.stat}</p>
-                      <p className="text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">{f.statLabel}</p>
+                      <p className="text-[9px] text-slate-500 font-bold uppercase tracking-wider mt-0.5">{f.statLabel}</p>
                     </div>
                   </div>
                 </div>
@@ -305,28 +284,27 @@ export default function CaracteristicasPage() {
         </div>
       </section>
 
-      {/* CAPABILITIES GRID */}
-      <section className="py-20 px-6 bg-white border-t border-emerald-100">
+      {/* CAPABILITIES GRID (BLACK) */}
+      <section className="py-20 px-6 bg-slate-50 border-t border-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 space-y-2">
             <h2 className="text-3xl font-bold text-slate-900">Tecnologías Integradas</h2>
-            <p className="text-slate-500 text-sm max-w-xl mx-auto">Capas de infraestructura optimizadas para una experiencia sin interrupciones.</p>
+            <p className="text-slate-600 text-sm max-w-xl mx-auto">Capas de infraestructura optimizadas para una experiencia sin interrupciones.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((f, i) => {
-              const c = colorMap[f.color];
               const Icon = f.icon;
               return (
-                <div key={i} onClick={() => handleOpenDetails(i)} className={`group p-6 border ${c.border} bg-white hover:${c.bg} transition-all cursor-pointer shadow-sm hover:shadow-md flex flex-col justify-between min-h-[220px]`}>
+                <div key={i} onClick={() => handleOpenDetails(i)} className={`group p-6 border border-slate-200 bg-slate-50 hover:border-[#D4AF37] transition-all cursor-pointer shadow-none hover:shadow-none flex flex-col justify-between min-h-[220px]`}>
                   <div>
-                    <div className={`w-10 h-10 ${c.icon} flex items-center justify-center mb-4`}>
+                    <div className={`w-10 h-10 bg-white text-[#D4AF37] border border-slate-200 flex items-center justify-center mb-4`}>
                       <Icon size={20} />
                     </div>
-                    <span className={`text-[9px] font-black uppercase tracking-widest ${c.text} block mb-1`}>{f.tag}</span>
+                    <span className={`text-[9px] font-black uppercase tracking-widest text-[#D4AF37] block mb-1`}>{f.tag}</span>
                     <h4 className="text-base font-bold text-slate-900 leading-tight mb-2">{f.title}</h4>
-                    <p className="text-slate-500 text-xs leading-relaxed">{f.description.substring(0, 110)}...</p>
+                    <p className="text-slate-600 text-xs leading-relaxed">{f.description.substring(0, 110)}...</p>
                   </div>
-                  <div className={`flex items-center gap-1 mt-4 text-[10px] font-bold uppercase tracking-wider ${c.text}`}>
+                  <div className={`flex items-center gap-1 mt-4 text-[10px] font-bold uppercase tracking-wider text-slate-900 group-hover:text-[#D4AF37]`}>
                     Diagnóstico <ChevronRight size={10} />
                   </div>
                 </div>
@@ -336,25 +314,25 @@ export default function CaracteristicasPage() {
         </div>
       </section>
 
-      {/* TECH ARCHITECTURE */}
-      <section className="py-20 px-6 bg-slate-900 border-t border-slate-800">
+      {/* TECH ARCHITECTURE (WHITE) */}
+      <section className="py-20 px-6 bg-white border-t border-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 space-y-2">
-            <span className="text-xs font-black text-amber-400 uppercase tracking-widest">Infraestructura Directa</span>
-            <h2 className="text-3xl font-bold text-white">Construido para Escala e Inferencia</h2>
-            <p className="text-slate-400 text-sm max-w-xl mx-auto">Optimización fonométrica y WebRTC redundante a nivel global.</p>
+            <span className="text-xs font-black text-black uppercase tracking-widest">Infraestructura Directa</span>
+            <h2 className="text-3xl font-bold text-black">Construido para Escala e Inferencia</h2>
+            <p className="text-gray-600 text-sm max-w-xl mx-auto">Optimización fonométrica y WebRTC redundante a nivel global.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {techStack.map((t, i) => {
               const Icon = t.icon;
               return (
-                <div key={i} className="p-5 border border-slate-800 bg-slate-800/30 hover:border-indigo-500/30 transition-all group flex items-start gap-4">
-                  <div className="w-10 h-10 bg-indigo-500/10 text-indigo-400 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors shrink-0">
+                <div key={i} className="p-5 border border-black bg-white hover:border-[#D4AF37] transition-all group flex items-start gap-4">
+                  <div className="w-10 h-10 bg-white text-slate-900 flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:text-black transition-colors shrink-0">
                     <Icon size={18} />
                   </div>
                   <div>
-                    <h4 className="text-white text-sm font-bold">{t.label}</h4>
-                    <p className="text-slate-500 text-[11px] mt-0.5 leading-normal">{t.sub}</p>
+                    <h4 className="text-black text-sm font-bold">{t.label}</h4>
+                    <p className="text-gray-600 text-[11px] mt-0.5 leading-normal">{t.sub}</p>
                   </div>
                 </div>
               );
@@ -365,61 +343,61 @@ export default function CaracteristicasPage() {
 
       {/* INTERACTIVE MODAL */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-slate-950/80 backdrop-blur-md">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-slate-50/80 backdrop-blur-md">
           <div className="bg-white max-w-2xl w-full border border-slate-200 shadow-2xl relative flex flex-col justify-between max-h-[85vh] overflow-y-auto rounded-none">
             
-            <div className="p-5 border-b border-slate-100 flex items-center justify-between">
+            <div className="p-5 border-b border-slate-200 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className={`px-2 py-0.5 text-[9px] font-black uppercase ${activeColor.tag}`}>{activeFeatureDetail.tag}</span>
-                <h3 className="font-bold text-slate-900 text-base">Consola de Diagnóstico</h3>
+                <h3 className="font-bold text-black text-base">Consola de Diagnóstico</h3>
               </div>
-              <button onClick={() => setIsModalOpen(false)} className="text-slate-400 hover:text-slate-900 transition-colors p-1">
+              <button onClick={() => setIsModalOpen(false)} className="text-slate-500 hover:text-black transition-colors p-1">
                 <X size={20} />
               </button>
             </div>
 
             <div className="p-6 space-y-6">
-              <div className="p-4 bg-amber-50 border border-amber-200 text-amber-900 flex gap-3 text-xs leading-normal">
-                <AlertTriangle size={18} className="shrink-0 mt-0.5 text-amber-600" />
+              <div className="p-4 bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-amber-900 flex gap-3 text-xs leading-normal">
+                <AlertTriangle size={18} className="shrink-0 mt-0.5 text-[#D4AF37]" />
                 <div>
-                  <p className="font-extrabold uppercase text-[9px] tracking-wider text-amber-700 mb-0.5">Demostración de Inferencia e IA</p>
+                  <p className="font-extrabold uppercase text-[9px] tracking-wider text-[#D4AF37] mb-0.5">Demostración de Inferencia e IA</p>
                   <p className="font-light">Las herramientas completas de Speech Analytics, simuladores acústicos de voz y persistencia en la base de datos están habilitadas en tu panel privado tras registrarte.</p>
                 </div>
               </div>
 
               <div className="space-y-2">
-                <h4 className="text-lg font-bold text-slate-900">{activeFeatureDetail.title}</h4>
-                <p className="text-slate-600 text-xs leading-relaxed">{activeFeatureDetail.description}</p>
-                <p className="text-slate-400 text-[11px] italic leading-normal">{activeFeatureDetail.extraDetails}</p>
+                <h4 className="text-lg font-bold text-black">{activeFeatureDetail.title}</h4>
+                <p className="text-gray-600 text-xs leading-relaxed">{activeFeatureDetail.description}</p>
+                <p className="text-slate-500 text-[11px] italic leading-normal">{activeFeatureDetail.extraDetails}</p>
               </div>
 
               {/* Dynamic Interactive Calculators */}
-              <div className="p-5 bg-slate-50 border border-slate-200 space-y-4">
+              <div className="p-5 bg-white border border-slate-200 space-y-4">
                 <div className="flex justify-between items-center border-b border-slate-200/60 pb-2">
                   <h4 className="text-[10px] font-black text-slate-700 uppercase tracking-widest flex items-center gap-1.5">
-                    <Sparkles size={12} className="text-indigo-650 animate-spin" />
+                    <Sparkles size={12} className="text-[#D4AF37] animate-spin" />
                     Simulación Rápida de Entrada
                   </h4>
-                  <span className="text-[9px] bg-indigo-50 border border-indigo-100 text-indigo-700 px-2 py-0.5 font-bold uppercase">Sandbox</span>
+                  <span className="text-[9px] bg-[#D4AF37]/10 border border-amber-100 text-amber-900 px-2 py-0.5 font-bold uppercase">Sandbox</span>
                 </div>
 
                 {activeFeatureDetail.interactiveMetric === 'density' && (
                   <div className="space-y-3">
-                    <label className="text-xs text-slate-500 block font-medium">Analizador de densidad de oratoria C-Suite:</label>
+                    <label className="text-xs text-slate-500 block font-medium">Analizador de densidad de oratoria Alta Dirección:</label>
                     <textarea 
                       value={inputText}
                       onChange={(e) => setInputText(e.target.value)}
-                      className="w-full text-xs p-2.5 bg-white border border-slate-200 focus:border-indigo-400 outline-none font-mono"
+                      className="w-full text-xs p-2.5 bg-white border border-slate-200 focus:border-amber-400 outline-none font-mono"
                       rows={3}
                     />
                     <div className="grid grid-cols-2 gap-3">
                       <div className="p-3 bg-white border border-slate-200 text-center">
-                        <p className="text-slate-400 uppercase text-[9px] font-bold">Densidad Léxica</p>
-                        <p className="text-indigo-600 text-lg font-black mt-0.5 font-mono">{Math.round(fn101_calcLexicalDensity(inputText))}%</p>
+                        <p className="text-slate-500 uppercase text-[9px] font-bold">Densidad Léxica</p>
+                        <p className="text-black text-lg font-black mt-0.5 font-mono">{Math.round(fn101_calcLexicalDensity(inputText))}%</p>
                       </div>
                       <div className="p-3 bg-white border border-slate-200 text-center">
-                        <p className="text-slate-400 uppercase text-[9px] font-bold">Jargon Detectado</p>
-                        <p className="text-slate-900 text-lg font-black mt-0.5 font-mono">{Math.round(fn110_detectJargonDensity(inputText, ['synergy', 'alignment', 'quarterly', 'board']))}%</p>
+                        <p className="text-slate-500 uppercase text-[9px] font-bold">Jargon Detectado</p>
+                        <p className="text-black text-lg font-black mt-0.5 font-mono">{Math.round(fn110_detectJargonDensity(inputText, ['synergy', 'alignment', 'quarterly', 'board']))}%</p>
                       </div>
                     </div>
                   </div>
@@ -432,18 +410,18 @@ export default function CaracteristicasPage() {
                       <input 
                         type="range" min="50" max="240" value={speechWpm}
                         onChange={(e) => setSpeechWpm(parseInt(e.target.value))}
-                        className="flex-1 accent-emerald-500"
+                        className="flex-1 accent-gray-500"
                       />
-                      <span className="font-mono text-xs text-slate-900 font-bold bg-white px-2 py-1 border border-slate-200 shrink-0">{speechWpm} WPM</span>
+                      <span className="font-mono text-xs text-black font-bold bg-white px-2 py-1 border border-slate-200 shrink-0">{speechWpm} WPM</span>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
                       <div className="p-3 bg-white border border-slate-200 text-center">
-                        <p className="text-slate-400 uppercase text-[9px] font-bold">Calificación Ritmo</p>
-                        <p className="text-emerald-600 text-xs font-bold mt-1 leading-normal">{fn122_classifyWpmPace(speechWpm)}</p>
+                        <p className="text-slate-500 uppercase text-[9px] font-bold">Calificación Ritmo</p>
+                        <p className="text-[#D4AF37] text-xs font-bold mt-1 leading-normal">{fn122_classifyWpmPace(speechWpm)}</p>
                       </div>
                       <div className="p-3 bg-white border border-slate-200 text-center">
-                        <p className="text-slate-400 uppercase text-[9px] font-bold">Confianza Estimada</p>
-                        <p className="text-slate-900 text-lg font-black mt-0.5 font-mono">{fn130_calculateVocalConfidence(90, speechWpm, 1)}%</p>
+                        <p className="text-slate-500 uppercase text-[9px] font-bold">Confianza Estimada</p>
+                        <p className="text-black text-lg font-black mt-0.5 font-mono">{fn130_calculateVocalConfidence(90, speechWpm, 1)}%</p>
                       </div>
                     </div>
                   </div>
@@ -454,17 +432,17 @@ export default function CaracteristicasPage() {
                     <label className="text-xs text-slate-500 block font-medium">Comparativa fonética del motor de traducción:</label>
                     <div className="grid grid-cols-1 gap-2 text-xs">
                       <div className="p-2.5 bg-white border border-slate-200">
-                        <p className="text-[8px] text-slate-400 uppercase font-bold">Frase Objetivo:</p>
+                        <p className="text-[8px] text-slate-500 uppercase font-bold">Frase Objetivo:</p>
                         <p className="font-mono font-semibold text-slate-700 text-xs mt-0.5">"This project is ready for implementation."</p>
                       </div>
                       <div className="p-2.5 bg-white border border-slate-200">
-                        <p className="text-[8px] text-slate-400 uppercase font-bold">Tu Entrada Acústica:</p>
+                        <p className="text-[8px] text-slate-500 uppercase font-bold">Tu Entrada Acústica:</p>
                         <p className="font-mono font-semibold text-slate-500 text-xs mt-0.5">"Dees project is ready for implamentation."</p>
                       </div>
                     </div>
                     <div className="p-3 bg-white border border-slate-200 text-center">
-                      <p className="text-[9px] text-slate-400 uppercase font-bold">Alineación Silábica Estimada</p>
-                      <p className="text-lg font-black text-blue-600 mt-1 font-mono">
+                      <p className="text-[9px] text-slate-500 uppercase font-bold">Alineación Silábica Estimada</p>
+                      <p className="text-lg font-black text-[#D4AF37] mt-1 font-mono">
                         {fn113_estimatePronunciationMatch("This project is ready for implementation.", "Dees project is ready for implamentation.")}%
                       </p>
                     </div>
@@ -478,7 +456,7 @@ export default function CaracteristicasPage() {
                       {[1000, 1200, 1400, 1600].map(elo => (
                         <button
                           key={elo} onClick={() => setChessElo(elo)}
-                          className={`flex-1 py-1.5 text-xs font-bold border transition-colors ${chessElo === elo ? 'border-amber-500 bg-amber-50 text-amber-700' : 'bg-white border-slate-200 hover:border-slate-350'}`}
+                          className={`flex-1 py-1.5 text-xs font-bold border transition-colors ${chessElo === elo ? 'border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37]' : 'bg-white border-slate-200 hover:border-slate-200'}`}
                         >
                           {elo} ELO
                         </button>
@@ -486,12 +464,12 @@ export default function CaracteristicasPage() {
                     </div>
                     <div className="grid grid-cols-2 gap-3 text-center">
                       <div className="p-3 bg-white border border-slate-200">
-                        <p className="text-slate-400 uppercase text-[9px] font-bold">Acierto Estimado</p>
-                        <p className="text-amber-600 text-lg font-black mt-0.5 font-mono">+{16} ELO</p>
+                        <p className="text-slate-500 uppercase text-[9px] font-bold">Acierto Estimado</p>
+                        <p className="text-[#D4AF37] text-lg font-black mt-0.5 font-mono">+{16} ELO</p>
                       </div>
                       <div className="p-3 bg-white border border-slate-200">
-                        <p className="text-slate-400 uppercase text-[9px] font-bold">Fallo Estimado</p>
-                        <p className="text-slate-900 text-lg font-black mt-0.5 font-mono">-{16} ELO</p>
+                        <p className="text-slate-500 uppercase text-[9px] font-bold">Fallo Estimado</p>
+                        <p className="text-black text-lg font-black mt-0.5 font-mono">-{16} ELO</p>
                       </div>
                     </div>
                   </div>
@@ -506,10 +484,10 @@ export default function CaracteristicasPage() {
                         onChange={(e) => setWordsKnown(parseInt(e.target.value))}
                         className="flex-1 accent-pink-500"
                       />
-                      <span className="font-mono text-xs text-slate-900 font-bold bg-white px-2 py-1 border border-slate-200 shrink-0">{wordsKnown} palabras</span>
+                      <span className="font-mono text-xs text-black font-bold bg-white px-2 py-1 border border-slate-200 shrink-0">{wordsKnown} palabras</span>
                     </div>
                     <div className="p-3 bg-white border border-slate-200 text-center">
-                      <p className="text-[9px] text-slate-400 uppercase font-bold">Puntaje Léxico C2 Relativo</p>
+                      <p className="text-[9px] text-slate-500 uppercase font-bold">Puntaje Léxico C2 Relativo</p>
                       <p className="text-lg font-black text-pink-600 mt-1 font-mono">{fn145_calculateVocabularyWealth(wordsKnown, 'C2')} pts</p>
                     </div>
                   </div>
@@ -518,11 +496,11 @@ export default function CaracteristicasPage() {
                 {activeFeatureDetail.interactiveMetric === 'executive' && (
                   <div className="space-y-3">
                     <label className="text-xs text-slate-500 block font-medium">Ejemplo de análisis diplomático de discurso:</label>
-                    <div className="p-2.5 bg-white border border-slate-200 text-xs leading-relaxed text-slate-600 font-light italic">
+                    <div className="p-2.5 bg-white border border-slate-200 text-xs leading-relaxed text-gray-600 font-light italic">
                       "I believe our strategy mitigates risk while creating collaborative synergy across departments."
                     </div>
                     <div className="p-3 bg-white border border-slate-200 text-center">
-                      <p className="text-[9px] text-slate-400 uppercase font-bold">Índice de Diplomacia C-Suite</p>
+                      <p className="text-[9px] text-slate-500 uppercase font-bold">Índice de Diplomacia Alta Dirección</p>
                       <p className="text-lg font-black text-violet-600 mt-1 font-mono">
                         {fn125_estimateDiplomacyScore("I believe our strategy mitigates risk while creating collaborative synergy across departments.")}%
                       </p>
@@ -533,12 +511,12 @@ export default function CaracteristicasPage() {
               </div>
             </div>
 
-            <div className="p-5 border-t border-slate-100 flex gap-3 justify-end">
-              <button onClick={() => setIsModalOpen(false)} className="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2.5 px-5 text-xs uppercase tracking-wider transition-colors">
+            <div className="p-5 border-t border-slate-200 flex gap-3 justify-end">
+              <button onClick={() => setIsModalOpen(false)} className="bg-white hover:bg-white text-slate-700 font-bold py-2.5 px-5 text-xs uppercase tracking-wider transition-colors">
                 Cerrar
               </button>
               <Link href="/register">
-                <button className={`text-white font-bold py-2.5 px-5 text-xs uppercase tracking-widest ${activeColor.btn}`}>
+                <button className={`text-slate-900 font-bold py-2.5 px-5 text-xs uppercase tracking-widest ${activeColor.btn}`}>
                   Demo Completa
                 </button>
               </Link>
@@ -548,13 +526,13 @@ export default function CaracteristicasPage() {
         </div>
       )}
 
-      {/* CTA */}
-      <section className="py-20 px-6 bg-[#edf7f2] border-t border-emerald-100 text-center">
+      {/* CTA (GOLD 20%) */}
+      <section className="py-20 px-6 bg-[#D4AF37]/20 border-t border-black text-center">
         <div className="max-w-2xl mx-auto space-y-6">
-          <h2 className="text-3xl font-bold text-slate-900">¿Listo para comenzar?</h2>
-          <p className="text-slate-500 text-sm">Crea tu cuenta gratis hoy mismo y accede al simulador interactivo de lecciones.</p>
+          <h2 className="text-3xl font-bold text-black">¿Listo para comenzar?</h2>
+          <p className="text-black text-sm font-medium">Crea tu cuenta gratis hoy mismo y accede al simulador interactivo de lecciones.</p>
           <Link href="/register">
-            <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 text-sm uppercase tracking-widest transition-all shadow-xl shadow-indigo-600/20 hover:scale-105">
+            <button className="bg-white hover:bg-slate-50 text-[#D4AF37] font-bold py-4 px-12 text-sm uppercase tracking-widest transition-all shadow-xl shadow-black/20 hover:scale-105 border border-[#D4AF37]">
               Comenzar Ahora
             </button>
           </Link>
@@ -562,22 +540,7 @@ export default function CaracteristicasPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#e2efe7] py-10 px-6 text-sm text-slate-655 border-t border-emerald-100">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <span className="font-bold text-slate-900">OnixLingo</span>
-          <div className="flex gap-6 font-medium flex-wrap">
-            <Link href="/planes" className="hover:text-indigo-600 transition-colors">Planes</Link>
-            <Link href="/legal/privacy" className="hover:text-indigo-600 transition-colors">Privacidad</Link>
-            <Link href="/legal/terms" className="hover:text-indigo-600 transition-colors">Términos</Link>
-            <Link href="/legal/refunds" className="hover:text-indigo-600 transition-colors">Reembolsos</Link>
-            <Link href="/legal/support" className="hover:text-indigo-600 transition-colors">Soporte</Link>
-          </div>
-          <div className="text-left md:text-right text-xs space-y-1">
-            <p>© 2026 OnixuTechnology.</p>
-            <p className="text-[10px] text-slate-550 font-light">Pagos procesados por Paddle, nuestro Merchant of Record.</p>
-          </div>
-        </div>
-      </footer>
+      <LandingFooter />
     </div>
   );
 }

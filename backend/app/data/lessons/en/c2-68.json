@@ -1,0 +1,101 @@
+{
+  "id": "c2-68",
+  "title": "Corporate Strategy",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Strategy", "Business", "Management"],
+  "completion_message": "¡Magistral! La estrategia corporativa no se trata de trabajar más duro, sino de jugar de manera más inteligente. Con este vocabulario, tienes la visión de un CEO moderno.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Estrategia Corporativa (C2)",
+      "parts": [
+        { "visual": "Los CEOs usan lenguaje de estrategia y teoría de juegos. \n\n1. Zero-sum game (Juego de suma cero): \n- Una situación donde si uno gana, el otro pierde exactamente la misma cantidad. No hay ganancia mutua. \nEj: In this saturated market, stealing clients is a ZERO-SUM GAME. \n\n2. First-mover advantage (Ventaja del pionero): \n- La ventaja competitiva que gana la primera empresa en entrar a un mercado nuevo. \nEj: Amazon had a massive FIRST-MOVER ADVANTAGE in e-commerce. \n\n3. Paradigm shift (Cambio de paradigma): \n- Un cambio fundamental en cómo se hace algo, a menudo causado por nueva tecnología. \nEj: The smartphone caused a PARADIGM SHIFT in personal computing.", "audio": "Welcome to Corporate Strategy. Modern CEOs use the language of strategy and game theory. Number 1: Zero-sum game. A situation where one person's gain is exactly equal to another person's loss. There is no mutual benefit. For example: In this saturated market, stealing clients is a ZERO-SUM GAME. Number 2: First-mover advantage. The competitive advantage gained by the initial significant occupant of a market segment. For example: Amazon had a massive FIRST-MOVER ADVANTAGE in e-commerce. Number 3: Paradigm shift. A fundamental change in approach or underlying assumptions, usually driven by new technology. For example: The smartphone caused a PARADIGM SHIFT in personal computing." },
+        { "visual": "4. Core competency (Competencia central/principal): \n- La fortaleza única y principal de una empresa. \nEj: We should outsource accounting and focus on our CORE COMPETENCY: software design. \n\n5. Economies of scale (Economías de escala): \n- Cuando produces más, el costo por unidad disminuye. \nEj: Walmart can offer lower prices because of its massive ECONOMIES OF SCALE. \n\n6. Exit strategy (Estrategia de salida): \n- El plan de un inversor o fundador para vender su parte y retirar su dinero. \nEj: The investors want to know your EXIT STRATEGY before they give you millions. \n\n7. Synergy (Sinergia): \n- Cuando 1 + 1 = 3. La combinación de empresas vale más que sus partes individuales. \nEj: The merger will create massive SYNERGIES.", "audio": "Number 4: Core competency. A defining capability or advantage that distinguishes an enterprise from its competitors. For example: We should outsource accounting and focus on our CORE COMPETENCY: software design. Number 5: Economies of scale. Cost advantages reaped by companies when production becomes efficient. Producing more makes each unit cheaper. For example: Walmart can offer lower prices because of its massive ECONOMIES OF SCALE. Number 6: Exit strategy. An entrepreneur or investor's strategic plan to sell their ownership in a company. For example: The investors want to know your EXIT STRATEGY before they give you millions. Finally, Number 7: Synergy. The concept that the combined value and performance of two companies will be greater than the sum of the separate individual parts." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término estratégico correcto.",
+      "questions": [
+        { "id": "c2-68-q1", "type": "quiz_choice", "question": "In this market, you can't create new customers. To grow, you must steal them from rivals. It is a ____-sum game. (Suma cero).", "options": ["zero", "null", "no", "blank"], "correct_answer": "zero", "explanation": "Zero-sum game = juego de suma cero (lo que gano yo, lo pierdes tú)." },
+        { "id": "c2-68-q2", "type": "quiz_choice", "question": "By being the very first to launch an electric truck, they gained a huge ____-mover advantage.", "options": ["first", "early", "fast", "front"], "correct_answer": "first", "explanation": "First-mover advantage = ventaja de ser el primero." },
+        { "id": "c2-68-q3", "type": "quiz_choice", "question": "The invention of artificial intelligence is causing a massive ____ shift in how humans work. (Cambio de paradigma).", "options": ["paradigm", "paramount", "parallel", "paragon"], "correct_answer": "paradigm", "explanation": "Paradigm shift = cambio fundamental o de paradigma." },
+        { "id": "c2-68-q4", "type": "quiz_choice", "question": "We are trying to do too many things. We need to stop selling hardware and return to our ____ competency: software. (Competencia principal).", "options": ["core", "main", "heart", "center"], "correct_answer": "core", "explanation": "Core competency = tu fortaleza o habilidad principal." },
+        { "id": "c2-68-q5", "type": "quiz_choice", "question": "Because China produces millions of phones a day, they have incredible economies of ____, making each phone very cheap.", "options": ["scale", "size", "mass", "bulk"], "correct_answer": "scale", "explanation": "Economies of scale = economías de escala." },
+        { "id": "c2-68-q6", "type": "quiz_choice", "question": "The venture capitalists will give you $10 million, but they want to know how they will get their money back. What is your ____ strategy?", "options": ["exit", "leave", "quit", "escape"], "correct_answer": "exit", "explanation": "Exit strategy = estrategia de salida (vender la empresa a un gigante o salir a bolsa)." },
+        { "id": "c2-68-q7", "type": "quiz_choice", "question": "Combining our marketing team with their sales team will create powerful ____. Together we are stronger. (Sinergias).", "options": ["synergies", "energies", "powers", "forces"], "correct_answer": "synergies", "explanation": "Synergies = sinergias (el conjunto es mayor que la suma de las partes)." },
+        { "id": "c2-68-q8", "type": "quiz_choice", "question": "Moving quickly to copy a competitor's successful innovation is the strategy of a 'fast ____'. (Seguidor rápido).", "options": ["follower", "copier", "runner", "chaser"], "correct_answer": "follower", "explanation": "Fast follower = una empresa que no innova primero, sino que copia rápido y mejor (como Microsoft muchas veces)." },
+        { "id": "c2-68-q9", "type": "quiz_choice", "question": "When a company expands by acquiring its suppliers or distributors, it is called ____ integration. (Integración vertical).", "options": ["vertical", "horizontal", "parallel", "diagonal"], "correct_answer": "vertical", "explanation": "Vertical integration = poseer toda la cadena de suministro." },
+        { "id": "c2-68-q10", "type": "quiz_choice", "question": "When a company expands by acquiring its direct competitors in the same industry, it is called ____ integration.", "options": ["horizontal", "vertical", "parallel", "flat"], "correct_answer": "horizontal", "explanation": "Horizontal integration = comprar a tus competidores." },
+        { "id": "c2-68-q11", "type": "quiz_choice", "question": "A business model where you give away the basic product for free, but charge for premium features, is called ____. (Freemium).", "options": ["freemium", "premium", "freebie", "discount"], "correct_answer": "freemium", "explanation": "Freemium = Free + Premium." },
+        { "id": "c2-68-q12", "type": "quiz_choice", "question": "To completely change a company's business model or direction because the current one is failing is to ____. (Pivotar).", "options": ["pivot", "spin", "turn", "jump"], "correct_answer": "pivot", "explanation": "Pivot = cambiar radicalmente de estrategia (pivotar)." },
+        { "id": "c2-68-q13", "type": "quiz_choice", "question": "If we launch a new product that is too similar to our existing ones, it will steal our own sales. This is called ____. (Canibalización).", "options": ["cannibalization", "destruction", "consumption", "eating"], "correct_answer": "cannibalization", "explanation": "Cannibalization = cuando un producto nuevo se 'come' las ventas de tu producto viejo." },
+        { "id": "c2-68-q14", "type": "quiz_choice", "question": "A situation in a market where there are only a few dominant sellers (like airlines or telecom) is an ____. (Oligopolio).", "options": ["oligopoly", "monopoly", "duopoly", "empire"], "correct_answer": "oligopoly", "explanation": "Oligopoly = mercado dominado por muy pocas empresas gigantes." },
+        { "id": "c2-68-q15", "type": "quiz_choice", "question": "A unique feature that makes a product stand out from all competitors is its USP (Unique ____ Proposition).", "options": ["Selling", "Sales", "Strategy", "System"], "correct_answer": "Selling", "explanation": "Unique Selling Proposition (USP) = propuesta única de venta." },
+        { "id": "c2-68-q16", "type": "quiz_choice", "question": "The 'barrier to ____' refers to the high costs or obstacles that prevent new competitors from easily entering an industry. (Barrera de entrada).", "options": ["entry", "start", "door", "gate"], "correct_answer": "entry", "explanation": "Barrier to entry = barreras de entrada al mercado." },
+        { "id": "c2-68-q17", "type": "quiz_choice", "question": "To use something to your maximum advantage is to ____ it. (Apalancar / Sacar provecho).", "options": ["leverage", "lift", "push", "pull"], "correct_answer": "leverage", "explanation": "Leverage = apalancar o aprovechar al máximo (en finanzas, significa endeudarse para invertir, pero en management significa sacar provecho)." },
+        { "id": "c2-68-q18", "type": "quiz_choice", "question": "A highly profitable product or division that generates steady income to fund the rest of the company is a cash ____. (Vaca lechera).", "options": ["cow", "machine", "printer", "faucet"], "correct_answer": "cow", "explanation": "Cash cow = el producto que siempre da dinero seguro y estable." },
+        { "id": "c2-68-q19", "type": "quiz_choice", "question": "We need to think outside the ____ to solve this complex problem. (Pensar fuera de lo convencional).", "options": ["box", "room", "cube", "square"], "correct_answer": "box", "explanation": "Think outside the box." },
+        { "id": "c2-68-q20", "type": "quiz_choice", "question": "A business strategy trying to find a new, uncontested market space with no competition is called a Blue ____ strategy. (Océano azul).", "options": ["Ocean", "Sea", "Sky", "Lake"], "correct_answer": "Ocean", "explanation": "Blue Ocean strategy = estrategia del océano azul (buscar mercados donde no hay competidores todavía)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término estratégico.",
+      "questions": [
+        { "id": "c2-68-f1", "type": "fill_input", "question": "A ____-sum game. (Suma cero con Z)", "correct_answer": "zero", "explanation": "zero." },
+        { "id": "c2-68-f2", "type": "fill_input", "question": "____-mover advantage. (Ventaja del primero con F)", "correct_answer": "First", "explanation": "First." },
+        { "id": "c2-68-f3", "type": "fill_input", "question": "A ____ shift. (Cambio de paradigma con P)", "correct_answer": "paradigm", "explanation": "paradigm." },
+        { "id": "c2-68-f4", "type": "fill_input", "question": "Our ____ competency. (Competencia principal con C)", "correct_answer": "core", "explanation": "core." },
+        { "id": "c2-68-f5", "type": "fill_input", "question": "Economies of ____. (Economías de escala con S)", "correct_answer": "scale", "explanation": "scale." },
+        { "id": "c2-68-f6", "type": "fill_input", "question": "What's the ____ strategy? (Estrategia de salida/venta con E)", "correct_answer": "exit", "explanation": "exit." },
+        { "id": "c2-68-f7", "type": "fill_input", "question": "We will create ____. (Sinergias con S)", "correct_answer": "synergies", "explanation": "synergies." },
+        { "id": "c2-68-f8", "type": "fill_input", "question": "Product ____. (Canibalización de tu propio producto con C)", "correct_answer": "cannibalization", "explanation": "cannibalization." },
+        { "id": "c2-68-f9", "type": "fill_input", "question": "A high barrier to ____. (Barrera de entrada al mercado con E)", "correct_answer": "entry", "explanation": "entry." },
+        { "id": "c2-68-f10", "type": "fill_input", "question": "We must ____ our assets. (Aprovechar/apalancar con L)", "correct_answer": "leverage", "explanation": "leverage." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Strategy Match",
+      "pairs": [
+        {"id": "c2-68-p1", "source": "Zero-sum game", "target": "Donde lo que uno gana, el otro pierde"},
+        {"id": "c2-68-p2", "source": "First-mover advantage", "target": "Ventaja de ser el pionero en un mercado"},
+        {"id": "c2-68-p3", "source": "Paradigm shift", "target": "Cambio drástico de enfoque o tecnología"},
+        {"id": "c2-68-p4", "source": "Core competency", "target": "Tu habilidad o fortaleza principal"},
+        {"id": "c2-68-p5", "source": "Economies of scale", "target": "Ahorro al producir en grandes volúmenes"},
+        {"id": "c2-68-p6", "source": "Exit strategy", "target": "Plan para vender tu empresa o retirar dinero"},
+        {"id": "c2-68-p7", "source": "Cannibalization", "target": "Tu producto nuevo mata las ventas del viejo"},
+        {"id": "c2-68-p8", "source": "Barrier to entry", "target": "Obstáculo para que entren nuevos rivales"},
+        {"id": "c2-68-p9", "source": "Leverage", "target": "Apalancar, aprovechar al máximo una ventaja"},
+        {"id": "c2-68-p10", "source": "Cash cow", "target": "Producto estrella que siempre da ganancias seguras"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase estratégica.",
+      "questions": [
+        { "id": "c2-68-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a zero-sum game.", "options": ["It is a zero-sum game.", "It was a zero-sum game.", "This is a zero-sum game.", "It is zero-sum game."], "correct_answer": "It is a zero-sum game.", "explanation": "Audio exacto." },
+        { "id": "c2-68-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The first-mover advantage.", "options": ["The first-mover advantage.", "A first-mover advantage.", "Their first-mover advantage.", "The fast-mover advantage."], "correct_answer": "The first-mover advantage.", "explanation": "Audio exacto." },
+        { "id": "c2-68-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A massive paradigm shift.", "options": ["A massive paradigm shift.", "The massive paradigm shift.", "A mass paradigm shift.", "A massive paradigm change."], "correct_answer": "A massive paradigm shift.", "explanation": "Audio exacto." },
+        { "id": "c2-68-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Focus on your core competency.", "options": ["Focus on your core competency.", "Focusing on your core competency.", "Focus on the core competency.", "Focus on your core competencies."], "correct_answer": "Focus on your core competency.", "explanation": "Audio exacto." },
+        { "id": "c2-68-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need economies of scale.", "options": ["We need economies of scale.", "They need economies of scale.", "We needed economies of scale.", "We need the economies of scale."], "correct_answer": "We need economies of scale.", "explanation": "Audio exacto." },
+        { "id": "c2-68-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is the exit strategy?", "options": ["What is the exit strategy?", "What was the exit strategy?", "What is your exit strategy?", "Where is the exit strategy?"], "correct_answer": "What is the exit strategy?", "explanation": "Audio exacto." },
+        { "id": "c2-68-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Beware of cannibalization.", "options": ["Beware of cannibalization.", "Be aware of cannibalization.", "Beware the cannibalization.", "Beware of the cannibalization."], "correct_answer": "Beware of cannibalization.", "explanation": "Audio exacto." },
+        { "id": "c2-68-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A high barrier to entry.", "options": ["A high barrier to entry.", "The high barrier to entry.", "High barriers to entry.", "A high barrier of entry."], "correct_answer": "A high barrier to entry.", "explanation": "Audio exacto." },
+        { "id": "c2-68-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must leverage our brand.", "options": ["We must leverage our brand.", "They must leverage our brand.", "We must leverage the brand.", "We must leveraging our brand."], "correct_answer": "We must leverage our brand.", "explanation": "Audio exacto." },
+        { "id": "c2-68-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "That product is a cash cow.", "options": ["That product is a cash cow.", "This product is a cash cow.", "That product was a cash cow.", "The product is a cash cow."], "correct_answer": "That product is a cash cow.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-23",
+  "title": "¡Vamos!",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Particles", "Suggestions", "Grammar"],
+  "completion_message": "¡Excelente trabajo! Has desbloqueado una de las partículas más amigables y útiles del chino mandarín.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "La Partícula 吧 (ba)",
+      "parts": [
+        {
+          "visual": "La Sugerencia: 吧 (ba)\n\nYa conoces la partícula 吗 (ma) que convierte oraciones en preguntas de Sí/No.\nHoy aprenderás otra partícula mágica que también va al FINAL de la oración: 吧 (ba).\n\nMientras que 'ma' es una pregunta fría y directa, 'ba' (tono neutro) es una sugerencia cálida. Es el equivalente a decir 'Vamos a...' o 'Hagamos...'.\n\n- Nosotros vamos: 我们去 (Wǒmen qù).\n- ¿Vamos? (Directo): 我们去吗？(Wǒmen qù ma?).\n- ¡Vamos! / Vayamos (Sugerencia suave): 我们去吧 (Wǒmen qù ba).",
+          "audio": "Hoy vamos a aprender cómo invitar a la gente a hacer cosas, o cómo sugerir algo de forma amigable. Conoces la partícula 'ma' que pones al final para hacer preguntas de Sí y No. Ahora conocerás a su prima amable: la partícula 'ba'. También se pone al mismísimo final de la frase y no tiene tono. Cuando le agregas 'ba' a una frase, la conviertes en una sugerencia suave, parecida a cuando en inglés dicen 'Let's go'. Si dices 'Wǒmen qù', es una afirmación: Nosotros vamos. Si dices 'Wǒmen qù ma', estás preguntando: ¿Nosotros vamos?. Pero si dices 'Wǒmen qù ba', estás sugiriendo con entusiasmo: ¡Vamos! o ¡Vayamos!"
+        },
+        {
+          "visual": "Dando Órdenes Suaves\n\nLa partícula 吧 (ba) también sirve para suavizar una orden y que no suene grosera o dictatorial.\n\nSin 'ba' (Suena a orden militar):\n- ¡Tú ve a China!: 你去中国 (Nǐ qù Zhōngguó).\n\nCon 'ba' (Suena a un consejo o sugerencia de un amigo):\n- Ve a China (te lo sugiero): 你去中国吧 (Nǐ qù Zhōngguó ba).\n\nResumen de Partículas Finales:\n1. 吗 (ma) = ¿Pregunta Sí/No?\n2. 呢 (ne) = ¿Y tú / Y ese objeto?\n3. 吧 (ba) = ¡Vamos / Sugerencia suave!",
+          "audio": "La partícula 'ba' tiene otro superpoder: suavizar las órdenes. En la cultura china, ser directo puede sonar un poco descortés. Si le dices a alguien 'Nǐ qù Zhōngguó', literalmente le estás dando una orden militar: Tú vas a China. Pero si le agregas el 'ba' al final, Nǐ qù Zhōngguó ba, la orden se transforma en un consejo amigable: Oye, ve a China. Te lo sugiero. Es una herramienta maravillosa para sonar natural y educado en cualquier situación cotidiana."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa tu uso de las sugerencias suaves.",
+      "questions": [
+        { "id": "zh-a1-23-q1", "type": "quiz_choice", "question": "¿Dónde se coloca la partícula 吧 (ba) en una oración?", "options": ["Siempre al final de la oración.", "Justo antes del verbo.", "Al principio de la oración.", "Después del sujeto."], "correct_answer": "Siempre al final de la oración.", "explanation": "Como la mayoría de las partículas modales (ma, ne, le), 'ba' va al final absoluto." },
+        { "id": "zh-a1-23-q2", "type": "quiz_choice", "question": "¿Cuál es la función principal de la partícula 吧 (ba)?", "options": ["Hacer una sugerencia suave ('Hagamos' / 'Vamos a').", "Hacer una pregunta directa de Sí o No.", "Negar una acción en el pasado.", "Unir dos sustantivos."], "correct_answer": "Hacer una sugerencia suave ('Hagamos' / 'Vamos a').", "explanation": "Suaviza el tono, convirtiendo declaraciones en sugerencias o invitaciones amigables." },
+        { "id": "zh-a1-23-q3", "type": "quiz_choice", "question": "¿Cómo dirías '¡Vamos a China!' (como una invitación a tus amigos)?", "options": ["Wǒmen qù Zhōngguó ba (我们去中国吧).", "Wǒmen qù Zhōngguó ma (我们去中国吗).", "Wǒmen qù Zhōngguó (我们去中国).", "Wǒmen dōu qù Zhōngguó (我们都去中国)."], "correct_answer": "Wǒmen qù Zhōngguó ba (我们去中国吧).", "explanation": "Nosotros (Wǒmen) + vamos (qù) + a China (Zhōngguó) + partícula de sugerencia (ba)." },
+        { "id": "zh-a1-23-q4", "type": "quiz_choice", "question": "Diferencia de tono: ¿Qué significa 'Nǐ qù ma' (你去吗？)?", "options": ["¿Tú vas? (Pregunta directa de Sí/No).", "¡Tú ve! (Orden suave).", "¿Y tú?", "Tú también vas."], "correct_answer": "¿Tú vas? (Pregunta directa de Sí/No).", "explanation": "La partícula 'ma' exige una respuesta directa de confirmación o negación." },
+        { "id": "zh-a1-23-q5", "type": "quiz_choice", "question": "Diferencia de tono: ¿Qué significa 'Nǐ qù ba' (你去吧)?", "options": ["¡Ve! / Mejor ve tú (Sugerencia/Consejo).", "¿Tú vas?", "Tú vas.", "¿Y tú?"], "correct_answer": "¡Ve! / Mejor ve tú (Sugerencia/Consejo).", "explanation": "La partícula 'ba' suaviza la orden, sonando como un consejo." },
+        { "id": "zh-a1-23-q6", "type": "quiz_choice", "question": "Si alguien te sugiere ir a un lugar y tú quieres decir 'De acuerdo / Vale', puedes responder diciendo:", "options": ["Hǎo ba (好吧).", "Hǎo ma (好吗).", "Bù hǎo (不好).", "Yě hǎo (也好)."], "correct_answer": "Hǎo ba (好吧).", "explanation": "Hǎo (Bueno/Bien) + ba (sugerencia suave) = Vale, está bien, de acuerdo." },
+        { "id": "zh-a1-23-q7", "type": "quiz_choice", "question": "Traduce: 'Wǒmen dōu qù ba' (我们都去吧).", "options": ["¡Vamos todos!", "¿Vamos todos?", "Todos vamos.", "Ninguno va."], "correct_answer": "¡Vamos todos!", "explanation": "Nosotros todos (wǒmen dōu) + ir (qù) + sugerencia (ba)." },
+        { "id": "zh-a1-23-q8", "type": "quiz_choice", "question": "¿Qué tono lleva la partícula 吧 (ba)?", "options": ["Tono neutro (corto y ligero).", "Primer tono.", "Cuarto tono.", "Segundo tono."], "correct_answer": "Tono neutro (corto y ligero).", "explanation": "Las partículas modales finales (ma, ba, ne, le) no tienen tono." },
+        { "id": "zh-a1-23-q9", "type": "quiz_choice", "question": "Si dices 'Tā bù qù ba' (他不去吧), estás expresando:", "options": ["Una suposición ('Creo que él no va / Supongo que no va').", "Una orden de que no vaya.", "Una pregunta sobre si fue.", "Un hecho firme."], "correct_answer": "Una suposición ('Creo que él no va / Supongo que no va').", "explanation": "Avanzado: Con negaciones o aseveraciones, 'ba' indica que estás suponiendo algo y pides confirmación suave." },
+        { "id": "zh-a1-23-q10", "type": "quiz_choice", "question": "Resumen: Asigna la función de cada partícula final. ma / ne / ba.", "options": ["ma=Sí/No, ne=Rebote de pregunta(¿Y tú?), ba=Sugerencia.", "ma=Sugerencia, ne=Sí/No, ba=Pasado.", "ma=Pasado, ne=Sugerencia, ba=Rebote.", "ma=Rebote, ne=Sí/No, ba=Sugerencia."], "correct_answer": "ma=Sí/No, ne=Rebote de pregunta(¿Y tú?), ba=Sugerencia.", "explanation": "Esta es la santísima trinidad de las partículas finales para principiantes." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para las sugerencias. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-23-f1", "type": "fill_input", "question": "Partícula de sugerencia (Vamos/Hagamos): ____ (ba)", "correct_answer": "ba", "explanation": "ba" },
+        { "id": "zh-a1-23-f2", "type": "fill_input", "question": "¡Vamos!: women qu ____", "correct_answer": "ba", "explanation": "ba" },
+        { "id": "zh-a1-23-f3", "type": "fill_input", "question": "¡Ve tú! (Consejo): ni qu ____", "correct_answer": "ba", "explanation": "ba" },
+        { "id": "zh-a1-23-f4", "type": "fill_input", "question": "¿Tú vas? (Pregunta directa): ni qu ____ (ma)", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-23-f5", "type": "fill_input", "question": "Vale / De acuerdo: hao ____", "correct_answer": "ba", "explanation": "ba" },
+        { "id": "zh-a1-23-f6", "type": "fill_input", "question": "Vamos a China: qu zhongguo ____", "correct_answer": "ba", "explanation": "ba" },
+        { "id": "zh-a1-23-f7", "type": "fill_input", "question": "¡Vamos todos!: women dou qu ____", "correct_answer": "ba", "explanation": "ba" },
+        { "id": "zh-a1-23-f8", "type": "fill_input", "question": "Supongo que no vas: ni bu qu ____", "correct_answer": "ba", "explanation": "ba" },
+        { "id": "zh-a1-23-f9", "type": "fill_input", "question": "¿Qué partícula usas para rebotar una pregunta? (¿Y tú?): ni ____", "correct_answer": "ne", "explanation": "ne" },
+        { "id": "zh-a1-23-f10", "type": "fill_input", "question": "No vayamos: women bu qu ____", "correct_answer": "ba", "explanation": "ba" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y diferencia el tono de las oraciones finales.",
+      "questions": [
+        { "id": "zh-a1-23-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "吧", "options": ["Partícula de sugerencia", "Partícula de pregunta", "Partícula de rebote", "Adverbio también"], "correct_answer": "Partícula de sugerencia", "explanation": "El audio dice: ba." },
+        { "id": "zh-a1-23-l2", "type": "listening_match", "question": "Escucha y selecciona la intención:", "tts_text": "我们去吧", "options": ["Sugerencia (¡Vamos!)", "Pregunta (¿Vamos?)", "Hecho (Nosotros vamos)", "Negación (No vamos)"], "correct_answer": "Sugerencia (¡Vamos!)", "explanation": "El audio dice: Wǒmen qù ba." },
+        { "id": "zh-a1-23-l3", "type": "listening_match", "question": "Escucha y selecciona la intención:", "tts_text": "我们去吗？", "options": ["Pregunta directa (¿Vamos?)", "Sugerencia (¡Vamos!)", "Afirmación (Vamos)", "Rebote (¿Y nosotros?)"], "correct_answer": "Pregunta directa (¿Vamos?)", "explanation": "El audio dice: Wǒmen qù ma?" },
+        { "id": "zh-a1-23-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "好吧", "options": ["Vale / De acuerdo", "No está bien", "Muy bien", "¿Está bien?"], "correct_answer": "Vale / De acuerdo", "explanation": "El audio dice: Hǎo ba." },
+        { "id": "zh-a1-23-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你去吧", "options": ["Ve tú (Sugerencia)", "¿Tú vas?", "Tú vas a ir", "Tú no vas"], "correct_answer": "Ve tú (Sugerencia)", "explanation": "El audio dice: Nǐ qù ba." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Particles and Intentions",
+      "pairs": [
+        {"id": "zh-a1-23-p1", "source": "吧 (ba)", "target": "Sugerencia / ¡Vamos!"},
+        {"id": "zh-a1-23-p2", "source": "吗 (ma)", "target": "Pregunta de Sí o No"},
+        {"id": "zh-a1-23-p3", "source": "呢 (ne)", "target": "¿Y tú? / Rebote"},
+        {"id": "zh-a1-23-p4", "source": "我们去吧 (wǒmen qù ba)", "target": "¡Vamos!"},
+        {"id": "zh-a1-23-p5", "source": "我们去吗？(wǒmen qù ma?)", "target": "¿Vamos?"},
+        {"id": "zh-a1-23-p6", "source": "我们去 (wǒmen qù)", "target": "Nosotros vamos (Hecho)"},
+        {"id": "zh-a1-23-p7", "source": "好吧 (hǎo ba)", "target": "Vale / De acuerdo"},
+        {"id": "zh-a1-23-p8", "source": "你去吧 (nǐ qù ba)", "target": "Ve tú (consejo amigable)"},
+        {"id": "zh-a1-23-p9", "source": "去中国吧 (qù zhōngguó ba)", "target": "¡Vamos a China!"},
+        {"id": "zh-a1-23-p10", "source": "我们都去吧 (wǒmen dōu qù ba)", "target": "¡Vamos todos!"}
+      ]
+    }
+  ]
+}

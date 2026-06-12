@@ -1,0 +1,101 @@
+{
+  "id": "c2-22",
+  "title": "Inversion for Dramatic Effect",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Grammar", "Inversion", "Writing", "Formal", "Rhetoric"],
+  "completion_message": "¡Soberbio! La Inversión Negativa (Negative Inversion) es el sello distintivo del inglés retórico más culto. Cuando usas estructuras como 'Not only did we win' o 'Under no circumstances should you', comandas la atención de toda la sala de juntas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Inversión Negativa para Efecto Dramático (C2)",
+      "parts": [
+        { "visual": "En inglés formal escrito o en discursos persuasivos, ponemos ciertas palabras negativas o restrictivas al principio de la oración para dar énfasis. \n¡Cuando hacemos esto, el sujeto y el verbo auxiliar se INVIERTEN (como en una pregunta)!\n\n1. Not only... but also (No solo... sino también): \nNormal: We not only won the contract, but we also got a bonus. \nInversión: NOT ONLY DID WE WIN the contract, but we also got a bonus. \n(Nota: Se usa el auxiliar 'did' porque 'won' es pasado simple).", "audio": "Welcome to Negative Inversion. In formal English or persuasive speeches, we place negative or restrictive words at the beginning of the sentence for dramatic emphasis. When we do this, the subject and the auxiliary verb are INVERTED, exactly like a question format! Number 1: Not only... but also. Normal sentence: We not only won the contract, but we also got a bonus. With inversion: NOT ONLY DID WE WIN the contract, but we also got a bonus. Notice we use the auxiliary 'did'." },
+        { "visual": "Más estructuras de Inversión (Sujeto y Auxiliar invertidos): \n\n2. Under no circumstances (Bajo ninguna circunstancia): \nNormal: You should not sign this contract under any circumstances. \nInversión: UNDER NO CIRCUMSTANCES SHOULD YOU sign this contract. \n\n3. Scarcely... when / Hardly... when / No sooner... than (Apenas... cuando): \nInversión: HARDLY HAD HE ARRIVED when the meeting started. \nInversión: NO SOONER HAD SHE SPOKEN than the alarm went off. \n\n4. Little did I know (Poco sabía yo / No tenía idea): \nInversión: LITTLE DID WE KNOW that the company was going bankrupt. \n\n5. Never before / Seldom / Rarely (Nunca antes / Rara vez): \nInversión: RARELY HAVE I SEEN such dedication.", "audio": "More Inversion structures. Number 2: Under no circumstances. Normal: You should not sign this contract under any circumstances. Inversion: UNDER NO CIRCUMSTANCES SHOULD YOU sign this contract. Number 3: Scarcely, Hardly, and No sooner. These mean 'just after'. Inversion: HARDLY HAD HE ARRIVED when the meeting started. Or: NO SOONER HAD SHE SPOKEN than the alarm went off. Number 4: Little did I know. Inversion: LITTLE DID WE KNOW that the company was going bankrupt. Number 5: Never before, Seldom, and Rarely. Inversion: RARELY HAVE I SEEN such dedication." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la estructura de Inversión Negativa correcta.",
+      "questions": [
+        { "id": "c2-22-q1", "type": "quiz_choice", "question": "Normal: He not only lied to us, but he also stole money. -> Inversion: Not only ____ to us, but he also stole money.", "options": ["did he lie", "he lied", "lied he", "did he lied"], "correct_answer": "did he lie", "explanation": "Auxiliar did + sujeto he + verbo base lie." },
+        { "id": "c2-22-q2", "type": "quiz_choice", "question": "Normal: You must not press this button under any circumstances. -> Inversion: Under no circumstances ____ this button.", "options": ["must you press", "you must press", "you must not press", "must you not press"], "correct_answer": "must you press", "explanation": "Under no circumstances MUST YOU PRESS." },
+        { "id": "c2-22-q3", "type": "quiz_choice", "question": "Normal: I have never seen such a terrible presentation. -> Inversion: Never before ____ such a terrible presentation.", "options": ["have I seen", "I have seen", "did I see", "saw I"], "correct_answer": "have I seen", "explanation": "Never before HAVE I SEEN." },
+        { "id": "c2-22-q4", "type": "quiz_choice", "question": "Normal: She had hardly sat down when the phone rang. -> Inversion: Hardly ____ down when the phone rang.", "options": ["had she sat", "she had sat", "did she sit", "sat she"], "correct_answer": "had she sat", "explanation": "Hardly HAD SHE SAT." },
+        { "id": "c2-22-q5", "type": "quiz_choice", "question": "Normal: I had no idea that they were planning a hostile takeover. -> Inversion: Little ____ that they were planning a hostile takeover.", "options": ["did I know", "I knew", "knew I", "had I known"], "correct_answer": "did I know", "explanation": "Little DID I KNOW (es una frase idiomática fija para 'no tenía idea')." },
+        { "id": "c2-22-q6", "type": "quiz_choice", "question": "Normal: We rarely find such talented engineers. -> Inversion: Rarely ____ such talented engineers.", "options": ["do we find", "we find", "did we find", "find we"], "correct_answer": "do we find", "explanation": "Rarely DO WE FIND (presente simple -> auxiliar do)." },
+        { "id": "c2-22-q7", "type": "quiz_choice", "question": "Normal: They had no sooner published the article than they were sued. -> Inversion: No sooner ____ the article than they were sued.", "options": ["had they published", "they had published", "did they publish", "published they"], "correct_answer": "had they published", "explanation": "No sooner HAD THEY PUBLISHED." },
+        { "id": "c2-22-q8", "type": "quiz_choice", "question": "Normal: You can leave the office only after 5 PM. -> Inversion: Only after 5 PM ____ the office.", "options": ["can you leave", "you can leave", "do you leave", "leave you"], "correct_answer": "can you leave", "explanation": "Only after 5 PM CAN YOU LEAVE." },
+        { "id": "c2-22-q9", "type": "quiz_choice", "question": "Not only ____ late for the meeting, but she also forgot the report.", "options": ["was she", "she was", "did she be", "is she"], "correct_answer": "was she", "explanation": "Not only WAS SHE (el verbo to be se invierte a sí mismo)." },
+        { "id": "c2-22-q10", "type": "quiz_choice", "question": "On no account ____ this information to the press. (Bajo ningún concepto deberías revelar).", "options": ["should you reveal", "you should reveal", "you reveal", "reveal you"], "correct_answer": "should you reveal", "explanation": "On no account SHOULD YOU REVEAL." },
+        { "id": "c2-22-q11", "type": "quiz_choice", "question": "Seldom ____ such a blatant disregard for safety protocols.", "options": ["have we witnessed", "we have witnessed", "did we witnessed", "we witness"], "correct_answer": "have we witnessed", "explanation": "Seldom HAVE WE WITNESSED." },
+        { "id": "c2-22-q12", "type": "quiz_choice", "question": "Scarcely ____ the building when the roof collapsed.", "options": ["had they evacuated", "they had evacuated", "did they evacuate", "they evacuated"], "correct_answer": "had they evacuated", "explanation": "Scarcely HAD THEY EVACUATED." },
+        { "id": "c2-22-q13", "type": "quiz_choice", "question": "At no time ____ that the company was in financial trouble.", "options": ["did he mention", "he mentioned", "mentioned he", "he did mention"], "correct_answer": "did he mention", "explanation": "At no time DID HE MENTION." },
+        { "id": "c2-22-q14", "type": "quiz_choice", "question": "Little ____ realize how much damage his words had caused.", "options": ["did he", "he did", "he", "does he"], "correct_answer": "did he", "explanation": "Little DID HE realize." },
+        { "id": "c2-22-q15", "type": "quiz_choice", "question": "Only when the CEO resigned ____ the severity of the crisis.", "options": ["did we understand", "we understood", "understood we", "we did understand"], "correct_answer": "did we understand", "explanation": "Only when... DID WE UNDERSTAND." },
+        { "id": "c2-22-q16", "type": "quiz_choice", "question": "Not until the auditor arrived ____ the missing funds.", "options": ["did they discover", "they discovered", "discovered they", "they did discover"], "correct_answer": "did they discover", "explanation": "Not until... DID THEY DISCOVER." },
+        { "id": "c2-22-q17", "type": "quiz_choice", "question": "In no way ____ responsible for the damages.", "options": ["are we", "we are", "do we be", "we do be"], "correct_answer": "are we", "explanation": "In no way ARE WE." },
+        { "id": "c2-22-q18", "type": "quiz_choice", "question": "No sooner ____ the contract than they realized their mistake.", "options": ["had they signed", "they had signed", "did they sign", "signed they"], "correct_answer": "had they signed", "explanation": "No sooner HAD THEY SIGNED." },
+        { "id": "c2-22-q19", "type": "quiz_choice", "question": "Not only ____ our target, but we also exceeded it by 20%.", "options": ["did we meet", "we met", "met we", "we did meet"], "correct_answer": "did we meet", "explanation": "Not only DID WE MEET." },
+        { "id": "c2-22-q20", "type": "quiz_choice", "question": "Under no circumstances ____ the firewall be disabled.", "options": ["should", "you", "it", "must you"], "correct_answer": "should", "explanation": "Under no circumstances SHOULD the firewall be disabled (Pasiva)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe las dos palabras de la inversión (auxiliar + sujeto).",
+      "questions": [
+        { "id": "c2-22-f1", "type": "fill_input", "question": "Not only (he lied) -> Not only ____ ____ lie.", "correct_answer": "did he", "explanation": "did he." },
+        { "id": "c2-22-f2", "type": "fill_input", "question": "Under no circumstances (you must) -> ____ ____ sign this.", "correct_answer": "must you", "explanation": "must you." },
+        { "id": "c2-22-f3", "type": "fill_input", "question": "Never before (I have) -> Never before ____ ____ seen this.", "correct_answer": "have I", "explanation": "have I." },
+        { "id": "c2-22-f4", "type": "fill_input", "question": "Hardly (she had) -> Hardly ____ ____ arrived.", "correct_answer": "had she", "explanation": "had she." },
+        { "id": "c2-22-f5", "type": "fill_input", "question": "Little (I knew) -> Little ____ ____ know.", "correct_answer": "did I", "explanation": "did I." },
+        { "id": "c2-22-f6", "type": "fill_input", "question": "Rarely (we find) -> Rarely ____ ____ find it.", "correct_answer": "do we", "explanation": "do we." },
+        { "id": "c2-22-f7", "type": "fill_input", "question": "No sooner (they had) -> No sooner ____ ____ left.", "correct_answer": "had they", "explanation": "had they." },
+        { "id": "c2-22-f8", "type": "fill_input", "question": "Not only (she was) -> Not only ____ ____ late.", "correct_answer": "was she", "explanation": "was she." },
+        { "id": "c2-22-f9", "type": "fill_input", "question": "At no time (he mentioned) -> At no time ____ ____ mention it.", "correct_answer": "did he", "explanation": "did he." },
+        { "id": "c2-22-f10", "type": "fill_input", "question": "In no way (we are) -> In no way ____ ____ responsible.", "correct_answer": "are we", "explanation": "are we." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Inversion Match",
+      "pairs": [
+        {"id": "c2-22-p1", "source": "Not only did he lie", "target": "No solo mintió él"},
+        {"id": "c2-22-p2", "source": "Under no circumstances must you", "target": "Bajo ninguna circunstancia debes tú"},
+        {"id": "c2-22-p3", "source": "Never before have I", "target": "Nunca antes he yo"},
+        {"id": "c2-22-p4", "source": "Hardly had she left", "target": "Apenas había ella salido (cuando...)"},
+        {"id": "c2-22-p5", "source": "Little did I know", "target": "Poco sabía yo / No tenía idea"},
+        {"id": "c2-22-p6", "source": "Rarely do we find", "target": "Rara vez encontramos"},
+        {"id": "c2-22-p7", "source": "No sooner had they started", "target": "Apenas habían comenzado (que...)"},
+        {"id": "c2-22-p8", "source": "Not only was she", "target": "No solo estaba ella"},
+        {"id": "c2-22-p9", "source": "At no time did he", "target": "En ningún momento él (lo hizo)"},
+        {"id": "c2-22-p10", "source": "In no way are we", "target": "De ninguna manera somos nosotros"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la estructura de inversión correcta.",
+      "questions": [
+        { "id": "c2-22-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Not only did we win, but we got a bonus.", "options": ["Not only did we win, but we got a bonus.", "Not only we won, but we got a bonus.", "Not only do we win, but we got a bonus.", "Not only did we won, but we got a bonus."], "correct_answer": "Not only did we win, but we got a bonus.", "explanation": "Audio exacto." },
+        { "id": "c2-22-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Under no circumstances should you sign.", "options": ["Under no circumstances should you sign.", "Under no circumstances you should sign.", "Under no circumstances you sign.", "Under no circumstances did you sign."], "correct_answer": "Under no circumstances should you sign.", "explanation": "Audio exacto." },
+        { "id": "c2-22-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Never before have I seen this.", "options": ["Never before have I seen this.", "Never before I have seen this.", "Never before did I see this.", "Never before I saw this."], "correct_answer": "Never before have I seen this.", "explanation": "Audio exacto." },
+        { "id": "c2-22-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Hardly had he arrived when it started.", "options": ["Hardly had he arrived when it started.", "Hardly he had arrived when it started.", "Hardly did he arrive when it started.", "Hardly he arrived when it started."], "correct_answer": "Hardly had he arrived when it started.", "explanation": "Audio exacto." },
+        { "id": "c2-22-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Little did they know the truth.", "options": ["Little did they know the truth.", "Little they knew the truth.", "Little had they known the truth.", "Little do they know the truth."], "correct_answer": "Little did they know the truth.", "explanation": "Audio exacto." },
+        { "id": "c2-22-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Rarely do we see such talent.", "options": ["Rarely do we see such talent.", "Rarely we see such talent.", "Rarely did we see such talent.", "Rarely we saw such talent."], "correct_answer": "Rarely do we see such talent.", "explanation": "Audio exacto." },
+        { "id": "c2-22-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "No sooner had she spoken than he left.", "options": ["No sooner had she spoken than he left.", "No sooner she had spoken than he left.", "No sooner did she speak than he left.", "No sooner she spoke than he left."], "correct_answer": "No sooner had she spoken than he left.", "explanation": "Audio exacto." },
+        { "id": "c2-22-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Not only was it cold, it rained.", "options": ["Not only was it cold, it rained.", "Not only it was cold, it rained.", "Not only did it be cold, it rained.", "Not only is it cold, it rained."], "correct_answer": "Not only was it cold, it rained.", "explanation": "Audio exacto." },
+        { "id": "c2-22-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "At no time did he mention money.", "options": ["At no time did he mention money.", "At no time he mentioned money.", "At no time had he mentioned money.", "At no time does he mention money."], "correct_answer": "At no time did he mention money.", "explanation": "Audio exacto." },
+        { "id": "c2-22-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In no way are we responsible.", "options": ["In no way are we responsible.", "In no way we are responsible.", "In no way do we be responsible.", "In no way we be responsible."], "correct_answer": "In no way are we responsible.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

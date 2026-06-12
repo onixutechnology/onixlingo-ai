@@ -1,0 +1,101 @@
+{
+  "id": "a1-11",
+  "title": "Days of the Week",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Time", "Calendar", "Meetings"],
+  "completion_message": "¡Perfecto! Ya puedes agendar reuniones corporativas usando los días de la semana.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Días Laborales",
+      "parts": [
+        { "visual": "Los días de la semana siempre se escriben con mayúscula inicial en inglés (Monday, Tuesday).", "audio": "Days of the week are always capitalized in English." },
+        { "visual": "Usamos la preposición 'on' para referirnos a un día específico: 'The meeting is on Monday'.", "audio": "We use the preposition on for a specific day: The meeting is on Monday." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona el día o preposición correcta.",
+      "questions": [
+        { "id": "a1-11-q1", "type": "quiz_choice", "question": "The meeting is ____ Monday.", "options": ["on", "in", "at", "by"], "correct_answer": "on", "explanation": "Con días de la semana usamos 'on'." },
+        { "id": "a1-11-q2", "type": "quiz_choice", "question": "I don't work on ____.", "options": ["Sunday", "sunday", "Sundays", "Saturdays"], "correct_answer": "Sunday", "explanation": "Domingo con mayúscula inicial." },
+        { "id": "a1-11-q3", "type": "quiz_choice", "question": "Today is ____.", "options": ["Tuesday", "tuesday", "Teusday", "Tuesdays"], "correct_answer": "Tuesday", "explanation": "Martes se escribe Tuesday." },
+        { "id": "a1-11-q4", "type": "quiz_choice", "question": "Send the report by ____.", "options": ["Friday", "friday", "Fridays", "Frieday"], "correct_answer": "Friday", "explanation": "Viernes con mayúscula." },
+        { "id": "a1-11-q5", "type": "quiz_choice", "question": "The conference starts on ____.", "options": ["Wednesday", "Wednsday", "Wendsday", "wednesday"], "correct_answer": "Wednesday", "explanation": "Miércoles correcto es Wednesday." },
+        { "id": "a1-11-q6", "type": "quiz_choice", "question": "Let's meet on ____.", "options": ["Thursday", "Thorsday", "Thurday", "thursday"], "correct_answer": "Thursday", "explanation": "Jueves es Thursday." },
+        { "id": "a1-11-q7", "type": "quiz_choice", "question": "We are closed on ____.", "options": ["Saturday", "Saturdays", "saturday", "Satrday"], "correct_answer": "Saturday", "explanation": "Sábado es Saturday." },
+        { "id": "a1-11-q8", "type": "quiz_choice", "question": "I will call you ____ Tuesday.", "options": ["on", "in", "at", "for"], "correct_answer": "on", "explanation": "Preposición 'on' para martes." },
+        { "id": "a1-11-q9", "type": "quiz_choice", "question": "Are you available on ____?", "options": ["Monday", "monday", "Mondays", "Munday"], "correct_answer": "Monday", "explanation": "Lunes." },
+        { "id": "a1-11-q10", "type": "quiz_choice", "question": "Our deadline is ____ Friday.", "options": ["this", "these", "those", "that"], "correct_answer": "this", "explanation": "Este viernes." },
+        { "id": "a1-11-q11", "type": "quiz_choice", "question": "She works from ____ to Friday.", "options": ["Monday", "monday", "Sunday", "Saturday"], "correct_answer": "Monday", "explanation": "De lunes a viernes." },
+        { "id": "a1-11-q12", "type": "quiz_choice", "question": "We have a team lunch every ____.", "options": ["Wednesday", "wednesday", "Wednsday", "Wendsday"], "correct_answer": "Wednesday", "explanation": "Cada miércoles." },
+        { "id": "a1-11-q13", "type": "quiz_choice", "question": "The office is open on ____.", "options": ["weekdays", "weekend", "weekends", "sunday"], "correct_answer": "weekdays", "explanation": "Días entre semana." },
+        { "id": "a1-11-q14", "type": "quiz_choice", "question": "I am out of the office on ____.", "options": ["Thursday", "thursday", "Thurday", "Thorsday"], "correct_answer": "Thursday", "explanation": "Jueves." },
+        { "id": "a1-11-q15", "type": "quiz_choice", "question": "See you ____ Monday.", "options": ["on", "in", "at", "by"], "correct_answer": "on", "explanation": "Nos vemos el lunes." },
+        { "id": "a1-11-q16", "type": "quiz_choice", "question": "The project ends next ____.", "options": ["Tuesday", "tuesday", "Teusday", "Tuesdays"], "correct_answer": "Tuesday", "explanation": "El próximo martes." },
+        { "id": "a1-11-q17", "type": "quiz_choice", "question": "I travel on ____.", "options": ["Sundays", "sunday", "Sunday", "Sundays'"], "correct_answer": "Sunday", "explanation": "Domingo." },
+        { "id": "a1-11-q18", "type": "quiz_choice", "question": "Every ____ we review the goals.", "options": ["Friday", "friday", "Fridays", "Frieday"], "correct_answer": "Friday", "explanation": "Cada viernes." },
+        { "id": "a1-11-q19", "type": "quiz_choice", "question": "Is the meeting on ____ or Thursday?", "options": ["Wednesday", "wednesday", "Wednsday", "Wendsday"], "correct_answer": "Wednesday", "explanation": "Miércoles." },
+        { "id": "a1-11-q20", "type": "quiz_choice", "question": "We don't work on the ____.", "options": ["weekend", "weekends", "weekdays", "weekday"], "correct_answer": "weekend", "explanation": "Fin de semana." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el día de la semana o preposición correcta.",
+      "questions": [
+        { "id": "a1-11-f1", "type": "fill_input", "question": "The meeting is ____ Monday.", "correct_answer": "on", "explanation": "Preposición para días." },
+        { "id": "a1-11-f2", "type": "fill_input", "question": "See you on ____ (Lunes).", "correct_answer": "Monday", "explanation": "Lunes." },
+        { "id": "a1-11-f3", "type": "fill_input", "question": "Let's talk on ____ (Martes).", "correct_answer": "Tuesday", "explanation": "Martes." },
+        { "id": "a1-11-f4", "type": "fill_input", "question": "Deadline is ____ (Miércoles).", "correct_answer": "Wednesday", "explanation": "Miércoles." },
+        { "id": "a1-11-f5", "type": "fill_input", "question": "Call me on ____ (Jueves).", "correct_answer": "Thursday", "explanation": "Jueves." },
+        { "id": "a1-11-f6", "type": "fill_input", "question": "Happy ____ (Viernes)!", "correct_answer": "Friday", "explanation": "Viernes." },
+        { "id": "a1-11-f7", "type": "fill_input", "question": "Closed on ____ (Sábado).", "correct_answer": "Saturday", "explanation": "Sábado." },
+        { "id": "a1-11-f8", "type": "fill_input", "question": "Rest on ____ (Domingo).", "correct_answer": "Sunday", "explanation": "Domingo." },
+        { "id": "a1-11-f9", "type": "fill_input", "question": "Have a good ____ (Fin de semana).", "correct_answer": "weekend", "explanation": "Fin de semana." },
+        { "id": "a1-11-f10", "type": "fill_input", "question": "Work ____ (Días laborables).", "correct_answer": "weekdays", "explanation": "Días entre semana." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-11-p1", "source": "Monday", "target": "Lunes"},
+        {"id": "a1-11-p2", "source": "Tuesday", "target": "Martes"},
+        {"id": "a1-11-p3", "source": "Wednesday", "target": "Miércoles"},
+        {"id": "a1-11-p4", "source": "Thursday", "target": "Jueves"},
+        {"id": "a1-11-p5", "source": "Friday", "target": "Viernes"},
+        {"id": "a1-11-p6", "source": "Saturday", "target": "Sábado"},
+        {"id": "a1-11-p7", "source": "Sunday", "target": "Domingo"},
+        {"id": "a1-11-p8", "source": "Weekend", "target": "Fin de semana"},
+        {"id": "a1-11-p9", "source": "Weekdays", "target": "Días laborables"},
+        {"id": "a1-11-p10", "source": "Today", "target": "Hoy"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el día mencionado.",
+      "questions": [
+        { "id": "a1-11-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The meeting is on Monday.", "options": ["The meeting is on Monday.", "The meeting is on Sunday.", "The meeting is on Tuesday.", "The meeting is on Friday."], "correct_answer": "The meeting is on Monday.", "explanation": "Audio exacto." },
+        { "id": "a1-11-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "See you on Tuesday.", "options": ["See you on Tuesday.", "See you on Thursday.", "See you on Wednesday.", "See you on Tuesday's."], "correct_answer": "See you on Tuesday.", "explanation": "Audio exacto." },
+        { "id": "a1-11-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Call me on Wednesday.", "options": ["Call me on Wednesday.", "Call him on Wednesday.", "Call me on Tuesday.", "Tell me on Wednesday."], "correct_answer": "Call me on Wednesday.", "explanation": "Audio exacto." },
+        { "id": "a1-11-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Due on Thursday.", "options": ["Due on Thursday.", "Do on Thursday.", "Due on Tuesday.", "Done on Thursday."], "correct_answer": "Due on Thursday.", "explanation": "Audio exacto." },
+        { "id": "a1-11-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I work on Friday.", "options": ["I work on Friday.", "I walk on Friday.", "I work on Fridays.", "He works on Friday."], "correct_answer": "I work on Friday.", "explanation": "Audio exacto." },
+        { "id": "a1-11-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Closed on Saturday.", "options": ["Closed on Saturday.", "Close on Saturday.", "Closed on Sunday.", "Closed on Saturdays."], "correct_answer": "Closed on Saturday.", "explanation": "Audio exacto." },
+        { "id": "a1-11-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Free on Sunday.", "options": ["Free on Sunday.", "Three on Sunday.", "Free on Monday.", "Tree on Sunday."], "correct_answer": "Free on Sunday.", "explanation": "Audio exacto." },
+        { "id": "a1-11-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Have a good weekend.", "options": ["Have a good weekend.", "Have a great weekend.", "Have a good weekdays.", "Had a good weekend."], "correct_answer": "Have a good weekend.", "explanation": "Audio exacto." },
+        { "id": "a1-11-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "From Monday to Friday.", "options": ["From Monday to Friday.", "For Monday to Friday.", "From Monday to Friday's.", "From Monday and Friday."], "correct_answer": "From Monday to Friday.", "explanation": "Audio exacto." },
+        { "id": "a1-11-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Today is Monday.", "options": ["Today is Monday.", "Tomorrow is Monday.", "Today is Sunday.", "Today was Monday."], "correct_answer": "Today is Monday.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

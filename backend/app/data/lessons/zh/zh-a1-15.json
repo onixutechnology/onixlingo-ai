@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-15",
+  "title": "Conectando Ideas",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Conjunctions", "Grammar", "Syntax"],
+  "completion_message": "¡Misión cumplida! Has terminado el Bloque 3. Ahora tus oraciones son largas y complejas como las de un nativo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Uniendo el Mundo",
+      "parts": [
+        {
+          "visual": "La palabra 'Y': 和 (hé)\n\nEl conector para decir 'Y' es 和 (hé), en segundo tono.\n- Yo y tú: 我和你 (Wǒ hé nǐ).\n- Té y agua: 茶和水 (Chá hé shuǐ).\n\n¡ALERTA GRAMATICAL ROJA! 🚨\nEn español, la letra 'y' sirve para unir cosas ('pan y queso') y también para unir acciones ('como pan y bebo agua').\n\nEn mandarín, 和 (hé) SOLO SE USA PARA UNIR SUSTANTIVOS Y PRONOMBRES.\n¡Jamás uses 'hé' para unir dos verbos o dos oraciones enteras!\n\n- Correcto: Me gusta el té y el agua -> 我喜欢茶和水 (Wǒ xǐhuan chá hé shuǐ).\n- ERROR FATAL: Voy a China y bebo té -> 我去中国和喝茶 ❌.",
+          "audio": "Hasta ahora hemos dicho oraciones cortas. Vamos a conectarlas. La palabra para decir 'Y' se pronuncia hé. Segundo tono. Wǒ hé nǐ significa Yo y tú. Chá hé shuǐ significa té y agua. Pero cuidado, porque aquí los occidentales cometen un error terrible. En español, usamos la 'Y' para todo. 'Té y agua', o 'Voy a la tienda y compro agua'. En chino, 'hé' es exclusivo para unir cosas o personas. Sustantivos. Jamás de los jamases puedes usar 'hé' para conectar dos acciones o dos verbos. Solo puedes usarlo para listar objetos. Yo quiero té y agua. Wǒ yào chá hé shuǐ."
+        },
+        {
+          "visual": "El conector 'Pero': 但是 (dànshì)\n\nPara expresar contraste o una idea opuesta, usamos 但是 (dànshì).\nSignifica 'pero', 'sin embargo'.\n\nEstructura:\n[Idea 1] + 但是 + [Idea 2]\n\nEjemplos:\n- Me gusta el té, PERO no me gusta el agua:\n我喜欢茶，但是我不喜欢水。(Wǒ xǐhuan chá, dànshì wǒ bù xǐhuan shuǐ).\n\n- Yo voy, PERO él no va:\n我去，但是他不去。(Wǒ qù, dànshì tā bú qù).",
+          "audio": "El segundo conector es 'Pero'. En mandarín se dice dànshì. Dànshì. Este conector sí te permite unir oraciones completas, porque sirve para contrastar dos ideas. Por ejemplo, imagina que quieres decir: 'Me gusta el té, pero no me gusta el agua'. Dirías: Wǒ xǐhuan chá, dànshì wǒ bù xǐhuan shuǐ. Así logras sonar mucho más natural y fluido. Otro ejemplo: 'Yo voy, pero él no va'. Wǒ qù, dànshì tā bú qù. Usa dànshì siempre que quieras mostrar oposición o contraste entre dos cosas."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa si sabes conectar las ideas correctamente en mandarín.",
+      "questions": [
+        { "id": "zh-a1-15-q1", "type": "quiz_choice", "question": "¿Qué significa la palabra 和 (hé)?", "options": ["Y (para unir sustantivos/pronombres).", "Pero.", "O.", "También."], "correct_answer": "Y (para unir sustantivos/pronombres).", "explanation": "和 (hé) significa 'Y'." },
+        { "id": "zh-a1-15-q2", "type": "quiz_choice", "question": "¿Qué significa la palabra 但是 (dànshì)?", "options": ["Pero / Sin embargo.", "Y / Además.", "Por qué.", "Porque."], "correct_answer": "Pero / Sin embargo.", "explanation": "但是 (dànshì) se usa para indicar contraste (Pero)." },
+        { "id": "zh-a1-15-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Tú y Yo' en mandarín?", "options": ["Nǐ hé wǒ (你和我).", "Nǐ dànshì wǒ (你但是我).", "Wǒmen nǐ (我们你).", "Nǐ de wǒ (你的我)."], "correct_answer": "Nǐ hé wǒ (你和我).", "explanation": "Tú (nǐ) + y (hé) + yo (wǒ)." },
+        { "id": "zh-a1-15-q4", "type": "quiz_choice", "question": "¡Alerta Gramatical! ¿Para qué NO puedes usar nunca la palabra 和 (hé)?", "options": ["Para unir dos oraciones o dos verbos.", "Para unir dos personas.", "Para unir dos objetos.", "Para unir nombres propios."], "correct_answer": "Para unir dos oraciones o dos verbos.", "explanation": "Hé SOLO une sustantivos o pronombres. Nunca verbos ('Ir y venir')." },
+        { "id": "zh-a1-15-q5", "type": "quiz_choice", "question": "¿Cuál de estas oraciones es gramaticalmente CORRECTA en chino?", "options": ["Wǒ yào chá hé shuǐ. (Yo quiero té y agua).", "Wǒ qù hé lái. (Yo voy y vengo).", "Wǒ xǐhuan hé ài. (Yo gusto y amo).", "Wǒ yào hé qù. (Yo quiero e ir)."], "correct_answer": "Wǒ yào chá hé shuǐ. (Yo quiero té y agua).", "explanation": "La primera une dos sustantivos (té y agua), lo cual es correcto. Las otras intentan unir verbos, lo cual es un error." },
+        { "id": "zh-a1-15-q6", "type": "quiz_choice", "question": "¿Cómo dirías 'Yo voy a China, PERO él no va'?", "options": ["Wǒ qù Zhōngguó, dànshì tā bú qù. (我去中国，但是他不去).", "Wǒ qù Zhōngguó, hé tā bú qù. (我去中国，和เขา不去).", "Wǒ qù Zhōngguó, shì tā bú qù. (我去中国，是他不去).", "Wǒ qù Zhōngguó, méi tā bú qù. (我去中国，没他不去)."], "correct_answer": "Wǒ qù Zhōngguó, dànshì tā bú qù. (我去中国，但是他不去).", "explanation": "Dànshì conecta dos ideas opuestas." },
+        { "id": "zh-a1-15-q7", "type": "quiz_choice", "question": "¿Cómo dirías 'Me gusta mi amigo, PERO no lo amo'?", "options": ["Wǒ xǐhuan wǒ de péngyou, dànshì wǒ bú ài tā.", "Wǒ xǐhuan wǒ de péngyou, hé wǒ bú ài tā.", "Wǒ xǐhuan dànshì wǒ bú ài wǒ de péngyou.", "Wǒ de péngyou xǐhuan dànshì ài wǒ."], "correct_answer": "Wǒ xǐhuan wǒ de péngyou, dànshì wǒ bú ài tā.", "explanation": "Se usa dànshì (pero) para contrastar los sentimientos." },
+        { "id": "zh-a1-15-q8", "type": "quiz_choice", "question": "La oración 'Tā yǒu shū hé chá' (他有书和茶) significa:", "options": ["Él tiene libro y té.", "Él tiene libro pero no té.", "A él le gusta el libro y el té.", "Él es un libro y un té."], "correct_answer": "Él tiene libro y té.", "explanation": "Él tiene (tā yǒu) libro (shū) y (hé) té (chá)." },
+        { "id": "zh-a1-15-q9", "type": "quiz_choice", "question": "¿Cómo se negaba el verbo 'tener' (yǒu) en una frase con contraste? Ej: 'Voy a la escuela, pero NO TENGO libro'.", "options": ["Dànshì wǒ méiyǒu shū.", "Dànshì wǒ bù yǒu shū.", "Hé wǒ méiyǒu shū.", "Dànshì wǒ bú qù shū."], "correct_answer": "Dànshì wǒ méiyǒu shū.", "explanation": "Pero (Dànshì) + yo no tengo (wǒ méiyǒu) + libro (shū). El verbo tener SIEMPRE usa méi." },
+        { "id": "zh-a1-15-q10", "type": "quiz_choice", "question": "Traduce: 'Él y yo vamos a China'.", "options": ["Tā hé wǒ qù Zhōngguó. (他和我去中国)", "Tā dànshì wǒ qù Zhōngguó. (他但是我去中国)", "Tā wǒ qù hé Zhōngguó. (他我去和中国)", "Wǒ qù Zhōngguó hé tā. (我去中国和他)"], "correct_answer": "Tā hé wǒ qù Zhōngguó. (他和我去中国)", "explanation": "El sujeto complejo (Él y yo) va al principio, unido por 'hé'." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para los conectores. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-15-f1", "type": "fill_input", "question": "Y (conector): ____ (he)", "correct_answer": "he", "explanation": "he" },
+        { "id": "zh-a1-15-f2", "type": "fill_input", "question": "Pero: dan____", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-a1-15-f3", "type": "fill_input", "question": "Yo y tú: wo ____ ni", "correct_answer": "he", "explanation": "he" },
+        { "id": "zh-a1-15-f4", "type": "fill_input", "question": "Té y agua: cha ____ shui", "correct_answer": "he", "explanation": "he" },
+        { "id": "zh-a1-15-f5", "type": "fill_input", "question": "Pero (completo): ____shi", "correct_answer": "dan", "explanation": "dan" },
+        { "id": "zh-a1-15-f6", "type": "fill_input", "question": "Yo voy, PERO él no va: wo qu, ____shi ta bu qu", "correct_answer": "dan", "explanation": "dan" },
+        { "id": "zh-a1-15-f7", "type": "fill_input", "question": "China y yo: zhongguo ____ wo", "correct_answer": "he", "explanation": "he" },
+        { "id": "zh-a1-15-f8", "type": "fill_input", "question": "Yo quiero té PERO no quiero agua: wo yao cha, ____shi wo bu yao shui", "correct_answer": "dan", "explanation": "dan" },
+        { "id": "zh-a1-15-f9", "type": "fill_input", "question": "¿Tú y él?: ni ____ ta (he)", "correct_answer": "he", "explanation": "he" },
+        { "id": "zh-a1-15-f10", "type": "fill_input", "question": "¿Tú vas?: ni qu ____ (ma)", "correct_answer": "ma", "explanation": "ma" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y diferencia cuándo se usa 'Y' o 'Pero'.",
+      "questions": [
+        { "id": "zh-a1-15-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "和", "options": ["Y (conector)", "Pero", "O", "Tener"], "correct_answer": "Y (conector)", "explanation": "El audio dice: hé." },
+        { "id": "zh-a1-15-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "但是", "options": ["Pero / Sin embargo", "Y", "Yo soy", "Por qué"], "correct_answer": "Pero / Sin embargo", "explanation": "El audio dice: dànshì." },
+        { "id": "zh-a1-15-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我和你", "options": ["Yo y tú", "Yo pero tú", "Él y tú", "Yo te amo"], "correct_answer": "Yo y tú", "explanation": "El audio dice: Wǒ hé nǐ." },
+        { "id": "zh-a1-15-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我去，但是他不去", "options": ["Yo voy, pero él no va", "Yo voy y él va", "Yo no voy, pero él va", "Él va, pero yo no"], "correct_answer": "Yo voy, pero él no va", "explanation": "El audio dice: Wǒ qù, dànshì tā bú qù." },
+        { "id": "zh-a1-15-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我喜欢茶和水", "options": ["Me gusta el té y el agua", "Me gusta el té pero no el agua", "No me gusta el té ni el agua", "Yo quiero té y agua"], "correct_answer": "Me gusta el té y el agua", "explanation": "El audio dice: Wǒ xǐhuan chá hé shuǐ." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Connections",
+      "pairs": [
+        {"id": "zh-a1-15-p1", "source": "和 (hé)", "target": "Y (para sustantivos)"},
+        {"id": "zh-a1-15-p2", "source": "但是 (dànshì)", "target": "Pero / Sin embargo"},
+        {"id": "zh-a1-15-p3", "source": "我和你 (wǒ hé nǐ)", "target": "Yo y tú"},
+        {"id": "zh-a1-15-p4", "source": "茶和水 (chá hé shuǐ)", "target": "Té y agua"},
+        {"id": "zh-a1-15-p5", "source": "他去，但是我不去 (tā qù, dànshì wǒ bú qù)", "target": "Él va, pero yo no voy"},
+        {"id": "zh-a1-15-p6", "source": "我喜欢，但是我不爱 (wǒ xǐhuan, dànshì wǒ bú ài)", "target": "Me gusta, pero no amo"},
+        {"id": "zh-a1-15-p7", "source": "你有书和茶 (nǐ yǒu shū hé chá)", "target": "Tú tienes libro y té"},
+        {"id": "zh-a1-15-p8", "source": "昨天和今天 (zuótiān hé jīntiān)", "target": "Ayer y hoy"},
+        {"id": "zh-a1-15-p9", "source": "去中国和去学校 (❌ Error)", "target": "Uso incorrecto de 'hé' (verbos)"},
+        {"id": "zh-a1-15-p10", "source": "我和我的朋友 (wǒ hé wǒ de péngyou)", "target": "Yo y mi amigo"}
+      ]
+    }
+  ]
+}

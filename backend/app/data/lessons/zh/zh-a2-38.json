@@ -1,0 +1,92 @@
+{
+  "id": "zh-a2-38",
+  "title": "Explorando la Ciudad",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Places", "City", "Vocabulary"],
+  "completion_message": "¡Buen viaje! Ya sabes cómo ubicarte en los lugares más importantes de tu día a día.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Lugares Cotidianos",
+      "parts": [
+        {
+          "visual": "Tres lugares clave de la ciudad:\n\n1. Casa / Familia: 家 (jiā - 1er tono).\n- Estoy en casa: 我在家 (Wǒ zài jiā).\n\n2. Escuela / Colegio: 学校 (xuéxiào - 2do y 4to tono).\n- Él está en la escuela: 他在学校 (Tā zài xuéxiào).\n\n3. Tienda / Comercio: 商店 (shāngdiàn - 1er y 4to tono).\n- Nosotros estamos en la tienda: 我们在商店 (Wǒmen zài shāngdiàn).\n\nRecordatorio: \nEl verbo Estar (en un lugar) es 在 (zài). Simplemente pon el sujeto, la palabra zài, y el lugar. ¡Cero preposiciones!",
+          "audio": "En la lección anterior aprendimos a decir 'Estoy en China'. Hoy vamos a hacer un zoom a nuestra vida diaria en la ciudad. Aprenderemos tres lugares fundamentales. El primero es tu hogar o tu casa. Se dice 'jiā'. Primer tono. Jiā. Si alguien te pregunta por teléfono dónde estás, simplemente respondes: Wǒ zài jiā. Yo estoy en casa. El segundo lugar es la escuela o el colegio. Se dice xuéxiào. Tā zài xuéxiào. Él está en la escuela. Y el tercer lugar es la tienda, que se dice shāngdiàn. Wǒmen zài shāngdiàn. Nosotros estamos en la tienda."
+        },
+        {
+          "visual": "Ir a los lugares: La Excepción de Casa\n\nEl verbo Ir es 去 (qù).\n- Ir a la escuela: 去学校 (Qù xuéxiào).\n- Ir a la tienda: 去商店 (Qù shāngdiàn).\n\n¡EXCEPCIÓN CRÍTICA! \nPara decir 'Ir a casa', en chino suena muy extraño decir 'Qù jiā' (Ir a casa). Se asume que la casa es tu punto de origen.\nPor lo tanto, se usa el verbo VOLVER / REGRESAR, que es 回 (huí).\n\n- Volver a casa (Ir a casa): 回家 (Huí jiā). ¡Apréndelo como una sola palabra inquebrantable!",
+          "audio": "Ahora que sabemos estar en los lugares, vamos a movernos hacia ellos. Ya sabes que el verbo ir es 'qù'. Ir a la escuela es qù xuéxiào. Ir a la tienda es qù shāngdiàn. Es directo y sin preposiciones. Pero aquí hay una trampa cultural inmensa. En chino, tu casa es tu punto de origen en el universo. Por lo tanto, tú no 'vas' a tu casa. Tú 'vuelves' a tu casa. El verbo volver o regresar es huí. Segundo tono hacia arriba. Huí. Así que para decir 'Me voy a casa' o 'Voy a casa', tienes que decir Wǒ huí jiā. Yo regreso a casa. Si dices Wǒ qù jiā, sonarás como un extraterrestre visitando una casa desconocida."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Muévete por la ciudad sin perderte.",
+      "questions": [
+        { "id": "zh-a2-38-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Cómo se dice 'Casa' u 'Hogar' en mandarín?", "options": ["Jiā (家).", "Xuéxiào (学校).", "Shāngdiàn (商店).", "Zhōngguó (中国)."], "correct_answer": "Jiā (家).", "explanation": "Jiā (1er tono) significa casa, hogar o familia." },
+        { "id": "zh-a2-38-q2", "type": "quiz_choice", "question": "Vocabulario: ¿Cómo se dice 'Escuela'?", "options": ["Xuéxiào (学校).", "Shāngdiàn (商店).", "Jiā (家).", "Qù (去)."], "correct_answer": "Xuéxiào (学校).", "explanation": "Xuéxiào significa escuela, colegio o universidad (en sentido general)." },
+        { "id": "zh-a2-38-q3", "type": "quiz_choice", "question": "Vocabulario: ¿Cómo se dice 'Tienda' o 'Comercio'?", "options": ["Shāngdiàn (商店).", "Jiā (家).", "Xuéxiào (学校).", "Chá (茶)."], "correct_answer": "Shāngdiàn (商店).", "explanation": "Shāngdiàn es cualquier tienda o local comercial." },
+        { "id": "zh-a2-38-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo estoy en casa'?", "options": ["Wǒ zài jiā (我在家).", "Wǒ shì jiā (我是家).", "Jiā zài wǒ (家在我).", "Wǒ jiā zài (我家在)."], "correct_answer": "Wǒ zài jiā (我在家).", "explanation": "Sujeto (Wǒ) + estar en (zài) + lugar (jiā)." },
+        { "id": "zh-a2-38-q5", "type": "quiz_choice", "question": "Traduce: 'Tā zài xuéxiào' (他在学校).", "options": ["Él está en la escuela.", "Él va a la escuela.", "Él no está en la escuela.", "Él es de la escuela."], "correct_answer": "Él está en la escuela.", "explanation": "Sujeto (Tā) + estar en (zài) + escuela (xuéxiào)." },
+        { "id": "zh-a2-38-q6", "type": "quiz_choice", "question": "¿Cuál es la forma correcta de decir 'Nosotros vamos a la tienda'?", "options": ["Wǒmen qù shāngdiàn (我们去商店).", "Wǒmen zài shāngdiàn (我们在商店).", "Wǒmen huí shāngdiàn (我们回商店).", "Wǒmen yào shāngdiàn (我们要商店)."], "correct_answer": "Wǒmen qù shāngdiàn (我们去商店).", "explanation": "Nosotros (Wǒmen) + ir (qù) + tienda (shāngdiàn)." },
+        { "id": "zh-a2-38-q7", "type": "quiz_choice", "question": "Excepción Cultural: ¿Por qué suena mal decir 'Wǒ qù jiā' (我去家) para decir 'Voy a casa'?", "options": ["Porque la casa es el punto de origen de una persona; se debe usar el verbo 'volver/regresar' (huí).", "Porque jiā no es un lugar físico.", "Porque falta el posesivo 'de'.", "Porque qù solo se usa para países."], "correct_answer": "Porque la casa es el punto de origen de una persona; se debe usar el verbo 'volver/regresar' (huí).", "explanation": "La frase 'Huí jiā' es un bloque inquebrantable en mandarín." },
+        { "id": "zh-a2-38-q8", "type": "quiz_choice", "question": "¿Cómo se dice correctamente 'Voy a casa' o 'Regreso a casa'?", "options": ["Wǒ huí jiā (我回家).", "Wǒ qù jiā (我去家).", "Wǒ zài jiā (我在家).", "Wǒ yào jiā (我要家)."], "correct_answer": "Wǒ huí jiā (我回家).", "explanation": "Yo (wǒ) + volver (huí) + casa (jiā)." },
+        { "id": "zh-a2-38-q9", "type": "quiz_choice", "question": "¿Cómo se dice 'Él no está en la tienda'?", "options": ["Tā bú zài shāngdiàn (他不在商店).", "Tā méi zài shāngdiàn (他没在商店).", "Tā bù zài shāngdiàn (他不在商店).", "Tā bú qù shāngdiàn (他不去商店)."], "correct_answer": "Tā bú zài shāngdiàn (他不在商店).", "explanation": "Él (tā) + no estar (bú zài - con cambio de tono) + tienda (shāngdiàn)." },
+        { "id": "zh-a2-38-q10", "type": "quiz_choice", "question": "Juntando verbos auxiliares: Traduce 'Wǒ yào huí jiā' (我要回家).", "options": ["Quiero ir a casa.", "Estoy en casa.", "No voy a casa.", "Quiero estar en casa."], "correct_answer": "Quiero ir a casa.", "explanation": "Yo (wǒ) + quiero/voy a (yào) + regresar a casa (huí jiā)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para los lugares de la ciudad. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a2-38-f1", "type": "fill_input", "question": "Casa / Hogar: ____ (jia)", "correct_answer": "jia", "explanation": "jia" },
+        { "id": "zh-a2-38-f2", "type": "fill_input", "question": "Escuela: xue ____ (xiao)", "correct_answer": "xiao", "explanation": "xiao" },
+        { "id": "zh-a2-38-f3", "type": "fill_input", "question": "Tienda: shang ____ (dian)", "correct_answer": "dian", "explanation": "dian" },
+        { "id": "zh-a2-38-f4", "type": "fill_input", "question": "Estar en casa: zai ____", "correct_answer": "jia", "explanation": "jia" },
+        { "id": "zh-a2-38-f5", "type": "fill_input", "question": "Ir a la tienda: qu shang ____", "correct_answer": "dian", "explanation": "dian" },
+        { "id": "zh-a2-38-f6", "type": "fill_input", "question": "Volver / Regresar: ____ (hui)", "correct_answer": "hui", "explanation": "hui" },
+        { "id": "zh-a2-38-f7", "type": "fill_input", "question": "Volver a casa (Ir a casa): ____ jia", "correct_answer": "hui", "explanation": "hui" },
+        { "id": "zh-a2-38-f8", "type": "fill_input", "question": "Yo estoy en la escuela: wo zai xue ____", "correct_answer": "xiao", "explanation": "xiao" },
+        { "id": "zh-a2-38-f9", "type": "fill_input", "question": "Él no está en casa: ta bu zai ____ (jia)", "correct_answer": "jia", "explanation": "jia" },
+        { "id": "zh-a2-38-f10", "type": "fill_input", "question": "¡Vamos a casa!: women hui jia ____ (ba)", "correct_answer": "ba", "explanation": "ba" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y determina hacia dónde se dirigen o dónde están.",
+      "questions": [
+        { "id": "zh-a2-38-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "家", "options": ["Casa", "Escuela", "Tienda", "Hospital"], "correct_answer": "Casa", "explanation": "El audio dice: jiā." },
+        { "id": "zh-a2-38-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "学校", "options": ["Escuela", "Tienda", "Casa", "China"], "correct_answer": "Escuela", "explanation": "El audio dice: xuéxiào." },
+        { "id": "zh-a2-38-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我在商店", "options": ["Estoy en la tienda", "Voy a la tienda", "No estoy en la tienda", "Él está en la tienda"], "correct_answer": "Estoy en la tienda", "explanation": "El audio dice: Wǒ zài shāngdiàn." },
+        { "id": "zh-a2-38-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他去学校", "options": ["Él va a la escuela", "Él está en la escuela", "Él no va a la escuela", "Él es de la escuela"], "correct_answer": "Él va a la escuela", "explanation": "El audio dice: Tā qù xuéxiào." },
+        { "id": "zh-a2-38-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我要回家", "options": ["Quiero ir a casa (volver a casa)", "Estoy en casa", "No voy a casa", "Quiero una casa"], "correct_answer": "Quiero ir a casa (volver a casa)", "explanation": "El audio dice: Wǒ yào huí jiā." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the City",
+      "pairs": [
+        {"id": "zh-a2-38-p1", "source": "家 (jiā)", "target": "Casa / Hogar / Familia"},
+        {"id": "zh-a2-38-p2", "source": "学校 (xuéxiào)", "target": "Escuela / Colegio"},
+        {"id": "zh-a2-38-p3", "source": "商店 (shāngdiàn)", "target": "Tienda / Comercio"},
+        {"id": "zh-a2-38-p4", "source": "去 (qù)", "target": "Ir"},
+        {"id": "zh-a2-38-p5", "source": "回 (huí)", "target": "Regresar / Volver"},
+        {"id": "zh-a2-38-p6", "source": "回家 (huí jiā)", "target": "Ir a casa (Volver al hogar)"},
+        {"id": "zh-a2-38-p7", "source": "去家 (❌ Error)", "target": "Forma incorrecta y robótica de decir 'Ir a casa'"},
+        {"id": "zh-a2-38-p8", "source": "在家 (zài jiā)", "target": "Estar en casa"},
+        {"id": "zh-a2-38-p9", "source": "他在学校 (tā zài xuéxiào)", "target": "Él está en la escuela"},
+        {"id": "zh-a2-38-p10", "source": "去商店 (qù shāngdiàn)", "target": "Ir a la tienda"}
+      ]
+    }
+  ]
+}

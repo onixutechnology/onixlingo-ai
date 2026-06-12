@@ -20,9 +20,9 @@ import { useSearchParams } from 'next/navigation';
 import apiClient from '@/lib/apiClient';
 import confetti from 'canvas-confetti';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
-
-
+const API_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://api.onixlingo.onixu.company' 
+  : 'http://127.0.0.1:5000';
 
 
 // ============================================================================
@@ -74,6 +74,7 @@ interface LessonData {
   difficulty?: string;
   category?: string;
   author?: string;
+  completion_message?: string;
 }
 
 interface LessonStats {
@@ -336,7 +337,7 @@ export default function LessonRunnerEngine() {
 
     try {
       // Intentar reproducir voz ultra-realista mediante el backend
-      const baseUrl = apiClient.defaults.baseURL || 'http://localhost:8020';
+      const baseUrl = apiClient.defaults.baseURL || 'http://localhost:5000';
       let audioUrl = `${baseUrl}/ai/tts?text=${encodeURIComponent(text)}&lang=${speechLang}`;
       if (translateTo) {
         audioUrl += `&translate_to=${translateTo}`;
@@ -682,9 +683,9 @@ export default function LessonRunnerEngine() {
   // [PRO 16] Modo oscuro avanzado con AMOLED
   const getThemeColors = useCallback((): { bg: string; fg: string; accent: string } => {
     const themes = {
-      light: { bg: 'bg-slate-50', fg: 'text-slate-900', accent: 'bg-blue-600' },
-      dark: { bg: 'bg-slate-950', fg: 'text-white', accent: 'bg-indigo-600' },
-      amoled: { bg: 'bg-black', fg: 'text-white', accent: 'bg-indigo-500' }
+      light: { bg: 'bg-white', fg: 'text-slate-900', accent: 'bg-[#D4AF37]/20' },
+      dark: { bg: 'bg-slate-50', fg: 'text-slate-900', accent: 'bg-[#D4AF37]/20' },
+      amoled: { bg: 'bg-white', fg: 'text-slate-900', accent: 'bg-[#D4AF37]/20' }
     };
     return themes[colorScheme as keyof typeof themes] || themes.light;
   }, [colorScheme]);
@@ -1220,7 +1221,7 @@ export default function LessonRunnerEngine() {
         total += stage.parts.length;
       } else if (stage.type === 'pairing_drill') {
         total += 1;
-      } else if ((stage.type === 'quiz' || stage.type === 'gamified_quiz') && stage.questions) {
+      } else if (['quiz', 'gamified_quiz', 'quiz_choice', 'fill_input', 'listening_match'].includes(stage.type) && stage.questions) {
         total += stage.questions.length;
       } else {
         total += 1;
@@ -1237,7 +1238,7 @@ export default function LessonRunnerEngine() {
         current += stage.parts.length;
       } else if (stage.type === 'pairing_drill') {
         current += 1;
-      } else if ((stage.type === 'quiz' || stage.type === 'gamified_quiz') && stage.questions) {
+      } else if (['quiz', 'gamified_quiz', 'quiz_choice', 'fill_input', 'listening_match'].includes(stage.type) && stage.questions) {
         current += stage.questions.length;
       } else {
         current += 1;
@@ -1252,7 +1253,7 @@ export default function LessonRunnerEngine() {
       } else if (currentStage.type === 'pairing_drill') {
         const totalPairs = (currentStage as any).pairs?.length || 1;
         current += matchedPairs.length / totalPairs;
-      } else if ((currentStage.type === 'quiz' || currentStage.type === 'gamified_quiz') && currentStage.questions) {
+      } else if (['quiz', 'gamified_quiz', 'quiz_choice', 'fill_input', 'listening_match'].includes(currentStage.type) && currentStage.questions) {
         current += currentQuestionIndex;
       }
     }
@@ -1475,8 +1476,8 @@ export default function LessonRunnerEngine() {
     const stage = lesson.stages[currentStageIndex];
     if (stage?.type === 'pairing_drill') {
       const pairs = (stage as any).pairs || [];
-      const leftItems = pairs.map((p: any) => ({ id: p.id, word: p.en }));
-      const rightItems = pairs.map((p: any) => ({ id: p.id, word: p.es || p.fr }));
+      const leftItems = pairs.map((p: any) => ({ id: p.id, word: p.en || p.source }));
+      const rightItems = pairs.map((p: any) => ({ id: p.id, word: p.es || p.fr || p.target }));
       
       setShuffledLeft([...leftItems].sort(() => Math.random() - 0.5));
       setShuffledRight([...rightItems].sort(() => Math.random() - 0.5));
@@ -1497,7 +1498,7 @@ export default function LessonRunnerEngine() {
     // Consume 50% de energía si es plan gratuito
     const { consumeEnergy, userTier } = useUIStore.getState();
     if (userTier === 'free') {
-      consumeEnergy(50);
+      consumeEnergy(38);
     }
 
     // Calcular métricas finales
@@ -1752,33 +1753,33 @@ export default function LessonRunnerEngine() {
   // ==================== RENDERS CONDICIONALES ==============================
   // ============================================================================
 
-  if (userTier === 'free' && energy < 50) {
+  if (userTier === 'free' && energy < 38) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-6 relative overflow-hidden font-sans">
+      <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-900 p-6 relative overflow-hidden font-sans">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-teal-500/20 via-transparent to-transparent"></div>
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-teal-500"></div>
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-[#D4AF37]/20"></div>
         
-        <div className="bg-slate-950/80 border border-slate-800 p-10 max-w-md w-full shadow-2xl rounded-none text-center relative z-10 backdrop-blur-md">
-          <div className="w-16 h-16 bg-teal-500/10 border border-teal-500/30 text-teal-400 flex items-center justify-center mx-auto mb-6">
+        <div className="bg-slate-50/80 border border-slate-800 p-10 max-w-md w-full shadow-2xl rounded-none text-center relative z-10 backdrop-blur-md">
+          <div className="w-16 h-16 bg-[#D4AF37]/20/10 border border-teal-500/30 text-teal-400 flex items-center justify-center mx-auto mb-6">
             <Zap size={32} className="animate-pulse" />
           </div>
           <h2 className="text-xl font-serif font-black italic uppercase tracking-wider text-teal-400 mb-2">
             Energía Insuficiente
           </h2>
-          <p className="text-[10px] text-slate-400 leading-relaxed mb-8 uppercase tracking-wider">
-            Completar una lección normal consume 50% de energía. Tu energía actual es de {energy}%.
+          <p className="text-[10px] text-slate-500 leading-relaxed mb-8 uppercase tracking-wider">
+            Completar una lección normal consume 38% de energía. Tu energía actual es de {energy}%.
           </p>
           
           <div className="flex flex-col gap-3">
             <button 
               onClick={() => router.push('/dashboard/pricing')}
-              className="w-full py-4 bg-teal-600 hover:bg-teal-500 text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none shadow-lg shadow-teal-600/30"
+              className="w-full py-4 bg-[#D4AF37]/20 hover:bg-[#D4AF37]/20 text-slate-900 font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none shadow-none shadow-teal-600/30"
             >
               Subir a Pro / Executive
             </button>
             <button 
               onClick={() => router.push('/dashboard')}
-              className="w-full py-3 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none"
+              className="w-full py-3 border border-slate-700 bg-transparent text-slate-500 hover:text-slate-900 font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none"
             >
               Volver al Dashboard
             </button>
@@ -1789,23 +1790,23 @@ export default function LessonRunnerEngine() {
   }
 
   if (loading) return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white font-bold animate-pulse">
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-900 font-bold animate-pulse">
       <Zap className="mr-3 animate-spin" /> Cargando Lección...
     </div>
   );
 
   if (isSaving) return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white font-bold">
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-900 font-bold">
       <Save className="animate-bounce mr-2" /> Guardando Progreso...
     </div>
   );
 
   if (error) return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-10 bg-slate-50">
-      <AlertTriangle size={48} className="text-red-500 mb-4" />
-      <h2 className="text-xl font-bold text-slate-800 mb-2">Error de Conexión</h2>
-      <p className="text-slate-500 mb-4 text-center">{error}</p>
-      <button onClick={() => window.location.reload()} className="bg-blue-600 text-white px-6 py-2 rounded-lg font-bold">
+    <div className="min-h-screen flex flex-col items-center justify-center p-10 bg-white">
+      <AlertTriangle size={48} className="text-[#D4AF37] mb-4" />
+      <h2 className="text-xl font-bold text-slate-900 mb-2">Error de Conexión</h2>
+      <p className="text-slate-600 mb-4 text-center">{error}</p>
+      <button onClick={() => window.location.reload()} className="bg-[#D4AF37]/20 text-slate-900 px-6 py-2 rounded-none font-bold">
         Reintentar
       </button>
     </div>
@@ -1827,30 +1828,43 @@ export default function LessonRunnerEngine() {
         onRetry={restartLesson} // 👈 Usa la función optimizada que ya creaste
         onExit={handleExit}               // 👈 Conecta tu función de salida
         answerHistory={answerHistory}     // 👈 NUEVO: historial de respuestas para el reporte y certificado
+        completionMessage={lesson?.completion_message} // 👈 NUEVO: Mensaje de AI
       />
     );
   }
 
   const currentStage = lesson?.stages[currentStageIndex];
-  if (!currentStage) return null;
+  if (!currentStage) return (
+    <div className="min-h-screen flex flex-col items-center justify-center p-10 bg-white text-slate-900">
+      <AlertTriangle size={48} className="text-[#D4AF37] mb-4" />
+      <h2 className="text-xl font-bold text-slate-900 mb-2">La lección está vacía</h2>
+      <p className="text-slate-600 mb-4 text-center">No se encontraron etapas (stages) para esta lección o el backend devolvió datos incompletos.</p>
+      <div className="bg-white p-4 rounded text-xs font-mono w-full max-w-2xl overflow-auto text-left mb-6 max-h-64">
+        {JSON.stringify(lesson, null, 2)}
+      </div>
+      <button onClick={() => window.location.reload()} className="bg-[#D4AF37]/20 text-slate-900 px-6 py-2 rounded-none font-bold">
+        Volver a intentar
+      </button>
+    </div>
+  );
 
   // ============================================================================
   // ==================== RENDER PRINCIPAL ====================================
   // ============================================================================
 
   return (
-    <div className={`min-h-screen flex flex-col transition-colors duration-500 bg-slate-50 text-slate-900`} style={{ fontSize: `${fontSize}px` }}>
+    <div className={`min-h-screen flex flex-col transition-colors duration-500 bg-white text-slate-900`} style={{ fontSize: `${fontSize}px` }}>
 
       {/* HEADER */}
       {isPro ? (
         <header className="h-16 bg-white/90 backdrop-blur-md border-b border-slate-200 px-6 flex items-center justify-between sticky top-0 z-20">
           <div className="flex items-center gap-4">
-            <button onClick={handleExit} className="p-2 hover:bg-slate-100 rounded-none transition-colors text-slate-500 hover:text-slate-900">
+            <button onClick={handleExit} className="p-2 hover:bg-white rounded-none transition-colors text-slate-600 hover:text-slate-900">
               <X size={24} />
             </button>
             <div className="hidden md:flex flex-col">
-              <span className="text-[10px] uppercase tracking-widest text-teal-500 font-black font-serif italic">Titanium Executive</span>
-              <div className="flex items-center gap-2 text-teal-600 text-xs font-black">
+              <span className="text-[10px] uppercase tracking-widest text-[#D4AF37] font-black font-serif italic">Titanium Executive</span>
+              <div className="flex items-center gap-2 text-[#D4AF37] text-xs font-black">
                 <Zap size={12} fill="currentColor" /> {stats.correctAnswers} ACIERTOS
               </div>
             </div>
@@ -1858,16 +1872,16 @@ export default function LessonRunnerEngine() {
 
           <div className="flex items-center gap-4">
             {showAnalytics && (
-              <div className="flex items-center gap-4 bg-slate-50 px-4 py-2 rounded-none border border-slate-200 text-[10px] font-black uppercase text-slate-700">
+              <div className="flex items-center gap-4 bg-white px-4 py-2 rounded-none border border-slate-200 text-[10px] font-black uppercase text-slate-700">
                 <div>⚡ {Math.round(stats.xpAccumulated / Math.max(seconds, 1) * 60)} XP/min</div>
                 <div>📊 {calculateAccuracy()}%</div>
               </div>
             )}
-            <div className={`flex items-center gap-3 px-4 py-2 rounded-none border shadow-sm transition-colors duration-300 ${timeMode !== 'basic' && seconds < 60 ? 'bg-red-50 border-red-200 animate-pulse' : 'bg-white border-slate-200'}`}>
-              <Clock size={16} className={timeMode !== 'basic' && seconds < 60 ? 'text-red-600 animate-bounce' : 'text-teal-600'} />
-              <span className={`font-mono text-xl font-black tracking-widest ${timeMode !== 'basic' && seconds < 60 ? 'text-red-700' : 'text-teal-850'}`}>{formatTime(seconds)}</span>
+            <div className={`flex items-center gap-3 px-4 py-2 rounded-none border shadow-none transition-colors duration-300 ${timeMode !== 'basic' && seconds < 60 ? 'bg-[#D4AF37]/10 border-red-200 animate-pulse' : 'bg-white border-slate-200'}`}>
+              <Clock size={16} className={timeMode !== 'basic' && seconds < 60 ? 'text-[#D4AF37] animate-bounce' : 'text-[#D4AF37]'} />
+              <span className={`font-mono text-xl font-black tracking-widest ${timeMode !== 'basic' && seconds < 60 ? 'text-[#D4AF37]' : 'text-teal-850'}`}>{formatTime(seconds)}</span>
             </div>
-            <button onClick={() => setShowSettings(!showSettings)} className="p-2 hover:bg-slate-100 rounded-none border border-transparent hover:border-slate-200 text-slate-600 hover:text-slate-900">
+            <button onClick={() => setShowSettings(!showSettings)} className="p-2 hover:bg-white rounded-none border border-transparent hover:border-slate-200 text-slate-600 hover:text-slate-900">
               <Settings size={20} />
             </button>
           </div>
@@ -1875,11 +1889,11 @@ export default function LessonRunnerEngine() {
       ) : (
         <header className="h-12 bg-white border-b border-slate-200 px-6 flex items-center justify-between sticky top-0 z-20">
           <div className="flex items-center gap-3">
-            <button onClick={handleExit} className="text-slate-400 hover:text-amber-600 transition-colors"><X size={20} /></button>
+            <button onClick={handleExit} className="text-slate-500 hover:text-[#D4AF37] transition-colors"><X size={20} /></button>
             {userTier === 'free' && (
               <div className="flex items-center">
                 {/* Cuerpo de la Batería */}
-                <div className="relative w-12 h-4 bg-slate-950 rounded-[4px] border border-slate-700 p-0.5 flex items-center shadow-[inset_0_1.5px_4px_rgba(0,0,0,0.8)] overflow-hidden">
+                <div className="relative w-12 h-4 bg-slate-50 rounded-[4px] border border-slate-700 p-0.5 flex items-center shadow-[inset_0_1.5px_4px_rgba(0,0,0,0.8)] overflow-hidden">
                   <div 
                     className={`h-full rounded-[2px] transition-all duration-500 ${
                       energy > 50 
@@ -1890,32 +1904,32 @@ export default function LessonRunnerEngine() {
                     }`}
                     style={{ width: `${energy}%` }}
                   />
-                  <span className="absolute inset-0 flex items-center justify-center text-[8px] font-black text-white font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
+                  <span className="absolute inset-0 flex items-center justify-center text-[8px] font-black text-slate-900 font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
                     {energy}%
                   </span>
                 </div>
                 {/* Polo Positivo */}
-                <div className="w-[2px] h-2 bg-slate-700 rounded-r-[1.5px] -ml-[1px] shadow-sm shrink-0" />
+                <div className="w-[2px] h-2 bg-slate-700 rounded-r-[1.5px] -ml-[1px] shadow-none shrink-0" />
               </div>
             )}
             {timeMode !== 'basic' && (
-              <div className={`flex items-center gap-1.5 px-3 py-1 border transition-colors ${seconds < 60 ? 'bg-rose-50 border-rose-200 text-rose-600 animate-pulse' : 'bg-slate-50 border-slate-200 text-slate-700'}`}>
+              <div className={`flex items-center gap-1.5 px-3 py-1 border transition-colors ${seconds < 60 ? 'bg-[#D4AF37]/10 border-[#D4AF37]/30 text-[#D4AF37] animate-pulse' : 'bg-white border-slate-200 text-slate-700'}`}>
                 <Clock size={12} className="animate-pulse" />
                 <span className="font-mono text-[10px] font-black tracking-wider">{formatTime(seconds)}</span>
               </div>
             )}
           </div>
-          <div className="w-1/3 h-1 bg-slate-100 rounded-none overflow-hidden">
-            <div className="h-full bg-amber-600 transition-all duration-500" style={{ width: `${getProgressPercentage()}%` }}></div>
+          <div className="w-1/3 h-1 bg-white rounded-none overflow-hidden">
+            <div className="h-full bg-[#D4AF37]/20 transition-all duration-500" style={{ width: `${getProgressPercentage()}%` }}></div>
           </div>
-          <span className="font-black text-slate-800 hidden sm:block truncate w-48 text-right text-[10px] uppercase tracking-widest font-serif italic">{lesson?.title}</span>
+          <span className="font-black text-slate-900 hidden sm:block truncate w-48 text-right text-[10px] uppercase tracking-widest font-serif italic">{lesson?.title}</span>
         </header>
       )}
 
       {/* SETTINGS MODAL PRO */}
       {isPro && showSettings && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 max-w-md w-full max-h-96 overflow-y-auto">
+        <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
+          <div className="bg-slate-50 border border-slate-800 rounded-none p-8 max-w-md w-full max-h-96 overflow-y-auto">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-bold">⚙️ Configuración PRO</h2>
               <button onClick={() => setShowSettings(false)}><X /></button>
@@ -1932,23 +1946,23 @@ export default function LessonRunnerEngine() {
                 <input type="range" min="12" max="24" value={fontSize} onChange={(e) => setFontSize(parseInt(e.target.value))} className="w-full" />
               </div>
 
-              <button onClick={() => toggleSound()} className={`w-full py-2 px-4 rounded-lg flex items-center gap-2 justify-center ${soundEnabled ? 'bg-emerald-600' : 'bg-red-600'}`}>
+              <button onClick={() => toggleSound()} className={`w-full py-2 px-4 rounded-none flex items-center gap-2 justify-center ${soundEnabled ? 'bg-emerald-600' : 'bg-[#D4AF37]/20'}`}>
                 {soundEnabled ? <Volume2 size={18} /> : <MicOff size={18} />} Sonido
               </button>
 
-              <button onClick={() => toggleSubtitles()} className={`w-full py-2 px-4 rounded-lg flex items-center gap-2 justify-center ${subtitlesEnabled ? 'bg-emerald-600' : 'bg-red-600'}`}>
+              <button onClick={() => toggleSubtitles()} className={`w-full py-2 px-4 rounded-none flex items-center gap-2 justify-center ${subtitlesEnabled ? 'bg-emerald-600' : 'bg-[#D4AF37]/20'}`}>
                 {subtitlesEnabled ? <Eye size={18} /> : <EyeOff size={18} />} Subtítulos
               </button>
 
-              <button onClick={() => setShowAnalytics(!showAnalytics)} className={`w-full py-2 px-4 rounded-lg flex items-center gap-2 justify-center ${showAnalytics ? 'bg-emerald-600' : 'bg-slate-700'}`}>
+              <button onClick={() => setShowAnalytics(!showAnalytics)} className={`w-full py-2 px-4 rounded-none flex items-center gap-2 justify-center ${showAnalytics ? 'bg-emerald-600' : 'bg-slate-700'}`}>
                 <BarChart3 size={18} /> Analítica
               </button>
 
-              <button onClick={() => enableAccessibilityMode()} className="w-full py-2 px-4 rounded-lg bg-indigo-600 flex items-center gap-2 justify-center">
+              <button onClick={() => enableAccessibilityMode()} className="w-full py-2 px-4 rounded-none bg-[#D4AF37]/20 flex items-center gap-2 justify-center">
                 <Check size={18} /> Modo Accesibilidad
               </button>
 
-              <button onClick={() => exportReportPDF()} className="w-full py-2 px-4 rounded-lg bg-amber-600 flex items-center gap-2 justify-center">
+              <button onClick={() => exportReportPDF()} className="w-full py-2 px-4 rounded-none bg-[#D4AF37]/20 flex items-center gap-2 justify-center">
                 <Download size={18} /> Exportar PDF
               </button>
             </div>
@@ -1958,15 +1972,15 @@ export default function LessonRunnerEngine() {
 
       {/* DIÁLOGO INTERACTIVO PARA RETOMAR SESIÓN GUARDADA */}
       {showResumePrompt && pendingResumeState && (
-        <div className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
-          <div className="bg-slate-900 border-2 border-amber-950 p-6 md:p-8 max-w-md w-full shadow-2xl text-center rounded-none relative">
-            <div className="absolute top-0 left-0 w-full h-1 bg-amber-500" />
-            <div className="flex justify-center mb-4 text-amber-500">
+        <div className="fixed inset-0 bg-white/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+          <div className="bg-slate-50 border-2 border-amber-950 p-6 md:p-8 max-w-md w-full shadow-2xl text-center rounded-none relative">
+            <div className="absolute top-0 left-0 w-full h-1 bg-[#D4AF37]/20" />
+            <div className="flex justify-center mb-4 text-[#D4AF37]">
               <Sparkles size={40} className="animate-pulse" />
             </div>
             <h3 className="text-sm font-serif font-black italic uppercase tracking-wider text-amber-400 mb-2">¿Deseas retomar tu intento?</h3>
-            <p className="text-[10px] text-slate-400 leading-relaxed mb-6">
-              Hemos detectado un progreso guardado del <span className="text-white font-mono font-black">{new Date(pendingResumeState.timestamp).toLocaleDateString()}</span>. ¿Prefieres reanudar tu lección desde la etapa donde estabas o comenzar uno nuevo de cero?
+            <p className="text-[10px] text-slate-500 leading-relaxed mb-6">
+              Hemos detectado un progreso guardado del <span className="text-slate-900 font-mono font-black">{new Date(pendingResumeState.timestamp).toLocaleDateString()}</span>. ¿Prefieres reanudar tu lección desde la etapa donde estabas o comenzar uno nuevo de cero?
             </p>
             <div className="flex flex-col gap-2">
               <button 
@@ -1977,7 +1991,7 @@ export default function LessonRunnerEngine() {
                   setAnswerHistory(pendingResumeState.answerHistory);
                   setShowResumePrompt(false);
                 }} 
-                className="w-full py-3 bg-amber-600 hover:bg-amber-500 text-white font-black text-[10px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-1.5"
+                className="w-full py-3 bg-[#D4AF37]/20 hover:bg-[#D4AF37]/20 text-slate-900 font-black text-[10px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-1.5"
               >
                 SÍ, REANUDAR LECCIÓN <ChevronRight size={14} />
               </button>
@@ -1987,7 +2001,7 @@ export default function LessonRunnerEngine() {
                   setSeconds(initialSeconds);
                   setShowResumePrompt(false);
                 }} 
-                className="w-full py-2.5 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-widest transition-all rounded-none"
+                className="w-full py-2.5 border border-slate-700 bg-transparent text-slate-500 hover:text-slate-900 font-black text-[9px] uppercase tracking-widest transition-all rounded-none"
               >
                 NO, COMENZAR DE CERO
               </button>
@@ -2002,28 +2016,28 @@ export default function LessonRunnerEngine() {
         {/* Efectos de fondo Pro */}
         {isPro && (
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-600/5 rounded-full blur-[120px] animate-pulse"></div>
-            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-amber-600/3 rounded-full blur-[120px] animate-pulse delay-700"></div>
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#D4AF37]/20/5 rounded-full blur-[120px] animate-pulse"></div>
+            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#D4AF37]/20/3 rounded-full blur-[120px] animate-pulse delay-700"></div>
           </div>
         )}
 
         {/* MODO 1: LECTURE */}
         {(currentStage.type === 'lecture' || currentStage.type === 'theory') && currentStage.parts && (
           <div className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 animate-in fade-in relative z-10">
-            <div className="rounded-none border-2 shadow-sm relative min-h-[400px] flex items-end justify-center overflow-hidden bg-slate-100 border-slate-200">
+            <div className="rounded-none border-2 shadow-none relative min-h-[400px] flex items-end justify-center overflow-hidden bg-white border-slate-200">
               <div className="absolute inset-0"><Avatar3D /></div>
             </div>
             <div className="flex flex-col justify-center">
-              <div className="p-8 rounded-none border bg-white border-slate-200 shadow-sm">
+              <div className="p-8 rounded-none border bg-white border-slate-200 shadow-none">
                 <div className="flex items-center gap-2 mb-4">
-                   <Zap size={14} className="text-teal-600" />
-                   <h2 className={`text-xs font-black uppercase tracking-[0.3em] font-serif italic ${isPro ? 'text-teal-700' : 'text-slate-800'}`}>{currentStage.title}</h2>
+                   <Zap size={14} className="text-[#D4AF37]" />
+                   <h2 className={`text-xs font-black uppercase tracking-[0.3em] font-serif italic ${isPro ? 'text-teal-700' : 'text-slate-900'}`}>{currentStage.title}</h2>
                 </div>
-                <div className={`text-sm font-black uppercase tracking-widest mb-8 leading-relaxed opacity-90 ${isPro ? 'text-slate-800' : 'text-slate-700'}`}>
+                <div className={`text-sm font-black uppercase tracking-widest mb-8 leading-relaxed opacity-90 ${isPro ? 'text-slate-900' : 'text-slate-700'}`}>
                   {currentStage.parts[lecturePartIndex]?.visual}
                 </div>
                 <div className="flex gap-2">
-                  <button onClick={() => speakText(currentStage.parts![lecturePartIndex]?.visual, 0.95, "es", "es")} className="p-4 rounded-none border transition-colors bg-slate-50 border-slate-200 hover:bg-slate-100 text-slate-800">
+                  <button onClick={() => speakText(currentStage.parts![lecturePartIndex]?.visual, 0.95, "es", "es")} className="p-4 rounded-none border transition-colors bg-white border-slate-200 hover:bg-white text-slate-900">
                     <Volume2 size={18} />
                   </button>
                   <button
@@ -2031,7 +2045,7 @@ export default function LessonRunnerEngine() {
                       if (lecturePartIndex < (currentStage.parts?.length || 0) - 1) setLecturePartIndex(prev => prev + 1);
                       else nextStage();
                     }}
-                    className={`flex-1 font-black py-4 rounded-none flex justify-center gap-3 text-[10px] uppercase tracking-[0.2em] transition-all ${isPro ? 'bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-900/20' : 'bg-amber-600 hover:bg-amber-700 text-white'}`}
+                    className={`flex-1 font-black py-4 rounded-none flex justify-center gap-3 text-[10px] uppercase tracking-[0.2em] transition-all ${isPro ? 'bg-[#D4AF37]/20 hover:bg-amber-700 text-slate-900 shadow-none shadow-amber-900/20' : 'bg-[#D4AF37]/20 hover:bg-amber-700 text-slate-900'}`}
                   >
                     SIGUIENTE FASE <ArrowRight size={14} />
                   </button>
@@ -2039,7 +2053,7 @@ export default function LessonRunnerEngine() {
 
                 {isPro && (
                   <div className="mt-6 flex gap-2">
-                    <button onClick={() => addBookmark(currentStage.id)} className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 text-sm ${bookmarks.includes(currentStage.id) ? 'bg-amber-600 text-white' : 'bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200'}`}>
+                    <button onClick={() => addBookmark(currentStage.id)} className={`flex-1 py-2 rounded-none flex items-center justify-center gap-2 text-sm ${bookmarks.includes(currentStage.id) ? 'bg-[#D4AF37]/20 text-slate-900' : 'bg-white text-slate-700 border border-slate-200 hover:bg-white'}`}>
                       <Heart size={16} /> {bookmarks.includes(currentStage.id) ? 'Guardado' : 'Guardar'}
                     </button>
                   </div>
@@ -2052,13 +2066,13 @@ export default function LessonRunnerEngine() {
         {/* MODO: PAIRING DRILL */}
         {currentStage.type === 'pairing_drill' && (
           <div className="max-w-2xl w-full flex flex-col justify-center animate-in zoom-in-95 relative z-10">
-            <div className="p-8 rounded-none border bg-white border-slate-200 shadow-sm">
-              <div className="flex items-center gap-2 mb-6 border-b border-slate-100 pb-4">
-                 <Zap size={14} className="text-teal-600" />
-                 <h2 className={`text-xs font-black uppercase tracking-[0.3em] font-serif italic ${isPro ? 'text-teal-700' : 'text-slate-800'}`}>{currentStage.title || "Vocabulario Clé"}</h2>
+            <div className="p-8 rounded-none border bg-white border-slate-200 shadow-none">
+              <div className="flex items-center gap-2 mb-6 border-b border-slate-200 pb-4">
+                 <Zap size={14} className="text-[#D4AF37]" />
+                 <h2 className={`text-xs font-black uppercase tracking-[0.3em] font-serif italic ${isPro ? 'text-teal-700' : 'text-slate-900'}`}>{currentStage.title || "Vocabulario Clé"}</h2>
               </div>
               
-              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-8">Empareja cada palabra en inglés con su traducción en francés:</p>
+              <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-8">Empareja cada palabra en inglés con su traducción en francés:</p>
               
               <div className="grid grid-cols-2 gap-8 mb-8">
                 {/* Columna Izquierda: Inglés */}
@@ -2073,10 +2087,10 @@ export default function LessonRunnerEngine() {
                         disabled={isMatched}
                         className={`w-full p-4 border-2 text-center font-bold text-xs uppercase tracking-wider transition-all
                           ${isMatched 
-                            ? 'bg-emerald-50 border-emerald-300 text-emerald-700 opacity-60 cursor-not-allowed'
+                            ? 'bg-[#D4AF37]/10 border-[#D4AF37]/30 text-[#D4AF37] opacity-60 cursor-not-allowed'
                             : isSelected
-                              ? 'bg-amber-50 border-amber-500 text-amber-700 scale-[0.98]'
-                              : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-amber-400 hover:bg-slate-100/50'
+                              ? 'bg-[#D4AF37]/10 border-[#D4AF37]/30 text-[#D4AF37] scale-[0.98]'
+                              : 'bg-white border-slate-200 text-slate-700 hover:border-amber-400 hover:bg-white/50'
                           }
                         `}
                       >
@@ -2098,10 +2112,10 @@ export default function LessonRunnerEngine() {
                         disabled={isMatched}
                         className={`w-full p-4 border-2 text-center font-bold text-xs uppercase tracking-wider transition-all
                           ${isMatched 
-                            ? 'bg-emerald-50 border-emerald-300 text-emerald-700 opacity-60 cursor-not-allowed'
+                            ? 'bg-[#D4AF37]/10 border-[#D4AF37]/30 text-[#D4AF37] opacity-60 cursor-not-allowed'
                             : isSelected
-                              ? 'bg-amber-50 border-amber-500 text-amber-700 scale-[0.98]'
-                              : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-amber-400 hover:bg-slate-100/50'
+                              ? 'bg-[#D4AF37]/10 border-[#D4AF37]/30 text-[#D4AF37] scale-[0.98]'
+                              : 'bg-white border-slate-200 text-slate-700 hover:border-amber-400 hover:bg-white/50'
                           }
                         `}
                       >
@@ -2114,12 +2128,12 @@ export default function LessonRunnerEngine() {
 
               {matchedPairs.length > 0 && matchedPairs.length === ((currentStage as any).pairs?.length || 0) ? (
                 <div className="animate-in fade-in duration-300">
-                  <div className="p-4 mb-6 rounded-none text-center font-bold text-xs uppercase tracking-wider bg-emerald-50 border border-emerald-200 text-emerald-800">
+                  <div className="p-4 mb-6 rounded-none text-center font-bold text-xs uppercase tracking-wider bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37]">
                     🎉 ¡Perfecto! Todas las parejas han sido emparejadas con éxito.
                   </div>
                   <button
                     onClick={nextStage}
-                    className={`w-full font-black py-4 rounded-none flex justify-center gap-3 text-[10px] uppercase tracking-[0.2em] transition-all bg-amber-600 hover:bg-amber-700 text-white shadow-lg`}
+                    className={`w-full font-black py-4 rounded-none flex justify-center gap-3 text-[10px] uppercase tracking-[0.2em] transition-all bg-[#D4AF37]/20 hover:bg-amber-700 text-slate-900 shadow-none`}
                   >
                     CONTINUAR A LA SIGUIENTE FASE <ArrowRight size={14} />
                   </button>
@@ -2127,7 +2141,7 @@ export default function LessonRunnerEngine() {
               ) : (
                 <button
                   disabled
-                  className="w-full font-black py-4 rounded-none flex justify-center gap-3 text-[10px] uppercase tracking-[0.2em] bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200"
+                  className="w-full font-black py-4 rounded-none flex justify-center gap-3 text-[10px] uppercase tracking-[0.2em] bg-white text-slate-500 cursor-not-allowed border border-slate-200"
                 >
                   EMPAREJA TODO PARA CONTINUAR
                 </button>
@@ -2137,15 +2151,15 @@ export default function LessonRunnerEngine() {
         )}
 
         {/* MODO 2: QUIZ */}
-        {(currentStage.type === 'gamified_quiz' || currentStage.type === 'quiz') && currentStage.questions && (
+        {['quiz', 'gamified_quiz', 'quiz_choice', 'fill_input', 'listening_match'].includes(currentStage.type) && currentStage.questions && (
           <div className="max-w-2xl w-full flex flex-col justify-center animate-in zoom-in-95 relative z-10">
-            <div className="p-8 rounded-none border bg-white border-slate-200 shadow-sm">
-              <div className="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
-                <span className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-400">
+            <div className="p-8 rounded-none border bg-white border-slate-200 shadow-none">
+              <div className="flex justify-between items-center mb-8 border-b border-slate-200 pb-4">
+                <span className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-500">
                   MOD {currentQuestionIndex + 1} / {currentStage.questions.length}
                 </span>
                 {isPro && (
-                  <div className="flex items-center gap-6 text-[9px] font-black uppercase tracking-widest text-teal-600">
+                  <div className="flex items-center gap-6 text-[9px] font-black uppercase tracking-widest text-[#D4AF37]">
                     <span>ACC: {calculateAccuracy()}%</span>
                     <span>🔥 {stats.streakCount}</span>
                   </div>
@@ -2158,42 +2172,42 @@ export default function LessonRunnerEngine() {
 
                 return (
                   <>
-                    <h2 className="text-sm font-black uppercase tracking-widest mb-10 font-serif italic text-slate-800">{activeQuestion.question}</h2>
+                    <h2 className="text-sm font-black uppercase tracking-widest mb-10 font-serif italic text-slate-900">{activeQuestion.question}</h2>
 
                     {activeQuestion.type === 'listening_match' && (
                       <div className="mb-8 flex justify-center">
                         <button
                           onClick={() => speakText(activeQuestion.tts_text || activeQuestion.correct_answer || "")}
-                          className={`w-20 h-20 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform ${isPro ? 'bg-indigo-600 shadow-indigo-500/30' : 'bg-blue-500'}`}
+                          className={`w-20 h-20 rounded-full flex items-center justify-center shadow-none hover:scale-105 transition-transform ${isPro ? 'bg-[#D4AF37]/20 shadow-indigo-500/30' : 'bg-[#D4AF37]/20'}`}
                         >
-                          <Volume2 size={32} className="text-white" />
+                          <Volume2 size={32} className="text-slate-900" />
                         </button>
                       </div>
                     )}
 
                     {activeQuestion.type === 'order_sentence' && (
                       <div className="space-y-6">
-                        <div className="min-h-[80px] p-4 border-2 border-dashed rounded-xl flex flex-wrap gap-2 items-center transition-colors bg-slate-50 border-slate-300">
-                          {sentenceBuilder.length === 0 && <span className="text-slate-500 text-sm italic">Toca las palabras abajo...</span>}
+                        <div className="min-h-[80px] p-4 border-2 border-dashed rounded-none flex flex-wrap gap-2 items-center transition-colors bg-white border-slate-200">
+                          {sentenceBuilder.length === 0 && <span className="text-slate-600 text-sm italic">Toca las palabras abajo...</span>}
                           {sentenceBuilder.map((word, idx) => (
-                            <button key={`built-${idx}`} onClick={() => handleWordClick(word, idx, false)} className="px-4 py-2 font-bold rounded-lg shadow-md transition-colors animate-in zoom-in bg-blue-600 text-white">
+                            <button key={`built-${idx}`} onClick={() => handleWordClick(word, idx, false)} className="px-4 py-2 font-bold rounded-none shadow-none transition-colors animate-in zoom-in bg-[#D4AF37]/20 text-slate-900">
                               {word}
                             </button>
                           ))}
                         </div>
                         <div className="flex flex-wrap gap-3 justify-center">
                           {wordPool.map((word, idx) => (
-                            <button key={`pool-${idx}`} onClick={() => handleWordClick(word, idx, true)} className="px-4 py-2 border-2 font-medium rounded-lg hover:-translate-y-1 transition-all shadow-sm bg-white border-slate-200 text-slate-700 hover:border-blue-400">
+                            <button key={`pool-${idx}`} onClick={() => handleWordClick(word, idx, true)} className="px-4 py-2 border-2 font-medium rounded-none hover:-translate-y-1 transition-all shadow-none bg-white border-slate-200 text-slate-700 hover:border-blue-400">
                               {word}
                             </button>
                           ))}
                         </div>
                         <div className="flex justify-end pt-4">
-                          <button onClick={() => { setSentenceBuilder([]); setWordPool([...(activeQuestion.parts || [])]); }} className="text-slate-400 hover:text-blue-500 flex items-center gap-1 text-sm font-bold">
+                          <button onClick={() => { setSentenceBuilder([]); setWordPool([...(activeQuestion.parts || [])]); }} className="text-slate-500 hover:text-[#D4AF37] flex items-center gap-1 text-sm font-bold">
                             <RefreshCw size={14} /> REINICIAR
                           </button>
                         </div>
-                        <button onClick={() => validateAnswer(activeQuestion)} disabled={sentenceBuilder.length === 0 || !!feedback} className="w-full font-bold py-3 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed shadow-lg bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200">
+                        <button onClick={() => validateAnswer(activeQuestion)} disabled={sentenceBuilder.length === 0 || !!feedback} className="w-full font-bold py-3 rounded-none disabled:opacity-50 disabled:cursor-not-allowed shadow-none bg-[#D4AF37]/20 hover:bg-blue-700 text-slate-900 shadow-blue-200">
                           {isSimulator ? "SIGUIENTE PREGUNTA" : "COMPROBAR ORDEN"}
                         </button>
                       </div>
@@ -2201,18 +2215,18 @@ export default function LessonRunnerEngine() {
 
                     {activeQuestion.type === 'fill_input' && (
                       <div className="space-y-4">
-                        <input type="text" value={textInput} onChange={(e) => setTextInput(e.target.value)} placeholder="Escribe tu respuesta aquí..." className="w-full p-4 text-lg border-2 rounded-xl outline-none transition-all bg-white border-slate-300 text-slate-900 focus:border-blue-500" disabled={!!feedback} autoFocus onKeyDown={(e) => { if (e.key === 'Enter' && !feedback) validateAnswer(activeQuestion); }} />
+                        <input type="text" value={textInput} onChange={(e) => setTextInput(e.target.value)} placeholder="Escribe tu respuesta aquí..." className="w-full p-4 text-lg border-2 rounded-none outline-none transition-all bg-white border-slate-200 text-slate-900 focus:border-blue-500" disabled={!!feedback} autoFocus onKeyDown={(e) => { if (e.key === 'Enter' && !feedback) validateAnswer(activeQuestion); }} />
                         {isPro && showHints && (
-                          <div className="p-3 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-sm">
+                          <div className="p-3 rounded-none bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-sm">
                             💡 {getIntelligentHint(activeQuestion, 1)}
                           </div>
                         )}
                         <div className="flex gap-2">
-                          <button onClick={() => validateAnswer(activeQuestion)} disabled={!textInput.trim() || !!feedback} className="flex-1 font-bold py-3 rounded-xl disabled:opacity-50 bg-blue-600 hover:bg-blue-700 text-white">
+                          <button onClick={() => validateAnswer(activeQuestion)} disabled={!textInput.trim() || !!feedback} className="flex-1 font-bold py-3 rounded-none disabled:opacity-50 bg-[#D4AF37]/20 hover:bg-blue-700 text-slate-900">
                             {isSimulator ? "SIGUIENTE PREGUNTA" : "COMPROBAR"}
                           </button>
                           {isPro && (
-                            <button onClick={() => { setShowHints(!showHints); setHintsUsed(prev => prev + 1); }} className="px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-250">
+                            <button onClick={() => { setShowHints(!showHints); setHintsUsed(prev => prev + 1); }} className="px-4 py-3 rounded-none bg-white hover:bg-white text-slate-700 border border-slate-200">
                               💡
                             </button>
                           )}
@@ -2229,24 +2243,24 @@ export default function LessonRunnerEngine() {
                             disabled={!!feedback}
                             className={`w-full p-5 rounded-none border-2 text-left font-black text-[10px] uppercase tracking-widest transition-all group
                               ${selectedOption === opt
-                                ? 'bg-amber-50 border-amber-600 text-amber-900'
-                                : 'bg-white border-slate-200 text-slate-500 hover:border-amber-400'
+                                ? 'bg-[#D4AF37]/10 border-amber-600 text-amber-900'
+                                : 'bg-white border-slate-200 text-slate-600 hover:border-amber-400'
                               }
                             `}
                           >
                             <div className="flex justify-between items-center">
                               <span>{opt}</span>
-                              {selectedOption === opt && <div className="w-2 h-2 bg-amber-600"></div>}
+                              {selectedOption === opt && <div className="w-2 h-2 bg-[#D4AF37]/20"></div>}
                             </div>
                           </button>
                         ))}
                         <div className="flex gap-2 pt-6">
-                          <button onClick={() => validateAnswer(activeQuestion)} disabled={!selectedOption || !!feedback} className="flex-1 font-black py-4 rounded-none text-[10px] uppercase tracking-[0.2em] disabled:opacity-50 transition-all bg-amber-600 hover:bg-amber-700 text-white">
+                          <button onClick={() => validateAnswer(activeQuestion)} disabled={!selectedOption || !!feedback} className="flex-1 font-black py-4 rounded-none text-[10px] uppercase tracking-[0.2em] disabled:opacity-50 transition-all bg-[#D4AF37]/20 hover:bg-amber-700 text-slate-900">
                             {isSimulator ? "SIGUIENTE PREGUNTA" : "VALIDAR RESPUESTA"}
                           </button>
                           {isPro && (
-                            <button onClick={() => skipQuestion()} className="px-5 py-4 rounded-none bg-slate-100 border border-slate-200 hover:bg-slate-200 transition-colors">
-                              <SkipForward size={18} className="text-slate-500" />
+                            <button onClick={() => skipQuestion()} className="px-5 py-4 rounded-none bg-white border border-slate-200 hover:bg-white transition-colors">
+                              <SkipForward size={18} className="text-slate-600" />
                             </button>
                           )}
                         </div>
@@ -2254,17 +2268,17 @@ export default function LessonRunnerEngine() {
                     )}
 
                     {feedback && (
-                      <div className={`mt-8 p-6 rounded-none border-l-4 animate-in slide-in-from-bottom-2 duration-300 ${feedback.isCorrect ? 'bg-amber-50 border-amber-600 text-amber-900' : 'bg-red-50 border-red-600 text-red-900'}`}>
+                      <div className={`mt-8 p-6 rounded-none border-l-4 animate-in slide-in-from-bottom-2 duration-300 ${feedback.isCorrect ? 'bg-[#D4AF37]/10 border-amber-600 text-amber-900' : 'bg-[#D4AF37]/10 border-[#D4AF37]/30 text-[#D4AF37]'}`}>
                         <div className="flex items-center gap-3 mb-4">
-                          {feedback.isCorrect ? <CheckCircle2 size={24} className="text-amber-600" /> : <XIcon size={24} className="text-red-600" />}
-                          <h3 className={`text-[10px] font-black uppercase tracking-[0.3em] ${feedback.isCorrect ? 'text-amber-800' : 'text-red-800'}`}>{feedback.isCorrect ? "Sync Correct" : "Sync Error"}</h3>
+                          {feedback.isCorrect ? <CheckCircle2 size={24} className="text-[#D4AF37]" /> : <XIcon size={24} className="text-[#D4AF37]" />}
+                          <h3 className={`text-[10px] font-black uppercase tracking-[0.3em] ${feedback.isCorrect ? 'text-[#D4AF37]' : 'text-[#D4AF37]'}`}>{feedback.isCorrect ? "Sync Correct" : "Sync Error"}</h3>
                         </div>
                         
                         {/* 1. MOSTRAR RESPUESTA CORRECTA CON ALTO CONTRASTE */}
                         {!feedback.isCorrect && feedback.correctAnswer && (
                           <div className="mb-4 p-4 bg-white/70 border border-red-200 text-[11px] font-bold uppercase tracking-widest rounded-none">
-                            <span className="text-slate-500 block mb-1">Respuesta Correcta:</span>
-                            <span className="text-red-700 font-extrabold text-sm block">{feedback.correctAnswer}</span>
+                            <span className="text-slate-600 block mb-1">Respuesta Correcta:</span>
+                            <span className="text-[#D4AF37] font-extrabold text-sm block">{feedback.correctAnswer}</span>
                           </div>
                         )}
 
@@ -2276,7 +2290,7 @@ export default function LessonRunnerEngine() {
                           </div>
                         )}
 
-                        <button onClick={nextQuestionOrStage} className={`w-full mt-6 py-4 rounded-none font-black text-[10px] uppercase tracking-[0.3em] transition-all ${feedback.isCorrect ? 'bg-amber-600 hover:bg-amber-700 text-white shadow-md' : 'bg-red-600 hover:bg-red-700 text-white shadow-md'}`}>
+                        <button onClick={nextQuestionOrStage} className={`w-full mt-6 py-4 rounded-none font-black text-[10px] uppercase tracking-[0.3em] transition-all ${feedback.isCorrect ? 'bg-[#D4AF37]/20 hover:bg-amber-700 text-slate-900 shadow-none' : 'bg-[#D4AF37]/20 hover:bg-red-700 text-slate-900 shadow-none'}`}>
                           PROCESAR SIGUIENTE
                         </button>
                       </div>
@@ -2290,9 +2304,9 @@ export default function LessonRunnerEngine() {
 
         {currentStage.type === 'practice_chat' && (
           <div className="max-w-3xl w-full text-center mt-20">
-            <h2 className={`text-2xl font-bold ${isPro ? 'text-white' : 'text-slate-900'}`}>Modo Conversación</h2>
-            <p className="text-slate-500 mb-6">Esta sección requiere el módulo de voz activado.</p>
-            <button onClick={nextStage} className="bg-blue-600 text-white px-6 py-2 rounded-lg">
+            <h2 className={`text-2xl font-bold ${isPro ? 'text-slate-900' : 'text-slate-900'}`}>Modo Conversación</h2>
+            <p className="text-slate-600 mb-6">Esta sección requiere el módulo de voz activado.</p>
+            <button onClick={nextStage} className="bg-[#D4AF37]/20 text-slate-900 px-6 py-2 rounded-none">
               Saltar por ahora
             </button>
           </div>

@@ -1,602 +1,94 @@
 {
   "id": "fr-b1-24",
-  "title": "Negociaciones de Contrato",
+  "title": "Les Doubles Pronoms",
+  "version": "4.0-ARTISAN",
   "level": "B1",
-  "description": "Revisión de términos clave en contratos.",
-  "total_xp": 300,
-  "difficulty": "medium",
-  "tags": [
-    "b1",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Pronouns", "Object Pronouns"],
+  "completion_message": "¡Felicidades! Has dominado una de las estructuras más temidas del francés. Tu agilidad mental con los pronombres es digna de un hablante nativo.",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Negociaciones de Contrato",
+      "title": "El Orden de los Factores (B1)",
       "parts": [
         {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau B1 • Leçon B1-24 de 200\nSujet: Negociaciones de Contrato\n\nConcept Clé:\n☞ 'CONTRAT'\n\n[Point Grammatical - Enfoque Gramatical]\n- L'utilisation des verbes modaux professionnels : Devoir, Pouvoir et Vouloir ('nous devons allouer contrat').\\n- Les pronoms compléments (en, y) pour éviter les répétitions dans vos e-mails : 'Nous y pensons pour contrat'.\\n- Clé Didactique : L'expression de l'obligation modérée et de la possibilité en milieu corporatif.",
-          "audio": "Bienvenue à la leçon B1-24 sur Negociaciones de Contrato. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : contrat."
+          "visual": "Los Dobles Pronombres (COI + COD)\n\n¿Cómo dices 'Yo te lo doy' en francés? Tienes dos pronombres: 'te' (A ti) y 'lo' (El objeto). Ambos van antes del verbo, pero el orden es ESTRICTO.\n\nREGLA 1 (Me, Te, Nous, Vous):\nEstos siempre van PRIMERO, antes de (Le, La, Les).\nEj: Tu me le donnes. (Tú me lo das). [ME + LE + Verbo].\nEj: Il nous les montre. (Él nos los muestra). [NOUS + LES + Verbo].",
+          "audio": "En francés, cuando quieres reemplazar a una persona y a un objeto al mismo tiempo, los pronombres se apilan antes del verbo. Por ejemplo, en español decimos 'Yo TE LO doy'. 'Te' es a ti, y 'Lo' es el objeto. En francés, existe una jerarquía estricta. La primera regla de oro es que los pronombres 'Me', 'Te', 'Nous' y 'Vous' son como clientes VIP: siempre entran primero. Entonces, si quieres decir 'Él me lo da', pones primero 'Me', luego 'Le', y luego el verbo. Queda: 'Il ME LE donne'. Si quieres decir 'Ella nos los muestra', pones primero 'Nous', luego 'Les', y queda: 'Elle NOUS LES montre'. ¡Los VIP siempre van primero!"
         },
         {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'contrat' (Traducción/Uso: Revisión de términos clave en contratos.)\n- Application Pratique : 'Nous devons intégrer contrat pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : Prononcez bien le 's' final dans les mots de liaison comme 'nous devons' devant une voyelle.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : contrat. Répétez après moi : contrat."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Au niveau B1, structurez vos arguments avec des connecteurs logiques formels ('cependant', 'par conséquent').\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
+          "visual": "REGLA 2 (Lui, Leur):\nCuando hablas de una TERCERA PERSONA (a él/ella, a ellos), el orden se INVIERTE. (Le, La, Les) van PRIMERO, y (Lui, Leur) van DESPUÉS.\nEj: Je le lui donne. (Yo se lo doy [a él/ella]). [LE + LUI + Verbo].\nEj: Tu la leur prêtes. (Tú se la prestas [a ellos]). [LA + LEUR + Verbo].\n\nResumen visual del orden:\n1. (Me, Te, Se, Nous, Vous)\n2. (Le, La, Les, L')\n3. (Lui, Leur)\n4. (Y)\n5. (En)",
+          "audio": "La segunda regla es donde casi todo el mundo se equivoca. Cuando hablas de una TERCERA persona ('A él', 'A ella' o 'A ellos'), es decir, cuando usas los pronombres 'Lui' o 'Leur', estos pierden su estatus VIP. ¡Se van al final de la fila! Entonces, la cosa (Le, La, Les) va PRIMERO. Por ejemplo, en español decimos 'Yo se lo doy', y 'se' va primero. En francés, ¡es al revés! Primero pones el objeto 'Le' y luego la persona 'Lui'. Dices: 'Je LE LUI donne'. Para decir 'Tú se la prestas a ellos', pones primero el objeto femenino 'La', y luego 'Leur'. Queda: 'Tu LA LEUR prêtes'. Es como decir: Yo la cosa a ellos presto. ¡Acostumbra tu cerebro a este ritmo!"
         }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el orden correcto de los pronombres dobles antes del verbo.",
       "questions": [
-        {
-          "id": "fr-b1-24-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"contrat\" dans le contexte de \"Negociaciones de Contrato\" ?",
-          "options": [
-            "Le concept professionnel principal de contrat utilisé dans Negociaciones de Contrato.",
-            "Un terme familier à éviter dans Negociaciones de Contrato.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Negociaciones de Contrato."
-          ],
-          "correct_answer": "Le concept professionnel principal de contrat utilisé dans Negociaciones de Contrato.",
-          "explanation": "Comprendre la définition de \"contrat\" est fondamental pour maîtriser \"Negociaciones de Contrato\"."
-        },
-        {
-          "id": "fr-b1-24-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"contrat\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Negociaciones de Contrato\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"contrat\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Negociaciones de Contrato\" aux parties prenantes.",
-          "explanation": "Aborder \"contrat\" dans les présentations professionnelles améliore la communication globale concernant \"Negociaciones de Contrato\"."
-        },
-        {
-          "id": "fr-b1-24-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Negociaciones de Contrato\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"contrat\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"contrat\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"contrat\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"contrat\" sont los piliers d'une exécution réussie de \"Negociaciones de Contrato\"."
-        },
-        {
-          "id": "fr-b1-24-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Negociaciones de Contrato\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"contrat\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"contrat\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"contrat\" conduit souvent à des résultats inefficaces dans \"Negociaciones de Contrato\"."
-        },
-        {
-          "id": "fr-b1-24-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"contrat\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"contrat\" adapté à l'environnement de \"Negociaciones de Contrato\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"contrat\" adapté à l'environnement de \"Negociaciones de Contrato\".",
-          "explanation": "Traduire ou adapter \"contrat\" nécessite de comprendre son application commerciale pratique dans \"Negociaciones de Contrato\"."
-        },
-        {
-          "id": "fr-b1-24-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"contrat\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Negociaciones de Contrato\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Negociaciones de Contrato\".",
-          "explanation": "Utiliser \"contrat\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-b1-24-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Negociaciones de Contrato\", comment un cadre doit-il présenter \"contrat\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"contrat\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-b1-24-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"contrat\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"contrat\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"contrat\".",
-          "explanation": "Définir les jalons liés à \"contrat\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-b1-24-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Negociaciones de Contrato\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"contrat\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"contrat\".",
-          "explanation": "Les mots professionnels comme \"contrat\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-b1-24-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"contrat\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"contrat\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "frb1-24-q1", "type": "quiz_choice", "question": "Según la jerarquía, si tienes los pronombres 'Me' y 'Le', ¿cuál va primero?", "options": ["Me", "Le"], "correct_answer": "Me", "explanation": "Me, Te, Nous, Vous siempre van antes que Le, La, Les." },
+        { "id": "frb1-24-q2", "type": "quiz_choice", "question": "Il ____ donne. (Él ME LO da - 'le').", "options": ["me le", "le me", "moi le", "le moi"], "correct_answer": "me le", "explanation": "Il ME LE donne. (Persona 1ª/2ª antes que el objeto)." },
+        { "id": "frb1-24-q3", "type": "quiz_choice", "question": "Tu ____ montres. (Tú NOS LOS muestras - 'les').", "options": ["nous les", "les nous", "nous leur", "leur nous"], "correct_answer": "nous les", "explanation": "Tu NOUS LES montres." },
+        { "id": "frb1-24-q4", "type": "quiz_choice", "question": "Según la jerarquía, si tienes los pronombres 'Lui' (a él) y 'La' (la cosa), ¿cuál va primero?", "options": ["La", "Lui"], "correct_answer": "La", "explanation": "Lui y Leur (3ª persona COI) siempre van DESPUÉS de Le, La, Les." },
+        { "id": "frb1-24-q5", "type": "quiz_choice", "question": "Je ____ donne. (Yo SE LO doy [a él]).", "options": ["le lui", "lui le", "se le", "le se"], "correct_answer": "le lui", "explanation": "Je LE LUI donne. (Objeto antes de 3ª persona)." },
+        { "id": "frb1-24-q6", "type": "quiz_choice", "question": "Nous ____ prêtons. (Nosotros SE LA prestamos [a ellos - 'la', 'leur']).", "options": ["la leur", "leur la", "les leur", "leur les"], "correct_answer": "la leur", "explanation": "Nous LA LEUR prêtons." },
+        { "id": "frb1-24-q7", "type": "quiz_choice", "question": "Elle ____ achète. (Ella TE LO compra - 'te', 'le').", "options": ["te l'", "l'te", "te le", "le te"], "correct_answer": "te l'", "explanation": "Te le achète -> le se contrae por la vocal -> te l'achète." },
+        { "id": "frb1-24-q8", "type": "quiz_choice", "question": "Il a écrit la lettre et il ____ a envoyée. (SE LA ha enviado [a ella - 'la', 'lui']).", "options": ["la lui", "lui la", "le lui", "lui le"], "correct_answer": "la lui", "explanation": "La lettre (la) a ella (lui). -> la lui." },
+        { "id": "frb1-24-q9", "type": "quiz_choice", "question": "Est-ce que tu me prêtes ton livre ? Oui, je ____ prête. (TE LO presto).", "options": ["te le", "le te", "me le", "le me"], "correct_answer": "te le", "explanation": "Te le." },
+        { "id": "frb1-24-q10", "type": "quiz_choice", "question": "Est-ce que vous leur expliquez la règle ? Oui, nous ____ expliquons. (SE LA explicamos [a ellos]).", "options": ["la leur", "leur la", "les leur", "leur les"], "correct_answer": "la leur", "explanation": "La règle (la) a ellos (leur). -> la leur." },
+        { "id": "frb1-24-q11", "type": "quiz_choice", "question": "Il veut nous donner les clés. Il veut ____ donner. (NOS LAS quiere dar).", "options": ["nous les", "les nous", "nous leur", "leur nous"], "correct_answer": "nous les", "explanation": "Antes del verbo en infinitivo: nous les." },
+        { "id": "frb1-24-q12", "type": "quiz_choice", "question": "Je vais lui raconter l'histoire. Je vais ____ raconter. (SE LA voy a contar).", "options": ["la lui", "lui la", "le lui", "lui le"], "correct_answer": "la lui", "explanation": "L'histoire (la) a él (lui) -> la lui." },
+        { "id": "frb1-24-q13", "type": "quiz_choice", "question": "Les professeurs ____ expliquent. (OS LO explican [a vosotros - 'vous', 'le']).", "options": ["vous l'", "l'vous", "vous le", "le vous"], "correct_answer": "vous l'", "explanation": "Vous le expliquent -> vous l'expliquent (contracción)." },
+        { "id": "frb1-24-q14", "type": "quiz_choice", "question": "¿Es correcta la frase 'Je lui le donne'?", "options": ["Falso", "Verdadero"], "correct_answer": "Falso", "explanation": "El orden es objeto (le) y luego 3ª persona (lui). Lo correcto es 'Je le lui donne'." },
+        { "id": "frb1-24-q15", "type": "quiz_choice", "question": "Tu as offert les fleurs à ta mère ? Oui, je ____ ai offertes. (SE LAS he ofrecido).", "options": ["les lui", "lui les", "les leur", "leur les"], "correct_answer": "les lui", "explanation": "Las flores (les) a ella (lui). -> les lui." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe los dos pronombres en el orden correcto.",
       "questions": [
-        {
-          "id": "fr-b1-24-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"contrat\" (Exercice 1) :",
-          "parts": [
-            "implémenter",
-            "votre",
-            "contrat",
-            "pour",
-            "optimiser",
-            "le",
-            "travail.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "implémenter",
-            "votre",
-            "contrat",
-            "pour",
-            "optimiser",
-            "le",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"contrat\"."
-        },
-        {
-          "id": "fr-b1-24-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"contrat\" (Exercice 2) :",
-          "parts": [
-            "actuelle",
-            "privilégie",
-            "votre",
-            "contrat",
-            "pour",
-            "le",
-            "client.",
-            "Notre",
-            "stratégie"
-          ],
-          "correct_order": [
-            "Notre",
-            "stratégie",
-            "actuelle",
-            "privilégie",
-            "votre",
-            "contrat",
-            "pour",
-            "le",
-            "client."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"contrat\"."
-        },
-        {
-          "id": "fr-b1-24-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"contrat\" (Exercice 3) :",
-          "parts": [
-            "coordonner",
-            "avec",
-            "l'équipe",
-            "concernant",
-            "notre",
-            "contrat.",
-            "Veuillez",
-            "vous"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "vous",
-            "coordonner",
-            "avec",
-            "l'équipe",
-            "concernant",
-            "notre",
-            "contrat."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"contrat\"."
-        },
-        {
-          "id": "fr-b1-24-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"contrat\" (Exercice 4) :",
-          "parts": [
-            "réunion",
-            "rapide",
-            "pour",
-            "discuter",
-            "de",
-            "notre",
-            "contrat.",
-            "Planifions",
-            "une"
-          ],
-          "correct_order": [
-            "Planifions",
-            "une",
-            "réunion",
-            "rapide",
-            "pour",
-            "discuter",
-            "de",
-            "notre",
-            "contrat."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"contrat\"."
-        },
-        {
-          "id": "fr-b1-24-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"contrat\" (Exercice 5) :",
-          "parts": [
-            "de",
-            "projet",
-            "demande",
-            "un",
-            "rapport",
-            "sur",
-            "notre",
-            "contrat.",
-            "Le",
-            "chef"
-          ],
-          "correct_order": [
-            "Le",
-            "chef",
-            "de",
-            "projet",
-            "demande",
-            "un",
-            "rapport",
-            "sur",
-            "notre",
-            "contrat."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"contrat\"."
-        },
-        {
-          "id": "fr-b1-24-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"contrat\" (Exercice 6) :",
-          "parts": [
-            "analyser",
-            "comment",
-            "notre",
-            "contrat",
-            "influence",
-            "le",
-            "budget.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "analyser",
-            "comment",
-            "notre",
-            "contrat",
-            "influence",
-            "le",
-            "budget."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"contrat\"."
-        },
-        {
-          "id": "fr-b1-24-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"contrat\" (Exercice 7) :",
-          "parts": [
-            "le",
-            "calendrier",
-            "pour",
-            "livrer",
-            "notre",
-            "contrat ?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "le",
-            "calendrier",
-            "pour",
-            "livrer",
-            "notre",
-            "contrat ?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"contrat\"."
-        },
-        {
-          "id": "fr-b1-24-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"contrat\" (Exercice 8) :",
-          "parts": [
-            "s'aligne",
-            "avec",
-            "les",
-            "objectifs",
-            "de",
-            "notre",
-            "contrat.",
-            "Cette",
-            "initiative"
-          ],
-          "correct_order": [
-            "Cette",
-            "initiative",
-            "s'aligne",
-            "avec",
-            "les",
-            "objectifs",
-            "de",
-            "notre",
-            "contrat."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"contrat\"."
-        },
-        {
-          "id": "fr-b1-24-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"contrat\" (Exercice 9) :",
-          "parts": [
-            "décidé",
-            "d'externaliser",
-            "la",
-            "gestion",
-            "de",
-            "notre",
-            "contrat.",
-            "Ils",
-            "ont"
-          ],
-          "correct_order": [
-            "Ils",
-            "ont",
-            "décidé",
-            "d'externaliser",
-            "la",
-            "gestion",
-            "de",
-            "notre",
-            "contrat."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"contrat\"."
-        },
-        {
-          "id": "fr-b1-24-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"contrat\" (Exercice 10) :",
-          "parts": [
-            "nous",
-            "concentrer",
-            "sur",
-            "l'amélioration",
-            "de",
-            "notre",
-            "contrat.",
-            "Nous",
-            "devrions"
-          ],
-          "correct_order": [
-            "Nous",
-            "devrions",
-            "nous",
-            "concentrer",
-            "sur",
-            "l'amélioration",
-            "de",
-            "notre",
-            "contrat."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"contrat\"."
-        }
+        { "id": "frb1-24-f1", "type": "fill_input", "question": "Il ____ donne. (ME LO da).", "correct_answer": "me le", "explanation": "me le" },
+        { "id": "frb1-24-f2", "type": "fill_input", "question": "Tu ____ donnes. (ME LA das).", "correct_answer": "me la", "explanation": "me la" },
+        { "id": "frb1-24-f3", "type": "fill_input", "question": "Je ____ donne. (SE LO doy [a él]).", "correct_answer": "le lui", "explanation": "le lui (el objeto primero)" },
+        { "id": "frb1-24-f4", "type": "fill_input", "question": "Je ____ donne. (SE LA doy [a ella]).", "correct_answer": "la lui", "explanation": "la lui" },
+        { "id": "frb1-24-f5", "type": "fill_input", "question": "Nous ____ prêtons. (SE LOS prestamos [a ellos]).", "correct_answer": "les leur", "explanation": "les leur" },
+        { "id": "frb1-24-f6", "type": "fill_input", "question": "Il ____ montre. (NOS LOS muestra).", "correct_answer": "nous les", "explanation": "nous les" },
+        { "id": "frb1-24-f7", "type": "fill_input", "question": "Elle ____ vendent. (OS LO venden [a vosotros]).", "correct_answer": "vous le", "explanation": "vous le" },
+        { "id": "frb1-24-f8", "type": "fill_input", "question": "Tu as le livre ? Oui, je ____ prête. (TE LO presto).", "correct_answer": "te le", "explanation": "te le" },
+        { "id": "frb1-24-f9", "type": "fill_input", "question": "Tu prêtes le livre à Marc ? Oui, je ____ prête. (SE LO presto).", "correct_answer": "le lui", "explanation": "le lui" },
+        { "id": "frb1-24-f10", "type": "fill_input", "question": "Vous donnez la voiture aux amis ? Oui, nous ____ donnons. (SE LA damos).", "correct_answer": "la leur", "explanation": "la leur" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-b1-24-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"contrat\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"contrat\" en détail.",
-            "Une autre déclaration sur notre \"contrat\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"contrat\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"contrat\" en réunion."
-        },
-        {
-          "id": "fr-b1-24-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"contrat\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"contrat\" ?",
-            "Une autre déclaration sur notre \"contrat\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"contrat\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"contrat\" en réunion."
-        },
-        {
-          "id": "fr-b1-24-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"contrat\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"contrat\" cette année.",
-            "Une autre déclaration sur notre \"contrat\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"contrat\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"contrat\" en réunion."
-        },
-        {
-          "id": "fr-b1-24-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"contrat\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"contrat\".",
-            "Une autre déclaration sur notre \"contrat\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"contrat\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"contrat\" en réunion."
-        },
-        {
-          "id": "fr-b1-24-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"contrat\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"contrat\".",
-            "Une autre déclaration sur notre \"contrat\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"contrat\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"contrat\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Double Pronoun Match",
+      "pairs": [
+        {"id": "frb1-24-p1", "source": "Je me le...", "target": "Me lo..."},
+        {"id": "frb1-24-p2", "source": "Tu me la...", "target": "Me la..."},
+        {"id": "frb1-24-p3", "source": "Je te les...", "target": "Te los/las..."},
+        {"id": "frb1-24-p4", "source": "Il nous le...", "target": "Nos lo..."},
+        {"id": "frb1-24-p5", "source": "Je le lui...", "target": "Se lo (a él/ella)"},
+        {"id": "frb1-24-p6", "source": "Je la lui...", "target": "Se la (a él/ella)"},
+        {"id": "frb1-24-p7", "source": "Je les lui...", "target": "Se los (a él/ella)"},
+        {"id": "frb1-24-p8", "source": "Je le leur...", "target": "Se lo (a ellos)"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica el orden de los pronombres.",
       "questions": [
-        {
-          "id": "fr-b1-24-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"con____\" (Indice : désigne \"contrat\")",
-          "correct_answers": [
-            "contrat",
-            "Contrat"
-          ],
-          "hints": [
-            "Commence par 'con'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"contrat\"."
-        },
-        {
-          "id": "fr-b1-24-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Notre stratégie actuelle concernant notre contrat dépend ____ l'équipe.\" (de / par)",
-          "correct_answers": [
-            "de",
-            "d'"
-          ],
-          "hints": [
-            "Préposition après le verbe dépendre"
-          ],
-          "explanation": "Le verbe dépendre se construit avec la préposition de."
-        },
-        {
-          "id": "fr-b1-24-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons ____ nos ressources pour améliorer notre contrat.\" (allouer / ignorer)",
-          "correct_answers": [
-            "allouer",
-            "Allouer"
-          ],
-          "hints": [
-            "Distribuer ou attribuer des ressources"
-          ],
-          "explanation": "Allouer des ressources signifie les dédier stratégiquement."
-        },
-        {
-          "id": "fr-b1-24-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Le responsable de département a demandé une ____ sur notre contrat.\" (mise à jour / pause)",
-          "correct_answers": [
-            "mise à jour",
-            "analyse",
-            "évaluation"
-          ],
-          "hints": [
-            "Dernières informations sur l'état d'avancement"
-          ],
-          "explanation": "Une 'mise à jour' est essentielle pour suivre le statut d'un projet."
-        },
-        {
-          "id": "fr-b1-24-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Établir un cadre ____ pour notre contrat est notre priorité.\" (solide / simple)",
-          "correct_answers": [
-            "solide"
-          ],
-          "hints": [
-            "Robuste, stable et bien défini"
-          ],
-          "explanation": "Un cadre 'solide' prévient les risques et dérives futures."
-        }
+        { "id": "frb1-24-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il me le donne", "options": ["Il me le donne", "Il le lui donne", "Il te le donne", "Il me la donne"], "correct_answer": "Il me le donne", "explanation": "Audio dice: Il me le donne (Él me lo da)." },
+        { "id": "frb1-24-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je le lui prête", "options": ["Je le lui prête", "Je la lui prête", "Je te le prête", "Je les lui prête"], "correct_answer": "Je le lui prête", "explanation": "Audio dice: Je le lui prête (Yo se lo presto a él)." },
+        { "id": "frb1-24-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Tu nous les montres", "options": ["Tu nous les montres", "Tu me les montres", "Tu vous les montres", "Tu les leur montres"], "correct_answer": "Tu nous les montres", "explanation": "Audio dice: Tu nous les montres (Tú nos los muestras)." },
+        { "id": "frb1-24-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Elle la leur envoie", "options": ["Elle la leur envoie", "Elle le leur envoie", "Elle les leur envoie", "Elle la lui envoie"], "correct_answer": "Elle la leur envoie", "explanation": "Audio dice: Elle la leur envoie (Ella se la envía a ellos)." },
+        { "id": "frb1-24-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je te les achète", "options": ["Je te les achète", "Je me les achète", "Je le lui achète", "Je les lui achète"], "correct_answer": "Je te les achète", "explanation": "Audio dice: Je te les achète." }
       ]
     }
   ]

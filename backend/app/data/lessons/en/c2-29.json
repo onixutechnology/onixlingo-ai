@@ -1,0 +1,101 @@
+{
+  "id": "c2-29",
+  "title": "Diplomacy: Hedging & Softening",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Diplomacy", "Corporate", "Soft Skills"],
+  "completion_message": "¡Excelente! 'Hedging' y 'Softening' son las herramientas definitivas de un líder diplomático. Saber cómo decir 'no' u opinar de forma suave pero firme garantiza que puedas navegar cualquier conflicto corporativo sin crear enemigos.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Diplomacia Corporativa: Hedging & Softening (C2)",
+      "parts": [
+        { "visual": "En reuniones de alto nivel, rara vez decimos las cosas de forma cruda o directa. Usamos 'Hedging' (mitigar) y 'Softening' (suavizar) para expresar desacuerdo o dar órdenes sin sonar agresivos. \n\n1. It appears/seems to be (Parece ser): \nEn vez de: This is a mistake. \nSoftened: It SEEMS TO BE a slight oversight. \n\n2. I'm not entirely convinced (No estoy totalmente convencido): \nEn vez de: I disagree. \nSoftened: I'M NOT ENTIRELY CONVINCED that this is the best approach. \n\n3. With all due respect (Con el debido respeto): \nSe usa antes de un desacuerdo formal. \nEj: WITH ALL DUE RESPECT, I must decline.", "audio": "Welcome to Corporate Diplomacy, Hedging and Softening. In high-level meetings, we rarely state things bluntly. We use hedging to soften our statements and avoid sounding aggressive. Number 1: It appears or It seems to be. Instead of saying 'This is a mistake', say 'It SEEMS TO BE a slight oversight'. Number 2: I'm not entirely convinced. Instead of 'I disagree', say 'I'm NOT ENTIRELY CONVINCED that this is the best approach'. Number 3: With all due respect. Use this before a formal disagreement. For example: WITH ALL DUE RESPECT, I must decline." },
+        { "visual": "4. We might want to consider (Podríamos querer considerar): \nEn vez de: Do this now. \nSoftened: WE MIGHT WANT TO CONSIDER revising the budget. \n\n5. To some extent / In a way (Hasta cierto punto / En cierto modo): \nEn vez de: You are wrong. \nSoftened: You are right TO SOME EXTENT, but there are other factors. \n\n6. Would you mind...? / I was wondering if... (¿Te importaría...? / Me preguntaba si...): \nEn vez de: Send me the report. \nSoftened: I WAS WONDERING IF you could send me the report. \n\n7. A slight / A bit of a (Un ligero / Un poco de): \nEn vez de: This is a huge problem. \nSoftened: We have A SLIGHT issue with the timeline.", "audio": "Number 4: We might want to consider. Instead of giving a direct order like 'Do this now', say 'WE MIGHT WANT TO CONSIDER revising the budget'. Number 5: To some extent, or In a way. Instead of saying 'You are wrong', say 'You are right TO SOME EXTENT, but there are other factors'. Number 6: I was wondering if. Instead of demanding 'Send me the report', soften it to 'I WAS WONDERING IF you could send me the report'. Number 7: A slight, or A bit of a. Instead of 'This is a huge problem', say 'We have A SLIGHT issue with the timeline'." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la opción más diplomática.",
+      "questions": [
+        { "id": "c2-29-q1", "type": "quiz_choice", "question": "Direct: This is a terrible idea. -> Diplomatic: I'm not entirely ____ that this is the best approach.", "options": ["convinced", "convincing", "believing", "surely"], "correct_answer": "convinced", "explanation": "I'm not entirely convinced = no estoy totalmente convencido." },
+        { "id": "c2-29-q2", "type": "quiz_choice", "question": "Direct: You made a mistake. -> Diplomatic: It ____ that there is a slight error here.", "options": ["appears", "looks", "makes", "shows"], "correct_answer": "appears", "explanation": "It appears (or it seems) = parece." },
+        { "id": "c2-29-q3", "type": "quiz_choice", "question": "Direct: Give me the file. -> Diplomatic: I was ____ if you could send me the file.", "options": ["wondering", "thinking", "asking", "saying"], "correct_answer": "wondering", "explanation": "I was wondering if = me preguntaba si (muy cortés)." },
+        { "id": "c2-29-q4", "type": "quiz_choice", "question": "Direct: You are wrong. -> Diplomatic: With all ____ respect, I see things differently.", "options": ["due", "full", "much", "total"], "correct_answer": "due", "explanation": "With all due respect = con el debido respeto." },
+        { "id": "c2-29-q5", "type": "quiz_choice", "question": "Direct: Change the strategy. -> Diplomatic: We might ____ to consider changing the strategy.", "options": ["want", "need", "have", "must"], "correct_answer": "want", "explanation": "We might want to consider = podríamos querer considerar." },
+        { "id": "c2-29-q6", "type": "quiz_choice", "question": "Direct: We have a huge problem. -> Diplomatic: We seem to have a ____ issue with the timeline.", "options": ["slight", "small", "tiny", "little"], "correct_answer": "slight", "explanation": "A slight issue = un ligero problema." },
+        { "id": "c2-29-q7", "type": "quiz_choice", "question": "Direct: I hate this design. -> Diplomatic: I'm not a ____ fan of this design.", "options": ["huge", "big", "great", "major"], "correct_answer": "huge", "explanation": "I'm not a huge fan (o big fan) = no soy muy fan / no me gusta mucho." },
+        { "id": "c2-29-q8", "type": "quiz_choice", "question": "Direct: Your numbers are completely wrong. -> Diplomatic: You are right to some ____, but we need to verify the data.", "options": ["extent", "amount", "level", "degree"], "correct_answer": "extent", "explanation": "To some extent = hasta cierto punto." },
+        { "id": "c2-29-q9", "type": "quiz_choice", "question": "Direct: I refuse. -> Diplomatic: Unfortunately, I'm not in a ____ to agree to that right now.", "options": ["position", "place", "state", "situation"], "correct_answer": "position", "explanation": "I'm not in a position to = no estoy en posición de." },
+        { "id": "c2-29-q10", "type": "quiz_choice", "question": "Direct: Start the meeting now. -> Diplomatic: ____ we get started?", "options": ["Shall", "Must", "Do", "Will"], "correct_answer": "Shall", "explanation": "Shall we = empezamos? / deberíamos empezar?" },
+        { "id": "c2-29-q11", "type": "quiz_choice", "question": "Direct: That's impossible. -> Diplomatic: That might be somewhat ____ to achieve.", "options": ["difficult", "hard", "tough", "bad"], "correct_answer": "difficult", "explanation": "Somewhat difficult = un tanto difícil (en vez de 'impossible')." },
+        { "id": "c2-29-q12", "type": "quiz_choice", "question": "Direct: We are delaying the launch. -> Diplomatic: There might be a bit of a ____ with the launch.", "options": ["delay", "stop", "pause", "wait"], "correct_answer": "delay", "explanation": "A bit of a delay = un poco de retraso." },
+        { "id": "c2-29-q13", "type": "quiz_choice", "question": "Direct: I don't know. -> Diplomatic: Let me look ____ that and get back to you.", "options": ["into", "for", "at", "through"], "correct_answer": "into", "explanation": "Look into it = investigarlo (esquiva decir 'no sé')." },
+        { "id": "c2-29-q14", "type": "quiz_choice", "question": "Direct: You're confusing me. -> Diplomatic: I'm not entirely ____ on what you mean.", "options": ["clear", "sure", "certain", "right"], "correct_answer": "clear", "explanation": "I'm not entirely clear = no tengo del todo claro." },
+        { "id": "c2-29-q15", "type": "quiz_choice", "question": "Direct: We won't pay that much. -> Diplomatic: That figure is a little ____ our budget.", "options": ["outside", "above", "over", "beyond"], "correct_answer": "outside", "explanation": "Outside our budget = fuera de nuestro presupuesto." },
+        { "id": "c2-29-q16", "type": "quiz_choice", "question": "Direct: Answer me today. -> Diplomatic: I would ____ a response by the end of the day.", "options": ["appreciate", "like", "want", "need"], "correct_answer": "appreciate", "explanation": "I would appreciate = apreciaría." },
+        { "id": "c2-29-q17", "type": "quiz_choice", "question": "Direct: No. -> Diplomatic: I'm ____ that won't be possible.", "options": ["afraid", "sorry", "sad", "unhappy"], "correct_answer": "afraid", "explanation": "I'm afraid (me temo) suaviza fuertemente un rechazo." },
+        { "id": "c2-29-q18", "type": "quiz_choice", "question": "Direct: You failed to mention this. -> Diplomatic: This detail seems to have been ____.", "options": ["overlooked", "forgotten", "missed", "dropped"], "correct_answer": "overlooked", "explanation": "Overlooked = pasado por alto (suaviza la culpa usando pasiva)." },
+        { "id": "c2-29-q19", "type": "quiz_choice", "question": "Direct: This project is a disaster. -> Diplomatic: The project hasn't exactly gone according to ____.", "options": ["plan", "design", "rule", "law"], "correct_answer": "plan", "explanation": "Hasn't gone according to plan = no ha ido exactamente según lo planeado." },
+        { "id": "c2-29-q20", "type": "quiz_choice", "question": "Direct: Tell me the price. -> Diplomatic: Could you give me a rough ____ of the costs?", "options": ["estimate", "guess", "number", "idea"], "correct_answer": "estimate", "explanation": "A rough estimate = un presupuesto/estimación aproximada." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra diplomática.",
+      "questions": [
+        { "id": "c2-29-f1", "type": "fill_input", "question": "It ____ to be a mistake. (Parece con A)", "correct_answer": "appears", "explanation": "appears." },
+        { "id": "c2-29-f2", "type": "fill_input", "question": "I'm not entirely ____. (Convencido con C)", "correct_answer": "convinced", "explanation": "convinced." },
+        { "id": "c2-29-f3", "type": "fill_input", "question": "With all ____ respect. (Debido con D)", "correct_answer": "due", "explanation": "due." },
+        { "id": "c2-29-f4", "type": "fill_input", "question": "We might ____ to consider... (Querer con W)", "correct_answer": "want", "explanation": "want." },
+        { "id": "c2-29-f5", "type": "fill_input", "question": "To some ____. (Hasta cierto punto con E)", "correct_answer": "extent", "explanation": "extent." },
+        { "id": "c2-29-f6", "type": "fill_input", "question": "I was ____ if... (Me preguntaba con W)", "correct_answer": "wondering", "explanation": "wondering." },
+        { "id": "c2-29-f7", "type": "fill_input", "question": "A ____ issue. (Ligero con S)", "correct_answer": "slight", "explanation": "slight." },
+        { "id": "c2-29-f8", "type": "fill_input", "question": "I'm not in a ____ to agree. (Posición con P)", "correct_answer": "position", "explanation": "position." },
+        { "id": "c2-29-f9", "type": "fill_input", "question": "I would ____ it. (Apreciarlo con A)", "correct_answer": "appreciate", "explanation": "appreciate." },
+        { "id": "c2-29-f10", "type": "fill_input", "question": "I'm ____ it won't be possible. (Me temo con A)", "correct_answer": "afraid", "explanation": "afraid." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Diplomacy Match",
+      "pairs": [
+        {"id": "c2-29-p1", "source": "It appears to be", "target": "Parece ser (en vez de 'es')"},
+        {"id": "c2-29-p2", "source": "I'm not entirely convinced", "target": "No estoy del todo convencido"},
+        {"id": "c2-29-p3", "source": "With all due respect", "target": "Con el debido respeto"},
+        {"id": "c2-29-p4", "source": "We might want to consider", "target": "Podríamos querer considerar"},
+        {"id": "c2-29-p5", "source": "To some extent", "target": "Hasta cierto punto"},
+        {"id": "c2-29-p6", "source": "I was wondering if", "target": "Me preguntaba si..."},
+        {"id": "c2-29-p7", "source": "A slight issue", "target": "Un ligero problema"},
+        {"id": "c2-29-p8", "source": "I'm not in a position to", "target": "No estoy en posición de..."},
+        {"id": "c2-29-p9", "source": "I would appreciate", "target": "Apreciaría..."},
+        {"id": "c2-29-p10", "source": "I'm afraid that", "target": "Me temo que (para rechazar)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase diplomática correcta.",
+      "questions": [
+        { "id": "c2-29-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It appears to be a mistake.", "options": ["It appears to be a mistake.", "It appears to have a mistake.", "He appears to be a mistake.", "It appeared to be a mistake."], "correct_answer": "It appears to be a mistake.", "explanation": "Audio exacto." },
+        { "id": "c2-29-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I'm not entirely convinced.", "options": ["I'm not entirely convinced.", "I am not entirely convinced.", "I was not entirely convinced.", "I'm not completely convinced."], "correct_answer": "I'm not entirely convinced.", "explanation": "Audio exacto." },
+        { "id": "c2-29-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "With all due respect, no.", "options": ["With all due respect, no.", "With all due respects, no.", "With my due respect, no.", "With some due respect, no."], "correct_answer": "With all due respect, no.", "explanation": "Audio exacto." },
+        { "id": "c2-29-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We might want to consider it.", "options": ["We might want to consider it.", "We may want to consider it.", "They might want to consider it.", "We might want to considered it."], "correct_answer": "We might want to consider it.", "explanation": "Audio exacto." },
+        { "id": "c2-29-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You are right to some extent.", "options": ["You are right to some extent.", "You are right to an extent.", "He is right to some extent.", "You were right to some extent."], "correct_answer": "You are right to some extent.", "explanation": "Audio exacto." },
+        { "id": "c2-29-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I was wondering if you could.", "options": ["I was wondering if you could.", "I was wondering if you can.", "I am wondering if you could.", "He was wondering if you could."], "correct_answer": "I was wondering if you could.", "explanation": "Audio exacto." },
+        { "id": "c2-29-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have a slight issue.", "options": ["We have a slight issue.", "We have a small issue.", "They have a slight issue.", "We had a slight issue."], "correct_answer": "We have a slight issue.", "explanation": "Audio exacto." },
+        { "id": "c2-29-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I'm not in a position to agree.", "options": ["I'm not in a position to agree.", "I am not in a position to agree.", "I'm not in the position to agree.", "I was not in a position to agree."], "correct_answer": "I'm not in a position to agree.", "explanation": "Audio exacto." },
+        { "id": "c2-29-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I would appreciate a reply.", "options": ["I would appreciate a reply.", "I will appreciate a reply.", "We would appreciate a reply.", "I would appreciate the reply."], "correct_answer": "I would appreciate a reply.", "explanation": "Audio exacto." },
+        { "id": "c2-29-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I'm afraid that is impossible.", "options": ["I'm afraid that is impossible.", "I am afraid that is impossible.", "I'm afraid it is impossible.", "I was afraid that is impossible."], "correct_answer": "I'm afraid that is impossible.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

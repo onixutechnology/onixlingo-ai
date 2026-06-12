@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-24",
+  "title": "Comer y Beber",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Verbs", "Food", "Culture"],
+  "completion_message": "¡Delicioso! Ahora sabes cómo invitar a la gente a comer y responder al saludo más icónico de China.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Sobreviviendo en China",
+      "parts": [
+        {
+          "visual": "Comer y Beber: 吃 (chī) y 喝 (hē)\n\nAmbos verbos llevan el radical de 'boca' (口) a la izquierda, porque obviamente usas la boca para ambas acciones.\nAmbos son de primer tono (alto y plano).\n\n- Comer: 吃 (chī).\n- Beber: 喝 (hē).\n\nVocabulario base:\n- Comida / Arroz cocido: 饭 (fàn).\n- Té: 茶 (chá).\n\nExpresiones clásicas:\n- Comer comida (Acción de comer): 吃饭 (chī fàn).\n- Beber té: 喝茶 (hē chá).\n- ¡Vamos a comer!: 我们吃饭吧 (Wǒmen chī fàn ba).",
+          "audio": "Es hora de aprender las dos habilidades más importantes para sobrevivir en cualquier país: comer y beber. El verbo comer se dice chī. Primer tono. Y el verbo beber se dice hē, también primer tono. Curiosamente, si miras ambos caracteres chinos, los dos tienen un cuadradito a la izquierda. Ese es el dibujo de una boca, lo cual tiene mucho sentido lógico. La comida en general, o el arroz, se dice fàn. Y el té se dice chá. Así que si le quieres sugerir a tus amigos ir a comer, usas la partícula 'ba' que aprendimos antes y dices: Wǒmen chī fàn ba. ¡Vamos a comer!"
+        },
+        {
+          "visual": "El Saludo Cultural: ¿Ya comiste?\n\nEn la cultura china, la comida es tan central que históricamente la gente no se saludaba diciendo '¿Cómo estás?'. Se saludaban preguntando si ya habías comido.\n\n- ¿Comiste? / ¿Has comido?: 你吃了吗？(Nǐ chī le ma?). Literalmente: ¿Tú comer + pasado + pregunta?\n\nPosibles respuestas:\n- Ya comí: 吃了 (Chī le).\n- No he comido: 没吃 (Méi chī).\n\nOjo: ¡Asegúrate de recordar que la negación del pasado NUNCA usa 'le'!",
+          "audio": "Aquí tienes un secreto cultural increíble. En China, la forma tradicional y más cálida de saludar a un vecino o a un amigo no es decir 'Hola, cómo estás'. Es preguntar si ya comieron. Se dice: Nǐ chī le ma. Nǐ es tú, chī es comer, le marca que la acción ya pasó, y ma hace la pregunta. Nǐ chī le ma. Si ya comiste, simplemente respondes 'Chī le'. Comido. Si tienes hambre y no has comido, respondes con nuestra negación de pasado: Méi chī. No he comido. Al responder Méi chī es muy probable que la persona te invite a comer inmediatamente."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que no pasarás hambre en China.",
+      "questions": [
+        { "id": "zh-a1-24-q1", "type": "quiz_choice", "question": "¿Cómo se dice el verbo 'Comer'?", "options": ["Chī (吃).", "Hē (喝).", "Fàn (饭).", "Chá (茶)."], "correct_answer": "Chī (吃).", "explanation": "Chī es el verbo comer." },
+        { "id": "zh-a1-24-q2", "type": "quiz_choice", "question": "¿Cómo se dice el verbo 'Beber'?", "options": ["Hē (喝).", "Chī (吃).", "Qù (去).", "Shì (是)."], "correct_answer": "Hē (喝).", "explanation": "Hē es el verbo beber." },
+        { "id": "zh-a1-24-q3", "type": "quiz_choice", "question": "¿Qué tienen en común visualmente los caracteres de Comer (吃) y Beber (喝)?", "options": ["Ambos tienen un cuadradito a la izquierda que representa una 'boca' (口).", "Ambos son exactamente iguales.", "No tienen nada en común.", "Ambos tienen el símbolo de agua."], "correct_answer": "Ambos tienen un cuadradito a la izquierda que representa una 'boca' (口).", "explanation": "El radical de boca indica que la acción involucra la boca." },
+        { "id": "zh-a1-24-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Comida' o 'Arroz'?", "options": ["Fàn (饭).", "Chá (茶).", "Chī (吃).", "Bàba (爸爸)."], "correct_answer": "Fàn (饭).", "explanation": "Fàn significa comida (en general) o arroz cocido." },
+        { "id": "zh-a1-24-q5", "type": "quiz_choice", "question": "Traduce: 'Wǒmen chī fàn ba' (我们吃饭吧).", "options": ["¡Vamos a comer!", "Nosotros comemos arroz.", "¿Nosotros comemos?", "Yo quiero comer."], "correct_answer": "¡Vamos a comer!", "explanation": "Nosotros (Wǒmen) + comemos (chī) + comida (fàn) + sugerencia (ba)." },
+        { "id": "zh-a1-24-q6", "type": "quiz_choice", "question": "Culturalmente, ¿qué significa si un vecino chino te pregunta 'Nǐ chī le ma?' (你吃了吗？)?", "options": ["Es un saludo cálido equivalente a '¿Cómo estás?'.", "Te está acusando de robar su comida.", "Es un insulto.", "Quiere saber si estás a dieta."], "correct_answer": "Es un saludo cálido equivalente a '¿Cómo estás?'.", "explanation": "Históricamente, asegurarse de que alguien haya comido era la muestra máxima de preocupación y cariño." },
+        { "id": "zh-a1-24-q7", "type": "quiz_choice", "question": "Si alguien te dice 'Nǐ chī le ma?' y tú YA COMISTE, ¿qué respondes?", "options": ["Chī le (吃了).", "Méi chī (没吃).", "Bù chī (不吃).", "Chī ma (吃吗)."], "correct_answer": "Chī le (吃了).", "explanation": "Comer (chī) + partícula de acción completada (le)." },
+        { "id": "zh-a1-24-q8", "type": "quiz_choice", "question": "Si no has comido, ¿cómo respondes en pasado?", "options": ["Méi chī (没吃).", "Bù chī (不吃).", "Bú chī (不吃).", "Méi chī le (没吃了)."], "correct_answer": "Méi chī (没吃).", "explanation": "Pasado negado (méi) + verbo (chī). Recuerda que NUNCA se usa 'le' en negaciones pasadas." },
+        { "id": "zh-a1-24-q9", "type": "quiz_choice", "question": "¿Qué significa la frase 'Tā bù hē chá' (他不喝茶)?", "options": ["Él no bebe té (presente/hábito).", "Él no bebió té (pasado).", "Él no quiere té.", "Él bebió té."], "correct_answer": "Él no bebe té (presente/hábito).", "explanation": "Bù (no en presente) + hē (beber) + chá (té)." },
+        { "id": "zh-a1-24-q10", "type": "quiz_choice", "question": "¿Cómo dirías 'Yo también bebo té'?", "options": ["Wǒ yě hē chá (我也喝茶).", "Wǒ hē chá yě (我喝茶也).", "Yě wǒ hē chá (也我喝茶).", "Wǒ hē yě chá (我喝也茶)."], "correct_answer": "Wǒ yě hē chá (我也喝茶).", "explanation": "Sujeto (wǒ) + adverbio (yě) + verbo (hē) + objeto (chá)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin del vocabulario de comida. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-24-f1", "type": "fill_input", "question": "Comer: ____ (chi)", "correct_answer": "chi", "explanation": "chi" },
+        { "id": "zh-a1-24-f2", "type": "fill_input", "question": "Beber: ____ (he)", "correct_answer": "he", "explanation": "he" },
+        { "id": "zh-a1-24-f3", "type": "fill_input", "question": "Comida / Arroz: ____ (fan)", "correct_answer": "fan", "explanation": "fan" },
+        { "id": "zh-a1-24-f4", "type": "fill_input", "question": "Té: ____ (cha)", "correct_answer": "cha", "explanation": "cha" },
+        { "id": "zh-a1-24-f5", "type": "fill_input", "question": "Comer comida: ____ fan (chi)", "correct_answer": "chi", "explanation": "chi" },
+        { "id": "zh-a1-24-f6", "type": "fill_input", "question": "Beber té: ____ cha (he)", "correct_answer": "he", "explanation": "he" },
+        { "id": "zh-a1-24-f7", "type": "fill_input", "question": "¡Vamos a comer!: women chi fan ____ (ba)", "correct_answer": "ba", "explanation": "ba" },
+        { "id": "zh-a1-24-f8", "type": "fill_input", "question": "¿Comiste?: ni chi ____ ma (le)", "correct_answer": "le", "explanation": "le" },
+        { "id": "zh-a1-24-f9", "type": "fill_input", "question": "No he comido (pasado): ____ chi (mei)", "correct_answer": "mei", "explanation": "mei" },
+        { "id": "zh-a1-24-f10", "type": "fill_input", "question": "Ya comí: chi ____ (le)", "correct_answer": "le", "explanation": "le" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y distingue qué se está consumiendo.",
+      "questions": [
+        { "id": "zh-a1-24-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "吃饭", "options": ["Comer comida", "Beber té", "Comer té", "Beber comida"], "correct_answer": "Comer comida", "explanation": "El audio dice: chī fàn." },
+        { "id": "zh-a1-24-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "喝茶", "options": ["Beber té", "Comer comida", "Beber agua", "Comer arroz"], "correct_answer": "Beber té", "explanation": "El audio dice: hē chá." },
+        { "id": "zh-a1-24-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我们喝茶吧", "options": ["¡Vamos a beber té!", "¿Bebemos té?", "Nosotros bebemos té", "Ellos beben té"], "correct_answer": "¡Vamos a beber té!", "explanation": "El audio dice: Wǒmen hē chá ba." },
+        { "id": "zh-a1-24-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你吃了吗？", "options": ["¿Ya comiste?", "¿Tú comes?", "¡Vamos a comer!", "Tú no comes"], "correct_answer": "¿Ya comiste?", "explanation": "El audio dice: Nǐ chī le ma?" },
+        { "id": "zh-a1-24-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "没吃", "options": ["No he comido", "Ya comí", "No como", "Come"], "correct_answer": "No he comido", "explanation": "El audio dice: méi chī." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Food and Actions",
+      "pairs": [
+        {"id": "zh-a1-24-p1", "source": "吃 (chī)", "target": "Comer"},
+        {"id": "zh-a1-24-p2", "source": "喝 (hē)", "target": "Beber"},
+        {"id": "zh-a1-24-p3", "source": "饭 (fàn)", "target": "Comida / Arroz"},
+        {"id": "zh-a1-24-p4", "source": "茶 (chá)", "target": "Té"},
+        {"id": "zh-a1-24-p5", "source": "吃饭 (chī fàn)", "target": "Comer comida"},
+        {"id": "zh-a1-24-p6", "source": "喝茶 (hē chá)", "target": "Beber té"},
+        {"id": "zh-a1-24-p7", "source": "你吃了吗？(nǐ chī le ma?)", "target": "¿Ya comiste? (Saludo cultural)"},
+        {"id": "zh-a1-24-p8", "source": "没吃 (méi chī)", "target": "No he comido (Pasado negado)"},
+        {"id": "zh-a1-24-p9", "source": "吃了 (chī le)", "target": "Ya comí (Pasado afirmativo)"},
+        {"id": "zh-a1-24-p10", "source": "我们吃饭吧 (wǒmen chī fàn ba)", "target": "¡Vamos a comer!"}
+      ]
+    }
+  ]
+}

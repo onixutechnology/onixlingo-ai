@@ -12,7 +12,7 @@ import confetti from 'canvas-confetti';
 import { useUIStore } from '@/store/uiStore';
 
 // URL HÍBRIDA: Detecta si estás en Vercel (Prod) o en tu PC (Dev)
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:5000';
 
 interface Props {
   xpEarned: number;
@@ -23,6 +23,7 @@ interface Props {
   onRetry: () => void;
   onExit: () => void;
   answerHistory?: any[];
+  completionMessage?: string;
 }
 
 export default function LessonComplete({ 
@@ -33,7 +34,8 @@ export default function LessonComplete({
   totalSteps, 
   onRetry, 
   onExit,
-  answerHistory = []
+  answerHistory = [],
+  completionMessage
 }: Props) {
   const { mode, activeLanguage } = useUIStore();
   const isPro = mode === 'professional' || lessonType === 'pro' || lessonId.includes('mock');
@@ -403,46 +405,46 @@ export default function LessonComplete({
       <motion.div 
         initial={{ opacity: 0 }} 
         animate={{ opacity: 1 }} 
-        className="absolute inset-0 bg-slate-950/90 backdrop-blur-md" 
+        className="absolute inset-0 bg-slate-50/90 backdrop-blur-md" 
       />
 
       <motion.div 
         initial={{ opacity: 0, scale: 0.95, y: 15 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ type: "spring", duration: 0.5 }}
-        className="relative w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-none shadow-2xl overflow-hidden flex flex-col lg:flex-row my-8"
+        className="relative w-full max-w-4xl bg-slate-50 border border-slate-800 rounded-none shadow-2xl overflow-hidden flex flex-col lg:flex-row my-8"
       >
         
         {/* PANEL IZQUIERDO: DETALLES DE ACCESOS Y NAVEGACIÓN */}
-        <div className="w-full lg:w-80 bg-slate-950/60 p-6 border-b lg:border-b-0 lg:border-r border-slate-800 flex flex-col justify-between">
+        <div className="w-full lg:w-80 bg-slate-50/60 p-6 border-b lg:border-b-0 lg:border-r border-slate-800 flex flex-col justify-between">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="bg-amber-500/10 p-2 text-amber-500">
+              <div className="bg-[#D4AF37]/20/10 p-2 text-[#D4AF37]">
                 <Shield size={20} />
               </div>
               <div>
-                <h3 className="text-xs font-black text-white uppercase tracking-widest font-serif italic">OnixLingo Security</h3>
-                <p className="text-[8px] text-slate-500 uppercase tracking-widest font-bold font-mono">Control Tower</p>
+                <h3 className="text-xs font-black text-slate-900 uppercase tracking-widest font-serif italic">OnixLingo Security</h3>
+                <p className="text-[8px] text-slate-600 uppercase tracking-widest font-bold font-mono">Control Tower</p>
               </div>
             </div>
 
             <div className="space-y-1 mb-8">
               <button 
                 onClick={() => setActiveTab('cert')}
-                className={`w-full py-3 px-4 flex items-center gap-3 text-left transition-all rounded-none text-xs font-black uppercase tracking-wider border-l-2 ${activeTab === 'cert' ? 'bg-amber-600/10 border-amber-500 text-amber-400' : 'border-transparent text-slate-400 hover:bg-white/5 hover:text-white'}`}
+                className={`w-full py-3 px-4 flex items-center gap-3 text-left transition-all rounded-none text-xs font-black uppercase tracking-wider border-l-2 ${activeTab === 'cert' ? 'bg-[#D4AF37]/20/10 border-[#D4AF37]/30 text-amber-400' : 'border-transparent text-slate-500 hover:bg-white/5 hover:text-slate-900'}`}
               >
                 <Award size={16} /> 📜 Certificado Oficial
               </button>
               <button 
                 onClick={() => setActiveTab('report')}
-                className={`w-full py-3 px-4 flex items-center gap-3 text-left transition-all rounded-none text-xs font-black uppercase tracking-wider border-l-2 ${activeTab === 'report' ? 'bg-amber-600/10 border-amber-500 text-amber-400' : 'border-transparent text-slate-400 hover:bg-white/5 hover:text-white'}`}
+                className={`w-full py-3 px-4 flex items-center gap-3 text-left transition-all rounded-none text-xs font-black uppercase tracking-wider border-l-2 ${activeTab === 'report' ? 'bg-[#D4AF37]/20/10 border-[#D4AF37]/30 text-amber-400' : 'border-transparent text-slate-500 hover:bg-white/5 hover:text-slate-900'}`}
               >
                 <FileText size={16} /> 📊 Reporte & IA Asesor
               </button>
               {answerHistory && answerHistory.length > 0 && (
                 <button 
                   onClick={() => setActiveTab('review')}
-                  className={`w-full py-3 px-4 flex items-center gap-3 text-left transition-all rounded-none text-xs font-black uppercase tracking-wider border-l-2 ${activeTab === 'review' ? 'bg-amber-600/10 border-amber-500 text-amber-400' : 'border-transparent text-slate-400 hover:bg-white/5 hover:text-white'}`}
+                  className={`w-full py-3 px-4 flex items-center gap-3 text-left transition-all rounded-none text-xs font-black uppercase tracking-wider border-l-2 ${activeTab === 'review' ? 'bg-[#D4AF37]/20/10 border-[#D4AF37]/30 text-amber-400' : 'border-transparent text-slate-500 hover:bg-white/5 hover:text-slate-900'}`}
                 >
                   <BookOpen size={16} /> 🔍 Revisión Detalle
                 </button>
@@ -450,15 +452,15 @@ export default function LessonComplete({
             </div>
 
             {/* Tarjeta de XP y Precisión rápida */}
-            <div className="bg-slate-900 border border-slate-800 p-4 space-y-3 mb-6">
-              <div className="flex justify-between items-center text-[10px] uppercase font-bold text-slate-400">
+            <div className="bg-slate-50 border border-slate-800 p-4 space-y-3 mb-6">
+              <div className="flex justify-between items-center text-[10px] uppercase font-bold text-slate-500">
                 <span>Precisión del Test:</span>
                 <span className={`font-mono font-black ${isSuccess ? 'text-emerald-400' : 'text-rose-400'}`}>{accuracy}%</span>
               </div>
-              <div className="w-full bg-slate-850 h-1.5 rounded-none overflow-hidden">
-                <div className={`h-full ${isSuccess ? 'bg-emerald-500' : 'bg-rose-500'}`} style={{ width: `${accuracy}%` }} />
+              <div className="w-full bg-slate-50 h-1.5 rounded-none overflow-hidden">
+                <div className={`h-full ${isSuccess ? 'bg-[#D4AF37]/100' : 'bg-[#D4AF37]/100'}`} style={{ width: `${accuracy}%` }} />
               </div>
-              <div className="flex justify-between items-center text-[10px] uppercase font-bold text-slate-400 pt-1">
+              <div className="flex justify-between items-center text-[10px] uppercase font-bold text-slate-500 pt-1">
                 <span>XP Total Ganado:</span>
                 <span className="font-mono font-black text-amber-400">+{xpEarned} XP</span>
               </div>
@@ -467,23 +469,23 @@ export default function LessonComplete({
 
           <div className="space-y-2 mt-6 lg:mt-0">
             {isSuccess ? (
-              <button onClick={onExit} className="w-full py-3.5 bg-amber-600 hover:bg-amber-500 text-white font-black text-[10px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-2">
+              <button onClick={onExit} className="w-full py-3.5 bg-[#D4AF37]/20 hover:bg-[#D4AF37]/20 text-slate-900 font-black text-[10px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-2">
                 SALIR AL PANEL PRINCIPAL <ArrowRight size={14} />
               </button>
             ) : (
-              <button onClick={onRetry} className="w-full py-3.5 bg-rose-600 hover:bg-rose-500 text-white font-black text-[10px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-2">
+              <button onClick={onRetry} className="w-full py-3.5 bg-rose-600 hover:bg-[#D4AF37]/100 text-slate-900 font-black text-[10px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-2">
                 <RotateCcw size={14} /> REINTENTAR MÓDULO
               </button>
             )}
             
             {isSuccess && (
-              <button onClick={onRetry} className="w-full py-2.5 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-1.5">
+              <button onClick={onRetry} className="w-full py-2.5 border border-slate-700 bg-transparent text-slate-500 hover:text-slate-900 font-black text-[9px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-1.5">
                 <RotateCcw size={12} /> Repetir simulador
               </button>
             )}
 
             {!isSuccess && (
-              <button onClick={onExit} className="w-full py-2 text-slate-500 hover:text-slate-300 text-center font-bold text-[9px] uppercase tracking-widest">
+              <button onClick={onExit} className="w-full py-2 text-slate-600 hover:text-slate-300 text-center font-bold text-[9px] uppercase tracking-widest">
                 {isExamMock ? 'Abandonar examen' : 'Abandonar lección'}
               </button>
             )}
@@ -491,7 +493,7 @@ export default function LessonComplete({
         </div>
 
         {/* PANEL DERECHO: VISUALIZACIÓN DINÁMICA DE PESTAÑAS */}
-        <div className="flex-1 p-6 md:p-8 flex flex-col justify-between bg-slate-900/40 relative">
+        <div className="flex-1 p-6 md:p-8 flex flex-col justify-between bg-slate-50/40 relative">
           
           <AnimatePresence mode="wait">
             
@@ -506,15 +508,15 @@ export default function LessonComplete({
               >
                 <div className="flex justify-between items-start">
                   <div>
-                    <h2 className="text-xl font-serif font-black italic tracking-wide text-amber-500 uppercase">
+                    <h2 className="text-xl font-serif font-black italic tracking-wide text-[#D4AF37] uppercase">
                       Certificate of Achievement
                     </h2>
-                    <p className="text-[10px] text-slate-400 uppercase tracking-widest font-mono mt-0.5">CREDENCIAL ACADÉMICA OFICIAL</p>
+                    <p className="text-[10px] text-slate-500 uppercase tracking-widest font-mono mt-0.5">CREDENCIAL ACADÉMICA OFICIAL</p>
                   </div>
                   {isSuccess && (
                     <button 
                       onClick={handleDownload}
-                      className="px-3 py-1.5 bg-slate-800 hover:bg-slate-750 border border-slate-700 text-amber-400 hover:text-amber-300 transition-all text-[9px] font-black uppercase tracking-wider flex items-center gap-1.5"
+                      className="px-3 py-1.5 bg-slate-50 hover:bg-slate-700 border border-slate-700 text-amber-400 hover:text-amber-300 transition-all text-[9px] font-black uppercase tracking-wider flex items-center gap-1.5"
                     >
                       <Download size={12} /> Descargar TXT
                     </button>
@@ -522,28 +524,28 @@ export default function LessonComplete({
                 </div>
 
                 {/* DISEÑO DEL CERTIFICADO FÍSICO DIGITALIZADO */}
-                <div className="relative border-4 border-double border-amber-950 bg-slate-950 p-6 md:p-8 text-center overflow-hidden shadow-2xl rounded-none">
+                <div className="relative border-4 border-double border-amber-950 bg-slate-50 p-6 md:p-8 text-center overflow-hidden shadow-2xl rounded-none">
                   
                   {/* Filigranas y Marcas de agua decorativas */}
                   <div className="absolute inset-0 pointer-events-none opacity-[0.03] flex items-center justify-center">
-                    <Shield size={260} className="text-amber-500" />
+                    <Shield size={260} className="text-[#D4AF37]" />
                   </div>
                   <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-amber-500/10 to-transparent blur-2xl" />
 
                   {/* Cabecera */}
                   <div className="flex justify-center mb-4">
-                    <Award size={44} className="text-amber-500 animate-[pulse_2s_infinite]" />
+                    <Award size={44} className="text-[#D4AF37] animate-[pulse_2s_infinite]" />
                   </div>
 
-                  <p className="text-[9px] font-mono tracking-[0.4em] uppercase text-amber-500/80 mb-2">ONIXLINGO ACADEMIC COMMISSION</p>
-                  <h4 className="text-xs text-slate-400 font-serif italic mb-6">Hereby certifies that</h4>
+                  <p className="text-[9px] font-mono tracking-[0.4em] uppercase text-[#D4AF37]/80 mb-2">ONIXLINGO ACADEMIC COMMISSION</p>
+                  <h4 className="text-xs text-slate-500 font-serif italic mb-6">Hereby certifies that</h4>
 
                   <h3 className="text-2xl font-black text-slate-100 font-serif tracking-wide border-b border-slate-800 pb-2 max-w-lg mx-auto mb-2">
                     {studentName}
                   </h3>
 
-                  <p className="text-[10px] text-slate-400 max-w-md mx-auto mb-6">
-                    has successfully sat the rigorous evaluation and demonstrated proficiency in the mock certification standard for
+                  <p className="text-[10px] text-slate-500 max-w-md mx-auto mb-6">
+                    has successfully sat the rigorous evaluation and demonstrated proficiency in the simulated certification standard for
                   </p>
 
                   <h2 className="text-lg font-black text-amber-400 uppercase tracking-widest font-mono mb-6">
@@ -551,34 +553,34 @@ export default function LessonComplete({
                   </h2>
 
                   {/* BLOQUE DE PUNTUACIÓN DE ESCALA REAL */}
-                  <div className="bg-slate-900/60 border border-amber-950 p-4 max-w-sm mx-auto mb-6 flex items-center justify-around">
+                  <div className="bg-slate-50/60 border border-amber-950 p-4 max-w-sm mx-auto mb-6 flex items-center justify-around">
                     <div>
-                      <span className="text-[8px] text-slate-500 uppercase tracking-wider font-bold block">{examData.scoreLabel}</span>
+                      <span className="text-[8px] text-slate-600 uppercase tracking-wider font-bold block">{examData.scoreLabel}</span>
                       <span className="text-2xl font-black text-amber-400 font-mono tracking-wider">{examData.score}</span>
                     </div>
-                    <div className="w-px h-8 bg-slate-850" />
+                    <div className="w-px h-8 bg-slate-50" />
                     <div>
-                      <span className="text-[8px] text-slate-500 uppercase tracking-wider font-bold block">Rango MCER (CEFR)</span>
-                      <span className="text-2xl font-black text-white font-mono tracking-widest">{examData.cefr}</span>
+                      <span className="text-[8px] text-slate-600 uppercase tracking-wider font-bold block">Rango MCER (CEFR)</span>
+                      <span className="text-2xl font-black text-slate-900 font-mono tracking-widest">{examData.cefr}</span>
                     </div>
                   </div>
 
-                  <p className="text-[9px] text-slate-400 italic mb-8">
+                  <p className="text-[9px] text-slate-500 italic mb-8">
                     "{examData.description}"
                   </p>
 
                   {/* Firmas y Sellos */}
-                  <div className="flex flex-col md:flex-row items-center justify-between gap-6 border-t border-slate-850 pt-4 text-left text-[8px] font-mono text-slate-500 uppercase">
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-6 border-t border-slate-800 pt-4 text-left text-[8px] font-mono text-slate-600 uppercase">
                     <div className="flex items-center gap-2">
-                      <Calendar size={14} className="text-amber-500/60" />
+                      <Calendar size={14} className="text-[#D4AF37]/60" />
                       <span>Emitido el: {new Date().toLocaleDateString()}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Hash size={14} className="text-amber-500/60" />
+                      <Hash size={14} className="text-[#D4AF37]/60" />
                       <span>ID Credencial: {certHash}</span>
                     </div>
                     <div className="text-right">
-                      <span className="block font-black text-amber-500/80">DIRECTORATE SIGNATURE</span>
+                      <span className="block font-black text-[#D4AF37]/80">DIRECTORATE SIGNATURE</span>
                       <span className="text-[7px] lowercase text-slate-600 block">secured_by_onixlingo_neural_node</span>
                     </div>
                   </div>
@@ -607,17 +609,25 @@ export default function LessonComplete({
                 className="space-y-6"
               >
                 <div>
-                  <h2 className="text-xl font-serif font-black italic tracking-wide text-amber-500 uppercase">
+                  <h2 className="text-xl font-serif font-black italic tracking-wide text-[#D4AF37] uppercase">
                     Reporte de Fortalezas y Áreas de Mejora
                   </h2>
-                  <p className="text-[10px] text-slate-400 uppercase tracking-widest font-mono mt-0.5">ANÁLISIS DE HABILIDADES BASADO EN NEURAL ADVISOR IA</p>
+                  <p className="text-[10px] text-slate-500 uppercase tracking-widest font-mono mt-0.5">ANÁLISIS DE HABILIDADES BASADO EN NEURAL ADVISOR IA</p>
                 </div>
+
+                {completionMessage && (
+                  <div className="bg-emerald-950/20 border border-emerald-900 p-4 mb-4">
+                    <p className="text-sm font-bold text-emerald-400 font-serif italic text-center">
+                      "{completionMessage}"
+                    </p>
+                  </div>
+                )}
 
                 {/* Subscores Desglosados */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {examData.subscores.map((sub, idx) => (
-                    <div key={idx} className="bg-slate-950/80 border border-slate-800 p-4 rounded-none">
-                      <span className="text-[9px] uppercase tracking-wider font-mono text-slate-400 block mb-1">{sub.name}</span>
+                    <div key={idx} className="bg-slate-50/80 border border-slate-800 p-4 rounded-none">
+                      <span className="text-[9px] uppercase tracking-wider font-mono text-slate-500 block mb-1">{sub.name}</span>
                       <span className="text-lg font-black text-amber-400 font-mono">{sub.val}</span>
                     </div>
                   ))}
@@ -634,12 +644,12 @@ export default function LessonComplete({
                     <div className="space-y-2">
                       {analytics.strengths.map((str, i) => (
                         <div key={i} className="bg-emerald-950/15 border border-emerald-900/30 p-3 flex items-start gap-2.5 rounded-none">
-                          <ChevronRight size={12} className="text-emerald-500 mt-0.5 flex-shrink-0" />
+                          <ChevronRight size={12} className="text-[#D4AF37] mt-0.5 flex-shrink-0" />
                           <span className="text-xs text-emerald-300">{str}</span>
                         </div>
                       ))}
                       {analytics.strengths.length === 0 && (
-                        <p className="text-[11px] text-slate-500 italic">No se detectaron fortalezas destacadas en este intento.</p>
+                        <p className="text-[11px] text-slate-600 italic">No se detectaron fortalezas destacadas en este intento.</p>
                       )}
                     </div>
                   </div>
@@ -668,10 +678,10 @@ export default function LessonComplete({
                 </div>
 
                 {/* RECOMENDACIONES DE NEURAL ADVISOR IA */}
-                <div className="bg-slate-950 border border-slate-800 p-5 rounded-none relative overflow-hidden">
+                <div className="bg-slate-50 border border-slate-800 p-5 rounded-none relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-500/5 to-transparent blur-xl pointer-events-none" />
                   
-                  <h4 className="text-[10px] font-black uppercase tracking-widest text-amber-500 flex items-center gap-2 mb-3">
+                  <h4 className="text-[10px] font-black uppercase tracking-widest text-[#D4AF37] flex items-center gap-2 mb-3">
                     <Sparkles size={14} className="text-amber-400 animate-spin" style={{ animationDuration: '6s' }} /> Recomendación Estratégica OnixLingo
                   </h4>
                   
@@ -692,10 +702,10 @@ export default function LessonComplete({
                 className="space-y-6 max-h-[500px] overflow-y-auto pr-2"
               >
                 <div>
-                  <h2 className="text-xl font-serif font-black italic tracking-wide text-amber-500 uppercase">
+                  <h2 className="text-xl font-serif font-black italic tracking-wide text-[#D4AF37] uppercase">
                     Revisión Detallada de Preguntas
                   </h2>
-                  <p className="text-[10px] text-slate-400 uppercase tracking-widest font-mono mt-0.5">HISTORIAL DE RESPUESTAS Y EXPLICACIONES</p>
+                  <p className="text-[10px] text-slate-500 uppercase tracking-widest font-mono mt-0.5">HISTORIAL DE RESPUESTAS Y EXPLICACIONES</p>
                 </div>
 
                 <div className="space-y-4">
@@ -709,13 +719,13 @@ export default function LessonComplete({
                       }`}
                     >
                       <div className="flex justify-between items-start gap-4 mb-3">
-                        <span className="text-[9px] font-black uppercase tracking-wider font-mono text-slate-400">
+                        <span className="text-[9px] font-black uppercase tracking-wider font-mono text-slate-500">
                           PREGUNTA {idx + 1}
                         </span>
                         <span className={`text-[9px] font-black uppercase tracking-widest font-mono px-2 py-0.5 rounded-none ${
                           ans.isCorrect 
-                            ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' 
-                            : 'bg-rose-500/10 text-rose-400 border border-rose-500/20'
+                            ? 'bg-[#D4AF37]/100/10 text-emerald-400 border border-emerald-500/20' 
+                            : 'bg-[#D4AF37]/100/10 text-rose-400 border border-rose-500/20'
                         }`}>
                           {ans.isCorrect ? 'Correcta' : 'Incorrecta'}
                         </span>
@@ -724,28 +734,28 @@ export default function LessonComplete({
                       <p className="text-sm font-black text-slate-200 uppercase tracking-wide leading-relaxed mb-4">{ans.question}</p>
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs mb-4">
-                        <div className="bg-slate-950 border border-slate-850 p-3 rounded-none">
-                          <span className="text-slate-500 block text-[8px] uppercase tracking-wider font-mono font-bold mb-1">Tu Respuesta:</span>
+                        <div className="bg-slate-50 border border-slate-800 p-3 rounded-none">
+                          <span className="text-slate-600 block text-[8px] uppercase tracking-wider font-mono font-bold mb-1">Tu Respuesta:</span>
                           <span className={`${ans.isCorrect ? 'text-emerald-400' : 'text-rose-400'} font-extrabold`}>{ans.answer || '(Sin respuesta)'}</span>
                         </div>
                         {!ans.isCorrect && (
-                          <div className="bg-slate-950 border border-slate-850 p-3 rounded-none">
-                            <span className="text-slate-500 block text-[8px] uppercase tracking-wider font-mono font-bold mb-1">Respuesta Correcta:</span>
+                          <div className="bg-slate-50 border border-slate-800 p-3 rounded-none">
+                            <span className="text-slate-600 block text-[8px] uppercase tracking-wider font-mono font-bold mb-1">Respuesta Correcta:</span>
                             <span className="text-emerald-400 font-extrabold">{ans.correctAnswer}</span>
                           </div>
                         )}
                       </div>
 
                       {ans.explanation && (
-                        <div className="p-4 bg-slate-950/60 border border-slate-850 text-[10px] leading-relaxed uppercase tracking-wider text-slate-400 rounded-none">
-                          <span className="font-black text-[8px] tracking-widest text-teal-500 block mb-1">Análisis de la Diapositiva / Evaluación:</span>
+                        <div className="p-4 bg-slate-50/60 border border-slate-800 text-[10px] leading-relaxed uppercase tracking-wider text-slate-500 rounded-none">
+                          <span className="font-black text-[8px] tracking-widest text-[#D4AF37] block mb-1">Análisis de la Diapositiva / Evaluación:</span>
                           {ans.explanation}
                         </div>
                       )}
                     </div>
                   ))}
                   {answerHistory.length === 0 && (
-                    <p className="text-xs text-slate-500 italic text-center py-8">No hay respuestas registradas para revisar.</p>
+                    <p className="text-xs text-slate-600 italic text-center py-8">No hay respuestas registradas para revisar.</p>
                   )}
                 </div>
               </motion.div>

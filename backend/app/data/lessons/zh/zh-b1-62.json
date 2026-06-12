@@ -1,0 +1,92 @@
+{
+  "id": "zh-b1-62",
+  "title": "Distancias y Trayectos",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Distance", "Locations", "Grammar"],
+  "completion_message": "¡Excelente! Ya sabes medir el mundo en chino. Con Cóng y Dào puedes conectar cualquier punto A con un punto B.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "De Aquí Hasta Allá",
+      "parts": [
+        {
+          "visual": "Lejos: 远 (yuǎn)\nCerca: 近 (jìn)\n\nSe usan como cualquier otro adjetivo (con hěn, tài...le, bù, etc):\n- Muy lejos: 很远 (Hěn yuǎn).\n- Muy cerca: 很近 (Hěn jìn).\n- Demasiado lejos: 太远了 (Tài yuǎn le).\n- No está lejos: 不远 (Bù yuǎn).",
+          "audio": "A medida que empieces a explorar la ciudad, vas a necesitar saber qué tan largas son las distancias. Lejos se dice Yuǎn. Tercer tono. Yuǎn. Cerca se dice Jìn. Cuarto tono. Jìn. Al igual que con 'Caro' y 'Grande', puedes combinarlos con tus intensificadores favoritos. Si un amigo te invita a un restaurante y no quieres caminar, puedes decirle: Tài yuǎn le! ¡Está demasiado lejos! O si le preguntas a alguien por el hospital y resulta que estás a dos pasos, te dirá: Hěn jìn. Está muy cerca."
+        },
+        {
+          "visual": "Trayectos: De A hasta B\nEstructura: 从 (Cóng - Desde) + Lugar A + 到 (Dào - Hasta) + Lugar B.\n\n- De China a España: 从中国到西班牙 (Cóng Zhōngguó dào Xībānyá).\n- Desde la escuela hasta el hospital: 从学校到医院 (Cóng xuéxiào dào yīyuàn).\n\nCombinando con distancia:\n- De la escuela al hospital está muy lejos: 从学校到医院很远 (Cóng xuéxiào dào yīyuàn hěn yuǎn).",
+          "audio": "Para hablar de trayectos, los chinos usan dos palabras mágicas: Cóng y Dào. Cóng significa 'Desde'. Dào significa 'Hasta' o 'Llegar a'. Es como trazar una línea en un mapa. Desde China hasta España: Cóng Zhōngguó dào Xībānyá. Si quieres preguntar por una dirección, puedes unir esta estructura con las distancias que acabamos de aprender. Por ejemplo: Cóng xuéxiào dào yīyuàn hěn yuǎn. Desde la escuela hasta el hospital está muy lejos. Cóng y dào son los cimientos de la navegación."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Calcula la ruta y prepárate para el viaje.",
+      "questions": [
+        { "id": "zh-b1-62-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 远 (yuǎn)?", "options": ["Lejos.", "Cerca.", "Caro.", "Dinero."], "correct_answer": "Lejos.", "explanation": "Yuǎn (3er tono) indica gran distancia." },
+        { "id": "zh-b1-62-q2", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 近 (jìn)?", "options": ["Cerca.", "Lejos.", "Izquierda.", "Derecha."], "correct_answer": "Cerca.", "explanation": "Jìn (4to tono) indica poca distancia." },
+        { "id": "zh-b1-62-q3", "type": "quiz_choice", "question": "Tu amigo te invita a cenar a la otra punta de la ciudad. Tú te quejas:", "options": ["Tài yuǎn le! (太远了！).", "Hěn jìn (很近).", "Tài guì le! (太贵了！).", "Bù yuǎn (不远)."], "correct_answer": "Tài yuǎn le! (太远了！).", "explanation": "Sándwich exclamativo: Demasiado (tài) + lejos (yuǎn) + le." },
+        { "id": "zh-b1-62-q4", "type": "quiz_choice", "question": "El hotel está a una cuadra de la estación. ¿Cómo lo describes?", "options": ["Hěn jìn (很近).", "Hěn yuǎn (很远).", "Tài yuǎn le (太远了).", "Bù jìn (不近)."], "correct_answer": "Hěn jìn (很近).", "explanation": "Muy (hěn) + cerca (jìn)." },
+        { "id": "zh-b1-62-q5", "type": "quiz_choice", "question": "Gramática: ¿Qué significa la partícula 从 (cóng)?", "options": ["Desde / De.", "Hasta / A.", "En.", "Por favor."], "correct_answer": "Desde / De.", "explanation": "Cóng marca el punto de origen (A)." },
+        { "id": "zh-b1-62-q6", "type": "quiz_choice", "question": "Gramática: ¿Qué significa la partícula 到 (dào)?", "options": ["Hasta / Llegar a.", "Desde / De.", "Ir.", "Ver."], "correct_answer": "Hasta / Llegar a.", "explanation": "Dào marca el punto de destino (B)." },
+        { "id": "zh-b1-62-q7", "type": "quiz_choice", "question": "Traduce el trayecto: 'De Beijing a Shanghai'.", "options": ["Cóng Běijīng dào Shànghǎi (从北京到上海).", "Dào Běijīng cóng Shànghǎi (到北京从上海).", "Běijīng cóng Shànghǎi dào (北京从上海到).", "Cóng Běijīng qù Shànghǎi (从北京去上海)."], "correct_answer": "Cóng Běijīng dào Shànghǎi (从北京到上海).", "explanation": "Desde (cóng) Beijing hasta (dào) Shanghai." },
+        { "id": "zh-b1-62-q8", "type": "quiz_choice", "question": "Combina trayecto y distancia: 'Desde el hospital hasta el banco está muy cerca'.", "options": ["Cóng yīyuàn dào yínháng hěn jìn (从医院到银行很近).", "Cóng yínháng dào yīyuàn hěn yuǎn (从银行到医院很远).", "Yīyuàn dào yínháng cóng hěn jìn (医院到银行从很近).", "Hěn jìn cóng yīyuàn dào yínháng (很近从医院到银行)."], "correct_answer": "Cóng yīyuàn dào yínháng hěn jìn (从医院到银行很近).", "explanation": "Desde hospital (cóng yīyuàn) hasta banco (dào yínháng) muy cerca (hěn jìn)." },
+        { "id": "zh-b1-62-q9", "type": "quiz_choice", "question": "Recuerda el pronombre demostrativo Aquí/Acá (Zhèr). ¿Cómo dices 'Desde aquí hasta allá'? (Allá es Nàr).", "options": ["Cóng zhèr dào nàr (从这儿到那儿).", "Cóng nàr dào zhèr (从那儿到这儿).", "Zhèr cóng dào nàr (这儿从到那儿).", "Zhèr dào nàr cóng (这儿到那儿从)."], "correct_answer": "Cóng zhèr dào nàr (从这儿到那儿).", "explanation": "Desde (cóng) aquí (zhèr) hasta (dào) allá (nàr)." },
+        { "id": "zh-b1-62-q10", "type": "quiz_choice", "question": "¿Cóng y Dào solo se usan para espacio físico, o también para tiempo? (Ej: De lunes a viernes)", "options": ["También se usan para tiempo (Desde las 8 hasta las 5).", "Solo se usan para espacio geográfico.", "Solo se usan para dinero.", "En tiempo se usan otras palabras."], "correct_answer": "También se usan para tiempo (Desde las 8 hasta las 5).", "explanation": "Es correcto. Puedes decir 'Cóng 8 diǎn dào 5 diǎn' (Desde las 8 hasta las 5). Es muy versátil." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe las palabras de distancia y trayecto en pinyin. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-b1-62-f1", "type": "fill_input", "question": "Lejos: ____ (yuan)", "correct_answer": "yuan", "explanation": "yuan" },
+        { "id": "zh-b1-62-f2", "type": "fill_input", "question": "Cerca: ____ (jin)", "correct_answer": "jin", "explanation": "jin" },
+        { "id": "zh-b1-62-f3", "type": "fill_input", "question": "Muy lejos: hen ____ (yuan)", "correct_answer": "yuan", "explanation": "yuan" },
+        { "id": "zh-b1-62-f4", "type": "fill_input", "question": "Muy cerca: hen ____ (jin)", "correct_answer": "jin", "explanation": "jin" },
+        { "id": "zh-b1-62-f5", "type": "fill_input", "question": "Demasiado lejos: tai ____ le", "correct_answer": "yuan", "explanation": "yuan" },
+        { "id": "zh-b1-62-f6", "type": "fill_input", "question": "Desde / De: ____ (cong)", "correct_answer": "cong", "explanation": "cong" },
+        { "id": "zh-b1-62-f7", "type": "fill_input", "question": "Hasta / Llegar a: ____ (dao)", "correct_answer": "dao", "explanation": "dao" },
+        { "id": "zh-b1-62-f8", "type": "fill_input", "question": "De Beijing a Shanghai: ____ Bei jing ____ Shang hai (cong / dao)", "correct_answer": "cong dao", "explanation": "cong dao" },
+        { "id": "zh-b1-62-f9", "type": "fill_input", "question": "Desde aquí hasta allá: cong zhe r ____ na r (dao)", "correct_answer": "dao", "explanation": "dao" },
+        { "id": "zh-b1-62-f10", "type": "fill_input", "question": "Desde el banco hasta el hospital: cong yin hang dao yi ____ (yuan)", "correct_answer": "yuan", "explanation": "yuan" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y determina qué tan largo es el viaje.",
+      "questions": [
+        { "id": "zh-b1-62-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "远", "options": ["Lejos", "Cerca", "Desde", "Hasta"], "correct_answer": "Lejos", "explanation": "El audio dice: Yuǎn." },
+        { "id": "zh-b1-62-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "近", "options": ["Cerca", "Lejos", "Hospital", "Banco"], "correct_answer": "Cerca", "explanation": "El audio dice: Jìn." },
+        { "id": "zh-b1-62-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "太远了", "options": ["Demasiado lejos", "Muy cerca", "Demasiado caro", "Un poco lejos"], "correct_answer": "Demasiado lejos", "explanation": "El audio dice: Tài yuǎn le." },
+        { "id": "zh-b1-62-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "从这里到那里", "options": ["Desde aquí hasta allá", "Desde la escuela al hospital", "De China a España", "Muy lejos de aquí"], "correct_answer": "Desde aquí hasta allá", "explanation": "El audio dice: Cóng zhèlǐ dào nàlǐ. (Zhèlǐ es sinónimo de Zhèr)." },
+        { "id": "zh-b1-62-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "从医院到银行很近", "options": ["Desde el hospital hasta el banco está muy cerca", "El hospital está muy lejos", "El banco está al lado del hospital", "Desde la escuela al hospital"], "correct_answer": "Desde el hospital hasta el banco está muy cerca", "explanation": "El audio dice: Cóng yīyuàn dào yínháng hěn jìn." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Journey",
+      "pairs": [
+        {"id": "zh-b1-62-p1", "source": "远 (yuǎn)", "target": "Lejos"},
+        {"id": "zh-b1-62-p2", "source": "近 (jìn)", "target": "Cerca"},
+        {"id": "zh-b1-62-p3", "source": "太远了 (tài yuǎn le)", "target": "¡Demasiado lejos!"},
+        {"id": "zh-b1-62-p4", "source": "很近 (hěn jìn)", "target": "Muy cerca"},
+        {"id": "zh-b1-62-p5", "source": "从 (cóng)", "target": "Desde / De"},
+        {"id": "zh-b1-62-p6", "source": "到 (dào)", "target": "Hasta / Llegar a"},
+        {"id": "zh-b1-62-p7", "source": "从北京到上海 (cóng Běijīng dào Shànghǎi)", "target": "De Beijing a Shanghai"},
+        {"id": "zh-b1-62-p8", "source": "医院 (yīyuàn)", "target": "Hospital"},
+        {"id": "zh-b1-62-p9", "source": "右边 (yòubiān)", "target": "Derecha"},
+        {"id": "zh-b1-62-p10", "source": "多少钱 (duōshao qián)", "target": "¿Cuánto cuesta?"}
+      ]
+    }
+  ]
+}

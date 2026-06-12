@@ -1,0 +1,101 @@
+{
+  "id": "c2-44",
+  "title": "Macroeconomics",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Economics", "Global Markets", "Business"],
+  "completion_message": "¡Formidable! Ahora dominas el vocabulario de las altas finanzas globales. Hablar de inflación, tasas de interés, aranceles y el PIB te permite analizar el entorno macroeconómico como un verdadero experto.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Macroeconomía y Mercados Globales (C2)",
+      "parts": [
+        { "visual": "Para entender el mundo empresarial a nivel macro, necesitas dominar estos términos financieros: \n\n1. Inflation (Inflación): \n- El aumento general de los precios y la caída del poder adquisitivo del dinero. \nEj: High INFLATION is destroying the consumers' purchasing power. \n\n2. Interest rates (Tasas de interés): \n- El costo de pedir dinero prestado, fijado por los bancos centrales. \nEj: The central bank raised INTEREST RATES to combat inflation. \n\n3. GDP / Gross Domestic Product (PIB / Producto Interno Bruto): \n- El valor total de todos los bienes y servicios producidos en un país. \nEj: The country's GDP grew by 3% last year.", "audio": "Welcome to Macroeconomics and Global Markets. To understand the business world at a macro level, you need to master these financial terms. Number 1: Inflation. This is the general increase in prices and the fall in the purchasing power of money. For example: High INFLATION is destroying the consumers' purchasing power. Number 2: Interest rates. This is the cost of borrowing money, usually set by central banks. For example: The central bank raised INTEREST RATES to combat inflation. Number 3: GDP, which stands for Gross Domestic Product. This represents the total value of all goods and services produced within a country. For example: The country's GDP grew by 3% last year." },
+        { "visual": "4. Protectionism (Proteccionismo): \n- Política económica de restringir las importaciones para proteger las industrias locales. \nEj: The new government's trade policy relies heavily on PROTECTIONISM. \n\n5. Tariffs (Aranceles): \n- Impuestos a los bienes importados o exportados. \nEj: They imposed high TARIFFS on imported steel. \n\n6. Supply chain (Cadena de suministro): \n- Toda la red de personas y empresas involucradas en la creación y distribución de un producto. \nEj: The pandemic severely disrupted global SUPPLY CHAINS. \n\n7. Bull vs. Bear market (Mercado alcista vs. bajista): \n- Bull = los precios suben. Bear = los precios bajan. \nEj: Investors are making a lot of money in this BULL market.", "audio": "Number 4: Protectionism. The economic policy of restricting imports from other countries to protect domestic industries. For example: The new government's trade policy relies heavily on PROTECTIONISM. Number 5: Tariffs. Taxes imposed on imported or exported goods. For example: They imposed high TARIFFS on imported steel. Number 6: Supply chain. The entire network of individuals, organizations, resources, and technologies involved in creating and selling a product. For example: The pandemic severely disrupted global SUPPLY CHAINS. Number 7: Bull versus Bear market. A Bull market means stock prices are rising. A Bear market means prices are falling. For example: Investors are making a lot of money in this BULL market." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término macroeconómico correcto.",
+      "questions": [
+        { "id": "c2-44-q1", "type": "quiz_choice", "question": "Due to high ____, the cost of living has doubled in the last five years, but salaries haven't changed.", "options": ["inflation", "deflation", "flation", "influx"], "correct_answer": "inflation", "explanation": "Inflation = inflación (aumento de precios)." },
+        { "id": "c2-44-q2", "type": "quiz_choice", "question": "The central bank decided to lower interest ____ to encourage people to take loans and buy houses.", "options": ["rates", "prices", "costs", "fees"], "correct_answer": "rates", "explanation": "Interest rates = tasas/tipos de interés." },
+        { "id": "c2-44-q3", "type": "quiz_choice", "question": "China has the second largest ____ (Gross Domestic Product) in the world. (PIB).", "options": ["GDP", "GNP", "GPD", "GND"], "correct_answer": "GDP", "explanation": "GDP (Gross Domestic Product) = PIB (Producto Interno Bruto)." },
+        { "id": "c2-44-q4", "type": "quiz_choice", "question": "To protect local farmers, the government imposed heavy ____ on imported agricultural products. (Aranceles).", "options": ["tariffs", "taxes", "tickets", "tolls"], "correct_answer": "tariffs", "explanation": "Tariffs = aranceles." },
+        { "id": "c2-44-q5", "type": "quiz_choice", "question": "The global ____ chain was severely disrupted when the Suez Canal was blocked. (Cadena de suministro).", "options": ["supply", "demand", "product", "delivery"], "correct_answer": "supply", "explanation": "Supply chain = cadena de suministro." },
+        { "id": "c2-44-q6", "type": "quiz_choice", "question": "A period of economic decline where the GDP falls for two consecutive quarters is officially called a ____.", "options": ["recession", "depression", "compression", "reduction"], "correct_answer": "recession", "explanation": "Recession = recesión (2 trimestres de caída del PIB)." },
+        { "id": "c2-44-q7", "type": "quiz_choice", "question": "When the stock market is rising and investors are optimistic, it is known as a ____ market.", "options": ["bull", "bear", "lion", "eagle"], "correct_answer": "bull", "explanation": "Bull market = mercado alcista." },
+        { "id": "c2-44-q8", "type": "quiz_choice", "question": "When the stock market is falling and investors are pessimistic, it is known as a ____ market.", "options": ["bear", "bull", "wolf", "snake"], "correct_answer": "bear", "explanation": "Bear market = mercado bajista." },
+        { "id": "c2-44-q9", "type": "quiz_choice", "question": "An economic policy that restricts international trade to help domestic industries is called ____.", "options": ["protectionism", "capitalism", "socialism", "globalism"], "correct_answer": "protectionism", "explanation": "Protectionism = proteccionismo." },
+        { "id": "c2-44-q10", "type": "quiz_choice", "question": "If a country imports more goods than it exports, it has a trade ____. (Déficit comercial).", "options": ["deficit", "surplus", "debt", "loan"], "correct_answer": "deficit", "explanation": "Trade deficit = déficit comercial." },
+        { "id": "c2-44-q11", "type": "quiz_choice", "question": "If a country exports more goods than it imports, it has a trade ____. (Superávit comercial).", "options": ["surplus", "deficit", "excess", "profit"], "correct_answer": "surplus", "explanation": "Trade surplus = superávit comercial." },
+        { "id": "c2-44-q12", "type": "quiz_choice", "question": "The total amount of money that a government owes to its creditors is the national ____. (Deuda nacional).", "options": ["debt", "deficit", "loan", "borrow"], "correct_answer": "debt", "explanation": "National debt = deuda nacional/pública." },
+        { "id": "c2-44-q13", "type": "quiz_choice", "question": "When a currency loses value compared to other currencies, it is called ____. (Devaluación/Depreciación).", "options": ["depreciation", "appreciation", "inflation", "deflation"], "correct_answer": "depreciation", "explanation": "Depreciation (o devaluation) = depreciación de la moneda." },
+        { "id": "c2-44-q14", "type": "quiz_choice", "question": "The ____ rate is the percentage of the labor force that is jobless and looking for work. (Tasa de desempleo).", "options": ["unemployment", "employment", "working", "jobless"], "correct_answer": "unemployment", "explanation": "Unemployment rate = tasa de desempleo." },
+        { "id": "c2-44-q15", "type": "quiz_choice", "question": "A tax levied on a specific product, like alcohol or tobacco, is called an ____ tax.", "options": ["excise", "income", "sales", "value"], "correct_answer": "excise", "explanation": "Excise tax = impuesto al consumo específico (alcohol, tabaco, gasolina)." },
+        { "id": "c2-44-q16", "type": "quiz_choice", "question": "The ____ power of the dollar has decreased significantly over the last 50 years. (Poder adquisitivo).", "options": ["purchasing", "buying", "spending", "paying"], "correct_answer": "purchasing", "explanation": "Purchasing power = poder adquisitivo." },
+        { "id": "c2-44-q17", "type": "quiz_choice", "question": "When prices drop because there is too much supply and not enough demand, it is called ____.", "options": ["deflation", "inflation", "recession", "stagnation"], "correct_answer": "deflation", "explanation": "Deflation = deflación (caída general de precios)." },
+        { "id": "c2-44-q18", "type": "quiz_choice", "question": "A situation where an economy experiences stagnant growth and high inflation at the same time is called ____.", "options": ["stagflation", "inflation", "deflation", "recession"], "correct_answer": "stagflation", "explanation": "Stagflation = estanflación (estancamiento + inflación)." },
+        { "id": "c2-44-q19", "type": "quiz_choice", "question": "Money given by the government to a private business to keep the price of a product low is called a ____. (Subsidio).", "options": ["subsidy", "bribe", "loan", "grant"], "correct_answer": "subsidy", "explanation": "Subsidy = subsidio/subvención." },
+        { "id": "c2-44-q20", "type": "quiz_choice", "question": "The process of moving a company's production back to its home country from overseas is called ____.", "options": ["reshoring", "offshoring", "outsourcing", "insourcing"], "correct_answer": "reshoring", "explanation": "Reshoring (o onshoring) = relocalización de la producción al país de origen." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término económico correcto.",
+      "questions": [
+        { "id": "c2-44-f1", "type": "fill_input", "question": "High ____ is raising prices. (Inflación con I)", "correct_answer": "inflation", "explanation": "inflation." },
+        { "id": "c2-44-f2", "type": "fill_input", "question": "Interest ____. (Tasas de interés con R)", "correct_answer": "rates", "explanation": "rates." },
+        { "id": "c2-44-f3", "type": "fill_input", "question": "The country's ____. (PIB con G)", "correct_answer": "GDP", "explanation": "GDP." },
+        { "id": "c2-44-f4", "type": "fill_input", "question": "Import ____. (Aranceles con T)", "correct_answer": "tariffs", "explanation": "tariffs." },
+        { "id": "c2-44-f5", "type": "fill_input", "question": "The ____ chain. (Cadena de suministro con S)", "correct_answer": "supply", "explanation": "supply." },
+        { "id": "c2-44-f6", "type": "fill_input", "question": "A ____ market. (Mercado alcista con B)", "correct_answer": "bull", "explanation": "bull." },
+        { "id": "c2-44-f7", "type": "fill_input", "question": "A ____ market. (Mercado bajista con B)", "correct_answer": "bear", "explanation": "bear." },
+        { "id": "c2-44-f8", "type": "fill_input", "question": "Trade ____. (Déficit comercial con D)", "correct_answer": "deficit", "explanation": "deficit." },
+        { "id": "c2-44-f9", "type": "fill_input", "question": "Trade ____. (Superávit comercial con S)", "correct_answer": "surplus", "explanation": "surplus." },
+        { "id": "c2-44-f10", "type": "fill_input", "question": "Economic ____. (Recesión con R)", "correct_answer": "recession", "explanation": "recession." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Macro Match",
+      "pairs": [
+        {"id": "c2-44-p1", "source": "Inflation", "target": "Inflación (subida de precios)"},
+        {"id": "c2-44-p2", "source": "Interest rates", "target": "Tasas de interés"},
+        {"id": "c2-44-p3", "source": "GDP (Gross Domestic Product)", "target": "PIB (Producto Interno Bruto)"},
+        {"id": "c2-44-p4", "source": "Tariffs", "target": "Aranceles a la importación"},
+        {"id": "c2-44-p5", "source": "Supply chain", "target": "Cadena de suministro"},
+        {"id": "c2-44-p6", "source": "Bull market", "target": "Mercado alcista (precios suben)"},
+        {"id": "c2-44-p7", "source": "Bear market", "target": "Mercado bajista (precios bajan)"},
+        {"id": "c2-44-p8", "source": "Protectionism", "target": "Proteccionismo económico"},
+        {"id": "c2-44-p9", "source": "Trade deficit", "target": "Déficit comercial"},
+        {"id": "c2-44-p10", "source": "Subsidy", "target": "Subsidio gubernamental"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración macroeconómica correcta.",
+      "questions": [
+        { "id": "c2-44-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Inflation is rising rapidly.", "options": ["Inflation is rising rapidly.", "Deflation is rising rapidly.", "Inflation was rising rapidly.", "Inflation is raising rapidly."], "correct_answer": "Inflation is rising rapidly.", "explanation": "Audio exacto." },
+        { "id": "c2-44-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They raised interest rates.", "options": ["They raised interest rates.", "We raised interest rates.", "They raise interest rates.", "They raised interest prices."], "correct_answer": "They raised interest rates.", "explanation": "Audio exacto." },
+        { "id": "c2-44-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The GDP grew by two percent.", "options": ["The GDP grew by two percent.", "The GDP grows by two percent.", "A GDP grew by two percent.", "The GDP grown by two percent."], "correct_answer": "The GDP grew by two percent.", "explanation": "Audio exacto." },
+        { "id": "c2-44-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They imposed high tariffs.", "options": ["They imposed high tariffs.", "We imposed high tariffs.", "They impose high tariffs.", "They imposing high tariffs."], "correct_answer": "They imposed high tariffs.", "explanation": "Audio exacto." },
+        { "id": "c2-44-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The supply chain is broken.", "options": ["The supply chain is broken.", "The supply chain was broken.", "A supply chain is broken.", "The supply chains are broken."], "correct_answer": "The supply chain is broken.", "explanation": "Audio exacto." },
+        { "id": "c2-44-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are in a bull market.", "options": ["We are in a bull market.", "They are in a bull market.", "We were in a bull market.", "We are in a bear market."], "correct_answer": "We are in a bull market.", "explanation": "Audio exacto." },
+        { "id": "c2-44-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are entering a recession.", "options": ["We are entering a recession.", "They are entering a recession.", "We were entering a recession.", "We are entering a depression."], "correct_answer": "We are entering a recession.", "explanation": "Audio exacto." },
+        { "id": "c2-44-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a trade deficit.", "options": ["It is a trade deficit.", "This is a trade deficit.", "It was a trade deficit.", "It is a trade surplus."], "correct_answer": "It is a trade deficit.", "explanation": "Audio exacto." },
+        { "id": "c2-44-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The national debt is huge.", "options": ["The national debt is huge.", "A national debt is huge.", "The national debt was huge.", "The national deficit is huge."], "correct_answer": "The national debt is huge.", "explanation": "Audio exacto." },
+        { "id": "c2-44-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They gave a government subsidy.", "options": ["They gave a government subsidy.", "We gave a government subsidy.", "They give a government subsidy.", "He gave a government subsidy."], "correct_answer": "They gave a government subsidy.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

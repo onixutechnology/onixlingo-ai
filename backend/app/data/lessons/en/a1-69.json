@@ -1,0 +1,101 @@
+{
+  "id": "a1-69",
+  "title": "Much vs Many",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Quantifiers", "Much vs Many"],
+  "completion_message": "¡Magnífico! Ya sabes cómo preguntar cantidades usando 'How much' (incontables) y 'How many' (contables).",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Much y Many",
+      "parts": [
+        { "visual": "'How much' se usa para incontables (singulares): How much time? How much money? How much coffee?", "audio": "How much is used for uncountable singular nouns: How much time? How much money? How much coffee?" },
+        { "visual": "'How many' se usa para contables en plural: How many computers? How many people? How many days?", "audio": "How many is used for countable plural nouns: How many computers? How many people? How many days?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige entre 'much' o 'many'.",
+      "questions": [
+        { "id": "a1-69-q1", "type": "quiz_choice", "question": "How ____ time do we have?", "options": ["much", "many", "some", "any"], "correct_answer": "much", "explanation": "Time es incontable (How much)." },
+        { "id": "a1-69-q2", "type": "quiz_choice", "question": "How ____ computers are in the office?", "options": ["many", "much", "any", "some"], "correct_answer": "many", "explanation": "Computers es plural contable (How many)." },
+        { "id": "a1-69-q3", "type": "quiz_choice", "question": "How ____ money does it cost?", "options": ["much", "many", "a lot", "any"], "correct_answer": "much", "explanation": "Money es incontable (How much)." },
+        { "id": "a1-69-q4", "type": "quiz_choice", "question": "How ____ people are in the meeting?", "options": ["many", "much", "any", "a lot"], "correct_answer": "many", "explanation": "People es el plural contable de person (How many)." },
+        { "id": "a1-69-q5", "type": "quiz_choice", "question": "I don't have ____ time today.", "options": ["much", "many", "some", "few"], "correct_answer": "much", "explanation": "No tengo mucho tiempo (much para incontables)." },
+        { "id": "a1-69-q6", "type": "quiz_choice", "question": "We don't need ____ chairs.", "options": ["many", "much", "some", "any"], "correct_answer": "many", "explanation": "Chairs (sillas) es contable plural (many)." },
+        { "id": "a1-69-q7", "type": "quiz_choice", "question": "How ____ coffee do you drink?", "options": ["much", "many", "a lot", "any"], "correct_answer": "much", "explanation": "Coffee es incontable (How much)." },
+        { "id": "a1-69-q8", "type": "quiz_choice", "question": "How ____ emails did you send?", "options": ["many", "much", "some", "any"], "correct_answer": "many", "explanation": "Emails es plural contable (How many)." },
+        { "id": "a1-69-q9", "type": "quiz_choice", "question": "There isn't ____ information.", "options": ["much", "many", "some", "few"], "correct_answer": "much", "explanation": "Information es incontable (much)." },
+        { "id": "a1-69-q10", "type": "quiz_choice", "question": "How ____ days are you staying?", "options": ["many", "much", "some", "any"], "correct_answer": "many", "explanation": "Days es plural contable (How many)." },
+        { "id": "a1-69-q11", "type": "quiz_choice", "question": "How ____ sugar do you want?", "options": ["much", "many", "a lot", "few"], "correct_answer": "much", "explanation": "Sugar es incontable (How much)." },
+        { "id": "a1-69-q12", "type": "quiz_choice", "question": "How ____ projects are you working on?", "options": ["many", "much", "any", "some"], "correct_answer": "many", "explanation": "Projects es plural contable (How many)." },
+        { "id": "a1-69-q13", "type": "quiz_choice", "question": "There isn't ____ milk in the fridge.", "options": ["much", "many", "some", "few"], "correct_answer": "much", "explanation": "Milk es incontable (much)." },
+        { "id": "a1-69-q14", "type": "quiz_choice", "question": "How ____ clients did you call?", "options": ["many", "much", "some", "any"], "correct_answer": "many", "explanation": "Clients es plural contable (How many)." },
+        { "id": "a1-69-q15", "type": "quiz_choice", "question": "I don't have ____ questions.", "options": ["many", "much", "some", "a lot"], "correct_answer": "many", "explanation": "Questions es contable plural (many)." },
+        { "id": "a1-69-q16", "type": "quiz_choice", "question": "How ____ experience do you have?", "options": ["much", "many", "any", "few"], "correct_answer": "much", "explanation": "Experience es incontable aquí (How much)." },
+        { "id": "a1-69-q17", "type": "quiz_choice", "question": "How ____ pages are in the report?", "options": ["many", "much", "any", "some"], "correct_answer": "many", "explanation": "Pages es plural contable (How many)." },
+        { "id": "a1-69-q18", "type": "quiz_choice", "question": "We don't use ____ paper in this office.", "options": ["much", "many", "a lot", "few"], "correct_answer": "much", "explanation": "Paper es incontable como material (much)." },
+        { "id": "a1-69-q19", "type": "quiz_choice", "question": "How ____ languages do you speak?", "options": ["many", "much", "any", "some"], "correct_answer": "many", "explanation": "Languages es plural contable (How many)." },
+        { "id": "a1-69-q20", "type": "quiz_choice", "question": "How ____ traffic is there?", "options": ["much", "many", "some", "any"], "correct_answer": "much", "explanation": "Traffic es incontable (How much)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe much o many según corresponda.",
+      "questions": [
+        { "id": "a1-69-f1", "type": "fill_input", "question": "How ____ time? (Incontable).", "correct_answer": "much", "explanation": "much." },
+        { "id": "a1-69-f2", "type": "fill_input", "question": "How ____ computers? (Contable plural).", "correct_answer": "many", "explanation": "many." },
+        { "id": "a1-69-f3", "type": "fill_input", "question": "How ____ money? (Incontable).", "correct_answer": "much", "explanation": "much." },
+        { "id": "a1-69-f4", "type": "fill_input", "question": "How ____ people? (Contable plural).", "correct_answer": "many", "explanation": "many." },
+        { "id": "a1-69-f5", "type": "fill_input", "question": "I don't have ____ time (Incontable).", "correct_answer": "much", "explanation": "much." },
+        { "id": "a1-69-f6", "type": "fill_input", "question": "I don't have ____ chairs (Contable plural).", "correct_answer": "many", "explanation": "many." },
+        { "id": "a1-69-f7", "type": "fill_input", "question": "How ____ coffee? (Incontable).", "correct_answer": "much", "explanation": "much." },
+        { "id": "a1-69-f8", "type": "fill_input", "question": "How ____ emails? (Contable plural).", "correct_answer": "many", "explanation": "many." },
+        { "id": "a1-69-f9", "type": "fill_input", "question": "There isn't ____ information (Incontable).", "correct_answer": "much", "explanation": "much." },
+        { "id": "a1-69-f10", "type": "fill_input", "question": "How ____ days? (Contable plural).", "correct_answer": "many", "explanation": "many." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-69-p1", "source": "How much time?", "target": "¿Cuánto tiempo?"},
+        {"id": "a1-69-p2", "source": "How many computers?", "target": "¿Cuántas computadoras?"},
+        {"id": "a1-69-p3", "source": "How much money?", "target": "¿Cuánto dinero?"},
+        {"id": "a1-69-p4", "source": "How many people?", "target": "¿Cuántas personas?"},
+        {"id": "a1-69-p5", "source": "Not much time", "target": "No mucho tiempo"},
+        {"id": "a1-69-p6", "source": "Not many chairs", "target": "No muchas sillas"},
+        {"id": "a1-69-p7", "source": "How much coffee?", "target": "¿Cuánto café?"},
+        {"id": "a1-69-p8", "source": "How many emails?", "target": "¿Cuántos correos?"},
+        {"id": "a1-69-p9", "source": "Not much information", "target": "No mucha información"},
+        {"id": "a1-69-p10", "source": "How many days?", "target": "¿Cuántos días?"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-69-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How much time do we have?", "options": ["How much time do we have?", "How many times do we have?", "Do we have much time?", "We have much time."], "correct_answer": "How much time do we have?", "explanation": "Audio exacto." },
+        { "id": "a1-69-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How many computers are there?", "options": ["How many computers are there?", "How much computer is there?", "Are there many computers?", "There are many computers."], "correct_answer": "How many computers are there?", "explanation": "Audio exacto." },
+        { "id": "a1-69-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How much money?", "options": ["How much money?", "How many money?", "Much money?", "Many money?"], "correct_answer": "How much money?", "explanation": "Audio exacto." },
+        { "id": "a1-69-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How many people are in the meeting?", "options": ["How many people are in the meeting?", "How much people are in the meeting?", "Many people are in the meeting.", "Are there many people in the meeting?"], "correct_answer": "How many people are in the meeting?", "explanation": "Audio exacto." },
+        { "id": "a1-69-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I don't have much time.", "options": ["I don't have much time.", "I have much time.", "He doesn't have much time.", "I don't have many time."], "correct_answer": "I don't have much time.", "explanation": "Audio exacto." },
+        { "id": "a1-69-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We don't need many chairs.", "options": ["We don't need many chairs.", "We need many chairs.", "I don't need many chairs.", "We don't need much chairs."], "correct_answer": "We don't need many chairs.", "explanation": "Audio exacto." },
+        { "id": "a1-69-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How much coffee do you drink?", "options": ["How much coffee do you drink?", "How many coffee do you drink?", "Do you drink much coffee?", "I drink much coffee."], "correct_answer": "How much coffee do you drink?", "explanation": "Audio exacto." },
+        { "id": "a1-69-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How many emails did you send?", "options": ["How many emails did you send?", "How much emails did you send?", "Did you send many emails?", "I sent many emails."], "correct_answer": "How many emails did you send?", "explanation": "Audio exacto." },
+        { "id": "a1-69-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There isn't much information.", "options": ["There isn't much information.", "There is much information.", "There aren't many information.", "Is there much information?"], "correct_answer": "There isn't much information.", "explanation": "Audio exacto." },
+        { "id": "a1-69-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How many days are you staying?", "options": ["How many days are you staying?", "How much days are you staying?", "Are you staying many days?", "I am staying many days."], "correct_answer": "How many days are you staying?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

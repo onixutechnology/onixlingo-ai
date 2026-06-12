@@ -1,0 +1,101 @@
+{
+  "id": "a1-20",
+  "title": "First Milestone Review",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 1000,
+  "tags": ["A1", "Review", "Milestone"],
+  "completion_message": "¡Felicidades! Has completado tus primeras 20 lecciones y dominas las bases del inglés corporativo A1.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Repaso A1",
+      "parts": [
+        { "visual": "En estas primeras 20 lecciones has aprendido a presentarte, agendar reuniones, contestar el teléfono y describir tu empresa.", "audio": "In these first 20 lessons you have learned to introduce yourself, schedule meetings, answer the phone, and describe your company." },
+        { "visual": "Este es un examen rápido para consolidar todo tu conocimiento. ¡Mucho éxito!", "audio": "This is a quick test to consolidate all your knowledge. Good luck!" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Examen de opción múltiple (Repaso General).",
+      "questions": [
+        { "id": "a1-20-q1", "type": "quiz_choice", "question": "Hello, my ____ is Sarah.", "options": ["name", "names", "name's", "naming"], "correct_answer": "name", "explanation": "Presentación (L1)." },
+        { "id": "a1-20-q2", "type": "quiz_choice", "question": "The meeting is ____ Monday.", "options": ["on", "in", "at", "by"], "correct_answer": "on", "explanation": "Días de la semana (L11)." },
+        { "id": "a1-20-q3", "type": "quiz_choice", "question": "I would like a cup of ____.", "options": ["coffee", "water", "tea", "milk"], "correct_answer": "coffee", "explanation": "Bebidas corporativas (L8)." },
+        { "id": "a1-20-q4", "type": "quiz_choice", "question": "Our company ____ large.", "options": ["is", "are", "am", "be"], "correct_answer": "is", "explanation": "Describir empresa (L15)." },
+        { "id": "a1-20-q5", "type": "quiz_choice", "question": "I am ____ a developer.", "options": ["not", "no", "none", "nothing"], "correct_answer": "not", "explanation": "Negación." },
+        { "id": "a1-20-q6", "type": "quiz_choice", "question": "Please ____ the document.", "options": ["print", "prints", "printing", "printed"], "correct_answer": "print", "explanation": "Acciones de oficina (L18)." },
+        { "id": "a1-20-q7", "type": "quiz_choice", "question": "John ____ (al teléfono).", "options": ["speaking", "talking", "saying", "telling"], "correct_answer": "speaking", "explanation": "Teléfono (L13)." },
+        { "id": "a1-20-q8", "type": "quiz_choice", "question": "____ Mr. Smith,", "options": ["Dear", "Deer", "Dare", "Darling"], "correct_answer": "Dear", "explanation": "Correos (L14)." },
+        { "id": "a1-20-q9", "type": "quiz_choice", "question": "The project starts ____ January.", "options": ["in", "on", "at", "by"], "correct_answer": "in", "explanation": "Meses (L12)." },
+        { "id": "a1-20-q10", "type": "quiz_choice", "question": "Here is my plane ____.", "options": ["ticket", "passport", "bag", "suit"], "correct_answer": "ticket", "explanation": "Viajes (L9)." },
+        { "id": "a1-20-q11", "type": "quiz_choice", "question": "I need a single ____.", "options": ["room", "bed", "hotel", "house"], "correct_answer": "room", "explanation": "Hotel (L10)." },
+        { "id": "a1-20-q12", "type": "quiz_choice", "question": "The ____ is in a meeting.", "options": ["manager", "manage", "managing", "management"], "correct_answer": "manager", "explanation": "Equipo (L7)." },
+        { "id": "a1-20-q13", "type": "quiz_choice", "question": "Turn ____ at the corner.", "options": ["left", "leave", "lift", "leaf"], "correct_answer": "left", "explanation": "Direcciones (L6)." },
+        { "id": "a1-20-q14", "type": "quiz_choice", "question": "The price is fifty ____.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Precios (L5)." },
+        { "id": "a1-20-q15", "type": "quiz_choice", "question": "It is two ____.", "options": ["o'clock", "clock", "time", "hour"], "correct_answer": "o'clock", "explanation": "Hora (L4)." },
+        { "id": "a1-20-q16", "type": "quiz_choice", "question": "I ____ up at 6 AM.", "options": ["wake", "wakes", "waking", "woke"], "correct_answer": "wake", "explanation": "Rutina (L3)." },
+        { "id": "a1-20-q17", "type": "quiz_choice", "question": "My ____ is on the desk.", "options": ["laptop", "lap", "top", "computer"], "correct_answer": "laptop", "explanation": "Oficina (L2)." },
+        { "id": "a1-20-q18", "type": "quiz_choice", "question": "I am ____ an email.", "options": ["writing", "write", "writes", "wrote"], "correct_answer": "writing", "explanation": "Presente continuo (L19)." },
+        { "id": "a1-20-q19", "type": "quiz_choice", "question": "She is an ____.", "options": ["engineer", "developer", "manager", "designer"], "correct_answer": "engineer", "explanation": "Artículo 'an' (L16)." },
+        { "id": "a1-20-q20", "type": "quiz_choice", "question": "Turn on the ____.", "options": ["computer", "compute", "computes", "computed"], "correct_answer": "computer", "explanation": "TI (L17)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta.",
+      "questions": [
+        { "id": "a1-20-f1", "type": "fill_input", "question": "My ____ is Sarah (Nombre).", "correct_answer": "name", "explanation": "Name." },
+        { "id": "a1-20-f2", "type": "fill_input", "question": "The meeting is ____ Monday.", "correct_answer": "on", "explanation": "On." },
+        { "id": "a1-20-f3", "type": "fill_input", "question": "A cup of ____ (Café).", "correct_answer": "coffee", "explanation": "Coffee." },
+        { "id": "a1-20-f4", "type": "fill_input", "question": "Our company ____ large.", "correct_answer": "is", "explanation": "Is." },
+        { "id": "a1-20-f5", "type": "fill_input", "question": "Please ____ the document (Imprimir).", "correct_answer": "print", "explanation": "Print." },
+        { "id": "a1-20-f6", "type": "fill_input", "question": "John ____ (Hablando).", "correct_answer": "speaking", "explanation": "Speaking." },
+        { "id": "a1-20-f7", "type": "fill_input", "question": "____ Mr. Smith (Estimado).", "correct_answer": "Dear", "explanation": "Dear." },
+        { "id": "a1-20-f8", "type": "fill_input", "question": "Starts ____ January.", "correct_answer": "in", "explanation": "In." },
+        { "id": "a1-20-f9", "type": "fill_input", "question": "Plane ____ (Boleto).", "correct_answer": "ticket", "explanation": "Ticket." },
+        { "id": "a1-20-f10", "type": "fill_input", "question": "I am ____ an email (Escribiendo).", "correct_answer": "writing", "explanation": "Writing." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-20-p1", "source": "Monday", "target": "Lunes"},
+        {"id": "a1-20-p2", "source": "January", "target": "Enero"},
+        {"id": "a1-20-p3", "source": "Coffee", "target": "Café"},
+        {"id": "a1-20-p4", "source": "Manager", "target": "Gerente"},
+        {"id": "a1-20-p5", "source": "Ticket", "target": "Boleto"},
+        {"id": "a1-20-p6", "source": "Room", "target": "Habitación"},
+        {"id": "a1-20-p7", "source": "Print", "target": "Imprimir"},
+        {"id": "a1-20-p8", "source": "Speak", "target": "Hablar"},
+        {"id": "a1-20-p9", "source": "Dear", "target": "Estimado"},
+        {"id": "a1-20-p10", "source": "Company", "target": "Empresa"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-20-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Hello, my name is John.", "options": ["Hello, my name is John.", "Hi, my name is John.", "Hello, his name is John.", "Hello, my name is Tom."], "correct_answer": "Hello, my name is John.", "explanation": "Audio exacto." },
+        { "id": "a1-20-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The meeting is on Monday.", "options": ["The meeting is on Monday.", "The meeting is on Sunday.", "The meeting is on Tuesday.", "The meeting is in May."], "correct_answer": "The meeting is on Monday.", "explanation": "Audio exacto." },
+        { "id": "a1-20-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I would like a coffee.", "options": ["I would like a coffee.", "I would like a tea.", "I will like a coffee.", "I want a coffee."], "correct_answer": "I would like a coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-20-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our company is large.", "options": ["Our company is large.", "Our company is small.", "Your company is large.", "Our country is large."], "correct_answer": "Our company is large.", "explanation": "Audio exacto." },
+        { "id": "a1-20-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please print the document.", "options": ["Please print the document.", "Please point the document.", "Please paint the document.", "Please print a document."], "correct_answer": "Please print the document.", "explanation": "Audio exacto." },
+        { "id": "a1-20-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "John speaking.", "options": ["John speaking.", "John calling.", "John talking.", "John sleeping."], "correct_answer": "John speaking.", "explanation": "Audio exacto." },
+        { "id": "a1-20-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Dear Mr. Smith.", "options": ["Dear Mr. Smith.", "Dear Mrs. Smith.", "Hear Mr. Smith.", "Dear Miss Smith."], "correct_answer": "Dear Mr. Smith.", "explanation": "Audio exacto." },
+        { "id": "a1-20-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In January.", "options": ["In January.", "On January.", "In February.", "At January."], "correct_answer": "In January.", "explanation": "Audio exacto." },
+        { "id": "a1-20-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Here is my ticket.", "options": ["Here is my ticket.", "Where is my ticket?", "There is my ticket.", "Here are my tickets."], "correct_answer": "Here is my ticket.", "explanation": "Audio exacto." },
+        { "id": "a1-20-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am writing an email.", "options": ["I am writing an email.", "I am reading an email.", "I am sending an email.", "He is writing an email."], "correct_answer": "I am writing an email.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

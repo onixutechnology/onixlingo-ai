@@ -1,0 +1,101 @@
+{
+  "id": "c2-73",
+  "title": "Cleft Sentences",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Grammar", "Emphasis", "Advanced", "Syntax"],
+  "completion_message": "¡Magnífico! Has dominado las oraciones hendidas ('Cleft sentences'). Ahora puedes dirigir la atención de tu oyente exactamente hacia donde quieres, con el máximo énfasis posible. Eres un maestro de la sintaxis.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Cleft Sentences for Emphasis (C2)",
+      "parts": [
+        { "visual": "Las oraciones hendidas (Cleft sentences) se usan en inglés para dar énfasis a una parte específica de la oración. Cortan (cleave) una oración normal en dos partes. \n\n1. It-Clefts (El énfasis va después del verbo 'to be'): \n- Normal: John broke the window yesterday. \n- Énfasis en John: IT WAS John WHO broke the window yesterday. \n- Énfasis en la ventana: IT WAS the window THAT John broke. \n- Énfasis en cuándo: IT WAS yesterday THAT John broke the window. \n\nEstructura: It + is/was + [Lo que enfatizas] + who/that...", "audio": "Welcome to Cleft Sentences for Emphasis. In English, we use cleft sentences to put focus on a specific part of a sentence. We cleave, or split, the sentence into two. Number 1: It-Clefts. The emphasis comes immediately after the verb 'to be'. Let's take a normal sentence: John broke the window yesterday. To emphasize John: IT WAS John WHO broke the window yesterday. To emphasize the window: IT WAS the window THAT John broke. To emphasize when it happened: IT WAS yesterday THAT John broke the window. The structure is: It plus is or was, plus the thing you want to emphasize, plus who or that." },
+        { "visual": "2. Wh-Clefts (Lo que quiero/necesito/hice...): \n- Normal: I need a coffee right now. \n- Énfasis: WHAT I need IS a coffee right now. \n- Normal: She wants peace and quiet. \n- Énfasis: WHAT she wants IS peace and quiet. \n\n3. All-Clefts (Todo lo que / Lo único que...): \n- Normal: I just want to sleep. \n- Énfasis: ALL I want IS to sleep. \n- Normal: He only touched the button. \n- Énfasis: ALL he did WAS touch the button. \n\n4. The reason why / The place where / The person who: \n- Normal: I love Paris because of the food. \n- Énfasis: THE REASON WHY I love Paris IS the food.", "audio": "Number 2: Wh-Clefts. These usually start with 'What' to mean 'the thing that'. Normal: I need a coffee right now. Emphasis: WHAT I need IS a coffee right now. Normal: She wants peace and quiet. Emphasis: WHAT she wants IS peace and quiet. Number 3: All-Clefts. 'All' here means 'the only thing'. Normal: I just want to sleep. Emphasis: ALL I want IS to sleep. Normal: He only touched the button. Emphasis: ALL he did WAS touch the button. Number 4: Using phrases like The reason why, The place where, or The person who. Normal: I love Paris because of the food. Emphasis: THE REASON WHY I love Paris IS the food." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la opción correcta para formar una oración hendida de alto impacto.",
+      "questions": [
+        { "id": "c2-73-q1", "type": "quiz_choice", "question": "Normal: Sarah solved the problem. -> Énfasis en Sarah: ____ Sarah who solved the problem.", "options": ["It was", "She was", "That was", "What was"], "correct_answer": "It was", "explanation": "It-Cleft: It was Sarah who..." },
+        { "id": "c2-73-q2", "type": "quiz_choice", "question": "Normal: I hate the humidity in this city. -> Énfasis en la humedad: ____ I hate is the humidity in this city.", "options": ["What", "That", "It", "Which"], "correct_answer": "What", "explanation": "Wh-Cleft: What I hate is..." },
+        { "id": "c2-73-q3", "type": "quiz_choice", "question": "Normal: I just need five minutes of your time. -> Énfasis: ____ I need is five minutes of your time.", "options": ["All", "Everything", "What", "Only"], "correct_answer": "All", "explanation": "All-Cleft: All I need is..." },
+        { "id": "c2-73-q4", "type": "quiz_choice", "question": "Normal: We met in London in 2015. -> Énfasis en el lugar: ____ we met was London.", "options": ["The place where", "The city that", "Where that", "It is where"], "correct_answer": "The place where", "explanation": "The place where we met was London." },
+        { "id": "c2-73-q5", "type": "quiz_choice", "question": "Normal: He quit his job because he was stressed. -> Énfasis en la razón: ____ he quit his job was the stress.", "options": ["The reason why", "The why", "Because", "It is because"], "correct_answer": "The reason why", "explanation": "The reason why he quit his job was..." },
+        { "id": "c2-73-q6", "type": "quiz_choice", "question": "Normal: I only want a glass of water. -> Énfasis: ____ I want is a glass of water.", "options": ["All", "Only", "Just", "What"], "correct_answer": "All", "explanation": "All I want is a glass of water." },
+        { "id": "c2-73-q7", "type": "quiz_choice", "question": "Normal: The CEO made the final decision. -> Énfasis en el CEO: It was the CEO ____ made the final decision.", "options": ["who", "which", "whom", "whose"], "correct_answer": "who", "explanation": "It was the CEO who made..." },
+        { "id": "c2-73-q8", "type": "quiz_choice", "question": "Normal: I really appreciate your honesty. -> Énfasis: What I really appreciate ____ your honesty.", "options": ["is", "are", "be", "was"], "correct_answer": "is", "explanation": "What I appreciate IS your honesty." },
+        { "id": "c2-73-q9", "type": "quiz_choice", "question": "Normal: They bought the house in 1999. -> Énfasis en el año: It was in 1999 ____ they bought the house.", "options": ["that", "when", "which", "where"], "correct_answer": "that", "explanation": "It was in 1999 THAT they bought... (En clefts temporales con 'It was', solemos usar 'that')." },
+        { "id": "c2-73-q10", "type": "quiz_choice", "question": "Normal: I don't understand the last paragraph. -> Énfasis: What I don't understand ____ the last paragraph.", "options": ["is", "are", "does", "do"], "correct_answer": "is", "explanation": "What I don't understand IS..." },
+        { "id": "c2-73-q11", "type": "quiz_choice", "question": "Normal: Mark gave me this book. -> Énfasis en el libro: ____ Mark gave me.", "options": ["It was this book that", "This book it was that", "That was this book", "It this book that"], "correct_answer": "It was this book that", "explanation": "It was [this book] that..." },
+        { "id": "c2-73-q12", "type": "quiz_choice", "question": "Normal: The constant noise annoys me. -> Énfasis: ____ the constant noise.", "options": ["What annoys me is", "It annoys me is", "That annoys me is", "All annoys me is"], "correct_answer": "What annoys me is", "explanation": "What annoys me is the constant noise." },
+        { "id": "c2-73-q13", "type": "quiz_choice", "question": "Normal: She only sent an email. (No hizo nada más). -> Énfasis con All: ____ send an email.", "options": ["All she did was", "All she sent was", "All she did is", "All she sends was"], "correct_answer": "All she did was", "explanation": "All she did was send an email." },
+        { "id": "c2-73-q14", "type": "quiz_choice", "question": "Normal: The lack of communication caused the failure. -> Énfasis: The ____ the lack of communication.", "options": ["reason for the failure was", "failure because of was", "why failure was", "reasoning failure was"], "correct_answer": "reason for the failure was", "explanation": "The reason for the failure was..." },
+        { "id": "c2-73-q15", "type": "quiz_choice", "question": "Normal: They are trying to hide the truth. -> Énfasis: ____ to hide the truth.", "options": ["What they are trying to do is", "What are they trying is", "That they are trying is", "It is what they try"], "correct_answer": "What they are trying to do is", "explanation": "What they are trying to do is hide the truth." },
+        { "id": "c2-73-q16", "type": "quiz_choice", "question": "Normal: I need you to listen to me. -> Énfasis: ____ you to listen to me.", "options": ["All I need is for", "All I need is", "What I need is", "Both 'All I need is for' and 'What I need is for' are correct"], "correct_answer": "Both 'All I need is for' and 'What I need is for' are correct", "explanation": "All I need is for you... / What I need is for you..." },
+        { "id": "c2-73-q17", "type": "quiz_choice", "question": "Normal: We must focus on the budget. -> Énfasis: The thing we must focus on ____ the budget.", "options": ["is", "are", "be", "being"], "correct_answer": "is", "explanation": "The thing we must focus on IS the budget." },
+        { "id": "c2-73-q18", "type": "quiz_choice", "question": "Normal: You need a good rest. -> Énfasis: ____ a good rest.", "options": ["What you need is", "It is you need", "That you need is", "All you need it is"], "correct_answer": "What you need is", "explanation": "What you need is a good rest." },
+        { "id": "c2-73-q19", "type": "quiz_choice", "question": "Normal: I spoke to the manager, not the secretary. -> Énfasis: ____ the manager that I spoke to.", "options": ["It was", "He was", "That was", "There was"], "correct_answer": "It was", "explanation": "It was the manager that I spoke to." },
+        { "id": "c2-73-q20", "type": "quiz_choice", "question": "Normal: He always complains about the weather. -> Énfasis: The only thing ____ about the weather.", "options": ["he complains about is", "about he complains is", "he complain is", "is complaining he"], "correct_answer": "he complains about is", "explanation": "The only thing he complains about is the weather." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Completa la oración hendida.",
+      "questions": [
+        { "id": "c2-73-f1", "type": "fill_input", "question": "____ was John who broke it.", "correct_answer": "It", "explanation": "It." },
+        { "id": "c2-73-f2", "type": "fill_input", "question": "____ I need is a coffee.", "correct_answer": "What", "explanation": "What." },
+        { "id": "c2-73-f3", "type": "fill_input", "question": "____ I want is to sleep.", "correct_answer": "All", "explanation": "All." },
+        { "id": "c2-73-f4", "type": "fill_input", "question": "The reason ____ I left was the money.", "correct_answer": "why", "explanation": "why." },
+        { "id": "c2-73-f5", "type": "fill_input", "question": "The ____ where we met was Paris.", "correct_answer": "place", "explanation": "place." },
+        { "id": "c2-73-f6", "type": "fill_input", "question": "It was the CEO ____ signed it.", "correct_answer": "who", "explanation": "who." },
+        { "id": "c2-73-f7", "type": "fill_input", "question": "What I hate ____ the noise.", "correct_answer": "is", "explanation": "is." },
+        { "id": "c2-73-f8", "type": "fill_input", "question": "All he ____ was touch the button. (Pasado de do)", "correct_answer": "did", "explanation": "did." },
+        { "id": "c2-73-f9", "type": "fill_input", "question": "It was in 1999 ____ they bought it.", "correct_answer": "that", "explanation": "that." },
+        { "id": "c2-73-f10", "type": "fill_input", "question": "The person ____ helped me was Sarah.", "correct_answer": "who", "explanation": "who." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Cleft Match",
+      "pairs": [
+        {"id": "c2-73-p1", "source": "It was John who broke it", "target": "Fue John quien lo rompió"},
+        {"id": "c2-73-p2", "source": "What I need is coffee", "target": "Lo que necesito es café"},
+        {"id": "c2-73-p3", "source": "All I want is peace", "target": "Todo lo que quiero es paz"},
+        {"id": "c2-73-p4", "source": "The reason why I left", "target": "La razón por la que me fui"},
+        {"id": "c2-73-p5", "source": "The place where we met", "target": "El lugar donde nos conocimos"},
+        {"id": "c2-73-p6", "source": "It was in 1999 that...", "target": "Fue en 1999 cuando..."},
+        {"id": "c2-73-p7", "source": "All he did was sleep", "target": "Lo único que él hizo fue dormir"},
+        {"id": "c2-73-p8", "source": "What annoys me is...", "target": "Lo que me molesta es..."},
+        {"id": "c2-73-p9", "source": "It was the manager that I saw", "target": "Fue al gerente al que vi"},
+        {"id": "c2-73-p10", "source": "The only thing I want is...", "target": "La única cosa que quiero es..."}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración hendida.",
+      "questions": [
+        { "id": "c2-73-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was John who broke it.", "options": ["It was John who broke it.", "He was John who broke it.", "That was John who broke it.", "It is John who broke it."], "correct_answer": "It was John who broke it.", "explanation": "Audio exacto." },
+        { "id": "c2-73-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What I need is coffee.", "options": ["What I need is coffee.", "That I need is coffee.", "What I needed is coffee.", "What I need is a coffee."], "correct_answer": "What I need is coffee.", "explanation": "Audio exacto." },
+        { "id": "c2-73-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "All I want is peace.", "options": ["All I want is peace.", "All I wanted is peace.", "What I want is peace.", "Only I want is peace."], "correct_answer": "All I want is peace.", "explanation": "Audio exacto." },
+        { "id": "c2-73-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The reason why I left.", "options": ["The reason why I left.", "The reason why I leave.", "The reason that I left.", "A reason why I left."], "correct_answer": "The reason why I left.", "explanation": "Audio exacto." },
+        { "id": "c2-73-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The place where we met.", "options": ["The place where we met.", "The place when we met.", "The place that we met.", "A place where we met."], "correct_answer": "The place where we met.", "explanation": "Audio exacto." },
+        { "id": "c2-73-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was in Paris that we met.", "options": ["It was in Paris that we met.", "It was in Paris where we met.", "It is in Paris that we met.", "That was in Paris that we met."], "correct_answer": "It was in Paris that we met.", "explanation": "Audio exacto." },
+        { "id": "c2-73-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "All he did was sleep.", "options": ["All he did was sleep.", "All he does is sleep.", "All she did was sleep.", "All he did was sleeping."], "correct_answer": "All he did was sleep.", "explanation": "Audio exacto." },
+        { "id": "c2-73-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What annoys me is the noise.", "options": ["What annoys me is the noise.", "What annoyed me is the noise.", "That annoys me is the noise.", "What annoys me is a noise."], "correct_answer": "What annoys me is the noise.", "explanation": "Audio exacto." },
+        { "id": "c2-73-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was the manager I saw.", "options": ["It was the manager I saw.", "It is the manager I saw.", "He was the manager I saw.", "That was the manager I saw."], "correct_answer": "It was the manager I saw.", "explanation": "Audio exacto." },
+        { "id": "c2-73-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The only thing I want is rest.", "options": ["The only thing I want is rest.", "The only thing I wanted is rest.", "An only thing I want is rest.", "The only thing I want is a rest."], "correct_answer": "The only thing I want is rest.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

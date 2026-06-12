@@ -1,0 +1,96 @@
+{
+  "id": "zh-a1-2",
+  "title": "Saludos y Cortesía",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Greetings", "Courtesy", "Vocabulary"],
+  "completion_message": "¡Muy bien! Ya eres capaz de saludar, dar las gracias y disculparte. El primer paso para construir relaciones (Guanxi) en China.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Arte de la Cortesía",
+      "parts": [
+        {
+          "visual": "Hola: 你好 (nǐ hǎo)\n\nLa palabra más famosa del chino, 'Nihao', se compone de dos caracteres:\n1. 你 (nǐ): Tú.\n2. 好 (hǎo): Bien / Bueno.\nLiteralmente le estás diciendo a la otra persona: 'Tú bien'.\n\nSi hablas con un jefe o persona mayor, debes usar la forma respetuosa de 'Tú' (Usted), que es 您 (nín). Fíjate que el símbolo de abajo es un corazón 心, porque tratas a esa persona con el corazón.\n- 您好 (nín hǎo): Hola (Usted bien).",
+          "audio": "En chino, las palabras se construyen como bloques de Lego. Para decir Hola, unes el bloque 'Tú', que se dice 'Nǐ', y el bloque 'Bien', que se dice 'Hǎo'. Al juntarlos tienes 'Nǐ hǎo'. Si vas a hablar con tu suegro, o con el director de la empresa, no debes decirle 'Tú', debes decirle 'Usted'. Para eso usamos la palabra 'Nín'. Nota que termina con la letra N. Así que el saludo respetuoso será 'Nín hǎo'."
+        },
+        {
+          "visual": "Gracias y De Nada:\n\n- Gracias: 谢谢 (xièxie). Repite la sílaba dos veces. Cuidado: la 'x' en pinyin suena casi como una 's' suave o una 'sh' ligera (sie-sie).\n- De nada: 不客气 (bú kèqi).\nDesglose de 'De nada':\n1. 不 (bú): No.\n2. 客 (kè): Invitado.\n3. 气 (qì): Aire / Aliento.\nLiteralmente significa: 'No actúes como un invitado / No seas tan cortés'.",
+          "audio": "Para dar las gracias, decimos Xièxie. Un error muy común es pronunciar la X como en México o como en taxi. En Pinyin, la letra X suena casi como una S suave, parecida a 'sie-sie'. Ahora, si alguien te da las gracias, debes decir de nada: 'bú kèqi'. En la cultura china, la hospitalidad es vital. 'bú kèqi' significa literalmente 'no seas tan cortés', o 'no te comportes como un simple invitado, estás en familia'."
+        },
+        {
+          "visual": "Lo Siento y Adiós:\n\n- Lo siento: 对不起 (duìbuqǐ). Es una disculpa sincera cuando cometes un error.\n- No pasa nada / Está bien: 没关系 (méi guānxi). Es la respuesta automática a un 'Lo siento'. (Literalmente: No tiene relación/consecuencia).\n\n- Adiós: 再见 (zàijiàn).\n1. 再 (zài): De nuevo.\n2. 见 (jiàn): Ver.\nLiteralmente: 'Volver a vernos' (Hasta la vista).",
+          "audio": "Cuando cometes un error en China, desde pisar a alguien en el metro hasta llegar tarde a una junta, debes decir 'duìbuqǐ'. Lo siento. Y la persona educadamente te responderá 'méi guānxi'. No pasa nada, no importa. Por último, para despedirte usa la palabra 'zàijiàn'. Literalmente significa 'de nuevo vernos'. Es una promesa optimista de volver a encontrar a esa persona."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la respuesta correcta en situaciones de la vida real.",
+      "questions": [
+        { "id": "zh-a1-2-q1", "type": "quiz_choice", "question": "¿Qué significa literalmente 'nǐ hǎo' (你好)?", "options": ["Tú bien.", "Buenos días.", "Bienvenido.", "Paz para ti."], "correct_answer": "Tú bien.", "explanation": "Nǐ (Tú) + Hǎo (Bien)." },
+        { "id": "zh-a1-2-q2", "type": "quiz_choice", "question": "Estás a punto de saludar al presidente de tu compañía. ¿Qué saludo es el correcto?", "options": ["Nín hǎo (您好)", "Nǐ hǎo (你好)", "Zàijiàn (再见)", "Xièxie (谢谢)"], "correct_answer": "Nín hǎo (您好)", "explanation": "Nín (您) es la forma de respeto (Usted). Se debe usar con superiores o personas mayores." },
+        { "id": "zh-a1-2-q3", "type": "quiz_choice", "question": "Te dan un regalo y tú dices 'Xièxie' (Gracias). ¿Qué te responderá la otra persona?", "options": ["Bú kèqi (De nada / No seas cortés).", "Méi guānxi (No importa).", "Nín hǎo (Usted bien).", "Duìbuqǐ (Lo siento)."], "correct_answer": "Bú kèqi (De nada / No seas cortés).", "explanation": "A 'gracias' se responde con 'de nada' (Bú kèqi)." },
+        { "id": "zh-a1-2-q4", "type": "quiz_choice", "question": "Rompes accidentalmente la taza favorita de tu amigo chino. ¿Qué debes decirle?", "options": ["Duìbuqǐ (Lo siento).", "Bú kèqi (De nada).", "Zàijiàn (Adiós).", "Nín hǎo (Usted bien)."], "correct_answer": "Duìbuqǐ (Lo siento).", "explanation": "Duìbuqǐ es la disculpa que se usa al cometer una falta." },
+        { "id": "zh-a1-2-q5", "type": "quiz_choice", "question": "Tu amigo se disculpa diciendo 'Duìbuqǐ'. ¿Qué le respondes para decirle que todo está bien?", "options": ["Méi guānxi (No pasa nada).", "Xièxie (Gracias).", "Zàijiàn (Adiós).", "Bú kèqi (De nada)."], "correct_answer": "Méi guānxi (No pasa nada).", "explanation": "A 'Lo siento' (duìbuqǐ) se responde con 'No pasa nada' (méi guānxi)." },
+        { "id": "zh-a1-2-q6", "type": "quiz_choice", "question": "¿Qué significa la palabra 'Zàijiàn' (再见) literalmente?", "options": ["De nuevo + ver (Hasta la vista).", "Ir + lejos.", "Tener + suerte.", "Día + bueno."], "correct_answer": "De nuevo + ver (Hasta la vista).", "explanation": "Zài = de nuevo. Jiàn = ver." },
+        { "id": "zh-a1-2-q7", "type": "quiz_choice", "question": "¿Cómo se escribe el pinyin para la palabra 'Gracias'?", "options": ["xièxie", "shieshie", "zhejie", "chichi"], "correct_answer": "xièxie", "explanation": "En pinyin se escribe con 'x', aunque se pronuncia como una s/sh suave." },
+        { "id": "zh-a1-2-q8", "type": "quiz_choice", "question": "En la palabra 'Bú kèqi' (De nada), la palabra 'bú' (不) significa:", "options": ["No.", "Tú.", "Bien.", "Amigo."], "correct_answer": "No.", "explanation": "不 (bù/bú) es la partícula universal de negación en chino." },
+        { "id": "zh-a1-2-q9", "type": "quiz_choice", "question": "¿Qué radical (símbolo base) tiene el carácter de respeto 您 (Nín / Usted) en su parte inferior?", "options": ["El corazón (心), porque tratas con respeto de corazón.", "La luna (月), porque es tranquilo.", "El agua (水), porque fluye.", "La persona (人)."], "correct_answer": "El corazón (心), porque tratas con respeto de corazón.", "explanation": "El carácter nǐ (tú) se pone encima del corazón (xīn) para crear nín (usted)." },
+        { "id": "zh-a1-2-q10", "type": "quiz_choice", "question": "Si alguien te dice 'Zàijiàn' (再见) al salir del trabajo, ¿qué haces?", "options": ["Te despides diciendo 'Zàijiàn' también.", "Le das las gracias diciendo 'Xièxie'.", "Te disculpas.", "Le preguntas su nombre."], "correct_answer": "Te despides diciendo 'Zàijiàn' también.", "explanation": "Zàijiàn es el saludo universal para decir adiós." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correcto para completar la palabra. Escribe en minúsculas y sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-2-f1", "type": "fill_input", "question": "Hola: nǐ ____", "correct_answer": "hao", "explanation": "hao" },
+        { "id": "zh-a1-2-f2", "type": "fill_input", "question": "Hola (formal/Usted): ____ hǎo", "correct_answer": "nin", "explanation": "nin" },
+        { "id": "zh-a1-2-f3", "type": "fill_input", "question": "Gracias: xie____", "correct_answer": "xie", "explanation": "xie" },
+        { "id": "zh-a1-2-f4", "type": "fill_input", "question": "De nada: bú kè____", "correct_answer": "qi", "explanation": "qi" },
+        { "id": "zh-a1-2-f5", "type": "fill_input", "question": "Adiós: zài____", "correct_answer": "jian", "explanation": "jian" },
+        { "id": "zh-a1-2-f6", "type": "fill_input", "question": "Lo siento: duì____qǐ", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a1-2-f7", "type": "fill_input", "question": "No pasa nada: méi guān____", "correct_answer": "xi", "explanation": "xi" },
+        { "id": "zh-a1-2-f8", "type": "fill_input", "question": "La palabra para 'Ver' en Adiós es ____ (jian).", "correct_answer": "jian", "explanation": "jian" },
+        { "id": "zh-a1-2-f9", "type": "fill_input", "question": "La palabra para 'De nuevo' en Adiós es ____ (zai).", "correct_answer": "zai", "explanation": "zai" },
+        { "id": "zh-a1-2-f10", "type": "fill_input", "question": "La palabra para 'Tú' en Hola es ____ (ni).", "correct_answer": "ni", "explanation": "ni" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y selecciona la expresión correcta.",
+      "questions": [
+        { "id": "zh-a1-2-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你好", "options": ["你好 (nǐ hǎo - Hola)", "您好 (nín hǎo - Usted)", "谢谢 (xièxie - Gracias)", "再见 (zàijiàn - Adiós)"], "correct_answer": "你好 (nǐ hǎo - Hola)", "explanation": "El audio dice: nǐ hǎo." },
+        { "id": "zh-a1-2-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "谢谢", "options": ["谢谢 (xièxie - Gracias)", "对不起 (duìbuqǐ - Lo siento)", "没关系 (méi guānxi - No pasa nada)", "不客气 (bú kèqi - De nada)"], "correct_answer": "谢谢 (xièxie - Gracias)", "explanation": "El audio dice: xièxie." },
+        { "id": "zh-a1-2-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "不客气", "options": ["不客气 (bú kèqi - De nada)", "谢谢 (xièxie - Gracias)", "你好 (nǐ hǎo - Hola)", "再见 (zàijiàn - Adiós)"], "correct_answer": "不客气 (bú kèqi - De nada)", "explanation": "El audio dice: bú kèqi." },
+        { "id": "zh-a1-2-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "对不起", "options": ["对不起 (duìbuqǐ - Lo siento)", "没关系 (méi guānxi - No pasa nada)", "再见 (zàijiàn - Adiós)", "您好 (nín hǎo - Usted)"], "correct_answer": "对不起 (duìbuqǐ - Lo siento)", "explanation": "El audio dice: duìbuqǐ." },
+        { "id": "zh-a1-2-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "没关系", "options": ["没关系 (méi guānxi - No pasa nada)", "对不起 (duìbuqǐ - Lo siento)", "不客气 (bú kèqi - De nada)", "谢谢 (xièxie - Gracias)"], "correct_answer": "没关系 (méi guānxi - No pasa nada)", "explanation": "El audio dice: méi guānxi." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Meanings",
+      "pairs": [
+        {"id": "zh-a1-2-p1", "source": "你好 (nǐ hǎo)", "target": "Hola (Tú bien)"},
+        {"id": "zh-a1-2-p2", "source": "您好 (nín hǎo)", "target": "Hola formal (Usted bien)"},
+        {"id": "zh-a1-2-p3", "source": "谢谢 (xièxie)", "target": "Gracias"},
+        {"id": "zh-a1-2-p4", "source": "不客气 (bú kèqi)", "target": "De nada"},
+        {"id": "zh-a1-2-p5", "source": "对不起 (duìbuqǐ)", "target": "Lo siento"},
+        {"id": "zh-a1-2-p6", "source": "没关系 (méi guānxi)", "target": "No pasa nada"},
+        {"id": "zh-a1-2-p7", "source": "再见 (zàijiàn)", "target": "Adiós (De nuevo ver)"},
+        {"id": "zh-a1-2-p8", "source": "不 (bù/bú)", "target": "No"},
+        {"id": "zh-a1-2-p9", "source": "你 (nǐ)", "target": "Tú"},
+        {"id": "zh-a1-2-p10", "source": "好 (hǎo)", "target": "Bien / Bueno"}
+      ]
+    }
+  ]
+}

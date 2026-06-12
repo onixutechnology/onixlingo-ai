@@ -32,9 +32,9 @@ async def lifespan(app: FastAPI):
     try:
         create_db()
         logger.info("[DB] Base de datos conectada y esquemas sincronizados.")
-        logger.info("[DB] Verificando e inyectando lecciones de ajedrez...")
-        generate_lessons()
-        logger.info("[DB] Ajedrez sincronizado y listo para jugar.")
+        # logger.info("[DB] Verificando e inyectando lecciones de ajedrez...")
+        # generate_lessons()  # ⏳ COMENTADO: Bloqueaba el inicio del backend por 2+ minutos en local
+        # logger.info("[DB] Ajedrez sincronizado y listo para jugar.")
     except Exception as e:
         logger.critical(f"[DB] Error critico al conectar DB: {e}")
     yield

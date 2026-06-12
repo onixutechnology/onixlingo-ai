@@ -1,0 +1,101 @@
+{
+  "id": "c2-19",
+  "title": "Crisis Management & PR",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Crisis", "PR", "Business", "Management"],
+  "completion_message": "¡Brillante! Las crisis definen a las empresas y a sus líderes. Manejar el vocabulario de relaciones públicas ('Damage control', 'Scapegoat', 'Backlash') te prepara para navegar y sobrevivir a las tormentas mediáticas más intensas del mundo corporativo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Gestión de Crisis y Relaciones Públicas (C2)",
+      "parts": [
+        { "visual": "1. Damage control (Control de daños): \n- Acciones tomadas para minimizar las consecuencias negativas de un incidente. \nEj: After the scandal broke, the PR team went into damage control mode. \n\n2. Backlash (Reacción violenta / Represalia pública): \n- Una fuerte reacción negativa del público contra una decisión o evento. \nEj: The company faced severe backlash over their new pricing policy. \n\n3. Scapegoat (Chivo expiatorio): \n- Persona o grupo al que se culpa por los errores de otros. \nEj: The junior manager was used as a scapegoat to protect the CEO.", "audio": "Welcome to Crisis Management and PR. Number 1: Damage control. These are actions taken to minimize the negative consequences of an incident. For example: After the scandal broke, the P R team went into damage control mode. Number 2: Backlash. A strong, negative public reaction against a decision or event. For example: The company faced severe backlash over their new pricing policy. Number 3: Scapegoat. A person or group made to bear the blame for others. For example: The junior manager was used as a scapegoat to protect the CEO." },
+        { "visual": "4. To sweep under the rug (Barrer bajo la alfombra / Ocultar): \n- Intentar esconder un problema o error en lugar de enfrentarlo. \nEj: You can't just sweep a massive data breach under the rug! \n\n5. To blow over (Pasar / Olvidarse): \n- Cuando un escándalo o crisis pierde intensidad y se olvida. \nEj: If we stay quiet, this scandal will eventually blow over. \n\n6. PR stunt (Truco publicitario): \n- Algo inusual hecho principalmente para atraer la atención de los medios. \nEj: The CEO jumping out of a plane was just a PR stunt. \n\n7. Fall guy (Cabeza de turco / El que asume la culpa): \n- Similar a scapegoat, la persona que asume la culpa de un plan fallido.", "audio": "Number 4: To sweep under the rug. This means to hide a problem or error instead of dealing with it. For example: You can't just sweep a massive data breach under the rug! Number 5: To blow over. When a scandal or crisis loses intensity and is forgotten. For example: If we stay quiet, this scandal will eventually blow over. Number 6: PR stunt. Something unusual done primarily to attract media attention. For example: The CEO jumping out of a plane was just a PR stunt. Number 7: Fall guy. Similar to a scapegoat, this is the person who takes the blame for a failed plan." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término correcto de gestión de crisis.",
+      "questions": [
+        { "id": "c2-19-q1", "type": "quiz_choice", "question": "As soon as the video leaked, our PR department went into full ____ control. (Control de daños).", "options": ["damage", "ruin", "break", "hurt"], "correct_answer": "damage", "explanation": "Damage control = control de daños." },
+        { "id": "c2-19-q2", "type": "quiz_choice", "question": "The decision to fire 5,000 workers caused a massive public ____. (Reacción negativa/Rechazo).", "options": ["backlash", "frontlash", "whip", "strike"], "correct_answer": "backlash", "explanation": "Backlash = fuerte reacción pública negativa." },
+        { "id": "c2-19-q3", "type": "quiz_choice", "question": "The executives made the mistake, but the intern was used as a ____ to take the blame. (Chivo expiatorio).", "options": ["scapegoat", "sheep", "cow", "victim"], "correct_answer": "scapegoat", "explanation": "Scapegoat = chivo expiatorio." },
+        { "id": "c2-19-q4", "type": "quiz_choice", "question": "You can't just sweep a million-dollar accounting error under the ____! (Barrer bajo la alfombra).", "options": ["rug", "carpet", "floor", "mat"], "correct_answer": "rug", "explanation": "Sweep under the rug = ocultar un problema." },
+        { "id": "c2-19-q5", "type": "quiz_choice", "question": "Don't issue a statement yet. Let's wait a few days and see if the scandal will ____ over. (Pasar / Olvidarse).", "options": ["blow", "fly", "wind", "storm"], "correct_answer": "blow", "explanation": "Blow over = calmarse, pasar al olvido." },
+        { "id": "c2-19-q6", "type": "quiz_choice", "question": "The millionaire giving away cars on the street was clearly just a PR ____ to gain followers. (Truco publicitario).", "options": ["stunt", "trick", "joke", "game"], "correct_answer": "stunt", "explanation": "PR stunt = truco o maniobra publicitaria." },
+        { "id": "c2-19-q7", "type": "quiz_choice", "question": "When the illegal operation was discovered, the project manager became the ____ guy. (Cabeza de turco).", "options": ["fall", "drop", "sink", "crash"], "correct_answer": "fall", "explanation": "Fall guy = el que asume la culpa, cabeza de turco." },
+        { "id": "c2-19-q8", "type": "quiz_choice", "question": "The company issued a public ____ to express their deep regret over the oil spill. (Disculpa).", "options": ["apology", "sorry", "excuse", "forgiveness"], "correct_answer": "apology", "explanation": "Public apology = disculpa pública." },
+        { "id": "c2-19-q9", "type": "quiz_choice", "question": "The constant bad news caused severe damage to the brand's ____. (Reputación).", "options": ["reputation", "fame", "name", "glory"], "correct_answer": "reputation", "explanation": "Brand reputation." },
+        { "id": "c2-19-q10", "type": "quiz_choice", "question": "During a crisis, you must strictly follow the crisis ____ plan. (Gestión/Manejo).", "options": ["management", "control", "handling", "stopping"], "correct_answer": "management", "explanation": "Crisis management plan = plan de gestión de crisis." },
+        { "id": "c2-19-q11", "type": "quiz_choice", "question": "We need to hire a spin ____ to change the media's narrative about our company. (Experto en relaciones públicas/manipulación mediática).", "options": ["doctor", "nurse", "surgeon", "lawyer"], "correct_answer": "doctor", "explanation": "Spin doctor = asesor de imagen/relaciones públicas especializado en dar un giro favorable a las noticias." },
+        { "id": "c2-19-q12", "type": "quiz_choice", "question": "The company's stock price took a ____ after the CEO was arrested. (Caída en picada).", "options": ["nosedive", "skydive", "drop", "fall"], "correct_answer": "nosedive", "explanation": "Take a nosedive = caer en picada." },
+        { "id": "c2-19-q13", "type": "quiz_choice", "question": "They tried to ____ the crisis by minimizing the number of affected users in the report. (Quitar importancia).", "options": ["downplay", "upplay", "play", "hide"], "correct_answer": "downplay", "explanation": "Downplay = quitar importancia, minimizar." },
+        { "id": "c2-19-q14", "type": "quiz_choice", "question": "The incident was a total PR ____. It couldn't have gone worse. (Pesadilla/Desastre).", "options": ["nightmare", "dream", "sleep", "terror"], "correct_answer": "nightmare", "explanation": "PR nightmare = pesadilla de relaciones públicas." },
+        { "id": "c2-19-q15", "type": "quiz_choice", "question": "To regain public trust, we must be completely ____ about what went wrong. (Transparentes).", "options": ["transparent", "clear", "visible", "open"], "correct_answer": "transparent", "explanation": "Transparent = transparente (comunicación)." },
+        { "id": "c2-19-q16", "type": "quiz_choice", "question": "The press completely tore his reputation to ____. (Hizo trizas).", "options": ["shreds", "pieces", "bits", "parts"], "correct_answer": "shreds", "explanation": "Tear to shreds = hacer trizas." },
+        { "id": "c2-19-q17", "type": "quiz_choice", "question": "We are facing a media ____. Every news channel is talking about our failure. (Tormenta mediática).", "options": ["storm", "rain", "wind", "hurricane"], "correct_answer": "storm", "explanation": "Media storm (o firestorm) = tormenta mediática." },
+        { "id": "c2-19-q18", "type": "quiz_choice", "question": "The CEO had to step down amidst ____ of fraud and embezzlement. (Acusaciones).", "options": ["allegations", "words", "talks", "rumors"], "correct_answer": "allegations", "explanation": "Allegations = acusaciones (aún no probadas)." },
+        { "id": "c2-19-q19", "type": "quiz_choice", "question": "The company is trying to ____ the flames of the scandal by firing the executives involved. (Apagar el fuego/Calmar).", "options": ["douse", "light", "fan", "burn"], "correct_answer": "douse", "explanation": "Douse the flames (o put out the fire) = apagar el escándalo. ('Fan the flames' sería empeorarlo)." },
+        { "id": "c2-19-q20", "type": "quiz_choice", "question": "The scandal was a severe blow to the company's ____ line. (Beneficios netos/Rentabilidad final).", "options": ["bottom", "top", "side", "finish"], "correct_answer": "bottom", "explanation": "Bottom line = el resultado financiero final (beneficio/pérdida)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de crisis/PR correcta.",
+      "questions": [
+        { "id": "c2-19-f1", "type": "fill_input", "question": "____ control. (Control de daños con D)", "correct_answer": "Damage", "explanation": "Damage." },
+        { "id": "c2-19-f2", "type": "fill_input", "question": "Public ____. (Reacción negativa/Rechazo con B)", "correct_answer": "backlash", "explanation": "backlash." },
+        { "id": "c2-19-f3", "type": "fill_input", "question": "He was the ____. (Chivo expiatorio con S)", "correct_answer": "scapegoat", "explanation": "scapegoat." },
+        { "id": "c2-19-f4", "type": "fill_input", "question": "He was the ____ guy. (Cabeza de turco con F)", "correct_answer": "fall", "explanation": "fall." },
+        { "id": "c2-19-f5", "type": "fill_input", "question": "Sweep under the ____. (Alfombra con R)", "correct_answer": "rug", "explanation": "rug." },
+        { "id": "c2-19-f6", "type": "fill_input", "question": "It will ____ over. (Pasar al olvido con B)", "correct_answer": "blow", "explanation": "blow." },
+        { "id": "c2-19-f7", "type": "fill_input", "question": "A PR ____. (Truco publicitario con S)", "correct_answer": "stunt", "explanation": "stunt." },
+        { "id": "c2-19-f8", "type": "fill_input", "question": "A PR ____. (Pesadilla con N)", "correct_answer": "nightmare", "explanation": "nightmare." },
+        { "id": "c2-19-f9", "type": "fill_input", "question": "A spin ____. (Asesor de imagen/medios con D)", "correct_answer": "doctor", "explanation": "doctor." },
+        { "id": "c2-19-f10", "type": "fill_input", "question": "Take a ____. (Caída en picada con N)", "correct_answer": "nosedive", "explanation": "nosedive." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Crisis Match",
+      "pairs": [
+        {"id": "c2-19-p1", "source": "Damage control", "target": "Control de daños"},
+        {"id": "c2-19-p2", "source": "Backlash", "target": "Reacción pública negativa / Rechazo"},
+        {"id": "c2-19-p3", "source": "Scapegoat", "target": "Chivo expiatorio"},
+        {"id": "c2-19-p4", "source": "Fall guy", "target": "El que asume la culpa (cabeza de turco)"},
+        {"id": "c2-19-p5", "source": "Sweep under the rug", "target": "Ocultar un problema / Barrer bajo la alfombra"},
+        {"id": "c2-19-p6", "source": "Blow over", "target": "Calmarse / Pasar al olvido (el escándalo)"},
+        {"id": "c2-19-p7", "source": "PR stunt", "target": "Truco o maniobra publicitaria"},
+        {"id": "c2-19-p8", "source": "Spin doctor", "target": "Experto en manipular la opinión mediática"},
+        {"id": "c2-19-p9", "source": "Take a nosedive", "target": "Caer en picada (acciones/reputación)"},
+        {"id": "c2-19-p10", "source": "Downplay", "target": "Quitar importancia / Minimizar"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de crisis correcta.",
+      "questions": [
+        { "id": "c2-19-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are in damage control.", "options": ["We are in damage control.", "We are in danger control.", "We are in damaged control.", "They are in damage control."], "correct_answer": "We are in damage control.", "explanation": "Audio exacto." },
+        { "id": "c2-19-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Expect a severe backlash.", "options": ["Expect a severe backlash.", "Expected a severe backlash.", "Expect a severe backslash.", "Expect the severe backlash."], "correct_answer": "Expect a severe backlash.", "explanation": "Audio exacto." },
+        { "id": "c2-19-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He was the scapegoat.", "options": ["He was the scapegoat.", "She was the scapegoat.", "He is the scapegoat.", "He was a scapegoat."], "correct_answer": "He was the scapegoat.", "explanation": "Audio exacto." },
+        { "id": "c2-19-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They swept it under the rug.", "options": ["They swept it under the rug.", "We swept it under the rug.", "They sweep it under the rug.", "They swept it under a rug."], "correct_answer": "They swept it under the rug.", "explanation": "Audio exacto." },
+        { "id": "c2-19-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The scandal will blow over.", "options": ["The scandal will blow over.", "The scandal would blow over.", "This scandal will blow over.", "A scandal will blow over."], "correct_answer": "The scandal will blow over.", "explanation": "Audio exacto." },
+        { "id": "c2-19-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was just a PR stunt.", "options": ["It was just a PR stunt.", "It is just a PR stunt.", "This was just a PR stunt.", "It was just a PR stand."], "correct_answer": "It was just a PR stunt.", "explanation": "Audio exacto." },
+        { "id": "c2-19-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I refuse to be the fall guy.", "options": ["I refuse to be the fall guy.", "We refuse to be the fall guy.", "I refused to be the fall guy.", "I refuse to be the tall guy."], "correct_answer": "I refuse to be the fall guy.", "explanation": "Audio exacto." },
+        { "id": "c2-19-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They hired a spin doctor.", "options": ["They hired a spin doctor.", "We hired a spin doctor.", "He hired a spin doctor.", "They hire a spin doctor."], "correct_answer": "They hired a spin doctor.", "explanation": "Audio exacto." },
+        { "id": "c2-19-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Shares took a nosedive.", "options": ["Shares took a nosedive.", "Share took a nosedive.", "The shares took a nosedive.", "Shares take a nosedive."], "correct_answer": "Shares took a nosedive.", "explanation": "Audio exacto." },
+        { "id": "c2-19-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do not downplay the issue.", "options": ["Do not downplay the issue.", "Do not up-play the issue.", "Did not downplay the issue.", "Do not play down the issue."], "correct_answer": "Do not downplay the issue.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

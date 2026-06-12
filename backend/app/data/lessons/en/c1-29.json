@@ -1,0 +1,101 @@
+{
+  "id": "c1-29",
+  "title": "IT, Tech & Cyber Security",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "IT", "Technology", "Cyber Security", "Business"],
+  "completion_message": "¡Formidable! En el mundo empresarial moderno, todas las empresas son empresas tecnológicas. Conocer términos como 'ransomware', 'encryption' y 'data breach' te permite interactuar con los equipos de TI y entender los riesgos digitales críticos.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "TI, Tecnología y Ciberseguridad (C1)",
+      "parts": [
+        { "visual": "Riesgos de Ciberseguridad: \n- Data breach (Brecha de datos / Fuga de información confidencial). \nEj: A massive data breach exposed millions of passwords. \n- Ransomware (Secuestro de datos / Software malicioso que bloquea el sistema hasta que se paga un rescate). \nEj: The hospital's network was paralyzed by a ransomware attack. \n- Phishing (Suplantación de identidad / Engaño por correo para robar datos). \nEj: Employees must be trained to recognize phishing emails.", "audio": "Cybersecurity Risks. A 'Data breach' is an incident where confidential information is accessed without authorization. For example: A massive data breach exposed millions of passwords. 'Ransomware' is malicious software designed to block access to a computer system until a sum of money is paid. For example: The hospital's network was paralyzed by a ransomware attack. 'Phishing' is the fraudulent practice of sending emails pretending to be from reputable companies to steal personal information. For example: Employees must be trained to recognize phishing emails." },
+        { "visual": "Tecnología e Infraestructura: \n- Encryption (Cifrado/Encriptación / Proteger datos convirtiéndolos en código). \nEj: End-to-end encryption ensures that our messages are secure. \n- Cloud computing (Computación en la nube / Servicios alojados en internet en lugar de servidores locales). \nEj: We are migrating all our legacy systems to cloud computing. \n- Bandwidth (Ancho de banda / Capacidad de transmisión de datos). \nEj: The video call failed because we didn't have enough bandwidth.", "audio": "Technology and Infrastructure. 'Encryption' is the process of converting information or data into a code, especially to prevent unauthorized access. For example: End-to-end encryption ensures that our messages are secure. 'Cloud computing' is the practice of using a network of remote servers hosted on the internet to store, manage, and process data. For example: We are migrating all our legacy systems to cloud computing. 'Bandwidth' is the maximum rate of data transfer across a given path. For example: The video call failed because we didn't have enough bandwidth." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término tecnológico o de ciberseguridad correcto.",
+      "questions": [
+        { "id": "c1-29-q1", "type": "quiz_choice", "question": "An unauthorized access to confidential information is called a data ____. (Brecha / Fuga de datos).", "options": ["breach", "break", "leakage", "spill"], "correct_answer": "breach", "explanation": "Data breach = brecha de seguridad / fuga de datos." },
+        { "id": "c1-29-q2", "type": "quiz_choice", "question": "Malware that encrypts your files and demands money to unlock them is called ____. (Secuestro de datos).", "options": ["ransomware", "spyware", "adware", "virus"], "correct_answer": "ransomware", "explanation": "Ransomware (ransom = rescate)." },
+        { "id": "c1-29-q3", "type": "quiz_choice", "question": "Sending fake emails to trick people into revealing their passwords is known as ____. (Suplantación de identidad).", "options": ["phishing", "fishing", "spoofing", "spamming"], "correct_answer": "phishing", "explanation": "Phishing = correos fraudulentos para robar credenciales." },
+        { "id": "c1-29-q4", "type": "quiz_choice", "question": "The process of encoding data so that only authorized parties can read it is ____. (Cifrado / Encriptación).", "options": ["encryption", "decryption", "coding", "translation"], "correct_answer": "encryption", "explanation": "Encryption = cifrado." },
+        { "id": "c1-29-q5", "type": "quiz_choice", "question": "Storing and accessing data and programs over the internet instead of your computer's hard drive is ____ computing.", "options": ["cloud", "sky", "remote", "web"], "correct_answer": "cloud", "explanation": "Cloud computing = computación en la nube." },
+        { "id": "c1-29-q6", "type": "quiz_choice", "question": "The amount of data that can be transmitted in a fixed amount of time is ____. (Ancho de banda).", "options": ["bandwidth", "broadband", "speed", "frequency"], "correct_answer": "bandwidth", "explanation": "Bandwidth = ancho de banda." },
+        { "id": "c1-29-q7", "type": "quiz_choice", "question": "Old computer systems or software that are still in use but outdated are called ____ systems.", "options": ["legacy", "antique", "historic", "vintage"], "correct_answer": "legacy", "explanation": "Legacy systems = sistemas heredados/obsoletos." },
+        { "id": "c1-29-q8", "type": "quiz_choice", "question": "A security system that monitors and controls incoming and outgoing network traffic based on security rules is a ____. (Cortafuegos).", "options": ["firewall", "fireblock", "wall", "shield"], "correct_answer": "firewall", "explanation": "Firewall = cortafuegos." },
+        { "id": "c1-29-q9", "type": "quiz_choice", "question": "Software that is intended to damage or disable computers and computer systems is generally called ____.", "options": ["malware", "badware", "evilware", "spam"], "correct_answer": "malware", "explanation": "Malware = software malicioso (incluye virus, ransomware, troyanos)." },
+        { "id": "c1-29-q10", "type": "quiz_choice", "question": "When a system goes offline and is unavailable to users, it experiences ____. (Tiempo de inactividad).", "options": ["downtime", "uptime", "offtime", "delay"], "correct_answer": "downtime", "explanation": "Downtime = tiempo de inactividad / caída del sistema." },
+        { "id": "c1-29-q11", "type": "quiz_choice", "question": "A small program that fixes a specific problem or vulnerability in software is a ____. (Parche).", "options": ["patch", "bandage", "fixer", "update"], "correct_answer": "patch", "explanation": "Software patch = parche de seguridad/software." },
+        { "id": "c1-29-q12", "type": "quiz_choice", "question": "A copy of data taken and stored elsewhere so it may be used to restore the original after a data loss is a ____. (Copia de seguridad).", "options": ["backup", "copy", "clone", "archive"], "correct_answer": "backup", "explanation": "Backup = copia de seguridad." },
+        { "id": "c1-29-q13", "type": "quiz_choice", "question": "A flaw or weakness in a computer system that hackers can exploit is a ____. (Vulnerabilidad).", "options": ["vulnerability", "weakness", "hole", "bug"], "correct_answer": "vulnerability", "explanation": "Vulnerability = vulnerabilidad." },
+        { "id": "c1-29-q14", "type": "quiz_choice", "question": "A cyber attack where multiple compromised systems attack a target to overwhelm it with traffic is a ____ attack. (Ataque de denegación de servicio).", "options": ["DDoS", "VPN", "SSL", "SEO"], "correct_answer": "DDoS", "explanation": "DDoS (Distributed Denial of Service) = ataque distribuido de denegación de servicio." },
+        { "id": "c1-29-q15", "type": "quiz_choice", "question": "A private network connection that creates a secure tunnel over the public internet is a ____. (Red Privada Virtual).", "options": ["VPN", "LAN", "WAN", "URL"], "correct_answer": "VPN", "explanation": "VPN (Virtual Private Network)." },
+        { "id": "c1-29-q16", "type": "quiz_choice", "question": "Using two different forms of identification to access an account is called two-factor ____. (Autenticación).", "options": ["authentication", "identification", "authorization", "login"], "correct_answer": "authentication", "explanation": "Two-factor authentication (2FA) = autenticación de dos factores." },
+        { "id": "c1-29-q17", "type": "quiz_choice", "question": "The process of moving data, applications, or other business elements to a cloud computing environment is cloud ____. (Migración).", "options": ["migration", "transfer", "moving", "shift"], "correct_answer": "migration", "explanation": "Cloud migration = migración a la nube." },
+        { "id": "c1-29-q18", "type": "quiz_choice", "question": "The time it takes for data to pass from one point on a network to another is ____. (Latencia).", "options": ["latency", "delay", "lag", "speed"], "correct_answer": "latency", "explanation": "Latency = latencia." },
+        { "id": "c1-29-q19", "type": "quiz_choice", "question": "A continuous process of software development where code is automatically built and tested is called Continuous ____ (CI). (Integración).", "options": ["Integration", "Invention", "Iteration", "Improvement"], "correct_answer": "Integration", "explanation": "Continuous Integration (CI) = integración continua." },
+        { "id": "c1-29-q20", "type": "quiz_choice", "question": "A methodology that combines software development (Dev) and IT operations (Ops) is called ____.", "options": ["DevOps", "TechOps", "SysAdmin", "Agile"], "correct_answer": "DevOps", "explanation": "DevOps = Development and Operations." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término tecnológico correcto.",
+      "questions": [
+        { "id": "c1-29-f1", "type": "fill_input", "question": "A data ____. (Brecha de datos con B)", "correct_answer": "breach", "explanation": "breach." },
+        { "id": "c1-29-f2", "type": "fill_input", "question": "A ____ attack. (Secuestro de datos con R)", "correct_answer": "ransomware", "explanation": "ransomware." },
+        { "id": "c1-29-f3", "type": "fill_input", "question": "A ____ email. (Suplantación con P)", "correct_answer": "phishing", "explanation": "phishing." },
+        { "id": "c1-29-f4", "type": "fill_input", "question": "End-to-end ____. (Cifrado con E)", "correct_answer": "encryption", "explanation": "encryption." },
+        { "id": "c1-29-f5", "type": "fill_input", "question": "____ computing. (Computación en la nube con C)", "correct_answer": "Cloud", "explanation": "Cloud." },
+        { "id": "c1-29-f6", "type": "fill_input", "question": "Not enough ____. (Ancho de banda con B)", "correct_answer": "bandwidth", "explanation": "bandwidth." },
+        { "id": "c1-29-f7", "type": "fill_input", "question": "____ systems. (Sistemas antiguos/heredados con L)", "correct_answer": "Legacy", "explanation": "Legacy." },
+        { "id": "c1-29-f8", "type": "fill_input", "question": "A security ____. (Cortafuegos con F)", "correct_answer": "firewall", "explanation": "firewall." },
+        { "id": "c1-29-f9", "type": "fill_input", "question": "System ____. (Tiempo de inactividad con D)", "correct_answer": "downtime", "explanation": "downtime." },
+        { "id": "c1-29-f10", "type": "fill_input", "question": "A software ____. (Parche con P)", "correct_answer": "patch", "explanation": "patch." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Tech & Cyber Match",
+      "pairs": [
+        {"id": "c1-29-p1", "source": "Data breach", "target": "Brecha de seguridad / Fuga de datos"},
+        {"id": "c1-29-p2", "source": "Ransomware", "target": "Secuestro de datos por rescate"},
+        {"id": "c1-29-p3", "source": "Phishing", "target": "Suplantación de identidad en correos"},
+        {"id": "c1-29-p4", "source": "Encryption", "target": "Cifrado de información"},
+        {"id": "c1-29-p5", "source": "Cloud computing", "target": "Computación en la nube"},
+        {"id": "c1-29-p6", "source": "Bandwidth", "target": "Ancho de banda"},
+        {"id": "c1-29-p7", "source": "Legacy systems", "target": "Sistemas antiguos / heredados"},
+        {"id": "c1-29-p8", "source": "Firewall", "target": "Cortafuegos de seguridad"},
+        {"id": "c1-29-p9", "source": "Downtime", "target": "Tiempo de inactividad / caída del sistema"},
+        {"id": "c1-29-p10", "source": "Software patch", "target": "Parche de actualización/seguridad"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término tecnológico correcto.",
+      "questions": [
+        { "id": "c1-29-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We suffered a major data breach.", "options": ["We suffered a major data breach.", "They suffered a major data breach.", "We suffer a major data breach.", "We suffered a major data break."], "correct_answer": "We suffered a major data breach.", "explanation": "Audio exacto." },
+        { "id": "c1-29-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a ransomware attack.", "options": ["It was a ransomware attack.", "It is a ransomware attack.", "It was a malware attack.", "This was a ransomware attack."], "correct_answer": "It was a ransomware attack.", "explanation": "Audio exacto." },
+        { "id": "c1-29-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Beware of phishing emails.", "options": ["Beware of phishing emails.", "Be aware of phishing emails.", "Beware of fishing emails.", "Beware of phishing messages."], "correct_answer": "Beware of phishing emails.", "explanation": "Audio exacto." },
+        { "id": "c1-29-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We use end-to-end encryption.", "options": ["We use end-to-end encryption.", "They use end-to-end encryption.", "We used end-to-end encryption.", "We use strong encryption."], "correct_answer": "We use end-to-end encryption.", "explanation": "Audio exacto." },
+        { "id": "c1-29-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Migrating to cloud computing is hard.", "options": ["Migrating to cloud computing is hard.", "Migrating to cloud servers is hard.", "Migration to cloud computing is hard.", "Migrating to the cloud is hard."], "correct_answer": "Migrating to cloud computing is hard.", "explanation": "Audio exacto." },
+        { "id": "c1-29-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need more bandwidth.", "options": ["We need more bandwidth.", "They need more bandwidth.", "We needed more bandwidth.", "We need high bandwidth."], "correct_answer": "We need more bandwidth.", "explanation": "Audio exacto." },
+        { "id": "c1-29-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Replace the legacy systems.", "options": ["Replace the legacy systems.", "Replaced the legacy systems.", "Update the legacy systems.", "Replace the old systems."], "correct_answer": "Replace the legacy systems.", "explanation": "Audio exacto." },
+        { "id": "c1-29-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The firewall blocked the access.", "options": ["The firewall blocked the access.", "A firewall blocked the access.", "The firewall blocks the access.", "The firewall blocked access."], "correct_answer": "The firewall blocked the access.", "explanation": "Audio exacto." },
+        { "id": "c1-29-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Downtime costs us millions.", "options": ["Downtime costs us millions.", "Downtime cost us millions.", "The downtime costs us millions.", "Downtime causes us millions."], "correct_answer": "Downtime costs us millions.", "explanation": "Audio exacto." },
+        { "id": "c1-29-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please install the security patch.", "options": ["Please install the security patch.", "Please install a security patch.", "Install the security patch.", "Please install the software patch."], "correct_answer": "Please install the security patch.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

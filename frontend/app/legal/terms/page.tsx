@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function TermsPage() {
   return (
-    <div className="prose prose-slate max-w-none">
-      <h2 className="text-3xl font-black mb-6 text-slate-900">Términos y Condiciones de Uso</h2>
-      <p className="text-sm text-slate-500 mb-8">Última actualización: Mayo 2026</p>
+    <div className="prose prose-invert max-w-none text-slate-700">
+      <h2 className="text-3xl font-black mb-6 text-slate-900 font-serif italic">Términos y Condiciones de Uso</h2>
+      <p className="text-sm text-[#D4AF37] mb-8 font-bold uppercase tracking-widest">Última actualización: Mayo 2026</p>
 
       <p className="mb-6 leading-relaxed">
         El presente documento establece los Términos y Condiciones bajo los cuales se regula el acceso y uso de la plataforma <strong>OnixLingo</strong> (en adelante, &ldquo;la Plataforma&rdquo; o &ldquo;el Servicio&rdquo;), operada bajo la propiedad legal de <strong>Onixu Technology</strong>.
@@ -15,8 +15,8 @@ export default function TermsPage() {
         Al registrarse, acceder o utilizar OnixLingo de cualquier forma, usted acepta de manera expresa e irrevocable cumplir y estar sujeto a estos Términos y Condiciones. Si no está de acuerdo con alguno de los términos aquí estipulados, deberá abstenerse de usar el servicio de forma inmediata.
       </p>
 
-      <h3 className="text-xl font-bold mt-8 mb-4">2. Relación de Facturación y Merchant of Record</h3>
-      <div className="bg-indigo-50 p-6 rounded-xl border border-indigo-100 text-indigo-900 font-medium my-6">
+      <h3 className="text-xl font-bold mt-8 mb-4 text-[#D4AF37]">2. Relación de Facturación y Merchant of Record</h3>
+      <div className="bg-[#D4AF37]/10 p-6 rounded-none border border-[#D4AF37]/30 text-slate-900 font-medium my-6">
         <p className="mb-3">
           <strong>IMPORTANTE:</strong> Nuestro proceso de cobro, facturación y procesamiento de pagos es gestionado en su totalidad por nuestro revendedor autorizado y Merchant of Record (Vendedor Oficial), <strong>Paddle.com Market Limited</strong> (en adelante, &ldquo;Paddle&rdquo;).
         </p>

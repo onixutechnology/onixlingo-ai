@@ -1,0 +1,101 @@
+{
+  "id": "b1-22",
+  "title": "Customer Complaints",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Vocabulary", "Customer Service", "Business"],
+  "completion_message": "¡Excelente! Ahora sabes cómo manejar quejas de clientes de manera profesional y resolutiva.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Quejas de Clientes (Customer Complaints)",
+      "parts": [
+        { "visual": "Recibiendo la queja: \n- Complain (Quejarse) / Complaint (Queja). \n- Apologize (Disculparse). \n- Look into (Investigar). \nEj: We apologize for the inconvenience. We will look into the matter immediately.", "audio": "Receiving the complaint. Complain is the verb, complaint is the noun. Apologize means to say sorry. Look into means to investigate. For example: We apologize for the inconvenience. We will look into the matter immediately." },
+        { "visual": "Resolviendo el problema: \n- Refund (Reembolso). \n- Replace (Reemplazar). \n- Solve / Resolve (Resolver). \nEj: We can offer you a full refund or replace the damaged item.", "audio": "Solving the problem. Refund means to give money back. Replace means to give a new item instead of the old one. Solve or Resolve. For example: We can offer you a full refund or replace the damaged item." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para manejar problemas y quejas.",
+      "questions": [
+        { "id": "b1-22-q1", "type": "quiz_choice", "question": "We received a formal ____ from a client yesterday. (Queja - sustantivo).", "options": ["complaint", "complain", "complaining", "complains"], "correct_answer": "complaint", "explanation": "Complaint (con 't' al final) es el sustantivo (la queja). Complain es el verbo (quejarse)." },
+        { "id": "b1-22-q2", "type": "quiz_choice", "question": "Many customers ____ about the slow service. (Se quejaron - verbo).", "options": ["complained", "complaints", "apologized", "solved"], "correct_answer": "complained", "explanation": "Complained = se quejaron." },
+        { "id": "b1-22-q3", "type": "quiz_choice", "question": "We sincerely ____ for the delay. (Nos disculpamos).", "options": ["apologize", "sorry", "excuse", "forgive"], "correct_answer": "apologize", "explanation": "Apologize = disculparse (forma profesional de decir 'we are sorry')." },
+        { "id": "b1-22-q4", "type": "quiz_choice", "question": "I am writing to express my ____ with the product. (Insatisfacción).", "options": ["dissatisfaction", "satisfaction", "happy", "angry"], "correct_answer": "dissatisfaction", "explanation": "Dissatisfaction = insatisfacción." },
+        { "id": "b1-22-q5", "type": "quiz_choice", "question": "Let me ____ into this matter right away. (Investigar / Revisar).", "options": ["look", "see", "watch", "find"], "correct_answer": "look", "explanation": "Look into (a matter/an issue) = investigar, revisar un asunto." },
+        { "id": "b1-22-q6", "type": "quiz_choice", "question": "We can offer you a full ____ of your money. (Reembolso).", "options": ["refund", "pay", "return", "give"], "correct_answer": "refund", "explanation": "Refund = reembolso (devolver el dinero)." },
+        { "id": "b1-22-q7", "type": "quiz_choice", "question": "The item arrived broken, so we will ____ it for free. (Reemplazar).", "options": ["replace", "repair", "refund", "return"], "correct_answer": "replace", "explanation": "Replace = reemplazar (dar uno nuevo)." },
+        { "id": "b1-22-q8", "type": "quiz_choice", "question": "We promise to ____ the issue within 24 hours. (Resolver).", "options": ["resolve", "make", "do", "answer"], "correct_answer": "resolve", "explanation": "Resolve (o solve) = resolver." },
+        { "id": "b1-22-q9", "type": "quiz_choice", "question": "I demand to speak to the ____! (Gerente).", "options": ["manager", "boss", "chief", "director"], "correct_answer": "manager", "explanation": "Manager = gerente." },
+        { "id": "b1-22-q10", "type": "quiz_choice", "question": "We are sorry for the ____ this has caused you. (Inconveniencia / Molestia).", "options": ["inconvenience", "problem", "trouble", "bad"], "correct_answer": "inconvenience", "explanation": "Inconvenience = inconveniencia/molestia (muy usado en atención al cliente)." },
+        { "id": "b1-22-q11", "type": "quiz_choice", "question": "As a gesture of ____, here is a 20% discount coupon. (Buena voluntad).", "options": ["goodwill", "good", "happy", "sorry"], "correct_answer": "goodwill", "explanation": "A gesture of goodwill = un gesto de buena voluntad (para compensar un error)." },
+        { "id": "b1-22-q12", "type": "quiz_choice", "question": "Your ____ is very important to us. (Opinión/Retroalimentación).", "options": ["feedback", "words", "talk", "speaking"], "correct_answer": "feedback", "explanation": "Feedback = comentarios, retroalimentación." },
+        { "id": "b1-22-q13", "type": "quiz_choice", "question": "We will ____ the product if it is defective. (Reparar).", "options": ["repair", "replace", "refund", "return"], "correct_answer": "repair", "explanation": "Repair = reparar (arreglar el mismo producto)." },
+        { "id": "b1-22-q14", "type": "quiz_choice", "question": "This product does not meet our quality ____. (Estándares).", "options": ["standards", "rules", "laws", "levels"], "correct_answer": "standards", "explanation": "Quality standards = estándares de calidad." },
+        { "id": "b1-22-q15", "type": "quiz_choice", "question": "The package was ____ during shipping. (Dañado).", "options": ["damaged", "broken", "hurt", "bad"], "correct_answer": "damaged", "explanation": "Damaged = dañado." },
+        { "id": "b1-22-q16", "type": "quiz_choice", "question": "Please ____ the defective item in its original box. (Devolver).", "options": ["return", "give", "take", "send"], "correct_answer": "return", "explanation": "Return = devolver." },
+        { "id": "b1-22-q17", "type": "quiz_choice", "question": "It was our ____. We sent the wrong size. (Error / Culpa).", "options": ["fault", "problem", "issue", "bad"], "correct_answer": "fault", "explanation": "It was our fault = Fue nuestra culpa." },
+        { "id": "b1-22-q18", "type": "quiz_choice", "question": "We will ____ this problem from happening again. (Prevenir / Evitar).", "options": ["prevent", "stop", "avoid", "block"], "correct_answer": "prevent", "explanation": "Prevent = prevenir." },
+        { "id": "b1-22-q19", "type": "quiz_choice", "question": "Thank you for bringing this to our ____. (Atención).", "options": ["attention", "eyes", "mind", "ears"], "correct_answer": "attention", "explanation": "Thank you for bringing this to our attention = Gracias por informarnos de esto (traerlo a nuestra atención)." },
+        { "id": "b1-22-q20", "type": "quiz_choice", "question": "I would like to ____ an order. It hasn't arrived yet. (Cancelar).", "options": ["cancel", "stop", "finish", "end"], "correct_answer": "cancel", "explanation": "Cancel = cancelar." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta de atención al cliente.",
+      "questions": [
+        { "id": "b1-22-f1", "type": "fill_input", "question": "A customer ____. (Queja - sustantivo con T al final)", "correct_answer": "complaint", "explanation": "complaint." },
+        { "id": "b1-22-f2", "type": "fill_input", "question": "We sincerely ____. (Nos disculpamos)", "correct_answer": "apologize", "explanation": "apologize." },
+        { "id": "b1-22-f3", "type": "fill_input", "question": "We will offer a ____. (Reembolso)", "correct_answer": "refund", "explanation": "refund." },
+        { "id": "b1-22-f4", "type": "fill_input", "question": "We will ____ the item. (Reemplazar)", "correct_answer": "replace", "explanation": "replace." },
+        { "id": "b1-22-f5", "type": "fill_input", "question": "We will ____ the issue. (Resolver con R)", "correct_answer": "resolve", "explanation": "resolve." },
+        { "id": "b1-22-f6", "type": "fill_input", "question": "Sorry for the ____. (Inconveniencia)", "correct_answer": "inconvenience", "explanation": "inconvenience." },
+        { "id": "b1-22-f7", "type": "fill_input", "question": "I want to speak to the ____. (Gerente)", "correct_answer": "manager", "explanation": "manager." },
+        { "id": "b1-22-f8", "type": "fill_input", "question": "It was our ____. (Culpa)", "correct_answer": "fault", "explanation": "fault." },
+        { "id": "b1-22-f9", "type": "fill_input", "question": "Please ____ the item. (Devolver)", "correct_answer": "return", "explanation": "return." },
+        { "id": "b1-22-f10", "type": "fill_input", "question": "The package was ____. (Dañado)", "correct_answer": "damaged", "explanation": "damaged." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Complaints Match",
+      "pairs": [
+        {"id": "b1-22-p1", "source": "Complain (verb)", "target": "Quejarse"},
+        {"id": "b1-22-p2", "source": "Complaint (noun)", "target": "La queja"},
+        {"id": "b1-22-p3", "source": "Apologize", "target": "Disculparse"},
+        {"id": "b1-22-p4", "source": "Look into the matter", "target": "Investigar el asunto"},
+        {"id": "b1-22-p5", "source": "Refund", "target": "Reembolso"},
+        {"id": "b1-22-p6", "source": "Replace", "target": "Reemplazar"},
+        {"id": "b1-22-p7", "source": "Inconvenience", "target": "Inconveniencia / Molestia"},
+        {"id": "b1-22-p8", "source": "Damaged", "target": "Dañado"},
+        {"id": "b1-22-p9", "source": "It was our fault", "target": "Fue nuestra culpa"},
+        {"id": "b1-22-p10", "source": "Gesture of goodwill", "target": "Gesto de buena voluntad"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la respuesta al cliente.",
+      "questions": [
+        { "id": "b1-22-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We received a formal complaint.", "options": ["We received a formal complaint.", "We received a formal complain.", "I received a formal complaint.", "They received a formal complaint."], "correct_answer": "We received a formal complaint.", "explanation": "Audio exacto." },
+        { "id": "b1-22-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We sincerely apologize for the delay.", "options": ["We sincerely apologize for the delay.", "We apologize for the delay.", "I sincerely apologize for the delay.", "We sincerely apologize for this."], "correct_answer": "We sincerely apologize for the delay.", "explanation": "Audio exacto." },
+        { "id": "b1-22-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will look into this matter.", "options": ["We will look into this matter.", "I will look into this matter.", "We will look at this matter.", "They will look into this matter."], "correct_answer": "We will look into this matter.", "explanation": "Audio exacto." },
+        { "id": "b1-22-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We can offer you a full refund.", "options": ["We can offer you a full refund.", "I can offer you a full refund.", "We can offer a full refund.", "We will offer you a full refund."], "correct_answer": "We can offer you a full refund.", "explanation": "Audio exacto." },
+        { "id": "b1-22-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will replace the damaged item.", "options": ["We will replace the damaged item.", "We will repair the damaged item.", "I will replace the damaged item.", "They will replace the damaged item."], "correct_answer": "We will replace the damaged item.", "explanation": "Audio exacto." },
+        { "id": "b1-22-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We promise to resolve the issue.", "options": ["We promise to resolve the issue.", "I promise to resolve the issue.", "We promise to solve the issue.", "We promised to resolve the issue."], "correct_answer": "We promise to resolve the issue.", "explanation": "Audio exacto." },
+        { "id": "b1-22-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are sorry for the inconvenience.", "options": ["We are sorry for the inconvenience.", "I am sorry for the inconvenience.", "We are sorry for the problem.", "We apologize for the inconvenience."], "correct_answer": "We are sorry for the inconvenience.", "explanation": "Audio exacto." },
+        { "id": "b1-22-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was our fault.", "options": ["It was our fault.", "It is our fault.", "It was my fault.", "It was your fault."], "correct_answer": "It was our fault.", "explanation": "Audio exacto." },
+        { "id": "b1-22-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please return the defective item.", "options": ["Please return the defective item.", "Please replace the defective item.", "Please refund the defective item.", "Return the defective item."], "correct_answer": "Please return the defective item.", "explanation": "Audio exacto." },
+        { "id": "b1-22-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Thank you for bringing this to our attention.", "options": ["Thank you for bringing this to our attention.", "Thank you for bringing this to my attention.", "Thanks for bringing this to our attention.", "Thank you for bringing it to our attention."], "correct_answer": "Thank you for bringing this to our attention.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

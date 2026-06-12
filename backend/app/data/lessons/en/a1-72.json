@@ -1,0 +1,101 @@
+{
+  "id": "a1-72",
+  "title": "Colleagues and Co-workers",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "People", "Office"],
+  "completion_message": "¡Excelente! Ahora conoces los diferentes roles y cargos de las personas con las que trabajas todos los días.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Compañeros de Trabajo",
+      "parts": [
+        { "visual": "Tus pares: Co-worker / Colleague (Compañero de trabajo). Tu grupo: Team (Equipo).", "audio": "Your peers: Co-worker or Colleague. Your group: Team." },
+        { "visual": "Superiores: Boss (Jefe), Manager (Gerente). Apoyo: Assistant (Asistente), Intern (Pasante).", "audio": "Superiors: Boss, Manager. Support: Assistant, Intern." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para el cargo o rol en la oficina.",
+      "questions": [
+        { "id": "a1-72-q1", "type": "quiz_choice", "question": "He is my ____. We work in the same office (compañero).", "options": ["co-worker", "boss", "client", "customer"], "correct_answer": "co-worker", "explanation": "Compañero de trabajo (co-worker / colleague)." },
+        { "id": "a1-72-q2", "type": "quiz_choice", "question": "She is my ____. We work on the same project (colega).", "options": ["colleague", "manager", "boss", "intern"], "correct_answer": "colleague", "explanation": "Colega/compañero (colleague)." },
+        { "id": "a1-72-q3", "type": "quiz_choice", "question": "I have to talk to the ____ about my vacation (jefe).", "options": ["boss", "intern", "assistant", "client"], "correct_answer": "boss", "explanation": "Jefe (boss)." },
+        { "id": "a1-72-q4", "type": "quiz_choice", "question": "Mr. Smith is the sales ____ (gerente).", "options": ["manager", "manage", "worker", "bosses"], "correct_answer": "manager", "explanation": "Gerente / Director (manager)." },
+        { "id": "a1-72-q5", "type": "quiz_choice", "question": "Our ____ is very good. We help each other (equipo).", "options": ["team", "group", "class", "family"], "correct_answer": "team", "explanation": "Equipo (team)." },
+        { "id": "a1-72-q6", "type": "quiz_choice", "question": "The ____ is learning how to do the job (pasante).", "options": ["intern", "boss", "manager", "director"], "correct_answer": "intern", "explanation": "Pasante / becario (intern)." },
+        { "id": "a1-72-q7", "type": "quiz_choice", "question": "I need the administrative ____ to print this (asistente).", "options": ["assistant", "assist", "helping", "boss"], "correct_answer": "assistant", "explanation": "Asistente (assistant)." },
+        { "id": "a1-72-q8", "type": "quiz_choice", "question": "The CEO is the ____ of the company (director ejecutivo).", "options": ["head", "arm", "hand", "foot"], "correct_answer": "head", "explanation": "La cabeza / líder (head)." },
+        { "id": "a1-72-q9", "type": "quiz_choice", "question": "We have a meeting with the ____ today (cliente).", "options": ["client", "intern", "employee", "worker"], "correct_answer": "client", "explanation": "Cliente (client / customer)." },
+        { "id": "a1-72-q10", "type": "quiz_choice", "question": "She is a new ____ in the company (empleada).", "options": ["employee", "employer", "boss", "client"], "correct_answer": "employee", "explanation": "Empleado/a (employee)." },
+        { "id": "a1-72-q11", "type": "quiz_choice", "question": "The company is a good ____ (empleador).", "options": ["employer", "employee", "intern", "staff"], "correct_answer": "employer", "explanation": "Empleador / el que contrata (employer)." },
+        { "id": "a1-72-q12", "type": "quiz_choice", "question": "All the ____ must attend the meeting (personal).", "options": ["staff", "stuff", "bosses", "interns"], "correct_answer": "staff", "explanation": "Personal / plantilla (staff)." },
+        { "id": "a1-72-q13", "type": "quiz_choice", "question": "He is the head of the IT ____ (departamento).", "options": ["department", "room", "office", "table"], "correct_answer": "department", "explanation": "Departamento / área (department)." },
+        { "id": "a1-72-q14", "type": "quiz_choice", "question": "The ____ answered the phone (recepcionista).", "options": ["receptionist", "boss", "manager", "director"], "correct_answer": "receptionist", "explanation": "Recepcionista (receptionist)." },
+        { "id": "a1-72-q15", "type": "quiz_choice", "question": "The ____ fixed the network (técnico).", "options": ["technician", "tech", "technical", "boss"], "correct_answer": "technician", "explanation": "Técnico (technician)." },
+        { "id": "a1-72-q16", "type": "quiz_choice", "question": "I am looking for a ____ in marketing (trabajo/puesto).", "options": ["job", "work", "task", "duty"], "correct_answer": "job", "explanation": "Trabajo (job)." },
+        { "id": "a1-72-q17", "type": "quiz_choice", "question": "What is your ____? (cargo/puesto).", "options": ["position", "place", "chair", "desk"], "correct_answer": "position", "explanation": "Cargo/Puesto (position / role)." },
+        { "id": "a1-72-q18", "type": "quiz_choice", "question": "The ____ is cleaning the office (conserje/limpieza).", "options": ["cleaner", "cleaning", "clean", "boss"], "correct_answer": "cleaner", "explanation": "Personal de limpieza (cleaner / janitor)." },
+        { "id": "a1-72-q19", "type": "quiz_choice", "question": "He is my ____ supervisor.", "options": ["direct", "direction", "right", "straight"], "correct_answer": "direct", "explanation": "Supervisor directo (direct supervisor)." },
+        { "id": "a1-72-q20", "type": "quiz_choice", "question": "We are ____ on this project (compañeros de equipo).", "options": ["teammates", "teams", "bosses", "managers"], "correct_answer": "teammates", "explanation": "Compañeros de equipo (teammates)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el cargo o rol correctamente.",
+      "questions": [
+        { "id": "a1-72-f1", "type": "fill_input", "question": "My ____ (Compañero de trabajo).", "correct_answer": "co-worker", "explanation": "co-worker." },
+        { "id": "a1-72-f2", "type": "fill_input", "question": "My ____ (Colega).", "correct_answer": "colleague", "explanation": "colleague." },
+        { "id": "a1-72-f3", "type": "fill_input", "question": "The ____ (Jefe).", "correct_answer": "boss", "explanation": "boss." },
+        { "id": "a1-72-f4", "type": "fill_input", "question": "The sales ____ (Gerente).", "correct_answer": "manager", "explanation": "manager." },
+        { "id": "a1-72-f5", "type": "fill_input", "question": "Our ____ (Equipo).", "correct_answer": "team", "explanation": "team." },
+        { "id": "a1-72-f6", "type": "fill_input", "question": "The new ____ (Pasante).", "correct_answer": "intern", "explanation": "intern." },
+        { "id": "a1-72-f7", "type": "fill_input", "question": "The ____ (Asistente).", "correct_answer": "assistant", "explanation": "assistant." },
+        { "id": "a1-72-f8", "type": "fill_input", "question": "A new ____ (Empleado).", "correct_answer": "employee", "explanation": "employee." },
+        { "id": "a1-72-f9", "type": "fill_input", "question": "The company ____ (Personal/Plantilla).", "correct_answer": "staff", "explanation": "staff." },
+        { "id": "a1-72-f10", "type": "fill_input", "question": "The ____ (Cliente).", "correct_answer": "client", "explanation": "client." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-72-p1", "source": "Co-worker", "target": "Compañero de trabajo"},
+        {"id": "a1-72-p2", "source": "Colleague", "target": "Colega"},
+        {"id": "a1-72-p3", "source": "Boss", "target": "Jefe"},
+        {"id": "a1-72-p4", "source": "Manager", "target": "Gerente"},
+        {"id": "a1-72-p5", "source": "Team", "target": "Equipo"},
+        {"id": "a1-72-p6", "source": "Intern", "target": "Pasante / Becario"},
+        {"id": "a1-72-p7", "source": "Assistant", "target": "Asistente"},
+        {"id": "a1-72-p8", "source": "Employee", "target": "Empleado/a"},
+        {"id": "a1-72-p9", "source": "Staff", "target": "Personal / Plantilla"},
+        {"id": "a1-72-p10", "source": "Client", "target": "Cliente"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-72-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is my co-worker.", "options": ["He is my co-worker.", "She is my co-worker.", "He is my boss.", "He is my colleague."], "correct_answer": "He is my co-worker.", "explanation": "Audio exacto." },
+        { "id": "a1-72-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is a good colleague.", "options": ["She is a good colleague.", "He is a good colleague.", "She is my colleague.", "She is a good worker."], "correct_answer": "She is a good colleague.", "explanation": "Audio exacto." },
+        { "id": "a1-72-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will talk to the boss.", "options": ["I will talk to the boss.", "I will talk to my boss.", "Talk to the boss.", "I have to talk to the boss."], "correct_answer": "I will talk to the boss.", "explanation": "Audio exacto." },
+        { "id": "a1-72-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is the new manager.", "options": ["He is the new manager.", "She is the new manager.", "He is the manager.", "He is a manager."], "correct_answer": "He is the new manager.", "explanation": "Audio exacto." },
+        { "id": "a1-72-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have a great team.", "options": ["We have a great team.", "I have a great team.", "They have a great team.", "We are a great team."], "correct_answer": "We have a great team.", "explanation": "Audio exacto." },
+        { "id": "a1-72-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The intern is very smart.", "options": ["The intern is very smart.", "The intern is smart.", "The assistant is very smart.", "My intern is very smart."], "correct_answer": "The intern is very smart.", "explanation": "Audio exacto." },
+        { "id": "a1-72-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am the assistant.", "options": ["I am the assistant.", "He is the assistant.", "I am an assistant.", "She is the assistant."], "correct_answer": "I am the assistant.", "explanation": "Audio exacto." },
+        { "id": "a1-72-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is an employee.", "options": ["She is an employee.", "He is an employee.", "She is a new employee.", "She is the employee."], "correct_answer": "She is an employee.", "explanation": "Audio exacto." },
+        { "id": "a1-72-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The staff is friendly.", "options": ["The staff is friendly.", "The staff is busy.", "The team is friendly.", "Our staff is friendly."], "correct_answer": "The staff is friendly.", "explanation": "Audio exacto." },
+        { "id": "a1-72-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have a client meeting.", "options": ["We have a client meeting.", "I have a client meeting.", "We have a team meeting.", "They have a client meeting."], "correct_answer": "We have a client meeting.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

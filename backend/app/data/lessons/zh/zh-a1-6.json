@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-6",
+  "title": "El Verbo Tener y su Enemigo",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Verbs", "Negation", "Grammar"],
+  "completion_message": "¡Magnífico! Acabas de aprender la regla de oro de la negación en chino. ¡NUNCA digas 'bù yǒu'!",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Tener y No Tener",
+      "parts": [
+        {
+          "visual": "El Verbo Tener (有 - yǒu):\n\nEl segundo verbo más importante del chino es 有 (yǒu), que significa 'Tener' o 'Haber'.\n- Yo tengo: 我有 (Wǒ yǒu).\n- Tú tienes: 你有 (Nǐ yǒu).\n- Él tiene: 他有 (Tā yǒu).\n\nPara hacer una pregunta, aplicamos la magia de la partícula 吗 (ma):\n- ¿Tienes?: 你有吗？ (Nǐ yǒu ma?)\n\nY para responder que SÍ, simplemente repites el verbo:\n- Sí, tengo: 有 (Yǒu).",
+          "audio": "El segundo verbo que debes dominar en mandarín, después del verbo Ser, es el verbo Tener. En chino se dice Yǒu. Es un tercer tono, así que la voz baja y sube. Yǒu. Como ya sabes, en chino no hay conjugaciones. Así que 'Yo tengo' es 'Wǒ yǒu'. 'Tú tienes' es 'Nǐ yǒu'. Y si le pegas la partícula de pregunta 'ma' al final, tienes 'Nǐ yǒu ma?', que significa ¿Tú tienes?. Para decir que sí, simplemente repites el verbo, como aprendimos en la lección anterior. Dices 'Yǒu'."
+        },
+        {
+          "visual": "La Negación Especial (没 - méi):\n\n¡CUIDADO! La regla de oro del chino:\nEl verbo 有 (yǒu) NUNCA, JAMÁS se lleva con la negación normal 不 (bù). ¡Son enemigos a muerte!\n\nPara negar el verbo 'Tener', existe una partícula exclusiva: 没 (méi).\n\n- Correcto (No tengo): 没有 (Méiyǒu).\n- ¡ERROR FATAL! (No tengo): 不有 (Bù yǒu) ❌ NUNCA lo digas.\n\nEjemplo completo:\n- Yo no tengo: 我没有 (Wǒ méiyǒu).",
+          "audio": "¡Alerta roja! Aquí es donde la mayoría de los estudiantes occidentales se equivocan. Ya aprendimos que la palabra universal para decir NO es 'Bù'. Pero, la palabra 'Bù' es el enemigo mortal del verbo Tener. Jamás pueden estar juntos en una oración. Decir 'bù yǒu' suena terrible en chino. Para el verbo Tener, existe un negador especial y exclusivo. Es la palabra 'Méi'. Por lo tanto, 'No tener' se dice siempre 'Méiyǒu'. Repito: Méiyǒu. Si te preguntan si tienes dinero, tu respuesta negativa debe ser obligatoriamente 'Méiyǒu'."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que entiendes cómo usar y negar el verbo Tener.",
+      "questions": [
+        { "id": "zh-a1-6-q1", "type": "quiz_choice", "question": "¿Qué significa el verbo 有 (yǒu)?", "options": ["Tener / Haber.", "Ser.", "Querer.", "Ir."], "correct_answer": "Tener / Haber.", "explanation": "有 (yǒu) es el verbo tener." },
+        { "id": "zh-a1-6-q2", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo tengo'?", "options": ["Wǒ yǒu (我有).", "Wǒ shì (我是).", "Nǐ yǒu (你有).", "Tā yǒu (他有)."], "correct_answer": "Wǒ yǒu (我有).", "explanation": "Wǒ (Yo) + yǒu (tengo)." },
+        { "id": "zh-a1-6-q3", "type": "quiz_choice", "question": "¡Regla de Oro! ¿Cuál es la única palabra que puede usarse para negar el verbo 有 (yǒu)?", "options": ["没 (méi).", "不 (bù).", "吗 (ma).", "是 (shì)."], "correct_answer": "没 (méi).", "explanation": "El verbo 有 solo puede negarse con 没. Decir 不有 es gramaticalmente incorrecto." },
+        { "id": "zh-a1-6-q4", "type": "quiz_choice", "question": "Si alguien dice 'Bù yǒu' (不有), ¿qué debes pensar?", "options": ["Es un error gramatical grave.", "Significa 'No tengo'.", "Significa 'Sí tengo'.", "Es una forma educada de negar."], "correct_answer": "Es un error gramatical grave.", "explanation": "La combinación bù + yǒu no existe en la gramática china." },
+        { "id": "zh-a1-6-q5", "type": "quiz_choice", "question": "¿Cómo se dice 'Nosotros NO tenemos'?", "options": ["Wǒmen méiyǒu (我们没有).", "Wǒmen bù yǒu (我们不有).", "Wǒmen yǒu bù (我们有不).", "Wǒ méiyǒu (我没有)."], "correct_answer": "Wǒmen méiyǒu (我们没有).", "explanation": "Wǒmen (Nosotros) + méiyǒu (no tenemos)." },
+        { "id": "zh-a1-6-q6", "type": "quiz_choice", "question": "¿Cómo preguntarías '¿Ustedes tienen?'", "options": ["Nǐmen yǒu ma? (你们有吗？)", "Nǐmen yǒu? (你们有？)", "Yǒu nǐmen ma? (有你们吗？)", "Nǐmen shì yǒu ma? (你们是有吗？)"], "correct_answer": "Nǐmen yǒu ma? (你们有吗？)", "explanation": "Nǐmen (Ustedes) + yǒu (tienen) + ma (partícula de pregunta)." },
+        { "id": "zh-a1-6-q7", "type": "quiz_choice", "question": "Te preguntan: '¿Nǐ yǒu ma?' (¿Tienes?). Para decir que SÍ, respondes:", "options": ["Yǒu (有).", "Shì (是).", "Méiyǒu (没有).", "Bù (不)."], "correct_answer": "Yǒu (有).", "explanation": "Para decir que sí a una pregunta con 'tener', repites el verbo: Yǒu." },
+        { "id": "zh-a1-6-q8", "type": "quiz_choice", "question": "Te preguntan: '¿Tā yǒu ma?' (¿Él tiene?). Para decir que NO, respondes:", "options": ["Méiyǒu (没有).", "Bú shì (不是).", "Yǒu (有).", "Bù yǒu (不有)."], "correct_answer": "Méiyǒu (没有).", "explanation": "La única forma de negar que alguien tiene algo es usando Méiyǒu." },
+        { "id": "zh-a1-6-q9", "type": "quiz_choice", "question": "¿El verbo 有 (yǒu) sufre algún cambio de conjugación cuando pasas de 'Yo tengo' a 'Ellos tienen'?", "options": ["No, los verbos en chino nunca se conjugan.", "Sí, se le agrega 'men'.", "Sí, cambia el tono.", "Sí, se convierte en 'yǒus'."], "correct_answer": "No, los verbos en chino nunca se conjugan.", "explanation": "El verbo yǒu es inmutable para todos los pronombres." },
+        { "id": "zh-a1-6-q10", "type": "quiz_choice", "question": "¿Cómo se escribe el pinyin para 'No tener'?", "options": ["méiyǒu", "meiyou", "bùyǒu", "buyou"], "correct_answer": "méiyǒu", "explanation": "Es la unión de la negación especial méi + el verbo yǒu." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correcto para completar las oraciones. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-6-f1", "type": "fill_input", "question": "Tener: ____ (you)", "correct_answer": "you", "explanation": "you" },
+        { "id": "zh-a1-6-f2", "type": "fill_input", "question": "Yo tengo: wo ____", "correct_answer": "you", "explanation": "you" },
+        { "id": "zh-a1-6-f3", "type": "fill_input", "question": "¿Él tiene?: ta you ____", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-6-f4", "type": "fill_input", "question": "Partícula para negar el verbo TENER: ____ (mei)", "correct_answer": "mei", "explanation": "mei" },
+        { "id": "zh-a1-6-f5", "type": "fill_input", "question": "No tengo: ____ you (mei)", "correct_answer": "mei", "explanation": "mei" },
+        { "id": "zh-a1-6-f6", "type": "fill_input", "question": "Yo NO tengo: wo mei____", "correct_answer": "you", "explanation": "you" },
+        { "id": "zh-a1-6-f7", "type": "fill_input", "question": "Partícula para negar CUALQUIER otro verbo (ej. Ser): ____ (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a1-6-f8", "type": "fill_input", "question": "¿Tú tienes?: ni ____ ma", "correct_answer": "you", "explanation": "you" },
+        { "id": "zh-a1-6-f9", "type": "fill_input", "question": "Nosotros tenemos: women ____", "correct_answer": "you", "explanation": "you" },
+        { "id": "zh-a1-6-f10", "type": "fill_input", "question": "Ellos NO tienen: tamen ____you", "correct_answer": "mei", "explanation": "mei" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y selecciona la traducción correcta.",
+      "questions": [
+        { "id": "zh-a1-6-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "有", "options": ["Sí (Tengo)", "No (No tengo)", "Yo soy", "Tú eres"], "correct_answer": "Sí (Tengo)", "explanation": "El audio dice: yǒu (Tener)." },
+        { "id": "zh-a1-6-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "没有", "options": ["No (No tengo)", "Sí (Tengo)", "No (No soy)", "Yo soy"], "correct_answer": "No (No tengo)", "explanation": "El audio dice: méiyǒu (No tener)." },
+        { "id": "zh-a1-6-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我有", "options": ["Yo tengo", "Tú tienes", "Él tiene", "Yo no tengo"], "correct_answer": "Yo tengo", "explanation": "El audio dice: wǒ yǒu." },
+        { "id": "zh-a1-6-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你有吗？", "options": ["¿Tú tienes?", "¿Él tiene?", "¿Tú eres?", "Tú no tienes"], "correct_answer": "¿Tú tienes?", "explanation": "El audio dice: Nǐ yǒu ma?" },
+        { "id": "zh-a1-6-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他们没有", "options": ["Ellos no tienen", "Ellos tienen", "Nosotros no tenemos", "Ellos no son"], "correct_answer": "Ellos no tienen", "explanation": "El audio dice: Tāmen méiyǒu." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Grammar Concepts",
+      "pairs": [
+        {"id": "zh-a1-6-p1", "source": "有 (yǒu)", "target": "Tener / Haber"},
+        {"id": "zh-a1-6-p2", "source": "没 (méi)", "target": "La única negación para 'Tener'"},
+        {"id": "zh-a1-6-p3", "source": "没有 (méiyǒu)", "target": "No tener"},
+        {"id": "zh-a1-6-p4", "source": "不 (bù)", "target": "Negación para los demás verbos"},
+        {"id": "zh-a1-6-p5", "source": "我有 (wǒ yǒu)", "target": "Yo tengo"},
+        {"id": "zh-a1-6-p6", "source": "你有吗？(nǐ yǒu ma?)", "target": "¿Tú tienes?"},
+        {"id": "zh-a1-6-p7", "source": "他没有 (tā méiyǒu)", "target": "Él no tiene"},
+        {"id": "zh-a1-6-p8", "source": "我们有 (wǒmen yǒu)", "target": "Nosotros tenemos"},
+        {"id": "zh-a1-6-p9", "source": "你们没有 (nǐmen méiyǒu)", "target": "Ustedes no tienen"},
+        {"id": "zh-a1-6-p10", "source": "不有 (bù yǒu)", "target": "Error gramatical (No existe)"}
+      ]
+    }
+  ]
+}

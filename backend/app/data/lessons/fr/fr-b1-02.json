@@ -1,0 +1,95 @@
+{
+  "id": "fr-b1-02",
+  "title": "Le Plus-que-parfait",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Past Tense", "Narrative"],
+  "completion_message": "¡Excelente! Has dominado la máquina del tiempo gramatical. Ahora puedes contar historias mucho más ricas al diferenciar qué pasó primero y qué pasó después.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Pasado del Pasado (B1)",
+      "parts": [
+        {
+          "visual": "¿Cómo cuentas una historia que ocurrió ANTES de otra historia en el pasado?\nUsamos el Plus-que-parfait (Pluscuamperfecto).\n\nEjemplo en español: 'Cuando él llegó (pasado 1), yo YA HABÍA COMIDO (pasado 2, más antiguo)'.\n\nEn francés, es como el Passé Composé, ¡pero el verbo auxiliar (Avoir o Être) va en IMPARFAIT!\n\nPassé Composé: J'AI mangé (He comido).\nPlus-que-parfait: J'AVAIS mangé (Había comido).",
+          "audio": "En el nivel A2 aprendiste a usar el Passé Composé para las acciones y el Imparfait para las descripciones. Hoy vamos a juntarlos para crear algo nuevo: el Plus-que-parfait. Este tiempo verbal sirve para hablar del 'pasado del pasado'. Por ejemplo, imagina que llegaste a la estación de tren, pero el tren ya se había ido. Llegar es pasado, pero irse es un pasado aún más antiguo. Para formar este tiempo, simplemente tomas el auxiliar AVOIR o ÊTRE y lo pones en Imparfait, seguido del participio. Así, en lugar de decir 'J'ai mangé', que significa 'He comido', dices 'J'avais mangé', que significa 'Yo había comido'."
+        },
+        {
+          "visual": "Recordatorio de los auxiliares en Imparfait:\n\nAVOIR (Para el 90% de los verbos):\n- J'avais (Yo había)\n- Tu avais\n- Il avait\n- Nous avions\n- Vous aviez\n- Ils avaient\n\nÊTRE (Para los verbos de movimiento y reflexivos):\n- J'étais (Yo había - estado/ido)\n- Tu étais\n- Il était\n- Nous étions\n- Vous étiez\n- Ils étaient\n\nEj: J'étais déjà parti (Yo ya me había ido).",
+          "audio": "La regla de oro del Passé Composé sigue viva aquí: la mayoría de los verbos usan AVOIR, pero la Casa de Être y los verbos reflexivos siguen usando ÊTRE. La diferencia es que ahora esos auxiliares están en Imparfait. Entonces, para decir 'Yo había terminado', usas avoir: 'J'avais fini'. Pero para decir 'Yo me había ido', como 'irse' es de la Casa de Être, tienes que usar Être en Imparfait. Dices: 'J'étais parti'. Es exactamente la misma lógica que ya conoces, solo que un escalón más atrás en el tiempo."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del Plus-que-parfait.",
+      "questions": [
+        { "id": "frb1-02-q1", "type": "quiz_choice", "question": "¿Para qué sirve el Plus-que-parfait?", "options": ["Para describir una acción pasada que ocurrió ANTES que otra acción pasada", "Para hablar de rutinas en el presente", "Para dar órdenes en el pasado", "Para describir el clima del pasado"], "correct_answer": "Para describir una acción pasada que ocurrió ANTES que otra acción pasada", "explanation": "Es el 'pasado del pasado'." },
+        { "id": "frb1-02-q2", "type": "quiz_choice", "question": "¿Cómo se forma el Plus-que-parfait?", "options": ["Auxiliar en Imparfait + Participio Pasado", "Auxiliar en Presente + Participio Pasado", "Verbo conjugado en Imparfait directamente"], "correct_answer": "Auxiliar en Imparfait + Participio Pasado", "explanation": "Ejemplo: J'avais (Imparfait) + mangé (Participio)." },
+        { "id": "frb1-02-q3", "type": "quiz_choice", "question": "Je ____ (manger). Yo HABÍA comido.", "options": ["avais mangé", "ai mangé", "étais mangé", "mangeais"], "correct_answer": "avais mangé", "explanation": "J'avais + mangé." },
+        { "id": "frb1-02-q4", "type": "quiz_choice", "question": "Il ____ (finir). Él HABÍA terminado.", "options": ["avait fini", "a fini", "était fini", "finissait"], "correct_answer": "avait fini", "explanation": "Il avait + fini." },
+        { "id": "frb1-02-q5", "type": "quiz_choice", "question": "Nous ____ (regarder). Nosotros HABÍAMOS mirado.", "options": ["avions regardé", "avons regardé", "avions regarder", "étions regardé"], "correct_answer": "avions regardé", "explanation": "Nous avions + regardé." },
+        { "id": "frb1-02-q6", "type": "quiz_choice", "question": "¿Qué auxiliar usa el verbo 'Aller' (ir) en Plus-que-parfait?", "options": ["Être (étais, était...)", "Avoir (avais, avait...)", "Aller (allais...)"], "correct_answer": "Être (étais, était...)", "explanation": "Aller es de la Casa de Être, así que sigue usando Être, pero en Imparfait." },
+        { "id": "frb1-02-q7", "type": "quiz_choice", "question": "Je (masc) ____ (aller). Yo HABÍA ido.", "options": ["étais allé", "avais allé", "suis allé", "allais"], "correct_answer": "étais allé", "explanation": "J'étais + allé." },
+        { "id": "frb1-02-q8", "type": "quiz_choice", "question": "Elle ____ (partir). Ella se HABÍA ido.", "options": ["était partie", "avait partie", "est partie", "était parti"], "correct_answer": "était partie", "explanation": "Elle était + partie (con 'e' de femenino porque usa Être)." },
+        { "id": "frb1-02-q9", "type": "quiz_choice", "question": "Tu ____ (perdre) tes clés. (Tú HABÍAS perdido tus llaves).", "options": ["avais perdu", "as perdu", "avais perdre", "étais perdu"], "correct_answer": "avais perdu", "explanation": "Tu avais + perdu." },
+        { "id": "frb1-02-q10", "type": "quiz_choice", "question": "Ils ____ (venir). (Ellos HABÍAN venido).", "options": ["étaient venus", "avaient venus", "sont venus", "étaient venu"], "correct_answer": "étaient venus", "explanation": "Venir es Casa de Être -> Ils étaient venus." },
+        { "id": "frb1-02-q11", "type": "quiz_choice", "question": "Vous ____ (comprendre). (Ustedes HABÍAN comprendido).", "options": ["aviez compris", "avez compris", "aviez comprendre", "étiez compris"], "correct_answer": "aviez compris", "explanation": "Vous aviez + compris." },
+        { "id": "frb1-02-q12", "type": "quiz_choice", "question": "¿Qué palabra se usa a menudo con el Plus-que-parfait para decir 'YA'?", "options": ["déjà", "jamais", "toujours", "encore"], "correct_answer": "déjà", "explanation": "Déjà = ya. Ej: J'avais DÉJÀ mangé." },
+        { "id": "frb1-02-q13", "type": "quiz_choice", "question": "J'étais fatigué parce que je ____ mal ____ (dormir).", "options": ["avais / dormi", "ai / dormi", "étais / dormi", "avais / dormir"], "correct_answer": "avais / dormi", "explanation": "Había dormido mal -> J'avais mal dormi." },
+        { "id": "frb1-02-q14", "type": "quiz_choice", "question": "Nous (fem. plur) ____ (sortir). (Nosotras HABÍAMOS salido).", "options": ["étions sorties", "avions sorties", "étions sorti", "sommes sorties"], "correct_answer": "étions sorties", "explanation": "Sortir usa Être -> Nous étions sorties." },
+        { "id": "frb1-02-q15", "type": "quiz_choice", "question": "Je me suis rendu compte qu'il m'____ (mentir). (Me di cuenta de que él me HABÍA mentido).", "options": ["avait menti", "a menti", "était menti", "avait mentir"], "correct_answer": "avait menti", "explanation": "Il avait + menti." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el auxiliar en Imparfait y el participio pasado.",
+      "questions": [
+        { "id": "frb1-02-f1", "type": "fill_input", "question": "Je / manger -> J'____ ____.", "correct_answer": "avais mangé", "explanation": "avais mangé" },
+        { "id": "frb1-02-f2", "type": "fill_input", "question": "Il / finir -> Il ____ ____.", "correct_answer": "avait fini", "explanation": "avait fini" },
+        { "id": "frb1-02-f3", "type": "fill_input", "question": "Nous / parler -> Nous ____ ____.", "correct_answer": "avions parlé", "explanation": "avions parlé" },
+        { "id": "frb1-02-f4", "type": "fill_input", "question": "Tu / voir -> Tu ____ ____.", "correct_answer": "avais vu", "explanation": "avais vu" },
+        { "id": "frb1-02-f5", "type": "fill_input", "question": "Je (masc) / aller -> J'____ ____.", "correct_answer": "étais allé", "explanation": "étais allé" },
+        { "id": "frb1-02-f6", "type": "fill_input", "question": "Elle / partir -> Elle ____ ____.", "correct_answer": "était partie", "explanation": "était partie" },
+        { "id": "frb1-02-f7", "type": "fill_input", "question": "Vous / comprendre -> Vous ____ ____.", "correct_answer": "aviez compris", "explanation": "aviez compris" },
+        { "id": "frb1-02-f8", "type": "fill_input", "question": "Ils / venir -> Ils ____ ____.", "correct_answer": "étaient venus", "explanation": "étaient venus" },
+        { "id": "frb1-02-f9", "type": "fill_input", "question": "Il / boire -> Il ____ ____.", "correct_answer": "avait bu", "explanation": "avait bu" },
+        { "id": "frb1-02-f10", "type": "fill_input", "question": "Elles / sortir -> Elles ____ ____.", "correct_answer": "étaient sorties", "explanation": "étaient sorties" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Time Machine Match",
+      "pairs": [
+        {"id": "frb1-02-p1", "source": "J'avais mangé", "target": "Yo había comido"},
+        {"id": "frb1-02-p2", "source": "J'ai mangé", "target": "Yo he comido / Yo comí"},
+        {"id": "frb1-02-p3", "source": "Il avait fini", "target": "Él había terminado"},
+        {"id": "frb1-02-p4", "source": "J'étais parti", "target": "Yo me había ido"},
+        {"id": "frb1-02-p5", "source": "Elle était arrivée", "target": "Ella había llegado"},
+        {"id": "frb1-02-p6", "source": "Nous avions vu", "target": "Nosotros habíamos visto"},
+        {"id": "frb1-02-p7", "source": "Tu avais lu", "target": "Tú habías leído"},
+        {"id": "frb1-02-p8", "source": "Ils étaient venus", "target": "Ellos habían venido"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y distingue: ¿Es Passé Composé (pasado) o Plus-que-parfait (pasado del pasado)?",
+      "questions": [
+        { "id": "frb1-02-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "J'avais mangé", "options": ["J'avais mangé", "J'ai mangé", "Je mangeais", "Je vais manger"], "correct_answer": "J'avais mangé", "explanation": "Audio dice: J'avais mangé (Plus-que-parfait)." },
+        { "id": "frb1-02-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "J'ai mangé", "options": ["J'ai mangé", "J'avais mangé", "Je mangeais", "Il avait mangé"], "correct_answer": "J'ai mangé", "explanation": "Audio dice: J'ai mangé (Passé Composé)." },
+        { "id": "frb1-02-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il était parti", "options": ["Il était parti", "Il est parti", "J'étais parti", "Elle était partie"], "correct_answer": "Il était parti", "explanation": "Audio dice: Il était parti (Plus-que-parfait)." },
+        { "id": "frb1-02-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Nous avions fini", "options": ["Nous avions fini", "Nous avons fini", "Vous aviez fini", "Ils avaient fini"], "correct_answer": "Nous avions fini", "explanation": "Audio dice: Nous avions fini." },
+        { "id": "frb1-02-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Tu avais vu", "options": ["Tu avais vu", "Tu as vu", "J'avais vu", "Il avait vu"], "correct_answer": "Tu avais vu", "explanation": "Audio dice: Tu avais vu." }
+      ]
+    }
+  ]
+}

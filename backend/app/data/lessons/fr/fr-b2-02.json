@@ -1,0 +1,95 @@
+{
+  "id": "fr-b2-02",
+  "title": "Les Conjonctions + Subjonctif",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Subjunctive", "Conjunctions"],
+  "completion_message": "¡Sublime! Acabas de dominar las palabras que obligan al francés a usar el subjuntivo. Ahora tus condiciones y objeciones suenan extremadamente profesionales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Club Exclusivo del Subjuntivo (B2)",
+      "parts": [
+        {
+          "visual": "Concesión con Subjuntivo (Aunque):\n\nEn la lección anterior vimos que 'Même si' (Incluso si) usa Indicativo. Pero si quieres usar una expresión más formal para decir 'Aunque', debes usar subjuntivo.\n\n1. Bien que / Quoique (Aunque) + SUBJUNTIVO.\n- BIEN QU'il PLEUVE, je sors. (Aunque llueva, salgo).\n- QUOIQUE je SOIS malade, je travaille. (Aunque esté enfermo, trabajo).\n\nRegla de oro B2: \nMême si + Indicativo (Même s'il pleut)\nBien que + Subjuntivo (Bien qu'il pleuve)",
+          "audio": "En la lección anterior aprendimos que para decir 'Aunque' usamos 'Même si', y que SIEMPRE va con indicativo. Pero, ¿qué pasa si quieres sonar más formal, más sofisticado? Tienes que usar 'Bien que' o 'Quoique'. Significa exactamente lo mismo: 'Aunque'. Pero hay un precio que pagar por sonar elegante: estas dos conjunciones OBLIGAN al uso del subjuntivo. Así que 'Aunque llueva' se dice: 'BIEN QU'il pleuve'. Jamás digas 'Bien qu'il pleut'. Es un error letal en el nivel B2. Grábate esto: Même si toma indicativo, Bien que toma subjuntivo."
+        },
+        {
+          "visual": "Condiciones y Restricciones con Subjuntivo:\n\n1. À condition que (Con la condición de que / Siempre y cuando):\n- Je viendrai À CONDITION QUE tu SOIS là. (Iré con la condición de que estés allí).\n\n2. Pourvu que (Con tal de que / Ojalá):\n- Nous gagnerons POURVU QU'il NEIGE. (Ganaremos con tal de que nieve).\n\n3. À moins que (A menos que) + 'ne' expletivo:\n- Je sortirai À MOINS QU'il NE pleuve. (Saldré a menos que llueva).\nNota B2: Ese pequeño 'ne' no es negativo, se llama 'ne expletivo' y se usa en lenguaje formal solo por elegancia.",
+          "audio": "El subjuntivo también se usa para poner condiciones muy estrictas. Si quieres decir 'Iré con la condición de que estés ahí', usas 'À condition que', y como es una regla estricta, exige subjuntivo: 'À condition que tu SOIS là'. Otra muy bonita es 'Pourvu que', que significa 'Con tal de que'. 'Ganaremos con tal de que nieve' sería: 'Nous gagnerons pourvu qu'il neige'. Y finalmente, tenemos al jefe final del nivel B2: 'À moins que', que significa 'A menos que'. Si dices 'Saldré a menos que llueva', dices: 'Je sortirai à moins qu'il NE pleuve'. ¿Escuchaste ese 'NE' colado ahí? Se llama 'NE expletivo'. No significa 'no', simplemente es una partícula elegante que los franceses ponen después de ciertas palabras de restricción."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma verbal o la conjunción correcta.",
+      "questions": [
+        { "id": "frb2-02-q1", "type": "quiz_choice", "question": "Bien qu'il ____ tard, je continue à travailler. (AUNQUE SEA).", "options": ["soit", "est", "sera", "sois"], "correct_answer": "soit", "explanation": "Bien que exige Subjuntivo -> qu'il soit." },
+        { "id": "frb2-02-q2", "type": "quiz_choice", "question": "Même s'il ____ tard, je continue. (AUNQUE ES).", "options": ["est", "soit", "sera", "serait"], "correct_answer": "est", "explanation": "Même si exige Indicativo -> s'il est." },
+        { "id": "frb2-02-q3", "type": "quiz_choice", "question": "Je t'aiderai à condition que tu m'____. (SIEMPRE Y CUANDO me AYUDES).", "options": ["aides", "aides (subjuntivo)", "aideras", "aidais"], "correct_answer": "aides", "explanation": "À condition que exige Subjuntivo (tu aides)." },
+        { "id": "frb2-02-q4", "type": "quiz_choice", "question": "Nous irons à la plage à moins qu'il ____. (A MENOS QUE LLUEVA).", "options": ["ne pleuve", "pleut", "pleuvra", "ne pleut"], "correct_answer": "ne pleuve", "explanation": "À moins que exige Subjuntivo + el 'ne' expletivo opcional formal -> ne pleuve." },
+        { "id": "frb2-02-q5", "type": "quiz_choice", "question": "____ il soit fatigué, il sourit. (AUNQUE - formal).", "options": ["Bien qu'", "Même s'", "Malgré", "Pourtant"], "correct_answer": "Bien qu'", "explanation": "'soit' es subjuntivo -> Bien qu'." },
+        { "id": "frb2-02-q6", "type": "quiz_choice", "question": "Quoique je ____ fatigué, je sors. (AUNQUE ESTÉ).", "options": ["sois", "suis", "serai", "soit"], "correct_answer": "sois", "explanation": "Quoique exige Subjuntivo -> que je sois." },
+        { "id": "frb2-02-q7", "type": "quiz_choice", "question": "Tout ira bien pourvu que nous ____ ensemble. (CON TAL DE QUE ESTEMOS).", "options": ["soyons", "sommes", "serons", "serions"], "correct_answer": "soyons", "explanation": "Pourvu que exige Subjuntivo -> que nous soyons." },
+        { "id": "frb2-02-q8", "type": "quiz_choice", "question": "Je viendrai ____ tu sois d'accord. (CON LA CONDICIÓN DE QUE).", "options": ["à condition que", "même si", "bien que", "tandis que"], "correct_answer": "à condition que", "explanation": "Condición (sois es subjuntivo) -> à condition que." },
+        { "id": "frb2-02-q9", "type": "quiz_choice", "question": "¿Qué significa el 'ne' en 'à moins qu'il ne vienne'?", "options": ["No significa nada, es un adorno formal (ne expletivo).", "Significa una negación estricta (no venga).", "Es un error ortográfico."], "correct_answer": "No significa nada, es un adorno formal (ne expletivo).", "explanation": "Se llama 'ne expletif' y se usa en lenguaje escrito/formal después de palabras de temor o restricción." },
+        { "id": "frb2-02-q10", "type": "quiz_choice", "question": "____ elle ait étudié, elle a échoué. (AUNQUE HAYA estudiado).", "options": ["Bien qu'", "Même s'", "Pourtant", "Malgré"], "correct_answer": "Bien qu'", "explanation": "'ait étudié' es subjuntivo pasado -> Bien qu'." },
+        { "id": "frb2-02-q11", "type": "quiz_choice", "question": "Il réussira à condition qu'il ____. (CON LA CONDICIÓN de que HAGA un esfuerzo).", "options": ["fasse", "fait", "fera", "faisait"], "correct_answer": "fasse", "explanation": "À condition que exige Subjuntivo del verbo faire -> fasse." },
+        { "id": "frb2-02-q12", "type": "quiz_choice", "question": "Le match aura lieu à moins qu'il ____ mauvais. (A MENOS QUE HAGA mal tiempo).", "options": ["ne fasse", "fait", "fasse", "ne fait"], "correct_answer": "ne fasse", "explanation": "À moins que + ne expletivo + subjuntivo (fasse) -> ne fasse." },
+        { "id": "frb2-02-q13", "type": "quiz_choice", "question": "Pourvu qu'ils ____ à temps ! (¡OJALÁ LLEGUEN a tiempo!).", "options": ["arrivent", "arrivent (subjuntivo)", "arriveront", "arrivaient"], "correct_answer": "arrivent", "explanation": "Pourvu que exige Subjuntivo (qu'ils arrivent)." },
+        { "id": "frb2-02-q14", "type": "quiz_choice", "question": "Bien que ce ____ difficile, c'est possible. (AUNQUE SEA).", "options": ["soit", "est", "sera", "serait"], "correct_answer": "soit", "explanation": "Bien que + Subjuntivo de Être -> soit." },
+        { "id": "frb2-02-q15", "type": "quiz_choice", "question": "On ira se promener ____ il pleut. (AUNQUE - ojo al verbo).", "options": ["même s'", "bien qu'", "quoiqu'", "à condition qu'"], "correct_answer": "même s'", "explanation": "'il pleut' es indicativo, por lo tanto la única opción posible es 'même si'." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la forma correcta del verbo en subjuntivo (y añade 'ne' si es necesario por 'à moins que').",
+      "questions": [
+        { "id": "frb2-02-f1", "type": "fill_input", "question": "Bien qu'il ____ (être) riche, il est triste.", "correct_answer": "soit", "explanation": "soit" },
+        { "id": "frb2-02-f2", "type": "fill_input", "question": "Je sors à condition qu'il ____ (faire) beau.", "correct_answer": "fasse", "explanation": "fasse" },
+        { "id": "frb2-02-f3", "type": "fill_input", "question": "Je partirai à moins qu'il ____ (pleuvoir - añade ne expletivo).", "correct_answer": "ne pleuve", "explanation": "ne pleuve" },
+        { "id": "frb2-02-f4", "type": "fill_input", "question": "Pourvu qu'elle ____ (venir) demain !", "correct_answer": "vienne", "explanation": "vienne" },
+        { "id": "frb2-02-f5", "type": "fill_input", "question": "Quoique nous ____ (avoir) peur, nous avançons.", "correct_answer": "ayons", "explanation": "ayons" },
+        { "id": "frb2-02-f6", "type": "fill_input", "question": "Bien que je le ____ (savoir), je ne dirai rien.", "correct_answer": "sache", "explanation": "sache" },
+        { "id": "frb2-02-f7", "type": "fill_input", "question": "Nous gagnerons à condition que tu ____ (pouvoir) jouer.", "correct_answer": "puisses", "explanation": "puisses" },
+        { "id": "frb2-02-f8", "type": "fill_input", "question": "Le projet est annulé à moins qu'il ____ (finir - añade ne expletivo) à temps.", "correct_answer": "ne finisse", "explanation": "ne finisse" },
+        { "id": "frb2-02-f9", "type": "fill_input", "question": "Pourvu que vous ____ (être) heureux.", "correct_answer": "soyez", "explanation": "soyez" },
+        { "id": "frb2-02-f10", "type": "fill_input", "question": "Bien qu'ils ____ (aller) au même endroit, ils prennent des voitures différentes.", "correct_answer": "aillent", "explanation": "aillent" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Subjunctive Conjunctions Match",
+      "pairs": [
+        {"id": "frb2-02-p1", "source": "Bien que + Subj", "target": "Aunque (Formal)"},
+        {"id": "frb2-02-p2", "source": "Même si + Ind", "target": "Aunque / Incluso si"},
+        {"id": "frb2-02-p3", "source": "Quoique + Subj", "target": "A pesar de que"},
+        {"id": "frb2-02-p4", "source": "Pourvu que", "target": "Con tal de que / Ojalá"},
+        {"id": "frb2-02-p5", "source": "À condition que", "target": "Siempre y cuando"},
+        {"id": "frb2-02-p6", "source": "À moins que", "target": "A menos que"},
+        {"id": "frb2-02-p7", "source": "ne pleuve", "target": "llueva (con ne expletivo)"},
+        {"id": "frb2-02-p8", "source": "qu'il soit", "target": "que él sea / esté"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica la conjunción con subjuntivo.",
+      "questions": [
+        { "id": "frb2-02-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Bien qu'il soit tard", "options": ["Bien qu'il soit tard", "Même s'il est tard", "Pourtant il est tard", "Bien qu'il est tard"], "correct_answer": "Bien qu'il soit tard", "explanation": "Audio dice: Bien qu'il soit tard." },
+        { "id": "frb2-02-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "À condition que tu viennes", "options": ["À condition que tu viennes", "À moins que tu viennes", "Pourvu que tu viennes", "Bien que tu viennes"], "correct_answer": "À condition que tu viennes", "explanation": "Audio dice: À condition que tu viennes." },
+        { "id": "frb2-02-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "À moins qu'il ne pleuve", "options": ["À moins qu'il ne pleuve", "Pourvu qu'il ne pleuve", "Bien qu'il pleuve", "À condition qu'il pleuve"], "correct_answer": "À moins qu'il ne pleuve", "explanation": "Audio dice: À moins qu'il ne pleuve." },
+        { "id": "frb2-02-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Pourvu qu'elle soit là", "options": ["Pourvu qu'elle soit là", "Pourvu qu'elle vienne là", "Bien qu'elle soit là", "À condition qu'elle soit là"], "correct_answer": "Pourvu qu'elle soit là", "explanation": "Audio dice: Pourvu qu'elle soit là." },
+        { "id": "frb2-02-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Quoiqu'il fasse beau", "options": ["Quoiqu'il fasse beau", "Bien qu'il fasse beau", "Même s'il fait beau", "Pourvu qu'il fasse beau"], "correct_answer": "Quoiqu'il fasse beau", "explanation": "Audio dice: Quoiqu'il fasse beau (A pesar de que hace buen clima)." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "a2-31",
+  "title": "Emails & Correspondence",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Vocabulary", "Email", "Correspondence", "Business"],
+  "completion_message": "¡Excelente! Has aprendido el vocabulario esencial para escribir y gestionar correos electrónicos formales en inglés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Correos y Correspondencia",
+      "parts": [
+        { "visual": "Partes de un correo: Subject (Asunto). Attachment (Archivo adjunto). Recipient (Destinatario). \nAcciones: Reply (Responder). Reply all (Responder a todos). Forward (Reenviar). Attach (Adjuntar). CC (Con copia).", "audio": "Parts of an email. Subject. Attachment. Recipient. Actions: Reply. Reply all. Forward means to send an email you received to another person. Attach means to add a file. CC stands for Carbon Copy." },
+        { "visual": "Frases útiles: Please find attached... (Por favor, encuentre adjunto...). I am writing to inform you that... (Le escribo para informarle que...). \nDespedidas formales: Sincerely, / Best regards, (Atentamente / Saludos cordiales).", "audio": "Useful phrases. Please find attached the report. I am writing to inform you that the meeting is delayed. Formal sign-offs: Sincerely, or Best regards." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta relacionada con correos electrónicos y correspondencia.",
+      "questions": [
+        { "id": "a2-31-q1", "type": "quiz_choice", "question": "What is the ____ of the email? (Asunto).", "options": ["subject", "object", "title", "name"], "correct_answer": "subject", "explanation": "Subject = asunto (tema del correo)." },
+        { "id": "a2-31-q2", "type": "quiz_choice", "question": "Please ____ the document to the email. (Adjuntar).", "options": ["attach", "put", "send", "add"], "correct_answer": "attach", "explanation": "Attach = adjuntar un archivo." },
+        { "id": "a2-31-q3", "type": "quiz_choice", "question": "Please find ____ the report you requested. (Adjunto).", "options": ["attached", "attach", "attaching", "inside"], "correct_answer": "attached", "explanation": "Please find attached = por favor, encuentre adjunto." },
+        { "id": "a2-31-q4", "type": "quiz_choice", "question": "Don't forget to ____ to his email. (Responder).", "options": ["reply", "say", "talk", "forward"], "correct_answer": "reply", "explanation": "Reply = responder (a un correo o mensaje)." },
+        { "id": "a2-31-q5", "type": "quiz_choice", "question": "Could you ____ this email to the manager? (Reenviar).", "options": ["forward", "send back", "reply", "cc"], "correct_answer": "forward", "explanation": "Forward = reenviar." },
+        { "id": "a2-31-q6", "type": "quiz_choice", "question": "I forgot to add the ____. (Archivo adjunto).", "options": ["attachment", "attach", "paper", "doc"], "correct_answer": "attachment", "explanation": "Attachment = el archivo adjunto (sustantivo)." },
+        { "id": "a2-31-q7", "type": "quiz_choice", "question": "I will ____ the HR department on this email. (Poner con copia a).", "options": ["cc", "send", "forward", "reply"], "correct_answer": "cc", "explanation": "CC (Carbon Copy) funciona como verbo: I will cc you = te pondré en copia." },
+        { "id": "a2-31-q8", "type": "quiz_choice", "question": "To write an email to someone, you first click on '____'. (Redactar/Nuevo mensaje).", "options": ["compose", "make", "create", "write down"], "correct_answer": "compose", "explanation": "Compose = redactar (un nuevo correo)." },
+        { "id": "a2-31-q9", "type": "quiz_choice", "question": "Be careful when you click 'Reply ____' because everyone will see it. (Responder a todos).", "options": ["all", "everyone", "full", "total"], "correct_answer": "all", "explanation": "Reply all = responder a todos." },
+        { "id": "a2-31-q10", "type": "quiz_choice", "question": "Dear Mr. Smith, I am ____ to inform you that... (Escribiendo).", "options": ["writing", "saying", "telling", "sending"], "correct_answer": "writing", "explanation": "I am writing to inform you = le escribo para informarle." },
+        { "id": "a2-31-q11", "type": "quiz_choice", "question": "A formal way to end an email is 'Best ____'. (Saludos cordiales).", "options": ["regards", "wishes", "hopes", "byes"], "correct_answer": "regards", "explanation": "Best regards o Kind regards = saludos cordiales." },
+        { "id": "a2-31-q12", "type": "quiz_choice", "question": "Another formal way to end an email is '____,'. (Atentamente/Sinceramente).", "options": ["Sincerely", "Truly", "Friendly", "Lovely"], "correct_answer": "Sincerely", "explanation": "Sincerely o Yours sincerely = Atentamente." },
+        { "id": "a2-31-q13", "type": "quiz_choice", "question": "I didn't receive it. Please check your ____ folder. (Bandeja de spam/correo no deseado).", "options": ["spam", "trash", "sent", "inbox"], "correct_answer": "spam", "explanation": "Spam / Junk folder = carpeta de correo no deseado." },
+        { "id": "a2-31-q14", "type": "quiz_choice", "question": "My ____ is full. I need to delete some emails. (Bandeja de entrada).", "options": ["inbox", "outbox", "box", "mail"], "correct_answer": "inbox", "explanation": "Inbox = bandeja de entrada." },
+        { "id": "a2-31-q15", "type": "quiz_choice", "question": "I haven't finished writing it. It's saved in my ____ folder. (Borradores).", "options": ["drafts", "trash", "sent", "spam"], "correct_answer": "drafts", "explanation": "Drafts = borradores." },
+        { "id": "a2-31-q16", "type": "quiz_choice", "question": "Who is the ____ of this email? (Destinatario).", "options": ["recipient", "sender", "user", "person"], "correct_answer": "recipient", "explanation": "Recipient = destinatario (quien recibe)." },
+        { "id": "a2-31-q17", "type": "quiz_choice", "question": "Who is the ____ of this email? (Remitente).", "options": ["sender", "recipient", "receiver", "from"], "correct_answer": "sender", "explanation": "Sender = remitente (quien envía)." },
+        { "id": "a2-31-q18", "type": "quiz_choice", "question": "Let me ____ you the email I received yesterday. (Reenviar).", "options": ["forward", "reply", "return", "attach"], "correct_answer": "forward", "explanation": "Forward = reenviar (un correo que ya recibiste)." },
+        { "id": "a2-31-q19", "type": "quiz_choice", "question": "Could you ____ the presentation in PDF format? (Adjuntar).", "options": ["attach", "join", "put", "clip"], "correct_answer": "attach", "explanation": "Attach = adjuntar." },
+        { "id": "a2-31-q20", "type": "quiz_choice", "question": "Please ____ this information. (Tomar nota / Estar informado).", "options": ["note", "notice", "see", "watch"], "correct_answer": "note", "explanation": "Please note this information = por favor tome nota de esta información." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta de vocabulario de emails.",
+      "questions": [
+        { "id": "a2-31-f1", "type": "fill_input", "question": "What is the ____ of the email? (Asunto)", "correct_answer": "subject", "explanation": "subject." },
+        { "id": "a2-31-f2", "type": "fill_input", "question": "Please ____ the document. (Adjuntar)", "correct_answer": "attach", "explanation": "attach." },
+        { "id": "a2-31-f3", "type": "fill_input", "question": "Please find ____ the report. (Adjunto)", "correct_answer": "attached", "explanation": "attached." },
+        { "id": "a2-31-f4", "type": "fill_input", "question": "I forgot the ____. (Archivo adjunto - sustantivo)", "correct_answer": "attachment", "explanation": "attachment." },
+        { "id": "a2-31-f5", "type": "fill_input", "question": "Please ____ to my email. (Responder)", "correct_answer": "reply", "explanation": "reply." },
+        { "id": "a2-31-f6", "type": "fill_input", "question": "Could you ____ this to the boss? (Reenviar)", "correct_answer": "forward", "explanation": "forward." },
+        { "id": "a2-31-f7", "type": "fill_input", "question": "I am ____ to inform you... (Escribiendo)", "correct_answer": "writing", "explanation": "writing." },
+        { "id": "a2-31-f8", "type": "fill_input", "question": "Best ____. (Saludos cordiales)", "correct_answer": "regards", "explanation": "regards." },
+        { "id": "a2-31-f9", "type": "fill_input", "question": "My ____ is full. (Bandeja de entrada)", "correct_answer": "inbox", "explanation": "inbox." },
+        { "id": "a2-31-f10", "type": "fill_input", "question": "It's saved in ____. (Borradores)", "correct_answer": "drafts", "explanation": "drafts." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-31-p1", "source": "Subject", "target": "Asunto"},
+        {"id": "a2-31-p2", "source": "Attach / Attachment", "target": "Adjuntar / Archivo adjunto"},
+        {"id": "a2-31-p3", "source": "Forward", "target": "Reenviar"},
+        {"id": "a2-31-p4", "source": "Reply / Reply all", "target": "Responder / Responder a todos"},
+        {"id": "a2-31-p5", "source": "CC (Carbon Copy)", "target": "Con copia a"},
+        {"id": "a2-31-p6", "source": "Please find attached", "target": "Por favor, encuentre adjunto"},
+        {"id": "a2-31-p7", "source": "Best regards / Sincerely", "target": "Saludos cordiales / Atentamente"},
+        {"id": "a2-31-p8", "source": "Inbox", "target": "Bandeja de entrada"},
+        {"id": "a2-31-p9", "source": "Drafts", "target": "Borradores"},
+        {"id": "a2-31-p10", "source": "Sender / Recipient", "target": "Remitente / Destinatario"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta sobre correos electrónicos.",
+      "questions": [
+        { "id": "a2-31-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is the subject of the email?", "options": ["What is the subject of the email?", "What is the topic of the email?", "Where is the subject of the email?", "Is that the subject of the email?"], "correct_answer": "What is the subject of the email?", "explanation": "Audio exacto." },
+        { "id": "a2-31-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please attach the document.", "options": ["Please attach the document.", "Please attach the file.", "Attach the document.", "Could you attach the document?"], "correct_answer": "Please attach the document.", "explanation": "Audio exacto." },
+        { "id": "a2-31-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please find attached the report.", "options": ["Please find attached the report.", "Please find attached the file.", "Find attached the report.", "I have attached the report."], "correct_answer": "Please find attached the report.", "explanation": "Audio exacto." },
+        { "id": "a2-31-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Could you forward this email?", "options": ["Could you forward this email?", "Can you forward this email?", "Please forward this email.", "Would you forward this email?"], "correct_answer": "Could you forward this email?", "explanation": "Audio exacto." },
+        { "id": "a2-31-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I forgot the attachment.", "options": ["I forgot the attachment.", "I forgot to attach it.", "She forgot the attachment.", "We forgot the attachment."], "correct_answer": "I forgot the attachment.", "explanation": "Audio exacto." },
+        { "id": "a2-31-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will CC you on this email.", "options": ["I will CC you on this email.", "I will copy you on this email.", "I will CC the manager.", "We will CC you on this email."], "correct_answer": "I will CC you on this email.", "explanation": "Audio exacto." },
+        { "id": "a2-31-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am writing to inform you.", "options": ["I am writing to inform you.", "I write to inform you.", "We are writing to inform you.", "I am writing you to inform."], "correct_answer": "I am writing to inform you.", "explanation": "Audio exacto." },
+        { "id": "a2-31-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My inbox is full.", "options": ["My inbox is full.", "The inbox is full.", "His inbox is full.", "My inbox was full."], "correct_answer": "My inbox is full.", "explanation": "Audio exacto." },
+        { "id": "a2-31-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Check your spam folder.", "options": ["Check your spam folder.", "Check the spam folder.", "Please check your spam folder.", "Look in your spam folder."], "correct_answer": "Check your spam folder.", "explanation": "Audio exacto." },
+        { "id": "a2-31-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is saved in my drafts.", "options": ["It is saved in my drafts.", "It's saved in the drafts.", "I saved it in my drafts.", "They are saved in my drafts."], "correct_answer": "It is saved in my drafts.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

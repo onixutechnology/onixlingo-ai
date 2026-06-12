@@ -1,0 +1,87 @@
+{
+  "id": "fr-b2-05",
+  "title": "B2 Milestone 1 - Révision",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 1000,
+  "tags": ["B2", "Milestone", "Review", "Subjunctive", "Argumentation"],
+  "completion_message": "¡Felicidades! Has superado el primer bloque del exigente nivel B2. Ya sabes exactamente cómo y cuándo usar el subjuntivo para argumentar, convencer y debatir. ¡Tu francés es oficialmente avanzado!",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Examen del Debate (B2)",
+      "parts": [
+        {
+          "visual": "Repaso del Bloque 1 (B2):\n\n1. Concesión y Oposición:\n- MÊME SI + Indicativo (Aunque).\n- BIEN QUE + Subjuntivo (Aunque formal).\n- MALGRÉ + Sustantivo (A pesar de).\n- AU LIEU DE + Infinitivo (En lugar de).\n\n2. El Objetivo y el Temor:\n- POUR QUE / AFIN QUE + Subjuntivo.\n- DE PEUR QUE + Subjuntivo + 'ne' expletivo.\n- POUR / DE PEUR DE + Infinitivo (si solo hay 1 sujeto).",
+          "audio": "¡Llegamos al final del primer bloque B2! En estas cuatro lecciones has aprendido el arte de debatir y argumentar. ¿Recuerdas la diferencia más importante de la gramática avanzada? 'Même si' siempre exige indicativo, mientras que 'Bien que' exige subjuntivo. Ambos significan 'Aunque', pero se usan de manera diferente. También vimos cómo hablar de nuestros objetivos y miedos. Si hay dos sujetos diferentes, debes usar 'Pour que' o 'De peur que' seguidos del temido subjuntivo. Y si hay miedo, no olvides ese pequeño y elegante 'ne expletivo' escondido en la frase."
+        },
+        {
+          "visual": "3. El Gran Debate: ¿Indicativo o Subjuntivo?\n\nCERTIDUMBRE = Indicativo.\n- Il est SÛR que, Il est CERTAIN que, Je PENSE que.\n- Il est PROBABLE que (Casi seguro = Indicativo).\n\nDUDA = Subjuntivo.\n- Il est POSSIBLE que (Dudoso = Subjuntivo).\n- Je DOUTE que.\n- Je NE pense PAS que (Negativo = Duda = Subjuntivo).",
+          "audio": "El otro gran pilar de este bloque fue aprender a dudar como un filósofo francés. La regla es clara: si expresas certeza o una opinión firme afirmativa, usas el verbo normal, el indicativo. Pero en cuanto introduces la duda, todo cambia al subjuntivo. Si niegas tu opinión, 'No pienso que', usas subjuntivo. Y la trampa favorita de todos los profesores: 'Posible' exige subjuntivo porque hay mucha duda, pero 'Probable' exige indicativo porque es casi seguro que ocurrirá. ¡Respira profundo, confía en tu instinto y demuestra que ya piensas en francés avanzado!"
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evaluación intensiva: Elige el conector o el modo verbal correcto.",
+      "questions": [
+        { "id": "frb2-05-q1", "type": "quiz_choice", "question": "Je viendrai ____ tu sois là. (CON LA CONDICIÓN DE QUE).", "options": ["à condition que", "bien que", "même si", "malgré"], "correct_answer": "à condition que", "explanation": "À condition que + subjuntivo (sois)." },
+        { "id": "frb2-05-q2", "type": "quiz_choice", "question": "Il est sorti ____ la tempête. (A PESAR DE).", "options": ["malgré", "tandis que", "pourtant", "au lieu de"], "correct_answer": "malgré", "explanation": "Malgré + sustantivo (la tempête)." },
+        { "id": "frb2-05-q3", "type": "quiz_choice", "question": "____ il est fatigué, il a fini le travail. (AUNQUE - Ojo, es indicativo).", "options": ["Même s'", "Bien qu'", "Quoiqu'", "Malgré"], "correct_answer": "Même s'", "explanation": "Même si exige indicativo (est)." },
+        { "id": "frb2-05-q4", "type": "quiz_choice", "question": "____ il soit fatigué, il a fini le travail. (AUNQUE - Ojo, es subjuntivo).", "options": ["Bien qu'", "Même s'", "Parce qu'", "Alors qu'"], "correct_answer": "Bien qu'", "explanation": "Bien que exige subjuntivo (soit)." },
+        { "id": "frb2-05-q5", "type": "quiz_choice", "question": "Je te donne ce livre ____ tu puisses étudier. (PARA QUE).", "options": ["pour que", "pour", "afin de", "de peur de"], "correct_answer": "pour que", "explanation": "Dos sujetos -> pour que + subjuntivo (puisses)." },
+        { "id": "frb2-05-q6", "type": "quiz_choice", "question": "Elle étudie beaucoup ____ obtenir la bourse. (PARA).", "options": ["pour", "pour que", "afin que", "bien que"], "correct_answer": "pour", "explanation": "Un solo sujeto -> pour + infinitivo (obtenir)." },
+        { "id": "frb2-05-q7", "type": "quiz_choice", "question": "Il est probable qu'elle ____ raison. (ES PROBABLE QUE).", "options": ["a", "ait", "avoir", "aura"], "correct_answer": "a", "explanation": "Probable = Casi seguro -> Indicativo (a)." },
+        { "id": "frb2-05-q8", "type": "quiz_choice", "question": "Il est possible qu'elle ____ raison. (ES POSIBLE QUE).", "options": ["ait", "a", "avoir", "aura"], "correct_answer": "ait", "explanation": "Posible = Duda -> Subjuntivo (ait)." },
+        { "id": "frb2-05-q9", "type": "quiz_choice", "question": "Je ne pense pas qu'il ____ venir. (NO PIENSO QUE).", "options": ["puisse", "peut", "pourra", "pouvait"], "correct_answer": "puisse", "explanation": "Negativo = Duda -> Subjuntivo (puisse)." },
+        { "id": "frb2-05-q10", "type": "quiz_choice", "question": "Je pense qu'il ____ venir. (PIENSO QUE).", "options": ["peut", "puisse", "pourra", "pouvait"], "correct_answer": "peut", "explanation": "Afirmativo -> Indicativo (peut)." },
+        { "id": "frb2-05-q11", "type": "quiz_choice", "question": "Nous resterons à la maison à moins qu'il ____. (A MENOS QUE HAGA BUEN TIEMPO).", "options": ["ne fasse beau", "fait beau", "ne fait beau", "faisait beau"], "correct_answer": "ne fasse beau", "explanation": "À moins que + ne expletivo + subjuntivo (ne fasse)." },
+        { "id": "frb2-05-q12", "type": "quiz_choice", "question": "Je parle doucement de peur qu'il ____. (POR MIEDO A QUE NOS ESCUCHE).", "options": ["ne nous entende", "nous entend", "ne nous entend", "nous entendrait"], "correct_answer": "ne nous entende", "explanation": "De peur que + ne expletivo + subjuntivo (entende)." },
+        { "id": "frb2-05-q13", "type": "quiz_choice", "question": "Prends un vélo ____ prendre ta voiture. (EN LUGAR DE).", "options": ["au lieu de", "malgré", "pourtant", "tandis que"], "correct_answer": "au lieu de", "explanation": "Au lieu de + infinitivo (prendre)." },
+        { "id": "frb2-05-q14", "type": "quiz_choice", "question": "J'aime le thé, ____ il préfère le café. (MIENTRAS QUE).", "options": ["alors qu'", "malgré", "cependant", "pourtant"], "correct_answer": "alors qu'", "explanation": "Contraste directo -> alors que (o tandis que)." },
+        { "id": "frb2-05-q15", "type": "quiz_choice", "question": "Il a révisé toute la nuit. ____, il a raté son examen. (SIN EMBARGO).", "options": ["Cependant", "Alors que", "Malgré", "Bien que"], "correct_answer": "Cependant", "explanation": "Contradicción ilógica al inicio de frase -> Cependant (o Pourtant)." },
+        { "id": "frb2-05-q16", "type": "quiz_choice", "question": "Il est évident que ce plan ____ le meilleur. (ES EVIDENTE QUE).", "options": ["est", "soit", "sera", "serait"], "correct_answer": "est", "explanation": "Evidencia/Certeza -> Indicativo (est)." },
+        { "id": "frb2-05-q17", "type": "quiz_choice", "question": "Je doute qu'elle ____ la vérité. (DUDO QUE DIGA).", "options": ["dise", "dit", "dira", "disait"], "correct_answer": "dise", "explanation": "Duda explícita -> Subjuntivo (dise)." },
+        { "id": "frb2-05-q18", "type": "quiz_choice", "question": "Nous gagnerons pourvu que vous ____ avec nous. (CON TAL DE QUE ESTÉN).", "options": ["soyez", "êtes", "serez", "seriez"], "correct_answer": "soyez", "explanation": "Pourvu que exige Subjuntivo (soyez)." },
+        { "id": "frb2-05-q19", "type": "quiz_choice", "question": "Il est très riche. ____, il est malheureux. (NO OBSTANTE / SIN EMBARGO).", "options": ["Néanmoins", "Malgré", "Tandis que", "Alors que"], "correct_answer": "Néanmoins", "explanation": "Conector formal de concesión -> Néanmoins." },
+        { "id": "frb2-05-q20", "type": "quiz_choice", "question": "¿Cuál es la regla de oro del conector 'Malgré'?", "options": ["Siempre va seguido de un sustantivo, NUNCA de un verbo conjugado.", "Siempre va seguido del subjuntivo.", "Siempre va seguido del indicativo."], "correct_answer": "Siempre va seguido de un sustantivo, NUNCA de un verbo conjugado.", "explanation": "Regla B2: Malgré la pluie. NUNCA 'Malgré qu'il pleut' (error grave)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Mastery",
+      "description": "Elige el conector o conjuga el verbo (usa 'ne' expletivo si es necesario).",
+      "questions": [
+        { "id": "frb2-05-f1", "type": "fill_input", "question": "____ (Aunque) il soit tard, je travaille. (Ojo: usa el que exige subjuntivo).", "correct_answer": "Bien qu'", "explanation": "Bien qu' (o Quoiqu')" },
+        { "id": "frb2-05-f2", "type": "fill_input", "question": "____ (Aunque) il est tard, je travaille. (Ojo: usa el que exige indicativo).", "correct_answer": "Même s'", "explanation": "Même s'" },
+        { "id": "frb2-05-f3", "type": "fill_input", "question": "____ (A pesar de) son âge, il court vite.", "correct_answer": "Malgré", "explanation": "Malgré" },
+        { "id": "frb2-05-f4", "type": "fill_input", "question": "Il est certain qu'elle ____ (avoir) le temps. (Indicativo).", "correct_answer": "a", "explanation": "a" },
+        { "id": "frb2-05-f5", "type": "fill_input", "question": "Il est douteux qu'elle ____ (avoir) le temps. (Subjuntivo).", "correct_answer": "ait", "explanation": "ait" },
+        { "id": "frb2-05-f6", "type": "fill_input", "question": "Je te prête mon stylo pour que tu ____ (pouvoir) écrire.", "correct_answer": "puisses", "explanation": "puisses" },
+        { "id": "frb2-05-f7", "type": "fill_input", "question": "Nous irons au parc à moins qu'il ____ (pleuvoir - usa ne expletivo).", "correct_answer": "ne pleuve", "explanation": "ne pleuve" },
+        { "id": "frb2-05-f8", "type": "fill_input", "question": "Penses-tu qu'il ____ (venir) ? (Duda en pregunta).", "correct_answer": "vienne", "explanation": "vienne" },
+        { "id": "frb2-05-f9", "type": "fill_input", "question": "Je parle doucement de crainte qu'il ____ (se réveiller - usa ne expletivo).", "correct_answer": "ne se réveille", "explanation": "ne se réveille" },
+        { "id": "frb2-05-f10", "type": "fill_input", "question": "____ (En lugar de) pleurer, agis !", "correct_answer": "Au lieu de", "explanation": "Au lieu de" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "B2 Milestone Match",
+      "pairs": [
+        {"id": "frb2-05-p1", "source": "Bien qu'il soit", "target": "Aunque él sea/esté"},
+        {"id": "frb2-05-p2", "source": "Même s'il est", "target": "Aunque él es/está"},
+        {"id": "frb2-05-p3", "source": "Alors qu'il est", "target": "Mientras que él es/está"},
+        {"id": "frb2-05-p4", "source": "Malgré la pluie", "target": "A pesar de la lluvia"},
+        {"id": "frb2-05-p5", "source": "Pour qu'il vienne", "target": "Para que él venga"},
+        {"id": "frb2-05-p6", "source": "De peur qu'il ne tombe", "target": "Por miedo a que se caiga"},
+        {"id": "frb2-05-p7", "source": "À moins qu'il ne pleuve", "target": "A menos que llueva"},
+        {"id": "frb2-05-p8", "source": "À condition qu'il soit là", "target": "Con la condición de que esté allí"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "b2-8",
+  "title": "Crisis Management",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Vocabulary", "Crisis", "Management", "Business"],
+  "completion_message": "¡Excelente! Los verdaderos líderes se forjan en las crisis. Ahora tienes el vocabulario para tomar el control cuando las cosas van mal.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Manejo de Crisis y Problemas",
+      "parts": [
+        { "visual": "Enfrentando el problema: \n- Damage control (Control de daños - minimizar consecuencias). \n- Tackle a problem (Abordar/enfrentar un problema directamente). \n- Mitigate risks (Mitigar riesgos - reducir la gravedad). \nEj: We need to do damage control immediately to mitigate the risks.", "audio": "Facing the problem. Damage control means minimizing the negative consequences. Tackle a problem means to deal with it directly and aggressively. Mitigate risks means to reduce the severity or probability of a risk. For example: We need to do damage control immediately to mitigate the risks." },
+        { "visual": "Resolución y resultados: \n- Root cause (La causa raíz / el origen del problema). \n- Contingency plan (Plan de contingencia / Plan B). \n- Bounce back (Recuperarse de un fracaso o crisis). \nEj: If we find the root cause, we can bounce back. We also need a contingency plan.", "audio": "Resolution and results. The root cause is the fundamental origin of a problem. A contingency plan is your Plan B. Bounce back means to recover quickly from a failure or crisis. For example: If we find the root cause, we can bounce back. We also need a contingency plan." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra de manejo de crisis adecuada.",
+      "questions": [
+        { "id": "b2-8-q1", "type": "quiz_choice", "question": "After the PR scandal, the company had to do some serious ____ control. (Control de daños).", "options": ["damage", "broken", "loss", "crash"], "correct_answer": "damage", "explanation": "Damage control = control de daños." },
+        { "id": "b2-8-q2", "type": "quiz_choice", "question": "We need to ____ the problem before it gets worse. (Abordar/Atacar directamente).", "options": ["tackle", "catch", "hit", "run"], "correct_answer": "tackle", "explanation": "Tackle a problem = abordar/atacar un problema." },
+        { "id": "b2-8-q3", "type": "quiz_choice", "question": "To ____ the risks, we should diversify our investments. (Mitigar / Reducir).", "options": ["mitigate", "grow", "make", "enlarge"], "correct_answer": "mitigate", "explanation": "Mitigate risks = mitigar riesgos." },
+        { "id": "b2-8-q4", "type": "quiz_choice", "question": "We are just treating the symptoms. We need to find the ____ cause. (Causa raíz).", "options": ["root", "base", "start", "floor"], "correct_answer": "root", "explanation": "Root cause = causa raíz / origen del problema." },
+        { "id": "b2-8-q5", "type": "quiz_choice", "question": "If the main server fails, what is our ____ plan? (Plan de contingencia).", "options": ["contingency", "emergency", "second", "backup"], "correct_answer": "contingency", "explanation": "Contingency plan = plan de contingencia (plan B)." },
+        { "id": "b2-8-q6", "type": "quiz_choice", "question": "Despite the crisis last year, the company managed to ____ back and increase profits. (Recuperarse).", "options": ["bounce", "jump", "run", "walk"], "correct_answer": "bounce", "explanation": "Bounce back = recuperarse (rebotar) después de una caída." },
+        { "id": "b2-8-q7", "type": "quiz_choice", "question": "The situation is ____ out of control. We need the CEO here now. (Saliéndose / Girando).", "options": ["spinning", "turning", "running", "moving"], "correct_answer": "spinning", "explanation": "Spinning out of control = saliéndose de control vertiginosamente." },
+        { "id": "b2-8-q8", "type": "quiz_choice", "question": "They had to lay off 500 employees as a last ____. (Último recurso).", "options": ["resort", "option", "choice", "chance"], "correct_answer": "resort", "explanation": "As a last resort = como último recurso." },
+        { "id": "b2-8-q9", "type": "quiz_choice", "question": "We need to nip this problem in the ____ before it becomes a disaster. (Cortar de raíz / en el capullo).", "options": ["bud", "root", "start", "flower"], "correct_answer": "bud", "explanation": "Nip in the bud = cortar de raíz (antes de que crezca)." },
+        { "id": "b2-8-q10", "type": "quiz_choice", "question": "There is a ____ in the system that allows hackers to enter. (Falla / Brecha).", "options": ["flaw", "hole", "break", "window"], "correct_answer": "flaw", "explanation": "Flaw = falla, defecto o brecha de seguridad." },
+        { "id": "b2-8-q11", "type": "quiz_choice", "question": "The CEO had to ____ the music and apologize to the shareholders. (Enfrentar las consecuencias).", "options": ["face", "hear", "listen", "play"], "correct_answer": "face", "explanation": "Face the music = enfrentar las consecuencias de un error." },
+        { "id": "b2-8-q12", "type": "quiz_choice", "question": "We must ensure business ____ during the power outage. (Continuidad).", "options": ["continuity", "continue", "going", "running"], "correct_answer": "continuity", "explanation": "Business continuity = continuidad del negocio." },
+        { "id": "b2-8-q13", "type": "quiz_choice", "question": "Let's brainstorm to find a ____ to this crisis. (Solución alterna / Parche).", "options": ["workaround", "shortcut", "backdoor", "runaround"], "correct_answer": "workaround", "explanation": "Workaround = solución temporal, alternativa para evadir el problema." },
+        { "id": "b2-8-q14", "type": "quiz_choice", "question": "The recall of the defective cars was a PR ____. (Pesadilla).", "options": ["nightmare", "dream", "terror", "scare"], "correct_answer": "nightmare", "explanation": "PR nightmare = pesadilla de relaciones públicas." },
+        { "id": "b2-8-q15", "type": "quiz_choice", "question": "We need someone to take ____ of this situation immediately. (Tomar el mando/cargo).", "options": ["charge", "control", "power", "lead"], "correct_answer": "charge", "explanation": "Take charge = tomar el mando, asumir la responsabilidad." },
+        { "id": "b2-8-q16", "type": "quiz_choice", "question": "The problem escalated ____. (Rápidamente).", "options": ["rapidly", "fast", "quick", "speed"], "correct_answer": "rapidly", "explanation": "Escalate rapidly = escalar/aumentar rápidamente." },
+        { "id": "b2-8-q17", "type": "quiz_choice", "question": "To avoid bankruptcy, they had to take ____ measures. (Drásticas).", "options": ["drastic", "strong", "hard", "heavy"], "correct_answer": "drastic", "explanation": "Drastic measures = medidas drásticas." },
+        { "id": "b2-8-q18", "type": "quiz_choice", "question": "Don't panic. Keep your ____ and think logically. (Mantén la calma / cabeza).", "options": ["head", "mind", "brain", "cool"], "correct_answer": "head", "explanation": "Keep your head = mantener la calma (no perder la cabeza)." },
+        { "id": "b2-8-q19", "type": "quiz_choice", "question": "We are walking on thin ____ with these legal issues. (Caminando sobre hielo fino / Situación arriesgada).", "options": ["ice", "water", "glass", "ground"], "correct_answer": "ice", "explanation": "Walk on thin ice = estar en una situación muy precaria o arriesgada." },
+        { "id": "b2-8-q20", "type": "quiz_choice", "question": "It's time to trigger the ____ plan. (Desencadenar / Activar).", "options": ["trigger", "push", "start", "shoot"], "correct_answer": "trigger", "explanation": "Trigger a plan = activar o desencadenar un plan." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta para la crisis.",
+      "questions": [
+        { "id": "b2-8-f1", "type": "fill_input", "question": "____ control. (Control de daños con D)", "correct_answer": "Damage", "explanation": "Damage." },
+        { "id": "b2-8-f2", "type": "fill_input", "question": "To ____ a problem. (Abordar con T)", "correct_answer": "tackle", "explanation": "tackle." },
+        { "id": "b2-8-f3", "type": "fill_input", "question": "To ____ risks. (Mitigar con M)", "correct_answer": "mitigate", "explanation": "mitigate." },
+        { "id": "b2-8-f4", "type": "fill_input", "question": "The ____ cause. (Causa raíz con R)", "correct_answer": "root", "explanation": "root." },
+        { "id": "b2-8-f5", "type": "fill_input", "question": "A ____ plan. (Plan de contingencia con C)", "correct_answer": "contingency", "explanation": "contingency." },
+        { "id": "b2-8-f6", "type": "fill_input", "question": "To ____ back. (Recuperarse con B)", "correct_answer": "bounce", "explanation": "bounce." },
+        { "id": "b2-8-f7", "type": "fill_input", "question": "As a last ____. (Último recurso con R)", "correct_answer": "resort", "explanation": "resort." },
+        { "id": "b2-8-f8", "type": "fill_input", "question": "A system ____. (Falla con F)", "correct_answer": "flaw", "explanation": "flaw." },
+        { "id": "b2-8-f9", "type": "fill_input", "question": "____ the music. (Enfrentar la situación con F)", "correct_answer": "Face", "explanation": "Face." },
+        { "id": "b2-8-f10", "type": "fill_input", "question": "Business ____. (Continuidad con C)", "correct_answer": "continuity", "explanation": "continuity." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Crisis Match",
+      "pairs": [
+        {"id": "b2-8-p1", "source": "Damage control", "target": "Control de daños"},
+        {"id": "b2-8-p2", "source": "Tackle a problem", "target": "Abordar un problema (directamente)"},
+        {"id": "b2-8-p3", "source": "Mitigate risks", "target": "Mitigar / Reducir riesgos"},
+        {"id": "b2-8-p4", "source": "Root cause", "target": "Causa raíz"},
+        {"id": "b2-8-p5", "source": "Contingency plan", "target": "Plan de contingencia"},
+        {"id": "b2-8-p6", "source": "Bounce back", "target": "Recuperarse (de un fracaso)"},
+        {"id": "b2-8-p7", "source": "Last resort", "target": "Último recurso"},
+        {"id": "b2-8-p8", "source": "Flaw", "target": "Falla / Defecto"},
+        {"id": "b2-8-p9", "source": "Face the music", "target": "Enfrentar las consecuencias"},
+        {"id": "b2-8-p10", "source": "Workaround", "target": "Solución temporal / Alternativa"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase relacionada con el manejo de crisis.",
+      "questions": [
+        { "id": "b2-8-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to do damage control.", "options": ["We need to do damage control.", "We need to do error control.", "They need to do damage control.", "We must do damage control."], "correct_answer": "We need to do damage control.", "explanation": "Audio exacto." },
+        { "id": "b2-8-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's tackle the problem.", "options": ["Let's tackle the problem.", "Let's attack the problem.", "Let's take the problem.", "Let's fix the problem."], "correct_answer": "Let's tackle the problem.", "explanation": "Audio exacto." },
+        { "id": "b2-8-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must mitigate the risks.", "options": ["We must mitigate the risks.", "We must minimize the risks.", "We must clear the risks.", "They must mitigate the risks."], "correct_answer": "We must mitigate the risks.", "explanation": "Audio exacto." },
+        { "id": "b2-8-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is the root cause?", "options": ["What is the root cause?", "Where is the root cause?", "Which is the root cause?", "That is the root cause."], "correct_answer": "What is the root cause?", "explanation": "Audio exacto." },
+        { "id": "b2-8-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Activate the contingency plan.", "options": ["Activate the contingency plan.", "Trigger the contingency plan.", "Start the contingency plan.", "Open the contingency plan."], "correct_answer": "Activate the contingency plan.", "explanation": "Audio exacto." },
+        { "id": "b2-8-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will bounce back.", "options": ["We will bounce back.", "They will bounce back.", "We will jump back.", "We can bounce back."], "correct_answer": "We will bounce back.", "explanation": "Audio exacto." },
+        { "id": "b2-8-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is our last resort.", "options": ["It is our last resort.", "That is our last resort.", "This is our last resort.", "It is the last resort."], "correct_answer": "It is our last resort.", "explanation": "Audio exacto." },
+        { "id": "b2-8-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He must face the music.", "options": ["He must face the music.", "She must face the music.", "He must face the problem.", "They must face the music."], "correct_answer": "He must face the music.", "explanation": "Audio exacto." },
+        { "id": "b2-8-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Is there a workaround?", "options": ["Is there a workaround?", "Is there a way around?", "Is there a solution?", "Is that a workaround?"], "correct_answer": "Is there a workaround?", "explanation": "Audio exacto." },
+        { "id": "b2-8-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Keep your head.", "options": ["Keep your head.", "Keep your mind.", "Keep your cool.", "Keep your calm."], "correct_answer": "Keep your head.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

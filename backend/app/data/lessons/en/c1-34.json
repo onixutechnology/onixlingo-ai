@@ -1,0 +1,101 @@
+{
+  "id": "c1-34",
+  "title": "International Trade & Supply Chain",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "International Trade", "Supply Chain", "Business", "Logistics"],
+  "completion_message": "¡Soberbio! El comercio internacional mueve el mundo. Vocabulario como 'supply chain', 'procurement' y 'tariffs' te equipa para negociar con proveedores globales y entender la macroeconomía que afecta a tu empresa.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Comercio Internacional y Cadena de Suministro (C1)",
+      "parts": [
+        { "visual": "La Cadena de Suministro (Supply Chain): \n- Supply chain (Cadena de suministro / El proceso desde la materia prima hasta el cliente). \nEj: The pandemic severely disrupted the global supply chain. \n- Procurement (Adquisiciones / Compras corporativas de bienes y servicios). \nEj: The procurement department negotiated a better deal with our suppliers. \n- Logistics (Logística / La organización y movimiento de productos). \nEj: We outsourced our logistics to a third-party company.", "audio": "The Supply Chain. The 'Supply chain' is the sequence of processes involved in the production and distribution of a commodity. For example: The pandemic severely disrupted the global supply chain. 'Procurement' is the action of obtaining or purchasing equipment, materials, or services for a business. For example: The procurement department negotiated a better deal with our suppliers. 'Logistics' refers to the detailed organization and implementation of a complex operation, like moving goods. For example: We outsourced our logistics to a third-party company." },
+        { "visual": "Comercio Global y Aduanas: \n- Tariffs (Aranceles / Impuestos a las importaciones o exportaciones). \nEj: The new tariffs on steel will increase our manufacturing costs. \n- Customs (Aduanas / La autoridad que controla el flujo de bienes). \nEj: Our shipment has been stuck in customs for two weeks. \n- Freight (Flete o carga / Bienes transportados por camión, tren, barco o avión). \nEj: Sea freight is much cheaper than air freight, but slower.", "audio": "Global Trade and Customs. 'Tariffs' are taxes or duties to be paid on a particular class of imports or exports. For example: The new tariffs on steel will increase our manufacturing costs. 'Customs' refers to the official department that administers and collects the duties levied by a government on imported goods. For example: Our shipment has been stuck in customs for two weeks. 'Freight' refers to goods transported in bulk by truck, train, ship, or aircraft. For example: Sea freight is much cheaper than air freight, but slower." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de logística o comercio internacional correcto.",
+      "questions": [
+        { "id": "c1-34-q1", "type": "quiz_choice", "question": "The entire process of making and selling commercial goods is the ____ chain. (Cadena de suministro).", "options": ["supply", "demand", "product", "value"], "correct_answer": "supply", "explanation": "Supply chain = cadena de suministro." },
+        { "id": "c1-34-q2", "type": "quiz_choice", "question": "The process of finding, agreeing terms, and buying goods or services from an external source is ____. (Adquisiciones/Compras corporativas).", "options": ["procurement", "securing", "getting", "retail"], "correct_answer": "procurement", "explanation": "Procurement = adquisiciones, departamento de compras." },
+        { "id": "c1-34-q3", "type": "quiz_choice", "question": "The government imposed heavy ____ on imported cars to protect local manufacturers. (Aranceles).", "options": ["tariffs", "fines", "tickets", "bills"], "correct_answer": "tariffs", "explanation": "Tariffs = aranceles / impuestos de importación o exportación." },
+        { "id": "c1-34-q4", "type": "quiz_choice", "question": "The goods are currently being inspected by ____ at the border. (Aduanas).", "options": ["customs", "police", "security", "guards"], "correct_answer": "customs", "explanation": "Customs = aduanas." },
+        { "id": "c1-34-q5", "type": "quiz_choice", "question": "Goods transported in bulk by truck, train, ship, or aircraft are called ____. (Flete / Carga).", "options": ["freight", "weight", "flight", "boxes"], "correct_answer": "freight", "explanation": "Freight = flete o mercancía de carga." },
+        { "id": "c1-34-q6", "type": "quiz_choice", "question": "A person or company that provides goods or services is a ____. (Proveedor).", "options": ["supplier", "buyer", "customer", "retailer"], "correct_answer": "supplier", "explanation": "Supplier (o vendor) = proveedor." },
+        { "id": "c1-34-q7", "type": "quiz_choice", "question": "A person or company that sells goods to the public in relatively small quantities for use or consumption rather than for resale is a ____. (Minorista).", "options": ["retailer", "wholesaler", "distributor", "manufacturer"], "correct_answer": "retailer", "explanation": "Retailer = minorista (ej. un supermercado o tienda de ropa)." },
+        { "id": "c1-34-q8", "type": "quiz_choice", "question": "A person or company that sells goods in large quantities at low prices, typically to retailers, is a ____. (Mayorista).", "options": ["wholesaler", "retailer", "consumer", "buyer"], "correct_answer": "wholesaler", "explanation": "Wholesaler = mayorista." },
+        { "id": "c1-34-q9", "type": "quiz_choice", "question": "The commercial activity of transporting goods to customers is ____. (Logística).", "options": ["logistics", "logic", "movement", "sending"], "correct_answer": "logistics", "explanation": "Logistics = logística." },
+        { "id": "c1-34-q10", "type": "quiz_choice", "question": "A large building where raw materials or manufactured goods may be stored before their export or distribution for sale is a ____. (Almacén).", "options": ["warehouse", "storehouse", "basement", "attic"], "correct_answer": "warehouse", "explanation": "Warehouse = almacén, bodega grande." },
+        { "id": "c1-34-q11", "type": "quiz_choice", "question": "The complete list of items such as property, goods in stock, or the contents of a building is the ____. (Inventario).", "options": ["inventory", "invention", "list", "menu"], "correct_answer": "inventory", "explanation": "Inventory (o stock) = inventario." },
+        { "id": "c1-34-q12", "type": "quiz_choice", "question": "A trade ____ is a restriction placed on the trade of goods or services between countries. (Embargo/Barrera).", "options": ["barrier", "block", "wall", "stop"], "correct_answer": "barrier", "explanation": "Trade barrier = barrera comercial (como un arancel o cuota)." },
+        { "id": "c1-34-q13", "type": "quiz_choice", "question": "An official ban on trade or other commercial activity with a particular country is an ____. (Embargo).", "options": ["embargo", "importer", "exporter", "exchange"], "correct_answer": "embargo", "explanation": "Embargo = embargo comercial." },
+        { "id": "c1-34-q14", "type": "quiz_choice", "question": "The difference in value between a country's imports and exports is the balance of ____. (Balanza comercial).", "options": ["trade", "money", "payment", "exchange"], "correct_answer": "trade", "explanation": "Balance of trade = balanza comercial." },
+        { "id": "c1-34-q15", "type": "quiz_choice", "question": "A raw material or primary agricultural product that can be bought and sold, such as copper or coffee, is a ____. (Materia prima / Producto básico).", "options": ["commodity", "common", "community", "company"], "correct_answer": "commodity", "explanation": "Commodity = producto básico, materia prima comercializable (ej. oro, petróleo, café)." },
+        { "id": "c1-34-q16", "type": "quiz_choice", "question": "To send goods to another country for sale is to ____ them. (Exportar).", "options": ["export", "import", "deport", "transport"], "correct_answer": "export", "explanation": "Export = exportar." },
+        { "id": "c1-34-q17", "type": "quiz_choice", "question": "A limited quantity of a particular product that under official controls can be produced, exported, or imported is a ____. (Cuota).", "options": ["quota", "quote", "quantity", "quarter"], "correct_answer": "quota", "explanation": "Quota = cuota de importación/exportación." },
+        { "id": "c1-34-q18", "type": "quiz_choice", "question": "An agent who buys and sells goods for others is a ____. (Corredor / Intermediario).", "options": ["broker", "breaker", "baker", "banker"], "correct_answer": "broker", "explanation": "Broker (e.g., customs broker) = corredor, agente, intermediario." },
+        { "id": "c1-34-q19", "type": "quiz_choice", "question": "A document issued by a carrier to acknowledge receipt of cargo for shipment is a Bill of ____. (Conocimiento de embarque).", "options": ["Lading", "Loading", "Landing", "Lending"], "correct_answer": "Lading", "explanation": "Bill of Lading (B/L) = conocimiento de embarque (documento legal de logística)." },
+        { "id": "c1-34-q20", "type": "quiz_choice", "question": "The system of producing and delivering products exactly when they are needed is ____-in-time manufacturing. (Justo a tiempo).", "options": ["Just", "Right", "Exact", "Perfect"], "correct_answer": "Just", "explanation": "Just-in-time (JIT) = sistema justo a tiempo (para reducir inventario)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término correcto de logística o comercio.",
+      "questions": [
+        { "id": "c1-34-f1", "type": "fill_input", "question": "The ____ chain. (Cadena de suministro con S)", "correct_answer": "supply", "explanation": "supply." },
+        { "id": "c1-34-f2", "type": "fill_input", "question": "The ____ department. (Adquisiciones/compras con P)", "correct_answer": "procurement", "explanation": "procurement." },
+        { "id": "c1-34-f3", "type": "fill_input", "question": "Import ____. (Aranceles con T)", "correct_answer": "tariffs", "explanation": "tariffs." },
+        { "id": "c1-34-f4", "type": "fill_input", "question": "Stuck in ____. (Aduanas con C)", "correct_answer": "customs", "explanation": "customs." },
+        { "id": "c1-34-f5", "type": "fill_input", "question": "Air ____. (Flete/carga aérea con F)", "correct_answer": "freight", "explanation": "freight." },
+        { "id": "c1-34-f6", "type": "fill_input", "question": "A reliable ____. (Proveedor con S)", "correct_answer": "supplier", "explanation": "supplier." },
+        { "id": "c1-34-f7", "type": "fill_input", "question": "A large ____. (Almacén con W)", "correct_answer": "warehouse", "explanation": "warehouse." },
+        { "id": "c1-34-f8", "type": "fill_input", "question": "Track the ____. (Inventario con I)", "correct_answer": "inventory", "explanation": "inventory." },
+        { "id": "c1-34-f9", "type": "fill_input", "question": "Trade ____. (Embargo comercial con E)", "correct_answer": "embargo", "explanation": "embargo." },
+        { "id": "c1-34-f10", "type": "fill_input", "question": "Gold is a ____. (Materia prima/producto básico con C)", "correct_answer": "commodity", "explanation": "commodity." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Trade & Logistics Match",
+      "pairs": [
+        {"id": "c1-34-p1", "source": "Supply chain", "target": "Cadena de suministro"},
+        {"id": "c1-34-p2", "source": "Procurement", "target": "Adquisiciones / Compras"},
+        {"id": "c1-34-p3", "source": "Tariffs", "target": "Aranceles / Impuestos de importación"},
+        {"id": "c1-34-p4", "source": "Customs", "target": "Aduanas"},
+        {"id": "c1-34-p5", "source": "Freight", "target": "Flete / Mercancía de carga"},
+        {"id": "c1-34-p6", "source": "Supplier", "target": "Proveedor"},
+        {"id": "c1-34-p7", "source": "Warehouse", "target": "Almacén"},
+        {"id": "c1-34-p8", "source": "Inventory", "target": "Inventario / Existencias"},
+        {"id": "c1-34-p9", "source": "Embargo", "target": "Embargo comercial / Prohibición"},
+        {"id": "c1-34-p10", "source": "Commodity", "target": "Materia prima / Producto básico"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término logístico o comercial correcto.",
+      "questions": [
+        { "id": "c1-34-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The supply chain is broken.", "options": ["The supply chain is broken.", "Our supply chain is broken.", "The supply chain was broken.", "The supply train is broken."], "correct_answer": "The supply chain is broken.", "explanation": "Audio exacto." },
+        { "id": "c1-34-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Talk to the procurement team.", "options": ["Talk to the procurement team.", "Talk to the procurement manager.", "Talk to our procurement team.", "Speak to the procurement team."], "correct_answer": "Talk to the procurement team.", "explanation": "Audio exacto." },
+        { "id": "c1-34-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They increased the tariffs.", "options": ["They increased the tariffs.", "We increased the tariffs.", "They increase the tariffs.", "They decreased the tariffs."], "correct_answer": "They increased the tariffs.", "explanation": "Audio exacto." },
+        { "id": "c1-34-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is stuck in customs.", "options": ["It is stuck in customs.", "It was stuck in customs.", "They are stuck in customs.", "Is it stuck in customs?"], "correct_answer": "It is stuck in customs.", "explanation": "Audio exacto." },
+        { "id": "c1-34-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sea freight is much cheaper.", "options": ["Sea freight is much cheaper.", "Air freight is much cheaper.", "Sea freight is much deeper.", "Sea flight is much cheaper."], "correct_answer": "Sea freight is much cheaper.", "explanation": "Audio exacto." },
+        { "id": "c1-34-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need a new supplier.", "options": ["We need a new supplier.", "They need a new supplier.", "We needed a new supplier.", "We need the new supplier."], "correct_answer": "We need a new supplier.", "explanation": "Audio exacto." },
+        { "id": "c1-34-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The warehouse is totally full.", "options": ["The warehouse is totally full.", "The warehouse was totally full.", "Our warehouse is totally full.", "The storehouse is totally full."], "correct_answer": "The warehouse is totally full.", "explanation": "Audio exacto." },
+        { "id": "c1-34-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Check the inventory levels.", "options": ["Check the inventory levels.", "Checked the inventory levels.", "Check the inventory level.", "Check your inventory levels."], "correct_answer": "Check the inventory levels.", "explanation": "Audio exacto." },
+        { "id": "c1-34-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a valuable commodity.", "options": ["It is a valuable commodity.", "It was a valuable commodity.", "This is a valuable commodity.", "It is a valuable community."], "correct_answer": "It is a valuable commodity.", "explanation": "Audio exacto." },
+        { "id": "c1-34-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The trade embargo was lifted.", "options": ["The trade embargo was lifted.", "A trade embargo was lifted.", "The trade embargo is lifted.", "The trade barrier was lifted."], "correct_answer": "The trade embargo was lifted.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "a1-122",
+  "title": "Past Continuous vs Past Simple",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Past Continuous", "Past Simple", "Interruption"],
+  "completion_message": "¡Excelente! Has aprendido a combinar dos pasados: uno en progreso (Past Continuous) y otro que lo interrumpe (Past Simple).",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Interrupciones en el Pasado",
+      "parts": [
+        { "visual": "A menudo combinamos ambos tiempos: El Past Continuous describe la acción larga en progreso. El Past Simple describe la acción corta que interrumpe. I was typing an email when the phone rang.", "audio": "We often combine both tenses. The Past Continuous describes the long action in progress. The Past Simple describes the short action that interrupts it. I was typing an email when the phone rang." },
+        { "visual": "Usamos 'when' (cuando) antes de la acción corta (Past Simple) o 'while' (mientras) antes de la acción larga (Past Continuous). While I was presenting, the projector stopped.", "audio": "We use 'when' before the short action in Past Simple, or 'while' before the long action in Past Continuous. While I was presenting, the projector stopped." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la combinación correcta de tiempos verbales.",
+      "questions": [
+        { "id": "a1-122-q1", "type": "quiz_choice", "question": "I ____ an email when the phone rang. (Estaba escribiendo).", "options": ["was typing", "typed", "am typing", "type"], "correct_answer": "was typing", "explanation": "Acción larga en progreso = was typing." },
+        { "id": "a1-122-q2", "type": "quiz_choice", "question": "I was typing an email when the phone ____. (Sonó - interrupción).", "options": ["rang", "was ringing", "rings", "ring"], "correct_answer": "rang", "explanation": "Interrupción en Past Simple = rang." },
+        { "id": "a1-122-q3", "type": "quiz_choice", "question": "While we ____ the budget, the CEO entered. (Estábamos discutiendo).", "options": ["were discussing", "discussed", "are discussing", "discuss"], "correct_answer": "were discussing", "explanation": "While + acción larga = were discussing." },
+        { "id": "a1-122-q4", "type": "quiz_choice", "question": "While we were discussing the budget, the CEO ____. (Entró).", "options": ["entered", "was entering", "enters", "enter"], "correct_answer": "entered", "explanation": "Acción corta/interrupción = entered." },
+        { "id": "a1-122-q5", "type": "quiz_choice", "question": "He ____ to a client when his computer crashed. (Estaba hablando).", "options": ["was talking", "talked", "is talking", "talks"], "correct_answer": "was talking", "explanation": "Acción larga = was talking." },
+        { "id": "a1-122-q6", "type": "quiz_choice", "question": "He was talking to a client when his computer ____. (Falló).", "options": ["crashed", "was crashing", "crashes", "crash"], "correct_answer": "crashed", "explanation": "Acción corta = crashed." },
+        { "id": "a1-122-q7", "type": "quiz_choice", "question": "____ I was waiting for the elevator, I saw the new manager. (Mientras).", "options": ["While", "When", "Because", "So"], "correct_answer": "While", "explanation": "While + Past Continuous." },
+        { "id": "a1-122-q8", "type": "quiz_choice", "question": "I was waiting for the elevator ____ I saw the new manager. (Cuando).", "options": ["when", "while", "because", "so"], "correct_answer": "when", "explanation": "When + Past Simple (I saw)." },
+        { "id": "a1-122-q9", "type": "quiz_choice", "question": "They were working late when the power ____ out. (Se fue).", "options": ["went", "was going", "goes", "go"], "correct_answer": "went", "explanation": "Past simple de 'go' = went." },
+        { "id": "a1-122-q10", "type": "quiz_choice", "question": "While she ____ the presentation, someone asked a question. (Estaba dando).", "options": ["was giving", "gave", "is giving", "gives"], "correct_answer": "was giving", "explanation": "While + Past Continuous." },
+        { "id": "a1-122-q11", "type": "quiz_choice", "question": "I ____ a coffee when the alarm started. (Estaba tomando).", "options": ["was having", "had", "am having", "have"], "correct_answer": "was having", "explanation": "Acción larga = was having." },
+        { "id": "a1-122-q12", "type": "quiz_choice", "question": "She ____ when the client arrived. (No estaba trabajando).", "options": ["wasn't working", "didn't work", "isn't working", "doesn't work"], "correct_answer": "wasn't working", "explanation": "Acción continua negativa = wasn't working." },
+        { "id": "a1-122-q13", "type": "quiz_choice", "question": "What ____ when the manager arrived? (¿Qué estabas haciendo?).", "options": ["were you doing", "did you do", "are you doing", "do you do"], "correct_answer": "were you doing", "explanation": "Pregunta de acción en progreso = were you doing." },
+        { "id": "a1-122-q14", "type": "quiz_choice", "question": "I ____ the report when you called. (Estaba leyendo).", "options": ["was reading", "read", "am reading", "reads"], "correct_answer": "was reading", "explanation": "Acción larga = was reading." },
+        { "id": "a1-122-q15", "type": "quiz_choice", "question": "I was reading the report when you ____. (Llamaste).", "options": ["called", "was calling", "call", "calls"], "correct_answer": "called", "explanation": "Acción corta = called." },
+        { "id": "a1-122-q16", "type": "quiz_choice", "question": "While they ____, the network went down. (Estaban actualizando).", "options": ["were updating", "updated", "are updating", "update"], "correct_answer": "were updating", "explanation": "While + were updating." },
+        { "id": "a1-122-q17", "type": "quiz_choice", "question": "We ____ lunch when we heard the news. (Estábamos comiendo).", "options": ["were eating", "ate", "are eating", "eat"], "correct_answer": "were eating", "explanation": "Acción larga = were eating." },
+        { "id": "a1-122-q18", "type": "quiz_choice", "question": "The printer stopped while I ____ a document. (Estaba imprimiendo).", "options": ["was printing", "printed", "am printing", "print"], "correct_answer": "was printing", "explanation": "While + was printing." },
+        { "id": "a1-122-q19", "type": "quiz_choice", "question": "They ____ the office when it started to rain. (Estaban saliendo de).", "options": ["were leaving", "left", "are leaving", "leave"], "correct_answer": "were leaving", "explanation": "Acción en progreso = were leaving." },
+        { "id": "a1-122-q20", "type": "quiz_choice", "question": "I was preparing the meeting room when he ____. (Llegó).", "options": ["arrived", "was arriving", "arrives", "arrive"], "correct_answer": "arrived", "explanation": "Acción corta/interrupción = arrived." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo en Past Continuous (was/were + -ing) o Past Simple (terminación -ed/irregular).",
+      "questions": [
+        { "id": "a1-122-f1", "type": "fill_input", "question": "I ____ ____ an email when the phone rang. (type - Past Cont.)", "correct_answer": "was typing", "explanation": "was typing." },
+        { "id": "a1-122-f2", "type": "fill_input", "question": "I was typing an email when the phone ____. (ring - Past Simple).", "correct_answer": "rang", "explanation": "rang." },
+        { "id": "a1-122-f3", "type": "fill_input", "question": "While we ____ ____ the budget, he entered. (discuss - Past Cont.)", "correct_answer": "were discussing", "explanation": "were discussing." },
+        { "id": "a1-122-f4", "type": "fill_input", "question": "While we were discussing, he ____. (enter - Past Simple).", "correct_answer": "entered", "explanation": "entered." },
+        { "id": "a1-122-f5", "type": "fill_input", "question": "He ____ ____ on the phone when it crashed. (talk - Past Cont.)", "correct_answer": "was talking", "explanation": "was talking." },
+        { "id": "a1-122-f6", "type": "fill_input", "question": "He was talking when his computer ____. (crash - Past Simple).", "correct_answer": "crashed", "explanation": "crashed." },
+        { "id": "a1-122-f7", "type": "fill_input", "question": "____ I was waiting, I saw him. (Mientras).", "correct_answer": "While", "explanation": "While." },
+        { "id": "a1-122-f8", "type": "fill_input", "question": "I was waiting ____ I saw him. (Cuando).", "correct_answer": "when", "explanation": "when." },
+        { "id": "a1-122-f9", "type": "fill_input", "question": "What ____ you ____ when he arrived? (do - Past Cont. pregunta).", "correct_answer": "were doing", "explanation": "were doing." },
+        { "id": "a1-122-f10", "type": "fill_input", "question": "I was reading when you ____. (call - Past Simple).", "correct_answer": "called", "explanation": "called." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-122-p1", "source": "I was typing when the phone rang", "target": "Estaba escribiendo cuando el teléfono sonó"},
+        {"id": "a1-122-p2", "source": "While we were discussing", "target": "Mientras estábamos discutiendo"},
+        {"id": "a1-122-p3", "source": "...the CEO entered", "target": "...el director entró"},
+        {"id": "a1-122-p4", "source": "He was talking when the PC crashed", "target": "Estaba hablando cuando el PC falló"},
+        {"id": "a1-122-p5", "source": "While I was waiting", "target": "Mientras estaba esperando"},
+        {"id": "a1-122-p6", "source": "I saw the manager", "target": "Vi al gerente"},
+        {"id": "a1-122-p7", "source": "They were working when the power went out", "target": "Estaban trabajando cuando se fue la luz"},
+        {"id": "a1-122-p8", "source": "What were you doing?", "target": "¿Qué estabas haciendo?"},
+        {"id": "a1-122-p9", "source": "I was reading when you called", "target": "Estaba leyendo cuando llamaste"},
+        {"id": "a1-122-p10", "source": "The printer stopped while I was printing", "target": "La impresora se detuvo mientras imprimía"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-122-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I was typing an email when the phone rang.", "options": ["I was typing an email when the phone rang.", "I was reading an email when the phone rang.", "She was typing an email when the phone rang.", "I typed an email when the phone rang."], "correct_answer": "I was typing an email when the phone rang.", "explanation": "Audio exacto." },
+        { "id": "a1-122-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "While we were discussing the budget, the CEO entered.", "options": ["While we were discussing the budget, the CEO entered.", "When we were discussing the budget, the CEO entered.", "While they were discussing the budget, the CEO entered.", "We discussed the budget when the CEO entered."], "correct_answer": "While we were discussing the budget, the CEO entered.", "explanation": "Audio exacto." },
+        { "id": "a1-122-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He was talking to a client when his computer crashed.", "options": ["He was talking to a client when his computer crashed.", "She was talking to a client when her computer crashed.", "He talked to a client when his computer crashed.", "He was talking to a client when the system crashed."], "correct_answer": "He was talking to a client when his computer crashed.", "explanation": "Audio exacto." },
+        { "id": "a1-122-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "While I was waiting, I saw the new manager.", "options": ["While I was waiting, I saw the new manager.", "When I was waiting, I saw the new manager.", "While she was waiting, she saw the new manager.", "I waited and saw the new manager."], "correct_answer": "While I was waiting, I saw the new manager.", "explanation": "Audio exacto." },
+        { "id": "a1-122-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They were working late when the power went out.", "options": ["They were working late when the power went out.", "We were working late when the power went out.", "They worked late when the power went out.", "They were working when the power went out."], "correct_answer": "They were working late when the power went out.", "explanation": "Audio exacto." },
+        { "id": "a1-122-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I was having a coffee when the alarm started.", "options": ["I was having a coffee when the alarm started.", "She was having a coffee when the alarm started.", "I had a coffee when the alarm started.", "I was drinking coffee when the alarm started."], "correct_answer": "I was having a coffee when the alarm started.", "explanation": "Audio exacto." },
+        { "id": "a1-122-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What were you doing when the manager arrived?", "options": ["What were you doing when the manager arrived?", "What did you do when the manager arrived?", "What was she doing when the manager arrived?", "What were they doing when the manager arrived?"], "correct_answer": "What were you doing when the manager arrived?", "explanation": "Audio exacto." },
+        { "id": "a1-122-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I was reading the report when you called.", "options": ["I was reading the report when you called.", "He was reading the report when you called.", "I read the report when you called.", "I was checking the report when you called."], "correct_answer": "I was reading the report when you called.", "explanation": "Audio exacto." },
+        { "id": "a1-122-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The printer stopped while I was printing.", "options": ["The printer stopped while I was printing.", "The machine stopped while I was printing.", "The printer crashed while I was printing.", "The printer stopped when I printed."], "correct_answer": "The printer stopped while I was printing.", "explanation": "Audio exacto." },
+        { "id": "a1-122-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I was preparing the room when he arrived.", "options": ["I was preparing the room when he arrived.", "She was preparing the room when he arrived.", "I prepared the room when he arrived.", "I was cleaning the room when he arrived."], "correct_answer": "I was preparing the room when he arrived.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

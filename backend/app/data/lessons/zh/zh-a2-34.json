@@ -1,0 +1,92 @@
+{
+  "id": "zh-a2-34",
+  "title": "El Dos Especial",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Numbers", "Classifiers", "Grammar"],
+  "completion_message": "¡Un par de aplausos para ti! Ahora dominas el secreto mejor guardado de los números en mandarín.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Gemelo del Dos",
+      "parts": [
+        {
+          "visual": "El Número 2 tiene un gemelo\n\nDesde el nivel A1 aprendiste a contar: 一, 二, 三 (Yī, Èr, Sān). \nEl número Dos matemático se dice 二 (èr).\n\nPero hay un problema gigante: En mandarín, es de MUY MALA EDUCACIÓN y suena horriblemente mal usar 'èr' para contar cantidades físicas.\n\nCuando cuentas 'unidades' de algo (usando un clasificador), el 'èr' es reemplazado por su gemelo: 两 (liǎng - 3er tono).\n- 两 (liǎng) significa 'Un par de' o 'Ambos'.\n\nEjemplos:\n- Dos personas (Un par de personas): 两个人 (Liǎng ge rén). \n¡ESTÁ PROHIBIDO decir 'Èr ge rén'!\n\n- Dos yuanes/pesos: 两块 (Liǎng kuài).",
+          "audio": "Hoy vas a aprender el secreto más importante de los números en chino. Desde tu primera lección sabes que el número Dos se dice Èr. Pero aquí está la trampa: cuando cuentas cantidades de cosas físicas, a los chinos les suena horrible usar la palabra Èr. Suena matemático y robótico. En lugar de decir 'Dos personas', los chinos dicen 'Un par de personas'. La palabra para 'Un par' es Liǎng. Tercer tono. Liǎng. Así que siempre que vayas a usar un clasificador para contar unidades, debes mutar el dos matemático por la palabra Liǎng. Dos personas se dice Liǎng ge rén. NUNCA digas Èr ge rén. Eso lastima los oídos de un nativo. Dos personas es Liǎng ge rén."
+        },
+        {
+          "visual": "Cuándo usar 二 (èr) y cuándo usar 两 (liǎng)\n\nRegla de Oro: \nSi hay un CLASIFICADOR (como 'ge' o 'kuài') justo después del dos, TIENES que usar 两 (liǎng).\n\n¿Cuándo usar el viejo 二 (èr)?\nSolo cuando se trata de matemática pura, series numéricas o calendarios donde no cuentas cantidades sino órdenes.\n\nUsa 二 (èr) para:\n- Febrero (El mes número dos): 二月 (Èr yuè).\n- Martes (Semana dos): 星期二 (Xīngqī èr).\n- Día 2 del mes: 二号 (Èr hào).\n- El número 20: 二十 (Èr shí).\n\nUsa 两 (liǎng) para:\n- Dos personas: 两个人 (Liǎng ge rén).\n- Dos años (de duración): 两年 (Liǎng nián).",
+          "audio": "Para que no te confundas, aquí tienes la regla de oro. Si hay un clasificador justo después del número, como 'ge' para personas o 'kuài' para el dinero, estás obligado a usar Liǎng. Liǎng ge rén, Liǎng kuài. Pero, ¿cuándo sobrevive nuestro viejo amigo Èr? Sobrevive cuando hablamos de matemáticas puras o del calendario. Recuerda que febrero es el mes número dos. Ahí no estás contando dos meses, estás diciendo que es la posición dos. Así que febrero es Èr yuè. El martes es la semana dos. Xīngqī èr. Y el día dos del mes es Èr hào. El número 20 es Èr shí. Guarda a Èr para las matemáticas, y usa Liǎng para la vida real."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que sabes cuándo usar Èr y cuándo usar Liǎng.",
+      "questions": [
+        { "id": "zh-a2-34-q1", "type": "quiz_choice", "question": "¿Qué significa la palabra 两 (liǎng)?", "options": ["Un par (Dos unidades de algo).", "Diez.", "Cero.", "Persona."], "correct_answer": "Un par (Dos unidades de algo).", "explanation": "Liǎng significa 'un par' o 'ambos', y se usa para cuantificar." },
+        { "id": "zh-a2-34-q2", "type": "quiz_choice", "question": "Gramática de conteo: ¿Cuál es la forma correcta de decir 'Dos personas'?", "options": ["Liǎng ge rén (两个人).", "Èr ge rén (二个人).", "Èr rén (二人).", "Rén liǎng ge (人两个)."], "correct_answer": "Liǎng ge rén (两个人).", "explanation": "Como estamos contando unidades físicas (personas), usamos Liǎng + Clasificador (ge) + Sustantivo." },
+        { "id": "zh-a2-34-q3", "type": "quiz_choice", "question": "¿Por qué es incorrecto decir 'Èr ge rén'?", "options": ["Porque 二 (èr) suena matemático y robótico; no se usa para contar objetos físicos con clasificadores.", "Porque rén no lleva clasificador.", "Porque Èr significa tres.", "En realidad es correcto, pero menos formal."], "correct_answer": "Porque 二 (èr) suena matemático y robótico; no se usa para contar objetos físicos con clasificadores.", "explanation": "Èr es estricto para números abstractos y calendarios." },
+        { "id": "zh-a2-34-q4", "type": "quiz_choice", "question": "Estás en el mercado y quieres pagar algo que cuesta 2 yuanes. ¿Qué dices?", "options": ["Liǎng kuài (两块).", "Èr kuài (二块).", "Èr qián (二钱).", "Liǎng qián (两钱)."], "correct_answer": "Liǎng kuài (两块).", "explanation": "Como 'kuài' funciona como una medida de dinero, debes usar Liǎng." },
+        { "id": "zh-a2-34-q5", "type": "quiz_choice", "question": "¿Cómo se dice 'Febrero' (el mes 2)?", "options": ["Èr yuè (二月).", "Liǎng yuè (两月).", "Yuè èr (月二).", "Yī yuè (一月)."], "correct_answer": "Èr yuè (二月).", "explanation": "Febrero es una etiqueta en un calendario, no estamos diciendo 'un par de meses'. Por lo tanto, se usa Èr." },
+        { "id": "zh-a2-34-q6", "type": "quiz_choice", "question": "¿Cómo se dice 'Martes' (semana 2)?", "options": ["Xīngqī èr (星期二).", "Xīngqī liǎng (星期两).", "Liǎng xīngqī (两星期).", "Èr xīngqī (二星期)."], "correct_answer": "Xīngqī èr (星期二).", "explanation": "Al igual que con los meses, los días de la semana son etiquetas de orden. Se usa Èr." },
+        { "id": "zh-a2-34-q7", "type": "quiz_choice", "question": "Regla rápida: Si hay un CLASIFICADOR inmediatamente después del número, ¿qué palabra debes usar para el dos?", "options": ["Liǎng (两).", "Èr (二).", "Sān (三).", "Ge (个)."], "correct_answer": "Liǎng (两).", "explanation": "La presencia de un clasificador (ge, kuài, etc.) OBLIGA a usar Liǎng." },
+        { "id": "zh-a2-34-q8", "type": "quiz_choice", "question": "¿Cómo se dice el número 'Veinte' (20)?", "options": ["Èr shí (二十).", "Liǎng shí (两十).", "Shí èr (十二).", "Shí liǎng (十二)."], "correct_answer": "Èr shí (二十).", "explanation": "20 es un número matemático puro (Dos dieces). Se usa Èr." },
+        { "id": "zh-a2-34-q9", "type": "quiz_choice", "question": "Traduce: 'Wǒ yào liǎng ge' (我要两个).", "options": ["Yo quiero dos (unidades).", "A mí me gustan dos.", "Yo voy con dos personas.", "Tengo veinte."], "correct_answer": "Yo quiero dos (unidades).", "explanation": "Yo (wǒ) + quiero (yào) + un par de unidades (liǎng ge). Es una frase perfecta para restaurantes." },
+        { "id": "zh-a2-34-q10", "type": "quiz_choice", "question": "Imagina que es el día 2 del mes. ¿Cómo lo dirías?", "options": ["Èr hào (二号).", "Liǎng hào (两号).", "Hào èr (号二).", "Hào liǎng (号两)."], "correct_answer": "Èr hào (二号).", "explanation": "El día 2 del mes indica una posición en el calendario, por lo que usamos el matemático Èr." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correcto para el dos matemático o el dos de cantidades.",
+      "questions": [
+        { "id": "zh-a2-34-f1", "type": "fill_input", "question": "Dos (Matemático / Orden): ____ (er)", "correct_answer": "er", "explanation": "er" },
+        { "id": "zh-a2-34-f2", "type": "fill_input", "question": "Dos (Cantidades / Un par): ____ (liang)", "correct_answer": "liang", "explanation": "liang" },
+        { "id": "zh-a2-34-f3", "type": "fill_input", "question": "Dos personas: ____ ge ren", "correct_answer": "liang", "explanation": "liang" },
+        { "id": "zh-a2-34-f4", "type": "fill_input", "question": "Dos yuanes/pesos: ____ kuai", "correct_answer": "liang", "explanation": "liang" },
+        { "id": "zh-a2-34-f5", "type": "fill_input", "question": "Febrero (Mes 2): ____ yue", "correct_answer": "er", "explanation": "er" },
+        { "id": "zh-a2-34-f6", "type": "fill_input", "question": "Martes (Semana 2): xing qi ____", "correct_answer": "er", "explanation": "er" },
+        { "id": "zh-a2-34-f7", "type": "fill_input", "question": "Quiero dos (unidades): wo yao ____ ge", "correct_answer": "liang", "explanation": "liang" },
+        { "id": "zh-a2-34-f8", "type": "fill_input", "question": "Día 2 (del mes): ____ hao", "correct_answer": "er", "explanation": "er" },
+        { "id": "zh-a2-34-f9", "type": "fill_input", "question": "Veinte (Dos Diez): ____ shi", "correct_answer": "er", "explanation": "er" },
+        { "id": "zh-a2-34-f10", "type": "fill_input", "question": "Diciembre (Mes 12): shi ____ yue", "correct_answer": "er", "explanation": "er" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y distingue entre el uso del Èr y el Liǎng.",
+      "questions": [
+        { "id": "zh-a2-34-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "两", "options": ["Un par (Dos unidades)", "Dos (Matemático)", "Semana", "Clasificador"], "correct_answer": "Un par (Dos unidades)", "explanation": "El audio dice: Liǎng." },
+        { "id": "zh-a2-34-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "两个人", "options": ["Dos personas", "Tres personas", "Una persona", "El martes"], "correct_answer": "Dos personas", "explanation": "El audio dice: Liǎng ge rén." },
+        { "id": "zh-a2-34-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "二月", "options": ["Febrero", "Dos meses (cantidad)", "Enero", "Lunes"], "correct_answer": "Febrero", "explanation": "El audio dice: Èr yuè." },
+        { "id": "zh-a2-34-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我要两个", "options": ["Quiero dos (unidades)", "Quiero ir", "Me gustan dos", "Tengo veinte"], "correct_answer": "Quiero dos (unidades)", "explanation": "El audio dice: Wǒ yào liǎng ge." },
+        { "id": "zh-a2-34-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "二十块", "options": ["20 yuanes", "2 yuanes", "12 yuanes", "Muy caro"], "correct_answer": "20 yuanes", "explanation": "El audio dice: Èr shí kuài (Dos dieces moneda = 20)." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Èr vs Liǎng Match",
+      "pairs": [
+        {"id": "zh-a2-34-p1", "source": "二 (èr)", "target": "Dos (Matemático / Posición)"},
+        {"id": "zh-a2-34-p2", "source": "两 (liǎng)", "target": "Dos / Un par (Para cuantificar cosas físicas)"},
+        {"id": "zh-a2-34-p3", "source": "两个人 (liǎng ge rén)", "target": "Dos personas"},
+        {"id": "zh-a2-34-p4", "source": "两块 (liǎng kuài)", "target": "Dos pesos / yuanes"},
+        {"id": "zh-a2-34-p5", "source": "星期二 (xīngqī èr)", "target": "Martes"},
+        {"id": "zh-a2-34-p6", "source": "二月 (èr yuè)", "target": "Febrero"},
+        {"id": "zh-a2-34-p7", "source": "二十 (èr shí)", "target": "Veinte (20)"},
+        {"id": "zh-a2-34-p8", "source": "二号 (èr hào)", "target": "Día 2 (del mes)"},
+        {"id": "zh-a2-34-p9", "source": "我要两个 (wǒ yào liǎng ge)", "target": "Quiero dos unidades"},
+        {"id": "zh-a2-34-p10", "source": "二个人 (❌ Error)", "target": "Forma robótica y prohibida de decir 'Dos personas'"}
+      ]
+    }
+  ]
+}

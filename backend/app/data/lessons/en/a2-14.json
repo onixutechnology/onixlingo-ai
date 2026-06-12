@@ -1,0 +1,101 @@
+{
+  "id": "a2-14",
+  "title": "Customer Service & Complaints",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Vocabulary", "Customer Service", "Complaints", "Business"],
+  "completion_message": "¡Excelente trabajo! Has aprendido a manejar quejas y ofrecer un gran servicio al cliente.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Servicio al Cliente y Quejas (Complaints)",
+      "parts": [
+        { "visual": "Manejo de quejas: I apologize for the inconvenience (Me disculpo por las molestias). Let me resolve this issue (Déjeme resolver este problema). Complaint = Queja. Complain = Quejarse.", "audio": "Handling complaints. I apologize for the inconvenience. Let me resolve this issue. A complaint is a noun, meaning 'queja'. To complain is the verb, meaning 'quejarse'." },
+        { "visual": "Soluciones: We can offer you a full refund (reembolso completo). I will send a replacement immediately (un reemplazo). Thank you for your patience (Gracias por su paciencia).", "audio": "Solutions. We can offer you a full refund. I will send a replacement immediately. Thank you for your patience." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la respuesta correcta para atender al cliente.",
+      "questions": [
+        { "id": "a2-14-q1", "type": "quiz_choice", "question": "I would like to make a ____. The product is broken. (Queja).", "options": ["complaint", "complain", "problem", "issue"], "correct_answer": "complaint", "explanation": "Make a complaint = hacer una queja." },
+        { "id": "a2-14-q2", "type": "quiz_choice", "question": "The customer called to ____ about the late delivery. (Quejarse).", "options": ["complain", "complaint", "cry", "shout"], "correct_answer": "complain", "explanation": "Complain (verbo) = quejarse." },
+        { "id": "a2-14-q3", "type": "quiz_choice", "question": "I sincerely ____ for the delay. (Me disculpo).", "options": ["apologize", "sorry", "excuse", "forgive"], "correct_answer": "apologize", "explanation": "Apologize = verbo 'disculparse' (formal)." },
+        { "id": "a2-14-q4", "type": "quiz_choice", "question": "We apologize for the ____. (Molestias/Inconveniencia).", "options": ["inconvenience", "problem", "trouble", "bad"], "correct_answer": "inconvenience", "explanation": "Inconvenience es la palabra formal para molestias." },
+        { "id": "a2-14-q5", "type": "quiz_choice", "question": "Let me ____ this issue for you right away. (Resolver).", "options": ["resolve", "make", "do", "clean"], "correct_answer": "resolve", "explanation": "Resolve an issue = resolver un problema." },
+        { "id": "a2-14-q6", "type": "quiz_choice", "question": "Since the item is broken, we will send a ____. (Reemplazo).", "options": ["replacement", "refund", "return", "apology"], "correct_answer": "replacement", "explanation": "Replacement = producto de reemplazo." },
+        { "id": "a2-14-q7", "type": "quiz_choice", "question": "If you don't want the item, we can offer a full ____. (Reembolso).", "options": ["refund", "replacement", "money", "cash"], "correct_answer": "refund", "explanation": "Refund = devolución del dinero." },
+        { "id": "a2-14-q8", "type": "quiz_choice", "question": "Thank you for your ____ while we fix the server. (Paciencia).", "options": ["patience", "wait", "time", "calm"], "correct_answer": "patience", "explanation": "Patience = paciencia." },
+        { "id": "a2-14-q9", "type": "quiz_choice", "question": "I will ____ into this matter immediately. (Investigar/Revisar).", "options": ["look", "see", "watch", "find"], "correct_answer": "look", "explanation": "Look into (phrasal verb) = investigar / revisar un asunto." },
+        { "id": "a2-14-q10", "type": "quiz_choice", "question": "Can I have your order ____, please? (Número).", "options": ["number", "name", "code", "file"], "correct_answer": "number", "explanation": "Order number = número de orden/pedido." },
+        { "id": "a2-14-q11", "type": "quiz_choice", "question": "I assure you this won't happen ____. (De nuevo).", "options": ["again", "more", "twice", "never"], "correct_answer": "again", "explanation": "Won't happen again = no volverá a ocurrir." },
+        { "id": "a2-14-q12", "type": "quiz_choice", "question": "Our goal is 100% customer ____. (Satisfacción).", "options": ["satisfaction", "happiness", "joy", "smile"], "correct_answer": "satisfaction", "explanation": "Customer satisfaction = satisfacción del cliente." },
+        { "id": "a2-14-q13", "type": "quiz_choice", "question": "We value your ____. (Comentarios/Retroalimentación).", "options": ["feedback", "words", "speaking", "letters"], "correct_answer": "feedback", "explanation": "Feedback." },
+        { "id": "a2-14-q14", "type": "quiz_choice", "question": "Please ____ our customer service department. (Contactar).", "options": ["contact", "call to", "speak", "tell"], "correct_answer": "contact", "explanation": "Contact (sin 'to')." },
+        { "id": "a2-14-q15", "type": "quiz_choice", "question": "I am ____ to hear that you had a bad experience. (Lamento/Siento).", "options": ["sorry", "sad", "apologize", "bad"], "correct_answer": "sorry", "explanation": "I am sorry to hear that... = lamento escuchar eso." },
+        { "id": "a2-14-q16", "type": "quiz_choice", "question": "Your request is currently being ____. (Procesada).", "options": ["processed", "done", "made", "worked"], "correct_answer": "processed", "explanation": "Processed." },
+        { "id": "a2-14-q17", "type": "quiz_choice", "question": "Is there anything else I can ____ you with? (Ayudar).", "options": ["help", "do", "make", "solve"], "correct_answer": "help", "explanation": "Help you with = ayudarte con." },
+        { "id": "a2-14-q18", "type": "quiz_choice", "question": "We need to ____ the customer's expectations. (Cumplir/Satisfacer).", "options": ["meet", "make", "do", "find"], "correct_answer": "meet", "explanation": "Meet expectations = cumplir las expectativas." },
+        { "id": "a2-14-q19", "type": "quiz_choice", "question": "The item is ____. It doesn't work. (Defectuoso).", "options": ["defective", "perfect", "good", "new"], "correct_answer": "defective", "explanation": "Defective = defectuoso." },
+        { "id": "a2-14-q20", "type": "quiz_choice", "question": "I will escalate this ____ to my manager. (Problema/Asunto).", "options": ["issue", "thing", "idea", "solution"], "correct_answer": "issue", "explanation": "Issue = problema/asunto. Escalate = escalar (a un superior)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave de servicio al cliente.",
+      "questions": [
+        { "id": "a2-14-f1", "type": "fill_input", "question": "I want to make a ____. (Queja - sustantivo)", "correct_answer": "complaint", "explanation": "complaint." },
+        { "id": "a2-14-f2", "type": "fill_input", "question": "He wants to ____. (Quejarse - verbo)", "correct_answer": "complain", "explanation": "complain." },
+        { "id": "a2-14-f3", "type": "fill_input", "question": "I sincerely ____. (Me disculpo)", "correct_answer": "apologize", "explanation": "apologize." },
+        { "id": "a2-14-f4", "type": "fill_input", "question": "Sorry for the ____. (Inconveniencia/Molestias)", "correct_answer": "inconvenience", "explanation": "inconvenience." },
+        { "id": "a2-14-f5", "type": "fill_input", "question": "Let me ____ this issue. (Resolver)", "correct_answer": "resolve", "explanation": "resolve." },
+        { "id": "a2-14-f6", "type": "fill_input", "question": "We will send a ____. (Reemplazo)", "correct_answer": "replacement", "explanation": "replacement." },
+        { "id": "a2-14-f7", "type": "fill_input", "question": "We can offer a full ____. (Reembolso)", "correct_answer": "refund", "explanation": "refund." },
+        { "id": "a2-14-f8", "type": "fill_input", "question": "Thank you for your ____. (Paciencia)", "correct_answer": "patience", "explanation": "patience." },
+        { "id": "a2-14-f9", "type": "fill_input", "question": "I will ____ into it. (Investigar - phrasal verb)", "correct_answer": "look", "explanation": "look." },
+        { "id": "a2-14-f10", "type": "fill_input", "question": "Is the item ____? (Defectuoso)", "correct_answer": "defective", "explanation": "defective." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-14-p1", "source": "Make a complaint", "target": "Hacer una queja"},
+        {"id": "a2-14-p2", "source": "To complain", "target": "Quejarse"},
+        {"id": "a2-14-p3", "source": "I apologize", "target": "Me disculpo"},
+        {"id": "a2-14-p4", "source": "Sorry for the inconvenience", "target": "Perdón por las molestias"},
+        {"id": "a2-14-p5", "source": "Resolve the issue", "target": "Resolver el problema / asunto"},
+        {"id": "a2-14-p6", "source": "Send a replacement", "target": "Enviar un reemplazo"},
+        {"id": "a2-14-p7", "source": "Offer a refund", "target": "Ofrecer un reembolso"},
+        {"id": "a2-14-p8", "source": "Thank you for your patience", "target": "Gracias por su paciencia"},
+        {"id": "a2-14-p9", "source": "Look into the matter", "target": "Investigar el asunto"},
+        {"id": "a2-14-p10", "source": "Customer satisfaction", "target": "Satisfacción del cliente"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a2-14-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I would like to make a complaint.", "options": ["I would like to make a complaint.", "I want to make a complaint.", "I would like to complain.", "I need to make a complaint."], "correct_answer": "I would like to make a complaint.", "explanation": "Audio exacto." },
+        { "id": "a2-14-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I sincerely apologize for the delay.", "options": ["I sincerely apologize for the delay.", "I apologize for the delay.", "I am sorry for the delay.", "I sincerely apologize for the problem."], "correct_answer": "I sincerely apologize for the delay.", "explanation": "Audio exacto." },
+        { "id": "a2-14-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We apologize for the inconvenience.", "options": ["We apologize for the inconvenience.", "I apologize for the inconvenience.", "Sorry for the inconvenience.", "We apologize for the problem."], "correct_answer": "We apologize for the inconvenience.", "explanation": "Audio exacto." },
+        { "id": "a2-14-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let me resolve this issue for you.", "options": ["Let me resolve this issue for you.", "Let me solve this issue for you.", "I will resolve this issue for you.", "Let me fix this issue for you."], "correct_answer": "Let me resolve this issue for you.", "explanation": "Audio exacto." },
+        { "id": "a2-14-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will send a replacement immediately.", "options": ["We will send a replacement immediately.", "I will send a replacement immediately.", "We can send a replacement immediately.", "We send a replacement immediately."], "correct_answer": "We will send a replacement immediately.", "explanation": "Audio exacto." },
+        { "id": "a2-14-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We can offer you a full refund.", "options": ["We can offer you a full refund.", "I can offer you a full refund.", "We will offer you a full refund.", "We offer you a full refund."], "correct_answer": "We can offer you a full refund.", "explanation": "Audio exacto." },
+        { "id": "a2-14-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Thank you for your patience.", "options": ["Thank you for your patience.", "Thanks for your patience.", "Thank you for waiting.", "We appreciate your patience."], "correct_answer": "Thank you for your patience.", "explanation": "Audio exacto." },
+        { "id": "a2-14-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will look into this matter.", "options": ["I will look into this matter.", "I look into this matter.", "I will look at this matter.", "We will look into this matter."], "correct_answer": "I will look into this matter.", "explanation": "Audio exacto." },
+        { "id": "a2-14-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I assure you this won't happen again.", "options": ["I assure you this won't happen again.", "I promise you this won't happen again.", "I assure this won't happen again.", "This won't happen again."], "correct_answer": "I assure you this won't happen again.", "explanation": "Audio exacto." },
+        { "id": "a2-14-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Is there anything else I can help you with?", "options": ["Is there anything else I can help you with?", "Is there something else I can help you with?", "Can I help you with anything else?", "Anything else I can help you with?"], "correct_answer": "Is there anything else I can help you with?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

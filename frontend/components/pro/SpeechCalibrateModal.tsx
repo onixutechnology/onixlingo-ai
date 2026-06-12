@@ -66,7 +66,7 @@ const CALIBRATION_PHRASES: CalibrationPhrase[] = [
   { id: 'c1_03', level: 'C1', category: 'Board Presentation', focus: 'Authoritative cadence', targetWPM: [120, 150], text: 'Our proprietary predictive algorithm identifies latent inefficiencies across distributed operational units, enabling targeted interventions that recover lost throughput at scale.' },
   { id: 'c1_04', level: 'C1', category: 'Risk Management', focus: 'Measured authority', targetWPM: [115, 145], text: 'Geopolitical volatility necessitates a diversified counterparty exposure strategy, incorporating dynamic currency hedging and jurisdictional arbitrage across tier-one markets.' },
   { id: 'c2_01', level: 'C2', category: 'VC Pitch', focus: 'Aspirational projection', targetWPM: [135, 165], text: 'Our unit economics have improved for eleven consecutive quarters, positioning us at the intersection of compounding network effects and defensible moat architecture at scale.' },
-  { id: 'c2_02', level: 'C2', category: 'IPO Readiness', focus: 'C-Suite gravitas', targetWPM: [130, 160], text: 'The prospectus underpins our CAGR thesis through institutional-grade financial transparency, demonstrating asymmetric risk-adjusted returns for long-horizon capital allocators.' },
+  { id: 'c2_02', level: 'C2', category: 'IPO Readiness', focus: 'Alta Dirección gravitas', targetWPM: [130, 160], text: 'The prospectus underpins our CAGR thesis through institutional-grade financial transparency, demonstrating asymmetric risk-adjusted returns for long-horizon capital allocators.' },
   { id: 'c2_03', level: 'C2', category: 'Crisis Communication', focus: 'Controlled urgency', targetWPM: [125, 155], text: 'The remediation protocol prioritizes stakeholder confidence through proactive disclosure, operational continuity assurance, and a demonstrably credible recovery timeline.' },
   { id: 'c2_04', level: 'C2', category: 'Innovation Keynote', focus: 'Inspirational flow', targetWPM: [120, 150], text: 'We are architecting an AI-native ecosystem wherein autonomous decision engines accelerate institutional cognition while preserving human judgment at critical governance inflection points.' },
   { id: 'b1_03', level: 'B1', category: 'Sales', focus: 'Warmth & persuasion', targetWPM: [100, 130], text: 'Our platform delivers measurable ROI within ninety days, backed by a dedicated implementation team and enterprise-grade support available around the clock globally.' },
@@ -91,7 +91,7 @@ const fn5 = (t: string) => t.toLowerCase().split(' ').filter(w => ['uh','um','li
 const fn6 = (fc: number, wc: number) => wc > 0 ? Math.round((fc / wc) * 100) : 0;
 const fn7 = (pct: number) => pct <= 1 ? 'Exceptional clarity' : pct <= 3 ? 'Professional standard' : pct <= 6 ? 'Moderate fillers' : 'High filler rate — practice needed';
 const fn8 = (t: string) => t.split(' ').map(w => w.length).reduce((a, b) => a + b, 0) / Math.max(1, fn1(t));
-const fn9 = (avg: number) => avg > 7 ? 'C-Suite vocabulary' : avg > 5 ? 'Professional range' : 'Build lexical complexity';
+const fn9 = (avg: number) => avg > 7 ? 'Alta Dirección vocabulary' : avg > 5 ? 'Professional range' : 'Build lexical complexity';
 const fn10 = (t: string) => fn2(t) > 0 ? Math.round(fn1(t) / fn2(t)) : 0;
 const fn11 = (avg: number) => avg > 20 ? 'Complex discourse' : avg < 8 ? 'Too concise' : 'Optimal length';
 const fn12 = (t: string) => t.toLowerCase().split(' ').filter(w => ['roi','ebitda','irr','npv','kpi','arr','cagr','ltv','sla','ipo','m&a','pe','vc'].includes(w)).length;
@@ -109,20 +109,20 @@ const fn23 = (t: string) => t.match(/\d+(\.\d+)?(%|M|K|B|x|\$|bn)/g)?.length || 
 const fn24 = (c: number) => c > 2 ? 'Data-driven delivery' : 'Add quantitative references';
 const fn25 = (t: string) => t.toLowerCase().split(' ').filter(w => ['however', 'therefore', 'furthermore', 'consequently', 'nevertheless', 'accordingly'].includes(w)).length;
 const fn26 = (c: number) => c > 1 ? 'Strong discourse connectors' : 'Use academic connectors';
-const fn27 = (acc: number) => acc >= 95 ? 'Native-speaker equivalence' : acc >= 85 ? 'Near-native proficiency' : acc >= 75 ? 'Professional grade' : 'Below C-Suite standard';
+const fn27 = (acc: number) => acc >= 95 ? 'Native-speaker equivalence' : acc >= 85 ? 'Near-native proficiency' : acc >= 75 ? 'Professional grade' : 'Below Alta Dirección standard';
 const fn28 = (acc: number) => acc >= 95 ? 'text-emerald-300' : acc >= 85 ? 'text-teal-300' : acc >= 75 ? 'text-amber-300' : 'text-rose-300';
-const fn29 = (fluency: number) => fluency >= 90 ? 'Boardroom native' : fluency >= 78 ? 'Executive fluent' : fluency >= 65 ? 'Business conversational' : 'Developing fluency';
+const fn29 = (fluency: number) => fluency >= 90 ? 'Corporativo native' : fluency >= 78 ? 'Executive fluent' : fluency >= 65 ? 'Business conversational' : 'Developing fluency';
 const fn30 = (wpm: number, target: [number, number]) => fn4(wpm, target) >= 80 ? 'On-target delivery speed' : wpm < target[0] ? 'Increase delivery pace' : 'Reduce speed for clarity';
 const fn31 = (pct: number) => 100 - pct;
 const fn32 = (score: number) => `${score >= 90 ? '🏆' : score >= 75 ? '⭐' : score >= 60 ? '✅' : '🔰'} ${score}%`;
 const fn33 = (scores: PhoneticScore) => Math.round((scores.accuracy + scores.fluency + scores.intonation + scores.rhythm + scores.clarity + scores.pace + scores.energy + scores.confidence) / 8);
 const fn34 = (composite: number) => composite >= 90 ? 'Elite Executive Voice' : composite >= 80 ? 'Senior Professional' : composite >= 70 ? 'Business Communicator' : composite >= 60 ? 'Developing Speaker' : 'Needs Coaching';
 const fn35 = (composite: number) => composite >= 90 ? 'from-emerald-500 to-teal-400' : composite >= 80 ? 'from-blue-500 to-indigo-400' : composite >= 70 ? 'from-amber-500 to-orange-400' : 'from-slate-600 to-slate-500';
-const fn36 = (composite: number) => composite >= 90 ? 'text-emerald-300' : composite >= 80 ? 'text-blue-300' : composite >= 70 ? 'text-amber-300' : 'text-slate-400';
+const fn36 = (composite: number) => composite >= 90 ? 'text-emerald-300' : composite >= 80 ? 'text-blue-300' : composite >= 70 ? 'text-amber-300' : 'text-slate-500';
 const fn37 = (scores: PhoneticScore) => Object.entries(scores).sort((a, b) => b[1] - a[1]);
 const fn38 = (scores: PhoneticScore) => Object.entries(scores).sort((a, b) => a[1] - b[1]);
 const fn39 = (key: string) => key === 'accuracy' ? 'Pronunciation' : key === 'fluency' ? 'Fluency' : key === 'intonation' ? 'Intonation' : key === 'rhythm' ? 'Rhythm' : key === 'clarity' ? 'Clarity' : key === 'pace' ? 'Pace' : key === 'energy' ? 'Energy' : 'Confidence';
-const fn40 = (score: number) => score >= 90 ? 'bg-emerald-500' : score >= 75 ? 'bg-teal-500' : score >= 60 ? 'bg-amber-500' : 'bg-rose-500';
+const fn40 = (score: number) => score >= 90 ? 'bg-[#D4AF37]/100' : score >= 75 ? 'bg-[#D4AF37]/20' : score >= 60 ? 'bg-[#D4AF37]/20' : 'bg-[#D4AF37]/100';
 const fn41 = (acc: number, fluency: number, intonation: number) => Math.round(acc * 0.4 + fluency * 0.3 + intonation * 0.3);
 const fn42 = (score: number) => score >= 90 ? 'C2 Mastery' : score >= 78 ? 'C1 Advanced' : score >= 65 ? 'B2 Professional' : 'B1 Developing';
 const fn43 = (t: string) => t.toLowerCase().split(' ').filter(w => ['strategic', 'leverage', 'synergy', 'optimize', 'transform', 'disrupt', 'scale', 'pivot', 'align'].includes(w)).length;
@@ -202,11 +202,11 @@ const fn104 = (scores: PhoneticScore) => { const strong = fn37(scores); return s
 const fn105 = (key: keyof PhoneticScore) => { const map: Record<string, string> = { accuracy: 'Your pronunciation precision is elite — maintain consonant clarity', fluency: 'Excellent flow — your connected speech sounds natural', intonation: 'Superior pitch variation — conveys authority and engagement', rhythm: 'Perfect rhythmic delivery — conveys professional confidence', clarity: 'Crystal-clear articulation — every word lands with precision', pace: 'Optimal delivery speed — neither rushed nor hesitant', energy: 'High vocal energy — commands attention and engagement', confidence: 'Assertive delivery — projects authority and credibility' }; return map[key] || 'Strong performance'; };
 const fn106 = (scores: PhoneticScore) => fn105(fn104(scores));
 const fn107 = (wpm: number) => wpm < 100 ? 'Slow breath rhythm exercises' : wpm > 155 ? 'Speed reduction drills with recording playback' : 'Maintain current pace — refine articulation at this speed';
-const fn108 = (fillers: number) => fillers > 3 ? 'Silent pause technique: pause 2 seconds instead of using filler words' : fillers > 0 ? 'Practice pause-and-breathe — silence is powerful in C-Suite delivery' : 'Perfect filler control — elite boardroom standard';
-const fn109 = (ltt: number) => ltt < 65 ? 'Read one FT or WSJ article daily — note 10 new executive vocabulary words' : ltt < 80 ? 'Use power vocabulary flashcards: 5 C-Suite terms per day' : 'Excellent range — focus on domain-specific jargon for your industry';
-const fn110 = (rs: number) => rs > 60 ? 'Add technical financial terminology and multi-syllable executive vocabulary' : rs < 30 ? 'Slightly simplify for maximum audience comprehension and impact' : 'Readability is calibrated for C-Suite audiences';
+const fn108 = (fillers: number) => fillers > 3 ? 'Silent pause technique: pause 2 seconds instead of using filler words' : fillers > 0 ? 'Practice pause-and-breathe — silence is powerful in Alta Dirección delivery' : 'Perfect filler control — elite boardroom standard';
+const fn109 = (ltt: number) => ltt < 65 ? 'Read one FT or WSJ article daily — note 10 new executive vocabulary words' : ltt < 80 ? 'Use power vocabulary flashcards: 5 Alta Dirección terms per day' : 'Excellent range — focus on domain-specific jargon for your industry';
+const fn110 = (rs: number) => rs > 60 ? 'Add technical financial terminology and multi-syllable executive vocabulary' : rs < 30 ? 'Slightly simplify for maximum audience comprehension and impact' : 'Readability is calibrated for Alta Dirección audiences';
 const fn111 = (score: number) => score < 70 ? ['Slow down by 15 WPM', 'Over-articulate consonants', 'Record and compare to native speaker', 'Focus on /th/ and /v/ sounds'] : ['Maintain current standards', 'Challenge yourself with C2 texts', 'Add intonation variety', 'Practice under pressure scenarios'];
-const fn112 = (acc: number, fluency: number) => { const combined = (acc + fluency) / 2; return combined >= 85 ? 'Boardroom-ready delivery' : combined >= 72 ? 'Professional-grade with minor refinements needed' : 'Structured coaching plan recommended'; };
+const fn112 = (acc: number, fluency: number) => { const combined = (acc + fluency) / 2; return combined >= 85 ? 'Corporativo-ready delivery' : combined >= 72 ? 'Professional-grade with minor refinements needed' : 'Structured coaching plan recommended'; };
 const fn113 = (streak: number) => streak >= 7 ? 'Elite consistency — maintain your daily practice regimen' : streak >= 3 ? `${7 - streak} more days to unlock Power Week streak badge` : 'Start a daily 10-minute speech drill routine for fast improvement';
 const fn114 = (sessions: SessionResult[]) => sessions.length >= 10 ? 'Ready for advanced pronunciation assessment' : `${10 - sessions.length} more sessions to unlock advanced analytics`;
 const fn115 = (score: number, target: number) => target > score ? `+${target - score}% to reach ${target}%` : `✅ Target ${target}% achieved!`;
@@ -216,7 +216,7 @@ const fn116 = (sessions: SessionResult[]) => {
   return unique.size >= 5 ? 'Good topic diversity' : 'Practice across more categories for complete fluency';
 };
 const fn117 = (acc: number) => acc < 80 ? 'high-priority' : acc < 90 ? 'medium-priority' : 'maintenance';
-const fn118 = (priority: string) => priority === 'high-priority' ? 'border-rose-500/30 bg-rose-950/10' : priority === 'medium-priority' ? 'border-amber-500/30 bg-amber-950/10' : 'border-emerald-500/30 bg-emerald-950/10';
+const fn118 = (priority: string) => priority === 'high-priority' ? 'border-rose-500/30 bg-rose-950/10' : priority === 'medium-priority' ? 'border-[#D4AF37]/30/30 bg-amber-950/10' : 'border-emerald-500/30 bg-emerald-950/10';
 const fn119 = (scores: PhoneticScore) => { const all = Object.values(scores); return Math.round(Math.sqrt(all.reduce((s, v) => s + Math.pow(v - fn33(scores), 2), 0) / all.length)); };
 const fn120 = (stddev: number) => stddev < 5 ? 'Highly consistent performance profile' : stddev < 12 ? 'Moderate variation — some skills ahead of others' : 'Imbalanced profile — focus on weakest dimensions';
 
@@ -242,7 +242,7 @@ const fn138 = (ielts: number) => `IELTS Speaking ~${ielts}.${Math.round((ielts %
 const fn139 = (score: number) => Math.round((score / 100) * 150 + 50);
 const fn140 = (toefl: number) => `TOEFL Speaking equivalent ~${toefl}`;
 const fn141 = (acc: number, fluency: number, intonation: number) => Math.round((acc + fluency + intonation) / 3);
-const fn142 = (avg3: number) => avg3 >= 85 ? '✅ Executive Ready' : avg3 >= 70 ? '⚠️ Almost Boardroom Ready' : '🔧 Further Practice Required';
+const fn142 = (avg3: number) => avg3 >= 85 ? '✅ Executive Ready' : avg3 >= 70 ? '⚠️ Almost Corporativo Ready' : '🔧 Further Practice Required';
 const fn143 = (score: number) => Math.max(0, 95 - score);
 const fn144 = (gap: number) => gap <= 3 ? 'Near-perfect delivery' : gap <= 10 ? 'Professional with minor gaps' : 'Structured improvement needed';
 const fn145 = (fluency: number) => Math.round(fluency * 0.85);
@@ -337,7 +337,7 @@ Sessions:        ${profile.sessions} completed
 ────────────────────────────────────────────
 This certifies professional-grade executive
 speech delivery and phonetic precision at
-C-Suite communication standards.
+Alta Dirección communication standards.
 ════════════════════════════════════════════
     BOARDROOM CERTIFIED — ONIXLINGO ACADEMY
 ════════════════════════════════════════════`;
@@ -564,35 +564,35 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
   const eligible = fn287_c(avgScore, fn68(sessionHistory), sessionHistory.length);
 
   return (
-    <div className="fixed inset-0 bg-slate-950/90 backdrop-blur-xl z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
-      <div className="bg-gradient-to-br from-teal-900 via-slate-900 to-slate-950 border border-teal-500/20 rounded-3xl max-w-3xl w-full max-h-[92vh] overflow-y-auto shadow-2xl flex flex-col text-slate-100">
+    <div className="fixed inset-0 bg-slate-50/90 backdrop-blur-xl z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
+      <div className="bg-gradient-to-br from-teal-900 via-slate-900 to-slate-950 border border-teal-500/20 rounded-none max-w-3xl w-full max-h-[92vh] overflow-y-auto shadow-2xl flex flex-col text-slate-100">
 
         {/* HEADER */}
-        <div className="sticky top-0 bg-black/50 backdrop-blur-md border-b border-teal-500/20 px-6 md:px-8 py-5 flex items-center justify-between z-10 flex-shrink-0">
+        <div className="sticky top-0 bg-white/50 backdrop-blur-md border-b border-teal-500/20 px-6 md:px-8 py-5 flex items-center justify-between z-10 flex-shrink-0">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-teal-500/15 rounded-xl ring-1 ring-teal-400/20 relative">
+            <div className="p-3 bg-[#D4AF37]/20/15 rounded-none ring-1 ring-teal-400/20 relative">
               <Mic size={22} className={`text-teal-300 ${isRecording ? 'animate-pulse' : ''}`} />
-              {isRecording && <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse" />}
+              {isRecording && <span className="absolute -top-1 -right-1 w-3 h-3 bg-[#D4AF37]/100 rounded-full animate-pulse" />}
             </div>
             <div>
-              <h2 className="text-xl font-black text-white tracking-tight uppercase">Speech Calibration Lab</h2>
+              <h2 className="text-xl font-black text-slate-900 tracking-tight uppercase">Speech Calibration Lab</h2>
               <p className="text-[9px] text-teal-300 uppercase tracking-widest font-black">Executive Phonetic Analytics Engine · 300 Functions</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
             {totalXP > 0 && (
-              <div className="px-3 py-1.5 bg-teal-500/10 border border-teal-500/20 rounded-lg">
+              <div className="px-3 py-1.5 bg-[#D4AF37]/20/10 border border-teal-500/20 rounded-none">
                 <span className="text-[9px] font-black text-teal-300 uppercase">+{totalXP} XP</span>
               </div>
             )}
-            <button onClick={onClose} className="p-2.5 bg-white/5 hover:bg-white/15 text-teal-300 hover:text-white rounded-full transition-colors">
+            <button onClick={onClose} className="p-2.5 bg-white/5 hover:bg-white/15 text-teal-300 hover:text-slate-900 rounded-full transition-colors">
               <X size={18} />
             </button>
           </div>
         </div>
 
         {/* TABS */}
-        <div className="flex border-b border-teal-500/10 bg-black/30 flex-shrink-0">
+        <div className="flex border-b border-teal-500/10 bg-white/30 flex-shrink-0">
           {[
             { id: 'calibrate', label: 'Calibrate', icon: Mic },
             { id: 'analytics', label: 'Analytics', icon: BarChart3 },
@@ -603,7 +603,7 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
             const isActive = activeTab === tab.id;
             return (
               <button key={tab.id} onClick={() => setActiveTab(tab.id as any)}
-                className={`flex-1 py-4 flex flex-col items-center gap-1 border-b-2 text-[8px] font-black uppercase tracking-wider transition-all ${isActive ? 'border-teal-400 text-teal-300 bg-teal-950/20' : 'border-transparent text-slate-600 hover:text-slate-400'}`}>
+                className={`flex-1 py-4 flex flex-col items-center gap-1 border-b-2 text-[8px] font-black uppercase tracking-wider transition-all ${isActive ? 'border-teal-400 text-teal-300 bg-teal-950/20' : 'border-transparent text-slate-600 hover:text-slate-500'}`}>
                 <Icon size={13} className={isActive ? 'text-teal-400' : ''} />
                 {tab.label}
               </button>
@@ -619,24 +619,24 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
             <>
               {/* Level Filter */}
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest">CEFR Level:</span>
+                <span className="text-[8px] font-black text-slate-600 uppercase tracking-widest">CEFR Level:</span>
                 {(['All', 'B1', 'B2', 'C1', 'C2'] as const).map(lvl => (
                   <button key={lvl} onClick={() => setLevelFilter(lvl)}
-                    className={`px-3 py-1.5 text-[8px] font-black uppercase rounded-lg border transition-all ${levelFilter === lvl ? 'bg-teal-500 border-teal-400 text-white' : 'bg-black/30 border-teal-950/50 text-slate-400 hover:text-white'}`}>
+                    className={`px-3 py-1.5 text-[8px] font-black uppercase rounded-none border transition-all ${levelFilter === lvl ? 'bg-[#D4AF37]/20 border-teal-400 text-slate-900' : 'bg-white/30 border-teal-950/50 text-slate-500 hover:text-slate-900'}`}>
                     {lvl}
                   </button>
                 ))}
-                <span className="ml-auto text-[8px] text-slate-500">{filteredPhrases.length} phrases</span>
+                <span className="ml-auto text-[8px] text-slate-600">{filteredPhrases.length} phrases</span>
               </div>
 
               {/* Phrase Selector */}
               <div className="max-h-52 overflow-y-auto space-y-2 pr-1">
                 {filteredPhrases.map(p => (
                   <button key={p.id} onClick={() => setSelectedPhrase(p)}
-                    className={`w-full text-left p-3.5 rounded-xl border transition-all ${selectedPhrase.id === p.id ? 'border-teal-400/60 bg-teal-950/30' : 'border-teal-950/30 bg-black/20 hover:bg-black/40 hover:border-teal-500/30'}`}>
+                    className={`w-full text-left p-3.5 rounded-none border transition-all ${selectedPhrase.id === p.id ? 'border-teal-400/60 bg-teal-950/30' : 'border-teal-950/30 bg-white/20 hover:bg-white/40 hover:border-teal-500/30'}`}>
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-[7px] font-black text-teal-400 uppercase">{p.level}</span>
-                      <span className="text-[7px] font-bold text-slate-500">{p.category}</span>
+                      <span className="text-[7px] font-bold text-slate-600">{p.category}</span>
                       <span className="ml-auto text-[7px] text-slate-600">{fn157_c(p)}</span>
                     </div>
                     <p className="text-[9px] text-slate-300 line-clamp-2 leading-relaxed">{p.text}</p>
@@ -645,32 +645,32 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
               </div>
 
               {/* Selected Phrase Card */}
-              <div className="p-5 bg-black/40 border border-teal-500/20 rounded-2xl space-y-4">
+              <div className="p-5 bg-white/40 border border-teal-500/20 rounded-none space-y-4">
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <span className="text-[8px] font-black text-teal-400 uppercase tracking-widest block">{selectedPhrase.category} · {selectedPhrase.level}</span>
-                    <span className="text-[9px] text-slate-400 mt-0.5 block">Focus: {selectedPhrase.focus}</span>
+                    <span className="text-[9px] text-slate-500 mt-0.5 block">Focus: {selectedPhrase.focus}</span>
                   </div>
                   <div className="flex gap-2">
-                    <button onClick={() => fn159_c(selectedPhrase)} className="p-2 bg-teal-500/10 border border-teal-500/20 rounded-lg text-teal-300 hover:bg-teal-500/20 transition-colors">
+                    <button onClick={() => fn159_c(selectedPhrase)} className="p-2 bg-[#D4AF37]/20/10 border border-teal-500/20 rounded-none text-teal-300 hover:bg-[#D4AF37]/20/20 transition-colors">
                       <Volume2 size={14} />
                     </button>
-                    <button onClick={fn160_c} className="p-2 bg-slate-900 border border-slate-700 rounded-lg text-slate-400 hover:text-white transition-colors">
+                    <button onClick={fn160_c} className="p-2 bg-slate-50 border border-slate-700 rounded-none text-slate-500 hover:text-slate-900 transition-colors">
                       <Square size={12} />
                     </button>
                   </div>
                 </div>
-                <div className="p-4 bg-teal-950/30 border border-teal-500/10 rounded-xl">
+                <div className="p-4 bg-teal-950/30 border border-teal-500/10 rounded-none">
                   <p className="text-[11px] text-slate-200 leading-relaxed italic">"{selectedPhrase.text}"</p>
                 </div>
-                <div className="flex gap-4 text-[8px] font-black text-slate-500 uppercase">
+                <div className="flex gap-4 text-[8px] font-black text-slate-600 uppercase">
                   <span>Target: {selectedPhrase.targetWPM[0]}–{selectedPhrase.targetWPM[1]} WPM</span>
                   <span>Words: {fn1(selectedPhrase.text)}</span>
                   <span>~{Math.round(fn1(selectedPhrase.text) / 130 * 60)}s at 130WPM</span>
                 </div>
 
                 {/* Waveform */}
-                <div className="h-14 flex items-center justify-center gap-0.5 bg-black/30 rounded-xl border border-teal-950/40 px-4">
+                <div className="h-14 flex items-center justify-center gap-0.5 bg-white/30 rounded-none border border-teal-950/40 px-4">
                   {isRecording ? Array.from({ length: 32 }).map((_, i) => (
                     <div key={i} className="w-1 bg-teal-400 rounded-full transition-all duration-75"
                       style={{ height: `${Math.max(8, Math.sin(i * 0.4 + Date.now() * 0.01) * volume * 1.5 + volume)}%`, opacity: 0.7 }} />
@@ -684,12 +684,12 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
 
                 {!isRecording ? (
                   <button onClick={startRecording} disabled={isAnalyzing}
-                    className="w-full py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white font-black uppercase tracking-widest text-[10px] rounded-xl flex items-center justify-center gap-3 transition-all shadow-lg active:scale-95 disabled:opacity-50">
+                    className="w-full py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-slate-900 font-black uppercase tracking-widest text-[10px] rounded-none flex items-center justify-center gap-3 transition-all shadow-none active:scale-95 disabled:opacity-50">
                     {isAnalyzing ? <><Loader2 size={15} className="animate-spin" /> Analyzing your delivery...</> : <><Mic size={15} /> Start Phonetic Recording</>}
                   </button>
                 ) : (
                   <button onClick={stopRecording}
-                    className="w-full py-4 bg-gradient-to-r from-red-600 to-rose-600 text-white font-black uppercase tracking-widest text-[10px] rounded-xl animate-pulse flex items-center justify-center gap-3 active:scale-95">
+                    className="w-full py-4 bg-gradient-to-r from-red-600 to-rose-600 text-slate-900 font-black uppercase tracking-widest text-[10px] rounded-none animate-pulse flex items-center justify-center gap-3 active:scale-95">
                     <Square size={14} fill="currentColor" /> Stop — {fmt(recordingTime)}
                   </button>
                 )}
@@ -698,7 +698,7 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
               {/* SESSION RESULT */}
               {sessionResult && (
                 <div className="space-y-4 animate-in slide-in-from-bottom-4 duration-400">
-                  <div className="p-5 bg-black/50 border border-teal-500/20 rounded-2xl">
+                  <div className="p-5 bg-white/50 border border-teal-500/20 rounded-none">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-[9px] font-black text-teal-300 uppercase tracking-widest">Session Analysis</span>
                       <span className={`text-[9px] font-black uppercase px-2 py-0.5 rounded border ${fn118(fn117(sessionResult.scores.accuracy))}`}>
@@ -707,26 +707,26 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
                     </div>
 
                     <div className="flex items-center justify-center mb-4">
-                      <div className={`w-28 h-28 rounded-full border-4 flex items-center justify-center bg-slate-900 shadow-[0_0_32px_rgba(20,184,166,0.15)] relative`}
+                      <div className={`w-28 h-28 rounded-full border-4 flex items-center justify-center bg-slate-50 shadow-[0_0_32px_rgba(20,184,166,0.15)] relative`}
                         style={{ borderColor: fn33(sessionResult.scores) >= 80 ? '#14b8a6' : fn33(sessionResult.scores) >= 65 ? '#f59e0b' : '#ef4444' }}>
                         <div>
                           <span className={`text-5xl font-black block text-center ${fn212_c(fn33(sessionResult.scores))}`}>{fn33(sessionResult.scores)}</span>
-                          <span className="text-[7px] font-black text-slate-500 uppercase block text-center">composite</span>
+                          <span className="text-[7px] font-black text-slate-600 uppercase block text-center">composite</span>
                         </div>
                       </div>
                     </div>
 
-                    <p className="text-[10px] font-black text-white uppercase text-center mb-1">{fn210_c(fn33(sessionResult.scores))}</p>
-                    <p className="text-[9px] text-slate-400 text-center">{fn288_c(fn33(sessionResult.scores))} speaking level</p>
+                    <p className="text-[10px] font-black text-slate-900 uppercase text-center mb-1">{fn210_c(fn33(sessionResult.scores))}</p>
+                    <p className="text-[9px] text-slate-500 text-center">{fn288_c(fn33(sessionResult.scores))} speaking level</p>
                   </div>
 
                   {/* Score Breakdown */}
                   <div className="grid grid-cols-2 gap-2">
                     {fn37(sessionResult.scores).map(([key, val], i) => (
-                      <div key={key} className="p-3 bg-black/30 border border-teal-950/40 rounded-xl">
-                        <span className="text-[7px] font-black text-slate-500 uppercase block">{fn39(key)}</span>
+                      <div key={key} className="p-3 bg-white/30 border border-teal-950/40 rounded-none">
+                        <span className="text-[7px] font-black text-slate-600 uppercase block">{fn39(key)}</span>
                         <div className="flex items-center gap-2 mt-1">
-                          <div className="flex-1 bg-slate-900 h-1.5 rounded-full"><div className={`h-full rounded-full ${fn226_c(val)}`} style={{ width: `${val}%` }} /></div>
+                          <div className="flex-1 bg-slate-50 h-1.5 rounded-full"><div className={`h-full rounded-full ${fn226_c(val)}`} style={{ width: `${val}%` }} /></div>
                           <span className="text-[9px] font-black text-teal-300">{val}%</span>
                         </div>
                       </div>
@@ -734,7 +734,7 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
                   </div>
 
                   {/* Coaching Panel */}
-                  <div className="p-4 bg-black/40 border border-teal-500/15 rounded-xl space-y-2">
+                  <div className="p-4 bg-white/40 border border-teal-500/15 rounded-none space-y-2">
                     <span className="text-[8px] font-black text-teal-400 uppercase tracking-widest block">🎤 Coaching Insights</span>
                     {[
                       fn254_c(sessionResult.scores),
@@ -743,17 +743,17 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
                       fn257_c(sessionResult.fillers),
                       fn225_c(sessionResult.wpm, selectedPhrase),
                     ].map((tip, i) => (
-                      <p key={i} className="text-[9px] text-slate-400 flex items-start gap-2">
-                        <span className="text-teal-500 shrink-0 font-black">·</span>{tip}
+                      <p key={i} className="text-[9px] text-slate-500 flex items-start gap-2">
+                        <span className="text-[#D4AF37] shrink-0 font-black">·</span>{tip}
                       </p>
                     ))}
                   </div>
 
                   <div className="flex gap-2">
-                    <button onClick={() => setSessionResult(null)} className="flex-1 py-2.5 bg-white/5 border border-teal-500/20 text-white hover:bg-white/10 font-black uppercase tracking-widest text-[8px] rounded-xl flex items-center justify-center gap-2 transition-colors">
+                    <button onClick={() => setSessionResult(null)} className="flex-1 py-2.5 bg-white/5 border border-teal-500/20 text-slate-900 hover:bg-white/10 font-black uppercase tracking-widest text-[8px] rounded-none flex items-center justify-center gap-2 transition-colors">
                       <RefreshCw size={11} /> New Take
                     </button>
-                    <button onClick={() => setActiveTab('analytics')} className="flex-1 py-2.5 bg-teal-500/10 border border-teal-500/20 text-teal-300 hover:bg-teal-500/20 font-black uppercase tracking-widest text-[8px] rounded-xl flex items-center justify-center gap-2 transition-colors">
+                    <button onClick={() => setActiveTab('analytics')} className="flex-1 py-2.5 bg-[#D4AF37]/20/10 border border-teal-500/20 text-teal-300 hover:bg-[#D4AF37]/20/20 font-black uppercase tracking-widest text-[8px] rounded-none flex items-center justify-center gap-2 transition-colors">
                       <BarChart3 size={11} /> Analytics
                     </button>
                   </div>
@@ -779,8 +779,8 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
                       { label: 'Sessions', val: sessionHistory.length, sub: fn188_c(sessionHistory), color: 'text-amber-300' },
                       { label: 'Trend', val: delta > 0 ? `+${delta}` : delta, sub: fn65(delta), color: delta >= 0 ? 'text-emerald-300' : 'text-rose-300' },
                     ].map((k, i) => (
-                      <div key={i} className="p-3.5 bg-black/40 border border-teal-950/30 rounded-xl">
-                        <span className="text-[7px] font-black text-slate-500 uppercase block">{k.label}</span>
+                      <div key={i} className="p-3.5 bg-white/40 border border-teal-950/30 rounded-none">
+                        <span className="text-[7px] font-black text-slate-600 uppercase block">{k.label}</span>
                         <span className={`text-2xl font-black ${k.color} block mt-0.5`}>{k.val}</span>
                         <span className="text-[7px] text-slate-600 block">{k.sub}</span>
                       </div>
@@ -788,7 +788,7 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
                   </div>
 
                   {/* Score History Bar Chart */}
-                  <div className="p-4 bg-black/40 border border-teal-950/30 rounded-2xl">
+                  <div className="p-4 bg-white/40 border border-teal-950/30 rounded-none">
                     <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest block mb-3">Score History</span>
                     <div className="flex gap-2 items-end h-20">
                       {fn73(sessionHistory).slice(0, 10).reverse().map((s, i) => (
@@ -798,35 +798,35 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
                         </div>
                       ))}
                     </div>
-                    <p className="text-[8px] text-slate-500 mt-2">{fn234_c(sessionHistory)}</p>
+                    <p className="text-[8px] text-slate-600 mt-2">{fn234_c(sessionHistory)}</p>
                   </div>
 
                   {/* CEFR Equivalent */}
-                  <div className="p-4 bg-black/40 border border-teal-950/30 rounded-xl">
+                  <div className="p-4 bg-white/40 border border-teal-950/30 rounded-none">
                     <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest block mb-2">CEFR Equivalent</span>
                     <div className="flex items-center gap-4">
                       <span className="text-3xl font-black text-teal-300">{fn268_c(avgScore)}</span>
                       <div>
                         <p className="text-[9px] text-slate-300">{fn269_c(fn268_c(avgScore))}</p>
-                        <p className="text-[8px] text-slate-500">{fn271_c(fn270_c(avgScore))}</p>
-                        <p className="text-[8px] text-slate-500">{fn273_c(fn272_c(avgScore))}</p>
+                        <p className="text-[8px] text-slate-600">{fn271_c(fn270_c(avgScore))}</p>
+                        <p className="text-[8px] text-slate-600">{fn273_c(fn272_c(avgScore))}</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Level Breakdown */}
-                  <div className="p-4 bg-black/40 border border-teal-950/30 rounded-xl">
+                  <div className="p-4 bg-white/40 border border-teal-950/30 rounded-none">
                     <span className="text-[9px] font-black text-slate-300 uppercase block mb-2">Sessions by Level</span>
-                    <p className="text-[9px] text-slate-400">{fn281_c(fn280_c(sessionHistory))}</p>
+                    <p className="text-[9px] text-slate-500">{fn281_c(fn280_c(sessionHistory))}</p>
                   </div>
 
                   {/* Session List */}
                   <div className="space-y-2 max-h-48 overflow-y-auto pr-1">
                     {sessionHistory.map((r, i) => (
-                      <div key={r.id} className="p-3 bg-slate-950 border border-slate-900 rounded-xl flex items-center justify-between">
+                      <div key={r.id} className="p-3 bg-slate-50 border border-slate-900 rounded-none flex items-center justify-between">
                         <div>
-                          <span className="text-[8px] font-black text-white uppercase block line-clamp-1">{r.text.substring(0, 45)}...</span>
-                          <span className="text-[7px] text-slate-500">{new Date(r.timestamp).toLocaleString()} · {r.wpm} WPM · {r.level}</span>
+                          <span className="text-[8px] font-black text-slate-900 uppercase block line-clamp-1">{r.text.substring(0, 45)}...</span>
+                          <span className="text-[7px] text-slate-600">{new Date(r.timestamp).toLocaleString()} · {r.wpm} WPM · {r.level}</span>
                         </div>
                         <span className={`text-sm font-black ${fn212_c(fn33(r.scores))}`}>{fn33(r.scores)}%</span>
                       </div>
@@ -847,30 +847,30 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
                   { label: 'IELTS Equiv.', val: fn270_c(avgScore || initialAccuracy), sub: fn271_c(fn270_c(avgScore || initialAccuracy)) },
                   { label: 'TOEFL Equiv.', val: fn272_c(avgScore || initialAccuracy), sub: fn273_c(fn272_c(avgScore || initialAccuracy)) },
                 ].map((b, i) => (
-                  <div key={i} className="p-4 bg-black/40 border border-teal-950/30 rounded-xl">
-                    <span className="text-[8px] font-black text-slate-500 uppercase block">{b.label}</span>
+                  <div key={i} className="p-4 bg-white/40 border border-teal-950/30 rounded-none">
+                    <span className="text-[8px] font-black text-slate-600 uppercase block">{b.label}</span>
                     <span className="text-2xl font-black text-teal-300 block mt-0.5">{b.val}</span>
-                    <span className="text-[7px] text-slate-500">{b.sub}</span>
+                    <span className="text-[7px] text-slate-600">{b.sub}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="p-4 bg-black/40 border border-teal-950/30 rounded-2xl">
+              <div className="p-4 bg-white/40 border border-teal-950/30 rounded-none">
                 <span className="text-[9px] font-black text-slate-300 uppercase block mb-3">Global Percentile</span>
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full border-4 border-teal-500/50 flex items-center justify-center bg-black/50">
+                  <div className="w-16 h-16 rounded-full border-4 border-teal-500/50 flex items-center justify-center bg-white/50">
                     <span className="text-xl font-black text-teal-300">{fn263_c(avgScore || initialAccuracy)}</span>
                   </div>
                   <div>
-                    <p className="text-[10px] font-black text-white">{fn264_c(fn263_c(avgScore || initialAccuracy))}</p>
-                    <p className="text-[9px] text-slate-400 mt-0.5">{fn146(avgScore || initialAccuracy)}</p>
-                    <p className="text-[8px] text-slate-500 mt-0.5">{fn265_c(avgScore || initialAccuracy, 78)}</p>
+                    <p className="text-[10px] font-black text-slate-900">{fn264_c(fn263_c(avgScore || initialAccuracy))}</p>
+                    <p className="text-[9px] text-slate-500 mt-0.5">{fn146(avgScore || initialAccuracy)}</p>
+                    <p className="text-[8px] text-slate-600 mt-0.5">{fn265_c(avgScore || initialAccuracy, 78)}</p>
                   </div>
                 </div>
               </div>
 
-              <div className="p-4 bg-black/40 border border-teal-950/30 rounded-xl">
-                <span className="text-[9px] font-black text-amber-400 uppercase block mb-2">📊 C-Suite Targets</span>
+              <div className="p-4 bg-white/40 border border-teal-950/30 rounded-none">
+                <span className="text-[9px] font-black text-amber-400 uppercase block mb-2">📊 Alta Dirección Targets</span>
                 <div className="space-y-2">
                   {[
                     { label: 'Pronunciation', current: avgScore || initialAccuracy, target: 90 },
@@ -879,10 +879,10 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
                   ].map((t, i) => (
                     <div key={i}>
                       <div className="flex justify-between text-[8px] font-bold mb-1">
-                        <span className="text-slate-400 uppercase">{t.label}</span>
+                        <span className="text-slate-500 uppercase">{t.label}</span>
                         <span className="text-slate-300">{fn115(t.current, t.target)}</span>
                       </div>
-                      <div className="h-1.5 bg-slate-900 rounded-full">
+                      <div className="h-1.5 bg-slate-50 rounded-full">
                         <div className={`h-full rounded-full ${fn226_c(t.current)}`} style={{ width: `${Math.min(100, t.current)}%` }} />
                       </div>
                     </div>
@@ -890,11 +890,11 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
                 </div>
               </div>
 
-              <div className="p-4 bg-black/40 border border-teal-950/30 rounded-xl">
+              <div className="p-4 bg-white/40 border border-teal-950/30 rounded-none">
                 <span className="text-[9px] font-black text-slate-300 uppercase block mb-2">📘 Coaching Plan</span>
                 {fn260_c(avgScore || initialAccuracy).map((tip, i) => (
-                  <p key={i} className="text-[9px] text-slate-400 flex items-start gap-2 mb-1">
-                    <span className="text-teal-500 font-black shrink-0">{i + 1}.</span>{tip}
+                  <p key={i} className="text-[9px] text-slate-500 flex items-start gap-2 mb-1">
+                    <span className="text-[#D4AF37] font-black shrink-0">{i + 1}.</span>{tip}
                   </p>
                 ))}
               </div>
@@ -904,40 +904,40 @@ export const SpeechCalibrateModal = ({ onClose, initialAccuracy = 92, initialFlu
           {/* ══ CERTIFICATION ══ */}
           {activeTab === 'certification' && (
             <>
-              <div className={`p-4 rounded-xl border text-center ${fn286_c(avgScore)} bg-clip-border`}>
+              <div className={`p-4 rounded-none border text-center ${fn286_c(avgScore)} bg-clip-border`}>
                 <span className="text-[8px] font-black uppercase tracking-widest block">{fn285_c(avgScore)}</span>
                 <span className="text-4xl font-black text-slate-900 block mt-1">{avgScore || '--'}%</span>
                 <span className="text-[9px] text-slate-700 block mt-1">{fn34(avgScore)}</span>
               </div>
 
-              <div className="p-4 bg-black/40 border border-teal-950/30 rounded-xl">
+              <div className="p-4 bg-white/40 border border-teal-950/30 rounded-none">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-[9px] font-black text-slate-300 uppercase">Eligibility</span>
                   <CheckCircle2 size={14} className={eligible ? 'text-emerald-400' : 'text-slate-600'} />
                 </div>
-                <p className="text-[9px] text-slate-400">{fn284_c(eligible)}</p>
-                <div className="mt-2 space-y-1 text-[8px] text-slate-500">
+                <p className="text-[9px] text-slate-500">{fn284_c(eligible)}</p>
+                <div className="mt-2 space-y-1 text-[8px] text-slate-600">
                   <p>✓ Min 3 sessions: {sessionHistory.length >= 3 ? '✅' : `${sessionHistory.length}/3`}</p>
                   <p>✓ Avg score ≥80%: {avgScore >= 80 ? '✅' : `${avgScore}%`}</p>
                   <p>✓ Fluency ≥75: {initialFluency >= 75 ? '✅' : `${initialFluency}/75`}</p>
                 </div>
               </div>
 
-              <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
-                <pre className="text-[7px] leading-relaxed text-slate-400 font-mono overflow-x-auto max-h-52 overflow-y-auto whitespace-pre">{certText}</pre>
+              <div className="p-4 bg-slate-50 border border-slate-800 rounded-none">
+                <pre className="text-[7px] leading-relaxed text-slate-500 font-mono overflow-x-auto max-h-52 overflow-y-auto whitespace-pre">{certText}</pre>
               </div>
 
               <div className="flex gap-2">
                 <button onClick={() => { fn183_c(certText); setCopied(true); setTimeout(() => setCopied(false), 2000); }}
-                  className="flex-1 py-3 bg-teal-500 hover:bg-white text-slate-950 font-black uppercase tracking-widest text-[8px] rounded-xl flex items-center justify-center gap-2 transition-all">
+                  className="flex-1 py-3 bg-[#D4AF37]/20 hover:bg-white text-slate-950 font-black uppercase tracking-widest text-[8px] rounded-none flex items-center justify-center gap-2 transition-all">
                   <Clipboard size={11} /> {copied ? '✓ Copied!' : 'Copy Certificate'}
                 </button>
                 <button onClick={() => window.open(fn186_c(certText), '_blank')}
-                  className="flex-1 py-3 bg-white/5 border border-teal-500/20 text-teal-300 hover:bg-white/10 font-black uppercase text-[8px] rounded-xl transition-all">
+                  className="flex-1 py-3 bg-white/5 border border-teal-500/20 text-teal-300 hover:bg-white/10 font-black uppercase text-[8px] rounded-none transition-all">
                   LinkedIn
                 </button>
                 <button onClick={() => window.open(fn187_c(avgScore), '_blank')}
-                  className="flex-1 py-3 bg-white/5 border border-teal-500/20 text-teal-300 hover:bg-white/10 font-black uppercase text-[8px] rounded-xl transition-all">
+                  className="flex-1 py-3 bg-white/5 border border-teal-500/20 text-teal-300 hover:bg-white/10 font-black uppercase text-[8px] rounded-none transition-all">
                   Twitter
                 </button>
               </div>

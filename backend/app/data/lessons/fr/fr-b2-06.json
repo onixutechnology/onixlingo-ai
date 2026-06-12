@@ -1,0 +1,95 @@
+{
+  "id": "fr-b2-06",
+  "title": "Le Conditionnel Avancé",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Conditionnel", "News", "Regrets"],
+  "completion_message": "¡Excelente! Ahora hablas como un periodista francés y sabes hacer reproches de forma natural. El condicional ya no tiene secretos para ti.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Periodistas y Reproches (B2)",
+      "parts": [
+        {
+          "visual": "El Condicional Periodístico (La información no confirmada):\n\nEn francés, cuando los periodistas dan una noticia que aún no es oficial o es un simple rumor, usan el Condicional en lugar del Indicativo para protegerse.\n\nEjemplos (Condicional Presente - Noticias de ahora):\n- Le président SERAIT malade. (Se rumorea/Se dice que el presidente está enfermo).\n- Il Y AURAIT une grève demain. (Habría / Al parecer habrá una huelga mañana).\n\nEjemplos (Condicional Pasado - Noticias de ayer):\n- L'accident AURAIT FAIT deux morts. (El accidente habría causado dos muertos / Al parecer hubo dos muertos).\n- Le voleur SE SERAIT ÉCHAPPÉ. (El ladrón se habría escapado).",
+          "audio": "En niveles anteriores aprendiste que el condicional sirve para ser educado, como decir 'Me gustaría un café' (Je voudrais un café). Pero en el B2, descubres que los franceses usan el condicional para el chisme profesional. Si prendes la televisión en Francia y un periodista dice 'Le président EST malade' (está enfermo), es porque tiene el informe médico en la mano. Pero si no está seguro y es solo un rumor, usará el condicional: 'Le président SERAIT malade' (El presidente estaría enfermo / Se rumorea que está enfermo). Lo mismo con el pasado: 'El accidente habría causado dos muertos' se dice 'L'accident AURAIT FAIT deux morts'. ¡Es el tiempo verbal perfecto para lavarse las manos y no asumir la responsabilidad de lo que dices!"
+        },
+        {
+          "visual": "1. Au cas où (Por si acaso):\n¡Regla de oro! En francés, 'Au cas où' SIEMPRE exige el modo Condicional. (A diferencia del español o el inglés).\n- Prends ton parapluie AU CAS OÙ il PLEUVRAIT. (Lleva tu paraguas por si acaso llueve). NUNCA digas 'au cas où il pleut'.\n\n2. Le Reproche (El Reproche):\nUsamos Devoir (Deber) o Pouvoir (Poder) en Condicional Pasado para quejarnos de algo que debiste hacer pero no hiciste.\n- Tu AURAIS DÛ m'appeler ! (¡Deberías haberme llamado!).\n- Tu AURAIS PU m'aider ! (¡Podrías haberme ayudado!).",
+          "audio": "Hay dos usos más del condicional que debes dominar hoy. Primero, la expresión 'Au cas où', que significa 'Por si acaso'. En español decimos 'por si acaso LLUEVE' en presente. En francés, como es una posibilidad hipotética, ¡estás obligado a usar el condicional! 'Au cas où il PLEUVRAIT'. Es un error de principiante usar el presente ahí. Y segundo, el condicional para pelear o hacer reproches. ¿Cómo dices '¡Podrías haberme llamado!'? Usas el verbo poder en condicional pasado: 'Tu AURAIS PU m'appeler'. ¿Y si quieres decir 'Debiste haberme llamado'? Usas el verbo deber: 'Tu AURAIS DÛ m'appeler'. Son frases que escucharás en toda discusión de pareja en Francia."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Identifica el condicional correcto y su significado en contexto.",
+      "questions": [
+        { "id": "frb2-06-q1", "type": "quiz_choice", "question": "Le ministre ____ (démissionner) ce matin. (RUMOR: Se dice que el ministro renunció).", "options": ["aurait démissionné", "a démissionné", "démissionne", "avait démissionné"], "correct_answer": "aurait démissionné", "explanation": "Noticia no confirmada en pasado -> Condicional Pasado (aurait démissionné)." },
+        { "id": "frb2-06-q2", "type": "quiz_choice", "question": "Prends ta veste au cas où il ____ (faire) froid ce soir. (POR SI ACASO HACE).", "options": ["ferait", "fait", "fasse", "fera"], "correct_answer": "ferait", "explanation": "'Au cas où' siempre va seguido de Condicional (ferait)." },
+        { "id": "frb2-06-q3", "type": "quiz_choice", "question": "Tu ____ (devoir) me le dire ! (¡DEBISTE HABÉRMELO DICHO!).", "options": ["aurais dû", "as dû", "devais", "devrais"], "correct_answer": "aurais dû", "explanation": "Reproche en el pasado -> Condicional Pasado de Devoir (aurais dû)." },
+        { "id": "frb2-06-q4", "type": "quiz_choice", "question": "D'après les rumeurs, le couple ____ (divorcer). (Se dice que la pareja se va a divorciar / se divorcia).", "options": ["divorcerait", "divorce", "divorcera", "divorça"], "correct_answer": "divorcerait", "explanation": "Rumor en presente/futuro -> Condicional Presente (divorcerait)." },
+        { "id": "frb2-06-q5", "type": "quiz_choice", "question": "Tu ____ (pouvoir) m'aider au lieu de regarder la télé ! (¡PODRÍAS HABERME AYUDADO!).", "options": ["aurais pu", "as pu", "pouvais", "pourrais"], "correct_answer": "aurais pu", "explanation": "Reproche en el pasado -> Condicional Pasado de Pouvoir (aurais pu)." },
+        { "id": "frb2-06-q6", "type": "quiz_choice", "question": "¿Es correcta la frase 'Je te donne les clés au cas où tu arrives avant moi'?", "options": ["Falso", "Verdadero"], "correct_answer": "Falso", "explanation": "'Au cas où' SIEMPRE toma condicional. Debería ser 'au cas où tu arriverais'." },
+        { "id": "frb2-06-q7", "type": "quiz_choice", "question": "Le suspect ____ (se cacher) en Suisse. (Se cree que el sospechoso se esconde en Suiza).", "options": ["se cacherait", "se cache", "s'est caché", "se cachera"], "correct_answer": "se cacherait", "explanation": "Información policial no confirmada en el presente -> Condicional Presente (se cacherait)." },
+        { "id": "frb2-06-q8", "type": "quiz_choice", "question": "L'incendie ____ (être) provoqué par une cigarette. (Al parecer el incendio FUE provocado...).", "options": ["aurait été", "a été", "était", "serait"], "correct_answer": "aurait été", "explanation": "Noticia no confirmada en el pasado -> Condicional Pasado de la voz pasiva (aurait été)." },
+        { "id": "frb2-06-q9", "type": "quiz_choice", "question": "Je vais préparer à manger au cas où vous ____ (avoir) faim. (POR SI ACASO TIENEN HAMBRE).", "options": ["auriez", "avez", "ayez", "aurez"], "correct_answer": "auriez", "explanation": "Au cas où + Condicional (auriez)." },
+        { "id": "frb2-06-q10", "type": "quiz_choice", "question": "Vous ____ (devoir) faire plus attention. (USTEDES DEBERÍAN HABER PRESTADO MÁS ATENCIÓN).", "options": ["auriez dû", "avez dû", "deviez", "devriez"], "correct_answer": "auriez dû", "explanation": "Reproche pasado (Vous auriez dû)." },
+        { "id": "frb2-06-q11", "type": "quiz_choice", "question": "Il y ____ (avoir) une centaine de blessés. (Habría un centenar de heridos).", "options": ["aurait", "a", "aura", "avait"], "correct_answer": "aurait", "explanation": "Cifra no oficial / Periodismo -> Condicional (Il y aurait)." },
+        { "id": "frb2-06-q12", "type": "quiz_choice", "question": "Je te laisse mon numéro, au cas où tu ____ (vouloir) m'appeler.", "options": ["voudrais", "veux", "veuilles", "voudras"], "correct_answer": "voudrais", "explanation": "Au cas où + Condicional (voudrais)." },
+        { "id": "frb2-06-q13", "type": "quiz_choice", "question": "La grève ____ (être) annulée. (RUMOR: Se dice que la huelga HA SIDO cancelada).", "options": ["aurait été", "a été", "était", "serait"], "correct_answer": "aurait été", "explanation": "Condicional Pasado -> aurait été." },
+        { "id": "frb2-06-q14", "type": "quiz_choice", "question": "Il ____ (pouvoir) s'excuser, au moins ! (¡AL MENOS PODRÍA HABERSE DISCULPADO!).", "options": ["aurait pu", "a pu", "pouvait", "pourrait"], "correct_answer": "aurait pu", "explanation": "Reproche pasado -> aurait pu." },
+        { "id": "frb2-06-q15", "type": "quiz_choice", "question": "Le célèbre acteur ____ (acheter) un château. (Se rumorea que el actor COMPRÓ un castillo).", "options": ["aurait acheté", "a acheté", "achèterait", "achète"], "correct_answer": "aurait acheté", "explanation": "Rumor en el pasado -> aurait acheté." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo en el condicional adecuado (Presente o Pasado).",
+      "questions": [
+        { "id": "frb2-06-f1", "type": "fill_input", "question": "Prends ta clé au cas où tu ____ (rentrer) tard.", "correct_answer": "rentrerais", "explanation": "rentrerais (Au cas où + Cond. Présent)" },
+        { "id": "frb2-06-f2", "type": "fill_input", "question": "Tu ____ (devoir) me prévenir ! (¡Deberías haberme avisado! - Cond. Pasado de Devoir).", "correct_answer": "aurais dû", "explanation": "aurais dû" },
+        { "id": "frb2-06-f3", "type": "fill_input", "question": "Tu ____ (pouvoir) faire attention ! (¡Podrías haber prestado atención! - Cond. Pasado de Pouvoir).", "correct_answer": "aurais pu", "explanation": "aurais pu" },
+        { "id": "frb2-06-f4", "type": "fill_input", "question": "Le ministre ____ (être) impliqué dans un scandale. (RUMOR: El ministro ESTARÍA implicado).", "correct_answer": "serait", "explanation": "serait" },
+        { "id": "frb2-06-f5", "type": "fill_input", "question": "Le suspect ____ (fuir) à l'étranger. (RUMOR: El sospechoso HABRÍA HUIDO).", "correct_answer": "aurait fui", "explanation": "aurait fui" },
+        { "id": "frb2-06-f6", "type": "fill_input", "question": "Je te prépare une chambre au cas où tu ____ (vouloir) rester.", "correct_answer": "voudrais", "explanation": "voudrais" },
+        { "id": "frb2-06-f7", "type": "fill_input", "question": "Il y ____ (avoir) des changements demain. (RUMOR: HABRÍA cambios).", "correct_answer": "aurait", "explanation": "aurait" },
+        { "id": "frb2-06-f8", "type": "fill_input", "question": "Vous ____ (devoir) l'aider au lieu de rire. (Ustedes DEBERÍAN HABERLE AYUDADO).", "correct_answer": "auriez dû", "explanation": "auriez dû" },
+        { "id": "frb2-06-f9", "type": "fill_input", "question": "L'accident ____ (faire) trois blessés. (RUMOR PASADO: Habría causado).", "correct_answer": "aurait fait", "explanation": "aurait fait" },
+        { "id": "frb2-06-f10", "type": "fill_input", "question": "On t'a gardé une part au cas où tu ____ (avoir) faim.", "correct_answer": "aurais", "explanation": "aurais" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Conditional Match",
+      "pairs": [
+        {"id": "frb2-06-p1", "source": "Au cas où il pleuvrait", "target": "Por si acaso llueve"},
+        {"id": "frb2-06-p2", "source": "Tu aurais dû", "target": "Deberías haber / Debiste"},
+        {"id": "frb2-06-p3", "source": "Tu aurais pu", "target": "Podrías haber / Pudiste"},
+        {"id": "frb2-06-p4", "source": "Il serait à Paris", "target": "Se dice que está en París"},
+        {"id": "frb2-06-p5", "source": "Il serait allé à Paris", "target": "Al parecer fue a París"},
+        {"id": "frb2-06-p6", "source": "Il y aurait", "target": "Habría (Rumor)"},
+        {"id": "frb2-06-p7", "source": "Il y a eu", "target": "Hubo (Hecho confirmado)"},
+        {"id": "frb2-06-p8", "source": "Au cas où tu voudrais", "target": "Por si acaso quieres"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica la frase con condicional avanzado.",
+      "questions": [
+        { "id": "frb2-06-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Tu aurais pu m'appeler", "options": ["Tu aurais pu m'appeler", "Tu as pu m'appeler", "Tu pourras m'appeler", "Tu aurais dû m'appeler"], "correct_answer": "Tu aurais pu m'appeler", "explanation": "Audio dice: Tu aurais pu m'appeler (Podrías haberme llamado)." },
+        { "id": "frb2-06-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Le ministre aurait démissionné", "options": ["Le ministre aurait démissionné", "Le ministre a démissionné", "Le ministre va démissionner", "Le ministre aurait pu démissionner"], "correct_answer": "Le ministre aurait démissionné", "explanation": "Audio dice: Le ministre aurait démissionné (Se rumorea que el ministro renunció)." },
+        { "id": "frb2-06-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Au cas où il pleuvrait", "options": ["Au cas où il pleuvrait", "Au cas où il pleut", "Même s'il pleuvait", "Bien qu'il pleuve"], "correct_answer": "Au cas où il pleuvrait", "explanation": "Audio dice: Au cas où il pleuvrait." },
+        { "id": "frb2-06-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Tu aurais dû faire attention", "options": ["Tu aurais dû faire attention", "Tu as dû faire attention", "Tu devais faire attention", "Tu devrais faire attention"], "correct_answer": "Tu aurais dû faire attention", "explanation": "Audio dice: Tu aurais dû faire attention (Debiste haber prestado atención)." },
+        { "id": "frb2-06-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il y aurait beaucoup de victimes", "options": ["Il y aurait beaucoup de victimes", "Il y aura beaucoup de victimes", "Il y a eu beaucoup de victimes", "Il y avait beaucoup de victimes"], "correct_answer": "Il y aurait beaucoup de victimes", "explanation": "Audio dice: Il y aurait beaucoup de victimes (Habría muchas víctimas)." }
+      ]
+    }
+  ]
+}

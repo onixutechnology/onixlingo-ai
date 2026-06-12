@@ -1,0 +1,101 @@
+{
+  "id": "a2-5",
+  "title": "Comparatives & Superlatives",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Comparatives", "Superlatives", "Adjectives"],
+  "completion_message": "¡Felicidades! Has completado el primer Hito del Nivel A2. Ahora sabes comparar cosas como todo un líder.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Adjetivos: Comparativos y Superlativos",
+      "parts": [
+        { "visual": "Comparativos (2 cosas): Adjetivos cortos + ER + than (cheap -> cheaper than / barato -> más barato que). Adjetivos largos: more + adjetivo + than (expensive -> more expensive than).", "audio": "Comparatives, used to compare 2 things. For short adjectives, add E-R and 'than'. Cheap becomes cheaper than. For long adjectives, use 'more', the adjective, and 'than'. Expensive becomes more expensive than." },
+        { "visual": "Superlativos (3 o más cosas): The + adjetivo corto + EST (the cheapest / el más barato). The + most + adjetivo largo (the most expensive / el más caro). Irregulares: good -> better -> the best. bad -> worse -> the worst.", "audio": "Superlatives, used to compare 3 or more things. For short adjectives, use 'the' and add E-S-T. The cheapest. For long adjectives, use 'the most'. The most expensive. Irregulars: good becomes better, and the best. Bad becomes worse, and the worst." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el comparativo o superlativo correcto.",
+      "questions": [
+        { "id": "a2-5-q1", "type": "quiz_choice", "question": "This software is ____ than the old one. (Adjetivo corto: fast).", "options": ["faster", "more fast", "fast", "the fastest"], "correct_answer": "faster", "explanation": "Comparativo de adjetivo corto: fast + er = faster." },
+        { "id": "a2-5-q2", "type": "quiz_choice", "question": "This is ____ software in the market. (Adjetivo corto: fast).", "options": ["the fastest", "faster", "the most fast", "fast"], "correct_answer": "the fastest", "explanation": "Superlativo (el más rápido de todos): the fastest." },
+        { "id": "a2-5-q3", "type": "quiz_choice", "question": "London is ____ than Madrid. (Adjetivo largo: expensive).", "options": ["more expensive", "expensiver", "most expensive", "the expensive"], "correct_answer": "more expensive", "explanation": "Comparativo de adjetivo largo: more + expensive." },
+        { "id": "a2-5-q4", "type": "quiz_choice", "question": "Tokyo is ____ city in the world. (Adjetivo largo: expensive).", "options": ["the most expensive", "more expensive", "the expensivest", "most expensive"], "correct_answer": "the most expensive", "explanation": "Superlativo de adjetivo largo: the most + expensive." },
+        { "id": "a2-5-q5", "type": "quiz_choice", "question": "My new computer is ____ than my old one. (Irregular: good).", "options": ["better", "gooder", "more good", "the best"], "correct_answer": "better", "explanation": "El comparativo de 'good' es 'better'." },
+        { "id": "a2-5-q6", "type": "quiz_choice", "question": "She is ____ employee in the company. (Irregular: good).", "options": ["the best", "better", "the goodest", "best"], "correct_answer": "the best", "explanation": "El superlativo de 'good' es 'the best'." },
+        { "id": "a2-5-q7", "type": "quiz_choice", "question": "This year's sales are ____ than last year's. (Irregular: bad).", "options": ["worse", "badder", "more bad", "the worst"], "correct_answer": "worse", "explanation": "El comparativo de 'bad' es 'worse' (peor)." },
+        { "id": "a2-5-q8", "type": "quiz_choice", "question": "That was ____ presentation I have ever seen. (Irregular: bad).", "options": ["the worst", "worse", "the baddest", "worst"], "correct_answer": "the worst", "explanation": "El superlativo de 'bad' es 'the worst' (el peor de todos)." },
+        { "id": "a2-5-q9", "type": "quiz_choice", "question": "A laptop is ____ than a desktop. (Adjetivo corto terminado en Y: heavy).", "options": ["heavier", "heavyer", "more heavy", "the heaviest"], "correct_answer": "heavier", "explanation": "Los terminados en 'y' cambian a 'i' + er: heavier." },
+        { "id": "a2-5-q10", "type": "quiz_choice", "question": "The CEO's office is ____ in the building. (Adjetivo corto: big).", "options": ["the biggest", "bigger", "the most big", "biggest"], "correct_answer": "the biggest", "explanation": "Superlativo de big (doble consonante): the biggest." },
+        { "id": "a2-5-q11", "type": "quiz_choice", "question": "This process is ____ efficient than the old one. (Adjetivo largo).", "options": ["more", "most", "the", "much"], "correct_answer": "more", "explanation": "Comparativo (2 cosas) de adjetivo largo: more efficient than." },
+        { "id": "a2-5-q12", "type": "quiz_choice", "question": "Who is ____ successful manager in the team? (Adjetivo largo).", "options": ["the most", "more", "most", "the more"], "correct_answer": "the most", "explanation": "Superlativo (de todo el equipo) de adjetivo largo: the most successful." },
+        { "id": "a2-5-q13", "type": "quiz_choice", "question": "This option is ____. (Más barata).", "options": ["cheaper", "more cheap", "the cheaper", "cheap"], "correct_answer": "cheaper", "explanation": "Cheap + er = cheaper." },
+        { "id": "a2-5-q14", "type": "quiz_choice", "question": "It is ____ than walking. (Adjetivo largo: dangerous).", "options": ["more dangerous", "dangerouser", "the most dangerous", "most dangerous"], "correct_answer": "more dangerous", "explanation": "More dangerous." },
+        { "id": "a2-5-q15", "type": "quiz_choice", "question": "This is ____ difficult task I have ever done. (Superlativo largo).", "options": ["the most", "more", "most", "the more"], "correct_answer": "the most", "explanation": "The most difficult." },
+        { "id": "a2-5-q16", "type": "quiz_choice", "question": "My desk is ____ than yours. (Adjetivo corto: small).", "options": ["smaller", "more small", "the smallest", "small"], "correct_answer": "smaller", "explanation": "Smaller." },
+        { "id": "a2-5-q17", "type": "quiz_choice", "question": "Today is ____ day of the year. (Adjetivo corto terminado en Y: busy).", "options": ["the busiest", "busier", "the most busy", "busiest"], "correct_answer": "the busiest", "explanation": "Superlativo de busy = the busiest." },
+        { "id": "a2-5-q18", "type": "quiz_choice", "question": "We need to work ____ than before. (Adjetivo irregular: hard).", "options": ["harder", "more hard", "the hardest", "hard"], "correct_answer": "harder", "explanation": "Harder (comparativo de adjetivo corto)." },
+        { "id": "a2-5-q19", "type": "quiz_choice", "question": "It is ____ important to focus on quality. (Más).", "options": ["more", "most", "the", "much"], "correct_answer": "more", "explanation": "More important." },
+        { "id": "a2-5-q20", "type": "quiz_choice", "question": "She makes ____ money in the company. (Superlativo: mucha/más de todos).", "options": ["the most", "more", "the more", "most"], "correct_answer": "the most", "explanation": "The most money = la mayor cantidad de dinero." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el comparativo o superlativo correcto.",
+      "questions": [
+        { "id": "a2-5-f1", "type": "fill_input", "question": "This is ____ than that. (fast - comparativo)", "correct_answer": "faster", "explanation": "faster." },
+        { "id": "a2-5-f2", "type": "fill_input", "question": "This is ____ car in the world. (fast - superlativo)", "correct_answer": "the fastest", "explanation": "the fastest." },
+        { "id": "a2-5-f3", "type": "fill_input", "question": "Gold is ____ expensive than silver. (comparativo)", "correct_answer": "more", "explanation": "more." },
+        { "id": "a2-5-f4", "type": "fill_input", "question": "This is ____ most expensive watch. (superlativo)", "correct_answer": "the", "explanation": "the." },
+        { "id": "a2-5-f5", "type": "fill_input", "question": "My phone is ____ than yours. (good - comparativo irregular)", "correct_answer": "better", "explanation": "better." },
+        { "id": "a2-5-f6", "type": "fill_input", "question": "She is ____ best employee. (superlativo de good)", "correct_answer": "the", "explanation": "the." },
+        { "id": "a2-5-f7", "type": "fill_input", "question": "This year is ____ than last year. (bad - comparativo irregular)", "correct_answer": "worse", "explanation": "worse." },
+        { "id": "a2-5-f8", "type": "fill_input", "question": "That is ____ worst idea. (superlativo de bad)", "correct_answer": "the", "explanation": "the." },
+        { "id": "a2-5-f9", "type": "fill_input", "question": "It is ____ than my bag. (heavy - comparativo, cambia y por i)", "correct_answer": "heavier", "explanation": "heavier." },
+        { "id": "a2-5-f10", "type": "fill_input", "question": "It is the ____ office. (big - superlativo, doble g)", "correct_answer": "biggest", "explanation": "biggest." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-5-p1", "source": "Fast / Faster / The fastest", "target": "Rápido / Más rápido / El más rápido"},
+        {"id": "a2-5-p2", "source": "Expensive / More expensive", "target": "Caro / Más caro"},
+        {"id": "a2-5-p3", "source": "The most expensive", "target": "El más caro (de todos)"},
+        {"id": "a2-5-p4", "source": "Good / Better / The best", "target": "Bueno / Mejor / El mejor"},
+        {"id": "a2-5-p5", "source": "Bad / Worse / The worst", "target": "Malo / Peor / El peor"},
+        {"id": "a2-5-p6", "source": "Heavy / Heavier / The heaviest", "target": "Pesado / Más pesado / El más pesado"},
+        {"id": "a2-5-p7", "source": "Big / Bigger / The biggest", "target": "Grande / Más grande / El más grande"},
+        {"id": "a2-5-p8", "source": "More efficient than", "target": "Más eficiente que"},
+        {"id": "a2-5-p9", "source": "The most successful", "target": "El más exitoso"},
+        {"id": "a2-5-p10", "source": "Harder than", "target": "Más duro que"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a2-5-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This software is faster than the old one.", "options": ["This software is faster than the old one.", "This software is fast than the old one.", "This software is the fastest.", "The software is faster than the old one."], "correct_answer": "This software is faster than the old one.", "explanation": "Audio exacto." },
+        { "id": "a2-5-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This is the fastest software in the market.", "options": ["This is the fastest software in the market.", "This is faster software in the market.", "It is the fastest software in the market.", "This is the fastest computer in the market."], "correct_answer": "This is the fastest software in the market.", "explanation": "Audio exacto." },
+        { "id": "a2-5-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "London is more expensive than Madrid.", "options": ["London is more expensive than Madrid.", "London is expensive than Madrid.", "London is the most expensive.", "London is more expensive."], "correct_answer": "London is more expensive than Madrid.", "explanation": "Audio exacto." },
+        { "id": "a2-5-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Tokyo is the most expensive city.", "options": ["Tokyo is the most expensive city.", "Tokyo is more expensive city.", "Tokyo is the most expensive.", "Tokyo is a very expensive city."], "correct_answer": "Tokyo is the most expensive city.", "explanation": "Audio exacto." },
+        { "id": "a2-5-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My new computer is better.", "options": ["My new computer is better.", "My new computer is good.", "My new computer is the best.", "My computer is better."], "correct_answer": "My new computer is better.", "explanation": "Audio exacto." },
+        { "id": "a2-5-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is the best employee.", "options": ["She is the best employee.", "She is a better employee.", "He is the best employee.", "She is the best worker."], "correct_answer": "She is the best employee.", "explanation": "Audio exacto." },
+        { "id": "a2-5-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This year's sales are worse.", "options": ["This year's sales are worse.", "This year's sales are bad.", "This year's sales are the worst.", "Sales are worse this year."], "correct_answer": "This year's sales are worse.", "explanation": "Audio exacto." },
+        { "id": "a2-5-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "That was the worst presentation.", "options": ["That was the worst presentation.", "That was a worse presentation.", "This was the worst presentation.", "It was the worst presentation."], "correct_answer": "That was the worst presentation.", "explanation": "Audio exacto." },
+        { "id": "a2-5-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The CEO's office is the biggest.", "options": ["The CEO's office is the biggest.", "The CEO's office is bigger.", "His office is the biggest.", "The office is the biggest."], "correct_answer": "The CEO's office is the biggest.", "explanation": "Audio exacto." },
+        { "id": "a2-5-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This option is cheaper.", "options": ["This option is cheaper.", "This option is the cheapest.", "This option is cheap.", "It is cheaper."], "correct_answer": "This option is cheaper.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

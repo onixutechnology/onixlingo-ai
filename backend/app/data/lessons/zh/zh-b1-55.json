@@ -1,0 +1,92 @@
+{
+  "id": "zh-b1-55",
+  "title": "El Tridente del Poder",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Modals", "Can", "Verbs"],
+  "completion_message": "¡Has dominado el Tridente del Poder! Ahora sabes distinguir entre habilidades, capacidades físicas y permisos. Tu precisión es la de un nivel B1.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Las Tres Formas de Poder",
+      "parts": [
+        {
+          "visual": "En español, usamos 'Poder' para todo ('Puedo nadar', 'Puedo levantar esto', '¿Puedo ir al baño?').\nEn mandarín, existen 3 palabras diferentes dependiendo del TIPO de poder:\n\n1. Habilidad Aprendida: 会 (huì)\nLo usas cuando 'Puedes' hacer algo porque lo aprendiste o lo practicaste.\n- Yo sé hablar chino: 我会说汉语 (Wǒ huì shuō hànyǔ).\n- Él sabe conducir: 他会开车 (Tā huì kāi chē).\n\n2. Capacidad Física o Circunstancia: 能 (néng - 2do tono)\nLo usas cuando tu cuerpo te lo permite o las circunstancias son favorables.\n- Yo puedo comer mucho: 我能吃很多 (Wǒ néng chī hěn duō).\n- Hoy estoy enfermo, no puedo ir: 今天我生病，不能去 (Jīntiān wǒ shēngbìng, bù néng qù). (No es que olvidó CÓMO ir, sino que FÍSICAMENTE o por las circunstancias, no puede).",
+          "audio": "En español, el verbo Poder es un comodín. Dices 'Puedo nadar' refiriéndote a que tomaste clases, dices 'No puedo ir' porque estás enfermo, y dices '¿Puedo salir?' para pedir permiso. En mandarín, eso es un error fatal. Los chinos dividen el verbo poder en un tridente. El primero ya lo conoces: Huì. Se usa solo para habilidades aprendidas. Wǒ huì shuō hànyǔ. Puedo hablar chino, porque lo estudié. El segundo es la capacidad física o la circunstancia: Néng. Segundo tono. Néng. Si estás muy enfermo y no tienes fuerzas para levantarte de la cama, dices Wǒ bù néng qù. Yo no puedo ir. Sabes cómo caminar, tienes la habilidad, pero las circunstancias físicas no te lo permiten."
+        },
+        {
+          "visual": "3. Permiso / Autorización: 可以 (kěyǐ)\nLo usas cuando 'Puedes' hacer algo porque las reglas o alguien con autoridad te lo permite.\n\n- ¿Puedo beber té?: 我可以喝茶吗？(Wǒ kěyǐ hē chá ma?). (Estoy pidiendo permiso).\n- Tú puedes irte: 你可以去 (Nǐ kěyǐ qù). (Te doy autorización).\n- No se puede fumar aquí: 这里不可以抽烟 (Zhèlǐ bù kěyǐ chōuyān).\n\nResumen del Tridente:\n- 会 (Huì) = Yo aprendí a hacerlo.\n- 能 (Néng) = Mi cuerpo y el universo me dejan hacerlo hoy.\n- 可以 (Kěyǐ) = Mi jefe / Las leyes me dejan hacerlo.",
+          "audio": "El tercer pico del tridente es el Permiso. Kěyǐ. Ambas sílabas en tercer tono. Kěyǐ. Si estás en casa de un amigo y quieres saber si está permitido tomar de su refrigerador, preguntas: ¿Wǒ kěyǐ hē chá ma? ¿Puedo beber té? No estás preguntando si tienes la habilidad física de tragar líquido, estás pidiendo autorización. Y si el guardia de un museo te dice que no puedes tomar fotos, usará la negación Bù kěyǐ. No se puede, está prohibido. Así que recuerda: Huì es porque estudiaste, Néng es porque tu cuerpo te deja, y Kěyǐ es porque te dieron permiso."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el poder correcto para cada situación.",
+      "questions": [
+        { "id": "zh-b1-55-q1", "type": "quiz_choice", "question": "Regla General: ¿Por qué en chino hay tres formas de decir 'Poder'?", "options": ["Porque dividen el 'poder' en Habilidad (Huì), Capacidad Física/Circunstancia (Néng) y Permiso (Kěyǐ).", "Porque depende si es mañana, tarde o noche.", "Porque una es para hombres, otra para mujeres y otra para niños.", "Porque es para distinguir entre pasado, presente y futuro."], "correct_answer": "Porque dividen el 'poder' en Habilidad (Huì), Capacidad Física/Circunstancia (Néng) y Permiso (Kěyǐ).", "explanation": "El mandarín es extremadamente específico respecto al ORIGEN de tu poder para hacer algo." },
+        { "id": "zh-b1-55-q2", "type": "quiz_choice", "question": "¿Qué verbo usas para 'Yo puedo/sé conducir'?", "options": ["Wǒ huì kāi chē (我会开车).", "Wǒ néng kāi chē (我能开车).", "Wǒ kěyǐ kāi chē (我可以开车).", "Wǒ yào kāi chē (我要开车)."], "correct_answer": "Wǒ huì kāi chē (我会开车).", "explanation": "Conducir es una habilidad aprendida, por lo tanto requiere Huì." },
+        { "id": "zh-b1-55-q3", "type": "quiz_choice", "question": "¿Qué verbo usas para decir 'Hoy estoy enfermo, no puedo ir'?", "options": ["Bù néng qù (不能去).", "Bú huì qù (不会去).", "Bù kěyǐ qù (不可以去).", "Bù yīnggāi qù (不应该去)."], "correct_answer": "Bù néng qù (不能去).", "explanation": "No has olvidado CÓMO ir (habilidad), ni te lo han prohibido (permiso). Físicamente no tienes la capacidad hoy. Usa Néng." },
+        { "id": "zh-b1-55-q4", "type": "quiz_choice", "question": "Estás en clase y necesitas salir al baño. Levantas la mano. ¿Qué verbo usas para pedir permiso?", "options": ["Kěyǐ (可以).", "Néng (能).", "Huì (会).", "Děi (得)."], "correct_answer": "Kěyǐ (可以).", "explanation": "Kěyǐ se usa exclusivamente para pedir o conceder permisos y autorizaciones." },
+        { "id": "zh-b1-55-q5", "type": "quiz_choice", "question": "Traduce esta autorización: 'Nǐ kěyǐ huí jiā le' (你可以回家了).", "options": ["Puedes volver a casa (Tienes permiso de irte ya).", "Sabes volver a casa.", "Tú físicamente puedes volver a casa.", "Tú tienes que volver a casa."], "correct_answer": "Puedes volver a casa (Tienes permiso de irte ya).", "explanation": "Tú (nǐ) + tienes permiso de (kěyǐ) + volver a casa (huí jiā) + ya/cambio (le)." },
+        { "id": "zh-b1-55-q6", "type": "quiz_choice", "question": "Traduce tu talento: 'Wǒ huì zuò fàn' (我会做饭).", "options": ["Yo sé cocinar.", "Yo tengo permiso de cocinar.", "Yo físicamente puedo cocinar mucho.", "Yo no sé cocinar."], "correct_answer": "Yo sé cocinar.", "explanation": "Huì + cocinar. Es una habilidad que aprendiste." },
+        { "id": "zh-b1-55-q7", "type": "quiz_choice", "question": "Si alguien dice 'Wǒ bù néng hē chá' (我不能喝茶), ¿qué está indicando más probablemente?", "options": ["Que no puede beber té por una circunstancia física (ej. le hace daño al estómago o es alérgico).", "Que nunca aprendió a tragar té.", "Que el gobierno le prohibió beber té.", "Que no le gusta el té."], "correct_answer": "Que no puede beber té por una circunstancia física (ej. le hace daño al estómago o es alérgico).", "explanation": "Bù néng indica incapacidad física o circunstancial." },
+        { "id": "zh-b1-55-q8", "type": "quiz_choice", "question": "¿Qué significa 'Bù kěyǐ' (不可以) en un cartel en la pared?", "options": ["No permitido / Prohibido.", "No sé hacerlo.", "No puedo porque estoy cansado.", "No tengo que hacerlo."], "correct_answer": "No permitido / Prohibido.", "explanation": "Negar Kěyǐ significa revocar el permiso, es decir, prohibir." },
+        { "id": "zh-b1-55-q9", "type": "quiz_choice", "question": "Si un amigo te invita a cenar hoy pero tú tienes mucho trabajo en la oficina. Le dices 'Hoy no puedo ir'. ¿Cuál usas?", "options": ["Bù néng qù (不能去) - Por las circunstancias.", "Bú huì qù (不会去).", "Bù kěyǐ qù (不可以去).", "Bù děi qù (不得去)."], "correct_answer": "Bù néng qù (不能去) - Por las circunstancias.", "explanation": "La falta de tiempo es una circunstancia limitante, igual que la falta de fuerza física. Se usa Néng." },
+        { "id": "zh-b1-55-q10", "type": "quiz_choice", "question": "Repaso de B1: Identifica las 3 formas en la oración: 'Wǒ _ lái' (yo no pude venir), 'Wǒ _ shuō' (yo sé hablar), 'Wǒ _ jìn ma?' (¿puedo entrar?).", "options": ["1. bù néng, 2. huì, 3. kěyǐ.", "1. bù kěyǐ, 2. néng, 3. huì.", "1. bú huì, 2. néng, 3. kěyǐ.", "1. kěyǐ, 2. huì, 3. néng."], "correct_answer": "1. bù néng, 2. huì, 3. kěyǐ.", "explanation": "No poder por circunstancias (néng), saber por habilidad (huì), pedir permiso (kěyǐ)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe los verbos modales del poder. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-b1-55-f1", "type": "fill_input", "question": "Poder (Habilidad Aprendida): ____ (hui)", "correct_answer": "hui", "explanation": "hui" },
+        { "id": "zh-b1-55-f2", "type": "fill_input", "question": "Yo sé conducir: wo ____ kai che", "correct_answer": "hui", "explanation": "hui" },
+        { "id": "zh-b1-55-f3", "type": "fill_input", "question": "Poder (Capacidad Física / Circunstancia): ____ (neng)", "correct_answer": "neng", "explanation": "neng" },
+        { "id": "zh-b1-55-f4", "type": "fill_input", "question": "Hoy no puedo ir: jin tian wo bu ____ qu", "correct_answer": "neng", "explanation": "neng" },
+        { "id": "zh-b1-55-f5", "type": "fill_input", "question": "Poder (Permiso / Autorización): ke ____ (yi)", "correct_answer": "yi", "explanation": "yi" },
+        { "id": "zh-b1-55-f6", "type": "fill_input", "question": "Poder (Permiso completo): ____ yi (ke)", "correct_answer": "ke", "explanation": "ke" },
+        { "id": "zh-b1-55-f7", "type": "fill_input", "question": "¿Puedo entrar?: wo ____ yi jin ma", "correct_answer": "ke", "explanation": "ke" },
+        { "id": "zh-b1-55-f8", "type": "fill_input", "question": "Prohibido (No se puede): bu ke ____", "correct_answer": "yi", "explanation": "yi" },
+        { "id": "zh-b1-55-f9", "type": "fill_input", "question": "Él no sabe hablar chino: ta bu ____ shuo han yu", "correct_answer": "hui", "explanation": "hui" },
+        { "id": "zh-b1-55-f10", "type": "fill_input", "question": "Tú puedes volver a casa (permiso): ni ke yi hui ____ (jia)", "correct_answer": "jia", "explanation": "jia" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha atentamente. ¿Es habilidad, capacidad física o permiso?",
+      "questions": [
+        { "id": "zh-b1-55-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "会", "options": ["Habilidad aprendida", "Capacidad Física", "Permiso", "Tener que"], "correct_answer": "Habilidad aprendida", "explanation": "El audio dice: Huì." },
+        { "id": "zh-b1-55-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "能", "options": ["Capacidad Física/Circunstancia", "Habilidad", "Permiso", "Debería"], "correct_answer": "Capacidad Física/Circunstancia", "explanation": "El audio dice: Néng." },
+        { "id": "zh-b1-55-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "可以", "options": ["Permiso / Autorización", "Habilidad", "Capacidad", "Pasado"], "correct_answer": "Permiso / Autorización", "explanation": "El audio dice: Kěyǐ." },
+        { "id": "zh-b1-55-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我不能去", "options": ["Yo no puedo ir (por circunstancia física)", "Yo no sé ir (habilidad)", "Yo no tengo permiso de ir", "Yo no tengo que ir"], "correct_answer": "Yo no puedo ir (por circunstancia física)", "explanation": "El audio dice: Wǒ bù néng qù." },
+        { "id": "zh-b1-55-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "不可以", "options": ["No permitido (Prohibido)", "No puedo físicamente", "No sé hacerlo", "No debo"], "correct_answer": "No permitido (Prohibido)", "explanation": "El audio dice: Bù kěyǐ." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Power Modals",
+      "pairs": [
+        {"id": "zh-b1-55-p1", "source": "会 (huì)", "target": "Poder (Saber, Habilidad Aprendida)"},
+        {"id": "zh-b1-55-p2", "source": "能 (néng)", "target": "Poder (Capacidad Física, Circunstancia)"},
+        {"id": "zh-b1-55-p3", "source": "可以 (kěyǐ)", "target": "Poder (Permiso, Autorización)"},
+        {"id": "zh-b1-55-p4", "source": "我会开车 (wǒ huì kāi chē)", "target": "Yo sé conducir"},
+        {"id": "zh-b1-55-p5", "source": "我不能去 (wǒ bù néng qù)", "target": "No puedo ir (estoy enfermo u ocupado)"},
+        {"id": "zh-b1-55-p6", "source": "我可以去吗？(wǒ kěyǐ qù ma?)", "target": "¿Puedo ir? (¿Me das permiso?)"},
+        {"id": "zh-b1-55-p7", "source": "不可以 (bù kěyǐ)", "target": "Prohibido / No se permite"},
+        {"id": "zh-b1-55-p8", "source": "得 (děi)", "target": "Tener que (Obligación ineludible)"},
+        {"id": "zh-b1-55-p9", "source": "应该 (yīnggāi)", "target": "Debería (Consejo / Moral)"},
+        {"id": "zh-b1-55-p10", "source": "想 (xiǎng)", "target": "Me gustaría / Pensar"}
+      ]
+    }
+  ]
+}

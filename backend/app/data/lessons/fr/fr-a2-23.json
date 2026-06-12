@@ -1,565 +1,94 @@
 {
   "id": "fr-a2-23",
-  "title": "En el Banco",
+  "title": "L'Ordre des Pronoms",
+  "version": "4.0-ARTISAN",
   "level": "A2",
-  "description": "Transacciones y pagos simples.",
-  "total_xp": 300,
-  "difficulty": "easy",
-  "tags": [
-    "a2",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Pronouns", "COD", "COI", "Order"],
+  "completion_message": "¡Felicidades! Has dominado la estructura más avanzada del nivel A2. Poder usar dos pronombres juntos ('Se lo doy') te hace sonar como un auténtico nativo.",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: En el Banco",
+      "title": "Se Lo Doy (A2)",
       "parts": [
         {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau A2 • Leçon A2-23 de 200\nSujet: En el Banco\n\nConcept Clé:\n☞ 'BANQUE'\n\n[Point Grammatical - Enfoque Gramatical]\n- Le passé composé avec l'auxiliaire avoir et être (ex: 'nous avons reçu banque').\\n- Les adjectifs possessifs (mon, ton, son, notre, votre, leur).\\n- Clé Didactique : Raconter des événements passés et des activités de bureau quotidiennes.",
-          "audio": "Bienvenue à la leçon A2-23 sur En el Banco. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : banque."
+          "visual": "¿Qué pasa cuando tenemos un objeto directo (lo/la/los) y un objeto indirecto (a él/a ellos) en la misma frase?\n\nEn español decimos: Yo SE LO doy.\nEn francés, cuando hablamos de la 3ra persona (lui, leur), el objeto directo (le, la, les) SIEMPRE VA PRIMERO.\n\nLa regla de oro es:\nSujeto + [LE/LA/LES] + [LUI/LEUR] + Verbo.\n\nEjemplo 1 (El libro -> a él):\n- Je donne LE LIVRE à PAUL.\n- Je LE LUI donne. (Yo se lo doy).",
+          "audio": "Ya sabemos usar 'Le' para decir 'Lo', y 'Lui' para decir 'A él'. Pero, ¿qué pasa cuando queremos decir 'Yo se lo doy'? Es decir, mezclar ambos pronombres en la misma frase. Aquí los franceses tienen una regla estricta: cuando ambos pronombres son de la tercera persona, el pronombre directo, es decir 'Lo' o 'La', siempre se escribe PRIMERO. Después escribimos 'Lui' o 'Leur', y finalmente el verbo. Así que, para decir 'Yo se lo doy', decimos literalmente 'Yo lo a él doy': Je LE LUI donne."
         },
         {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'banque' (Traducción/Uso: Transacciones y pagos simples.)\n- Application Pratique : 'Nous devons intégrer banque pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : La lettre 'e' finale dans 'banque' est généralement muette.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : banque. Répétez après moi : banque."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Au niveau A2, la ponctualité est essentielle en France; arriver 5 minutes avant l'heure démontre du professionnalisme.\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
+          "visual": "Veamos más ejemplos con esta estructura: [Sujeto] + [LE/LA/LES] + [LUI/LEUR] + [Verbo].\n\nEjemplo 2 (La manzana -> a ella):\n- Je donne LA POMME à MARIE.\n- Je LA LUI donne. (Yo se la doy).\n\nEjemplo 3 (Los libros -> a ellos):\n- Je donne LES LIVRES aux ENFANTS.\n- Je LES LEUR donne. (Yo se los doy a ellos).\n\nEjemplo 4 (La verdad -> a ellos):\n- Je dis LA VÉRITÉ aux PARENTS.\n- Je LA LEUR dis. (Yo se la digo a ellos).",
+          "audio": "Veamos otro ejemplo. Imagina que vas a darle 'La manzana' a 'María'. La manzana es femenino, así que usamos LA. María es a ella, así que usamos LUI. Como el objeto directo siempre va primero, la frase será: Je LA LUI donne. Que significa 'Yo se la doy'. Y si son varios libros, dices LES. Y si se los das a los niños, dices LEUR. Todo junto sería: Je LES LEUR donne. Memoriza esta canción: primero Le-La-Les, y luego Lui-Leur."
         }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el orden correcto de los pronombres (Directo + Indirecto).",
       "questions": [
-        {
-          "id": "fr-a2-23-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"banque\" dans le contexte de \"En el Banco\" ?",
-          "options": [
-            "Le concept professionnel principal de banque utilisé dans En el Banco.",
-            "Un terme familier à éviter dans En el Banco.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans En el Banco."
-          ],
-          "correct_answer": "Le concept professionnel principal de banque utilisé dans En el Banco.",
-          "explanation": "Comprendre la définition de \"banque\" est fondamental pour maîtriser \"En el Banco\"."
-        },
-        {
-          "id": "fr-a2-23-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"banque\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"En el Banco\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"banque\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"En el Banco\" aux parties prenantes.",
-          "explanation": "Aborder \"banque\" dans les présentations professionnelles améliore la communication globale concernant \"En el Banco\"."
-        },
-        {
-          "id": "fr-a2-23-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"En el Banco\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"banque\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"banque\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"banque\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"banque\" sont los piliers d'une exécution réussie de \"En el Banco\"."
-        },
-        {
-          "id": "fr-a2-23-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"En el Banco\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"banque\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"banque\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"banque\" conduit souvent à des résultats inefficaces dans \"En el Banco\"."
-        },
-        {
-          "id": "fr-a2-23-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"banque\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"banque\" adapté à l'environnement de \"En el Banco\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"banque\" adapté à l'environnement de \"En el Banco\".",
-          "explanation": "Traduire ou adapter \"banque\" nécessite de comprendre son application commerciale pratique dans \"En el Banco\"."
-        },
-        {
-          "id": "fr-a2-23-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"banque\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"En el Banco\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"En el Banco\".",
-          "explanation": "Utiliser \"banque\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-a2-23-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"En el Banco\", comment un cadre doit-il présenter \"banque\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"banque\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-a2-23-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"banque\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"banque\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"banque\".",
-          "explanation": "Définir les jalons liés à \"banque\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-a2-23-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"En el Banco\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"banque\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"banque\".",
-          "explanation": "Les mots professionnels comme \"banque\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-a2-23-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"banque\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"banque\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "fra2-23-q1", "type": "quiz_choice", "question": "¿En qué orden se colocan los pronombres de tercera persona en francés?", "options": ["Primero el directo (le/la/les), luego el indirecto (lui/leur)", "Primero el indirecto (lui/leur), luego el directo (le/la/les)", "No importa el orden", "Uno antes del verbo y otro después"], "correct_answer": "Primero el directo (le/la/les), luego el indirecto (lui/leur)", "explanation": "La regla es: Sujeto + Le/La/Les + Lui/Leur + Verbo." },
+        { "id": "fra2-23-q2", "type": "quiz_choice", "question": "Je donne le stylo à Paul. (Le stylo = le, à Paul = lui). ¿Cómo queda?", "options": ["Je le lui donne", "Je lui le donne", "Je donne le lui", "Je le donne lui"], "correct_answer": "Je le lui donne", "explanation": "Primero LE, luego LUI." },
+        { "id": "fra2-23-q3", "type": "quiz_choice", "question": "Je prête la voiture à Marie. (La voiture = la, à Marie = lui). ¿Cómo queda?", "options": ["Je la lui prête", "Je lui la prête", "Je prête la lui", "Je la prête lui"], "correct_answer": "Je la lui prête", "explanation": "Primero LA, luego LUI." },
+        { "id": "fra2-23-q4", "type": "quiz_choice", "question": "Il donne les bonbons aux enfants. (Les bonbons = les, aux enfants = leur). ¿Cómo queda?", "options": ["Il les leur donne", "Il leur les donne", "Il donne les leur", "Il les donne leur"], "correct_answer": "Il les leur donne", "explanation": "Primero LES, luego LEUR." },
+        { "id": "fra2-23-q5", "type": "quiz_choice", "question": "Tu montres la photo à Sophie. (La photo = la, à Sophie = lui).", "options": ["Tu la lui montres", "Tu lui la montres", "Tu la montres lui", "Tu montres la lui"], "correct_answer": "Tu la lui montres", "explanation": "Primero LA, luego LUI." },
+        { "id": "fra2-23-q6", "type": "quiz_choice", "question": "Nous envoyons le message aux clients. (Le message = le, aux clients = leur).", "options": ["Nous le leur envoyons", "Nous leur le envoyons", "Nous l'envoyons leur", "Nous leur l'envoyons"], "correct_answer": "Nous le leur envoyons", "explanation": "Primero LE, luego LEUR." },
+        { "id": "fra2-23-q7", "type": "quiz_choice", "question": "Je dis la vérité à ma mère. (La vérité = la, à ma mère = lui).", "options": ["Je la lui dis", "Je lui la dis", "Je la dis lui", "Je dis la lui"], "correct_answer": "Je la lui dis", "explanation": "Primero LA, luego LUI." },
+        { "id": "fra2-23-q8", "type": "quiz_choice", "question": "¿Qué significa 'Je les lui donne'?", "options": ["Yo se los doy (a él/ella)", "Yo se lo doy (a ellos)", "Yo les doy algo", "Yo se las doy (a ellos)"], "correct_answer": "Yo se los doy (a él/ella)", "explanation": "LES (los) + LUI (a él/ella)." },
+        { "id": "fra2-23-q9", "type": "quiz_choice", "question": "¿Qué significa 'Je le leur montre'?", "options": ["Yo se lo muestro (a ellos/ellas)", "Yo se los muestro (a él/ella)", "Yo se la muestro", "Ellos me lo muestran"], "correct_answer": "Yo se lo muestro (a ellos/ellas)", "explanation": "LE (lo) + LEUR (a ellos/ellas)." },
+        { "id": "fra2-23-q10", "type": "quiz_choice", "question": "¿Es correcta la frase 'Je lui le donne'?", "options": ["No, el orden es incorrecto (Debe ser: Je le lui donne)", "Sí, es correcta", "Sí, pero solo en plural"], "correct_answer": "No, el orden es incorrecto (Debe ser: Je le lui donne)", "explanation": "Para la 3ra persona, el directo (le/la) siempre va ANTES del indirecto (lui/leur)." },
+        { "id": "fra2-23-q11", "type": "quiz_choice", "question": "Il explique le problème au directeur. (Le problème = le, au directeur = lui).", "options": ["Il le lui explique", "Il lui le explique", "Il l'explique lui", "Il le explique lui"], "correct_answer": "Il le lui explique", "explanation": "Primero LE, luego LUI." },
+        { "id": "fra2-23-q12", "type": "quiz_choice", "question": "Elle vend sa maison aux voisins. (La maison = la, aux voisins = leur).", "options": ["Elle la leur vend", "Elle leur la vend", "Elle la vend leur", "Elle vend la leur"], "correct_answer": "Elle la leur vend", "explanation": "Primero LA, luego LEUR." },
+        { "id": "fra2-23-q13", "type": "quiz_choice", "question": "Vous offrez les fleurs à votre femme. (Les fleurs = les, à votre femme = lui).", "options": ["Vous les lui offrez", "Vous lui les offrez", "Vous les offrez lui", "Vous offrez les lui"], "correct_answer": "Vous les lui offrez", "explanation": "Primero LES, luego LUI." },
+        { "id": "fra2-23-q14", "type": "quiz_choice", "question": "¿Dónde se colocan ambos pronombres juntos?", "options": ["Inmediatamente antes del verbo", "Al final de la frase", "Después del verbo", "Separados por el verbo"], "correct_answer": "Inmediatamente antes del verbo", "explanation": "Los dos pronombres van pegados justo antes del verbo." },
+        { "id": "fra2-23-q15", "type": "quiz_choice", "question": "Je raconte l'histoire aux enfants. (L'histoire = la, aux enfants = leur).", "options": ["Je la leur raconte", "Je leur la raconte", "Je la raconte leur", "Je l'leur raconte"], "correct_answer": "Je la leur raconte", "explanation": "Primero LA, luego LEUR." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe los dos pronombres en el orden correcto (ej: le lui, la leur, les lui).",
       "questions": [
-        {
-          "id": "fr-a2-23-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"banque\" (Exercice 1) :",
-          "parts": [
-            "notre",
-            "banque",
-            "pendant",
-            "les",
-            "réunions.",
-            "Nous",
-            "utilisons"
-          ],
-          "correct_order": [
-            "Nous",
-            "utilisons",
-            "notre",
-            "banque",
-            "pendant",
-            "les",
-            "réunions."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"banque\"."
-        },
-        {
-          "id": "fr-a2-23-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"banque\" (Exercice 2) :",
-          "parts": [
-            "banque",
-            "pour",
-            "le",
-            "projet.",
-            "Voici",
-            "notre"
-          ],
-          "correct_order": [
-            "Voici",
-            "notre",
-            "banque",
-            "pour",
-            "le",
-            "projet."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"banque\"."
-        },
-        {
-          "id": "fr-a2-23-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"banque\" (Exercice 3) :",
-          "parts": [
-            "vérifier",
-            "notre",
-            "banque",
-            "ce",
-            "matin.",
-            "Je",
-            "dois"
-          ],
-          "correct_order": [
-            "Je",
-            "dois",
-            "vérifier",
-            "notre",
-            "banque",
-            "ce",
-            "matin."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"banque\"."
-        },
-        {
-          "id": "fr-a2-23-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"banque\" (Exercice 4) :",
-          "parts": [
-            "votre",
-            "banque",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît.",
-            "Veuillez",
-            "présenter"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "présenter",
-            "votre",
-            "banque",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"banque\"."
-        },
-        {
-          "id": "fr-a2-23-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"banque\" (Exercice 5) :",
-          "parts": [
-            "apprécie",
-            "chaque",
-            "banque",
-            "de",
-            "bureau.",
-            "Notre",
-            "équipe"
-          ],
-          "correct_order": [
-            "Notre",
-            "équipe",
-            "apprécie",
-            "chaque",
-            "banque",
-            "de",
-            "bureau."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"banque\"."
-        },
-        {
-          "id": "fr-a2-23-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"banque\" (Exercice 6) :",
-          "parts": [
-            "notre",
-            "banque",
-            "avant",
-            "midi",
-            "?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "notre",
-            "banque",
-            "avant",
-            "midi",
-            "?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"banque\"."
-        },
-        {
-          "id": "fr-a2-23-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"banque\" (Exercice 7) :",
-          "parts": [
-            "organiser",
-            "notre",
-            "banque",
-            "cette",
-            "semaine.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "organiser",
-            "notre",
-            "banque",
-            "cette",
-            "semaine."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"banque\"."
-        },
-        {
-          "id": "fr-a2-23-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"banque\" (Exercice 8) :",
-          "parts": [
-            "statut",
-            "de",
-            "notre",
-            "banque",
-            "ensemble.",
-            "Examinons",
-            "le"
-          ],
-          "correct_order": [
-            "Examinons",
-            "le",
-            "statut",
-            "de",
-            "notre",
-            "banque",
-            "ensemble."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"banque\"."
-        },
-        {
-          "id": "fr-a2-23-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"banque\" (Exercice 9) :",
-          "parts": [
-            "améliorer",
-            "notre",
-            "banque",
-            "de",
-            "travail.",
-            "Ils",
-            "souhaitent"
-          ],
-          "correct_order": [
-            "Ils",
-            "souhaitent",
-            "améliorer",
-            "notre",
-            "banque",
-            "de",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"banque\"."
-        },
-        {
-          "id": "fr-a2-23-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"banque\" (Exercice 10) :",
-          "parts": [
-            "avec",
-            "notre",
-            "banque",
-            "tous",
-            "les",
-            "jours.",
-            "Elle",
-            "travaille"
-          ],
-          "correct_order": [
-            "Elle",
-            "travaille",
-            "avec",
-            "notre",
-            "banque",
-            "tous",
-            "les",
-            "jours."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"banque\"."
-        }
+        { "id": "fra2-23-f1", "type": "fill_input", "question": "Je donne le stylo à Paul -> Je ____ donne.", "correct_answer": "le lui", "explanation": "le lui" },
+        { "id": "fra2-23-f2", "type": "fill_input", "question": "Je donne la pomme à Paul -> Je ____ donne.", "correct_answer": "la lui", "explanation": "la lui" },
+        { "id": "fra2-23-f3", "type": "fill_input", "question": "Je donne les livres à Paul -> Je ____ donne.", "correct_answer": "les lui", "explanation": "les lui" },
+        { "id": "fra2-23-f4", "type": "fill_input", "question": "Je donne le stylo aux amis -> Je ____ donne.", "correct_answer": "le leur", "explanation": "le leur" },
+        { "id": "fra2-23-f5", "type": "fill_input", "question": "Je donne la pomme aux amis -> Je ____ donne.", "correct_answer": "la leur", "explanation": "la leur" },
+        { "id": "fra2-23-f6", "type": "fill_input", "question": "Je donne les livres aux amis -> Je ____ donne.", "correct_answer": "les leur", "explanation": "les leur" },
+        { "id": "fra2-23-f7", "type": "fill_input", "question": "Il montre la lettre au chef -> Il ____ montre.", "correct_answer": "la lui", "explanation": "la lui" },
+        { "id": "fra2-23-f8", "type": "fill_input", "question": "Elle vend sa maison aux clients -> Elle ____ vend.", "correct_answer": "la leur", "explanation": "la leur" },
+        { "id": "fra2-23-f9", "type": "fill_input", "question": "Nous envoyons le message à Sophie -> Nous ____ envoyons.", "correct_answer": "le lui", "explanation": "le lui" },
+        { "id": "fra2-23-f10", "type": "fill_input", "question": "Vous offrez les fleurs à Marie -> Vous ____ offrez.", "correct_answer": "les lui", "explanation": "les lui" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-a2-23-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"banque\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"banque\" en détail.",
-            "Une autre déclaration sur notre \"banque\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"banque\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"banque\" en réunion."
-        },
-        {
-          "id": "fr-a2-23-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"banque\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"banque\" ?",
-            "Une autre déclaration sur notre \"banque\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"banque\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"banque\" en réunion."
-        },
-        {
-          "id": "fr-a2-23-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"banque\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"banque\" cette année.",
-            "Une autre déclaration sur notre \"banque\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"banque\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"banque\" en réunion."
-        },
-        {
-          "id": "fr-a2-23-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"banque\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"banque\".",
-            "Une autre déclaration sur notre \"banque\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"banque\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"banque\" en réunion."
-        },
-        {
-          "id": "fr-a2-23-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"banque\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"banque\".",
-            "Une autre déclaration sur notre \"banque\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"banque\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"banque\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Synthesis Match",
+      "pairs": [
+        {"id": "fra2-23-p1", "source": "Je le lui donne", "target": "Yo se lo doy (A él/ella)"},
+        {"id": "fra2-23-p2", "source": "Je la lui donne", "target": "Yo se la doy (A él/ella)"},
+        {"id": "fra2-23-p3", "source": "Je les lui donne", "target": "Yo se los/las doy (A él/ella)"},
+        {"id": "fra2-23-p4", "source": "Je le leur donne", "target": "Yo se lo doy (A ellos/ellas)"},
+        {"id": "fra2-23-p5", "source": "Je la leur donne", "target": "Yo se la doy (A ellos/ellas)"},
+        {"id": "fra2-23-p6", "source": "Je les leur donne", "target": "Yo se los doy (A ellos/ellas)"},
+        {"id": "fra2-23-p7", "source": "Il le lui explique", "target": "Él se lo explica (A él/ella)"},
+        {"id": "fra2-23-p8", "source": "Il le leur explique", "target": "Él se lo explica (A ellos)"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y distingue qué se está dando y a quién.",
       "questions": [
-        {
-          "id": "fr-a2-23-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"ban___\" (Indice : désigne \"banque\")",
-          "correct_answers": [
-            "banque",
-            "Banque"
-          ],
-          "hints": [
-            "Commence par 'ban'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"banque\"."
-        },
-        {
-          "id": "fr-a2-23-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"L'équipe veut discuter de notre banque ____ lundi matin.\" (le / en)",
-          "correct_answers": [
-            "le"
-          ],
-          "hints": [
-            "Article défini utilisé devant les jours de la semaine"
-          ],
-          "explanation": "En français, on utilise l'article défini 'le' devant un jour de la semana pour indiquer un rendez-vous habituel ou fixe."
-        },
-        {
-          "id": "fr-a2-23-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Veuillez ____ attention à ne pas faire d'erreur sur notre banque.\" (faire / prendre)",
-          "correct_answers": [
-            "faire",
-            "Faire"
-          ],
-          "hints": [
-            "Verbe signifiant effectuer ou prêter attention"
-          ],
-          "explanation": "L'expression 'faire attention' est une collocation standard en français."
-        },
-        {
-          "id": "fr-a2-23-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons organiser une ____ pour revoir notre banque.\" (réunion / carte)",
-          "correct_answers": [
-            "réunion",
-            "discussion",
-            "session"
-          ],
-          "hints": [
-            "Un rassemblement de personnes pour travailler ensemble"
-          ],
-          "explanation": "Une 'réunion' est le terme standard pour un meeting professionnel."
-        },
-        {
-          "id": "fr-a2-23-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Il nous faut un rapport ____ sur le statut de notre banque.\" (clair / lent)",
-          "correct_answers": [
-            "clair"
-          ],
-          "hints": [
-            "Facile à comprendre et bien structuré"
-          ],
-          "explanation": "Un rapport 'clair' est indispensable pour assurer l'alignement."
-        }
+        { "id": "fra2-23-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je le lui donne", "options": ["Je le lui donne", "Je la lui donne", "Je les lui donne", "Je le leur donne"], "correct_answer": "Je le lui donne", "explanation": "Audio dice: Je le lui donne." },
+        { "id": "fra2-23-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je la leur donne", "options": ["Je la leur donne", "Je la lui donne", "Je le leur donne", "Je les leur donne"], "correct_answer": "Je la leur donne", "explanation": "Audio dice: Je la leur donne." },
+        { "id": "fra2-23-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je les lui montre", "options": ["Je les lui montre", "Je les leur montre", "Je le lui montre", "Je la lui montre"], "correct_answer": "Je les lui montre", "explanation": "Audio dice: Je les lui montre." },
+        { "id": "fra2-23-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Nous le leur envoyons", "options": ["Nous le leur envoyons", "Nous le lui envoyons", "Nous la leur envoyons", "Nous les leur envoyons"], "correct_answer": "Nous le leur envoyons", "explanation": "Audio dice: Nous le leur envoyons." },
+        { "id": "fra2-23-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Tu la lui donnes", "options": ["Tu la lui donnes", "Tu le lui donnes", "Tu la leur donnes", "Tu les lui donnes"], "correct_answer": "Tu la lui donnes", "explanation": "Audio dice: Tu la lui donnes." }
       ]
     }
   ]

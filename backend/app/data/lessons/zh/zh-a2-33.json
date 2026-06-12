@@ -1,0 +1,92 @@
+{
+  "id": "zh-a2-33",
+  "title": "Yo Quiero",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Verbs", "Grammar", "Desires"],
+  "completion_message": "¡Lo quieres, lo tienes! El verbo 'yào' es tu arma secreta para ordenar comida, pedir cosas y expresar tus planes futuros.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Verbo de la Voluntad",
+      "parts": [
+        {
+          "visual": "Querer: 要 (yào)\n\nEn el nivel A1 aprendiste 'gustar' (喜欢 xǐhuan). Ahora aprenderás el verbo más directo y útil para sobrevivir en China: Querer.\n- Querer / Necesitar / Voy a: 要 (yào - 4to tono).\n\nUso 1: Querer un objeto directo (Perfecto para restaurantes o tiendas).\n- Quiero té: 我要茶 (Wǒ yào chá).\n- Quiero esto: 我要这个 (Wǒ yào zhè ge).\n\nUso 2: Querer HACER algo (Funciona como un verbo auxiliar que indica intención futura o deseo fuerte).\n- Quiero ir a China / Voy a ir a China: 我要去中国 (Wǒ yào qù Zhōngguó).",
+          "audio": "Hasta ahora sabes decir qué te gusta. Pero cuando vas a un restaurante, no dices 'Me gusta el arroz', dices 'Quiero arroz'. La palabra para expresar un deseo fuerte, una necesidad o una intención inminente es 'yào'. Cuarto tono, fuerte y seco. Yào. Si estás en una tienda y quieres comprar algo, simplemente señalas y dices: 'Wǒ yào zhè ge'. Yo quiero esto. Yào también sirve para acciones. Si dices 'Wǒ yào qù Zhōngguó', no solo estás diciendo 'Quiero ir a China', también suena como un plan firme: 'Voy a ir a China'. Es un verbo con mucha voluntad."
+        },
+        {
+          "visual": "Negar el deseo: 不要 (bú yào)\n\n¡ALERTA CAMALEÓN! 🦎\nRecuerda la regla de oro del A1: Si la negación 不 (bù - 4to tono) choca con otro 4to tono (como yào), el 'bù' se transforma en 2do tono (bú).\n\n- No quiero: 不要 (bú yào). NUNCA 'bù yào'.\n\nUso 3: Dar órdenes negativas (¡No lo hagas!).\nEn chino, 'bú yào' también significa 'No (hagas algo)'.\n- Por favor no vayas: 请不要去 (Qǐng bú yào qù).\n- ¡No hables! / ¡No lo digas!: 不要说 (Bú yào shuō).",
+          "audio": "Ahora, ¿cómo decimos que no queremos algo? Aquí regresa nuestro viejo amigo del nivel A1: el camaleón de los tonos. La negación para el presente es 'bù', que es cuarto tono. Y la palabra querer, 'yào', también es cuarto tono. Si los juntas, chocan. Por lo tanto, el 'bù' muta al segundo tono. Se pronuncia 'bú yào'. No quiero. Wǒ bú yào. Pero espera, hay un truco extra. En chino, 'bú yào' también se usa como una orden imperativa negativa. Si le dices a alguien 'bú yào qù', no significa 'no quiero ir', significa '¡NO VAYAS!'. Es una orden directa."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que sabes cómo pedir lo que quieres y rechazar lo que no.",
+      "questions": [
+        { "id": "zh-a2-33-q1", "type": "quiz_choice", "question": "¿Qué significa el verbo 要 (yào)?", "options": ["Querer / Necesitar / Ir a (intención).", "Gustar.", "Tener.", "Ser."], "correct_answer": "Querer / Necesitar / Ir a (intención).", "explanation": "Yào es un verbo fuerte que expresa voluntad, deseo u obligación inminente." },
+        { "id": "zh-a2-33-q2", "type": "quiz_choice", "question": "Estás en un restaurante. ¿Cuál es la forma más natural de decir 'Quiero esto'?", "options": ["Wǒ yào zhè ge (我要这个).", "Wǒ xǐhuan zhè ge (我喜欢这个).", "Wǒ qù zhè ge (我去这个).", "Wǒ yào qù zhè ge (我要去这个)."], "correct_answer": "Wǒ yào zhè ge (我要这个).", "explanation": "Yo (Wǒ) + quiero (yào) + esto / esta unidad (zhè ge)." },
+        { "id": "zh-a2-33-q3", "type": "quiz_choice", "question": "Gramática de verbos auxiliares: ¿Cómo se dice 'Quiero beber té'?", "options": ["Wǒ yào hē chá (我要喝茶).", "Wǒ hē chá yào (我喝茶要).", "Yào wǒ hē chá (要我喝茶).", "Wǒ yào chá hē (我要茶喝)."], "correct_answer": "Wǒ yào hē chá (我要喝茶).", "explanation": "Sujeto (Wǒ) + Auxiliar (yào) + Verbo (hē) + Objeto (chá)." },
+        { "id": "zh-a2-33-q4", "type": "quiz_choice", "question": "Alerta Camaleón: ¿Cuál es la pronunciación tonal correcta para 'No quiero' (不要)?", "options": ["Bú yào (2do tono + 4to tono).", "Bù yào (4to tono + 4to tono).", "Bù yāo (4to tono + 1er tono).", "Bú yáo (2do tono + 2do tono)."], "correct_answer": "Bú yào (2do tono + 4to tono).", "explanation": "Regla del camaleón: bù cambia a bú antes de un cuarto tono (yào)." },
+        { "id": "zh-a2-33-q5", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo no quiero ir'?", "options": ["Wǒ bú yào qù (我不要去).", "Wǒ bù qù yào (我不去要).", "Wǒ méi yào qù (我没要去).", "Bú yào wǒ qù (不要我去)."], "correct_answer": "Wǒ bú yào qù (我不要去).", "explanation": "Yo (Wǒ) + no quiero (bú yào) + ir (qù)." },
+        { "id": "zh-a2-33-q6", "type": "quiz_choice", "question": "Imperativo negativo: Si le dices a alguien 'Bú yào qù!' (不要去!), ¿qué significa en ese contexto?", "options": ["¡No vayas!", "No quiero ir.", "Él no quiere ir.", "¡No entres!"], "correct_answer": "¡No vayas!", "explanation": "Bú yào + verbo, dirigido a otra persona, funciona como una orden negativa ('Don't go')." },
+        { "id": "zh-a2-33-q7", "type": "quiz_choice", "question": "Traduce esta orden cortés: 'Qǐng bú yào chū qù' (请不要出去).", "options": ["Por favor, no salgas.", "Por favor, no entres.", "Por favor, no vayas.", "No quiero salir, por favor."], "correct_answer": "Por favor, no salgas.", "explanation": "Por favor (qǐng) + no lo hagas (bú yào) + salir alejándote (chū qù)." },
+        { "id": "zh-a2-33-q8", "type": "quiz_choice", "question": "¿Cuál es la diferencia entre 喜欢 (xǐhuan) y 要 (yào)?", "options": ["Xǐhuan expresa un gusto general o preferencia; Yào expresa un deseo inmediato de tener o hacer algo.", "Son sinónimos exactos.", "Yào es para comida, Xǐhuan es para personas.", "Yào es pasado, Xǐhuan es presente."], "correct_answer": "Xǐhuan expresa un gusto general o preferencia; Yào expresa un deseo inmediato de tener o hacer algo.", "explanation": "Te puede gustar el té (xǐhuan), pero en este momento no quieres beberlo (bú yào)." },
+        { "id": "zh-a2-33-q9", "type": "quiz_choice", "question": "Traduce: 'Tāmen dōu bú yào fàn' (他们都不要饭).", "options": ["Ninguno de ellos quiere comida.", "Todos ellos quieren comida.", "Ellos no tienen comida.", "Ellos no comen arroz."], "correct_answer": "Ninguno de ellos quiere comida.", "explanation": "Ellos (tāmen) + todos (dōu) + no quieren (bú yào) + comida/arroz (fàn). Literalmente: Todos ellos no quieren." },
+        { "id": "zh-a2-33-q10", "type": "quiz_choice", "question": "¿Cómo preguntarías '¿Tú quieres té?' (usando la partícula de pregunta Sí/No)?", "options": ["Nǐ yào chá ma? (你要茶吗？).", "Nǐ yào chá ne? (你要茶呢？).", "Nǐ xǐhuan chá ma? (你喜欢茶吗？).", "Yào nǐ chá ma? (要你茶吗？)."], "correct_answer": "Nǐ yào chá ma? (你要茶吗？).", "explanation": "Tú (nǐ) + quieres (yào) + té (chá) + partícula interrogativa (ma)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin del verbo querer. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a2-33-f1", "type": "fill_input", "question": "Querer: ____ (yao)", "correct_answer": "yao", "explanation": "yao" },
+        { "id": "zh-a2-33-f2", "type": "fill_input", "question": "Yo quiero: wo ____", "correct_answer": "yao", "explanation": "yao" },
+        { "id": "zh-a2-33-f3", "type": "fill_input", "question": "No (Cambio de tono ante 4to tono): ____ (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a2-33-f4", "type": "fill_input", "question": "No quiero: ____ yao (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a2-33-f5", "type": "fill_input", "question": "Quiero esto: wo yao zhe ____ (ge)", "correct_answer": "ge", "explanation": "ge" },
+        { "id": "zh-a2-33-f6", "type": "fill_input", "question": "Quiero beber té: wo yao he ____ (cha)", "correct_answer": "cha", "explanation": "cha" },
+        { "id": "zh-a2-33-f7", "type": "fill_input", "question": "¿Quieres?: ni yao ____ (ma)", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a2-33-f8", "type": "fill_input", "question": "Voy a ir (Quiero ir): wo yao ____ (qu)", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-a2-33-f9", "type": "fill_input", "question": "¡No vayas! (Orden): bu yao ____ (qu)", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-a2-33-f10", "type": "fill_input", "question": "Todos queremos ir: women ____ yao qu (dou)", "correct_answer": "dou", "explanation": "dou" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha e identifica los deseos y las órdenes.",
+      "questions": [
+        { "id": "zh-a2-33-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "要", "options": ["Querer", "Gustar", "Tener", "Ser"], "correct_answer": "Querer", "explanation": "El audio dice: Yào." },
+        { "id": "zh-a2-33-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我要这个", "options": ["Quiero esto", "No quiero esto", "Me gusta esto", "Quiero ir"], "correct_answer": "Quiero esto", "explanation": "El audio dice: Wǒ yào zhè ge." },
+        { "id": "zh-a2-33-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "不要", "options": ["No quiero / No lo hagas", "Quiero", "No me gusta", "No voy"], "correct_answer": "No quiero / No lo hagas", "explanation": "El audio dice: Bú yào." },
+        { "id": "zh-a2-33-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "请不要去", "options": ["Por favor no vayas", "Por favor entra", "Por favor ve", "No quiero ir"], "correct_answer": "Por favor no vayas", "explanation": "El audio dice: Qǐng bú yào qù." },
+        { "id": "zh-a2-33-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你要吗？", "options": ["¿Lo quieres?", "¿Te gusta?", "¿Vas a ir?", "¿Es tuyo?"], "correct_answer": "¿Lo quieres?", "explanation": "El audio dice: Nǐ yào ma? (¿Tú quieres?)." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Desires",
+      "pairs": [
+        {"id": "zh-a2-33-p1", "source": "要 (yào)", "target": "Querer / Intención de hacer algo"},
+        {"id": "zh-a2-33-p2", "source": "喜欢 (xǐhuan)", "target": "Gustar (Preferencia general)"},
+        {"id": "zh-a2-33-p3", "source": "不要 (bú yào)", "target": "No querer / Orden negativa (¡No!)"},
+        {"id": "zh-a2-33-p4", "source": "我要茶 (wǒ yào chá)", "target": "Quiero té"},
+        {"id": "zh-a2-33-p5", "source": "我要这个 (wǒ yào zhè ge)", "target": "Quiero esto"},
+        {"id": "zh-a2-33-p6", "source": "不要去 (bú yào qù)", "target": "¡No vayas!"},
+        {"id": "zh-a2-33-p7", "source": "我要去中国 (wǒ yào qù zhōngguó)", "target": "Quiero ir a China (Voy a ir...)"},
+        {"id": "zh-a2-33-p8", "source": "我不喜欢 (wǒ bù xǐhuan)", "target": "No me gusta"},
+        {"id": "zh-a2-33-p9", "source": "你要吗？ (nǐ yào ma?)", "target": "¿Quieres?"},
+        {"id": "zh-a2-33-p10", "source": "请不要出来 (qǐng bú yào chū lái)", "target": "Por favor no salgas (hacia mí)"}
+      ]
+    }
+  ]
+}

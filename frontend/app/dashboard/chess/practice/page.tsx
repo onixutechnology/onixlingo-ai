@@ -25,7 +25,7 @@ import {
   Sparkles
 } from 'lucide-react';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:5000';
 const FALLBACK_FEN = '3k4/8/8/3p4/8/8/8/3R2K1 w - - 0 1';
 
 type LessonData = {
@@ -93,7 +93,7 @@ function PracticeArena() {
     // Consume 10% de energía si es plan gratuito e incrementa el contador
     const { consumeEnergy, addChessPuzzle, userTier } = useUIStore.getState();
     if (userTier === 'free') {
-      consumeEnergy(20);
+      consumeEnergy(15);
       addChessPuzzle();
     }
 
@@ -316,7 +316,7 @@ function PracticeArena() {
     return null;
   }, [showGuide, lessonData]);
 
-  if (userTier === 'free' && (chessPuzzlesToday >= 5 || energy < 20)) {
+  if (userTier === 'free' && (chessPuzzlesToday >= 5 || energy < 15)) {
     return (
       <div className="min-h-screen wood-theme-bg flex items-center justify-center text-[#ecd3b5] p-6 relative overflow-hidden font-sans">
         <style>{`
@@ -335,28 +335,28 @@ function PracticeArena() {
         `}</style>
         
         <div className="wood-panel p-10 max-w-md w-full shadow-2xl rounded-none text-center relative z-10 animate-in fade-in">
-          <div className="w-16 h-16 bg-[#3c1e0a] border border-[#502b16] text-amber-500 flex items-center justify-center mx-auto mb-6">
+          <div className="w-16 h-16 bg-[#3c1e0a] border border-[#502b16] text-[#D4AF37] flex items-center justify-center mx-auto mb-6">
             <Target size={32} className="animate-pulse" />
           </div>
           <h2 className="text-xl font-serif font-black italic uppercase tracking-wider text-amber-400 mb-2">
             {chessPuzzlesToday >= 5 ? "Límite Diario de Puzzles" : "Energía Insuficiente"}
           </h2>
-          <p className="text-[10px] text-slate-350 leading-relaxed mb-8 uppercase tracking-wider">
+          <p className="text-[10px] text-slate-300 leading-relaxed mb-8 uppercase tracking-wider">
             {chessPuzzlesToday >= 5 
               ? "En el Plan Free estás limitado a resolver 5 puzzles de ajedrez al día." 
-              : `Cada puzzle de ajedrez consume 20% de energía. Tu energía actual es de ${energy}%.`}
+              : `Cada puzzle de ajedrez consume 15% de energía. Tu energía actual es de ${energy}%.`}
           </p>
           
           <div className="flex flex-col gap-3">
             <button 
               onClick={() => router.push('/dashboard/pricing')}
-              className="w-full py-4 bg-[#ecd3b5] hover:bg-[#fbf8f0] text-[#1e130c] font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none border border-[#fbf8f0] shadow-lg shadow-black/40"
+              className="w-full py-4 bg-[#ecd3b5] hover:bg-[#fbf8f0] text-[#1e130c] font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none border border-[#fbf8f0] shadow-none shadow-black/40"
             >
               Subir a Pro / Executive
             </button>
             <button 
               onClick={() => router.push('/dashboard/chess')}
-              className="w-full py-3 border border-[#502b16] bg-transparent text-slate-450 hover:text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none"
+              className="w-full py-3 border border-[#502b16] bg-transparent text-slate-500 hover:text-slate-900 font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none"
             >
               Volver al Menú
             </button>
@@ -368,7 +368,7 @@ function PracticeArena() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-[#1c0d02] flex items-center justify-center text-amber-500">
+      <div className="min-h-screen bg-[#1c0d02] flex items-center justify-center text-[#D4AF37]">
         <Loader2 className="animate-spin" size={48} />
       </div>
     );
@@ -420,13 +420,13 @@ function PracticeArena() {
 
       <div className="w-full md:w-[400px] lg:w-[450px] p-6 md:p-8 flex flex-col border-b md:border-b-0 md:border-r border-[#3c1e0a]/60 bg-[#25140b]/90 shadow-2xl z-20 overflow-y-auto rounded-none">
         <div className="flex items-center justify-between mb-8">
-          <Link href="/dashboard/chess" className="inline-flex items-center gap-2 text-[#ecd3b5] hover:text-white font-bold text-sm bg-[#361d0f] px-4 py-2 rounded-none border border-[#502b16]">
+          <Link href="/dashboard/chess" className="inline-flex items-center gap-2 text-[#ecd3b5] hover:text-slate-900 font-bold text-sm bg-[#361d0f] px-4 py-2 rounded-none border border-[#502b16]">
             <ArrowLeft size={16} /> Salir al Menú
           </Link>
           {userTier === 'free' ? (
             <div className="flex items-center">
               {/* Cuerpo de la Batería */}
-              <div className="relative w-14 h-5 bg-slate-950 rounded-[4px] border border-slate-700 p-0.5 flex items-center shadow-[inset_0_1.5px_4px_rgba(0,0,0,0.8)] overflow-hidden">
+              <div className="relative w-14 h-5 bg-slate-50 rounded-[4px] border border-slate-700 p-0.5 flex items-center shadow-[inset_0_1.5px_4px_rgba(0,0,0,0.8)] overflow-hidden">
                 <div 
                   className={`h-full rounded-[2px] transition-all duration-500 ${
                     energy > 50 
@@ -437,12 +437,12 @@ function PracticeArena() {
                   }`}
                   style={{ width: `${energy}%` }}
                 />
-                <span className="absolute inset-0 flex items-center justify-center text-[9px] font-black text-white font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
+                <span className="absolute inset-0 flex items-center justify-center text-[9px] font-black text-slate-900 font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
                   {energy}%
                 </span>
               </div>
               {/* Polo Positivo */}
-              <div className="w-[3px] h-2.5 bg-slate-700 rounded-r-[2px] -ml-[1px] shadow-sm shrink-0" />
+              <div className="w-[3px] h-2.5 bg-slate-700 rounded-r-[2px] -ml-[1px] shadow-none shrink-0" />
             </div>
           ) : (
             <span className="text-[8px] font-black uppercase tracking-wider text-emerald-400">Energía Ilimitada</span>
@@ -468,13 +468,13 @@ function PracticeArena() {
             )}
           </div>
 
-          <h1 className="text-2xl lg:text-3xl font-black text-white mb-6 leading-tight tracking-tight border-l-4 border-amber-500 pl-4 py-1">
+          <h1 className="text-2xl lg:text-3xl font-black text-slate-900 mb-6 leading-tight tracking-tight border-l-4 border-[#D4AF37]/30 pl-4 py-1">
             {lessonData.title || 'Chess Practice'}
           </h1>
 
           <div className="wood-panel-light p-6 rounded-none shadow-xl mb-6 relative overflow-hidden group">
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-              <BookOpen size={64} className="text-amber-500" />
+              <BookOpen size={64} className="text-[#D4AF37]" />
             </div>
             <div className="relative z-10">
               <h3 className="text-[10px] font-black text-amber-400 uppercase tracking-[0.2em] mb-3 flex items-center gap-2">
@@ -487,10 +487,10 @@ function PracticeArena() {
             </div>
           </div>
 
-          <div className={`p-5 rounded-none border shadow-lg flex items-start gap-4 transition-colors ${status === 'correct' ? 'bg-emerald-950/60 border-emerald-800/40 text-emerald-300' : status === 'wrong' ? 'bg-red-955/60 border-red-800/40 text-red-300' : 'bg-[#361d0f]/80 border-[#502b16] text-[#ecd3b5]'}`}>
+          <div className={`p-5 rounded-none border shadow-none flex items-start gap-4 transition-colors ${status === 'correct' ? 'bg-emerald-950/60 border-emerald-800/40 text-emerald-300' : status === 'wrong' ? 'bg-red-955/60 border-red-800/40 text-red-300' : 'bg-[#361d0f]/80 border-[#502b16] text-[#ecd3b5]'}`}>
             {status === 'correct' ? <CheckCircle2 className="shrink-0 w-6 h-6 mt-0.5" /> : status === 'wrong' ? <XCircle className="shrink-0 w-6 h-6 mt-0.5" /> : <Lightbulb className="shrink-0 w-6 h-6 mt-0.5" />}
             <div>
-              <h4 className="font-black text-xs mb-1 uppercase tracking-widest text-white">
+              <h4 className="font-black text-xs mb-1 uppercase tracking-widest text-slate-900">
                 {status === 'correct' ? '¡Brillante!' : status === 'wrong' ? 'Movimiento Incorrecto' : status === 'gameover' ? 'Partida Terminada' : 'Análisis Activo'}
               </h4>
               <p className="text-sm font-medium opacity-90 leading-relaxed">{feedback}</p>
@@ -500,7 +500,7 @@ function PracticeArena() {
 
         <div className="mt-8 pt-6 border-t border-[#3c1e0a] space-y-3 shrink-0">
           {status === 'correct' || status === 'gameover' ? (
-            <button onClick={() => router.push('/dashboard/chess')} className="w-full py-4 bg-[#ecd3b5] hover:bg-[#fbf8f0] text-[#1e130c] rounded-none font-black text-sm uppercase shadow-lg border border-[#fbf8f0] flex items-center justify-center gap-2">
+            <button onClick={() => router.push('/dashboard/chess')} className="w-full py-4 bg-[#ecd3b5] hover:bg-[#fbf8f0] text-[#1e130c] rounded-none font-black text-sm uppercase shadow-none border border-[#fbf8f0] flex items-center justify-center gap-2">
               Continuar Ruta <ChevronRight size={18} />
             </button>
           ) : (
@@ -544,7 +544,7 @@ function PracticeArena() {
 export default function PracticePage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-[#1c0d02] flex items-center justify-center text-amber-500 rounded-none">
+      <div className="min-h-screen bg-[#1c0d02] flex items-center justify-center text-[#D4AF37] rounded-none">
         <Loader2 className="animate-spin" size={48} />
       </div>
     }>

@@ -1,0 +1,101 @@
+{
+  "id": "a1-62",
+  "title": "Office Supplies & Stationery",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Office", "Supplies"],
+  "completion_message": "¡Magnífico! Ya dominas el vocabulario de suministros y artículos de papelería en la oficina.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Suministros de Oficina",
+      "parts": [
+        { "visual": "Artículos básicos: Pen (bolígrafo), Pencil (lápiz), Notebook (cuaderno).", "audio": "Basic items: Pen, pencil, notebook." },
+        { "visual": "Para organizar: Folder (carpeta), Paperclip (clip), Stapler (grapadora), Scissors (tijeras).", "audio": "To organize: Folder, paperclip, stapler, scissors." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para el suministro de oficina.",
+      "questions": [
+        { "id": "a1-62-q1", "type": "quiz_choice", "question": "Can I borrow your ____? (bolígrafo).", "options": ["pen", "pan", "pin", "pet"], "correct_answer": "pen", "explanation": "Bolígrafo / pluma (pen)." },
+        { "id": "a1-62-q2", "type": "quiz_choice", "question": "I write with a ____ (lápiz).", "options": ["pencil", "pen", "stencil", "brush"], "correct_answer": "pencil", "explanation": "Lápiz (pencil)." },
+        { "id": "a1-62-q3", "type": "quiz_choice", "question": "Put the documents in a ____ (carpeta).", "options": ["folder", "fold", "holder", "box"], "correct_answer": "folder", "explanation": "Carpeta (folder)." },
+        { "id": "a1-62-q4", "type": "quiz_choice", "question": "I need some ____ (papel).", "options": ["paper", "pepper", "pipe", "pages"], "correct_answer": "paper", "explanation": "Papel (paper)." },
+        { "id": "a1-62-q5", "type": "quiz_choice", "question": "Use a ____ to hold the papers together (clip).", "options": ["paperclip", "clip paper", "staple", "pin"], "correct_answer": "paperclip", "explanation": "Clip para papel (paperclip)." },
+        { "id": "a1-62-q6", "type": "quiz_choice", "question": "Where is the ____? (grapadora).", "options": ["stapler", "staple", "punch", "cutter"], "correct_answer": "stapler", "explanation": "Grapadora / engrapadora (stapler)." },
+        { "id": "a1-62-q7", "type": "quiz_choice", "question": "I write notes in my ____ (cuaderno).", "options": ["notebook", "book", "note", "paper"], "correct_answer": "notebook", "explanation": "Cuaderno / libreta (notebook)." },
+        { "id": "a1-62-q8", "type": "quiz_choice", "question": "Pass me the ____ (tijeras).", "options": ["scissors", "scissor", "cutter", "knife"], "correct_answer": "scissors", "explanation": "Tijeras (scissors). Siempre es plural en inglés." },
+        { "id": "a1-62-q9", "type": "quiz_choice", "question": "Do you have any sticky ____? (notas adhesivas).", "options": ["notes", "papers", "stickers", "cards"], "correct_answer": "notes", "explanation": "Notas adhesivas (sticky notes o post-its)." },
+        { "id": "a1-62-q10", "type": "quiz_choice", "question": "We need more printer ____ (tinta).", "options": ["ink", "water", "paint", "color"], "correct_answer": "ink", "explanation": "Tinta (ink)." },
+        { "id": "a1-62-q11", "type": "quiz_choice", "question": "I need a ____ to stick this (pegamento).", "options": ["glue", "blue", "clue", "gum"], "correct_answer": "glue", "explanation": "Pegamento (glue)." },
+        { "id": "a1-62-q12", "type": "quiz_choice", "question": "Use a ____ to draw a straight line (regla).", "options": ["ruler", "rule", "roller", "tape"], "correct_answer": "ruler", "explanation": "Regla de medir (ruler)." },
+        { "id": "a1-62-q13", "type": "quiz_choice", "question": "Can I have an ____? (sobre para cartas).", "options": ["envelope", "letter", "paper", "box"], "correct_answer": "envelope", "explanation": "Sobre (envelope)." },
+        { "id": "a1-62-q14", "type": "quiz_choice", "question": "Where is the sellotape / adhesive ____? (cinta).", "options": ["tape", "type", "tie", "glue"], "correct_answer": "tape", "explanation": "Cinta adhesiva (tape)." },
+        { "id": "a1-62-q15", "type": "quiz_choice", "question": "I need an ____ to erase this (borrador/goma).", "options": ["eraser", "erase", "rubber", "cleaner"], "correct_answer": "eraser", "explanation": "Borrador/Goma (eraser en EE.UU., rubber en UK)." },
+        { "id": "a1-62-q16", "type": "quiz_choice", "question": "Highlight the text with a ____ (resaltador).", "options": ["highlighter", "marker", "pen", "light"], "correct_answer": "highlighter", "explanation": "Resaltador/marcador de texto (highlighter)." },
+        { "id": "a1-62-q17", "type": "quiz_choice", "question": "Use the hole ____ (perforadora).", "options": ["punch", "maker", "cutter", "drill"], "correct_answer": "punch", "explanation": "Perforadora de papel (hole punch)." },
+        { "id": "a1-62-q18", "type": "quiz_choice", "question": "We keep the supplies in the ____ (gabinete/armario).", "options": ["cabinet", "table", "desk", "chair"], "correct_answer": "cabinet", "explanation": "Gabinete (cabinet)." },
+        { "id": "a1-62-q19", "type": "quiz_choice", "question": "I need a white board ____ (marcador).", "options": ["marker", "mark", "pen", "pencil"], "correct_answer": "marker", "explanation": "Marcador (marker)." },
+        { "id": "a1-62-q20", "type": "quiz_choice", "question": "Can you order more office ____? (suministros).", "options": ["supplies", "supply", "things", "objects"], "correct_answer": "supplies", "explanation": "Suministros (supplies)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el artículo de oficina exacto.",
+      "questions": [
+        { "id": "a1-62-f1", "type": "fill_input", "question": "A blue ____ (Bolígrafo).", "correct_answer": "pen", "explanation": "Pen." },
+        { "id": "a1-62-f2", "type": "fill_input", "question": "A yellow ____ (Lápiz).", "correct_answer": "pencil", "explanation": "Pencil." },
+        { "id": "a1-62-f3", "type": "fill_input", "question": "A red ____ (Carpeta).", "correct_answer": "folder", "explanation": "Folder." },
+        { "id": "a1-62-f4", "type": "fill_input", "question": "Some ____ (Papel).", "correct_answer": "paper", "explanation": "Paper." },
+        { "id": "a1-62-f5", "type": "fill_input", "question": "A ____ (Cuaderno).", "correct_answer": "notebook", "explanation": "Notebook." },
+        { "id": "a1-62-f6", "type": "fill_input", "question": "The ____ (Grapadora).", "correct_answer": "stapler", "explanation": "Stapler." },
+        { "id": "a1-62-f7", "type": "fill_input", "question": "A ____ (Clip de papel).", "correct_answer": "paperclip", "explanation": "Paperclip." },
+        { "id": "a1-62-f8", "type": "fill_input", "question": "The ____ (Tijeras).", "correct_answer": "scissors", "explanation": "Scissors." },
+        { "id": "a1-62-f9", "type": "fill_input", "question": "Sticky ____ (Notas adhesivas).", "correct_answer": "notes", "explanation": "Notes." },
+        { "id": "a1-62-f10", "type": "fill_input", "question": "Office ____ (Suministros).", "correct_answer": "supplies", "explanation": "Supplies." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-62-p1", "source": "Pen", "target": "Bolígrafo / Pluma"},
+        {"id": "a1-62-p2", "source": "Pencil", "target": "Lápiz"},
+        {"id": "a1-62-p3", "source": "Folder", "target": "Carpeta"},
+        {"id": "a1-62-p4", "source": "Paperclip", "target": "Clip de papel"},
+        {"id": "a1-62-p5", "source": "Stapler", "target": "Grapadora"},
+        {"id": "a1-62-p6", "source": "Notebook", "target": "Cuaderno / Libreta"},
+        {"id": "a1-62-p7", "source": "Scissors", "target": "Tijeras"},
+        {"id": "a1-62-p8", "source": "Sticky notes", "target": "Notas adhesivas"},
+        {"id": "a1-62-p9", "source": "Ink", "target": "Tinta"},
+        {"id": "a1-62-p10", "source": "Office supplies", "target": "Suministros de oficina"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-62-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need a pen.", "options": ["I need a pen.", "I need a pencil.", "I have a pen.", "He needs a pen."], "correct_answer": "I need a pen.", "explanation": "Audio exacto." },
+        { "id": "a1-62-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I borrow your pencil?", "options": ["Can I borrow your pencil?", "Can I borrow your pen?", "Can you borrow my pencil?", "Do you have a pencil?"], "correct_answer": "Can I borrow your pencil?", "explanation": "Audio exacto." },
+        { "id": "a1-62-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Put it in the folder.", "options": ["Put it in the folder.", "Put it on the folder.", "It is in the folder.", "Put it in the file."], "correct_answer": "Put it in the folder.", "explanation": "Audio exacto." },
+        { "id": "a1-62-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Use a paperclip.", "options": ["Use a paperclip.", "Use a stapler.", "I have a paperclip.", "He uses a paperclip."], "correct_answer": "Use a paperclip.", "explanation": "Audio exacto." },
+        { "id": "a1-62-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Where is the stapler?", "options": ["Where is the stapler?", "Here is the stapler.", "Where is the staple?", "Where is the printer?"], "correct_answer": "Where is the stapler?", "explanation": "Audio exacto." },
+        { "id": "a1-62-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Write it in your notebook.", "options": ["Write it in your notebook.", "Write it on your notebook.", "Read it in your notebook.", "Write in the notebook."], "correct_answer": "Write it in your notebook.", "explanation": "Audio exacto." },
+        { "id": "a1-62-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Pass me the scissors.", "options": ["Pass me the scissors.", "Give me the scissors.", "Pass the scissors.", "I need the scissors."], "correct_answer": "Pass me the scissors.", "explanation": "Audio exacto." },
+        { "id": "a1-62-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need sticky notes.", "options": ["I need sticky notes.", "I have sticky notes.", "He needs sticky notes.", "I need a note."], "correct_answer": "I need sticky notes.", "explanation": "Audio exacto." },
+        { "id": "a1-62-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need more ink.", "options": ["We need more ink.", "We need more paper.", "I need more ink.", "We have more ink."], "correct_answer": "We need more ink.", "explanation": "Audio exacto." },
+        { "id": "a1-62-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Office supplies.", "options": ["Office supplies.", "Office supply.", "Office files.", "Office things."], "correct_answer": "Office supplies.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

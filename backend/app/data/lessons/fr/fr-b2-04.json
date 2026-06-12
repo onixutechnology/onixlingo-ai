@@ -1,0 +1,95 @@
+{
+  "id": "fr-b2-04",
+  "title": "Certitude, Doute et Probabilité",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Subjunctive", "Indicative", "Opinion"],
+  "completion_message": "¡Magistral! Acabas de dominar uno de los debates gramaticales más complejos del francés. Ya sabes exactamente cuándo dudar, cuándo afirmar y cuándo usar el subjuntivo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Gran Debate: ¿Indicativo o Subjuntivo? (B2)",
+      "parts": [
+        {
+          "visual": "Certidumbre y Opinión = INDICATIVO\n\nSi expresas un hecho, una certeza absoluta o tu opinión firme, usas el verbo normal (Indicativo).\n- Il est SÛR / CERTAIN / ÉVIDENT que tu AS raison. (Es seguro/evidente que tienes razón).\n- Je PENSE / Je CROIS que tu ES gentil. (Pienso/Creo que eres amable).\n\n¡Cuidado! Si pones la opinión en NEGATIVO o INTERROGATIVO, se inyecta la duda. Y la duda SIEMPRE exige Subjuntivo.\n- Je NE pense PAS que tu SOIS gentil. (Dudo, así que uso Subjuntivo).\n- Penses-tu qu'il VIENNE ? (Pregunto, así que dudo -> Subjuntivo).",
+          "audio": "El nivel B2 está lleno de trampas psicológicas, y esta es la mayor de todas: ¿Indicativo o Subjuntivo? La regla de oro es: el Subjuntivo es el modo de la DUDA, las emociones y la incertidumbre. El Indicativo es el modo de los HECHOS y las certezas. Si dices 'Es seguro que viene', 'Il est sûr qu'il vient', usas indicativo. Si expresas tu opinión afirmando algo: 'Pienso que eres amable', dices 'Je pense que tu ES gentil'. ¡Pero cuidado! Si dices 'NO pienso que seas amable', al ponerlo en negativo has creado DUDA. Y la duda llama al subjuntivo. Así que dices: 'Je ne pense pas que tu SOIS gentil'. Lo mismo pasa al hacer preguntas: ¿Crees que él venga? 'Penses-tu qu'il VIENNE ?'. Al preguntar, dudas."
+        },
+        {
+          "visual": "Probabilidad vs. Posibilidad (Trampa B2):\n\n1. Il est POSSIBLE que + SUBJUNTIVO.\n- Lo posible es solo una opción entre muchas. Hay mucha duda.\n- Il est possible qu'il PLEUVE. (Es posible que llueva).\n\n2. Il est PROBABLE que + INDICATIVO.\n- Lo probable tiene altas chances de ocurrir. El francés lo trata casi como una certeza.\n- Il est probable qu'il PLEUT. (Es probable que llueva).\n\nDudas explícitas (Siempre Subjuntivo):\n- Il est DOUTEUX que (Es dudoso que)\n- Je DOUTE que (Yo dudo que)\n- Il est IMPOSSIBLE que (Es imposible que)",
+          "audio": "Ahora hablemos de la trampa más famosa de los exámenes internacionales de francés: La diferencia entre Posible y Probable. En español ambas suenan a duda, pero los franceses las ven diferente. Lo POSIBLE es solo una opción, un cincuenta por ciento de chance. Es pura duda, así que exige subjuntivo: 'Il est possible qu'il PLEUVE'. Pero lo PROBABLE tiene un noventa por ciento de chance de ocurrir. El francés considera lo probable como un hecho casi seguro. Por lo tanto, ¡'Probable' exige indicativo! Dirías 'Il est probable qu'il PLEUT'. Repítelo conmigo mil veces: Posible toma subjuntivo, Probable toma indicativo. Y por supuesto, frases como 'Je doute que' o 'Il est impossible que' siempre, siempre llevarán subjuntivo."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige entre indicativo o subjuntivo analizando el grado de certeza o duda.",
+      "questions": [
+        { "id": "frb2-04-q1", "type": "quiz_choice", "question": "Il est certain qu'il ____ la vérité. (ES SEGURO QUE - Indicativo).", "options": ["dit", "dise", "dira", "disait"], "correct_answer": "dit", "explanation": "Certeza absoluta -> Indicativo (dit)." },
+        { "id": "frb2-04-q2", "type": "quiz_choice", "question": "Il est possible qu'il ____ la vérité. (ES POSIBLE QUE - Subjuntivo).", "options": ["dise", "dit", "dira", "disait"], "correct_answer": "dise", "explanation": "Posibilidad = Duda -> Subjuntivo (dise)." },
+        { "id": "frb2-04-q3", "type": "quiz_choice", "question": "Il est probable qu'il ____ la vérité. (ES PROBABLE QUE - ¡Cuidado con la trampa!).", "options": ["dit", "dise", "dira", "disait"], "correct_answer": "dit", "explanation": "Probable = Casi seguro -> Indicativo (dit)." },
+        { "id": "frb2-04-q4", "type": "quiz_choice", "question": "Je pense que tu ____ raison. (PIENSO QUE - Afirmación).", "options": ["as", "aies", "avoir", "auras"], "correct_answer": "as", "explanation": "Pense que afirmativo = Opinión firme -> Indicativo (as)." },
+        { "id": "frb2-04-q5", "type": "quiz_choice", "question": "Je NE pense PAS que tu ____ raison. (NO PIENSO QUE - Duda).", "options": ["aies", "as", "aura", "avais"], "correct_answer": "aies", "explanation": "Pense que negativo = Duda -> Subjuntivo (aies)." },
+        { "id": "frb2-04-q6", "type": "quiz_choice", "question": "Il est douteux qu'ils ____ le match. (ES DUDOSO QUE).", "options": ["gagnent (subjuntivo)", "gagnent (indicativo)", "gagneront", "ont gagné"], "correct_answer": "gagnent (subjuntivo)", "explanation": "Duda explícita -> Subjuntivo (qu'ils gagnent)." },
+        { "id": "frb2-04-q7", "type": "quiz_choice", "question": "Croyez-vous qu'elle ____ venir ? (¿CREEN QUE ELLA... ? - Pregunta).", "options": ["puisse", "peut", "pourra", "pouvait"], "correct_answer": "puisse", "explanation": "Opinión en interrogativo = Duda -> Subjuntivo (puisse)." },
+        { "id": "frb2-04-q8", "type": "quiz_choice", "question": "Je suis sûr que nous ____ le train. (ESTOY SEGURO DE QUE).", "options": ["aurons", "ayons", "avons", "avions"], "correct_answer": "aurons", "explanation": "Certeza -> Indicativo, en este caso Futuro (aurons)." },
+        { "id": "frb2-04-q9", "type": "quiz_choice", "question": "Il est évident que ce problème ____ grave. (ES EVIDENTE QUE).", "options": ["est", "soit", "sera", "serait"], "correct_answer": "est", "explanation": "Evidencia/Certeza -> Indicativo (est)." },
+        { "id": "frb2-04-q10", "type": "quiz_choice", "question": "Il n'est pas certain qu'elle ____ d'accord. (NO ES SEGURO QUE).", "options": ["soit", "est", "sera", "était"], "correct_answer": "soit", "explanation": "Falta de certeza = Duda -> Subjuntivo (soit)." },
+        { "id": "frb2-04-q11", "type": "quiz_choice", "question": "Il est impossible que tu ____ ça ! (ES IMPOSIBLE QUE HAGAS).", "options": ["fasses", "fais", "feras", "ferais"], "correct_answer": "fasses", "explanation": "Imposibilidad -> Subjuntivo (fasses)." },
+        { "id": "frb2-04-q12", "type": "quiz_choice", "question": "Je crois qu'il ____ en Italie. (CREO QUE VIVE).", "options": ["vit", "vive", "vivra", "vivait"], "correct_answer": "vit", "explanation": "Crois que afirmativo -> Indicativo (vit)." },
+        { "id": "frb2-04-q13", "type": "quiz_choice", "question": "Je ne crois pas qu'il ____ la réponse. (NO CREO QUE SEPA).", "options": ["sache", "sait", "saura", "saurait"], "correct_answer": "sache", "explanation": "Crois que negativo = Duda -> Subjuntivo (sache)." },
+        { "id": "frb2-04-q14", "type": "quiz_choice", "question": "Il est probable que nous ____ en retard. (ES PROBABLE QUE LLEGUEMOS).", "options": ["serons", "soyons", "sommes", "serions"], "correct_answer": "serons", "explanation": "Probable -> Indicativo (Futuro: serons)." },
+        { "id": "frb2-04-q15", "type": "quiz_choice", "question": "Il se peut qu'il ____ malade. (PUEDE SER QUE ESTÉ).", "options": ["soit", "est", "sera", "serait"], "correct_answer": "soit", "explanation": "Il se peut que (Puede ser que) = Posibilidad = Duda -> Subjuntivo (soit)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo en Indicativo o Subjuntivo según el grado de certeza de la frase.",
+      "questions": [
+        { "id": "frb2-04-f1", "type": "fill_input", "question": "Il est sûr qu'elle ____ (être) là. (Indicativo).", "correct_answer": "est", "explanation": "est" },
+        { "id": "frb2-04-f2", "type": "fill_input", "question": "Il est possible qu'elle ____ (être) là. (Subjuntivo).", "correct_answer": "soit", "explanation": "soit" },
+        { "id": "frb2-04-f3", "type": "fill_input", "question": "Il est probable qu'elle ____ (être) là. (Trampa: Indicativo).", "correct_answer": "est", "explanation": "est (o sera)" },
+        { "id": "frb2-04-f4", "type": "fill_input", "question": "Je pense qu'il ____ (avoir) raison. (Indicativo).", "correct_answer": "a", "explanation": "a" },
+        { "id": "frb2-04-f5", "type": "fill_input", "question": "Je ne pense pas qu'il ____ (avoir) raison. (Subjuntivo).", "correct_answer": "ait", "explanation": "ait" },
+        { "id": "frb2-04-f6", "type": "fill_input", "question": "Il est douteux que nous ____ (aller) au cinéma. (Subjuntivo).", "correct_answer": "allions", "explanation": "allions" },
+        { "id": "frb2-04-f7", "type": "fill_input", "question": "Il est évident que tu ____ (faire) des progrès. (Indicativo).", "correct_answer": "fais", "explanation": "fais" },
+        { "id": "frb2-04-f8", "type": "fill_input", "question": "Crois-tu qu'elle ____ (venir) ? (Pregunta -> Subjuntivo).", "correct_answer": "vienne", "explanation": "vienne" },
+        { "id": "frb2-04-f9", "type": "fill_input", "question": "Il se peut qu'il ____ (pleuvoir). (Posibilidad -> Subjuntivo).", "correct_answer": "pleuve", "explanation": "pleuve" },
+        { "id": "frb2-04-f10", "type": "fill_input", "question": "Je suis certain qu'il le ____ (savoir). (Indicativo).", "correct_answer": "sait", "explanation": "sait" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Certainty vs Doubt Match",
+      "pairs": [
+        {"id": "frb2-04-p1", "source": "Il est possible que", "target": "Es posible que (+ Subjuntivo)"},
+        {"id": "frb2-04-p2", "source": "Il est probable que", "target": "Es probable que (+ Indicativo)"},
+        {"id": "frb2-04-p3", "source": "Il est sûr que", "target": "Es seguro que (+ Indicativo)"},
+        {"id": "frb2-04-p4", "source": "Il se peut que", "target": "Puede ser que (+ Subjuntivo)"},
+        {"id": "frb2-04-p5", "source": "Je pense que tu es", "target": "Pienso que eres (Indicativo)"},
+        {"id": "frb2-04-p6", "source": "Je ne pense pas que tu sois", "target": "No pienso que seas (Subjuntivo)"},
+        {"id": "frb2-04-p7", "source": "Je doute qu'il vienne", "target": "Dudo que venga (Subjuntivo)"},
+        {"id": "frb2-04-p8", "source": "Il est évident qu'il vient", "target": "Es evidente que viene (Indicativo)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica si la frase transmite certeza o duda.",
+      "questions": [
+        { "id": "frb2-04-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je ne pense pas qu'il vienne", "options": ["Je ne pense pas qu'il vienne", "Je pense qu'il vient", "Je doute qu'il vienne", "Il est sûr qu'il vient"], "correct_answer": "Je ne pense pas qu'il vienne", "explanation": "Audio dice: Je ne pense pas qu'il vienne." },
+        { "id": "frb2-04-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il est probable qu'il est en retard", "options": ["Il est probable qu'il est en retard", "Il est possible qu'il soit en retard", "Il se peut qu'il soit en retard", "Il est douteux qu'il soit en retard"], "correct_answer": "Il est probable qu'il est en retard", "explanation": "Audio dice: Il est probable qu'il est en retard (Indicativo)." },
+        { "id": "frb2-04-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il est possible qu'il pleuve", "options": ["Il est possible qu'il pleuve", "Il est probable qu'il pleut", "Il est évident qu'il pleut", "Il est sûr qu'il pleut"], "correct_answer": "Il est possible qu'il pleuve", "explanation": "Audio dice: Il est possible qu'il pleuve (Subjuntivo)." },
+        { "id": "frb2-04-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Crois-tu qu'il ait raison ?", "options": ["Crois-tu qu'il ait raison ?", "Je crois qu'il a raison", "Il est certain qu'il a raison", "Il est sûr qu'il a raison"], "correct_answer": "Crois-tu qu'il ait raison ?", "explanation": "Audio dice: Crois-tu qu'il ait raison ? (Pregunta -> Subjuntivo ait)." },
+        { "id": "frb2-04-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il est évident que c'est faux", "options": ["Il est évident que c'est faux", "Il est douteux que ce soit faux", "Il est possible que ce soit faux", "Je ne pense pas que ce soit faux"], "correct_answer": "Il est évident que c'est faux", "explanation": "Audio dice: Il est évident que c'est faux (Indicativo)." }
+      ]
+    }
+  ]
+}

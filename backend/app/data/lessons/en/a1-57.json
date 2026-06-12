@@ -1,0 +1,101 @@
+{
+  "id": "a1-57",
+  "title": "Basic Tech Support Phrases",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Technology", "Support", "Office"],
+  "completion_message": "¡Genial! Has aprendido frases esenciales para lidiar con el soporte técnico y resolver problemas de TI.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Soporte Técnico",
+      "parts": [
+        { "visual": "Usa imperativos para instrucciones: 'Restart your computer' (Reinicie su computadora), 'Enter your password' (Ingrese su contraseña).", "audio": "Use imperatives for instructions: Restart your computer, Enter your password." },
+        { "visual": "Para explicar problemas usa el verbo to be o present simple: 'The screen is frozen' (La pantalla está congelada), 'The app doesn't open' (La aplicación no abre).", "audio": "To explain problems use to be or present simple: The screen is frozen, The app doesn't open." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para la situación de TI.",
+      "questions": [
+        { "id": "a1-57-q1", "type": "quiz_choice", "question": "My computer is ____ (congelada).", "options": ["frozen", "cold", "freeze", "freezing"], "correct_answer": "frozen", "explanation": "Congelada (frozen)." },
+        { "id": "a1-57-q2", "type": "quiz_choice", "question": "Please ____ your computer (reiniciar).", "options": ["restart", "start", "stop", "rebooting"], "correct_answer": "restart", "explanation": "Reiniciar (restart o reboot)." },
+        { "id": "a1-57-q3", "type": "quiz_choice", "question": "I forgot my ____ (contraseña).", "options": ["password", "pass", "word", "code"], "correct_answer": "password", "explanation": "Contraseña (password)." },
+        { "id": "a1-57-q4", "type": "quiz_choice", "question": "The internet is ____ (lento).", "options": ["slow", "fast", "low", "down"], "correct_answer": "slow", "explanation": "Lento (slow)." },
+        { "id": "a1-57-q5", "type": "quiz_choice", "question": "The Wi-Fi is ____ (caído/no funciona).", "options": ["down", "up", "off", "slow"], "correct_answer": "down", "explanation": "La red está caída (down)." },
+        { "id": "a1-57-q6", "type": "quiz_choice", "question": "____ your password here (ingrese).", "options": ["Enter", "Enters", "Entering", "To enter"], "correct_answer": "Enter", "explanation": "Ingresar (Enter)." },
+        { "id": "a1-57-q7", "type": "quiz_choice", "question": "I can't ____ in to my account (iniciar sesión).", "options": ["log", "lock", "look", "luck"], "correct_answer": "log", "explanation": "Iniciar sesión (log in)." },
+        { "id": "a1-57-q8", "type": "quiz_choice", "question": "Please ____ the page (actualizar/refrescar).", "options": ["refresh", "fresh", "reload", "starts"], "correct_answer": "refresh", "explanation": "Refrescar (refresh / reload)." },
+        { "id": "a1-57-q9", "type": "quiz_choice", "question": "The printer is out of ____ (papel).", "options": ["paper", "ink", "power", "pages"], "correct_answer": "paper", "explanation": "Papel (paper)." },
+        { "id": "a1-57-q10", "type": "quiz_choice", "question": "The printer has a paper ____ (atasco).", "options": ["jam", "jelly", "block", "stop"], "correct_answer": "jam", "explanation": "Atasco de papel (paper jam)." },
+        { "id": "a1-57-q11", "type": "quiz_choice", "question": "____ the file on your desktop (guardar).", "options": ["Save", "Saves", "Saving", "Safe"], "correct_answer": "Save", "explanation": "Guardar (save)." },
+        { "id": "a1-57-q12", "type": "quiz_choice", "question": "I accidentally ____ the document (borré).", "options": ["deleted", "delete", "deleting", "clear"], "correct_answer": "deleted", "explanation": "Borré en pasado (deleted)." },
+        { "id": "a1-57-q13", "type": "quiz_choice", "question": "Check your ____ connection (red).", "options": ["network", "net", "work", "cable"], "correct_answer": "network", "explanation": "Red (network)." },
+        { "id": "a1-57-q14", "type": "quiz_choice", "question": "____ on the link (haz clic).", "options": ["Click", "Clicks", "Clicking", "Clack"], "correct_answer": "Click", "explanation": "Haz clic (Click)." },
+        { "id": "a1-57-q15", "type": "quiz_choice", "question": "Please ____ the software (instalar).", "options": ["install", "installs", "installing", "setup"], "correct_answer": "install", "explanation": "Instalar (install)." },
+        { "id": "a1-57-q16", "type": "quiz_choice", "question": "My screen is ____ (en blanco/negro).", "options": ["blank", "black", "empty", "white"], "correct_answer": "blank", "explanation": "En blanco/vacía (blank)." },
+        { "id": "a1-57-q17", "type": "quiz_choice", "question": "You need to ____ the app (actualizar).", "options": ["update", "date", "upgrade", "new"], "correct_answer": "update", "explanation": "Actualizar (update)." },
+        { "id": "a1-57-q18", "type": "quiz_choice", "question": "Is the cable ____ in? (enchufado).", "options": ["plugged", "plug", "plugging", "plugs"], "correct_answer": "plugged", "explanation": "Enchufado (plugged in)." },
+        { "id": "a1-57-q19", "type": "quiz_choice", "question": "____ the attachment to download it (abrir).", "options": ["Open", "Opens", "Opening", "To open"], "correct_answer": "Open", "explanation": "Abrir (Open)." },
+        { "id": "a1-57-q20", "type": "quiz_choice", "question": "Please call ____ Support (soporte técnico).", "options": ["Tech", "Teach", "Ticket", "Task"], "correct_answer": "Tech", "explanation": "Tech Support (Soporte Técnico)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de soporte técnico exacta.",
+      "questions": [
+        { "id": "a1-57-f1", "type": "fill_input", "question": "My computer is ____ (Congelada).", "correct_answer": "frozen", "explanation": "Frozen." },
+        { "id": "a1-57-f2", "type": "fill_input", "question": "____ the computer (Reiniciar).", "correct_answer": "Restart", "explanation": "Restart." },
+        { "id": "a1-57-f3", "type": "fill_input", "question": "Forgot my ____ (Contraseña).", "correct_answer": "password", "explanation": "Password." },
+        { "id": "a1-57-f4", "type": "fill_input", "question": "The Wi-Fi is ____ (Caído).", "correct_answer": "down", "explanation": "Down." },
+        { "id": "a1-57-f5", "type": "fill_input", "question": "I can't ____ in (Iniciar sesión).", "correct_answer": "log", "explanation": "Log (log in)." },
+        { "id": "a1-57-f6", "type": "fill_input", "question": "____ the page (Refrescar).", "correct_answer": "Refresh", "explanation": "Refresh." },
+        { "id": "a1-57-f7", "type": "fill_input", "question": "Paper ____ (Atasco).", "correct_answer": "jam", "explanation": "Jam." },
+        { "id": "a1-57-f8", "type": "fill_input", "question": "____ the file (Guardar).", "correct_answer": "Save", "explanation": "Save." },
+        { "id": "a1-57-f9", "type": "fill_input", "question": "____ on the link (Haz clic).", "correct_answer": "Click", "explanation": "Click." },
+        { "id": "a1-57-f10", "type": "fill_input", "question": "____ the app (Actualizar).", "correct_answer": "Update", "explanation": "Update." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-57-p1", "source": "Frozen", "target": "Congelado"},
+        {"id": "a1-57-p2", "source": "Restart", "target": "Reiniciar"},
+        {"id": "a1-57-p3", "source": "Password", "target": "Contraseña"},
+        {"id": "a1-57-p4", "source": "Log in", "target": "Iniciar sesión"},
+        {"id": "a1-57-p5", "source": "Refresh", "target": "Refrescar / Actualizar"},
+        {"id": "a1-57-p6", "source": "Paper jam", "target": "Atasco de papel"},
+        {"id": "a1-57-p7", "source": "Save", "target": "Guardar"},
+        {"id": "a1-57-p8", "source": "Delete", "target": "Borrar"},
+        {"id": "a1-57-p9", "source": "Network", "target": "Red"},
+        {"id": "a1-57-p10", "source": "Update", "target": "Actualizar (software)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-57-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My computer is frozen.", "options": ["My computer is frozen.", "My screen is frozen.", "His computer is frozen.", "The computer is broken."], "correct_answer": "My computer is frozen.", "explanation": "Audio exacto." },
+        { "id": "a1-57-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Restart the computer.", "options": ["Restart the computer.", "Start the computer.", "Restart your computer.", "Turn off the computer."], "correct_answer": "Restart the computer.", "explanation": "Audio exacto." },
+        { "id": "a1-57-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I forgot my password.", "options": ["I forgot my password.", "I lost my password.", "He forgot his password.", "I entered my password."], "correct_answer": "I forgot my password.", "explanation": "Audio exacto." },
+        { "id": "a1-57-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The Wi-Fi is down.", "options": ["The Wi-Fi is down.", "The network is down.", "The Wi-Fi is slow.", "My Wi-Fi is down."], "correct_answer": "The Wi-Fi is down.", "explanation": "Audio exacto." },
+        { "id": "a1-57-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I can't log in.", "options": ["I can't log in.", "I can log in.", "He can't log in.", "I cannot log in."], "correct_answer": "I can't log in.", "explanation": "Audio exacto." },
+        { "id": "a1-57-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Refresh the page.", "options": ["Refresh the page.", "Reload the page.", "Refresh your page.", "Close the page."], "correct_answer": "Refresh the page.", "explanation": "Audio exacto." },
+        { "id": "a1-57-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Paper jam.", "options": ["Paper jam.", "Paper out.", "Paper bag.", "Paper jam in the printer."], "correct_answer": "Paper jam.", "explanation": "Audio exacto." },
+        { "id": "a1-57-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Save the file.", "options": ["Save the file.", "Delete the file.", "Close the file.", "Send the file."], "correct_answer": "Save the file.", "explanation": "Audio exacto." },
+        { "id": "a1-57-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Click on the link.", "options": ["Click on the link.", "Click the link.", "Open the link.", "Send the link."], "correct_answer": "Click on the link.", "explanation": "Audio exacto." },
+        { "id": "a1-57-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Update the app.", "options": ["Update the app.", "Upgrade the app.", "Install the app.", "Delete the app."], "correct_answer": "Update the app.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

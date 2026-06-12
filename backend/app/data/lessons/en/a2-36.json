@@ -1,0 +1,101 @@
+{
+  "id": "a2-36",
+  "title": "Office Supplies & Equipment",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Vocabulary", "Office", "Equipment", "Business"],
+  "completion_message": "¡Buen trabajo! Ya dominas el vocabulario de suministros y equipos de oficina.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Suministros y Equipos de Oficina",
+      "parts": [
+        { "visual": "Equipos (Equipment): Printer (Impresora). Photocopier (Fotocopiadora). Shredder (Trituradora de papel). Scanner (Escáner). Projector (Proyector).", "audio": "Office equipment. Printer. Photocopier. Shredder. Scanner. Projector." },
+        { "visual": "Suministros (Supplies): Stapler (Engrapadora). Paperclip (Clip). Folder (Carpeta). Notepad (Bloc de notas). Ink cartridge (Cartucho de tinta). 'We are out of ink' (Nos quedamos sin tinta).", "audio": "Office supplies. Stapler. Paperclip. Folder. Notepad. Ink cartridge. We are out of ink." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para referirte a los objetos de la oficina.",
+      "questions": [
+        { "id": "a2-36-q1", "type": "quiz_choice", "question": "I need to print this document. Is the ____ working? (Impresora).", "options": ["printer", "scanner", "shredder", "copier"], "correct_answer": "printer", "explanation": "Printer = impresora." },
+        { "id": "a2-36-q2", "type": "quiz_choice", "question": "The ____ is out of paper. We can't make copies. (Fotocopiadora).", "options": ["photocopier", "scanner", "printer", "shredder"], "correct_answer": "photocopier", "explanation": "Photocopier (o copier) = fotocopiadora." },
+        { "id": "a2-36-q3", "type": "quiz_choice", "question": "Destroy these confidential documents in the ____. (Trituradora de papel).", "options": ["shredder", "printer", "trash", "basket"], "correct_answer": "shredder", "explanation": "Shredder = trituradora de papel (de 'shred' = hacer tiras)." },
+        { "id": "a2-36-q4", "type": "quiz_choice", "question": "Could you ____ these pages together, please? (Engrapar).", "options": ["staple", "clip", "glue", "cut"], "correct_answer": "staple", "explanation": "Staple = engrapar (verbo) o grapa (sustantivo)." },
+        { "id": "a2-36-q5", "type": "quiz_choice", "question": "Where is the ____? I need to put these pages together. (Engrapadora).", "options": ["stapler", "staple", "clipper", "folder"], "correct_answer": "stapler", "explanation": "Stapler = engrapadora." },
+        { "id": "a2-36-q6", "type": "quiz_choice", "question": "Use a ____ to keep those two papers together temporarily. (Clip).", "options": ["paperclip", "stapler", "folder", "pen"], "correct_answer": "paperclip", "explanation": "Paperclip = clip (para papel)." },
+        { "id": "a2-36-q7", "type": "quiz_choice", "question": "Put all the project documents in this blue ____. (Carpeta).", "options": ["folder", "box", "envelope", "bag"], "correct_answer": "folder", "explanation": "Folder = carpeta." },
+        { "id": "a2-36-q8", "type": "quiz_choice", "question": "I like to write my ideas on a ____. (Bloc de notas).", "options": ["notepad", "mousepad", "book", "board"], "correct_answer": "notepad", "explanation": "Notepad = bloc de notas." },
+        { "id": "a2-36-q9", "type": "quiz_choice", "question": "The printer is out of ____. The pages are blank. (Tinta).", "options": ["ink", "water", "paint", "color"], "correct_answer": "ink", "explanation": "Out of ink = sin tinta / se acabó la tinta." },
+        { "id": "a2-36-q10", "type": "quiz_choice", "question": "We need to order a new ink ____. (Cartucho).", "options": ["cartridge", "box", "bottle", "piece"], "correct_answer": "cartridge", "explanation": "Ink cartridge = cartucho de tinta." },
+        { "id": "a2-36-q11", "type": "quiz_choice", "question": "Mail this letter. You need an ____. (Sobre).", "options": ["envelope", "folder", "paper", "box"], "correct_answer": "envelope", "explanation": "Envelope = sobre (para cartas)." },
+        { "id": "a2-36-q12", "type": "quiz_choice", "question": "I need to stick this paper to the wall. Do you have any ____? (Cinta adhesiva).", "options": ["tape", "glue", "clip", "staple"], "correct_answer": "tape", "explanation": "Tape = cinta adhesiva." },
+        { "id": "a2-36-q13", "type": "quiz_choice", "question": "Use ____ if you want to paste the photos in the notebook. (Pegamento).", "options": ["glue", "tape", "paint", "water"], "correct_answer": "glue", "explanation": "Glue = pegamento." },
+        { "id": "a2-36-q14", "type": "quiz_choice", "question": "Turn on the ____. We want to see the presentation on the big screen. (Proyector).", "options": ["projector", "screen", "monitor", "tv"], "correct_answer": "projector", "explanation": "Projector = proyector." },
+        { "id": "a2-36-q15", "type": "quiz_choice", "question": "You can leave a note on the ____ board in the kitchen. (Tablero de anuncios).", "options": ["notice", "black", "white", "note"], "correct_answer": "notice", "explanation": "Notice board = tablero de anuncios." },
+        { "id": "a2-36-q16", "type": "quiz_choice", "question": "I made a mistake in my drawing. Do you have an ____? (Borrador/Goma).", "options": ["eraser", "pencil", "pen", "ruler"], "correct_answer": "eraser", "explanation": "Eraser = borrador / goma de borrar." },
+        { "id": "a2-36-q17", "type": "quiz_choice", "question": "Use a ____ to mark the important parts of the text. (Resaltador).", "options": ["highlighter", "pen", "pencil", "marker"], "correct_answer": "highlighter", "explanation": "Highlighter = marcador resaltador." },
+        { "id": "a2-36-q18", "type": "quiz_choice", "question": "The ____ ran out of staples. (Engrapadora).", "options": ["stapler", "printer", "copier", "shredder"], "correct_answer": "stapler", "explanation": "Stapler (engrapadora) necesita staples (grapas)." },
+        { "id": "a2-36-q19", "type": "quiz_choice", "question": "We need to order more office ____. (Suministros/Material de oficina).", "options": ["supplies", "equipments", "tools", "things"], "correct_answer": "supplies", "explanation": "Office supplies = suministros / material de oficina." },
+        { "id": "a2-36-q20", "type": "quiz_choice", "question": "A printer is a piece of office ____. (Equipo).", "options": ["equipment", "supplies", "tool", "machine"], "correct_answer": "equipment", "explanation": "Office equipment = equipo de oficina (impresoras, computadoras)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el nombre del objeto de oficina en inglés.",
+      "questions": [
+        { "id": "a2-36-f1", "type": "fill_input", "question": "Is the ____ working? (Impresora)", "correct_answer": "printer", "explanation": "printer." },
+        { "id": "a2-36-f2", "type": "fill_input", "question": "The ____ is out of paper. (Fotocopiadora)", "correct_answer": "photocopier", "explanation": "photocopier (o copier)." },
+        { "id": "a2-36-f3", "type": "fill_input", "question": "Destroy it in the ____. (Trituradora)", "correct_answer": "shredder", "explanation": "shredder." },
+        { "id": "a2-36-f4", "type": "fill_input", "question": "Where is the ____? (Engrapadora)", "correct_answer": "stapler", "explanation": "stapler." },
+        { "id": "a2-36-f5", "type": "fill_input", "question": "Use a ____ to keep the papers together. (Clip)", "correct_answer": "paperclip", "explanation": "paperclip." },
+        { "id": "a2-36-f6", "type": "fill_input", "question": "Put it in the blue ____. (Carpeta)", "correct_answer": "folder", "explanation": "folder." },
+        { "id": "a2-36-f7", "type": "fill_input", "question": "We are out of ____. (Tinta)", "correct_answer": "ink", "explanation": "ink." },
+        { "id": "a2-36-f8", "type": "fill_input", "question": "Turn on the ____. (Proyector)", "correct_answer": "projector", "explanation": "projector." },
+        { "id": "a2-36-f9", "type": "fill_input", "question": "Put the letter in the ____. (Sobre)", "correct_answer": "envelope", "explanation": "envelope." },
+        { "id": "a2-36-f10", "type": "fill_input", "question": "We need more office ____. (Suministros)", "correct_answer": "supplies", "explanation": "supplies." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-36-p1", "source": "Printer", "target": "Impresora"},
+        {"id": "a2-36-p2", "source": "Photocopier", "target": "Fotocopiadora"},
+        {"id": "a2-36-p3", "source": "Shredder", "target": "Trituradora de papel"},
+        {"id": "a2-36-p4", "source": "Stapler", "target": "Engrapadora"},
+        {"id": "a2-36-p5", "source": "Paperclip", "target": "Clip para papel"},
+        {"id": "a2-36-p6", "source": "Folder", "target": "Carpeta"},
+        {"id": "a2-36-p7", "source": "Ink cartridge", "target": "Cartucho de tinta"},
+        {"id": "a2-36-p8", "source": "Envelope", "target": "Sobre"},
+        {"id": "a2-36-p9", "source": "Office supplies", "target": "Suministros de oficina"},
+        {"id": "a2-36-p10", "source": "Projector", "target": "Proyector"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta sobre suministros de oficina.",
+      "questions": [
+        { "id": "a2-36-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Is the printer working?", "options": ["Is the printer working?", "Is the printer broken?", "Are the printers working?", "Is the photocopier working?"], "correct_answer": "Is the printer working?", "explanation": "Audio exacto." },
+        { "id": "a2-36-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The photocopier is out of paper.", "options": ["The photocopier is out of paper.", "The printer is out of paper.", "The copier is out of paper.", "The photocopier has no paper."], "correct_answer": "The photocopier is out of paper.", "explanation": "Audio exacto." },
+        { "id": "a2-36-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Destroy this in the shredder.", "options": ["Destroy this in the shredder.", "Put this in the shredder.", "Destroy it in the shredder.", "Cut this in the shredder."], "correct_answer": "Destroy this in the shredder.", "explanation": "Audio exacto." },
+        { "id": "a2-36-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Where is the stapler?", "options": ["Where is the stapler?", "Where is the staple?", "Where is my stapler?", "Where are the staples?"], "correct_answer": "Where is the stapler?", "explanation": "Audio exacto." },
+        { "id": "a2-36-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Use a paperclip.", "options": ["Use a paperclip.", "Need a paperclip.", "Have a paperclip.", "Use the paperclip."], "correct_answer": "Use a paperclip.", "explanation": "Audio exacto." },
+        { "id": "a2-36-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Put it in the blue folder.", "options": ["Put it in the blue folder.", "Put it in the folder.", "Put them in the blue folder.", "Place it in the blue folder."], "correct_answer": "Put it in the blue folder.", "explanation": "Audio exacto." },
+        { "id": "a2-36-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are out of ink.", "options": ["We are out of ink.", "We ran out of ink.", "I am out of ink.", "The printer is out of ink."], "correct_answer": "We are out of ink.", "explanation": "Audio exacto." },
+        { "id": "a2-36-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Turn on the projector.", "options": ["Turn on the projector.", "Turn off the projector.", "Please turn on the projector.", "Can you turn on the projector?"], "correct_answer": "Turn on the projector.", "explanation": "Audio exacto." },
+        { "id": "a2-36-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Put the letter in the envelope.", "options": ["Put the letter in the envelope.", "Put the letter in an envelope.", "Place the letter in the envelope.", "Put it in the envelope."], "correct_answer": "Put the letter in the envelope.", "explanation": "Audio exacto." },
+        { "id": "a2-36-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to order more office supplies.", "options": ["We need to order more office supplies.", "We must order more office supplies.", "We need more office supplies.", "I need to order more office supplies."], "correct_answer": "We need to order more office supplies.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

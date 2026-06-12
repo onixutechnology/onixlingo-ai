@@ -4,8 +4,7 @@ import "./globals.css";
 // IMPORTAMOS EL PADDLE PROVIDER QUE ACABAS DE CREAR
 import { PaddleProvider } from '@/components/providers/PaddleProvider';
 import PwaInstallPrompt from '@/components/PwaInstallPrompt';
-
-const inter = Inter({ subsets: ["latin"] });
+import EnergyRegenerator from '@/components/EnergyRegenerator';
 
 export const viewport: Viewport = {
   themeColor: "#4f46e5",
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
     default: "OnixLingo | AI-Powered Enterprise Language Training",
     template: "%s | OnixLingo"
   },
-  description: "Plataforma de aprendizaje de idiomas de alto rendimiento impulsada por Inteligencia Artificial para ejecutivos y profesionales de OnixCorp.",
+  description: "Plataforma de aprendizaje de idiomas de alto rendimiento impulsada por Inteligencia Artificial para ejecutivos y profesionales de OnixLingo.",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   keywords: ["idiomas", "IA", "ejecutivos", "B2B", "English training", "Ajedrez PvP", "OnixLingo"],
-  authors: [{ name: "OnixCorp Engineering" }],
+  authors: [{ name: "OnixLingo Engineering" }],
   openGraph: {
     type: "website",
     locale: "es_ES",
@@ -58,6 +57,8 @@ export const metadata: Metadata = {
   },
 };
 
+import Script from 'next/script';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -65,9 +66,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={inter.className}>
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1609709638618518"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
+      <body className="font-sans text-slate-900 antialiased">
         {/* ENVOLVEMOS LA APLICACIÓN CON EL PROVIDER */}
         <PaddleProvider>
+          <EnergyRegenerator />
           {children}
         </PaddleProvider>
         <PwaInstallPrompt />

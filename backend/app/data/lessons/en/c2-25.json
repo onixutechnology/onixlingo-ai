@@ -1,0 +1,101 @@
+{
+  "id": "c2-25",
+  "title": "C2 Capstone: The Ultimate Exam",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 1000,
+  "tags": ["C2", "Capstone", "Final Exam", "Grammar", "Vocabulary", "Advanced", "Business"],
+  "completion_message": "¡FELICITACIONES! Has superado el 'Capstone Exam' y dominado el nivel C2, el pináculo absoluto del idioma inglés. Has demostrado una elocuencia retórica perfecta, un vocabulario legal y financiero impecable, y una capacidad de liderazgo innegable. ¡Eres oficialmente bilingüe al más alto nivel profesional!",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "C2 Capstone: El Examen Definitivo",
+      "parts": [
+        { "visual": "Este es el hito final de tu viaje. \nEn este 'Capstone Exam', evaluaremos los conceptos más avanzados y sofisticados del idioma inglés que has aprendido en el nivel C2: \n\n1. Inversión Negativa para efecto dramático (Not only did we win... / Under no circumstances should you...). \n2. Mixed Conditionals (If I had invested then, I would be rich now). \n3. Relative Clauses avanzadas y conectores (Whom, Of which, Whereby, Albeit, Insofar as).", "audio": "This is the final milestone of your journey. In this Capstone Exam, we will evaluate the most advanced and sophisticated concepts of the English language that you have learned in the C2 level. We will test Negative Inversion for dramatic effect, such as 'Not only did we win', and 'Under no circumstances should you'. We will test Mixed Conditionals, like 'If I had invested then, I would be rich now'. We will also test advanced Relative Clauses and Connectors, like Whom, Of which, Whereby, Albeit, and Insofar as." },
+        { "visual": "También pondremos a prueba tu dominio del vocabulario corporativo supremo: \n\n4. Boardroom Politics & Crisis Management (C-Suite, Golden parachute, Scapegoat, Damage control). \n5. Legal English II (Indemnity, Force Majeure, Breach of contract, Due diligence). \n6. The Global Economy (Inflation, Quantitative Easing, Bear/Bull Market, GDP). \n\nEste es el paso final. ¡Demuestra que estás listo para liderar en el escenario global!", "audio": "We will also test your mastery of supreme corporate vocabulary. This includes Boardroom Politics and Crisis Management, with terms like C-Suite, Golden parachute, Scapegoat, and Damage control. We will test Legal English, including Indemnity, Force Majeure, Breach of contract, and Due diligence. Finally, we will test The Global Economy, covering Inflation, Quantitative Easing, Bear and Bull Markets, and GDP. This is the final step. Show that you are ready to lead on the global stage!" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "The Capstone Quiz",
+      "description": "Demuestra tu dominio absoluto en este examen final de C2.",
+      "questions": [
+        { "id": "c2-25-q1", "type": "quiz_choice", "question": "Normal: He had hardly entered the boardroom when the argument started. -> Inversion: Hardly ____ the boardroom when the argument started.", "options": ["had he entered", "he had entered", "did he enter", "entered he"], "correct_answer": "had he entered", "explanation": "Hardly + had + sujeto + participio." },
+        { "id": "c2-25-q2", "type": "quiz_choice", "question": "If they had accepted our initial offer in 2018, we ____ market leaders right now.", "options": ["would be", "would have been", "were", "will be"], "correct_answer": "would be", "explanation": "Mixed conditional: Causa pasada (had accepted) -> Efecto presente (would be)." },
+        { "id": "c2-25-q3", "type": "quiz_choice", "question": "The contractor failed to deliver the materials, which constitutes a clear ____ of contract.", "options": ["breach", "break", "burst", "branch"], "correct_answer": "breach", "explanation": "Breach of contract = incumplimiento de contrato." },
+        { "id": "c2-25-q4", "type": "quiz_choice", "question": "The central bank initiated a new round of Quantitative ____ to inject money into the struggling economy.", "options": ["Easing", "Lifting", "Pushing", "Raising"], "correct_answer": "Easing", "explanation": "Quantitative Easing = expansión cuantitativa." },
+        { "id": "c2-25-q5", "type": "quiz_choice", "question": "We bought out the competitor, ____ establishing a monopoly in the region. (Por lo tanto / De ese modo).", "options": ["thereby", "whereby", "albeit", "hence"], "correct_answer": "thereby", "explanation": "Thereby = de ese modo (whereby = mediante el cual)." },
+        { "id": "c2-25-q6", "type": "quiz_choice", "question": "____ only did the CFO embezzle funds, but he also destroyed the evidence.", "options": ["Not", "No", "Never", "Rarely"], "correct_answer": "Not", "explanation": "Not only did..." },
+        { "id": "c2-25-q7", "type": "quiz_choice", "question": "When the corruption scandal broke, the junior accountant was used as a ____ to protect the CEO.", "options": ["scapegoat", "whistleblower", "shareholder", "stakeholder"], "correct_answer": "scapegoat", "explanation": "Scapegoat = chivo expiatorio." },
+        { "id": "c2-25-q8", "type": "quiz_choice", "question": "The proposed merger is highly lucrative, ____ extremely risky. (Si bien / Aunque).", "options": ["albeit", "unless", "insofar", "conversely"], "correct_answer": "albeit", "explanation": "Albeit = si bien, aunque (muy formal)." },
+        { "id": "c2-25-q9", "type": "quiz_choice", "question": "If I ____ Russian fluently, they would have sent me to the Moscow office last year.", "options": ["spoke", "had spoken", "speak", "would speak"], "correct_answer": "spoke", "explanation": "Mixed conditional: Si yo hablara ruso (habilidad general) -> me habrían enviado (pasado)." },
+        { "id": "c2-25-q10", "type": "quiz_choice", "question": "Due to the unprecedented hurricane, the company invoked the Force ____ clause to suspend operations.", "options": ["Majeure", "Major", "Maximum", "Main"], "correct_answer": "Majeure", "explanation": "Force Majeure = Fuerza mayor." },
+        { "id": "c2-25-q11", "type": "quiz_choice", "question": "Under no circumstances ____ the server passwords with anyone outside the department.", "options": ["should you share", "you should share", "you share", "share you"], "correct_answer": "should you share", "explanation": "Under no circumstances + auxiliar + sujeto (should you share)." },
+        { "id": "c2-25-q12", "type": "quiz_choice", "question": "The board forced him to resign, but he left with a $50 million golden ____.", "options": ["parachute", "ticket", "handshake", "shield"], "correct_answer": "parachute", "explanation": "Golden parachute = indemnización millonaria." },
+        { "id": "c2-25-q13", "type": "quiz_choice", "question": "The committee presented five options, none of ____ were financially viable. (De las cuales).", "options": ["which", "whom", "what", "them"], "correct_answer": "which", "explanation": "None of which (para cosas)." },
+        { "id": "c2-25-q14", "type": "quiz_choice", "question": "A steady rise in prices that erodes purchasing power is known as ____.", "options": ["inflation", "deflation", "recession", "stagflation"], "correct_answer": "inflation", "explanation": "Inflation = inflación." },
+        { "id": "c2-25-q15", "type": "quiz_choice", "question": "The employee who leaked the illegal practices to the press is protected by ____ laws. (Denunciante).", "options": ["whistleblower", "scapegoat", "insider", "cronyism"], "correct_answer": "whistleblower", "explanation": "Whistleblower = denunciante interno." },
+        { "id": "c2-25-q16", "type": "quiz_choice", "question": "Before acquiring the startup, our lawyers must conduct thorough due ____. (Auditoría previa).", "options": ["diligence", "process", "care", "investigation"], "correct_answer": "diligence", "explanation": "Due diligence = auditoría / diligencia debida." },
+        { "id": "c2-25-q17", "type": "quiz_choice", "question": "Little ____ realize that the microphone was still on during his private conversation.", "options": ["did he", "he did", "he", "does he"], "correct_answer": "did he", "explanation": "Little + auxiliar + sujeto (Little did he realize)." },
+        { "id": "c2-25-q18", "type": "quiz_choice", "question": "They signed an agreement ____ the supplier will offer a 10% discount on bulk orders. (Mediante el cual).", "options": ["whereby", "thereby", "hereby", "whereof"], "correct_answer": "whereby", "explanation": "Whereby = mediante/por el cual." },
+        { "id": "c2-25-q19", "type": "quiz_choice", "question": "The sudden drop in tech stocks signals the beginning of a ____ market. (Mercado bajista).", "options": ["bear", "bull", "lion", "wolf"], "correct_answer": "bear", "explanation": "Bear market = mercado bajista." },
+        { "id": "c2-25-q20", "type": "quiz_choice", "question": "His lack of formal education ____, he built a billion-dollar empire. (A pesar de / No obstante su falta...).", "options": ["notwithstanding", "conversely", "albeit", "hence"], "correct_answer": "notwithstanding", "explanation": "Notwithstanding (puede ir después del sustantivo)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra (o palabras) clave.",
+      "questions": [
+        { "id": "c2-25-f1", "type": "fill_input", "question": "Not only (we won) -> Not only ____ ____ win.", "correct_answer": "did we", "explanation": "did we." },
+        { "id": "c2-25-f2", "type": "fill_input", "question": "If I had bought it, I ____ be rich now. (Usa: would)", "correct_answer": "would", "explanation": "would." },
+        { "id": "c2-25-f3", "type": "fill_input", "question": "None of ____. (Ninguno de los cuales - cosas)", "correct_answer": "which", "explanation": "which." },
+        { "id": "c2-25-f4", "type": "fill_input", "question": "Successful, ____ expensive. (Aunque - formal con A)", "correct_answer": "albeit", "explanation": "albeit." },
+        { "id": "c2-25-f5", "type": "fill_input", "question": "____ of contract. (Incumplimiento con B)", "correct_answer": "Breach", "explanation": "Breach." },
+        { "id": "c2-25-f6", "type": "fill_input", "question": "A golden ____. (Indemnización millonaria con P)", "correct_answer": "parachute", "explanation": "parachute." },
+        { "id": "c2-25-f7", "type": "fill_input", "question": "A ____ market. (Mercado alcista con B)", "correct_answer": "bull", "explanation": "bull." },
+        { "id": "c2-25-f8", "type": "fill_input", "question": "A corporate ____. (Denunciante con W)", "correct_answer": "whistleblower", "explanation": "whistleblower." },
+        { "id": "c2-25-f9", "type": "fill_input", "question": "Due ____. (Auditoría/Diligencia con D)", "correct_answer": "diligence", "explanation": "diligence." },
+        { "id": "c2-25-f10", "type": "fill_input", "question": "Force ____. (Fuerza mayor con M)", "correct_answer": "Majeure", "explanation": "Majeure." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "The Ultimate Match",
+      "pairs": [
+        {"id": "c2-25-p1", "source": "Not only did we win", "target": "No solo ganamos (Inversión)"},
+        {"id": "c2-25-p2", "source": "If I had invested,", "target": "Si hubiera invertido,"},
+        {"id": "c2-25-p3", "source": "I would be rich now.", "target": "Sería rico ahora. (Mixed cond.)"},
+        {"id": "c2-25-p4", "source": "Whereby", "target": "Mediante el cual"},
+        {"id": "c2-25-p5", "source": "Notwithstanding", "target": "A pesar de / No obstante"},
+        {"id": "c2-25-p6", "source": "Breach of contract", "target": "Incumplimiento de contrato"},
+        {"id": "c2-25-p7", "source": "Due diligence", "target": "Auditoría previa a un trato"},
+        {"id": "c2-25-p8", "source": "Whistleblower", "target": "Denunciante de fraude interno"},
+        {"id": "c2-25-p9", "source": "Quantitative Easing", "target": "Expansión cuantitativa"},
+        {"id": "c2-25-p10", "source": "Bear market", "target": "Mercado bajista"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Prueba auditiva definitiva para graduarte del nivel C2.",
+      "questions": [
+        { "id": "c2-25-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Not only did we win, we dominated.", "options": ["Not only did we win, we dominated.", "Not only we won, we dominated.", "Not only do we win, we dominated.", "Not only did we won, we dominated."], "correct_answer": "Not only did we win, we dominated.", "explanation": "Audio exacto." },
+        { "id": "c2-25-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If I had known, I would be there.", "options": ["If I had known, I would be there.", "If I knew, I would be there.", "If I had known, I would have been there.", "If I know, I will be there."], "correct_answer": "If I had known, I would be there.", "explanation": "Audio exacto." },
+        { "id": "c2-25-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The manager whom I trust.", "options": ["The manager whom I trust.", "The manager who I trust.", "The manager which I trust.", "The manager whose I trust."], "correct_answer": "The manager whom I trust.", "explanation": "Audio exacto." },
+        { "id": "c2-25-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was good, albeit expensive.", "options": ["It was good, albeit expensive.", "It was good, always expensive.", "It was good, although expensive.", "It was good, almost expensive."], "correct_answer": "It was good, albeit expensive.", "explanation": "Audio exacto." },
+        { "id": "c2-25-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a breach of contract.", "options": ["It is a breach of contract.", "It was a breach of contract.", "This is a breach of contract.", "That is a breach of contract."], "correct_answer": "It is a breach of contract.", "explanation": "Audio exacto." },
+        { "id": "c2-25-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Conduct your due diligence.", "options": ["Conduct your due diligence.", "Conducted your due diligence.", "Conduct the due diligence.", "Conduct your new diligence."], "correct_answer": "Conduct your due diligence.", "explanation": "Audio exacto." },
+        { "id": "c2-25-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He got a golden parachute.", "options": ["He got a golden parachute.", "She got a golden parachute.", "He gets a golden parachute.", "He got the golden parachute."], "correct_answer": "He got a golden parachute.", "explanation": "Audio exacto." },
+        { "id": "c2-25-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The whistleblower was fired.", "options": ["The whistleblower was fired.", "A whistleblower was fired.", "The whistleblower is fired.", "The whistleblower was hired."], "correct_answer": "The whistleblower was fired.", "explanation": "Audio exacto." },
+        { "id": "c2-25-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Inflation is rising rapidly.", "options": ["Inflation is rising rapidly.", "Deflation is rising rapidly.", "Inflation was rising rapidly.", "Inflation is falling rapidly."], "correct_answer": "Inflation is rising rapidly.", "explanation": "Audio exacto." },
+        { "id": "c2-25-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are in a bear market.", "options": ["We are in a bear market.", "They are in a bear market.", "We were in a bear market.", "We are in a bull market."], "correct_answer": "We are in a bear market.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

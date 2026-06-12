@@ -1,0 +1,101 @@
+{
+  "id": "c2-42",
+  "title": "Corporate Governance",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Corporate", "Business", "Governance"],
+  "completion_message": "¡Excelente! Entender el vocabulario de Gobierno Corporativo te permite comprender cómo se dirigen las empresas más grandes del mundo. Conceptos como 'Fiduciary duty' y 'Stakeholders' son el pan de cada día de un CEO.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Gobierno Corporativo y Sala de Juntas (C2)",
+      "parts": [
+        { "visual": "1. Shareholders vs. Stakeholders: \n- Shareholders (Accionistas): Los que poseen acciones de la empresa (dueños financieros). \n- Stakeholders (Partes interesadas): Cualquier persona afectada por la empresa (empleados, clientes, comunidad, proveedores). \nEj: A modern CEO must balance the needs of all STAKEHOLDERS, not just SHAREHOLDERS. \n\n2. Fiduciary duty (Deber fiduciario): \n- La obligación legal de actuar en el mejor interés financiero de otra persona o entidad. \nEj: The board members have a FIDUCIARY DUTY to protect the investors' money. \n\n3. Board of Directors (Junta Directiva / Consejo de Administración): \n- El grupo elegido por los accionistas para supervisar a la empresa. \nEj: The BOARD OF DIRECTORS decided to fire the CEO.", "audio": "Welcome to Corporate Governance vocabulary. Number 1: Shareholders versus Stakeholders. Shareholders are the people who own shares of the company, the financial owners. Stakeholders are anyone affected by the company, including employees, customers, the local community, and suppliers. For example: A modern CEO must balance the needs of all STAKEHOLDERS, not just SHAREHOLDERS. Number 2: Fiduciary duty. This is the strict legal obligation to act in the best financial interest of another entity. For example: The board members have a FIDUCIARY DUTY to protect the investors' money. Number 3: Board of Directors. The group elected by shareholders to oversee the company. For example: The BOARD OF DIRECTORS decided to fire the CEO." },
+        { "visual": "4. Proxy vote (Voto por poder / Voto delegado): \n- Cuando un accionista delega su voto a otra persona para una asamblea. \nEj: I won't attend the annual meeting, so I will cast a PROXY VOTE. \n\n5. Dividend (Dividendo): \n- Una parte de las ganancias de la empresa que se reparte a los accionistas. \nEj: The company announced a huge DIVIDEND for this quarter. \n\n6. Hostile takeover (Adquisición hostil / OPA hostil): \n- Cuando una empresa intenta comprar a otra en contra de la voluntad de su junta directiva. \nEj: To prevent a HOSTILE TAKEOVER, they implemented a 'poison pill' strategy. \n\n7. Vested interest (Interés personal / Creado): \n- Una razón personal o financiera para querer que algo suceda de cierta manera. \nEj: He has a VESTED INTEREST in keeping the old software because his brother sells it.", "audio": "Number 4: Proxy vote. When a shareholder delegates their voting power to someone else because they cannot attend the meeting. For example: I won't attend the annual meeting, so I will cast a PROXY VOTE. Number 5: Dividend. A sum of money paid regularly by a company to its shareholders out of its profits. For example: The company announced a huge DIVIDEND for this quarter. Number 6: Hostile takeover. When a company attempts to buy another company against the wishes of its management. For example: To prevent a HOSTILE TAKEOVER, they implemented a poison pill strategy. Number 7: Vested interest. A personal or financial reason for wanting something to happen in a specific way. For example: He has a VESTED INTEREST in keeping the old software because his brother sells it." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de gobierno corporativo correcto.",
+      "questions": [
+        { "id": "c2-42-q1", "type": "quiz_choice", "question": "The people who actually own pieces of the company are called ____. (Accionistas).", "options": ["shareholders", "stakeholders", "employees", "managers"], "correct_answer": "shareholders", "explanation": "Shareholders = accionistas (poseen 'shares')." },
+        { "id": "c2-42-q2", "type": "quiz_choice", "question": "Anyone who is impacted by the company, including the local community and employees, is a ____. (Parte interesada).", "options": ["stakeholder", "shareholder", "bystander", "onlooker"], "correct_answer": "stakeholder", "explanation": "Stakeholders = todas las partes interesadas o afectadas." },
+        { "id": "c2-42-q3", "type": "quiz_choice", "question": "The executive team must act in the best financial interest of the investors; this is their ____ duty. (Deber fiduciario).", "options": ["fiduciary", "financial", "friendly", "forced"], "correct_answer": "fiduciary", "explanation": "Fiduciary duty = deber fiduciario." },
+        { "id": "c2-42-q4", "type": "quiz_choice", "question": "Because she was sick, she asked her lawyer to cast a ____ vote at the annual shareholders' meeting. (Voto delegado).", "options": ["proxy", "fake", "remote", "absent"], "correct_answer": "proxy", "explanation": "Proxy vote = voto por poder o delegado." },
+        { "id": "c2-42-q5", "type": "quiz_choice", "question": "The company is highly profitable, so they pay a generous quarterly ____ to all investors. (Dividendo).", "options": ["dividend", "division", "divide", "bonus"], "correct_answer": "dividend", "explanation": "Dividend = dividendo (reparto de ganancias)." },
+        { "id": "c2-42-q6", "type": "quiz_choice", "question": "When a rival firm tries to buy a company against the wishes of its management, it's called a ____ takeover.", "options": ["hostile", "angry", "violent", "aggressive"], "correct_answer": "hostile", "explanation": "Hostile takeover = adquisición (u OPA) hostil." },
+        { "id": "c2-42-q7", "type": "quiz_choice", "question": "The CEO shouldn't choose the supplier because his wife owns the supply company. He has a ____ interest in the deal.", "options": ["vested", "tested", "rested", "invested"], "correct_answer": "vested", "explanation": "Vested interest = interés personal o económico encubierto." },
+        { "id": "c2-42-q8", "type": "quiz_choice", "question": "The ____ of Directors is responsible for hiring and firing the CEO. (Junta directiva).", "options": ["Board", "Group", "Team", "Council"], "correct_answer": "Board", "explanation": "Board of Directors = Consejo de Administración o Junta Directiva." },
+        { "id": "c2-42-q9", "type": "quiz_choice", "question": "When a company first sells shares to the public, it is called an IPO, which stands for Initial Public ____.", "options": ["Offering", "Opening", "Option", "Order"], "correct_answer": "Offering", "explanation": "Initial Public Offering (IPO) = Oferta Pública Inicial (salir a bolsa)." },
+        { "id": "c2-42-q10", "type": "quiz_choice", "question": "If an executive uses secret company information to buy stock and make a profit, they are committing ____ trading.", "options": ["insider", "inside", "internal", "secret"], "correct_answer": "insider", "explanation": "Insider trading = uso de información privilegiada." },
+        { "id": "c2-42-q11", "type": "quiz_choice", "question": "A strategy used to discourage a hostile takeover by making the company's stock less attractive is called a 'poison ____'.", "options": ["pill", "apple", "drink", "bite"], "correct_answer": "pill", "explanation": "Poison pill = píldora envenenada (táctica defensiva corporativa)." },
+        { "id": "c2-42-q12", "type": "quiz_choice", "question": "When the CEO is also the Chairman of the Board, critics often say it creates a ____ of interest. (Conflicto).", "options": ["conflict", "clash", "fight", "battle"], "correct_answer": "conflict", "explanation": "Conflict of interest = conflicto de intereses." },
+        { "id": "c2-42-q13", "type": "quiz_choice", "question": "The top executives of a company (CEO, CFO, COO) are collectively known as the ____-suite.", "options": ["C", "A", "Top", "Exec"], "correct_answer": "C", "explanation": "C-suite = ejecutivos de nivel 'Chief'." },
+        { "id": "c2-42-q14", "type": "quiz_choice", "question": "When a company buys back its own shares from the open market, it is called a share ____.", "options": ["buyback", "return", "refund", "recall"], "correct_answer": "buyback", "explanation": "Share buyback = recompra de acciones." },
+        { "id": "c2-42-q15", "type": "quiz_choice", "question": "A massive severance package given to an executive when they are fired is called a golden ____.", "options": ["parachute", "handshake", "ticket", "helmet"], "correct_answer": "parachute", "explanation": "Golden parachute = paracaídas dorado (indemnización millonaria)." },
+        { "id": "c2-42-q16", "type": "quiz_choice", "question": "To ensure transparency, public companies must undergo a yearly external ____. (Auditoría).", "options": ["audit", "check", "review", "inspection"], "correct_answer": "audit", "explanation": "Audit = auditoría." },
+        { "id": "c2-42-q17", "type": "quiz_choice", "question": "The legal document that outlines how a corporation will be run is called the company's ____. (Estatutos).", "options": ["bylaws", "laws", "rules", "orders"], "correct_answer": "bylaws", "explanation": "Bylaws (o Articles of Incorporation) = estatutos de la empresa." },
+        { "id": "c2-42-q18", "type": "quiz_choice", "question": "When two companies join together to form a new entity, it is a ____. (Fusión).", "options": ["merger", "meeting", "joining", "alliance"], "correct_answer": "merger", "explanation": "Merger = fusión." },
+        { "id": "c2-42-q19", "type": "quiz_choice", "question": "When one company buys a smaller company, it is an ____. (Adquisición).", "options": ["acquisition", "addition", "adoption", "absorption"], "correct_answer": "acquisition", "explanation": "Acquisition = adquisición." },
+        { "id": "c2-42-q20", "type": "quiz_choice", "question": "The measure of a company's total value, calculated by multiplying the share price by the number of shares, is its market ____.", "options": ["capitalization", "size", "value", "worth"], "correct_answer": "capitalization", "explanation": "Market capitalization (Market cap) = capitalización bursátil." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término corporativo correcto.",
+      "questions": [
+        { "id": "c2-42-f1", "type": "fill_input", "question": "The ____. (Accionistas con S)", "correct_answer": "shareholders", "explanation": "shareholders." },
+        { "id": "c2-42-f2", "type": "fill_input", "question": "The ____. (Partes interesadas con S)", "correct_answer": "stakeholders", "explanation": "stakeholders." },
+        { "id": "c2-42-f3", "type": "fill_input", "question": "A ____ duty. (Deber fiduciario con F)", "correct_answer": "fiduciary", "explanation": "fiduciary." },
+        { "id": "c2-42-f4", "type": "fill_input", "question": "A ____ vote. (Voto por poder con P)", "correct_answer": "proxy", "explanation": "proxy." },
+        { "id": "c2-42-f5", "type": "fill_input", "question": "Pay a ____. (Dividendo con D)", "correct_answer": "dividend", "explanation": "dividend." },
+        { "id": "c2-42-f6", "type": "fill_input", "question": "A ____ takeover. (Adquisición hostil con H)", "correct_answer": "hostile", "explanation": "hostile." },
+        { "id": "c2-42-f7", "type": "fill_input", "question": "A ____ interest. (Interés personal/creado con V)", "correct_answer": "vested", "explanation": "vested." },
+        { "id": "c2-42-f8", "type": "fill_input", "question": "____ of Directors. (Junta Directiva con B)", "correct_answer": "Board", "explanation": "Board." },
+        { "id": "c2-42-f9", "type": "fill_input", "question": "____ trading. (Información privilegiada con I)", "correct_answer": "Insider", "explanation": "Insider." },
+        { "id": "c2-42-f10", "type": "fill_input", "question": "A golden ____. (Paracaídas dorado con P)", "correct_answer": "parachute", "explanation": "parachute." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Governance Match",
+      "pairs": [
+        {"id": "c2-42-p1", "source": "Shareholders", "target": "Accionistas (dueños financieros)"},
+        {"id": "c2-42-p2", "source": "Stakeholders", "target": "Todas las partes interesadas/afectadas"},
+        {"id": "c2-42-p3", "source": "Fiduciary duty", "target": "Deber u obligación fiduciaria"},
+        {"id": "c2-42-p4", "source": "Proxy vote", "target": "Voto delegado / por poder"},
+        {"id": "c2-42-p5", "source": "Dividend", "target": "Reparto de ganancias a inversores"},
+        {"id": "c2-42-p6", "source": "Hostile takeover", "target": "Adquisición/OPA hostil"},
+        {"id": "c2-42-p7", "source": "Vested interest", "target": "Interés personal o económico oculto"},
+        {"id": "c2-42-p8", "source": "Board of Directors", "target": "Junta Directiva / Consejo"},
+        {"id": "c2-42-p9", "source": "Insider trading", "target": "Uso de información privilegiada"},
+        {"id": "c2-42-p10", "source": "Golden parachute", "target": "Indemnización millonaria por despido"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración corporativa correcta.",
+      "questions": [
+        { "id": "c2-42-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must please the shareholders.", "options": ["We must please the shareholders.", "We must please the stakeholders.", "We must pleasing the shareholders.", "He must please the shareholders."], "correct_answer": "We must please the shareholders.", "explanation": "Audio exacto." },
+        { "id": "c2-42-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It affects all stakeholders.", "options": ["It affects all stakeholders.", "It affects all shareholders.", "It affected all stakeholders.", "It affects some stakeholders."], "correct_answer": "It affects all stakeholders.", "explanation": "Audio exacto." },
+        { "id": "c2-42-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have a fiduciary duty.", "options": ["We have a fiduciary duty.", "They have a fiduciary duty.", "We had a fiduciary duty.", "I have a fiduciary duty."], "correct_answer": "We have a fiduciary duty.", "explanation": "Audio exacto." },
+        { "id": "c2-42-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She cast a proxy vote.", "options": ["She cast a proxy vote.", "He cast a proxy vote.", "She casts a proxy vote.", "She casted a proxy vote."], "correct_answer": "She cast a proxy vote.", "explanation": "Audio exacto." },
+        { "id": "c2-42-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They announced a huge dividend.", "options": ["They announced a huge dividend.", "We announced a huge dividend.", "They announce a huge dividend.", "He announced a huge dividend."], "correct_answer": "They announced a huge dividend.", "explanation": "Audio exacto." },
+        { "id": "c2-42-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a hostile takeover.", "options": ["It was a hostile takeover.", "This was a hostile takeover.", "It is a hostile takeover.", "It was a hostile takedown."], "correct_answer": "It was a hostile takeover.", "explanation": "Audio exacto." },
+        { "id": "c2-42-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He has a vested interest.", "options": ["He has a vested interest.", "She has a vested interest.", "He had a vested interest.", "He has an invested interest."], "correct_answer": "He has a vested interest.", "explanation": "Audio exacto." },
+        { "id": "c2-42-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The Board of Directors agreed.", "options": ["The Board of Directors agreed.", "A Board of Directors agreed.", "The Board of Directors agree.", "The Board of Director agreed."], "correct_answer": "The Board of Directors agreed.", "explanation": "Audio exacto." },
+        { "id": "c2-42-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They accused him of insider trading.", "options": ["They accused him of insider trading.", "We accused him of insider trading.", "They accuse him of insider trading.", "They accused her of insider trading."], "correct_answer": "They accused him of insider trading.", "explanation": "Audio exacto." },
+        { "id": "c2-42-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He got a golden parachute.", "options": ["He got a golden parachute.", "She got a golden parachute.", "He gets a golden parachute.", "I got a golden parachute."], "correct_answer": "He got a golden parachute.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

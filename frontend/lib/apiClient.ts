@@ -2,13 +2,10 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-let RAW_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company/api/v1';
+let RAW_URL = 'https://api.onixlingo.onixu.company/api/v1';
 
-// Autodetección para usar el backend local si el frontend corre en localhost
-if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
-    RAW_URL = 'http://127.0.0.1:8020/api/v1';
-} else if (typeof window === 'undefined' && process.env.NODE_ENV === 'development') {
-    // Si se está ejecutando del lado del servidor en desarrollo
+// En desarrollo usamos el backend local
+if (process.env.NODE_ENV !== 'production') {
     RAW_URL = 'http://127.0.0.1:8020/api/v1';
 }
 

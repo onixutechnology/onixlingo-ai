@@ -1,0 +1,101 @@
+{
+  "id": "b1-26",
+  "title": "Third Conditional (Past Regrets)",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Conditionals", "Business"],
+  "completion_message": "¡Excelente! Ahora puedes analizar el pasado y hablar sobre oportunidades perdidas usando el Tercer Condicional.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Tercer Condicional: Situaciones del Pasado",
+      "parts": [
+        { "visual": "Usamos el Tercer Condicional para hablar de situaciones en el PASADO que no ocurrieron y sus consecuencias imaginarias. \nEstructura: IF + Pasado Perfecto (had + participio) , WOULD HAVE + Participio.", "audio": "We use the Third Conditional to talk about situations in the past that did not happen, and their imaginary consequences. The structure is: If, plus Past Perfect, comma, plus Would Have, plus a Past Participle." },
+        { "visual": "Ejemplos: \nIF we HAD LAUNCHED earlier, we WOULD HAVE SOLD more (Si hubiéramos lanzado antes, habríamos vendido más). \nIF I HAD KNOWN the deadline, I WOULDN'T HAVE BEEN late (Si hubiera sabido la fecha límite, no habría llegado tarde).", "audio": "Examples. If we had launched earlier, we would have sold more. Another example: If I had known the deadline, I wouldn't have been late." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del Tercer Condicional.",
+      "questions": [
+        { "id": "b1-26-q1", "type": "quiz_choice", "question": "If we ____ the contract, we would have lost the client. (No hubiéramos firmado).", "options": ["hadn't signed", "didn't sign", "haven't signed", "wouldn't sign"], "correct_answer": "hadn't signed", "explanation": "If + pasado perfecto (hadn't signed)." },
+        { "id": "b1-26-q2", "type": "quiz_choice", "question": "If they had offered a better price, we ____ it. (Lo habríamos aceptado).", "options": ["would have accepted", "would accept", "will accept", "accepted"], "correct_answer": "would have accepted", "explanation": "Consecuencia en el pasado = would have + participio (accepted)." },
+        { "id": "b1-26-q3", "type": "quiz_choice", "question": "I ____ to the meeting if you had told me about it. (Habría ido).", "options": ["would have gone", "would go", "will go", "had gone"], "correct_answer": "would have gone", "explanation": "Consecuencia de algo que no pasó = would have gone." },
+        { "id": "b1-26-q4", "type": "quiz_choice", "question": "If she ____ the email, she would have known about the problem. (Hubiera leído).", "options": ["had read", "read", "would have read", "has read"], "correct_answer": "had read", "explanation": "If + past perfect = had read." },
+        { "id": "b1-26-q5", "type": "quiz_choice", "question": "We would have won the project if our presentation ____ better. (Hubiera sido).", "options": ["had been", "was", "were", "has been"], "correct_answer": "had been", "explanation": "If + past perfect de 'to be' = had been." },
+        { "id": "b1-26-q6", "type": "quiz_choice", "question": "If I had seen the error, I ____ you. (Te habría dicho).", "options": ["would have told", "would tell", "will tell", "had told"], "correct_answer": "would have told", "explanation": "Consecuencia pasada = would have + told." },
+        { "id": "b1-26-q7", "type": "quiz_choice", "question": "The company ____ bankrupt if they hadn't secured the loan. (Habría quebrado).", "options": ["would have gone", "would go", "went", "had gone"], "correct_answer": "would have gone", "explanation": "Would have gone bankrupt." },
+        { "id": "b1-26-q8", "type": "quiz_choice", "question": "If you ____ earlier, you would have met the CEO. (Hubieras llegado - arrive).", "options": ["had arrived", "arrived", "would have arrived", "have arrived"], "correct_answer": "had arrived", "explanation": "If + past perfect = had arrived." },
+        { "id": "b1-26-q9", "type": "quiz_choice", "question": "If we had invested in that startup, we ____ a lot of money. (Habríamos ganado/hecho).", "options": ["would have made", "would make", "had made", "made"], "correct_answer": "would have made", "explanation": "Would have made a lot of money." },
+        { "id": "b1-26-q10", "type": "quiz_choice", "question": "I wouldn't have missed the flight if the taxi ____ late. (No hubiera llegado).", "options": ["hadn't been", "wasn't", "didn't be", "wouldn't have been"], "correct_answer": "hadn't been", "explanation": "If the taxi hadn't been late (Si no hubiera llegado tarde)." },
+        { "id": "b1-26-q11", "type": "quiz_choice", "question": "What ____ you ____ if they had rejected your proposal? (¿Qué habrías hecho?).", "options": ["would / have done", "would / do", "did / do", "will / do"], "correct_answer": "would / have done", "explanation": "Pregunta: What would you have done?" },
+        { "id": "b1-26-q12", "type": "quiz_choice", "question": "If they ____ market research, the launch wouldn't have failed. (Hubieran hecho - do).", "options": ["had done", "did", "have done", "would have done"], "correct_answer": "had done", "explanation": "If + had done (participio de do)." },
+        { "id": "b1-26-q13", "type": "quiz_choice", "question": "If he had prepared for the interview, he ____ the job. (Habría conseguido).", "options": ["would have gotten", "would get", "had gotten", "got"], "correct_answer": "would have gotten", "explanation": "Would have gotten (conseguido)." },
+        { "id": "b1-26-q14", "type": "quiz_choice", "question": "We ____ the deadline if the system hadn't crashed. (Habríamos cumplido - meet).", "options": ["would have met", "would meet", "had met", "met"], "correct_answer": "would have met", "explanation": "Would have met the deadline (Habríamos cumplido la fecha)." },
+        { "id": "b1-26-q15", "type": "quiz_choice", "question": "If I ____ that you were in town, we could have had lunch. (Hubiera sabido).", "options": ["had known", "knew", "would have known", "know"], "correct_answer": "had known", "explanation": "If + past perfect de know = had known." },
+        { "id": "b1-26-q16", "type": "quiz_choice", "question": "They wouldn't have sued us if we ____ the mistake immediately. (Hubiéramos arreglado).", "options": ["had fixed", "fixed", "have fixed", "would have fixed"], "correct_answer": "had fixed", "explanation": "If + had fixed." },
+        { "id": "b1-26-q17", "type": "quiz_choice", "question": "If the marketing team ____ a better campaign, sales would have been higher. (Hubiera creado).", "options": ["had created", "created", "would have created", "has created"], "correct_answer": "had created", "explanation": "Had created." },
+        { "id": "b1-26-q18", "type": "quiz_choice", "question": "She would have been promoted if she ____ that big mistake. (No hubiera cometido).", "options": ["hadn't made", "didn't make", "wouldn't have made", "hasn't made"], "correct_answer": "hadn't made", "explanation": "If she hadn't made." },
+        { "id": "b1-26-q19", "type": "quiz_choice", "question": "If we had listened to the customers, we ____ this problem now. Wait... 'now' indica condicional mixto, pero asume consecuencia pasada: we ____ the problem yesterday. (Habríamos evitado).", "options": ["would have avoided", "would avoid", "had avoided", "avoided"], "correct_answer": "would have avoided", "explanation": "Would have avoided." },
+        { "id": "b1-26-q20", "type": "quiz_choice", "question": "We ____ the contract if you had given us more time. (Habríamos firmado).", "options": ["would have signed", "would sign", "had signed", "signed"], "correct_answer": "would have signed", "explanation": "Would have signed." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Completa el Tercer Condicional (had + participio / would have + participio).",
+      "questions": [
+        { "id": "b1-26-f1", "type": "fill_input", "question": "If we ____ (had) more time, we would have finished. (Hubiéramos tenido)", "correct_answer": "had had", "explanation": "had had (el primer 'had' es el auxiliar, el segundo es el verbo principal en participio)." },
+        { "id": "b1-26-f2", "type": "fill_input", "question": "If I had known, I ____ (would have) told you.", "correct_answer": "would have", "explanation": "would have." },
+        { "id": "b1-26-f3", "type": "fill_input", "question": "If she ____ (be) late, she would have missed the flight. (Hubiera estado)", "correct_answer": "had been", "explanation": "had been." },
+        { "id": "b1-26-f4", "type": "fill_input", "question": "We would have lost the client if we ____ (not fix) it.", "correct_answer": "hadn't fixed", "explanation": "hadn't fixed." },
+        { "id": "b1-26-f5", "type": "fill_input", "question": "What ____ you have done? (Habrías)", "correct_answer": "would", "explanation": "would." },
+        { "id": "b1-26-f6", "type": "fill_input", "question": "If they ____ (offer) a discount, we would have bought it.", "correct_answer": "had offered", "explanation": "had offered." },
+        { "id": "b1-26-f7", "type": "fill_input", "question": "I would have gone if you ____ (invite) me.", "correct_answer": "had invited", "explanation": "had invited." },
+        { "id": "b1-26-f8", "type": "fill_input", "question": "If we had invested, we would ____ (make) a profit.", "correct_answer": "have made", "explanation": "have made." },
+        { "id": "b1-26-f9", "type": "fill_input", "question": "If I ____ (know), I wouldn't have gone.", "correct_answer": "had known", "explanation": "had known." },
+        { "id": "b1-26-f10", "type": "fill_input", "question": "The company would ____ (go) bankrupt.", "correct_answer": "have gone", "explanation": "have gone." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Third Conditional Match",
+      "pairs": [
+        {"id": "b1-26-p1", "source": "If we had signed...", "target": "...we would have lost the client."},
+        {"id": "b1-26-p2", "source": "If I had known...", "target": "...I would have told you."},
+        {"id": "b1-26-p3", "source": "If she had read the email...", "target": "...she would have known."},
+        {"id": "b1-26-p4", "source": "If we had invested...", "target": "...we would have made money."},
+        {"id": "b1-26-p5", "source": "What would you have done...", "target": "...if they had rejected it?"},
+        {"id": "b1-26-p6", "source": "We would have accepted...", "target": "...if they had offered a discount."},
+        {"id": "b1-26-p7", "source": "I wouldn't have missed the flight...", "target": "...if I hadn't been late."},
+        {"id": "b1-26-p8", "source": "If the presentation had been better...", "target": "...we would have won the project."},
+        {"id": "b1-26-p9", "source": "If they had done research...", "target": "...it wouldn't have failed."},
+        {"id": "b1-26-p10", "source": "We would have met the deadline...", "target": "...if the system hadn't crashed."}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase en Tercer Condicional correcta.",
+      "questions": [
+        { "id": "b1-26-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If we had signed the contract, we would have lost.", "options": ["If we had signed the contract, we would have lost.", "If we signed the contract, we would lose.", "If we had signed the contract, we would lose.", "If we signed the contract, we would have lost."], "correct_answer": "If we had signed the contract, we would have lost.", "explanation": "Audio exacto." },
+        { "id": "b1-26-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If I had known, I would have told you.", "options": ["If I had known, I would have told you.", "If I knew, I would have told you.", "If I had known, I would tell you.", "If I know, I will tell you."], "correct_answer": "If I had known, I would have told you.", "explanation": "Audio exacto." },
+        { "id": "b1-26-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We would have accepted if they had offered a discount.", "options": ["We would have accepted if they had offered a discount.", "We would accept if they had offered a discount.", "We would have accepted if they offered a discount.", "We would have accepted if they offer a discount."], "correct_answer": "We would have accepted if they had offered a discount.", "explanation": "Audio exacto." },
+        { "id": "b1-26-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I would have gone if you had invited me.", "options": ["I would have gone if you had invited me.", "I would go if you had invited me.", "I would have gone if you invited me.", "I will go if you invite me."], "correct_answer": "I would have gone if you had invited me.", "explanation": "Audio exacto." },
+        { "id": "b1-26-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What would you have done?", "options": ["What would you have done?", "What would you do?", "What will you do?", "What did you do?"], "correct_answer": "What would you have done?", "explanation": "Audio exacto." },
+        { "id": "b1-26-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If she had been late, she would have missed it.", "options": ["If she had been late, she would have missed it.", "If she was late, she would have missed it.", "If she had been late, she would miss it.", "If she is late, she will miss it."], "correct_answer": "If she had been late, she would have missed it.", "explanation": "Audio exacto." },
+        { "id": "b1-26-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company would have gone bankrupt.", "options": ["The company would have gone bankrupt.", "The company would go bankrupt.", "The company will go bankrupt.", "The company had gone bankrupt."], "correct_answer": "The company would have gone bankrupt.", "explanation": "Audio exacto." },
+        { "id": "b1-26-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We would have made a profit.", "options": ["We would have made a profit.", "We would make a profit.", "We will make a profit.", "We have made a profit."], "correct_answer": "We would have made a profit.", "explanation": "Audio exacto." },
+        { "id": "b1-26-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If they had done research, it wouldn't have failed.", "options": ["If they had done research, it wouldn't have failed.", "If they did research, it wouldn't have failed.", "If they had done research, it won't fail.", "If they do research, it won't fail."], "correct_answer": "If they had done research, it wouldn't have failed.", "explanation": "Audio exacto." },
+        { "id": "b1-26-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If we had had more time.", "options": ["If we had had more time.", "If we had more time.", "If we have more time.", "If we have had more time."], "correct_answer": "If we had had more time.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

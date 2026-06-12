@@ -1,0 +1,101 @@
+{
+  "id": "a1-39",
+  "title": "Basic Directions in the Building",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Directions", "Office"],
+  "completion_message": "¡Excelente! Ya sabes dar y pedir direcciones básicas dentro de tu edificio de oficinas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Direcciones Básicas",
+      "parts": [
+        { "visual": "Para dar direcciones usa comandos: 'Go straight' (Sigue derecho), 'Turn left/right' (Gira a la izquierda/derecha).", "audio": "To give directions use commands: Go straight, turn left, turn right." },
+        { "visual": "También puedes usar 'Take the elevator' (Toma el ascensor) o 'Take the stairs' (Toma las escaleras).", "audio": "You can also use Take the elevator or Take the stairs." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la dirección o lugar correcto.",
+      "questions": [
+        { "id": "a1-39-q1", "type": "quiz_choice", "question": "To go to the lobby, ____ the elevator.", "options": ["take", "make", "do", "go"], "correct_answer": "take", "explanation": "Tomar el ascensor (take the elevator)." },
+        { "id": "a1-39-q2", "type": "quiz_choice", "question": "Go ____ ahead.", "options": ["straight", "right", "left", "back"], "correct_answer": "straight", "explanation": "Sigue derecho (Go straight ahead)." },
+        { "id": "a1-39-q3", "type": "quiz_choice", "question": "____ left at the corner.", "options": ["Turn", "Go", "Make", "Walk"], "correct_answer": "Turn", "explanation": "Girar (Turn left)." },
+        { "id": "a1-39-q4", "type": "quiz_choice", "question": "The meeting room is on the second ____.", "options": ["floor", "door", "window", "roof"], "correct_answer": "floor", "explanation": "Segundo piso (floor)." },
+        { "id": "a1-39-q5", "type": "quiz_choice", "question": "Where is the ____? I need to wash my hands.", "options": ["restroom", "bedroom", "kitchen", "office"], "correct_answer": "restroom", "explanation": "Baño (restroom)." },
+        { "id": "a1-39-q6", "type": "quiz_choice", "question": "Walk down the ____.", "options": ["hallway", "wall", "ceiling", "window"], "correct_answer": "hallway", "explanation": "Pasillo (hallway o corridor)." },
+        { "id": "a1-39-q7", "type": "quiz_choice", "question": "Take the ____ to the 5th floor.", "options": ["stairs", "doors", "windows", "rooms"], "correct_answer": "stairs", "explanation": "Escaleras (stairs)." },
+        { "id": "a1-39-q8", "type": "quiz_choice", "question": "It's ____ to the water cooler.", "options": ["next", "near", "left", "right"], "correct_answer": "next", "explanation": "Al lado de (next to)." },
+        { "id": "a1-39-q9", "type": "quiz_choice", "question": "The cafeteria is ____ the right.", "options": ["on", "in", "at", "to"], "correct_answer": "on", "explanation": "A la derecha (on the right)." },
+        { "id": "a1-39-q10", "type": "quiz_choice", "question": "Turn ____ at the reception desk.", "options": ["right", "straight", "ahead", "back"], "correct_answer": "right", "explanation": "Gira a la derecha (Turn right)." },
+        { "id": "a1-39-q11", "type": "quiz_choice", "question": "Go ____ the end of the hall.", "options": ["to", "in", "at", "on"], "correct_answer": "to", "explanation": "Ve hasta (Go to)." },
+        { "id": "a1-39-q12", "type": "quiz_choice", "question": "The HR office is ____ the second floor.", "options": ["on", "in", "at", "for"], "correct_answer": "on", "explanation": "En el piso (on the floor)." },
+        { "id": "a1-39-q13", "type": "quiz_choice", "question": "____ me, where is the elevator?", "options": ["Excuse", "Sorry", "Pardon", "Forgive"], "correct_answer": "Excuse", "explanation": "Disculpe (Excuse me)." },
+        { "id": "a1-39-q14", "type": "quiz_choice", "question": "It is ____ the coffee machine.", "options": ["behind", "back", "straight", "floor"], "correct_answer": "behind", "explanation": "Detrás de (behind)." },
+        { "id": "a1-39-q15", "type": "quiz_choice", "question": "It's ____ front of you.", "options": ["in", "on", "at", "by"], "correct_answer": "in", "explanation": "Enfrente de (in front of)." },
+        { "id": "a1-39-q16", "type": "quiz_choice", "question": "You can't ____ it.", "options": ["miss", "lose", "drop", "find"], "correct_answer": "miss", "explanation": "No tiene pérdida (You can't miss it)." },
+        { "id": "a1-39-q17", "type": "quiz_choice", "question": "Go ____ the stairs.", "options": ["up", "on", "in", "at"], "correct_answer": "up", "explanation": "Sube las escaleras (Go up)." },
+        { "id": "a1-39-q18", "type": "quiz_choice", "question": "The emergency ____.", "options": ["exit", "door", "window", "out"], "correct_answer": "exit", "explanation": "Salida de emergencia (emergency exit)." },
+        { "id": "a1-39-q19", "type": "quiz_choice", "question": "Where is the main ____?", "options": ["entrance", "enter", "entering", "door"], "correct_answer": "entrance", "explanation": "Entrada principal." },
+        { "id": "a1-39-q20", "type": "quiz_choice", "question": "It's down the ____ on your left.", "options": ["hall", "wall", "room", "door"], "correct_answer": "hall", "explanation": "Pasillo (hall)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta para la dirección.",
+      "questions": [
+        { "id": "a1-39-f1", "type": "fill_input", "question": "____ the elevator (Toma).", "correct_answer": "Take", "explanation": "Take." },
+        { "id": "a1-39-f2", "type": "fill_input", "question": "Go ____ (Derecho/Recto).", "correct_answer": "straight", "explanation": "Straight." },
+        { "id": "a1-39-f3", "type": "fill_input", "question": "____ left (Gira).", "correct_answer": "Turn", "explanation": "Turn." },
+        { "id": "a1-39-f4", "type": "fill_input", "question": "The second ____ (Piso).", "correct_answer": "floor", "explanation": "Floor." },
+        { "id": "a1-39-f5", "type": "fill_input", "question": "The ____ (Baño).", "correct_answer": "restroom", "explanation": "Restroom." },
+        { "id": "a1-39-f6", "type": "fill_input", "question": "Down the ____ (Pasillo).", "correct_answer": "hallway", "explanation": "Hallway." },
+        { "id": "a1-39-f7", "type": "fill_input", "question": "Take the ____ (Escaleras).", "correct_answer": "stairs", "explanation": "Stairs." },
+        { "id": "a1-39-f8", "type": "fill_input", "question": "On the ____ (Derecha).", "correct_answer": "right", "explanation": "Right." },
+        { "id": "a1-39-f9", "type": "fill_input", "question": "____ me (Disculpe).", "correct_answer": "Excuse", "explanation": "Excuse." },
+        { "id": "a1-39-f10", "type": "fill_input", "question": "Emergency ____ (Salida).", "correct_answer": "exit", "explanation": "Exit." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-39-p1", "source": "Go straight", "target": "Sigue derecho"},
+        {"id": "a1-39-p2", "source": "Turn left", "target": "Gira a la izquierda"},
+        {"id": "a1-39-p3", "source": "Turn right", "target": "Gira a la derecha"},
+        {"id": "a1-39-p4", "source": "Elevator", "target": "Ascensor"},
+        {"id": "a1-39-p5", "source": "Stairs", "target": "Escaleras"},
+        {"id": "a1-39-p6", "source": "Floor", "target": "Piso / Planta"},
+        {"id": "a1-39-p7", "source": "Hallway", "target": "Pasillo"},
+        {"id": "a1-39-p8", "source": "Restroom", "target": "Baño"},
+        {"id": "a1-39-p9", "source": "Entrance", "target": "Entrada"},
+        {"id": "a1-39-p10", "source": "Exit", "target": "Salida"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la indicación exacta.",
+      "questions": [
+        { "id": "a1-39-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Take the elevator.", "options": ["Take the elevator.", "Make the elevator.", "Take an elevator.", "Wait for the elevator."], "correct_answer": "Take the elevator.", "explanation": "Audio exacto." },
+        { "id": "a1-39-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Go straight.", "options": ["Go straight.", "Go straight ahead.", "Go back.", "Go left."], "correct_answer": "Go straight.", "explanation": "Audio exacto." },
+        { "id": "a1-39-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Turn left.", "options": ["Turn left.", "Turn right.", "Go left.", "Look left."], "correct_answer": "Turn left.", "explanation": "Audio exacto." },
+        { "id": "a1-39-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The second floor.", "options": ["The second floor.", "The third floor.", "A second floor.", "The first floor."], "correct_answer": "The second floor.", "explanation": "Audio exacto." },
+        { "id": "a1-39-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The restroom.", "options": ["The restroom.", "A restroom.", "The bathroom.", "The rest room."], "correct_answer": "The restroom.", "explanation": "Audio exacto." },
+        { "id": "a1-39-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Down the hallway.", "options": ["Down the hallway.", "Up the hallway.", "In the hallway.", "Down the wall."], "correct_answer": "Down the hallway.", "explanation": "Audio exacto." },
+        { "id": "a1-39-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Take the stairs.", "options": ["Take the stairs.", "Make the stairs.", "Use the stairs.", "Go up the stairs."], "correct_answer": "Take the stairs.", "explanation": "Audio exacto." },
+        { "id": "a1-39-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "On the right.", "options": ["On the right.", "On the left.", "In the right.", "At the right."], "correct_answer": "On the right.", "explanation": "Audio exacto." },
+        { "id": "a1-39-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Excuse me.", "options": ["Excuse me.", "Sorry.", "Pardon.", "Excuse you."], "correct_answer": "Excuse me.", "explanation": "Audio exacto." },
+        { "id": "a1-39-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Emergency exit.", "options": ["Emergency exit.", "Emergency doors.", "Emergency wait.", "An emergency exit."], "correct_answer": "Emergency exit.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

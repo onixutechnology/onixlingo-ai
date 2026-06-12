@@ -1,602 +1,94 @@
 {
   "id": "fr-b1-13",
-  "title": "Dominio del Soporte Técnico",
+  "title": "Le Discours Indirect au Passé",
+  "version": "4.0-ARTISAN",
   "level": "B1",
-  "description": "Solución guiada de incidentes de IT.",
-  "total_xp": 300,
-  "difficulty": "medium",
-  "tags": [
-    "b1",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Reported Speech", "Past Tense", "Concordance"],
+  "completion_message": "¡Félicitations! Has dominado la Concordancia de los Tiempos, uno de los temas más temidos por los estudiantes. Tu francés es ahora oficialmente nivel B1 sólido.",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Dominio del Soporte Técnico",
+      "title": "La Máquina del Tiempo (B1)",
       "parts": [
         {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau B1 • Leçon B1-13 de 200\nSujet: Dominio del Soporte Técnico\n\nConcept Clé:\n☞ 'REDÉMARRAGE'\n\n[Point Grammatical - Enfoque Gramatical]\n- L'utilisation des verbes modaux professionnels : Devoir, Pouvoir et Vouloir ('nous devons allouer redémarrage').\\n- Les pronoms compléments (en, y) pour éviter les répétitions dans vos e-mails : 'Nous y pensons pour redémarrage'.\\n- Clé Didactique : L'expression de l'obligation modérée et de la possibilité en milieu corporatif.",
-          "audio": "Bienvenue à la leçon B1-13 sur Dominio del Soporte Técnico. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : redémarrage."
+          "visual": "Concordance des Temps (Salto en el tiempo)\n\nCuando reportas algo que alguien DIJO en el PASADO ('Il a dit que...'), el verbo principal es empujado hacia atrás en el tiempo.\n\n1. Présent -> Imparfait\nDirecto: 'Je suis fatigué' (Presente).\nIndirecto: Il a dit qu'il ÉTAIT fatigué. (Imparfait).\n\n2. Futur Simple -> Conditionnel Présent\nDirecto: 'Je viendrai demain' (Futuro).\nIndirecto: Il a dit qu'il VIENDRAIT le lendemain. (Condicional).",
+          "audio": "En la lección anterior vimos cómo reportar chismes en tiempo real usando 'Él dice que...'. Pero, ¿qué pasa si el chisme ocurrió ayer? Si usas 'Él DIJO que...' (Il a dit que), toda la frase entra en una máquina del tiempo y viaja hacia atrás. A esto se le llama la 'Concordancia de los tiempos'. Si tu amigo te dijo 'Estoy cansado' (en presente), tú reportas: 'Él dijo que ESTABA cansado'. En francés: 'Il a dit qu'il ÉTAIT fatigué' (el presente se vuelve Imparfait). Si él prometió: 'Iré a la fiesta' (en futuro), tú reportas 'Él dijo que IRÍA a la fiesta'. En francés: 'Il a dit qu'il IRAIT' (el futuro se vuelve condicional)."
         },
         {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'redémarrage' (Traducción/Uso: Solución guiada de incidentes de IT.)\n- Application Pratique : 'Nous devons intégrer redémarrage pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : Prononcez bien le 's' final dans les mots de liaison comme 'nous devons' devant une voyelle.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : redémarrage. Répétez après moi : redémarrage."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Au niveau B1, structurez vos arguments avec des connecteurs logiques formels ('cependant', 'par conséquent').\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
+          "visual": "3. Passé Composé -> Plus-que-parfait\nDirecto: 'J'ai mangé' (Pasado).\nIndirecto: Il a dit qu'il AVAIT mangé. (Plus-que-parfait).\n\nPalabras de tiempo también cambian:\n- Demain (mañana) -> Le lendemain (al día siguiente).\n- Hier (ayer) -> La veille (el día anterior).\n- Aujourd'hui (hoy) -> Ce jour-là (ese día).",
+          "audio": "La última transformación de nuestra máquina del tiempo es para acciones que ya estaban en pasado cuando te las contaron. Si alguien te dijo: 'Ayer COMÍ pizza' (Passé Composé), tienes que mandarlo todavía más atrás. Dices: 'Él dijo que HABÍA COMIDO pizza'. En francés: 'Il a dit qu'il AVAIT mangé' (usando el Plus-que-parfait). Además, las palabras de tiempo también viajan al pasado. Si él dijo 'Mañana', tú no puedes decir 'mañana' porque ya no es el mismo día. Tienes que decir 'al día siguiente', que en francés se dice 'Le lendemain'. Y si dijo 'Ayer', dices 'La veille', que significa la víspera o el día anterior."
         }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Aplica la concordancia de tiempos para el discurso indirecto en pasado.",
       "questions": [
-        {
-          "id": "fr-b1-13-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"redémarrage\" dans le contexte de \"Dominio del Soporte Técnico\" ?",
-          "options": [
-            "Le concept professionnel principal de redémarrage utilisé dans Dominio del Soporte Técnico.",
-            "Un terme familier à éviter dans Dominio del Soporte Técnico.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Dominio del Soporte Técnico."
-          ],
-          "correct_answer": "Le concept professionnel principal de redémarrage utilisé dans Dominio del Soporte Técnico.",
-          "explanation": "Comprendre la définition de \"redémarrage\" est fondamental pour maîtriser \"Dominio del Soporte Técnico\"."
-        },
-        {
-          "id": "fr-b1-13-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"redémarrage\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Dominio del Soporte Técnico\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"redémarrage\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Dominio del Soporte Técnico\" aux parties prenantes.",
-          "explanation": "Aborder \"redémarrage\" dans les présentations professionnelles améliore la communication globale concernant \"Dominio del Soporte Técnico\"."
-        },
-        {
-          "id": "fr-b1-13-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Dominio del Soporte Técnico\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"redémarrage\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"redémarrage\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"redémarrage\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"redémarrage\" sont los piliers d'une exécution réussie de \"Dominio del Soporte Técnico\"."
-        },
-        {
-          "id": "fr-b1-13-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Dominio del Soporte Técnico\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"redémarrage\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"redémarrage\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"redémarrage\" conduit souvent à des résultats inefficaces dans \"Dominio del Soporte Técnico\"."
-        },
-        {
-          "id": "fr-b1-13-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"redémarrage\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"redémarrage\" adapté à l'environnement de \"Dominio del Soporte Técnico\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"redémarrage\" adapté à l'environnement de \"Dominio del Soporte Técnico\".",
-          "explanation": "Traduire ou adapter \"redémarrage\" nécessite de comprendre son application commerciale pratique dans \"Dominio del Soporte Técnico\"."
-        },
-        {
-          "id": "fr-b1-13-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"redémarrage\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Dominio del Soporte Técnico\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Dominio del Soporte Técnico\".",
-          "explanation": "Utiliser \"redémarrage\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-b1-13-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Dominio del Soporte Técnico\", comment un cadre doit-il présenter \"redémarrage\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"redémarrage\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-b1-13-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"redémarrage\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"redémarrage\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"redémarrage\".",
-          "explanation": "Définir les jalons liés à \"redémarrage\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-b1-13-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Dominio del Soporte Técnico\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"redémarrage\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"redémarrage\".",
-          "explanation": "Les mots professionnels comme \"redémarrage\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-b1-13-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"redémarrage\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"redémarrage\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "frb1-13-q1", "type": "quiz_choice", "question": "¿Cuándo se debe aplicar la 'Concordancia de los Tiempos' (cambiar el tiempo del verbo)?", "options": ["Cuando el verbo introductorio está en pasado (ej: Il a dit, il a demandé)", "Cuando el verbo introductorio está en presente (ej: Il dit)", "Siempre, sin importar el verbo introductorio"], "correct_answer": "Cuando el verbo introductorio está en pasado (ej: Il a dit, il a demandé)", "explanation": "Si el chisme es viejo ('Il a dit que...'), empuja todo al pasado." },
+        { "id": "frb1-13-q2", "type": "quiz_choice", "question": "En la concordancia de tiempos, el PRESENTE se transforma en...", "options": ["Imparfait", "Passé Composé", "Plus-que-parfait", "Conditionnel"], "correct_answer": "Imparfait", "explanation": "'Yo soy' -> 'Él dijo que él ERA'." },
+        { "id": "frb1-13-q3", "type": "quiz_choice", "question": "Il a dit: 'Je MÈNE une vie tranquille' (Presente). -> Il a dit qu'il ____ une vie tranquille.", "options": ["menait", "mène", "a mené", "mènera"], "correct_answer": "menait", "explanation": "Présent (mène) -> Imparfait (menait)." },
+        { "id": "frb1-13-q4", "type": "quiz_choice", "question": "En la concordancia de tiempos, el FUTURO SIMPLE se transforma en...", "options": ["Conditionnel Présent", "Imparfait", "Passé Composé", "Subjonctif"], "correct_answer": "Conditionnel Présent", "explanation": "'Yo iré' -> 'Él dijo que él IRÍA'." },
+        { "id": "frb1-13-q5", "type": "quiz_choice", "question": "Elle a affirmé: 'Je PARTIRAI demain' (Futuro). -> Elle a affirmé qu'elle ____.", "options": ["partirait", "partira", "partait", "est partie"], "correct_answer": "partirait", "explanation": "Futur (partirai) -> Conditionnel (partirait)." },
+        { "id": "frb1-13-q6", "type": "quiz_choice", "question": "En la concordancia de tiempos, el PASSÉ COMPOSÉ se transforma en...", "options": ["Plus-que-parfait", "Imparfait", "Passé Simple", "Conditionnel Passé"], "correct_answer": "Plus-que-parfait", "explanation": "'Yo comí' -> 'Él dijo que él HABÍA COMIDO'." },
+        { "id": "frb1-13-q7", "type": "quiz_choice", "question": "Paul m'a dit: 'J'AI MANGÉ la pomme' (Passé Comp). -> Paul m'a dit qu'il ____ la pomme.", "options": ["avait mangé", "a mangé", "mangeait", "mangerait"], "correct_answer": "avait mangé", "explanation": "Passé Composé -> Plus-que-parfait (avait mangé)." },
+        { "id": "frb1-13-q8", "type": "quiz_choice", "question": "Luc a demandé: 'Que FAIS-TU ?' (Presente). -> Luc a demandé ce que je ____.", "options": ["faisais", "fais", "ferais", "ai fait"], "correct_answer": "faisais", "explanation": "Fais-tu (Présent) -> faisais (Imparfait)." },
+        { "id": "frb1-13-q9", "type": "quiz_choice", "question": "¿Cómo se dice 'Aujourd'hui' (Hoy) en el discurso indirecto en pasado?", "options": ["Ce jour-là (ese día)", "Hier (ayer)", "Le lendemain (el día siguiente)"], "correct_answer": "Ce jour-là (ese día)", "explanation": "Hoy -> Ese día (Ce jour-là)." },
+        { "id": "frb1-13-q10", "type": "quiz_choice", "question": "Il a dit: 'Je suis là AUJOURD'HUI'. -> Il a dit qu'il était là ____.", "options": ["ce jour-là", "aujourd'hui", "le lendemain", "la veille"], "correct_answer": "ce jour-là", "explanation": "Aujourd'hui -> ce jour-là." },
+        { "id": "frb1-13-q11", "type": "quiz_choice", "question": "¿Cómo se transforma la palabra 'Demain' (Mañana)?", "options": ["Le lendemain (el día siguiente)", "Demain (mañana)", "Le jour avant (el día antes)"], "correct_answer": "Le lendemain (el día siguiente)", "explanation": "No puedes usar 'mañana' si estás contando algo de hace un mes." },
+        { "id": "frb1-13-q12", "type": "quiz_choice", "question": "Elle a dit: 'Je viendrai DEMAIN'. -> Elle a dit qu'elle viendrait ____.", "options": ["le lendemain", "demain", "la veille", "ce jour-là"], "correct_answer": "le lendemain", "explanation": "Demain -> le lendemain." },
+        { "id": "frb1-13-q13", "type": "quiz_choice", "question": "¿Cómo se transforma la palabra 'Hier' (Ayer)?", "options": ["La veille (el día anterior/víspera)", "Hier (ayer)", "Le lendemain"], "correct_answer": "La veille (el día anterior/víspera)", "explanation": "Hier -> La veille." },
+        { "id": "frb1-13-q14", "type": "quiz_choice", "question": "Il a dit: 'J'ai travaillé HIER'. -> Il a dit qu'il avait travaillé ____.", "options": ["la veille", "hier", "le lendemain", "aujourd'hui"], "correct_answer": "la veille", "explanation": "Hier -> la veille." },
+        { "id": "frb1-13-q15", "type": "quiz_choice", "question": "Le docteur a demandé: 'EST-CE QUE tu as mal ?'. -> Le docteur a demandé ____ j'avais mal.", "options": ["si", "que", "ce que", "est-ce que"], "correct_answer": "si", "explanation": "Pregunta de Sí/No -> Si." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Transforma el verbo a Imparfait, Plus-que-parfait o Conditionnel según la regla de concordancia.",
       "questions": [
-        {
-          "id": "fr-b1-13-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"redémarrage\" (Exercice 1) :",
-          "parts": [
-            "implémenter",
-            "votre",
-            "redémarrage",
-            "pour",
-            "optimiser",
-            "le",
-            "travail.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "implémenter",
-            "votre",
-            "redémarrage",
-            "pour",
-            "optimiser",
-            "le",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"redémarrage\"."
-        },
-        {
-          "id": "fr-b1-13-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"redémarrage\" (Exercice 2) :",
-          "parts": [
-            "actuelle",
-            "privilégie",
-            "votre",
-            "redémarrage",
-            "pour",
-            "le",
-            "client.",
-            "Notre",
-            "stratégie"
-          ],
-          "correct_order": [
-            "Notre",
-            "stratégie",
-            "actuelle",
-            "privilégie",
-            "votre",
-            "redémarrage",
-            "pour",
-            "le",
-            "client."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"redémarrage\"."
-        },
-        {
-          "id": "fr-b1-13-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"redémarrage\" (Exercice 3) :",
-          "parts": [
-            "coordonner",
-            "avec",
-            "l'équipe",
-            "concernant",
-            "notre",
-            "redémarrage.",
-            "Veuillez",
-            "vous"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "vous",
-            "coordonner",
-            "avec",
-            "l'équipe",
-            "concernant",
-            "notre",
-            "redémarrage."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"redémarrage\"."
-        },
-        {
-          "id": "fr-b1-13-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"redémarrage\" (Exercice 4) :",
-          "parts": [
-            "réunion",
-            "rapide",
-            "pour",
-            "discuter",
-            "de",
-            "notre",
-            "redémarrage.",
-            "Planifions",
-            "une"
-          ],
-          "correct_order": [
-            "Planifions",
-            "une",
-            "réunion",
-            "rapide",
-            "pour",
-            "discuter",
-            "de",
-            "notre",
-            "redémarrage."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"redémarrage\"."
-        },
-        {
-          "id": "fr-b1-13-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"redémarrage\" (Exercice 5) :",
-          "parts": [
-            "de",
-            "projet",
-            "demande",
-            "un",
-            "rapport",
-            "sur",
-            "notre",
-            "redémarrage.",
-            "Le",
-            "chef"
-          ],
-          "correct_order": [
-            "Le",
-            "chef",
-            "de",
-            "projet",
-            "demande",
-            "un",
-            "rapport",
-            "sur",
-            "notre",
-            "redémarrage."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"redémarrage\"."
-        },
-        {
-          "id": "fr-b1-13-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"redémarrage\" (Exercice 6) :",
-          "parts": [
-            "analyser",
-            "comment",
-            "notre",
-            "redémarrage",
-            "influence",
-            "le",
-            "budget.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "analyser",
-            "comment",
-            "notre",
-            "redémarrage",
-            "influence",
-            "le",
-            "budget."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"redémarrage\"."
-        },
-        {
-          "id": "fr-b1-13-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"redémarrage\" (Exercice 7) :",
-          "parts": [
-            "le",
-            "calendrier",
-            "pour",
-            "livrer",
-            "notre",
-            "redémarrage ?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "le",
-            "calendrier",
-            "pour",
-            "livrer",
-            "notre",
-            "redémarrage ?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"redémarrage\"."
-        },
-        {
-          "id": "fr-b1-13-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"redémarrage\" (Exercice 8) :",
-          "parts": [
-            "s'aligne",
-            "avec",
-            "les",
-            "objectifs",
-            "de",
-            "notre",
-            "redémarrage.",
-            "Cette",
-            "initiative"
-          ],
-          "correct_order": [
-            "Cette",
-            "initiative",
-            "s'aligne",
-            "avec",
-            "les",
-            "objectifs",
-            "de",
-            "notre",
-            "redémarrage."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"redémarrage\"."
-        },
-        {
-          "id": "fr-b1-13-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"redémarrage\" (Exercice 9) :",
-          "parts": [
-            "décidé",
-            "d'externaliser",
-            "la",
-            "gestion",
-            "de",
-            "notre",
-            "redémarrage.",
-            "Ils",
-            "ont"
-          ],
-          "correct_order": [
-            "Ils",
-            "ont",
-            "décidé",
-            "d'externaliser",
-            "la",
-            "gestion",
-            "de",
-            "notre",
-            "redémarrage."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"redémarrage\"."
-        },
-        {
-          "id": "fr-b1-13-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"redémarrage\" (Exercice 10) :",
-          "parts": [
-            "nous",
-            "concentrer",
-            "sur",
-            "l'amélioration",
-            "de",
-            "notre",
-            "redémarrage.",
-            "Nous",
-            "devrions"
-          ],
-          "correct_order": [
-            "Nous",
-            "devrions",
-            "nous",
-            "concentrer",
-            "sur",
-            "l'amélioration",
-            "de",
-            "notre",
-            "redémarrage."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"redémarrage\"."
-        }
+        { "id": "frb1-13-f1", "type": "fill_input", "question": "Il a dit: 'Je TRAVAILLE' (Présent). -> Il a dit qu'il ____. (Imparfait).", "correct_answer": "travaillait", "explanation": "travaillait" },
+        { "id": "frb1-13-f2", "type": "fill_input", "question": "Elle a dit: 'Je FINIRAI' (Futur). -> Elle a dit qu'elle ____. (Condicional).", "correct_answer": "finirait", "explanation": "finirait" },
+        { "id": "frb1-13-f3", "type": "fill_input", "question": "Il a dit: 'J'AI MANGÉ' (Passé Comp). -> Il a dit qu'il ____ ____. (Plus-que-parfait).", "correct_answer": "avait mangé", "explanation": "avait mangé" },
+        { "id": "frb1-13-f4", "type": "fill_input", "question": "Marie a demandé: 'Es-tu LÀ ?' (Présent). -> Marie a demandé si j'____ là. (Imparfait).", "correct_answer": "étais", "explanation": "étais" },
+        { "id": "frb1-13-f5", "type": "fill_input", "question": "Luc a dit: 'Je PARTIRAI demain' (Futur). -> Luc a dit qu'il ____ le lendemain. (Condicional).", "correct_answer": "partirait", "explanation": "partirait" },
+        { "id": "frb1-13-f6", "type": "fill_input", "question": "Il a dit: 'Nous SOMMES (Présent) fatigués'. -> Il a dit qu'ils ____ (Imparfait) fatigués.", "correct_answer": "étaient", "explanation": "étaient" },
+        { "id": "frb1-13-f7", "type": "fill_input", "question": "Elle a dit: 'Il A PLU hier' (Passé Comp). -> Elle a dit qu'il ____ ____ la veille. (Plus-que-parfait).", "correct_answer": "avait plu", "explanation": "avait plu" },
+        { "id": "frb1-13-f8", "type": "fill_input", "question": "Maman a demandé: 'Qu'est-ce que tu VEUX ?' (Présent). -> Maman a demandé ce que je ____ (Imparfait).", "correct_answer": "voulais", "explanation": "voulais" },
+        { "id": "frb1-13-f9", "type": "fill_input", "question": "Il m'a dit: 'Je l'ACHÈTERAI' (Futur). -> Il m'a dit qu'il l'____. (Condicional).", "correct_answer": "achèterait", "explanation": "achèterait" },
+        { "id": "frb1-13-f10", "type": "fill_input", "question": "Elle a avoué: 'J'AI OUBLIÉ' (Passé Comp). -> Elle a avoué qu'elle ____ ____. (Plus-que-parfait).", "correct_answer": "avait oublié", "explanation": "avait oublié" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-b1-13-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"redémarrage\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"redémarrage\" en détail.",
-            "Une autre déclaration sur notre \"redémarrage\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"redémarrage\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"redémarrage\" en réunion."
-        },
-        {
-          "id": "fr-b1-13-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"redémarrage\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"redémarrage\" ?",
-            "Une autre déclaration sur notre \"redémarrage\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"redémarrage\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"redémarrage\" en réunion."
-        },
-        {
-          "id": "fr-b1-13-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"redémarrage\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"redémarrage\" cette année.",
-            "Une autre déclaration sur notre \"redémarrage\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"redémarrage\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"redémarrage\" en réunion."
-        },
-        {
-          "id": "fr-b1-13-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"redémarrage\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"redémarrage\".",
-            "Une autre déclaration sur notre \"redémarrage\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"redémarrage\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"redémarrage\" en réunion."
-        },
-        {
-          "id": "fr-b1-13-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"redémarrage\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"redémarrage\".",
-            "Une autre déclaration sur notre \"redémarrage\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"redémarrage\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"redémarrage\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Time Machine Match",
+      "pairs": [
+        {"id": "frb1-13-p1", "source": "Présent", "target": "Devient: Imparfait"},
+        {"id": "frb1-13-p2", "source": "Passé Composé", "target": "Devient: Plus-que-parfait"},
+        {"id": "frb1-13-p3", "source": "Futur Simple", "target": "Devient: Conditionnel Présent"},
+        {"id": "frb1-13-p4", "source": "Aujourd'hui (Hoy)", "target": "Devient: Ce jour-là (Ese día)"},
+        {"id": "frb1-13-p5", "source": "Demain (Mañana)", "target": "Devient: Le lendemain (Día sig.)"},
+        {"id": "frb1-13-p6", "source": "Hier (Ayer)", "target": "Devient: La veille (Víspera)"},
+        {"id": "frb1-13-p7", "source": "Il a dit", "target": "Él dijo que... (Exige salto)"},
+        {"id": "frb1-13-p8", "source": "Il dit", "target": "Él dice que... (NO hay salto)"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica la concordancia correcta en el discurso indirecto.",
       "questions": [
-        {
-          "id": "fr-b1-13-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"red________\" (Indice : désigne \"redémarrage\")",
-          "correct_answers": [
-            "redémarrage",
-            "Redémarrage"
-          ],
-          "hints": [
-            "Commence par 'red'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"redémarrage\"."
-        },
-        {
-          "id": "fr-b1-13-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Notre stratégie actuelle concernant notre redémarrage dépend ____ l'équipe.\" (de / par)",
-          "correct_answers": [
-            "de",
-            "d'"
-          ],
-          "hints": [
-            "Préposition après le verbe dépendre"
-          ],
-          "explanation": "Le verbe dépendre se construit avec la préposition de."
-        },
-        {
-          "id": "fr-b1-13-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons ____ nos ressources pour améliorer notre redémarrage.\" (allouer / ignorer)",
-          "correct_answers": [
-            "allouer",
-            "Allouer"
-          ],
-          "hints": [
-            "Distribuer ou attribuer des ressources"
-          ],
-          "explanation": "Allouer des ressources signifie les dédier stratégiquement."
-        },
-        {
-          "id": "fr-b1-13-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Le responsable de département a demandé une ____ sur notre redémarrage.\" (mise à jour / pause)",
-          "correct_answers": [
-            "mise à jour",
-            "analyse",
-            "évaluation"
-          ],
-          "hints": [
-            "Dernières informations sur l'état d'avancement"
-          ],
-          "explanation": "Une 'mise à jour' est essentielle pour suivre le statut d'un projet."
-        },
-        {
-          "id": "fr-b1-13-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Établir un cadre ____ pour notre redémarrage est notre priorité.\" (solide / simple)",
-          "correct_answers": [
-            "solide"
-          ],
-          "hints": [
-            "Robuste, stable et bien défini"
-          ],
-          "explanation": "Un cadre 'solide' prévient les risques et dérives futures."
-        }
+        { "id": "frb1-13-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il a dit qu'il était fatigué", "options": ["Il a dit qu'il était fatigué", "Il a dit qu'il est fatigué", "Il dit qu'il était fatigué", "Il a dit j'étais fatigué"], "correct_answer": "Il a dit qu'il était fatigué", "explanation": "Audio dice: Il a dit qu'il était fatigué." },
+        { "id": "frb1-13-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Elle a dit qu'elle viendrait", "options": ["Elle a dit qu'elle viendrait", "Elle a dit qu'elle viendra", "Elle dit qu'elle viendrait", "Elle a dit qu'elle vient"], "correct_answer": "Elle a dit qu'elle viendrait", "explanation": "Audio dice: Elle a dit qu'elle viendrait (Condicional)." },
+        { "id": "frb1-13-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il a dit qu'il avait mangé", "options": ["Il a dit qu'il avait mangé", "Il a dit qu'il a mangé", "Il a dit qu'il mangerait", "Il dit qu'il a mangé"], "correct_answer": "Il a dit qu'il avait mangé", "explanation": "Audio dice: Il a dit qu'il avait mangé (Plus-que-parfait)." },
+        { "id": "frb1-13-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Elle a demandé si j'étais là", "options": ["Elle a demandé si j'étais là", "Elle a demandé si je suis là", "Elle demande si j'étais là", "Elle a demandé que j'étais là"], "correct_answer": "Elle a demandé si j'étais là", "explanation": "Audio dice: Elle a demandé si j'étais là." },
+        { "id": "frb1-13-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il a dit qu'il le ferait", "options": ["Il a dit qu'il le ferait", "Il a dit qu'il le fera", "Il a dit qu'il le faisait", "Il dit qu'il le fera"], "correct_answer": "Il a dit qu'il le ferait", "explanation": "Audio dice: Il a dit qu'il le ferait." }
       ]
     }
   ]

@@ -1,0 +1,92 @@
+{
+  "id": "zh-b1-56",
+  "title": "SOS: Necesito Ayuda",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Help", "Verbs", "Social"],
+  "completion_message": "¡Excelente! Pedir ayuda es la habilidad de supervivencia número uno en cualquier idioma. Ahora no estarás solo cuando tengas un problema.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Arte de Pedir Ayuda",
+      "parts": [
+        {
+          "visual": "Ayudar / Ayuda: 帮助 (bāngzhù) o 帮 (bāng)\n\nEl verbo para 'ayudar' es 帮助 (bāngzhù - 1er y 4to tono), pero en el habla diaria la mayoría de los chinos lo acortan a simplemente 帮 (bāng).\n\nFormas de pedir ayuda:\n1. Usando Qǐng (Por favor): \n   - Por favor, ayúdame: 请帮我 (Qǐng bāng wǒ).\n\n2. Usando Néng (Poder/Capacidad):\n   - ¿Me puedes ayudar?: 你能帮我吗？(Nǐ néng bāng wǒ ma?).",
+          "audio": "Tarde o temprano, estando en China, vas a necesitar ayuda. Te perderás, no entenderás un menú, o no sabrás cómo comprar un boleto. La palabra clave para tu supervivencia es Bāng. Primer tono. Bāng. Significa Ayudar. Si quieres ser directo y educado, usas la palabra Qǐng, que significa por favor. Qǐng bāng wǒ. Por favor, ayúdame. Si quieres sonar un poco más suave, puedes usar el verbo de poder Néng que aprendimos en la lección anterior. Nǐ néng bāng wǒ ma? Literalmente: ¿Tú puedes ayudarme?"
+        },
+        {
+          "visual": "Tengo un problema: 问题 (wèntí)\n\nLa palabra 问题 (wèntí) significa 'Problema' o 'Pregunta'.\n- Yo tengo un problema: 我有一个问题 (Wǒ yǒu yí ge wèntí). ('ge' es el clasificador general).\n- No hay problema: 没问题 (Méi wèntí).\n\nAyudar a hacer algo (帮 + persona + verbo):\nSi quieres que alguien te ayude con una ACCIÓN ESPECÍFICA, la fórmula es: Bāng + pronombre + acción.\n- Ayúdame a comprar: 帮我买 (Bāng wǒ mǎi).\n- Por favor, ayúdame a cocinar: 请帮我做饭 (Qǐng bāng wǒ zuò fàn).",
+          "audio": "A veces, antes de pedir ayuda, tienes que anunciar que tienes un problema. Problema se dice Wèntí. Cuarto y segundo tono. Wèntí. Esta palabra también significa 'pregunta'. Si dices Wǒ yǒu yí ge wèntí, estás diciendo 'Tengo un problema' o 'Tengo una pregunta'. Y si alguien te pide un favor a ti y quieres decir 'No hay problema', simplemente niegas la posesión: Méi wèntí. Literalmente: No tener problema. Finalmente, si quieres que te ayuden con una acción específica, pones el verbo justo después. Bāng wǒ mǎi. Ayúdame a comprar. Qǐng bāng wǒ zuò fàn. Por favor, ayúdame a cocinar."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Asegúrate de saber cómo pedir un salvavidas.",
+      "questions": [
+        { "id": "zh-b1-56-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa la palabra 帮 (bāng) o 帮助 (bāngzhù)?", "options": ["Ayudar / Ayuda.", "Problema.", "Pregunta.", "Trabajar."], "correct_answer": "Ayudar / Ayuda.", "explanation": "Bāng es el verbo fundamental para la cooperación." },
+        { "id": "zh-b1-56-q2", "type": "quiz_choice", "question": "Traduce la frase más útil de la lección: 'Qǐng bāng wǒ' (请帮我).", "options": ["Por favor, ayúdame.", "Yo te ayudo.", "¿Me puedes ayudar?", "Yo tengo un problema."], "correct_answer": "Por favor, ayúdame.", "explanation": "Por favor (qǐng) + ayudar (bāng) + a mí (wǒ)." },
+        { "id": "zh-b1-56-q3", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 问题 (wèntí)?", "options": ["Problema / Pregunta.", "Ayuda.", "Tiempo.", "Clima."], "correct_answer": "Problema / Pregunta.", "explanation": "Wèntí se usa tanto cuando no entiendes algo en clase (pregunta) como cuando algo sale mal (problema)." },
+        { "id": "zh-b1-56-q4", "type": "quiz_choice", "question": "¿Cómo le dices a tu profesor 'Tengo una pregunta' o 'Tengo un problema'?", "options": ["Wǒ yǒu yí ge wèntí (我有一个问题).", "Wǒ méi wèntí (我没问题).", "Wǒ yào wèntí (我要问题).", "Wǒ shì wèntí (我是问题)."], "correct_answer": "Wǒ yǒu yí ge wèntí (我有一个问题).", "explanation": "Yo (wǒ) + tengo (yǒu) + un (yí ge) + problema/pregunta (wèntí)." },
+        { "id": "zh-b1-56-q5", "type": "quiz_choice", "question": "Alguien te pide un favor que es muy fácil para ti. ¿Cómo respondes 'No hay problema'?", "options": ["Méi wèntí (没问题).", "Bù wèntí (不问题).", "Bú shì wèntí (不是问题).", "Bù kěyǐ (不可以)."], "correct_answer": "Méi wèntí (没问题).", "explanation": "El problema es algo que 'se tiene', por lo tanto se niega con Méi (no tener)." },
+        { "id": "zh-b1-56-q6", "type": "quiz_choice", "question": "Usando el verbo de capacidad (Néng). ¿Cómo preguntas '¿Me puedes ayudar?'?", "options": ["Nǐ néng bāng wǒ ma? (你能帮我吗？).", "Nǐ huì bāng wǒ ma? (你会帮我吗？).", "Nǐ yīnggāi bāng wǒ ma? (你应该帮我吗？).", "Nǐ yào bāng wǒ ma? (你要帮我吗？)."], "correct_answer": "Nǐ néng bāng wǒ ma? (你能帮我吗？).", "explanation": "Tú (nǐ) + puedes/tienes la capacidad (néng) + ayudarme (bāng wǒ) + ma." },
+        { "id": "zh-b1-56-q7", "type": "quiz_choice", "question": "Estructura avanzada: ¿Cómo dirías 'Ayúdame a comprar ropa'?", "options": ["Bāng wǒ mǎi yīfu (帮我买衣服).", "Mǎi yīfu bāng wǒ (买衣服帮我).", "Wǒ bāng mǎi yīfu (我帮买衣服).", "Wǒ mǎi yīfu bāng (我买衣服帮)."], "correct_answer": "Bāng wǒ mǎi yīfu (帮我买衣服).", "explanation": "La estructura es: Bāng + pronombre (a quién se ayuda) + acción. Ayudar (a) mí (a) comprar ropa." },
+        { "id": "zh-b1-56-q8", "type": "quiz_choice", "question": "Traduce la orden amable: 'Qǐng bāng wǒ zuò fàn' (请帮我做饭).", "options": ["Por favor, ayúdame a cocinar.", "Yo te ayudo a cocinar.", "Tú deberías cocinar.", "No hay problema, yo cocino."], "correct_answer": "Por favor, ayúdame a cocinar.", "explanation": "Por favor (Qǐng) + ayúdame (bāng wǒ) + cocinar (zuò fàn)." },
+        { "id": "zh-b1-56-q9", "type": "quiz_choice", "question": "Un amigo te dice: 'Wǒ děi gōngzuò, nǐ néng bāng wǒ ma?'. ¿Qué te está pidiendo?", "options": ["Él tiene que trabajar, te está preguntando si puedes ayudarlo.", "Él va a ayudarte a trabajar.", "Él no tiene problemas con su trabajo.", "Él opina que tú deberías trabajar."], "correct_answer": "Él tiene que trabajar, te está preguntando si puedes ayudarlo.", "explanation": "Usa 'děi' (tener que obligación) y luego la petición de ayuda 'néng bāng wǒ ma?'." },
+        { "id": "zh-b1-56-q10", "type": "quiz_choice", "question": "¿Es posible usar 'wèntí' (problema) con el verbo 'tài...le' (demasiado)? Ej: 'Wèntí tài dà le'.", "options": ["Sí, significa 'El problema es demasiado grande'.", "No, los problemas no pueden tener tamaño.", "Sí, pero significa 'El problema es genial'.", "No, wèntí solo se usa con números."], "correct_answer": "Sí, significa 'El problema es demasiado grande'.", "explanation": "Wèntí es un sustantivo común, puedes decir que el problema es muy grande (hěn dà) o demasiado grande (tài dà le)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe las palabras de ayuda y problema en pinyin. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-b1-56-f1", "type": "fill_input", "question": "Ayudar / Ayuda (versión corta): ____ (bang)", "correct_answer": "bang", "explanation": "bang" },
+        { "id": "zh-b1-56-f2", "type": "fill_input", "question": "Por favor ayúdame: qing ____ wo (bang)", "correct_answer": "bang", "explanation": "bang" },
+        { "id": "zh-b1-56-f3", "type": "fill_input", "question": "¿Me puedes ayudar?: ni neng ____ wo ma", "correct_answer": "bang", "explanation": "bang" },
+        { "id": "zh-b1-56-f4", "type": "fill_input", "question": "Problema / Pregunta: wen ____ (ti)", "correct_answer": "ti", "explanation": "ti" },
+        { "id": "zh-b1-56-f5", "type": "fill_input", "question": "Tengo un problema: wo you yi ge wen ____", "correct_answer": "ti", "explanation": "ti" },
+        { "id": "zh-b1-56-f6", "type": "fill_input", "question": "No hay problema: ____ wen ti (mei)", "correct_answer": "mei", "explanation": "mei" },
+        { "id": "zh-b1-56-f7", "type": "fill_input", "question": "Ayúdame a cocinar: bang wo zuo ____ (fan)", "correct_answer": "fan", "explanation": "fan" },
+        { "id": "zh-b1-56-f8", "type": "fill_input", "question": "Ayúdame a comprar ropa: bang wo ____ yi fu (mai)", "correct_answer": "mai", "explanation": "mai" },
+        { "id": "zh-b1-56-f9", "type": "fill_input", "question": "El problema es demasiado grande: wen ti tai ____ le (da)", "correct_answer": "da", "explanation": "da" },
+        { "id": "zh-b1-56-f10", "type": "fill_input", "question": "Yo te ayudo: wo ____ ni (bang)", "correct_answer": "bang", "explanation": "bang" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha quién necesita ayuda y empareja.",
+      "questions": [
+        { "id": "zh-b1-56-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "帮", "options": ["Ayudar / Ayuda", "Problema", "Por favor", "Pregunta"], "correct_answer": "Ayudar / Ayuda", "explanation": "El audio dice: Bāng." },
+        { "id": "zh-b1-56-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "请帮我", "options": ["Por favor, ayúdame", "Yo te ayudo", "¿Me ayudas?", "No hay problema"], "correct_answer": "Por favor, ayúdame", "explanation": "El audio dice: Qǐng bāng wǒ." },
+        { "id": "zh-b1-56-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "问题", "options": ["Problema / Pregunta", "Solución", "Ayuda", "Trabajo"], "correct_answer": "Problema / Pregunta", "explanation": "El audio dice: Wèntí." },
+        { "id": "zh-b1-56-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "没问题", "options": ["No hay problema", "Tengo un problema", "Es un gran problema", "Ayúdame con el problema"], "correct_answer": "No hay problema", "explanation": "El audio dice: Méi wèntí." },
+        { "id": "zh-b1-56-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "帮我做饭", "options": ["Ayúdame a cocinar", "Yo cocino por ti", "Ayúdame a comprar", "No quiero cocinar"], "correct_answer": "Ayúdame a cocinar", "explanation": "El audio dice: Bāng wǒ zuò fàn." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Call for Help",
+      "pairs": [
+        {"id": "zh-b1-56-p1", "source": "帮 (bāng)", "target": "Ayudar / Ayuda"},
+        {"id": "zh-b1-56-p2", "source": "问题 (wèntí)", "target": "Problema / Pregunta"},
+        {"id": "zh-b1-56-p3", "source": "请帮我 (qǐng bāng wǒ)", "target": "Por favor, ayúdame"},
+        {"id": "zh-b1-56-p4", "source": "你能帮我吗？(nǐ néng bāng wǒ ma?)", "target": "¿Puedes ayudarme?"},
+        {"id": "zh-b1-56-p5", "source": "我有一个问题 (wǒ yǒu yí ge wèntí)", "target": "Tengo un problema / una pregunta"},
+        {"id": "zh-b1-56-p6", "source": "没问题 (méi wèntí)", "target": "No hay problema"},
+        {"id": "zh-b1-56-p7", "source": "帮我买衣服 (bāng wǒ mǎi yīfu)", "target": "Ayúdame a comprar ropa"},
+        {"id": "zh-b1-56-p8", "source": "得工作 (děi gōngzuò)", "target": "Tener que trabajar"},
+        {"id": "zh-b1-56-p9", "source": "想 (xiǎng)", "target": "Pensar / Desear / Extrañar"},
+        {"id": "zh-b1-56-p10", "source": "怎么 (zěnme)", "target": "Cómo"}
+      ]
+    }
+  ]
+}

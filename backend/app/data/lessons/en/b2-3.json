@@ -1,0 +1,101 @@
+{
+  "id": "b2-3",
+  "title": "Advanced Negotiations",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Vocabulary", "Negotiation", "Business"],
+  "completion_message": "¡Felicidades! Tienes el vocabulario necesario para sentarte en la mesa y negociar grandes acuerdos internacionales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Negociaciones Avanzadas",
+      "parts": [
+        { "visual": "Estrategias: \n- Leverage (Poder de negociación / Ventaja). \n- Compromise (Llegar a un acuerdo mutuo / Ceder). \n- Concession (Concesión - dar algo para obtener algo). \nEj: We have strong leverage. If they want a compromise, they must make a concession.", "audio": "Strategies. Leverage is your power or advantage in a negotiation. Compromise means to reach a mutual agreement by both sides giving up something. Concession is something you give to the other side. For example: We have strong leverage. If they want a compromise, they must make a concession." },
+        { "visual": "Tácticas y resultados: \n- Walk away (Retirarse de la negociación). \n- Deal-breaker (Factor decisivo para cancelar el trato). \n- Win-win situation (Situación donde ambos ganan). \nEj: If the price is a deal-breaker, we have to walk away. We want a win-win situation.", "audio": "Tactics and results. Walk away means to leave the negotiation. A deal-breaker is an issue that causes the negotiation to fail. A win-win situation is an agreement where both sides benefit. For example: If the price is a deal-breaker, we have to walk away. We want a win-win situation." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta de negociación.",
+      "questions": [
+        { "id": "b2-3-q1", "type": "quiz_choice", "question": "Because we are the only suppliers, we have a lot of ____ in this negotiation. (Poder/Ventaja).", "options": ["leverage", "power", "force", "weight"], "correct_answer": "leverage", "explanation": "Leverage = ventaja o poder de negociación." },
+        { "id": "b2-3-q2", "type": "quiz_choice", "question": "We couldn't agree on everything, so we had to reach a ____. (Acuerdo intermedio / Ceder ambas partes).", "options": ["compromise", "promise", "deal", "contract"], "correct_answer": "compromise", "explanation": "Compromise = acuerdo donde ambas partes ceden." },
+        { "id": "b2-3-q3", "type": "quiz_choice", "question": "They want us to lower the price. We should ask for a ____ in return. (Concesión).", "options": ["concession", "gift", "present", "bonus"], "correct_answer": "concession", "explanation": "Concession = concesión (algo que se cede durante la negociación)." },
+        { "id": "b2-3-q4", "type": "quiz_choice", "question": "We agreed to ____ the difference. We offered $100, they wanted $120, so we settled on $110. (Partir la diferencia).", "options": ["split", "cut", "break", "divide"], "correct_answer": "split", "explanation": "Split the difference = partir la diferencia a la mitad." },
+        { "id": "b2-3-q5", "type": "quiz_choice", "question": "A lack of technical support is a ____ for us. We won't sign. (Factor decisivo para cancelar el trato).", "options": ["deal-breaker", "deal-maker", "problem", "stopper"], "correct_answer": "deal-breaker", "explanation": "Deal-breaker = condición inaceptable que rompe el trato." },
+        { "id": "b2-3-q6", "type": "quiz_choice", "question": "If they don't accept our terms, we have to be prepared to ____ away. (Retirarnos).", "options": ["walk", "run", "go", "move"], "correct_answer": "walk", "explanation": "Walk away = retirarse de la mesa de negociación." },
+        { "id": "b2-3-q7", "type": "quiz_choice", "question": "This agreement benefits both companies. It's a ____ situation. (Ganar-ganar).", "options": ["win-win", "good", "double", "two-way"], "correct_answer": "win-win", "explanation": "Win-win situation = situación en la que ambas partes ganan." },
+        { "id": "b2-3-q8", "type": "quiz_choice", "question": "We need to identify our bottom ____ before the meeting. (El límite / El precio mínimo o máximo aceptable).", "options": ["line", "mark", "point", "number"], "correct_answer": "line", "explanation": "Bottom line = límite innegociable, lo mínimo o máximo aceptable." },
+        { "id": "b2-3-q9", "type": "quiz_choice", "question": "I'm sorry, but that price is non-____. We cannot change it. (No negociable).", "options": ["negotiable", "changeable", "moving", "flexible"], "correct_answer": "negotiable", "explanation": "Non-negotiable = no negociable, fijo." },
+        { "id": "b2-3-q10", "type": "quiz_choice", "question": "They are driving a ____ bargain. They refuse to lower the price. (Negociación dura).", "options": ["hard", "strong", "bad", "difficult"], "correct_answer": "hard", "explanation": "Drive a hard bargain = negociar duro, ser inflexible." },
+        { "id": "b2-3-q11", "type": "quiz_choice", "question": "Let's put our cards on the ____ and be honest. (Cartas sobre la mesa).", "options": ["table", "desk", "board", "floor"], "correct_answer": "table", "explanation": "Put cards on the table = ser honesto y transparente sobre las intenciones." },
+        { "id": "b2-3-q12", "type": "quiz_choice", "question": "We managed to ____ a deal after three hours of negotiation. (Cerrar / Llegar a un trato).", "options": ["strike", "hit", "punch", "make"], "correct_answer": "strike", "explanation": "Strike a deal (o close a deal) = cerrar un trato." },
+        { "id": "b2-3-q13", "type": "quiz_choice", "question": "We need to ____ the contract to make sure there are no errors. (Redactar).", "options": ["draft", "write", "make", "create"], "correct_answer": "draft", "explanation": "Draft a contract = redactar un contrato (el borrador inicial)." },
+        { "id": "b2-3-q14", "type": "quiz_choice", "question": "The negotiations have reached a ____. Neither side will compromise. (Punto muerto / Callejón sin salida).", "options": ["deadlock", "stop", "end", "wall"], "correct_answer": "deadlock", "explanation": "Deadlock (o stalemate) = punto muerto, bloqueo." },
+        { "id": "b2-3-q15", "type": "quiz_choice", "question": "To break the ____, we offered them a 5% discount. (Romper el bloqueo/hielo).", "options": ["deadlock", "ice", "wall", "stop"], "correct_answer": "deadlock", "explanation": "Break the deadlock = salir del punto muerto." },
+        { "id": "b2-3-q16", "type": "quiz_choice", "question": "Can you give us a ____ figure for the total cost? (Cifra aproximada).", "options": ["ballpark", "round", "stadium", "field"], "correct_answer": "ballpark", "explanation": "Ballpark figure = cifra aproximada." },
+        { "id": "b2-3-q17", "type": "quiz_choice", "question": "We shouldn't accept their first proposal. We need to make a ____. (Contraoferta).", "options": ["counter-offer", "second-offer", "re-offer", "back-offer"], "correct_answer": "counter-offer", "explanation": "Counter-offer (o counterproposal) = contraoferta." },
+        { "id": "b2-3-q18", "type": "quiz_choice", "question": "They ____ our initial proposal, so we had to try again. (Rechazaron).", "options": ["rejected", "accepted", "took", "passed"], "correct_answer": "rejected", "explanation": "Reject = rechazar." },
+        { "id": "b2-3-q19", "type": "quiz_choice", "question": "Let's find some common ____ before we start discussing the price. (Terreno común / Puntos de acuerdo).", "options": ["ground", "land", "earth", "floor"], "correct_answer": "ground", "explanation": "Common ground = puntos en común, intereses compartidos." },
+        { "id": "b2-3-q20", "type": "quiz_choice", "question": "The meeting went well, and we agreed in ____ on the main points. (En principio).", "options": ["principle", "start", "beginning", "theory"], "correct_answer": "principle", "explanation": "Agree in principle = estar de acuerdo en lo general (faltando detalles)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de negociación.",
+      "questions": [
+        { "id": "b2-3-f1", "type": "fill_input", "question": "We have ____. (Ventaja/Poder con L)", "correct_answer": "leverage", "explanation": "leverage." },
+        { "id": "b2-3-f2", "type": "fill_input", "question": "To reach a ____. (Acuerdo mutuo/Ceder con C)", "correct_answer": "compromise", "explanation": "compromise." },
+        { "id": "b2-3-f3", "type": "fill_input", "question": "Make a ____. (Concesión con C)", "correct_answer": "concession", "explanation": "concession." },
+        { "id": "b2-3-f4", "type": "fill_input", "question": "A deal-____. (Factor de ruptura con B)", "correct_answer": "breaker", "explanation": "breaker." },
+        { "id": "b2-3-f5", "type": "fill_input", "question": "A ____ situation. (Ganar-ganar con W)", "correct_answer": "win-win", "explanation": "win-win." },
+        { "id": "b2-3-f6", "type": "fill_input", "question": "____ the difference. (Partir a la mitad con S)", "correct_answer": "split", "explanation": "split." },
+        { "id": "b2-3-f7", "type": "fill_input", "question": "The bottom ____. (Límite con L)", "correct_answer": "line", "explanation": "line." },
+        { "id": "b2-3-f8", "type": "fill_input", "question": "Make a ____-offer. (Contraoferta con C)", "correct_answer": "counter", "explanation": "counter." },
+        { "id": "b2-3-f9", "type": "fill_input", "question": "Reach a ____. (Punto muerto con D)", "correct_answer": "deadlock", "explanation": "deadlock." },
+        { "id": "b2-3-f10", "type": "fill_input", "question": "Common ____. (Terreno común con G)", "correct_answer": "ground", "explanation": "ground." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Negotiation Match",
+      "pairs": [
+        {"id": "b2-3-p1", "source": "Leverage", "target": "Poder de negociación / Ventaja"},
+        {"id": "b2-3-p2", "source": "Compromise", "target": "Acuerdo mutuo (ceder)"},
+        {"id": "b2-3-p3", "source": "Concession", "target": "Concesión"},
+        {"id": "b2-3-p4", "source": "Deal-breaker", "target": "Condición inaceptable (rompe trato)"},
+        {"id": "b2-3-p5", "source": "Win-win situation", "target": "Situación donde ambos ganan"},
+        {"id": "b2-3-p6", "source": "Walk away", "target": "Retirarse de la negociación"},
+        {"id": "b2-3-p7", "source": "Split the difference", "target": "Partir la diferencia"},
+        {"id": "b2-3-p8", "source": "Bottom line", "target": "Límite innegociable"},
+        {"id": "b2-3-p9", "source": "Deadlock", "target": "Punto muerto / Bloqueo"},
+        {"id": "b2-3-p10", "source": "Counter-offer", "target": "Contraoferta"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de negociación.",
+      "questions": [
+        { "id": "b2-3-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have a lot of leverage.", "options": ["We have a lot of leverage.", "We have a lot of power.", "They have a lot of leverage.", "We have no leverage."], "correct_answer": "We have a lot of leverage.", "explanation": "Audio exacto." },
+        { "id": "b2-3-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must reach a compromise.", "options": ["We must reach a compromise.", "We must make a promise.", "We must reach an agreement.", "They must reach a compromise."], "correct_answer": "We must reach a compromise.", "explanation": "Audio exacto." },
+        { "id": "b2-3-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They want a concession.", "options": ["They want a concession.", "They want a connection.", "We want a concession.", "They need a concession."], "correct_answer": "They want a concession.", "explanation": "Audio exacto." },
+        { "id": "b2-3-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "That is a deal-breaker for us.", "options": ["That is a deal-breaker for us.", "This is a deal-breaker for us.", "That is a deal-maker for us.", "That is a problem for us."], "correct_answer": "That is a deal-breaker for us.", "explanation": "Audio exacto." },
+        { "id": "b2-3-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's a win-win situation.", "options": ["It's a win-win situation.", "It is a win-win.", "That's a win-win situation.", "We want a win-win situation."], "correct_answer": "It's a win-win situation.", "explanation": "Audio exacto." },
+        { "id": "b2-3-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's split the difference.", "options": ["Let's split the difference.", "Let's cut the difference.", "Let's divide the difference.", "We split the difference."], "correct_answer": "Let's split the difference.", "explanation": "Audio exacto." },
+        { "id": "b2-3-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is your bottom line?", "options": ["What is your bottom line?", "What is the bottom line?", "Where is your bottom line?", "What is your deadline?"], "correct_answer": "What is your bottom line?", "explanation": "Audio exacto." },
+        { "id": "b2-3-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We reached a deadlock.", "options": ["We reached a deadlock.", "We reach a deadlock.", "They reached a deadlock.", "We reached a dead end."], "correct_answer": "We reached a deadlock.", "explanation": "Audio exacto." },
+        { "id": "b2-3-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will make a counter-offer.", "options": ["We will make a counter-offer.", "We will make an offer.", "They will make a counter-offer.", "We make a counter-offer."], "correct_answer": "We will make a counter-offer.", "explanation": "Audio exacto." },
+        { "id": "b2-3-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Be prepared to walk away.", "options": ["Be prepared to walk away.", "Be prepared to go away.", "We are prepared to walk away.", "Are you prepared to walk away?"], "correct_answer": "Be prepared to walk away.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

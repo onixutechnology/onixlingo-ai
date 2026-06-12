@@ -1,0 +1,92 @@
+{
+  "id": "zh-a2-37",
+  "title": "¿Dónde Estás?",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Location", "Verbs"],
+  "completion_message": "¡Te encontré! Ahora dominas la Santa Trinidad de los verbos chinos: Ser (shì), Tener (yǒu) y Estar (zài).",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Verbo de Ubicación",
+      "parts": [
+        {
+          "visual": "Estar (en un lugar): 在 (zài)\n\nEn la lección 35 vimos que 在 (zài) antes de una acción significa 'Estar haciendo'.\n¡Pero si pones 在 (zài) antes de un LUGAR, se convierte mágicamente en el verbo ESTAR!\n\nEn español, usamos el verbo Ser y Estar.\nEn mandarín, son palabras completamente diferentes:\n- Ser (Identidad): 是 (shì). Ej: Yo soy chino.\n- Estar (Ubicación): 在 (zài). Ej: Yo estoy en China.\n\nFórmula de Ubicación:\nSujeto + 在 (zài) + Lugar.\n- Yo estoy en China: 我在中国 (Wǒ zài Zhōngguó).\n- ¡NUNCA digas 'Wǒ shì Zhōngguó'! Eso significa 'Yo soy el país de China'.",
+          "audio": "En el nivel A1 aprendiste el verbo ser: shì. Y te advertí que solo sirve para identidades, nunca para ubicaciones. Hoy vas a aprender la pieza que faltaba: el verbo Estar. Es una palabra que ya conoces: Zài. Si pones la palabra zài antes de un verbo, significa estar haciendo algo. Pero si pones la palabra zài antes de un lugar, se convierte en el verbo de ubicación. Sujeto, zài, lugar. Para decir 'Yo estoy en China', dices Wǒ zài Zhōngguó. Si cometes el error de usar el verbo ser y dices Wǒ shì Zhōngguó, los chinos se reirán mucho de ti, porque estás diciendo 'Yo soy el territorio nacional de China'. Para ubicaciones, siempre zài."
+        },
+        {
+          "visual": "Preguntar y Negar la Ubicación\n\n1. Preguntar '¿Dónde?': 哪里 (Nǎlǐ)\n- ¿Dónde estás?: 你在哪里？(Nǐ zài nǎlǐ?). Literalmente: Tú + estar + dónde.\n\n2. Negar (¡Alerta Camaleón! 🦎)\nPara decir 'No estoy', usamos la negación de presente 不 (bù).\nComo 在 (zài) es 4to tono, el 'bù' se transforma en 'bú' (2do tono).\n- No estar: 不在 (Bú zài).\n- Él no está en China: 他不在中国 (Tā bú zài Zhōngguó).\n\nLa Santa Trinidad de los Verbos de Estado Chinos:\n1. Ser (Identidad): 是 (shì).\n2. Tener (Posesión): 有 (yǒu).\n3. Estar (Ubicación): 在 (zài).",
+          "audio": "Si quieres buscar a alguien, usas la palabra 'dónde', que aprendiste en el nivel A1: Nǎlǐ. ¿Dónde estás? se dice Nǐ zài nǎlǐ. Y si quieres decir que alguien no está, usamos la negación de presente: bù. Pero cuidado, el camaleón ataca de nuevo. Como zài es cuarto tono, bù cambia a bú. No estar, se dice Bú zài. Tā bú zài Zhōngguó. Él no está en China. Con esto has completado la santa trinidad de los verbos de estado en mandarín. Shì para Ser. Yǒu para Tener. Y zài para Estar."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que sabes exactamente dónde estás ubicado.",
+      "questions": [
+        { "id": "zh-a2-37-q1", "type": "quiz_choice", "question": "¿Qué función tiene la palabra 在 (zài) cuando está seguida de un LUGAR?", "options": ["Funciona como el verbo 'Estar (ubicado en)'.", "Funciona como el verbo 'Ser'.", "Indica que la acción ocurre en el futuro.", "Indica posesión."], "correct_answer": "Funciona como el verbo 'Estar (ubicado en)'.", "explanation": "Zài + Lugar = Estar en un lugar." },
+        { "id": "zh-a2-37-q2", "type": "quiz_choice", "question": "¿Es correcto decir 'Wǒ shì Zhōngguó' (我是中国) para expresar que estás en China?", "options": ["No, significa 'Yo soy la nación de China'.", "Sí, es la forma correcta.", "Solo si estás hablando formalmente.", "Sí, 'shì' sirve para ser y estar."], "correct_answer": "No, significa 'Yo soy la nación de China'.", "explanation": "El verbo shì (ser) NUNCA se usa para ubicaciones físicas." },
+        { "id": "zh-a2-37-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo estoy en China' correctamente?", "options": ["Wǒ zài Zhōngguó (我在中国).", "Wǒ qù Zhōngguó zài (我去中国在).", "Zài wǒ Zhōngguó (在我中国).", "Wǒ shì Zhōngguó zài (我是中国在)."], "correct_answer": "Wǒ zài Zhōngguó (我在中国).", "explanation": "Sujeto (Wǒ) + estar en (zài) + lugar (Zhōngguó)." },
+        { "id": "zh-a2-37-q4", "type": "quiz_choice", "question": "Recordatorio A1: ¿Cómo se dice la palabra interrogativa 'Dónde'?", "options": ["Nǎlǐ (哪里).", "Shénme (什么).", "Shéi (谁).", "Duōshao (多少)."], "correct_answer": "Nǎlǐ (哪里).", "explanation": "Nǎlǐ es la palabra para preguntar por lugares." },
+        { "id": "zh-a2-37-q5", "type": "quiz_choice", "question": "¿Cómo le preguntas a un amigo por teléfono '¿Dónde estás?'", "options": ["Nǐ zài nǎlǐ? (你在哪里？).", "Nǐ shì nǎlǐ? (你是哪里？).", "Nǎlǐ nǐ zài? (哪里你在？).", "Nǐ nǎlǐ qù? (你哪里去？)."], "correct_answer": "Nǐ zài nǎlǐ? (你在哪里？).", "explanation": "Tú (nǐ) + estás en (zài) + dónde (nǎlǐ)." },
+        { "id": "zh-a2-37-q6", "type": "quiz_choice", "question": "¿Cómo se niega el verbo Estar (zài)? (Alerta de camaleón tonal).", "options": ["Bú zài (不在).", "Bù zài (不在).", "Méi zài (没在).", "Bú shì (不是)."], "correct_answer": "Bú zài (不在).", "explanation": "Como zài es 4to tono, el 'bù' se transforma en 'bú' (2do tono) para evitar el choque fuerte." },
+        { "id": "zh-a2-37-q7", "type": "quiz_choice", "question": "¿Cómo se dice 'Él no está en China'?", "options": ["Tā bú zài Zhōngguó (他不在中国).", "Tā méi zài Zhōngguó (他没在中国).", "Tā bú shì Zhōngguó (他不是中国).", "Tā bù zài Zhōngguó (他不在中国)."], "correct_answer": "Tā bú zài Zhōngguó (他不在中国).", "explanation": "Él (tā) + no está en (bú zài) + China (Zhōngguó)." },
+        { "id": "zh-a2-37-q8", "type": "quiz_choice", "question": "Asocia la Santa Trinidad de verbos con sus usos en español:", "options": ["Shì = Ser (Identidad) / Yǒu = Tener (Posesión) / Zài = Estar (Ubicación).", "Shì = Estar / Yǒu = Ser / Zài = Tener.", "Shì = Tener / Yǒu = Estar / Zài = Ser.", "Los tres significan exactamente lo mismo."], "correct_answer": "Shì = Ser (Identidad) / Yǒu = Tener (Posesión) / Zài = Estar (Ubicación).", "explanation": "Dominar la diferencia entre estos tres verbos es el pilar de la gramática china." },
+        { "id": "zh-a2-37-q9", "type": "quiz_choice", "question": "Traduce: 'Wǒ dìdi bú zài' (我弟弟不在).", "options": ["Mi hermano menor no está (aquí).", "Mi hermano mayor no es de aquí.", "Yo no tengo hermano menor.", "Yo no estoy con mi hermano."], "correct_answer": "Mi hermano menor no está (aquí).", "explanation": "Mi hermano menor (Wǒ dìdi) + no está en este lugar (bú zài)." },
+        { "id": "zh-a2-37-q10", "type": "quiz_choice", "question": "¿Cuál es la diferencia entre 'Tā zài chī' y 'Tā zài Zhōngguó'?", "options": ["Zài chī = Presente continuo (está comiendo) / Zài Zhōngguó = Ubicación (está en China).", "Ambas indican ubicación física.", "Ambas indican presente continuo.", "Zài chī es ubicación en un restaurante."], "correct_answer": "Zài chī = Presente continuo (está comiendo) / Zài Zhōngguó = Ubicación (está en China).", "explanation": "La función de zài cambia automáticamente si la palabra siguiente es un Verbo o un Lugar." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para las ubicaciones. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a2-37-f1", "type": "fill_input", "question": "Estar (en un lugar): ____ (zai)", "correct_answer": "zai", "explanation": "zai" },
+        { "id": "zh-a2-37-f2", "type": "fill_input", "question": "Estoy en China: wo ____ zhong guo", "correct_answer": "zai", "explanation": "zai" },
+        { "id": "zh-a2-37-f3", "type": "fill_input", "question": "¿Dónde?: na ____ (li)", "correct_answer": "li", "explanation": "li" },
+        { "id": "zh-a2-37-f4", "type": "fill_input", "question": "¿Dónde estás?: ni zai na ____", "correct_answer": "li", "explanation": "li" },
+        { "id": "zh-a2-37-f5", "type": "fill_input", "question": "No estar (Cambio de tono de 'bu'): ____ zai (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a2-37-f6", "type": "fill_input", "question": "Él no está: ta ____ zai", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a2-37-f7", "type": "fill_input", "question": "Nosotros estamos en China: women ____ zhong guo (zai)", "correct_answer": "zai", "explanation": "zai" },
+        { "id": "zh-a2-37-f8", "type": "fill_input", "question": "¿Estás? / ¿Estás aquí?: ni zai ____ (ma)", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a2-37-f9", "type": "fill_input", "question": "Ser (Identidad): ____ (shi)", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-a2-37-f10", "type": "fill_input", "question": "Tener (Posesión): ____ (you)", "correct_answer": "you", "explanation": "you" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y capta quién está dónde.",
+      "questions": [
+        { "id": "zh-a2-37-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "在", "options": ["Estar (en un lugar)", "Ser", "Tener", "Querer"], "correct_answer": "Estar (en un lugar)", "explanation": "El audio dice: Zài." },
+        { "id": "zh-a2-37-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你在哪里？", "options": ["¿Dónde estás?", "¿Quién eres?", "¿A dónde vas?", "¿De dónde eres?"], "correct_answer": "¿Dónde estás?", "explanation": "El audio dice: Nǐ zài nǎlǐ?" },
+        { "id": "zh-a2-37-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我在中国", "options": ["Estoy en China", "Voy a China", "Soy de China", "Me gusta China"], "correct_answer": "Estoy en China", "explanation": "El audio dice: Wǒ zài Zhōngguó." },
+        { "id": "zh-a2-37-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他不在", "options": ["Él no está", "Él no es", "Él no tiene", "Él no va"], "correct_answer": "Él no está", "explanation": "El audio dice: Tā bú zài." },
+        { "id": "zh-a2-37-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我是中国人", "options": ["Yo soy chino (Identidad)", "Yo estoy en China", "Tú eres chino", "Aquel es chino"], "correct_answer": "Yo soy chino (Identidad)", "explanation": "El audio dice: Wǒ shì Zhōngguó rén (Uso del verbo Ser, no Estar)." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "State Verbs Match",
+      "pairs": [
+        {"id": "zh-a2-37-p1", "source": "在 (zài)", "target": "Estar en un lugar (o hacer algo en presente)"},
+        {"id": "zh-a2-37-p2", "source": "是 (shì)", "target": "Ser (Identidad / Profesión)"},
+        {"id": "zh-a2-37-p3", "source": "有 (yǒu)", "target": "Tener (Posesión)"},
+        {"id": "zh-a2-37-p4", "source": "哪里 (nǎlǐ)", "target": "¿Dónde?"},
+        {"id": "zh-a2-37-p5", "source": "你在哪里？(nǐ zài nǎlǐ?)", "target": "¿Dónde estás?"},
+        {"id": "zh-a2-37-p6", "source": "我在中国 (wǒ zài zhōngguó)", "target": "Estoy en China"},
+        {"id": "zh-a2-37-p7", "source": "我是中国人 (wǒ shì zhōngguó rén)", "target": "Yo soy chino"},
+        {"id": "zh-a2-37-p8", "source": "不在 (bú zài)", "target": "No estar (en un lugar)"},
+        {"id": "zh-a2-37-p9", "source": "他不在 (tā bú zài)", "target": "Él no está"},
+        {"id": "zh-a2-37-p10", "source": "我是中国 (❌ Error)", "target": "Decir que tú eres la nación entera de China"}
+      ]
+    }
+  ]
+}

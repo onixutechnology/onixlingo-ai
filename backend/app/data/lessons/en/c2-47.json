@@ -1,0 +1,101 @@
+{
+  "id": "c2-47",
+  "title": "Corporate Finance",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Finance", "Accounting", "Business"],
+  "completion_message": "¡Brillante! El lenguaje de los negocios es la contabilidad. Conocer términos como EBITDA, ROI, y Balance Sheet te permite sentarte en cualquier junta directiva y entender exactamente la salud financiera de la empresa.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Finanzas Corporativas y Contabilidad (C2)",
+      "parts": [
+        { "visual": "El lenguaje de la alta dirección es financiero. \n\n1. ROI (Return on Investment): \n- El Retorno de Inversión. Mide cuánta ganancia genera una inversión respecto a su costo. \nEj: The marketing campaign had a massive ROI of 300%. \n\n2. EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization): \n- Mide la rentabilidad operativa pura de una empresa antes de factores contables/financieros. \nEj: Our EBITDA margin grew to 25% this year. \n\n3. Cash flow (Flujo de caja / Flujo de efectivo): \n- El dinero neto que entra y sale de la empresa. Una empresa puede ser rentable pero quebrar por mal 'cash flow'. \nEj: We have a severe CASH FLOW problem because clients pay late.", "audio": "Welcome to Corporate Finance and Accounting. The language of executive management is finance. Number 1: ROI, which stands for Return on Investment. This measures how much profit an investment generates compared to its cost. For example: The marketing campaign had a massive ROI of 300%. Number 2: EBITDA, which stands for Earnings Before Interest, Taxes, Depreciation, and Amortization. It measures the pure operational profitability of a company before accounting and financial deductions. For example: Our EBITDA margin grew to 25% this year. Number 3: Cash flow. This is the net amount of cash moving in and out of a business. A company can be profitable but still go bankrupt due to bad cash flow. For example: We have a severe CASH FLOW problem because clients pay late." },
+        { "visual": "4. Balance sheet (Balance general): \n- El documento contable que muestra los Activos (Assets), Pasivos (Liabilities) y Patrimonio (Equity) en un momento específico. \nEj: We need to clean up the BALANCE SHEET before looking for investors. \n\n5. Overhead (Gastos fijos / Gastos generales): \n- Los costos operativos diarios que no están directamente ligados a la producción (alquiler, luz, seguros). \nEj: We need to reduce our OVERHEAD to survive the recession. \n\n6. Profit and Loss statement / P&L (Estado de resultados): \n- El documento que resume los ingresos, costos y gastos durante un período, mostrando la ganancia neta. \nEj: The CFO is presenting the P&L statement to the board today.", "audio": "Number 4: Balance sheet. The financial statement that shows a company's Assets, Liabilities, and Equity at a specific point in time. For example: We need to clean up the BALANCE SHEET before looking for investors. Number 5: Overhead. The ongoing business expenses not directly attributed to creating a product or service, such as rent, insurance, and utilities. For example: We need to reduce our OVERHEAD to survive the recession. Number 6: Profit and Loss statement, often called the P&L. A financial report that summarizes the revenues, costs, and expenses during a specific period, showing the net profit or loss. For example: The CFO is presenting the P&L statement to the board today." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término financiero correcto.",
+      "questions": [
+        { "id": "c2-47-q1", "type": "quiz_choice", "question": "To evaluate if the new software was worth the $100,000 cost, we need to calculate the ____. (Retorno de Inversión).", "options": ["ROI", "EBITDA", "P&L", "IPO"], "correct_answer": "ROI", "explanation": "ROI = Return on Investment." },
+        { "id": "c2-47-q2", "type": "quiz_choice", "question": "The investors only care about our operational profitability, so they asked for our ____ numbers. (Beneficios antes de intereses, impuestos, depreciación y amortización).", "options": ["EBITDA", "ROI", "P&L", "GDP"], "correct_answer": "EBITDA", "explanation": "EBITDA = Earnings Before Interest, Taxes, Depreciation, and Amortization." },
+        { "id": "c2-47-q3", "type": "quiz_choice", "question": "A company can be very profitable on paper, but if clients don't pay on time, it will die from poor ____. (Flujo de caja).", "options": ["cash flow", "balance sheet", "overhead", "revenue"], "correct_answer": "cash flow", "explanation": "Cash flow = flujo de efectivo." },
+        { "id": "c2-47-q4", "type": "quiz_choice", "question": "Things the company owns, like cash, buildings, and patents, are classified as ____. (Activos).", "options": ["assets", "liabilities", "equities", "debts"], "correct_answer": "assets", "explanation": "Assets = activos." },
+        { "id": "c2-47-q5", "type": "quiz_choice", "question": "Money the company owes to others, like bank loans and unpaid bills, are classified as ____. (Pasivos).", "options": ["liabilities", "assets", "equities", "profits"], "correct_answer": "liabilities", "explanation": "Liabilities = pasivos o deudas." },
+        { "id": "c2-47-q6", "type": "quiz_choice", "question": "The ____ sheet shows the company's assets, liabilities, and equity at a specific moment in time. (Balance general).", "options": ["balance", "profit", "cash", "income"], "correct_answer": "balance", "explanation": "Balance sheet = balance general o balance de situación." },
+        { "id": "c2-47-q7", "type": "quiz_choice", "question": "Rent, utilities, and administrative salaries are considered ____ expenses because they don't directly produce goods. (Gastos fijos/generales).", "options": ["overhead", "underhead", "capital", "direct"], "correct_answer": "overhead", "explanation": "Overhead = gastos generales operativos (luz, alquiler, etc.)." },
+        { "id": "c2-47-q8", "type": "quiz_choice", "question": "The ____ and Loss statement (P&L) summarizes the revenues, costs, and expenses incurred during a specific period. (Estado de resultados).", "options": ["Profit", "Gain", "Money", "Income"], "correct_answer": "Profit", "explanation": "Profit and Loss statement (P&L) = Estado de pérdidas y ganancias / Estado de resultados." },
+        { "id": "c2-47-q9", "type": "quiz_choice", "question": "The gradual loss of value of a physical asset (like machinery or vehicles) over time is called ____. (Depreciación).", "options": ["depreciation", "appreciation", "amortization", "inflation"], "correct_answer": "depreciation", "explanation": "Depreciation = depreciación de activos físicos." },
+        { "id": "c2-47-q10", "type": "quiz_choice", "question": "The gradual write-off of an intangible asset (like a patent or a loan) over time is called ____. (Amortización).", "options": ["amortization", "depreciation", "appreciation", "deflation"], "correct_answer": "amortization", "explanation": "Amortization = amortización (se usa para intangibles o préstamos)." },
+        { "id": "c2-47-q11", "type": "quiz_choice", "question": "The total amount of money brought in by a company's operations, before any expenses are deducted, is called ____. (Ingresos totales / Facturación).", "options": ["revenue", "profit", "net income", "margin"], "correct_answer": "revenue", "explanation": "Revenue (o Sales / Turnover) = Ingresos totales antes de descontar gastos." },
+        { "id": "c2-47-q12", "type": "quiz_choice", "question": "What is left over after all expenses, taxes, and costs have been subtracted from revenue is the net ____. (Ganancia neta).", "options": ["profit", "revenue", "turnover", "gross"], "correct_answer": "profit", "explanation": "Net profit (o net income / bottom line) = ganancia o beneficio neto." },
+        { "id": "c2-47-q13", "type": "quiz_choice", "question": "The percentage of revenue that remains after subtracting the cost of goods sold is the gross ____. (Margen bruto).", "options": ["margin", "profit", "revenue", "overhead"], "correct_answer": "margin", "explanation": "Gross margin = margen bruto." },
+        { "id": "c2-47-q14", "type": "quiz_choice", "question": "In financial slang, the final figure of net profit on a P&L statement is often called the ____ line. (Resultado final).", "options": ["bottom", "top", "red", "black"], "correct_answer": "bottom", "explanation": "The bottom line = la línea final del estado de resultados (la ganancia neta)." },
+        { "id": "c2-47-q15", "type": "quiz_choice", "question": "In financial slang, the total revenue figure at the very beginning of a P&L statement is called the ____ line. (Ingresos brutos).", "options": ["top", "bottom", "front", "first"], "correct_answer": "top", "explanation": "The top line = los ingresos totales o facturación bruta." },
+        { "id": "c2-47-q16", "type": "quiz_choice", "question": "When a company spends money to buy, maintain, or improve its fixed assets (buildings, vehicles), it is a capital ____ (CapEx). (Gasto de capital).", "options": ["expenditure", "revenue", "liability", "dividend"], "correct_answer": "expenditure", "explanation": "Capital expenditure (CapEx) = gasto en capital (inversión en activos)." },
+        { "id": "c2-47-q17", "type": "quiz_choice", "question": "The day-to-day expenses required to run a business (like salaries, rent) are known as operational ____ (OpEx). (Gastos operativos).", "options": ["expenses", "assets", "liabilities", "margins"], "correct_answer": "expenses", "explanation": "Operational expenses (OpEx) = gastos operativos." },
+        { "id": "c2-47-q18", "type": "quiz_choice", "question": "If a company owes more money than its assets are worth, it has negative ____. (Patrimonio neto).", "options": ["equity", "debt", "liability", "revenue"], "correct_answer": "equity", "explanation": "Equity = patrimonio neto (Activos - Pasivos)." },
+        { "id": "c2-47-q19", "type": "quiz_choice", "question": "If a company is making a profit, it is said to be operating 'in the ____'. (En números negros).", "options": ["black", "red", "green", "blue"], "correct_answer": "black", "explanation": "In the black = tener ganancias. In the red = tener pérdidas." },
+        { "id": "c2-47-q20", "type": "quiz_choice", "question": "A financial ____ is an educated guess about the company's future revenues and expenses. (Pronóstico/Proyección).", "options": ["forecast", "history", "audit", "balance"], "correct_answer": "forecast", "explanation": "Financial forecast = pronóstico o proyección financiera." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término financiero correcto.",
+      "questions": [
+        { "id": "c2-47-f1", "type": "fill_input", "question": "Return on Investment. (R____)", "correct_answer": "ROI", "explanation": "ROI." },
+        { "id": "c2-47-f2", "type": "fill_input", "question": "Operational profit before taxes/depreciation. (E____)", "correct_answer": "EBITDA", "explanation": "EBITDA." },
+        { "id": "c2-47-f3", "type": "fill_input", "question": "____ flow. (Flujo de caja con C)", "correct_answer": "Cash", "explanation": "Cash." },
+        { "id": "c2-47-f4", "type": "fill_input", "question": "____ sheet. (Balance general con B)", "correct_answer": "Balance", "explanation": "Balance." },
+        { "id": "c2-47-f5", "type": "fill_input", "question": "Things you own. (Activos con A)", "correct_answer": "Assets", "explanation": "Assets." },
+        { "id": "c2-47-f6", "type": "fill_input", "question": "Things you owe. (Pasivos con L)", "correct_answer": "Liabilities", "explanation": "Liabilities." },
+        { "id": "c2-47-f7", "type": "fill_input", "question": "Rent and utilities are ____ expenses. (Gastos fijos/generales con O)", "correct_answer": "overhead", "explanation": "overhead." },
+        { "id": "c2-47-f8", "type": "fill_input", "question": "Total sales money. (Ingresos totales con R)", "correct_answer": "Revenue", "explanation": "Revenue." },
+        { "id": "c2-47-f9", "type": "fill_input", "question": "Net ____. (Ganancia neta con P)", "correct_answer": "profit", "explanation": "profit." },
+        { "id": "c2-47-f10", "type": "fill_input", "question": "The ____ line. (Ganancia neta en jerga financiera con B)", "correct_answer": "bottom", "explanation": "bottom." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Finance Match",
+      "pairs": [
+        {"id": "c2-47-p1", "source": "ROI", "target": "Retorno de inversión"},
+        {"id": "c2-47-p2", "source": "EBITDA", "target": "Rentabilidad operativa bruta"},
+        {"id": "c2-47-p3", "source": "Cash flow", "target": "Flujo de caja / efectivo"},
+        {"id": "c2-47-p4", "source": "Balance sheet", "target": "Balance general o de situación"},
+        {"id": "c2-47-p5", "source": "Assets", "target": "Activos (lo que se tiene)"},
+        {"id": "c2-47-p6", "source": "Liabilities", "target": "Pasivos (deudas/lo que se debe)"},
+        {"id": "c2-47-p7", "source": "Overhead", "target": "Gastos generales operativos (alquiler)"},
+        {"id": "c2-47-p8", "source": "P&L statement", "target": "Estado de pérdidas y ganancias (resultados)"},
+        {"id": "c2-47-p9", "source": "Revenue", "target": "Ingresos totales / Facturación"},
+        {"id": "c2-47-p10", "source": "The bottom line", "target": "La ganancia neta final"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término contable/financiero.",
+      "questions": [
+        { "id": "c2-47-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is the ROI?", "options": ["What is the ROI?", "What is the RIA?", "What is the ROW?", "What is the RIO?"], "correct_answer": "What is the ROI?", "explanation": "Audio exacto." },
+        { "id": "c2-47-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our EBITDA is growing.", "options": ["Our EBITDA is growing.", "Their EBITDA is growing.", "Our EBITDA was growing.", "Our EBITDA is lowering."], "correct_answer": "Our EBITDA is growing.", "explanation": "Audio exacto." },
+        { "id": "c2-47-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have a cash flow problem.", "options": ["We have a cash flow problem.", "They have a cash flow problem.", "We had a cash flow problem.", "We have a cash flow issue."], "correct_answer": "We have a cash flow problem.", "explanation": "Audio exacto." },
+        { "id": "c2-47-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Look at the balance sheet.", "options": ["Look at the balance sheet.", "Look at the balance sheets.", "Looking at the balance sheet.", "Looked at the balance sheet."], "correct_answer": "Look at the balance sheet.", "explanation": "Audio exacto." },
+        { "id": "c2-47-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our assets exceed our liabilities.", "options": ["Our assets exceed our liabilities.", "Their assets exceed our liabilities.", "Our assets exceed their liabilities.", "Our asset exceeds our liability."], "correct_answer": "Our assets exceed our liabilities.", "explanation": "Audio exacto." },
+        { "id": "c2-47-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must cut overhead.", "options": ["We must cut overhead.", "They must cut overhead.", "We must cutting overhead.", "We must cut overheads."], "correct_answer": "We must cut overhead.", "explanation": "Audio exacto." },
+        { "id": "c2-47-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Review the P&L statement.", "options": ["Review the P&L statement.", "Reviewing the P&L statement.", "Reviewed the P&L statement.", "Review the B&L statement."], "correct_answer": "Review the P&L statement.", "explanation": "Audio exacto." },
+        { "id": "c2-47-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Revenue is up ten percent.", "options": ["Revenue is up ten percent.", "Revenue is up two percent.", "Revenue was up ten percent.", "Revenue is down ten percent."], "correct_answer": "Revenue is up ten percent.", "explanation": "Audio exacto." },
+        { "id": "c2-47-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is the bottom line?", "options": ["What is the bottom line?", "What was the bottom line?", "Where is the bottom line?", "What is the top line?"], "correct_answer": "What is the bottom line?", "explanation": "Audio exacto." },
+        { "id": "c2-47-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are operating in the black.", "options": ["We are operating in the black.", "We are operating in the red.", "They are operating in the black.", "We were operating in the black."], "correct_answer": "We are operating in the black.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

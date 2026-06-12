@@ -1,0 +1,101 @@
+{
+  "id": "a1-82",
+  "title": "Can / Could: Making Requests",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Modal Verbs", "Requests", "Polite"],
+  "completion_message": "¡Muy bien! Ahora sabes hacer peticiones corteses en inglés profesional usando 'Can you...?' y 'Could you...?'.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Peticiones con Can / Could",
+      "parts": [
+        { "visual": "Usamos 'Can you...?' para pedir algo de forma directa: Can you send me the report? (¿Puedes enviarme el informe?).", "audio": "We use Can you to make direct requests: Can you send me the report?" },
+        { "visual": "'Could you...?' es más formal y cortés: Could you please send me the report? (¿Podría usted enviarme el informe?). Ideal para emails formales.", "audio": "Could you is more formal and polite: Could you please send me the report? Ideal for formal emails." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige 'Can you' o 'Could you' según el nivel de formalidad.",
+      "questions": [
+        { "id": "a1-82-q1", "type": "quiz_choice", "question": "____ you send me the report? (Directo, a un compañero).", "options": ["Can", "Could", "Do", "Are"], "correct_answer": "Can", "explanation": "Petición directa informal (Can)." },
+        { "id": "a1-82-q2", "type": "quiz_choice", "question": "____ you please send me the report? (Formal, a un jefe).", "options": ["Could", "Can", "Do", "Are"], "correct_answer": "Could", "explanation": "Petición formal (Could)." },
+        { "id": "a1-82-q3", "type": "quiz_choice", "question": "Can you ____ this email? (Revisar).", "options": ["check", "to check", "checking", "checks"], "correct_answer": "check", "explanation": "Después de can, el verbo va en infinitivo sin 'to'." },
+        { "id": "a1-82-q4", "type": "quiz_choice", "question": "Could you ____ me the file? (Enviar).", "options": ["send", "to send", "sending", "sends"], "correct_answer": "send", "explanation": "Después de could, el verbo va en infinitivo sin 'to'." },
+        { "id": "a1-82-q5", "type": "quiz_choice", "question": "Can you ____ a bit louder? (Hablar).", "options": ["speak", "to speak", "speaking", "spoke"], "correct_answer": "speak", "explanation": "Infinitivo sin 'to' tras can." },
+        { "id": "a1-82-q6", "type": "quiz_choice", "question": "Could you ____ the meeting? (Confirmar).", "options": ["confirm", "to confirm", "confirming", "confirms"], "correct_answer": "confirm", "explanation": "Infinitivo sin 'to' tras could." },
+        { "id": "a1-82-q7", "type": "quiz_choice", "question": "Can you ____ me with this? (Ayudar).", "options": ["help", "to help", "helping", "helps"], "correct_answer": "help", "explanation": "Infinitivo sin 'to' tras can." },
+        { "id": "a1-82-q8", "type": "quiz_choice", "question": "Could you ____ the document? (Imprimir).", "options": ["print", "to print", "printing", "prints"], "correct_answer": "print", "explanation": "Infinitivo sin 'to' tras could." },
+        { "id": "a1-82-q9", "type": "quiz_choice", "question": "Can you ____ back later? (Llamar).", "options": ["call", "to call", "calling", "calls"], "correct_answer": "call", "explanation": "Infinitivo sin 'to' tras can." },
+        { "id": "a1-82-q10", "type": "quiz_choice", "question": "Could you ____ the door, please? (Cerrar).", "options": ["close", "to close", "closing", "closes"], "correct_answer": "close", "explanation": "Infinitivo sin 'to' tras could." },
+        { "id": "a1-82-q11", "type": "quiz_choice", "question": "Of ____. (Respuesta afirmativa: Por supuesto).", "options": ["course", "courses", "sure", "yes"], "correct_answer": "course", "explanation": "Of course = Por supuesto." },
+        { "id": "a1-82-q12", "type": "quiz_choice", "question": "No ____. (Respuesta: No hay problema).", "options": ["problem", "trouble", "issue", "worry"], "correct_answer": "problem", "explanation": "No problem = No hay problema." },
+        { "id": "a1-82-q13", "type": "quiz_choice", "question": "____, I can't right now. (Lo siento, no puedo).", "options": ["Sorry", "Excuse", "Pardon", "Please"], "correct_answer": "Sorry", "explanation": "Sorry, I can't = Lo siento, no puedo." },
+        { "id": "a1-82-q14", "type": "quiz_choice", "question": "Can you ____? (Repetir).", "options": ["repeat", "to repeat", "repeating", "repeats"], "correct_answer": "repeat", "explanation": "Infinitivo sin 'to' tras can." },
+        { "id": "a1-82-q15", "type": "quiz_choice", "question": "Could you ____ that again, please? (Decir).", "options": ["say", "tell", "speak", "talk"], "correct_answer": "say", "explanation": "Could you say that again? (¿Podría repetirlo?)." },
+        { "id": "a1-82-q16", "type": "quiz_choice", "question": "Can you ____ the presentation? (Preparar).", "options": ["prepare", "to prepare", "preparing", "prepares"], "correct_answer": "prepare", "explanation": "Infinitivo sin 'to' tras can." },
+        { "id": "a1-82-q17", "type": "quiz_choice", "question": "Could you ____ on time? (Llegar).", "options": ["arrive", "to arrive", "arriving", "arrives"], "correct_answer": "arrive", "explanation": "Infinitivo sin 'to' tras could." },
+        { "id": "a1-82-q18", "type": "quiz_choice", "question": "Can you ____ the invoice? (Aprobar/Firmar).", "options": ["sign", "to sign", "signing", "signs"], "correct_answer": "sign", "explanation": "Infinitivo sin 'to' tras can." },
+        { "id": "a1-82-q19", "type": "quiz_choice", "question": "Could you ____ the issue? (Revisar/Solucionar).", "options": ["check", "to check", "checking", "checks"], "correct_answer": "check", "explanation": "Infinitivo sin 'to' tras could." },
+        { "id": "a1-82-q20", "type": "quiz_choice", "question": "Can you ____ the data? (Compartir).", "options": ["share", "to share", "sharing", "shares"], "correct_answer": "share", "explanation": "Infinitivo sin 'to' tras can." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe 'Can you' o 'Could you' para completar la petición.",
+      "questions": [
+        { "id": "a1-82-f1", "type": "fill_input", "question": "____ send me the report? (Directo, informal).", "correct_answer": "Can you", "explanation": "Can you." },
+        { "id": "a1-82-f2", "type": "fill_input", "question": "____ please send the report? (Formal).", "correct_answer": "Could you", "explanation": "Could you." },
+        { "id": "a1-82-f3", "type": "fill_input", "question": "____ check this email? (Directo).", "correct_answer": "Can you", "explanation": "Can you." },
+        { "id": "a1-82-f4", "type": "fill_input", "question": "____ confirm the meeting? (Formal).", "correct_answer": "Could you", "explanation": "Could you." },
+        { "id": "a1-82-f5", "type": "fill_input", "question": "____ help me? (Directo).", "correct_answer": "Can you", "explanation": "Can you." },
+        { "id": "a1-82-f6", "type": "fill_input", "question": "____ print this? (Formal).", "correct_answer": "Could you", "explanation": "Could you." },
+        { "id": "a1-82-f7", "type": "fill_input", "question": "____ call back later? (Directo).", "correct_answer": "Can you", "explanation": "Can you." },
+        { "id": "a1-82-f8", "type": "fill_input", "question": "____ say that again? (Formal).", "correct_answer": "Could you", "explanation": "Could you." },
+        { "id": "a1-82-f9", "type": "fill_input", "question": "Of ____. (Por supuesto).", "correct_answer": "course", "explanation": "course." },
+        { "id": "a1-82-f10", "type": "fill_input", "question": "No ____. (No hay problema).", "correct_answer": "problem", "explanation": "problem." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-82-p1", "source": "Can you send me the report?", "target": "¿Puedes enviarme el informe?"},
+        {"id": "a1-82-p2", "source": "Could you please send the report?", "target": "¿Podría usted enviarme el informe?"},
+        {"id": "a1-82-p3", "source": "Can you check this?", "target": "¿Puedes revisar esto?"},
+        {"id": "a1-82-p4", "source": "Could you confirm the meeting?", "target": "¿Podría confirmar la reunión?"},
+        {"id": "a1-82-p5", "source": "Of course", "target": "Por supuesto"},
+        {"id": "a1-82-p6", "source": "No problem", "target": "No hay problema"},
+        {"id": "a1-82-p7", "source": "Sorry, I can't right now", "target": "Lo siento, ahora no puedo"},
+        {"id": "a1-82-p8", "source": "Could you say that again?", "target": "¿Podría repetirlo?"},
+        {"id": "a1-82-p9", "source": "Can you speak louder?", "target": "¿Puedes hablar más fuerte?"},
+        {"id": "a1-82-p10", "source": "Could you sign the invoice?", "target": "¿Podría firmar la factura?"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-82-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you send me the report?", "options": ["Can you send me the report?", "Could you send me the report?", "Can he send me the report?", "Can you give me the report?"], "correct_answer": "Can you send me the report?", "explanation": "Audio exacto." },
+        { "id": "a1-82-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Could you please confirm the meeting?", "options": ["Could you please confirm the meeting?", "Can you please confirm the meeting?", "Could you confirm the meeting?", "Could she please confirm the meeting?"], "correct_answer": "Could you please confirm the meeting?", "explanation": "Audio exacto." },
+        { "id": "a1-82-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you check this email?", "options": ["Can you check this email?", "Could you check this email?", "Can he check this email?", "Can you read this email?"], "correct_answer": "Can you check this email?", "explanation": "Audio exacto." },
+        { "id": "a1-82-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Of course.", "options": ["Of course.", "No problem.", "Sure.", "Yes, please."], "correct_answer": "Of course.", "explanation": "Audio exacto." },
+        { "id": "a1-82-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "No problem.", "options": ["No problem.", "Of course.", "No issue.", "Sure."], "correct_answer": "No problem.", "explanation": "Audio exacto." },
+        { "id": "a1-82-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sorry, I can't right now.", "options": ["Sorry, I can't right now.", "Sorry, I don't right now.", "Sorry, she can't right now.", "I can't right now."], "correct_answer": "Sorry, I can't right now.", "explanation": "Audio exacto." },
+        { "id": "a1-82-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Could you say that again?", "options": ["Could you say that again?", "Can you say that again?", "Could he say that again?", "Could you tell that again?"], "correct_answer": "Could you say that again?", "explanation": "Audio exacto." },
+        { "id": "a1-82-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you speak louder?", "options": ["Can you speak louder?", "Can you speak softer?", "Could you speak louder?", "Can he speak louder?"], "correct_answer": "Can you speak louder?", "explanation": "Audio exacto." },
+        { "id": "a1-82-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Could you print the document?", "options": ["Could you print the document?", "Can you print the document?", "Could he print the document?", "Could you copy the document?"], "correct_answer": "Could you print the document?", "explanation": "Audio exacto." },
+        { "id": "a1-82-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you help me with this?", "options": ["Can you help me with this?", "Could you help me with this?", "Can she help me with this?", "Can you help him with this?"], "correct_answer": "Can you help me with this?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

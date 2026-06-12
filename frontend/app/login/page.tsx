@@ -1,6 +1,8 @@
 'use client';
+import LandingFooter from '@/components/LandingFooter';
 
 import React, { useState, useEffect } from 'react';
+import LandingNavbar from '@/components/LandingNavbar';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Cookies from 'js-cookie';
@@ -94,98 +96,22 @@ export default function LoginPage() {
       const detail = error.response?.data?.detail;
       setErrorMessage(detail || 'Fallo de autenticación.');
     }
-  };  const [activeSlide, setActiveSlide] = useState(0);
-  const slides = [
-    { title: "Soberanía Multilingüe", description: "Aprende Inglés, Francés, Chino Mandarín y Ajedrez en una sola plataforma integrada.", highlight: "MCER Avanzado" },
-    { title: "Simulador Boardroom C-Suite", description: "Entrena oratoria corporativa, pitch de inversión y diplomacia directiva.", highlight: "Feedback Acústico" },
-    { title: "Ajedrez Cognitivo", description: "Potencia tu capacidad de análisis táctico y toma de decisiones ejecutivas.", highlight: "Pensamiento Estratégico" },
-    { title: "Repetición Espaciada SRS", description: "Asimila más de 3,000 términos clave e incorpora vocabulario técnico y diplomático.", highlight: "Retención Científica" },
-    { title: "Negociación Global", description: "Desarrolla habilidades de persuasión en escenarios de alto nivel con stakeholders.", highlight: "Liderazgo Directivo" },
-    { title: "Inmersión Fonométrica", description: "Perfecciona tu pronunciación y acento con métricas exactas e instantáneas.", highlight: "Precisión 98.4%" },
-    { title: "Resolución de Conflictos", description: "Aprende el lenguaje de la mediación y gestión de crisis en entornos complejos.", highlight: "Diplomacia" },
-    { title: "Finanzas Internacionales", description: "Domina el vocabulario de fusiones, adquisiciones y mercados bursátiles.", highlight: "Vocabulario C-Suite" },
-    { title: "Oratoria de Impacto", description: "Estructura discursos que inspiran y movilizan a tu organización hacia el éxito.", highlight: "Comunicación Efectiva" },
-    { title: "Visión Estratégica", description: "Anticipa movimientos del mercado y desarrolla tácticas con ajedrez.", highlight: "Análisis Crítico" },
-    { title: "Networking Ejecutivo", description: "Construye relaciones sólidas y expansivas con socios clave en el mundo.", highlight: "Relaciones Globales" },
-    { title: "Agilidad Mental", description: "Resuelve problemas bajo presión de tiempo con ejercicios cognitivos.", highlight: "Rendimiento Óptimo" },
-    { title: "Liderazgo Intercultural", description: "Gestiona equipos diversos con empatía y comprensión profunda de culturas.", highlight: "Gestión de Equipos" },
-    { title: "Presentaciones C-Level", description: "Comunica resultados financieros y estrategias de crecimiento con claridad.", highlight: "Storytelling" },
-    { title: "Pensamiento Lateral", description: "Encuentra soluciones innovadoras a desafíos empresariales mediante estrategia.", highlight: "Innovación" },
-    { title: "Gramática Avanzada", description: "Estructura contratos, correos y reportes con una precisión impecable.", highlight: "Redacción Ejecutiva" },
-    { title: "Simulaciones de Crisis", description: "Practica tu respuesta ante situaciones de estrés y protege la reputación.", highlight: "Manejo de Crisis" },
-    { title: "Dominio de Mandarín", description: "Abre las puertas al mercado asiático con fluidez en acuerdos comerciales.", highlight: "Expansión Asiática" },
-    { title: "Excelencia en Francés", description: "Comunícate con elegancia y precisión en los mercados europeos francófonos.", highlight: "Alcance Europeo" },
-    { title: "Fluidez en Inglés", description: "Consolida tu presencia como líder en el idioma universal de los negocios.", highlight: "Estándar Global" }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % slides.length);
-    }, 4500);
-    return () => clearInterval(interval);
-  }, []);
+  };
 
   return (
     <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ""}>
-      <div className="min-h-screen bg-white flex flex-col font-sans selection:bg-teal-100 selection:text-teal-900">
+      <div className="min-h-screen bg-slate-50 flex flex-col font-sans selection:bg-[#D4AF37]/30 selection:text-slate-900">
+        <LandingNavbar />
         
-        {/* TOP PANEL - CAROUSEL */}
-        <div className="w-full flex-none bg-sky-50 flex flex-col md:flex-row items-center justify-between p-3 sm:px-8 lg:px-12 relative overflow-hidden border-b border-sky-100 min-h-[60px]">
-          {/* Background decoration */}
-          <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-teal-200/40 blur-[80px] opacity-60 rounded-full pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[150px] h-[150px] bg-sky-200/40 blur-[60px] opacity-40 rounded-full pointer-events-none" />
-
-          {/* Top tagline */}
-          <div className="relative z-10 flex items-center mb-1 md:mb-0">
-            <span className="px-2 py-0.5 bg-teal-100 border border-teal-200 text-teal-700 text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
-              Executive Speeches
-            </span>
-          </div>
-
-          {/* Active Slide Display */}
-          <div className="relative z-10 w-full md:flex-1 text-center md:text-right overflow-hidden ml-0 md:ml-4">
-            <div className="relative h-10 flex flex-col justify-center">
-              {slides.map((s, idx) => (
-                <div
-                  key={idx}
-                  className={`transition-all duration-700 w-full flex flex-col md:flex-row items-center md:justify-end gap-1 md:gap-3 ${activeSlide === idx ? 'opacity-100 translate-y-0 absolute' : 'opacity-0 translate-y-2 absolute hidden'}`}
-                >
-                  <span className="text-sky-600 font-mono text-xs font-black uppercase tracking-wider hidden lg:block whitespace-nowrap">
-                    {s.highlight}
-                  </span>
-                  <h3 className="text-base font-black text-slate-900 tracking-tight whitespace-nowrap">
-                    {s.title}
-                  </h3>
-                  <p className="text-slate-600 text-xs leading-relaxed font-medium hidden md:block truncate max-w-[60%]">
-                    {s.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Slide Indicators */}
-            <div className="flex gap-0.5 mt-0.5 justify-center md:justify-end">
-              {slides.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setActiveSlide(idx)}
-                  className={`h-[2px] transition-all duration-300 rounded-none ${activeSlide === idx ? 'w-3 bg-teal-500' : 'w-1 bg-slate-300 hover:bg-slate-400'}`}
-                  title={`Diapositiva ${idx + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* BOTTOM PANEL - FORM */}
-        <div className="w-full flex-1 flex flex-col justify-center py-12 px-6 sm:px-12 lg:px-24 bg-white relative z-10">
-          <div className="max-w-[360px] w-full mx-auto space-y-6">
+        <div className="w-full flex-1 flex flex-col justify-center py-12 pt-32 px-6 sm:px-12 lg:px-24 relative z-10">
+          <div className="max-w-[360px] w-full mx-auto space-y-6 bg-slate-50 border border-slate-200 p-8 shadow-2xl animate-scale-in opacity-0">
             
             {/* Logo and Header */}
             <div className="flex flex-col items-center text-center mb-2">
               <Link
                 href="/"
-                className="flex items-center gap-1.5 text-slate-400 hover:text-teal-600 transition-colors text-[10px] font-black uppercase tracking-widest mb-4 group"
+                className="flex items-center gap-1.5 text-slate-500 hover:text-[#D4AF37] transition-colors text-[10px] font-black uppercase tracking-widest mb-4 group"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-0.5 transition-transform">
                   <polyline points="15 18 9 12 15 6" />
@@ -193,15 +119,15 @@ export default function LoginPage() {
                 Regresar al inicio
               </Link>
               <Link href="/" className="flex items-center gap-2 mb-2">
-                <div className="w-8 h-8 bg-teal-600 flex items-center justify-center text-white font-bold shadow-lg shadow-teal-600/20">
+                <div className="w-8 h-8 bg-[#D4AF37]/20 flex items-center justify-center text-[#050510] font-bold shadow-none shadow-amber-500/20">
                   <span>O</span>
                 </div>
                 <span className="font-extrabold text-slate-900 tracking-tight text-xl">OnixLingo</span>
               </Link>
-              <h2 className="text-2xl font-extrabold text-slate-950 tracking-tight mt-4">
+              <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight mt-4">
                 Nos alegra que estés aquí.
               </h2>
-              <p className="text-xs text-slate-500 mt-1 font-medium leading-relaxed">
+              <p className="text-xs text-slate-600 mt-1 font-medium leading-relaxed">
                 Introduce tu identificador para acceder a los simuladores de la plataforma.
               </p>
             </div>
@@ -223,7 +149,7 @@ export default function LoginPage() {
                     disabled={status === 'loading' || status === 'success'}
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
-                    className="block w-full pl-10 pr-4 py-3 border border-slate-200 rounded-none bg-slate-50 text-slate-900 placeholder-slate-350 focus:outline-none focus:border-teal-600 transition-all text-xs font-bold disabled:opacity-50"
+                    className="block w-full pl-10 pr-4 py-3 border border-slate-200 rounded-none bg-white text-slate-900 placeholder-gray-600 focus:outline-none focus:border-[#D4AF37]/30 transition-all text-xs font-bold disabled:opacity-50"
                     placeholder="Usuario / Email"
                   />
                 </div>
@@ -235,7 +161,7 @@ export default function LoginPage() {
                     Clave de Acceso
                   </label>
                   <span className="text-slate-300 text-[8px] font-black">·</span>
-                  <Link href="/forgot-password" className="text-[8px] font-black text-teal-600 hover:text-teal-700 transition-colors uppercase tracking-widest">
+                  <Link href="/forgot-password" className="text-[8px] font-black text-[#D4AF37] hover:text-amber-400 transition-colors uppercase tracking-widest">
                     Recuperar
                   </Link>
                 </div>
@@ -250,14 +176,14 @@ export default function LoginPage() {
                     disabled={status === 'loading' || status === 'success'}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="block w-full pl-10 pr-10 py-3 border border-slate-200 rounded-none bg-slate-50 text-slate-900 placeholder-slate-355 focus:outline-none focus:border-teal-600 transition-all text-xs font-bold disabled:opacity-50"
+                    className="block w-full pl-10 pr-10 py-3 border border-slate-200 rounded-none bg-white text-slate-900 placeholder-gray-600 focus:outline-none focus:border-[#D4AF37]/30 transition-all text-xs font-bold disabled:opacity-50"
                     placeholder="••••••••"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
                     disabled={status === 'loading' || status === 'success'}
-                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 transition-colors"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-500 hover:text-gray-600 transition-colors"
                   >
                     {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
                   </button>
@@ -265,7 +191,7 @@ export default function LoginPage() {
               </div>
 
               {status === 'error' && (
-                <div className="flex items-center gap-2 text-red-655 bg-red-50 p-3 border border-red-100 text-[9px] font-black uppercase tracking-tight">
+                <div className="flex items-center gap-2 text-red-655 bg-[#D4AF37]/10 p-3 border border-red-100 text-[9px] font-black uppercase tracking-tight">
                   <AlertCircle size={14} className="shrink-0" />
                   <p>{errorMessage}</p>
                 </div>
@@ -274,8 +200,8 @@ export default function LoginPage() {
               <button
                 type="submit"
                 disabled={status === 'loading' || status === 'success'}
-                className={`w-full flex justify-center items-center gap-2 py-3.5 px-4 rounded-none text-[9px] font-black uppercase tracking-[0.2em] text-white transition-all disabled:cursor-not-allowed
-                  ${status === 'success' ? 'bg-emerald-600' : 'bg-slate-900 hover:bg-teal-600 active:scale-95 shadow-md shadow-slate-900/10'}
+                className={`w-full flex justify-center items-center gap-2 py-3.5 px-4 rounded-none text-[9px] font-black uppercase tracking-[0.2em] text-[#050510] transition-all disabled:cursor-not-allowed
+                  ${status === 'success' ? 'bg-[#D4AF37]/100' : 'bg-[#D4AF37]/20 hover:bg-amber-400 active:scale-95 shadow-none shadow-amber-500/10'}
                 `}
               >
                 {status === 'loading' ? (
@@ -291,7 +217,7 @@ export default function LoginPage() {
             {/* Divisor Google */}
             <div className="relative my-6 flex items-center justify-center">
               <div className="border-t border-slate-200 w-full"></div>
-              <span className="bg-white px-3 text-[9px] text-slate-400 font-bold uppercase tracking-wider absolute">o ingresa con</span>
+              <span className="bg-slate-50 px-3 text-[9px] text-slate-500 font-bold uppercase tracking-wider absolute">o ingresa con</span>
             </div>
 
             {/* Botón de Google */}
@@ -309,10 +235,10 @@ export default function LoginPage() {
               />
             </div>
 
-            <div className="mt-8 pt-6 border-t border-slate-100 text-center">
+            <div className="mt-8 pt-6 border-t border-slate-200 text-center">
               <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
                 ¿Nueva incorporación?{' '}
-                <Link href="/register" className="text-teal-600 hover:text-teal-700 transition-colors">
+                <Link href="/register" className="text-[#D4AF37] hover:text-amber-400 transition-colors">
                   Registro de Usuario
                 </Link>
               </p>

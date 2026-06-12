@@ -1,565 +1,83 @@
 {
   "id": "fr-a1-8",
-  "title": "Comida y Bebida",
+  "title": "Les Verbes en -ER",
+  "version": "4.0-ARTISAN",
   "level": "A1",
-  "description": "Ordenar alimentos en almuerzos de negocios rápidos.",
-  "total_xp": 300,
-  "difficulty": "easy",
-  "tags": [
-    "a1",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "French", "Verbs"],
+  "completion_message": "¡Félicitations! Has dominado el grupo de verbos más grande de todo el idioma francés. Ya puedes construir miles de oraciones por tu cuenta.",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Comida y Bebida",
+      "title": "Los Verbos Regulares terminados en -ER (A1)",
       "parts": [
-        {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau A1 • Leçon A1-8 de 200\nSujet: Comida y Bebida\n\nConcept Clé:\n☞ 'CAFÉ'\n\n[Point Grammatical - Enfoque Gramatical]\n- Le présent de l'indicatif : verbes réguliers en -er ('nous utilisons café') et auxiliaires ('je suis', 'nous avons').\\n- L'accord en genre et nombre des adjectifs de bureau (ex: 'un dossier vert', 'des chaises vertes').\\n- Clé Didactique : Structure de base Sujet + Verbe + Complément pour la communication simple.",
-          "audio": "Bienvenue à la leçon A1-8 sur Comida y Bebida. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : café."
-        },
-        {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'café' (Traducción/Uso: Ordenar alimentos en almuerzos de negocios rápidos.)\n- Application Pratique : 'Nous devons intégrer café pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : Faites attention à la liaison entre 'un' et 'café' s'il commence par une voyelle.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : café. Répétez après moi : café."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Dans le niveau A1, privilégiez des phrases courtes et directes pour éviter les erreurs d'incompréhension.\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
-        }
+        { "visual": "En francés, la mayoría de los verbos terminan en '-ER' y todos se conjugan exactamente igual. \n\nEjemplo con el verbo PARLER (Hablar): \n(Se quita el '-er' y se añade la nueva terminación) \n\n- Je parlE (Yo hablo) \n- Tu parlES (Tú hablas) \n- Il / Elle parlE (Él / Ella habla) \n- Nous parlONS (Nosotros hablamos) \n- Vous parlEZ (Ustedes hablan / Usted habla) \n- Ils / Elles parlENT (Ellos / Ellas hablan)", "audio": "¡El 90% de los verbos en francés terminan en E R, y son regulares! Eso significa que si aprendes a conjugar uno, los sabes conjugar casi todos. Usemos el verbo Parler, que significa Hablar. La regla es quitar la E R final y poner la terminación. Escucha: Je parle, yo hablo. Tu parles, tú hablas. Il parle, él habla. Nous parlons, nosotros hablamos. Vous parlez, usted habla o ustedes hablan. Ils parlent, ellos hablan." },
+        { "visual": "¡El secreto de la pronunciación francesa! \n\nPara el verbo PARLER, mira las siguientes conjugaciones: \n- Je parle \n- Tu parles \n- Il/Elle parle \n- Ils/Elles parlent \n\n¡TODAS estas formas se pronuncian EXACTAMENTE IGUAL en francés! (Suenan como 'parl'). \n\nLas únicas que suenan diferente son: \n- Nous parlons (par-lón) \n- Vous parlez (par-lé)", "audio": "Aquí tienes el secreto más grande del francés: ¡casi todas las conjugaciones se pronuncian exactamente igual! Je parle, tu parles, il parle, e ils parlent... todas suenan simplemente como 'parl'. La S de 'Tu parles' es muda, y la E N T de 'Ils parlent' también es completamente muda. Las únicas que suenan diferente son 'Nous parlons', que termina en 'on', y 'Vous parlez', que suena a 'lé', como Parlez-vous français?" }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la conjugación correcta para los verbos terminados en -ER.",
       "questions": [
-        {
-          "id": "fr-a1-8-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"café\" dans le contexte de \"Comida y Bebida\" ?",
-          "options": [
-            "Le concept professionnel principal de café utilisé dans Comida y Bebida.",
-            "Un terme familier à éviter dans Comida y Bebida.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Comida y Bebida."
-          ],
-          "correct_answer": "Le concept professionnel principal de café utilisé dans Comida y Bebida.",
-          "explanation": "Comprendre la définition de \"café\" est fondamental pour maîtriser \"Comida y Bebida\"."
-        },
-        {
-          "id": "fr-a1-8-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"café\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Comida y Bebida\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"café\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Comida y Bebida\" aux parties prenantes.",
-          "explanation": "Aborder \"café\" dans les présentations professionnelles améliore la communication globale concernant \"Comida y Bebida\"."
-        },
-        {
-          "id": "fr-a1-8-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Comida y Bebida\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"café\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"café\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"café\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"café\" sont los piliers d'une exécution réussie de \"Comida y Bebida\"."
-        },
-        {
-          "id": "fr-a1-8-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Comida y Bebida\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"café\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"café\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"café\" conduit souvent à des résultats inefficaces dans \"Comida y Bebida\"."
-        },
-        {
-          "id": "fr-a1-8-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"café\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"café\" adapté à l'environnement de \"Comida y Bebida\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"café\" adapté à l'environnement de \"Comida y Bebida\".",
-          "explanation": "Traduire ou adapter \"café\" nécessite de comprendre son application commerciale pratique dans \"Comida y Bebida\"."
-        },
-        {
-          "id": "fr-a1-8-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"café\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Comida y Bebida\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Comida y Bebida\".",
-          "explanation": "Utiliser \"café\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-a1-8-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Comida y Bebida\", comment un cadre doit-il présenter \"café\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"café\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-a1-8-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"café\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"café\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"café\".",
-          "explanation": "Définir les jalons liés à \"café\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-a1-8-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Comida y Bebida\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"café\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"café\".",
-          "explanation": "Les mots professionnels comme \"café\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-a1-8-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"café\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"café\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "fra1-8-q1", "type": "quiz_choice", "question": "Je ____ français. (Hablar)", "options": ["parle", "parles", "parlons", "parlez"], "correct_answer": "parle", "explanation": "Je parle (terminación -e)." },
+        { "id": "fra1-8-q2", "type": "quiz_choice", "question": "Tu ____ anglais. (Hablar)", "options": ["parles", "parle", "parlent", "parlons"], "correct_answer": "parles", "explanation": "Tu parles (terminación -es)." },
+        { "id": "fra1-8-q3", "type": "quiz_choice", "question": "Il ____ espagnol. (Hablar)", "options": ["parle", "parles", "parlez", "parlent"], "correct_answer": "parle", "explanation": "Il parle (terminación -e)." },
+        { "id": "fra1-8-q4", "type": "quiz_choice", "question": "Nous ____ beaucoup. (Hablamos mucho).", "options": ["parlons", "parlez", "parlent", "parle"], "correct_answer": "parlons", "explanation": "Nous parlons (terminación -ons)." },
+        { "id": "fra1-8-q5", "type": "quiz_choice", "question": "Vous ____ français ? (¿Usted habla francés?)", "options": ["parlez", "parlons", "parle", "parles"], "correct_answer": "parlez", "explanation": "Vous parlez (terminación -ez)." },
+        { "id": "fra1-8-q6", "type": "quiz_choice", "question": "Ils ____ italien. (Ellos hablan).", "options": ["parlent", "parle", "parles", "parlez"], "correct_answer": "parlent", "explanation": "Ils parlent (terminación -ent)." },
+        { "id": "fra1-8-q7", "type": "quiz_choice", "question": "Aimer significa Amar/Gustar. ¿Cómo dices 'Yo amo'?", "options": ["J'aime", "J'aimes", "J'aimons", "Je aime"], "correct_answer": "J'aime", "explanation": "J'aime (el pronombre Je se contrae antes de vocal: J'aime)." },
+        { "id": "fra1-8-q8", "type": "quiz_choice", "question": "¿Cómo se pronuncia 'Ils parlent' (Ellos hablan)?", "options": ["Suena igual que 'Je parle'", "Se pronuncia 'parl-ent'", "Se pronuncia 'par-lón'", "Se pronuncia 'par-lé'"], "correct_answer": "Suena igual que 'Je parle'", "explanation": "La terminación -ent en los verbos es completamente muda." },
+        { "id": "fra1-8-q9", "type": "quiz_choice", "question": "Travailler significa trabajar. ¿Cómo dices 'Tú trabajas'?", "options": ["Tu travailles", "Tu travaille", "Tu travaillons", "Tu travaillez"], "correct_answer": "Tu travailles", "explanation": "Para Tu, la terminación siempre es -es." },
+        { "id": "fra1-8-q10", "type": "quiz_choice", "question": "Habiter significa vivir/habitar. ¿Cómo dices 'Nosotros vivimos'?", "options": ["Nous habitons", "Nous habitez", "Nous habitent", "Nous habite"], "correct_answer": "Nous habitons", "explanation": "Para Nous, la terminación siempre es -ons." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la conjugación correcta (¡cuidado con la ortografía!).",
       "questions": [
-        {
-          "id": "fr-a1-8-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"café\" (Exercice 1) :",
-          "parts": [
-            "notre",
-            "café",
-            "pendant",
-            "les",
-            "réunions.",
-            "Nous",
-            "utilisons"
-          ],
-          "correct_order": [
-            "Nous",
-            "utilisons",
-            "notre",
-            "café",
-            "pendant",
-            "les",
-            "réunions."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"café\"."
-        },
-        {
-          "id": "fr-a1-8-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"café\" (Exercice 2) :",
-          "parts": [
-            "café",
-            "pour",
-            "le",
-            "projet.",
-            "Voici",
-            "notre"
-          ],
-          "correct_order": [
-            "Voici",
-            "notre",
-            "café",
-            "pour",
-            "le",
-            "projet."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"café\"."
-        },
-        {
-          "id": "fr-a1-8-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"café\" (Exercice 3) :",
-          "parts": [
-            "vérifier",
-            "notre",
-            "café",
-            "ce",
-            "matin.",
-            "Je",
-            "dois"
-          ],
-          "correct_order": [
-            "Je",
-            "dois",
-            "vérifier",
-            "notre",
-            "café",
-            "ce",
-            "matin."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"café\"."
-        },
-        {
-          "id": "fr-a1-8-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"café\" (Exercice 4) :",
-          "parts": [
-            "votre",
-            "café",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît.",
-            "Veuillez",
-            "présenter"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "présenter",
-            "votre",
-            "café",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"café\"."
-        },
-        {
-          "id": "fr-a1-8-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"café\" (Exercice 5) :",
-          "parts": [
-            "apprécie",
-            "chaque",
-            "café",
-            "de",
-            "bureau.",
-            "Notre",
-            "équipe"
-          ],
-          "correct_order": [
-            "Notre",
-            "équipe",
-            "apprécie",
-            "chaque",
-            "café",
-            "de",
-            "bureau."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"café\"."
-        },
-        {
-          "id": "fr-a1-8-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"café\" (Exercice 6) :",
-          "parts": [
-            "notre",
-            "café",
-            "avant",
-            "midi",
-            "?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "notre",
-            "café",
-            "avant",
-            "midi",
-            "?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"café\"."
-        },
-        {
-          "id": "fr-a1-8-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"café\" (Exercice 7) :",
-          "parts": [
-            "organiser",
-            "notre",
-            "café",
-            "cette",
-            "semaine.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "organiser",
-            "notre",
-            "café",
-            "cette",
-            "semaine."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"café\"."
-        },
-        {
-          "id": "fr-a1-8-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"café\" (Exercice 8) :",
-          "parts": [
-            "statut",
-            "de",
-            "notre",
-            "café",
-            "ensemble.",
-            "Examinons",
-            "le"
-          ],
-          "correct_order": [
-            "Examinons",
-            "le",
-            "statut",
-            "de",
-            "notre",
-            "café",
-            "ensemble."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"café\"."
-        },
-        {
-          "id": "fr-a1-8-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"café\" (Exercice 9) :",
-          "parts": [
-            "améliorer",
-            "notre",
-            "café",
-            "de",
-            "travail.",
-            "Ils",
-            "souhaitent"
-          ],
-          "correct_order": [
-            "Ils",
-            "souhaitent",
-            "améliorer",
-            "notre",
-            "café",
-            "de",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"café\"."
-        },
-        {
-          "id": "fr-a1-8-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"café\" (Exercice 10) :",
-          "parts": [
-            "avec",
-            "notre",
-            "café",
-            "tous",
-            "les",
-            "jours.",
-            "Elle",
-            "travaille"
-          ],
-          "correct_order": [
-            "Elle",
-            "travaille",
-            "avec",
-            "notre",
-            "café",
-            "tous",
-            "les",
-            "jours."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"café\"."
-        }
+        { "id": "fra1-8-f1", "type": "fill_input", "question": "Je parl____. (Terminación para Yo)", "correct_answer": "e", "explanation": "e" },
+        { "id": "fra1-8-f2", "type": "fill_input", "question": "Tu parl____. (Terminación para Tú)", "correct_answer": "es", "explanation": "es" },
+        { "id": "fra1-8-f3", "type": "fill_input", "question": "Il parl____. (Terminación para Él)", "correct_answer": "e", "explanation": "e" },
+        { "id": "fra1-8-f4", "type": "fill_input", "question": "Nous parl____. (Terminación para Nosotros)", "correct_answer": "ons", "explanation": "ons" },
+        { "id": "fra1-8-f5", "type": "fill_input", "question": "Vous parl____. (Terminación para Usted)", "correct_answer": "ez", "explanation": "ez" },
+        { "id": "fra1-8-f6", "type": "fill_input", "question": "Ils parl____. (Terminación para Ellos)", "correct_answer": "ent", "explanation": "ent" },
+        { "id": "fra1-8-f7", "type": "fill_input", "question": "J'aim____. (Yo amo)", "correct_answer": "e", "explanation": "e" },
+        { "id": "fra1-8-f8", "type": "fill_input", "question": "Tu aim____. (Tú amas)", "correct_answer": "es", "explanation": "es" },
+        { "id": "fra1-8-f9", "type": "fill_input", "question": "Nous habit____. (Nosotros vivimos)", "correct_answer": "ons", "explanation": "ons" },
+        { "id": "fra1-8-f10", "type": "fill_input", "question": "Vous travaill____. (Usted trabaja)", "correct_answer": "ez", "explanation": "ez" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-a1-8-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"café\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"café\" en détail.",
-            "Une autre déclaration sur notre \"café\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"café\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"café\" en réunion."
-        },
-        {
-          "id": "fr-a1-8-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"café\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"café\" ?",
-            "Une autre déclaration sur notre \"café\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"café\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"café\" en réunion."
-        },
-        {
-          "id": "fr-a1-8-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"café\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"café\" cette année.",
-            "Une autre déclaration sur notre \"café\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"café\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"café\" en réunion."
-        },
-        {
-          "id": "fr-a1-8-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"café\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"café\".",
-            "Une autre déclaration sur notre \"café\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"café\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"café\" en réunion."
-        },
-        {
-          "id": "fr-a1-8-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"café\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"café\".",
-            "Une autre déclaration sur notre \"café\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"café\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"café\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Conjugation Match",
+      "pairs": [
+        {"id": "fra1-8-p1", "source": "Je parle", "target": "Yo hablo"},
+        {"id": "fra1-8-p2", "source": "Tu parles", "target": "Tú hablas"},
+        {"id": "fra1-8-p3", "source": "Il parle", "target": "Él habla"},
+        {"id": "fra1-8-p4", "source": "Nous parlons", "target": "Nosotros hablamos"},
+        {"id": "fra1-8-p5", "source": "Vous parlez", "target": "Usted habla"},
+        {"id": "fra1-8-p6", "source": "Ils parlent", "target": "Ellos hablan"},
+        {"id": "fra1-8-p7", "source": "J'aime", "target": "Yo amo / Me gusta"},
+        {"id": "fra1-8-p8", "source": "Tu aimes", "target": "Tú amas / Te gusta"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y relaciona.",
       "questions": [
-        {
-          "id": "fr-a1-8-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"caf_\" (Indice : désigne \"café\")",
-          "correct_answers": [
-            "café",
-            "Café"
-          ],
-          "hints": [
-            "Commence par 'caf'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"café\"."
-        },
-        {
-          "id": "fr-a1-8-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"L'équipe veut discuter de notre café ____ lundi matin.\" (le / en)",
-          "correct_answers": [
-            "le"
-          ],
-          "hints": [
-            "Article défini utilisé devant les jours de la semaine"
-          ],
-          "explanation": "En français, on utilise l'article défini 'le' devant un jour de la semana pour indiquer un rendez-vous habituel ou fixe."
-        },
-        {
-          "id": "fr-a1-8-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Veuillez ____ attention à ne pas faire d'erreur sur notre café.\" (faire / prendre)",
-          "correct_answers": [
-            "faire",
-            "Faire"
-          ],
-          "hints": [
-            "Verbe signifiant effectuer ou prêter attention"
-          ],
-          "explanation": "L'expression 'faire attention' est une collocation standard en français."
-        },
-        {
-          "id": "fr-a1-8-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons organiser une ____ pour revoir notre café.\" (réunion / carte)",
-          "correct_answers": [
-            "réunion",
-            "discussion",
-            "session"
-          ],
-          "hints": [
-            "Un rassemblement de personnes pour travailler ensemble"
-          ],
-          "explanation": "Une 'réunion' est le terme standard pour un meeting professionnel."
-        },
-        {
-          "id": "fr-a1-8-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Il nous faut un rapport ____ sur le statut de notre café.\" (clair / lent)",
-          "correct_answers": [
-            "clair"
-          ],
-          "hints": [
-            "Facile à comprendre et bien structuré"
-          ],
-          "explanation": "Un rapport 'clair' est indispensable pour assurer l'alignement."
-        }
+        { "id": "fra1-8-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je parle", "options": ["Je parle", "Tu parles", "Nous parlons", "Vous parlez"], "correct_answer": "Je parle", "explanation": "Audio dice: Je parle." },
+        { "id": "fra1-8-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Vous parlez", "options": ["Vous parlez", "Nous parlons", "Ils parlent", "Tu parles"], "correct_answer": "Vous parlez", "explanation": "Audio dice: Vous parlez." },
+        { "id": "fra1-8-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Nous parlons", "options": ["Nous parlons", "Vous parlez", "Je parle", "Ils parlent"], "correct_answer": "Nous parlons", "explanation": "Audio dice: Nous parlons." },
+        { "id": "fra1-8-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Ils parlent", "options": ["Ils parlent", "Nous parlons", "Vous parlez", "J'aime"], "correct_answer": "Ils parlent", "explanation": "Audio dice: Ils parlent (suena igual que 'Je parle')." },
+        { "id": "fra1-8-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "J'aime", "options": ["J'aime", "Je parle", "Tu aimes", "Tu parles"], "correct_answer": "J'aime", "explanation": "Audio dice: J'aime." }
       ]
     }
   ]

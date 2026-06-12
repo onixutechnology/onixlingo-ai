@@ -1,0 +1,101 @@
+{
+  "id": "a2-1",
+  "title": "Present Simple vs Continuous & Stative Verbs",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Present Simple", "Present Continuous", "Stative Verbs"],
+  "completion_message": "¡Excelente! Has dominado la diferencia entre acciones temporales, rutinas y verbos de estado.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Presente Simple vs Continuo y Verbos de Estado",
+      "parts": [
+        { "visual": "Present Simple (Rutinas y verdades): I work in London (Siempre). Present Continuous (Temporal y ahora): I am working in Paris this week (Solo por esta semana).", "audio": "Present Simple for routines and permanent facts. I work in London. Present Continuous for temporary situations and actions happening right now. I am working in Paris this week." },
+        { "visual": "Stative Verbs (Verbos de Estado): Verbos de pensamiento, posesión y emoción NO se usan en forma continua (-ing). Ejemplos: know (saber), believe (creer), understand (entender), want (querer), need (necesitar), own (poseer). CORRECTO: I know the answer. INCORRECTO: I am knowing the answer.", "audio": "Stative verbs. Verbs of thinking, possession, and emotion are NOT used in the continuous form with I-N-G. Examples: know, believe, understand, want, need, and own. It is correct to say: I know the answer. Never say: I am knowing the answer." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del verbo (rutina, temporal o estado).",
+      "questions": [
+        { "id": "a2-1-q1", "type": "quiz_choice", "question": "I usually ____ at 9:00 AM, but today I ____ at 8:00 AM.", "options": ["start / am starting", "am starting / start", "start / start", "am starting / am starting"], "correct_answer": "start / am starting", "explanation": "Usually indica rutina (Present Simple). Today indica una situación temporal o actual (Present Continuous)." },
+        { "id": "a2-1-q2", "type": "quiz_choice", "question": "She ____ the new strategy. It makes sense. (Entiende - Verbo de estado).", "options": ["understands", "is understanding", "understand", "are understanding"], "correct_answer": "understands", "explanation": "'Understand' es un stative verb, no lleva -ing." },
+        { "id": "a2-1-q3", "type": "quiz_choice", "question": "They ____ to open a new branch next year. (Quieren - Verbo de estado).", "options": ["want", "are wanting", "wants", "is wanting"], "correct_answer": "want", "explanation": "'Want' es un stative verb, nunca se dice 'are wanting'." },
+        { "id": "a2-1-q4", "type": "quiz_choice", "question": "We normally ____ meetings in Room A, but this week we ____ them in Room B.", "options": ["have / are having", "are having / have", "have / have", "are having / are having"], "correct_answer": "have / are having", "explanation": "Normally = Present Simple (have). This week = Situación temporal (are having)." },
+        { "id": "a2-1-q5", "type": "quiz_choice", "question": "I ____ you are right about the budget. (Creo - Verbo de estado).", "options": ["believe", "am believing", "believes", "are believing"], "correct_answer": "believe", "explanation": "'Believe' (creer) es un verbo de estado, no lleva -ing." },
+        { "id": "a2-1-q6", "type": "quiz_choice", "question": "Look! The CEO ____ to the investors right now.", "options": ["is talking", "talks", "talk", "are talking"], "correct_answer": "is talking", "explanation": "Right now indica una acción en progreso (Present Continuous)." },
+        { "id": "a2-1-q7", "type": "quiz_choice", "question": "I ____ to the office every day. (Manejo - Rutina permanente).", "options": ["drive", "am driving", "drives", "are driving"], "correct_answer": "drive", "explanation": "Every day indica rutina (Present Simple)." },
+        { "id": "a2-1-q8", "type": "quiz_choice", "question": "I ____ my car this week because the train is on strike. (Estoy manejando - Temporal).", "options": ["am driving", "drive", "drives", "are driving"], "correct_answer": "am driving", "explanation": "This week indica situación temporal (Present Continuous)." },
+        { "id": "a2-1-q9", "type": "quiz_choice", "question": "Do you ____ the password for the Wi-Fi? (Saber/Conocer - Verbo de estado).", "options": ["know", "are knowing", "knowing", "knows"], "correct_answer": "know", "explanation": "'Know' es un stative verb. Nunca se dice 'are you knowing'." },
+        { "id": "a2-1-q10", "type": "quiz_choice", "question": "The company ____ three factories in Asia. (Posee - Verbo de posesión).", "options": ["owns", "is owning", "own", "are owning"], "correct_answer": "owns", "explanation": "'Own' (poseer) es un verbo de estado, no lleva -ing." },
+        { "id": "a2-1-q11", "type": "quiz_choice", "question": "I ____ we should delay the launch. (Pienso/Opino - Verbo de estado).", "options": ["think", "am thinking", "thinks", "are thinking"], "correct_answer": "think", "explanation": "Cuando 'think' significa opinar/creer, es un verbo de estado (no -ing)." },
+        { "id": "a2-1-q12", "type": "quiz_choice", "question": "Shh! I ____ about the problem. Give me a minute. (Estoy pensando - Acción mental en proceso).", "options": ["am thinking", "think", "thinks", "are thinking"], "correct_answer": "am thinking", "explanation": "Cuando 'think' es el proceso mental de analizar algo en el momento, SÍ se puede usar en continuo." },
+        { "id": "a2-1-q13", "type": "quiz_choice", "question": "We ____ more time to finish the project. (Necesitamos - Verbo de estado).", "options": ["need", "are needing", "needs", "is needing"], "correct_answer": "need", "explanation": "'Need' es stative verb." },
+        { "id": "a2-1-q14", "type": "quiz_choice", "question": "She never ____ coffee. (Bebe - Rutina).", "options": ["drinks", "is drinking", "drink", "are drinking"], "correct_answer": "drinks", "explanation": "Never = rutina/hábito = Present Simple." },
+        { "id": "a2-1-q15", "type": "quiz_choice", "question": "Why ____ you ____ at the screen like that? Is it broken? (Aahora mismo).", "options": ["are / looking", "do / look", "is / looking", "does / look"], "correct_answer": "are / looking", "explanation": "Acción sucediendo en este momento: Why are you looking...?" },
+        { "id": "a2-1-q16", "type": "quiz_choice", "question": "This laptop ____ to the company. (Pertenece - Verbo de posesión).", "options": ["belongs", "is belonging", "belong", "are belonging"], "correct_answer": "belongs", "explanation": "'Belong' es stative verb, no lleva -ing." },
+        { "id": "a2-1-q17", "type": "quiz_choice", "question": "They ____ the software this month to fix the bugs. (Están actualizando - Temporal).", "options": ["are updating", "update", "updates", "is updating"], "correct_answer": "are updating", "explanation": "This month = situación en progreso o temporal." },
+        { "id": "a2-1-q18", "type": "quiz_choice", "question": "I ____ what you mean. (Veo/Entiendo - Verbo de estado).", "options": ["see", "am seeing", "sees", "are seeing"], "correct_answer": "see", "explanation": "Cuando 'see' significa entender, es stative verb." },
+        { "id": "a2-1-q19", "type": "quiz_choice", "question": "The manager ____ the client at 3 PM tomorrow. (Se reúne con - Plan futuro).", "options": ["is seeing", "sees", "see", "are seeing"], "correct_answer": "is seeing", "explanation": "Cuando 'see' significa reunirse con alguien (plan), sí puede ir en continuo." },
+        { "id": "a2-1-q20", "type": "quiz_choice", "question": "How much ____ this software ____? (Cuesta - Estado permanente).", "options": ["does / cost", "is / costing", "do / cost", "are / costing"], "correct_answer": "does / cost", "explanation": "'Cost' (costar) es stative verb. Usa auxiliar do/does." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo en Present Simple o Present Continuous según corresponda.",
+      "questions": [
+        { "id": "a2-1-f1", "type": "fill_input", "question": "I ____ the answer. (know - verbo de estado)", "correct_answer": "know", "explanation": "know." },
+        { "id": "a2-1-f2", "type": "fill_input", "question": "We ____ a new website this week. (build - temporal)", "correct_answer": "are building", "explanation": "are building." },
+        { "id": "a2-1-f3", "type": "fill_input", "question": "She ____ the problem. (understand - verbo de estado)", "correct_answer": "understands", "explanation": "understands (lleva 's')." },
+        { "id": "a2-1-f4", "type": "fill_input", "question": "They ____ help right now. (need - verbo de estado)", "correct_answer": "need", "explanation": "need." },
+        { "id": "a2-1-f5", "type": "fill_input", "question": "The company ____ the building. (own - verbo de estado)", "correct_answer": "owns", "explanation": "owns." },
+        { "id": "a2-1-f6", "type": "fill_input", "question": "I ____ to work every day. (drive - rutina)", "correct_answer": "drive", "explanation": "drive." },
+        { "id": "a2-1-f7", "type": "fill_input", "question": "I ____ this week because my car is broken. (take the bus - temporal)", "correct_answer": "am taking", "explanation": "am taking." },
+        { "id": "a2-1-f8", "type": "fill_input", "question": "Look! He ____ to the boss. (talk - ahora mismo)", "correct_answer": "is talking", "explanation": "is talking." },
+        { "id": "a2-1-f9", "type": "fill_input", "question": "I ____ you are right. (believe - verbo de estado)", "correct_answer": "believe", "explanation": "believe." },
+        { "id": "a2-1-f10", "type": "fill_input", "question": "We ____ more budget. (want - verbo de estado)", "correct_answer": "want", "explanation": "want." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-1-p1", "source": "I work every day", "target": "Trabajo todos los días (rutina)"},
+        {"id": "a2-1-p2", "source": "I am working this week", "target": "Estoy trabajando esta semana (temporal)"},
+        {"id": "a2-1-p3", "source": "I know", "target": "Yo sé / conozco (Stative)"},
+        {"id": "a2-1-p4", "source": "I understand", "target": "Entiendo (Stative)"},
+        {"id": "a2-1-p5", "source": "I want", "target": "Quiero (Stative)"},
+        {"id": "a2-1-p6", "source": "I need", "target": "Necesito (Stative)"},
+        {"id": "a2-1-p7", "source": "I believe", "target": "Creo (Stative)"},
+        {"id": "a2-1-p8", "source": "The company owns", "target": "La empresa posee (Stative)"},
+        {"id": "a2-1-p9", "source": "It belongs to us", "target": "Nos pertenece (Stative)"},
+        {"id": "a2-1-p10", "source": "I am thinking about it", "target": "Estoy pensándolo (Proceso en curso)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a2-1-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I know the answer.", "options": ["I know the answer.", "I knew the answer.", "I am knowing the answer.", "She knows the answer."], "correct_answer": "I know the answer.", "explanation": "Audio exacto." },
+        { "id": "a2-1-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She understands the new strategy.", "options": ["She understands the new strategy.", "He understands the new strategy.", "She is understanding the new strategy.", "I understand the new strategy."], "correct_answer": "She understands the new strategy.", "explanation": "Audio exacto." },
+        { "id": "a2-1-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They want to open a new branch.", "options": ["They want to open a new branch.", "We want to open a new branch.", "They wanted to open a new branch.", "They are wanting to open a new branch."], "correct_answer": "They want to open a new branch.", "explanation": "Audio exacto." },
+        { "id": "a2-1-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I believe you are right.", "options": ["I believe you are right.", "I think you are right.", "I believe he is right.", "I am believing you are right."], "correct_answer": "I believe you are right.", "explanation": "Audio exacto." },
+        { "id": "a2-1-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company owns three factories.", "options": ["The company owns three factories.", "The company owns two factories.", "The company is owning three factories.", "He owns three factories."], "correct_answer": "The company owns three factories.", "explanation": "Audio exacto." },
+        { "id": "a2-1-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This laptop belongs to the company.", "options": ["This laptop belongs to the company.", "The laptop belongs to the company.", "This laptop is belonging to the company.", "This computer belongs to the company."], "correct_answer": "This laptop belongs to the company.", "explanation": "Audio exacto." },
+        { "id": "a2-1-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need more time to finish.", "options": ["I need more time to finish.", "I am needing more time to finish.", "We need more time to finish.", "I need more time to work."], "correct_answer": "I need more time to finish.", "explanation": "Audio exacto." },
+        { "id": "a2-1-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are having meetings in Room B this week.", "options": ["We are having meetings in Room B this week.", "We have meetings in Room B this week.", "They are having meetings in Room B this week.", "We are having a meeting in Room B this week."], "correct_answer": "We are having meetings in Room B this week.", "explanation": "Audio exacto." },
+        { "id": "a2-1-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am thinking about the problem.", "options": ["I am thinking about the problem.", "I think about the problem.", "He is thinking about the problem.", "I am thinking about the project."], "correct_answer": "I am thinking about the problem.", "explanation": "Audio exacto." },
+        { "id": "a2-1-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How much does this software cost?", "options": ["How much does this software cost?", "How much is this software costing?", "How much does the software cost?", "How much do these soft wares cost?"], "correct_answer": "How much does this software cost?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "a1-98",
+  "title": "Eating Out: Business Lunch and Dinner",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Restaurant", "Business Dining", "Travel"],
+  "completion_message": "¡Excelente! Ya puedes pedir en un restaurante, hacer reservas y comportarte correctamente en una comida de negocios en inglés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Comida de Negocios",
+      "parts": [
+        { "visual": "Para reservar mesa: I would like to book a table for four (Me gustaría reservar una mesa para cuatro). For this evening at 8 PM (Para esta noche a las 8).", "audio": "To book a table: I would like to book a table for four. For this evening at eight PM." },
+        { "visual": "Para pedir: Can I see the menu? (¿Puedo ver el menú?). I would like the... (Me gustaría el/la...). The bill, please. (La cuenta, por favor). Could we split the bill? (¿Podríamos dividir la cuenta?).", "audio": "To order: Can I see the menu? I would like the... The bill, please. Could we split the bill?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la expresión correcta para el restaurante.",
+      "questions": [
+        { "id": "a1-98-q1", "type": "quiz_choice", "question": "I would like to ____ a table for four. (Reservar).", "options": ["book", "take", "get", "make"], "correct_answer": "book", "explanation": "Book a table = reservar una mesa." },
+        { "id": "a1-98-q2", "type": "quiz_choice", "question": "Can I see the ____? (Menú).", "options": ["menu", "bill", "card", "list"], "correct_answer": "menu", "explanation": "Menu = menú / carta." },
+        { "id": "a1-98-q3", "type": "quiz_choice", "question": "I would like the grilled ____. (Salmón a la plancha).", "options": ["salmon", "salad", "chicken", "steak"], "correct_answer": "salmon", "explanation": "Grilled salmon = salmón a la plancha." },
+        { "id": "a1-98-q4", "type": "quiz_choice", "question": "Are you ready to ____? (Pedir/Ordenar).", "options": ["order", "eat", "pay", "choose"], "correct_answer": "order", "explanation": "Order = pedir / ordenar." },
+        { "id": "a1-98-q5", "type": "quiz_choice", "question": "The ____, please. (La cuenta).", "options": ["bill", "check", "invoice", "receipt"], "correct_answer": "bill", "explanation": "The bill = la cuenta (en UK). 'Check' en US." },
+        { "id": "a1-98-q6", "type": "quiz_choice", "question": "Could we ____ the bill? (Dividir).", "options": ["split", "divide", "share", "separate"], "correct_answer": "split", "explanation": "Split the bill = dividir la cuenta." },
+        { "id": "a1-98-q7", "type": "quiz_choice", "question": "It is on ____. (Lo pago yo / Es mi invitación).", "options": ["me", "my account", "the company", "us"], "correct_answer": "me", "explanation": "It's on me = yo invito." },
+        { "id": "a1-98-q8", "type": "quiz_choice", "question": "What is the ____? (Especialidad del día).", "options": ["special", "menu", "dish", "meal"], "correct_answer": "special", "explanation": "The special = el especial del día." },
+        { "id": "a1-98-q9", "type": "quiz_choice", "question": "I am a ____. I don't eat meat. (Vegetariano).", "options": ["vegetarian", "vegan", "allergic", "kosher"], "correct_answer": "vegetarian", "explanation": "Vegetarian = vegetariano." },
+        { "id": "a1-98-q10", "type": "quiz_choice", "question": "Could I have some ____, please? (Agua).", "options": ["water", "wine", "coffee", "juice"], "correct_answer": "water", "explanation": "Water = agua." },
+        { "id": "a1-98-q11", "type": "quiz_choice", "question": "I am ____ to nuts. (Alérgico).", "options": ["allergic", "sensitive", "reacting", "against"], "correct_answer": "allergic", "explanation": "Allergic to nuts = alérgico a los frutos secos." },
+        { "id": "a1-98-q12", "type": "quiz_choice", "question": "This is ____. (Delicioso).", "options": ["delicious", "tasty", "good", "fine"], "correct_answer": "delicious", "explanation": "Delicious = delicioso." },
+        { "id": "a1-98-q13", "type": "quiz_choice", "question": "Could I have the ____ without onion? (Ensalada sin cebolla).", "options": ["salad", "soup", "dish", "starter"], "correct_answer": "salad", "explanation": "Salad without onion = ensalada sin cebolla." },
+        { "id": "a1-98-q14", "type": "quiz_choice", "question": "For ____, I will have the cheesecake. (Postre).", "options": ["dessert", "starter", "main", "appetizer"], "correct_answer": "dessert", "explanation": "Dessert = postre." },
+        { "id": "a1-98-q15", "type": "quiz_choice", "question": "As a ____, I would like soup. (Entrada).", "options": ["starter", "dessert", "main course", "side"], "correct_answer": "starter", "explanation": "Starter = entrada / primer plato." },
+        { "id": "a1-98-q16", "type": "quiz_choice", "question": "Could I have the ____ course? (Plato principal).", "options": ["main", "first", "second", "last"], "correct_answer": "main", "explanation": "Main course = plato principal." },
+        { "id": "a1-98-q17", "type": "quiz_choice", "question": "I would like my steak ____. (Bien cocida).", "options": ["well done", "medium", "rare", "raw"], "correct_answer": "well done", "explanation": "Well done = bien cocida." },
+        { "id": "a1-98-q18", "type": "quiz_choice", "question": "Excuse me, this is not what I ____. (Pedí).", "options": ["ordered", "wanted", "asked", "chose"], "correct_answer": "ordered", "explanation": "I ordered = yo pedí." },
+        { "id": "a1-98-q19", "type": "quiz_choice", "question": "The service was ____. (Excelente).", "options": ["excellent", "good", "fine", "nice"], "correct_answer": "excellent", "explanation": "Excellent service = servicio excelente." },
+        { "id": "a1-98-q20", "type": "quiz_choice", "question": "Shall we ____ to the restaurant? (¿Vamos?).", "options": ["go", "walk", "drive", "head"], "correct_answer": "go", "explanation": "Shall we go? = ¿Vamos?" }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta para el restaurante.",
+      "questions": [
+        { "id": "a1-98-f1", "type": "fill_input", "question": "I would like to ____ a table. (Reservar).", "correct_answer": "book", "explanation": "book." },
+        { "id": "a1-98-f2", "type": "fill_input", "question": "Can I see the ____? (Menú).", "correct_answer": "menu", "explanation": "menu." },
+        { "id": "a1-98-f3", "type": "fill_input", "question": "Are you ready to ____? (Pedir).", "correct_answer": "order", "explanation": "order." },
+        { "id": "a1-98-f4", "type": "fill_input", "question": "The ____, please. (La cuenta).", "correct_answer": "bill", "explanation": "bill." },
+        { "id": "a1-98-f5", "type": "fill_input", "question": "Could we ____ the bill? (Dividir).", "correct_answer": "split", "explanation": "split." },
+        { "id": "a1-98-f6", "type": "fill_input", "question": "It is on ____. (Yo invito).", "correct_answer": "me", "explanation": "me." },
+        { "id": "a1-98-f7", "type": "fill_input", "question": "I am ____ to nuts. (Alérgico).", "correct_answer": "allergic", "explanation": "allergic." },
+        { "id": "a1-98-f8", "type": "fill_input", "question": "As a ____, I want soup. (Entrada).", "correct_answer": "starter", "explanation": "starter." },
+        { "id": "a1-98-f9", "type": "fill_input", "question": "For ____, I'll have cheesecake. (Postre).", "correct_answer": "dessert", "explanation": "dessert." },
+        { "id": "a1-98-f10", "type": "fill_input", "question": "This is ____. (Delicioso).", "correct_answer": "delicious", "explanation": "delicious." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-98-p1", "source": "Book a table", "target": "Reservar una mesa"},
+        {"id": "a1-98-p2", "source": "Menu", "target": "Menú / Carta"},
+        {"id": "a1-98-p3", "source": "Order", "target": "Pedir / Ordenar"},
+        {"id": "a1-98-p4", "source": "The bill, please", "target": "La cuenta, por favor"},
+        {"id": "a1-98-p5", "source": "Split the bill", "target": "Dividir la cuenta"},
+        {"id": "a1-98-p6", "source": "It's on me", "target": "Yo invito"},
+        {"id": "a1-98-p7", "source": "Starter", "target": "Entrada / Primer plato"},
+        {"id": "a1-98-p8", "source": "Main course", "target": "Plato principal"},
+        {"id": "a1-98-p9", "source": "Dessert", "target": "Postre"},
+        {"id": "a1-98-p10", "source": "Delicious", "target": "Delicioso"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-98-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I would like to book a table for four.", "options": ["I would like to book a table for four.", "I would like to book a table for two.", "She would like to book a table for four.", "I want to book a table for four."], "correct_answer": "I would like to book a table for four.", "explanation": "Audio exacto." },
+        { "id": "a1-98-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I see the menu?", "options": ["Can I see the menu?", "Can she see the menu?", "Could I see the menu?", "Can I have the menu?"], "correct_answer": "Can I see the menu?", "explanation": "Audio exacto." },
+        { "id": "a1-98-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Are you ready to order?", "options": ["Are you ready to order?", "Are they ready to order?", "Is she ready to order?", "Are you ready to eat?"], "correct_answer": "Are you ready to order?", "explanation": "Audio exacto." },
+        { "id": "a1-98-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The bill, please.", "options": ["The bill, please.", "The check, please.", "My bill, please.", "The bill please."], "correct_answer": "The bill, please.", "explanation": "Audio exacto." },
+        { "id": "a1-98-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Could we split the bill?", "options": ["Could we split the bill?", "Can we split the bill?", "Should we split the bill?", "Could they split the bill?"], "correct_answer": "Could we split the bill?", "explanation": "Audio exacto." },
+        { "id": "a1-98-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's on me.", "options": ["It's on me.", "It is on me.", "It is on us.", "It's my treat."], "correct_answer": "It's on me.", "explanation": "Audio exacto." },
+        { "id": "a1-98-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am allergic to nuts.", "options": ["I am allergic to nuts.", "She is allergic to nuts.", "I am sensitive to nuts.", "I am allergic to milk."], "correct_answer": "I am allergic to nuts.", "explanation": "Audio exacto." },
+        { "id": "a1-98-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "As a starter, I would like soup.", "options": ["As a starter, I would like soup.", "For dessert, I would like soup.", "As a starter, she would like soup.", "As a starter, I want soup."], "correct_answer": "As a starter, I would like soup.", "explanation": "Audio exacto." },
+        { "id": "a1-98-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This is delicious.", "options": ["This is delicious.", "That is delicious.", "It was delicious.", "This was delicious."], "correct_answer": "This is delicious.", "explanation": "Audio exacto." },
+        { "id": "a1-98-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Excuse me, this is not what I ordered.", "options": ["Excuse me, this is not what I ordered.", "Sorry, this is not what I ordered.", "Excuse me, that is not what I ordered.", "Excuse me, this was not what I ordered."], "correct_answer": "Excuse me, this is not what I ordered.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

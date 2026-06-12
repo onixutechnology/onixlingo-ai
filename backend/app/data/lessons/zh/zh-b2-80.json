@@ -1,0 +1,92 @@
+{
+  "id": "zh-b2-80",
+  "title": "Todos los Días",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Time", "Quantifiers"],
+  "completion_message": "¡Misión cumplida! Has completado el primer bloque de B2. Ahora puedes hablar de tus rutinas diarias, mensuales y anuales con total fluidez.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Rutinas y Frecuencia",
+      "parts": [
+        {
+          "visual": "Cada / Todos: 每 (měi)\n\nLa palabra 每 (měi) significa 'cada'. Se usa para expresar frecuencia o totalidad. Siempre debe ir acompañada de un clasificador (ge) a menos que la palabra de tiempo no lo requiera (como tiān o nián).\n\n- Cada día (Todos los días): 每天 (Měitiān).\n- Cada año (Todos los años): 每年 (Měinián).\n- Cada persona (Todos): 每个人 (Měi ge rén).\n- Cada mes (Todos los meses): 每个月 (Měi ge yuè).",
+          "audio": "En el nivel A1 aprendiste la palabra 'todos' como 'Dōu'. Pero Dōu es un adverbio para agrupar verbos. Si quieres decir 'Todos los días' o 'Cada persona', usas la palabra Měi. Tercer tono. Měi. Significa 'Cada'. Como Día y Año son palabras especiales, dices directamente Měitiān, cada día. Měinián, cada año. Pero si hablas de personas o meses, necesitas usar el clasificador 'ge'. Měi ge rén. Cada persona. Měi ge yuè. Cada mes."
+        },
+        {
+          "visual": "La Pareja Perfecta: Měi ... Dōu (每...都)\n\nPara enfatizar que no hay excepciones, los chinos suelen combinar Měi (Cada) al principio, con Dōu (Todos) antes del verbo.\n\n- Yo todos los días bebo agua: 我每天都喝水 (Wǒ měitiān dōu hē shuǐ). (Literal: Yo cada día todo bebo agua).\n- Cada persona debe ir: 每个人都得去 (Měi ge rén dōu děi qù).\n- Todos los meses estoy muy ocupado: 我每个月都很忙 (Wǒ měi ge yuè dōu hěn máng).",
+          "audio": "A los chinos les encanta la redundancia para enfatizar. Si dices 'Yo cada día bebo agua', gramaticalmente está bien, pero un nativo siempre agregará el 'Dōu' antes del verbo para decir que, sin excepción, la acción ocurre. Wǒ měitiān dōu hē shuǐ. Yo, cada día, todo bebo agua. Měi ge rén dōu děi qù. Cada persona, todas, tienen que ir. Es una estructura rítmica, la pareja perfecta del idioma chino."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Establece tus rutinas chinas.",
+      "questions": [
+        { "id": "zh-b2-80-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 每 (měi)?", "options": ["Cada.", "Mucho.", "Poco.", "Todo (Adverbio grupal)."], "correct_answer": "Cada.", "explanation": "Měi cuantifica cada unidad de un grupo (cada día, cada persona)." },
+        { "id": "zh-b2-80-q2", "type": "quiz_choice", "question": "¿Cómo se dice 'Todos los días' / 'Cada día'?", "options": ["Měitiān (每天).", "Měinián (每年).", "Měi ge tiān (每个天).", "Měi ge yuè (每个月)."], "correct_answer": "Měitiān (每天).", "explanation": "Tiān (día) no necesita clasificador." },
+        { "id": "zh-b2-80-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Todos los meses' / 'Cada mes'?", "options": ["Měi ge yuè (每个月).", "Měiyuè (每月).", "Měitiān (每天).", "Měi ge nián (每个年)."], "correct_answer": "Měi ge yuè (每个月).", "explanation": "Yuè (mes) SIEMPRE necesita el clasificador 'ge'." },
+        { "id": "zh-b2-80-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Cada persona' / 'Todos'?", "options": ["Měi ge rén (每个人).", "Měirén (每人).", "Měi rén ge (每人个).", "Měi dōu rén (每都人)."], "correct_answer": "Měi ge rén (每个人).", "explanation": "Rén (persona) requiere el clasificador 'ge' después de Měi." },
+        { "id": "zh-b2-80-q5", "type": "quiz_choice", "question": "Gramática: ¿Con qué adverbio hace pareja 'Měi' frecuentemente para enfatizar que no hay excepciones?", "options": ["Dōu (都 - Todos/Ambos).", "Hěn (很 - Muy).", "Yǐjīng (已经 - Ya).", "Zài (在 - Estar)."], "correct_answer": "Dōu (都 - Todos/Ambos).", "explanation": "La estructura 'Měi... dōu...' (Cada... todos...) es súper nativa." },
+        { "id": "zh-b2-80-q6", "type": "quiz_choice", "question": "Traduce con énfasis nativo: 'Yo como todos los días'.", "options": ["Wǒ měitiān dōu chīfàn (我每天都吃饭).", "Wǒ měitiān chīfàn (我每天吃饭).", "Wǒ dōu měitiān chīfàn (我都每天吃饭).", "Měitiān dōu wǒ chīfàn (每天都我吃饭)."], "correct_answer": "Wǒ měitiān dōu chīfàn (我每天都吃饭).", "explanation": "Yo (wǒ) + cada día (měitiān) + todos (dōu) + como (chīfàn)." },
+        { "id": "zh-b2-80-q7", "type": "quiz_choice", "question": "Aplica 'debería' (lección 79): 'Cada persona debería ir'.", "options": ["Měi ge rén dōu yīnggāi qù (每个人都应该去).", "Měi ge rén yīnggāi qù dōu (每个人应该去都).", "Dōu měi ge rén yīnggāi qù (都每个人应该去).", "Yīnggāi dōu měi ge rén qù (应该都每个人去)."], "correct_answer": "Měi ge rén dōu yīnggāi qù (每个人都应该去).", "explanation": "Cada persona (Měi ge rén) + todos (dōu) + deberían (yīnggāi) + ir (qù)." },
+        { "id": "zh-b2-80-q8", "type": "quiz_choice", "question": "Una queja de rutina: 'Todos los meses estoy muy cansado'.", "options": ["Wǒ měi ge yuè dōu hěn lèi (我每个月都很累).", "Wǒ měi ge yuè hěn lèi (我每个月很累).", "Wǒ měitiān dōu hěn lèi (我每天都很累).", "Měi ge nián wǒ dōu lèi (每个年我都累)."], "correct_answer": "Wǒ měi ge yuè dōu hěn lèi (我每个月都很累).", "explanation": "Yo (wǒ) + cada mes (měi ge yuè) + todos (dōu) + muy cansado (hěn lèi)." },
+        { "id": "zh-b2-80-q9", "type": "quiz_choice", "question": "Traduce esta rutina: 'Todos los años, ella va a China'.", "options": ["Tā měinián dōu qù Zhōngguó (她每年都去中国).", "Tā měi ge nián dōu qù Zhōngguó (她每个年都去中国).", "Tā měitiān dōu qù Zhōngguó (她每天都去中国).", "Tā qù Zhōngguó měinián dōu (她去中国每年都)."], "correct_answer": "Tā měinián dōu qù Zhōngguó (她每年都去中国).", "explanation": "Nián (año) NO lleva clasificador. Ella (tā) + cada año (měinián) + todos (dōu) + ir a China (qù Zhōngguó)." },
+        { "id": "zh-b2-80-q10", "type": "quiz_choice", "question": "¿Es obligatorio usar Dōu (都) con Měi (每)?", "options": ["No es gramaticalmente obligatorio, pero es extremadamente común en el chino hablado para enfatizar la totalidad.", "Sí, es absolutamente obligatorio siempre.", "No, Dōu solo se usa en negativo.", "Sí, pero solo para preguntar la hora."], "correct_answer": "No es gramaticalmente obligatorio, pero es extremadamente común en el chino hablado para enfatizar la totalidad.", "explanation": "Sin Dōu se entiende perfecto, pero con Dōu suenas como un nativo." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe las rutinas en pinyin.",
+      "questions": [
+        { "id": "zh-b2-80-f1", "type": "fill_input", "question": "Cada: ____ (mei)", "correct_answer": "mei", "explanation": "mei" },
+        { "id": "zh-b2-80-f2", "type": "fill_input", "question": "Cada día (Todos los días): mei ____ (tian)", "correct_answer": "tian", "explanation": "tian" },
+        { "id": "zh-b2-80-f3", "type": "fill_input", "question": "Cada año (Todos los años): mei ____ (nian)", "correct_answer": "nian", "explanation": "nian" },
+        { "id": "zh-b2-80-f4", "type": "fill_input", "question": "Cada mes: mei ge ____ (yue)", "correct_answer": "yue", "explanation": "yue" },
+        { "id": "zh-b2-80-f5", "type": "fill_input", "question": "Cada persona: mei ____ ren (ge)", "correct_answer": "ge", "explanation": "ge" },
+        { "id": "zh-b2-80-f6", "type": "fill_input", "question": "Todos (Énfasis nativo): ____ (dou)", "correct_answer": "dou", "explanation": "dou" },
+        { "id": "zh-b2-80-f7", "type": "fill_input", "question": "Yo como todos los días: wo mei tian ____ chi fan (dou)", "correct_answer": "dou", "explanation": "dou" },
+        { "id": "zh-b2-80-f8", "type": "fill_input", "question": "Cada persona debería ir: mei ge ren dou ying ____ qu (gai)", "correct_answer": "gai", "explanation": "gai" },
+        { "id": "zh-b2-80-f9", "type": "fill_input", "question": "Todos los meses estoy muy ocupado: wo mei ge yue dou hen ____ (mang)", "correct_answer": "mang", "explanation": "mang" },
+        { "id": "zh-b2-80-f10", "type": "fill_input", "question": "Él va a China todos los años: ta mei nian dou ____ zhong guo (qu)", "correct_answer": "qu", "explanation": "qu" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha las rutinas de la gente.",
+      "questions": [
+        { "id": "zh-b2-80-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "每", "options": ["Cada", "Todos (Énfasis)", "Día", "Mes"], "correct_answer": "Cada", "explanation": "El audio dice: Měi." },
+        { "id": "zh-b2-80-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "每天", "options": ["Todos los días", "Todos los meses", "Todos los años", "Cada persona"], "correct_answer": "Todos los días", "explanation": "El audio dice: Měitiān." },
+        { "id": "zh-b2-80-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "每个人都去", "options": ["Cada persona (todos) va", "Todos los días voy", "Yo no voy", "Cada mes voy"], "correct_answer": "Cada persona (todos) va", "explanation": "El audio dice: Měi ge rén dōu qù." },
+        { "id": "zh-b2-80-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "每个月都", "options": ["Todos los meses (énfasis)", "Todos los días", "Todos los años", "Cada persona"], "correct_answer": "Todos los meses (énfasis)", "explanation": "El audio dice: Měi ge yuè dōu." },
+        { "id": "zh-b2-80-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我每年都去中国", "options": ["Yo voy a China todos los años", "Yo voy a China todos los meses", "Yo voy a China todos los días", "Yo fui a China el año pasado"], "correct_answer": "Yo voy a China todos los años", "explanation": "El audio dice: Wǒ měinián dōu qù Zhōngguó." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Frequency",
+      "pairs": [
+        {"id": "zh-b2-80-p1", "source": "每 (měi)", "target": "Cada"},
+        {"id": "zh-b2-80-p2", "source": "每天 (měitiān)", "target": "Cada día (Todos los días)"},
+        {"id": "zh-b2-80-p3", "source": "每个月 (měi ge yuè)", "target": "Cada mes (Todos los meses)"},
+        {"id": "zh-b2-80-p4", "source": "每年 (měinián)", "target": "Cada año (Todos los años)"},
+        {"id": "zh-b2-80-p5", "source": "每个人 (měi ge rén)", "target": "Cada persona (Todos)"},
+        {"id": "zh-b2-80-p6", "source": "都 (dōu)", "target": "Todos (Énfasis para Cada)"},
+        {"id": "zh-b2-80-p7", "source": "应该 (yīnggāi)", "target": "Debería (Consejo)"},
+        {"id": "zh-b2-80-p8", "source": "做完 (zuò wán)", "target": "Terminar de hacer"},
+        {"id": "zh-b2-80-p9", "source": "已经 (yǐjīng)", "target": "Ya"},
+        {"id": "zh-b2-80-p10", "source": "懂 (dǒng)", "target": "Entender"}
+      ]
+    }
+  ]
+}

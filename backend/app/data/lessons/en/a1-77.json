@@ -1,0 +1,101 @@
+{
+  "id": "a1-77",
+  "title": "Comparative Adjectives (Short Adjectives)",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Comparatives", "Adjectives"],
+  "completion_message": "¡Magnífico! Ya sabes cómo comparar dos cosas usando adjetivos cortos agregando '-er'.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Comparativos (Adjetivos Cortos)",
+      "parts": [
+        { "visual": "Para comparar con adjetivos cortos, agregamos '-er' + 'than' (que). Fast -> Faster than (Más rápido que).", "audio": "To compare with short adjectives, add -er plus than. Fast becomes faster than." },
+        { "visual": "Si termina en 'e', solo agrega 'r': Nice -> Nicer. Si termina en 'y', cambia a 'i': Easy -> Easier. Excepción: Good -> Better.", "audio": "If it ends in e, just add r. Nice becomes nicer. If it ends in y, change to i. Easy becomes easier. Exception: Good becomes better." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma comparativa correcta.",
+      "questions": [
+        { "id": "a1-77-q1", "type": "quiz_choice", "question": "My computer is ____ than yours (fast - rápido).", "options": ["faster", "fast", "fastest", "more fast"], "correct_answer": "faster", "explanation": "Fast + er = faster (más rápido)." },
+        { "id": "a1-77-q2", "type": "quiz_choice", "question": "This printer is ____ than the old one (cheap - barato).", "options": ["cheaper", "cheap", "cheapest", "more cheap"], "correct_answer": "cheaper", "explanation": "Cheap + er = cheaper (más barato)." },
+        { "id": "a1-77-q3", "type": "quiz_choice", "question": "The new office is ____ than the old one (big - grande).", "options": ["bigger", "biger", "more big", "big"], "correct_answer": "bigger", "explanation": "Big duplica la 'g' -> bigger (más grande)." },
+        { "id": "a1-77-q4", "type": "quiz_choice", "question": "This task is ____ than I thought (easy - fácil).", "options": ["easier", "easy", "easyer", "more easy"], "correct_answer": "easier", "explanation": "Easy cambia 'y' por 'i' -> easier (más fácil)." },
+        { "id": "a1-77-q5", "type": "quiz_choice", "question": "My new chair is ____ than the old one (nice - agradable/bonita).", "options": ["nicer", "niceer", "more nice", "nice"], "correct_answer": "nicer", "explanation": "Nice termina en 'e', solo agrega 'r' -> nicer." },
+        { "id": "a1-77-q6", "type": "quiz_choice", "question": "This software is ____ than the other one (good - bueno).", "options": ["better", "gooder", "more good", "best"], "correct_answer": "better", "explanation": "Excepción: Good -> Better (mejor)." },
+        { "id": "a1-77-q7", "type": "quiz_choice", "question": "The meeting was ____ than usual (short - corto).", "options": ["shorter", "short", "more short", "shortest"], "correct_answer": "shorter", "explanation": "Short -> shorter (más corto)." },
+        { "id": "a1-77-q8", "type": "quiz_choice", "question": "John is ____ than Mark (tall - alto).", "options": ["taller", "tall", "more tall", "tallest"], "correct_answer": "taller", "explanation": "Tall -> taller (más alto)." },
+        { "id": "a1-77-q9", "type": "quiz_choice", "question": "The internet is ____ today (slow - lento).", "options": ["slower", "slow", "more slow", "slowest"], "correct_answer": "slower", "explanation": "Slow -> slower (más lento)." },
+        { "id": "a1-77-q10", "type": "quiz_choice", "question": "This project is ____ than the last one (hard - difícil/duro).", "options": ["harder", "hard", "more hard", "hardest"], "correct_answer": "harder", "explanation": "Hard -> harder (más difícil/duro)." },
+        { "id": "a1-77-q11", "type": "quiz_choice", "question": "I feel ____ today (good - bien).", "options": ["better", "gooder", "more good", "well"], "correct_answer": "better", "explanation": "Good -> better (mejor)." },
+        { "id": "a1-77-q12", "type": "quiz_choice", "question": "We need a ____ room for the meeting (large - grande/amplio).", "options": ["larger", "large", "more large", "largest"], "correct_answer": "larger", "explanation": "Large -> larger (más amplio)." },
+        { "id": "a1-77-q13", "type": "quiz_choice", "question": "Please speak ____ (loud - fuerte/ruidoso).", "options": ["louder", "loud", "more loud", "loudest"], "correct_answer": "louder", "explanation": "Loud -> louder (más fuerte)." },
+        { "id": "a1-77-q14", "type": "quiz_choice", "question": "Can you come ____ tomorrow? (early - temprano).", "options": ["earlier", "early", "earlyer", "more early"], "correct_answer": "earlier", "explanation": "Early -> earlier (más temprano)." },
+        { "id": "a1-77-q15", "type": "quiz_choice", "question": "This laptop is ____ than that one (light - ligero).", "options": ["lighter", "light", "more light", "lightest"], "correct_answer": "lighter", "explanation": "Light -> lighter (más ligero/liviano)." },
+        { "id": "a1-77-q16", "type": "quiz_choice", "question": "The traffic is ____ today (bad - malo).", "options": ["worse", "bader", "badder", "more bad"], "correct_answer": "worse", "explanation": "Excepción: Bad -> Worse (peor)." },
+        { "id": "a1-77-q17", "type": "quiz_choice", "question": "She is ____ than me (young - joven).", "options": ["younger", "young", "more young", "youngest"], "correct_answer": "younger", "explanation": "Young -> younger (más joven)." },
+        { "id": "a1-77-q18", "type": "quiz_choice", "question": "He is ____ than the boss (old - viejo).", "options": ["older", "old", "more old", "oldest"], "correct_answer": "older", "explanation": "Old -> older (más mayor)." },
+        { "id": "a1-77-q19", "type": "quiz_choice", "question": "This building is ____ than ours (high - alto).", "options": ["higher", "high", "more high", "highest"], "correct_answer": "higher", "explanation": "High -> higher (más alto)." },
+        { "id": "a1-77-q20", "type": "quiz_choice", "question": "I need a ____ cable (long - largo).", "options": ["longer", "long", "more long", "longest"], "correct_answer": "longer", "explanation": "Long -> longer (más largo)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el comparativo correcto del adjetivo.",
+      "questions": [
+        { "id": "a1-77-f1", "type": "fill_input", "question": "Fast -> ____ (Más rápido).", "correct_answer": "faster", "explanation": "faster." },
+        { "id": "a1-77-f2", "type": "fill_input", "question": "Cheap -> ____ (Más barato).", "correct_answer": "cheaper", "explanation": "cheaper." },
+        { "id": "a1-77-f3", "type": "fill_input", "question": "Big -> ____ (Más grande).", "correct_answer": "bigger", "explanation": "bigger." },
+        { "id": "a1-77-f4", "type": "fill_input", "question": "Easy -> ____ (Más fácil).", "correct_answer": "easier", "explanation": "easier." },
+        { "id": "a1-77-f5", "type": "fill_input", "question": "Nice -> ____ (Más agradable/mejor).", "correct_answer": "nicer", "explanation": "nicer." },
+        { "id": "a1-77-f6", "type": "fill_input", "question": "Good -> ____ (Mejor).", "correct_answer": "better", "explanation": "better." },
+        { "id": "a1-77-f7", "type": "fill_input", "question": "Bad -> ____ (Peor).", "correct_answer": "worse", "explanation": "worse." },
+        { "id": "a1-77-f8", "type": "fill_input", "question": "Slow -> ____ (Más lento).", "correct_answer": "slower", "explanation": "slower." },
+        { "id": "a1-77-f9", "type": "fill_input", "question": "Early -> ____ (Más temprano).", "correct_answer": "earlier", "explanation": "earlier." },
+        { "id": "a1-77-f10", "type": "fill_input", "question": "Short -> ____ (Más corto).", "correct_answer": "shorter", "explanation": "shorter." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-77-p1", "source": "Faster", "target": "Más rápido"},
+        {"id": "a1-77-p2", "source": "Cheaper", "target": "Más barato"},
+        {"id": "a1-77-p3", "source": "Bigger", "target": "Más grande"},
+        {"id": "a1-77-p4", "source": "Easier", "target": "Más fácil"},
+        {"id": "a1-77-p5", "source": "Nicer", "target": "Más bonito / agradable"},
+        {"id": "a1-77-p6", "source": "Better", "target": "Mejor"},
+        {"id": "a1-77-p7", "source": "Worse", "target": "Peor"},
+        {"id": "a1-77-p8", "source": "Slower", "target": "Más lento"},
+        {"id": "a1-77-p9", "source": "Earlier", "target": "Más temprano"},
+        {"id": "a1-77-p10", "source": "Shorter", "target": "Más corto"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-77-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My computer is faster.", "options": ["My computer is faster.", "My computer is fast.", "Your computer is faster.", "This computer is faster."], "correct_answer": "My computer is faster.", "explanation": "Audio exacto." },
+        { "id": "a1-77-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This printer is cheaper.", "options": ["This printer is cheaper.", "That printer is cheaper.", "The printer is cheap.", "This printer is cheap."], "correct_answer": "This printer is cheaper.", "explanation": "Audio exacto." },
+        { "id": "a1-77-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The new office is bigger.", "options": ["The new office is bigger.", "The new office is big.", "Our office is bigger.", "The old office is bigger."], "correct_answer": "The new office is bigger.", "explanation": "Audio exacto." },
+        { "id": "a1-77-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This task is easier.", "options": ["This task is easier.", "That task is easier.", "This task is easy.", "It is easier."], "correct_answer": "This task is easier.", "explanation": "Audio exacto." },
+        { "id": "a1-77-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This software is better.", "options": ["This software is better.", "That software is better.", "The software is good.", "This software is good."], "correct_answer": "This software is better.", "explanation": "Audio exacto." },
+        { "id": "a1-77-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The meeting was shorter.", "options": ["The meeting was shorter.", "The meeting is short.", "The meeting was short.", "A meeting was shorter."], "correct_answer": "The meeting was shorter.", "explanation": "Audio exacto." },
+        { "id": "a1-77-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The internet is slower today.", "options": ["The internet is slower today.", "The internet is slow today.", "Internet is slower today.", "The network is slower today."], "correct_answer": "The internet is slower today.", "explanation": "Audio exacto." },
+        { "id": "a1-77-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I feel better today.", "options": ["I feel better today.", "I feel good today.", "He feels better today.", "I felt better today."], "correct_answer": "I feel better today.", "explanation": "Audio exacto." },
+        { "id": "a1-77-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you come earlier?", "options": ["Can you come earlier?", "Can you come early?", "Could you come earlier?", "Do you come earlier?"], "correct_answer": "Can you come earlier?", "explanation": "Audio exacto." },
+        { "id": "a1-77-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The traffic is worse.", "options": ["The traffic is worse.", "Traffic is worse.", "The traffic is bad.", "The traffic is worst."], "correct_answer": "The traffic is worse.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "c1-13",
+  "title": "Global Economics & Trade",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "Economics", "Trade", "Business", "Finance"],
+  "completion_message": "¡Magnífico! Entender términos como 'GDP', 'Inflation', 'Tariffs' y 'Supply Chain' te permite leer el Financial Times o The Economist con soltura y discutir el impacto macroeconómico en tu empresa.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Economía Global y Comercio (C1)",
+      "parts": [
+        { "visual": "Términos Macroeconómicos: \n- GDP (Gross Domestic Product): Producto Interno Bruto (PIB). El valor total de los bienes producidos en un país. \nEj: The country's GDP grew by 3% this year. \n- Inflation (Inflación): El aumento general de precios. \nEj: High inflation reduces consumer purchasing power. \n- Interest rates (Tasas de interés): El costo de pedir dinero prestado. \nEj: The central bank raised interest rates to fight inflation.", "audio": "Macroeconomic terms. G D P stands for Gross Domestic Product, which is the total value of goods produced and services provided in a country during one year. For example: The country's G D P grew by 3% this year. 'Inflation' is a general increase in prices and fall in the purchasing value of money. For example: High inflation reduces consumer purchasing power. 'Interest rates' represent the cost of borrowing money. For example: The central bank raised interest rates to fight inflation." },
+        { "visual": "Comercio Internacional: \n- Tariff (Arancel): Un impuesto sobre bienes importados o exportados. \nEj: The government imposed heavy tariffs on imported steel. \n- Supply chain (Cadena de suministro): La red entre una empresa y sus proveedores. \nEj: The pandemic severely disrupted the global supply chain. \n- Subsidy (Subsidio): Dinero dado por el gobierno para ayudar a una industria. \nEj: The agricultural sector receives massive government subsidies.", "audio": "International Trade. A 'Tariff' is a tax or duty to be paid on a particular class of imports or exports. For example: The government imposed heavy tariffs on imported steel. The 'Supply chain' is the sequence of processes involved in the production and distribution of a commodity. For example: The pandemic severely disrupted the global supply chain. A 'Subsidy' is a sum of money granted by the government to assist an industry or business. For example: The agricultural sector receives massive government subsidies." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término económico o de comercio correcto.",
+      "questions": [
+        { "id": "c1-13-q1", "type": "quiz_choice", "question": "The total value of everything produced in the country is called the ____. (PIB).", "options": ["GDP", "GNP", "CPI", "VAT"], "correct_answer": "GDP", "explanation": "GDP = Gross Domestic Product (Producto Interno Bruto)." },
+        { "id": "c1-13-q2", "type": "quiz_choice", "question": "When prices rise and money loses value, the country is experiencing ____. (Inflación).", "options": ["inflation", "deflation", "stagnation", "recession"], "correct_answer": "inflation", "explanation": "Inflation = inflación." },
+        { "id": "c1-13-q3", "type": "quiz_choice", "question": "To make borrowing money more expensive, the central bank raised the ____ rates. (Tasas de interés).", "options": ["interest", "interesting", "profit", "loan"], "correct_answer": "interest", "explanation": "Interest rates = tasas de interés." },
+        { "id": "c1-13-q4", "type": "quiz_choice", "question": "A tax placed on goods coming from another country is called a ____. (Arancel).", "options": ["tariff", "traffic", "terrifying", "ticket"], "correct_answer": "tariff", "explanation": "Tariff = arancel a la importación/exportación." },
+        { "id": "c1-13-q5", "type": "quiz_choice", "question": "The network of suppliers, factories, and logistics companies is called the ____ chain. (Cadena de suministro).", "options": ["supply", "demand", "value", "production"], "correct_answer": "supply", "explanation": "Supply chain = cadena de suministro." },
+        { "id": "c1-13-q6", "type": "quiz_choice", "question": "The government provided a financial ____ to help farmers keep prices low. (Subsidio).", "options": ["subsidy", "substitute", "substance", "submarine"], "correct_answer": "subsidy", "explanation": "Subsidy = subsidio, ayuda financiera del gobierno." },
+        { "id": "c1-13-q7", "type": "quiz_choice", "question": "When a country imports more than it exports, it has a trade ____. (Déficit).", "options": ["deficit", "surplus", "profit", "loss"], "correct_answer": "deficit", "explanation": "Trade deficit = déficit comercial." },
+        { "id": "c1-13-q8", "type": "quiz_choice", "question": "When a country exports more than it imports, it has a trade ____. (Superávit).", "options": ["surplus", "deficit", "extra", "bonus"], "correct_answer": "surplus", "explanation": "Trade surplus = superávit comercial." },
+        { "id": "c1-13-q9", "type": "quiz_choice", "question": "Due to the economic crisis, the country went into a deep ____. (Recesión).", "options": ["recession", "procession", "session", "concession"], "correct_answer": "recession", "explanation": "Recession = recesión (caída del PIB durante dos trimestres consecutivos)." },
+        { "id": "c1-13-q10", "type": "quiz_choice", "question": "The national ____ is the total amount of money that a country's government has borrowed. (Deuda pública).", "options": ["debt", "credit", "loan", "borrow"], "correct_answer": "debt", "explanation": "National debt = deuda nacional / deuda pública." },
+        { "id": "c1-13-q11", "type": "quiz_choice", "question": "We need to analyze the ____ and demand for this new product before manufacturing it. (Oferta y demanda).", "options": ["supply", "supplier", "surplus", "suppose"], "correct_answer": "supply", "explanation": "Supply and demand = oferta y demanda." },
+        { "id": "c1-13-q12", "type": "quiz_choice", "question": "The rate at which one currency can be traded for another is the ____ rate. (Tipo de cambio).", "options": ["exchange", "change", "trade", "swap"], "correct_answer": "exchange", "explanation": "Exchange rate = tipo de cambio (ej. USD a EUR)." },
+        { "id": "c1-13-q13", "type": "quiz_choice", "question": "Raw materials like oil, gold, and wheat are traded as ____. (Materias primas / Commodities).", "options": ["commodities", "accommodations", "products", "goods"], "correct_answer": "commodities", "explanation": "Commodities = materias primas básicas que se negocian en los mercados." },
+        { "id": "c1-13-q14", "type": "quiz_choice", "question": "A sudden, rapid decrease in the value of a currency is called a ____. (Devaluación).", "options": ["devaluation", "evaluation", "valuation", "revaluation"], "correct_answer": "devaluation", "explanation": "Devaluation = devaluación de la moneda." },
+        { "id": "c1-13-q15", "type": "quiz_choice", "question": "The government imposed a trade ____ on the country, forbidding any commercial exchange. (Embargo).", "options": ["embargo", "embark", "barrier", "block"], "correct_answer": "embargo", "explanation": "Trade embargo = embargo comercial (prohibición de comerciar con un país)." },
+        { "id": "c1-13-q16", "type": "quiz_choice", "question": "Because of inflation, the ____ power of the average worker has decreased. (Poder adquisitivo).", "options": ["purchasing", "buying", "shopping", "paying"], "correct_answer": "purchasing", "explanation": "Purchasing power = poder adquisitivo." },
+        { "id": "c1-13-q17", "type": "quiz_choice", "question": "To protect local industries from foreign competition, governments use ____ measures. (Proteccionistas).", "options": ["protectionist", "protecting", "protective", "protector"], "correct_answer": "protectionist", "explanation": "Protectionist measures = medidas proteccionistas." },
+        { "id": "c1-13-q18", "type": "quiz_choice", "question": "The index that measures the average change in prices paid by consumers is the ____. (IPC).", "options": ["CPI", "GDP", "GNP", "VAT"], "correct_answer": "CPI", "explanation": "CPI = Consumer Price Index (Índice de Precios al Consumidor o IPC)." },
+        { "id": "c1-13-q19", "type": "quiz_choice", "question": "A situation where inflation is high, economic growth rate slows, and unemployment remains steadily high is called ____. (Estanflación).", "options": ["stagflation", "inflation", "deflation", "stagnation"], "correct_answer": "stagflation", "explanation": "Stagflation = estanflación (estancamiento + inflación)." },
+        { "id": "c1-13-q20", "type": "quiz_choice", "question": "The central bank uses ____ policy, adjusting interest rates to control the economy. (Política monetaria).", "options": ["monetary", "money", "fiscal", "financial"], "correct_answer": "monetary", "explanation": "Monetary policy = política monetaria (controlada por el banco central)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término económico correcto.",
+      "questions": [
+        { "id": "c1-13-f1", "type": "fill_input", "question": "Gross Domestic Product is abbreviated as ____.", "correct_answer": "GDP", "explanation": "GDP." },
+        { "id": "c1-13-f2", "type": "fill_input", "question": "General price increase is called ____. (Inflación)", "correct_answer": "inflation", "explanation": "inflation." },
+        { "id": "c1-13-f3", "type": "fill_input", "question": "A tax on imports is a ____. (Arancel con T)", "correct_answer": "tariff", "explanation": "tariff." },
+        { "id": "c1-13-f4", "type": "fill_input", "question": "The ____ chain was disrupted. (Cadena de suministro)", "correct_answer": "supply", "explanation": "supply." },
+        { "id": "c1-13-f5", "type": "fill_input", "question": "Government financial help is a ____. (Subsidio con S)", "correct_answer": "subsidy", "explanation": "subsidy." },
+        { "id": "c1-13-f6", "type": "fill_input", "question": "A trade ____. (Déficit con D)", "correct_answer": "deficit", "explanation": "deficit." },
+        { "id": "c1-13-f7", "type": "fill_input", "question": "A trade ____. (Superávit con S)", "correct_answer": "surplus", "explanation": "surplus." },
+        { "id": "c1-13-f8", "type": "fill_input", "question": "Economic ____. (Recesión con R)", "correct_answer": "recession", "explanation": "recession." },
+        { "id": "c1-13-f9", "type": "fill_input", "question": "The ____ rate. (Tipo de cambio con E)", "correct_answer": "exchange", "explanation": "exchange." },
+        { "id": "c1-13-f10", "type": "fill_input", "question": "Purchasing ____. (Poder adquisitivo con P)", "correct_answer": "power", "explanation": "power." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Economics Match",
+      "pairs": [
+        {"id": "c1-13-p1", "source": "GDP", "target": "Producto Interno Bruto (PIB)"},
+        {"id": "c1-13-p2", "source": "Inflation", "target": "Inflación (subida de precios)"},
+        {"id": "c1-13-p3", "source": "Interest rates", "target": "Tasas de interés"},
+        {"id": "c1-13-p4", "source": "Tariff", "target": "Arancel (impuesto a importaciones)"},
+        {"id": "c1-13-p5", "source": "Supply chain", "target": "Cadena de suministro"},
+        {"id": "c1-13-p6", "source": "Subsidy", "target": "Subsidio gubernamental"},
+        {"id": "c1-13-p7", "source": "Trade deficit", "target": "Déficit comercial (importar más)"},
+        {"id": "c1-13-p8", "source": "Recession", "target": "Recesión económica"},
+        {"id": "c1-13-p9", "source": "Exchange rate", "target": "Tipo de cambio de divisas"},
+        {"id": "c1-13-p10", "source": "Purchasing power", "target": "Poder adquisitivo"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término macroeconómico correcto.",
+      "questions": [
+        { "id": "c1-13-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The country's GDP is growing.", "options": ["The country's GDP is growing.", "The country's GNP is growing.", "The country's CPI is growing.", "The country's debt is growing."], "correct_answer": "The country's GDP is growing.", "explanation": "Audio exacto." },
+        { "id": "c1-13-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "High inflation is a big problem.", "options": ["High inflation is a big problem.", "High deflation is a big problem.", "High taxation is a big problem.", "High stagflation is a big problem."], "correct_answer": "High inflation is a big problem.", "explanation": "Audio exacto." },
+        { "id": "c1-13-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They raised the interest rates.", "options": ["They raised the interest rates.", "They lowered the interest rates.", "They changed the interest rates.", "They kept the interest rates."], "correct_answer": "They raised the interest rates.", "explanation": "Audio exacto." },
+        { "id": "c1-13-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The government imposed a tariff.", "options": ["The government imposed a tariff.", "The government imposed a tax.", "The government lifted the tariff.", "The government proposed a tariff."], "correct_answer": "The government imposed a tariff.", "explanation": "Audio exacto." },
+        { "id": "c1-13-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The supply chain is broken.", "options": ["The supply chain is broken.", "The supply chain is working.", "The value chain is broken.", "The demand chain is broken."], "correct_answer": "The supply chain is broken.", "explanation": "Audio exacto." },
+        { "id": "c1-13-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Farmers receive a subsidy.", "options": ["Farmers receive a subsidy.", "Farmers need a subsidy.", "Farmers want a subsidy.", "Companies receive a subsidy."], "correct_answer": "Farmers receive a subsidy.", "explanation": "Audio exacto." },
+        { "id": "c1-13-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have a large trade deficit.", "options": ["We have a large trade deficit.", "We have a small trade deficit.", "We have a large trade surplus.", "They have a large trade deficit."], "correct_answer": "We have a large trade deficit.", "explanation": "Audio exacto." },
+        { "id": "c1-13-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The economy is in a recession.", "options": ["The economy is in a recession.", "The economy is in a depression.", "The economy is recovering.", "The company is in a recession."], "correct_answer": "The economy is in a recession.", "explanation": "Audio exacto." },
+        { "id": "c1-13-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Look at the exchange rate.", "options": ["Look at the exchange rate.", "Look at the interest rate.", "Look at the inflation rate.", "Look at the tax rate."], "correct_answer": "Look at the exchange rate.", "explanation": "Audio exacto." },
+        { "id": "c1-13-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It affects purchasing power.", "options": ["It affects purchasing power.", "It affected purchasing power.", "It affects buying power.", "It increases purchasing power."], "correct_answer": "It affects purchasing power.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

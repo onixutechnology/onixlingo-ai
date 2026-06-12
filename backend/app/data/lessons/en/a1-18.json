@@ -1,0 +1,101 @@
+{
+  "id": "a1-18",
+  "title": "Office Actions",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Verbs", "Office"],
+  "completion_message": "¡Excelente! Has dominado los verbos de acción clave en la oficina.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Verbos de Oficina",
+      "parts": [
+        { "visual": "Verbos como 'send' (enviar), 'print' (imprimir) y 'copy' (copiar) son diarios.", "audio": "Verbs like send, print, and copy are daily actions." },
+        { "visual": "Al solicitar algo, usa la forma base: 'Please print this file'.", "audio": "When requesting something, use the base form: Please print this file." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona el verbo correcto.",
+      "questions": [
+        { "id": "a1-18-q1", "type": "quiz_choice", "question": "Please ____ this document.", "options": ["print", "prints", "printing", "printed"], "correct_answer": "print", "explanation": "Verbo en forma base para peticiones." },
+        { "id": "a1-18-q2", "type": "quiz_choice", "question": "I need to ____ an email.", "options": ["send", "sent", "sends", "sending"], "correct_answer": "send", "explanation": "Después de 'to' el verbo va en forma base." },
+        { "id": "a1-18-q3", "type": "quiz_choice", "question": "Can you ____ this file for me?", "options": ["copy", "copies", "coping", "copied"], "correct_answer": "copy", "explanation": "Verbo copiar." },
+        { "id": "a1-18-q4", "type": "quiz_choice", "question": "Let's ____ the report.", "options": ["read", "reading", "reads", "red"], "correct_answer": "read", "explanation": "Después de 'Let's' usamos forma base." },
+        { "id": "a1-18-q5", "type": "quiz_choice", "question": "Did you ____ the email?", "options": ["receive", "received", "receives", "receiving"], "correct_answer": "receive", "explanation": "Con el auxiliar 'did', el verbo vuelve a forma base." },
+        { "id": "a1-18-q6", "type": "quiz_choice", "question": "Please ____ the contract.", "options": ["sign", "signs", "signing", "signed"], "correct_answer": "sign", "explanation": "Firmar." },
+        { "id": "a1-18-q7", "type": "quiz_choice", "question": "I have to ____ a presentation.", "options": ["make", "makes", "making", "made"], "correct_answer": "make", "explanation": "Hacer una presentación." },
+        { "id": "a1-18-q8", "type": "quiz_choice", "question": "We need to ____ the meeting.", "options": ["schedule", "scheduled", "schedules", "scheduling"], "correct_answer": "schedule", "explanation": "Agendar." },
+        { "id": "a1-18-q9", "type": "quiz_choice", "question": "Could you ____ the phone?", "options": ["answer", "answers", "answering", "answered"], "correct_answer": "answer", "explanation": "Contestar." },
+        { "id": "a1-18-q10", "type": "quiz_choice", "question": "I will ____ the issue.", "options": ["check", "checks", "checking", "checked"], "correct_answer": "check", "explanation": "Revisar." },
+        { "id": "a1-18-q11", "type": "quiz_choice", "question": "Please ____ to my email.", "options": ["reply", "replying", "replies", "replied"], "correct_answer": "reply", "explanation": "Responder." },
+        { "id": "a1-18-q12", "type": "quiz_choice", "question": "Don't forget to ____ your work.", "options": ["save", "saves", "saving", "saved"], "correct_answer": "save", "explanation": "Guardar." },
+        { "id": "a1-18-q13", "type": "quiz_choice", "question": "We will ____ the project today.", "options": ["start", "starts", "starting", "started"], "correct_answer": "start", "explanation": "Empezar." },
+        { "id": "a1-18-q14", "type": "quiz_choice", "question": "He needs to ____ the document.", "options": ["finish", "finishes", "finishing", "finished"], "correct_answer": "finish", "explanation": "Terminar." },
+        { "id": "a1-18-q15", "type": "quiz_choice", "question": "I want to ____ a question.", "options": ["ask", "asks", "asking", "asked"], "correct_answer": "ask", "explanation": "Preguntar." },
+        { "id": "a1-18-q16", "type": "quiz_choice", "question": "Please ____ this folder.", "options": ["open", "opens", "opening", "opened"], "correct_answer": "open", "explanation": "Abrir." },
+        { "id": "a1-18-q17", "type": "quiz_choice", "question": "Don't ____ the window.", "options": ["close", "closes", "closing", "closed"], "correct_answer": "close", "explanation": "Cerrar." },
+        { "id": "a1-18-q18", "type": "quiz_choice", "question": "You must ____ the rules.", "options": ["follow", "follows", "following", "followed"], "correct_answer": "follow", "explanation": "Seguir." },
+        { "id": "a1-18-q19", "type": "quiz_choice", "question": "They ____ new staff every month.", "options": ["hire", "hires", "hiring", "hired"], "correct_answer": "hire", "explanation": "Contratar." },
+        { "id": "a1-18-q20", "type": "quiz_choice", "question": "Let's ____ the problem.", "options": ["discuss", "discusses", "discussing", "discussed"], "correct_answer": "discuss", "explanation": "Discutir." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo exacto.",
+      "questions": [
+        { "id": "a1-18-f1", "type": "fill_input", "question": "Please ____ the file (Imprimir).", "correct_answer": "print", "explanation": "Print." },
+        { "id": "a1-18-f2", "type": "fill_input", "question": "____ an email (Enviar).", "correct_answer": "send", "explanation": "Send." },
+        { "id": "a1-18-f3", "type": "fill_input", "question": "____ the contract (Firmar).", "correct_answer": "sign", "explanation": "Sign." },
+        { "id": "a1-18-f4", "type": "fill_input", "question": "____ the meeting (Agendar).", "correct_answer": "schedule", "explanation": "Schedule." },
+        { "id": "a1-18-f5", "type": "fill_input", "question": "____ the phone (Contestar).", "correct_answer": "answer", "explanation": "Answer." },
+        { "id": "a1-18-f6", "type": "fill_input", "question": "____ to the email (Responder).", "correct_answer": "reply", "explanation": "Reply." },
+        { "id": "a1-18-f7", "type": "fill_input", "question": "____ your work (Guardar).", "correct_answer": "save", "explanation": "Save." },
+        { "id": "a1-18-f8", "type": "fill_input", "question": "____ the report (Leer).", "correct_answer": "read", "explanation": "Read." },
+        { "id": "a1-18-f9", "type": "fill_input", "question": "____ a question (Preguntar).", "correct_answer": "ask", "explanation": "Ask." },
+        { "id": "a1-18-f10", "type": "fill_input", "question": "____ the problem (Discutir).", "correct_answer": "discuss", "explanation": "Discuss." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-18-p1", "source": "Print", "target": "Imprimir"},
+        {"id": "a1-18-p2", "source": "Send", "target": "Enviar"},
+        {"id": "a1-18-p3", "source": "Sign", "target": "Firmar"},
+        {"id": "a1-18-p4", "source": "Schedule", "target": "Agendar"},
+        {"id": "a1-18-p5", "source": "Answer", "target": "Contestar"},
+        {"id": "a1-18-p6", "source": "Reply", "target": "Responder"},
+        {"id": "a1-18-p7", "source": "Save", "target": "Guardar"},
+        {"id": "a1-18-p8", "source": "Read", "target": "Leer"},
+        {"id": "a1-18-p9", "source": "Ask", "target": "Preguntar"},
+        {"id": "a1-18-p10", "source": "Discuss", "target": "Discutir"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-18-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please print this document.", "options": ["Please print this document.", "Please point this document.", "Please paint this document.", "Please bring this document."], "correct_answer": "Please print this document.", "explanation": "Audio exacto." },
+        { "id": "a1-18-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Send an email.", "options": ["Send an email.", "Send an mail.", "Sent an email.", "Send the email."], "correct_answer": "Send an email.", "explanation": "Audio exacto." },
+        { "id": "a1-18-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sign the contract.", "options": ["Sign the contract.", "Sing the contract.", "Sign a contract.", "Signed the contract."], "correct_answer": "Sign the contract.", "explanation": "Audio exacto." },
+        { "id": "a1-18-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Schedule the meeting.", "options": ["Schedule the meeting.", "Scheduled the meeting.", "Schedule a meeting.", "Schedule my meeting."], "correct_answer": "Schedule the meeting.", "explanation": "Audio exacto." },
+        { "id": "a1-18-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Answer the phone.", "options": ["Answer the phone.", "Answer a phone.", "Answered the phone.", "Ask the phone."], "correct_answer": "Answer the phone.", "explanation": "Audio exacto." },
+        { "id": "a1-18-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Reply to my email.", "options": ["Reply to my email.", "Reply my email.", "Apply to my email.", "Reply to the email."], "correct_answer": "Reply to my email.", "explanation": "Audio exacto." },
+        { "id": "a1-18-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Save your work.", "options": ["Save your work.", "Save your word.", "Safe your work.", "Say your work."], "correct_answer": "Save your work.", "explanation": "Audio exacto." },
+        { "id": "a1-18-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Read the report.", "options": ["Read the report.", "Read a report.", "Read the record.", "Lead the report."], "correct_answer": "Read the report.", "explanation": "Audio exacto." },
+        { "id": "a1-18-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Ask a question.", "options": ["Ask a question.", "Ask the question.", "Ask question.", "Add a question."], "correct_answer": "Ask a question.", "explanation": "Audio exacto." },
+        { "id": "a1-18-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Discuss the problem.", "options": ["Discuss the problem.", "Discuss a problem.", "Disgust the problem.", "Discussing the problem."], "correct_answer": "Discuss the problem.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

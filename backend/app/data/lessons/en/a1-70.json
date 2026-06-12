@@ -1,0 +1,101 @@
+{
+  "id": "a1-70",
+  "title": "Some vs Any",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Quantifiers", "Some vs Any"],
+  "completion_message": "¡Excelente! Has dominado el uso de 'Some' y 'Any' para expresar cantidades indefinidas en oraciones afirmativas, negativas y preguntas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Some y Any",
+      "parts": [
+        { "visual": "'Some' (algunos/algo de) se usa en oraciones afirmativas: I have some pens. We need some water.", "audio": "Some is used in affirmative sentences: I have some pens. We need some water." },
+        { "visual": "'Any' (ningún/algo de) se usa en negativas y preguntas: I don't have any pens. Do we have any water?", "audio": "Any is used in negative sentences and questions: I don't have any pens. Do we have any water?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige entre 'some' o 'any'.",
+      "questions": [
+        { "id": "a1-70-q1", "type": "quiz_choice", "question": "I have ____ questions (algunas).", "options": ["some", "any", "much", "a"], "correct_answer": "some", "explanation": "Oración afirmativa (some)." },
+        { "id": "a1-70-q2", "type": "quiz_choice", "question": "Do you have ____ questions?", "options": ["any", "some", "much", "a"], "correct_answer": "any", "explanation": "Pregunta (any)." },
+        { "id": "a1-70-q3", "type": "quiz_choice", "question": "I don't have ____ questions.", "options": ["any", "some", "many", "much"], "correct_answer": "any", "explanation": "Negativa (any)." },
+        { "id": "a1-70-q4", "type": "quiz_choice", "question": "We need ____ more paper (algo de).", "options": ["some", "any", "many", "a"], "correct_answer": "some", "explanation": "Afirmativa con incontable (some)." },
+        { "id": "a1-70-q5", "type": "quiz_choice", "question": "Is there ____ coffee left?", "options": ["any", "some", "many", "a"], "correct_answer": "any", "explanation": "Pregunta con incontable (any)." },
+        { "id": "a1-70-q6", "type": "quiz_choice", "question": "There isn't ____ coffee left.", "options": ["any", "some", "many", "much"], "correct_answer": "any", "explanation": "Negativa con incontable (any)." },
+        { "id": "a1-70-q7", "type": "quiz_choice", "question": "She brought ____ documents for the meeting.", "options": ["some", "any", "much", "a"], "correct_answer": "some", "explanation": "Afirmativa (some)." },
+        { "id": "a1-70-q8", "type": "quiz_choice", "question": "Are there ____ problems?", "options": ["any", "some", "much", "a"], "correct_answer": "any", "explanation": "Pregunta (any)." },
+        { "id": "a1-70-q9", "type": "quiz_choice", "question": "There aren't ____ problems.", "options": ["any", "some", "much", "many"], "correct_answer": "any", "explanation": "Negativa (any)." },
+        { "id": "a1-70-q10", "type": "quiz_choice", "question": "Could I have ____ water, please? (oferta/petición).", "options": ["some", "any", "many", "a"], "correct_answer": "some", "explanation": "Excepción: En peticiones u ofertas usamos 'some' aunque sea pregunta." },
+        { "id": "a1-70-q11", "type": "quiz_choice", "question": "Would you like ____ coffee? (oferta).", "options": ["some", "any", "many", "a"], "correct_answer": "some", "explanation": "Excepción: En ofertas usamos 'some' en lugar de 'any'." },
+        { "id": "a1-70-q12", "type": "quiz_choice", "question": "I want ____ information about the project.", "options": ["some", "any", "many", "a"], "correct_answer": "some", "explanation": "Afirmativa (some)." },
+        { "id": "a1-70-q13", "type": "quiz_choice", "question": "We don't have ____ information.", "options": ["any", "some", "many", "much"], "correct_answer": "any", "explanation": "Negativa (any)." },
+        { "id": "a1-70-q14", "type": "quiz_choice", "question": "Do we need ____ new computers?", "options": ["any", "some", "much", "a"], "correct_answer": "any", "explanation": "Pregunta (any)." },
+        { "id": "a1-70-q15", "type": "quiz_choice", "question": "I need to make ____ calls.", "options": ["some", "any", "much", "a"], "correct_answer": "some", "explanation": "Afirmativa (some)." },
+        { "id": "a1-70-q16", "type": "quiz_choice", "question": "I haven't made ____ calls today.", "options": ["any", "some", "much", "many"], "correct_answer": "any", "explanation": "Negativa (any)." },
+        { "id": "a1-70-q17", "type": "quiz_choice", "question": "There are ____ people in the lobby.", "options": ["some", "any", "much", "a"], "correct_answer": "some", "explanation": "Afirmativa (some)." },
+        { "id": "a1-70-q18", "type": "quiz_choice", "question": "Are there ____ managers here?", "options": ["any", "some", "much", "a"], "correct_answer": "any", "explanation": "Pregunta (any)." },
+        { "id": "a1-70-q19", "type": "quiz_choice", "question": "I don't see ____ managers.", "options": ["any", "some", "much", "many"], "correct_answer": "any", "explanation": "Negativa (any)." },
+        { "id": "a1-70-q20", "type": "quiz_choice", "question": "Please bring ____ chairs from the other room.", "options": ["some", "any", "much", "a"], "correct_answer": "some", "explanation": "Afirmativa (some)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe some o any según corresponda.",
+      "questions": [
+        { "id": "a1-70-f1", "type": "fill_input", "question": "I have ____ pens (Afirmativa).", "correct_answer": "some", "explanation": "some." },
+        { "id": "a1-70-f2", "type": "fill_input", "question": "Do you have ____ pens? (Pregunta general).", "correct_answer": "any", "explanation": "any." },
+        { "id": "a1-70-f3", "type": "fill_input", "question": "I don't have ____ pens (Negativa).", "correct_answer": "any", "explanation": "any." },
+        { "id": "a1-70-f4", "type": "fill_input", "question": "We need ____ water (Afirmativa).", "correct_answer": "some", "explanation": "some." },
+        { "id": "a1-70-f5", "type": "fill_input", "question": "Is there ____ water? (Pregunta general).", "correct_answer": "any", "explanation": "any." },
+        { "id": "a1-70-f6", "type": "fill_input", "question": "There isn't ____ water (Negativa).", "correct_answer": "any", "explanation": "any." },
+        { "id": "a1-70-f7", "type": "fill_input", "question": "Could I have ____ water? (Petición).", "correct_answer": "some", "explanation": "some." },
+        { "id": "a1-70-f8", "type": "fill_input", "question": "Would you like ____ coffee? (Oferta).", "correct_answer": "some", "explanation": "some." },
+        { "id": "a1-70-f9", "type": "fill_input", "question": "I want ____ information (Afirmativa).", "correct_answer": "some", "explanation": "some." },
+        { "id": "a1-70-f10", "type": "fill_input", "question": "We don't have ____ information (Negativa).", "correct_answer": "any", "explanation": "any." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-70-p1", "source": "I have some pens", "target": "Tengo algunos bolígrafos"},
+        {"id": "a1-70-p2", "source": "Do you have any pens?", "target": "¿Tienes algún bolígrafo?"},
+        {"id": "a1-70-p3", "source": "I don't have any pens", "target": "No tengo ningún bolígrafo"},
+        {"id": "a1-70-p4", "source": "We need some water", "target": "Necesitamos algo de agua"},
+        {"id": "a1-70-p5", "source": "Is there any water?", "target": "¿Hay algo de agua?"},
+        {"id": "a1-70-p6", "source": "There isn't any water", "target": "No hay nada de agua"},
+        {"id": "a1-70-p7", "source": "Could I have some water?", "target": "¿Podría darme algo de agua?"},
+        {"id": "a1-70-p8", "source": "Would you like some coffee?", "target": "¿Te gustaría algo de café?"},
+        {"id": "a1-70-p9", "source": "I want some information", "target": "Quiero algo de información"},
+        {"id": "a1-70-p10", "source": "We don't have any information", "target": "No tenemos ninguna información"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-70-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have some questions.", "options": ["I have some questions.", "I have any questions.", "I have a question.", "Do you have some questions?"], "correct_answer": "I have some questions.", "explanation": "Audio exacto." },
+        { "id": "a1-70-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do you have any questions?", "options": ["Do you have any questions?", "Do you have some questions?", "I have some questions.", "I don't have any questions."], "correct_answer": "Do you have any questions?", "explanation": "Audio exacto." },
+        { "id": "a1-70-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I don't have any questions.", "options": ["I don't have any questions.", "I don't have some questions.", "I have some questions.", "Do you have any questions?"], "correct_answer": "I don't have any questions.", "explanation": "Audio exacto." },
+        { "id": "a1-70-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need some paper.", "options": ["We need some paper.", "We need any paper.", "Do we need any paper?", "We don't need any paper."], "correct_answer": "We need some paper.", "explanation": "Audio exacto." },
+        { "id": "a1-70-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Is there any coffee?", "options": ["Is there any coffee?", "Is there some coffee?", "There is some coffee.", "There isn't any coffee."], "correct_answer": "Is there any coffee?", "explanation": "Audio exacto." },
+        { "id": "a1-70-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There isn't any coffee.", "options": ["There isn't any coffee.", "There isn't some coffee.", "There is some coffee.", "Is there any coffee?"], "correct_answer": "There isn't any coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-70-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Could I have some water?", "options": ["Could I have some water?", "Could I have any water?", "I have some water.", "I don't have any water."], "correct_answer": "Could I have some water?", "explanation": "Audio exacto." },
+        { "id": "a1-70-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Would you like some coffee?", "options": ["Would you like some coffee?", "Would you like any coffee?", "Do you like some coffee?", "I would like some coffee."], "correct_answer": "Would you like some coffee?", "explanation": "Audio exacto." },
+        { "id": "a1-70-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I want some information.", "options": ["I want some information.", "I want any information.", "Do you want any information?", "I don't want any information."], "correct_answer": "I want some information.", "explanation": "Audio exacto." },
+        { "id": "a1-70-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We don't have any information.", "options": ["We don't have any information.", "We don't have some information.", "We have some information.", "Do we have any information?"], "correct_answer": "We don't have any information.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

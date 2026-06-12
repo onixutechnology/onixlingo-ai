@@ -1,0 +1,101 @@
+{
+  "id": "a1-41",
+  "title": "Telling the Time",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Time", "Numbers"],
+  "completion_message": "¡Excelente! Ya sabes cómo preguntar y dar la hora exacta en el trabajo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Decir la hora",
+      "parts": [
+        { "visual": "Para preguntar la hora decimos: 'What time is it?' (¿Qué hora es?).", "audio": "To ask the time we say: What time is it?" },
+        { "visual": "Para responder usamos 'It is...'. Ejemplo: 'It is 9 o'clock' (Son las 9 en punto) o 'It is half past two' (Son las dos y media).", "audio": "To answer we use It is. Example: It is nine o'clock or It is half past two." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la respuesta correcta para la hora.",
+      "questions": [
+        { "id": "a1-41-q1", "type": "quiz_choice", "question": "____ time is it?", "options": ["What", "How", "When", "Which"], "correct_answer": "What", "explanation": "Preguntamos con 'What' (What time is it?)." },
+        { "id": "a1-41-q2", "type": "quiz_choice", "question": "It is three ____ (3:00).", "options": ["o'clock", "clock", "clocks", "o clock"], "correct_answer": "o'clock", "explanation": "En punto (o'clock)." },
+        { "id": "a1-41-q3", "type": "quiz_choice", "question": "It is ____ past four (4:30).", "options": ["half", "thirty", "middle", "center"], "correct_answer": "half", "explanation": "Media hora pasada las 4 (half past four)." },
+        { "id": "a1-41-q4", "type": "quiz_choice", "question": "It's a ____ past nine (9:15).", "options": ["quarter", "fifteen", "part", "fourth"], "correct_answer": "quarter", "explanation": "Un cuarto pasado las nueve (a quarter past)." },
+        { "id": "a1-41-q5", "type": "quiz_choice", "question": "It is a quarter ____ ten (9:45).", "options": ["to", "past", "for", "at"], "correct_answer": "to", "explanation": "Un cuarto para las diez (a quarter to)." },
+        { "id": "a1-41-q6", "type": "quiz_choice", "question": "It's 10:____ (10:10).", "options": ["ten", "zero ten", "one zero", "tens"], "correct_answer": "ten", "explanation": "Diez y diez (ten ten, o ten past ten)." },
+        { "id": "a1-41-q7", "type": "quiz_choice", "question": "The meeting is ____ 2 PM.", "options": ["at", "in", "on", "to"], "correct_answer": "at", "explanation": "Preposición para la hora exacta (at)." },
+        { "id": "a1-41-q8", "type": "quiz_choice", "question": "It is noon (12:00 ____).", "options": ["PM", "AM", "night", "morning"], "correct_answer": "PM", "explanation": "Mediodía es 12 PM." },
+        { "id": "a1-41-q9", "type": "quiz_choice", "question": "It is midnight (12:00 ____).", "options": ["AM", "PM", "day", "afternoon"], "correct_answer": "AM", "explanation": "Medianoche es 12 AM." },
+        { "id": "a1-41-q10", "type": "quiz_choice", "question": "____ you have the time?", "options": ["Do", "Are", "Have", "Is"], "correct_answer": "Do", "explanation": "¿Tienes la hora? (Do you have the time?)." },
+        { "id": "a1-41-q11", "type": "quiz_choice", "question": "It's 5:____ (5:45).", "options": ["forty-five", "four five", "quarter", "half"], "correct_answer": "forty-five", "explanation": "Cinco cuarenta y cinco (forty-five)." },
+        { "id": "a1-41-q12", "type": "quiz_choice", "question": "Let's meet ____ noon.", "options": ["at", "in", "on", "by"], "correct_answer": "at", "explanation": "A mediodía (at noon)." },
+        { "id": "a1-41-q13", "type": "quiz_choice", "question": "It's twenty ____ three (2:40).", "options": ["to", "past", "at", "for"], "correct_answer": "to", "explanation": "Veinte para las tres (twenty to three)." },
+        { "id": "a1-41-q14", "type": "quiz_choice", "question": "It is 8:____ AM (8:30).", "options": ["thirty", "half", "three zero", "third"], "correct_answer": "thirty", "explanation": "Ocho treinta (eight thirty)." },
+        { "id": "a1-41-q15", "type": "quiz_choice", "question": "What time ____ the meeting start?", "options": ["does", "do", "is", "are"], "correct_answer": "does", "explanation": "Auxiliar para 'the meeting' (it)." },
+        { "id": "a1-41-q16", "type": "quiz_choice", "question": "The office closes ____ 6 PM.", "options": ["at", "in", "on", "by"], "correct_answer": "at", "explanation": "Cierra a las 6." },
+        { "id": "a1-41-q17", "type": "quiz_choice", "question": "It's five ____ two (2:05).", "options": ["past", "to", "after", "before"], "correct_answer": "past", "explanation": "Cinco pasadas las dos." },
+        { "id": "a1-41-q18", "type": "quiz_choice", "question": "Could you tell me the ____?", "options": ["time", "hour", "clock", "watch"], "correct_answer": "time", "explanation": "¿Me puede dar la hora? (the time)." },
+        { "id": "a1-41-q19", "type": "quiz_choice", "question": "We have a break ____ 10:15.", "options": ["at", "in", "on", "to"], "correct_answer": "at", "explanation": "Un receso a las 10:15." },
+        { "id": "a1-41-q20", "type": "quiz_choice", "question": "It is exactly one ____.", "options": ["o'clock", "clock", "hour", "time"], "correct_answer": "o'clock", "explanation": "Exactamente la una en punto." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de tiempo correcta.",
+      "questions": [
+        { "id": "a1-41-f1", "type": "fill_input", "question": "____ time is it? (¿Qué...?)", "correct_answer": "What", "explanation": "What." },
+        { "id": "a1-41-f2", "type": "fill_input", "question": "It's five ____ (En punto).", "correct_answer": "o'clock", "explanation": "o'clock." },
+        { "id": "a1-41-f3", "type": "fill_input", "question": "It's ____ past two (2:30).", "correct_answer": "half", "explanation": "half." },
+        { "id": "a1-41-f4", "type": "fill_input", "question": "A ____ past four (4:15).", "correct_answer": "quarter", "explanation": "quarter." },
+        { "id": "a1-41-f5", "type": "fill_input", "question": "A quarter ____ six (5:45).", "correct_answer": "to", "explanation": "to." },
+        { "id": "a1-41-f6", "type": "fill_input", "question": "The meeting is ____ 9 AM.", "correct_answer": "at", "explanation": "at." },
+        { "id": "a1-41-f7", "type": "fill_input", "question": "It is noon (____ PM).", "correct_answer": "12", "explanation": "12." },
+        { "id": "a1-41-f8", "type": "fill_input", "question": "It is 8:____ (8:30).", "correct_answer": "thirty", "explanation": "thirty." },
+        { "id": "a1-41-f9", "type": "fill_input", "question": "Ten ____ ten (10:10).", "correct_answer": "past", "explanation": "past." },
+        { "id": "a1-41-f10", "type": "fill_input", "question": "Tell me the ____ (Hora).", "correct_answer": "time", "explanation": "time." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-41-p1", "source": "What time is it?", "target": "¿Qué hora es?"},
+        {"id": "a1-41-p2", "source": "O'clock", "target": "En punto"},
+        {"id": "a1-41-p3", "source": "Half past", "target": "Y media"},
+        {"id": "a1-41-p4", "source": "A quarter past", "target": "Y cuarto"},
+        {"id": "a1-41-p5", "source": "A quarter to", "target": "Un cuarto para"},
+        {"id": "a1-41-p6", "source": "Noon", "target": "Mediodía"},
+        {"id": "a1-41-p7", "source": "Midnight", "target": "Medianoche"},
+        {"id": "a1-41-p8", "source": "At 9 AM", "target": "A las 9 AM"},
+        {"id": "a1-41-p9", "source": "Hour", "target": "Hora (duración)"},
+        {"id": "a1-41-p10", "source": "Minute", "target": "Minuto"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la hora exacta.",
+      "questions": [
+        { "id": "a1-41-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What time is it?", "options": ["What time is it?", "What time was it?", "What is the time?", "What time is that?"], "correct_answer": "What time is it?", "explanation": "Audio exacto." },
+        { "id": "a1-41-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is three o'clock.", "options": ["It is three o'clock.", "It is two o'clock.", "Is it three o'clock?", "It was three o'clock."], "correct_answer": "It is three o'clock.", "explanation": "Audio exacto." },
+        { "id": "a1-41-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is half past four.", "options": ["It is half past four.", "It is half past five.", "It is past four.", "It is half to four."], "correct_answer": "It is half past four.", "explanation": "Audio exacto." },
+        { "id": "a1-41-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A quarter past nine.", "options": ["A quarter past nine.", "A quarter to nine.", "A quarter past ten.", "A quarter to ten."], "correct_answer": "A quarter past nine.", "explanation": "Audio exacto." },
+        { "id": "a1-41-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A quarter to ten.", "options": ["A quarter to ten.", "A quarter past ten.", "A quarter to nine.", "A quarter past nine."], "correct_answer": "A quarter to ten.", "explanation": "Audio exacto." },
+        { "id": "a1-41-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "At two PM.", "options": ["At two PM.", "At three PM.", "In two PM.", "At two AM."], "correct_answer": "At two PM.", "explanation": "Audio exacto." },
+        { "id": "a1-41-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "At noon.", "options": ["At noon.", "At night.", "In noon.", "At moon."], "correct_answer": "At noon.", "explanation": "Audio exacto." },
+        { "id": "a1-41-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do you have the time?", "options": ["Do you have the time?", "Did you have the time?", "Do you know the time?", "Do you have time?"], "correct_answer": "Do you have the time?", "explanation": "Audio exacto." },
+        { "id": "a1-41-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Eight thirty.", "options": ["Eight thirty.", "Eight forty.", "Nine thirty.", "Eight thirteen."], "correct_answer": "Eight thirty.", "explanation": "Audio exacto." },
+        { "id": "a1-41-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Ten past ten.", "options": ["Ten past ten.", "Ten to ten.", "Ten and ten.", "Ten past nine."], "correct_answer": "Ten past ten.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

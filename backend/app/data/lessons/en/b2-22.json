@@ -1,0 +1,101 @@
+{
+  "id": "b2-22",
+  "title": "Past Habits & States",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Past Habits", "Business"],
+  "completion_message": "¡Perfecto! Has comprendido la diferencia sutil entre 'Used to', 'Would' y 'Be used to'. Esto hace que tus historias del pasado suenen muy naturales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Hábitos y Estados en el Pasado",
+      "parts": [
+        { "visual": "Used to vs Would: \n- 'Used to' (Solía) sirve para HÁBITOS repetidos y ESTADOS permanentes del pasado (cosas que ya no son así). \nEj: I USED TO be the manager (Estado). \n- 'Would' (Solía) sirve SOLO para HÁBITOS repetidos (acciones). ¡NO para estados! \nEj: Every Friday, the team WOULD go to the bar. (Acción repetida - correcto). \nMal: I would be the manager. (Incorrecto, 'be' es un estado).", "audio": "Used to versus Would. 'Used to' is used for repeated past habits and permanent past states that are no longer true. For example: I used to be the manager. 'Would' is used ONLY for repeated past actions or habits. NOT for states! For example: Every Friday, the team would go to the bar. That is correct. But you cannot say: I would be the manager, because being a manager is a state, not an action." },
+        { "visual": "Be used to vs Get used to: \n- 'Be used to' + ING / Noun: Estar acostumbrado a algo. \nEj: I AM USED TO working under pressure. (Estoy acostumbrado a...). \n- 'Get used to' + ING / Noun: Acostumbrarse a algo (el proceso). \nEj: I am GETTING USED TO the new software. (Me estoy acostumbrando a...).", "audio": "Be used to versus Get used to. 'Be used to' followed by a noun or an i n g verb means to be accustomed to something. For example: I am used to working under pressure. 'Get used to' means the process of becoming accustomed to something. For example: I am getting used to the new software." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la opción correcta para hábitos y estados.",
+      "questions": [
+        { "id": "b2-22-q1", "type": "quiz_choice", "question": "I ____ live in London, but now I live in New York. (Solía vivir - estado).", "options": ["used to", "would", "am used to", "get used to"], "correct_answer": "used to", "explanation": "'Live' es un estado permanente, por lo que usamos 'used to', no 'would'." },
+        { "id": "b2-22-q2", "type": "quiz_choice", "question": "When we were a startup, the CEO ____ buy us pizza every Friday. (Solía comprar - acción repetida).", "options": ["would", "was used to", "getting used to", "is used to"], "correct_answer": "would", "explanation": "'Buy' es una acción repetida en el pasado. Se puede usar 'would' (también 'used to', pero 'would' es muy común para historias pasadas)." },
+        { "id": "b2-22-q3", "type": "quiz_choice", "question": "I ____ have a small office, but now I have a large one. (Solía tener - estado de posesión).", "options": ["used to", "would", "am used to", "got used to"], "correct_answer": "used to", "explanation": "'Have' (posesión) es un estado. No se puede usar 'would'." },
+        { "id": "b2-22-q4", "type": "quiz_choice", "question": "It's difficult, but I am ____ waking up at 5 AM. (Estoy acostumbrado a).", "options": ["used to", "would", "used", "get used to"], "correct_answer": "used to", "explanation": "Be used to + ING = estar acostumbrado a." },
+        { "id": "b2-22-q5", "type": "quiz_choice", "question": "I can't ____ this new keyboard. It's too small. (No puedo acostumbrarme a).", "options": ["get used to", "be used to", "used to", "would"], "correct_answer": "get used to", "explanation": "Get used to = el proceso de acostumbrarse." },
+        { "id": "b2-22-q6", "type": "quiz_choice", "question": "Before emails, people ____ send letters. (Solían enviar - acción repetida).", "options": ["would", "are used to", "were used to", "got used to"], "correct_answer": "would", "explanation": "Acción repetida en el pasado = would (o used to)." },
+        { "id": "b2-22-q7", "type": "quiz_choice", "question": "He ____ be very shy, but now he is a great public speaker. (Solía ser - estado).", "options": ["used to", "would", "is used to", "gets used to"], "correct_answer": "used to", "explanation": "'Be' es un estado. Usamos 'used to'." },
+        { "id": "b2-22-q8", "type": "quiz_choice", "question": "Are you ____ the cold weather here yet? (¿Estás acostumbrado a...?).", "options": ["used to", "use to", "would", "get used"], "correct_answer": "used to", "explanation": "Be used to + sustantivo (the cold weather)." },
+        { "id": "b2-22-q9", "type": "quiz_choice", "question": "In the old office, we ____ have a coffee machine. (Solíamos tener - estado).", "options": ["used to", "would", "are used to", "were used to"], "correct_answer": "used to", "explanation": "'Have' (posesión) es un estado, requiere 'used to'." },
+        { "id": "b2-22-q10", "type": "quiz_choice", "question": "My new boss yells a lot. I'll never ____ it. (Acostumbrarme a).", "options": ["get used to", "be used to", "used to", "would"], "correct_answer": "get used to", "explanation": "Get used to (proceso de adaptarse a algo nuevo)." },
+        { "id": "b2-22-q11", "type": "quiz_choice", "question": "Every summer, my grandfather ____ take me fishing. (Solía llevarme - hábito).", "options": ["would", "is used to", "was used to", "gets used to"], "correct_answer": "would", "explanation": "'Take' es una acción, 'would' suena natural para contar recuerdos." },
+        { "id": "b2-22-q12", "type": "quiz_choice", "question": "I ____ commuting 2 hours a day, so 30 minutes is easy for me. (Estoy acostumbrado a).", "options": ["am used to", "used to", "would", "get used to"], "correct_answer": "am used to", "explanation": "I am used to + ING (estoy acostumbrado)." },
+        { "id": "b2-22-q13", "type": "quiz_choice", "question": "We ____ know each other, but we lost touch. (Solíamos conocernos - estado mental).", "options": ["used to", "would", "are used to", "got used to"], "correct_answer": "used to", "explanation": "'Know' es un verbo de estado (mental), requiere 'used to'." },
+        { "id": "b2-22-q14", "type": "quiz_choice", "question": "I hated the new software at first, but I ____ it. (Me acostumbré - pasado de get used to).", "options": ["got used to", "was used to", "used to", "would"], "correct_answer": "got used to", "explanation": "Got used to = proceso completado en el pasado." },
+        { "id": "b2-22-q15", "type": "quiz_choice", "question": "She ____ hate coffee, but now she drinks 3 cups a day. (Solía odiar - estado).", "options": ["used to", "would", "is used to", "gets used to"], "correct_answer": "used to", "explanation": "'Hate' es un verbo de estado/emoción." },
+        { "id": "b2-22-q16", "type": "quiz_choice", "question": "During the conference, the CEO ____ walk around and talk to everyone. (Solía caminar - acción).", "options": ["would", "was used to", "is used to", "gets used to"], "correct_answer": "would", "explanation": "'Walk' y 'talk' son acciones (hábito pasado)." },
+        { "id": "b2-22-q17", "type": "quiz_choice", "question": "Don't worry about the noise. I ____ it. (Estoy acostumbrado a).", "options": ["am used to", "used to", "would", "get used to"], "correct_answer": "am used to", "explanation": "Am used to + sustantivo." },
+        { "id": "b2-22-q18", "type": "quiz_choice", "question": "Did you ____ play football when you were young? (¿Solías jugar?).", "options": ["use to", "used to", "would", "are used to"], "correct_answer": "use to", "explanation": "En pregunta con 'Did', se usa 'use to' (sin D final)." },
+        { "id": "b2-22-q19", "type": "quiz_choice", "question": "It took me months to ____ driving on the left. (Acostumbrarme a).", "options": ["get used to", "be used to", "used to", "would"], "correct_answer": "get used to", "explanation": "Get used to (proceso)." },
+        { "id": "b2-22-q20", "type": "quiz_choice", "question": "I didn't ____ like sushi, but now I love it. (No solía - estado negativo).", "options": ["use to", "used to", "would", "am used to"], "correct_answer": "use to", "explanation": "Con 'didn't', el verbo vuelve a infinitivo: didn't use to." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Completa con 'used to', 'would', 'am used to' o 'get used to'.",
+      "questions": [
+        { "id": "b2-22-f1", "type": "fill_input", "question": "I ____ live here. (Solía vivir - estado)", "correct_answer": "used to", "explanation": "used to." },
+        { "id": "b2-22-f2", "type": "fill_input", "question": "He ____ buy us pizza. (Solía comprar - acción repetida)", "correct_answer": "would", "explanation": "would (o used to)." },
+        { "id": "b2-22-f3", "type": "fill_input", "question": "I ____ have a car. (Solía tener - estado)", "correct_answer": "used to", "explanation": "used to." },
+        { "id": "b2-22-f4", "type": "fill_input", "question": "I ____ working late. (Estoy acostumbrado a)", "correct_answer": "am used to", "explanation": "am used to." },
+        { "id": "b2-22-f5", "type": "fill_input", "question": "I can't ____ it. (Acostumbrarme a)", "correct_answer": "get used to", "explanation": "get used to." },
+        { "id": "b2-22-f6", "type": "fill_input", "question": "Did you ____ play? (¿Solías jugar?)", "correct_answer": "use to", "explanation": "use to." },
+        { "id": "b2-22-f7", "type": "fill_input", "question": "I didn't ____ like him. (No solía agradarme)", "correct_answer": "use to", "explanation": "use to." },
+        { "id": "b2-22-f8", "type": "fill_input", "question": "She ____ be shy. (Solía ser - estado)", "correct_answer": "used to", "explanation": "used to." },
+        { "id": "b2-22-f9", "type": "fill_input", "question": "Are you ____ the cold? (¿Estás acostumbrado a?)", "correct_answer": "used to", "explanation": "used to." },
+        { "id": "b2-22-f10", "type": "fill_input", "question": "I finally ____ the new system. (Me acostumbré - pasado)", "correct_answer": "got used to", "explanation": "got used to." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Habits Match",
+      "pairs": [
+        {"id": "b2-22-p1", "source": "Used to (States)", "target": "Solía ser / tener (Estados pasados)"},
+        {"id": "b2-22-p2", "source": "Would (Actions)", "target": "Solía hacer (Acciones repetidas pasadas)"},
+        {"id": "b2-22-p3", "source": "Be used to", "target": "Estar acostumbrado a (Estado actual)"},
+        {"id": "b2-22-p4", "source": "Get used to", "target": "Acostumbrarse a (Proceso)"},
+        {"id": "b2-22-p5", "source": "I used to be the boss", "target": "Solía ser el jefe (Estado)"},
+        {"id": "b2-22-p6", "source": "We would go to the bar", "target": "Solíamos ir al bar (Acción)"},
+        {"id": "b2-22-p7", "source": "I am used to the pressure", "target": "Estoy acostumbrado a la presión"},
+        {"id": "b2-22-p8", "source": "I am getting used to it", "target": "Me estoy acostumbrando a ello"},
+        {"id": "b2-22-p9", "source": "I got used to the noise", "target": "Me acostumbré al ruido (Proceso completado)"},
+        {"id": "b2-22-p10", "source": "Did you use to work here?", "target": "¿Solías trabajar aquí? (Pregunta)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración correcta sobre hábitos.",
+      "questions": [
+        { "id": "b2-22-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I used to live in London.", "options": ["I used to live in London.", "I use to live in London.", "I am used to living in London.", "I would live in London."], "correct_answer": "I used to live in London.", "explanation": "Audio exacto." },
+        { "id": "b2-22-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We would buy pizza every Friday.", "options": ["We would buy pizza every Friday.", "We used to buy pizza every Friday.", "We will buy pizza every Friday.", "We were used to buy pizza every Friday."], "correct_answer": "We would buy pizza every Friday.", "explanation": "Audio exacto." },
+        { "id": "b2-22-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am used to working late.", "options": ["I am used to working late.", "I used to work late.", "I get used to working late.", "I would work late."], "correct_answer": "I am used to working late.", "explanation": "Audio exacto." },
+        { "id": "b2-22-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I can't get used to this keyboard.", "options": ["I can't get used to this keyboard.", "I am not used to this keyboard.", "I didn't use to this keyboard.", "I won't get used to this keyboard."], "correct_answer": "I can't get used to this keyboard.", "explanation": "Audio exacto." },
+        { "id": "b2-22-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Did you use to play football?", "options": ["Did you use to play football?", "Do you use to play football?", "Are you used to playing football?", "Did you used to play football?"], "correct_answer": "Did you use to play football?", "explanation": "Audio exacto." },
+        { "id": "b2-22-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I didn't use to like sushi.", "options": ["I didn't use to like sushi.", "I don't use to like sushi.", "I am not used to liking sushi.", "I wouldn't like sushi."], "correct_answer": "I didn't use to like sushi.", "explanation": "Audio exacto." },
+        { "id": "b2-22-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She used to be very shy.", "options": ["She used to be very shy.", "She would be very shy.", "She is used to being very shy.", "She gets used to being very shy."], "correct_answer": "She used to be very shy.", "explanation": "Audio exacto." },
+        { "id": "b2-22-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Are you used to the cold weather?", "options": ["Are you used to the cold weather?", "Do you get used to the cold weather?", "Did you use to the cold weather?", "Are you using the cold weather?"], "correct_answer": "Are you used to the cold weather?", "explanation": "Audio exacto." },
+        { "id": "b2-22-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I got used to the noise.", "options": ["I got used to the noise.", "I am used to the noise.", "I get used to the noise.", "I used to the noise."], "correct_answer": "I got used to the noise.", "explanation": "Audio exacto." },
+        { "id": "b2-22-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He used to have a car.", "options": ["He used to have a car.", "He would have a car.", "He is used to having a car.", "He gets used to having a car."], "correct_answer": "He used to have a car.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

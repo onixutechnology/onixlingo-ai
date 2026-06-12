@@ -12,7 +12,7 @@ import PairingDrill from '@/components/lesson/vocabulary/PairingDrill';
 import LessonComplete from '@/components/lesson/LessonComplete';
 
 // ✅ URL INTELIGENTE: Usa la de Vercel en la nube, o Localhost en tu casa
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';
 
 // --- TIPOS STRICTOS (Punto 19) ---
 interface Pair {
@@ -48,7 +48,9 @@ export default function VocabularyLessonPage() {
   }, [checkAndResetDailyLimits]);
 
   // Manejo defensivo del ID (Punto 23)
-  const lessonId = Array.isArray(params?.id) ? params.id[0] : params?.id;
+  let rawLessonId = Array.isArray(params?.id) ? params.id[0] : params?.id;
+  // Limpiamos los ceros a la izquierda si el usuario refrescó la página con la URL vieja (ej. basics_mod_01 -> basics_mod_1)
+  const lessonId = rawLessonId ? rawLessonId.replace(/_mod_0+(\d+)/, '_mod_$1') : '';
 
   // --- ESTADOS ---
   const [lesson, setLesson] = useState<VocabularyLesson | null>(null);
@@ -175,7 +177,7 @@ export default function VocabularyLessonPage() {
     // Consume energía y actualiza el contador diario si es plan gratuito
     const { consumeEnergy, addVocabLesson, userTier } = useUIStore.getState();
     if (userTier === 'free') {
-      consumeEnergy(30);
+      consumeEnergy(23);
       addVocabLesson();
     }
 
@@ -241,36 +243,36 @@ export default function VocabularyLessonPage() {
   // RENDERS DE ESTADO (Skeleton & Error mejorados)
   // =========================================================
 
-  if (userTier === 'free' && (vocabLessonsToday >= 1 || energy < 30)) {
+  if (userTier === 'free' && (vocabLessonsToday >= 1 || energy < 23)) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-6 relative overflow-hidden font-sans">
+      <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-900 p-6 relative overflow-hidden font-sans">
         {/* Gradients */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent"></div>
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-indigo-500"></div>
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-[#D4AF37]/20"></div>
         
-        <div className="bg-slate-950/80 border border-slate-800 p-10 max-w-md w-full shadow-2xl rounded-none text-center relative z-10 backdrop-blur-md">
-          <div className="w-16 h-16 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center mx-auto mb-6">
+        <div className="bg-slate-50/80 border border-slate-800 p-10 max-w-md w-full shadow-2xl rounded-none text-center relative z-10 backdrop-blur-md">
+          <div className="w-16 h-16 bg-[#D4AF37]/20/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center mx-auto mb-6">
             <Sparkles size={32} className="animate-pulse" />
           </div>
           <h2 className="text-xl font-serif font-black italic uppercase tracking-wider text-indigo-400 mb-2">
             {vocabLessonsToday >= 1 ? "Límite Diario Alcanzado" : "Energía Insuficiente"}
           </h2>
-          <p className="text-[10px] text-slate-400 leading-relaxed mb-8 uppercase tracking-wider">
+          <p className="text-[10px] text-slate-500 leading-relaxed mb-8 uppercase tracking-wider">
             {vocabLessonsToday >= 1 
               ? "En el Plan Free estás limitado a 1 lección de vocabulario (bloque de 50 palabras) al día." 
-              : `Completar una lección de vocabulario consume 30% de energía. Tu energía actual es de ${energy}%.`}
+              : `Completar una lección de vocabulario consume 23% de energía. Tu energía actual es de ${energy}%.`}
           </p>
           
           <div className="flex flex-col gap-3">
             <button 
               onClick={() => router.push('/dashboard/pricing')}
-              className="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none shadow-lg shadow-indigo-600/30"
+              className="w-full py-4 bg-[#D4AF37]/20 hover:bg-[#D4AF37]/20 text-slate-900 font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none shadow-none shadow-indigo-600/30"
             >
               Subir a Pro / Executive
             </button>
             <button 
               onClick={() => router.push('/dashboard')}
-              className="w-full py-3 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none"
+              className="w-full py-3 border border-slate-700 bg-transparent text-slate-500 hover:text-slate-900 font-black text-[9px] uppercase tracking-[0.2em] transition-all rounded-none"
             >
               Volver al Dashboard
             </button>
@@ -281,41 +283,41 @@ export default function VocabularyLessonPage() {
   }
 
   if (loading) return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 relative overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white relative overflow-hidden">
         {/* (Punto 4) Skeleton UI */}
         <div className="w-full max-w-4xl p-8 space-y-8 animate-pulse">
-            <div className="h-8 bg-slate-200 rounded-full w-1/3 mx-auto"></div>
+            <div className="h-8 bg-white rounded-full w-1/3 mx-auto"></div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {[...Array(12)].map((_, i) => (
-                    <div key={i} className="h-32 bg-slate-200 rounded-2xl"></div>
+                    <div key={i} className="h-32 bg-white rounded-none"></div>
                 ))}
             </div>
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-full shadow-lg">
-                <Loader2 className="animate-spin text-indigo-600" size={32} />
+            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-full shadow-none">
+                <Loader2 className="animate-spin text-[#D4AF37]" size={32} />
             </div>
         </div>
     </div>
   );
 
   if (error || !lesson) return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 p-6 text-center">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6 text-center">
       <motion.div 
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        className="bg-white p-8 rounded-3xl shadow-xl max-w-md border border-slate-100"
+        className="bg-white p-8 rounded-none shadow-xl max-w-md border border-slate-200"
       >
-        <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6">
-            <AlertTriangle className="text-red-500" size={32} />
+        <div className="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <AlertTriangle className="text-[#D4AF37]" size={32} />
         </div>
-        <h2 className="text-2xl font-black text-slate-800 mb-2">Ups, algo salió mal</h2>
-        <p className="text-slate-500 mb-6">{error || "No pudimos cargar el contenido."}</p>
+        <h2 className="text-2xl font-black text-slate-900 mb-2">Ups, algo salió mal</h2>
+        <p className="text-slate-600 mb-6">{error || "No pudimos cargar el contenido."}</p>
         <div className="flex gap-3">
-            <button onClick={() => router.back()} className="flex-1 px-4 py-3 rounded-xl border border-slate-200 font-bold text-slate-600 hover:bg-slate-50 transition-colors">
+            <button onClick={() => router.back()} className="flex-1 px-4 py-3 rounded-none border border-slate-200 font-bold text-slate-600 hover:bg-white transition-colors">
                 Volver
             </button>
-            <button onClick={fetchLesson} className="flex-1 px-4 py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2">
+            <button onClick={fetchLesson} className="flex-1 px-4 py-3 rounded-none bg-[#D4AF37]/20 text-slate-900 font-bold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2">
                 <RefreshCcw size={18} /> Reintentar
             </button>
         </div>
@@ -350,8 +352,8 @@ export default function VocabularyLessonPage() {
           : 'Aprende y asocia palabras sin presión. Excelente para practicar.',
         badge: isPremium ? '1 Boleto de Sorteo' : '0 Boletos (Plan Free)',
         badgeColor: isPremium 
-          ? 'bg-amber-50 text-amber-800 border-amber-200' 
-          : 'bg-slate-100 text-slate-500 border-slate-200'
+          ? 'bg-[#D4AF37]/10 text-[#D4AF37] border-[#D4AF37]/30' 
+          : 'bg-white text-slate-600 border-slate-200'
       },
       { 
         id: 'medium', 
@@ -362,8 +364,8 @@ export default function VocabularyLessonPage() {
           : 'Pon a prueba tu rapidez mental básica bajo el reloj (3:00 min).',
         badge: isPremium ? '2 Boletos de Sorteo' : '0 Boletos (Plan Free)',
         badgeColor: isPremium 
-          ? 'bg-amber-50 text-amber-800 border-amber-200'
-          : 'bg-slate-100 text-slate-500 border-slate-200'
+          ? 'bg-[#D4AF37]/10 text-[#D4AF37] border-[#D4AF37]/30'
+          : 'bg-white text-slate-600 border-slate-200'
       },
       { 
         id: 'pro', 
@@ -374,15 +376,15 @@ export default function VocabularyLessonPage() {
           : 'Para maestros del vocabulario. Módulo avanzado con límite de tiempo estricto (1:30 min).',
         badge: isPremium ? '5 Boletos (PRO/Exec)' : '0 Boletos (Plan Free)',
         badgeColor: isPremium 
-          ? 'bg-amber-100 text-amber-800 border-amber-300'
-          : 'bg-slate-100 text-slate-500 border-slate-200'
+          ? 'bg-amber-100 text-[#D4AF37] border-amber-300'
+          : 'bg-white text-slate-600 border-slate-200'
       }
     ];
 
     return (
-      <div className="min-h-screen flex items-center justify-center bg-amber-50/95 text-slate-900 p-6 relative overflow-hidden font-sans">
+      <div className="min-h-screen flex items-center justify-center bg-[#D4AF37]/10/95 text-slate-900 p-6 relative overflow-hidden font-sans">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-200/40 via-transparent to-transparent"></div>
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-amber-500"></div>
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-[#D4AF37]/20"></div>
         
         <motion.div 
           initial={{ scale: 0.95, opacity: 0 }}
@@ -392,12 +394,12 @@ export default function VocabularyLessonPage() {
           <div className="flex justify-between items-start mb-6">
             <button 
               onClick={() => router.push('/dashboard/vocabulary')}
-              className="p-2 border border-slate-200 text-slate-500 hover:text-amber-700 hover:border-amber-500 transition-all rounded-none bg-white"
+              className="p-2 border border-slate-200 text-slate-600 hover:text-[#D4AF37] hover:border-[#D4AF37]/30 transition-all rounded-none bg-white"
             >
               <ArrowLeft size={16} />
             </button>
             <div className="text-center">
-              <span className="text-[8px] font-black uppercase tracking-[0.3em] text-amber-600">Selector de Nivel</span>
+              <span className="text-[8px] font-black uppercase tracking-[0.3em] text-[#D4AF37]">Selector de Nivel</span>
               <h2 className="text-lg font-serif font-black italic uppercase tracking-wider text-slate-900 mt-1">
                 {lesson.title}
               </h2>
@@ -405,7 +407,7 @@ export default function VocabularyLessonPage() {
             <div className="w-8"></div>
           </div>
 
-          <p className="text-[10px] text-slate-500 text-center leading-relaxed mb-8 uppercase tracking-widest">
+          <p className="text-[10px] text-slate-600 text-center leading-relaxed mb-8 uppercase tracking-widest">
             Selecciona la dificultad del Neuro Link. Elige sabiamente, la velocidad premiará a los valientes.
           </p>
 
@@ -419,20 +421,20 @@ export default function VocabularyLessonPage() {
                   className={`
                     w-full p-4 border text-left flex flex-col justify-between transition-all rounded-none relative
                     ${isSelected 
-                      ? 'border-amber-500 bg-amber-50 ring-1 ring-amber-500' 
+                      ? 'border-[#D4AF37]/30 bg-[#D4AF37]/10 ring-1 ring-amber-500' 
                       : 'border-slate-200 bg-white hover:border-amber-350'}
                   `}
                 >
                   <div className="flex justify-between items-start w-full mb-1">
-                    <h3 className={`font-black text-[11px] uppercase tracking-wider ${isSelected ? 'text-amber-700' : 'text-slate-800'}`}>
+                    <h3 className={`font-black text-[11px] uppercase tracking-wider ${isSelected ? 'text-[#D4AF37]' : 'text-slate-900'}`}>
                       {opt.title}
                     </h3>
                     <span className={`text-[8px] font-black uppercase tracking-wider px-2 py-0.5 border rounded-none ${opt.badgeColor}`}>
                       {opt.badge}
                     </span>
                   </div>
-                  <span className="text-[9px] font-mono font-black text-slate-500 mb-2">{opt.time}</span>
-                  <p className="text-[9px] text-slate-500 font-bold uppercase tracking-wider leading-relaxed">
+                  <span className="text-[9px] font-mono font-black text-slate-600 mb-2">{opt.time}</span>
+                  <p className="text-[9px] text-slate-600 font-bold uppercase tracking-wider leading-relaxed">
                     {opt.desc}
                   </p>
                 </button>
@@ -451,7 +453,7 @@ export default function VocabularyLessonPage() {
                 setTimerActive(true);
               }
             }}
-            className="w-full py-4 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[10px] uppercase tracking-[0.2em] transition-all rounded-none shadow-lg shadow-amber-500/10 active:scale-[0.98]"
+            className="w-full py-4 bg-[#D4AF37]/20 hover:bg-amber-400 text-slate-950 font-black text-[10px] uppercase tracking-[0.2em] transition-all rounded-none shadow-none shadow-amber-500/10 active:scale-[0.98]"
           >
             Sincronizar y Comenzar
           </button>
@@ -474,12 +476,12 @@ export default function VocabularyLessonPage() {
         className="flex-1 flex flex-col"
       >
         {/* HEADER (Punto 2: Glassmorphism) */}
-        <header className="px-6 h-20 flex items-center justify-between bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-30 shadow-sm transition-all">
+        <header className="px-6 h-20 flex items-center justify-between bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-30 shadow-none transition-all">
           
           <div className="flex items-center gap-2">
             <button 
                 onClick={() => setShowExitConfirm(true)} 
-                className="p-2.5 -ml-2 hover:bg-slate-100 rounded-full transition-all text-slate-500 hover:text-red-500 active:scale-95"
+                className="p-2.5 -ml-2 hover:bg-white rounded-full transition-all text-slate-600 hover:text-[#D4AF37] active:scale-95"
                 aria-label="Salir de la lección" // (Punto 29)
             >
               <X size={24} strokeWidth={2.5} />
@@ -488,7 +490,7 @@ export default function VocabularyLessonPage() {
             {/* (Punto 13) Mute Button */}
             <button
                 onClick={() => setIsMuted(!isMuted)}
-                className="p-2.5 rounded-full hover:bg-slate-100 text-slate-400 hover:text-indigo-600 transition-all active:scale-95"
+                className="p-2.5 rounded-full hover:bg-white text-slate-500 hover:text-[#D4AF37] transition-all active:scale-95"
                 aria-label={isMuted ? "Activar sonido" : "Silenciar"}
             >
                 {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
@@ -498,7 +500,7 @@ export default function VocabularyLessonPage() {
           <div className="font-bold text-slate-700 truncate max-w-[150px] md:max-w-md text-center flex flex-col items-center">
               <span className="text-sm font-black truncate max-w-[150px] md:max-w-md">{lesson.title}</span>
               {(difficulty === 'medium' || difficulty === 'pro') && (
-                <span className={`text-[10px] font-mono font-black mt-0.5 px-2 py-0.5 border flex items-center gap-1.5 ${timeLeft <= 20 ? 'bg-red-50 text-red-600 border-red-200 animate-pulse animate-bounce' : 'bg-indigo-50 text-indigo-600 border-indigo-200'}`}>
+                <span className={`text-[10px] font-mono font-black mt-0.5 px-2 py-0.5 border flex items-center gap-1.5 ${timeLeft <= 20 ? 'bg-[#D4AF37]/10 text-[#D4AF37] border-red-200 animate-pulse animate-bounce' : 'bg-indigo-50 text-[#D4AF37] border-indigo-200'}`}>
                   <Clock size={10} className={timeLeft <= 20 ? 'animate-bounce' : ''} />
                   {formatTime(timeLeft)}
                 </span>
@@ -506,7 +508,7 @@ export default function VocabularyLessonPage() {
           </div>
 
           <div className="w-[88px] flex justify-end"> {/* Espaciador para equilibrar el header */}
-             <div className="text-xs font-bold bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full border border-indigo-100">
+             <div className="text-xs font-bold bg-indigo-50 text-[#D4AF37] px-3 py-1 rounded-full border border-indigo-100">
                 {pairs.length} Cards
              </div>
           </div>
@@ -542,25 +544,25 @@ export default function VocabularyLessonPage() {
 
       <AnimatePresence>
         {showExitConfirm && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-50/40 backdrop-blur-sm">
             <motion.div 
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full border border-slate-100"
+              className="bg-white rounded-none shadow-2xl p-6 max-w-sm w-full border border-slate-200"
             >
-              <h3 className="text-xl font-black text-slate-800 mb-2">¿Abandonar lección?</h3>
-              <p className="text-slate-500 mb-6 text-sm">Perderás el progreso de esta sesión si sales ahora.</p>
+              <h3 className="text-xl font-black text-slate-900 mb-2">¿Abandonar lección?</h3>
+              <p className="text-slate-600 mb-6 text-sm">Perderás el progreso de esta sesión si sales ahora.</p>
               <div className="flex gap-3">
                 <button 
                   onClick={() => setShowExitConfirm(false)}
-                  className="flex-1 py-3 font-bold text-slate-600 bg-slate-100 rounded-xl hover:bg-slate-200 transition-colors"
+                  className="flex-1 py-3 font-bold text-slate-600 bg-white rounded-none hover:bg-white transition-colors"
                 >
                   Quedarse
                 </button>
                 <button 
                   onClick={handleExit}
-                  className="flex-1 py-3 font-bold text-white bg-red-500 rounded-xl hover:bg-red-600 transition-colors shadow-lg shadow-red-500/20"
+                  className="flex-1 py-3 font-bold text-slate-900 bg-[#D4AF37]/100 rounded-none hover:bg-[#D4AF37]/20 transition-colors shadow-none shadow-red-500/20"
                 >
                   Salir
                 </button>
@@ -571,15 +573,15 @@ export default function VocabularyLessonPage() {
       </AnimatePresence>
 
       {showResumePrompt && pendingResumeState && (
-        <div className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
-          <div className="bg-slate-900 border-2 border-orange-950 p-6 md:p-8 max-w-md w-full shadow-2xl text-center rounded-none relative">
+        <div className="fixed inset-0 bg-white/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+          <div className="bg-slate-50 border-2 border-orange-950 p-6 md:p-8 max-w-md w-full shadow-2xl text-center rounded-none relative">
             <div className="absolute top-0 left-0 w-full h-1 bg-orange-500" />
             <div className="flex justify-center mb-4 text-orange-500">
               <Sparkles size={40} className="animate-pulse" />
             </div>
             <h3 className="text-sm font-serif font-black italic uppercase tracking-wider text-orange-400 mb-2">¿Deseas retomar tu vocabulario?</h3>
-            <p className="text-[10px] text-slate-400 leading-relaxed mb-6">
-              Hemos detectado un progreso guardado con <span className="text-white font-mono font-black">{pendingResumeState.completedIds.length} palabras</span> memorizadas. ¿Prefieres reanudar desde donde te quedaste o comenzar de cero?
+            <p className="text-[10px] text-slate-500 leading-relaxed mb-6">
+              Hemos detectado un progreso guardado con <span className="text-slate-900 font-mono font-black">{pendingResumeState.completedIds.length} palabras</span> memorizadas. ¿Prefieres reanudar desde donde te quedaste o comenzar de cero?
             </p>
             <div className="flex flex-col gap-2">
               <button 
@@ -588,7 +590,7 @@ export default function VocabularyLessonPage() {
                   setDrillKey(prev => prev + 1);
                   setShowResumePrompt(false);
                 }} 
-                className="w-full py-3 bg-orange-600 hover:bg-orange-500 text-white font-black text-[10px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-1.5"
+                className="w-full py-3 bg-orange-600 hover:bg-orange-500 text-slate-900 font-black text-[10px] uppercase tracking-widest transition-all rounded-none flex items-center justify-center gap-1.5"
               >
                 SÍ, REANUDAR DICCIONARIO <ChevronRight size={14} />
               </button>
@@ -599,7 +601,7 @@ export default function VocabularyLessonPage() {
                   setDrillKey(prev => prev + 1);
                   setShowResumePrompt(false);
                 }} 
-                className="w-full py-2.5 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-widest transition-all rounded-none"
+                className="w-full py-2.5 border border-slate-700 bg-transparent text-slate-500 hover:text-slate-900 font-black text-[9px] uppercase tracking-widest transition-all rounded-none"
               >
                 NO, COMENZAR DE CERO
               </button>
@@ -610,19 +612,19 @@ export default function VocabularyLessonPage() {
 
       <AnimatePresence>
         {showTimeUpModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-50/90 backdrop-blur-md">
             <motion.div 
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="bg-slate-900 border-2 border-red-950 p-8 max-w-md w-full shadow-2xl text-center rounded-none relative"
+              className="bg-slate-50 border-2 border-red-950 p-8 max-w-md w-full shadow-2xl text-center rounded-none relative"
             >
-              <div className="absolute top-0 left-0 w-full h-1 bg-red-600" />
-              <div className="w-16 h-16 bg-red-950/40 text-red-500 border border-red-800 flex items-center justify-center mx-auto mb-6">
+              <div className="absolute top-0 left-0 w-full h-1 bg-[#D4AF37]/20" />
+              <div className="w-16 h-16 bg-red-950/40 text-[#D4AF37] border border-red-800 flex items-center justify-center mx-auto mb-6">
                 <Clock size={32} className="animate-pulse" />
               </div>
               <h3 className="text-sm font-serif font-black italic uppercase tracking-wider text-red-400 mb-2">¡Tiempo Agotado!</h3>
-              <p className="text-[10px] text-slate-400 leading-relaxed mb-8 uppercase tracking-wider">
-                El tiempo límite para el nivel de dificultad <strong className="text-white">{difficulty.toUpperCase()}</strong> ha expirado. El Neuro Link se ha desconectado.
+              <p className="text-[10px] text-slate-500 leading-relaxed mb-8 uppercase tracking-wider">
+                El tiempo límite para el nivel de dificultad <strong className="text-slate-900">{difficulty.toUpperCase()}</strong> ha expirado. El Neuro Link se ha desconectado.
               </p>
               <div className="flex flex-col gap-2">
                 <button 
@@ -638,13 +640,13 @@ export default function VocabularyLessonPage() {
                       setTimerActive(true);
                     }
                   }}
-                  className="w-full py-3 bg-red-600 hover:bg-red-500 text-white font-black text-[10px] uppercase tracking-widest transition-all rounded-none shadow-lg shadow-red-600/30"
+                  className="w-full py-3 bg-[#D4AF37]/20 hover:bg-[#D4AF37]/100 text-slate-900 font-black text-[10px] uppercase tracking-widest transition-all rounded-none shadow-none shadow-red-600/30"
                 >
                   REINTENTAR DIFICULTAD
                 </button>
                 <button 
                   onClick={handleExit}
-                  className="w-full py-2.5 border border-slate-700 bg-transparent text-slate-400 hover:text-white font-black text-[9px] uppercase tracking-widest transition-all rounded-none"
+                  className="w-full py-2.5 border border-slate-700 bg-transparent text-slate-500 hover:text-slate-900 font-black text-[9px] uppercase tracking-widest transition-all rounded-none"
                 >
                   SALIR AL DASHBOARD
                 </button>

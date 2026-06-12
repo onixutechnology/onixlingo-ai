@@ -1,4 +1,6 @@
 'use client';
+import LandingFooter from '@/components/LandingFooter';
+import LandingNavbar from '@/components/LandingNavbar';
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
@@ -18,7 +20,7 @@ const scenarios = [
     id: 'ma',
     role: 'ceo',
     title: 'Negociación de Fusión & Adquisición (M&A)',
-    situation: 'Debes presentar los términos finales de una adquisición estratégica ante un panel de accionistas escépticos de OnixCorp.',
+    situation: 'Debes presentar los términos finales de una adquisición estratégica ante un panel de accionistas escépticos de OnixLingo.',
     prompt: 'Presenta la justificación estratégica del acuerdo de $40M, minimizando el riesgo de pasivos ocultos.',
     teleprompter: 'Este acuerdo representa una sinergia operativa sin precedentes. Hemos auditado con rigor cada pasivo estratégico para garantizar un proceso de integración limpio.',
     jargonKeywords: ['sinergia', 'pasivo', 'estratégico', 'integración']
@@ -53,7 +55,7 @@ const scenarios = [
 ];
 
 const executiveUnits = [
-  { id: '01', title: 'Fundamentos de Oratoria C-Suite', topic: 'Postura, modulación del ritmo e inflexión tonal de autoridad.' },
+  { id: '01', title: 'Fundamentos de Oratoria Alta Dirección', topic: 'Postura, modulación del ritmo e inflexión tonal de autoridad.' },
   { id: '02', title: 'Fusiones e Integración de Culturas', topic: 'Uso de vocabulario diplomático durante adquisiciones hostiles.' },
   { id: '03', title: 'Roadshows Financieros e IPO', topic: 'Presentación de métricas de capital y rentabilidad ante bolsas globales.' },
   { id: '04', title: 'Gestión Lingüística de Crisis', topic: 'Comunicación de incidentes operativos mitigando el pánico de inversores.' },
@@ -83,7 +85,7 @@ export default function ProgramaEjecutivoPage() {
     accuracy: '100%',
     fluency: '100%',
     fillerWords: '0 filler words (Perfect control)',
-    diplomacy: 'Excellent (C-Suite Standard)',
+    diplomacy: 'Excellent (Alta Dirección Standard)',
     jargon: 'None',
     percentile: '99th percentile'
   });
@@ -180,7 +182,7 @@ export default function ProgramaEjecutivoPage() {
           analyserRef.current.getByteFrequencyData(dataArray);
 
           if (ctx) {
-            ctx.fillStyle = '#0f172a'; // slate-900 matching page style
+            ctx.fillStyle = '#0f172a'; // black matching page style
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             const barWidth = (canvas.width / bufferLength) * 1.5;
@@ -190,7 +192,7 @@ export default function ProgramaEjecutivoPage() {
             for (let i = 0; i < bufferLength; i++) {
               barHeight = dataArray[i] / 2;
 
-              // Amber-500 gradient style for C-Suite branding
+              // Amber-500 gradient style for Alta Dirección branding
               ctx.fillStyle = `rgb(${245}, ${158}, ${11 + barHeight})`;
               ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
 
@@ -328,7 +330,7 @@ export default function ProgramaEjecutivoPage() {
     } else if (accuracyVal < 75) {
       diplomacyVal = 'Hesitant (Requires modulation)';
     } else if (accuracyVal < 90) {
-      diplomacyVal = 'Professional (Standard C-Suite)';
+      diplomacyVal = 'Professional (Standard Alta Dirección)';
     }
 
     // Jargon check
@@ -360,57 +362,34 @@ export default function ProgramaEjecutivoPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-amber-500/30 selection:text-amber-100">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-[#D4AF37]/30 selection:text-black">
       
       {/* NAVBAR */}
-      <nav className="fixed w-full bg-slate-950/90 backdrop-blur-xl border-b border-slate-800 z-50">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-amber-500 flex items-center justify-center text-slate-950 font-bold shadow-lg shadow-amber-500/20">
-              <span>O</span>
-            </div>
-            <span className="font-bold text-white tracking-tight text-xl">OnixLingo</span>
-          </Link>
-          <div className="hidden md:flex gap-8 items-center text-sm font-semibold text-slate-400">
-            <Link href="/caracteristicas" className="hover:text-white transition-colors">Características</Link>
-            <Link href="/vocabulario" className="hover:text-white transition-colors">Vocabulario</Link>
-            <Link href="/programa-ejecutivo" className="text-amber-400 border-b-2 border-amber-400 pb-1">Programa Ejecutivo</Link>
-            <Link href="/planes" className="hover:text-white transition-colors">Planes</Link>
-          </div>
-          <div className="flex gap-4 items-center">
-            <Link href="/login" className="hidden md:block text-sm font-semibold text-slate-400 hover:text-white transition-colors">Iniciar Sesión</Link>
-            <Link href="/register">
-              <button className="bg-amber-500 hover:bg-amber-600 text-slate-950 text-sm font-bold py-2.5 px-6 transition-all shadow-md shadow-amber-500/20">
-                Acceso Corporativo
-              </button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <LandingNavbar />
 
-      {/* HERO */}
-      <header className="pt-36 pb-16 px-6 relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-amber-500/10 to-transparent blur-[140px] opacity-60 pointer-events-none" />
+      {/* HERO (BLACK) */}
+      <header className="pt-36 pb-16 px-6 relative overflow-hidden bg-slate-50">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[#D4AF37]/10 blur-[140px] opacity-60 pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10 space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-slate-900 border border-slate-800 text-amber-400 text-xs font-bold uppercase tracking-widest shadow-lg">
-            <Crown size={12} className="text-amber-500 animate-pulse" />
-            C-Suite Boardroom Training
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-bold uppercase tracking-widest shadow-none">
+            <Crown size={12} className="text-[#D4AF37] animate-pulse" />
+            Alta Dirección Corporativo Training
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Domina el Lenguaje de los<br />
-            <span className="bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500 bg-clip-text text-transparent">Negocios Globales.</span>
+            <span className="text-[#D4AF37]">Negocios Globales.</span>
           </h1>
-          <p className="text-lg text-slate-450 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed font-light">
             El simulador definitivo para directivos y líderes corporativos. Entrena oratoria, pitch con inversionistas y diplomacia ejecutiva en entornos reales.
           </p>
           <div className="flex justify-center gap-4 pt-2">
             <a href="#simulator">
-              <button className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3.5 px-8 transition-all flex items-center gap-2 shadow-lg shadow-amber-500/15">
+              <button className="bg-[#D4AF37] hover:bg-[#b5952f] text-black font-bold py-3.5 px-8 transition-all flex items-center gap-2 shadow-none shadow-[#D4AF37]/15">
                 Probar Simulador <ArrowRight size={18} />
               </button>
             </a>
             <Link href="/planes">
-              <button className="bg-slate-900 border border-slate-855 hover:border-amber-500/30 text-slate-300 font-semibold py-3.5 px-8 transition-all">
+                <button className="bg-transparent border border-[#D4AF37] hover:bg-[#D4AF37] text-slate-900 hover:text-black font-semibold py-3.5 px-8 transition-all">
                 Planes Corporativos
               </button>
             </Link>
@@ -418,38 +397,38 @@ export default function ProgramaEjecutivoPage() {
         </div>
       </header>
 
-      {/* QUICK STATS */}
-      <section className="py-10 px-6 border-t border-slate-900 bg-slate-900/40">
+      {/* QUICK STATS (WHITE) */}
+      <section className="py-10 px-6 border-y border-black bg-white text-black">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
-            { val: '60', label: 'Unidades Executive', color: 'text-amber-400' },
-            { val: '1,400+', label: 'Escenarios Reales', color: 'text-white' },
-            { val: '98.4%', label: 'Precisión Fonométrica', color: 'text-emerald-400' },
-            { val: 'OnixCorp', label: 'Estándar Oficial', color: 'text-amber-400' }
+            { val: '60', label: 'Unidades Executive', color: 'text-black' },
+            { val: '1,400+', label: 'Escenarios Reales', color: 'text-[#D4AF37]' },
+            { val: '98.4%', label: 'Precisión Fonométrica', color: 'text-black' },
+            { val: 'OnixLingo', label: 'Estándar Oficial', color: 'text-black' }
           ].map((s, i) => (
-            <div key={i} className="p-5 border border-slate-855 bg-slate-950/80 shadow-xl">
+            <div key={i} className="p-5 border border-black bg-white shadow-xl">
               <p className={`text-2xl font-black ${s.color}`}>{s.val}</p>
-              <p className="text-[9px] text-slate-500 font-bold uppercase mt-1 tracking-wider">{s.label}</p>
+              <p className="text-[9px] text-gray-600 font-bold uppercase mt-1 tracking-wider">{s.label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* BOARDROOM SIMULATOR */}
-      <section id="simulator" className="py-20 px-6 relative">
+      {/* BOARDROOM SIMULATOR (GOLD 20%) */}
+      <section id="simulator" className="py-20 px-6 relative bg-[#D4AF37]/20 text-black">
         <div className="max-w-5xl mx-auto">
           
           <div className="text-center mb-12 space-y-2">
-            <span className="text-xs font-black text-amber-555 uppercase tracking-widest">Simulator Console</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">Simulador de Oratoria Directiva C-Suite</h2>
-            <p className="text-slate-400 text-sm max-w-xl mx-auto">Selecciona tu rol estratégico y lee la frase ante la consola fonométrica.</p>
+            <span className="text-xs font-black text-black/70 uppercase tracking-widest">Simulator Console</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-black">Simulador de Oratoria Directiva Alta Dirección</h2>
+            <p className="text-black text-sm max-w-xl mx-auto font-medium">Selecciona tu rol estratégico y lee la frase ante la consola fonométrica.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
             {/* Roles selector */}
             <div className="lg:col-span-4 space-y-4">
-              <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">1. Perfil C-Suite</h4>
+              <h4 className="text-[10px] font-bold text-black uppercase tracking-wider">1. Perfil Alta Dirección</h4>
               <div className="space-y-3">
                 {roles.map((r) => {
                   const Icon = r.icon;
@@ -457,22 +436,22 @@ export default function ProgramaEjecutivoPage() {
                     <button
                       key={r.id}
                       onClick={() => handleRoleChange(r.id)}
-                      className={`w-full p-4 border text-left transition-all flex gap-3.5 ${selectedRole === r.id ? 'border-amber-500 bg-amber-500/10' : 'border-slate-855 bg-slate-900/20 hover:border-slate-700'}`}
+                      className={`w-full p-4 border text-left transition-all flex gap-3.5 ${selectedRole === r.id ? 'border-black bg-white' : 'border-black/20 bg-white hover:border-black/50'}`}
                     >
-                      <div className={`p-2 shrink-0 ${selectedRole === r.id ? 'bg-amber-500 text-slate-950' : 'bg-slate-800 text-slate-400'}`}>
+                      <div className={`p-2 shrink-0 ${selectedRole === r.id ? 'bg-[#D4AF37] text-black' : 'bg-white text-slate-500'}`}>
                         <Icon size={16} />
                       </div>
                       <div>
-                        <p className="font-bold text-xs text-white">{r.name}</p>
-                        <p className="text-[10px] text-slate-450 leading-relaxed mt-0.5">{r.desc}</p>
+                        <p className={`font-bold text-xs ${selectedRole === r.id ? 'text-slate-900' : 'text-black'}`}>{r.name}</p>
+                        <p className={`text-[10px] leading-relaxed mt-0.5 ${selectedRole === r.id ? 'text-slate-700' : 'text-gray-600'}`}>{r.desc}</p>
                       </div>
                     </button>
                   );
                 })}
               </div>
 
-              <div className="pt-4 border-t border-slate-900 space-y-2">
-                <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">2. Caso de Negociación</h4>
+              <div className="pt-4 border-t border-black space-y-2">
+                <h4 className="text-[10px] font-bold text-black uppercase tracking-wider">2. Caso de Negociación</h4>
                 <div className="space-y-1.5">
                   {activeScenarios.map((s) => (
                     <button
@@ -482,7 +461,7 @@ export default function ProgramaEjecutivoPage() {
                         setIsSimulating(false);
                         setSimulationStep(0);
                       }}
-                      className={`w-full p-3 text-left text-xs font-bold border transition-colors flex justify-between items-center ${selectedScenarioId === s.id ? 'border-amber-500 text-amber-400 bg-amber-500/5' : 'border-slate-900 text-slate-500 hover:border-slate-800'}`}
+                      className={`w-full p-3 text-left text-xs font-bold border transition-colors flex justify-between items-center ${selectedScenarioId === s.id ? 'border-black text-slate-900 bg-white' : 'border-black/20 bg-white text-black hover:border-black/50'}`}
                     >
                       <span>{s.title}</span>
                       <ChevronRight size={12} />
@@ -493,19 +472,19 @@ export default function ProgramaEjecutivoPage() {
             </div>
 
             {/* Simulator Screen */}
-            <div className="lg:col-span-8 bg-slate-900 border border-slate-800 shadow-2xl flex flex-col min-h-[440px]">
+            <div className="lg:col-span-8 bg-white border border-slate-200 shadow-2xl flex flex-col min-h-[440px]">
               
-              <div className="p-4 bg-amber-500/10 border-b border-slate-850 text-amber-300 flex items-start gap-2.5 text-xs">
-                <AlertCircle size={16} className="shrink-0 mt-0.5 text-amber-500" />
+              <div className="p-4 bg-[#D4AF37]/20/10 border-b border-slate-800 text-amber-300 flex items-start gap-2.5 text-xs">
+                <AlertCircle size={16} className="shrink-0 mt-0.5 text-[#D4AF37]" />
                 <div>
                   <p className="font-extrabold uppercase text-[8px] tracking-wider text-amber-400 mb-0.5">Simulador Activo por Voz</p>
                   <p className="font-light">Usa tu micrófono real para probar esta demo. Si el navegador no tiene permisos o soporte, se aplicará una inferencia de simulación de respaldo.</p>
                 </div>
               </div>
 
-              <div className="p-3 bg-slate-950 border-b border-slate-850 flex items-center justify-between text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">
-                <span className="flex items-center gap-1.5"><Activity size={12} className="text-amber-500 animate-pulse" /> Audio Engine v4</span>
-                <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Active</span>
+              <div className="p-3 bg-slate-50 border-b border-slate-800 flex items-center justify-between text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">
+                <span className="flex items-center gap-1.5"><Activity size={12} className="text-[#D4AF37] animate-pulse" /> Audio Engine v4</span>
+                <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-none bg-white0" /> Active</span>
               </div>
 
               <div className="p-6 flex-1 flex flex-col justify-between">
@@ -513,18 +492,18 @@ export default function ProgramaEjecutivoPage() {
                 {!isSimulating && (
                   <div className="my-auto text-center space-y-5 py-4">
                     <div className="space-y-2">
-                      <h4 className="text-lg font-bold text-white">{currentScenario.title}</h4>
-                      <p className="text-slate-400 text-xs leading-relaxed max-w-md mx-auto">{currentScenario.situation}</p>
+                      <h4 className="text-lg font-bold text-slate-900">{currentScenario.title}</h4>
+                      <p className="text-slate-500 text-xs leading-relaxed max-w-md mx-auto">{currentScenario.situation}</p>
                     </div>
 
-                    <div className="p-3.5 bg-slate-950 border border-slate-850 text-left max-w-md mx-auto space-y-1">
-                      <p className="text-[9px] text-amber-450 font-black uppercase tracking-wider">Objetivo de la simulación:</p>
+                    <div className="p-3.5 bg-slate-50 border border-slate-800 text-left max-w-md mx-auto space-y-1">
+                      <p className="text-[9px] text-amber-400 font-black uppercase tracking-wider">Objetivo de la simulación:</p>
                       <p className="text-xs text-slate-300 text-center">"{currentScenario.prompt}"</p>
                     </div>
 
                     <button
                       onClick={startSimulation}
-                      className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 px-8 text-xs uppercase tracking-widest transition-all shadow-md active:scale-95"
+                      className="bg-[#D4AF37]/20 hover:bg-[#D4AF37]/20 text-[#050510] font-bold py-3 px-8 text-xs uppercase tracking-widest transition-all shadow-none active:scale-95"
                     >
                       Iniciar Caso de Simulación
                     </button>
@@ -535,52 +514,52 @@ export default function ProgramaEjecutivoPage() {
                   <div className="space-y-5">
                     <div className="space-y-1">
                       <span className="text-[8px] text-amber-400 font-black uppercase tracking-widest">Caso Activo</span>
-                      <h4 className="text-base font-bold text-white">{currentScenario.title}</h4>
+                      <h4 className="text-base font-bold text-slate-900">{currentScenario.title}</h4>
                     </div>
 
-                    <div className="p-4 bg-slate-950 border border-slate-800 space-y-2">
-                      <span className="text-[8px] text-slate-500 font-black uppercase tracking-wider block border-b border-slate-800 pb-1">Frase a Leer en Voz Alta:</span>
+                    <div className="p-4 bg-slate-50 border border-slate-200 space-y-2">
+                      <span className="text-[8px] text-slate-500 font-black uppercase tracking-wider block border-b border-slate-200 pb-1">Frase a Leer en Voz Alta:</span>
                       <p className="text-sm italic text-slate-200 leading-relaxed font-semibold">"{currentScenario.teleprompter}"</p>
                     </div>
 
                     {/* Mode Selector Tabs */}
-                    <div className="flex gap-2 p-1 bg-slate-950 border border-slate-850 max-w-xs mx-auto">
+                    <div className="flex gap-2 p-1 bg-slate-50 border border-slate-800 max-w-xs mx-auto">
                       <button
                         type="button"
                         disabled={!speechSupported}
                         onClick={() => setIsWrittenMode(false)}
-                        className={`flex-1 py-1 px-2 text-center text-[10px] font-bold uppercase transition-all ${!isWrittenMode ? 'bg-amber-500 text-slate-950 font-black' : 'text-slate-500 hover:text-slate-300 disabled:opacity-40'}`}
+                        className={`flex-1 py-1 px-2 text-center text-[10px] font-bold uppercase transition-all ${!isWrittenMode ? 'bg-[#D4AF37]/20 text-[#050510] font-black' : 'text-slate-500 hover:text-slate-300 disabled:opacity-40'}`}
                       >
                         Micrófono
                       </button>
                       <button
                         type="button"
                         onClick={() => setIsWrittenMode(true)}
-                        className={`flex-1 py-1 px-2 text-center text-[10px] font-bold uppercase transition-all ${isWrittenMode ? 'bg-amber-500 text-slate-950 font-black' : 'text-slate-500 hover:text-slate-300'}`}
+                        className={`flex-1 py-1 px-2 text-center text-[10px] font-bold uppercase transition-all ${isWrittenMode ? 'bg-[#D4AF37]/20 text-[#050510] font-black' : 'text-slate-500 hover:text-slate-300'}`}
                       >
                         Texto Escrito
                       </button>
                     </div>
 
                     {!isWrittenMode ? (
-                      <div className="flex flex-col items-center pt-4 border-t border-slate-850 space-y-3">
-                        <p className="text-[10px] text-slate-400 font-medium text-center">
+                      <div className="flex flex-col items-center pt-4 border-t border-slate-800 space-y-3">
+                        <p className="text-[10px] text-slate-500 font-medium text-center">
                           Haz clic en el botón de abajo, otorga permisos y lee la frase en voz alta:
                         </p>
                         <button
                           type="button"
                           onClick={startVoiceRecording}
-                          className="w-14 h-14 bg-red-500 hover:bg-red-650 text-white rounded-full flex items-center justify-center transition-all border-4 border-slate-850 hover:scale-105 active:scale-95"
+                          className="w-14 h-14 bg-[#D4AF37]/100 hover:bg-red-650 text-slate-900 rounded-none flex items-center justify-center transition-all border-4 border-slate-800 hover:scale-105 active:scale-95"
                           title="Comenzar Grabación de Voz"
                         >
                           <Mic size={20} />
                         </button>
                       </div>
                     ) : (
-                      <div className="space-y-4 pt-4 border-t border-slate-850">
-                        <p className="text-[10px] text-slate-400 font-medium">
+                      <div className="space-y-4 pt-4 border-t border-slate-800">
+                        <p className="text-[10px] text-slate-500 font-medium">
                           {!speechSupported && (
-                            <span className="text-amber-500 font-bold block mb-1">
+                            <span className="text-[#D4AF37] font-bold block mb-1">
                               ⚠️ El reconocimiento de voz no es compatible con tu navegador. Por favor ingresa el texto:
                             </span>
                           )}
@@ -591,13 +570,13 @@ export default function ProgramaEjecutivoPage() {
                           value={writtenText}
                           onChange={(e) => setWrittenText(e.target.value)}
                           placeholder="Escribe tu frase aquí..."
-                          className="w-full p-3 bg-slate-950 border border-slate-800 text-slate-200 text-xs focus:border-amber-500 outline-none font-mono"
+                          className="w-full p-3 bg-slate-50 border border-slate-200 text-slate-200 text-xs focus:border-[#D4AF37]/30 outline-none font-mono"
                         />
                         <div className="flex justify-end">
                           <button
                             type="button"
                             onClick={() => stopRecordingAndAnalyze(writtenText)}
-                            className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2.5 px-6 text-xs uppercase tracking-wider shadow-md"
+                            className="bg-[#D4AF37]/20 hover:bg-[#D4AF37]/20 text-[#050510] font-bold py-2.5 px-6 text-xs uppercase tracking-wider shadow-none"
                           >
                             Analizar Texto Escrito
                           </button>
@@ -611,21 +590,21 @@ export default function ProgramaEjecutivoPage() {
                   <div className="my-auto text-center space-y-6 py-6">
                     <div className="relative">
                       {/* Audio visualizer canvas element for real-time waveform */}
-                      <canvas id="audio-canvas" width="300" height="60" className="mx-auto bg-slate-950 border border-slate-850" />
+                      <canvas id="audio-canvas" width="300" height="60" className="mx-auto bg-slate-50 border border-slate-800" />
                     </div>
                     <div className="space-y-1">
-                      <h4 className="text-base font-bold text-white animate-pulse">Grabando tu voz... ({recordDuration}s)</h4>
-                      <p className="text-slate-400 text-[10px]">Habla ahora. El motor Web Audio está capturando las frecuencias.</p>
+                      <h4 className="text-base font-bold text-slate-900 animate-pulse">Grabando tu voz... ({recordDuration}s)</h4>
+                      <p className="text-slate-500 text-[10px]">Habla ahora. El motor Web Audio está capturando las frecuencias.</p>
                     </div>
                     <div className="text-[10px] text-red-400 font-bold uppercase tracking-widest flex items-center justify-center gap-1.5 font-mono">
-                      <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
+                      <span className="w-2 h-2 rounded-none bg-[#D4AF37]/100 animate-ping" />
                       MICROFONO ACTIVO - LEE EL TELEPROMPTER
                     </div>
                     <div className="pt-2">
                       <button
                         type="button"
                         onClick={stopRecordingManually}
-                        className="bg-red-650 hover:bg-red-750 text-white font-bold py-2 px-6 text-xs uppercase tracking-wider transition-colors shadow-md"
+                        className="bg-red-650 hover:bg-red-750 text-slate-900 font-bold py-2 px-6 text-xs uppercase tracking-wider transition-colors shadow-none"
                       >
                         Detener y Analizar
                       </button>
@@ -635,10 +614,10 @@ export default function ProgramaEjecutivoPage() {
 
                 {isSimulating && simulationStep === 2 && (
                   <div className="space-y-5">
-                    <div className="flex justify-between items-center border-b border-slate-855 pb-3">
+                    <div className="flex justify-between items-center border-b border-slate-800 pb-3">
                       <div>
                         <span className="text-[8px] text-emerald-400 font-black uppercase tracking-widest">Análisis Completado</span>
-                        <h4 className="text-base font-bold text-white">{currentScenario.title}</h4>
+                        <h4 className="text-base font-bold text-slate-900">{currentScenario.title}</h4>
                       </div>
                       <div className="text-right">
                         <p className="text-2xl font-black text-amber-400 font-mono">{computedMetrics.percentile}</p>
@@ -649,23 +628,23 @@ export default function ProgramaEjecutivoPage() {
                     <div className="grid grid-cols-2 gap-3 font-mono">
                       {[
                         { label: 'Fluency Accuracy (Ritmo WPM)', val: computedMetrics.fluency, color: 'text-emerald-400' },
-                        { label: 'Pronunciation Core', val: computedMetrics.accuracy, color: 'text-white' },
+                        { label: 'Pronunciation Core', val: computedMetrics.accuracy, color: 'text-slate-900' },
                         { label: 'Diplomacy Index', val: computedMetrics.diplomacy, color: 'text-amber-400' },
-                        { label: 'Filler Word Control', val: computedMetrics.fillerWords, color: 'text-white' }
+                        { label: 'Filler Word Control', val: computedMetrics.fillerWords, color: 'text-slate-900' }
                       ].map((m, i) => (
-                        <div key={i} className="p-2.5 bg-slate-950 border border-slate-850">
+                        <div key={i} className="p-2.5 bg-slate-50 border border-slate-800">
                           <p className="text-[8px] text-slate-500 font-bold uppercase">{m.label}</p>
                           <p className={`text-sm font-bold mt-1 ${m.color}`}>{m.val}</p>
                         </div>
                       ))}
                     </div>
 
-                    <div className="p-3 bg-slate-950 border border-slate-855 text-[11px] space-y-1.5 text-left">
+                    <div className="p-3 bg-slate-50 border border-slate-800 text-[11px] space-y-1.5 text-left">
                       <div>
                         <p className="text-[8px] text-slate-500 font-bold uppercase">Tu Transcripción Detectada:</p>
                         <p className="text-xs text-slate-200 italic">"{userTranscript}"</p>
                         {isFallback && (
-                          <p className="text-[9px] text-amber-500 font-bold mt-0.5">(Nota: Entrada de respaldo debido a falta de audio/permisos)</p>
+                          <p className="text-[9px] text-[#D4AF37] font-bold mt-0.5">(Nota: Entrada de respaldo debido a falta de audio/permisos)</p>
                         )}
                       </div>
                       <div>
@@ -674,16 +653,16 @@ export default function ProgramaEjecutivoPage() {
                       </div>
                     </div>
 
-                    <div className="flex gap-3 justify-end pt-3 border-t border-slate-850">
+                    <div className="flex gap-3 justify-end pt-3 border-t border-slate-800">
                       <button
                         onClick={() => { setSimulationStep(0); setIsSimulating(false); }}
-                        className="border border-slate-700 hover:border-slate-500 text-white font-bold py-2 px-5 text-[10px] uppercase transition-colors"
+                        className="border border-slate-700 hover:border-gray-500 text-slate-900 font-bold py-2 px-5 text-[10px] uppercase transition-colors"
                       >
                         Salir
                       </button>
                       <button
                         onClick={startSimulation}
-                        className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 px-5 text-[10px] uppercase transition-all shadow-md"
+                        className="bg-[#D4AF37]/20 hover:bg-[#D4AF37]/20 text-[#050510] font-bold py-2 px-5 text-[10px] uppercase transition-all shadow-none"
                       >
                         Reintentar
                       </button>
@@ -698,22 +677,22 @@ export default function ProgramaEjecutivoPage() {
         </div>
       </section>
 
-      {/* CURRICULUM SYLLABUS */}
-      <section className="py-20 px-6 bg-slate-900 border-t border-slate-855">
+      {/* CURRICULUM SYLLABUS (BLACK) */}
+      <section className="py-20 px-6 bg-slate-50 border-y border-black text-slate-900">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 space-y-2">
-            <span className="text-xs font-black text-amber-400 uppercase tracking-widest">Temario del Programa</span>
-            <h2 className="text-3xl font-bold text-white">60 Unidades de Especialización Directiva</h2>
-            <p className="text-slate-400 text-sm max-w-xl mx-auto">Cada módulo incluye simulaciones adaptativas específicas y análisis de vocabulario C-Suite.</p>
+            <span className="text-xs font-black text-[#D4AF37] uppercase tracking-widest">Temario del Programa</span>
+            <h2 className="text-3xl font-bold text-slate-900">60 Unidades de Especialización Directiva</h2>
+            <p className="text-slate-600 text-sm max-w-xl mx-auto">Cada módulo incluye simulaciones adaptativas específicas y análisis de vocabulario Alta Dirección.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {executiveUnits.map((u) => (
-              <div key={u.id} className="p-5 border border-slate-800 bg-slate-950/60 hover:border-amber-500/30 transition-all group flex gap-4">
-                <div className="text-xl font-black text-amber-500/20 group-hover:text-amber-500/40 transition-colors shrink-0">{u.id}</div>
+              <div key={u.id} className="p-5 border border-slate-200 bg-slate-50 hover:border-[#D4AF37] transition-all group flex gap-4">
+                <div className="text-xl font-black text-[#D4AF37]/50 group-hover:text-[#D4AF37] transition-colors shrink-0">{u.id}</div>
                 <div>
-                  <h4 className="text-sm font-bold text-white">{u.title}</h4>
-                  <p className="text-[11px] text-slate-500 leading-normal mt-1">{u.topic}</p>
+                  <h4 className="text-sm font-bold text-slate-900">{u.title}</h4>
+                  <p className="text-[11px] text-slate-600 leading-normal mt-1">{u.topic}</p>
                 </div>
               </div>
             ))}
@@ -721,33 +700,33 @@ export default function ProgramaEjecutivoPage() {
         </div>
       </section>
 
-      {/* ACCREDITATION */}
-      <section className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 blur-[120px] pointer-events-none rounded-none" />
+      {/* ACCREDITATION (WHITE) */}
+      <section className="py-20 px-6 relative overflow-hidden bg-white text-black">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#D4AF37]/10 blur-[120px] pointer-events-none rounded-none" />
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-5 space-y-6">
-              <span className="text-xs font-black text-amber-500 uppercase tracking-widest">Acreditación Oficial</span>
-              <h2 className="text-3xl font-bold text-white leading-tight">
+              <span className="text-xs font-black text-black uppercase tracking-widest bg-[#D4AF37] px-2 py-1">Acreditación Oficial</span>
+              <h2 className="text-3xl font-bold text-black leading-tight">
                 Certificación Directiva:<br />
-                <span className="bg-gradient-to-r from-amber-400 to-amber-250 bg-clip-text text-transparent">Executive Speech Standard</span>
+                <span className="text-[#D4AF37]">Executive Speech Standard</span>
               </h2>
-              <p className="text-slate-400 text-sm leading-relaxed font-light">
-                Al completar la currícula de 60 unidades, obtendrás la credencial digital respaldada por OnixCorp, verificable por departamentos de RH en la blockchain corporativa.
+              <p className="text-gray-600 text-sm leading-relaxed font-light">
+                Al completar la currícula de 60 unidades, obtendrás la credencial digital respaldada por OnixLingo, verificable por departamentos de RH en la blockchain corporativa.
               </p>
 
-              <ul className="space-y-3 text-xs text-slate-355 font-medium">
+              <ul className="space-y-3 text-xs text-gray-700 font-medium">
                 <li className="flex items-center gap-3">
-                  <CheckCircle2 size={16} className="text-amber-500 shrink-0" />
+                  <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0" />
                   <span>Alineado con el estándar C2 del MCER.</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <CheckCircle2 size={16} className="text-amber-500 shrink-0" />
+                  <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0" />
                   <span>Integración de un solo clic con LinkedIn.</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <CheckCircle2 size={16} className="text-amber-500 shrink-0" />
+                  <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0" />
                   <span>Acreditación verificable y auditable por terceros.</span>
                 </li>
               </ul>
@@ -755,55 +734,64 @@ export default function ProgramaEjecutivoPage() {
 
             {/* Certificate */}
             <div className="lg:col-span-7">
-              <div className="p-6 md:p-8 bg-slate-900 border border-amber-500/20 rounded-none shadow-2xl relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 blur-xl pointer-events-none rounded-none" />
+              <div className="p-6 md:p-8 bg-white border border-black rounded-none shadow-2xl relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-[#D4AF37]/10 blur-xl pointer-events-none rounded-none" />
                 
-                <div className="border border-amber-500/10 p-6 md:p-8 space-y-5 text-center bg-slate-950/80">
-                  <div className="flex justify-center mb-1">
-                    <div className="w-10 h-10 bg-amber-500/10 text-amber-500 flex items-center justify-center border border-amber-500/20">
-                      <Crown size={20} />
+                <div className="border-4 border-double border-slate-900 p-8 md:p-12 space-y-8 text-center bg-white relative">
+                  {/* Watermark-like background */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
+                    <Crown size={200} className="text-black" />
+                  </div>
+
+                  <div className="flex justify-center relative z-10">
+                    <div className="w-14 h-14 bg-white text-[#D4AF37] flex items-center justify-center border-2 border-slate-900 shadow-sm">
+                      <Crown size={28} />
                     </div>
                   </div>
 
-                  <div className="space-y-1">
-                    <p className="text-[9px] text-amber-500 font-bold uppercase tracking-wider">Acreditación Oficial</p>
-                    <h3 className="font-serif text-xl md:text-2xl text-white tracking-wide">Executive Speech Standard</h3>
+                  <div className="space-y-2 relative z-10">
+                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em]">Acreditación Oficial</p>
+                    <h3 className="font-serif text-3xl md:text-4xl text-slate-900 tracking-wide font-medium">Executive Speech Standard</h3>
                   </div>
 
-                  <div className="space-y-2">
-                    <p className="text-[9px] text-slate-500 font-bold uppercase">Otorgado a:</p>
-                    <p className="text-base font-bold text-white tracking-wide border-b border-slate-800 pb-1.5 max-w-xs mx-auto">Alejandro Pérez C.</p>
-                    <p className="text-[10px] text-slate-400 italic font-light max-w-sm mx-auto">
+                  <div className="space-y-4 relative z-10 py-4">
+                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Otorgado a:</p>
+                    <p className="font-serif text-3xl font-bold text-slate-900 tracking-widest border-b border-slate-300 pb-2 max-w-sm mx-auto">
+                      A. P. C.
+                    </p>
+                    <p className="text-xs text-slate-600 italic font-serif leading-relaxed max-w-md mx-auto">
                       "Por acreditar con excelencia las 60 unidades del simulador interactivo de oratoria de alta dirección internacional."
                     </p>
                   </div>
 
-                  <div className="flex justify-between items-center text-[8px] text-slate-500 font-mono pt-3 border-t border-slate-900">
-                    <div className="text-left">
-                      <p>CERTIFICADO ID: ONIX-839-C2</p>
-                      <p className="text-amber-500/50 font-semibold">VERIFICACIÓN: ACTIVA</p>
+                  <div className="flex justify-between items-end text-[9px] text-slate-600 font-mono pt-6 border-t border-slate-200 relative z-10">
+                    <div className="text-left space-y-1">
+                      <p className="tracking-widest">ID: ONIX-839-C2</p>
+                      <p className="text-slate-900 font-bold bg-[#D4AF37]/20 px-2 py-0.5 inline-block border border-[#D4AF37]">VERIFICACIÓN ACTIVA</p>
                     </div>
-                    <div className="text-right">
-                      <p>FECHA: MAYO 2026</p>
-                      <p>Accreditation Board</p>
+                    <div className="text-right space-y-1">
+                      <div className="border-b border-slate-400 pb-1 mb-1 px-4">
+                         <span className="font-script text-lg text-slate-800">O.L. Board</span>
+                      </div>
+                      <p className="tracking-widest">DIRECCIÓN ACADÉMICA</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] text-slate-400">
+                <div className="mt-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] text-gray-600">
                   <span className="font-semibold">Comparte tu acreditación:</span>
                   <div className="flex gap-2">
-                    <button onClick={() => setCertShared(true)} className="flex items-center gap-1.5 bg-[#0077b5] text-white py-1.5 px-3 hover:opacity-90 transition-all font-semibold rounded-none">
+                    <button onClick={() => setCertShared(true)} className="flex items-center gap-1.5 bg-white text-[#D4AF37] py-1.5 px-3 hover:opacity-90 transition-all font-semibold rounded-none">
                       LinkedIn
                     </button>
-                    <button onClick={() => setCertShared(true)} className="flex items-center gap-1.5 bg-[#1da1f2] text-white py-1.5 px-3 hover:opacity-90 transition-all font-semibold rounded-none">
+                    <button onClick={() => setCertShared(true)} className="flex items-center gap-1.5 bg-white text-[#D4AF37] py-1.5 px-3 hover:opacity-90 transition-all font-semibold rounded-none">
                       Twitter
                     </button>
                   </div>
                 </div>
 
                 {certShared && (
-                  <div className="mt-3 p-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-450 text-[10px] text-center font-medium">
+                  <div className="mt-3 p-2 bg-green-50 border border-green-200 text-green-700 text-[10px] text-center font-bold">
                     ✓ Credencial vinculada a tu cuenta con éxito.
                   </div>
                 )}
@@ -814,27 +802,27 @@ export default function ProgramaEjecutivoPage() {
         </div>
       </section>
 
-      {/* B2B FOOTER CALL TO ACTION */}
-      <section className="py-20 px-6 bg-slate-900 border-t border-slate-800 text-center relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
+      {/* B2B FOOTER CALL TO ACTION (GOLD 20%) */}
+      <section className="py-20 px-6 bg-[#D4AF37]/20 border-t border-black text-center relative overflow-hidden text-black">
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-white/10" />
         <div className="max-w-2xl mx-auto space-y-6">
-          <div className="w-10 h-10 bg-amber-500/10 border border-amber-500/20 text-amber-500 flex items-center justify-center mx-auto">
+          <div className="w-10 h-10 bg-white text-[#D4AF37] flex items-center justify-center mx-auto border border-black">
             <Building2 size={20} />
           </div>
           <div className="space-y-1">
-            <h2 className="text-2xl font-extrabold text-white">¿Implementación Corporativa?</h2>
-            <p className="text-slate-450 text-sm font-light leading-relaxed">
+            <h2 className="text-2xl font-extrabold text-black">¿Implementación Corporativa?</h2>
+            <p className="text-gray-700 text-sm font-medium leading-relaxed">
               Consigue licencias por volumen, control multi-tenant de analíticas, SSO y currícula personalizada de marca para tus equipos directivos.
             </p>
           </div>
           <div className="flex gap-3 justify-center">
             <Link href="/planes">
-              <button className="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 px-6 text-xs uppercase tracking-widest transition-colors shadow-md">
+              <button className="bg-white hover:bg-slate-50 text-[#D4AF37] font-bold py-3 px-6 text-xs uppercase tracking-widest transition-colors shadow-none border border-[#D4AF37]">
                 Ver Planes B2B
               </button>
             </Link>
             <Link href="/ventas">
-              <button className="bg-slate-950 border border-slate-800 text-slate-350 hover:text-white font-semibold py-3 px-6 text-xs uppercase tracking-widest transition-all">
+              <button className="bg-transparent border border-black text-black hover:bg-white hover:text-slate-900 font-semibold py-3 px-6 text-xs uppercase tracking-widest transition-all">
                 Contactar Ventas
               </button>
             </Link>
@@ -843,22 +831,7 @@ export default function ProgramaEjecutivoPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-slate-950 py-10 px-6 text-sm text-slate-500 border-t border-slate-900">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <span className="font-bold text-white">OnixLingo</span>
-          <div className="flex gap-6 font-medium flex-wrap">
-            <Link href="/planes" className="hover:text-amber-400 transition-colors">Planes</Link>
-            <Link href="/legal/privacy" className="hover:text-amber-400 transition-colors">Privacidad</Link>
-            <Link href="/legal/terms" className="hover:text-amber-400 transition-colors">Términos</Link>
-            <Link href="/legal/refunds" className="hover:text-amber-400 transition-colors">Reembolsos</Link>
-            <Link href="/legal/support" className="hover:text-amber-400 transition-colors">Soporte</Link>
-          </div>
-          <div className="text-left md:text-right text-xs space-y-1">
-            <p>© 2026 OnixuTechnology.</p>
-            <p className="text-[10px] text-slate-655 font-light">Pagos procesados por Paddle, nuestro Merchant of Record.</p>
-          </div>
-        </div>
-      </footer>
+      <LandingFooter />
 
     </div>
   );

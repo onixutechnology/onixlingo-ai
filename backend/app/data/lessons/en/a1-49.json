@@ -1,0 +1,101 @@
+{
+  "id": "a1-49",
+  "title": "Food & Drinks at Work",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Food", "Break"],
+  "completion_message": "¡Delicioso! Ya dominas el vocabulario de alimentos y bebidas para interactuar en la cafetería.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Comida y Bebidas",
+      "parts": [
+        { "visual": "Bebidas comunes en la oficina: Coffee (café), Tea (té), Water (agua).", "audio": "Common office drinks: Coffee, Tea, Water." },
+        { "visual": "Comidas rápidas: Sandwich (sándwich), Salad (ensalada), Snack (bocadillo). 'Lunch' es el almuerzo.", "audio": "Fast food: Sandwich, Salad, Snack. Lunch is the mid-day meal." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el alimento o bebida correcta.",
+      "questions": [
+        { "id": "a1-49-q1", "type": "quiz_choice", "question": "I need a cup of ____ to wake up.", "options": ["coffee", "cough", "coffin", "calf"], "correct_answer": "coffee", "explanation": "Café (coffee)." },
+        { "id": "a1-49-q2", "type": "quiz_choice", "question": "Do you want green ____ or black ____?", "options": ["tea", "tee", "sea", "pea"], "correct_answer": "tea", "explanation": "Té (tea)." },
+        { "id": "a1-49-q3", "type": "quiz_choice", "question": "Please drink more ____.", "options": ["water", "waiter", "weather", "whether"], "correct_answer": "water", "explanation": "Agua (water)." },
+        { "id": "a1-49-q4", "type": "quiz_choice", "question": "Let's go have ____ (almuerzo) at 1 PM.", "options": ["lunch", "launch", "lounge", "lump"], "correct_answer": "lunch", "explanation": "Almuerzo (lunch)." },
+        { "id": "a1-49-q5", "type": "quiz_choice", "question": "I brought a ____ from home (sándwich).", "options": ["sandwich", "sand", "sandwitch", "which"], "correct_answer": "sandwich", "explanation": "Sándwich (sandwich)." },
+        { "id": "a1-49-q6", "type": "quiz_choice", "question": "I am trying to eat a healthy ____ (ensalada).", "options": ["salad", "salt", "sell", "solid"], "correct_answer": "salad", "explanation": "Ensalada (salad)." },
+        { "id": "a1-49-q7", "type": "quiz_choice", "question": "I'm hungry. I need a ____.", "options": ["snack", "snake", "sneak", "sack"], "correct_answer": "snack", "explanation": "Bocadillo/Merienda (snack)." },
+        { "id": "a1-49-q8", "type": "quiz_choice", "question": "The ____ machine is empty.", "options": ["vending", "bending", "selling", "vend"], "correct_answer": "vending", "explanation": "Máquina expendedora (vending machine)." },
+        { "id": "a1-49-q9", "type": "quiz_choice", "question": "Do you want some ____ in your coffee? (azúcar)", "options": ["sugar", "salt", "soup", "sour"], "correct_answer": "sugar", "explanation": "Azúcar (sugar)." },
+        { "id": "a1-49-q10", "type": "quiz_choice", "question": "I take my coffee with milk and ____.", "options": ["sugar", "salt", "pepper", "spice"], "correct_answer": "sugar", "explanation": "Leche y azúcar (milk and sugar)." },
+        { "id": "a1-49-q11", "type": "quiz_choice", "question": "I don't drink ____, only tea. (café)", "options": ["coffee", "water", "juice", "milk"], "correct_answer": "coffee", "explanation": "Café." },
+        { "id": "a1-49-q12", "type": "quiz_choice", "question": "Can I have a glass of ____? (agua)", "options": ["water", "wine", "beer", "soda"], "correct_answer": "water", "explanation": "Agua." },
+        { "id": "a1-49-q13", "type": "quiz_choice", "question": "There is a box of ____ in the break room. (donas)", "options": ["donuts", "donuts'", "donut", "do"], "correct_answer": "donuts", "explanation": "Donas (donuts)." },
+        { "id": "a1-49-q14", "type": "quiz_choice", "question": "I eat an ____ every day. (manzana)", "options": ["apple", "banana", "orange", "grape"], "correct_answer": "apple", "explanation": "Manzana (apple)." },
+        { "id": "a1-49-q15", "type": "quiz_choice", "question": "Would you like some ____ juice? (naranja)", "options": ["orange", "apple", "grape", "tomato"], "correct_answer": "orange", "explanation": "Jugo de naranja." },
+        { "id": "a1-49-q16", "type": "quiz_choice", "question": "Let's heat the food in the ____.", "options": ["microwave", "micro", "stove", "oven"], "correct_answer": "microwave", "explanation": "Microondas." },
+        { "id": "a1-49-q17", "type": "quiz_choice", "question": "Put your lunch in the ____.", "options": ["fridge", "bridge", "microwave", "oven"], "correct_answer": "fridge", "explanation": "Refrigerador (fridge / refrigerator)." },
+        { "id": "a1-49-q18", "type": "quiz_choice", "question": "We are having pizza for ____.", "options": ["lunch", "lounge", "breakfast", "dinner"], "correct_answer": "lunch", "explanation": "Almuerzo." },
+        { "id": "a1-49-q19", "type": "quiz_choice", "question": "I am a vegetarian. I eat ____.", "options": ["vegetables", "meat", "beef", "chicken"], "correct_answer": "vegetables", "explanation": "Vegetales." },
+        { "id": "a1-49-q20", "type": "quiz_choice", "question": "Do you eat ____? (carne)", "options": ["meat", "meet", "met", "mate"], "correct_answer": "meat", "explanation": "Carne (meat)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de alimento o bebida exacta.",
+      "questions": [
+        { "id": "a1-49-f1", "type": "fill_input", "question": "A cup of ____ (Café).", "correct_answer": "coffee", "explanation": "Coffee." },
+        { "id": "a1-49-f2", "type": "fill_input", "question": "Green ____ (Té).", "correct_answer": "tea", "explanation": "Tea." },
+        { "id": "a1-49-f3", "type": "fill_input", "question": "Drink ____ (Agua).", "correct_answer": "water", "explanation": "Water." },
+        { "id": "a1-49-f4", "type": "fill_input", "question": "Have ____ (Almuerzo).", "correct_answer": "lunch", "explanation": "Lunch." },
+        { "id": "a1-49-f5", "type": "fill_input", "question": "A healthy ____ (Ensalada).", "correct_answer": "salad", "explanation": "Salad." },
+        { "id": "a1-49-f6", "type": "fill_input", "question": "A ____ (Sándwich).", "correct_answer": "sandwich", "explanation": "Sandwich." },
+        { "id": "a1-49-f7", "type": "fill_input", "question": "Milk and ____ (Azúcar).", "correct_answer": "sugar", "explanation": "Sugar." },
+        { "id": "a1-49-f8", "type": "fill_input", "question": "An ____ (Manzana).", "correct_answer": "apple", "explanation": "Apple." },
+        { "id": "a1-49-f9", "type": "fill_input", "question": "____ juice (Naranja).", "correct_answer": "orange", "explanation": "Orange." },
+        { "id": "a1-49-f10", "type": "fill_input", "question": "I need a ____ (Bocadillo).", "correct_answer": "snack", "explanation": "Snack." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-49-p1", "source": "Coffee", "target": "Café"},
+        {"id": "a1-49-p2", "source": "Tea", "target": "Té"},
+        {"id": "a1-49-p3", "source": "Water", "target": "Agua"},
+        {"id": "a1-49-p4", "source": "Lunch", "target": "Almuerzo"},
+        {"id": "a1-49-p5", "source": "Salad", "target": "Ensalada"},
+        {"id": "a1-49-p6", "source": "Sandwich", "target": "Sándwich"},
+        {"id": "a1-49-p7", "source": "Snack", "target": "Bocadillo"},
+        {"id": "a1-49-p8", "source": "Sugar", "target": "Azúcar"},
+        {"id": "a1-49-p9", "source": "Fridge", "target": "Refrigerador"},
+        {"id": "a1-49-p10", "source": "Microwave", "target": "Microondas"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-49-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A cup of coffee.", "options": ["A cup of coffee.", "A cup of tea.", "A glass of water.", "A cup of milk."], "correct_answer": "A cup of coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-49-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I drink tea.", "options": ["I drink tea.", "I drink water.", "He drinks tea.", "I drank tea."], "correct_answer": "I drink tea.", "explanation": "Audio exacto." },
+        { "id": "a1-49-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A glass of water.", "options": ["A glass of water.", "A cup of water.", "A bottle of water.", "Some water."], "correct_answer": "A glass of water.", "explanation": "Audio exacto." },
+        { "id": "a1-49-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's have lunch.", "options": ["Let's have lunch.", "Let's eat lunch.", "He has lunch.", "Let's go lunch."], "correct_answer": "Let's have lunch.", "explanation": "Audio exacto." },
+        { "id": "a1-49-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I want a sandwich.", "options": ["I want a sandwich.", "I want a salad.", "He wants a sandwich.", "I eat a sandwich."], "correct_answer": "I want a sandwich.", "explanation": "Audio exacto." },
+        { "id": "a1-49-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A healthy salad.", "options": ["A healthy salad.", "A healthy sandwich.", "A big salad.", "A fresh salad."], "correct_answer": "A healthy salad.", "explanation": "Audio exacto." },
+        { "id": "a1-49-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need a snack.", "options": ["I need a snack.", "I want a snack.", "He needs a snack.", "I need my snack."], "correct_answer": "I need a snack.", "explanation": "Audio exacto." },
+        { "id": "a1-49-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Milk and sugar.", "options": ["Milk and sugar.", "Milk and coffee.", "Water and sugar.", "Tea and sugar."], "correct_answer": "Milk and sugar.", "explanation": "Audio exacto." },
+        { "id": "a1-49-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Put it in the fridge.", "options": ["Put it in the fridge.", "Put it in the microwave.", "Put it on the desk.", "Put it in the bag."], "correct_answer": "Put it in the fridge.", "explanation": "Audio exacto." },
+        { "id": "a1-49-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Orange juice.", "options": ["Orange juice.", "Apple juice.", "Orange fruit.", "Grape juice."], "correct_answer": "Orange juice.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

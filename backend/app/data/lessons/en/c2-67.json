@@ -1,0 +1,101 @@
+{
+  "id": "c2-67",
+  "title": "Advanced Finance",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Finance", "Business", "Wall Street"],
+  "completion_message": "¡Excelente! Hablar de dinero a nivel corporativo no se trata solo de ingresos y gastos. Ahora conoces la jerga de Wall Street, los rescates financieros y cómo se mueve el capital en el mundo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Finanzas Avanzadas y Wall Street (C2)",
+      "parts": [
+        { "visual": "El vocabulario de la bolsa de valores y la banca de inversión. \n\n1. Bear market / Bull market (Mercado bajista / alcista): \n- Un 'Bear market' es cuando los precios de las acciones caen. Un 'Bull market' es cuando suben. \nEj: Investors lost millions during the BEAR MARKET of 2008. \n\n2. Blue-chip stock (Acción de primera línea): \n- Acciones de empresas gigantes, estables y seguras (como Apple o Coca-Cola). \nEj: She only invests her retirement money in BLUE-CHIP STOCKS. \n\n3. Dividend (Dividendo): \n- Una parte de las ganancias de la empresa que se paga a los accionistas. \nEj: The company pays a quarterly DIVIDEND of $2 per share.", "audio": "Welcome to Advanced Finance and Wall Street. Number 1: Bear market and Bull market. A bear market is a period when stock prices fall, and people are pessimistic. A bull market is when prices are rising. For example: Investors lost millions during the BEAR MARKET of 2008. Number 2: Blue-chip stock. These are shares in giant, financially stable, and reliable companies, like Apple or Coca-Cola. For example: She only invests her retirement money in BLUE-CHIP STOCKS. Number 3: Dividend. A sum of money paid regularly by a company to its shareholders out of its profits. For example: The company pays a quarterly DIVIDEND of $2 per share." },
+        { "visual": "4. Bailout (Rescate financiero): \n- Cuando el gobierno da dinero a una empresa en quiebra para salvarla. \nEj: The bank received a $10 billion BAILOUT from the government. \n\n5. Liquidate (Liquidar): \n- Vender todos los activos de una empresa para pagar deudas y cerrarla. \nEj: The store is bankrupt, so they will LIQUIDATE all inventory. \n\n6. Capital gains (Ganancias de capital): \n- Las ganancias obtenidas al vender un activo (como acciones o casas) a un precio mayor del que costó. \nEj: You have to pay a 15% tax on your CAPITAL GAINS. \n\n7. Venture capital (Capital de riesgo): \n- Dinero invertido en startups tecnológicas con alto riesgo pero gran potencial. \nEj: The startup raised $5 million in VENTURE CAPITAL.", "audio": "Number 4: Bailout. When the government or another organization gives financial assistance to a failing business to save it from collapse. For example: The bank received a $10 billion BAILOUT from the government. Number 5: Liquidate. To sell off a company's assets, usually to pay debts when closing down. For example: The store is bankrupt, so they will LIQUIDATE all inventory. Number 6: Capital gains. The profit earned from the sale of an asset like stocks or real estate. For example: You have to pay a 15% tax on your CAPITAL GAINS. Number 7: Venture capital. Money invested in new, risky startups that have high growth potential. For example: The startup raised $5 million in VENTURE CAPITAL." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término financiero correcto.",
+      "questions": [
+        { "id": "c2-67-q1", "type": "quiz_choice", "question": "Prices are falling, unemployment is up, and investors are scared. We are officially in a ____ market. (Mercado bajista).", "options": ["bear", "bull", "lion", "wolf"], "correct_answer": "bear", "explanation": "Bear market = mercado a la baja." },
+        { "id": "c2-67-q2", "type": "quiz_choice", "question": "The economy is booming and stock prices hit record highs every day. It's a strong ____ market. (Mercado alcista).", "options": ["bull", "bear", "eagle", "tiger"], "correct_answer": "bull", "explanation": "Bull market = mercado al alza." },
+        { "id": "c2-67-q3", "type": "quiz_choice", "question": "Investors love this company because every three months it pays a large ____ to its shareholders. (Dividendo).", "options": ["dividend", "bonus", "reward", "fee"], "correct_answer": "dividend", "explanation": "Dividend = dividendo (parte de las ganancias pagada a los accionistas)." },
+        { "id": "c2-67-q4", "type": "quiz_choice", "question": "Microsoft and Johnson & Johnson are considered ____-chip stocks because they are large, stable, and historically profitable. (De primera línea).", "options": ["blue", "red", "gold", "green"], "correct_answer": "blue", "explanation": "Blue-chip stock = acciones de empresas gigantes y seguras." },
+        { "id": "c2-67-q5", "type": "quiz_choice", "question": "During the 2008 crisis, the US government had to give the banks a massive ____ to prevent a total economic collapse. (Rescate).", "options": ["bailout", "handout", "sellout", "buyout"], "correct_answer": "bailout", "explanation": "Bailout = rescate financiero del gobierno." },
+        { "id": "c2-67-q6", "type": "quiz_choice", "question": "The company has failed. We must ____ our assets, sell the office furniture, and pay off our debts. (Liquidar).", "options": ["liquidate", "solidify", "vaporize", "freeze"], "correct_answer": "liquidate", "explanation": "Liquidate = liquidar activos (vender todo para pagar deudas)." },
+        { "id": "c2-67-q7", "type": "quiz_choice", "question": "I bought the stock for $10 and sold it for $50. I must pay taxes on my $40 capital ____. (Ganancia de capital).", "options": ["gains", "profits", "wins", "revenues"], "correct_answer": "gains", "explanation": "Capital gains = ganancias de capital (la diferencia positiva entre compra y venta de activos)." },
+        { "id": "c2-67-q8", "type": "quiz_choice", "question": "Silicon Valley is famous for ____ capital, where firms invest millions in risky, early-stage tech startups. (Capital de riesgo).", "options": ["venture", "adventure", "risk", "danger"], "correct_answer": "venture", "explanation": "Venture capital (VC) = capital de riesgo." },
+        { "id": "c2-67-q9", "type": "quiz_choice", "question": "A person who provides capital for a business start-up, usually in exchange for convertible debt or ownership equity, is an ____ investor.", "options": ["angel", "saint", "hero", "god"], "correct_answer": "angel", "explanation": "Angel investor = inversor ángel (invierte su propio dinero al principio de una startup)." },
+        { "id": "c2-67-q10", "type": "quiz_choice", "question": "When a private company first sells shares to the public on the stock market, it is called an ____ (Initial Public Offering).", "options": ["IPO", "IOP", "OPI", "POI"], "correct_answer": "IPO", "explanation": "IPO = Initial Public Offering (Oferta Pública Inicial)." },
+        { "id": "c2-67-q11", "type": "quiz_choice", "question": "To bet that a stock's price will go DOWN, so you borrow shares, sell them, and buy them back cheaper later. This is called ____ selling.", "options": ["short", "long", "low", "down"], "correct_answer": "short", "explanation": "Short selling (o 'shorting a stock') = apostar en corto (apostar a que el precio caerá)." },
+        { "id": "c2-67-q12", "type": "quiz_choice", "question": "A group of investments held by a person or a company is their financial ____. (Portafolio/Cartera).", "options": ["portfolio", "wallet", "folder", "basket"], "correct_answer": "portfolio", "explanation": "Portfolio = cartera de inversiones." },
+        { "id": "c2-67-q13", "type": "quiz_choice", "question": "To spread your investments around so you don't lose everything if one company fails. 'Don't put all your eggs in one basket.' This is ____. (Diversificación).", "options": ["diversification", "multiplication", "expansion", "division"], "correct_answer": "diversification", "explanation": "Diversification = diversificación." },
+        { "id": "c2-67-q14", "type": "quiz_choice", "question": "An asset that can be quickly converted into cash without losing value is a ____ asset. (Líquido).", "options": ["liquid", "solid", "fluid", "gas"], "correct_answer": "liquid", "explanation": "Liquid asset = activo líquido (dinero en efectivo o fácil de vender)." },
+        { "id": "c2-67-q15", "type": "quiz_choice", "question": "A measurement of how much the price of a stock fluctuates. High ____ means it is very risky and jumps up and down. (Volatilidad).", "options": ["volatility", "velocity", "stability", "agility"], "correct_answer": "volatility", "explanation": "Volatility = volatilidad." },
+        { "id": "c2-67-q16", "type": "quiz_choice", "question": "To buy a controlling interest in another company is an ____. (Adquisición).", "options": ["acquisition", "inquisition", "requisition", "addition"], "correct_answer": "acquisition", "explanation": "Acquisition = adquisición (la 'A' en M&A - Mergers & Acquisitions)." },
+        { "id": "c2-67-q17", "type": "quiz_choice", "question": "A loan taken out to buy property or real estate is a ____. (Hipoteca).", "options": ["mortgage", "pledge", "debt", "bond"], "correct_answer": "mortgage", "explanation": "Mortgage = hipoteca (la 't' no se pronuncia: MOR-gij)." },
+        { "id": "c2-67-q18", "type": "quiz_choice", "question": "The percentage charged by a lender to a borrower for the use of money is the ____ rate. (Tasa de interés).", "options": ["interest", "penalty", "profit", "fee"], "correct_answer": "interest", "explanation": "Interest rate = tasa de interés." },
+        { "id": "c2-67-q19", "type": "quiz_choice", "question": "A general increase in prices and fall in the purchasing value of money is ____. (Inflación).", "options": ["inflation", "deflation", "expansion", "growth"], "correct_answer": "inflation", "explanation": "Inflation = inflación." },
+        { "id": "c2-67-q20", "type": "quiz_choice", "question": "A prolonged period of economic decline, generally identified by a fall in GDP in two successive quarters, is a ____. (Recesión).", "options": ["recession", "depression", "compression", "regression"], "correct_answer": "recession", "explanation": "Recession = recesión económica." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave de finanzas.",
+      "questions": [
+        { "id": "c2-67-f1", "type": "fill_input", "question": "A ____ market. (Mercado bajista con B)", "correct_answer": "bear", "explanation": "bear." },
+        { "id": "c2-67-f2", "type": "fill_input", "question": "A ____ market. (Mercado alcista con B)", "correct_answer": "bull", "explanation": "bull." },
+        { "id": "c2-67-f3", "type": "fill_input", "question": "Quarterly ____. (Dividendos con D)", "correct_answer": "dividends", "explanation": "dividends." },
+        { "id": "c2-67-f4", "type": "fill_input", "question": "____-chip stocks. (Acciones de gigantes seguros con B)", "correct_answer": "Blue", "explanation": "Blue." },
+        { "id": "c2-67-f5", "type": "fill_input", "question": "Government ____. (Rescate financiero con B)", "correct_answer": "bailout", "explanation": "bailout." },
+        { "id": "c2-67-f6", "type": "fill_input", "question": "____ the assets. (Liquidar con L)", "correct_answer": "Liquidate", "explanation": "Liquidate." },
+        { "id": "c2-67-f7", "type": "fill_input", "question": "Capital ____. (Ganancias de inversión con G)", "correct_answer": "gains", "explanation": "gains." },
+        { "id": "c2-67-f8", "type": "fill_input", "question": "____ capital. (Capital de riesgo con V)", "correct_answer": "Venture", "explanation": "Venture." },
+        { "id": "c2-67-f9", "type": "fill_input", "question": "An ____ investor. (Inversor ángel con A)", "correct_answer": "angel", "explanation": "angel." },
+        { "id": "c2-67-f10", "type": "fill_input", "question": "An ____ (Initial Public Offering). (Oferta Pública Inicial con I)", "correct_answer": "IPO", "explanation": "IPO." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Finance Match",
+      "pairs": [
+        {"id": "c2-67-p1", "source": "Bear market", "target": "Mercado bajista (pesimista)"},
+        {"id": "c2-67-p2", "source": "Bull market", "target": "Mercado alcista (optimista)"},
+        {"id": "c2-67-p3", "source": "Blue-chip stock", "target": "Acciones de empresas grandes y estables"},
+        {"id": "c2-67-p4", "source": "Dividend", "target": "Reparto de ganancias a accionistas"},
+        {"id": "c2-67-p5", "source": "Bailout", "target": "Rescate financiero del gobierno"},
+        {"id": "c2-67-p6", "source": "Liquidate", "target": "Vender activos para cerrar la empresa"},
+        {"id": "c2-67-p7", "source": "Capital gains", "target": "Ganancias por venta de activos"},
+        {"id": "c2-67-p8", "source": "Venture capital", "target": "Capital de riesgo para startups"},
+        {"id": "c2-67-p9", "source": "IPO", "target": "Lanzamiento a la bolsa de valores"},
+        {"id": "c2-67-p10", "source": "Mortgage", "target": "Préstamo hipotecario"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase financiera.",
+      "questions": [
+        { "id": "c2-67-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are in a bear market.", "options": ["We are in a bear market.", "They are in a bear market.", "We were in a bear market.", "We are in the bear market."], "correct_answer": "We are in a bear market.", "explanation": "Audio exacto." },
+        { "id": "c2-67-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a bull market.", "options": ["It is a bull market.", "This is a bull market.", "It was a bull market.", "It is the bull market."], "correct_answer": "It is a bull market.", "explanation": "Audio exacto." },
+        { "id": "c2-67-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They pay a quarterly dividend.", "options": ["They pay a quarterly dividend.", "We pay a quarterly dividend.", "They paid a quarterly dividend.", "They pay a quarter dividend."], "correct_answer": "They pay a quarterly dividend.", "explanation": "Audio exacto." },
+        { "id": "c2-67-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Invest in blue-chip stocks.", "options": ["Invest in blue-chip stocks.", "Invest in a blue-chip stock.", "Invested in blue-chip stocks.", "Investing in blue-chip stocks."], "correct_answer": "Invest in blue-chip stocks.", "explanation": "Audio exacto." },
+        { "id": "c2-67-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The bank needs a bailout.", "options": ["The bank needs a bailout.", "The bank needed a bailout.", "This bank needs a bailout.", "The bank needs the bailout."], "correct_answer": "The bank needs a bailout.", "explanation": "Audio exacto." },
+        { "id": "c2-67-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must liquidate all assets.", "options": ["We must liquidate all assets.", "They must liquidate all assets.", "We must liquidate the assets.", "We must liquidating all assets."], "correct_answer": "We must liquidate all assets.", "explanation": "Audio exacto." },
+        { "id": "c2-67-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Taxes on capital gains.", "options": ["Taxes on capital gains.", "Tax on capital gains.", "Taxes on capital gain.", "Taxes on the capital gains."], "correct_answer": "Taxes on capital gains.", "explanation": "Audio exacto." },
+        { "id": "c2-67-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We raised venture capital.", "options": ["We raised venture capital.", "They raised venture capital.", "We raise venture capital.", "We raised the venture capital."], "correct_answer": "We raised venture capital.", "explanation": "Audio exacto." },
+        { "id": "c2-67-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The IPO was a success.", "options": ["The IPO was a success.", "The IPO is a success.", "An IPO was a success.", "The IPO was successful."], "correct_answer": "The IPO was a success.", "explanation": "Audio exacto." },
+        { "id": "c2-67-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Pay your mortgage on time.", "options": ["Pay your mortgage on time.", "Paid your mortgage on time.", "Pay the mortgage on time.", "Paying your mortgage on time."], "correct_answer": "Pay your mortgage on time.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

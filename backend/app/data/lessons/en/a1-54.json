@@ -1,0 +1,101 @@
+{
+  "id": "a1-54",
+  "title": "Using 'Can' for Permission",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Modals", "Permission"],
+  "completion_message": "¡Excelente! Has aprendido a pedir y dar permiso de forma educada en la oficina usando 'Can'.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Permiso con 'Can'",
+      "parts": [
+        { "visual": "Usamos 'Can I...?' para pedir permiso: 'Can I leave early?' (¿Puedo salir temprano?).", "audio": "We use Can I...? to ask for permission: Can I leave early?" },
+        { "visual": "Para dar permiso: 'Yes, you can'. Para denegar: 'No, you can't'.", "audio": "To give permission: Yes, you can. To deny: No, you can't." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta de usar 'can' para permiso.",
+      "questions": [
+        { "id": "a1-54-q1", "type": "quiz_choice", "question": "____ I use your pen, please?", "options": ["Can", "Do", "Am", "Have"], "correct_answer": "Can", "explanation": "Para pedir permiso (Can I...?)." },
+        { "id": "a1-54-q2", "type": "quiz_choice", "question": "Can I ____ early today? I have a doctor's appointment.", "options": ["leave", "leaves", "leaving", "to leave"], "correct_answer": "leave", "explanation": "Salir/irse (leave) en forma base después de can." },
+        { "id": "a1-54-q3", "type": "quiz_choice", "question": "Yes, you ____.", "options": ["can", "do", "are", "have"], "correct_answer": "can", "explanation": "Dando permiso (Yes, you can)." },
+        { "id": "a1-54-q4", "type": "quiz_choice", "question": "No, you ____. The meeting is important.", "options": ["can't", "don't", "aren't", "haven't"], "correct_answer": "can't", "explanation": "Denegando permiso (No, you can't)." },
+        { "id": "a1-54-q5", "type": "quiz_choice", "question": "Can we ____ a break now?", "options": ["take", "takes", "taking", "to take"], "correct_answer": "take", "explanation": "Tomar un descanso (take a break)." },
+        { "id": "a1-54-q6", "type": "quiz_choice", "question": "____ I open the window?", "options": ["Can", "Does", "Am", "Are"], "correct_answer": "Can", "explanation": "Pidiendo permiso para abrir la ventana." },
+        { "id": "a1-54-q7", "type": "quiz_choice", "question": "Can I ____ a question?", "options": ["ask", "asks", "asking", "to ask"], "correct_answer": "ask", "explanation": "Hacer una pregunta (ask a question)." },
+        { "id": "a1-54-q8", "type": "quiz_choice", "question": "Can she ____ from home on Friday?", "options": ["work", "works", "working", "to work"], "correct_answer": "work", "explanation": "Trabajar desde casa (work from home)." },
+        { "id": "a1-54-q9", "type": "quiz_choice", "question": "____ we start the meeting now?", "options": ["Can", "Do", "Are", "Have"], "correct_answer": "Can", "explanation": "¿Podemos empezar? (Can we start...?)." },
+        { "id": "a1-54-q10", "type": "quiz_choice", "question": "Can I ____ here? (sentarme)", "options": ["sit", "sits", "sitting", "seat"], "correct_answer": "sit", "explanation": "Sentarse (sit)." },
+        { "id": "a1-54-q11", "type": "quiz_choice", "question": "Can I ____ this file? (borrar)", "options": ["delete", "deletes", "deleting", "to delete"], "correct_answer": "delete", "explanation": "Borrar (delete)." },
+        { "id": "a1-54-q12", "type": "quiz_choice", "question": "Can you ____ me the report? (pasar/entregar)", "options": ["pass", "passes", "passing", "to pass"], "correct_answer": "pass", "explanation": "Pasar (pass)." },
+        { "id": "a1-54-q13", "type": "quiz_choice", "question": "Can I ____ you later? (llamar)", "options": ["call", "calls", "calling", "to call"], "correct_answer": "call", "explanation": "Llamar (call)." },
+        { "id": "a1-54-q14", "type": "quiz_choice", "question": "Can we ____ the date? (cambiar)", "options": ["change", "changes", "changing", "to change"], "correct_answer": "change", "explanation": "Cambiar (change)." },
+        { "id": "a1-54-q15", "type": "quiz_choice", "question": "Of course you ____.", "options": ["can", "do", "will", "are"], "correct_answer": "can", "explanation": "Por supuesto que puedes (Of course you can)." },
+        { "id": "a1-54-q16", "type": "quiz_choice", "question": "Can I ____ your computer?", "options": ["use", "uses", "using", "to use"], "correct_answer": "use", "explanation": "Usar (use)." },
+        { "id": "a1-54-q17", "type": "quiz_choice", "question": "Can they ____ the room?", "options": ["enter", "enters", "entering", "to enter"], "correct_answer": "enter", "explanation": "Entrar (enter)." },
+        { "id": "a1-54-q18", "type": "quiz_choice", "question": "Can I ____ to the manager? (hablar)", "options": ["speak", "speaks", "speaking", "to speak"], "correct_answer": "speak", "explanation": "Hablar (speak)." },
+        { "id": "a1-54-q19", "type": "quiz_choice", "question": "Sorry, you ____. It's confidential.", "options": ["can't", "don't", "not", "aren't"], "correct_answer": "can't", "explanation": "Denegación educada (Sorry, you can't)." },
+        { "id": "a1-54-q20", "type": "quiz_choice", "question": "Can I ____ some water? (tener/tomar)", "options": ["have", "has", "having", "to have"], "correct_answer": "have", "explanation": "Can I have...? (¿Me da/Puedo tomar...?)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe can, can't o el verbo en forma base.",
+      "questions": [
+        { "id": "a1-54-f1", "type": "fill_input", "question": "____ I use your pen? (¿Puedo?).", "correct_answer": "Can", "explanation": "Can." },
+        { "id": "a1-54-f2", "type": "fill_input", "question": "Can I ____ early? (Salir/irse).", "correct_answer": "leave", "explanation": "leave." },
+        { "id": "a1-54-f3", "type": "fill_input", "question": "Yes, you ____ (Puedes).", "correct_answer": "can", "explanation": "can." },
+        { "id": "a1-54-f4", "type": "fill_input", "question": "No, you ____ (No puedes, contraído).", "correct_answer": "can't", "explanation": "can't." },
+        { "id": "a1-54-f5", "type": "fill_input", "question": "Can we ____ a break? (Tomar).", "correct_answer": "take", "explanation": "take." },
+        { "id": "a1-54-f6", "type": "fill_input", "question": "____ I ask a question? (¿Puedo?).", "correct_answer": "Can", "explanation": "Can." },
+        { "id": "a1-54-f7", "type": "fill_input", "question": "Can I ____ here? (Sentarme).", "correct_answer": "sit", "explanation": "sit." },
+        { "id": "a1-54-f8", "type": "fill_input", "question": "Can I ____ you later? (Llamar).", "correct_answer": "call", "explanation": "call." },
+        { "id": "a1-54-f9", "type": "fill_input", "question": "Can we ____ the date? (Cambiar).", "correct_answer": "change", "explanation": "change." },
+        { "id": "a1-54-f10", "type": "fill_input", "question": "Sorry, you ____ (No puedes).", "correct_answer": "can't", "explanation": "can't." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-54-p1", "source": "Can I...?", "target": "¿Puedo yo...?"},
+        {"id": "a1-54-p2", "source": "Can we...?", "target": "¿Podemos nosotros...?"},
+        {"id": "a1-54-p3", "source": "Yes, you can", "target": "Sí, puedes"},
+        {"id": "a1-54-p4", "source": "No, you can't", "target": "No, no puedes"},
+        {"id": "a1-54-p5", "source": "Leave early", "target": "Salir temprano"},
+        {"id": "a1-54-p6", "source": "Take a break", "target": "Tomar un descanso"},
+        {"id": "a1-54-p7", "source": "Ask a question", "target": "Hacer una pregunta"},
+        {"id": "a1-54-p8", "source": "Use your pen", "target": "Usar tu bolígrafo"},
+        {"id": "a1-54-p9", "source": "Sit here", "target": "Sentarme aquí"},
+        {"id": "a1-54-p10", "source": "Change the date", "target": "Cambiar la fecha"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-54-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I leave early?", "options": ["Can I leave early?", "Can I arrive early?", "Can you leave early?", "Can we leave early?"], "correct_answer": "Can I leave early?", "explanation": "Audio exacto." },
+        { "id": "a1-54-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Yes, you can.", "options": ["Yes, you can.", "Yes, I can.", "Yes, we can.", "No, you can't."], "correct_answer": "Yes, you can.", "explanation": "Audio exacto." },
+        { "id": "a1-54-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "No, you can't.", "options": ["No, you can't.", "Yes, you can.", "No, I can't.", "No, he can't."], "correct_answer": "No, you can't.", "explanation": "Audio exacto." },
+        { "id": "a1-54-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can we take a break?", "options": ["Can we take a break?", "Can I take a break?", "Can you take a break?", "Do we take a break?"], "correct_answer": "Can we take a break?", "explanation": "Audio exacto." },
+        { "id": "a1-54-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I ask a question?", "options": ["Can I ask a question?", "Can you ask a question?", "Can we ask a question?", "Can I answer a question?"], "correct_answer": "Can I ask a question?", "explanation": "Audio exacto." },
+        { "id": "a1-54-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I sit here?", "options": ["Can I sit here?", "Can you sit here?", "Can I wait here?", "Can we sit here?"], "correct_answer": "Can I sit here?", "explanation": "Audio exacto." },
+        { "id": "a1-54-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I call you later?", "options": ["Can I call you later?", "Can you call me later?", "Can we call later?", "Can I talk to you later?"], "correct_answer": "Can I call you later?", "explanation": "Audio exacto." },
+        { "id": "a1-54-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can we change the date?", "options": ["Can we change the date?", "Can I change the date?", "Can you change the date?", "Can we check the date?"], "correct_answer": "Can we change the date?", "explanation": "Audio exacto." },
+        { "id": "a1-54-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I use your computer?", "options": ["Can I use your computer?", "Can you use my computer?", "Can I see your computer?", "Can we use the computer?"], "correct_answer": "Can I use your computer?", "explanation": "Audio exacto." },
+        { "id": "a1-54-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I have some water?", "options": ["Can I have some water?", "Can you have some water?", "Can we have some water?", "Can I drink some water?"], "correct_answer": "Can I have some water?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

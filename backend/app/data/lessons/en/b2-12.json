@@ -1,0 +1,101 @@
+{
+  "id": "b2-12",
+  "title": "Modals of Deduction",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Modals", "Business"],
+  "completion_message": "¡Perfecto! Ahora puedes sacar conclusiones y hacer deducciones profesionales sobre eventos del pasado usando Modales de Deducción.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Modales de Deducción en el Pasado",
+      "parts": [
+        { "visual": "Usamos modales en pasado (Modal + have + participio) para hacer deducciones sobre cosas que ya pasaron. \n- Must have (Debe haber / Seguro que): Cuando estás 99% seguro de que algo ocurrió. \nEj: He MUST HAVE SIGNED the contract. (Seguro que firmó / Debe haber firmado).", "audio": "We use past modals, structure: Modal plus 'have' plus past participle, to make deductions about things that already happened. 'Must have' is used when you are 99% sure that something happened. For example: He must have signed the contract." },
+        { "visual": "- Might have / May have / Could have (Podría haber / Tal vez): Cuando es posible, pero no estás seguro. \nEj: They MIGHT HAVE LOST the file. (Tal vez perdieron el archivo). \n- Can't have / Couldn't have (No puede haber / Es imposible que): Cuando estás 99% seguro de que algo NO ocurrió. \nEj: She COULDN'T HAVE STOLEN the money. (Es imposible que ella haya robado el dinero).", "audio": "Might have, may have, or could have, are used when it's possible, but you are not sure. For example: They might have lost the file. Can't have or couldn't have, are used when you are 99% sure that something did NOT happen. For example: She couldn't have stolen the money." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el modal de deducción correcto basado en el contexto.",
+      "questions": [
+        { "id": "b2-12-q1", "type": "quiz_choice", "question": "The boss is very angry. He ____ found out about the mistake. (Seguro que / Debe haberse enterado).", "options": ["must have", "can't have", "might have", "should have"], "correct_answer": "must have", "explanation": "Must have: alta certeza de que ocurrió (porque está muy enojado)." },
+        { "id": "b2-12-q2", "type": "quiz_choice", "question": "She ____ stolen the data! She was on vacation in Paris all week. (Es imposible que haya).", "options": ["couldn't have", "must have", "might have", "should have"], "correct_answer": "couldn't have", "explanation": "Couldn't have: alta certeza de que NO ocurrió (estaba en París)." },
+        { "id": "b2-12-q3", "type": "quiz_choice", "question": "I can't find my USB drive. I ____ left it at home, but I'm not sure. (Tal vez / Podría haber).", "options": ["might have", "must have", "can't have", "will have"], "correct_answer": "might have", "explanation": "Might have: posibilidad, pero no hay seguridad ('I'm not sure')." },
+        { "id": "b2-12-q4", "type": "quiz_choice", "question": "They didn't win the contract. They ____ offered a terrible price. (Seguro que).", "options": ["must have", "can't have", "couldn't have", "would have"], "correct_answer": "must have", "explanation": "Must have: deducción lógica y casi segura." },
+        { "id": "b2-12-q5", "type": "quiz_choice", "question": "He ____ read my email yet. I only sent it two minutes ago. (Es imposible que haya).", "options": ["can't have", "must have", "might have", "should have"], "correct_answer": "can't have", "explanation": "Can't have: es imposible porque pasó muy poco tiempo." },
+        { "id": "b2-12-q6", "type": "quiz_choice", "question": "The server crashed. The IT guy ____ made a mistake during the update. (Debe haber).", "options": ["must have", "can't have", "couldn't have", "should have"], "correct_answer": "must have", "explanation": "Must have: deducción lógica." },
+        { "id": "b2-12-q7", "type": "quiz_choice", "question": "We ____ won the negotiation, but we walked away too early. (Podríamos haber - pero no lo hicimos).", "options": ["could have", "must have", "can't have", "would have"], "correct_answer": "could have", "explanation": "Could have: Había la posibilidad en el pasado, pero no sucedió." },
+        { "id": "b2-12-q8", "type": "quiz_choice", "question": "John didn't come to the meeting. He ____ forgotten about it. (Tal vez - 50% probabilidad).", "options": ["may have", "can't have", "mustn't have", "would have"], "correct_answer": "may have", "explanation": "May have: es una posibilidad probable." },
+        { "id": "b2-12-q9", "type": "quiz_choice", "question": "You ____ seen the CEO. He is in Japan right now! (Es imposible que hayas).", "options": ["couldn't have", "must have", "might have", "should have"], "correct_answer": "couldn't have", "explanation": "Couldn't have: es imposible, él está en Japón." },
+        { "id": "b2-12-q10", "type": "quiz_choice", "question": "The presentation was flawless. She ____ prepared for weeks! (Seguro que).", "options": ["must have", "can't have", "might have", "would have"], "correct_answer": "must have", "explanation": "Must have: deducción lógica por lo impecable que fue." },
+        { "id": "b2-12-q11", "type": "quiz_choice", "question": "They ____ gone bankrupt. Their profits were up 200% last year! (Es imposible que hayan).", "options": ["can't have", "must have", "might have", "should have"], "correct_answer": "can't have", "explanation": "Can't have: la evidencia (ganancias) contradice la quiebra." },
+        { "id": "b2-12-q12", "type": "quiz_choice", "question": "I ____ deleted the file by accident, let me check the trash bin. (Tal vez).", "options": ["might have", "must have", "can't have", "couldn't have"], "correct_answer": "might have", "explanation": "Might have: existe la duda/posibilidad." },
+        { "id": "b2-12-q13", "type": "quiz_choice", "question": "He has a new Ferrari. He ____ received a massive bonus! (Seguro que).", "options": ["must have", "can't have", "might not have", "should have"], "correct_answer": "must have", "explanation": "Must have: deducción lógica ante la nueva riqueza." },
+        { "id": "b2-12-q14", "type": "quiz_choice", "question": "The client didn't sign. They ____ liked our proposal. (Seguro que NO).", "options": ["must not have", "can't have", "might have", "should have"], "correct_answer": "must not have", "explanation": "Must not have: Deducción lógica negativa (Seguro que no les gustó). Can't have es 'es imposible que les haya gustado', que es muy fuerte aquí." },
+        { "id": "b2-12-q15", "type": "quiz_choice", "question": "We sent the package on Monday. They ____ received it by now. (Deberían haber - expectativa lógica).", "options": ["should have", "can't have", "might have", "would have"], "correct_answer": "should have", "explanation": "Should have: expectativa lógica (no deducción 100% segura, sino lo que 'debería' ser)." },
+        { "id": "b2-12-q16", "type": "quiz_choice", "question": "The office is completely dark. Everyone ____ gone home. (Seguro que se han).", "options": ["must have", "can't have", "might have", "would have"], "correct_answer": "must have", "explanation": "Must have: deducción obvia." },
+        { "id": "b2-12-q17", "type": "quiz_choice", "question": "She speaks fluent Mandarin. She ____ lived in China. (Seguro que / Debe haber).", "options": ["must have", "can't have", "might not have", "would have"], "correct_answer": "must have", "explanation": "Must have: Deducción por su fluidez." },
+        { "id": "b2-12-q18", "type": "quiz_choice", "question": "You ____ sent that angry email to the client. Now we lost the deal. (No deberías haber - crítica).", "options": ["shouldn't have", "can't have", "mustn't have", "couldn't have"], "correct_answer": "shouldn't have", "explanation": "Shouldn't have: se usa para criticar o arrepentirse de una acción pasada." },
+        { "id": "b2-12-q19", "type": "quiz_choice", "question": "He looks exhausted. He ____ been working all night. (Seguro que ha).", "options": ["must have", "can't have", "might have", "would have"], "correct_answer": "must have", "explanation": "Must have been working (deducción continua en el pasado)." },
+        { "id": "b2-12-q20", "type": "quiz_choice", "question": "I don't know why the system failed. It ____ been a virus, but I will check. (Podría haber).", "options": ["could have", "must have", "can't have", "should have"], "correct_answer": "could have", "explanation": "Could have: posibilidad ('I don't know')." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el modal correcto (must, might, can't, could) seguido de 'have'.",
+      "questions": [
+        { "id": "b2-12-f1", "type": "fill_input", "question": "He is angry. He ____ have found out. (Seguro que)", "correct_answer": "must", "explanation": "must." },
+        { "id": "b2-12-f2", "type": "fill_input", "question": "She is in Paris. She ____ have stolen it. (Es imposible / can't)", "correct_answer": "can't", "explanation": "can't (o couldn't)." },
+        { "id": "b2-12-f3", "type": "fill_input", "question": "I'm not sure. I ____ have lost it. (Tal vez / might)", "correct_answer": "might", "explanation": "might (o may / could)." },
+        { "id": "b2-12-f4", "type": "fill_input", "question": "They didn't win. They ____ have offered a bad price. (Seguro que)", "correct_answer": "must", "explanation": "must." },
+        { "id": "b2-12-f5", "type": "fill_input", "question": "You sent it 1 minute ago. He ____ have read it yet. (Es imposible / couldn't)", "correct_answer": "couldn't", "explanation": "couldn't (o can't)." },
+        { "id": "b2-12-f6", "type": "fill_input", "question": "The server crashed. The IT guy ____ have made a mistake. (Seguro que)", "correct_answer": "must", "explanation": "must." },
+        { "id": "b2-12-f7", "type": "fill_input", "question": "We walked away. We ____ have won, but we didn't try. (Podríamos)", "correct_answer": "could", "explanation": "could." },
+        { "id": "b2-12-f8", "type": "fill_input", "question": "He didn't come. He ____ have forgotten. (Tal vez / may)", "correct_answer": "may", "explanation": "may (o might)." },
+        { "id": "b2-12-f9", "type": "fill_input", "question": "He has a Ferrari. He ____ have gotten a bonus. (Seguro que)", "correct_answer": "must", "explanation": "must." },
+        { "id": "b2-12-f10", "type": "fill_input", "question": "You lost the client! You ____ not have sent that angry email! (No deberías - crítica)", "correct_answer": "should", "explanation": "should." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Deduction Match",
+      "pairs": [
+        {"id": "b2-12-p1", "source": "Must have", "target": "Seguro que pasó (Deducción 99%)"},
+        {"id": "b2-12-p2", "source": "Can't have / Couldn't have", "target": "Es imposible que haya pasado (99%)"},
+        {"id": "b2-12-p3", "source": "Might have / May have", "target": "Tal vez pasó (Posibilidad 50%)"},
+        {"id": "b2-12-p4", "source": "Should have", "target": "Debería haber pasado (Expectativa/Crítica)"},
+        {"id": "b2-12-p5", "source": "Could have", "target": "Podría haber pasado (pero no pasó)"},
+        {"id": "b2-12-p6", "source": "He must have forgotten", "target": "Seguro que se olvidó"},
+        {"id": "b2-12-p7", "source": "She can't have done it", "target": "Es imposible que ella lo haya hecho"},
+        {"id": "b2-12-p8", "source": "They might have lost it", "target": "Tal vez lo perdieron"},
+        {"id": "b2-12-p9", "source": "You shouldn't have said that", "target": "No deberías haber dicho eso"},
+        {"id": "b2-12-p10", "source": "We could have won", "target": "Podríamos haber ganado"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la deducción correcta.",
+      "questions": [
+        { "id": "b2-12-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He must have signed the contract.", "options": ["He must have signed the contract.", "He might have signed the contract.", "He can't have signed the contract.", "He should have signed the contract."], "correct_answer": "He must have signed the contract.", "explanation": "Audio exacto." },
+        { "id": "b2-12-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She couldn't have stolen the money.", "options": ["She couldn't have stolen the money.", "She must have stolen the money.", "She shouldn't have stolen the money.", "She might have stolen the money."], "correct_answer": "She couldn't have stolen the money.", "explanation": "Audio exacto." },
+        { "id": "b2-12-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They might have lost the file.", "options": ["They might have lost the file.", "They must have lost the file.", "They can't have lost the file.", "They should have lost the file."], "correct_answer": "They might have lost the file.", "explanation": "Audio exacto." },
+        { "id": "b2-12-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You shouldn't have sent that email.", "options": ["You shouldn't have sent that email.", "You couldn't have sent that email.", "You wouldn't have sent that email.", "You must not have sent that email."], "correct_answer": "You shouldn't have sent that email.", "explanation": "Audio exacto." },
+        { "id": "b2-12-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We could have won the negotiation.", "options": ["We could have won the negotiation.", "We should have won the negotiation.", "We must have won the negotiation.", "We would have won the negotiation."], "correct_answer": "We could have won the negotiation.", "explanation": "Audio exacto." },
+        { "id": "b2-12-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He can't have read it yet.", "options": ["He can't have read it yet.", "He must have read it yet.", "He might have read it yet.", "He shouldn't have read it yet."], "correct_answer": "He can't have read it yet.", "explanation": "Audio exacto." },
+        { "id": "b2-12-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They must have offered a bad price.", "options": ["They must have offered a bad price.", "They might have offered a bad price.", "They can't have offered a bad price.", "They could have offered a bad price."], "correct_answer": "They must have offered a bad price.", "explanation": "Audio exacto." },
+        { "id": "b2-12-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She may have forgotten.", "options": ["She may have forgotten.", "She must have forgotten.", "She can't have forgotten.", "She should have forgotten."], "correct_answer": "She may have forgotten.", "explanation": "Audio exacto." },
+        { "id": "b2-12-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You must have been working all night.", "options": ["You must have been working all night.", "You might have been working all night.", "You can't have been working all night.", "You should have been working all night."], "correct_answer": "You must have been working all night.", "explanation": "Audio exacto." },
+        { "id": "b2-12-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I might have deleted the file.", "options": ["I might have deleted the file.", "I must have deleted the file.", "I couldn't have deleted the file.", "I should have deleted the file."], "correct_answer": "I might have deleted the file.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

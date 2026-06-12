@@ -1,0 +1,101 @@
+{
+  "id": "a1-9",
+  "title": "Business Travel Basics",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Travel", "Airport"],
+  "completion_message": "¡Buen viaje! Ahora dominas el vocabulario básico de aeropuertos corporativos.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Viajes de Negocios",
+      "parts": [
+        { "visual": "La palabra 'ticket' (boleto o billete) es esencial al moverte por aeropuertos.", "audio": "The word ticket is essential when moving through airports." },
+        { "visual": "Al presentar tus documentos dices: 'Here is my ticket' (Aquí está mi boleto).", "audio": "When presenting your documents say: Here is my ticket." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la opción correcta.",
+      "questions": [
+        { "id": "a1-9-q1", "type": "quiz_choice", "question": "Here is my plane ____.", "options": ["ticket", "tickets", "ticket's", "ticketing"], "correct_answer": "ticket", "explanation": "Boleto de avión." },
+        { "id": "a1-9-q2", "type": "quiz_choice", "question": "I need to buy a ____ to New York.", "options": ["ticket", "passport", "visa", "suit"], "correct_answer": "ticket", "explanation": "Comprar un boleto." },
+        { "id": "a1-9-q3", "type": "quiz_choice", "question": "Can I see your ____, please?", "options": ["ticket", "suitcase", "laptop", "office"], "correct_answer": "ticket", "explanation": "Al abordar piden ver tu boleto." },
+        { "id": "a1-9-q4", "type": "quiz_choice", "question": "The company paid for the ____.", "options": ["ticket", "tickets", "airport", "plane"], "correct_answer": "ticket", "explanation": "El boleto pagado por la empresa." },
+        { "id": "a1-9-q5", "type": "quiz_choice", "question": "I lost my train ____.", "options": ["ticket", "train", "station", "bag"], "correct_answer": "ticket", "explanation": "Boleto de tren." },
+        { "id": "a1-9-q6", "type": "quiz_choice", "question": "Print your boarding ____ at the kiosk.", "options": ["pass", "ticket", "paper", "card"], "correct_answer": "pass", "explanation": "En el aeropuerto se dice 'boarding pass'." },
+        { "id": "a1-9-q7", "type": "quiz_choice", "question": "This is a first-class ____.", "options": ["ticket", "tickets", "flight", "plane"], "correct_answer": "ticket", "explanation": "Boleto de primera clase." },
+        { "id": "a1-9-q8", "type": "quiz_choice", "question": "Do you have your return ____?", "options": ["ticket", "tickets", "passport", "bag"], "correct_answer": "ticket", "explanation": "Boleto de regreso." },
+        { "id": "a1-9-q9", "type": "quiz_choice", "question": "My ____ is on my phone.", "options": ["ticket", "tickets", "suit", "plane"], "correct_answer": "ticket", "explanation": "Boleto digital." },
+        { "id": "a1-9-q10", "type": "quiz_choice", "question": "Book the ____ in advance.", "options": ["ticket", "tickets", "plane", "airport"], "correct_answer": "ticket", "explanation": "Reservar el boleto." },
+        { "id": "a1-9-q11", "type": "quiz_choice", "question": "How much is the ____?", "options": ["ticket", "plane", "airport", "flight"], "correct_answer": "ticket", "explanation": "Preguntar el precio del boleto." },
+        { "id": "a1-9-q12", "type": "quiz_choice", "question": "I need a direct flight ____.", "options": ["ticket", "tickets", "passport", "card"], "correct_answer": "ticket", "explanation": "Boleto de vuelo directo." },
+        { "id": "a1-9-q13", "type": "quiz_choice", "question": "Give the ____ to the agent.", "options": ["ticket", "agent", "plane", "airport"], "correct_answer": "ticket", "explanation": "Entregar el boleto." },
+        { "id": "a1-9-q14", "type": "quiz_choice", "question": "He forgot his ____ at the office.", "options": ["ticket", "tickets", "flight", "plane"], "correct_answer": "ticket", "explanation": "Olvidó el boleto." },
+        { "id": "a1-9-q15", "type": "quiz_choice", "question": "The ____ counter is closed.", "options": ["ticket", "tickets", "plane", "flight"], "correct_answer": "ticket", "explanation": "El mostrador de boletos." },
+        { "id": "a1-9-q16", "type": "quiz_choice", "question": "Show your ____ at the gate.", "options": ["ticket", "plane", "airport", "flight"], "correct_answer": "ticket", "explanation": "Mostrar el boleto en la puerta." },
+        { "id": "a1-9-q17", "type": "quiz_choice", "question": "She booked a cheap ____.", "options": ["ticket", "tickets", "flight", "plane"], "correct_answer": "ticket", "explanation": "Boleto barato." },
+        { "id": "a1-9-q18", "type": "quiz_choice", "question": "Your ____ is non-refundable.", "options": ["ticket", "tickets", "passport", "bag"], "correct_answer": "ticket", "explanation": "Boleto no reembolsable." },
+        { "id": "a1-9-q19", "type": "quiz_choice", "question": "Hold on to your ____.", "options": ["ticket", "tickets", "plane", "flight"], "correct_answer": "ticket", "explanation": "Guarda tu boleto." },
+        { "id": "a1-9-q20", "type": "quiz_choice", "question": "The electronic ____ was sent to your email.", "options": ["ticket", "tickets", "flight", "plane"], "correct_answer": "ticket", "explanation": "Boleto electrónico (e-ticket)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta.",
+      "questions": [
+        { "id": "a1-9-f1", "type": "fill_input", "question": "Here is my ____.", "correct_answer": "ticket", "explanation": "Boleto." },
+        { "id": "a1-9-f2", "type": "fill_input", "question": "Buy a plane ____.", "correct_answer": "ticket", "explanation": "Boleto de avión." },
+        { "id": "a1-9-f3", "type": "fill_input", "question": "Show your ____.", "correct_answer": "ticket", "explanation": "Muestra tu boleto." },
+        { "id": "a1-9-f4", "type": "fill_input", "question": "The ____ counter.", "correct_answer": "ticket", "explanation": "Mostrador." },
+        { "id": "a1-9-f5", "type": "fill_input", "question": "An electronic ____.", "correct_answer": "ticket", "explanation": "Boleto electrónico." },
+        { "id": "a1-9-f6", "type": "fill_input", "question": "A return ____.", "correct_answer": "ticket", "explanation": "Boleto de regreso." },
+        { "id": "a1-9-f7", "type": "fill_input", "question": "I lost my ____.", "correct_answer": "ticket", "explanation": "Perdí mi boleto." },
+        { "id": "a1-9-f8", "type": "fill_input", "question": "Book a ____.", "correct_answer": "ticket", "explanation": "Reservar boleto." },
+        { "id": "a1-9-f9", "type": "fill_input", "question": "The ____ price.", "correct_answer": "ticket", "explanation": "Precio del boleto." },
+        { "id": "a1-9-f10", "type": "fill_input", "question": "Hold your ____.", "correct_answer": "ticket", "explanation": "Sostén tu boleto." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-9-p1", "source": "Ticket", "target": "Boleto"},
+        {"id": "a1-9-p2", "source": "Flight", "target": "Vuelo"},
+        {"id": "a1-9-p3", "source": "Airport", "target": "Aeropuerto"},
+        {"id": "a1-9-p4", "source": "Plane", "target": "Avión"},
+        {"id": "a1-9-p5", "source": "Passport", "target": "Pasaporte"},
+        {"id": "a1-9-p6", "source": "Luggage", "target": "Equipaje"},
+        {"id": "a1-9-p7", "source": "Gate", "target": "Puerta"},
+        {"id": "a1-9-p8", "source": "Seat", "target": "Asiento"},
+        {"id": "a1-9-p9", "source": "Boarding", "target": "Abordaje"},
+        {"id": "a1-9-p10", "source": "Trip", "target": "Viaje"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-9-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Here is my ticket.", "options": ["Here is my ticket.", "Where is my ticket?", "There is my ticket.", "Here are my tickets."], "correct_answer": "Here is my ticket.", "explanation": "Audio exacto." },
+        { "id": "a1-9-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need a ticket.", "options": ["I need a ticket.", "I need the ticket.", "I had a ticket.", "You need a ticket."], "correct_answer": "I need a ticket.", "explanation": "Audio exacto." },
+        { "id": "a1-9-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Show me your ticket.", "options": ["Show me your ticket.", "Show him your ticket.", "Show me the ticket.", "See my ticket."], "correct_answer": "Show me your ticket.", "explanation": "Audio exacto." },
+        { "id": "a1-9-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A plane ticket.", "options": ["A plane ticket.", "The plane ticket.", "A train ticket.", "A bus ticket."], "correct_answer": "A plane ticket.", "explanation": "Audio exacto." },
+        { "id": "a1-9-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This is a ticket.", "options": ["This is a ticket.", "That is a ticket.", "This is the ticket.", "These are tickets."], "correct_answer": "This is a ticket.", "explanation": "Audio exacto." },
+        { "id": "a1-9-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Buy a return ticket.", "options": ["Buy a return ticket.", "Buy a ticket.", "Buy the return ticket.", "Bring a return ticket."], "correct_answer": "Buy a return ticket.", "explanation": "Audio exacto." },
+        { "id": "a1-9-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The ticket counter.", "options": ["The ticket counter.", "A ticket counter.", "The ticket center.", "The ticket count."], "correct_answer": "The ticket counter.", "explanation": "Audio exacto." },
+        { "id": "a1-9-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I lost my ticket.", "options": ["I lost my ticket.", "He lost his ticket.", "I lost a ticket.", "I lose my ticket."], "correct_answer": "I lost my ticket.", "explanation": "Audio exacto." },
+        { "id": "a1-9-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Your ticket is here.", "options": ["Your ticket is here.", "My ticket is here.", "Your ticket is there.", "His ticket is here."], "correct_answer": "Your ticket is here.", "explanation": "Audio exacto." },
+        { "id": "a1-9-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "An electronic ticket.", "options": ["An electronic ticket.", "The electronic ticket.", "An electric ticket.", "An e-ticket."], "correct_answer": "An electronic ticket.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

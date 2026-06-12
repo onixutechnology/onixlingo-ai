@@ -1,0 +1,101 @@
+{
+  "id": "a1-33",
+  "title": "Company Departments",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Corporate", "Departments"],
+  "completion_message": "¡Excelente! Has aprendido a identificar y nombrar los departamentos clave de cualquier empresa.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Departamentos de la Empresa",
+      "parts": [
+        { "visual": "Los departamentos principales son: Human Resources (HR), Sales (Ventas), Marketing (Mercadeo), IT (Tecnología), y Finance (Finanzas).", "audio": "The main departments are Human Resources, Sales, Marketing, IT, and Finance." },
+        { "visual": "Para decir dónde trabajas: 'I work in the Sales department'.", "audio": "To say where you work: I work in the Sales department." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el departamento correcto.",
+      "questions": [
+        { "id": "a1-33-q1", "type": "quiz_choice", "question": "They hire new people in ____ Resources.", "options": ["Human", "Humans", "Humanity", "Man"], "correct_answer": "Human", "explanation": "Human Resources (HR)." },
+        { "id": "a1-33-q2", "type": "quiz_choice", "question": "I work in the ____ department.", "options": ["Sales", "Sale", "Selling", "Sells"], "correct_answer": "Sales", "explanation": "Ventas (Sales)." },
+        { "id": "a1-33-q3", "type": "quiz_choice", "question": "He is the manager of the ____ team.", "options": ["Marketing", "Market", "Markets", "Marketer"], "correct_answer": "Marketing", "explanation": "Equipo de Marketing." },
+        { "id": "a1-33-q4", "type": "quiz_choice", "question": "For computer problems, call ____.", "options": ["IT", "HR", "Sales", "Finance"], "correct_answer": "IT", "explanation": "IT (Information Technology)." },
+        { "id": "a1-33-q5", "type": "quiz_choice", "question": "The ____ department handles the money.", "options": ["Finance", "Finances", "Financial", "Financing"], "correct_answer": "Finance", "explanation": "Finanzas." },
+        { "id": "a1-33-q6", "type": "quiz_choice", "question": "Customer ____ answers client questions.", "options": ["Service", "Services", "Serve", "Servant"], "correct_answer": "Service", "explanation": "Atención al cliente (Customer Service)." },
+        { "id": "a1-33-q7", "type": "quiz_choice", "question": "I have a meeting with ____ Resources.", "options": ["Human", "People", "Person", "Humans"], "correct_answer": "Human", "explanation": "Recursos Humanos." },
+        { "id": "a1-33-q8", "type": "quiz_choice", "question": "She is in ____.", "options": ["Accounting", "Account", "Accounts", "Accountant"], "correct_answer": "Accounting", "explanation": "Contabilidad." },
+        { "id": "a1-33-q9", "type": "quiz_choice", "question": "They are the ____ team.", "options": ["Legal", "Law", "Lawyer", "Legals"], "correct_answer": "Legal", "explanation": "Equipo Legal." },
+        { "id": "a1-33-q10", "type": "quiz_choice", "question": "Our ____ is growing.", "options": ["department", "depart", "room", "office"], "correct_answer": "department", "explanation": "Departamento." },
+        { "id": "a1-33-q11", "type": "quiz_choice", "question": "Send this to ____.", "options": ["HR", "IT", "PR", "CEO"], "correct_answer": "HR", "explanation": "RRHH (Human Resources)." },
+        { "id": "a1-33-q12", "type": "quiz_choice", "question": "The ____ department creates ads.", "options": ["Marketing", "Sales", "Finance", "IT"], "correct_answer": "Marketing", "explanation": "Marketing crea anuncios." },
+        { "id": "a1-33-q13", "type": "quiz_choice", "question": "____ deals with taxes and payroll.", "options": ["Accounting", "Marketing", "Sales", "IT"], "correct_answer": "Accounting", "explanation": "Contabilidad (impuestos y nómina)." },
+        { "id": "a1-33-q14", "type": "quiz_choice", "question": "We need help from ____.", "options": ["IT", "HR", "PR", "Sales"], "correct_answer": "IT", "explanation": "Asistencia técnica (IT)." },
+        { "id": "a1-33-q15", "type": "quiz_choice", "question": "The ____ team closed the deal.", "options": ["Sales", "Sale", "Selling", "Sells"], "correct_answer": "Sales", "explanation": "El equipo de Ventas." },
+        { "id": "a1-33-q16", "type": "quiz_choice", "question": "____ manages public relations.", "options": ["PR", "HR", "IT", "CEO"], "correct_answer": "PR", "explanation": "Public Relations (PR)." },
+        { "id": "a1-33-q17", "type": "quiz_choice", "question": "Research and ____ (R&D).", "options": ["Development", "Develop", "Developing", "Developer"], "correct_answer": "Development", "explanation": "Investigación y Desarrollo." },
+        { "id": "a1-33-q18", "type": "quiz_choice", "question": "He transferred to ____.", "options": ["Finance", "Finances", "Financial", "Financing"], "correct_answer": "Finance", "explanation": "Finanzas." },
+        { "id": "a1-33-q19", "type": "quiz_choice", "question": "She is the head of ____.", "options": ["Operations", "Operation", "Operate", "Operating"], "correct_answer": "Operations", "explanation": "Operaciones." },
+        { "id": "a1-33-q20", "type": "quiz_choice", "question": "The ____ department handles contracts.", "options": ["Legal", "Law", "Lawyer", "HR"], "correct_answer": "Legal", "explanation": "El departamento Legal." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el nombre del departamento.",
+      "questions": [
+        { "id": "a1-33-f1", "type": "fill_input", "question": "____ Resources (Recursos Humanos).", "correct_answer": "Human", "explanation": "Human." },
+        { "id": "a1-33-f2", "type": "fill_input", "question": "The ____ department (Ventas).", "correct_answer": "Sales", "explanation": "Sales." },
+        { "id": "a1-33-f3", "type": "fill_input", "question": "The ____ team (Mercadeo).", "correct_answer": "Marketing", "explanation": "Marketing." },
+        { "id": "a1-33-f4", "type": "fill_input", "question": "Call ____ (Tecnología).", "correct_answer": "IT", "explanation": "IT." },
+        { "id": "a1-33-f5", "type": "fill_input", "question": "The ____ department (Finanzas).", "correct_answer": "Finance", "explanation": "Finance." },
+        { "id": "a1-33-f6", "type": "fill_input", "question": "Customer ____ (Atención al cliente).", "correct_answer": "Service", "explanation": "Service." },
+        { "id": "a1-33-f7", "type": "fill_input", "question": "She is in ____ (Contabilidad).", "correct_answer": "Accounting", "explanation": "Accounting." },
+        { "id": "a1-33-f8", "type": "fill_input", "question": "The ____ team (Legal).", "correct_answer": "Legal", "explanation": "Legal." },
+        { "id": "a1-33-f9", "type": "fill_input", "question": "____ (Relaciones Públicas, siglas).", "correct_answer": "PR", "explanation": "PR." },
+        { "id": "a1-33-f10", "type": "fill_input", "question": "____ (Recursos Humanos, siglas).", "correct_answer": "HR", "explanation": "HR." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-33-p1", "source": "Human Resources", "target": "Recursos Humanos"},
+        {"id": "a1-33-p2", "source": "Sales", "target": "Ventas"},
+        {"id": "a1-33-p3", "source": "Marketing", "target": "Mercadeo"},
+        {"id": "a1-33-p4", "source": "IT", "target": "Tecnología"},
+        {"id": "a1-33-p5", "source": "Finance", "target": "Finanzas"},
+        {"id": "a1-33-p6", "source": "Customer Service", "target": "Atención al Cliente"},
+        {"id": "a1-33-p7", "source": "Accounting", "target": "Contabilidad"},
+        {"id": "a1-33-p8", "source": "Legal", "target": "Legal"},
+        {"id": "a1-33-p9", "source": "PR", "target": "Relaciones Públicas"},
+        {"id": "a1-33-p10", "source": "Operations", "target": "Operaciones"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el departamento correcto.",
+      "questions": [
+        { "id": "a1-33-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Human Resources.", "options": ["Human Resources.", "Human Research.", "Human Rights.", "Human Results."], "correct_answer": "Human Resources.", "explanation": "Audio exacto." },
+        { "id": "a1-33-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The Sales department.", "options": ["The Sales department.", "The Sale department.", "The Selling department.", "The Sells department."], "correct_answer": "The Sales department.", "explanation": "Audio exacto." },
+        { "id": "a1-33-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The Marketing team.", "options": ["The Marketing team.", "The Market team.", "A Marketing team.", "The Marketer team."], "correct_answer": "The Marketing team.", "explanation": "Audio exacto." },
+        { "id": "a1-33-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Call IT.", "options": ["Call IT.", "Call HR.", "Call PR.", "Call them."], "correct_answer": "Call IT.", "explanation": "Audio exacto." },
+        { "id": "a1-33-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The Finance department.", "options": ["The Finance department.", "The Financial department.", "A Finance department.", "The Finances department."], "correct_answer": "The Finance department.", "explanation": "Audio exacto." },
+        { "id": "a1-33-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Customer Service.", "options": ["Customer Service.", "Customer Server.", "Custom Service.", "Costume Service."], "correct_answer": "Customer Service.", "explanation": "Audio exacto." },
+        { "id": "a1-33-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Accounting.", "options": ["Accounting.", "Account.", "Accountant.", "Accounts."], "correct_answer": "Accounting.", "explanation": "Audio exacto." },
+        { "id": "a1-33-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The Legal team.", "options": ["The Legal team.", "The Law team.", "The Lawyer team.", "A Legal team."], "correct_answer": "The Legal team.", "explanation": "Audio exacto." },
+        { "id": "a1-33-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Send it to PR.", "options": ["Send it to PR.", "Send it to HR.", "Send it to IT.", "Sent it to PR."], "correct_answer": "Send it to PR.", "explanation": "Audio exacto." },
+        { "id": "a1-33-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Operations.", "options": ["Operations.", "Operation.", "Operate.", "Operator."], "correct_answer": "Operations.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -141,7 +141,7 @@ export async function streamMessage(
     payload: SendMessagePayload
 ): Promise<ReadableStream<Uint8Array>> {
     const baseUrl =
-        process.env.NEXT_PUBLIC_API_URL ?? "https://api.onixlingo.com";
+        process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:5000';
 
     const response = await fetch(
         `${baseUrl}/ai/sessions/${sessionId}/messages/stream`,

@@ -1,0 +1,101 @@
+{
+  "id": "a1-93",
+  "title": "Numbers, Prices and Quantities",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Numbers", "Prices", "Money"],
+  "completion_message": "¡Excelente! Ahora puedes leer, decir y escribir precios, cantidades y cifras empresariales en inglés con confianza.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Números, Precios y Cantidades",
+      "parts": [
+        { "visual": "Números grandes: 100 = one hundred. 1,000 = one thousand. 10,000 = ten thousand. 1,000,000 = one million.", "audio": "Large numbers: 100 is one hundred, 1000 is one thousand, 10000 is ten thousand, 1000000 is one million." },
+        { "visual": "Precios: $25.50 = twenty-five dollars and fifty cents / twenty-five fifty. €100 = one hundred euros. Porcentajes: 15% = fifteen percent.", "audio": "Prices: $25.50 is twenty-five dollars and fifty cents, or twenty-five fifty. 100 euros is one hundred euros. Percentages: 15% is fifteen percent." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del número, precio o cantidad.",
+      "questions": [
+        { "id": "a1-93-q1", "type": "quiz_choice", "question": "500 = ____.", "options": ["five hundred", "five thousands", "fifty hundred", "five hundreds"], "correct_answer": "five hundred", "explanation": "500 = five hundred (sin 's')." },
+        { "id": "a1-93-q2", "type": "quiz_choice", "question": "1,000 = ____.", "options": ["one thousand", "one hundred", "ten hundred", "a thousands"], "correct_answer": "one thousand", "explanation": "1,000 = one thousand." },
+        { "id": "a1-93-q3", "type": "quiz_choice", "question": "5,000 = ____.", "options": ["five thousand", "five hundred", "five millions", "fifty hundred"], "correct_answer": "five thousand", "explanation": "5,000 = five thousand." },
+        { "id": "a1-93-q4", "type": "quiz_choice", "question": "50,000 = ____.", "options": ["fifty thousand", "five hundred thousand", "fifty million", "five thousand"], "correct_answer": "fifty thousand", "explanation": "50,000 = fifty thousand." },
+        { "id": "a1-93-q5", "type": "quiz_choice", "question": "1,000,000 = ____.", "options": ["one million", "one billion", "one thousand thousand", "a millions"], "correct_answer": "one million", "explanation": "1,000,000 = one million." },
+        { "id": "a1-93-q6", "type": "quiz_choice", "question": "$25.00 = twenty-five ____.", "options": ["dollars", "dollar", "euros", "pesos"], "correct_answer": "dollars", "explanation": "$25 = twenty-five dollars." },
+        { "id": "a1-93-q7", "type": "quiz_choice", "question": "$0.50 = fifty ____.", "options": ["cents", "cent", "dollars", "pence"], "correct_answer": "cents", "explanation": "$0.50 = fifty cents." },
+        { "id": "a1-93-q8", "type": "quiz_choice", "question": "15% = fifteen ____.", "options": ["percent", "percentage", "per cent", "percents"], "correct_answer": "percent", "explanation": "15% = fifteen percent." },
+        { "id": "a1-93-q9", "type": "quiz_choice", "question": "The total ____ is $500. (cantidad/monto).", "options": ["amount", "number", "count", "sum"], "correct_answer": "amount", "explanation": "Amount = monto/cantidad." },
+        { "id": "a1-93-q10", "type": "quiz_choice", "question": "The ____ is $250 per month. (precio).", "options": ["price", "cost", "fee", "rate"], "correct_answer": "price", "explanation": "Price = precio." },
+        { "id": "a1-93-q11", "type": "quiz_choice", "question": "750 = seven ____ fifty.", "options": ["hundred", "thousands", "hundred and", "hundreds"], "correct_answer": "hundred", "explanation": "750 = seven hundred and fifty." },
+        { "id": "a1-93-q12", "type": "quiz_choice", "question": "How ____ does it cost? (¿Cuánto cuesta?).", "options": ["much", "many", "often", "far"], "correct_answer": "much", "explanation": "How much = ¿Cuánto cuesta?" },
+        { "id": "a1-93-q13", "type": "quiz_choice", "question": "It costs $1,200. = It costs one ____ two hundred dollars.", "options": ["thousand", "hundred", "million", "billion"], "correct_answer": "thousand", "explanation": "1,200 = one thousand, two hundred." },
+        { "id": "a1-93-q14", "type": "quiz_choice", "question": "Sales ____ by 10%. (aumentaron).", "options": ["increased", "increase", "decreased", "reduced"], "correct_answer": "increased", "explanation": "Sales increased = las ventas aumentaron." },
+        { "id": "a1-93-q15", "type": "quiz_choice", "question": "Costs ____ by 5%. (bajaron).", "options": ["decreased", "increased", "raised", "grew"], "correct_answer": "decreased", "explanation": "Costs decreased = los costos bajaron." },
+        { "id": "a1-93-q16", "type": "quiz_choice", "question": "The ____ is €50 per hour. (tarifa).", "options": ["rate", "price", "cost", "fee"], "correct_answer": "rate", "explanation": "Rate = tarifa (por hora/día)." },
+        { "id": "a1-93-q17", "type": "quiz_choice", "question": "The ____ is €200. (honorario / cargo fijo).", "options": ["fee", "rate", "price", "bill"], "correct_answer": "fee", "explanation": "Fee = honorario / cargo profesional." },
+        { "id": "a1-93-q18", "type": "quiz_choice", "question": "The project ____ $10,000. (cuesta).", "options": ["costs", "is", "has", "worth"], "correct_answer": "costs", "explanation": "Costs = cuesta." },
+        { "id": "a1-93-q19", "type": "quiz_choice", "question": "Our ____ this year is $2 million. (ingresos/presupuesto).", "options": ["budget", "money", "cost", "payment"], "correct_answer": "budget", "explanation": "Budget = presupuesto." },
+        { "id": "a1-93-q20", "type": "quiz_choice", "question": "We saved 20 ____. (por ciento).", "options": ["percent", "percentage", "percents", "per cent"], "correct_answer": "percent", "explanation": "20% = twenty percent." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el número o la palabra correcta.",
+      "questions": [
+        { "id": "a1-93-f1", "type": "fill_input", "question": "500 = five ____", "correct_answer": "hundred", "explanation": "hundred." },
+        { "id": "a1-93-f2", "type": "fill_input", "question": "1,000 = one ____", "correct_answer": "thousand", "explanation": "thousand." },
+        { "id": "a1-93-f3", "type": "fill_input", "question": "1,000,000 = one ____", "correct_answer": "million", "explanation": "million." },
+        { "id": "a1-93-f4", "type": "fill_input", "question": "15% = fifteen ____", "correct_answer": "percent", "explanation": "percent." },
+        { "id": "a1-93-f5", "type": "fill_input", "question": "How ____ does it cost? (¿Cuánto cuesta?)", "correct_answer": "much", "explanation": "much." },
+        { "id": "a1-93-f6", "type": "fill_input", "question": "Sales ____ (increase, pasado) by 10%.", "correct_answer": "increased", "explanation": "increased." },
+        { "id": "a1-93-f7", "type": "fill_input", "question": "Costs ____ (decrease, pasado) by 5%.", "correct_answer": "decreased", "explanation": "decreased." },
+        { "id": "a1-93-f8", "type": "fill_input", "question": "The hourly ____ is $50. (tarifa).", "correct_answer": "rate", "explanation": "rate." },
+        { "id": "a1-93-f9", "type": "fill_input", "question": "The project ____ $10,000. (cuesta).", "correct_answer": "costs", "explanation": "costs." },
+        { "id": "a1-93-f10", "type": "fill_input", "question": "Our ____ is $2 million. (presupuesto).", "correct_answer": "budget", "explanation": "budget." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-93-p1", "source": "One hundred", "target": "100"},
+        {"id": "a1-93-p2", "source": "One thousand", "target": "1,000"},
+        {"id": "a1-93-p3", "source": "One million", "target": "1,000,000"},
+        {"id": "a1-93-p4", "source": "Fifteen percent", "target": "15%"},
+        {"id": "a1-93-p5", "source": "How much does it cost?", "target": "¿Cuánto cuesta?"},
+        {"id": "a1-93-p6", "source": "Sales increased", "target": "Las ventas aumentaron"},
+        {"id": "a1-93-p7", "source": "Costs decreased", "target": "Los costos bajaron"},
+        {"id": "a1-93-p8", "source": "The rate is $50/hour", "target": "La tarifa es $50/hora"},
+        {"id": "a1-93-p9", "source": "The fee is €200", "target": "El honorario es €200"},
+        {"id": "a1-93-p10", "source": "Our budget is $2 million", "target": "Nuestro presupuesto es $2 millones"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-93-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Five hundred dollars.", "options": ["Five hundred dollars.", "Five thousand dollars.", "Fifty dollars.", "Five hundred euros."], "correct_answer": "Five hundred dollars.", "explanation": "Audio exacto." },
+        { "id": "a1-93-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "One thousand two hundred.", "options": ["One thousand two hundred.", "One hundred and twenty.", "Two thousand one hundred.", "One million two hundred."], "correct_answer": "One thousand two hundred.", "explanation": "Audio exacto." },
+        { "id": "a1-93-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How much does it cost?", "options": ["How much does it cost?", "How many does it cost?", "How much does he cost?", "What does it cost?"], "correct_answer": "How much does it cost?", "explanation": "Audio exacto." },
+        { "id": "a1-93-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sales increased by ten percent.", "options": ["Sales increased by ten percent.", "Sales decreased by ten percent.", "Costs increased by ten percent.", "Sales grew by ten percent."], "correct_answer": "Sales increased by ten percent.", "explanation": "Audio exacto." },
+        { "id": "a1-93-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The budget is two million dollars.", "options": ["The budget is two million dollars.", "The budget is two thousand dollars.", "Our budget is two million dollars.", "The budget was two million dollars."], "correct_answer": "The budget is two million dollars.", "explanation": "Audio exacto." },
+        { "id": "a1-93-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It costs fifty euros.", "options": ["It costs fifty euros.", "It costs fifteen euros.", "It costs fifty dollars.", "He costs fifty euros."], "correct_answer": "It costs fifty euros.", "explanation": "Audio exacto." },
+        { "id": "a1-93-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Costs decreased by five percent.", "options": ["Costs decreased by five percent.", "Costs increased by five percent.", "Sales decreased by five percent.", "Costs reduced by five percent."], "correct_answer": "Costs decreased by five percent.", "explanation": "Audio exacto." },
+        { "id": "a1-93-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The hourly rate is fifty dollars.", "options": ["The hourly rate is fifty dollars.", "The daily rate is fifty dollars.", "The hourly fee is fifty dollars.", "Our rate is fifty dollars."], "correct_answer": "The hourly rate is fifty dollars.", "explanation": "Audio exacto." },
+        { "id": "a1-93-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The total amount is five thousand.", "options": ["The total amount is five thousand.", "The total cost is five thousand.", "The amount is five thousand.", "The total amount is fifty thousand."], "correct_answer": "The total amount is five thousand.", "explanation": "Audio exacto." },
+        { "id": "a1-93-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We saved twenty percent.", "options": ["We saved twenty percent.", "They saved twenty percent.", "We spent twenty percent.", "We saved thirty percent."], "correct_answer": "We saved twenty percent.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

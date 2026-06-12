@@ -1,0 +1,101 @@
+{
+  "id": "a1-27",
+  "title": "Frequency Adverbs",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Adverbs", "Routines"],
+  "completion_message": "¡Excelente! Ahora sabes cómo expresar la frecuencia con la que realizas tus tareas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Adverbios de Frecuencia",
+      "parts": [
+        { "visual": "Usamos Always (siempre), Sometimes (a veces), y Never (nunca) para hablar de rutinas.", "audio": "We use Always, Sometimes, and Never to talk about routines." },
+        { "visual": "Se colocan antes del verbo principal: 'I always check my emails'. (Siempre reviso mis correos).", "audio": "They are placed before the main verb: I always check my emails." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el adverbio correcto o su posición.",
+      "questions": [
+        { "id": "a1-27-q1", "type": "quiz_choice", "question": "I ____ arrive early to the office (100%).", "options": ["always", "never", "sometimes", "rarely"], "correct_answer": "always", "explanation": "Always es siempre (100%)." },
+        { "id": "a1-27-q2", "type": "quiz_choice", "question": "She ____ drinks coffee (0%).", "options": ["never", "always", "sometimes", "often"], "correct_answer": "never", "explanation": "Never es nunca (0%)." },
+        { "id": "a1-27-q3", "type": "quiz_choice", "question": "We ____ have meetings on Fridays (50%).", "options": ["sometimes", "never", "always", "none"], "correct_answer": "sometimes", "explanation": "Sometimes es a veces." },
+        { "id": "a1-27-q4", "type": "quiz_choice", "question": "I ____ check my emails first.", "options": ["always", "always I", "am always", "I always"], "correct_answer": "always", "explanation": "El adverbio va antes del verbo principal." },
+        { "id": "a1-27-q5", "type": "quiz_choice", "question": "He is ____ late for work.", "options": ["never", "never is", "is never", "not never"], "correct_answer": "never", "explanation": "Con el verbo 'To Be', el adverbio va DESPUÉS." },
+        { "id": "a1-27-q6", "type": "quiz_choice", "question": "Do you ____ work from home?", "options": ["often", "often do", "are often", "does often"], "correct_answer": "often", "explanation": "Often (a menudo)." },
+        { "id": "a1-27-q7", "type": "quiz_choice", "question": "They ____ use the printer.", "options": ["rarely", "rare", "rares", "rarely do"], "correct_answer": "rarely", "explanation": "Rarely (rara vez)." },
+        { "id": "a1-27-q8", "type": "quiz_choice", "question": "I ____ forget my password.", "options": ["sometimes", "sometime", "someday", "times"], "correct_answer": "sometimes", "explanation": "A veces olvido mi contraseña." },
+        { "id": "a1-27-q9", "type": "quiz_choice", "question": "The boss is ____ in a good mood.", "options": ["usually", "usual", "usuals", "use"], "correct_answer": "usually", "explanation": "Usually (usualmente), va después de 'is'." },
+        { "id": "a1-27-q10", "type": "quiz_choice", "question": "We ____ eat lunch at our desks.", "options": ["often", "neverly", "alwaysly", "some"], "correct_answer": "often", "explanation": "A menudo." },
+        { "id": "a1-27-q11", "type": "quiz_choice", "question": "She ____ finishes her work on time.", "options": ["always", "always is", "is always", "always do"], "correct_answer": "always", "explanation": "Va antes del verbo principal (finishes)." },
+        { "id": "a1-27-q12", "type": "quiz_choice", "question": "I am ____ tired after work.", "options": ["always", "always am", "always be", "always do"], "correct_answer": "always", "explanation": "Después del verbo To Be (am)." },
+        { "id": "a1-27-q13", "type": "quiz_choice", "question": "____ you usually take the bus?", "options": ["Do", "Does", "Are", "Is"], "correct_answer": "Do", "explanation": "Auxiliar interrogativo 'Do'." },
+        { "id": "a1-27-q14", "type": "quiz_choice", "question": "He ____ works on Sundays.", "options": ["never", "not never", "doesn't never", "neverly"], "correct_answer": "never", "explanation": "'Never' ya es negativo, no usamos auxiliar." },
+        { "id": "a1-27-q15", "type": "quiz_choice", "question": "My computer ____ crashes.", "options": ["sometimes", "sometime", "sometimes is", "some"], "correct_answer": "sometimes", "explanation": "A veces." },
+        { "id": "a1-27-q16", "type": "quiz_choice", "question": "We ____ start at 8 AM.", "options": ["always", "always are", "are always", "always do"], "correct_answer": "always", "explanation": "Siempre empezamos." },
+        { "id": "a1-27-q17", "type": "quiz_choice", "question": "Does she ____ reply late?", "options": ["often", "oftenly", "often does", "do often"], "correct_answer": "often", "explanation": "¿Responde tarde a menudo?" },
+        { "id": "a1-27-q18", "type": "quiz_choice", "question": "I ____ drink tea in the morning.", "options": ["never", "neverly", "no ever", "ever"], "correct_answer": "never", "explanation": "Nunca bebo té." },
+        { "id": "a1-27-q19", "type": "quiz_choice", "question": "They are ____ helpful.", "options": ["always", "always are", "always do", "do always"], "correct_answer": "always", "explanation": "Siempre son útiles (después de 'are')." },
+        { "id": "a1-27-q20", "type": "quiz_choice", "question": "I ____ take a taxi to the airport.", "options": ["usually", "usual", "use", "using"], "correct_answer": "usually", "explanation": "Usualmente." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el adverbio correcto (always, never, sometimes, often, usually).",
+      "questions": [
+        { "id": "a1-27-f1", "type": "fill_input", "question": "I ____ arrive early (100%).", "correct_answer": "always", "explanation": "Always." },
+        { "id": "a1-27-f2", "type": "fill_input", "question": "She ____ drinks coffee (0%).", "correct_answer": "never", "explanation": "Never." },
+        { "id": "a1-27-f3", "type": "fill_input", "question": "We ____ have meetings (50%).", "correct_answer": "sometimes", "explanation": "Sometimes." },
+        { "id": "a1-27-f4", "type": "fill_input", "question": "He is ____ late (100%).", "correct_answer": "always", "explanation": "Always." },
+        { "id": "a1-27-f5", "type": "fill_input", "question": "I ____ use the printer (Rara vez, 10%).", "correct_answer": "rarely", "explanation": "Rarely." },
+        { "id": "a1-27-f6", "type": "fill_input", "question": "Do you ____ work from home? (A menudo).", "correct_answer": "often", "explanation": "Often." },
+        { "id": "a1-27-f7", "type": "fill_input", "question": "I ____ forget my password (50%).", "correct_answer": "sometimes", "explanation": "Sometimes." },
+        { "id": "a1-27-f8", "type": "fill_input", "question": "The boss is ____ happy (Usualmente).", "correct_answer": "usually", "explanation": "Usually." },
+        { "id": "a1-27-f9", "type": "fill_input", "question": "I am ____ tired (100%).", "correct_answer": "always", "explanation": "Always." },
+        { "id": "a1-27-f10", "type": "fill_input", "question": "They ____ start at 9 (0%).", "correct_answer": "never", "explanation": "Never." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-27-p1", "source": "Always", "target": "Siempre"},
+        {"id": "a1-27-p2", "source": "Never", "target": "Nunca"},
+        {"id": "a1-27-p3", "source": "Sometimes", "target": "A veces"},
+        {"id": "a1-27-p4", "source": "Often", "target": "A menudo"},
+        {"id": "a1-27-p5", "source": "Usually", "target": "Usualmente"},
+        {"id": "a1-27-p6", "source": "Rarely", "target": "Rara vez"},
+        {"id": "a1-27-p7", "source": "Early", "target": "Temprano"},
+        {"id": "a1-27-p8", "source": "Late", "target": "Tarde"},
+        {"id": "a1-27-p9", "source": "Before", "target": "Antes"},
+        {"id": "a1-27-p10", "source": "After", "target": "Después"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-27-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I always arrive early.", "options": ["I always arrive early.", "I never arrive early.", "He always arrives early.", "I usually arrive early."], "correct_answer": "I always arrive early.", "explanation": "Audio exacto." },
+        { "id": "a1-27-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She never drinks coffee.", "options": ["She never drinks coffee.", "She always drinks coffee.", "He never drinks coffee.", "She sometimes drinks coffee."], "correct_answer": "She never drinks coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-27-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We sometimes have meetings.", "options": ["We sometimes have meetings.", "They sometimes have meetings.", "We always have meetings.", "We never have meetings."], "correct_answer": "We sometimes have meetings.", "explanation": "Audio exacto." },
+        { "id": "a1-27-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is never late.", "options": ["He is never late.", "She is never late.", "He is always late.", "He was never late."], "correct_answer": "He is never late.", "explanation": "Audio exacto." },
+        { "id": "a1-27-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do you often work?", "options": ["Do you often work?", "Do you usually work?", "Does he often work?", "Did you often work?"], "correct_answer": "Do you often work?", "explanation": "Audio exacto." },
+        { "id": "a1-27-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I rarely use the printer.", "options": ["I rarely use the printer.", "I never use the printer.", "I always use the printer.", "He rarely uses the printer."], "correct_answer": "I rarely use the printer.", "explanation": "Audio exacto." },
+        { "id": "a1-27-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The boss is usually happy.", "options": ["The boss is usually happy.", "A boss is usually happy.", "The boss is always happy.", "The boss is never happy."], "correct_answer": "The boss is usually happy.", "explanation": "Audio exacto." },
+        { "id": "a1-27-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I sometimes forget.", "options": ["I sometimes forget.", "I always forget.", "I never forget.", "He sometimes forgets."], "correct_answer": "I sometimes forget.", "explanation": "Audio exacto." },
+        { "id": "a1-27-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am always tired.", "options": ["I am always tired.", "I am never tired.", "He is always tired.", "I was always tired."], "correct_answer": "I am always tired.", "explanation": "Audio exacto." },
+        { "id": "a1-27-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They never start at nine.", "options": ["They never start at nine.", "They always start at nine.", "We never start at nine.", "They never started at nine."], "correct_answer": "They never start at nine.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

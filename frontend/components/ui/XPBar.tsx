@@ -30,9 +30,9 @@ export default function XPBar() {
   const progressToNextLevel = xp % 100; 
 
   return (
-    <div className={`flex items-center gap-4 p-2 rounded-2xl border backdrop-blur-sm shadow-sm transition-colors ${
+    <div className={`flex items-center gap-4 p-2 rounded-none border backdrop-blur-sm shadow-none transition-colors ${
         isPro 
-            ? 'bg-slate-900/80 border-slate-700 text-slate-200' 
+            ? 'bg-slate-50/80 border-slate-700 text-slate-200' 
             : 'bg-white/80 border-slate-200 text-slate-700'
     }`}>
       
@@ -41,7 +41,7 @@ export default function XPBar() {
         <svg className="absolute w-full h-full -rotate-90" viewBox="0 0 36 36">
           {/* Fondo del círculo */}
           <path
-            className={isPro ? "text-slate-800" : "text-slate-200"}
+            className={isPro ? "text-slate-900" : "text-slate-200"}
             d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
             fill="none"
             stroke="currentColor"
@@ -52,7 +52,7 @@ export default function XPBar() {
             initial={{ pathLength: 0 }}
             animate={{ pathLength: progressToNextLevel / 100 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className={isPro ? "text-amber-500" : "text-indigo-500"}
+            className={isPro ? "text-[#D4AF37]" : "text-[#D4AF37]"}
             d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
             fill="none"
             stroke="currentColor"
@@ -77,8 +77,8 @@ export default function XPBar() {
         </div>
         
         <div className="flex items-center gap-1">
-            <Zap size={14} className={isPro ? "text-amber-500 fill-current" : "text-yellow-500 fill-current"} />
-            <span className={`text-sm font-black ${isPro ? "text-white" : "text-slate-900"}`}>
+            <Zap size={14} className={isPro ? "text-[#D4AF37] fill-current" : "text-yellow-500 fill-current"} />
+            <span className={`text-sm font-black ${isPro ? "text-slate-900" : "text-slate-900"}`}>
                 {xp} <span className="text-[10px] opacity-60">XP</span>
             </span>
         </div>

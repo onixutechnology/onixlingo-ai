@@ -1,0 +1,96 @@
+{
+  "id": "zh-a1-3",
+  "title": "Los Pronombres y el Verbo Ser",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Pronouns", "Verbs", "Grammar"],
+  "completion_message": "¡Fantástico! Acabas de descubrir el mayor secreto del mandarín: ¡no hay conjugaciones! Aprender verbos chinos es un paseo por el parque.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "La Magia de la Gramática China",
+      "parts": [
+        {
+          "visual": "Los Pronombres Personales:\n\n- 我 (wǒ): Yo.\n- 你 (nǐ): Tú.\n- 他 (tā): Él.\n- 她 (tā): Ella.\n\nNota auditiva: 'Él' y 'Ella' se pronuncian exactamente igual (tā), en primer tono. Solo al leer el carácter sabes si es hombre (他) o mujer (她), porque la mujer tiene el radical de mujer (女) a la izquierda.",
+          "audio": "En español tenemos Yo, Tú, Él, Ella. En chino, esto es increíblemente fácil. 'Yo' se dice Wǒ. Recuerda hacer el tercer tono, bajando y subiendo: Wǒ. 'Tú' se dice Nǐ, que ya conoces de la palabra Nihao. Y para decir 'Él' o 'Ella', se usa exactamente la misma palabra: Tā. En primer tono alto y plano. Tā. Así que cuando hablas, Tā significa él o ella por igual. Solo cuando lo escribes usas un símbolo diferente para diferenciar el género."
+        },
+        {
+          "visual": "El Plural Mágico (们 - men):\n\nPara hacer plural un pronombre, solo tienes que agregar la partícula 'men' (们) al final. Es un tono neutro (muy corto).\n\n- Nosotros: 我们 (wǒmen).\n- Ustedes: 你们 (nǐmen).\n- Ellos / Ellas: 他们 (tāmen) / 她们 (tāmen).",
+          "audio": "Ahora te voy a enseñar un truco de magia. Para convertir 'Yo' en 'Nosotros', o 'Tú' en 'Ustedes', no tienes que aprender palabras nuevas. Solo tienes que pegarle la sílaba 'men' al final. 'Men' es el sufijo plural para personas. Así que, si Wǒ es Yo, Nosotros será Wǒmen. Si Nǐ es Tú, Ustedes será Nǐmen. Y si Tā es Él, Ellos será Tāmen. Es así de simple. Matemáticas puras."
+        },
+        {
+          "visual": "El Verbo Ser (是 - shì):\n\nEl chino NO tiene conjugaciones verbales. Los verbos nunca cambian.\n\n- 我是 (wǒ shì) = Yo soy.\n- 你是 (nǐ shì) = Tú eres.\n- 他是 (tā shì) = Él es.\n- 我们是 (wǒmen shì) = Nosotros somos.\n\nEstructura de la oración: Sujeto + Verbo + Objeto.\nEjemplo: 我是学生 (Wǒ shì xuésheng) = Yo soy estudiante.",
+          "audio": "Aquí viene la mejor noticia que escucharás hoy. El idioma chino no tiene conjugaciones verbales. Cero. Nada de yo soy, tú eres, él es, nosotros somos, ellos son. En chino hay una sola palabra: shì. Shì significa Ser. Para decir 'Yo soy', dices 'Wǒ shì'. Para decir 'Tú eres', dices 'Nǐ shì'. Para decir 'Nosotros somos', adivinaste: 'Wǒmen shì'. El verbo 'shì' es inamovible, como un bloque de piedra. Y el orden de la oración es exactamente igual al español: Sujeto, verbo, objeto. 'Wǒ shì xuésheng'. Yo soy estudiante."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa tu comprensión de los pronombres y el verbo ser.",
+      "questions": [
+        { "id": "zh-a1-3-q1", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo' en mandarín?", "options": ["Wǒ (我)", "Nǐ (你)", "Tā (他)", "Men (们)"], "correct_answer": "Wǒ (我)", "explanation": "Wǒ significa Yo." },
+        { "id": "zh-a1-3-q2", "type": "quiz_choice", "question": "¿Qué tienen en común las palabras 'Él' y 'Ella' al hablar?", "options": ["Se pronuncian exactamente igual (Tā).", "Se escriben con el mismo carácter.", "Son imposibles de diferenciar.", "No existen en chino."], "correct_answer": "Se pronuncian exactamente igual (Tā).", "explanation": "Al hablar, ambos suenan 'tā'. Solo se diferencian en la escritura (他 vs 她)." },
+        { "id": "zh-a1-3-q3", "type": "quiz_choice", "question": "¿Cuál es la función de la partícula 'men' (们)?", "options": ["Convierte los pronombres singulares en plurales.", "Es el verbo ser.", "Significa 'Gracias'.", "Es un pronombre para animales."], "correct_answer": "Convierte los pronombres singulares en plurales.", "explanation": "Wǒ (Yo) + men = Wǒmen (Nosotros)." },
+        { "id": "zh-a1-3-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Nosotros' en mandarín?", "options": ["Wǒmen (我们)", "Nǐmen (你们)", "Tāmen (他们)", "Wǒ (我)"], "correct_answer": "Wǒmen (我们)", "explanation": "Yo (Wǒ) pluralizado con 'men'." },
+        { "id": "zh-a1-3-q5", "type": "quiz_choice", "question": "¿Cómo se conjuga el verbo 'Ser' (是 - shì) para decir 'Ellos son'?", "options": ["Tāmen shì (他们是)", "Tāmen shìm (他们是们)", "Tāmen shiren (他们是人)", "Tāmen shis (他们是s)"], "correct_answer": "Tāmen shì (他们是)", "explanation": "¡No hay conjugación! El verbo 'shì' se mantiene igual para todos los sujetos." },
+        { "id": "zh-a1-3-q6", "type": "quiz_choice", "question": "La oración 'Wǒ shì xuésheng' significa 'Yo soy estudiante'. ¿Cómo dirías 'Tú eres estudiante'?", "options": ["Nǐ shì xuésheng.", "Nǐ shìm xuésheng.", "Nǐmen shì xuésheng.", "Tā shì xuésheng."], "correct_answer": "Nǐ shì xuésheng.", "explanation": "Solo cambias el pronombre 'Wǒ' por 'Nǐ'. El verbo y el objeto quedan intactos." },
+        { "id": "zh-a1-3-q7", "type": "quiz_choice", "question": "Escuchas a alguien decir 'Tā shì María'. ¿Qué puedes inferir?", "options": ["Significa 'Ella es María'.", "Significa 'Tú eres María'.", "Significa 'Él es María'.", "Significa 'Yo soy María'."], "correct_answer": "Significa 'Ella es María'.", "explanation": "Por el contexto del nombre femenino, sabemos que el 'Tā' se refiere a Ella." },
+        { "id": "zh-a1-3-q8", "type": "quiz_choice", "question": "En el pronombre femenino Ella (她 - Tā), ¿qué significa el símbolo (radical) de la izquierda 女?", "options": ["Mujer.", "Hombre.", "Agua.", "Corazón."], "correct_answer": "Mujer.", "explanation": "El radical 女 indica que el carácter está relacionado con lo femenino." },
+        { "id": "zh-a1-3-q9", "type": "quiz_choice", "question": "¿Cómo dirías 'Ustedes' en mandarín?", "options": ["Nǐmen (你们)", "Tāmen (他们)", "Wǒmen (我们)", "Nín (您)"], "correct_answer": "Nǐmen (你们)", "explanation": "Nǐ (Tú) + men (plural)." },
+        { "id": "zh-a1-3-q10", "type": "quiz_choice", "question": "¿El verbo 'Ser' (是) cambia si hablas en pasado?", "options": ["No, los verbos chinos nunca cambian (no se conjugan).", "Sí, se le agrega un sufijo.", "Sí, cambia de tono.", "Sí, se dice 'shǐ'."], "correct_answer": "No, los verbos chinos nunca cambian (no se conjugan).", "explanation": "El tiempo se indica con palabras de tiempo (ayer, mañana), el verbo queda idéntico." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correcto para completar la palabra. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-3-f1", "type": "fill_input", "question": "Yo: ____ (wo)", "correct_answer": "wo", "explanation": "wo" },
+        { "id": "zh-a1-3-f2", "type": "fill_input", "question": "Tú: ____ (ni)", "correct_answer": "ni", "explanation": "ni" },
+        { "id": "zh-a1-3-f3", "type": "fill_input", "question": "Él / Ella: ____ (ta)", "correct_answer": "ta", "explanation": "ta" },
+        { "id": "zh-a1-3-f4", "type": "fill_input", "question": "Nosotros: wo____ (men)", "correct_answer": "men", "explanation": "men" },
+        { "id": "zh-a1-3-f5", "type": "fill_input", "question": "Ustedes: ____men (ni)", "correct_answer": "ni", "explanation": "ni" },
+        { "id": "zh-a1-3-f6", "type": "fill_input", "question": "Ellos: ta____ (men)", "correct_answer": "men", "explanation": "men" },
+        { "id": "zh-a1-3-f7", "type": "fill_input", "question": "Ser: ____ (shi)", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-a1-3-f8", "type": "fill_input", "question": "Yo soy: wo ____ (shi)", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-a1-3-f9", "type": "fill_input", "question": "Tú eres: ____ shi (ni)", "correct_answer": "ni", "explanation": "ni" },
+        { "id": "zh-a1-3-f10", "type": "fill_input", "question": "Ellos son: tamen ____ (shi)", "correct_answer": "shi", "explanation": "shi" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y selecciona la oración correcta.",
+      "questions": [
+        { "id": "zh-a1-3-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我是", "options": ["我是 (wǒ shì - Yo soy)", "你是 (nǐ shì - Tú eres)", "他是 (tā shì - Él es)", "我们是 (wǒmen shì - Nosotros somos)"], "correct_answer": "我是 (wǒ shì - Yo soy)", "explanation": "El audio dice: wǒ shì." },
+        { "id": "zh-a1-3-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你是", "options": ["你是 (nǐ shì - Tú eres)", "我是 (wǒ shì - Yo soy)", "他是 (tā shì - Él es)", "他们是 (tāmen shì - Ellos son)"], "correct_answer": "你是 (nǐ shì - Tú eres)", "explanation": "El audio dice: nǐ shì." },
+        { "id": "zh-a1-3-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他是", "options": ["他是 (tā shì - Él es)", "我们是 (wǒmen shì - Nosotros somos)", "我是 (wǒ shì - Yo soy)", "你是 (nǐ shì - Tú eres)"], "correct_answer": "他是 (tā shì - Él es)", "explanation": "El audio dice: tā shì." },
+        { "id": "zh-a1-3-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我们", "options": ["我们 (wǒmen - Nosotros)", "你们 (nǐmen - Ustedes)", "他们 (tāmen - Ellos)", "我 (wǒ - Yo)"], "correct_answer": "我们 (wǒmen - Nosotros)", "explanation": "El audio dice: wǒmen." },
+        { "id": "zh-a1-3-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你们是", "options": ["你们是 (nǐmen shì - Ustedes son)", "我们是 (wǒmen shì - Nosotros somos)", "他们是 (tāmen shì - Ellos son)", "你是 (nǐ shì - Tú eres)"], "correct_answer": "你们是 (nǐmen shì - Ustedes son)", "explanation": "El audio dice: nǐmen shì." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Pronouns and Verbs",
+      "pairs": [
+        {"id": "zh-a1-3-p1", "source": "我 (wǒ)", "target": "Yo"},
+        {"id": "zh-a1-3-p2", "source": "你 (nǐ)", "target": "Tú"},
+        {"id": "zh-a1-3-p3", "source": "他 (tā)", "target": "Él"},
+        {"id": "zh-a1-3-p4", "source": "她 (tā)", "target": "Ella"},
+        {"id": "zh-a1-3-p5", "source": "我们 (wǒmen)", "target": "Nosotros"},
+        {"id": "zh-a1-3-p6", "source": "你们 (nǐmen)", "target": "Ustedes"},
+        {"id": "zh-a1-3-p7", "source": "他们 (tāmen)", "target": "Ellos"},
+        {"id": "zh-a1-3-p8", "source": "是 (shì)", "target": "Ser (Soy, eres, es...)"},
+        {"id": "zh-a1-3-p9", "source": "我是 (wǒ shì)", "target": "Yo soy"},
+        {"id": "zh-a1-3-p10", "source": "你是 (nǐ shì)", "target": "Tú eres"}
+      ]
+    }
+  ]
+}

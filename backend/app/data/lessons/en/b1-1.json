@@ -1,0 +1,101 @@
+{
+  "id": "b1-1",
+  "title": "Future Plans & Certainty",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Future", "Business"],
+  "completion_message": "¡Excelente inicio de nivel B1! Ahora sabes exactamente cómo hablar del futuro según el grado de planificación.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Hablando del Futuro (Will vs Going to vs Present Continuous)",
+      "parts": [
+        { "visual": "WILL: Decisiones espontáneas o promesas. \nEj: 'The phone is ringing. I WILL answer it' (Yo contestaré). \n'I WILL send you the report today' (Promesa).", "audio": "We use WILL for spontaneous decisions or promises. For example: The phone is ringing, I will answer it. Or, I will send you the report today." },
+        { "visual": "GOING TO: Planes o intenciones ya decididos. \nEj: 'We ARE GOING TO launch the product next month' (Tenemos la intención). \nPRESENT CONTINUOUS: Citas o eventos ya agendados y 100% seguros. \nEj: 'I AM MEETING the CEO tomorrow at 9 AM' (Ya está en la agenda).", "audio": "We use GOING TO for plans and intentions. For example: We are going to launch the product next month. We use the PRESENT CONTINUOUS for 100% confirmed arrangements in the calendar. For example: I am meeting the CEO tomorrow at 9 A.M." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del futuro según el contexto (decisión rápida, intención o cita confirmada).",
+      "questions": [
+        { "id": "b1-1-q1", "type": "quiz_choice", "question": "A: We are out of coffee. \nB: Really? I ____ get some right now. (Decisión espontánea).", "options": ["will", "am going to", "am getting", "go to"], "correct_answer": "will", "explanation": "Decisión tomada en el momento = Will (I will get some)." },
+        { "id": "b1-1-q2", "type": "quiz_choice", "question": "I ____ to London tomorrow. I have the tickets and the hotel booked. (100% confirmado).", "options": ["am flying", "fly", "will fly", "flying"], "correct_answer": "am flying", "explanation": "Cita confirmada con boletos comprados = Present Continuous (I am flying)." },
+        { "id": "b1-1-q3", "type": "quiz_choice", "question": "We ____ hire a new assistant next month. That is our plan. (Plan/Intención).", "options": ["are going to", "will", "are hiring", "going to"], "correct_answer": "are going to", "explanation": "Plan o intención clara pero sin fecha exacta todavía = going to." },
+        { "id": "b1-1-q4", "type": "quiz_choice", "question": "A: The client is on line 1. \nB: Okay, I ____ take the call. (Decisión en el momento).", "options": ["will", "am taking", "am going to", "take"], "correct_answer": "will", "explanation": "Decisión espontánea para reaccionar a una situación = will." },
+        { "id": "b1-1-q5", "type": "quiz_choice", "question": "I promise I ____ finish the project by Friday. (Promesa).", "options": ["will", "am finishing", "going to", "am going to"], "correct_answer": "will", "explanation": "Las promesas siempre se hacen con 'will'." },
+        { "id": "b1-1-q6", "type": "quiz_choice", "question": "She ____ the manager at 2:00 PM today. It's on her calendar. (Cita agendada).", "options": ["is seeing", "sees", "will see", "see"], "correct_answer": "is seeing", "explanation": "Cita en el calendario (100% seguro) = Present Continuous (is seeing)." },
+        { "id": "b1-1-q7", "type": "quiz_choice", "question": "They ____ open a new branch in Berlin next year. They just decided it. (Plan/Intención).", "options": ["are going to", "will open", "opening", "are open"], "correct_answer": "are going to", "explanation": "Intención a futuro = are going to." },
+        { "id": "b1-1-q8", "type": "quiz_choice", "question": "Don't worry about the presentation. I ____ help you. (Promesa/Ofrecimiento).", "options": ["will", "am going to", "help", "am helping"], "correct_answer": "will", "explanation": "Ofrecer ayuda = will (I will help you)." },
+        { "id": "b1-1-q9", "type": "quiz_choice", "question": "What time ____ the clients arriving tomorrow? (Confirmado).", "options": ["are", "will", "do", "is"], "correct_answer": "are", "explanation": "Present continuous en pregunta: What time ARE they arriving?" },
+        { "id": "b1-1-q10", "type": "quiz_choice", "question": "Look at those dark clouds! It ____ rain. (Predicción con evidencia visible).", "options": ["is going to", "will", "is raining", "rains"], "correct_answer": "is going to", "explanation": "Predicción basada en lo que vemos ahora (nubes oscuras) = is going to." },
+        { "id": "b1-1-q11", "type": "quiz_choice", "question": "I think our company ____ grow next year. (Predicción basada en opinión).", "options": ["will", "is growing", "growing", "is going to"], "correct_answer": "will", "explanation": "Predicciones basadas en opiniones personales (I think) = will." },
+        { "id": "b1-1-q12", "type": "quiz_choice", "question": "We ____ a conference call tomorrow morning at 10. (Agendado).", "options": ["are having", "will have", "have", "having"], "correct_answer": "are having", "explanation": "Evento en agenda = are having (Present Continuous)." },
+        { "id": "b1-1-q13", "type": "quiz_choice", "question": "Are you ____ attend the seminar next week? (¿Tienes la intención...?).", "options": ["going to", "will", "attending to", "go to"], "correct_answer": "going to", "explanation": "Preguntar por intenciones = Are you going to...?" },
+        { "id": "b1-1-q14", "type": "quiz_choice", "question": "A: I forgot to send the email! \nB: It's okay, I ____ do it for you. (Decisión rápida).", "options": ["will", "am going to", "do", "am doing"], "correct_answer": "will", "explanation": "Reacción rápida = will." },
+        { "id": "b1-1-q15", "type": "quiz_choice", "question": "He ____ resign next month. He already wrote the letter. (Plan firme).", "options": ["is going to", "will", "is resign", "resigns"], "correct_answer": "is going to", "explanation": "Plan/Decisión ya tomada con anticipación = is going to." },
+        { "id": "b1-1-q16", "type": "quiz_choice", "question": "I ____ you an email as soon as I arrive. (Promesa).", "options": ["will send", "am sending", "am going to send", "send"], "correct_answer": "will send", "explanation": "Promesa = will send." },
+        { "id": "b1-1-q17", "type": "quiz_choice", "question": "The CEO ____ visiting our office next Monday. (Confirmado).", "options": ["is", "will", "does", "going to"], "correct_answer": "is", "explanation": "Present continuous: The CEO is visiting..." },
+        { "id": "b1-1-q18", "type": "quiz_choice", "question": "I don't think we ____ reach our sales target. (Opinión/Predicción).", "options": ["will", "are reaching", "are going to", "reach"], "correct_answer": "will", "explanation": "Opinión (I don't think) = will." },
+        { "id": "b1-1-q19", "type": "quiz_choice", "question": "We ____ launching the marketing campaign on Friday. (Confirmado).", "options": ["are", "will", "do", "going to"], "correct_answer": "are", "explanation": "Present continuous para citas: We are launching..." },
+        { "id": "b1-1-q20", "type": "quiz_choice", "question": "Hold on, I ____ open the door for you. (Decisión espontánea).", "options": ["will", "am opening", "open", "am going to"], "correct_answer": "will", "explanation": "Decisión al momento = will." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe 'will', 'going' (para going to), o la conjugación 'am/is/are' para el presente continuo.",
+      "questions": [
+        { "id": "b1-1-f1", "type": "fill_input", "question": "I promise I ____ send it today. (Promesa)", "correct_answer": "will", "explanation": "will." },
+        { "id": "b1-1-f2", "type": "fill_input", "question": "We are ____ to hire a new manager. (Intención)", "correct_answer": "going", "explanation": "going (to)." },
+        { "id": "b1-1-f3", "type": "fill_input", "question": "I ____ flying to Paris tomorrow. (Cita confirmada)", "correct_answer": "am", "explanation": "am (flying)." },
+        { "id": "b1-1-f4", "type": "fill_input", "question": "I ____ answer the phone! (Decisión espontánea)", "correct_answer": "will", "explanation": "will." },
+        { "id": "b1-1-f5", "type": "fill_input", "question": "She ____ meeting the CEO at 2 PM. (Cita confirmada)", "correct_answer": "is", "explanation": "is (meeting)." },
+        { "id": "b1-1-f6", "type": "fill_input", "question": "They ____ going to open a new branch. (Intención plural)", "correct_answer": "are", "explanation": "are." },
+        { "id": "b1-1-f7", "type": "fill_input", "question": "I think it ____ rain. (Predicción)", "correct_answer": "will", "explanation": "will." },
+        { "id": "b1-1-f8", "type": "fill_input", "question": "Don't worry, I ____ help you. (Ofrecimiento)", "correct_answer": "will", "explanation": "will." },
+        { "id": "b1-1-f9", "type": "fill_input", "question": "We ____ having a meeting tomorrow. (Confirmado plural)", "correct_answer": "are", "explanation": "are (having)." },
+        { "id": "b1-1-f10", "type": "fill_input", "question": "He is ____ to resign. (Plan decidido)", "correct_answer": "going", "explanation": "going (to)." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Grammar Match",
+      "pairs": [
+        {"id": "b1-1-p1", "source": "I will answer it", "target": "Decisión espontánea"},
+        {"id": "b1-1-p2", "source": "I will send it today", "target": "Promesa"},
+        {"id": "b1-1-p3", "source": "We are going to launch", "target": "Intención / Plan general"},
+        {"id": "b1-1-p4", "source": "I am flying tomorrow", "target": "Plan 100% agendado"},
+        {"id": "b1-1-p5", "source": "I think it will grow", "target": "Predicción de opinión"},
+        {"id": "b1-1-p6", "source": "Look! It is going to rain", "target": "Predicción con evidencia"},
+        {"id": "b1-1-p7", "source": "I will help you", "target": "Ofrecimiento de ayuda"},
+        {"id": "b1-1-p8", "source": "She is meeting the CEO", "target": "Cita en calendario"},
+        {"id": "b1-1-p9", "source": "We are having a call", "target": "Evento programado"},
+        {"id": "b1-1-p10", "source": "Are you going to attend?", "target": "Preguntar por intenciones"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración que habla del futuro.",
+      "questions": [
+        { "id": "b1-1-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will answer the phone.", "options": ["I will answer the phone.", "I am answering the phone.", "I answered the phone.", "I will call the phone."], "correct_answer": "I will answer the phone.", "explanation": "Audio exacto." },
+        { "id": "b1-1-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are going to launch the product.", "options": ["We are going to launch the product.", "We will launch the product.", "We are launching the product.", "We go to launch the product."], "correct_answer": "We are going to launch the product.", "explanation": "Audio exacto." },
+        { "id": "b1-1-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am meeting the CEO tomorrow.", "options": ["I am meeting the CEO tomorrow.", "I will meet the CEO tomorrow.", "I meet the CEO tomorrow.", "I am going to meet the CEO tomorrow."], "correct_answer": "I am meeting the CEO tomorrow.", "explanation": "Audio exacto." },
+        { "id": "b1-1-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I promise I will send it.", "options": ["I promise I will send it.", "I promise I am sending it.", "I promise to send it.", "I will send it tomorrow."], "correct_answer": "I promise I will send it.", "explanation": "Audio exacto." },
+        { "id": "b1-1-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is seeing the manager at two.", "options": ["She is seeing the manager at two.", "She will see the manager at two.", "She sees the manager at two.", "She is going to see the manager at two."], "correct_answer": "She is seeing the manager at two.", "explanation": "Audio exacto." },
+        { "id": "b1-1-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They are going to open a new branch.", "options": ["They are going to open a new branch.", "They will open a new branch.", "They are opening a new branch.", "We are going to open a new branch."], "correct_answer": "They are going to open a new branch.", "explanation": "Audio exacto." },
+        { "id": "b1-1-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Don't worry, I will help you.", "options": ["Don't worry, I will help you.", "Don't worry, I am helping you.", "Don't worry, I am going to help you.", "I will help you don't worry."], "correct_answer": "Don't worry, I will help you.", "explanation": "Audio exacto." },
+        { "id": "b1-1-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I think the company will grow.", "options": ["I think the company will grow.", "I think the company is growing.", "I think the company is going to grow.", "We think the company will grow."], "correct_answer": "I think the company will grow.", "explanation": "Audio exacto." },
+        { "id": "b1-1-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are having a conference call.", "options": ["We are having a conference call.", "We will have a conference call.", "We are going to have a conference call.", "We have a conference call."], "correct_answer": "We are having a conference call.", "explanation": "Audio exacto." },
+        { "id": "b1-1-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Are you going to attend the seminar?", "options": ["Are you going to attend the seminar?", "Will you attend the seminar?", "Are you attending the seminar?", "Do you go to the seminar?"], "correct_answer": "Are you going to attend the seminar?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

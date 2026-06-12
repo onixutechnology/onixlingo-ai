@@ -1,0 +1,101 @@
+{
+  "id": "c2-37",
+  "title": "Legal & Compliance",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Legal", "Compliance", "Business"],
+  "completion_message": "¡Excelente! El inglés legal es un idioma en sí mismo. Conocer términos como 'Null and void' o 'Breach of contract' asegura que puedas proteger los intereses de tu empresa en cualquier negociación internacional.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Inglés Legal y Cumplimiento (C2)",
+      "parts": [
+        { "visual": "En el nivel directivo, interactuarás constantemente con contratos y regulaciones. \n\n1. Binding (Vinculante): \n- Un acuerdo que tiene fuerza legal y debe ser obedecido. \nEj: This email constitutes a legally BINDING contract. \n\n2. Null and void (Nulo y sin efecto): \n- Un contrato o cláusula que carece de validez legal, a menudo por un error o fraude. \nEj: Because it wasn't signed, the agreement is NULL AND VOID. \n\n3. Breach of contract (Incumplimiento de contrato): \n- Romper las reglas establecidas en un acuerdo legal. \nEj: Failing to deliver the goods on time is a clear BREACH OF CONTRACT.", "audio": "Welcome to Legal English and Compliance. At the executive level, you will constantly deal with contracts and regulations. Number 1: Binding. This means an agreement has legal force and must be obeyed. For example: This email constitutes a legally BINDING contract. Number 2: Null and void. This refers to a contract or clause that has no legal force, often due to an error or fraud. For example: Because it wasn't signed, the agreement is NULL AND VOID. Number 3: Breach of contract. This means breaking the rules or failing to perform what was promised in a legal agreement. For example: Failing to deliver the goods on time is a clear BREACH OF CONTRACT." },
+        { "visual": "4. Loophole (Vacío legal / Escapatoria): \n- Una ambigüedad en la ley o contrato que permite a alguien evitar una obligación. \nEj: The company used a tax LOOPHOLE to avoid paying millions. \n\n5. Liability (Responsabilidad legal / Obligación): \n- Ser legalmente responsable de algo, especialmente de pagar por daños. \nEj: We need insurance to cover our LIABILITY in case of accidents. \n\n6. Non-disclosure agreement / NDA (Acuerdo de confidencialidad): \n- Contrato para mantener en secreto información compartida. \nEj: Please sign this NDA before we discuss the software. \n\n7. Due diligence (Debida diligencia / Auditoría previa): \n- Investigación exhaustiva antes de firmar un contrato o comprar una empresa. \nEj: We must perform DUE DILIGENCE before acquiring the startup.", "audio": "Number 4: Loophole. An ambiguity or inadequacy in the law or a set of rules that allows someone to avoid an obligation. For example: The company used a tax LOOPHOLE to avoid paying millions. Number 5: Liability. Being legally responsible for something, especially paying for damages. For example: We need insurance to cover our LIABILITY in case of accidents. Number 6: Non-disclosure agreement, or NDA. A contract to keep shared information a secret. For example: Please sign this NDA before we discuss the software. Number 7: Due diligence. A comprehensive appraisal or investigation of a business undertaken before a merger or acquisition. For example: We must perform DUE DILIGENCE before acquiring the startup." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término legal corporativo correcto.",
+      "questions": [
+        { "id": "c2-37-q1", "type": "quiz_choice", "question": "Once both parties sign this document, it becomes a legally ____ agreement. (Vinculante).", "options": ["binding", "bounding", "banding", "bending"], "correct_answer": "binding", "explanation": "Binding = vinculante, de cumplimiento obligatorio." },
+        { "id": "c2-37-q2", "type": "quiz_choice", "question": "Because the contract was signed under pressure, the judge declared it null and ____. (Nulo y sin efecto).", "options": ["void", "empty", "blank", "zero"], "correct_answer": "void", "explanation": "Null and void = expresión legal para nulo e inválido." },
+        { "id": "c2-37-q3", "type": "quiz_choice", "question": "The supplier didn't deliver the materials on time, which is a clear ____ of contract. (Incumplimiento).", "options": ["breach", "break", "crack", "tear"], "correct_answer": "breach", "explanation": "Breach of contract = incumplimiento de contrato." },
+        { "id": "c2-37-q4", "type": "quiz_choice", "question": "The billionaire's lawyers found a tax ____ that allowed him to pay zero taxes legally. (Vacío legal).", "options": ["loophole", "blackhole", "peephole", "pothole"], "correct_answer": "loophole", "explanation": "Loophole = vacío legal, ambigüedad que permite evadir la norma." },
+        { "id": "c2-37-q5", "type": "quiz_choice", "question": "As a company director, you have limited ____ in case the company goes bankrupt. (Responsabilidad financiera/legal).", "options": ["liability", "responsibility", "reliability", "viability"], "correct_answer": "liability", "explanation": "Liability = responsabilidad legal, especialmente referida a deudas o daños." },
+        { "id": "c2-37-q6", "type": "quiz_choice", "question": "Before buying the competitor, our accountants spent three months performing due ____. (Auditoría previa / Investigación profunda).", "options": ["diligence", "intelligence", "vigilance", "excellence"], "correct_answer": "diligence", "explanation": "Due diligence = debida diligencia (investigación legal y financiera previa a una compra)." },
+        { "id": "c2-37-q7", "type": "quiz_choice", "question": "We can't discuss the secret project until you sign this ____-disclosure agreement (NDA).", "options": ["non", "un", "no", "anti"], "correct_answer": "non", "explanation": "Non-disclosure agreement (NDA) = acuerdo de confidencialidad." },
+        { "id": "c2-37-q8", "type": "quiz_choice", "question": "A ____ is a lawsuit filed by a large group of people who all suffered from the same issue. (Demanda colectiva).", "options": ["class-action", "group-action", "mass-action", "team-action"], "correct_answer": "class-action", "explanation": "Class-action lawsuit = demanda colectiva." },
+        { "id": "c2-37-q9", "type": "quiz_choice", "question": "The fine print in the contract contains several ____ clauses that protect the company. (Cláusulas).", "options": ["clauses", "sentences", "paragraphs", "lines"], "correct_answer": "clauses", "explanation": "Clauses = cláusulas (secciones de un contrato)." },
+        { "id": "c2-37-q10", "type": "quiz_choice", "question": "If you use our logo without permission, you are committing copyright ____. (Infracción).", "options": ["infringement", "breaking", "stealing", "robbing"], "correct_answer": "infringement", "explanation": "Copyright infringement = infracción de derechos de autor." },
+        { "id": "c2-37-q11", "type": "quiz_choice", "question": "The contract includes a ____ agreement, meaning the employee cannot work for a competitor for two years. (No competencia).", "options": ["non-compete", "non-work", "anti-rival", "no-fight"], "correct_answer": "non-compete", "explanation": "Non-compete clause/agreement = cláusula de no competencia." },
+        { "id": "c2-37-q12", "type": "quiz_choice", "question": "Both parties agreed to settle the dispute out of ____ to avoid massive legal fees. (Fuera del tribunal).", "options": ["court", "trial", "judge", "law"], "correct_answer": "court", "explanation": "Settle out of court = llegar a un acuerdo extrajudicial." },
+        { "id": "c2-37-q13", "type": "quiz_choice", "question": "The company was found guilty of money ____. (Lavado de dinero).", "options": ["laundering", "washing", "cleaning", "hiding"], "correct_answer": "laundering", "explanation": "Money laundering = lavado de dinero." },
+        { "id": "c2-37-q14", "type": "quiz_choice", "question": "A person who exposes illegal or unethical activity within a company is called a ____. (Denunciante / Informante).", "options": ["whistleblower", "bellringer", "alarmist", "shouter"], "correct_answer": "whistleblower", "explanation": "Whistleblower = denunciante interno." },
+        { "id": "c2-37-q15", "type": "quiz_choice", "question": "The HR department ensures ____ with all local labor laws. (Cumplimiento normativo).", "options": ["compliance", "reliance", "alliance", "defiance"], "correct_answer": "compliance", "explanation": "Compliance = cumplimiento normativo." },
+        { "id": "c2-37-q16", "type": "quiz_choice", "question": "In the event of a dispute, this agreement shall be governed by the ____ of the State of New York. (Jurisdicción / Leyes).", "options": ["laws", "rules", "orders", "commands"], "correct_answer": "laws", "explanation": "Governed by the laws of = regido por las leyes de (cláusula de jurisdicción)." },
+        { "id": "c2-37-q17", "type": "quiz_choice", "question": "The company filed for Chapter 11 ____ to restructure its massive debts. (Bancarrota).", "options": ["bankruptcy", "ruin", "failure", "broke"], "correct_answer": "bankruptcy", "explanation": "Bankruptcy = bancarrota / quiebra." },
+        { "id": "c2-37-q18", "type": "quiz_choice", "question": "The contract has a ____ clause, allowing either party to end the agreement with a 30-day notice. (Terminación).", "options": ["termination", "ending", "finishing", "closing"], "correct_answer": "termination", "explanation": "Termination clause = cláusula de terminación o rescisión." },
+        { "id": "c2-37-q19", "type": "quiz_choice", "question": "The CEO was accused of ____ trading because he bought shares just before the merger was announced. (Uso de información privilegiada).", "options": ["insider", "inside", "internal", "secret"], "correct_answer": "insider", "explanation": "Insider trading = uso ilegal de información privilegiada para operar en bolsa." },
+        { "id": "c2-37-q20", "type": "quiz_choice", "question": "Force ____ is a clause that frees both parties from liability in case of an extraordinary event, like an earthquake. (Fuerza mayor).", "options": ["majeure", "major", "force", "power"], "correct_answer": "majeure", "explanation": "Force majeure = fuerza mayor (término legal francés usado en inglés)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término legal correcto.",
+      "questions": [
+        { "id": "c2-37-f1", "type": "fill_input", "question": "A legally ____ contract. (Vinculante con B)", "correct_answer": "binding", "explanation": "binding." },
+        { "id": "c2-37-f2", "type": "fill_input", "question": "Null and ____. (Nulo y sin efecto con V)", "correct_answer": "void", "explanation": "void." },
+        { "id": "c2-37-f3", "type": "fill_input", "question": "A ____ of contract. (Incumplimiento con B)", "correct_answer": "breach", "explanation": "breach." },
+        { "id": "c2-37-f4", "type": "fill_input", "question": "A tax ____. (Vacío legal con L)", "correct_answer": "loophole", "explanation": "loophole." },
+        { "id": "c2-37-f5", "type": "fill_input", "question": "Limited ____. (Responsabilidad legal con L)", "correct_answer": "liability", "explanation": "liability." },
+        { "id": "c2-37-f6", "type": "fill_input", "question": "Due ____. (Auditoría previa con D)", "correct_answer": "diligence", "explanation": "diligence." },
+        { "id": "c2-37-f7", "type": "fill_input", "question": "A ____-disclosure agreement. (Confidencialidad con N)", "correct_answer": "non", "explanation": "non." },
+        { "id": "c2-37-f8", "type": "fill_input", "question": "Copyright ____. (Infracción con I)", "correct_answer": "infringement", "explanation": "infringement." },
+        { "id": "c2-37-f9", "type": "fill_input", "question": "Settle out of ____. (Tribunal con C)", "correct_answer": "court", "explanation": "court." },
+        { "id": "c2-37-f10", "type": "fill_input", "question": "A corporate ____. (Denunciante interno con W)", "correct_answer": "whistleblower", "explanation": "whistleblower." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Legal Match",
+      "pairs": [
+        {"id": "c2-37-p1", "source": "Binding", "target": "Vinculante (obligatorio)"},
+        {"id": "c2-37-p2", "source": "Null and void", "target": "Nulo y sin efecto"},
+        {"id": "c2-37-p3", "source": "Breach of contract", "target": "Incumplimiento de contrato"},
+        {"id": "c2-37-p4", "source": "Loophole", "target": "Vacío legal / Escapatoria"},
+        {"id": "c2-37-p5", "source": "Liability", "target": "Responsabilidad legal / financiera"},
+        {"id": "c2-37-p6", "source": "Due diligence", "target": "Auditoría o investigación previa"},
+        {"id": "c2-37-p7", "source": "NDA (Non-disclosure)", "target": "Acuerdo de confidencialidad"},
+        {"id": "c2-37-p8", "source": "Copyright infringement", "target": "Infracción de derechos de autor"},
+        {"id": "c2-37-p9", "source": "Settle out of court", "target": "Llegar a un acuerdo extrajudicial"},
+        {"id": "c2-37-p10", "source": "Whistleblower", "target": "Denunciante interno"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase legal correcta.",
+      "questions": [
+        { "id": "c2-37-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This is a binding agreement.", "options": ["This is a binding agreement.", "That is a binding agreement.", "This was a binding agreement.", "This is a finding agreement."], "correct_answer": "This is a binding agreement.", "explanation": "Audio exacto." },
+        { "id": "c2-37-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The contract is null and void.", "options": ["The contract is null and void.", "A contract is null and void.", "The contracts are null and void.", "The contract was null and void."], "correct_answer": "The contract is null and void.", "explanation": "Audio exacto." },
+        { "id": "c2-37-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "That is a breach of contract.", "options": ["That is a breach of contract.", "This is a breach of contract.", "That was a breach of contract.", "There is a breach of contract."], "correct_answer": "That is a breach of contract.", "explanation": "Audio exacto." },
+        { "id": "c2-37-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They found a tax loophole.", "options": ["They found a tax loophole.", "We found a tax loophole.", "He found a tax loophole.", "They find a tax loophole."], "correct_answer": "They found a tax loophole.", "explanation": "Audio exacto." },
+        { "id": "c2-37-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have limited liability.", "options": ["We have limited liability.", "They have limited liability.", "I have limited liability.", "We had limited liability."], "correct_answer": "We have limited liability.", "explanation": "Audio exacto." },
+        { "id": "c2-37-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Perform due diligence first.", "options": ["Perform due diligence first.", "Perform due diligence fast.", "Performed due diligence first.", "Performing due diligence first."], "correct_answer": "Perform due diligence first.", "explanation": "Audio exacto." },
+        { "id": "c2-37-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sign the non-disclosure agreement.", "options": ["Sign the non-disclosure agreement.", "Signed the non-disclosure agreement.", "Signing the non-disclosure agreement.", "Sign a non-disclosure agreement."], "correct_answer": "Sign the non-disclosure agreement.", "explanation": "Audio exacto." },
+        { "id": "c2-37-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is copyright infringement.", "options": ["It is copyright infringement.", "This is copyright infringement.", "That is copyright infringement.", "It was copyright infringement."], "correct_answer": "It is copyright infringement.", "explanation": "Audio exacto." },
+        { "id": "c2-37-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They settled out of court.", "options": ["They settled out of court.", "We settled out of court.", "They settle out of court.", "He settled out of court."], "correct_answer": "They settled out of court.", "explanation": "Audio exacto." },
+        { "id": "c2-37-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The whistleblower was fired.", "options": ["The whistleblower was fired.", "A whistleblower was fired.", "The whistleblowers were fired.", "The whistleblower is fired."], "correct_answer": "The whistleblower was fired.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

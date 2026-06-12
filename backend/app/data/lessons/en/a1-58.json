@@ -1,0 +1,101 @@
+{
+  "id": "a1-58",
+  "title": "Workplace Safety",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Safety", "Workplace"],
+  "completion_message": "¡Excelente! Has aprendido vocabulario clave para mantenerte seguro en tu lugar de trabajo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Seguridad en el Trabajo",
+      "parts": [
+        { "visual": "En caso de emergencia (emergency), busca la salida de emergencia (emergency exit). Escucha la alarma de incendios (fire alarm).", "audio": "In case of emergency, look for the emergency exit. Listen to the fire alarm." },
+        { "visual": "Equipo de protección: Helmet / hard hat (casco), Gloves (guantes), Safety glasses (gafas de seguridad).", "audio": "Protective equipment: Helmet or hard hat, gloves, safety glasses." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta sobre seguridad en el trabajo.",
+      "questions": [
+        { "id": "a1-58-q1", "type": "quiz_choice", "question": "Where is the emergency ____? (salida).", "options": ["exit", "door", "out", "enter"], "correct_answer": "exit", "explanation": "Salida de emergencia (emergency exit)." },
+        { "id": "a1-58-q2", "type": "quiz_choice", "question": "I hear the fire ____ (alarma).", "options": ["alarm", "bell", "ring", "noise"], "correct_answer": "alarm", "explanation": "Alarma de incendios (fire alarm)." },
+        { "id": "a1-58-q3", "type": "quiz_choice", "question": "You must wear a hard ____ (casco).", "options": ["hat", "cap", "helmet", "head"], "correct_answer": "hat", "explanation": "Casco de construcción (hard hat o helmet)." },
+        { "id": "a1-58-q4", "type": "quiz_choice", "question": "Wear safety ____ to protect your eyes (gafas).", "options": ["glasses", "glass", "cups", "windows"], "correct_answer": "glasses", "explanation": "Gafas de seguridad (safety glasses)." },
+        { "id": "a1-58-q5", "type": "quiz_choice", "question": "Put on your ____ (guantes).", "options": ["gloves", "hands", "shoes", "socks"], "correct_answer": "gloves", "explanation": "Guantes (gloves)." },
+        { "id": "a1-58-q6", "type": "quiz_choice", "question": "Use the fire ____ (extintor).", "options": ["extinguisher", "water", "hose", "box"], "correct_answer": "extinguisher", "explanation": "Extintor (fire extinguisher)." },
+        { "id": "a1-58-q7", "type": "quiz_choice", "question": "Don't run, please ____ (camina).", "options": ["walk", "walks", "walking", "to walk"], "correct_answer": "walk", "explanation": "Camina (walk)." },
+        { "id": "a1-58-q8", "type": "quiz_choice", "question": "Be ____! The floor is wet (cuidado).", "options": ["careful", "care", "caring", "safe"], "correct_answer": "careful", "explanation": "Ten cuidado (Be careful)." },
+        { "id": "a1-58-q9", "type": "quiz_choice", "question": "Look out for the wet ____ sign (piso).", "options": ["floor", "door", "wall", "ground"], "correct_answer": "floor", "explanation": "Piso mojado (wet floor)." },
+        { "id": "a1-58-q10", "type": "quiz_choice", "question": "This area is ____ (peligrosa).", "options": ["dangerous", "danger", "safe", "bad"], "correct_answer": "dangerous", "explanation": "Peligrosa (dangerous)." },
+        { "id": "a1-58-q11", "type": "quiz_choice", "question": "Keep the area ____ (segura).", "options": ["safe", "save", "safety", "danger"], "correct_answer": "safe", "explanation": "Segura (safe)." },
+        { "id": "a1-58-q12", "type": "quiz_choice", "question": "Follow the safety ____ (reglas).", "options": ["rules", "rulers", "laws", "lines"], "correct_answer": "rules", "explanation": "Reglas de seguridad (safety rules)." },
+        { "id": "a1-58-q13", "type": "quiz_choice", "question": "Where is the first aid ____? (botiquín).", "options": ["kit", "box", "bag", "pack"], "correct_answer": "kit", "explanation": "Botiquín de primeros auxilios (first aid kit)." },
+        { "id": "a1-58-q14", "type": "quiz_choice", "question": "Call ____ in an emergency (número de emergencias en USA).", "options": ["911", "123", "411", "000"], "correct_answer": "911", "explanation": "911 es el número de emergencias." },
+        { "id": "a1-58-q15", "type": "quiz_choice", "question": "Do not use the ____ in a fire (ascensor).", "options": ["elevator", "stairs", "door", "window"], "correct_answer": "elevator", "explanation": "Ascensor / Elevador (elevator)." },
+        { "id": "a1-58-q16", "type": "quiz_choice", "question": "Use the ____ instead (escaleras).", "options": ["stairs", "elevator", "ramp", "door"], "correct_answer": "stairs", "explanation": "Escaleras (stairs)." },
+        { "id": "a1-58-q17", "type": "quiz_choice", "question": "Wear steel-toe ____ (botas).", "options": ["boots", "shoes", "socks", "heels"], "correct_answer": "boots", "explanation": "Botas con punta de acero (steel-toe boots)." },
+        { "id": "a1-58-q18", "type": "quiz_choice", "question": "There is an ____ (emergencia).", "options": ["emergency", "urgent", "danger", "safe"], "correct_answer": "emergency", "explanation": "Emergencia (emergency)." },
+        { "id": "a1-58-q19", "type": "quiz_choice", "question": "Evacuate the ____ (edificio).", "options": ["building", "build", "house", "room"], "correct_answer": "building", "explanation": "Edificio (building)." },
+        { "id": "a1-58-q20", "type": "quiz_choice", "question": "Stay ____ (calmado).", "options": ["calm", "safe", "quiet", "down"], "correct_answer": "calm", "explanation": "Mantén la calma (Stay calm)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta de seguridad.",
+      "questions": [
+        { "id": "a1-58-f1", "type": "fill_input", "question": "Emergency ____ (Salida).", "correct_answer": "exit", "explanation": "Exit." },
+        { "id": "a1-58-f2", "type": "fill_input", "question": "Fire ____ (Alarma).", "correct_answer": "alarm", "explanation": "Alarm." },
+        { "id": "a1-58-f3", "type": "fill_input", "question": "Hard ____ (Casco de seguridad).", "correct_answer": "hat", "explanation": "Hat." },
+        { "id": "a1-58-f4", "type": "fill_input", "question": "Safety ____ (Gafas).", "correct_answer": "glasses", "explanation": "Glasses." },
+        { "id": "a1-58-f5", "type": "fill_input", "question": "Wear ____ (Guantes).", "correct_answer": "gloves", "explanation": "Gloves." },
+        { "id": "a1-58-f6", "type": "fill_input", "question": "Be ____! (Cuidadoso).", "correct_answer": "careful", "explanation": "Careful." },
+        { "id": "a1-58-f7", "type": "fill_input", "question": "First aid ____ (Botiquín).", "correct_answer": "kit", "explanation": "Kit." },
+        { "id": "a1-58-f8", "type": "fill_input", "question": "Don't use the ____ (Ascensor).", "correct_answer": "elevator", "explanation": "Elevator." },
+        { "id": "a1-58-f9", "type": "fill_input", "question": "Use the ____ (Escaleras).", "correct_answer": "stairs", "explanation": "Stairs." },
+        { "id": "a1-58-f10", "type": "fill_input", "question": "Stay ____ (Calmado).", "correct_answer": "calm", "explanation": "Calm." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-58-p1", "source": "Emergency exit", "target": "Salida de emergencia"},
+        {"id": "a1-58-p2", "source": "Fire alarm", "target": "Alarma de incendios"},
+        {"id": "a1-58-p3", "source": "Hard hat", "target": "Casco de seguridad"},
+        {"id": "a1-58-p4", "source": "Gloves", "target": "Guantes"},
+        {"id": "a1-58-p5", "source": "Safety glasses", "target": "Gafas de seguridad"},
+        {"id": "a1-58-p6", "source": "First aid kit", "target": "Botiquín de primeros auxilios"},
+        {"id": "a1-58-p7", "source": "Elevator", "target": "Ascensor"},
+        {"id": "a1-58-p8", "source": "Stairs", "target": "Escaleras"},
+        {"id": "a1-58-p9", "source": "Dangerous", "target": "Peligroso"},
+        {"id": "a1-58-p10", "source": "Safe", "target": "Seguro"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-58-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Emergency exit.", "options": ["Emergency exit.", "Emergency room.", "Emergency door.", "Emergency plan."], "correct_answer": "Emergency exit.", "explanation": "Audio exacto." },
+        { "id": "a1-58-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I hear the fire alarm.", "options": ["I hear the fire alarm.", "I see the fire alarm.", "Hear the fire alarm.", "The fire alarm."], "correct_answer": "I hear the fire alarm.", "explanation": "Audio exacto." },
+        { "id": "a1-58-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Wear your hard hat.", "options": ["Wear your hard hat.", "Wear your hat.", "Where is your hard hat?", "Wear your helmet."], "correct_answer": "Wear your hard hat.", "explanation": "Audio exacto." },
+        { "id": "a1-58-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Safety glasses.", "options": ["Safety glasses.", "Safety rules.", "Safe glasses.", "Sun glasses."], "correct_answer": "Safety glasses.", "explanation": "Audio exacto." },
+        { "id": "a1-58-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Be careful.", "options": ["Be careful.", "Be quiet.", "Be safe.", "Be calm."], "correct_answer": "Be careful.", "explanation": "Audio exacto." },
+        { "id": "a1-58-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "First aid kit.", "options": ["First aid kit.", "First aid box.", "First aid bag.", "Fast aid kit."], "correct_answer": "First aid kit.", "explanation": "Audio exacto." },
+        { "id": "a1-58-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Don't use the elevator.", "options": ["Don't use the elevator.", "Use the elevator.", "Don't use the stairs.", "Please use the elevator."], "correct_answer": "Don't use the elevator.", "explanation": "Audio exacto." },
+        { "id": "a1-58-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Use the stairs.", "options": ["Use the stairs.", "Use the elevator.", "Go to the stairs.", "Walk the stairs."], "correct_answer": "Use the stairs.", "explanation": "Audio exacto." },
+        { "id": "a1-58-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Stay calm.", "options": ["Stay calm.", "Stay safe.", "Stay quiet.", "Be calm."], "correct_answer": "Stay calm.", "explanation": "Audio exacto." },
+        { "id": "a1-58-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Evacuate the building.", "options": ["Evacuate the building.", "Leave the building.", "Enter the building.", "Evacuate the office."], "correct_answer": "Evacuate the building.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

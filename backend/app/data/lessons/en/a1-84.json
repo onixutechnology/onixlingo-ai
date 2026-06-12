@@ -1,0 +1,101 @@
+{
+  "id": "a1-84",
+  "title": "Describing Your Job",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Jobs", "Descriptions", "Work"],
+  "completion_message": "¡Muy bien! Ahora puedes describir tu trabajo, tus responsabilidades y tu sector de manera básica en inglés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Describir Tu Trabajo",
+      "parts": [
+        { "visual": "Para decir tu cargo: I am a (cargo). I am an engineer / I am a manager / I am an accountant.", "audio": "To say your job title: I am a followed by the job. I am an engineer. I am a manager. I am an accountant." },
+        { "visual": "Para describir responsabilidades: I work with (Trabajo con). I manage (Gestiono). I handle (Me encargo de). I report to (Reporto a).", "audio": "To describe responsibilities: I work with. I manage. I handle. I report to." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para describir tu trabajo.",
+      "questions": [
+        { "id": "a1-84-q1", "type": "quiz_choice", "question": "I am ____ accountant. (artículo correcto).", "options": ["an", "a", "the", "some"], "correct_answer": "an", "explanation": "'an' antes de vocal inicial: accountant empieza con 'a'." },
+        { "id": "a1-84-q2", "type": "quiz_choice", "question": "I am ____ manager.", "options": ["a", "an", "the", "some"], "correct_answer": "a", "explanation": "'a' antes de consonante: manager empieza con 'm'." },
+        { "id": "a1-84-q3", "type": "quiz_choice", "question": "I ____ in the sales department. (Trabajo).", "options": ["work", "am working", "working", "works"], "correct_answer": "work", "explanation": "Descripción general habitual -> Simple Present." },
+        { "id": "a1-84-q4", "type": "quiz_choice", "question": "I ____ a team of five people. (Gestiono).", "options": ["manage", "managing", "managed", "manages"], "correct_answer": "manage", "explanation": "Simple present para hecho habitual." },
+        { "id": "a1-84-q5", "type": "quiz_choice", "question": "I ____ client accounts. (Me encargo de).", "options": ["handle", "am handling", "handled", "handles"], "correct_answer": "handle", "explanation": "Handle = gestionar/encargarse de." },
+        { "id": "a1-84-q6", "type": "quiz_choice", "question": "I ____ to the regional director. (Reporto).", "options": ["report", "reporting", "reported", "reports"], "correct_answer": "report", "explanation": "Report to = reportar a." },
+        { "id": "a1-84-q7", "type": "quiz_choice", "question": "I ____ with the marketing team. (Colaboro).", "options": ["work", "working", "worked", "works"], "correct_answer": "work", "explanation": "Work with = trabajar con." },
+        { "id": "a1-84-q8", "type": "quiz_choice", "question": "What do you ____? (¿A qué te dedicas?).", "options": ["do", "does", "doing", "did"], "correct_answer": "do", "explanation": "What do you do? (¿A qué te dedicas?)." },
+        { "id": "a1-84-q9", "type": "quiz_choice", "question": "I am ____ engineer.", "options": ["an", "a", "the", "some"], "correct_answer": "an", "explanation": "Engineer empieza con vocal." },
+        { "id": "a1-84-q10", "type": "quiz_choice", "question": "I ____ in finance. (Trabajo, sector).", "options": ["work", "am working", "working", "works"], "correct_answer": "work", "explanation": "I work in finance." },
+        { "id": "a1-84-q11", "type": "quiz_choice", "question": "I am ____ for IT support. (Responsable).", "options": ["responsible", "response", "respond", "responsibility"], "correct_answer": "responsible", "explanation": "Responsible for = responsable de." },
+        { "id": "a1-84-q12", "type": "quiz_choice", "question": "I ____ data every day. (Analizo).", "options": ["analyze", "analysing", "analysed", "analyses"], "correct_answer": "analyze", "explanation": "Simple present habitual: analyze." },
+        { "id": "a1-84-q13", "type": "quiz_choice", "question": "My main ____ is sales. (Responsabilidad).", "options": ["responsibility", "respond", "response", "responsible"], "correct_answer": "responsibility", "explanation": "Responsibility = responsabilidad." },
+        { "id": "a1-84-q14", "type": "quiz_choice", "question": "I ____ for a tech company. (Trabajo para).", "options": ["work", "working", "worked", "works"], "correct_answer": "work", "explanation": "Work for = trabajar para." },
+        { "id": "a1-84-q15", "type": "quiz_choice", "question": "I am ____ HR officer.", "options": ["an", "a", "the", "some"], "correct_answer": "an", "explanation": "HR starts with a vowel sound." },
+        { "id": "a1-84-q16", "type": "quiz_choice", "question": "I ____ invoices and payments. (Proceso).", "options": ["process", "processing", "processed", "processes"], "correct_answer": "process", "explanation": "Process = procesar." },
+        { "id": "a1-84-q17", "type": "quiz_choice", "question": "My ____ is Marketing Manager. (Cargo).", "options": ["title", "name", "role", "position"], "correct_answer": "title", "explanation": "Job title = cargo/título del puesto." },
+        { "id": "a1-84-q18", "type": "quiz_choice", "question": "I am ____ for new accounts. (Cargo: encargado/a).", "options": ["responsible", "respond", "response", "responsible"], "correct_answer": "responsible", "explanation": "Responsible for = responsable de." },
+        { "id": "a1-84-q19", "type": "quiz_choice", "question": "I ____ clients every day. (Contacto).", "options": ["contact", "contacting", "contacted", "contacts"], "correct_answer": "contact", "explanation": "Contact = contactar." },
+        { "id": "a1-84-q20", "type": "quiz_choice", "question": "I ____ meetings and schedules. (Organizo).", "options": ["organize", "organizing", "organized", "organizes"], "correct_answer": "organize", "explanation": "Organize = organizar." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta para describir tu trabajo.",
+      "questions": [
+        { "id": "a1-84-f1", "type": "fill_input", "question": "I am ____ accountant. (artículo).", "correct_answer": "an", "explanation": "an." },
+        { "id": "a1-84-f2", "type": "fill_input", "question": "I am ____ manager. (artículo).", "correct_answer": "a", "explanation": "a." },
+        { "id": "a1-84-f3", "type": "fill_input", "question": "I ____ in the sales department. (Trabajo).", "correct_answer": "work", "explanation": "work." },
+        { "id": "a1-84-f4", "type": "fill_input", "question": "I ____ a team of five. (Gestiono).", "correct_answer": "manage", "explanation": "manage." },
+        { "id": "a1-84-f5", "type": "fill_input", "question": "I ____ to the director. (Reporto).", "correct_answer": "report", "explanation": "report." },
+        { "id": "a1-84-f6", "type": "fill_input", "question": "I ____ with the marketing team. (Colaboro).", "correct_answer": "work", "explanation": "work." },
+        { "id": "a1-84-f7", "type": "fill_input", "question": "What do you ____? (¿A qué te dedicas?).", "correct_answer": "do", "explanation": "do." },
+        { "id": "a1-84-f8", "type": "fill_input", "question": "I am ____ for IT support. (Responsable).", "correct_answer": "responsible", "explanation": "responsible." },
+        { "id": "a1-84-f9", "type": "fill_input", "question": "I ____ for a tech company. (Trabajo para).", "correct_answer": "work", "explanation": "work." },
+        { "id": "a1-84-f10", "type": "fill_input", "question": "My ____ is Marketing Manager. (Cargo/título).", "correct_answer": "title", "explanation": "title." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-84-p1", "source": "I am an accountant", "target": "Soy contador/a"},
+        {"id": "a1-84-p2", "source": "I work in finance", "target": "Trabajo en finanzas"},
+        {"id": "a1-84-p3", "source": "I manage a team", "target": "Gestiono un equipo"},
+        {"id": "a1-84-p4", "source": "I handle client accounts", "target": "Me encargo de cuentas de clientes"},
+        {"id": "a1-84-p5", "source": "I report to the director", "target": "Le reporto al director"},
+        {"id": "a1-84-p6", "source": "I work with the marketing team", "target": "Colaboro con el equipo de marketing"},
+        {"id": "a1-84-p7", "source": "What do you do?", "target": "¿A qué te dedicas?"},
+        {"id": "a1-84-p8", "source": "I am responsible for IT", "target": "Soy responsable de TI"},
+        {"id": "a1-84-p9", "source": "I work for a tech company", "target": "Trabajo para una empresa de tecnología"},
+        {"id": "a1-84-p10", "source": "My job title is Manager", "target": "Mi cargo es Gerente"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-84-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am an accountant.", "options": ["I am an accountant.", "I am a manager.", "He is an accountant.", "I am an analyst."], "correct_answer": "I am an accountant.", "explanation": "Audio exacto." },
+        { "id": "a1-84-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I work in the sales department.", "options": ["I work in the sales department.", "She works in the sales department.", "I work at the sales department.", "I work in the marketing department."], "correct_answer": "I work in the sales department.", "explanation": "Audio exacto." },
+        { "id": "a1-84-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I manage a team of five.", "options": ["I manage a team of five.", "He manages a team of five.", "I manage a team of ten.", "I work with a team of five."], "correct_answer": "I manage a team of five.", "explanation": "Audio exacto." },
+        { "id": "a1-84-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I handle client accounts.", "options": ["I handle client accounts.", "She handles client accounts.", "I manage client accounts.", "I handle customer accounts."], "correct_answer": "I handle client accounts.", "explanation": "Audio exacto." },
+        { "id": "a1-84-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I report to the regional director.", "options": ["I report to the regional director.", "She reports to the director.", "I report to the local director.", "He reports to the regional director."], "correct_answer": "I report to the regional director.", "explanation": "Audio exacto." },
+        { "id": "a1-84-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What do you do?", "options": ["What do you do?", "What does he do?", "What are you doing?", "What did you do?"], "correct_answer": "What do you do?", "explanation": "Audio exacto." },
+        { "id": "a1-84-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I work for a tech company.", "options": ["I work for a tech company.", "She works for a tech company.", "I work in a tech company.", "I work for a big company."], "correct_answer": "I work for a tech company.", "explanation": "Audio exacto." },
+        { "id": "a1-84-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am responsible for IT support.", "options": ["I am responsible for IT support.", "He is responsible for IT support.", "I am responsible for tech support.", "I am responsible for IT."], "correct_answer": "I am responsible for IT support.", "explanation": "Audio exacto." },
+        { "id": "a1-84-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I organize meetings and schedules.", "options": ["I organize meetings and schedules.", "He organizes meetings.", "I manage meetings and schedules.", "I organize calls and schedules."], "correct_answer": "I organize meetings and schedules.", "explanation": "Audio exacto." },
+        { "id": "a1-84-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My job title is Marketing Manager.", "options": ["My job title is Marketing Manager.", "My title is Marketing Manager.", "Her job title is Marketing Manager.", "My job is Marketing Manager."], "correct_answer": "My job title is Marketing Manager.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

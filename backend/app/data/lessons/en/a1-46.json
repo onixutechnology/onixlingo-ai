@@ -1,0 +1,101 @@
+{
+  "id": "a1-46",
+  "title": "Describing People: Appearance",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "People", "Appearance"],
+  "completion_message": "¡Buen trabajo! Ya puedes describir la apariencia física de colegas o clientes.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Apariencia Física",
+      "parts": [
+        { "visual": "Usamos el verbo 'To Be' para altura y edad: 'He is tall' (Él es alto), 'She is young' (Ella es joven).", "audio": "We use To Be for height and age: He is tall, She is young." },
+        { "visual": "Usamos 'Has' (tener) para el cabello y los ojos: 'She has short hair' (Ella tiene cabello corto), 'He has blue eyes'.", "audio": "We use Has for hair and eyes: She has short hair, He has blue eyes." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para describir la apariencia.",
+      "questions": [
+        { "id": "a1-46-q1", "type": "quiz_choice", "question": "My new boss ____ tall.", "options": ["is", "has", "does", "are"], "correct_answer": "is", "explanation": "Altura usa verbo To Be (is tall)." },
+        { "id": "a1-46-q2", "type": "quiz_choice", "question": "The CEO ____ short hair.", "options": ["has", "is", "does", "have"], "correct_answer": "has", "explanation": "Cabello usa verbo To Have (has short hair)." },
+        { "id": "a1-46-q3", "type": "quiz_choice", "question": "He ____ brown eyes.", "options": ["has", "is", "does", "have"], "correct_answer": "has", "explanation": "Ojos usa verbo To Have (has brown eyes)." },
+        { "id": "a1-46-q4", "type": "quiz_choice", "question": "Our manager is very ____ (joven).", "options": ["young", "old", "short", "tall"], "correct_answer": "young", "explanation": "Joven (young)." },
+        { "id": "a1-46-q5", "type": "quiz_choice", "question": "The consultant is an ____ man (mayor).", "options": ["older", "young", "tall", "short"], "correct_answer": "older", "explanation": "Mayor (older)." },
+        { "id": "a1-46-q6", "type": "quiz_choice", "question": "She has ____ hair (largo).", "options": ["long", "tall", "short", "big"], "correct_answer": "long", "explanation": "Largo, para cabello (long)." },
+        { "id": "a1-46-q7", "type": "quiz_choice", "question": "He has a ____ (barba).", "options": ["beard", "bear", "beer", "bird"], "correct_answer": "beard", "explanation": "Barba (beard)." },
+        { "id": "a1-46-q8", "type": "quiz_choice", "question": "She wears ____ (lentes).", "options": ["glasses", "glass", "cups", "windows"], "correct_answer": "glasses", "explanation": "Lentes / gafas (glasses)." },
+        { "id": "a1-46-q9", "type": "quiz_choice", "question": "He is ____ (calvo).", "options": ["bald", "ball", "bold", "bad"], "correct_answer": "bald", "explanation": "Calvo (bald)." },
+        { "id": "a1-46-q10", "type": "quiz_choice", "question": "What does he look ____?", "options": ["like", "love", "look", "see"], "correct_answer": "like", "explanation": "¿Cómo es físicamente? (What does he look like?)." },
+        { "id": "a1-46-q11", "type": "quiz_choice", "question": "She is of medium ____ (estatura).", "options": ["height", "high", "tall", "short"], "correct_answer": "height", "explanation": "Estatura media (medium height)." },
+        { "id": "a1-46-q12", "type": "quiz_choice", "question": "He has a ____ (bigote).", "options": ["mustache", "mouth", "beard", "hair"], "correct_answer": "mustache", "explanation": "Bigote (mustache)." },
+        { "id": "a1-46-q13", "type": "quiz_choice", "question": "She has ____ hair (rubio).", "options": ["blonde", "yellow", "gold", "white"], "correct_answer": "blonde", "explanation": "Rubio (blonde)." },
+        { "id": "a1-46-q14", "type": "quiz_choice", "question": "He has ____ hair (oscuro).", "options": ["dark", "black", "night", "brown"], "correct_answer": "dark", "explanation": "Oscuro (dark)." },
+        { "id": "a1-46-q15", "type": "quiz_choice", "question": "She is very ____ (alta).", "options": ["tall", "high", "long", "big"], "correct_answer": "tall", "explanation": "Alto/a (tall)." },
+        { "id": "a1-46-q16", "type": "quiz_choice", "question": "He is quite ____ (bajo/chaparro).", "options": ["short", "small", "low", "little"], "correct_answer": "short", "explanation": "Bajo de estatura (short)." },
+        { "id": "a1-46-q17", "type": "quiz_choice", "question": "They ____ green eyes.", "options": ["have", "has", "are", "do"], "correct_answer": "have", "explanation": "Para They se usa 'have'." },
+        { "id": "a1-46-q18", "type": "quiz_choice", "question": "She has ____ hair (rizado).", "options": ["curly", "curl", "curls", "curved"], "correct_answer": "curly", "explanation": "Rizado (curly)." },
+        { "id": "a1-46-q19", "type": "quiz_choice", "question": "He has ____ hair (lacio).", "options": ["straight", "line", "flat", "smooth"], "correct_answer": "straight", "explanation": "Lacio (straight)." },
+        { "id": "a1-46-q20", "type": "quiz_choice", "question": "He always wears ____ to work (lentes).", "options": ["glasses", "glass", "eyes", "looks"], "correct_answer": "glasses", "explanation": "Gafas/lentes (glasses)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta para describir la apariencia.",
+      "questions": [
+        { "id": "a1-46-f1", "type": "fill_input", "question": "He ____ tall (Es).", "correct_answer": "is", "explanation": "Is." },
+        { "id": "a1-46-f2", "type": "fill_input", "question": "She ____ short hair (Tiene).", "correct_answer": "has", "explanation": "Has." },
+        { "id": "a1-46-f3", "type": "fill_input", "question": "He has a ____ (Barba).", "correct_answer": "beard", "explanation": "Beard." },
+        { "id": "a1-46-f4", "type": "fill_input", "question": "She is ____ (Joven).", "correct_answer": "young", "explanation": "Young." },
+        { "id": "a1-46-f5", "type": "fill_input", "question": "He is an ____ man (Mayor).", "correct_answer": "older", "explanation": "Older." },
+        { "id": "a1-46-f6", "type": "fill_input", "question": "She wears ____ (Lentes).", "correct_answer": "glasses", "explanation": "Glasses." },
+        { "id": "a1-46-f7", "type": "fill_input", "question": "He is ____ (Calvo).", "correct_answer": "bald", "explanation": "Bald." },
+        { "id": "a1-46-f8", "type": "fill_input", "question": "She has ____ hair (Largo).", "correct_answer": "long", "explanation": "Long." },
+        { "id": "a1-46-f9", "type": "fill_input", "question": "He has a ____ (Bigote).", "correct_answer": "mustache", "explanation": "Mustache." },
+        { "id": "a1-46-f10", "type": "fill_input", "question": "____ does he look like? (Cómo).", "correct_answer": "What", "explanation": "What." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-46-p1", "source": "Tall", "target": "Alto"},
+        {"id": "a1-46-p2", "source": "Short", "target": "Bajo / Corto"},
+        {"id": "a1-46-p3", "source": "Young", "target": "Joven"},
+        {"id": "a1-46-p4", "source": "Older", "target": "Mayor"},
+        {"id": "a1-46-p5", "source": "Beard", "target": "Barba"},
+        {"id": "a1-46-p6", "source": "Mustache", "target": "Bigote"},
+        {"id": "a1-46-p7", "source": "Bald", "target": "Calvo"},
+        {"id": "a1-46-p8", "source": "Glasses", "target": "Lentes / Gafas"},
+        {"id": "a1-46-p9", "source": "Blonde", "target": "Rubio"},
+        {"id": "a1-46-p10", "source": "Curly", "target": "Rizado"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-46-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is tall.", "options": ["He is tall.", "She is tall.", "He is short.", "He was tall."], "correct_answer": "He is tall.", "explanation": "Audio exacto." },
+        { "id": "a1-46-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She has short hair.", "options": ["She has short hair.", "He has short hair.", "She has long hair.", "She is short."], "correct_answer": "She has short hair.", "explanation": "Audio exacto." },
+        { "id": "a1-46-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He has a beard.", "options": ["He has a beard.", "She has a beard.", "He has a bird.", "He had a beard."], "correct_answer": "He has a beard.", "explanation": "Audio exacto." },
+        { "id": "a1-46-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is young.", "options": ["She is young.", "He is young.", "She is older.", "They are young."], "correct_answer": "She is young.", "explanation": "Audio exacto." },
+        { "id": "a1-46-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He wears glasses.", "options": ["He wears glasses.", "She wears glasses.", "He wears glass.", "He wore glasses."], "correct_answer": "He wears glasses.", "explanation": "Audio exacto." },
+        { "id": "a1-46-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is bald.", "options": ["He is bald.", "He is bad.", "She is bald.", "He was bald."], "correct_answer": "He is bald.", "explanation": "Audio exacto." },
+        { "id": "a1-46-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What does he look like?", "options": ["What does he look like?", "What does she look like?", "How does he look like?", "What do you look like?"], "correct_answer": "What does he look like?", "explanation": "Audio exacto." },
+        { "id": "a1-46-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She has curly hair.", "options": ["She has curly hair.", "He has curly hair.", "She has straight hair.", "She has blonde hair."], "correct_answer": "She has curly hair.", "explanation": "Audio exacto." },
+        { "id": "a1-46-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He has a mustache.", "options": ["He has a mustache.", "She has a mustache.", "He has a beard.", "He had a mustache."], "correct_answer": "He has a mustache.", "explanation": "Audio exacto." },
+        { "id": "a1-46-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is of medium height.", "options": ["She is of medium height.", "He is of medium height.", "She is of medium weight.", "She is very tall."], "correct_answer": "She is of medium height.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

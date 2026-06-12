@@ -1,0 +1,101 @@
+{
+  "id": "b1-13",
+  "title": "Comparing Options",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Comparisons", "Business"],
+  "completion_message": "¡Muy bien! Comparar opciones es una habilidad esencial para tomar decisiones de negocios.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Comparando Opciones en los Negocios",
+      "parts": [
+        { "visual": "Para decir que dos cosas son iguales usamos: AS + adjetivo + AS. \nEj: Our product is AS GOOD AS theirs (Nuestro producto es tan bueno como el de ellos). \nNegativo: NOT AS... AS (No tan... como). \nEj: This laptop is NOT AS FAST AS the other one.", "audio": "To say two things are equal, we use: As, plus adjective, plus as. For example: Our product is as good as theirs. The negative is: Not as, plus adjective, plus as. For example: This laptop is not as fast as the other one." },
+        { "visual": "Para decir que algo es más, usamos: MORE + adjetivo largo + THAN. O añadimos -ER a los adjetivos cortos. \nEj: Option A is MORE EXPENSIVE THAN Option B. \nOption B is CHEAPER THAN Option A. \nPara decir 'menos': LESS + adjetivo + THAN.", "audio": "To say something is more, we use MORE plus a long adjective plus THAN. Or we add E-R to short adjectives. For example: Option A is more expensive than Option B. Option B is cheaper than Option A. To say less, we use: Less plus adjective plus than." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta de comparar opciones.",
+      "questions": [
+        { "id": "b1-13-q1", "type": "quiz_choice", "question": "This printer is ____ that one. (Tan rápida como).", "options": ["as fast as", "fast as", "as fast", "more fast as"], "correct_answer": "as fast as", "explanation": "As + adjetivo + as (as fast as)." },
+        { "id": "b1-13-q2", "type": "quiz_choice", "question": "Our new software is ____ the old version. (Más eficiente que).", "options": ["more efficient than", "more efficient as", "efficienter than", "as efficient than"], "correct_answer": "more efficient than", "explanation": "'Efficient' es un adjetivo largo -> more efficient than." },
+        { "id": "b1-13-q3", "type": "quiz_choice", "question": "The second option is ____ than the first one. (Más barata).", "options": ["cheaper", "more cheap", "cheap", "as cheap"], "correct_answer": "cheaper", "explanation": "Para adjetivos cortos (cheap), agregamos -er (cheaper)." },
+        { "id": "b1-13-q4", "type": "quiz_choice", "question": "This marketing campaign was ____ than the last one. (Menos exitosa).", "options": ["less successful", "least successful", "not successful", "more less successful"], "correct_answer": "less successful", "explanation": "Menos... que = Less + adjetivo + than (less successful)." },
+        { "id": "b1-13-q5", "type": "quiz_choice", "question": "His presentation wasn't ____ yours. (Tan buena como).", "options": ["as good as", "good as", "as good", "better as"], "correct_answer": "as good as", "explanation": "Not as good as = no tan buena como." },
+        { "id": "b1-13-q6", "type": "quiz_choice", "question": "Working from home is ____ than commuting every day. (Mejor).", "options": ["better", "more good", "gooder", "best"], "correct_answer": "better", "explanation": "El comparativo de 'good' es irregular: 'better'." },
+        { "id": "b1-13-q7", "type": "quiz_choice", "question": "This quarter's results are ____ than we expected. (Peores).", "options": ["worse", "more bad", "badder", "worst"], "correct_answer": "worse", "explanation": "El comparativo de 'bad' es irregular: 'worse'." },
+        { "id": "b1-13-q8", "type": "quiz_choice", "question": "Which supplier is ____? (Más confiable).", "options": ["more reliable", "reliable", "reliabler", "most reliable"], "correct_answer": "more reliable", "explanation": "Reliable (largo) -> more reliable." },
+        { "id": "b1-13-q9", "type": "quiz_choice", "question": "Company A is not ____ Company B. (Tan grande como).", "options": ["as big as", "bigger as", "as big than", "more big as"], "correct_answer": "as big as", "explanation": "Not as big as." },
+        { "id": "b1-13-q10", "type": "quiz_choice", "question": "Traveling by train is ____ traveling by plane. (Menos estresante que).", "options": ["less stressful than", "less stressful as", "not stressful as", "more stressful than"], "correct_answer": "less stressful than", "explanation": "Less + adjetivo + than." },
+        { "id": "b1-13-q11", "type": "quiz_choice", "question": "The meeting was ____ than I thought. (Más larga).", "options": ["longer", "more long", "long", "as long"], "correct_answer": "longer", "explanation": "Long (corto) -> longer." },
+        { "id": "b1-13-q12", "type": "quiz_choice", "question": "Is the new office ____ the old one? (Tan espaciosa como).", "options": ["as spacious as", "spacious as", "more spacious as", "as spacious than"], "correct_answer": "as spacious as", "explanation": "As spacious as." },
+        { "id": "b1-13-q13", "type": "quiz_choice", "question": "Their offer is ____ ours. (Tan competitiva como).", "options": ["as competitive as", "competitive as", "more competitive as", "as competitive than"], "correct_answer": "as competitive as", "explanation": "As competitive as." },
+        { "id": "b1-13-q14", "type": "quiz_choice", "question": "This year is going to be ____ than last year. (Más difícil).", "options": ["more difficult", "difficult", "difficulter", "most difficult"], "correct_answer": "more difficult", "explanation": "More difficult (largo)." },
+        { "id": "b1-13-q15", "type": "quiz_choice", "question": "Our service is ____ the competitor's. (Más rápido que).", "options": ["faster than", "more fast than", "fast as", "as fast than"], "correct_answer": "faster than", "explanation": "Fast (corto) -> faster than." },
+        { "id": "b1-13-q16", "type": "quiz_choice", "question": "I have ____ experience than he does. (Menos).", "options": ["less", "fewer", "little", "least"], "correct_answer": "less", "explanation": "Less (menos) para cosas incontables como la experiencia." },
+        { "id": "b1-13-q17", "type": "quiz_choice", "question": "The CEO's speech was ____ than usual. (Más inspirador).", "options": ["more inspiring", "inspiring", "inspirer", "most inspiring"], "correct_answer": "more inspiring", "explanation": "More inspiring." },
+        { "id": "b1-13-q18", "type": "quiz_choice", "question": "That decision was ____ than we realized. (Peor).", "options": ["worse", "more bad", "badder", "worst"], "correct_answer": "worse", "explanation": "Worse = peor que." },
+        { "id": "b1-13-q19", "type": "quiz_choice", "question": "This problem is not ____ it seems. (Tan simple como).", "options": ["as simple as", "simple as", "more simple as", "as simple than"], "correct_answer": "as simple as", "explanation": "Not as simple as." },
+        { "id": "b1-13-q20", "type": "quiz_choice", "question": "We need to work ____ than before. (Más inteligentemente - Comparativo de smart).", "options": ["smarter", "more smart", "smart", "as smart"], "correct_answer": "smarter", "explanation": "Smart (corto) -> smarter." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Completa la comparación.",
+      "questions": [
+        { "id": "b1-13-f1", "type": "fill_input", "question": "It is ____ good as ours. (Tan)", "correct_answer": "as", "explanation": "as (as good as)." },
+        { "id": "b1-13-f2", "type": "fill_input", "question": "It is ____ expensive than ours. (Más)", "correct_answer": "more", "explanation": "more." },
+        { "id": "b1-13-f3", "type": "fill_input", "question": "It is ____ successful than ours. (Menos)", "correct_answer": "less", "explanation": "less." },
+        { "id": "b1-13-f4", "type": "fill_input", "question": "It is better ____ theirs. (Que)", "correct_answer": "than", "explanation": "than (better than)." },
+        { "id": "b1-13-f5", "type": "fill_input", "question": "Not ____ fast as a train. (Tan)", "correct_answer": "as", "explanation": "as." },
+        { "id": "b1-13-f6", "type": "fill_input", "question": "This is ____ than that. (Mejor - irregular de good)", "correct_answer": "better", "explanation": "better." },
+        { "id": "b1-13-f7", "type": "fill_input", "question": "This is ____ than that. (Peor - irregular de bad)", "correct_answer": "worse", "explanation": "worse." },
+        { "id": "b1-13-f8", "type": "fill_input", "question": "Our price is ____ than theirs. (Más bajo - low + er)", "correct_answer": "lower", "explanation": "lower." },
+        { "id": "b1-13-f9", "type": "fill_input", "question": "It is ____ reliable than the old one. (Más)", "correct_answer": "more", "explanation": "more." },
+        { "id": "b1-13-f10", "type": "fill_input", "question": "Is it as big ____ the other office? (Como)", "correct_answer": "as", "explanation": "as." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Comparisons Match",
+      "pairs": [
+        {"id": "b1-13-p1", "source": "As good as", "target": "Tan bueno como"},
+        {"id": "b1-13-p2", "source": "Not as fast as", "target": "No tan rápido como"},
+        {"id": "b1-13-p3", "source": "More expensive than", "target": "Más caro que"},
+        {"id": "b1-13-p4", "source": "Cheaper than", "target": "Más barato que"},
+        {"id": "b1-13-p5", "source": "Less successful than", "target": "Menos exitoso que"},
+        {"id": "b1-13-p6", "source": "Better than", "target": "Mejor que"},
+        {"id": "b1-13-p7", "source": "Worse than", "target": "Peor que"},
+        {"id": "b1-13-p8", "source": "Faster than", "target": "Más rápido que"},
+        {"id": "b1-13-p9", "source": "More reliable than", "target": "Más confiable que"},
+        {"id": "b1-13-p10", "source": "Smarter than", "target": "Más inteligente que"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase que compara opciones.",
+      "questions": [
+        { "id": "b1-13-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our product is as good as theirs.", "options": ["Our product is as good as theirs.", "Our product is good as theirs.", "Our product is better than theirs.", "Their product is as good as ours."], "correct_answer": "Our product is as good as theirs.", "explanation": "Audio exacto." },
+        { "id": "b1-13-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This laptop is not as fast as the other one.", "options": ["This laptop is not as fast as the other one.", "This laptop is as fast as the other one.", "This laptop is faster than the other one.", "The other laptop is not as fast."], "correct_answer": "This laptop is not as fast as the other one.", "explanation": "Audio exacto." },
+        { "id": "b1-13-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Option A is more expensive than Option B.", "options": ["Option A is more expensive than Option B.", "Option B is more expensive than Option A.", "Option A is as expensive as Option B.", "Option A is less expensive than Option B."], "correct_answer": "Option A is more expensive than Option B.", "explanation": "Audio exacto." },
+        { "id": "b1-13-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Option B is cheaper than Option A.", "options": ["Option B is cheaper than Option A.", "Option A is cheaper than Option B.", "Option B is cheap as Option A.", "Option B is less cheap than Option A."], "correct_answer": "Option B is cheaper than Option A.", "explanation": "Audio exacto." },
+        { "id": "b1-13-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The meeting was longer than I thought.", "options": ["The meeting was longer than I thought.", "The meeting is longer than I thought.", "The meeting was long as I thought.", "The meeting was shorter than I thought."], "correct_answer": "The meeting was longer than I thought.", "explanation": "Audio exacto." },
+        { "id": "b1-13-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Working from home is better than commuting.", "options": ["Working from home is better than commuting.", "Working from home is worse than commuting.", "Working from home is as good as commuting.", "Working from home is easier than commuting."], "correct_answer": "Working from home is better than commuting.", "explanation": "Audio exacto." },
+        { "id": "b1-13-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The results are worse than we expected.", "options": ["The results are worse than we expected.", "The results are better than we expected.", "The results are bad as we expected.", "Our results are worse than expected."], "correct_answer": "The results are worse than we expected.", "explanation": "Audio exacto." },
+        { "id": "b1-13-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Which supplier is more reliable?", "options": ["Which supplier is more reliable?", "Which supplier is reliable?", "Which supplier is most reliable?", "Which supplier is less reliable?"], "correct_answer": "Which supplier is more reliable?", "explanation": "Audio exacto." },
+        { "id": "b1-13-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This campaign was less successful.", "options": ["This campaign was less successful.", "This campaign was more successful.", "This campaign was very successful.", "That campaign was less successful."], "correct_answer": "This campaign was less successful.", "explanation": "Audio exacto." },
+        { "id": "b1-13-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Is the new office as spacious as the old one?", "options": ["Is the new office as spacious as the old one?", "Is the old office as spacious as the new one?", "Is the new office more spacious than the old one?", "The new office is as spacious as the old one."], "correct_answer": "Is the new office as spacious as the old one?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

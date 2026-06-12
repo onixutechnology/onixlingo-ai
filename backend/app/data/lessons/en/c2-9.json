@@ -1,0 +1,101 @@
+{
+  "id": "c2-9",
+  "title": "Diplomatic Refusal & Disagreement",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Diplomacy", "Disagreement", "Formal", "Business"],
+  "completion_message": "¡Excelente! Decir 'no' o discrepar en los niveles más altos requiere sutileza. Usar expresiones como 'With all due respect' o 'I beg to differ' te permite mantener tu postura firme sin dañar la relación profesional.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Rechazo Diplomático y Desacuerdo (C2)",
+      "parts": [
+        { "visual": "1. With all due respect (Con el debido respeto): \n- Se usa antes de contradecir a alguien, especialmente a un superior. \nEj: With all due respect, I believe this strategy is flawed. \n\n2. I beg to differ (Me permito disentir / Difiero): \n- Una forma muy formal y firme de decir 'I disagree'. \nEj: You think the market is shrinking, but I beg to differ. \n\n3. I have my reservations (Tengo mis reservas/dudas): \n- Una forma suave de decir que no confías en un plan. \nEj: I have my reservations about the new vendor's reliability.", "audio": "Welcome to Diplomatic Refusal. Saying 'no' or disagreeing at the highest levels requires subtlety. Number 1: With all due respect. Use this before contradicting someone, especially a superior. For example: With all due respect, I believe this strategy is flawed. Number 2: I beg to differ. This is a very formal and firm way of saying 'I disagree'. For example: You think the market is shrinking, but I beg to differ. Number 3: I have my reservations. A polite way to express doubt or lack of trust. For example: I have my reservations about the new vendor's reliability." },
+        { "visual": "4. I'm afraid that's out of the question (Me temo que eso está fuera de discusión): \n- Un 'NO' absoluto y definitivo, pero dicho de manera formal. \nEj: Giving you a 50% discount is completely out of the question. \n\n5. Let's agree to disagree (Acordemos estar en desacuerdo): \n- Se usa para terminar una discusión sin ganadores cuando nadie cede. \nEj: We are not making progress, so let's agree to disagree. \n\n6. I'd rather not (Preferiría no hacerlo): \n- Una forma suave pero clara de rechazar una solicitud. \nEj: I'd rather not commit to a date just yet.", "audio": "Number 4: I'm afraid that's out of the question. This is an absolute 'NO', but stated formally. For example: Giving you a fifty percent discount is completely out of the question. Number 5: Let's agree to disagree. Use this to end an argument when neither side will compromise. For example: We are not making progress, so let's agree to disagree. Number 6: I'd rather not. A gentle but clear way to decline a request. For example: I'd rather not commit to a date just yet." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la expresión diplomática adecuada para el contexto.",
+      "questions": [
+        { "id": "c2-9-q1", "type": "quiz_choice", "question": "____ all due respect, sir, I don't think firing him is the right move.", "options": ["With", "In", "For", "To"], "correct_answer": "With", "explanation": "With all due respect = con el debido respeto." },
+        { "id": "c2-9-q2", "type": "quiz_choice", "question": "The CEO thinks this will increase sales, but I ____ to differ. (Disiento).", "options": ["beg", "ask", "plead", "want"], "correct_answer": "beg", "explanation": "I beg to differ = me permito disentir." },
+        { "id": "c2-9-q3", "type": "quiz_choice", "question": "I understand your enthusiasm, but I have my ____ about the viability of this project. (Reservas/Dudas).", "options": ["reservations", "doubts", "questions", "problems"], "correct_answer": "reservations", "explanation": "I have my reservations = tengo mis dudas/reservas." },
+        { "id": "c2-9-q4", "type": "quiz_choice", "question": "Approving a $5 million budget without seeing a business plan is completely out of the ____. (Fuera de discusión).", "options": ["question", "room", "table", "book"], "correct_answer": "question", "explanation": "Out of the question = imposible / fuera de discusión." },
+        { "id": "c2-9-q5", "type": "quiz_choice", "question": "Since neither of us will change our minds, let's agree to ____. (Estar en desacuerdo).", "options": ["disagree", "fight", "stop", "leave"], "correct_answer": "disagree", "explanation": "Agree to disagree." },
+        { "id": "c2-9-q6", "type": "quiz_choice", "question": "I'd ____ not discuss this matter in front of the client. (Preferiría no hacerlo).", "options": ["rather", "prefer", "better", "like"], "correct_answer": "rather", "explanation": "I'd rather not = preferiría no hacerlo." },
+        { "id": "c2-9-q7", "type": "quiz_choice", "question": "I'm not entirely ____ that this is the best approach. (Convencido).", "options": ["convinced", "sure", "knowing", "believing"], "correct_answer": "convinced", "explanation": "I'm not entirely convinced = no estoy del todo convencido." },
+        { "id": "c2-9-q8", "type": "quiz_choice", "question": "That's a valid point, but looking at it from another ____, we might lose money. (Perspectiva).", "options": ["perspective", "view", "eye", "side"], "correct_answer": "perspective", "explanation": "From another perspective." },
+        { "id": "c2-9-q9", "type": "quiz_choice", "question": "I'm ____ I can't agree with you on that. (Me temo que).", "options": ["afraid", "sorry", "scared", "sad"], "correct_answer": "afraid", "explanation": "I'm afraid I can't agree." },
+        { "id": "c2-9-q10", "type": "quiz_choice", "question": "I see where you're coming ____, but we still have a budget deficit. (Entiendo tu postura).", "options": ["from", "to", "at", "by"], "correct_answer": "from", "explanation": "I see where you're coming from = entiendo tu punto de vista / de dónde vienes." },
+        { "id": "c2-9-q11", "type": "quiz_choice", "question": "That is simply not ____ at this moment in time. (Factible / Viable).", "options": ["feasible", "possible", "doing", "making"], "correct_answer": "feasible", "explanation": "Feasible = factible / viable (más profesional que 'possible')." },
+        { "id": "c2-9-q12", "type": "quiz_choice", "question": "To be perfectly ____, I don't think your team is ready for this responsibility. (Franco/Honesto).", "options": ["frank", "honest", "open", "clear"], "correct_answer": "frank", "explanation": "To be perfectly frank = para ser perfectamente franco." },
+        { "id": "c2-9-q13", "type": "quiz_choice", "question": "I must take ____ with your claim that our quality has dropped. (Discrepar / No estar de acuerdo con una afirmación).", "options": ["issue", "problem", "fault", "error"], "correct_answer": "issue", "explanation": "Take issue with = estar en desacuerdo con / objetar algo." },
+        { "id": "c2-9-q14", "type": "quiz_choice", "question": "I think we are looking at this from completely different ____. (Ángulos).", "options": ["angles", "corners", "sides", "shapes"], "correct_answer": "angles", "explanation": "Different angles = diferentes ángulos o perspectivas." },
+        { "id": "c2-9-q15", "type": "quiz_choice", "question": "While I appreciate your ____, I'm afraid we have to decline. (Oferta/Aporte).", "options": ["input", "words", "speech", "saying"], "correct_answer": "input", "explanation": "Input = aporte, comentarios, sugerencias." },
+        { "id": "c2-9-q16", "type": "quiz_choice", "question": "It's highly ____ that the board will approve such a massive expense. (Improbable).", "options": ["unlikely", "impossible", "hard", "difficult"], "correct_answer": "unlikely", "explanation": "Highly unlikely = muy improbable." },
+        { "id": "c2-9-q17", "type": "quiz_choice", "question": "I'm sorry, but my hands are ____ on this matter. (Atadas - no puedo hacer nada).", "options": ["tied", "bound", "chained", "closed"], "correct_answer": "tied", "explanation": "My hands are tied = tengo las manos atadas (estoy limitado por reglas o superiores)." },
+        { "id": "c2-9-q18", "type": "quiz_choice", "question": "I find that very hard to ____ given our current financial data. (Creer/Aceptar).", "options": ["swallow", "eat", "drink", "believe"], "correct_answer": "swallow", "explanation": "Hard to swallow = difícil de tragar/creer/aceptar." },
+        { "id": "c2-9-q19", "type": "quiz_choice", "question": "I'm inclined to ____ with John on this particular issue. (Estar de acuerdo - disentir del otro).", "options": ["agree", "go", "take", "make"], "correct_answer": "agree", "explanation": "Inclined to agree = inclinado a estar de acuerdo." },
+        { "id": "c2-9-q20", "type": "quiz_choice", "question": "That goes against company ____, so we cannot proceed. (Política).", "options": ["policy", "politics", "rules", "laws"], "correct_answer": "policy", "explanation": "Company policy = política de la empresa." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta para completar la expresión.",
+      "questions": [
+        { "id": "c2-9-f1", "type": "fill_input", "question": "With all ____ respect. (Debido con D)", "correct_answer": "due", "explanation": "due." },
+        { "id": "c2-9-f2", "type": "fill_input", "question": "I ____ to differ. (Disiento con B)", "correct_answer": "beg", "explanation": "beg." },
+        { "id": "c2-9-f3", "type": "fill_input", "question": "I have my ____. (Reservas con R)", "correct_answer": "reservations", "explanation": "reservations." },
+        { "id": "c2-9-f4", "type": "fill_input", "question": "Out of the ____. (Fuera de discusión con Q)", "correct_answer": "question", "explanation": "question." },
+        { "id": "c2-9-f5", "type": "fill_input", "question": "Agree to ____. (Estar en desacuerdo con D)", "correct_answer": "disagree", "explanation": "disagree." },
+        { "id": "c2-9-f6", "type": "fill_input", "question": "I'd ____ not. (Preferiría con R)", "correct_answer": "rather", "explanation": "rather." },
+        { "id": "c2-9-f7", "type": "fill_input", "question": "To be perfectly ____. (Franco/Honesto con F)", "correct_answer": "frank", "explanation": "frank." },
+        { "id": "c2-9-f8", "type": "fill_input", "question": "I must take ____ with that. (Discrepar con I)", "correct_answer": "issue", "explanation": "issue." },
+        { "id": "c2-9-f9", "type": "fill_input", "question": "My hands are ____. (Atadas con T)", "correct_answer": "tied", "explanation": "tied." },
+        { "id": "c2-9-f10", "type": "fill_input", "question": "I see where you're coming ____. (De dónde vienes)", "correct_answer": "from", "explanation": "from." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Diplomacy Match",
+      "pairs": [
+        {"id": "c2-9-p1", "source": "With all due respect", "target": "Con el debido respeto"},
+        {"id": "c2-9-p2", "source": "I beg to differ", "target": "Me permito disentir / Difiero"},
+        {"id": "c2-9-p3", "source": "I have my reservations", "target": "Tengo mis dudas / reservas"},
+        {"id": "c2-9-p4", "source": "Out of the question", "target": "Fuera de discusión / Imposible"},
+        {"id": "c2-9-p5", "source": "Agree to disagree", "target": "Acordar estar en desacuerdo"},
+        {"id": "c2-9-p6", "source": "I'd rather not", "target": "Preferiría no hacerlo"},
+        {"id": "c2-9-p7", "source": "To be perfectly frank", "target": "Para ser perfectamente franco"},
+        {"id": "c2-9-p8", "source": "Take issue with", "target": "Discrepar / Objetar a algo"},
+        {"id": "c2-9-p9", "source": "My hands are tied", "target": "Tengo las manos atadas"},
+        {"id": "c2-9-p10", "source": "See where you're coming from", "target": "Entender tu punto de vista"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase diplomática correcta.",
+      "questions": [
+        { "id": "c2-9-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "With all due respect, I disagree.", "options": ["With all due respect, I disagree.", "With all my respect, I disagree.", "With due respect, I disagree.", "With all the respect, I disagree."], "correct_answer": "With all due respect, I disagree.", "explanation": "Audio exacto." },
+        { "id": "c2-9-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I beg to differ.", "options": ["I beg to differ.", "I beg to difference.", "I beg to different.", "I beg to defer."], "correct_answer": "I beg to differ.", "explanation": "Audio exacto." },
+        { "id": "c2-9-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have my reservations about this.", "options": ["I have my reservations about this.", "I have some reservations about this.", "I have a reservation about this.", "I have no reservations about this."], "correct_answer": "I have my reservations about this.", "explanation": "Audio exacto." },
+        { "id": "c2-9-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "That is out of the question.", "options": ["That is out of the question.", "This is out of the question.", "It is out of the question.", "That was out of the question."], "correct_answer": "That is out of the question.", "explanation": "Audio exacto." },
+        { "id": "c2-9-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's agree to disagree.", "options": ["Let's agree to disagree.", "Let us agree to disagree.", "We agree to disagree.", "Let's agreed to disagree."], "correct_answer": "Let's agree to disagree.", "explanation": "Audio exacto." },
+        { "id": "c2-9-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I'd rather not say.", "options": ["I'd rather not say.", "I would rather not say.", "I rather not say.", "I'd better not say."], "correct_answer": "I'd rather not say.", "explanation": "Audio exacto." },
+        { "id": "c2-9-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "To be perfectly frank, no.", "options": ["To be perfectly frank, no.", "To be perfectly honest, no.", "To be perfect frank, no.", "Be perfectly frank, no."], "correct_answer": "To be perfectly frank, no.", "explanation": "Audio exacto." },
+        { "id": "c2-9-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I must take issue with that.", "options": ["I must take issue with that.", "I must make issue with that.", "We must take issue with that.", "I might take issue with that."], "correct_answer": "I must take issue with that.", "explanation": "Audio exacto." },
+        { "id": "c2-9-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I see where you're coming from.", "options": ["I see where you're coming from.", "I see where you are coming from.", "I saw where you're coming from.", "I see where he's coming from."], "correct_answer": "I see where you're coming from.", "explanation": "Audio exacto." },
+        { "id": "c2-9-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My hands are tied.", "options": ["My hands are tied.", "His hands are tied.", "My hands were tied.", "Our hands are tied."], "correct_answer": "My hands are tied.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

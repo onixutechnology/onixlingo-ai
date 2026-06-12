@@ -1,10 +1,10 @@
 import sys
 import re
-from app.services.chess_catalog import CHESS_LESSONS_CATALOG
+from app.services.chess_catalog import CHESS_CATALOG
 
-print(f"Total lecciones en catálogo: {len(CHESS_LESSONS_CATALOG)}")
+print(f"Total lecciones en catálogo: {len(CHESS_CATALOG)}")
 fens = set()
-for l in CHESS_LESSONS_CATALOG:
+for l in CHESS_CATALOG.values():
     fens.add(l.get('fen', 'NO_FEN'))
     
 print(f"Total FENs únicos: {len(fens)}")

@@ -1,0 +1,101 @@
+{
+  "id": "c2-56",
+  "title": "AI & Automation",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "AI", "Technology", "Business"],
+  "completion_message": "¡Excelente! La Inteligencia Artificial es la próxima revolución industrial. Conocer términos como 'Machine learning', 'Algorithm bias' y 'Disruption' te permite liderar la transformación digital en cualquier empresa.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Inteligencia Artificial en los Negocios (C2)",
+      "parts": [
+        { "visual": "La Inteligencia Artificial (AI) está transformando el trabajo corporativo. \n\n1. Machine learning (Aprendizaje automático): \n- Cuando las computadoras aprenden de los datos sin ser programadas explícitamente. \nEj: Our fraud detection system uses MACHINE LEARNING. \n\n2. Algorithm bias (Sesgo algorítmico): \n- Cuando la IA toma decisiones injustas o discriminatorias porque fue entrenada con datos sesgados. \nEj: We must fix the ALGORITHM BIAS in our hiring software. \n\n3. Disruption (Disrupción): \n- Cuando una nueva tecnología destruye la forma antigua de hacer negocios. \nEj: AI is causing massive DISRUPTION in the legal industry.", "audio": "Welcome to AI and Automation in Business. Artificial Intelligence is transforming corporate work. Let's cover the essential vocabulary. Number 1: Machine learning. This is when computers learn from data without being explicitly programmed. For example: Our fraud detection system uses MACHINE LEARNING. Number 2: Algorithm bias. When an AI makes unfair or discriminatory decisions because it was trained on biased human data. For example: We must fix the ALGORITHM BIAS in our hiring software. Number 3: Disruption. When a new technology completely changes or destroys the old way of doing business. For example: AI is causing massive DISRUPTION in the legal industry." },
+        { "visual": "4. Automation (Automatización): \n- Usar tecnología para hacer tareas humanas. \nEj: Robotic process AUTOMATION will save us millions. \n\n5. Scalability (Escalabilidad): \n- La capacidad de un sistema para crecer y manejar más demanda sin colapsar. \nEj: The cloud infrastructure offers infinite SCALABILITY. \n\n6. Data mining (Minería de datos): \n- Analizar bases de datos enormes para encontrar patrones ocultos. \nEj: Through DATA MINING, we discovered what teenagers really buy. \n\n7. Redundancy (Redundancia / Despidos por automatización): \n- En RRHH, significa despedir a alguien porque su trabajo ya no es necesario (frecuentemente por la IA). \nEj: The new software will lead to 500 REDUNDANCIES.", "audio": "Number 4: Automation. The use of technology to perform tasks without human intervention. For example: Robotic process AUTOMATION will save us millions. Number 5: Scalability. The capacity of a system to grow and handle increased demand without failing. For example: The cloud infrastructure offers infinite SCALABILITY. Number 6: Data mining. Analyzing massive databases to discover hidden patterns. For example: Through DATA MINING, we discovered what teenagers really buy. Number 7: Redundancy. In Human Resources, making someone 'redundant' means firing them because their job is no longer needed, often due to AI or automation. For example: The new software will lead to 500 REDUNDANCIES." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término tecnológico o corporativo correcto.",
+      "questions": [
+        { "id": "c2-56-q1", "type": "quiz_choice", "question": "Instead of writing fixed rules, we use ____ learning so the software improves itself over time. (Aprendizaje automático).", "options": ["machine", "robot", "computer", "engine"], "correct_answer": "machine", "explanation": "Machine learning = aprendizaje automático." },
+        { "id": "c2-56-q2", "type": "quiz_choice", "question": "The AI recruiting tool was rejecting female applicants because of a historical ____ in its training data. (Sesgo/Prejuicio).", "options": ["bias", "error", "bug", "flaw"], "correct_answer": "bias", "explanation": "Algorithm bias = sesgo o prejuicio en el algoritmo." },
+        { "id": "c2-56-q3", "type": "quiz_choice", "question": "Uber caused massive ____ in the traditional taxi industry. (Disrupción / Alteración drástica).", "options": ["disruption", "interruption", "destruction", "eruption"], "correct_answer": "disruption", "explanation": "Disruption = disrupción (innovación que cambia el mercado)." },
+        { "id": "c2-56-q4", "type": "quiz_choice", "question": "By using robotic process ____, we can process invoices 100 times faster without humans. (Automatización).", "options": ["automation", "mechanization", "animation", "fabrication"], "correct_answer": "automation", "explanation": "Automation = automatización." },
+        { "id": "c2-56-q5", "type": "quiz_choice", "question": "We need a database with high ____ so it doesn't crash when we go from 10,000 to 1 million users. (Escalabilidad).", "options": ["scalability", "stability", "flexibility", "mobility"], "correct_answer": "scalability", "explanation": "Scalability = escalabilidad." },
+        { "id": "c2-56-q6", "type": "quiz_choice", "question": "They hired data scientists to perform data ____ on our customer records to find hidden buying patterns. (Minería de datos).", "options": ["mining", "digging", "searching", "hunting"], "correct_answer": "mining", "explanation": "Data mining = minería de datos." },
+        { "id": "c2-56-q7", "type": "quiz_choice", "question": "Because the new AI can do the work of 10 accountants, the company announced 500 ____. (Despidos por redundancia).", "options": ["redundancies", "firings", "quitters", "resignations"], "correct_answer": "redundancies", "explanation": "Redundancies = despidos corporativos (porque el puesto ya no hace falta)." },
+        { "id": "c2-56-q8", "type": "quiz_choice", "question": "A type of AI that can create new text, images, or code (like ChatGPT) is called ____ AI. (Generativa).", "options": ["generative", "creative", "productive", "making"], "correct_answer": "generative", "explanation": "Generative AI = IA Generativa." },
+        { "id": "c2-56-q9", "type": "quiz_choice", "question": "The massive volume of structured and unstructured data generated daily by businesses is called ____ Data.", "options": ["Big", "Huge", "Large", "Giant"], "correct_answer": "Big", "explanation": "Big Data." },
+        { "id": "c2-56-q10", "type": "quiz_choice", "question": "A computer program designed to simulate conversation with human users, especially over the internet, is a ____. (Chatbot).", "options": ["chatbot", "talkbot", "speakbot", "wordbot"], "correct_answer": "chatbot", "explanation": "Chatbot." },
+        { "id": "c2-56-q11", "type": "quiz_choice", "question": "When an AI hallucinates or makes up fake information but presents it as a fact, it is called a ____. (Alucinación).", "options": ["hallucination", "dream", "illusion", "mirage"], "correct_answer": "hallucination", "explanation": "AI Hallucination = cuando la IA inventa respuestas." },
+        { "id": "c2-56-q12", "type": "quiz_choice", "question": "Using AI to analyze historical data and forecast future trends or customer behavior is called ____ analytics. (Predictivo).", "options": ["predictive", "guessing", "future", "vision"], "correct_answer": "predictive", "explanation": "Predictive analytics = análisis predictivo." },
+        { "id": "c2-56-q13", "type": "quiz_choice", "question": "Technology that can recognize and understand human speech is Natural ____ Processing (NLP).", "options": ["Language", "Speech", "Word", "Voice"], "correct_answer": "Language", "explanation": "Natural Language Processing (NLP) = Procesamiento de Lenguaje Natural." },
+        { "id": "c2-56-q14", "type": "quiz_choice", "question": "A system where machines are connected to the internet and can communicate with each other (like smart thermostats) is the Internet of ____ (IoT).", "options": ["Things", "Machines", "Objects", "Devices"], "correct_answer": "Things", "explanation": "Internet of Things (IoT) = Internet de las Cosas." },
+        { "id": "c2-56-q15", "type": "quiz_choice", "question": "In tech startups, completely changing the company's business model to survive is called a ____. (Pivotar/Cambio de dirección).", "options": ["pivot", "spin", "turn", "jump"], "correct_answer": "pivot", "explanation": "Pivot = pivotar (cambiar la estrategia radicalmente)." },
+        { "id": "c2-56-q16", "type": "quiz_choice", "question": "An early sample or model built to test a concept or process is a ____. (Prototipo).", "options": ["prototype", "copy", "draft", "test"], "correct_answer": "prototype", "explanation": "Prototype = prototipo." },
+        { "id": "c2-56-q17", "type": "quiz_choice", "question": "The initial launch of a product to a limited audience to test it before the full public release is a ____ launch.", "options": ["soft", "quiet", "small", "hidden"], "correct_answer": "soft", "explanation": "Soft launch = lanzamiento suave o de prueba." },
+        { "id": "c2-56-q18", "type": "quiz_choice", "question": "Software that is provided over the internet on a subscription basis (like Salesforce or Netflix) is called ____ (Software as a Service).", "options": ["SaaS", "PaaS", "IaaS", "DaaS"], "correct_answer": "SaaS", "explanation": "SaaS = Software as a Service." },
+        { "id": "c2-56-q19", "type": "quiz_choice", "question": "When old, outdated computer systems are still being used because replacing them is too hard, they are called ____ systems. (Sistemas heredados).", "options": ["legacy", "ancient", "history", "past"], "correct_answer": "legacy", "explanation": "Legacy systems = sistemas obsoletos/heredados." },
+        { "id": "c2-56-q20", "type": "quiz_choice", "question": "To write the instructions or text that guide an AI like ChatGPT to produce a desired output is called ____ engineering.", "options": ["prompt", "input", "text", "query"], "correct_answer": "prompt", "explanation": "Prompt engineering = ingeniería de instrucciones para IA." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término tecnológico.",
+      "questions": [
+        { "id": "c2-56-f1", "type": "fill_input", "question": "____ learning. (Aprendizaje automático con M)", "correct_answer": "Machine", "explanation": "Machine." },
+        { "id": "c2-56-f2", "type": "fill_input", "question": "Algorithm ____. (Sesgo/prejuicio con B)", "correct_answer": "bias", "explanation": "bias." },
+        { "id": "c2-56-f3", "type": "fill_input", "question": "Industry ____. (Disrupción con D)", "correct_answer": "disruption", "explanation": "disruption." },
+        { "id": "c2-56-f4", "type": "fill_input", "question": "Process ____. (Automatización con A)", "correct_answer": "automation", "explanation": "automation." },
+        { "id": "c2-56-f5", "type": "fill_input", "question": "Infinite ____. (Escalabilidad con S)", "correct_answer": "scalability", "explanation": "scalability." },
+        { "id": "c2-56-f6", "type": "fill_input", "question": "Data ____. (Minería de datos con M)", "correct_answer": "mining", "explanation": "mining." },
+        { "id": "c2-56-f7", "type": "fill_input", "question": "Job ____. (Despidos por automatización con R)", "correct_answer": "redundancies", "explanation": "redundancies." },
+        { "id": "c2-56-f8", "type": "fill_input", "question": "____ AI. (IA Generativa con G)", "correct_answer": "Generative", "explanation": "Generative." },
+        { "id": "c2-56-f9", "type": "fill_input", "question": "____ analytics. (Análisis predictivo con P)", "correct_answer": "Predictive", "explanation": "Predictive." },
+        { "id": "c2-56-f10", "type": "fill_input", "question": "____ engineering. (Ingeniería de textos para IA con P)", "correct_answer": "Prompt", "explanation": "Prompt." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Tech Match",
+      "pairs": [
+        {"id": "c2-56-p1", "source": "Machine learning", "target": "Aprendizaje automático sin programación directa"},
+        {"id": "c2-56-p2", "source": "Algorithm bias", "target": "Sesgo o prejuicio en la IA"},
+        {"id": "c2-56-p3", "source": "Disruption", "target": "Transformación radical de una industria"},
+        {"id": "c2-56-p4", "source": "Automation", "target": "Hacer procesos sin intervención humana"},
+        {"id": "c2-56-p5", "source": "Scalability", "target": "Capacidad de crecer sin colapsar"},
+        {"id": "c2-56-p6", "source": "Data mining", "target": "Búsqueda de patrones en grandes datos"},
+        {"id": "c2-56-p7", "source": "Redundancies", "target": "Despidos porque el trabajo ya no es necesario"},
+        {"id": "c2-56-p8", "source": "Generative AI", "target": "IA que crea contenido nuevo"},
+        {"id": "c2-56-p9", "source": "Predictive analytics", "target": "Usar datos para predecir el futuro"},
+        {"id": "c2-56-p10", "source": "Legacy systems", "target": "Sistemas informáticos viejos y obsoletos"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase tecnológica.",
+      "questions": [
+        { "id": "c2-56-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It uses machine learning.", "options": ["It uses machine learning.", "It uses a machine learning.", "He uses machine learning.", "It used machine learning."], "correct_answer": "It uses machine learning.", "explanation": "Audio exacto." },
+        { "id": "c2-56-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We found an algorithm bias.", "options": ["We found an algorithm bias.", "They found an algorithm bias.", "We found the algorithm bias.", "We find an algorithm bias."], "correct_answer": "We found an algorithm bias.", "explanation": "Audio exacto." },
+        { "id": "c2-56-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It caused massive disruption.", "options": ["It caused massive disruption.", "It causes massive disruption.", "They caused massive disruption.", "It caused a massive disruption."], "correct_answer": "It caused massive disruption.", "explanation": "Audio exacto." },
+        { "id": "c2-56-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Process automation is key.", "options": ["Process automation is key.", "Process automation is king.", "Process automation was key.", "Processing automation is key."], "correct_answer": "Process automation is key.", "explanation": "Audio exacto." },
+        { "id": "c2-56-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It lacks scalability.", "options": ["It lacks scalability.", "It lacked scalability.", "They lack scalability.", "It lacks stability."], "correct_answer": "It lacks scalability.", "explanation": "Audio exacto." },
+        { "id": "c2-56-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Using data mining techniques.", "options": ["Using data mining techniques.", "Using data mining technique.", "Use data mining techniques.", "Using data digging techniques."], "correct_answer": "Using data mining techniques.", "explanation": "Audio exacto." },
+        { "id": "c2-56-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There will be redundancies.", "options": ["There will be redundancies.", "There would be redundancies.", "There will be redundancy.", "They will be redundancies."], "correct_answer": "There will be redundancies.", "explanation": "Audio exacto." },
+        { "id": "c2-56-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Generative AI is the future.", "options": ["Generative AI is the future.", "Generative AI was the future.", "General AI is the future.", "Generative AI is a future."], "correct_answer": "Generative AI is the future.", "explanation": "Audio exacto." },
+        { "id": "c2-56-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Replace the legacy systems.", "options": ["Replace the legacy systems.", "Replaced the legacy systems.", "Replacing the legacy systems.", "Replace the legal systems."], "correct_answer": "Replace the legacy systems.", "explanation": "Audio exacto." },
+        { "id": "c2-56-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Learn prompt engineering.", "options": ["Learn prompt engineering.", "Learning prompt engineering.", "Learned prompt engineering.", "Learn proper engineering."], "correct_answer": "Learn prompt engineering.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

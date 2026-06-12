@@ -50,8 +50,8 @@ export function PaddleProvider({ children }: { children: React.ReactNode }) {
   return (
     <>
       {error && (
-        <div className="fixed bottom-4 right-4 z-[9999] bg-amber-50 border border-amber-200 p-4 rounded-xl shadow-2xl max-w-sm animate-in slide-in-from-right">
-          <p className="text-amber-800 text-sm font-medium">
+        <div className="fixed bottom-4 right-4 z-[9999] bg-[#D4AF37]/10 border border-[#D4AF37]/30 p-4 rounded-none shadow-2xl max-w-sm animate-in slide-in-from-right">
+          <p className="text-[#D4AF37] text-sm font-medium">
             ⚠️ {error}
           </p>
         </div>
@@ -59,4 +59,4 @@ export function PaddleProvider({ children }: { children: React.ReactNode }) {
       {children}
     </>
   );
-}
+}

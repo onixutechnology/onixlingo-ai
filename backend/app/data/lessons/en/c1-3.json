@@ -1,0 +1,101 @@
+{
+  "id": "c1-3",
+  "title": "C-Level & Boardroom",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "Boardroom", "C-Level", "Business"],
+  "completion_message": "¡Soberbio! Acabas de aprender el vocabulario exacto que se usa en las salas de juntas (boardrooms) al más alto nivel corporativo. Ya estás listo para hablar como un CEO.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Vocabulario C-Level y de Sala de Juntas",
+      "parts": [
+        { "visual": "Términos Corporativos de Alto Nivel: \n- C-Suite / C-Level (Los altos ejecutivos: CEO, CFO, CTO, COO). \nEj: The C-Suite is having a meeting right now. \n- Board of Directors (Junta Directiva). \nEj: The board of directors approved the merger. \n- Hostile takeover (Adquisición hostil / Comprar una empresa en contra de la voluntad de su dirección). \nEj: They launched a hostile takeover of the rival company.", "audio": "High-Level Corporate Terms. 'C-Suite' or 'C-Level' refers to the top executives like the C E O, C F O, and C T O. For example: The C-Suite is having a meeting right now. The 'Board of Directors' is the group of people elected to represent shareholders. For example: The board of directors approved the merger. A 'Hostile takeover' is when a company is bought against the wishes of its management. For example: They launched a hostile takeover of the rival company." },
+        { "visual": "Acuerdos y Compensaciones: \n- Golden parachute (Paracaídas dorado / Gran compensación financiera garantizada a un ejecutivo si es despedido). \nEj: The CEO left with a $10 million golden parachute. \n- Monopolize (Monopolizar / Tener control total). \nEj: They are trying to monopolize the market. \n- Redundancy / Layoffs (Despidos masivos por falta de trabajo/fondos). \nEj: The company announced 500 redundancies.", "audio": "Agreements and Compensations. A 'Golden parachute' is a huge financial compensation guaranteed to an executive if they are fired. For example: The C E O left with a 10 million dollar golden parachute. To 'Monopolize' means to have total control over a market. For example: They are trying to monopolize the market. 'Redundancy' or 'Layoffs' refer to mass firings usually due to a lack of funds or work. For example: The company announced 500 redundancies." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término C-Level correcto para cada situación ejecutiva.",
+      "questions": [
+        { "id": "c1-3-q1", "type": "quiz_choice", "question": "The top executives in a company (CEO, CFO, CTO) are known collectively as the ____. (Ejecutivos de nivel C).", "options": ["C-Suite", "A-Team", "Top-Floor", "Boss-Group"], "correct_answer": "C-Suite", "explanation": "C-Suite o C-Level." },
+        { "id": "c1-3-q2", "type": "quiz_choice", "question": "The ____ of Directors meets every quarter to discuss the company's strategy. (Junta Directiva).", "options": ["Board", "Group", "Team", "Circle"], "correct_answer": "Board", "explanation": "Board of Directors = Junta Directiva." },
+        { "id": "c1-3-q3", "type": "quiz_choice", "question": "They bought the company against the wishes of its management. It was a ____ takeover. (Adquisición hostil).", "options": ["hostile", "friendly", "angry", "violent"], "correct_answer": "hostile", "explanation": "Hostile takeover = toma de control u OPA hostil." },
+        { "id": "c1-3-q4", "type": "quiz_choice", "question": "Even though he was fired for poor performance, he left with a $5 million ____ parachute. (Paracaídas dorado).", "options": ["golden", "silver", "diamond", "bronze"], "correct_answer": "golden", "explanation": "Golden parachute = indemnización millonaria para altos ejecutivos." },
+        { "id": "c1-3-q5", "type": "quiz_choice", "question": "Because of the economic crisis, the company announced massive ____. (Despidos masivos).", "options": ["layoffs", "hiring", "onboarding", "training"], "correct_answer": "layoffs", "explanation": "Layoffs / Redundancies = despidos por recortes de personal." },
+        { "id": "c1-3-q6", "type": "quiz_choice", "question": "The new law prevents large tech companies from trying to ____ the market. (Monopolizar).", "options": ["monopolize", "minimize", "maximize", "analyze"], "correct_answer": "monopolize", "explanation": "Monopolize = monopolizar." },
+        { "id": "c1-3-q7", "type": "quiz_choice", "question": "A ____ company is a company that is completely owned by another company. (Subsidiaria/Filial).", "options": ["subsidiary", "parent", "brother", "sister"], "correct_answer": "subsidiary", "explanation": "Subsidiary = empresa filial o subsidiaria." },
+        { "id": "c1-3-q8", "type": "quiz_choice", "question": "The company that owns the subsidiary is called the ____ company. (Empresa matriz).", "options": ["parent", "mother", "father", "boss"], "correct_answer": "parent", "explanation": "Parent company = empresa matriz." },
+        { "id": "c1-3-q9", "type": "quiz_choice", "question": "The board decided to ____ the CEO because of the recent scandal. (Destituir / Expulsar).", "options": ["oust", "promote", "hire", "keep"], "correct_answer": "oust", "explanation": "Oust = destituir, expulsar de un cargo de poder." },
+        { "id": "c1-3-q10", "type": "quiz_choice", "question": "When two companies join together to form a new company, it is called a ____. (Fusión).", "options": ["merger", "acquisition", "split", "division"], "correct_answer": "merger", "explanation": "Merger = fusión." },
+        { "id": "c1-3-q11", "type": "quiz_choice", "question": "When one company buys another, it is called an ____. (Adquisición).", "options": ["acquisition", "merger", "alliance", "contract"], "correct_answer": "acquisition", "explanation": "Acquisition = adquisición (M&A: Mergers and Acquisitions)." },
+        { "id": "c1-3-q12", "type": "quiz_choice", "question": "We are looking for a highly ____ executive to lead the new department. (Capacitado / De alto nivel).", "options": ["seasoned", "spicy", "salty", "raw"], "correct_answer": "seasoned", "explanation": "A seasoned executive = un ejecutivo experimentado/veterano." },
+        { "id": "c1-3-q13", "type": "quiz_choice", "question": "The CEO has the final say, but he usually consults his ____ of advisors. (Círculo íntimo).", "options": ["inner circle", "outer ring", "round table", "square box"], "correct_answer": "inner circle", "explanation": "Inner circle = círculo íntimo o de confianza." },
+        { "id": "c1-3-q14", "type": "quiz_choice", "question": "We need to do our ____ diligence before buying that company. (Diligencia debida / Auditoría previa).", "options": ["due", "do", "done", "doing"], "correct_answer": "due", "explanation": "Due diligence = auditoría o investigación exhaustiva antes de una firma/compra." },
+        { "id": "c1-3-q15", "type": "quiz_choice", "question": "The company was accused of ____ trading (using secret information to buy stocks). (Uso de información privilegiada).", "options": ["insider", "outsider", "internal", "external"], "correct_answer": "insider", "explanation": "Insider trading = tráfico de información privilegiada." },
+        { "id": "c1-3-q16", "type": "quiz_choice", "question": "The ____ line of this report is that we are losing money. (Conclusión / Resultado final).", "options": ["bottom", "top", "front", "back"], "correct_answer": "bottom", "explanation": "The bottom line = el resultado neto, la conclusión principal." },
+        { "id": "c1-3-q17", "type": "quiz_choice", "question": "They made a ____ bid to buy the company for $500 million. (Oferta pública de adquisición).", "options": ["takeover", "takeout", "takeoff", "takein"], "correct_answer": "takeover", "explanation": "Takeover bid = oferta de adquisición (OPA)." },
+        { "id": "c1-3-q18", "type": "quiz_choice", "question": "A ____ is someone who reveals illegal activities happening within their company. (Denunciante).", "options": ["whistleblower", "bellringer", "alarmist", "shouter"], "correct_answer": "whistleblower", "explanation": "Whistleblower = informante, denunciante de prácticas corruptas." },
+        { "id": "c1-3-q19", "type": "quiz_choice", "question": "The executives met in the ____ to discuss the confidential strategy. (Sala de juntas).", "options": ["boardroom", "bedroom", "bathroom", "living room"], "correct_answer": "boardroom", "explanation": "Boardroom = sala de juntas directivas." },
+        { "id": "c1-3-q20", "type": "quiz_choice", "question": "We need a CEO who can navigate the company through these ____ waters. (Tiempos difíciles / Aguas turbulentas).", "options": ["turbulent", "calm", "still", "clear"], "correct_answer": "turbulent", "explanation": "Turbulent waters / times = tiempos turbulentos, inestables." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término directivo correcto.",
+      "questions": [
+        { "id": "c1-3-f1", "type": "fill_input", "question": "The ____-Suite. (Ejecutivos nivel C)", "correct_answer": "C", "explanation": "C." },
+        { "id": "c1-3-f2", "type": "fill_input", "question": "The ____ of Directors. (Junta directiva con B)", "correct_answer": "Board", "explanation": "Board." },
+        { "id": "c1-3-f3", "type": "fill_input", "question": "A ____ takeover. (Adquisición hostil con H)", "correct_answer": "hostile", "explanation": "hostile." },
+        { "id": "c1-3-f4", "type": "fill_input", "question": "A ____ parachute. (Indemnización millonaria dorada)", "correct_answer": "golden", "explanation": "golden." },
+        { "id": "c1-3-f5", "type": "fill_input", "question": "Massive ____. (Despidos masivos con L)", "correct_answer": "layoffs", "explanation": "layoffs." },
+        { "id": "c1-3-f6", "type": "fill_input", "question": "____ company. (Empresa matriz con P)", "correct_answer": "Parent", "explanation": "Parent." },
+        { "id": "c1-3-f7", "type": "fill_input", "question": "To ____ the CEO. (Destituir con O)", "correct_answer": "oust", "explanation": "oust." },
+        { "id": "c1-3-f8", "type": "fill_input", "question": "Due ____. (Auditoría previa / Diligencia debida con D)", "correct_answer": "diligence", "explanation": "diligence." },
+        { "id": "c1-3-f9", "type": "fill_input", "question": "A ____ executive. (Ejecutivo experimentado/veterano con S)", "correct_answer": "seasoned", "explanation": "seasoned." },
+        { "id": "c1-3-f10", "type": "fill_input", "question": "A ____. (Fusión con M)", "correct_answer": "merger", "explanation": "merger." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Boardroom Match",
+      "pairs": [
+        {"id": "c1-3-p1", "source": "C-Suite", "target": "Altos ejecutivos (CEO, CFO, etc.)"},
+        {"id": "c1-3-p2", "source": "Board of Directors", "target": "Junta Directiva"},
+        {"id": "c1-3-p3", "source": "Hostile takeover", "target": "Adquisición hostil"},
+        {"id": "c1-3-p4", "source": "Golden parachute", "target": "Indemnización millonaria por despido"},
+        {"id": "c1-3-p5", "source": "Oust", "target": "Destituir / Expulsar del cargo"},
+        {"id": "c1-3-p6", "source": "Due diligence", "target": "Auditoría / Diligencia debida"},
+        {"id": "c1-3-p7", "source": "Merger", "target": "Fusión de empresas"},
+        {"id": "c1-3-p8", "source": "Parent company", "target": "Empresa matriz"},
+        {"id": "c1-3-p9", "source": "Whistleblower", "target": "Denunciante de fraude interno"},
+        {"id": "c1-3-p10", "source": "Insider trading", "target": "Tráfico de información privilegiada"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de alto nivel corporativo correcta.",
+      "questions": [
+        { "id": "c1-3-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The C-Suite is in a meeting.", "options": ["The C-Suite is in a meeting.", "The A-Suite is in a meeting.", "The C-Level is in a meeting.", "The C-Suite is in the meeting."], "correct_answer": "The C-Suite is in a meeting.", "explanation": "Audio exacto." },
+        { "id": "c1-3-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The board of directors approved it.", "options": ["The board of directors approved it.", "The group of directors approved it.", "The board of directors approves it.", "The board of directions approved it."], "correct_answer": "The board of directors approved it.", "explanation": "Audio exacto." },
+        { "id": "c1-3-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a hostile takeover.", "options": ["It was a hostile takeover.", "It is a hostile takeover.", "It was a friendly takeover.", "Is it a hostile takeover?"], "correct_answer": "It was a hostile takeover.", "explanation": "Audio exacto." },
+        { "id": "c1-3-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He got a golden parachute.", "options": ["He got a golden parachute.", "She got a golden parachute.", "He gets a golden parachute.", "They got a golden parachute."], "correct_answer": "He got a golden parachute.", "explanation": "Audio exacto." },
+        { "id": "c1-3-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They announced massive layoffs.", "options": ["They announced massive layoffs.", "We announced massive layoffs.", "They announce massive layoffs.", "They announced massive hiring."], "correct_answer": "They announced massive layoffs.", "explanation": "Audio exacto." },
+        { "id": "c1-3-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to do our due diligence.", "options": ["We need to do our due diligence.", "They need to do our due diligence.", "We need to do our diligence.", "We needed to do our due diligence."], "correct_answer": "We need to do our due diligence.", "explanation": "Audio exacto." },
+        { "id": "c1-3-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a merger, not an acquisition.", "options": ["It is a merger, not an acquisition.", "It was a merger, not an acquisition.", "It is a merger, not a division.", "Is it a merger, not an acquisition?"], "correct_answer": "It is a merger, not an acquisition.", "explanation": "Audio exacto." },
+        { "id": "c1-3-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They ousted the CEO.", "options": ["They ousted the CEO.", "We ousted the CEO.", "They oust the CEO.", "They ousted the CFO."], "correct_answer": "They ousted the CEO.", "explanation": "Audio exacto." },
+        { "id": "c1-3-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is a seasoned executive.", "options": ["She is a seasoned executive.", "He is a seasoned executive.", "She was a seasoned executive.", "She is a good executive."], "correct_answer": "She is a seasoned executive.", "explanation": "Audio exacto." },
+        { "id": "c1-3-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He was arrested for insider trading.", "options": ["He was arrested for insider trading.", "She was arrested for insider trading.", "He is arrested for insider trading.", "He was arrested for outside trading."], "correct_answer": "He was arrested for insider trading.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

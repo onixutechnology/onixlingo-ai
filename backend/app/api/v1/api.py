@@ -13,6 +13,7 @@ from app.api.v1.endpoints import (
     avatar,
     exercises,
     admin,
+    voclessons,
     chess # 🔥 NUEVO: Importamos el módulo chess
 )
 
@@ -24,6 +25,7 @@ api_router.include_router(users.router, prefix="/users", tags=["Users"])
 
 # 📚 Core LMS (Lecciones y Progreso)
 api_router.include_router(lessons.router, prefix="/lessons", tags=["Lessons"])
+api_router.include_router(voclessons.router, prefix="/voclessons", tags=["Vocab Lessons"])
 api_router.include_router(progress.router, prefix="/progress", tags=["Progress"])
 api_router.include_router(exercises.router, prefix="/exercises", tags=["Exercises"])
 

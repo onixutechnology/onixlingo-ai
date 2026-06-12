@@ -1,0 +1,92 @@
+{
+  "id": "zh-b1-71",
+  "title": "Tengo un Asunto",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Nouns", "Social", "Favors"],
+  "completion_message": "¡Excelente! Ahora sabes distinguir entre cosas físicas y asuntos, un paso clave hacia el pensamiento abstracto en chino.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Cosas Físicas vs Asuntos",
+      "parts": [
+        {
+          "visual": "Cosa Física vs Asunto:\nEn el nivel A1 aprendiste la palabra 'Cosa' (东西 dōngxi), pero esta solo se usa para objetos físicos que puedes tocar.\nPara cosas intangibles, problemas, asuntos o favores, se usa:\n\n- Asunto / Cosa: 事情 (shìqing)\n- Un asunto: 一件事情 (Yí jiàn shìqing). El clasificador para asuntos es 'jiàn' (el mismo que para la ropa).",
+          "audio": "En español usamos la palabra 'cosa' para todo. 'Tengo una cosa en la mano' o 'Tengo que decirte una cosa'. En chino, esto es un grave error. Si puedes tocarlo, se llama Dōngxi. Si no puedes tocarlo, porque es un asunto, un problema, un evento o un favor, se llama Shìqing. Cuarto y tono neutro. Shìqing. Así que nunca digas 'Tengo un dōngxi que decirte', a menos que le vayas a arrojar un zapato."
+        },
+        {
+          "visual": "Tener asuntos (Estar ocupado):\nLa forma más común de usar 事情 (shìqing) es con el verbo tener (有 yǒu).\n\n- Yo tengo un asunto / Tengo algo que hacer: 我有事情 (Wǒ yǒu shìqing).\n- Hoy tengo cosas que hacer: 今天我有事情 (Jīntiān wǒ yǒu shìqing).\n\nEn el habla diaria, la gente a menudo acorta 'shìqing' a simplemente 'shì':\n- Yo tengo cosas que hacer: 我有事 (Wǒ yǒu shì).\n\nCombinación con la lección anterior:\n- Hoy tengo asuntos, estoy muy ocupado: 今天我有事，我很忙 (Jīntiān wǒ yǒu shì, wǒ hěn máng).",
+          "audio": "La palabra Shìqing es la excusa perfecta. Si alguien te invita a salir y no quieres, puedes decirle Wǒ yǒu shìqing. Significa 'Tengo asuntos' o 'Tengo cosas que hacer'. Los nativos, por la ley del mínimo esfuerzo, acortan Shìqing y simplemente dicen Shì. Wǒ yǒu shì. Tengo asuntos. Y puedes combinarlo con lo que aprendimos en la lección pasada para hacer un combo destructor: Jīntiān wǒ yǒu shì, wǒ hěn máng. Hoy tengo cosas que hacer, estoy muy ocupado."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Aprende a diferenciar la materia de lo intangible.",
+      "questions": [
+        { "id": "zh-b1-71-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 事情 (shìqing)?", "options": ["Asunto / Problema / Cosa intangible.", "Cosa física (objeto).", "Dinero.", "Deporte."], "correct_answer": "Asunto / Problema / Cosa intangible.", "explanation": "Shìqing es para eventos, problemas, obligaciones o favores." },
+        { "id": "zh-b1-71-q2", "type": "quiz_choice", "question": "Gramática: ¿Cuál es la diferencia entre 东西 (dōngxi) y 事情 (shìqing)?", "options": ["Dōngxi es para cosas que puedes tocar. Shìqing es para cosas abstractas/asuntos.", "Dōngxi es para ropa y shìqing es para comida.", "Son sinónimos exactos.", "Dōngxi es pasado y shìqing es futuro."], "correct_answer": "Dōngxi es para cosas que puedes tocar. Shìqing es para cosas abstractas/asuntos.", "explanation": "Regla de oro: No puedes poner un 'shìqing' en tu mochila." },
+        { "id": "zh-b1-71-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Tengo un asunto / Tengo algo que hacer'?", "options": ["Wǒ yǒu shìqing (我有事情).", "Wǒ shì shìqing (我是事情).", "Wǒ mǎi shìqing (我买事情).", "Wǒ yǒu dōngxi (我有东西)."], "correct_answer": "Wǒ yǒu shìqing (我有事情).", "explanation": "Yo tengo (wǒ yǒu) + asunto (shìqing)." },
+        { "id": "zh-b1-71-q4", "type": "quiz_choice", "question": "En el habla rápida, ¿cómo acortan los nativos 'Wǒ yǒu shìqing'?", "options": ["Wǒ yǒu shì (我有事).", "Wǒ yǒu qing (我有情).", "Y yǒu shìqing (有事情).", "Wǒ shì (我是)."], "correct_answer": "Wǒ yǒu shì (我有事).", "explanation": "Acortan shìqing a shì." },
+        { "id": "zh-b1-71-q5", "type": "quiz_choice", "question": "Quieres decir 'Hoy tengo cosas que hacer'. Tú dices:", "options": ["Jīntiān wǒ yǒu shì (今天我有事).", "Míngtiān wǒ yǒu shì (明天我有事).", "Jīntiān wǒ bù máng (今天我不忙).", "Jīntiān wǒ mǎi dōngxi (今天我买东西)."], "correct_answer": "Jīntiān wǒ yǒu shì (今天我有事).", "explanation": "Hoy (Jīntiān) + yo (wǒ) + tengo (yǒu) + asunto (shì)." },
+        { "id": "zh-b1-71-q6", "type": "quiz_choice", "question": "Excusa nivel maestro: 'No puedo ir, hoy tengo cosas que hacer'.", "options": ["Wǒ bù néng qù, jīntiān wǒ yǒu shì (我不能去，今天我有事).", "Wǒ bù xiǎng qù, jīntiān wǒ yǒu shì (我不想去，今天我有事).", "Wǒ qù, jīntiān wǒ bù máng (我去，今天我不忙).", "Wǒ néng qù, jīntiān wǒ yǒu shì (我能去，今天我有事)."], "correct_answer": "Wǒ bù néng qù, jīntiān wǒ yǒu shì (我不能去，今天我有事).", "explanation": "No puedo (bù néng - imposibilidad por agenda) ir (qù)." },
+        { "id": "zh-b1-71-q7", "type": "quiz_choice", "question": "¿Cuál es el clasificador para asuntos? (Ej: 'Un asunto').", "options": ["Jiàn (件) - Igual que para la ropa.", "Ge (个) - El general.", "Běn (本) - El de libros.", "Kǒu (口) - El de familia."], "correct_answer": "Jiàn (件) - Igual que para la ropa.", "explanation": "Un asunto = Yí jiàn shìqing." },
+        { "id": "zh-b1-71-q8", "type": "quiz_choice", "question": "Llegas a la oficina de tu jefe y dices: 'Tengo un asunto'.", "options": ["Wǒ yǒu yí jiàn shìqing (我有一件事情).", "Wǒ shì yí jiàn shìqing (我是一件事情).", "Wǒ yǒu yí ge dōngxi (我有一个东西).", "Wǒ kàn yí jiàn shìqing (我看一件事情)."], "correct_answer": "Wǒ yǒu yí jiàn shìqing (我有一件事情).", "explanation": "Yo tengo (wǒ yǒu) + un (yí jiàn) + asunto (shìqing)." },
+        { "id": "zh-b1-71-q9", "type": "quiz_choice", "question": "¿Qué significa 'Wǒ méiyǒu shìqing' (我没有事情)?", "options": ["No tengo asuntos / No tengo nada que hacer (Estoy libre).", "No tengo cosas (físicas).", "No tengo dinero.", "Tengo muchos asuntos."], "correct_answer": "No tengo asuntos / No tengo nada que hacer (Estoy libre).", "explanation": "Méiyǒu es la negación de yǒu. Significa que estás libre y disponible." },
+        { "id": "zh-b1-71-q10", "type": "quiz_choice", "question": "Tu amigo está llorando, le preguntas '¿Tienes algún problema?' (¿Hay algún asunto?)", "options": ["Yǒu shìqing ma? (有事情吗？).", "Yǒu dōngxi ma? (有东西吗？).", "Yǒu qián ma? (有钱吗？).", "Yǒu kàn ma? (有看吗？)."], "correct_answer": "Yǒu shìqing ma? (有事情吗？).", "explanation": "¿Hay (yǒu) + asunto (shìqing) + ma? Es la forma china de preguntar '¿Qué pasa?'." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe las palabras de negocios en pinyin. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-b1-71-f1", "type": "fill_input", "question": "Asunto / Problema: shi ____ (qing)", "correct_answer": "qing", "explanation": "qing" },
+        { "id": "zh-b1-71-f2", "type": "fill_input", "question": "Cosa física (Para contrastar): dong ____ (xi)", "correct_answer": "xi", "explanation": "xi" },
+        { "id": "zh-b1-71-f3", "type": "fill_input", "question": "Tengo asuntos: wo ____ shi qing (you)", "correct_answer": "you", "explanation": "you" },
+        { "id": "zh-b1-71-f4", "type": "fill_input", "question": "Tengo cosas que hacer (Versión corta): wo you ____ (shi)", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-b1-71-f5", "type": "fill_input", "question": "No tengo nada que hacer: wo mei you ____ (shi)", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-b1-71-f6", "type": "fill_input", "question": "Un asunto: yi ____ shi qing (jian)", "correct_answer": "jian", "explanation": "jian" },
+        { "id": "zh-b1-71-f7", "type": "fill_input", "question": "¿Qué pasa? (¿Hay algún asunto?): you shi qing ____ (ma)", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-b1-71-f8", "type": "fill_input", "question": "Hoy tengo asuntos: jin tian wo you ____ qing (shi)", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-b1-71-f9", "type": "fill_input", "question": "Yo tengo un asunto: wo you yi jian shi ____ (qing)", "correct_answer": "qing", "explanation": "qing" },
+        { "id": "zh-b1-71-f10", "type": "fill_input", "question": "Tengo asuntos, estoy muy ocupado: wo you shi, wo hen ____ (mang)", "correct_answer": "mang", "explanation": "mang" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha las excusas corporativas.",
+      "questions": [
+        { "id": "zh-b1-71-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "事情", "options": ["Asunto / Problema", "Cosa física", "Ocupado", "Cansado"], "correct_answer": "Asunto / Problema", "explanation": "El audio dice: Shìqing." },
+        { "id": "zh-b1-71-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我有事情", "options": ["Tengo asuntos", "Tengo dinero", "Tengo un problema", "No tengo cosas"], "correct_answer": "Tengo asuntos", "explanation": "El audio dice: Wǒ yǒu shìqing." },
+        { "id": "zh-b1-71-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我没有事", "options": ["No tengo nada que hacer (Libre)", "No tengo dinero", "No tengo tiempo", "Tengo muchos asuntos"], "correct_answer": "No tengo nada que hacer (Libre)", "explanation": "El audio dice: Wǒ méiyǒu shì. (Usando la versión corta)." },
+        { "id": "zh-b1-71-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "一件事情", "options": ["Un asunto", "Una cosa (física)", "Una ropa", "Un libro"], "correct_answer": "Un asunto", "explanation": "El audio dice: Yí jiàn shìqing." },
+        { "id": "zh-b1-71-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "今天我有事", "options": ["Hoy tengo cosas que hacer", "Mañana tengo cosas que hacer", "Hoy no estoy ocupado", "Hoy compro cosas"], "correct_answer": "Hoy tengo cosas que hacer", "explanation": "El audio dice: Jīntiān wǒ yǒu shì." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Intangibles",
+      "pairs": [
+        {"id": "zh-b1-71-p1", "source": "事情 (shìqing)", "target": "Asunto / Problema (Intangible)"},
+        {"id": "zh-b1-71-p2", "source": "东西 (dōngxi)", "target": "Cosa física"},
+        {"id": "zh-b1-71-p3", "source": "我有事 (wǒ yǒu shì)", "target": "Tengo cosas que hacer (Versión corta)"},
+        {"id": "zh-b1-71-p4", "source": "没有事 (méiyǒu shì)", "target": "No tener nada que hacer (Libre)"},
+        {"id": "zh-b1-71-p5", "source": "件 (jiàn)", "target": "Clasificador para ropa y asuntos"},
+        {"id": "zh-b1-71-p6", "source": "有事吗？(yǒu shì ma?)", "target": "¿Qué pasa? / ¿Tienes algún asunto?"},
+        {"id": "zh-b1-71-p7", "source": "忙 (máng)", "target": "Ocupado"},
+        {"id": "zh-b1-71-p8", "source": "累 (lèi)", "target": "Cansado"},
+        {"id": "zh-b1-71-p9", "source": "运动 (yùndòng)", "target": "Deporte"},
+        {"id": "zh-b1-71-p10", "source": "欢迎 (huānyíng)", "target": "Bienvenido"}
+      ]
+    }
+  ]
+}

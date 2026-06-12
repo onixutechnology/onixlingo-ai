@@ -1,0 +1,101 @@
+{
+  "id": "a1-97",
+  "title": "Hotel Check-in and Business Stay",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Hotel", "Travel", "Business"],
+  "completion_message": "¡Muy bien! Ahora puedes hacer check-in, pedir lo que necesitas y comunicarte con el personal del hotel en inglés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Hotel Check-in",
+      "parts": [
+        { "visual": "Frases para el check-in: I have a reservation (Tengo una reserva). My name is... I would like to check in (Me gustaría hacer el check-in). What time is check-out? (¿A qué hora es el check-out?).", "audio": "Check-in phrases: I have a reservation. My name is... I would like to check in. What time is check-out?" },
+        { "visual": "Solicitudes en el hotel: Can I have a wake-up call at 7 AM? (¿Puede despertarme a las 7?). Could you bring extra towels? (¿Podría traer toallas extra?). Is Wi-Fi included? (¿Está incluido el Wi-Fi?).", "audio": "Hotel requests: Can I have a wake-up call at seven AM? Could you bring extra towels? Is Wi-Fi included?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la expresión correcta para el hotel.",
+      "questions": [
+        { "id": "a1-97-q1", "type": "quiz_choice", "question": "I have a ____. My name is Smith. (Reserva).", "options": ["reservation", "booking", "reservation", "appointment"], "correct_answer": "reservation", "explanation": "Reservation = reserva." },
+        { "id": "a1-97-q2", "type": "quiz_choice", "question": "I would like to check ____. (Entrar/Registrarse).", "options": ["in", "out", "up", "into"], "correct_answer": "in", "explanation": "Check in = registrarse a la llegada." },
+        { "id": "a1-97-q3", "type": "quiz_choice", "question": "What time is ____? (Hora de salida).", "options": ["check-out", "check-in", "departure", "exit"], "correct_answer": "check-out", "explanation": "Check-out = hora de salida." },
+        { "id": "a1-97-q4", "type": "quiz_choice", "question": "I would like a ____ room. (Habitación para no fumadores).", "options": ["non-smoking", "quiet", "smoking", "double"], "correct_answer": "non-smoking", "explanation": "Non-smoking room = habitación de no fumadores." },
+        { "id": "a1-97-q5", "type": "quiz_choice", "question": "Can I have a wake-up ____ at 7 AM? (Llamada despertador).", "options": ["call", "alarm", "ring", "phone"], "correct_answer": "call", "explanation": "Wake-up call = llamada despertador." },
+        { "id": "a1-97-q6", "type": "quiz_choice", "question": "Is ____ included? (Wi-Fi).", "options": ["Wi-Fi", "internet", "breakfast", "parking"], "correct_answer": "Wi-Fi", "explanation": "Is Wi-Fi included?" },
+        { "id": "a1-97-q7", "type": "quiz_choice", "question": "Could you bring extra ____? (Toallas).", "options": ["towels", "pillows", "sheets", "soap"], "correct_answer": "towels", "explanation": "Towels = toallas." },
+        { "id": "a1-97-q8", "type": "quiz_choice", "question": "Is ____ included? (Desayuno).", "options": ["breakfast", "lunch", "dinner", "meal"], "correct_answer": "breakfast", "explanation": "Is breakfast included? = ¿Está incluido el desayuno?" },
+        { "id": "a1-97-q9", "type": "quiz_choice", "question": "Can I have the ____, please? (Llave / tarjeta de la habitación).", "options": ["key card", "key", "card", "room key"], "correct_answer": "key card", "explanation": "Key card = tarjeta llave." },
+        { "id": "a1-97-q10", "type": "quiz_choice", "question": "My room is on the ____ floor. (Tercer).", "options": ["third", "three", "3nd", "thirth"], "correct_answer": "third", "explanation": "Third floor = tercer piso." },
+        { "id": "a1-97-q11", "type": "quiz_choice", "question": "Can I have a ____ room? (Con vista al mar).", "options": ["sea view", "pool view", "city view", "garden view"], "correct_answer": "sea view", "explanation": "Sea view room = habitación con vista al mar." },
+        { "id": "a1-97-q12", "type": "quiz_choice", "question": "There is a problem with my ____. (Habitación).", "options": ["room", "key", "bill", "towel"], "correct_answer": "room", "explanation": "Problem with my room = problema con mi habitación." },
+        { "id": "a1-97-q13", "type": "quiz_choice", "question": "The air conditioning is not ____. (Funcionando).", "options": ["working", "work", "works", "worked"], "correct_answer": "working", "explanation": "Not working = no funciona." },
+        { "id": "a1-97-q14", "type": "quiz_choice", "question": "Can I ____ my room? (Extender la estadía).", "options": ["extend", "keep", "stay", "hold"], "correct_answer": "extend", "explanation": "Extend my stay = extender mi estadía." },
+        { "id": "a1-97-q15", "type": "quiz_choice", "question": "I need to check ____ early. (Salida anticipada).", "options": ["out", "in", "up", "off"], "correct_answer": "out", "explanation": "Check out early = salida anticipada." },
+        { "id": "a1-97-q16", "type": "quiz_choice", "question": "Can I leave my ____ at reception? (Maleta/equipaje).", "options": ["luggage", "bag", "suitcase", "bags"], "correct_answer": "luggage", "explanation": "Luggage = equipaje." },
+        { "id": "a1-97-q17", "type": "quiz_choice", "question": "Please add it to my ____. (Factura/cuenta del hotel).", "options": ["bill", "invoice", "receipt", "account"], "correct_answer": "bill", "explanation": "Bill = cuenta del hotel." },
+        { "id": "a1-97-q18", "type": "quiz_choice", "question": "Is there a ____ near the hotel? (Farmacia).", "options": ["pharmacy", "chemist", "drug store", "hospital"], "correct_answer": "pharmacy", "explanation": "Pharmacy = farmacia." },
+        { "id": "a1-97-q19", "type": "quiz_choice", "question": "The ____ is on the second floor. (Restaurante del hotel).", "options": ["restaurant", "bar", "gym", "pool"], "correct_answer": "restaurant", "explanation": "Restaurant = restaurante." },
+        { "id": "a1-97-q20", "type": "quiz_choice", "question": "Can you call me a ____? (Taxi).", "options": ["taxi", "cab", "car", "bus"], "correct_answer": "taxi", "explanation": "Call me a taxi = llámame un taxi." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta del hotel.",
+      "questions": [
+        { "id": "a1-97-f1", "type": "fill_input", "question": "I have a ____. (Reserva).", "correct_answer": "reservation", "explanation": "reservation." },
+        { "id": "a1-97-f2", "type": "fill_input", "question": "I would like to check ____. (Entrar).", "correct_answer": "in", "explanation": "in." },
+        { "id": "a1-97-f3", "type": "fill_input", "question": "What time is ____? (Salida).", "correct_answer": "check-out", "explanation": "check-out." },
+        { "id": "a1-97-f4", "type": "fill_input", "question": "Can I have a wake-up ____? (Llamada despertador).", "correct_answer": "call", "explanation": "call." },
+        { "id": "a1-97-f5", "type": "fill_input", "question": "Is Wi-Fi ____? (Incluido).", "correct_answer": "included", "explanation": "included." },
+        { "id": "a1-97-f6", "type": "fill_input", "question": "Extra ____? (Toallas).", "correct_answer": "towels", "explanation": "towels." },
+        { "id": "a1-97-f7", "type": "fill_input", "question": "My ____ is on the third floor. (Habitación).", "correct_answer": "room", "explanation": "room." },
+        { "id": "a1-97-f8", "type": "fill_input", "question": "Please add it to my ____. (Cuenta).", "correct_answer": "bill", "explanation": "bill." },
+        { "id": "a1-97-f9", "type": "fill_input", "question": "Can I leave my ____ here? (Equipaje).", "correct_answer": "luggage", "explanation": "luggage." },
+        { "id": "a1-97-f10", "type": "fill_input", "question": "Can you call me a ____? (Taxi).", "correct_answer": "taxi", "explanation": "taxi." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-97-p1", "source": "I have a reservation", "target": "Tengo una reserva"},
+        {"id": "a1-97-p2", "source": "Check in", "target": "Registrarse (llegada)"},
+        {"id": "a1-97-p3", "source": "Check out", "target": "Salir / Pagar (salida)"},
+        {"id": "a1-97-p4", "source": "Wake-up call", "target": "Llamada despertador"},
+        {"id": "a1-97-p5", "source": "Is breakfast included?", "target": "¿Está incluido el desayuno?"},
+        {"id": "a1-97-p6", "source": "Key card", "target": "Tarjeta llave"},
+        {"id": "a1-97-p7", "source": "Non-smoking room", "target": "Habitación de no fumadores"},
+        {"id": "a1-97-p8", "source": "My room", "target": "Mi habitación"},
+        {"id": "a1-97-p9", "source": "Please add it to my bill", "target": "Por favor cárguelo a mi cuenta"},
+        {"id": "a1-97-p10", "source": "Can you call me a taxi?", "target": "¿Puede llamarme un taxi?"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-97-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have a reservation.", "options": ["I have a reservation.", "She has a reservation.", "I made a reservation.", "I want a reservation."], "correct_answer": "I have a reservation.", "explanation": "Audio exacto." },
+        { "id": "a1-97-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I would like to check in.", "options": ["I would like to check in.", "I would like to check out.", "She would like to check in.", "I want to check in."], "correct_answer": "I would like to check in.", "explanation": "Audio exacto." },
+        { "id": "a1-97-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What time is check-out?", "options": ["What time is check-out?", "What time is check-in?", "When is check-out?", "What time was check-out?"], "correct_answer": "What time is check-out?", "explanation": "Audio exacto." },
+        { "id": "a1-97-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I have a wake-up call at seven?", "options": ["Can I have a wake-up call at seven?", "Can she have a wake-up call at seven?", "Could I have a wake-up call at seven?", "Can I have a call at seven?"], "correct_answer": "Can I have a wake-up call at seven?", "explanation": "Audio exacto." },
+        { "id": "a1-97-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Is breakfast included?", "options": ["Is breakfast included?", "Is lunch included?", "Is Wi-Fi included?", "Was breakfast included?"], "correct_answer": "Is breakfast included?", "explanation": "Audio exacto." },
+        { "id": "a1-97-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Could you bring extra towels?", "options": ["Could you bring extra towels?", "Can you bring extra towels?", "Could she bring extra towels?", "Could you bring extra pillows?"], "correct_answer": "Could you bring extra towels?", "explanation": "Audio exacto." },
+        { "id": "a1-97-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My room is on the third floor.", "options": ["My room is on the third floor.", "My room is on the fourth floor.", "His room is on the third floor.", "My room is on floor three."], "correct_answer": "My room is on the third floor.", "explanation": "Audio exacto." },
+        { "id": "a1-97-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please add it to my bill.", "options": ["Please add it to my bill.", "Please add it to my account.", "Please put it on my bill.", "Add it to my bill please."], "correct_answer": "Please add it to my bill.", "explanation": "Audio exacto." },
+        { "id": "a1-97-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I leave my luggage here?", "options": ["Can I leave my luggage here?", "Can she leave her luggage here?", "Could I leave my luggage here?", "Can I leave my bags here?"], "correct_answer": "Can I leave my luggage here?", "explanation": "Audio exacto." },
+        { "id": "a1-97-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you call me a taxi?", "options": ["Can you call me a taxi?", "Could you call me a taxi?", "Can she call me a taxi?", "Can you get me a taxi?"], "correct_answer": "Can you call me a taxi?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

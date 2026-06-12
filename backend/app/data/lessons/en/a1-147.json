@@ -1,0 +1,101 @@
+{
+  "id": "a1-147",
+  "title": "A1 Final Review Part 7: Travel & Directions",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Review", "Travel", "Directions", "Airport", "Hotel"],
+  "completion_message": "¡Excelente! Has repasado con éxito el vocabulario clave para viajes de negocios y direcciones.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Repaso Final: Viajes y Direcciones",
+      "parts": [
+        { "visual": "Viajes de Negocios (Business Travel): Flight (vuelo), Ticket (boleto), Boarding pass (pase de abordar), Luggage (equipaje), Gate (puerta de embarque). Hotel: Reservation (reservación), Check-in (registro de entrada), Check-out (salida), Single room (habitación sencilla).", "audio": "Business Travel: Flight, ticket, boarding pass, luggage, and gate. Hotel vocabulary: Reservation, check-in, check-out, and single room." },
+        { "visual": "Direcciones (Directions): Go straight (sigue derecho), Turn left (gira a la izquierda), Turn right (gira a la derecha), Next to (junto a), Opposite / Across from (enfrente de). Transport: Take a taxi (tomar un taxi), Take the subway (tomar el metro).", "audio": "Directions: Go straight, turn left, turn right, next to, and opposite or across from. Transport: take a taxi, and take the subway." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra de vocabulario de viajes o dirección correcta.",
+      "questions": [
+        { "id": "a1-147-q1", "type": "quiz_choice", "question": "I need to book a ____ to London. (Vuelo).", "options": ["flight", "fly", "flying", "plane"], "correct_answer": "flight", "explanation": "Flight = vuelo." },
+        { "id": "a1-147-q2", "type": "quiz_choice", "question": "Do you have your boarding ____? (Pase de abordar).", "options": ["pass", "card", "ticket", "paper"], "correct_answer": "pass", "explanation": "Boarding pass = pase de abordar." },
+        { "id": "a1-147-q3", "type": "quiz_choice", "question": "Where is the ____ claim? I need my bags. (Equipaje).", "options": ["luggage", "bags", "suitcases", "carry"], "correct_answer": "luggage", "explanation": "Luggage / Baggage claim = reclamo de equipaje." },
+        { "id": "a1-147-q4", "type": "quiz_choice", "question": "The flight is departing from ____ 12. (Puerta de embarque).", "options": ["gate", "door", "room", "entrance"], "correct_answer": "gate", "explanation": "Gate = puerta de embarque en un aeropuerto." },
+        { "id": "a1-147-q5", "type": "quiz_choice", "question": "I have a ____ at this hotel under the name Smith. (Reservación).", "options": ["reservation", "room", "reserve", "ticket"], "correct_answer": "reservation", "explanation": "Reservation = reservación." },
+        { "id": "a1-147-q6", "type": "quiz_choice", "question": "What time is ____? (Registro de entrada al hotel).", "options": ["check-in", "check-out", "check-up", "check-on"], "correct_answer": "check-in", "explanation": "Check-in = hora de entrada al hotel." },
+        { "id": "a1-147-q7", "type": "quiz_choice", "question": "I need to ____ out before 11:00 AM. (Hacer registro de salida).", "options": ["check", "go", "leave", "stay"], "correct_answer": "check", "explanation": "Check out = hacer el registro de salida." },
+        { "id": "a1-147-q8", "type": "quiz_choice", "question": "I would like a ____ room, please. Just for me. (Habitación sencilla).", "options": ["single", "double", "twin", "one"], "correct_answer": "single", "explanation": "Single room = habitación para una persona." },
+        { "id": "a1-147-q9", "type": "quiz_choice", "question": "Go ____ ahead. Do not turn. (Sigue derecho).", "options": ["straight", "direct", "front", "forward"], "correct_answer": "straight", "explanation": "Go straight = sigue derecho." },
+        { "id": "a1-147-q10", "type": "quiz_choice", "question": "____ left at the corner. (Gira a la izquierda).", "options": ["Turn", "Take", "Go", "Make"], "correct_answer": "Turn", "explanation": "Turn left = gira a la izquierda." },
+        { "id": "a1-147-q11", "type": "quiz_choice", "question": "____ right at the traffic lights. (Gira a la derecha).", "options": ["Turn", "Take", "Go", "Look"], "correct_answer": "Turn", "explanation": "Turn right = gira a la derecha." },
+        { "id": "a1-147-q12", "type": "quiz_choice", "question": "The meeting room is ____ to the cafeteria. (Junto a).", "options": ["next", "near", "close", "opposite"], "correct_answer": "next", "explanation": "Next to = junto a." },
+        { "id": "a1-147-q13", "type": "quiz_choice", "question": "The hotel is ____ the train station. (Enfrente de).", "options": ["opposite", "front", "next", "behind"], "correct_answer": "opposite", "explanation": "Opposite = enfrente de (también 'across from')." },
+        { "id": "a1-147-q14", "type": "quiz_choice", "question": "I need to ____ a taxi to the airport. (Tomar).", "options": ["take", "catch", "have", "make"], "correct_answer": "take", "explanation": "Take a taxi / Take a train." },
+        { "id": "a1-147-q15", "type": "quiz_choice", "question": "Can I see your ____, please? (Pasaporte).", "options": ["passport", "pass", "ticket", "ID"], "correct_answer": "passport", "explanation": "Passport = pasaporte." },
+        { "id": "a1-147-q16", "type": "quiz_choice", "question": "How do I ____ to the train station? (Llegar a).", "options": ["get", "go", "arrive", "walk"], "correct_answer": "get", "explanation": "How do I get to...? = ¿Cómo llego a...?" },
+        { "id": "a1-147-q17", "type": "quiz_choice", "question": "The office is on the ____ floor. (Primer piso).", "options": ["first", "one", "front", "ground"], "correct_answer": "first", "explanation": "First floor = primer piso." },
+        { "id": "a1-147-q18", "type": "quiz_choice", "question": "Excuse me, where is the ____? (Elevador/Ascensor).", "options": ["elevator", "stairs", "door", "floor"], "correct_answer": "elevator", "explanation": "Elevator = elevador." },
+        { "id": "a1-147-q19", "type": "quiz_choice", "question": "I am traveling on ____. (De viaje de negocios).", "options": ["business", "work", "job", "company"], "correct_answer": "business", "explanation": "Traveling on business = viajando por negocios." },
+        { "id": "a1-147-q20", "type": "quiz_choice", "question": "I only have a ____ bag. (Equipaje de mano).", "options": ["carry-on", "small", "hand", "backpack"], "correct_answer": "carry-on", "explanation": "Carry-on bag = equipaje de mano." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de viajes o dirección correcta.",
+      "questions": [
+        { "id": "a1-147-f1", "type": "fill_input", "question": "I need to book a ____. (Vuelo)", "correct_answer": "flight", "explanation": "flight." },
+        { "id": "a1-147-f2", "type": "fill_input", "question": "Do you have your boarding ____? (Pase)", "correct_answer": "pass", "explanation": "pass." },
+        { "id": "a1-147-f3", "type": "fill_input", "question": "Where is the ____ claim? (Equipaje)", "correct_answer": "luggage", "explanation": "luggage." },
+        { "id": "a1-147-f4", "type": "fill_input", "question": "The flight departs from ____ 12. (Puerta)", "correct_answer": "gate", "explanation": "gate." },
+        { "id": "a1-147-f5", "type": "fill_input", "question": "I have a ____. (Reservación)", "correct_answer": "reservation", "explanation": "reservation." },
+        { "id": "a1-147-f6", "type": "fill_input", "question": "What time is ____? (Registro de entrada)", "correct_answer": "check-in", "explanation": "check-in." },
+        { "id": "a1-147-f7", "type": "fill_input", "question": "Go ____ ahead. (Derecho)", "correct_answer": "straight", "explanation": "straight." },
+        { "id": "a1-147-f8", "type": "fill_input", "question": "____ left. (Gira)", "correct_answer": "Turn", "explanation": "Turn." },
+        { "id": "a1-147-f9", "type": "fill_input", "question": "It is ____ to the cafeteria. (Junto a)", "correct_answer": "next", "explanation": "next." },
+        { "id": "a1-147-f10", "type": "fill_input", "question": "How do I ____ to the airport? (Llegar a)", "correct_answer": "get", "explanation": "get." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-147-p1", "source": "Flight / Ticket", "target": "Vuelo / Boleto"},
+        {"id": "a1-147-p2", "source": "Boarding pass / Gate", "target": "Pase de abordar / Puerta de embarque"},
+        {"id": "a1-147-p3", "source": "Luggage / Carry-on", "target": "Equipaje / Equipaje de mano"},
+        {"id": "a1-147-p4", "source": "Reservation / Single room", "target": "Reservación / Habitación sencilla"},
+        {"id": "a1-147-p5", "source": "Check-in / Check-out", "target": "Registro de entrada / Registro de salida"},
+        {"id": "a1-147-p6", "source": "Go straight", "target": "Sigue derecho"},
+        {"id": "a1-147-p7", "source": "Turn left / Turn right", "target": "Gira a la izquierda / Gira a la derecha"},
+        {"id": "a1-147-p8", "source": "Next to / Opposite", "target": "Junto a / Enfrente de"},
+        {"id": "a1-147-p9", "source": "Take a taxi", "target": "Tomar un taxi"},
+        {"id": "a1-147-p10", "source": "How do I get to...?", "target": "¿Cómo llego a...?"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-147-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need to book a flight to London.", "options": ["I need to book a flight to London.", "I need to book a train to London.", "We need to book a flight to London.", "I need to take a flight to London."], "correct_answer": "I need to book a flight to London.", "explanation": "Audio exacto." },
+        { "id": "a1-147-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do you have your boarding pass?", "options": ["Do you have your boarding pass?", "Do you have your ticket?", "Where is your boarding pass?", "Do you have your boarding card?"], "correct_answer": "Do you have your boarding pass?", "explanation": "Audio exacto." },
+        { "id": "a1-147-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Where is the luggage claim?", "options": ["Where is the luggage claim?", "Where is the baggage claim?", "Where is my luggage?", "Is this the luggage claim?"], "correct_answer": "Where is the luggage claim?", "explanation": "Audio exacto." },
+        { "id": "a1-147-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The flight is departing from gate twelve.", "options": ["The flight is departing from gate twelve.", "The flight departs from gate twelve.", "The plane is at gate twelve.", "The flight is departing from gate ten."], "correct_answer": "The flight is departing from gate twelve.", "explanation": "Audio exacto." },
+        { "id": "a1-147-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have a reservation.", "options": ["I have a reservation.", "We have a reservation.", "I need a reservation.", "Do you have a reservation?"], "correct_answer": "I have a reservation.", "explanation": "Audio exacto." },
+        { "id": "a1-147-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What time is check-in?", "options": ["What time is check-in?", "What time is check-out?", "When is check-in?", "Is it time for check-in?"], "correct_answer": "What time is check-in?", "explanation": "Audio exacto." },
+        { "id": "a1-147-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Go straight ahead.", "options": ["Go straight ahead.", "Go straight.", "Please go straight ahead.", "Go straight to the corner."], "correct_answer": "Go straight ahead.", "explanation": "Audio exacto." },
+        { "id": "a1-147-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Turn left at the corner.", "options": ["Turn left at the corner.", "Turn right at the corner.", "Turn left.", "Go left at the corner."], "correct_answer": "Turn left at the corner.", "explanation": "Audio exacto." },
+        { "id": "a1-147-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The hotel is opposite the train station.", "options": ["The hotel is opposite the train station.", "The hotel is next to the train station.", "The office is opposite the train station.", "The hotel is across from the train station."], "correct_answer": "The hotel is opposite the train station.", "explanation": "Audio exacto." },
+        { "id": "a1-147-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How do I get to the airport?", "options": ["How do I get to the airport?", "How can I get to the airport?", "Where is the airport?", "How do I get to the train station?"], "correct_answer": "How do I get to the airport?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

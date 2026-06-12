@@ -1,0 +1,101 @@
+{
+  "id": "a2-8",
+  "title": "Present Perfect (For & Since)",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Present Perfect", "For", "Since"],
+  "completion_message": "¡Felicidades! Ahora sabes cómo expresar la duración de eventos usando Present Perfect con For y Since.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Present Perfect: For y Since",
+      "parts": [
+        { "visual": "Usamos el Present Perfect (have/has + verbo en participio) para hablar de acciones que empezaron en el pasado y continúan en el presente. \nFOR = Por/Durante (indica un periodo o cantidad de tiempo). Ej: I have worked here FOR five years.", "audio": "We use the Present Perfect to talk about actions that started in the past and continue in the present. F-O-R is used to indicate a period or amount of time. For example: I have worked here FOR five years." },
+        { "visual": "SINCE = Desde (indica el punto de inicio exacto en el pasado). Ej: I have worked here SINCE 2018. SINCE last month. SINCE Monday. (Preguntamos la duración con 'How long...?').", "audio": "SINCE is used to indicate the exact starting point in the past. For example: I have worked here SINCE 2018. Since last month. Since Monday. We ask about duration using: How long...?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige FOR o SINCE, o la forma correcta del verbo.",
+      "questions": [
+        { "id": "a2-8-q1", "type": "quiz_choice", "question": "I have been the manager ____ 2020. (Desde).", "options": ["since", "for", "in", "at"], "correct_answer": "since", "explanation": "2020 es un punto de inicio específico: since." },
+        { "id": "a2-8-q2", "type": "quiz_choice", "question": "We have worked on this project ____ three months. (Durante).", "options": ["for", "since", "during", "in"], "correct_answer": "for", "explanation": "Three months es una cantidad/periodo de tiempo: for." },
+        { "id": "a2-8-q3", "type": "quiz_choice", "question": "She has lived in New York ____ last year. (Desde).", "options": ["since", "for", "at", "on"], "correct_answer": "since", "explanation": "Last year (el año pasado) es un punto específico de inicio: since." },
+        { "id": "a2-8-q4", "type": "quiz_choice", "question": "They have had that software ____ a long time. (Por mucho tiempo).", "options": ["for", "since", "at", "in"], "correct_answer": "for", "explanation": "A long time (mucho tiempo) es un periodo: for." },
+        { "id": "a2-8-q5", "type": "quiz_choice", "question": "____ have you worked in this company?", "options": ["How long", "How much", "How many", "When"], "correct_answer": "How long", "explanation": "Para preguntar por duración con Present Perfect usamos 'How long' (¿Cuánto tiempo?)." },
+        { "id": "a2-8-q6", "type": "quiz_choice", "question": "I have known the CEO ____ we were in university. (Desde que).", "options": ["since", "for", "when", "while"], "correct_answer": "since", "explanation": "'We were in university' es el punto de inicio en el pasado: since." },
+        { "id": "a2-8-q7", "type": "quiz_choice", "question": "The server has been down ____ two hours. (Por dos horas).", "options": ["for", "since", "by", "until"], "correct_answer": "for", "explanation": "Two hours es cantidad de tiempo: for." },
+        { "id": "a2-8-q8", "type": "quiz_choice", "question": "We haven't received any emails ____ Monday. (Desde el lunes).", "options": ["since", "for", "on", "in"], "correct_answer": "since", "explanation": "Monday es punto específico: since." },
+        { "id": "a2-8-q9", "type": "quiz_choice", "question": "How long ____ he been the Director of Sales?", "options": ["has", "have", "is", "was"], "correct_answer": "has", "explanation": "He lleva el auxiliar 'has' en Present Perfect." },
+        { "id": "a2-8-q10", "type": "quiz_choice", "question": "I haven't seen John ____ a week. (Por una semana).", "options": ["for", "since", "during", "in"], "correct_answer": "for", "explanation": "A week (una semana) es un periodo de tiempo: for." },
+        { "id": "a2-8-q11", "type": "quiz_choice", "question": "They ____ been partners since 2015. (Han sido).", "options": ["have", "has", "are", "were"], "correct_answer": "have", "explanation": "They lleva 'have'." },
+        { "id": "a2-8-q12", "type": "quiz_choice", "question": "I have had this laptop ____ six months. (Por seis meses).", "options": ["for", "since", "at", "in"], "correct_answer": "for", "explanation": "Six months es un periodo: for." },
+        { "id": "a2-8-q13", "type": "quiz_choice", "question": "We have been in this meeting ____ 9:00 AM. (Desde las).", "options": ["since", "for", "at", "in"], "correct_answer": "since", "explanation": "9:00 AM es el punto de inicio exacto: since." },
+        { "id": "a2-8-q14", "type": "quiz_choice", "question": "How long have you ____ in London? (Vivido).", "options": ["lived", "live", "living", "lives"], "correct_answer": "lived", "explanation": "Present Perfect requiere el verbo en participio: lived." },
+        { "id": "a2-8-q15", "type": "quiz_choice", "question": "She has been sick ____ three days. (Por tres días).", "options": ["for", "since", "in", "by"], "correct_answer": "for", "explanation": "Three days = periodo de tiempo = for." },
+        { "id": "a2-8-q16", "type": "quiz_choice", "question": "He hasn't called me ____ he arrived in Tokyo. (Desde que).", "options": ["since", "for", "when", "while"], "correct_answer": "since", "explanation": "He arrived in Tokyo es el punto de inicio de la acción: since." },
+        { "id": "a2-8-q17", "type": "quiz_choice", "question": "Our company has grown a lot ____ the last ten years. (Durante/Por).", "options": ["for", "since", "in", "at"], "correct_answer": "for", "explanation": "The last ten years indica un periodo acumulado: for." },
+        { "id": "a2-8-q18", "type": "quiz_choice", "question": "I haven't taken a vacation ____ December. (Desde).", "options": ["since", "for", "in", "on"], "correct_answer": "since", "explanation": "December = mes específico de inicio = since." },
+        { "id": "a2-8-q19", "type": "quiz_choice", "question": "We have ____ each other for ten years. (Conocido).", "options": ["known", "know", "knew", "knowing"], "correct_answer": "known", "explanation": "Participio de know = known." },
+        { "id": "a2-8-q20", "type": "quiz_choice", "question": "How long have they ____ married? (Estado).", "options": ["been", "be", "was", "were"], "correct_answer": "been", "explanation": "Participio de To Be = been." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe FOR (cantidad de tiempo) o SINCE (punto de inicio exacto).",
+      "questions": [
+        { "id": "a2-8-f1", "type": "fill_input", "question": "I have worked here ____ five years. (Por)", "correct_answer": "for", "explanation": "for." },
+        { "id": "a2-8-f2", "type": "fill_input", "question": "I have worked here ____ 2018. (Desde)", "correct_answer": "since", "explanation": "since." },
+        { "id": "a2-8-f3", "type": "fill_input", "question": "We have been partners ____ last year. (Desde)", "correct_answer": "since", "explanation": "since." },
+        { "id": "a2-8-f4", "type": "fill_input", "question": "He has been sick ____ three days. (Por)", "correct_answer": "for", "explanation": "for." },
+        { "id": "a2-8-f5", "type": "fill_input", "question": "We haven't met ____ January. (Desde)", "correct_answer": "since", "explanation": "since." },
+        { "id": "a2-8-f6", "type": "fill_input", "question": "The server has been down ____ two hours. (Por)", "correct_answer": "for", "explanation": "for." },
+        { "id": "a2-8-f7", "type": "fill_input", "question": "I haven't seen her ____ Monday. (Desde)", "correct_answer": "since", "explanation": "since." },
+        { "id": "a2-8-f8", "type": "fill_input", "question": "They have had that software ____ a long time. (Por)", "correct_answer": "for", "explanation": "for." },
+        { "id": "a2-8-f9", "type": "fill_input", "question": "We have known each other ____ we were kids. (Desde)", "correct_answer": "since", "explanation": "since." },
+        { "id": "a2-8-f10", "type": "fill_input", "question": "I have had this laptop ____ six months. (Por)", "correct_answer": "for", "explanation": "for." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-8-p1", "source": "For five years", "target": "Por / Durante cinco años (Periodo)"},
+        {"id": "a2-8-p2", "source": "Since 2018", "target": "Desde 2018 (Inicio exacto)"},
+        {"id": "a2-8-p3", "source": "For a long time", "target": "Por mucho tiempo"},
+        {"id": "a2-8-p4", "source": "Since last month", "target": "Desde el mes pasado"},
+        {"id": "a2-8-p5", "source": "How long...?", "target": "¿Cuánto tiempo...?"},
+        {"id": "a2-8-p6", "source": "Since I was young", "target": "Desde que yo era joven"},
+        {"id": "a2-8-p7", "source": "For three days", "target": "Por tres días"},
+        {"id": "a2-8-p8", "source": "Since Monday", "target": "Desde el lunes"},
+        {"id": "a2-8-p9", "source": "I have worked here", "target": "He trabajado aquí (y sigo trabajando)"},
+        {"id": "a2-8-p10", "source": "We have known each other", "target": "Nos hemos conocido (por un tiempo)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a2-8-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have worked here for five years.", "options": ["I have worked here for five years.", "I have worked here since five years.", "I worked here for five years.", "I am working here for five years."], "correct_answer": "I have worked here for five years.", "explanation": "Audio exacto." },
+        { "id": "a2-8-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have been the manager since 2020.", "options": ["I have been the manager since 2020.", "I have been the manager for 2020.", "I was the manager since 2020.", "He has been the manager since 2020."], "correct_answer": "I have been the manager since 2020.", "explanation": "Audio exacto." },
+        { "id": "a2-8-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have worked on this project for three months.", "options": ["We have worked on this project for three months.", "We have worked on this project since three months.", "They have worked on this project for three months.", "We worked on this project for three months."], "correct_answer": "We have worked on this project for three months.", "explanation": "Audio exacto." },
+        { "id": "a2-8-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She has lived in New York since last year.", "options": ["She has lived in New York since last year.", "She has lived in New York for last year.", "He has lived in New York since last year.", "She lived in New York since last year."], "correct_answer": "She has lived in New York since last year.", "explanation": "Audio exacto." },
+        { "id": "a2-8-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How long have you worked in this company?", "options": ["How long have you worked in this company?", "How much have you worked in this company?", "How long did you work in this company?", "How many years have you worked in this company?"], "correct_answer": "How long have you worked in this company?", "explanation": "Audio exacto." },
+        { "id": "a2-8-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The server has been down for two hours.", "options": ["The server has been down for two hours.", "The server has been down since two hours.", "The system has been down for two hours.", "The server is down for two hours."], "correct_answer": "The server has been down for two hours.", "explanation": "Audio exacto." },
+        { "id": "a2-8-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We haven't received any emails since Monday.", "options": ["We haven't received any emails since Monday.", "We haven't received any emails for Monday.", "They haven't received any emails since Monday.", "We didn't receive any emails since Monday."], "correct_answer": "We haven't received any emails since Monday.", "explanation": "Audio exacto." },
+        { "id": "a2-8-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I haven't seen John for a week.", "options": ["I haven't seen John for a week.", "I haven't seen John since a week.", "I didn't see John for a week.", "He hasn't seen John for a week."], "correct_answer": "I haven't seen John for a week.", "explanation": "Audio exacto." },
+        { "id": "a2-8-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have been in this meeting since 9 AM.", "options": ["We have been in this meeting since 9 AM.", "We have been in this meeting for 9 AM.", "They have been in this meeting since 9 AM.", "We were in this meeting since 9 AM."], "correct_answer": "We have been in this meeting since 9 AM.", "explanation": "Audio exacto." },
+        { "id": "a2-8-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have known each other for ten years.", "options": ["We have known each other for ten years.", "We have known each other since ten years.", "They have known each other for ten years.", "We knew each other for ten years."], "correct_answer": "We have known each other for ten years.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

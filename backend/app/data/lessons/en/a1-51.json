@@ -1,0 +1,101 @@
+{
+  "id": "a1-51",
+  "title": "Present Simple: Negative & Questions",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Questions", "Negative"],
+  "completion_message": "¡Excelente! Has reforzado tu habilidad para hacer preguntas de rutina y negar acciones en presente.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Negativo y Preguntas",
+      "parts": [
+        { "visual": "Para negar: 'I/You/We/They don't work'. 'He/She/It doesn't work'. El verbo vuelve a su forma base.", "audio": "To make it negative: I don't work, He doesn't work. The verb returns to its base form." },
+        { "visual": "Para preguntar: 'Do you work?'. 'Does she work?'.", "audio": "To ask a question: Do you work? Does she work?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el auxiliar correcto (do/does/don't/doesn't).",
+      "questions": [
+        { "id": "a1-51-q1", "type": "quiz_choice", "question": "I ____ have a meeting today.", "options": ["don't", "doesn't", "not", "no"], "correct_answer": "don't", "explanation": "I don't have." },
+        { "id": "a1-51-q2", "type": "quiz_choice", "question": "He ____ work on weekends.", "options": ["doesn't", "don't", "not", "isn't"], "correct_answer": "doesn't", "explanation": "Tercera persona (He doesn't)." },
+        { "id": "a1-51-q3", "type": "quiz_choice", "question": "____ you like your job?", "options": ["Do", "Does", "Are", "Is"], "correct_answer": "Do", "explanation": "¿Te gusta...? (Do you...?)." },
+        { "id": "a1-51-q4", "type": "quiz_choice", "question": "____ she speak Spanish?", "options": ["Does", "Do", "Is", "Has"], "correct_answer": "Does", "explanation": "Tercera persona en pregunta (Does she...?)." },
+        { "id": "a1-51-q5", "type": "quiz_choice", "question": "We ____ agree with this idea.", "options": ["don't", "doesn't", "aren't", "not"], "correct_answer": "don't", "explanation": "We don't agree." },
+        { "id": "a1-51-q6", "type": "quiz_choice", "question": "The printer ____ work.", "options": ["doesn't", "don't", "isn't", "not"], "correct_answer": "doesn't", "explanation": "La impresora (It) usa doesn't." },
+        { "id": "a1-51-q7", "type": "quiz_choice", "question": "____ they have the report?", "options": ["Do", "Does", "Are", "Have"], "correct_answer": "Do", "explanation": "Pregunta para They (Do they...?)." },
+        { "id": "a1-51-q8", "type": "quiz_choice", "question": "What time ____ the meeting start?", "options": ["does", "do", "is", "are"], "correct_answer": "does", "explanation": "The meeting (It) usa does." },
+        { "id": "a1-51-q9", "type": "quiz_choice", "question": "Where ____ you work?", "options": ["do", "does", "are", "is"], "correct_answer": "do", "explanation": "Where do you work?" },
+        { "id": "a1-51-q10", "type": "quiz_choice", "question": "I don't ____ much free time.", "options": ["have", "has", "having", "had"], "correct_answer": "have", "explanation": "Después de don't el verbo va en forma base (have)." },
+        { "id": "a1-51-q11", "type": "quiz_choice", "question": "She doesn't ____ coffee.", "options": ["drink", "drinks", "drinking", "drank"], "correct_answer": "drink", "explanation": "Después de doesn't, el verbo pierde la 's' (drink)." },
+        { "id": "a1-51-q12", "type": "quiz_choice", "question": "Does he ____ the email?", "options": ["understand", "understands", "understanding", "understood"], "correct_answer": "understand", "explanation": "En preguntas con Does, el verbo va en forma base." },
+        { "id": "a1-51-q13", "type": "quiz_choice", "question": "Why ____ you arrive late?", "options": ["do", "does", "are", "is"], "correct_answer": "do", "explanation": "Why do you...?" },
+        { "id": "a1-51-q14", "type": "quiz_choice", "question": "The manager doesn't ____ this software.", "options": ["use", "uses", "using", "used"], "correct_answer": "use", "explanation": "El verbo principal va en forma base (use)." },
+        { "id": "a1-51-q15", "type": "quiz_choice", "question": "____ it rain a lot here?", "options": ["Does", "Do", "Is", "Has"], "correct_answer": "Does", "explanation": "Pregunta para clima (Does it...?)." },
+        { "id": "a1-51-q16", "type": "quiz_choice", "question": "No, I ____.", "options": ["don't", "doesn't", "do", "am not"], "correct_answer": "don't", "explanation": "Respuesta corta negativa." },
+        { "id": "a1-51-q17", "type": "quiz_choice", "question": "Yes, she ____.", "options": ["does", "do", "is", "has"], "correct_answer": "does", "explanation": "Respuesta corta afirmativa (Yes, she does)." },
+        { "id": "a1-51-q18", "type": "quiz_choice", "question": "They ____ need help.", "options": ["don't", "doesn't", "not", "aren't"], "correct_answer": "don't", "explanation": "They don't." },
+        { "id": "a1-51-q19", "type": "quiz_choice", "question": "Does the bus ____ here?", "options": ["stop", "stops", "stopping", "stopped"], "correct_answer": "stop", "explanation": "Verbo base (stop) por culpa del Does." },
+        { "id": "a1-51-q20", "type": "quiz_choice", "question": "I don't ____ why.", "options": ["know", "knows", "knowing", "knew"], "correct_answer": "know", "explanation": "No sé (I don't know)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe do, does, don't o doesn't según corresponda.",
+      "questions": [
+        { "id": "a1-51-f1", "type": "fill_input", "question": "I ____ have time (Negativo).", "correct_answer": "don't", "explanation": "don't." },
+        { "id": "a1-51-f2", "type": "fill_input", "question": "He ____ like it (Negativo).", "correct_answer": "doesn't", "explanation": "doesn't." },
+        { "id": "a1-51-f3", "type": "fill_input", "question": "____ you work here? (Pregunta).", "correct_answer": "Do", "explanation": "Do." },
+        { "id": "a1-51-f4", "type": "fill_input", "question": "____ she speak English? (Pregunta).", "correct_answer": "Does", "explanation": "Does." },
+        { "id": "a1-51-f5", "type": "fill_input", "question": "We ____ know (Negativo).", "correct_answer": "don't", "explanation": "don't." },
+        { "id": "a1-51-f6", "type": "fill_input", "question": "The system ____ work (Negativo).", "correct_answer": "doesn't", "explanation": "doesn't." },
+        { "id": "a1-51-f7", "type": "fill_input", "question": "____ they have a meeting? (Pregunta).", "correct_answer": "Do", "explanation": "Do." },
+        { "id": "a1-51-f8", "type": "fill_input", "question": "Where ____ he live? (Pregunta).", "correct_answer": "does", "explanation": "does." },
+        { "id": "a1-51-f9", "type": "fill_input", "question": "Yes, I ____. (Respuesta corta).", "correct_answer": "do", "explanation": "do." },
+        { "id": "a1-51-f10", "type": "fill_input", "question": "No, she ____. (Respuesta corta negativa).", "correct_answer": "doesn't", "explanation": "doesn't." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-51-p1", "source": "I don't work", "target": "Yo no trabajo"},
+        {"id": "a1-51-p2", "source": "He doesn't work", "target": "Él no trabaja"},
+        {"id": "a1-51-p3", "source": "Do you work?", "target": "¿Trabajas tú?"},
+        {"id": "a1-51-p4", "source": "Does she work?", "target": "¿Trabaja ella?"},
+        {"id": "a1-51-p5", "source": "I don't know", "target": "No sé"},
+        {"id": "a1-51-p6", "source": "Where do you work?", "target": "¿Dónde trabajas?"},
+        {"id": "a1-51-p7", "source": "Yes, I do", "target": "Sí (lo hago)"},
+        {"id": "a1-51-p8", "source": "No, I don't", "target": "No (no lo hago)"},
+        {"id": "a1-51-p9", "source": "Yes, she does", "target": "Sí (ella lo hace)"},
+        {"id": "a1-51-p10", "source": "No, she doesn't", "target": "No (ella no lo hace)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-51-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I don't work here.", "options": ["I don't work here.", "I didn't work here.", "He doesn't work here.", "I don't live here."], "correct_answer": "I don't work here.", "explanation": "Audio exacto." },
+        { "id": "a1-51-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He doesn't have time.", "options": ["He doesn't have time.", "She doesn't have time.", "I don't have time.", "He didn't have time."], "correct_answer": "He doesn't have time.", "explanation": "Audio exacto." },
+        { "id": "a1-51-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do you like your job?", "options": ["Do you like your job?", "Does he like his job?", "Do you love your job?", "Did you like your job?"], "correct_answer": "Do you like your job?", "explanation": "Audio exacto." },
+        { "id": "a1-51-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Does she speak English?", "options": ["Does she speak English?", "Do you speak English?", "Does he speak English?", "Did she speak English?"], "correct_answer": "Does she speak English?", "explanation": "Audio exacto." },
+        { "id": "a1-51-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We don't agree.", "options": ["We don't agree.", "They don't agree.", "I don't agree.", "We didn't agree."], "correct_answer": "We don't agree.", "explanation": "Audio exacto." },
+        { "id": "a1-51-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The printer doesn't work.", "options": ["The printer doesn't work.", "The printer didn't work.", "A printer doesn't work.", "My printer doesn't work."], "correct_answer": "The printer doesn't work.", "explanation": "Audio exacto." },
+        { "id": "a1-51-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Where do you work?", "options": ["Where do you work?", "Where does he work?", "When do you work?", "Why do you work?"], "correct_answer": "Where do you work?", "explanation": "Audio exacto." },
+        { "id": "a1-51-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I don't know.", "options": ["I don't know.", "I didn't know.", "He doesn't know.", "They don't know."], "correct_answer": "I don't know.", "explanation": "Audio exacto." },
+        { "id": "a1-51-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Yes, I do.", "options": ["Yes, I do.", "No, I don't.", "Yes, he does.", "Yes, she does."], "correct_answer": "Yes, I do.", "explanation": "Audio exacto." },
+        { "id": "a1-51-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "No, she doesn't.", "options": ["No, she doesn't.", "No, he doesn't.", "No, I don't.", "No, they don't."], "correct_answer": "No, she doesn't.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

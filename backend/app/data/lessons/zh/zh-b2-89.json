@@ -1,0 +1,92 @@
+{
+  "id": "zh-b2-89",
+  "title": "Si y Entonces",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Conditionals", "Logic"],
+  "completion_message": "¡Felicidades! Has dominado la tercera gran estructura lógica del B2. Ahora puedes negociar, poner condiciones y hablar de situaciones hipotéticas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Condiciones y Resultados",
+      "parts": [
+        {
+          "visual": "Si... : 如果 (rúguǒ)\nEntonces... : 就 (jiù)\n\nEsta es la tercera gran estructura lógica del chino (después de Causa/Efecto y Contraste). Se usa para crear condicionales. Presentas un escenario hipotético, y luego das el resultado inmediato.\n\n- [Condición] Si llueve: 如果下雨 (Rúguǒ xiàyǔ).\n- [Resultado] Entonces no voy: 就不去 (Jiù bú qù).\n- Si llueve, entonces no voy: 如果下雨，就不去 (Rúguǒ xiàyǔ, jiù bú qù).",
+          "audio": "En el B2 hemos aprendido a construir argumentos como nativos. Ya sabes decir 'Porque... por lo tanto' y 'Aunque... pero'. Hoy aprenderás la estructura condicional: 'Si... entonces'. La palabra para Si es Rúguǒ. Y la palabra para Entonces es Jiù. Por ejemplo, Rúguǒ xiàyǔ. Si llueve. Jiù bú qù. Entonces no voy. Rúguǒ introduce la hipótesis, y Jiù marca el resultado inevitable."
+        },
+        {
+          "visual": "Posición del Sujeto:\n\n¡Cuidado! Si el resultado tiene un sujeto, el 'jiù' siempre debe ir DESPUÉS del sujeto y ANTES del verbo.\n\n- Si tú vas, entonces yo voy: 如果你去，我就去 (Rúguǒ nǐ qù, wǒ jiù qù).\n- Si es muy caro, entonces yo no compro: 如果很贵，我就不买 (Rúguǒ hěn guì, wǒ jiù bù mǎi).\n- Si estás cansado, entonces descansa: 如果你累了，就休息 (Rúguǒ nǐ lèi le, jiù xiūxi).",
+          "audio": "Hay una regla de oro con la palabra Jiù: Si hay un pronombre o sujeto en la segunda parte de la oración, el Jiù va DESPUÉS del sujeto. No puedes decir 'Jiù wǒ qù'. Tienes que decir 'Wǒ jiù qù'. Yo entonces voy. Si tú vas, entonces yo voy: Rúguǒ nǐ qù, wǒ jiù qù. Es un patrón rítmico. Sujeto más Jiù más Verbo. Acostumbra a tu cerebro a este ritmo."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Establece las condiciones.",
+      "questions": [
+        { "id": "zh-b2-89-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 如果 (rúguǒ)?", "options": ["Si (Condicional).", "Entonces.", "Porque.", "Aunque."], "correct_answer": "Si (Condicional).", "explanation": "Rúguǒ introduce la cláusula de condición." },
+        { "id": "zh-b2-89-q2", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 就 (jiù) en esta estructura?", "options": ["Entonces / Inmediatamente después (Resultado).", "Si.", "Pero.", "También."], "correct_answer": "Entonces / Inmediatamente después (Resultado).", "explanation": "Jiù conecta el resultado directamente con la condición." },
+        { "id": "zh-b2-89-q3", "type": "quiz_choice", "question": "Traduce la condición básica: 'Si llueve, entonces no voy'. (Llover = xiàyǔ).", "options": ["Rúguǒ xiàyǔ, jiù bú qù (如果下雨，就不去).", "Yīnwèi xiàyǔ, suǒyǐ bú qù (因为下雨，所以不去 - Causa/Efecto).", "Suīrán xiàyǔ, dànshì bú qù (虽然下雨，但是不去).", "Jiù xiàyǔ, rúguǒ bú qù (就下雨，如果不去)."], "correct_answer": "Rúguǒ xiàyǔ, jiù bú qù (如果下雨，就不去).", "explanation": "Si (rúguǒ) llueve (xiàyǔ), entonces (jiù) no ir (bú qù)." },
+        { "id": "zh-b2-89-q4", "type": "quiz_choice", "question": "Gramática importante: Si hay un sujeto (como 'yo') en la parte del resultado, ¿dónde se pone 'jiù'?", "options": ["Sujeto + jiù + Verbo (wǒ jiù qù).", "Jiù + Sujeto + Verbo (jiù wǒ qù).", "Verbo + jiù + Sujeto (qù jiù wǒ).", "Sujeto + Verbo + jiù (wǒ qù jiù)."], "correct_answer": "Sujeto + jiù + Verbo (wǒ jiù qù).", "explanation": "Jiù es un adverbio, por lo tanto DEBE ir después del sujeto y antes del verbo." },
+        { "id": "zh-b2-89-q5", "type": "quiz_choice", "question": "Aplica la regla del sujeto: 'Si tú vas, entonces yo voy'.", "options": ["Rúguǒ nǐ qù, wǒ jiù qù (如果你去，我就去).", "Rúguǒ nǐ qù, jiù wǒ qù (如果你去，就我去).", "Nǐ qù rúguǒ, wǒ jiù qù (你去如果，我就去).", "Rúguǒ qù nǐ, qù jiù wǒ (如果去你，去就我)."], "correct_answer": "Rúguǒ nǐ qù, wǒ jiù qù (如果你去，我就去).", "explanation": "Si (rúguǒ) tú vas (nǐ qù), yo (wǒ) entonces (jiù) voy (qù)." },
+        { "id": "zh-b2-89-q6", "type": "quiz_choice", "question": "Negociando precios: 'Si es muy caro, entonces yo no lo compro'.", "options": ["Rúguǒ hěn guì, wǒ jiù bù mǎi (如果很贵，我就不买).", "Rúguǒ hěn guì, jiù wǒ bù mǎi (如果很贵，就我不买).", "Yīnwèi hěn guì, suǒyǐ wǒ bù mǎi (因为很贵，所以我不买 - Causa/Efecto, no condicional).", "Rúguǒ bù mǎi, wǒ jiù hěn guì (如果不买，我就很贵)."], "correct_answer": "Rúguǒ hěn guì, wǒ jiù bù mǎi (如果很贵，我就不买).", "explanation": "Si muy caro (Rúguǒ hěn guì), yo entonces no compro (wǒ jiù bù mǎi)." },
+        { "id": "zh-b2-89-q7", "type": "quiz_choice", "question": "Dando consejos condicionales: 'Si estás cansado, entonces descansa'. (Cansado = lèi, Descansar = xiūxi).", "options": ["Rúguǒ nǐ lèi le, jiù xiūxi (如果你累了，就休息).", "Rúguǒ jiù xiūxi, nǐ lèi le (如果就休息，你累了).", "Suīrán nǐ lèi le, dànshì xiūxi (虽然你累了，但是休息).", "Yīnwèi xiūxi, suǒyǐ lèi le (因为休息，所以累了)."], "correct_answer": "Rúguǒ nǐ lèi le, jiù xiūxi (如果你累了，就休息).", "explanation": "Si (Rúguǒ) tú estás cansado (nǐ lèi le), entonces descansa (jiù xiūxi)." },
+        { "id": "zh-b2-89-q8", "type": "quiz_choice", "question": "Combina con 'Poder/Saber' (huì): 'Si yo lo supiera hacer, entonces te ayudaría'.", "options": ["Rúguǒ wǒ huì zuò, wǒ jiù bāng nǐ (如果我会做，我就帮你).", "Rúguǒ wǒ bāng nǐ, wǒ jiù huì zuò (如果我帮你，我就会做).", "Wǒ jiù huì zuò, rúguǒ wǒ bāng nǐ (我就会做，如果我帮你).", "Rúguǒ wǒ huì zuò, jiù wǒ bāng nǐ (如果我会做，就我帮你)."], "correct_answer": "Rúguǒ wǒ huì zuò, wǒ jiù bāng nǐ (如果我会做，我就帮你).", "explanation": "Huì zuò (saber hacer). Bāng (ayudar). El wǒ va antes del jiù." },
+        { "id": "zh-b2-89-q9", "type": "quiz_choice", "question": "A veces, en el habla rápida, los chinos omiten 'Rúguǒ' (Si) y solo dejan el 'Jiù' (Entonces). ¿Es esto correcto?", "options": ["Sí, el contexto a menudo deja clara la condición, y el 'jiù' por sí solo marca el resultado condicional.", "No, si quitas 'Rúguǒ' es gramaticalmente incorrecto.", "Se puede omitir 'Jiù', pero no 'Rúguǒ'.", "Nunca se omite nada en chino."], "correct_answer": "Sí, el contexto a menudo deja clara la condición, y el 'jiù' por sí solo marca el resultado condicional.", "explanation": "En chino coloquial: 'Nǐ qù, wǒ jiù qù' (Tú vas, yo entonces voy) funciona perfecto sin el Rúguǒ." },
+        { "id": "zh-b2-89-q10", "type": "quiz_choice", "question": "Repaso de Lógica: Identifica la pareja de Causa y Efecto, Contraste, y Condicional.", "options": ["Yīnwèi...suǒyǐ / Suīrán...dànshì / Rúguǒ...jiù.", "Rúguǒ...jiù / Yīnwèi...suǒyǐ / Suīrán...dànshì.", "Suīrán...dànshì / Rúguǒ...jiù / Yīnwèi...suǒyǐ.", "Todas usan 'Dōu'."], "correct_answer": "Yīnwèi...suǒyǐ / Suīrán...dànshì / Rúguǒ...jiù.", "explanation": "Las 3 parejas de oro: Porque-Por lo tanto / Aunque-Pero / Si-Entonces." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe las condiciones.",
+      "questions": [
+        { "id": "zh-b2-89-f1", "type": "fill_input", "question": "Si (Condicional): ru ____ (guo)", "correct_answer": "guo", "explanation": "guo" },
+        { "id": "zh-b2-89-f2", "type": "fill_input", "question": "Entonces (Resultado): ____ (jiu)", "correct_answer": "jiu", "explanation": "jiu" },
+        { "id": "zh-b2-89-f3", "type": "fill_input", "question": "Si llueve...: ru guo xia ____ (yu)", "correct_answer": "yu", "explanation": "yu" },
+        { "id": "zh-b2-89-f4", "type": "fill_input", "question": "... entonces no voy: ____ bu qu (jiu)", "correct_answer": "jiu", "explanation": "jiu" },
+        { "id": "zh-b2-89-f5", "type": "fill_input", "question": "Si tú vas...: ru guo ni ____ (qu)", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-b2-89-f6", "type": "fill_input", "question": "... entonces yo voy (Ojo al orden): wo ____ qu (jiu)", "correct_answer": "jiu", "explanation": "jiu" },
+        { "id": "zh-b2-89-f7", "type": "fill_input", "question": "Si es muy caro...: ru guo hen ____ (gui)", "correct_answer": "gui", "explanation": "gui" },
+        { "id": "zh-b2-89-f8", "type": "fill_input", "question": "... entonces yo no compro: wo jiu bu ____ (mai)", "correct_answer": "mai", "explanation": "mai" },
+        { "id": "zh-b2-89-f9", "type": "fill_input", "question": "Si estás cansado...: ru guo ni ____ le (lei)", "correct_answer": "lei", "explanation": "lei" },
+        { "id": "zh-b2-89-f10", "type": "fill_input", "question": "... entonces descansa: jiu xiu ____ (xi)", "correct_answer": "xi", "explanation": "xi" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha las hipótesis.",
+      "questions": [
+        { "id": "zh-b2-89-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "如果", "options": ["Si (Condicional)", "Porque", "Aunque", "Experiencia"], "correct_answer": "Si (Condicional)", "explanation": "El audio dice: Rúguǒ." },
+        { "id": "zh-b2-89-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "就", "options": ["Entonces", "Permitir", "Igual", "Todos"], "correct_answer": "Entonces", "explanation": "El audio dice: Jiù." },
+        { "id": "zh-b2-89-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "如果下雨，就不去", "options": ["Si llueve, entonces no voy", "Porque llueve, por lo tanto no voy", "Aunque llueve, pero voy", "Si no llueve, entonces voy"], "correct_answer": "Si llueve, entonces no voy", "explanation": "El audio dice: Rúguǒ xiàyǔ, jiù bú qù." },
+        { "id": "zh-b2-89-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "如果你去，我就去", "options": ["Si tú vas, entonces yo voy", "Porque tú vas, yo voy", "Tú y yo vamos", "Si yo voy, tú vas"], "correct_answer": "Si tú vas, entonces yo voy", "explanation": "El audio dice: Rúguǒ nǐ qù, wǒ jiù qù." },
+        { "id": "zh-b2-89-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "如果很贵，我就不买", "options": ["Si es muy caro, entonces yo no lo compro", "Porque es muy caro, no lo compro", "Aunque es caro, lo compro", "Si es barato, lo compro"], "correct_answer": "Si es muy caro, entonces yo no lo compro", "explanation": "El audio dice: Rúguǒ hěn guì, wǒ jiù bù mǎi." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Logic Pairs",
+      "pairs": [
+        {"id": "zh-b2-89-p1", "source": "如果 (rúguǒ)", "target": "Si (Condicional)"},
+        {"id": "zh-b2-89-p2", "source": "就 (jiù)", "target": "Entonces"},
+        {"id": "zh-b2-89-p3", "source": "因为 (yīnwèi)", "target": "Porque (Causa)"},
+        {"id": "zh-b2-89-p4", "source": "所以 (suǒyǐ)", "target": "Por lo tanto (Efecto)"},
+        {"id": "zh-b2-89-p5", "source": "虽然 (suīrán)", "target": "Aunque (Obstáculo)"},
+        {"id": "zh-b2-89-p6", "source": "但是 (dànshì)", "target": "Pero (Contraste)"},
+        {"id": "zh-b2-89-p7", "source": "过 (guò)", "target": "Partícula de experiencia"},
+        {"id": "zh-b2-89-p8", "source": "一样 (yíyàng)", "target": "Igual / Lo mismo"},
+        {"id": "zh-b2-89-p9", "source": "地 (de)", "target": "Sufijo mente"},
+        {"id": "zh-b2-89-p10", "source": "让 (ràng)", "target": "Permitir / Hacer que"}
+      ]
+    }
+  ]
+}

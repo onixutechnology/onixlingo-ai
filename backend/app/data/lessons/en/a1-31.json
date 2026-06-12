@@ -1,0 +1,101 @@
+{
+  "id": "a1-31",
+  "title": "There is & There are",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Existence"],
+  "completion_message": "¡Excelente! Ya sabes cómo describir lo que hay o existe en tu entorno de trabajo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: There is / There are",
+      "parts": [
+        { "visual": "Usamos 'There is' para singular (hay una cosa): 'There is a meeting'.", "audio": "We use There is for singular: There is a meeting." },
+        { "visual": "Usamos 'There are' para plural (hay varias cosas): 'There are five people'.", "audio": "We use There are for plural: There are five people." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige 'There is' o 'There are'.",
+      "questions": [
+        { "id": "a1-31-q1", "type": "quiz_choice", "question": "____ a computer on my desk.", "options": ["There is", "There are", "They is", "There am"], "correct_answer": "There is", "explanation": "'A computer' es singular." },
+        { "id": "a1-31-q2", "type": "quiz_choice", "question": "____ ten employees in this room.", "options": ["There are", "There is", "They are", "There have"], "correct_answer": "There are", "explanation": "'Ten employees' es plural." },
+        { "id": "a1-31-q3", "type": "quiz_choice", "question": "____ an error in the report.", "options": ["There is", "There are", "Is there", "Are there"], "correct_answer": "There is", "explanation": "'An error' es singular." },
+        { "id": "a1-31-q4", "type": "quiz_choice", "question": "____ any messages for me?", "options": ["Are there", "Is there", "There are", "There is"], "correct_answer": "Are there", "explanation": "Pregunta en plural." },
+        { "id": "a1-31-q5", "type": "quiz_choice", "question": "____ a problem with the printer?", "options": ["Is there", "Are there", "There is", "There are"], "correct_answer": "Is there", "explanation": "Pregunta en singular." },
+        { "id": "a1-31-q6", "type": "quiz_choice", "question": "____ no time left.", "options": ["There is", "There are", "Is there", "Are there"], "correct_answer": "There is", "explanation": "'Time' es incontable (se trata como singular)." },
+        { "id": "a1-31-q7", "type": "quiz_choice", "question": "____ two managers in the meeting.", "options": ["There are", "There is", "They are", "There have"], "correct_answer": "There are", "explanation": "'Two managers' es plural." },
+        { "id": "a1-31-q8", "type": "quiz_choice", "question": "____ many clients waiting.", "options": ["There are", "There is", "Is there", "There have"], "correct_answer": "There are", "explanation": "Plural." },
+        { "id": "a1-31-q9", "type": "quiz_choice", "question": "____ some coffee in the kitchen.", "options": ["There is", "There are", "Is there", "Are there"], "correct_answer": "There is", "explanation": "'Coffee' es incontable." },
+        { "id": "a1-31-q10", "type": "quiz_choice", "question": "____ a call for you on line 1.", "options": ["There is", "There are", "They is", "It is"], "correct_answer": "There is", "explanation": "'A call' es singular." },
+        { "id": "a1-31-q11", "type": "quiz_choice", "question": "____ not enough chairs.", "options": ["There are", "There is", "They are", "It is"], "correct_answer": "There are", "explanation": "'Chairs' es plural." },
+        { "id": "a1-31-q12", "type": "quiz_choice", "question": "____ a new policy.", "options": ["There is", "There are", "There have", "They are"], "correct_answer": "There is", "explanation": "Singular." },
+        { "id": "a1-31-q13", "type": "quiz_choice", "question": "How many computers ____?", "options": ["are there", "is there", "there are", "there is"], "correct_answer": "are there", "explanation": "Estructura de pregunta: How many + sustantivo plural + are there?" },
+        { "id": "a1-31-q14", "type": "quiz_choice", "question": "____ five floors in this building.", "options": ["There are", "There is", "They are", "It is"], "correct_answer": "There are", "explanation": "Pisos (floors) plural." },
+        { "id": "a1-31-q15", "type": "quiz_choice", "question": "____ a delay with the flight.", "options": ["There is", "There are", "Is there", "Are there"], "correct_answer": "There is", "explanation": "Un retraso (singular)." },
+        { "id": "a1-31-q16", "type": "quiz_choice", "question": "____ three documents attached.", "options": ["There are", "There is", "They are", "There have"], "correct_answer": "There are", "explanation": "Tres documentos (plural)." },
+        { "id": "a1-31-q17", "type": "quiz_choice", "question": "____ any paper in the printer?", "options": ["Is there", "Are there", "There is", "There are"], "correct_answer": "Is there", "explanation": "Paper es incontable, pregunta en singular." },
+        { "id": "a1-31-q18", "type": "quiz_choice", "question": "____ a lot of work today.", "options": ["There is", "There are", "They are", "It is"], "correct_answer": "There is", "explanation": "'Work' es incontable." },
+        { "id": "a1-31-q19", "type": "quiz_choice", "question": "____ only one option.", "options": ["There is", "There are", "It are", "They is"], "correct_answer": "There is", "explanation": "Una sola opción." },
+        { "id": "a1-31-q20", "type": "quiz_choice", "question": "____ missing files on the server.", "options": ["There are", "There is", "Are there", "Is there"], "correct_answer": "There are", "explanation": "Archivos perdidos (plural)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe 'is' o 'are'.",
+      "questions": [
+        { "id": "a1-31-f1", "type": "fill_input", "question": "There ____ a computer.", "correct_answer": "is", "explanation": "Singular." },
+        { "id": "a1-31-f2", "type": "fill_input", "question": "There ____ ten employees.", "correct_answer": "are", "explanation": "Plural." },
+        { "id": "a1-31-f3", "type": "fill_input", "question": "There ____ an error.", "correct_answer": "is", "explanation": "Singular." },
+        { "id": "a1-31-f4", "type": "fill_input", "question": "____ there any messages?", "correct_answer": "Are", "explanation": "Plural." },
+        { "id": "a1-31-f5", "type": "fill_input", "question": "There ____ no time left.", "correct_answer": "is", "explanation": "Incontable." },
+        { "id": "a1-31-f6", "type": "fill_input", "question": "There ____ two managers.", "correct_answer": "are", "explanation": "Plural." },
+        { "id": "a1-31-f7", "type": "fill_input", "question": "____ there a problem?", "correct_answer": "Is", "explanation": "Singular." },
+        { "id": "a1-31-f8", "type": "fill_input", "question": "There ____ some coffee.", "correct_answer": "is", "explanation": "Incontable." },
+        { "id": "a1-31-f9", "type": "fill_input", "question": "There ____ not enough chairs.", "correct_answer": "are", "explanation": "Plural." },
+        { "id": "a1-31-f10", "type": "fill_input", "question": "There ____ a lot of work.", "correct_answer": "is", "explanation": "Incontable." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-31-p1", "source": "There is", "target": "Hay (Singular)"},
+        {"id": "a1-31-p2", "source": "There are", "target": "Hay (Plural)"},
+        {"id": "a1-31-p3", "source": "Is there...?", "target": "¿Hay...? (Singular)"},
+        {"id": "a1-31-p4", "source": "Are there...?", "target": "¿Hay...? (Plural)"},
+        {"id": "a1-31-p5", "source": "Some", "target": "Algo de / Algunos"},
+        {"id": "a1-31-p6", "source": "Any", "target": "Algún / Ninguno"},
+        {"id": "a1-31-p7", "source": "Many", "target": "Muchos"},
+        {"id": "a1-31-p8", "source": "A lot of", "target": "Un montón de"},
+        {"id": "a1-31-p9", "source": "Enough", "target": "Suficiente"},
+        {"id": "a1-31-p10", "source": "Missing", "target": "Faltante"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-31-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is a meeting.", "options": ["There is a meeting.", "There are meetings.", "There was a meeting.", "Is there a meeting?"], "correct_answer": "There is a meeting.", "explanation": "Audio exacto." },
+        { "id": "a1-31-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There are five people.", "options": ["There are five people.", "There is five people.", "They are five people.", "There are four people."], "correct_answer": "There are five people.", "explanation": "Audio exacto." },
+        { "id": "a1-31-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Is there a problem?", "options": ["Is there a problem?", "Are there a problem?", "There is a problem.", "There are a problem."], "correct_answer": "Is there a problem?", "explanation": "Audio exacto." },
+        { "id": "a1-31-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Are there any messages?", "options": ["Are there any messages?", "Is there any messages?", "There are any messages?", "Are there many messages?"], "correct_answer": "Are there any messages?", "explanation": "Audio exacto." },
+        { "id": "a1-31-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is no time.", "options": ["There is no time.", "There are no time.", "There is more time.", "There is time."], "correct_answer": "There is no time.", "explanation": "Audio exacto." },
+        { "id": "a1-31-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There are two managers.", "options": ["There are two managers.", "There is two managers.", "They are two managers.", "There are three managers."], "correct_answer": "There are two managers.", "explanation": "Audio exacto." },
+        { "id": "a1-31-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is some coffee.", "options": ["There is some coffee.", "There are some coffee.", "Is there some coffee?", "There is no coffee."], "correct_answer": "There is some coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-31-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How many computers are there?", "options": ["How many computers are there?", "How many computers is there?", "How many computer are there?", "How many computers there are?"], "correct_answer": "How many computers are there?", "explanation": "Audio exacto." },
+        { "id": "a1-31-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is a delay.", "options": ["There is a delay.", "There are a delay.", "Is there a delay?", "There is no delay."], "correct_answer": "There is a delay.", "explanation": "Audio exacto." },
+        { "id": "a1-31-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There are missing files.", "options": ["There are missing files.", "There is missing files.", "They are missing files.", "There are missing file."], "correct_answer": "There are missing files.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

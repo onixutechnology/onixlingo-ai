@@ -1,0 +1,101 @@
+{
+  "id": "a1-32",
+  "title": "Prepositions of Place",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Locations"],
+  "completion_message": "¡Magnífico! Ya puedes ubicar todos los objetos en tu oficina de forma precisa.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Preposiciones de Lugar",
+      "parts": [
+        { "visual": "Usamos In (dentro), On (sobre/encima), Under (debajo) y Next to (al lado de) para ubicar objetos.", "audio": "We use In, On, Under, and Next to to locate objects." },
+        { "visual": "Ejemplo: 'The file is in the cabinet' (El archivo está dentro del archivero).", "audio": "Example: The file is in the cabinet." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la preposición correcta.",
+      "questions": [
+        { "id": "a1-32-q1", "type": "quiz_choice", "question": "The computer is ____ the desk.", "options": ["on", "in", "under", "next"], "correct_answer": "on", "explanation": "Sobre el escritorio." },
+        { "id": "a1-32-q2", "type": "quiz_choice", "question": "The papers are ____ the folder.", "options": ["in", "on", "next", "under"], "correct_answer": "in", "explanation": "Dentro de la carpeta." },
+        { "id": "a1-32-q3", "type": "quiz_choice", "question": "My bag is ____ the chair.", "options": ["under", "in", "next", "at"], "correct_answer": "under", "explanation": "Debajo de la silla." },
+        { "id": "a1-32-q4", "type": "quiz_choice", "question": "The printer is ____ to the door.", "options": ["next", "near", "on", "in"], "correct_answer": "next", "explanation": "Al lado de ('next to')." },
+        { "id": "a1-32-q5", "type": "quiz_choice", "question": "The boss is ____ his office.", "options": ["in", "on", "under", "next"], "correct_answer": "in", "explanation": "Dentro de la oficina." },
+        { "id": "a1-32-q6", "type": "quiz_choice", "question": "The clock is ____ the wall.", "options": ["on", "in", "under", "next"], "correct_answer": "on", "explanation": "Pegado sobre la pared." },
+        { "id": "a1-32-q7", "type": "quiz_choice", "question": "Put the trash ____ the bin.", "options": ["in", "on", "next", "at"], "correct_answer": "in", "explanation": "Dentro del basurero." },
+        { "id": "a1-32-q8", "type": "quiz_choice", "question": "My desk is ____ to yours.", "options": ["next", "near", "in", "on"], "correct_answer": "next", "explanation": "Next to (al lado de)." },
+        { "id": "a1-32-q9", "type": "quiz_choice", "question": "The pen is ____ the table.", "options": ["on", "in", "under", "at"], "correct_answer": "on", "explanation": "Sobre la mesa." },
+        { "id": "a1-32-q10", "type": "quiz_choice", "question": "I left the report ____ your desk.", "options": ["on", "in", "next", "under"], "correct_answer": "on", "explanation": "Sobre el escritorio." },
+        { "id": "a1-32-q11", "type": "quiz_choice", "question": "The cable is ____ the floor.", "options": ["on", "in", "at", "next"], "correct_answer": "on", "explanation": "En el suelo (sobre el suelo)." },
+        { "id": "a1-32-q12", "type": "quiz_choice", "question": "There is a meeting ____ room A.", "options": ["in", "on", "next", "under"], "correct_answer": "in", "explanation": "Dentro de la sala." },
+        { "id": "a1-32-q13", "type": "quiz_choice", "question": "The keys are ____ my pocket.", "options": ["in", "on", "under", "next"], "correct_answer": "in", "explanation": "En mi bolsillo (dentro)." },
+        { "id": "a1-32-q14", "type": "quiz_choice", "question": "Sit ____ the chair, please.", "options": ["on", "in", "under", "at"], "correct_answer": "on", "explanation": "Sentarse sobre la silla." },
+        { "id": "a1-32-q15", "type": "quiz_choice", "question": "The coffee machine is ____ to the fridge.", "options": ["next", "near", "on", "in"], "correct_answer": "next", "explanation": "Al lado del refrigerador." },
+        { "id": "a1-32-q16", "type": "quiz_choice", "question": "I dropped my pen ____ the desk.", "options": ["under", "in", "next", "on"], "correct_answer": "under", "explanation": "Debajo del escritorio." },
+        { "id": "a1-32-q17", "type": "quiz_choice", "question": "Your name is ____ the list.", "options": ["on", "in", "at", "under"], "correct_answer": "on", "explanation": "Sobre/en la lista." },
+        { "id": "a1-32-q18", "type": "quiz_choice", "question": "The stapler is ____ the drawer.", "options": ["in", "on", "next", "under"], "correct_answer": "in", "explanation": "Dentro del cajón." },
+        { "id": "a1-32-q19", "type": "quiz_choice", "question": "She is standing ____ to the whiteboard.", "options": ["next", "near", "on", "in"], "correct_answer": "next", "explanation": "Parada al lado del pizarrón." },
+        { "id": "a1-32-q20", "type": "quiz_choice", "question": "Keep the boxes ____ the shelf.", "options": ["on", "in", "next", "at"], "correct_answer": "on", "explanation": "Sobre el estante." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe In, On, Under o Next.",
+      "questions": [
+        { "id": "a1-32-f1", "type": "fill_input", "question": "The computer is ____ the desk (Sobre).", "correct_answer": "on", "explanation": "On." },
+        { "id": "a1-32-f2", "type": "fill_input", "question": "The papers are ____ the folder (Dentro).", "correct_answer": "in", "explanation": "In." },
+        { "id": "a1-32-f3", "type": "fill_input", "question": "My bag is ____ the chair (Debajo).", "correct_answer": "under", "explanation": "Under." },
+        { "id": "a1-32-f4", "type": "fill_input", "question": "The printer is ____ to the door (Al lado).", "correct_answer": "next", "explanation": "Next." },
+        { "id": "a1-32-f5", "type": "fill_input", "question": "The boss is ____ his office (Dentro).", "correct_answer": "in", "explanation": "In." },
+        { "id": "a1-32-f6", "type": "fill_input", "question": "The clock is ____ the wall (Sobre).", "correct_answer": "on", "explanation": "On." },
+        { "id": "a1-32-f7", "type": "fill_input", "question": "Put the trash ____ the bin (Dentro).", "correct_answer": "in", "explanation": "In." },
+        { "id": "a1-32-f8", "type": "fill_input", "question": "My desk is ____ to yours (Al lado).", "correct_answer": "next", "explanation": "Next." },
+        { "id": "a1-32-f9", "type": "fill_input", "question": "I dropped it ____ the table (Debajo).", "correct_answer": "under", "explanation": "Under." },
+        { "id": "a1-32-f10", "type": "fill_input", "question": "The keys are ____ my pocket (Dentro).", "correct_answer": "in", "explanation": "In." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-32-p1", "source": "In", "target": "Dentro de"},
+        {"id": "a1-32-p2", "source": "On", "target": "Sobre / Encima de"},
+        {"id": "a1-32-p3", "source": "Under", "target": "Debajo de"},
+        {"id": "a1-32-p4", "source": "Next to", "target": "Al lado de"},
+        {"id": "a1-32-p5", "source": "Near", "target": "Cerca de"},
+        {"id": "a1-32-p6", "source": "Inside", "target": "Adentro"},
+        {"id": "a1-32-p7", "source": "Outside", "target": "Afuera"},
+        {"id": "a1-32-p8", "source": "Between", "target": "En medio de"},
+        {"id": "a1-32-p9", "source": "Behind", "target": "Detrás de"},
+        {"id": "a1-32-p10", "source": "In front of", "target": "En frente de"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-32-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "On the desk.", "options": ["On the desk.", "In the desk.", "Under the desk.", "Next to the desk."], "correct_answer": "On the desk.", "explanation": "Audio exacto." },
+        { "id": "a1-32-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In the folder.", "options": ["In the folder.", "On the folder.", "Under the folder.", "Next to the folder."], "correct_answer": "In the folder.", "explanation": "Audio exacto." },
+        { "id": "a1-32-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Under the chair.", "options": ["Under the chair.", "On the chair.", "In the chair.", "Next to the chair."], "correct_answer": "Under the chair.", "explanation": "Audio exacto." },
+        { "id": "a1-32-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Next to the door.", "options": ["Next to the door.", "Near the door.", "On the door.", "In the door."], "correct_answer": "Next to the door.", "explanation": "Audio exacto." },
+        { "id": "a1-32-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In the office.", "options": ["In the office.", "On the office.", "At the office.", "Under the office."], "correct_answer": "In the office.", "explanation": "Audio exacto." },
+        { "id": "a1-32-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "On the wall.", "options": ["On the wall.", "In the wall.", "Under the wall.", "Next to the wall."], "correct_answer": "On the wall.", "explanation": "Audio exacto." },
+        { "id": "a1-32-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In the bin.", "options": ["In the bin.", "On the bin.", "Under the bin.", "Next to the bin."], "correct_answer": "In the bin.", "explanation": "Audio exacto." },
+        { "id": "a1-32-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Next to yours.", "options": ["Next to yours.", "Next to you.", "Near yours.", "On yours."], "correct_answer": "Next to yours.", "explanation": "Audio exacto." },
+        { "id": "a1-32-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Under the desk.", "options": ["Under the desk.", "On the desk.", "In the desk.", "Next to the desk."], "correct_answer": "Under the desk.", "explanation": "Audio exacto." },
+        { "id": "a1-32-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In my pocket.", "options": ["In my pocket.", "On my pocket.", "Under my pocket.", "Next to my pocket."], "correct_answer": "In my pocket.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

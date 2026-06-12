@@ -218,11 +218,11 @@ export default function ProfilePage() {
   // ---- RANGOS EJECUTIVOS ----
   const getExecutiveRank = (points: number) => {
     const pts = points || 0;
-    if (pts < 1000) return { label: 'Analista Junior', nextLabel: 'Asociado Senior', min: 0, max: 1000, color: 'from-slate-400 to-slate-500', badge: 'bg-slate-100 text-slate-700 border-slate-300' };
+    if (pts < 1000) return { label: 'Analista Junior', nextLabel: 'Asociado Senior', min: 0, max: 1000, color: 'from-slate-400 to-slate-500', badge: 'bg-white text-slate-700 border-slate-200' };
     if (pts < 3000) return { label: 'Asociado Senior', nextLabel: 'Gerente Líder', min: 1000, max: 3000, color: 'from-teal-500 to-emerald-400', badge: 'bg-teal-50 text-teal-800 border-teal-300' };
     if (pts < 6000) return { label: 'Gerente Líder', nextLabel: 'Vicepresidente de Comunicaciones', min: 3000, max: 6000, color: 'from-indigo-500 to-blue-400', badge: 'bg-indigo-50 text-indigo-800 border-indigo-300' };
-    if (pts < 12000) return { label: 'Vicepresidente de Comunicaciones', nextLabel: 'Director de Elocuencia', min: 6000, max: 12000, color: 'from-amber-500 to-yellow-400', badge: 'bg-amber-50 text-amber-800 border-amber-300' };
-    return { label: 'Director de Elocuencia', nextLabel: 'Cima C-Suite', min: 12000, max: 12000, color: 'from-emerald-500 to-teal-400', badge: 'bg-emerald-50 text-emerald-800 border-emerald-300' };
+    if (pts < 12000) return { label: 'Vicepresidente de Comunicaciones', nextLabel: 'Director de Elocuencia', min: 6000, max: 12000, color: 'from-amber-500 to-yellow-400', badge: 'bg-[#D4AF37]/10 text-[#D4AF37] border-amber-300' };
+    return { label: 'Director de Elocuencia', nextLabel: 'Cima Alta Dirección', min: 12000, max: 12000, color: 'from-emerald-500 to-teal-400', badge: 'bg-[#D4AF37]/10 text-[#D4AF37] border-[#D4AF37]/30' };
   };
 
   const userPoints = stats?.total_xp || profile?.stats?.total_xp || 0;
@@ -237,28 +237,28 @@ export default function ProfilePage() {
       desc: 'Oratoria Directiva y Juntas',
       val: stats?.skills_radar?.find((s: any) => s.subject === 'Speaking')?.A ?? 0,
       color: 'from-teal-500 to-emerald-400',
-      icon: <Sparkles size={13} className="text-teal-500" />
+      icon: <Sparkles size={13} className="text-[#D4AF37]" />
     },
     {
       name: 'Listening',
       desc: 'Comprensión de Audiencias',
       val: stats?.skills_radar?.find((s: any) => s.subject === 'Listening')?.A ?? 0,
       color: 'from-indigo-500 to-blue-400',
-      icon: <Globe size={13} className="text-indigo-500" />
+      icon: <Globe size={13} className="text-[#D4AF37]" />
     },
     {
       name: 'Reading',
       desc: 'Auditoría y Memos Técnicos',
       val: stats?.skills_radar?.find((s: any) => s.subject === 'Reading')?.A ?? 0,
       color: 'from-emerald-500 to-green-400',
-      icon: <BookOpen size={13} className="text-emerald-500" />
+      icon: <BookOpen size={13} className="text-[#D4AF37]" />
     },
     {
       name: 'Writing',
       desc: 'Correspondencia Corporativa',
       val: stats?.skills_radar?.find((s: any) => s.subject === 'Writing')?.A ?? 0,
       color: 'from-amber-500 to-yellow-400',
-      icon: <Save size={13} className="text-amber-500" />
+      icon: <Save size={13} className="text-[#D4AF37]" />
     },
     {
       name: 'Grammar',
@@ -269,7 +269,7 @@ export default function ProfilePage() {
     },
     {
       name: 'Vocabulary',
-      desc: 'Terminología Directiva C-Suite',
+      desc: 'Terminología Directiva Alta Dirección',
       val: stats?.skills_radar?.find((s: any) => s.subject === 'Vocabulary')?.A ?? 0,
       color: 'from-pink-500 to-rose-400',
       icon: <Briefcase size={13} className="text-pink-500" />
@@ -294,7 +294,7 @@ export default function ProfilePage() {
       {
         id: 'c_suite',
         category: 'business',
-        title: 'Comunicador C-Suite',
+        title: 'Comunicador Alta Dirección',
         desc: 'Dominio absoluto de la oratoria y liderazgo directivo en juntas.',
         req: 'Plan Pro/Executive y más de 1,000 XP.',
         icon: <Award size={20} />,
@@ -552,7 +552,7 @@ export default function ProfilePage() {
     
     // Celdas vacías previas
     for (let i = 0; i < startDayIndex; i++) {
-      cells.push(<div key={`empty-${i}`} className="h-9 w-full rounded bg-slate-50/20" />);
+      cells.push(<div key={`empty-${i}`} className="h-9 w-full rounded bg-white/20" />);
     }
     
     // Celdas del mes
@@ -575,8 +575,8 @@ export default function ProfilePage() {
           key={`day-${day}`}
           className={`h-9 w-full flex flex-col items-center justify-center rounded relative border ${
             isToday 
-              ? 'bg-slate-900 border-slate-900 text-white font-black' 
-              : 'bg-white border-slate-100 text-slate-700'
+              ? 'bg-slate-50 border-slate-900 text-slate-900 font-black' 
+              : 'bg-white border-slate-200 text-slate-700'
           }`}
         >
           <span className="text-[10px]">{day}</span>
@@ -594,19 +594,19 @@ export default function ProfilePage() {
     }
     
     return (
-      <div className="w-full max-w-sm mx-auto bg-slate-50 border border-slate-200/80 p-5 rounded-none shadow-sm">
+      <div className="w-full max-w-sm mx-auto bg-white border border-slate-200/80 p-5 rounded-none shadow-none">
         <div className="flex justify-between items-center mb-4 pb-2 border-b border-slate-200">
-          <span className="text-[10px] font-black uppercase tracking-wider text-slate-800">
+          <span className="text-[10px] font-black uppercase tracking-wider text-slate-900">
             {monthNames[currentMonth]} {currentYear}
           </span>
-          <span className="text-[8px] font-black text-teal-600 bg-teal-50 border border-teal-100 px-2 py-0.5 uppercase tracking-widest">
+          <span className="text-[8px] font-black text-[#D4AF37] bg-teal-50 border border-teal-100 px-2 py-0.5 uppercase tracking-widest">
             {streakDays} Días de Racha
           </span>
         </div>
         
         <div className="grid grid-cols-7 gap-1 text-center mb-2">
           {dayNames.map((d, idx) => (
-            <div key={idx} className="text-[8px] font-black text-slate-400 uppercase tracking-widest">
+            <div key={idx} className="text-[8px] font-black text-slate-500 uppercase tracking-widest">
               {d}
             </div>
           ))}
@@ -616,9 +616,9 @@ export default function ProfilePage() {
           {cells}
         </div>
         
-        <div className="flex items-center gap-3 mt-4 pt-3 border-t border-slate-200 text-[8px] font-bold text-slate-400 uppercase tracking-wide">
+        <div className="flex items-center gap-3 mt-4 pt-3 border-t border-slate-200 text-[8px] font-bold text-slate-500 uppercase tracking-wide">
           <div className="flex items-center gap-1">
-            <div className="w-2.5 h-2.5 bg-slate-900 rounded-sm" />
+            <div className="w-2.5 h-2.5 bg-slate-50 rounded-sm" />
             <span>Hoy</span>
           </div>
           <div className="flex items-center gap-1">
@@ -634,7 +634,7 @@ export default function ProfilePage() {
     <div className="min-h-screen flex items-center justify-center bg-[#F8FAFC]">
       <div className="flex flex-col items-center gap-3">
         <div className="w-10 h-10 border-4 border-slate-950 border-t-teal-500 animate-spin" />
-        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Cargando credenciales...</p>
+        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">Cargando credenciales...</p>
       </div>
     </div>
   );
@@ -654,12 +654,12 @@ export default function ProfilePage() {
             exit={{ opacity: 0, y: -48, scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 300, damping: 28 }}
             className={`fixed top-5 right-5 z-[300] flex items-center gap-3 px-5 py-3.5 shadow-2xl border min-w-[280px] ${
-              toast.type === 'success' ? 'bg-slate-950 border-emerald-500/40' : 'bg-slate-950 border-rose-500/40'
+              toast.type === 'success' ? 'bg-slate-50 border-emerald-500/40' : 'bg-slate-50 border-rose-500/40'
             }`}
           >
             <div className={`w-2 h-2 rounded-full shrink-0 animate-pulse ${toast.type === 'success' ? 'bg-emerald-400' : 'bg-rose-400'}`} />
-            <span className="text-[10px] font-black uppercase tracking-[0.15em] text-white flex-1">{toast.message}</span>
-            <button onClick={() => setToast(p => ({ ...p, show: false }))} className="text-slate-500 hover:text-white transition-colors">
+            <span className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-900 flex-1">{toast.message}</span>
+            <button onClick={() => setToast(p => ({ ...p, show: false }))} className="text-slate-600 hover:text-slate-900 transition-colors">
               <X size={11} />
             </button>
           </motion.div>
@@ -669,24 +669,24 @@ export default function ProfilePage() {
       {/* ─── NAVEGACIÓN PRINCIPAL ─── */}
       <nav className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200 px-6 h-14 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <button onClick={() => router.back()} className="p-2 hover:bg-slate-100 transition-colors border border-transparent hover:border-slate-200 rounded-none">
+          <button onClick={() => router.back()} className="p-2 hover:bg-white transition-colors border border-transparent hover:border-slate-200 rounded-none">
             <ArrowLeft size={16} />
           </button>
           <span className="font-black text-[10px] tracking-[0.3em] uppercase text-slate-900">
-            Perfil <span className="text-teal-600">Ejecutivo</span>
+            Perfil <span className="text-[#D4AF37]">Ejecutivo</span>
           </span>
         </div>
         <div className="flex items-center gap-2">
           <button
             onClick={handleLogout}
-            className="border border-slate-200 hover:bg-red-50 hover:border-red-200 text-slate-500 hover:text-red-700 px-3 py-1.5 text-[8px] font-black uppercase tracking-widest transition-all flex items-center gap-1.5"
+            className="border border-slate-200 hover:bg-[#D4AF37]/10 hover:border-red-200 text-slate-600 hover:text-[#D4AF37] px-3 py-1.5 text-[8px] font-black uppercase tracking-widest transition-all flex items-center gap-1.5"
           >
             <LogOut size={11} /> Cerrar sesión
           </button>
           <button
             onClick={() => handleSave()}
             disabled={saving}
-            className="bg-slate-950 text-white px-5 py-1.5 text-[9px] font-black uppercase tracking-widest flex items-center gap-2 hover:bg-teal-800 disabled:opacity-50 transition-all shadow-[0_4px_14px_rgba(0,0,0,0.18)]"
+            className="bg-slate-50 text-slate-900 px-5 py-1.5 text-[9px] font-black uppercase tracking-widest flex items-center gap-2 hover:bg-teal-800 disabled:opacity-50 transition-all shadow-[0_4px_14px_rgba(0,0,0,0.18)]"
           >
             {saving ? (
               <span className="flex items-center gap-1.5"><span className="w-3 h-3 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Guardando...</span>
@@ -706,10 +706,10 @@ export default function ProfilePage() {
         }} />
         {/* Luces decorativas */}
         <div className="absolute -bottom-16 right-24 w-[360px] h-[360px] bg-teal-400/10 rounded-full blur-[100px]" />
-        <div className="absolute -top-10 left-10 w-[250px] h-[250px] bg-indigo-500/10 rounded-full blur-[80px]" />
+        <div className="absolute -top-10 left-10 w-[250px] h-[250px] bg-[#D4AF37]/20/10 rounded-full blur-[80px]" />
         <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1.5 backdrop-blur-sm">
           <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-          <span className="text-[8px] text-white/60 font-black uppercase tracking-widest">Sesión activa</span>
+          <span className="text-[8px] text-slate-900/60 font-black uppercase tracking-widest">Sesión activa</span>
         </div>
 
         {/* Stats dinámicos y clickables en el banner */}
@@ -718,23 +718,23 @@ export default function ProfilePage() {
             onClick={() => { setHistoryTab('xp'); setShowHistoryModal(true); }}
             className="text-right hidden md:block hover:opacity-85 transition-opacity group cursor-pointer"
           >
-            <p className="text-[7px] text-white/40 font-black uppercase tracking-widest group-hover:text-teal-400 transition-colors">Elocuencia Total</p>
-            <p className="text-xl font-black text-white font-mono flex items-center gap-1">{userPoints.toLocaleString()} <span className="text-[10px] text-teal-400">XP</span></p>
+            <p className="text-[7px] text-slate-900/40 font-black uppercase tracking-widest group-hover:text-teal-400 transition-colors">Elocuencia Total</p>
+            <p className="text-xl font-black text-slate-900 font-mono flex items-center gap-1">{userPoints.toLocaleString()} <span className="text-[10px] text-teal-400">XP</span></p>
           </button>
           <div className="w-px h-8 bg-white/10 hidden md:block" />
           <button 
             onClick={() => { setHistoryTab('streak'); setShowHistoryModal(true); }}
             className="text-right hidden md:block hover:opacity-85 transition-opacity group cursor-pointer"
           >
-            <p className="text-[7px] text-white/40 font-black uppercase tracking-widest group-hover:text-orange-400 transition-colors">Racha Activa</p>
-            <p className="text-xl font-black text-white font-mono flex items-center gap-1">{streakDays} <span className="text-[10px] text-orange-400">días</span></p>
+            <p className="text-[7px] text-slate-900/40 font-black uppercase tracking-widest group-hover:text-orange-400 transition-colors">Racha Activa</p>
+            <p className="text-xl font-black text-slate-900 font-mono flex items-center gap-1">{streakDays} <span className="text-[10px] text-orange-400">días</span></p>
           </button>
           <div className="w-px h-8 bg-white/10 hidden md:block" />
           <button 
             onClick={() => setShowUpgradeModal(true)}
             className="text-right hidden md:block hover:opacity-85 transition-opacity group cursor-pointer"
           >
-            <p className="text-[7px] text-white/40 font-black uppercase tracking-widest group-hover:text-amber-400 transition-colors">Plan Activo</p>
+            <p className="text-[7px] text-slate-900/40 font-black uppercase tracking-widest group-hover:text-amber-400 transition-colors">Plan Activo</p>
             <p className="text-xl font-black text-teal-400 uppercase tracking-wide">{userTier}</p>
           </button>
         </div>
@@ -747,7 +747,7 @@ export default function ProfilePage() {
           <div className="lg:col-span-2 space-y-8">
 
             {/* TARJETA DE IDENTIDAD */}
-            <section className="bg-white border border-slate-200 shadow-lg overflow-hidden">
+            <section className="bg-white border border-slate-200 shadow-none overflow-hidden">
               <div className="p-8">
                 <div className="flex flex-col md:flex-row items-center md:items-end gap-6">
 
@@ -756,14 +756,14 @@ export default function ProfilePage() {
                     <div className={`absolute -inset-1.5 bg-gradient-to-br ${rank.color} opacity-80 blur-[2px]`} />
                     <div
                       onClick={() => setShowAvatarPicker(!showAvatarPicker)}
-                      className="relative w-28 h-28 bg-slate-950 border-2 border-white flex items-center justify-center text-teal-400 text-4xl font-black cursor-pointer overflow-hidden hover:ring-4 hover:ring-teal-500/20 transition-all shadow-2xl group"
+                      className="relative w-28 h-28 bg-slate-50 border-2 border-white flex items-center justify-center text-teal-400 text-4xl font-black cursor-pointer overflow-hidden hover:ring-4 hover:ring-teal-500/20 transition-all shadow-2xl group"
                     >
                       {formData.avatar_url
                         ? <img src={formData.avatar_url} alt="Avatar" className="w-full h-full object-cover" />
-                        : <span className="font-black text-white text-3xl">{profile?.username?.slice(0, 2).toUpperCase()}</span>
+                        : <span className="font-black text-slate-900 text-3xl">{profile?.username?.slice(0, 2).toUpperCase()}</span>
                       }
-                      <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span className="text-[8px] text-white font-black uppercase tracking-wider">Cambiar</span>
+                      <div className="absolute inset-0 bg-white/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span className="text-[8px] text-slate-900 font-black uppercase tracking-wider">Cambiar</span>
                       </div>
                     </div>
 
@@ -778,8 +778,8 @@ export default function ProfilePage() {
                         <Star size={8} fill="currentColor" /> {rank.label}
                       </span>
                     </div>
-                    <p className="text-[9px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 flex items-center justify-center md:justify-start gap-1.5">
-                      <Shield size={11} className={profile?.is_pro ? 'text-teal-600' : 'text-slate-400'} />
+                    <p className="text-[9px] font-black text-slate-500 uppercase tracking-[0.2em] mb-4 flex items-center justify-center md:justify-start gap-1.5">
+                      <Shield size={11} className={profile?.is_pro ? 'text-[#D4AF37]' : 'text-slate-500'} />
                       {profile?.is_pro ? 'Cuenta Ejecutiva Profesional' : 'Cuenta de Estudiante Estándar'}
                       {formData.country_code && (
                         <span className="ml-2 flex items-center gap-1">
@@ -792,10 +792,10 @@ export default function ProfilePage() {
                     {/* Barra de Rango y XP */}
                     <div className="max-w-md">
                       <div className="flex justify-between items-center mb-1">
-                        <span className="text-[7px] font-black text-slate-400 uppercase tracking-widest">Nivel de elocuencia</span>
+                        <span className="text-[7px] font-black text-slate-500 uppercase tracking-widest">Nivel de elocuencia</span>
                         <span className="text-[8px] font-black text-slate-900 font-mono">{userPoints.toLocaleString()} / {rank.max.toLocaleString()} XP</span>
                       </div>
-                      <div className="w-full h-2.5 bg-slate-100 border border-slate-200 p-[1px]">
+                      <div className="w-full h-2.5 bg-white border border-slate-200 p-[1px]">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${progressPct}%` }}
@@ -804,8 +804,8 @@ export default function ProfilePage() {
                         />
                       </div>
                       <div className="flex justify-between mt-1">
-                        <span className="text-[7px] text-slate-400 font-bold uppercase">{rank.label}</span>
-                        <span className="text-[7px] text-slate-400 font-bold uppercase flex items-center gap-0.5"><ChevronUp size={8} />{rank.nextLabel}</span>
+                        <span className="text-[7px] text-slate-500 font-bold uppercase">{rank.label}</span>
+                        <span className="text-[7px] text-slate-500 font-bold uppercase flex items-center gap-0.5"><ChevronUp size={8} />{rank.nextLabel}</span>
                       </div>
                     </div>
                   </div>
@@ -814,14 +814,14 @@ export default function ProfilePage() {
             </section>
 
             {/* PASE DIGITAL */}
-            <section className="bg-white border border-slate-200 shadow-sm overflow-hidden">
-              <div className="px-8 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+            <section className="bg-white border border-slate-200 shadow-none overflow-hidden">
+              <div className="px-8 py-4 bg-white border-b border-slate-200 flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <CreditCard size={13} className="text-slate-400" />
+                  <CreditCard size={13} className="text-slate-500" />
                   <h3 className="text-[10px] font-black uppercase tracking-[0.2em]">Pase Ejecutivo Digital</h3>
                 </div>
                 {userTier !== 'executive' && (
-                  <button onClick={() => setShowUpgradeModal(true)} className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 text-[8px] font-black uppercase tracking-widest transition-colors">
+                  <button onClick={() => setShowUpgradeModal(true)} className="bg-[#D4AF37]/20 hover:bg-[#D4AF37]/20 text-slate-950 px-3 py-1.5 text-[8px] font-black uppercase tracking-widest transition-colors">
                     Mejorar plan
                   </button>
                 )}
@@ -829,33 +829,25 @@ export default function ProfilePage() {
               <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
                 {/* Tarjeta metálica premium */}
-                <div className="w-full h-44 bg-gradient-to-br from-slate-950 via-[#0a2a24] to-slate-950 border border-slate-800 shadow-2xl p-6 flex flex-col justify-between relative overflow-hidden">
-                  <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, white 0, white 1px, transparent 0, transparent 50%)', backgroundSize: '6px 6px' }} />
-                  <div className="absolute top-0 right-0 w-28 h-28 bg-white/5 rounded-full blur-2xl -translate-y-8 translate-x-8" />
+                <div className="w-full h-44 bg-white border border-slate-200 p-6 flex flex-col justify-between relative overflow-hidden shadow-sm">
                   <div className="flex justify-between items-start">
                     <div>
                       <p className="text-[6px] text-slate-500 font-black tracking-widest uppercase">OnixLingo Corporate</p>
-                      <p className="text-[8px] text-white font-black tracking-[0.2em] uppercase mt-0.5">Pase de Miembro Ejecutivo</p>
+                      <p className="text-[8px] text-slate-900 font-black tracking-[0.2em] uppercase mt-0.5">Pase de Miembro Ejecutivo</p>
                     </div>
-                    <div className="flex items-center gap-1 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5">
-                      <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                      <span className="text-[6px] text-emerald-400 font-black tracking-wider uppercase">Activo</span>
+                    <div className="flex items-center gap-1 bg-emerald-50 border border-emerald-200 px-2 py-0.5">
+                      <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+                      <span className="text-[6px] text-emerald-700 font-black tracking-wider uppercase">Activo</span>
                     </div>
-                  </div>
-                  {/* Holograma de chip */}
-                  <div className="w-10 h-8 bg-gradient-to-br from-amber-300 via-yellow-100 to-amber-500 rounded-[3px] border border-amber-300/30 p-1.5 flex flex-col justify-between">
-                    <div className="w-full h-[1px] bg-slate-900/20" />
-                    <div className="w-full h-[1px] bg-slate-900/20" />
-                    <div className="w-full h-[1px] bg-slate-900/20" />
                   </div>
                   <div className="flex justify-between items-end">
                     <div>
                       <p className="text-[5px] text-slate-500 font-bold uppercase tracking-widest">Titular</p>
-                      <p className="text-[9px] text-white font-black font-mono tracking-wider uppercase mt-0.5">{profile?.username}</p>
+                      <p className="text-[9px] text-slate-900 font-black font-mono tracking-wider uppercase mt-0.5">{profile?.username}</p>
                     </div>
                     <div className="text-right">
                       <p className="text-[5px] text-slate-500 font-bold uppercase tracking-widest">ID de Pase</p>
-                      <p className="text-[7px] text-slate-300 font-black font-mono tracking-wider uppercase mt-0.5">ONX-{profile?.referral_code || 'EX-0000'}</p>
+                      <p className="text-[7px] text-slate-500 font-black font-mono tracking-wider uppercase mt-0.5">ONX-{profile?.referral_code || 'EX-0000'}</p>
                     </div>
                   </div>
                 </div>
@@ -863,11 +855,11 @@ export default function ProfilePage() {
                 {/* Beneficios corporativos */}
                 <div className="space-y-4">
                   <div>
-                    <span className="text-[7px] text-slate-400 font-black uppercase tracking-widest block mb-1.5">Rango del Plan</span>
+                    <span className="text-[7px] text-slate-500 font-black uppercase tracking-widest block mb-1.5">Rango del Plan</span>
                     <span className={`px-3 py-1 text-[9px] font-black uppercase tracking-widest border inline-block ${
-                      userTier === 'executive' ? 'bg-amber-50 border-amber-200 text-amber-800' :
+                      userTier === 'executive' ? 'bg-[#D4AF37]/10 border-[#D4AF37]/30 text-[#D4AF37]' :
                       userTier === 'pro' ? 'bg-teal-50 border-teal-200 text-teal-800' :
-                      'bg-slate-50 border-slate-200 text-slate-600'
+                      'bg-white border-slate-200 text-slate-600'
                     }`}>PLAN {userTier.toUpperCase()}</span>
                   </div>
                   <div className="space-y-2.5">
@@ -877,12 +869,12 @@ export default function ProfilePage() {
                       'Energía ilimitada y sin publicidad corporativa',
                     ].map((b, i) => (
                       <div key={i} className="flex items-center gap-2">
-                        <CheckCircle2 size={12} className="text-teal-600 shrink-0" />
+                        <CheckCircle2 size={12} className="text-[#D4AF37] shrink-0" />
                         <span className="text-[9px] font-semibold text-slate-700 uppercase tracking-tight">{b}</span>
                       </div>
                     ))}
                   </div>
-                  <p className="text-[8px] text-slate-400 font-bold uppercase italic border-t border-slate-100 pt-2.5">
+                  <p className="text-[8px] text-slate-500 font-bold uppercase italic border-t border-slate-200 pt-2.5">
                     Vigencia: {profile?.membership?.valid_until
                       ? new Date(profile.membership.valid_until).toLocaleDateString('es-MX', { year: 'numeric', month: 'short', day: 'numeric' })
                       : userTier === 'free' ? 'Plan de por vida' : 'Ilimitada'}
@@ -892,13 +884,13 @@ export default function ProfilePage() {
             </section>
 
             {/* VITRINA DE TROFEOS PREMIUM (GABINETE EXCLUSIVO) */}
-            <section className="bg-white border border-slate-200 shadow-lg overflow-hidden">
-              <div className="px-8 py-5 bg-slate-900 border-b border-slate-800 text-white flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <section className="bg-white border border-slate-200 shadow-none overflow-hidden">
+              <div className="px-8 py-5 bg-white border-b border-slate-200 text-slate-900 flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div className="flex items-center gap-2.5">
                   <Trophy size={18} className="text-amber-400 animate-pulse" />
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.25em]">Vitrina de Trofeos Directivos ({unlockedCount} / 500)</h3>
-                    <p className="text-[7px] text-slate-400 font-bold uppercase tracking-widest mt-0.5">Credenciales y méritos de todas las secciones</p>
+                    <p className="text-[7px] text-slate-500 font-bold uppercase tracking-widest mt-0.5">Credenciales y méritos de todas las secciones</p>
                   </div>
                 </div>
                 {/* Pestañas de categorías */}
@@ -918,8 +910,8 @@ export default function ProfilePage() {
                       }}
                       className={`px-3 py-1.5 text-[7px] font-black uppercase tracking-widest transition-all ${
                         trophyFilter === tab.id 
-                          ? 'bg-white text-slate-950 shadow-md font-black' 
-                          : 'text-slate-400 hover:text-white'
+                          ? 'bg-white text-slate-950 shadow-none font-black' 
+                          : 'text-slate-500 hover:text-slate-900'
                       }`}
                     >
                       {tab.label}
@@ -929,9 +921,9 @@ export default function ProfilePage() {
               </div>
 
               {/* El gabinete de la vitrina */}
-              <div className="p-8 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+              <div className="p-8 bg-white relative overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.03]" style={{
-                  backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)',
+                  backgroundImage: 'radial-gradient(circle, #000000 1px, transparent 1px)',
                   backgroundSize: '24px 24px',
                 }} />
                 
@@ -940,11 +932,11 @@ export default function ProfilePage() {
                   {filteredTrophies.slice(0, visibleCount).map(trophy => (
                     <div 
                       key={trophy.id} 
-                      className="group flex flex-col items-center justify-between p-4 bg-white/[0.02] border border-white/5 rounded-none hover:bg-white/[0.04] hover:border-white/10 transition-all duration-300 relative text-center min-h-[190px]"
+                      className="group flex flex-col items-center justify-between p-4 bg-white border border-slate-200 shadow-sm hover:border-slate-300 hover:bg-slate-50 transition-all duration-300 relative text-center min-h-[190px]"
                     >
                       {/* Aro de luz de fondo para trofeos desbloqueados */}
                       {trophy.isUnlocked && (
-                        <div className={`absolute inset-0 bg-gradient-to-br ${trophy.color} opacity-[0.03] blur-xl`} />
+                        <div className={`absolute inset-0 bg-gradient-to-br ${trophy.color} opacity-[0.02] blur-xl`} />
                       )}
                       
                       {/* Estado visual del Trofeo */}
@@ -952,21 +944,21 @@ export default function ProfilePage() {
                         {trophy.isUnlocked ? (
                           <>
                             {/* Trofeo Desbloqueado - Hermoso círculo metalizado */}
-                            <div className={`absolute inset-0 bg-gradient-to-br ${trophy.color} rounded-full opacity-10 ${trophy.glow} shadow-lg`} />
-                            <div className={`w-12 h-12 bg-gradient-to-br ${trophy.color} rounded-full flex items-center justify-center text-slate-950 font-black shadow-2xl relative transition-transform duration-500 group-hover:scale-110`}>
+                            <div className={`absolute inset-0 bg-gradient-to-br ${trophy.color} rounded-full opacity-10 shadow-none`} />
+                            <div className={`w-12 h-12 bg-white border border-slate-100 rounded-full flex items-center justify-center text-slate-900 font-black shadow-sm relative transition-transform duration-500 group-hover:scale-110`}>
                               {trophy.icon}
                               {/* Micro check de verificado */}
-                              <div className="absolute -bottom-1 -right-1 bg-slate-950 text-emerald-400 border border-emerald-500/30 p-0.5 rounded-full">
-                                <CheckCircle2 size={8} className="fill-slate-950" />
+                              <div className="absolute -bottom-1 -right-1 bg-white text-emerald-500 border border-emerald-200 p-0.5 rounded-full">
+                                <CheckCircle2 size={8} />
                               </div>
                             </div>
                           </>
                         ) : (
                           <>
                             {/* Trofeo Bloqueado - Opaco */}
-                            <div className="absolute inset-0 bg-slate-800 rounded-full opacity-20 border border-slate-700/30" />
-                            <div className="w-12 h-12 bg-slate-900 border border-slate-800 rounded-full flex items-center justify-center text-slate-600 shadow-inner relative">
-                              <Lock size={16} className="text-slate-500 opacity-60" />
+                            <div className="absolute inset-0 bg-slate-50 rounded-full opacity-20 border border-slate-200" />
+                            <div className="w-12 h-12 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center text-slate-400 shadow-none relative">
+                              <Lock size={16} className="opacity-60" />
                             </div>
                           </>
                         )}
@@ -975,21 +967,21 @@ export default function ProfilePage() {
                       {/* Títulos y descripción */}
                       <div className="flex-1 flex flex-col justify-center">
                         <p className={`text-[9px] font-black uppercase tracking-wider mb-1 ${
-                          trophy.isUnlocked ? 'text-white' : 'text-slate-500'
+                          trophy.isUnlocked ? 'text-slate-900' : 'text-slate-500'
                         }`}>{trophy.title}</p>
-                        <p className="text-[7px] text-slate-400 font-semibold leading-relaxed px-1 line-clamp-2">
+                        <p className="text-[7px] text-slate-500 font-semibold leading-relaxed px-1 line-clamp-2">
                           {trophy.isUnlocked ? trophy.desc : trophy.req}
                         </p>
                       </div>
 
                       {/* Estado inferior */}
-                      <div className="mt-3 w-full border-t border-white/[0.04] pt-2 shrink-0">
+                      <div className="mt-3 w-full border-t border-slate-100 pt-2 shrink-0">
                         {trophy.isUnlocked ? (
-                          <span className="text-[6px] font-black text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 uppercase tracking-widest inline-block">
+                          <span className="text-[6px] font-black text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 uppercase tracking-widest inline-block">
                             Verificado
                           </span>
                         ) : (
-                          <span className="text-[6px] font-black text-slate-500 bg-slate-900 border border-slate-800 px-2 py-0.5 uppercase tracking-widest inline-block">
+                          <span className="text-[6px] font-black text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 uppercase tracking-widest inline-block">
                             Bloqueado
                           </span>
                         )}
@@ -1004,7 +996,7 @@ export default function ProfilePage() {
                     <button
                       type="button"
                       onClick={() => setVisibleCount(prev => Math.min(prev + 16, filteredTrophies.length))}
-                      className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-6 py-2.5 text-[9px] font-black uppercase tracking-widest transition-all"
+                      className="bg-white hover:bg-slate-50 text-slate-900 border border-slate-200 px-6 py-2.5 text-[9px] font-black uppercase tracking-widest transition-all"
                     >
                       Cargar más trofeos (+16)
                     </button>
@@ -1012,18 +1004,18 @@ export default function ProfilePage() {
                 )}
                 
                 {/* Repisa de madera/cristal virtual de fondo */}
-                <div className="h-2 w-full bg-gradient-to-r from-transparent via-white/10 to-transparent mt-6 rounded-full blur-[1px] relative z-0" />
+                <div className="h-2 w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent mt-6 rounded-full blur-[1px] relative z-0" />
               </div>
             </section>
 
             {/* HABILIDADES DIVERSIFICADAS DINÁMICAS */}
-            <section className="bg-white border border-slate-200 shadow-sm">
-              <div className="px-8 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+            <section className="bg-white border border-slate-200 shadow-none">
+              <div className="px-8 py-4 bg-white border-b border-slate-200 flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <BarChart2 size={13} className="text-slate-400" />
+                  <BarChart2 size={13} className="text-slate-500" />
                   <h3 className="text-[10px] font-black uppercase tracking-[0.2em]">Habilidades corporativas reales</h3>
                 </div>
-                <span className="text-[7px] text-slate-400 font-black uppercase tracking-widest">Métricas de competencia directiva</span>
+                <span className="text-[7px] text-slate-500 font-black uppercase tracking-widest">Métricas de competencia directiva</span>
               </div>
               <div className="p-8 space-y-5">
                 {skills.map((skill, idx) => (
@@ -1033,12 +1025,12 @@ export default function ProfilePage() {
                         {skill.icon}
                         <div className="flex items-center gap-2">
                           <span className="text-[10px] font-black text-slate-900 uppercase tracking-wide">{skill.name === 'Speaking' ? 'Habla' : skill.name === 'Listening' ? 'Escucha' : skill.name === 'Reading' ? 'Lectura' : skill.name === 'Writing' ? 'Escritura' : skill.name === 'Grammar' ? 'Gramática' : 'Vocabulario'}</span>
-                          <span className="text-[7px] text-slate-400 font-bold hidden md:block">({skill.desc})</span>
+                          <span className="text-[7px] text-slate-500 font-bold hidden md:block">({skill.desc})</span>
                         </div>
                       </div>
-                      <span className="text-[10px] font-mono font-black text-slate-800">{skill.val}%</span>
+                      <span className="text-[10px] font-mono font-black text-slate-900">{skill.val}%</span>
                     </div>
-                    <div className="w-full h-3 bg-slate-100 border border-slate-200/60 p-[1.5px]">
+                    <div className="w-full h-3 bg-white border border-slate-200/60 p-[1.5px]">
                       <motion.div
                         initial={{ width: 0 }}
                         animate={{ width: `${skill.val}%` }}
@@ -1052,18 +1044,18 @@ export default function ProfilePage() {
             </section>
 
             {/* FORMULARIOS DE INFORMACIÓN */}
-            <section className="bg-white border border-slate-200 shadow-sm overflow-hidden">
+            <section className="bg-white border border-slate-200 shadow-none overflow-hidden">
               {/* Pestañas */}
               <div className="flex border-b border-slate-200">
                 <button
                   onClick={() => setActiveTab('info')}
-                  className={`flex-1 px-8 py-4 text-[9px] font-black uppercase tracking-widest transition-colors flex items-center justify-center gap-2 ${activeTab === 'info' ? 'bg-white border-b-2 border-teal-600 text-teal-700' : 'bg-slate-50 text-slate-400 hover:text-slate-700'}`}
+                  className={`flex-1 px-8 py-4 text-[9px] font-black uppercase tracking-widest transition-colors flex items-center justify-center gap-2 ${activeTab === 'info' ? 'bg-white border-b-2 border-teal-600 text-teal-700' : 'bg-white text-slate-500 hover:text-slate-700'}`}
                 >
                   <User size={12} /> Información personal
                 </button>
                 <button
                   onClick={() => setActiveTab('security')}
-                  className={`flex-1 px-8 py-4 text-[9px] font-black uppercase tracking-widest transition-colors flex items-center justify-center gap-2 ${activeTab === 'security' ? 'bg-white border-b-2 border-teal-600 text-teal-700' : 'bg-slate-50 text-slate-400 hover:text-slate-700'}`}
+                  className={`flex-1 px-8 py-4 text-[9px] font-black uppercase tracking-widest transition-colors flex items-center justify-center gap-2 ${activeTab === 'security' ? 'bg-white border-b-2 border-teal-600 text-teal-700' : 'bg-white text-slate-500 hover:text-slate-700'}`}
                 >
                   <Lock size={12} /> Seguridad y acceso
                 </button>
@@ -1085,14 +1077,14 @@ export default function ProfilePage() {
                       { label: 'Teléfono de contacto', field: 'phone', type: 'tel', icon: <Phone size={13} />, placeholder: '+52 000 000 0000' },
                     ].map(({ label, field, type, icon, placeholder }) => (
                       <div key={field} className="space-y-1.5">
-                        <label className="text-[8px] font-black text-slate-400 uppercase tracking-widest block">{label}</label>
+                        <label className="text-[8px] font-black text-slate-500 uppercase tracking-widest block">{label}</label>
                         <div className="relative">
                           <div className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-300">{icon}</div>
                           <input
                             type={type}
                             value={(formData as any)[field]}
                             onChange={e => setFormData({ ...formData, [field]: e.target.value })}
-                            className="w-full bg-slate-50 border border-slate-200 py-3 pl-10 pr-4 text-xs font-semibold text-slate-800 focus:outline-none focus:border-teal-500 focus:bg-white transition-all"
+                            className="w-full bg-white border border-slate-200 py-3 pl-10 pr-4 text-xs font-semibold text-slate-900 focus:outline-none focus:border-teal-500 focus:bg-white transition-all"
                             placeholder={placeholder}
                           />
                         </div>
@@ -1100,13 +1092,13 @@ export default function ProfilePage() {
                     ))}
                     {/* Región */}
                     <div className="space-y-1.5">
-                      <label className="text-[8px] font-black text-slate-400 uppercase tracking-widest block">Región de residencia</label>
+                      <label className="text-[8px] font-black text-slate-500 uppercase tracking-widest block">Región de residencia</label>
                       <div className="relative">
                         <Globe className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-300" size={13} />
                         <select
                           value={formData.country_code}
                           onChange={e => setFormData({ ...formData, country_code: e.target.value })}
-                          className="w-full bg-slate-50 border border-slate-200 py-3 pl-10 pr-4 text-xs font-semibold text-slate-800 focus:outline-none focus:border-teal-500 focus:bg-white appearance-none transition-all"
+                          className="w-full bg-white border border-slate-200 py-3 pl-10 pr-4 text-xs font-semibold text-slate-900 focus:outline-none focus:border-teal-500 focus:bg-white appearance-none transition-all"
                         >
                           {COUNTRIES.map(c => <option key={c.code} value={c.code}>{c.flag} {c.label}</option>)}
                         </select>
@@ -1127,67 +1119,67 @@ export default function ProfilePage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl">
                       {/* Nueva contraseña */}
                       <div className="space-y-1.5">
-                        <label className="text-[8px] font-black text-slate-400 uppercase tracking-widest block">Nueva contraseña</label>
+                        <label className="text-[8px] font-black text-slate-500 uppercase tracking-widest block">Nueva contraseña</label>
                         <div className="relative">
                           <Shield className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-300" size={13} />
                           <input
                             type={showPassword ? 'text' : 'password'}
                             value={formData.password}
                             onChange={e => setFormData({ ...formData, password: e.target.value })}
-                            className="w-full bg-slate-50 border border-slate-200 py-3 pl-10 pr-10 text-xs font-semibold text-slate-800 focus:outline-none focus:border-teal-500 focus:bg-white transition-all"
+                            className="w-full bg-white border border-slate-200 py-3 pl-10 pr-10 text-xs font-semibold text-slate-900 focus:outline-none focus:border-teal-500 focus:bg-white transition-all"
                             placeholder="Mínimo 6 caracteres"
                           />
-                          <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-800">
+                          <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-900">
                             {showPassword ? <EyeOff size={13} /> : <Eye size={13} />}
                           </button>
                         </div>
                       </div>
                       {/* Confirmar contraseña */}
                       <div className="space-y-1.5">
-                        <label className="text-[8px] font-black text-slate-400 uppercase tracking-widest block">Confirmar contraseña</label>
+                        <label className="text-[8px] font-black text-slate-500 uppercase tracking-widest block">Confirmar contraseña</label>
                         <div className="relative">
                           <Shield className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-300" size={13} />
                           <input
                             type={showPassword ? 'text' : 'password'}
                             value={formData.confirm_password}
                             onChange={e => setFormData({ ...formData, confirm_password: e.target.value })}
-                            className={`w-full bg-slate-50 border py-3 pl-10 pr-4 text-xs font-semibold text-slate-800 focus:outline-none focus:bg-white transition-all ${passwordError ? 'border-rose-400 focus:border-rose-500' : 'border-slate-200 focus:border-teal-500'}`}
+                            className={`w-full bg-white border py-3 pl-10 pr-4 text-xs font-semibold text-slate-900 focus:outline-none focus:bg-white transition-all ${passwordError ? 'border-rose-400 focus:border-rose-500' : 'border-slate-200 focus:border-teal-500'}`}
                             placeholder="Confirma la contraseña"
                           />
                         </div>
                       </div>
                       {/* Error de contraseña */}
                       {passwordError && (
-                        <div className="md:col-span-2 flex items-center gap-2 text-rose-600 bg-rose-50 border border-rose-200 px-3 py-2">
+                        <div className="md:col-span-2 flex items-center gap-2 text-[#D4AF37] bg-[#D4AF37]/10 border border-[#D4AF37]/30 px-3 py-2">
                           <X size={11} />
                           <span className="text-[8px] font-black uppercase tracking-widest">{passwordError}</span>
                         </div>
                       )}
                     </div>
                     {/* Información de accesos */}
-                    <div className="mt-6 pt-6 border-t border-slate-100 grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className="p-4 bg-slate-50 border border-slate-100">
-                        <p className="text-[7px] font-black text-slate-400 uppercase tracking-widest mb-1">Último acceso</p>
-                        <p className="text-[9px] font-black text-slate-800 flex items-center gap-1">
-                          <Clock size={10} className="text-teal-500" />
+                    <div className="mt-6 pt-6 border-t border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="p-4 bg-white border border-slate-200">
+                        <p className="text-[7px] font-black text-slate-500 uppercase tracking-widest mb-1">Último acceso</p>
+                        <p className="text-[9px] font-black text-slate-900 flex items-center gap-1">
+                          <Clock size={10} className="text-[#D4AF37]" />
                           {new Date().toLocaleDateString('es-MX', { day: 'numeric', month: 'short', year: 'numeric' })}
                         </p>
                       </div>
-                      <div className="p-4 bg-slate-50 border border-slate-100">
-                        <p className="text-[7px] font-black text-slate-400 uppercase tracking-widest mb-1">Sesiones activas</p>
-                        <p className="text-[9px] font-black text-slate-800 flex items-center gap-1">
-                          <Activity size={10} className="text-emerald-500" />1 dispositivo
+                      <div className="p-4 bg-white border border-slate-200">
+                        <p className="text-[7px] font-black text-slate-500 uppercase tracking-widest mb-1">Sesiones activas</p>
+                        <p className="text-[9px] font-black text-slate-900 flex items-center gap-1">
+                          <Activity size={10} className="text-[#D4AF37]" />1 dispositivo
                         </p>
                       </div>
-                      <div className="p-4 bg-slate-50 border border-slate-100">
-                        <p className="text-[7px] font-black text-slate-400 uppercase tracking-widest mb-1">Fecha de registro</p>
-                        <p className="text-[9px] font-black text-slate-800 flex items-center gap-1">
-                          <Calendar size={10} className="text-indigo-500" />
+                      <div className="p-4 bg-white border border-slate-200">
+                        <p className="text-[7px] font-black text-slate-500 uppercase tracking-widest mb-1">Fecha de registro</p>
+                        <p className="text-[9px] font-black text-slate-900 flex items-center gap-1">
+                          <Calendar size={10} className="text-[#D4AF37]" />
                           {profile?.created_at ? new Date(profile.created_at).toLocaleDateString('es-MX', { month: 'short', year: 'numeric' }) : 'No disponible'}
                         </p>
                       </div>
                     </div>
-                    <p className="text-[7px] text-slate-400 font-bold uppercase italic mt-4">Deja los campos en blanco si no deseas cambiar tu contraseña.</p>
+                    <p className="text-[7px] text-slate-500 font-bold uppercase italic mt-4">Deja los campos en blanco si no deseas cambiar tu contraseña.</p>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -1199,17 +1191,17 @@ export default function ProfilePage() {
           <div className="space-y-8">
 
             {/* RED DE REFERIDOS */}
-            <section className="bg-slate-950 text-white border border-slate-800 shadow-xl relative overflow-hidden">
+            <section className="bg-slate-50 text-slate-900 border border-slate-800 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 opacity-[0.07] p-3"><Swords size={72} /></div>
               <div className="p-7">
                 <h3 className="text-[11px] font-black uppercase tracking-[0.25em] mb-1.5 flex items-center gap-2">
                   <Award size={14} className="text-teal-400" /> Red de referidos
                 </h3>
-                <p className="text-[8px] text-slate-400 font-bold uppercase tracking-tight mb-6 leading-relaxed">
+                <p className="text-[8px] text-slate-500 font-bold uppercase tracking-tight mb-6 leading-relaxed">
                   Invita colegas directivos a OnixLingo y gana puntos de elocuencia por cada registro activo verificado.
                 </p>
                 <div className="bg-white/5 border border-white/10 p-4 mb-3">
-                  <span className="text-[7px] font-black text-teal-500 uppercase tracking-widest block mb-2">Código personal</span>
+                  <span className="text-[7px] font-black text-[#D4AF37] uppercase tracking-widest block mb-2">Código personal</span>
                   <div className="flex items-center justify-between gap-3">
                     <code className="text-base font-mono font-black tracking-widest text-teal-400">{profile?.referral_code || '------'}</code>
                     <button onClick={copyReferral} className="p-2 bg-white/10 hover:bg-white/20 transition-colors border border-white/5">
@@ -1222,39 +1214,39 @@ export default function ProfilePage() {
             </section>
 
             {/* TIMELINE DE ACTIVIDAD REAL */}
-            <section className="bg-white border border-slate-200 shadow-sm">
-              <div className="px-6 py-4 bg-slate-50 border-b border-slate-200 flex items-center gap-2">
-                <Activity size={13} className="text-slate-400" />
+            <section className="bg-white border border-slate-200 shadow-none">
+              <div className="px-6 py-4 bg-white border-b border-slate-200 flex items-center gap-2">
+                <Activity size={13} className="text-slate-500" />
                 <h3 className="text-[9px] font-black uppercase tracking-[0.2em]">Actividad reciente</h3>
               </div>
               <div className="divide-y divide-slate-100 max-h-[400px] overflow-y-auto">
                 {completedLessons.length > 0 ? (
                   completedLessons.slice(0, 5).map((item, i) => (
-                    <div key={i} className="flex items-start gap-3 px-5 py-4 hover:bg-slate-50 transition-colors">
-                      <div className="w-7 h-7 bg-slate-100 border border-slate-200 flex items-center justify-center shrink-0 mt-0.5">
+                    <div key={i} className="flex items-start gap-3 px-5 py-4 hover:bg-white transition-colors">
+                      <div className="w-7 h-7 bg-white border border-slate-200 flex items-center justify-center shrink-0 mt-0.5">
                         {item.lesson_type === 'pro' ? (
-                          <Briefcase size={12} className="text-teal-500" />
+                          <Briefcase size={12} className="text-[#D4AF37]" />
                         ) : item.lesson_type === 'vocab' ? (
-                          <Star size={12} className="text-amber-500" />
+                          <Star size={12} className="text-[#D4AF37]" />
                         ) : (
-                          <BookOpen size={12} className="text-indigo-500" />
+                          <BookOpen size={12} className="text-[#D4AF37]" />
                         )}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-[9px] font-black uppercase tracking-tight text-slate-800">
+                        <p className="text-[9px] font-black uppercase tracking-tight text-slate-900">
                           {item.lesson_type === 'pro' ? 'Lección Pro' : item.lesson_type === 'vocab' ? 'Vocabulario' : 'Lección Estándar'}
                         </p>
-                        <p className="text-[7px] text-slate-400 font-bold truncate mt-0.5">
+                        <p className="text-[7px] text-slate-500 font-bold truncate mt-0.5">
                           ID: {item.lesson_id.toUpperCase()} · Precisión: {item.score}%
                         </p>
                       </div>
-                      <span className="text-[7px] text-slate-400 font-black uppercase tracking-widest whitespace-nowrap">
+                      <span className="text-[7px] text-slate-500 font-black uppercase tracking-widest whitespace-nowrap">
                         {formatActivityTime(item.updated_at)}
                       </span>
                     </div>
                   ))
                 ) : (
-                  <div className="p-8 text-center text-slate-400 flex flex-col items-center justify-center gap-2">
+                  <div className="p-8 text-center text-slate-500 flex flex-col items-center justify-center gap-2">
                     <Clock size={16} />
                     <p className="text-[8px] font-black uppercase tracking-widest">Sin actividad registrada aún</p>
                   </div>
@@ -1276,7 +1268,7 @@ export default function ProfilePage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setShowHistoryModal(false)}
-              className="absolute inset-0 bg-slate-950/40 backdrop-blur-md"
+              className="absolute inset-0 bg-slate-50/40 backdrop-blur-md"
             />
             
             {/* Contenedor del Modal */}
@@ -1288,26 +1280,26 @@ export default function ProfilePage() {
               className="relative w-full max-w-lg bg-white border border-slate-200 shadow-2xl p-6 overflow-hidden max-h-[90vh] flex flex-col"
             >
               {/* Encabezado */}
-              <div className="flex justify-between items-center pb-4 border-b border-slate-100 mb-6 shrink-0">
+              <div className="flex justify-between items-center pb-4 border-b border-slate-200 mb-6 shrink-0">
                 <span className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-900 flex items-center gap-2">
-                  <TrendingUp size={14} className="text-teal-600 animate-pulse" /> Historial de Progreso
+                  <TrendingUp size={14} className="text-[#D4AF37] animate-pulse" /> Historial de Progreso
                 </span>
                 <button 
                   onClick={() => setShowHistoryModal(false)}
-                  className="text-slate-400 hover:text-slate-950 p-1 transition-colors border border-transparent hover:border-slate-200"
+                  className="text-slate-500 hover:text-slate-950 p-1 transition-colors border border-transparent hover:border-slate-200"
                 >
                   <X size={14} />
                 </button>
               </div>
 
               {/* Pestañas dentro del Modal */}
-              <div className="flex border border-slate-200 bg-slate-50 p-1 mb-6 shrink-0">
+              <div className="flex border border-slate-200 bg-white p-1 mb-6 shrink-0">
                 <button
                   onClick={() => setHistoryTab('xp')}
                   className={`flex-1 py-2 text-[9px] font-black uppercase tracking-widest transition-all flex items-center justify-center gap-2 ${
                     historyTab === 'xp' 
-                      ? 'bg-white text-slate-950 shadow-sm border border-slate-200/50' 
-                      : 'text-slate-400 hover:text-slate-600'
+                      ? 'bg-white text-slate-950 shadow-none border border-slate-200/50' 
+                      : 'text-slate-500 hover:text-slate-600'
                   }`}
                 >
                   <Zap size={11} /> Ganancia de XP
@@ -1316,8 +1308,8 @@ export default function ProfilePage() {
                   onClick={() => setHistoryTab('streak')}
                   className={`flex-1 py-2 text-[9px] font-black uppercase tracking-widest transition-all flex items-center justify-center gap-2 ${
                     historyTab === 'streak' 
-                      ? 'bg-white text-slate-950 shadow-sm border border-slate-200/50' 
-                      : 'text-slate-400 hover:text-slate-600'
+                      ? 'bg-white text-slate-950 shadow-none border border-slate-200/50' 
+                      : 'text-slate-500 hover:text-slate-600'
                   }`}
                 >
                   <Flame size={11} /> Calendario de Racha
@@ -1329,50 +1321,50 @@ export default function ProfilePage() {
                 {historyTab === 'xp' ? (
                   <div className="space-y-6">
                     {/* Tarjeta resumen de XP */}
-                    <div className="grid grid-cols-3 gap-4 bg-slate-950 text-white p-5 border border-slate-800">
+                    <div className="grid grid-cols-3 gap-4 bg-slate-50 text-slate-900 p-5 border border-slate-800">
                       <div className="text-center">
-                        <p className="text-[7px] text-slate-400 font-black uppercase tracking-widest">XP Acumulado</p>
+                        <p className="text-[7px] text-slate-500 font-black uppercase tracking-widest">XP Acumulado</p>
                         <p className="text-lg font-black font-mono text-teal-400 mt-1">{userPoints.toLocaleString()}</p>
                       </div>
                       <div className="text-center border-x border-white/10">
-                        <p className="text-[7px] text-slate-400 font-black uppercase tracking-widest">Precisión Promedio</p>
+                        <p className="text-[7px] text-slate-500 font-black uppercase tracking-widest">Precisión Promedio</p>
                         <p className="text-lg font-black font-mono text-indigo-300 mt-1">{stats?.accuracy ?? 0}%</p>
                       </div>
                       <div className="text-center">
-                        <p className="text-[7px] text-slate-400 font-black uppercase tracking-widest">Fluidez Estimada</p>
+                        <p className="text-[7px] text-slate-500 font-black uppercase tracking-widest">Fluidez Estimada</p>
                         <p className="text-lg font-black font-mono text-emerald-300 mt-1">{stats?.fluency_score ?? 0}%</p>
                       </div>
                     </div>
 
                     {/* Timeline de ganancias */}
                     <div className="space-y-3">
-                      <h4 className="text-[8px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 pb-2">Registro de Ganancias</h4>
+                      <h4 className="text-[8px] font-black text-slate-500 uppercase tracking-widest border-b border-slate-200 pb-2">Registro de Ganancias</h4>
                       
                       {completedLessons.length > 0 ? (
                         <div className="divide-y divide-slate-100">
                           {completedLessons.map((lesson, idx) => (
                             <div key={idx} className="flex justify-between items-center py-3">
                               <div className="flex items-center gap-3">
-                                <div className="w-8 h-8 rounded-none border border-slate-100 bg-slate-50 flex items-center justify-center text-slate-600">
+                                <div className="w-8 h-8 rounded-none border border-slate-200 bg-white flex items-center justify-center text-slate-600">
                                   {lesson.lesson_type === 'pro' ? <Briefcase size={12} /> : <BookOpen size={12} />}
                                 </div>
                                 <div>
-                                  <p className="text-[10px] font-black text-slate-800 uppercase tracking-tight">
+                                  <p className="text-[10px] font-black text-slate-900 uppercase tracking-tight">
                                     {lesson.lesson_type === 'pro' ? 'Módulo Ejecutivo Pro' : 'Módulo de Estudio Estándar'}
                                   </p>
-                                  <p className="text-[7px] text-slate-400 font-bold uppercase mt-0.5">
+                                  <p className="text-[7px] text-slate-500 font-bold uppercase mt-0.5">
                                     ID: {lesson.lesson_id.toUpperCase()} · {new Date(lesson.updated_at).toLocaleDateString('es-MX', { day: 'numeric', month: 'short' })}
                                   </p>
                                 </div>
                               </div>
-                              <span className="text-[10px] font-mono font-black text-emerald-600 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-sm">
+                              <span className="text-[10px] font-mono font-black text-[#D4AF37] bg-[#D4AF37]/10 border border-emerald-100 px-2 py-0.5 rounded-sm">
                                 +{lesson.score} XP
                               </span>
                             </div>
                           ))}
                         </div>
                       ) : (
-                        <div className="text-center py-10 text-slate-400 flex flex-col items-center justify-center gap-2">
+                        <div className="text-center py-10 text-slate-500 flex flex-col items-center justify-center gap-2">
                           <Zap size={24} className="text-slate-300" />
                           <p className="text-[8px] font-black uppercase tracking-widest">Aún no has ganado XP en lecciones</p>
                         </div>
@@ -1383,13 +1375,13 @@ export default function ProfilePage() {
                   <div className="space-y-6">
                     {/* Resumen de Racha */}
                     <div className="flex items-center gap-4 bg-orange-50 border border-orange-200/60 p-4">
-                      <div className="w-10 h-10 bg-orange-500 rounded-none flex items-center justify-center text-white shrink-0 shadow-lg shadow-orange-500/20">
+                      <div className="w-10 h-10 bg-orange-500 rounded-none flex items-center justify-center text-slate-900 shrink-0 shadow-none shadow-orange-500/20">
                         <Flame size={20} className="fill-white" />
                       </div>
                       <div>
                         <h4 className="text-[10px] font-black text-slate-900 uppercase tracking-wider">Compromiso Diario</h4>
-                        <p className="text-[8px] text-slate-500 font-bold uppercase tracking-tight mt-0.5">
-                          Tienes una racha activa de <span className="text-orange-600 font-black">{streakDays} días</span>. ¡Sigue así y alcanza el C-Suite!
+                        <p className="text-[8px] text-slate-600 font-bold uppercase tracking-tight mt-0.5">
+                          Tienes una racha activa de <span className="text-orange-600 font-black">{streakDays} días</span>. ¡Sigue así y alcanza el Alta Dirección!
                         </p>
                       </div>
                     </div>
@@ -1416,7 +1408,7 @@ export default function ProfilePage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setShowAvatarPicker(false)}
-              className="absolute inset-0 bg-slate-950/40 backdrop-blur-md"
+              className="absolute inset-0 bg-slate-50/40 backdrop-blur-md"
             />
             
             {/* Contenedor del Modal */}
@@ -1428,13 +1420,13 @@ export default function ProfilePage() {
               className="relative w-full max-w-md bg-white border border-slate-200 shadow-2xl p-6 overflow-hidden flex flex-col"
             >
               {/* Encabezado */}
-              <div className="flex justify-between items-center pb-4 border-b border-slate-100 mb-6 shrink-0">
+              <div className="flex justify-between items-center pb-4 border-b border-slate-200 mb-6 shrink-0">
                 <span className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-900 flex items-center gap-2">
-                  <User size={14} className="text-teal-600 animate-pulse" /> Seleccionar avatar
+                  <User size={14} className="text-[#D4AF37] animate-pulse" /> Seleccionar avatar
                 </span>
                 <button 
                   onClick={() => setShowAvatarPicker(false)}
-                  className="text-slate-400 hover:text-slate-950 p-1 transition-colors border border-transparent hover:border-slate-200"
+                  className="text-slate-500 hover:text-slate-950 p-1 transition-colors border border-transparent hover:border-slate-200"
                 >
                   <X size={14} />
                 </button>
@@ -1446,14 +1438,14 @@ export default function ProfilePage() {
                   <div
                     key={i}
                     onClick={() => selectAvatar(url)}
-                    className={`w-full aspect-square border cursor-pointer hover:border-teal-500 hover:shadow-lg transition-all bg-slate-50 overflow-hidden relative group ${
-                      formData.avatar_url === url ? 'border-teal-500 ring-2 ring-teal-500/20' : 'border-slate-100'
+                    className={`w-full aspect-square border cursor-pointer hover:border-teal-500 hover:shadow-none transition-all bg-white overflow-hidden relative group ${
+                      formData.avatar_url === url ? 'border-teal-500 ring-2 ring-teal-500/20' : 'border-slate-200'
                     }`}
                   >
                     <img src={url} alt={`Avatar ${i+1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                     {formData.avatar_url === url && (
                       <div className="absolute inset-0 bg-teal-950/20 flex items-center justify-center">
-                        <div className="bg-teal-600 text-white p-1 rounded-full">
+                        <div className="bg-[#D4AF37]/20 text-slate-900 p-1 rounded-full">
                           <Check size={10} />
                         </div>
                       </div>
@@ -1462,7 +1454,7 @@ export default function ProfilePage() {
                 ))}
               </div>
               
-              <p className="text-[7px] text-slate-400 font-bold uppercase text-center mt-2">
+              <p className="text-[7px] text-slate-500 font-bold uppercase text-center mt-2">
                 Haz clic en cualquier avatar para seleccionarlo y guardarlo automáticamente de forma local.
               </p>
             </motion.div>

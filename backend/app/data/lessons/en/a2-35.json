@@ -1,0 +1,101 @@
+{
+  "id": "a2-35",
+  "title": "Departments & Roles",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Vocabulary", "Company Structure", "Departments", "Business"],
+  "completion_message": "¡Felicidades! Ahora conoces la estructura de la empresa y los departamentos principales en inglés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Departamentos y Roles en la Empresa",
+      "parts": [
+        { "visual": "Departamentos: HR (Human Resources - Recursos Humanos). IT (Information Technology - Tecnología). R&D (Research and Development - Investigación y Desarrollo). PR (Public Relations). Sales (Ventas). Marketing. Accounting (Contabilidad).", "audio": "Departments. HR stands for Human Resources. IT stands for Information Technology. R&D stands for Research and Development. PR stands for Public Relations. Sales, Marketing, and Accounting." },
+        { "visual": "Roles: CEO (Chief Executive Officer). CFO (Chief Financial Officer). Manager (Gerente). Employee (Empleado). Assistant (Asistente). Supervisor (Supervisor).", "audio": "Roles in the company. CEO is the Chief Executive Officer. CFO is the Chief Financial Officer. Manager. Employee. Assistant. Supervisor." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el departamento o rol correcto según la descripción.",
+      "questions": [
+        { "id": "a2-35-q1", "type": "quiz_choice", "question": "This department hires new employees. It's ____. (Recursos Humanos).", "options": ["HR", "IT", "PR", "R&D"], "correct_answer": "HR", "explanation": "HR (Human Resources) = Recursos Humanos." },
+        { "id": "a2-35-q2", "type": "quiz_choice", "question": "My computer is broken. I need to call ____. (Tecnología de la información).", "options": ["IT", "HR", "Sales", "Accounting"], "correct_answer": "IT", "explanation": "IT (Information Technology) = Sistemas / Informática." },
+        { "id": "a2-35-q3", "type": "quiz_choice", "question": "This department pays the bills and manages the money. It's ____. (Contabilidad).", "options": ["Accounting", "Marketing", "Sales", "HR"], "correct_answer": "Accounting", "explanation": "Accounting = Contabilidad." },
+        { "id": "a2-35-q4", "type": "quiz_choice", "question": "They invent new products. It's the ____ department. (Investigación y Desarrollo).", "options": ["R&D", "PR", "IT", "HR"], "correct_answer": "R&D", "explanation": "R&D (Research and Development) = Investigación y Desarrollo." },
+        { "id": "a2-35-q5", "type": "quiz_choice", "question": "They sell the products to clients. It's the ____ department. (Ventas).", "options": ["Sales", "Marketing", "Accounting", "IT"], "correct_answer": "Sales", "explanation": "Sales = Ventas." },
+        { "id": "a2-35-q6", "type": "quiz_choice", "question": "This department manages advertising and social media. It's ____. (Mercadotecnia).", "options": ["Marketing", "Sales", "PR", "HR"], "correct_answer": "Marketing", "explanation": "Marketing = Mercadotecnia." },
+        { "id": "a2-35-q7", "type": "quiz_choice", "question": "They handle the image of the company with the press. It's ____. (Relaciones Públicas).", "options": ["PR", "HR", "IT", "R&D"], "correct_answer": "PR", "explanation": "PR (Public Relations) = Relaciones Públicas." },
+        { "id": "a2-35-q8", "type": "quiz_choice", "question": "This department deals with legal contracts. It's the ____ department. (Legal/Jurídico).", "options": ["Legal", "Accounting", "Sales", "PR"], "correct_answer": "Legal", "explanation": "Legal department = Departamento Legal/Jurídico." },
+        { "id": "a2-35-q9", "type": "quiz_choice", "question": "The highest position in the company is the ____. (Director Ejecutivo).", "options": ["CEO", "CFO", "Manager", "Assistant"], "correct_answer": "CEO", "explanation": "CEO (Chief Executive Officer) = Director Ejecutivo / Presidente." },
+        { "id": "a2-35-q10", "type": "quiz_choice", "question": "The person who manages the money and finances of the company is the ____. (Director Financiero).", "options": ["CFO", "CEO", "HR", "IT"], "correct_answer": "CFO", "explanation": "CFO (Chief Financial Officer) = Director Financiero." },
+        { "id": "a2-35-q11", "type": "quiz_choice", "question": "He is the ____ of the marketing department. He leads the team. (Gerente/Director).", "options": ["Manager", "Assistant", "Employee", "Client"], "correct_answer": "Manager", "explanation": "Manager = Gerente o Director de área." },
+        { "id": "a2-35-q12", "type": "quiz_choice", "question": "I am the administrative ____. I help the manager. (Asistente).", "options": ["Assistant", "CEO", "Manager", "Executive"], "correct_answer": "Assistant", "explanation": "Assistant = Asistente." },
+        { "id": "a2-35-q13", "type": "quiz_choice", "question": "We have 500 ____ in our company. (Empleados).", "options": ["employees", "employers", "clients", "bosses"], "correct_answer": "employees", "explanation": "Employees = Empleados." },
+        { "id": "a2-35-q14", "type": "quiz_choice", "question": "The company that hires you is your ____. (Empleador/Patrón).", "options": ["employer", "employee", "client", "worker"], "correct_answer": "employer", "explanation": "Employer = Empleador (la empresa que te da trabajo)." },
+        { "id": "a2-35-q15", "type": "quiz_choice", "question": "The ____ check the quality of the work on the factory floor. (Supervisores).", "options": ["supervisors", "assistants", "CEOs", "clients"], "correct_answer": "supervisors", "explanation": "Supervisors = Supervisores." },
+        { "id": "a2-35-q16", "type": "quiz_choice", "question": "The board of ____ makes the big decisions. (Directores).", "options": ["directors", "assistants", "employees", "workers"], "correct_answer": "directors", "explanation": "Board of directors = Junta directiva / Consejo de administración." },
+        { "id": "a2-35-q17", "type": "quiz_choice", "question": "This department helps customers with their problems. It's ____ Service. (Servicio al cliente).", "options": ["Customer", "Client", "Buyer", "User"], "correct_answer": "Customer", "explanation": "Customer Service = Servicio al Cliente." },
+        { "id": "a2-35-q18", "type": "quiz_choice", "question": "A senior manager in a company is called an ____. (Ejecutivo).", "options": ["executive", "assistant", "employee", "worker"], "correct_answer": "executive", "explanation": "Executive = Ejecutivo (alto directivo)." },
+        { "id": "a2-35-q19", "type": "quiz_choice", "question": "She is the ____ of the company. She started the business. (Fundadora).", "options": ["founder", "assistant", "manager", "employee"], "correct_answer": "founder", "explanation": "Founder = Fundador(a)." },
+        { "id": "a2-35-q20", "type": "quiz_choice", "question": "This department buys materials for the company. It's ____. (Compras).", "options": ["Purchasing", "Sales", "Marketing", "HR"], "correct_answer": "Purchasing", "explanation": "Purchasing (o Procurement) = Departamento de Compras." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe las siglas del departamento o el rol de la persona.",
+      "questions": [
+        { "id": "a2-35-f1", "type": "fill_input", "question": "Human Resources is ____. (Siglas)", "correct_answer": "HR", "explanation": "HR." },
+        { "id": "a2-35-f2", "type": "fill_input", "question": "Information Technology is ____. (Siglas)", "correct_answer": "IT", "explanation": "IT." },
+        { "id": "a2-35-f3", "type": "fill_input", "question": "Research and Development is ____. (Siglas con el signo &)", "correct_answer": "R&D", "explanation": "R&D." },
+        { "id": "a2-35-f4", "type": "fill_input", "question": "Public Relations is ____. (Siglas)", "correct_answer": "PR", "explanation": "PR." },
+        { "id": "a2-35-f5", "type": "fill_input", "question": "The Chief Executive Officer is the ____. (Siglas)", "correct_answer": "CEO", "explanation": "CEO." },
+        { "id": "a2-35-f6", "type": "fill_input", "question": "The Chief Financial Officer is the ____. (Siglas)", "correct_answer": "CFO", "explanation": "CFO." },
+        { "id": "a2-35-f7", "type": "fill_input", "question": "She is the Marketing ____. (Gerente)", "correct_answer": "Manager", "explanation": "Manager." },
+        { "id": "a2-35-f8", "type": "fill_input", "question": "I am the administrative ____. (Asistente)", "correct_answer": "Assistant", "explanation": "Assistant." },
+        { "id": "a2-35-f9", "type": "fill_input", "question": "We have 100 ____. (Empleados)", "correct_answer": "employees", "explanation": "employees." },
+        { "id": "a2-35-f10", "type": "fill_input", "question": "They work in ____ Service. (Servicio al cliente - Customer)", "correct_answer": "Customer", "explanation": "Customer." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-35-p1", "source": "HR (Human Resources)", "target": "Recursos Humanos"},
+        {"id": "a2-35-p2", "source": "IT (Information Tech)", "target": "Sistemas / Informática"},
+        {"id": "a2-35-p3", "source": "R&D (Research & Dev)", "target": "Investigación y Desarrollo"},
+        {"id": "a2-35-p4", "source": "Accounting", "target": "Contabilidad"},
+        {"id": "a2-35-p5", "source": "Purchasing", "target": "Compras"},
+        {"id": "a2-35-p6", "source": "CEO", "target": "Director Ejecutivo"},
+        {"id": "a2-35-p7", "source": "CFO", "target": "Director Financiero"},
+        {"id": "a2-35-p8", "source": "Manager", "target": "Gerente"},
+        {"id": "a2-35-p9", "source": "Assistant", "target": "Asistente"},
+        {"id": "a2-35-p10", "source": "Employee vs Employer", "target": "Empleado vs Empleador"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta sobre departamentos.",
+      "questions": [
+        { "id": "a2-35-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I work in HR.", "options": ["I work in HR.", "I work in IT.", "He works in HR.", "We work in HR."], "correct_answer": "I work in HR.", "explanation": "Audio exacto." },
+        { "id": "a2-35-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Call IT if your computer is broken.", "options": ["Call IT if your computer is broken.", "Call HR if your computer is broken.", "Please call IT if your computer is broken.", "Call IT when your computer is broken."], "correct_answer": "Call IT if your computer is broken.", "explanation": "Audio exacto." },
+        { "id": "a2-35-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They work in Accounting.", "options": ["They work in Accounting.", "We work in Accounting.", "He works in Accounting.", "They work in Sales."], "correct_answer": "They work in Accounting.", "explanation": "Audio exacto." },
+        { "id": "a2-35-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The R&D department invented a new product.", "options": ["The R&D department invented a new product.", "The IT department invented a new product.", "Our R&D department invented a new product.", "The R&D department made a new product."], "correct_answer": "The R&D department invented a new product.", "explanation": "Audio exacto." },
+        { "id": "a2-35-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is the CEO of the company.", "options": ["She is the CEO of the company.", "He is the CEO of the company.", "She is the CFO of the company.", "She is the manager of the company."], "correct_answer": "She is the CEO of the company.", "explanation": "Audio exacto." },
+        { "id": "a2-35-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need to talk to the Manager.", "options": ["I need to talk to the Manager.", "I want to talk to the Manager.", "He needs to talk to the Manager.", "I need to speak to the Manager."], "correct_answer": "I need to talk to the Manager.", "explanation": "Audio exacto." },
+        { "id": "a2-35-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have five hundred employees.", "options": ["We have five hundred employees.", "They have five hundred employees.", "We have fifty employees.", "We have five hundred workers."], "correct_answer": "We have five hundred employees.", "explanation": "Audio exacto." },
+        { "id": "a2-35-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is my assistant.", "options": ["He is my assistant.", "She is my assistant.", "He is the assistant.", "He was my assistant."], "correct_answer": "He is my assistant.", "explanation": "Audio exacto." },
+        { "id": "a2-35-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Contact Customer Service for help.", "options": ["Contact Customer Service for help.", "Call Customer Service for help.", "Please contact Customer Service.", "Contact Customer Service for support."], "correct_answer": "Contact Customer Service for help.", "explanation": "Audio exacto." },
+        { "id": "a2-35-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The CFO manages the finances.", "options": ["The CFO manages the finances.", "The CEO manages the finances.", "The CFO manages the money.", "The manager manages the finances."], "correct_answer": "The CFO manages the finances.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

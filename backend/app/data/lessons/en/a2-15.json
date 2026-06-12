@@ -1,0 +1,101 @@
+{
+  "id": "a2-15",
+  "title": "Modals: Advice & Obligation",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Modals", "Should", "Have to"],
+  "completion_message": "¡Excelente! Ahora sabes dar consejos y expresar obligaciones en el entorno laboral.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Modales: Consejos y Obligaciones",
+      "parts": [
+        { "visual": "Consejo (Advice): SHOULD (Debería) / SHOULDN'T (No debería). Ej: You should save your document. You shouldn't arrive late. (Es una buena idea, pero no es obligatorio).", "audio": "Advice. We use SHOULD and SHOULDN'T. For example: You should save your document. You shouldn't arrive late. It is a good idea, but it is not mandatory." },
+        { "visual": "Obligación (Obligation): HAVE TO / HAS TO (Tener que). Ej: I have to wear a uniform (Es obligatorio por regla). Negativo: DON'T HAVE TO (No tienes que / No es necesario, pero puedes hacerlo si quieres). Ej: You don't have to work on Sunday.", "audio": "Obligation. We use HAVE TO or HAS TO. For example: I have to wear a uniform. It is a rule. In the negative: DON'T HAVE TO. This means it is not necessary, but you can do it if you want. Example: You don't have to work on Sunday." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el verbo modal correcto (consejo, obligación o falta de obligación).",
+      "questions": [
+        { "id": "a2-15-q1", "type": "quiz_choice", "question": "You ____ save your work frequently so you don't lose it. (Consejo / Deberías).", "options": ["should", "have to", "must", "shouldn't"], "correct_answer": "should", "explanation": "Es un buen consejo: should." },
+        { "id": "a2-15-q2", "type": "quiz_choice", "question": "I ____ wear a suit to the office. It's the company rule. (Tengo que / Obligación externa).", "options": ["have to", "should", "don't have to", "shouldn't"], "correct_answer": "have to", "explanation": "Regla de la empresa = obligación externa = have to." },
+        { "id": "a2-15-q3", "type": "quiz_choice", "question": "You ____ be rude to the customers! (Consejo fuerte / No deberías).", "options": ["shouldn't", "don't have to", "have to", "should"], "correct_answer": "shouldn't", "explanation": "Shouldn't = no deberías (mal consejo/mala idea)." },
+        { "id": "a2-15-q4", "type": "quiz_choice", "question": "Today is a holiday. You ____ work today. (No es necesario / No tienes que).", "options": ["don't have to", "shouldn't", "mustn't", "have to"], "correct_answer": "don't have to", "explanation": "Don't have to = no es necesario/no tienes la obligación." },
+        { "id": "a2-15-q5", "type": "quiz_choice", "question": "She ____ attend the meeting. She is the speaker! (Tiene que - Obligación).", "options": ["has to", "have to", "should", "doesn't have to"], "correct_answer": "has to", "explanation": "She + have to = has to." },
+        { "id": "a2-15-q6", "type": "quiz_choice", "question": "We ____ arrive at the airport two hours before the flight. (Obligación de la aerolínea).", "options": ["have to", "has to", "shouldn't", "don't have to"], "correct_answer": "have to", "explanation": "Have to (regla externa)." },
+        { "id": "a2-15-q7", "type": "quiz_choice", "question": "I think we ____ hire more people. We have too much work. (Consejo/Opinión).", "options": ["should", "have to", "must", "shouldn't"], "correct_answer": "should", "explanation": "Con 'I think' normalmente damos una opinión o consejo: should." },
+        { "id": "a2-15-q8", "type": "quiz_choice", "question": "He ____ wear a tie. The dress code is casual. (No es necesario).", "options": ["doesn't have to", "don't have to", "shouldn't", "has to"], "correct_answer": "doesn't have to", "explanation": "No es necesario (he) = doesn't have to." },
+        { "id": "a2-15-q9", "type": "quiz_choice", "question": "____ I call the client now or later? (Pedir consejo: ¿Debería?).", "options": ["Should", "Do", "Have to", "Must"], "correct_answer": "Should", "explanation": "Should I...? = ¿Debería yo...?" },
+        { "id": "a2-15-q10", "type": "quiz_choice", "question": "Do I ____ pay for the coffee? No, it's free. (Obligación: ¿Tengo que?).", "options": ["have to", "should", "must", "has to"], "correct_answer": "have to", "explanation": "Do I have to...? = ¿Tengo que...?" },
+        { "id": "a2-15-q11", "type": "quiz_choice", "question": "You ____ check the numbers again. There is a mistake. (Deberías).", "options": ["should", "don't have to", "have to", "shouldn't"], "correct_answer": "should", "explanation": "Consejo = should." },
+        { "id": "a2-15-q12", "type": "quiz_choice", "question": "You ____ open that email. It looks like a virus! (No deberías).", "options": ["shouldn't", "don't have to", "should", "have to"], "correct_answer": "shouldn't", "explanation": "Mala idea/Peligro = shouldn't." },
+        { "id": "a2-15-q13", "type": "quiz_choice", "question": "The boss is busy. You ____ wait here. (Tienes que).", "options": ["have to", "has to", "shouldn't", "don't have to"], "correct_answer": "have to", "explanation": "Obligación situacional = have to." },
+        { "id": "a2-15-q14", "type": "quiz_choice", "question": "You ____ send the report today. Tomorrow is fine. (No es necesario).", "options": ["don't have to", "shouldn't", "mustn't", "have to"], "correct_answer": "don't have to", "explanation": "Tomorrow is fine -> no es obligatorio hacerlo hoy = don't have to." },
+        { "id": "a2-15-q15", "type": "quiz_choice", "question": "What time do we ____ leave? (Obligación: ¿A qué hora tenemos que...?).", "options": ["have to", "has to", "should", "must"], "correct_answer": "have to", "explanation": "Do we have to...?" },
+        { "id": "a2-15-q16", "type": "quiz_choice", "question": "You ____ drink so much coffee. It's bad for you. (Consejo negativo).", "options": ["shouldn't", "don't have to", "mustn't", "doesn't have to"], "correct_answer": "shouldn't", "explanation": "Consejo sobre salud = shouldn't." },
+        { "id": "a2-15-q17", "type": "quiz_choice", "question": "He ____ wake up at 5 AM every day for work. (Tiene que).", "options": ["has to", "have to", "should", "must to"], "correct_answer": "has to", "explanation": "Obligación de rutina (He) = has to." },
+        { "id": "a2-15-q18", "type": "quiz_choice", "question": "You ____ apologize. It was my fault. (No tienes que).", "options": ["don't have to", "shouldn't", "mustn't", "doesn't have to"], "correct_answer": "don't have to", "explanation": "Falta de obligación = don't have to." },
+        { "id": "a2-15-q19", "type": "quiz_choice", "question": "They ____ sign the contract before Friday. It's a legal requirement. (Tienen que).", "options": ["have to", "has to", "should", "don't have to"], "correct_answer": "have to", "explanation": "Requisito legal = have to." },
+        { "id": "a2-15-q20", "type": "quiz_choice", "question": "I think you ____ talk to the manager about your idea. (Deberías).", "options": ["should", "have to", "must", "shouldn't"], "correct_answer": "should", "explanation": "Opinión/Sugerencia = should." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe should, shouldn't, have to, has to, o don't have to.",
+      "questions": [
+        { "id": "a2-15-f1", "type": "fill_input", "question": "You ____ save your work. (Deberías - consejo)", "correct_answer": "should", "explanation": "should." },
+        { "id": "a2-15-f2", "type": "fill_input", "question": "You ____ arrive late. (No deberías - consejo negativo)", "correct_answer": "shouldn't", "explanation": "shouldn't." },
+        { "id": "a2-15-f3", "type": "fill_input", "question": "I ____ wear a uniform. (Tengo que - regla)", "correct_answer": "have to", "explanation": "have to." },
+        { "id": "a2-15-f4", "type": "fill_input", "question": "She ____ attend the meeting. (Tiene que - obligación de ella)", "correct_answer": "has to", "explanation": "has to." },
+        { "id": "a2-15-f5", "type": "fill_input", "question": "You ____ ____ ____ work on Sunday. (No es necesario/No tienes que - 3 palabras)", "correct_answer": "don't have to", "explanation": "don't have to." },
+        { "id": "a2-15-f6", "type": "fill_input", "question": "He ____ ____ ____ wear a tie. (No es necesario para él - 3 palabras)", "correct_answer": "doesn't have to", "explanation": "doesn't have to." },
+        { "id": "a2-15-f7", "type": "fill_input", "question": "____ I call the client? (¿Debería yo?)", "correct_answer": "Should", "explanation": "Should." },
+        { "id": "a2-15-f8", "type": "fill_input", "question": "Do I ____ ____ pay? (¿Tengo que?)", "correct_answer": "have to", "explanation": "have to." },
+        { "id": "a2-15-f9", "type": "fill_input", "question": "We ____ arrive early. (Tenemos que)", "correct_answer": "have to", "explanation": "have to." },
+        { "id": "a2-15-f10", "type": "fill_input", "question": "You ____ open that email! (No deberías - es un virus)", "correct_answer": "shouldn't", "explanation": "shouldn't." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-15-p1", "source": "You should", "target": "Tú deberías (Consejo)"},
+        {"id": "a2-15-p2", "source": "You shouldn't", "target": "Tú no deberías (Consejo negativo)"},
+        {"id": "a2-15-p3", "source": "I have to", "target": "Yo tengo que (Obligación)"},
+        {"id": "a2-15-p4", "source": "She has to", "target": "Ella tiene que (Obligación)"},
+        {"id": "a2-15-p5", "source": "You don't have to", "target": "No tienes que / No es necesario"},
+        {"id": "a2-15-p6", "source": "He doesn't have to", "target": "Él no tiene que / No es necesario para él"},
+        {"id": "a2-15-p7", "source": "Should I...?", "target": "¿Debería yo...?"},
+        {"id": "a2-15-p8", "source": "Do I have to...?", "target": "¿Tengo que...?"},
+        {"id": "a2-15-p9", "source": "It's a good idea", "target": "Es una buena idea"},
+        {"id": "a2-15-p10", "source": "It's the rule", "target": "Es la regla"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a2-15-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You should save your document.", "options": ["You should save your document.", "You should save your work.", "You have to save your document.", "You must save your document."], "correct_answer": "You should save your document.", "explanation": "Audio exacto." },
+        { "id": "a2-15-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You shouldn't arrive late.", "options": ["You shouldn't arrive late.", "You shouldn't be late.", "You don't have to arrive late.", "You must not arrive late."], "correct_answer": "You shouldn't arrive late.", "explanation": "Audio exacto." },
+        { "id": "a2-15-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have to wear a uniform.", "options": ["I have to wear a uniform.", "I should wear a uniform.", "I have to wear the uniform.", "He has to wear a uniform."], "correct_answer": "I have to wear a uniform.", "explanation": "Audio exacto." },
+        { "id": "a2-15-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She has to attend the meeting.", "options": ["She has to attend the meeting.", "She should attend the meeting.", "He has to attend the meeting.", "She has to go to the meeting."], "correct_answer": "She has to attend the meeting.", "explanation": "Audio exacto." },
+        { "id": "a2-15-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You don't have to work on Sunday.", "options": ["You don't have to work on Sunday.", "You shouldn't work on Sunday.", "You don't have to work today.", "He doesn't have to work on Sunday."], "correct_answer": "You don't have to work on Sunday.", "explanation": "Audio exacto." },
+        { "id": "a2-15-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He doesn't have to wear a tie.", "options": ["He doesn't have to wear a tie.", "You don't have to wear a tie.", "He shouldn't wear a tie.", "He doesn't have to wear a suit."], "correct_answer": "He doesn't have to wear a tie.", "explanation": "Audio exacto." },
+        { "id": "a2-15-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Should I call the client now?", "options": ["Should I call the client now?", "Do I have to call the client now?", "Should I call him now?", "Should we call the client now?"], "correct_answer": "Should I call the client now?", "explanation": "Audio exacto." },
+        { "id": "a2-15-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do I have to pay for the coffee?", "options": ["Do I have to pay for the coffee?", "Do you have to pay for the coffee?", "Should I pay for the coffee?", "Do I have to pay for it?"], "correct_answer": "Do I have to pay for the coffee?", "explanation": "Audio exacto." },
+        { "id": "a2-15-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You shouldn't open that email.", "options": ["You shouldn't open that email.", "You don't have to open that email.", "You shouldn't read that email.", "We shouldn't open that email."], "correct_answer": "You shouldn't open that email.", "explanation": "Audio exacto." },
+        { "id": "a2-15-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You don't have to apologize.", "options": ["You don't have to apologize.", "You shouldn't apologize.", "He doesn't have to apologize.", "You don't have to be sorry."], "correct_answer": "You don't have to apologize.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

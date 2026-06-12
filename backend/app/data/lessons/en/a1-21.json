@@ -1,0 +1,101 @@
+{
+  "id": "a1-21",
+  "title": "Transportation to Work",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Transportation", "Commute"],
+  "completion_message": "¡Excelente! Ahora puedes hablar fluidamente sobre cómo te trasladas al trabajo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Medios de Transporte",
+      "parts": [
+        { "visual": "Usamos la preposición 'by' para medios de transporte: 'by car', 'by bus', 'by train'.", "audio": "We use the preposition by for means of transport: by car, by bus, by train." },
+        { "visual": "Sin embargo, para caminar decimos 'on foot' (a pie).", "audio": "However, for walking we say on foot." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la palabra o preposición correcta.",
+      "questions": [
+        { "id": "a1-21-q1", "type": "quiz_choice", "question": "I go to work ____ car.", "options": ["by", "in", "on", "at"], "correct_answer": "by", "explanation": "Para medios de transporte se usa 'by'." },
+        { "id": "a1-21-q2", "type": "quiz_choice", "question": "She travels ____ train.", "options": ["by", "in", "on", "with"], "correct_answer": "by", "explanation": "By train (en tren)." },
+        { "id": "a1-21-q3", "type": "quiz_choice", "question": "He comes to the office ____ foot.", "options": ["on", "by", "in", "at"], "correct_answer": "on", "explanation": "Excepción: 'on foot' (a pie)." },
+        { "id": "a1-21-q4", "type": "quiz_choice", "question": "I usually take the ____.", "options": ["bus", "buses", "bussing", "bussed"], "correct_answer": "bus", "explanation": "Tomar el autobús." },
+        { "id": "a1-21-q5", "type": "quiz_choice", "question": "Do you ____ to work?", "options": ["drive", "drives", "driving", "drove"], "correct_answer": "drive", "explanation": "Conducir al trabajo." },
+        { "id": "a1-21-q6", "type": "quiz_choice", "question": "We went there ____ taxi.", "options": ["by", "in", "on", "for"], "correct_answer": "by", "explanation": "By taxi (en taxi)." },
+        { "id": "a1-21-q7", "type": "quiz_choice", "question": "How do you ____ to the office?", "options": ["get", "gets", "getting", "got"], "correct_answer": "get", "explanation": "'Get to' significa llegar a." },
+        { "id": "a1-21-q8", "type": "quiz_choice", "question": "The ____ station is near here.", "options": ["train", "trains", "training", "trained"], "correct_answer": "train", "explanation": "Estación de tren." },
+        { "id": "a1-21-q9", "type": "quiz_choice", "question": "I like to ____ my bike to work.", "options": ["ride", "drive", "take", "make"], "correct_answer": "ride", "explanation": "Andar en bicicleta se dice 'ride'." },
+        { "id": "a1-21-q10", "type": "quiz_choice", "question": "The commute is very ____.", "options": ["long", "longs", "tall", "high"], "correct_answer": "long", "explanation": "El trayecto es largo." },
+        { "id": "a1-21-q11", "type": "quiz_choice", "question": "I missed the ____.", "options": ["bus", "buses", "buss", "car"], "correct_answer": "bus", "explanation": "Perder el autobús." },
+        { "id": "a1-21-q12", "type": "quiz_choice", "question": "She takes the subway ____.", "options": ["everyday", "always", "never", "sometimes"], "correct_answer": "everyday", "explanation": "Todos los días." },
+        { "id": "a1-21-q13", "type": "quiz_choice", "question": "They travel ____ plane for business.", "options": ["by", "in", "on", "with"], "correct_answer": "by", "explanation": "By plane (en avión)." },
+        { "id": "a1-21-q14", "type": "quiz_choice", "question": "Traffic is very ____ today.", "options": ["bad", "badly", "worse", "worst"], "correct_answer": "bad", "explanation": "El tráfico es malo." },
+        { "id": "a1-21-q15", "type": "quiz_choice", "question": "I need to park my ____.", "options": ["car", "cars", "bus", "train"], "correct_answer": "car", "explanation": "Estacionar el auto." },
+        { "id": "a1-21-q16", "type": "quiz_choice", "question": "Is there a parking ____?", "options": ["lot", "lots", "space", "room"], "correct_answer": "lot", "explanation": "Estacionamiento (parking lot)." },
+        { "id": "a1-21-q17", "type": "quiz_choice", "question": "He walks ____ work.", "options": ["to", "in", "at", "by"], "correct_answer": "to", "explanation": "Camina HACIA el trabajo." },
+        { "id": "a1-21-q18", "type": "quiz_choice", "question": "We took a ____ from the airport.", "options": ["cab", "cabs", "cabbing", "bus"], "correct_answer": "cab", "explanation": "Taxi (cab)." },
+        { "id": "a1-21-q19", "type": "quiz_choice", "question": "It takes thirty ____.", "options": ["minutes", "minute", "time", "hour"], "correct_answer": "minutes", "explanation": "Tarda 30 minutos." },
+        { "id": "a1-21-q20", "type": "quiz_choice", "question": "I live ____ the office.", "options": ["near", "nearly", "close", "next"], "correct_answer": "near", "explanation": "Cerca de la oficina." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta.",
+      "questions": [
+        { "id": "a1-21-f1", "type": "fill_input", "question": "I go to work ____ car.", "correct_answer": "by", "explanation": "By car." },
+        { "id": "a1-21-f2", "type": "fill_input", "question": "He comes ____ foot (A pie).", "correct_answer": "on", "explanation": "On foot." },
+        { "id": "a1-21-f3", "type": "fill_input", "question": "I take the ____ (Autobús).", "correct_answer": "bus", "explanation": "Bus." },
+        { "id": "a1-21-f4", "type": "fill_input", "question": "Do you ____? (Conducir)", "correct_answer": "drive", "explanation": "Drive." },
+        { "id": "a1-21-f5", "type": "fill_input", "question": "I missed my ____ (Tren).", "correct_answer": "train", "explanation": "Train." },
+        { "id": "a1-21-f6", "type": "fill_input", "question": "Traffic is ____ (Malo).", "correct_answer": "bad", "explanation": "Bad." },
+        { "id": "a1-21-f7", "type": "fill_input", "question": "We went ____ taxi.", "correct_answer": "by", "explanation": "By taxi." },
+        { "id": "a1-21-f8", "type": "fill_input", "question": "Take a ____ (Taxi).", "correct_answer": "cab", "explanation": "Cab." },
+        { "id": "a1-21-f9", "type": "fill_input", "question": "Parking ____ (Estacionamiento).", "correct_answer": "lot", "explanation": "Lot." },
+        { "id": "a1-21-f10", "type": "fill_input", "question": "Travel by ____ (Avión).", "correct_answer": "plane", "explanation": "Plane." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-21-p1", "source": "Car", "target": "Auto"},
+        {"id": "a1-21-p2", "source": "Bus", "target": "Autobús"},
+        {"id": "a1-21-p3", "source": "Train", "target": "Tren"},
+        {"id": "a1-21-p4", "source": "Plane", "target": "Avión"},
+        {"id": "a1-21-p5", "source": "Taxi", "target": "Taxi"},
+        {"id": "a1-21-p6", "source": "Walk", "target": "Caminar"},
+        {"id": "a1-21-p7", "source": "Drive", "target": "Conducir"},
+        {"id": "a1-21-p8", "source": "Traffic", "target": "Tráfico"},
+        {"id": "a1-21-p9", "source": "Commute", "target": "Viaje diario"},
+        {"id": "a1-21-p10", "source": "Station", "target": "Estación"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-21-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I go by car.", "options": ["I go by car.", "I go by bus.", "I went by car.", "He goes by car."], "correct_answer": "I go by car.", "explanation": "Audio exacto." },
+        { "id": "a1-21-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I go on foot.", "options": ["I go on foot.", "I go in foot.", "I got on foot.", "He goes on foot."], "correct_answer": "I go on foot.", "explanation": "Audio exacto." },
+        { "id": "a1-21-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Take the bus.", "options": ["Take the bus.", "Make the bus.", "Wait the bus.", "Taking the bus."], "correct_answer": "Take the bus.", "explanation": "Audio exacto." },
+        { "id": "a1-21-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I drive to work.", "options": ["I drive to work.", "I travel to work.", "I arrive to work.", "He drives to work."], "correct_answer": "I drive to work.", "explanation": "Audio exacto." },
+        { "id": "a1-21-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "By train.", "options": ["By train.", "My train.", "By plane.", "The train."], "correct_answer": "By train.", "explanation": "Audio exacto." },
+        { "id": "a1-21-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Traffic is bad.", "options": ["Traffic is bad.", "Traffic is sad.", "The traffic is bad.", "Traffic is back."], "correct_answer": "Traffic is bad.", "explanation": "Audio exacto." },
+        { "id": "a1-21-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We took a taxi.", "options": ["We took a taxi.", "He took a taxi.", "We take a taxi.", "They took a taxi."], "correct_answer": "We took a taxi.", "explanation": "Audio exacto." },
+        { "id": "a1-21-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The train station.", "options": ["The train station.", "A train station.", "The bus station.", "The train starts."], "correct_answer": "The train station.", "explanation": "Audio exacto." },
+        { "id": "a1-21-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Parking lot.", "options": ["Parking lot.", "Parking spot.", "Park a lot.", "Barking lot."], "correct_answer": "Parking lot.", "explanation": "Audio exacto." },
+        { "id": "a1-21-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Travel by plane.", "options": ["Travel by plane.", "Travel by train.", "Travels by plane.", "Traveling by plane."], "correct_answer": "Travel by plane.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

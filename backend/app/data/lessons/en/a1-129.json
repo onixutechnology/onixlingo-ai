@@ -1,0 +1,101 @@
+{
+  "id": "a1-129",
+  "title": "Business Travel Vocabulary",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Travel", "Business", "Airport"],
+  "completion_message": "¡Excelente! Has aprendido el vocabulario clave para manejar viajes de negocios en aeropuertos y hoteles.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Viajes de Negocios",
+      "parts": [
+        { "visual": "En el aeropuerto: Flight (vuelo), Departure (salida), Arrival (llegada), Boarding pass (pase de abordar), Gate (puerta de embarque), Luggage / Baggage (equipaje).", "audio": "At the airport: Flight, Departure, Arrival, Boarding pass, Gate, and Luggage or Baggage." },
+        { "visual": "En el viaje: Business trip (viaje de negocios), Itinerary (itinerario), Accommodation (alojamiento), To book (reservar), Receipt (recibo).", "audio": "On the trip: Business trip, Itinerary, Accommodation, To book, which means to reserve, and Receipt." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra de vocabulario correcta.",
+      "questions": [
+        { "id": "a1-129-q1", "type": "quiz_choice", "question": "I need to ____ a hotel for my trip. (Reservar).", "options": ["book", "make", "take", "do"], "correct_answer": "book", "explanation": "Book = reservar." },
+        { "id": "a1-129-q2", "type": "quiz_choice", "question": "My ____ is at 8:00 AM tomorrow. (Vuelo).", "options": ["flight", "fly", "flying", "plane"], "correct_answer": "flight", "explanation": "Flight = vuelo." },
+        { "id": "a1-129-q3", "type": "quiz_choice", "question": "Please show your ____ ____ at the gate. (Pase de abordar).", "options": ["boarding pass", "flight ticket", "travel paper", "receipt"], "correct_answer": "boarding pass", "explanation": "Boarding pass = pase de abordar." },
+        { "id": "a1-129-q4", "type": "quiz_choice", "question": "The flight is boarding at ____ 14. (Puerta de embarque).", "options": ["gate", "door", "entry", "exit"], "correct_answer": "gate", "explanation": "Gate = puerta de embarque en un aeropuerto." },
+        { "id": "a1-129-q5", "type": "quiz_choice", "question": "I have two pieces of ____. (Equipaje).", "options": ["luggage", "luggages", "bags", "suitcases"], "correct_answer": "luggage", "explanation": "Luggage (o baggage) = equipaje (incontable, no lleva 's')." },
+        { "id": "a1-129-q6", "type": "quiz_choice", "question": "The ____ time is 10:30 AM. (Salida).", "options": ["departure", "arrival", "arriving", "leaving"], "correct_answer": "departure", "explanation": "Departure = salida." },
+        { "id": "a1-129-q7", "type": "quiz_choice", "question": "The ____ time is 2:00 PM. (Llegada).", "options": ["arrival", "departure", "arriving", "leaving"], "correct_answer": "arrival", "explanation": "Arrival = llegada." },
+        { "id": "a1-129-q8", "type": "quiz_choice", "question": "I am going on a ____ ____ to Berlin. (Viaje de negocios).", "options": ["business trip", "work travel", "job trip", "business journey"], "correct_answer": "business trip", "explanation": "Business trip = viaje de negocios." },
+        { "id": "a1-129-q9", "type": "quiz_choice", "question": "Can I have a ____ for the taxi? (Recibo).", "options": ["receipt", "recipe", "ticket", "paper"], "correct_answer": "receipt", "explanation": "Receipt (la 'p' no suena) = recibo." },
+        { "id": "a1-129-q10", "type": "quiz_choice", "question": "Please check the travel ____. (Itinerario).", "options": ["itinerary", "agenda", "list", "schedule"], "correct_answer": "itinerary", "explanation": "Itinerary = itinerario." },
+        { "id": "a1-129-q11", "type": "quiz_choice", "question": "We need to find ____ for the team. (Alojamiento).", "options": ["accommodation", "hotel", "house", "room"], "correct_answer": "accommodation", "explanation": "Accommodation = alojamiento." },
+        { "id": "a1-129-q12", "type": "quiz_choice", "question": "The flight is ____ by one hour. (Retrasado).", "options": ["delayed", "cancelled", "late", "stopped"], "correct_answer": "delayed", "explanation": "Delayed = retrasado/demorado." },
+        { "id": "a1-129-q13", "type": "quiz_choice", "question": "I have to ____ ____ at the hotel before 10 PM. (Registrarme/Hacer check-in).", "options": ["check in", "check out", "book", "enter"], "correct_answer": "check in", "explanation": "Check in." },
+        { "id": "a1-129-q14", "type": "quiz_choice", "question": "Don't forget to ____ ____ of the hotel tomorrow morning. (Registrar salida).", "options": ["check out", "check in", "leave", "exit"], "correct_answer": "check out", "explanation": "Check out." },
+        { "id": "a1-129-q15", "type": "quiz_choice", "question": "Is this a direct ____? (Vuelo).", "options": ["flight", "plane", "travel", "trip"], "correct_answer": "flight", "explanation": "Direct flight = vuelo directo." },
+        { "id": "a1-129-q16", "type": "quiz_choice", "question": "I prefer an ____ seat. (Asiento de pasillo).", "options": ["aisle", "window", "middle", "front"], "correct_answer": "aisle", "explanation": "Aisle seat = asiento de pasillo (la 's' es muda)." },
+        { "id": "a1-129-q17", "type": "quiz_choice", "question": "I would like a ____ seat. (Asiento de ventana).", "options": ["window", "aisle", "middle", "back"], "correct_answer": "window", "explanation": "Window seat." },
+        { "id": "a1-129-q18", "type": "quiz_choice", "question": "Where is the ____ claim? (Reclamo de equipaje).", "options": ["baggage", "suitcase", "bag", "box"], "correct_answer": "baggage", "explanation": "Baggage claim (o luggage claim) = reclamo de equipaje." },
+        { "id": "a1-129-q19", "type": "quiz_choice", "question": "I need to pass through ____. (Seguridad).", "options": ["security", "police", "guards", "check"], "correct_answer": "security", "explanation": "Security = seguridad del aeropuerto." },
+        { "id": "a1-129-q20", "type": "quiz_choice", "question": "Show your ____ to the officer. (Pasaporte).", "options": ["passport", "card", "ID", "ticket"], "correct_answer": "passport", "explanation": "Passport." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de vocabulario correcta.",
+      "questions": [
+        { "id": "a1-129-f1", "type": "fill_input", "question": "I need to ____ a hotel. (Reservar).", "correct_answer": "book", "explanation": "book." },
+        { "id": "a1-129-f2", "type": "fill_input", "question": "My ____ is at 8 AM. (Vuelo).", "correct_answer": "flight", "explanation": "flight." },
+        { "id": "a1-129-f3", "type": "fill_input", "question": "Show your ____ ____. (Pase de abordar).", "correct_answer": "boarding pass", "explanation": "boarding pass." },
+        { "id": "a1-129-f4", "type": "fill_input", "question": "Go to ____ 14. (Puerta de embarque).", "correct_answer": "gate", "explanation": "gate." },
+        { "id": "a1-129-f5", "type": "fill_input", "question": "I have two pieces of ____. (Equipaje).", "correct_answer": "luggage", "explanation": "luggage / baggage." },
+        { "id": "a1-129-f6", "type": "fill_input", "question": "The ____ time is 10 AM. (Salida).", "correct_answer": "departure", "explanation": "departure." },
+        { "id": "a1-129-f7", "type": "fill_input", "question": "I am on a ____ ____. (Viaje de negocios).", "correct_answer": "business trip", "explanation": "business trip." },
+        { "id": "a1-129-f8", "type": "fill_input", "question": "Can I have a ____? (Recibo).", "correct_answer": "receipt", "explanation": "receipt." },
+        { "id": "a1-129-f9", "type": "fill_input", "question": "Check the ____. (Itinerario).", "correct_answer": "itinerary", "explanation": "itinerary." },
+        { "id": "a1-129-f10", "type": "fill_input", "question": "The flight is ____. (Retrasado).", "correct_answer": "delayed", "explanation": "delayed." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-129-p1", "source": "To book", "target": "Reservar"},
+        {"id": "a1-129-p2", "source": "Flight", "target": "Vuelo"},
+        {"id": "a1-129-p3", "source": "Boarding pass", "target": "Pase de abordar"},
+        {"id": "a1-129-p4", "source": "Gate", "target": "Puerta de embarque"},
+        {"id": "a1-129-p5", "source": "Luggage / Baggage", "target": "Equipaje"},
+        {"id": "a1-129-p6", "source": "Departure / Arrival", "target": "Salida / Llegada"},
+        {"id": "a1-129-p7", "source": "Business trip", "target": "Viaje de negocios"},
+        {"id": "a1-129-p8", "source": "Receipt", "target": "Recibo / Comprobante de pago"},
+        {"id": "a1-129-p9", "source": "Itinerary", "target": "Itinerario"},
+        {"id": "a1-129-p10", "source": "Delayed", "target": "Retrasado / Demorado"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-129-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need to book a hotel.", "options": ["I need to book a hotel.", "I want to book a hotel.", "She needs to book a hotel.", "We need to book a hotel."], "correct_answer": "I need to book a hotel.", "explanation": "Audio exacto." },
+        { "id": "a1-129-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My flight is at 8 AM.", "options": ["My flight is at 8 AM.", "The flight is at 8 AM.", "His flight is at 8 AM.", "My train is at 8 AM."], "correct_answer": "My flight is at 8 AM.", "explanation": "Audio exacto." },
+        { "id": "a1-129-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please show your boarding pass.", "options": ["Please show your boarding pass.", "Please show your passport.", "Please give me your boarding pass.", "Show me your boarding pass."], "correct_answer": "Please show your boarding pass.", "explanation": "Audio exacto." },
+        { "id": "a1-129-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The flight is boarding at gate 14.", "options": ["The flight is boarding at gate 14.", "The plane is boarding at gate 14.", "The flight is leaving at gate 14.", "The flight is at gate 14."], "correct_answer": "The flight is boarding at gate 14.", "explanation": "Audio exacto." },
+        { "id": "a1-129-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have two pieces of luggage.", "options": ["I have two pieces of luggage.", "I have three pieces of luggage.", "She has two pieces of luggage.", "I have two bags."], "correct_answer": "I have two pieces of luggage.", "explanation": "Audio exacto." },
+        { "id": "a1-129-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am going on a business trip.", "options": ["I am going on a business trip.", "He is going on a business trip.", "I am taking a business trip.", "I go on a business trip."], "correct_answer": "I am going on a business trip.", "explanation": "Audio exacto." },
+        { "id": "a1-129-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I have a receipt?", "options": ["Can I have a receipt?", "Can you give me a receipt?", "Do you have a receipt?", "I need a receipt."], "correct_answer": "Can I have a receipt?", "explanation": "Audio exacto." },
+        { "id": "a1-129-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please check the itinerary.", "options": ["Please check the itinerary.", "Please read the itinerary.", "Let's check the itinerary.", "Please check the agenda."], "correct_answer": "Please check the itinerary.", "explanation": "Audio exacto." },
+        { "id": "a1-129-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The flight is delayed by one hour.", "options": ["The flight is delayed by one hour.", "The flight is delayed by two hours.", "The train is delayed by one hour.", "The flight is late by one hour."], "correct_answer": "The flight is delayed by one hour.", "explanation": "Audio exacto." },
+        { "id": "a1-129-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I prefer an aisle seat.", "options": ["I prefer an aisle seat.", "I want an aisle seat.", "I prefer a window seat.", "She prefers an aisle seat."], "correct_answer": "I prefer an aisle seat.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

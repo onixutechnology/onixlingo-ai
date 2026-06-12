@@ -1,0 +1,101 @@
+{
+  "id": "a1-96",
+  "title": "Business Travel: Transportation",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Travel", "Transportation", "Business"],
+  "completion_message": "¡Excelente! Ahora dominas el vocabulario esencial de transporte para tus viajes de negocios en inglés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Transporte en Viajes de Negocios",
+      "parts": [
+        { "visual": "Medios de transporte comunes: Plane (avión), Train (tren), Taxi / Cab (taxi), Bus (autobús), Subway / Metro (metro), Car (auto/coche).", "audio": "Common means of transport: Plane, Train, Taxi or Cab, Bus, Subway or Metro, Car." },
+        { "visual": "Frases clave: Take the train (Tomar el tren). Book a flight (Reservar un vuelo). Miss the bus (Perder el autobús). The flight is delayed (El vuelo está retrasado).", "audio": "Key phrases: Take the train. Book a flight. Miss the bus. The flight is delayed." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra de transporte correcta.",
+      "questions": [
+        { "id": "a1-96-q1", "type": "quiz_choice", "question": "I ____ the train to the city center. (Tomo).", "options": ["take", "ride", "drive", "go"], "correct_answer": "take", "explanation": "Take the train = tomar el tren." },
+        { "id": "a1-96-q2", "type": "quiz_choice", "question": "I need to ____ a flight to New York. (Reservar).", "options": ["book", "take", "catch", "find"], "correct_answer": "book", "explanation": "Book a flight = reservar un vuelo." },
+        { "id": "a1-96-q3", "type": "quiz_choice", "question": "The flight is ____. We have to wait. (Retrasado).", "options": ["delayed", "cancelled", "late", "slow"], "correct_answer": "delayed", "explanation": "Delayed = retrasado." },
+        { "id": "a1-96-q4", "type": "quiz_choice", "question": "Hurry up! We will ____ the bus. (Perder).", "options": ["miss", "lose", "forget", "skip"], "correct_answer": "miss", "explanation": "Miss the bus = perder el autobús." },
+        { "id": "a1-96-q5", "type": "quiz_choice", "question": "Can you call a ____? (Taxi).", "options": ["taxi", "cab", "car", "bus"], "correct_answer": "taxi", "explanation": "Taxi / Cab = taxi." },
+        { "id": "a1-96-q6", "type": "quiz_choice", "question": "The train ____ at 9:15. (Sale/Parte).", "options": ["departs", "arrives", "leaves", "goes"], "correct_answer": "departs", "explanation": "Departs = sale/parte." },
+        { "id": "a1-96-q7", "type": "quiz_choice", "question": "We ____ at the airport at 7 AM. (Llegamos).", "options": ["arrive", "departure", "left", "board"], "correct_answer": "arrive", "explanation": "Arrive at the airport = llegar al aeropuerto." },
+        { "id": "a1-96-q8", "type": "quiz_choice", "question": "My flight is at Terminal ____. (Número / Letra).", "options": ["two", "second", "2nd", "the two"], "correct_answer": "two", "explanation": "Terminal two = Terminal 2 (números cardinales)." },
+        { "id": "a1-96-q9", "type": "quiz_choice", "question": "I need a one-____ ticket to London. (solo ida).", "options": ["way", "trip", "side", "direction"], "correct_answer": "way", "explanation": "One-way ticket = boleto de ida." },
+        { "id": "a1-96-q10", "type": "quiz_choice", "question": "I need a ____-trip ticket. (ida y vuelta).", "options": ["round", "return", "both", "double"], "correct_answer": "round", "explanation": "Round-trip ticket = boleto de ida y vuelta." },
+        { "id": "a1-96-q11", "type": "quiz_choice", "question": "I travel ____ business class. (En clase ejecutiva).", "options": ["in", "by", "on", "with"], "correct_answer": "in", "explanation": "Travel in business class." },
+        { "id": "a1-96-q12", "type": "quiz_choice", "question": "I travel ____ plane. (En avión).", "options": ["by", "in", "on", "with"], "correct_answer": "by", "explanation": "Travel by plane = viajar en avión." },
+        { "id": "a1-96-q13", "type": "quiz_choice", "question": "Where is the ____? I need to check in. (Mostrador).", "options": ["check-in desk", "boarding gate", "customs", "terminal"], "correct_answer": "check-in desk", "explanation": "Check-in desk = mostrador de facturación." },
+        { "id": "a1-96-q14", "type": "quiz_choice", "question": "I need to ____ my luggage. (Facturar).", "options": ["check in", "carry", "take", "put"], "correct_answer": "check in", "explanation": "Check in luggage = facturar el equipaje." },
+        { "id": "a1-96-q15", "type": "quiz_choice", "question": "Please go to ____ 12. (Puerta de embarque).", "options": ["gate", "door", "exit", "platform"], "correct_answer": "gate", "explanation": "Gate = puerta de embarque." },
+        { "id": "a1-96-q16", "type": "quiz_choice", "question": "The train ____ on Platform 3. (Sale desde).", "options": ["departs from", "arrives at", "leaves to", "goes at"], "correct_answer": "departs from", "explanation": "Departs from Platform 3." },
+        { "id": "a1-96-q17", "type": "quiz_choice", "question": "My ____ number is AA 123. (Número de vuelo).", "options": ["flight", "train", "ticket", "trip"], "correct_answer": "flight", "explanation": "Flight number = número de vuelo." },
+        { "id": "a1-96-q18", "type": "quiz_choice", "question": "Is there a direct ____? (Vuelo directo).", "options": ["flight", "train", "route", "trip"], "correct_answer": "flight", "explanation": "Direct flight = vuelo directo." },
+        { "id": "a1-96-q19", "type": "quiz_choice", "question": "The trip ____ three hours. (Dura).", "options": ["takes", "makes", "does", "has"], "correct_answer": "takes", "explanation": "The trip takes = el viaje dura." },
+        { "id": "a1-96-q20", "type": "quiz_choice", "question": "We need to go through ____. (Control de seguridad).", "options": ["security", "customs", "immigration", "baggage"], "correct_answer": "security", "explanation": "Security = control de seguridad." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término correcto de transporte.",
+      "questions": [
+        { "id": "a1-96-f1", "type": "fill_input", "question": "I ____ the train. (Tomo el tren).", "correct_answer": "take", "explanation": "take." },
+        { "id": "a1-96-f2", "type": "fill_input", "question": "I need to ____ a flight. (Reservar).", "correct_answer": "book", "explanation": "book." },
+        { "id": "a1-96-f3", "type": "fill_input", "question": "The flight is ____. (Retrasado).", "correct_answer": "delayed", "explanation": "delayed." },
+        { "id": "a1-96-f4", "type": "fill_input", "question": "We will ____ the bus. (Perder).", "correct_answer": "miss", "explanation": "miss." },
+        { "id": "a1-96-f5", "type": "fill_input", "question": "The train ____ at 9:15. (Sale).", "correct_answer": "departs", "explanation": "departs." },
+        { "id": "a1-96-f6", "type": "fill_input", "question": "A one-____ ticket. (Ida).", "correct_answer": "way", "explanation": "way." },
+        { "id": "a1-96-f7", "type": "fill_input", "question": "I travel ____ plane. (Preposición).", "correct_answer": "by", "explanation": "by." },
+        { "id": "a1-96-f8", "type": "fill_input", "question": "Please go to ____ 12. (Puerta).", "correct_answer": "gate", "explanation": "gate." },
+        { "id": "a1-96-f9", "type": "fill_input", "question": "My ____ number is AA123. (Vuelo).", "correct_answer": "flight", "explanation": "flight." },
+        { "id": "a1-96-f10", "type": "fill_input", "question": "The trip ____ three hours. (Dura).", "correct_answer": "takes", "explanation": "takes." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-96-p1", "source": "Take the train", "target": "Tomar el tren"},
+        {"id": "a1-96-p2", "source": "Book a flight", "target": "Reservar un vuelo"},
+        {"id": "a1-96-p3", "source": "The flight is delayed", "target": "El vuelo está retrasado"},
+        {"id": "a1-96-p4", "source": "Miss the bus", "target": "Perder el autobús"},
+        {"id": "a1-96-p5", "source": "One-way ticket", "target": "Boleto de ida"},
+        {"id": "a1-96-p6", "source": "Round-trip ticket", "target": "Boleto de ida y vuelta"},
+        {"id": "a1-96-p7", "source": "Travel by plane", "target": "Viajar en avión"},
+        {"id": "a1-96-p8", "source": "Check-in desk", "target": "Mostrador de facturación"},
+        {"id": "a1-96-p9", "source": "Boarding gate", "target": "Puerta de embarque"},
+        {"id": "a1-96-p10", "source": "The trip takes 3 hours", "target": "El viaje dura 3 horas"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-96-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I take the train to the city center.", "options": ["I take the train to the city center.", "She takes the train to the city center.", "I take the bus to the city center.", "I take a train to the city center."], "correct_answer": "I take the train to the city center.", "explanation": "Audio exacto." },
+        { "id": "a1-96-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need to book a flight.", "options": ["I need to book a flight.", "She needs to book a flight.", "I need to take a flight.", "I want to book a flight."], "correct_answer": "I need to book a flight.", "explanation": "Audio exacto." },
+        { "id": "a1-96-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The flight is delayed.", "options": ["The flight is delayed.", "The train is delayed.", "A flight is delayed.", "The flight was delayed."], "correct_answer": "The flight is delayed.", "explanation": "Audio exacto." },
+        { "id": "a1-96-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will miss the bus.", "options": ["We will miss the bus.", "We missed the bus.", "I will miss the bus.", "We will lose the bus."], "correct_answer": "We will miss the bus.", "explanation": "Audio exacto." },
+        { "id": "a1-96-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need a one-way ticket.", "options": ["I need a one-way ticket.", "She needs a one-way ticket.", "I want a one-way ticket.", "I need a round-trip ticket."], "correct_answer": "I need a one-way ticket.", "explanation": "Audio exacto." },
+        { "id": "a1-96-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I travel by plane.", "options": ["I travel by plane.", "She travels by plane.", "I travel by train.", "I fly by plane."], "correct_answer": "I travel by plane.", "explanation": "Audio exacto." },
+        { "id": "a1-96-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please go to gate twelve.", "options": ["Please go to gate twelve.", "Please go to gate two.", "Please go to terminal twelve.", "Go to gate twelve please."], "correct_answer": "Please go to gate twelve.", "explanation": "Audio exacto." },
+        { "id": "a1-96-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My flight number is double A one twenty-three.", "options": ["My flight number is double A one twenty-three.", "Her flight number is double A one twenty-three.", "My train number is double A one twenty-three.", "My flight number is double A two twenty-three."], "correct_answer": "My flight number is double A one twenty-three.", "explanation": "Audio exacto." },
+        { "id": "a1-96-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The trip takes three hours.", "options": ["The trip takes three hours.", "The flight takes three hours.", "The trip takes two hours.", "A trip takes three hours."], "correct_answer": "The trip takes three hours.", "explanation": "Audio exacto." },
+        { "id": "a1-96-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to go through security.", "options": ["We need to go through security.", "They need to go through security.", "We need to go through customs.", "We have to go through security."], "correct_answer": "We need to go through security.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

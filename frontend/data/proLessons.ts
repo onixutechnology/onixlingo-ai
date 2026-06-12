@@ -110,8 +110,8 @@ lessons['pro-b1-1'] = {
         title: 'The Art of the Executive Intro',
         parts: [
           {
-            visual: "In the C-Suite world, the first 7 seconds are crucial.\n\nUnlike casual introductions, an executive introduction must establish two things immediately:\n1. Competence (Who you are)\n2. Value (Why it matters)\n\nAvoid saying: 'Hi, I'm [Name].'\nInstead, use: 'Good morning. I'm [Name], leading the [Department] division.'",
-            audio: "In the C-Suite world, the first 7 seconds are crucial..." 
+            visual: "In the Alta Dirección world, the first 7 seconds are crucial.\n\nUnlike casual introductions, an executive introduction must establish two things immediately:\n1. Competence (Who you are)\n2. Value (Why it matters)\n\nAvoid saying: 'Hi, I'm [Name].'\nInstead, use: 'Good morning. I'm [Name], leading the [Department] division.'",
+            audio: "In the Alta Dirección world, the first 7 seconds are crucial..." 
           }
         ]
       },

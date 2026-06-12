@@ -1,0 +1,107 @@
+{
+  "id": "a1-4",
+  "title": "Telling Time",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Time", "Clock"],
+  "completion_message": "¡A tiempo! Has dominado cómo expresar la hora y organizar tus horarios laborales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Programación de Horarios",
+      "parts": [
+        {
+          "visual": "Aprender a decir la hora usando la palabra 'clock' y 'o'clock' es fundamental para no llegar tarde a ninguna reunión.",
+          "audio": "Learning to tell time using the word 'clock' is fundamental to not be late for any meeting."
+        },
+        {
+          "visual": "Recuerda que usamos 'at' para horas específicas (at 5 o'clock).",
+          "audio": "Remember that we use 'at' for specific times."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la respuesta correcta sobre el manejo del tiempo.",
+      "questions": [
+        { "id": "a1-4-q1", "type": "quiz_choice", "question": "The meeting is at 10 ____.", "options": ["o'clock", "clock", "clocks", "o clock"], "correct_answer": "o'clock", "explanation": "Para la hora en punto usamos 'o'clock'." },
+        { "id": "a1-4-q2", "type": "quiz_choice", "question": "Look at the ____ on the wall.", "options": ["clock", "watch", "time", "hour"], "correct_answer": "clock", "explanation": "El reloj de pared o escritorio se llama 'clock'." },
+        { "id": "a1-4-q3", "type": "quiz_choice", "question": "I wear a ____ on my wrist.", "options": ["watch", "clock", "o'clock", "timer"], "correct_answer": "watch", "explanation": "El reloj de pulsera se llama 'watch'." },
+        { "id": "a1-4-q4", "type": "quiz_choice", "question": "What ____ is the presentation?", "options": ["time", "clock", "hour", "watch"], "correct_answer": "time", "explanation": "Preguntamos 'What time' para saber la hora." },
+        { "id": "a1-4-q5", "type": "quiz_choice", "question": "We work around the ____.", "options": ["clock", "time", "hour", "watch"], "correct_answer": "clock", "explanation": "'Around the clock' es una expresión para decir 'las 24 horas'." },
+        { "id": "a1-4-q6", "type": "quiz_choice", "question": "The ____ is ticking.", "options": ["clock", "time", "watch", "hour"], "correct_answer": "clock", "explanation": "Expresión para indicar que el tiempo se acaba." },
+        { "id": "a1-4-q7", "type": "quiz_choice", "question": "I set my alarm ____ for 6 AM.", "options": ["clock", "watch", "time", "hour"], "correct_answer": "clock", "explanation": "El despertador se llama 'alarm clock'." },
+        { "id": "a1-4-q8", "type": "quiz_choice", "question": "Please submit it by 5 ____.", "options": ["o'clock", "clock", "hour", "time"], "correct_answer": "o'clock", "explanation": "Para decir las 5 en punto." },
+        { "id": "a1-4-q9", "type": "quiz_choice", "question": "Punch the ____ when you arrive.", "options": ["clock", "card", "time", "watch"], "correct_answer": "clock", "explanation": "'Punch the clock' significa registrar la entrada." },
+        { "id": "a1-4-q10", "type": "quiz_choice", "question": "Is that ____ correct?", "options": ["clock", "time", "hour", "o'clock"], "correct_answer": "clock", "explanation": "Preguntando si el aparato marca bien la hora." },
+        { "id": "a1-4-q11", "type": "quiz_choice", "question": "The ____ struck midnight.", "options": ["clock", "time", "watch", "hour"], "correct_answer": "clock", "explanation": "Referencia al reloj dando la hora." },
+        { "id": "a1-4-q12", "type": "quiz_choice", "question": "I need a new wall ____ for my office.", "options": ["clock", "watch", "time", "hour"], "correct_answer": "clock", "explanation": "Reloj de pared." },
+        { "id": "a1-4-q13", "type": "quiz_choice", "question": "It's exactly three ____.", "options": ["o'clock", "clock", "clocks", "hour"], "correct_answer": "o'clock", "explanation": "Las 3 en punto." },
+        { "id": "a1-4-q14", "type": "quiz_choice", "question": "We are working against the ____.", "options": ["clock", "time", "watch", "hour"], "correct_answer": "clock", "explanation": "'Against the clock' significa contra reloj." },
+        { "id": "a1-4-q15", "type": "quiz_choice", "question": "Do you have the ____?", "options": ["time", "clock", "watch", "hour"], "correct_answer": "time", "explanation": "Forma educada de preguntar la hora." },
+        { "id": "a1-4-q16", "type": "quiz_choice", "question": "The grandfather ____ is antique.", "options": ["clock", "watch", "time", "hour"], "correct_answer": "clock", "explanation": "Reloj de pie clásico." },
+        { "id": "a1-4-q17", "type": "quiz_choice", "question": "Time is ____.", "options": ["money", "clock", "watch", "hour"], "correct_answer": "money", "explanation": "El tiempo es oro (dinero)." },
+        { "id": "a1-4-q18", "type": "quiz_choice", "question": "Look at the ____; we are late.", "options": ["clock", "time", "watch", "hour"], "correct_answer": "clock", "explanation": "Mirar el reloj de la oficina." },
+        { "id": "a1-4-q19", "type": "quiz_choice", "question": "My ____ stopped working.", "options": ["watch", "clock", "time", "hour"], "correct_answer": "watch", "explanation": "Reloj personal." },
+        { "id": "a1-4-q20", "type": "quiz_choice", "question": "Turn back the ____.", "options": ["clock", "time", "watch", "hour"], "correct_answer": "clock", "explanation": "Retroceder el tiempo (expresión)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta relacionada al tiempo.",
+      "questions": [
+        { "id": "a1-4-f1", "type": "fill_input", "question": "The meeting is at two ____.", "correct_answer": "o'clock", "explanation": "Hora exacta." },
+        { "id": "a1-4-f2", "type": "fill_input", "question": "Look at the wall ____.", "correct_answer": "clock", "explanation": "Reloj de pared." },
+        { "id": "a1-4-f3", "type": "fill_input", "question": "I wear a ____ on my arm.", "correct_answer": "watch", "explanation": "Reloj de pulsera." },
+        { "id": "a1-4-f4", "type": "fill_input", "question": "What ____ is it?", "correct_answer": "time", "explanation": "Preguntar la hora." },
+        { "id": "a1-4-f5", "type": "fill_input", "question": "We are working against the ____.", "correct_answer": "clock", "explanation": "Trabajar contrarreloj." },
+        { "id": "a1-4-f6", "type": "fill_input", "question": "Set your alarm ____.", "correct_answer": "clock", "explanation": "Reloj despertador." },
+        { "id": "a1-4-f7", "type": "fill_input", "question": "It is precisely 5 ____.", "correct_answer": "o'clock", "explanation": "Hora en punto." },
+        { "id": "a1-4-f8", "type": "fill_input", "question": "The ____ is ticking.", "correct_answer": "clock", "explanation": "Expresión corporativa." },
+        { "id": "a1-4-f9", "type": "fill_input", "question": "Do you have the ____?", "correct_answer": "time", "explanation": "Tienes la hora." },
+        { "id": "a1-4-f10", "type": "fill_input", "question": "Time is ____.", "correct_answer": "money", "explanation": "El tiempo es dinero." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-4-p1", "source": "Clock", "target": "Reloj (pared)"},
+        {"id": "a1-4-p2", "source": "Watch", "target": "Reloj (pulsera)"},
+        {"id": "a1-4-p3", "source": "Time", "target": "Tiempo/Hora"},
+        {"id": "a1-4-p4", "source": "Hour", "target": "Hora (duración)"},
+        {"id": "a1-4-p5", "source": "Minute", "target": "Minuto"},
+        {"id": "a1-4-p6", "source": "Second", "target": "Segundo"},
+        {"id": "a1-4-p7", "source": "Late", "target": "Tarde"},
+        {"id": "a1-4-p8", "source": "Early", "target": "Temprano"},
+        {"id": "a1-4-p9", "source": "Meeting", "target": "Reunión"},
+        {"id": "a1-4-p10", "source": "Schedule", "target": "Horario"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-4-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is five o'clock.", "options": ["It is five o'clock.", "It is four o'clock.", "It is five clocks.", "Is it five o'clock?"], "correct_answer": "It is five o'clock.", "explanation": "Audio exacto." },
+        { "id": "a1-4-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Look at the clock.", "options": ["Look at the clock.", "Look at the watch.", "Look at the time.", "Look at that clock."], "correct_answer": "Look at the clock.", "explanation": "Audio exacto." },
+        { "id": "a1-4-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What time is it?", "options": ["What time is it?", "What clock is it?", "What time is this?", "What is the time?"], "correct_answer": "What time is it?", "explanation": "Audio exacto." },
+        { "id": "a1-4-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are against the clock.", "options": ["We are against the clock.", "We work against the clock.", "They are against the clock.", "We are against the time."], "correct_answer": "We are against the clock.", "explanation": "Audio exacto." },
+        { "id": "a1-4-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Set the alarm clock.", "options": ["Set the alarm clock.", "Set the alarm watch.", "Get the alarm clock.", "Set an alarm clock."], "correct_answer": "Set the alarm clock.", "explanation": "Audio exacto." },
+        { "id": "a1-4-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The clock is broken.", "options": ["The clock is broken.", "The watch is broken.", "The clock is working.", "The clock was broken."], "correct_answer": "The clock is broken.", "explanation": "Audio exacto." },
+        { "id": "a1-4-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have no time.", "options": ["I have no time.", "I have no clock.", "I have some time.", "I had no time."], "correct_answer": "I have no time.", "explanation": "Audio exacto." },
+        { "id": "a1-4-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is noon.", "options": ["It is noon.", "It is soon.", "Is it noon?", "It is moon."], "correct_answer": "It is noon.", "explanation": "Audio exacto." },
+        { "id": "a1-4-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Don't be late.", "options": ["Don't be late.", "Don't be early.", "Do not be late.", "Don't be lately."], "correct_answer": "Don't be late.", "explanation": "Audio exacto." },
+        { "id": "a1-4-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Time is money.", "options": ["Time is money.", "Time is monkeys.", "Time was money.", "The time is money."], "correct_answer": "Time is money.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

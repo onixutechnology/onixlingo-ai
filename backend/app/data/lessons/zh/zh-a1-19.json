@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-19",
+  "title": "Las Matemáticas del Chino",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Numbers", "Vocabulary", "Logic"],
+  "completion_message": "¡Eres un genio matemático! Ahora sabes contar hasta 99 sin tener que aprenderte 90 palabras nuevas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "La Lógica de los Números",
+      "parts": [
+        {
+          "visual": "El Número 10: 十 (shí)\n\nVisualmente, el 10 es una cruz (+). Se pronuncia 'shí' en segundo tono (subiendo).\n\nEn español, tenemos que aprender palabras raras para los números mayores de 10: Once, Doce, Quince, Veinte, Treinta.\n¡En mandarín NO existen estas palabras! Todo es una fórmula matemática.\n\nLógica de Adición (11 al 19):\nPara hacer el 11, simplemente sumas 10 + 1.\n- 11 = 十一 (shí yī).\n- 12 = 十二 (shí èr).\n- 15 = 十五 (shí wǔ).",
+          "audio": "Hoy vas a entender por qué los niños chinos son tan buenos en matemáticas desde pequeños. El idioma está diseñado para enseñarles a sumar y multiplicar automáticamente. El número 10 se dice shí. Se escribe como una cruz, igual que el símbolo de sumar. Si quieres decir Once, no hay una palabra nueva que memorizar. Literalmente dices Diez, Uno. Shí yī. El doce es Diez, Dos. Shí èr. Así que el quince, simplemente es Diez, Cinco. Shí wǔ. Es pura adición lógica."
+        },
+        {
+          "visual": "Lógica de Multiplicación (Decenas puras):\n\nPara hacer el 20, simplemente multiplicas 2 x 10.\n- 20 = 二十 (èr shí).\n- 30 = 三十 (sān shí).\n- 90 = 九十 (jiǔ shí).\n\nCombinando Adición y Multiplicación:\nPara hacer un número complejo como el 21, multiplicas 2 x 10 y le sumas 1.\n- 21 = 二十一 (èr shí yī).\n- 35 = 三十五 (sān shí wǔ).\n- 99 = 九十九 (jiǔ shí jiǔ) -> Nueve-Dieces-Nueve.",
+          "audio": "Ahora veamos las decenas. Si para el once ponías el diez primero y luego el uno para sumar, para hacer el veinte pones el dos primero para multiplicar. Así que veinte es Literalmente Dos-Dieces. Èr shí. El treinta es Tres-Dieces. Sān shí. Súper fácil. ¿Y qué pasa si queremos un número combinado como el veintiuno? Usamos ambas reglas. Primero multiplicas, luego sumas. Dos-Diez-Uno. Èr shí yī. El noventa y nueve sería Nueve-Diez-Nueve. Jiǔ shí jiǔ. Sabiendo contar del uno al diez, automáticamente sabes contar hasta el 99 sin esfuerzo."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra tus habilidades matemáticas en mandarín.",
+      "questions": [
+        { "id": "zh-a1-19-q1", "type": "quiz_choice", "question": "¿Qué número es 十 (shí)?", "options": ["10.", "1.", "5.", "100."], "correct_answer": "10.", "explanation": "El símbolo de cruz 十 representa el número 10." },
+        { "id": "zh-a1-19-q2", "type": "quiz_choice", "question": "¿Cómo es la lógica para formar el número 11?", "options": ["Se suma 10 + 1 (shí yī).", "Es una palabra completamente nueva.", "Se dice 1 + 1 (yī yī).", "Se dice 1 + 10 (yī shí)."], "correct_answer": "Se suma 10 + 1 (shí yī).", "explanation": "10 (shí) seguido de 1 (yī) = 11." },
+        { "id": "zh-a1-19-q3", "type": "quiz_choice", "question": "¿Cómo se dice 13 en mandarín?", "options": ["Shí sān (十三).", "Sān shí (三十).", "Sān (三).", "Yī sān (一三)."], "correct_answer": "Shí sān (十三).", "explanation": "Diez (shí) + tres (sān)." },
+        { "id": "zh-a1-19-q4", "type": "quiz_choice", "question": "¿Cómo es la lógica para formar las decenas puras, como el 20?", "options": ["Se multiplica la unidad por diez (èr shí).", "Se dice el número dos veces (èr èr).", "Se suma 10 + 10 (shí shí).", "Es una palabra nueva que hay que memorizar."], "correct_answer": "Se multiplica la unidad por diez (èr shí).", "explanation": "Poner el 2 (èr) antes del 10 (shí) implica 'dos dieces' = 20." },
+        { "id": "zh-a1-19-q5", "type": "quiz_choice", "question": "¿Cómo se dice 40 en mandarín?", "options": ["Sì shí (四十).", "Shí sì (十四).", "Sì (四).", "Sì sì (四四)."], "correct_answer": "Sì shí (四十).", "explanation": "Cuatro (sì) + diez (shí)." },
+        { "id": "zh-a1-19-q6", "type": "quiz_choice", "question": "¿Cuál de estos números es el 14 y cuál es el 40?", "options": ["14 es Shí sì, 40 es Sì shí.", "14 es Sì shí, 40 es Shí sì.", "Ambos se dicen igual, depende del contexto.", "Ninguno, se dicen con palabras diferentes."], "correct_answer": "14 es Shí sì, 40 es Sì shí.", "explanation": "10+4 = 14. 4x10 = 40. Cuidado con no confundirlos." },
+        { "id": "zh-a1-19-q7", "type": "quiz_choice", "question": "¿Cómo se dice 55 en mandarín?", "options": ["Wǔ shí wǔ (五十五).", "Wǔ wǔ (五五).", "Shí wǔ wǔ (十五五).", "Wǔ wǔ shí (五五十)."], "correct_answer": "Wǔ shí wǔ (五十五).", "explanation": "Cinco-Dieces-Cinco." },
+        { "id": "zh-a1-19-q8", "type": "quiz_choice", "question": "¿Qué número es Bā shí qī (八十七)?", "options": ["87.", "78.", "187.", "807."], "correct_answer": "87.", "explanation": "Ocho (bā) + diez (shí) + siete (qī)." },
+        { "id": "zh-a1-19-q9", "type": "quiz_choice", "question": "¿Qué número es Jiǔ shí jiǔ (九十九)?", "options": ["99.", "19.", "90.", "909."], "correct_answer": "99.", "explanation": "Nueve (jiǔ) + diez (shí) + nueve (jiǔ)." },
+        { "id": "zh-a1-19-q10", "type": "quiz_choice", "question": "¿Por qué es tan fácil aprender a contar en mandarín?", "options": ["Porque el sistema es estrictamente base-10, combinando multiplicaciones y adiciones lógicas sin vocabulario extra.", "Porque hay pocas palabras.", "Porque los números riman.", "Porque solo hay 10 números en total."], "correct_answer": "Porque el sistema es estrictamente base-10, combinando multiplicaciones y adiciones lógicas sin vocabulario extra.", "explanation": "No hay excepciones raras como 'once', 'quince' o el sistema francés (cuatro veintes y diez)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para los números compuestos. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-19-f1", "type": "fill_input", "question": "10: ____ (shi)", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-a1-19-f2", "type": "fill_input", "question": "11: shi ____ (yi)", "correct_answer": "yi", "explanation": "yi" },
+        { "id": "zh-a1-19-f3", "type": "fill_input", "question": "15: shi ____ (wu)", "correct_answer": "wu", "explanation": "wu" },
+        { "id": "zh-a1-19-f4", "type": "fill_input", "question": "20: ____ shi (er)", "correct_answer": "er", "explanation": "er" },
+        { "id": "zh-a1-19-f5", "type": "fill_input", "question": "30: ____ shi (san)", "correct_answer": "san", "explanation": "san" },
+        { "id": "zh-a1-19-f6", "type": "fill_input", "question": "21: er shi ____ (yi)", "correct_answer": "yi", "explanation": "yi" },
+        { "id": "zh-a1-19-f7", "type": "fill_input", "question": "55: wu ____ wu", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-a1-19-f8", "type": "fill_input", "question": "88: ____ shi ____ (ba)", "correct_answer": "ba", "explanation": "ba" },
+        { "id": "zh-a1-19-f9", "type": "fill_input", "question": "99: jiu shi ____", "correct_answer": "jiu", "explanation": "jiu" },
+        { "id": "zh-a1-19-f10", "type": "fill_input", "question": "14: ____ si", "correct_answer": "shi", "explanation": "shi" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y traduce el número correcto.",
+      "questions": [
+        { "id": "zh-a1-19-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "十一", "options": ["11", "21", "10", "1"], "correct_answer": "11", "explanation": "El audio dice: shí yī (10+1)." },
+        { "id": "zh-a1-19-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "二十", "options": ["20", "12", "2", "22"], "correct_answer": "20", "explanation": "El audio dice: èr shí (2x10)." },
+        { "id": "zh-a1-19-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "三十五", "options": ["35", "53", "15", "30"], "correct_answer": "35", "explanation": "El audio dice: sān shí wǔ (3x10+5)." },
+        { "id": "zh-a1-19-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "六十八", "options": ["68", "86", "16", "60"], "correct_answer": "68", "explanation": "El audio dice: liù shí bā (6x10+8)." },
+        { "id": "zh-a1-19-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "九十九", "options": ["99", "19", "90", "9"], "correct_answer": "99", "explanation": "El audio dice: jiǔ shí jiǔ (9x10+9)." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Numbers",
+      "pairs": [
+        {"id": "zh-a1-19-p1", "source": "十 (shí)", "target": "10"},
+        {"id": "zh-a1-19-p2", "source": "十一 (shí yī)", "target": "11"},
+        {"id": "zh-a1-19-p3", "source": "十五 (shí wǔ)", "target": "15"},
+        {"id": "zh-a1-19-p4", "source": "二十 (èr shí)", "target": "20"},
+        {"id": "zh-a1-19-p5", "source": "三十 (sān shí)", "target": "30"},
+        {"id": "zh-a1-19-p6", "source": "二十一 (èr shí yī)", "target": "21"},
+        {"id": "zh-a1-19-p7", "source": "四十五 (sì shí wǔ)", "target": "45"},
+        {"id": "zh-a1-19-p8", "source": "七十二 (qī shí èr)", "target": "72"},
+        {"id": "zh-a1-19-p9", "source": "八十八 (bā shí bā)", "target": "88"},
+        {"id": "zh-a1-19-p10", "source": "九十九 (jiǔ shí jiǔ)", "target": "99"}
+      ]
+    }
+  ]
+}

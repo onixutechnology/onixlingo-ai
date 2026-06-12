@@ -1,0 +1,95 @@
+{
+  "id": "fr-b2-03",
+  "title": "L'Expression du But et de la Crainte",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Subjunctive", "Goals", "Fears"],
+  "completion_message": "¡Excelente trabajo! Expresar intenciones y miedos con dos sujetos diferentes es una de las marcas de fuego del nivel B2. Tu francés es cada vez más preciso.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Metas y Miedos (B2)",
+      "parts": [
+        {
+          "visual": "L'Expression du But (El Objetivo):\n\n¿Cómo decimos 'PARA QUE'? Depende de quién hace la acción.\n\n1. Un solo sujeto (Yo hago algo PARA Yo lograr algo):\nUsamos POUR o AFIN DE + Infinitivo.\n- Je travaille POUR RÉUSSIR. (Trabajo para tener éxito).\n\n2. Dos sujetos (Yo hago algo PARA QUE TÚ logres algo):\nUsamos POUR QUE o AFIN QUE + Subjuntivo.\n- Je t'aide POUR QUE tu RÉUSSISSES. (Te ayudo para que [tú] tengas éxito).\n\n*Afin que* es más formal y se usa mucho en entornos profesionales.",
+          "audio": "En este nivel ya no puedes usar las mismas palabras básicas para todo. Si quieres hablar de tus objetivos y decir 'PARA QUE', la regla número uno es revisar cuántos sujetos hay en la frase. Si yo hago algo para mi propio beneficio, por ejemplo 'Yo trabajo para tener éxito', uso 'Pour' seguido del verbo normal: 'Je travaille POUR réussir'. Pero, ¿qué pasa si yo hago algo para que OTRA persona se beneficie? Por ejemplo 'Yo te ayudo PARA QUE TÚ tengas éxito'. Ahí tienes dos sujetos: Yo y Tú. En este caso, el francés te obliga a usar 'Pour que' más el subjuntivo. Dirías: 'Je t'aide POUR QUE tu RÉUSSISSES'. Y si estás en la oficina y quieres sonar muy profesional, puedes cambiar 'Pour que' por 'Afin que'. Significa lo mismo, pero suena mucho más elegante."
+        },
+        {
+          "visual": "L'Expression de la Crainte (El Temor):\n\nSe usa para prevenir algo malo. Significa 'Por miedo a (que)'.\n\n1. Un solo sujeto:\n- DE PEUR DE / DE CRAINTE DE + Infinitivo.\n- Je cours DE PEUR D'ÊTRE en retard. (Corro por miedo a llegar tarde).\n\n2. Dos sujetos:\n- DE PEUR QUE / DE CRAINTE QUE + Subjuntivo + 'ne' expletivo.\n- Je chuchote DE PEUR QU'il NE SE RÉVEILLE. (Susurro por miedo a que [él] se despierte).\n\nRecuerda: El 'ne' expletivo no significa 'no', es solo formalidad B2.",
+          "audio": "Ahora veamos la otra cara de la moneda: cuando haces algo para evitar un desastre. La expresión es 'Por miedo a' o 'De peur de'. La regla de los sujetos aplica exactamente igual aquí. Si yo corro por miedo a que YO llegue tarde, digo 'Je cours DE PEUR D'ÊTRE en retard'. Un solo sujeto, uso infinitivo. Pero si susurro por miedo a que ÉL se despierte, tenemos dos sujetos. Entonces usamos 'De peur QUE' y el verbo en subjuntivo: 'De peur qu'il SE RÉVEILLE'. Sin embargo, para dominar el nivel B2 de verdad, le vamos a añadir nuestro adorno favorito: el 'ne expletivo'. La frase completa y perfecta sería: 'Je chuchote DE PEUR QU'IL NE SE RÉVEILLE'. Suena súper avanzado y natural."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta evaluando si hay uno o dos sujetos.",
+      "questions": [
+        { "id": "frb2-03-q1", "type": "quiz_choice", "question": "Je parle lentement ____ tu comprennes. (PARA QUE).", "options": ["pour que", "pour", "afin de", "de peur que"], "correct_answer": "pour que", "explanation": "Dos sujetos (Je / tu) -> Pour que + subjuntivo (comprennes)." },
+        { "id": "frb2-03-q2", "type": "quiz_choice", "question": "Il étudie beaucoup ____ réussir son examen. (PARA).", "options": ["pour", "pour que", "afin que", "de peur que"], "correct_answer": "pour", "explanation": "Un solo sujeto (Il) -> Pour + infinitivo (réussir)." },
+        { "id": "frb2-03-q3", "type": "quiz_choice", "question": "Je te donne la clé afin que tu ____ entrer. (PARA QUE PUEDAS).", "options": ["puisses", "peux", "pourras", "puvoir"], "correct_answer": "puisses", "explanation": "Afin que + Subjuntivo de pouvoir -> tu puisses." },
+        { "id": "frb2-03-q4", "type": "quiz_choice", "question": "Il ne dit rien de peur de la ____. (POR MIEDO A despertarla - él).", "options": ["réveiller", "réveille", "ne réveille", "réveillât"], "correct_answer": "réveiller", "explanation": "Un solo sujeto (Il). De peur de + infinitivo (réveiller)." },
+        { "id": "frb2-03-q5", "type": "quiz_choice", "question": "Je cache le gâteau de crainte que les enfants ____ le mangent. (POR MIEDO A QUE).", "options": ["ne", "n'", "pas", "(nada)"], "correct_answer": "ne", "explanation": "De crainte que atrae el 'ne' expletivo -> de crainte que les enfants NE le mangent." },
+        { "id": "frb2-03-q6", "type": "quiz_choice", "question": "Je vais t'expliquer pour que ce ____ clair. (PARA QUE SEA claro).", "options": ["soit", "est", "sera", "serait"], "correct_answer": "soit", "explanation": "Pour que + Subjuntivo de Être -> soit." },
+        { "id": "frb2-03-q7", "type": "quiz_choice", "question": "Nous travaillons dur ____ finir avant midi. (CON EL FIN DE).", "options": ["afin de", "afin que", "pour que", "de peur de"], "correct_answer": "afin de", "explanation": "Un solo sujeto (Nous) -> afin de + infinitivo (finir)." },
+        { "id": "frb2-03-q8", "type": "quiz_choice", "question": "Prends un parapluie de peur qu'il ____. (POR MIEDO A QUE LLUEVA).", "options": ["ne pleuve", "pleut", "ne pleut", "pleuvra"], "correct_answer": "ne pleuve", "explanation": "De peur que + Subjuntivo + ne expletivo -> qu'il ne pleuve." },
+        { "id": "frb2-03-q9", "type": "quiz_choice", "question": "Elle crie pour qu'on l'____. (PARA QUE uno la ESCUCHE).", "options": ["entende", "entend", "entendra", "entendu"], "correct_answer": "entende", "explanation": "Pour que + Subjuntivo (qu'on l'entende)." },
+        { "id": "frb2-03-q10", "type": "quiz_choice", "question": "¿Qué par de conjunciones son exactamente iguales en significado y regla gramatical?", "options": ["Pour que y Afin que", "Pour que y Pour", "Afin de y Afin que"], "correct_answer": "Pour que y Afin que", "explanation": "Ambas significan 'para que' y ambas usan subjuntivo (Afin que es simplemente más formal)." },
+        { "id": "frb2-03-q11", "type": "quiz_choice", "question": "Je me dépêche de crainte d'____ en retard. (POR MIEDO A LLEGAR / ESTAR).", "options": ["être", "sois", "suis", "étant"], "correct_answer": "être", "explanation": "Un solo sujeto (Je). De crainte de + infinitivo -> d'être." },
+        { "id": "frb2-03-q12", "type": "quiz_choice", "question": "Il te prête sa voiture afin que tu ____ partir. (PARA QUE TE VAYAS).", "options": ["puisses", "peux", "partir", "pars"], "correct_answer": "puisses", "explanation": "Afin que + Subjuntivo (tu puisses)." },
+        { "id": "frb2-03-q13", "type": "quiz_choice", "question": "Ferme la fenêtre de peur que les moustiques ____. (NO ENTREN).", "options": ["n'entrent", "entrent", "ne pas entrent", "n'entreront"], "correct_answer": "n'entrent", "explanation": "De peur que + ne expletivo + subjuntivo -> qu'ils n'entrent." },
+        { "id": "frb2-03-q14", "type": "quiz_choice", "question": "Ils ont tout préparé pour que vous ____ satisfaits. (PARA QUE ESTÉN).", "options": ["soyez", "êtes", "seriez", "serez"], "correct_answer": "soyez", "explanation": "Pour que + Subjuntivo -> vous soyez." },
+        { "id": "frb2-03-q15", "type": "quiz_choice", "question": "Je l'ai invité ____ lui parler. (PARA HABLARLE - Yo lo invito y Yo le hablo).", "options": ["pour", "pour que", "afin que", "de peur de"], "correct_answer": "pour", "explanation": "Un solo sujeto principal que realiza ambas acciones -> pour + infinitivo." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Elige la forma correcta (pour / pour que) o escribe el verbo en la forma correcta (infinitivo o subjuntivo).",
+      "questions": [
+        { "id": "frb2-03-f1", "type": "fill_input", "question": "Je te donne ce livre ____ tu le lises. (pour / pour que)", "correct_answer": "pour que", "explanation": "pour que" },
+        { "id": "frb2-03-f2", "type": "fill_input", "question": "Je lis ce livre ____ apprendre. (pour / pour que)", "correct_answer": "pour", "explanation": "pour" },
+        { "id": "frb2-03-f3", "type": "fill_input", "question": "Il part tôt afin d'____ (arriver) à l'heure. (Infinitivo).", "correct_answer": "arriver", "explanation": "arriver" },
+        { "id": "frb2-03-f4", "type": "fill_input", "question": "Il part tôt afin qu'ils ____ (être) à l'heure. (Subjuntivo).", "correct_answer": "soient", "explanation": "soient" },
+        { "id": "frb2-03-f5", "type": "fill_input", "question": "Je chuchote de peur de la ____ (réveiller). (Infinitivo).", "correct_answer": "réveiller", "explanation": "réveiller" },
+        { "id": "frb2-03-f6", "type": "fill_input", "question": "Je chuchote de peur qu'elle ____ (se réveiller - añade 'ne' expletivo).", "correct_answer": "ne se réveille", "explanation": "ne se réveille" },
+        { "id": "frb2-03-f7", "type": "fill_input", "question": "Mets un manteau pour ne pas ____ (avoir) froid. (Infinitivo).", "correct_answer": "avoir", "explanation": "avoir" },
+        { "id": "frb2-03-f8", "type": "fill_input", "question": "Mets lui un manteau pour qu'il n'____ (avoir) pas froid. (Subjuntivo).", "correct_answer": "ait", "explanation": "ait" },
+        { "id": "frb2-03-f9", "type": "fill_input", "question": "Nous le faisons afin que tu ____ (pouvoir) réussir. (Subjuntivo).", "correct_answer": "puisses", "explanation": "puisses" },
+        { "id": "frb2-03-f10", "type": "fill_input", "question": "De crainte qu'il ____ (pleuvoir - añade 'ne' expletivo).", "correct_answer": "ne pleuve", "explanation": "ne pleuve" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Goals and Fears Match",
+      "pairs": [
+        {"id": "frb2-03-p1", "source": "Pour", "target": "Para (+ Infinitivo)"},
+        {"id": "frb2-03-p2", "source": "Pour que", "target": "Para que (+ Subjuntivo)"},
+        {"id": "frb2-03-p3", "source": "Afin de", "target": "A fin de (+ Infinitivo)"},
+        {"id": "frb2-03-p4", "source": "Afin que", "target": "A fin de que (+ Subjuntivo)"},
+        {"id": "frb2-03-p5", "source": "De peur de", "target": "Por miedo a (+ Infinitivo)"},
+        {"id": "frb2-03-p6", "source": "De peur que", "target": "Por miedo a que (+ Subjuntivo)"},
+        {"id": "frb2-03-p7", "source": "qu'elle soit", "target": "que ella sea/esté"},
+        {"id": "frb2-03-p8", "source": "qu'elle ne tombe", "target": "que ella (no) se caiga"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica la conjunción y el tiempo verbal.",
+      "questions": [
+        { "id": "frb2-03-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je travaille pour réussir", "options": ["Je travaille pour réussir", "Je travaille pour que je réussis", "Je travaille pour que tu réussisses", "Je travaille afin que tu réussis"], "correct_answer": "Je travaille pour réussir", "explanation": "Audio dice: Je travaille pour réussir." },
+        { "id": "frb2-03-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Pour que tu sois heureux", "options": ["Pour que tu sois heureux", "Pour que tu es heureux", "Afin de tu es heureux", "Pour être heureux"], "correct_answer": "Pour que tu sois heureux", "explanation": "Audio dice: Pour que tu sois heureux." },
+        { "id": "frb2-03-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Afin qu'elle comprenne", "options": ["Afin qu'elle comprenne", "Afin d'elle comprenne", "Pour qu'elle comprend", "Afin de comprendre"], "correct_answer": "Afin qu'elle comprenne", "explanation": "Audio dice: Afin qu'elle comprenne (Para que ella comprenda)." },
+        { "id": "frb2-03-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "De peur qu'il ne pleuve", "options": ["De peur qu'il ne pleuve", "De peur de pleuvoir", "De crainte de pleuvoir", "De peur qu'il pleut"], "correct_answer": "De peur qu'il ne pleuve", "explanation": "Audio dice: De peur qu'il ne pleuve." },
+        { "id": "frb2-03-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "De crainte de tomber", "options": ["De crainte de tomber", "De crainte qu'il ne tombe", "De peur qu'il ne tombe", "Afin de tomber"], "correct_answer": "De crainte de tomber", "explanation": "Audio dice: De crainte de tomber (Por miedo a caerse)." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "c2-52",
+  "title": "Mergers & Acquisitions",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "M&A", "Finance", "Business"],
+  "completion_message": "¡Excelente! El mundo de 'M&A' (Fusiones y Adquisiciones) es donde se cierran los tratos más grandes del planeta. Ya tienes el vocabulario para entender cómo los titanes corporativos devoran o se unen a sus rivales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Fusiones y Adquisiciones (M&A) (C2)",
+      "parts": [
+        { "visual": "El término 'M&A' (Mergers and Acquisitions) domina las noticias financieras. \n\n1. Synergy (Sinergia): \n- El concepto de que dos empresas juntas valen más que separadas (1+1=3). \nEj: The merger will create massive SYNERGIES in marketing and distribution. \n\n2. Takeover bid (Oferta pública de adquisición / OPA): \n- Una oferta formal para comprar las acciones de una empresa y tomar el control. \nEj: Microsoft launched a $40 billion TAKEOVER BID for the tech company. \n\n3. Spin-off (Escisión / Empresa derivada): \n- Cuando una empresa separa una de sus divisiones para crear una nueva compañía independiente. \nEj: The corporation decided to SPIN OFF its healthcare division.", "audio": "Welcome to Mergers and Acquisitions, commonly known as M&A. This is where the biggest deals on the planet happen. Number 1: Synergy. The concept that the value of two companies combined will be greater than the sum of their separate parts. One plus one equals three. For example: The merger will create massive SYNERGIES in marketing and distribution. Number 2: Takeover bid. A type of corporate action in which a company makes an offer to purchase another company. For example: Microsoft launched a 40 billion dollar TAKEOVER BID for the tech company. Number 3: Spin-off. When a company creates a new independent business by selling or distributing new shares of an existing business division. For example: The corporation decided to SPIN OFF its healthcare division." },
+        { "visual": "4. Monopoly (Monopolio): \n- Cuando una sola empresa domina todo un mercado. \nEj: If they buy their only competitor, they will have a MONOPOLY. \n\n5. Antitrust laws (Leyes antimonopolio): \n- Leyes diseñadas para promover la competencia y evitar monopolios. \nEj: The merger was blocked by ANTITRUST regulators. \n\n6. Golden parachute (Paracaídas dorado): \n- Una cláusula que garantiza un pago millonario a un ejecutivo si la empresa es comprada y él es despedido. \nEj: The CEO left with a $20 million GOLDEN PARACHUTE. \n\n7. Due diligence (Debida diligencia / Auditoría previa): \n- La investigación financiera y legal profunda antes de comprar una empresa. \nEj: During DUE DILIGENCE, we discovered massive hidden debts.", "audio": "Number 4: Monopoly. When a single company or group owns all or nearly all of the market for a given type of product or service. For example: If they buy their only competitor, they will have a MONOPOLY. Number 5: Antitrust laws. These are regulations that encourage competition by limiting the market power of any particular firm. For example: The merger was blocked by ANTITRUST regulators. Number 6: Golden parachute. A huge severance package guaranteed to a top executive if they lose their job due to a merger or takeover. For example: The CEO left with a 20 million dollar GOLDEN PARACHUTE. Number 7: Due diligence. An exhaustive investigation of a business before signing a contract. For example: During DUE DILIGENCE, we discovered massive hidden debts." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de M&A correcto.",
+      "questions": [
+        { "id": "c2-52-q1", "type": "quiz_choice", "question": "The combination of the two companies is expected to create massive cost ____, saving millions every year. (Sinergias).", "options": ["synergies", "energies", "strategies", "tragedies"], "correct_answer": "synergies", "explanation": "Synergies = sinergias (el valor conjunto es mayor)." },
+        { "id": "c2-52-q2", "type": "quiz_choice", "question": "The larger company made a hostile takeover ____ to buy all outstanding shares at $50 each. (Oferta de adquisición).", "options": ["bid", "ask", "call", "demand"], "correct_answer": "bid", "explanation": "Takeover bid = oferta de adquisición / OPA." },
+        { "id": "c2-52-q3", "type": "quiz_choice", "question": "To focus on its core software business, the corporation decided to ____ off its hardware division into a new company. (Escindir / Separar).", "options": ["spin", "turn", "cut", "break"], "correct_answer": "spin", "explanation": "Spin-off = escisión corporativa (crear una empresa a partir de una división)." },
+        { "id": "c2-52-q4", "type": "quiz_choice", "question": "The government blocked the merger because it would create a ____, killing all competition in the market. (Monopolio).", "options": ["monopoly", "duopoly", "oligopoly", "competition"], "correct_answer": "monopoly", "explanation": "Monopoly = monopolio." },
+        { "id": "c2-52-q5", "type": "quiz_choice", "question": "To prevent monopolies, the government enforces strict ____ laws. (Leyes antimonopolio).", "options": ["antitrust", "antifraud", "antitax", "antirisk"], "correct_answer": "antitrust", "explanation": "Antitrust laws = leyes antimonopolio (en EE.UU. y Europa)." },
+        { "id": "c2-52-q6", "type": "quiz_choice", "question": "The CEO didn't mind being fired after the acquisition because he had a $15 million golden ____. (Indemnización millonaria).", "options": ["parachute", "ticket", "handshake", "shield"], "correct_answer": "parachute", "explanation": "Golden parachute = paracaídas dorado (indemnización masiva por despido en M&A)." },
+        { "id": "c2-52-q7", "type": "quiz_choice", "question": "Before we finalize the purchase, our legal and financial teams must spend a month performing due ____. (Auditoría / Investigación exhaustiva).", "options": ["diligence", "intelligence", "vigilance", "patience"], "correct_answer": "diligence", "explanation": "Due diligence = debida diligencia." },
+        { "id": "c2-52-q8", "type": "quiz_choice", "question": "When two companies of roughly equal size agree to join forces and become a single new company, it's called a ____. (Fusión).", "options": ["merger", "acquisition", "takeover", "purchase"], "correct_answer": "merger", "explanation": "Merger = fusión (a menudo entre iguales o mutuo acuerdo)." },
+        { "id": "c2-52-q9", "type": "quiz_choice", "question": "When a larger company buys a smaller company and absorbs it, it's called an ____. (Adquisición).", "options": ["acquisition", "alliance", "amalgamation", "addition"], "correct_answer": "acquisition", "explanation": "Acquisition = adquisición (una empresa compra a otra)." },
+        { "id": "c2-52-q10", "type": "quiz_choice", "question": "M&A stands for ____ and Acquisitions.", "options": ["Mergers", "Markets", "Money", "Managers"], "correct_answer": "Mergers", "explanation": "M&A = Mergers and Acquisitions (Fusiones y Adquisiciones)." },
+        { "id": "c2-52-q11", "type": "quiz_choice", "question": "To defend against the hostile takeover, the board swallowed a 'poison ____', creating new shares to dilute the attacker's power.", "options": ["pill", "apple", "drink", "dart"], "correct_answer": "pill", "explanation": "Poison pill = píldora envenenada (estrategia defensiva financiera)." },
+        { "id": "c2-52-q12", "type": "quiz_choice", "question": "A wealthy individual or company that rescues a target company from a hostile takeover is called a 'white ____'.", "options": ["knight", "king", "horse", "shield"], "correct_answer": "knight", "explanation": "White knight = caballero blanco (un comprador amistoso que salva a la empresa de un comprador hostil)." },
+        { "id": "c2-52-q13", "type": "quiz_choice", "question": "The process of integrating two companies after a merger is extremely difficult due to clashing corporate ____. (Culturas).", "options": ["cultures", "rules", "laws", "offices"], "correct_answer": "cultures", "explanation": "Corporate culture clash = choque de culturas corporativas (el mayor problema en M&A)." },
+        { "id": "c2-52-q14", "type": "quiz_choice", "question": "If a company wants to buy another, the first official step is usually to sign a Letter of ____ (LOI). (Carta de intención).", "options": ["Intent", "Interest", "Investment", "Inquiry"], "correct_answer": "Intent", "explanation": "Letter of Intent (LOI) = Carta de intención." },
+        { "id": "c2-52-q15", "type": "quiz_choice", "question": "The company being targeted for acquisition is known as the ____ company. (Objetivo).", "options": ["target", "victim", "mark", "goal"], "correct_answer": "target", "explanation": "Target company = la empresa objetivo (la que va a ser comprada)." },
+        { "id": "c2-52-q16", "type": "quiz_choice", "question": "To buy the competitor, they used borrowed money (debt). This is called a ____ buyout (LBO). (Compra apalancada).", "options": ["leveraged", "borrowed", "debt", "loaned"], "correct_answer": "leveraged", "explanation": "Leveraged Buyout (LBO) = compra financiada con deuda (apalancada)." },
+        { "id": "c2-52-q17", "type": "quiz_choice", "question": "A company that buys other companies purely as investments, without producing anything itself, is a ____ company. (Sociedad gestora / matriz).", "options": ["holding", "keeping", "saving", "storing"], "correct_answer": "holding", "explanation": "Holding company = sociedad tenedora o matriz." },
+        { "id": "c2-52-q18", "type": "quiz_choice", "question": "When a company buys one of its suppliers to control the supply chain, it's called ____ integration. (Integración vertical).", "options": ["vertical", "horizontal", "diagonal", "straight"], "correct_answer": "vertical", "explanation": "Vertical integration = comprar proveedores o distribuidores." },
+        { "id": "c2-52-q19", "type": "quiz_choice", "question": "When a company buys a direct competitor to increase market share, it's called ____ integration. (Integración horizontal).", "options": ["horizontal", "vertical", "parallel", "flat"], "correct_answer": "horizontal", "explanation": "Horizontal integration = comprar a un competidor directo." },
+        { "id": "c2-52-q20", "type": "quiz_choice", "question": "The difference between the purchase price and the actual book value of the acquired company's assets is recorded as ____. (Fondo de comercio / Prestigio).", "options": ["goodwill", "bonus", "premium", "extra"], "correct_answer": "goodwill", "explanation": "Goodwill = fondo de comercio (el valor intangible por el que se paga de más, como la marca o los clientes)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término de M&A correcto.",
+      "questions": [
+        { "id": "c2-52-f1", "type": "fill_input", "question": "M&A: ____ and Acquisitions. (Fusiones con M)", "correct_answer": "Mergers", "explanation": "Mergers." },
+        { "id": "c2-52-f2", "type": "fill_input", "question": "Create massive ____. (Sinergias con S)", "correct_answer": "synergies", "explanation": "synergies." },
+        { "id": "c2-52-f3", "type": "fill_input", "question": "A takeover ____. (Oferta pública con B)", "correct_answer": "bid", "explanation": "bid." },
+        { "id": "c2-52-f4", "type": "fill_input", "question": "A corporate ____-off. (Escisión de empresa con S)", "correct_answer": "spin", "explanation": "spin." },
+        { "id": "c2-52-f5", "type": "fill_input", "question": "A market ____. (Monopolio con M)", "correct_answer": "monopoly", "explanation": "monopoly." },
+        { "id": "c2-52-f6", "type": "fill_input", "question": "____ laws. (Leyes antimonopolio con A)", "correct_answer": "Antitrust", "explanation": "Antitrust." },
+        { "id": "c2-52-f7", "type": "fill_input", "question": "A golden ____. (Paracaídas dorado con P)", "correct_answer": "parachute", "explanation": "parachute." },
+        { "id": "c2-52-f8", "type": "fill_input", "question": "Perform due ____. (Auditoría previa con D)", "correct_answer": "diligence", "explanation": "diligence." },
+        { "id": "c2-52-f9", "type": "fill_input", "question": "A poison ____. (Píldora defensiva con P)", "correct_answer": "pill", "explanation": "pill." },
+        { "id": "c2-52-f10", "type": "fill_input", "question": "A white ____. (Comprador amistoso con K)", "correct_answer": "knight", "explanation": "knight." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "M&A Match",
+      "pairs": [
+        {"id": "c2-52-p1", "source": "Mergers & Acquisitions", "target": "Fusiones y Adquisiciones (M&A)"},
+        {"id": "c2-52-p2", "source": "Synergy", "target": "Valor extra al unir dos empresas (1+1=3)"},
+        {"id": "c2-52-p3", "source": "Takeover bid", "target": "Oferta formal de compra (OPA)"},
+        {"id": "c2-52-p4", "source": "Spin-off", "target": "Escindir/crear empresa desde una división"},
+        {"id": "c2-52-p5", "source": "Antitrust laws", "target": "Leyes antimonopolio"},
+        {"id": "c2-52-p6", "source": "Due diligence", "target": "Auditoría legal y financiera previa"},
+        {"id": "c2-52-p7", "source": "Golden parachute", "target": "Indemnización millonaria para directivos"},
+        {"id": "c2-52-p8", "source": "Poison pill", "target": "Táctica defensiva contra compra hostil"},
+        {"id": "c2-52-p9", "source": "White knight", "target": "Comprador amistoso que salva a la empresa"},
+        {"id": "c2-52-p10", "source": "Target company", "target": "Empresa objetivo (la que será comprada)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de fusiones y adquisiciones.",
+      "questions": [
+        { "id": "c2-52-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We handle mergers and acquisitions.", "options": ["We handle mergers and acquisitions.", "They handle mergers and acquisitions.", "We handled mergers and acquisitions.", "We handle merger and acquisition."], "correct_answer": "We handle mergers and acquisitions.", "explanation": "Audio exacto." },
+        { "id": "c2-52-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It will create massive synergies.", "options": ["It will create massive synergies.", "It will create massive synergy.", "They will create massive synergies.", "It would create massive synergies."], "correct_answer": "It will create massive synergies.", "explanation": "Audio exacto." },
+        { "id": "c2-52-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They launched a takeover bid.", "options": ["They launched a takeover bid.", "We launched a takeover bid.", "They launch a takeover bid.", "They launched a takeover ask."], "correct_answer": "They launched a takeover bid.", "explanation": "Audio exacto." },
+        { "id": "c2-52-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They plan a corporate spin-off.", "options": ["They plan a corporate spin-off.", "We plan a corporate spin-off.", "They planned a corporate spin-off.", "They plan a corporate spin-out."], "correct_answer": "They plan a corporate spin-off.", "explanation": "Audio exacto." },
+        { "id": "c2-52-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It violates antitrust laws.", "options": ["It violates antitrust laws.", "It violated antitrust laws.", "They violate antitrust laws.", "It violates antirust laws."], "correct_answer": "It violates antitrust laws.", "explanation": "Audio exacto." },
+        { "id": "c2-52-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He received a golden parachute.", "options": ["He received a golden parachute.", "She received a golden parachute.", "They received a golden parachute.", "He receives a golden parachute."], "correct_answer": "He received a golden parachute.", "explanation": "Audio exacto." },
+        { "id": "c2-52-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are conducting due diligence.", "options": ["We are conducting due diligence.", "They are conducting due diligence.", "We were conducting due diligence.", "We are conducting due diligence now."], "correct_answer": "We are conducting due diligence.", "explanation": "Audio exacto." },
+        { "id": "c2-52-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They swallowed a poison pill.", "options": ["They swallowed a poison pill.", "We swallowed a poison pill.", "They swallow a poison pill.", "He swallowed a poison pill."], "correct_answer": "They swallowed a poison pill.", "explanation": "Audio exacto." },
+        { "id": "c2-52-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Saved by a white knight.", "options": ["Saved by a white knight.", "Save by a white knight.", "Saved by a white king.", "Saved by the white knight."], "correct_answer": "Saved by a white knight.", "explanation": "Audio exacto." },
+        { "id": "c2-52-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Who is the target company?", "options": ["Who is the target company?", "Which is the target company?", "Where is the target company?", "What is the target company?"], "correct_answer": "Who is the target company?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

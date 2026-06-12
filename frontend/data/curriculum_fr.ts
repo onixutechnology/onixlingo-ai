@@ -242,7 +242,7 @@ const TEMAS_C1_DATA: string[][] = [
   ['Estrategia Corporativa de Alto Nivel', 'Formular la dirección estratégica a 5 años.', 'vision'],
   ['Negociación de Alto Impacto', 'Técnicas avanzadas para cerrar acuerdos complejos.', 'concession'],
   ['Discurso Ante la Junta Directiva', 'Presentar estrategia y resultados al consejo.', 'conseil'],
-  ['Comunicación de Crisis a Nivel C-Suite', 'Gestionar comunicación en situaciones críticas.', 'dirigeant'],
+  ['Comunicación de Crisis a Nivel Alta Dirección', 'Gestionar comunicación en situaciones críticas.', 'dirigeant'],
   ['Filosofía de Liderazgo Transformacional', 'Inspirar y motivar equipos de alto rendimiento.', 'leadership'],
   ['Pensamiento Sistémico', 'Analizar problemas complejos e interdependientes.', 'systémique'],
   ['Toma de Decisiones Bajo Incertidumbre', 'Marcos para decidir con datos limitados.', 'décision'],

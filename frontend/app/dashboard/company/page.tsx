@@ -31,8 +31,8 @@ const CEFR_COLORS: Record<string, string> = {
 
 const PLAN_BADGES: Record<string, string> = {
     titanium: "bg-cyan-500/20 text-cyan-300 border-cyan-500/40",
-    enterprise: "bg-indigo-500/20 text-indigo-300 border-indigo-500/40",
-    growth: "bg-emerald-500/20 text-emerald-300 border-emerald-500/40",
+    enterprise: "bg-[#D4AF37]/20/20 text-indigo-300 border-indigo-500/40",
+    growth: "bg-[#D4AF37]/100/20 text-emerald-300 border-emerald-500/40",
     starter: "bg-slate-600/30 text-slate-300 border-slate-500/40",
 };
 
@@ -55,12 +55,12 @@ function KpiCard({
     };
     return (
         <div
-            className={`relative flex flex-col gap-2 rounded-2xl border bg-gradient-to-br p-5 backdrop-blur-sm ${ring[accent]}`}
+            className={`relative flex flex-col gap-2 rounded-none border bg-gradient-to-br p-5 backdrop-blur-sm ${ring[accent]}`}
         >
             <span className="text-2xl">{icon}</span>
-            <span className="text-3xl font-bold tracking-tight text-white">{value}</span>
-            <span className="text-sm font-medium text-slate-400">{label}</span>
-            {sublabel && <span className="text-xs text-slate-500">{sublabel}</span>}
+            <span className="text-3xl font-bold tracking-tight text-slate-900">{value}</span>
+            <span className="text-sm font-medium text-slate-500">{label}</span>
+            {sublabel && <span className="text-xs text-slate-600">{sublabel}</span>}
         </div>
     );
 }
@@ -81,7 +81,7 @@ function Skeleton({ rows = 8 }: { rows?: number }) {
     );
 }
 
-function ProgressBar({ value, max, colorClass = "bg-indigo-500" }: { value: number; max: number; colorClass?: string }) {
+function ProgressBar({ value, max, colorClass = "bg-[#D4AF37]/20" }: { value: number; max: number; colorClass?: string }) {
     const pct = max > 0 ? Math.min(100, (value / max) * 100) : 0;
     return (
         <div className="relative h-1.5 w-full overflow-hidden rounded-full bg-slate-700">
@@ -166,18 +166,18 @@ export default function CompanyDashboardPage() {
 
     if (!COMPANY_ID) {
         return (
-            <main className="min-h-screen bg-[#080c14] text-white flex items-center justify-center">
-                <div className="text-center space-y-4 max-w-md mx-auto p-8 border border-red-500/20 bg-red-900/10 rounded-2xl">
+            <main className="min-h-screen bg-[#080c14] text-slate-900 flex items-center justify-center">
+                <div className="text-center space-y-4 max-w-md mx-auto p-8 border border-red-500/20 bg-red-900/10 rounded-none">
                     <div className="text-4xl">🏢</div>
                     <h2 className="text-2xl font-bold text-slate-200">No tienes una empresa asignada</h2>
-                    <p className="text-slate-400">Este panel es exclusivo para empleados vinculados a una cuenta corporativa (B2B). Contacta a tu administrador para solicitar acceso.</p>
+                    <p className="text-slate-500">Este panel es exclusivo para empleados vinculados a una cuenta corporativa (B2B). Contacta a tu administrador para solicitar acceso.</p>
                 </div>
             </main>
         );
     }
 
     return (
-        <main className="min-h-screen bg-[#080c14] text-white">
+        <main className="min-h-screen bg-[#080c14] text-slate-900">
             {/* ── Background mesh ── */}
             <div className="pointer-events-none fixed inset-0 overflow-hidden">
                 <div className="absolute -left-40 -top-40 h-96 w-96 rounded-full bg-indigo-700/10 blur-3xl" />
@@ -190,7 +190,7 @@ export default function CompanyDashboardPage() {
                 <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <div className="space-y-1">
                         {isLoadingCompany ? (
-                            <div className="h-8 w-64 animate-pulse rounded-lg bg-slate-700" />
+                            <div className="h-8 w-64 animate-pulse rounded-none bg-slate-700" />
                         ) : (
                             <div className="flex items-center gap-3">
                                 {company?.logo_url && (
@@ -199,7 +199,7 @@ export default function CompanyDashboardPage() {
                                         alt={company.name} 
                                         width={36} 
                                         height={36} 
-                                        className="rounded-lg object-cover" 
+                                        className="rounded-none object-cover" 
                                     />
                                 )}
                                 <h1 className="text-2xl font-bold tracking-tight">
@@ -212,7 +212,7 @@ export default function CompanyDashboardPage() {
                                 )}
                             </div>
                         )}
-                        <p className="text-sm text-slate-400">
+                        <p className="text-sm text-slate-500">
                             {company?.domain ?? "Titanium Enterprise Dashboard"}
                         </p>
                     </div>
@@ -220,14 +220,14 @@ export default function CompanyDashboardPage() {
                     <div className="flex items-center gap-3">
                         <button
                             onClick={handleCsvDownload}
-                            className="flex items-center gap-2 rounded-xl border border-white/10 bg-slate-800/60 px-4 py-2 text-sm font-medium text-slate-300 transition-all hover:border-white/20 hover:text-white"
+                            className="flex items-center gap-2 rounded-none border border-white/10 bg-slate-50/60 px-4 py-2 text-sm font-medium text-slate-300 transition-all hover:border-white/20 hover:text-slate-900"
                         >
                             ⬇ Export CSV
                         </button>
                         <button
                             onClick={() => COMPANY_ID && triggerCacheRefresh(COMPANY_ID)}
                             disabled={isRefreshingCache}
-                            className="flex items-center gap-2 rounded-xl border border-indigo-500/40 bg-indigo-600/20 px-4 py-2 text-sm font-semibold text-indigo-300 transition-all hover:bg-indigo-600/30 disabled:opacity-50"
+                            className="flex items-center gap-2 rounded-none border border-indigo-500/40 bg-[#D4AF37]/20/20 px-4 py-2 text-sm font-semibold text-indigo-300 transition-all hover:bg-[#D4AF37]/20/30 disabled:opacity-50"
                         >
                             {isRefreshingCache ? (
                                 <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-indigo-400 border-t-transparent" />
@@ -238,12 +238,12 @@ export default function CompanyDashboardPage() {
                 </header>
 
                 {/* ───────────────── SEAT USAGE ─────────────── */}
-                <section className="rounded-2xl border border-white/10 bg-slate-800/40 p-5 backdrop-blur-sm">
+                <section className="rounded-none border border-white/10 bg-slate-50/40 p-5 backdrop-blur-sm">
                     <div className="mb-2 flex items-center justify-between text-sm">
                         <span className="font-medium text-slate-300">License Seat Usage</span>
-                        <span className="tabular-nums text-slate-400">
+                        <span className="tabular-nums text-slate-500">
                             {company?.total_employees ?? 0} / {company?.max_seats ?? 0} seats
-                            <span className="ml-2 font-semibold text-white">{pct(seatPct)}</span>
+                            <span className="ml-2 font-semibold text-slate-900">{pct(seatPct)}</span>
                         </span>
                     </div>
                     <div className="relative h-2.5 overflow-hidden rounded-full bg-slate-700">
@@ -295,7 +295,7 @@ export default function CompanyDashboardPage() {
 
                 {/* ───────────────── WEAKNESS LEADERBOARD ──── */}
                 {(company?.top_weakness_categories?.length ?? 0) > 0 && (
-                    <section className="rounded-2xl border border-rose-500/20 bg-rose-900/10 p-5">
+                    <section className="rounded-none border border-rose-500/20 bg-rose-900/10 p-5">
                         <p className="mb-3 text-sm font-semibold text-rose-300">
                             🧠 Top AI-Detected Team Weaknesses
                         </p>
@@ -303,7 +303,7 @@ export default function CompanyDashboardPage() {
                             {company!.top_weakness_categories.map((cat) => (
                                 <span
                                     key={cat}
-                                    className="rounded-full border border-rose-500/30 bg-rose-500/10 px-3 py-1 text-xs font-medium text-rose-300"
+                                    className="rounded-full border border-rose-500/30 bg-[#D4AF37]/100/10 px-3 py-1 text-xs font-medium text-rose-300"
                                 >
                                     {cat.replace(/_/g, " ")}
                                 </span>
@@ -314,20 +314,20 @@ export default function CompanyDashboardPage() {
 
                 {/* ───────────────── ERROR BANNER ───────────── */}
                 {error && (
-                    <div className="flex items-center justify-between rounded-xl border border-red-500/30 bg-red-900/20 px-4 py-3 text-sm text-red-300">
+                    <div className="flex items-center justify-between rounded-none border border-red-500/30 bg-red-900/20 px-4 py-3 text-sm text-red-300">
                         <span>⛔ {error}</span>
-                        <button onClick={clearError} className="ml-4 text-red-400 hover:text-white">✕</button>
+                        <button onClick={clearError} className="ml-4 text-red-400 hover:text-slate-900">✕</button>
                     </div>
                 )}
 
                 {/* ───────────────── EMPLOYEE TABLE ─────────── */}
-                <section className="rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur-sm">
+                <section className="rounded-none border border-white/10 bg-slate-50/60 backdrop-blur-sm">
 
                     {/* Table toolbar */}
                     <div className="flex flex-col gap-3 border-b border-white/10 p-4 sm:flex-row sm:items-center sm:justify-between">
                         <div className="flex items-center gap-3">
                             <h2 className="text-base font-semibold">Employees</h2>
-                            <span className="rounded-full bg-slate-700/60 px-2.5 py-0.5 text-xs text-slate-400">
+                            <span className="rounded-full bg-slate-700/60 px-2.5 py-0.5 text-xs text-slate-500">
                                 {employeeTotal}
                             </span>
                         </div>
@@ -342,7 +342,7 @@ export default function CompanyDashboardPage() {
                                     setFilter("search", e.target.value);
                                     reload({ search: e.target.value, page: 1 });
                                 }}
-                                className="w-52 rounded-lg border border-white/10 bg-slate-800 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 outline-none focus:border-indigo-500"
+                                className="w-52 rounded-none border border-white/10 bg-slate-50 px-3 py-1.5 text-sm text-slate-200 placeholder-slate-500 outline-none focus:border-indigo-500"
                             />
 
                             {/* Language filter */}
@@ -353,7 +353,7 @@ export default function CompanyDashboardPage() {
                                     setFilter("language", val);
                                     reload({ language: val, page: 1 });
                                 }}
-                                className="rounded-lg border border-white/10 bg-slate-800 px-3 py-1.5 text-sm text-slate-300 outline-none focus:border-indigo-500"
+                                className="rounded-none border border-white/10 bg-slate-50 px-3 py-1.5 text-sm text-slate-300 outline-none focus:border-indigo-500"
                             >
                                 <option value="">All Languages</option>
                                 <option value="en">🇺🇸 English</option>
@@ -364,21 +364,21 @@ export default function CompanyDashboardPage() {
 
                             {/* Bulk actions — visible only when rows are selected */}
                             {selectedCount > 0 && (
-                                <div className="flex items-center gap-2 rounded-lg border border-indigo-500/30 bg-indigo-900/20 px-3 py-1.5">
+                                <div className="flex items-center gap-2 rounded-none border border-indigo-500/30 bg-indigo-900/20 px-3 py-1.5">
                                     <span className="text-xs text-indigo-300">{selectedCount} selected</span>
                                     <button
                                         onClick={handleAssign}
-                                        className="rounded-md bg-indigo-600/40 px-2 py-1 text-xs font-semibold text-indigo-200 hover:bg-indigo-600/60"
+                                        className="rounded-none bg-[#D4AF37]/20/40 px-2 py-1 text-xs font-semibold text-indigo-200 hover:bg-[#D4AF37]/20/60"
                                     >
                                         Assign License
                                     </button>
                                     <button
                                         onClick={handleRevoke}
-                                        className="rounded-md bg-red-600/30 px-2 py-1 text-xs font-semibold text-red-300 hover:bg-red-600/50"
+                                        className="rounded-none bg-[#D4AF37]/20/30 px-2 py-1 text-xs font-semibold text-red-300 hover:bg-[#D4AF37]/20/50"
                                     >
                                         Revoke
                                     </button>
-                                    <button onClick={clearSelection} className="text-xs text-slate-400 hover:text-white">✕</button>
+                                    <button onClick={clearSelection} className="text-xs text-slate-500 hover:text-slate-900">✕</button>
                                 </div>
                             )}
                         </div>
@@ -388,7 +388,7 @@ export default function CompanyDashboardPage() {
                     <div className="overflow-x-auto">
                         <table className="w-full text-sm">
                             <thead>
-                                <tr className="border-b border-white/8 text-left text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                <tr className="border-b border-white/8 text-left text-xs font-semibold uppercase tracking-wider text-slate-600">
                                     <th className="px-4 py-3 w-10">
                                         <input
                                             type="checkbox"
@@ -411,7 +411,7 @@ export default function CompanyDashboardPage() {
                                     <Skeleton rows={8} />
                                 ) : employees.length === 0 ? (
                                     <tr>
-                                        <td colSpan={8} className="py-16 text-center text-slate-500">
+                                        <td colSpan={8} className="py-16 text-center text-slate-600">
                                             No employees found. Try adjusting your filters.
                                         </td>
                                     </tr>
@@ -420,7 +420,7 @@ export default function CompanyDashboardPage() {
                                         <tr
                                             key={emp.user_id}
                                             onClick={() => toggleEmployeeSelection(emp.user_id)}
-                                            className={`cursor-pointer border-b border-white/5 transition-colors hover:bg-slate-800/40 ${selectedEmployeeIds.has(emp.user_id) ? "bg-indigo-900/20" : ""
+                                            className={`cursor-pointer border-b border-white/5 transition-colors hover:bg-slate-50/40 ${selectedEmployeeIds.has(emp.user_id) ? "bg-indigo-900/20" : ""
                                                 }`}
                                         >
                                             {/* Checkbox */}
@@ -440,14 +440,14 @@ export default function CompanyDashboardPage() {
                                                         {emp.username.charAt(0).toUpperCase()}
                                                     </div>
                                                     <div>
-                                                        <p className="font-medium text-white">{emp.username}</p>
-                                                        <p className="text-xs text-slate-500">{emp.email}</p>
+                                                        <p className="font-medium text-slate-900">{emp.username}</p>
+                                                        <p className="text-xs text-slate-600">{emp.email}</p>
                                                     </div>
                                                 </div>
                                             </td>
 
                                             {/* Department */}
-                                            <td className="px-4 py-3 text-slate-400">
+                                            <td className="px-4 py-3 text-slate-500">
                                                 {emp.department ?? <span className="text-slate-600">—</span>}
                                             </td>
 
@@ -469,7 +469,7 @@ export default function CompanyDashboardPage() {
                                             {/* CEFR */}
                                             <td className="px-4 py-3">
                                                 {emp.cefr_level ? (
-                                                    <span className={`rounded-full border px-2.5 py-0.5 text-xs font-bold ${CEFR_COLORS[emp.cefr_level] ?? "border-slate-600 text-slate-400"}`}>
+                                                    <span className={`rounded-full border px-2.5 py-0.5 text-xs font-bold ${CEFR_COLORS[emp.cefr_level] ?? "border-slate-600 text-slate-500"}`}>
                                                         {emp.cefr_level}
                                                     </span>
                                                 ) : (
@@ -491,7 +491,7 @@ export default function CompanyDashboardPage() {
                                                                     : "bg-gradient-to-r from-rose-500 to-red-400"
                                                         }
                                                     />
-                                                    <span className="text-xs tabular-nums text-slate-500">
+                                                    <span className="text-xs tabular-nums text-slate-600">
                                                         {pct(emp.lesson_completion_pct)} · 🔥 {emp.streak_days}d
                                                     </span>
                                                 </div>
@@ -503,13 +503,13 @@ export default function CompanyDashboardPage() {
                                                     {emp.top_weaknesses.slice(0, 2).map((w) => (
                                                         <span
                                                             key={w}
-                                                            className="rounded-full border border-rose-500/25 bg-rose-500/10 px-2 py-0.5 text-[10px] text-rose-300"
+                                                            className="rounded-full border border-rose-500/25 bg-[#D4AF37]/100/10 px-2 py-0.5 text-[10px] text-rose-300"
                                                         >
                                                             {w.replace(/_/g, " ")}
                                                         </span>
                                                     ))}
                                                     {emp.top_weaknesses.length > 2 && (
-                                                        <span className="text-[10px] text-slate-500">
+                                                        <span className="text-[10px] text-slate-600">
                                                             +{emp.top_weaknesses.length - 2}
                                                         </span>
                                                     )}
@@ -525,21 +525,21 @@ export default function CompanyDashboardPage() {
                     {/* Pagination */}
                     {totalPages > 1 && (
                         <div className="flex items-center justify-between border-t border-white/10 px-4 py-3">
-                            <span className="text-xs text-slate-500">
+                            <span className="text-xs text-slate-600">
                                 Page {filters.page} of {totalPages} · {employeeTotal} total
                             </span>
                             <div className="flex gap-2">
                                 <button
                                     disabled={filters.page <= 1}
                                     onClick={() => handlePageChange(filters.page - 1)}
-                                    className="rounded-lg border border-white/10 bg-slate-800 px-3 py-1.5 text-xs text-slate-300 transition-colors hover:border-white/20 disabled:opacity-30"
+                                    className="rounded-none border border-white/10 bg-slate-50 px-3 py-1.5 text-xs text-slate-300 transition-colors hover:border-white/20 disabled:opacity-30"
                                 >
                                     ← Prev
                                 </button>
                                 <button
                                     disabled={filters.page >= totalPages}
                                     onClick={() => handlePageChange(filters.page + 1)}
-                                    className="rounded-lg border border-white/10 bg-slate-800 px-3 py-1.5 text-xs text-slate-300 transition-colors hover:border-white/20 disabled:opacity-30"
+                                    className="rounded-none border border-white/10 bg-slate-50 px-3 py-1.5 text-xs text-slate-300 transition-colors hover:border-white/20 disabled:opacity-30"
                                 >
                                     Next →
                                 </button>

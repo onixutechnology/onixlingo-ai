@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-17",
+  "title": "¿De Dónde Eres?",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Nationalities", "Nouns", "Vocabulary"],
+  "completion_message": "¡Maravilloso! Acabas de aprender el secreto de las nacionalidades chinas. No importa de qué país seas, solo necesitas agregar el carácter de 'persona'.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Las Nacionalidades",
+      "parts": [
+        {
+          "visual": "La Persona: 人 (rén)\n\nEl carácter chino para persona es 人 (rén). Es un segundo tono, subiendo hacia arriba. Fíjate cómo el carácter parece literalmente dos piernas caminando.\n\nEn español tenemos palabras especiales para cada nacionalidad: Español, Mexicano, Estadounidense.\n¡En chino, las nacionalidades no existen como palabras nuevas!\n\nSimplemente decimos: País + Persona.\n- China: 中国 (Zhōngguó).\n- Chino (nacionalidad): 中国人 (Zhōngguó rén) -> Literalmente: Persona del País del Centro.\n\nEjemplo:\n- Yo soy chino: 我是中国人 (Wǒ shì Zhōngguó rén).",
+          "audio": "Vamos a aprender uno de los caracteres más antiguos y famosos de China: el carácter para Persona. Se pronuncia 'rén', en segundo tono, como haciendo una pregunta. Rén. Si miras el símbolo, son simplemente dos trazos que parecen un humano caminando de perfil con las piernas abiertas. Para hablar de nacionalidades, el chino tiene un sistema maravillosamente simple. No tienes que aprenderte gentilicios raros como 'estadounidense' o 'guatemalteco'. Solo tomas el nombre del país, y le pegas la palabra 'Persona' al final. Por ejemplo, si China es Zhōngguó, entonces una persona china es simplemente Zhōngguó rén. Persona de China."
+        },
+        {
+          "visual": "Preguntar el Origen: 哪里人 (Nǎlǐ rén)\n\n¿Recuerdas que 哪里 (nǎlǐ) significa 'Dónde'?\nPara preguntar '¿De dónde eres tú?', la estructura china es fascinante:\nTú + Eres + Dónde + Persona.\n\n- ¿De dónde eres?: 你是哪里人？ (Nǐ shì nǎlǐ rén?). Literalmente: ¿Tú eres persona de dónde?\n\nRespuesta:\n- Yo soy chino: 我是中国人 (Wǒ shì Zhōngguó rén).\n\nPara negar (Regla del camaleón):\n- No soy chino: 我不是中国人 (Wǒ bú shì Zhōngguó rén). Como shì es 4to tono, el bù cambia a bú.",
+          "audio": "Ahora aprendamos a preguntar a alguien de dónde es. En lugar de decir 'De dónde vienes', en chino preguntas '¿Tú eres persona de dónde?'. Ya sabemos que 'Dónde' se dice Nǎlǐ. Así que 'persona de dónde' se dice Nǎlǐ rén. La pregunta completa es: Nǐ shì nǎlǐ rén. Tú eres dónde persona. Y respondes usando el verbo ser. Wǒ shì Zhōngguó rén. Yo soy chino. Y si no lo eres, recuerda usar nuestra negación universal 'bù', pero como el verbo ser es fuerte hacia abajo, el bù sube y se convierte en bú. Wǒ bú shì Zhōngguó rén. Yo no soy chino."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que puedes identificar el origen de las personas.",
+      "questions": [
+        { "id": "zh-a1-17-q1", "type": "quiz_choice", "question": "¿Qué significa el carácter 人 (rén)?", "options": ["Persona / Humano.", "País.", "China.", "Yo."], "correct_answer": "Persona / Humano.", "explanation": "人 (rén) significa persona." },
+        { "id": "zh-a1-17-q2", "type": "quiz_choice", "question": "¿Cómo se forman las nacionalidades o gentilicios en chino?", "options": ["Se dice el Nombre del País + la palabra Persona (人).", "Hay una palabra única para cada nacionalidad.", "Se dice la palabra Persona + el País.", "Se usa el adjetivo de posesión (de)."], "correct_answer": "Se dice el Nombre del País + la palabra Persona (人).", "explanation": "País + 人 (Ej: Zhōngguó rén = Persona de China)." },
+        { "id": "zh-a1-17-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Chino' (referido a la persona/nacionalidad)?", "options": ["Zhōngguó rén (中国人).", "Rén Zhōngguó (人中国).", "Zhōngrén (中人).", "Guórén (国人)."], "correct_answer": "Zhōngguó rén (中国人).", "explanation": "China (Zhōngguó) + Persona (rén)." },
+        { "id": "zh-a1-17-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo soy chino' en mandarín?", "options": ["Wǒ shì Zhōngguó rén (我是中国人).", "Wǒ Zhōngguó rén (我中国人).", "Wǒ yǒu Zhōngguó rén (我有中国人).", "Zhōngguó rén shì wǒ (中国人是我)."], "correct_answer": "Wǒ shì Zhōngguó rén (我是中国人).", "explanation": "Yo (Wǒ) + soy (shì) + chino (Zhōngguó rén)." },
+        { "id": "zh-a1-17-q5", "type": "quiz_choice", "question": "¿Cómo se pregunta '¿De dónde eres tú?' de manera literal y natural en mandarín?", "options": ["Nǐ shì nǎlǐ rén? (你是哪里人？ - ¿Tú eres persona de dónde?)", "Nǐ lái nǎlǐ? (你来哪里？ - ¿Tú vienes dónde?)", "Nǐ qù nǎlǐ rén? (你去哪里人？ - ¿Tú vas persona de dónde?)", "Nǐ shì Zhōngguó ma? (你是中国吗？ - ¿Tú eres China?)"], "correct_answer": "Nǐ shì nǎlǐ rén? (你是哪里人？ - ¿Tú eres persona de dónde?)", "explanation": "La estructura correcta es preguntar '¿Tú eres [dónde] [persona]?'" },
+        { "id": "zh-a1-17-q6", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo NO soy chino' prestando atención a los tonos?", "options": ["Wǒ bú shì Zhōngguó rén (我不是中国人).", "Wǒ bù shì Zhōngguó rén (我不是中国人).", "Wǒ méi shì Zhōngguó rén (我没是中国人).", "Wǒ shì bù Zhōngguó rén (我是不中国人)."], "correct_answer": "Wǒ bú shì Zhōngguó rén (我不是中国人).", "explanation": "El bù cambia a bú porque el verbo shì es de cuarto tono." },
+        { "id": "zh-a1-17-q7", "type": "quiz_choice", "question": "¿Es correcto preguntar 'Nǐ shì nǎlǐ rén ma?' (你是哪里人吗？)?", "options": ["No, es incorrecto.", "Sí, es muy educado.", "Solo si no conoces a la persona.", "Sí, porque es una pregunta de Sí/No."], "correct_answer": "No, es incorrecto.", "explanation": "La palabra 'nǎlǐ' (dónde) ya es una pregunta abierta, por lo que NO se puede usar la partícula 'ma'." },
+        { "id": "zh-a1-17-q8", "type": "quiz_choice", "question": "Imagina que México se dice Mòxīgē (墨西哥). ¿Cómo dirías 'Mexicano'?", "options": ["Mòxīgē rén (墨西哥人).", "Rén Mòxīgē (人墨西哥).", "Mòxīgē guó (墨西哥国).", "Wǒ Mòxīgē (我墨西哥)."], "correct_answer": "Mòxīgē rén (墨西哥人).", "explanation": "País + Persona (rén)." },
+        { "id": "zh-a1-17-q9", "type": "quiz_choice", "question": "Traduce: 'Tāmen shì Zhōngguó rén' (他们是中国人).", "options": ["Ellos son chinos.", "Ellos van a China.", "Nosotros somos chinos.", "Él es chino."], "correct_answer": "Ellos son chinos.", "explanation": "Ellos (Tāmen) + son (shì) + chinos (Zhōngguó rén). No hay plural para los adjetivos/sustantivos de nacionalidad." },
+        { "id": "zh-a1-17-q10", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo soy una persona' (ignorando contadores por ahora)?", "options": ["Wǒ shì rén (我是人).", "Wǒ shì Zhōngguó (我是中国).", "Wǒ yǒu rén (我有人).", "Wǒ rén (我人)."], "correct_answer": "Wǒ shì rén (我是人).", "explanation": "Yo (wǒ) + soy (shì) + persona (rén)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correcto para nacionalidades. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-17-f1", "type": "fill_input", "question": "Persona: ____ (ren)", "correct_answer": "ren", "explanation": "ren" },
+        { "id": "zh-a1-17-f2", "type": "fill_input", "question": "China: zhong____ (guo)", "correct_answer": "guo", "explanation": "guo" },
+        { "id": "zh-a1-17-f3", "type": "fill_input", "question": "Chino (Persona de China): zhongguo ____", "correct_answer": "ren", "explanation": "ren" },
+        { "id": "zh-a1-17-f4", "type": "fill_input", "question": "Dónde: ____ (nali)", "correct_answer": "nali", "explanation": "nali" },
+        { "id": "zh-a1-17-f5", "type": "fill_input", "question": "¿De dónde eres?: ni shi nali ____ (ren)", "correct_answer": "ren", "explanation": "ren" },
+        { "id": "zh-a1-17-f6", "type": "fill_input", "question": "Yo soy chino: wo ____ zhongguo ren (shi)", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-a1-17-f7", "type": "fill_input", "question": "Yo NO soy chino: wo ____ shi zhongguo ren (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a1-17-f8", "type": "fill_input", "question": "¿Él es chino?: ta shi zhongguo ren ____ (ma)", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-17-f9", "type": "fill_input", "question": "Persona: r____n", "correct_answer": "e", "explanation": "e" },
+        { "id": "zh-a1-17-f10", "type": "fill_input", "question": "Persona de dónde: nali ____", "correct_answer": "ren", "explanation": "ren" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha e identifica el origen de las personas.",
+      "questions": [
+        { "id": "zh-a1-17-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "人", "options": ["Persona", "País", "Centro", "Yo"], "correct_answer": "Persona", "explanation": "El audio dice: rén." },
+        { "id": "zh-a1-17-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "中国人", "options": ["Chino (Nacionalidad)", "China (País)", "Centro de personas", "Persona buena"], "correct_answer": "Chino (Nacionalidad)", "explanation": "El audio dice: Zhōngguó rén." },
+        { "id": "zh-a1-17-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我是中国人", "options": ["Yo soy chino", "Yo voy a China", "Él es chino", "Tú eres chino"], "correct_answer": "Yo soy chino", "explanation": "El audio dice: Wǒ shì Zhōngguó rén." },
+        { "id": "zh-a1-17-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你是哪里人？", "options": ["¿De dónde eres? (Tú eres dónde persona)", "¿Tú vas a dónde?", "¿Tú eres chino?", "¿Tú quién eres?"], "correct_answer": "¿De dónde eres? (Tú eres dónde persona)", "explanation": "El audio dice: Nǐ shì nǎlǐ rén?" },
+        { "id": "zh-a1-17-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他不是中国人", "options": ["Él no es chino", "Él es chino", "Yo no soy chino", "Él no va a China"], "correct_answer": "Él no es chino", "explanation": "El audio dice: Tā bú shì Zhōngguó rén." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Nationalities",
+      "pairs": [
+        {"id": "zh-a1-17-p1", "source": "人 (rén)", "target": "Persona"},
+        {"id": "zh-a1-17-p2", "source": "中国 (zhōngguó)", "target": "China"},
+        {"id": "zh-a1-17-p3", "source": "中国人 (zhōngguó rén)", "target": "Chino (nacionalidad)"},
+        {"id": "zh-a1-17-p4", "source": "哪里人 (nǎlǐ rén)", "target": "Persona de dónde (De dónde)"},
+        {"id": "zh-a1-17-p5", "source": "你是哪里人？(nǐ shì nǎlǐ rén?)", "target": "¿De dónde eres?"},
+        {"id": "zh-a1-17-p6", "source": "我是中国人 (wǒ shì zhōngguó rén)", "target": "Yo soy chino"},
+        {"id": "zh-a1-17-p7", "source": "我不是中国人 (wǒ bú shì zhōngguó rén)", "target": "Yo no soy chino"},
+        {"id": "zh-a1-17-p8", "source": "他是中国人吗？(tā shì zhōngguó rén ma?)", "target": "¿Él es chino?"},
+        {"id": "zh-a1-17-p9", "source": "我是人 (wǒ shì rén)", "target": "Yo soy una persona"},
+        {"id": "zh-a1-17-p10", "source": "去中国的人 (qù zhōngguó de rén)", "target": "Persona que va a China (avanzado)"}
+      ]
+    }
+  ]
+}

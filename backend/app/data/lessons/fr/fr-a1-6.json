@@ -1,565 +1,83 @@
 {
   "id": "fr-a1-6",
-  "title": "Direcciones Simples",
+  "title": "Les Jours de la Semaine",
+  "version": "4.0-ARTISAN",
   "level": "A1",
-  "description": "Ubicación física en las oficinas.",
-  "total_xp": 300,
-  "difficulty": "easy",
-  "tags": [
-    "a1",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "French", "Time", "Days"],
+  "completion_message": "¡Très bien! Ya dominas los días de la semana y sabes cómo estructurar tus planes. ¡Estás un paso más cerca de dominar el tiempo en francés!",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Direcciones Simples",
+      "title": "Los Días de la Semana (A1)",
       "parts": [
-        {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau A1 • Leçon A1-6 de 200\nSujet: Direcciones Simples\n\nConcept Clé:\n☞ 'GAUCHE'\n\n[Point Grammatical - Enfoque Gramatical]\n- Le présent de l'indicatif : verbes réguliers en -er ('nous utilisons gauche') et auxiliaires ('je suis', 'nous avons').\\n- L'accord en genre et nombre des adjectifs de bureau (ex: 'un dossier vert', 'des chaises vertes').\\n- Clé Didactique : Structure de base Sujet + Verbe + Complément pour la communication simple.",
-          "audio": "Bienvenue à la leçon A1-6 sur Direcciones Simples. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : gauche."
-        },
-        {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'gauche' (Traducción/Uso: Ubicación física en las oficinas.)\n- Application Pratique : 'Nous devons intégrer gauche pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : Faites attention à la liaison entre 'un' et 'gauche' s'il commence par une voyelle.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : gauche. Répétez après moi : gauche."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Dans le niveau A1, privilégiez des phrases courtes et directes pour éviter les erreurs d'incompréhension.\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
-        }
+        { "visual": "Los 7 días de la semana (Les jours de la semaine): \n\n- Lundi (Lunes) \n- Mardi (Martes) \n- Mercredi (Miércoles) \n- Jeudi (Jueves) \n- Vendredi (Viernes) \n- Samedi (Sábado) \n- Dimanche (Domingo) \n\nIMPORTANTE: \nAl igual que en español, en francés los días de la semana se escriben en MINÚSCULA. \nEj: Je travaille lundi. (Trabajo el lunes).", "audio": "Hoy vamos a aprender los días de la semana. Escucha y repite: Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi, y Dimanche. Nota que casi todos los días terminan con la sílaba 'di', excepto el domingo, que es Dimanche. Una regla muy importante: en francés, los días de la semana no se escriben con mayúscula inicial, siempre van en minúscula." },
+        { "visual": "Vocabulario de Tiempo Útil: \n\n1. Aujourd'hui (Hoy) \nEj: AUJOURD'HUI c'est lundi. (Hoy es lunes). \n\n2. Demain (Mañana) \nEj: DEMAIN c'est mardi. (Mañana es martes). \n\n3. Hier (Ayer) \n\n4. Le week-end (El fin de semana) \nEj: Bon week-end ! (¡Buen fin de semana!). \n\nNota sobre el artículo 'Le': \nSi dices 'le lundi', significa 'todos los lunes'. Si dices solo 'lundi', significa 'este lunes'. \n- Lundi (Este lunes). \n- Le lundi (Todos los lunes).", "audio": "Añadamos palabras para hablar del tiempo. Hoy se dice 'Aujourd'hui'. Es una palabra larga, repite: Aujourd'hui. Mañana se dice 'Demain'. Y ayer se dice 'Hier'. El fin de semana es muy fácil: 'Le week-end'. Hay un detalle muy francés que debes saber: si dices 'Jeudi', significa ESTE jueves. Pero si le agregas el artículo 'Le' y dices 'Le jeudi', significa TODOS los jueves. Por ejemplo, 'Le lundi, je travaille' significa que trabajas todos los lunes." }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la traducción o el día correcto.",
       "questions": [
-        {
-          "id": "fr-a1-6-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"gauche\" dans le contexte de \"Direcciones Simples\" ?",
-          "options": [
-            "Le concept professionnel principal de gauche utilisé dans Direcciones Simples.",
-            "Un terme familier à éviter dans Direcciones Simples.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Direcciones Simples."
-          ],
-          "correct_answer": "Le concept professionnel principal de gauche utilisé dans Direcciones Simples.",
-          "explanation": "Comprendre la définition de \"gauche\" est fondamental pour maîtriser \"Direcciones Simples\"."
-        },
-        {
-          "id": "fr-a1-6-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"gauche\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Direcciones Simples\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"gauche\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Direcciones Simples\" aux parties prenantes.",
-          "explanation": "Aborder \"gauche\" dans les présentations professionnelles améliore la communication globale concernant \"Direcciones Simples\"."
-        },
-        {
-          "id": "fr-a1-6-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Direcciones Simples\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"gauche\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"gauche\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"gauche\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"gauche\" sont los piliers d'une exécution réussie de \"Direcciones Simples\"."
-        },
-        {
-          "id": "fr-a1-6-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Direcciones Simples\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"gauche\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"gauche\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"gauche\" conduit souvent à des résultats inefficaces dans \"Direcciones Simples\"."
-        },
-        {
-          "id": "fr-a1-6-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"gauche\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"gauche\" adapté à l'environnement de \"Direcciones Simples\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"gauche\" adapté à l'environnement de \"Direcciones Simples\".",
-          "explanation": "Traduire ou adapter \"gauche\" nécessite de comprendre son application commerciale pratique dans \"Direcciones Simples\"."
-        },
-        {
-          "id": "fr-a1-6-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"gauche\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Direcciones Simples\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Direcciones Simples\".",
-          "explanation": "Utiliser \"gauche\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-a1-6-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Direcciones Simples\", comment un cadre doit-il présenter \"gauche\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"gauche\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-a1-6-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"gauche\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"gauche\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"gauche\".",
-          "explanation": "Définir les jalons liés à \"gauche\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-a1-6-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Direcciones Simples\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"gauche\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"gauche\".",
-          "explanation": "Les mots professionnels comme \"gauche\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-a1-6-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"gauche\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"gauche\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "fra1-6-q1", "type": "quiz_choice", "question": "¿Qué día es 'Mercredi'?", "options": ["Miércoles", "Martes", "Jueves", "Viernes"], "correct_answer": "Miércoles", "explanation": "Mercredi = Miércoles." },
+        { "id": "fra1-6-q2", "type": "quiz_choice", "question": "¿Qué día es 'Jeudi'?", "options": ["Jueves", "Viernes", "Martes", "Sábado"], "correct_answer": "Jueves", "explanation": "Jeudi = Jueves." },
+        { "id": "fra1-6-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Viernes' en francés?", "options": ["Vendredi", "Samedi", "Mardi", "Lundi"], "correct_answer": "Vendredi", "explanation": "Viernes = Vendredi." },
+        { "id": "fra1-6-q4", "type": "quiz_choice", "question": "Aujourd'hui c'est samedi. Demain c'est ____.", "options": ["dimanche", "vendredi", "lundi", "jeudi"], "correct_answer": "dimanche", "explanation": "Si hoy es sábado, mañana es domingo (dimanche)." },
+        { "id": "fra1-6-q5", "type": "quiz_choice", "question": "¿Cómo se dice 'Hoy' en francés?", "options": ["Aujourd'hui", "Demain", "Hier", "Le week-end"], "correct_answer": "Aujourd'hui", "explanation": "Hoy = Aujourd'hui." },
+        { "id": "fra1-6-q6", "type": "quiz_choice", "question": "¿Cuál de estas oraciones significa 'Yo trabajo TODOS los martes'?", "options": ["Je travaille le mardi", "Je travaille mardi", "Je travaille un mardi", "Je travaille demain"], "correct_answer": "Je travaille le mardi", "explanation": "Añadir 'le' antes del día significa que es una acción habitual (todos los martes)." },
+        { "id": "fra1-6-q7", "type": "quiz_choice", "question": "¿Cuál es el único día de la semana que NO termina en 'di'?", "options": ["Dimanche", "Samedi", "Jeudi", "Mardi"], "correct_answer": "Dimanche", "explanation": "Dimanche (Domingo) es el único que no termina en 'di'." },
+        { "id": "fra1-6-q8", "type": "quiz_choice", "question": "Aujourd'hui c'est mardi. Hier c'était ____. (Si hoy es martes, ayer era...).", "options": ["lundi", "mercredi", "jeudi", "dimanche"], "correct_answer": "lundi", "explanation": "Ayer de martes es lunes (lundi)." },
+        { "id": "fra1-6-q9", "type": "quiz_choice", "question": "¿Cómo le deseas un 'Buen fin de semana' a un colega francés?", "options": ["Bon week-end", "Bonjour week-end", "Bonsoir week-end", "Salut week-end"], "correct_answer": "Bon week-end", "explanation": "¡Buen fin de semana! = Bon week-end !" },
+        { "id": "fra1-6-q10", "type": "quiz_choice", "question": "¿Es correcto escribir 'Lundi' con mayúscula a mitad de una frase en francés?", "options": ["Falso", "Verdadero"], "correct_answer": "Falso", "explanation": "Falso. En francés los días de la semana SIEMPRE se escriben en minúscula (salvo que inicien una oración)." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el día de la semana o la palabra de tiempo. Recuerda usar minúsculas para los días.",
       "questions": [
-        {
-          "id": "fr-a1-6-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 1) :",
-          "parts": [
-            "notre",
-            "gauche",
-            "pendant",
-            "les",
-            "réunions.",
-            "Nous",
-            "utilisons"
-          ],
-          "correct_order": [
-            "Nous",
-            "utilisons",
-            "notre",
-            "gauche",
-            "pendant",
-            "les",
-            "réunions."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a1-6-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 2) :",
-          "parts": [
-            "gauche",
-            "pour",
-            "le",
-            "projet.",
-            "Voici",
-            "notre"
-          ],
-          "correct_order": [
-            "Voici",
-            "notre",
-            "gauche",
-            "pour",
-            "le",
-            "projet."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a1-6-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 3) :",
-          "parts": [
-            "vérifier",
-            "notre",
-            "gauche",
-            "ce",
-            "matin.",
-            "Je",
-            "dois"
-          ],
-          "correct_order": [
-            "Je",
-            "dois",
-            "vérifier",
-            "notre",
-            "gauche",
-            "ce",
-            "matin."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a1-6-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 4) :",
-          "parts": [
-            "votre",
-            "gauche",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît.",
-            "Veuillez",
-            "présenter"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "présenter",
-            "votre",
-            "gauche",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a1-6-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 5) :",
-          "parts": [
-            "apprécie",
-            "chaque",
-            "gauche",
-            "de",
-            "bureau.",
-            "Notre",
-            "équipe"
-          ],
-          "correct_order": [
-            "Notre",
-            "équipe",
-            "apprécie",
-            "chaque",
-            "gauche",
-            "de",
-            "bureau."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a1-6-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 6) :",
-          "parts": [
-            "notre",
-            "gauche",
-            "avant",
-            "midi",
-            "?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "notre",
-            "gauche",
-            "avant",
-            "midi",
-            "?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a1-6-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 7) :",
-          "parts": [
-            "organiser",
-            "notre",
-            "gauche",
-            "cette",
-            "semaine.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "organiser",
-            "notre",
-            "gauche",
-            "cette",
-            "semaine."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a1-6-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 8) :",
-          "parts": [
-            "statut",
-            "de",
-            "notre",
-            "gauche",
-            "ensemble.",
-            "Examinons",
-            "le"
-          ],
-          "correct_order": [
-            "Examinons",
-            "le",
-            "statut",
-            "de",
-            "notre",
-            "gauche",
-            "ensemble."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a1-6-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 9) :",
-          "parts": [
-            "améliorer",
-            "notre",
-            "gauche",
-            "de",
-            "travail.",
-            "Ils",
-            "souhaitent"
-          ],
-          "correct_order": [
-            "Ils",
-            "souhaitent",
-            "améliorer",
-            "notre",
-            "gauche",
-            "de",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a1-6-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 10) :",
-          "parts": [
-            "avec",
-            "notre",
-            "gauche",
-            "tous",
-            "les",
-            "jours.",
-            "Elle",
-            "travaille"
-          ],
-          "correct_order": [
-            "Elle",
-            "travaille",
-            "avec",
-            "notre",
-            "gauche",
-            "tous",
-            "les",
-            "jours."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        }
+        { "id": "fra1-6-f1", "type": "fill_input", "question": "Lunes = ____", "correct_answer": "lundi", "explanation": "lundi" },
+        { "id": "fra1-6-f2", "type": "fill_input", "question": "Martes = ____", "correct_answer": "mardi", "explanation": "mardi" },
+        { "id": "fra1-6-f3", "type": "fill_input", "question": "Miércoles = ____", "correct_answer": "mercredi", "explanation": "mercredi" },
+        { "id": "fra1-6-f4", "type": "fill_input", "question": "Jueves = ____", "correct_answer": "jeudi", "explanation": "jeudi" },
+        { "id": "fra1-6-f5", "type": "fill_input", "question": "Viernes = ____", "correct_answer": "vendredi", "explanation": "vendredi" },
+        { "id": "fra1-6-f6", "type": "fill_input", "question": "Sábado = ____", "correct_answer": "samedi", "explanation": "samedi" },
+        { "id": "fra1-6-f7", "type": "fill_input", "question": "Domingo = ____", "correct_answer": "dimanche", "explanation": "dimanche" },
+        { "id": "fra1-6-f8", "type": "fill_input", "question": "Hoy = ____", "correct_answer": "aujourd'hui", "explanation": "aujourd'hui" },
+        { "id": "fra1-6-f9", "type": "fill_input", "question": "Mañana = ____", "correct_answer": "demain", "explanation": "demain" },
+        { "id": "fra1-6-f10", "type": "fill_input", "question": "El fin de semana = Le ____", "correct_answer": "week-end", "explanation": "week-end" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-a1-6-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"gauche\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"gauche\" en détail.",
-            "Une autre déclaration sur notre \"gauche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"gauche\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"gauche\" en réunion."
-        },
-        {
-          "id": "fr-a1-6-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"gauche\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"gauche\" ?",
-            "Une autre déclaration sur notre \"gauche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"gauche\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"gauche\" en réunion."
-        },
-        {
-          "id": "fr-a1-6-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"gauche\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"gauche\" cette année.",
-            "Une autre déclaration sur notre \"gauche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"gauche\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"gauche\" en réunion."
-        },
-        {
-          "id": "fr-a1-6-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"gauche\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"gauche\".",
-            "Une autre déclaration sur notre \"gauche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"gauche\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"gauche\" en réunion."
-        },
-        {
-          "id": "fr-a1-6-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"gauche\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"gauche\".",
-            "Une autre déclaration sur notre \"gauche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"gauche\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"gauche\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Time Match",
+      "pairs": [
+        {"id": "fra1-6-p1", "source": "Lundi", "target": "Lunes"},
+        {"id": "fra1-6-p2", "source": "Mercredi", "target": "Miércoles"},
+        {"id": "fra1-6-p3", "source": "Jeudi", "target": "Jueves"},
+        {"id": "fra1-6-p4", "source": "Vendredi", "target": "Viernes"},
+        {"id": "fra1-6-p5", "source": "Dimanche", "target": "Domingo"},
+        {"id": "fra1-6-p6", "source": "Aujourd'hui", "target": "Hoy"},
+        {"id": "fra1-6-p7", "source": "Demain", "target": "Mañana"},
+        {"id": "fra1-6-p8", "source": "Hier", "target": "Ayer"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la palabra correcta.",
       "questions": [
-        {
-          "id": "fr-a1-6-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"gau___\" (Indice : désigne \"gauche\")",
-          "correct_answers": [
-            "gauche",
-            "Gauche"
-          ],
-          "hints": [
-            "Commence par 'gau'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"gauche\"."
-        },
-        {
-          "id": "fr-a1-6-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"L'équipe veut discuter de notre gauche ____ lundi matin.\" (le / en)",
-          "correct_answers": [
-            "le"
-          ],
-          "hints": [
-            "Article défini utilisé devant les jours de la semaine"
-          ],
-          "explanation": "En français, on utilise l'article défini 'le' devant un jour de la semana pour indiquer un rendez-vous habituel ou fixe."
-        },
-        {
-          "id": "fr-a1-6-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Veuillez ____ attention à ne pas faire d'erreur sur notre gauche.\" (faire / prendre)",
-          "correct_answers": [
-            "faire",
-            "Faire"
-          ],
-          "hints": [
-            "Verbe signifiant effectuer ou prêter attention"
-          ],
-          "explanation": "L'expression 'faire attention' est une collocation standard en français."
-        },
-        {
-          "id": "fr-a1-6-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons organiser une ____ pour revoir notre gauche.\" (réunion / carte)",
-          "correct_answers": [
-            "réunion",
-            "discussion",
-            "session"
-          ],
-          "hints": [
-            "Un rassemblement de personnes pour travailler ensemble"
-          ],
-          "explanation": "Une 'réunion' est le terme standard pour un meeting professionnel."
-        },
-        {
-          "id": "fr-a1-6-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Il nous faut un rapport ____ sur le statut de notre gauche.\" (clair / lent)",
-          "correct_answers": [
-            "clair"
-          ],
-          "hints": [
-            "Facile à comprendre et bien structuré"
-          ],
-          "explanation": "Un rapport 'clair' est indispensable pour assurer l'alignement."
-        }
+        { "id": "fra1-6-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Mercredi", "options": ["Mercredi", "Mardi", "Jeudi", "Vendredi"], "correct_answer": "Mercredi", "explanation": "Audio dice: Mercredi (Miércoles)." },
+        { "id": "fra1-6-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Jeudi", "options": ["Jeudi", "Lundi", "Mardi", "Samedi"], "correct_answer": "Jeudi", "explanation": "Audio dice: Jeudi (Jueves)." },
+        { "id": "fra1-6-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Dimanche", "options": ["Dimanche", "Vendredi", "Samedi", "Mercredi"], "correct_answer": "Dimanche", "explanation": "Audio dice: Dimanche (Domingo)." },
+        { "id": "fra1-6-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Aujourd'hui", "options": ["Aujourd'hui", "Demain", "Hier", "Lundi"], "correct_answer": "Aujourd'hui", "explanation": "Audio dice: Aujourd'hui (Hoy)." },
+        { "id": "fra1-6-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Demain", "options": ["Demain", "Aujourd'hui", "Hier", "Mardi"], "correct_answer": "Demain", "explanation": "Audio dice: Demain (Mañana)." }
       ]
     }
   ]

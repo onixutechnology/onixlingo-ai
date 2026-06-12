@@ -1,0 +1,96 @@
+{
+  "id": "zh-a1-4",
+  "title": "Números y la Negación",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Numbers", "Negation", "Vocabulary"],
+  "completion_message": "¡Excelente! Ya sabes contar del 1 al 10 con los dedos de una sola mano (al estilo chino) y sabes cómo decir 'NO' como un nativo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Contando y Negando en China",
+      "parts": [
+        {
+          "visual": "Los Números del 1 al 5:\n\n1: 一 (yī)\n2: 二 (èr)\n3: 三 (sān)\n4: 四 (sì)\n5: 五 (wǔ)\n\nFíjate en los caracteres del 1 al 3. Son súper lógicos: una raya, dos rayas, tres rayas. A partir del 4 y 5 se vuelven un poco abstractos.",
+          "audio": "Aprender los números en chino es muy visual, especialmente los tres primeros. Para el número uno, escribes una línea horizontal. Yī. Para el dos, escribes dos líneas horizontales, una sobre la otra. Èr. Y para el tres, tres líneas horizontales. Sān. Luego tenemos el cuatro, Sì, y el cinco, Wǔ. En China, puedes contar del 1 al 10 usando los dedos de una sola mano. Es un sistema de lenguaje de señas que usan en los mercados para negociar precios sin gritar."
+        },
+        {
+          "visual": "Los Números del 6 al 10:\n\n6: 六 (liù)\n7: 七 (qī)\n8: 八 (bā)\n9: 九 (jiǔ)\n10: 十 (shí)\n\nEl número 8 (bā) es el número de la suerte en China porque suena parecido a 'fa', que significa enriquecerse. El 4 (sì) es de mala suerte porque suena como 'muerte' (sǐ).",
+          "audio": "Sigamos contando. Seis es Liù. Siete es Qī. Ocho es Bā. Nueve es Jiǔ. Y diez es Shí, que se escribe como una cruz perfecta. Un dato cultural fascinante: el número 8, Bā, es el número de la suerte en China, tanto así que la gente paga miles de dólares por tener un número de teléfono lleno de ochos. Por el contrario, el 4, Sì, es el número de la mala suerte, porque suena casi igual a la palabra muerte. ¡Muchos edificios en China no tienen piso 4!"
+        },
+        {
+          "visual": "La Negación con 不 (bù):\n\nPara decir 'NO' y negar un verbo, usamos la partícula 不 (bù). Se coloca siempre ANTES del verbo.\n\n- 我是 (wǒ shì) = Yo soy.\n- 我不是 (wǒ bú shì) = Yo NO soy.\n\n¡La Regla del Camaleón!\nEl tono natural de 不 es el cuarto tono (hacia abajo, bù). PERO, si la palabra que le sigue también tiene el cuarto tono (como shì), 不 cambia al segundo tono (hacia arriba, bú) para que sea más fácil de pronunciar: Bú shì.",
+          "audio": "Para decir que algo NO es, usamos la partícula 'Bù'. Bù es el gran negador en mandarín. Siempre se pone justo antes del verbo. Si 'wǒ shì' significa 'yo soy', entonces 'yo no soy' será 'wǒ bú shì'. Y aquí hay una pequeña trampa de pronunciación. 'Bù' normalmente se pronuncia fuerte hacia abajo. Pero, si la palabra que le sigue también va hacia abajo, como 'shì', decir 'bù shì' suena muy trabado. Así que los chinos cambian el tono del 'bu' y lo suben un poco: 'bú shì'. Es mucho más fluido decir 'Wǒ bú shì'."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra tu dominio de los números y la negación.",
+      "questions": [
+        { "id": "zh-a1-4-q1", "type": "quiz_choice", "question": "¿Cómo se escribe el número 3 en caracteres chinos?", "options": ["三", "一", "二", "四"], "correct_answer": "三", "explanation": "Son tres líneas horizontales." },
+        { "id": "zh-a1-4-q2", "type": "quiz_choice", "question": "¿Qué número es considerado de mala suerte en China porque suena como 'muerte'?", "options": ["Sì (4)", "Bā (8)", "Jiǔ (9)", "Liù (6)"], "correct_answer": "Sì (4)", "explanation": "Sì (4) suena casi idéntico a sǐ (muerte), solo cambia el tono." },
+        { "id": "zh-a1-4-q3", "type": "quiz_choice", "question": "¿Cuál es el número de la suerte en China?", "options": ["Bā (8)", "Sì (4)", "Qī (7)", "Shí (10)"], "correct_answer": "Bā (8)", "explanation": "Bā (8) es el número de la prosperidad y la suerte." },
+        { "id": "zh-a1-4-q4", "type": "quiz_choice", "question": "¿Dónde se coloca la partícula de negación 不 (bù) en una oración?", "options": ["Antes del verbo.", "Al final de la oración.", "Al principio de la oración.", "Después del verbo."], "correct_answer": "Antes del verbo.", "explanation": "Ejemplo: Yo NO soy -> 我不是 (Wǒ bú shì)." },
+        { "id": "zh-a1-4-q5", "type": "quiz_choice", "question": "El tono normal de 不 es bù (cuarto tono). ¿Por qué cambia a bú (segundo tono) en 'bú shì'?", "options": ["Para que sea más fácil de pronunciar porque 'shì' también tiene el cuarto tono.", "Porque es una excepción gramatical aleatoria.", "Porque la oración es en pasado.", "Porque es una pregunta."], "correct_answer": "Para que sea más fácil de pronunciar porque 'shì' también tiene el cuarto tono.", "explanation": "Es la regla del cambio de tono. Dos cuartos tonos seguidos son difíciles de decir rápido." },
+        { "id": "zh-a1-4-q6", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo NO soy estudiante' (estudiante = xuésheng)?", "options": ["Wǒ bú shì xuésheng.", "Wǒ shì bù xuésheng.", "Bù wǒ shì xuésheng.", "Wǒ shì xuésheng bù."], "correct_answer": "Wǒ bú shì xuésheng.", "explanation": "Sujeto + Negación + Verbo + Objeto." },
+        { "id": "zh-a1-4-q7", "type": "quiz_choice", "question": "¿Qué carácter chino parece una cruz perfecta (+)?", "options": ["十 (shí - 10)", "七 (qī - 7)", "八 (bā - 8)", "九 (jiǔ - 9)"], "correct_answer": "十 (shí - 10)", "explanation": "El número 10 se escribe 十." },
+        { "id": "zh-a1-4-q8", "type": "quiz_choice", "question": "La oración 'Tā bú shì...' significa:", "options": ["Él/Ella no es...", "Yo no soy...", "Nosotros somos...", "Tú no eres..."], "correct_answer": "Él/Ella no es...", "explanation": "Tā (él/ella) bú shì (no es)." },
+        { "id": "zh-a1-4-q9", "type": "quiz_choice", "question": "Si a ti te dicen 'Nǐ shì...' (Tú eres...) y quieres negarlo, ¿qué respondes?", "options": ["Wǒ bú shì...", "Wǒ shì...", "Tā bú shì...", "Bù nǐ shì..."], "correct_answer": "Wǒ bú shì...", "explanation": "Debes responder con 'Wǒ' (Yo) y negarlo con 'bú shì'." },
+        { "id": "zh-a1-4-q10", "type": "quiz_choice", "question": "¿Cómo se escribe el número 8 en pinyin?", "options": ["bā", "ba", "pa", "bō"], "correct_answer": "bā", "explanation": "bā (primer tono plano)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correspondiente a los números y la negación. Usa letras minúsculas, sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-4-f1", "type": "fill_input", "question": "Uno (1): ____ (yi)", "correct_answer": "yi", "explanation": "yi" },
+        { "id": "zh-a1-4-f2", "type": "fill_input", "question": "Dos (2): ____ (er)", "correct_answer": "er", "explanation": "er" },
+        { "id": "zh-a1-4-f3", "type": "fill_input", "question": "Tres (3): ____ (san)", "correct_answer": "san", "explanation": "san" },
+        { "id": "zh-a1-4-f4", "type": "fill_input", "question": "Cuatro (4): ____ (si)", "correct_answer": "si", "explanation": "si" },
+        { "id": "zh-a1-4-f5", "type": "fill_input", "question": "Cinco (5): ____ (wu)", "correct_answer": "wu", "explanation": "wu" },
+        { "id": "zh-a1-4-f6", "type": "fill_input", "question": "Ocho (8): ____ (ba)", "correct_answer": "ba", "explanation": "ba" },
+        { "id": "zh-a1-4-f7", "type": "fill_input", "question": "Diez (10): ____ (shi)", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-a1-4-f8", "type": "fill_input", "question": "No: ____ (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a1-4-f9", "type": "fill_input", "question": "Yo NO soy: wo ____ shi", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a1-4-f10", "type": "fill_input", "question": "Él NO es: ta ____ shi", "correct_answer": "bu", "explanation": "bu" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y selecciona la respuesta correcta.",
+      "questions": [
+        { "id": "zh-a1-4-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "八", "options": ["八 (bā - 8)", "七 (qī - 7)", "九 (jiǔ - 9)", "十 (shí - 10)"], "correct_answer": "八 (bā - 8)", "explanation": "El audio dice: bā (8)." },
+        { "id": "zh-a1-4-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "四", "options": ["四 (sì - 4)", "十 (shí - 10)", "五 (wǔ - 5)", "三 (sān - 3)"], "correct_answer": "四 (sì - 4)", "explanation": "El audio dice: sì (4)." },
+        { "id": "zh-a1-4-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我不是", "options": ["我不是 (wǒ bú shì - Yo NO soy)", "我是 (wǒ shì - Yo soy)", "你不是 (nǐ bú shì - Tú NO eres)", "他不是 (tā bú shì - Él NO es)"], "correct_answer": "我不是 (wǒ bú shì - Yo NO soy)", "explanation": "El audio dice: wǒ bú shì." },
+        { "id": "zh-a1-4-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他不是", "options": ["他不是 (tā bú shì - Él NO es)", "你是 (nǐ shì - Tú eres)", "我不是 (wǒ bú shì - Yo NO soy)", "不是 (bú shì - No es)"], "correct_answer": "他不是 (tā bú shì - Él NO es)", "explanation": "El audio dice: tā bú shì." },
+        { "id": "zh-a1-4-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "十", "options": ["十 (shí - 10)", "四 (sì - 4)", "五 (wǔ - 5)", "六 (liù - 6)"], "correct_answer": "十 (shí - 10)", "explanation": "El audio dice: shí (10)." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Numbers and Characters",
+      "pairs": [
+        {"id": "zh-a1-4-p1", "source": "一 (yī)", "target": "1"},
+        {"id": "zh-a1-4-p2", "source": "二 (èr)", "target": "2"},
+        {"id": "zh-a1-4-p3", "source": "三 (sān)", "target": "3"},
+        {"id": "zh-a1-4-p4", "source": "四 (sì)", "target": "4"},
+        {"id": "zh-a1-4-p5", "source": "五 (wǔ)", "target": "5"},
+        {"id": "zh-a1-4-p6", "source": "六 (liù)", "target": "6"},
+        {"id": "zh-a1-4-p7", "source": "七 (qī)", "target": "7"},
+        {"id": "zh-a1-4-p8", "source": "八 (bā)", "target": "8"},
+        {"id": "zh-a1-4-p9", "source": "九 (jiǔ)", "target": "9"},
+        {"id": "zh-a1-4-p10", "source": "十 (shí)", "target": "10"}
+      ]
+    }
+  ]
+}

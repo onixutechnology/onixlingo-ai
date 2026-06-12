@@ -1,0 +1,101 @@
+{
+  "id": "b2-33",
+  "title": "Meetings & Negotiations",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Vocabulary", "Meetings", "Negotiations", "Business"],
+  "completion_message": "¡Excelente! Con este vocabulario puedes liderar cualquier negociación, destrabar situaciones difíciles (deadlocks) y llegar a acuerdos beneficiosos.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Vocabulario de Reuniones y Negociaciones",
+      "parts": [
+        { "visual": "Términos Clave de Negociación: \n- Bargain (Negociar precio / Ganga). \nEj: They bargained hard for a better deal. \n- Counter-offer (Contraoferta). \nEj: We rejected their price and made a counter-offer. \n- Consensus (Consenso / Acuerdo general). \nEj: We need to reach a consensus before the end of the meeting.", "audio": "Key Negotiation Terms. 'Bargain' means to negotiate the terms of an agreement, usually price, or it can mean a good deal. For example: They bargained hard for a better deal. 'Counter-offer' is an offer made in response to another. For example: We rejected their price and made a counter-offer. 'Consensus' means a general agreement. For example: We need to reach a consensus before the end of the meeting." },
+        { "visual": "Resolución y Conflicto: \n- Deadlock (Punto muerto / Estancamiento). \nEj: The negotiations have reached a deadlock. \n- Compromise (Ceder ambas partes para llegar a un acuerdo). \nEj: We both want different things, so we will have to compromise. \n- Leverage (Poder de negociación / Ventaja). \nEj: Since we have multiple suppliers, we have more leverage.", "audio": "Resolution and Conflict. 'Deadlock' is a situation where no progress can be made. For example: The negotiations have reached a deadlock. 'Compromise' means an agreement where both sides make concessions. For example: We both want different things, so we will have to compromise. 'Leverage' is the power to influence a person or situation. For example: Since we have multiple suppliers, we have more leverage." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para la situación de negociación.",
+      "questions": [
+        { "id": "b2-33-q1", "type": "quiz_choice", "question": "The negotiations have reached a ____. Neither side is willing to change their position. (Punto muerto).", "options": ["deadlock", "lockdown", "doorstep", "deadline"], "correct_answer": "deadlock", "explanation": "Deadlock = punto muerto, estancamiento." },
+        { "id": "b2-33-q2", "type": "quiz_choice", "question": "To reach an agreement, both parties will have to ____. (Llegar a un acuerdo cediendo ambos).", "options": ["compromise", "promise", "commit", "agree"], "correct_answer": "compromise", "explanation": "Compromise = compromiso donde ambas partes ceden en algo." },
+        { "id": "b2-33-q3", "type": "quiz_choice", "question": "They offered us $10,000, but we made a ____ of $15,000. (Contraoferta).", "options": ["counter-offer", "re-offer", "second-offer", "back-offer"], "correct_answer": "counter-offer", "explanation": "Counter-offer = contraoferta." },
+        { "id": "b2-33-q4", "type": "quiz_choice", "question": "After hours of discussion, we finally reached a ____. Everyone agreed. (Consenso).", "options": ["consensus", "consent", "concept", "context"], "correct_answer": "consensus", "explanation": "Consensus = consenso, acuerdo general." },
+        { "id": "b2-33-q5", "type": "quiz_choice", "question": "Because we are their only client, we have a lot of ____ in this negotiation. (Poder de negociación / Ventaja).", "options": ["leverage", "power", "strength", "weight"], "correct_answer": "leverage", "explanation": "Leverage = ventaja o poder de influencia en una negociación." },
+        { "id": "b2-33-q6", "type": "quiz_choice", "question": "You can try to ____ with the seller to get a lower price. (Regatear / Negociar).", "options": ["bargain", "argue", "fight", "discuss"], "correct_answer": "bargain", "explanation": "Bargain = regatear, negociar un precio." },
+        { "id": "b2-33-q7", "type": "quiz_choice", "question": "I would like to propose a ____ situation where both companies benefit. (Ganar-ganar).", "options": ["win-win", "win-lose", "good-good", "top-top"], "correct_answer": "win-win", "explanation": "Win-win situation = situación en la que todos ganan." },
+        { "id": "b2-33-q8", "type": "quiz_choice", "question": "Before the meeting starts, let's look at the ____. (Orden del día / Temas a tratar).", "options": ["agenda", "schedule", "timetable", "diary"], "correct_answer": "agenda", "explanation": "Agenda = orden del día, lista de temas a discutir en una reunión." },
+        { "id": "b2-33-q9", "type": "quiz_choice", "question": "Who is going to take the ____ during this meeting? (Acta de la reunión / Notas).", "options": ["minutes", "seconds", "hours", "notes"], "correct_answer": "minutes", "explanation": "Take the minutes = levantar el acta de la reunión." },
+        { "id": "b2-33-q10", "type": "quiz_choice", "question": "We need to ____ the main points before we make a final decision. (Resumir).", "options": ["summarize", "add", "calculate", "speak"], "correct_answer": "summarize", "explanation": "Summarize = resumir." },
+        { "id": "b2-33-q11", "type": "quiz_choice", "question": "Let's stick to the ____, please. We are getting off-topic. (Puntos de discusión).", "options": ["agenda", "book", "paper", "wall"], "correct_answer": "agenda", "explanation": "Stick to the agenda = ceñirse a los puntos de la reunión." },
+        { "id": "b2-33-q12", "type": "quiz_choice", "question": "The union is threatening to go on ____ if their demands are not met. (Huelga).", "options": ["strike", "break", "leave", "holiday"], "correct_answer": "strike", "explanation": "Go on strike = ir a la huelga (contexto de negociación laboral)." },
+        { "id": "b2-33-q13", "type": "quiz_choice", "question": "This is our ____ offer. We will not pay a single dollar more. (Oferta final/definitiva).", "options": ["bottom-line", "top-line", "end-line", "last-line"], "correct_answer": "bottom-line", "explanation": "Bottom-line offer (o simply 'final offer') = la oferta límite. 'The bottom line' también significa la conclusión o el resultado financiero final." },
+        { "id": "b2-33-q14", "type": "quiz_choice", "question": "If they don't accept our terms, we are prepared to ____ away from the deal. (Alejarse / Abandonar la negociación).", "options": ["walk", "run", "jump", "fly"], "correct_answer": "walk", "explanation": "Walk away = abandonar la negociación si no conviene." },
+        { "id": "b2-33-q15", "type": "quiz_choice", "question": "We had to make some ____ to keep the client happy. (Concesiones).", "options": ["concessions", "confessions", "connections", "corrections"], "correct_answer": "concessions", "explanation": "Make concessions = hacer concesiones, ceder en ciertos puntos." },
+        { "id": "b2-33-q16", "type": "quiz_choice", "question": "The meeting was very ____. We solved all the issues in one hour. (Productiva).", "options": ["productive", "predictive", "proactive", "protective"], "correct_answer": "productive", "explanation": "Productive = productivo." },
+        { "id": "b2-33-q17", "type": "quiz_choice", "question": "Let's put that issue on ____ and discuss it later. (En espera).", "options": ["hold", "wait", "pause", "stop"], "correct_answer": "hold", "explanation": "Put on hold = poner en espera, pausar." },
+        { "id": "b2-33-q18", "type": "quiz_choice", "question": "I would like to ____ a proposal regarding the new software. (Hacer/Presentar una propuesta).", "options": ["make", "do", "have", "take"], "correct_answer": "make", "explanation": "Make a proposal = hacer una propuesta." },
+        { "id": "b2-33-q19", "type": "quiz_choice", "question": "Could you please ____ what you mean by 'restructuring'? (Aclarar).", "options": ["clarify", "clean", "clear", "close"], "correct_answer": "clarify", "explanation": "Clarify = aclarar, explicar con más detalle." },
+        { "id": "b2-33-q20", "type": "quiz_choice", "question": "The two parties finally managed to ____ a deal. (Cerrar / Llegar a un acuerdo).", "options": ["strike", "hit", "beat", "punch"], "correct_answer": "strike", "explanation": "Strike a deal = llegar a un acuerdo o trato." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave de negociación.",
+      "questions": [
+        { "id": "b2-33-f1", "type": "fill_input", "question": "Reach a ____. (Punto muerto con D)", "correct_answer": "deadlock", "explanation": "deadlock." },
+        { "id": "b2-33-f2", "type": "fill_input", "question": "Make a ____-offer. (Contraoferta)", "correct_answer": "counter", "explanation": "counter." },
+        { "id": "b2-33-f3", "type": "fill_input", "question": "Reach a ____. (Consenso con C)", "correct_answer": "consensus", "explanation": "consensus." },
+        { "id": "b2-33-f4", "type": "fill_input", "question": "We have more ____. (Ventaja/Poder de negociación con L)", "correct_answer": "leverage", "explanation": "leverage." },
+        { "id": "b2-33-f5", "type": "fill_input", "question": "We must ____. (Ceder ambas partes con C)", "correct_answer": "compromise", "explanation": "compromise." },
+        { "id": "b2-33-f6", "type": "fill_input", "question": "To ____ hard. (Regatear/Negociar precio con B)", "correct_answer": "bargain", "explanation": "bargain." },
+        { "id": "b2-33-f7", "type": "fill_input", "question": "A ____-win situation. (Ganar-ganar)", "correct_answer": "win", "explanation": "win." },
+        { "id": "b2-33-f8", "type": "fill_input", "question": "Take the ____. (Acta de la reunión con M)", "correct_answer": "minutes", "explanation": "minutes." },
+        { "id": "b2-33-f9", "type": "fill_input", "question": "Stick to the ____. (Orden del día con A)", "correct_answer": "agenda", "explanation": "agenda." },
+        { "id": "b2-33-f10", "type": "fill_input", "question": "Make ____. (Concesiones con C)", "correct_answer": "concessions", "explanation": "concessions." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Meetings Match",
+      "pairs": [
+        {"id": "b2-33-p1", "source": "Deadlock", "target": "Punto muerto / Estancamiento"},
+        {"id": "b2-33-p2", "source": "Compromise", "target": "Ceder mutuamente / Acuerdo intermedio"},
+        {"id": "b2-33-p3", "source": "Leverage", "target": "Poder de negociación / Ventaja"},
+        {"id": "b2-33-p4", "source": "Counter-offer", "target": "Contraoferta"},
+        {"id": "b2-33-p5", "source": "Consensus", "target": "Consenso general"},
+        {"id": "b2-33-p6", "source": "Bargain", "target": "Regatear / Negociar precio"},
+        {"id": "b2-33-p7", "source": "Take the minutes", "target": "Levantar el acta de la reunión"},
+        {"id": "b2-33-p8", "source": "Agenda", "target": "Orden del día / Temas a tratar"},
+        {"id": "b2-33-p9", "source": "Make concessions", "target": "Hacer concesiones"},
+        {"id": "b2-33-p10", "source": "Strike a deal", "target": "Cerrar un trato"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término de negociación correcto.",
+      "questions": [
+        { "id": "b2-33-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We reached a deadlock.", "options": ["We reached a deadlock.", "They reached a deadlock.", "We reached a deadline.", "We reach a deadlock."], "correct_answer": "We reached a deadlock.", "explanation": "Audio exacto." },
+        { "id": "b2-33-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have more leverage.", "options": ["We have more leverage.", "They have more leverage.", "We have no leverage.", "We have more beverage."], "correct_answer": "We have more leverage.", "explanation": "Audio exacto." },
+        { "id": "b2-33-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They made a counter-offer.", "options": ["They made a counter-offer.", "We made a counter-offer.", "They make a counter-offer.", "He made a counter-offer."], "correct_answer": "They made a counter-offer.", "explanation": "Audio exacto." },
+        { "id": "b2-33-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to compromise.", "options": ["We need to compromise.", "They need to compromise.", "We need to promise.", "We need to agree."], "correct_answer": "We need to compromise.", "explanation": "Audio exacto." },
+        { "id": "b2-33-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's reach a consensus.", "options": ["Let's reach a consensus.", "Let's reach a consent.", "They reach a consensus.", "Let's sign a consensus."], "correct_answer": "Let's reach a consensus.", "explanation": "Audio exacto." },
+        { "id": "b2-33-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Stick to the agenda.", "options": ["Stick to the agenda.", "Look at the agenda.", "Stick to the plan.", "Stuck to the agenda."], "correct_answer": "Stick to the agenda.", "explanation": "Audio exacto." },
+        { "id": "b2-33-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Who will take the minutes?", "options": ["Who will take the minutes?", "Who will take the notes?", "We will take the minutes.", "Who will read the minutes?"], "correct_answer": "Who will take the minutes?", "explanation": "Audio exacto." },
+        { "id": "b2-33-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a win-win situation.", "options": ["It is a win-win situation.", "It was a win-win situation.", "Is it a win-win situation?", "This is a win-win situation."], "correct_answer": "It is a win-win situation.", "explanation": "Audio exacto." },
+        { "id": "b2-33-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We made some concessions.", "options": ["We made some concessions.", "They made some concessions.", "We make some concessions.", "We made no concessions."], "correct_answer": "We made some concessions.", "explanation": "Audio exacto." },
+        { "id": "b2-33-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We finally struck a deal.", "options": ["We finally struck a deal.", "They finally struck a deal.", "We finally made a deal.", "We finally strike a deal."], "correct_answer": "We finally struck a deal.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

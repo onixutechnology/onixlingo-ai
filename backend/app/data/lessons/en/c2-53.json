@@ -1,0 +1,101 @@
+{
+  "id": "c2-53",
+  "title": "Data Privacy & Security",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Technology", "Cybersecurity", "Law"],
+  "completion_message": "¡Formidable! En la era digital, los datos son el activo más valioso. Entender los términos de ciberseguridad y privacidad de datos te protege a ti y a tu empresa de desastres multimillonarios.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Privacidad de Datos y Ciberseguridad (C2)",
+      "parts": [
+        { "visual": "Los datos corporativos están bajo amenaza constante. Conoce este vocabulario: \n\n1. Data breach (Filtración / Brecha de datos): \n- Cuando información confidencial es robada o expuesta. \nEj: The DATA BREACH exposed the passwords of 5 million users. \n\n2. GDPR (General Data Protection Regulation): \n- La estricta ley de privacidad de Europa. Violarla cuesta millones. \nEj: Is our new software fully GDPR compliant? \n\n3. Opt-in / Opt-out (Aceptar participar / Rechazar participar): \n- 'Opt-in' significa que el usuario debe dar permiso explícito (ej. marcar una casilla) para recibir correos. 'Opt-out' es cuando se le incluye por defecto y debe pedir salir. \nEj: European laws require strict OPT-IN consent for marketing emails.", "audio": "Welcome to Data Privacy and Cybersecurity. Corporate data is under constant threat. Number 1: Data breach. An incident where confidential or protected information is exposed or stolen. For example: The DATA BREACH exposed the passwords of 5 million users. Number 2: GDPR, which stands for General Data Protection Regulation. This is Europe's strict privacy law. For example: Is our new software fully GDPR compliant? Number 3: Opt-in and Opt-out. Opt-in means the user must actively give permission, like checking a box, to receive emails. Opt-out means they are included by default and must ask to be removed. For example: European laws require strict OPT-IN consent for marketing emails." },
+        { "visual": "4. Encryption (Cifrado / Encriptación): \n- Ocultar datos convirtiéndolos en código secreto. 'End-to-end encryption' significa que solo el emisor y receptor pueden leerlos. \nEj: All our messages are secured with end-to-end ENCRYPTION. \n\n5. Phishing (Suplantación de identidad): \n- Correos falsos diseñados para robar contraseñas simulando ser empresas reales. \nEj: The employee clicked on a PHISHING link and compromised the network. \n\n6. Ransomware (Secuestro de datos): \n- Un virus que bloquea los archivos de una empresa hasta que pagan un rescate ('ransom'). \nEj: The hospital's systems were shut down by a RANSOMWARE attack. \n\n7. NDA (Non-Disclosure Agreement / Acuerdo de confidencialidad): \n- Contrato legal para no revelar secretos. \nEj: Before I show you the prototype, you must sign this NDA.", "audio": "Number 4: Encryption. The process of converting information or data into a code, especially to prevent unauthorized access. For example: All our messages are secured with end-to-end ENCRYPTION. Number 5: Phishing. Cyber attacks that use deceptive emails to trick people into revealing passwords or clicking malicious links. For example: The employee clicked on a PHISHING link and compromised the network. Number 6: Ransomware. Malicious software that blocks access to a computer system or files until a sum of money, a ransom, is paid. For example: The hospital's systems were shut down by a RANSOMWARE attack. Number 7: NDA, which stands for Non-Disclosure Agreement. A legal contract keeping information secret. For example: Before I show you the prototype, you must sign this NDA." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de privacidad o seguridad correcto.",
+      "questions": [
+        { "id": "c2-53-q1", "type": "quiz_choice", "question": "The company was fined $50 million after a massive data ____ exposed customer credit cards. (Brecha / Filtración).", "options": ["breach", "break", "burst", "bleed"], "correct_answer": "breach", "explanation": "Data breach = filtración o brecha de datos." },
+        { "id": "c2-53-q2", "type": "quiz_choice", "question": "If you do business in Europe, your software must be fully compliant with the ____ regulations.", "options": ["GDPR", "GDRP", "GPRD", "GRDP"], "correct_answer": "GDPR", "explanation": "GDPR = General Data Protection Regulation." },
+        { "id": "c2-53-q3", "type": "quiz_choice", "question": "You cannot subscribe users automatically. They must actively check a box to ____-in to our newsletter. (Aceptar explícitamente).", "options": ["opt", "in", "choose", "pick"], "correct_answer": "opt", "explanation": "Opt-in = elegir participar (dar consentimiento activo)." },
+        { "id": "c2-53-q4", "type": "quiz_choice", "question": "If users no longer want to receive our emails, there must be a clear link at the bottom allowing them to ____-out. (Darse de baja).", "options": ["opt", "get", "leave", "drop"], "correct_answer": "opt", "explanation": "Opt-out = elegir no participar o darse de baja." },
+        { "id": "c2-53-q5", "type": "quiz_choice", "question": "To ensure hackers cannot read the database, all passwords are protected using military-grade ____. (Cifrado).", "options": ["encryption", "encoding", "enclosing", "engraving"], "correct_answer": "encryption", "explanation": "Encryption = encriptación o cifrado." },
+        { "id": "c2-53-q6", "type": "quiz_choice", "question": "The hacker sent an email pretending to be the CEO asking for passwords. This is a classic ____ attack. (Suplantación).", "options": ["phishing", "fishing", "hunting", "trapping"], "correct_answer": "phishing", "explanation": "Phishing = correos fraudulentos para robar datos." },
+        { "id": "c2-53-q7", "type": "quiz_choice", "question": "All our files were locked by hackers who demanded 50 Bitcoin to unlock them. We were hit by ____. (Secuestro de datos).", "options": ["ransomware", "spyware", "malware", "virus"], "correct_answer": "ransomware", "explanation": "Ransomware = software que pide un rescate (ransom)." },
+        { "id": "c2-53-q8", "type": "quiz_choice", "question": "Before our engineers look at your proprietary code, they will sign a strict ____. (Acuerdo de confidencialidad).", "options": ["NDA", "DNA", "AND", "NAD"], "correct_answer": "NDA", "explanation": "NDA = Non-Disclosure Agreement." },
+        { "id": "c2-53-q9", "type": "quiz_choice", "question": "A hacker who finds security flaws to help a company fix them (legally) is called a '____ hat' hacker.", "options": ["white", "black", "grey", "red"], "correct_answer": "white", "explanation": "White hat hacker = hacker ético." },
+        { "id": "c2-53-q10", "type": "quiz_choice", "question": "When a system requires both a password and a code sent to your phone, it is using Two-Factor ____ (2FA). (Autenticación).", "options": ["Authentication", "Authorization", "Approval", "Access"], "correct_answer": "Authentication", "explanation": "Two-Factor Authentication (2FA) = Autenticación de dos factores." },
+        { "id": "c2-53-q11", "type": "quiz_choice", "question": "A vulnerability in software that is completely unknown to the vendor and has no patch yet is called a '____-day' exploit.", "options": ["zero", "first", "one", "black"], "correct_answer": "zero", "explanation": "Zero-day exploit = vulnerabilidad de día cero." },
+        { "id": "c2-53-q12", "type": "quiz_choice", "question": "To prevent internal data theft, employees should only have access to the data necessary for their job. This is the principle of 'least ____'.", "options": ["privilege", "power", "access", "control"], "correct_answer": "privilege", "explanation": "Principle of least privilege = principio de menor privilegio." },
+        { "id": "c2-53-q13", "type": "quiz_choice", "question": "The company's servers were overwhelmed by fake traffic in a massive ____ attack. (Ataque de denegación de servicio).", "options": ["DDoS", "DOSD", "SDOD", "ODDS"], "correct_answer": "DDoS", "explanation": "DDoS = Distributed Denial of Service." },
+        { "id": "c2-53-q14", "type": "quiz_choice", "question": "A hidden method used by hackers to bypass normal authentication and access a system is called a ____. (Puerta trasera).", "options": ["backdoor", "trapdoor", "sidedoor", "hiddendoor"], "correct_answer": "backdoor", "explanation": "Backdoor = puerta trasera." },
+        { "id": "c2-53-q15", "type": "quiz_choice", "question": "Any software intentionally designed to cause damage to a computer or network is broadly called ____. (Software malicioso).", "options": ["malware", "badware", "evilware", "darkware"], "correct_answer": "malware", "explanation": "Malware = malicious software." },
+        { "id": "c2-53-q16", "type": "quiz_choice", "question": "A network security system that monitors and controls incoming and outgoing network traffic based on rules is a ____. (Cortafuegos).", "options": ["firewall", "firedoor", "stonewall", "brickwall"], "correct_answer": "firewall", "explanation": "Firewall = cortafuegos." },
+        { "id": "c2-53-q17", "type": "quiz_choice", "question": "The 'ransom' in ransomware refers to the money demanded by the attackers. What does 'ransom' mean?", "options": ["Rescate", "Robo", "Recompensa", "Regalo"], "correct_answer": "Rescate", "explanation": "Ransom = rescate." },
+        { "id": "c2-53-q18", "type": "quiz_choice", "question": "If your personal data is collected, the company must specify the ____ of the data collection clearly. (Propósito).", "options": ["purpose", "meaning", "value", "price"], "correct_answer": "purpose", "explanation": "Purpose = propósito o finalidad." },
+        { "id": "c2-53-q19", "type": "quiz_choice", "question": "Under GDPR, users have the 'Right to be ____', meaning they can request their data be completely deleted. (Olvidados).", "options": ["forgotten", "erased", "deleted", "ignored"], "correct_answer": "forgotten", "explanation": "Right to be forgotten = el derecho al olvido." },
+        { "id": "c2-53-q20", "type": "quiz_choice", "question": "When data is rendered anonymous in such a way that the person is no longer identifiable, it is called data ____. (Anonimización).", "options": ["anonymization", "hiding", "blurring", "erasure"], "correct_answer": "anonymization", "explanation": "Anonymization = anonimización." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término de seguridad correcto.",
+      "questions": [
+        { "id": "c2-53-f1", "type": "fill_input", "question": "A massive data ____. (Filtración con B)", "correct_answer": "breach", "explanation": "breach." },
+        { "id": "c2-53-f2", "type": "fill_input", "question": "European privacy law: ____. (Siglas)", "correct_answer": "GDPR", "explanation": "GDPR." },
+        { "id": "c2-53-f3", "type": "fill_input", "question": "Users must ____-in to subscribe. (Elegir participar)", "correct_answer": "opt", "explanation": "opt." },
+        { "id": "c2-53-f4", "type": "fill_input", "question": "Users can ____-out anytime. (Darse de baja)", "correct_answer": "opt", "explanation": "opt." },
+        { "id": "c2-53-f5", "type": "fill_input", "question": "End-to-end ____. (Cifrado con E)", "correct_answer": "encryption", "explanation": "encryption." },
+        { "id": "c2-53-f6", "type": "fill_input", "question": "A deceptive ____ email. (Suplantación con P)", "correct_answer": "phishing", "explanation": "phishing." },
+        { "id": "c2-53-f7", "type": "fill_input", "question": "Locked files by ____. (Virus de rescate con R)", "correct_answer": "ransomware", "explanation": "ransomware." },
+        { "id": "c2-53-f8", "type": "fill_input", "question": "Sign an ____. (Acuerdo de confidencialidad, siglas)", "correct_answer": "NDA", "explanation": "NDA." },
+        { "id": "c2-53-f9", "type": "fill_input", "question": "Malicious software: ____. (Malware)", "correct_answer": "malware", "explanation": "malware." },
+        { "id": "c2-53-f10", "type": "fill_input", "question": "Two-Factor ____. (Autenticación con A)", "correct_answer": "Authentication", "explanation": "Authentication." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Cyber Match",
+      "pairs": [
+        {"id": "c2-53-p1", "source": "Data breach", "target": "Filtración o robo masivo de datos"},
+        {"id": "c2-53-p2", "source": "GDPR", "target": "Ley europea de protección de datos"},
+        {"id": "c2-53-p3", "source": "Opt-in", "target": "Dar consentimiento expreso (casilla)"},
+        {"id": "c2-53-p4", "source": "Opt-out", "target": "Retirar el consentimiento / Darse de baja"},
+        {"id": "c2-53-p5", "source": "Encryption", "target": "Cifrado o encriptación de seguridad"},
+        {"id": "c2-53-p6", "source": "Phishing", "target": "Correos falsos para robar contraseñas"},
+        {"id": "c2-53-p7", "source": "Ransomware", "target": "Virus que bloquea datos pidiendo rescate"},
+        {"id": "c2-53-p8", "source": "NDA", "target": "Acuerdo de no divulgación / confidencialidad"},
+        {"id": "c2-53-p9", "source": "Malware", "target": "Software malicioso en general"},
+        {"id": "c2-53-p10", "source": "Firewall", "target": "Cortafuegos de red"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de ciberseguridad.",
+      "questions": [
+        { "id": "c2-53-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We suffered a data breach.", "options": ["We suffered a data breach.", "They suffered a data breach.", "We suffer a data breach.", "We suffered a data break."], "correct_answer": "We suffered a data breach.", "explanation": "Audio exacto." },
+        { "id": "c2-53-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Are we GDPR compliant?", "options": ["Are we GDPR compliant?", "Are they GDPR compliant?", "Are we GDRP compliant?", "Is it GDPR compliant?"], "correct_answer": "Are we GDPR compliant?", "explanation": "Audio exacto." },
+        { "id": "c2-53-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Require strict opt-in consent.", "options": ["Require strict opt-in consent.", "Requires strict opt-in consent.", "Require strict opt-out consent.", "Required strict opt-in consent."], "correct_answer": "Require strict opt-in consent.", "explanation": "Audio exacto." },
+        { "id": "c2-53-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Users can opt-out easily.", "options": ["Users can opt-out easily.", "Users can opt-in easily.", "User can opt-out easily.", "Users could opt-out easily."], "correct_answer": "Users can opt-out easily.", "explanation": "Audio exacto." },
+        { "id": "c2-53-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We use strong encryption.", "options": ["We use strong encryption.", "They use strong encryption.", "We used strong encryption.", "We use strong encryptions."], "correct_answer": "We use strong encryption.", "explanation": "Audio exacto." },
+        { "id": "c2-53-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a phishing attack.", "options": ["It was a phishing attack.", "It is a phishing attack.", "That was a phishing attack.", "This was a phishing attack."], "correct_answer": "It was a phishing attack.", "explanation": "Audio exacto." },
+        { "id": "c2-53-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Infected by ransomware.", "options": ["Infected by ransomware.", "Infecting by ransomware.", "Infected with ransomware.", "Infected by malware."], "correct_answer": "Infected by ransomware.", "explanation": "Audio exacto." },
+        { "id": "c2-53-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sign the NDA first.", "options": ["Sign the NDA first.", "Signed the NDA first.", "Signing the NDA first.", "Sign an NDA first."], "correct_answer": "Sign the NDA first.", "explanation": "Audio exacto." },
+        { "id": "c2-53-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Enable two-factor authentication.", "options": ["Enable two-factor authentication.", "Enabled two-factor authentication.", "Enabling two-factor authentication.", "Enable dual-factor authentication."], "correct_answer": "Enable two-factor authentication.", "explanation": "Audio exacto." },
+        { "id": "c2-53-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Update the firewall.", "options": ["Update the firewall.", "Updated the firewall.", "Updating the firewall.", "Update your firewall."], "correct_answer": "Update the firewall.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

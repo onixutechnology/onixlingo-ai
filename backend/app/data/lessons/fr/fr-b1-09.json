@@ -1,0 +1,95 @@
+{
+  "id": "fr-b1-09",
+  "title": "Le Conditionnel Passé",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Conditional", "Regrets"],
+  "completion_message": "¡Excelente! Has aprendido a hablar del 'hubiera'. Aunque en la vida real no puedes volver al pasado, en francés ahora tienes las palabras para expresarlo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Pasado que no Fue (B1)",
+      "parts": [
+        {
+          "visual": "¿Cómo expresas el arrepentimiento en francés? (Yo HUBIERA querido, yo HABRÍA ido).\n\nUsamos el Conditionnel Passé.\nAl igual que todos los tiempos compuestos, se forma con dos piezas:\n1. El auxiliar (Avoir o Être) en CONDICIONAL PRÉSENT.\n2. El Participio Pasado del verbo.\n\nEjemplo: J'AURAIS voulu y aller. (Yo HABRÍA querido ir).",
+          "audio": "En lecciones anteriores aprendimos el condicional para decir 'Yo iría' o 'Yo quisiera'. Pero, ¿qué pasa cuando ya es demasiado tarde? ¿Cómo dices 'Yo HUBIERA querido' o 'Yo HABRÍA ido'? Para expresar estos arrepentimientos o cosas que nunca pasaron, usamos el Condicional Pasado. Como todos los tiempos compuestos, necesitas un verbo auxiliar. Tomas Avoir o Être y lo pones en condicional, y luego añades tu participio. Así, si 'Yo tendría' es 'J'aurais', para decir 'Yo habría comido' dices: 'J'aurais mangé'."
+        },
+        {
+          "visual": "Recordatorio de los auxiliares en Condicional:\n\nAVOIR (La mayoría de los verbos):\n- J'aurais (Yo habría)\n- Tu aurais\n- Il aurait\n- Nous aurions\n- Vous auriez\n- Ils auraient\n\nÊTRE (Verbos de movimiento y reflexivos):\n- Je serais (Yo habría - estado/ido)\n- Tu serais\n- Il serait\n- Nous serions\n- Vous seriez\n- Ils seraient\n\nEj: Je SERAIS allé à la fête. (Yo HABRÍA ido a la fiesta).",
+          "audio": "Y, por supuesto, el drama de siempre: ¿uso AVOIR o uso ÊTRE? La regla no ha cambiado desde el nivel A1. Si tu verbo es de movimiento, como ir (aller), o si es reflexivo, usas ÊTRE. Como estamos en condicional, el auxiliar ÊTRE es 'Je serais'. Así que, si eres un chico y dices 'Yo habría ido a la fiesta', dices 'Je serais allé à la fête'. Si eres una chica, le añades una 'e' al final y suena igual pero se escribe diferente: 'Je serais allée'. ¡Usa este tiempo para desahogarte sobre lo que pudo haber sido y no fue!"
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del Conditionnel Passé.",
+      "questions": [
+        { "id": "frb1-09-q1", "type": "quiz_choice", "question": "¿Para qué sirve principalmente el Conditionnel Passé?", "options": ["Para expresar arrepentimientos y acciones pasadas que nunca ocurrieron (Yo habría hecho...)", "Para dar órdenes estrictas en el pasado", "Para describir el clima del pasado", "Para expresar obligaciones futuras"], "correct_answer": "Para expresar arrepentimientos y acciones pasadas que nunca ocurrieron (Yo habría hecho...)", "explanation": "El famoso 'hubiera' o 'habría'." },
+        { "id": "frb1-09-q2", "type": "quiz_choice", "question": "¿Cómo se forma el Conditionnel Passé?", "options": ["Auxiliar en Condicional + Participio Pasado", "Auxiliar en Imparfait + Participio Pasado", "Auxiliar en Futuro + Participio Pasado"], "correct_answer": "Auxiliar en Condicional + Participio Pasado", "explanation": "Ejemplo: j'aurais (aux en condicional) + mangé (participio)." },
+        { "id": "frb1-09-q3", "type": "quiz_choice", "question": "Je ____ (manger). Yo HABRÍA comido.", "options": ["aurais mangé", "avais mangé", "ai mangé", "mangerais"], "correct_answer": "aurais mangé", "explanation": "j'aurais (condicional) + mangé." },
+        { "id": "frb1-09-q4", "type": "quiz_choice", "question": "Il ____ (finir). Él HABRÍA terminado.", "options": ["aurait fini", "avait fini", "a fini", "finirait"], "correct_answer": "aurait fini", "explanation": "Il aurait + fini." },
+        { "id": "frb1-09-q5", "type": "quiz_choice", "question": "Tu ____ (aimer). A ti te HABRÍA gustado.", "options": ["aurais aimé", "avais aimé", "aimerais", "as aimé"], "correct_answer": "aurais aimé", "explanation": "Tu aurais + aimé." },
+        { "id": "frb1-09-q6", "type": "quiz_choice", "question": "¿Qué auxiliar usamos en Condicional Passé para el verbo 'Aller' (ir)?", "options": ["Être (serais, serait...)", "Avoir (aurais, aurait...)", "Aller (irais...)"], "correct_answer": "Être (serais, serait...)", "explanation": "Aller es Casa de Être -> Je serais allé(e)." },
+        { "id": "frb1-09-q7", "type": "quiz_choice", "question": "Je (masc) ____ (aller). Yo HABRÍA ido.", "options": ["serais allé", "aurais allé", "irais", "suis allé"], "correct_answer": "serais allé", "explanation": "Je serais + allé." },
+        { "id": "frb1-09-q8", "type": "quiz_choice", "question": "Elle ____ (venir). Ella HABRÍA venido.", "options": ["serait venue", "aurait venue", "était venue", "viendrait"], "correct_answer": "serait venue", "explanation": "Venir usa Être -> Elle serait venue." },
+        { "id": "frb1-09-q9", "type": "quiz_choice", "question": "Nous ____ (savoir). Nosotros HABRÍAMOS sabido.", "options": ["aurions su", "avions su", "saurions", "avons su"], "correct_answer": "aurions su", "explanation": "Savoir usa Avoir -> Nous aurions + su." },
+        { "id": "frb1-09-q10", "type": "quiz_choice", "question": "Ils ____ (pouvoir). Ellos HABRÍAN podido.", "options": ["auraient pu", "avaient pu", "pourraient", "ont pu"], "correct_answer": "auraient pu", "explanation": "Pouvoir usa Avoir -> Ils auraient + pu." },
+        { "id": "frb1-09-q11", "type": "quiz_choice", "question": "Si j'avais su, je ne ____ pas ____ (dire) ça. (No HABRÍA dicho eso).", "options": ["aurais / dit", "avais / dit", "ai / dit", "serais / dit"], "correct_answer": "aurais / dit", "explanation": "Dire usa Avoir -> Je n'aurais pas dit." },
+        { "id": "frb1-09-q12", "type": "quiz_choice", "question": "Vous (masc plur) ____ (partir). Ustedes se HABRÍAN ido.", "options": ["seriez partis", "auriez partis", "étiez partis", "partiriez"], "correct_answer": "seriez partis", "explanation": "Partir usa Être -> Vous seriez + partis." },
+        { "id": "frb1-09-q13", "type": "quiz_choice", "question": "Je l'____ (faire) avec plaisir ! (Yo lo HABRÍA hecho con placer).", "options": ["aurais fait", "avais fait", "ferais", "ai fait"], "correct_answer": "aurais fait", "explanation": "Faire usa Avoir -> Je l'aurais fait." },
+        { "id": "frb1-09-q14", "type": "quiz_choice", "question": "Elles ____ (rester). Ellas se HABRÍAN quedado.", "options": ["seraient restées", "auraient restées", "resteraient", "étaient restées"], "correct_answer": "seraient restées", "explanation": "Rester usa Être -> Elles seraient + restées." },
+        { "id": "frb1-09-q15", "type": "quiz_choice", "question": "Tu m'____ (prévenir). Tú me HABRÍAS avisado.", "options": ["aurais prévenu", "avais prévenu", "as prévenu", "préviendrais"], "correct_answer": "aurais prévenu", "explanation": "Prévenir usa Avoir -> Tu m'aurais prévenu." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el auxiliar en Condicional y el participio pasado.",
+      "questions": [
+        { "id": "frb1-09-f1", "type": "fill_input", "question": "Je / manger -> J'____ ____.", "correct_answer": "aurais mangé", "explanation": "aurais mangé" },
+        { "id": "frb1-09-f2", "type": "fill_input", "question": "Il / finir -> Il ____ ____.", "correct_answer": "aurait fini", "explanation": "aurait fini" },
+        { "id": "frb1-09-f3", "type": "fill_input", "question": "Nous / vouloir -> Nous ____ ____.", "correct_answer": "aurions voulu", "explanation": "aurions voulu" },
+        { "id": "frb1-09-f4", "type": "fill_input", "question": "Tu / voir -> Tu ____ ____.", "correct_answer": "aurais vu", "explanation": "aurais vu" },
+        { "id": "frb1-09-f5", "type": "fill_input", "question": "Je (masc) / aller -> Je ____ ____.", "correct_answer": "serais allé", "explanation": "serais allé" },
+        { "id": "frb1-09-f6", "type": "fill_input", "question": "Elle / partir -> Elle ____ ____.", "correct_answer": "serait partie", "explanation": "serait partie" },
+        { "id": "frb1-09-f7", "type": "fill_input", "question": "Vous / comprendre -> Vous ____ ____.", "correct_answer": "auriez compris", "explanation": "auriez compris" },
+        { "id": "frb1-09-f8", "type": "fill_input", "question": "Ils / venir -> Ils ____ ____.", "correct_answer": "seraient venus", "explanation": "seraient venus" },
+        { "id": "frb1-09-f9", "type": "fill_input", "question": "Il / faire -> Il ____ ____.", "correct_answer": "aurait fait", "explanation": "aurait fait" },
+        { "id": "frb1-09-f10", "type": "fill_input", "question": "Elles / tomber -> Elles ____ ____.", "correct_answer": "seraient tombées", "explanation": "seraient tombées" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Regrets Match",
+      "pairs": [
+        {"id": "frb1-09-p1", "source": "J'aurais mangé", "target": "Habría comido"},
+        {"id": "frb1-09-p2", "source": "J'aurais voulu", "target": "Habría querido"},
+        {"id": "frb1-09-p3", "source": "J'aurais aimé", "target": "Me habría gustado"},
+        {"id": "frb1-09-p4", "source": "Je serais allé", "target": "Habría ido"},
+        {"id": "frb1-09-p5", "source": "Je serais parti", "target": "Me habría ido"},
+        {"id": "frb1-09-p6", "source": "Il aurait fait", "target": "Él habría hecho"},
+        {"id": "frb1-09-p7", "source": "Nous aurions pu", "target": "Nosotros habríamos podido"},
+        {"id": "frb1-09-p8", "source": "Tu aurais dû", "target": "Tú habrías debido"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y distingue: ¿Es Plus-que-parfait (pasado) o Condicional Pasado (hubiera)?",
+      "questions": [
+        { "id": "frb1-09-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "J'aurais aimé", "options": ["J'aurais aimé", "J'avais aimé", "J'aimerais", "J'ai aimé"], "correct_answer": "J'aurais aimé", "explanation": "Audio dice: J'aurais aimé (Conditionnel Passé)." },
+        { "id": "frb1-09-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il aurait fait ça", "options": ["Il aurait fait ça", "Il avait fait ça", "Il ferait ça", "Il a fait ça"], "correct_answer": "Il aurait fait ça", "explanation": "Audio dice: Il aurait fait ça (Conditionnel Passé)." },
+        { "id": "frb1-09-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je serais allé", "options": ["Je serais allé", "J'étais allé", "J'irais", "Je suis allé"], "correct_answer": "Je serais allé", "explanation": "Audio dice: Je serais allé (Conditionnel Passé)." },
+        { "id": "frb1-09-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Nous aurions pu", "options": ["Nous aurions pu", "Nous avions pu", "Nous pourrions", "Nous avons pu"], "correct_answer": "Nous aurions pu", "explanation": "Audio dice: Nous aurions pu." },
+        { "id": "frb1-09-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Tu avais vu", "options": ["Tu avais vu", "Tu aurais vu", "Tu verrais", "Tu as vu"], "correct_answer": "Tu avais vu", "explanation": "Audio dice: Tu avais vu (Plus-que-parfait, ¡cuidado!)." }
+      ]
+    }
+  ]
+}

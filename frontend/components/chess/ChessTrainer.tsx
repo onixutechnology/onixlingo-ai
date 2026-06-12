@@ -61,7 +61,7 @@ export default function ChessTrainer() {
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
 
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.onixlingo.onixu.company';
+      const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:5000';
       await fetch(`${API_URL}/api/v1/chess/progress`, {
         method: 'POST',
         headers: { 
@@ -85,13 +85,13 @@ export default function ChessTrainer() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full max-w-md mx-auto bg-slate-900/50 p-6 rounded-[2rem] shadow-2xl border border-slate-700/50 backdrop-blur-xl">
+    <div className="flex flex-col items-center w-full max-w-md mx-auto bg-slate-50/50 p-6 rounded-[2rem] shadow-2xl border border-slate-700/50 backdrop-blur-xl">
       {/* Header */}
       <div className="flex justify-between items-center w-full mb-6">
-        <h3 className="font-black text-white text-xl flex items-center gap-2">
+        <h3 className="font-black text-slate-900 text-xl flex items-center gap-2">
           ♟️ Táctica Diaria
         </h3>
-        <span className={`px-4 py-1.5 rounded-full text-xs font-bold border ${isCompleted ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-blue-500/10 text-blue-400 border-blue-500/20'}`}>
+        <span className={`px-4 py-1.5 rounded-full text-xs font-bold border ${isCompleted ? 'bg-[#D4AF37]/100/10 text-emerald-400 border-emerald-500/20' : 'bg-[#D4AF37]/20/10 text-blue-400 border-blue-500/20'}`}>
           {isCompleted ? 'Completado' : 'En progreso'}
         </span>
       </div>
@@ -105,27 +105,27 @@ export default function ChessTrainer() {
             disabled={isCompleted}
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-slate-800 rounded-lg">
-            <Loader2 className="animate-spin text-slate-500" size={48} />
+          <div className="w-full h-full flex items-center justify-center bg-slate-50 rounded-none">
+            <Loader2 className="animate-spin text-slate-600" size={48} />
           </div>
         )}
       </div>
 
       {/* Controles y Status */}
       <div className="w-full space-y-4">
-        <div className={`p-4 rounded-xl text-center font-bold text-sm transition-colors border ${isCompleted ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : status.includes('❌') ? 'bg-red-500/10 text-red-400 border-red-500/20' : 'bg-slate-800/50 text-slate-300 border-slate-700/50'}`}>
+        <div className={`p-4 rounded-none text-center font-bold text-sm transition-colors border ${isCompleted ? 'bg-[#D4AF37]/100/10 text-emerald-400 border-emerald-500/20' : status.includes('❌') ? 'bg-[#D4AF37]/100/10 text-red-400 border-red-500/20' : 'bg-slate-50/50 text-slate-300 border-slate-700/50'}`}>
           {status}
         </div>
 
         <div className="flex gap-3">
           <button 
             onClick={resetGame}
-            className="flex-1 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98] border border-slate-600/50"
+            className="flex-1 py-3.5 bg-slate-50 hover:bg-slate-700 text-slate-900 font-bold rounded-none flex items-center justify-center gap-2 transition-all active:scale-[0.98] border border-slate-600/50"
           >
             <RefreshCw size={18} /> Reiniciar
           </button>
           {!isCompleted && (
-            <button className="px-5 py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-all active:scale-[0.98] shadow-lg shadow-indigo-500/25 border border-indigo-400/20">
+            <button className="px-5 py-3.5 bg-[#D4AF37]/20 hover:bg-[#D4AF37]/20 text-slate-900 font-bold rounded-none transition-all active:scale-[0.98] shadow-none shadow-indigo-500/25 border border-indigo-400/20">
               <Lightbulb size={20} />
             </button>
           )}

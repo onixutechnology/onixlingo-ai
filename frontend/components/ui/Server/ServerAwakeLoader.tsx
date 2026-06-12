@@ -93,14 +93,14 @@ const ChessGame = () => {
             onClick={() => handleSquareClick(r, c)}
             className={`
               w-full h-8 sm:h-9 flex items-center justify-center text-xl cursor-pointer transition-colors duration-200
-              ${isBlack ? 'bg-slate-300 hover:bg-slate-400' : 'bg-slate-100 hover:bg-slate-200'}
+              ${isBlack ? 'bg-slate-300 hover:bg-slate-400' : 'bg-white hover:bg-white'}
               ${isPieceHere ? 'cursor-default ring-2 ring-indigo-500 z-10' : ''}
             `}
           >
             {isPieceHere && (
               <motion.span 
                 layoutId="piece"
-                className="text-slate-900 font-bold text-2xl drop-shadow-sm select-none"
+                className="text-slate-900 font-bold text-2xl drop-shadow-none select-none"
               >
                 {PIECES[activePiece].icon}
               </motion.span>
@@ -116,25 +116,25 @@ const ChessGame = () => {
     <div className={`flex flex-col items-center w-full ${shake ? 'animate-shake' : ''}`}>
       {/* Header del Juego */}
       <div className="flex items-center justify-between w-full mb-4 px-1">
-        <div className="flex items-center gap-3 bg-slate-50 p-2 rounded-xl border border-slate-200 w-full">
+        <div className="flex items-center gap-3 bg-white p-2 rounded-none border border-slate-200 w-full">
             <span className="text-4xl">{PIECES[activePiece].icon}</span>
             <div className="text-left flex-1">
-                <p className="font-bold text-slate-800 text-sm">Mueve el {PIECES[activePiece].name}</p>
-                <p className="text-[10px] text-slate-500 leading-tight">{PIECES[activePiece].hint}</p>
+                <p className="font-bold text-slate-900 text-sm">Mueve el {PIECES[activePiece].name}</p>
+                <p className="text-[10px] text-slate-600 leading-tight">{PIECES[activePiece].hint}</p>
             </div>
-            <div className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-lg font-bold text-sm flex items-center gap-1">
+            <div className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-none font-bold text-sm flex items-center gap-1">
                 <Trophy size={14} /> {score}
             </div>
         </div>
       </div>
 
       {/* Tablero */}
-      <div className="grid grid-cols-8 border-4 border-slate-800 rounded-lg overflow-hidden shadow-2xl w-full max-w-[320px] bg-slate-800">
+      <div className="grid grid-cols-8 border-4 border-slate-800 rounded-none overflow-hidden shadow-2xl w-full max-w-[320px] bg-slate-50">
         {renderBoard()}
       </div>
 
       {/* Feedback Mensaje */}
-      <p className={`mt-3 text-xs font-bold h-4 transition-colors ${message.includes('inválido') ? 'text-rose-500' : 'text-emerald-600'}`}>
+      <p className={`mt-3 text-xs font-bold h-4 transition-colors ${message.includes('inválido') ? 'text-rose-500' : 'text-[#D4AF37]'}`}>
         {message}
       </p>
     </div>
@@ -165,20 +165,20 @@ export const ServerAwakeLoader = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-slate-950/95 backdrop-blur-md px-4 animate-in fade-in duration-500">
+    <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-slate-50/95 backdrop-blur-md px-4 animate-in fade-in duration-500">
       
-      <div className="w-full max-w-md bg-white rounded-3xl p-6 shadow-2xl text-center border border-slate-200 relative overflow-hidden">
+      <div className="w-full max-w-md bg-white rounded-none p-6 shadow-2xl text-center border border-slate-200 relative overflow-hidden">
         
         {/* Decoración de fondo */}
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
 
         {/* Título */}
         <div className="mb-6">
-            <h3 className="text-xl font-black text-slate-800 flex items-center justify-center gap-2">
-                <Brain className="text-indigo-600" size={24} />
+            <h3 className="text-xl font-black text-slate-900 flex items-center justify-center gap-2">
+                <Brain className="text-[#D4AF37]" size={24} />
                 Entrenando Mente...
             </h3>
-            <p className="text-xs text-slate-400 mt-1">
+            <p className="text-xs text-slate-500 mt-1">
                 El servidor está despertando. ¡Aprovecha para practicar!
             </p>
         </div>
@@ -187,15 +187,15 @@ export const ServerAwakeLoader = () => {
         <ChessGame />
 
         {/* Barra de Progreso Inferior */}
-        <div className="mt-8 pt-4 border-t border-slate-100">
-          <div className="flex justify-between text-[10px] uppercase font-bold text-slate-400 mb-2">
+        <div className="mt-8 pt-4 border-t border-slate-200">
+          <div className="flex justify-between text-[10px] uppercase font-bold text-slate-500 mb-2">
             <span className="flex items-center gap-1"><Server size={10} /> Conectando Servidor</span>
             <span>{Math.round(progress)}%</span>
           </div>
           
-          <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden relative">
+          <div className="w-full h-2 bg-white rounded-full overflow-hidden relative">
             {/* Brillo animado */}
-            <div className="absolute top-0 left-0 w-full h-full bg-slate-100 overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-white overflow-hidden">
                  <motion.div 
                     initial={{ x: '-100%' }}
                     animate={{ x: '100%' }}
@@ -205,7 +205,7 @@ export const ServerAwakeLoader = () => {
             </div>
             
             <motion.div 
-              className="h-full bg-indigo-600 rounded-full relative z-0"
+              className="h-full bg-[#D4AF37]/20 rounded-full relative z-0"
               style={{ width: `${progress}%` }}
               animate={{ width: `${progress}%` }}
             />

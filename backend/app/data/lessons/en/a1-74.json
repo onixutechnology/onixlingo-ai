@@ -1,0 +1,101 @@
+{
+  "id": "a1-74",
+  "title": "There is / There are (Negative & Questions)",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "There is", "Questions", "Negatives"],
+  "completion_message": "¡Excelente! Has aprendido a preguntar si algo existe y a indicar cuando algo no está presente usando las formas negativas y de pregunta.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Preguntas y Negaciones",
+      "parts": [
+        { "visual": "Negativo: 'There isn't a problem' (No hay problema). 'There aren't any pens' (No hay bolígrafos).", "audio": "Negative: There isn't a problem. There aren't any pens." },
+        { "visual": "Preguntas: Invertimos el verbo. 'Is there a meeting?' (¿Hay una reunión?). 'Are there any computers?' (¿Hay computadoras?).", "audio": "Questions: Is there a meeting? Are there any computers?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta en negativo o pregunta.",
+      "questions": [
+        { "id": "a1-74-q1", "type": "quiz_choice", "question": "____ there a meeting at 10 AM?", "options": ["Is", "Are", "Does", "Do"], "correct_answer": "Is", "explanation": "Singular pregunta (Is there...?)." },
+        { "id": "a1-74-q2", "type": "quiz_choice", "question": "____ there any computers left?", "options": ["Are", "Is", "Do", "Does"], "correct_answer": "Are", "explanation": "Plural pregunta (Are there...?)." },
+        { "id": "a1-74-q3", "type": "quiz_choice", "question": "There ____ a problem. Everything is fine.", "options": ["isn't", "aren't", "is", "are"], "correct_answer": "isn't", "explanation": "Singular negativo (There isn't)." },
+        { "id": "a1-74-q4", "type": "quiz_choice", "question": "There ____ any pens in the office.", "options": ["aren't", "isn't", "are", "is"], "correct_answer": "aren't", "explanation": "Plural negativo (There aren't)." },
+        { "id": "a1-74-q5", "type": "quiz_choice", "question": "____ there any coffee?", "options": ["Is", "Are", "Do", "Does"], "correct_answer": "Is", "explanation": "Incontable pregunta (Is there...?)." },
+        { "id": "a1-74-q6", "type": "quiz_choice", "question": "There ____ any information about this.", "options": ["isn't", "aren't", "not", "no"], "correct_answer": "isn't", "explanation": "Incontable negativo (There isn't)." },
+        { "id": "a1-74-q7", "type": "quiz_choice", "question": "____ there a manager available?", "options": ["Is", "Are", "Has", "Have"], "correct_answer": "Is", "explanation": "Singular pregunta (Is there...?)." },
+        { "id": "a1-74-q8", "type": "quiz_choice", "question": "There ____ many people in the room.", "options": ["aren't", "isn't", "don't", "doesn't"], "correct_answer": "aren't", "explanation": "Plural negativo (There aren't)." },
+        { "id": "a1-74-q9", "type": "quiz_choice", "question": "____ there any problems?", "options": ["Are", "Is", "Do", "Does"], "correct_answer": "Are", "explanation": "Plural pregunta (Are there...?)." },
+        { "id": "a1-74-q10", "type": "quiz_choice", "question": "There ____ any time left.", "options": ["isn't", "aren't", "not", "is not"], "correct_answer": "isn't", "explanation": "Incontable negativo (There isn't)." },
+        { "id": "a1-74-q11", "type": "quiz_choice", "question": "____ there a printer on this floor?", "options": ["Is", "Are", "Has", "Have"], "correct_answer": "Is", "explanation": "Singular pregunta (Is there...?)." },
+        { "id": "a1-74-q12", "type": "quiz_choice", "question": "There ____ an email from him.", "options": ["isn't", "aren't", "no", "not"], "correct_answer": "isn't", "explanation": "Singular negativo (There isn't)." },
+        { "id": "a1-74-q13", "type": "quiz_choice", "question": "____ there any chairs here?", "options": ["Are", "Is", "Do", "Does"], "correct_answer": "Are", "explanation": "Plural pregunta (Are there...?)." },
+        { "id": "a1-74-q14", "type": "quiz_choice", "question": "There ____ any water in the bottle.", "options": ["isn't", "aren't", "not", "no"], "correct_answer": "isn't", "explanation": "Incontable negativo (There isn't)." },
+        { "id": "a1-74-q15", "type": "quiz_choice", "question": "____ there an IT person here?", "options": ["Is", "Are", "Has", "Have"], "correct_answer": "Is", "explanation": "Singular pregunta (Is there...?)." },
+        { "id": "a1-74-q16", "type": "quiz_choice", "question": "There ____ any mistakes in the report.", "options": ["aren't", "isn't", "not", "no"], "correct_answer": "aren't", "explanation": "Plural negativo (There aren't)." },
+        { "id": "a1-74-q17", "type": "quiz_choice", "question": "____ there any messages for me?", "options": ["Are", "Is", "Do", "Does"], "correct_answer": "Are", "explanation": "Plural pregunta (Are there...?)." },
+        { "id": "a1-74-q18", "type": "quiz_choice", "question": "There ____ an assistant today.", "options": ["isn't", "aren't", "no", "not"], "correct_answer": "isn't", "explanation": "Singular negativo (There isn't)." },
+        { "id": "a1-74-q19", "type": "quiz_choice", "question": "____ there any paper in the printer?", "options": ["Is", "Are", "Do", "Does"], "correct_answer": "Is", "explanation": "Incontable pregunta (Is there...?)." },
+        { "id": "a1-74-q20", "type": "quiz_choice", "question": "There ____ many options.", "options": ["aren't", "isn't", "no", "not"], "correct_answer": "aren't", "explanation": "Plural negativo (There aren't)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe Is, Are, isn't o aren't.",
+      "questions": [
+        { "id": "a1-74-f1", "type": "fill_input", "question": "____ there a meeting? (Pregunta singular).", "correct_answer": "Is", "explanation": "Is." },
+        { "id": "a1-74-f2", "type": "fill_input", "question": "____ there any computers? (Pregunta plural).", "correct_answer": "Are", "explanation": "Are." },
+        { "id": "a1-74-f3", "type": "fill_input", "question": "There ____ a problem (Negativo singular).", "correct_answer": "isn't", "explanation": "isn't." },
+        { "id": "a1-74-f4", "type": "fill_input", "question": "There ____ any pens (Negativo plural).", "correct_answer": "aren't", "explanation": "aren't." },
+        { "id": "a1-74-f5", "type": "fill_input", "question": "____ there any coffee? (Pregunta incontable).", "correct_answer": "Is", "explanation": "Is." },
+        { "id": "a1-74-f6", "type": "fill_input", "question": "There ____ any information (Negativo incontable).", "correct_answer": "isn't", "explanation": "isn't." },
+        { "id": "a1-74-f7", "type": "fill_input", "question": "____ there any problems? (Pregunta plural).", "correct_answer": "Are", "explanation": "Are." },
+        { "id": "a1-74-f8", "type": "fill_input", "question": "There ____ many people (Negativo plural).", "correct_answer": "aren't", "explanation": "aren't." },
+        { "id": "a1-74-f9", "type": "fill_input", "question": "____ there a printer? (Pregunta singular).", "correct_answer": "Is", "explanation": "Is." },
+        { "id": "a1-74-f10", "type": "fill_input", "question": "There ____ any time left (Negativo incontable).", "correct_answer": "isn't", "explanation": "isn't." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-74-p1", "source": "Is there...?", "target": "¿Hay...? (singular/incontable)"},
+        {"id": "a1-74-p2", "source": "Are there...?", "target": "¿Hay...? (plural)"},
+        {"id": "a1-74-p3", "source": "There isn't", "target": "No hay (singular/incontable)"},
+        {"id": "a1-74-p4", "source": "There aren't", "target": "No hay (plural)"},
+        {"id": "a1-74-p5", "source": "Is there a meeting?", "target": "¿Hay una reunión?"},
+        {"id": "a1-74-p6", "source": "Are there any pens?", "target": "¿Hay bolígrafos?"},
+        {"id": "a1-74-p7", "source": "There isn't a problem", "target": "No hay problema"},
+        {"id": "a1-74-p8", "source": "There aren't any computers", "target": "No hay computadoras"},
+        {"id": "a1-74-p9", "source": "Is there any coffee?", "target": "¿Hay café?"},
+        {"id": "a1-74-p10", "source": "There isn't any time", "target": "No hay tiempo"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-74-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Is there a meeting?", "options": ["Is there a meeting?", "Are there a meeting?", "There is a meeting?", "Is it a meeting?"], "correct_answer": "Is there a meeting?", "explanation": "Audio exacto." },
+        { "id": "a1-74-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Are there any computers?", "options": ["Are there any computers?", "Is there any computers?", "There are any computers?", "Are they computers?"], "correct_answer": "Are there any computers?", "explanation": "Audio exacto." },
+        { "id": "a1-74-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There isn't a problem.", "options": ["There isn't a problem.", "There aren't a problem.", "It isn't a problem.", "There is a problem."], "correct_answer": "There isn't a problem.", "explanation": "Audio exacto." },
+        { "id": "a1-74-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There aren't any pens.", "options": ["There aren't any pens.", "There isn't any pens.", "They aren't any pens.", "Are there any pens?"], "correct_answer": "There aren't any pens.", "explanation": "Audio exacto." },
+        { "id": "a1-74-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Is there any coffee?", "options": ["Is there any coffee?", "Are there any coffee?", "There is any coffee?", "Is it any coffee?"], "correct_answer": "Is there any coffee?", "explanation": "Audio exacto." },
+        { "id": "a1-74-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There isn't any information.", "options": ["There isn't any information.", "There aren't any information.", "It isn't any information.", "There is information."], "correct_answer": "There isn't any information.", "explanation": "Audio exacto." },
+        { "id": "a1-74-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Are there any problems?", "options": ["Are there any problems?", "Is there any problems?", "There are any problems?", "Are they problems?"], "correct_answer": "Are there any problems?", "explanation": "Audio exacto." },
+        { "id": "a1-74-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There aren't many people.", "options": ["There aren't many people.", "There isn't many people.", "They aren't many people.", "Are there many people?"], "correct_answer": "There aren't many people.", "explanation": "Audio exacto." },
+        { "id": "a1-74-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Is there a printer?", "options": ["Is there a printer?", "Are there a printer?", "There is a printer?", "Is it a printer?"], "correct_answer": "Is there a printer?", "explanation": "Audio exacto." },
+        { "id": "a1-74-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There isn't any time.", "options": ["There isn't any time.", "There aren't any time.", "It isn't any time.", "Is there any time?"], "correct_answer": "There isn't any time.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

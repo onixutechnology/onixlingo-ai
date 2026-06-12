@@ -1,0 +1,101 @@
+{
+  "id": "b2-39",
+  "title": "Leadership & Management",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Vocabulary", "Leadership", "Management", "Business"],
+  "completion_message": "¡Magnífico! Un buen líder no solo sabe qué hacer, sino cómo comunicarlo. Con estas palabras podrás gestionar equipos, alinear inversores (stakeholders) y delegar efectivamente.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Vocabulario de Liderazgo y Gestión (Management)",
+      "parts": [
+        { "visual": "Liderazgo de Equipos: \n- Delegate (Delegar tareas). \nEj: A good manager knows how to delegate. \n- Micromanage (Microgestionar / Controlar cada pequeño detalle, usualmente negativo). \nEj: Employees hate it when their boss micromanages them. \n- Empower (Empoderar / Dar autoridad o poder a alguien). \nEj: We need to empower our employees to make decisions.", "audio": "Team Leadership. 'Delegate' means to give tasks or responsibilities to others. For example: A good manager knows how to delegate. 'Micromanage' is to control every small detail of someone's work. It usually has a negative meaning. For example: Employees hate it when their boss micromanages them. 'Empower' means to give someone the authority or power to do something. For example: We need to empower our employees to make decisions." },
+        { "visual": "Estrategia y Medición: \n- Stakeholder (Parte interesada / Cualquiera afectado por las acciones de la empresa: empleados, clientes, inversores). \nEj: We must consider the needs of all stakeholders. \n- Benchmark (Punto de referencia / Estándar para comparar). \nEj: Her performance is the benchmark for the rest of the team. \n- Synergize / Synergy (Sinergia / Trabajar juntos para un mejor resultado). \nEj: The two departments need to synergize to increase efficiency.", "audio": "Strategy and Measurement. A 'Stakeholder' is anyone who is affected by the actions of a company, such as employees, customers, or investors. For example: We must consider the needs of all stakeholders. A 'Benchmark' is a standard or point of reference against which things may be compared. For example: Her performance is the benchmark for the rest of the team. 'Synergy' is when two or more things work together to produce a better result. For example: The two departments need to synergize to increase efficiency." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de liderazgo o gestión corporativa correcto.",
+      "questions": [
+        { "id": "b2-39-q1", "type": "quiz_choice", "question": "You can't do everything yourself. You need to ____ some tasks to your team. (Delegar).", "options": ["delegate", "delete", "delay", "demand"], "correct_answer": "delegate", "explanation": "Delegate = delegar." },
+        { "id": "b2-39-q2", "type": "quiz_choice", "question": "My boss wants to approve every single email I send. He likes to ____. (Microgestionar).", "options": ["micromanage", "macro-manage", "overmanage", "undermanage"], "correct_answer": "micromanage", "explanation": "Micromanage = controlar cada pequeño detalle." },
+        { "id": "b2-39-q3", "type": "quiz_choice", "question": "We must ensure that all our ____, including investors and employees, are happy. (Partes interesadas).", "options": ["stakeholders", "shareholders", "stockholders", "steakholders"], "correct_answer": "stakeholders", "explanation": "Stakeholders = cualquier persona o grupo afectado por la empresa. (Shareholders son solo los accionistas)." },
+        { "id": "b2-39-q4", "type": "quiz_choice", "question": "Apple's customer service is often used as a ____ for other tech companies. (Punto de referencia / Estándar).", "options": ["benchmark", "trademark", "watermark", "bookmark"], "correct_answer": "benchmark", "explanation": "Benchmark = punto de referencia para medir calidad o rendimiento." },
+        { "id": "b2-39-q5", "type": "quiz_choice", "question": "To improve motivation, we must ____ our team to make their own decisions. (Empoderar / Dar autoridad).", "options": ["empower", "power", "force", "make"], "correct_answer": "empower", "explanation": "Empower = empoderar." },
+        { "id": "b2-39-q6", "type": "quiz_choice", "question": "By merging the two departments, we hope to create a powerful ____. (Sinergia).", "options": ["synergy", "energy", "strategy", "tragedy"], "correct_answer": "synergy", "explanation": "Synergy = sinergia." },
+        { "id": "b2-39-q7", "type": "quiz_choice", "question": "As a leader, you must be ____ and take responsibility for your actions. (Responsable de tus actos / Que rinde cuentas).", "options": ["accountable", "countable", "accounting", "counted"], "correct_answer": "accountable", "explanation": "Accountable = responsable, que debe rendir cuentas." },
+        { "id": "b2-39-q8", "type": "quiz_choice", "question": "We need to ____ the process to make it faster and cheaper. (Agilizar / Optimizar).", "options": ["streamline", "mainline", "headline", "underline"], "correct_answer": "streamline", "explanation": "Streamline = optimizar, simplificar o hacer más eficiente un proceso." },
+        { "id": "b2-39-q9", "type": "quiz_choice", "question": "The HR department is responsible for the ____ of new employees. (Contratación).", "options": ["recruitment", "firing", "retiring", "working"], "correct_answer": "recruitment", "explanation": "Recruitment = reclutamiento, contratación." },
+        { "id": "b2-39-q10", "type": "quiz_choice", "question": "During their first week, new hires go through an ____ process. (Proceso de integración/orientación).", "options": ["onboarding", "boarding", "inboarding", "outboarding"], "correct_answer": "onboarding", "explanation": "Onboarding = inducción o integración de un nuevo empleado." },
+        { "id": "b2-39-q11", "type": "quiz_choice", "question": "The company suffers from a high staff ____. People quit every month. (Rotación de personal).", "options": ["turnover", "turnaround", "turnout", "turnin"], "correct_answer": "turnover", "explanation": "Staff turnover = rotación de personal (tasa a la que los empleados dejan la empresa)." },
+        { "id": "b2-39-q12", "type": "quiz_choice", "question": "We will conduct a performance ____ at the end of the year. (Evaluación de desempeño).", "options": ["review", "view", "preview", "interview"], "correct_answer": "review", "explanation": "Performance review = evaluación de desempeño." },
+        { "id": "b2-39-q13", "type": "quiz_choice", "question": "She is taking a ____ leave for six months after having her baby. (Baja por maternidad).", "options": ["maternity", "paternity", "sick", "holiday"], "correct_answer": "maternity", "explanation": "Maternity leave = baja/licencia por maternidad." },
+        { "id": "b2-39-q14", "type": "quiz_choice", "question": "We need to identify the ____ in our production line that is causing the delay. (Cuello de botella).", "options": ["bottleneck", "bottle", "neck", "breakdown"], "correct_answer": "bottleneck", "explanation": "Bottleneck = cuello de botella (punto de congestión en un proceso)." },
+        { "id": "b2-39-q15", "type": "quiz_choice", "question": "Let's ____ some ideas for the new marketing campaign. (Hacer lluvia de ideas).", "options": ["brainstorm", "brainwash", "brainwave", "brainpower"], "correct_answer": "brainstorm", "explanation": "Brainstorm = tormenta de ideas." },
+        { "id": "b2-39-q16", "type": "quiz_choice", "question": "It is important to align our daily tasks with the company's ____ goals. (Objetivos a largo plazo).", "options": ["long-term", "short-term", "mid-term", "no-term"], "correct_answer": "long-term", "explanation": "Long-term = a largo plazo." },
+        { "id": "b2-39-q17", "type": "quiz_choice", "question": "We need someone to ____ this project and make sure it finishes on time. (Supervisar).", "options": ["oversee", "look", "watch", "see"], "correct_answer": "oversee", "explanation": "Oversee = supervisar." },
+        { "id": "b2-39-q18", "type": "quiz_choice", "question": "A CEO must have a clear ____ for the future of the company. (Visión).", "options": ["vision", "sight", "eyesight", "view"], "correct_answer": "vision", "explanation": "Vision = visión (estrategia y dirección futura)." },
+        { "id": "b2-39-q19", "type": "quiz_choice", "question": "Our main ____ is to provide affordable healthcare to everyone. (Misión).", "options": ["mission", "vision", "passion", "action"], "correct_answer": "mission", "explanation": "Mission = misión (el propósito actual de la empresa)." },
+        { "id": "b2-39-q20", "type": "quiz_choice", "question": "We need to ____ the impact of the new regulations on our business. (Evaluar).", "options": ["assess", "access", "guess", "pass"], "correct_answer": "assess", "explanation": "Assess = evaluar, valorar." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término de management correcto.",
+      "questions": [
+        { "id": "b2-39-f1", "type": "fill_input", "question": "You must ____ tasks. (Delegar con D)", "correct_answer": "delegate", "explanation": "delegate." },
+        { "id": "b2-39-f2", "type": "fill_input", "question": "Don't ____ me! (Microgestionar con M)", "correct_answer": "micromanage", "explanation": "micromanage." },
+        { "id": "b2-39-f3", "type": "fill_input", "question": "All the ____. (Partes interesadas con S)", "correct_answer": "stakeholders", "explanation": "stakeholders." },
+        { "id": "b2-39-f4", "type": "fill_input", "question": "This is the ____. (Punto de referencia con B)", "correct_answer": "benchmark", "explanation": "benchmark." },
+        { "id": "b2-39-f5", "type": "fill_input", "question": "Create ____. (Sinergia con S)", "correct_answer": "synergy", "explanation": "synergy." },
+        { "id": "b2-39-f6", "type": "fill_input", "question": "Be ____. (Responsable/Rendir cuentas con A)", "correct_answer": "accountable", "explanation": "accountable." },
+        { "id": "b2-39-f7", "type": "fill_input", "question": "____ the process. (Agilizar/Optimizar con S)", "correct_answer": "Streamline", "explanation": "Streamline." },
+        { "id": "b2-39-f8", "type": "fill_input", "question": "The ____ process. (Integración de nuevos empleados con O)", "correct_answer": "onboarding", "explanation": "onboarding." },
+        { "id": "b2-39-f9", "type": "fill_input", "question": "High staff ____. (Rotación de personal con T)", "correct_answer": "turnover", "explanation": "turnover." },
+        { "id": "b2-39-f10", "type": "fill_input", "question": "Identify the ____. (Cuello de botella con B)", "correct_answer": "bottleneck", "explanation": "bottleneck." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Leadership Match",
+      "pairs": [
+        {"id": "b2-39-p1", "source": "Delegate", "target": "Delegar tareas"},
+        {"id": "b2-39-p2", "source": "Micromanage", "target": "Controlar cada detalle (negativo)"},
+        {"id": "b2-39-p3", "source": "Stakeholder", "target": "Parte interesada (empleados, inversores, clientes)"},
+        {"id": "b2-39-p4", "source": "Benchmark", "target": "Punto de referencia / Estándar"},
+        {"id": "b2-39-p5", "source": "Empower", "target": "Empoderar / Dar autoridad"},
+        {"id": "b2-39-p6", "source": "Synergy", "target": "Sinergia"},
+        {"id": "b2-39-p7", "source": "Accountable", "target": "Responsable / Que rinde cuentas"},
+        {"id": "b2-39-p8", "source": "Streamline", "target": "Optimizar / Agilizar un proceso"},
+        {"id": "b2-39-p9", "source": "Onboarding", "target": "Integración de un nuevo empleado"},
+        {"id": "b2-39-p10", "source": "Staff turnover", "target": "Rotación de personal"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de liderazgo correcta.",
+      "questions": [
+        { "id": "b2-39-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to delegate tasks.", "options": ["We need to delegate tasks.", "They need to delegate tasks.", "We need to delete tasks.", "We need to delay tasks."], "correct_answer": "We need to delegate tasks.", "explanation": "Audio exacto." },
+        { "id": "b2-39-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do not micromanage the team.", "options": ["Do not micromanage the team.", "Do not overmanage the team.", "Did not micromanage the team.", "Do not micromanage the theme."], "correct_answer": "Do not micromanage the team.", "explanation": "Audio exacto." },
+        { "id": "b2-39-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Consider the stakeholders.", "options": ["Consider the stakeholders.", "Consider the shareholders.", "Consider the steakholders.", "Considers the stakeholders."], "correct_answer": "Consider the stakeholders.", "explanation": "Audio exacto." },
+        { "id": "b2-39-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This is our new benchmark.", "options": ["This is our new benchmark.", "That is our new benchmark.", "This is our old benchmark.", "This was our new benchmark."], "correct_answer": "This is our new benchmark.", "explanation": "Audio exacto." },
+        { "id": "b2-39-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We want to empower our employees.", "options": ["We want to empower our employees.", "They want to empower our employees.", "We wanted to empower our employees.", "We want to overpower our employees."], "correct_answer": "We want to empower our employees.", "explanation": "Audio exacto." },
+        { "id": "b2-39-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need better synergy.", "options": ["We need better synergy.", "They need better synergy.", "We need better energy.", "We needed better synergy."], "correct_answer": "We need better synergy.", "explanation": "Audio exacto." },
+        { "id": "b2-39-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You are accountable for this.", "options": ["You are accountable for this.", "He is accountable for this.", "You are countable for this.", "They are accountable for this."], "correct_answer": "You are accountable for this.", "explanation": "Audio exacto." },
+        { "id": "b2-39-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must streamline the process.", "options": ["We must streamline the process.", "We must stream the process.", "They must streamline the process.", "We must underline the process."], "correct_answer": "We must streamline the process.", "explanation": "Audio exacto." },
+        { "id": "b2-39-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The onboarding process is too long.", "options": ["The onboarding process is too long.", "The boarding process is too long.", "The onboarding process is too short.", "Her onboarding process is too long."], "correct_answer": "The onboarding process is too long.", "explanation": "Audio exacto." },
+        { "id": "b2-39-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Staff turnover is very high.", "options": ["Staff turnover is very high.", "Staff turnover is very low.", "Staff turnout is very high.", "Stuff turnover is very high."], "correct_answer": "Staff turnover is very high.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

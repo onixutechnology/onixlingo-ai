@@ -1,0 +1,101 @@
+{
+  "id": "a1-86",
+  "title": "Simple Past: Was / Were",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Past Tense", "Was", "Were"],
+  "completion_message": "¡Muy bien! Ahora puedes hablar de eventos y situaciones pasadas usando 'was' y 'were' en inglés corporativo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Was / Were",
+      "parts": [
+        { "visual": "'Was' se usa con I, He, She, It: I was in a meeting (Estaba en una reunión). She was busy (Ella estaba ocupada).", "audio": "Was is used with I, He, She, It: I was in a meeting. She was busy." },
+        { "visual": "'Were' se usa con You, We, They: You were right (Tenías razón). They were on time (Llegaron a tiempo). Negativo: wasn't / weren't. Pregunta: Was I? / Were they?", "audio": "Were is used with You, We, They: You were right. They were on time. Negative: wasn't, weren't. Question: Was I? Were they?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige 'was', 'were', 'wasn't' o 'weren't' según corresponda.",
+      "questions": [
+        { "id": "a1-86-q1", "type": "quiz_choice", "question": "I ____ in a meeting yesterday.", "options": ["was", "were", "is", "am"], "correct_answer": "was", "explanation": "I + was." },
+        { "id": "a1-86-q2", "type": "quiz_choice", "question": "She ____ very busy last week.", "options": ["was", "were", "is", "be"], "correct_answer": "was", "explanation": "She + was." },
+        { "id": "a1-86-q3", "type": "quiz_choice", "question": "They ____ at the conference.", "options": ["were", "was", "are", "be"], "correct_answer": "were", "explanation": "They + were." },
+        { "id": "a1-86-q4", "type": "quiz_choice", "question": "We ____ late for the presentation.", "options": ["were", "was", "are", "be"], "correct_answer": "were", "explanation": "We + were." },
+        { "id": "a1-86-q5", "type": "quiz_choice", "question": "The meeting ____ very long.", "options": ["was", "were", "is", "be"], "correct_answer": "was", "explanation": "The meeting (it) + was." },
+        { "id": "a1-86-q6", "type": "quiz_choice", "question": "You ____ right about the budget.", "options": ["were", "was", "are", "be"], "correct_answer": "were", "explanation": "You + were." },
+        { "id": "a1-86-q7", "type": "quiz_choice", "question": "I ____ at the office. I worked from home. (negativo).", "options": ["wasn't", "weren't", "am not", "don't"], "correct_answer": "wasn't", "explanation": "I + wasn't." },
+        { "id": "a1-86-q8", "type": "quiz_choice", "question": "They ____ ready for the presentation. (negativo).", "options": ["weren't", "wasn't", "aren't", "don't"], "correct_answer": "weren't", "explanation": "They + weren't." },
+        { "id": "a1-86-q9", "type": "quiz_choice", "question": "____ you at the meeting? (Pregunta).", "options": ["Were", "Was", "Are", "Do"], "correct_answer": "Were", "explanation": "You -> Were you?" },
+        { "id": "a1-86-q10", "type": "quiz_choice", "question": "____ she on time? (Pregunta).", "options": ["Was", "Were", "Is", "Does"], "correct_answer": "Was", "explanation": "She -> Was she?" },
+        { "id": "a1-86-q11", "type": "quiz_choice", "question": "The results ____ very positive.", "options": ["were", "was", "are", "be"], "correct_answer": "were", "explanation": "Results (plural) + were." },
+        { "id": "a1-86-q12", "type": "quiz_choice", "question": "He ____ the manager last year.", "options": ["was", "were", "is", "be"], "correct_answer": "was", "explanation": "He + was." },
+        { "id": "a1-86-q13", "type": "quiz_choice", "question": "The clients ____ satisfied.", "options": ["were", "was", "are", "be"], "correct_answer": "were", "explanation": "Clients (plural) + were." },
+        { "id": "a1-86-q14", "type": "quiz_choice", "question": "The deadline ____ on Monday.", "options": ["was", "were", "is", "be"], "correct_answer": "was", "explanation": "The deadline (it) + was." },
+        { "id": "a1-86-q15", "type": "quiz_choice", "question": "The report ____ incorrect. (negativo).", "options": ["wasn't", "weren't", "don't", "am not"], "correct_answer": "wasn't", "explanation": "The report (it) + wasn't." },
+        { "id": "a1-86-q16", "type": "quiz_choice", "question": "The staff ____ informed. (negativo, plural).", "options": ["weren't", "wasn't", "don't", "aren't"], "correct_answer": "weren't", "explanation": "Staff (plural) + weren't." },
+        { "id": "a1-86-q17", "type": "quiz_choice", "question": "____ the meeting productive? (Pregunta).", "options": ["Was", "Were", "Is", "Does"], "correct_answer": "Was", "explanation": "The meeting (it) -> Was?" },
+        { "id": "a1-86-q18", "type": "quiz_choice", "question": "____ there any problems? (Pregunta pasado).", "options": ["Were", "Was", "Are", "Do"], "correct_answer": "Were", "explanation": "There were (plural) -> Were there?" },
+        { "id": "a1-86-q19", "type": "quiz_choice", "question": "It ____ a great success.", "options": ["was", "were", "is", "be"], "correct_answer": "was", "explanation": "It + was." },
+        { "id": "a1-86-q20", "type": "quiz_choice", "question": "I ____ the only one in the office.", "options": ["was", "were", "am", "be"], "correct_answer": "was", "explanation": "I + was." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe was, were, wasn't o weren't.",
+      "questions": [
+        { "id": "a1-86-f1", "type": "fill_input", "question": "I ____ in a meeting. (pasado positivo, I).", "correct_answer": "was", "explanation": "was." },
+        { "id": "a1-86-f2", "type": "fill_input", "question": "They ____ at the conference. (pasado positivo, plural).", "correct_answer": "were", "explanation": "were." },
+        { "id": "a1-86-f3", "type": "fill_input", "question": "She ____ busy. (pasado negativo).", "correct_answer": "wasn't", "explanation": "wasn't." },
+        { "id": "a1-86-f4", "type": "fill_input", "question": "We ____ ready. (pasado negativo, plural).", "correct_answer": "weren't", "explanation": "weren't." },
+        { "id": "a1-86-f5", "type": "fill_input", "question": "____ you at the meeting? (Pregunta).", "correct_answer": "Were", "explanation": "Were." },
+        { "id": "a1-86-f6", "type": "fill_input", "question": "____ she on time? (Pregunta).", "correct_answer": "Was", "explanation": "Was." },
+        { "id": "a1-86-f7", "type": "fill_input", "question": "The meeting ____ very long. (positivo).", "correct_answer": "was", "explanation": "was." },
+        { "id": "a1-86-f8", "type": "fill_input", "question": "The results ____ positive. (positivo, plural).", "correct_answer": "were", "explanation": "were." },
+        { "id": "a1-86-f9", "type": "fill_input", "question": "It ____ a great success. (positivo).", "correct_answer": "was", "explanation": "was." },
+        { "id": "a1-86-f10", "type": "fill_input", "question": "____ there any problems? (Pregunta pasado).", "correct_answer": "Were", "explanation": "Were." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-86-p1", "source": "I was in a meeting", "target": "Estaba en una reunión"},
+        {"id": "a1-86-p2", "source": "She was busy", "target": "Ella estaba ocupada"},
+        {"id": "a1-86-p3", "source": "They were on time", "target": "Llegaron a tiempo"},
+        {"id": "a1-86-p4", "source": "You were right", "target": "Tenías razón"},
+        {"id": "a1-86-p5", "source": "I wasn't at the office", "target": "No estaba en la oficina"},
+        {"id": "a1-86-p6", "source": "They weren't ready", "target": "No estaban listos"},
+        {"id": "a1-86-p7", "source": "Were you at the meeting?", "target": "¿Estuviste en la reunión?"},
+        {"id": "a1-86-p8", "source": "Was she on time?", "target": "¿Llegó a tiempo?"},
+        {"id": "a1-86-p9", "source": "The meeting was productive", "target": "La reunión fue productiva"},
+        {"id": "a1-86-p10", "source": "It was a great success", "target": "Fue un gran éxito"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-86-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I was in a meeting yesterday.", "options": ["I was in a meeting yesterday.", "She was in a meeting yesterday.", "I am in a meeting today.", "I was at a meeting yesterday."], "correct_answer": "I was in a meeting yesterday.", "explanation": "Audio exacto." },
+        { "id": "a1-86-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She was very busy last week.", "options": ["She was very busy last week.", "He was very busy last week.", "She is very busy this week.", "She was busy last week."], "correct_answer": "She was very busy last week.", "explanation": "Audio exacto." },
+        { "id": "a1-86-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They were at the conference.", "options": ["They were at the conference.", "We were at the conference.", "They are at the conference.", "They were in the conference."], "correct_answer": "They were at the conference.", "explanation": "Audio exacto." },
+        { "id": "a1-86-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I wasn't at the office.", "options": ["I wasn't at the office.", "She wasn't at the office.", "I am not at the office.", "I wasn't in the office."], "correct_answer": "I wasn't at the office.", "explanation": "Audio exacto." },
+        { "id": "a1-86-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Were you at the meeting?", "options": ["Were you at the meeting?", "Was she at the meeting?", "Are you at the meeting?", "Were they at the meeting?"], "correct_answer": "Were you at the meeting?", "explanation": "Audio exacto." },
+        { "id": "a1-86-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Was she on time?", "options": ["Was she on time?", "Were they on time?", "Is she on time?", "Was he on time?"], "correct_answer": "Was she on time?", "explanation": "Audio exacto." },
+        { "id": "a1-86-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The meeting was very long.", "options": ["The meeting was very long.", "A meeting was very long.", "The meeting is very long.", "The call was very long."], "correct_answer": "The meeting was very long.", "explanation": "Audio exacto." },
+        { "id": "a1-86-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The results were very positive.", "options": ["The results were very positive.", "The result was very positive.", "The results are positive.", "The numbers were very positive."], "correct_answer": "The results were very positive.", "explanation": "Audio exacto." },
+        { "id": "a1-86-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They weren't ready.", "options": ["They weren't ready.", "We weren't ready.", "They are not ready.", "She wasn't ready."], "correct_answer": "They weren't ready.", "explanation": "Audio exacto." },
+        { "id": "a1-86-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a great success.", "options": ["It was a great success.", "It is a great success.", "It was a big success.", "That was a great success."], "correct_answer": "It was a great success.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "a2-25",
+  "title": "Giving a Presentation",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Vocabulary", "Presentations", "Public Speaking", "Business"],
+  "completion_message": "¡Excelente! Ya tienes las frases clave para dar una presentación profesional en inglés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Dando una Presentación",
+      "parts": [
+        { "visual": "Inicio: Welcome everyone (Bienvenidos todos). Thank you for coming (Gracias por venir). Today, I'm going to talk about... (Hoy voy a hablar de...). \nEstructura: First (Primero), Then (Luego), Finally (Finalmente).", "audio": "Starting a presentation. Welcome everyone. Thank you for coming. Today, I'm going to talk about our new project. For structure we use: First, Then, and Finally." },
+        { "visual": "Desarrollo: Let's move on to the next slide (Pasemos a la siguiente diapositiva). As you can see on this graph... (Como pueden ver en este gráfico...). \nCierre: In conclusion... (En conclusión...). Are there any questions? (¿Hay alguna pregunta?).", "audio": "During the presentation. Let's move on to the next slide. As you can see on this graph... And to finish: In conclusion... Are there any questions?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la frase correcta para cada momento de tu presentación.",
+      "questions": [
+        { "id": "a2-25-q1", "type": "quiz_choice", "question": "____ everyone to the annual meeting. (Bienvenidos).", "options": ["Welcome", "Hello", "Greetings", "Come"], "correct_answer": "Welcome", "explanation": "Welcome everyone = bienvenidos todos." },
+        { "id": "a2-25-q2", "type": "quiz_choice", "question": "Thank you for ____ today. (Por venir).", "options": ["coming", "come", "came", "to come"], "correct_answer": "coming", "explanation": "Después de 'for' (preposición), el verbo lleva -ing: coming." },
+        { "id": "a2-25-q3", "type": "quiz_choice", "question": "Today, I am going to ____ about our new strategy. (Hablar).", "options": ["talk", "say", "tell", "discuss"], "correct_answer": "talk", "explanation": "Talk about = hablar acerca de." },
+        { "id": "a2-25-q4", "type": "quiz_choice", "question": "The ____ of my presentation is the Q3 budget. (Propósito/Objetivo).", "options": ["purpose", "mean", "idea", "want"], "correct_answer": "purpose", "explanation": "The purpose of my presentation = el propósito de mi presentación." },
+        { "id": "a2-25-q5", "type": "quiz_choice", "question": "I have divided my presentation into three ____. (Partes).", "options": ["parts", "pieces", "cuts", "slides"], "correct_answer": "parts", "explanation": "Three parts = tres partes." },
+        { "id": "a2-25-q6", "type": "quiz_choice", "question": "____, I will talk about the problem. (Primero).", "options": ["First", "One", "Start", "Begin"], "correct_answer": "First", "explanation": "First = primero." },
+        { "id": "a2-25-q7", "type": "quiz_choice", "question": "____, I will show you the solution. (Luego/Después).", "options": ["Then", "Second", "Two", "After"], "correct_answer": "Then", "explanation": "Then = luego / entonces." },
+        { "id": "a2-25-q8", "type": "quiz_choice", "question": "Let's ____ on to the next slide. (Pasemos/Avancemos).", "options": ["move", "go", "jump", "walk"], "correct_answer": "move", "explanation": "Move on to = pasar a / avanzar a (un nuevo tema o diapositiva)." },
+        { "id": "a2-25-q9", "type": "quiz_choice", "question": "As you can ____ on this graph, sales are up. (Ver).", "options": ["see", "look", "watch", "view"], "correct_answer": "see", "explanation": "As you can see = como pueden ver." },
+        { "id": "a2-25-q10", "type": "quiz_choice", "question": "This ____ shows our revenue for the year. (Gráfico/Tabla).", "options": ["chart", "photo", "drawing", "painting"], "correct_answer": "chart", "explanation": "Chart o Graph = gráfico (bar chart, pie chart)." },
+        { "id": "a2-25-q11", "type": "quiz_choice", "question": "Let me give you an ____. (Ejemplo).", "options": ["example", "idea", "option", "show"], "correct_answer": "example", "explanation": "An example = un ejemplo." },
+        { "id": "a2-25-q12", "type": "quiz_choice", "question": "I would like to ____ that this is very important. (Enfatizar/Señalar).", "options": ["point out", "say out", "look out", "watch out"], "correct_answer": "point out", "explanation": "Point out = señalar / hacer notar algo importante." },
+        { "id": "a2-25-q13", "type": "quiz_choice", "question": "To ____ up, we need to reduce costs. (Para resumir).", "options": ["sum", "add", "make", "close"], "correct_answer": "sum", "explanation": "To sum up = para resumir." },
+        { "id": "a2-25-q14", "type": "quiz_choice", "question": "In ____, the project was a success. (Conclusión).", "options": ["conclusion", "end", "finish", "closing"], "correct_answer": "conclusion", "explanation": "In conclusion = en conclusión." },
+        { "id": "a2-25-q15", "type": "quiz_choice", "question": "That ____ me to the end of my presentation. (Me lleva).", "options": ["brings", "takes", "gives", "makes"], "correct_answer": "brings", "explanation": "That brings me to the end = eso me lleva al final." },
+        { "id": "a2-25-q16", "type": "quiz_choice", "question": "Are there any ____? (Preguntas).", "options": ["questions", "answers", "doubts", "problems"], "correct_answer": "questions", "explanation": "Are there any questions? = ¿Hay alguna pregunta? (No se usa 'doubts' para esto)." },
+        { "id": "a2-25-q17", "type": "quiz_choice", "question": "Thank you for your ____. (Atención).", "options": ["attention", "time", "ears", "eyes"], "correct_answer": "attention", "explanation": "Thank you for your attention = gracias por su atención." },
+        { "id": "a2-25-q18", "type": "quiz_choice", "question": "I will be happy to ____ your questions now. (Responder).", "options": ["answer", "say", "reply", "talk"], "correct_answer": "answer", "explanation": "Answer questions = responder preguntas." },
+        { "id": "a2-25-q19", "type": "quiz_choice", "question": "If you look at the ____, you will see the numbers. (Pantalla).", "options": ["screen", "monitor", "tv", "glass"], "correct_answer": "screen", "explanation": "Screen = pantalla (donde se proyecta la presentación)." },
+        { "id": "a2-25-q20", "type": "quiz_choice", "question": "Can everyone ____ me in the back? (Escucharme).", "options": ["hear", "listen", "sound", "understand"], "correct_answer": "hear", "explanation": "Can everyone hear me? = ¿Me pueden escuchar todos?" }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave para tu presentación.",
+      "questions": [
+        { "id": "a2-25-f1", "type": "fill_input", "question": "____ everyone! (Bienvenidos)", "correct_answer": "Welcome", "explanation": "Welcome." },
+        { "id": "a2-25-f2", "type": "fill_input", "question": "Thank you for ____. (Por venir)", "correct_answer": "coming", "explanation": "coming." },
+        { "id": "a2-25-f3", "type": "fill_input", "question": "Today I am going to ____ about... (Hablar)", "correct_answer": "talk", "explanation": "talk." },
+        { "id": "a2-25-f4", "type": "fill_input", "question": "The ____ of my presentation is... (Propósito)", "correct_answer": "purpose", "explanation": "purpose." },
+        { "id": "a2-25-f5", "type": "fill_input", "question": "Let's ____ on to the next slide. (Pasemos)", "correct_answer": "move", "explanation": "move." },
+        { "id": "a2-25-f6", "type": "fill_input", "question": "As you can ____ on this graph... (Ver)", "correct_answer": "see", "explanation": "see." },
+        { "id": "a2-25-f7", "type": "fill_input", "question": "This ____ shows the sales. (Gráfico/Tabla - chart)", "correct_answer": "chart", "explanation": "chart." },
+        { "id": "a2-25-f8", "type": "fill_input", "question": "To ____ up, we must improve. (Para resumir)", "correct_answer": "sum", "explanation": "sum." },
+        { "id": "a2-25-f9", "type": "fill_input", "question": "In ____... (Conclusión)", "correct_answer": "conclusion", "explanation": "conclusion." },
+        { "id": "a2-25-f10", "type": "fill_input", "question": "Are there any ____? (Preguntas)", "correct_answer": "questions", "explanation": "questions." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-25-p1", "source": "Welcome everyone", "target": "Bienvenidos todos"},
+        {"id": "a2-25-p2", "source": "Thank you for coming", "target": "Gracias por venir"},
+        {"id": "a2-25-p3", "source": "I'm going to talk about...", "target": "Voy a hablar acerca de..."},
+        {"id": "a2-25-p4", "source": "The purpose of my presentation", "target": "El propósito de mi presentación"},
+        {"id": "a2-25-p5", "source": "Let's move on", "target": "Pasemos / Avancemos (al siguiente tema)"},
+        {"id": "a2-25-p6", "source": "The next slide", "target": "La siguiente diapositiva"},
+        {"id": "a2-25-p7", "source": "As you can see", "target": "Como pueden ver"},
+        {"id": "a2-25-p8", "source": "To sum up", "target": "Para resumir"},
+        {"id": "a2-25-p9", "source": "In conclusion", "target": "En conclusión"},
+        {"id": "a2-25-p10", "source": "Are there any questions?", "target": "¿Hay alguna pregunta?"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de presentación exacta.",
+      "questions": [
+        { "id": "a2-25-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Welcome everyone to the meeting.", "options": ["Welcome everyone to the meeting.", "Welcome everybody to the meeting.", "Welcome to the meeting.", "Hello everyone to the meeting."], "correct_answer": "Welcome everyone to the meeting.", "explanation": "Audio exacto." },
+        { "id": "a2-25-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Thank you for coming today.", "options": ["Thank you for coming today.", "Thanks for coming today.", "Thank you for coming.", "Thank you very much for coming."], "correct_answer": "Thank you for coming today.", "explanation": "Audio exacto." },
+        { "id": "a2-25-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Today I am going to talk about sales.", "options": ["Today I am going to talk about sales.", "Today I will talk about sales.", "I am going to talk about sales.", "Today we are going to talk about sales."], "correct_answer": "Today I am going to talk about sales.", "explanation": "Audio exacto." },
+        { "id": "a2-25-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The purpose of my presentation is to show the results.", "options": ["The purpose of my presentation is to show the results.", "The goal of my presentation is to show the results.", "The purpose is to show the results.", "My presentation is to show the results."], "correct_answer": "The purpose of my presentation is to show the results.", "explanation": "Audio exacto." },
+        { "id": "a2-25-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's move on to the next slide.", "options": ["Let's move on to the next slide.", "Let's go to the next slide.", "We will move to the next slide.", "Let's move to the next slide."], "correct_answer": "Let's move on to the next slide.", "explanation": "Audio exacto." },
+        { "id": "a2-25-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "As you can see on this graph.", "options": ["As you can see on this graph.", "As you can see in this chart.", "Like you can see on this graph.", "As you can see here."], "correct_answer": "As you can see on this graph.", "explanation": "Audio exacto." },
+        { "id": "a2-25-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "To sum up, we need to reduce costs.", "options": ["To sum up, we need to reduce costs.", "In summary, we need to reduce costs.", "To sum up, we must reduce costs.", "To sum up, we need to cut costs."], "correct_answer": "To sum up, we need to reduce costs.", "explanation": "Audio exacto." },
+        { "id": "a2-25-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In conclusion, the project was a success.", "options": ["In conclusion, the project was a success.", "In conclusion, it was a success.", "To conclude, the project was a success.", "In conclusion, the project is a success."], "correct_answer": "In conclusion, the project was a success.", "explanation": "Audio exacto." },
+        { "id": "a2-25-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Are there any questions?", "options": ["Are there any questions?", "Do you have any questions?", "Are there questions?", "Is there any question?"], "correct_answer": "Are there any questions?", "explanation": "Audio exacto." },
+        { "id": "a2-25-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Thank you for your attention.", "options": ["Thank you for your attention.", "Thanks for your attention.", "Thank you for your time.", "Thank you very much for your attention."], "correct_answer": "Thank you for your attention.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

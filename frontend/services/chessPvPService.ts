@@ -99,7 +99,7 @@ export class ChessSocketManager {
     /** Open the WebSocket connection. */
     connect(): void {
         const wsBase =
-            process.env.NEXT_PUBLIC_WS_URL ?? "wss://api.onixlingo.com/ws";
+            process.env.NODE_ENV === 'production' ? 'wss://api.onixlingo.onixu.company/ws' : 'ws://127.0.0.1:5000/ws';
         const url = `${wsBase}/chess/matches/${this.matchId}?token=${this.token}`;
 
         this.ws = new WebSocket(url);

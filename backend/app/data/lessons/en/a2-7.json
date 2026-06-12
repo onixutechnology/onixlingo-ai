@@ -1,0 +1,101 @@
+{
+  "id": "a2-7",
+  "title": "Quantifiers (Much, Many, A lot of)",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Quantifiers", "Much", "Many", "A lot of"],
+  "completion_message": "¡Excelente! Has aprendido a cuantificar recursos, dinero y tiempo de forma correcta.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Cuantificadores: Much, Many, A lot of",
+      "parts": [
+        { "visual": "Sustantivos Contables (se pueden contar: 1 laptop, 2 laptops): Usamos MANY (muchos), A FEW (unos pocos). Ej: We don't have MANY laptops. We have A FEW laptops.", "audio": "Countable nouns are things you can count, like laptops. We use MANY and A FEW. For example: We don't have MANY laptops. We have A FEW laptops." },
+        { "visual": "Sustantivos Incontables (no se cuentan: money, time, information): Usamos MUCH (mucho), A LITTLE (un poco). Ej: We don't have MUCH time. We have A LITTLE money. \nA LOT OF (mucho/s) se usa para ambos (contables e incontables), casi siempre en oraciones afirmativas.", "audio": "Uncountable nouns are things you cannot count directly, like money, time, and information. We use MUCH and A LITTLE. For example: We don't have MUCH time. We have A LITTLE money. A LOT OF can be used for both countable and uncountable nouns, mostly in affirmative sentences." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el cuantificador correcto para cada situación corporativa.",
+      "questions": [
+        { "id": "a2-7-q1", "type": "quiz_choice", "question": "We don't have ____ time to finish the project. (Tiempo es incontable).", "options": ["much", "many", "a few", "few"], "correct_answer": "much", "explanation": "Para incontables en negativo se usa 'much'." },
+        { "id": "a2-7-q2", "type": "quiz_choice", "question": "How ____ employees work in the London branch? (Empleados son contables).", "options": ["many", "much", "a lot", "little"], "correct_answer": "many", "explanation": "Para preguntar por plurales contables se usa 'How many'." },
+        { "id": "a2-7-q3", "type": "quiz_choice", "question": "The company made ____ money last year. (Afirmativa, dinero es incontable).", "options": ["a lot of", "many", "a few", "few"], "correct_answer": "a lot of", "explanation": "En afirmativas, es muy común usar 'a lot of' para ambos tipos." },
+        { "id": "a2-7-q4", "type": "quiz_choice", "question": "There are only ____ chairs in the meeting room. (Sillas son contables).", "options": ["a few", "a little", "much", "little"], "correct_answer": "a few", "explanation": "'A few' (unos pocos) se usa con plurales contables." },
+        { "id": "a2-7-q5", "type": "quiz_choice", "question": "I need ____ more information before making a decision. (Información es incontable).", "options": ["a little", "a few", "many", "few"], "correct_answer": "a little", "explanation": "'A little' (un poco) se usa con incontables. 'Information' siempre es incontable en inglés." },
+        { "id": "a2-7-q6", "type": "quiz_choice", "question": "How ____ does this software cost? (Pregunta sobre precio/dinero incontable).", "options": ["much", "many", "a lot", "few"], "correct_answer": "much", "explanation": "Para preguntar precio o cantidad incontable se usa 'How much'." },
+        { "id": "a2-7-q7", "type": "quiz_choice", "question": "He didn't make ____ sales this month. (Ventas son contables y plurales).", "options": ["many", "much", "a little", "little"], "correct_answer": "many", "explanation": "Para negativos contables plurales se usa 'many'." },
+        { "id": "a2-7-q8", "type": "quiz_choice", "question": "We received ____ of applications for the job. (Muchas).", "options": ["a lot", "many", "much", "a few"], "correct_answer": "a lot", "explanation": "La expresión completa es 'a lot of' (en la oración ya está el 'of', por lo que la opción es 'a lot')." },
+        { "id": "a2-7-q9", "type": "quiz_choice", "question": "Can I give you ____ advice? (Consejo es incontable en inglés).", "options": ["a little", "a few", "many", "few"], "correct_answer": "a little", "explanation": "Advice es incontable en inglés (no existe 'advices'), por lo que lleva 'a little' o 'some'." },
+        { "id": "a2-7-q10", "type": "quiz_choice", "question": "I only have ____ minutes before my next meeting. (Minutos son contables).", "options": ["a few", "a little", "much", "little"], "correct_answer": "a few", "explanation": "Minutes (contable plural) lleva 'a few'." },
+        { "id": "a2-7-q11", "type": "quiz_choice", "question": "They spend too ____ money on marketing. (Dinero es incontable).", "options": ["much", "many", "a few", "few"], "correct_answer": "much", "explanation": "Too much = demasiado (incontable)." },
+        { "id": "a2-7-q12", "type": "quiz_choice", "question": "There are too ____ people in this elevator. (Personas son contables).", "options": ["many", "much", "a little", "little"], "correct_answer": "many", "explanation": "Too many = demasiados (contable plural)." },
+        { "id": "a2-7-q13", "type": "quiz_choice", "question": "We had ____ problems with the server yesterday. (Afirmativa, plural contable).", "options": ["a lot of", "much", "a little", "little"], "correct_answer": "a lot of", "explanation": "A lot of problems (muchos problemas)." },
+        { "id": "a2-7-q14", "type": "quiz_choice", "question": "Let's wait. We still have ____ time. (Tenemos un poco de tiempo).", "options": ["a little", "a few", "many", "few"], "correct_answer": "a little", "explanation": "A little time = un poco de tiempo (suficiente)." },
+        { "id": "a2-7-q15", "type": "quiz_choice", "question": "I don't have ____ experience in sales. (Experiencia es incontable).", "options": ["much", "many", "a few", "few"], "correct_answer": "much", "explanation": "En negativo e incontable se usa 'much'." },
+        { "id": "a2-7-q16", "type": "quiz_choice", "question": "How ____ emails do you receive a day? (Correos son contables).", "options": ["many", "much", "a lot", "little"], "correct_answer": "many", "explanation": "How many emails...?" },
+        { "id": "a2-7-q17", "type": "quiz_choice", "question": "We have very ____ budget left for this project. (Presupuesto como dinero/masa es incontable, o aquí 'poco').", "options": ["little", "few", "many", "a lot"], "correct_answer": "little", "explanation": "Very little budget = muy poco presupuesto. (Few es para contables plurales)." },
+        { "id": "a2-7-q18", "type": "quiz_choice", "question": "Just ____ corrections are needed on the report. (Solo unas pocas correcciones).", "options": ["a few", "a little", "much", "little"], "correct_answer": "a few", "explanation": "Corrections (plural contable) -> a few." },
+        { "id": "a2-7-q19", "type": "quiz_choice", "question": "He has a lot ____ meetings today. (Completar la frase).", "options": ["of", "for", "with", "to"], "correct_answer": "of", "explanation": "La estructura es 'a lot of'." },
+        { "id": "a2-7-q20", "type": "quiz_choice", "question": "I don't drink ____ coffee. (Café como líquido es incontable).", "options": ["much", "many", "a few", "few"], "correct_answer": "much", "explanation": "Much coffee (líquido incontable)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe much, many, a lot of, a few, o a little.",
+      "questions": [
+        { "id": "a2-7-f1", "type": "fill_input", "question": "We don't have ____ time. (Incontable negativo)", "correct_answer": "much", "explanation": "much." },
+        { "id": "a2-7-f2", "type": "fill_input", "question": "How ____ employees are there? (Contable plural)", "correct_answer": "many", "explanation": "many." },
+        { "id": "a2-7-f3", "type": "fill_input", "question": "He has ____ ____ of money. (Mucho - afirmativa)", "correct_answer": "a lot", "explanation": "a lot." },
+        { "id": "a2-7-f4", "type": "fill_input", "question": "There are only ____ ____ chairs. (Unas pocas)", "correct_answer": "a few", "explanation": "a few." },
+        { "id": "a2-7-f5", "type": "fill_input", "question": "I need ____ ____ information. (Un poco - incontable)", "correct_answer": "a little", "explanation": "a little." },
+        { "id": "a2-7-f6", "type": "fill_input", "question": "How ____ does it cost? (Precio)", "correct_answer": "much", "explanation": "much." },
+        { "id": "a2-7-f7", "type": "fill_input", "question": "I only have ____ ____ minutes. (Unos pocos)", "correct_answer": "a few", "explanation": "a few." },
+        { "id": "a2-7-f8", "type": "fill_input", "question": "We had ____ ____ ____ problems. (Muchos - 3 palabras)", "correct_answer": "a lot of", "explanation": "a lot of." },
+        { "id": "a2-7-f9", "type": "fill_input", "question": "They spend too ____ money. (Demasiado - incontable)", "correct_answer": "much", "explanation": "much." },
+        { "id": "a2-7-f10", "type": "fill_input", "question": "There are too ____ people. (Demasiadas - contable)", "correct_answer": "many", "explanation": "many." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-7-p1", "source": "Not much time", "target": "No mucho tiempo (incontable)"},
+        {"id": "a2-7-p2", "source": "Not many laptops", "target": "No muchas laptops (contable)"},
+        {"id": "a2-7-p3", "source": "A lot of money", "target": "Mucho dinero (afirmativa)"},
+        {"id": "a2-7-p4", "source": "A lot of problems", "target": "Muchos problemas (afirmativa)"},
+        {"id": "a2-7-p5", "source": "A few minutes", "target": "Unos pocos minutos (contable)"},
+        {"id": "a2-7-p6", "source": "A little information", "target": "Un poco de información (incontable)"},
+        {"id": "a2-7-p7", "source": "How much?", "target": "¿Cuánto? (Precio/Incontable)"},
+        {"id": "a2-7-p8", "source": "How many?", "target": "¿Cuántos? (Contable)"},
+        {"id": "a2-7-p9", "source": "Too much pressure", "target": "Demasiada presión (incontable)"},
+        {"id": "a2-7-p10", "source": "Too many emails", "target": "Demasiados correos (contable)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a2-7-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We don't have much time to finish the project.", "options": ["We don't have much time to finish the project.", "We don't have many time to finish the project.", "We have a little time to finish the project.", "They don't have much time to finish the project."], "correct_answer": "We don't have much time to finish the project.", "explanation": "Audio exacto." },
+        { "id": "a2-7-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How many employees work in the London branch?", "options": ["How many employees work in the London branch?", "How much employees work in the London branch?", "How many workers work in the London branch?", "How many employees work in London?"], "correct_answer": "How many employees work in the London branch?", "explanation": "Audio exacto." },
+        { "id": "a2-7-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company made a lot of money last year.", "options": ["The company made a lot of money last year.", "The company made much money last year.", "The company earned a lot of money last year.", "My company made a lot of money last year."], "correct_answer": "The company made a lot of money last year.", "explanation": "Audio exacto." },
+        { "id": "a2-7-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There are only a few chairs in the meeting room.", "options": ["There are only a few chairs in the meeting room.", "There are a few chairs in the meeting room.", "There are only a few chairs in the room.", "There are some chairs in the meeting room."], "correct_answer": "There are only a few chairs in the meeting room.", "explanation": "Audio exacto." },
+        { "id": "a2-7-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need a little more information.", "options": ["I need a little more information.", "I need a few more information.", "I need a little information.", "She needs a little more information."], "correct_answer": "I need a little more information.", "explanation": "Audio exacto." },
+        { "id": "a2-7-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How much does this software cost?", "options": ["How much does this software cost?", "How much does the software cost?", "How many does this software cost?", "How much is this software?"], "correct_answer": "How much does this software cost?", "explanation": "Audio exacto." },
+        { "id": "a2-7-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They spend too much money on marketing.", "options": ["They spend too much money on marketing.", "We spend too much money on marketing.", "They spend a lot of money on marketing.", "He spends too much money on marketing."], "correct_answer": "They spend too much money on marketing.", "explanation": "Audio exacto." },
+        { "id": "a2-7-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There are too many people in this elevator.", "options": ["There are too many people in this elevator.", "There are too much people in this elevator.", "There are many people in this elevator.", "There are a lot of people in this elevator."], "correct_answer": "There are too many people in this elevator.", "explanation": "Audio exacto." },
+        { "id": "a2-7-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I only have a few minutes before my next meeting.", "options": ["I only have a few minutes before my next meeting.", "I have a few minutes before my next meeting.", "I only have a little minutes before my next meeting.", "I only have a few minutes."], "correct_answer": "I only have a few minutes before my next meeting.", "explanation": "Audio exacto." },
+        { "id": "a2-7-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I give you a little advice?", "options": ["Can I give you a little advice?", "Can I give you a few advice?", "Could I give you a little advice?", "Can you give me a little advice?"], "correct_answer": "Can I give you a little advice?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

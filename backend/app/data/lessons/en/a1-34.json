@@ -1,0 +1,101 @@
+{
+  "id": "a1-34",
+  "title": "Basic Phone Spelling",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Phone", "Spelling", "Alphabet"],
+  "completion_message": "¡Felicidades! Ahora sabes cómo deletrear palabras difíciles por teléfono usando el alfabeto fonético básico.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Deletreo Telefónico",
+      "parts": [
+        { "visual": "Por teléfono, para evitar confusiones al deletrear, usamos palabras clave: 'A as in Alpha', 'B as in Bravo'.", "audio": "On the phone, to avoid confusion, we use keywords: A as in Alpha, B as in Bravo." },
+        { "visual": "Puedes decir: 'My name is Bob. That's B as in Bravo, O as in Oscar, B as in Bravo'.", "audio": "You can say: My name is Bob. That's B as in Bravo, O as in Oscar, B as in Bravo." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la palabra correcta para deletrear.",
+      "questions": [
+        { "id": "a1-34-q1", "type": "quiz_choice", "question": "A as in ____.", "options": ["Alpha", "Apple", "Animal", "Ant"], "correct_answer": "Alpha", "explanation": "El estándar corporativo y aéreo es Alpha." },
+        { "id": "a1-34-q2", "type": "quiz_choice", "question": "B as in ____.", "options": ["Bravo", "Boy", "Bat", "Blue"], "correct_answer": "Bravo", "explanation": "Bravo." },
+        { "id": "a1-34-q3", "type": "quiz_choice", "question": "C as in ____.", "options": ["Charlie", "Cat", "Car", "Call"], "correct_answer": "Charlie", "explanation": "Charlie." },
+        { "id": "a1-34-q4", "type": "quiz_choice", "question": "D as in ____.", "options": ["Delta", "Dog", "Day", "Date"], "correct_answer": "Delta", "explanation": "Delta." },
+        { "id": "a1-34-q5", "type": "quiz_choice", "question": "E as in ____.", "options": ["Echo", "Elephant", "Eat", "Egg"], "correct_answer": "Echo", "explanation": "Echo." },
+        { "id": "a1-34-q6", "type": "quiz_choice", "question": "F as in ____.", "options": ["Foxtrot", "Fox", "Fish", "Four"], "correct_answer": "Foxtrot", "explanation": "Foxtrot." },
+        { "id": "a1-34-q7", "type": "quiz_choice", "question": "G as in ____.", "options": ["Golf", "Girl", "Good", "Go"], "correct_answer": "Golf", "explanation": "Golf." },
+        { "id": "a1-34-q8", "type": "quiz_choice", "question": "H as in ____.", "options": ["Hotel", "Hat", "House", "Hello"], "correct_answer": "Hotel", "explanation": "Hotel." },
+        { "id": "a1-34-q9", "type": "quiz_choice", "question": "I as in ____.", "options": ["India", "Ice", "Island", "Igloo"], "correct_answer": "India", "explanation": "India." },
+        { "id": "a1-34-q10", "type": "quiz_choice", "question": "J as in ____.", "options": ["Juliet", "Jump", "Job", "July"], "correct_answer": "Juliet", "explanation": "Juliet." },
+        { "id": "a1-34-q11", "type": "quiz_choice", "question": "K as in ____.", "options": ["Kilo", "Kite", "Key", "King"], "correct_answer": "Kilo", "explanation": "Kilo." },
+        { "id": "a1-34-q12", "type": "quiz_choice", "question": "L as in ____.", "options": ["Lima", "Lion", "Love", "Light"], "correct_answer": "Lima", "explanation": "Lima." },
+        { "id": "a1-34-q13", "type": "quiz_choice", "question": "M as in ____.", "options": ["Mike", "Mouse", "Man", "Monkey"], "correct_answer": "Mike", "explanation": "Mike." },
+        { "id": "a1-34-q14", "type": "quiz_choice", "question": "N as in ____.", "options": ["November", "No", "Nut", "Night"], "correct_answer": "November", "explanation": "November." },
+        { "id": "a1-34-q15", "type": "quiz_choice", "question": "O as in ____.", "options": ["Oscar", "Orange", "Ocean", "Owl"], "correct_answer": "Oscar", "explanation": "Oscar." },
+        { "id": "a1-34-q16", "type": "quiz_choice", "question": "P as in ____.", "options": ["Papa", "Pig", "Pen", "Pool"], "correct_answer": "Papa", "explanation": "Papa." },
+        { "id": "a1-34-q17", "type": "quiz_choice", "question": "Q as in ____.", "options": ["Quebec", "Queen", "Quiet", "Quick"], "correct_answer": "Quebec", "explanation": "Quebec." },
+        { "id": "a1-34-q18", "type": "quiz_choice", "question": "R as in ____.", "options": ["Romeo", "Red", "Rat", "Run"], "correct_answer": "Romeo", "explanation": "Romeo." },
+        { "id": "a1-34-q19", "type": "quiz_choice", "question": "S as in ____.", "options": ["Sierra", "Sun", "Snake", "Star"], "correct_answer": "Sierra", "explanation": "Sierra." },
+        { "id": "a1-34-q20", "type": "quiz_choice", "question": "T as in ____.", "options": ["Tango", "Tree", "Tiger", "Two"], "correct_answer": "Tango", "explanation": "Tango." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave del alfabeto fonético.",
+      "questions": [
+        { "id": "a1-34-f1", "type": "fill_input", "question": "A as in ____.", "correct_answer": "Alpha", "explanation": "Alpha." },
+        { "id": "a1-34-f2", "type": "fill_input", "question": "B as in ____.", "correct_answer": "Bravo", "explanation": "Bravo." },
+        { "id": "a1-34-f3", "type": "fill_input", "question": "C as in ____.", "correct_answer": "Charlie", "explanation": "Charlie." },
+        { "id": "a1-34-f4", "type": "fill_input", "question": "D as in ____.", "correct_answer": "Delta", "explanation": "Delta." },
+        { "id": "a1-34-f5", "type": "fill_input", "question": "E as in ____.", "correct_answer": "Echo", "explanation": "Echo." },
+        { "id": "a1-34-f6", "type": "fill_input", "question": "F as in ____.", "correct_answer": "Foxtrot", "explanation": "Foxtrot." },
+        { "id": "a1-34-f7", "type": "fill_input", "question": "G as in ____.", "correct_answer": "Golf", "explanation": "Golf." },
+        { "id": "a1-34-f8", "type": "fill_input", "question": "H as in ____.", "correct_answer": "Hotel", "explanation": "Hotel." },
+        { "id": "a1-34-f9", "type": "fill_input", "question": "I as in ____.", "correct_answer": "India", "explanation": "India." },
+        { "id": "a1-34-f10", "type": "fill_input", "question": "J as in ____.", "correct_answer": "Juliet", "explanation": "Juliet." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-34-p1", "source": "A", "target": "Alpha"},
+        {"id": "a1-34-p2", "source": "B", "target": "Bravo"},
+        {"id": "a1-34-p3", "source": "C", "target": "Charlie"},
+        {"id": "a1-34-p4", "source": "D", "target": "Delta"},
+        {"id": "a1-34-p5", "source": "E", "target": "Echo"},
+        {"id": "a1-34-p6", "source": "F", "target": "Foxtrot"},
+        {"id": "a1-34-p7", "source": "G", "target": "Golf"},
+        {"id": "a1-34-p8", "source": "H", "target": "Hotel"},
+        {"id": "a1-34-p9", "source": "I", "target": "India"},
+        {"id": "a1-34-p10", "source": "J", "target": "Juliet"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la letra y palabra.",
+      "questions": [
+        { "id": "a1-34-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A as in Alpha.", "options": ["A as in Alpha.", "A as in Apple.", "A as in Animal.", "A as in Art."], "correct_answer": "A as in Alpha.", "explanation": "Audio exacto." },
+        { "id": "a1-34-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "B as in Bravo.", "options": ["B as in Bravo.", "B as in Boy.", "B as in Bat.", "B as in Ball."], "correct_answer": "B as in Bravo.", "explanation": "Audio exacto." },
+        { "id": "a1-34-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "C as in Charlie.", "options": ["C as in Charlie.", "C as in Cat.", "C as in Car.", "C as in Call."], "correct_answer": "C as in Charlie.", "explanation": "Audio exacto." },
+        { "id": "a1-34-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "D as in Delta.", "options": ["D as in Delta.", "D as in Dog.", "D as in Day.", "D as in Date."], "correct_answer": "D as in Delta.", "explanation": "Audio exacto." },
+        { "id": "a1-34-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "E as in Echo.", "options": ["E as in Echo.", "E as in Elephant.", "E as in Eat.", "E as in Egg."], "correct_answer": "E as in Echo.", "explanation": "Audio exacto." },
+        { "id": "a1-34-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "F as in Foxtrot.", "options": ["F as in Foxtrot.", "F as in Fox.", "F as in Fish.", "F as in Four."], "correct_answer": "F as in Foxtrot.", "explanation": "Audio exacto." },
+        { "id": "a1-34-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "G as in Golf.", "options": ["G as in Golf.", "G as in Girl.", "G as in Good.", "G as in Go."], "correct_answer": "G as in Golf.", "explanation": "Audio exacto." },
+        { "id": "a1-34-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "H as in Hotel.", "options": ["H as in Hotel.", "H as in Hat.", "H as in House.", "H as in Hello."], "correct_answer": "H as in Hotel.", "explanation": "Audio exacto." },
+        { "id": "a1-34-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I as in India.", "options": ["I as in India.", "I as in Ice.", "I as in Island.", "I as in Idea."], "correct_answer": "I as in India.", "explanation": "Audio exacto." },
+        { "id": "a1-34-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "J as in Juliet.", "options": ["J as in Juliet.", "J as in Jump.", "J as in Job.", "J as in July."], "correct_answer": "J as in Juliet.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

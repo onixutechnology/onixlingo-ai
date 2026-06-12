@@ -1,0 +1,101 @@
+{
+  "id": "a1-81",
+  "title": "Can / Can't: Ability",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Modal Verbs", "Can", "Ability"],
+  "completion_message": "¡Excelente! Ahora puedes expresar lo que sabes y no sabes hacer en el entorno laboral usando 'can' y 'can't'.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Can / Can't",
+      "parts": [
+        { "visual": "'Can' expresa habilidad o capacidad: I can speak English (Puedo hablar inglés). She can use Excel (Ella sabe usar Excel).", "audio": "Can expresses ability or capacity: I can speak English. She can use Excel." },
+        { "visual": "'Can't' es la negación: I can't drive (No sé/puedo conducir). He can't attend the meeting (No puede asistir a la reunión).", "audio": "Can't is the negation: I can't drive. He can't attend the meeting." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige 'can' o 'can't' según el contexto.",
+      "questions": [
+        { "id": "a1-81-q1", "type": "quiz_choice", "question": "I ____ speak English. (Sí puedo).", "options": ["can", "can't", "don't", "am not"], "correct_answer": "can", "explanation": "Habilidad positiva (can)." },
+        { "id": "a1-81-q2", "type": "quiz_choice", "question": "She ____ use Excel very well. (Sí sabe).", "options": ["can", "can't", "doesn't", "isn't"], "correct_answer": "can", "explanation": "Habilidad positiva (can)." },
+        { "id": "a1-81-q3", "type": "quiz_choice", "question": "I ____ drive. I don't have a licence. (No puedo).", "options": ["can't", "can", "don't", "am not"], "correct_answer": "can't", "explanation": "Negación de habilidad (can't)." },
+        { "id": "a1-81-q4", "type": "quiz_choice", "question": "He ____ attend the meeting. He is travelling. (No puede).", "options": ["can't", "can", "doesn't", "isn't"], "correct_answer": "can't", "explanation": "Negación (can't)." },
+        { "id": "a1-81-q5", "type": "quiz_choice", "question": "____ you type quickly? (¿Puedes?).", "options": ["Can", "Do", "Are", "Have"], "correct_answer": "Can", "explanation": "Pregunta con can." },
+        { "id": "a1-81-q6", "type": "quiz_choice", "question": "They ____ fix the server. The team is ready. (Sí pueden).", "options": ["can", "can't", "don't", "aren't"], "correct_answer": "can", "explanation": "Habilidad positiva (can)." },
+        { "id": "a1-81-q7", "type": "quiz_choice", "question": "I ____ find the file. Can you help me? (No puedo).", "options": ["can't", "can", "don't", "am not"], "correct_answer": "can't", "explanation": "Negación (can't)." },
+        { "id": "a1-81-q8", "type": "quiz_choice", "question": "Mary ____ write reports in English. (Sí puede).", "options": ["can", "can't", "does", "is"], "correct_answer": "can", "explanation": "Habilidad positiva (can)." },
+        { "id": "a1-81-q9", "type": "quiz_choice", "question": "____ he speak French? (¿Puede él?).", "options": ["Can", "Does", "Is", "Has"], "correct_answer": "Can", "explanation": "Pregunta con can." },
+        { "id": "a1-81-q10", "type": "quiz_choice", "question": "We ____ start the meeting without him. He is not here. (No podemos).", "options": ["can't", "can", "don't", "aren't"], "correct_answer": "can't", "explanation": "Negación (can't)." },
+        { "id": "a1-81-q11", "type": "quiz_choice", "question": "I ____ help you with the presentation. (Sí puedo).", "options": ["can", "can't", "don't", "am not"], "correct_answer": "can", "explanation": "Habilidad positiva (can)." },
+        { "id": "a1-81-q12", "type": "quiz_choice", "question": "She ____ come to the office today. She is sick. (No puede).", "options": ["can't", "can", "doesn't", "isn't"], "correct_answer": "can't", "explanation": "Negación (can't)." },
+        { "id": "a1-81-q13", "type": "quiz_choice", "question": "____ we reschedule the call? (¿Podemos?).", "options": ["Can", "Do", "Are", "Have"], "correct_answer": "Can", "explanation": "Pregunta con can." },
+        { "id": "a1-81-q14", "type": "quiz_choice", "question": "He ____ use the new software. He had training. (Sí puede).", "options": ["can", "can't", "does", "is"], "correct_answer": "can", "explanation": "Habilidad positiva (can)." },
+        { "id": "a1-81-q15", "type": "quiz_choice", "question": "I ____ read the document. The font is too small. (No puedo).", "options": ["can't", "can", "don't", "am not"], "correct_answer": "can't", "explanation": "Negación (can't)." },
+        { "id": "a1-81-q16", "type": "quiz_choice", "question": "The team ____ deliver the project on time. (Sí puede).", "options": ["can", "can't", "do", "are"], "correct_answer": "can", "explanation": "Habilidad positiva (can)." },
+        { "id": "a1-81-q17", "type": "quiz_choice", "question": "I ____ hear you. Can you speak louder? (No puedo).", "options": ["can't", "can", "don't", "am not"], "correct_answer": "can't", "explanation": "Negación (can't)." },
+        { "id": "a1-81-q18", "type": "quiz_choice", "question": "____ you send me the file? (¿Puedes?).", "options": ["Can", "Do", "Are", "Will"], "correct_answer": "Can", "explanation": "Pregunta con can (petición)." },
+        { "id": "a1-81-q19", "type": "quiz_choice", "question": "No, I ____. I am in a meeting. (No puedo, respuesta).", "options": ["can't", "can", "don't", "am not"], "correct_answer": "can't", "explanation": "Respuesta negativa corta (can't)." },
+        { "id": "a1-81-q20", "type": "quiz_choice", "question": "Yes, I ____. (Sí puedo, respuesta corta).", "options": ["can", "do", "am", "have"], "correct_answer": "can", "explanation": "Respuesta positiva corta (can)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe 'can' o 'can't' para completar la oración.",
+      "questions": [
+        { "id": "a1-81-f1", "type": "fill_input", "question": "I ____ speak English. (Sí puedo).", "correct_answer": "can", "explanation": "can." },
+        { "id": "a1-81-f2", "type": "fill_input", "question": "She ____ use Excel. (Sí sabe).", "correct_answer": "can", "explanation": "can." },
+        { "id": "a1-81-f3", "type": "fill_input", "question": "I ____ drive. (No puedo).", "correct_answer": "can't", "explanation": "can't." },
+        { "id": "a1-81-f4", "type": "fill_input", "question": "He ____ attend the meeting. (No puede).", "correct_answer": "can't", "explanation": "can't." },
+        { "id": "a1-81-f5", "type": "fill_input", "question": "____ you type quickly? (¿Puedes?).", "correct_answer": "Can", "explanation": "Can." },
+        { "id": "a1-81-f6", "type": "fill_input", "question": "I ____ help you. (Sí puedo).", "correct_answer": "can", "explanation": "can." },
+        { "id": "a1-81-f7", "type": "fill_input", "question": "She ____ come today. (No puede).", "correct_answer": "can't", "explanation": "can't." },
+        { "id": "a1-81-f8", "type": "fill_input", "question": "____ we reschedule? (¿Podemos?).", "correct_answer": "Can", "explanation": "Can." },
+        { "id": "a1-81-f9", "type": "fill_input", "question": "I ____ hear you. (No puedo).", "correct_answer": "can't", "explanation": "can't." },
+        { "id": "a1-81-f10", "type": "fill_input", "question": "Yes, I ____. (Sí, respuesta corta).", "correct_answer": "can", "explanation": "can." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-81-p1", "source": "I can speak English", "target": "Puedo hablar inglés"},
+        {"id": "a1-81-p2", "source": "She can use Excel", "target": "Ella sabe usar Excel"},
+        {"id": "a1-81-p3", "source": "I can't drive", "target": "No sé conducir"},
+        {"id": "a1-81-p4", "source": "He can't attend", "target": "Él no puede asistir"},
+        {"id": "a1-81-p5", "source": "Can you type quickly?", "target": "¿Puedes escribir rápido?"},
+        {"id": "a1-81-p6", "source": "Can we reschedule?", "target": "¿Podemos reprogramar?"},
+        {"id": "a1-81-p7", "source": "I can help you", "target": "Puedo ayudarte"},
+        {"id": "a1-81-p8", "source": "I can't hear you", "target": "No te puedo escuchar"},
+        {"id": "a1-81-p9", "source": "Yes, I can", "target": "Sí, puedo"},
+        {"id": "a1-81-p10", "source": "No, I can't", "target": "No, no puedo"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-81-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I can speak English.", "options": ["I can speak English.", "I can't speak English.", "She can speak English.", "I can speak French."], "correct_answer": "I can speak English.", "explanation": "Audio exacto." },
+        { "id": "a1-81-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She can use Excel.", "options": ["She can use Excel.", "He can use Excel.", "She can't use Excel.", "She can use Word."], "correct_answer": "She can use Excel.", "explanation": "Audio exacto." },
+        { "id": "a1-81-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I can't drive.", "options": ["I can't drive.", "I can drive.", "She can't drive.", "I don't drive."], "correct_answer": "I can't drive.", "explanation": "Audio exacto." },
+        { "id": "a1-81-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He can't attend the meeting.", "options": ["He can't attend the meeting.", "She can't attend the meeting.", "He can attend the meeting.", "He can't attend a meeting."], "correct_answer": "He can't attend the meeting.", "explanation": "Audio exacto." },
+        { "id": "a1-81-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you type quickly?", "options": ["Can you type quickly?", "Can he type quickly?", "Can you write quickly?", "Do you type quickly?"], "correct_answer": "Can you type quickly?", "explanation": "Audio exacto." },
+        { "id": "a1-81-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I can help you.", "options": ["I can help you.", "I can't help you.", "He can help you.", "I can help them."], "correct_answer": "I can help you.", "explanation": "Audio exacto." },
+        { "id": "a1-81-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can we reschedule?", "options": ["Can we reschedule?", "Can I reschedule?", "Can they reschedule?", "Do we reschedule?"], "correct_answer": "Can we reschedule?", "explanation": "Audio exacto." },
+        { "id": "a1-81-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I can't hear you.", "options": ["I can't hear you.", "I can hear you.", "He can't hear you.", "I can't see you."], "correct_answer": "I can't hear you.", "explanation": "Audio exacto." },
+        { "id": "a1-81-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you send me the file?", "options": ["Can you send me the file?", "Can he send me the file?", "Can you send them the file?", "Do you send me the file?"], "correct_answer": "Can you send me the file?", "explanation": "Audio exacto." },
+        { "id": "a1-81-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Yes, I can.", "options": ["Yes, I can.", "Yes, I do.", "No, I can't.", "Yes, she can."], "correct_answer": "Yes, I can.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

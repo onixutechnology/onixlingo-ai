@@ -1,0 +1,92 @@
+{
+  "id": "zh-b2-81",
+  "title": "Un Poco o Algunos",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Quantifiers", "Adjectives"],
+  "completion_message": "¡Excelente! Has dominado los modificadores de cantidad. Ahora puedes pedir 'un poco' de respeto o 'algunos' días libres.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Cantidades Indefinidas",
+      "parts": [
+        {
+          "visual": "Un poco (Incontables / Adjetivos): 一点 (yìdiǎn) / 一点儿 (yìdiǎnr)\n\nSe usa para cantidades muy pequeñas de cosas incontables, líquidos, o para suavizar adjetivos (un poco más grande).\n\n- Un poco de agua: 一点水 (Yìdiǎn shuǐ).\n- Hablo un poco de chino: 我会说一点中文 (Wǒ huì shuō yìdiǎn Zhōngwén).\n- Un poco más grande: 大一点 (Dà yìdiǎn). (Nota: Con adjetivos comparativos, 'yìdiǎn' va DESPUÉS del adjetivo).",
+          "audio": "En chino, no es lo mismo decir 'un poco de agua' que 'algunos amigos'. Para cosas que no puedes contar uno a uno, o para atenuar un adjetivo, usas Yìdiǎn. Un poco. Yìdiǎn shuǐ. Un poco de agua. Si hablas poquito chino, dices Wǒ huì shuō yìdiǎn Zhōngwén. Si estás comprando ropa y la camisa te queda apretada, le dices al vendedor: Dà yìdiǎn. Un poco más grande. Ojo aquí, el 'Yìdiǎn' se pone después del adjetivo para pedir un cambio."
+        },
+        {
+          "visual": "Algunos / Unos cuantos (Contables): 一些 (yìxiē)\n\nSe usa para cosas plurales y contables. No se puede usar con adjetivos para decir 'un poco más'.\n\n- Algunas personas: 一些人 (Yìxiē rén).\n- Compré algunas manzanas: 我买了一些苹果 (Wǒ mǎi le yìxiē píngguǒ).\n- Estos: 这些 (Zhèxiē - Estos algunos).\n- Esos: 那些 (Nàxiē - Esos algunos).",
+          "audio": "Si quieres referirte a un grupo de cosas o personas, no puedes usar 'Yìdiǎn'. Debes usar Yìxiē. Que significa 'Algunos' o 'Unos cuantos'. Si fuiste al mercado, dices: Wǒ mǎi le yìxiē píngguǒ. Compré algunas manzanas. Si hay gente afuera, dices: Yìxiē rén. Algunas personas. También es la clave para hacer plurales 'Este' y 'Ese'. Si dices Zhè, es Este. Si dices Zhèxiē, es Estos (Estos algunos). Súper lógico, ¿verdad?"
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la cantidad correcta.",
+      "questions": [
+        { "id": "zh-b2-81-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 一点 (yìdiǎn)?", "options": ["Un poco (para incontables o suavizar adjetivos).", "Algunos/Unos cuantos (para contables).", "Mucho.", "Todo."], "correct_answer": "Un poco (para incontables o suavizar adjetivos).", "explanation": "Yìdiǎn (o yìdiǎnr) = a little / a bit." },
+        { "id": "zh-b2-81-q2", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 一些 (yìxiē)?", "options": ["Algunos/Unos cuantos (para contables).", "Un poco (para incontables).", "Poco.", "Cada."], "correct_answer": "Algunos/Unos cuantos (para contables).", "explanation": "Yìxiē = some / a few." },
+        { "id": "zh-b2-81-q3", "type": "quiz_choice", "question": "Si quieres pedir 'Un poco de agua', ¿qué usas?", "options": ["Yìdiǎn shuǐ (一点水).", "Yìxiē shuǐ (一些水).", "Hěnduō shuǐ (很多水).", "Měi ge shuǐ (每个水)."], "correct_answer": "Yìdiǎn shuǐ (一点水).", "explanation": "El agua es incontable, requiere yìdiǎn." },
+        { "id": "zh-b2-81-q4", "type": "quiz_choice", "question": "Vas a una tienda de ropa y el abrigo es muy caro. Pides uno 'Un poco más barato' (Barato = piányi).", "options": ["Piányi yìdiǎn (便宜一点).", "Yìdiǎn piányi (一点便宜).", "Piányi yìxiē (便宜一些).", "Yìxiē piányi (一些便宜)."], "correct_answer": "Piányi yìdiǎn (便宜一点).", "explanation": "Para modificar adjetivos (comparativo/petición), yìdiǎn va DESPUÉS del adjetivo." },
+        { "id": "zh-b2-81-q5", "type": "quiz_choice", "question": "Estás hablando de un grupo de personas. 'Algunas personas fueron a China'.", "options": ["Yìxiē rén qù le Zhōngguó (一些人去了中国).", "Yìdiǎn rén qù le Zhōngguó (一点人去了中国).", "Měi ge rén qù le Zhōngguó (每个人去了中国).", "Dōu rén qù le Zhōngguó (都人去了中国)."], "correct_answer": "Yìxiē rén qù le Zhōngguó (一些人去了中国).", "explanation": "Las personas son contables, se agrupan con yìxiē (algunas)." },
+        { "id": "zh-b2-81-q6", "type": "quiz_choice", "question": "Traduce esta frase clásica: 'Yo sé hablar un poco de chino'.", "options": ["Wǒ huì shuō yìdiǎn Zhōngwén (我会说一点中文).", "Wǒ huì shuō yìxiē Zhōngwén (我会说一些中文).", "Wǒ dǒng yìxiē Zhōngwén (我懂一些中文).", "Wǒ yīnggāi shuō yìdiǎn Zhōngwén (我应该说一点中文)."], "correct_answer": "Wǒ huì shuō yìdiǎn Zhōngwén (我会说一点中文).", "explanation": "El idioma se trata como algo continuo/incontable en este contexto. 'Un poquito de chino'." },
+        { "id": "zh-b2-81-q7", "type": "quiz_choice", "question": "Combinación B2. ¿Cómo dirías 'Estos' (Estos algunos)?", "options": ["Zhèxiē (这些).", "Zhèdiǎn (这点).", "Nàxiē (那些).", "Měixiē (每些)."], "correct_answer": "Zhèxiē (这些).", "explanation": "Zhè (Este) + xiē (algunos) = Estos." },
+        { "id": "zh-b2-81-q8", "type": "quiz_choice", "question": "Combinación B2. Tu amigo tiene muchas cosas en las manos. Tú dices: 'Déjame ayudarte a llevar ESAS cosas' (Esas = nàxiē).", "options": ["Wǒ bāng nǐ ná nàxiē dōngxi (我帮你拿那些东西).", "Wǒ bāng nǐ ná zhèxiē dōngxi (我帮你拿这些东西).", "Wǒ bāng nǐ ná nàdiǎn dōngxi (我帮你拿那点东西).", "Wǒ bāng nǐ ná měi ge dōngxi (我帮你拿每个东西)."], "correct_answer": "Wǒ bāng nǐ ná nàxiē dōngxi (我帮你拿那些东西).", "explanation": "Nà (Ese) + xiē (algunos) = Esos. Cosas (dōngxi) son contables plurales." },
+        { "id": "zh-b2-81-q9", "type": "quiz_choice", "question": "Repaso de B1: Alguien habla muy rápido. 'Por favor habla un poco más lento'. (Lento = màn).", "options": ["Qǐng shuō màn yìdiǎn (请说慢一点).", "Qǐng shuō màn yìxiē (请说慢一些).", "Qǐng shuō yìdiǎn màn (请说一点慢).", "Qǐng màn shuō yìdiǎn (请慢说一点)."], "correct_answer": "Qǐng shuō màn yìdiǎn (请说慢一点).", "explanation": "Adjetivo (màn) + yìdiǎn." },
+        { "id": "zh-b2-81-q10", "type": "quiz_choice", "question": "Quieres decir 'Bebí algo de medicina' (una cantidad no especificada).", "options": ["Wǒ chī le yìdiǎn yào (我吃了一点药).", "Wǒ chī le yìxiē yào (我吃了一些药).", "Ambas pueden ser correctas (yìdiǎn para líquido/polvo, yìxiē para varias pastillas).", "Wǒ chī wán le yào (我吃完了药)."], "correct_answer": "Ambas pueden ser correctas (yìdiǎn para líquido/polvo, yìxiē para varias pastillas).", "explanation": "En chino coloquial, a veces se cruzan si el contexto lo permite (medicina líquida vs pastillas múltiples)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe los cuantificadores en pinyin.",
+      "questions": [
+        { "id": "zh-b2-81-f1", "type": "fill_input", "question": "Un poco (Incontables/Adjetivos): yi ____ (dian)", "correct_answer": "dian", "explanation": "dian" },
+        { "id": "zh-b2-81-f2", "type": "fill_input", "question": "Algunos (Contables/Plurales): yi ____ (xie)", "correct_answer": "xie", "explanation": "xie" },
+        { "id": "zh-b2-81-f3", "type": "fill_input", "question": "Un poco de agua: yi dian ____ (shui)", "correct_answer": "shui", "explanation": "shui" },
+        { "id": "zh-b2-81-f4", "type": "fill_input", "question": "Algunas personas: yi xie ____ (ren)", "correct_answer": "ren", "explanation": "ren" },
+        { "id": "zh-b2-81-f5", "type": "fill_input", "question": "Hablo un poco de chino: wo hui shuo yi dian zhong ____ (wen)", "correct_answer": "wen", "explanation": "wen" },
+        { "id": "zh-b2-81-f6", "type": "fill_input", "question": "Compré algunas manzanas: wo mai le yi xie ping ____ (guo)", "correct_answer": "guo", "explanation": "guo" },
+        { "id": "zh-b2-81-f7", "type": "fill_input", "question": "Estos: ____ xie (zhe)", "correct_answer": "zhe", "explanation": "zhe" },
+        { "id": "zh-b2-81-f8", "type": "fill_input", "question": "Esos: ____ xie (na)", "correct_answer": "na", "explanation": "na" },
+        { "id": "zh-b2-81-f9", "type": "fill_input", "question": "Un poco más grande (El adjetivo va antes): ____ yi dian (da)", "correct_answer": "da", "explanation": "da" },
+        { "id": "zh-b2-81-f10", "type": "fill_input", "question": "Por favor habla un poco más lento: qing shuo man yi ____ (dian)", "correct_answer": "dian", "explanation": "dian" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha las cantidades.",
+      "questions": [
+        { "id": "zh-b2-81-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "一点", "options": ["Un poco", "Algunos", "Muchos", "Cada"], "correct_answer": "Un poco", "explanation": "El audio dice: Yìdiǎn." },
+        { "id": "zh-b2-81-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "一些", "options": ["Algunos", "Un poco", "Todos", "Estos"], "correct_answer": "Algunos", "explanation": "El audio dice: Yìxiē." },
+        { "id": "zh-b2-81-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "一点水", "options": ["Un poco de agua", "Algunas personas", "Mucha agua", "Todos los días"], "correct_answer": "Un poco de agua", "explanation": "El audio dice: Yìdiǎn shuǐ." },
+        { "id": "zh-b2-81-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "一些人", "options": ["Algunas personas", "Cada persona", "Un poco de gente", "Todos"], "correct_answer": "Algunas personas", "explanation": "El audio dice: Yìxiē rén." },
+        { "id": "zh-b2-81-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "这些", "options": ["Estos", "Esos", "Algunos", "Este"], "correct_answer": "Estos", "explanation": "El audio dice: Zhèxiē." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Quantifiers",
+      "pairs": [
+        {"id": "zh-b2-81-p1", "source": "一点 (yìdiǎn)", "target": "Un poco (Incontables)"},
+        {"id": "zh-b2-81-p2", "source": "一些 (yìxiē)", "target": "Algunos (Contables)"},
+        {"id": "zh-b2-81-p3", "source": "大一点 (dà yìdiǎn)", "target": "Un poco más grande"},
+        {"id": "zh-b2-81-p4", "source": "一些人 (yìxiē rén)", "target": "Algunas personas"},
+        {"id": "zh-b2-81-p5", "source": "这些 (zhèxiē)", "target": "Estos"},
+        {"id": "zh-b2-81-p6", "source": "那些 (nàxiē)", "target": "Esos"},
+        {"id": "zh-b2-81-p7", "source": "每 (měi)", "target": "Cada"},
+        {"id": "zh-b2-81-p8", "source": "每天 (měitiān)", "target": "Todos los días"},
+        {"id": "zh-b2-81-p9", "source": "应该 (yīnggāi)", "target": "Debería (Consejo)"},
+        {"id": "zh-b2-81-p10", "source": "已经 (yǐjīng)", "target": "Ya"}
+      ]
+    }
+  ]
+}

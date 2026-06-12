@@ -760,7 +760,7 @@ async def generate_dynamic_lesson(lesson_id: str, lang: str = "es") -> Dict[str,
     genai.configure(api_key=_app_settings.GEMINI_API_KEY)
     
     model = genai.GenerativeModel(
-        model_name="gemini-1.5-flash",
+        model_name="gemini-2.5-flash",
         system_instruction="You are an elite C-Level Executive English Curriculum Designer. You design flawless, highly professional JSON lessons for a corporate language app.",
         generation_config={
             "temperature": 0.5,
@@ -785,7 +785,8 @@ async def generate_dynamic_lesson(lesson_id: str, lang: str = "es") -> Dict[str,
     2. Distractor options must look like realistic grammatical or corporate mistakes. DO NOT generate nonsensical distractors.
     3. The English sentences must be highly professional and corporate, appropriate for the level {level}.
     4. Explanations must strictly be in the target UI language '{lang}'.
-    5. Generate EXACTLY 10 quiz_choice, 10 order_sentence, 5 listening_match, and 5 fill_input questions.
+    5. Generate EXACTLY 50 exercises total: 20 quiz_choice, 10 fill_input, 10 pairing_drill, and 10 listening_match (for speaking/listening).
+    6. Ensure the completion_message is encouraging and professional, in the target language '{lang}'.
     
     Output JSON Schema:
     {{
@@ -793,8 +794,9 @@ async def generate_dynamic_lesson(lesson_id: str, lang: str = "es") -> Dict[str,
       "title": "{title}",
       "version": "4.0-AI",
       "level": "{level}",
-      "total_xp": 300,
+      "total_xp": 500,
       "tags": ["{level}", "Dynamic", "AI-Generated"],
+      "completion_message": "A professional and encouraging message in {lang} congratulating the user for finishing 50 exercises.",
       "stages": [
         {{
           "id": "stg_theory",
@@ -822,19 +824,12 @@ async def generate_dynamic_lesson(lesson_id: str, lang: str = "es") -> Dict[str,
           ]
         }},
         {{
-          "id": "stg_order_sentence",
-          "type": "order_sentence",
-          "title": "Syntax Reconstruction (translate to {lang})",
-          "description": "Order the words to form a sentence (translate to {lang})",
-          "questions": [
-             {{
-                "id": "{lesson_id}-q-order-1",
-                "type": "order_sentence",
-                "question": "Arrange the words (translate to {lang}):",
-                "parts": ["randomized", "array", "of", "words"],
-                "correct_order": ["The", "correct", "ordered", "words"],
-                "explanation": "Syntax explanation in {lang}."
-             }}
+          "id": "stg_pairing",
+          "type": "pairing_drill",
+          "title": "Match the words (translate to {lang})",
+          "pairs": [
+             {{ "id": "{lesson_id}-p1", "source": "English Word", "target": "Word in {lang}" }},
+             {{ "id": "{lesson_id}-p2", "source": "Another English Word", "target": "Word in {lang}" }}
           ]
         }},
         {{

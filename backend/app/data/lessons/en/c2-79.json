@@ -1,0 +1,101 @@
+{
+  "id": "c2-79",
+  "title": "Crisis Management",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Management", "Crisis", "PR"],
+  "completion_message": "¡Excelente! Resolver crisis requiere cabeza fría y vocabulario afilado. Sabes cómo manejar el control de daños y evitar un desastre de relaciones públicas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Gestión de Crisis Corporativa (C2)",
+      "parts": [
+        { "visual": "El vocabulario de los momentos más oscuros de una empresa. \n\n1. Damage control (Control de daños): \n- Medidas tomadas para minimizar el daño a la reputación tras un escándalo o error. \nEj: After the CEO's racist tweet, the PR team went into DAMAGE CONTROL. \n\n2. PR disaster (Desastre de Relaciones Públicas): \n- Un evento que destruye la imagen pública de la empresa. \nEj: Selling exploding batteries was a massive PR DISASTER. \n\n3. Scapegoat (Chivo expiatorio): \n- Una persona culpada por las fallas o errores de otros. \nEj: The junior manager was used as a SCAPEGOAT to protect the CEO.", "audio": "Welcome to Corporate Crisis Management. The vocabulary for a company's darkest moments. Number 1: Damage control. Measures taken to minimize damage to a company's reputation after a scandal or mistake. For example: After the CEO's racist tweet, the PR team went into DAMAGE CONTROL. Number 2: PR disaster. PR stands for Public Relations. A PR disaster is an event that destroys the public image of a company. For example: Selling exploding batteries was a massive PR DISASTER. Number 3: Scapegoat. A person who is blamed for the wrongdoings, mistakes, or faults of others. For example: The junior manager was used as a SCAPEGOAT to protect the CEO." },
+        { "visual": "4. Fall guy (El que asume la culpa): \n- Similar al scapegoat, alguien dispuesto a cargar con la culpa (a menudo a cambio de dinero o para proteger la organización). \nEj: He was paid millions to be the FALL GUY and go to jail. \n\n5. Sweep under the rug (Barrer bajo la alfombra): \n- Ocultar un problema o escándalo en lugar de enfrentarlo. \nEj: They tried to SWEEP the harassment allegations UNDER THE RUG. \n\n6. Backlash (Reacción violenta / Respuesta negativa severa): \n- Una fuerte reacción pública negativa contra una empresa o decisión. \nEj: The new policy caused a massive BACKLASH from customers. \n\n7. Boycott (Boicot): \n- Cuando el público se niega colectivamente a comprar o usar un producto como protesta. \nEj: Activists called for a BOYCOTT of the brand.", "audio": "Number 4: Fall guy. Similar to a scapegoat, but often someone who agrees to take the blame, sometimes for a financial reward or loyalty to the organization. For example: He was paid millions to be the FALL GUY and go to jail. Number 5: Sweep under the rug. To hide a problem or keep a scandal secret instead of dealing with it openly. For example: They tried to SWEEP the harassment allegations UNDER THE RUG. Number 6: Backlash. A strong and adverse reaction by a large number of people, especially to a social or political development. For example: The new policy caused a massive BACKLASH from customers. Finally, Number 7: Boycott. When the public collectively refuses to buy or use a product as a protest. For example: Activists called for a BOYCOTT of the brand." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término correcto de gestión de crisis.",
+      "questions": [
+        { "id": "c2-79-q1", "type": "quiz_choice", "question": "The factory leaked chemicals into the river. The PR team is now doing damage ____ to save our reputation.", "options": ["control", "repair", "fix", "management"], "correct_answer": "control", "explanation": "Damage control = control de daños." },
+        { "id": "c2-79-q2", "type": "quiz_choice", "question": "The marketing campaign was deeply offensive to many people. It turned into a massive ____ disaster. (Relaciones Públicas).", "options": ["PR", "HR", "IT", "CEO"], "correct_answer": "PR", "explanation": "PR disaster = Desastre de Public Relations." },
+        { "id": "c2-79-q3", "type": "quiz_choice", "question": "The board of directors made the bad decision, but they fired the project manager as a ____ so the public would blame him instead.", "options": ["scapegoat", "black sheep", "lone wolf", "fall horse"], "correct_answer": "scapegoat", "explanation": "Scapegoat = chivo expiatorio." },
+        { "id": "c2-79-q4", "type": "quiz_choice", "question": "He agreed to be the ____ guy, taking all the legal blame for the fraud in exchange for a secret payment.", "options": ["fall", "drop", "down", "crash"], "correct_answer": "fall", "explanation": "Fall guy = el que asume la culpa/cae por los demás." },
+        { "id": "c2-79-q5", "type": "quiz_choice", "question": "You can't just sweep this corruption scandal under the ____. The press will find out eventually. (Barrer bajo la alfombra).", "options": ["rug", "bed", "sofa", "table"], "correct_answer": "rug", "explanation": "Sweep under the rug = ocultar bajo la alfombra." },
+        { "id": "c2-79-q6", "type": "quiz_choice", "question": "When they raised the price of the life-saving medicine by 500%, they faced a massive public ____. (Reacción negativa severa).", "options": ["backlash", "backfire", "backstab", "backtrack"], "correct_answer": "backlash", "explanation": "Backlash = reacción violenta de la opinión pública." },
+        { "id": "c2-79-q7", "type": "quiz_choice", "question": "Because of the company's terrible environmental record, millions of consumers joined a ____ and stopped buying their products.", "options": ["boycott", "strike", "riot", "protest"], "correct_answer": "boycott", "explanation": "Boycott = boicot (negarse a comprar)." },
+        { "id": "c2-79-q8", "type": "quiz_choice", "question": "To issue a formal, public statement saying you are sorry for a mistake is to issue an ____.", "options": ["apology", "excuse", "argument", "attack"], "correct_answer": "apology", "explanation": "Issue an apology = emitir una disculpa formal." },
+        { "id": "c2-79-q9", "type": "quiz_choice", "question": "A situation where employees refuse to work as a form of organized protest is a ____. (Huelga).", "options": ["strike", "boycott", "mutiny", "riot"], "correct_answer": "strike", "explanation": "Strike = huelga laboral." },
+        { "id": "c2-79-q10", "type": "quiz_choice", "question": "To take full responsibility for a mistake or failure is to ____ the blame. (Asumir la culpa).", "options": ["take", "give", "throw", "drop"], "correct_answer": "take", "explanation": "Take the blame (o shoulder the blame) = asumir la culpa." },
+        { "id": "c2-79-q11", "type": "quiz_choice", "question": "To unfairly blame someone else for a mistake you made is to ____ the blame.", "options": ["shift", "drop", "take", "hide"], "correct_answer": "shift", "explanation": "Shift the blame = desviar la culpa hacia otro." },
+        { "id": "c2-79-q12", "type": "quiz_choice", "question": "When a company discovers a dangerous defect in its cars, it must issue a product ____ to bring them back to the factory.", "options": ["recall", "return", "refund", "remake"], "correct_answer": "recall", "explanation": "Product recall = retiro del mercado por defectos." },
+        { "id": "c2-79-q13", "type": "quiz_choice", "question": "A sudden, unexpected problem that causes a lot of damage is a ____. (Desastre/Catástrofe).", "options": ["catastrophe", "triumph", "miracle", "success"], "correct_answer": "catastrophe", "explanation": "Catastrophe = catástrofe." },
+        { "id": "c2-79-q14", "type": "quiz_choice", "question": "To limit or stop the spread of bad news or a crisis is to ____ it. (Contener).", "options": ["contain", "spread", "expand", "ignite"], "correct_answer": "contain", "explanation": "Contain the crisis = contener la crisis." },
+        { "id": "c2-79-q15", "type": "quiz_choice", "question": "If you try to cover up a crime, the ____ is often worse than the crime itself. (Encubrimiento).", "options": ["cover-up", "hide-out", "run-away", "break-in"], "correct_answer": "cover-up", "explanation": "Cover-up = encubrimiento." },
+        { "id": "c2-79-q16", "type": "quiz_choice", "question": "To voluntarily leave your job, especially after a scandal, is to ____. (Renunciar/Dimitir).", "options": ["resign", "retire", "fire", "hire"], "correct_answer": "resign", "explanation": "Resign = renunciar a un cargo." },
+        { "id": "c2-79-q17", "type": "quiz_choice", "question": "A person hired specifically to handle public relations during a scandal and 'spin' the news positively is a ____ doctor.", "options": ["spin", "news", "press", "media"], "correct_answer": "spin", "explanation": "Spin doctor = experto en PR que manipula o suaviza las noticias." },
+        { "id": "c2-79-q18", "type": "quiz_choice", "question": "An official investigation into a company's financial records to find missing money is an ____.", "options": ["audit", "edit", "update", "upload"], "correct_answer": "audit", "explanation": "Audit = auditoría." },
+        { "id": "c2-79-q19", "type": "quiz_choice", "question": "If the company doesn't survive the crisis, it will have to file for ____. (Bancarrota).", "options": ["bankruptcy", "insolvency", "liquidity", "profitability"], "correct_answer": "bankruptcy", "explanation": "Bankruptcy = bancarrota." },
+        { "id": "c2-79-q20", "type": "quiz_choice", "question": "When facing a crisis, the worst thing a CEO can do is bury their head in the ____ and ignore it. (Esconder la cabeza como el avestruz).", "options": ["sand", "ground", "dirt", "mud"], "correct_answer": "sand", "explanation": "Bury your head in the sand = ignorar el problema esperando que desaparezca." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término de crisis corporativa.",
+      "questions": [
+        { "id": "c2-79-f1", "type": "fill_input", "question": "Damage ____. (Control de daños con C)", "correct_answer": "control", "explanation": "control." },
+        { "id": "c2-79-f2", "type": "fill_input", "question": "A massive ____ disaster. (Relaciones públicas con P)", "correct_answer": "PR", "explanation": "PR." },
+        { "id": "c2-79-f3", "type": "fill_input", "question": "He was the ____. (Chivo expiatorio con S)", "correct_answer": "scapegoat", "explanation": "scapegoat." },
+        { "id": "c2-79-f4", "type": "fill_input", "question": "The ____ guy. (El que asume la culpa con F)", "correct_answer": "fall", "explanation": "fall." },
+        { "id": "c2-79-f5", "type": "fill_input", "question": "Sweep it under the ____. (Barrer bajo la alfombra con R)", "correct_answer": "rug", "explanation": "rug." },
+        { "id": "c2-79-f6", "type": "fill_input", "question": "A public ____. (Reacción negativa severa con B)", "correct_answer": "backlash", "explanation": "backlash." },
+        { "id": "c2-79-f7", "type": "fill_input", "question": "A consumer ____. (Boicot con B)", "correct_answer": "boycott", "explanation": "boycott." },
+        { "id": "c2-79-f8", "type": "fill_input", "question": "A product ____. (Retiro del mercado por defectos con R)", "correct_answer": "recall", "explanation": "recall." },
+        { "id": "c2-79-f9", "type": "fill_input", "question": "The ____ is worse than the crime. (Encubrimiento con C)", "correct_answer": "cover-up", "explanation": "cover-up." },
+        { "id": "c2-79-f10", "type": "fill_input", "question": "Bury your head in the ____. (Ignorar el problema con S)", "correct_answer": "sand", "explanation": "sand." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Crisis Match",
+      "pairs": [
+        {"id": "c2-79-p1", "source": "Damage control", "target": "Acciones para minimizar el daño a la reputación"},
+        {"id": "c2-79-p2", "source": "PR disaster", "target": "Desastre de Relaciones Públicas"},
+        {"id": "c2-79-p3", "source": "Scapegoat", "target": "Persona culpada injustamente (chivo expiatorio)"},
+        {"id": "c2-79-p4", "source": "Fall guy", "target": "El que acepta asumir la culpa de otros"},
+        {"id": "c2-79-p5", "source": "Sweep under the rug", "target": "Ocultar un escándalo o problema"},
+        {"id": "c2-79-p6", "source": "Backlash", "target": "Reacción pública furiosa contra la empresa"},
+        {"id": "c2-79-p7", "source": "Boycott", "target": "Negativa colectiva a comprar de la marca"},
+        {"id": "c2-79-p8", "source": "Product recall", "target": "Retiro masivo de productos defectuosos"},
+        {"id": "c2-79-p9", "source": "Cover-up", "target": "Encubrimiento de un crimen o error"},
+        {"id": "c2-79-p10", "source": "Bury head in the sand", "target": "Ignorar la crisis esperando que pase sola"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de crisis.",
+      "questions": [
+        { "id": "c2-79-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need damage control.", "options": ["We need damage control.", "They need damage control.", "We needed damage control.", "We need damage controls."], "correct_answer": "We need damage control.", "explanation": "Audio exacto." },
+        { "id": "c2-79-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a PR disaster.", "options": ["It was a PR disaster.", "It is a PR disaster.", "This was a PR disaster.", "It was the PR disaster."], "correct_answer": "It was a PR disaster.", "explanation": "Audio exacto." },
+        { "id": "c2-79-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is the scapegoat.", "options": ["He is the scapegoat.", "She is the scapegoat.", "He was the scapegoat.", "He is a scapegoat."], "correct_answer": "He is the scapegoat.", "explanation": "Audio exacto." },
+        { "id": "c2-79-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Looking for a fall guy.", "options": ["Looking for a fall guy.", "Look for a fall guy.", "Looking for the fall guy.", "Looking to fall guys."], "correct_answer": "Looking for a fall guy.", "explanation": "Audio exacto." },
+        { "id": "c2-79-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Swept under the rug.", "options": ["Swept under the rug.", "Sweep under the rug.", "Sweeping under the rug.", "Swept under a rug."], "correct_answer": "Swept under the rug.", "explanation": "Audio exacto." },
+        { "id": "c2-79-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A massive public backlash.", "options": ["A massive public backlash.", "The massive public backlash.", "Massive public backlashes.", "A mass public backlash."], "correct_answer": "A massive public backlash.", "explanation": "Audio exacto." },
+        { "id": "c2-79-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They organized a boycott.", "options": ["They organized a boycott.", "We organized a boycott.", "They organize a boycott.", "They organized the boycott."], "correct_answer": "They organized a boycott.", "explanation": "Audio exacto." },
+        { "id": "c2-79-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A massive product recall.", "options": ["A massive product recall.", "The massive product recall.", "A massive product recalled.", "A mass product recall."], "correct_answer": "A massive product recall.", "explanation": "Audio exacto." },
+        { "id": "c2-79-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a cover-up.", "options": ["It was a cover-up.", "It is a cover-up.", "This was a cover-up.", "It was the cover-up."], "correct_answer": "It was a cover-up.", "explanation": "Audio exacto." },
+        { "id": "c2-79-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Bury your head in the sand.", "options": ["Bury your head in the sand.", "Buried your head in the sand.", "Burying your head in the sand.", "Bury your heads in the sand."], "correct_answer": "Bury your head in the sand.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

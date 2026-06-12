@@ -109,7 +109,7 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
             >
               {/* Capas de selección y último movimiento (Preserva textura inferior de madera) */}
               {isSelected && (
-                <div className="absolute inset-0 bg-amber-600/30 z-10 pointer-events-none" />
+                <div className="absolute inset-0 bg-[#D4AF37]/20/30 z-10 pointer-events-none" />
               )}
               {isLastMove && (
                 <div className="absolute inset-0 bg-amber-400/30 z-10 pointer-events-none" />
@@ -129,10 +129,10 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
 
               {/* Indicador de movimiento válido (Punto ámbar o anillo de captura) */}
               {isOption && !isCaptureOption && (
-                <div className="absolute w-[30%] h-[30%] bg-amber-500/40 rounded-full z-10 pointer-events-none" />
+                <div className="absolute w-[30%] h-[30%] bg-[#D4AF37]/20/40 rounded-full z-10 pointer-events-none" />
               )}
               {isCaptureOption && (
-                <div className="absolute w-[85%] h-[85%] border-[6px] border-amber-500/40 rounded-full z-10 pointer-events-none" />
+                <div className="absolute w-[85%] h-[85%] border-[6px] border-[#D4AF37]/30/40 rounded-full z-10 pointer-events-none" />
               )}
 
               {/* Renderizado de la pieza */}

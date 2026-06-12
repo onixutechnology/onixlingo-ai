@@ -1,0 +1,101 @@
+{
+  "id": "a1-109",
+  "title": "Discourse Connectors: Sequencing Ideas",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Connectors", "Discourse", "Writing", "Speaking"],
+  "completion_message": "¡Muy bien! Los conectores del discurso te permiten estructurar tus ideas con claridad y profesionalismo, tanto al hablar como al escribir.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Conectores del Discurso",
+      "parts": [
+        { "visual": "Conectores de secuencia: First (Primero), Then / Next (Luego / Después), After that (Después de eso), Finally / Lastly (Por último). Ejemplo: First, we analyzed the data. Then, we prepared the report.", "audio": "Sequencing connectors: First, Then or Next, After that, Finally or Lastly. Example: First, we analyzed the data. Then, we prepared the report." },
+        { "visual": "Conectores de adición: Also (También), In addition (Además), Furthermore (Es más / Además). Contraste: However (Sin embargo), But (Pero), On the other hand (Por otro lado). Resultado: Therefore (Por lo tanto), As a result (Como resultado).", "audio": "Addition connectors: Also, In addition, Furthermore. Contrast: However, But, On the other hand. Result: Therefore, As a result." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el conector más apropiado para cada contexto.",
+      "questions": [
+        { "id": "a1-109-q1", "type": "quiz_choice", "question": "____, we will review the budget. (Primero).", "options": ["First", "Then", "Finally", "Also"], "correct_answer": "First", "explanation": "First = primero." },
+        { "id": "a1-109-q2", "type": "quiz_choice", "question": "____, we will present the results. (Luego).", "options": ["Then", "First", "Finally", "However"], "correct_answer": "Then", "explanation": "Then = luego / después." },
+        { "id": "a1-109-q3", "type": "quiz_choice", "question": "____, we will answer questions. (Por último).", "options": ["Finally", "First", "Then", "Also"], "correct_answer": "Finally", "explanation": "Finally = por último." },
+        { "id": "a1-109-q4", "type": "quiz_choice", "question": "____ that, we discussed the proposal. (Después de).", "options": ["After", "Then", "Next", "Before"], "correct_answer": "After", "explanation": "After that = después de eso." },
+        { "id": "a1-109-q5", "type": "quiz_choice", "question": "The project was successful. ____, costs were high. (Sin embargo).", "options": ["However", "Therefore", "Also", "Finally"], "correct_answer": "However", "explanation": "However = sin embargo (contraste)." },
+        { "id": "a1-109-q6", "type": "quiz_choice", "question": "Sales increased. ____, the team received a bonus. (Por lo tanto).", "options": ["Therefore", "However", "But", "Also"], "correct_answer": "Therefore", "explanation": "Therefore = por lo tanto (resultado)." },
+        { "id": "a1-109-q7", "type": "quiz_choice", "question": "We finished on time. ____, we were under budget. (Además).", "options": ["In addition", "However", "Therefore", "But"], "correct_answer": "In addition", "explanation": "In addition = además." },
+        { "id": "a1-109-q8", "type": "quiz_choice", "question": "I like the proposal. ____ the timeline is too long. (Pero).", "options": ["But", "Also", "Therefore", "Finally"], "correct_answer": "But", "explanation": "But = pero (contraste simple)." },
+        { "id": "a1-109-q9", "type": "quiz_choice", "question": "The product was good. ____, the price was too high. (Por otro lado).", "options": ["On the other hand", "As a result", "In addition", "Furthermore"], "correct_answer": "On the other hand", "explanation": "On the other hand = por otro lado." },
+        { "id": "a1-109-q10", "type": "quiz_choice", "question": "The deadline passed. ____, we lost the client. (Como resultado).", "options": ["As a result", "Therefore", "However", "In addition"], "correct_answer": "As a result", "explanation": "As a result = como resultado." },
+        { "id": "a1-109-q11", "type": "quiz_choice", "question": "We need to reduce costs. ____, we need to increase revenue. (También).", "options": ["Also", "But", "However", "Therefore"], "correct_answer": "Also", "explanation": "Also = también." },
+        { "id": "a1-109-q12", "type": "quiz_choice", "question": "____, I would like to thank the team. (Por último).", "options": ["Lastly", "Firstly", "Then", "Also"], "correct_answer": "Lastly", "explanation": "Lastly = por último (sinónimo de finally)." },
+        { "id": "a1-109-q13", "type": "quiz_choice", "question": "The numbers are good. ____, the trend is positive. (Es más).", "options": ["Furthermore", "However", "But", "As a result"], "correct_answer": "Furthermore", "explanation": "Furthermore = es más / además (formal)." },
+        { "id": "a1-109-q14", "type": "quiz_choice", "question": "____, we analyzed the data, ____ we wrote the report. (Primero... luego).", "options": ["First... then", "Then... first", "After... next", "First... after"], "correct_answer": "First... then", "explanation": "First... then = primero... luego." },
+        { "id": "a1-109-q15", "type": "quiz_choice", "question": "We had a problem. ____, we found a solution. (Sin embargo / pero).", "options": ["However", "Therefore", "Also", "Finally"], "correct_answer": "However", "explanation": "However para introducir contraste." },
+        { "id": "a1-109-q16", "type": "quiz_choice", "question": "The price is high. ____, the quality is excellent. (Sin embargo).", "options": ["However", "Therefore", "Also", "As a result"], "correct_answer": "However", "explanation": "However = sin embargo." },
+        { "id": "a1-109-q17", "type": "quiz_choice", "question": "The team worked hard. ____, the project was completed on time. (Por lo tanto).", "options": ["Therefore", "However", "But", "In addition"], "correct_answer": "Therefore", "explanation": "Therefore = por lo tanto." },
+        { "id": "a1-109-q18", "type": "quiz_choice", "question": "We have a strong team. ____, we have excellent technology. (Además).", "options": ["In addition", "However", "But", "Therefore"], "correct_answer": "In addition", "explanation": "In addition = además." },
+        { "id": "a1-109-q19", "type": "quiz_choice", "question": "____, I want to highlight one key point. (Para finalizar).", "options": ["Finally", "Firstly", "Then", "After that"], "correct_answer": "Finally", "explanation": "Finally para finalizar una presentación." },
+        { "id": "a1-109-q20", "type": "quiz_choice", "question": "The meeting went well. ____, no decisions were made. (Sin embargo).", "options": ["However", "Therefore", "Also", "In addition"], "correct_answer": "However", "explanation": "However = sin embargo." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el conector correcto.",
+      "questions": [
+        { "id": "a1-109-f1", "type": "fill_input", "question": "____, we reviewed the budget. (Primero).", "correct_answer": "First", "explanation": "First." },
+        { "id": "a1-109-f2", "type": "fill_input", "question": "____, we presented the results. (Luego).", "correct_answer": "Then", "explanation": "Then." },
+        { "id": "a1-109-f3", "type": "fill_input", "question": "____, we answered questions. (Por último).", "correct_answer": "Finally", "explanation": "Finally." },
+        { "id": "a1-109-f4", "type": "fill_input", "question": "The project was good. ____, costs were high. (Sin embargo).", "correct_answer": "However", "explanation": "However." },
+        { "id": "a1-109-f5", "type": "fill_input", "question": "Sales rose. ____, the team got a bonus. (Por lo tanto).", "correct_answer": "Therefore", "explanation": "Therefore." },
+        { "id": "a1-109-f6", "type": "fill_input", "question": "We finished on time. ____, we were under budget. (Además).", "correct_answer": "In addition", "explanation": "In addition." },
+        { "id": "a1-109-f7", "type": "fill_input", "question": "Numbers are good. ____, the trend is positive. (Es más).", "correct_answer": "Furthermore", "explanation": "Furthermore." },
+        { "id": "a1-109-f8", "type": "fill_input", "question": "The product is good. ____ the price is high. (Por otro lado).", "correct_answer": "On the other hand", "explanation": "On the other hand." },
+        { "id": "a1-109-f9", "type": "fill_input", "question": "The deadline passed. ____, we lost the client. (Como resultado).", "correct_answer": "As a result", "explanation": "As a result." },
+        { "id": "a1-109-f10", "type": "fill_input", "question": "We need to cut costs. ____ we need more revenue. (También).", "correct_answer": "Also", "explanation": "Also." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-109-p1", "source": "First", "target": "Primero"},
+        {"id": "a1-109-p2", "source": "Then / Next", "target": "Luego / Después"},
+        {"id": "a1-109-p3", "source": "Finally / Lastly", "target": "Por último"},
+        {"id": "a1-109-p4", "source": "However", "target": "Sin embargo"},
+        {"id": "a1-109-p5", "source": "Therefore", "target": "Por lo tanto"},
+        {"id": "a1-109-p6", "source": "In addition", "target": "Además"},
+        {"id": "a1-109-p7", "source": "Furthermore", "target": "Es más / Además (formal)"},
+        {"id": "a1-109-p8", "source": "On the other hand", "target": "Por otro lado"},
+        {"id": "a1-109-p9", "source": "As a result", "target": "Como resultado"},
+        {"id": "a1-109-p10", "source": "Also", "target": "También"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-109-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "First, we will review the budget.", "options": ["First, we will review the budget.", "Then, we will review the budget.", "First, they will review the budget.", "Firstly, we will review the budget."], "correct_answer": "First, we will review the budget.", "explanation": "Audio exacto." },
+        { "id": "a1-109-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Then, we will present the results.", "options": ["Then, we will present the results.", "First, we will present the results.", "Finally, we will present the results.", "Next, we will present the results."], "correct_answer": "Then, we will present the results.", "explanation": "Audio exacto." },
+        { "id": "a1-109-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Finally, we will answer questions.", "options": ["Finally, we will answer questions.", "Lastly, we will answer questions.", "Then, we will answer questions.", "First, we will answer questions."], "correct_answer": "Finally, we will answer questions.", "explanation": "Audio exacto." },
+        { "id": "a1-109-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The project was successful. However, costs were high.", "options": ["The project was successful. However, costs were high.", "The project was successful. Therefore, costs were high.", "A project was successful. However, costs were high.", "The project was good. However, costs were high."], "correct_answer": "The project was successful. However, costs were high.", "explanation": "Audio exacto." },
+        { "id": "a1-109-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sales increased. Therefore, the team received a bonus.", "options": ["Sales increased. Therefore, the team received a bonus.", "Sales decreased. Therefore, the team received a bonus.", "Sales increased. As a result, the team received a bonus.", "Costs increased. Therefore, the team received a bonus."], "correct_answer": "Sales increased. Therefore, the team received a bonus.", "explanation": "Audio exacto." },
+        { "id": "a1-109-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We finished on time. In addition, we were under budget.", "options": ["We finished on time. In addition, we were under budget.", "We finished late. In addition, we were under budget.", "They finished on time. In addition, they were under budget.", "We finished on time. Furthermore, we were under budget."], "correct_answer": "We finished on time. In addition, we were under budget.", "explanation": "Audio exacto." },
+        { "id": "a1-109-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The product is good. On the other hand, the price is high.", "options": ["The product is good. On the other hand, the price is high.", "The product is bad. On the other hand, the price is high.", "The service is good. On the other hand, the price is high.", "The product is good. However, the price is high."], "correct_answer": "The product is good. On the other hand, the price is high.", "explanation": "Audio exacto." },
+        { "id": "a1-109-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The deadline passed. As a result, we lost the client.", "options": ["The deadline passed. As a result, we lost the client.", "The deadline passed. Therefore, we lost the client.", "A deadline passed. As a result, we lost the client.", "The deadline passed. As a result, they lost the client."], "correct_answer": "The deadline passed. As a result, we lost the client.", "explanation": "Audio exacto." },
+        { "id": "a1-109-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The numbers are good. Furthermore, the trend is positive.", "options": ["The numbers are good. Furthermore, the trend is positive.", "The data is good. Furthermore, the trend is positive.", "The numbers are bad. Furthermore, the trend is positive.", "The numbers are good. In addition, the trend is positive."], "correct_answer": "The numbers are good. Furthermore, the trend is positive.", "explanation": "Audio exacto." },
+        { "id": "a1-109-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Finally, I want to highlight one key point.", "options": ["Finally, I want to highlight one key point.", "Lastly, I want to highlight one key point.", "Finally, she wants to highlight one key point.", "First, I want to highlight one key point."], "correct_answer": "Finally, I want to highlight one key point.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

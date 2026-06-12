@@ -1,0 +1,101 @@
+{
+  "id": "a2-23",
+  "title": "Logistics & Supply Chain",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Vocabulary", "Logistics", "Supply Chain", "Business"],
+  "completion_message": "¡Excelente trabajo! Ya conoces el vocabulario fundamental para gestionar la cadena de suministro y la logística.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Logística y Cadena de Suministro",
+      "parts": [
+        { "visual": "Supply chain (Cadena de suministro): El proceso desde la creación hasta la entrega. Supplier (Proveedor). Warehouse (Almacén / Bodega). Inventory (Inventario).", "audio": "Logistics and Supply chain. A Supplier is the company that provides materials. Warehouse is where we store goods. Inventory is the stock of products." },
+        { "visual": "Transporte: Shipping (Envío). Delivery (Entrega). Track a package (Rastrear un paquete). Delay (Retraso). Freight (Flete / Carga).", "audio": "Transportation. Shipping. Delivery. To track a package means to follow its location. Delay means the package is late. Freight refers to the cargo or goods." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra de logística correcta.",
+      "questions": [
+        { "id": "a2-23-q1", "type": "quiz_choice", "question": "We need to order more materials from our ____. (Proveedor).", "options": ["supplier", "supply", "buyer", "client"], "correct_answer": "supplier", "explanation": "Supplier = proveedor." },
+        { "id": "a2-23-q2", "type": "quiz_choice", "question": "The goods are stored in the ____. (Almacén/Bodega).", "options": ["warehouse", "house", "store", "office"], "correct_answer": "warehouse", "explanation": "Warehouse = almacén o bodega grande." },
+        { "id": "a2-23-q3", "type": "quiz_choice", "question": "We need to check the ____. We might be out of stock. (Inventario).", "options": ["inventory", "invoice", "paper", "box"], "correct_answer": "inventory", "explanation": "Inventory (o stock) = inventario." },
+        { "id": "a2-23-q4", "type": "quiz_choice", "question": "The ____ is scheduled for tomorrow morning. (Entrega).", "options": ["delivery", "deliver", "shipping", "sending"], "correct_answer": "delivery", "explanation": "Delivery = entrega." },
+        { "id": "a2-23-q5", "type": "quiz_choice", "question": "____ costs have increased this year. (De envío).", "options": ["Shipping", "Delivery", "Supply", "Freight"], "correct_answer": "Shipping", "explanation": "Shipping costs = costos de envío." },
+        { "id": "a2-23-q6", "type": "quiz_choice", "question": "There is a ____ due to bad weather. (Retraso).", "options": ["delay", "stop", "late", "wait"], "correct_answer": "delay", "explanation": "Delay = retraso / demora." },
+        { "id": "a2-23-q7", "type": "quiz_choice", "question": "Can you give me the ____ number? (De rastreo).", "options": ["tracking", "track", "trace", "following"], "correct_answer": "tracking", "explanation": "Tracking number = número de rastreo/seguimiento." },
+        { "id": "a2-23-q8", "type": "quiz_choice", "question": "The entire supply ____ was disrupted. (Cadena).", "options": ["chain", "line", "road", "train"], "correct_answer": "chain", "explanation": "Supply chain = cadena de suministro." },
+        { "id": "a2-23-q9", "type": "quiz_choice", "question": "We transport heavy ____ by train. (Flete/Carga pesada).", "options": ["freight", "weight", "boxes", "bags"], "correct_answer": "freight", "explanation": "Freight = carga pesada comercial / flete." },
+        { "id": "a2-23-q10", "type": "quiz_choice", "question": "The product is out of ____. (Agotado / Sin inventario).", "options": ["stock", "store", "inventory", "place"], "correct_answer": "stock", "explanation": "Out of stock = agotado." },
+        { "id": "a2-23-q11", "type": "quiz_choice", "question": "We have plenty of items in ____. (En existencia / En inventario).", "options": ["stock", "warehouse", "store", "supply"], "correct_answer": "stock", "explanation": "In stock = disponible / en inventario." },
+        { "id": "a2-23-q12", "type": "quiz_choice", "question": "The ____ arrives at the port today. (Cargamento / Envío grande).", "options": ["shipment", "shipping", "deliver", "boat"], "correct_answer": "shipment", "explanation": "Shipment = cargamento / envío físico." },
+        { "id": "a2-23-q13", "type": "quiz_choice", "question": "Who is responsible for the logistics and ____? (Distribución).", "options": ["distribution", "distribute", "delivering", "sending"], "correct_answer": "distribution", "explanation": "Distribution = distribución." },
+        { "id": "a2-23-q14", "type": "quiz_choice", "question": "We use a ____ service for fast deliveries. (Servicio de mensajería rápida).", "options": ["courier", "post", "mail", "send"], "correct_answer": "courier", "explanation": "Courier = mensajero o servicio de paquetería rápida (ej. FedEx, DHL)." },
+        { "id": "a2-23-q15", "type": "quiz_choice", "question": "The goods are packed in wooden ____. (Cajas de madera/Huacales).", "options": ["crates", "boxes", "bags", "papers"], "correct_answer": "crates", "explanation": "Crates = cajas grandes de madera para transporte." },
+        { "id": "a2-23-q16", "type": "quiz_choice", "question": "Load the boxes onto the wooden ____. (Paleta / Tarima).", "options": ["pallet", "table", "floor", "truck"], "correct_answer": "pallet", "explanation": "Pallet = paleta / tarima de madera." },
+        { "id": "a2-23-q17", "type": "quiz_choice", "question": "The truck driver will ____ the goods tomorrow. (Descargar).", "options": ["unload", "download", "load", "drop"], "correct_answer": "unload", "explanation": "Unload = descargar (un camión/barco). Download es solo para internet." },
+        { "id": "a2-23-q18", "type": "quiz_choice", "question": "We need a forklift to ____ the truck. (Cargar).", "options": ["load", "upload", "put", "fill"], "correct_answer": "load", "explanation": "Load = cargar (físicamente). Upload es subir a internet." },
+        { "id": "a2-23-q19", "type": "quiz_choice", "question": "Customs clearance can cause a ____. (Retraso en aduanas).", "options": ["delay", "stop", "wait", "fine"], "correct_answer": "delay", "explanation": "Customs clearance (despacho de aduanas) a menudo causa 'delays' (retrasos)." },
+        { "id": "a2-23-q20", "type": "quiz_choice", "question": "Please sign the ____ note. (Nota de entrega/remisión).", "options": ["delivery", "deliver", "shipping", "sent"], "correct_answer": "delivery", "explanation": "Delivery note = nota de entrega." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término correcto de la cadena de suministro.",
+      "questions": [
+        { "id": "a2-23-f1", "type": "fill_input", "question": "We buy from a local ____. (Proveedor)", "correct_answer": "supplier", "explanation": "supplier." },
+        { "id": "a2-23-f2", "type": "fill_input", "question": "It is stored in the ____. (Almacén)", "correct_answer": "warehouse", "explanation": "warehouse." },
+        { "id": "a2-23-f3", "type": "fill_input", "question": "We must check the ____. (Inventario)", "correct_answer": "inventory", "explanation": "inventory." },
+        { "id": "a2-23-f4", "type": "fill_input", "question": "The ____ is scheduled for Monday. (Entrega)", "correct_answer": "delivery", "explanation": "delivery." },
+        { "id": "a2-23-f5", "type": "fill_input", "question": "____ costs are high. (Costos de envío)", "correct_answer": "Shipping", "explanation": "Shipping." },
+        { "id": "a2-23-f6", "type": "fill_input", "question": "There is a ____. (Retraso)", "correct_answer": "delay", "explanation": "delay." },
+        { "id": "a2-23-f7", "type": "fill_input", "question": "What is the ____ number? (De rastreo)", "correct_answer": "tracking", "explanation": "tracking." },
+        { "id": "a2-23-f8", "type": "fill_input", "question": "Supply ____ management. (Cadena)", "correct_answer": "chain", "explanation": "chain." },
+        { "id": "a2-23-f9", "type": "fill_input", "question": "The item is out of ____. (Agotado)", "correct_answer": "stock", "explanation": "stock." },
+        { "id": "a2-23-f10", "type": "fill_input", "question": "We use a fast ____. (Servicio de mensajería - courier)", "correct_answer": "courier", "explanation": "courier." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-23-p1", "source": "Supplier", "target": "Proveedor"},
+        {"id": "a2-23-p2", "source": "Warehouse", "target": "Almacén / Bodega"},
+        {"id": "a2-23-p3", "source": "Inventory / Stock", "target": "Inventario / Existencias"},
+        {"id": "a2-23-p4", "source": "Supply chain", "target": "Cadena de suministro"},
+        {"id": "a2-23-p5", "source": "Shipping", "target": "Envío"},
+        {"id": "a2-23-p6", "source": "Delivery", "target": "Entrega"},
+        {"id": "a2-23-p7", "source": "Delay", "target": "Retraso / Demora"},
+        {"id": "a2-23-p8", "source": "Tracking number", "target": "Número de rastreo"},
+        {"id": "a2-23-p9", "source": "Freight", "target": "Flete / Carga pesada"},
+        {"id": "a2-23-p10", "source": "Courier", "target": "Mensajero / Paquetería rápida"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta sobre logística.",
+      "questions": [
+        { "id": "a2-23-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to order from our supplier.", "options": ["We need to order from our supplier.", "We need to call our supplier.", "We must order from our supplier.", "We need to buy from our supplier."], "correct_answer": "We need to order from our supplier.", "explanation": "Audio exacto." },
+        { "id": "a2-23-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The goods are in the warehouse.", "options": ["The goods are in the warehouse.", "The boxes are in the warehouse.", "The materials are in the warehouse.", "The goods are stored in the warehouse."], "correct_answer": "The goods are in the warehouse.", "explanation": "Audio exacto." },
+        { "id": "a2-23-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to check the inventory.", "options": ["We need to check the inventory.", "We have to check the inventory.", "We must check the inventory.", "Please check the inventory."], "correct_answer": "We need to check the inventory.", "explanation": "Audio exacto." },
+        { "id": "a2-23-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The delivery is scheduled for tomorrow.", "options": ["The delivery is scheduled for tomorrow.", "The delivery is planned for tomorrow.", "The delivery arrives tomorrow.", "The delivery will be tomorrow."], "correct_answer": "The delivery is scheduled for tomorrow.", "explanation": "Audio exacto." },
+        { "id": "a2-23-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Shipping costs have increased.", "options": ["Shipping costs have increased.", "Shipping costs went up.", "The shipping costs are higher.", "Delivery costs have increased."], "correct_answer": "Shipping costs have increased.", "explanation": "Audio exacto." },
+        { "id": "a2-23-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is a delay due to bad weather.", "options": ["There is a delay due to bad weather.", "There is a delay because of the weather.", "We have a delay due to bad weather.", "The delay is due to bad weather."], "correct_answer": "There is a delay due to bad weather.", "explanation": "Audio exacto." },
+        { "id": "a2-23-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you give me the tracking number?", "options": ["Can you give me the tracking number?", "Could you give me the tracking number?", "Can I have the tracking number?", "Please give me the tracking number."], "correct_answer": "Can you give me the tracking number?", "explanation": "Audio exacto." },
+        { "id": "a2-23-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The supply chain was disrupted.", "options": ["The supply chain was disrupted.", "The supply chain was broken.", "The supply chain stopped.", "Our supply chain was disrupted."], "correct_answer": "The supply chain was disrupted.", "explanation": "Audio exacto." },
+        { "id": "a2-23-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The product is out of stock.", "options": ["The product is out of stock.", "The item is out of stock.", "We are out of stock.", "The product is not in stock."], "correct_answer": "The product is out of stock.", "explanation": "Audio exacto." },
+        { "id": "a2-23-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We use a courier service for fast deliveries.", "options": ["We use a courier service for fast deliveries.", "We use a courier for fast deliveries.", "We have a courier service for fast deliveries.", "I use a courier service for fast deliveries."], "correct_answer": "We use a courier service for fast deliveries.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

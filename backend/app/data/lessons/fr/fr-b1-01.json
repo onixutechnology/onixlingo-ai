@@ -1,0 +1,95 @@
+{
+  "id": "fr-b1-01",
+  "title": "L'Introduction au Subjonctif",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Subjunctive", "Necessity"],
+  "completion_message": "¡Félicitations! Has dado tu primer paso en el nivel B1 y has dominado el temido subjuntivo. Ahora puedes expresar tus emociones y obligaciones como todo un adulto en francés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Bienvenido a B1: El Subjuntivo",
+      "parts": [
+        {
+          "visual": "¡Bienvenido al nivel B1!\nEn este nivel dejaremos de hablar de hechos simples (Yo como, Tú vives) y empezaremos a expresar emociones, dudas y necesidades. Para esto usamos el Modo Subjuntivo.\n\nLa frase estrella del subjuntivo es:\nIL FAUT QUE... (Es necesario que... / Hay que...)\n\n- Indicativo (Hecho): Tu manges (Tú comes).\n- Subjuntivo (Necesidad): Il faut que tu MANGES (Es necesario que tú comas).",
+          "audio": "¡Bienvenido al nivel intermedio, nivel B1! Has llegado muy lejos. Hasta ahora hemos hablado del mundo real: yo trabajo, él come, nosotros viajamos. Pero a partir de hoy, empezaremos a hablar del mundo de los deseos, las emociones y las obligaciones. Y para eso, necesitas una herramienta nueva: el famoso modo Subjuntivo. El subjuntivo aparece siempre que quieres expresar una necesidad, y su mejor amigo es la frase 'Il faut que...', que significa 'Es necesario que...'. Por ejemplo, no es lo mismo decir 'Tú comes' (que es un hecho), que decir 'Es necesario que tú comas' (que es una orden o deseo)."
+        },
+        {
+          "visual": "¿Cómo se forma el Subjuntivo Regular?\n\n1. Toma la forma 'ILS' (Ellos) del presente.\nEj: Ils parlent (Ellos hablan). Quita la '-ent'. Tu raíz es 'parl-'.\n2. Añade las terminaciones mágicas del subjuntivo:\n- je: -e (que je parle)\n- tu: -es (que tu parles)\n- il/elle: -e (qu'il parle)\n- nous: -ions (que nous parlions)\n- vous: -iez (que vous parliez)\n- ils/elles: -ent (qu'ils parlent)",
+          "audio": "Para formar el subjuntivo, los franceses usan una fórmula secreta. Primero, tomas el verbo y lo conjugas en presente para 'Ellos'. Por ejemplo, el verbo hablar, parler. Ellos hablan se dice: 'Ils parlent'. Ahora, córtale el final 'ent' para que te quede la raíz. A esa raíz, le vas a añadir unas terminaciones especiales. Para Yo, Él y Ellos, las terminaciones son idénticas al presente normal con la letra 'E'. Pero cuidado con Nosotros y Ustedes: ellos roban las terminaciones del pasado Imparfait. Así que dices: 'Que nous parlions' y 'Que vous parliez'. ¡Practiquemos!"
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del subjuntivo después de 'Il faut que...'.",
+      "questions": [
+        { "id": "frb1-01-q1", "type": "quiz_choice", "question": "¿Cuándo usamos el subjuntivo en francés?", "options": ["Para expresar necesidades, emociones y dudas", "Para contar historias del pasado", "Para dar órdenes directas sin sujeto", "Para expresar un hecho 100% seguro"], "correct_answer": "Para expresar necesidades, emociones y dudas", "explanation": "El subjuntivo es el modo de la subjetividad (no de la realidad concreta)." },
+        { "id": "frb1-01-q2", "type": "quiz_choice", "question": "¿Qué significa la frase 'Il faut que'?", "options": ["Es necesario que / Hay que", "Es posible que", "Me gustaría que", "Es cierto que"], "correct_answer": "Es necesario que / Hay que", "explanation": "'Il faut que' expresa obligación y SIEMPRE exige subjuntivo." },
+        { "id": "frb1-01-q3", "type": "quiz_choice", "question": "Para encontrar la raíz del subjuntivo, tomamos la forma del presente de qué pronombre?", "options": ["Ils (Ellos)", "Nous (Nosotros)", "Je (Yo)", "Vous (Ustedes)"], "correct_answer": "Ils (Ellos)", "explanation": "Tomamos la forma 'ils' (ej: ils parlent) y quitamos el '-ent'." },
+        { "id": "frb1-01-q4", "type": "quiz_choice", "question": "Il faut que je ____ (parler).", "options": ["parle", "parles", "parlons", "parlais"], "correct_answer": "parle", "explanation": "Raíz parl- + e = que je parle." },
+        { "id": "frb1-01-q5", "type": "quiz_choice", "question": "Il faut que tu ____ (manger).", "options": ["manges", "mange", "mangez", "mangiez"], "correct_answer": "manges", "explanation": "Raíz mang- + es = que tu manges." },
+        { "id": "frb1-01-q6", "type": "quiz_choice", "question": "Il faut qu'il ____ (finir). (Presente: Ils finissent).", "options": ["finisse", "finit", "finis", "finissait"], "correct_answer": "finisse", "explanation": "Raíz finiss- + e = qu'il finisse." },
+        { "id": "frb1-01-q7", "type": "quiz_choice", "question": "¿Cuál es la terminación del subjuntivo para NOUS?", "options": ["-ions", "-ons", "-ez", "-ent"], "correct_answer": "-ions", "explanation": "Nous y Vous toman terminaciones similares al imparfait (-ions, -iez)." },
+        { "id": "frb1-01-q8", "type": "quiz_choice", "question": "Il faut que nous ____ (parler).", "options": ["parlions", "parlons", "parliez", "parlent"], "correct_answer": "parlions", "explanation": "que nous parlions." },
+        { "id": "frb1-01-q9", "type": "quiz_choice", "question": "Il faut que vous ____ (écouter).", "options": ["écoutiez", "écoutez", "écoutions", "écoutent"], "correct_answer": "écoutiez", "explanation": "que vous écoutiez." },
+        { "id": "frb1-01-q10", "type": "quiz_choice", "question": "Il faut qu'elles ____ (partir). (Presente: Ils partent).", "options": ["partent", "part", "partons", "partiez"], "correct_answer": "partent", "explanation": "Raíz part- + ent = qu'elles partent." },
+        { "id": "frb1-01-q11", "type": "quiz_choice", "question": "Para los verbos regulares en -ER (como parler), ¿el subjuntivo de 'je', 'tu', 'il', 'ils' suena igual que el presente?", "options": ["Sí, suenan exactamente igual y a menudo se escriben igual", "No, suenan muy diferente", "Sí, pero solo para 'nous' y 'vous'"], "correct_answer": "Sí, suenan exactamente igual y a menudo se escriben igual", "explanation": "Je parle (pres.) y Que je parle (subj.) son idénticos." },
+        { "id": "frb1-01-q12", "type": "quiz_choice", "question": "Il faut que tu ____ (choisir). (Presente: Ils choisissent).", "options": ["choisisses", "choisis", "choisissez", "choisissent"], "correct_answer": "choisisses", "explanation": "Raíz choisiss- + es = que tu choisisses." },
+        { "id": "frb1-01-q13", "type": "quiz_choice", "question": "Il faut que nous ____ (regarder).", "options": ["regardions", "regardons", "regardiez", "regarde"], "correct_answer": "regardions", "explanation": "que nous regardions." },
+        { "id": "frb1-01-q14", "type": "quiz_choice", "question": "¿Qué palabra se usa antes del pronombre cuando usamos el subjuntivo?", "options": ["que / qu'", "si", "où", "dont"], "correct_answer": "que / qu'", "explanation": "El subjuntivo siempre está introducido por 'que' (que je, qu'il...)." },
+        { "id": "frb1-01-q15", "type": "quiz_choice", "question": "Il faut que vous ____ (travailler).", "options": ["travailliez", "travaillez", "travaillons", "travaillent"], "correct_answer": "travailliez", "explanation": "que vous travailliez (con la 'i' antes de ez)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Conjuga el verbo entre paréntesis en el Subjuntivo Presente.",
+      "questions": [
+        { "id": "frb1-01-f1", "type": "fill_input", "question": "Il faut que je ____ (parler).", "correct_answer": "parle", "explanation": "parle" },
+        { "id": "frb1-01-f2", "type": "fill_input", "question": "Il faut que tu ____ (manger).", "correct_answer": "manges", "explanation": "manges" },
+        { "id": "frb1-01-f3", "type": "fill_input", "question": "Il faut qu'il ____ (chercher).", "correct_answer": "cherche", "explanation": "cherche" },
+        { "id": "frb1-01-f4", "type": "fill_input", "question": "Il faut que nous ____ (parler).", "correct_answer": "parlions", "explanation": "parlions" },
+        { "id": "frb1-01-f5", "type": "fill_input", "question": "Il faut que vous ____ (écouter).", "correct_answer": "écoutiez", "explanation": "écoutiez" },
+        { "id": "frb1-01-f6", "type": "fill_input", "question": "Il faut qu'elles ____ (travailler).", "correct_answer": "travaillent", "explanation": "travaillent" },
+        { "id": "frb1-01-f7", "type": "fill_input", "question": "Il faut que je ____ (finir). (Raíz: finiss-).", "correct_answer": "finisse", "explanation": "finisse" },
+        { "id": "frb1-01-f8", "type": "fill_input", "question": "Il faut que tu ____ (choisir). (Raíz: choisiss-).", "correct_answer": "choisisses", "explanation": "choisisses" },
+        { "id": "frb1-01-f9", "type": "fill_input", "question": "Il faut que nous ____ (finir).", "correct_answer": "finissions", "explanation": "finissions" },
+        { "id": "frb1-01-f10", "type": "fill_input", "question": "Il faut que vous ____ (manger).", "correct_answer": "mangiez", "explanation": "mangiez" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Mastery Match",
+      "pairs": [
+        {"id": "frb1-01-p1", "source": "Il faut que", "target": "Es necesario que"},
+        {"id": "frb1-01-p2", "source": "que je parle", "target": "que yo hable"},
+        {"id": "frb1-01-p3", "source": "que tu manges", "target": "que tú comas"},
+        {"id": "frb1-01-p4", "source": "qu'il finisse", "target": "que él termine"},
+        {"id": "frb1-01-p5", "source": "que nous parlions", "target": "que nosotros hablemos"},
+        {"id": "frb1-01-p6", "source": "que vous mangiez", "target": "que ustedes coman"},
+        {"id": "frb1-01-p7", "source": "qu'ils travaillent", "target": "que ellos trabajen"},
+        {"id": "frb1-01-p8", "source": "Le subjonctif", "target": "Modo de obligación y duda"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y distingue el verbo en subjuntivo.",
+      "questions": [
+        { "id": "frb1-01-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il faut que je parle", "options": ["Il faut que je parle", "Il faut que tu parles", "Je parle", "Il faut qu'il parle"], "correct_answer": "Il faut que je parle", "explanation": "Audio dice: Il faut que je parle." },
+        { "id": "frb1-01-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il faut que nous parlions", "options": ["Il faut que nous parlions", "Il faut que vous parliez", "Nous parlons", "Il faut que je parle"], "correct_answer": "Il faut que nous parlions", "explanation": "Audio dice: Il faut que nous parlions." },
+        { "id": "frb1-01-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il faut qu'il finisse", "options": ["Il faut qu'il finisse", "Il faut que tu finisses", "Il finit", "Il faut que je finisse"], "correct_answer": "Il faut qu'il finisse", "explanation": "Audio dice: Il faut qu'il finisse." },
+        { "id": "frb1-01-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il faut que vous mangiez", "options": ["Il faut que vous mangiez", "Il faut que nous mangions", "Vous mangez", "Il faut que tu manges"], "correct_answer": "Il faut que vous mangiez", "explanation": "Audio dice: Il faut que vous mangiez." },
+        { "id": "frb1-01-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il faut qu'elles travaillent", "options": ["Il faut qu'elles travaillent", "Il faut qu'il travaille", "Elles travaillent", "Il faut que je travaille"], "correct_answer": "Il faut qu'elles travaillent", "explanation": "Audio dice: Il faut qu'elles travaillent." }
+      ]
+    }
+  ]
+}

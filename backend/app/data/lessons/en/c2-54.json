@@ -1,0 +1,101 @@
+{
+  "id": "c2-54",
+  "title": "Diplomatic Disagreement",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Communication", "Diplomacy", "Business", "Conflict"],
+  "completion_message": "¡Soberbio! Decir 'no' en el mundo corporativo es un arte. Has aprendido a desarmar la oposición con elegancia, firmeza y profesionalismo diplomático.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Desacuerdo Diplomático (C2)",
+      "parts": [
+        { "visual": "En reuniones C2, nunca decimos 'You're wrong'. Usamos lenguaje diplomático para rechazar ideas sin ofender. \n\n1. With all due respect (Con el debido respeto): \n- La frase clásica para introducir un desacuerdo fuerte. \nEj: WITH ALL DUE RESPECT, I don't think that strategy will work. \n\n2. I beg to differ (Me permito discrepar): \n- Una forma extremadamente educada y formal de decir 'no estoy de acuerdo'. \nEj: You said profits are up, but looking at the data, I BEG TO DIFFER. \n\n3. That's a valid point, but... (Es un punto válido, pero...): \n- La técnica del 'Yes, but'. Valida a la persona antes de destruirla con lógica. \nEj: THAT'S A VALID POINT, BUT we don't have the budget for it.", "audio": "Welcome to Diplomatic Disagreement. In a C2 level meeting, we never simply say 'You are wrong'. That is aggressive and unprofessional. We use diplomatic language to push back. Number 1: With all due respect. The classic phrase to introduce a strong disagreement politely. For example: WITH ALL DUE RESPECT, I don't think that strategy will work. Number 2: I beg to differ. An extremely polite, highly formal way to say 'I disagree'. For example: You said profits are up, but looking at the data, I BEG TO DIFFER. Number 3: That's a valid point, but... This is the 'Yes, but' technique. You validate the person before destroying their argument with logic. For example: THAT'S A VALID POINT, BUT we don't have the budget for it." },
+        { "visual": "4. I have reservations about... (Tengo reservas/dudas sobre...): \n- Una forma suave de expresar preocupación o rechazo. \nEj: I HAVE SERIOUS RESERVATIONS ABOUT partnering with them. \n\n5. Let's agree to disagree (Acordemos no estar de acuerdo): \n- Cuando es imposible convencer al otro y quieres cerrar el tema pacíficamente. \nEj: We're not making progress. LET'S AGREE TO DISAGREE and move on. \n\n6. To play devil's advocate (Ser el abogado del diablo): \n- Discutir en contra de una idea solo para probar su fortaleza. \nEj: TO PLAY DEVIL'S ADVOCATE, what happens if the server crashes? \n\n7. Pushback (Resistencia / Rechazo): \n- Sustantivo para describir cuando la gente se opone a tu idea. \nEj: Be prepared to get a lot of PUSHBACK from the board.", "audio": "Number 4: I have reservations about... A soft, professional way to express concern or rejection. For example: I HAVE SERIOUS RESERVATIONS ABOUT partnering with them. Number 5: Let's agree to disagree. When it's impossible to convince the other person and you want to close the topic peacefully. For example: We're not making progress. LET'S AGREE TO DISAGREE and move on. Number 6: To play devil's advocate. To argue against an idea simply to test its strength. For example: TO PLAY DEVIL'S ADVOCATE, what happens if the server crashes? Finally, Number 7: Pushback. A noun used to describe resistance or opposition to an idea. For example: Be prepared to get a lot of PUSHBACK from the board." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la expresión diplomática correcta.",
+      "questions": [
+        { "id": "c2-54-q1", "type": "quiz_choice", "question": "With all due ____, I must completely reject your proposal. (Con el debido respeto).", "options": ["respect", "honor", "care", "attention"], "correct_answer": "respect", "explanation": "With all due respect = Con el debido respeto." },
+        { "id": "c2-54-q2", "type": "quiz_choice", "question": "You claim that our customers love the new design, but looking at the sales drop, I ____ to differ. (Me permito discrepar).", "options": ["beg", "ask", "wish", "want"], "correct_answer": "beg", "explanation": "I beg to differ = Me permito discrepar." },
+        { "id": "c2-54-q3", "type": "quiz_choice", "question": "That's a ____ point, but have you considered the legal implications? (Un punto válido).", "options": ["valid", "true", "real", "nice"], "correct_answer": "valid", "explanation": "That's a valid point, but... = Es un punto válido, pero..." },
+        { "id": "c2-54-q4", "type": "quiz_choice", "question": "I have serious ____ about hiring him. He doesn't seem reliable. (Tengo reservas/dudas).", "options": ["reservations", "bookings", "thoughts", "feelings"], "correct_answer": "reservations", "explanation": "I have reservations about = Tengo reservas/dudas sobre..." },
+        { "id": "c2-54-q5", "type": "quiz_choice", "question": "We are never going to convince each other. Let's agree to ____. (Acordemos no estar de acuerdo).", "options": ["disagree", "argue", "fight", "stop"], "correct_answer": "disagree", "explanation": "Let's agree to disagree." },
+        { "id": "c2-54-q6", "type": "quiz_choice", "question": "I actually like your idea, but just to play ____'s advocate, what if our competitor copies it? (Abogado del diablo).", "options": ["devil", "demon", "angel", "god"], "correct_answer": "devil", "explanation": "Play devil's advocate = hacer de abogado del diablo." },
+        { "id": "c2-54-q7", "type": "quiz_choice", "question": "If we propose cutting employee bonuses, expect a massive amount of ____ from the staff. (Resistencia/Rechazo).", "options": ["pushback", "pullback", "throwback", "setback"], "correct_answer": "pushback", "explanation": "Pushback = resistencia, oposición." },
+        { "id": "c2-54-q8", "type": "quiz_choice", "question": "I hear what you're saying, but I ____ it from a different perspective. (Lo veo desde otra perspectiva).", "options": ["see", "look", "watch", "view"], "correct_answer": "see", "explanation": "I see it from a different perspective = Lo veo de otro modo." },
+        { "id": "c2-54-q9", "type": "quiz_choice", "question": "I'm afraid I don't entirely ____ your view on this matter. (No comparto tu visión).", "options": ["share", "give", "take", "hold"], "correct_answer": "share", "explanation": "I don't entirely share your view = No comparto del todo tu opinión." },
+        { "id": "c2-54-q10", "type": "quiz_choice", "question": "While I ____ your concerns, the decision has already been made. (Aprecio/Entiendo).", "options": ["appreciate", "thank", "like", "love"], "correct_answer": "appreciate", "explanation": "While I appreciate your concerns = Aunque aprecio/entiendo tus preocupaciones." },
+        { "id": "c2-54-q11", "type": "quiz_choice", "question": "I understand where you're ____ from, but the data says otherwise. (Entiendo de dónde vienes / tu postura).", "options": ["coming", "going", "talking", "thinking"], "correct_answer": "coming", "explanation": "I understand where you're coming from = Entiendo tu punto de vista." },
+        { "id": "c2-54-q12", "type": "quiz_choice", "question": "That is certainly one way of ____ at it. However... (Esa es ciertamente una forma de verlo).", "options": ["looking", "seeing", "watching", "staring"], "correct_answer": "looking", "explanation": "That is one way of looking at it = Es una forma de verlo (diplomacia pasivo-agresiva)." },
+        { "id": "c2-54-q13", "type": "quiz_choice", "question": "I'm not fully ____ that this is the best course of action. (No estoy totalmente convencido).", "options": ["convinced", "sure", "believing", "trusting"], "correct_answer": "convinced", "explanation": "I'm not fully convinced = No estoy del todo convencido." },
+        { "id": "c2-54-q14", "type": "quiz_choice", "question": "Let's put a ____ in this topic and discuss it later. (Dejemos esto en pausa).", "options": ["pin", "needle", "nail", "tack"], "correct_answer": "pin", "explanation": "Put a pin in it = dejar un tema en pausa para más tarde." },
+        { "id": "c2-54-q15", "type": "quiz_choice", "question": "Let's take this offline. (¿Qué significa esto en una reunión?)", "options": ["Hablemos de esto en privado después", "Desconectemos el internet", "Cancelemos la reunión", "Apaguemos las computadoras"], "correct_answer": "Hablemos de esto en privado después", "explanation": "Take this offline = hablarlo en privado o fuera de la reunión." },
+        { "id": "c2-54-q16", "type": "quiz_choice", "question": "I take ____ with your claim that our quality has dropped. (Tengo un problema / Discrepo con...).", "options": ["issue", "problem", "fault", "error"], "correct_answer": "issue", "explanation": "Take issue with = discrepar fuertemente, molestarse por una afirmación." },
+        { "id": "c2-54-q17", "type": "quiz_choice", "question": "We seem to be talking at ____ purposes. We are misunderstanding each other. (Hablar sin entenderse).", "options": ["cross", "different", "wrong", "bad"], "correct_answer": "cross", "explanation": "Talk at cross purposes = hablar de cosas distintas pensando que hablan de lo mismo." },
+        { "id": "c2-54-q18", "type": "quiz_choice", "question": "I think we're going around in ____. We aren't making any progress. (Dar vueltas en círculo).", "options": ["circles", "squares", "lines", "loops"], "correct_answer": "circles", "explanation": "Go around in circles = dar vueltas sobre lo mismo sin avanzar." },
+        { "id": "c2-54-q19", "type": "quiz_choice", "question": "To be perfectly ____, your proposal is too expensive. (Para ser perfectamente franco).", "options": ["frank", "open", "clear", "loud"], "correct_answer": "frank", "explanation": "To be perfectly frank (o candid) = para ser franco/sincero." },
+        { "id": "c2-54-q20", "type": "quiz_choice", "question": "Up to a ____, I agree with you, but not entirely. (Hasta cierto punto).", "options": ["point", "limit", "degree", "line"], "correct_answer": "point", "explanation": "Up to a point = hasta cierto punto." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave diplomática.",
+      "questions": [
+        { "id": "c2-54-f1", "type": "fill_input", "question": "With all due ____. (Respeto con R)", "correct_answer": "respect", "explanation": "respect." },
+        { "id": "c2-54-f2", "type": "fill_input", "question": "I ____ to differ. (Me permito con B)", "correct_answer": "beg", "explanation": "beg." },
+        { "id": "c2-54-f3", "type": "fill_input", "question": "That's a ____ point. (Punto válido con V)", "correct_answer": "valid", "explanation": "valid." },
+        { "id": "c2-54-f4", "type": "fill_input", "question": "I have ____ about this. (Reservas/dudas con R)", "correct_answer": "reservations", "explanation": "reservations." },
+        { "id": "c2-54-f5", "type": "fill_input", "question": "Let's agree to ____. (No estar de acuerdo con D)", "correct_answer": "disagree", "explanation": "disagree." },
+        { "id": "c2-54-f6", "type": "fill_input", "question": "Play ____'s advocate. (Abogado del diablo con D)", "correct_answer": "devil", "explanation": "devil." },
+        { "id": "c2-54-f7", "type": "fill_input", "question": "Expect a lot of ____. (Resistencia/oposición con P)", "correct_answer": "pushback", "explanation": "pushback." },
+        { "id": "c2-54-f8", "type": "fill_input", "question": "I don't ____ your view. (Comparto con S)", "correct_answer": "share", "explanation": "share." },
+        { "id": "c2-54-f9", "type": "fill_input", "question": "I see where you're ____ from. (Viniendo con C)", "correct_answer": "coming", "explanation": "coming." },
+        { "id": "c2-54-f10", "type": "fill_input", "question": "Let's take this ____. (Fuera de la reunión con O)", "correct_answer": "offline", "explanation": "offline." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Diplomacy Match",
+      "pairs": [
+        {"id": "c2-54-p1", "source": "With all due respect", "target": "Con el debido respeto"},
+        {"id": "c2-54-p2", "source": "I beg to differ", "target": "Me permito discrepar"},
+        {"id": "c2-54-p3", "source": "That's a valid point", "target": "Es un punto válido"},
+        {"id": "c2-54-p4", "source": "I have reservations", "target": "Tengo reservas / dudas"},
+        {"id": "c2-54-p5", "source": "Agree to disagree", "target": "Acordar no estar de acuerdo"},
+        {"id": "c2-54-p6", "source": "Play devil's advocate", "target": "Hacer de abogado del diablo"},
+        {"id": "c2-54-p7", "source": "Pushback", "target": "Resistencia / Rechazo a una idea"},
+        {"id": "c2-54-p8", "source": "Where you're coming from", "target": "Entiendo de dónde vienes (tu punto)"},
+        {"id": "c2-54-p9", "source": "Take this offline", "target": "Discutir en privado más tarde"},
+        {"id": "c2-54-p10", "source": "To be perfectly frank", "target": "Para ser perfectamente sincero"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase diplomática correcta.",
+      "questions": [
+        { "id": "c2-54-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "With all due respect.", "options": ["With all due respect.", "With all your respect.", "Will all due respect.", "With all due respects."], "correct_answer": "With all due respect.", "explanation": "Audio exacto." },
+        { "id": "c2-54-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I beg to differ.", "options": ["I beg to differ.", "I ask to differ.", "I beg to different.", "I begged to differ."], "correct_answer": "I beg to differ.", "explanation": "Audio exacto." },
+        { "id": "c2-54-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "That is a valid point.", "options": ["That is a valid point.", "This is a valid point.", "It is a valid point.", "That was a valid point."], "correct_answer": "That is a valid point.", "explanation": "Audio exacto." },
+        { "id": "c2-54-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have reservations.", "options": ["I have reservations.", "I had reservations.", "They have reservations.", "I have a reservation."], "correct_answer": "I have reservations.", "explanation": "Audio exacto." },
+        { "id": "c2-54-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's agree to disagree.", "options": ["Let's agree to disagree.", "Let's agree to agree.", "Let us agree to disagree.", "Let's agreed to disagree."], "correct_answer": "Let's agree to disagree.", "explanation": "Audio exacto." },
+        { "id": "c2-54-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "To play devil's advocate.", "options": ["To play devil's advocate.", "To play the devil's advocate.", "To playing devil's advocate.", "To play demon's advocate."], "correct_answer": "To play devil's advocate.", "explanation": "Audio exacto." },
+        { "id": "c2-54-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We got a lot of pushback.", "options": ["We got a lot of pushback.", "They got a lot of pushback.", "We get a lot of pushback.", "We got some pushback."], "correct_answer": "We got a lot of pushback.", "explanation": "Audio exacto." },
+        { "id": "c2-54-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I see where you're coming from.", "options": ["I see where you're coming from.", "I know where you're coming from.", "I saw where you're coming from.", "I see where you come from."], "correct_answer": "I see where you're coming from.", "explanation": "Audio exacto." },
+        { "id": "c2-54-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's take this offline.", "options": ["Let's take this offline.", "Let us take this offline.", "Let's take it offline.", "Let's taking this offline."], "correct_answer": "Let's take this offline.", "explanation": "Audio exacto." },
+        { "id": "c2-54-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "To be perfectly frank.", "options": ["To be perfectly frank.", "To be perfectly honest.", "To being perfectly frank.", "To be perfect frank."], "correct_answer": "To be perfectly frank.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

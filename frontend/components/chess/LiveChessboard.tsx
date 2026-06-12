@@ -31,7 +31,7 @@ export default function LiveChessboard({
 
   useEffect(() => {
     // Configuración de la URL del WebSocket
-    const wsBaseUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8020/ws';
+    const wsBaseUrl = process.env.NODE_ENV === 'production' ? 'wss://api.onixlingo.onixu.company/ws' : 'ws://127.0.0.1:5000/ws';
     const wsUrl = `${wsBaseUrl}/chess/matches/${matchId}?token=${token}`;
 
     const ws = new WebSocket(wsUrl);
@@ -183,8 +183,8 @@ export default function LiveChessboard({
       {/* Status Bar: Conexión y Reloj Oponente */}
       <div className="flex justify-between items-center w-full mb-4 px-2">
         <div className="flex items-center gap-2">
-          <span className={`w-2.5 h-2.5 rounded-none ${isConnected ? 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]' : 'bg-red-500'} ${isConnected ? 'animate-pulse' : ''}`} />
-          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider hidden sm:block">Conexión Segura</span>
+          <span className={`w-2.5 h-2.5 rounded-none ${isConnected ? 'bg-[#D4AF37]/100 shadow-[0_0_10px_rgba(16,185,129,0.5)]' : 'bg-[#D4AF37]/100'} ${isConnected ? 'animate-pulse' : ''}`} />
+          <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider hidden sm:block">Conexión Segura</span>
         </div>
         <div className="font-mono text-2xl font-black text-amber-400 wood-panel-light px-4 py-1 rounded-none border border-[#502b16] shadow-inner">
           {formatTime(playerColor === 'w' ? blackTime : whiteTime)}
@@ -195,8 +195,8 @@ export default function LiveChessboard({
       <div className="w-full aspect-square mb-6 rounded-none">
         {!isConnected && !fen ? (
           <div className="w-full h-full flex flex-col items-center justify-center bg-[#130a04] rounded-none border border-[#3c1e0a] gap-4">
-            <Loader2 className="animate-spin text-amber-500" size={48} />
-            <p className="text-slate-400 font-medium animate-pulse">Conectando a la sala...</p>
+            <Loader2 className="animate-spin text-[#D4AF37]" size={48} />
+            <p className="text-slate-500 font-medium animate-pulse">Conectando a la sala...</p>
           </div>
         ) : (
           <CustomChessboard 
@@ -211,7 +211,7 @@ export default function LiveChessboard({
       <div className="w-full space-y-4 rounded-none">
         {/* Status y reloj local */}
         <div className="flex justify-between items-center wood-panel-light p-3 sm:p-4 rounded-none shadow-inner">
-          <div className="text-xs sm:text-sm font-bold text-slate-350 max-w-[60%]">
+          <div className="text-xs sm:text-sm font-bold text-slate-300 max-w-[60%]">
             {status}
           </div>
           <div className="font-mono text-2xl font-black text-amber-300 bg-[#130a04] px-4 py-1 rounded-none border border-[#3c1e0a] shadow-[0_0_15px_rgba(0,0,0,0.3)]">

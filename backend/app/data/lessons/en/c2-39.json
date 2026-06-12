@@ -1,0 +1,101 @@
+{
+  "id": "c2-39",
+  "title": "Delivering Bad News",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Communication", "Bad News", "Diplomacy", "Corporate"],
+  "completion_message": "¡Excelente! Dar malas noticias es la prueba de fuego de cualquier líder corporativo. Al usar estas estructuras de amortiguación (buffering) y vocabulario avanzado, puedes mantener la calma y el respeto incluso en las peores crisis.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Entregando Malas Noticias (C2)",
+      "parts": [
+        { "visual": "En los negocios, rara vez se dicen las malas noticias de golpe. Usamos una técnica de 'amortiguación' (Buffering) y frases formales. \n\n1. I regret to inform you (Lamento informarle): \n- La forma más clásica y profesional de empezar una mala noticia escrita. \nEj: I REGRET TO INFORM YOU that your application was unsuccessful. \n\n2. We are forced to / We have no choice but to (Nos vemos obligados a): \n- Desplaza la culpa a las circunstancias externas. \nEj: Due to the recession, WE ARE FORCED TO close the branch. \n\n3. Shortfall / Setback (Déficit / Contratiempo): \n- Suavizar palabras como 'fracaso' o 'pérdida'. \nEj: We experienced a significant SHORTFALL in revenue this quarter.", "audio": "Welcome to Delivering Bad News. In business, we rarely deliver bad news bluntly. We use a buffering technique and highly formal phrases. Number 1: I regret to inform you. This is the most classic and professional way to start a written bad news message. For example: I REGRET TO INFORM YOU that your application was unsuccessful. Number 2: We are forced to, or We have no choice but to. This shifts the blame to external circumstances. For example: Due to the recession, WE ARE FORCED TO close the branch. Number 3: Shortfall or Setback. These are nouns used to soften harsh words like failure or loss. For example: We experienced a significant SHORTFALL in revenue this quarter." },
+        { "visual": "4. Unfortunately / Regrettably (Desafortunadamente / Lamentablemente): \n- Adverbios esenciales para iniciar una oración negativa en persona. \nEj: REGRETTABLY, we cannot offer you the position. \n\n5. It has come to my attention (Ha llegado a mi conocimiento): \n- Una forma diplomática pero firme de confrontar a alguien por un error. \nEj: IT HAS COME TO MY ATTENTION that the reports are constantly late. \n\n6. Fall short of (No alcanzar / Quedarse corto): \n- Eufemismo para decir que algo fracasó o no cumplió la meta. \nEj: The marketing campaign FELL SHORT OF our expectations.", "audio": "Number 4: Unfortunately, or Regrettably. These adverbs are essential to start a negative sentence in person. For example: REGRETTABLY, we cannot offer you the position. Number 5: It has come to my attention. This is a diplomatic but very firm way to confront someone about an error or bad behavior. For example: IT HAS COME TO MY ATTENTION that the reports are constantly late. Number 6: Fall short of. This is a common euphemism used to say that something failed or didn't meet the goal. For example: The marketing campaign FELL SHORT OF our expectations." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la expresión correcta para dar malas noticias.",
+      "questions": [
+        { "id": "c2-39-q1", "type": "quiz_choice", "question": "Dear Mr. Smith, I ____ to inform you that we have chosen another candidate for the role.", "options": ["regret", "sad", "sorry", "apologize"], "correct_answer": "regret", "explanation": "I regret to inform you = Lamento informarle (muy formal)." },
+        { "id": "c2-39-q2", "type": "quiz_choice", "question": "Due to the sudden increase in taxes, we have no ____ but to raise our prices.", "options": ["choice", "option", "chance", "way"], "correct_answer": "choice", "explanation": "We have no choice but to = No tenemos más remedio que." },
+        { "id": "c2-39-q3", "type": "quiz_choice", "question": "Instead of saying 'We lost money', the report said: 'We experienced a massive financial ____.'", "options": ["shortfall", "shortage", "shorting", "shortness"], "correct_answer": "shortfall", "explanation": "Shortfall = déficit, falta (para suavizar 'pérdida')." },
+        { "id": "c2-39-q4", "type": "quiz_choice", "question": "____, we will not be able to attend the conference this year. (Lamentablemente).", "options": ["Regrettably", "Sadly", "Unhappily", "Badly"], "correct_answer": "Regrettably", "explanation": "Regrettably (o Unfortunately) = Lamentablemente." },
+        { "id": "c2-39-q5", "type": "quiz_choice", "question": "It has ____ to my attention that some employees are arriving late. (Me he enterado / Me han informado).", "options": ["come", "brought", "reached", "arrived"], "correct_answer": "come", "explanation": "It has come to my attention = ha llegado a mi conocimiento." },
+        { "id": "c2-39-q6", "type": "quiz_choice", "question": "The new product launch completely failed; it ____ short of all our expectations.", "options": ["fell", "went", "came", "dropped"], "correct_answer": "fell", "explanation": "Fall short of (pasado: fell short of) = no alcanzar, quedarse corto." },
+        { "id": "c2-39-q7", "type": "quiz_choice", "question": "We are ____ to announce the closure of our Madrid office. (Nos vemos obligados).", "options": ["forced", "pushed", "made", "driven"], "correct_answer": "forced", "explanation": "We are forced to = nos vemos obligados a." },
+        { "id": "c2-39-q8", "type": "quiz_choice", "question": "This isn't a failure, it's just a temporary ____. We will recover next month. (Contratiempo).", "options": ["setback", "stepback", "pushback", "fallback"], "correct_answer": "setback", "explanation": "Setback = contratiempo, revés." },
+        { "id": "c2-39-q9", "type": "quiz_choice", "question": "I'm writing to ____ you that your account has been suspended. (Avisar/Notificar de forma dura).", "options": ["advise", "talk", "speak", "say"], "correct_answer": "advise", "explanation": "Advise = en inglés legal/formal significa notificar o informar (I advise you that...)." },
+        { "id": "c2-39-q10", "type": "quiz_choice", "question": "I'm ____ that we cannot accept your proposal at this time. (Me temo).", "options": ["afraid", "scared", "fearful", "sad"], "correct_answer": "afraid", "explanation": "I'm afraid that = Me temo que (amortiguador clásico)." },
+        { "id": "c2-39-q11", "type": "quiz_choice", "question": "We have carefully ____ your request, but we must decline it. (Considerado).", "options": ["considered", "thought", "looked", "watched"], "correct_answer": "considered", "explanation": "Carefully considered = considerado cuidadosamente (para suavizar el rechazo)." },
+        { "id": "c2-39-q12", "type": "quiz_choice", "question": "Due to circumstances ____ our control, the delivery will be delayed. (Fuera de).", "options": ["beyond", "outside", "over", "above"], "correct_answer": "beyond", "explanation": "Circumstances beyond our control = circunstancias ajenas/fuera de nuestro control." },
+        { "id": "c2-39-q13", "type": "quiz_choice", "question": "Please accept our sincere ____ for the inconvenience caused. (Disculpas).", "options": ["apologies", "sorrows", "regrets", "excuses"], "correct_answer": "apologies", "explanation": "Sincere apologies = sinceras disculpas." },
+        { "id": "c2-39-q14", "type": "quiz_choice", "question": "We are writing to ____ you of a data breach affecting your account. (Notificar).", "options": ["notify", "say", "tell", "speak"], "correct_answer": "notify", "explanation": "Notify = notificar (verbo formal para alertas graves)." },
+        { "id": "c2-39-q15", "type": "quiz_choice", "question": "This decision was not made ____. (A la ligera).", "options": ["lightly", "easily", "softly", "weakly"], "correct_answer": "lightly", "explanation": "Not made lightly = no se tomó a la ligera (para dar gravedad a la mala noticia)." },
+        { "id": "c2-39-q16", "type": "quiz_choice", "question": "The board has ____ the difficult decision to restructure the company. (Tomado).", "options": ["taken", "made", "done", "gotten"], "correct_answer": "taken", "explanation": "Take a decision (o Make a decision) = tomar una decisión." },
+        { "id": "c2-39-q17", "type": "quiz_choice", "question": "I have some ____ news regarding the Q3 financial results. (Noticias difíciles).", "options": ["tough", "hard", "solid", "heavy"], "correct_answer": "tough", "explanation": "Tough news = noticias difíciles o malas." },
+        { "id": "c2-39-q18", "type": "quiz_choice", "question": "We must ____ the fact that the project is no longer viable. (Afrontar).", "options": ["face", "look", "see", "meet"], "correct_answer": "face", "explanation": "Face the fact = afrontar el hecho." },
+        { "id": "c2-39-q19", "type": "quiz_choice", "question": "There's no easy way to ____ this, but we are letting you go. (Decir/Expresar).", "options": ["say", "tell", "speak", "talk"], "correct_answer": "say", "explanation": "No easy way to say this = no hay forma fácil de decir esto." },
+        { "id": "c2-39-q20", "type": "quiz_choice", "question": "We understand this is ____ news, and we are here to support you. (Decepcionante).", "options": ["disappointing", "sad", "bad", "terrible"], "correct_answer": "disappointing", "explanation": "Disappointing = decepcionante (suaviza 'terrible' o 'devastador')." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave de comunicación formal.",
+      "questions": [
+        { "id": "c2-39-f1", "type": "fill_input", "question": "I ____ to inform you... (Lamento con R)", "correct_answer": "regret", "explanation": "regret." },
+        { "id": "c2-39-f2", "type": "fill_input", "question": "We have no ____ but to... (Opción/Remedio con C)", "correct_answer": "choice", "explanation": "choice." },
+        { "id": "c2-39-f3", "type": "fill_input", "question": "A financial ____. (Déficit con S)", "correct_answer": "shortfall", "explanation": "shortfall." },
+        { "id": "c2-39-f4", "type": "fill_input", "question": "____, we must decline. (Lamentablemente con R)", "correct_answer": "Regrettably", "explanation": "Regrettably." },
+        { "id": "c2-39-f5", "type": "fill_input", "question": "It has ____ to my attention. (Llegado con C)", "correct_answer": "come", "explanation": "come." },
+        { "id": "c2-39-f6", "type": "fill_input", "question": "It fell ____ of our expectations. (Corto con S)", "correct_answer": "short", "explanation": "short." },
+        { "id": "c2-39-f7", "type": "fill_input", "question": "We are ____ to close it. (Obligados con F)", "correct_answer": "forced", "explanation": "forced." },
+        { "id": "c2-39-f8", "type": "fill_input", "question": "A temporary ____. (Contratiempo con S)", "correct_answer": "setback", "explanation": "setback." },
+        { "id": "c2-39-f9", "type": "fill_input", "question": "Circumstances ____ our control. (Fuera de / Más allá de con B)", "correct_answer": "beyond", "explanation": "beyond." },
+        { "id": "c2-39-f10", "type": "fill_input", "question": "Sincere ____. (Disculpas con A)", "correct_answer": "apologies", "explanation": "apologies." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Bad News Match",
+      "pairs": [
+        {"id": "c2-39-p1", "source": "I regret to inform you", "target": "Lamento informarle"},
+        {"id": "c2-39-p2", "source": "We have no choice but to", "target": "No tenemos más remedio que"},
+        {"id": "c2-39-p3", "source": "Shortfall", "target": "Déficit / Falta de ingresos"},
+        {"id": "c2-39-p4", "source": "Regrettably", "target": "Lamentablemente (Adverbio)"},
+        {"id": "c2-39-p5", "source": "It has come to my attention", "target": "Me he enterado / Ha llegado a mi conocimiento"},
+        {"id": "c2-39-p6", "source": "Fall short of", "target": "No alcanzar / Quedarse corto"},
+        {"id": "c2-39-p7", "source": "We are forced to", "target": "Nos vemos obligados a"},
+        {"id": "c2-39-p8", "source": "Setback", "target": "Contratiempo / Revés"},
+        {"id": "c2-39-p9", "source": "Beyond our control", "target": "Fuera de nuestro control"},
+        {"id": "c2-39-p10", "source": "Not taken lightly", "target": "No se tomó a la ligera"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase formal correcta.",
+      "questions": [
+        { "id": "c2-39-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I regret to inform you.", "options": ["I regret to inform you.", "I regret informing you.", "I regretted to inform you.", "I regret to inform your."], "correct_answer": "I regret to inform you.", "explanation": "Audio exacto." },
+        { "id": "c2-39-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have no choice but to cancel.", "options": ["We have no choice but to cancel.", "They have no choice but to cancel.", "We had no choice but to cancel.", "We have no choices but to cancel."], "correct_answer": "We have no choice but to cancel.", "explanation": "Audio exacto." },
+        { "id": "c2-39-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There was a significant shortfall.", "options": ["There was a significant shortfall.", "There is a significant shortfall.", "That was a significant shortfall.", "There was a significant shortage."], "correct_answer": "There was a significant shortfall.", "explanation": "Audio exacto." },
+        { "id": "c2-39-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Regrettably, we must decline.", "options": ["Regrettably, we must decline.", "Sadly, we must decline.", "Regrettably, they must decline.", "Regrettably, we must declining."], "correct_answer": "Regrettably, we must decline.", "explanation": "Audio exacto." },
+        { "id": "c2-39-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It has come to my attention.", "options": ["It has come to my attention.", "It has coming to my attention.", "It had come to my attention.", "He has come to my attention."], "correct_answer": "It has come to my attention.", "explanation": "Audio exacto." },
+        { "id": "c2-39-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sales fell short of expectations.", "options": ["Sales fell short of expectations.", "Sales fall short of expectations.", "Sales fell short to expectations.", "Sales fell shorten of expectations."], "correct_answer": "Sales fell short of expectations.", "explanation": "Audio exacto." },
+        { "id": "c2-39-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are forced to close.", "options": ["We are forced to close.", "They are forced to close.", "We were forced to close.", "We are force to close."], "correct_answer": "We are forced to close.", "explanation": "Audio exacto." },
+        { "id": "c2-39-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a minor setback.", "options": ["It is a minor setback.", "This is a minor setback.", "It was a minor setback.", "It is a minor stepback."], "correct_answer": "It is a minor setback.", "explanation": "Audio exacto." },
+        { "id": "c2-39-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is beyond our control.", "options": ["It is beyond our control.", "It was beyond our control.", "This is beyond our control.", "It is behind our control."], "correct_answer": "It is beyond our control.", "explanation": "Audio exacto." },
+        { "id": "c2-39-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please accept my sincere apologies.", "options": ["Please accept my sincere apologies.", "Please accept my sincere apology.", "Please accept our sincere apologies.", "Please accepted my sincere apologies."], "correct_answer": "Please accept my sincere apologies.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

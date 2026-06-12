@@ -1,0 +1,101 @@
+{
+  "id": "a1-43",
+  "title": "Prepositions of Time",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Time"],
+  "completion_message": "¡Excelente! Ya dominas la regla de oro de In, On, At para organizar tu agenda.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: In, On, At",
+      "parts": [
+        { "visual": "Usa IN para meses, años y partes del día (in May, in 2023, in the morning).", "audio": "Use IN for months, years, and parts of the day." },
+        { "visual": "Usa ON para días de la semana y fechas específicas (on Monday, on May 5th). Usa AT para la hora exacta (at 9 AM, at noon).", "audio": "Use ON for days and dates. Use AT for exact times." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la preposición de tiempo correcta.",
+      "questions": [
+        { "id": "a1-43-q1", "type": "quiz_choice", "question": "The meeting is ____ Monday.", "options": ["on", "in", "at", "for"], "correct_answer": "on", "explanation": "Días de la semana usan ON." },
+        { "id": "a1-43-q2", "type": "quiz_choice", "question": "I start work ____ 8 AM.", "options": ["at", "in", "on", "by"], "correct_answer": "at", "explanation": "Hora exacta usa AT." },
+        { "id": "a1-43-q3", "type": "quiz_choice", "question": "My vacation is ____ July.", "options": ["in", "on", "at", "to"], "correct_answer": "in", "explanation": "Meses (sin día exacto) usan IN." },
+        { "id": "a1-43-q4", "type": "quiz_choice", "question": "The company was founded ____ 2010.", "options": ["in", "on", "at", "since"], "correct_answer": "in", "explanation": "Años usan IN." },
+        { "id": "a1-43-q5", "type": "quiz_choice", "question": "See you ____ Friday morning.", "options": ["on", "in", "at", "until"], "correct_answer": "on", "explanation": "Si se menciona el día de la semana, gana ON." },
+        { "id": "a1-43-q6", "type": "quiz_choice", "question": "I drink coffee ____ the morning.", "options": ["in", "on", "at", "during"], "correct_answer": "in", "explanation": "Partes del día usan IN (in the morning)." },
+        { "id": "a1-43-q7", "type": "quiz_choice", "question": "He has a meeting ____ noon.", "options": ["at", "in", "on", "by"], "correct_answer": "at", "explanation": "Noon (mediodía) es una hora exacta, usa AT." },
+        { "id": "a1-43-q8", "type": "quiz_choice", "question": "The project is due ____ May 15th.", "options": ["on", "in", "at", "for"], "correct_answer": "on", "explanation": "Fechas completas (mes + día) usan ON." },
+        { "id": "a1-43-q9", "type": "quiz_choice", "question": "I don't work ____ night.", "options": ["at", "in", "on", "for"], "correct_answer": "at", "explanation": "Excepción: se dice 'at night'." },
+        { "id": "a1-43-q10", "type": "quiz_choice", "question": "We have a break ____ 10:30.", "options": ["at", "in", "on", "to"], "correct_answer": "at", "explanation": "Hora exacta (at)." },
+        { "id": "a1-43-q11", "type": "quiz_choice", "question": "Are you free ____ the afternoon?", "options": ["in", "on", "at", "to"], "correct_answer": "in", "explanation": "Partes del día (in the afternoon)." },
+        { "id": "a1-43-q12", "type": "quiz_choice", "question": "Let's meet ____ Wednesday.", "options": ["on", "in", "at", "for"], "correct_answer": "on", "explanation": "Día de la semana (on)." },
+        { "id": "a1-43-q13", "type": "quiz_choice", "question": "The store closes ____ midnight.", "options": ["at", "in", "on", "by"], "correct_answer": "at", "explanation": "Midnight es una hora exacta (at)." },
+        { "id": "a1-43-q14", "type": "quiz_choice", "question": "The conference is ____ October.", "options": ["in", "on", "at", "to"], "correct_answer": "in", "explanation": "Mes solo (in)." },
+        { "id": "a1-43-q15", "type": "quiz_choice", "question": "He always calls ____ the evening.", "options": ["in", "on", "at", "to"], "correct_answer": "in", "explanation": "In the evening." },
+        { "id": "a1-43-q16", "type": "quiz_choice", "question": "My interview is ____ Monday at 2 PM.", "options": ["on", "in", "at", "for"], "correct_answer": "on", "explanation": "Gana el día que inicia la frase (on Monday...)." },
+        { "id": "a1-43-q17", "type": "quiz_choice", "question": "It gets cold ____ winter.", "options": ["in", "on", "at", "to"], "correct_answer": "in", "explanation": "Las estaciones del año usan IN." },
+        { "id": "a1-43-q18", "type": "quiz_choice", "question": "We usually get paid ____ the 1st of the month.", "options": ["on", "in", "at", "by"], "correct_answer": "on", "explanation": "Fecha exacta (on the 1st)." },
+        { "id": "a1-43-q19", "type": "quiz_choice", "question": "Can we talk ____ lunchtime?", "options": ["at", "in", "on", "to"], "correct_answer": "at", "explanation": "Momento puntual del día (at lunchtime)." },
+        { "id": "a1-43-q20", "type": "quiz_choice", "question": "I will finish this ____ a few minutes.", "options": ["in", "on", "at", "for"], "correct_answer": "in", "explanation": "Para hablar de un periodo futuro: 'en unos minutos' (in)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe In, On o At.",
+      "questions": [
+        { "id": "a1-43-f1", "type": "fill_input", "question": "The meeting is ____ Monday.", "correct_answer": "on", "explanation": "On (Día)." },
+        { "id": "a1-43-f2", "type": "fill_input", "question": "I start work ____ 8 AM.", "correct_answer": "at", "explanation": "At (Hora)." },
+        { "id": "a1-43-f3", "type": "fill_input", "question": "My vacation is ____ July.", "correct_answer": "in", "explanation": "In (Mes)." },
+        { "id": "a1-43-f4", "type": "fill_input", "question": "Founded ____ 2010.", "correct_answer": "in", "explanation": "In (Año)." },
+        { "id": "a1-43-f5", "type": "fill_input", "question": "See you ____ Friday morning.", "correct_answer": "on", "explanation": "On (Día + Parte)." },
+        { "id": "a1-43-f6", "type": "fill_input", "question": "Coffee ____ the morning.", "correct_answer": "in", "explanation": "In (Parte del día)." },
+        { "id": "a1-43-f7", "type": "fill_input", "question": "Meeting ____ noon.", "correct_answer": "at", "explanation": "At (Hora exacta)." },
+        { "id": "a1-43-f8", "type": "fill_input", "question": "Due ____ May 15th.", "correct_answer": "on", "explanation": "On (Fecha exacta)." },
+        { "id": "a1-43-f9", "type": "fill_input", "question": "I don't work ____ night.", "correct_answer": "at", "explanation": "At (Excepción)." },
+        { "id": "a1-43-f10", "type": "fill_input", "question": "Free ____ the afternoon?", "correct_answer": "in", "explanation": "In (Parte del día)." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-43-p1", "source": "On Monday", "target": "El lunes"},
+        {"id": "a1-43-p2", "source": "At 9 AM", "target": "A las 9 AM"},
+        {"id": "a1-43-p3", "source": "In May", "target": "En Mayo"},
+        {"id": "a1-43-p4", "source": "In the morning", "target": "Por la mañana"},
+        {"id": "a1-43-p5", "source": "In the afternoon", "target": "Por la tarde"},
+        {"id": "a1-43-p6", "source": "At night", "target": "Por la noche"},
+        {"id": "a1-43-p7", "source": "At noon", "target": "A mediodía"},
+        {"id": "a1-43-p8", "source": "On July 4th", "target": "El 4 de julio"},
+        {"id": "a1-43-p9", "source": "In 2023", "target": "En 2023"},
+        {"id": "a1-43-p10", "source": "At lunchtime", "target": "En la hora del almuerzo"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-43-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "On Monday.", "options": ["On Monday.", "In Monday.", "At Monday.", "For Monday."], "correct_answer": "On Monday.", "explanation": "Audio exacto." },
+        { "id": "a1-43-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "At nine AM.", "options": ["At nine AM.", "In nine AM.", "On nine AM.", "At ten AM."], "correct_answer": "At nine AM.", "explanation": "Audio exacto." },
+        { "id": "a1-43-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In July.", "options": ["In July.", "On July.", "At July.", "In June."], "correct_answer": "In July.", "explanation": "Audio exacto." },
+        { "id": "a1-43-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In the morning.", "options": ["In the morning.", "On the morning.", "At the morning.", "In the evening."], "correct_answer": "In the morning.", "explanation": "Audio exacto." },
+        { "id": "a1-43-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "At night.", "options": ["At night.", "In the night.", "On the night.", "At noon."], "correct_answer": "At night.", "explanation": "Audio exacto." },
+        { "id": "a1-43-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "On Friday morning.", "options": ["On Friday morning.", "In Friday morning.", "At Friday morning.", "On Monday morning."], "correct_answer": "On Friday morning.", "explanation": "Audio exacto." },
+        { "id": "a1-43-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "At noon.", "options": ["At noon.", "In noon.", "On noon.", "At midnight."], "correct_answer": "At noon.", "explanation": "Audio exacto." },
+        { "id": "a1-43-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "On May fifteenth.", "options": ["On May fifteenth.", "In May fifteenth.", "At May fifteenth.", "On May fifth."], "correct_answer": "On May fifteenth.", "explanation": "Audio exacto." },
+        { "id": "a1-43-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "In the evening.", "options": ["In the evening.", "On the evening.", "At the evening.", "In the afternoon."], "correct_answer": "In the evening.", "explanation": "Audio exacto." },
+        { "id": "a1-43-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "At lunchtime.", "options": ["At lunchtime.", "In lunchtime.", "On lunchtime.", "At lunch."], "correct_answer": "At lunchtime.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

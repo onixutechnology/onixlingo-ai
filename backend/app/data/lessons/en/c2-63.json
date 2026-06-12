@@ -1,0 +1,101 @@
+{
+  "id": "c2-63",
+  "title": "Corporate Ethics",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Ethics", "Business", "Compliance"],
+  "completion_message": "¡Magnífico! Sobornar, malversar, cumplir las reglas. Conoces el lado oscuro y la rectitud de las corporaciones. Tu vocabulario ético es nivel CEO.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Ética Corporativa y Cumplimiento (C2)",
+      "parts": [
+        { "visual": "Los escándalos arruinan empresas. Conoce el vocabulario para evitarlos (o entender las noticias). \n\n1. Compliance (Cumplimiento normativo): \n- Seguir las leyes y reglas corporativas. \nEj: Our COMPLIANCE officer ensures we don't break international trade laws. \n\n2. Bribery / Bribe (Soborno): \n- Pagar a alguien para que haga algo ilegal a tu favor. \nEj: The executives were arrested for BRIBERY. \n\n3. Embezzlement (Malversación de fondos / Desfalco): \n- Robar dinero de la empresa para la que trabajas. \nEj: The accountant went to jail for EMBEZZLEMENT.", "audio": "Welcome to Corporate Ethics and Compliance. Scandals ruin companies. Let's learn the vocabulary to navigate the dark side and the righteous side of business. Number 1: Compliance. The action of complying with a command, or following laws and corporate rules. For example: Our COMPLIANCE officer ensures we don't break international trade laws. Number 2: Bribery. Giving someone a financial advantage or a 'bribe' to encourage them to perform their functions improperly. For example: The executives were arrested for BRIBERY. Number 3: Embezzlement. Secretly stealing money that belongs to the organization you work for. For example: The accountant went to jail for EMBEZZLEMENT." },
+        { "visual": "4. Conflict of interest (Conflicto de intereses): \n- Cuando tu interés personal puede afectar tu juicio profesional. \nEj: It's a CONFLICT OF INTEREST to hire your own brother's company. \n\n5. Money laundering (Lavado de dinero): \n- Ocultar el origen de dinero ilegal pasándolo por negocios legales. \nEj: The casino was used for massive MONEY LAUNDERING. \n\n6. ESG (Environmental, Social, and Governance): \n- Criterios para medir si una empresa es ética, ecológica y bien gobernada. \nEj: Investors are demanding better ESG policies. \n\n7. Nepotism (Nepotismo): \n- Favorecer a familiares o amigos al darles empleos, sin importar sus méritos. \nEj: The CEO hiring his unqualified son is pure NEPOTISM.", "audio": "Number 4: Conflict of interest. A situation where a person has a personal or financial interest that might corrupt their professional motivation. For example: It's a CONFLICT OF INTEREST to hire your own brother's company. Number 5: Money laundering. Concealing the origins of illegally obtained money by passing it through a complex sequence of banking transfers or commercial transactions. For example: The casino was used for massive MONEY LAUNDERING. Number 6: ESG, which stands for Environmental, Social, and Governance. These are the criteria used to measure how ethical and sustainable a company is. For example: Investors are demanding better ESG policies. Number 7: Nepotism. The practice of those with power favoring relatives or friends, especially by giving them jobs. For example: The CEO hiring his unqualified son is pure NEPOTISM." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término ético correcto.",
+      "questions": [
+        { "id": "c2-63-q1", "type": "quiz_choice", "question": "The bank hired a Chief ____ Officer to make sure they follow all new government regulations. (Cumplimiento normativo).", "options": ["Compliance", "Complaint", "Complete", "Command"], "correct_answer": "Compliance", "explanation": "Compliance = cumplimiento normativo/legal." },
+        { "id": "c2-63-q2", "type": "quiz_choice", "question": "The construction company paid $1 million in secret to the mayor to win the contract. This is ____. (Soborno).", "options": ["bribery", "robbery", "thievery", "burglary"], "correct_answer": "bribery", "explanation": "Bribery = soborno (el acto de dar o recibir sobornos)." },
+        { "id": "c2-63-q3", "type": "quiz_choice", "question": "Over five years, the finance director secretly transferred $500,000 of company money to his personal account. This is ____. (Desfalco/Malversación).", "options": ["embezzlement", "pickpocketing", "extortion", "blackmail"], "correct_answer": "embezzlement", "explanation": "Embezzlement = malversación de fondos/robar a tu propia empresa." },
+        { "id": "c2-63-q4", "type": "quiz_choice", "question": "The drug cartel bought a chain of restaurants to hide the illegal origins of their cash. This is money ____. (Lavado de dinero).", "options": ["laundering", "washing", "cleaning", "drying"], "correct_answer": "laundering", "explanation": "Money laundering = lavado de dinero." },
+        { "id": "c2-63-q5", "type": "quiz_choice", "question": "You cannot be the judge in this competition because your daughter is one of the participants. That's a clear ____ of interest. (Conflicto).", "options": ["conflict", "clash", "fight", "battle"], "correct_answer": "conflict", "explanation": "Conflict of interest = conflicto de intereses." },
+        { "id": "c2-63-q6", "type": "quiz_choice", "question": "Modern investors don't just look at profits; they look at ____ criteria (Environmental, Social, and Governance).", "options": ["ESG", "EGS", "SGE", "GSE"], "correct_answer": "ESG", "explanation": "ESG = Ambiental, Social y Gobernanza." },
+        { "id": "c2-63-q7", "type": "quiz_choice", "question": "The CEO hired his lazy, unqualified nephew as Vice President. The other employees are furious about the ____. (Nepotismo).", "options": ["nepotism", "cronyism", "favoritism", "heroism"], "correct_answer": "nepotism", "explanation": "Nepotism = nepotismo (favorecer a familiares)." },
+        { "id": "c2-63-q8", "type": "quiz_choice", "question": "Buying or selling shares in a public company based on secret, confidential information is called ____ trading. (Uso de información privilegiada).", "options": ["insider", "outsider", "secret", "hidden"], "correct_answer": "insider", "explanation": "Insider trading = uso ilegal de información privilegiada en la bolsa." },
+        { "id": "c2-63-q9", "type": "quiz_choice", "question": "To force someone to give you money by threatening to reveal a damaging secret about them is ____. (Chantaje).", "options": ["blackmail", "whitemail", "extortion", "bribery"], "correct_answer": "blackmail", "explanation": "Blackmail = chantaje." },
+        { "id": "c2-63-q10", "type": "quiz_choice", "question": "Using force, threats, or violence to obtain money from a business is ____. (Extorsión).", "options": ["extortion", "distortion", "contortion", "bribery"], "correct_answer": "extortion", "explanation": "Extortion = extorsión (usando fuerza o amenaza de violencia)." },
+        { "id": "c2-63-q11", "type": "quiz_choice", "question": "A secret payment made as a reward for facilitating a legal or illegal business deal is called a ____. (Soborno/Comisión ilegal).", "options": ["kickback", "throwback", "pushback", "giveback"], "correct_answer": "kickback", "explanation": "A kickback = una 'mordida' o comisión ilegal." },
+        { "id": "c2-63-q12", "type": "quiz_choice", "question": "An attempt to secretly hide illegal activities from the public or authorities is a ____. (Encubrimiento).", "options": ["cover-up", "hide-out", "shut-down", "close-up"], "correct_answer": "cover-up", "explanation": "Cover-up = encubrimiento." },
+        { "id": "c2-63-q13", "type": "quiz_choice", "question": "The employee who secretly reported the company's illegal dumping of chemicals to the EPA is a ____. (Denunciante).", "options": ["whistleblower", "bellringer", "alarmist", "traitor"], "correct_answer": "whistleblower", "explanation": "Whistleblower = denunciante interno." },
+        { "id": "c2-63-q14", "type": "quiz_choice", "question": "Falsifying the financial records of a company to make it look more profitable is called 'cooking the ____'. (Falsificar los libros/cuentas).", "options": ["books", "meals", "numbers", "data"], "correct_answer": "books", "explanation": "Cooking the books = falsificar la contabilidad." },
+        { "id": "c2-63-q15", "type": "quiz_choice", "question": "The moral principles that govern a person's behavior or the conducting of an activity are called ____. (Ética).", "options": ["ethics", "morals", "rules", "laws"], "correct_answer": "ethics", "explanation": "Ethics = ética." },
+        { "id": "c2-63-q16", "type": "quiz_choice", "question": "Taking credit for someone else's idea or work in a corporate environment is considered highly ____. (Poco ético).", "options": ["unethical", "illegal", "criminal", "rude"], "correct_answer": "unethical", "explanation": "Unethical = poco ético." },
+        { "id": "c2-63-q17", "type": "quiz_choice", "question": "A set of rules outlining the responsibilities or proper practices for an individual or organization is a Code of ____. (Código de conducta).", "options": ["Conduct", "Action", "Behavior", "Rules"], "correct_answer": "Conduct", "explanation": "Code of Conduct = Código de Conducta." },
+        { "id": "c2-63-q18", "type": "quiz_choice", "question": "The duty of a board of directors to act in the best financial interest of the shareholders is their ____ duty. (Deber fiduciario).", "options": ["fiduciary", "financial", "friendly", "formal"], "correct_answer": "fiduciary", "explanation": "Fiduciary duty = deber fiduciario (lealtad financiera extrema a los clientes o accionistas)." },
+        { "id": "c2-63-q19", "type": "quiz_choice", "question": "If you don't declare all your income to the government, you are committing tax ____. (Evasión fiscal, que es ILEGAL).", "options": ["evasion", "avoidance", "running", "hiding"], "correct_answer": "evasion", "explanation": "Tax evasion = evasión fiscal (ilegal). Tax avoidance = elusión fiscal (legal)." },
+        { "id": "c2-63-q20", "type": "quiz_choice", "question": "A fraudulent investment operation where earlier investors are paid with money given by newer investors is a ____ scheme. (Esquema Ponzi).", "options": ["Ponzi", "Pyramid", "Triangle", "Square"], "correct_answer": "Ponzi", "explanation": "Ponzi scheme = esquema Ponzi (una estafa de inversión piramidal específica)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término ético/legal.",
+      "questions": [
+        { "id": "c2-63-f1", "type": "fill_input", "question": "Ensure ____. (Cumplimiento normativo con C)", "correct_answer": "compliance", "explanation": "compliance." },
+        { "id": "c2-63-f2", "type": "fill_input", "question": "Arrested for ____. (Soborno con B)", "correct_answer": "bribery", "explanation": "bribery." },
+        { "id": "c2-63-f3", "type": "fill_input", "question": "Jail for ____. (Malversación de fondos con E)", "correct_answer": "embezzlement", "explanation": "embezzlement." },
+        { "id": "c2-63-f4", "type": "fill_input", "question": "Money ____. (Lavado de dinero con L)", "correct_answer": "laundering", "explanation": "laundering." },
+        { "id": "c2-63-f5", "type": "fill_input", "question": "____ of interest. (Conflicto con C)", "correct_answer": "Conflict", "explanation": "Conflict." },
+        { "id": "c2-63-f6", "type": "fill_input", "question": "Strict ____ policies. (Ambiental, Social y Gobernanza con E)", "correct_answer": "ESG", "explanation": "ESG." },
+        { "id": "c2-63-f7", "type": "fill_input", "question": "Pure ____. (Nepotismo con N)", "correct_answer": "nepotism", "explanation": "nepotism." },
+        { "id": "c2-63-f8", "type": "fill_input", "question": "____ trading. (Uso de información privilegiada con I)", "correct_answer": "Insider", "explanation": "Insider." },
+        { "id": "c2-63-f9", "type": "fill_input", "question": "A secret ____. (Mordida/Comisión ilegal con K)", "correct_answer": "kickback", "explanation": "kickback." },
+        { "id": "c2-63-f10", "type": "fill_input", "question": "Code of ____. (Código de conducta con C)", "correct_answer": "Conduct", "explanation": "Conduct." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Ethics Match",
+      "pairs": [
+        {"id": "c2-63-p1", "source": "Compliance", "target": "Cumplimiento normativo y legal"},
+        {"id": "c2-63-p2", "source": "Bribery", "target": "Soborno a alguien externo"},
+        {"id": "c2-63-p3", "source": "Embezzlement", "target": "Desfalco o robo interno a tu empresa"},
+        {"id": "c2-63-p4", "source": "Money laundering", "target": "Lavado de dinero ilegal"},
+        {"id": "c2-63-p5", "source": "Conflict of interest", "target": "Conflicto de intereses"},
+        {"id": "c2-63-p6", "source": "ESG", "target": "Ambiental, Social y de Gobernanza"},
+        {"id": "c2-63-p7", "source": "Nepotism", "target": "Nepotismo (favorecer a familiares)"},
+        {"id": "c2-63-p8", "source": "Insider trading", "target": "Uso de información privilegiada en bolsa"},
+        {"id": "c2-63-p9", "source": "Kickback", "target": "Mordida o comisión ilegal"},
+        {"id": "c2-63-p10", "source": "Cooking the books", "target": "Falsificar la contabilidad"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase ética.",
+      "questions": [
+        { "id": "c2-63-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We strictly enforce compliance.", "options": ["We strictly enforce compliance.", "They strictly enforce compliance.", "We strictly enforced compliance.", "We strictly enforce complaints."], "correct_answer": "We strictly enforce compliance.", "explanation": "Audio exacto." },
+        { "id": "c2-63-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He was arrested for bribery.", "options": ["He was arrested for bribery.", "She was arrested for bribery.", "He is arrested for bribery.", "He was arrested for robbery."], "correct_answer": "He was arrested for bribery.", "explanation": "Audio exacto." },
+        { "id": "c2-63-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a massive embezzlement.", "options": ["It is a massive embezzlement.", "It was a massive embezzlement.", "This is a massive embezzlement.", "It is a massive settlement."], "correct_answer": "It is a massive embezzlement.", "explanation": "Audio exacto." },
+        { "id": "c2-63-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Arrested for money laundering.", "options": ["Arrested for money laundering.", "Arrested for money wandering.", "Arresting for money laundering.", "Arrested for the money laundering."], "correct_answer": "Arrested for money laundering.", "explanation": "Audio exacto." },
+        { "id": "c2-63-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A clear conflict of interest.", "options": ["A clear conflict of interest.", "A clean conflict of interest.", "The clear conflict of interest.", "A clear conflict of interests."], "correct_answer": "A clear conflict of interest.", "explanation": "Audio exacto." },
+        { "id": "c2-63-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have strong ESG policies.", "options": ["We have strong ESG policies.", "They have strong ESG policies.", "We had strong ESG policies.", "We have a strong ESG policy."], "correct_answer": "We have strong ESG policies.", "explanation": "Audio exacto." },
+        { "id": "c2-63-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Hiring his son is nepotism.", "options": ["Hiring his son is nepotism.", "Hiring her son is nepotism.", "Hiring his sun is nepotism.", "Hired his son is nepotism."], "correct_answer": "Hiring his son is nepotism.", "explanation": "Audio exacto." },
+        { "id": "c2-63-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He was guilty of insider trading.", "options": ["He was guilty of insider trading.", "She was guilty of insider trading.", "He is guilty of insider trading.", "He was guilty of outsider trading."], "correct_answer": "He was guilty of insider trading.", "explanation": "Audio exacto." },
+        { "id": "c2-63-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He demanded a kickback.", "options": ["He demanded a kickback.", "She demanded a kickback.", "He demands a kickback.", "He demanded the kickback."], "correct_answer": "He demanded a kickback.", "explanation": "Audio exacto." },
+        { "id": "c2-63-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They were cooking the books.", "options": ["They were cooking the books.", "We were cooking the books.", "They are cooking the books.", "They were cooking the book."], "correct_answer": "They were cooking the books.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

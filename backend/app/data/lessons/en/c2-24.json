@@ -1,0 +1,101 @@
+{
+  "id": "c2-24",
+  "title": "The Global Economy",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Economy", "Finance", "Macroeconomics", "Global"],
+  "completion_message": "¡Excelente! Entender la macroeconomía es lo que diferencia a un gerente de un líder global. Conceptos como 'Inflation', 'Quantitative Easing' o distinguir un 'Bear Market' de un 'Bull Market' te permiten leer el mundo y anticipar el futuro.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "La Economía Global y Macroeconomía (C2)",
+      "parts": [
+        { "visual": "1. Inflation / Deflation (Inflación / Deflación): \n- Inflación: Aumento general de los precios y caída del poder adquisitivo. \n- Deflación: Caída general de los precios. \nEj: Rampant INFLATION is destroying the middle class's purchasing power. \n\n2. Interest rates (Tasas de interés): \n- El costo de pedir dinero prestado. \nEj: The central bank raised INTEREST RATES to combat inflation. \n\n3. Quantitative Easing (Expansión cuantitativa): \n- Cuando un banco central compra activos financieros para inyectar dinero en la economía. \nEj: The government announced a new round of QUANTITATIVE EASING.", "audio": "Welcome to The Global Economy and Macroeconomics. Number 1: Inflation and Deflation. Inflation is a general increase in prices and fall in the purchasing value of money. Deflation is a decrease in prices. For example: Rampant INFLATION is destroying the middle class's purchasing power. Number 2: Interest rates. This is the cost of borrowing money. For example: The central bank raised INTEREST RATES to combat inflation. Number 3: Quantitative Easing. This happens when a central bank buys financial assets to inject money into the economy. For example: The government announced a new round of QUANTITATIVE EASING." },
+        { "visual": "4. Bear Market vs Bull Market: \n- Bear Market (Mercado bajista): Mercado donde los precios de las acciones caen. \n- Bull Market (Mercado alcista): Mercado donde los precios suben. \nEj: We have been in a BULL MARKET for the past five years. \n\n5. Supply chain (Cadena de suministro): \n- La red de individuos, empresas, recursos y tecnología involucrados en la creación y venta de un producto. \nEj: The pandemic caused massive GLOBAL SUPPLY CHAIN disruptions. \n\n6. GDP - Gross Domestic Product (PIB - Producto Interno Bruto): \n- El valor total de los bienes producidos y servicios prestados en un país durante un año. \nEj: The country's GDP grew by 3% this quarter.", "audio": "Number 4: Bear Market versus Bull Market. A Bear Market is when stock prices are falling. A Bull Market is when prices are rising. For example: We have been in a BULL MARKET for the past five years. Number 5: Supply chain. The network involved in the creation and sale of a product. For example: The pandemic caused massive GLOBAL SUPPLY CHAIN disruptions. Number 6: GDP, which stands for Gross Domestic Product. The total value of goods produced and services provided in a country. For example: The country's GDP grew by 3 percent this quarter." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término macroeconómico correcto.",
+      "questions": [
+        { "id": "c2-24-q1", "type": "quiz_choice", "question": "The central bank decided to lower ____ rates to encourage people to borrow and spend money. (Tasas de interés).", "options": ["interest", "interesting", "bank", "borrow"], "correct_answer": "interest", "explanation": "Interest rates = tasas de interés." },
+        { "id": "c2-24-q2", "type": "quiz_choice", "question": "High ____ means your money buys less today than it did yesterday. (Inflación).", "options": ["inflation", "deflation", "flation", "inflationary"], "correct_answer": "inflation", "explanation": "Inflation = inflación." },
+        { "id": "c2-24-q3", "type": "quiz_choice", "question": "A stock market characterized by falling prices and pessimism is a ____ market.", "options": ["bear", "bull", "lion", "tiger"], "correct_answer": "bear", "explanation": "Bear market = mercado bajista (el oso ataca hacia abajo)." },
+        { "id": "c2-24-q4", "type": "quiz_choice", "question": "A stock market characterized by rising prices and optimism is a ____ market.", "options": ["bull", "bear", "cow", "horse"], "correct_answer": "bull", "explanation": "Bull market = mercado alcista (el toro ataca hacia arriba)." },
+        { "id": "c2-24-q5", "type": "quiz_choice", "question": "The total value of goods and services produced by a country in one year is its Gross ____ Product (GDP).", "options": ["Domestic", "Internal", "National", "Global"], "correct_answer": "Domestic", "explanation": "Gross Domestic Product (GDP) = Producto Interno Bruto (PIB)." },
+        { "id": "c2-24-q6", "type": "quiz_choice", "question": "The global ____ chain was severely disrupted, causing shortages of microchips worldwide. (Cadena de suministro).", "options": ["supply", "demand", "production", "delivery"], "correct_answer": "supply", "explanation": "Supply chain = cadena de suministro." },
+        { "id": "c2-24-q7", "type": "quiz_choice", "question": "When a central bank creates money to buy government bonds and inject liquidity, it's called Quantitative ____.", "options": ["Easing", "Hardening", "Softening", "Printing"], "correct_answer": "Easing", "explanation": "Quantitative Easing (QE) = expansión cuantitativa." },
+        { "id": "c2-24-q8", "type": "quiz_choice", "question": "A prolonged period of economic decline, typically defined as two consecutive quarters of negative GDP growth, is a ____.", "options": ["recession", "depression", "boom", "bubble"], "correct_answer": "recession", "explanation": "Recession = recesión económica." },
+        { "id": "c2-24-q9", "type": "quiz_choice", "question": "A severe and prolonged downturn in economic activity is known as an economic ____.", "options": ["depression", "recession", "inflation", "crash"], "correct_answer": "depression", "explanation": "Depression = depresión económica (más grave y larga que una recesión)." },
+        { "id": "c2-24-q10", "type": "quiz_choice", "question": "The amount of goods and services that a unit of currency can buy is its ____ power.", "options": ["purchasing", "buying", "spending", "shopping"], "correct_answer": "purchasing", "explanation": "Purchasing power = poder adquisitivo." },
+        { "id": "c2-24-q11", "type": "quiz_choice", "question": "The difference in value between a country's imports and exports is its balance of ____.", "options": ["trade", "money", "goods", "exchange"], "correct_answer": "trade", "explanation": "Balance of trade = balanza comercial." },
+        { "id": "c2-24-q12", "type": "quiz_choice", "question": "Taxes imposed on imported goods and services are called ____. (Aranceles).", "options": ["tariffs", "fees", "tolls", "costs"], "correct_answer": "tariffs", "explanation": "Tariffs = aranceles." },
+        { "id": "c2-24-q13", "type": "quiz_choice", "question": "When the government spends more money than it takes in from taxes, it creates a budget ____. (Déficit).", "options": ["deficit", "surplus", "debt", "loan"], "correct_answer": "deficit", "explanation": "Budget deficit = déficit presupuestario." },
+        { "id": "c2-24-q14", "type": "quiz_choice", "question": "When inflation is high, economic growth rate slows, and unemployment remains steadily high, the economy experiences ____.", "options": ["stagflation", "deflation", "hyperinflation", "inflation"], "correct_answer": "stagflation", "explanation": "Stagflation = estanflación (estancamiento + inflación)." },
+        { "id": "c2-24-q15", "type": "quiz_choice", "question": "The total amount of money that a country's government has borrowed is the national ____.", "options": ["debt", "loan", "credit", "deficit"], "correct_answer": "debt", "explanation": "National debt = deuda nacional." },
+        { "id": "c2-24-q16", "type": "quiz_choice", "question": "A financial ____ occurs when the price of an asset, like housing, rises far above its actual value and then suddenly drops.", "options": ["bubble", "balloon", "boom", "crash"], "correct_answer": "bubble", "explanation": "Bubble = burbuja económica (ej: housing bubble)." },
+        { "id": "c2-24-q17", "type": "quiz_choice", "question": "A basic physical asset that is interchangeable with other goods of the same type (like oil, gold, or wheat) is a ____.", "options": ["commodity", "stock", "bond", "currency"], "correct_answer": "commodity", "explanation": "Commodity = materia prima / producto básico." },
+        { "id": "c2-24-q18", "type": "quiz_choice", "question": "A tax levied on the purchase of goods and services is known as Value-____ Tax (VAT).", "options": ["Added", "Extra", "Plus", "High"], "correct_answer": "Added", "explanation": "Value-Added Tax (VAT) = Impuesto al Valor Agregado (IVA)." },
+        { "id": "c2-24-q19", "type": "quiz_choice", "question": "The bank that provides financial and banking services for a country's government and commercial banking system is the ____ bank.", "options": ["central", "main", "federal", "national"], "correct_answer": "central", "explanation": "Central bank = banco central (ej: la Reserva Federal)." },
+        { "id": "c2-24-q20", "type": "quiz_choice", "question": "If inflation gets completely out of control, causing prices to rise extremely rapidly, it is called ____. (Hiperinflación).", "options": ["hyperinflation", "superinflation", "megainflation", "ultrainflation"], "correct_answer": "hyperinflation", "explanation": "Hyperinflation = hiperinflación." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término económico correcto.",
+      "questions": [
+        { "id": "c2-24-f1", "type": "fill_input", "question": "High ____. (Inflación con I)", "correct_answer": "inflation", "explanation": "inflation." },
+        { "id": "c2-24-f2", "type": "fill_input", "question": "____ rates. (Tasas de interés con I)", "correct_answer": "Interest", "explanation": "Interest." },
+        { "id": "c2-24-f3", "type": "fill_input", "question": "A ____ market. (Mercado bajista con B)", "correct_answer": "bear", "explanation": "bear." },
+        { "id": "c2-24-f4", "type": "fill_input", "question": "A ____ market. (Mercado alcista con B)", "correct_answer": "bull", "explanation": "bull." },
+        { "id": "c2-24-f5", "type": "fill_input", "question": "Gross Domestic ____. (Producto Interno Bruto con P)", "correct_answer": "Product", "explanation": "Product." },
+        { "id": "c2-24-f6", "type": "fill_input", "question": "Global ____ chain. (Cadena de suministro con S)", "correct_answer": "supply", "explanation": "supply." },
+        { "id": "c2-24-f7", "type": "fill_input", "question": "Quantitative ____. (Expansión cuantitativa con E)", "correct_answer": "Easing", "explanation": "Easing." },
+        { "id": "c2-24-f8", "type": "fill_input", "question": "Economic ____. (Recesión con R)", "correct_answer": "recession", "explanation": "recession." },
+        { "id": "c2-24-f9", "type": "fill_input", "question": "Budget ____. (Déficit con D)", "correct_answer": "deficit", "explanation": "deficit." },
+        { "id": "c2-24-f10", "type": "fill_input", "question": "A housing ____. (Burbuja inmobiliaria con B)", "correct_answer": "bubble", "explanation": "bubble." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Economy Match",
+      "pairs": [
+        {"id": "c2-24-p1", "source": "Inflation", "target": "Inflación (aumento de precios)"},
+        {"id": "c2-24-p2", "source": "Interest rates", "target": "Tasas de interés"},
+        {"id": "c2-24-p3", "source": "Bear market", "target": "Mercado bajista (pesimista)"},
+        {"id": "c2-24-p4", "source": "Bull market", "target": "Mercado alcista (optimista)"},
+        {"id": "c2-24-p5", "source": "GDP", "target": "PIB (Producto Interno Bruto)"},
+        {"id": "c2-24-p6", "source": "Supply chain", "target": "Cadena de suministro"},
+        {"id": "c2-24-p7", "source": "Quantitative Easing", "target": "Expansión cuantitativa"},
+        {"id": "c2-24-p8", "source": "Recession", "target": "Recesión económica"},
+        {"id": "c2-24-p9", "source": "Purchasing power", "target": "Poder adquisitivo"},
+        {"id": "c2-24-p10", "source": "Budget deficit", "target": "Déficit presupuestario"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase económica correcta.",
+      "questions": [
+        { "id": "c2-24-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Inflation is rising rapidly.", "options": ["Inflation is rising rapidly.", "Deflation is rising rapidly.", "Inflation was rising rapidly.", "Inflation is falling rapidly."], "correct_answer": "Inflation is rising rapidly.", "explanation": "Audio exacto." },
+        { "id": "c2-24-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They raised interest rates.", "options": ["They raised interest rates.", "We raised interest rates.", "They raise interest rates.", "They raised the interest rates."], "correct_answer": "They raised interest rates.", "explanation": "Audio exacto." },
+        { "id": "c2-24-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are in a bear market.", "options": ["We are in a bear market.", "They are in a bear market.", "We were in a bear market.", "We are in a bull market."], "correct_answer": "We are in a bear market.", "explanation": "Audio exacto." },
+        { "id": "c2-24-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It has been a bull market.", "options": ["It has been a bull market.", "It had been a bull market.", "It has been a bear market.", "He has been a bull market."], "correct_answer": "It has been a bull market.", "explanation": "Audio exacto." },
+        { "id": "c2-24-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "GDP grew by two percent.", "options": ["GDP grew by two percent.", "GDP grows by two percent.", "GDP grew by three percent.", "The GDP grew by two percent."], "correct_answer": "GDP grew by two percent.", "explanation": "Audio exacto." },
+        { "id": "c2-24-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The supply chain is broken.", "options": ["The supply chain is broken.", "A supply chain is broken.", "The supply chain was broken.", "His supply chain is broken."], "correct_answer": "The supply chain is broken.", "explanation": "Audio exacto." },
+        { "id": "c2-24-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They started quantitative easing.", "options": ["They started quantitative easing.", "We started quantitative easing.", "He started quantitative easing.", "They start quantitative easing."], "correct_answer": "They started quantitative easing.", "explanation": "Audio exacto." },
+        { "id": "c2-24-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We avoided a recession.", "options": ["We avoided a recession.", "They avoided a recession.", "We avoid a recession.", "He avoided a recession."], "correct_answer": "We avoided a recession.", "explanation": "Audio exacto." },
+        { "id": "c2-24-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Purchasing power has dropped.", "options": ["Purchasing power has dropped.", "Purchasing power had dropped.", "Purchasing power is dropped.", "The purchasing power has dropped."], "correct_answer": "Purchasing power has dropped.", "explanation": "Audio exacto." },
+        { "id": "c2-24-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The housing bubble burst.", "options": ["The housing bubble burst.", "A housing bubble burst.", "The house bubble burst.", "The housing bubble broke."], "correct_answer": "The housing bubble burst.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

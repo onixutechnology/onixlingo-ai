@@ -1,0 +1,92 @@
+{
+  "id": "zh-a2-32",
+  "title": "El Gran Embudo del Tiempo",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Time", "Dates", "Numbers"],
+  "completion_message": "¡Misión cumplida! Ahora puedes dar fechas exactas como un verdadero hablante nativo. El embudo del tiempo no tiene secretos para ti.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "De Mayor a Menor",
+      "parts": [
+        {
+          "visual": "Día del Mes: 号 (hào)\n\nYa sabes decir los meses. Para decir el DÍA del mes, usamos la palabra 号 (hào - 4to tono), que significa 'número' o 'marca'.\n- Día 5: 五号 (wǔ hào).\n- Día 25: 二十五号 (èr shí wǔ hào).\n\nPara preguntar '¿Qué fecha/día del mes es hoy?':\n- 今天几号？(Jīntiān jǐ hào?). Literalmente: Hoy cuántos números.\n\nNota: En el lenguaje escrito o noticias de TV se usa 日 (rì) en lugar de hào, pero hào es el rey indiscutible al hablar.",
+          "audio": "Hoy completaremos el calendario. Para decir en qué día del mes estamos, usamos la palabra hào. Cuarto tono hacia abajo. Hào. Hào significa literalmente número o marca. Así que si hoy es el día 5 del mes, simplemente dices Wǔ hào. Si es 25, dices Èr shí wǔ hào. Y si quieres preguntarle a un amigo '¿Qué fecha es hoy?', usas la palabra 'jǐ' que aprendimos en la lección pasada. Jīntiān jǐ hào. Hoy, ¿cuántos números? Es una forma muy rápida y directa de preguntar el día del mes."
+        },
+        {
+          "visual": "El Año: 年 (nián) y Cero: 零 (líng)\n\nEl Año se dice 年 (nián - 2do tono).\nUna regla especial de los años en chino: ¡NO se leen como números grandes!\nEl año 2024 NO se dice 'Dos mil veinticuatro'. Se lee DÍGITO POR DÍGITO: Dos, Cero, Dos, Cuatro.\n- Cero: 零 (líng - 2do tono).\n- 2024: 二零二四年 (Èr líng èr sì nián).\n\nEl Gran Embudo Chino (Orden estricto):\nEn Occidente decimos: Día - Mes - Año (25 de mayo de 2024).\nEn China el tiempo fluye como un embudo, SIEMPRE de lo MÁS GRANDE a lo MÁS PEQUEÑO:\nAÑO -> MES -> DÍA.\n- 25 de Mayo de 2024: 2024年 5月 25号 (Èr líng èr sì nián, wǔ yuè, èr shí wǔ hào).",
+          "audio": "Ahora viene la regla más importante de la mentalidad china. El Gran Embudo. En China, todo va de mayor a menor jerarquía. El tiempo también. Mientras en español decimos el día primero, el mes en medio y el año al final... en chino es exactamente al revés. Año, Mes, Día. Como una pirámide invertida. El año se dice Nián. Y hay un truco buenísimo: los años no se leen como números gigantes de miles. Se leen dígito por dígito. Para el año 2024, necesitas aprender a decir el Cero. Cero se dice Líng. Así que 2024 se dice: Dos, cero, dos, cuatro. Èr líng èr sì nián. Juntando el embudo, el 25 de mayo de 2024 sería: Èr líng èr sì nián, wǔ yuè, èr shí wǔ hào."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Viaja en el tiempo y demuestra que puedes leer fechas en chino.",
+      "questions": [
+        { "id": "zh-a2-32-q1", "type": "quiz_choice", "question": "¿Qué palabra se usa en el lenguaje hablado para decir el 'Día del mes'?", "options": ["Hào (号).", "Tiān (天).", "Yuè (月).", "Nián (年)."], "correct_answer": "Hào (号).", "explanation": "Hào significa 'número' o 'marca' y es la forma estándar de dar la fecha del mes al hablar." },
+        { "id": "zh-a2-32-q2", "type": "quiz_choice", "question": "¿Cómo preguntas '¿Qué día del mes es hoy?'", "options": ["Jīntiān jǐ hào? (今天几号？).", "Jīntiān jǐ yuè? (今天几月？).", "Jīntiān duōshao? (今天多少？).", "Jīntiān jǐ tiān? (今天几天？)."], "correct_answer": "Jīntiān jǐ hào? (今天几号？).", "explanation": "Hoy (Jīntiān) + cuántos (jǐ) + día del mes (hào)." },
+        { "id": "zh-a2-32-q3", "type": "quiz_choice", "question": "Vocabulario: ¿Cómo se dice 'Año' en chino?", "options": ["Nián (年).", "Yuè (月).", "Hào (号).", "Xīngqī (星期)."], "correct_answer": "Nián (年).", "explanation": "Nián (2do tono) significa Año." },
+        { "id": "zh-a2-32-q4", "type": "quiz_choice", "question": "¿Cómo se leen los años en chino?", "options": ["Dígito por dígito, seguido de la palabra 'Nián'.", "Como un número grande completo (ej. Dos mil veinticuatro).", "Se leen solo los últimos dos dígitos.", "No se pronuncia la palabra 'Nián'."], "correct_answer": "Dígito por dígito, seguido de la palabra 'Nián'.", "explanation": "El año 2024 se lee 2-0-2-4 + Año." },
+        { "id": "zh-a2-32-q5", "type": "quiz_choice", "question": "Vocabulario clave: ¿Cómo se dice el número 'Cero'?", "options": ["Líng (零).", "Bǎi (百).", "Yī (一).", "Bù (不)."], "correct_answer": "Líng (零).", "explanation": "Líng (2do tono) es Cero." },
+        { "id": "zh-a2-32-q6", "type": "quiz_choice", "question": "¿Cómo se dice el año 2024?", "options": ["Èr líng èr sì nián (二零二四年).", "Liǎng qiān èr shí sì nián (两千二十四年).", "Nián èr líng èr sì (年二零二四).", "Èr bǎi èr sì nián (二百二四年)."], "correct_answer": "Èr líng èr sì nián (二零二四年).", "explanation": "Dos (èr) + cero (líng) + dos (èr) + cuatro (sì) + año (nián)." },
+        { "id": "zh-a2-32-q7", "type": "quiz_choice", "question": "La Regla del Gran Embudo: ¿Cuál es el orden correcto para decir una fecha completa en chino?", "options": ["Año - Mes - Día.", "Día - Mes - Año.", "Mes - Día - Año.", "Año - Día - Mes."], "correct_answer": "Año - Mes - Día.", "explanation": "El mandarín siempre va de la unidad más grande (Año) a la más pequeña (Día)." },
+        { "id": "zh-a2-32-q8", "type": "quiz_choice", "question": "Traduce correctamente el '8 de Octubre de 2020':", "options": ["2020 年 10 月 8 号 (Èr líng èr líng nián, shí yuè, bā hào).", "8 号 10 月 2020 年 (Bā hào, shí yuè, èr líng èr líng nián).", "10 月 8 号 2020 年 (Shí yuè, bā hào, èr líng èr líng nián).", "2020 10 8 (Èr líng èr líng shí bā)."], "correct_answer": "2020 年 10 月 8 号 (Èr líng èr líng nián, shí yuè, bā hào).", "explanation": "Año (2020) + Mes (10) + Día (8)." },
+        { "id": "zh-a2-32-q9", "type": "quiz_choice", "question": "¿Si quieres preguntar la fecha COMPLETA de hoy (mes y día), cómo lo dirías?", "options": ["Jīntiān jǐ yuè jǐ hào? (今天几月几号？).", "Jīntiān jǐ hào jǐ yuè? (今天几号几月？).", "Jīntiān duōshao tiān? (今天多少天？).", "Jīntiān shì shéi? (今天是谁？)."], "correct_answer": "Jīntiān jǐ yuè jǐ hào? (今天几月几号？).", "explanation": "Hoy (Jīntiān) + cuántos meses (jǐ yuè) + cuántos días (jǐ hào). Manteniendo el orden Mayor a Menor." },
+        { "id": "zh-a2-32-q10", "type": "quiz_choice", "question": "¿Qué significa: Jīntiān bā yuè wǔ hào (今天八月五号)?", "options": ["Hoy es el 5 de Agosto.", "Hoy es el 8 de Mayo.", "Ayer fue 5 de Agosto.", "Ayer fue 8 de Mayo."], "correct_answer": "Hoy es el 5 de Agosto.", "explanation": "Mes 8 (bā yuè) = Agosto. Día 5 (wǔ hào). Hoy es el 5 de Agosto." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para las fechas. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a2-32-f1", "type": "fill_input", "question": "Día del mes (Número): ____ (hao)", "correct_answer": "hao", "explanation": "hao" },
+        { "id": "zh-a2-32-f2", "type": "fill_input", "question": "Día 10: shi ____", "correct_answer": "hao", "explanation": "hao" },
+        { "id": "zh-a2-32-f3", "type": "fill_input", "question": "¿Qué día del mes es hoy?: jin tian ji ____", "correct_answer": "hao", "explanation": "hao" },
+        { "id": "zh-a2-32-f4", "type": "fill_input", "question": "Año: ____ (nian)", "correct_answer": "nian", "explanation": "nian" },
+        { "id": "zh-a2-32-f5", "type": "fill_input", "question": "Cero: ____ (ling)", "correct_answer": "ling", "explanation": "ling" },
+        { "id": "zh-a2-32-f6", "type": "fill_input", "question": "Año 2024: er ling er si ____", "correct_answer": "nian", "explanation": "nian" },
+        { "id": "zh-a2-32-f7", "type": "fill_input", "question": "Orden: Año (nian) -> Mes (yue) -> Día (____)", "correct_answer": "hao", "explanation": "hao" },
+        { "id": "zh-a2-32-f8", "type": "fill_input", "question": "¿Qué mes y qué día?: ji yue ji ____", "correct_answer": "hao", "explanation": "hao" },
+        { "id": "zh-a2-32-f9", "type": "fill_input", "question": "1 de Mayo: wu yue yi ____", "correct_answer": "hao", "explanation": "hao" },
+        { "id": "zh-a2-32-f10", "type": "fill_input", "question": "Año 2025: er ling er ____ nian (wu)", "correct_answer": "wu", "explanation": "wu" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y capta la fecha completa en el orden chino.",
+      "questions": [
+        { "id": "zh-a2-32-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "年", "options": ["Año", "Mes", "Día", "Semana"], "correct_answer": "Año", "explanation": "El audio dice: nián." },
+        { "id": "zh-a2-32-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "今天几号？", "options": ["¿Qué día (fecha) es hoy?", "¿Qué mes es hoy?", "¿Qué año es?", "¿Qué semana es?"], "correct_answer": "¿Qué día (fecha) es hoy?", "explanation": "El audio dice: Jīntiān jǐ hào?" },
+        { "id": "zh-a2-32-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "二零二四年", "options": ["Año 2024", "Año 2020", "Año 2022", "Año 2042"], "correct_answer": "Año 2024", "explanation": "El audio dice: Èr líng èr sì nián." },
+        { "id": "zh-a2-32-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "八月十号", "options": ["10 de Agosto", "8 de Octubre", "8 de Agosto", "10 de Octubre"], "correct_answer": "10 de Agosto", "explanation": "El audio dice: Bā yuè shí hào (Mes 8, Día 10)." },
+        { "id": "zh-a2-32-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "二零二四年三月五号", "options": ["5 de Marzo de 2024", "3 de Mayo de 2024", "2024 de Marzo de 5", "5 de Abril de 2024"], "correct_answer": "5 de Marzo de 2024", "explanation": "El audio dice: Èr líng èr sì nián (2024) sān yuè (Marzo) wǔ hào (Día 5)." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Dates",
+      "pairs": [
+        {"id": "zh-a2-32-p1", "source": "号 (hào)", "target": "Día del mes (Hablado)"},
+        {"id": "zh-a2-32-p2", "source": "年 (nián)", "target": "Año"},
+        {"id": "zh-a2-32-p3", "source": "零 (líng)", "target": "Cero"},
+        {"id": "zh-a2-32-p4", "source": "今天几号？(jīntiān jǐ hào?)", "target": "¿Qué fecha es hoy?"},
+        {"id": "zh-a2-32-p5", "source": "几月几号？(jǐ yuè jǐ hào?)", "target": "¿Qué mes y qué día?"},
+        {"id": "zh-a2-32-p6", "source": "二零二四年 (èr líng èr sì nián)", "target": "Año 2024 (2-0-2-4)"},
+        {"id": "zh-a2-32-p7", "source": "五月十号 (wǔ yuè shí hào)", "target": "10 de Mayo (Mes 5, Día 10)"},
+        {"id": "zh-a2-32-p8", "source": "十二月二十五号 (shí èr yuè èr shí wǔ hào)", "target": "25 de Diciembre"},
+        {"id": "zh-a2-32-p9", "source": "八号 (bā hào)", "target": "Día 8"},
+        {"id": "zh-a2-32-p10", "source": "顺序: 年月日 (Orden: nián yuè rì/hào)", "target": "Orden chino: Año - Mes - Día"}
+      ]
+    }
+  ]
+}

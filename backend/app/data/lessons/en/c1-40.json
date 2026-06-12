@@ -1,0 +1,101 @@
+{
+  "id": "c1-40",
+  "title": "C1 Milestone 8: Final Exam",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 1000,
+  "tags": ["C1", "Final Exam", "Milestone", "Grammar", "Vocabulary", "Advanced"],
+  "completion_message": "¡MAGNÍFICO! ¡Has completado oficialmente el nivel C1 de Inglés Corporativo! Tu dominio abarca desde complejas inversiones gramaticales y cleft sentences hasta el lenguaje estratégico de las juntas directivas. Tienes el nivel lingüístico de un líder global. ¡El mundo corporativo es tuyo!",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "The Grand C1 Final Exam",
+      "parts": [
+        { "visual": "¡Bienvenido al Examen Final de C1! \nEn este último desafío pondrás a prueba todo lo aprendido en el Nivel C1. \n\nGramática Avanzada: \n- Mixed Conditionals (If I had bought Bitcoin, I would be rich). \n- Inversion for Emphasis (Never have I seen...). \n- Advanced Cleft Sentences (What we need is... / It was the CEO who...). \n- Participle Clauses (Having signed the deal, we celebrated). \n- The Subjunctive (It is crucial that he resign).", "audio": "Welcome to the Grand C1 Final Exam! In this ultimate challenge, you will test everything you have learned in the C1 Level. We will review Advanced Grammar, including Mixed Conditionals, Inversion for Emphasis, Advanced Cleft Sentences, Participle Clauses, and the Subjunctive mood." },
+        { "visual": "Vocabulario Corporativo C1: \n- Finanzas, Fusiones y Adquisiciones (M&A, hostile takeover, IPO). \n- Estrategia (Pivot, benchmark, synergy). \n- Legal (Breach of contract, NDA, liability). \n- Crisis y PR (Damage control, whistleblower). \n- Idioms y Gobierno Corporativo (Cash cow, Board of Directors, Fiduciary duty). \n\n¡Demuestra que tienes la fluidez nativa de un alto ejecutivo!", "audio": "We will also test C1 Corporate Vocabulary. Topics include Finance, Mergers and Acquisitions, Strategy, Legal English, Crisis Management, PR, Advanced Idioms, and Corporate Governance. Prove that you have the native-like fluency of a top executive! Let's begin the final exam." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "C1 Final Certification Test",
+      "description": "Demuestra tu dominio absoluto del inglés corporativo nivel C1.",
+      "questions": [
+        { "id": "c1-40-q1", "type": "quiz_choice", "question": "Normal: I have never faced such a crisis. -> Inversion: Never ____ such a crisis.", "options": ["have I faced", "I have faced", "did I face", "face I"], "correct_answer": "have I faced", "explanation": "Inversión para dar énfasis: Never have I faced." },
+        { "id": "c1-40-q2", "type": "quiz_choice", "question": "If we ____ the competitor last year, we would be the market leaders today.", "options": ["had bought", "bought", "would have bought", "have bought"], "correct_answer": "had bought", "explanation": "Mixed Conditional (Pasado irreal -> Presente irreal): If we had bought." },
+        { "id": "c1-40-q3", "type": "quiz_choice", "question": "Normal: I only want a chance to present my idea. -> Cleft: ____ I want is a chance to present my idea.", "options": ["All", "What", "Everything", "Which"], "correct_answer": "All", "explanation": "All-Cleft: All I want is..." },
+        { "id": "c1-40-q4", "type": "quiz_choice", "question": "It is absolutely essential that the CFO ____ the financial report by tomorrow.", "options": ["sign", "signs", "signed", "signing"], "correct_answer": "sign", "explanation": "Subjunctive: that the CFO sign (forma base)." },
+        { "id": "c1-40-q5", "type": "quiz_choice", "question": "____ completed the audit, the accountants left the office.", "options": ["Having", "Have", "Had", "Being"], "correct_answer": "Having", "explanation": "Participle Clause de pasado: Having completed." },
+        { "id": "c1-40-q6", "type": "quiz_choice", "question": "The company's most profitable product, which requires little investment, is its ____ cow.", "options": ["cash", "gold", "money", "dollar"], "correct_answer": "cash", "explanation": "Idiom: cash cow." },
+        { "id": "c1-40-q7", "type": "quiz_choice", "question": "The Board of Directors fired him because he breached his ____ duty to the shareholders.", "options": ["fiduciary", "legal", "financial", "moral"], "correct_answer": "fiduciary", "explanation": "Fiduciary duty = deber fiduciario." },
+        { "id": "c1-40-q8", "type": "quiz_choice", "question": "The combination of two companies to create greater value than they would separately is called ____.", "options": ["synergy", "strategy", "energy", "fusion"], "correct_answer": "synergy", "explanation": "Synergy = sinergia." },
+        { "id": "c1-40-q9", "type": "quiz_choice", "question": "If you violate the terms of the NDA, we will sue you for ____ of contract.", "options": ["breach", "break", "crack", "snap"], "correct_answer": "breach", "explanation": "Breach of contract = incumplimiento de contrato." },
+        { "id": "c1-40-q10", "type": "quiz_choice", "question": "Due to the scandal, the PR team immediately went into ____ control.", "options": ["damage", "risk", "loss", "public"], "correct_answer": "damage", "explanation": "Damage control." },
+        { "id": "c1-40-q11", "type": "quiz_choice", "question": "Normal: People believe that the CEO stole the funds. -> Passive: The CEO is believed ____ the funds.", "options": ["to have stolen", "to steal", "stealing", "stole"], "correct_answer": "to have stolen", "explanation": "Reporting passive (acción pasada): to have stolen." },
+        { "id": "c1-40-q12", "type": "quiz_choice", "question": "To start selling shares to the public for the first time is an ____ (Initial Public Offering).", "options": ["IPO", "ROI", "KPI", "B2B"], "correct_answer": "IPO", "explanation": "IPO = Oferta Pública Inicial." },
+        { "id": "c1-40-q13", "type": "quiz_choice", "question": "Our competitor launched a ____ takeover by buying shares directly from the shareholders.", "options": ["hostile", "friendly", "angry", "aggressive"], "correct_answer": "hostile", "explanation": "Hostile takeover = OPA hostil." },
+        { "id": "c1-40-q14", "type": "quiz_choice", "question": "If I ____ you, I would accept the golden parachute and leave.", "options": ["were", "was", "am", "be"], "correct_answer": "were", "explanation": "Second conditional con to be: If I were you." },
+        { "id": "c1-40-q15", "type": "quiz_choice", "question": "Normal: The lack of cash flow caused the bankruptcy. -> Wh-Cleft: ____ caused the bankruptcy was the lack of cash flow.", "options": ["What", "That", "Which", "It"], "correct_answer": "What", "explanation": "Wh-Cleft: What caused..." },
+        { "id": "c1-40-q16", "type": "quiz_choice", "question": "We need to ____ the market if we want to establish a monopoly. (Acaparar).", "options": ["corner", "edge", "circle", "square"], "correct_answer": "corner", "explanation": "Corner the market." },
+        { "id": "c1-40-q17", "type": "quiz_choice", "question": "The employee who reported the illegal accounting practices to the media is a ____.", "options": ["whistleblower", "scapegoat", "spokesperson", "spy"], "correct_answer": "whistleblower", "explanation": "Whistleblower = denunciante." },
+        { "id": "c1-40-q18", "type": "quiz_choice", "question": "I ____ going to attend the meeting, but my flight was cancelled. (Future in the past).", "options": ["was", "am", "will", "would"], "correct_answer": "was", "explanation": "Future in the past: was going to." },
+        { "id": "c1-40-q19", "type": "quiz_choice", "question": "Under no circumstances ____ open this confidential file.", "options": ["should you", "you should", "you do", "do you should"], "correct_answer": "should you", "explanation": "Inversion con Under no circumstances: should you." },
+        { "id": "c1-40-q20", "type": "quiz_choice", "question": "Normal: The HR manager fired him. -> It-Cleft: ____ the HR manager who fired him.", "options": ["It was", "He was", "That was", "There was"], "correct_answer": "It was", "explanation": "It-Cleft: It was the HR manager who..." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta para completar la oración de nivel C1.",
+      "questions": [
+        { "id": "c1-40-f1", "type": "fill_input", "question": "If we ____ invested, we would be rich today. (Hubiéramos)", "correct_answer": "had", "explanation": "had." },
+        { "id": "c1-40-f2", "type": "fill_input", "question": "It is vital that she ____ the truth. (Subjuntivo - decir 'tell' sin la S)", "correct_answer": "tell", "explanation": "tell." },
+        { "id": "c1-40-f3", "type": "fill_input", "question": "____ finished the report, I went home. (Habiendo)", "correct_answer": "Having", "explanation": "Having." },
+        { "id": "c1-40-f4", "type": "fill_input", "question": "Never ____ I felt so insulted. (He)", "correct_answer": "have", "explanation": "have." },
+        { "id": "c1-40-f5", "type": "fill_input", "question": "____ we need is more time. (Lo que)", "correct_answer": "What", "explanation": "What." },
+        { "id": "c1-40-f6", "type": "fill_input", "question": "It ____ the CEO who signed it. (Fue)", "correct_answer": "was", "explanation": "was." },
+        { "id": "c1-40-f7", "type": "fill_input", "question": "____ I want is peace. (Todo lo que)", "correct_answer": "All", "explanation": "All." },
+        { "id": "c1-40-f8", "type": "fill_input", "question": "Breach of ____. (Contrato con C)", "correct_answer": "contract", "explanation": "contract." },
+        { "id": "c1-40-f9", "type": "fill_input", "question": "A cash ____. (Vaca lechera/rentable con C)", "correct_answer": "cow", "explanation": "cow." },
+        { "id": "c1-40-f10", "type": "fill_input", "question": "Fiduciary ____. (Deber con D)", "correct_answer": "duty", "explanation": "duty." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "C1 Grand Final Match",
+      "pairs": [
+        {"id": "c1-40-p1", "source": "Never have I seen", "target": "Nunca he visto (Inversión)"},
+        {"id": "c1-40-p2", "source": "What we need is", "target": "Lo que necesitamos es (Wh-Cleft)"},
+        {"id": "c1-40-p3", "source": "It was John who", "target": "Fue John quien (It-Cleft)"},
+        {"id": "c1-40-p4", "source": "Having analyzed the data", "target": "Habiendo analizado los datos"},
+        {"id": "c1-40-p5", "source": "It is crucial that he sign", "target": "Es crucial que él firme (Subjuntivo)"},
+        {"id": "c1-40-p6", "source": "Fiduciary duty", "target": "Deber fiduciario"},
+        {"id": "c1-40-p7", "source": "Hostile takeover", "target": "Adquisición hostil"},
+        {"id": "c1-40-p8", "source": "Damage control", "target": "Control de daños"},
+        {"id": "c1-40-p9", "source": "Cash cow", "target": "Producto muy rentable"},
+        {"id": "c1-40-p10", "source": "Whistleblower", "target": "Denunciante interno"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "C1 Grand Listening Test",
+      "description": "El desafío final auditivo del Nivel C1.",
+      "questions": [
+        { "id": "c1-40-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Never have I seen such incompetence.", "options": ["Never have I seen such incompetence.", "Never I have seen such incompetence.", "Never did I see such incompetence.", "Never have I see such incompetence."], "correct_answer": "Never have I seen such incompetence.", "explanation": "Audio exacto." },
+        { "id": "c1-40-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What we need is a hostile takeover.", "options": ["What we need is a hostile takeover.", "What we needed is a hostile takeover.", "That we need is a hostile takeover.", "What we need was a hostile takeover."], "correct_answer": "What we need is a hostile takeover.", "explanation": "Audio exacto." },
+        { "id": "c1-40-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is vital that she resign.", "options": ["It is vital that she resign.", "It is vital that she resigns.", "It was vital that she resign.", "It is vital that she resigned."], "correct_answer": "It is vital that she resign.", "explanation": "Audio exacto." },
+        { "id": "c1-40-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Having signed the NDA, we talked.", "options": ["Having signed the NDA, we talked.", "Having sign the NDA, we talked.", "Have signed the NDA, we talked.", "Having signing the NDA, we talked."], "correct_answer": "Having signed the NDA, we talked.", "explanation": "Audio exacto." },
+        { "id": "c1-40-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They breached their fiduciary duty.", "options": ["They breached their fiduciary duty.", "We breached their fiduciary duty.", "They breach their fiduciary duty.", "He breached his fiduciary duty."], "correct_answer": "They breached their fiduciary duty.", "explanation": "Audio exacto." },
+        { "id": "c1-40-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This software is our cash cow.", "options": ["This software is our cash cow.", "The software is our cash cow.", "This software was our cash cow.", "This software is your cash cow."], "correct_answer": "This software is our cash cow.", "explanation": "Audio exacto." },
+        { "id": "c1-40-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He received a massive golden parachute.", "options": ["He received a massive golden parachute.", "She received a massive golden parachute.", "He receives a massive golden parachute.", "He received a big golden parachute."], "correct_answer": "He received a massive golden parachute.", "explanation": "Audio exacto." },
+        { "id": "c1-40-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We cannot afford to cut corners.", "options": ["We cannot afford to cut corners.", "We can not afford to cut corners.", "They cannot afford to cut corners.", "We couldn't afford to cut corners."], "correct_answer": "We cannot afford to cut corners.", "explanation": "Audio exacto." },
+        { "id": "c1-40-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was the Chairman who spoke.", "options": ["It was the Chairman who spoke.", "It is the Chairman who spoke.", "It was the Chairperson who spoke.", "He was the Chairman who spoke."], "correct_answer": "It was the Chairman who spoke.", "explanation": "Audio exacto." },
+        { "id": "c1-40-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The whistleblower exposed the fraud.", "options": ["The whistleblower exposed the fraud.", "A whistleblower exposed the fraud.", "The whistleblower exposes the fraud.", "The whistleblower exposed a fraud."], "correct_answer": "The whistleblower exposed the fraud.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

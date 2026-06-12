@@ -1,0 +1,101 @@
+{
+  "id": "b1-11",
+  "title": "First Conditional (Real Possibilities)",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Conditionals", "Business"],
+  "completion_message": "¡Excelente! El Primer Condicional te permite hablar de resultados lógicos y negociar condiciones con seguridad.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Primer Condicional: Posibilidades Reales",
+      "parts": [
+        { "visual": "Usamos el Primer Condicional para hablar de situaciones reales o muy posibles en el futuro. \nEstructura: IF + Presente Simple , WILL + Verbo Base.", "audio": "We use the First Conditional to talk about real or very possible situations in the future. The structure is: If, plus Present Simple, comma, plus Will, plus a base verb." },
+        { "visual": "Ejemplos: IF we drop the price, we WILL sell more (Si bajamos el precio, venderemos más). \nIF you don't call the client, they WILL cancel the order (Si no llamas al cliente, cancelarán el pedido).", "audio": "Examples: If we drop the price, we will sell more. In negative: If you don't call the client, they will cancel the order." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del verbo para completar la oración condicional.",
+      "questions": [
+        { "id": "b1-11-q1", "type": "quiz_choice", "question": "If we launch the product today, we ____ a lot of money. (Haremos).", "options": ["will make", "make", "made", "would make"], "correct_answer": "will make", "explanation": "If + presente (launch), la consecuencia va con 'will' (will make)." },
+        { "id": "b1-11-q2", "type": "quiz_choice", "question": "If you ____ the deadline, the client will be angry. (Pierdes / No cumples).", "options": ["miss", "will miss", "missed", "missing"], "correct_answer": "miss", "explanation": "La condición (después de IF) va en presente simple (miss). No se usa 'will' justo después de 'if'." },
+        { "id": "b1-11-q3", "type": "quiz_choice", "question": "The company ____ bankrupt if we don't reduce expenses. (Irá).", "options": ["will go", "go", "goes", "went"], "correct_answer": "will go", "explanation": "La consecuencia va con 'will'. (The company will go... if we don't...)." },
+        { "id": "b1-11-q4", "type": "quiz_choice", "question": "If she ____ the contract, we will start the project. (Firma).", "options": ["signs", "sign", "will sign", "signed"], "correct_answer": "signs", "explanation": "If + presente simple. Para 'She', el verbo lleva 's' (signs)." },
+        { "id": "b1-11-q5", "type": "quiz_choice", "question": "If they don't accept our offer, we ____ another supplier. (Encontraremos).", "options": ["will find", "find", "found", "are finding"], "correct_answer": "will find", "explanation": "Consecuencia en futuro = will find." },
+        { "id": "b1-11-q6", "type": "quiz_choice", "question": "If I ____ to London, I will visit their headquarters. (Voy).", "options": ["go", "will go", "went", "goes"], "correct_answer": "go", "explanation": "Condición en presente = If I go." },
+        { "id": "b1-11-q7", "type": "quiz_choice", "question": "If we offer a 10% discount, ____ you buy in bulk? (¿Comprarás...?).", "options": ["will", "do", "are", "have"], "correct_answer": "will", "explanation": "Pregunta de consecuencia en futuro: will you buy...?" },
+        { "id": "b1-11-q8", "type": "quiz_choice", "question": "He will get promoted if he ____ this deal. (Cierra).", "options": ["closes", "close", "will close", "closed"], "correct_answer": "closes", "explanation": "If + presente (closes, porque es He)." },
+        { "id": "b1-11-q9", "type": "quiz_choice", "question": "If the price ____ too high, customers won't buy it. (Es).", "options": ["is", "will be", "be", "was"], "correct_answer": "is", "explanation": "If the price IS (presente del verbo be)." },
+        { "id": "b1-11-q10", "type": "quiz_choice", "question": "If you need help with the presentation, I ____ you. (Ayudaré).", "options": ["will help", "help", "helped", "am help"], "correct_answer": "will help", "explanation": "Consecuencia = I will help you." },
+        { "id": "b1-11-q11", "type": "quiz_choice", "question": "We won't reach our target if sales ____ drop. Wait, if sales DROP. (No alcanzaremos... si las ventas caen).", "options": ["drop", "will drop", "drops", "dropped"], "correct_answer": "drop", "explanation": "If sales (plural) drop (presente simple)." },
+        { "id": "b1-11-q12", "type": "quiz_choice", "question": "If the economy ____, we will expand our business. (Mejora).", "options": ["improves", "improve", "will improve", "improved"], "correct_answer": "improves", "explanation": "The economy = It -> presente simple: improves." },
+        { "id": "b1-11-q13", "type": "quiz_choice", "question": "What ____ you do if they reject the proposal? (¿Qué harás...?).", "options": ["will", "do", "are", "have"], "correct_answer": "will", "explanation": "What will you do...?" },
+        { "id": "b1-11-q14", "type": "quiz_choice", "question": "If we ____ early, we will avoid traffic. (Salimos).", "options": ["leave", "will leave", "leaves", "left"], "correct_answer": "leave", "explanation": "If we leave (presente)." },
+        { "id": "b1-11-q15", "type": "quiz_choice", "question": "You will lose the client if you ____ call them back today. (No llamas).", "options": ["don't", "won't", "doesn't", "didn't"], "correct_answer": "don't", "explanation": "Negativo en presente simple para 'you' = don't." },
+        { "id": "b1-11-q16", "type": "quiz_choice", "question": "If she ____ the report on time, the boss will be furious. (No entrega).", "options": ["doesn't submit", "don't submit", "won't submit", "didn't submit"], "correct_answer": "doesn't submit", "explanation": "Negativo en presente para 'She' = doesn't." },
+        { "id": "b1-11-q17", "type": "quiz_choice", "question": "If we invest in new technology, our productivity ____ increase. (Aumentará).", "options": ["will", "do", "does", "is"], "correct_answer": "will", "explanation": "Consecuencia = will increase." },
+        { "id": "b1-11-q18", "type": "quiz_choice", "question": "They ____ agree to the terms if we compromise. (Estarán de acuerdo).", "options": ["will", "do", "are", "have"], "correct_answer": "will", "explanation": "They will agree (Ellos aceptarán/estarán de acuerdo)." },
+        { "id": "b1-11-q19", "type": "quiz_choice", "question": "If the CEO ____, I will let you know. (Llega).", "options": ["arrives", "arrive", "will arrive", "arrived"], "correct_answer": "arrives", "explanation": "The CEO (He/She) -> arrives." },
+        { "id": "b1-11-q20", "type": "quiz_choice", "question": "We ____ hire more staff unless sales go up. (Unless = If not).", "options": ["won't", "don't", "doesn't", "aren't"], "correct_answer": "won't", "explanation": "No contrataremos (won't hire) a menos que las ventas suban." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Completa la oración condicional con el verbo en presente o futuro ('will' + verbo).",
+      "questions": [
+        { "id": "b1-11-f1", "type": "fill_input", "question": "If we launch it today, we ____ (make) a lot of money.", "correct_answer": "will make", "explanation": "Consecuencia = will make." },
+        { "id": "b1-11-f2", "type": "fill_input", "question": "If you ____ (miss) the deadline, they will be angry.", "correct_answer": "miss", "explanation": "Condición (después de if) = presente (miss)." },
+        { "id": "b1-11-f3", "type": "fill_input", "question": "If she ____ (sign) the contract, we will start.", "correct_answer": "signs", "explanation": "Condición para She = signs (con 's')." },
+        { "id": "b1-11-f4", "type": "fill_input", "question": "We ____ (find) a new supplier if they reject it.", "correct_answer": "will find", "explanation": "Consecuencia = will find." },
+        { "id": "b1-11-f5", "type": "fill_input", "question": "If I ____ (go) to London, I will visit them.", "correct_answer": "go", "explanation": "Condición para I = go." },
+        { "id": "b1-11-f6", "type": "fill_input", "question": "If the price ____ (be) too high, they won't buy.", "correct_answer": "is", "explanation": "El verbo 'be' para 'the price' (It) es 'is'." },
+        { "id": "b1-11-f7", "type": "fill_input", "question": "He will be promoted if he ____ (close) the deal.", "correct_answer": "closes", "explanation": "Para 'he' agregamos 's' = closes." },
+        { "id": "b1-11-f8", "type": "fill_input", "question": "If we ____ (leave) now, we will arrive on time.", "correct_answer": "leave", "explanation": "Presente = leave." },
+        { "id": "b1-11-f9", "type": "fill_input", "question": "I ____ (help) you if you need it.", "correct_answer": "will help", "explanation": "Consecuencia = will help." },
+        { "id": "b1-11-f10", "type": "fill_input", "question": "If she ____ (not call), we will lose the client.", "correct_answer": "doesn't call", "explanation": "Negativo para She = doesn't call." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Conditional Match",
+      "pairs": [
+        {"id": "b1-11-p1", "source": "If we drop the price...", "target": "...we will sell more."},
+        {"id": "b1-11-p2", "source": "If you don't call...", "target": "...they will cancel it."},
+        {"id": "b1-11-p3", "source": "If she signs the contract...", "target": "...we will start the project."},
+        {"id": "b1-11-p4", "source": "We will find a new supplier...", "target": "...if they reject our offer."},
+        {"id": "b1-11-p5", "source": "If I go to London...", "target": "...I will visit the office."},
+        {"id": "b1-11-p6", "source": "If the price is too high...", "target": "...customers won't buy it."},
+        {"id": "b1-11-p7", "source": "He will get promoted...", "target": "...if he closes the deal."},
+        {"id": "b1-11-p8", "source": "If the economy improves...", "target": "...we will expand."},
+        {"id": "b1-11-p9", "source": "What will you do...", "target": "...if they reject it?"},
+        {"id": "b1-11-p10", "source": "We won't hire more staff...", "target": "...unless sales go up."}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración condicional correcta.",
+      "questions": [
+        { "id": "b1-11-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If we drop the price, we will sell more.", "options": ["If we drop the price, we will sell more.", "If we drop the price, we sell more.", "If we drop the price, we would sell more.", "If we drop the price, we won't sell more."], "correct_answer": "If we drop the price, we will sell more.", "explanation": "Audio exacto." },
+        { "id": "b1-11-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If you don't call, they will cancel.", "options": ["If you don't call, they will cancel.", "If you don't call, they cancel.", "If you didn't call, they will cancel.", "If you won't call, they will cancel."], "correct_answer": "If you don't call, they will cancel.", "explanation": "Audio exacto." },
+        { "id": "b1-11-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If she signs the contract, we will start.", "options": ["If she signs the contract, we will start.", "If she sign the contract, we will start.", "If she signs the contract, we start.", "If she will sign the contract, we will start."], "correct_answer": "If she signs the contract, we will start.", "explanation": "Audio exacto." },
+        { "id": "b1-11-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will find a new supplier if they reject it.", "options": ["We will find a new supplier if they reject it.", "We find a new supplier if they reject it.", "We will find a new supplier if they rejected it.", "We find a new supplier if they will reject it."], "correct_answer": "We will find a new supplier if they reject it.", "explanation": "Audio exacto." },
+        { "id": "b1-11-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If I go to London, I will visit them.", "options": ["If I go to London, I will visit them.", "If I will go to London, I will visit them.", "If I go to London, I visit them.", "If I went to London, I will visit them."], "correct_answer": "If I go to London, I will visit them.", "explanation": "Audio exacto." },
+        { "id": "b1-11-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If the price is too high, they won't buy.", "options": ["If the price is too high, they won't buy.", "If the price is too high, they don't buy.", "If the price is too high, they wouldn't buy.", "If the price is too high, they will buy."], "correct_answer": "If the price is too high, they won't buy.", "explanation": "Audio exacto." },
+        { "id": "b1-11-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He will get promoted if he closes the deal.", "options": ["He will get promoted if he closes the deal.", "He gets promoted if he closes the deal.", "He will get promoted if he close the deal.", "He will get promoted if he will close the deal."], "correct_answer": "He will get promoted if he closes the deal.", "explanation": "Audio exacto." },
+        { "id": "b1-11-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If we leave now, we will arrive on time.", "options": ["If we leave now, we will arrive on time.", "If we left now, we will arrive on time.", "If we leave now, we arrive on time.", "If we will leave now, we will arrive on time."], "correct_answer": "If we leave now, we will arrive on time.", "explanation": "Audio exacto." },
+        { "id": "b1-11-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What will you do if they reject it?", "options": ["What will you do if they reject it?", "What do you do if they reject it?", "What will you do if they rejected it?", "What would you do if they reject it?"], "correct_answer": "What will you do if they reject it?", "explanation": "Audio exacto." },
+        { "id": "b1-11-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will help you if you need it.", "options": ["I will help you if you need it.", "I help you if you need it.", "I will help you if you will need it.", "I would help you if you need it."], "correct_answer": "I will help you if you need it.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

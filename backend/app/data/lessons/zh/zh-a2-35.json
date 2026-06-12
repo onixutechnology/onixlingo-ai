@@ -1,0 +1,92 @@
+{
+  "id": "zh-a2-35",
+  "title": "¿Qué Estás Haciendo?",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Verbs", "Present Continuous"],
+  "completion_message": "¡Zài zài zài! Has desbloqueado el presente continuo. Ya puedes reportar exactamente lo que estás haciendo en tiempo real.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Presente Continuo",
+      "parts": [
+        {
+          "visual": "Estar haciendo algo: 在 (zài)\n\nEn español, si la acción ocurre en este exacto instante, decimos 'Estoy bebiendo' o 'Está comiendo'.\nEn chino, ¡ES MUCHO MÁS FÁCIL!\n\nNo hay gerundios. Simplemente colocamos la palabra 在 (zài - 4to tono) ANTES DEL VERBO principal.\n\n- Beber: 喝 (hē).\n- (Estar) bebiendo: 在喝 (zài hē).\n- Comer: 吃 (chī).\n- (Estar) comiendo: 在吃 (zài chī).\n\nFórmula: Sujeto + 在 (zài) + Verbo.\n- Él está comiendo: 他在吃 (Tā zài chī).",
+          "audio": "En chino mandarín, los verbos no tienen conjugación. Ya lo sabes. Pero, ¿cómo diferenciamos entre 'Yo como todos los días' y 'Estoy comiendo en este momento'? Usamos la partícula Zài. Zài, cuarto tono fuerte. Si pones la palabra Zài justo antes de cualquier verbo, automáticamente lo conviertes en presente continuo. Es como el 'ando' o 'iendo' del español, o el 'ing' del inglés. Si beber es 'hē', estar bebiendo es 'zài hē'. Si comer es 'chī', estar comiendo es 'zài chī'. Él está comiendo se dice: Tā zài chī."
+        },
+        {
+          "visual": "¿Qué?: 什么 (shénme)\n\nLa palabra universal para preguntar '¿Qué?' o '¿Qué cosa?' es 什么 (shénme - 2do y neutro).\nSe coloca SIEMPRE DESPUÉS DEL VERBO.\n\n- Comer qué: 吃什么 (chī shénme).\n- Beber qué: 喝什么 (hē shénme).\n\nJuntando todo:\n- ¿Qué estás comiendo?: 你在吃什么？(Nǐ zài chī shénme?). Literalmente: Tú + 'estar' + comer + qué.\n- Yo estoy bebiendo té: 我在喝茶 (Wǒ zài hē chá).",
+          "audio": "Para hacer este nivel aún más poderoso, vamos a aprender la palabra más preguntada del mundo: ¿Qué? En chino se dice Shénme. Y tiene una regla dorada: siempre va después del verbo, ocupando el lugar del objeto que no conoces. Comer qué se dice 'Chī shénme'. Beber qué se dice 'Hē shénme'. Si quieres preguntarle a un amigo por teléfono qué está comiendo en este preciso momento, juntas la partícula de presente continuo que acabamos de ver con la palabra qué. Tú estás comiendo qué: Nǐ zài chī shénme. Así de matemático y directo."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que puedes hablar en tiempo real.",
+      "questions": [
+        { "id": "zh-a2-35-q1", "type": "quiz_choice", "question": "¿Qué función tiene la palabra 在 (zài) cuando se coloca ANTES de un verbo?", "options": ["Convierte el verbo en Presente Continuo (estar haciendo algo en este momento).", "Convierte el verbo a pasado.", "Indica que la acción ocurrirá en el futuro.", "Significa 'También'."], "correct_answer": "Convierte el verbo en Presente Continuo (estar haciendo algo en este momento).", "explanation": "Zài actúa como marcador de acción en progreso (gerundio)." },
+        { "id": "zh-a2-35-q2", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo estoy comiendo'?", "options": ["Wǒ zài chī (我在吃).", "Wǒ chī zài (我吃在).", "Wǒ shì chī (我是吃).", "Zài wǒ chī (在我吃)."], "correct_answer": "Wǒ zài chī (我在吃).", "explanation": "Sujeto (Wǒ) + marcador continuo (zài) + verbo (chī)." },
+        { "id": "zh-a2-35-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Él está bebiendo'?", "options": ["Tā zài hē (他在喝).", "Tā hē zài (他喝在).", "Wǒ zài hē (我在喝).", "Tā yě hē (他也喝)."], "correct_answer": "Tā zài hē (他在喝).", "explanation": "Él (tā) + está bebiendo (zài hē)." },
+        { "id": "zh-a2-35-q4", "type": "quiz_choice", "question": "Vocabulario clave: ¿Cómo se dice la pregunta '¿Qué?' o '¿Qué cosa?'", "options": ["Shénme (什么).", "Shéi (谁).", "Nǎlǐ (哪里).", "Jǐ (几)."], "correct_answer": "Shénme (什么).", "explanation": "Shénme es la palabra para 'Qué'." },
+        { "id": "zh-a2-35-q5", "type": "quiz_choice", "question": "Regla gramatical: ¿Dónde se coloca la palabra 什么 (shénme) en una oración?", "options": ["Después del verbo, ocupando el lugar del objeto.", "Al principio de la oración.", "Antes del verbo.", "Al final de la oración, después de un punto."], "correct_answer": "Después del verbo, ocupando el lugar del objeto.", "explanation": "Chī shénme (comer qué). El objeto interrogativo va en su posición natural (S-V-O)." },
+        { "id": "zh-a2-35-q6", "type": "quiz_choice", "question": "Traduce: '¿Qué estás comiendo?'", "options": ["Nǐ zài chī shénme? (你在吃什么？).", "Nǐ chī shénme zài? (你吃什么在？).", "Shénme nǐ zài chī? (什么你在吃？).", "Nǐ yào chī shénme? (你要吃什么？)."], "correct_answer": "Nǐ zài chī shénme? (你在吃什么？).", "explanation": "Tú (nǐ) + estás comiendo (zài chī) + qué (shénme)." },
+        { "id": "zh-a2-35-q7", "type": "quiz_choice", "question": "Traduce: '¿Qué estás bebiendo?'", "options": ["Nǐ zài hē shénme? (你在喝什么？).", "Nǐ hē shénme zài? (你喝什么在？).", "Nǐ yào hē shénme? (你要喝什么？).", "Shénme nǐ zài hē? (什么你在喝？)."], "correct_answer": "Nǐ zài hē shénme? (你在喝什么？).", "explanation": "Tú (nǐ) + estás bebiendo (zài hē) + qué (shénme)." },
+        { "id": "zh-a2-35-q8", "type": "quiz_choice", "question": "¿Qué significa 'Wǒ zài hē chá' (我在喝茶)?", "options": ["Yo estoy bebiendo té (ahora mismo).", "Yo bebo té todos los días.", "Yo bebí té ayer.", "Yo quiero beber té."], "correct_answer": "Yo estoy bebiendo té (ahora mismo).", "explanation": "Zài indica presente continuo." },
+        { "id": "zh-a2-35-q9", "type": "quiz_choice", "question": "¿Es posible usar 在 (zài) con el verbo Ir (去 - qù)? Ejemplo: Wǒ zài qù Zhōngguó.", "options": ["No, zài no suele usarse con verbos de desplazamiento hacia un lugar (como qù o lái).", "Sí, es muy común.", "Solo si vas caminando.", "Solo si es una pregunta."], "correct_answer": "No, zài no suele usarse con verbos de desplazamiento hacia un lugar (como qù o lái).", "explanation": "Con ir o venir no se usa presente continuo. Si estás en camino se dice distinto." },
+        { "id": "zh-a2-35-q10", "type": "quiz_choice", "question": "¿Cuál es la diferencia entre 'Nǐ yào chī shénme?' y 'Nǐ zài chī shénme?'?", "options": ["Yào = Qué QUIERES comer / Zài = Qué ESTÁS comiendo.", "Yào = Qué estás comiendo / Zài = Qué quieres comer.", "Ambas significan lo mismo.", "Yào es para comida, Zài es para bebidas."], "correct_answer": "Yào = Qué QUIERES comer / Zài = Qué ESTÁS comiendo.", "explanation": "Yào es intención/deseo. Zài es acción en proceso." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para las acciones en progreso. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a2-35-f1", "type": "fill_input", "question": "Marcador de presente continuo: ____ (zai)", "correct_answer": "zai", "explanation": "zai" },
+        { "id": "zh-a2-35-f2", "type": "fill_input", "question": "Estoy comiendo: wo ____ chi", "correct_answer": "zai", "explanation": "zai" },
+        { "id": "zh-a2-35-f3", "type": "fill_input", "question": "Él está bebiendo: ta ____ he", "correct_answer": "zai", "explanation": "zai" },
+        { "id": "zh-a2-35-f4", "type": "fill_input", "question": "¿Qué? / ¿Qué cosa?: shen ____ (me)", "correct_answer": "me", "explanation": "me" },
+        { "id": "zh-a2-35-f5", "type": "fill_input", "question": "¿Qué comes?: chi shen ____", "correct_answer": "me", "explanation": "me" },
+        { "id": "zh-a2-35-f6", "type": "fill_input", "question": "¿Qué estás comiendo?: ni zai chi ____ me", "correct_answer": "shen", "explanation": "shen" },
+        { "id": "zh-a2-35-f7", "type": "fill_input", "question": "¿Qué estás bebiendo?: ni zai he shen ____", "correct_answer": "me", "explanation": "me" },
+        { "id": "zh-a2-35-f8", "type": "fill_input", "question": "Estoy bebiendo té: wo ____ he cha (zai)", "correct_answer": "zai", "explanation": "zai" },
+        { "id": "zh-a2-35-f9", "type": "fill_input", "question": "Estoy comiendo comida/arroz: wo zai chi ____ (fan)", "correct_answer": "fan", "explanation": "fan" },
+        { "id": "zh-a2-35-f10", "type": "fill_input", "question": "Nosotros estamos bebiendo té: women ____ he cha", "correct_answer": "zai", "explanation": "zai" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha e identifica qué están haciendo las personas.",
+      "questions": [
+        { "id": "zh-a2-35-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "在吃", "options": ["Está comiendo", "Come todos los días", "Quiere comer", "No come"], "correct_answer": "Está comiendo", "explanation": "El audio dice: zài chī (Presente continuo)." },
+        { "id": "zh-a2-35-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "在喝", "options": ["Está bebiendo", "Está comiendo", "Quiero beber", "Voy a beber"], "correct_answer": "Está bebiendo", "explanation": "El audio dice: zài hē." },
+        { "id": "zh-a2-35-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "什么？", "options": ["¿Qué?", "¿Quién?", "¿Dónde?", "¿Cuánto?"], "correct_answer": "¿Qué?", "explanation": "El audio dice: Shénme?" },
+        { "id": "zh-a2-35-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你在吃什么？", "options": ["¿Qué estás comiendo?", "¿Qué quieres comer?", "¿Qué comiste?", "¿Dónde estás comiendo?"], "correct_answer": "¿Qué estás comiendo?", "explanation": "El audio dice: Nǐ zài chī shénme?" },
+        { "id": "zh-a2-35-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我在喝茶", "options": ["Yo estoy bebiendo té", "Él está bebiendo té", "Yo quiero beber té", "Tú estás bebiendo té"], "correct_answer": "Yo estoy bebiendo té", "explanation": "El audio dice: Wǒ zài hē chá." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Continuous Actions",
+      "pairs": [
+        {"id": "zh-a2-35-p1", "source": "在 (zài)", "target": "Marcador de presente continuo (Estar haciendo...)"},
+        {"id": "zh-a2-35-p2", "source": "什么 (shénme)", "target": "¿Qué? / ¿Qué cosa?"},
+        {"id": "zh-a2-35-p3", "source": "在吃 (zài chī)", "target": "Estando comiendo"},
+        {"id": "zh-a2-35-p4", "source": "在喝 (zài hē)", "target": "Estando bebiendo"},
+        {"id": "zh-a2-35-p5", "source": "你在吃什么？(nǐ zài chī shénme?)", "target": "¿Qué estás comiendo?"},
+        {"id": "zh-a2-35-p6", "source": "你要吃什么？(nǐ yào chī shénme?)", "target": "¿Qué quieres comer?"},
+        {"id": "zh-a2-35-p7", "source": "我在喝茶 (wǒ zài hē chá)", "target": "Yo estoy bebiendo té"},
+        {"id": "zh-a2-35-p8", "source": "他在吃饭 (tā zài chī fàn)", "target": "Él está comiendo (arroz/comida)"},
+        {"id": "zh-a2-35-p9", "source": "我们都在吃 (wǒmen dōu zài chī)", "target": "Todos nosotros estamos comiendo"},
+        {"id": "zh-a2-35-p10", "source": "不要吃 (bú yào chī)", "target": "¡No comas!"}
+      ]
+    }
+  ]
+}

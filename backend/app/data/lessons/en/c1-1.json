@@ -1,0 +1,101 @@
+{
+  "id": "c1-1",
+  "title": "Cleft Sentences",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Grammar", "Cleft Sentences", "Emphasis", "Business"],
+  "completion_message": "¡Bienvenidos al nivel C1! Usar 'Cleft Sentences' te permite controlar exactamente dónde pones el énfasis en una oración, una habilidad crucial para debatir, persuadir y liderar reuniones directivas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Cleft Sentences (Oraciones Hendidas para Énfasis)",
+      "parts": [
+        { "visual": "En C1, no solo comunicas información, sino que diriges la atención del oyente hacia lo más importante. Para ello usamos 'Cleft Sentences' (dividir la oración en dos partes). \n1. Empezando con 'What': \nNormal: We need more time. \nÉnfasis: WHAT we need IS more time. (Lo que necesitamos es más tiempo). \nNormal: I hated his attitude. \nÉnfasis: WHAT I hated WAS his attitude. (Lo que odié fue su actitud).", "audio": "Welcome to C1! At this level, you don't just communicate information; you direct the listener's attention to what is most important. We use 'Cleft Sentences' to do this. A cleft sentence divides a normal sentence into two parts to add emphasis. Starting with 'What'. Normal sentence: We need more time. Emphasized sentence: What we need is more time. Normal sentence: I hated his attitude. Emphasized sentence: What I hated was his attitude." },
+        { "visual": "2. Empezando con 'It': \nNormal: John signed the contract yesterday. \nÉnfasis en la persona: IT WAS John WHO signed the contract yesterday. (Fue John quien...). \nÉnfasis en el objeto: IT WAS the contract THAT John signed yesterday. (Fue el contrato lo que...). \nÉnfasis en el tiempo: IT WAS yesterday THAT John signed the contract. (Fue ayer cuando...).", "audio": "Starting with 'It'. You can emphasize different parts of the sentence by using 'It is' or 'It was'. Normal sentence: John signed the contract yesterday. To emphasize the person: It was John who signed the contract yesterday. To emphasize the object: It was the contract that John signed yesterday. To emphasize the time: It was yesterday that John signed the contract." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la estructura correcta para dar énfasis (Cleft Sentence).",
+      "questions": [
+        { "id": "c1-1-q1", "type": "quiz_choice", "question": "Normal: I want a pay rise. \nEmphasis: ____ I want is a pay rise. (Lo que quiero es...).", "options": ["What", "That", "Which", "It"], "correct_answer": "What", "explanation": "Para decir 'Lo que...' al principio de una oración usamos 'What'. (What I want is...)." },
+        { "id": "c1-1-q2", "type": "quiz_choice", "question": "Normal: Sarah found the error. \nEmphasis: It was Sarah ____ found the error. (Fue Sarah quien...).", "options": ["who", "which", "what", "whom"], "correct_answer": "who", "explanation": "Para enfatizar a una persona usamos 'It was [persona] who/that...'." },
+        { "id": "c1-1-q3", "type": "quiz_choice", "question": "____ we need now is a completely new strategy. (Lo que necesitamos ahora es...).", "options": ["What", "The thing", "It", "That"], "correct_answer": "What", "explanation": "'What we need is...'. ('The thing that we need' también es posible, pero 'The thing' solo no, y 'What' es la forma de cleft clause clásica)." },
+        { "id": "c1-1-q4", "type": "quiz_choice", "question": "Normal: We launched the product in 2015. \nEmphasis: It ____ in 2015 that we launched the product. (Fue en 2015 cuando...).", "options": ["was", "is", "were", "has been"], "correct_answer": "was", "explanation": "La acción original está en pasado (launched), así que el énfasis debe usar 'was' (It was in 2015 that...)." },
+        { "id": "c1-1-q5", "type": "quiz_choice", "question": "____ I really admire about him is his honesty. (Lo que realmente admiro de él es...).", "options": ["What", "Which", "That", "It"], "correct_answer": "What", "explanation": "What I really admire is..." },
+        { "id": "c1-1-q6", "type": "quiz_choice", "question": "Normal: The lack of funding caused the failure. \nEmphasis: It was the lack of funding ____ caused the failure. (Fue la falta de fondos lo que...).", "options": ["that", "what", "who", "whom"], "correct_answer": "that", "explanation": "Después de 'It was [objeto]' usamos 'that' o 'which', pero NUNCA 'what'." },
+        { "id": "c1-1-q7", "type": "quiz_choice", "question": "What happens is ____ the server crashes when there are too many users. (Lo que pasa es QUE...).", "options": ["that", "what", "which", "it"], "correct_answer": "that", "explanation": "What happens is + that + clause. (Lo que pasa es que...)." },
+        { "id": "c1-1-q8", "type": "quiz_choice", "question": "Normal: I don't understand the new policy. \nEmphasis: What I don't understand ____ the new policy. (Lo que no entiendo ES...).", "options": ["is", "was", "are", "be"], "correct_answer": "is", "explanation": "El verbo principal de la cláusula de énfasis concuerda en presente: What I don't understand IS..." },
+        { "id": "c1-1-q9", "type": "quiz_choice", "question": "It was only yesterday ____ I realized the company was bankrupt. (Fue apenas ayer cuando/que...).", "options": ["that", "what", "when", "which"], "correct_answer": "that", "explanation": "Con expresiones de tiempo en Cleft Sentences, la forma más común y formal es usar 'that' (It was yesterday that...). 'When' también se escucha pero 'that' es la regla gramatical estricta." },
+        { "id": "c1-1-q10", "type": "quiz_choice", "question": "____ you have to do is sign at the bottom of the page. (Lo único que tienes que hacer es...).", "options": ["All", "Everything", "What", "That"], "correct_answer": "All", "explanation": "Variación común: 'All (that) you have to do is...' (Lo único/Todo lo que tienes que hacer es...). Se usa 'All' en lugar de 'What' para decir 'Lo único'." },
+        { "id": "c1-1-q11", "type": "quiz_choice", "question": "It ____ the CEO who made the final decision, not the board. (Fue el CEO quien...).", "options": ["was", "is", "has been", "were"], "correct_answer": "was", "explanation": "Acción pasada (made), requiere 'It was'." },
+        { "id": "c1-1-q12", "type": "quiz_choice", "question": "What I ____ about the proposal was the high risk involved. (Lo que no me gustó...).", "options": ["disliked", "dislike", "was disliking", "dislikes"], "correct_answer": "disliked", "explanation": "El verbo 'was' indica que la acción está en pasado: What I disliked was..." },
+        { "id": "c1-1-q13", "type": "quiz_choice", "question": "Normal: I love the company culture. \nEmphasis: The ____ I love is the company culture. (LA COSA que amo es...).", "options": ["thing", "what", "that", "reason"], "correct_answer": "thing", "explanation": "Otra variación: The thing (that) I love is..." },
+        { "id": "c1-1-q14", "type": "quiz_choice", "question": "The reason ____ I resigned was the toxic environment. (La razón por la que renuncié fue...).", "options": ["why", "what", "because", "how"], "correct_answer": "why", "explanation": "Énfasis con motivo: The reason why I resigned was..." },
+        { "id": "c1-1-q15", "type": "quiz_choice", "question": "It's not the money ____ I care about, it's the principles! (No es el dinero lo que me importa...).", "options": ["that", "what", "who", "how"], "correct_answer": "that", "explanation": "It's not the money THAT I care about. (Nunca 'what' en medio de una oración 'It is...')." },
+        { "id": "c1-1-q16", "type": "quiz_choice", "question": "Normal: We lost the contract because of him. \nEmphasis: It is because of him ____ we lost the contract. (Es por su culpa que...).", "options": ["that", "what", "which", "who"], "correct_answer": "that", "explanation": "Énfasis de causa: It is because of him THAT..." },
+        { "id": "c1-1-q17", "type": "quiz_choice", "question": "What they did ____ fire half of the staff. (Lo que ellos hicieron FUE despedir...).", "options": ["was", "is", "were", "did"], "correct_answer": "was", "explanation": "What they did WAS fire... (El verbo to be hace de puente)." },
+        { "id": "c1-1-q18", "type": "quiz_choice", "question": "____ I really want to know is who approved this budget. (Lo que realmente quiero saber es...).", "options": ["What", "That", "The thing", "Which"], "correct_answer": "What", "explanation": "What I really want to know is..." },
+        { "id": "c1-1-q19", "type": "quiz_choice", "question": "It was in Paris ____ they signed the merger agreement. (Fue en París donde/que...).", "options": ["that", "where", "what", "when"], "correct_answer": "that", "explanation": "Aunque 'where' parezca lógico, la estructura gramatical de Cleft Sentence exige 'that': It was in Paris THAT they signed..." },
+        { "id": "c1-1-q20", "type": "quiz_choice", "question": "Normal: You need a vacation. \nEmphasis: What you ____ is a vacation. (Lo que necesitas es...).", "options": ["need", "needs", "needed", "are needing"], "correct_answer": "need", "explanation": "What you need is a vacation." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave (What, It, that, was, is) para completar la oración enfática.",
+      "questions": [
+        { "id": "c1-1-f1", "type": "fill_input", "question": "____ I need is more budget. (Lo que necesito es...)", "correct_answer": "What", "explanation": "What." },
+        { "id": "c1-1-f2", "type": "fill_input", "question": "____ was John who made the mistake. (Fue John quien...)", "correct_answer": "It", "explanation": "It." },
+        { "id": "c1-1-f3", "type": "fill_input", "question": "It was the software ____ failed, not the hardware. (Fue el software lo QUE falló).", "correct_answer": "that", "explanation": "that (o which)." },
+        { "id": "c1-1-f4", "type": "fill_input", "question": "What we want ____ higher salaries. (Lo que queremos ES... - en presente).", "correct_answer": "is", "explanation": "is." },
+        { "id": "c1-1-f5", "type": "fill_input", "question": "What I hated ____ his attitude. (Lo que odié FUE... - en pasado).", "correct_answer": "was", "explanation": "was." },
+        { "id": "c1-1-f6", "type": "fill_input", "question": "____ was in 2010 that we met. (Fue en 2010 que...)", "correct_answer": "It", "explanation": "It." },
+        { "id": "c1-1-f7", "type": "fill_input", "question": "The reason ____ I left was the low pay. (La razón POR LA QUE me fui...)", "correct_answer": "why", "explanation": "why." },
+        { "id": "c1-1-f8", "type": "fill_input", "question": "____ you have to do is sign here. (LO ÚNICO que tienes que hacer es... - palabra con A).", "correct_answer": "All", "explanation": "All." },
+        { "id": "c1-1-f9", "type": "fill_input", "question": "It was Sarah ____ fired him. (Fue Sarah QUIEN...)", "correct_answer": "who", "explanation": "who (también se acepta that)." },
+        { "id": "c1-1-f10", "type": "fill_input", "question": "What happens is ____ we have no money. (Lo que pasa es QUE...)", "correct_answer": "that", "explanation": "that." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Cleft Sentences Match",
+      "pairs": [
+        {"id": "c1-1-p1", "source": "What I need is time.", "target": "Lo que necesito es tiempo."},
+        {"id": "c1-1-p2", "source": "It was John who quit.", "target": "Fue John quien renunció."},
+        {"id": "c1-1-p3", "source": "All you have to do is wait.", "target": "Lo único que tienes que hacer es esperar."},
+        {"id": "c1-1-p4", "source": "It was yesterday that we met.", "target": "Fue ayer que nos reunimos."},
+        {"id": "c1-1-p5", "source": "What happened was terrible.", "target": "Lo que pasó fue terrible."},
+        {"id": "c1-1-p6", "source": "The reason why I am here...", "target": "La razón por la que estoy aquí..."},
+        {"id": "c1-1-p7", "source": "What they did was fire everyone.", "target": "Lo que hicieron fue despedir a todos."},
+        {"id": "c1-1-p8", "source": "It is the lack of money that...", "target": "Es la falta de dinero lo que..."},
+        {"id": "c1-1-p9", "source": "What bothers me is the noise.", "target": "Lo que me molesta es el ruido."},
+        {"id": "c1-1-p10", "source": "It was in London that I saw him.", "target": "Fue en Londres que lo vi."}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración con énfasis correcta.",
+      "questions": [
+        { "id": "c1-1-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What we need is more time.", "options": ["What we need is more time.", "What we need are more time.", "What we needed is more time.", "That we need is more time."], "correct_answer": "What we need is more time.", "explanation": "Audio exacto." },
+        { "id": "c1-1-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was John who signed the contract.", "options": ["It was John who signed the contract.", "It is John who signed the contract.", "It was John what signed the contract.", "It was John which signed the contract."], "correct_answer": "It was John who signed the contract.", "explanation": "Audio exacto." },
+        { "id": "c1-1-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What I hated was his attitude.", "options": ["What I hated was his attitude.", "What I hate was his attitude.", "What I hated is his attitude.", "That I hated was his attitude."], "correct_answer": "What I hated was his attitude.", "explanation": "Audio exacto." },
+        { "id": "c1-1-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "All you have to do is wait.", "options": ["All you have to do is wait.", "What you have to do is wait.", "Everything you have to do is wait.", "All you had to do is wait."], "correct_answer": "All you have to do is wait.", "explanation": "Audio exacto." },
+        { "id": "c1-1-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was yesterday that we met.", "options": ["It was yesterday that we met.", "It is yesterday that we met.", "It was yesterday when we met.", "It was yesterday what we met."], "correct_answer": "It was yesterday that we met.", "explanation": "Audio exacto." },
+        { "id": "c1-1-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The reason why I resigned is the pay.", "options": ["The reason why I resigned is the pay.", "The reason what I resigned is the pay.", "The reason why I resign is the pay.", "The reason that I resigned is the pay."], "correct_answer": "The reason why I resigned is the pay.", "explanation": "Audio exacto." },
+        { "id": "c1-1-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What happens is that the system crashes.", "options": ["What happens is that the system crashes.", "What happened is that the system crashes.", "What happens is what the system crashes.", "What happens is the system crashes."], "correct_answer": "What happens is that the system crashes.", "explanation": "Audio exacto." },
+        { "id": "c1-1-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is the lack of funding that hurts us.", "options": ["It is the lack of funding that hurts us.", "It was the lack of funding that hurts us.", "It is the lack of funding what hurts us.", "It is the lack of funding which hurts us."], "correct_answer": "It is the lack of funding that hurts us.", "explanation": "Audio exacto." },
+        { "id": "c1-1-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What they did was fire the CEO.", "options": ["What they did was fire the CEO.", "What they do was fire the CEO.", "What they did is fire the CEO.", "What they did was fired the CEO."], "correct_answer": "What they did was fire the CEO.", "explanation": "Audio exacto." },
+        { "id": "c1-1-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's not the money that I care about.", "options": ["It's not the money that I care about.", "It's not the money what I care about.", "It's not the money which I care about.", "It was not the money that I care about."], "correct_answer": "It's not the money that I care about.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

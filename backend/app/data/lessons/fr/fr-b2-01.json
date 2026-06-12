@@ -1,0 +1,95 @@
+{
+  "id": "fr-b2-01",
+  "title": "L'Opposition et la Concession",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Conjunctions", "Argumentation"],
+  "completion_message": "¡Excelente inicio de nivel! Acabas de dar el primer paso hacia el debate profesional. Ahora puedes contrastar ideas y manejar contradicciones con la elegancia de un diplomático francés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Arte de Debatir (B2)",
+      "parts": [
+        {
+          "visual": "L'Opposition (El Contraste Directo):\n\nLa oposición compara dos cosas que son diferentes sin que haya una contradicción lógica. Es como comparar manzanas y naranjas.\n\n1. Alors que / Tandis que (Mientras que):\nSe usan seguidas de una frase completa (Sujeto + Verbo).\n- J'aime le thé TANDIS QU'il préfère le café. (A mí me gusta el té MIENTRAS QUE él prefiere el café).\n\n2. Au lieu de (En lugar de):\nSe usa seguido de un infinitivo o un sustantivo.\n- Tu joues AU LIEU DE travailler. (Juegas EN LUGAR DE trabajar).",
+          "audio": "¡Bienvenido al Nivel B2! A partir de hoy dejamos de sobrevivir y empezamos a argumentar. En este nivel tienes que convencer, debatir y contrastar ideas. Empecemos con la Oposición pura. Esto es comparar dos cosas que son distintas, como el sol y la luna. Para decir 'MIENTRAS QUE', los franceses usan dos expresiones muy elegantes: 'Alors que' y 'Tandis que'. Si quieres decir 'A mí me gusta el té mientras que a él le gusta el café', dices: 'J'aime le thé TANDIS QU'IL préfère le café'. Otra muy útil es 'Au lieu de', que significa 'En lugar de'. Si le dices a alguien 'Estás jugando en lugar de trabajar', dices 'Tu joues AU LIEU DE travailler'. Recuerda, 'au lieu de' siempre va con un verbo sin conjugar, en infinitivo."
+        },
+        {
+          "visual": "La Concession (El Contraste Ilógico):\n\nLa concesión expresa un resultado sorprendente. Una acción debería haber impedido la otra, pero no lo hizo. (Ej: Llovió, pero salimos).\n\n1. Même si (Incluso si / Aunque) + Indicativo:\n- MÊME S'il pleut, je sors. (AUNQUE llueva, salgo). ¡Ojo, en francés NO usa subjuntivo aquí!\n\n2. Pourtant / Cependant / Néanmoins / Toutefois (Sin embargo):\nSe usan en la segunda frase para mostrar la sorpresa.\n- Il est riche, POURTANT il n'est pas heureux. (Él es rico, SIN EMBARGO no es feliz).\n\n3. Malgré / En dépit de (A pesar de) + Sustantivo:\n- MALGRÉ la pluie, je sors. (A PESAR DE la lluvia, salgo). ¡Nunca seguido de verbo!",
+          "audio": "Ahora viene lo divertido: La Concesión. Esto es cuando pasa algo ilógico o sorprendente. Debería haber pasado A, pero pasó B. Por ejemplo, estaba lloviendo, pero igual salí a la calle. Para decir 'Incluso si' o 'Aunque', usamos 'Même si'. Pero cuidado, trampa mortal para hispanohablantes: en español decimos 'Aunque LLUEVA' en subjuntivo. En francés, 'Même si' JAMÁS acepta el subjuntivo, siempre va en indicativo. Dices: 'Même s'il PLEUT'. Otras joyas de la concesión son las palabras para decir 'Sin embargo': 'Pourtant' o 'Cependant'. Y finalmente, si quieres decir 'A pesar de', usas 'Malgré'. Pero 'Malgré' es un esnob de la gramática, nunca se junta con verbos, solo acepta cosas, sustantivos. 'A pesar de LA LLUVIA': 'Malgré LA PLUIE'."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el conector correcto de oposición o concesión.",
+      "questions": [
+        { "id": "frb2-01-q1", "type": "quiz_choice", "question": "Il aime le sport ____ je préfère la lecture. (MIENTRAS QUE).", "options": ["alors que", "malgré", "cependant", "au lieu de"], "correct_answer": "alors que", "explanation": "Comparación directa entre dos personas -> alors que (o tandis que)." },
+        { "id": "frb2-01-q2", "type": "quiz_choice", "question": "Il est sorti ____ le froid. (A PESAR DE).", "options": ["malgré", "tandis que", "même si", "pourtant"], "correct_answer": "malgré", "explanation": "'Le froid' es un sustantivo. 'A pesar del frío' -> Malgré le froid." },
+        { "id": "frb2-01-q3", "type": "quiz_choice", "question": "____ il est fatigué, il continue à travailler. (AUNQUE / INCLUSO SI).", "options": ["Même s'", "Malgré", "Pourtant", "Au lieu d'"], "correct_answer": "Même s'", "explanation": "Même si + frase indicativa (il est fatigué)." },
+        { "id": "frb2-01-q4", "type": "quiz_choice", "question": "Il a beaucoup étudié, ____ il a raté l'examen. (SIN EMBARGO).", "options": ["pourtant", "tandis qu'", "alors qu'", "malgré"], "correct_answer": "pourtant", "explanation": "Contraste ilógico. Estudió mucho, sin embargo (pourtant) fracasó." },
+        { "id": "frb2-01-q5", "type": "quiz_choice", "question": "Je vais regarder un film ____ faire mes devoirs. (EN LUGAR DE).", "options": ["au lieu de", "malgré", "cependant", "même si"], "correct_answer": "au lieu de", "explanation": "Au lieu de + infinitivo (faire)." },
+        { "id": "frb2-01-q6", "type": "quiz_choice", "question": "____ sa richesse, il vit simplement. (A PESAR DE).", "options": ["En dépit de", "Tandis que", "Cependant", "Même si"], "correct_answer": "En dépit de", "explanation": "'En dépit de' es sinónimo formal de 'Malgré' y va seguido de sustantivo (sa richesse)." },
+        { "id": "frb2-01-q7", "type": "quiz_choice", "question": "Elle est grande ____ son frère est petit. (MIENTRAS QUE).", "options": ["tandis que", "pourtant", "malgré", "en dépit de"], "correct_answer": "tandis que", "explanation": "Contraste físico directo -> tandis que." },
+        { "id": "frb2-01-q8", "type": "quiz_choice", "question": "¿Es correcta la frase 'Malgré qu'il pleut'? (A pesar de que llueve).", "options": ["Falso", "Verdadero"], "correct_answer": "Falso", "explanation": "¡Trampa clásica! 'Malgré que' es considerado incorrecto por la Academia Francesa. Se debe decir 'Bien qu'il pleuve' o 'Malgré la pluie'." },
+        { "id": "frb2-01-q9", "type": "quiz_choice", "question": "Ce restaurant est très cher. ____, la nourriture n'est pas bonne. (SIN EMBARGO).", "options": ["Cependant", "Alors que", "Malgré", "Tandis que"], "correct_answer": "Cependant", "explanation": "Cependant es sinónimo de Pourtant. Inicia la contradicción." },
+        { "id": "frb2-01-q10", "type": "quiz_choice", "question": "Tu devrais dormir ____ regarder ton téléphone. (EN LUGAR DE).", "options": ["au lieu de", "malgré", "pourtant", "même si"], "correct_answer": "au lieu de", "explanation": "Au lieu de + infinitivo (regarder)." },
+        { "id": "frb2-01-q11", "type": "quiz_choice", "question": "Je l'aime ____ ses défauts. (A PESAR DE).", "options": ["malgré", "même si", "alors que", "pourtant"], "correct_answer": "malgré", "explanation": "Malgré + sustantivo (ses défauts)." },
+        { "id": "frb2-01-q12", "type": "quiz_choice", "question": "____ je sois malade, je vais travailler. (AUNQUE).", "options": ["Bien que", "Même si", "Malgré", "Pourtant"], "correct_answer": "Bien que", "explanation": "'sois' es subjuntivo. 'Même si' toma indicativo. 'Bien que' (que verás en la lección 2) toma subjuntivo." },
+        { "id": "frb2-01-q13", "type": "quiz_choice", "question": "____ j'ai peur, je le ferai. (INCLUSO SI / AUNQUE).", "options": ["Même si", "Malgré", "Pourtant", "Au lieu de"], "correct_answer": "Même si", "explanation": "Même si + Indicativo (ai peur)." },
+        { "id": "frb2-01-q14", "type": "quiz_choice", "question": "Il a 80 ans, ____ il court le marathon. (NO OBSTANTE / SIN EMBARGO).", "options": ["néanmoins", "alors que", "malgré", "tandis que"], "correct_answer": "néanmoins", "explanation": "Néanmoins es un conector formal muy B2 para decir 'sin embargo'." },
+        { "id": "frb2-01-q15", "type": "quiz_choice", "question": "Le nord est industriel ____ le sud est agricole. (MIENTRAS QUE).", "options": ["alors que", "cependant", "malgré", "en dépit de"], "correct_answer": "alors que", "explanation": "Contraste geográfico -> alors que (o tandis que)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el conector adecuado según la pista (presta atención a las vocales para los apóstrofes).",
+      "questions": [
+        { "id": "frb2-01-f1", "type": "fill_input", "question": "Il travaille ____ moi je me repose. (MIENTRAS QUE - 2 palabras).", "correct_answer": "alors que", "explanation": "alors que" },
+        { "id": "frb2-01-f2", "type": "fill_input", "question": "____ son âge, il est très actif. (A PESAR DE).", "correct_answer": "Malgré", "explanation": "Malgré" },
+        { "id": "frb2-01-f3", "type": "fill_input", "question": "Il est malade, ____ il vient travailler. (SIN EMBARGO - empieza con P).", "correct_answer": "pourtant", "explanation": "pourtant" },
+        { "id": "frb2-01-f4", "type": "fill_input", "question": "Aide-moi ____ me critiquer. (EN LUGAR DE).", "correct_answer": "au lieu de", "explanation": "au lieu de" },
+        { "id": "frb2-01-f5", "type": "fill_input", "question": "____ elle est triste, elle sourit. (INCLUSO SI - cuidado con apóstrofe).", "correct_answer": "Même si", "explanation": "Même si (no se contrae la 'i' delante de 'elle', a diferencia de 'il' que sería 'Même s'il')." },
+        { "id": "frb2-01-f6", "type": "fill_input", "question": "J'aime la mer ____ il préfère la montagne. (MIENTRAS QUE - empieza con T).", "correct_answer": "tandis qu'", "explanation": "tandis qu' (se apostrofa delante de il)." },
+        { "id": "frb2-01-f7", "type": "fill_input", "question": "Le produit est cher. ____, la qualité est moyenne. (SIN EMBARGO - empieza con C).", "correct_answer": "Cependant", "explanation": "Cependant" },
+        { "id": "frb2-01-f8", "type": "fill_input", "question": "____ de la crise, l'entreprise a des profits. (A PESAR DE - 3 palabras).", "correct_answer": "En dépit", "explanation": "En dépit (de)" },
+        { "id": "frb2-01-f9", "type": "fill_input", "question": "____ il fait chaud, je bois du café chaud. (INCLUSO SI - con apóstrofe para 'il').", "correct_answer": "Même s'", "explanation": "Même s'il fait chaud." },
+        { "id": "frb2-01-f10", "type": "fill_input", "question": "Prends un taxi ____ marcher sous la pluie. (EN LUGAR DE).", "correct_answer": "au lieu de", "explanation": "au lieu de" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Conjunctions Match",
+      "pairs": [
+        {"id": "frb2-01-p1", "source": "Alors que", "target": "Mientras que (Contraste)"},
+        {"id": "frb2-01-p2", "source": "Tandis que", "target": "Mientras que / En cambio"},
+        {"id": "frb2-01-p3", "source": "Au lieu de", "target": "En lugar de"},
+        {"id": "frb2-01-p4", "source": "Même si", "target": "Incluso si / Aunque (+ Indicativo)"},
+        {"id": "frb2-01-p5", "source": "Pourtant", "target": "Sin embargo (Sorpresa)"},
+        {"id": "frb2-01-p6", "source": "Cependant", "target": "Sin embargo / No obstante"},
+        {"id": "frb2-01-p7", "source": "Malgré", "target": "A pesar de (+ Sustantivo)"},
+        {"id": "frb2-01-p8", "source": "En dépit de", "target": "A pesar de (Formal)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica la frase de concesión u oposición.",
+      "questions": [
+        { "id": "frb2-01-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il est sorti malgré la pluie", "options": ["Il est sorti malgré la pluie", "Il est sorti même si la pluie", "Il est sorti pourtant la pluie", "Il est sorti alors que la pluie"], "correct_answer": "Il est sorti malgré la pluie", "explanation": "Audio dice: Il est sorti malgré la pluie." },
+        { "id": "frb2-01-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Même s'il est tard, je continue", "options": ["Même s'il est tard, je continue", "Malgré s'il est tard, je continue", "Pourtant s'il est tard, je continue", "Alors qu'il est tard, je continue"], "correct_answer": "Même s'il est tard, je continue", "explanation": "Audio dice: Même s'il est tard, je continue." },
+        { "id": "frb2-01-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "J'aime lire alors qu'il préfère la télé", "options": ["J'aime lire alors qu'il préfère la télé", "J'aime lire au lieu de la télé", "J'aime lire pourtant il préfère la télé", "J'aime lire même s'il préfère la télé"], "correct_answer": "J'aime lire alors qu'il préfère la télé", "explanation": "Audio dice: J'aime lire alors qu'il préfère la télé." },
+        { "id": "frb2-01-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il est riche, pourtant il est triste", "options": ["Il est riche, pourtant il est triste", "Il est riche, alors il est triste", "Il est riche, malgré il est triste", "Il est riche, au lieu d'être triste"], "correct_answer": "Il est riche, pourtant il est triste", "explanation": "Audio dice: Il est riche, pourtant il est triste." },
+        { "id": "frb2-01-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Lis un livre au lieu de dormir", "options": ["Lis un livre au lieu de dormir", "Lis un livre malgré dormir", "Lis un livre même si tu dors", "Lis un livre tandis que tu dors"], "correct_answer": "Lis un livre au lieu de dormir", "explanation": "Audio dice: Lis un livre au lieu de dormir." }
+      ]
+    }
+  ]
+}

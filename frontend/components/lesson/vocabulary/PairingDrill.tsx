@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // 👈 Importante para animaciones suaves
 import { Check, X, Zap, Volume2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
@@ -144,14 +144,20 @@ export default function PairingDrill({
       setSelectedCards([]);
       setIsProcessing(false);
       
-      // IMPORTANTE: Esto dispara el useEffect para cargar el siguiente lote si corresponde
-      setCompletedPairIds(prev => {
-        const next = new Set(prev).add(pairId);
-        if (onProgressChange) onProgressChange(Array.from(next));
-        return next;
-      });
+      // IMPORTANTE: Separamos el side-effect del actualizador de estado para evitar advertencias de React
+      setCompletedPairIds(prev => new Set(prev).add(pairId));
     }, 500);
   };
+
+  // Disparamos el onProgressChange solo cuando cambia la cantidad de parejas completadas
+  const lastCompletedSize = useRef(completedPairIds.size);
+  
+  useEffect(() => {
+    if (onProgressChange && completedPairIds.size > lastCompletedSize.current) {
+      lastCompletedSize.current = completedPairIds.size;
+      onProgressChange(Array.from(completedPairIds));
+    }
+  }, [completedPairIds, onProgressChange]);
 
   const handleMatchError = (id1: string, id2: string) => {
     onError();
@@ -172,20 +178,25 @@ export default function PairingDrill({
   const getCardClasses = (card: CardItem) => {
     const isSelected = card.status === 'selected';
     const isError = card.status === 'error';
-    const isEn = card.type === 'en';
+    const isEs = card.type === 'es';
     
     // Base layout
-    let classes = "relative flex flex-col items-center justify-center p-4 h-28 md:h-32 rounded-2xl border-b-4 transition-all duration-200 cursor-pointer select-none overflow-hidden active:scale-95 shadow-sm ";
+    let classes = "relative flex flex-col items-center justify-center p-4 h-28 md:h-32 rounded-xl border-b-4 transition-all duration-200 cursor-pointer select-none overflow-hidden active:scale-95 shadow-sm font-bold ";
     
-    // Tema PRO vs Normal
-    if (isPro) {
-        if (isSelected) classes += "bg-indigo-600 border-indigo-800 text-white ring-2 ring-indigo-400 ";
-        else if (isError) classes += "bg-red-900/50 border-red-600 text-red-200 animate-shake ";
-        else classes += "bg-slate-800 border-slate-950 text-slate-200 hover:bg-slate-700 hover:-translate-y-1 ";
+    if (isError) {
+        classes += "bg-red-200 border-red-600 text-black animate-shake ";
+    } else if (isSelected) {
+        if (isEs) {
+            classes += "bg-emerald-400 border-emerald-700 text-black ring-4 ring-emerald-500 ";
+        } else {
+            classes += "bg-blue-400 border-blue-700 text-black ring-4 ring-blue-500 ";
+        }
     } else {
-        if (isSelected) classes += "bg-blue-500 border-blue-700 text-white ring-4 ring-blue-200 ";
-        else if (isError) classes += "bg-red-100 border-red-400 text-red-700 animate-shake ";
-        else classes += "bg-white border-slate-200 text-slate-700 hover:border-blue-300 hover:text-blue-600 hover:-translate-y-1 ";
+        if (isEs) {
+            classes += "bg-emerald-200 border-emerald-500 text-black hover:bg-emerald-300 hover:border-emerald-600 hover:-translate-y-1 hover:shadow-md ";
+        } else {
+            classes += "bg-blue-200 border-blue-500 text-black hover:bg-blue-300 hover:border-blue-600 hover:-translate-y-1 hover:shadow-md ";
+        }
     }
 
     return classes;
@@ -200,23 +211,23 @@ export default function PairingDrill({
       {/* HEADER */}
       <div className="w-full flex flex-col md:flex-row justify-between items-end mb-6 px-4 gap-4">
         <div className="flex-1">
-          <h2 className={`text-2xl md:text-3xl font-black ${isPro ? 'text-white' : 'text-slate-800'}`}>
+          <h2 className={`text-2xl md:text-3xl font-black ${isPro ? 'text-slate-900' : 'text-slate-900'}`}>
             {stage?.title || "Vocabulary Drill"}
           </h2>
-          <p className={`${isPro ? 'text-slate-400' : 'text-slate-500'} text-sm mt-1`}>
+          <p className={`${isPro ? 'text-slate-500' : 'text-slate-600'} text-sm mt-1`}>
             {stage?.description || "Empareja los conceptos."}
           </p>
         </div>
         
         {/* Barra de Progreso */}
         <div className="w-full md:w-1/3 flex flex-col items-end">
-            <div className={`flex items-center gap-2 font-bold mb-1 ${isPro ? 'text-indigo-400' : 'text-indigo-600'}`}>
+            <div className={`flex items-center gap-2 font-bold mb-1 ${isPro ? 'text-indigo-400' : 'text-[#D4AF37]'}`}>
                 <Zap size={16} fill="currentColor" />
                 <span>{completedPairIds.size} / {pairs.length}</span>
             </div>
-            <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+            <div className="w-full h-2 bg-white rounded-full overflow-hidden">
                 <motion.div 
-                    className="h-full bg-indigo-500"
+                    className="h-full bg-[#D4AF37]/20"
                     initial={{ width: 0 }}
                     animate={{ width: `${progressPercent}%` }}
                     transition={{ duration: 0.5 }}
@@ -246,10 +257,10 @@ export default function PairingDrill({
                 >
                     {/* Badge Idioma */}
                     <span className={`
-                    absolute top-2 right-2 text-[10px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded
+                    absolute top-2 right-2 text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded-md
                     ${card.type === 'en' 
-                        ? (isPro ? 'bg-slate-900 text-slate-500' : 'bg-blue-50 text-blue-400') 
-                        : (isPro ? 'bg-slate-900 text-emerald-500' : 'bg-emerald-50 text-emerald-600')
+                        ? 'bg-blue-300/80 text-blue-950' 
+                        : 'bg-emerald-300/80 text-emerald-950'
                     }
                     `}>
                     {card.type === 'en' ? leftLabel : rightLabel}
@@ -261,7 +272,7 @@ export default function PairingDrill({
 
                     {/* Feedback Icon (Solo error, el success desaparece la carta) */}
                     {card.status === 'error' && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-red-100/10 text-red-500">
+                        <div className="absolute inset-0 flex items-center justify-center bg-red-100/10 text-[#D4AF37]">
                             <X size={48} strokeWidth={4} />
                         </div>
                     )}
@@ -272,7 +283,7 @@ export default function PairingDrill({
         
         {/* Loading State cuando cambia de lote */}
         {activeCards.length === 0 && completedPairIds.size < pairs.length && (
-            <div className="col-span-full flex items-center justify-center h-64 text-slate-400 animate-pulse">
+            <div className="col-span-full flex items-center justify-center h-64 text-slate-500 animate-pulse">
                 Cargando siguiente ronda...
             </div>
         )}

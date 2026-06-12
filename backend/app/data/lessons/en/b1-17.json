@@ -1,0 +1,101 @@
+{
+  "id": "b1-17",
+  "title": "Presentations & Public Speaking",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Vocabulary", "Presentations", "Business"],
+  "completion_message": "¡Excelente! Ahora tienes las frases clave para dominar cualquier presentación en inglés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Presentaciones y Hablar en Público",
+      "parts": [
+        { "visual": "Estructurando tu presentación: \n- Overview (Visión general). \n- Outline (Esquema/Índice). \nEj: First, I will give you a brief overview of the project. \nTransiciones: \n- Moving on to... (Pasando a...). \nEj: Moving on to the next slide (Pasando a la siguiente diapositiva).", "audio": "Structuring your presentation. Overview means a general summary. Outline is the plan of what you will cover. For example: First, I will give you a brief overview of the project. Transitions. Moving on to means going to the next topic. Moving on to the next slide." },
+        { "visual": "Elementos visuales y cierre: \n- Slide (Diapositiva). \n- Graph / Chart (Gráfico). \n- Summarize (Resumir). \nEj: As you can see on this graph... (Como pueden ver en este gráfico...). \nTo summarize, we need to reduce costs (Para resumir, necesitamos reducir costos).", "audio": "Visuals and closing. Slide. Graph or Chart. Summarize means to give a brief statement of the main points. For example: As you can see on this graph. To summarize, we need to reduce costs." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra o frase correcta para tu presentación.",
+      "questions": [
+        { "id": "b1-17-q1", "type": "quiz_choice", "question": "Let me share my screen and show you the first ____. (Diapositiva).", "options": ["slide", "page", "sheet", "picture"], "correct_answer": "slide", "explanation": "Slide = diapositiva (de PowerPoint, Google Slides, etc.)." },
+        { "id": "b1-17-q2", "type": "quiz_choice", "question": "First, I'll give you a brief ____ of the new strategy. (Visión general / Resumen).", "options": ["overview", "overlook", "sight", "look"], "correct_answer": "overview", "explanation": "Overview = visión general, resumen introductorio." },
+        { "id": "b1-17-q3", "type": "quiz_choice", "question": "Let's look at the ____ for today's presentation. (Índice / Esquema).", "options": ["outline", "menu", "list", "index"], "correct_answer": "outline", "explanation": "Outline = esquema, los puntos que se van a tratar." },
+        { "id": "b1-17-q4", "type": "quiz_choice", "question": "As you can see on this ____, sales have increased. (Gráfico).", "options": ["graph", "draw", "photo", "line"], "correct_answer": "graph", "explanation": "Graph (o chart) = gráfico." },
+        { "id": "b1-17-q5", "type": "quiz_choice", "question": "____ on to the next point, let's discuss the budget. (Pasando a...).", "options": ["Moving", "Going", "Walking", "Passing"], "correct_answer": "Moving", "explanation": "Moving on to... = Pasando a..." },
+        { "id": "b1-17-q6", "type": "quiz_choice", "question": "To ____, we need to focus on customer satisfaction. (Para resumir).", "options": ["summarize", "summary", "short", "end"], "correct_answer": "summarize", "explanation": "To summarize = Para resumir." },
+        { "id": "b1-17-q7", "type": "quiz_choice", "question": "Does anyone have any ____? (Preguntas).", "options": ["questions", "doubts", "askings", "problems"], "correct_answer": "questions", "explanation": "En inglés no se suele decir 'have doubts' al final de una presentación, se dice 'have questions'." },
+        { "id": "b1-17-q8", "type": "quiz_choice", "question": "Good morning everyone. Thank you for ____ today. (Asistir / Venir).", "options": ["coming", "come", "came", "to come"], "correct_answer": "coming", "explanation": "Thank you for + verbo-ing = Thank you for coming (Gracias por venir)." },
+        { "id": "b1-17-q9", "type": "quiz_choice", "question": "The ____ of my presentation is the Q3 results. (Propósito / Tema).", "options": ["purpose", "mean", "reason", "why"], "correct_answer": "purpose", "explanation": "The purpose of my presentation = El propósito/objetivo de mi presentación." },
+        { "id": "b1-17-q10", "type": "quiz_choice", "question": "Let's ____ down to business. (Ir al grano / Empezar a trabajar).", "options": ["get", "go", "make", "take"], "correct_answer": "get", "explanation": "Let's get down to business = Vamos al grano / Manos a la obra." },
+        { "id": "b1-17-q11", "type": "quiz_choice", "question": "Let me ____ your attention to this chart. (Llamar / Dirigir).", "options": ["draw", "call", "take", "put"], "correct_answer": "draw", "explanation": "Draw someone's attention to... = Dirigir la atención de alguien hacia..." },
+        { "id": "b1-17-q12", "type": "quiz_choice", "question": "I have divided my presentation into three ____. (Partes).", "options": ["parts", "pieces", "chunks", "bits"], "correct_answer": "parts", "explanation": "Three parts = tres partes." },
+        { "id": "b1-17-q13", "type": "quiz_choice", "question": "This ____ to my next point. (Nos lleva a).", "options": ["leads", "takes", "goes", "brings"], "correct_answer": "leads", "explanation": "This leads me to my next point = Esto me lleva a mi siguiente punto." },
+        { "id": "b1-17-q14", "type": "quiz_choice", "question": "Let's take a closer ____ at the numbers. (Vistazo / Mirada).", "options": ["look", "see", "watch", "view"], "correct_answer": "look", "explanation": "Take a closer look at = echemos un vistazo más de cerca a." },
+        { "id": "b1-17-q15", "type": "quiz_choice", "question": "I will take questions at the ____ of the presentation. (Final).", "options": ["end", "finish", "last", "bottom"], "correct_answer": "end", "explanation": "At the end = al final." },
+        { "id": "b1-17-q16", "type": "quiz_choice", "question": "As I ____ earlier, our budget is limited. (Mencioné).", "options": ["mentioned", "spoke", "told", "talked"], "correct_answer": "mentioned", "explanation": "As I mentioned earlier = Como mencioné antes." },
+        { "id": "b1-17-q17", "type": "quiz_choice", "question": "That covers everything I wanted to ____ today. (Decir / Tratar).", "options": ["say", "speak", "talk", "tell"], "correct_answer": "say", "explanation": "Everything I wanted to say = Todo lo que quería decir." },
+        { "id": "b1-17-q18", "type": "quiz_choice", "question": "To ____ up, the project is a success. (Concluir / Resumir).", "options": ["sum", "end", "finish", "close"], "correct_answer": "sum", "explanation": "To sum up = Para resumir." },
+        { "id": "b1-17-q19", "type": "quiz_choice", "question": "Let's skip this ____ and go to the next one. (Diapositiva).", "options": ["slide", "page", "sheet", "board"], "correct_answer": "slide", "explanation": "Skip this slide = saltarse esta diapositiva." },
+        { "id": "b1-17-q20", "type": "quiz_choice", "question": "Can everyone ____ my screen? (Ver).", "options": ["see", "look", "watch", "view"], "correct_answer": "see", "explanation": "Can everyone see my screen? = ¿Todos pueden ver mi pantalla?" }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de presentación correcta.",
+      "questions": [
+        { "id": "b1-17-f1", "type": "fill_input", "question": "Next ____. (Diapositiva con S)", "correct_answer": "slide", "explanation": "slide." },
+        { "id": "b1-17-f2", "type": "fill_input", "question": "A brief ____. (Visión general con O)", "correct_answer": "overview", "explanation": "overview." },
+        { "id": "b1-17-f3", "type": "fill_input", "question": "The presentation ____. (Esquema/Índice con O)", "correct_answer": "outline", "explanation": "outline." },
+        { "id": "b1-17-f4", "type": "fill_input", "question": "As you see on this ____. (Gráfico con G)", "correct_answer": "graph", "explanation": "graph." },
+        { "id": "b1-17-f5", "type": "fill_input", "question": "____ on to the next topic. (Pasando a... con M)", "correct_answer": "Moving", "explanation": "Moving." },
+        { "id": "b1-17-f6", "type": "fill_input", "question": "To ____, we need to act now. (Resumir con S)", "correct_answer": "summarize", "explanation": "summarize." },
+        { "id": "b1-17-f7", "type": "fill_input", "question": "Any ____? (Preguntas con Q)", "correct_answer": "questions", "explanation": "questions." },
+        { "id": "b1-17-f8", "type": "fill_input", "question": "The ____ of my presentation is... (Propósito con P)", "correct_answer": "purpose", "explanation": "purpose." },
+        { "id": "b1-17-f9", "type": "fill_input", "question": "Can you ____ my screen? (Ver)", "correct_answer": "see", "explanation": "see." },
+        { "id": "b1-17-f10", "type": "fill_input", "question": "As I ____ earlier... (Mencioné con M)", "correct_answer": "mentioned", "explanation": "mentioned." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Presentation Match",
+      "pairs": [
+        {"id": "b1-17-p1", "source": "Slide", "target": "Diapositiva"},
+        {"id": "b1-17-p2", "source": "Overview", "target": "Visión general / Resumen corto"},
+        {"id": "b1-17-p3", "source": "Outline", "target": "Esquema / Índice"},
+        {"id": "b1-17-p4", "source": "Graph / Chart", "target": "Gráfico"},
+        {"id": "b1-17-p5", "source": "Moving on to...", "target": "Pasando a..."},
+        {"id": "b1-17-p6", "source": "To summarize...", "target": "Para resumir..."},
+        {"id": "b1-17-p7", "source": "Any questions?", "target": "¿Alguna pregunta?"},
+        {"id": "b1-17-p8", "source": "The purpose of...", "target": "El propósito de..."},
+        {"id": "b1-17-p9", "source": "As I mentioned...", "target": "Como mencioné..."},
+        {"id": "b1-17-p10", "source": "Can you see my screen?", "target": "¿Pueden ver mi pantalla?"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase que usarías en tu presentación.",
+      "questions": [
+        { "id": "b1-17-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let me show you the first slide.", "options": ["Let me show you the first slide.", "Let me see the first slide.", "Let me show you the next slide.", "Let me share the first slide."], "correct_answer": "Let me show you the first slide.", "explanation": "Audio exacto." },
+        { "id": "b1-17-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will give you a brief overview.", "options": ["I will give you a brief overview.", "I will give you a quick overview.", "I will show you a brief overview.", "I give you a brief overview."], "correct_answer": "I will give you a brief overview.", "explanation": "Audio exacto." },
+        { "id": "b1-17-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's look at the outline.", "options": ["Let's look at the outline.", "Let's see the outline.", "Let's look at the overview.", "Let's check the outline."], "correct_answer": "Let's look at the outline.", "explanation": "Audio exacto." },
+        { "id": "b1-17-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "As you can see on this graph.", "options": ["As you can see on this graph.", "As you can see in this graph.", "As you see on this graph.", "As you can see on that graph."], "correct_answer": "As you can see on this graph.", "explanation": "Audio exacto." },
+        { "id": "b1-17-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Moving on to the next point.", "options": ["Moving on to the next point.", "Going on to the next point.", "Moving on to the next slide.", "Moving to the next point."], "correct_answer": "Moving on to the next point.", "explanation": "Audio exacto." },
+        { "id": "b1-17-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "To summarize, we need to act now.", "options": ["To summarize, we need to act now.", "To sum up, we need to act now.", "To summarize, we need to go now.", "To summarize, you need to act now."], "correct_answer": "To summarize, we need to act now.", "explanation": "Audio exacto." },
+        { "id": "b1-17-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Does anyone have any questions?", "options": ["Does anyone have any questions?", "Do you have any questions?", "Has anyone got any questions?", "Does everyone have any questions?"], "correct_answer": "Does anyone have any questions?", "explanation": "Audio exacto." },
+        { "id": "b1-17-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The purpose of my presentation is to inform you.", "options": ["The purpose of my presentation is to inform you.", "The purpose of the presentation is to inform you.", "The goal of my presentation is to inform you.", "My purpose is to inform you."], "correct_answer": "The purpose of my presentation is to inform you.", "explanation": "Audio exacto." },
+        { "id": "b1-17-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "As I mentioned earlier.", "options": ["As I mentioned earlier.", "As I said earlier.", "As I mentioned before.", "As we mentioned earlier."], "correct_answer": "As I mentioned earlier.", "explanation": "Audio exacto." },
+        { "id": "b1-17-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can everyone see my screen?", "options": ["Can everyone see my screen?", "Can you see my screen?", "Does everyone see my screen?", "Can everybody see my screen?"], "correct_answer": "Can everyone see my screen?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -64,7 +64,7 @@ export default function MeetingRoomPage() {
     {
       id: 'ma_pitch',
       title: 'High-Stakes M&A Pitch',
-      subtitle: 'Boardroom acquisition strategy approval',
+      subtitle: 'Corporativo acquisition strategy approval',
       difficulty: 'HARD',
       description: 'Acquiring your main tech competitor in Europe. You must present the expansion plan, justify the 45M EUR investment valuation, and handle sharp objections from the CFO regarding cash reserves.',
       objectives: [
@@ -79,7 +79,7 @@ export default function MeetingRoomPage() {
     {
       id: 'product_recall',
       title: 'PR & Product Recall Crisis',
-      subtitle: 'Emergency Boardroom Negotiations',
+      subtitle: 'Emergency Corporativo Negotiations',
       difficulty: 'EXTREME',
       description: 'A major hardware defect in your new autonomous device line is causing safety concerns. You need to negotiate a containment strategy without crashing public stock valuation, balancing financial damage vs brand reputation.',
       objectives: [
@@ -132,7 +132,7 @@ export default function MeetingRoomPage() {
   // Audio Playback
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
 
-  // Overall Boardroom metrics
+  // Overall Corporativo metrics
   const [grammarScore, setGrammarScore] = useState<number>(85);
   const [toneScore, setToneScore] = useState<number>(80);
   const [vocabularyScore, setVocabularyScore] = useState<number>(75);
@@ -543,13 +543,13 @@ export default function MeetingRoomPage() {
     const oldest = historicalLogs[historicalLogs.length - 1].trust;
     const diff = latest - oldest;
     if (diff > 0) return `Upward strategic curve! Aggregate board trust has increased by +${diff}% from initial trials.`;
-    if (diff < 0) return `Boardroom friction detected. Trust is down by ${diff}% due to tight CFO scrutiny. Repitch with better risk mitigation.`;
+    if (diff < 0) return `Corporativo friction detected. Trust is down by ${diff}% due to tight CFO scrutiny. Repitch with better risk mitigation.`;
     return "Stable performance curve. Maintain executive posture and jargon consistency.";
   };
 
   // [30] getExecutiveRankTitle: Converts average scores to executive designations
   const getExecutiveRankTitle = (avg: number): string => {
-    if (avg >= 92) return "Titanium board member (C-Suite Elite)";
+    if (avg >= 92) return "Titanium board member (Alta Dirección Elite)";
     if (avg >= 83) return "Executive Vice President of Global Scale";
     if (avg >= 70) return "Senior Business Strategy Advisor";
     return "Management Candidate (Development Phase)";
@@ -572,7 +572,7 @@ export default function MeetingRoomPage() {
 
   // [33] toggleVoiceSubtitles: Setting helper
   const toggleVoiceSubtitles = (): void => {
-    alert("C-Suite high fidelity subtitles enabled for live feedback.");
+    alert("Alta Dirección high fidelity subtitles enabled for live feedback.");
   };
 
   // [34] calculateSimulatedSpeakingPace: Computes pace wpm
@@ -611,7 +611,7 @@ export default function MeetingRoomPage() {
 
   // [38] shareToLinkedIn: Linked sharing utility
   const shareToLinkedIn = (): void => {
-    alert("Boardroom certification shared on LinkedIn. Enterprise record logged!");
+    alert("Corporativo certification shared on LinkedIn. Enterprise record logged!");
   };
 
   // [39] shareToTwitter: Twitter sharing utility
@@ -780,8 +780,8 @@ export default function MeetingRoomPage() {
     return text.toLowerCase().split(/\s+/).filter(w => jargonWords.includes(w)).length;
   };
 
-  // [62] saveBoardroomSessionHistory: Appends history item to local storage database
-  const saveBoardroomSessionHistory = (score: number): void => {
+  // [62] saveCorporativoSessionHistory: Appends history item to local storage database
+  const saveCorporativoSessionHistory = (score: number): void => {
     const entry = {
       scenarioId: selectedScenario.id,
       trustScore: score,
@@ -794,8 +794,8 @@ export default function MeetingRoomPage() {
     }
   };
 
-  // [63] getBoardroomPerformanceReport: Retrieves average score trends
-  const getBoardroomPerformanceReport = (): string => {
+  // [63] getCorporativoPerformanceReport: Retrieves average score trends
+  const getCorporativoPerformanceReport = (): string => {
     if (historicalLogs.length === 0) return "No boardroom session logs recorded yet.";
     const avg = getHistoricalAverageScore();
     return `Navigated ${historicalLogs.length} sessions with a baseline trust of ${avg}%.`;
@@ -991,9 +991,9 @@ export default function MeetingRoomPage() {
 
   // [90] getJargonDifficultyBadge: Difficulty color strings
   const getJargonDifficultyBadge = (): string => {
-    if (selectedScenario.difficulty === 'EXTREME') return "border-red-500/30 bg-red-500/20 text-red-400";
+    if (selectedScenario.difficulty === 'EXTREME') return "border-red-500/30 bg-[#D4AF37]/100/20 text-red-400";
     if (selectedScenario.difficulty === 'HARD') return "border-orange-500/30 bg-orange-500/20 text-orange-400";
-    return "border-blue-500/30 bg-blue-500/20 text-blue-400";
+    return "border-blue-500/30 bg-[#D4AF37]/20/20 text-blue-400";
   };
 
   // [91] evaluateCompetitorDeterrenceScore: Deterrence score
@@ -1057,7 +1057,7 @@ export default function MeetingRoomPage() {
 
   // [99] shareSimGraduationToLinkedIn: Dynamic dummy share
   const shareSimGraduationToLinkedIn = (): void => {
-    alert('CEO Boardroom Sim graduation successfully shared on LinkedIn profile!');
+    alert('CEO Corporativo Sim graduation successfully shared on LinkedIn profile!');
   };
 
   // [100] shareSimGraduationToTwitter: Dynamic twitter share
@@ -1189,8 +1189,8 @@ export default function MeetingRoomPage() {
     return getObjectionDefenseStatus();
   };
 
-  // [117] getBoardroomHistoryLength: Returns length of logs
-  const getBoardroomHistoryLength = (): number => {
+  // [117] getCorporativoHistoryLength: Returns length of logs
+  const getCorporativoHistoryLength = (): number => {
     return historicalLogs.length;
   };
 
@@ -1295,7 +1295,7 @@ export default function MeetingRoomPage() {
   // [136] getTurnOwnerName: Turn holder name
   const getTurnOwnerName = (): string => {
     const char = characters.find(c => c.id === currentTurnOwner);
-    return char?.name || 'Boardroom';
+    return char?.name || 'Corporativo';
   };
 
   // [137] getTurnOwnerRole: Turn holder designation
@@ -1442,12 +1442,12 @@ export default function MeetingRoomPage() {
 
   // [165] getHistoricalLogLength: history logs count
   const getHistoricalLogLength = (): number => {
-    return getBoardroomHistoryLength();
+    return getCorporativoHistoryLength();
   };
 
   // [166] saveHistoricalScoreRecord: Append record wrapper
   const saveHistoricalScoreRecord = (score: number): void => {
-    saveBoardroomSessionHistory(score);
+    saveCorporativoSessionHistory(score);
   };
 
   // [167] calculateTotalJargonProficiency: Returns jargon level evaluation
@@ -1685,14 +1685,14 @@ export default function MeetingRoomPage() {
     return getHighestTrustScenario();
   };
 
-  // [214] getBoardroomPerformanceReportDetailed: performance logs average wrapper
-  const getBoardroomPerformanceReportDetailed = (): string => {
-    return getBoardroomPerformanceReport();
+  // [214] getCorporativoPerformanceReportDetailed: performance logs average wrapper
+  const getCorporativoPerformanceReportDetailed = (): string => {
+    return getCorporativoPerformanceReport();
   };
 
-  // [215] saveBoardroomSessionHistoryDetailed: sessions logs appender wrapper
-  const saveBoardroomSessionHistoryDetailed = (score: number): void => {
-    saveBoardroomSessionHistory(score);
+  // [215] saveCorporativoSessionHistoryDetailed: sessions logs appender wrapper
+  const saveCorporativoSessionHistoryDetailed = (score: number): void => {
+    saveCorporativoSessionHistory(score);
   };
 
   // [216] getScenarioKeywordsCountDetailed: Matched keywords count wrapper
@@ -1755,9 +1755,9 @@ export default function MeetingRoomPage() {
     return getHistoryTrustAverage();
   };
 
-  // [228] getBoardroomHistoryLengthDetailed: log records detailed count wrapper
-  const getBoardroomHistoryLengthDetailed = (): number => {
-    return getBoardroomHistoryLength();
+  // [228] getCorporativoHistoryLengthDetailed: log records detailed count wrapper
+  const getCorporativoHistoryLengthDetailed = (): number => {
+    return getCorporativoHistoryLength();
   };
 
   // [229] getObjectionDefenseStatusTextDetailed: Dynamic goal status string detailed
@@ -2141,7 +2141,7 @@ export default function MeetingRoomPage() {
       setMessages([
         {
           role: 'ai',
-          sender: activeChar?.name || 'Boardroom',
+          sender: activeChar?.name || 'Corporativo',
           avatar: activeChar?.avatar || '',
           text: selectedScenario.initialQuestion,
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
@@ -2299,7 +2299,7 @@ export default function MeetingRoomPage() {
     }
   };
 
-  // Submit Answer to dynamic AI Boardroom Simulator
+  // Submit Answer to dynamic AI Corporativo Simulator
   const handleSendMessage = async () => {
     const textToSend = inputText.trim();
     if (!textToSend && !audioBlob) return;
@@ -2521,7 +2521,7 @@ export default function MeetingRoomPage() {
     <div className="h-screen bg-gradient-to-br from-orange-600 via-amber-800 to-stone-950 flex flex-col text-slate-100 font-sans overflow-hidden">
       
       {/* Header */}
-      <div className="h-16 border-b border-orange-500/25 px-6 flex items-center justify-between bg-black/40 backdrop-blur-md z-10">
+      <div className="h-16 border-b border-orange-500/25 px-6 flex items-center justify-between bg-white/40 backdrop-blur-md z-10">
         <div className="flex items-center gap-4">
           <button 
             onClick={() => {
@@ -2531,7 +2531,7 @@ export default function MeetingRoomPage() {
                 router.back();
               }
             }} 
-            className="p-2 bg-white/10 hover:bg-white/20 text-orange-200 hover:text-white transition-all rounded-md"
+            className="p-2 bg-white/10 hover:bg-white/20 text-orange-200 hover:text-slate-900 transition-all rounded-none"
           >
             <ArrowLeft size={16} />
           </button>
@@ -2540,7 +2540,7 @@ export default function MeetingRoomPage() {
           
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-orange-400 animate-pulse"></span>
-            <h1 className="text-sm font-black text-white uppercase tracking-wider">Titanium Executive Boardroom</h1>
+            <h1 className="text-sm font-black text-slate-900 uppercase tracking-wider">Titanium Executive Corporativo</h1>
           </div>
         </div>
 
@@ -2548,9 +2548,9 @@ export default function MeetingRoomPage() {
           {isJoined && (
             <button 
               onClick={() => setIsToolboxOpen(!isToolboxOpen)} 
-              className={`px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-wider transition-all flex items-center gap-1.5 z-20 ${
+              className={`px-3 py-1.5 rounded-none text-[10px] font-black uppercase tracking-wider transition-all flex items-center gap-1.5 z-20 ${
                 isToolboxOpen 
-                  ? 'bg-orange-500 text-slate-950 shadow-lg shadow-orange-500/20' 
+                  ? 'bg-orange-500 text-slate-950 shadow-none shadow-orange-500/20' 
                   : 'bg-white/10 hover:bg-white/20 text-orange-200'
               }`}
             >
@@ -2564,14 +2564,14 @@ export default function MeetingRoomPage() {
           </div>
           <button 
             onClick={() => setIsMuteAll(!isMuteAll)} 
-            className={`p-2 rounded-lg transition-colors ${isMuteAll ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30' : 'bg-white/10 hover:bg-white/20 text-orange-200'}`}
+            className={`p-2 rounded-none transition-colors ${isMuteAll ? 'bg-[#D4AF37]/100/20 text-red-400 hover:bg-[#D4AF37]/100/30' : 'bg-white/10 hover:bg-white/20 text-orange-200'}`}
             title={isMuteAll ? "Unmute board members" : "Mute board members"}
           >
             {isMuteAll ? <VolumeX size={18} /> : <Volume2 size={18} />}
           </button>
           <button 
             onClick={() => router.push('/dashboard/pro')} 
-            className="p-2 hover:bg-red-500/10 text-red-400 transition-colors rounded-lg"
+            className="p-2 hover:bg-[#D4AF37]/100/10 text-red-400 transition-colors rounded-none"
           >
             <X size={20} />
           </button>
@@ -2588,17 +2588,17 @@ export default function MeetingRoomPage() {
             exit={{ opacity: 0, y: -20 }}
             className="flex-1 overflow-y-auto p-6 flex flex-col items-center custom-scrollbar"
           >
-            <div className="w-full max-w-4xl bg-black/60 border border-orange-500/20 p-8 md:p-12 shadow-2xl relative backdrop-blur-xl rounded-2xl my-auto">
+            <div className="w-full max-w-4xl bg-white/60 border border-orange-500/20 p-8 md:p-12 shadow-2xl relative backdrop-blur-xl rounded-none my-auto">
               
               <div className="absolute top-0 right-0 p-8 opacity-5 text-orange-500">
                 <Users size={200} />
               </div>
               
               <div className="text-center max-w-2xl mx-auto mb-10">
-                <div className="w-16 h-16 bg-gradient-to-tr from-orange-500 to-amber-400 rounded-2xl flex items-center justify-center text-slate-950 shadow-lg shadow-orange-500/20 mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-tr from-orange-500 to-amber-400 rounded-none flex items-center justify-center text-slate-950 shadow-none shadow-orange-500/20 mx-auto mb-6">
                   <Award size={36} className="animate-pulse" />
                 </div>
-                <h2 className="text-3xl font-extrabold text-white tracking-tight uppercase">Enter the C-Suite Boardroom</h2>
+                <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight uppercase">Enter the Alta Dirección Corporativo</h2>
                 <p className="text-sm text-orange-200/80 mt-2">
                   Test your real-time speaking capacity, professional vocabulary, and executive composure under corporate interrogation. Choose a scenario below.
                 </p>
@@ -2612,26 +2612,26 @@ export default function MeetingRoomPage() {
                     <div 
                       key={scen.id}
                       onClick={() => setSelectedScenario(scen)}
-                      className={`p-6 border rounded-xl cursor-pointer transition-all flex flex-col justify-between ${
+                      className={`p-6 border rounded-none cursor-pointer transition-all flex flex-col justify-between ${
                         isSelected 
-                          ? 'bg-orange-950/40 border-orange-500 shadow-xl shadow-orange-500/10 ring-1 ring-orange-500/30 text-white' 
-                          : 'bg-black/40 border-orange-900/40 hover:border-orange-500/40 hover:bg-black/60 text-slate-300'
+                          ? 'bg-orange-950/40 border-orange-500 shadow-xl shadow-orange-500/10 ring-1 ring-orange-500/30 text-slate-900' 
+                          : 'bg-white/40 border-orange-900/40 hover:border-orange-500/40 hover:bg-white/60 text-slate-300'
                       }`}
                     >
                       <div>
                         <div className="flex items-center justify-between mb-4">
                           <span className={`text-[9px] font-black px-2.5 py-0.5 rounded-full ${
                             scen.difficulty === 'EXTREME' 
-                              ? 'bg-red-500/20 text-red-400 border border-red-500/30' 
+                              ? 'bg-[#D4AF37]/100/20 text-red-400 border border-red-500/30' 
                               : scen.difficulty === 'HARD' 
                                 ? 'bg-orange-500/20 text-orange-300 border border-orange-500/30' 
-                                : 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
+                                : 'bg-[#D4AF37]/20/20 text-blue-300 border border-blue-500/30'
                           }`}>
                             {scen.difficulty}
                           </span>
                           {isSelected && <Circle className="text-orange-500 fill-orange-500 animate-ping" style={{ transformBox: 'fill-box' }} size={10} />}
                         </div>
-                        <h3 className="text-base font-bold text-white mb-2">{scen.title}</h3>
+                        <h3 className="text-base font-bold text-slate-900 mb-2">{scen.title}</h3>
                         <p className="text-xs text-orange-200/60 mb-4">{scen.subtitle}</p>
                         <p className="text-xs text-slate-300 line-clamp-4 leading-relaxed">{scen.description}</p>
                       </div>
@@ -2650,10 +2650,10 @@ export default function MeetingRoomPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto mb-8">
                 <button 
                   onClick={() => setIsMicOn(!isMicOn)}
-                  className={`py-4 px-6 border flex items-center justify-center gap-3 transition-all rounded-lg ${
+                  className={`py-4 px-6 border flex items-center justify-center gap-3 transition-all rounded-none ${
                     isMicOn 
-                      ? 'bg-orange-500 border-orange-400 text-slate-950 font-black shadow-lg shadow-orange-500/10' 
-                      : 'bg-black/40 border-orange-900/40 text-slate-400 hover:bg-black/60'
+                      ? 'bg-orange-500 border-orange-400 text-slate-950 font-black shadow-none shadow-orange-500/10' 
+                      : 'bg-white/40 border-orange-900/40 text-slate-500 hover:bg-white/60'
                   }`}
                 >
                   {isMicOn ? <Mic size={18} /> : <MicOff size={18} />}
@@ -2662,10 +2662,10 @@ export default function MeetingRoomPage() {
 
                 <button 
                   onClick={() => setIsVideoOn(!isVideoOn)}
-                  className={`py-4 px-6 border flex items-center justify-center gap-3 transition-all rounded-lg ${
+                  className={`py-4 px-6 border flex items-center justify-center gap-3 transition-all rounded-none ${
                     isVideoOn 
-                      ? 'bg-orange-500 border-orange-400 text-slate-950 font-black shadow-lg shadow-orange-500/10' 
-                      : 'bg-black/40 border-orange-900/40 text-slate-400 hover:bg-black/60'
+                      ? 'bg-orange-500 border-orange-400 text-slate-950 font-black shadow-none shadow-orange-500/10' 
+                      : 'bg-white/40 border-orange-900/40 text-slate-500 hover:bg-white/60'
                   }`}
                 >
                   {isVideoOn ? <Video size={18} /> : <VideoOff size={18} />}
@@ -2677,9 +2677,9 @@ export default function MeetingRoomPage() {
               <div className="flex flex-col items-center">
                 <button 
                   onClick={() => setIsJoined(true)}
-                  className="w-full max-w-sm py-4 bg-white hover:bg-orange-500 hover:text-slate-950 text-slate-950 font-extrabold uppercase tracking-widest text-xs rounded-lg transition-all transform active:scale-95 shadow-xl hover:shadow-orange-500/10"
+                  className="w-full max-w-sm py-4 bg-white hover:bg-orange-500 hover:text-slate-950 text-slate-950 font-extrabold uppercase tracking-widest text-xs rounded-none transition-all transform active:scale-95 shadow-xl hover:shadow-orange-500/10"
                 >
-                  Launch Boardroom Sim
+                  Launch Corporativo Sim
                 </button>
               </div>
 
@@ -2704,9 +2704,9 @@ export default function MeetingRoomPage() {
                   {characters.map((char) => (
                     <div 
                       key={char.id} 
-                      className={`relative bg-slate-900 border-2 transition-all aspect-video overflow-hidden rounded-xl group ${
+                      className={`relative bg-slate-50 border-2 transition-all aspect-video overflow-hidden rounded-none group ${
                         char.status === 'speaking' 
-                          ? 'border-amber-500 ring-2 ring-amber-500/20 shadow-lg shadow-amber-500/5' 
+                          ? 'border-[#D4AF37]/30 ring-2 ring-amber-500/20 shadow-none shadow-amber-500/5' 
                           : char.status === 'listening' 
                             ? 'border-blue-500/50' 
                             : 'border-slate-800/80 hover:border-slate-700'
@@ -2723,14 +2723,14 @@ export default function MeetingRoomPage() {
                       
                       {/* Live feedback status badges */}
                       <div className="absolute top-3 left-3 flex gap-1.5">
-                        <span className="px-2 py-0.5 bg-slate-950/80 text-[8px] font-black text-slate-400 uppercase tracking-widest rounded backdrop-blur-md border border-slate-800">
+                        <span className="px-2 py-0.5 bg-slate-50/80 text-[8px] font-black text-slate-500 uppercase tracking-widest rounded backdrop-blur-md border border-slate-800">
                           Board AI
                         </span>
                         {char.status !== 'idle' && (
                           <span className={`px-2 py-0.5 text-[8px] font-black uppercase tracking-widest rounded backdrop-blur-md border ${
                             char.status === 'speaking' 
-                              ? 'bg-amber-500/20 text-amber-400 border-amber-500/30 animate-pulse' 
-                              : 'bg-blue-500/20 text-blue-400 border-blue-500/30'
+                              ? 'bg-[#D4AF37]/20/20 text-amber-400 border-[#D4AF37]/30/30 animate-pulse' 
+                              : 'bg-[#D4AF37]/20/20 text-blue-400 border-blue-500/30'
                           }`}>
                             {char.status}
                           </span>
@@ -2740,14 +2740,14 @@ export default function MeetingRoomPage() {
                       <div className="absolute bottom-0 left-0 p-4 w-full">
                         <div className="flex items-center justify-between">
                           <div>
-                            <p className="text-white font-extrabold text-xs uppercase tracking-wider">{char.name}</p>
-                            <p className="text-[9px] text-amber-500 font-bold uppercase tracking-wider">{char.role}</p>
+                            <p className="text-slate-900 font-extrabold text-xs uppercase tracking-wider">{char.name}</p>
+                            <p className="text-[9px] text-[#D4AF37] font-bold uppercase tracking-wider">{char.role}</p>
                           </div>
                           {char.status === 'speaking' && (
-                            <div className="flex items-end gap-0.5 h-4 px-1.5 py-0.5 bg-amber-500/20 rounded">
-                              <span className="w-0.5 h-2 bg-amber-500 animate-[bounce_0.6s_infinite]"></span>
-                              <span className="w-0.5 h-3 bg-amber-500 animate-[bounce_0.8s_infinite]"></span>
-                              <span className="w-0.5 h-1.5 bg-amber-500 animate-[bounce_0.4s_infinite]"></span>
+                            <div className="flex items-end gap-0.5 h-4 px-1.5 py-0.5 bg-[#D4AF37]/20/20 rounded">
+                              <span className="w-0.5 h-2 bg-[#D4AF37]/20 animate-[bounce_0.6s_infinite]"></span>
+                              <span className="w-0.5 h-3 bg-[#D4AF37]/20 animate-[bounce_0.8s_infinite]"></span>
+                              <span className="w-0.5 h-1.5 bg-[#D4AF37]/20 animate-[bounce_0.4s_infinite]"></span>
                             </div>
                           )}
                         </div>
@@ -2756,16 +2756,16 @@ export default function MeetingRoomPage() {
                   ))}
 
                   {/* User Active View */}
-                  <div className={`relative bg-slate-900 border-2 aspect-video overflow-hidden rounded-xl flex items-center justify-center transition-all ${
+                  <div className={`relative bg-slate-50 border-2 aspect-video overflow-hidden rounded-none flex items-center justify-center transition-all ${
                     isRecording 
-                      ? 'border-red-500 shadow-lg shadow-red-500/5' 
+                      ? 'border-red-500 shadow-none shadow-red-500/5' 
                       : 'border-slate-800/80'
                   }`}>
                     {isVideoOn ? (
-                      <div className="w-full h-full bg-slate-800 flex items-center justify-center italic text-slate-500 text-xs relative">
+                      <div className="w-full h-full bg-slate-50 flex items-center justify-center italic text-slate-600 text-xs relative">
                         <span className="absolute top-3 right-3 flex h-2 w-2">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]/100"></span>
                         </span>
                         Camera Mock Active
                       </div>
@@ -2782,19 +2782,19 @@ export default function MeetingRoomPage() {
                                   key={i}
                                   animate={{ height: vol }}
                                   transition={{ type: 'spring', stiffness: 300, damping: 15 }}
-                                  className="w-1 bg-red-500 rounded-full"
+                                  className="w-1 bg-[#D4AF37]/100 rounded-full"
                                   style={{ minHeight: '4px' }}
                                 />
                               ))}
                             </div>
                           ) : (
-                            <div className="w-16 h-16 rounded-full bg-slate-800 border border-slate-700/60 flex items-center justify-center text-white text-lg font-black mb-2 shadow-inner">
+                            <div className="w-16 h-16 rounded-full bg-slate-50 border border-slate-700/60 flex items-center justify-center text-slate-900 text-lg font-black mb-2 shadow-inner">
                               U
                             </div>
                           )}
                         </div>
                         
-                        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                        <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">
                           {isRecording ? 'Capturing Audio...' : 'Camera Inactive'}
                         </p>
                         <p className="text-[8px] text-slate-600 font-bold uppercase mt-1">You (CEO)</p>
@@ -2802,7 +2802,7 @@ export default function MeetingRoomPage() {
                     )}
                     
                     <div className="absolute bottom-3 left-3">
-                      <span className="px-2 py-0.5 bg-slate-950/80 text-[8px] font-black text-slate-400 uppercase tracking-widest rounded backdrop-blur-md border border-slate-800/80">
+                      <span className="px-2 py-0.5 bg-slate-50/80 text-[8px] font-black text-slate-500 uppercase tracking-widest rounded backdrop-blur-md border border-slate-800/80">
                         CEO (You)
                       </span>
                     </div>
@@ -2810,13 +2810,13 @@ export default function MeetingRoomPage() {
                 </div>
 
                 {/* Subtitles & Dynamic Transcript Feed */}
-                <div className="bg-slate-900/30 border border-slate-800/60 rounded-xl p-5 flex-1 min-h-[250px] flex flex-col shadow-inner backdrop-blur-sm">
+                <div className="bg-slate-50/30 border border-slate-800/60 rounded-none p-5 flex-1 min-h-[250px] flex flex-col shadow-inner backdrop-blur-sm">
                   <div className="flex items-center justify-between border-b border-slate-800/80 pb-4 mb-4">
-                    <div className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">
-                      <Activity size={14} className="text-amber-500 animate-pulse" /> Meeting Log & Real-time Transcription
+                    <div className="flex items-center gap-2 text-[10px] font-black text-slate-500 uppercase tracking-widest">
+                      <Activity size={14} className="text-[#D4AF37] animate-pulse" /> Meeting Log & Real-time Transcription
                     </div>
                     {isTranscribing && (
-                      <span className="text-[9px] font-bold text-amber-500 uppercase tracking-widest flex items-center gap-1">
+                      <span className="text-[9px] font-bold text-[#D4AF37] uppercase tracking-widest flex items-center gap-1">
                         <Loader2 size={12} className="animate-spin" /> processing speech metrics...
                       </span>
                     )}
@@ -2825,16 +2825,16 @@ export default function MeetingRoomPage() {
                   <div className="flex-1 space-y-4 overflow-y-auto pr-2 custom-scrollbar">
                     {messages.map((msg, i) => (
                       <div key={i} className={`flex gap-4 ${msg.role === 'user' ? 'justify-end' : ''}`}>
-                        <div className={`max-w-[80%] rounded-xl p-4 text-xs leading-relaxed ${
+                        <div className={`max-w-[80%] rounded-none p-4 text-xs leading-relaxed ${
                           msg.role === 'user' 
-                            ? 'bg-slate-800 text-white border border-slate-700/60 shadow-lg' 
-                            : 'bg-slate-900/80 border border-slate-800 text-slate-200 shadow-md'
+                            ? 'bg-slate-50 text-slate-900 border border-slate-700/60 shadow-none' 
+                            : 'bg-slate-50/80 border border-slate-800 text-slate-200 shadow-none'
                         }`}>
                           <div className="flex items-center justify-between gap-6 mb-2">
-                            <span className="font-extrabold text-[9px] uppercase tracking-widest text-amber-500">
+                            <span className="font-extrabold text-[9px] uppercase tracking-widest text-[#D4AF37]">
                               {msg.sender}
                             </span>
-                            <span className="text-[8px] text-slate-500 font-bold">
+                            <span className="text-[8px] text-slate-600 font-bold">
                               {msg.timestamp}
                             </span>
                           </div>
@@ -2844,12 +2844,12 @@ export default function MeetingRoomPage() {
                           {msg.analysis && (
                             <div className="mt-3 pt-3 border-t border-slate-800/60 flex flex-wrap gap-x-4 gap-y-2">
                               {msg.analysis.score && (
-                                <span className="text-[9px] font-black text-emerald-500 uppercase tracking-wider flex items-center gap-1 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                                <span className="text-[9px] font-black text-[#D4AF37] uppercase tracking-wider flex items-center gap-1 bg-[#D4AF37]/100/10 px-2 py-0.5 rounded border border-emerald-500/20">
                                   <Sparkles size={10} /> grammar: {msg.analysis.score}%
                                 </span>
                               )}
                               {msg.analysis.tone_check && (
-                                <span className="text-[9px] font-black text-blue-400 uppercase tracking-wider flex items-center gap-1 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">
+                                <span className="text-[9px] font-black text-blue-400 uppercase tracking-wider flex items-center gap-1 bg-[#D4AF37]/20/10 px-2 py-0.5 rounded border border-blue-500/20">
                                   <TrendingUp size={10} /> tone: {msg.analysis.tone_check}
                                 </span>
                               )}
@@ -2861,9 +2861,9 @@ export default function MeetingRoomPage() {
                     
                     {isLoading && (
                       <div className="flex gap-4">
-                        <div className="bg-slate-900/60 border border-slate-800 p-4 rounded-xl flex items-center gap-3">
-                          <Loader2 className="animate-spin text-amber-500" size={16} />
-                          <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider animate-pulse">
+                        <div className="bg-slate-50/60 border border-slate-800 p-4 rounded-none flex items-center gap-3">
+                          <Loader2 className="animate-spin text-[#D4AF37]" size={16} />
+                          <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider animate-pulse">
                             Board is reflecting...
                           </span>
                         </div>
@@ -2875,56 +2875,56 @@ export default function MeetingRoomPage() {
               </div>
 
               {/* Sidebar: Evaluation & Session Objectives */}
-              <div className="w-80 border-l border-slate-800 bg-slate-900/20 backdrop-blur-lg flex flex-col z-10 shrink-0">
+              <div className="w-80 border-l border-slate-800 bg-slate-50/20 backdrop-blur-lg flex flex-col z-10 shrink-0">
                 
                 {/* Score Dashboard */}
-                <div className="p-6 border-b border-slate-800/80 bg-slate-900/40">
+                <div className="p-6 border-b border-slate-800/80 bg-slate-50/40">
                   <div className="flex items-center gap-2 mb-4">
-                    <Trophy size={16} className="text-amber-500" />
-                    <h3 className="text-xs font-black text-white uppercase tracking-widest">Real-Time Evaluation</h3>
+                    <Trophy size={16} className="text-[#D4AF37]" />
+                    <h3 className="text-xs font-black text-slate-900 uppercase tracking-widest">Real-Time Evaluation</h3>
                   </div>
                   
                   <div className="space-y-4">
                     {/* Grammar Progress */}
                     <div>
-                      <div className="flex justify-between text-[10px] font-bold text-slate-400 uppercase mb-1">
+                      <div className="flex justify-between text-[10px] font-bold text-slate-500 uppercase mb-1">
                         <span>Grammar accuracy</span>
                         <span className="text-emerald-400">{grammarScore}%</span>
                       </div>
-                      <div className="w-full bg-slate-950 h-1.5 rounded-full overflow-hidden">
+                      <div className="w-full bg-slate-50 h-1.5 rounded-full overflow-hidden">
                         <div className="bg-emerald-400 h-full transition-all duration-500" style={{ width: `${grammarScore}%` }}></div>
                       </div>
                     </div>
 
                     {/* Executive Tone Progress */}
                     <div>
-                      <div className="flex justify-between text-[10px] font-bold text-slate-400 uppercase mb-1">
+                      <div className="flex justify-between text-[10px] font-bold text-slate-500 uppercase mb-1">
                         <span>Executive Tone</span>
                         <span className="text-amber-400">{toneScore}%</span>
                       </div>
-                      <div className="w-full bg-slate-950 h-1.5 rounded-full overflow-hidden">
+                      <div className="w-full bg-slate-50 h-1.5 rounded-full overflow-hidden">
                         <div className="bg-amber-400 h-full transition-all duration-500" style={{ width: `${toneScore}%` }}></div>
                       </div>
                     </div>
 
                     {/* Vocabulary Upgrade Progress */}
                     <div>
-                      <div className="flex justify-between text-[10px] font-bold text-slate-400 uppercase mb-1">
+                      <div className="flex justify-between text-[10px] font-bold text-slate-500 uppercase mb-1">
                         <span>Vocabulary VIP</span>
                         <span className="text-cyan-400">{vocabularyScore}%</span>
                       </div>
-                      <div className="w-full bg-slate-950 h-1.5 rounded-full overflow-hidden">
+                      <div className="w-full bg-slate-50 h-1.5 rounded-full overflow-hidden">
                         <div className="bg-cyan-400 h-full transition-all duration-500" style={{ width: `${vocabularyScore}%` }}></div>
                       </div>
                     </div>
 
                     {/* Fluency / Pronunciation Progress */}
                     <div>
-                      <div className="flex justify-between text-[10px] font-bold text-slate-400 uppercase mb-1">
+                      <div className="flex justify-between text-[10px] font-bold text-slate-500 uppercase mb-1">
                         <span>Mic Fluency</span>
                         <span className="text-pink-400">{fluencyScore}%</span>
                       </div>
-                      <div className="w-full bg-slate-950 h-1.5 rounded-full overflow-hidden">
+                      <div className="w-full bg-slate-50 h-1.5 rounded-full overflow-hidden">
                         <div className="bg-pink-400 h-full transition-all duration-500" style={{ width: `${fluencyScore}%` }}></div>
                       </div>
                     </div>
@@ -2934,8 +2934,8 @@ export default function MeetingRoomPage() {
                 {/* Session Objectives */}
                 <div className="p-6 border-b border-slate-800/80 flex-1 overflow-y-auto">
                   <div className="flex items-center gap-2 mb-4">
-                    <Check size={16} className="text-emerald-500" />
-                    <h3 className="text-xs font-black text-white uppercase tracking-widest">Session Objectives</h3>
+                    <Check size={16} className="text-[#D4AF37]" />
+                    <h3 className="text-xs font-black text-slate-900 uppercase tracking-widest">Session Objectives</h3>
                   </div>
                   
                   <div className="space-y-3.5">
@@ -2943,13 +2943,13 @@ export default function MeetingRoomPage() {
                       <div 
                         key={i} 
                         className={`flex items-start gap-3 text-[10px] font-bold transition-colors ${
-                          completedObjectives[i] ? 'text-slate-200' : 'text-slate-500'
+                          completedObjectives[i] ? 'text-slate-200' : 'text-slate-600'
                         }`}
                       >
                         <div className={`mt-0.5 w-4 h-4 border rounded flex items-center justify-center shrink-0 transition-all ${
                           completedObjectives[i] 
-                            ? 'bg-emerald-500 border-emerald-400 text-slate-950' 
-                            : 'border-slate-700 bg-slate-950'
+                            ? 'bg-[#D4AF37]/100 border-emerald-400 text-slate-950' 
+                            : 'border-slate-700 bg-slate-50'
                         }`}>
                           {completedObjectives[i] && <Check size={10} strokeWidth={3} />}
                         </div>
@@ -2960,15 +2960,15 @@ export default function MeetingRoomPage() {
                 </div>
 
                 {/* Suggestions Board */}
-                <div className="p-6 bg-slate-950/40 border-t border-slate-800/80">
+                <div className="p-6 bg-slate-50/40 border-t border-slate-800/80">
                   <div className="flex items-center gap-2 mb-3">
                     <BookOpen size={14} className="text-cyan-400" />
-                    <h4 className="text-[10px] font-black text-white uppercase tracking-wider">C-Level Upgrade Tips</h4>
+                    <h4 className="text-[10px] font-black text-slate-900 uppercase tracking-wider">C-Level Upgrade Tips</h4>
                   </div>
                   <div className="space-y-2">
                     {suggestions.map((sug, i) => (
-                      <div key={i} className="p-3 bg-slate-900/60 border border-slate-800/40 rounded text-[9px] font-bold text-slate-400 leading-normal flex gap-2">
-                        <span className="text-amber-500 shrink-0">•</span>
+                      <div key={i} className="p-3 bg-slate-50/60 border border-slate-800/40 rounded text-[9px] font-bold text-slate-500 leading-normal flex gap-2">
+                        <span className="text-[#D4AF37] shrink-0">•</span>
                         <span>{sug}</span>
                       </div>
                     ))}
@@ -2984,10 +2984,10 @@ export default function MeetingRoomPage() {
                     initial={{ opacity: 0, x: 300 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 300 }}
-                    className="w-96 border-l border-orange-500/20 bg-black/85 backdrop-blur-2xl flex flex-col z-25 shrink-0 overflow-y-auto"
+                    className="w-96 border-l border-orange-500/20 bg-white/85 backdrop-blur-2xl flex flex-col z-25 shrink-0 overflow-y-auto"
                   >
                     <div className="p-6 border-b border-orange-500/20 flex items-center justify-between">
-                      <h3 className="text-xs font-black text-white uppercase tracking-widest flex items-center gap-2">
+                      <h3 className="text-xs font-black text-slate-900 uppercase tracking-widest flex items-center gap-2">
                         <Sparkles size={14} className="text-orange-400" /> Executive Analytics
                       </h3>
                       <button 
@@ -2999,7 +2999,7 @@ export default function MeetingRoomPage() {
                     </div>
 
                     {/* Tab Navigation */}
-                    <div className="flex border-b border-orange-500/10 bg-black/40">
+                    <div className="flex border-b border-orange-500/10 bg-white/40">
                       {[
                         { id: 'analytics', label: 'Analytics', icon: Activity },
                         { id: 'drills', label: 'Drills', icon: Zap },
@@ -3015,10 +3015,10 @@ export default function MeetingRoomPage() {
                             className={`flex-1 py-3.5 flex flex-col items-center justify-center gap-1 border-b-2 text-[9px] font-black uppercase tracking-wider transition-all ${
                               isActive 
                                 ? 'border-orange-500 text-orange-400 bg-orange-950/15' 
-                                : 'border-transparent text-slate-500 hover:text-slate-300 hover:bg-white/5'
+                                : 'border-transparent text-slate-600 hover:text-slate-300 hover:bg-white/5'
                             }`}
                           >
-                            <Icon size={12} className={isActive ? 'text-orange-400' : 'text-slate-500'} />
+                            <Icon size={12} className={isActive ? 'text-orange-400' : 'text-slate-600'} />
                             {tab.label}
                           </button>
                         );
@@ -3030,39 +3030,39 @@ export default function MeetingRoomPage() {
                       {toolboxTab === 'analytics' && (
                         <div className="space-y-6">
                           {/* Stopwatch & Trust */}
-                          <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-xl">
+                          <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-none">
                             <div className="flex justify-between items-center mb-3">
                               <span className="text-[10px] font-bold text-orange-300 uppercase">Session Timer</span>
-                              <span className="text-xs font-black text-white">{formatSessionTimer(sessionTimer)}</span>
+                              <span className="text-xs font-black text-slate-900">{formatSessionTimer(sessionTimer)}</span>
                             </div>
                             <div className="flex justify-between items-center mb-2">
                               <span className="text-[10px] font-bold text-orange-300 uppercase">Board Status</span>
                               <span className="text-[10px] font-extrabold text-orange-400 leading-normal text-right max-w-[180px]">{getBoardSatisfactionIndicator()}</span>
                             </div>
-                            <div className="w-full bg-slate-950 h-1.5 rounded-full overflow-hidden mt-1">
+                            <div className="w-full bg-slate-50 h-1.5 rounded-full overflow-hidden mt-1">
                               <div className="bg-orange-500 h-full transition-all duration-500" style={{ width: `${boardTrust}%` }}></div>
                             </div>
                           </div>
 
                           {/* Stress Level & Pace */}
                           <div className="grid grid-cols-2 gap-4">
-                            <div className="p-4 bg-black/40 border border-orange-950 rounded-xl">
-                              <span className="text-[9px] font-bold text-slate-400 uppercase">Stress Index</span>
+                            <div className="p-4 bg-white/40 border border-orange-950 rounded-none">
+                              <span className="text-[9px] font-bold text-slate-500 uppercase">Stress Index</span>
                               <p className={`text-xl font-black mt-1 ${getStressLevelColor()}`}>{getStressLevelIndex()}%</p>
                             </div>
-                            <div className="p-4 bg-black/40 border border-orange-950 rounded-xl">
-                              <span className="text-[9px] font-bold text-slate-400 uppercase">Buzzword Jargon</span>
-                              <p className="text-xl font-black text-white mt-1">{jargonCount} used</p>
+                            <div className="p-4 bg-white/40 border border-orange-950 rounded-none">
+                              <span className="text-[9px] font-bold text-slate-500 uppercase">Buzzword Jargon</span>
+                              <p className="text-xl font-black text-slate-900 mt-1">{jargonCount} used</p>
                             </div>
                           </div>
 
                           {/* Daily Challenge */}
-                          <div className="p-4 bg-orange-950/10 border border-orange-900/30 rounded-xl">
+                          <div className="p-4 bg-orange-950/10 border border-orange-900/30 rounded-none">
                             <div className="flex justify-between items-center mb-2">
                               <span className="text-[9px] font-black text-orange-400 uppercase tracking-wider">Dynamic Challenge</span>
                               <button 
                                 onClick={generateDynamicChallenge}
-                                className="text-[8px] font-black text-white bg-orange-500 px-2 py-0.5 rounded uppercase hover:bg-orange-450"
+                                className="text-[8px] font-black text-slate-900 bg-orange-500 px-2 py-0.5 rounded uppercase hover:bg-orange-450"
                               >
                                 Reroll
                               </button>
@@ -3071,15 +3071,15 @@ export default function MeetingRoomPage() {
                           </div>
 
                           {/* Objection Blueprint */}
-                          <div className="p-4 bg-black/50 border border-orange-950 rounded-xl">
-                            <span className="text-[9px] font-black text-slate-400 uppercase">Objection Defense Blueprint</span>
+                          <div className="p-4 bg-white/50 border border-orange-950 rounded-none">
+                            <span className="text-[9px] font-black text-slate-500 uppercase">Objection Defense Blueprint</span>
                             <p className="text-xs font-bold text-orange-300 mt-2 leading-relaxed">{getObjectionDefenseTip(selectedScenario.id)}</p>
                           </div>
 
                           {/* Notes Editor */}
                           <div className="space-y-2">
                             <div className="flex justify-between items-center">
-                              <label className="text-[10px] font-black text-white uppercase">CEO Notes</label>
+                              <label className="text-[10px] font-black text-slate-900 uppercase">CEO Notes</label>
                               {executiveNotes && (
                                 <button 
                                   onClick={clearExecutiveNotes}
@@ -3093,7 +3093,7 @@ export default function MeetingRoomPage() {
                               value={executiveNotes}
                               onChange={(e) => saveNotesLocally(e.target.value)}
                               placeholder="Draft your boardroom arguments here. Auto-saved locally..."
-                              className="w-full h-24 bg-slate-950 border border-orange-950 rounded-xl p-3 text-xs font-bold text-white placeholder:text-slate-700 focus:outline-none focus:border-orange-500/80 transition-all shadow-inner resize-none"
+                              className="w-full h-24 bg-slate-50 border border-orange-950 rounded-none p-3 text-xs font-bold text-slate-900 placeholder:text-slate-700 focus:outline-none focus:border-orange-500/80 transition-all shadow-inner resize-none"
                             />
                           </div>
 
@@ -3101,13 +3101,13 @@ export default function MeetingRoomPage() {
                           <div className="pt-4 border-t border-orange-500/10 space-y-3">
                             <button 
                               onClick={exportMinutesToDisk}
-                              className="w-full py-3 bg-orange-500 text-slate-950 hover:bg-white transition-all font-extrabold uppercase tracking-widest text-[9px] rounded-lg shadow-lg active:scale-95"
+                              className="w-full py-3 bg-orange-500 text-slate-950 hover:bg-white transition-all font-extrabold uppercase tracking-widest text-[9px] rounded-none shadow-none active:scale-95"
                             >
                               Download Meeting Minutes (.txt)
                             </button>
                             <button 
                               onClick={toggleSystemDiagnostics}
-                              className="w-full py-2 text-slate-500 hover:text-orange-400 font-bold uppercase tracking-widest text-[8px] transition-colors"
+                              className="w-full py-2 text-slate-600 hover:text-orange-400 font-bold uppercase tracking-widest text-[8px] transition-colors"
                             >
                               Run Diagnostics Test
                             </button>
@@ -3118,16 +3118,16 @@ export default function MeetingRoomPage() {
                       {/* TAB 2: DRILLS */}
                       {toolboxTab === 'drills' && (
                         <div className="space-y-6">
-                          <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-xl">
+                          <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-none">
                             <div className="flex items-center justify-between mb-2">
                               <span className="text-[10px] font-black text-orange-400 uppercase tracking-widest">Jargon Vocabulary Drill</span>
-                              <span className="text-[10px] font-bold text-slate-400">{getJargonQuizProgress()}% completed</span>
+                              <span className="text-[10px] font-bold text-slate-500">{getJargonQuizProgress()}% completed</span>
                             </div>
-                            <div className="w-full bg-slate-950 h-1 rounded-full overflow-hidden mb-4">
+                            <div className="w-full bg-slate-50 h-1 rounded-full overflow-hidden mb-4">
                               <div className="bg-orange-500 h-full transition-all duration-300" style={{ width: `${getJargonQuizProgress()}%` }}></div>
                             </div>
                             
-                            <h4 className="text-xs font-bold text-white leading-relaxed mb-4">
+                            <h4 className="text-xs font-bold text-slate-900 leading-relaxed mb-4">
                               {getJargonQuizQuestion().question}
                             </h4>
                             
@@ -3140,14 +3140,14 @@ export default function MeetingRoomPage() {
                                     key={i}
                                     onClick={() => !selectedQuizAnswer && checkJargonQuizAnswer(opt)}
                                     disabled={!!selectedQuizAnswer}
-                                    className={`w-full p-3 rounded-lg text-left text-xs font-bold border transition-all ${
+                                    className={`w-full p-3 rounded-none text-left text-xs font-bold border transition-all ${
                                       selectedQuizAnswer 
                                         ? isCorrect 
-                                          ? 'bg-emerald-500/20 border-emerald-500 text-emerald-300' 
+                                          ? 'bg-[#D4AF37]/100/20 border-emerald-500 text-emerald-300' 
                                           : isSelected 
-                                            ? 'bg-red-500/20 border-red-500 text-red-300' 
-                                            : 'bg-slate-950 border-slate-900 text-slate-600'
-                                        : 'bg-slate-900 hover:bg-slate-800 border-slate-800 text-slate-300 hover:text-white'
+                                            ? 'bg-[#D4AF37]/100/20 border-red-500 text-red-300' 
+                                            : 'bg-slate-50 border-slate-900 text-slate-600'
+                                        : 'bg-slate-50 hover:bg-slate-50 border-slate-800 text-slate-300 hover:text-slate-900'
                                     }`}
                                   >
                                     {opt}
@@ -3157,10 +3157,10 @@ export default function MeetingRoomPage() {
                             </div>
                             
                             {quizFeedback && (
-                              <div className={`mt-4 p-3 rounded-lg text-[10px] font-bold ${
+                              <div className={`mt-4 p-3 rounded-none text-[10px] font-bold ${
                                 quizFeedback.includes('Correct') 
-                                  ? 'bg-emerald-500/10 border border-emerald-500/20 text-emerald-400' 
-                                  : 'bg-red-500/10 border border-red-500/20 text-red-400'
+                                  ? 'bg-[#D4AF37]/100/10 border border-emerald-500/20 text-emerald-400' 
+                                  : 'bg-[#D4AF37]/100/10 border border-red-500/20 text-red-400'
                               }`}>
                                 {quizFeedback}
                               </div>
@@ -3169,15 +3169,15 @@ export default function MeetingRoomPage() {
                             {selectedQuizAnswer && (
                               <button
                                 onClick={nextJargonQuizQuestion}
-                                className="w-full mt-4 py-2 bg-white text-slate-950 hover:bg-orange-500 transition-all font-black uppercase tracking-widest text-[9px] rounded-lg"
+                                className="w-full mt-4 py-2 bg-white text-slate-950 hover:bg-orange-500 transition-all font-black uppercase tracking-widest text-[9px] rounded-none"
                               >
                                 Next Question
                               </button>
                             )}
                           </div>
 
-                          <div className="p-4 bg-black/40 border border-orange-950 rounded-xl">
-                            <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest block mb-2">Lexicon List</span>
+                          <div className="p-4 bg-white/40 border border-orange-950 rounded-none">
+                            <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest block mb-2">Lexicon List</span>
                             <div className="flex flex-wrap gap-1.5">
                               {getJargonBadges().map((badge, idx) => (
                                 <span key={idx} className="px-2 py-0.5 bg-orange-500/10 border border-orange-500/20 text-orange-300 text-[8px] font-bold uppercase rounded">
@@ -3193,30 +3193,30 @@ export default function MeetingRoomPage() {
                       {toolboxTab === 'voice' && (
                         <div className="space-y-6">
                           {/* Executive XP & Level Badge */}
-                          <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-xl">
+                          <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-none">
                             <div className="flex justify-between items-center mb-1">
                               <span className="text-[9px] font-black text-orange-400 uppercase tracking-wider">Executive Status</span>
-                              <span className="text-[9px] font-extrabold text-white bg-orange-500 px-2 py-0.5 rounded">LVL {getExecutiveLevel()}</span>
+                              <span className="text-[9px] font-extrabold text-slate-900 bg-orange-500 px-2 py-0.5 rounded">LVL {getExecutiveLevel()}</span>
                             </div>
-                            <h4 className="text-xs font-black text-white uppercase tracking-tight mb-3">
+                            <h4 className="text-xs font-black text-slate-900 uppercase tracking-tight mb-3">
                               {getExecutiveLevelBadge()}
                             </h4>
-                            <div className="flex justify-between text-[8px] font-bold text-slate-400 uppercase mb-1">
+                            <div className="flex justify-between text-[8px] font-bold text-slate-500 uppercase mb-1">
                               <span>Level Progress</span>
                               <span>{executiveXP} / {getXPNeededForNextLevel()} XP</span>
                             </div>
-                            <div className="w-full bg-slate-950 h-2 rounded-full overflow-hidden">
+                            <div className="w-full bg-slate-50 h-2 rounded-full overflow-hidden">
                               <div className="bg-gradient-to-r from-orange-500 to-amber-400 h-full transition-all duration-500" style={{ width: `${getLevelProgressPercentage()}%` }}></div>
                             </div>
                           </div>
 
                           {/* Voice Calibration Parameters */}
-                          <div className="p-4 bg-black/40 border border-orange-950 rounded-xl space-y-4">
+                          <div className="p-4 bg-white/40 border border-orange-950 rounded-none space-y-4">
                             <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest block border-b border-orange-950 pb-2">Voice Calibration</span>
                             
                             {/* Pitch Slider */}
                             <div className="space-y-1.5">
-                              <div className="flex justify-between text-[9px] font-bold text-slate-400 uppercase">
+                              <div className="flex justify-between text-[9px] font-bold text-slate-500 uppercase">
                                 <span>Vocal Pitch</span>
                                 <span className="text-orange-400">{voicePitch.toFixed(1)}x</span>
                               </div>
@@ -3227,13 +3227,13 @@ export default function MeetingRoomPage() {
                                 step="0.1" 
                                 value={voicePitch}
                                 onChange={(e) => changeVoicePitch(parseFloat(e.target.value))}
-                                className="w-full accent-orange-500 bg-slate-950 rounded-lg appearance-none h-1 cursor-pointer"
+                                className="w-full accent-orange-500 bg-slate-50 rounded-none appearance-none h-1 cursor-pointer"
                               />
                             </div>
 
                             {/* Speed / Pace Slider */}
                             <div className="space-y-1.5">
-                              <div className="flex justify-between text-[9px] font-bold text-slate-400 uppercase">
+                              <div className="flex justify-between text-[9px] font-bold text-slate-500 uppercase">
                                 <span>Speaking Pace</span>
                                 <span className="text-orange-400">{playbackSpeed.toFixed(1)}x</span>
                               </div>
@@ -3244,13 +3244,13 @@ export default function MeetingRoomPage() {
                                 step="0.1" 
                                 value={playbackSpeed}
                                 onChange={(e) => changePlaybackSpeed(parseFloat(e.target.value))}
-                                className="w-full accent-orange-500 bg-slate-950 rounded-lg appearance-none h-1 cursor-pointer"
+                                className="w-full accent-orange-500 bg-slate-50 rounded-none appearance-none h-1 cursor-pointer"
                               />
                             </div>
 
                             {/* Speaker Volume Slider */}
                             <div className="space-y-1.5">
-                              <div className="flex justify-between text-[9px] font-bold text-slate-400 uppercase">
+                              <div className="flex justify-between text-[9px] font-bold text-slate-500 uppercase">
                                 <span>Speaker Volume</span>
                                 <span className="text-orange-400">{speakerVolume}%</span>
                               </div>
@@ -3260,23 +3260,23 @@ export default function MeetingRoomPage() {
                                 max="100" 
                                 value={speakerVolume}
                                 onChange={(e) => changeSpeakerVolume(parseInt(e.target.value))}
-                                className="w-full accent-orange-500 bg-slate-950 rounded-lg appearance-none h-1 cursor-pointer"
+                                className="w-full accent-orange-500 bg-slate-50 rounded-none appearance-none h-1 cursor-pointer"
                               />
                             </div>
 
                             {/* Speaker Accent Dropdown */}
                             <div className="space-y-1.5">
-                              <label className="text-[9px] font-bold text-slate-400 uppercase">Interactive Accent Calibration</label>
+                              <label className="text-[9px] font-bold text-slate-500 uppercase">Interactive Accent Calibration</label>
                               <select
                                 value={speakerAccent}
                                 onChange={(e) => alert(`Accent calibrated to: ${e.target.value}`)}
-                                className="w-full bg-slate-950 border border-slate-900 rounded-lg p-2.5 text-xs font-bold text-white focus:outline-none focus:border-orange-500"
+                                className="w-full bg-slate-50 border border-slate-900 rounded-none p-2.5 text-xs font-bold text-slate-900 focus:outline-none focus:border-orange-500"
                               >
                                 <option value="US">American Corporate (Marcus Thorne)</option>
                                 <option value="UK">British Professional (Sarah Chen)</option>
                                 <option value="ES">Spanish Bilateral (Elena Rodriguez)</option>
                               </select>
-                              <p className="text-[8px] text-slate-500 leading-normal italic mt-1">
+                              <p className="text-[8px] text-slate-600 leading-normal italic mt-1">
                                 {getAccentDescription()}
                               </p>
                             </div>
@@ -3288,22 +3288,22 @@ export default function MeetingRoomPage() {
                       {toolboxTab === 'history' && (
                         <div className="space-y-6">
                           {/* Board Accreditation Certificate */}
-                          <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-xl relative overflow-hidden">
+                          <div className="p-4 bg-orange-950/20 border border-orange-500/20 rounded-none relative overflow-hidden">
                             <span className="text-[10px] font-black text-orange-400 uppercase tracking-widest block mb-2">Digital Accreditation</span>
-                            <div className="bg-slate-950 p-3 rounded-lg border border-slate-900 max-h-48 overflow-y-auto mb-3 font-mono text-[8px] leading-relaxed text-slate-400 whitespace-pre">
+                            <div className="bg-slate-50 p-3 rounded-none border border-slate-900 max-h-48 overflow-y-auto mb-3 font-mono text-[8px] leading-relaxed text-slate-500 whitespace-pre">
                               {generateDigitalCertificate()}
                             </div>
                             
                             <div className="flex gap-2">
                               <button 
                                 onClick={copyCertificateToClipboard}
-                                className="flex-1 py-2 bg-orange-500 hover:bg-white text-slate-950 transition-all font-extrabold uppercase tracking-widest text-[8px] rounded-lg"
+                                className="flex-1 py-2 bg-orange-500 hover:bg-white text-slate-950 transition-all font-extrabold uppercase tracking-widest text-[8px] rounded-none"
                               >
                                 Copy Cert
                               </button>
                               <button 
                                 onClick={shareToLinkedIn}
-                                className="flex-1 py-2 bg-white/5 border border-orange-500/20 text-white hover:bg-white/10 transition-all font-extrabold uppercase tracking-widest text-[8px] rounded-lg"
+                                className="flex-1 py-2 bg-white/5 border border-orange-500/20 text-slate-900 hover:bg-white/10 transition-all font-extrabold uppercase tracking-widest text-[8px] rounded-none"
                               >
                                 LinkedIn
                               </button>
@@ -3311,9 +3311,9 @@ export default function MeetingRoomPage() {
                           </div>
 
                           {/* Historical Session Logs */}
-                          <div className="p-4 bg-black/40 border border-orange-950 rounded-xl">
+                          <div className="p-4 bg-white/40 border border-orange-950 rounded-none">
                             <div className="flex justify-between items-center mb-3 border-b border-orange-950 pb-2">
-                              <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Boardroom Session Logs</span>
+                              <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Corporativo Session Logs</span>
                               {historicalLogs.length > 0 && (
                                 <button 
                                   onClick={clearSessionHistory}
@@ -3331,10 +3331,10 @@ export default function MeetingRoomPage() {
                             ) : (
                               <div className="space-y-2 max-h-44 overflow-y-auto pr-1">
                                 {historicalLogs.map((log, idx) => (
-                                  <div key={idx} className="p-2.5 bg-slate-950 border border-slate-900 rounded flex justify-between items-center text-[8px] font-bold">
+                                  <div key={idx} className="p-2.5 bg-slate-50 border border-slate-900 rounded flex justify-between items-center text-[8px] font-bold">
                                     <div>
-                                      <p className="text-white uppercase truncate max-w-[140px]">{log.title || 'Simulation Run'}</p>
-                                      <p className="text-slate-500 mt-0.5">{new Date(log.timestamp).toLocaleDateString()}</p>
+                                      <p className="text-slate-900 uppercase truncate max-w-[140px]">{log.title || 'Simulation Run'}</p>
+                                      <p className="text-slate-600 mt-0.5">{new Date(log.timestamp).toLocaleDateString()}</p>
                                     </div>
                                     <span className="text-orange-400 font-extrabold font-mono">TRUST: {log.trust || log.trustScore}%</span>
                                   </div>
@@ -3352,16 +3352,16 @@ export default function MeetingRoomPage() {
             </div>
 
             {/* Bottom Interaction / Controls Bar */}
-            <div className="h-24 bg-slate-950 border-t border-slate-800/80 px-6 md:px-10 flex items-center justify-between gap-6 z-10">
+            <div className="h-24 bg-slate-50 border-t border-slate-800/80 px-6 md:px-10 flex items-center justify-between gap-6 z-10">
               
               {/* Hardware micro toggles */}
               <div className="flex items-center gap-3 shrink-0">
                 <button 
                   onClick={() => setIsMicOn(!isMicOn)}
-                  className={`w-12 h-12 rounded-xl flex flex-col items-center justify-center border transition-all ${
+                  className={`w-12 h-12 rounded-none flex flex-col items-center justify-center border transition-all ${
                     isMicOn 
-                      ? 'bg-slate-800 border-slate-700 text-white' 
-                      : 'bg-red-500/20 border-red-500/30 text-red-400 hover:bg-red-500/30'
+                      ? 'bg-slate-50 border-slate-700 text-slate-900' 
+                      : 'bg-[#D4AF37]/100/20 border-red-500/30 text-red-400 hover:bg-[#D4AF37]/100/30'
                   }`}
                   title={isMicOn ? "Disable Mic input" : "Enable Mic input"}
                 >
@@ -3370,10 +3370,10 @@ export default function MeetingRoomPage() {
                 
                 <button 
                   onClick={() => setIsVideoOn(!isVideoOn)}
-                  className={`w-12 h-12 rounded-xl flex flex-col items-center justify-center border transition-all ${
+                  className={`w-12 h-12 rounded-none flex flex-col items-center justify-center border transition-all ${
                     isVideoOn 
-                      ? 'bg-slate-800 border-slate-700 text-white' 
-                      : 'bg-red-500/20 border-red-500/30 text-red-400 hover:bg-red-500/30'
+                      ? 'bg-slate-50 border-slate-700 text-slate-900' 
+                      : 'bg-[#D4AF37]/100/20 border-red-500/30 text-red-400 hover:bg-[#D4AF37]/100/30'
                   }`}
                   title={isVideoOn ? "Turn off Camera" : "Turn on Camera"}
                 >
@@ -3390,14 +3390,14 @@ export default function MeetingRoomPage() {
                     onChange={(e) => setInputText(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
                     placeholder={isRecording ? "Recording active. Speak to transcribe..." : "Speak or type your strategic response to the board..."}
-                    className="w-full bg-slate-900 border border-slate-800 rounded-xl pl-5 pr-14 py-3.5 text-xs font-bold text-white placeholder:text-slate-600 focus:outline-none focus:border-amber-500/80 transition-all shadow-inner"
+                    className="w-full bg-slate-50 border border-slate-800 rounded-none pl-5 pr-14 py-3.5 text-xs font-bold text-slate-900 placeholder:text-slate-600 focus:outline-none focus:border-[#D4AF37]/30/80 transition-all shadow-inner"
                     disabled={isRecording}
                   />
                   
                   {inputText.trim() && (
                     <button 
                       onClick={handleSendMessage}
-                      className="absolute right-3 top-2.5 p-2 bg-amber-500 text-slate-950 hover:bg-white transition-all rounded-lg"
+                      className="absolute right-3 top-2.5 p-2 bg-[#D4AF37]/20 text-slate-950 hover:bg-white transition-all rounded-none"
                     >
                       <Send size={14} />
                     </button>
@@ -3407,10 +3407,10 @@ export default function MeetingRoomPage() {
                 {/* Primary Mic Trigger */}
                 <button 
                   onClick={isRecording ? stopMicRecording : startMicRecording}
-                  className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all ${
+                  className={`w-14 h-14 rounded-none flex items-center justify-center transition-all ${
                     isRecording 
-                      ? 'bg-red-500 text-white animate-pulse shadow-lg shadow-red-500/20' 
-                      : 'bg-amber-500 text-slate-950 hover:bg-white shadow-lg shadow-amber-500/10 hover:scale-105 active:scale-95'
+                      ? 'bg-[#D4AF37]/100 text-slate-900 animate-pulse shadow-none shadow-red-500/20' 
+                      : 'bg-[#D4AF37]/20 text-slate-950 hover:bg-white shadow-none shadow-amber-500/10 hover:scale-105 active:scale-95'
                   }`}
                   title={isRecording ? "Stop recording and transcribe" : "Record voice answer"}
                 >
@@ -3422,7 +3422,7 @@ export default function MeetingRoomPage() {
               <div className="flex items-center gap-4 shrink-0">
                 <button 
                   onClick={() => setIsJoined(false)}
-                  className="px-6 py-3.5 bg-red-600/90 text-white text-[10px] font-black uppercase tracking-widest hover:bg-red-600 transition-all rounded-xl shadow-lg active:scale-95"
+                  className="px-6 py-3.5 bg-[#D4AF37]/20/90 text-slate-900 text-[10px] font-black uppercase tracking-widest hover:bg-[#D4AF37]/20 transition-all rounded-none shadow-none active:scale-95"
                 >
                   End Meeting
                 </button>

@@ -1,0 +1,101 @@
+{
+  "id": "c2-57",
+  "title": "Supply Chain Management",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Vocabulary", "Logistics", "Business", "Management"],
+  "completion_message": "¡Excelente! Una idea brillante no sirve de nada si no puedes fabricarla y entregarla. Entender la Cadena de Suministro te permite hablar sobre cómo los productos globales llegan desde la fábrica hasta las manos del cliente.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Gestión de la Cadena de Suministro (C2)",
+      "parts": [
+        { "visual": "En negocios internacionales, la logística lo es todo. Conoce estos términos: \n\n1. Supply Chain (Cadena de suministro): \n- Toda la red de personas y empresas involucradas en crear y vender un producto. \nEj: The global pandemic caused massive disruptions in the SUPPLY CHAIN. \n\n2. Just-in-Time / JIT (Justo a tiempo): \n- Un sistema donde los materiales llegan exactamente cuando se necesitan para la producción, ahorrando costos de almacén. \nEj: Toyota pioneered the JUST-IN-TIME manufacturing system. \n\n3. Backlog (Trabajo acumulado / Pedidos pendientes): \n- Una acumulación de trabajo o pedidos que aún no se han procesado. \nEj: We have a huge BACKLOG of orders due to the factory strike.", "audio": "Welcome to Supply Chain Management. In international business, logistics is everything. Number 1: Supply Chain. The entire network of entities, people, and resources involved in creating and selling a product. For example: The global pandemic caused massive disruptions in the SUPPLY CHAIN. Number 2: Just-in-Time, or JIT. An inventory system where materials arrive exactly when they are needed in the production process, reducing storage costs. For example: Toyota pioneered the JUST-IN-TIME manufacturing system. Number 3: Backlog. An accumulation of uncompleted work or customer orders waiting to be processed. For example: We have a huge BACKLOG of orders due to the factory strike." },
+        { "visual": "4. Bottleneck (Cuello de botella): \n- Un punto de congestión en un sistema que frena todo el proceso. \nEj: The quality control department has become a massive BOTTLENECK. \n\n5. Procurement (Adquisiciones / Compras): \n- El proceso corporativo de encontrar y comprar bienes y servicios de proveedores. \nEj: Our PROCUREMENT team is negotiating a new contract for steel. \n\n6. Lead time (Tiempo de entrega / Tiempo de ciclo): \n- El tiempo que transcurre entre hacer un pedido y recibirlo. \nEj: If we order from China, the LEAD TIME is six weeks. \n\n7. Outsourcing (Subcontratación / Externalización): \n- Contratar a terceros (a menudo en otro país) para hacer un trabajo. \nEj: We are OUTSOURCING our customer service to India.", "audio": "Number 4: Bottleneck. A point of congestion in a system that slows down the overall process. Like the neck of a bottle. For example: The quality control department has become a massive BOTTLENECK. Number 5: Procurement. The formal corporate process of finding, agreeing terms, and buying goods or services from external sources. For example: Our PROCUREMENT team is negotiating a new contract for steel. Number 6: Lead time. The amount of time that passes from the start of a process, like placing an order, until its conclusion. For example: If we order from China, the LEAD TIME is six weeks. Number 7: Outsourcing. Obtaining goods or services from an outside or foreign supplier. For example: We are OUTSOURCING our customer service to India." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de logística correcto.",
+      "questions": [
+        { "id": "c2-57-q1", "type": "quiz_choice", "question": "The earthquake in Taiwan destroyed microchip factories, causing a global ____ chain crisis. (Cadena de suministro).", "options": ["supply", "demand", "value", "production"], "correct_answer": "supply", "explanation": "Supply chain = cadena de suministro." },
+        { "id": "c2-57-q2", "type": "quiz_choice", "question": "To save money on warehouses, we use ____-in-time manufacturing, where parts arrive the exact day we build the car.", "options": ["just", "right", "exactly", "perfect"], "correct_answer": "just", "explanation": "Just-in-Time (JIT) = justo a tiempo." },
+        { "id": "c2-57-q3", "type": "quiz_choice", "question": "Because the website crashed for three days, we now have a massive ____ of unprocessed orders. (Acumulación/Pedidos pendientes).", "options": ["backlog", "backloging", "backorder", "backup"], "correct_answer": "backlog", "explanation": "Backlog = pedidos pendientes o trabajo acumulado." },
+        { "id": "c2-57-q4", "type": "quiz_choice", "question": "The factory can produce 1000 phones a day, but the packaging team can only box 500. Packaging is a ____. (Cuello de botella).", "options": ["bottleneck", "roadblock", "stop sign", "dead end"], "correct_answer": "bottleneck", "explanation": "Bottleneck = cuello de botella (el punto que frena todo)." },
+        { "id": "c2-57-q5", "type": "quiz_choice", "question": "The ____ department is responsible for finding suppliers and negotiating prices for raw materials. (Compras / Adquisiciones).", "options": ["procurement", "sales", "marketing", "HR"], "correct_answer": "procurement", "explanation": "Procurement = el departamento de adquisiciones corporativas." },
+        { "id": "c2-57-q6", "type": "quiz_choice", "question": "If you order the standard parts, they arrive tomorrow. For custom parts, the ____ time is 3 months. (Tiempo de entrega).", "options": ["lead", "wait", "shipping", "transport"], "correct_answer": "lead", "explanation": "Lead time = tiempo de entrega (desde el pedido hasta la recepción)." },
+        { "id": "c2-57-q7", "type": "quiz_choice", "question": "Instead of hiring an internal accounting team, they decided on ____ the work to a firm in the Philippines. (Subcontratar).", "options": ["outsourcing", "insourcing", "exporting", "offshoring"], "correct_answer": "outsourcing", "explanation": "Outsourcing = externalizar o subcontratar servicios." },
+        { "id": "c2-57-q8", "type": "quiz_choice", "question": "Relocating business processes to another country, often to lower costs, is specifically called ____. (Deslocalización).", "options": ["offshoring", "onshoring", "outsourcing", "exporting"], "correct_answer": "offshoring", "explanation": "Offshoring = mover operaciones a otro país (puede ser tu propia empresa, no siempre subcontratado)." },
+        { "id": "c2-57-q9", "type": "quiz_choice", "question": "A raw material or primary agricultural product that can be bought and sold, such as copper or coffee, is a ____. (Materia prima/Producto básico).", "options": ["commodity", "product", "goods", "merchandise"], "correct_answer": "commodity", "explanation": "Commodity = producto básico (petróleo, trigo, cobre, etc.)." },
+        { "id": "c2-57-q10", "type": "quiz_choice", "question": "All the goods and materials that a business holds for the ultimate goal of resale or production is its ____. (Inventario).", "options": ["inventory", "warehouse", "storage", "supply"], "correct_answer": "inventory", "explanation": "Inventory = inventario (stock)." },
+        { "id": "c2-57-q11", "type": "quiz_choice", "question": "The physical building where goods are stored before distribution is a ____. (Almacén).", "options": ["warehouse", "storehouse", "shop", "factory"], "correct_answer": "warehouse", "explanation": "Warehouse = almacén." },
+        { "id": "c2-57-q12", "type": "quiz_choice", "question": "Moving goods from the manufacturer directly to the customer, bypassing the retailer, is called 'Direct to ____' (D2C).", "options": ["Consumer", "Customer", "Client", "Buyer"], "correct_answer": "Consumer", "explanation": "Direct to Consumer (D2C)." },
+        { "id": "c2-57-q13", "type": "quiz_choice", "question": "The very final step of the delivery process, from a distribution center to the customer's front door, is called the 'last ____'. (Última milla).", "options": ["mile", "kilometer", "step", "leg"], "correct_answer": "mile", "explanation": "Last-mile delivery = la entrega de última milla (la parte más cara de la logística)." },
+        { "id": "c2-57-q14", "type": "quiz_choice", "question": "The people or companies that supply raw materials to your company are your ____. (Proveedores).", "options": ["suppliers", "buyers", "clients", "customers"], "correct_answer": "suppliers", "explanation": "Suppliers = proveedores (también 'vendors')." },
+        { "id": "c2-57-q15", "type": "quiz_choice", "question": "The management of the flow of things between the point of origin and the point of consumption is called ____. (Logística).", "options": ["logistics", "shipping", "transport", "moving"], "correct_answer": "logistics", "explanation": "Logistics = logística." },
+        { "id": "c2-57-q16", "type": "quiz_choice", "question": "A situation where a company runs completely out of a specific product and cannot fulfill orders is a ____-out. (Desabastecimiento).", "options": ["stock", "sell", "run", "buy"], "correct_answer": "stock", "explanation": "Stock-out = falta de existencias (quedarse sin stock)." },
+        { "id": "c2-57-q17", "type": "quiz_choice", "question": "A tax or duty to be paid on a particular class of imports or exports is a ____. (Arancel).", "options": ["tariff", "ticket", "fine", "cost"], "correct_answer": "tariff", "explanation": "Tariff = arancel." },
+        { "id": "c2-57-q18", "type": "quiz_choice", "question": "Bringing manufacturing jobs back to your own country from overseas is called ____. (Relocalización).", "options": ["reshoring", "offshoring", "insourcing", "outsourcing"], "correct_answer": "reshoring", "explanation": "Reshoring (u onshoring) = volver a traer las fábricas al país de origen." },
+        { "id": "c2-57-q19", "type": "quiz_choice", "question": "The cost associated with storing unsold inventory in a warehouse is called the 'carrying ____'. (Costo de mantenimiento).", "options": ["cost", "price", "fee", "tax"], "correct_answer": "cost", "explanation": "Carrying cost = el costo de almacenar inventario no vendido." },
+        { "id": "c2-57-q20", "type": "quiz_choice", "question": "A company that provides logistics services (transportation, warehousing) to another company is a 'Third-Party Logistics' provider, or ____.", "options": ["3PL", "TPL", "3rd", "3L"], "correct_answer": "3PL", "explanation": "3PL = Third-Party Logistics." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término logístico.",
+      "questions": [
+        { "id": "c2-57-f1", "type": "fill_input", "question": "____ chain. (Cadena de suministro con S)", "correct_answer": "Supply", "explanation": "Supply." },
+        { "id": "c2-57-f2", "type": "fill_input", "question": "____-in-time. (Justo a tiempo con J)", "correct_answer": "Just", "explanation": "Just." },
+        { "id": "c2-57-f3", "type": "fill_input", "question": "A massive ____. (Acumulación de pedidos con B)", "correct_answer": "backlog", "explanation": "backlog." },
+        { "id": "c2-57-f4", "type": "fill_input", "question": "A production ____. (Cuello de botella con B)", "correct_answer": "bottleneck", "explanation": "bottleneck." },
+        { "id": "c2-57-f5", "type": "fill_input", "question": "The ____ team. (Departamento de adquisiciones/compras con P)", "correct_answer": "procurement", "explanation": "procurement." },
+        { "id": "c2-57-f6", "type": "fill_input", "question": "A long ____ time. (Tiempo de entrega con L)", "correct_answer": "lead", "explanation": "lead." },
+        { "id": "c2-57-f7", "type": "fill_input", "question": "____ services. (Subcontratar con O)", "correct_answer": "Outsourcing", "explanation": "Outsourcing." },
+        { "id": "c2-57-f8", "type": "fill_input", "question": "A raw ____. (Producto básico/materia prima con C)", "correct_answer": "commodity", "explanation": "commodity." },
+        { "id": "c2-57-f9", "type": "fill_input", "question": "The last ____. (Entrega final con M)", "correct_answer": "mile", "explanation": "mile." },
+        { "id": "c2-57-f10", "type": "fill_input", "question": "Our ____ in China. (Proveedores con S)", "correct_answer": "suppliers", "explanation": "suppliers." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Logistics Match",
+      "pairs": [
+        {"id": "c2-57-p1", "source": "Supply chain", "target": "Cadena de suministro global"},
+        {"id": "c2-57-p2", "source": "Just-in-Time (JIT)", "target": "Fabricación sin almacenar inventario extra"},
+        {"id": "c2-57-p3", "source": "Backlog", "target": "Pedidos o trabajo acumulado pendiente"},
+        {"id": "c2-57-p4", "source": "Bottleneck", "target": "Cuello de botella en el proceso"},
+        {"id": "c2-57-p5", "source": "Procurement", "target": "Adquisiciones y compra corporativa"},
+        {"id": "c2-57-p6", "source": "Lead time", "target": "Tiempo desde el pedido hasta la entrega"},
+        {"id": "c2-57-p7", "source": "Outsourcing", "target": "Subcontratación de empresas de servicios"},
+        {"id": "c2-57-p8", "source": "Offshoring", "target": "Deslocalización a otro país"},
+        {"id": "c2-57-p9", "source": "Commodity", "target": "Materia prima o producto básico"},
+        {"id": "c2-57-p10", "source": "Last-mile delivery", "target": "El paso final para llegar a la casa del cliente"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de cadena de suministro.",
+      "questions": [
+        { "id": "c2-57-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Supply chain disruption.", "options": ["Supply chain disruption.", "Supply train disruption.", "Supply chain interruption.", "Supply chain disruptions."], "correct_answer": "Supply chain disruption.", "explanation": "Audio exacto." },
+        { "id": "c2-57-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We use just-in-time manufacturing.", "options": ["We use just-in-time manufacturing.", "They use just-in-time manufacturing.", "We used just-in-time manufacturing.", "We use just in time manufacturing."], "correct_answer": "We use just-in-time manufacturing.", "explanation": "Audio exacto." },
+        { "id": "c2-57-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is a huge backlog.", "options": ["There is a huge backlog.", "There was a huge backlog.", "This is a huge backlog.", "There is a huge backload."], "correct_answer": "There is a huge backlog.", "explanation": "Audio exacto." },
+        { "id": "c2-57-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Shipping is the bottleneck.", "options": ["Shipping is the bottleneck.", "Shipping was the bottleneck.", "Shipping is a bottleneck.", "Shopping is the bottleneck."], "correct_answer": "Shipping is the bottleneck.", "explanation": "Audio exacto." },
+        { "id": "c2-57-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Talk to the procurement team.", "options": ["Talk to the procurement team.", "Talk to the procurement teams.", "Talked to the procurement team.", "Talking to the procurement team."], "correct_answer": "Talk to the procurement team.", "explanation": "Audio exacto." },
+        { "id": "c2-57-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is the lead time?", "options": ["What is the lead time?", "What was the lead time?", "Where is the lead time?", "What is the lead times?"], "correct_answer": "What is the lead time?", "explanation": "Audio exacto." },
+        { "id": "c2-57-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We are outsourcing IT.", "options": ["We are outsourcing IT.", "They are outsourcing IT.", "We were outsourcing IT.", "We are outsourcing it."], "correct_answer": "We are outsourcing IT.", "explanation": "Audio exacto." },
+        { "id": "c2-57-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Gold is a commodity.", "options": ["Gold is a commodity.", "Gold is a commodities.", "Coal is a commodity.", "Gold was a commodity."], "correct_answer": "Gold is a commodity.", "explanation": "Audio exacto." },
+        { "id": "c2-57-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The last mile is expensive.", "options": ["The last mile is expensive.", "The last mile was expensive.", "The last miles are expensive.", "This last mile is expensive."], "correct_answer": "The last mile is expensive.", "explanation": "Audio exacto." },
+        { "id": "c2-57-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Contact our suppliers.", "options": ["Contact our suppliers.", "Contact your suppliers.", "Contacted our suppliers.", "Contact our supplier."], "correct_answer": "Contact our suppliers.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-7",
+  "title": "¿Qué y Quién?",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Questions", "Grammar", "Vocabulary"],
+  "completion_message": "¡Excelente! Has aprendido que las preguntas en chino son como rompecabezas donde las piezas no se mueven.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Preguntas que no se mueven",
+      "parts": [
+        {
+          "visual": "Qué: 什么 (shénme)\nQuién: 谁 (shéi)\n\nEn español, movemos la palabra interrogativa al principio de la frase: '¿QUÉ tienes tú?'.\n\nEn chino, el orden de la oración (Sujeto + Verbo + Objeto) JAMÁS cambia. La palabra de pregunta se pone EXACTAMENTE donde iría la respuesta.\n\n- Español: ¿Qué tienes tú?\n- Chino: Tú + tienes + qué?\n- Traducción: 你有什么？(Nǐ yǒu shénme?)",
+          "audio": "En el idioma español, cuando hacemos una pregunta abierta como 'Qué' o 'Quién', solemos mover esa palabra al principio de la oración. Decimos '¿Qué tienes?'. En chino mandarín, esto no funciona así. El orden de las palabras en chino es sagrado y jamás cambia. Siempre es Sujeto, Verbo, Objeto. Si quieres preguntar '¿Qué tienes tú?', tienes que poner la palabra 'qué' exactamente en el lugar donde iría el objeto de la respuesta. Así que la estructura es 'Tú tienes qué'. Nǐ yǒu shénme. 'Qué' se dice shénme."
+        },
+        {
+          "visual": "Regla de Oro de las Preguntas Abiertas:\n\n¡NUNCA uses la partícula 吗 (ma) cuando ya tengas una palabra interrogativa (Qué, Quién, Dónde)!\n\nCorrecto: ¿Quién es él? -> 他是谁？(Tā shì shéi?)\nIncorrecto: ¿Quién es él? -> 他是谁吗？(Tā shì shéi ma?) ❌ ERROR.\n\nLa partícula 吗 (ma) es SOLO para preguntas cerradas de 'Sí o No'. Las palabras 什么 (qué) y 谁 (quién) ya hacen que la oración sea una pregunta por sí mismas.",
+          "audio": "Para decir 'Quién', usamos la palabra 'Shéi'. Si quieres preguntar '¿Quién es él?', la lógica es la misma. Mantienes el orden Sujeto, verbo, objeto. Entonces dices: 'Él es quién'. Tā shì shéi. Ahora, presta mucha atención a la regla de oro: Si tu oración ya tiene las palabras 'Qué' o 'Quién', JAMÁS le agregues la partícula 'ma' al final. 'Ma' significa que la respuesta debe ser sí o no. Tú no puedes responder 'Sí' a la pregunta '¿Qué tienes?'. Así que decir 'Nǐ yǒu shénme ma' es un error gravísimo y muy común."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa tu comprensión de la estructura de preguntas abiertas.",
+      "questions": [
+        { "id": "zh-a1-7-q1", "type": "quiz_choice", "question": "¿Qué significa la palabra 什么 (shénme)?", "options": ["Qué.", "Quién.", "Dónde.", "Por qué."], "correct_answer": "Qué.", "explanation": "什么 (shénme) es la palabra universal para 'Qué' o 'Cual'." },
+        { "id": "zh-a1-7-q2", "type": "quiz_choice", "question": "¿Qué significa la palabra 谁 (shéi)?", "options": ["Quién.", "Qué.", "Tener.", "Ser."], "correct_answer": "Quién.", "explanation": "谁 (shéi) significa 'Quién'." },
+        { "id": "zh-a1-7-q3", "type": "quiz_choice", "question": "En chino, ¿se mueve la palabra interrogativa al principio de la oración?", "options": ["No, se queda exactamente donde iría la respuesta.", "Sí, siempre va de primera.", "Sí, pero solo con el verbo ser.", "No, se pone siempre de última sin importar la oración."], "correct_answer": "No, se queda exactamente donde iría la respuesta.", "explanation": "El orden Sujeto+Verbo+Objeto se mantiene. 'Tú eres quién' (Nǐ shì shéi)." },
+        { "id": "zh-a1-7-q4", "type": "quiz_choice", "question": "¿Cómo se pregunta '¿Qué tienes (tú)?' en mandarín?", "options": ["Nǐ yǒu shénme? (你有什么？)", "Shénme nǐ yǒu? (什么你有？)", "Nǐ shénme yǒu? (你什么有？)", "Nǐ yǒu shénme ma? (你有什么吗？)"], "correct_answer": "Nǐ yǒu shénme? (你有什么？)", "explanation": "Sujeto (Tú) + Verbo (tienes) + Objeto (qué)." },
+        { "id": "zh-a1-7-q5", "type": "quiz_choice", "question": "¿Cómo se pregunta '¿Quién es ella?' en mandarín?", "options": ["Tā shì shéi? (她是谁？)", "Shéi shì tā? (谁是她？)", "Tā shéi shì? (她谁是？)", "Tā shì shéi ma? (她是谁吗？)"], "correct_answer": "Tā shì shéi? (她是谁？)", "explanation": "Sujeto (Ella) + Verbo (es) + Objeto (quién)." },
+        { "id": "zh-a1-7-q6", "type": "quiz_choice", "question": "¡Alerta gramatical! ¿Es correcto decir 'Tā shì shéi ma?' (他是谁吗？)?", "options": ["No, porque no se usa 吗 (ma) junto con 谁 (shéi).", "Sí, es una pregunta muy educada.", "Sí, pero solo si es un superior.", "No, porque falta el verbo."], "correct_answer": "No, porque no se usa 吗 (ma) junto con 谁 (shéi).", "explanation": "La partícula 'ma' solo se usa para preguntas de Sí/No. Nunca se combina con Qué/Quién." },
+        { "id": "zh-a1-7-q7", "type": "quiz_choice", "question": "Si alguien te pregunta 'Nǐ yǒu shénme?' (¿Qué tienes?), ¿qué le responderías?", "options": ["Wǒ yǒu... (Yo tengo... [objeto]).", "Shì (Sí).", "Méiyǒu (No tengo).", "Wǒ shì... (Yo soy...)."], "correct_answer": "Wǒ yǒu... (Yo tengo... [objeto]).", "explanation": "Te están preguntando 'qué' tienes, así que debes responder reemplazando el 'qué' con un objeto." },
+        { "id": "zh-a1-7-q8", "type": "quiz_choice", "question": "Imagina la oración: 'Nosotros somos [quién]'. ¿Cómo se traduce?", "options": ["Wǒmen shì shéi?", "Wǒmen shì shénme?", "Wǒmen yǒu shéi?", "Nǐmen shì shéi?"], "correct_answer": "Wǒmen shì shéi?", "explanation": "Nosotros (Wǒmen) + somos (shì) + quién (shéi)." },
+        { "id": "zh-a1-7-q9", "type": "quiz_choice", "question": "Traduce '¿Qué es él?' (en sentido de qué animal, cosa, rol):", "options": ["Tā shì shénme? (他是什么？)", "Tā shì shéi? (他是谁？)", "Tā yǒu shénme? (他有什么？)", "Tā yǒu shéi? (他有谁？)"], "correct_answer": "Tā shì shénme? (他是什么？)", "explanation": "Él (tā) + es (shì) + qué (shénme)." },
+        { "id": "zh-a1-7-q10", "type": "quiz_choice", "question": "¿La palabra 什么 (shénme - qué) cambia de posición si preguntas en pasado o futuro?", "options": ["No, nunca cambia la posición (S+V+O).", "Sí, en pasado va al principio.", "Sí, en futuro va al final.", "Sí, se convierte en un sufijo verbal."], "correct_answer": "No, nunca cambia la posición (S+V+O).", "explanation": "El orden estructural del mandarín es estricto e inmutable." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correspondiente. Recuerda que no necesitas marcas de tono.",
+      "questions": [
+        { "id": "zh-a1-7-f1", "type": "fill_input", "question": "Qué: ____ (shen me)", "correct_answer": "shenme", "explanation": "shenme" },
+        { "id": "zh-a1-7-f2", "type": "fill_input", "question": "Quién: ____ (shei)", "correct_answer": "shei", "explanation": "shei" },
+        { "id": "zh-a1-7-f3", "type": "fill_input", "question": "¿Tú tienes QUÉ?: ni you ____", "correct_answer": "shenme", "explanation": "shenme" },
+        { "id": "zh-a1-7-f4", "type": "fill_input", "question": "¿Él es QUIÉN?: ta shi ____", "correct_answer": "shei", "explanation": "shei" },
+        { "id": "zh-a1-7-f5", "type": "fill_input", "question": "¿QUÉ tienes tú?: ni you ____", "correct_answer": "shenme", "explanation": "shenme" },
+        { "id": "zh-a1-7-f6", "type": "fill_input", "question": "Partícula PROHIBIDA al usar 'qué' o 'quién': ____ (ma)", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-7-f7", "type": "fill_input", "question": "¿Tú eres quién?: ni shi ____", "correct_answer": "shei", "explanation": "shei" },
+        { "id": "zh-a1-7-f8", "type": "fill_input", "question": "¿Qué son ellos?: tamen shi ____", "correct_answer": "shenme", "explanation": "shenme" },
+        { "id": "zh-a1-7-f9", "type": "fill_input", "question": "¿Quiénes son ellos?: tamen shi ____", "correct_answer": "shei", "explanation": "shei" },
+        { "id": "zh-a1-7-f10", "type": "fill_input", "question": "¿Él tiene qué?: ta you ____", "correct_answer": "shenme", "explanation": "shenme" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y selecciona la traducción de las preguntas abiertas.",
+      "questions": [
+        { "id": "zh-a1-7-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "什么", "options": ["Qué", "Quién", "Tener", "Ser"], "correct_answer": "Qué", "explanation": "El audio dice: shénme (Qué)." },
+        { "id": "zh-a1-7-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "谁", "options": ["Quién", "Qué", "Dónde", "Por qué"], "correct_answer": "Quién", "explanation": "El audio dice: shéi (Quién)." },
+        { "id": "zh-a1-7-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你有什么？", "options": ["¿Qué tienes tú?", "¿Quién eres tú?", "¿Tú tienes?", "Tú no tienes nada"], "correct_answer": "¿Qué tienes tú?", "explanation": "El audio dice: Nǐ yǒu shénme?" },
+        { "id": "zh-a1-7-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他是谁？", "options": ["¿Quién es él?", "¿Qué es él?", "¿Él tiene?", "¿Él es?"], "correct_answer": "¿Quién es él?", "explanation": "El audio dice: Tā shì shéi?" },
+        { "id": "zh-a1-7-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他有什么？", "options": ["¿Qué tiene él?", "¿Quién es él?", "¿Él tiene algo?", "Él no tiene nada"], "correct_answer": "¿Qué tiene él?", "explanation": "El audio dice: Tā yǒu shénme?" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Questions and Meanings",
+      "pairs": [
+        {"id": "zh-a1-7-p1", "source": "什么 (shénme)", "target": "Qué / Cuál"},
+        {"id": "zh-a1-7-p2", "source": "谁 (shéi)", "target": "Quién"},
+        {"id": "zh-a1-7-p3", "source": "你有什么？(nǐ yǒu shénme?)", "target": "¿Qué tienes?"},
+        {"id": "zh-a1-7-p4", "source": "他是谁？(tā shì shéi?)", "target": "¿Quién es él?"},
+        {"id": "zh-a1-7-p5", "source": "你是什么？(nǐ shì shénme?)", "target": "¿Qué eres?"},
+        {"id": "zh-a1-7-p6", "source": "我是谁？(wǒ shì shéi?)", "target": "¿Quién soy?"},
+        {"id": "zh-a1-7-p7", "source": "他们是谁？(tāmen shì shéi?)", "target": "¿Quiénes son ellos?"},
+        {"id": "zh-a1-7-p8", "source": "我们有什么？(wǒmen yǒu shénme?)", "target": "¿Qué tenemos?"},
+        {"id": "zh-a1-7-p9", "source": "是谁？(shì shéi?)", "target": "¿Quién es?"},
+        {"id": "zh-a1-7-p10", "source": "是吗？(shì ma?)", "target": "¿Sí? (Pregunta de Sí/No)"}
+      ]
+    }
+  ]
+}

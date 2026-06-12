@@ -1,0 +1,101 @@
+{
+  "id": "c2-12",
+  "title": "Fronting & Cleft Sentences",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Grammar", "Emphasis", "Fronting", "Cleft Sentences", "Writing"],
+  "completion_message": "¡Magistral! Fronting y Cleft Sentences son las técnicas retóricas supremas en inglés. Al reordenar la oración para poner el foco en la información vital (What we need is..., It was the CEO who...), logras un nivel de persuasión y énfasis propio de un líder de C2.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Fronting y Oraciones Hendidas (C2)",
+      "parts": [
+        { "visual": "1. Cleft Sentences (Oraciones Hendidas con 'It'): \n- Sirven para enfatizar una parte específica de la oración. \nNormal: John signed the contract yesterday. \nÉnfasis en la persona: IT WAS John WHO signed the contract yesterday. \nÉnfasis en el objeto: IT WAS the contract THAT John signed yesterday. \nÉnfasis en el tiempo: IT WAS yesterday THAT John signed the contract. \n\n2. Pseudo-cleft sentences (con 'What' / 'All'): \nNormal: I need more time to finish the report. \nÉnfasis (What): WHAT I need is more time to finish the report. \nÉnfasis (All): ALL I need is more time to finish the report. \nÉnfasis (The reason why): THE REASON WHY I am here is to help.", "audio": "Welcome to Emphasis through Fronting and Cleft Sentences. A cleft sentence uses 'It' to focus on a specific part of a sentence. Normal: John signed the contract yesterday. To emphasize John: IT WAS John WHO signed the contract yesterday. To emphasize the contract: IT WAS the contract THAT John signed yesterday. We also use Pseudo-cleft sentences with 'What' or 'All'. Normal: I need more time to finish the report. Emphasized: WHAT I need is more time. Or: ALL I need is more time." },
+        { "visual": "3. Fronting (Adelantamiento): \n- Mover una frase (usualmente preposicional o adverbial) al principio de la oración para dar énfasis o contexto dramático. \nNormal: A beautiful castle stood on top of the hill. \nFronting: On top of the hill stood a beautiful castle. (Nota: Aquí el sujeto y el verbo a menudo se invierten si el verbo es de movimiento o posición). \n\nNormal: The CEO came into the room. \nFronting: Into the room came the CEO. \n\nNormal: I have never seen such incompetence. \nFronting: Never have I seen such incompetence. (Inversión negativa, ya vista en C1).", "audio": "Number 3: Fronting. Fronting means moving a phrase, usually prepositional or adverbial, to the beginning of the sentence for dramatic effect. Normal: A beautiful castle stood on top of the hill. Fronting: On top of the hill stood a beautiful castle. Notice that the subject and verb are often inverted here. Normal: The CEO came into the room. Fronting: Into the room came the CEO. And remember negative inversion: Never have I seen such incompetence." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta de dar énfasis (Fronting o Cleft Sentence).",
+      "questions": [
+        { "id": "c2-12-q1", "type": "quiz_choice", "question": "Normal: The marketing team lost the client. -> Emphasis: ____ the marketing team who lost the client.", "options": ["It was", "What was", "That was", "There was"], "correct_answer": "It was", "explanation": "It was... who (cleft sentence)." },
+        { "id": "c2-12-q2", "type": "quiz_choice", "question": "Normal: I want a straight answer. -> Emphasis: ____ I want is a straight answer.", "options": ["What", "It", "That", "Which"], "correct_answer": "What", "explanation": "What I want is... (pseudo-cleft)." },
+        { "id": "c2-12-q3", "type": "quiz_choice", "question": "Normal: The sudden drop in revenue concerns me. -> Emphasis: ____ concerns me is the sudden drop in revenue.", "options": ["What", "It", "Which", "That"], "correct_answer": "What", "explanation": "What concerns me is... (pseudo-cleft)." },
+        { "id": "c2-12-q4", "type": "quiz_choice", "question": "Normal: He resigned because of the scandal. -> Emphasis: ____ the scandal that caused him to resign.", "options": ["It was", "What was", "Which was", "That was"], "correct_answer": "It was", "explanation": "It was the scandal that... (cleft sentence enfocando la causa)." },
+        { "id": "c2-12-q5", "type": "quiz_choice", "question": "Normal: A huge statue stood in the middle of the square. -> Fronting: In the middle of the square ____ a huge statue.", "options": ["stood", "did stand", "stands", "standing"], "correct_answer": "stood", "explanation": "In the middle of the square stood a huge statue (Fronting con inversión de sujeto y verbo de posición)." },
+        { "id": "c2-12-q6", "type": "quiz_choice", "question": "Normal: The president walked out of the building. -> Fronting: Out of the building ____ the president.", "options": ["walked", "did walk", "walk", "walking"], "correct_answer": "walked", "explanation": "Out of the building walked the president (Fronting con verbo de movimiento)." },
+        { "id": "c2-12-q7", "type": "quiz_choice", "question": "Normal: I only need five minutes of your time. -> Emphasis: ____ I need is five minutes of your time.", "options": ["All", "It", "Every", "Whole"], "correct_answer": "All", "explanation": "All I need is... (pseudo-cleft con All)." },
+        { "id": "c2-12-q8", "type": "quiz_choice", "question": "Normal: They announced the merger in Paris. -> Emphasis: ____ in Paris that they announced the merger.", "options": ["It was", "What was", "There was", "Where was"], "correct_answer": "It was", "explanation": "It was in Paris that... (cleft sentence enfocando el lugar)." },
+        { "id": "c2-12-q9", "type": "quiz_choice", "question": "____ we are trying to achieve is a seamless user experience.", "options": ["What", "It", "That", "Which"], "correct_answer": "What", "explanation": "What we are trying to achieve is..." },
+        { "id": "c2-12-q10", "type": "quiz_choice", "question": "____ the CFO who discovered the accounting error, not the auditors.", "options": ["It was", "He was", "There was", "What was"], "correct_answer": "It was", "explanation": "It was the CFO who..." },
+        { "id": "c2-12-q11", "type": "quiz_choice", "question": "Normal: A mysterious figure sat at the back of the room. -> Fronting: At the back of the room ____ a mysterious figure.", "options": ["sat", "did sit", "sits", "sitting"], "correct_answer": "sat", "explanation": "At the back of the room sat..." },
+        { "id": "c2-12-q12", "type": "quiz_choice", "question": "____ matters most right now is securing the supply chain.", "options": ["What", "It", "That", "The thing"], "correct_answer": "What", "explanation": "What matters most..." },
+        { "id": "c2-12-q13", "type": "quiz_choice", "question": "Normal: I didn't realize the severity of the problem until later. -> Negative Inversion (Fronting): Not until later ____ the severity of the problem.", "options": ["did I realize", "I realized", "I did realize", "realized I"], "correct_answer": "did I realize", "explanation": "Not until later did I realize... (Inversión negativa requiere auxiliar)." },
+        { "id": "c2-12-q14", "type": "quiz_choice", "question": "____ they did was fire the entire management team. (Lo que hicieron fue...).", "options": ["What", "It", "That", "All"], "correct_answer": "What", "explanation": "What they did was..." },
+        { "id": "c2-12-q15", "type": "quiz_choice", "question": "____ happened was a complete breakdown in communication.", "options": ["What", "It", "That", "Which"], "correct_answer": "What", "explanation": "What happened was..." },
+        { "id": "c2-12-q16", "type": "quiz_choice", "question": "Normal: We need a structural reorganization. -> Emphasis: The ____ we need is a structural reorganization.", "options": ["thing", "what", "it", "reason"], "correct_answer": "thing", "explanation": "The thing we need is... (Otra forma de pseudo-cleft)." },
+        { "id": "c2-12-q17", "type": "quiz_choice", "question": "____ was on Tuesday that the server finally crashed.", "options": ["It", "What", "That", "There"], "correct_answer": "It", "explanation": "It was on Tuesday that..." },
+        { "id": "c2-12-q18", "type": "quiz_choice", "question": "Normal: The old manager sat behind the massive desk. -> Fronting: Behind the massive desk ____ the old manager.", "options": ["sat", "did sit", "sits", "sitting"], "correct_answer": "sat", "explanation": "Behind the massive desk sat..." },
+        { "id": "c2-12-q19", "type": "quiz_choice", "question": "____ I really want to know is why nobody told me about this.", "options": ["What", "It", "That", "Which"], "correct_answer": "What", "explanation": "What I really want to know is..." },
+        { "id": "c2-12-q20", "type": "quiz_choice", "question": "____ wasn't until midnight that the negotiations concluded.", "options": ["It", "What", "That", "There"], "correct_answer": "It", "explanation": "It wasn't until midnight that..." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de énfasis (It, What, All) o el verbo para Fronting.",
+      "questions": [
+        { "id": "c2-12-f1", "type": "fill_input", "question": "____ was John who did it. (Cleft con I)", "correct_answer": "It", "explanation": "It." },
+        { "id": "c2-12-f2", "type": "fill_input", "question": "____ I need is time. (Lo que... con W)", "correct_answer": "What", "explanation": "What." },
+        { "id": "c2-12-f3", "type": "fill_input", "question": "____ I want is peace. (Todo lo que... con A)", "correct_answer": "All", "explanation": "All." },
+        { "id": "c2-12-f4", "type": "fill_input", "question": "____ was yesterday that he called. (Cleft con I)", "correct_answer": "It", "explanation": "It." },
+        { "id": "c2-12-f5", "type": "fill_input", "question": "____ concerns me is the cost. (Lo que... con W)", "correct_answer": "What", "explanation": "What." },
+        { "id": "c2-12-f6", "type": "fill_input", "question": "On the hill ____ a castle. (Stand en pasado - S)", "correct_answer": "stood", "explanation": "stood." },
+        { "id": "c2-12-f7", "type": "fill_input", "question": "Into the room ____ the CEO. (Walk en pasado - W)", "correct_answer": "walked", "explanation": "walked." },
+        { "id": "c2-12-f8", "type": "fill_input", "question": "The ____ I need is a coffee. (Cosa con T)", "correct_answer": "thing", "explanation": "thing." },
+        { "id": "c2-12-f9", "type": "fill_input", "question": "____ happened was a disaster. (Lo que... con W)", "correct_answer": "What", "explanation": "What." },
+        { "id": "c2-12-f10", "type": "fill_input", "question": "Not until later ____ I realize. (Inversión: did I / do I - escribe la primera palabra)", "correct_answer": "did", "explanation": "did." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Emphasis Match",
+      "pairs": [
+        {"id": "c2-12-p1", "source": "It was John who", "target": "Fue John quien (Cleft sujeto)"},
+        {"id": "c2-12-p2", "source": "It was yesterday that", "target": "Fue ayer cuando (Cleft tiempo)"},
+        {"id": "c2-12-p3", "source": "What I need is", "target": "Lo que necesito es (Pseudo-cleft)"},
+        {"id": "c2-12-p4", "source": "All I want is", "target": "Todo lo que quiero es"},
+        {"id": "c2-12-p5", "source": "What happened was", "target": "Lo que pasó fue"},
+        {"id": "c2-12-p6", "source": "On the hill stood", "target": "En la colina se erguía (Fronting)"},
+        {"id": "c2-12-p7", "source": "Into the room walked", "target": "En la habitación entró (Fronting)"},
+        {"id": "c2-12-p8", "source": "It wasn't until today that", "target": "No fue hasta hoy que"},
+        {"id": "c2-12-p9", "source": "The thing I need is", "target": "La cosa que necesito es"},
+        {"id": "c2-12-p10", "source": "What they did was", "target": "Lo que ellos hicieron fue"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración con énfasis correcta.",
+      "questions": [
+        { "id": "c2-12-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was John who called.", "options": ["It was John who called.", "What was John who called.", "That was John who called.", "He was John who called."], "correct_answer": "It was John who called.", "explanation": "Audio exacto." },
+        { "id": "c2-12-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What I need is time.", "options": ["What I need is time.", "It I need is time.", "That I need is time.", "Which I need is time."], "correct_answer": "What I need is time.", "explanation": "Audio exacto." },
+        { "id": "c2-12-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "All I want is peace.", "options": ["All I want is peace.", "What I want is peace.", "That I want is peace.", "It I want is peace."], "correct_answer": "All I want is peace.", "explanation": "Audio exacto." },
+        { "id": "c2-12-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was yesterday that we met.", "options": ["It was yesterday that we met.", "It is yesterday that we met.", "What was yesterday that we met.", "That was yesterday that we met."], "correct_answer": "It was yesterday that we met.", "explanation": "Audio exacto." },
+        { "id": "c2-12-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What happened was terrible.", "options": ["What happened was terrible.", "It happened was terrible.", "That happened was terrible.", "Which happened was terrible."], "correct_answer": "What happened was terrible.", "explanation": "Audio exacto." },
+        { "id": "c2-12-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "On the hill stood a castle.", "options": ["On the hill stood a castle.", "On the hill stands a castle.", "On the hill standing a castle.", "On the hill stand a castle."], "correct_answer": "On the hill stood a castle.", "explanation": "Audio exacto." },
+        { "id": "c2-12-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Into the room walked the boss.", "options": ["Into the room walked the boss.", "Into the room walk the boss.", "Into the room walking the boss.", "Into the room walks the boss."], "correct_answer": "Into the room walked the boss.", "explanation": "Audio exacto." },
+        { "id": "c2-12-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The thing I need is sleep.", "options": ["The thing I need is sleep.", "The things I need is sleep.", "A thing I need is sleep.", "What thing I need is sleep."], "correct_answer": "The thing I need is sleep.", "explanation": "Audio exacto." },
+        { "id": "c2-12-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What they did was wrong.", "options": ["What they did was wrong.", "What they do was wrong.", "What they done was wrong.", "That they did was wrong."], "correct_answer": "What they did was wrong.", "explanation": "Audio exacto." },
+        { "id": "c2-12-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It wasn't until today that I knew.", "options": ["It wasn't until today that I knew.", "It wasn't until today that I know.", "It isn't until today that I knew.", "What wasn't until today that I knew."], "correct_answer": "It wasn't until today that I knew.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

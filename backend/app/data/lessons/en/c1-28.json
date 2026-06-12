@@ -1,0 +1,101 @@
+{
+  "id": "c1-28",
+  "title": "Legal English & Contracts",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "Legal", "Contracts", "Law", "Business"],
+  "completion_message": "¡Excelente! El Inglés Legal (Legalese) es notoriamente complejo. Dominar términos como 'breach', 'liability' y 'arbitration' te protegerá en negociaciones y te permitirá interactuar con fluidez con los departamentos legales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Inglés Legal y Contratos (C1)",
+      "parts": [
+        { "visual": "Términos Legales Esenciales: \n- Breach of contract (Incumplimiento de contrato / Romper los términos acordados). \nEj: Failing to deliver on time is a clear breach of contract. \n- Liability (Responsabilidad legal o financiera). \nEj: The company denies any liability for the accident. \n- Arbitration (Arbitraje / Resolver una disputa fuera de los tribunales con un tercero). \nEj: The contract states that any disputes will go to arbitration.", "audio": "Essential Legal Terms. A 'Breach of contract' is the failure to observe a legal agreement. For example: Failing to deliver on time is a clear breach of contract. 'Liability' refers to being legally responsible for something, especially financially. For example: The company denies any liability for the accident. 'Arbitration' is the process of resolving a dispute outside the courts using an independent third party. For example: The contract states that any disputes will go to arbitration." },
+        { "visual": "Términos en Contratos: \n- Loophole (Vacío legal / Una ambigüedad en la ley o contrato que permite evadir una regla). \nEj: They used a tax loophole to avoid paying millions. \n- Clause (Cláusula / Una sección específica de un contrato). \nEj: Please read the termination clause carefully. \n- Binding (Vinculante / Que obliga legalmente). \nEj: Once signed, this agreement is legally binding.", "audio": "Contract Terms. A 'Loophole' is an ambiguity or inadequacy in the law or a set of rules. For example: They used a tax loophole to avoid paying millions. A 'Clause' is a particular and separate article, stipulation, or proviso in a treaty, bill, or contract. For example: Please read the termination clause carefully. 'Binding' means that an agreement involves an obligation that cannot be legally broken. For example: Once signed, this agreement is legally binding." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término legal o de contrato correcto.",
+      "questions": [
+        { "id": "c1-28-q1", "type": "quiz_choice", "question": "If you do not pay by the deadline, you will be in ____ of contract. (Incumplimiento).", "options": ["breach", "break", "violation", "fault"], "correct_answer": "breach", "explanation": "Breach of contract = incumplimiento de contrato." },
+        { "id": "c1-28-q2", "type": "quiz_choice", "question": "The company accepted full ____ for the damages caused by the spill. (Responsabilidad legal/financiera).", "options": ["liability", "responsibility", "fault", "debt"], "correct_answer": "liability", "explanation": "Liability = responsabilidad legal o civil (suele implicar pago)." },
+        { "id": "c1-28-q3", "type": "quiz_choice", "question": "Instead of going to court, the two companies agreed to binding ____. (Arbitraje).", "options": ["arbitration", "mediation", "litigation", "settlement"], "correct_answer": "arbitration", "explanation": "Arbitration = arbitraje (resolución privada de disputas)." },
+        { "id": "c1-28-q4", "type": "quiz_choice", "question": "Their lawyers found a ____ in the tax code and saved them millions. (Vacío legal).", "options": ["loophole", "blackhole", "gap", "crack"], "correct_answer": "loophole", "explanation": "Loophole = vacío legal, escapatoria en las reglas." },
+        { "id": "c1-28-q5", "type": "quiz_choice", "question": "A specific paragraph or section in a contract is called a ____. (Cláusula).", "options": ["clause", "phrase", "sentence", "section"], "correct_answer": "clause", "explanation": "Clause = cláusula." },
+        { "id": "c1-28-q6", "type": "quiz_choice", "question": "Once both parties sign it, the document becomes a legally ____ agreement. (Vinculante).", "options": ["binding", "bounding", "tying", "obligatory"], "correct_answer": "binding", "explanation": "Legally binding = legalmente vinculante / de cumplimiento obligatorio." },
+        { "id": "c1-28-q7", "type": "quiz_choice", "question": "When a court orders someone to stop doing something (e.g., selling a copied product), it issues an ____. (Orden judicial / Amparo).", "options": ["injunction", "order", "instruction", "demand"], "correct_answer": "injunction", "explanation": "Injunction = orden judicial (generalmente para detener una acción)." },
+        { "id": "c1-28-q8", "type": "quiz_choice", "question": "To start a legal case against someone is to ____ them. (Demandar).", "options": ["sue", "prosecute", "accuse", "charge"], "correct_answer": "sue", "explanation": "To sue = demandar civilmente." },
+        { "id": "c1-28-q9", "type": "quiz_choice", "question": "Money paid to compensate someone for loss or injury is called ____. (Daños y perjuicios).", "options": ["damages", "damage", "fines", "penalties"], "correct_answer": "damages", "explanation": "Damages (siempre plural) = indemnización por daños y perjuicios." },
+        { "id": "c1-28-q10", "type": "quiz_choice", "question": "An agreement made outside of court to end a dispute, usually involving a payment, is a ____. (Acuerdo extrajudicial).", "options": ["settlement", "deal", "agreement", "truce"], "correct_answer": "settlement", "explanation": "Settlement = acuerdo (usualmente monetario) para no ir o para salir del tribunal." },
+        { "id": "c1-28-q11", "type": "quiz_choice", "question": "A person who brings a case against another in a court of law is the ____. (Demandante).", "options": ["plaintiff", "defendant", "lawyer", "judge"], "correct_answer": "plaintiff", "explanation": "Plaintiff = demandante." },
+        { "id": "c1-28-q12", "type": "quiz_choice", "question": "The person or company being sued or accused is the ____. (Demandado / Acusado).", "options": ["defendant", "plaintiff", "prosecutor", "witness"], "correct_answer": "defendant", "explanation": "Defendant = demandado o acusado." },
+        { "id": "c1-28-q13", "type": "quiz_choice", "question": "Information kept hidden because of a Non-____ Agreement (NDA). (Acuerdo de confidencialidad).", "options": ["Disclosure", "Discovery", "Distribution", "Discussion"], "correct_answer": "Disclosure", "explanation": "Non-Disclosure Agreement (NDA) = acuerdo de no divulgación/confidencialidad." },
+        { "id": "c1-28-q14", "type": "quiz_choice", "question": "If you fail to pay your mortgage, the bank might ____ on your property. (Ejecutar la hipoteca / Embargar).", "options": ["foreclose", "close", "seize", "take"], "correct_answer": "foreclose", "explanation": "Foreclose = ejecutar una hipoteca." },
+        { "id": "c1-28-q15", "type": "quiz_choice", "question": "An official document proving you own a piece of property (like a house) is a ____. (Título de propiedad).", "options": ["title", "deed", "ticket", "certificate"], "correct_answer": "deed", "explanation": "Deed = escritura o título de propiedad (también se usa 'title')." },
+        { "id": "c1-28-q16", "type": "quiz_choice", "question": "Intellectual ____ includes patents, trademarks, and copyrights. (Propiedad intelectual).", "options": ["property", "assets", "rights", "ownership"], "correct_answer": "property", "explanation": "Intellectual Property (IP) = propiedad intelectual." },
+        { "id": "c1-28-q17", "type": "quiz_choice", "question": "A contract that says an employee cannot work for a competitor for a certain period is a non-____ clause. (Cláusula de no competencia).", "options": ["compete", "competition", "competing", "competitor"], "correct_answer": "compete", "explanation": "Non-compete clause = cláusula de no competencia." },
+        { "id": "c1-28-q18", "type": "quiz_choice", "question": "When a contract is officially cancelled and declared invalid, it is ____. (Nulo y sin efecto).", "options": ["null and void", "empty and void", "zero and void", "null and zero"], "correct_answer": "null and void", "explanation": "Null and void = nulo y sin efecto." },
+        { "id": "c1-28-q19", "type": "quiz_choice", "question": "A legal process by which a person or business unable to pay debts is relieved of those obligations is ____. (Bancarrota).", "options": ["bankruptcy", "insolvency", "liquidation", "ruin"], "correct_answer": "bankruptcy", "explanation": "Bankruptcy = bancarrota / quiebra." },
+        { "id": "c1-28-q20", "type": "quiz_choice", "question": "The right to use someone else's property or land for a specific purpose is an ____. (Servidumbre de paso / Derecho de uso).", "options": ["easement", "lease", "rent", "permit"], "correct_answer": "easement", "explanation": "Easement = servidumbre (término de bienes raíces/legal)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término legal correcto.",
+      "questions": [
+        { "id": "c1-28-f1", "type": "fill_input", "question": "A ____ of contract. (Incumplimiento con B)", "correct_answer": "breach", "explanation": "breach." },
+        { "id": "c1-28-f2", "type": "fill_input", "question": "Legal ____. (Responsabilidad con L)", "correct_answer": "liability", "explanation": "liability." },
+        { "id": "c1-28-f3", "type": "fill_input", "question": "To go to ____. (Arbitraje con A)", "correct_answer": "arbitration", "explanation": "arbitration." },
+        { "id": "c1-28-f4", "type": "fill_input", "question": "A tax ____. (Vacío legal con L)", "correct_answer": "loophole", "explanation": "loophole." },
+        { "id": "c1-28-f5", "type": "fill_input", "question": "The termination ____. (Cláusula con C)", "correct_answer": "clause", "explanation": "clause." },
+        { "id": "c1-28-f6", "type": "fill_input", "question": "Legally ____. (Vinculante con B)", "correct_answer": "binding", "explanation": "binding." },
+        { "id": "c1-28-f7", "type": "fill_input", "question": "To ____ someone. (Demandar con S)", "correct_answer": "sue", "explanation": "sue." },
+        { "id": "c1-28-f8", "type": "fill_input", "question": "To pay ____. (Daños y perjuicios con D)", "correct_answer": "damages", "explanation": "damages." },
+        { "id": "c1-28-f9", "type": "fill_input", "question": "A non-____ agreement. (Confidencialidad con D)", "correct_answer": "disclosure", "explanation": "disclosure (NDA)." },
+        { "id": "c1-28-f10", "type": "fill_input", "question": "Null and ____. (Sin efecto con V)", "correct_answer": "void", "explanation": "void." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Legal Terms Match",
+      "pairs": [
+        {"id": "c1-28-p1", "source": "Breach of contract", "target": "Incumplimiento de contrato"},
+        {"id": "c1-28-p2", "source": "Liability", "target": "Responsabilidad legal/financiera"},
+        {"id": "c1-28-p3", "source": "Arbitration", "target": "Arbitraje (resolución fuera del tribunal)"},
+        {"id": "c1-28-p4", "source": "Loophole", "target": "Vacío legal / Escapatoria"},
+        {"id": "c1-28-p5", "source": "Clause", "target": "Cláusula de un contrato"},
+        {"id": "c1-28-p6", "source": "Legally binding", "target": "Legalmente vinculante"},
+        {"id": "c1-28-p7", "source": "Sue", "target": "Demandar en un tribunal civil"},
+        {"id": "c1-28-p8", "source": "Damages", "target": "Daños y perjuicios (indemnización)"},
+        {"id": "c1-28-p9", "source": "Settlement", "target": "Acuerdo extrajudicial"},
+        {"id": "c1-28-p10", "source": "Null and void", "target": "Nulo y sin efecto"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término legal correcto.",
+      "questions": [
+        { "id": "c1-28-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This is a breach of contract.", "options": ["This is a breach of contract.", "This is a break of contract.", "That is a breach of contract.", "This was a breach of contract."], "correct_answer": "This is a breach of contract.", "explanation": "Audio exacto." },
+        { "id": "c1-28-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We deny any liability.", "options": ["We deny any liability.", "They deny any liability.", "We denied any liability.", "We accept full liability."], "correct_answer": "We deny any liability.", "explanation": "Audio exacto." },
+        { "id": "c1-28-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We agreed to arbitration.", "options": ["We agreed to arbitration.", "They agreed to arbitration.", "We agree to arbitration.", "We went to arbitration."], "correct_answer": "We agreed to arbitration.", "explanation": "Audio exacto." },
+        { "id": "c1-28-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They found a legal loophole.", "options": ["They found a legal loophole.", "We found a legal loophole.", "They found a tax loophole.", "They find a legal loophole."], "correct_answer": "They found a legal loophole.", "explanation": "Audio exacto." },
+        { "id": "c1-28-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Read the termination clause.", "options": ["Read the termination clause.", "Read the termination section.", "I read the termination clause.", "Check the termination clause."], "correct_answer": "Read the termination clause.", "explanation": "Audio exacto." },
+        { "id": "c1-28-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is legally binding.", "options": ["It is legally binding.", "It was legally binding.", "Is it legally binding?", "It's legally binding."], "correct_answer": "It is legally binding.", "explanation": "Audio exacto." },
+        { "id": "c1-28-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company will sue them.", "options": ["The company will sue them.", "The company will sue him.", "A company will sue them.", "The company can sue them."], "correct_answer": "The company will sue them.", "explanation": "Audio exacto." },
+        { "id": "c1-28-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They must pay damages.", "options": ["They must pay damages.", "We must pay damages.", "They must pay the damages.", "They will pay damages."], "correct_answer": "They must pay damages.", "explanation": "Audio exacto." },
+        { "id": "c1-28-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We reached a settlement.", "options": ["We reached a settlement.", "They reached a settlement.", "We reach a settlement.", "We signed a settlement."], "correct_answer": "We reached a settlement.", "explanation": "Audio exacto." },
+        { "id": "c1-28-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The contract is null and void.", "options": ["The contract is null and void.", "The agreement is null and void.", "The contract was null and void.", "His contract is null and void."], "correct_answer": "The contract is null and void.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

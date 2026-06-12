@@ -1,0 +1,101 @@
+{
+  "id": "b2-26",
+  "title": "Gerunds vs Infinitives",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Gerunds", "Infinitives", "Business"],
+  "completion_message": "¡Excelente! Has dominado uno de los temas más tramposos del inglés avanzado: los verbos que cambian de significado dependiendo de si usan Gerundio o Infinitivo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Verbos con Cambio de Significado (Gerundio vs Infinitivo)",
+      "parts": [
+        { "visual": "Verbos como STOP, REMEMBER, FORGET y REGRET cambian de significado según lo que les siga. \n- Stop + ING (Dejar un hábito): He stopped SMOKING. (Dejó de fumar). \n- Stop + TO (Detenerse para hacer algo): He stopped TO SMOKE. (Se detuvo PARA fumar).", "audio": "Verbs like stop, remember, forget, and regret, change their meaning depending on what follows them. Stop plus i n g means to quit a habit. For example: He stopped smoking. Stop plus 'to' means to stop an action in order to do something else. For example: He stopped to smoke." },
+        { "visual": "- Remember/Forget + ING (Recuerdo del pasado): I remember SIGNING the contract. (Recuerdo haberlo firmado). \n- Remember/Forget + TO (Deberes a futuro): Remember TO SIGN the contract. (Acuérdate de firmarlo). \n- Regret + ING (Lamento haber hecho algo): I regret TELLING him. \n- Regret + TO (Lamento informarte): I regret TO TELL you that you are fired.", "audio": "Remember or Forget plus i n g refers to a memory of the past. For example: I remember signing the contract. Remember or Forget plus 'to' refers to a future duty. For example: Remember to sign the contract. Regret plus i n g means you are sorry for something you did in the past. For example: I regret telling him. Regret plus 'to' is used in formal language to say 'I am sorry to inform you'. For example: I regret to tell you that you are fired." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta (Gerundio o Infinitivo) según el contexto.",
+      "questions": [
+        { "id": "b2-26-q1", "type": "quiz_choice", "question": "I completely forgot ____ the client. I'll do it right now! (Olvidé llamarlo - deber futuro/presente).", "options": ["to call", "calling", "call", "called"], "correct_answer": "to call", "explanation": "Forget + TO = olvidar hacer una tarea o deber." },
+        { "id": "b2-26-q2", "type": "quiz_choice", "question": "I'll never forget ____ the CEO for the first time. It was terrifying. (Recuerdo la experiencia pasada).", "options": ["meeting", "to meet", "meet", "met"], "correct_answer": "meeting", "explanation": "Forget + ING = olvidar una experiencia que ya viviste en el pasado." },
+        { "id": "b2-26-q3", "type": "quiz_choice", "question": "Please remember ____ your timesheet before 5 PM. (Acuérdate de enviar - deber).", "options": ["to submit", "submitting", "submit", "submitted"], "correct_answer": "to submit", "explanation": "Remember + TO = recordar hacer una obligación." },
+        { "id": "b2-26-q4", "type": "quiz_choice", "question": "I clearly remember ____ that email, but now I can't find it in my sent folder. (Recuerdo haberlo enviado).", "options": ["sending", "to send", "send", "sent"], "correct_answer": "sending", "explanation": "Remember + ING = tener la memoria de algo que ya hiciste." },
+        { "id": "b2-26-q5", "type": "quiz_choice", "question": "We were driving to the office, but we stopped ____ some coffee. (Nos detuvimos PARA comprar).", "options": ["to buy", "buying", "buy", "bought"], "correct_answer": "to buy", "explanation": "Stop + TO = interrumpir una acción con el propósito de hacer otra." },
+        { "id": "b2-26-q6", "type": "quiz_choice", "question": "The doctor told him he must stop ____ if he wants to reduce his stress. (Dejar el hábito de trabajar tanto).", "options": ["working", "to work", "work", "worked"], "correct_answer": "working", "explanation": "Stop + ING = abandonar un hábito o acción continuada." },
+        { "id": "b2-26-q7", "type": "quiz_choice", "question": "I regret ____ you that your application has been rejected. (Lamento informarle - formal).", "options": ["to inform", "informing", "inform", "informed"], "correct_answer": "to inform", "explanation": "Regret + TO (inform/tell/say) = lamento comunicarle." },
+        { "id": "b2-26-q8", "type": "quiz_choice", "question": "I really regret ____ that job offer. The company is now a unicorn! (Me arrepiento de haber rechazado).", "options": ["rejecting", "to reject", "reject", "rejected"], "correct_answer": "rejecting", "explanation": "Regret + ING = arrepentirse de una acción del pasado." },
+        { "id": "b2-26-q9", "type": "quiz_choice", "question": "We tried ____ the server, but it's still crashing. (Hicimos el experimento de reiniciar).", "options": ["restarting", "to restart", "restart", "restarted"], "correct_answer": "restarting", "explanation": "Try + ING = hacer un experimento o probar un método para ver si funciona." },
+        { "id": "b2-26-q10", "type": "quiz_choice", "question": "I tried ____ the server, but I didn't have the admin password. (Hice el esfuerzo pero no pude).", "options": ["to restart", "restarting", "restart", "restarted"], "correct_answer": "to restart", "explanation": "Try + TO = hacer el intento/esfuerzo de hacer algo, a menudo sin éxito." },
+        { "id": "b2-26-q11", "type": "quiz_choice", "question": "If your laptop is freezing, try ____ some background apps. (Prueba a cerrar - como solución).", "options": ["closing", "to close", "close", "closed"], "correct_answer": "closing", "explanation": "Try + ING = sugerir un método o experimento." },
+        { "id": "b2-26-q12", "type": "quiz_choice", "question": "Did you remember ____ the alarm before leaving the office? (Recordaste activar).", "options": ["to set", "setting", "set", "setted"], "correct_answer": "to set", "explanation": "Remember + TO (deber/obligación)." },
+        { "id": "b2-26-q13", "type": "quiz_choice", "question": "I remember ____ the door, but maybe it didn't lock properly. (Recuerdo la acción de cerrar).", "options": ["closing", "to close", "close", "closed"], "correct_answer": "closing", "explanation": "Remember + ING (memoria del pasado)." },
+        { "id": "b2-26-q14", "type": "quiz_choice", "question": "Please stop ____! I am trying to focus on this report. (Dejen de hablar - interrumpir la acción).", "options": ["talking", "to talk", "talk", "talked"], "correct_answer": "talking", "explanation": "Stop + ING (cesar la acción actual)." },
+        { "id": "b2-26-q15", "type": "quiz_choice", "question": "On my way to the meeting, I stopped ____ up some documents. (Me detuve para recoger).", "options": ["to pick", "picking", "pick", "picked"], "correct_answer": "to pick", "explanation": "Stop + TO (propósito)." },
+        { "id": "b2-26-q16", "type": "quiz_choice", "question": "I regret ____ to that meeting. It was a complete waste of time. (Me arrepiento de haber ido).", "options": ["going", "to go", "go", "went"], "correct_answer": "going", "explanation": "Regret + ING (arrepentimiento pasado)." },
+        { "id": "b2-26-q17", "type": "quiz_choice", "question": "The company regrets ____ announce the closure of its Madrid office. (Lamenta anunciar - formal).", "options": ["to", "announcing", "announce", "announced"], "correct_answer": "to", "explanation": "Regret + TO (anuncio formal negativo)." },
+        { "id": "b2-26-q18", "type": "quiz_choice", "question": "Don't forget ____ your password tomorrow morning. It expires today. (No olvides cambiar - deber).", "options": ["to change", "changing", "change", "changed"], "correct_answer": "to change", "explanation": "Forget + TO (deber/tarea)." },
+        { "id": "b2-26-q19", "type": "quiz_choice", "question": "I'll never forget ____ my first bonus. I was so happy! (Olvidar la experiencia de recibir).", "options": ["receiving", "to receive", "receive", "received"], "correct_answer": "receiving", "explanation": "Forget + ING (memoria)." },
+        { "id": "b2-26-q20", "type": "quiz_choice", "question": "We tried ____ the client, but his phone was switched off. (Intentamos contactar - esfuerzo fallido).", "options": ["to contact", "contacting", "contact", "contacted"], "correct_answer": "to contact", "explanation": "Try + TO (hacer el esfuerzo sin lograrlo)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la forma correcta del verbo entre paréntesis (usando 'to' o '-ing').",
+      "questions": [
+        { "id": "b2-26-f1", "type": "fill_input", "question": "He stopped ____ (smoke) 5 years ago. (Dejó el hábito)", "correct_answer": "smoking", "explanation": "smoking." },
+        { "id": "b2-26-f2", "type": "fill_input", "question": "We stopped ____ (eat) because we were hungry. (Nos detuvimos para)", "correct_answer": "to eat", "explanation": "to eat." },
+        { "id": "b2-26-f3", "type": "fill_input", "question": "Remember ____ (lock) the door! (Acuérdate de - deber)", "correct_answer": "to lock", "explanation": "to lock." },
+        { "id": "b2-26-f4", "type": "fill_input", "question": "I remember ____ (see) him yesterday. (Recuerdo haberlo visto)", "correct_answer": "seeing", "explanation": "seeing." },
+        { "id": "b2-26-f5", "type": "fill_input", "question": "Don't forget ____ (call) the client. (No olvides - deber)", "correct_answer": "to call", "explanation": "to call." },
+        { "id": "b2-26-f6", "type": "fill_input", "question": "I'll never forget ____ (win) that award. (Experiencia pasada)", "correct_answer": "winning", "explanation": "winning." },
+        { "id": "b2-26-f7", "type": "fill_input", "question": "I regret ____ (tell) you that you failed. (Lamento informarte)", "correct_answer": "to tell", "explanation": "to tell." },
+        { "id": "b2-26-f8", "type": "fill_input", "question": "I regret ____ (buy) this old car. (Me arrepiento de haber comprado)", "correct_answer": "buying", "explanation": "buying." },
+        { "id": "b2-26-f9", "type": "fill_input", "question": "Try ____ (restart) the PC to see if it fixes it. (Prueba como experimento)", "correct_answer": "restarting", "explanation": "restarting." },
+        { "id": "b2-26-f10", "type": "fill_input", "question": "I tried ____ (open) the door, but it was locked. (Hice el esfuerzo físico pero no pude)", "correct_answer": "to open", "explanation": "to open." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Gerund vs Infinitive Match",
+      "pairs": [
+        {"id": "b2-26-p1", "source": "Stop smoking", "target": "Dejar el hábito de fumar"},
+        {"id": "b2-26-p2", "source": "Stop to smoke", "target": "Detenerse con el propósito de fumar"},
+        {"id": "b2-26-p3", "source": "Remember to sign", "target": "Acordarse de firmar (Obligación)"},
+        {"id": "b2-26-p4", "source": "Remember signing", "target": "Recordar haber firmado (Memoria pasada)"},
+        {"id": "b2-26-p5", "source": "Forget to call", "target": "Olvidarse de llamar (No lo hiciste)"},
+        {"id": "b2-26-p6", "source": "Forget calling", "target": "Olvidar la experiencia de haber llamado"},
+        {"id": "b2-26-p7", "source": "Regret to inform", "target": "Lamentar informar (Noticia mala y formal)"},
+        {"id": "b2-26-p8", "source": "Regret buying", "target": "Arrepentirse de haber comprado (Error pasado)"},
+        {"id": "b2-26-p9", "source": "Try to open", "target": "Hacer el esfuerzo de abrir (pero fallar)"},
+        {"id": "b2-26-p10", "source": "Try opening", "target": "Hacer el experimento de abrir (a ver qué pasa)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración correcta.",
+      "questions": [
+        { "id": "b2-26-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He stopped smoking.", "options": ["He stopped smoking.", "He stopped to smoke.", "He stops smoking.", "He stopped smoke."], "correct_answer": "He stopped smoking.", "explanation": "Audio exacto." },
+        { "id": "b2-26-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We stopped to eat.", "options": ["We stopped to eat.", "We stopped eating.", "They stopped to eat.", "We stop to eat."], "correct_answer": "We stopped to eat.", "explanation": "Audio exacto." },
+        { "id": "b2-26-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Remember to lock the door.", "options": ["Remember to lock the door.", "Remember locking the door.", "Remember to knock the door.", "Remember to open the door."], "correct_answer": "Remember to lock the door.", "explanation": "Audio exacto." },
+        { "id": "b2-26-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I remember seeing him.", "options": ["I remember seeing him.", "I remember to see him.", "I remembered seeing him.", "I remember see him."], "correct_answer": "I remember seeing him.", "explanation": "Audio exacto." },
+        { "id": "b2-26-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I forgot to call the client.", "options": ["I forgot to call the client.", "I forgot calling the client.", "I forget to call the client.", "I forgot to call the boss."], "correct_answer": "I forgot to call the client.", "explanation": "Audio exacto." },
+        { "id": "b2-26-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will never forget winning.", "options": ["I will never forget winning.", "I will never forget to win.", "I will never forget spinning.", "I never forget winning."], "correct_answer": "I will never forget winning.", "explanation": "Audio exacto." },
+        { "id": "b2-26-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I regret to inform you.", "options": ["I regret to inform you.", "I regret informing you.", "I regret to tell you.", "I regret to report you."], "correct_answer": "I regret to inform you.", "explanation": "Audio exacto." },
+        { "id": "b2-26-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I regret buying this car.", "options": ["I regret buying this car.", "I regret to buy this car.", "I regret selling this car.", "He regrets buying this car."], "correct_answer": "I regret buying this car.", "explanation": "Audio exacto." },
+        { "id": "b2-26-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Try restarting the computer.", "options": ["Try restarting the computer.", "Try to restart the computer.", "Try turning the computer.", "Try starting the computer."], "correct_answer": "Try restarting the computer.", "explanation": "Audio exacto." },
+        { "id": "b2-26-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I tried to open the door.", "options": ["I tried to open the door.", "I tried opening the door.", "I try to open the door.", "They tried to open the door."], "correct_answer": "I tried to open the door.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

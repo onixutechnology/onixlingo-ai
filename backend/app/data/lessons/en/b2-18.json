@@ -1,0 +1,101 @@
+{
+  "id": "b2-18",
+  "title": "Tech & Innovation",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Vocabulary", "Technology", "Innovation", "Business"],
+  "completion_message": "¡Fantástico! Dominas el vocabulario de las startups y la tecnología moderna. Estás listo para hablar de innovación al más alto nivel.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Tecnología e Innovación Disruptiva",
+      "parts": [
+        { "visual": "Innovación: \n- Disruptive (Disruptivo - que cambia completamente una industria). \n- Cutting-edge (De vanguardia / Lo más avanzado). \n- Paradigm shift (Cambio de paradigma). \nEj: AI is a disruptive technology causing a paradigm shift in education.", "audio": "Innovation. Disruptive means changing an industry completely. Cutting-edge means the most advanced or state of the art. Paradigm shift is a fundamental change in approach or underlying assumptions. For example: A I is a disruptive technology causing a paradigm shift in education." },
+        { "visual": "Startups y Desarrollo: \n- Scale up (Escalar - crecer rápidamente el negocio). \n- Algorithm (Algoritmo). \n- Pain point (Punto de dolor - el problema específico del cliente que tu producto resuelve). \nEj: To scale up, our algorithm must solve a real pain point.", "audio": "Startups and Development. Scale up means to grow a business rapidly. Algorithm is a set of rules for a computer. Pain point is the specific problem of the customer that your product solves. For example: To scale up, our algorithm must solve a real pain point." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término tecnológico correcto.",
+      "questions": [
+        { "id": "b2-18-q1", "type": "quiz_choice", "question": "Uber was a ____ technology because it completely changed the taxi industry. (Disruptiva).", "options": ["disruptive", "breaking", "crashing", "destroying"], "correct_answer": "disruptive", "explanation": "Disruptive = disruptivo (que altera radicalmente un sector)." },
+        { "id": "b2-18-q2", "type": "quiz_choice", "question": "We use ____-edge technology in our laboratories. (De vanguardia / Lo último).", "options": ["cutting", "sharp", "knife", "front"], "correct_answer": "cutting", "explanation": "Cutting-edge (o state-of-the-art) = de última generación, de vanguardia." },
+        { "id": "b2-18-q3", "type": "quiz_choice", "question": "The invention of the internet caused a paradigm ____ in how we communicate. (Cambio/Giro).", "options": ["shift", "move", "jump", "turn"], "correct_answer": "shift", "explanation": "Paradigm shift = cambio de paradigma (un cambio fundamental)." },
+        { "id": "b2-18-q4", "type": "quiz_choice", "question": "The startup is looking for investors so they can ____ up operations globally. (Escalar / Crecer).", "options": ["scale", "climb", "grow", "jump"], "correct_answer": "scale", "explanation": "Scale up = escalar un negocio (crecer sus ingresos rápidamente sin que los costos suban al mismo ritmo)." },
+        { "id": "b2-18-q5", "type": "quiz_choice", "question": "Our app solves a major ____ point for remote workers. (Punto de dolor / Problema principal).", "options": ["pain", "hurt", "cry", "sad"], "correct_answer": "pain", "explanation": "Pain point = punto de dolor (el problema que frustra al cliente)." },
+        { "id": "b2-18-q6", "type": "quiz_choice", "question": "The social media ____ decides which videos you see on your feed. (Algoritmo).", "options": ["algorithm", "math", "code", "rule"], "correct_answer": "algorithm", "explanation": "Algorithm = algoritmo." },
+        { "id": "b2-18-q7", "type": "quiz_choice", "question": "They created a ____ of the app to test it before the official launch. (Prototipo).", "options": ["prototype", "first", "model", "copy"], "correct_answer": "prototype", "explanation": "Prototype = prototipo." },
+        { "id": "b2-18-q8", "type": "quiz_choice", "question": "We need an app that is user-____ so older people can use it easily. (Amigable / Fácil de usar).", "options": ["friendly", "easy", "nice", "kind"], "correct_answer": "friendly", "explanation": "User-friendly = fácil de usar, intuitivo." },
+        { "id": "b2-18-q9", "type": "quiz_choice", "question": "Our data is stored securely in the ____. (La nube).", "options": ["cloud", "sky", "air", "web"], "correct_answer": "cloud", "explanation": "The cloud = la nube." },
+        { "id": "b2-18-q10", "type": "quiz_choice", "question": "Artificial ____ will automate many routine tasks. (Inteligencia).", "options": ["Intelligence", "Brain", "Mind", "Thought"], "correct_answer": "Intelligence", "explanation": "Artificial Intelligence (AI)." },
+        { "id": "b2-18-q11", "type": "quiz_choice", "question": "A sudden system ____ caused us to lose an hour of work. (Fallo / Caída).", "options": ["crash", "fall", "break", "hit"], "correct_answer": "crash", "explanation": "System crash = caída o fallo del sistema." },
+        { "id": "b2-18-q12", "type": "quiz_choice", "question": "We need to fix this software ____ before the release. (Error / Bicho).", "options": ["bug", "ant", "spider", "fly"], "correct_answer": "bug", "explanation": "Bug = error de software." },
+        { "id": "b2-18-q13", "type": "quiz_choice", "question": "To protect our network from hackers, we improved our ____. (Ciberseguridad).", "options": ["cybersecurity", "internet-safe", "web-guard", "pc-shield"], "correct_answer": "cybersecurity", "explanation": "Cybersecurity = ciberseguridad." },
+        { "id": "b2-18-q14", "type": "quiz_choice", "question": "The company uses machine ____ to analyze customer data. (Aprendizaje).", "options": ["learning", "studying", "reading", "knowing"], "correct_answer": "learning", "explanation": "Machine learning = aprendizaje automático." },
+        { "id": "b2-18-q15", "type": "quiz_choice", "question": "We are planning to ____ the new feature next week. (Lanzar / Implementar).", "options": ["roll out", "throw out", "push out", "kick out"], "correct_answer": "roll out", "explanation": "Roll out = lanzar o implementar gradualmente un nuevo producto o función." },
+        { "id": "b2-18-q16", "type": "quiz_choice", "question": "This software is obsolete; we need to ____ it immediately. (Actualizar).", "options": ["update", "upkeep", "upscale", "uprise"], "correct_answer": "update", "explanation": "Update (o upgrade) = actualizar." },
+        { "id": "b2-18-q17", "type": "quiz_choice", "question": "A tech ____ is a company that has reached a valuation of $1 billion. (Unicornio).", "options": ["unicorn", "dragon", "horse", "lion"], "correct_answer": "unicorn", "explanation": "Unicorn = empresa emergente (startup) valuada en más de 1000 millones de dólares." },
+        { "id": "b2-18-q18", "type": "quiz_choice", "question": "We use an ____-source platform, which means the code is free for everyone. (Código abierto).", "options": ["open", "free", "public", "clear"], "correct_answer": "open", "explanation": "Open-source = código abierto." },
+        { "id": "b2-18-q19", "type": "quiz_choice", "question": "The new interface is highly ____ to fit our specific needs. (Personalizable).", "options": ["customizable", "changeable", "movable", "fixable"], "correct_answer": "customizable", "explanation": "Customizable = personalizable, adaptable." },
+        { "id": "b2-18-q20", "type": "quiz_choice", "question": "Virtual ____ headsets are becoming very popular in gaming and training. (Realidad).", "options": ["reality", "world", "life", "truth"], "correct_answer": "reality", "explanation": "Virtual reality (VR) = realidad virtual." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra tecnológica correcta.",
+      "questions": [
+        { "id": "b2-18-f1", "type": "fill_input", "question": "____ technology. (Disruptiva con D)", "correct_answer": "Disruptive", "explanation": "Disruptive." },
+        { "id": "b2-18-f2", "type": "fill_input", "question": "____-edge. (De vanguardia con C)", "correct_answer": "Cutting", "explanation": "Cutting." },
+        { "id": "b2-18-f3", "type": "fill_input", "question": "Paradigm ____. (Cambio con S)", "correct_answer": "shift", "explanation": "shift." },
+        { "id": "b2-18-f4", "type": "fill_input", "question": "To ____ up. (Escalar con S)", "correct_answer": "scale", "explanation": "scale." },
+        { "id": "b2-18-f5", "type": "fill_input", "question": "A pain ____. (Punto de dolor con P)", "correct_answer": "point", "explanation": "point." },
+        { "id": "b2-18-f6", "type": "fill_input", "question": "The ____. (Algoritmo con A)", "correct_answer": "algorithm", "explanation": "algorithm." },
+        { "id": "b2-18-f7", "type": "fill_input", "question": "User-____. (Amigable/Fácil de usar con F)", "correct_answer": "friendly", "explanation": "friendly." },
+        { "id": "b2-18-f8", "type": "fill_input", "question": "Software ____. (Error/Bicho con B)", "correct_answer": "bug", "explanation": "bug." },
+        { "id": "b2-18-f9", "type": "fill_input", "question": "Machine ____. (Aprendizaje con L)", "correct_answer": "learning", "explanation": "learning." },
+        { "id": "b2-18-f10", "type": "fill_input", "question": "____-source. (Código abierto con O)", "correct_answer": "Open", "explanation": "Open." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Tech Match",
+      "pairs": [
+        {"id": "b2-18-p1", "source": "Disruptive", "target": "Disruptivo (que cambia todo)"},
+        {"id": "b2-18-p2", "source": "Cutting-edge", "target": "De vanguardia / Lo último"},
+        {"id": "b2-18-p3", "source": "Paradigm shift", "target": "Cambio de paradigma"},
+        {"id": "b2-18-p4", "source": "Scale up", "target": "Escalar un negocio"},
+        {"id": "b2-18-p5", "source": "Pain point", "target": "Punto de dolor (del cliente)"},
+        {"id": "b2-18-p6", "source": "Algorithm", "target": "Algoritmo"},
+        {"id": "b2-18-p7", "source": "Prototype", "target": "Prototipo"},
+        {"id": "b2-18-p8", "source": "Bug", "target": "Error de software"},
+        {"id": "b2-18-p9", "source": "Roll out", "target": "Lanzar / Implementar gradualmente"},
+        {"id": "b2-18-p10", "source": "Open-source", "target": "Código abierto"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración de innovación.",
+      "questions": [
+        { "id": "b2-18-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a disruptive technology.", "options": ["It is a disruptive technology.", "It is a destructive technology.", "Is it a disruptive technology?", "It is a new technology."], "correct_answer": "It is a disruptive technology.", "explanation": "Audio exacto." },
+        { "id": "b2-18-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We use cutting-edge software.", "options": ["We use cutting-edge software.", "We use cutting software.", "They use cutting-edge software.", "We need cutting-edge software."], "correct_answer": "We use cutting-edge software.", "explanation": "Audio exacto." },
+        { "id": "b2-18-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This is a paradigm shift.", "options": ["This is a paradigm shift.", "That is a paradigm shift.", "This is a paradigm.", "This was a paradigm shift."], "correct_answer": "This is a paradigm shift.", "explanation": "Audio exacto." },
+        { "id": "b2-18-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to scale up.", "options": ["We need to scale up.", "We need to scale down.", "They need to scale up.", "We must scale up."], "correct_answer": "We need to scale up.", "explanation": "Audio exacto." },
+        { "id": "b2-18-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Identify the customer's pain point.", "options": ["Identify the customer's pain point.", "Find the customer's pain point.", "Identify the customer's point.", "Identify the main pain point."], "correct_answer": "Identify the customer's pain point.", "explanation": "Audio exacto." },
+        { "id": "b2-18-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The algorithm is complex.", "options": ["The algorithm is complex.", "The algorithm is complete.", "The math is complex.", "The algorithm was complex."], "correct_answer": "The algorithm is complex.", "explanation": "Audio exacto." },
+        { "id": "b2-18-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We built a prototype.", "options": ["We built a prototype.", "We build a prototype.", "They built a prototype.", "We bought a prototype."], "correct_answer": "We built a prototype.", "explanation": "Audio exacto." },
+        { "id": "b2-18-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "There is a bug in the code.", "options": ["There is a bug in the code.", "There is a bug in the system.", "Is there a bug in the code?", "There was a bug in the code."], "correct_answer": "There is a bug in the code.", "explanation": "Audio exacto." },
+        { "id": "b2-18-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will roll out the feature.", "options": ["We will roll out the feature.", "They will roll out the feature.", "We will roll out the future.", "We roll out the feature."], "correct_answer": "We will roll out the feature.", "explanation": "Audio exacto." },
+        { "id": "b2-18-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is open-source software.", "options": ["It is open-source software.", "It is open software.", "It is source software.", "Is it open-source software?"], "correct_answer": "It is open-source software.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

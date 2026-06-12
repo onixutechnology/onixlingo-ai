@@ -1,0 +1,101 @@
+{
+  "id": "c1-32",
+  "title": "Passive Voice in Reporting",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Grammar", "Passive Voice", "Reporting", "Journalism", "Formal"],
+  "completion_message": "¡Excelente! La voz pasiva impersonal es el pilar de la redacción formal, el periodismo y los informes corporativos. Usar 'It is believed that' o 'The CEO is said to have resigned' te permite reportar información sin comprometerte o sin señalar culpables directos.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Voz Pasiva Impersonal y de Reporte (C1)",
+      "parts": [
+        { "visual": "En contextos formales o periodísticos, cuando no sabemos quién dijo algo, o queremos distanciarnos de un rumor, usamos la Pasiva de Reporte. Hay dos estructuras principales. \nVerbos comunes: say, believe, report, expect, consider, think, know. \n\nEstructura 1 (Con 'It'): It + be + past participle + that... \nActiva: People believe that the company is bankrupt. \nPasiva 1: IT IS BELIEVED that the company is bankrupt. \nActiva: They reported that the CEO had resigned. \nPasiva 1: IT WAS REPORTED that the CEO had resigned.", "audio": "In formal or journalistic contexts, when we don't know who said something, or we want to distance ourselves from a rumor, we use the Reporting Passive. Common verbs include: say, believe, report, expect, consider, think, and know. Structure 1 uses 'It' as an empty subject. Formula: It plus 'be' plus past participle plus 'that'. Active sentence: People believe that the company is bankrupt. Passive 1: IT IS BELIEVED that the company is bankrupt. Active: They reported that the CEO had resigned. Passive 1: IT WAS REPORTED that the CEO had resigned." },
+        { "visual": "Estructura 2 (Con el Sujeto de la segunda oración): \nSujeto + be + past participle + TO + infinitivo. \n\nSi la acción ocurre en el PRESENTE o FUTURO (to + base verb): \nActiva: People expect that the inflation will rise. \nPasiva 2: The inflation IS EXPECTED TO RISE. \nActiva: They say he is a tough negotiator. \nPasiva 2: He IS SAID TO BE a tough negotiator. \n\nSi la acción ocurrió en el PASADO (to have + past participle): \nActiva: They believe the hackers stole the data. \nPasiva 2: The hackers ARE BELIEVED TO HAVE STOLEN the data. \nActiva: They report that the CEO resigned. \nPasiva 2: The CEO IS REPORTED TO HAVE RESIGNED.", "audio": "Structure 2 uses the Subject of the second clause. Formula: Subject plus 'be' plus past participle plus 'TO' plus infinitive. If the action is in the present or future, use 'to' plus the base verb. Active: People expect that the inflation will rise. Passive 2: The inflation IS EXPECTED TO RISE. Active: They say he is a tough negotiator. Passive 2: He IS SAID TO BE a tough negotiator. Now, if the action happened in the PAST, use 'to have' plus past participle. Active: They believe the hackers stole the data. Passive 2: The hackers ARE BELIEVED TO HAVE STOLEN the data. Active: They report that the CEO resigned. Passive 2: The CEO IS REPORTED TO HAVE RESIGNED." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta de voz pasiva de reporte.",
+      "questions": [
+        { "id": "c1-32-q1", "type": "quiz_choice", "question": "People say that he is very strict. -> It ____ that he is very strict.", "options": ["is said", "is saying", "says", "has said"], "correct_answer": "is said", "explanation": "It + is + past participle (said)." },
+        { "id": "c1-32-q2", "type": "quiz_choice", "question": "People say that he is very strict. -> He is said ____ very strict.", "options": ["to be", "to being", "be", "is"], "correct_answer": "to be", "explanation": "Sujeto + is said + TO + infinitivo presente (to be)." },
+        { "id": "c1-32-q3", "type": "quiz_choice", "question": "They expect that profits will drop. -> Profits are expected ____.", "options": ["to drop", "drop", "to have dropped", "dropping"], "correct_answer": "to drop", "explanation": "Acción futura -> TO + infinitivo simple (to drop)." },
+        { "id": "c1-32-q4", "type": "quiz_choice", "question": "Journalists reported that the bank lost millions. -> It ____ that the bank lost millions.", "options": ["was reported", "is reported", "has reported", "reports"], "correct_answer": "was reported", "explanation": "El reporte ocurrió en pasado: It WAS reported." },
+        { "id": "c1-32-q5", "type": "quiz_choice", "question": "People believe that the CFO stole the money. -> The CFO is believed ____ the money.", "options": ["to have stolen", "to steal", "to stole", "having stolen"], "correct_answer": "to have stolen", "explanation": "Acción pasada (el robo) -> TO HAVE + past participle (to have stolen)." },
+        { "id": "c1-32-q6", "type": "quiz_choice", "question": "They consider her to be the best candidate. -> She ____ to be the best candidate.", "options": ["is considered", "considers", "has considered", "is considering"], "correct_answer": "is considered", "explanation": "Sujeto + pasiva presente (is considered)." },
+        { "id": "c1-32-q7", "type": "quiz_choice", "question": "People know that the company is struggling. -> The company is known ____ struggling.", "options": ["to be", "to being", "is", "be"], "correct_answer": "to be", "explanation": "Acción presente -> TO BE." },
+        { "id": "c1-32-q8", "type": "quiz_choice", "question": "They think that the fire started in the warehouse. -> The fire is thought ____ in the warehouse.", "options": ["to have started", "to start", "starting", "started"], "correct_answer": "to have started", "explanation": "Acción pasada (el fuego empezó) -> TO HAVE STARTED." },
+        { "id": "c1-32-q9", "type": "quiz_choice", "question": "Experts estimate that the project will take two years. -> It ____ that the project will take two years.", "options": ["is estimated", "estimates", "was estimated", "has estimated"], "correct_answer": "is estimated", "explanation": "It + is + estimated." },
+        { "id": "c1-32-q10", "type": "quiz_choice", "question": "Police reported that the suspect fled the country. -> The suspect was reported ____ the country.", "options": ["to have fled", "to flee", "fleeing", "fled"], "correct_answer": "to have fled", "explanation": "El reporte fue en pasado (was reported) y la huida también fue un evento pasado respecto al reporte: TO HAVE FLED." },
+        { "id": "c1-32-q11", "type": "quiz_choice", "question": "People say the merger is going to happen soon. -> The merger is said ____ soon.", "options": ["to be going to happen", "to happen", "happening", "happen"], "correct_answer": "to happen", "explanation": "Se puede simplificar el futuro a TO HAPPEN." },
+        { "id": "c1-32-q12", "type": "quiz_choice", "question": "They understand that the CEO resigned yesterday. -> The CEO is understood ____ yesterday.", "options": ["to have resigned", "to resign", "resigning", "resigned"], "correct_answer": "to have resigned", "explanation": "Acción pasada (yesterday) -> TO HAVE RESIGNED." },
+        { "id": "c1-32-q13", "type": "quiz_choice", "question": "People claim that he has secret bank accounts. -> He is claimed ____ secret bank accounts.", "options": ["to have", "to has", "having", "has"], "correct_answer": "to have", "explanation": "Acción presente (tener cuentas) -> TO HAVE (infinitivo base)." },
+        { "id": "c1-32-q14", "type": "quiz_choice", "question": "They believed that the document was forged. -> It ____ that the document was forged.", "options": ["was believed", "is believed", "has believed", "believes"], "correct_answer": "was believed", "explanation": "Creencia en el pasado: It WAS believed." },
+        { "id": "c1-32-q15", "type": "quiz_choice", "question": "They believed that the document was forged. -> The document was believed ____ forged.", "options": ["to have been", "to be", "to was", "been"], "correct_answer": "to have been", "explanation": "El documento 'fue' falsificado en el pasado -> TO HAVE BEEN (past infinitive of be)." },
+        { "id": "c1-32-q16", "type": "quiz_choice", "question": "We expect the inflation rate to reach 5%. -> The inflation rate ____ to reach 5%.", "options": ["is expected", "expects", "has expected", "was expected"], "correct_answer": "is expected", "explanation": "Present expectation: is expected." },
+        { "id": "c1-32-q17", "type": "quiz_choice", "question": "People allege that the company evaded taxes. -> The company is alleged ____ taxes.", "options": ["to have evaded", "to evade", "evading", "evaded"], "correct_answer": "to have evaded", "explanation": "Evadió en el pasado -> TO HAVE EVADED." },
+        { "id": "c1-32-q18", "type": "quiz_choice", "question": "They presume he is innocent. -> He ____ to be innocent.", "options": ["is presumed", "presumes", "has presumed", "was presumed"], "correct_answer": "is presumed", "explanation": "He is presumed." },
+        { "id": "c1-32-q19", "type": "quiz_choice", "question": "It ____ that the new rules will improve efficiency. (Se espera).", "options": ["is hoped", "hopes", "has hoped", "was hoped"], "correct_answer": "is hoped", "explanation": "It IS hoped (se espera/hay esperanza)." },
+        { "id": "c1-32-q20", "type": "quiz_choice", "question": "They found that the software had a bug. -> The software was found ____ a bug.", "options": ["to have", "to had", "having", "has"], "correct_answer": "to have", "explanation": "Se descubrió (pasado) que el software tenía (estado simultáneo en el pasado) -> TO HAVE." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra que falta.",
+      "questions": [
+        { "id": "c1-32-f1", "type": "fill_input", "question": "____ is said that he is rich. (Se dice)", "correct_answer": "It", "explanation": "It." },
+        { "id": "c1-32-f2", "type": "fill_input", "question": "He is said ____ be rich. (Se dice que él es)", "correct_answer": "to", "explanation": "to." },
+        { "id": "c1-32-f3", "type": "fill_input", "question": "It ____ reported that they won. (Se reportó en el pasado)", "correct_answer": "was", "explanation": "was." },
+        { "id": "c1-32-f4", "type": "fill_input", "question": "The CEO is believed to ____ resigned. (haber)", "correct_answer": "have", "explanation": "have." },
+        { "id": "c1-32-f5", "type": "fill_input", "question": "She is expected ____ arrive tomorrow. (llegar)", "correct_answer": "to", "explanation": "to." },
+        { "id": "c1-32-f6", "type": "fill_input", "question": "He is known to ____ stolen the money. (haber)", "correct_answer": "have", "explanation": "have." },
+        { "id": "c1-32-f7", "type": "fill_input", "question": "It is ____ that prices will drop. (se espera - hope)", "correct_answer": "hoped", "explanation": "hoped." },
+        { "id": "c1-32-f8", "type": "fill_input", "question": "The company ____ alleged to have evaded taxes. (es)", "correct_answer": "is", "explanation": "is." },
+        { "id": "c1-32-f9", "type": "fill_input", "question": "It is ____ that they are bankrupt. (se cree)", "correct_answer": "believed", "explanation": "believed." },
+        { "id": "c1-32-f10", "type": "fill_input", "question": "They are thought to have ____ fired. (sido - pasado participio de be)", "correct_answer": "been", "explanation": "been." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Reporting Match",
+      "pairs": [
+        {"id": "c1-32-p1", "source": "It is said that", "target": "Se dice que"},
+        {"id": "c1-32-p2", "source": "He is said to be", "target": "Se dice que él es (presente)"},
+        {"id": "c1-32-p3", "source": "It was reported that", "target": "Se reportó que (pasado)"},
+        {"id": "c1-32-p4", "source": "He is reported to have resigned", "target": "Se reporta que él renunció (acción pasada)"},
+        {"id": "c1-32-p5", "source": "It is expected that", "target": "Se espera que"},
+        {"id": "c1-32-p6", "source": "Prices are expected to rise", "target": "Se espera que los precios suban"},
+        {"id": "c1-32-p7", "source": "It is believed that", "target": "Se cree que"},
+        {"id": "c1-32-p8", "source": "They are believed to have stolen", "target": "Se cree que ellos robaron"},
+        {"id": "c1-32-p9", "source": "It is known that", "target": "Se sabe que"},
+        {"id": "c1-32-p10", "source": "She is known to be strict", "target": "Se sabe que ella es estricta"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase de reporte pasivo correcta.",
+      "questions": [
+        { "id": "c1-32-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is believed that he is rich.", "options": ["It is believed that he is rich.", "It was believed that he is rich.", "He is believed that he is rich.", "It is believe that he is rich."], "correct_answer": "It is believed that he is rich.", "explanation": "Audio exacto." },
+        { "id": "c1-32-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is believed to be rich.", "options": ["He is believed to be rich.", "He is believe to be rich.", "It is believed to be rich.", "He was believed to be rich."], "correct_answer": "He is believed to be rich.", "explanation": "Audio exacto." },
+        { "id": "c1-32-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was reported that she resigned.", "options": ["It was reported that she resigned.", "It is reported that she resigned.", "She was reported that she resigned.", "It was report that she resigned."], "correct_answer": "It was reported that she resigned.", "explanation": "Audio exacto." },
+        { "id": "c1-32-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is reported to have resigned.", "options": ["She is reported to have resigned.", "She is reported to resign.", "She was reported to have resigned.", "She is report to have resigned."], "correct_answer": "She is reported to have resigned.", "explanation": "Audio exacto." },
+        { "id": "c1-32-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Profits are expected to drop.", "options": ["Profits are expected to drop.", "Profit is expected to drop.", "Profits are expect to drop.", "Profits were expected to drop."], "correct_answer": "Profits are expected to drop.", "explanation": "Audio exacto." },
+        { "id": "c1-32-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They are thought to have escaped.", "options": ["They are thought to have escaped.", "They are thought to escape.", "They were thought to have escaped.", "They are thinking to have escaped."], "correct_answer": "They are thought to have escaped.", "explanation": "Audio exacto." },
+        { "id": "c1-32-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is known that the market is volatile.", "options": ["It is known that the market is volatile.", "It was known that the market is volatile.", "He is known that the market is volatile.", "It is know that the market is volatile."], "correct_answer": "It is known that the market is volatile.", "explanation": "Audio exacto." },
+        { "id": "c1-32-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The project is estimated to take a year.", "options": ["The project is estimated to take a year.", "The project was estimated to take a year.", "A project is estimated to take a year.", "The project is estimate to take a year."], "correct_answer": "The project is estimated to take a year.", "explanation": "Audio exacto." },
+        { "id": "c1-32-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company is alleged to have evaded taxes.", "options": ["The company is alleged to have evaded taxes.", "The company is allege to have evaded taxes.", "The company was alleged to have evaded taxes.", "The company is alleged to evade taxes."], "correct_answer": "The company is alleged to have evaded taxes.", "explanation": "Audio exacto." },
+        { "id": "c1-32-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is hoped that sales will recover.", "options": ["It is hoped that sales will recover.", "It was hoped that sales will recover.", "It is hope that sales will recover.", "Is it hoped that sales will recover?"], "correct_answer": "It is hoped that sales will recover.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

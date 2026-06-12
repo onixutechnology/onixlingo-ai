@@ -1,0 +1,101 @@
+{
+  "id": "b1-32",
+  "title": "Finance & Banking",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Vocabulary", "Finance", "Business"],
+  "completion_message": "¡Excelente! El vocabulario financiero es esencial para hablar de negocios con autoridad.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Finanzas y Banca",
+      "parts": [
+        { "visual": "Préstamos y dinero: \n- Loan (Préstamo). \n- Mortgage (Hipoteca - préstamo para una casa). \n- Interest rate (Tasa de interés). \nEj: We got a loan from the bank with a low interest rate to buy the new office.", "audio": "Loans and money. Loan. Mortgage is a loan to buy a house. Note the T is silent in mortgage. Interest rate. For example: We got a loan from the bank with a low interest rate to buy the new office." },
+        { "visual": "Inversiones y resultados: \n- Invest (Invertir). \n- Profit (Ganancia / Beneficio). \n- Loss (Pérdida). \n- Debt (Deuda - la B es muda). \nEj: If we invest in this technology, we will increase our profit and reduce our debt.", "audio": "Investments and results. Invest. Profit means the money you make. Loss means the money you lose. Debt means money you owe. Note the B in debt is silent. For example: If we invest in this technology, we will increase our profit and reduce our debt." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra financiera correcta.",
+      "questions": [
+        { "id": "b1-32-q1", "type": "quiz_choice", "question": "I applied for a bank ____ to start my business. (Préstamo).", "options": ["loan", "borrow", "lend", "mortgage"], "correct_answer": "loan", "explanation": "Loan = préstamo (dinero que el banco te da)." },
+        { "id": "b1-32-q2", "type": "quiz_choice", "question": "She is paying off the ____ on her house. (Hipoteca).", "options": ["mortgage", "loan", "debt", "interest"], "correct_answer": "mortgage", "explanation": "Mortgage (se pronuncia 'morguech', la T es muda) = hipoteca." },
+        { "id": "b1-32-q3", "type": "quiz_choice", "question": "The central bank raised the ____ rate to control inflation. (Tasa de interés).", "options": ["interest", "money", "profit", "loan"], "correct_answer": "interest", "explanation": "Interest rate = tasa de interés." },
+        { "id": "b1-32-q4", "type": "quiz_choice", "question": "We made a huge ____ this year! ($$$ a favor).", "options": ["profit", "loss", "debt", "tax"], "correct_answer": "profit", "explanation": "Profit = ganancia, beneficio económico." },
+        { "id": "b1-32-q5", "type": "quiz_choice", "question": "Unfortunately, the company suffered a terrible ____. ($$$ en contra).", "options": ["loss", "profit", "gain", "win"], "correct_answer": "loss", "explanation": "Loss = pérdida (dinero perdido)." },
+        { "id": "b1-32-q6", "type": "quiz_choice", "question": "He has a lot of credit card ____. (Deuda).", "options": ["debt", "loan", "profit", "money"], "correct_answer": "debt", "explanation": "Debt (se pronuncia 'det', la B es muda) = deuda." },
+        { "id": "b1-32-q7", "type": "quiz_choice", "question": "It's a good time to ____ in the stock market. (Invertir).", "options": ["invest", "spend", "buy", "save"], "correct_answer": "invest", "explanation": "Invest = invertir." },
+        { "id": "b1-32-q8", "type": "quiz_choice", "question": "Can I ____ $50 from you? (Pedir prestado).", "options": ["borrow", "lend", "loan", "give"], "correct_answer": "borrow", "explanation": "Borrow = pedir prestado (recibir)." },
+        { "id": "b1-32-q9", "type": "quiz_choice", "question": "Can you ____ me $50? (Prestar).", "options": ["lend", "borrow", "loan", "take"], "correct_answer": "lend", "explanation": "Lend = prestar a alguien (dar)." },
+        { "id": "b1-32-q10", "type": "quiz_choice", "question": "You need to pay your income ____ before April. (Impuestos).", "options": ["taxes", "debts", "loans", "profits"], "correct_answer": "taxes", "explanation": "Taxes = impuestos." },
+        { "id": "b1-32-q11", "type": "quiz_choice", "question": "We need to cut costs because our ____ is too low. (Margen de ganancia).", "options": ["profit margin", "loss", "debt", "interest"], "correct_answer": "profit margin", "explanation": "Profit margin = margen de ganancia." },
+        { "id": "b1-32-q12", "type": "quiz_choice", "question": "I need to open a new bank ____. (Cuenta).", "options": ["account", "card", "book", "number"], "correct_answer": "account", "explanation": "Bank account = cuenta bancaria." },
+        { "id": "b1-32-q13", "type": "quiz_choice", "question": "She made a cash ____ of $500. (Retiro).", "options": ["withdrawal", "deposit", "transfer", "payment"], "correct_answer": "withdrawal", "explanation": "Withdrawal = retiro (sacar dinero). Deposit = depósito (meter dinero)." },
+        { "id": "b1-32-q14", "type": "quiz_choice", "question": "The company went ____ because they couldn't pay their debts. (A la quiebra / Bancarrota).", "options": ["bankrupt", "broke", "lost", "empty"], "correct_answer": "bankrupt", "explanation": "Go bankrupt = ir a la bancarrota / quebrar." },
+        { "id": "b1-32-q15", "type": "quiz_choice", "question": "What is the ____ rate between the Dollar and the Euro today? (Tasa de cambio).", "options": ["exchange", "interest", "change", "money"], "correct_answer": "exchange", "explanation": "Exchange rate = tasa de cambio (divisas)." },
+        { "id": "b1-32-q16", "type": "quiz_choice", "question": "The company's total ____ is over 5 million dollars. (Ingresos).", "options": ["revenue", "profit", "debt", "loss"], "correct_answer": "revenue", "explanation": "Revenue = ingresos (dinero total que entra antes de descontar gastos). Profit = ganancia (lo que queda limpio)." },
+        { "id": "b1-32-q17", "type": "quiz_choice", "question": "He works as a financial ____ for a big bank. (Asesor).", "options": ["advisor", "advice", "helper", "teller"], "correct_answer": "advisor", "explanation": "Financial advisor = asesor financiero." },
+        { "id": "b1-32-q18", "type": "quiz_choice", "question": "I need to ____ some money to your account. (Transferir).", "options": ["transfer", "send", "give", "move"], "correct_answer": "transfer", "explanation": "Transfer money = transferir dinero." },
+        { "id": "b1-32-q19", "type": "quiz_choice", "question": "A ____ market is when stock prices are falling. (Mercado bajista).", "options": ["bear", "bull", "cow", "lion"], "correct_answer": "bear", "explanation": "Bear market = mercado a la baja. Bull market = mercado al alza." },
+        { "id": "b1-32-q20", "type": "quiz_choice", "question": "A ____ is a small piece of ownership in a company. (Acción bursátil).", "options": ["share", "part", "piece", "cut"], "correct_answer": "share", "explanation": "Share (o stock) = acción de una empresa." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término financiero correcto.",
+      "questions": [
+        { "id": "b1-32-f1", "type": "fill_input", "question": "A bank ____. (Préstamo con L)", "correct_answer": "loan", "explanation": "loan." },
+        { "id": "b1-32-f2", "type": "fill_input", "question": "A house ____. (Hipoteca con M)", "correct_answer": "mortgage", "explanation": "mortgage." },
+        { "id": "b1-32-f3", "type": "fill_input", "question": "The ____ rate. (Tasa de interés con I)", "correct_answer": "interest", "explanation": "interest." },
+        { "id": "b1-32-f4", "type": "fill_input", "question": "To make a ____. (Ganancia/Beneficio con P)", "correct_answer": "profit", "explanation": "profit." },
+        { "id": "b1-32-f5", "type": "fill_input", "question": "To make a ____. (Pérdida con L)", "correct_answer": "loss", "explanation": "loss." },
+        { "id": "b1-32-f6", "type": "fill_input", "question": "Credit card ____. (Deuda con D)", "correct_answer": "debt", "explanation": "debt." },
+        { "id": "b1-32-f7", "type": "fill_input", "question": "To ____ money. (Invertir con I)", "correct_answer": "invest", "explanation": "invest." },
+        { "id": "b1-32-f8", "type": "fill_input", "question": "Pay your ____. (Impuestos con T)", "correct_answer": "taxes", "explanation": "taxes." },
+        { "id": "b1-32-f9", "type": "fill_input", "question": "Company ____. (Ingresos totales con R)", "correct_answer": "revenue", "explanation": "revenue." },
+        { "id": "b1-32-f10", "type": "fill_input", "question": "Go ____. (A la quiebra con B)", "correct_answer": "bankrupt", "explanation": "bankrupt." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Finance Match",
+      "pairs": [
+        {"id": "b1-32-p1", "source": "Loan", "target": "Préstamo"},
+        {"id": "b1-32-p2", "source": "Mortgage", "target": "Hipoteca"},
+        {"id": "b1-32-p3", "source": "Interest rate", "target": "Tasa de interés"},
+        {"id": "b1-32-p4", "source": "Profit", "target": "Ganancia / Beneficio"},
+        {"id": "b1-32-p5", "source": "Loss", "target": "Pérdida"},
+        {"id": "b1-32-p6", "source": "Debt", "target": "Deuda"},
+        {"id": "b1-32-p7", "source": "Invest", "target": "Invertir"},
+        {"id": "b1-32-p8", "source": "Taxes", "target": "Impuestos"},
+        {"id": "b1-32-p9", "source": "Revenue", "target": "Ingresos (brutos)"},
+        {"id": "b1-32-p10", "source": "Bankrupt", "target": "En bancarrota"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración financiera correcta.",
+      "questions": [
+        { "id": "b1-32-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I applied for a bank loan.", "options": ["I applied for a bank loan.", "I applied for a bank line.", "I applied for a bank mortgage.", "I applied for a bank account."], "correct_answer": "I applied for a bank loan.", "explanation": "Audio exacto." },
+        { "id": "b1-32-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She is paying off the mortgage.", "options": ["She is paying off the mortgage.", "She is paying off the loan.", "She is paying off the debt.", "He is paying off the mortgage."], "correct_answer": "She is paying off the mortgage.", "explanation": "Audio exacto." },
+        { "id": "b1-32-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The interest rate is very high.", "options": ["The interest rate is very high.", "The interest rate is very low.", "The interest is very high.", "The exchange rate is very high."], "correct_answer": "The interest rate is very high.", "explanation": "Audio exacto." },
+        { "id": "b1-32-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We made a huge profit.", "options": ["We made a huge profit.", "We made a huge loss.", "We make a huge profit.", "They made a huge profit."], "correct_answer": "We made a huge profit.", "explanation": "Audio exacto." },
+        { "id": "b1-32-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company suffered a loss.", "options": ["The company suffered a loss.", "The company suffered a debt.", "The company suffered a profit.", "The company made a loss."], "correct_answer": "The company suffered a loss.", "explanation": "Audio exacto." },
+        { "id": "b1-32-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He has a lot of debt.", "options": ["He has a lot of debt.", "She has a lot of debt.", "He has a lot of money.", "He has a lot of loans."], "correct_answer": "He has a lot of debt.", "explanation": "Audio exacto." },
+        { "id": "b1-32-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's a good time to invest.", "options": ["It's a good time to invest.", "It's a good time to buy.", "It's a good time to sell.", "Is it a good time to invest?"], "correct_answer": "It's a good time to invest.", "explanation": "Audio exacto." },
+        { "id": "b1-32-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You need to pay your taxes.", "options": ["You need to pay your taxes.", "You need to pay your debts.", "You need to pay your loans.", "I need to pay my taxes."], "correct_answer": "You need to pay your taxes.", "explanation": "Audio exacto." },
+        { "id": "b1-32-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company went bankrupt.", "options": ["The company went bankrupt.", "The company will go bankrupt.", "The business went bankrupt.", "The company goes bankrupt."], "correct_answer": "The company went bankrupt.", "explanation": "Audio exacto." },
+        { "id": "b1-32-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is the exchange rate?", "options": ["What is the exchange rate?", "What is the interest rate?", "What is the exchange?", "What is the rate?"], "correct_answer": "What is the exchange rate?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

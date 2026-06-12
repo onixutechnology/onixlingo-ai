@@ -1,0 +1,101 @@
+{
+  "id": "b1-3",
+  "title": "Present Perfect Basics",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Present Perfect", "Business"],
+  "completion_message": "¡Excelente! El Present Perfect es el tiempo verbal más importante para hablar de experiencia profesional.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Present Perfect: Experiencias y Logros",
+      "parts": [
+        { "visual": "Usamos el Present Perfect para hablar de acciones pasadas que tienen conexión con el presente (no importa CUÁNDO pasaron). \nEstructura: Sujeto + HAVE/HAS + Verbo en Participio.", "audio": "We use the Present Perfect to talk about past actions that connect to the present. The exact time is not important. Structure: Subject, plus have or has, plus the verb in Past Participle." },
+        { "visual": "Ejemplos: I HAVE WORKED in marketing (He trabajado en marketing). \nShe HAS FINISHED the report (Ella ha terminado el reporte). \nPreguntas de experiencia: HAVE YOU EVER...? (¿Alguna vez has...?). Ej: Have you ever managed a team?", "audio": "Examples: I have worked in marketing. She has finished the report. To ask about life experiences, we use: Have you ever...? For example: Have you ever managed a team?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del Present Perfect (have/has + participio).",
+      "questions": [
+        { "id": "b1-3-q1", "type": "quiz_choice", "question": "I ____ worked in sales for three years. (He trabajado).", "options": ["have", "has", "am", "did"], "correct_answer": "have", "explanation": "Con 'I' usamos 'have'." },
+        { "id": "b1-3-q2", "type": "quiz_choice", "question": "She ____ finished the presentation. (Ha terminado).", "options": ["has", "have", "is", "does"], "correct_answer": "has", "explanation": "Con 'She/He/It' usamos 'has'." },
+        { "id": "b1-3-q3", "type": "quiz_choice", "question": "We have ____ a new supplier. (Encontrado - participio de find).", "options": ["found", "find", "finding", "finded"], "correct_answer": "found", "explanation": "Participio de find = found." },
+        { "id": "b1-3-q4", "type": "quiz_choice", "question": "____ you ever managed a team? (¿Has...?).", "options": ["Have", "Has", "Did", "Do"], "correct_answer": "Have", "explanation": "Con 'you' usamos 'Have'." },
+        { "id": "b1-3-q5", "type": "quiz_choice", "question": "He has ____ in London and Tokyo. (Vivido).", "options": ["lived", "live", "living", "lives"], "correct_answer": "lived", "explanation": "Participio de live = lived." },
+        { "id": "b1-3-q6", "type": "quiz_choice", "question": "They ____ not signed the contract yet. (No han).", "options": ["have", "has", "are", "did"], "correct_answer": "have", "explanation": "Con 'They' usamos 'have' (They have not / haven't)." },
+        { "id": "b1-3-q7", "type": "quiz_choice", "question": "I have ____ that email three times! (Enviado - participio de send).", "options": ["sent", "send", "sending", "sended"], "correct_answer": "sent", "explanation": "Participio de send = sent." },
+        { "id": "b1-3-q8", "type": "quiz_choice", "question": "____ the CEO arrived? (¿Ha llegado...?).", "options": ["Has", "Have", "Is", "Did"], "correct_answer": "Has", "explanation": "The CEO = He/She, por lo tanto 'Has'." },
+        { "id": "b1-3-q9", "type": "quiz_choice", "question": "I haven't ____ the boss yet. (Visto - participio de see).", "options": ["seen", "saw", "see", "seeing"], "correct_answer": "seen", "explanation": "Participio de see = seen." },
+        { "id": "b1-3-q10", "type": "quiz_choice", "question": "We have ____ a lot of money on this project. (Gastado - participio de spend).", "options": ["spent", "spend", "spending", "spended"], "correct_answer": "spent", "explanation": "Participio de spend = spent." },
+        { "id": "b1-3-q11", "type": "quiz_choice", "question": "Have you ever ____ a mistake at work? (Cometido - participio de make).", "options": ["made", "make", "making", "maked"], "correct_answer": "made", "explanation": "Participio de make = made (Make a mistake)." },
+        { "id": "b1-3-q12", "type": "quiz_choice", "question": "Our company has ____ significantly this year. (Crecido - participio de grow).", "options": ["grown", "grew", "grow", "growing"], "correct_answer": "grown", "explanation": "Participio de grow = grown." },
+        { "id": "b1-3-q13", "type": "quiz_choice", "question": "I have ____ a new idea for the marketing campaign. (Tenido - participio de have).", "options": ["had", "have", "has", "having"], "correct_answer": "had", "explanation": "Present perfect del verbo have: I have had (Yo he tenido)." },
+        { "id": "b1-3-q14", "type": "quiz_choice", "question": "The manager ____ approved the budget. (Ha aprobado).", "options": ["has", "have", "is", "did"], "correct_answer": "has", "explanation": "The manager = He/She -> has." },
+        { "id": "b1-3-q15", "type": "quiz_choice", "question": "Have they ____ to the client? (Hablado - participio de speak).", "options": ["spoken", "spoke", "speak", "speaking"], "correct_answer": "spoken", "explanation": "Participio de speak = spoken." },
+        { "id": "b1-3-q16", "type": "quiz_choice", "question": "She hasn't ____ the email. (Leído - participio de read).", "options": ["read", "readed", "reading", "reads"], "correct_answer": "read", "explanation": "Participio de read = read (se escribe igual, se pronuncia como el color rojo 'red')." },
+        { "id": "b1-3-q17", "type": "quiz_choice", "question": "Have you ever ____ to New York on business? (Estado / Ido).", "options": ["been", "went", "was", "be"], "correct_answer": "been", "explanation": "Participio de be = been. Have you been to...? = ¿Has estado en...?" },
+        { "id": "b1-3-q18", "type": "quiz_choice", "question": "We have ____ to cancel the meeting. (Decidido - participio regular).", "options": ["decided", "decide", "deciding", "decides"], "correct_answer": "decided", "explanation": "Verbo regular -> decided." },
+        { "id": "b1-3-q19", "type": "quiz_choice", "question": "I have ____ written the report. (Recién/Acabo de).", "options": ["just", "yet", "ever", "never"], "correct_answer": "just", "explanation": "Just + participio = acción que acaba de suceder." },
+        { "id": "b1-3-q20", "type": "quiz_choice", "question": "He has ____ in this company since 2015. (Trabajado).", "options": ["worked", "work", "working", "works"], "correct_answer": "worked", "explanation": "Present Perfect para acciones que empezaron en el pasado y continúan (He has worked)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe 'have' o 'has' y el verbo en participio.",
+      "questions": [
+        { "id": "b1-3-f1", "type": "fill_input", "question": "I ____ worked here for years. (He)", "correct_answer": "have", "explanation": "have." },
+        { "id": "b1-3-f2", "type": "fill_input", "question": "She ____ finished the report. (Ha)", "correct_answer": "has", "explanation": "has." },
+        { "id": "b1-3-f3", "type": "fill_input", "question": "____ you ever managed a team? (¿Has...?)", "correct_answer": "Have", "explanation": "Have." },
+        { "id": "b1-3-f4", "type": "fill_input", "question": "I have ____ the email. (Enviado - participio de send)", "correct_answer": "sent", "explanation": "sent." },
+        { "id": "b1-3-f5", "type": "fill_input", "question": "We have ____ a lot of money. (Gastado - participio de spend)", "correct_answer": "spent", "explanation": "spent." },
+        { "id": "b1-3-f6", "type": "fill_input", "question": "Have you ever ____ a mistake? (Cometido - participio de make)", "correct_answer": "made", "explanation": "made." },
+        { "id": "b1-3-f7", "type": "fill_input", "question": "He hasn't ____ the client. (Visto - participio de see)", "correct_answer": "seen", "explanation": "seen." },
+        { "id": "b1-3-f8", "type": "fill_input", "question": "Have you ever ____ to Paris? (Estado - participio de be)", "correct_answer": "been", "explanation": "been." },
+        { "id": "b1-3-f9", "type": "fill_input", "question": "The company has ____. (Crecido - participio de grow)", "correct_answer": "grown", "explanation": "grown." },
+        { "id": "b1-3-f10", "type": "fill_input", "question": "They haven't ____ to her. (Hablado - participio de speak)", "correct_answer": "spoken", "explanation": "spoken." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Participial Match",
+      "pairs": [
+        {"id": "b1-3-p1", "source": "I have worked", "target": "He trabajado"},
+        {"id": "b1-3-p2", "source": "She has finished", "target": "Ella ha terminado"},
+        {"id": "b1-3-p3", "source": "Have you ever...?", "target": "¿Alguna vez has...?"},
+        {"id": "b1-3-p4", "source": "Send (Sent)", "target": "Enviar (Enviado)"},
+        {"id": "b1-3-p5", "source": "Spend (Spent)", "target": "Gastar (Gastado)"},
+        {"id": "b1-3-p6", "source": "Make (Made)", "target": "Hacer (Hecho/Cometido)"},
+        {"id": "b1-3-p7", "source": "See (Seen)", "target": "Ver (Visto)"},
+        {"id": "b1-3-p8", "source": "Speak (Spoken)", "target": "Hablar (Hablado)"},
+        {"id": "b1-3-p9", "source": "Grow (Grown)", "target": "Crecer (Crecido)"},
+        {"id": "b1-3-p10", "source": "Be (Been)", "target": "Ser/Estar (Estado/Sido)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase en Present Perfect.",
+      "questions": [
+        { "id": "b1-3-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have worked in sales for three years.", "options": ["I have worked in sales for three years.", "I worked in sales for three years.", "I am working in sales for three years.", "I had worked in sales for three years."], "correct_answer": "I have worked in sales for three years.", "explanation": "Audio exacto." },
+        { "id": "b1-3-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She has finished the presentation.", "options": ["She has finished the presentation.", "She have finished the presentation.", "She finished the presentation.", "She finishes the presentation."], "correct_answer": "She has finished the presentation.", "explanation": "Audio exacto." },
+        { "id": "b1-3-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Have you ever managed a team?", "options": ["Have you ever managed a team?", "Did you ever manage a team?", "Do you ever manage a team?", "Had you ever managed a team?"], "correct_answer": "Have you ever managed a team?", "explanation": "Audio exacto." },
+        { "id": "b1-3-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They have not signed the contract.", "options": ["They have not signed the contract.", "They did not sign the contract.", "They haven't signed the contract.", "They do not sign the contract."], "correct_answer": "They have not signed the contract.", "explanation": "Audio exacto." },
+        { "id": "b1-3-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have sent that email three times.", "options": ["I have sent that email three times.", "I sent that email three times.", "I have sended that email three times.", "I am sending that email three times."], "correct_answer": "I have sent that email three times.", "explanation": "Audio exacto." },
+        { "id": "b1-3-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Has the CEO arrived?", "options": ["Has the CEO arrived?", "Have the CEO arrived?", "Did the CEO arrive?", "Is the CEO arrived?"], "correct_answer": "Has the CEO arrived?", "explanation": "Audio exacto." },
+        { "id": "b1-3-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have spent a lot of money.", "options": ["We have spent a lot of money.", "We spent a lot of money.", "We are spending a lot of money.", "We have spend a lot of money."], "correct_answer": "We have spent a lot of money.", "explanation": "Audio exacto." },
+        { "id": "b1-3-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Have you ever been to New York?", "options": ["Have you ever been to New York?", "Have you ever gone to New York?", "Did you ever go to New York?", "Were you ever in New York?"], "correct_answer": "Have you ever been to New York?", "explanation": "Audio exacto." },
+        { "id": "b1-3-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I haven't seen the boss yet.", "options": ["I haven't seen the boss yet.", "I didn't see the boss yet.", "I haven't saw the boss yet.", "I don't see the boss yet."], "correct_answer": "I haven't seen the boss yet.", "explanation": "Audio exacto." },
+        { "id": "b1-3-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our company has grown significantly.", "options": ["Our company has grown significantly.", "Our company grew significantly.", "Our company is growing significantly.", "The company has grown significantly."], "correct_answer": "Our company has grown significantly.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

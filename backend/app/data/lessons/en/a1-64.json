@@ -1,0 +1,101 @@
+{
+  "id": "a1-64",
+  "title": "Giving Directions in the Office",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Directions", "Office"],
+  "completion_message": "¡Magnífico! Ya sabes cómo dar y pedir indicaciones para llegar a diferentes lugares dentro de la oficina.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Direcciones",
+      "parts": [
+        { "visual": "Para preguntar: 'Where is the restroom?' o 'How do I get to the meeting room?'.", "audio": "To ask: Where is the restroom? or How do I get to the meeting room?" },
+        { "visual": "Para indicar: 'Go straight' (siga derecho), 'Turn left/right' (gire a la izquierda/derecha), 'It's on the left/right' (está a la izquierda/derecha).", "audio": "To indicate: Go straight, Turn left or right, It's on the left or right." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la indicación correcta.",
+      "questions": [
+        { "id": "a1-64-q1", "type": "quiz_choice", "question": "Where is the ____? (baño).", "options": ["restroom", "rest", "room", "bed"], "correct_answer": "restroom", "explanation": "Baño público/oficina (restroom o bathroom)." },
+        { "id": "a1-64-q2", "type": "quiz_choice", "question": "Go ____ ahead (siga derecho).", "options": ["straight", "street", "strong", "right"], "correct_answer": "straight", "explanation": "Derecho / de frente (straight ahead)." },
+        { "id": "a1-64-q3", "type": "quiz_choice", "question": "Turn ____ (gire a la izquierda).", "options": ["left", "right", "straight", "back"], "correct_answer": "left", "explanation": "Izquierda (left)." },
+        { "id": "a1-64-q4", "type": "quiz_choice", "question": "Turn ____ (gire a la derecha).", "options": ["right", "left", "straight", "wrong"], "correct_answer": "right", "explanation": "Derecha (right)." },
+        { "id": "a1-64-q5", "type": "quiz_choice", "question": "It's ____ the right (está a la derecha).", "options": ["on", "in", "at", "to"], "correct_answer": "on", "explanation": "A la derecha (on the right)." },
+        { "id": "a1-64-q6", "type": "quiz_choice", "question": "It's ____ the left (está a la izquierda).", "options": ["on", "in", "at", "to"], "correct_answer": "on", "explanation": "A la izquierda (on the left)." },
+        { "id": "a1-64-q7", "type": "quiz_choice", "question": "How do I ____ to the cafeteria? (llegar).", "options": ["get", "go", "arrive", "come"], "correct_answer": "get", "explanation": "Cómo llego a... (How do I get to...?)." },
+        { "id": "a1-64-q8", "type": "quiz_choice", "question": "Go ____ the hallway (por el pasillo).", "options": ["down", "on", "in", "at"], "correct_answer": "down", "explanation": "Avanzar por (go down the hallway)." },
+        { "id": "a1-64-q9", "type": "quiz_choice", "question": "It's at the ____ of the hall (al final).", "options": ["end", "start", "middle", "front"], "correct_answer": "end", "explanation": "Al final de (at the end of)." },
+        { "id": "a1-64-q10", "type": "quiz_choice", "question": "It's the first door ____ the left.", "options": ["on", "in", "at", "to"], "correct_answer": "on", "explanation": "En la izquierda (on the left)." },
+        { "id": "a1-64-q11", "type": "quiz_choice", "question": "Take the ____ to the 3rd floor (ascensor).", "options": ["elevator", "stairs", "door", "window"], "correct_answer": "elevator", "explanation": "Ascensor (elevator)." },
+        { "id": "a1-64-q12", "type": "quiz_choice", "question": "Go ____ the stairs to the second floor (subir).", "options": ["up", "down", "in", "on"], "correct_answer": "up", "explanation": "Subir (go up)." },
+        { "id": "a1-64-q13", "type": "quiz_choice", "question": "It is ____ the reception (detrás).", "options": ["behind", "front", "next", "on"], "correct_answer": "behind", "explanation": "Detrás de (behind)." },
+        { "id": "a1-64-q14", "type": "quiz_choice", "question": "It is in ____ of the copy machine (enfrente).", "options": ["front", "back", "next", "behind"], "correct_answer": "front", "explanation": "Enfrente de (in front of)." },
+        { "id": "a1-64-q15", "type": "quiz_choice", "question": "Excuse me, ____ is the HR department?", "options": ["where", "what", "when", "who"], "correct_answer": "where", "explanation": "¿Dónde? (where)." },
+        { "id": "a1-64-q16", "type": "quiz_choice", "question": "You can't ____ it (no te lo puedes perder).", "options": ["miss", "lose", "find", "see"], "correct_answer": "miss", "explanation": "No tiene pérdida (You can't miss it)." },
+        { "id": "a1-64-q17", "type": "quiz_choice", "question": "Walk ____ the break room (pasa por).", "options": ["past", "passed", "pass", "on"], "correct_answer": "past", "explanation": "Pasar por un lado (walk past)." },
+        { "id": "a1-64-q18", "type": "quiz_choice", "question": "The office is ____ the corner (en la esquina).", "options": ["on", "in", "under", "at"], "correct_answer": "on", "explanation": "En la esquina (on the corner)." },
+        { "id": "a1-64-q19", "type": "quiz_choice", "question": "Cross the ____ area (cruza la zona de recepción).", "options": ["reception", "receive", "receipt", "recept"], "correct_answer": "reception", "explanation": "Recepción (reception)." },
+        { "id": "a1-64-q20", "type": "quiz_choice", "question": "It is ____ door number 5.", "options": ["through", "threw", "though", "tough"], "correct_answer": "through", "explanation": "A través de (through)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta de dirección.",
+      "questions": [
+        { "id": "a1-64-f1", "type": "fill_input", "question": "Where is the ____? (Baño).", "correct_answer": "restroom", "explanation": "Restroom." },
+        { "id": "a1-64-f2", "type": "fill_input", "question": "Go ____ ahead (Derecho).", "correct_answer": "straight", "explanation": "Straight." },
+        { "id": "a1-64-f3", "type": "fill_input", "question": "Turn ____ (Izquierda).", "correct_answer": "left", "explanation": "Left." },
+        { "id": "a1-64-f4", "type": "fill_input", "question": "Turn ____ (Derecha).", "correct_answer": "right", "explanation": "Right." },
+        { "id": "a1-64-f5", "type": "fill_input", "question": "It's ____ the right (En).", "correct_answer": "on", "explanation": "on." },
+        { "id": "a1-64-f6", "type": "fill_input", "question": "How do I ____ to the meeting room? (Llegar).", "correct_answer": "get", "explanation": "get." },
+        { "id": "a1-64-f7", "type": "fill_input", "question": "Go ____ the hallway (Por).", "correct_answer": "down", "explanation": "down." },
+        { "id": "a1-64-f8", "type": "fill_input", "question": "At the ____ of the hall (Final).", "correct_answer": "end", "explanation": "end." },
+        { "id": "a1-64-f9", "type": "fill_input", "question": "It's ____ the reception (Detrás).", "correct_answer": "behind", "explanation": "behind." },
+        { "id": "a1-64-f10", "type": "fill_input", "question": "Walk ____ the copy room (Pasa).", "correct_answer": "past", "explanation": "past." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-64-p1", "source": "Where is...?", "target": "¿Dónde está...?"},
+        {"id": "a1-64-p2", "source": "How do I get to...?", "target": "¿Cómo llego a...?"},
+        {"id": "a1-64-p3", "source": "Go straight", "target": "Siga derecho"},
+        {"id": "a1-64-p4", "source": "Turn left", "target": "Gire a la izquierda"},
+        {"id": "a1-64-p5", "source": "Turn right", "target": "Gire a la derecha"},
+        {"id": "a1-64-p6", "source": "On the left", "target": "A la izquierda"},
+        {"id": "a1-64-p7", "source": "On the right", "target": "A la derecha"},
+        {"id": "a1-64-p8", "source": "At the end", "target": "Al final"},
+        {"id": "a1-64-p9", "source": "Behind", "target": "Detrás de"},
+        {"id": "a1-64-p10", "source": "In front of", "target": "Enfrente de"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-64-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Where is the restroom?", "options": ["Where is the restroom?", "Where is the room?", "Where is the meeting room?", "Where is the kitchen?"], "correct_answer": "Where is the restroom?", "explanation": "Audio exacto." },
+        { "id": "a1-64-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How do I get to the cafeteria?", "options": ["How do I get to the cafeteria?", "How do we get to the cafeteria?", "Where is the cafeteria?", "How do I go to the cafeteria?"], "correct_answer": "How do I get to the cafeteria?", "explanation": "Audio exacto." },
+        { "id": "a1-64-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Go straight ahead.", "options": ["Go straight ahead.", "Go straight away.", "Go down the street.", "Go right ahead."], "correct_answer": "Go straight ahead.", "explanation": "Audio exacto." },
+        { "id": "a1-64-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Turn left.", "options": ["Turn left.", "Turn right.", "Go left.", "Take a left."], "correct_answer": "Turn left.", "explanation": "Audio exacto." },
+        { "id": "a1-64-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Turn right.", "options": ["Turn right.", "Turn left.", "Go right.", "Take a right."], "correct_answer": "Turn right.", "explanation": "Audio exacto." },
+        { "id": "a1-64-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's on the right.", "options": ["It's on the right.", "It's on the left.", "It is on the right.", "Turn on the right."], "correct_answer": "It's on the right.", "explanation": "Audio exacto." },
+        { "id": "a1-64-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's on the left.", "options": ["It's on the left.", "It's on the right.", "It is on the left.", "Turn on the left."], "correct_answer": "It's on the left.", "explanation": "Audio exacto." },
+        { "id": "a1-64-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "At the end of the hall.", "options": ["At the end of the hall.", "At the end of the day.", "At the start of the hall.", "It's the end of the hall."], "correct_answer": "At the end of the hall.", "explanation": "Audio exacto." },
+        { "id": "a1-64-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's behind the reception.", "options": ["It's behind the reception.", "It is behind the reception.", "It's in front of the reception.", "It's next to the reception."], "correct_answer": "It's behind the reception.", "explanation": "Audio exacto." },
+        { "id": "a1-64-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You can't miss it.", "options": ["You can't miss it.", "You cannot miss it.", "You won't miss it.", "You don't miss it."], "correct_answer": "You can't miss it.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "zh-a2-45",
+  "title": "Venir e Ir",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Movement", "Verbs", "Grammar"],
+  "completion_message": "¡Movimiento dominado! Ahora tienes control total sobre la dirección de tus acciones en mandarín.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "La Dirección del Movimiento",
+      "parts": [
+        {
+          "visual": "Ir: 去 (qù) vs Venir: 来 (lái)\n\nEl movimiento en mandarín siempre depende de dónde está la persona que habla.\n\n1. Ir (Alejarse de ti): 去 (qù - 4to tono).\n- Voy a la escuela: 我去学校 (Wǒ qù xuéxiào).\n\n2. Venir (Acercarse a ti): 来 (lái - 2do tono).\n- Vengo a China: 我来中国 (Wǒ lái Zhōngguó). (¡Esto solo puedes decirlo si YA estás en China!).\n\n- Ven a mi casa: 来我家 (Lái wǒ jiā).",
+          "audio": "En chino, el universo siempre gira alrededor de la persona que habla. Ya conoces el verbo 'qù', que significa 'ir' alejándote de tu posición actual. Si estás en casa y vas a la tienda, dices Wǒ qù shāngdiàn. Hoy aprenderás su verbo gemelo: Venir. Se dice Lái. Segundo tono hacia arriba. Lái. Venir significa acercarse al lugar donde está el hablante. Si invitas a un amigo a tu casa, le dices: Lái wǒ jiā. Ven a mi casa. Si ya aterrizaste en el aeropuerto de Beijing, puedes decir triunfante: Wǒ lái Zhōngguó. Yo vengo a China."
+        },
+        {
+          "visual": "Movimiento + Acción\n\nPuedes encadenar estos verbos de dirección antes de una acción para decir a qué vas o a qué vienes.\n\nFórmula: Dirección (qù / lái) + Verbo de acción.\n\n- Ir a comer: 去吃饭 (Qù chī fàn).\n- Venir a comer: 来吃饭 (Lái chī fàn).\n- Voy a comprar ropa: 我去买衣服 (Wǒ qù mǎi yīfu).\n\nNegación y el Camaleón 🦎:\n- Venir (lái) es 2do tono. No venir: 不来 (Bù lái). (No hay cambio de tono).\n- Ir (qù) es 4to tono. No ir: 不去 (Bú qù). (¡El 'bù' muta a 'bú'!).",
+          "audio": "Estos dos verbos, ir y venir, son extremadamente poderosos porque se pueden encadenar con otras acciones. Si quieres decir 'Ir a comer', simplemente pones el verbo ir antes de la acción. Qù chī fàn. Ir a comer. Si tu mamá te llama a la mesa, te dirá: Lái chī fàn. Ven a comer. Si sales de casa hacia el centro comercial, dices: Wǒ qù mǎi yīfu. Voy a comprar ropa. Por último, ten cuidado con la negación. Como 'lái' es segundo tono, la negación no cambia. No vengo es Bù lái. Pero como 'qù' es cuarto tono, el camaleón ataca. No voy se dice Bú qù. Suave y elegante."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el camino correcto y domina el movimiento.",
+      "questions": [
+        { "id": "zh-a2-45-q1", "type": "quiz_choice", "question": "¿Qué significa el verbo 来 (lái)?", "options": ["Venir (Acercarse al hablante).", "Ir (Alejarse del hablante).", "Comprar.", "Estar."], "correct_answer": "Venir (Acercarse al hablante).", "explanation": "Lái implica un movimiento hacia la ubicación de la persona que habla." },
+        { "id": "zh-a2-45-q2", "type": "quiz_choice", "question": "¿Qué significa el verbo 去 (qù)?", "options": ["Ir (Alejarse del hablante).", "Venir (Acercarse al hablante).", "Saber (hacer algo).", "Regresar."], "correct_answer": "Ir (Alejarse del hablante).", "explanation": "Qù implica movimiento hacia otro lugar." },
+        { "id": "zh-a2-45-q3", "type": "quiz_choice", "question": "Estás en España y tu amigo en China te llama. Te pregunta '¿Cuándo viajas para acá?'. ¿Qué verbo usará él?", "options": ["Lái (来) - Venir.", "Qù (去) - Ir.", "Huí (回) - Regresar.", "Zài (在) - Estar."], "correct_answer": "Lái (来) - Venir.", "explanation": "Para él, tu viaje es un acercamiento a su posición. Él te dirá '¿Cuándo Vienes?'." },
+        { "id": "zh-a2-45-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Ven a mi casa'?", "options": ["Lái wǒ jiā (来我家).", "Qù wǒ jiā (去我家).", "Huí wǒ jiā (回我家).", "Zài wǒ jiā (在我家)."], "correct_answer": "Lái wǒ jiā (来我家).", "explanation": "Venir (Lái) + mi casa (wǒ jiā)." },
+        { "id": "zh-a2-45-q5", "type": "quiz_choice", "question": "Traduce: 'Wǒ qù mǎi yīfu' (我去买衣服).", "options": ["Yo voy a comprar ropa.", "Yo vengo a comprar ropa.", "Yo estoy comprando ropa.", "Yo quiero ropa."], "correct_answer": "Yo voy a comprar ropa.", "explanation": "Yo voy (wǒ qù) + comprar ropa (mǎi yīfu)." },
+        { "id": "zh-a2-45-q6", "type": "quiz_choice", "question": "Estás cocinando y quieres llamar a tu familia a la mesa. ¿Qué les gritas?", "options": ["Lái chī fàn! (来吃饭！).", "Qù chī fàn! (去吃饭！).", "Huí chī fàn! (回吃饭！).", "Zài chī fàn! (在吃饭！)."], "correct_answer": "Lái chī fàn! (来吃饭！).", "explanation": "Ven (lái) + comer comida (chī fàn)." },
+        { "id": "zh-a2-45-q7", "type": "quiz_choice", "question": "Alerta de Tonos: ¿Cómo se dice 'No voy'?", "options": ["Bú qù (不去).", "Bù qù (不去).", "Méi qù (没去).", "Bù lái (不来)."], "correct_answer": "Bú qù (不去).", "explanation": "Qù es 4to tono, por lo que el bù muta a bú." },
+        { "id": "zh-a2-45-q8", "type": "quiz_choice", "question": "Alerta de Tonos: ¿Cómo se dice 'No vengo'?", "options": ["Bù lái (不来).", "Bú lái (不来).", "Méi lái (没来).", "Bù qù (不去)."], "correct_answer": "Bù lái (不来).", "explanation": "Lái es 2do tono, por lo que el bù mantiene su 4to tono original (bù)." },
+        { "id": "zh-a2-45-q9", "type": "quiz_choice", "question": "Traduce: 'Tā wèi shénme bù lái?' (他为什么不来？).", "options": ["¿Por qué él no viene?", "¿Por qué él no va?", "¿Cuándo viene él?", "¿Quién no viene?"], "correct_answer": "¿Por qué él no viene?", "explanation": "Él (tā) + por qué (wèi shénme) + no viene (bù lái)." },
+        { "id": "zh-a2-45-q10", "type": "quiz_choice", "question": "¿Cuál es la diferencia de significado si dices 'Wǒ qù Zhōngguó' vs 'Wǒ lái Zhōngguó'?", "options": ["Qù = Viajas hacia allá (aún no estás) / Lái = Vienes hacia acá (ya estás en China).", "Ambas significan lo mismo.", "Qù es en avión, Lái es en tren.", "Qù es presente continuo, Lái es pasado."], "correct_answer": "Qù = Viajas hacia allá (aún no estás) / Lái = Vienes hacia acá (ya estás en China).", "explanation": "La elección entre Ir y Venir revela tu ubicación geográfica actual." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe los verbos direccionales en pinyin. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a2-45-f1", "type": "fill_input", "question": "Ir (Alejarse): ____ (qu)", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-a2-45-f2", "type": "fill_input", "question": "Venir (Acercarse): ____ (lai)", "correct_answer": "lai", "explanation": "lai" },
+        { "id": "zh-a2-45-f3", "type": "fill_input", "question": "Ven a mi casa: ____ wo jia", "correct_answer": "lai", "explanation": "lai" },
+        { "id": "zh-a2-45-f4", "type": "fill_input", "question": "Ir a la escuela: ____ xue xiao", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-a2-45-f5", "type": "fill_input", "question": "Venir a comer: ____ chi fan", "correct_answer": "lai", "explanation": "lai" },
+        { "id": "zh-a2-45-f6", "type": "fill_input", "question": "Ir a comprar ropa: qu ____ yifu (mai)", "correct_answer": "mai", "explanation": "mai" },
+        { "id": "zh-a2-45-f7", "type": "fill_input", "question": "No venir (Sin cambio de tono): ____ lai (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a2-45-f8", "type": "fill_input", "question": "No ir (Con cambio de tono): ____ qu (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a2-45-f9", "type": "fill_input", "question": "¿Cuándo vienes?: shen me shi hou ____ (lai)", "correct_answer": "lai", "explanation": "lai" },
+        { "id": "zh-a2-45-f10", "type": "fill_input", "question": "¿A qué hora vas?: ji dian ____ (qu)", "correct_answer": "qu", "explanation": "qu" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y capta la dirección de la acción.",
+      "questions": [
+        { "id": "zh-a2-45-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "来", "options": ["Venir", "Ir", "Comprar", "Volver"], "correct_answer": "Venir", "explanation": "El audio dice: Lái." },
+        { "id": "zh-a2-45-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "去", "options": ["Ir", "Venir", "Hacer", "Decir"], "correct_answer": "Ir", "explanation": "El audio dice: Qù." },
+        { "id": "zh-a2-45-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "来我家", "options": ["Ven a mi casa", "Voy a mi casa", "Vuelvo a casa", "Estoy en casa"], "correct_answer": "Ven a mi casa", "explanation": "El audio dice: Lái wǒ jiā." },
+        { "id": "zh-a2-45-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "去买衣服", "options": ["Ir a comprar ropa", "Venir a comprar ropa", "Comprar ropa", "No quiero ropa"], "correct_answer": "Ir a comprar ropa", "explanation": "El audio dice: Qù mǎi yīfu." },
+        { "id": "zh-a2-45-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他不来", "options": ["Él no viene", "Él no va", "Él no está", "Él no sabe"], "correct_answer": "Él no viene", "explanation": "El audio dice: Tā bù lái." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Movement",
+      "pairs": [
+        {"id": "zh-a2-45-p1", "source": "来 (lái)", "target": "Venir (Acercarse)"},
+        {"id": "zh-a2-45-p2", "source": "去 (qù)", "target": "Ir (Alejarse)"},
+        {"id": "zh-a2-45-p3", "source": "来我家 (lái wǒ jiā)", "target": "Ven a mi casa"},
+        {"id": "zh-a2-45-p4", "source": "去学校 (qù xuéxiào)", "target": "Ir a la escuela"},
+        {"id": "zh-a2-45-p5", "source": "来吃饭 (lái chī fàn)", "target": "Venir a comer"},
+        {"id": "zh-a2-45-p6", "source": "去买衣服 (qù mǎi yīfu)", "target": "Ir a comprar ropa"},
+        {"id": "zh-a2-45-p7", "source": "不来 (bù lái)", "target": "No venir"},
+        {"id": "zh-a2-45-p8", "source": "不去 (bú qù)", "target": "No ir"},
+        {"id": "zh-a2-45-p9", "source": "我来中国 (wǒ lái zhōngguó)", "target": "Yo vengo a China (Estoy allá)"},
+        {"id": "zh-a2-45-p10", "source": "我去中国 (wǒ qù zhōngguó)", "target": "Yo voy a China (No estoy allá)"}
+      ]
+    }
+  ]
+}

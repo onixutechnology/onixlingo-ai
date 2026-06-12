@@ -1,0 +1,101 @@
+{
+  "id": "c2-43",
+  "title": "Persuasion & Rhetoric",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Communication", "Persuasion", "Rhetoric", "Leadership"],
+  "completion_message": "¡Soberbio! Acabas de aprender las herramientas secretas de los grandes oradores: la Anáfora, la Regla de Tres y las Preguntas Retóricas. Con esto, tus presentaciones no solo informarán, sino que inspirarán.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Persuasión y Dispositivos Retóricos (C2)",
+      "parts": [
+        { "visual": "En el nivel más alto de liderazgo corporativo, no solo das información; persuades e inspiras. Para ello, usamos 'Rhetorical Devices'. \n\n1. The Rule of Three (La regla de tres): \n- Las personas recuerdan mejor las cosas agrupadas de a tres. \nEj: This product is faster, smarter, AND cheaper. \nEj: We need vision, dedication, AND execution. \n\n2. Anaphora (Repetición enfática / Anáfora): \n- Repetir la misma palabra al principio de frases consecutivas para crear un ritmo hipnótico y poderoso. \nEj: WE CANNOT accept defeat. WE CANNOT surrender to the competition. WE CANNOT let our customers down.", "audio": "Welcome to Persuasion and Rhetorical Devices. At the highest level of corporate leadership, you don't just give information; you persuade and inspire. To do this, we use Rhetorical Devices. Number 1: The Rule of Three. People remember things best when they are grouped in threes. For example: This product is faster, smarter, AND cheaper. Or: We need vision, dedication, AND execution. Number 2: Anaphora. This means repeating the exact same word or phrase at the beginning of consecutive sentences to create a powerful, hypnotic rhythm. For example: WE CANNOT accept defeat. WE CANNOT surrender to the competition. WE CANNOT let our customers down." },
+        { "visual": "3. Rhetorical Questions (Preguntas retóricas): \n- Hacer una pregunta cuya respuesta es tan obvia que no requiere que nadie responda. Sirve para hacer pensar a la audiencia. \nEj: Do we really want to be second best? \nEj: Can we afford to miss this opportunity? \n\n4. Antithesis (Antítesis / Contraste): \n- Poner dos ideas opuestas juntas para resaltar la diferencia. \nEj: It's a small risk for the company, but a giant leap for the industry. \n\n5. Hyperbole (Hipérbole / Exageración dramática): \n- Exagerar para enfatizar (se usa con cuidado). \nEj: I've told you a million times not to push that button.", "audio": "Number 3: Rhetorical Questions. Asking a question whose answer is so obvious that no one needs to reply. It is used to make the audience think. For example: Do we really want to be second best? Or: Can we afford to miss this opportunity? Number 4: Antithesis. Putting two opposite ideas together to highlight a contrast. For example: It's a small risk for the company, but a giant leap for the industry. Number 5: Hyperbole. Exaggerating to create dramatic emphasis. Use this carefully in business. For example: I've told you a million times not to push that button." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el dispositivo retórico correcto.",
+      "questions": [
+        { "id": "c2-43-q1", "type": "quiz_choice", "question": "'We need innovation, dedication, and perfection.' This is an example of the Rule of ____.", "options": ["Three", "Four", "Two", "Many"], "correct_answer": "Three", "explanation": "Rule of Three = usar tres adjetivos o conceptos seguidos." },
+        { "id": "c2-43-q2", "type": "quiz_choice", "question": "'Do we really want to lose our market share?' Since the speaker doesn't expect an answer, this is a ____ question.", "options": ["rhetorical", "historical", "theoretical", "numerical"], "correct_answer": "rhetorical", "explanation": "Rhetorical question = pregunta retórica." },
+        { "id": "c2-43-q3", "type": "quiz_choice", "question": "'We will fight in the markets. We will fight in the courts. We will fight for our survival.' Repeating 'We will fight' is called ____.", "options": ["anaphora", "metaphor", "simile", "irony"], "correct_answer": "anaphora", "explanation": "Anaphora (Anáfora) = repetición al inicio de oraciones." },
+        { "id": "c2-43-q4", "type": "quiz_choice", "question": "'It's a small mistake for him, but a massive disaster for the company.' Contrasting two opposite ideas is called ____.", "options": ["antithesis", "synthesis", "hypothesis", "thesis"], "correct_answer": "antithesis", "explanation": "Antithesis (Antítesis) = contraponer dos ideas." },
+        { "id": "c2-43-q5", "type": "quiz_choice", "question": "'I am literally drowning in paperwork.' Exaggerating to make a point is called ____.", "options": ["hyperbole", "understatement", "logic", "reasoning"], "correct_answer": "hyperbole", "explanation": "Hyperbole (Hipérbole) = exageración." },
+        { "id": "c2-43-q6", "type": "quiz_choice", "question": "Which of the following uses the Rule of Three perfectly?", "options": ["The software is fast, secure, and reliable.", "The software is fast and secure.", "The software is fast, secure, reliable, and cheap.", "The software is fast."], "correct_answer": "The software is fast, secure, and reliable.", "explanation": "Tres adjetivos crean el mejor ritmo." },
+        { "id": "c2-43-q7", "type": "quiz_choice", "question": "What is the purpose of a rhetorical question in a presentation?", "options": ["To make the audience think and agree silently.", "To get someone from the audience to stand up and answer.", "To test if the microphone works.", "To confuse the audience."], "correct_answer": "To make the audience think and agree silently.", "explanation": "Provoca reflexión, no una respuesta verbal." },
+        { "id": "c2-43-q8", "type": "quiz_choice", "question": "'Our competitors are sleeping, while we are running a marathon.' This contrast of opposites is an example of ____.", "options": ["antithesis", "anaphora", "hyperbole", "simile"], "correct_answer": "antithesis", "explanation": "Antítesis (dormir vs. correr maratón)." },
+        { "id": "c2-43-q9", "type": "quiz_choice", "question": "A figure of speech where you say less than what you mean (the opposite of hyperbole) is called an ____. (Ej: 'Losing 10 million dollars is a bit of a problem').", "options": ["understatement", "overstatement", "exaggeration", "lie"], "correct_answer": "understatement", "explanation": "Understatement = atenuación o decir algo de forma muy sutil/irónica." },
+        { "id": "c2-43-q10", "type": "quiz_choice", "question": "Comparing the company to a ship navigating a storm without using 'like' or 'as' is a ____.", "options": ["metaphor", "simile", "anaphora", "hyperbole"], "correct_answer": "metaphor", "explanation": "Metaphor (Metáfora) = comparación directa." },
+        { "id": "c2-43-q11", "type": "quiz_choice", "question": "If you say 'The company is LIKE a ship navigating a storm', using 'like', it is a ____.", "options": ["simile", "metaphor", "anaphora", "antithesis"], "correct_answer": "simile", "explanation": "Simile (Símil) = comparación que usa 'like' o 'as'." },
+        { "id": "c2-43-q12", "type": "quiz_choice", "question": "'Blood, sweat, and tears'. This famous phrase by Churchill uses the Rule of ____.", "options": ["Three", "Four", "Two", "Five"], "correct_answer": "Three", "explanation": "Tres elementos impactan más." },
+        { "id": "c2-43-q13", "type": "quiz_choice", "question": "'Can we afford to fail? No. Can we afford to give up? Never.' This combines Anaphora with ____ questions.", "options": ["rhetorical", "stupid", "real", "difficult"], "correct_answer": "rhetorical", "explanation": "Preguntas retóricas que el mismo orador responde para dar énfasis." },
+        { "id": "c2-43-q14", "type": "quiz_choice", "question": "'This merger will be the biggest disaster in human history.' This is an obvious ____.", "options": ["hyperbole", "understatement", "truth", "fact"], "correct_answer": "hyperbole", "explanation": "Exageración enorme = hipérbole." },
+        { "id": "c2-43-q15", "type": "quiz_choice", "question": "Using the same consonant sound at the beginning of words (e.g., 'Big, bold, and beautiful') is called ____.", "options": ["alliteration", "anaphora", "antithesis", "hyperbole"], "correct_answer": "alliteration", "explanation": "Alliteration (Aliteración) = repetir sonidos consonantes." },
+        { "id": "c2-43-q16", "type": "quiz_choice", "question": "'We must innovate. We must grow. We must lead.' This repetition is called ____.", "options": ["anaphora", "antithesis", "simile", "understatement"], "correct_answer": "anaphora", "explanation": "Anáfora = repetición inicial." },
+        { "id": "c2-43-q17", "type": "quiz_choice", "question": "'It was the best of times, it was the worst of times.' This famous literary opening is a classic ____.", "options": ["antithesis", "simile", "hyperbole", "metaphor"], "correct_answer": "antithesis", "explanation": "Contraponer 'best' y 'worst'." },
+        { "id": "c2-43-q18", "type": "quiz_choice", "question": "'We've had a slight hiccup' (referring to a total server collapse). This is a massive ____.", "options": ["understatement", "hyperbole", "anaphora", "alliteration"], "correct_answer": "understatement", "explanation": "Llamar 'hipo' a un colapso es un understatement irónico." },
+        { "id": "c2-43-q19", "type": "quiz_choice", "question": "'To lead is to serve.' (Liderar es servir). This phrase presents a ____, a statement that seems contradictory but is true.", "options": ["paradox", "hyperbole", "simile", "anaphora"], "correct_answer": "paradox", "explanation": "Paradox (Paradoja) = verdad que parece una contradicción." },
+        { "id": "c2-43-q20", "type": "quiz_choice", "question": "'Who wouldn't want to double their profits?' This is a ____ question.", "options": ["rhetorical", "literal", "mathematical", "silly"], "correct_answer": "rhetorical", "explanation": "La respuesta es obvia: todos." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el nombre del dispositivo retórico.",
+      "questions": [
+        { "id": "c2-43-f1", "type": "fill_input", "question": "Fast, smart, and cheap. (The Rule of ____)", "correct_answer": "Three", "explanation": "Three." },
+        { "id": "c2-43-f2", "type": "fill_input", "question": "Do we want to lose? (A ____ question)", "correct_answer": "rhetorical", "explanation": "rhetorical." },
+        { "id": "c2-43-f3", "type": "fill_input", "question": "WE CAN do it. WE CAN win. WE CAN lead. (A____)", "correct_answer": "Anaphora", "explanation": "Anaphora." },
+        { "id": "c2-43-f4", "type": "fill_input", "question": "Small risk, giant reward. (A____)", "correct_answer": "Antithesis", "explanation": "Antithesis." },
+        { "id": "c2-43-f5", "type": "fill_input", "question": "I've told you a million times. (H____)", "correct_answer": "Hyperbole", "explanation": "Hyperbole." },
+        { "id": "c2-43-f6", "type": "fill_input", "question": "Losing 1B is a 'minor issue'. (U____)", "correct_answer": "Understatement", "explanation": "Understatement." },
+        { "id": "c2-43-f7", "type": "fill_input", "question": "Big, bold, and beautiful. (A____)", "correct_answer": "Alliteration", "explanation": "Alliteration." },
+        { "id": "c2-43-f8", "type": "fill_input", "question": "He is a shark. (M____)", "correct_answer": "Metaphor", "explanation": "Metaphor." },
+        { "id": "c2-43-f9", "type": "fill_input", "question": "He is LIKE a shark. (S____)", "correct_answer": "Simile", "explanation": "Simile." },
+        { "id": "c2-43-f10", "type": "fill_input", "question": "To save money, we must spend money. (P____)", "correct_answer": "Paradox", "explanation": "Paradox." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Rhetoric Match",
+      "pairs": [
+        {"id": "c2-43-p1", "source": "Rule of Three", "target": "Tres adjetivos o ideas (Fast, safe, cheap)"},
+        {"id": "c2-43-p2", "source": "Rhetorical question", "target": "¿Acaso queremos perder? (No espera respuesta)"},
+        {"id": "c2-43-p3", "source": "Anaphora", "target": "Repetir inicio (We will win. We will lead)"},
+        {"id": "c2-43-p4", "source": "Antithesis", "target": "Contraponer (Paso pequeño, gran salto)"},
+        {"id": "c2-43-p5", "source": "Hyperbole", "target": "Exageración (Te lo dije un millón de veces)"},
+        {"id": "c2-43-p6", "source": "Understatement", "target": "Atenuación irónica (El incendio fue un 'contratiempo')"},
+        {"id": "c2-43-p7", "source": "Alliteration", "target": "Mismo sonido inicial (Big, bold, beautiful)"},
+        {"id": "c2-43-p8", "source": "Metaphor", "target": "Comparación directa (Él es un tiburón)"},
+        {"id": "c2-43-p9", "source": "Simile", "target": "Comparación con 'like/as' (Es COMO un tiburón)"},
+        {"id": "c2-43-p10", "source": "Paradox", "target": "Verdad contradictoria (Menos es más)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la figura retórica correcta.",
+      "questions": [
+        { "id": "c2-43-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need time, money, and focus.", "options": ["We need time, money, and focus.", "We need time, money, and power.", "They need time, money, and focus.", "We need time, money, or focus."], "correct_answer": "We need time, money, and focus.", "explanation": "Audio exacto. (Rule of Three)." },
+        { "id": "c2-43-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do we really want to fail?", "options": ["Do we really want to fail?", "Do they really want to fail?", "Do we really wanted to fail?", "Did we really want to fail?"], "correct_answer": "Do we really want to fail?", "explanation": "Audio exacto. (Rhetorical question)." },
+        { "id": "c2-43-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will fight, we will win.", "options": ["We will fight, we will win.", "They will fight, they will win.", "We would fight, we would win.", "We will fight, we will winning."], "correct_answer": "We will fight, we will win.", "explanation": "Audio exacto. (Anaphora)." },
+        { "id": "c2-43-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Small risk, giant reward.", "options": ["Small risk, giant reward.", "Small risk, big reward.", "Small risks, giant rewards.", "Small risk, giant rewards."], "correct_answer": "Small risk, giant reward.", "explanation": "Audio exacto. (Antithesis)." },
+        { "id": "c2-43-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have told you a million times.", "options": ["I have told you a million times.", "I had told you a million times.", "He has told you a million times.", "I have told him a million times."], "correct_answer": "I have told you a million times.", "explanation": "Audio exacto. (Hyperbole)." },
+        { "id": "c2-43-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a slight disaster.", "options": ["It was a slight disaster.", "This was a slight disaster.", "It is a slight disaster.", "It was a slight disasters."], "correct_answer": "It was a slight disaster.", "explanation": "Audio exacto. (Understatement)." },
+        { "id": "c2-43-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Big, bold, and beautiful.", "options": ["Big, bold, and beautiful.", "Big, cold, and beautiful.", "Big, bold, and beautify.", "Big, bald, and beautiful."], "correct_answer": "Big, bold, and beautiful.", "explanation": "Audio exacto. (Alliteration)." },
+        { "id": "c2-43-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company is a sinking ship.", "options": ["The company is a sinking ship.", "This company is a sinking ship.", "The company was a sinking ship.", "The company is a sunken ship."], "correct_answer": "The company is a sinking ship.", "explanation": "Audio exacto. (Metaphor)." },
+        { "id": "c2-43-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He works like a machine.", "options": ["He works like a machine.", "She works like a machine.", "He worked like a machine.", "He works like machines."], "correct_answer": "He works like a machine.", "explanation": "Audio exacto. (Simile)." },
+        { "id": "c2-43-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Less is more.", "options": ["Less is more.", "Less was more.", "Lesser is more.", "Less is mostly."], "correct_answer": "Less is more.", "explanation": "Audio exacto. (Paradox)." }
+      ]
+    }
+  ]
+}

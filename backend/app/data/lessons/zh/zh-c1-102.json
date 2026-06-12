@@ -1,0 +1,92 @@
+{
+  "id": "zh-c1-102",
+  "title": "Todo o Nada",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Grammar", "Pronouns", "Absolutes"],
+  "completion_message": "¡Todo dominado! Ahora puedes hablar en términos absolutos, desde 'cualquier cosa' hasta 'ningún lugar', como un maestro del chino.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Afirmaciones Absolutas: Pregunta + 都",
+      "parts": [
+        {
+          "visual": "La fórmula Absoluta: Pronombre Interrogativo + 都 (dōu)\n\nEn chino NO existen palabras únicas para 'Todos', 'Nadie', 'Todo' o 'Nada'. Se construyen usando palabras de pregunta seguidas de 都 (dōu - todos/ambos).\n\n- Quién: 谁 (shuí) -> 谁都... (Todos / Cualquiera).\n- A todos les gusta: 谁都喜欢 (Shuí dōu xǐhuan). Literal: Quién-todos-gustar.\n- Nadie lo sabe: 谁都不知道 (Shuí dōu bù zhīdào). Literal: Quién-todos-no-saber.\n\nEl significado ('Todos' o 'Nadie') depende de si el verbo es afirmativo o negativo.",
+          "audio": "En el nivel C1 aprendemos que los chinos son muy eficientes reciclando palabras. En español tenemos palabras específicas como 'Alguien', 'Nadie', 'Todos'. En chino, toman la pregunta '¿Quién?' (Shuí), y le agregan la palabra 'Todos' (Dōu). Shuí dōu. Si dices Shuí dōu xǐhuan, significa 'Quien sea, a todos les gusta'. Si lo haces negativo y dices Shuí dōu bù zhīdào, significa 'Quien sea, todos no saben', es decir: Nadie lo sabe."
+        },
+        {
+          "visual": "Todo, Nada, Siempre y Donde Sea:\n\nAplica la misma fórmula para objetos, lugares y tiempo.\n\n- Qué: 什么 (shénme) -> 什么都... (Cualquier cosa / Nada).\n- Yo como cualquier cosa (todo me gusta): 我什么都吃 (Wǒ shénme dōu chī).\n- Yo no quiero comer nada: 我什么都不想吃 (Wǒ shénme dōu bù xiǎng chī).\n\n- Dónde: 哪儿 (nǎr) -> 哪儿都... (Donde sea / Ningún lado).\n- Él va a donde sea (a todos lados): 他哪儿都去 (Tā nǎr dōu qù).\n- No quiero ir a ningún lado: 我哪儿都不想去 (Wǒ nǎr dōu bù xiǎng qù).",
+          "audio": "Esta fórmula es mágica. Toma la pregunta '¿Qué?' (Shénme) y agrégale Dōu. Shénme dōu. Significa 'cualquier cosa' o 'todo'. Si te preguntan qué quieres comer, y te da igual, dices: Wǒ shénme dōu chī. Yo cualquier cosa como. Si estás lleno, dices: Wǒ shénme dōu bù chī. Yo ninguna cosa como (no como nada). Lo mismo con los lugares. Nǎr es Dónde. Nǎr dōu significa 'Donde sea' o 'En ningún lado', dependiendo del verbo. Es la estructura absoluta."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Nadie sabe todo.",
+      "questions": [
+        { "id": "zh-c1-102-q1", "type": "quiz_choice", "question": "Gramática C1: ¿Cómo se crean las palabras como 'Todos', 'Nadie' o 'Cualquier cosa' en chino?", "options": ["Combinando un pronombre interrogativo (quién, qué) con 都 (dōu).", "Añadiendo la palabra 'wán' al final.", "No existen, no se pueden decir.", "Usando siempre la palabra 'hěn'."], "correct_answer": "Combinando un pronombre interrogativo (quién, qué) con 都 (dōu).", "explanation": "Pregunta + Dōu = Absoluto." },
+        { "id": "zh-c1-102-q2", "type": "quiz_choice", "question": "Traduce: 'A TODOS les gusta'. (Quién = shuí).", "options": ["Shuí dōu xǐhuan (谁都喜欢).", "Shuí xǐhuan (谁喜欢 - ¿A quién le gusta?).", "Tāmen dōu xǐhuan (他们都喜欢 - A ellos les gusta).", "Shénme dōu xǐhuan (什么都喜欢 - Le gusta cualquier cosa)."], "correct_answer": "Shuí dōu xǐhuan (谁都喜欢).", "explanation": "Quién (shuí) + todos (dōu) + gustar (xǐhuan) = Quien sea / A todos les gusta." },
+        { "id": "zh-c1-102-q3", "type": "quiz_choice", "question": "¿Y cómo dices 'NADIE sabe'? (Saber = zhīdào).", "options": ["Shuí dōu bù zhīdào (谁都不知道).", "Méi rén zhīdào (没人知道 - También es válido, pero Shuí dōu es más fuerte/absoluto).", "Shuí zhīdào (谁知道 - ¿Quién sabe?).", "Bù shuí zhīdào (不谁知道 - Gramaticalmente incorrecto)."], "correct_answer": "Shuí dōu bù zhīdào (谁都不知道).", "explanation": "Quién (shuí) + todos (dōu) + no saben (bù zhīdào) = Todos ignoran / Nadie sabe." },
+        { "id": "zh-c1-102-q4", "type": "quiz_choice", "question": "Te preguntan qué quieres beber. Dices: 'Cualquier cosa está bien' (Literal: Cualquier cosa quiero beber).", "options": ["Wǒ shénme dōu xiǎng hē (我什么都想喝).", "Wǒ hē shénme dōu (我喝什么都 - El 'shénme dōu' va ANTES del verbo).", "Wǒ shénme xiǎng hē (我什么想喝 - Me falta el dōu).", "Wǒ xiǎng hē dōu shénme (我想喝都什么)."], "correct_answer": "Wǒ shénme dōu xiǎng hē (我什么都想喝).", "explanation": "Yo (wǒ) + qué (shénme) + todos (dōu) + quiero beber (xiǎng hē)." },
+        { "id": "zh-c1-102-q5", "type": "quiz_choice", "question": "Te sientes mal del estómago. Dices: 'No quiero comer NADA'.", "options": ["Wǒ shénme dōu bù xiǎng chī (我什么都不想吃).", "Wǒ bù xiǎng chī shénme (我不想吃什么 - No quiero comer qué [Pregunta incorrecta]).", "Wǒ shénme bù chī dōu (我什么不吃都).", "Wǒ bù chī (我不吃 - Yo no como, pero no tiene el énfasis absoluto de 'nada')."], "correct_answer": "Wǒ shénme dōu bù xiǎng chī (我什么都不想吃).", "explanation": "Yo (wǒ) + qué (shénme) + todos (dōu) + no quiero comer (bù xiǎng chī)." },
+        { "id": "zh-c1-102-q6", "type": "quiz_choice", "question": "Es fin de semana y quieres quedarte en casa. Dices: 'No quiero ir a NINGÚN LADO'. (Dónde = nǎr).", "options": ["Wǒ nǎr dōu bù xiǎng qù (我哪儿都不想去).", "Wǒ bù xiǎng qù nǎr (我不想去哪儿 - No quiero ir a dónde [Pregunta]).", "Wǒ nǎr dōu qù (我哪儿都去 - Voy a donde sea).", "Wǒ bù qù dōu nǎr (我不去都哪儿)."], "correct_answer": "Wǒ nǎr dōu bù xiǎng qù (我哪儿都不想去).", "explanation": "Yo (wǒ) + dónde (nǎr) + todos (dōu) + no quiero ir (bù xiǎng qù)." },
+        { "id": "zh-c1-102-q7", "type": "quiz_choice", "question": "Hablando de un gran viajero: 'Él ha ido a TODOS LADOS (donde sea)'. (Ir = qù / Experiencia = guo).", "options": ["Tā nǎr dōu qù guo (他哪儿都去过).", "Tā qù guo nǎr dōu (他去过哪儿都).", "Tā nǎr qù guo (他哪儿去过).", "Tā dōu qù nǎr (他都去哪儿)."], "correct_answer": "Tā nǎr dōu qù guo (他哪儿都去过).", "explanation": "Él (tā) + dónde (nǎr) + todos (dōu) + ir-experiencia (qù guo)." },
+        { "id": "zh-c1-102-q8", "type": "quiz_choice", "question": "Tiempo absoluto: 'Cuándo' es 什么时候 (shénme shíhou). ¿Cómo dices 'SIEMPRE'? (Literal: Cualquier tiempo todos...).", "options": ["Shénme shíhou dōu (什么时候都...).", "Měitiān dōu (每天都 - Eso es Todos los días).", "Shénme dōu (什么都 - Cualquier cosa).", "Shuí dōu (谁都 - Quien sea)."], "correct_answer": "Shénme shíhou dōu (什么时候都...).", "explanation": "Cuándo (shénme shíhou) + todos (dōu)." },
+        { "id": "zh-c1-102-q9", "type": "quiz_choice", "question": "Aplica lo anterior: 'Él SIEMPRE está ocupado'. (Ocupado = máng).", "options": ["Tā shénme shíhou dōu máng (他什么时候都忙).", "Tā máng shénme shíhou dōu (他忙什么时候都).", "Tā shénme dōu máng (他什么都忙 - Él está ocupado con cualquier cosa).", "Tā nǎr dōu máng (他哪儿都忙 - Él está ocupado en todos lados)."], "correct_answer": "Tā shénme shíhou dōu máng (他什么时候都忙).", "explanation": "Él (tā) + cuándo (shénme shíhou) + todos (dōu) + ocupado (máng)." },
+        { "id": "zh-c1-102-q10", "type": "quiz_choice", "question": "Combínalo con la pregunta retórica (L101): '¿Acaso TODOS lo saben?'.", "options": ["Nándào shuí dōu zhīdào ma? (难道谁都知道吗？).", "Nándào shuí dōu bù zhīdào ma? (难道谁都不知道吗？ - ¿Acaso nadie lo sabe?).", "Shuí dōu zhīdào ma? (谁都知道吗？ - ¿Todos lo saben? [Sin indignación]).", "Nándào shénme dōu zhīdào ma? (难道什么都知道吗？ - ¿Acaso sabe todo?)."], "correct_answer": "Nándào shuí dōu zhīdào ma? (难道谁都知道吗？).", "explanation": "Acaso (Nándào) + quién (shuí) + todos (dōu) + saber (zhīdào) + ma?" }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe los absolutos.",
+      "questions": [
+        { "id": "zh-c1-102-f1", "type": "fill_input", "question": "Quién: shui", "correct_answer": "shui", "explanation": "shui" },
+        { "id": "zh-c1-102-f2", "type": "fill_input", "question": "Todos (Quien sea): shui ____ (dou)", "correct_answer": "dou", "explanation": "dou" },
+        { "id": "zh-c1-102-f3", "type": "fill_input", "question": "Nadie lo sabe: shui dou bu zhi ____ (dao)", "correct_answer": "dao", "explanation": "dao" },
+        { "id": "zh-c1-102-f4", "type": "fill_input", "question": "Qué: shen me", "correct_answer": "shen me", "explanation": "shen me" },
+        { "id": "zh-c1-102-f5", "type": "fill_input", "question": "Cualquier cosa (Todo): shen me ____ (dou)", "correct_answer": "dou", "explanation": "dou" },
+        { "id": "zh-c1-102-f6", "type": "fill_input", "question": "No quiero comer nada: wo shen me dou bu xiang ____ (chi)", "correct_answer": "chi", "explanation": "chi" },
+        { "id": "zh-c1-102-f7", "type": "fill_input", "question": "Dónde: nar", "correct_answer": "nar", "explanation": "nar" },
+        { "id": "zh-c1-102-f8", "type": "fill_input", "question": "A ningún lado / Donde sea: nar ____ (dou)", "correct_answer": "dou", "explanation": "dou" },
+        { "id": "zh-c1-102-f9", "type": "fill_input", "question": "Cuándo (En qué momento): shen me shi hou", "correct_answer": "shen me shi hou", "explanation": "shen me shi hou" },
+        { "id": "zh-c1-102-f10", "type": "fill_input", "question": "Repaso (Él apenas viene): ta ____ lai (cai)", "correct_answer": "cai", "explanation": "cai" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha las palabras absolutas.",
+      "questions": [
+        { "id": "zh-c1-102-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "谁都喜欢", "options": ["A todos les gusta (Quien sea)", "Nadie le gusta", "¿A quién le gusta?", "Le gusta cualquier cosa"], "correct_answer": "A todos les gusta (Quien sea)", "explanation": "El audio dice: Shuí dōu xǐhuan." },
+        { "id": "zh-c1-102-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "谁都不知道", "options": ["Nadie lo sabe (Quien sea no lo sabe)", "Todos lo saben", "¿Quién lo sabe?", "Él no lo sabe"], "correct_answer": "Nadie lo sabe (Quien sea no lo sabe)", "explanation": "El audio dice: Shuí dōu bù zhīdào." },
+        { "id": "zh-c1-102-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "什么都吃", "options": ["Come cualquier cosa (Todo)", "No come nada", "Come en todos lados", "¿Qué comes?"], "correct_answer": "Come cualquier cosa (Todo)", "explanation": "El audio dice: Shénme dōu chī." },
+        { "id": "zh-c1-102-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "哪儿都不想去", "options": ["No quiero ir a ningún lado", "Voy a donde sea", "Siempre voy", "No quiero hacer nada"], "correct_answer": "No quiero ir a ningún lado", "explanation": "El audio dice: Nǎr dōu bù xiǎng qù." },
+        { "id": "zh-c1-102-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "什么时候都忙", "options": ["Siempre está ocupado (En cualquier momento)", "Nunca está ocupado", "Todos están ocupados", "Cualquier cosa lo ocupa"], "correct_answer": "Siempre está ocupado (En cualquier momento)", "explanation": "El audio dice: Shénme shíhou dōu máng." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Absolutes",
+      "pairs": [
+        {"id": "zh-c1-102-p1", "source": "谁 (shuí)", "target": "Quién"},
+        {"id": "zh-c1-102-p2", "source": "谁都不知道 (shuí dōu bù zhīdào)", "target": "Nadie lo sabe"},
+        {"id": "zh-c1-102-p3", "source": "什么 (shénme)", "target": "Qué"},
+        {"id": "zh-c1-102-p4", "source": "什么都吃 (shénme dōu chī)", "target": "Come cualquier cosa / todo"},
+        {"id": "zh-c1-102-p5", "source": "什么都不想做 (shénme dōu bù xiǎng zuò)", "target": "No quiere hacer nada"},
+        {"id": "zh-c1-102-p6", "source": "哪儿 (nǎr)", "target": "Dónde"},
+        {"id": "zh-c1-102-p7", "source": "哪儿都去 (nǎr dōu qù)", "target": "Va a donde sea"},
+        {"id": "zh-c1-102-p8", "source": "什么时候 (shénme shíhou)", "target": "Cuándo (En qué tiempo)"},
+        {"id": "zh-c1-102-p9", "source": "什么时候都忙 (shénme shíhou dōu máng)", "target": "Siempre está ocupado"},
+        {"id": "zh-c1-102-p10", "source": "难道 (nándào)", "target": "¿Acaso...? (C1 Review)"}
+      ]
+    }
+  ]
+}

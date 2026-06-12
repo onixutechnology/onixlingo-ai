@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-25",
+  "title": "La Gran Prueba Final",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 1000,
+  "tags": ["A1", "Review", "Grammar", "Vocabulary", "Exam"],
+  "completion_message": "¡FELICITACIONES! Has completado exitosamente el nivel A1 de Chino Mandarín. Has construido una base de titanio para tu futuro en este idioma. ¡Nos vemos en el nivel A2!",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Resumen del Nivel A1",
+      "parts": [
+        {
+          "visual": "El Esqueleto del Dragón: Repaso Gramatical\n\n1. S-V-O: El chino es Sujeto-Verbo-Objeto (como el español). No hay conjugaciones.\n2. Negaciones Universales:\n   - Presente/Futuro: 不 (bù).\n   - Pasado: 没 (méi).\n3. La Regla del Camaleón: Si 不 (bù - 4to tono) va antes de otro 4to tono (ej. shì), cambia a 2do tono (bú shì).\n4. Partículas de Tiempo y Lugar:\n   - El tiempo SIEMPRE va antes de la acción (Ayer fui). NUNCA al final.\n   - No se usan preposiciones de movimiento ('Voy a China' -> 我去中国 Wǒ qù Zhōngguó).",
+          "audio": "¡Llegamos al final del nivel A1! Hagamos un repaso relámpago de todo lo que has aprendido. Tienes la ventaja de que el chino no tiene conjugaciones, plurales ni géneros. Es un idioma de bloques de lego. Sujeto, Verbo y Objeto. Tienes dos escudos mágicos para negar: Bù para el presente, y Méi para el pasado. Tienes la regla del camaleón donde el bù cambia de tono si choca con otro cuarto tono, como en bú shì. Y lo más importante: nunca uses preposiciones de movimiento. Vas directo al destino. Wǒ qù Zhōngguó."
+        },
+        {
+          "visual": "El Poder de las Partículas y los Adverbios\n\n1. Las 4 Partículas Finales:\n   - 吗 (ma): Pregunta de Sí/No.\n   - 呢 (ne): Rebote de pregunta (¿Y tú?).\n   - 了 (le): Marca de acción completada en el pasado.\n   - 吧 (ba): Sugerencia suave (¡Vamos!).\n\n2. Los Adverbios Pegajosos:\n   - 也 (yě - También) y 都 (dōu - Todos).\n   - Regla de oro: SIEMPRE van pegados justo antes del verbo.\n\n3. La Edad:\n   - ¡Cero verbos! Sujeto + Número + 岁 (suì).",
+          "audio": "También descubriste la magia de las partículas finales. Son esas pequeñas sílabas sin tono que cambian completamente la intención de tu frase: ma para preguntar, ne para rebotar, le para el pasado, y ba para sugerir. Aprendiste a usar adverbios como 'yě' para también, y 'dōu' para todos, recordando que siempre deben ir justo antes del verbo. Está prohibido decir 'Yo también' sin verbo. Y finalmente, aprendiste que la edad en chino es un número directo, sin el verbo ser y sin el verbo tener. Ahora, prepárate. Demuestra todo lo que has aprendido en el gran examen final."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "El Examen Final del Nivel A1.",
+      "questions": [
+        { "id": "zh-a1-25-q1", "type": "quiz_choice", "question": "Gramática base: ¿Cuál es el orden fundamental de las palabras en una oración simple en chino?", "options": ["Sujeto - Verbo - Objeto.", "Sujeto - Objeto - Verbo.", "Verbo - Sujeto - Objeto.", "Objeto - Verbo - Sujeto."], "correct_answer": "Sujeto - Verbo - Objeto.", "explanation": "El mandarín sigue la estructura S-V-O, igual que el español." },
+        { "id": "zh-a1-25-q2", "type": "quiz_choice", "question": "Tonos: ¿Qué significa 'mā' (1er tono) y qué significa 'mǎ' (3er tono)?", "options": ["Mā = Mamá, Mǎ = Caballo.", "Mā = Caballo, Mǎ = Mamá.", "Mā = Pregunta, Mǎ = Regaño.", "Mā = Insulto, Mǎ = Saludo."], "correct_answer": "Mā = Mamá, Mǎ = Caballo.", "explanation": "El tono lo es todo en chino. māma es mamá, mǎ es caballo." },
+        { "id": "zh-a1-25-q3", "type": "quiz_choice", "question": "¿Cuáles son las dos palabras mágicas para NEGAR en mandarín?", "options": ["Bù (Presente/Futuro) y Méi (Pasado).", "Bú y Bù.", "Ma y Ne.", "Méi y Le."], "correct_answer": "Bù (Presente/Futuro) y Méi (Pasado).", "explanation": "No (bù) y No en pasado (méi / méiyǒu)." },
+        { "id": "zh-a1-25-q4", "type": "quiz_choice", "question": "Identifica la frase CORRECTA para decir 'Ayer no fui a China':", "options": ["Wǒ zuótiān méi qù Zhōngguó.", "Wǒ zuótiān bù qù Zhōngguó.", "Wǒ méi qù Zhōngguó zuótiān.", "Wǒ zuótiān méi qù le Zhōngguó."], "correct_answer": "Wǒ zuótiān méi qù Zhōngguó.", "explanation": "Tiempo antes del verbo (zuótiān). Pasado negado (méi). Sin partícula 'le' en negaciones." },
+        { "id": "zh-a1-25-q5", "type": "quiz_choice", "question": "¿Cuál es la forma correcta de decir 'Él va a la escuela' (sin usar preposiciones)?", "options": ["Tā qù xuéxiào (他去学校).", "Tā qù dào xuéxiào (他去到学校).", "Tā zài qù xuéxiào (他在去学校).", "Tā qù le xuéxiào ma (他去了学校吗)."], "correct_answer": "Tā qù xuéxiào (他去学校).", "explanation": "Sujeto (tā) + verbo (qù) + destino directo (xuéxiào). Cero preposiciones." },
+        { "id": "zh-a1-25-q6", "type": "quiz_choice", "question": "¿Cuál es la regla de oro de los adverbios como También (也) y Todos (都)?", "options": ["Deben ir estrictamente ANTES del verbo.", "Deben ir al final de la oración.", "Deben ir al principio de la oración.", "Solo se usan en preguntas."], "correct_answer": "Deben ir estrictamente ANTES del verbo.", "explanation": "Los adverbios siempre modifican al verbo y se pegan justo antes de él." },
+        { "id": "zh-a1-25-q7", "type": "quiz_choice", "question": "Traduce: 'Nosotros tampoco vamos' (Nosotros también no vamos).", "options": ["Wǒmen yě bú qù.", "Wǒmen dōu bú qù.", "Wǒmen yě dōu qù.", "Wǒmen qù yě bú."], "correct_answer": "Wǒmen yě bú qù.", "explanation": "Nosotros (Wǒmen) + también (yě) + no (bú) + vamos (qù)." },
+        { "id": "zh-a1-25-q8", "type": "quiz_choice", "question": "¿Cómo se dice 'Mi hermano mayor tiene 30 años'?", "options": ["Wǒ gēge sān shí suì.", "Wǒ gēge yǒu sān shí suì.", "Wǒ gēge shì sān shí suì.", "Wǒ jiějie sān shí suì."], "correct_answer": "Wǒ gēge sān shí suì.", "explanation": "Cero verbos para la edad. Hermano mayor (gēge) + 30 (sān shí) + años (suì)." },
+        { "id": "zh-a1-25-q9", "type": "quiz_choice", "question": "Asocia la partícula final con su función: 'ma', 'ne', 'le', 'ba'.", "options": ["ma=Sí/No, ne=Rebote, le=Pasado, ba=Sugerencia.", "ma=Sugerencia, ne=Pasado, le=Sí/No, ba=Rebote.", "ma=Pasado, ne=Rebote, le=Sugerencia, ba=Sí/No.", "ma=Rebote, ne=Sí/No, le=Pasado, ba=Sugerencia."], "correct_answer": "ma=Sí/No, ne=Rebote, le=Pasado, ba=Sugerencia.", "explanation": "Dominar estas cuatro partículas te da un poder inmenso en el idioma hablado." },
+        { "id": "zh-a1-25-q10", "type": "quiz_choice", "question": "La prueba de fuego. Traduce: 'Él sabe chino. Yo también sé. ¡Vamos a China!'", "options": ["Tā huì Hànyǔ. Wǒ yě huì. Wǒmen qù Zhōngguó ba!", "Tā shì Hànyǔ. Wǒ yě shì. Wǒmen qù Zhōngguó ma!", "Tā yǒu Hànyǔ. Wǒ yě yǒu. Wǒmen qù Zhōngguó ne!", "Tā xǐhuan Hànyǔ. Wǒ yě. Wǒmen qù Zhōngguó le!"], "correct_answer": "Tā huì Hànyǔ. Wǒ yě huì. Wǒmen qù Zhōngguó ba!", "explanation": "Saber idioma (huì). Yo también sé (wǒ yě huì). Sugerencia (ba)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Demuestra que puedes escribir las palabras clave de memoria. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-25-f1", "type": "fill_input", "question": "El Verbo Ser: ____ (shi)", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-a1-25-f2", "type": "fill_input", "question": "El Verbo Ir: ____ (qu)", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-a1-25-f3", "type": "fill_input", "question": "El Verbo Querer: ____ (yao)", "correct_answer": "yao", "explanation": "yao" },
+        { "id": "zh-a1-25-f4", "type": "fill_input", "question": "No (Presente): ____ (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a1-25-f5", "type": "fill_input", "question": "No (Pasado): ____ (mei)", "correct_answer": "mei", "explanation": "mei" },
+        { "id": "zh-a1-25-f6", "type": "fill_input", "question": "También: ____ (ye)", "correct_answer": "ye", "explanation": "ye" },
+        { "id": "zh-a1-25-f7", "type": "fill_input", "question": "Todos: ____ (dou)", "correct_answer": "dou", "explanation": "dou" },
+        { "id": "zh-a1-25-f8", "type": "fill_input", "question": "Saber/Poder (Habilidad): ____ (hui)", "correct_answer": "hui", "explanation": "hui" },
+        { "id": "zh-a1-25-f9", "type": "fill_input", "question": "Partícula de Pasado: ____ (le)", "correct_answer": "le", "explanation": "le" },
+        { "id": "zh-a1-25-f10", "type": "fill_input", "question": "Partícula de Sugerencia: ____ (ba)", "correct_answer": "ba", "explanation": "ba" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo Final",
+      "description": "Escucha y traduce las oraciones completas.",
+      "questions": [
+        { "id": "zh-a1-25-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我是中国人", "options": ["Yo soy chino", "Yo no soy chino", "Él es chino", "Tú eres chino"], "correct_answer": "Yo soy chino", "explanation": "El audio dice: Wǒ shì Zhōngguó rén." },
+        { "id": "zh-a1-25-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我昨天没去", "options": ["Ayer no fui", "Yo no voy", "Mañana no voy", "Hoy no fui"], "correct_answer": "Ayer no fui", "explanation": "El audio dice: Wǒ zuótiān méi qù." },
+        { "id": "zh-a1-25-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我不喜欢喝茶", "options": ["No me gusta beber té", "No me gusta comer", "Me gusta el té", "No bebo agua"], "correct_answer": "No me gusta beber té", "explanation": "El audio dice: Wǒ bù xǐhuan hē chá." },
+        { "id": "zh-a1-25-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他们都不会汉语", "options": ["Ninguno de ellos sabe chino", "Todos ellos saben chino", "Ellos no son chinos", "Él no sabe chino"], "correct_answer": "Ninguno de ellos sabe chino", "explanation": "El audio dice: Tāmen dōu bú huì Hànyǔ (Ellos todos no saben chino)." },
+        { "id": "zh-a1-25-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我们去吃饭吧", "options": ["¡Vamos a comer!", "¿Vamos a comer?", "Nosotros comemos", "Yo como"], "correct_answer": "¡Vamos a comer!", "explanation": "El audio dice: Wǒmen qù chī fàn ba." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Ultimate A1 Match",
+      "pairs": [
+        {"id": "zh-a1-25-p1", "source": "是 (shì) / 不是 (bú shì)", "target": "Ser / No ser"},
+        {"id": "zh-a1-25-p2", "source": "去 (qù) / 没去 (méi qù)", "target": "Ir / No haber ido (pasado)"},
+        {"id": "zh-a1-25-p3", "source": "也 (yě) / 都 (dōu)", "target": "También / Todos (Adverbios)"},
+        {"id": "zh-a1-25-p4", "source": "喜欢 (xǐhuan) / 爱 (ài)", "target": "Gustar / Amar"},
+        {"id": "zh-a1-25-p5", "source": "吃 (chī) / 喝 (hē)", "target": "Comer / Beber"},
+        {"id": "zh-a1-25-p6", "source": "中国 (zhōngguó) / 汉语 (hànyǔ)", "target": "China / Idioma Chino"},
+        {"id": "zh-a1-25-p7", "source": "吗 (ma) / 呢 (ne)", "target": "Partícula de Sí o No / Partícula de rebote"},
+        {"id": "zh-a1-25-p8", "source": "了 (le) / 吧 (ba)", "target": "Partícula de pasado / Partícula de sugerencia"},
+        {"id": "zh-a1-25-p9", "source": "多大？(duō dà?)", "target": "¿Cuántos años tienes?"},
+        {"id": "zh-a1-25-p10", "source": "会 (huì)", "target": "Saber hacer algo aprendido"}
+      ]
+    }
+  ]
+}

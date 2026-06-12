@@ -1,0 +1,92 @@
+{
+  "id": "zh-a2-43",
+  "title": "De Compras",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Shopping", "Vocabulary", "Verbs"],
+  "completion_message": "¡Eres un experto comprador! Ya sabes cómo pedir exactamente la ropa que quieres con su tamaño y color.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Ropa y Dinero",
+      "parts": [
+        {
+          "visual": "Ropa: 衣服 (yīfu)\n\nLa palabra general para 'ropa' o 'prenda de vestir' es 衣服 (yīfu). La primera sílaba es 1er tono, la segunda es neutra.\n\nComprar: 买 (mǎi)\nEl verbo comprar se dice 买 (mǎi - 3er tono).\n- Comprar ropa: 买衣服 (mǎi yīfu).\n- Yo quiero comprar ropa: 我要买衣服 (Wǒ yào mǎi yīfu).\n\n¿Qué vas a comprar?: 你买什么？(Nǐ mǎi shénme?).\n\nNota Curiosa: El verbo 'Vender' se escribe casi igual pero se pronuncia en 4to tono (mài - 卖). Por ahora concéntrate solo en Comprar (mǎi - 3er tono bajando y subiendo la voz).",
+          "audio": "Hoy nos vamos de compras. La palabra general para decir Ropa es Yīfu. Yīfu. Y el verbo más importante para un turista es Comprar. Se dice Mǎi. Tercer tono, bajando y subiendo. Mǎi. Si vas a un centro comercial y alguien te pregunta qué quieres hacer, puedes decir: Wǒ yào mǎi yīfu. Yo quiero comprar ropa. La palabra comprar es tan útil que puedes usarla con cualquier cosa. Mǎi chá (comprar té), mǎi gǒu (comprar un perro). Si le preguntas a un amigo qué está comprando, dices: Nǐ mǎi shénme?"
+        },
+        {
+          "visual": "Ropa de Colores y Tamaños\n\nApliquemos todo lo que sabemos (Adjetivo + 的 + Sustantivo):\n\n- Ropa grande: 大的衣服 (dà de yīfu).\n- Ropa roja: 红色的衣服 (hóng sè de yīfu).\n\nJuntando verbos, adjetivos y conectores:\n- Quiero comprar ropa negra: \n我要买黑色的衣服 (Wǒ yào mǎi hēi sè de yīfu).\n(Yo + quiero + comprar + negro color + de + ropa).\n\n- No quiero comprar ropa blanca:\n我不要买白色的衣服 (Wǒ bú yào mǎi bái sè de yīfu).",
+          "audio": "Ahora vamos a convertirnos en compradores exigentes usando las reglas de las lecciones anteriores. Si entras a una tienda y quieres especificar cómo quieres tu ropa, usas el pegamento 'de'. Ropa grande se dice Dà de yīfu. Ropa roja es Hóng sè de yīfu. Vamos a armar una oración digna de un hablante avanzado. 'Yo quiero comprar ropa negra'. Wǒ yào mǎi hēi sè de yīfu. Suena como un trabalenguas, pero si lo analizas bloque por bloque es pura matemática. Yo quiero comprar (wǒ yào mǎi), negra (hēi sè de), ropa (yīfu)."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra tus habilidades para ir de compras en China.",
+      "questions": [
+        { "id": "zh-a2-43-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Cómo se dice 'Ropa'?", "options": ["Yīfu (衣服).", "Chá (茶).", "Gǒu (狗).", "Shuǐ (水)."], "correct_answer": "Yīfu (衣服).", "explanation": "Yīfu es la palabra general para ropa o prendas de vestir." },
+        { "id": "zh-a2-43-q2", "type": "quiz_choice", "question": "Vocabulario: ¿Cuál es el verbo 'Comprar'?", "options": ["Mǎi (买).", "Yào (要).", "Qù (去).", "Zài (在)."], "correct_answer": "Mǎi (买).", "explanation": "Mǎi (3er tono) significa comprar." },
+        { "id": "zh-a2-43-q3", "type": "quiz_choice", "question": "Traduce: 'Wǒ yào mǎi yīfu' (我要买衣服).", "options": ["Yo quiero comprar ropa.", "Yo tengo ropa.", "Yo no quiero ropa.", "Esta es mi ropa."], "correct_answer": "Yo quiero comprar ropa.", "explanation": "Yo (wǒ) + quiero/voy a (yào) + comprar (mǎi) + ropa (yīfu)." },
+        { "id": "zh-a2-43-q4", "type": "quiz_choice", "question": "¿Cómo preguntas '¿Qué vas a comprar?'", "options": ["Nǐ mǎi shénme? (你买什么？).", "Nǐ yào shénme? (你要什么？).", "Nǐ shì shénme? (你是什么？).", "Nǐ mǎi nǎlǐ? (你买哪里？)."], "correct_answer": "Nǐ mǎi shénme? (你买什么？).", "explanation": "Tú (nǐ) + comprar (mǎi) + qué (shénme)." },
+        { "id": "zh-a2-43-q5", "type": "quiz_choice", "question": "Aplicando el pegamento (de): ¿Cómo se dice 'Ropa grande'?", "options": ["Dà de yīfu (大的衣服).", "Yīfu dà de (衣服大的).", "Dà yīfu de (大衣服的).", "Yīfu de dà (衣服的大)."], "correct_answer": "Dà de yīfu (大的衣服).", "explanation": "Adjetivo (dà) + conector (de) + sustantivo (yīfu)." },
+        { "id": "zh-a2-43-q6", "type": "quiz_choice", "question": "¿Cómo se dice 'Ropa roja'?", "options": ["Hóng sè de yīfu (红色的衣服).", "Bái sè de yīfu (白色的衣服).", "Yīfu hóng sè (衣服红色).", "Hóng sè yīfu (红色衣服)."], "correct_answer": "Hóng sè de yīfu (红色的衣服).", "explanation": "Color rojo (hóng sè) + conector (de) + ropa (yīfu)." },
+        { "id": "zh-a2-43-q7", "type": "quiz_choice", "question": "El desafío largo: Traduce 'Wǒ yào mǎi bái sè de yīfu' (我要买白色的衣服).", "options": ["Quiero comprar ropa blanca.", "Quiero comprar ropa negra.", "Me gusta la ropa blanca.", "No quiero comprar ropa blanca."], "correct_answer": "Quiero comprar ropa blanca.", "explanation": "Yo quiero comprar (wǒ yào mǎi) + ropa blanca (bái sè de yīfu)." },
+        { "id": "zh-a2-43-q8", "type": "quiz_choice", "question": "Niega tu deseo: ¿Cómo dirías 'No quiero comprar ropa pequeña'?", "options": ["Wǒ bú yào mǎi xiǎo de yīfu (我不要买小的衣服).", "Wǒ bù yào mǎi xiǎo de yīfu (我不买小的衣服).", "Wǒ méiyǒu mǎi xiǎo de yīfu (我没有买小的衣服).", "Wǒ bú yào mǎi dà de yīfu (我不要买大的衣服)."], "correct_answer": "Wǒ bú yào mǎi xiǎo de yīfu (我不要买小的衣服).", "explanation": "Yo no quiero (wǒ bú yào) + comprar (mǎi) + pequeño (xiǎo de) + ropa (yīfu)." },
+        { "id": "zh-a2-43-q9", "type": "quiz_choice", "question": "Traduce esta pregunta: 'Nǐ wèishénme mǎi yīfu?' (你为什么买衣服？).", "options": ["¿Por qué compras ropa?", "¿Cuándo compras ropa?", "¿Qué ropa compras?", "¿Dónde compras ropa?"], "correct_answer": "¿Por qué compras ropa?", "explanation": "Tú (nǐ) + por qué (wèishénme) + comprar ropa (mǎi yīfu)." },
+        { "id": "zh-a2-43-q10", "type": "quiz_choice", "question": "¿Qué significa 'Wǒ zài shāngdiàn mǎi yīfu' (我在商店买衣服)?", "options": ["Yo estoy en la tienda comprando ropa.", "Yo quiero ir a la tienda de ropa.", "La tienda vende ropa.", "Yo no compro ropa en la tienda."], "correct_answer": "Yo estoy en la tienda comprando ropa.", "explanation": "Sujeto (Wǒ) + lugar (zài shāngdiàn) + acción (mǎi yīfu). En chino, el lugar siempre va ANTES de la acción." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe las palabras de compras en pinyin. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a2-43-f1", "type": "fill_input", "question": "Ropa: ____ (yifu)", "correct_answer": "yifu", "explanation": "yifu" },
+        { "id": "zh-a2-43-f2", "type": "fill_input", "question": "Comprar: ____ (mai)", "correct_answer": "mai", "explanation": "mai" },
+        { "id": "zh-a2-43-f3", "type": "fill_input", "question": "Comprar ropa: ____ yifu (mai)", "correct_answer": "mai", "explanation": "mai" },
+        { "id": "zh-a2-43-f4", "type": "fill_input", "question": "Yo quiero comprar: wo yao ____", "correct_answer": "mai", "explanation": "mai" },
+        { "id": "zh-a2-43-f5", "type": "fill_input", "question": "Ropa grande: da ____ yifu (de)", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a2-43-f6", "type": "fill_input", "question": "Ropa roja: hong se de ____", "correct_answer": "yifu", "explanation": "yifu" },
+        { "id": "zh-a2-43-f7", "type": "fill_input", "question": "Quiero comprar ropa negra: wo yao mai hei se ____ yifu", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-a2-43-f8", "type": "fill_input", "question": "¿Qué compras?: ni mai shen ____ (me)", "correct_answer": "me", "explanation": "me" },
+        { "id": "zh-a2-43-f9", "type": "fill_input", "question": "No quiero comprar: wo ____ yao mai (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a2-43-f10", "type": "fill_input", "question": "¿Dónde compras ropa?: zai na li ____ yifu", "correct_answer": "mai", "explanation": "mai" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha lo que dicen los clientes en la tienda.",
+      "questions": [
+        { "id": "zh-a2-43-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "衣服", "options": ["Ropa", "Agua", "Tienda", "Comprar"], "correct_answer": "Ropa", "explanation": "El audio dice: Yīfu." },
+        { "id": "zh-a2-43-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "买", "options": ["Comprar", "Vender", "Tener", "Ir"], "correct_answer": "Comprar", "explanation": "El audio dice: Mǎi." },
+        { "id": "zh-a2-43-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我要买衣服", "options": ["Quiero comprar ropa", "No quiero comprar ropa", "Me gusta la ropa", "Tengo ropa"], "correct_answer": "Quiero comprar ropa", "explanation": "El audio dice: Wǒ yào mǎi yīfu." },
+        { "id": "zh-a2-43-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "白色的衣服", "options": ["Ropa blanca", "Ropa negra", "Ropa grande", "Ropa roja"], "correct_answer": "Ropa blanca", "explanation": "El audio dice: Bái sè de yīfu." },
+        { "id": "zh-a2-43-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你买什么？", "options": ["¿Qué compras?", "¿Por qué compras?", "¿Dónde compras?", "¿Cuándo compras?"], "correct_answer": "¿Qué compras?", "explanation": "El audio dice: Nǐ mǎi shénme?" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Shopping Items",
+      "pairs": [
+        {"id": "zh-a2-43-p1", "source": "衣服 (yīfu)", "target": "Ropa"},
+        {"id": "zh-a2-43-p2", "source": "买 (mǎi)", "target": "Comprar"},
+        {"id": "zh-a2-43-p3", "source": "买衣服 (mǎi yīfu)", "target": "Comprar ropa"},
+        {"id": "zh-a2-43-p4", "source": "我要买 (wǒ yào mǎi)", "target": "Yo quiero comprar"},
+        {"id": "zh-a2-43-p5", "source": "你买什么？(nǐ mǎi shénme?)", "target": "¿Qué compras?"},
+        {"id": "zh-a2-43-p6", "source": "大的衣服 (dà de yīfu)", "target": "Ropa grande"},
+        {"id": "zh-a2-43-p7", "source": "红色的衣服 (hóng sè de yīfu)", "target": "Ropa roja"},
+        {"id": "zh-a2-43-p8", "source": "买黑色的衣服 (mǎi hēi sè de yīfu)", "target": "Comprar ropa negra"},
+        {"id": "zh-a2-43-p9", "source": "不要买 (bú yào mǎi)", "target": "No querer comprar (Negación)"},
+        {"id": "zh-a2-43-p10", "source": "在商店买 (zài shāngdiàn mǎi)", "target": "Comprar en la tienda (Lugar + Acción)"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "c1-39",
+  "title": "Corporate Governance",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "Corporate Governance", "Board of Directors", "Business"],
+  "completion_message": "¡Excelente! El Gobierno Corporativo es el nivel más alto de toma de decisiones en una empresa. Entender términos como 'fiduciary duty' o 'golden parachute' te permite comprender la política y el poder en las altas esferas corporativas.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Gobierno Corporativo y Junta Directiva (C1)",
+      "parts": [
+        { "visual": "La Junta Directiva (Board of Directors): \n- Board of Directors (Junta Directiva / El comité elegido que representa a los accionistas). \nEj: The Board of Directors fired the CEO yesterday. \n- Chairman / Chairperson (Presidente de la junta). \nEj: The Chairperson called the meeting to order. \n- Shareholder / Stockholder (Accionista / Dueño de acciones). \nEj: The shareholders voted against the new compensation package.", "audio": "The Board of Directors. The 'Board of Directors' is an elected group of individuals that represents shareholders. For example: The Board of Directors fired the CEO yesterday. The 'Chairman' or 'Chairperson' is the head of the board. For example: The Chairperson called the meeting to order. A 'Shareholder' or 'Stockholder' is an owner of shares in a company. For example: The shareholders voted against the new compensation package." },
+        { "visual": "Deberes y Compensaciones Directivas: \n- Fiduciary duty (Deber fiduciario / Obligación legal de actuar en el mejor interés económico de la empresa). \nEj: Board members have a fiduciary duty to the shareholders. \n- Golden parachute (Paracaídas dorado / Acuerdo financiero muy lucrativo para un ejecutivo en caso de despido). \nEj: The CEO left the failing company with a $20 million golden parachute. \n- Conflict of interest (Conflicto de intereses). \nEj: Hiring his own brother's firm was a clear conflict of interest.", "audio": "Executive Duties and Compensation. 'Fiduciary duty' is the legal obligation of one party to act in the best interest of another. For example: Board members have a fiduciary duty to the shareholders. A 'Golden parachute' is a huge severance package guaranteed to a company executive if they are fired. For example: The CEO left the failing company with a $20 million golden parachute. A 'Conflict of interest' occurs when an individual's personal interests could compromise their professional judgment. For example: Hiring his own brother's firm was a clear conflict of interest." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de gobierno corporativo correcto.",
+      "questions": [
+        { "id": "c1-39-q1", "type": "quiz_choice", "question": "The group of people elected by shareholders to manage a company is the ____ of Directors.", "options": ["Board", "Group", "Team", "Council"], "correct_answer": "Board", "explanation": "Board of Directors = junta directiva / consejo de administración." },
+        { "id": "c1-39-q2", "type": "quiz_choice", "question": "The person who presides over the meetings of the Board of Directors is the ____.", "options": ["Chairman", "CEO", "President", "Manager"], "correct_answer": "Chairman", "explanation": "Chairman (o Chairperson) = presidente de la junta directiva." },
+        { "id": "c1-39-q3", "type": "quiz_choice", "question": "An individual or institution that legally owns one or more shares of stock in a public or private corporation is a ____. (Accionista).", "options": ["shareholder", "stakeholder", "owner", "partner"], "correct_answer": "shareholder", "explanation": "Shareholder (o stockholder) = accionista." },
+        { "id": "c1-39-q4", "type": "quiz_choice", "question": "Anyone who has an interest or concern in an organization (employees, customers, suppliers) is a ____. (Parte interesada).", "options": ["stakeholder", "shareholder", "investor", "member"], "correct_answer": "stakeholder", "explanation": "Stakeholder = cualquier parte interesada (más amplio que shareholder)." },
+        { "id": "c1-39-q5", "type": "quiz_choice", "question": "A legal obligation of one party to act in the best interest of another is a ____ duty. (Deber fiduciario).", "options": ["fiduciary", "financial", "legal", "moral"], "correct_answer": "fiduciary", "explanation": "Fiduciary duty = deber fiduciario." },
+        { "id": "c1-39-q6", "type": "quiz_choice", "question": "A large payment or other financial compensation guaranteed to a company executive should they be dismissed is a golden ____. (Paracaídas dorado).", "options": ["parachute", "ticket", "handshake", "bridge"], "correct_answer": "parachute", "explanation": "Golden parachute = indemnización millonaria por despido para ejecutivos." },
+        { "id": "c1-39-q7", "type": "quiz_choice", "question": "When a person's private interests interfere with their professional responsibilities, it is a ____ of interest.", "options": ["conflict", "clash", "problem", "dispute"], "correct_answer": "conflict", "explanation": "Conflict of interest = conflicto de intereses." },
+        { "id": "c1-39-q8", "type": "quiz_choice", "question": "The system of rules, practices, and processes by which a company is directed and controlled is corporate ____. (Gobierno corporativo).", "options": ["governance", "management", "control", "politics"], "correct_answer": "governance", "explanation": "Corporate governance = gobierno corporativo." },
+        { "id": "c1-39-q9", "type": "quiz_choice", "question": "A person who is on the board of directors but does not work for the company on a daily basis is an independent or non-____ director.", "options": ["executive", "working", "employee", "active"], "correct_answer": "executive", "explanation": "Non-executive director (o independent director) = consejero externo / independiente." },
+        { "id": "c1-39-q10", "type": "quiz_choice", "question": "When one company attempts to buy out another against the wishes of the target company's management, it is a ____ takeover. (OPA hostil).", "options": ["hostile", "friendly", "aggressive", "violent"], "correct_answer": "hostile", "explanation": "Hostile takeover = toma de control (adquisición) hostil." },
+        { "id": "c1-39-q11", "type": "quiz_choice", "question": "A strategy used by a target company to prevent a hostile takeover (e.g., making the stock less attractive) is a ____ pill. (Píldora envenenada).", "options": ["poison", "bitter", "toxic", "lethal"], "correct_answer": "poison", "explanation": "Poison pill = píldora envenenada (estrategia anti-adquisición)." },
+        { "id": "c1-39-q12", "type": "quiz_choice", "question": "A voting method where a shareholder grants another person the authority to vote on their behalf is a ____ vote. (Voto por poder).", "options": ["proxy", "absentee", "mail", "distance"], "correct_answer": "proxy", "explanation": "Proxy vote = voto por delegación / poder." },
+        { "id": "c1-39-q13", "type": "quiz_choice", "question": "The yearly meeting where shareholders vote on company issues and elect the board is the ____ (Annual General Meeting).", "options": ["AGM", "CEO", "IPO", "NDA"], "correct_answer": "AGM", "explanation": "AGM = Annual General Meeting (Junta General de Accionistas)." },
+        { "id": "c1-39-q14", "type": "quiz_choice", "question": "The minimum number of board members required to be present to make the proceedings of a meeting valid is a ____. (Quórum).", "options": ["quorum", "majority", "minimum", "limit"], "correct_answer": "quorum", "explanation": "Quorum = quórum." },
+        { "id": "c1-39-q15", "type": "quiz_choice", "question": "A formal decision made by a board or meeting, usually after a vote, is a ____. (Resolución).", "options": ["resolution", "decision", "rule", "law"], "correct_answer": "resolution", "explanation": "Resolution = resolución / acuerdo formal de la junta." },
+        { "id": "c1-39-q16", "type": "quiz_choice", "question": "When a board member formally agrees with a proposal during a meeting, they ____ the motion. (Apoyar/Secundar).", "options": ["second", "first", "support", "back"], "correct_answer": "second", "explanation": "To second a motion = secundar una moción." },
+        { "id": "c1-39-q17", "type": "quiz_choice", "question": "A complete record of the discussions and decisions made during a meeting are called the ____. (Actas).", "options": ["minutes", "seconds", "notes", "records"], "correct_answer": "minutes", "explanation": "Meeting minutes = actas de la reunión." },
+        { "id": "c1-39-q18", "type": "quiz_choice", "question": "The list of items to be discussed at a formal meeting is the ____. (Agenda / Orden del día).", "options": ["agenda", "schedule", "menu", "list"], "correct_answer": "agenda", "explanation": "Agenda = orden del día." },
+        { "id": "c1-39-q19", "type": "quiz_choice", "question": "When a board member abstains from voting due to a conflict of interest, they ____ themselves. (Recusarse).", "options": ["recuse", "refuse", "reject", "remove"], "correct_answer": "recuse", "explanation": "To recuse oneself = recusarse (abstenerse por conflicto de intereses)." },
+        { "id": "c1-39-q20", "type": "quiz_choice", "question": "An attempt by activist shareholders to join together to win a corporate vote and replace management is a ____ fight. (Guerra de poderes).", "options": ["proxy", "power", "voting", "board"], "correct_answer": "proxy", "explanation": "Proxy fight = guerra de delegación de votos para cambiar la directiva." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término de gobierno corporativo correcto.",
+      "questions": [
+        { "id": "c1-39-f1", "type": "fill_input", "question": "The ____ of Directors. (Junta directiva con B)", "correct_answer": "Board", "explanation": "Board." },
+        { "id": "c1-39-f2", "type": "fill_input", "question": "The Board ____. (Presidente con C)", "correct_answer": "Chairman", "explanation": "Chairman (o Chairperson)." },
+        { "id": "c1-39-f3", "type": "fill_input", "question": "A major ____. (Accionista con S)", "correct_answer": "shareholder", "explanation": "shareholder." },
+        { "id": "c1-39-f4", "type": "fill_input", "question": "Corporate ____. (Gobierno con G)", "correct_answer": "governance", "explanation": "governance." },
+        { "id": "c1-39-f5", "type": "fill_input", "question": "____ duty. (Deber fiduciario con F)", "correct_answer": "Fiduciary", "explanation": "Fiduciary." },
+        { "id": "c1-39-f6", "type": "fill_input", "question": "A golden ____. (Paracaídas con P)", "correct_answer": "parachute", "explanation": "parachute." },
+        { "id": "c1-39-f7", "type": "fill_input", "question": "A ____ of interest. (Conflicto con C)", "correct_answer": "conflict", "explanation": "conflict." },
+        { "id": "c1-39-f8", "type": "fill_input", "question": "A ____ takeover. (Adquisición hostil con H)", "correct_answer": "hostile", "explanation": "hostile." },
+        { "id": "c1-39-f9", "type": "fill_input", "question": "Meeting ____. (Actas de la reunión con M)", "correct_answer": "minutes", "explanation": "minutes." },
+        { "id": "c1-39-f10", "type": "fill_input", "question": "The meeting ____. (Orden del día con A)", "correct_answer": "agenda", "explanation": "agenda." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Corporate Governance Match",
+      "pairs": [
+        {"id": "c1-39-p1", "source": "Board of Directors", "target": "Junta Directiva"},
+        {"id": "c1-39-p2", "source": "Chairman", "target": "Presidente de la Junta"},
+        {"id": "c1-39-p3", "source": "Shareholder", "target": "Accionista"},
+        {"id": "c1-39-p4", "source": "Fiduciary duty", "target": "Obligación legal de proteger los intereses"},
+        {"id": "c1-39-p5", "source": "Golden parachute", "target": "Indemnización millonaria por despido"},
+        {"id": "c1-39-p6", "source": "Conflict of interest", "target": "Conflicto de intereses"},
+        {"id": "c1-39-p7", "source": "Hostile takeover", "target": "Adquisición u OPA hostil"},
+        {"id": "c1-39-p8", "source": "Proxy vote", "target": "Voto por poder/delegación"},
+        {"id": "c1-39-p9", "source": "Meeting minutes", "target": "Actas de la reunión"},
+        {"id": "c1-39-p10", "source": "Quorum", "target": "Número mínimo para validar una reunión"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término correcto.",
+      "questions": [
+        { "id": "c1-39-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The Board of Directors met today.", "options": ["The Board of Directors met today.", "The Board of Directors meet today.", "A Board of Directors met today.", "The Board of Director met today."], "correct_answer": "The Board of Directors met today.", "explanation": "Audio exacto." },
+        { "id": "c1-39-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He is the new Chairman.", "options": ["He is the new Chairman.", "She is the new Chairman.", "He is the new Chairperson.", "He was the new Chairman."], "correct_answer": "He is the new Chairman.", "explanation": "Audio exacto." },
+        { "id": "c1-39-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The shareholders voted against it.", "options": ["The shareholders voted against it.", "The stakeholders voted against it.", "The shareholders vote against it.", "The shareholders voted for it."], "correct_answer": "The shareholders voted against it.", "explanation": "Audio exacto." },
+        { "id": "c1-39-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You breached your fiduciary duty.", "options": ["You breached your fiduciary duty.", "He breached your fiduciary duty.", "You breached his fiduciary duty.", "You breach your fiduciary duty."], "correct_answer": "You breached your fiduciary duty.", "explanation": "Audio exacto." },
+        { "id": "c1-39-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He received a golden parachute.", "options": ["He received a golden parachute.", "She received a golden parachute.", "He receives a golden parachute.", "They received a golden parachute."], "correct_answer": "He received a golden parachute.", "explanation": "Audio exacto." },
+        { "id": "c1-39-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a conflict of interest.", "options": ["It is a conflict of interest.", "This is a conflict of interest.", "It was a conflict of interest.", "It is a conflict of interests."], "correct_answer": "It is a conflict of interest.", "explanation": "Audio exacto." },
+        { "id": "c1-39-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They launched a hostile takeover.", "options": ["They launched a hostile takeover.", "We launched a hostile takeover.", "They launch a hostile takeover.", "They launched the hostile takeover."], "correct_answer": "They launched a hostile takeover.", "explanation": "Audio exacto." },
+        { "id": "c1-39-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Send me the meeting minutes.", "options": ["Send me the meeting minutes.", "Send him the meeting minutes.", "Send me the meeting notes.", "Sent me the meeting minutes."], "correct_answer": "Send me the meeting minutes.", "explanation": "Audio exacto." },
+        { "id": "c1-39-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do we have a quorum?", "options": ["Do we have a quorum?", "Did we have a quorum?", "Do you have a quorum?", "Does he have a quorum?"], "correct_answer": "Do we have a quorum?", "explanation": "Audio exacto." },
+        { "id": "c1-39-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will vote by proxy.", "options": ["I will vote by proxy.", "He will vote by proxy.", "I would vote by proxy.", "I will vote by mail."], "correct_answer": "I will vote by proxy.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

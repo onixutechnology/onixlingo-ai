@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-5",
+  "title": "Las Preguntas Mágicas",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Questions", "Particles", "Grammar"],
+  "completion_message": "¡Felicidades! Has terminado el Bloque 1. Ya sabes presentarte, contar, negar y hacer preguntas. ¡Tu base de chino es sólida como una roca!",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Poder de una Sola Partícula",
+      "parts": [
+        {
+          "visual": "La Partícula 吗 (ma):\n\nEn español, para hacer una pregunta, cambiamos el tono de voz y usamos signos de interrogación (¿?). En chino, existe una herramienta mucho más fácil: la partícula 吗 (ma).\n\nRegla de Oro:\nPara convertir CUALQUIER afirmación en una pregunta de 'Sí o No', simplemente pon '吗' al final de la oración.\n\n- Afirmación: 你是学生 (Nǐ shì xuésheng) = Tú eres estudiante.\n- Pregunta: 你是学生吗？(Nǐ shì xuésheng ma?) = ¿Eres estudiante?",
+          "audio": "Hacer preguntas en chino es increíblemente fácil. En lugar de cambiar el orden de las palabras como en inglés, o cambiar drásticamente la melodía de tu voz como en español, los chinos simplemente usan una partícula mágica: 'ma'. Imagina que 'ma' es como un signo de interrogación hablado. Tomas cualquier oración afirmativa normal, le pegas un 'ma' al final, y boom, ya es una pregunta. 'Tú eres estudiante', nǐ shì xuésheng. Le agregamos 'ma' al final: 'Nǐ shì xuésheng ma?', y ahora significa '¿Eres estudiante?'. Así de simple."
+        },
+        {
+          "visual": "Cómo decir 'Sí' o 'No':\n\nEn chino mandarín NO existen las palabras genéricas para 'Sí' o 'No'.\nSe responde repitiendo el verbo de la pregunta, o negándolo.\n\nPregunta: 你是学生吗？ (Nǐ shì xuésheng ma? - ¿Eres estudiante?)\n- Para decir Sí: 是 (shì). Literalmente dices 'Soy'.\n- Para decir No: 不是 (bú shì). Literalmente dices 'No soy'.\n\nPregunta: ¿Él es chino? 他是中国人吗？ (Tā shì zhōngguó rén ma?)\n- Sí: 是 (shì).\n- No: 不是 (bú shì).",
+          "audio": "Aquí hay algo que le vuela la cabeza a todos los occidentales. En chino mandarín, no existen las palabras genéricas para Sí o No. No puedes simplemente decir 'Sí'. Tienes que responder usando el verbo que te preguntaron. Si te preguntan: '¿Eres estudiante?', el verbo ahí es 'Ser', shì. Para decir que sí, respondes simplemente 'shì'. Literalmente estás diciendo 'Soy'. Para decir que no, usas la negación que aprendimos en la lección anterior: 'bú shì', que significa 'no soy'. Siempre se responde repitiendo el verbo o negando el verbo."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa tu comprensión sobre cómo hacer preguntas en mandarín.",
+      "questions": [
+        { "id": "zh-a1-5-q1", "type": "quiz_choice", "question": "¿Para qué sirve la partícula 吗 (ma)?", "options": ["Para convertir una afirmación en una pregunta de Sí/No.", "Para hacer una oración plural.", "Para indicar el tiempo pasado.", "Para negar un verbo."], "correct_answer": "Para convertir una afirmación en una pregunta de Sí/No.", "explanation": "Funciona como un signo de interrogación al final de la frase." },
+        { "id": "zh-a1-5-q2", "type": "quiz_choice", "question": "¿Dónde se coloca la partícula 吗 (ma) en una oración?", "options": ["Siempre al final de la oración.", "Siempre al principio de la oración.", "Justo antes del verbo.", "Entre el sujeto y el verbo."], "correct_answer": "Siempre al final de la oración.", "explanation": "Ejemplo: Nǐ shì xuésheng ma?" },
+        { "id": "zh-a1-5-q3", "type": "quiz_choice", "question": "¿Cuál es la traducción de '你是学生吗？' (Nǐ shì xuésheng ma?)?", "options": ["¿Eres tú estudiante?", "Yo no soy estudiante.", "Él es estudiante.", "¿Quién es estudiante?"], "correct_answer": "¿Eres tú estudiante?", "explanation": "Nǐ shì xuésheng (Tú eres estudiante) + ma (?) = ¿Eres tú estudiante?" },
+        { "id": "zh-a1-5-q4", "type": "quiz_choice", "question": "En chino, ¿existen palabras sueltas que signifiquen universalmente 'Sí' o 'No'?", "options": ["No, no existen. Se debe repetir o negar el verbo de la pregunta.", "Sí, las palabras son 'Sí' y 'No'.", "Solo existe la palabra para 'No'.", "Solo existe la palabra para 'Sí'."], "correct_answer": "No, no existen. Se debe repetir o negar el verbo de la pregunta.", "explanation": "El mandarín carece de 'Yes/No'. Todo se responde con el verbo en cuestión." },
+        { "id": "zh-a1-5-q5", "type": "quiz_choice", "question": "Te preguntan: '¿Tā shì lǎoshī ma?' (¿Él es profesor?). Para decir que SÍ, ¿qué respondes?", "options": ["Shì (是)", "Bú shì (不是)", "Tā (他)", "Ma (吗)"], "correct_answer": "Shì (是)", "explanation": "Como el verbo de la pregunta es 'shì' (es), respondes 'shì' para afirmar." },
+        { "id": "zh-a1-5-q6", "type": "quiz_choice", "question": "Te preguntan: '¿Nǐ shì xuésheng ma?' (¿Eres estudiante?). Para decir que NO, ¿qué respondes?", "options": ["Bú shì (不是)", "Shì (是)", "Bù (不)", "Méi guānxi (没关系)"], "correct_answer": "Bú shì (不是)", "explanation": "Niegas el verbo con bú shì (No soy)." },
+        { "id": "zh-a1-5-q7", "type": "quiz_choice", "question": "¿Cómo convertirías 'Nosotros somos' (Wǒmen shì) en una pregunta?", "options": ["Wǒmen shì ma?", "Ma wǒmen shì?", "Wǒmen ma shì?", "Wǒmen bù shì?"], "correct_answer": "Wǒmen shì ma?", "explanation": "Simplemente se añade 'ma' al final de la oración afirmativa." },
+        { "id": "zh-a1-5-q8", "type": "quiz_choice", "question": "¿Qué tono lleva la partícula 吗 (ma)?", "options": ["Tono neutro (corto y sin fuerza).", "Primer tono (alto y plano).", "Tercer tono (baja y sube).", "Cuarto tono (fuerte hacia abajo)."], "correct_answer": "Tono neutro (corto y sin fuerza).", "explanation": "Al no llevar marca de tono (ma), indica que se pronuncia ligero." },
+        { "id": "zh-a1-5-q9", "type": "quiz_choice", "question": "¿Puedes usar 吗 (ma) en preguntas que ya tienen palabras interrogativas como 'Qué' o 'Quién'?", "options": ["No, solo se usa para preguntas de Sí/No.", "Sí, siempre se debe usar.", "A veces, depende del verbo.", "Solo si el verbo es 'Ser'."], "correct_answer": "No, solo se usa para preguntas de Sí/No.", "explanation": "Si preguntas '¿Quién eres?', ya no usas 'ma'." },
+        { "id": "zh-a1-5-q10", "type": "quiz_choice", "question": "¿Cómo responderías que NO a la pregunta '¿Ellos son tus amigos?' (Tāmen shì... ma?)?", "options": ["Bú shì (不是)", "Shì (是)", "Duìbuqǐ (对不起)", "Bú kèqi (不客气)"], "correct_answer": "Bú shì (不是)", "explanation": "Bú shì es 'No son' (Negación del verbo Ser)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correcto para hacer preguntas y responder. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-5-f1", "type": "fill_input", "question": "Partícula de pregunta (Sí/No): ____", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-5-f2", "type": "fill_input", "question": "¿Tú eres?: ni shi ____", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-5-f3", "type": "fill_input", "question": "¿Él es?: ta shi ____", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-5-f4", "type": "fill_input", "question": "Responder SÍ (Ser): ____ (shi)", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-a1-5-f5", "type": "fill_input", "question": "Responder NO (No Ser): bu ____", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-a1-5-f6", "type": "fill_input", "question": "¿Nosotros somos?: women shi ____", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-5-f7", "type": "fill_input", "question": "¿Ustedes son?: nimen shi ____", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-5-f8", "type": "fill_input", "question": "Negación del verbo Ser: ____ shi (bu/bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-a1-5-f9", "type": "fill_input", "question": "Afirmar el verbo Ser: ____ (shi)", "correct_answer": "shi", "explanation": "shi" },
+        { "id": "zh-a1-5-f10", "type": "fill_input", "question": "¿Son ellos?: tamen shi ____", "correct_answer": "ma", "explanation": "ma" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y selecciona la traducción o respuesta correcta.",
+      "questions": [
+        { "id": "zh-a1-5-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你是学生吗？", "options": ["¿Eres tú estudiante?", "Yo soy estudiante.", "¿Él es estudiante?", "Yo no soy estudiante."], "correct_answer": "¿Eres tú estudiante?", "explanation": "El audio dice: Nǐ shì xuésheng ma?" },
+        { "id": "zh-a1-5-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "是", "options": ["Sí (Soy)", "No (No soy)", "¿Eres?", "Hola"], "correct_answer": "Sí (Soy)", "explanation": "El audio dice: shì." },
+        { "id": "zh-a1-5-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "不是", "options": ["No (No soy)", "Sí (Soy)", "¿Eres?", "Adiós"], "correct_answer": "No (No soy)", "explanation": "El audio dice: bú shì." },
+        { "id": "zh-a1-5-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "他是吗？", "options": ["¿Él es?", "¿Tú eres?", "¿Yo soy?", "¿Nosotros somos?"], "correct_answer": "¿Él es?", "explanation": "El audio dice: Tā shì ma?" },
+        { "id": "zh-a1-5-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "吗", "options": ["ma (Partícula de pregunta)", "mā (Madre)", "mà (Regañar)", "mǎ (Caballo)"], "correct_answer": "ma (Partícula de pregunta)", "explanation": "El audio dice 'ma' en tono neutro, corto y ligero." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Grammar",
+      "pairs": [
+        {"id": "zh-a1-5-p1", "source": "吗 (ma)", "target": "Partícula de pregunta (Sí/No)"},
+        {"id": "zh-a1-5-p2", "source": "你是吗？(nǐ shì ma?)", "target": "¿Tú eres?"},
+        {"id": "zh-a1-5-p3", "source": "他是吗？(tā shì ma?)", "target": "¿Él es?"},
+        {"id": "zh-a1-5-p4", "source": "我们是吗？(wǒmen shì ma?)", "target": "¿Nosotros somos?"},
+        {"id": "zh-a1-5-p5", "source": "你们是吗？(nǐmen shì ma?)", "target": "¿Ustedes son?"},
+        {"id": "zh-a1-5-p6", "source": "他们是吗？(tāmen shì ma?)", "target": "¿Ellos son?"},
+        {"id": "zh-a1-5-p7", "source": "是 (shì)", "target": "Sí (Soy / Es)"},
+        {"id": "zh-a1-5-p8", "source": "不是 (bú shì)", "target": "No (No soy / No es)"},
+        {"id": "zh-a1-5-p9", "source": "学生 (xuésheng)", "target": "Estudiante"},
+        {"id": "zh-a1-5-p10", "source": "我是 (wǒ shì)", "target": "Yo soy (Afirmación)"}
+      ]
+    }
+  ]
+}

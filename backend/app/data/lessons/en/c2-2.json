@@ -1,0 +1,101 @@
+{
+  "id": "c2-2",
+  "title": "Subtle Modal Verbs",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Grammar", "Modals", "Subtlety", "Nuance"],
+  "completion_message": "¡Soberbio! Los verbos modales en C2 dejan de ser simples reglas de obligación o posibilidad para convertirse en herramientas de precisión diplomática y matiz emocional. Expresiones como 'needn't have' o 'might as well' demuestran un dominio superior del idioma.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Verbos Modales Sutiles (C2)",
+      "parts": [
+        { "visual": "1. NEEDN'T HAVE vs DIDN'T NEED TO: \n- Needn't have + past participle: Hiciste algo que NO era necesario (te esforzaste en vano). \nEj: You needn't have cooked; I already ordered pizza. (Cocinaste, pero no hacía falta). \n- Didn't need to + infinitive: No era necesario, así que probablemente NO lo hiciste (o es irrelevante si lo hiciste). \nEj: I didn't need to cook because we went out for dinner. \n\n2. MIGHT / MAY AS WELL: \n- Significa que ya que no hay una alternativa mejor, 'bien podríamos' hacer algo. \nEj: We've missed the last train, so we might as well walk.", "audio": "Number 1: Needn't have versus Didn't need to. Use 'needn't have' plus past participle when you did something, but it was unnecessary. You wasted your effort. For example: You needn't have cooked; I already ordered pizza. You cooked, but it wasn't necessary. Use 'didn't need to' plus infinitive when it was not necessary, so you probably didn't do it. For example: I didn't need to cook because we went out for dinner. Number 2: Might or may as well. This means there is no better alternative, so we should do something. For example: We've missed the last train, so we might as well walk." },
+        { "visual": "3. DARE (Como verbo modal): \n- Usado principalmente en negativas y preguntas, sin 'to'. \nEj: How dare you speak to me like that! (¿Cómo te atreves?) \nEj: I daren't tell him the truth. (No me atrevo). \n\n4. SHOULD (Para coincidencia o probabilidad condicional): \n- Significa 'Si por casualidad...'. \nEj: If you should see John, tell him to call me. \nEj: Should you need any help, please contact us. (Inversión). \n\n5. WOULD (Para hábitos molestos en el pasado): \nEj: He would always interrupt me during meetings. (Solía hacerlo y me molestaba).", "audio": "Number 3: Dare, used as a modal verb. It is mainly used in negatives and questions, without 'to'. For example: How dare you speak to me like that! Or: I daren't tell him the truth. Number 4: Should, used for coincidence or conditional probability. It means 'If by chance'. For example: If you should see John, tell him to call me. Or inverted: Should you need any help, please contact us. Number 5: Would, used for annoying past habits. For example: He would always interrupt me during meetings. This implies he used to do it, and it was annoying." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el modal con el matiz correcto.",
+      "questions": [
+        { "id": "c2-2-q1", "type": "quiz_choice", "question": "I bought a lot of food, but my friends didn't come. I ____ so much food.", "options": ["needn't have bought", "didn't need to buy", "mustn't have bought", "shouldn't buy"], "correct_answer": "needn't have bought", "explanation": "Lo compró, pero fue en vano -> Needn't have + past participle." },
+        { "id": "c2-2-q2", "type": "quiz_choice", "question": "I ____ up early on Sunday because it was a holiday, so I slept until noon.", "options": ["didn't need to wake", "needn't have woken", "mustn't wake", "shouldn't wake"], "correct_answer": "didn't need to wake", "explanation": "No era necesario y NO lo hizo -> Didn't need to." },
+        { "id": "c2-2-q3", "type": "quiz_choice", "question": "Since the concert is cancelled and we are already dressed up, we ____ go to a fancy restaurant.", "options": ["might as well", "must", "should as well", "need to"], "correct_answer": "might as well", "explanation": "Ya que estamos en esta situación, lo mejor es aprovechar -> Might as well." },
+        { "id": "c2-2-q4", "type": "quiz_choice", "question": "How ____ you say such a terrible thing to your mother!", "options": ["dare", "must", "should", "ought"], "correct_answer": "dare", "explanation": "How dare you! = ¡Cómo te atreves!" },
+        { "id": "c2-2-q5", "type": "quiz_choice", "question": "If you ____ change your mind, let me know.", "options": ["should", "would", "must", "might"], "correct_answer": "should", "explanation": "If you should = Si de casualidad..." },
+        { "id": "c2-2-q6", "type": "quiz_choice", "question": "____ you have any questions, do not hesitate to contact me.", "options": ["Should", "Would", "If", "Must"], "correct_answer": "Should", "explanation": "Inversión condicional con should = Should you have..." },
+        { "id": "c2-2-q7", "type": "quiz_choice", "question": "When we were kids, my brother ____ always steal my toys and hide them. (Hábito molesto).", "options": ["would", "should", "must", "might"], "correct_answer": "would", "explanation": "Would para hábitos repetitivos y molestos en el pasado." },
+        { "id": "c2-2-q8", "type": "quiz_choice", "question": "She brought an umbrella, but it didn't rain at all. She ____ an umbrella.", "options": ["needn't have brought", "didn't need to bring", "mustn't have brought", "shouldn't bring"], "correct_answer": "needn't have brought", "explanation": "Lo hizo, pero no hacía falta -> Needn't have brought." },
+        { "id": "c2-2-q9", "type": "quiz_choice", "question": "I don't know the answer, and I ____ ask the boss because he is very angry today. (No me atrevo).", "options": ["daren't", "mustn't", "needn't", "shouldn't"], "correct_answer": "daren't", "explanation": "Daren't = dare not (no me atrevo)." },
+        { "id": "c2-2-q10", "type": "quiz_choice", "question": "You ____ worry about the tickets; I've already bought them. (No tienes necesidad, aún no has hecho nada).", "options": ["needn't", "mustn't", "daren't", "mightn't"], "correct_answer": "needn't", "explanation": "Needn't = no necesitas / no hace falta." },
+        { "id": "c2-2-q11", "type": "quiz_choice", "question": "We have to wait two hours for the next flight, so we ____ get a coffee.", "options": ["might as well", "must as well", "should as well", "dare"], "correct_answer": "might as well", "explanation": "Might as well = podríamos (ya que no hay nada mejor que hacer)." },
+        { "id": "c2-2-q12", "type": "quiz_choice", "question": "I ____ take a taxi because Sarah offered me a ride home. (No era necesario y no lo tomé).", "options": ["didn't need to", "needn't have", "mustn't", "shouldn't"], "correct_answer": "didn't need to", "explanation": "Didn't need to." },
+        { "id": "c2-2-q13", "type": "quiz_choice", "question": "He ____ always complain about the temperature in the office. It was so annoying!", "options": ["would", "could", "should", "must"], "correct_answer": "would", "explanation": "Would para hábitos molestos pasados." },
+        { "id": "c2-2-q14", "type": "quiz_choice", "question": "If anyone ____ ask, tell them I'm in a meeting.", "options": ["should", "would", "must", "can"], "correct_answer": "should", "explanation": "If anyone should ask = si de casualidad alguien pregunta." },
+        { "id": "c2-2-q15", "type": "quiz_choice", "question": "You ____ paid for my dinner, but thank you very much! (Pagaste, pero no tenías que hacerlo).", "options": ["needn't have", "didn't need to", "mustn't have", "shouldn't"], "correct_answer": "needn't have", "explanation": "Needn't have paid." },
+        { "id": "c2-2-q16", "type": "quiz_choice", "question": "Nobody ____ challenge the king's authority. (Nadie se atreve).", "options": ["dares", "needs", "must", "should"], "correct_answer": "dares", "explanation": "Dares (aquí usado como verbo principal afirmativo)." },
+        { "id": "c2-2-q17", "type": "quiz_choice", "question": "Since nobody else wants the last slice of pizza, I ____ eat it.", "options": ["might as well", "would as well", "should as well", "dare"], "correct_answer": "might as well", "explanation": "Might as well." },
+        { "id": "c2-2-q18", "type": "quiz_choice", "question": "We ____ rush because the train was delayed anyway. We ran for nothing!", "options": ["needn't have", "didn't need to", "mustn't have", "shouldn't"], "correct_answer": "needn't have", "explanation": "Corrieron en vano -> Needn't have rushed (o solo needn't have si el verbo está omitido)." },
+        { "id": "c2-2-q19", "type": "quiz_choice", "question": "____ you require further information, please refer to the manual.", "options": ["Should", "Would", "If", "Must"], "correct_answer": "Should", "explanation": "Should you require..." },
+        { "id": "c2-2-q20", "type": "quiz_choice", "question": "He was so terrifying that I ____ look him in the eye.", "options": ["daren't", "needn't", "mustn't", "shouldn't"], "correct_answer": "daren't", "explanation": "Daren't (o didn't dare)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo modal que falta.",
+      "questions": [
+        { "id": "c2-2-f1", "type": "fill_input", "question": "You ____ have cooked; I brought food. (No era necesario y lo hiciste)", "correct_answer": "needn't", "explanation": "needn't." },
+        { "id": "c2-2-f2", "type": "fill_input", "question": "I didn't ____ to go to work today. (No fue necesario y no fui)", "correct_answer": "need", "explanation": "need." },
+        { "id": "c2-2-f3", "type": "fill_input", "question": "We ____ as well stay here. (Podríamos - no hay alternativa)", "correct_answer": "might", "explanation": "might (o may)." },
+        { "id": "c2-2-f4", "type": "fill_input", "question": "How ____ you! (¡Cómo te atreves!)", "correct_answer": "dare", "explanation": "dare." },
+        { "id": "c2-2-f5", "type": "fill_input", "question": "____ you need help, call me. (Si de casualidad)", "correct_answer": "Should", "explanation": "Should." },
+        { "id": "c2-2-f6", "type": "fill_input", "question": "If he ____ call, tell him I'm out. (Si por si acaso)", "correct_answer": "should", "explanation": "should." },
+        { "id": "c2-2-f7", "type": "fill_input", "question": "He ____ always leave his socks on the floor. (Hábito molesto en el pasado)", "correct_answer": "would", "explanation": "would." },
+        { "id": "c2-2-f8", "type": "fill_input", "question": "I ____ not tell her. (No me atrevo - contracción informal daren't o palabra completa)", "correct_answer": "dare", "explanation": "dare." },
+        { "id": "c2-2-f9", "type": "fill_input", "question": "They ____ have worried; everything was fine. (Se preocuparon en vano)", "correct_answer": "needn't", "explanation": "needn't." },
+        { "id": "c2-2-f10", "type": "fill_input", "question": "We may as ____ leave now. (Igual podríamos)", "correct_answer": "well", "explanation": "well." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Modal Nuance Match",
+      "pairs": [
+        {"id": "c2-2-p1", "source": "You needn't have done it", "target": "Lo hiciste, pero fue en vano / no era necesario"},
+        {"id": "c2-2-p2", "source": "You didn't need to do it", "target": "No era necesario (probablemente no lo hiciste)"},
+        {"id": "c2-2-p3", "source": "We might as well go", "target": "Igual podríamos ir (ya que no hay nada mejor)"},
+        {"id": "c2-2-p4", "source": "How dare you?", "target": "¿Cómo te atreves?"},
+        {"id": "c2-2-p5", "source": "I daren't ask", "target": "No me atrevo a preguntar"},
+        {"id": "c2-2-p6", "source": "Should you need help", "target": "En caso de que necesites ayuda (formal)"},
+        {"id": "c2-2-p7", "source": "If you should see him", "target": "Si de pura casualidad lo ves"},
+        {"id": "c2-2-p8", "source": "He would always complain", "target": "Él siempre se quejaba (hábito molesto)"},
+        {"id": "c2-2-p9", "source": "You needn't worry", "target": "No tienes por qué preocuparte (presente)"},
+        {"id": "c2-2-p10", "source": "May as well", "target": "Igual podríamos (sinónimo de might as well)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración modal correcta.",
+      "questions": [
+        { "id": "c2-2-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You needn't have bothered.", "options": ["You needn't have bothered.", "You didn't need to bother.", "You mustn't have bothered.", "You shouldn't have bothered."], "correct_answer": "You needn't have bothered.", "explanation": "Audio exacto." },
+        { "id": "c2-2-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I didn't need to study.", "options": ["I didn't need to study.", "I needn't have studied.", "I don't need to study.", "I hadn't need to study."], "correct_answer": "I didn't need to study.", "explanation": "Audio exacto." },
+        { "id": "c2-2-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We might as well leave.", "options": ["We might as well leave.", "We may as well leave.", "We must as well leave.", "We should as well leave."], "correct_answer": "We might as well leave.", "explanation": "Audio exacto." },
+        { "id": "c2-2-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How dare you speak to me!", "options": ["How dare you speak to me!", "How dare he speak to me!", "How dare you talk to me!", "How dare you speak to her!"], "correct_answer": "How dare you speak to me!", "explanation": "Audio exacto." },
+        { "id": "c2-2-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I daren't tell her the truth.", "options": ["I daren't tell her the truth.", "I dare not tell her the truth.", "I didn't dare tell her the truth.", "I daren't tell him the truth."], "correct_answer": "I daren't tell her the truth.", "explanation": "Audio exacto." },
+        { "id": "c2-2-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Should you need anything, call me.", "options": ["Should you need anything, call me.", "If you need anything, call me.", "Should you need something, call me.", "Should you need help, call me."], "correct_answer": "Should you need anything, call me.", "explanation": "Audio exacto." },
+        { "id": "c2-2-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If he should ask, lie.", "options": ["If he should ask, lie.", "If she should ask, lie.", "If he should call, lie.", "If he asks, lie."], "correct_answer": "If he should ask, lie.", "explanation": "Audio exacto." },
+        { "id": "c2-2-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He would always ignore me.", "options": ["He would always ignore me.", "She would always ignore me.", "He should always ignore me.", "He will always ignore me."], "correct_answer": "He would always ignore me.", "explanation": "Audio exacto." },
+        { "id": "c2-2-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You needn't have paid.", "options": ["You needn't have paid.", "You didn't need to pay.", "You mustn't have paid.", "You shouldn't have paid."], "correct_answer": "You needn't have paid.", "explanation": "Audio exacto." },
+        { "id": "c2-2-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We may as well try.", "options": ["We may as well try.", "We might as well try.", "We must as well try.", "You may as well try."], "correct_answer": "We may as well try.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

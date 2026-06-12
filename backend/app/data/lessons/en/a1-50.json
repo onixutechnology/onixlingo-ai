@@ -1,0 +1,101 @@
+{
+  "id": "a1-50",
+  "title": "Ordering Food for a Meeting",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Food", "Meetings", "Ordering"],
+  "completion_message": "¡Misión cumplida! Has aprendido a pedir comida para tus reuniones usando 'I would like' y preguntas modales.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Pedir Comida",
+      "parts": [
+        { "visual": "Para ordenar comida, usa 'I would like...' (Me gustaría...). Ejemplo: 'I would like a sandwich'.", "audio": "To order food, use 'I would like'. Example: I would like a sandwich." },
+        { "visual": "Para preguntar en grupo: 'Can we order pizza?' (¿Podemos pedir pizza?).", "audio": "To ask the group: Can we order pizza?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la frase correcta para ordenar comida.",
+      "questions": [
+        { "id": "a1-50-q1", "type": "quiz_choice", "question": "I ____ like a coffee, please.", "options": ["would", "will", "want", "do"], "correct_answer": "would", "explanation": "Me gustaría (I would like)." },
+        { "id": "a1-50-q2", "type": "quiz_choice", "question": "Can we ____ pizza for the meeting?", "options": ["order", "buy", "sell", "eat"], "correct_answer": "order", "explanation": "Pedir / ordenar (order)." },
+        { "id": "a1-50-q3", "type": "quiz_choice", "question": "What would you ____ to eat?", "options": ["like", "likes", "want", "love"], "correct_answer": "like", "explanation": "¿Qué te gustaría comer? (What would you like?)." },
+        { "id": "a1-50-q4", "type": "quiz_choice", "question": "I ____ like a chicken sandwich.", "options": ["would", "am", "do", "have"], "correct_answer": "would", "explanation": "I would like (forma cortés)." },
+        { "id": "a1-50-q5", "type": "quiz_choice", "question": "Here is the ____ (menú).", "options": ["menu", "list", "paper", "book"], "correct_answer": "menu", "explanation": "Menú (menu)." },
+        { "id": "a1-50-q6", "type": "quiz_choice", "question": "I would like ____ water (un poco de).", "options": ["some", "a", "an", "the"], "correct_answer": "some", "explanation": "Algo de agua (some water)." },
+        { "id": "a1-50-q7", "type": "quiz_choice", "question": "Are you ____ to order? (listos).", "options": ["ready", "read", "reading", "prepared"], "correct_answer": "ready", "explanation": "¿Están listos? (Are you ready?)." },
+        { "id": "a1-50-q8", "type": "quiz_choice", "question": "Can I have the ____, please? (cuenta).", "options": ["bill", "pill", "ball", "bell"], "correct_answer": "bill", "explanation": "Cuenta (bill / check)." },
+        { "id": "a1-50-q9", "type": "quiz_choice", "question": "We want to order ____ delivery.", "options": ["for", "to", "in", "at"], "correct_answer": "for", "explanation": "Para entrega a domicilio (for delivery)." },
+        { "id": "a1-50-q10", "type": "quiz_choice", "question": "Is the food ____? (aquí).", "options": ["here", "there", "hear", "where"], "correct_answer": "here", "explanation": "¿Ya está la comida aquí? (Is the food here?)." },
+        { "id": "a1-50-q11", "type": "quiz_choice", "question": "I will ____ a salad (tomar/pedir).", "options": ["have", "has", "eat", "am"], "correct_answer": "have", "explanation": "En restaurantes, 'I'll have' es pedir." },
+        { "id": "a1-50-q12", "type": "quiz_choice", "question": "Do you want anything to ____? (beber).", "options": ["drink", "eat", "drunk", "drinking"], "correct_answer": "drink", "explanation": "Beber (drink)." },
+        { "id": "a1-50-q13", "type": "quiz_choice", "question": "Would you like some ____? (postre).", "options": ["dessert", "desert", "sweet", "dinner"], "correct_answer": "dessert", "explanation": "Postre (dessert)." },
+        { "id": "a1-50-q14", "type": "quiz_choice", "question": "I am ____ (lleno).", "options": ["full", "fool", "fill", "fall"], "correct_answer": "full", "explanation": "Satisfecho/lleno (full)." },
+        { "id": "a1-50-q15", "type": "quiz_choice", "question": "Can we get extra ____? (servilletas).", "options": ["napkins", "papers", "towels", "wipes"], "correct_answer": "napkins", "explanation": "Servilletas (napkins)." },
+        { "id": "a1-50-q16", "type": "quiz_choice", "question": "I'd like my steak ____ (bien cocido).", "options": ["well done", "good", "well", "done"], "correct_answer": "well done", "explanation": "Bien cocido (well done)." },
+        { "id": "a1-50-q17", "type": "quiz_choice", "question": "I am allergic to ____ (cacahuetes).", "options": ["peanuts", "nuts", "beans", "peas"], "correct_answer": "peanuts", "explanation": "Cacahuetes (peanuts)." },
+        { "id": "a1-50-q18", "type": "quiz_choice", "question": "Can you pay the ____? (cuenta).", "options": ["check", "cash", "money", "card"], "correct_answer": "check", "explanation": "Cuenta en EE.UU. (check)." },
+        { "id": "a1-50-q19", "type": "quiz_choice", "question": "We need to leave a ____ (propina).", "options": ["tip", "top", "tap", "money"], "correct_answer": "tip", "explanation": "Propina (tip)." },
+        { "id": "a1-50-q20", "type": "quiz_choice", "question": "The food is very ____ (deliciosa).", "options": ["delicious", "good", "bad", "tasty"], "correct_answer": "delicious", "explanation": "Deliciosa." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta para ordenar.",
+      "questions": [
+        { "id": "a1-50-f1", "type": "fill_input", "question": "I ____ like coffee (Me gustaría).", "correct_answer": "would", "explanation": "Would." },
+        { "id": "a1-50-f2", "type": "fill_input", "question": "Can we ____ pizza? (Ordenar).", "correct_answer": "order", "explanation": "Order." },
+        { "id": "a1-50-f3", "type": "fill_input", "question": "What would you ____? (Gustaría).", "correct_answer": "like", "explanation": "Like." },
+        { "id": "a1-50-f4", "type": "fill_input", "question": "Here is the ____ (Menú).", "correct_answer": "menu", "explanation": "Menu." },
+        { "id": "a1-50-f5", "type": "fill_input", "question": "I would like ____ water (Algo de).", "correct_answer": "some", "explanation": "Some." },
+        { "id": "a1-50-f6", "type": "fill_input", "question": "Are you ____? (Listos).", "correct_answer": "ready", "explanation": "Ready." },
+        { "id": "a1-50-f7", "type": "fill_input", "question": "Can I have the ____? (Cuenta/Bill).", "correct_answer": "bill", "explanation": "Bill." },
+        { "id": "a1-50-f8", "type": "fill_input", "question": "For ____ (Para llevar/A domicilio).", "correct_answer": "delivery", "explanation": "Delivery." },
+        { "id": "a1-50-f9", "type": "fill_input", "question": "I will ____ a salad (Tomaré).", "correct_answer": "have", "explanation": "Have." },
+        { "id": "a1-50-f10", "type": "fill_input", "question": "Leave a ____ (Propina).", "correct_answer": "tip", "explanation": "Tip." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-50-p1", "source": "I would like", "target": "Me gustaría"},
+        {"id": "a1-50-p2", "source": "Order", "target": "Ordenar / Pedir"},
+        {"id": "a1-50-p3", "source": "Menu", "target": "Menú"},
+        {"id": "a1-50-p4", "source": "Ready", "target": "Listo"},
+        {"id": "a1-50-p5", "source": "Bill / Check", "target": "Cuenta"},
+        {"id": "a1-50-p6", "source": "Delivery", "target": "A domicilio / Entrega"},
+        {"id": "a1-50-p7", "source": "Drink", "target": "Beber / Bebida"},
+        {"id": "a1-50-p8", "source": "Dessert", "target": "Postre"},
+        {"id": "a1-50-p9", "source": "Napkins", "target": "Servilletas"},
+        {"id": "a1-50-p10", "source": "Tip", "target": "Propina"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-50-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I would like a coffee.", "options": ["I would like a coffee.", "I will like a coffee.", "I want a coffee.", "I had a coffee."], "correct_answer": "I would like a coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-50-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can we order pizza?", "options": ["Can we order pizza?", "Could we order pizza?", "Do we order pizza?", "Are we ordering pizza?"], "correct_answer": "Can we order pizza?", "explanation": "Audio exacto." },
+        { "id": "a1-50-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What would you like?", "options": ["What would you like?", "What do you like?", "What will you like?", "What did you like?"], "correct_answer": "What would you like?", "explanation": "Audio exacto." },
+        { "id": "a1-50-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Here is the menu.", "options": ["Here is the menu.", "Where is the menu?", "Here is the bill.", "Here is the list."], "correct_answer": "Here is the menu.", "explanation": "Audio exacto." },
+        { "id": "a1-50-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Are you ready to order?", "options": ["Are you ready to order?", "Are you ready to eat?", "Are we ready to order?", "Are they ready to order?"], "correct_answer": "Are you ready to order?", "explanation": "Audio exacto." },
+        { "id": "a1-50-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I have the bill?", "options": ["Can I have the bill?", "Can I have the check?", "Can I see the bill?", "Can I pay the bill?"], "correct_answer": "Can I have the bill?", "explanation": "Audio exacto." },
+        { "id": "a1-50-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "For delivery.", "options": ["For delivery.", "For here.", "To go.", "For later."], "correct_answer": "For delivery.", "explanation": "Audio exacto." },
+        { "id": "a1-50-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I will have a salad.", "options": ["I will have a salad.", "I would like a salad.", "I want a salad.", "He will have a salad."], "correct_answer": "I will have a salad.", "explanation": "Audio exacto." },
+        { "id": "a1-50-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Extra napkins.", "options": ["Extra napkins.", "Extra papers.", "Some napkins.", "Extra towels."], "correct_answer": "Extra napkins.", "explanation": "Audio exacto." },
+        { "id": "a1-50-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Leave a tip.", "options": ["Leave a tip.", "Give a tip.", "Leave the tip.", "Leave a bill."], "correct_answer": "Leave a tip.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

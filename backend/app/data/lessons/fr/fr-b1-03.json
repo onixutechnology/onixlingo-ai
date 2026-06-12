@@ -1,0 +1,95 @@
+{
+  "id": "fr-b1-03",
+  "title": "Le Conditionnel Présent",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Conditional", "Politeness"],
+  "completion_message": "¡Magnífico! Ahora puedes pedir las cosas con muchísima cortesía, dar consejos útiles y hablar de todo lo que harías si fueras millonario.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Deseos y Cortesía (B1)",
+      "parts": [
+        {
+          "visual": "El Condicional se usa principalmente para tres cosas:\n\n1. Cortesía: En vez de decir 'Je veux' (Yo quiero), decimos 'Je voudrais' (Yo quisiera / Me gustaría).\n2. Dar consejos: 'Tu devrais te reposer' (Tú deberías descansar).\n3. Hipótesis (La regla del 'Si'): 'Si j'étais riche, j'achèterais un château' (Si yo fuera rico, compraría un castillo).",
+          "audio": "En francés, hay una línea muy fina entre ser directo y sonar grosero. Por eso existe el Condicional. Es el tiempo verbal de la cortesía por excelencia. Nunca entras a una panadería y dices 'Yo quiero un croissant'. Dices: 'Je voudrais un croissant' (A mí me gustaría un croissant). Además de la cortesía, el condicional se usa para dar consejos. Si un amigo está cansado, le dices 'Tu devrais te reposer' (Tú deberías descansar). Y, por último, lo usamos para soñar despiertos: 'Si yo fuera rico, yo compraría una isla'."
+        },
+        {
+          "visual": "¿Cómo se forma el Condicional?\nEs la combinación perfecta de dos tiempos que ya conoces:\nRaíz del Futuro Simple + Terminaciones del Imparfait (-ais, -ais, -ait, -ions, -iez, -aient).\n\nEjemplo con Parler (Hablar):\n- Raíz del futuro: parler-\n- Yo hablaría: Je parlerAIS\n- Tú hablarías: Tu parlerAIS\n- Nosotros hablaríamos: Nous parlerIONS\n\nRaíces irregulares (las mismas del futuro):\n- Avoir -> aur- (J'aurais)\n- Être -> ser- (Je serais)\n- Aller -> ir- (J'irais)\n- Vouloir -> voudr- (Je voudrais)",
+          "audio": "Formar el condicional es súper fácil si ya dominas el futuro y el imparfait, porque es literalmente un híbrido de ambos. Tomas la raíz del futuro simple, que casi siempre es el verbo entero terminando en 'R', y le pegas las terminaciones del imparfait. Para el verbo parler (hablar), la raíz es 'parler-'. Para decir 'yo hablaría', le añades 'ais'. Queda: 'Je parlerais'. Las raíces irregulares son exactamente las mismas que las del futuro. Avoir se convierte en aur-, así que 'Yo tendría' es 'J'aurais'. Être se convierte en ser-, así que 'Yo sería' es 'Je serais'."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del condicional según la situación.",
+      "questions": [
+        { "id": "frb1-03-q1", "type": "quiz_choice", "question": "¿Cuáles son los tres usos principales del Condicional?", "options": ["Cortesía, consejos e hipótesis", "Rutinas, descripciones y pasado", "Órdenes, prohibiciones y subjuntivo", "Acciones futuras seguras y planes"], "correct_answer": "Cortesía, consejos e hipótesis", "explanation": "El condicional es el modo de lo que 'podría ser' y la educación." },
+        { "id": "frb1-03-q2", "type": "quiz_choice", "question": "¿Cómo se forma el Condicional Presente?", "options": ["Raíz del Futuro + Terminaciones del Imparfait", "Raíz del Presente + Terminaciones del Futuro", "Verbo en infinitivo sin cambios"], "correct_answer": "Raíz del Futuro + Terminaciones del Imparfait", "explanation": "Ej: manger- + -ais = je mangerais." },
+        { "id": "frb1-03-q3", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo quisiera' / 'Me gustaría' (verbo Vouloir)?", "options": ["Je voudrais", "Je veux", "Je voudrai", "Je voulais"], "correct_answer": "Je voudrais", "explanation": "Je voudrais es la forma más común de cortesía." },
+        { "id": "frb1-03-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Tú deberías' (verbo Devoir)?", "options": ["Tu devrais", "Tu dois", "Tu devras", "Tu devais"], "correct_answer": "Tu devrais", "explanation": "Raíz devr- + ais = Tu devrais." },
+        { "id": "frb1-03-q5", "type": "quiz_choice", "question": "Je ____ (manger). (Yo comería).", "options": ["mangerais", "mangeais", "mangerai", "mange"], "correct_answer": "mangerais", "explanation": "manger- + ais = je mangerais." },
+        { "id": "frb1-03-q6", "type": "quiz_choice", "question": "Il ____ (parler). (Él hablaría).", "options": ["parlerait", "parlait", "parlera", "parlerai"], "correct_answer": "parlerait", "explanation": "parler- + ait = il parlerait." },
+        { "id": "frb1-03-q7", "type": "quiz_choice", "question": "¿Cuál es la raíz irregular del verbo 'Aller' (ir) en el condicional?", "options": ["ir-", "all-", "aill-", "allais-"], "correct_answer": "ir-", "explanation": "Al igual que en el futuro, Aller cambia a 'ir-' (J'irais = Yo iría)." },
+        { "id": "frb1-03-q8", "type": "quiz_choice", "question": "Nous ____ (aller) au cinéma. (Nosotros iríamos al cine).", "options": ["irions", "allions", "irons", "allons"], "correct_answer": "irions", "explanation": "ir- + ions = nous irions." },
+        { "id": "frb1-03-q9", "type": "quiz_choice", "question": "Si j'étais riche, j'____ (acheter) un bateau. (Si yo fuera rico, compraría un barco).", "options": ["achèterais", "achète", "achetais", "achèterai"], "correct_answer": "achèterais", "explanation": "achèter- + ais = j'achèterais." },
+        { "id": "frb1-03-q10", "type": "quiz_choice", "question": "Vous ____ (aimer) un café ? (¿A ustedes les gustaría un café?).", "options": ["aimeriez", "aimez", "aimiez", "aimerez"], "correct_answer": "aimeriez", "explanation": "aimer- + iez = vous aimeriez." },
+        { "id": "frb1-03-q11", "type": "quiz_choice", "question": "¿Cuál es la raíz irregular del verbo 'Avoir' (tener)?", "options": ["aur-", "av-", "ai-", "a-"], "correct_answer": "aur-", "explanation": "Avoir cambia a 'aur-' (J'aurais = Yo tendría)." },
+        { "id": "frb1-03-q12", "type": "quiz_choice", "question": "Ils ____ (avoir) peur. (Ellos tendrían miedo).", "options": ["auraient", "avaient", "auront", "auraies"], "correct_answer": "auraient", "explanation": "aur- + aient = ils auraient." },
+        { "id": "frb1-03-q13", "type": "quiz_choice", "question": "¿Cuál es la raíz irregular del verbo 'Être' (ser/estar)?", "options": ["ser-", "ét-", "soi-", "est-"], "correct_answer": "ser-", "explanation": "Être cambia a 'ser-' (Je serais = Yo sería)." },
+        { "id": "frb1-03-q14", "type": "quiz_choice", "question": "Je ____ (être) très content. (Yo estaría muy contento).", "options": ["serais", "étais", "serai", "suis"], "correct_answer": "serais", "explanation": "ser- + ais = je serais." },
+        { "id": "frb1-03-q15", "type": "quiz_choice", "question": "Si tu pouvais, tu ____ (voyager). (Si tú pudieras, tú viajarías).", "options": ["voyagerais", "voyageais", "voyages", "voyageras"], "correct_answer": "voyagerais", "explanation": "voyager- + ais = tu voyagerais." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Conjuga el verbo en Condicional Presente. ¡Cuidado con las raíces irregulares!",
+      "questions": [
+        { "id": "frb1-03-f1", "type": "fill_input", "question": "Je ____ (vouloir) un café, s'il vous plaît. (Quisiera).", "correct_answer": "voudrais", "explanation": "voudrais" },
+        { "id": "frb1-03-f2", "type": "fill_input", "question": "Tu ____ (devoir) étudier. (Deberías).", "correct_answer": "devrais", "explanation": "devrais" },
+        { "id": "frb1-03-f3", "type": "fill_input", "question": "Il ____ (parler) avec le patron. (Hablaría).", "correct_answer": "parlerait", "explanation": "parlerait" },
+        { "id": "frb1-03-f4", "type": "fill_input", "question": "Nous ____ (aimer) voyager. (Nos gustaría).", "correct_answer": "aimerions", "explanation": "aimerions" },
+        { "id": "frb1-03-f5", "type": "fill_input", "question": "Vous ____ (manger) au restaurant ? (¿Comerían?).", "correct_answer": "mangeriez", "explanation": "mangeriez" },
+        { "id": "frb1-03-f6", "type": "fill_input", "question": "Elles ____ (finir) le projet. (Terminarían).", "correct_answer": "finiraient", "explanation": "finiraient" },
+        { "id": "frb1-03-f7", "type": "fill_input", "question": "J'____ (aller) à Paris si j'avais de l'argent. (Iría).", "correct_answer": "irais", "explanation": "irais" },
+        { "id": "frb1-03-f8", "type": "fill_input", "question": "Je ____ (être) heureux de t'aider. (Estaría).", "correct_answer": "serais", "explanation": "serais" },
+        { "id": "frb1-03-f9", "type": "fill_input", "question": "Tu ____ (avoir) le temps ? (¿Tendrías?).", "correct_answer": "aurais", "explanation": "aurais" },
+        { "id": "frb1-03-f10", "type": "fill_input", "question": "Il ____ (faire) beau demain ? (¿Haría buen clima?).", "correct_answer": "ferait", "explanation": "ferait (raíz fer-)" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Polite Match",
+      "pairs": [
+        {"id": "frb1-03-p1", "source": "Je voudrais", "target": "Yo quisiera / Me gustaría"},
+        {"id": "frb1-03-p2", "source": "Tu devrais", "target": "Tú deberías"},
+        {"id": "frb1-03-p3", "source": "Je serais", "target": "Yo sería / estaría"},
+        {"id": "frb1-03-p4", "source": "J'aurais", "target": "Yo tendría"},
+        {"id": "frb1-03-p5", "source": "J'irais", "target": "Yo iría"},
+        {"id": "frb1-03-p6", "source": "Je ferais", "target": "Yo haría"},
+        {"id": "frb1-03-p7", "source": "Nous aimerions", "target": "Nos gustaría (a nosotros)"},
+        {"id": "frb1-03-p8", "source": "Si j'étais toi...", "target": "Si yo fuera tú..."}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y distingue: ¿Es Imparfait (pasado), Futuro o Condicional?",
+      "questions": [
+        { "id": "frb1-03-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je voudrais un café", "options": ["Je voudrais un café", "Je voulais un café", "Je voudrai un café", "Je veux un café"], "correct_answer": "Je voudrais un café", "explanation": "Audio dice: Je voudrais un café (Condicional)." },
+        { "id": "frb1-03-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je serais content", "options": ["Je serais content", "J'étais content", "Je serai content", "Je suis content"], "correct_answer": "Je serais content", "explanation": "Audio dice: Je serais content (Condicional)." },
+        { "id": "frb1-03-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Tu devrais venir", "options": ["Tu devrais venir", "Tu devais venir", "Tu devras venir", "Tu dois venir"], "correct_answer": "Tu devrais venir", "explanation": "Audio dice: Tu devrais venir (Condicional)." },
+        { "id": "frb1-03-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "J'irais avec toi", "options": ["J'irais avec toi", "J'allais avec toi", "J'irai avec toi", "Je vais avec toi"], "correct_answer": "J'irais avec toi", "explanation": "Audio dice: J'irais avec toi." },
+        { "id": "frb1-03-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Nous aimerions voyager", "options": ["Nous aimerions voyager", "Nous aimions voyager", "Nous aimerons voyager", "Nous aimons voyager"], "correct_answer": "Nous aimerions voyager", "explanation": "Audio dice: Nous aimerions voyager." }
+      ]
+    }
+  ]
+}

@@ -63,13 +63,13 @@ const PRESETS: TimePreset[] = [
         id: "blitz-3-0", label: "3+0", sub: "Blitz",
         initialSec: 180, incrementSec: 0, category: "blitz",
         icon: "🔥", accentFrom: "from-amber-500", accentTo: "to-yellow-400",
-        borderColor: "border-amber-500/40", glow: "shadow-amber-500/20",
+        borderColor: "border-[#D4AF37]/30/40", glow: "shadow-amber-500/20",
     },
     {
         id: "blitz-3-2", label: "3+2", sub: "Blitz",
         initialSec: 180, incrementSec: 2, category: "blitz",
         icon: "🔥", accentFrom: "from-amber-500", accentTo: "to-orange-400",
-        borderColor: "border-amber-500/40", glow: "shadow-amber-500/20",
+        borderColor: "border-[#D4AF37]/30/40", glow: "shadow-amber-500/20",
     },
     {
         id: "blitz-5-0", label: "5+0", sub: "Blitz",
@@ -135,15 +135,15 @@ function PresetCard({
             onClick={onSelect}
             className={`group relative flex flex-col items-center gap-2 rounded-none border-2 p-5 text-center transition-all duration-200
         ${selected
-                    ? "border-amber-500 bg-[#462614] text-[#ecd3b5] shadow-lg shadow-amber-950/50 scale-[1.02]"
+                    ? "border-[#D4AF37]/30 bg-[#462614] text-[#ecd3b5] shadow-none shadow-amber-950/50 scale-[1.02]"
                     : "border-[#502b16] bg-[#361d0f] text-[#ecd3b5]/80 hover:border-[#62351b] hover:bg-[#462614] hover:scale-[1.01]"
                 }`}
         >
             {selected && (
-                <span className="absolute right-3 top-3 flex h-5 w-5 items-center justify-center rounded-none bg-amber-500/20 text-[10px] text-amber-300 border border-amber-500/40">✓</span>
+                <span className="absolute right-3 top-3 flex h-5 w-5 items-center justify-center rounded-none bg-[#D4AF37]/20/20 text-[10px] text-amber-300 border border-[#D4AF37]/30/40">✓</span>
             )}
             <span className="text-3xl">{preset.icon}</span>
-            <span className={`text-2xl font-bold tracking-tight ${selected ? "text-white" : "text-[#ecd3b5]"}`}>
+            <span className={`text-2xl font-bold tracking-tight ${selected ? "text-slate-900" : "text-[#ecd3b5]"}`}>
                 {preset.label}
             </span>
             <span className={`rounded-none px-2.5 py-0.5 text-xs font-semibold ${selected ? "bg-amber-950/60 text-amber-300 border border-amber-800/40" : "bg-[#25140b] text-[#ecd3b5]/60 border border-[#3c1e0a]"}`}>
@@ -167,7 +167,7 @@ function RadarAnimation() {
             {/* Static outer ring */}
             <span className="absolute inset-0 rounded-none border border-amber-800/20" />
             {/* Sweep */}
-            <span className="absolute inset-4 rounded-none border border-amber-500/30 animate-spin" style={{ animationDuration: "3s" }} />
+            <span className="absolute inset-4 rounded-none border border-[#D4AF37]/30/30 animate-spin" style={{ animationDuration: "3s" }} />
             {/* Core */}
             <div className="relative flex h-20 w-20 items-center justify-center rounded-none bg-gradient-to-br from-[#462614] to-[#25140b] border-2 border-[#62351b] shadow-2xl shadow-amber-950/50">
                 <span className="text-3xl text-amber-400">♟</span>
@@ -378,16 +378,16 @@ export default function ChessArenaPage() {
             </div>
 
             {/* Navigation Header */}
-            <nav className="w-full h-14 border-b-2 border-[#3c1e0a] px-6 flex items-center justify-between bg-[#25140b] shadow-md z-40 text-[#ecd3b5]">
+            <nav className="w-full h-14 border-b-2 border-[#3c1e0a] px-6 flex items-center justify-between bg-[#25140b] shadow-none z-40 text-[#ecd3b5]">
                 <div className="flex items-center gap-4">
-                    <button onClick={() => router.push('/dashboard/chess')} className="p-2 hover:bg-[#361d0f] hover:text-white transition-colors text-[#ecd3b5] rounded-none">
+                    <button onClick={() => router.push('/dashboard/chess')} className="p-2 hover:bg-[#361d0f] hover:text-slate-900 transition-colors text-[#ecd3b5] rounded-none">
                         <ChevronLeft size={20} />
                     </button>
                     <div className="flex items-center gap-2">
                         <div className="w-6 h-6 bg-[#3d200c] border border-[#502b16] flex items-center justify-center">
                             <Gamepad2 size={14} className="text-[#ecd3b5]" />
                         </div>
-                        <h1 className="font-black text-[10px] tracking-[0.2em] uppercase text-white">Onix Chess <span className="text-amber-400 font-bold">Arena PvP</span></h1>
+                        <h1 className="font-black text-[10px] tracking-[0.2em] uppercase text-slate-900">Onix Chess <span className="text-amber-400 font-bold">Arena PvP</span></h1>
                     </div>
                 </div>
 
@@ -395,7 +395,7 @@ export default function ChessArenaPage() {
                     <div className="hidden md:flex items-center gap-6 px-6 border-x border-[#3c1e0a]">
                         <div className="text-center">
                             <p className="text-[8px] text-amber-200/50 font-black uppercase tracking-widest leading-none mb-1">Mi ELO Arena</p>
-                            <p className="text-[10px] font-black uppercase text-white">{localElo}</p>
+                            <p className="text-[10px] font-black uppercase text-slate-900">{localElo}</p>
                         </div>
                     </div>
                 </div>
@@ -408,12 +408,12 @@ export default function ChessArenaPage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md"
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-md"
                     >
                         <div className="relative flex flex-col items-center gap-6 wood-panel p-10 shadow-2xl rounded-none w-full max-w-md">
                             <div className="relative flex flex-col items-center gap-3 text-center">
                                 <span className="text-5xl animate-bounce">♟</span>
-                                <h2 className="text-3xl font-black tracking-tight text-white uppercase">
+                                <h2 className="text-3xl font-black tracking-tight text-slate-900 uppercase">
                                     ¡Oponente Encontrado!
                                 </h2>
                                 <p className="text-amber-200/80">Prepárate para jugar...</p>
@@ -421,12 +421,12 @@ export default function ChessArenaPage() {
 
                             {/* Opponent card */}
                             <div className="relative flex items-center gap-4 rounded-none border border-[#502b16] bg-[#361d0f] px-6 py-4 w-full">
-                                <div className="flex h-14 w-14 items-center justify-center rounded-none bg-[#ecd3b5] text-[#1e130c] text-2xl font-bold shadow-lg border border-[#fbf8f0]">
+                                <div className="flex h-14 w-14 items-center justify-center rounded-none bg-[#ecd3b5] text-[#1e130c] text-2xl font-bold shadow-none border border-[#fbf8f0]">
                                     {opponent.username.charAt(0).toUpperCase()}
                                 </div>
                                 <div>
-                                    <p className="text-xl font-bold text-white">{opponent.username}</p>
-                                    <p className="text-sm text-slate-350">
+                                    <p className="text-xl font-bold text-slate-900">{opponent.username}</p>
+                                    <p className="text-sm text-slate-300">
                                         ELO <span className="font-semibold text-amber-400">{opponent.elo}</span>
                                         {" · "}
                                         {CATEGORY_LABELS[selectedPreset.category]}
@@ -475,14 +475,14 @@ export default function ChessArenaPage() {
                                 {/* Elapsed timer */}
                                 <div className="flex items-center gap-2 rounded-none border border-[#502b16] bg-[#361d0f] px-5 py-2.5 mt-4 shadow-inner">
                                     <span className="h-2 w-2 animate-pulse rounded-none bg-emerald-400" />
-                                    <span className="font-mono text-xl font-bold tabular-nums text-white">
+                                    <span className="font-mono text-xl font-bold tabular-nums text-slate-900">
                                         {formatElapsed(elapsed)}
                                     </span>
                                 </div>
 
                                 <button
                                     onClick={handleCancel}
-                                    className="mt-6 rounded-none border border-red-800/40 bg-red-950/60 px-8 py-3 text-sm font-semibold text-red-300 transition-all hover:bg-red-900/50 hover:text-white"
+                                    className="mt-6 rounded-none border border-red-800/40 bg-red-950/60 px-8 py-3 text-sm font-semibold text-red-300 transition-all hover:bg-red-900/50 hover:text-slate-900"
                                 >
                                     ✕ Cancelar Búsqueda
                                 </button>
@@ -494,9 +494,9 @@ export default function ChessArenaPage() {
                                     <span className="font-black text-[9px] uppercase tracking-wider">Bitácora de Emparejamiento</span>
                                     <span className="animate-pulse">● LIVE</span>
                                 </div>
-                                <div className="flex-1 overflow-y-auto space-y-2 console-scrollbar pr-2 text-slate-350">
+                                <div className="flex-1 overflow-y-auto space-y-2 console-scrollbar pr-2 text-slate-300">
                                     {queueLogs.length === 0 ? (
-                                        <p className="text-slate-500 italic">Iniciando traza de auditoría de red...</p>
+                                        <p className="text-slate-600 italic">Iniciando traza de auditoría de red...</p>
                                     ) : (
                                         queueLogs.map((log, idx) => (
                                             <p key={idx} className="leading-relaxed border-l-2 border-amber-600/40 pl-2 py-0.5">
@@ -504,9 +504,9 @@ export default function ChessArenaPage() {
                                             </p>
                                         ))
                                     )}
-                                    <span className="inline-block w-1.5 h-3 bg-amber-500 animate-pulse ml-2" />
+                                    <span className="inline-block w-1.5 h-3 bg-[#D4AF37]/20 animate-pulse ml-2" />
                                 </div>
-                                <div className="border-t border-[#3c1e0a] pt-2 mt-3 text-[9px] text-slate-500 flex justify-between">
+                                <div className="border-t border-[#3c1e0a] pt-2 mt-3 text-[9px] text-slate-600 flex justify-between">
                                     <span>PROTOCOL: WEBSOCKET</span>
                                     <span>LATENCY: ~32MS</span>
                                 </div>
@@ -522,7 +522,7 @@ export default function ChessArenaPage() {
 
                     {/* Page header */}
                     <div className="text-center space-y-3">
-                        <div className="inline-flex items-center gap-2 rounded-none border border-[#3c1e0a] bg-[#25140b] px-4 py-1.5 text-xs font-black uppercase tracking-widest text-amber-400 shadow-md">
+                        <div className="inline-flex items-center gap-2 rounded-none border border-[#3c1e0a] bg-[#25140b] px-4 py-1.5 text-xs font-black uppercase tracking-widest text-amber-400 shadow-none">
                             ♟ Chess Arena
                         </div>
                         <h1 className="text-4xl font-black tracking-tight text-[#25140b] md:text-5xl uppercase">
@@ -546,13 +546,13 @@ export default function ChessArenaPage() {
                                 <button
                                     key={tab.id}
                                     onClick={() => setActiveTab(tab.id as any)}
-                                    className={`flex items-center gap-2 px-5 py-3 text-[10px] font-black uppercase tracking-wider border-2 transition-all rounded-none shadow-md
+                                    className={`flex items-center gap-2 px-5 py-3 text-[10px] font-black uppercase tracking-wider border-2 transition-all rounded-none shadow-none
                                         ${activeTab === tab.id
-                                            ? "border-amber-500 text-white bg-[#25140b] shadow-lg scale-[1.02]"
-                                            : "border-[#502b16] text-[#ecd3b5]/80 hover:text-white bg-[#361d0f] hover:bg-[#462614] hover:border-amber-500/40"
+                                            ? "border-[#D4AF37]/30 text-slate-900 bg-[#25140b] shadow-none scale-[1.02]"
+                                            : "border-[#502b16] text-[#ecd3b5]/80 hover:text-slate-900 bg-[#361d0f] hover:bg-[#462614] hover:border-[#D4AF37]/30/40"
                                         }`}
                                 >
-                                    <Icon size={14} className={activeTab === tab.id ? "text-amber-400" : "text-slate-350"} />
+                                    <Icon size={14} className={activeTab === tab.id ? "text-amber-400" : "text-slate-300"} />
                                     {tab.label}
                                 </button>
                             );
@@ -585,11 +585,11 @@ export default function ChessArenaPage() {
                                     ))}
 
                                     {/* Summary & Play CTA */}
-                                    <div className="wood-panel p-5 rounded-none shadow-lg">
+                                    <div className="wood-panel p-5 rounded-none shadow-none">
                                         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
                                             <div className="space-y-0.5 text-center sm:text-left">
                                                 <p className="text-[8px] text-amber-200/40 uppercase tracking-widest font-black">Control Seleccionado</p>
-                                                <p className="text-xl font-bold text-white uppercase">
+                                                <p className="text-xl font-bold text-slate-900 uppercase">
                                                     {selectedPreset.sub} · {selectedPreset.label}
                                                 </p>
                                                 <p className="text-sm text-slate-300">
@@ -618,14 +618,14 @@ export default function ChessArenaPage() {
                                 {/* Right Side: Cognitive Perk Sidebar */}
                                 <div className="space-y-6">
                                     <div className="wood-panel p-6 rounded-none relative overflow-hidden h-full flex flex-col justify-between">
-                                        <div className="absolute top-0 right-0 p-4 opacity-5 text-amber-500">
+                                        <div className="absolute top-0 right-0 p-4 opacity-5 text-[#D4AF37]">
                                             <Brain size={120} />
                                         </div>
                                         <div className="relative z-10 space-y-4">
                                             <div className="inline-flex items-center gap-2 rounded-none border border-amber-800 bg-[#361d0f] px-3 py-1 text-[8px] font-black uppercase tracking-wider text-amber-400">
                                                 🔬 Laboratorio de Enfoque
                                             </div>
-                                            <h3 className="text-lg font-black text-white uppercase border-b border-[#3c1e0a] pb-2">
+                                            <h3 className="text-lg font-black text-slate-900 uppercase border-b border-[#3c1e0a] pb-2">
                                                 {selectedPerk.title}
                                             </h3>
                                             <p className="text-xs text-slate-300 leading-relaxed">
@@ -635,7 +635,7 @@ export default function ChessArenaPage() {
 
                                         <div className="relative z-10 bg-[#130a04] p-4 border border-[#3c1e0a] mt-6">
                                             <p className="text-[8px] text-amber-400 font-black uppercase tracking-widest mb-1">Beneficio Principal</p>
-                                            <p className="text-xs text-white font-bold leading-snug">
+                                            <p className="text-xs text-slate-900 font-bold leading-snug">
                                                 {selectedPerk.benefit}
                                             </p>
                                         </div>
@@ -648,14 +648,14 @@ export default function ChessArenaPage() {
                         {activeTab === "stats" && (
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                                 {/* Executive Player Card */}
-                                <div className="wood-panel p-6 rounded-none relative flex flex-col justify-between overflow-hidden shadow-2xl border-t-4 border-amber-500 h-96">
+                                <div className="wood-panel p-6 rounded-none relative flex flex-col justify-between overflow-hidden shadow-2xl border-t-4 border-[#D4AF37]/30 h-96">
                                     <div className="absolute top-0 right-0 p-4 opacity-10 text-amber-400">
                                         <Crown size={120} />
                                     </div>
                                     <div className="space-y-6 relative z-10">
                                         <div>
                                             <p className="text-[8px] text-amber-400 font-black uppercase tracking-[0.25em] leading-none mb-1">Ficha de Identidad</p>
-                                            <h2 className="text-2xl font-black text-white uppercase tracking-tight">{user?.username ?? "Usuario"}</h2>
+                                            <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tight">{user?.username ?? "Usuario"}</h2>
                                             <span className="text-[9px] px-2 py-0.5 bg-[#462614] border border-amber-700/40 text-amber-300 font-bold uppercase tracking-wider mt-1.5 inline-block">
                                                 {user?.tier === "executive" ? "Executive Premium Member" : user?.is_pro ? "Pro Member" : "Free Member"}
                                             </span>
@@ -663,17 +663,17 @@ export default function ChessArenaPage() {
 
                                         <div className="grid grid-cols-2 gap-4 border-y border-[#3c1e0a] py-6">
                                             <div>
-                                                <p className="text-[8px] text-slate-400 font-black uppercase tracking-widest mb-1">ELO Arena PvP</p>
+                                                <p className="text-[8px] text-slate-500 font-black uppercase tracking-widest mb-1">ELO Arena PvP</p>
                                                 <p className="text-3xl font-black text-amber-300 tracking-tighter">{localElo}</p>
                                             </div>
                                             <div>
-                                                <p className="text-[8px] text-slate-400 font-black uppercase tracking-widest mb-1">ELO Táctico</p>
+                                                <p className="text-[8px] text-slate-500 font-black uppercase tracking-widest mb-1">ELO Táctico</p>
                                                 <p className="text-3xl font-black text-slate-200 tracking-tighter">{user?.chess_tactical_elo ?? 800}</p>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div className="relative z-10 bg-[#130a04]/60 p-3 border border-[#3c1e0a]/60 text-[9px] text-slate-400">
+                                    <div className="relative z-10 bg-[#130a04]/60 p-3 border border-[#3c1e0a]/60 text-[9px] text-slate-500">
                                         Firma Digital Autenticada en OnixLingo Ajedrez Cognitivo
                                     </div>
                                 </div>
@@ -682,33 +682,33 @@ export default function ChessArenaPage() {
                                 <div className="lg:col-span-2 space-y-6">
                                     {/* Win/Draw/Loss Distribution */}
                                     <div className="wood-panel p-5 rounded-none">
-                                        <h3 className="text-xs font-black uppercase tracking-wider mb-4 text-white">Distribución de Victorias</h3>
+                                        <h3 className="text-xs font-black uppercase tracking-wider mb-4 text-slate-900">Distribución de Victorias</h3>
                                         <div className="space-y-4">
                                             <div>
                                                 <div className="flex justify-between text-xs mb-1">
                                                     <span className="text-emerald-400 font-bold">Victorias (58%)</span>
-                                                    <span className="text-slate-350">58 Partidas</span>
+                                                    <span className="text-slate-300">58 Partidas</span>
                                                 </div>
                                                 <div className="h-2 bg-[#130a04] border border-[#3c1e0a] rounded-none overflow-hidden">
-                                                    <div className="h-full bg-emerald-500" style={{ width: "58%" }}></div>
+                                                    <div className="h-full bg-[#D4AF37]/100" style={{ width: "58%" }}></div>
                                                 </div>
                                             </div>
                                             <div>
                                                 <div className="flex justify-between text-xs mb-1">
                                                     <span className="text-amber-400 font-bold">Tablas / Empates (10%)</span>
-                                                    <span className="text-slate-350">10 Partidas</span>
+                                                    <span className="text-slate-300">10 Partidas</span>
                                                 </div>
                                                 <div className="h-2 bg-[#130a04] border border-[#3c1e0a] rounded-none overflow-hidden">
-                                                    <div className="h-full bg-amber-500" style={{ width: "10%" }}></div>
+                                                    <div className="h-full bg-[#D4AF37]/20" style={{ width: "10%" }}></div>
                                                 </div>
                                             </div>
                                             <div>
                                                 <div className="flex justify-between text-xs mb-1">
                                                     <span className="text-red-400 font-bold">Derrotas (32%)</span>
-                                                    <span className="text-slate-350">32 Partidas</span>
+                                                    <span className="text-slate-300">32 Partidas</span>
                                                 </div>
                                                 <div className="h-2 bg-[#130a04] border border-[#3c1e0a] rounded-none overflow-hidden">
-                                                    <div className="h-full bg-red-500" style={{ width: "32%" }}></div>
+                                                    <div className="h-full bg-[#D4AF37]/100" style={{ width: "32%" }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -735,19 +735,19 @@ export default function ChessArenaPage() {
                                                 </thead>
                                                 <tbody className="divide-y divide-[#3c1e0a]/40 text-slate-300">
                                                     <tr>
-                                                        <td className="py-2.5 font-bold text-white">Bot-Manager</td>
+                                                        <td className="py-2.5 font-bold text-slate-900">Bot-Manager</td>
                                                         <td className="py-2.5">🔥 Blitz 3+2</td>
                                                         <td className="py-2.5 text-emerald-400 font-bold">Victoria</td>
                                                         <td className="py-2.5 text-emerald-400 font-bold text-right">+15</td>
                                                     </tr>
                                                     <tr>
-                                                        <td className="py-2.5 font-bold text-white">Carlos_CEO</td>
+                                                        <td className="py-2.5 font-bold text-slate-900">Carlos_CEO</td>
                                                         <td className="py-2.5">🛡️ Rapid 10+0</td>
                                                         <td className="py-2.5 text-red-400 font-bold">Derrota</td>
                                                         <td className="py-2.5 text-red-400 font-bold text-right">-15</td>
                                                     </tr>
                                                     <tr>
-                                                        <td className="py-2.5 font-bold text-white">Bot-Principiante</td>
+                                                        <td className="py-2.5 font-bold text-slate-900">Bot-Principiante</td>
                                                         <td className="py-2.5">⚡ Bullet 1+0</td>
                                                         <td className="py-2.5 text-emerald-400 font-bold">Victoria</td>
                                                         <td className="py-2.5 text-emerald-400 font-bold text-right">+5</td>
@@ -782,10 +782,10 @@ export default function ChessArenaPage() {
                                                 <th className="pb-3 font-black text-right">Rango</th>
                                             </tr>
                                         </thead>
-                                        <tbody className="divide-y divide-[#3c1e0a]/40 text-slate-350 font-medium">
+                                        <tbody className="divide-y divide-[#3c1e0a]/40 text-slate-300 font-medium">
                                             <tr className="bg-[#462614]/10">
                                                 <td className="py-3.5 font-black text-amber-400 text-sm">#1</td>
-                                                <td className="py-3.5 font-bold text-white flex items-center gap-1.5">
+                                                <td className="py-3.5 font-bold text-slate-900 flex items-center gap-1.5">
                                                     Magnus_CEO <Crown size={12} className="text-amber-400" />
                                                 </td>
                                                 <td className="py-3.5 font-black text-amber-300">2840</td>
@@ -794,38 +794,38 @@ export default function ChessArenaPage() {
                                                 <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-amber-950/60 text-amber-300 border border-amber-800/40 px-1.5 py-0.5">EXECUTIVE</span></td>
                                             </tr>
                                             <tr>
-                                                <td className="py-3.5 font-black text-amber-500/60 text-sm">#2</td>
-                                                <td className="py-3.5 font-bold text-white">Kasparov_Pro</td>
+                                                <td className="py-3.5 font-black text-[#D4AF37]/60 text-sm">#2</td>
+                                                <td className="py-3.5 font-bold text-slate-900">Kasparov_Pro</td>
                                                 <td className="py-3.5 font-bold">2610</td>
                                                 <td className="py-3.5">76%</td>
                                                 <td className="py-3.5">🇦🇿 AZ</td>
                                                 <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-amber-950/60 text-amber-300 border border-amber-800/40 px-1.5 py-0.5">EXECUTIVE</span></td>
                                             </tr>
                                             <tr>
-                                                <td className="py-3.5 font-black text-amber-500/60 text-sm">#3</td>
-                                                <td className="py-3.5 font-bold text-white">Sofia_Chess92</td>
+                                                <td className="py-3.5 font-black text-[#D4AF37]/60 text-sm">#3</td>
+                                                <td className="py-3.5 font-bold text-slate-900">Sofia_Chess92</td>
                                                 <td className="py-3.5 font-bold">1850</td>
                                                 <td className="py-3.5">68%</td>
                                                 <td className="py-3.5">🇪🇸 ES</td>
-                                                <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-[#130a04] text-slate-350 border border-[#3c1e0a] px-1.5 py-0.5">PRO</span></td>
+                                                <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-[#130a04] text-slate-300 border border-[#3c1e0a] px-1.5 py-0.5">PRO</span></td>
                                             </tr>
                                             <tr className="bg-[#462614]/30 border-y-2 border-amber-700/40">
                                                 <td className="py-3.5 font-black text-amber-400 text-sm">#4</td>
-                                                <td className="py-3.5 font-bold text-white flex items-center gap-1.5">
+                                                <td className="py-3.5 font-bold text-slate-900 flex items-center gap-1.5">
                                                     {user?.username ?? "Usuario"} <span className="text-[8px] text-amber-400 font-bold">(Tú)</span>
                                                 </td>
                                                 <td className="py-3.5 font-black text-amber-300">{localElo}</td>
                                                 <td className="py-3.5">58%</td>
                                                 <td className="py-3.5">🇲🇽 MX</td>
-                                                <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-[#130a04] text-slate-350 border border-[#3c1e0a] px-1.5 py-0.5">PRO</span></td>
+                                                <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-[#130a04] text-slate-300 border border-[#3c1e0a] px-1.5 py-0.5">PRO</span></td>
                                             </tr>
                                             <tr>
-                                                <td className="py-3.5 font-black text-amber-500/60 text-sm">#5</td>
-                                                <td className="py-3.5 font-bold text-white">Student_99</td>
+                                                <td className="py-3.5 font-black text-[#D4AF37]/60 text-sm">#5</td>
+                                                <td className="py-3.5 font-bold text-slate-900">Student_99</td>
                                                 <td className="py-3.5 font-bold">1220</td>
                                                 <td className="py-3.5">51%</td>
                                                 <td className="py-3.5">🇨🇴 CO</td>
-                                                <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-[#130a04] text-slate-500 border border-[#3c1e0a]/40 px-1.5 py-0.5">STUDENT</span></td>
+                                                <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-[#130a04] text-slate-600 border border-[#3c1e0a]/40 px-1.5 py-0.5">STUDENT</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -841,7 +841,7 @@ export default function ChessArenaPage() {
                                     <div className="absolute top-0 right-0 p-4 opacity-5 text-amber-400">
                                         <Award size={100} />
                                     </div>
-                                    <h3 className="text-base font-black uppercase tracking-wider mb-2 text-white border-b border-[#3c1e0a] pb-2">Los 3 Senderos del Ajedrez Cognitivo</h3>
+                                    <h3 className="text-base font-black uppercase tracking-wider mb-2 text-slate-900 border-b border-[#3c1e0a] pb-2">Los 3 Senderos del Ajedrez Cognitivo</h3>
                                     <p className="text-xs text-slate-300 leading-relaxed max-w-4xl">
                                         OnixLingo separa el entrenamiento mental de ajedrez en tres modalidades diferenciadas para entrenar áreas cognitivas específicas de un ejecutivo.
                                     </p>
@@ -854,11 +854,11 @@ export default function ChessArenaPage() {
                                             <div className="w-10 h-10 bg-blue-950/40 border border-blue-800/40 text-blue-400 flex items-center justify-center">
                                                 <BookOpen size={20} />
                                             </div>
-                                            <h4 className="font-bold text-base text-white uppercase">El Sendero del Aprendizaje</h4>
-                                            <p className="text-xs text-slate-350 leading-relaxed">
+                                            <h4 className="font-bold text-base text-slate-900 uppercase">El Sendero del Aprendizaje</h4>
+                                            <p className="text-xs text-slate-300 leading-relaxed">
                                                 Academia estructurada con 4 niveles generales que engloban 400 módulos de entrenamiento y 40,000 ejercicios de puzzle únicos. 
                                             </p>
-                                            <ul className="text-[10px] text-slate-400 space-y-1 pl-4 list-disc">
+                                            <ul className="text-[10px] text-slate-500 space-y-1 pl-4 list-disc">
                                                 <li>Entrena cálculo y visión espacial.</li>
                                                 <li>Basado en táctica de enroque y finales.</li>
                                                 <li>Resolución asíncrona sin temporizador.</li>
@@ -875,11 +875,11 @@ export default function ChessArenaPage() {
                                             <div className="w-10 h-10 bg-amber-950/40 border border-amber-800/40 text-amber-400 flex items-center justify-center">
                                                 <Brain size={20} />
                                             </div>
-                                            <h4 className="font-bold text-base text-white uppercase">Laboratorio de OnixAI</h4>
-                                            <p className="text-xs text-slate-350 leading-relaxed">
+                                            <h4 className="font-bold text-base text-slate-900 uppercase">Laboratorio de OnixAI</h4>
+                                            <p className="text-xs text-slate-300 leading-relaxed">
                                                 Enfréntate a nuestro motor inteligente en partidas completas. Utiliza algoritmos Minimax a profundidad 3 y adaptabilidad posicional según tu nivel de juego.
                                             </p>
-                                            <ul className="text-[10px] text-slate-400 space-y-1 pl-4 list-disc">
+                                            <ul className="text-[10px] text-slate-500 space-y-1 pl-4 list-disc">
                                                 <li>Entrena teoría de aperturas y estructuras.</li>
                                                 <li>Tres dificultades: Principiante, Manager, CEO.</li>
                                                 <li>Guardado local automático de partida.</li>
@@ -891,16 +891,16 @@ export default function ChessArenaPage() {
                                     </div>
 
                                     {/* PvP Arena */}
-                                    <div className="wood-panel p-6 rounded-none flex flex-col justify-between h-96 border-t-4 border-amber-500">
+                                    <div className="wood-panel p-6 rounded-none flex flex-col justify-between h-96 border-t-4 border-[#D4AF37]/30">
                                         <div className="space-y-4">
                                             <div className="w-10 h-10 bg-emerald-950/40 border border-emerald-800/40 text-emerald-400 flex items-center justify-center">
                                                 <Gamepad2 size={20} />
                                             </div>
-                                            <h4 className="font-bold text-base text-white uppercase">Arena de Combate PvP</h4>
-                                            <p className="text-xs text-slate-350 leading-relaxed">
+                                            <h4 className="font-bold text-base text-slate-900 uppercase">Arena de Combate PvP</h4>
+                                            <p className="text-xs text-slate-300 leading-relaxed">
                                                 Combates en vivo contra humanos en la plataforma o bots de contingencia automáticos. Modifica tu ELO de clasificación en la tabla global OnixLingo.
                                             </p>
-                                            <ul className="text-[10px] text-slate-400 space-y-1 pl-4 list-disc">
+                                            <ul className="text-[10px] text-slate-500 space-y-1 pl-4 list-disc">
                                                 <li>Entrena el autocontrol bajo tiempo límite.</li>
                                                 <li>Controles Bullet, Blitz y Rapid habilitados.</li>
                                                 <li>Conexión WebSocket directa y relojes activos.</li>

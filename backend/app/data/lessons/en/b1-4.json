@@ -1,0 +1,101 @@
+{
+  "id": "b1-4",
+  "title": "Basic Negotiations",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Vocabulary", "Negotiation", "Business"],
+  "completion_message": "¡Trato hecho! Has aprendido el vocabulario esencial para llevar a cabo una negociación básica en inglés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Negociaciones Básicas (Basic Negotiations)",
+      "parts": [
+        { "visual": "Términos clave: Make an offer (Hacer una oferta). Accept / Reject (Aceptar / Rechazar). Reach a deal (Llegar a un acuerdo). Compromise (Llegar a un punto medio / Ceder).", "audio": "Key terms. Make an offer. Accept or Reject. Reach a deal. Compromise means to find a middle ground." },
+        { "visual": "Frases útiles: That is out of the question (Eso es imposible / innegociable). \nWe need to find a middle ground (Necesitamos encontrar un punto medio). \nIt's a win-win situation (Es una situación en la que ambos ganan). \nLet's shake on it (Cerremos el trato con un apretón de manos).", "audio": "Useful phrases. That is out of the question. We need to find a middle ground. It's a win-win situation. Let's shake on it." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para completar el diálogo o concepto de negociación.",
+      "questions": [
+        { "id": "b1-4-q1", "type": "quiz_choice", "question": "I would like to make you an ____. (Oferta).", "options": ["offer", "offering", "deal", "ask"], "correct_answer": "offer", "explanation": "Make an offer = hacer una oferta." },
+        { "id": "b1-4-q2", "type": "quiz_choice", "question": "If you lower the price, we will ____ the offer. (Aceptar).", "options": ["accept", "except", "reject", "take"], "correct_answer": "accept", "explanation": "Accept = aceptar." },
+        { "id": "b1-4-q3", "type": "quiz_choice", "question": "Unfortunately, we have to ____ your proposal. (Rechazar).", "options": ["reject", "accept", "receive", "take"], "correct_answer": "reject", "explanation": "Reject = rechazar." },
+        { "id": "b1-4-q4", "type": "quiz_choice", "question": "I'm glad we could ____ a deal today. (Llegar a un acuerdo).", "options": ["reach", "arrive", "get", "make"], "correct_answer": "reach", "explanation": "Reach a deal = llegar a un acuerdo (alcanzar un trato)." },
+        { "id": "b1-4-q5", "type": "quiz_choice", "question": "Neither of us got exactly what we wanted, but we reached a ____. (Punto medio / Acuerdo mutuo cediendo).", "options": ["compromise", "promise", "deal", "win"], "correct_answer": "compromise", "explanation": "Compromise = ceder para llegar a un punto medio. (Falso amigo: no significa 'compromiso' de obligación)." },
+        { "id": "b1-4-q6", "type": "quiz_choice", "question": "A 50% discount is ____ of the question. (Imposible / Innegociable).", "options": ["out", "off", "up", "away"], "correct_answer": "out", "explanation": "Out of the question = totalmente imposible." },
+        { "id": "b1-4-q7", "type": "quiz_choice", "question": "We need to find a ____ ground to make this work. (Punto medio).", "options": ["middle", "center", "half", "mid"], "correct_answer": "middle", "explanation": "Find a middle ground = encontrar un punto medio." },
+        { "id": "b1-4-q8", "type": "quiz_choice", "question": "This agreement benefits both of us. It's a ____ situation. (Ganar-Ganar).", "options": ["win-win", "good-good", "up-up", "deal-deal"], "correct_answer": "win-win", "explanation": "Win-win situation = situación donde ambas partes ganan." },
+        { "id": "b1-4-q9", "type": "quiz_choice", "question": "Let's ____ on it to close the deal. (Dar un apretón de manos).", "options": ["shake", "touch", "hold", "take"], "correct_answer": "shake", "explanation": "Shake on it = darse la mano (para cerrar un trato)." },
+        { "id": "b1-4-q10", "type": "quiz_choice", "question": "What is your ____ line? (El mínimo aceptable / Lo último que puedes aceptar).", "options": ["bottom", "last", "final", "base"], "correct_answer": "bottom", "explanation": "Bottom line = el precio o condición mínima aceptable." },
+        { "id": "b1-4-q11", "type": "quiz_choice", "question": "If we buy in bulk, can you give us a ____? (Descuento).", "options": ["discount", "cheap", "lower", "cut"], "correct_answer": "discount", "explanation": "Discount = descuento." },
+        { "id": "b1-4-q12", "type": "quiz_choice", "question": "We are willing to ____ on the delivery time, but not on the price. (Negociar/Discutir).", "options": ["negotiate", "argue", "say", "talk"], "correct_answer": "negotiate", "explanation": "Negotiate = negociar." },
+        { "id": "b1-4-q13", "type": "quiz_choice", "question": "Since they rejected our offer, we made a ____. (Contraoferta).", "options": ["counteroffer", "new offer", "back offer", "second offer"], "correct_answer": "counteroffer", "explanation": "Counteroffer = contraoferta." },
+        { "id": "b1-4-q14", "type": "quiz_choice", "question": "I will have to ____ this over with my boss before saying yes. (Consultarlo / Hablarlo).", "options": ["talk", "speak", "say", "tell"], "correct_answer": "talk", "explanation": "Talk this over = discutirlo/consultarlo con alguien." },
+        { "id": "b1-4-q15", "type": "quiz_choice", "question": "Before we sign, let's review the ____ and conditions. (Términos).", "options": ["terms", "words", "rules", "laws"], "correct_answer": "terms", "explanation": "Terms and conditions = términos y condiciones." },
+        { "id": "b1-4-q16", "type": "quiz_choice", "question": "I think we have a ____. (Trato / Acuerdo).", "options": ["deal", "win", "shake", "promise"], "correct_answer": "deal", "explanation": "We have a deal = tenemos un trato." },
+        { "id": "b1-4-q17", "type": "quiz_choice", "question": "You drive a ____ bargain! (Eres duro negociando).", "options": ["hard", "strong", "difficult", "tough"], "correct_answer": "hard", "explanation": "Drive a hard bargain = ser un negociador duro o exigente." },
+        { "id": "b1-4-q18", "type": "quiz_choice", "question": "Let's put our cards on the ____. What do you really want? (Ser honestos / Jugar limpio).", "options": ["table", "desk", "floor", "chair"], "correct_answer": "table", "explanation": "Put our cards on the table = poner las cartas sobre la mesa (ser transparente)." },
+        { "id": "b1-4-q19", "type": "quiz_choice", "question": "We are deadlocked. We need a ____ to move forward. (Solución/Acuerdo).", "options": ["breakthrough", "breakout", "breakdown", "breakup"], "correct_answer": "breakthrough", "explanation": "Breakthrough = avance importante (para salir de un punto muerto)." },
+        { "id": "b1-4-q20", "type": "quiz_choice", "question": "Let's get down to ____. (Ir al grano / Empezar a hablar de negocios en serio).", "options": ["business", "work", "money", "talk"], "correct_answer": "business", "explanation": "Get down to business = ir al grano (empezar a trabajar/negociar)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de negociación correcta.",
+      "questions": [
+        { "id": "b1-4-f1", "type": "fill_input", "question": "Make an ____. (Oferta)", "correct_answer": "offer", "explanation": "offer." },
+        { "id": "b1-4-f2", "type": "fill_input", "question": "____ the offer. (Aceptar)", "correct_answer": "Accept", "explanation": "Accept." },
+        { "id": "b1-4-f3", "type": "fill_input", "question": "____ the offer. (Rechazar)", "correct_answer": "Reject", "explanation": "Reject." },
+        { "id": "b1-4-f4", "type": "fill_input", "question": "Reach a ____. (Trato/Acuerdo)", "correct_answer": "deal", "explanation": "deal." },
+        { "id": "b1-4-f5", "type": "fill_input", "question": "We reached a ____. (Punto medio/Cesión mutua - empieza con C)", "correct_answer": "compromise", "explanation": "compromise." },
+        { "id": "b1-4-f6", "type": "fill_input", "question": "Find a ____ ground. (Punto medio)", "correct_answer": "middle", "explanation": "middle." },
+        { "id": "b1-4-f7", "type": "fill_input", "question": "It's a ____ situation. (Ganar-ganar)", "correct_answer": "win-win", "explanation": "win-win." },
+        { "id": "b1-4-f8", "type": "fill_input", "question": "Let's ____ on it. (Darse la mano)", "correct_answer": "shake", "explanation": "shake." },
+        { "id": "b1-4-f9", "type": "fill_input", "question": "Give us a ____. (Descuento)", "correct_answer": "discount", "explanation": "discount." },
+        { "id": "b1-4-f10", "type": "fill_input", "question": "Let's get down to ____. (Negocios/Ir al grano)", "correct_answer": "business", "explanation": "business." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "b1-4-p1", "source": "Make an offer", "target": "Hacer una oferta"},
+        {"id": "b1-4-p2", "source": "Accept / Reject", "target": "Aceptar / Rechazar"},
+        {"id": "b1-4-p3", "source": "Reach a deal", "target": "Llegar a un acuerdo"},
+        {"id": "b1-4-p4", "source": "Compromise", "target": "Ceder / Punto medio"},
+        {"id": "b1-4-p5", "source": "Out of the question", "target": "Fuera de discusión / Imposible"},
+        {"id": "b1-4-p6", "source": "Middle ground", "target": "Punto medio"},
+        {"id": "b1-4-p7", "source": "Win-win situation", "target": "Situación donde ambos ganan"},
+        {"id": "b1-4-p8", "source": "Shake on it", "target": "Darse la mano (Cerrar trato)"},
+        {"id": "b1-4-p9", "source": "Counteroffer", "target": "Contraoferta"},
+        {"id": "b1-4-p10", "source": "Drive a hard bargain", "target": "Ser duro al negociar"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta sobre negociaciones.",
+      "questions": [
+        { "id": "b1-4-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I would like to make you an offer.", "options": ["I would like to make you an offer.", "I want to make you an offer.", "We would like to make you an offer.", "I like to make you an offer."], "correct_answer": "I would like to make you an offer.", "explanation": "Audio exacto." },
+        { "id": "b1-4-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have to reject your proposal.", "options": ["We have to reject your proposal.", "I have to reject your proposal.", "We have to reject your offer.", "They reject your proposal."], "correct_answer": "We have to reject your proposal.", "explanation": "Audio exacto." },
+        { "id": "b1-4-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I'm glad we could reach a deal.", "options": ["I'm glad we could reach a deal.", "I'm happy we could reach a deal.", "I'm glad we reached a deal.", "We are glad we could reach a deal."], "correct_answer": "I'm glad we could reach a deal.", "explanation": "Audio exacto." },
+        { "id": "b1-4-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We reached a compromise.", "options": ["We reached a compromise.", "They reached a compromise.", "I reached a compromise.", "We made a compromise."], "correct_answer": "We reached a compromise.", "explanation": "Audio exacto." },
+        { "id": "b1-4-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "That is out of the question.", "options": ["That is out of the question.", "This is out of the question.", "It is out of the question.", "That's out of the question."], "correct_answer": "That is out of the question.", "explanation": "Audio exacto." },
+        { "id": "b1-4-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to find a middle ground.", "options": ["We need to find a middle ground.", "I need to find a middle ground.", "We have to find a middle ground.", "They need to find a middle ground."], "correct_answer": "We need to find a middle ground.", "explanation": "Audio exacto." },
+        { "id": "b1-4-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's a win-win situation.", "options": ["It's a win-win situation.", "It is a win-win situation.", "This is a win-win situation.", "That's a win-win situation."], "correct_answer": "It's a win-win situation.", "explanation": "Audio exacto." },
+        { "id": "b1-4-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's shake on it.", "options": ["Let's shake on it.", "Let us shake on it.", "We should shake on it.", "Let's shake hands on it."], "correct_answer": "Let's shake on it.", "explanation": "Audio exacto." },
+        { "id": "b1-4-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You drive a hard bargain.", "options": ["You drive a hard bargain.", "You drive a good bargain.", "He drives a hard bargain.", "They drive a hard bargain."], "correct_answer": "You drive a hard bargain.", "explanation": "Audio exacto." },
+        { "id": "b1-4-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Let's get down to business.", "options": ["Let's get down to business.", "Let us get down to business.", "We should get down to business.", "Get down to business."], "correct_answer": "Let's get down to business.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

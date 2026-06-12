@@ -1,0 +1,92 @@
+{
+  "id": "zh-b2-87",
+  "title": "Somos Iguales",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Comparisons", "Adjectives"],
+  "completion_message": "¡Lo lograste! Ahora puedes comparar personas y objetos. Eres igual de inteligente que un nativo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Comparar con Igualdad",
+      "parts": [
+        {
+          "visual": "Igual / Lo mismo: 一样 (yíyàng)\n\nPara decir que dos cosas son iguales, en español decimos 'A es igual que B'. En chino, conectas los dos sujetos con 'y' (和 hé), y luego dices 'iguales'.\n\n- Yo y tú (somos) iguales: 我和你一样 (Wǒ hé nǐ yíyàng).\n- Su libro y mi libro son iguales: 他的书和我的书一样 (Tā de shū hé wǒ de shū yíyàng).\n- No son iguales: 不一样 (Bù yíyàng).",
+          "audio": "En chino, las matemáticas dictan la gramática. Para comparar dos cosas y decir que son iguales, simplemente las sumas con la palabra 'Y' (hé) y luego dices la palabra 'Igual', que es Yíyàng. Así que para decir 'Yo soy igual que tú', dices literalmente 'Yo y tú iguales'. Wǒ hé nǐ yíyàng. Si quieres decir que son diferentes, dices que 'No son iguales'. Bù yíyàng."
+        },
+        {
+          "visual": "Igual de [Adjetivo]: 一样 + Adjetivo\n\nSi quieres especificar en qué aspecto son iguales (igual de alto, igual de caro), simplemente agregas el adjetivo al final de la oración.\n\n- Alto: 高 (Gāo).\n- Yo soy igual de alto que tú: 我和你一样高 (Wǒ hé nǐ yíyàng gāo).\n- Este té es igual de bueno que ese té: 这个茶和那个茶一样好 (Zhège chá hé nàge chá yíyàng hǎo).\n- Ella es igual de hermosa que tú: 她和你一样漂亮 (Tā hé nǐ yíyàng piàoliang).",
+          "audio": "Si quieres decir 'Igual de alto', primero estableces la igualdad, y luego pones el adjetivo al final como un remate. Wǒ hé nǐ yíyàng gāo. Literalmente: Yo y tú iguales de altos. Tā hé nǐ yíyàng piàoliang. Ella y tú iguales de hermosas. Es una estructura muy limpia, sin las complicaciones de 'tan... como...' del español."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Encuentra las igualdades.",
+      "questions": [
+        { "id": "zh-b2-87-q1", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 一样 (yíyàng)?", "options": ["Igual / Lo mismo.", "Diferente.", "Mucho.", "Permitir."], "correct_answer": "Igual / Lo mismo.", "explanation": "Yíyàng es el núcleo de las comparaciones de igualdad." },
+        { "id": "zh-b2-87-q2", "type": "quiz_choice", "question": "¿Qué palabra se usa para conectar los dos objetos que se están comparando?", "options": ["Hé (和 - Y / Con).", "De (地 - Mente).", "Dōu (都 - Todos).", "Yǐjīng (已经 - Ya)."], "correct_answer": "Hé (和 - Y / Con).", "explanation": "A y B iguales -> A hé B yíyàng." },
+        { "id": "zh-b2-87-q3", "type": "quiz_choice", "question": "Traduce: 'Yo y tú (somos) iguales'.", "options": ["Wǒ hé nǐ yíyàng (我和你一样).", "Wǒ yíyàng nǐ (我一样你).", "Wǒ shì nǐ yíyàng (我是你一样).", "Wǒ hé nǐ bù yíyàng (我和你不一样)."], "correct_answer": "Wǒ hé nǐ yíyàng (我和你一样).", "explanation": "Yo (wǒ) + y (hé) + tú (nǐ) + iguales (yíyàng)." },
+        { "id": "zh-b2-87-q4", "type": "quiz_choice", "question": "Vocabulario: ¿Qué significa 高 (gāo)?", "options": ["Alto.", "Bajo.", "Feliz.", "Caro."], "correct_answer": "Alto.", "explanation": "Gāo se refiere a la altura de personas o cosas." },
+        { "id": "zh-b2-87-q5", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo soy igual de alto que tú'?", "options": ["Wǒ hé nǐ yíyàng gāo (我和你一样高).", "Wǒ gāo hé nǐ yíyàng (我高和你一样).", "Wǒ yíyàng hé nǐ gāo (我一样和你高).", "Wǒ hé nǐ gāo yíyàng (我和你高一样)."], "correct_answer": "Wǒ hé nǐ yíyàng gāo (我和你一样高).", "explanation": "A y B iguales (yíyàng) + adjetivo (gāo)." },
+        { "id": "zh-b2-87-q6", "type": "quiz_choice", "question": "¿Cómo dirías que dos cosas NO son iguales?", "options": ["Bù yíyàng (不一样).", "Méi yíyàng (没一样).", "Bù hé yíyàng (不和一样).", "Wǒ yíyàng bù (我一样不)."], "correct_answer": "Bù yíyàng (不一样).", "explanation": "Se niega la igualdad con Bù." },
+        { "id": "zh-b2-87-q7", "type": "quiz_choice", "question": "Traduce una queja de precios: 'Este té y ese té son igual de caros'. (Caro = guì).", "options": ["Zhège chá hé nàge chá yíyàng guì (这个茶和那个茶一样贵).", "Zhège chá hé nàge chá guì yíyàng (这个茶和那个茶贵一样).", "Zhège chá yíyàng nàge chá guì (这个茶一样那个茶贵).", "Yíyàng guì zhège chá nàge chá (一样贵这个茶那个茶)."], "correct_answer": "Zhège chá hé nàge chá yíyàng guì (这个茶和那个茶一样贵).", "explanation": "Este té (Zhège chá) + y (hé) + ese té (nàge chá) + igual de (yíyàng) + caro (guì)." },
+        { "id": "zh-b2-87-q8", "type": "quiz_choice", "question": "Combina con el verbo gustar (Lección 55): 'A él le gusta lo mismo que a mí' (Él y yo iguales que nos gusta).", "options": ["Tā hé wǒ yíyàng xǐhuan (他和我都一样喜欢).", "Tā xǐhuan hé wǒ yíyàng (他喜欢和我一样).", "Tā yíyàng xǐhuan wǒ (他一样喜欢我 - Él igualmente me gusta).", "Tā xǐhuan yíyàng wǒ (他喜欢一样我)."], "correct_answer": "Tā hé wǒ yíyàng xǐhuan (他和我都一样喜欢).", "explanation": "Él y yo (Tā hé wǒ) + iguales (yíyàng) + gustar (xǐhuan). A veces se le añade 'dōu' para enfatizar." },
+        { "id": "zh-b2-87-q9", "type": "quiz_choice", "question": "¿Es obligatorio el verbo 是 (shì - ser) en estas comparaciones? (Ej: Wǒ shì hé nǐ yíyàng).", "options": ["No, nunca se usa 是 (shì) con 'yíyàng' ni con adjetivos.", "Sí, es obligatorio.", "Depende del adjetivo.", "Solo si estás hablando en pasado."], "correct_answer": "No, nunca se usa 是 (shì) con 'yíyàng' ni con adjetivos.", "explanation": "En chino, los adjetivos y el 'yíyàng' actúan como verbos por sí mismos. No necesitan 'ser'." },
+        { "id": "zh-b2-87-q10", "type": "quiz_choice", "question": "Dile a tu amigo: 'Tú eres igual de bueno que él'.", "options": ["Nǐ hé tā yíyàng hǎo (你和他一样好).", "Nǐ hǎo hé tā yíyàng (你好和他一样).", "Nǐ hé tā hǎo yíyàng (你和他好一样).", "Nǐ yíyàng hǎo tā (你一样好他)."], "correct_answer": "Nǐ hé tā yíyàng hǎo (你和他一样好).", "explanation": "Tú y él (Nǐ hé tā) + iguales de (yíyàng) + buenos (hǎo)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe las palabras de igualdad.",
+      "questions": [
+        { "id": "zh-b2-87-f1", "type": "fill_input", "question": "Igual / Lo mismo: yi ____ (yang)", "correct_answer": "yang", "explanation": "yang" },
+        { "id": "zh-b2-87-f2", "type": "fill_input", "question": "Y / Con (Para conectar): ____ (he)", "correct_answer": "he", "explanation": "he" },
+        { "id": "zh-b2-87-f3", "type": "fill_input", "question": "Yo y tú (somos) iguales: wo he ni yi ____ (yang)", "correct_answer": "yang", "explanation": "yang" },
+        { "id": "zh-b2-87-f4", "type": "fill_input", "question": "Alto: ____ (gao)", "correct_answer": "gao", "explanation": "gao" },
+        { "id": "zh-b2-87-f5", "type": "fill_input", "question": "Igual de alto: yi yang ____ (gao)", "correct_answer": "gao", "explanation": "gao" },
+        { "id": "zh-b2-87-f6", "type": "fill_input", "question": "Yo soy igual de alto que tú: wo he ni yi yang ____ (gao)", "correct_answer": "gao", "explanation": "gao" },
+        { "id": "zh-b2-87-f7", "type": "fill_input", "question": "No son iguales: ____ yi yang (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-b2-87-f8", "type": "fill_input", "question": "Igual de caro: yi yang ____ (gui)", "correct_answer": "gui", "explanation": "gui" },
+        { "id": "zh-b2-87-f9", "type": "fill_input", "question": "Tú eres igual de bueno que él: ni he ta yi yang ____ (hao)", "correct_answer": "hao", "explanation": "hao" },
+        { "id": "zh-b2-87-f10", "type": "fill_input", "question": "Adverbio mente (Repaso): gao xing ____ (de)", "correct_answer": "de", "explanation": "de" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha las comparaciones.",
+      "questions": [
+        { "id": "zh-b2-87-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "一样", "options": ["Igual / Lo mismo", "Diferente", "Alto", "Bajo"], "correct_answer": "Igual / Lo mismo", "explanation": "El audio dice: Yíyàng." },
+        { "id": "zh-b2-87-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我和你一样", "options": ["Yo y tú somos iguales", "Yo y él somos iguales", "Yo no soy como tú", "Tú y él son iguales"], "correct_answer": "Yo y tú somos iguales", "explanation": "El audio dice: Wǒ hé nǐ yíyàng." },
+        { "id": "zh-b2-87-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "一样高", "options": ["Igual de alto", "Igual de grande", "Igual de caro", "Igual de bueno"], "correct_answer": "Igual de alto", "explanation": "El audio dice: Yíyàng gāo." },
+        { "id": "zh-b2-87-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "这个和那个不一样", "options": ["Este y ese no son iguales", "Este y ese son iguales", "Este es más caro", "Yo y tú somos diferentes"], "correct_answer": "Este y ese no son iguales", "explanation": "El audio dice: Zhège hé nàge bù yíyàng." },
+        { "id": "zh-b2-87-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "她和你一样漂亮", "options": ["Ella es igual de hermosa que tú", "Ella es igual de alta que tú", "Yo soy igual de hermoso que ella", "Ella no es hermosa"], "correct_answer": "Ella es igual de hermosa que tú", "explanation": "El audio dice: Tā hé nǐ yíyàng piàoliang." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Comparisons",
+      "pairs": [
+        {"id": "zh-b2-87-p1", "source": "一样 (yíyàng)", "target": "Igual / Lo mismo"},
+        {"id": "zh-b2-87-p2", "source": "不一样 (bù yíyàng)", "target": "No son iguales"},
+        {"id": "zh-b2-87-p3", "source": "和 (hé)", "target": "Y / Con"},
+        {"id": "zh-b2-87-p4", "source": "高 (gāo)", "target": "Alto"},
+        {"id": "zh-b2-87-p5", "source": "一样高 (yíyàng gāo)", "target": "Igual de alto"},
+        {"id": "zh-b2-87-p6", "source": "我和你 (wǒ hé nǐ)", "target": "Yo y tú"},
+        {"id": "zh-b2-87-p7", "source": "地 (de)", "target": "Sufijo mente (Adverbio)"},
+        {"id": "zh-b2-87-p8", "source": "让 (ràng)", "target": "Dejar / Permitir"},
+        {"id": "zh-b2-87-p9", "source": "多久 (duō jiǔ)", "target": "¿Cuánto tiempo?"},
+        {"id": "zh-b2-87-p10", "source": "多远 (duō yuǎn)", "target": "¿Qué tan lejos?"}
+      ]
+    }
+  ]
+}

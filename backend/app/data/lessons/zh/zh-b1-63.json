@@ -1,0 +1,92 @@
+{
+  "id": "zh-b1-63",
+  "title": "Máquinas Voladoras",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Transport", "Vehicles", "Vocabulary"],
+  "completion_message": "¡Excelente! Ya no te quedarás a pie. Entiendes la lógica detrás de los vehículos chinos y cómo usarlos correctamente.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Vehículos y Lógica China",
+      "parts": [
+        {
+          "visual": "Lógica de los vehículos:\n- Avión: 飞机 (fēijī). Fēi = volar, Jī = máquina. (Máquina voladora).\n- Autobús: 公共汽车 (gōnggòng qìchē). Gōnggòng = público, Qìchē = coche. (Coche público).\n- Bicicleta: 自行车 (zìxíngchē). Zì = sí mismo, Xíng = mover, Chē = vehículo. (Vehículo que se mueve por sí mismo).\n\nEl Verbo Sentarse / Tomar: 坐 (zuò)\nPara los vehículos en los que vas como pasajero (avión, autobús, tren, coche), se usa el verbo 坐 (zuò - sentarse).\n- Tomar un avión: 坐飞机 (Zuò fēijī).\n- Tomar un autobús: 坐公共汽车 (Zuò gōnggòng qìchē).",
+          "audio": "El chino es un idioma muy lógico, es como jugar al Pictionary. Avión se dice Fēijī. Fēi es volar y Jī es máquina. Una máquina que vuela. Autobús es Gōnggòng qìchē. Gōnggòng significa público, y qìchē es coche. El coche público. Y Bicicleta es Zìxíngchē. Literalmente: El vehículo que se mueve por sí mismo. Ahora, para usar estos vehículos no decimos 'tomar', usamos el verbo 'Sentarse', que es Zuò. Cuarto tono. Zuò. Así que para decir que viajas en avión, dices: Zuò fēijī. Sentarse en la máquina voladora."
+        },
+        {
+          "visual": "El Verbo Montar: 骑 (qí)\nSi el vehículo tiene dos ruedas o es un animal, no te 'sientas' adentro, te 'montas' encima. Se usa el verbo 骑 (qí - montar).\n- Montar en bicicleta: 骑自行车 (Qí zìxíngchē).\n\nCombinando con Ir (qù):\nPara decir 'Voy al hospital en avión' (suena exagerado, pero para el ejemplo sirve), en chino primero dices CÓMO vas y luego A DÓNDE vas.\n- Yo en avión voy al hospital: 我坐飞机去医院 (Wǒ zuò fēijī qù yīyuàn).\n- Yo en bicicleta voy a la escuela: 我骑自行车去学校 (Wǒ qí zìxíngchē qù xuéxiào).",
+          "audio": "Pero cuidado, hay una excepción importante. Si vas en bicicleta, moto o a caballo, no estás 'sentado adentro', estás montado encima. Para eso existe el verbo Qí. Segundo tono. Qí. Montar en bicicleta es Qí zìxíngchē. Ahora, la regla de oro para decir 'Voy a un lugar en un vehículo'. En español decimos 'Voy a China en avión'. En chino es al revés: Primero te subes al vehículo y luego vas al lugar. Wǒ zuò fēijī qù Zhōngguó. Literalmente: Yo me siento en el avión, para ir a China. Todo en estricto orden cronológico."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige tu transporte y llega a tiempo.",
+      "questions": [
+        { "id": "zh-b1-63-q1", "type": "quiz_choice", "question": "Lógica china: ¿Qué significa literalmente 飞机 (Fēijī - Avión)?", "options": ["Máquina de volar.", "Pájaro de hierro.", "Coche del cielo.", "Sombra eléctrica."], "correct_answer": "Máquina de volar.", "explanation": "Fēi (volar) + jī (máquina/aparato)." },
+        { "id": "zh-b1-63-q2", "type": "quiz_choice", "question": "Vocabulario: ¿Cómo se dice 'Autobús' (Coche público)?", "options": ["Gōnggòng qìchē (公共汽车).", "Zìxíngchē (自行车).", "Fēijī (飞机).", "Chūzūchē (出租车)."], "correct_answer": "Gōnggòng qìchē (公共汽车).", "explanation": "Gōnggòng (público) + qìchē (coche)." },
+        { "id": "zh-b1-63-q3", "type": "quiz_choice", "question": "Vocabulario: ¿Cómo se dice 'Bicicleta' (Vehículo que se mueve por sí mismo)?", "options": ["Zìxíngchē (自行车).", "Fēijī (飞机).", "Gōnggòng qìchē (公共汽车).", "Diànyǐng (电影)."], "correct_answer": "Zìxíngchē (自行车).", "explanation": "Zì (por sí mismo) + xíng (mover) + chē (vehículo)." },
+        { "id": "zh-b1-63-q4", "type": "quiz_choice", "question": "Gramática: ¿Qué verbo se usa para 'tomar' un avión o un autobús (como pasajero)?", "options": ["Zuò (坐 - Sentarse).", "Qí (骑 - Montar).", "Kàn (看 - Ver).", "Qù (去 - Ir)."], "correct_answer": "Zuò (坐 - Sentarse).", "explanation": "Te conviertes en pasajero y te sientas (zuò)." },
+        { "id": "zh-b1-63-q5", "type": "quiz_choice", "question": "Gramática: ¿Qué verbo se usa para 'montar' en bicicleta?", "options": ["Qí (骑 - Montar).", "Zuò (坐 - Sentarse).", "Mǎi (买 - Comprar).", "Kàn (看 - Ver)."], "correct_answer": "Qí (骑 - Montar).", "explanation": "Para vehículos de dos ruedas y caballos se usa Qí." },
+        { "id": "zh-b1-63-q6", "type": "quiz_choice", "question": "Traduce la acción cronológica: 'Yo voy a China en avión'.", "options": ["Wǒ zuò fēijī qù Zhōngguó (我坐飞机去中国).", "Wǒ qù Zhōngguó zuò fēijī (我去中国坐飞机).", "Wǒ fēijī qù Zhōngguó zuò (我飞机去中国坐).", "Wǒ zuò qù Zhōngguó fēijī (我坐去中国飞机)."], "correct_answer": "Wǒ zuò fēijī qù Zhōngguó (我坐飞机去中国).", "explanation": "Primero te sientas en el avión (zuò fēijī) y luego vas a China (qù Zhōngguó)." },
+        { "id": "zh-b1-63-q7", "type": "quiz_choice", "question": "Traduce: 'Ella va al hospital en autobús'.", "options": ["Tā zuò gōnggòng qìchē qù yīyuàn (她坐公共汽车去医院).", "Tā qù yīyuàn zuò gōnggòng qìchē (她去医院坐公共汽车).", "Tā qí gōnggòng qìchē qù yīyuàn (她骑公共汽车去医院).", "Tā zuò yīyuàn qù gōnggòng qìchē (她坐医院去公共汽车)."], "correct_answer": "Tā zuò gōnggòng qìchē qù yīyuàn (她坐公共汽车去医院).", "explanation": "Sentarse en autobús (zuò gōnggòng qìchē) + ir al hospital (qù yīyuàn)." },
+        { "id": "zh-b1-63-q8", "type": "quiz_choice", "question": "Traduce: 'Nosotros vamos al banco en bicicleta'.", "options": ["Wǒmen qí zìxíngchē qù yínháng (我们骑自行车去银行).", "Wǒmen zuò zìxíngchē qù yínháng (我们坐自行车去银行).", "Wǒmen qù yínháng qí zìxíngchē (我们去银行骑自行车).", "Wǒmen qí yínháng qù zìxíngchē (我们骑银行去自行车)."], "correct_answer": "Wǒmen qí zìxíngchē qù yínháng (我们骑自行车去银行).", "explanation": "Montar bici (qí zìxíngchē) + ir al banco (qù yínháng)." },
+        { "id": "zh-b1-63-q9", "type": "quiz_choice", "question": "Recuerda la palabra 'Lejos' (Yuǎn). Si digo 'Zhōngguó hěn yuǎn, wǒ děi zuò fēijī'. ¿Qué significa?", "options": ["China está muy lejos, tengo que tomar avión.", "China está muy cerca, voy en bicicleta.", "El avión es muy caro.", "No quiero ir a China en avión."], "correct_answer": "China está muy lejos, tengo que tomar avión.", "explanation": "Hěn yuǎn (muy lejos), děi (tengo que), zuò fēijī (tomar avión)." },
+        { "id": "zh-b1-63-q10", "type": "quiz_choice", "question": "¿Crees que se puede usar '坐' (Zuò - sentarse) con una bicicleta?", "options": ["Sí, pero significa que vas de paquete/pasajero atrás, no conduciendo.", "No, es un error gramatical grave.", "Sí, siempre se usa 'Zuò' con todos los vehículos.", "Solo si la bicicleta es pública."], "correct_answer": "Sí, pero significa que vas de paquete/pasajero atrás, no conduciendo.", "explanation": "Si dices 'Wǒ zuò zìxíngchē' implica que estás sentado en la parte de atrás mientras otro conduce (qí)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe los vehículos y verbos en pinyin. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-b1-63-f1", "type": "fill_input", "question": "Avión (Máquina de volar): fei ____ (ji)", "correct_answer": "ji", "explanation": "ji" },
+        { "id": "zh-b1-63-f2", "type": "fill_input", "question": "Autobús (Coche público): gong gong qi ____ (che)", "correct_answer": "che", "explanation": "che" },
+        { "id": "zh-b1-63-f3", "type": "fill_input", "question": "Bicicleta: zi xing ____ (che)", "correct_answer": "che", "explanation": "che" },
+        { "id": "zh-b1-63-f4", "type": "fill_input", "question": "Tomar (Sentarse): ____ (zuo)", "correct_answer": "zuo", "explanation": "zuo" },
+        { "id": "zh-b1-63-f5", "type": "fill_input", "question": "Montar (dos ruedas): ____ (qi)", "correct_answer": "qi", "explanation": "qi" },
+        { "id": "zh-b1-63-f6", "type": "fill_input", "question": "Tomar un avión: ____ fei ji (zuo)", "correct_answer": "zuo", "explanation": "zuo" },
+        { "id": "zh-b1-63-f7", "type": "fill_input", "question": "Montar bicicleta: ____ zi xing che (qi)", "correct_answer": "qi", "explanation": "qi" },
+        { "id": "zh-b1-63-f8", "type": "fill_input", "question": "Voy a China en avión: wo zuo fei ji ____ zhong guo (qu)", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-b1-63-f9", "type": "fill_input", "question": "Voy al hospital en autobús: wo zuo gong gong qi che qu yi ____ (yuan)", "correct_answer": "yuan", "explanation": "yuan" },
+        { "id": "zh-b1-63-f10", "type": "fill_input", "question": "Voy al banco en bicicleta: wo qi zi xing che qu yin ____ (hang)", "correct_answer": "hang", "explanation": "hang" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha cómo viajan y elige el transporte.",
+      "questions": [
+        { "id": "zh-b1-63-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "飞机", "options": ["Avión", "Bicicleta", "Autobús", "Tren"], "correct_answer": "Avión", "explanation": "El audio dice: Fēijī." },
+        { "id": "zh-b1-63-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "公共汽车", "options": ["Autobús", "Avión", "Bicicleta", "Coche"], "correct_answer": "Autobús", "explanation": "El audio dice: Gōnggòng qìchē." },
+        { "id": "zh-b1-63-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "自行车", "options": ["Bicicleta", "Autobús", "Coche", "Avión"], "correct_answer": "Bicicleta", "explanation": "El audio dice: Zìxíngchē." },
+        { "id": "zh-b1-63-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "我坐飞机去北京", "options": ["Voy a Beijing en avión", "Voy a Beijing en autobús", "Beijing está muy lejos", "No quiero tomar el avión"], "correct_answer": "Voy a Beijing en avión", "explanation": "El audio dice: Wǒ zuò fēijī qù Běijīng." },
+        { "id": "zh-b1-63-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "她骑自行车去学校", "options": ["Ella va a la escuela en bicicleta", "Ella va al hospital en autobús", "Ella toma el autobús", "Ella monta en bici"], "correct_answer": "Ella va a la escuela en bicicleta", "explanation": "El audio dice: Tā qí zìxíngchē qù xuéxiào." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Vehicles",
+      "pairs": [
+        {"id": "zh-b1-63-p1", "source": "飞机 (fēijī)", "target": "Avión (Máquina voladora)"},
+        {"id": "zh-b1-63-p2", "source": "公共汽车 (gōnggòng qìchē)", "target": "Autobús (Coche público)"},
+        {"id": "zh-b1-63-p3", "source": "自行车 (zìxíngchē)", "target": "Bicicleta (Mueve por sí mismo)"},
+        {"id": "zh-b1-63-p4", "source": "坐 (zuò)", "target": "Sentarse / Tomar (pasajero)"},
+        {"id": "zh-b1-63-p5", "source": "骑 (qí)", "target": "Montar (dos ruedas)"},
+        {"id": "zh-b1-63-p6", "source": "坐飞机 (zuò fēijī)", "target": "Tomar un avión"},
+        {"id": "zh-b1-63-p7", "source": "骑自行车 (qí zìxíngchē)", "target": "Montar bicicleta"},
+        {"id": "zh-b1-63-p8", "source": "远 (yuǎn)", "target": "Lejos"},
+        {"id": "zh-b1-63-p9", "source": "近 (jìn)", "target": "Cerca"},
+        {"id": "zh-b1-63-p10", "source": "从...到 (cóng...dào)", "target": "Desde...hasta"}
+      ]
+    }
+  ]
+}

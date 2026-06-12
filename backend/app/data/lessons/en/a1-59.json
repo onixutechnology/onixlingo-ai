@@ -1,0 +1,101 @@
+{
+  "id": "a1-59",
+  "title": "Weather & Small Talk",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Weather", "Small Talk", "Social"],
+  "completion_message": "¡Muy bien! Estás listo para hacer 'small talk' sobre el clima en tu trabajo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Clima y Small Talk",
+      "parts": [
+        { "visual": "Para preguntar el clima: 'What's the weather like?' (¿Cómo está el clima?).", "audio": "To ask about the weather: What's the weather like?" },
+        { "visual": "Para describir el clima usa 'It is' (It's): It's sunny (soleado), It's raining (lloviendo), It's cold (frío).", "audio": "To describe the weather use It is: It's sunny, It's raining, It's cold." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta sobre el clima.",
+      "questions": [
+        { "id": "a1-59-q1", "type": "quiz_choice", "question": "What's the ____ like today? (clima).", "options": ["weather", "whether", "water", "winter"], "correct_answer": "weather", "explanation": "El clima (weather)." },
+        { "id": "a1-59-q2", "type": "quiz_choice", "question": "It's very ____ today (caluroso).", "options": ["hot", "cold", "warm", "cool"], "correct_answer": "hot", "explanation": "Caluroso (hot)." },
+        { "id": "a1-59-q3", "type": "quiz_choice", "question": "It's ____ outside (frío).", "options": ["cold", "hot", "sun", "warm"], "correct_answer": "cold", "explanation": "Frío (cold)." },
+        { "id": "a1-59-q4", "type": "quiz_choice", "question": "It's ____ right now (lloviendo).", "options": ["raining", "rain", "rains", "rainy"], "correct_answer": "raining", "explanation": "Está lloviendo (raining, presente continuo)." },
+        { "id": "a1-59-q5", "type": "quiz_choice", "question": "I love ____ days (soleados).", "options": ["sunny", "sun", "sunshine", "hot"], "correct_answer": "sunny", "explanation": "Soleados (sunny)." },
+        { "id": "a1-59-q6", "type": "quiz_choice", "question": "It's very ____ today (nublado).", "options": ["cloudy", "cloud", "clouds", "clear"], "correct_answer": "cloudy", "explanation": "Nublado (cloudy)." },
+        { "id": "a1-59-q7", "type": "quiz_choice", "question": "It is ____ (nevando).", "options": ["snowing", "snow", "snows", "snowy"], "correct_answer": "snowing", "explanation": "Nevando (snowing)." },
+        { "id": "a1-59-q8", "type": "quiz_choice", "question": "The wind is strong. It's ____ (ventoso).", "options": ["windy", "wind", "winds", "breeze"], "correct_answer": "windy", "explanation": "Ventoso (windy)." },
+        { "id": "a1-59-q9", "type": "quiz_choice", "question": "It is ____ outside (cálido/agradable).", "options": ["warm", "hot", "cold", "freezing"], "correct_answer": "warm", "explanation": "Cálido (warm)." },
+        { "id": "a1-59-q10", "type": "quiz_choice", "question": "Take an ____, it's raining (paraguas).", "options": ["umbrella", "jacket", "hat", "shoes"], "correct_answer": "umbrella", "explanation": "Paraguas (umbrella)." },
+        { "id": "a1-59-q11", "type": "quiz_choice", "question": "It's ____ today (congelado/muy frío).", "options": ["freezing", "hot", "warm", "sunny"], "correct_answer": "freezing", "explanation": "Congelado/helado (freezing)." },
+        { "id": "a1-59-q12", "type": "quiz_choice", "question": "The weather is ____ today (agradable).", "options": ["nice", "bad", "terrible", "awful"], "correct_answer": "nice", "explanation": "Agradable (nice)." },
+        { "id": "a1-59-q13", "type": "quiz_choice", "question": "It's a ____ day (hermoso).", "options": ["beautiful", "bad", "ugly", "sad"], "correct_answer": "beautiful", "explanation": "Hermoso (beautiful)." },
+        { "id": "a1-59-q14", "type": "quiz_choice", "question": "I need my ____ (chaqueta/abrigo).", "options": ["jacket", "shoes", "glasses", "pants"], "correct_answer": "jacket", "explanation": "Chaqueta/abrigo (jacket o coat)." },
+        { "id": "a1-59-q15", "type": "quiz_choice", "question": "We are having a ____ (tormenta).", "options": ["storm", "rain", "wind", "cloud"], "correct_answer": "storm", "explanation": "Tormenta (storm)." },
+        { "id": "a1-59-q16", "type": "quiz_choice", "question": "Is it going to ____? (llover).", "options": ["rain", "raining", "rains", "sun"], "correct_answer": "rain", "explanation": "Llover en forma base (rain)." },
+        { "id": "a1-59-q17", "type": "quiz_choice", "question": "How is the ____ in London?", "options": ["weather", "climate", "water", "day"], "correct_answer": "weather", "explanation": "Clima diario (weather)." },
+        { "id": "a1-59-q18", "type": "quiz_choice", "question": "I hate ____ weather (malo).", "options": ["bad", "good", "nice", "great"], "correct_answer": "bad", "explanation": "Mal clima (bad weather)." },
+        { "id": "a1-59-q19", "type": "quiz_choice", "question": "The ____ is shining (sol).", "options": ["sun", "moon", "star", "cloud"], "correct_answer": "sun", "explanation": "El sol (the sun)." },
+        { "id": "a1-59-q20", "type": "quiz_choice", "question": "It's a bit ____ today (fresco/templado tirando a frío).", "options": ["cool", "hot", "warm", "boiling"], "correct_answer": "cool", "explanation": "Fresco (cool)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta.",
+      "questions": [
+        { "id": "a1-59-f1", "type": "fill_input", "question": "What's the ____ like? (Clima).", "correct_answer": "weather", "explanation": "Weather." },
+        { "id": "a1-59-f2", "type": "fill_input", "question": "It's ____ (Caluroso).", "correct_answer": "hot", "explanation": "Hot." },
+        { "id": "a1-59-f3", "type": "fill_input", "question": "It's ____ (Frío).", "correct_answer": "cold", "explanation": "Cold." },
+        { "id": "a1-59-f4", "type": "fill_input", "question": "It's ____ (Lloviendo).", "correct_answer": "raining", "explanation": "Raining." },
+        { "id": "a1-59-f5", "type": "fill_input", "question": "It's ____ (Soleado).", "correct_answer": "sunny", "explanation": "Sunny." },
+        { "id": "a1-59-f6", "type": "fill_input", "question": "It's ____ (Nublado).", "correct_answer": "cloudy", "explanation": "Cloudy." },
+        { "id": "a1-59-f7", "type": "fill_input", "question": "It's ____ (Nevando).", "correct_answer": "snowing", "explanation": "Snowing." },
+        { "id": "a1-59-f8", "type": "fill_input", "question": "Take an ____ (Paraguas).", "correct_answer": "umbrella", "explanation": "Umbrella." },
+        { "id": "a1-59-f9", "type": "fill_input", "question": "Nice ____ (Clima).", "correct_answer": "weather", "explanation": "Weather." },
+        { "id": "a1-59-f10", "type": "fill_input", "question": "I need my ____ (Chaqueta).", "correct_answer": "jacket", "explanation": "Jacket." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-59-p1", "source": "Weather", "target": "Clima"},
+        {"id": "a1-59-p2", "source": "Hot", "target": "Caluroso"},
+        {"id": "a1-59-p3", "source": "Cold", "target": "Frío"},
+        {"id": "a1-59-p4", "source": "Raining", "target": "Lloviendo"},
+        {"id": "a1-59-p5", "source": "Sunny", "target": "Soleado"},
+        {"id": "a1-59-p6", "source": "Cloudy", "target": "Nublado"},
+        {"id": "a1-59-p7", "source": "Snowing", "target": "Nevando"},
+        {"id": "a1-59-p8", "source": "Umbrella", "target": "Paraguas"},
+        {"id": "a1-59-p9", "source": "Windy", "target": "Ventoso"},
+        {"id": "a1-59-p10", "source": "Storm", "target": "Tormenta"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-59-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What's the weather like?", "options": ["What's the weather like?", "How is the weather like?", "What's the weather today?", "What is weather like?"], "correct_answer": "What's the weather like?", "explanation": "Audio exacto." },
+        { "id": "a1-59-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's raining.", "options": ["It's raining.", "It's rain.", "It rains.", "It is raining now."], "correct_answer": "It's raining.", "explanation": "Audio exacto." },
+        { "id": "a1-59-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's very cold.", "options": ["It's very cold.", "It's cold.", "It is very cold.", "It's too cold."], "correct_answer": "It's very cold.", "explanation": "Audio exacto." },
+        { "id": "a1-59-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's sunny today.", "options": ["It's sunny today.", "It's sunny.", "It is sunny today.", "It was sunny today."], "correct_answer": "It's sunny today.", "explanation": "Audio exacto." },
+        { "id": "a1-59-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Take an umbrella.", "options": ["Take an umbrella.", "Take your umbrella.", "Get an umbrella.", "Take a jacket."], "correct_answer": "Take an umbrella.", "explanation": "Audio exacto." },
+        { "id": "a1-59-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's cloudy.", "options": ["It's cloudy.", "It's clear.", "It's cold.", "It is cloudy."], "correct_answer": "It's cloudy.", "explanation": "Audio exacto." },
+        { "id": "a1-59-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Nice weather.", "options": ["Nice weather.", "Good weather.", "Bad weather.", "Great weather."], "correct_answer": "Nice weather.", "explanation": "Audio exacto." },
+        { "id": "a1-59-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's snowing.", "options": ["It's snowing.", "It's snow.", "It is snowing.", "It snows."], "correct_answer": "It's snowing.", "explanation": "Audio exacto." },
+        { "id": "a1-59-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need my jacket.", "options": ["I need my jacket.", "I need a jacket.", "I have a jacket.", "He needs my jacket."], "correct_answer": "I need my jacket.", "explanation": "Audio exacto." },
+        { "id": "a1-59-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It's windy.", "options": ["It's windy.", "It's wind.", "It is windy.", "It was windy."], "correct_answer": "It's windy.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

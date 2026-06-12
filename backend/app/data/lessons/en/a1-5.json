@@ -1,0 +1,107 @@
+{
+  "id": "a1-5",
+  "title": "Numbers & Prices",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Finance", "Dollars"],
+  "completion_message": "¡Negocio cerrado! Manejar el vocabulario financiero básico es el primer paso al éxito.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Dinero y Precios",
+      "parts": [
+        {
+          "visual": "Aprender a discutir precios usando la palabra 'dollars' es clave en cualquier negociación internacional.",
+          "audio": "Learning to discuss prices using the word 'dollars' is key in any international negotiation."
+        },
+        {
+          "visual": "Recuerda que en inglés la moneda suele ir antes del número escrito, pero se lee después ($50 = fifty dollars).",
+          "audio": "Remember that the currency goes before the number, but we read it after."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la respuesta correcta.",
+      "questions": [
+        { "id": "a1-5-q1", "type": "quiz_choice", "question": "That software costs fifty ____.", "options": ["dollars", "dollar", "money", "coins"], "correct_answer": "dollars", "explanation": "Plural para la moneda." },
+        { "id": "a1-5-q2", "type": "quiz_choice", "question": "I only have one ____.", "options": ["dollar", "dollars", "money", "cash"], "correct_answer": "dollar", "explanation": "Singular cuando es sólo uno." },
+        { "id": "a1-5-q3", "type": "quiz_choice", "question": "A billion ____ is a lot of money.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Plural." },
+        { "id": "a1-5-q4", "type": "quiz_choice", "question": "The invoice is for 500 ____.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Plural en facturas." },
+        { "id": "a1-5-q5", "type": "quiz_choice", "question": "It makes good ____ and sense.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Expresión: 'Makes dollars and cents' (juego de palabras con sentido/centavos)." },
+        { "id": "a1-5-q6", "type": "quiz_choice", "question": "How many ____ does this cost?", "options": ["dollars", "dollar", "money", "price"], "correct_answer": "dollars", "explanation": "Plural contable con 'How many'." },
+        { "id": "a1-5-q7", "type": "quiz_choice", "question": "He earns a million ____ a year.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Sueldos en dólares." },
+        { "id": "a1-5-q8", "type": "quiz_choice", "question": "The budget was cut by thousands of ____.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Plural." },
+        { "id": "a1-5-q9", "type": "quiz_choice", "question": "We need to save every ____.", "options": ["dollar", "dollars", "money", "cash"], "correct_answer": "dollar", "explanation": "Con 'every' usamos singular." },
+        { "id": "a1-5-q10", "type": "quiz_choice", "question": "Can you lend me a ____?", "options": ["dollar", "dollars", "money", "cash"], "correct_answer": "dollar", "explanation": "'A' implica uno, singular." },
+        { "id": "a1-5-q11", "type": "quiz_choice", "question": "The price is five ____ and fifty cents.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Plural." },
+        { "id": "a1-5-q12", "type": "quiz_choice", "question": "We deal in US ____.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Moneda oficial." },
+        { "id": "a1-5-q13", "type": "quiz_choice", "question": "A top-dollar executive means they are paid many ____.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Plural." },
+        { "id": "a1-5-q14", "type": "quiz_choice", "question": "I paid ten ____ for this coffee.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Plural." },
+        { "id": "a1-5-q15", "type": "quiz_choice", "question": "Our goal is to reach a billion ____ in sales.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Metas de ventas." },
+        { "id": "a1-5-q16", "type": "quiz_choice", "question": "That is a multi-million ____ deal.", "options": ["dollar", "dollars", "money", "cash"], "correct_answer": "dollar", "explanation": "Como adjetivo modificador de 'deal', va en singular." },
+        { "id": "a1-5-q17", "type": "quiz_choice", "question": "Invest your ____ wisely.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Tus dólares/fondos." },
+        { "id": "a1-5-q18", "type": "quiz_choice", "question": "We lost thousands of ____.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Pérdidas en plural." },
+        { "id": "a1-5-q19", "type": "quiz_choice", "question": "A hundred ____ is a fair price.", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Plural." },
+        { "id": "a1-5-q20", "type": "quiz_choice", "question": "Do you accept Canadian ____?", "options": ["dollars", "dollar", "money", "cash"], "correct_answer": "dollars", "explanation": "Moneda canadiense." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta (dollar o dollars).",
+      "questions": [
+        { "id": "a1-5-f1", "type": "fill_input", "question": "It costs ten ____.", "correct_answer": "dollars", "explanation": "Plural." },
+        { "id": "a1-5-f2", "type": "fill_input", "question": "Here is one ____.", "correct_answer": "dollar", "explanation": "Singular." },
+        { "id": "a1-5-f3", "type": "fill_input", "question": "A million ____ contract.", "correct_answer": "dollar", "explanation": "Adjetivo singular." },
+        { "id": "a1-5-f4", "type": "fill_input", "question": "We accept US ____.", "correct_answer": "dollars", "explanation": "Plural." },
+        { "id": "a1-5-f5", "type": "fill_input", "question": "Fifty ____ is too much.", "correct_answer": "dollars", "explanation": "Plural." },
+        { "id": "a1-5-f6", "type": "fill_input", "question": "Save every ____.", "correct_answer": "dollar", "explanation": "Singular con every." },
+        { "id": "a1-5-f7", "type": "fill_input", "question": "Thousands of ____ were spent.", "correct_answer": "dollars", "explanation": "Plural." },
+        { "id": "a1-5-f8", "type": "fill_input", "question": "I need change for a ____.", "correct_answer": "dollar", "explanation": "Billete de uno." },
+        { "id": "a1-5-f9", "type": "fill_input", "question": "A billion ____ industry.", "correct_answer": "dollar", "explanation": "Adjetivo." },
+        { "id": "a1-5-f10", "type": "fill_input", "question": "Five ____ and ten cents.", "correct_answer": "dollars", "explanation": "Plural." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-5-p1", "source": "Dollars", "target": "Dólares"},
+        {"id": "a1-5-p2", "source": "Money", "target": "Dinero"},
+        {"id": "a1-5-p3", "source": "Cash", "target": "Efectivo"},
+        {"id": "a1-5-p4", "source": "Credit", "target": "Crédito"},
+        {"id": "a1-5-p5", "source": "Card", "target": "Tarjeta"},
+        {"id": "a1-5-p6", "source": "Invoice", "target": "Factura"},
+        {"id": "a1-5-p7", "source": "Price", "target": "Precio"},
+        {"id": "a1-5-p8", "source": "Cost", "target": "Costo"},
+        {"id": "a1-5-p9", "source": "Budget", "target": "Presupuesto"},
+        {"id": "a1-5-p10", "source": "Sales", "target": "Ventas"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-5-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It costs fifty dollars.", "options": ["It costs fifty dollars.", "It costs fifteen dollars.", "It cost fifty dollar.", "It is fifty dollars."], "correct_answer": "It costs fifty dollars.", "explanation": "Audio exacto." },
+        { "id": "a1-5-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have one dollar.", "options": ["I have one dollar.", "I have some dollars.", "I had one dollar.", "I have a dollar."], "correct_answer": "I have one dollar.", "explanation": "Audio exacto." },
+        { "id": "a1-5-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Millions of dollars.", "options": ["Millions of dollars.", "Million of dollar.", "Millions of dollar.", "Million of dollars."], "correct_answer": "Millions of dollars.", "explanation": "Audio exacto." },
+        { "id": "a1-5-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We accept dollars.", "options": ["We accept dollars.", "They accept dollars.", "We accepted dollars.", "We accept dollar."], "correct_answer": "We accept dollars.", "explanation": "Audio exacto." },
+        { "id": "a1-5-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Save every dollar.", "options": ["Save every dollar.", "Save every dollars.", "Safe every dollar.", "Save your dollar."], "correct_answer": "Save every dollar.", "explanation": "Audio exacto." },
+        { "id": "a1-5-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a billion dollar deal.", "options": ["It is a billion dollar deal.", "It is a million dollar deal.", "It is a billion dollars deal.", "Is it a billion dollar deal?"], "correct_answer": "It is a billion dollar deal.", "explanation": "Audio exacto." },
+        { "id": "a1-5-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I borrow a dollar?", "options": ["Can I borrow a dollar?", "Can I borrow a dollars?", "Can you borrow a dollar?", "Can I bring a dollar?"], "correct_answer": "Can I borrow a dollar?", "explanation": "Audio exacto." },
+        { "id": "a1-5-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The price is ten dollars.", "options": ["The price is ten dollars.", "The prize is ten dollars.", "The price is two dollars.", "The price was ten dollars."], "correct_answer": "The price is ten dollars.", "explanation": "Audio exacto." },
+        { "id": "a1-5-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I lost twenty dollars.", "options": ["I lost twenty dollars.", "I lose twenty dollars.", "I lost twelve dollars.", "I lost twenty dollar."], "correct_answer": "I lost twenty dollars.", "explanation": "Audio exacto." },
+        { "id": "a1-5-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He earns a million dollars.", "options": ["He earns a million dollars.", "She earns a million dollars.", "He earned a million dollars.", "He earns a million dollar."], "correct_answer": "He earns a million dollars.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

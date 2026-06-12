@@ -1,0 +1,101 @@
+{
+  "id": "b1-6",
+  "title": "Giving Advice (Should / Ought to)",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Modals", "Advice", "Business"],
+  "completion_message": "¡Muy bien! Dar consejos profesionales de manera educada es una habilidad clave en el entorno laboral.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Dando Consejos (Giving Advice)",
+      "parts": [
+        { "visual": "SHOULD (Debería): Es el modal más común para dar un consejo u opinión. \nEj: You SHOULD talk to the manager (Deberías hablar con el gerente). \nYou SHOULDN'T send that email (No deberías enviar ese correo).", "audio": "Should is the most common modal verb for giving advice. For example: You should talk to the manager. Or in the negative: You shouldn't send that email." },
+        { "visual": "OUGHT TO (Debería): Significa exactamente lo mismo que 'Should', pero es un poco más formal. OJO: Siempre lleva 'to'. \nEj: We OUGHT TO hire more staff (Deberíamos contratar más personal).", "audio": "Ought to means exactly the same as should, but it is a little more formal. Remember, it always takes 'to'. For example: We ought to hire more staff." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta para dar o pedir un consejo.",
+      "questions": [
+        { "id": "b1-6-q1", "type": "quiz_choice", "question": "You look very tired. You ____ take a break. (Deberías).", "options": ["should", "should to", "ought", "mustn't"], "correct_answer": "should", "explanation": "'Should' nunca lleva 'to' después." },
+        { "id": "b1-6-q2", "type": "quiz_choice", "question": "The deadline is tomorrow. We ____ to finish this tonight. (Deberíamos - formal).", "options": ["ought", "should", "must", "have"], "correct_answer": "ought", "explanation": "Como la oración ya tiene 'to' (to finish), la respuesta correcta es 'ought'." },
+        { "id": "b1-6-q3", "type": "quiz_choice", "question": "They ____ invest in that company. It's too risky. (No deberían).", "options": ["shouldn't", "should", "ought", "don't should"], "correct_answer": "shouldn't", "explanation": "Negativo de should = shouldn't (should not)." },
+        { "id": "b1-6-q4", "type": "quiz_choice", "question": "What ____ I do about the angry client? (¿Qué debería hacer?).", "options": ["should", "ought", "ought to", "must"], "correct_answer": "should", "explanation": "Para preguntas pidiendo consejo, usamos 'should' (What should I do?)." },
+        { "id": "b1-6-q5", "type": "quiz_choice", "question": "You ____ to speak with human resources about this issue. (Deberías).", "options": ["ought", "should", "can", "will"], "correct_answer": "ought", "explanation": "Otra vez, el 'to' ya está en la frase, así que es 'ought' (ought to)." },
+        { "id": "b1-6-q6", "type": "quiz_choice", "question": "I think we ____ delay the product launch. The software has bugs. (Deberíamos).", "options": ["should", "should to", "ought", "ought not"], "correct_answer": "should", "explanation": "Should + verbo base (should delay)." },
+        { "id": "b1-6-q7", "type": "quiz_choice", "question": "He ____ arrived late to the meeting again. (No debería haber). Wait! This is basic advice. He ____ arrive late. (No debería).", "options": ["shouldn't", "oughtn't", "don't should", "mustn't to"], "correct_answer": "shouldn't", "explanation": "Shouldn't + verbo base (shouldn't arrive)." },
+        { "id": "b1-6-q8", "type": "quiz_choice", "question": "____ we accept their offer? (¿Deberíamos...?).", "options": ["Should", "Ought", "Do we should", "Ought to"], "correct_answer": "Should", "explanation": "Should + sujeto + verbo para preguntas." },
+        { "id": "b1-6-q9", "type": "quiz_choice", "question": "If you want a promotion, you ____ work harder. (Deberías).", "options": ["should", "ought", "should to", "oughtn't"], "correct_answer": "should", "explanation": "Should work harder." },
+        { "id": "b1-6-q10", "type": "quiz_choice", "question": "We ____ to review the budget before the meeting. (Deberíamos).", "options": ["ought", "should", "must", "have"], "correct_answer": "ought", "explanation": "We ought to review..." },
+        { "id": "b1-6-q11", "type": "quiz_choice", "question": "You ____ open attachments from unknown senders. (No deberías).", "options": ["shouldn't", "should", "ought to", "don't ought"], "correct_answer": "shouldn't", "explanation": "Consejo negativo fuerte." },
+        { "id": "b1-6-q12", "type": "quiz_choice", "question": "I ____ complain to the manager, but I don't want problems. (Debería).", "options": ["should", "ought", "should to", "must"], "correct_answer": "should", "explanation": "I should complain (Yo debería quejarme)." },
+        { "id": "b1-6-q13", "type": "quiz_choice", "question": "She ____ to apologize to the client. (Debería).", "options": ["ought", "should", "must", "can"], "correct_answer": "ought", "explanation": "She ought to apologize." },
+        { "id": "b1-6-q14", "type": "quiz_choice", "question": "____ I wear a suit to the interview? (¿Debería...?).", "options": ["Should", "Ought", "Do", "Am I"], "correct_answer": "Should", "explanation": "Should I wear a suit? (¿Debería usar traje?)." },
+        { "id": "b1-6-q15", "type": "quiz_choice", "question": "The company ____ improve its customer service. (Debería).", "options": ["should", "ought", "should to", "must to"], "correct_answer": "should", "explanation": "Should improve." },
+        { "id": "b1-6-q16", "type": "quiz_choice", "question": "They ____ hire someone with more experience. (Deberían).", "options": ["should", "ought", "should to", "have"], "correct_answer": "should", "explanation": "They should hire." },
+        { "id": "b1-6-q17", "type": "quiz_choice", "question": "We ____ to consider all the options before deciding. (Deberíamos).", "options": ["ought", "should", "must", "need"], "correct_answer": "ought", "explanation": "Ought to consider." },
+        { "id": "b1-6-q18", "type": "quiz_choice", "question": "You ____ be rude to the customers. (No deberías).", "options": ["shouldn't", "should", "ought to", "don't should"], "correct_answer": "shouldn't", "explanation": "You shouldn't be rude." },
+        { "id": "b1-6-q19", "type": "quiz_choice", "question": "____ we call the supplier now? (¿Deberíamos...?).", "options": ["Should", "Ought", "Ought we", "Do we"], "correct_answer": "Should", "explanation": "Should we call...?" },
+        { "id": "b1-6-q20", "type": "quiz_choice", "question": "I really think you ____ to take a few days off. (Deberías).", "options": ["ought", "should", "must", "can"], "correct_answer": "ought", "explanation": "Ought to take." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe 'should', 'shouldn't' o 'ought' según el contexto.",
+      "questions": [
+        { "id": "b1-6-f1", "type": "fill_input", "question": "You ____ talk to him. (Deberías - modal más común)", "correct_answer": "should", "explanation": "should." },
+        { "id": "b1-6-f2", "type": "fill_input", "question": "You ____ to talk to him. (Deberías - formal)", "correct_answer": "ought", "explanation": "ought (ya tiene el 'to')." },
+        { "id": "b1-6-f3", "type": "fill_input", "question": "We ____ invest in that. It's bad. (No deberíamos)", "correct_answer": "shouldn't", "explanation": "shouldn't." },
+        { "id": "b1-6-f4", "type": "fill_input", "question": "What ____ I do? (¿Qué debería yo...?)", "correct_answer": "should", "explanation": "should." },
+        { "id": "b1-6-f5", "type": "fill_input", "question": "They ____ to hire her. (Deberían - formal)", "correct_answer": "ought", "explanation": "ought." },
+        { "id": "b1-6-f6", "type": "fill_input", "question": "You ____ be late. (No deberías)", "correct_answer": "shouldn't", "explanation": "shouldn't." },
+        { "id": "b1-6-f7", "type": "fill_input", "question": "____ we accept? (¿Deberíamos...?)", "correct_answer": "Should", "explanation": "Should." },
+        { "id": "b1-6-f8", "type": "fill_input", "question": "She ____ to apologize. (Debería - formal)", "correct_answer": "ought", "explanation": "ought." },
+        { "id": "b1-6-f9", "type": "fill_input", "question": "You ____ work so hard. (No deberías)", "correct_answer": "shouldn't", "explanation": "shouldn't." },
+        { "id": "b1-6-f10", "type": "fill_input", "question": "I think you ____ ask for a raise. (Deberías)", "correct_answer": "should", "explanation": "should." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Grammar Match",
+      "pairs": [
+        {"id": "b1-6-p1", "source": "You should ask", "target": "Deberías preguntar"},
+        {"id": "b1-6-p2", "source": "You ought to ask", "target": "Deberías preguntar (formal)"},
+        {"id": "b1-6-p3", "source": "You shouldn't ask", "target": "No deberías preguntar"},
+        {"id": "b1-6-p4", "source": "Should I ask?", "target": "¿Debería preguntar?"},
+        {"id": "b1-6-p5", "source": "What should I do?", "target": "¿Qué debería hacer?"},
+        {"id": "b1-6-p6", "source": "We should hire him", "target": "Deberíamos contratarlo"},
+        {"id": "b1-6-p7", "source": "We ought to hire him", "target": "Deberíamos contratarlo (formal)"},
+        {"id": "b1-6-p8", "source": "We shouldn't hire him", "target": "No deberíamos contratarlo"},
+        {"id": "b1-6-p9", "source": "Should we accept?", "target": "¿Deberíamos aceptar?"},
+        {"id": "b1-6-p10", "source": "I think you should", "target": "Creo que deberías"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase que da un consejo.",
+      "questions": [
+        { "id": "b1-6-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You should talk to the manager.", "options": ["You should talk to the manager.", "You shouldn't talk to the manager.", "You ought to talk to the manager.", "Should I talk to the manager?"], "correct_answer": "You should talk to the manager.", "explanation": "Audio exacto." },
+        { "id": "b1-6-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We ought to hire more staff.", "options": ["We ought to hire more staff.", "We should hire more staff.", "They ought to hire more staff.", "We ought to fire more staff."], "correct_answer": "We ought to hire more staff.", "explanation": "Audio exacto." },
+        { "id": "b1-6-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You shouldn't send that email.", "options": ["You shouldn't send that email.", "You should send that email.", "You shouldn't read that email.", "I shouldn't send that email."], "correct_answer": "You shouldn't send that email.", "explanation": "Audio exacto." },
+        { "id": "b1-6-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What should I do?", "options": ["What should I do?", "What should we do?", "Why should I do it?", "What can I do?"], "correct_answer": "What should I do?", "explanation": "Audio exacto." },
+        { "id": "b1-6-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She ought to apologize.", "options": ["She ought to apologize.", "She should apologize.", "He ought to apologize.", "We ought to apologize."], "correct_answer": "She ought to apologize.", "explanation": "Audio exacto." },
+        { "id": "b1-6-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Should we accept the offer?", "options": ["Should we accept the offer?", "Should I accept the offer?", "Could we accept the offer?", "Should we accept their offer?"], "correct_answer": "Should we accept the offer?", "explanation": "Audio exacto." },
+        { "id": "b1-6-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You shouldn't be late.", "options": ["You shouldn't be late.", "You shouldn't be rude.", "He shouldn't be late.", "You should not be late."], "correct_answer": "You shouldn't be late.", "explanation": "Audio exacto." },
+        { "id": "b1-6-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I think you should ask for a raise.", "options": ["I think you should ask for a raise.", "I think you should ask for a promotion.", "We think you should ask for a raise.", "I think he should ask for a raise."], "correct_answer": "I think you should ask for a raise.", "explanation": "Audio exacto." },
+        { "id": "b1-6-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They ought to review the contract.", "options": ["They ought to review the contract.", "We ought to review the contract.", "They should review the contract.", "They ought to sign the contract."], "correct_answer": "They ought to review the contract.", "explanation": "Audio exacto." },
+        { "id": "b1-6-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Should I wear a suit?", "options": ["Should I wear a suit?", "Should he wear a suit?", "Should I buy a suit?", "Must I wear a suit?"], "correct_answer": "Should I wear a suit?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

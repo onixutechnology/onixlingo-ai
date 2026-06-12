@@ -68,24 +68,24 @@ export default function PwaInstallPrompt() {
   };
 
   return (
-    <div className="fixed bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 sm:left-auto sm:right-6 sm:translate-x-0 z-[100] w-[90%] max-w-[340px] bg-white border border-gray-200 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-3 flex flex-row items-center gap-3 text-slate-800 animate-in slide-in-from-bottom-10 fade-in duration-500">
-      <div className="bg-teal-50 text-teal-600 p-2.5 rounded-xl shrink-0">
+    <div className="fixed bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 sm:left-auto sm:right-6 sm:translate-x-0 z-[100] w-[90%] max-w-[340px] bg-white border border-gray-200 rounded-none shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-3 flex flex-row items-center gap-3 text-slate-900 animate-in slide-in-from-bottom-10 fade-in duration-500">
+      <div className="bg-teal-50 text-[#D4AF37] p-2.5 rounded-none shrink-0">
         <Download size={20} strokeWidth={2.5} />
       </div>
       <div className="flex-1 text-left">
         <h4 className="font-bold text-sm text-slate-900 tracking-tight">¡Lleva OnixLingo contigo!</h4>
-        <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">Instala la app y úsala directo desde tu inicio.</p>
+        <p className="text-[11px] text-slate-600 mt-0.5 leading-snug">Instala la app y úsala directo desde tu inicio.</p>
       </div>
       <div className="flex gap-1.5 shrink-0 items-center">
         <button 
           onClick={handleInstall}
-          className="bg-teal-600 hover:bg-teal-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all shadow-sm active:scale-95"
+          className="bg-[#D4AF37]/20 hover:bg-teal-700 text-slate-900 px-3.5 py-1.5 rounded-none text-xs font-bold transition-all shadow-none active:scale-95"
         >
           Instalar
         </button>
         <button 
           onClick={() => setShowPrompt(false)}
-          className="hover:bg-gray-100 p-1.5 rounded-lg text-gray-400 hover:text-gray-600 transition-colors active:scale-95"
+          className="hover:bg-white p-1.5 rounded-none text-slate-600 hover:text-gray-600 transition-colors active:scale-95"
           aria-label="Cerrar"
         >
           <X size={16} strokeWidth={2.5} />

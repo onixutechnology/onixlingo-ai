@@ -1,565 +1,94 @@
 {
   "id": "fr-a2-22",
-  "title": "Perfil de la Empresa",
+  "title": "Les Pronoms COI",
+  "version": "4.0-ARTISAN",
   "level": "A2",
-  "description": "Describir el sector y tamaño básico de la empresa.",
-  "total_xp": 300,
-  "difficulty": "easy",
-  "tags": [
-    "a2",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Pronouns", "COI", "Indirect Object"],
+  "completion_message": "¡Excelente! Ahora sabes decir 'Le hablo' y 'Les escribo' como todo un experto. ¡Has dominado el temido pronombre LUI!",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Perfil de la Empresa",
+      "title": "A Él, A Ella, A Ellos (A2)",
       "parts": [
         {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau A2 • Leçon A2-22 de 200\nSujet: Perfil de la Empresa\n\nConcept Clé:\n☞ 'SOCIÉTÉ'\n\n[Point Grammatical - Enfoque Gramatical]\n- Le passé composé avec l'auxiliaire avoir et être (ex: 'nous avons reçu société').\\n- Les adjectifs possessifs (mon, ton, son, notre, votre, leur).\\n- Clé Didactique : Raconter des événements passés et des activités de bureau quotidiennes.",
-          "audio": "Bienvenue à la leçon A2-22 sur Perfil de la Empresa. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : société."
+          "visual": "A diferencia de los pronombres directos (Lo/La), los Pronombres Indirectos (COI) reemplazan a PERSONAS introducidas por la preposición 'À'.\n(Es decir: A él, A ella, A ellos).\n\nAquí viene la regla más importante que confunde a muchos:\nPara decir 'A él' O 'A ella', usamos UN SOLO pronombre: LUI.\n\n- Je parle À PAUL -> Je LUI parle (Yo LE hablo [a él]).\n- Je parle À MARIE -> Je LUI parle (Yo LE hablo [a ella]).\n¡LUI no tiene género en este contexto!",
+          "audio": "En la lección pasada vimos cómo decir 'lo veo' o 'la veo'. Pero, ¿qué pasa con verbos como hablar, telefonear o escribir? En francés, no dices 'Yo hablo Paul', dices 'Yo hablo A Paul' (Je parle à Paul). Cuando hay una preposición 'A' dirigida a una persona, usamos los pronombres indirectos. Y aquí hay un secreto que confunde a muchos: para decir 'LE hablo', ya sea a un hombre o a una mujer, se usa la misma palabra: L U I. Por lo tanto, 'Je LUI parle' puede significar 'Yo le hablo a él', o 'Yo le hablo a ella'. ¡No tiene género!"
         },
         {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'société' (Traducción/Uso: Describir el sector y tamaño básico de la empresa.)\n- Application Pratique : 'Nous devons intégrer société pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : La lettre 'e' finale dans 'société' est généralement muette.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : société. Répétez après moi : société."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Au niveau A2, la ponctualité est essentielle en France; arriver 5 minutes avant l'heure démontre du professionnalisme.\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
+          "visual": "Para el PLURAL (A ellos / A ellas), usamos la palabra LEUR.\n\n- J'écris AUX professeurs (a los profesores) -> Je LEUR écris (Yo LES escribo).\n- Je téléphone À MES SOEURS (a mis hermanas) -> Je LEUR téléphone (Yo LES telefoneo).\n\n¡Atención a la posición!\nAl igual que los pronombres directos, los pronombres indirectos (LUI y LEUR) van siempre ANTES del verbo.\n- Sujeto + LUI/LEUR + Verbo.\n- NUNCA digas 'Je parle lui'. Siempre: 'Je LUI parle'.",
+          "audio": "Para el plural es aún más fácil. Si le hablas o le escribes a varias personas, usas la palabra L E U R. Por ejemplo, si dices 'Escribo a mis padres', en francés es 'J'écris à mes parents'. Como es a ellos, reemplazamos 'à mes parents' por LEUR, y lo ponemos ANTES del verbo, como siempre. El resultado es: 'Je LEUR écris'. Y recuerda, 'Je leur écris' puede significar 'Yo les escribo a ellos' o 'Yo les escribo a ellas'. ¡LEUR tampoco tiene género!"
         }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige LUI o LEUR según la persona a la que va dirigida la acción.",
       "questions": [
-        {
-          "id": "fr-a2-22-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"société\" dans le contexte de \"Perfil de la Empresa\" ?",
-          "options": [
-            "Le concept professionnel principal de société utilisé dans Perfil de la Empresa.",
-            "Un terme familier à éviter dans Perfil de la Empresa.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Perfil de la Empresa."
-          ],
-          "correct_answer": "Le concept professionnel principal de société utilisé dans Perfil de la Empresa.",
-          "explanation": "Comprendre la définition de \"société\" est fondamental pour maîtriser \"Perfil de la Empresa\"."
-        },
-        {
-          "id": "fr-a2-22-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"société\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Perfil de la Empresa\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"société\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Perfil de la Empresa\" aux parties prenantes.",
-          "explanation": "Aborder \"société\" dans les présentations professionnelles améliore la communication globale concernant \"Perfil de la Empresa\"."
-        },
-        {
-          "id": "fr-a2-22-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Perfil de la Empresa\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"société\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"société\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"société\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"société\" sont los piliers d'une exécution réussie de \"Perfil de la Empresa\"."
-        },
-        {
-          "id": "fr-a2-22-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Perfil de la Empresa\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"société\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"société\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"société\" conduit souvent à des résultats inefficaces dans \"Perfil de la Empresa\"."
-        },
-        {
-          "id": "fr-a2-22-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"société\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"société\" adapté à l'environnement de \"Perfil de la Empresa\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"société\" adapté à l'environnement de \"Perfil de la Empresa\".",
-          "explanation": "Traduire ou adapter \"société\" nécessite de comprendre son application commerciale pratique dans \"Perfil de la Empresa\"."
-        },
-        {
-          "id": "fr-a2-22-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"société\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Perfil de la Empresa\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Perfil de la Empresa\".",
-          "explanation": "Utiliser \"société\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-a2-22-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Perfil de la Empresa\", comment un cadre doit-il présenter \"société\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"société\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-a2-22-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"société\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"société\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"société\".",
-          "explanation": "Définir les jalons liés à \"société\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-a2-22-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Perfil de la Empresa\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"société\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"société\".",
-          "explanation": "Les mots professionnels comme \"société\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-a2-22-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"société\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"société\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "fra2-22-q1", "type": "quiz_choice", "question": "¿Cuándo se usan los pronombres COI (Lui / Leur)?", "options": ["Para reemplazar a personas introducidas por la preposición 'À'", "Para reemplazar objetos directos", "Para reemplazar lugares", "Para reemplazar cantidades"], "correct_answer": "Para reemplazar a personas introducidas por la preposición 'À'", "explanation": "Se usan para reemplazar a quién va dirigida la acción (Ej: Hablar A Paul)." },
+        { "id": "fra2-22-q2", "type": "quiz_choice", "question": "Je parle À Marc. (Yo hablo a Marc). -> Je ____ parle.", "options": ["lui", "leur", "le", "l'"], "correct_answer": "lui", "explanation": "Marc es singular (a él) -> lui." },
+        { "id": "fra2-22-q3", "type": "quiz_choice", "question": "Je téléphone À Sophie. (Yo telefoneo a Sophie). -> Je ____ téléphone.", "options": ["lui", "la", "leur", "l'"], "correct_answer": "lui", "explanation": "¡Atención! 'Lui' sirve tanto para él como para ella (a ella) -> lui." },
+        { "id": "fra2-22-q4", "type": "quiz_choice", "question": "¿Existe diferencia de género entre 'le hablo a él' y 'le hablo a ella' al usar el pronombre COI en francés?", "options": ["No, en ambos casos se usa 'LUI'", "Sí, se usa 'lui' para él y 'elle' para ella", "Sí, se usa 'le' y 'la'"], "correct_answer": "No, en ambos casos se usa 'LUI'", "explanation": "LUI es el pronombre indirecto singular para masculino y femenino." },
+        { "id": "fra2-22-q5", "type": "quiz_choice", "question": "J'écris À MES PARENTS. (Escribo a mis padres). -> Je ____ écris.", "options": ["leur", "les", "lui", "l'"], "correct_answer": "leur", "explanation": "Padres es plural (a ellos) -> leur." },
+        { "id": "fra2-22-q6", "type": "quiz_choice", "question": "Je réponds AUX FILLES. (Respondo a las chicas). -> Je ____ réponds.", "options": ["leur", "les", "lui", "la"], "correct_answer": "leur", "explanation": "Chicas es plural (a ellas). 'Leur' tampoco tiene género -> leur." },
+        { "id": "fra2-22-q7", "type": "quiz_choice", "question": "¿Dónde se coloca el pronombre LUI o LEUR en la oración?", "options": ["Antes del verbo", "Después del verbo", "Al final", "Antes del sujeto"], "correct_answer": "Antes del verbo", "explanation": "Ejemplo: Je lui parle. Je leur écris." },
+        { "id": "fra2-22-q8", "type": "quiz_choice", "question": "Je dis bonjour À MON PROFESSEUR. (Digo buenos días a mi profesor). -> Je ____ dis bonjour.", "options": ["lui", "le", "leur", "l'"], "correct_answer": "lui", "explanation": "A mi profesor (singular) -> lui." },
+        { "id": "fra2-22-q9", "type": "quiz_choice", "question": "¿Cuál es la frase correcta para 'Yo le hablo' (a él)?", "options": ["Je lui parle", "Je parle lui", "Je le parle", "Lui je parle"], "correct_answer": "Je lui parle", "explanation": "El pronombre COI va antes del verbo." },
+        { "id": "fra2-22-q10", "type": "quiz_choice", "question": "Il demande À SA MÈRE. (Él pregunta a su madre). -> Il ____ demande.", "options": ["lui", "la", "leur", "elle"], "correct_answer": "lui", "explanation": "A su madre (singular). Para ella se usa 'lui' indirectamente." },
+        { "id": "fra2-22-q11", "type": "quiz_choice", "question": "Nous donnons un cadeau AUX ENFANTS. (Damos un regalo a los niños). -> Nous ____ donnons un cadeau.", "options": ["leur", "les", "lui", "l'"], "correct_answer": "leur", "explanation": "A los niños (plural) -> leur." },
+        { "id": "fra2-22-q12", "type": "quiz_choice", "question": "¿El pronombre 'LEUR' lleva 'S' al final cuando es pronombre personal (ej: Je leur parle)?", "options": ["No, nunca lleva S como pronombre", "Sí, siempre lleva S", "Depende del verbo"], "correct_answer": "No, nunca lleva S como pronombre", "explanation": "'Leur' NUNCA lleva S cuando se usa ANTES de un verbo como pronombre." },
+        { "id": "fra2-22-q13", "type": "quiz_choice", "question": "Je souris À MARIE. (Yo sonrío a Marie). -> Je ____ souris.", "options": ["lui", "la", "leur", "elle"], "correct_answer": "lui", "explanation": "A Marie (singular) -> lui." },
+        { "id": "fra2-22-q14", "type": "quiz_choice", "question": "Il téléphone AUX POMPIERS. (Él telefonea a los bomberos). -> Il ____ téléphone.", "options": ["leur", "les", "lui", "l'"], "correct_answer": "leur", "explanation": "A los bomberos (plural) -> leur." },
+        { "id": "fra2-22-q15", "type": "quiz_choice", "question": "Je veux parler AU DIRECTEUR. -> Je veux ____ parler.", "options": ["lui", "le", "leur", "l'"], "correct_answer": "lui", "explanation": "Au (à le) directeur (singular) -> lui." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe LUI (Singular) o LEUR (Plural).",
       "questions": [
-        {
-          "id": "fr-a2-22-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"société\" (Exercice 1) :",
-          "parts": [
-            "notre",
-            "société",
-            "pendant",
-            "les",
-            "réunions.",
-            "Nous",
-            "utilisons"
-          ],
-          "correct_order": [
-            "Nous",
-            "utilisons",
-            "notre",
-            "société",
-            "pendant",
-            "les",
-            "réunions."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"société\"."
-        },
-        {
-          "id": "fr-a2-22-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"société\" (Exercice 2) :",
-          "parts": [
-            "société",
-            "pour",
-            "le",
-            "projet.",
-            "Voici",
-            "notre"
-          ],
-          "correct_order": [
-            "Voici",
-            "notre",
-            "société",
-            "pour",
-            "le",
-            "projet."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"société\"."
-        },
-        {
-          "id": "fr-a2-22-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"société\" (Exercice 3) :",
-          "parts": [
-            "vérifier",
-            "notre",
-            "société",
-            "ce",
-            "matin.",
-            "Je",
-            "dois"
-          ],
-          "correct_order": [
-            "Je",
-            "dois",
-            "vérifier",
-            "notre",
-            "société",
-            "ce",
-            "matin."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"société\"."
-        },
-        {
-          "id": "fr-a2-22-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"société\" (Exercice 4) :",
-          "parts": [
-            "votre",
-            "société",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît.",
-            "Veuillez",
-            "présenter"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "présenter",
-            "votre",
-            "société",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"société\"."
-        },
-        {
-          "id": "fr-a2-22-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"société\" (Exercice 5) :",
-          "parts": [
-            "apprécie",
-            "chaque",
-            "société",
-            "de",
-            "bureau.",
-            "Notre",
-            "équipe"
-          ],
-          "correct_order": [
-            "Notre",
-            "équipe",
-            "apprécie",
-            "chaque",
-            "société",
-            "de",
-            "bureau."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"société\"."
-        },
-        {
-          "id": "fr-a2-22-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"société\" (Exercice 6) :",
-          "parts": [
-            "notre",
-            "société",
-            "avant",
-            "midi",
-            "?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "notre",
-            "société",
-            "avant",
-            "midi",
-            "?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"société\"."
-        },
-        {
-          "id": "fr-a2-22-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"société\" (Exercice 7) :",
-          "parts": [
-            "organiser",
-            "notre",
-            "société",
-            "cette",
-            "semaine.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "organiser",
-            "notre",
-            "société",
-            "cette",
-            "semaine."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"société\"."
-        },
-        {
-          "id": "fr-a2-22-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"société\" (Exercice 8) :",
-          "parts": [
-            "statut",
-            "de",
-            "notre",
-            "société",
-            "ensemble.",
-            "Examinons",
-            "le"
-          ],
-          "correct_order": [
-            "Examinons",
-            "le",
-            "statut",
-            "de",
-            "notre",
-            "société",
-            "ensemble."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"société\"."
-        },
-        {
-          "id": "fr-a2-22-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"société\" (Exercice 9) :",
-          "parts": [
-            "améliorer",
-            "notre",
-            "société",
-            "de",
-            "travail.",
-            "Ils",
-            "souhaitent"
-          ],
-          "correct_order": [
-            "Ils",
-            "souhaitent",
-            "améliorer",
-            "notre",
-            "société",
-            "de",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"société\"."
-        },
-        {
-          "id": "fr-a2-22-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"société\" (Exercice 10) :",
-          "parts": [
-            "avec",
-            "notre",
-            "société",
-            "tous",
-            "les",
-            "jours.",
-            "Elle",
-            "travaille"
-          ],
-          "correct_order": [
-            "Elle",
-            "travaille",
-            "avec",
-            "notre",
-            "société",
-            "tous",
-            "les",
-            "jours."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"société\"."
-        }
+        { "id": "fra2-22-f1", "type": "fill_input", "question": "Je parle à Paul -> Je ____ parle.", "correct_answer": "lui", "explanation": "lui" },
+        { "id": "fra2-22-f2", "type": "fill_input", "question": "Je parle à Marie -> Je ____ parle.", "correct_answer": "lui", "explanation": "lui" },
+        { "id": "fra2-22-f3", "type": "fill_input", "question": "Je parle aux enfants -> Je ____ parle.", "correct_answer": "leur", "explanation": "leur" },
+        { "id": "fra2-22-f4", "type": "fill_input", "question": "Je téléphone à ma mère -> Je ____ téléphone.", "correct_answer": "lui", "explanation": "lui" },
+        { "id": "fra2-22-f5", "type": "fill_input", "question": "Il écrit à ses grands-parents -> Il ____ écrit.", "correct_answer": "leur", "explanation": "leur" },
+        { "id": "fra2-22-f6", "type": "fill_input", "question": "Nous disons bonjour au professeur -> Nous ____ disons bonjour.", "correct_answer": "lui", "explanation": "lui" },
+        { "id": "fra2-22-f7", "type": "fill_input", "question": "Vous répondez aux clients -> Vous ____ répondez.", "correct_answer": "leur", "explanation": "leur" },
+        { "id": "fra2-22-f8", "type": "fill_input", "question": "Je donne la lettre à Sophie -> Je ____ donne la lettre.", "correct_answer": "lui", "explanation": "lui" },
+        { "id": "fra2-22-f9", "type": "fill_input", "question": "Tu envoies un message à Marc -> Tu ____ envoies un message.", "correct_answer": "lui", "explanation": "lui" },
+        { "id": "fra2-22-f10", "type": "fill_input", "question": "Elle sourit aux filles -> Elle ____ sourit.", "correct_answer": "leur", "explanation": "leur" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-a2-22-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"société\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"société\" en détail.",
-            "Une autre déclaration sur notre \"société\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"société\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"société\" en réunion."
-        },
-        {
-          "id": "fr-a2-22-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"société\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"société\" ?",
-            "Une autre déclaration sur notre \"société\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"société\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"société\" en réunion."
-        },
-        {
-          "id": "fr-a2-22-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"société\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"société\" cette année.",
-            "Une autre déclaration sur notre \"société\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"société\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"société\" en réunion."
-        },
-        {
-          "id": "fr-a2-22-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"société\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"société\".",
-            "Une autre déclaration sur notre \"société\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"société\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"société\" en réunion."
-        },
-        {
-          "id": "fr-a2-22-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"société\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"société\".",
-            "Une autre déclaration sur notre \"société\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"société\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"société\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Mastery Match",
+      "pairs": [
+        {"id": "fra2-22-p1", "source": "Je lui parle", "target": "Yo le hablo (a él/ella)"},
+        {"id": "fra2-22-p2", "source": "Je leur parle", "target": "Yo les hablo (a ellos/ellas)"},
+        {"id": "fra2-22-p3", "source": "Je lui téléphone", "target": "Yo le telefoneo"},
+        {"id": "fra2-22-p4", "source": "Je leur téléphone", "target": "Yo les telefoneo"},
+        {"id": "fra2-22-p5", "source": "Je lui écris", "target": "Yo le escribo"},
+        {"id": "fra2-22-p6", "source": "Je leur écris", "target": "Yo les escribo"},
+        {"id": "fra2-22-p7", "source": "Lui", "target": "A él / A ella"},
+        {"id": "fra2-22-p8", "source": "Leur", "target": "A ellos / A ellas"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha atentamente. ¿Es singular (Lui) o plural (Leur)?",
       "questions": [
-        {
-          "id": "fr-a2-22-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"soc____\" (Indice : désigne \"société\")",
-          "correct_answers": [
-            "société",
-            "Société"
-          ],
-          "hints": [
-            "Commence par 'soc'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"société\"."
-        },
-        {
-          "id": "fr-a2-22-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"L'équipe veut discuter de notre société ____ lundi matin.\" (le / en)",
-          "correct_answers": [
-            "le"
-          ],
-          "hints": [
-            "Article défini utilisé devant les jours de la semaine"
-          ],
-          "explanation": "En français, on utilise l'article défini 'le' devant un jour de la semana pour indiquer un rendez-vous habituel ou fixe."
-        },
-        {
-          "id": "fr-a2-22-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Veuillez ____ attention à ne pas faire d'erreur sur notre société.\" (faire / prendre)",
-          "correct_answers": [
-            "faire",
-            "Faire"
-          ],
-          "hints": [
-            "Verbe signifiant effectuer ou prêter attention"
-          ],
-          "explanation": "L'expression 'faire attention' est une collocation standard en français."
-        },
-        {
-          "id": "fr-a2-22-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons organiser une ____ pour revoir notre société.\" (réunion / carte)",
-          "correct_answers": [
-            "réunion",
-            "discussion",
-            "session"
-          ],
-          "hints": [
-            "Un rassemblement de personnes pour travailler ensemble"
-          ],
-          "explanation": "Une 'réunion' est le terme standard pour un meeting professionnel."
-        },
-        {
-          "id": "fr-a2-22-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Il nous faut un rapport ____ sur le statut de notre société.\" (clair / lent)",
-          "correct_answers": [
-            "clair"
-          ],
-          "hints": [
-            "Facile à comprendre et bien structuré"
-          ],
-          "explanation": "Un rapport 'clair' est indispensable pour assurer l'alignement."
-        }
+        { "id": "fra2-22-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je lui parle", "options": ["Je lui parle", "Je leur parle", "Je le parle", "Tu lui parles"], "correct_answer": "Je lui parle", "explanation": "Audio dice: Je lui parle." },
+        { "id": "fra2-22-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je leur parle", "options": ["Je leur parle", "Je lui parle", "Je les parle", "Tu leur parles"], "correct_answer": "Je leur parle", "explanation": "Audio dice: Je leur parle." },
+        { "id": "fra2-22-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je lui téléphone", "options": ["Je lui téléphone", "Je leur téléphone", "Tu lui téléphones", "Il lui téléphone"], "correct_answer": "Je lui téléphone", "explanation": "Audio dice: Je lui téléphone." },
+        { "id": "fra2-22-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il leur écrit", "options": ["Il leur écrit", "Je leur écris", "Il lui écrit", "Tu lui écris"], "correct_answer": "Il leur écrit", "explanation": "Audio dice: Il leur écrit." },
+        { "id": "fra2-22-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Nous lui donnons", "options": ["Nous lui donnons", "Nous leur donnons", "Vous lui donnez", "Je lui donne"], "correct_answer": "Nous lui donnons", "explanation": "Audio dice: Nous lui donnons." }
       ]
     }
   ]

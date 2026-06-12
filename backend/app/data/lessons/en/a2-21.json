@@ -1,0 +1,101 @@
+{
+  "id": "a2-21",
+  "title": "Job Interviews (Part 2)",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Vocabulary", "Job Interview", "HR", "Business"],
+  "completion_message": "¡Fantástico! Ahora estás preparado para responder las preguntas más comunes en una entrevista de trabajo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Entrevistas de Trabajo (Parte 2: Preguntas)",
+      "parts": [
+        { "visual": "Preguntas comunes: 'Tell me about yourself' (Háblame de ti). 'Why do you want to work here?' (¿Por qué quieres trabajar aquí?). 'Why did you leave your last job?' (¿Por qué dejaste tu último trabajo?).", "audio": "Common questions. Tell me about yourself. Why do you want to work here? Why did you leave your last job?" },
+        { "visual": "Más preguntas: 'Where do you see yourself in five years?' (¿Dónde te ves en cinco años?). 'How do you handle pressure?' (¿Cómo manejas la presión?). Respuestas útiles: 'I am a team player' (Trabajo bien en equipo). 'I am looking for a new challenge' (Busco un nuevo reto).", "audio": "More questions. Where do you see yourself in five years? How do you handle pressure? Useful answers: I am a team player. I am looking for a new challenge." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la respuesta o palabra correcta para esta entrevista de trabajo.",
+      "questions": [
+        { "id": "a2-21-q1", "type": "quiz_choice", "question": "Could you ____ me about yourself? (Hablarme / Contarme).", "options": ["tell", "say", "speak", "talk"], "correct_answer": "tell", "explanation": "Tell me about yourself = háblame / cuéntame sobre ti." },
+        { "id": "a2-21-q2", "type": "quiz_choice", "question": "____ do you want to work for our company? (¿Por qué?).", "options": ["Why", "What", "When", "How"], "correct_answer": "Why", "explanation": "Why do you want to work here? = ¿Por qué quieres trabajar aquí?" },
+        { "id": "a2-21-q3", "type": "quiz_choice", "question": "Why did you ____ your last job? (Dejar/Renunciar).", "options": ["leave", "live", "lose", "let"], "correct_answer": "leave", "explanation": "Leave a job = dejar un trabajo." },
+        { "id": "a2-21-q4", "type": "quiz_choice", "question": "Where do you ____ yourself in five years? (Te ves).", "options": ["see", "look", "watch", "view"], "correct_answer": "see", "explanation": "Where do you see yourself...? = ¿Dónde te ves a ti mismo...?" },
+        { "id": "a2-21-q5", "type": "quiz_choice", "question": "How do you ____ pressure? (Manejar).", "options": ["handle", "take", "make", "hand"], "correct_answer": "handle", "explanation": "Handle pressure = manejar la presión." },
+        { "id": "a2-21-q6", "type": "quiz_choice", "question": "I am looking for a new ____. (Reto / Desafío).", "options": ["challenge", "problem", "question", "money"], "correct_answer": "challenge", "explanation": "Looking for a new challenge = buscando un nuevo reto profesional." },
+        { "id": "a2-21-q7", "type": "quiz_choice", "question": "I consider myself a ____ player. (Persona que trabaja en equipo).", "options": ["team", "group", "work", "sport"], "correct_answer": "team", "explanation": "Team player = alguien que trabaja bien en equipo." },
+        { "id": "a2-21-q8", "type": "quiz_choice", "question": "What is your greatest ____? (Logro).", "options": ["achievement", "achieve", "win", "goal"], "correct_answer": "achievement", "explanation": "Achievement = logro." },
+        { "id": "a2-21-q9", "type": "quiz_choice", "question": "I have a ____ in Business Administration. (Título universitario).", "options": ["degree", "title", "paper", "diploma"], "correct_answer": "degree", "explanation": "Degree = título universitario (Bachelor's degree, Master's degree)." },
+        { "id": "a2-21-q10", "type": "quiz_choice", "question": "I am very ____ to detail. (Orientado al detalle).", "options": ["oriented", "looking", "watching", "seeing"], "correct_answer": "oriented", "explanation": "Detail-oriented = detallista / orientado al detalle." },
+        { "id": "a2-21-q11", "type": "quiz_choice", "question": "Why should we ____ you? (Contratarte).", "options": ["hire", "fire", "pay", "buy"], "correct_answer": "hire", "explanation": "Why should we hire you? = ¿Por qué deberíamos contratarte?" },
+        { "id": "a2-21-q12", "type": "quiz_choice", "question": "I am a very ____ person. I always want to improve and grow. (Ambicioso).", "options": ["ambitious", "lazy", "boring", "quiet"], "correct_answer": "ambitious", "explanation": "Ambitious = ambicioso (en un sentido positivo profesional)." },
+        { "id": "a2-21-q13", "type": "quiz_choice", "question": "What are your salary ____? (Expectativas).", "options": ["expectations", "expects", "waiting", "hopes"], "correct_answer": "expectations", "explanation": "Salary expectations = expectativas salariales." },
+        { "id": "a2-21-q14", "type": "quiz_choice", "question": "I am ____ to work weekends if necessary. (Dispuesto).", "options": ["willing", "wanting", "wishing", "liking"], "correct_answer": "willing", "explanation": "Willing to = dispuesto a." },
+        { "id": "a2-21-q15", "type": "quiz_choice", "question": "I left my last job because there was no room for ____. (Crecimiento).", "options": ["growth", "grow", "growing", "grew"], "correct_answer": "growth", "explanation": "Room for growth = espacio para crecer / oportunidad de crecimiento." },
+        { "id": "a2-21-q16", "type": "quiz_choice", "question": "I have strong leadership ____. (Habilidades).", "options": ["skills", "powers", "talents", "jobs"], "correct_answer": "skills", "explanation": "Leadership skills = habilidades de liderazgo." },
+        { "id": "a2-21-q17", "type": "quiz_choice", "question": "I am very ____. I never arrive late. (Puntual).", "options": ["punctual", "late", "slow", "fast"], "correct_answer": "punctual", "explanation": "Punctual = puntual." },
+        { "id": "a2-21-q18", "type": "quiz_choice", "question": "Do you have any ____ for us? (Preguntas).", "options": ["questions", "answers", "doubts", "problems"], "correct_answer": "questions", "explanation": "Do you have any questions for us? (Típica pregunta final en la entrevista)." },
+        { "id": "a2-21-q19", "type": "quiz_choice", "question": "I am a quick ____. I adapt easily to new software. (Aprendiz).", "options": ["learner", "student", "teacher", "reader"], "correct_answer": "learner", "explanation": "Quick learner (o fast learner) = persona que aprende rápido." },
+        { "id": "a2-21-q20", "type": "quiz_choice", "question": "Thank you for the ____. (Oportunidad).", "options": ["opportunity", "time", "job", "money"], "correct_answer": "opportunity", "explanation": "Opportunity = oportunidad." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra clave para responder en la entrevista.",
+      "questions": [
+        { "id": "a2-21-f1", "type": "fill_input", "question": "____ me about yourself. (Háblame / Cuéntame)", "correct_answer": "Tell", "explanation": "Tell." },
+        { "id": "a2-21-f2", "type": "fill_input", "question": "Why did you ____ your last job? (Dejar/Renunciar)", "correct_answer": "leave", "explanation": "leave." },
+        { "id": "a2-21-f3", "type": "fill_input", "question": "How do you ____ pressure? (Manejar)", "correct_answer": "handle", "explanation": "handle." },
+        { "id": "a2-21-f4", "type": "fill_input", "question": "I am looking for a new ____. (Desafío / Reto)", "correct_answer": "challenge", "explanation": "challenge." },
+        { "id": "a2-21-f5", "type": "fill_input", "question": "I am a ____ player. (Trabajo en equipo)", "correct_answer": "team", "explanation": "team." },
+        { "id": "a2-21-f6", "type": "fill_input", "question": "What is your greatest ____? (Logro)", "correct_answer": "achievement", "explanation": "achievement." },
+        { "id": "a2-21-f7", "type": "fill_input", "question": "I have a ____ in Marketing. (Título universitario)", "correct_answer": "degree", "explanation": "degree." },
+        { "id": "a2-21-f8", "type": "fill_input", "question": "Why should we ____ you? (Contratarte)", "correct_answer": "hire", "explanation": "hire." },
+        { "id": "a2-21-f9", "type": "fill_input", "question": "I am ____ to travel. (Dispuesto)", "correct_answer": "willing", "explanation": "willing." },
+        { "id": "a2-21-f10", "type": "fill_input", "question": "Thank you for the ____. (Oportunidad)", "correct_answer": "opportunity", "explanation": "opportunity." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-21-p1", "source": "Tell me about yourself", "target": "Háblame de ti"},
+        {"id": "a2-21-p2", "source": "Why did you leave?", "target": "¿Por qué renunciaste/dejaste tu empleo?"},
+        {"id": "a2-21-p3", "source": "Where do you see yourself?", "target": "¿Dónde te ves a ti mismo?"},
+        {"id": "a2-21-p4", "source": "How do you handle pressure?", "target": "¿Cómo manejas la presión?"},
+        {"id": "a2-21-p5", "source": "I am a team player", "target": "Trabajo bien en equipo"},
+        {"id": "a2-21-p6", "source": "I am looking for a new challenge", "target": "Busco un nuevo desafío/reto"},
+        {"id": "a2-21-p7", "source": "Greatest achievement", "target": "Mayor logro"},
+        {"id": "a2-21-p8", "source": "I have a degree in...", "target": "Tengo un título universitario en..."},
+        {"id": "a2-21-p9", "source": "Why should we hire you?", "target": "¿Por qué deberíamos contratarte?"},
+        {"id": "a2-21-p10", "source": "Salary expectations", "target": "Expectativas salariales"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la pregunta de entrevista.",
+      "questions": [
+        { "id": "a2-21-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Tell me about yourself.", "options": ["Tell me about yourself.", "Talk me about yourself.", "Speak me about yourself.", "Say me about yourself."], "correct_answer": "Tell me about yourself.", "explanation": "Audio exacto." },
+        { "id": "a2-21-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Why do you want to work here?", "options": ["Why do you want to work here?", "Why do you want to work for us?", "Where do you want to work here?", "Why would you want to work here?"], "correct_answer": "Why do you want to work here?", "explanation": "Audio exacto." },
+        { "id": "a2-21-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Why did you leave your last job?", "options": ["Why did you leave your last job?", "Why did you quit your last job?", "When did you leave your last job?", "Why did you lose your last job?"], "correct_answer": "Why did you leave your last job?", "explanation": "Audio exacto." },
+        { "id": "a2-21-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Where do you see yourself in five years?", "options": ["Where do you see yourself in five years?", "Where do you see yourself in two years?", "How do you see yourself in five years?", "Where do you want to be in five years?"], "correct_answer": "Where do you see yourself in five years?", "explanation": "Audio exacto." },
+        { "id": "a2-21-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How do you handle pressure?", "options": ["How do you handle pressure?", "How do you manage pressure?", "How do you take pressure?", "How do you handle stress?"], "correct_answer": "How do you handle pressure?", "explanation": "Audio exacto." },
+        { "id": "a2-21-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am looking for a new challenge.", "options": ["I am looking for a new challenge.", "I am looking for a new job.", "I am looking for a new project.", "We are looking for a new challenge."], "correct_answer": "I am looking for a new challenge.", "explanation": "Audio exacto." },
+        { "id": "a2-21-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am a team player.", "options": ["I am a team player.", "I am a team worker.", "I am a good team player.", "He is a team player."], "correct_answer": "I am a team player.", "explanation": "Audio exacto." },
+        { "id": "a2-21-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is your greatest achievement?", "options": ["What is your greatest achievement?", "What is your best achievement?", "What are your greatest achievements?", "What is your greatest goal?"], "correct_answer": "What is your greatest achievement?", "explanation": "Audio exacto." },
+        { "id": "a2-21-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Why should we hire you?", "options": ["Why should we hire you?", "Why do we hire you?", "Why should I hire you?", "Why should we choose you?"], "correct_answer": "Why should we hire you?", "explanation": "Audio exacto." },
+        { "id": "a2-21-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What are your salary expectations?", "options": ["What are your salary expectations?", "What is your salary expectation?", "What are your expectations?", "What salary do you expect?"], "correct_answer": "What are your salary expectations?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "a2-10",
+  "title": "A2 Milestone 1: Review Test",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 750,
+  "tags": ["A2", "Review", "Milestone", "Test", "Grammar", "Vocabulary"],
+  "completion_message": "¡Misión Cumplida! Has superado el primer gran Hito del Nivel A2. ¡Sigue así!",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "A2 Milestone 1: Gran Repaso",
+      "parts": [
+        { "visual": "En esta prueba repasaremos las lecciones 1 a 9 del nivel A2: Present Simple vs Continuous, Stative verbs (know, believe), Responsabilidades (responsible for + ing), Interrupciones con When/While.", "audio": "In this test we will review lessons 1 to 9 of level A2: Present Simple versus Continuous, Stative verbs, Responsibilities, and Interruptions with When and While." },
+        { "visual": "También evaluaremos: Estructura de la empresa (Headquarters, subsidiaries), Comparativos/Superlativos, Tecnología (Crashed, froze), Cuantificadores (Much, many), y Present Perfect (For, since).", "audio": "We will also evaluate: Company structure, Comparatives and Superlatives, Technology issues, Quantifiers, and the Present Perfect with For and Since." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Milestone Quiz",
+      "description": "Elige la respuesta correcta en este desafío integrador.",
+      "questions": [
+        { "id": "a2-10-q1", "type": "quiz_choice", "question": "I usually ____ from home, but today I ____ from the office.", "options": ["work / am working", "am working / work", "work / work", "working / work"], "correct_answer": "work / am working", "explanation": "Rutina (work) vs Temporal (am working)." },
+        { "id": "a2-10-q2", "type": "quiz_choice", "question": "I ____ you are right about the budget. (Creo - Verbo de estado).", "options": ["believe", "am believing", "believes", "believeing"], "correct_answer": "believe", "explanation": "Believe no lleva -ing." },
+        { "id": "a2-10-q3", "type": "quiz_choice", "question": "I am responsible ____ training the new staff.", "options": ["for", "of", "to", "in"], "correct_answer": "for", "explanation": "Responsible for." },
+        { "id": "a2-10-q4", "type": "quiz_choice", "question": "She is in charge of ____ the budget. (Administrar).", "options": ["managing", "manage", "to manage", "managed"], "correct_answer": "managing", "explanation": "Después de of, verbo-ing." },
+        { "id": "a2-10-q5", "type": "quiz_choice", "question": "I was typing an email ____ the system crashed. (Cuando).", "options": ["when", "while", "during", "for"], "correct_answer": "when", "explanation": "When + interrupción (Past Simple)." },
+        { "id": "a2-10-q6", "type": "quiz_choice", "question": "____ I was waiting for the taxi, it started to rain.", "options": ["While", "When", "During", "For"], "correct_answer": "While", "explanation": "While + acción larga en progreso." },
+        { "id": "a2-10-q7", "type": "quiz_choice", "question": "Our ____ are located in Paris. (Sede central).", "options": ["headquarters", "branches", "subsidiaries", "departments"], "correct_answer": "headquarters", "explanation": "Headquarters." },
+        { "id": "a2-10-q8", "type": "quiz_choice", "question": "The CEO reports directly to the ____ of Directors.", "options": ["Board", "Branch", "Subsidiary", "Parent"], "correct_answer": "Board", "explanation": "Board of Directors." },
+        { "id": "a2-10-q9", "type": "quiz_choice", "question": "This server is ____ than the old one. (Adjetivo corto: fast).", "options": ["faster", "more fast", "the fastest", "fast"], "correct_answer": "faster", "explanation": "Faster." },
+        { "id": "a2-10-q10", "type": "quiz_choice", "question": "This is ____ project of the year. (Adjetivo largo: important).", "options": ["the most important", "more important", "the importantest", "most important"], "correct_answer": "the most important", "explanation": "The most important (Superlativo)." },
+        { "id": "a2-10-q11", "type": "quiz_choice", "question": "My computer ____ and I lost everything! (Colapsó/Se cayó).", "options": ["crashed", "froze", "died", "deleted"], "correct_answer": "crashed", "explanation": "Crashed." },
+        { "id": "a2-10-q12", "type": "quiz_choice", "question": "Have you tried to ____ the system? (Reiniciar).", "options": ["reboot", "rebuild", "remake", "return"], "correct_answer": "reboot", "explanation": "Reboot." },
+        { "id": "a2-10-q13", "type": "quiz_choice", "question": "We don't have ____ time left. (Tiempo incontable).", "options": ["much", "many", "a few", "few"], "correct_answer": "much", "explanation": "Much." },
+        { "id": "a2-10-q14", "type": "quiz_choice", "question": "There are too ____ people in the room. (Personas contables).", "options": ["many", "much", "a little", "little"], "correct_answer": "many", "explanation": "Many." },
+        { "id": "a2-10-q15", "type": "quiz_choice", "question": "I have worked here ____ five years. (Por).", "options": ["for", "since", "in", "during"], "correct_answer": "for", "explanation": "For + periodo de tiempo." },
+        { "id": "a2-10-q16", "type": "quiz_choice", "question": "She has been the manager ____ 2018. (Desde).", "options": ["since", "for", "in", "at"], "correct_answer": "since", "explanation": "Since + fecha de inicio." },
+        { "id": "a2-10-q17", "type": "quiz_choice", "question": "Sorry to ____, but I have a question. (Interrumpir).", "options": ["interrupt", "break", "stop", "cut"], "correct_answer": "interrupt", "explanation": "Interrupt." },
+        { "id": "a2-10-q18", "type": "quiz_choice", "question": "What do you ____ about this strategy? (Pensar).", "options": ["think", "feel", "believe", "know"], "correct_answer": "think", "explanation": "What do you think...?" },
+        { "id": "a2-10-q19", "type": "quiz_choice", "question": "How do you ____ about this idea? (Sentir/Opinar).", "options": ["feel", "think", "believe", "see"], "correct_answer": "feel", "explanation": "How do you feel...?" },
+        { "id": "a2-10-q20", "type": "quiz_choice", "question": "I completely ____ with you. (Estoy de acuerdo).", "options": ["agree", "am agree", "agreed", "agrees"], "correct_answer": "agree", "explanation": "Agree (sin 'am')." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta para completar el repaso.",
+      "questions": [
+        { "id": "a2-10-f1", "type": "fill_input", "question": "I ____ you are right. (believe)", "correct_answer": "believe", "explanation": "believe." },
+        { "id": "a2-10-f2", "type": "fill_input", "question": "I am responsible ____ the team. (Por/de)", "correct_answer": "for", "explanation": "for." },
+        { "id": "a2-10-f3", "type": "fill_input", "question": "I was talking ____ the call dropped. (Cuando)", "correct_answer": "when", "explanation": "when." },
+        { "id": "a2-10-f4", "type": "fill_input", "question": "____ I was talking, it dropped. (Mientras)", "correct_answer": "While", "explanation": "While." },
+        { "id": "a2-10-f5", "type": "fill_input", "question": "Our ____ are in London. (Sede central)", "correct_answer": "headquarters", "explanation": "headquarters." },
+        { "id": "a2-10-f6", "type": "fill_input", "question": "It is ____ than the old one. (Más rápido)", "correct_answer": "faster", "explanation": "faster." },
+        { "id": "a2-10-f7", "type": "fill_input", "question": "My system ____. (Colapsó)", "correct_answer": "crashed", "explanation": "crashed." },
+        { "id": "a2-10-f8", "type": "fill_input", "question": "We don't have ____ time. (Mucho)", "correct_answer": "much", "explanation": "much." },
+        { "id": "a2-10-f9", "type": "fill_input", "question": "I have worked here ____ five years. (Por)", "correct_answer": "for", "explanation": "for." },
+        { "id": "a2-10-f10", "type": "fill_input", "question": "I completely ____ with you. (Estoy de acuerdo)", "correct_answer": "agree", "explanation": "agree." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-10-p1", "source": "I believe (Stative)", "target": "Creo (No lleva -ing)"},
+        {"id": "a2-10-p2", "source": "Responsible for managing", "target": "Responsable de administrar"},
+        {"id": "a2-10-p3", "source": "When it dropped", "target": "Cuando se cortó"},
+        {"id": "a2-10-p4", "source": "While I was talking", "target": "Mientras estaba hablando"},
+        {"id": "a2-10-p5", "source": "Headquarters", "target": "Sede central"},
+        {"id": "a2-10-p6", "source": "Faster / The fastest", "target": "Más rápido / El más rápido"},
+        {"id": "a2-10-p7", "source": "System crashed", "target": "El sistema colapsó"},
+        {"id": "a2-10-p8", "source": "Not much time", "target": "No mucho tiempo"},
+        {"id": "a2-10-p9", "source": "For 5 years / Since 2018", "target": "Por 5 años / Desde 2018"},
+        {"id": "a2-10-p10", "source": "Sorry to interrupt", "target": "Perdón por interrumpir"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta del Review.",
+      "questions": [
+        { "id": "a2-10-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I usually work from home.", "options": ["I usually work from home.", "I am usually working from home.", "I work from home today.", "I usually work in the office."], "correct_answer": "I usually work from home.", "explanation": "Audio exacto." },
+        { "id": "a2-10-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I believe you are right.", "options": ["I believe you are right.", "I think you are right.", "I believe he is right.", "I am believing you are right."], "correct_answer": "I believe you are right.", "explanation": "Audio exacto." },
+        { "id": "a2-10-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I am responsible for training.", "options": ["I am responsible for training.", "I am responsible for managing.", "She is responsible for training.", "I am in charge of training."], "correct_answer": "I am responsible for training.", "explanation": "Audio exacto." },
+        { "id": "a2-10-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I was typing an email when it crashed.", "options": ["I was typing an email when it crashed.", "I typed an email when it crashed.", "She was typing an email when it crashed.", "I was typing when it crashed."], "correct_answer": "I was typing an email when it crashed.", "explanation": "Audio exacto." },
+        { "id": "a2-10-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our headquarters are in Paris.", "options": ["Our headquarters are in Paris.", "Our branches are in Paris.", "The headquarters are in Paris.", "Our headquarters is in Paris."], "correct_answer": "Our headquarters are in Paris.", "explanation": "Audio exacto." },
+        { "id": "a2-10-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This server is faster.", "options": ["This server is faster.", "This computer is faster.", "The server is faster.", "This server is the fastest."], "correct_answer": "This server is faster.", "explanation": "Audio exacto." },
+        { "id": "a2-10-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We don't have much time.", "options": ["We don't have much time.", "We don't have many time.", "I don't have much time.", "They don't have much time."], "correct_answer": "We don't have much time.", "explanation": "Audio exacto." },
+        { "id": "a2-10-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have worked here for five years.", "options": ["I have worked here for five years.", "I worked here for five years.", "I have worked here since five years.", "He has worked here for five years."], "correct_answer": "I have worked here for five years.", "explanation": "Audio exacto." },
+        { "id": "a2-10-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sorry to interrupt, but I have a question.", "options": ["Sorry to interrupt, but I have a question.", "Sorry to interrupt, but we have a problem.", "Excuse me to interrupt, but I have a question.", "Sorry to interrupt."], "correct_answer": "Sorry to interrupt, but I have a question.", "explanation": "Audio exacto." },
+        { "id": "a2-10-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I completely agree with you.", "options": ["I completely agree with you.", "I totally agree with you.", "I agree with you.", "She completely agrees with you."], "correct_answer": "I completely agree with you.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

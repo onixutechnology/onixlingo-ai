@@ -1,0 +1,92 @@
+{
+  "id": "zh-a1-13",
+  "title": "La Partícula del Pasado",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Past", "Grammar", "Particles"],
+  "completion_message": "¡Fantástico! Ya sabes cómo enviar un verbo al pasado sin tener que conjugarlo. ¡Solo pégale un 'le'!",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Magia en el Tiempo",
+      "parts": [
+        {
+          "visual": "La Partícula de Acción Completada: 了 (le)\n\nComo sabemos, los verbos en chino NUNCA cambian.\n- Yo voy: 我去 (Wǒ qù).\n\nEntonces, ¿cómo decimos 'Yo fui'? Simplemente agregamos la partícula 了 (le) inmediatamente después del verbo.\n- Yo fui: 我去了 (Wǒ qù le).\n\nEjemplos:\n- Yo vengo: 我来 (Wǒ lái).\n- Yo vine: 我来了 (Wǒ lái le).\n- Él fue a China: 他去了中国 (Tā qù le Zhōngguó).\n\nEl 'le' no tiene tono (es neutro y corto).",
+          "audio": "En las lecciones anteriores vimos que para hablar del pasado, bastaba con decir la palabra 'Ayer' al principio de la frase. Pero a veces queremos hacer énfasis en que una acción ya se completó, ya ocurrió. Para eso usamos nuestra segunda partícula mágica: el 'le'. Es súper simple. Tomas el verbo normal, que nunca cambia, y le pegas el 'le' justo después. Si 'ir' es qù, entonces 'fui' es qù le. Si 'venir' es lái, entonces 'vine' es lái le. 'Wǒ qù le Zhōngguó' significa 'Yo fui a China'."
+        },
+        {
+          "visual": "Negando el Pasado: 没 (méi)\n\n¡ALERTA GRAMATICAL ROJA! 🚨\nPara decir que NO hiciste algo en el pasado, NUNCA uses 不 (bù).\nSi no hiciste algo, significa que no tienes esa experiencia. Por lo tanto, se usa el negador del verbo tener: 没 (méi) o 没有 (méiyǒu).\n\n- Yo NO fui: 我没去 (Wǒ méi qù).\n\nRegla de Oro:\n¡El 'le' desaparece en las frases negativas!\n- Correcto: 我没去 (Wǒ méi qù) -> Yo no fui.\n- ERROR FATAL ❌: 我没去了 (Wǒ méi qù le).\n\nLa lógica es simple: Si NO lo hiciste, la acción NO se completó, así que el 'le' (acción completada) no tiene sentido.",
+          "audio": "Esta es probablemente la regla más importante que aprenderás sobre el pasado. Si quieres decir que NO hiciste algo, jamás puedes usar 'bù'. 'Bù' es solo para el presente o el futuro, o para rechazar algo. En el pasado, si no hiciste la acción, significa que no tienes el hecho. Así que usamos nuestro negador especial 'méi'. 'Wǒ méi qù' significa 'Yo no fui'. Y aquí viene lo crítico: si no fuiste, la acción nunca se completó. Por lo tanto, la partícula de completado, el 'le', tiene que desaparecer. Decir 'Wǒ méi qù le' es absurdo en chino, es como decir 'Yo no haber completado de ir'. Solo di: 'Wǒ méi qù'."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Demuestra que entiendes cómo funciona el pasado en mandarín.",
+      "questions": [
+        { "id": "zh-a1-13-q1", "type": "quiz_choice", "question": "¿Cuál es la función principal de la partícula 了 (le)?", "options": ["Indicar que una acción se ha completado (pasado).", "Hacer una pregunta de Sí/No.", "Indicar posesión.", "Negar un verbo."], "correct_answer": "Indicar que una acción se ha completado (pasado).", "explanation": "El 'le' marca que la acción ha finalizado." },
+        { "id": "zh-a1-13-q2", "type": "quiz_choice", "question": "¿Dónde se coloca la partícula 了 (le) para indicar que una acción ocurrió?", "options": ["Generalmente justo después del verbo.", "Antes del verbo.", "Al principio de la oración.", "Antes del sujeto."], "correct_answer": "Generalmente justo después del verbo.", "explanation": "Verbo + le = Acción completada. (Ej: qù le = fui)." },
+        { "id": "zh-a1-13-q3", "type": "quiz_choice", "question": "El verbo 'venir' es 来 (lái). ¿Cómo dirías 'Yo vine'?", "options": ["Wǒ lái le (我来了).", "Wǒ le lái (我了来).", "Lái le wǒ (来了我).", "Wǒ lái ma (我来吗)."], "correct_answer": "Wǒ lái le (我来了).", "explanation": "Wǒ (Yo) + lái (venir) + le (completado)." },
+        { "id": "zh-a1-13-q4", "type": "quiz_choice", "question": "¡Alerta Gramatical! ¿Cómo se dice 'Yo NO fui' en mandarín?", "options": ["Wǒ méi qù (我没去).", "Wǒ bú qù (我不去).", "Wǒ méi qù le (我没去了).", "Wǒ bú qù le (我不去了)."], "correct_answer": "Wǒ méi qù (我没去).", "explanation": "En el pasado, se niega con 没 (méi) y NUNCA se pone la partícula 了 (le)." },
+        { "id": "zh-a1-13-q5", "type": "quiz_choice", "question": "¿Por qué es incorrecto decir 'Wǒ méi qù le'?", "options": ["Porque si la acción no ocurrió (méi), no puede estar completada (le).", "Porque suena feo.", "Porque falta el objeto.", "Porque 'le' siempre va al principio."], "correct_answer": "Porque si la acción no ocurrió (méi), no puede estar completada (le).", "explanation": "Es lógicamente contradictorio tener negación de experiencia (méi) y marcador de completado (le) juntos en el verbo." },
+        { "id": "zh-a1-13-q6", "type": "quiz_choice", "question": "La oración 'Tā qù le Zhōngguó' (他去了中国) significa:", "options": ["Él fue a China.", "Él va a China.", "Él no va a China.", "Él quiere ir a China."], "correct_answer": "Él fue a China.", "explanation": "Él (tā) + ir (qù) + completado (le) + China (Zhōngguó)." },
+        { "id": "zh-a1-13-q7", "type": "quiz_choice", "question": "¿Cuál de las siguientes oraciones usa el tiempo correctamente?", "options": ["Zuótiān wǒ qù le. (昨天我去了 - Ayer yo fui).", "Wǒ qù le zuótiān. (我去了昨天).", "Zuótiān wǒ méi qù le. (昨天我没去了).", "Wǒ bù qù zuótiān. (我不去昨天)."], "correct_answer": "Zuótiān wǒ qù le. (昨天我去了 - Ayer yo fui).", "explanation": "Tiempo al principio (zuótiān) + Sujeto (wǒ) + Verbo (qù) + Pasado (le)." },
+        { "id": "zh-a1-13-q8", "type": "quiz_choice", "question": "Si alguien te pregunta '¿Nǐ qù le ma?' (¿Tú fuiste?). Y quieres responder que SÍ. ¿Qué dices?", "options": ["Qù le (去了).", "Qù (去).", "Shì (是).", "Méi qù (没去)."], "correct_answer": "Qù le (去了).", "explanation": "Respondes con el verbo + la partícula de pasado para confirmar que la acción se completó." },
+        { "id": "zh-a1-13-q9", "type": "quiz_choice", "question": "Si alguien te pregunta '¿Nǐ lái le ma?' (¿Tú viniste?). Y quieres responder que NO. ¿Qué dices?", "options": ["Méi lái (没来).", "Bù lái (不来).", "Bú shì (不是).", "Méi lái le (没来了)."], "correct_answer": "Méi lái (没来).", "explanation": "Niegas la acción en el pasado con 'méi', y omites el 'le'." },
+        { "id": "zh-a1-13-q10", "type": "quiz_choice", "question": "¿Qué significa 'Wǒ bú qù' en comparación con 'Wǒ méi qù'?", "options": ["'Wǒ bú qù' es presente/futuro (No voy / No iré), 'Wǒ méi qù' es pasado (No fui).", "Significan exactamente lo mismo.", "'Wǒ bú qù' es para hombres, 'méi' para mujeres.", "'Bú qù' es una disculpa, 'méi qù' es una afirmación."], "correct_answer": "'Wǒ bú qù' es presente/futuro (No voy / No iré), 'Wǒ méi qù' es pasado (No fui).", "explanation": "Bù es para negar voluntad actual o futura. Méi es para negar hechos del pasado." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin para usar correctamente el pasado. Sin acentos tonales.",
+      "questions": [
+        { "id": "zh-a1-13-f1", "type": "fill_input", "question": "Partícula de pasado: ____ (le)", "correct_answer": "le", "explanation": "le" },
+        { "id": "zh-a1-13-f2", "type": "fill_input", "question": "Ir: ____ (qu)", "correct_answer": "qu", "explanation": "qu" },
+        { "id": "zh-a1-13-f3", "type": "fill_input", "question": "Yo fui: wo qu ____", "correct_answer": "le", "explanation": "le" },
+        { "id": "zh-a1-13-f4", "type": "fill_input", "question": "Él vino: ta lai ____", "correct_answer": "le", "explanation": "le" },
+        { "id": "zh-a1-13-f5", "type": "fill_input", "question": "Partícula para NEGAR el pasado: ____ (mei)", "correct_answer": "mei", "explanation": "mei" },
+        { "id": "zh-a1-13-f6", "type": "fill_input", "question": "Yo NO fui: wo ____ qu (mei)", "correct_answer": "mei", "explanation": "mei" },
+        { "id": "zh-a1-13-f7", "type": "fill_input", "question": "Él NO vino: ta ____ lai (mei)", "correct_answer": "mei", "explanation": "mei" },
+        { "id": "zh-a1-13-f8", "type": "fill_input", "question": "¿Tú fuiste?: ni qu le ____ (ma)", "correct_answer": "ma", "explanation": "ma" },
+        { "id": "zh-a1-13-f9", "type": "fill_input", "question": "Ayer (zuotian): ____tian", "correct_answer": "zuo", "explanation": "zuo" },
+        { "id": "zh-a1-13-f10", "type": "fill_input", "question": "Yo no voy (Presente): wo ____ qu (bu)", "correct_answer": "bu", "explanation": "bu" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha y diferencia el presente del pasado en la voz.",
+      "questions": [
+        { "id": "zh-a1-13-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "去了", "options": ["Fui / Fue", "Ir", "Venir", "Vine"], "correct_answer": "Fui / Fue", "explanation": "El audio dice: qù le." },
+        { "id": "zh-a1-13-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "来了", "options": ["Vine / Vino", "Fui", "Ir", "Venir"], "correct_answer": "Vine / Vino", "explanation": "El audio dice: lái le." },
+        { "id": "zh-a1-13-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "没去", "options": ["No fui (Pasado)", "No voy (Presente)", "No vengo", "Fui"], "correct_answer": "No fui (Pasado)", "explanation": "El audio dice: méi qù." },
+        { "id": "zh-a1-13-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "不去", "options": ["No voy (Presente/Futuro)", "No fui (Pasado)", "No vengo", "No tener"], "correct_answer": "No voy (Presente/Futuro)", "explanation": "El audio dice: bú qù." },
+        { "id": "zh-a1-13-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "你去吗？", "options": ["¿Tú vas?", "¿Tú fuiste?", "¿A dónde vas?", "Tú vas"], "correct_answer": "¿Tú vas?", "explanation": "El audio dice: Nǐ qù ma? (Presente). Si fuera pasado sería 'Nǐ qù le ma?'" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Tenses and Meanings",
+      "pairs": [
+        {"id": "zh-a1-13-p1", "source": "了 (le)", "target": "Partícula de pasado / completado"},
+        {"id": "zh-a1-13-p2", "source": "我去 (wǒ qù)", "target": "Yo voy"},
+        {"id": "zh-a1-13-p3", "source": "我去了 (wǒ qù le)", "target": "Yo fui"},
+        {"id": "zh-a1-13-p4", "source": "我来 (wǒ lái)", "target": "Yo vengo"},
+        {"id": "zh-a1-13-p5", "source": "我来了 (wǒ lái le)", "target": "Yo vine"},
+        {"id": "zh-a1-13-p6", "source": "我不去 (wǒ bú qù)", "target": "Yo no voy (Presente)"},
+        {"id": "zh-a1-13-p7", "source": "我没去 (wǒ méi qù)", "target": "Yo no fui (Pasado)"},
+        {"id": "zh-a1-13-p8", "source": "昨天我去了 (zuótiān wǒ qù le)", "target": "Ayer yo fui"},
+        {"id": "zh-a1-13-p9", "source": "去了吗？(qù le ma?)", "target": "¿Fuiste?"},
+        {"id": "zh-a1-13-p10", "source": "没去 (méi qù)", "target": "No fui / No fue"}
+      ]
+    }
+  ]
+}

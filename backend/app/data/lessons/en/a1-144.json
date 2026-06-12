@@ -1,0 +1,101 @@
+{
+  "id": "a1-144",
+  "title": "A1 Final Review Part 4: Modal Verbs",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Review", "Modal Verbs", "Can", "Must", "Should", "Would"],
+  "completion_message": "¡Excelente! Has superado con éxito la cuarta parte del Gran Repaso Final de A1.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Gran Repaso: Verbos Modales",
+      "parts": [
+        { "visual": "Los verbos modales expresan habilidad, obligación o sugerencia. NO cambian con he/she/it (no llevan 's') y el verbo que les sigue va en su forma original (sin 'to').", "audio": "Modal verbs express ability, obligation, or suggestion. They do not change with he, she, or it. And the verb after them is in its original form, without 'to'." },
+        { "visual": "CAN (habilidad/permiso): I can swim. Can I help you? MUST (obligación fuerte): You must wear a uniform. SHOULD (sugerencia/consejo): You should rest. WOULD LIKE (deseo formal): I would like a coffee.", "audio": "CAN for ability or permission. I can swim. MUST for strong obligation. You must wear a uniform. SHOULD for suggestions. You should rest. WOULD LIKE for polite requests. I would like a coffee." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el verbo modal o la forma verbal correcta.",
+      "questions": [
+        { "id": "a1-144-q1", "type": "quiz_choice", "question": "I ____ speak English and Spanish. (Habilidad).", "options": ["can", "must", "should", "would"], "correct_answer": "can", "explanation": "Habilidad = can." },
+        { "id": "a1-144-q2", "type": "quiz_choice", "question": "You ____ wear a helmet on the construction site. It's the law. (Obligación).", "options": ["must", "can", "should", "would"], "correct_answer": "must", "explanation": "Obligación fuerte o regla = must." },
+        { "id": "a1-144-q3", "type": "quiz_choice", "question": "You look tired. You ____ take a break. (Sugerencia).", "options": ["should", "must", "can", "would"], "correct_answer": "should", "explanation": "Consejo o sugerencia = should." },
+        { "id": "a1-144-q4", "type": "quiz_choice", "question": "I ____ like a cup of coffee, please. (Deseo formal).", "options": ["would", "can", "must", "should"], "correct_answer": "would", "explanation": "Deseo o petición formal = would like." },
+        { "id": "a1-144-q5", "type": "quiz_choice", "question": "She can ____ the piano. (Tocar).", "options": ["play", "to play", "playing", "plays"], "correct_answer": "play", "explanation": "Después de un modal, el verbo va sin 'to': play." },
+        { "id": "a1-144-q6", "type": "quiz_choice", "question": "We must ____ the report today. (Terminar).", "options": ["finish", "to finish", "finishing", "finishes"], "correct_answer": "finish", "explanation": "Después de must, el verbo va sin 'to': finish." },
+        { "id": "a1-144-q7", "type": "quiz_choice", "question": "He should ____ to the doctor. (Ir).", "options": ["go", "to go", "going", "goes"], "correct_answer": "go", "explanation": "Después de should, el verbo va sin 'to': go." },
+        { "id": "a1-144-q8", "type": "quiz_choice", "question": "____ I open the window? (Permiso/Ofrecimiento).", "options": ["Can", "Must", "Would", "Has"], "correct_answer": "Can", "explanation": "Pedir permiso u ofrecer = Can I...?" },
+        { "id": "a1-144-q9", "type": "quiz_choice", "question": "They ____ not enter this room. It's private. (Prohibición).", "options": ["must", "should", "would", "can"], "correct_answer": "must", "explanation": "Must not (mustn't) = prohibición estricta." },
+        { "id": "a1-144-q10", "type": "quiz_choice", "question": "____ you like some water? (¿Te gustaría...?).", "options": ["Would", "Can", "Must", "Should"], "correct_answer": "Would", "explanation": "Ofrecimiento formal = Would you like...?" },
+        { "id": "a1-144-q11", "type": "quiz_choice", "question": "I ____ to leave now. (Tengo que).", "options": ["have", "must", "can", "should"], "correct_answer": "have", "explanation": "Si lleva 'to', no puede ser un modal puro. Usamos 'have to'." },
+        { "id": "a1-144-q12", "type": "quiz_choice", "question": "We ____ cancel the meeting. The CEO is sick. (Debemos).", "options": ["must", "can", "would", "are"], "correct_answer": "must", "explanation": "Obligación fuerte o necesidad = must." },
+        { "id": "a1-144-q13", "type": "quiz_choice", "question": "You shouldn't ____ late. (Llegar).", "options": ["arrive", "to arrive", "arriving", "arrives"], "correct_answer": "arrive", "explanation": "Después de shouldn't, verbo base: arrive." },
+        { "id": "a1-144-q14", "type": "quiz_choice", "question": "____ you help me with this box? (¿Puedes...?).", "options": ["Can", "Must", "Should", "Have"], "correct_answer": "Can", "explanation": "Petición de habilidad/ayuda = Can you...?" },
+        { "id": "a1-144-q15", "type": "quiz_choice", "question": "I would ____ to speak to the manager. (Me gustaría).", "options": ["like", "love", "want", "wish"], "correct_answer": "like", "explanation": "I would like = Me gustaría." },
+        { "id": "a1-144-q16", "type": "quiz_choice", "question": "You don't ____ to come if you are busy. (No tienes que / No es necesario).", "options": ["have", "must", "should", "can"], "correct_answer": "have", "explanation": "Falta de obligación = don't have to." },
+        { "id": "a1-144-q17", "type": "quiz_choice", "question": "I ____ fix this issue. It's too difficult. (No puedo).", "options": ["cannot", "must not", "should not", "would not"], "correct_answer": "cannot", "explanation": "Falta de habilidad = cannot (can't)." },
+        { "id": "a1-144-q18", "type": "quiz_choice", "question": "____ we start the presentation? (¿Deberíamos / Empezamos?).", "options": ["Should", "Must", "Would", "Have"], "correct_answer": "Should", "explanation": "Pedir consejo o sugerir empezar = Should we...?" },
+        { "id": "a1-144-q19", "type": "quiz_choice", "question": "Visitors ____ wear a badge at all times. (Obligación).", "options": ["must", "can", "would", "might"], "correct_answer": "must", "explanation": "Regla estricta = must." },
+        { "id": "a1-144-q20", "type": "quiz_choice", "question": "If you want to improve, you ____ practice every day. (Consejo).", "options": ["should", "must", "can", "would"], "correct_answer": "should", "explanation": "Consejo = should." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe can, must, should o would.",
+      "questions": [
+        { "id": "a1-144-f1", "type": "fill_input", "question": "I ____ speak English. (Habilidad)", "correct_answer": "can", "explanation": "can." },
+        { "id": "a1-144-f2", "type": "fill_input", "question": "You ____ wear a helmet. (Obligación)", "correct_answer": "must", "explanation": "must." },
+        { "id": "a1-144-f3", "type": "fill_input", "question": "You ____ take a break. (Consejo)", "correct_answer": "should", "explanation": "should." },
+        { "id": "a1-144-f4", "type": "fill_input", "question": "I ____ like a coffee. (Deseo formal)", "correct_answer": "would", "explanation": "would." },
+        { "id": "a1-144-f5", "type": "fill_input", "question": "____ I open the window? (Permiso)", "correct_answer": "Can", "explanation": "Can." },
+        { "id": "a1-144-f6", "type": "fill_input", "question": "They ____ not enter. (Prohibición)", "correct_answer": "must", "explanation": "must." },
+        { "id": "a1-144-f7", "type": "fill_input", "question": "____ you like some water? (Ofrecimiento)", "correct_answer": "Would", "explanation": "Would." },
+        { "id": "a1-144-f8", "type": "fill_input", "question": "____ you help me? (Petición)", "correct_answer": "Can", "explanation": "Can." },
+        { "id": "a1-144-f9", "type": "fill_input", "question": "We ____ cancel the meeting. (Necesidad urgente/obligación)", "correct_answer": "must", "explanation": "must." },
+        { "id": "a1-144-f10", "type": "fill_input", "question": "____ we start? (¿Deberíamos?)", "correct_answer": "Should", "explanation": "Should." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-144-p1", "source": "I can", "target": "Yo puedo (habilidad)"},
+        {"id": "a1-144-p2", "source": "You must", "target": "Tú debes (obligación)"},
+        {"id": "a1-144-p3", "source": "He should", "target": "Él debería (consejo)"},
+        {"id": "a1-144-p4", "source": "I would like", "target": "Me gustaría (formal)"},
+        {"id": "a1-144-p5", "source": "Can I...?", "target": "¿Puedo...? (permiso)"},
+        {"id": "a1-144-p6", "source": "Must not", "target": "No debe (prohibición)"},
+        {"id": "a1-144-p7", "source": "Should not (shouldn't)", "target": "No debería"},
+        {"id": "a1-144-p8", "source": "Would you like...?", "target": "¿Te gustaría...?"},
+        {"id": "a1-144-p9", "source": "Cannot (can't)", "target": "No puede"},
+        {"id": "a1-144-p10", "source": "Should we...?", "target": "¿Deberíamos...?"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-144-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I can speak English and Spanish.", "options": ["I can speak English and Spanish.", "I can speak English and French.", "He can speak English and Spanish.", "I can read English and Spanish."], "correct_answer": "I can speak English and Spanish.", "explanation": "Audio exacto." },
+        { "id": "a1-144-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You must wear a helmet.", "options": ["You must wear a helmet.", "You must wear a uniform.", "He must wear a helmet.", "You should wear a helmet."], "correct_answer": "You must wear a helmet.", "explanation": "Audio exacto." },
+        { "id": "a1-144-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You should take a break.", "options": ["You should take a break.", "You must take a break.", "He should take a break.", "You can take a break."], "correct_answer": "You should take a break.", "explanation": "Audio exacto." },
+        { "id": "a1-144-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I would like a cup of coffee.", "options": ["I would like a cup of coffee.", "I would like a cup of tea.", "He would like a cup of coffee.", "I'd like a cup of coffee."], "correct_answer": "I would like a cup of coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-144-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I open the window?", "options": ["Can I open the window?", "Can you open the window?", "Should I open the window?", "Can I close the window?"], "correct_answer": "Can I open the window?", "explanation": "Audio exacto." },
+        { "id": "a1-144-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They must not enter this room.", "options": ["They must not enter this room.", "You must not enter this room.", "They should not enter this room.", "We must not enter this room."], "correct_answer": "They must not enter this room.", "explanation": "Audio exacto." },
+        { "id": "a1-144-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Would you like some water?", "options": ["Would you like some water?", "Do you like some water?", "Would you like some coffee?", "Can you like some water?"], "correct_answer": "Would you like some water?", "explanation": "Audio exacto." },
+        { "id": "a1-144-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must cancel the meeting.", "options": ["We must cancel the meeting.", "We should cancel the meeting.", "They must cancel the meeting.", "We can cancel the meeting."], "correct_answer": "We must cancel the meeting.", "explanation": "Audio exacto." },
+        { "id": "a1-144-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you help me with this box?", "options": ["Can you help me with this box?", "Could you help me with this box?", "Can he help me with this box?", "Can you help me with this bag?"], "correct_answer": "Can you help me with this box?", "explanation": "Audio exacto." },
+        { "id": "a1-144-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Should we start the presentation?", "options": ["Should we start the presentation?", "Can we start the presentation?", "Must we start the presentation?", "Should they start the presentation?"], "correct_answer": "Should we start the presentation?", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "zh-a1-1",
+  "title": "El Pinyin y los Tonos",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Pronunciation", "Pinyin", "Tones", "Fundamentals"],
+  "completion_message": "¡Excelente! Has dado el paso más importante: entender que en chino, el tono es tan vital como la letra misma.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "La Fundación del Mandarín",
+      "parts": [
+        {
+          "visual": "El Sistema Pinyin (拼音):\n\nEl chino no usa un alfabeto, usa caracteres (Hanzi - 汉字). Para poder leerlos y escribirlos en un teclado, usamos el 'Pinyin', que es la pronunciación escrita con letras occidentales.\n\nEstructura de una sílaba:\nCada sílaba en chino se divide en:\n1. Inicial (Consonante inicial) ej. 'm'\n2. Final (Vocal o combinación) ej. 'a'\n3. Tono (La melodía de la voz) ej. 'mā'\n\nEl Pinyin es solo una muleta. El objetivo a largo plazo es leer el carácter 妈 (mā) sin necesitar el pinyin.",
+          "audio": "Bienvenido al idioma chino mandarín. Lo primero que debes saber es que el chino no tiene abecedario. Tienen símbolos llamados Hanzi. Pero, ¿cómo los lees si no los conoces? Para eso existe el Pinyin. El Pinyin es simplemente escribir cómo suena ese símbolo usando nuestras letras occidentales. Por ejemplo, la palabra 'hola' se escribe con dos símbolos extraños, pero su pinyin es N-I H-A-O. Nihao. Cada vez que aprendamos una palabra nueva, verás el símbolo original y debajo su Pinyin para que sepas cómo pronunciarlo."
+        },
+        {
+          "visual": "Los 4 Tonos del Mandarín:\n\nEl chino es un idioma tonal. Si cambias la entonación, cambias por completo el significado de la palabra.\n\nTomemos la sílaba 'ma':\n1. Primer Tono (Alto y plano): mā (妈 - Madre)\n2. Segundo Tono (Sube, como preguntando): má (麻 - Cáñamo/Adormecido)\n3. Tercer Tono (Baja y luego sube): mǎ (马 - Caballo)\n4. Cuarto Tono (Cae fuerte y seco): mà (骂 - Regañar)\n\n+ Tono Neutro (Corto y ligero): ma (吗 - Partícula de pregunta).",
+          "audio": "Aquí viene el verdadero desafío del chino: Los tonos. En español, si dices 'caballo' o 'caballó', la gente te entiende aunque suenes raro. En chino no. En chino, la misma sílaba con diferente melodía significa cosas totalmente distintas. Tomemos la sílaba 'ma'. Si la dices con un tono alto y sostenido, 'mā', significa 'Mamá'. Si la dices bajando y luego subiendo la voz, 'mǎ', significa 'Caballo'. Si te equivocas de tono, en lugar de llamar a tu madre, estarás llamando a un caballo. Por eso, desde hoy, debes memorizar no solo cómo se dice una palabra, sino con qué melodía se canta."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa tu comprensión de la estructura del mandarín.",
+      "questions": [
+        { "id": "zh-a1-1-q1", "type": "quiz_choice", "question": "¿Qué es el 'Pinyin'?", "options": ["Un sistema para escribir la pronunciación china con letras occidentales.", "Un dialecto antiguo de China.", "El alfabeto oficial con el que se escriben los periódicos en China.", "Una marca de teclados."], "correct_answer": "Un sistema para escribir la pronunciación china con letras occidentales.", "explanation": "El Pinyin es la romanización del mandarín. No es el idioma escrito real (ese es el Hanzi o caracteres)." },
+        { "id": "zh-a1-1-q2", "type": "quiz_choice", "question": "¿Cuántos tonos principales tiene el chino mandarín (sin contar el tono neutro)?", "options": ["4", "5", "3", "6"], "correct_answer": "4", "explanation": "El mandarín tiene 4 tonos principales más un tono ligero o neutro." },
+        { "id": "zh-a1-1-q3", "type": "quiz_choice", "question": "¿Qué pasa si pronuncias la misma sílaba pero con un tono diferente?", "options": ["El significado de la palabra cambia por completo.", "Significa lo mismo pero suena más formal.", "Nadie se da cuenta.", "Significa lo mismo pero en plural."], "correct_answer": "El significado de la palabra cambia por completo.", "explanation": "Es un idioma tonal. Cambiar el tono es cambiar la palabra (ej. mā=madre, mǎ=caballo)." },
+        { "id": "zh-a1-1-q4", "type": "quiz_choice", "question": "En la sílaba pinyin 'mā' (madre), ¿qué indica la raya plana sobre la letra 'a'?", "options": ["Que es el Primer Tono (Alto y plano).", "Que es el Cuarto Tono (Fuerte y seco).", "Que es el Tercer Tono (Baja y sube).", "Que la 'a' es muda."], "correct_answer": "Que es el Primer Tono (Alto y plano).", "explanation": "El símbolo '¯' indica el primer tono." },
+        { "id": "zh-a1-1-q5", "type": "quiz_choice", "question": "¿Cómo se describe el Tercer Tono (ej. mǎ - Caballo)?", "options": ["La voz baja y luego vuelve a subir.", "La voz sube como haciendo una pregunta.", "La voz cae de golpe.", "La voz se mantiene plana."], "correct_answer": "La voz baja y luego vuelve a subir.", "explanation": "El símbolo 'ˇ' muestra visualmente cómo la voz baja y sube." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe el pinyin correspondiente. Ignora los acentos de los tonos por ahora, solo escribe las letras.",
+      "questions": [
+        { "id": "zh-a1-1-f1", "type": "fill_input", "question": "El sistema de romanización del chino se llama ____yin.", "correct_answer": "pin", "explanation": "pin" },
+        { "id": "zh-a1-1-f2", "type": "fill_input", "question": "La sílaba para caballo es 'mǎ'. Escribe la consonante inicial.", "correct_answer": "m", "explanation": "m" },
+        { "id": "zh-a1-1-f3", "type": "fill_input", "question": "La sílaba para madre es 'mā'. Escribe la vocal final.", "correct_answer": "a", "explanation": "a" },
+        { "id": "zh-a1-1-f4", "type": "fill_input", "question": "¿Cuántos tonos principales hay? (Escribe el número).", "correct_answer": "4", "explanation": "4" },
+        { "id": "zh-a1-1-f5", "type": "fill_input", "question": "Las letras usadas para pronunciar chino se llaman pinyin, y los símbolos dibujados se llaman Han____.", "correct_answer": "zi", "explanation": "zi" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo Tonal",
+      "description": "Escucha atentamente el audio e identifica qué tono estás escuchando. Presta atención a la melodía de la voz.",
+      "questions": [
+        { "id": "zh-a1-1-l1", "type": "listening_match", "question": "Escucha y selecciona la opción correcta:", "tts_text": "mā", "options": ["mā (Primer tono, madre)", "má (Segundo tono, cáñamo)", "mǎ (Tercer tono, caballo)", "mà (Cuarto tono, regañar)"], "correct_answer": "mā (Primer tono, madre)", "explanation": "El audio usa un tono alto y plano, constante." },
+        { "id": "zh-a1-1-l2", "type": "listening_match", "question": "Escucha y selecciona la opción correcta:", "tts_text": "mǎ", "options": ["mǎ (Tercer tono, caballo)", "mà (Cuarto tono, regañar)", "mā (Primer tono, madre)", "má (Segundo tono, cáñamo)"], "correct_answer": "mǎ (Tercer tono, caballo)", "explanation": "El audio baja y luego sube profundamente." },
+        { "id": "zh-a1-1-l3", "type": "listening_match", "question": "Escucha y selecciona la opción correcta:", "tts_text": "mà", "options": ["mà (Cuarto tono, regañar)", "mā (Primer tono, madre)", "má (Segundo tono, cáñamo)", "mǎ (Tercer tono, caballo)"], "correct_answer": "mà (Cuarto tono, regañar)", "explanation": "El audio es un golpe seco hacia abajo, como una orden." },
+        { "id": "zh-a1-1-l4", "type": "listening_match", "question": "Escucha y selecciona la opción correcta:", "tts_text": "má", "options": ["má (Segundo tono, cáñamo)", "mǎ (Tercer tono, caballo)", "mà (Cuarto tono, regañar)", "mā (Primer tono, madre)"], "correct_answer": "má (Segundo tono, cáñamo)", "explanation": "El audio sube rápidamente, como si preguntaras '¿Qué?'." },
+        { "id": "zh-a1-1-l5", "type": "listening_match", "question": "Escucha y selecciona la opción correcta:", "tts_text": "ma", "options": ["ma (Tono neutro)", "mā (Primer tono)", "má (Segundo tono)", "mà (Cuarto tono)"], "correct_answer": "ma (Tono neutro)", "explanation": "Es un sonido muy corto y ligero, sin fuerza." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match Pinyin & Concepts",
+      "pairs": [
+        {"id": "zh-a1-1-p1", "source": "Pinyin", "target": "Sistema de romanización"},
+        {"id": "zh-a1-1-p2", "source": "Hanzi", "target": "Caracteres chinos"},
+        {"id": "zh-a1-1-p3", "source": "mā", "target": "Primer tono (Alto y plano)"},
+        {"id": "zh-a1-1-p4", "source": "má", "target": "Segundo tono (Sube)"},
+        {"id": "zh-a1-1-p5", "source": "mǎ", "target": "Tercer tono (Baja y sube)"},
+        {"id": "zh-a1-1-p6", "source": "mà", "target": "Cuarto tono (Baja fuerte)"},
+        {"id": "zh-a1-1-p7", "source": "Idioma Tonal", "target": "El tono cambia el significado"},
+        {"id": "zh-a1-1-p8", "source": "Inicial", "target": "Consonante de la sílaba"},
+        {"id": "zh-a1-1-p9", "source": "Final", "target": "Vocal de la sílaba"},
+        {"id": "zh-a1-1-p10", "source": "Tono Neutro", "target": "Corto y ligero"}
+      ]
+    }
+  ]
+}

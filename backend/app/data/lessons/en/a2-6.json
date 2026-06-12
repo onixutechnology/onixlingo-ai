@@ -1,0 +1,101 @@
+{
+  "id": "a2-6",
+  "title": "Office Tech & IT Issues",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Vocabulary", "IT", "Technology", "Issues"],
+  "completion_message": "¡Genial! Ahora sabes cómo reportar problemas técnicos comunes en la oficina.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Problemas de Tecnología y TI (IT Issues)",
+      "parts": [
+        { "visual": "The screen froze (La pantalla se congeló). The system crashed (El sistema se cayó). My laptop died (Mi laptop se apagó/quedó sin batería). I can't log in (No puedo iniciar sesión).", "audio": "The screen froze. The system crashed. My laptop died. I can't log in." },
+        { "visual": "Soluciones: Reboot/Restart the computer (Reinicia la computadora). Unplug and plug it back in (Desconecta y vuelve a conectar). Clear the cache (Borra la caché). Call IT support (Llama a soporte técnico).", "audio": "Solutions: Reboot or restart the computer. Unplug and plug it back in. Clear the cache. Call IT support." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra correcta para describir el problema tecnológico.",
+      "questions": [
+        { "id": "a2-6-q1", "type": "quiz_choice", "question": "My screen ____. I can't move the mouse. (Se congeló).", "options": ["froze", "crashed", "died", "broke"], "correct_answer": "froze", "explanation": "Froze = se congeló." },
+        { "id": "a2-6-q2", "type": "quiz_choice", "question": "The entire system ____. We lost all our data. (Se cayó/colapsó).", "options": ["crashed", "froze", "died", "stopped"], "correct_answer": "crashed", "explanation": "Crashed = el sistema falló/colapsó." },
+        { "id": "a2-6-q3", "type": "quiz_choice", "question": "My phone battery ____. I need a charger. (Murió/Se agotó).", "options": ["died", "crashed", "froze", "killed"], "correct_answer": "died", "explanation": "Cuando la batería se agota, decimos 'it died'." },
+        { "id": "a2-6-q4", "type": "quiz_choice", "question": "I can't ____ in to my email. It says 'wrong password'. (Iniciar sesión).", "options": ["log", "enter", "go", "sign"], "correct_answer": "log", "explanation": "Log in = iniciar sesión." },
+        { "id": "a2-6-q5", "type": "quiz_choice", "question": "Have you tried to ____ the computer? (Reiniciar).", "options": ["reboot", "remake", "redo", "replay"], "correct_answer": "reboot", "explanation": "Reboot / Restart = reiniciar." },
+        { "id": "a2-6-q6", "type": "quiz_choice", "question": "Please ____ the cable and plug it back in. (Desconectar).", "options": ["unplug", "disconnect", "pull", "take out"], "correct_answer": "unplug", "explanation": "Unplug = desconectar de la corriente." },
+        { "id": "a2-6-q7", "type": "quiz_choice", "question": "You should clear the browser's ____. (Caché).", "options": ["cache", "memory", "data", "history"], "correct_answer": "cache", "explanation": "Clear the cache = limpiar/borrar la caché." },
+        { "id": "a2-6-q8", "type": "quiz_choice", "question": "My keyboard is not ____. (No está funcionando).", "options": ["working", "doing", "playing", "making"], "correct_answer": "working", "explanation": "Not working = no funciona/está descompuesto." },
+        { "id": "a2-6-q9", "type": "quiz_choice", "question": "I will call ____ support. (Soporte técnico / TI).", "options": ["IT", "HR", "PR", "CEO"], "correct_answer": "IT", "explanation": "IT support = Information Technology support." },
+        { "id": "a2-6-q10", "type": "quiz_choice", "question": "The printer is out of ____. (No tiene papel).", "options": ["paper", "ink", "power", "energy"], "correct_answer": "paper", "explanation": "Out of paper = sin papel." },
+        { "id": "a2-6-q11", "type": "quiz_choice", "question": "The printer is out of ____. (No tiene tinta).", "options": ["ink", "paper", "water", "paint"], "correct_answer": "ink", "explanation": "Out of ink = sin tinta." },
+        { "id": "a2-6-q12", "type": "quiz_choice", "question": "The Wi-Fi connection is very ____ today. (Lenta).", "options": ["slow", "fast", "bad", "low"], "correct_answer": "slow", "explanation": "Slow = lenta." },
+        { "id": "a2-6-q13", "type": "quiz_choice", "question": "I forgot my ____. I can't access my account. (Contraseña).", "options": ["password", "username", "code", "key"], "correct_answer": "password", "explanation": "Password." },
+        { "id": "a2-6-q14", "type": "quiz_choice", "question": "Could you ____ my password, please? (Restablecer).", "options": ["reset", "restart", "remake", "return"], "correct_answer": "reset", "explanation": "Reset a password = restablecer una contraseña." },
+        { "id": "a2-6-q15", "type": "quiz_choice", "question": "I accidentally ____ the file! Can we recover it? (Eliminé).", "options": ["deleted", "crashed", "saved", "copied"], "correct_answer": "deleted", "explanation": "Deleted = borré/eliminé." },
+        { "id": "a2-6-q16", "type": "quiz_choice", "question": "Please ____ the document on your desktop. (Guardar).", "options": ["save", "keep", "hold", "store"], "correct_answer": "save", "explanation": "Save = guardar." },
+        { "id": "a2-6-q17", "type": "quiz_choice", "question": "Did you ____ a backup? (Hiciste una copia de seguridad).", "options": ["make", "do", "take", "get"], "correct_answer": "make", "explanation": "Make a backup = hacer una copia de seguridad." },
+        { "id": "a2-6-q18", "type": "quiz_choice", "question": "The email has a large ____. (Archivo adjunto).", "options": ["attachment", "file", "document", "link"], "correct_answer": "attachment", "explanation": "Attachment = adjunto." },
+        { "id": "a2-6-q19", "type": "quiz_choice", "question": "The server is ____ right now. (Caído / Fuera de servicio).", "options": ["down", "up", "off", "out"], "correct_answer": "down", "explanation": "The server is down = el servidor está caído." },
+        { "id": "a2-6-q20", "type": "quiz_choice", "question": "My mouse is completely ____. It doesn't move. (Muerto/No funciona).", "options": ["dead", "frozen", "crashed", "slow"], "correct_answer": "dead", "explanation": "Dead = no tiene energía o no funciona en absoluto." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo o palabra clave de tecnología.",
+      "questions": [
+        { "id": "a2-6-f1", "type": "fill_input", "question": "My screen ____. (Se congeló)", "correct_answer": "froze", "explanation": "froze." },
+        { "id": "a2-6-f2", "type": "fill_input", "question": "The system ____. (Colapsó/Se cayó)", "correct_answer": "crashed", "explanation": "crashed." },
+        { "id": "a2-6-f3", "type": "fill_input", "question": "My battery ____. (Se agotó/murió)", "correct_answer": "died", "explanation": "died." },
+        { "id": "a2-6-f4", "type": "fill_input", "question": "I can't ____ in. (Iniciar sesión)", "correct_answer": "log", "explanation": "log." },
+        { "id": "a2-6-f5", "type": "fill_input", "question": "Please ____ the computer. (Reiniciar)", "correct_answer": "reboot", "explanation": "reboot." },
+        { "id": "a2-6-f6", "type": "fill_input", "question": "The server is ____. (Caído)", "correct_answer": "down", "explanation": "down." },
+        { "id": "a2-6-f7", "type": "fill_input", "question": "I accidentally ____ the file. (Borré)", "correct_answer": "deleted", "explanation": "deleted." },
+        { "id": "a2-6-f8", "type": "fill_input", "question": "Can you ____ my password? (Restablecer)", "correct_answer": "reset", "explanation": "reset." },
+        { "id": "a2-6-f9", "type": "fill_input", "question": "Clear the ____. (Caché)", "correct_answer": "cache", "explanation": "cache." },
+        { "id": "a2-6-f10", "type": "fill_input", "question": "Did you make a ____? (Copia de seguridad)", "correct_answer": "backup", "explanation": "backup." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-6-p1", "source": "My screen froze", "target": "Mi pantalla se congeló"},
+        {"id": "a2-6-p2", "source": "The system crashed", "target": "El sistema colapsó / se cayó"},
+        {"id": "a2-6-p3", "source": "My battery died", "target": "Mi batería se agotó"},
+        {"id": "a2-6-p4", "source": "Log in", "target": "Iniciar sesión"},
+        {"id": "a2-6-p5", "source": "Reboot", "target": "Reiniciar"},
+        {"id": "a2-6-p6", "source": "The server is down", "target": "El servidor está caído"},
+        {"id": "a2-6-p7", "source": "Reset password", "target": "Restablecer contraseña"},
+        {"id": "a2-6-p8", "source": "Make a backup", "target": "Hacer copia de seguridad"},
+        {"id": "a2-6-p9", "source": "Unplug it", "target": "Desconéctalo (del enchufe)"},
+        {"id": "a2-6-p10", "source": "Delete a file", "target": "Eliminar un archivo"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a2-6-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My screen froze.", "options": ["My screen froze.", "My computer froze.", "The screen froze.", "My mouse froze."], "correct_answer": "My screen froze.", "explanation": "Audio exacto." },
+        { "id": "a2-6-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The system crashed.", "options": ["The system crashed.", "The computer crashed.", "My system crashed.", "The server crashed."], "correct_answer": "The system crashed.", "explanation": "Audio exacto." },
+        { "id": "a2-6-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "My laptop died.", "options": ["My laptop died.", "My battery died.", "My phone died.", "My computer died."], "correct_answer": "My laptop died.", "explanation": "Audio exacto." },
+        { "id": "a2-6-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I can't log in.", "options": ["I can't log in.", "I cannot log in.", "He can't log in.", "I can't log on."], "correct_answer": "I can't log in.", "explanation": "Audio exacto." },
+        { "id": "a2-6-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Have you tried to reboot the computer?", "options": ["Have you tried to reboot the computer?", "Have you tried to restart the computer?", "Did you try to reboot the computer?", "Have you tried to reboot the system?"], "correct_answer": "Have you tried to reboot the computer?", "explanation": "Audio exacto." },
+        { "id": "a2-6-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The server is down right now.", "options": ["The server is down right now.", "The server is down.", "The system is down right now.", "The internet is down right now."], "correct_answer": "The server is down right now.", "explanation": "Audio exacto." },
+        { "id": "a2-6-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Could you reset my password, please?", "options": ["Could you reset my password, please?", "Can you reset my password, please?", "Could you restart my password, please?", "Please reset my password."], "correct_answer": "Could you reset my password, please?", "explanation": "Audio exacto." },
+        { "id": "a2-6-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I accidentally deleted the file.", "options": ["I accidentally deleted the file.", "I accidentally deleted the folder.", "He accidentally deleted the file.", "I deleted the file."], "correct_answer": "I accidentally deleted the file.", "explanation": "Audio exacto." },
+        { "id": "a2-6-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Did you make a backup?", "options": ["Did you make a backup?", "Did you do a backup?", "Have you made a backup?", "Did you take a backup?"], "correct_answer": "Did you make a backup?", "explanation": "Audio exacto." },
+        { "id": "a2-6-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The printer is out of paper.", "options": ["The printer is out of paper.", "The printer is out of ink.", "My printer is out of paper.", "The machine is out of paper."], "correct_answer": "The printer is out of paper.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

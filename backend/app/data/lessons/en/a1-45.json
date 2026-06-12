@@ -1,0 +1,101 @@
+{
+  "id": "a1-45",
+  "title": "Office Dress Code & Colors",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Clothes", "Colors"],
+  "completion_message": "¡Magnífico! Ya conoces el vocabulario necesario para describir la vestimenta y los colores en un entorno profesional.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Código de Vestimenta",
+      "parts": [
+        { "visual": "Colores básicos: Black (negro), White (blanco), Blue (azul), Grey (gris).", "audio": "Basic colors: Black, White, Blue, Grey." },
+        { "visual": "Prendas: Suit (traje), Shirt (camisa), Tie (corbata), Skirt (falda), Shoes (zapatos).", "audio": "Clothing: Suit, Shirt, Tie, Skirt, Shoes." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la prenda o el color correcto.",
+      "questions": [
+        { "id": "a1-45-q1", "type": "quiz_choice", "question": "He is wearing a blue ____.", "options": ["suit", "sweet", "suite", "sweat"], "correct_answer": "suit", "explanation": "Traje (suit)." },
+        { "id": "a1-45-q2", "type": "quiz_choice", "question": "She has a white ____.", "options": ["shirt", "short", "skirt", "shoe"], "correct_answer": "shirt", "explanation": "Camisa (shirt)." },
+        { "id": "a1-45-q3", "type": "quiz_choice", "question": "The manager is wearing a red ____.", "options": ["tie", "die", "time", "try"], "correct_answer": "tie", "explanation": "Corbata (tie)." },
+        { "id": "a1-45-q4", "type": "quiz_choice", "question": "Please wear black ____.", "options": ["shoes", "shoe", "show", "shows"], "correct_answer": "shoes", "explanation": "Zapatos (shoes)." },
+        { "id": "a1-45-q5", "type": "quiz_choice", "question": "We have a strict dress ____.", "options": ["code", "coat", "cold", "cord"], "correct_answer": "code", "explanation": "Código de vestimenta (dress code)." },
+        { "id": "a1-45-q6", "type": "quiz_choice", "question": "Tomorrow is Casual ____.", "options": ["Friday", "Monday", "Day", "Time"], "correct_answer": "Friday", "explanation": "Viernes casual (Casual Friday)." },
+        { "id": "a1-45-q7", "type": "quiz_choice", "question": "He forgot his ____.", "options": ["jacket", "jack", "packet", "rack"], "correct_answer": "jacket", "explanation": "Chaqueta (jacket)." },
+        { "id": "a1-45-q8", "type": "quiz_choice", "question": "She is wearing a grey ____.", "options": ["skirt", "shirt", "sky", "skin"], "correct_answer": "skirt", "explanation": "Falda (skirt)." },
+        { "id": "a1-45-q9", "type": "quiz_choice", "question": "The logo of our company is ____ (verde).", "options": ["green", "blue", "red", "yellow"], "correct_answer": "green", "explanation": "Verde (green)." },
+        { "id": "a1-45-q10", "type": "quiz_choice", "question": "The presentation background is ____ (blanco).", "options": ["white", "black", "grey", "brown"], "correct_answer": "white", "explanation": "Blanco (white)." },
+        { "id": "a1-45-q11", "type": "quiz_choice", "question": "I need some dark ____.", "options": ["pants", "pant", "paint", "paints"], "correct_answer": "pants", "explanation": "Pantalones (pants)." },
+        { "id": "a1-45-q12", "type": "quiz_choice", "question": "You look very ____ today.", "options": ["professional", "profess", "profession", "professor"], "correct_answer": "professional", "explanation": "Profesional." },
+        { "id": "a1-45-q13", "type": "quiz_choice", "question": "Is it okay to wear ____? (jeans/mezclilla)", "options": ["jeans", "jean", "genes", "gems"], "correct_answer": "jeans", "explanation": "Pantalones de mezclilla." },
+        { "id": "a1-45-q14", "type": "quiz_choice", "question": "A business ____ is required.", "options": ["suit", "sweet", "shirt", "skirt"], "correct_answer": "suit", "explanation": "Traje de negocios (business suit)." },
+        { "id": "a1-45-q15", "type": "quiz_choice", "question": "The text should be ____ (negro).", "options": ["black", "block", "back", "blank"], "correct_answer": "black", "explanation": "Negro." },
+        { "id": "a1-45-q16", "type": "quiz_choice", "question": "Her shoes are ____ (café/marrón).", "options": ["brown", "town", "down", "crown"], "correct_answer": "brown", "explanation": "Marrón (brown)." },
+        { "id": "a1-45-q17", "type": "quiz_choice", "question": "No open-toed ____ in the lab.", "options": ["shoes", "show", "shirts", "skirts"], "correct_answer": "shoes", "explanation": "Zapatos (shoes)." },
+        { "id": "a1-45-q18", "type": "quiz_choice", "question": "He has a yellow ____.", "options": ["tie", "die", "time", "try"], "correct_answer": "tie", "explanation": "Corbata amarilla." },
+        { "id": "a1-45-q19", "type": "quiz_choice", "question": "Our uniform is ____ (azul).", "options": ["blue", "glue", "clue", "blow"], "correct_answer": "blue", "explanation": "Azul (blue)." },
+        { "id": "a1-45-q20", "type": "quiz_choice", "question": "Wear something ____.", "options": ["comfortable", "comfort", "comforts", "comforting"], "correct_answer": "comfortable", "explanation": "Cómodo (comfortable)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra de ropa o color exacto.",
+      "questions": [
+        { "id": "a1-45-f1", "type": "fill_input", "question": "A blue ____ (Traje).", "correct_answer": "suit", "explanation": "Suit." },
+        { "id": "a1-45-f2", "type": "fill_input", "question": "A white ____ (Camisa).", "correct_answer": "shirt", "explanation": "Shirt." },
+        { "id": "a1-45-f3", "type": "fill_input", "question": "A red ____ (Corbata).", "correct_answer": "tie", "explanation": "Tie." },
+        { "id": "a1-45-f4", "type": "fill_input", "question": "Black ____ (Zapatos).", "correct_answer": "shoes", "explanation": "Shoes." },
+        { "id": "a1-45-f5", "type": "fill_input", "question": "Dress ____ (Código).", "correct_answer": "code", "explanation": "Code." },
+        { "id": "a1-45-f6", "type": "fill_input", "question": "Casual ____ (Viernes).", "correct_answer": "Friday", "explanation": "Friday." },
+        { "id": "a1-45-f7", "type": "fill_input", "question": "A grey ____ (Falda).", "correct_answer": "skirt", "explanation": "Skirt." },
+        { "id": "a1-45-f8", "type": "fill_input", "question": "The color ____ (Verde).", "correct_answer": "green", "explanation": "Green." },
+        { "id": "a1-45-f9", "type": "fill_input", "question": "The color ____ (Blanco).", "correct_answer": "white", "explanation": "White." },
+        { "id": "a1-45-f10", "type": "fill_input", "question": "Dark ____ (Pantalones).", "correct_answer": "pants", "explanation": "Pants." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-45-p1", "source": "Suit", "target": "Traje"},
+        {"id": "a1-45-p2", "source": "Shirt", "target": "Camisa"},
+        {"id": "a1-45-p3", "source": "Tie", "target": "Corbata"},
+        {"id": "a1-45-p4", "source": "Shoes", "target": "Zapatos"},
+        {"id": "a1-45-p5", "source": "Dress code", "target": "Código de vestimenta"},
+        {"id": "a1-45-p6", "source": "Skirt", "target": "Falda"},
+        {"id": "a1-45-p7", "source": "Pants", "target": "Pantalones"},
+        {"id": "a1-45-p8", "source": "Black", "target": "Negro"},
+        {"id": "a1-45-p9", "source": "White", "target": "Blanco"},
+        {"id": "a1-45-p10", "source": "Blue", "target": "Azul"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la prenda o color.",
+      "questions": [
+        { "id": "a1-45-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A blue suit.", "options": ["A blue suit.", "A black suit.", "A blue shirt.", "A brown suit."], "correct_answer": "A blue suit.", "explanation": "Audio exacto." },
+        { "id": "a1-45-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A white shirt.", "options": ["A white shirt.", "A white skirt.", "A white suit.", "A black shirt."], "correct_answer": "A white shirt.", "explanation": "Audio exacto." },
+        { "id": "a1-45-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A red tie.", "options": ["A red tie.", "A red die.", "A blue tie.", "A green tie."], "correct_answer": "A red tie.", "explanation": "Audio exacto." },
+        { "id": "a1-45-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Black shoes.", "options": ["Black shoes.", "Brown shoes.", "Blue shoes.", "Black boots."], "correct_answer": "Black shoes.", "explanation": "Audio exacto." },
+        { "id": "a1-45-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Dress code.", "options": ["Dress code.", "Dress coat.", "Dress cold.", "Dress cord."], "correct_answer": "Dress code.", "explanation": "Audio exacto." },
+        { "id": "a1-45-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Casual Friday.", "options": ["Casual Friday.", "Casual Monday.", "Visual Friday.", "Actual Friday."], "correct_answer": "Casual Friday.", "explanation": "Audio exacto." },
+        { "id": "a1-45-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A grey skirt.", "options": ["A grey skirt.", "A grey shirt.", "A green skirt.", "A grey suit."], "correct_answer": "A grey skirt.", "explanation": "Audio exacto." },
+        { "id": "a1-45-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Dark pants.", "options": ["Dark pants.", "Dark paint.", "Black pants.", "Blue pants."], "correct_answer": "Dark pants.", "explanation": "Audio exacto." },
+        { "id": "a1-45-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Professional.", "options": ["Professional.", "Professor.", "Profession.", "Profess."], "correct_answer": "Professional.", "explanation": "Audio exacto." },
+        { "id": "a1-45-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Wear something comfortable.", "options": ["Wear something comfortable.", "Wear something casual.", "Wear something formal.", "Wear something blue."], "correct_answer": "Wear something comfortable.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

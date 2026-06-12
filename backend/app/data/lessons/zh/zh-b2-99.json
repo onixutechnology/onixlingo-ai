@@ -1,0 +1,92 @@
+{
+  "id": "zh-b2-99",
+  "title": "Misión Posible",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Grammar", "Complements", "Potential"],
+  "completion_message": "¡Misión Cumplida! Has desbloqueado el máximo nivel de precisión verbal. Ahora sabes cuándo algo es posible y cuándo simplemente no se puede hacer.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "El Complemento de Potencial",
+      "parts": [
+        {
+          "visual": "Posibilidad: Verbo + 得 (de) + Complemento\nImposibilidad: Verbo + 不 (bu) + Complemento\n\nSi insertas un 'de' o un 'bu' en medio de la estructura (entre el verbo y el resultado), cambias el significado de un HECHO a una POSIBILIDAD. Esto se llama 'Complemento de Potencial'.\n\n- Entender: 听懂 (Tīng dǒng) [Hecho].\n- Poder entender (Es posible para mí): 听得懂 (Tīng de dǒng) [Posibilidad].\n- No poder entender (Es imposible): 听不懂 (Tīng bu dǒng) [Imposibilidad].\n- Yo no puedo entender el chino: 我听不懂中文 (Wǒ tīng bu dǒng Zhōngwén).",
+          "audio": "Esta es la estructura más útil y mágica del nivel B2. Tomas todo lo que hemos aprendido sobre resultados y lo abres en medio. Si metes un 'De' en el medio, dices que ES POSIBLE alcanzar el resultado. Si metes un 'Bu' en el medio, dices que NO ES POSIBLE alcanzar el resultado. Si dices Tīng dǒng, es que entendiste. Pero si el chino es muy rápido y NO PUEDES entenderlo, dices Tīng bu dǒng. Esa es la frase más famosa del chino para extranjeros: Tīng bu dǒng. No puedo entender (por el oído)."
+        },
+        {
+          "visual": "Aplicado a todos los complementos:\n\nEsta regla de meter el 'de/bu' aplica a los resultados que ya aprendimos: 完 (wán), 好 (hǎo), 到 (dào), 清楚 (qīngchu).\n\n- Terminar (Agotar): 吃完 (Chī wán).\n- Poder terminar (ej: mucha comida, pero puedo): 吃得完 (Chī de wán).\n- No poder terminar (ej: es demasiada comida): 吃不完 (Chī bu wán).\n\n- Alcanzar a ver: 看到 (Kàn dào).\n- Poder verlo (alcanza la vista): 看得到 (Kàn de dào).\n- No poder verlo (muy lejos/tapado): 看不到 (Kàn bu dào).",
+          "audio": "Puedes usar esta fórmula con todos los complementos. Imagina que te sirven un plato gigante de arroz. Tu amigo te pregunta: ¿Chī de wán ma? ¿Puedes terminarlo? Tú te tocas el estómago y dices: Chī bu wán. No puedo terminarlo (es imposible comerlo todo). O estás en el cine y alguien alto se sienta frente a ti. No usas el verbo 'poder' (néng). Dices: Kàn bu dào. Literalmente: Miro-No-Alcanzo. No puedo verlo."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa tus posibilidades.",
+      "questions": [
+        { "id": "zh-b2-99-q1", "type": "quiz_choice", "question": "Gramática B2: ¿Qué indica un Complemento de Potencial (insertando de/bu)?", "options": ["Si es posible o imposible alcanzar un resultado.", "Si una acción ya pasó o no.", "Si dos cosas son iguales.", "Si una acción va a empezar."], "correct_answer": "Si es posible o imposible alcanzar un resultado.", "explanation": "Evalúa la viabilidad (puedo o no puedo lograrlo)." },
+        { "id": "zh-b2-99-q2", "type": "quiz_choice", "question": "Traduce la frase más famosa del chino: 'No puedo entender (al escuchar)'.", "options": ["Tīng bu dǒng (听不懂).", "Bù tīng dǒng (不听懂 - Yo no escucho-entiendo [incorrecto]).", "Tīng dǒng bu (听懂不).", "Méi tīng dǒng (没听懂 - Eso es 'No entendí' [pasado, hecho consumado])."], "correct_answer": "Tīng bu dǒng (听不懂).", "explanation": "Escuchar (tīng) + no (bu) + entender (dǒng)." },
+        { "id": "zh-b2-99-q3", "type": "quiz_choice", "question": "Y si el profesor habla muy claro y dices: 'Sí puedo entender (al escuchar)'.", "options": ["Tīng de dǒng (听得懂).", "Tīng dǒng le (听懂了 - Eso es 'Ya entendí' [hecho]).", "Tīng hěn dǒng (听很懂).", "Tīng shì dǒng (听是懂)."], "correct_answer": "Tīng de dǒng (听得懂).", "explanation": "El 'de' en medio indica que la posibilidad es positiva." },
+        { "id": "zh-b2-99-q4", "type": "quiz_choice", "question": "Te dan 5 kilos de arroz. Dices: 'No puedo terminar de comer(lo)'. (Agotar = wán).", "options": ["Chī bu wán (吃不完).", "Bù chī wán (不吃完).", "Chī wán bu (吃完不).", "Méi chī wán (没吃完 - No lo terminé [pasado])."], "correct_answer": "Chī bu wán (吃不完).", "explanation": "Comer (chī) + no (bu) + agotar/terminar (wán)." },
+        { "id": "zh-b2-99-q5", "type": "quiz_choice", "question": "¿Cómo preguntas '¿Puedes terminar de comer(lo)?' usando el potencial positivo + ma?", "options": ["Nǐ chī de wán ma? (你吃得完吗？).", "Nǐ chī bu wán ma? (你吃不完吗？ - ¿No puedes terminarlo?).", "Nǐ néng chī wán le ma? (你能吃完了吗？).", "Nǐ chī wán le ma? (你吃完了吗？ - ¿Ya terminaste?)."], "correct_answer": "Nǐ chī de wán ma? (你吃得完吗？).", "explanation": "Tú (nǐ) + comer-poder-terminar (chī de wán) + ma?" },
+        { "id": "zh-b2-99-q6", "type": "quiz_choice", "question": "Estás muy lejos del escenario. Dices: 'No puedo ver (No alcanzo a ver)'.", "options": ["Kàn bu dào (看不到).", "Kàn bu qīngchu (看不清楚 - Veo algo borroso, pero sí alcanzo a ver bultos).", "Kàn bu dǒng (看不懂 - Lo veo, pero no lo entiendo [ej: un texto]).", "Méi kàn dào (没看到 - No lo vi [pasado])."], "correct_answer": "Kàn bu dào (看不到).", "explanation": "Ver (kàn) + no (bu) + alcanzar (dào). Incapacidad física de llegar al objetivo visual." },
+        { "id": "zh-b2-99-q7", "type": "quiz_choice", "question": "Ahora estás sin lentes frente al texto. Dices: 'No puedo ver claramente'.", "options": ["Kàn bu qīngchu (看不清楚).", "Kàn bu dào (看不到 - No ves ni el papel).", "Méi kàn qīngchu (没看清楚 - No lo vi claro [pasado]).", "Kàn de qīngchu (看得清楚 - Sí puedo ver claro)."], "correct_answer": "Kàn bu qīngchu (看不清楚).", "explanation": "Ver (kàn) + no (bu) + claro (qīngchu)." },
+        { "id": "zh-b2-99-q8", "type": "quiz_choice", "question": "El boleto está agotado. Tú dices: 'No se puede (conseguir) comprar'.", "options": ["Mǎi bu dào (买不到).", "Mǎi bu wán (买不完 - Hay demasiados boletos y no se acaban).", "Mǎi bu hǎo (买不好 - No se puede comprar bien).", "Mǎi bu dǒng (买不懂 - No se puede entender comprando)."], "correct_answer": "Mǎi bu dào (买不到).", "explanation": "Comprar (mǎi) + no (bu) + alcanzar objetivo (dào)." },
+        { "id": "zh-b2-99-q9", "type": "quiz_choice", "question": "Diferencia temporal fundamental: ¿Cuál es la diferencia entre 'Wǒ méi tīng dǒng' y 'Wǒ tīng bu dǒng'?", "options": ["Méi tīng dǒng: No entendí (Ya pasó el intento). / Tīng bu dǒng: No puedo entender (Incapacidad general o actual).", "Son exactamente lo mismo.", "Méi tīng dǒng es futuro. Tīng bu dǒng es pasado.", "Una es ver y otra es escuchar."], "correct_answer": "Méi tīng dǒng: No entendí (Ya pasó el intento). / Tīng bu dǒng: No puedo entender (Incapacidad general o actual).", "explanation": "Méi = Hecho que no ocurrió. Bu en medio = Imposibilidad." },
+        { "id": "zh-b2-99-q10", "type": "quiz_choice", "question": "Un amigo intenta leer Ruso. Tú le preguntas: '¿Puedes entenderlo (al leer)?'. (Mirar/Leer = kàn).", "options": ["Nǐ kàn de dǒng ma? (你看得懂吗？).", "Nǐ kàn bu dǒng ma? (看不懂吗？ - ¿No puedes?).", "Nǐ tīng de dǒng ma? (你听得懂吗？ - ¿Puedes entenderlo al oír?).", "Nǐ kàn wán le ma? (你看完了吗？ - ¿Terminaste de leer?)."], "correct_answer": "Nǐ kàn de dǒng ma? (你看得懂吗？).", "explanation": "Leer (kàn) + poder (de) + entender (dǒng) + ma." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Pinyin Typing",
+      "description": "Escribe lo que puedes y no puedes hacer.",
+      "questions": [
+        { "id": "zh-b2-99-f1", "type": "fill_input", "question": "No puedo entender (al oír): ting ____ dong (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-b2-99-f2", "type": "fill_input", "question": "Sí puedo entender (al oír): ting ____ dong (de)", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-b2-99-f3", "type": "fill_input", "question": "No puedo ver (no alcanzo): kan bu ____ (dao)", "correct_answer": "dao", "explanation": "dao" },
+        { "id": "zh-b2-99-f4", "type": "fill_input", "question": "Sí puedo ver (sí alcanzo): kan de ____ (dao)", "correct_answer": "dao", "explanation": "dao" },
+        { "id": "zh-b2-99-f5", "type": "fill_input", "question": "No puedo terminar de comer (es mucho): chi bu ____ (wan)", "correct_answer": "wan", "explanation": "wan" },
+        { "id": "zh-b2-99-f6", "type": "fill_input", "question": "¿Puedes terminar de comer?: ni chi ____ wan ma? (de)", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-b2-99-f7", "type": "fill_input", "question": "No puedo ver claramente: kan bu qing ____ (chu)", "correct_answer": "chu", "explanation": "chu" },
+        { "id": "zh-b2-99-f8", "type": "fill_input", "question": "No se puede comprar (conseguir): mai ____ dao (bu)", "correct_answer": "bu", "explanation": "bu" },
+        { "id": "zh-b2-99-f9", "type": "fill_input", "question": "¿Puedes entender (al leer)?: ni kan ____ dong ma? (de)", "correct_answer": "de", "explanation": "de" },
+        { "id": "zh-b2-99-f10", "type": "fill_input", "question": "Repaso (No lo entendí, pasado): mei ting ____ (dong)", "correct_answer": "dong", "explanation": "dong" }
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Entrenamiento Auditivo",
+      "description": "Escucha las posibilidades.",
+      "questions": [
+        { "id": "zh-b2-99-l1", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "听不懂", "options": ["No puedo entender (al oír)", "No entendí (pasado)", "Sí puedo entender", "No quiero escuchar"], "correct_answer": "No puedo entender (al oír)", "explanation": "El audio dice: Tīng bu dǒng." },
+        { "id": "zh-b2-99-l2", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "听得懂", "options": ["Sí puedo entender (al oír)", "No puedo entender", "Entendí", "No entendí"], "correct_answer": "Sí puedo entender (al oír)", "explanation": "El audio dice: Tīng de dǒng." },
+        { "id": "zh-b2-99-l3", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "看不到", "options": ["No puedo ver (no alcanzo)", "No puedo leer (no entiendo)", "No quiero ver", "No lo vi"], "correct_answer": "No puedo ver (no alcanzo)", "explanation": "El audio dice: Kàn bu dào." },
+        { "id": "zh-b2-99-l4", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "看得懂", "options": ["Sí puedo entender (al leer)", "No puedo entender (al leer)", "Sí puedo ver", "No puedo ver"], "correct_answer": "Sí puedo entender (al leer)", "explanation": "El audio dice: Kàn de dǒng." },
+        { "id": "zh-b2-99-l5", "type": "listening_match", "question": "Escucha y selecciona:", "tts_text": "吃不完", "options": ["No puedo terminar de comer", "Sí puedo terminar", "No me lo comí", "Terminé de comer"], "correct_answer": "No puedo terminar de comer", "explanation": "El audio dice: Chī bu wán." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Match the Potentials",
+      "pairs": [
+        {"id": "zh-b2-99-p1", "source": "听不懂 (tīng bu dǒng)", "target": "No puedo entender (al oír)"},
+        {"id": "zh-b2-99-p2", "source": "听得懂 (tīng de dǒng)", "target": "Sí puedo entender (al oír)"},
+        {"id": "zh-b2-99-p3", "source": "看不懂 (kàn bu dǒng)", "target": "No puedo entender (al leer)"},
+        {"id": "zh-b2-99-p4", "source": "看不到 (kàn bu dào)", "target": "No puedo ver (no alcanzo)"},
+        {"id": "zh-b2-99-p5", "source": "吃不完 (chī bu wán)", "target": "No puedo terminar de comer"},
+        {"id": "zh-b2-99-p6", "source": "买不到 (mǎi bu dào)", "target": "No se puede comprar / conseguir"},
+        {"id": "zh-b2-99-p7", "source": "看不清楚 (kàn bu qīngchu)", "target": "No puedo ver claramente"},
+        {"id": "zh-b2-99-p8", "source": "没听懂 (méi tīng dǒng)", "target": "No lo entendí (Pasado - Hecho)"},
+        {"id": "zh-b2-99-p9", "source": "起来 (qǐlái)", "target": "Empezar la acción"},
+        {"id": "zh-b2-99-p10", "source": "下去 (xiàqù)", "target": "Continuar la acción"}
+      ]
+    }
+  ]
+}

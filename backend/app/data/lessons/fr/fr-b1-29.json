@@ -1,602 +1,94 @@
 {
   "id": "fr-b1-29",
-  "title": "Investigación de Mercado",
+  "title": "Le Participe Présent",
+  "version": "4.0-ARTISAN",
   "level": "B1",
-  "description": "Análisis DAFO/SWOT en inglés.",
-  "total_xp": 300,
-  "difficulty": "medium",
-  "tags": [
-    "b1",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Participles", "Writing"],
+  "completion_message": "¡Magnífico! Has dominado el nivel más alto del lenguaje escrito. Ya puedes leer noticias, contratos y literatura francesa sin tropezar.",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Investigación de Mercado",
+      "title": "El Lenguaje de los Periódicos (B1)",
       "parts": [
         {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau B1 • Leçon B1-29 de 200\nSujet: Investigación de Mercado\n\nConcept Clé:\n☞ 'RECHERCHE'\n\n[Point Grammatical - Enfoque Gramatical]\n- L'utilisation des verbes modaux professionnels : Devoir, Pouvoir et Vouloir ('nous devons allouer recherche').\\n- Les pronoms compléments (en, y) pour éviter les répétitions dans vos e-mails : 'Nous y pensons pour recherche'.\\n- Clé Didactique : L'expression de l'obligation modérée et de la possibilité en milieu corporatif.",
-          "audio": "Bienvenue à la leçon B1-29 sur Investigación de Mercado. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : recherche."
+          "visual": "Le Participe Présent (El Participio Presente):\n\nTiene la misma forma que el gerundio (raíz de 'nous' + ant), pero SIN la palabra 'En'.\nEj: Parler -> Parlant. Finir -> Finissant. Être -> Étant. Avoir -> Ayant.\n\nUSO 1: Reemplazar 'Qui + Verbo' en el lenguaje escrito/formal.\nSi lees una noticia o un contrato, en lugar de decir 'Las personas QUE TIENEN un billete', usarán el participio: 'Las personas TENIENDO un billete'.\n\n- Normal: Les personnes QUI ONT un billet.\n- Formal: Les personnes AYANT un billet.\n\n¡Atención! Cuando reemplaza a 'qui + verbo', el participio es INVARIABLE (no cambia por plural o femenino).",
+          "audio": "¡Bienvenido a la clase más formal del nivel B1! Hoy vamos a hablar del Participio Presente. Tiene exactamente la misma forma que el gerundio, es decir, termina en '-ant', pero NO lleva la palabra 'En' al principio. Solo dices 'parlant' o 'ayant'. ¿Para qué sirve? Si abres un periódico francés o firmas un contrato, rara vez verás la frase 'Las personas QUE TIENEN un billete'. Para ahorrar espacio y sonar profesionales, los franceses quitan el 'Que tienen' y ponen el participio: 'Las personas TENIENDO un billete'. Así que 'Les personnes QUI ONT un billet', se convierte en 'Les personnes AYANT un billet'. Y ojo, en este uso, la palabra 'ayant' no cambia aunque sean muchas personas."
         },
         {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'recherche' (Traducción/Uso: Análisis DAFO/SWOT en inglés.)\n- Application Pratique : 'Nous devons intégrer recherche pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : Prononcez bien le 's' final dans les mots de liaison comme 'nous devons' devant une voyelle.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : recherche. Répétez après moi : recherche."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Au niveau B1, structurez vos arguments avec des connecteurs logiques formels ('cependant', 'par conséquent').\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
+          "visual": "USO 2: Como Adjetivo (L'Adjectif Verbal):\n\nEl participio presente también se usa como un adjetivo normal. Como es un adjetivo, SÍ CONCUERDA en género y número con el sustantivo.\n\nEjemplos:\n- Un film SURPRENANT (Una película sorprendente).\n- Une histoire SURPRENANTE (Una historia sorprendente - Femenino).\n- Des événements MARQUANTS (Eventos impactantes - Plural).\n\nResumen de concordancia:\n- Si reemplaza una acción (qui + verbo) -> INVARIABLE.\n- Si funciona como un adjetivo descriptivo -> SÍ CAMBIA (se le añade 'e' o 's').",
+          "audio": "El segundo uso es como adjetivo. Muchos adjetivos en español terminan en 'ante' o 'ente': interesante, sorprendente, impactante. En francés, todos esos adjetivos se hacen con el participio presente. Una película sorprendente es 'Un film SURPRENANT'. Pero ¡cuidado aquí! Como está funcionando como un adjetivo para describir algo, SÍ tiene que concordar. Si es una historia sorprendente, le agregas una 'E' de femenino y dices: 'Une histoire SURPRENANTE'. La regla de oro es: si está reemplazando a una acción, es decir 'los que hacen algo', no cambia. Si es un adjetivo para describir, sí cambia."
         }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del participio presente o adjetivo verbal.",
       "questions": [
-        {
-          "id": "fr-b1-29-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"recherche\" dans le contexte de \"Investigación de Mercado\" ?",
-          "options": [
-            "Le concept professionnel principal de recherche utilisé dans Investigación de Mercado.",
-            "Un terme familier à éviter dans Investigación de Mercado.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Investigación de Mercado."
-          ],
-          "correct_answer": "Le concept professionnel principal de recherche utilisé dans Investigación de Mercado.",
-          "explanation": "Comprendre la définition de \"recherche\" est fondamental pour maîtriser \"Investigación de Mercado\"."
-        },
-        {
-          "id": "fr-b1-29-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"recherche\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Investigación de Mercado\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"recherche\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Investigación de Mercado\" aux parties prenantes.",
-          "explanation": "Aborder \"recherche\" dans les présentations professionnelles améliore la communication globale concernant \"Investigación de Mercado\"."
-        },
-        {
-          "id": "fr-b1-29-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Investigación de Mercado\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"recherche\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"recherche\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"recherche\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"recherche\" sont los piliers d'une exécution réussie de \"Investigación de Mercado\"."
-        },
-        {
-          "id": "fr-b1-29-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Investigación de Mercado\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"recherche\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"recherche\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"recherche\" conduit souvent à des résultats inefficaces dans \"Investigación de Mercado\"."
-        },
-        {
-          "id": "fr-b1-29-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"recherche\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"recherche\" adapté à l'environnement de \"Investigación de Mercado\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"recherche\" adapté à l'environnement de \"Investigación de Mercado\".",
-          "explanation": "Traduire ou adapter \"recherche\" nécessite de comprendre son application commerciale pratique dans \"Investigación de Mercado\"."
-        },
-        {
-          "id": "fr-b1-29-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"recherche\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Investigación de Mercado\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Investigación de Mercado\".",
-          "explanation": "Utiliser \"recherche\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-b1-29-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Investigación de Mercado\", comment un cadre doit-il présenter \"recherche\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"recherche\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-b1-29-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"recherche\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"recherche\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"recherche\".",
-          "explanation": "Définir les jalons liés à \"recherche\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-b1-29-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Investigación de Mercado\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"recherche\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"recherche\".",
-          "explanation": "Les mots professionnels comme \"recherche\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-b1-29-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"recherche\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"recherche\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "frb1-29-q1", "type": "quiz_choice", "question": "¿Cómo se forma el Participio Presente?", "options": ["Raíz de 'nous' en presente + ant", "Infinitivo + ant", "Raíz de 'ils' + ant", "Participio pasado + ant"], "correct_answer": "Raíz de 'nous' en presente + ant", "explanation": "Igual que el gerundio, se forma con 'nous'. (Nous parlons -> parlant)." },
+        { "id": "frb1-29-q2", "type": "quiz_choice", "question": "¿Cuál es la diferencia visible entre el Gerundio y el Participio Presente?", "options": ["El Gerundio lleva 'En' (En parlant) y el Participio Presente no (parlant)", "El Gerundio termina en -ant y el Participio Presente en -é", "Ninguna, son idénticos"], "correct_answer": "El Gerundio lleva 'En' (En parlant) y el Participio Presente no (parlant)", "explanation": "Gerundio: En parlant. Participio: parlant." },
+        { "id": "frb1-29-q3", "type": "quiz_choice", "question": "Convierte al participio: 'Les élèves qui écoutent le professeur'.", "options": ["Les élèves écoutant le professeur", "Les élèves en écoutant le professeur", "Les élèves écoutants le professeur"], "correct_answer": "Les élèves écoutant le professeur", "explanation": "Reemplaza 'qui écoutent' por 'écoutant' (invariable)." },
+        { "id": "frb1-29-q4", "type": "quiz_choice", "question": "Convierte al participio: 'Les personnes qui ont un billet'.", "options": ["Les personnes ayant un billet", "Les personnes ayantes un billet", "Les personnes aillant un billet"], "correct_answer": "Les personnes ayant un billet", "explanation": "Avoir es irregular -> ayant. Como reemplaza acción, es invariable." },
+        { "id": "frb1-29-q5", "type": "quiz_choice", "question": "Ce sont des histoires ____. (Son historias SORPRENDENTES).", "options": ["surprenantes", "surprenant", "surprenants", "surprenante"], "correct_answer": "surprenantes", "explanation": "Aquí funciona como adjetivo de 'histoires' (fem. plural) -> surprenantes." },
+        { "id": "frb1-29-q6", "type": "quiz_choice", "question": "J'ai vu une émission très ____. (INTERESANTE - f).", "options": ["intéressante", "intéressant", "intéressantes", "intéressants"], "correct_answer": "intéressante", "explanation": "Adjetivo para 'émission' (femenino) -> intéressante." },
+        { "id": "frb1-29-q7", "type": "quiz_choice", "question": "Les employés ____ (qui veulent) un congé doivent signer ici.", "options": ["voulant", "voulants", "voulantes", "en voulant"], "correct_answer": "voulant", "explanation": "Reemplaza acción (qui veulent) -> voulant (invariable)." },
+        { "id": "frb1-29-q8", "type": "quiz_choice", "question": "¿Cuál es el participio presente del verbo 'Être'?", "options": ["Étant", "Soyant", "Estant", "Êtrant"], "correct_answer": "Étant", "explanation": "Être -> Étant." },
+        { "id": "frb1-29-q9", "type": "quiz_choice", "question": "Les enfants ____ (qui sont) fatigués peuvent dormir.", "options": ["étant", "étants", "en étant", "sontant"], "correct_answer": "étant", "explanation": "Reemplaza 'qui sont' -> étant (invariable)." },
+        { "id": "frb1-29-q10", "type": "quiz_choice", "question": "C'est un travail très ____. (FATIGANTE).", "options": ["fatigant", "fatigants", "fatiguant", "fatigante"], "correct_answer": "fatigant", "explanation": "Adjetivo verbal masculino singular -> fatigant." },
+        { "id": "frb1-29-q11", "type": "quiz_choice", "question": "Les passagers ____ (qui voyagent) en première classe...", "options": ["voyageant", "voyageants", "en voyageant", "voyagant"], "correct_answer": "voyageant", "explanation": "Voyager -> Voyageant (con 'e' para mantener el sonido suave de la g). Invariable." },
+        { "id": "frb1-29-q12", "type": "quiz_choice", "question": "Elle a une voix ____. (CHARMANTE / ENCANTADORA).", "options": ["charmante", "charmant", "charmantes", "en charmant"], "correct_answer": "charmante", "explanation": "Adjetivo para 'voix' (fem) -> charmante." },
+        { "id": "frb1-29-q13", "type": "quiz_choice", "question": "¿Cuál es el participio presente del verbo 'Savoir'?", "options": ["Sachant", "Savant", "Sachants", "Suvant"], "correct_answer": "Sachant", "explanation": "Savoir -> Sachant (irregular)." },
+        { "id": "frb1-29-q14", "type": "quiz_choice", "question": "Les personnes ____ (qui savent) parler anglais...", "options": ["sachant", "sachants", "en sachant", "savantes"], "correct_answer": "sachant", "explanation": "Reemplaza acción -> sachant (invariable)." },
+        { "id": "frb1-29-q15", "type": "quiz_choice", "question": "C'est une femme ____. (BRILLANTE).", "options": ["brillante", "brillant", "brillants", "brillantes"], "correct_answer": "brillante", "explanation": "Adjetivo verbal femenino -> brillante." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el participio presente invariable o el adjetivo verbal con concordancia.",
       "questions": [
-        {
-          "id": "fr-b1-29-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"recherche\" (Exercice 1) :",
-          "parts": [
-            "implémenter",
-            "votre",
-            "recherche",
-            "pour",
-            "optimiser",
-            "le",
-            "travail.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "implémenter",
-            "votre",
-            "recherche",
-            "pour",
-            "optimiser",
-            "le",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"recherche\"."
-        },
-        {
-          "id": "fr-b1-29-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"recherche\" (Exercice 2) :",
-          "parts": [
-            "actuelle",
-            "privilégie",
-            "votre",
-            "recherche",
-            "pour",
-            "le",
-            "client.",
-            "Notre",
-            "stratégie"
-          ],
-          "correct_order": [
-            "Notre",
-            "stratégie",
-            "actuelle",
-            "privilégie",
-            "votre",
-            "recherche",
-            "pour",
-            "le",
-            "client."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"recherche\"."
-        },
-        {
-          "id": "fr-b1-29-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"recherche\" (Exercice 3) :",
-          "parts": [
-            "coordonner",
-            "avec",
-            "l'équipe",
-            "concernant",
-            "notre",
-            "recherche.",
-            "Veuillez",
-            "vous"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "vous",
-            "coordonner",
-            "avec",
-            "l'équipe",
-            "concernant",
-            "notre",
-            "recherche."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"recherche\"."
-        },
-        {
-          "id": "fr-b1-29-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"recherche\" (Exercice 4) :",
-          "parts": [
-            "réunion",
-            "rapide",
-            "pour",
-            "discuter",
-            "de",
-            "notre",
-            "recherche.",
-            "Planifions",
-            "une"
-          ],
-          "correct_order": [
-            "Planifions",
-            "une",
-            "réunion",
-            "rapide",
-            "pour",
-            "discuter",
-            "de",
-            "notre",
-            "recherche."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"recherche\"."
-        },
-        {
-          "id": "fr-b1-29-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"recherche\" (Exercice 5) :",
-          "parts": [
-            "de",
-            "projet",
-            "demande",
-            "un",
-            "rapport",
-            "sur",
-            "notre",
-            "recherche.",
-            "Le",
-            "chef"
-          ],
-          "correct_order": [
-            "Le",
-            "chef",
-            "de",
-            "projet",
-            "demande",
-            "un",
-            "rapport",
-            "sur",
-            "notre",
-            "recherche."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"recherche\"."
-        },
-        {
-          "id": "fr-b1-29-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"recherche\" (Exercice 6) :",
-          "parts": [
-            "analyser",
-            "comment",
-            "notre",
-            "recherche",
-            "influence",
-            "le",
-            "budget.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "analyser",
-            "comment",
-            "notre",
-            "recherche",
-            "influence",
-            "le",
-            "budget."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"recherche\"."
-        },
-        {
-          "id": "fr-b1-29-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"recherche\" (Exercice 7) :",
-          "parts": [
-            "le",
-            "calendrier",
-            "pour",
-            "livrer",
-            "notre",
-            "recherche ?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "le",
-            "calendrier",
-            "pour",
-            "livrer",
-            "notre",
-            "recherche ?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"recherche\"."
-        },
-        {
-          "id": "fr-b1-29-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"recherche\" (Exercice 8) :",
-          "parts": [
-            "s'aligne",
-            "avec",
-            "les",
-            "objectifs",
-            "de",
-            "notre",
-            "recherche.",
-            "Cette",
-            "initiative"
-          ],
-          "correct_order": [
-            "Cette",
-            "initiative",
-            "s'aligne",
-            "avec",
-            "les",
-            "objectifs",
-            "de",
-            "notre",
-            "recherche."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"recherche\"."
-        },
-        {
-          "id": "fr-b1-29-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"recherche\" (Exercice 9) :",
-          "parts": [
-            "décidé",
-            "d'externaliser",
-            "la",
-            "gestion",
-            "de",
-            "notre",
-            "recherche.",
-            "Ils",
-            "ont"
-          ],
-          "correct_order": [
-            "Ils",
-            "ont",
-            "décidé",
-            "d'externaliser",
-            "la",
-            "gestion",
-            "de",
-            "notre",
-            "recherche."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"recherche\"."
-        },
-        {
-          "id": "fr-b1-29-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"recherche\" (Exercice 10) :",
-          "parts": [
-            "nous",
-            "concentrer",
-            "sur",
-            "l'amélioration",
-            "de",
-            "notre",
-            "recherche.",
-            "Nous",
-            "devrions"
-          ],
-          "correct_order": [
-            "Nous",
-            "devrions",
-            "nous",
-            "concentrer",
-            "sur",
-            "l'amélioration",
-            "de",
-            "notre",
-            "recherche."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"recherche\"."
-        }
+        { "id": "frb1-29-f1", "type": "fill_input", "question": "Les élèves ____ (qui écoutent)... -> (Participio invariable)", "correct_answer": "écoutant", "explanation": "écoutant" },
+        { "id": "frb1-29-f2", "type": "fill_input", "question": "Une histoire ____ (surprendre). -> (Adjetivo femenino)", "correct_answer": "surprenante", "explanation": "surprenante" },
+        { "id": "frb1-29-f3", "type": "fill_input", "question": "Les personnes ____ (qui ont) soif... -> (Avoir - Participio invariable)", "correct_answer": "ayant", "explanation": "ayant" },
+        { "id": "frb1-29-f4", "type": "fill_input", "question": "Des films ____ (intéresser). -> (Adjetivo masculino plural)", "correct_answer": "intéressants", "explanation": "intéressants" },
+        { "id": "frb1-29-f5", "type": "fill_input", "question": "Ceux ____ (qui savent) la vérité... -> (Savoir - Participio invariable)", "correct_answer": "sachant", "explanation": "sachant" },
+        { "id": "frb1-29-f6", "type": "fill_input", "question": "Une journée ____ (fatiguer). -> (Adjetivo femenino)", "correct_answer": "fatigante", "explanation": "fatigante" },
+        { "id": "frb1-29-f7", "type": "fill_input", "question": "Les clients ____ (qui veulent) payer... -> (Vouloir - Participio invariable)", "correct_answer": "voulant", "explanation": "voulant" },
+        { "id": "frb1-29-f8", "type": "fill_input", "question": "Une eau ____ (bouillir). -> (Agua hirviendo - Adjetivo femenino)", "correct_answer": "bouillante", "explanation": "bouillante" },
+        { "id": "frb1-29-f9", "type": "fill_input", "question": "Les enfants ____ (qui sont) sages... -> (Être - Participio invariable)", "correct_answer": "étant", "explanation": "étant" },
+        { "id": "frb1-29-f10", "type": "fill_input", "question": "Des personnes très ____ (charmer). -> (Adjetivo femenino plural)", "correct_answer": "charmantes", "explanation": "charmantes" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-b1-29-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"recherche\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"recherche\" en détail.",
-            "Une autre déclaration sur notre \"recherche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"recherche\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"recherche\" en réunion."
-        },
-        {
-          "id": "fr-b1-29-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"recherche\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"recherche\" ?",
-            "Une autre déclaration sur notre \"recherche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"recherche\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"recherche\" en réunion."
-        },
-        {
-          "id": "fr-b1-29-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"recherche\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"recherche\" cette année.",
-            "Une autre déclaration sur notre \"recherche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"recherche\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"recherche\" en réunion."
-        },
-        {
-          "id": "fr-b1-29-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"recherche\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"recherche\".",
-            "Une autre déclaration sur notre \"recherche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"recherche\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"recherche\" en réunion."
-        },
-        {
-          "id": "fr-b1-29-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"recherche\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"recherche\".",
-            "Une autre déclaration sur notre \"recherche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"recherche\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"recherche\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Participle Match",
+      "pairs": [
+        {"id": "frb1-29-p1", "source": "Écoutant", "target": "Los que escuchan (Participio)"},
+        {"id": "frb1-29-p2", "source": "Ayant", "target": "Los que tienen (Participio)"},
+        {"id": "frb1-29-p3", "source": "Étant", "target": "Los que son/están (Participio)"},
+        {"id": "frb1-29-p4", "source": "Sachant", "target": "Los que saben (Participio)"},
+        {"id": "frb1-29-p5", "source": "Surprenant", "target": "Sorprendente (Adjetivo Masc)"},
+        {"id": "frb1-29-p6", "source": "Surprenante", "target": "Sorprendente (Adjetivo Fem)"},
+        {"id": "frb1-29-p7", "source": "Fatigant", "target": "Fatigante (Adjetivo Masc)"},
+        {"id": "frb1-29-p8", "source": "Intéressants", "target": "Interesantes (Adjetivo Masc Plural)"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica el participio o adjetivo verbal.",
       "questions": [
-        {
-          "id": "fr-b1-29-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"rec______\" (Indice : désigne \"recherche\")",
-          "correct_answers": [
-            "recherche",
-            "Recherche"
-          ],
-          "hints": [
-            "Commence par 'rec'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"recherche\"."
-        },
-        {
-          "id": "fr-b1-29-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Notre stratégie actuelle concernant notre recherche dépend ____ l'équipe.\" (de / par)",
-          "correct_answers": [
-            "de",
-            "d'"
-          ],
-          "hints": [
-            "Préposition après le verbe dépendre"
-          ],
-          "explanation": "Le verbe dépendre se construit avec la préposition de."
-        },
-        {
-          "id": "fr-b1-29-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons ____ nos ressources pour améliorer notre recherche.\" (allouer / ignorer)",
-          "correct_answers": [
-            "allouer",
-            "Allouer"
-          ],
-          "hints": [
-            "Distribuer ou attribuer des ressources"
-          ],
-          "explanation": "Allouer des ressources signifie les dédier stratégiquement."
-        },
-        {
-          "id": "fr-b1-29-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Le responsable de département a demandé une ____ sur notre recherche.\" (mise à jour / pause)",
-          "correct_answers": [
-            "mise à jour",
-            "analyse",
-            "évaluation"
-          ],
-          "hints": [
-            "Dernières informations sur l'état d'avancement"
-          ],
-          "explanation": "Une 'mise à jour' est essentielle pour suivre le statut d'un projet."
-        },
-        {
-          "id": "fr-b1-29-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Établir un cadre ____ pour notre recherche est notre priorité.\" (solide / simple)",
-          "correct_answers": [
-            "solide"
-          ],
-          "hints": [
-            "Robuste, stable et bien défini"
-          ],
-          "explanation": "Un cadre 'solide' prévient les risques et dérives futures."
-        }
+        { "id": "frb1-29-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Les personnes ayant un billet", "options": ["Les personnes ayant un billet", "Les personnes aillant un billet", "Les personnes sachant un billet", "Les personnes étant un billet"], "correct_answer": "Les personnes ayant un billet", "explanation": "Audio dice: Les personnes ayant un billet." },
+        { "id": "frb1-29-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "C'est une idée intéressante", "options": ["C'est une idée intéressante", "C'est un homme intéressant", "C'est une fille intéressante", "C'est une histoire intéressante"], "correct_answer": "C'est une idée intéressante", "explanation": "Audio dice: C'est une idée intéressante." },
+        { "id": "frb1-29-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Les passagers sachant nager", "options": ["Les passagers sachant nager", "Les passagers savant nager", "Les passagers ayant nager", "Les passagers voulant nager"], "correct_answer": "Les passagers sachant nager", "explanation": "Audio dice: Les passagers sachant nager (Los pasajeros que saben nadar)." },
+        { "id": "frb1-29-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "C'est très fatigant", "options": ["C'est très fatigant", "C'est très fascinant", "C'est très charmant", "C'est très surprenant"], "correct_answer": "C'est très fatigant", "explanation": "Audio dice: C'est très fatigant." },
+        { "id": "frb1-29-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Des histoires surprenantes", "options": ["Des histoires surprenantes", "Des hommes surprenants", "Des histoires fascinantes", "Des histoires intéressantes"], "correct_answer": "Des histoires surprenantes", "explanation": "Audio dice: Des histoires surprenantes." }
       ]
     }
   ]

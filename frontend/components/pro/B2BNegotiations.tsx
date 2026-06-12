@@ -239,7 +239,7 @@ const B2B_SCENARIOS: NegotiationScenario[] = [
 const B2B_DRILLS: DrillQuestion[] = [
   {
     id: 'd01', category: 'Deal Structuring',
-    prompt: 'A prospect says "Your price is 25% above our budget." The most strategic C-Suite response is:',
+    prompt: 'A prospect says "Your price is 25% above our budget." The most strategic Alta Dirección response is:',
     options: [
       'We can reduce the price to match your budget immediately.',
       'Let us reframe the conversation around total cost of ownership and ROI over 36 months.',
@@ -460,7 +460,7 @@ export const B2BNegotiations = ({ onClose }: B2BNegotiationsProps) => {
   const fn1 = (t: string) => t.split(/\s+/).filter(Boolean).length;
   const fn2 = (t: string) => t.split(/[.!?]+/).filter(Boolean).length;
   const fn3 = (t: string, s: number) => s > 0 ? Math.round((fn1(t) / s) * 60) : 0;
-  const fn4 = (wpm: number) => wpm > 160 ? 'Too fast for C-Suite' : wpm < 70 ? 'Too slow — lacks urgency' : 'Executive cadence';
+  const fn4 = (wpm: number) => wpm > 160 ? 'Too fast for Alta Dirección' : wpm < 70 ? 'Too slow — lacks urgency' : 'Executive cadence';
   const fn5 = (t: string) => t.toLowerCase().split(' ').filter(w => ['uh','um','like','so','basically','literally'].includes(w)).length;
   const fn6 = (fc: number, wc: number) => wc > 0 ? Math.round((fc / wc) * 100) : 0;
   const fn7 = (pct: number) => pct > 5 ? 'Reduce verbal fillers for authority' : 'Clean executive delivery';
@@ -524,7 +524,7 @@ export const B2BNegotiations = ({ onClose }: B2BNegotiationsProps) => {
   const fn62 = (d: number) => d > 90 ? 'Elite Negotiator' : d > 75 ? 'Senior Partner' : d > 60 ? 'Business Professional' : 'Developing Executive';
   const fn63 = (d: number) => d > 90 ? 'text-emerald-400' : d > 75 ? 'text-amber-400' : d > 60 ? 'text-orange-400' : 'text-red-400';
   const fn64 = (wpm: number, filler: number, fin: number, val: number, coll: number) => Math.round(wpm * 0.2 + (100 - filler * 10) * 0.2 + fin * 5 + val * 5 + coll * 5);
-  const fn65 = (s: number) => s > 90 ? '🏆 Boardroom Elite' : s > 75 ? '⭐ Strategic Leader' : s > 60 ? '📊 Business Professional' : '🔰 Junior Negotiator';
+  const fn65 = (s: number) => s > 90 ? '🏆 Corporativo Elite' : s > 75 ? '⭐ Strategic Leader' : s > 60 ? '📊 Business Professional' : '🔰 Junior Negotiator';
   const fn66 = (stake: string) => stake === 'Critical' ? 100 : stake === 'High' ? 80 : stake === 'Mid' ? 60 : 40;
   const fn67 = (lvl: string) => lvl === 'C2' ? 100 : lvl === 'C1' ? 80 : lvl === 'B2' ? 60 : 40;
   const fn68 = (a: number, b: number) => Math.round((a + b) / 2);
@@ -533,7 +533,7 @@ export const B2BNegotiations = ({ onClose }: B2BNegotiationsProps) => {
   const fn71 = (xp: number) => (Math.floor(xp / 1000) + 1) * 1000;
   const fn72 = (xp: number) => Math.round(((xp % 1000) / 1000) * 100);
   const fn73 = (lvl: number) => lvl >= 8 ? 'Global Dealmaker' : lvl >= 6 ? 'Senior Negotiator' : lvl >= 4 ? 'Business Developer' : 'Rising Executive';
-  const fn74 = (score: number) => score >= 90 ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : 'bg-amber-500/20 text-amber-300 border-amber-500/30';
+  const fn74 = (score: number) => score >= 90 ? 'bg-[#D4AF37]/100/20 text-emerald-300 border-emerald-500/30' : 'bg-[#D4AF37]/20/20 text-amber-300 border-[#D4AF37]/30/30';
   const fn75 = (logs: NegotiationLog[]) => logs.length > 0 ? Math.round(logs.reduce((a, l) => a + l.score, 0) / logs.length) : 0;
   const fn76 = (logs: NegotiationLog[]) => logs.length > 0 ? Math.max(...logs.map(l => l.score)) : 0;
   const fn77 = (logs: NegotiationLog[]) => logs.length > 0 ? Math.min(...logs.map(l => l.score)) : 0;
@@ -686,7 +686,7 @@ Distinction: ${fn187(score)}
 ───────────────────────────────────────────────
 This certifies elite command of B2B negotiation
 strategy, deal structuring, and executive
-communication at C-Suite level.
+communication at Alta Dirección level.
 ═══════════════════════════════════════════════
      BOARDROOM CERTIFIED — ONIXLINGO ACADEMY
 ═══════════════════════════════════════════════`;
@@ -696,7 +696,7 @@ communication at C-Suite level.
   const fn204 = (avgScore: number, drillAcc: number) => Math.round((avgScore * 0.7) + (drillAcc * 0.3));
   const fn205 = (composite: number) => composite >= 90 ? 'Distinguished Honors' : composite >= 75 ? 'High Distinction' : composite >= 60 ? 'Pass with Merit' : 'Conditional Pass';
   const fn206 = (logs: NegotiationLog[]) => logs.reduce((acc, l) => acc + fn69(l.score), 0);
-  const fn207 = () => `C-Suite B2B Negotiation Module — Completed ${fn182()}`;
+  const fn207 = () => `Alta Dirección B2B Negotiation Module — Completed ${fn182()}`;
   const fn208 = (level: number) => `OnixLingo Executive Level ${level} — B2B Negotiation Specialist`;
   const fn209 = (score: number) => score >= 85 ? 'bg-gradient-to-r from-amber-500 to-yellow-400' : 'bg-gradient-to-r from-slate-600 to-slate-500';
   const fn210 = (scenarios: number, drills: number) => `${scenarios} scenarios completed, ${drills} drills passed`;
@@ -932,33 +932,33 @@ communication at C-Suite level.
   // ──────────────────────────────────────────────────────────────
 
   return (
-    <div className="fixed inset-0 bg-slate-950/90 backdrop-blur-xl z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
-      <div className="bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-950 border border-blue-500/20 rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl flex flex-col text-slate-100">
+    <div className="fixed inset-0 bg-slate-50/90 backdrop-blur-xl z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
+      <div className="bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-950 border border-blue-500/20 rounded-none max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl flex flex-col text-slate-100">
 
         {/* HEADER */}
-        <div className="sticky top-0 bg-black/50 backdrop-blur-md border-b border-blue-500/20 px-6 md:px-10 py-5 flex items-center justify-between z-10 flex-shrink-0">
+        <div className="sticky top-0 bg-white/50 backdrop-blur-md border-b border-blue-500/20 px-6 md:px-10 py-5 flex items-center justify-between z-10 flex-shrink-0">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-blue-500/15 rounded-xl ring-1 ring-blue-400/20">
+            <div className="p-3 bg-[#D4AF37]/20/15 rounded-none ring-1 ring-blue-400/20">
               <Briefcase size={24} className="text-blue-300 animate-pulse" />
             </div>
             <div>
-              <h2 className="text-2xl font-black text-white tracking-tight uppercase">B2B Negotiation Lab</h2>
-              <p className="text-[10px] text-blue-300 uppercase tracking-widest font-black">C-Suite Deal Strategy Engine · 300 Tactics</p>
+              <h2 className="text-2xl font-black text-slate-900 tracking-tight uppercase">B2B Negotiation Lab</h2>
+              <p className="text-[10px] text-blue-300 uppercase tracking-widest font-black">Alta Dirección Deal Strategy Engine · 300 Tactics</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+            <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-[#D4AF37]/20/10 border border-blue-500/20 rounded-none">
               <Trophy size={12} className="text-amber-400" />
               <span className="text-[10px] font-black text-amber-300 uppercase tracking-wider">{negotiationXP.toLocaleString()} XP</span>
             </div>
-            <button onClick={onClose} className="p-2.5 bg-white/5 hover:bg-white/15 text-blue-300 hover:text-white rounded-full transition-colors active:scale-95">
+            <button onClick={onClose} className="p-2.5 bg-white/5 hover:bg-white/15 text-blue-300 hover:text-slate-900 rounded-full transition-colors active:scale-95">
               <X size={18} />
             </button>
           </div>
         </div>
 
         {/* TAB NAVIGATION */}
-        <div className="flex border-b border-blue-500/10 bg-black/30 flex-shrink-0">
+        <div className="flex border-b border-blue-500/10 bg-white/30 flex-shrink-0">
           {[
             { id: 'scenarios', label: 'Scenarios', icon: Target },
             { id: 'drills', label: 'Tactics Drills', icon: Zap },
@@ -969,8 +969,8 @@ communication at C-Suite level.
             const isActive = activeTab === tab.id;
             return (
               <button key={tab.id} onClick={() => setActiveTab(tab.id as any)}
-                className={`flex-1 py-4 flex flex-col items-center gap-1 border-b-2 text-[9px] font-black uppercase tracking-wider transition-all ${isActive ? 'border-blue-400 text-blue-300 bg-blue-950/20' : 'border-transparent text-slate-500 hover:text-slate-300 hover:bg-white/5'}`}>
-                <Icon size={13} className={isActive ? 'text-blue-400' : 'text-slate-500'} />
+                className={`flex-1 py-4 flex flex-col items-center gap-1 border-b-2 text-[9px] font-black uppercase tracking-wider transition-all ${isActive ? 'border-blue-400 text-blue-300 bg-blue-950/20' : 'border-transparent text-slate-600 hover:text-slate-300 hover:bg-white/5'}`}>
+                <Icon size={13} className={isActive ? 'text-blue-400' : 'text-slate-600'} />
                 {tab.label}
               </button>
             );
@@ -987,30 +987,30 @@ communication at C-Suite level.
                 <>
                   {/* Level Filter */}
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Filter Level:</span>
+                    <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Filter Level:</span>
                     {(['All', 'B1', 'B2', 'C1', 'C2'] as const).map(lvl => (
                       <button key={lvl} onClick={() => setScenarioFilter(lvl)}
-                        className={`px-3 py-1.5 text-[9px] font-black uppercase rounded-lg border transition-all ${scenarioFilter === lvl ? 'bg-blue-500 border-blue-400 text-white' : 'bg-black/30 border-blue-950/50 text-slate-400 hover:text-white'}`}>
+                        className={`px-3 py-1.5 text-[9px] font-black uppercase rounded-none border transition-all ${scenarioFilter === lvl ? 'bg-[#D4AF37]/20 border-blue-400 text-slate-900' : 'bg-white/30 border-blue-950/50 text-slate-500 hover:text-slate-900'}`}>
                         {lvl}
                       </button>
                     ))}
-                    <span className="ml-auto text-[9px] font-bold text-slate-500">{filteredScenarios.length} scenarios</span>
+                    <span className="ml-auto text-[9px] font-bold text-slate-600">{filteredScenarios.length} scenarios</span>
                   </div>
 
                   {/* Scenario Grid */}
                   <div className="space-y-3 max-h-80 overflow-y-auto pr-1">
                     {filteredScenarios.map(s => (
                       <button key={s.id} onClick={() => setSelectedScenario(s)}
-                        className={`w-full text-left p-4 rounded-xl border transition-all ${selectedScenario.id === s.id ? 'border-blue-400/60 bg-blue-950/30' : 'border-blue-950/40 bg-black/20 hover:bg-black/40 hover:border-blue-500/30'}`}>
+                        className={`w-full text-left p-4 rounded-none border transition-all ${selectedScenario.id === s.id ? 'border-blue-400/60 bg-blue-950/30' : 'border-blue-950/40 bg-white/20 hover:bg-white/40 hover:border-blue-500/30'}`}>
                         <div className="flex items-start justify-between gap-3">
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 mb-1 flex-wrap">
-                              <span className="text-[8px] font-black text-slate-500">{fn250(s)}</span>
+                              <span className="text-[8px] font-black text-slate-600">{fn250(s)}</span>
                               <span className={`px-1.5 py-0.5 text-[7px] font-black uppercase rounded border ${fn83(s.difficulty)}`}>{fn82(s.difficulty)}</span>
                               <span className="text-[8px] font-black text-blue-400 uppercase">{s.level}</span>
                             </div>
-                            <h4 className="text-xs font-black text-white uppercase tracking-tight">{s.title}</h4>
-                            <p className="text-[9px] text-slate-400 mt-0.5 line-clamp-1">{s.counterpart}</p>
+                            <h4 className="text-xs font-black text-slate-900 uppercase tracking-tight">{s.title}</h4>
+                            <p className="text-[9px] text-slate-500 mt-0.5 line-clamp-1">{s.counterpart}</p>
                           </div>
                           <ChevronRight size={14} className={`flex-shrink-0 mt-1 transition-all ${selectedScenario.id === s.id ? 'text-blue-400 rotate-90' : 'text-slate-600'}`} />
                         </div>
@@ -1019,26 +1019,26 @@ communication at C-Suite level.
                   </div>
 
                   {/* Selected Scenario Detail */}
-                  <div className="p-5 bg-black/40 border border-blue-500/20 rounded-2xl space-y-4">
+                  <div className="p-5 bg-white/40 border border-blue-500/20 rounded-none space-y-4">
                     <div className="flex items-start justify-between">
                       <div>
-                        <h3 className="text-sm font-black text-white uppercase tracking-tight">{selectedScenario.title}</h3>
+                        <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight">{selectedScenario.title}</h3>
                         <p className="text-[10px] text-blue-300 mt-0.5">{selectedScenario.counterpart}</p>
                       </div>
-                      <button onClick={playScenarioOpener} className="p-2 bg-blue-500/10 border border-blue-500/20 rounded-lg text-blue-300 hover:bg-blue-500/20 transition-colors">
+                      <button onClick={playScenarioOpener} className="p-2 bg-[#D4AF37]/20/10 border border-blue-500/20 rounded-none text-blue-300 hover:bg-[#D4AF37]/20/20 transition-colors">
                         <Volume2 size={14} />
                       </button>
                     </div>
 
                     <p className="text-[10px] text-slate-300 leading-relaxed">{selectedScenario.context}</p>
 
-                    <div className="p-3 bg-blue-950/30 border border-blue-500/10 rounded-lg">
+                    <div className="p-3 bg-blue-950/30 border border-blue-500/10 rounded-none">
                       <span className="text-[8px] font-black text-blue-400 uppercase tracking-widest block mb-1">Opening Line</span>
                       <p className="text-[10px] text-slate-200 italic leading-relaxed">"{selectedScenario.opener}"</p>
                     </div>
 
                     <div>
-                      <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest block mb-2">Your Objectives</span>
+                      <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest block mb-2">Your Objectives</span>
                       <div className="space-y-1">
                         {selectedScenario.objectives.map((o, i) => (
                           <div key={i} className="flex items-start gap-2 text-[9px]">
@@ -1050,16 +1050,16 @@ communication at C-Suite level.
                     </div>
 
                     <div>
-                      <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest block mb-2">Key Terms to Deploy</span>
+                      <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest block mb-2">Key Terms to Deploy</span>
                       <div className="flex flex-wrap gap-1.5">
                         {selectedScenario.keyTerms.map((k, i) => (
-                          <span key={i} className="px-2 py-0.5 bg-blue-500/10 border border-blue-500/20 text-blue-300 text-[8px] font-bold uppercase rounded">{k}</span>
+                          <span key={i} className="px-2 py-0.5 bg-[#D4AF37]/20/10 border border-blue-500/20 text-blue-300 text-[8px] font-bold uppercase rounded">{k}</span>
                         ))}
                       </div>
                     </div>
 
                     <button onClick={() => setSimulationActive(true)}
-                      className="w-full py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-black uppercase tracking-widest text-[10px] rounded-xl transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2">
+                      className="w-full py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-slate-900 font-black uppercase tracking-widest text-[10px] rounded-none transition-all shadow-none active:scale-95 flex items-center justify-center gap-2">
                       <Mic size={15} /> Begin Live Simulation
                     </button>
                   </div>
@@ -1067,17 +1067,17 @@ communication at C-Suite level.
               ) : (
                 /* ACTIVE SIMULATION */
                 <div className="space-y-5">
-                  <div className="p-4 bg-black/50 border border-blue-500/20 rounded-xl">
+                  <div className="p-4 bg-white/50 border border-blue-500/20 rounded-none">
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-[9px] font-black text-blue-300 uppercase tracking-widest">Live Negotiation: {selectedScenario.title}</span>
                       <button onClick={() => { setSimulationActive(false); setAnalysisResult(null); setTranscript(''); }}
-                        className="text-[8px] font-bold text-slate-500 hover:text-white uppercase transition-colors">Exit Simulation</button>
+                        className="text-[8px] font-bold text-slate-600 hover:text-slate-900 uppercase transition-colors">Exit Simulation</button>
                     </div>
                     <p className="text-[10px] text-slate-300 italic leading-relaxed">"{selectedScenario.opener}"</p>
                   </div>
 
                   {/* Volume waveform */}
-                  <div className="h-12 flex items-center justify-center gap-1 bg-black/30 rounded-xl border border-blue-950/40 px-4">
+                  <div className="h-12 flex items-center justify-center gap-1 bg-white/30 rounded-none border border-blue-950/40 px-4">
                     {isRecording ? Array.from({ length: 22 }).map((_, i) => (
                       <div key={i} className="w-1 bg-blue-400 rounded-full transition-all duration-75"
                         style={{ height: `${Math.max(8, Math.random() * volume * 2)}%`, opacity: 0.7 + Math.random() * 0.3 }} />
@@ -1090,12 +1090,12 @@ communication at C-Suite level.
 
                   {!isRecording ? (
                     <button onClick={startRecording} disabled={isAnalyzing}
-                      className="w-full py-4 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-black uppercase tracking-widest text-[11px] rounded-xl transition-all flex items-center justify-center gap-3 shadow-lg active:scale-95 disabled:opacity-50">
+                      className="w-full py-4 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-slate-900 font-black uppercase tracking-widest text-[11px] rounded-none transition-all flex items-center justify-center gap-3 shadow-none active:scale-95 disabled:opacity-50">
                       {isAnalyzing ? <><Loader2 size={16} className="animate-spin" /> Analyzing.....</> : <><Mic size={16} /> Record Your Response</>}
                     </button>
                   ) : (
                     <button onClick={stopRecording}
-                      className="w-full py-4 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-black uppercase tracking-widest text-[11px] rounded-xl animate-pulse flex items-center justify-center gap-3 active:scale-95">
+                      className="w-full py-4 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-slate-900 font-black uppercase tracking-widest text-[11px] rounded-none animate-pulse flex items-center justify-center gap-3 active:scale-95">
                       <Square size={14} fill="currentColor" /> Stop & Analyze — {fmt(recordingTime)}
                     </button>
                   )}
@@ -1103,48 +1103,48 @@ communication at C-Suite level.
                   {/* ANALYSIS RESULTS */}
                   {analysisResult && (
                     <div className="space-y-4 animate-in slide-in-from-bottom-4 duration-400">
-                      <div className="p-5 bg-black/50 border border-blue-500/20 rounded-2xl text-center">
+                      <div className="p-5 bg-white/50 border border-blue-500/20 rounded-none text-center">
                         <p className="text-[9px] font-black text-blue-400 uppercase tracking-widest mb-3">Negotiation Score</p>
-                        <div className="inline-flex items-center justify-center w-24 h-24 rounded-full border-4 border-blue-500 bg-slate-900 shadow-[0_0_24px_rgba(99,102,241,0.2)] mb-3">
+                        <div className="inline-flex items-center justify-center w-24 h-24 rounded-full border-4 border-blue-500 bg-slate-50 shadow-[0_0_24px_rgba(99,102,241,0.2)] mb-3">
                           <span className={`text-4xl font-black ${fn63(analysisResult.score)}`}>{analysisResult.score}</span>
                         </div>
-                        <p className="text-[10px] font-black text-white uppercase">{fn65(analysisResult.score)}</p>
-                        <p className="text-[9px] text-slate-400 mt-1">{analysisResult.dealReadiness}</p>
+                        <p className="text-[10px] font-black text-slate-900 uppercase">{fn65(analysisResult.score)}</p>
+                        <p className="text-[9px] text-slate-500 mt-1">{analysisResult.dealReadiness}</p>
                       </div>
 
                       <div className="grid grid-cols-2 gap-3">
                         {analysisResult.breakdown.map((b: any, i: number) => (
-                          <div key={i} className="p-3 bg-black/30 border border-blue-950/40 rounded-xl">
-                            <span className="text-[8px] font-black text-slate-500 uppercase block">{b.label}</span>
+                          <div key={i} className="p-3 bg-white/30 border border-blue-950/40 rounded-none">
+                            <span className="text-[8px] font-black text-slate-600 uppercase block">{b.label}</span>
                             <div className="flex items-center gap-2 mt-1">
-                              <div className="flex-1 bg-slate-900 h-1.5 rounded-full"><div className="bg-blue-400 h-full rounded-full" style={{ width: `${b.score}%` }} /></div>
+                              <div className="flex-1 bg-slate-50 h-1.5 rounded-full"><div className="bg-blue-400 h-full rounded-full" style={{ width: `${b.score}%` }} /></div>
                               <span className="text-[9px] font-black text-blue-300">{b.score}%</span>
                             </div>
                           </div>
                         ))}
-                        <div className="p-3 bg-black/30 border border-blue-950/40 rounded-xl">
-                          <span className="text-[8px] font-black text-slate-500 uppercase block">Keywords</span>
+                        <div className="p-3 bg-white/30 border border-blue-950/40 rounded-none">
+                          <span className="text-[8px] font-black text-slate-600 uppercase block">Keywords</span>
                           <span className="text-[10px] font-black text-emerald-400 mt-1 block">{analysisResult.keywordsMatched}/{selectedScenario.keyTerms.length} matched</span>
                         </div>
-                        <div className="p-3 bg-black/30 border border-blue-950/40 rounded-xl">
-                          <span className="text-[8px] font-black text-slate-500 uppercase block">Profile</span>
+                        <div className="p-3 bg-white/30 border border-blue-950/40 rounded-none">
+                          <span className="text-[8px] font-black text-slate-600 uppercase block">Profile</span>
                           <span className="text-[9px] font-black text-blue-300 mt-1 block">{analysisResult.compositeProfile}</span>
                         </div>
                       </div>
 
-                      <div className="p-3 bg-black/30 border border-blue-950/40 rounded-xl">
-                        <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest block mb-2">Tactical Radar</span>
+                      <div className="p-3 bg-white/30 border border-blue-950/40 rounded-none">
+                        <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest block mb-2">Tactical Radar</span>
                         <div className="grid grid-cols-2 gap-1">
                           {Object.entries(analysisResult.tactics).slice(0, 6).map(([k, v]: [string, any]) => (
-                            <div key={k} className="text-[8px] text-slate-400 flex items-start gap-1">
-                              <span className="text-blue-500 font-black shrink-0">·</span>{String(v).substring(0, 35)}
+                            <div key={k} className="text-[8px] text-slate-500 flex items-start gap-1">
+                              <span className="text-[#D4AF37] font-black shrink-0">·</span>{String(v).substring(0, 35)}
                             </div>
                           ))}
                         </div>
                       </div>
 
                       <button onClick={() => { setAnalysisResult(null); setTranscript(''); }}
-                        className="w-full py-3 bg-white/5 border border-blue-500/20 text-white hover:bg-white/10 font-black uppercase tracking-widest text-[9px] rounded-xl transition-colors flex items-center justify-center gap-2">
+                        className="w-full py-3 bg-white/5 border border-blue-500/20 text-slate-900 hover:bg-white/10 font-black uppercase tracking-widest text-[9px] rounded-none transition-colors flex items-center justify-center gap-2">
                         <RefreshCw size={13} /> New Round
                       </button>
                     </div>
@@ -1160,53 +1160,53 @@ communication at C-Suite level.
               <div className="flex items-center justify-between">
                 <div>
                   <span className="text-[10px] font-black text-blue-300 uppercase tracking-widest block">Tactical Negotiation Drills</span>
-                  <span className="text-[9px] text-slate-500">Master B2B closing, objection handling & strategy</span>
+                  <span className="text-[9px] text-slate-600">Master B2B closing, objection handling & strategy</span>
                 </div>
                 <div className="text-right">
                   <span className="text-[8px] font-black text-amber-400 uppercase block">{drillScore}/{drillAttempts} Correct</span>
-                  <span className="text-[8px] text-slate-500">{fn88(drillScore, drillAttempts)}% Accuracy</span>
+                  <span className="text-[8px] text-slate-600">{fn88(drillScore, drillAttempts)}% Accuracy</span>
                 </div>
               </div>
 
               {/* Progress bar */}
               <div>
-                <div className="flex justify-between text-[8px] font-black text-slate-500 uppercase mb-1">
+                <div className="flex justify-between text-[8px] font-black text-slate-600 uppercase mb-1">
                   <span>Drill {(drillIndex % B2B_DRILLS.length) + 1}/{B2B_DRILLS.length}</span>
                   <span>{fn272(drillIndex, B2B_DRILLS.length)}% complete</span>
                 </div>
-                <div className="w-full bg-slate-900 h-1.5 rounded-full"><div className="bg-blue-500 h-full rounded-full transition-all" style={{ width: `${fn272(drillIndex, B2B_DRILLS.length)}%` }} /></div>
+                <div className="w-full bg-slate-50 h-1.5 rounded-full"><div className="bg-[#D4AF37]/20 h-full rounded-full transition-all" style={{ width: `${fn272(drillIndex, B2B_DRILLS.length)}%` }} /></div>
               </div>
 
               {/* Current Drill */}
               {(() => {
                 const drill = fn271(drillIndex);
                 return (
-                  <div className="p-5 bg-black/40 border border-blue-500/20 rounded-2xl space-y-4">
+                  <div className="p-5 bg-white/40 border border-blue-500/20 rounded-none space-y-4">
                     <div className="flex items-center gap-2">
-                      <span className="px-2 py-0.5 bg-blue-500/15 border border-blue-500/20 text-blue-400 text-[8px] font-black uppercase rounded">{fn276(drill)}</span>
+                      <span className="px-2 py-0.5 bg-[#D4AF37]/20/15 border border-blue-500/20 text-blue-400 text-[8px] font-black uppercase rounded">{fn276(drill)}</span>
                     </div>
-                    <h4 className="text-xs font-bold text-white leading-relaxed">{drill.prompt}</h4>
+                    <h4 className="text-xs font-bold text-slate-900 leading-relaxed">{drill.prompt}</h4>
                     <div className="space-y-2">
                       {drill.options.map((opt, i) => {
                         const isSelected = drillAnswer === opt;
                         const isCorrect = opt === drill.correct;
                         return (
                           <button key={i} onClick={() => !drillAnswer && handleDrillAnswer(opt)} disabled={!!drillAnswer}
-                            className={`w-full p-3 rounded-xl text-left text-[10px] font-bold border transition-all ${drillAnswer
-                              ? isCorrect ? 'bg-emerald-500/15 border-emerald-400 text-emerald-300' : isSelected ? 'bg-red-500/15 border-red-400 text-red-300' : 'bg-slate-950 border-slate-800 text-slate-600'
-                              : 'bg-slate-900 hover:bg-slate-800 border-slate-700 text-slate-300 hover:text-white'}`}>
+                            className={`w-full p-3 rounded-none text-left text-[10px] font-bold border transition-all ${drillAnswer
+                              ? isCorrect ? 'bg-[#D4AF37]/100/15 border-emerald-400 text-emerald-300' : isSelected ? 'bg-[#D4AF37]/100/15 border-red-400 text-red-300' : 'bg-slate-50 border-slate-800 text-slate-600'
+                              : 'bg-slate-50 hover:bg-slate-50 border-slate-700 text-slate-300 hover:text-slate-900'}`}>
                             {opt}
                           </button>
                         );
                       })}
                     </div>
                     {drillFeedback && (
-                      <div className={`p-3 rounded-xl text-[9px] font-bold border ${drillFeedback.startsWith('✅') ? 'bg-emerald-950/30 border-emerald-500/20 text-emerald-300' : 'bg-red-950/30 border-red-500/20 text-red-300'}`}>
+                      <div className={`p-3 rounded-none text-[9px] font-bold border ${drillFeedback.startsWith('✅') ? 'bg-emerald-950/30 border-emerald-500/20 text-emerald-300' : 'bg-red-950/30 border-red-500/20 text-red-300'}`}>
                         {drillFeedback}
                       </div>
                     )}
                     {drillAnswer && (
-                      <button onClick={nextDrill} className="w-full py-2.5 bg-white text-slate-950 hover:bg-blue-400 transition-all font-black uppercase tracking-widest text-[9px] rounded-xl">
+                      <button onClick={nextDrill} className="w-full py-2.5 bg-white text-slate-950 hover:bg-blue-400 transition-all font-black uppercase tracking-widest text-[9px] rounded-none">
                         Next Tactic →
                       </button>
                     )}
@@ -1215,8 +1215,8 @@ communication at C-Suite level.
               })()}
 
               {/* Categories */}
-              <div className="p-4 bg-black/30 border border-blue-950/40 rounded-xl">
-                <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest block mb-2">Drill Categories</span>
+              <div className="p-4 bg-white/30 border border-blue-950/40 rounded-none">
+                <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest block mb-2">Drill Categories</span>
                 <div className="flex flex-wrap gap-1.5">
                   {fn279(B2B_DRILLS).map(cat => (
                     <span key={cat} className="px-2 py-0.5 bg-blue-950/30 border border-blue-950/40 text-blue-400 text-[8px] font-bold uppercase rounded">
@@ -1227,7 +1227,7 @@ communication at C-Suite level.
               </div>
 
               {/* Power Tips */}
-              <div className="p-4 bg-black/30 border border-blue-950/40 rounded-xl">
+              <div className="p-4 bg-white/30 border border-blue-950/40 rounded-none">
                 <span className="text-[8px] font-black text-amber-400 uppercase tracking-widest block mb-2">⚡ Power Negotiation Tips</span>
                 <div className="space-y-1">
                   {fn284().slice(0, 3).map((tip, i) => (
@@ -1251,22 +1251,22 @@ communication at C-Suite level.
                   { label: 'Sessions', val: sessionLogs.length.toString(), color: 'text-amber-300' },
                   { label: 'Drill Acc.', val: `${fn88(drillScore, drillAttempts)}%`, color: 'text-violet-300' },
                 ].map((kpi, i) => (
-                  <div key={i} className="p-4 bg-black/40 border border-blue-950/40 rounded-xl">
-                    <span className="text-[8px] font-black text-slate-500 uppercase block">{kpi.label}</span>
+                  <div key={i} className="p-4 bg-white/40 border border-blue-950/40 rounded-none">
+                    <span className="text-[8px] font-black text-slate-600 uppercase block">{kpi.label}</span>
                     <span className={`text-2xl font-black ${kpi.color} mt-1 block`}>{kpi.val}</span>
                   </div>
                 ))}
               </div>
 
               {/* Performance Trend */}
-              <div className="p-4 bg-black/40 border border-blue-950/40 rounded-xl">
+              <div className="p-4 bg-white/40 border border-blue-950/40 rounded-none">
                 <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest block mb-2">Performance Trend</span>
                 <p className="text-[10px] text-slate-300">{fn80(sessionLogs)}</p>
-                <p className="text-[9px] text-slate-500 mt-1">{fn263(fn262(sessionLogs))}</p>
+                <p className="text-[9px] text-slate-600 mt-1">{fn263(fn262(sessionLogs))}</p>
               </div>
 
               {/* Tactical Framework Guide */}
-              <div className="p-4 bg-black/40 border border-blue-950/40 rounded-xl">
+              <div className="p-4 bg-white/40 border border-blue-950/40 rounded-none">
                 <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest block mb-3">Core Concepts</span>
                 <div className="flex flex-wrap gap-1.5">
                   {fn286().map((c, i) => <span key={i} className="px-2 py-1 bg-indigo-950/40 border border-indigo-500/20 text-indigo-300 text-[8px] font-bold uppercase rounded">{c}</span>)}
@@ -1274,7 +1274,7 @@ communication at C-Suite level.
               </div>
 
               {/* Advanced Tactics */}
-              <div className="p-4 bg-black/40 border border-blue-950/40 rounded-xl">
+              <div className="p-4 bg-white/40 border border-blue-950/40 rounded-none">
                 <span className="text-[9px] font-black text-amber-400 uppercase tracking-widest block mb-3">Advanced Techniques</span>
                 <div className="space-y-1.5">
                   {fn287().map((t, i) => (
@@ -1287,11 +1287,11 @@ communication at C-Suite level.
               </div>
 
               {/* Avoidance List */}
-              <div className="p-4 bg-black/40 border border-red-950/20 rounded-xl">
+              <div className="p-4 bg-white/40 border border-red-950/20 rounded-none">
                 <span className="text-[9px] font-black text-red-400 uppercase tracking-widest block mb-3">Never Do These</span>
                 <div className="space-y-1">
                   {fn285().map((tip, i) => (
-                    <div key={i} className="text-[9px] text-slate-400 flex items-start gap-2">
+                    <div key={i} className="text-[9px] text-slate-500 flex items-start gap-2">
                       <AlertTriangle size={9} className="text-red-400 shrink-0 mt-0.5" />
                       {tip}
                     </div>
@@ -1300,7 +1300,7 @@ communication at C-Suite level.
               </div>
 
               {/* Session History */}
-              <div className="p-4 bg-black/40 border border-blue-950/40 rounded-xl">
+              <div className="p-4 bg-white/40 border border-blue-950/40 rounded-none">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest">Session History</span>
                   {sessionLogs.length > 0 && <button onClick={() => setSessionLogs([])} className="text-[8px] font-bold text-red-400 uppercase">Clear</button>}
@@ -1310,10 +1310,10 @@ communication at C-Suite level.
                 ) : (
                   <div className="space-y-2 max-h-40 overflow-y-auto pr-1">
                     {sessionLogs.map((log, i) => (
-                      <div key={i} className="p-2.5 bg-slate-950 border border-slate-900 rounded flex justify-between items-center text-[8px] font-bold">
+                      <div key={i} className="p-2.5 bg-slate-50 border border-slate-900 rounded flex justify-between items-center text-[8px] font-bold">
                         <div>
-                          <p className="text-white uppercase truncate max-w-[180px]">{log.scenario}</p>
-                          <p className="text-slate-500 mt-0.5">{new Date(log.timestamp).toLocaleDateString()} · {log.level}</p>
+                          <p className="text-slate-900 uppercase truncate max-w-[180px]">{log.scenario}</p>
+                          <p className="text-slate-600 mt-0.5">{new Date(log.timestamp).toLocaleDateString()} · {log.level}</p>
                         </div>
                         <span className={`font-extrabold font-mono ${fn63(log.score)}`}>{log.score}%</span>
                       </div>
@@ -1328,50 +1328,50 @@ communication at C-Suite level.
           {activeTab === 'certification' && (
             <div className="space-y-5">
               {/* Status Badge */}
-              <div className="p-5 bg-black/40 border border-blue-500/20 rounded-2xl">
+              <div className="p-5 bg-white/40 border border-blue-500/20 rounded-none">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-[9px] font-black text-blue-400 uppercase tracking-widest">Negotiation Status</span>
-                  <span className="px-2 py-1 bg-blue-500 text-[8px] font-black text-white uppercase rounded">LVL {fn70(negotiationXP)}</span>
+                  <span className="px-2 py-1 bg-[#D4AF37]/20 text-[8px] font-black text-slate-900 uppercase rounded">LVL {fn70(negotiationXP)}</span>
                 </div>
-                <h3 className="text-sm font-black text-white uppercase">{fn281(negotiationXP)}</h3>
-                <p className="text-[9px] text-slate-400 mt-0.5">{certData.title}</p>
+                <h3 className="text-sm font-black text-slate-900 uppercase">{fn281(negotiationXP)}</h3>
+                <p className="text-[9px] text-slate-500 mt-0.5">{certData.title}</p>
                 <div className="mt-3">
-                  <div className="flex justify-between text-[8px] font-black text-slate-500 uppercase mb-1">
+                  <div className="flex justify-between text-[8px] font-black text-slate-600 uppercase mb-1">
                     <span>XP Progress</span>
                     <span>{negotiationXP} / {fn71(negotiationXP)}</span>
                   </div>
-                  <div className="w-full bg-slate-900 h-2 rounded-full">
+                  <div className="w-full bg-slate-50 h-2 rounded-full">
                     <div className="bg-gradient-to-r from-blue-500 to-indigo-400 h-full rounded-full transition-all" style={{ width: `${fn72(negotiationXP)}%` }} />
                   </div>
                 </div>
               </div>
 
               {/* Composite Score */}
-              <div className="p-4 bg-black/40 border border-blue-950/40 rounded-xl text-center">
-                <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest block mb-2">Composite Negotiation Score</span>
+              <div className="p-4 bg-white/40 border border-blue-950/40 rounded-none text-center">
+                <span className="text-[8px] font-black text-slate-600 uppercase tracking-widest block mb-2">Composite Negotiation Score</span>
                 <span className={`text-5xl font-black ${fn63(compositeScore)}`}>{compositeScore}</span>
-                <p className="text-[9px] text-slate-400 mt-1">{fn205(compositeScore)}</p>
-                <p className="text-[10px] font-black text-white mt-1">{certData.badge} {certData.distinction}</p>
+                <p className="text-[9px] text-slate-500 mt-1">{fn205(compositeScore)}</p>
+                <p className="text-[10px] font-black text-slate-900 mt-1">{certData.badge} {certData.distinction}</p>
               </div>
 
               {/* Digital Certificate */}
-              <div className="p-4 bg-black/40 border border-blue-950/40 rounded-xl">
+              <div className="p-4 bg-white/40 border border-blue-950/40 rounded-none">
                 <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest block mb-2">Digital Accreditation</span>
-                <div className="bg-slate-950 border border-slate-900 rounded-lg p-3 max-h-44 overflow-y-auto font-mono text-[8px] leading-relaxed text-slate-400 whitespace-pre mb-3">
+                <div className="bg-slate-50 border border-slate-900 rounded-none p-3 max-h-44 overflow-y-auto font-mono text-[8px] leading-relaxed text-slate-500 whitespace-pre mb-3">
                   {certificate}
                 </div>
                 <div className="flex gap-2">
-                  <button onClick={() => fn188(certificate)} className="flex-1 py-2 bg-blue-500 hover:bg-white text-slate-950 font-black uppercase tracking-widest text-[8px] rounded-lg transition-all flex items-center justify-center gap-1">
+                  <button onClick={() => fn188(certificate)} className="flex-1 py-2 bg-[#D4AF37]/20 hover:bg-white text-slate-950 font-black uppercase tracking-widest text-[8px] rounded-none transition-all flex items-center justify-center gap-1">
                     <Clipboard size={10} /> Copy Cert
                   </button>
-                  <button onClick={() => window.open(fn189(), '_blank')} className="flex-1 py-2 bg-white/5 border border-blue-500/20 text-white hover:bg-white/10 font-black uppercase tracking-widest text-[8px] rounded-lg transition-all">
+                  <button onClick={() => window.open(fn189(), '_blank')} className="flex-1 py-2 bg-white/5 border border-blue-500/20 text-slate-900 hover:bg-white/10 font-black uppercase tracking-widest text-[8px] rounded-none transition-all">
                     LinkedIn
                   </button>
                 </div>
               </div>
 
               {/* Scenario Stats */}
-              <div className="p-4 bg-black/40 border border-blue-950/40 rounded-xl">
+              <div className="p-4 bg-white/40 border border-blue-950/40 rounded-none">
                 <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest block mb-3">Achievement Breakdown</span>
                 <div className="space-y-2">
                   {[
@@ -1381,8 +1381,8 @@ communication at C-Suite level.
                     { label: 'Total XP Earned', val: negotiationXP.toLocaleString() },
                     { label: 'Favorite Scenario', val: fn193(sessionLogs) },
                   ].map((stat, i) => (
-                    <div key={i} className="flex justify-between items-center text-[8px] font-bold p-2 bg-slate-950 border border-slate-900 rounded">
-                      <span className="text-slate-400 uppercase">{stat.label}</span>
+                    <div key={i} className="flex justify-between items-center text-[8px] font-bold p-2 bg-slate-50 border border-slate-900 rounded">
+                      <span className="text-slate-500 uppercase">{stat.label}</span>
                       <span className="text-blue-300 font-mono">{stat.val}</span>
                     </div>
                   ))}

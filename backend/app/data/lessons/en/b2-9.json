@@ -1,0 +1,101 @@
+{
+  "id": "b2-9",
+  "title": "Finance & Investment",
+  "version": "4.0-ARTISAN",
+  "level": "B2",
+  "total_xp": 500,
+  "tags": ["B2", "Vocabulary", "Finance", "Investment", "Business"],
+  "completion_message": "¡Excelente! Has dominado el lenguaje de Wall Street. Entender de activos, pasivos y mercados financieros te pone en otro nivel profesional.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Finanzas e Inversiones Avanzadas",
+      "parts": [
+        { "visual": "Términos contables y corporativos: \n- Assets (Activos - lo que la empresa posee). \n- Liabilities (Pasivos - las deudas u obligaciones). \n- ROI (Return on Investment - Retorno de inversión). \n- Go public (Salir a bolsa - vender acciones al público). \nEj: To go public, our assets must be greater than our liabilities.", "audio": "Accounting and corporate terms. Assets are what the company owns. Liabilities are the debts or obligations. R O I stands for Return on Investment. Go public means to start selling shares to the general public on the stock market. For example: To go public, our assets must be greater than our liabilities." },
+        { "visual": "El Mercado: \n- Bear market (Mercado bajista / en caída). \n- Bull market (Mercado alcista / en crecimiento). \n- Stakeholder (Cualquier persona o grupo afectado por las decisiones de la empresa, no solo accionistas). \nEj: In a bear market, stakeholders demand a clear strategy to protect their ROI.", "audio": "The Market. A bear market is a market in decline. A bull market is a growing market. A stakeholder is anyone affected by the company's decisions, not just shareholders. For example: In a bear market, stakeholders demand a clear strategy to protect their R O I." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término financiero correcto.",
+      "questions": [
+        { "id": "b2-9-q1", "type": "quiz_choice", "question": "The company's ____ include real estate, equipment, and cash. (Activos).", "options": ["assets", "liabilities", "debts", "losses"], "correct_answer": "assets", "explanation": "Assets = activos (lo que posee la empresa)." },
+        { "id": "b2-9-q2", "type": "quiz_choice", "question": "We need to pay off our ____ to improve our financial health. (Pasivos / Deudas).", "options": ["liabilities", "assets", "profits", "gains"], "correct_answer": "liabilities", "explanation": "Liabilities = pasivos o deudas." },
+        { "id": "b2-9-q3", "type": "quiz_choice", "question": "What is the expected ____ on this marketing campaign? (Retorno de Inversión).", "options": ["ROI", "CEO", "CFO", "HR"], "correct_answer": "ROI", "explanation": "ROI = Return on Investment." },
+        { "id": "b2-9-q4", "type": "quiz_choice", "question": "After 10 years of private growth, the startup decided to ____ public. (Salir a bolsa).", "options": ["go", "make", "take", "run"], "correct_answer": "go", "explanation": "Go public = salir a la bolsa de valores." },
+        { "id": "b2-9-q5", "type": "quiz_choice", "question": "During a ____ market, stock prices are falling and investors are pessimistic. (Mercado bajista).", "options": ["bear", "bull", "lion", "wolf"], "correct_answer": "bear", "explanation": "Bear market = mercado bajista (el oso ataca hacia abajo)." },
+        { "id": "b2-9-q6", "type": "quiz_choice", "question": "In a ____ market, prices are rising and the economy is strong. (Mercado alcista).", "options": ["bull", "bear", "horse", "eagle"], "correct_answer": "bull", "explanation": "Bull market = mercado alcista (el toro ataca hacia arriba)." },
+        { "id": "b2-9-q7", "type": "quiz_choice", "question": "Employees, customers, and investors are all ____ of the company. (Partes interesadas / afectados).", "options": ["stakeholders", "shareholders", "brokers", "dealers"], "correct_answer": "stakeholders", "explanation": "Stakeholders = grupos de interés o partes afectadas." },
+        { "id": "b2-9-q8", "type": "quiz_choice", "question": "A ____ is a person who owns shares in a company. (Accionista).", "options": ["shareholder", "stakeholder", "employee", "customer"], "correct_answer": "shareholder", "explanation": "Shareholder = accionista (dueño de acciones). Todo shareholder es stakeholder, pero no al revés." },
+        { "id": "b2-9-q9", "type": "quiz_choice", "question": "When a company goes public, it offers an IPO. What does the 'I' stand for? (Oferta Pública INICIAL).", "options": ["Initial", "Investment", "Internal", "Income"], "correct_answer": "Initial", "explanation": "IPO = Initial Public Offering." },
+        { "id": "b2-9-q10", "type": "quiz_choice", "question": "The company filed for ____ because it couldn't pay its debts. (Bancarrota).", "options": ["bankruptcy", "profits", "dividends", "shares"], "correct_answer": "bankruptcy", "explanation": "File for bankruptcy = declararse en bancarrota." },
+        { "id": "b2-9-q11", "type": "quiz_choice", "question": "If you buy shares, you hope they will pay a good ____ at the end of the year. (Dividendo).", "options": ["dividend", "debt", "liability", "tax"], "correct_answer": "dividend", "explanation": "Dividend = dividendo (la parte de las ganancias que se reparte a los accionistas)." },
+        { "id": "b2-9-q12", "type": "quiz_choice", "question": "We need to ____ our portfolio to minimize risk. (Diversificar).", "options": ["diversify", "focus", "sell", "lose"], "correct_answer": "diversify", "explanation": "Diversify = diversificar." },
+        { "id": "b2-9-q13", "type": "quiz_choice", "question": "The total amount of money a company receives from sales is its ____. (Ingresos).", "options": ["revenue", "expense", "debt", "liability"], "correct_answer": "revenue", "explanation": "Revenue (o turnover) = ingresos totales antes de deducir gastos." },
+        { "id": "b2-9-q14", "type": "quiz_choice", "question": "Revenue minus expenses equals ____. (Ganancia neta / Beneficio).", "options": ["profit", "loss", "tax", "cost"], "correct_answer": "profit", "explanation": "Profit = ganancia, beneficio." },
+        { "id": "b2-9-q15", "type": "quiz_choice", "question": "A company's financial statement showing assets and liabilities is the balance ____. (Hoja de balance).", "options": ["sheet", "paper", "book", "card"], "correct_answer": "sheet", "explanation": "Balance sheet = hoja de balance." },
+        { "id": "b2-9-q16", "type": "quiz_choice", "question": "The money a business owes to its suppliers is called Accounts ____. (Cuentas por pagar).", "options": ["Payable", "Receivable", "Lost", "Found"], "correct_answer": "Payable", "explanation": "Accounts Payable = cuentas por pagar (pasivo)." },
+        { "id": "b2-9-q17", "type": "quiz_choice", "question": "The money owed TO a business by its customers is Accounts ____. (Cuentas por cobrar).", "options": ["Receivable", "Payable", "Debt", "Credit"], "correct_answer": "Receivable", "explanation": "Accounts Receivable = cuentas por cobrar (activo)." },
+        { "id": "b2-9-q18", "type": "quiz_choice", "question": "Our cash ____ is positive, meaning more money is coming in than going out. (Flujo).", "options": ["flow", "run", "river", "drop"], "correct_answer": "flow", "explanation": "Cash flow = flujo de caja." },
+        { "id": "b2-9-q19", "type": "quiz_choice", "question": "We must calculate the ____ margin before setting the final price. (Margen de beneficio).", "options": ["profit", "loss", "sale", "cost"], "correct_answer": "profit", "explanation": "Profit margin = margen de ganancia/beneficio." },
+        { "id": "b2-9-q20", "type": "quiz_choice", "question": "A sudden drop in stock prices caused a market ____. (Caída/Desplome).", "options": ["crash", "jump", "run", "fly"], "correct_answer": "crash", "explanation": "Market crash = desplome del mercado financiero." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra financiera correcta.",
+      "questions": [
+        { "id": "b2-9-f1", "type": "fill_input", "question": "Company ____. (Activos con A plural)", "correct_answer": "assets", "explanation": "assets." },
+        { "id": "b2-9-f2", "type": "fill_input", "question": "Company ____. (Pasivos con L plural)", "correct_answer": "liabilities", "explanation": "liabilities." },
+        { "id": "b2-9-f3", "type": "fill_input", "question": "Return on Investment is ____. (Acrónimo 3 letras)", "correct_answer": "ROI", "explanation": "ROI." },
+        { "id": "b2-9-f4", "type": "fill_input", "question": "To ____ public. (Salir a bolsa con G)", "correct_answer": "go", "explanation": "go." },
+        { "id": "b2-9-f5", "type": "fill_input", "question": "A ____ market. (Mercado bajista con B)", "correct_answer": "bear", "explanation": "bear." },
+        { "id": "b2-9-f6", "type": "fill_input", "question": "A ____ market. (Mercado alcista con B)", "correct_answer": "bull", "explanation": "bull." },
+        { "id": "b2-9-f7", "type": "fill_input", "question": "All the ____. (Partes interesadas con S plural)", "correct_answer": "stakeholders", "explanation": "stakeholders." },
+        { "id": "b2-9-f8", "type": "fill_input", "question": "Total ____. (Ingresos con R)", "correct_answer": "revenue", "explanation": "revenue." },
+        { "id": "b2-9-f9", "type": "fill_input", "question": "File for ____. (Bancarrota con B)", "correct_answer": "bankruptcy", "explanation": "bankruptcy." },
+        { "id": "b2-9-f10", "type": "fill_input", "question": "Cash ____. (Flujo de caja con F)", "correct_answer": "flow", "explanation": "flow." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Finance Match",
+      "pairs": [
+        {"id": "b2-9-p1", "source": "Assets", "target": "Activos"},
+        {"id": "b2-9-p2", "source": "Liabilities", "target": "Pasivos / Deudas"},
+        {"id": "b2-9-p3", "source": "ROI", "target": "Retorno de Inversión"},
+        {"id": "b2-9-p4", "source": "Go public", "target": "Salir a la bolsa (IPO)"},
+        {"id": "b2-9-p5", "source": "Bear market", "target": "Mercado bajista (cayendo)"},
+        {"id": "b2-9-p6", "source": "Bull market", "target": "Mercado alcista (subiendo)"},
+        {"id": "b2-9-p7", "source": "Stakeholders", "target": "Partes interesadas / afectadas"},
+        {"id": "b2-9-p8", "source": "Revenue", "target": "Ingresos (antes de gastos)"},
+        {"id": "b2-9-p9", "source": "Profit", "target": "Ganancia neta (beneficio)"},
+        {"id": "b2-9-p10", "source": "Bankruptcy", "target": "Quiebra / Bancarrota"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración de finanzas.",
+      "questions": [
+        { "id": "b2-9-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our assets are growing.", "options": ["Our assets are growing.", "Our liabilities are growing.", "Our access is growing.", "Our assets are glowing."], "correct_answer": "Our assets are growing.", "explanation": "Audio exacto." },
+        { "id": "b2-9-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to reduce our liabilities.", "options": ["We need to reduce our liabilities.", "We need to reduce our debts.", "We need to produce our liabilities.", "They need to reduce their liabilities."], "correct_answer": "We need to reduce our liabilities.", "explanation": "Audio exacto." },
+        { "id": "b2-9-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is the expected ROI?", "options": ["What is the expected ROI?", "What is the expected CEO?", "Where is the expected ROI?", "Is this the expected ROI?"], "correct_answer": "What is the expected ROI?", "explanation": "Audio exacto." },
+        { "id": "b2-9-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company decided to go public.", "options": ["The company decided to go public.", "The company wants to go public.", "The company will go public.", "The company refused to go public."], "correct_answer": "The company decided to go public.", "explanation": "Audio exacto." },
+        { "id": "b2-9-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a bear market right now.", "options": ["It is a bear market right now.", "It is a bull market right now.", "It is a bad market right now.", "Is it a bear market right now?"], "correct_answer": "It is a bear market right now.", "explanation": "Audio exacto." },
+        { "id": "b2-9-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The stakeholders demand answers.", "options": ["The stakeholders demand answers.", "The shareholders demand answers.", "The stakeholders ask questions.", "The employees demand answers."], "correct_answer": "The stakeholders demand answers.", "explanation": "Audio exacto." },
+        { "id": "b2-9-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Revenue increased by ten percent.", "options": ["Revenue increased by ten percent.", "Revenue decreased by ten percent.", "Profits increased by ten percent.", "Revenue increased by two percent."], "correct_answer": "Revenue increased by ten percent.", "explanation": "Audio exacto." },
+        { "id": "b2-9-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They filed for bankruptcy.", "options": ["They filed for bankruptcy.", "They filed for the bank.", "We filed for bankruptcy.", "They filed bankruptcy."], "correct_answer": "They filed for bankruptcy.", "explanation": "Audio exacto." },
+        { "id": "b2-9-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We must improve our cash flow.", "options": ["We must improve our cash flow.", "We must improve our money flow.", "We must prove our cash flow.", "They must improve their cash flow."], "correct_answer": "We must improve our cash flow.", "explanation": "Audio exacto." },
+        { "id": "b2-9-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Check the balance sheet.", "options": ["Check the balance sheet.", "Check the balance book.", "Read the balance sheet.", "Where is the balance sheet?"], "correct_answer": "Check the balance sheet.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "a1-56",
+  "title": "Imperatives: Giving Instructions",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Imperatives", "Instructions"],
+  "completion_message": "¡Magnífico! Ahora puedes dar instrucciones directas y comandos en tu trabajo.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: El Imperativo",
+      "parts": [
+        { "visual": "Usamos el imperativo para dar órdenes o instrucciones. Simplemente usa el verbo base sin 'You': 'Print this document' (Imprime este documento).", "audio": "We use the imperative to give orders or instructions. Just use the base verb without You: Print this document." },
+        { "visual": "Para comandos negativos usa 'Do not' o 'Don't': 'Don't touch that button' (No toques ese botón).", "audio": "For negative commands use Do not or Don't: Don't touch that button." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma imperativa correcta.",
+      "questions": [
+        { "id": "a1-56-q1", "type": "quiz_choice", "question": "____ the door, please.", "options": ["Close", "Closes", "Closing", "To close"], "correct_answer": "Close", "explanation": "Imperativo afirmativo, verbo base (Close)." },
+        { "id": "a1-56-q2", "type": "quiz_choice", "question": "____ open the window. It's cold.", "options": ["Don't", "Doesn't", "Not", "No"], "correct_answer": "Don't", "explanation": "Imperativo negativo (Don't)." },
+        { "id": "a1-56-q3", "type": "quiz_choice", "question": "____ me the report by 5 PM.", "options": ["Send", "Sends", "Sending", "To send"], "correct_answer": "Send", "explanation": "Enviar (Send)." },
+        { "id": "a1-56-q4", "type": "quiz_choice", "question": "____ forget to sign the contract.", "options": ["Don't", "Not", "Doesn't", "No"], "correct_answer": "Don't", "explanation": "No olvides (Don't forget)." },
+        { "id": "a1-56-q5", "type": "quiz_choice", "question": "____ here, please. (Firme)", "options": ["Sign", "Signs", "Signing", "Signed"], "correct_answer": "Sign", "explanation": "Firme (Sign)." },
+        { "id": "a1-56-q6", "type": "quiz_choice", "question": "____ to the client politely.", "options": ["Speak", "Speaks", "Speaking", "Spoke"], "correct_answer": "Speak", "explanation": "Hable (Speak)." },
+        { "id": "a1-56-q7", "type": "quiz_choice", "question": "____ that button. It's dangerous.", "options": ["Don't touch", "Not touch", "Doesn't touch", "No touching"], "correct_answer": "Don't touch", "explanation": "No toques (Don't touch)." },
+        { "id": "a1-56-q8", "type": "quiz_choice", "question": "____ down and let's talk.", "options": ["Sit", "Sits", "Sitting", "Sat"], "correct_answer": "Sit", "explanation": "Siéntate (Sit)." },
+        { "id": "a1-56-q9", "type": "quiz_choice", "question": "____ me at 9 AM tomorrow.", "options": ["Call", "Calls", "Calling", "Called"], "correct_answer": "Call", "explanation": "Llámame (Call)." },
+        { "id": "a1-56-q10", "type": "quiz_choice", "question": "____ turn off the lights when you leave.", "options": ["Please", "Don't", "No", "Not"], "correct_answer": "Please", "explanation": "Para suavizar un comando se usa 'Please'." },
+        { "id": "a1-56-q11", "type": "quiz_choice", "question": "____ carefully.", "options": ["Listen", "Listens", "Listening", "To listen"], "correct_answer": "Listen", "explanation": "Escucha (Listen)." },
+        { "id": "a1-56-q12", "type": "quiz_choice", "question": "____ me an email.", "options": ["Write", "Writes", "Writing", "Written"], "correct_answer": "Write", "explanation": "Escríbeme (Write)." },
+        { "id": "a1-56-q13", "type": "quiz_choice", "question": "____ late for the meeting.", "options": ["Don't be", "Not be", "Be not", "Doesn't be"], "correct_answer": "Don't be", "explanation": "No llegues/estés tarde (Don't be late)." },
+        { "id": "a1-56-q14", "type": "quiz_choice", "question": "____ quiet. People are working.", "options": ["Be", "Is", "Are", "Am"], "correct_answer": "Be", "explanation": "Sé silencioso (Be quiet)." },
+        { "id": "a1-56-q15", "type": "quiz_choice", "question": "____ the attachment before sending.", "options": ["Check", "Checks", "Checking", "Checked"], "correct_answer": "Check", "explanation": "Revisa (Check)." },
+        { "id": "a1-56-q16", "type": "quiz_choice", "question": "____ your computer.", "options": ["Restart", "Restarts", "Restarting", "Restarted"], "correct_answer": "Restart", "explanation": "Reinicia (Restart)." },
+        { "id": "a1-56-q17", "type": "quiz_choice", "question": "____ your password here.", "options": ["Type", "Types", "Typing", "Typed"], "correct_answer": "Type", "explanation": "Escribe/teclea (Type)." },
+        { "id": "a1-56-q18", "type": "quiz_choice", "question": "____ a seat.", "options": ["Take", "Takes", "Taking", "Took"], "correct_answer": "Take", "explanation": "Tome asiento (Take a seat)." },
+        { "id": "a1-56-q19", "type": "quiz_choice", "question": "____ me when you arrive.", "options": ["Text", "Texts", "Texting", "Texted"], "correct_answer": "Text", "explanation": "Envíame un mensaje (Text)." },
+        { "id": "a1-56-q20", "type": "quiz_choice", "question": "____ this document. It is important.", "options": ["Read", "Reads", "Reading", "To read"], "correct_answer": "Read", "explanation": "Lee (Read)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el comando o negación correcta.",
+      "questions": [
+        { "id": "a1-56-f1", "type": "fill_input", "question": "____ the door (Cierra).", "correct_answer": "Close", "explanation": "Close." },
+        { "id": "a1-56-f2", "type": "fill_input", "question": "____ open the window (No, imperativo).", "correct_answer": "Don't", "explanation": "Don't." },
+        { "id": "a1-56-f3", "type": "fill_input", "question": "____ me the report (Envía).", "correct_answer": "Send", "explanation": "Send." },
+        { "id": "a1-56-f4", "type": "fill_input", "question": "____ here (Firma).", "correct_answer": "Sign", "explanation": "Sign." },
+        { "id": "a1-56-f5", "type": "fill_input", "question": "____ down (Siéntate).", "correct_answer": "Sit", "explanation": "Sit." },
+        { "id": "a1-56-f6", "type": "fill_input", "question": "____ me at 9 AM (Llama).", "correct_answer": "Call", "explanation": "Call." },
+        { "id": "a1-56-f7", "type": "fill_input", "question": "____ be late (No, imperativo).", "correct_answer": "Don't", "explanation": "Don't." },
+        { "id": "a1-56-f8", "type": "fill_input", "question": "____ quiet (Mantente/Sé).", "correct_answer": "Be", "explanation": "Be." },
+        { "id": "a1-56-f9", "type": "fill_input", "question": "____ the attachment (Revisa).", "correct_answer": "Check", "explanation": "Check." },
+        { "id": "a1-56-f10", "type": "fill_input", "question": "____ a seat (Toma).", "correct_answer": "Take", "explanation": "Take." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-56-p1", "source": "Close the door", "target": "Cierra la puerta"},
+        {"id": "a1-56-p2", "source": "Don't open it", "target": "No lo abras"},
+        {"id": "a1-56-p3", "source": "Send the email", "target": "Envía el correo"},
+        {"id": "a1-56-p4", "source": "Sign here", "target": "Firme aquí"},
+        {"id": "a1-56-p5", "source": "Don't touch", "target": "No toques"},
+        {"id": "a1-56-p6", "source": "Sit down", "target": "Siéntate"},
+        {"id": "a1-56-p7", "source": "Call me", "target": "Llámame"},
+        {"id": "a1-56-p8", "source": "Be quiet", "target": "Guarda silencio"},
+        {"id": "a1-56-p9", "source": "Check the file", "target": "Revisa el archivo"},
+        {"id": "a1-56-p10", "source": "Don't be late", "target": "No llegues tarde"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-56-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Close the door.", "options": ["Close the door.", "Open the door.", "Don't close the door.", "Please close the door."], "correct_answer": "Close the door.", "explanation": "Audio exacto." },
+        { "id": "a1-56-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Don't open the window.", "options": ["Don't open the window.", "Open the window.", "Don't close the window.", "Don't open the door."], "correct_answer": "Don't open the window.", "explanation": "Audio exacto." },
+        { "id": "a1-56-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Send the report.", "options": ["Send the report.", "Send the email.", "Send the file.", "Send the money."], "correct_answer": "Send the report.", "explanation": "Audio exacto." },
+        { "id": "a1-56-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sign here, please.", "options": ["Sign here, please.", "Wait here, please.", "Sit here, please.", "Stand here, please."], "correct_answer": "Sign here, please.", "explanation": "Audio exacto." },
+        { "id": "a1-56-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Don't touch that button.", "options": ["Don't touch that button.", "Touch that button.", "Don't touch the screen.", "Don't touch it."], "correct_answer": "Don't touch that button.", "explanation": "Audio exacto." },
+        { "id": "a1-56-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sit down.", "options": ["Sit down.", "Stand up.", "Sit here.", "Come down."], "correct_answer": "Sit down.", "explanation": "Audio exacto." },
+        { "id": "a1-56-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Call me tomorrow.", "options": ["Call me tomorrow.", "Call me today.", "Call him tomorrow.", "Text me tomorrow."], "correct_answer": "Call me tomorrow.", "explanation": "Audio exacto." },
+        { "id": "a1-56-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Don't be late.", "options": ["Don't be late.", "Don't be sad.", "Don't be early.", "Don't go late."], "correct_answer": "Don't be late.", "explanation": "Audio exacto." },
+        { "id": "a1-56-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Be quiet.", "options": ["Be quiet.", "Be quick.", "Be happy.", "Be careful."], "correct_answer": "Be quiet.", "explanation": "Audio exacto." },
+        { "id": "a1-56-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Check the attachment.", "options": ["Check the attachment.", "Send the attachment.", "Open the attachment.", "Read the attachment."], "correct_answer": "Check the attachment.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "c1-8",
+  "title": "Innovation & Tech",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "Innovation", "Technology", "Business"],
+  "completion_message": "¡Brillante! Ahora dominas la jerga de Silicon Valley. Palabras como 'disruptive', 'paradigm shift' o 'scalable' te permitirán liderar conversaciones sobre innovación, transformación digital y startups.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Vocabulario de Innovación y Tecnología (C1)",
+      "parts": [
+        { "visual": "Transformación y Mercado: \n- Disruptive (Disruptivo / Que rompe el mercado tradicional con una nueva tecnología o modelo). \nEj: Uber was a disruptive force in the taxi industry. \n- Paradigm shift (Cambio de paradigma / Un cambio fundamental en cómo se hacen las cosas). \nEj: AI is causing a paradigm shift in software development. \n- Scalable (Escalable / Un negocio o sistema que puede crecer enormemente sin que sus costos aumenten al mismo ritmo). \nEj: Software is highly scalable; consulting is not.", "audio": "Transformation and Market. 'Disruptive' describes something that completely changes the traditional market with a new technology or model. For example: Uber was a disruptive force in the taxi industry. A 'Paradigm shift' is a fundamental change in approach or underlying assumptions. For example: A I is causing a paradigm shift in software development. 'Scalable' describes a business or system that can grow enormously without its costs increasing at the same rate. For example: Software is highly scalable; consulting is not." },
+        { "visual": "Tecnología Avanzada y Métodos: \n- Bleeding-edge (Tecnología de vanguardia absoluta, tan nueva que a veces tiene riesgos o fallas). \nEj: We use bleeding-edge technology, which is sometimes unstable. \n- Outdated / Obsolete (Obsoleto / Que ya no sirve o está anticuado). \nEj: That software is completely obsolete now. \n- Pain point (Punto de dolor / El problema específico que un cliente tiene y que tu producto resuelve). \nEj: Our app solves the main pain point for remote workers.", "audio": "Advanced Technology and Methods. 'Bleeding-edge' refers to technology that is so new that it may have a high risk of being unreliable. For example: We use bleeding-edge technology, which is sometimes unstable. 'Obsolete' or 'Outdated' means something is no longer produced or used; it's out of date. For example: That software is completely obsolete now. A 'Pain point' is a specific problem that a customer has, which your product aims to solve. For example: Our app solves the main pain point for remote workers." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de innovación o tecnología correcto.",
+      "questions": [
+        { "id": "c1-8-q1", "type": "quiz_choice", "question": "Smartphones were a ____ technology that completely destroyed the digital camera market. (Disruptivo / Que rompe el mercado).", "options": ["disruptive", "interruptive", "corruptive", "abrupt"], "correct_answer": "disruptive", "explanation": "Disruptive = disruptivo (que cambia las reglas de una industria)." },
+        { "id": "c1-8-q2", "type": "quiz_choice", "question": "Moving from physical stores to e-commerce was a huge ____ shift for the retail industry. (Cambio de paradigma).", "options": ["paradigm", "paramount", "parallel", "paragraph"], "correct_answer": "paradigm", "explanation": "Paradigm shift = cambio de paradigma / cambio fundamental." },
+        { "id": "c1-8-q3", "type": "quiz_choice", "question": "Investors love software companies because their business model is highly ____. You build it once and sell it millions of times. (Escalable).", "options": ["scalable", "saleable", "stable", "suitable"], "correct_answer": "scalable", "explanation": "Scalable = escalable (capacidad de crecer masivamente con bajos costos marginales)." },
+        { "id": "c1-8-q4", "type": "quiz_choice", "question": "This technology isn't just cutting-edge; it is ____-edge. It's so new that it still has bugs. (De vanguardia absoluta / Innovación extrema).", "options": ["bleeding", "bleeding-edge", "cutting", "sharp"], "correct_answer": "bleeding-edge", "explanation": "Bleeding-edge = más nuevo que cutting-edge, tan innovador que conlleva riesgos." },
+        { "id": "c1-8-q5", "type": "quiz_choice", "question": "Floppy disks and CD-ROMs are completely ____ today. Nobody uses them. (Obsoletos).", "options": ["obsolete", "absolute", "resolute", "dissolute"], "correct_answer": "obsolete", "explanation": "Obsolete = obsoleto, anticuado, en desuso." },
+        { "id": "c1-8-q6", "type": "quiz_choice", "question": "Our marketing team needs to identify the customer's main ____ point so we can solve it. (Punto de dolor / Problema).", "options": ["pain", "hurt", "sore", "ache"], "correct_answer": "pain", "explanation": "Pain point = el problema o frustración principal del cliente." },
+        { "id": "c1-8-q7", "type": "quiz_choice", "question": "We work using an ____ methodology, which allows us to adapt to changes quickly in two-week sprints. (Ágil).", "options": ["agile", "fragile", "fast", "quick"], "correct_answer": "agile", "explanation": "Agile methodology = metodología ágil (scrum, kanban, etc.)." },
+        { "id": "c1-8-q8", "type": "quiz_choice", "question": "Instead of building the full app, let's launch an MVP. What does MVP stand for? (Producto Mínimo Viable).", "options": ["Minimum Viable Product", "Most Valuable Player", "Maximum Value Price", "Minimum Visual Product"], "correct_answer": "Minimum Viable Product", "explanation": "Minimum Viable Product (MVP) = el producto con las funciones mínimas para salir al mercado." },
+        { "id": "c1-8-q9", "type": "quiz_choice", "question": "The process of moving all our local servers to the internet is called ____ migration. (Migración a la nube).", "options": ["cloud", "sky", "air", "web"], "correct_answer": "cloud", "explanation": "Cloud migration = migración a la nube." },
+        { "id": "c1-8-q10", "type": "quiz_choice", "question": "To stay competitive, we need to completely ____ our supply chain using AI. (Modernizar / Reformar por completo).", "options": ["overhaul", "overall", "overlook", "overtake"], "correct_answer": "overhaul", "explanation": "Overhaul = revisar y modernizar/reparar por completo un sistema." },
+        { "id": "c1-8-q11", "type": "quiz_choice", "question": "The software is designed to ____ repetitive tasks, so humans don't have to do them. (Automatizar).", "options": ["automate", "animate", "estimate", "evaluate"], "correct_answer": "automate", "explanation": "Automate = automatizar." },
+        { "id": "c1-8-q12", "type": "quiz_choice", "question": "The app is very ____-friendly. Even my grandmother can use it easily. (Fácil de usar para el usuario).", "options": ["user", "human", "customer", "person"], "correct_answer": "user", "explanation": "User-friendly = intuitivo, fácil de usar." },
+        { "id": "c1-8-q13", "type": "quiz_choice", "question": "Our system has a ____ that prevents hackers from stealing data. (Cortafuegos / Sistema de seguridad).", "options": ["firewall", "waterwall", "stonewall", "brickwall"], "correct_answer": "firewall", "explanation": "Firewall = cortafuegos (seguridad informática)." },
+        { "id": "c1-8-q14", "type": "quiz_choice", "question": "Before launching, we need to fix a few minor ____ in the code. (Errores / Fallos).", "options": ["bugs", "insects", "spiders", "ants"], "correct_answer": "bugs", "explanation": "Bugs = errores en el código de software." },
+        { "id": "c1-8-q15", "type": "quiz_choice", "question": "The CEO wants to ____ AI across all departments by next year. (Implementar / Desplegar).", "options": ["deploy", "employ", "destroy", "enjoy"], "correct_answer": "deploy", "explanation": "Deploy = implementar, desplegar, poner en funcionamiento." },
+        { "id": "c1-8-q16", "type": "quiz_choice", "question": "It's an ____-source project, meaning anyone can see and modify the code for free. (De código abierto).", "options": ["open", "free", "public", "shared"], "correct_answer": "open", "explanation": "Open-source = código abierto." },
+        { "id": "c1-8-q17", "type": "quiz_choice", "question": "We use strong ____ to make sure no one can intercept our messages. (Encriptación / Cifrado).", "options": ["encryption", "description", "prescription", "subscription"], "correct_answer": "encryption", "explanation": "Encryption = cifrado, encriptación." },
+        { "id": "c1-8-q18", "type": "quiz_choice", "question": "This new microchip is a massive ____ in computing power. (Avance tecnológico / Descubrimiento).", "options": ["breakthrough", "breakdown", "breakout", "breakin"], "correct_answer": "breakthrough", "explanation": "Breakthrough = avance importante, descubrimiento revolucionario." },
+        { "id": "c1-8-q19", "type": "quiz_choice", "question": "Because of the high web traffic, our servers experienced some ____ yesterday. (Tiempo de inactividad / Caída del sistema).", "options": ["downtime", "uptime", "overtime", "part-time"], "correct_answer": "downtime", "explanation": "Downtime = tiempo de inactividad o caída de un servidor/sistema." },
+        { "id": "c1-8-q20", "type": "quiz_choice", "question": "The startup aims to ____ the real estate market by eliminating brokers. (Alterar/Revolucionar una industria).", "options": ["disrupt", "interrupt", "corrupt", "erupt"], "correct_answer": "disrupt", "explanation": "Disrupt = alterar, revolucionar, romper el esquema tradicional de un mercado." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término de innovación/tecnología C1.",
+      "questions": [
+        { "id": "c1-8-f1", "type": "fill_input", "question": "A ____ technology. (Disruptiva con D)", "correct_answer": "disruptive", "explanation": "disruptive." },
+        { "id": "c1-8-f2", "type": "fill_input", "question": "A ____ shift. (Cambio de paradigma con P)", "correct_answer": "paradigm", "explanation": "paradigm." },
+        { "id": "c1-8-f3", "type": "fill_input", "question": "Highly ____. (Escalable con S)", "correct_answer": "scalable", "explanation": "scalable." },
+        { "id": "c1-8-f4", "type": "fill_input", "question": "____-edge tech. (Vanguardia extrema con B)", "correct_answer": "Bleeding", "explanation": "Bleeding." },
+        { "id": "c1-8-f5", "type": "fill_input", "question": "It is completely ____. (Obsoleto con O)", "correct_answer": "obsolete", "explanation": "obsolete." },
+        { "id": "c1-8-f6", "type": "fill_input", "question": "The customer's ____ point. (Punto de dolor con P)", "correct_answer": "pain", "explanation": "pain." },
+        { "id": "c1-8-f7", "type": "fill_input", "question": "____ methodology. (Metodología Ágil con A)", "correct_answer": "Agile", "explanation": "Agile." },
+        { "id": "c1-8-f8", "type": "fill_input", "question": "____ the system. (Modernizar/Reformar por completo con O)", "correct_answer": "Overhaul", "explanation": "Overhaul." },
+        { "id": "c1-8-f9", "type": "fill_input", "question": "A major technological ____. (Avance/Descubrimiento con B)", "correct_answer": "breakthrough", "explanation": "breakthrough." },
+        { "id": "c1-8-f10", "type": "fill_input", "question": "Server ____. (Tiempo de inactividad/Caída con D)", "correct_answer": "downtime", "explanation": "downtime." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Innovation Match",
+      "pairs": [
+        {"id": "c1-8-p1", "source": "Disruptive", "target": "Disruptivo / Que rompe el mercado"},
+        {"id": "c1-8-p2", "source": "Paradigm shift", "target": "Cambio de paradigma / fundamental"},
+        {"id": "c1-8-p3", "source": "Scalable", "target": "Escalable (crecimiento masivo a bajo costo)"},
+        {"id": "c1-8-p4", "source": "Bleeding-edge", "target": "Vanguardia absoluta (casi experimental)"},
+        {"id": "c1-8-p5", "source": "Obsolete", "target": "Obsoleto / Anticuado"},
+        {"id": "c1-8-p6", "source": "Pain point", "target": "Punto de dolor (problema del cliente)"},
+        {"id": "c1-8-p7", "source": "Overhaul", "target": "Revisar y modernizar por completo"},
+        {"id": "c1-8-p8", "source": "Deploy", "target": "Implementar / Desplegar (software)"},
+        {"id": "c1-8-p9", "source": "Breakthrough", "target": "Avance tecnológico importante"},
+        {"id": "c1-8-p10", "source": "Downtime", "target": "Tiempo de inactividad / Caída del sistema"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase tecnológica correcta.",
+      "questions": [
+        { "id": "c1-8-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is a disruptive technology.", "options": ["It is a disruptive technology.", "It is a corruptive technology.", "It was a disruptive technology.", "Is it a disruptive technology?"], "correct_answer": "It is a disruptive technology.", "explanation": "Audio exacto." },
+        { "id": "c1-8-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "This is a paradigm shift.", "options": ["This is a paradigm shift.", "That is a paradigm shift.", "This is a parallel shift.", "This was a paradigm shift."], "correct_answer": "This is a paradigm shift.", "explanation": "Audio exacto." },
+        { "id": "c1-8-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our business model is scalable.", "options": ["Our business model is scalable.", "Your business model is scalable.", "Our business model is stable.", "Our business model was scalable."], "correct_answer": "Our business model is scalable.", "explanation": "Audio exacto." },
+        { "id": "c1-8-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We use bleeding-edge software.", "options": ["We use bleeding-edge software.", "They use bleeding-edge software.", "We use cutting-edge software.", "We used bleeding-edge software."], "correct_answer": "We use bleeding-edge software.", "explanation": "Audio exacto." },
+        { "id": "c1-8-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "That product is obsolete.", "options": ["That product is obsolete.", "This product is obsolete.", "That product was obsolete.", "That product is absolute."], "correct_answer": "That product is obsolete.", "explanation": "Audio exacto." },
+        { "id": "c1-8-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is the customer's pain point?", "options": ["What is the customer's pain point?", "Where is the customer's pain point?", "What is the customer's main point?", "What was the customer's pain point?"], "correct_answer": "What is the customer's pain point?", "explanation": "Audio exacto." },
+        { "id": "c1-8-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to overhaul the system.", "options": ["We need to overhaul the system.", "We need to overall the system.", "They need to overhaul the system.", "We needed to overhaul the system."], "correct_answer": "We need to overhaul the system.", "explanation": "Audio exacto." },
+        { "id": "c1-8-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was a major breakthrough.", "options": ["It was a major breakthrough.", "It is a major breakthrough.", "It was a minor breakthrough.", "It was a major breakdown."], "correct_answer": "It was a major breakthrough.", "explanation": "Audio exacto." },
+        { "id": "c1-8-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We experienced some server downtime.", "options": ["We experienced some server downtime.", "They experienced some server downtime.", "We experience some server downtime.", "We experienced some server uptime."], "correct_answer": "We experienced some server downtime.", "explanation": "Audio exacto." },
+        { "id": "c1-8-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We will deploy the app tomorrow.", "options": ["We will deploy the app tomorrow.", "They will deploy the app tomorrow.", "We will deploy the app today.", "We will destroy the app tomorrow."], "correct_answer": "We will deploy the app tomorrow.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

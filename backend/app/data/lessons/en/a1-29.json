@@ -1,0 +1,101 @@
+{
+  "id": "a1-29",
+  "title": "Asking for Help",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Communication", "Help"],
+  "completion_message": "¡Magnífico! Ya sabes cómo pedir ayuda de manera profesional y cortés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Pidiendo Ayuda",
+      "parts": [
+        { "visual": "Usa 'Can you help me?' o 'Could you help me?' (formal) cuando necesites asistencia.", "audio": "Use Can you help me or Could you help me when you need assistance." },
+        { "visual": "Para preguntar el método, usa 'How do I...?' (¿Cómo hago...?).", "audio": "To ask for the method, use How do I...?" }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Selecciona la palabra correcta para pedir ayuda.",
+      "questions": [
+        { "id": "a1-29-q1", "type": "quiz_choice", "question": "Can you ____ me, please?", "options": ["help", "helps", "helping", "helped"], "correct_answer": "help", "explanation": "Después de 'can' el verbo va en forma base." },
+        { "id": "a1-29-q2", "type": "quiz_choice", "question": "____ you help me with this report?", "options": ["Could", "Do", "Are", "Is"], "correct_answer": "Could", "explanation": "'Could' es una forma más cortés que 'Can'." },
+        { "id": "a1-29-q3", "type": "quiz_choice", "question": "How ____ I print this document?", "options": ["do", "does", "am", "are"], "correct_answer": "do", "explanation": "Auxiliar 'do' para 'I'." },
+        { "id": "a1-29-q4", "type": "quiz_choice", "question": "I need some ____.", "options": ["help", "helps", "helping", "helper"], "correct_answer": "help", "explanation": "Necesito un poco de ayuda (sustantivo)." },
+        { "id": "a1-29-q5", "type": "quiz_choice", "question": "I don't ____ this task.", "options": ["understand", "understands", "understood", "understanding"], "correct_answer": "understand", "explanation": "No entiendo (forma base)." },
+        { "id": "a1-29-q6", "type": "quiz_choice", "question": "Can you ____ that again?", "options": ["explain", "explains", "explained", "explaining"], "correct_answer": "explain", "explanation": "Explicar." },
+        { "id": "a1-29-q7", "type": "quiz_choice", "question": "What ____ this mean?", "options": ["does", "do", "is", "are"], "correct_answer": "does", "explanation": "Auxiliar para 'this' (it)." },
+        { "id": "a1-29-q8", "type": "quiz_choice", "question": "____ you show me how to do it?", "options": ["Can", "Do", "Are", "Have"], "correct_answer": "Can", "explanation": "¿Puedes mostrarme?" },
+        { "id": "a1-29-q9", "type": "quiz_choice", "question": "I have a ____.", "options": ["question", "questions", "questioning", "quest"], "correct_answer": "question", "explanation": "Tengo una pregunta." },
+        { "id": "a1-29-q10", "type": "quiz_choice", "question": "Sorry to ____ you, but I need help.", "options": ["bother", "bothers", "bothered", "bothering"], "correct_answer": "bother", "explanation": "Siento molestarte (bother)." },
+        { "id": "a1-29-q11", "type": "quiz_choice", "question": "Do you have a ____?", "options": ["minute", "minutes", "time", "hour"], "correct_answer": "minute", "explanation": "Do you have a minute? (¿Tienes un minuto?)." },
+        { "id": "a1-29-q12", "type": "quiz_choice", "question": "Could you ____ me a favor?", "options": ["do", "make", "take", "give"], "correct_answer": "do", "explanation": "Hacer un favor ('do a favor')." },
+        { "id": "a1-29-q13", "type": "quiz_choice", "question": "How do you ____ this word?", "options": ["spell", "spells", "spelled", "spelling"], "correct_answer": "spell", "explanation": "¿Cómo se deletrea?" },
+        { "id": "a1-29-q14", "type": "quiz_choice", "question": "How do you ____ this in English?", "options": ["say", "says", "said", "saying"], "correct_answer": "say", "explanation": "¿Cómo se dice?" },
+        { "id": "a1-29-q15", "type": "quiz_choice", "question": "I am ____, I don't know.", "options": ["sorry", "sad", "bad", "apologize"], "correct_answer": "sorry", "explanation": "Lo siento." },
+        { "id": "a1-29-q16", "type": "quiz_choice", "question": "Can you ____ a little slower?", "options": ["speak", "talk", "say", "tell"], "correct_answer": "speak", "explanation": "Hablar (speak) más despacio." },
+        { "id": "a1-29-q17", "type": "quiz_choice", "question": "I didn't ____ that.", "options": ["catch", "catches", "caught", "catching"], "correct_answer": "catch", "explanation": "'Catch' como entender o escuchar bien." },
+        { "id": "a1-29-q18", "type": "quiz_choice", "question": "Can we ____ this later?", "options": ["discuss", "discusses", "discussed", "discussing"], "correct_answer": "discuss", "explanation": "Discutir más tarde." },
+        { "id": "a1-29-q19", "type": "quiz_choice", "question": "Who can I ____ to about this?", "options": ["talk", "talks", "talked", "talking"], "correct_answer": "talk", "explanation": "¿Con quién puedo hablar?" },
+        { "id": "a1-29-q20", "type": "quiz_choice", "question": "Thanks for your ____.", "options": ["help", "helping", "helped", "helps"], "correct_answer": "help", "explanation": "Gracias por tu ayuda." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra exacta.",
+      "questions": [
+        { "id": "a1-29-f1", "type": "fill_input", "question": "Can you ____ me? (Ayudar).", "correct_answer": "help", "explanation": "Help." },
+        { "id": "a1-29-f2", "type": "fill_input", "question": "____ you help me? (Podrías, formal).", "correct_answer": "Could", "explanation": "Could." },
+        { "id": "a1-29-f3", "type": "fill_input", "question": "How ____ I print? (Auxiliar).", "correct_answer": "do", "explanation": "Do." },
+        { "id": "a1-29-f4", "type": "fill_input", "question": "I don't ____ (Entender).", "correct_answer": "understand", "explanation": "Understand." },
+        { "id": "a1-29-f5", "type": "fill_input", "question": "Can you ____ that? (Explicar).", "correct_answer": "explain", "explanation": "Explain." },
+        { "id": "a1-29-f6", "type": "fill_input", "question": "What does this ____? (Significar).", "correct_answer": "mean", "explanation": "Mean." },
+        { "id": "a1-29-f7", "type": "fill_input", "question": "I have a ____ (Pregunta).", "correct_answer": "question", "explanation": "Question." },
+        { "id": "a1-29-f8", "type": "fill_input", "question": "Do you have a ____? (Minuto).", "correct_answer": "minute", "explanation": "Minute." },
+        { "id": "a1-29-f9", "type": "fill_input", "question": "Could you ____ a favor? (Hacer).", "correct_answer": "do", "explanation": "Do." },
+        { "id": "a1-29-f10", "type": "fill_input", "question": "How do you ____ it? (Deletrear).", "correct_answer": "spell", "explanation": "Spell." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-29-p1", "source": "Help", "target": "Ayuda / Ayudar"},
+        {"id": "a1-29-p2", "source": "Could", "target": "Podría"},
+        {"id": "a1-29-p3", "source": "Understand", "target": "Entender"},
+        {"id": "a1-29-p4", "source": "Explain", "target": "Explicar"},
+        {"id": "a1-29-p5", "source": "Mean", "target": "Significar"},
+        {"id": "a1-29-p6", "source": "Question", "target": "Pregunta"},
+        {"id": "a1-29-p7", "source": "Bother", "target": "Molestar"},
+        {"id": "a1-29-p8", "source": "Favor", "target": "Favor"},
+        {"id": "a1-29-p9", "source": "Spell", "target": "Deletrear"},
+        {"id": "a1-29-p10", "source": "Catch", "target": "Atrapar / Entender"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-29-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you help me?", "options": ["Can you help me?", "Can you tell me?", "Can he help me?", "Can you hear me?"], "correct_answer": "Can you help me?", "explanation": "Audio exacto." },
+        { "id": "a1-29-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Could you help me?", "options": ["Could you help me?", "Can you help me?", "Would you help me?", "Should you help me?"], "correct_answer": "Could you help me?", "explanation": "Audio exacto." },
+        { "id": "a1-29-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How do I do this?", "options": ["How do I do this?", "How did I do this?", "How does he do this?", "Why do I do this?"], "correct_answer": "How do I do this?", "explanation": "Audio exacto." },
+        { "id": "a1-29-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I don't understand.", "options": ["I don't understand.", "I didn't understand.", "He doesn't understand.", "I do understand."], "correct_answer": "I don't understand.", "explanation": "Audio exacto." },
+        { "id": "a1-29-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you explain?", "options": ["Can you explain?", "Can you expand?", "Can he explain?", "Did you explain?"], "correct_answer": "Can you explain?", "explanation": "Audio exacto." },
+        { "id": "a1-29-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What does this mean?", "options": ["What does this mean?", "What do you mean?", "What did this mean?", "What does he mean?"], "correct_answer": "What does this mean?", "explanation": "Audio exacto." },
+        { "id": "a1-29-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have a question.", "options": ["I have a question.", "He has a question.", "I had a question.", "I have questions."], "correct_answer": "I have a question.", "explanation": "Audio exacto." },
+        { "id": "a1-29-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Do you have a minute?", "options": ["Do you have a minute?", "Do you have time?", "Does he have a minute?", "Did you have a minute?"], "correct_answer": "Do you have a minute?", "explanation": "Audio exacto." },
+        { "id": "a1-29-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "How do you spell it?", "options": ["How do you spell it?", "How did you spell it?", "How do you say it?", "How does he spell it?"], "correct_answer": "How do you spell it?", "explanation": "Audio exacto." },
+        { "id": "a1-29-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I didn't catch that.", "options": ["I didn't catch that.", "I don't catch that.", "He didn't catch that.", "I didn't watch that."], "correct_answer": "I didn't catch that.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

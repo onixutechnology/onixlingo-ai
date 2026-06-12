@@ -1,0 +1,95 @@
+{
+  "id": "fr-b1-06",
+  "title": "Le Subjonctif Irrégulier",
+  "version": "4.0-ARTISAN",
+  "level": "B1",
+  "total_xp": 500,
+  "tags": ["B1", "Grammar", "Subjunctive", "Irregular Verbs"],
+  "completion_message": "¡Félicitations! Has dominado los temidos verbos irregulares del subjuntivo. Ahora nadie podrá detenerte al dar órdenes o expresar deseos.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Los Rebeldes del Subjuntivo (B1)",
+      "parts": [
+        {
+          "visual": "En la lección anterior vimos que el subjuntivo regular se forma tomando la raíz de 'ils'. Pero, ¡oh sorpresa! Los verbos más importantes del francés son completamente irregulares en el subjuntivo.\n\nLos Reyes Rebeldes:\n- ÊTRE (ser/estar): que je SOIS, que tu SOIS, qu'il SOIT, que nous SOYONS, que vous SOYEZ, qu'ils SOIENT.\n- AVOIR (tener): que j'AIE, que tu AIES, qu'il AIT, que nous AYONS, que vous AYEZ, qu'ils AIENT.",
+          "audio": "Bienvenido al lado oscuro del subjuntivo. Ya sabes que para los verbos normales, simplemente tomas el presente de ellos y le quitas la terminación 'ent'. Pero los verbos más usados en francés, que son Ser y Tener, decidieron no seguir esta regla en absoluto. Para el verbo ÊTRE, la raíz mágica es 'soi'. Así que dices 'Que je sois' o 'Qu'il soit'. Y para el verbo AVOIR, la raíz es 'ai'. Dices 'Que j'aie' o 'Qu'il ait'. Memoriza estas dos listas porque las usarás todos los días."
+        },
+        {
+          "visual": "Los 5 mosqueteros irregulares (solo cambia la raíz, las terminaciones son regulares: e, es, e, ions, iez, ent):\n\n1. FAIRE (hacer) -> Raíz: FASS- (Il faut que je fasse)\n2. POUVOIR (poder) -> Raíz: PUISS- (Il faut que je puisse)\n3. SAVOIR (saber) -> Raíz: SACH- (Il faut que je sache)\n4. ALLER (ir) -> Raíz: AILL- / ALL- (Il faut que j'aille, que nous allions)\n5. VOULOIR (querer) -> Raíz: VEUILL- / VOUL- (Il faut que je veuille, que nous voulions)",
+          "audio": "Además de Ser y Tener, hay 5 verbos que tienes que aprenderte de memoria porque cambian su raíz. Por ejemplo, Faire se convierte en FASS-. 'Es necesario que yo haga' se dice 'Il faut que je fasse'. Pouvoir se convierte en PUISS-: 'Que je puisse' (que yo pueda). Savoir se convierte en SACH-: 'Que je sache' (que yo sepa). Para ir, usamos AILL-: 'Que j'aille' (que yo vaya). La buena noticia es que, aunque la raíz sea rara, las terminaciones que les añades son las mismas de siempre. Es decir, la 'e', 'es', 'e', 'ions', 'iez', 'ent'."
+        }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta del subjuntivo irregular.",
+      "questions": [
+        { "id": "frb1-06-q1", "type": "quiz_choice", "question": "Il faut que je ____ (être) à l'heure. (Es necesario que yo ESTÉ a tiempo).", "options": ["sois", "suis", "soit", "sere"], "correct_answer": "sois", "explanation": "Être -> que je sois." },
+        { "id": "frb1-06-q2", "type": "quiz_choice", "question": "Il faut qu'il ____ (être) fort. (Es necesario que él SEA fuerte).", "options": ["soit", "est", "sois", "sera"], "correct_answer": "soit", "explanation": "Être -> qu'il soit." },
+        { "id": "frb1-06-q3", "type": "quiz_choice", "question": "Il faut que nous ____ (être) prudents.", "options": ["soyons", "sommes", "soions", "étions"], "correct_answer": "soyons", "explanation": "Être -> que nous soyons." },
+        { "id": "frb1-06-q4", "type": "quiz_choice", "question": "Il faut que tu ____ (avoir) du courage. (TENGAS valor).", "options": ["aies", "as", "aie", "aura"], "correct_answer": "aies", "explanation": "Avoir -> que tu aies." },
+        { "id": "frb1-06-q5", "type": "quiz_choice", "question": "Il faut que vous ____ (avoir) le temps.", "options": ["ayez", "avez", "aiez", "auriez"], "correct_answer": "ayez", "explanation": "Avoir -> que vous ayez." },
+        { "id": "frb1-06-q6", "type": "quiz_choice", "question": "Il faut qu'ils ____ (avoir) de l'argent.", "options": ["aient", "ont", "aies", "aillent"], "correct_answer": "aient", "explanation": "Avoir -> qu'ils aient." },
+        { "id": "frb1-06-q7", "type": "quiz_choice", "question": "¿Cuál es la raíz irregular del verbo FAIRE en subjuntivo?", "options": ["fass-", "fais-", "fer-", "fai-"], "correct_answer": "fass-", "explanation": "Faire -> que je fasse (raíz fass-)." },
+        { "id": "frb1-06-q8", "type": "quiz_choice", "question": "Il faut que tu ____ (faire) tes devoirs. (HAGAS).", "options": ["fasses", "fais", "fasse", "feras"], "correct_answer": "fasses", "explanation": "Raíz fass- + es = que tu fasses." },
+        { "id": "frb1-06-q9", "type": "quiz_choice", "question": "Il faut que je ____ (aller) au supermarché. (VAYA).", "options": ["aille", "vais", "alle", "ira"], "correct_answer": "aille", "explanation": "Aller cambia a aill- -> que j'aille." },
+        { "id": "frb1-06-q10", "type": "quiz_choice", "question": "Il faut que nous ____ (aller) en France.", "options": ["allions", "allons", "aillions", "irions"], "correct_answer": "allions", "explanation": "Para nous y vous, la raíz vuelve a 'all-' -> que nous allions." },
+        { "id": "frb1-06-q11", "type": "quiz_choice", "question": "¿Cuál es el subjuntivo de POUVOIR (poder) para 'il'?", "options": ["qu'il puisse", "qu'il peut", "qu'il pouve", "qu'il pourra"], "correct_answer": "qu'il puisse", "explanation": "Pouvoir cambia a puiss- -> qu'il puisse." },
+        { "id": "frb1-06-q12", "type": "quiz_choice", "question": "Il faut que je le ____ (savoir). (Es necesario que yo lo SEPA).", "options": ["sache", "sais", "save", "saurait"], "correct_answer": "sache", "explanation": "Savoir cambia a sach- -> que je sache." },
+        { "id": "frb1-06-q13", "type": "quiz_choice", "question": "Je veux que vous ____ (savoir) la vérité.", "options": ["sachiez", "savez", "sachez", "saviez"], "correct_answer": "sachiez", "explanation": "Savoir -> que vous sachiez." },
+        { "id": "frb1-06-q14", "type": "quiz_choice", "question": "Bien qu'elle le ____ (vouloir)... (Aunque ella lo QUIERA...).", "options": ["veuille", "veut", "voule", "voudrait"], "correct_answer": "veuille", "explanation": "Vouloir cambia a veuill- -> qu'elle veuille." },
+        { "id": "frb1-06-q15", "type": "quiz_choice", "question": "Il faut que nous ____ (pouvoir) entrer. (Es necesario que PODAMOS).", "options": ["puissions", "pouvons", "pouvions", "puissez"], "correct_answer": "puissions", "explanation": "Pouvoir -> que nous puissions." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo en el Subjuntivo Presente. (Todos son irregulares).",
+      "questions": [
+        { "id": "frb1-06-f1", "type": "fill_input", "question": "Il faut que je ____ (être).", "correct_answer": "sois", "explanation": "sois" },
+        { "id": "frb1-06-f2", "type": "fill_input", "question": "Il faut qu'il ____ (avoir).", "correct_answer": "ait", "explanation": "ait" },
+        { "id": "frb1-06-f3", "type": "fill_input", "question": "Il faut que nous ____ (être).", "correct_answer": "soyons", "explanation": "soyons" },
+        { "id": "frb1-06-f4", "type": "fill_input", "question": "Il faut que je ____ (faire).", "correct_answer": "fasse", "explanation": "fasse" },
+        { "id": "frb1-06-f5", "type": "fill_input", "question": "Il faut que tu ____ (aller).", "correct_answer": "ailles", "explanation": "ailles" },
+        { "id": "frb1-06-f6", "type": "fill_input", "question": "Il faut qu'elle ____ (pouvoir).", "correct_answer": "puisse", "explanation": "puisse" },
+        { "id": "frb1-06-f7", "type": "fill_input", "question": "Il faut que vous ____ (savoir).", "correct_answer": "sachiez", "explanation": "sachiez" },
+        { "id": "frb1-06-f8", "type": "fill_input", "question": "Il faut que j'____ (avoir).", "correct_answer": "aie", "explanation": "aie" },
+        { "id": "frb1-06-f9", "type": "fill_input", "question": "Il faut qu'ils ____ (être).", "correct_answer": "soient", "explanation": "soient" },
+        { "id": "frb1-06-f10", "type": "fill_input", "question": "Il faut que je le ____ (savoir).", "correct_answer": "sache", "explanation": "sache" }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Irregular Roots Match",
+      "pairs": [
+        {"id": "frb1-06-p1", "source": "Que je sois", "target": "Que yo sea / esté"},
+        {"id": "frb1-06-p2", "source": "Qu'il ait", "target": "Que él tenga"},
+        {"id": "frb1-06-p3", "source": "Que je fasse", "target": "Que yo haga"},
+        {"id": "frb1-06-p4", "source": "Que j'aille", "target": "Que yo vaya"},
+        {"id": "frb1-06-p5", "source": "Que tu puisses", "target": "Que tú puedas"},
+        {"id": "frb1-06-p6", "source": "Qu'elle sache", "target": "Que ella sepa"},
+        {"id": "frb1-06-p7", "source": "Que je veuille", "target": "Que yo quiera"},
+        {"id": "frb1-06-p8", "source": "Que nous soyons", "target": "Que nosotros seamos"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y distingue los subjuntivos irregulares.",
+      "questions": [
+        { "id": "frb1-06-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il faut que je sois prêt", "options": ["Il faut que je sois prêt", "Il faut qu'il soit prêt", "Je suis prêt", "Tu es prêt"], "correct_answer": "Il faut que je sois prêt", "explanation": "Audio dice: Il faut que je sois prêt." },
+        { "id": "frb1-06-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il faut qu'il ait le temps", "options": ["Il faut qu'il ait le temps", "Il faut que j'aie le temps", "Il a le temps", "Qu'ils aient le temps"], "correct_answer": "Il faut qu'il ait le temps", "explanation": "Audio dice: Il faut qu'il ait le temps." },
+        { "id": "frb1-06-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il faut que tu fasses ça", "options": ["Il faut que tu fasses ça", "Il faut que je fasse ça", "Tu fais ça", "Qu'il fasse ça"], "correct_answer": "Il faut que tu fasses ça", "explanation": "Audio dice: Il faut que tu fasses ça." },
+        { "id": "frb1-06-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il faut que j'aille", "options": ["Il faut que j'aille", "Il faut qu'il aille", "Je vais", "Tu vas"], "correct_answer": "Il faut que j'aille", "explanation": "Audio dice: Il faut que j'aille." },
+        { "id": "frb1-06-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il faut que tu saches", "options": ["Il faut que tu saches", "Il faut que je sache", "Tu sais", "Qu'il sache"], "correct_answer": "Il faut que tu saches", "explanation": "Audio dice: Il faut que tu saches." }
+      ]
+    }
+  ]
+}

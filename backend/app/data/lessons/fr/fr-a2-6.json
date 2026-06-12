@@ -1,565 +1,94 @@
 {
   "id": "fr-a2-6",
-  "title": "Direcciones Simples",
+  "title": "Souvenirs d'Enfance (Imparfait)",
+  "version": "4.0-ARTISAN",
   "level": "A2",
-  "description": "Ubicación física en las oficinas.",
-  "total_xp": 300,
-  "difficulty": "easy",
-  "tags": [
-    "a2",
-    "standard",
-    "french",
-    "didactic",
-    "grammar",
-    "vocabulary"
-  ],
+  "total_xp": 500,
+  "tags": ["A2", "Grammar", "Past Tense", "Imparfait", "Childhood"],
+  "completion_message": "¡Excelente! Acabas de desbloquear el 'Imparfait'. Ahora puedes describir cómo eran las cosas en el pasado y hablar de tus recuerdos de infancia con total fluidez.",
   "stages": [
     {
       "id": "stg_theory",
       "type": "lecture",
-      "title": "Concept Stratégique: Direcciones Simples",
+      "title": "L'Imparfait (El Imperfecto A2)",
       "parts": [
         {
-          "visual": "★ ONIXLINGO SYSTÈME PROFESSIONNEL DE FRANÇAIS ★\n\nNiveau A2 • Leçon A2-6 de 200\nSujet: Direcciones Simples\n\nConcept Clé:\n☞ 'GAUCHE'\n\n[Point Grammatical - Enfoque Gramatical]\n- Le passé composé avec l'auxiliaire avoir et être (ex: 'nous avons reçu gauche').\\n- Les adjectifs possessifs (mon, ton, son, notre, votre, leur).\\n- Clé Didactique : Raconter des événements passés et des activités de bureau quotidiennes.",
-          "audio": "Bienvenue à la leçon A2-6 sur Direcciones Simples. Explorons la théorie et l'application stratégique de notre mot de vocabulaire clé : gauche."
+          "visual": "En francés, usamos L'Imparfait (El Imperfecto) para:\n- Describir cosas en el pasado (El cielo ERA azul).\n- Hablar de hábitos pasados (Yo JUGABA todos los días).\n- Hablar de la infancia (Cuando yo ERA pequeño...).\n\n¿Cómo se forma?\n1. Toma la conjugación de 'Nous' en presente.\nEj: Parler -> Nous parlons.\n2. Quita el '-ons' (Raíz: parl-)\n3. Añade las terminaciones del imperfecto:\n- Je ...ais\n- Tu ...ais\n- Il/Elle ...ait\n- Nous ...ions\n- Vous ...iez\n- Ils/Elles ...aient\n\nEjemplo: Je parlais (Yo hablaba).",
+          "audio": "Hoy aprenderemos un nuevo tiempo del pasado: El Imperfecto. Lo usamos para describir cómo eran las cosas, para hablar de hábitos o contar recuerdos de la infancia. Por ejemplo, decir 'yo hablaba' o 'yo jugaba'. Para formarlo, hay un truco mágico: toma el verbo en presente con la persona 'Nosotros'. Por ejemplo, nosotros hablamos es 'nous parlons'. Quítale el O N S del final, y te quedas con la raíz. Luego le añades las terminaciones del imperfecto: A I S, A I T, etc. Así, yo hablaba se dice: Je parlais."
         },
         {
-          "visual": "[Analyse Détaillée du Vocabulaire]\n- Vocable : 'gauche' (Traducción/Uso: Ubicación física en las oficinas.)\n- Application Pratique : 'Nous devons intégrer gauche pour réussir.'\n\n[Guide de Prononciation - Guía Fonética]\n- Prononciation : La lettre 'e' finale dans 'gauche' est généralement muette.",
-          "audio": "Veuillez vous concentrer sur notre terme clé : gauche. Répétez après moi : gauche."
-        },
-        {
-          "visual": "[Règle d'Or Professionnelle - Regla de Oro]\n- Règle d'Or : Au niveau A2, la ponctualité est essentielle en France; arriver 5 minutes avant l'heure démontre du professionnalisme.\n\n¡Comencez les exercices pratiques maintenant !",
-          "audio": "Commençons les exercices interactifs pour valider votre compréhension."
+          "visual": "Pronunciación y el gran verbo rebelde:\n\n¡La pronunciación del imperfecto es muy fácil!\nJe parlais, Tu parlais, Il parlait, Ils parlaient... ¡Todas suenan EXACTAMENTE IGUAL (parlè)!\nSolo cambian Nous parlions (par-li-on) y Vous parliez (par-li-é).\n\nEl ÚNICO verbo irregular en el imperfecto es ÊTRE (Ser/Estar):\nSu raíz es 'ét-':\n- J'étais (Yo era / Yo estaba)\n- Tu étais (Tú eras)\n- Il était (Él era)\n- Nous étions (Nosotros éramos)\n- Vous étiez (Ustedes eran)\n- Ils étaient (Ellos eran)\n\nFrase clave: Quand j'étais petit... (Cuando yo era pequeño...)",
+          "audio": "La mejor noticia sobre el imperfecto es su pronunciación. Las terminaciones para Yo, Tú, Él, y Ellos, se escriben diferente, ¡pero suenan exactamente igual! Je parlais, Tu parlais, Il parlait, Ils parlaient... todas suenan a 'parlè'. Además, solo hay UN verbo irregular en todo el imperfecto: el verbo Être. Su forma es tan importante que debes memorizarla: 'J'étais' significa 'Yo era' o 'Yo estaba'. Si quieres contar historias, siempre empezarás diciendo: 'Quand j'étais petit...', es decir, 'Cuando yo era pequeño...'."
         }
       ]
     },
     {
-      "id": "stg_drill_choice",
-      "type": "gamified_quiz",
-      "title": "Drill 1: Vocabulaire de Direction",
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Evalúa tu conocimiento sobre cómo formar y usar el imperfecto.",
       "questions": [
-        {
-          "id": "fr-a2-6-q-choice-1",
-          "type": "quiz_choice",
-          "question": "Que signifie principalement le terme \"gauche\" dans le contexte de \"Direcciones Simples\" ?",
-          "options": [
-            "Le concept professionnel principal de gauche utilisé dans Direcciones Simples.",
-            "Un terme familier à éviter dans Direcciones Simples.",
-            "Un mot obsolète qui n'est plus utilisé dans les affaires.",
-            "Un terme générique sans signification spécifique dans Direcciones Simples."
-          ],
-          "correct_answer": "Le concept professionnel principal de gauche utilisé dans Direcciones Simples.",
-          "explanation": "Comprendre la définition de \"gauche\" est fondamental pour maîtriser \"Direcciones Simples\"."
-        },
-        {
-          "id": "fr-a2-6-q-choice-2",
-          "type": "quiz_choice",
-          "question": "Quand est-il le plus approprié d'aborder \"gauche\" lors d'un événement professionnel ?",
-          "options": [
-            "Lors de la présentation d'idées clés liées à \"Direcciones Simples\" aux parties prenantes.",
-            "Uniquement lors de communications informelles en dehors du travail.",
-            "Lorsque vous souhaitez intentionnellement confondre vos collègues.",
-            "Jamais, car \"gauche\" n'est pas un terme professionnel."
-          ],
-          "correct_answer": "Lors de la présentation d'idées clés liées à \"Direcciones Simples\" aux parties prenantes.",
-          "explanation": "Aborder \"gauche\" dans les présentations professionnelles améliore la communication globale concernant \"Direcciones Simples\"."
-        },
-        {
-          "id": "fr-a2-6-q-choice-3",
-          "type": "quiz_choice",
-          "question": "Laquelle des options suivantes est considérée comme une bonne pratique pour gérer \"Direcciones Simples\" ?",
-          "options": [
-            "Prioriser l'alignement actif et utiliser \"gauche\" de manière appropriée.",
-            "Contourner tous les canaux de communication pour gagner du temps.",
-            "Travailler dans un isolement complet sans informer l'équipe.",
-            "Ignorer complètement la valeur stratégique de \"gauche\"."
-          ],
-          "correct_answer": "Prioriser l'alignement actif et utiliser \"gauche\" de manière appropriée.",
-          "explanation": "L'alignement actif et l'utilisation correcte de \"gauche\" sont los piliers d'une exécution réussie de \"Direcciones Simples\"."
-        },
-        {
-          "id": "fr-a2-6-q-choice-4",
-          "type": "quiz_choice",
-          "question": "Quelle erreur courante les professionnels commettent-ils concernant \"Direcciones Simples\" ?",
-          "options": [
-            "Mal comprendre le rôle stratégique de \"gauche\" dans le processus.",
-            "Trop collaborer avec les autres membres de l'équipe.",
-            "Préparer l'ordre du jour de la réunion trop longtemps à l'avance.",
-            "Documenter toutes les décisions avec une grande précision."
-          ],
-          "correct_answer": "Mal comprendre le rôle stratégique de \"gauche\" dans le processus.",
-          "explanation": "Ne pas reconnaître l'impact de \"gauche\" conduit souvent à des résultats inefficaces dans \"Direcciones Simples\"."
-        },
-        {
-          "id": "fr-a2-6-q-choice-5",
-          "type": "quiz_choice",
-          "question": "Quelle est la traduction ou l'équivalent le plus proche de \"gauche\" pour un professionnel hispanophone ?",
-          "options": [
-            "Il représente le concept clé de \"gauche\" adapté à l'environnement de \"Direcciones Simples\".",
-            "Un mot très familier qui n'a pas de sens dans les affaires.",
-            "Une traduction littérale sans aucune application pratique.",
-            "Un terme technique complexe non lié au français des affaires."
-          ],
-          "correct_answer": "Il représente le concept clé de \"gauche\" adapté à l'environnement de \"Direcciones Simples\".",
-          "explanation": "Traduire ou adapter \"gauche\" nécessite de comprendre son application commerciale pratique dans \"Direcciones Simples\"."
-        },
-        {
-          "id": "fr-a2-6-q-choice-6",
-          "type": "quiz_choice",
-          "question": "Comment le concept de \"gauche\" aide-t-il à optimiser les processus d'affaires ?",
-          "options": [
-            "Il fournit un cadre clair pour coordonner les activités de \"Direcciones Simples\".",
-            "Il permet aux équipes de sauter les étapes de validation standard.",
-            "Il encourage les discussions informelles et non structurées.",
-            "Il augmente le temps nécessaire pour terminer des projets simples."
-          ],
-          "correct_answer": "Il fournit un cadre clair pour coordonner les activités de \"Direcciones Simples\".",
-          "explanation": "Utiliser \"gauche\" comme référence optimise les flux de travail et la coordination générale."
-        },
-        {
-          "id": "fr-a2-6-q-choice-7",
-          "type": "quiz_choice",
-          "question": "Lors d'une réunion sur \"Direcciones Simples\", comment un cadre doit-il présenter \"gauche\" ?",
-          "options": [
-            "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-            "En parlant très rapidement pour éviter les questions difficiles.",
-            "Comme un détail mineur qui ne mérite pas beaucoup d'attention.",
-            "Sans préparer de diapositives ni de données de support."
-          ],
-          "correct_answer": "Avec des indicateurs clairs montrant son impact sur les objectifs de l'entreprise.",
-          "explanation": "Les présentations de \"gauche\" basées sur des données assurent l'alignement et le soutien de la direction."
-        },
-        {
-          "id": "fr-a2-6-q-choice-8",
-          "type": "quiz_choice",
-          "question": "Lors d'une collaboration sur des tâches impliquant \"gauche\", que doit faire l'équipe en premier ?",
-          "options": [
-            "S'aligner sur les livrables clés et définir les jalons de \"gauche\".",
-            "Commencer à travailler immédiatement sans attribuer de rôles spécifiques.",
-            "Reporter toutes les discussions jusqu'à ce que la date limite soit proche.",
-            "Demander une augmentation immédiate du budget au directeur financier."
-          ],
-          "correct_answer": "S'aligner sur les livrables clés et définir les jalons de \"gauche\".",
-          "explanation": "Définir les jalons liés à \"gauche\" prévient les retards et la confusion dans le projet."
-        },
-        {
-          "id": "fr-a2-6-q-choice-9",
-          "type": "quiz_choice",
-          "question": "Quel est le principal avantage de maîtriser le vocabulaire de \"Direcciones Simples\" ?",
-          "options": [
-            "Cela permet une communication fluide en utilisant des mots professionnels comme \"gauche\".",
-            "Cela garantit une promotion salariale immédiate sans effort supplémentaire.",
-            "Cela vous permet de contourner les directives de conformité de l'entreprise.",
-            "Cela réduit la nécessité de tenir des réunions d'alignement hebdomadaires."
-          ],
-          "correct_answer": "Cela permet une communication fluide en utilisant des mots professionnels comme \"gauche\".",
-          "explanation": "Les mots professionnels comme \"gauche\" sont les piliers du français des affaires au niveau expert."
-        },
-        {
-          "id": "fr-a2-6-q-choice-10",
-          "type": "quiz_choice",
-          "question": "Pourquoi l'alignement mondial sur \"gauche\" est-il important pour les entreprises multinationales ?",
-          "options": [
-            "Cela garantit une interprétation standardisée dans les différentes régions.",
-            "Cela permet aux équipes d'utiliser leur argot local dans les lettres formelles.",
-            "Cela limite l'influence du siège social sur les filiales locales.",
-            "Cela rend les contrats juridiques plus courts et moins détaillés."
-          ],
-          "correct_answer": "Cela garantit une interprétation standardisée dans les différentes régions.",
-          "explanation": "Une interprétation standardisée de \"gauche\" prévient les erreurs de communication internationales coûteuses."
-        }
+        { "id": "fra2-6-q1", "type": "quiz_choice", "question": "¿Para qué se utiliza principalmente el Imparfait?", "options": ["Descripciones en el pasado y hábitos", "Acciones rápidas que terminaron de golpe", "Hablar del futuro", "Dar órdenes formales"], "correct_answer": "Descripciones en el pasado y hábitos", "explanation": "El imperfecto describe escenarios pasados (El sol brillaba, yo jugaba)." },
+        { "id": "fra2-6-q2", "type": "quiz_choice", "question": "¿Cuál es el primer paso para formar el imperfecto de un verbo regular?", "options": ["Tomar la forma 'Nous' del presente", "Usar el auxiliar Avoir", "Añadir -é al final", "Tomar el infinitivo completo"], "correct_answer": "Tomar la forma 'Nous' del presente", "explanation": "El truco es usar la raíz de 'Nous' en presente (ej: nous mangeons -> mange-)." },
+        { "id": "fra2-6-q3", "type": "quiz_choice", "question": "¿Cuáles son las terminaciones del imperfecto para Je, Tu, Il?", "options": ["-ais, -ais, -ait", "-e, -es, -e", "-ai, -as, -a", "-is, -is, -it"], "correct_answer": "-ais, -ais, -ait", "explanation": "Je parlais, Tu parlais, Il parlait." },
+        { "id": "fra2-6-q4", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo era' o 'Yo estaba'?", "options": ["J'étais", "J'ai été", "Je suis", "J'avais"], "correct_answer": "J'étais", "explanation": "Être es irregular: J'étais." },
+        { "id": "fra2-6-q5", "type": "quiz_choice", "question": "¿Cómo se dice 'Nosotros hablábamos'?", "options": ["Nous parlions", "Nous parlons", "Nous parlions", "Nous parlait"], "correct_answer": "Nous parlions", "explanation": "Raíz parl- + terminación -ions = Nous parlions." },
+        { "id": "fra2-6-q6", "type": "quiz_choice", "question": "¿Cuál es el ÚNICO verbo irregular en el imperfecto?", "options": ["Être", "Avoir", "Aller", "Faire"], "correct_answer": "Être", "explanation": "Être es el único cuya raíz (ét-) no viene de la forma 'Nous' del presente." },
+        { "id": "fra2-6-q7", "type": "quiz_choice", "question": "Completa: Quand je ____ petit... (Cuando yo era pequeño...)", "options": ["suis", "étais", "été", "avais"], "correct_answer": "étais", "explanation": "Cuando yo ERA pequeño = Quand j'étais petit." },
+        { "id": "fra2-6-q8", "type": "quiz_choice", "question": "¿Cómo suenan 'Je parlais' (Yo hablaba) e 'Ils parlaient' (Ellos hablaban)?", "options": ["Suenan exactamente igual", "La segunda suena con 'ent' al final", "La segunda suena con 'on' al final", "Tienen acentos muy diferentes"], "correct_answer": "Suenan exactamente igual", "explanation": "Las terminaciones -ais, -ait y -aient son homófonas en francés." },
+        { "id": "fra2-6-q9", "type": "quiz_choice", "question": "¿Cómo se dice 'Yo tenía' (Verbo Avoir)?", "options": ["J'avais", "J'ai eu", "J'étais", "J'ai"], "correct_answer": "J'avais", "explanation": "Raíz de avoir (nous avons -> av-) + ais = J'avais." },
+        { "id": "fra2-6-q10", "type": "quiz_choice", "question": "¿Cómo se dice 'Tú comías' (Verbo Manger)?", "options": ["Tu mangeais", "Tu as mangé", "Tu mangais", "Tu manges"], "correct_answer": "Tu mangeais", "explanation": "Manger mantiene la 'e' antes de la 'a' para conservar el sonido suave (mangeais)." },
+        { "id": "fra2-6-q11", "type": "quiz_choice", "question": "Completa: Il ____ beau. (Hacía buen tiempo).", "options": ["faisait", "fait", "a fait", "faisais"], "correct_answer": "faisait", "explanation": "Faire -> nous faisons -> fais- + ait = Il faisait." },
+        { "id": "fra2-6-q12", "type": "quiz_choice", "question": "¿Cómo se dice 'Nosotros éramos'?", "options": ["Nous étions", "Nous sommes", "Nous avons été", "Nous étiez"], "correct_answer": "Nous étions", "explanation": "Raíz ét- + ions = Nous étions." },
+        { "id": "fra2-6-q13", "type": "quiz_choice", "question": "Completa: Vous ____ au tennis. (Ustedes jugaban).", "options": ["jouiez", "jouez", "jouaient", "jouions"], "correct_answer": "jouiez", "explanation": "Raíz jou- + iez = Vous jouiez." },
+        { "id": "fra2-6-q14", "type": "quiz_choice", "question": "¿Cómo se dice 'Ellos iban' (Verbo aller)?", "options": ["Ils allaient", "Ils vont", "Ils sont allés", "Ils allait"], "correct_answer": "Ils allaient", "explanation": "Raíz all- + aient = Ils allaient." },
+        { "id": "fra2-6-q15", "type": "quiz_choice", "question": "El imperfecto se usa a menudo para describir el clima en el pasado.", "options": ["Verdadero", "Falso"], "correct_answer": "Verdadero", "explanation": "Verdadero. Para decir 'Llovía' o 'Hacía sol' se usa el imperfecto." }
       ]
     },
     {
-      "id": "stg_drill_order",
-      "type": "gamified_quiz",
-      "title": "Drill 2: Construction de la Syntaxe",
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el verbo en imperfecto (¡Atención a la ortografía de las terminaciones!).",
       "questions": [
-        {
-          "id": "fr-a2-6-q-order-1",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 1) :",
-          "parts": [
-            "notre",
-            "gauche",
-            "pendant",
-            "les",
-            "réunions.",
-            "Nous",
-            "utilisons"
-          ],
-          "correct_order": [
-            "Nous",
-            "utilisons",
-            "notre",
-            "gauche",
-            "pendant",
-            "les",
-            "réunions."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a2-6-q-order-2",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 2) :",
-          "parts": [
-            "gauche",
-            "pour",
-            "le",
-            "projet.",
-            "Voici",
-            "notre"
-          ],
-          "correct_order": [
-            "Voici",
-            "notre",
-            "gauche",
-            "pour",
-            "le",
-            "projet."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a2-6-q-order-3",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 3) :",
-          "parts": [
-            "vérifier",
-            "notre",
-            "gauche",
-            "ce",
-            "matin.",
-            "Je",
-            "dois"
-          ],
-          "correct_order": [
-            "Je",
-            "dois",
-            "vérifier",
-            "notre",
-            "gauche",
-            "ce",
-            "matin."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a2-6-q-order-4",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 4) :",
-          "parts": [
-            "votre",
-            "gauche",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît.",
-            "Veuillez",
-            "présenter"
-          ],
-          "correct_order": [
-            "Veuillez",
-            "présenter",
-            "votre",
-            "gauche",
-            "maintenant",
-            "s'il",
-            "vous",
-            "plaît."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a2-6-q-order-5",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 5) :",
-          "parts": [
-            "apprécie",
-            "chaque",
-            "gauche",
-            "de",
-            "bureau.",
-            "Notre",
-            "équipe"
-          ],
-          "correct_order": [
-            "Notre",
-            "équipe",
-            "apprécie",
-            "chaque",
-            "gauche",
-            "de",
-            "bureau."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a2-6-q-order-6",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 6) :",
-          "parts": [
-            "notre",
-            "gauche",
-            "avant",
-            "midi",
-            "?",
-            "Pouvez-vous",
-            "confirmer"
-          ],
-          "correct_order": [
-            "Pouvez-vous",
-            "confirmer",
-            "notre",
-            "gauche",
-            "avant",
-            "midi",
-            "?"
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a2-6-q-order-7",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 7) :",
-          "parts": [
-            "organiser",
-            "notre",
-            "gauche",
-            "cette",
-            "semaine.",
-            "Nous",
-            "devons"
-          ],
-          "correct_order": [
-            "Nous",
-            "devons",
-            "organiser",
-            "notre",
-            "gauche",
-            "cette",
-            "semaine."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a2-6-q-order-8",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 8) :",
-          "parts": [
-            "statut",
-            "de",
-            "notre",
-            "gauche",
-            "ensemble.",
-            "Examinons",
-            "le"
-          ],
-          "correct_order": [
-            "Examinons",
-            "le",
-            "statut",
-            "de",
-            "notre",
-            "gauche",
-            "ensemble."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a2-6-q-order-9",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 9) :",
-          "parts": [
-            "améliorer",
-            "notre",
-            "gauche",
-            "de",
-            "travail.",
-            "Ils",
-            "souhaitent"
-          ],
-          "correct_order": [
-            "Ils",
-            "souhaitent",
-            "améliorer",
-            "notre",
-            "gauche",
-            "de",
-            "travail."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        },
-        {
-          "id": "fr-a2-6-q-order-10",
-          "type": "order_sentence",
-          "question": "Arrangez les mots pour construire une phrase professionnelle concernant \"gauche\" (Exercice 10) :",
-          "parts": [
-            "avec",
-            "notre",
-            "gauche",
-            "tous",
-            "les",
-            "jours.",
-            "Elle",
-            "travaille"
-          ],
-          "correct_order": [
-            "Elle",
-            "travaille",
-            "avec",
-            "notre",
-            "gauche",
-            "tous",
-            "les",
-            "jours."
-          ],
-          "explanation": "L'ordre correct des mots est essentiel pour exprimer clairement les concepts liés à \"gauche\"."
-        }
+        { "id": "fra2-6-f1", "type": "fill_input", "question": "Yo hablaba = Je parl____", "correct_answer": "ais", "explanation": "ais" },
+        { "id": "fra2-6-f2", "type": "fill_input", "question": "Él hablaba = Il parl____", "correct_answer": "ait", "explanation": "ait" },
+        { "id": "fra2-6-f3", "type": "fill_input", "question": "Yo era / estaba = J'____", "correct_answer": "étais", "explanation": "étais" },
+        { "id": "fra2-6-f4", "type": "fill_input", "question": "Yo tenía = J'av____", "correct_answer": "ais", "explanation": "ais" },
+        { "id": "fra2-6-f5", "type": "fill_input", "question": "Nosotros éramos = Nous ét____", "correct_answer": "ions", "explanation": "ions" },
+        { "id": "fra2-6-f6", "type": "fill_input", "question": "Ellos hablaban = Ils parl____", "correct_answer": "aient", "explanation": "aient" },
+        { "id": "fra2-6-f7", "type": "fill_input", "question": "Ustedes jugaban (Jouer) = Vous jou____", "correct_answer": "iez", "explanation": "iez" },
+        { "id": "fra2-6-f8", "type": "fill_input", "question": "Cuando yo ERA pequeño = Quand j'____ petit", "correct_answer": "étais", "explanation": "étais" },
+        { "id": "fra2-6-f9", "type": "fill_input", "question": "Hacía sol (Faire) = Il fais____ du soleil", "correct_answer": "ait", "explanation": "ait" },
+        { "id": "fra2-6-f10", "type": "fill_input", "question": "Tú ibas (Aller) = Tu all____", "correct_answer": "ais", "explanation": "ais" }
       ]
     },
     {
-      "id": "stg_drill_listening",
-      "type": "gamified_quiz",
-      "title": "Drill 3: Traitement Auditif",
-      "questions": [
-        {
-          "id": "fr-a2-6-q-listening-1",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Notre objectif principal est de discuter de notre \"gauche\" en détail.",
-          "options": [
-            "Notre objectif principal est de discuter de notre \"gauche\" en détail.",
-            "Une autre déclaration sur notre \"gauche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Notre objectif principal est de discuter de notre \"gauche\" en détail.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"gauche\" en réunion."
-        },
-        {
-          "id": "fr-a2-6-q-listening-2",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"gauche\" ?",
-          "options": [
-            "Pourriez-vous s'il vous plaît clarifier le statut de notre \"gauche\" ?",
-            "Une autre déclaration sur notre \"gauche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Pourriez-vous s'il vous plaît clarifier le statut de notre \"gauche\" ?",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"gauche\" en réunion."
-        },
-        {
-          "id": "fr-a2-6-q-listening-3",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Nous sommes pleinement engagés à améliorer notre \"gauche\" cette année.",
-          "options": [
-            "Nous sommes pleinement engagés à améliorer notre \"gauche\" cette année.",
-            "Une autre déclaration sur notre \"gauche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Nous sommes pleinement engagés à améliorer notre \"gauche\" cette année.",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"gauche\" en réunion."
-        },
-        {
-          "id": "fr-a2-6-q-listening-4",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Le client a donné un retour très positif sur notre \"gauche\".",
-          "options": [
-            "Le client a donné un retour très positif sur notre \"gauche\".",
-            "Une autre déclaration sur notre \"gauche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Le client a donné un retour très positif sur notre \"gauche\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"gauche\" en réunion."
-        },
-        {
-          "id": "fr-a2-6-q-listening-5",
-          "type": "listening_match",
-          "question": "Sélectionnez exactement ce que vous entendez dans le flux audio :",
-          "tts_text": "Alignons nos calendriers pour nous concentrer sur notre \"gauche\".",
-          "options": [
-            "Alignons nos calendriers pour nous concentrer sur notre \"gauche\".",
-            "Une autre déclaration sur notre \"gauche\" qui n'est pas correcte.",
-            "Une phrase d'affaires générique sans rapport avec le sujet."
-          ],
-          "correct_answer": "Alignons nos calendriers pour nous concentrer sur notre \"gauche\".",
-          "explanation": "L'écoute active assure la bonne compréhension auditive de \"gauche\" en réunion."
-        }
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Synthesis Match",
+      "pairs": [
+        {"id": "fra2-6-p1", "source": "Je parlais", "target": "Yo hablaba"},
+        {"id": "fra2-6-p2", "source": "J'étais", "target": "Yo era / Yo estaba"},
+        {"id": "fra2-6-p3", "source": "J'avais", "target": "Yo tenía"},
+        {"id": "fra2-6-p4", "source": "Il faisait beau", "target": "Hacía buen tiempo"},
+        {"id": "fra2-6-p5", "source": "Nous étions", "target": "Nosotros éramos"},
+        {"id": "fra2-6-p6", "source": "Ils allaient", "target": "Ellos iban"},
+        {"id": "fra2-6-p7", "source": "Tu mangeais", "target": "Tú comías"},
+        {"id": "fra2-6-p8", "source": "Quand j'étais petit", "target": "Cuando yo era pequeño"}
       ]
     },
     {
-      "id": "stg_drill_writing",
-      "type": "gamified_quiz",
-      "title": "Drill 4: Précision Écrite",
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha e identifica el verbo en imperfecto. Recuerda que suenan muy parecido.",
       "questions": [
-        {
-          "id": "fr-a2-6-q-fill-1",
-          "type": "fill_input",
-          "question": "Complétez l'orthographe du vocabulaire professionnel : \"gau___\" (Indice : désigne \"gauche\")",
-          "correct_answers": [
-            "gauche",
-            "Gauche"
-          ],
-          "hints": [
-            "Commence par 'gau'"
-          ],
-          "explanation": "Cet exercice teste votre orthographe active de \"gauche\"."
-        },
-        {
-          "id": "fr-a2-6-q-fill-2",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"L'équipe veut discuter de notre gauche ____ lundi matin.\" (le / en)",
-          "correct_answers": [
-            "le"
-          ],
-          "hints": [
-            "Article défini utilisé devant les jours de la semaine"
-          ],
-          "explanation": "En français, on utilise l'article défini 'le' devant un jour de la semana pour indiquer un rendez-vous habituel ou fixe."
-        },
-        {
-          "id": "fr-a2-6-q-fill-3",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Veuillez ____ attention à ne pas faire d'erreur sur notre gauche.\" (faire / prendre)",
-          "correct_answers": [
-            "faire",
-            "Faire"
-          ],
-          "hints": [
-            "Verbe signifiant effectuer ou prêter attention"
-          ],
-          "explanation": "L'expression 'faire attention' est une collocation standard en français."
-        },
-        {
-          "id": "fr-a2-6-q-fill-4",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Nous devons organiser une ____ pour revoir notre gauche.\" (réunion / carte)",
-          "correct_answers": [
-            "réunion",
-            "discussion",
-            "session"
-          ],
-          "hints": [
-            "Un rassemblement de personnes pour travailler ensemble"
-          ],
-          "explanation": "Une 'réunion' est le terme standard pour un meeting professionnel."
-        },
-        {
-          "id": "fr-a2-6-q-fill-5",
-          "type": "fill_input",
-          "question": "Complétez la phrase : \"Il nous faut un rapport ____ sur le statut de notre gauche.\" (clair / lent)",
-          "correct_answers": [
-            "clair"
-          ],
-          "hints": [
-            "Facile à comprendre et bien structuré"
-          ],
-          "explanation": "Un rapport 'clair' est indispensable pour assurer l'alignement."
-        }
+        { "id": "fra2-6-l1", "type": "listening_match", "question": "Écoutez:", "tts_text": "Je parlais", "options": ["Je parlais", "Je parle", "J'ai parlé", "Nous parlions"], "correct_answer": "Je parlais", "explanation": "Audio dice: Je parlais (Yo hablaba)." },
+        { "id": "fra2-6-l2", "type": "listening_match", "question": "Écoutez:", "tts_text": "J'étais petit", "options": ["J'étais petit", "Je suis petit", "J'ai été petit", "Il était petit"], "correct_answer": "J'étais petit", "explanation": "Audio dice: J'étais petit (Yo era pequeño)." },
+        { "id": "fra2-6-l3", "type": "listening_match", "question": "Écoutez:", "tts_text": "Il faisait beau", "options": ["Il faisait beau", "Il fait beau", "Il a fait beau", "Je faisais beau"], "correct_answer": "Il faisait beau", "explanation": "Audio dice: Il faisait beau (Hacía buen tiempo)." },
+        { "id": "fra2-6-l4", "type": "listening_match", "question": "Écoutez:", "tts_text": "Nous étions", "options": ["Nous étions", "Nous sommes", "Vous étiez", "Ils étaient"], "correct_answer": "Nous étions", "explanation": "Audio dice: Nous étions (Nosotros éramos)." },
+        { "id": "fra2-6-l5", "type": "listening_match", "question": "Écoutez:", "tts_text": "Ils allaient au cinéma", "options": ["Ils allaient au cinéma", "Ils vont au cinéma", "Ils sont allés au cinéma", "J'allais au cinéma"], "correct_answer": "Ils allaient au cinéma", "explanation": "Audio dice: Ils allaient au cinéma (Ellos iban al cine)." }
       ]
     }
   ]

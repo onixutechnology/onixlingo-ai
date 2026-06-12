@@ -1,0 +1,18 @@
+﻿.\venv\Scripts\python.exe : C:\Users\jeico\onixlingo\language-ai-tutor\backend\app\services\curriculum_factory.py:11: 
+FutureWarning: 
+En línea: 1 Carácter: 1
++ .\venv\Scripts\python.exe batch_generate_lessons.py > generation_log. ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\jeico\...FutureWarning: :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+Starting batch generation of 1400 lessons...
+Generating [a1-1] (en)... SUCCESS!

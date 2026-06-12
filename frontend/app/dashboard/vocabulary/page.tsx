@@ -104,7 +104,7 @@ export default function VocabularyPage() {
 
   // Real database leaderboard rankings only
   const getVocabLeaderboard = () => {
-    const list = [...leaderboard];
+    const list = [...leaderboard].filter(item => item.alias?.toLowerCase() !== 'diana');
     
     // Ensure the current user is represented
     if (!list.some(item => item.isMe)) {
@@ -135,14 +135,14 @@ export default function VocabularyPage() {
     
     // English thematic names
     const enNames = [
-      "Lexical Explorer", "Pioneer Speaker", "Oxford Aspirant", "C-Suite Communicator",
+      "Lexical Explorer", "Pioneer Speaker", "Oxford Aspirant", "Alta Dirección Communicator",
       "Wall Street Analyst", "Silicon Valley Innovator", "Cambridge Rhetorician",
-      "Global Diplomat", "Vanguard Negotiator", "Boardroom Elite"
+      "Global Diplomat", "Vanguard Negotiator", "Corporativo Elite"
     ];
     
     // French thematic names
     const frNames = [
-      "Explorateur Lexical", "Orateur Débutant", "Aspirant de la Sorbonne", "Communicateur C-Suite",
+      "Explorateur Lexical", "Orateur Débutant", "Aspirant de la Sorbonne", "Communicateur Alta Dirección",
       "Analyste de la Bourse", "Innovateur Technologique", "Rhétoricien Classique",
       "Diplomate de Genève", "Négociateur d'Élite", "Cénacle Exécutif"
     ];
@@ -150,7 +150,7 @@ export default function VocabularyPage() {
     // Chinese thematic names
     const zhNames = [
       "词汇探索者 (Lexical Explorer)", "初级演说家 (Pioneer Speaker)", "国子监门生 (Imperial Aspirant)",
-      "董事会发言人 (Boardroom Speaker)", "陆家嘴分析师 (Financial Analyst)", "中关村创业者 (Tech Innovator)",
+      "董事会发言人 (Corporativo Speaker)", "陆家嘴分析师 (Financial Analyst)", "中关村创业者 (Tech Innovator)",
       "清华辩手 (Tsinghua Rhetorician)", "外事外交官 (Global Diplomat)", "顶级谈判专家 (Elite Negotiator)",
       "紫禁城领袖 (Forbidden Leader)"
     ];
@@ -262,7 +262,7 @@ export default function VocabularyPage() {
       if (lessonData.status === 'completed') return 'completed';
       if (lessonData.status === 'active' || lessonData.is_unlocked) return 'active';
     }
-    if (lessonId === 'basics_mod_01') return 'active';
+    if (lessonId === 'basics_mod_1') return 'active';
     return 'locked';
   };
 
@@ -284,27 +284,27 @@ export default function VocabularyPage() {
   if (isLoading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-orange-50">
-        <Loader2 className="animate-spin text-orange-800 mb-4" size={24} />
-        <p className="text-orange-800 font-black text-[9px] uppercase tracking-[0.3em]">Neural Link Active...</p>
+        <Loader2 className="animate-spin text-slate-700 mb-4" size={24} />
+        <p className="text-slate-700 font-black text-[9px] uppercase tracking-[0.3em]">Neural Link Active...</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-orange-50 pb-32 font-sans text-orange-950 selection:bg-orange-100 selection:text-orange-950 relative">
+    <div className="min-h-screen bg-orange-50 pb-32 font-sans text-black selection:bg-orange-100 selection:text-black relative">
       
       {/* --- HEADER CORPORATIVO (SQUARE) --- */}
-      <div className="bg-white border-b border-orange-200 sticky top-0 z-40 h-16 flex items-center">
+      <div className="bg-white border-b border-slate-200 sticky top-0 z-40 h-16 flex items-center">
         <div className="max-w-7xl mx-auto w-full px-6 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Link href="/dashboard" className="p-2 border border-orange-200 text-orange-800 hover:text-orange-800 hover:border-orange-600 transition-all">
+            <Link href="/dashboard" className="p-2 border border-slate-200 text-slate-700 hover:text-slate-700 hover:border-black transition-all">
               <ArrowLeft size={18} />
             </Link>
             <div className="flex items-center gap-2">
-              <div className="bg-orange-600 p-1.5 text-white">
+              <div className="bg-black p-1.5 text-slate-900">
                 <BookA size={18} />
               </div>
-              <h1 className="text-sm font-black uppercase tracking-[0.2em] font-serif italic">Vocabulario <span className="text-orange-800">Pro</span></h1>
+              <h1 className="text-sm font-black uppercase tracking-[0.2em] font-serif italic">Vocabulario <span className="text-slate-700">Pro</span></h1>
             </div>
           </div>
           
@@ -312,19 +312,19 @@ export default function VocabularyPage() {
              {/* Selector rápido de idioma para el vocabulario */}
              <button 
                onClick={() => setShowLangModal(true)} 
-               className="flex items-center gap-2 px-3 py-1.5 border border-orange-200 text-orange-950 hover:text-orange-800 hover:border-orange-600 transition-all font-black text-[9px] uppercase tracking-widest bg-white"
+               className="flex items-center gap-2 px-3 py-1.5 border border-slate-200 text-black hover:text-slate-700 hover:border-black transition-all font-black text-[9px] uppercase tracking-widest bg-white"
              >
-               <Languages size={14} className="text-orange-800" />
+               <Languages size={14} className="text-slate-700" />
                <span>Idioma: {activeLanguage === 'en' ? 'Inglés' : activeLanguage === 'fr' ? 'Francés' : 'Chino'}</span>
              </button>
 
               <div className="hidden md:flex items-center gap-4">
-                 <div className="flex items-center gap-2 border-r border-orange-100 pr-4">
+                 <div className="flex items-center gap-2 border-r border-slate-100 pr-4">
                     <Flame size={14} className="text-rose-500" />
                     <span className="text-xs font-black">{userStats.streak}</span>
                  </div>
-                 <div className="flex items-center gap-2 border-r border-orange-100 pr-4">
-                    <Zap size={14} className="text-orange-800" />
+                 <div className="flex items-center gap-2 border-r border-slate-100 pr-4">
+                    <Zap size={14} className="text-slate-700" />
                     <span className="text-xs font-black">{userStats.totalXP.toLocaleString()} XP</span>
                  </div>
                   {/* ⚡ ENERGÍA (Batería Premium) */}
@@ -333,7 +333,7 @@ export default function VocabularyPage() {
                       <div className="flex items-center gap-1">
                         {/* Cuerpo de la Batería */}
                         <div className="flex items-center">
-                          <div className="relative w-14 h-5 bg-orange-950 rounded-[4px] border border-orange-700 p-0.5 flex items-center shadow-[inset_0_1.5px_4px_rgba(0,0,0,0.8)] overflow-hidden">
+                          <div className="relative w-14 h-5 bg-slate-900 rounded-[4px] border border-slate-700 p-0.5 flex items-center shadow-[inset_0_1.5px_4px_rgba(0,0,0,0.8)] overflow-hidden">
                             <div 
                               className={`h-full rounded-[2px] transition-all duration-500 ${
                                 energy > 50 
@@ -344,16 +344,16 @@ export default function VocabularyPage() {
                               }`}
                               style={{ width: `${energy}%` }}
                             />
-                            <span className="absolute inset-0 flex items-center justify-center text-[9px] font-black text-white font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
+                            <span className="absolute inset-0 flex items-center justify-center text-[9px] font-black text-slate-900 font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
                               {energy}%
                             </span>
                           </div>
                           {/* Polo Positivo */}
-                          <div className="w-[3px] h-2.5 bg-orange-700 rounded-r-[2px] -ml-[1px] shadow-[0_4px_15px_rgba(234,88,12,0.05)] shrink-0" />
+                          <div className="w-[3px] h-2.5 bg-slate-700 rounded-r-[2px] -ml-[1px] shadow-[0_4px_15px_rgba(234,88,12,0.05)] shrink-0" />
                         </div>
                       </div>
                     ) : (
-                      <span className="text-[9px] font-black uppercase tracking-wider text-emerald-600">Energía Ilimitada</span>
+                      <span className="text-[9px] font-black uppercase tracking-wider text-[#D4AF37]">Energía Ilimitada</span>
                     )}
                   </div>
               </div>
@@ -364,42 +364,42 @@ export default function VocabularyPage() {
       <div className="max-w-7xl mx-auto px-6 py-10">
         
         {/* --- PANEL DE CONTROL DE VOCABULARIO (OPTIMIZADO PARA PAREJAS DE PALABRAS Y SEGUIMIENTO) --- */}
-        <div className="mb-10 bg-orange-100 border-l-4 border-orange-500 p-6 shadow-[0_10px_40px_rgba(234,88,12,0.12)] text-orange-950 relative overflow-hidden group rounded-xl">
-          <div className="absolute top-0 right-0 p-1 opacity-20"><BookA size={70} className="text-orange-800 animate-pulse" /></div>
+        <div className="mb-10 bg-orange-100 border-l-4 border-slate-300 p-6 shadow-[0_10px_40px_rgba(234,88,12,0.12)] text-black relative overflow-hidden group rounded-none">
+          <div className="absolute top-0 right-0 p-1 opacity-20"><BookA size={70} className="text-slate-700 animate-pulse" /></div>
           
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
             <div>
-              <p className="text-[8px] font-black text-orange-950 uppercase tracking-[0.3em] mb-2 flex items-center gap-1.5">
-                <Zap size={12} className="text-orange-800" />
+              <p className="text-[8px] font-black text-black uppercase tracking-[0.3em] mb-2 flex items-center gap-1.5">
+                <Zap size={12} className="text-slate-700" />
                 Word Association Training System
               </p>
-              <h2 className="text-2xl font-black uppercase tracking-tight font-serif italic mb-1.5 text-orange-950">
+              <h2 className="text-2xl font-black uppercase tracking-tight font-serif italic mb-1.5 text-black">
                 Estadísticas de Asociación de Vocabulario
               </h2>
-              <p className="text-orange-950 text-[10px] font-bold uppercase tracking-widest leading-relaxed max-w-xl">
+              <p className="text-black text-[10px] font-bold uppercase tracking-widest leading-relaxed max-w-xl">
                 Métricas de retención y asociación de parejas de palabras registradas de forma interactiva en tu cuenta.
               </p>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full lg:w-auto shrink-0">
               
-              <div className="p-3.5 bg-white/80 backdrop-blur-sm border border-orange-200 text-center min-w-[120px] rounded-xl shadow-sm">
-                <p className="text-[8px] text-orange-950 font-black uppercase tracking-wider mb-1">Parejas Completadas</p>
-                <p className="text-xs font-black text-orange-950 tracking-tight leading-none mt-1.5 font-mono">
+              <div className="p-3.5 bg-white/80 backdrop-blur-sm border border-slate-200 text-center min-w-[120px] rounded-none shadow-none">
+                <p className="text-[8px] text-black font-black uppercase tracking-wider mb-1">Parejas Completadas</p>
+                <p className="text-xs font-black text-black tracking-tight leading-none mt-1.5 font-mono">
                   {vocabProgress.filter(p => p.status === 'completed').length * 5} parejas
                 </p>
               </div>
 
-              <div className="p-3.5 bg-white/80 backdrop-blur-sm border border-orange-200 text-center min-w-[120px] rounded-xl shadow-sm">
-                <p className="text-[8px] text-orange-950 font-black uppercase tracking-wider mb-1">Racha de Días</p>
-                <p className="text-xs font-black text-orange-950 font-mono leading-none mt-1.5">
+              <div className="p-3.5 bg-white/80 backdrop-blur-sm border border-slate-200 text-center min-w-[120px] rounded-none shadow-none">
+                <p className="text-[8px] text-black font-black uppercase tracking-wider mb-1">Racha de Días</p>
+                <p className="text-xs font-black text-black font-mono leading-none mt-1.5">
                   {userStats.streak} {userStats.streak === 1 ? 'día' : 'días'}
                 </p>
               </div>
 
-              <div className="p-3.5 bg-white/80 backdrop-blur-sm border border-orange-200 text-center min-w-[120px] rounded-xl shadow-sm">
-                <p className="text-[8px] text-orange-950 font-black uppercase tracking-wider mb-1">Promedio de Acierto</p>
-                <p className="text-xs font-black text-emerald-600 font-mono leading-none mt-1.5">
+              <div className="p-3.5 bg-white/80 backdrop-blur-sm border border-slate-200 text-center min-w-[120px] rounded-none shadow-none">
+                <p className="text-[8px] text-black font-black uppercase tracking-wider mb-1">Promedio de Acierto</p>
+                <p className="text-xs font-black text-[#D4AF37] font-mono leading-none mt-1.5">
                   {(() => {
                     const completed = vocabProgress.filter(p => p.status === 'completed');
                     return completed.length > 0
@@ -414,31 +414,28 @@ export default function VocabularyPage() {
         </div>
 
         {/* --- GRID DE EXCELENCIA: RANKING, TROFEOS Y RECORDATORIOS --- */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          {/* Columna 1: Recordatorios de Práctica */}
-          <PracticeReminderWidget themeColor="orange" />
-
-          {/* Columna 2: Ranking Global de Vocabulario */}
-          <div className="bg-white border border-orange-200 p-5 rounded-xl shadow-[0_4px_15px_rgba(234,88,12,0.05)] flex flex-col justify-between relative overflow-hidden group">
-            <div className="absolute top-0 right-0 p-1 opacity-5"><Trophy size={60} className="text-orange-800" /></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          {/* Columna 1: Ranking Global de Vocabulario */}
+          <div className="bg-white border border-slate-200 p-5 rounded-none shadow-[0_4px_15px_rgba(234,88,12,0.05)] flex flex-col justify-between relative overflow-hidden group">
+            <div className="absolute top-0 right-0 p-1 opacity-5"><Trophy size={60} className="text-slate-700" /></div>
             <div className="relative z-10 space-y-3">
               <div>
                 <div className="flex items-center gap-1.5 mb-1">
-                  <Sparkles size={11} className="text-orange-800" />
-                  <span className="text-[8px] font-black uppercase tracking-[0.2em] text-orange-800">Competencia Global</span>
+                  <Sparkles size={11} className="text-slate-700" />
+                  <span className="text-[8px] font-black uppercase tracking-[0.2em] text-slate-700">Competencia Global</span>
                 </div>
-                <h3 className="text-xs font-black uppercase tracking-tight text-orange-950 leading-none">Ranking de Vocabulario</h3>
-                <p className="text-[9px] text-orange-950 font-semibold leading-none mt-1.5">Top alumnos con mayor número de parejas asociadas.</p>
+                <h3 className="text-xs font-black uppercase tracking-tight text-black leading-none">Ranking de Vocabulario</h3>
+                <p className="text-[9px] text-black font-semibold leading-none mt-1.5">Top alumnos con mayor número de parejas asociadas.</p>
               </div>
 
               <div className="space-y-1.5 pt-2">
                 {getVocabLeaderboard().map((item, index) => (
                   <div 
                     key={index}
-                    className={`flex items-center justify-between p-2 text-[10px] font-bold border ${item.isMe ? 'border-orange-200 bg-orange-50/20 text-orange-950' : 'border-orange-100 text-orange-950'}`}
+                    className={`flex items-center justify-between p-2 text-[10px] font-bold border ${item.isMe ? 'border-slate-200 bg-orange-50/20 text-black' : 'border-slate-100 text-black'}`}
                   >
                     <div className="flex items-center gap-2">
-                      <span className={`w-4 h-4 flex items-center justify-center font-mono text-[9px] font-black ${index === 0 ? 'bg-amber-500 text-white' : index === 1 ? 'bg-orange-300 text-orange-950' : 'bg-amber-700 text-white'}`}>
+                      <span className={`w-4 h-4 flex items-center justify-center font-mono text-[9px] font-black ${index === 0 ? 'bg-[#D4AF37]/20 text-slate-900' : index === 1 ? 'bg-slate-300 text-black' : 'bg-amber-700 text-slate-900'}`}>
                         {index + 1}
                       </span>
                       <span>{item.name}</span>
@@ -451,33 +448,33 @@ export default function VocabularyPage() {
           </div>
 
           {/* Columna 3: Logros y Trofeos */}
-          <div className="bg-white border border-orange-200 p-5 rounded-xl shadow-[0_4px_15px_rgba(234,88,12,0.05)] flex flex-col justify-between relative overflow-hidden group">
-            <div className="absolute top-0 right-0 p-1 opacity-5"><Award size={60} className="text-orange-800" /></div>
+          <div className="bg-white border border-slate-200 p-5 rounded-none shadow-[0_4px_15px_rgba(234,88,12,0.05)] flex flex-col justify-between relative overflow-hidden group">
+            <div className="absolute top-0 right-0 p-1 opacity-5"><Award size={60} className="text-slate-700" /></div>
             <div className="relative z-10 space-y-3">
               <div>
                 <div className="flex items-center gap-1.5 mb-1">
-                  <Sparkles size={11} className="text-orange-800" />
-                  <span className="text-[8px] font-black uppercase tracking-[0.2em] text-orange-800">Recompensas Académicas</span>
+                  <Sparkles size={11} className="text-slate-700" />
+                  <span className="text-[8px] font-black uppercase tracking-[0.2em] text-slate-700">Recompensas Académicas</span>
                 </div>
-                <h3 className="text-xs font-black uppercase tracking-tight text-orange-950 leading-none">Trofeos de Vocabulario ({getVocabularyTrophies().filter(t => t.unlocked).length}/100)</h3>
-                <p className="text-[9px] text-orange-950 font-semibold leading-none mt-1.5">Completa lecciones y mantén tu racha activa.</p>
+                <h3 className="text-xs font-black uppercase tracking-tight text-black leading-none">Trofeos de Vocabulario ({getVocabularyTrophies().filter(t => t.unlocked).length}/100)</h3>
+                <p className="text-[9px] text-black font-semibold leading-none mt-1.5">Completa lecciones y mantén tu racha activa.</p>
               </div>
 
               <div className="space-y-1.5 pt-1 max-h-[175px] overflow-y-auto pr-1 custom-scrollbar">
                 {getVocabularyTrophies().map((badge, idx) => (
                   <div 
                     key={idx}
-                    className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-250 bg-emerald-50/20 text-emerald-800' : 'border-orange-100 text-orange-800 opacity-60'}`}
+                    className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-250 bg-[#D4AF37]/10/20 text-[#D4AF37]' : 'border-slate-100 text-slate-700 opacity-60'}`}
                   >
                     <div className="flex items-center gap-2">
-                      {badge.icon === 'Crown' && <Crown size={12} className={badge.unlocked ? 'text-emerald-600' : 'text-orange-800'} />}
-                      {badge.icon === 'Flame' && <Flame size={12} className={badge.unlocked ? 'text-emerald-600' : 'text-orange-800'} />}
-                      {badge.icon === 'Award' && <Award size={12} className={badge.unlocked ? 'text-emerald-600' : 'text-orange-800'} />}
-                      {badge.icon === 'Sparkles' && <Sparkles size={12} className={badge.unlocked ? 'text-emerald-600' : 'text-orange-800'} />}
+                      {badge.icon === 'Crown' && <Crown size={12} className={badge.unlocked ? 'text-[#D4AF37]' : 'text-slate-700'} />}
+                      {badge.icon === 'Flame' && <Flame size={12} className={badge.unlocked ? 'text-[#D4AF37]' : 'text-slate-700'} />}
+                      {badge.icon === 'Award' && <Award size={12} className={badge.unlocked ? 'text-[#D4AF37]' : 'text-slate-700'} />}
+                      {badge.icon === 'Sparkles' && <Sparkles size={12} className={badge.unlocked ? 'text-[#D4AF37]' : 'text-slate-700'} />}
                       
                       <div className="text-left">
                         <p className="text-[9px] font-black leading-none">{badge.title}</p>
-                        <p className="text-[7px] font-bold text-orange-800 mt-0.5 leading-none">{badge.desc}</p>
+                        <p className="text-[7px] font-bold text-slate-700 mt-0.5 leading-none">{badge.desc}</p>
                       </div>
                     </div>
                     <span className="text-[7px] font-black uppercase tracking-widest shrink-0 ml-1">
@@ -492,22 +489,22 @@ export default function VocabularyPage() {
 
         {/* --- SINCRONIZACIÓN --- */}
         {(activeLanguage !== 'en' && activeLanguage !== 'fr' && activeLanguage !== 'zh') ? (
-          <div className="bg-white border border-orange-200 p-12 text-center flex flex-col items-center justify-center shadow-[0_4px_15px_rgba(234,88,12,0.05)]">
-            <div className="w-16 h-16 bg-orange-100 text-orange-800 flex items-center justify-center mb-6 border border-orange-200">
+          <div className="bg-white border border-slate-200 p-12 text-center flex flex-col items-center justify-center shadow-[0_4px_15px_rgba(234,88,12,0.05)]">
+            <div className="w-16 h-16 bg-orange-100 text-slate-700 flex items-center justify-center mb-6 border border-slate-200">
               <Languages size={32} />
             </div>
-            <h3 className="text-xl font-black text-orange-950 mb-2 uppercase tracking-tight font-serif italic">Glosario en Sincronización</h3>
-            <p className="text-orange-800 max-w-md mx-auto mb-8 text-[11px] font-bold uppercase tracking-widest leading-relaxed">
+            <h3 className="text-xl font-black text-black mb-2 uppercase tracking-tight font-serif italic">Glosario en Sincronización</h3>
+            <p className="text-slate-700 max-w-md mx-auto mb-8 text-[11px] font-bold uppercase tracking-widest leading-relaxed">
               El diccionario interactivo para <strong>{activeLanguage === 'fr' ? 'Francés' : 'Chino'}</strong> está siendo indexado.
             </p>
-            <button onClick={() => setLanguage('en')} className="bg-orange-900 text-white font-black px-8 py-3 rounded-xl hover:bg-orange-700 transition-all text-[10px] uppercase tracking-widest">
+            <button onClick={() => setLanguage('en')} className="bg-slate-900 text-slate-900 font-black px-8 py-3 rounded-none hover:bg-slate-700 transition-all text-[10px] uppercase tracking-widest">
               Regresar a Inglés
             </button>
           </div>
         ) : (
           <>
             {/* --- SELECTOR DE CATEGORÍAS (CUADRADO) --- */}
-            <div className="mb-12 border-b border-orange-200 flex flex-wrap gap-1">
+            <div className="mb-12 border-b border-slate-200 flex flex-wrap gap-1">
               {CATEGORIES.map((cat) => {
                 const isActive = activeCat === cat.id;
                 return (
@@ -517,8 +514,8 @@ export default function VocabularyPage() {
                     className={`
                       px-6 py-4 flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] transition-all border-b-2
                       ${isActive 
-                        ? 'border-orange-600 bg-white text-orange-800' 
-                        : 'border-transparent text-orange-800 hover:text-orange-950 hover:bg-white'}
+                        ? 'border-black bg-white text-slate-700' 
+                        : 'border-transparent text-slate-700 hover:text-black hover:bg-white'}
                     `}
                   >
                     <cat.icon size={14} />
@@ -532,27 +529,27 @@ export default function VocabularyPage() {
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
               <div className="max-w-2xl">
                 <div className="flex items-center gap-2 mb-2">
-                  <Sparkles size={14} className="text-orange-800" />
-                  <span className="text-[9px] font-black uppercase tracking-[0.4em] text-orange-800">Directorio Técnico</span>
+                  <Sparkles size={14} className="text-slate-700" />
+                  <span className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-700">Directorio Técnico</span>
                 </div>
-                <h2 className="text-4xl font-black text-orange-950 tracking-tighter uppercase mb-4 font-serif italic">
+                <h2 className="text-4xl font-black text-black tracking-tighter uppercase mb-4 font-serif italic">
                   {CATEGORIES.find(c => c.id === activeCat)?.label}
                 </h2>
-                <p className="text-orange-950 text-[11px] font-bold uppercase tracking-widest leading-relaxed opacity-80">
+                <p className="text-black text-[11px] font-bold uppercase tracking-widest leading-relaxed opacity-80">
                   Léxico corporativo de alto rendimiento. Módulos diseñados para el dominio de terminología C-Level y gestión ejecutiva global.
                 </p>
               </div>
 
               <div className="relative w-full lg:w-80 group">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <Search className="h-4 w-4 text-orange-800" />
+                  <Search className="h-4 w-4 text-slate-700" />
                 </div>
                 <input 
                   type="text"
                   placeholder="FILTRAR MÓDULOS..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white border border-orange-200 rounded-xl outline-none focus:border-orange-600 transition-all font-black text-[10px] uppercase tracking-widest"
+                  className="w-full pl-10 pr-4 py-3 bg-white border border-slate-200 rounded-none outline-none focus:border-black transition-all font-black text-[10px] uppercase tracking-widest"
                 />
               </div>
             </div>
@@ -571,7 +568,7 @@ export default function VocabularyPage() {
                 
                 return partsArray.map(part => {
                   const moduleNum = (levelIndex * partsCount) + part;
-                  const moduleStr = moduleNum.toString().padStart(2, '0');
+                  const moduleStr = moduleNum.toString();
                   const lessonId = `${activeCat}_mod_${moduleStr}`;
                   
                   const status = getLessonState(lessonId);
@@ -616,27 +613,27 @@ export default function VocabularyPage() {
 
                 const CardContent = (
                   <div className={`
-                    h-full border p-6 flex flex-col justify-between transition-all duration-300 rounded-xl relative overflow-hidden group
+                    h-full border p-6 flex flex-col justify-between transition-all duration-300 rounded-none relative overflow-hidden group
                     ${!isLocked 
-                      ? 'bg-white border-orange-200 hover:border-orange-600 hover:shadow-[0_10px_40px_rgba(234,88,12,0.12)]' 
-                      : 'bg-orange-50 border-orange-100 opacity-60 cursor-not-allowed'}
+                      ? 'bg-white border-slate-200 hover:border-black hover:shadow-[0_10px_40px_rgba(234,88,12,0.12)]' 
+                      : 'bg-orange-50 border-slate-100 opacity-60 cursor-not-allowed'}
                   `}>
                     
                     <div className="flex items-start gap-4 mb-8">
                       <div className={`
                         w-12 h-12 flex flex-col items-center justify-center font-black text-xs border transition-colors
-                        ${!isLocked ? 'bg-orange-50 border-orange-200 text-orange-800' : 'bg-orange-100 border-orange-200 text-orange-800'}
+                        ${!isLocked ? 'bg-orange-50 border-slate-200 text-slate-700' : 'bg-orange-100 border-slate-200 text-slate-700'}
                       `}>
                         {level}
                         <span className="text-[7px] font-black opacity-60">P{part}</span>
                       </div>
 
                       <div className="flex-1 min-w-0">
-                        <h3 className={`font-black text-xs uppercase tracking-tight mb-1 transition-colors flex items-center gap-1.5 ${!isLocked ? 'text-orange-950' : 'text-orange-800'}`}>
+                        <h3 className={`font-black text-xs uppercase tracking-tight mb-1 transition-colors flex items-center gap-1.5 ${!isLocked ? 'text-black' : 'text-slate-700'}`}>
                           {displayTitle}
-                          {isPremiumModule && <span className="px-1.5 py-[1px] bg-orange-900 text-white text-[6px] tracking-widest rounded-none shadow-sm">PRO</span>}
+                          {isPremiumModule && <span className="px-1.5 py-[1px] bg-slate-900 text-slate-900 text-[6px] tracking-widest rounded-none shadow-none">PRO</span>}
                         </h3>
-                        <p className="text-[8px] font-black text-orange-800 uppercase tracking-[0.2em]">
+                        <p className="text-[8px] font-black text-slate-700 uppercase tracking-[0.2em]">
                           {subTitle}
                         </p>
                       </div>
@@ -644,13 +641,13 @@ export default function VocabularyPage() {
 
                     <div className="flex items-center justify-between gap-4">
                       <div className="flex-1">
-                        <div className="flex justify-between text-[8px] font-black text-orange-800 uppercase tracking-widest mb-1.5">
+                        <div className="flex justify-between text-[8px] font-black text-slate-700 uppercase tracking-widest mb-1.5">
                           <span>Dominio Técnico</span>
-                          <span className={score > 0 ? 'text-orange-800' : ''}>{score}%</span>
+                          <span className={score > 0 ? 'text-slate-700' : ''}>{score}%</span>
                         </div>
-                        <div className="w-full h-1 bg-orange-100 rounded-xl overflow-hidden">
+                        <div className="w-full h-1 bg-orange-100 rounded-none overflow-hidden">
                           <div 
-                            className="h-full bg-orange-600 transition-all duration-1000" 
+                            className="h-full bg-black transition-all duration-1000" 
                             style={{ width: `${score}%` }}
                           />
                         </div>
@@ -658,7 +655,7 @@ export default function VocabularyPage() {
 
                       <div className={`
                         w-10 h-10 flex items-center justify-center transition-all duration-300 border
-                        ${isLocked ? 'bg-orange-50 text-orange-700 border-orange-100' : 'bg-white text-orange-800 group-hover:bg-orange-600 group-hover:text-white border-orange-200 group-hover:border-orange-600'}
+                        ${isLocked ? 'bg-orange-50 text-slate-500 border-slate-100' : 'bg-white text-slate-700 group-hover:bg-black group-hover:text-slate-900 border-slate-200 group-hover:border-black'}
                       `}>
                         {isLocked ? <Lock size={16} /> : (status === 'completed' ? <CheckCircle2 size={18} /> : <Play size={16} fill="currentColor" />)}
                       </div>
@@ -685,31 +682,31 @@ export default function VocabularyPage() {
       {/* --- MODAL DE SELECCIÓN DE IDIOMA CORPORATIVO --- */}
       <AnimatePresence>
         {showLangModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-orange-900/60 backdrop-blur-md">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md">
             <motion.div
               initial={{ scale: 0.95, opacity: 0, y: 15 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 15 }}
               transition={{ type: "spring", stiffness: 350, damping: 28 }}
-              className="bg-white border border-orange-200 rounded-xl p-6 max-w-md w-full shadow-2xl relative overflow-hidden"
+              className="bg-white border border-slate-200 rounded-none p-6 max-w-md w-full shadow-2xl relative overflow-hidden"
             >
               {/* Botón de cierre - solo cierra el modal */}
               <button 
                 onClick={() => setShowLangModal(false)}
-                className="absolute top-4 right-4 text-orange-800 hover:text-orange-950 transition-colors p-1"
+                className="absolute top-4 right-4 text-slate-700 hover:text-black transition-colors p-1"
                 aria-label="Cerrar modal"
               >
                 <X size={18} />
               </button>
 
               <div className="text-center mb-6">
-                <div className="inline-flex bg-orange-50 text-orange-800 p-2.5 mb-3 border border-orange-200">
+                <div className="inline-flex bg-orange-50 text-slate-700 p-2.5 mb-3 border border-slate-200">
                   <Languages size={22} />
                 </div>
-                <h2 className="text-lg font-black text-orange-950 tracking-tight uppercase font-serif italic mb-1">
+                <h2 className="text-lg font-black text-black tracking-tight uppercase font-serif italic mb-1">
                   Idioma de Vocabulario
                 </h2>
-                <p className="text-orange-800 text-[8px] font-black uppercase tracking-[0.2em]">
+                <p className="text-slate-700 text-[8px] font-black uppercase tracking-[0.2em]">
                   Selecciona el diccionario ejecutivo que deseas practicar
                 </p>
               </div>
@@ -731,27 +728,27 @@ export default function VocabularyPage() {
                         localStorage.setItem('vocab_lang_modal_seen', 'true');
                       }}
                       className={`
-                        w-full p-4 border text-left flex items-center justify-between transition-all rounded-xl bg-white hover:border-orange-600 hover:bg-orange-50/10
-                        ${isCurrent ? 'border-orange-600 ring-1 ring-orange-500/20 bg-orange-50/5' : 'border-orange-200'}
+                        w-full p-4 border text-left flex items-center justify-between transition-all rounded-none bg-white hover:border-black hover:bg-orange-50/10
+                        ${isCurrent ? 'border-black ring-1 ring-slate-500/20 bg-orange-50/5' : 'border-slate-200'}
                       `}
                     >
                       <div className="flex items-center gap-3">
                         <span className="text-2xl">{langOpt.flag}</span>
                         <div>
-                          <h4 className="font-black text-orange-950 text-xs uppercase tracking-wider leading-none mb-1">
+                          <h4 className="font-black text-black text-xs uppercase tracking-wider leading-none mb-1">
                             {langOpt.label}
                           </h4>
-                          <p className="text-[8px] font-black text-orange-800 uppercase tracking-widest leading-none">
+                          <p className="text-[8px] font-black text-slate-700 uppercase tracking-widest leading-none">
                             {langOpt.native}
                           </p>
                         </div>
                       </div>
                       {isCurrent ? (
-                        <span className="bg-orange-600 text-white text-[7px] font-black uppercase tracking-widest px-2 py-0.5 rounded-xl">
+                        <span className="bg-black text-slate-900 text-[7px] font-black uppercase tracking-widest px-2 py-0.5 rounded-none">
                           Seleccionado
                         </span>
                       ) : (
-                        <span className="text-[8px] font-black text-orange-800 uppercase tracking-widest">
+                        <span className="text-[8px] font-black text-slate-700 uppercase tracking-widest">
                           Seleccionar
                         </span>
                       )}
@@ -760,16 +757,16 @@ export default function VocabularyPage() {
                 })}
               </div>
 
-              <div className="flex justify-between items-center gap-3 border-t border-orange-100 pt-4">
+              <div className="flex justify-between items-center gap-3 border-t border-slate-100 pt-4">
                 <button
                   onClick={() => router.push('/dashboard')}
-                  className="px-4 py-2 border border-orange-200 hover:border-orange-600 hover:bg-orange-50 text-orange-800 text-[9px] font-black uppercase tracking-widest transition-all rounded-xl active:scale-[0.98]"
+                  className="px-4 py-2 border border-slate-200 hover:border-black hover:bg-orange-50 text-slate-700 text-[9px] font-black uppercase tracking-widest transition-all rounded-none active:scale-[0.98]"
                 >
                   Regresar al Dashboard
                 </button>
                 <button
                   onClick={() => setShowLangModal(false)}
-                  className="px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white text-[9px] font-black uppercase tracking-widest transition-all rounded-xl active:scale-[0.98]"
+                  className="px-6 py-2 bg-black hover:bg-slate-700 text-slate-900 text-[9px] font-black uppercase tracking-widest transition-all rounded-none active:scale-[0.98]"
                 >
                   Cancelar
                 </button>

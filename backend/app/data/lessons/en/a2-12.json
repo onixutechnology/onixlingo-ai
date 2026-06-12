@@ -1,0 +1,101 @@
+{
+  "id": "a2-12",
+  "title": "Basic Finance & Accounting",
+  "version": "4.0-ARTISAN",
+  "level": "A2",
+  "total_xp": 500,
+  "tags": ["A2", "Vocabulary", "Finance", "Accounting", "Business"],
+  "completion_message": "¡Excelente! Has dominado el vocabulario esencial de finanzas y contabilidad.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Finanzas Básicas y Contabilidad",
+      "parts": [
+        { "visual": "Revenue (Ingresos / Ventas totales): El dinero que entra a la empresa. Expenses (Gastos): El dinero que sale (renta, salarios). Profit (Ganancia / Beneficio): Lo que queda cuando los ingresos son mayores que los gastos. Loss (Pérdida): Cuando los gastos son mayores que los ingresos.", "audio": "Revenue is the total money that comes into the company. Expenses are the money that goes out, like rent and salaries. Profit is what remains when revenue is greater than expenses. Loss happens when expenses are greater than revenue." },
+        { "visual": "Budget (Presupuesto): El plan financiero. Invoice (Factura): Un documento que pide el pago por un servicio o producto. Taxes (Impuestos): Dinero que se paga al gobierno. Debt (Deuda): Dinero que se debe a otros (la 'b' es muda: se pronuncia 'det').", "audio": "Budget is the financial plan. An Invoice is a document asking for payment. Taxes are money paid to the government. Debt is money owed to others. Note that the letter B in Debt is silent. You pronounce it: det." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la palabra financiera correcta.",
+      "questions": [
+        { "id": "a2-12-q1", "type": "quiz_choice", "question": "Our total ____ for the year was two million dollars. (Ingresos/Ventas totales).", "options": ["revenue", "expenses", "debt", "taxes"], "correct_answer": "revenue", "explanation": "Revenue = ingresos totales (ventas brutas)." },
+        { "id": "a2-12-q2", "type": "quiz_choice", "question": "We need to reduce our ____. We are spending too much on travel. (Gastos).", "options": ["expenses", "revenue", "profit", "invoices"], "correct_answer": "expenses", "explanation": "Expenses = gastos." },
+        { "id": "a2-12-q3", "type": "quiz_choice", "question": "The company made a huge ____ this quarter! We earned more than we spent. (Ganancia).", "options": ["profit", "loss", "debt", "tax"], "correct_answer": "profit", "explanation": "Profit = ganancia/beneficio." },
+        { "id": "a2-12-q4", "type": "quiz_choice", "question": "Unfortunately, the company suffered a ____ last year. (Pérdida).", "options": ["loss", "profit", "revenue", "budget"], "correct_answer": "loss", "explanation": "Loss = pérdida (cuando los gastos superan los ingresos)." },
+        { "id": "a2-12-q5", "type": "quiz_choice", "question": "What is our marketing ____ for this year? (Presupuesto).", "options": ["budget", "invoice", "debt", "expense"], "correct_answer": "budget", "explanation": "Budget = presupuesto (cantidad asignada para gastar)." },
+        { "id": "a2-12-q6", "type": "quiz_choice", "question": "Please pay the ____ within 30 days. (Factura).", "options": ["invoice", "budget", "revenue", "loss"], "correct_answer": "invoice", "explanation": "Invoice = factura de cobro." },
+        { "id": "a2-12-q7", "type": "quiz_choice", "question": "The company is in ____. It owes a lot of money to the bank. (Deuda).", "options": ["debt", "profit", "revenue", "tax"], "correct_answer": "debt", "explanation": "Debt = deuda. (Se pronuncia 'det')." },
+        { "id": "a2-12-q8", "type": "quiz_choice", "question": "We have to pay income ____ to the government. (Impuestos).", "options": ["taxes", "profits", "debts", "invoices"], "correct_answer": "taxes", "explanation": "Taxes = impuestos." },
+        { "id": "a2-12-q9", "type": "quiz_choice", "question": "We are over ____! We spent more than planned. (Pasados del presupuesto).", "options": ["budget", "expense", "invoice", "profit"], "correct_answer": "budget", "explanation": "Over budget = excedido del presupuesto." },
+        { "id": "a2-12-q10", "type": "quiz_choice", "question": "They ____ us $500 for the software. (Nos cobraron).", "options": ["charged", "paid", "budgeted", "taxed"], "correct_answer": "charged", "explanation": "Charge = cobrar." },
+        { "id": "a2-12-q11", "type": "quiz_choice", "question": "Have you ____ the invoice yet? (Pagado).", "options": ["paid", "charged", "earned", "lost"], "correct_answer": "paid", "explanation": "Pay an invoice = pagar una factura." },
+        { "id": "a2-12-q12", "type": "quiz_choice", "question": "The ____ line shows our total profit or loss. (Línea de fondo / Resultado neto).", "options": ["bottom", "top", "side", "revenue"], "correct_answer": "bottom", "explanation": "Bottom line = el resultado neto (la última línea del estado financiero)." },
+        { "id": "a2-12-q13", "type": "quiz_choice", "question": "We need to cut ____ to survive. (Recortar gastos/costos).", "options": ["costs", "revenue", "profits", "taxes"], "correct_answer": "costs", "explanation": "Cut costs = recortar costos/gastos." },
+        { "id": "a2-12-q14", "type": "quiz_choice", "question": "The accounting department handles ____. (Nómina/Pago a empleados).", "options": ["payroll", "invoice", "loss", "budget"], "correct_answer": "payroll", "explanation": "Payroll = nómina (el proceso de pagar salarios)." },
+        { "id": "a2-12-q15", "type": "quiz_choice", "question": "Gross profit is before ____. (Bruto es antes de impuestos).", "options": ["taxes", "revenue", "income", "sales"], "correct_answer": "taxes", "explanation": "Gross profit = ganancia bruta (antes de impuestos)." },
+        { "id": "a2-12-q16", "type": "quiz_choice", "question": "Net profit is after ____. (Neto es después de impuestos).", "options": ["taxes", "revenue", "sales", "budget"], "correct_answer": "taxes", "explanation": "Net profit = ganancia neta (después de impuestos)." },
+        { "id": "a2-12-q17", "type": "quiz_choice", "question": "You can request a ____ if you are not satisfied. (Reembolso).", "options": ["refund", "budget", "tax", "debt"], "correct_answer": "refund", "explanation": "Refund = reembolso (devolución de dinero)." },
+        { "id": "a2-12-q18", "type": "quiz_choice", "question": "Can you send me a ____ for the payment? (Recibo).", "options": ["receipt", "refund", "budget", "loss"], "correct_answer": "receipt", "explanation": "Receipt = recibo (comprobante de pago). La 'p' es muda." },
+        { "id": "a2-12-q19", "type": "quiz_choice", "question": "I need to withdraw ____ from the ATM. (Dinero en efectivo).", "options": ["cash", "credit", "invoice", "debt"], "correct_answer": "cash", "explanation": "Cash = efectivo." },
+        { "id": "a2-12-q20", "type": "quiz_choice", "question": "He has a high ____. (Salario).", "options": ["salary", "revenue", "expense", "invoice"], "correct_answer": "salary", "explanation": "Salary = salario (pago fijo a empleados)." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra financiera correspondiente.",
+      "questions": [
+        { "id": "a2-12-f1", "type": "fill_input", "question": "Total ____ was $2 million. (Ingresos totales)", "correct_answer": "revenue", "explanation": "revenue." },
+        { "id": "a2-12-f2", "type": "fill_input", "question": "We need to reduce our ____. (Gastos)", "correct_answer": "expenses", "explanation": "expenses." },
+        { "id": "a2-12-f3", "type": "fill_input", "question": "We made a huge ____! (Ganancia)", "correct_answer": "profit", "explanation": "profit." },
+        { "id": "a2-12-f4", "type": "fill_input", "question": "The company suffered a ____. (Pérdida)", "correct_answer": "loss", "explanation": "loss." },
+        { "id": "a2-12-f5", "type": "fill_input", "question": "What is the marketing ____? (Presupuesto)", "correct_answer": "budget", "explanation": "budget." },
+        { "id": "a2-12-f6", "type": "fill_input", "question": "Please pay the ____. (Factura)", "correct_answer": "invoice", "explanation": "invoice." },
+        { "id": "a2-12-f7", "type": "fill_input", "question": "The company is in ____. (Deuda)", "correct_answer": "debt", "explanation": "debt." },
+        { "id": "a2-12-f8", "type": "fill_input", "question": "We pay income ____. (Impuestos)", "correct_answer": "taxes", "explanation": "taxes." },
+        { "id": "a2-12-f9", "type": "fill_input", "question": "Can I have a ____? (Recibo)", "correct_answer": "receipt", "explanation": "receipt." },
+        { "id": "a2-12-f10", "type": "fill_input", "question": "I would like a ____. (Reembolso)", "correct_answer": "refund", "explanation": "refund." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a2-12-p1", "source": "Revenue", "target": "Ingresos totales / Ventas"},
+        {"id": "a2-12-p2", "source": "Expenses", "target": "Gastos"},
+        {"id": "a2-12-p3", "source": "Profit", "target": "Ganancia / Beneficio"},
+        {"id": "a2-12-p4", "source": "Loss", "target": "Pérdida"},
+        {"id": "a2-12-p5", "source": "Budget", "target": "Presupuesto"},
+        {"id": "a2-12-p6", "source": "Invoice", "target": "Factura (para cobrar)"},
+        {"id": "a2-12-p7", "source": "Debt", "target": "Deuda"},
+        {"id": "a2-12-p8", "source": "Taxes", "target": "Impuestos"},
+        {"id": "a2-12-p9", "source": "Receipt", "target": "Recibo (comprobante)"},
+        {"id": "a2-12-p10", "source": "Refund", "target": "Reembolso"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a2-12-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Our total revenue was two million.", "options": ["Our total revenue was two million.", "Our total profit was two million.", "Our total expense was two million.", "The revenue was two million."], "correct_answer": "Our total revenue was two million.", "explanation": "Audio exacto." },
+        { "id": "a2-12-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need to reduce our expenses.", "options": ["We need to reduce our expenses.", "We need to cut our expenses.", "We have to reduce our expenses.", "We need to reduce the budget."], "correct_answer": "We need to reduce our expenses.", "explanation": "Audio exacto." },
+        { "id": "a2-12-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company made a huge profit.", "options": ["The company made a huge profit.", "The company made a big profit.", "We made a huge profit.", "The company had a huge profit."], "correct_answer": "The company made a huge profit.", "explanation": "Audio exacto." },
+        { "id": "a2-12-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company suffered a loss.", "options": ["The company suffered a loss.", "The company had a loss.", "The company reported a loss.", "We suffered a loss."], "correct_answer": "The company suffered a loss.", "explanation": "Audio exacto." },
+        { "id": "a2-12-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "What is our marketing budget?", "options": ["What is our marketing budget?", "What is the marketing budget?", "Where is our marketing budget?", "What is your marketing budget?"], "correct_answer": "What is our marketing budget?", "explanation": "Audio exacto." },
+        { "id": "a2-12-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Please pay the invoice within thirty days.", "options": ["Please pay the invoice within thirty days.", "Please pay the invoice in thirty days.", "Please send the invoice within thirty days.", "You must pay the invoice within thirty days."], "correct_answer": "Please pay the invoice within thirty days.", "explanation": "Audio exacto." },
+        { "id": "a2-12-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The company is in debt.", "options": ["The company is in debt.", "The company has debt.", "Our company is in debt.", "The company is in deficit."], "correct_answer": "The company is in debt.", "explanation": "Audio exacto." },
+        { "id": "a2-12-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We have to pay income taxes.", "options": ["We have to pay income taxes.", "We need to pay income taxes.", "You have to pay income taxes.", "We have to pay taxes."], "correct_answer": "We have to pay income taxes.", "explanation": "Audio exacto." },
+        { "id": "a2-12-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can you send me a receipt?", "options": ["Can you send me a receipt?", "Could you send me a receipt?", "Can you give me a receipt?", "Please send me a receipt."], "correct_answer": "Can you send me a receipt?", "explanation": "Audio exacto." },
+        { "id": "a2-12-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You can request a refund.", "options": ["You can request a refund.", "You can ask for a refund.", "I can request a refund.", "We can offer a refund."], "correct_answer": "You can request a refund.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

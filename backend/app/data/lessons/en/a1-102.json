@@ -1,0 +1,101 @@
+{
+  "id": "a1-102",
+  "title": "Asking For and Giving Directions",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Vocabulary", "Directions", "Navigation", "Office"],
+  "completion_message": "¡Muy bien! Ahora puedes pedir y dar indicaciones para llegar a reuniones, salas o lugares de negocio en inglés.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Direcciones e Indicaciones",
+      "parts": [
+        { "visual": "Para pedir: Excuse me, how do I get to...? (¿Cómo llego a...?). Where is the meeting room? (¿Dónde está la sala de reuniones?).", "audio": "To ask: Excuse me, how do I get to? Where is the meeting room?" },
+        { "visual": "Para dar: Turn left / right (Gira a la izquierda / derecha). Go straight (Ve recto). Take the elevator (Toma el ascensor). It is on the second floor (Está en el segundo piso). It is next to / opposite / between (Está junto a / frente a / entre).", "audio": "To give: Turn left or right. Go straight. Take the elevator. It is on the second floor. It is next to, opposite, or between." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la expresión correcta para pedir o dar indicaciones.",
+      "questions": [
+        { "id": "a1-102-q1", "type": "quiz_choice", "question": "Excuse me, how do I ____ to the reception? (Llegar).", "options": ["get", "go", "find", "arrive"], "correct_answer": "get", "explanation": "How do I get to...? = ¿Cómo llego a...?" },
+        { "id": "a1-102-q2", "type": "quiz_choice", "question": "Where ____ the meeting room? (¿Dónde está?).", "options": ["is", "are", "am", "be"], "correct_answer": "is", "explanation": "Where is = ¿Dónde está?" },
+        { "id": "a1-102-q3", "type": "quiz_choice", "question": "____ left at the elevator. (Gira).", "options": ["Turn", "Go", "Take", "Walk"], "correct_answer": "Turn", "explanation": "Turn left = gira a la izquierda." },
+        { "id": "a1-102-q4", "type": "quiz_choice", "question": "Go ____ and then turn right. (Recto).", "options": ["straight", "forward", "ahead", "direct"], "correct_answer": "straight", "explanation": "Go straight = ve recto." },
+        { "id": "a1-102-q5", "type": "quiz_choice", "question": "Take the ____ to the third floor. (Ascensor).", "options": ["elevator", "stairs", "lift", "escalator"], "correct_answer": "elevator", "explanation": "Elevator (US) / Lift (UK) = ascensor." },
+        { "id": "a1-102-q6", "type": "quiz_choice", "question": "It is on the ____ floor. (Segundo).", "options": ["second", "two", "2nd", "twond"], "correct_answer": "second", "explanation": "Second floor = segundo piso." },
+        { "id": "a1-102-q7", "type": "quiz_choice", "question": "The restroom is ____ the elevator. (Junto a).", "options": ["next to", "near to", "close of", "beside of"], "correct_answer": "next to", "explanation": "Next to = junto a." },
+        { "id": "a1-102-q8", "type": "quiz_choice", "question": "The cafeteria is ____ the main office. (Frente a).", "options": ["opposite", "in front", "across to", "facing"], "correct_answer": "opposite", "explanation": "Opposite = frente a / al otro lado de." },
+        { "id": "a1-102-q9", "type": "quiz_choice", "question": "The conference room is ____ the lab and the office. (Entre).", "options": ["between", "in the middle", "among", "inside"], "correct_answer": "between", "explanation": "Between = entre (dos cosas)." },
+        { "id": "a1-102-q10", "type": "quiz_choice", "question": "It is at the ____ of the corridor. (Al final).", "options": ["end", "finish", "last", "bottom"], "correct_answer": "end", "explanation": "At the end of the corridor = al final del pasillo." },
+        { "id": "a1-102-q11", "type": "quiz_choice", "question": "____ right after the reception desk. (Gira).", "options": ["Turn", "Go", "Walk", "Take"], "correct_answer": "Turn", "explanation": "Turn right = gira a la derecha." },
+        { "id": "a1-102-q12", "type": "quiz_choice", "question": "____ past the cafeteria. (Pasa / Camina más allá).", "options": ["Go", "Walk", "Turn", "Take"], "correct_answer": "Go", "explanation": "Go past = pasar más allá de." },
+        { "id": "a1-102-q13", "type": "quiz_choice", "question": "It is the first door on your ____. (Izquierda).", "options": ["left", "right", "side", "front"], "correct_answer": "left", "explanation": "On your left = a tu izquierda." },
+        { "id": "a1-102-q14", "type": "quiz_choice", "question": "It is the last door on your ____. (Derecha).", "options": ["right", "left", "side", "back"], "correct_answer": "right", "explanation": "On your right = a tu derecha." },
+        { "id": "a1-102-q15", "type": "quiz_choice", "question": "Can you ____ me how to get there? (Decir).", "options": ["tell", "show", "say", "explain"], "correct_answer": "tell", "explanation": "Tell me = dime." },
+        { "id": "a1-102-q16", "type": "quiz_choice", "question": "Take the ____ down to the lobby. (Escaleras).", "options": ["stairs", "elevator", "lift", "escalator"], "correct_answer": "stairs", "explanation": "Stairs = escaleras." },
+        { "id": "a1-102-q17", "type": "quiz_choice", "question": "It is ____ the lobby on the right. (Pasando).", "options": ["past", "behind", "opposite", "next"], "correct_answer": "past", "explanation": "Past the lobby = pasando el vestíbulo." },
+        { "id": "a1-102-q18", "type": "quiz_choice", "question": "You ____ miss it. (No puedes perdértelo).", "options": ["can't", "won't", "don't", "mustn't"], "correct_answer": "can't", "explanation": "You can't miss it = no puedes perdértelo." },
+        { "id": "a1-102-q19", "type": "quiz_choice", "question": "It is about ten minutes ____. (Caminando).", "options": ["on foot", "by foot", "walking", "to walk"], "correct_answer": "on foot", "explanation": "On foot = a pie / caminando." },
+        { "id": "a1-102-q20", "type": "quiz_choice", "question": "Sorry, I ____ sure. I'm new here. (No estoy seguro).", "options": ["am not", "don't", "can't", "won't"], "correct_answer": "am not", "explanation": "I am not sure = no estoy seguro." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra correcta para dar o pedir indicaciones.",
+      "questions": [
+        { "id": "a1-102-f1", "type": "fill_input", "question": "How do I ____ to reception? (Llegar).", "correct_answer": "get", "explanation": "get." },
+        { "id": "a1-102-f2", "type": "fill_input", "question": "Where ____ the meeting room? (¿Dónde está?).", "correct_answer": "is", "explanation": "is." },
+        { "id": "a1-102-f3", "type": "fill_input", "question": "____ left at the elevator. (Gira).", "correct_answer": "Turn", "explanation": "Turn." },
+        { "id": "a1-102-f4", "type": "fill_input", "question": "Go ____ and then turn right. (Recto).", "correct_answer": "straight", "explanation": "straight." },
+        { "id": "a1-102-f5", "type": "fill_input", "question": "Take the ____ to the 3rd floor. (Ascensor).", "correct_answer": "elevator", "explanation": "elevator." },
+        { "id": "a1-102-f6", "type": "fill_input", "question": "It is ____ the cafeteria. (Frente a).", "correct_answer": "opposite", "explanation": "opposite." },
+        { "id": "a1-102-f7", "type": "fill_input", "question": "It is ____ the lab and the office. (Entre).", "correct_answer": "between", "explanation": "between." },
+        { "id": "a1-102-f8", "type": "fill_input", "question": "It is at the ____ of the corridor. (Final).", "correct_answer": "end", "explanation": "end." },
+        { "id": "a1-102-f9", "type": "fill_input", "question": "It is the first door on your ____. (Izquierda).", "correct_answer": "left", "explanation": "left." },
+        { "id": "a1-102-f10", "type": "fill_input", "question": "You can't ____ it. (Perdértelo).", "correct_answer": "miss", "explanation": "miss." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-102-p1", "source": "How do I get to...?", "target": "¿Cómo llego a...?"},
+        {"id": "a1-102-p2", "source": "Turn left", "target": "Gira a la izquierda"},
+        {"id": "a1-102-p3", "source": "Turn right", "target": "Gira a la derecha"},
+        {"id": "a1-102-p4", "source": "Go straight", "target": "Ve recto"},
+        {"id": "a1-102-p5", "source": "Take the elevator", "target": "Toma el ascensor"},
+        {"id": "a1-102-p6", "source": "Next to", "target": "Junto a"},
+        {"id": "a1-102-p7", "source": "Opposite", "target": "Frente a"},
+        {"id": "a1-102-p8", "source": "Between", "target": "Entre"},
+        {"id": "a1-102-p9", "source": "At the end of the corridor", "target": "Al final del pasillo"},
+        {"id": "a1-102-p10", "source": "You can't miss it", "target": "No puedes perdértelo"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-102-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Excuse me, how do I get to the reception?", "options": ["Excuse me, how do I get to the reception?", "Excuse me, how do I get to the meeting room?", "Sorry, how do I get to the reception?", "Excuse me, where is the reception?"], "correct_answer": "Excuse me, how do I get to the reception?", "explanation": "Audio exacto." },
+        { "id": "a1-102-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Turn left at the elevator.", "options": ["Turn left at the elevator.", "Turn right at the elevator.", "Go left at the elevator.", "Turn left at the stairs."], "correct_answer": "Turn left at the elevator.", "explanation": "Audio exacto." },
+        { "id": "a1-102-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Go straight and then turn right.", "options": ["Go straight and then turn right.", "Go straight and then turn left.", "Go forward and then turn right.", "Go straight then turn right."], "correct_answer": "Go straight and then turn right.", "explanation": "Audio exacto." },
+        { "id": "a1-102-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Take the elevator to the third floor.", "options": ["Take the elevator to the third floor.", "Take the stairs to the third floor.", "Take the elevator to the second floor.", "Use the elevator to the third floor."], "correct_answer": "Take the elevator to the third floor.", "explanation": "Audio exacto." },
+        { "id": "a1-102-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is next to the elevator.", "options": ["It is next to the elevator.", "It is near the elevator.", "It is opposite the elevator.", "It was next to the elevator."], "correct_answer": "It is next to the elevator.", "explanation": "Audio exacto." },
+        { "id": "a1-102-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The cafeteria is opposite the main office.", "options": ["The cafeteria is opposite the main office.", "The cafeteria is next to the main office.", "The restaurant is opposite the main office.", "The cafeteria is opposite the reception."], "correct_answer": "The cafeteria is opposite the main office.", "explanation": "Audio exacto." },
+        { "id": "a1-102-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is at the end of the corridor.", "options": ["It is at the end of the corridor.", "It is at the end of the hall.", "It was at the end of the corridor.", "It is at the bottom of the corridor."], "correct_answer": "It is at the end of the corridor.", "explanation": "Audio exacto." },
+        { "id": "a1-102-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It is the first door on your left.", "options": ["It is the first door on your left.", "It is the second door on your left.", "It is the first door on your right.", "It was the first door on your left."], "correct_answer": "It is the first door on your left.", "explanation": "Audio exacto." },
+        { "id": "a1-102-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "You can't miss it.", "options": ["You can't miss it.", "You won't miss it.", "She can't miss it.", "You can miss it."], "correct_answer": "You can't miss it.", "explanation": "Audio exacto." },
+        { "id": "a1-102-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sorry, I am not sure. I'm new here.", "options": ["Sorry, I am not sure. I'm new here.", "Sorry, I don't know. I'm new here.", "I am not sure. I'm new here.", "Sorry, I am not sure. She is new here."], "correct_answer": "Sorry, I am not sure. I'm new here.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

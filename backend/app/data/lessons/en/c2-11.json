@@ -1,0 +1,101 @@
+{
+  "id": "c2-11",
+  "title": "Advanced Participle Clauses",
+  "version": "4.0-ARTISAN",
+  "level": "C2",
+  "total_xp": 500,
+  "tags": ["C2", "Grammar", "Participles", "Formal", "Writing", "Flow"],
+  "completion_message": "¡Brillante! Las 'Participle Clauses' son la herramienta secreta de los escritores y oradores avanzados. Te permiten condensar información, eliminar conjunciones innecesarias (como because o after) y darle a tu discurso un flujo rítmico y ejecutivo impecable.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Cláusulas de Participio Avanzadas (C2)",
+      "parts": [
+        { "visual": "1. Present Participle (-ing): \n- Reemplaza 'because' / 'as' / 'since' (Razón). \nEj: Being aware of the risks, we decided to proceed. (Como éramos conscientes de los riesgos...). \n- Acciones simultáneas. \nEj: He sat at his desk, analyzing the data. (Se sentó... analizando...). \n\n2. Past Participle (-ed / 3ra columna): \n- Sentido pasivo o reemplaza 'if'. \nEj: Seen from this angle, the project looks profitable. (Si se ve desde este ángulo...). \nEj: Founded in 1990, the company has grown rapidly.", "audio": "Welcome to Advanced Participle Clauses. These clauses allow us to condense information and sound highly professional. Number 1: Present Participle, the '-ing' form. We use it to replace 'because', 'as', or 'since' to show reason. For example: Being aware of the risks, we decided to proceed. It also shows simultaneous actions. For example: He sat at his desk, analyzing the data. Number 2: Past Participle, the '-ed' form or the third column. This has a passive meaning or replaces 'if'. For example: Seen from this angle, the project looks profitable. Or: Founded in 1990, the company has grown rapidly." },
+        { "visual": "3. Perfect Participle (Having + Past Participle): \n- Indica que una acción terminó ANTES de que empezara la siguiente. \n- Reemplaza 'After'. \nEj: Having analyzed the market, we launched the product. (Después de haber analizado...). \nEj: Not having received a reply, I sent a follow-up email. (Como no había recibido respuesta...). \n\n¡OJO! (Dangling Participles): \nEl sujeto de la cláusula principal DEBE ser el mismo que el de la cláusula de participio. \nINCORRECTO: Walking down the street, the trees were beautiful. (¿Los árboles caminaban?). \nCORRECTO: Walking down the street, I saw the beautiful trees.", "audio": "Number 3: Perfect Participle, which is 'Having' plus a Past Participle. This indicates that one action finished BEFORE the next one started. It replaces 'after'. For example: Having analyzed the market, we launched the product. Or in the negative: Not having received a reply, I sent a follow-up email. Be careful with Dangling Participles! The subject of the main clause MUST be the same as the subject of the participle clause. Incorrect: Walking down the street, the trees were beautiful. Trees don't walk! Correct: Walking down the street, I saw the beautiful trees." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la cláusula de participio correcta.",
+      "questions": [
+        { "id": "c2-11-q1", "type": "quiz_choice", "question": "____ aware of the budget cuts, the manager cancelled the corporate retreat. (Como era consciente).", "options": ["Being", "Having", "Been", "Knowing"], "correct_answer": "Being", "explanation": "Being aware of = As he was aware of." },
+        { "id": "c2-11-q2", "type": "quiz_choice", "question": "____ from this perspective, the merger is actually a brilliant idea. (Si se ve).", "options": ["Seen", "Seeing", "Having seen", "To see"], "correct_answer": "Seen", "explanation": "Seen from = If it is seen from (sentido pasivo)." },
+        { "id": "c2-11-q3", "type": "quiz_choice", "question": "____ reviewed all the resumes, HR decided to hire Sarah. (Después de haber revisado).", "options": ["Having", "Being", "Reviewed", "Reviewing"], "correct_answer": "Having", "explanation": "Having reviewed = After they had reviewed (acción anterior terminada)." },
+        { "id": "c2-11-q4", "type": "quiz_choice", "question": "____ in 1920, the bank is one of the oldest in the country. (Fundado).", "options": ["Founded", "Founding", "Having founded", "To found"], "correct_answer": "Founded", "explanation": "Founded = pasivo (creado en 1920)." },
+        { "id": "c2-11-q5", "type": "quiz_choice", "question": "Not ____ received the funds, we cannot start construction. (Como no hemos recibido).", "options": ["having", "being", "had", "have"], "correct_answer": "having", "explanation": "Not having received = As we have not received (negación del perfect participle)." },
+        { "id": "c2-11-q6", "type": "quiz_choice", "question": "____ at her desk, she carefully analyzed the financial report. (Sentada - acción simultánea).", "options": ["Sitting", "Sat", "Having sat", "Sit"], "correct_answer": "Sitting", "explanation": "Sitting = mientras estaba sentada (simultáneo)." },
+        { "id": "c2-11-q7", "type": "quiz_choice", "question": "____ exhausted by the long negotiation, the CEO went straight to bed.", "options": ["Exhausted", "Exhausting", "Having exhaust", "To exhaust"], "correct_answer": "Exhausted", "explanation": "Exhausted = As he was exhausted (pasado participio / adjetivo)." },
+        { "id": "c2-11-q8", "type": "quiz_choice", "question": "____ read the manual, he knew exactly how to fix the machine. (Como ya había leído).", "options": ["Having", "Being", "Reading", "Read"], "correct_answer": "Having", "explanation": "Having read = Because he had read (acción anterior)." },
+        { "id": "c2-11-q9", "type": "quiz_choice", "question": "Which sentence has a Dangling Participle? (INCORRECTA por sujetos distintos).", "options": ["Looking out the window, it started to rain.", "Looking out the window, I saw the rain.", "Having finished my dinner, I watched TV.", "Exhausted, she fell asleep instantly."], "correct_answer": "Looking out the window, it started to rain.", "explanation": "El sujeto de la principal es 'it' (el clima), pero 'it' no estaba mirando por la ventana. Es un error gramatical." },
+        { "id": "c2-11-q10", "type": "quiz_choice", "question": "____ no other option, the company declared bankruptcy.", "options": ["Having", "Being", "Had", "Have"], "correct_answer": "Having", "explanation": "Having no other option = As they had no other option." },
+        { "id": "c2-11-q11", "type": "quiz_choice", "question": "____ in the heart of London, our office is easy to reach. (Situada).", "options": ["Located", "Locating", "Having located", "To locate"], "correct_answer": "Located", "explanation": "Located = As it is located (pasivo)." },
+        { "id": "c2-11-q12", "type": "quiz_choice", "question": "Not ____ what to do, I asked my supervisor for advice. (No sabiendo).", "options": ["knowing", "known", "having known", "knew"], "correct_answer": "knowing", "explanation": "Not knowing = As I didn't know (razón presente)." },
+        { "id": "c2-11-q13", "type": "quiz_choice", "question": "____ out of the room, he slammed the door behind him. (Caminando - simultáneo).", "options": ["Walking", "Walked", "Having walked", "Walks"], "correct_answer": "Walking", "explanation": "Walking = As he walked." },
+        { "id": "c2-11-q14", "type": "quiz_choice", "question": "____ the contract, I realized it contained a severe penalty clause. (Mientras leía).", "options": ["Reading", "Read", "Having read", "To read"], "correct_answer": "Reading", "explanation": "Reading = While I was reading." },
+        { "id": "c2-11-q15", "type": "quiz_choice", "question": "____ been warned about the risks, they decided not to invest. (Después de haber sido advertidos - pasivo perfecto).", "options": ["Having", "Being", "Been", "Have"], "correct_answer": "Having", "explanation": "Having been warned = After they had been warned." },
+        { "id": "c2-11-q16", "type": "quiz_choice", "question": "____ by the sudden drop in sales, the board called an emergency meeting. (Preocupados/Alarmados).", "options": ["Alarmed", "Alarming", "Having alarm", "To alarm"], "correct_answer": "Alarmed", "explanation": "Alarmed = As they were alarmed (pasado participio)." },
+        { "id": "c2-11-q17", "type": "quiz_choice", "question": "____ a native speaker, she was able to translate the document perfectly. (Siendo).", "options": ["Being", "Having", "Been", "Is"], "correct_answer": "Being", "explanation": "Being a native speaker = As she was a native speaker." },
+        { "id": "c2-11-q18", "type": "quiz_choice", "question": "____ the password, he couldn't log into the server. (Habiendo olvidado).", "options": ["Having forgotten", "Forgetting", "Forgotten", "Forget"], "correct_answer": "Having forgotten", "explanation": "Having forgotten = Because he had forgotten (acción terminada previa)." },
+        { "id": "c2-11-q19", "type": "quiz_choice", "question": "____ carefully, the software should last for years without bugs. (Si es diseñado).", "options": ["Designed", "Designing", "Having designed", "Design"], "correct_answer": "Designed", "explanation": "Designed carefully = If it is designed carefully." },
+        { "id": "c2-11-q20", "type": "quiz_choice", "question": "____ late for the meeting, I missed the CEO's opening remarks.", "options": ["Arriving", "Arrived", "Having arrived", "Arrive"], "correct_answer": "Arriving", "explanation": "Arriving late = As I arrived late." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra (participio) que falta.",
+      "questions": [
+        { "id": "c2-11-f1", "type": "fill_input", "question": "____ aware of the risks, we stopped. (Como éramos conscientes - con B)", "correct_answer": "Being", "explanation": "Being." },
+        { "id": "c2-11-f2", "type": "fill_input", "question": "____ finished the report, I went home. (Después de haber terminado - con H)", "correct_answer": "Having", "explanation": "Having." },
+        { "id": "c2-11-f3", "type": "fill_input", "question": "____ from this angle, it's perfect. (Si se ve - con S)", "correct_answer": "Seen", "explanation": "Seen." },
+        { "id": "c2-11-f4", "type": "fill_input", "question": "Not ____ received an answer, I called. (Como no había recibido - con H)", "correct_answer": "having", "explanation": "having." },
+        { "id": "c2-11-f5", "type": "fill_input", "question": "____ no money, he couldn't buy it. (No teniendo - con H)", "correct_answer": "Having", "explanation": "Having." },
+        { "id": "c2-11-f6", "type": "fill_input", "question": "____ in 1990, the firm is huge. (Fundada - con F)", "correct_answer": "Founded", "explanation": "Founded." },
+        { "id": "c2-11-f7", "type": "fill_input", "question": "Not ____ what to do, I asked. (No sabiendo - con K)", "correct_answer": "knowing", "explanation": "knowing." },
+        { "id": "c2-11-f8", "type": "fill_input", "question": "____ at her desk, she worked. (Sentada - con S)", "correct_answer": "Sitting", "explanation": "Sitting." },
+        { "id": "c2-11-f9", "type": "fill_input", "question": "____ read the book, I knew the end. (Habiendo leído - con H)", "correct_answer": "Having", "explanation": "Having." },
+        { "id": "c2-11-f10", "type": "fill_input", "question": "____ been warned, he was careful. (Después de haber sido - con H)", "correct_answer": "Having", "explanation": "Having." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Participle Clauses Match",
+      "pairs": [
+        {"id": "c2-11-p1", "source": "Being aware of", "target": "Como era consciente de / Siendo consciente"},
+        {"id": "c2-11-p2", "source": "Having analyzed the data", "target": "Después de haber analizado los datos"},
+        {"id": "c2-11-p3", "source": "Seen from this angle", "target": "Si se ve desde este ángulo"},
+        {"id": "c2-11-p4", "source": "Founded in 1990", "target": "Fundada en 1990"},
+        {"id": "c2-11-p5", "source": "Not having received", "target": "Como no había recibido"},
+        {"id": "c2-11-p6", "source": "Not knowing what to do", "target": "Al no saber qué hacer"},
+        {"id": "c2-11-p7", "source": "Having been warned", "target": "Después de haber sido advertido (pasivo)"},
+        {"id": "c2-11-p8", "source": "Walking down the hall", "target": "Mientras caminaba por el pasillo"},
+        {"id": "c2-11-p9", "source": "Alarmed by the news", "target": "Preocupado por las noticias"},
+        {"id": "c2-11-p10", "source": "Having no money", "target": "Como no tenía dinero"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la oración con cláusula de participio correcta.",
+      "questions": [
+        { "id": "c2-11-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Being aware of the risk, we stopped.", "options": ["Being aware of the risk, we stopped.", "Been aware of the risk, we stopped.", "Having aware of the risk, we stopped.", "Be aware of the risk, we stopped."], "correct_answer": "Being aware of the risk, we stopped.", "explanation": "Audio exacto." },
+        { "id": "c2-11-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Having finished, I went home.", "options": ["Having finished, I went home.", "Have finished, I went home.", "Being finished, I went home.", "Having finish, I went home."], "correct_answer": "Having finished, I went home.", "explanation": "Audio exacto." },
+        { "id": "c2-11-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Seen from here, it looks fine.", "options": ["Seen from here, it looks fine.", "Seeing from here, it looks fine.", "See from here, it looks fine.", "Saw from here, it looks fine."], "correct_answer": "Seen from here, it looks fine.", "explanation": "Audio exacto." },
+        { "id": "c2-11-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Not having received it, I called.", "options": ["Not having received it, I called.", "No having received it, I called.", "Not have received it, I called.", "Not having receive it, I called."], "correct_answer": "Not having received it, I called.", "explanation": "Audio exacto." },
+        { "id": "c2-11-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Founded last year, we grew fast.", "options": ["Founded last year, we grew fast.", "Founding last year, we grew fast.", "Having founded last year, we grew fast.", "Found last year, we grew fast."], "correct_answer": "Founded last year, we grew fast.", "explanation": "Audio exacto." },
+        { "id": "c2-11-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Not knowing the answer, he guessed.", "options": ["Not knowing the answer, he guessed.", "No knowing the answer, he guessed.", "Not know the answer, he guessed.", "Not known the answer, he guessed."], "correct_answer": "Not knowing the answer, he guessed.", "explanation": "Audio exacto." },
+        { "id": "c2-11-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Sitting there, she read a book.", "options": ["Sitting there, she read a book.", "Sat there, she read a book.", "Having sit there, she read a book.", "Sit there, she read a book."], "correct_answer": "Sitting there, she read a book.", "explanation": "Audio exacto." },
+        { "id": "c2-11-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Having read the email, he smiled.", "options": ["Having read the email, he smiled.", "Being read the email, he smiled.", "Have read the email, he smiled.", "Having read the email, he smiles."], "correct_answer": "Having read the email, he smiled.", "explanation": "Audio exacto." },
+        { "id": "c2-11-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Exhausted by work, he slept.", "options": ["Exhausted by work, he slept.", "Exhausting by work, he slept.", "Exhaust by work, he slept.", "Having exhaust by work, he slept."], "correct_answer": "Exhausted by work, he slept.", "explanation": "Audio exacto." },
+        { "id": "c2-11-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Having been warned, we avoided it.", "options": ["Having been warned, we avoided it.", "Being warned, we avoided it.", "Have been warned, we avoided it.", "Having warned, we avoided it."], "correct_answer": "Having been warned, we avoided it.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "a1-68",
+  "title": "Countable and Uncountable Nouns",
+  "version": "4.0-ARTISAN",
+  "level": "A1",
+  "total_xp": 500,
+  "tags": ["A1", "Grammar", "Nouns", "Countable"],
+  "completion_message": "¡Excelente! Ya sabes distinguir entre lo que puedes contar con números y lo que no, clave para sonar natural en la oficina.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Concepto Teórico: Sustantivos",
+      "parts": [
+        { "visual": "Contables (Countables): Puedes usar 'a/an' o números. A desk, two desks. A pen, three pens.", "audio": "Countables: You can use a or an or numbers. A desk, two desks. A pen, three pens." },
+        { "visual": "Incontables (Uncountables): No se cuentan con números ni tienen plural. Water, information, coffee, money.", "audio": "Uncountables: You don't use numbers and they don't have a plural form. Water, information, coffee, money." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige la forma correcta para sustantivos contables e incontables.",
+      "questions": [
+        { "id": "a1-68-q1", "type": "quiz_choice", "question": "I need ____ pen (un bolígrafo).", "options": ["a", "an", "some", "two"], "correct_answer": "a", "explanation": "A pen (un bolígrafo contable)." },
+        { "id": "a1-68-q2", "type": "quiz_choice", "question": "Can I have some ____? (agua).", "options": ["water", "waters", "a water", "two water"], "correct_answer": "water", "explanation": "Water es incontable, no lleva 's'." },
+        { "id": "a1-68-q3", "type": "quiz_choice", "question": "I have two ____ (computadoras).", "options": ["computers", "computer", "a computer", "computing"], "correct_answer": "computers", "explanation": "Computer es contable (computers)." },
+        { "id": "a1-68-q4", "type": "quiz_choice", "question": "We need more ____ for the meeting (información).", "options": ["information", "informations", "an information", "two informations"], "correct_answer": "information", "explanation": "Information es incontable, NUNCA lleva 's'." },
+        { "id": "a1-68-q5", "type": "quiz_choice", "question": "I drank three cups of ____ (café).", "options": ["coffee", "coffees", "a coffee", "coffe"], "correct_answer": "coffee", "explanation": "Coffee es incontable (las tazas se cuentan, el café no)." },
+        { "id": "a1-68-q6", "type": "quiz_choice", "question": "She brought four ____ (manzanas).", "options": ["apples", "apple", "an apple", "some apple"], "correct_answer": "apples", "explanation": "Manzanas son contables." },
+        { "id": "a1-68-q7", "type": "quiz_choice", "question": "I don't have much ____ (tiempo).", "options": ["time", "times", "a time", "two times"], "correct_answer": "time", "explanation": "Time (como duración) es incontable." },
+        { "id": "a1-68-q8", "type": "quiz_choice", "question": "We bought new ____ (mobiliario).", "options": ["furniture", "furnitures", "a furniture", "two furnitures"], "correct_answer": "furniture", "explanation": "Furniture (mobiliario) es incontable, nunca lleva 's'." },
+        { "id": "a1-68-q9", "type": "quiz_choice", "question": "I have an ____ (idea).", "options": ["idea", "ideas", "some idea", "two idea"], "correct_answer": "idea", "explanation": "Idea es contable, lleva 'an' por empezar con vocal." },
+        { "id": "a1-68-q10", "type": "quiz_choice", "question": "Give me some ____ (papel).", "options": ["paper", "papers", "a paper", "two paper"], "correct_answer": "paper", "explanation": "Paper (como material) es incontable." },
+        { "id": "a1-68-q11", "type": "quiz_choice", "question": "I have ten ____ (libros).", "options": ["books", "book", "a book", "some book"], "correct_answer": "books", "explanation": "Books son contables." },
+        { "id": "a1-68-q12", "type": "quiz_choice", "question": "Can I give you some ____? (consejo).", "options": ["advice", "advices", "an advice", "two advices"], "correct_answer": "advice", "explanation": "Advice es incontable en inglés." },
+        { "id": "a1-68-q13", "type": "quiz_choice", "question": "I don't have any ____ (dinero).", "options": ["money", "moneys", "a money", "two moneys"], "correct_answer": "money", "explanation": "Money es incontable." },
+        { "id": "a1-68-q14", "type": "quiz_choice", "question": "I ate a ____ (sándwich).", "options": ["sandwich", "sandwiches", "some sandwich", "two sandwich"], "correct_answer": "sandwich", "explanation": "Sandwich es contable." },
+        { "id": "a1-68-q15", "type": "quiz_choice", "question": "Do you like ____? (música).", "options": ["music", "musics", "a music", "two musics"], "correct_answer": "music", "explanation": "Music es incontable." },
+        { "id": "a1-68-q16", "type": "quiz_choice", "question": "There is a lot of ____ outside (tráfico).", "options": ["traffic", "traffics", "a traffic", "some traffics"], "correct_answer": "traffic", "explanation": "Traffic es incontable." },
+        { "id": "a1-68-q17", "type": "quiz_choice", "question": "I have two ____ (teléfonos).", "options": ["phones", "phone", "a phone", "some phone"], "correct_answer": "phones", "explanation": "Phones son contables." },
+        { "id": "a1-68-q18", "type": "quiz_choice", "question": "We need to buy some ____ (equipamiento).", "options": ["equipment", "equipments", "an equipment", "two equipments"], "correct_answer": "equipment", "explanation": "Equipment es incontable." },
+        { "id": "a1-68-q19", "type": "quiz_choice", "question": "Put some ____ in your coffee (azúcar).", "options": ["sugar", "sugars", "a sugar", "two sugar"], "correct_answer": "sugar", "explanation": "Sugar es incontable." },
+        { "id": "a1-68-q20", "type": "quiz_choice", "question": "There are three ____ in the room (sillas).", "options": ["chairs", "chair", "a chair", "some chair"], "correct_answer": "chairs", "explanation": "Chairs son contables." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la palabra (contable o incontable) correctamente.",
+      "questions": [
+        { "id": "a1-68-f1", "type": "fill_input", "question": "A ____ (Bolígrafo).", "correct_answer": "pen", "explanation": "pen." },
+        { "id": "a1-68-f2", "type": "fill_input", "question": "Some ____ (Agua).", "correct_answer": "water", "explanation": "water." },
+        { "id": "a1-68-f3", "type": "fill_input", "question": "Two ____ (Computadoras).", "correct_answer": "computers", "explanation": "computers." },
+        { "id": "a1-68-f4", "type": "fill_input", "question": "Some ____ (Información).", "correct_answer": "information", "explanation": "information." },
+        { "id": "a1-68-f5", "type": "fill_input", "question": "Some ____ (Café).", "correct_answer": "coffee", "explanation": "coffee." },
+        { "id": "a1-68-f6", "type": "fill_input", "question": "Four ____ (Manzanas).", "correct_answer": "apples", "explanation": "apples." },
+        { "id": "a1-68-f7", "type": "fill_input", "question": "Some ____ (Mobiliario).", "correct_answer": "furniture", "explanation": "furniture." },
+        { "id": "a1-68-f8", "type": "fill_input", "question": "An ____ (Idea).", "correct_answer": "idea", "explanation": "idea." },
+        { "id": "a1-68-f9", "type": "fill_input", "question": "Some ____ (Dinero).", "correct_answer": "money", "explanation": "money." },
+        { "id": "a1-68-f10", "type": "fill_input", "question": "Some ____ (Equipamiento).", "correct_answer": "equipment", "explanation": "equipment." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Vocabulary Match",
+      "pairs": [
+        {"id": "a1-68-p1", "source": "A pen", "target": "Un bolígrafo (Contable)"},
+        {"id": "a1-68-p2", "source": "Water", "target": "Agua (Incontable)"},
+        {"id": "a1-68-p3", "source": "Computers", "target": "Computadoras (Contable)"},
+        {"id": "a1-68-p4", "source": "Information", "target": "Información (Incontable)"},
+        {"id": "a1-68-p5", "source": "Coffee", "target": "Café (Incontable)"},
+        {"id": "a1-68-p6", "source": "Apples", "target": "Manzanas (Contable)"},
+        {"id": "a1-68-p7", "source": "Furniture", "target": "Mobiliario (Incontable)"},
+        {"id": "a1-68-p8", "source": "Ideas", "target": "Ideas (Contable)"},
+        {"id": "a1-68-p9", "source": "Money", "target": "Dinero (Incontable)"},
+        {"id": "a1-68-p10", "source": "Equipment", "target": "Equipamiento (Incontable)"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona la frase exacta.",
+      "questions": [
+        { "id": "a1-68-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I need a pen.", "options": ["I need a pen.", "I need two pens.", "I need a pencil.", "He needs a pen."], "correct_answer": "I need a pen.", "explanation": "Audio exacto." },
+        { "id": "a1-68-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "Can I have some water?", "options": ["Can I have some water?", "Can I have water?", "Can you have some water?", "I have some water."], "correct_answer": "Can I have some water?", "explanation": "Audio exacto." },
+        { "id": "a1-68-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have two computers.", "options": ["I have two computers.", "I have a computer.", "He has two computers.", "I have three computers."], "correct_answer": "I have two computers.", "explanation": "Audio exacto." },
+        { "id": "a1-68-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We need more information.", "options": ["We need more information.", "I need more information.", "We have more information.", "They need information."], "correct_answer": "We need more information.", "explanation": "Audio exacto." },
+        { "id": "a1-68-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I drank coffee.", "options": ["I drank coffee.", "I drink coffee.", "He drank coffee.", "I drank some coffee."], "correct_answer": "I drank coffee.", "explanation": "Audio exacto." },
+        { "id": "a1-68-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "She brought apples.", "options": ["She brought apples.", "She bought apples.", "He brought apples.", "She brought an apple."], "correct_answer": "She brought apples.", "explanation": "Audio exacto." },
+        { "id": "a1-68-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I don't have much time.", "options": ["I don't have much time.", "I have much time.", "He doesn't have much time.", "I don't have time."], "correct_answer": "I don't have much time.", "explanation": "Audio exacto." },
+        { "id": "a1-68-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We bought new furniture.", "options": ["We bought new furniture.", "I bought new furniture.", "We bought a furniture.", "They bought new furniture."], "correct_answer": "We bought new furniture.", "explanation": "Audio exacto." },
+        { "id": "a1-68-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I have an idea.", "options": ["I have an idea.", "I have two ideas.", "He has an idea.", "I had an idea."], "correct_answer": "I have an idea.", "explanation": "Audio exacto." },
+        { "id": "a1-68-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "I don't have any money.", "options": ["I don't have any money.", "I don't have money.", "He doesn't have any money.", "I have no money."], "correct_answer": "I don't have any money.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

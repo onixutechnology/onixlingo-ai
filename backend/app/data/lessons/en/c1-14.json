@@ -1,0 +1,101 @@
+{
+  "id": "c1-14",
+  "title": "PR & Crisis Management",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Vocabulary", "PR", "Crisis", "Communications", "Business"],
+  "completion_message": "¡Impresionante! Dominar el vocabulario de Relaciones Públicas y Manejo de Crisis es una habilidad de alto nivel ejecutivo. Términos como 'damage control', 'scapegoat' y 'PR stunt' son esenciales para proteger la reputación de cualquier organización.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Relaciones Públicas y Manejo de Crisis (C1)",
+      "parts": [
+        { "visual": "Vocabulario de Crisis: \n- Damage control (Control de daños / Acciones para limitar el impacto negativo de un escándalo). \nEj: The company went into full damage control mode after the scandal. \n- Backlash (Reacción violenta/Rechazo público / Fuerte reacción negativa del público). \nEj: The CEO faced a massive backlash after his offensive tweet. \n- Scapegoat (Chivo expiatorio / Persona o grupo que carga con la culpa de otros). \nEj: The manager became the scapegoat for the company's failure.", "audio": "Crisis Vocabulary. 'Damage control' refers to action taken to limit the negative effects of an accident or error. For example: The company went into full damage control mode after the scandal. 'Backlash' is a strong negative public reaction to something. For example: The CEO faced a massive backlash after his offensive tweet. A 'Scapegoat' is a person who is blamed for the wrongdoings, mistakes, or faults of others. For example: The manager became the scapegoat for the company's failure." },
+        { "visual": "Estrategias de PR: \n- PR stunt (Acción de relaciones públicas / Evento o acción diseñada para atraer la atención de los medios). \nEj: That celebrity apology was clearly just a PR stunt. \n- Whistleblower (Delator / Informante / Persona que expone información ilegal dentro de una organización). \nEj: A whistleblower leaked the documents to the press. \n- Spin (Sesgar la información / Presentar la información de forma favorable para la empresa). \nEj: The spokesperson tried to put a positive spin on the layoffs.", "audio": "P R Strategies. A 'P R stunt' is a planned event or action designed to attract media attention. For example: That celebrity apology was clearly just a P R stunt. A 'Whistleblower' is a person who informs on a person or organization engaged in an illicit activity. For example: A whistleblower leaked the documents to the press. 'Spin' means to present information in a biased or favorable way. For example: The spokesperson tried to put a positive spin on the layoffs." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el término de PR o manejo de crisis correcto.",
+      "questions": [
+        { "id": "c1-14-q1", "type": "quiz_choice", "question": "After the oil spill, the company launched a massive ____ campaign to fix their image. (Control de daños).", "options": ["damage control", "damage controller", "damage limitation", "damage fix"], "correct_answer": "damage control", "explanation": "Damage control = control de daños." },
+        { "id": "c1-14-q2", "type": "quiz_choice", "question": "The new policy caused a huge public ____, with thousands of angry tweets. (Reacción negativa masiva).", "options": ["backlash", "feedback", "reaction", "protest"], "correct_answer": "backlash", "explanation": "Backlash = rechazo/reacción negativa fuerte del público." },
+        { "id": "c1-14-q3", "type": "quiz_choice", "question": "Instead of firing the whole board, they made one junior employee the ____ for the accounting fraud. (Chivo expiatorio).", "options": ["scapegoat", "sacrifice", "victim", "target"], "correct_answer": "scapegoat", "explanation": "Scapegoat = chivo expiatorio." },
+        { "id": "c1-14-q4", "type": "quiz_choice", "question": "Critics said the CEO's public apology on television was just a ____ stunt. (Estrategia de relaciones públicas).", "options": ["PR", "public", "media", "press"], "correct_answer": "PR", "explanation": "PR stunt = acción diseñada para generar cobertura mediática." },
+        { "id": "c1-14-q5", "type": "quiz_choice", "question": "The ____ who leaked internal financial documents saved the company from further fraud. (Informante / Delator).", "options": ["whistleblower", "whistler", "whisper", "leaker"], "correct_answer": "whistleblower", "explanation": "Whistleblower = informante, delator (generalmente por una causa justa)." },
+        { "id": "c1-14-q6", "type": "quiz_choice", "question": "The communications team tried to ____ the news to make the layoffs sound positive. (Sesgar la información favorablemente).", "options": ["spin", "tell", "report", "broadcast"], "correct_answer": "spin", "explanation": "Spin = sesgar/presentar la información de manera favorable." },
+        { "id": "c1-14-q7", "type": "quiz_choice", "question": "We need to ____ a press conference immediately to address the rumors. (Convocar).", "options": ["call", "request", "ask", "hold"], "correct_answer": "call", "explanation": "Call a press conference = convocar una conferencia de prensa." },
+        { "id": "c1-14-q8", "type": "quiz_choice", "question": "A statement issued to newspapers and broadcasters about a newsworthy event is called a press ____. (Comunicado de prensa).", "options": ["release", "conference", "brief", "report"], "correct_answer": "release", "explanation": "Press release = comunicado de prensa." },
+        { "id": "c1-14-q9", "type": "quiz_choice", "question": "The company tried to ____ the scandal by releasing good news the same day. (Enterrar/Eclipsar).", "options": ["bury", "hide", "cover", "mask"], "correct_answer": "bury", "explanation": "To bury bad news = enterrar malas noticias lanzando otras más positivas al mismo tiempo." },
+        { "id": "c1-14-q10", "type": "quiz_choice", "question": "After the scandal, their brand ____ took a huge hit. (Reputación de marca).", "options": ["reputation", "repute", "image", "brand"], "correct_answer": "reputation", "explanation": "Brand reputation = reputación de marca." },
+        { "id": "c1-14-q11", "type": "quiz_choice", "question": "The CEO was asked to step down due to concerns about ____ of interest. (Conflicto de intereses).", "options": ["conflict", "clash", "fight", "contrast"], "correct_answer": "conflict", "explanation": "Conflict of interest = conflicto de intereses." },
+        { "id": "c1-14-q12", "type": "quiz_choice", "question": "After the CEO resigned, the board launched an internal ____ to find out what happened. (Investigación).", "options": ["inquiry", "interrogation", "investigation", "inquest"], "correct_answer": "inquiry", "explanation": "Internal inquiry = investigación interna. (inquiry/investigation son intercambiables en este contexto)." },
+        { "id": "c1-14-q13", "type": "quiz_choice", "question": "The company issued a public ____ for the harm caused by their faulty product. (Disculpa pública).", "options": ["apology", "excuse", "sorry", "regret"], "correct_answer": "apology", "explanation": "Public apology = disculpa pública oficial." },
+        { "id": "c1-14-q14", "type": "quiz_choice", "question": "When a product has a flaw and the company asks customers to return it, this is called a product ____. (Retiro / Llamado a revisión).", "options": ["recall", "refund", "return", "reject"], "correct_answer": "recall", "explanation": "Product recall = retiro de un producto del mercado por defectos o peligros." },
+        { "id": "c1-14-q15", "type": "quiz_choice", "question": "The scandal created a massive ____ risk for the company's investors. (Riesgo de reputación).", "options": ["reputational", "reputation", "reputable", "reputed"], "correct_answer": "reputational", "explanation": "Reputational risk = riesgo reputacional (adjetivo)." },
+        { "id": "c1-14-q16", "type": "quiz_choice", "question": "The company hired a ____ firm to improve its public image after the scandal. (Empresa de relaciones públicas).", "options": ["PR", "media", "law", "consulting"], "correct_answer": "PR", "explanation": "PR firm = empresa de Relaciones Públicas." },
+        { "id": "c1-14-q17", "type": "quiz_choice", "question": "The celebrity tried to ____ the narrative by giving exclusive interviews. (Controlar).", "options": ["control", "manage", "steer", "spin"], "correct_answer": "control", "explanation": "Control the narrative = controlar el relato/la narrativa." },
+        { "id": "c1-14-q18", "type": "quiz_choice", "question": "In a press conference, the spokesperson said 'No ____.' (Sin comentarios).", "options": ["comment", "comments", "answer", "statement"], "correct_answer": "comment", "explanation": "No comment = sin comentarios (frase estándar para evitar declaraciones)." },
+        { "id": "c1-14-q19", "type": "quiz_choice", "question": "The social media ____ from angry customers was overwhelming after the CEO's speech. (Repercusión / Reacción en cadena).", "options": ["fallout", "falldown", "feedback", "backlash"], "correct_answer": "fallout", "explanation": "Fallout = consecuencias negativas, repercusiones de una situación." },
+        { "id": "c1-14-q20", "type": "quiz_choice", "question": "The charity work they did was seen by many as a ____, not genuine philanthropy. (Estratagema de imagen).", "options": ["PR stunt", "PR move", "false charity", "media trick"], "correct_answer": "PR stunt", "explanation": "PR stunt = acción de imagen calculada para mejorar la percepción pública." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe el término de PR o crisis correcto.",
+      "questions": [
+        { "id": "c1-14-f1", "type": "fill_input", "question": "____ control. (Limitar impacto de escándalo con D)", "correct_answer": "Damage", "explanation": "Damage." },
+        { "id": "c1-14-f2", "type": "fill_input", "question": "Public ____. (Rechazo masivo con B)", "correct_answer": "backlash", "explanation": "backlash." },
+        { "id": "c1-14-f3", "type": "fill_input", "question": "He was made a ____. (Chivo expiatorio con S)", "correct_answer": "scapegoat", "explanation": "scapegoat." },
+        { "id": "c1-14-f4", "type": "fill_input", "question": "A ____ stunt. (Estrategia de imagen con PR)", "correct_answer": "PR", "explanation": "PR." },
+        { "id": "c1-14-f5", "type": "fill_input", "question": "A ____blower. (Informante con W)", "correct_answer": "whistle", "explanation": "whistle." },
+        { "id": "c1-14-f6", "type": "fill_input", "question": "To ____ the news. (Sesgar favorablemente con S)", "correct_answer": "spin", "explanation": "spin." },
+        { "id": "c1-14-f7", "type": "fill_input", "question": "A press ____. (Comunicado de prensa con R)", "correct_answer": "release", "explanation": "release." },
+        { "id": "c1-14-f8", "type": "fill_input", "question": "Brand ____. (Reputación con R)", "correct_answer": "reputation", "explanation": "reputation." },
+        { "id": "c1-14-f9", "type": "fill_input", "question": "A product ____. (Retiro del mercado con R)", "correct_answer": "recall", "explanation": "recall." },
+        { "id": "c1-14-f10", "type": "fill_input", "question": "No ____. (Sin comentarios con C)", "correct_answer": "comment", "explanation": "comment." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "PR & Crisis Match",
+      "pairs": [
+        {"id": "c1-14-p1", "source": "Damage control", "target": "Control de daños / limitar impacto"},
+        {"id": "c1-14-p2", "source": "Backlash", "target": "Reacción negativa masiva del público"},
+        {"id": "c1-14-p3", "source": "Scapegoat", "target": "Chivo expiatorio"},
+        {"id": "c1-14-p4", "source": "PR stunt", "target": "Acción de imagen calculada"},
+        {"id": "c1-14-p5", "source": "Whistleblower", "target": "Informante / Delator interno"},
+        {"id": "c1-14-p6", "source": "Spin", "target": "Sesgar la información favorablemente"},
+        {"id": "c1-14-p7", "source": "Press release", "target": "Comunicado de prensa"},
+        {"id": "c1-14-p8", "source": "Product recall", "target": "Retiro de un producto del mercado"},
+        {"id": "c1-14-p9", "source": "No comment", "target": "Sin comentarios (a la prensa)"},
+        {"id": "c1-14-p10", "source": "Fallout", "target": "Repercusiones / Consecuencias negativas"}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el término de PR o crisis correcto.",
+      "questions": [
+        { "id": "c1-14-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They need damage control now.", "options": ["They need damage control now.", "We need damage control now.", "They needed damage control.", "They need damage limitation now."], "correct_answer": "They need damage control now.", "explanation": "Audio exacto." },
+        { "id": "c1-14-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The backlash was enormous.", "options": ["The backlash was enormous.", "The backlash was small.", "A backlash was enormous.", "The reaction was enormous."], "correct_answer": "The backlash was enormous.", "explanation": "Audio exacto." },
+        { "id": "c1-14-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He was the scapegoat.", "options": ["He was the scapegoat.", "She was the scapegoat.", "He is the scapegoat.", "He was the scapegoats."], "correct_answer": "He was the scapegoat.", "explanation": "Audio exacto." },
+        { "id": "c1-14-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "It was just a PR stunt.", "options": ["It was just a PR stunt.", "It was just a PR trick.", "It is just a PR stunt.", "It was a PR stunt."], "correct_answer": "It was just a PR stunt.", "explanation": "Audio exacto." },
+        { "id": "c1-14-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "A whistleblower leaked the files.", "options": ["A whistleblower leaked the files.", "The whistleblower leaked the files.", "A whistleblower stole the files.", "A whistleblower leaked the data."], "correct_answer": "A whistleblower leaked the files.", "explanation": "Audio exacto." },
+        { "id": "c1-14-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They tried to spin the news.", "options": ["They tried to spin the news.", "We tried to spin the news.", "They tried to spin the story.", "They try to spin the news."], "correct_answer": "They tried to spin the news.", "explanation": "Audio exacto." },
+        { "id": "c1-14-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "We issued a press release.", "options": ["We issued a press release.", "They issued a press release.", "We issued a press statement.", "We issue a press release."], "correct_answer": "We issued a press release.", "explanation": "Audio exacto." },
+        { "id": "c1-14-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The brand's reputation was damaged.", "options": ["The brand's reputation was damaged.", "The brand's reputation is damaged.", "The brand's image was damaged.", "The company's reputation was damaged."], "correct_answer": "The brand's reputation was damaged.", "explanation": "Audio exacto." },
+        { "id": "c1-14-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "They announced a product recall.", "options": ["They announced a product recall.", "We announced a product recall.", "They announce a product recall.", "They announced a product return."], "correct_answer": "They announced a product recall.", "explanation": "Audio exacto." },
+        { "id": "c1-14-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "The spokesperson said no comment.", "options": ["The spokesperson said no comment.", "The spokesperson said no comments.", "A spokesperson said no comment.", "The spokesperson says no comment."], "correct_answer": "The spokesperson said no comment.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}

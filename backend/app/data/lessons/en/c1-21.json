@@ -1,0 +1,101 @@
+{
+  "id": "c1-21",
+  "title": "Mixed Conditionals",
+  "version": "4.0-ARTISAN",
+  "level": "C1",
+  "total_xp": 500,
+  "tags": ["C1", "Grammar", "Mixed Conditionals", "Advanced", "Business"],
+  "completion_message": "¡Formidable! Los Mixed Conditionals son quizás la estructura gramatical más sofisticada del inglés. Conectan el pasado con el presente o el presente con el pasado para expresar situaciones hipotéticas complejas con una precisión y madurez que solo tienen los hablantes de nivel C.",
+  "stages": [
+    {
+      "id": "stg_theory",
+      "type": "lecture",
+      "title": "Condicionales Mixtos (Mixed Conditionals)",
+      "parts": [
+        { "visual": "Los Mixed Conditionals mezclan tiempos de diferentes condicionales para expresar ideas complejas. \n\nTipo 1 - Efecto PRESENTE de causa PASADA (el más común en negocios): \n- Estructura: IF + Past Perfect, WOULD + Infinitive. \n- Significado: Si algo en el PASADO hubiera sido diferente, el PRESENTE sería diferente. \nEj: IF he had studied law, he WOULD BE a lawyer now. (Si hubiera estudiado Derecho, ahora SERÍA abogado). \nEj: IF we hadn't taken that risk, the company WOULD NOT EXIST today.", "audio": "Mixed Conditionals combine tenses from different conditional types to express complex ideas. Type 1 shows the PRESENT effect of a PAST cause. Structure: If, plus Past Perfect, comma, Would plus infinitive. Meaning: If something in the PAST had been different, the PRESENT would be different. For example: If he had studied law, he would be a lawyer now. This means he didn't study law in the past, so he is not a lawyer now. Another example: If we hadn't taken that risk, the company would not exist today." },
+        { "visual": "Tipo 2 - Efecto PASADO de causa PRESENTE (menos común pero muy sofisticado): \n- Estructura: IF + Past Simple, WOULD HAVE + Participio Pasado. \n- Significado: Si una situación PRESENTE fuera diferente, algo en el PASADO habría sido diferente. \nEj: IF he were more organized, he WOULD HAVE FINISHED the report yesterday. (Si fuera más organizado, habría terminado el informe ayer). \nEj: IF I were an expert, I WOULD HAVE PREDICTED this crisis.", "audio": "Type 2 shows the PAST effect of a PRESENT cause. Structure: If, plus Past Simple, comma, Would Have plus Past Participle. Meaning: If a PRESENT situation were different, something in the PAST would have been different. For example: If he were more organized, he would have finished the report yesterday. This means he is NOT organized now, and because of that, he DID NOT finish the report yesterday. Another example: If I were an expert, I would have predicted this crisis." }
+      ]
+    },
+    {
+      "id": "stg_quiz_choice",
+      "type": "quiz_choice",
+      "title": "Interactive Quiz",
+      "description": "Elige el Mixed Conditional correcto según el tipo (pasado→presente o presente→pasado).",
+      "questions": [
+        { "id": "c1-21-q1", "type": "quiz_choice", "question": "If she had gone to university, she ____ a professor now. (Efecto presente de causa pasada).", "options": ["would be", "would have been", "would have", "was"], "correct_answer": "would be", "explanation": "Past Perfect → WOULD BE (now). Causa pasada → efecto presente." },
+        { "id": "c1-21-q2", "type": "quiz_choice", "question": "If he were more decisive, he ____ the deal last month. (Efecto pasado de causa presente).", "options": ["would have closed", "would close", "would be closing", "had closed"], "correct_answer": "would have closed", "explanation": "Past Simple (were) → WOULD HAVE + Participle. Condición presente → resultado pasado." },
+        { "id": "c1-21-q3", "type": "quiz_choice", "question": "If I ____ more carefully in school, I would understand financial reports now.", "options": ["had studied", "studied", "would study", "have studied"], "correct_answer": "had studied", "explanation": "Estructura tipo 1: IF + Past Perfect... would + infinitivo (now)." },
+        { "id": "c1-21-q4", "type": "quiz_choice", "question": "If we were a larger company, we ____ secured the funding last year.", "options": ["would have", "would", "had", "could have"], "correct_answer": "would have", "explanation": "WOULD HAVE + secured (resultado pasado de condición presente)." },
+        { "id": "c1-21-q5", "type": "quiz_choice", "question": "If he had accepted the promotion, he ____ our CEO today.", "options": ["would be", "would have been", "is", "had been"], "correct_answer": "would be", "explanation": "Causa pasada (rejected) → efecto presente (today). WOULD BE." },
+        { "id": "c1-21-q6", "type": "quiz_choice", "question": "If I were a native English speaker, I ____ the presentation much better yesterday.", "options": ["would have delivered", "would deliver", "delivered", "had delivered"], "correct_answer": "would have delivered", "explanation": "Condición presente (not native) → resultado pasado (yesterday). WOULD HAVE + delivered." },
+        { "id": "c1-21-q7", "type": "quiz_choice", "question": "If they ____ the project on time, they would still be a trusted supplier.", "options": ["had delivered", "delivered", "would deliver", "have delivered"], "correct_answer": "had delivered", "explanation": "IF + Past Perfect (causa pasada) → WOULD + infinitivo (resultado presente, 'still')." },
+        { "id": "c1-21-q8", "type": "quiz_choice", "question": "If she were truly committed, she ____ the project on time. (Pasado resultado).", "options": ["would have finished", "would finish", "finished", "had finished"], "correct_answer": "would have finished", "explanation": "Condición presente (she's not committed) → resultado pasado. WOULD HAVE + finished." },
+        { "id": "c1-21-q9", "type": "quiz_choice", "question": "If we had diversified our portfolio in 2010, we ____ very wealthy now.", "options": ["would be", "would have been", "were", "are"], "correct_answer": "would be", "explanation": "Causa pasada → estado presente (now). WOULD BE." },
+        { "id": "c1-21-q10", "type": "quiz_choice", "question": "If I were better at negotiation, I ____ a much better deal last week.", "options": ["would have negotiated", "would negotiate", "negotiated", "had negotiated"], "correct_answer": "would have negotiated", "explanation": "Característica presente (poor negotiator) → resultado pasado (last week)." },
+        { "id": "c1-21-q11", "type": "quiz_choice", "question": "If he ____ the warning signs, he wouldn't be in so much debt now.", "options": ["had noticed", "noticed", "would notice", "notices"], "correct_answer": "had noticed", "explanation": "IF + Past Perfect → WOULDN'T BE (now). Causa pasada → efecto presente." },
+        { "id": "c1-21-q12", "type": "quiz_choice", "question": "If she were less risk-averse, she ____ invested in Bitcoin early on.", "options": ["would have", "would", "had", "might"], "correct_answer": "would have", "explanation": "WOULD HAVE + invested. Carácter presente → resultado pasado." },
+        { "id": "c1-21-q13", "type": "quiz_choice", "question": "If I had joined that startup in 2015, I ____ a millionaire right now.", "options": ["would be", "would have been", "will be", "am"], "correct_answer": "would be", "explanation": "Causa pasada → estado presente (right now). WOULD BE." },
+        { "id": "c1-21-q14", "type": "quiz_choice", "question": "If our team were more innovative, we ____ that product first. (They launched before us).", "options": ["would have launched", "would launch", "launched", "had launched"], "correct_answer": "would have launched", "explanation": "Característica presente → resultado pasado." },
+        { "id": "c1-21-q15", "type": "quiz_choice", "question": "If the CEO ____ that investment, the company wouldn't be struggling today.", "options": ["hadn't made", "didn't make", "wouldn't have made", "hasn't made"], "correct_answer": "hadn't made", "explanation": "IF + Past Perfect Negative → WOULDN'T BE (today). Causa pasada → efecto presente." },
+        { "id": "c1-21-q16", "type": "quiz_choice", "question": "If they were more experienced, they ____ caught that accounting error last quarter.", "options": ["would have", "would", "had", "should"], "correct_answer": "would have", "explanation": "Experiencia presente → resultado pasado (last quarter). WOULD HAVE + caught." },
+        { "id": "c1-21-q17", "type": "quiz_choice", "question": "If he had built a stronger network, he ____ unemployed now.", "options": ["wouldn't be", "wouldn't have been", "isn't", "hadn't been"], "correct_answer": "wouldn't be", "explanation": "Causa pasada → estado presente negativo (now). WOULDN'T BE." },
+        { "id": "c1-21-q18", "type": "quiz_choice", "question": "If I were a better public speaker, my presentation ____ gone better last month.", "options": ["would have", "would", "had", "might have"], "correct_answer": "would have", "explanation": "Habilidad presente → resultado pasado (last month). WOULD HAVE + gone." },
+        { "id": "c1-21-q19", "type": "quiz_choice", "question": "If they ____ that market earlier, they would dominate it today.", "options": ["had entered", "entered", "would enter", "have entered"], "correct_answer": "had entered", "explanation": "IF + Past Perfect → WOULD + infinitivo (today = presente). Causa pasada." },
+        { "id": "c1-21-q20", "type": "quiz_choice", "question": "If our culture were less hierarchical, we ____ that talented engineer who resigned last year.", "options": ["would have kept", "would keep", "kept", "had kept"], "correct_answer": "would have kept", "explanation": "Cultura presente → resultado pasado (resigned last year). WOULD HAVE + kept." }
+      ]
+    },
+    {
+      "id": "stg_fill",
+      "type": "fill_input",
+      "title": "Written Expression",
+      "description": "Escribe la forma verbal correcta para el Mixed Conditional.",
+      "questions": [
+        { "id": "c1-21-f1", "type": "fill_input", "question": "If she had studied law, she ____ a lawyer now. (would be / would have been)", "correct_answer": "would be", "explanation": "would be (causa pasada → efecto presente)." },
+        { "id": "c1-21-f2", "type": "fill_input", "question": "If he were more careful, he ____ that mistake. (would have avoided / would avoid)", "correct_answer": "would have avoided", "explanation": "would have avoided (condición presente → resultado pasado)." },
+        { "id": "c1-21-f3", "type": "fill_input", "question": "If I ____ that company, I'd be rich now. (had bought / bought)", "correct_answer": "had bought", "explanation": "had bought (IF + Past Perfect → would be now)." },
+        { "id": "c1-21-f4", "type": "fill_input", "question": "If we were bolder, we ____ first. (would have launched / would launch)", "correct_answer": "would have launched", "explanation": "would have launched (condición presente → resultado pasado)." },
+        { "id": "c1-21-f5", "type": "fill_input", "question": "If he hadn't quit, he ____ the CEO today. (would be / would have been)", "correct_answer": "would be", "explanation": "would be (causa pasada → estado presente)." },
+        { "id": "c1-21-f6", "type": "fill_input", "question": "If I ____ native English, I'd have written it better. (were / had been)", "correct_answer": "were", "explanation": "were (condición presente → resultado pasado)." },
+        { "id": "c1-21-f7", "type": "fill_input", "question": "If they ____ saved more, they wouldn't be in debt now. (had / have)", "correct_answer": "had", "explanation": "had saved (IF + Past Perfect → wouldn't be now)." },
+        { "id": "c1-21-f8", "type": "fill_input", "question": "If she were disciplined, she ____ finished on time. (would have / would)", "correct_answer": "would have", "explanation": "would have finished (condición presente → resultado pasado)." },
+        { "id": "c1-21-f9", "type": "fill_input", "question": "If he ____ that investment, he'd be retired now. (had made / made)", "correct_answer": "had made", "explanation": "had made (causa pasada → efecto presente)." },
+        { "id": "c1-21-f10", "type": "fill_input", "question": "If I were more experienced, I ____ that error last year. (would have caught / would catch)", "correct_answer": "would have caught", "explanation": "would have caught (condición presente → resultado pasado)." }
+      ]
+    },
+    {
+      "id": "stg_pairing",
+      "type": "pairing_drill",
+      "title": "Mixed Conditionals Match",
+      "pairs": [
+        {"id": "c1-21-p1", "source": "If + Past Perfect → would + infinitive", "target": "Causa PASADA → Efecto PRESENTE"},
+        {"id": "c1-21-p2", "source": "If + Past Simple → would have + participle", "target": "Condición PRESENTE → Resultado PASADO"},
+        {"id": "c1-21-p3", "source": "If he had studied, he would be...", "target": "Si hubiera estudiado, ahora sería..."},
+        {"id": "c1-21-p4", "source": "If she were organized, she would have finished...", "target": "Si fuera organizada, habría terminado..."},
+        {"id": "c1-21-p5", "source": "If they hadn't merged, they would be bankrupt.", "target": "Si no se hubieran fusionado, ahora estarían en quiebra."},
+        {"id": "c1-21-p6", "source": "If I were bilingual, I would have gotten the job.", "target": "Si fuera bilingüe, habría conseguido el trabajo."},
+        {"id": "c1-21-p7", "source": "He would be rich now if he had invested.", "target": "Sería rico ahora si hubiera invertido."},
+        {"id": "c1-21-p8", "source": "If the team were faster, they would have won.", "target": "Si el equipo fuera más rápido, habrían ganado."},
+        {"id": "c1-21-p9", "source": "I wouldn't be here if I hadn't taken that risk.", "target": "No estaría aquí si no hubiera tomado ese riesgo."},
+        {"id": "c1-21-p10", "source": "If she were confident, she would have spoken up.", "target": "Si fuera segura, habría hablado."}
+      ]
+    },
+    {
+      "id": "stg_listen",
+      "type": "listening_match",
+      "title": "Listening Comprehension",
+      "description": "Escucha y selecciona el Mixed Conditional correcto.",
+      "questions": [
+        { "id": "c1-21-l1", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If he had studied, he would be rich now.", "options": ["If he had studied, he would be rich now.", "If he had studied, he would have been rich.", "If he studied, he would be rich now.", "If he had studied, he will be rich now."], "correct_answer": "If he had studied, he would be rich now.", "explanation": "Audio exacto." },
+        { "id": "c1-21-l2", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If she were confident, she would have spoken up.", "options": ["If she were confident, she would have spoken up.", "If she was confident, she would have spoken up.", "If she were confident, she would speak up.", "If she were confident, she would have spoke up."], "correct_answer": "If she were confident, she would have spoken up.", "explanation": "Audio exacto." },
+        { "id": "c1-21-l3", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If we had merged, we would be bigger now.", "options": ["If we had merged, we would be bigger now.", "If we had merged, we would have been bigger.", "If we merged, we would be bigger now.", "If we had merged, we would be big now."], "correct_answer": "If we had merged, we would be bigger now.", "explanation": "Audio exacto." },
+        { "id": "c1-21-l4", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If I were more experienced, I would have led the project.", "options": ["If I were more experienced, I would have led the project.", "If I was more experienced, I would have led the project.", "If I were more experienced, I would lead the project.", "If I were experienced, I would have led the project."], "correct_answer": "If I were more experienced, I would have led the project.", "explanation": "Audio exacto." },
+        { "id": "c1-21-l5", "type": "listening_match", "question": "Listen carefully.", "tts_text": "He would be CEO now if he hadn't quit.", "options": ["He would be CEO now if he hadn't quit.", "He would have been CEO if he hadn't quit.", "He would be CEO now if he didn't quit.", "He will be CEO now if he hadn't quit."], "correct_answer": "He would be CEO now if he hadn't quit.", "explanation": "Audio exacto." },
+        { "id": "c1-21-l6", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If they were innovative, they would have won.", "options": ["If they were innovative, they would have won.", "If they are innovative, they would have won.", "If they were innovative, they would win.", "If they were innovative, they will have won."], "correct_answer": "If they were innovative, they would have won.", "explanation": "Audio exacto." },
+        { "id": "c1-21-l7", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If I had invested early, I would be retired now.", "options": ["If I had invested early, I would be retired now.", "If I invested early, I would be retired now.", "If I had invested early, I would have been retired.", "If I had invested earlier, I would be retired now."], "correct_answer": "If I had invested early, I would be retired now.", "explanation": "Audio exacto." },
+        { "id": "c1-21-l8", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If she were bilingual, she would have gotten the job.", "options": ["If she were bilingual, she would have gotten the job.", "If she was bilingual, she would have gotten the job.", "If she were bilingual, she would get the job.", "If she were multilingual, she would have gotten the job."], "correct_answer": "If she were bilingual, she would have gotten the job.", "explanation": "Audio exacto." },
+        { "id": "c1-21-l9", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If the team had trained more, they would win today.", "options": ["If the team had trained more, they would win today.", "If the team trained more, they would win today.", "If the team had trained more, they would have won.", "If the team had trained more, they will win today."], "correct_answer": "If the team had trained more, they would win today.", "explanation": "Audio exacto." },
+        { "id": "c1-21-l10", "type": "listening_match", "question": "Listen carefully.", "tts_text": "If he were braver, he would have quit sooner.", "options": ["If he were braver, he would have quit sooner.", "If he was braver, he would have quit sooner.", "If he were braver, he would quit sooner.", "If he were brave, he would have quit sooner."], "correct_answer": "If he were braver, he would have quit sooner.", "explanation": "Audio exacto." }
+      ]
+    }
+  ]
+}
