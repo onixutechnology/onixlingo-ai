@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useUIStore } from '@/store/uiStore';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { StatsModal } from '@/components/dashboard/StatsModal';
 import { 
   GraduationCap, 
   ToggleLeft, 
