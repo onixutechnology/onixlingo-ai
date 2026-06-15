@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-014",
+  "title": "The Cap Table",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Ledger of Power",
+      "parts": [
+        {
+          "visual": "A founder has an idea, $1,000 in the bank, and a spreadsheet. That spreadsheet is the Cap Table.\n\nThe Anatomy:\n1. Capitalization Table (Cap Table): The master document that shows exactly who owns what percentage of the company.\n2. The Pieces: It lists the Founders' shares, the Investors' shares, and the 'Option Pool' (shares reserved to give to future employees).\n3. The Golden Rule: The Cap Table must equal exactly 100%. When a new investor buys in, everybody else's percentage gets mathematically smaller (Dilution).",
+          "audio": "The Cap Table is the most important legal document in a startup. It is the absolute mathematical truth of who owns the company and who controls the voting power."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Mathematical Reality",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup issues 1,000 total shares. Founder A has 600 shares, Founder B has 400. An investor buys 500 new shares. What happens to the founders' ownership?",
+          "options": [
+            "Nothing, they keep their percentages.",
+            "Dilution. The total number of shares is now 1,500. Founder A used to own 60% (600/1000), but now they only own 40% (600/1500). The pie got bigger, but their slice of the pie got smaller.",
+            "Founder B gets fired."
+          ],
+          "correct_answer": "Dilution. The total number of shares is now 1,500. Founder A used to own 60% (600/1000), but now they only own 40% (600/1500). The pie got bigger, but their slice of the pie got smaller.",
+          "explanation": "This is the fundamental math of Venture Capital. You trade ownership for cash."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC. What is she forcing the founders to do before she invests?",
+          "tts_text": "Before I sign this term sheet, you need to create a 15% Option Pool for future employees. And you must carve that 15% entirely out of your own founder shares, not my new shares.",
+          "options": [
+            "She wants more money.",
+            "The Pre-Money Option Pool Shuffle. The VC forces the founders to absorb the entire mathematical cost of the employee shares *before* the investment happens, protecting the VC from immediate dilution.",
+            "She wants to hire her friends."
+          ],
+          "correct_answer": "The Pre-Money Option Pool Shuffle. The VC forces the founders to absorb the entire mathematical cost of the employee shares *before* the investment happens, protecting the VC from immediate dilution.",
+          "explanation": "This is a standard, brutal VC tactic that inexperienced founders fail to notice."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a startup has a 'Messy' Cap Table (e.g., they gave 5% to a random uncle, 10% to an old professor, and 15% to a marketing agency)?",
+          "options": [
+            "The company is famous.",
+            "It becomes 'Un-investable'. Top tier VCs will refuse to invest because there is too much 'Dead Equity'. The founders don't own enough of the company to stay motivated.",
+            "The uncle gets rich."
+          ],
+          "correct_answer": "It becomes 'Un-investable'. Top tier VCs will refuse to invest because there is too much 'Dead Equity'. The founders don't own enough of the company to stay motivated.",
+          "explanation": "Never give away equity to advisors or consultants in the early days. Pay them in cash."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Fully Diluted' ownership?",
+          "options": [
+            "Ownership of a water company.",
+            "The calculation of ownership assuming that every single option, warrant, and convertible note has been turned into actual shares. It shows the 'worst-case scenario' of your ownership percentage.",
+            "Ownership that is illegal."
+          ],
+          "correct_answer": "The calculation of ownership assuming that every single option, warrant, and convertible note has been turned into actual shares. It shows the 'worst-case scenario' of your ownership percentage.",
+          "explanation": "Always calculate your wealth based on the Fully Diluted cap table, not the current issued shares."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Cap Table Terminology",
+      "pairs": [
+        { "concept": "Cap Table", "match": "A spreadsheet or document that shows the ownership stakes in a startup" },
+        { "concept": "Dilution", "match": "A decrease in existing shareholders' ownership percentage as a result of the company issuing new equity" },
+        { "concept": "Option Pool", "match": "An amount of a startup's equity reserved for future hires" },
+        { "concept": "Fully Diluted", "match": "The total number of shares that would be outstanding if all possible sources of conversion were exercised" }
+      ]
+    }
+  ]
+}

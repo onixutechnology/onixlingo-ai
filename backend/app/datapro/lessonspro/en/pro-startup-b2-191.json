@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-191",
+  "title": "The Cult of Hustle Culture",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Glamorization of Exhaustion",
+      "parts": [
+        {
+          "visual": "A CEO posts on Twitter: 'I sleep 4 hours a night under my desk. If you take weekends off, you don't want to win.' Junior employees read this, feel guilty, and start working 90 hours a week. Six months later, the company's best engineers all resign due to massive physical exhaustion. The CEO is left sleeping under a desk in an empty office.\n\nThe Toxicity:\n1. Hustle Culture: The toxic Silicon Valley ideology that equates extreme physical and mental suffering with dedication and future success.\n2. The Productivity Illusion: Working 100 hours a week does not equal 100 hours of output. In knowledge work (like coding or design), the human brain degrades rapidly after 50 hours. The last 50 hours are usually spent writing bad code that will take 100 hours to fix later.",
+          "audio": "Hustle culture is a lie sold by billionaires who already won the game. If you build a culture where sleep deprivation is a badge of honor, you are not building a resilient company; you are building a factory for burnout."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Working Smart vs. Suffering",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Performative Work'?",
+          "options": [
+            "Acting in a play.",
+            "Staying at the office until 9:00 PM just so the CEO sees you at your desk, even though you finished your actual work at 5:00 PM. It destroys morale and encourages people to waste time instead of being efficient.",
+            "Working while listening to music."
+          ],
+          "correct_answer": "Staying at the office until 9:00 PM just so the CEO sees you at your desk, even though you finished your actual work at 5:00 PM. It destroys morale and encourages people to waste time instead of being efficient.",
+          "explanation": "If you measure hours instead of output, you get actors instead of workers."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the engineering manager. Why does she ban engineers from working on Sundays?",
+          "tts_text": "If an engineer writes code on Sunday, they are tired. Tired engineers write bugs. On Monday, my fresh engineers have to spend the entire day fixing the bugs the tired engineer wrote on Sunday. It is mathematically inefficient.",
+          "options": [
+            "Because Sunday is for watching football.",
+            "Negative Velocity. In creative knowledge work, an exhausted worker does not produce zero value; they actually produce negative value (bugs, bad architecture) that actively slows down the rest of the team.",
+            "Because she doesn't want to pay them."
+          ],
+          "correct_answer": "Negative Velocity. In creative knowledge work, an exhausted worker does not produce zero value; they actually produce negative value (bugs, bad architecture) that actively slows down the rest of the team.",
+          "explanation": "Exhaustion creates debt."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is the founder's expectation of employees often mathematically unfair?",
+          "options": [
+            "Because founders are bad at math.",
+            "The Equity Disconnect. The founder owns 40% of the company. If it succeeds, they make $400 Million. The employee owns 0.1%. Expecting an employee to sacrifice their health and marriage for a 0.1% payout is delusional and unfair.",
+            "Because employees don't know math."
+          ],
+          "correct_answer": "The Equity Disconnect. The founder owns 40% of the company. If it succeeds, they make $400 Million. The employee owns 0.1%. Expecting an employee to sacrifice their health and marriage for a 0.1% payout is delusional and unfair.",
+          "explanation": "You cannot buy a founder's obsession with an employee's salary."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How do top-tier tech companies actually view sleep and recovery?",
+          "options": [
+            "As a weakness.",
+            "As a biological performance enhancer. Elite founders treat themselves like Olympic athletes, not machines. Sleep and recovery are not 'breaks' from work; they are critical biological requirements to make high-level strategic decisions.",
+            "As a waste of money."
+          ],
+          "correct_answer": "As a biological performance enhancer. Elite founders treat themselves like Olympic athletes, not machines. Sleep and recovery are not 'breaks' from work; they are critical biological requirements to make high-level strategic decisions.",
+          "explanation": "Rest is a weapon."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Culture Terminology",
+      "pairs": [
+        { "concept": "Hustle Culture", "match": "The toxic ideology that glorifies exhaustion and 100-hour work weeks" },
+        { "concept": "Performative Work", "match": "Pretending to work late just to look dedicated to the boss" },
+        { "concept": "Negative Velocity", "match": "When exhausted workers write bad code that actually slows the team down" },
+        { "concept": "Equity Disconnect", "match": "Expecting employees with 0.1% ownership to work as hard as the founder" }
+      ]
+    }
+  ]
+}

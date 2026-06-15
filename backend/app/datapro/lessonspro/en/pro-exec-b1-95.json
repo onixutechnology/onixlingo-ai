@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-95",
+  "title": "Understanding the Cap Table",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Who Owns the Company?",
+      "parts": [
+        {
+          "visual": "The Capitalization Table (Cap Table) is a spreadsheet that shows exactly who owns what percentage of the company.\n\nKey Components:\n1. Founders' Equity: What the creators own.\n2. Investors (VCs): Equity given in exchange for cash.\n3. Option Pool: Shares reserved for future employees to incentivize them (RSUs and Stock Options).",
+          "audio": "The Cap Table shows exactly who owns the company. It tracks Founders' Equity, Investor shares, and the Employee Option Pool."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Equity and Ownership",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What happens to a founder's percentage of ownership every time they raise money from Venture Capitalists?",
+          "options": [
+            "It goes up.",
+            "It gets 'Diluted' (decreases), because they must issue new shares to give to the investors.",
+            "It stays exactly the same."
+          ],
+          "correct_answer": "It gets 'Diluted' (decreases), because they must issue new shares to give to the investors.",
+          "explanation": "Dilution is a reality of raising capital. You own a smaller piece of the pie, but ideally, the pie itself becomes massively larger."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the HR Director. What part of the cap table are they discussing?",
+          "tts_text": "We need to reserve 15% of our total shares to give as bonuses to attract top-tier engineering talent over the next two years.",
+          "options": [
+            "The Option Pool.",
+            "Venture Capital.",
+            "Debt."
+          ],
+          "correct_answer": "The Option Pool.",
+          "explanation": "The Option Pool is a slice of the company explicitly set aside for employees. Without it, startups cannot afford elite talent."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Vesting'?",
+          "options": [
+            "Wearing a vest to the office.",
+            "The process where an employee earns their stock options over time (usually 4 years), rather than getting them all on day one.",
+            "Selling stock."
+          ],
+          "correct_answer": "The process where an employee earns their stock options over time (usually 4 years), rather than getting them all on day one.",
+          "explanation": "Vesting prevents an employee from taking massive amounts of stock and quitting on their second day. It guarantees loyalty."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does 'Post-Money Valuation' mean?",
+          "options": [
+            "The value of the company after the CEO leaves.",
+            "The value of the company immediately after outside investment is added to its balance sheet.",
+            "A fake number."
+          ],
+          "correct_answer": "The value of the company immediately after outside investment is added to its balance sheet.",
+          "explanation": "If your company is worth $10M (Pre-Money) and a VC gives you $2M, your Post-Money Valuation is $12M."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Cap Table Vocabulary",
+      "pairs": [
+        { "concept": "Cap Table", "match": "A record of all major shareholders in a company" },
+        { "concept": "Dilution", "match": "A reduction in ownership percentage when new shares are issued" },
+        { "concept": "Vesting", "match": "The schedule by which you earn the rights to your stock" },
+        { "concept": "Option Pool", "match": "Shares set aside specifically for employees" }
+      ]
+    }
+  ]
+}

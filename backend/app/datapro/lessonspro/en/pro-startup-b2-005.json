@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-005",
+  "title": "The Business Model (How we make money)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Mechanics of Cash",
+      "parts": [
+        {
+          "visual": "A startup has millions of free users, but they are going bankrupt because they don't know how to charge them. They have a product, but they do not have a Business Model.\n\nThe Models:\n1. SaaS (Software as a Service): Monthly subscriptions.\n2. Marketplace: Taking a % cut of a transaction between two people (Uber, Airbnb).\n3. Freemium: 95% use it for free, 5% pay for premium features.\n4. Enterprise B2B: Selling massive, multi-year contracts directly to other corporations.",
+          "audio": "A great product is not a company. A Business Model explains exactly how the startup extracts money from the value it creates. The most popular models in tech are SaaS, Marketplaces, and Enterprise B2B."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Monetizing the Product",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Airbnb doesn't own any hotels. They simply connect people who have extra rooms with people who need to sleep, and charge a 15% fee on every booking. What is this Business Model?",
+          "options": [
+            "A charity.",
+            "A Marketplace Model (or Brokerage Model). They facilitate the transaction and take a 'Take Rate' (commission).",
+            "A SaaS model."
+          ],
+          "correct_answer": "A Marketplace Model (or Brokerage Model). They facilitate the transaction and take a 'Take Rate' (commission).",
+          "explanation": "Marketplaces are incredibly hard to start (the Cold Start Problem), but wildly profitable once they achieve network effects."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the B2B founder. How do they price their software?",
+          "tts_text": "We don't charge a flat monthly fee. We charge $0.01 for every single API call the customer makes. If they use our system a little, they pay a little. If they scale, they pay millions.",
+          "options": [
+            "Freemium Pricing.",
+            "Usage-Based Pricing (or Pay-As-You-Go). The revenue scales perfectly with the customer's utilization of the product.",
+            "A flat-rate subscription."
+          ],
+          "correct_answer": "Usage-Based Pricing (or Pay-As-You-Go). The revenue scales perfectly with the customer's utilization of the product.",
+          "explanation": "This is how AWS (Amazon Web Services) and Stripe make billions of dollars."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of relying on an 'Advertising' business model (like early Facebook or Twitter)?",
+          "options": [
+            "People like ads.",
+            "You need hundreds of millions of daily active users before the ad revenue becomes mathematically significant. Most startups die long before they reach that scale.",
+            "The ads take up too much memory."
+          ],
+          "correct_answer": "You need hundreds of millions of daily active users before the ad revenue becomes mathematically significant. Most startups die long before they reach that scale.",
+          "explanation": "If you don't charge the user, you must achieve planetary scale."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do VCs love 'Enterprise B2B' business models?",
+          "options": [
+            "Because they like office buildings.",
+            "Because the contracts are massive ($100k+ per year) and 'Churn' is extremely low. Once a massive corporation installs your software, it is too painful for them to switch to a competitor.",
+            "Because B2B software is pretty."
+          ],
+          "correct_answer": "Because the contracts are massive ($100k+ per year) and 'Churn' is extremely low. Once a massive corporation installs your software, it is too painful for them to switch to a competitor.",
+          "explanation": "High ACV (Annual Contract Value) + Low Churn = A billion dollar valuation."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Business Model Terminology",
+      "pairs": [
+        { "concept": "Marketplace", "match": "A platform that connects buyers and sellers and takes a commission" },
+        { "concept": "SaaS", "match": "Software licensed on a subscription basis" },
+        { "concept": "Usage-Based Pricing", "match": "Charging customers directly based on how much they consume the product" },
+        { "concept": "Take Rate", "match": "The percentage of a transaction that a marketplace platform keeps as revenue" }
+      ]
+    }
+  ]
+}

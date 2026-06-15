@@ -1,0 +1,100 @@
+{
+  "id": "pro-startup-b2-152",
+  "title": "Intellectual Property (Trademarks and Patents)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Defending the Castle",
+      "parts": [
+        {
+          "visual": "A founder spends 5 years inventing a revolutionary new battery. They are so excited, they post the exact chemical formula on a public blog to show off. A massive corporation sees the blog, copies the formula, patents it, and makes billions. The founder gets nothing.\n\nThe Shields:\n1. Trademark: Protects your brand identity (Your name, logo, and slogans). It prevents a competitor from launching a product with the same name to confuse your customers.\n2. Patent: Protects your actual invention (how the machine works or the chemical formula). Once you disclose an invention publicly, you generally lose the right to patent it.",
+          "audio": "In software, execution is usually more important than patents. But in hardware, biotech, or deep tech, your Intellectual Property is the only thing standing between your startup and complete annihilation by massive corporate competitors."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Building the Moat",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Why do most typical SaaS (Software as a Service) startups ignore patents?",
+          "options": [
+            "Because software is illegal.",
+            "Because software patents are incredibly expensive, take years to get, and are very easy for competitors to bypass just by writing the code slightly differently. Speed of execution is a better defense than a software patent.",
+            "Because lawyers are cheap."
+          ],
+          "correct_answer": "Because software patents are incredibly expensive, take years to get, and are very easy for competitors to bypass just by writing the code slightly differently. Speed of execution is a better defense than a software patent.",
+          "explanation": "By the time a software patent is approved, the software is usually obsolete."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the trademark lawyer. What is the biggest mistake founders make when naming their startup?",
+          "tts_text": "Founders love describing exactly what their app does. They name their shoe delivery app 'Shoe Delivery'. You cannot trademark generic words. You have to invent a completely meaningless, fake word, like 'Zappos'.",
+          "options": [
+            "They make the name too long.",
+            "Descriptive Names vs. Fanciful Names. The law will not let you own a normal dictionary word if it just describes the product. The strongest trademarks in the world (Google, Rolex, Kodak) are entirely made-up words that have no other meaning.",
+            "They use too many vowels."
+          ],
+          "correct_answer": "Descriptive Names vs. Fanciful Names. The law will not let you own a normal dictionary word if it just describes the product. The strongest trademarks in the world (Google, Rolex, Kodak) are entirely made-up words that have no other meaning.",
+          "explanation": "If it describes the product, you can't own the name."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Copyright' and what does it protect in a startup?",
+          "options": [
+            "It protects the idea.",
+            "It protects the exact, literal expression of an idea. For a startup, copyright automatically protects the actual lines of code written by the engineers, the text on the website, and the design of the app, but NOT the underlying idea itself.",
+            "It protects the logo."
+          ],
+          "correct_answer": "It protects the exact, literal expression of an idea. For a startup, copyright automatically protects the actual lines of code written by the engineers, the text on the website, and the design of the app, but NOT the underlying idea itself.",
+          "explanation": "You can't copyright the idea of a dating app. You can copyright the exact code of Tinder."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a startup engineer writes code on their personal laptop, on a Saturday, while employed by the startup?",
+          "options": [
+            "The engineer owns the code.",
+            "IP Assignment. If the engineer signed a standard 'IP Assignment Agreement' (which all startups require), the company legally owns that code, even if written on the weekend, because it relates to the business. The company must own all IP.",
+            "The government owns the code."
+          ],
+          "correct_answer": "IP Assignment. If the engineer signed a standard 'IP Assignment Agreement' (which all startups require), the company legally owns that code, even if written on the weekend, because it relates to the business. The company must own all IP.",
+          "explanation": "If the company doesn't own the code, VCs will not invest."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Protection",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to match the legal protection to its asset:",
+          "parts": [
+            "Patents",
+            "protect",
+            "inventions,",
+            "Trademarks",
+            "protect",
+            "brands."
+          ],
+          "correct_order": [
+            "Patents",
+            "protect",
+            "inventions,",
+            "Trademarks",
+            "protect",
+            "brands."
+          ],
+          "explanation": "The fundamental difference in IP law."
+        }
+      ]
+    }
+  ]
+}

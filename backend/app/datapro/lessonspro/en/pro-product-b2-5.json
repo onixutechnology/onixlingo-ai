@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-5",
+  "title": "Prioritization Frameworks (RICE, MoSCoW)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Art of Saying No",
+      "parts": [
+        {
+          "visual": "The CEO wants an AI chatbot. The Sales team wants a dashboard. The users want dark mode. The engineers want to rewrite the database. You have 3 engineers and 4 weeks. You cannot build it all. You must kill 90% of the ideas. How do you decide who to disappoint?\n\nThe Frameworks:\n1. The Problem: If you prioritize based on who yells the loudest (usually Sales or the CEO), your product becomes a chaotic Frankenstein monster. You need objective math to defend your decisions.\n2. The RICE Score: A mathematical framework to score features based on Reach, Impact, Confidence, and Effort.\n3. MoSCoW: A categorization method: Must-have, Should-have, Could-have, Won't-have.",
+          "audio": "Product management is the relentless, exhausting process of saying NO. Anyone can say yes to a good idea. A true PM has the courage to look at a brilliant, profitable, highly-requested feature and say, 'No, we are not building that right now.'"
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Math of Decisions",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "In the RICE framework, what does 'Effort' represent?",
+          "options": [
+            "How hard the PM works.",
+            "The denominator of the equation. It represents how many weeks/months of engineering time the feature will cost. A feature with massive impact is terrible if the effort is 12 months. A feature with medium impact is brilliant if the effort is 2 days.",
+            "The marketing budget."
+          ],
+          "correct_answer": "The denominator of the equation. It represents how many weeks/months of engineering time the feature will cost. A feature with massive impact is terrible if the effort is 12 months. A feature with medium impact is brilliant if the effort is 2 days.",
+          "explanation": "Impact divided by Cost equals Priority."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the PM defending a decision against the CEO. Why did the PM downgrade the CEO's idea based on the 'Confidence' score in RICE?",
+          "tts_text": "You think this feature will double revenue. But we have zero user data proving that. It is just a guess. Therefore, I am giving this a Confidence score of 20%. Because the confidence is low, the overall RICE score crashes to the bottom of the list.",
+          "options": [
+            "Because the PM hates the CEO.",
+            "Punishing assumptions. The 'Confidence' metric forces teams to admit when they are guessing. If you think the impact is huge, but you have no data to back it up, the math forces you to do user research before committing 6 months of engineering time.",
+            "Because the CEO is not confident."
+          ],
+          "correct_answer": "Punishing assumptions. The 'Confidence' metric forces teams to admit when they are guessing. If you think the impact is huge, but you have no data to back it up, the math forces you to do user research before committing 6 months of engineering time.",
+          "explanation": "Data defeats hierarchy."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "In the MoSCoW method, what is the difference between a 'Must-Have' and a 'Should-Have'?",
+          "options": [
+            "Must is spelled differently.",
+            "Legality and survival. A 'Must-Have' means if we launch without this, the product is literally broken, illegal, or useless (e.g., a login button). A 'Should-Have' is highly valuable, but we can technically launch on Monday without it and survive.",
+            "Should-Have is more expensive."
+          ],
+          "correct_answer": "Legality and survival. A 'Must-Have' means if we launch without this, the product is literally broken, illegal, or useless (e.g., a login button). A 'Should-Have' is highly valuable, but we can technically launch on Monday without it and survive.",
+          "explanation": "Must-Haves are oxygen. Should-Haves are vitamins."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is the 'Won't-Have' category in MoSCoW the most powerful tool for a PM?",
+          "options": [
+            "It is for lazy people.",
+            "It manages expectations aggressively. By putting a highly requested feature permanently into the 'Won't Have' bucket for this quarter, the PM kills false hope. The sales team stops asking about it, and the engineers can focus without distraction.",
+            "It saves money on servers."
+          ],
+          "correct_answer": "It manages expectations aggressively. By putting a highly requested feature permanently into the 'Won't Have' bucket for this quarter, the PM kills false hope. The sales team stops asking about it, and the engineers can focus without distraction.",
+          "explanation": "A clear 'No' is vastly superior to a vague 'Maybe later'."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Prioritization Terms",
+      "pairs": [
+        { "concept": "Reach (RICE)", "match": "How many total users will actually see or use this feature?" },
+        { "concept": "Effort (RICE)", "match": "How many weeks of engineering time it will take to build" },
+        { "concept": "Must-Have (MoSCoW)", "match": "The product is literally broken or useless without this" },
+        { "concept": "Won't-Have (MoSCoW)", "match": "Explicitly deciding NOT to build something to protect the timeline" }
+      ]
+    }
+  ]
+}

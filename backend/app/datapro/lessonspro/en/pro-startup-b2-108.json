@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-108",
+  "title": "SOC 2 Compliance and Security Audits",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Security Checkpoint",
+      "parts": [
+        {
+          "visual": "A 10-person startup tries to sell its software to a massive hospital network. The hospital says, 'We love the product. Send us your SOC 2 Type II report so we can verify you won't leak our patients' medical records to Russian hackers.' The startup has no idea what that means.\n\nThe Shield:\n1. SOC 2 (System and Organization Controls): A rigorous, formal security framework created by the American Institute of CPAs. It proves that a tech company securely manages customer data to protect privacy.\n2. The Barrier to Entry: In modern B2B sales, if you do not have a formal, externally audited security certification (like SOC 2 or ISO 27001), major corporations will legally refuse to buy your software.",
+          "audio": "Security is no longer a technical feature; it is a fundamental business requirement. Enterprise sales die instantly the moment a corporate Chief Information Security Officer (CISO) realizes your startup is running its database from a laptop in a coffee shop."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Passing the Audit",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the fundamental difference between SOC 2 Type I and SOC 2 Type II?",
+          "options": [
+            "Type II is cheaper.",
+            "Type I proves your security systems look good on paper on a single day. Type II requires an auditor to monitor your startup for 6 to 12 months to prove you actually follow your own security rules every single day.",
+            "Type I is for hardware."
+          ],
+          "correct_answer": "Type I proves your security systems look good on paper on a single day. Type II requires an auditor to monitor your startup for 6 to 12 months to prove you actually follow your own security rules every single day.",
+          "explanation": "Type II is the gold standard for enterprise sales."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the startup engineer complaining about SOC 2 compliance. What annoying corporate rule did they have to implement?",
+          "tts_text": "Because of this audit, I can't just push code to the live server anymore. I have to submit it, a second engineer has to formally review it, and then I have to document the change in Jira. It slows us down so much.",
+          "options": [
+            "They have to wear a suit.",
+            "Change Management and Access Control. Compliance requires removing the 'wild west' startup culture. You must prove that no single employee can secretly change the code or access customer data without oversight and a digital paper trail.",
+            "They have to use a different programming language."
+          ],
+          "correct_answer": "Change Management and Access Control. Compliance requires removing the 'wild west' startup culture. You must prove that no single employee can secretly change the code or access customer data without oversight and a digital paper trail.",
+          "explanation": "Enterprise security means you can no longer 'move fast and break things'."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If a startup cannot afford a $50,000 SOC 2 audit yet, what will the enterprise client send them instead during the sales cycle?",
+          "options": [
+            "A rejection letter.",
+            "A 'Security Questionnaire'. This is a massive Excel spreadsheet with 300 highly technical questions about encryption, passwords, and server infrastructure. The startup must answer them perfectly, or the CISO will block the deal.",
+            "A box of chocolates."
+          ],
+          "correct_answer": "A 'Security Questionnaire'. This is a massive Excel spreadsheet with 300 highly technical questions about encryption, passwords, and server infrastructure. The startup must answer them perfectly, or the CISO will block the deal.",
+          "explanation": "The Security Questionnaire is the bane of every B2B founder's existence."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do VCs strongly encourage B2B startups to get SOC 2 compliance as early as possible?",
+          "options": [
+            "Because VCs like paperwork.",
+            "It unlocks revenue. Without it, you are locked out of the Fortune 500 market. Getting SOC 2 compliant early removes the biggest objection in the sales cycle, turning security from a liability into a competitive advantage.",
+            "Because it makes the logo look better."
+          ],
+          "correct_answer": "It unlocks revenue. Without it, you are locked out of the Fortune 500 market. Getting SOC 2 compliant early removes the biggest objection in the sales cycle, turning security from a liability into a competitive advantage.",
+          "explanation": "Compliance is painful, but being broke is worse."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Security Terminology",
+      "pairs": [
+        { "concept": "SOC 2", "match": "A formal auditing procedure ensuring a service provider securely manages data" },
+        { "concept": "CISO", "match": "Chief Information Security Officer; the executive who blocks unsafe software" },
+        { "concept": "Security Questionnaire", "match": "A massive checklist used to evaluate a startup's security posture before buying" },
+        { "concept": "Access Control", "match": "Strict policies ensuring employees can only access the data they absolutely need" }
+      ]
+    }
+  ]
+}

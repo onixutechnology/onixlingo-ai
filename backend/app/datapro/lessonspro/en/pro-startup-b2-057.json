@@ -1,0 +1,104 @@
+{
+  "id": "pro-startup-b2-057",
+  "title": "The 10x Engineer Myth",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Toxic Genius",
+      "parts": [
+        {
+          "visual": "You hire a brilliant engineer. He writes code ten times faster than anyone else. But he refuses to document his work, he insults the junior developers, and he refuses to attend meetings. Your company's output actually goes *down*.\n\nThe Legend vs. Reality:\n1. The 10x Engineer: A Silicon Valley myth that some programmers are 10 times more productive than average engineers, and therefore should be allowed to behave however they want.\n2. The Reality: A toxic 'genius' destroys team morale. The total velocity of the engineering team drops because nobody wants to work with the brilliant jerk.",
+          "audio": "Never hire the brilliant jerk. One toxic '10x engineer' will cause your three best normal engineers to quit. The net productivity of the company is heavily damaged by their arrogance."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Team Dynamics",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A brilliant engineer writes incredibly complex, elegant code, but explicitly refuses to write 'documentation' (instructions on how the code works) because 'it slows him down'. Why is this a firing offense?",
+          "options": [
+            "Because paper is cheap.",
+            "Because the 'Bus Factor' becomes 1. If that engineer gets hit by a bus (or quits), nobody else in the company will be able to understand or fix the complex code, putting the entire startup at risk.",
+            "Because documentation is fun to read."
+          ],
+          "correct_answer": "Because the 'Bus Factor' becomes 1. If that engineer gets hit by a bus (or quits), nobody else in the company will be able to understand or fix the complex code, putting the entire startup at risk.",
+          "explanation": "Code without documentation is essentially a hostage situation."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CTO. What is the definition of a true '10x Engineer' in a mature startup?",
+          "tts_text": "A real 10x engineer isn't someone who writes code 10 times faster. It's an engineer who mentors 10 junior developers, improving everyone's code, so the *entire team's* output goes up by 10x.",
+          "options": [
+            "A fast typist.",
+            "A Force Multiplier. True extreme value comes from elevating the team, creating great architecture, and teaching others, not just being a lone wolf who types incredibly fast.",
+            "A lone wolf."
+          ],
+          "correct_answer": "A Force Multiplier. True extreme value comes from elevating the team, creating great architecture, and teaching others, not just being a lone wolf who types incredibly fast.",
+          "explanation": "Leadership and mentorship scale. Typing speed does not."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do early-stage startups often tolerate the 'Brilliant Jerk' despite the toxic culture?",
+          "options": [
+            "Because the CEO is also a jerk.",
+            "Desperation. When a startup has 4 months of cash left, they are desperate for someone to build the MVP immediately. The toxic genius gets the job done, but the cultural poison ruins the company later.",
+            "Because jerks work for free."
+          ],
+          "correct_answer": "Desperation. When a startup has 4 months of cash left, they are desperate for someone to build the MVP immediately. The toxic genius gets the job done, but the cultural poison ruins the company later.",
+          "explanation": "You trade long-term culture for short-term survival. It is a dangerous bargain."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does it mean when an engineer 'hoards knowledge'?",
+          "options": [
+            "They read a lot of books.",
+            "They intentionally keep critical systems a secret in their own head to make themselves 'indispensable' to the company. They cannot be fired, because the company relies entirely on their secret knowledge.",
+            "They steal the company's laptops."
+          ],
+          "correct_answer": "They intentionally keep critical systems a secret in their own head to make themselves 'indispensable' to the company. They cannot be fired, because the company relies entirely on their secret knowledge.",
+          "explanation": "Knowledge hoarding is a toxic power play. Great engineers democratize knowledge."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Teams",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the hiring rule:",
+          "parts": [
+            "Never",
+            "tolerate",
+            "a",
+            "brilliant",
+            "jerk",
+            "on",
+            "your",
+            "team."
+          ],
+          "correct_order": [
+            "Never",
+            "tolerate",
+            "a",
+            "brilliant",
+            "jerk",
+            "on",
+            "your",
+            "team."
+          ],
+          "explanation": "Culture is defined by the worst behavior you are willing to tolerate."
+        }
+      ]
+    }
+  ]
+}

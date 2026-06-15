@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-101",
+  "title": "Hardware is Hard (Supply Chains)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Physical Reality",
+      "parts": [
+        {
+          "visual": "A software startup pushes a broken line of code. They fix it in 5 minutes and deploy an update to millions of users instantly for $0. \nA hardware startup builds a drone. They manufacture 10,000 units in China. They realize a plastic gear inside the drone breaks easily. They have to recall all 10,000 drones, scrap them, and spend $2 Million to redesign the mold.\n\nThe Cruel Physics:\n1. Atoms vs. Bits: Software (bits) has zero marginal cost of reproduction and infinite scalability. Hardware (atoms) is governed by the brutal laws of physics, factories, and international shipping.\n2. Supply Chain: The complex global network of different factories required to produce a single physical object.",
+          "audio": "In Silicon Valley, there is a famous saying: 'Hardware is hard'. Unlike software, you cannot just iterate your way out of a manufacturing mistake. One tiny physical error in the design phase can bankrupt the entire company six months later."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Navigating the Factories",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A hardware startup wants to build a new smartwatch. What is the 'BOM' (Bill of Materials)?",
+          "options": [
+            "A list of the engineers.",
+            "The master recipe. It is the exhaustive list of every single physical component (screen, battery, screws, microchips) required to build one watch, along with the specific cost of each item from the suppliers.",
+            "The box the watch comes in."
+          ],
+          "correct_answer": "The master recipe. It is the exhaustive list of every single physical component (screen, battery, screws, microchips) required to build one watch, along with the specific cost of each item from the suppliers.",
+          "explanation": "If your BOM cost is higher than your retail price, your company is dead on arrival."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the hardware CEO panicking. What is the catastrophic supply chain issue?",
+          "tts_text": "We have 50,000 pre-orders for Christmas. But the factory in Taiwan that makes our custom Bluetooth chip just flooded. They can't deliver the chips for three months. We have all the other parts, but without the Bluetooth chip, we can't ship anything.",
+          "options": [
+            "They ran out of cardboard boxes.",
+            "Single Point of Failure. The startup relied entirely on one factory for a critical component. In hardware, if one single part out of 500 is missing, the entire production line stops. You cannot ship a 99% finished product.",
+            "The Bluetooth chip is too loud."
+          ],
+          "correct_answer": "Single Point of Failure. The startup relied entirely on one factory for a critical component. In hardware, if one single part out of 500 is missing, the entire production line stops. You cannot ship a 99% finished product.",
+          "explanation": "Supply chain resilience requires having backup suppliers for every critical component."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do VCs often hate investing in Consumer Hardware startups?",
+          "options": [
+            "Because VCs hate objects.",
+            "Capital Intensity and Inventory Risk. A hardware startup must spend millions of dollars upfront to manufacture inventory *before* they can sell it. If the product doesn't sell, the startup is stuck with a warehouse full of useless plastic.",
+            "Because hardware is too easy."
+          ],
+          "correct_answer": "Capital Intensity and Inventory Risk. A hardware startup must spend millions of dollars upfront to manufacture inventory *before* they can sell it. If the product doesn't sell, the startup is stuck with a warehouse full of useless plastic.",
+          "explanation": "Software scales on AWS. Hardware scales on cargo ships."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Tooling' in the context of hardware manufacturing?",
+          "options": [
+            "Buying hammers for the office.",
+            "The massive upfront cost of creating the custom steel molds used to inject plastic into the shape of your product. A single mold can cost $100,000 and take 3 months to carve. If you change the design by 1 millimeter, you have to buy a new mold.",
+            "The software used to draw the product."
+          ],
+          "correct_answer": "The massive upfront cost of creating the custom steel molds used to inject plastic into the shape of your product. A single mold can cost $100,000 and take 3 months to carve. If you change the design by 1 millimeter, you have to buy a new mold.",
+          "explanation": "Tooling is where 'agile development' goes to die."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Hardware Terminology",
+      "pairs": [
+        { "concept": "BOM", "match": "Bill of Materials; the comprehensive list of parts needed to build the product" },
+        { "concept": "Tooling", "match": "The custom steel molds and machinery required to mass-produce physical parts" },
+        { "concept": "Inventory Risk", "match": "The financial danger of manufacturing thousands of units that nobody buys" },
+        { "concept": "Supply Chain", "match": "The global network of suppliers and factories that provide the raw materials and assembly" }
+      ]
+    }
+  ]
+}

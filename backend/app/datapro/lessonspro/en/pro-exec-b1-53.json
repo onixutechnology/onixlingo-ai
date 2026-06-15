@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-53",
+  "title": "Defending Your Budget",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "ROI and Justification",
+      "parts": [
+        {
+          "visual": "When presenting a budget to the CFO, 'we need it' is not a strategy. You must prove Return on Investment (ROI).\n\nRules of Budget Defense:\n1. Tie every expense to a strategic company goal.\n2. Show the 'Cost of Inaction' (What happens if we don't spend this?).\n3. Provide hard metrics, not soft feelings.",
+          "audio": "When presenting a budget, 'we need it' is not a strategy. You must prove ROI and show the cost of inaction."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Budget Justification",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "You want $50,000 for new software. What is the most persuasive argument to the CFO?",
+          "options": [
+            "The team really likes this software and it looks cool.",
+            "This software costs $50k but will automate 40 hours of manual work per week, saving us $120k in contractor fees annually.",
+            "Our competitors use it."
+          ],
+          "correct_answer": "This software costs $50k but will automate 40 hours of manual work per week, saving us $120k in contractor fees annually.",
+          "explanation": "CFOs speak the language of numbers. Proving that an expense is actually an investment that saves money guarantees approval."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the phrase. What negotiation tactic is this?",
+          "tts_text": "If we don't upgrade the server infrastructure this quarter, we risk a catastrophic outage during the Black Friday sales event.",
+          "options": [
+            "Asking politely.",
+            "Demonstrating the 'Cost of Inaction'.",
+            "Exaggerating."
+          ],
+          "correct_answer": "Demonstrating the 'Cost of Inaction'.",
+          "explanation": "Sometimes the strongest argument for spending money is highlighting the massive financial risk of doing nothing."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does 'ROI' stand for?",
+          "options": [
+            "Return on Investment: A metric used to understand the profitability of an investment.",
+            "Record of Income.",
+            "Return on Ideas."
+          ],
+          "correct_answer": "Return on Investment: A metric used to understand the profitability of an investment.",
+          "explanation": "Every single dollar requested in a corporate budget must have a projected ROI."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If the CFO tells you that your department must cut its budget by 10%, you should:",
+          "options": [
+            "Complain and say it's impossible.",
+            "Present a revised budget showing exactly what strategic goals will have to be delayed or cancelled due to the cut.",
+            "Cut everyone's salary secretly."
+          ],
+          "correct_answer": "Present a revised budget showing exactly what strategic goals will have to be delayed or cancelled due to the cut.",
+          "explanation": "Budget cuts mean scope cuts. Making the trade-offs clear to the executive team forces them to own the consequences of the cut."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Financial Acumen Terms",
+      "pairs": [
+        { "concept": "ROI", "match": "Return on Investment" },
+        { "concept": "Cost of Inaction", "match": "The negative financial impact of not doing something" },
+        { "concept": "Budget Cut", "match": "A reduction in allocated funds" },
+        { "concept": "Justification", "match": "The action of showing something to be right or reasonable" }
+      ]
+    }
+  ]
+}

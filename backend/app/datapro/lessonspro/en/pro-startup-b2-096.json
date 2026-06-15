@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-096",
+  "title": "The Network Effect (Defensibility)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Infinite Moat",
+      "parts": [
+        {
+          "visual": "A startup builds a new messaging app that is 10 times faster than WhatsApp and has better features. Nobody uses it. Why? Because a messaging app with no users is completely useless, even if the code is perfect.\n\nThe Monopoly Engine:\n1. Network Effect: A phenomenon where a product or service gains additional value as more people use it.\n2. Defensibility: Once a startup achieves a massive network effect (like Facebook or Uber), it becomes almost mathematically impossible for a new competitor to steal their market share, creating an impenetrable 'Moat'.",
+          "audio": "Software is easy to copy. Networks are impossible to copy. VCs do not want to fund great software; they want to fund software that creates a monopoly through powerful network effects."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Building the Moat",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Which of these businesses has a strong 'Direct Network Effect'?",
+          "options": [
+            "A company selling shoes.",
+            "A social media platform. Every time a new user joins, the platform instantly becomes more valuable to every other user because there is more content to consume and more people to talk to.",
+            "A coffee shop."
+          ],
+          "correct_answer": "A social media platform. Every time a new user joins, the platform instantly becomes more valuable to every other user because there is more content to consume and more people to talk to.",
+          "explanation": "If you are the only person on a social network, it's not a network; it's a diary."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC explaining why Uber's model is so powerful. What type of network effect is this?",
+          "tts_text": "More drivers mean shorter wait times. Shorter wait times attract more riders. More riders mean more money for drivers, which attracts more drivers. It is a perfect, self-reinforcing loop.",
+          "options": [
+            "A broken loop.",
+            "A Two-Sided Marketplace. This is an indirect network effect. The riders don't care about other riders; they care about the drivers. The drivers don't care about other drivers; they care about the riders. You must balance both sides.",
+            "A pyramid scheme."
+          ],
+          "correct_answer": "A Two-Sided Marketplace. This is an indirect network effect. The riders don't care about other riders; they care about the drivers. The drivers don't care about other drivers; they care about the riders. You must balance both sides.",
+          "explanation": "Marketplaces are incredibly hard to start, but impossible to kill once they reach scale."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Cold Start Problem'?",
+          "options": [
+            "When the servers freeze.",
+            "The existential challenge of starting a network effect business. How do you convince the first 100 people to join the network when the network has zero value because it is empty? Startups must often 'fake' the network early on.",
+            "When the CEO is mean."
+          ],
+          "correct_answer": "The existential challenge of starting a network effect business. How do you convince the first 100 people to join the network when the network has zero value because it is empty? Startups must often 'fake' the network early on.",
+          "explanation": "Reddit's founders created hundreds of fake accounts to make the site look active on Day 1."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A startup builds an amazing B2B accounting software. It has zero network effects. Is it a bad business?",
+          "options": [
+            "Yes, it is terrible.",
+            "No, but it lacks 'Defensibility'. It might be highly profitable, but if a competitor builds the exact same software for half the price tomorrow, the startup will lose all its customers. It has no 'Moat'.",
+            "Yes, it will go bankrupt."
+          ],
+          "correct_answer": "No, but it lacks 'Defensibility'. It might be highly profitable, but if a competitor builds the exact same software for half the price tomorrow, the startup will lose all its customers. It has no 'Moat'.",
+          "explanation": "High Switching Costs and Brand Loyalty are other moats, but Network Effects are the strongest."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Defensibility Terminology",
+      "pairs": [
+        { "concept": "Network Effect", "match": "When a product becomes more valuable as more people use it" },
+        { "concept": "The Moat", "match": "A competitive advantage that protects a company from being destroyed by rivals" },
+        { "concept": "Cold Start Problem", "match": "The massive difficulty of acquiring the very first users for a network" },
+        { "concept": "Two-Sided Marketplace", "match": "A platform connecting two distinct user groups who need each other" }
+      ]
+    }
+  ]
+}

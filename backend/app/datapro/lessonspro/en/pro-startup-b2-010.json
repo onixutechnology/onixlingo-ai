@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-010",
+  "title": "The Ask (How much money and why)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Closing the Pitch",
+      "parts": [
+        {
+          "visual": "You reach the final slide of your Pitch Deck. You must now look the billionaire investor in the eye and ask them for millions of dollars. If you stutter, you lose.\n\nThe Elements of 'The Ask':\n1. The Amount: Exactly how much capital you are raising (e.g., 'We are raising a $2M Seed round').\n2. The Runway: How many months that money will keep the company alive (usually 18-24 months).\n3. The Milestones: Exactly what unassailable goals you will achieve with that money before you run out.",
+          "audio": "The final slide of a pitch deck is The Ask. You must confidently state exactly how much money you need, how long it will last, and the specific milestones you will buy with that capital."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Allocating the Capital",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A founder asks a VC for $5 Million. The VC asks: 'What are you going to do with the money?' The founder replies: 'We are going to throw a huge party and figure it out later.' What is the correct answer?",
+          "options": [
+            "'We will put it in the bank for safety.'",
+            "'We will use 40% to hire 5 senior engineers to finish the AI module, 40% for direct CAC to acquire 10,000 users, and 20% for operational runway.'",
+            "'We will buy a new office.'"
+          ],
+          "correct_answer": "'We will use 40% to hire 5 senior engineers to finish the AI module, 40% for direct CAC to acquire 10,000 users, and 20% for operational runway.'",
+          "explanation": "Investors demand a precise 'Use of Funds' breakdown. They are buying a specific execution plan."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the founder's fatal error. Why is the investor instantly passing on the deal?",
+          "tts_text": "We are asking for $500,000. Our monthly burn rate is $100,000. So this money will give us exactly 5 months to try and figure out our Go-To-Market strategy.",
+          "options": [
+            "The burn rate is too low.",
+            "The 'Runway' is far too short. 5 months is a death sentence. It takes 6 months just to close a fundraising round. The founder will be out of cash before they even start executing.",
+            "The requested amount is too high."
+          ],
+          "correct_answer": "The 'Runway' is far too short. 5 months is a death sentence. It takes 6 months just to close a fundraising round. The founder will be out of cash before they even start executing.",
+          "explanation": "You must raise enough money to survive for 18 to 24 months."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the concept of a 'Milestone' in the context of The Ask?",
+          "options": [
+            "A heavy rock.",
+            "A massive, value-creating target (e.g., 'Reach $1M in Annual Revenue'). If you hit the milestone before your runway ends, your company becomes highly valuable, allowing you to easily raise the next round of funding.",
+            "A type of metric."
+          ],
+          "correct_answer": "A massive, value-creating target (e.g., 'Reach $1M in Annual Revenue'). If you hit the milestone before your runway ends, your company becomes highly valuable, allowing you to easily raise the next round of funding.",
+          "explanation": "You are literally buying time (runway) to hit a milestone. If you miss the milestone, you die."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do VCs prefer founders who say 'We *are* raising $2M' instead of 'We *want* to raise $2M'?",
+          "options": [
+            "It is grammatically shorter.",
+            "It signals momentum and confidence. 'We are raising' implies the train is leaving the station and the VC needs to jump on board before they miss out (FOMO).",
+            "It sounds more polite."
+          ],
+          "correct_answer": "It signals momentum and confidence. 'We are raising' implies the train is leaving the station and the VC needs to jump on board before they miss out (FOMO).",
+          "explanation": "Fundraising is a psychological game of power dynamics."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Fundraising Terminology",
+      "pairs": [
+        { "concept": "The Ask", "match": "The specific request for capital at the end of a pitch presentation" },
+        { "concept": "Runway", "match": "The amount of time a company has until it runs out of cash, assuming current income and expenses" },
+        { "concept": "Burn Rate", "match": "The rate at which a new company is spending its venture capital to finance overhead before generating positive cash flow" },
+        { "concept": "Use of Funds", "match": "A detailed breakdown of exactly how the startup plans to spend the investor's money" }
+      ]
+    }
+  ]
+}

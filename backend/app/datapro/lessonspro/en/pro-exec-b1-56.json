@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-56",
+  "title": "Delivering the Perfect Sales Pitch",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Selling the Solution, Not the Features",
+      "parts": [
+        {
+          "visual": "A rookie sells features ('Our software has 50 integrations'). An executive sells solutions ('Our software eliminates 20 hours of manual data entry per week').\n\nThe 3-Step Pitch:\n1. Pain: Agitate the client's current problem.\n2. Remedy: Present your product as the specific cure.\n3. Proof: Provide a case study or data confirming the ROI.",
+          "audio": "A rookie sells features. An executive sells solutions. Master the 3-Step Pitch: Agitate the Pain, present the Remedy, and provide the Proof."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Sales Psychology",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Which of these is a 'Benefit' rather than a 'Feature'?",
+          "options": [
+            "Our engine has 500 horsepower.",
+            "Our database uses 256-bit encryption.",
+            "You will sleep soundly knowing your customers' data is completely safe from hackers."
+          ],
+          "correct_answer": "You will sleep soundly knowing your customers' data is completely safe from hackers.",
+          "explanation": "Encryption is the feature. Peace of mind and security is the actual benefit the client is buying."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the salesperson. What step of the pitch is this?",
+          "tts_text": "When we implemented this for Acme Corp, they saw a 40% reduction in server costs within three months.",
+          "options": [
+            "Pain.",
+            "Remedy.",
+            "Proof."
+          ],
+          "correct_answer": "Proof.",
+          "explanation": "Citing a specific client success story (a case study) provides the objective proof needed to close a high-ticket sale."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does it mean to 'Agitate the Pain' in sales?",
+          "options": [
+            "To make the client angry at you.",
+            "To ask questions that make the client realize exactly how much money or time their current problem is costing them.",
+            "To complain about your own problems."
+          ],
+          "correct_answer": "To ask questions that make the client realize exactly how much money or time their current problem is costing them.",
+          "explanation": "If a client does not feel the financial or emotional weight of their problem, they will never buy your solution."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How should you handle an 'Objection' (e.g., 'It's too expensive')?",
+          "options": [
+            "Argue with the client.",
+            "Acknowledge the concern, then re-frame the price as an investment by demonstrating the ROI.",
+            "Lower the price immediately."
+          ],
+          "correct_answer": "Acknowledge the concern, then re-frame the price as an investment by demonstrating the ROI.",
+          "explanation": "Objections are buying signals. Answering them with hard ROI data is how executives close deals."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Sales Terminology",
+      "pairs": [
+        { "concept": "Feature", "match": "A factual statement about a product" },
+        { "concept": "Benefit", "match": "The value or positive result the feature provides" },
+        { "concept": "Objection", "match": "A reason the client hesitates to buy" },
+        { "concept": "ROI", "match": "Return on Investment" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "pro-startup-b2-109",
+  "title": "Service Level Agreements (SLAs) and Penalties",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Promise of Uptime",
+      "parts": [
+        {
+          "visual": "A startup provides the checkout software for a massive airline. On Black Friday, the startup's servers crash for 2 hours. The airline loses $5 Million in ticket sales. The airline's lawyers immediately contact the startup, demanding they pay for the lost revenue.\n\nThe Contract:\n1. SLA (Service Level Agreement): A legally binding contract between the startup and the enterprise customer explicitly defining the level of service expected (e.g., 'The servers will be online 99.9% of the time').\n2. The Penalty Clause: If the startup fails to meet the SLA, they must legally refund the customer or pay severe financial penalties.",
+          "audio": "When you sell to consumers, a server crash is a minor annoyance. When you sell to massive corporations, a server crash is a breach of contract. SLAs are how corporations financially punish startups for being unreliable."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Mathematics of Uptime",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup signs an SLA promising 'Five Nines' (99.999%) uptime. How much downtime are they legally allowed to have per year without getting sued?",
+          "options": [
+            "5 days.",
+            "About 5 minutes per year. 'Five Nines' is an astronomically difficult engineering standard. If the server goes down for 10 minutes in January, the startup has already breached the contract for the entire year.",
+            "5 hours."
+          ],
+          "correct_answer": "About 5 minutes per year. 'Five Nines' is an astronomically difficult engineering standard. If the server goes down for 10 minutes in January, the startup has already breached the contract for the entire year.",
+          "explanation": "Never promise Five Nines unless you have an army of engineers."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the lawyer negotiating the enterprise contract. What dangerous clause is the startup trying to avoid?",
+          "tts_text": "The client wants an 'Unlimited Liability' clause. If our software crashes and they lose a million dollars, they want to sue us for the full million. We must cap our liability to the value of the contract, which is only $50,000.",
+          "options": [
+            "A marketing clause.",
+            "Unlimited Liability. If a startup agrees to unlimited liability, a single server crash could completely bankrupt the company. A good lawyer will always cap the penalty at '1x the annual contract value' to protect the startup from total destruction.",
+            "A coffee break clause."
+          ],
+          "correct_answer": "Unlimited Liability. If a startup agrees to unlimited liability, a single server crash could completely bankrupt the company. A good lawyer will always cap the penalty at '1x the annual contract value' to protect the startup from total destruction.",
+          "explanation": "One bad contract can kill a great startup."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Response Time' in an SLA?",
+          "options": [
+            "How fast the software loads.",
+            "The legal maximum amount of time the startup has to respond to a critical bug report from the client. Enterprise SLAs often require a '1-hour response time' 24/7/365, forcing the startup to hire engineers who work night shifts.",
+            "How fast the CEO talks."
+          ],
+          "correct_answer": "The legal maximum amount of time the startup has to respond to a critical bug report from the client. Enterprise SLAs often require a '1-hour response time' 24/7/365, forcing the startup to hire engineers who work night shifts.",
+          "explanation": "Enterprise customers are paying for panic prevention."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do startups sometimes charge a massive premium for 'Enterprise Tier' pricing?",
+          "options": [
+            "Because the logo is different.",
+            "Because the startup is taking on massive legal and operational risk. To provide 99.99% uptime SLAs and 1-hour response times, the startup has to build expensive redundant servers and hire 24/7 support staff. The high price pays for the risk.",
+            "Because the software is shinier."
+          ],
+          "correct_answer": "Because the startup is taking on massive legal and operational risk. To provide 99.99% uptime SLAs and 1-hour response times, the startup has to build expensive redundant servers and hire 24/7 support staff. The high price pays for the risk.",
+          "explanation": "Enterprise pricing is an insurance policy for the client."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of the Contract",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the reality of SLAs:",
+          "parts": [
+            "Uptime",
+            "is",
+            "not",
+            "a",
+            "feature,",
+            "it",
+            "is",
+            "a",
+            "legal",
+            "obligation."
+          ],
+          "correct_order": [
+            "Uptime",
+            "is",
+            "not",
+            "a",
+            "feature,",
+            "it",
+            "is",
+            "a",
+            "legal",
+            "obligation."
+          ],
+          "explanation": "The difference between B2C and B2B."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "pro-startup-b2-144",
+  "title": "Secondary Sales (Founder Liquidity)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Paper Wealth vs. Real Cash",
+      "parts": [
+        {
+          "visual": "A founder's startup is valued at $1 Billion. The founder owns 20% ($200 Million). But the founder drives a broken 15-year-old car and cannot afford to buy a house in San Francisco. Why? Because their wealth is trapped in private stock they are not allowed to sell.\n\nThe Release Valve:\n1. Illiquidity: The reality that private startup stock is essentially monopoly money until an IPO or Acquisition happens 10 years later.\n2. Secondary Sales: A private transaction where a founder or early employee is allowed to sell a small portion of their stock to a new VC *before* the company goes public, giving them actual cash.",
+          "audio": "VCs used to hate Secondary Sales. They wanted founders to be starving and desperate so they would work harder. Today, smart VCs encourage founders to take a few million off the table, so the founder isn't terrified of taking massive risks."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Taking Money Off the Table",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup is raising a $50 Million Series C. The founders ask the VCs if they can sell $2 Million of their own personal stock in a 'Secondary' transaction. Why does the VC agree?",
+          "options": [
+            "Because the VC is generous.",
+            "Risk Alignment. If a founder's entire net worth is tied up in the company, they will be terrified to take the massive, aggressive risks required to build a $10 Billion company. Letting them buy a house removes their personal financial panic.",
+            "Because the VC hates money."
+          ],
+          "correct_answer": "Risk Alignment. If a founder's entire net worth is tied up in the company, they will be terrified to take the massive, aggressive risks required to build a $10 Billion company. Letting them buy a house removes their personal financial panic.",
+          "explanation": "A desperate founder is a dangerous founder."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO rejecting an employee's request. Why can't the employee sell their shares on the secondary market?",
+          "tts_text": "I know a private equity firm offered to buy your shares. But our corporate bylaws give the company 'ROFR'—the Right of First Refusal. And we do not allow employees to sell to random outside firms, because we tightly control who is on our Cap Table.",
+          "options": [
+            "The shares are fake.",
+            "Cap Table Control. Startups aggressively restrict secondary sales because they do not want unknown, aggressive private equity investors buying up 5% of the company from employees and suddenly demanding board seats.",
+            "The CEO wants the money."
+          ],
+          "correct_answer": "Cap Table Control. Startups aggressively restrict secondary sales because they do not want unknown, aggressive private equity investors buying up 5% of the company from employees and suddenly demanding board seats.",
+          "explanation": "You cannot sell private stock without the CEO's permission."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the difference between a 'Primary' raise and a 'Secondary' sale?",
+          "options": [
+            "Primary is faster.",
+            "In a Primary raise, the VC buys newly created shares, and the $50M cash goes into the *company's* bank account to hire engineers. In a Secondary sale, the VC buys existing shares from a founder, and the cash goes into the *founder's* personal bank account.",
+            "Secondary is illegal."
+          ],
+          "correct_answer": "In a Primary raise, the VC buys newly created shares, and the $50M cash goes into the *company's* bank account to hire engineers. In a Secondary sale, the VC buys existing shares from a founder, and the cash goes into the *founder's* personal bank account.",
+          "explanation": "Primary builds the company. Secondary buys the founder a house."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If a founder tries to sell 100% of their stock in a Secondary Sale before the IPO, what will the VCs do?",
+          "options": [
+            "Help them pack.",
+            "Block the sale and fire the founder. Selling 5% of your stock for security is normal. Trying to sell 100% signals to the investors that you think the company is going to fail and you are abandoning ship. It destroys all trust.",
+            "Buy the stock themselves."
+          ],
+          "correct_answer": "Block the sale and fire the founder. Selling 5% of your stock for security is normal. Trying to sell 100% signals to the investors that you think the company is going to fail and you are abandoning ship. It destroys all trust.",
+          "explanation": "You can take some chips off the table, but you cannot leave the casino."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Liquidity",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the reality of startup wealth:",
+          "parts": [
+            "Paper",
+            "wealth",
+            "is",
+            "not",
+            "the",
+            "same",
+            "as",
+            "liquidity."
+          ],
+          "correct_order": [
+            "Paper",
+            "wealth",
+            "is",
+            "not",
+            "the",
+            "same",
+            "as",
+            "liquidity."
+          ],
+          "explanation": "You cannot buy groceries with private stock."
+        }
+      ]
+    }
+  ]
+}

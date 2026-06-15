@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-3",
+  "title": "Customer Empathy and User Interviews",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Getting Out of the Building",
+      "parts": [
+        {
+          "visual": "A team spends 8 months in a conference room designing a 'smart coffee cup' with a bluetooth thermometer. They launch it. Nobody buys it. Why? Because they never actually talked to a person who drinks coffee. They assumed the user's problem was temperature; the real problem was time.\n\nThe Interview:\n1. The Illusion of Knowledge: Sitting in an office looking at analytics dashboards is a trap. Data tells you 'what' users are doing. Only talking directly to users tells you 'why' they are doing it.\n2. Radical Empathy: A PM's superpower is setting aside their own ego and deeply listening to the pain, frustrations, and actual workflows of the customer without interrupting or selling to them.",
+          "audio": "Users lie. They don't mean to, but they do. If you ask a user 'Would you use this feature?', they will say yes just to be polite. The art of the user interview is never asking about the future; you must only ask them about their actual behavior in the past."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Art of Listening",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Mom Test' in user interviews?",
+          "options": [
+            "Testing it on your mother.",
+            "A framework for asking questions that even your mom can't lie to you about. Instead of asking 'Is this a good idea?' (which invites a polite lie), you ask 'Talk me through the last time you tried to solve this problem.' You focus on past facts, not future opinions.",
+            "Asking moms to buy it."
+          ],
+          "correct_answer": "A framework for asking questions that even your mom can't lie to you about. Instead of asking 'Is this a good idea?' (which invites a polite lie), you ask 'Talk me through the last time you tried to solve this problem.' You focus on past facts, not future opinions.",
+          "explanation": "Past behavior is the only reliable predictor of future action."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the PM conducting an interview. Why did they interrupt the user?",
+          "tts_text": "User: 'I think I would probably use a calendar integration if you built it.' PM: 'Wait, let's go back. Last week, when you scheduled a meeting, what exact tool did you physically open first?'",
+          "options": [
+            "Because the PM was impatient.",
+            "Anchoring to Reality. The user was guessing about their future desires. The PM interrupted to force the user to describe a concrete, historical action. People are terrible at predicting their future desires, but excellent at remembering their past pain.",
+            "Because the PM hates calendars."
+          ],
+          "correct_answer": "Anchoring to Reality. The user was guessing about their future desires. The PM interrupted to force the user to describe a concrete, historical action. People are terrible at predicting their future desires, but excellent at remembering their past pain.",
+          "explanation": "Don't ask them what they want. Ask them what they did."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is it dangerous to 'Pitch' your product during a user interview?",
+          "options": [
+            "Because pitching is for sales.",
+            "It biases the data. If you spend 10 minutes explaining why your idea is brilliant, the user will feel pressured to agree with you to avoid awkwardness. A PM must remain entirely neutral and act like a curious investigator, not a salesperson.",
+            "Because the user might steal it."
+          ],
+          "correct_answer": "It biases the data. If you spend 10 minutes explaining why your idea is brilliant, the user will feel pressured to agree with you to avoid awkwardness. A PM must remain entirely neutral and act like a curious investigator, not a salesperson.",
+          "explanation": "You are there to learn, not to convince."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does 'Observing the Workaround' mean?",
+          "options": [
+            "Watching them walk around.",
+            "Finding gold. If you watch a user use 3 different Excel spreadsheets, a sticky note, and a calculator just to generate one report, you have found a massive point of friction. The 'workaround' proves the problem is severe enough that they will pay you to fix it.",
+            "Ignoring the user."
+          ],
+          "correct_answer": "Finding gold. If you watch a user use 3 different Excel spreadsheets, a sticky note, and a calculator just to generate one report, you have found a massive point of friction. The 'workaround' proves the problem is severe enough that they will pay you to fix it.",
+          "explanation": "Ugly workarounds are the blueprints for billion-dollar products."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Interview Tactics",
+      "pairs": [
+        { "concept": "The Mom Test", "match": "Asking about past facts instead of future opinions to avoid polite lies" },
+        { "concept": "Pitching", "match": "The terrible mistake of trying to sell your idea during a research interview" },
+        { "concept": "Workaround", "match": "A painful, manual process the user created, proving a deep need for a solution" },
+        { "concept": "Radical Empathy", "match": "Deeply understanding the user's frustration without imposing your own ego" }
+      ]
+    }
+  ]
+}

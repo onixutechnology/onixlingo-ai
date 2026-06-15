@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-085",
+  "title": "The IPO (Initial Public Offering)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Ringing the Bell",
+      "parts": [
+        {
+          "visual": "The founders stand on the balcony of the New York Stock Exchange. They ring the bell. At that exact second, their private startup transforms into a public corporation. Anyone in the world with a brokerage account can now buy a piece of their company.\n\nThe Apex:\n1. IPO (Initial Public Offering): The process of offering shares of a private corporation to the public in a new stock issuance.\n2. The Why: Startups go public to raise massive amounts of capital (Billions, not Millions) to fund global expansion, and to allow early employees and VCs to finally sell their shares and become liquid.",
+          "audio": "An IPO is not the finish line; it is the starting line of a much harder race. Once you are public, you are subject to brutal SEC regulations and the unforgiving quarterly demands of Wall Street analysts."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Going Public",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup goes public. On the day of the IPO, the stock price crashes by 40%. The media calls it a disaster. Why is the CEO terrified?",
+          "options": [
+            "Because the media is mean.",
+            "Because employee morale will collapse. Thousands of employees accepted low salaries for years in exchange for stock options. If the stock crashes, their 'lottery ticket' is worthless, and they will all quit.",
+            "Because the bell was too loud."
+          ],
+          "correct_answer": "Because employee morale will collapse. Thousands of employees accepted low salaries for years in exchange for stock options. If the stock crashes, their 'lottery ticket' is worthless, and they will all quit.",
+          "explanation": "A broken IPO destroys the company's ability to retain talent."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Wall Street analyst complaining about a newly public tech company. What is the fundamental shift in expectations?",
+          "tts_text": "When they were a private startup, we tolerated them burning cash to grow. But now they are a public company trading at $50 a share. We don't care about their 'vision' anymore. We demand to see a profit by Q3, or we will short the stock.",
+          "options": [
+            "Wall Street loves visionaries.",
+            "The Quarterly Pressure. Private VCs will wait 5 years for a return. Public markets demand financial performance every 90 days. This pressure often forces public CEOs to make bad long-term decisions just to hit short-term targets.",
+            "Wall Street hates technology."
+          ],
+          "correct_answer": "The Quarterly Pressure. Private VCs will wait 5 years for a return. Public markets demand financial performance every 90 days. This pressure often forces public CEOs to make bad long-term decisions just to hit short-term targets.",
+          "explanation": "The public markets are a ruthless voting machine."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Lock-up Period' after an IPO?",
+          "options": [
+            "A period where the CEO is locked in a room.",
+            "A legally mandated period (usually 6 months) where the founders, early employees, and VCs are strictly forbidden from selling their stock. This prevents them from instantly cashing out and crashing the stock price on Day 1.",
+            "A period where no one can buy the stock."
+          ],
+          "correct_answer": "A legally mandated period (usually 6 months) where the founders, early employees, and VCs are strictly forbidden from selling their stock. This prevents them from instantly cashing out and crashing the stock price on Day 1.",
+          "explanation": "You are rich on paper, but you still cannot buy a Ferrari."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Who are the 'Investment Bankers' in an IPO (like Goldman Sachs or Morgan Stanley)?",
+          "options": [
+            "They are the people who ring the bell.",
+            "The Underwriters. They manage the massive legal paperwork, travel the country pitching the stock to institutional investors (The Roadshow), and ultimately set the initial price of the stock. They charge millions for this service.",
+            "They are the people who buy the company."
+          ],
+          "correct_answer": "The Underwriters. They manage the massive legal paperwork, travel the country pitching the stock to institutional investors (The Roadshow), and ultimately set the initial price of the stock. They charge millions for this service.",
+          "explanation": "Investment bankers are the toll collectors on the road to Wall Street."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Public Market Terminology",
+      "pairs": [
+        { "concept": "IPO", "match": "Initial Public Offering; the first sale of stock by a company to the public" },
+        { "concept": "Lock-up Period", "match": "A window of time where insiders are legally forbidden from selling their shares" },
+        { "concept": "Underwriter", "match": "The investment bank that manages the IPO process and prices the stock" },
+        { "concept": "Going Public", "match": "The transition from being owned by a few private VCs to being owned by anyone with a brokerage account" }
+      ]
+    }
+  ]
+}

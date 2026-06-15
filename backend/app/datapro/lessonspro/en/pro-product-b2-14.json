@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-14",
+  "title": "A/B Testing and Statistical Significance",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Scientific Method of Software",
+      "parts": [
+        {
+          "visual": "The PM wants the 'Buy Now' button to be Green. The CEO wants the button to be Red. They argue in a meeting for 2 hours. A professional PM stops the meeting and says: 'Let's just ask the algorithm.' They launch both buttons. 50% of users see Green, 50% see Red. Three days later, the data shows Red generated 20% more revenue. End of argument.\n\nThe Experiment:\n1. A/B Testing: The process of serving two different versions of a feature to two random groups of users at the exact same time, to mathematically prove which one performs better.\n2. The End of Opinions: In a high-functioning product team, the Highest Paid Person's Opinion (HiPPO) is irrelevant. Only the results of the A/B test matter.",
+          "audio": "If you have an opinion, we will listen. If you have data, you win. A/B testing shifts product development from 'Who is the best debater in the meeting?' to 'Who actually knows what the user wants?'"
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Running the Test",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Control' group in an A/B Test?",
+          "options": [
+            "The users who control the app.",
+            "Group A. They see the original, unchanged version of the app. They act as the baseline. Group B sees the new 'Variant'. If you don't have a Control group, you cannot mathematically prove that your change actually caused the increase in clicks.",
+            "The engineers in the office."
+          ],
+          "correct_answer": "Group A. They see the original, unchanged version of the app. They act as the baseline. Group B sees the new 'Variant'. If you don't have a Control group, you cannot mathematically prove that your change actually caused the increase in clicks.",
+          "explanation": "You cannot measure progress without a baseline."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the data scientist rejecting an A/B test result. Why is the test invalid?",
+          "tts_text": "We ran the test for 4 hours. 10 people saw the Red button and 12 people saw the Green button. The Green button got one more click! The PM wants to launch Green to millions of users. I told them no. It is not statistically significant.",
+          "options": [
+            "Because green is an ugly color.",
+            "Statistical Significance. You cannot make massive business decisions based on 22 people clicking a button. The result might just be random luck. You must run the test until thousands of users participate to prove the result is a mathematical certainty, not a fluke.",
+            "Because the data scientist hates the PM."
+          ],
+          "correct_answer": "Statistical Significance. You cannot make massive business decisions based on 22 people clicking a button. The result might just be random luck. You must run the test until thousands of users participate to prove the result is a mathematical certainty, not a fluke.",
+          "explanation": "Noise is not signal."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of testing too many things at the exact same time?",
+          "options": [
+            "The app will explode.",
+            "The Isolation Problem. If you change the button color, the headline text, AND the price all in the same A/B test, and sales go up 30%, you have no idea WHICH change actually caused the success. You must test one variable at a time.",
+            "The CEO will get confused."
+          ],
+          "correct_answer": "The Isolation Problem. If you change the button color, the headline text, AND the price all in the same A/B test, and sales go up 30%, you have no idea WHICH change actually caused the success. You must test one variable at a time.",
+          "explanation": "Science requires isolated variables."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'HiPPO' effect in product meetings, which A/B testing destroys?",
+          "options": [
+            "When the room smells bad.",
+            "Highest Paid Person's Opinion. Without data, the CEO or senior executives automatically win every argument just because of their rank. A/B testing democratizes the process, allowing a junior designer to beat the CEO if their design gets more clicks.",
+            "When people eat too much."
+          ],
+          "correct_answer": "Highest Paid Person's Opinion. Without data, the CEO or senior executives automatically win every argument just because of their rank. A/B testing democratizes the process, allowing a junior designer to beat the CEO if their design gets more clicks.",
+          "explanation": "Data is the great equalizer."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Testing Terminology",
+      "pairs": [
+        { "concept": "A/B Testing", "match": "Showing two versions of a feature to prove which one works better" },
+        { "concept": "Control Group", "match": "The baseline group of users who see the original, unchanged app" },
+        { "concept": "Statistical Significance", "match": "Mathematical proof that the test result was real, not just random luck" },
+        { "concept": "HiPPO", "match": "Highest Paid Person's Opinion; the dangerous default without data" }
+      ]
+    }
+  ]
+}

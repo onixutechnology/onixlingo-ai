@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-001",
+  "title": "The Problem Statement (Painkillers vs. Vitamins)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Selling the Cure",
+      "parts": [
+        {
+          "visual": "You walk into a VC's office. You have 30 seconds to explain what your startup does. Do not talk about your software. Talk about the problem you are solving.\n\nThe Philosophy:\n1. Fall in love with the problem, not the solution.\n2. The 'Painkiller' vs. 'Vitamin' rule: Investors want to fund 'painkillers' (products that solve a massive, bleeding problem right now) and not 'vitamins' (nice-to-have products that make life slightly better).",
+          "audio": "When pitching a startup, you must define the Problem Statement immediately. Investors are looking for Painkillers—solutions to urgent, painful problems—not Vitamins, which are just 'nice to have'."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Identifying the Pain",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A founder pitches a new app that reminds people to drink water. The investor passes on the deal, calling it a 'Vitamin'. What does the investor mean?",
+          "options": [
+            "The app needs more features.",
+            "It is a 'nice-to-have' product, not a 'must-have'. When the economy gets tough, consumers will cancel their subscriptions to 'vitamins', making it a terrible investment.",
+            "The app is illegal."
+          ],
+          "correct_answer": "It is a 'nice-to-have' product, not a 'must-have'. When the economy gets tough, consumers will cancel their subscriptions to 'vitamins', making it a terrible investment.",
+          "explanation": "Vitamins are easily forgotten. Painkillers are bought immediately."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the founder's pitch. What mistake is he making?",
+          "tts_text": "We built a revolutionary decentralized blockchain architecture using Rust and Web3 protocols that optimizes latency by 40%.",
+          "options": [
+            "He is speaking too slowly.",
+            "He is obsessing over the Solution instead of defining the Problem. Nobody cares about the technology if they don't understand whose life it improves.",
+            "He needs more funding."
+          ],
+          "correct_answer": "He is obsessing over the Solution instead of defining the Problem. Nobody cares about the technology if they don't understand whose life it improves.",
+          "explanation": "Technology is useless without a customer who is bleeding and needs a bandage."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do elite founders say 'Fall in love with the problem, not the solution'?",
+          "options": [
+            "Because problems are fun.",
+            "Because your first 'solution' (your product) will probably fail. If you love the problem, you will pivot and try a different solution until it works.",
+            "Because solutions are expensive."
+          ],
+          "correct_answer": "Because your first 'solution' (your product) will probably fail. If you love the problem, you will pivot and try a different solution until it works.",
+          "explanation": "Attachment to a specific piece of software is the number one cause of startup death."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What makes a 'Hair on Fire' problem?",
+          "options": [
+            "A fire hazard.",
+            "A problem so urgent and painful that the customer will buy a broken, ugly, incomplete prototype from you right now just to make the pain stop.",
+            "A hair salon software."
+          ],
+          "correct_answer": "A problem so urgent and painful that the customer will buy a broken, ugly, incomplete prototype from you right now just to make the pain stop.",
+          "explanation": "If the customer demands a polished product, their problem isn't painful enough."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Startup Fundamentals",
+      "pairs": [
+        { "concept": "Painkiller", "match": "A product that solves an urgent, immediate, and painful problem" },
+        { "concept": "Vitamin", "match": "A product that is a 'nice-to-have' but not strictly necessary" },
+        { "concept": "Problem Statement", "match": "A clear, concise description of the issue that the startup is trying to solve" },
+        { "concept": "Hair on Fire", "match": "A problem so severe that the customer will accept an imperfect solution immediately" }
+      ]
+    }
+  ]
+}

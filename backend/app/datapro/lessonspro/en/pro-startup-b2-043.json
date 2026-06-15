@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-043",
+  "title": "Secondary Markets (Cashing Out Early)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Paper Rich, Cash Poor",
+      "parts": [
+        {
+          "visual": "A founder has been building their company for 5 years. The company is valued at $1 Billion. The founder's stock is worth $200 Million. But their salary is only $100k, and they can't afford to buy a house. They are trapped in 'Paper Wealth'.\n\nThe Release Valve:\n1. Secondary Markets: Private transactions where founders and early employees sell a small portion of their vested stock to VCs *before* the company IPOs or is acquired.\n2. The Goal: It allows founders to take 'some chips off the table', relieving personal financial stress so they can focus on taking massive risks for the company without fearing personal bankruptcy.",
+          "audio": "Secondary sales are the secret mechanism founders use to get rich before the company actually exits. It transforms anxiety into confidence."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Taking Chips Off the Table",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A VC offers to invest $50 Million in a Series C round. The VC says: '$40M goes to the company, and $10M is a 'Secondary' for the founders.' What does this mean?",
+          "options": [
+            "The founders have to pay $10M.",
+            "The VC is giving $40M to the startup's bank account to fund operations, and the VC is buying $10M worth of stock directly from the founders' personal accounts, instantly making the founders cash-millionaires.",
+            "The VC gets a discount."
+          ],
+          "correct_answer": "The VC is giving $40M to the startup's bank account to fund operations, and the VC is buying $10M worth of stock directly from the founders' personal accounts, instantly making the founders cash-millionaires.",
+          "explanation": "Primary capital funds the company. Secondary capital funds the founder's personal life."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Board of Directors debating a founder's request to sell some stock. Why does the Board agree to let the founder cash out $3 Million early?",
+          "tts_text": "If she doesn't have any cash, she is going to be terrified of risk. She will want to sell the company to Google tomorrow for $50 Million just to be safe. If we give her $3 Million in cash now, she will swing for the fences and try to build a $5 Billion company.",
+          "options": [
+            "To make her quit.",
+            "Risk Alignment. A founder who is worried about paying rent will make safe, small decisions. A founder whose personal financial future is secured will take the massive, aggressive risks that VCs require.",
+            "Because she asked nicely."
+          ],
+          "correct_answer": "Risk Alignment. A founder who is worried about paying rent will make safe, small decisions. A founder whose personal financial future is secured will take the massive, aggressive risks that VCs require.",
+          "explanation": "Relieving the founder's personal anxiety is highly profitable for the VC."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do VCs hate it if a founder tries to sell 100% of their stock in a Secondary transaction?",
+          "options": [
+            "Because they hate taxes.",
+            "The Alignment Problem. If the founder cashes out entirely, they have zero financial incentive to keep working. VCs usually cap Secondary sales at 10% or 20% of the founder's total equity to ensure they stay 'hungry'.",
+            "Because there is no buyer."
+          ],
+          "correct_answer": "The Alignment Problem. If the founder cashes out entirely, they have zero financial incentive to keep working. VCs usually cap Secondary sales at 10% or 20% of the founder's total equity to ensure they stay 'hungry'.",
+          "explanation": "You can take some chips off the table, but you must leave the majority of your bet in the game."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the primary risk for an employee buying a house based on the 'paper value' of their private startup stock?",
+          "options": [
+            "The stock is made of paper.",
+            "Illiquidity. Private stock cannot be easily sold on an open market. If the company fails to IPO, or the Board blocks Secondary sales, that paper wealth is completely useless for paying a mortgage.",
+            "The house might burn down."
+          ],
+          "correct_answer": "Illiquidity. Private stock cannot be easily sold on an open market. If the company fails to IPO, or the Board blocks Secondary sales, that paper wealth is completely useless for paying a mortgage.",
+          "explanation": "Paper wealth is Monopoly money until a liquidity event occurs."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Liquidity Terminology",
+      "pairs": [
+        { "concept": "Secondary Market", "match": "A market where existing investors or employees sell their shares to other private investors" },
+        { "concept": "Illiquid Asset", "match": "An asset that cannot be easily or quickly sold for cash without a substantial loss in value" },
+        { "concept": "Paper Wealth", "match": "Wealth on paper that hasn't been realized in cash because the assets haven't been sold" },
+        { "concept": "Risk Alignment", "match": "Ensuring the founder's psychological risk tolerance matches the VC's goals" }
+      ]
+    }
+  ]
+}

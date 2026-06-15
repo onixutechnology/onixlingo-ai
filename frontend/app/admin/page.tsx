@@ -38,7 +38,7 @@ export default function AdminDashboard() {
         return;
       }
 
-      const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:5000';
+      const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';
       const res = await fetch(`${API_URL}/api/v1/admin/users`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -68,7 +68,7 @@ export default function AdminDashboard() {
     setGrantingId(userId);
     try {
       const token = Cookies.get('access_token');
-      const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:5000';
+      const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';
       
       const res = await fetch(`${API_URL}/api/v1/admin/grant-pro/${userId}?days=30`, {
         method: 'POST',

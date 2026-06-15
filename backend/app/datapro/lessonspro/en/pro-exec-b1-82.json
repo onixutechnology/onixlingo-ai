@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-82",
+  "title": "Understanding the Balance Sheet",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Snapshot of Health",
+      "parts": [
+        {
+          "visual": "A P&L shows a company's income over time. A Balance Sheet shows a company's financial health at one specific moment.\n\nThe Golden Equation:\nAssets = Liabilities + Equity\n\n1. Assets: What you own (Cash, inventory, IP).\n2. Liabilities: What you owe (Debt, unpaid bills).\n3. Equity: What belongs to the owners (Net worth).",
+          "audio": "A Balance Sheet shows a company's financial health at a specific moment. Remember the equation: Assets equal Liabilities plus Equity."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Balance Sheet Basics",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A company has $10 Million in the bank (Asset), but owes $12 Million in loans (Liability). What is the state of their Equity?",
+          "options": [
+            "Positive Equity.",
+            "Negative Equity. The company is technically insolvent (worth less than zero).",
+            "They are very rich."
+          ],
+          "correct_answer": "Negative Equity. The company is technically insolvent (worth less than zero).",
+          "explanation": "This is why cash in the bank does not equal 'success'. You must balance the cash against the debt."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CFO. What balance sheet item is this?",
+          "tts_text": "We need to collect the $2 Million our clients still owe us from last quarter.",
+          "options": [
+            "Accounts Payable (Liability).",
+            "Accounts Receivable (Asset).",
+            "Equity."
+          ],
+          "correct_answer": "Accounts Receivable (Asset).",
+          "explanation": "Money owed TO the company is an asset. Money the company owes TO others is a liability (Accounts Payable)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do executives care about 'Liquidity'?",
+          "options": [
+            "It sounds cool.",
+            "Liquidity is how quickly an asset can be turned into cash. You can't pay your employees with office furniture; you need liquid cash.",
+            "It refers to company drinks."
+          ],
+          "correct_answer": "Liquidity is how quickly an asset can be turned into cash. You can't pay your employees with office furniture; you need liquid cash.",
+          "explanation": "Companies don't usually go bankrupt because they lack assets; they go bankrupt because they run out of *liquid* cash to pay their immediate bills."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the difference between a P&L and a Balance Sheet?",
+          "options": [
+            "They are exactly the same.",
+            "A P&L is a video of the year (revenues and expenses). A Balance Sheet is a photograph of a single day (what is owned vs. owed).",
+            "One is for marketing, one is for HR."
+          ],
+          "correct_answer": "A P&L is a video of the year (revenues and expenses). A Balance Sheet is a photograph of a single day (what is owned vs. owed).",
+          "explanation": "Both are required to understand the true financial health of an organization."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Financial Snapshot Terms",
+      "pairs": [
+        { "concept": "Asset", "match": "A resource with economic value that a company owns" },
+        { "concept": "Liability", "match": "A company's legal financial debts or obligations" },
+        { "concept": "Equity", "match": "The value that would be returned to shareholders if all assets were liquidated and debts paid" },
+        { "concept": "Liquidity", "match": "How easily an asset can be converted into cash" }
+      ]
+    }
+  ]
+}

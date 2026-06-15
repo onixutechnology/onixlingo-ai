@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-068",
+  "title": "The Demo (Selling Value, Not Features)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Feature Trap",
+      "parts": [
+        {
+          "visual": "A salesperson shares their screen and spends 45 minutes showing the prospect every single button, dropdown menu, and color setting in the software. The prospect falls asleep and does not buy. The salesperson is confused because the software is 'so powerful'.\n\nThe Philosophy:\n1. Features vs. Benefits: A feature is what the software DOES (e.g., 'It has an AI algorithm'). A benefit is what the software DOES FOR THE USER (e.g., 'It saves you 10 hours a week').\n2. The Golden Rule of Demos: Never show a feature unless you can explicitly tie it to solving a massive, painful problem the prospect has already admitted they have.",
+          "audio": "Amateurs sell features. Professionals sell outcomes. The CEO does not care that your software was built using a new coding language. The CEO only cares if your software will make them money or save them time."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Translating to Value",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup sells an AI email tool. The engineer says: 'Our tool uses a 100-layer neural network.' How should the salesperson translate this 'Feature' into a 'Value Proposition' for a CEO?",
+          "options": [
+            "Tell the CEO about the layers.",
+            "'Our AI writes emails so perfectly that your sales team will double their response rate, generating an extra $100k in revenue this month.' The CEO buys revenue, not neural networks.",
+            "Show the CEO the code."
+          ],
+          "correct_answer": "'Our AI writes emails so perfectly that your sales team will double their response rate, generating an extra $100k in revenue this month.' The CEO buys revenue, not neural networks.",
+          "explanation": "Always translate technical jargon into dollar signs."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the salesperson making a fatal error during a software demo. What went wrong?",
+          "tts_text": "And if you click here, you can change the background to blue! And over here, you can see our advanced settings panel, which you probably won't use, but it's really cool!",
+          "options": [
+            "The background was ugly.",
+            "The 'Harbor Tour'. The salesperson is just showing off the software like a tour guide, clicking random buttons without any narrative. It overwhelms the prospect and creates zero urgency to buy.",
+            "The software crashed."
+          ],
+          "correct_answer": "The 'Harbor Tour'. The salesperson is just showing off the software like a tour guide, clicking random buttons without any narrative. It overwhelms the prospect and creates zero urgency to buy.",
+          "explanation": "A demo should only be 15 minutes long. Show them the solution to their pain, then stop talking."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why should you ask the prospect questions *during* the software demo?",
+          "options": [
+            "To test their memory.",
+            "To maintain control and verify alignment. After showing a feature, you ask: 'How would your team use this tomorrow?' If they can't answer, they don't care about the feature, and you must pivot immediately.",
+            "Because salespeople like to talk."
+          ],
+          "correct_answer": "To maintain control and verify alignment. After showing a feature, you ask: 'How would your team use this tomorrow?' If they can't answer, they don't care about the feature, and you must pivot immediately.",
+          "explanation": "A demo should be a conversation, not a monologue."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'ROI' (Return on Investment) and why is it the climax of the demo?",
+          "options": [
+            "A type of French bread.",
+            "It is the mathematical proof. At the end of the demo, you show the prospect exactly how spending $10k on your software will definitively result in $50k of profit or savings. If the ROI is obvious, the sale closes itself.",
+            "A computer virus."
+          ],
+          "correct_answer": "It is the mathematical proof. At the end of the demo, you show the prospect exactly how spending $10k on your software will definitively result in $50k of profit or savings. If the ROI is obvious, the sale closes itself.",
+          "explanation": "B2B buyers do not buy software. They buy ROI."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Value Terminology",
+      "pairs": [
+        { "concept": "Feature", "match": "A factual statement about the product and what it does" },
+        { "concept": "Benefit", "match": "The specific value or outcome the user gets from the product" },
+        { "concept": "ROI", "match": "Return on Investment (The mathematical proof that the software is worth the price)" },
+        { "concept": "Value Proposition", "match": "A clear statement that explains how your product solves a customer's problem" }
+      ]
+    }
+  ]
+}

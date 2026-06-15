@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-171",
+  "title": "Unit Economics (LTV/CAC Ratio)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Math of Survival",
+      "parts": [
+        {
+          "visual": "A founder pitches a VC: 'We are growing so fast! We spent $100 on Facebook ads to get one user, and that user paid us $20 this year.' The VC asks: 'How long will they stay a user?' The founder says: 'Probably a year.' The VC closes their notebook and leaves. The startup is literally paying $100 to make $20.\n\nThe Golden Ratio:\n1. CAC (Customer Acquisition Cost): The total money spent on sales and marketing divided by the number of new customers acquired.\n2. LTV (Lifetime Value): The total amount of pure profit a single customer will give you before they cancel their subscription.\n3. The 3:1 Rule: In Silicon Valley, a healthy business must have an LTV to CAC ratio of at least 3 to 1. If it costs $100 to get a user, that user must eventually generate $300 in profit.",
+          "audio": "A startup is a machine. You put $1 into the machine through marketing, and you need $3 to come out the other side over the next few years. If you put $1 in and only $0.50 comes out, you are not a business; you are a charity subsidizing Facebook ads."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Calculating the Machine",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A SaaS startup spends $10,000 on Google Ads in January and gets 100 new paying users. What is their CAC?",
+          "options": [
+            "$10",
+            "$100. (Total Marketing Spend divided by New Users). It costs this startup exactly $100 in advertising to acquire a single paying human. This is the baseline number they must overcome to be profitable.",
+            "$1,000"
+          ],
+          "correct_answer": "$100. (Total Marketing Spend divided by New Users). It costs this startup exactly $100 in advertising to acquire a single paying human. This is the baseline number they must overcome to be profitable.",
+          "explanation": "You must know exactly how much you are paying to 'buy' a user."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC criticizing a pitch. Why does the VC think the LTV calculation is a lie?",
+          "tts_text": "You are telling me your Lifetime Value is $5,000 per user because they pay $100 a month and you assume they will stay for 50 months. Your company is only 3 months old! You have no idea if they will stay for 50 months. You are guessing.",
+          "options": [
+            "The VC hates the founder.",
+            "Fake Extrapolation. Early-stage founders often hallucinate their LTV by assuming users will stay forever. Until you have actual historical data proving that a user stays for 4 years, your LTV is just a dangerous theoretical guess.",
+            "The math is correct."
+          ],
+          "correct_answer": "Fake Extrapolation. Early-stage founders often hallucinate their LTV by assuming users will stay forever. Until you have actual historical data proving that a user stays for 4 years, your LTV is just a dangerous theoretical guess.",
+          "explanation": "Hope is not a valid mathematical variable."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A startup has an LTV/CAC ratio of 1:1 (It costs $100 to get a user, and the user generates $100 in profit). What happens if they raise $10 Million to scale?",
+          "options": [
+            "They get rich.",
+            "They scale their own bankruptcy. If your unit economics are broken, raising VC money just allows you to lose money faster. You are pouring gasoline on a broken engine. You must fix the 1:1 ratio before you try to grow.",
+            "The VCs fix the company."
+          ],
+          "correct_answer": "They scale their own bankruptcy. If your unit economics are broken, raising VC money just allows you to lose money faster. You are pouring gasoline on a broken engine. You must fix the 1:1 ratio before you try to grow.",
+          "explanation": "Scaling a negative margin creates a massive crater."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Payback Period'?",
+          "options": [
+            "When the CEO pays themselves.",
+            "The exact number of months it takes for a user to pay you back for their CAC. If CAC is $100, and they pay $10 a month, the payback period is 10 months. VCs want this to be under 12 months, or the startup requires too much cash to survive.",
+            "When the VC pays the founder."
+          ],
+          "correct_answer": "The exact number of months it takes for a user to pay you back for their CAC. If CAC is $100, and they pay $10 a month, the payback period is 10 months. VCs want this to be under 12 months, or the startup requires too much cash to survive.",
+          "explanation": "The faster the money comes back, the faster you can reinvest it."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Economic Formulas",
+      "pairs": [
+        { "concept": "CAC", "match": "Customer Acquisition Cost (Marketing Spend / New Users)" },
+        { "concept": "LTV", "match": "Lifetime Value (The total profit a single user generates before leaving)" },
+        { "concept": "3:1 Ratio", "match": "The golden rule of SaaS (LTV must be 3x higher than CAC)" },
+        { "concept": "Payback Period", "match": "How many months it takes for a user's subscription to cover their CAC" }
+      ]
+    }
+  ]
+}

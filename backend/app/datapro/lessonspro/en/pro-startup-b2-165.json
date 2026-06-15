@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-165",
+  "title": "Defense Tech and Government Contracts",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Selling to the Empire",
+      "parts": [
+        {
+          "visual": "A founder builds an incredible AI targeting drone. They want to sell it to the US Military. They realize that the military does not have a 'Buy Now' button on a website. It takes 3 years of filling out thousands of pages of legal compliance forms just to get a meeting. But once they win the contract, the military signs a check for $500 Million.\n\nThe Defense Playbook:\n1. B2G (Business to Government): The hardest, slowest, but ultimately most lucrative sales cycle in the world. The government doesn't care about your marketing; they care about security compliance and federal regulations.\n2. The Prime Contractor Trap: Startups are often too small to sell directly to the Pentagon. They have to partner with a giant 'Prime' contractor (like Lockheed or Raytheon), who takes most of the profit and all of the credit.",
+          "audio": "Silicon Valley spent 20 years building photo-sharing apps while ignoring national security. Now, a new wave of Defense Tech founders is realizing that the government is the largest, most reliable customer on the planet, provided you can survive the bureaucracy."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Navigating the Bureaucracy",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the biggest barrier for a 5-person startup trying to sell software to the Department of Defense?",
+          "options": [
+            "The software isn't colorful enough.",
+            "Security Clearances and Compliance. The DoD requires 'FedRAMP' certification and high-level security clearances. A startup might have to spend $2 Million and 18 months upgrading their server security before the government is even legally allowed to look at their product.",
+            "The military only buys hardware."
+          ],
+          "correct_answer": "Security Clearances and Compliance. The DoD requires 'FedRAMP' certification and high-level security clearances. A startup might have to spend $2 Million and 18 months upgrading their server security before the government is even legally allowed to look at their product.",
+          "explanation": "Compliance is the toll booth for government money."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the defense founder talking about the 'Sales Cycle'. What is the brutal reality of B2G?",
+          "tts_text": "In B2B enterprise software, closing a big deal takes 6 months. In defense tech, from the first handshake with a general to the moment the money hits our bank account, it took 3.5 years. If we hadn't raised massive VC money to survive the wait, we would be dead.",
+          "options": [
+            "The military pays in cash instantly.",
+            "The Time Horizon. The government budget process is dictated by Congress and moves glacially slow. A defense startup must raise enough venture capital to literally survive 3 to 4 years of zero revenue while waiting for the contract to clear the bureaucracy.",
+            "The generals don't answer emails."
+          ],
+          "correct_answer": "The Time Horizon. The government budget process is dictated by Congress and moves glacially slow. A defense startup must raise enough venture capital to literally survive 3 to 4 years of zero revenue while waiting for the contract to clear the bureaucracy.",
+          "explanation": "You have to survive the wait."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Program of Record'?",
+          "options": [
+            "A music album.",
+            "The Holy Grail of Defense Tech. It means your product is officially written into the permanent, multi-year federal budget by Congress. Once you are a 'Program of Record', you receive hundreds of millions of dollars continuously, and it is almost impossible for competitors to displace you.",
+            "A document showing code history."
+          ],
+          "correct_answer": "The Holy Grail of Defense Tech. It means your product is officially written into the permanent, multi-year federal budget by Congress. Once you are a 'Program of Record', you receive hundreds of millions of dollars continuously, and it is almost impossible for competitors to displace you.",
+          "explanation": "It transforms a startup into an institution."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why did startups like Anduril succeed in defense tech when others failed?",
+          "options": [
+            "They made cheaper weapons.",
+            "They refused to act like defense contractors. Instead of waiting for the government to ask for a product and pay for the R&D, Anduril used VC money to build the finished, working weapons *first*, and then showed up to the military and said: 'It already works. Buy it today.'",
+            "They only hired generals."
+          ],
+          "correct_answer": "They refused to act like defense contractors. Instead of waiting for the government to ask for a product and pay for the R&D, Anduril used VC money to build the finished, working weapons *first*, and then showed up to the military and said: 'It already works. Buy it today.'",
+          "explanation": "Moving at Silicon Valley speed in a Pentagon world."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Defense Tech Terms",
+      "pairs": [
+        { "concept": "B2G", "match": "Business to Government; selling directly to federal agencies" },
+        { "concept": "FedRAMP", "match": "The brutal, expensive security compliance required for federal software" },
+        { "concept": "Program of Record", "match": "Being permanently written into the US defense budget for continuous funding" },
+        { "concept": "Prime Contractor", "match": "Giant corporations (like Lockheed) that act as middlemen for startups" }
+      ]
+    }
+  ]
+}

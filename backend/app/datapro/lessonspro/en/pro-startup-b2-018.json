@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-018",
+  "title": "The Burn Rate & Runway",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Countdown to Death",
+      "parts": [
+        {
+          "visual": "A startup raises $1.2 Million. The founders celebrate. But they are losing $100,000 every single month on salaries and servers. In exactly 12 months, the bank account will hit zero, and the company will legally die.\n\nThe Math of Survival:\n1. Burn Rate: The amount of cash a company loses every month before it becomes profitable.\n2. Runway: The amount of time (in months) the company has before it runs out of cash. (Total Cash / Monthly Burn Rate = Runway).",
+          "audio": "Burn Rate is the speed at which your startup is bleeding cash. Runway is how many months you have to live. An elite founder checks their Runway every single morning before they drink their coffee."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Managing the Bleed",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup has $2,000,000 in the bank. They generate $50,000 in monthly revenue, but their total monthly expenses are $250,000. What is their exact Monthly Burn Rate?",
+          "options": [
+            "$250,000.",
+            "$200,000. (Expenses minus Revenue). This is the 'Net Burn Rate', the actual amount of cash leaving the bank account every month.",
+            "$50,000."
+          ],
+          "correct_answer": "$200,000. (Expenses minus Revenue). This is the 'Net Burn Rate', the actual amount of cash leaving the bank account every month.",
+          "explanation": "Gross Burn is total expenses. Net Burn is what actually kills you."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO. Why is he firing 20% of the staff?",
+          "tts_text": "We only have 6 months of Runway left. The economy just crashed, and VCs are not writing checks. If I fire 20% of the team today, our Burn Rate drops, and our Runway extends to 14 months, guaranteeing we survive the winter.",
+          "options": [
+            "Because he hates his employees.",
+            "Extending the Runway. He is trading human capital for time. By violently cutting the Burn Rate, he buys the company 8 more months to figure out how to survive.",
+            "To hire new people."
+          ],
+          "correct_answer": "Extending the Runway. He is trading human capital for time. By violently cutting the Burn Rate, he buys the company 8 more months to figure out how to survive.",
+          "explanation": "This is the hardest decision a founder makes. Cut deep, and cut early."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does it mean when a startup becomes 'Default Alive'?",
+          "options": [
+            "They are legally incorporated.",
+            "It means their Revenue is finally growing faster than their expenses. If they just keep doing exactly what they are doing, they will reach profitability before their Runway hits zero. They no longer *need* VC money to survive.",
+            "They paid their electricity bill."
+          ],
+          "correct_answer": "It means their Revenue is finally growing faster than their expenses. If they just keep doing exactly what they are doing, they will reach profitability before their Runway hits zero. They no longer *need* VC money to survive.",
+          "explanation": "Coined by Paul Graham, being 'Default Alive' is the ultimate leverage when negotiating with VCs."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is it dangerous to raise *too much* money (e.g., raising $50M when you only needed $5M)?",
+          "options": [
+            "It makes the bank account too heavy.",
+            "The 'Curse of Too Much Capital'. Having massive cash reserves makes founders lazy and undisciplined. They artificially inflate their Burn Rate by hiring useless executives and renting fancy offices, rather than building a real business.",
+            "It is against the law."
+          ],
+          "correct_answer": "The 'Curse of Too Much Capital'. Having massive cash reserves makes founders lazy and undisciplined. They artificially inflate their Burn Rate by hiring useless executives and renting fancy offices, rather than building a real business.",
+          "explanation": "Starvation creates innovation. Over-funding creates bureaucracy."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Cash Flow Terminology",
+      "pairs": [
+        { "concept": "Burn Rate", "match": "The rate at which a company is losing money" },
+        { "concept": "Runway", "match": "The measure of the amount of time until a company runs out of cash" },
+        { "concept": "Default Alive", "match": "Assuming expenses remain constant, the startup will reach profitability before running out of money" },
+        { "concept": "Default Dead", "match": "Assuming expenses remain constant, the startup will run out of money before reaching profitability" }
+      ]
+    }
+  ]
+}

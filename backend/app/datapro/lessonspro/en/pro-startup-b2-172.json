@@ -1,0 +1,104 @@
+{
+  "id": "pro-startup-b2-172",
+  "title": "Burn Rate and Runway Mathematics",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Doomsday Clock",
+      "parts": [
+        {
+          "visual": "A startup raises $2 Million. The founders celebrate. They hire 10 engineers, rent a fancy office, and buy MacBooks for everyone. Their monthly expenses are $200,000. They are making $0 in revenue. The CEO suddenly realizes that in exactly 10 months, the bank account will hit $0 and the company will die.\n\nThe Countdown:\n1. Burn Rate: The exact amount of cash a company loses every single month. (If expenses are $200k and revenue is $50k, the 'Net Burn' is $150k per month).\n2. Runway: The amount of time (in months) until the company runs out of cash. (Total Cash in Bank / Monthly Net Burn = Runway).",
+          "audio": "Startups do not die when they have a bad idea. Startups die when they run out of cash. Your 'Runway' is your oxygen level in space. If you do not track your runway every single week, you are a negligent CEO."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Managing the Oxygen",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup has $1.2 Million in the bank. They spend $150,000 a month on salaries and servers. They make $50,000 a month in revenue. What is their exact Runway?",
+          "options": [
+            "10 months.",
+            "12 months. Their 'Net Burn' is $100,000 ($150k expenses minus $50k revenue). $1.2 Million divided by $100k equals 12 months. In exactly 365 days, they will go bankrupt if nothing changes.",
+            "15 months."
+          ],
+          "correct_answer": "12 months. Their 'Net Burn' is $100,000 ($150k expenses minus $50k revenue). $1.2 Million divided by $100k equals 12 months. In exactly 365 days, they will go bankrupt if nothing changes.",
+          "explanation": "Net Burn determines your survival, not Gross Expenses."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC advising the founder. When should the founder start raising their next round of funding?",
+          "tts_text": "Do not wait until you have 2 months of runway left. Fundraising takes 6 months. If you start raising when you have 2 months of oxygen, VCs will smell your desperation, offer you terrible terms, and bleed you dry.",
+          "options": [
+            "At 2 months.",
+            "When they have 9 to 12 months of runway left. You must fundraise when you still have power. If you wait until you are out of cash, the VC has 100% of the leverage and will take massive chunks of your equity.",
+            "When they have 1 month."
+          ],
+          "correct_answer": "When they have 9 to 12 months of runway left. You must fundraise when you still have power. If you wait until you are out of cash, the VC has 100% of the leverage and will take massive chunks of your equity.",
+          "explanation": "Always raise money when you don't desperately need it."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the difference between 'Gross Burn' and 'Net Burn'?",
+          "options": [
+            "Gross is ugly.",
+            "Gross Burn is the total amount of money leaving the bank account (e.g., $100k). Net Burn is the total money leaving MINUS the revenue coming in (e.g., $100k - $20k revenue = $80k Net Burn). Net burn is the only metric that matters for survival.",
+            "Net burn is for taxes."
+          ],
+          "correct_answer": "Gross Burn is the total amount of money leaving the bank account (e.g., $100k). Net Burn is the total money leaving MINUS the revenue coming in (e.g., $100k - $20k revenue = $80k Net Burn). Net burn is the only metric that matters for survival.",
+          "explanation": "Revenue subsidizes your burn."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the fastest, most effective way for a CEO to 'extend the runway' during a crisis?",
+          "options": [
+            "Switching to cheaper coffee.",
+            "Layoffs (Firing people). It is brutal, but in a software startup, 80% of expenses are human salaries. If a CEO needs to magically add 6 months to the runway to survive a recession, they must cut headcount aggressively.",
+            "Buying fewer ads."
+          ],
+          "correct_answer": "Layoffs (Firing people). It is brutal, but in a software startup, 80% of expenses are human salaries. If a CEO needs to magically add 6 months to the runway to survive a recession, they must cut headcount aggressively.",
+          "explanation": "Salaries are the heaviest weight on the airplane."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Survival",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to form the fundamental runway equation:",
+          "parts": [
+            "Runway",
+            "equals",
+            "total",
+            "cash",
+            "divided",
+            "by",
+            "net",
+            "burn."
+          ],
+          "correct_order": [
+            "Runway",
+            "equals",
+            "total",
+            "cash",
+            "divided",
+            "by",
+            "net",
+            "burn."
+          ],
+          "explanation": "The math equation that dictates if you live or die."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-121",
+  "title": "The Viral Coefficient (K-Factor)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Equation of Outbreaks",
+      "parts": [
+        {
+          "visual": "You acquire 100 users for your new photo-sharing app. Each of those 100 users invites 2 friends. Now you have 300 users. Those 200 new users invite 2 friends each. The app spreads like a virus. You spend exactly $0 on marketing.\n\nThe Viral Math:\n1. The Viral Coefficient (K-Factor): A mathematical formula that calculates how many new users each existing user brings into the product.\n2. The Threshold: If K is less than 1 (e.g., 0.5), the viral loop will eventually stop. If K is greater than 1 (e.g., 1.2), the app will experience exponential, infinite growth until it saturates the entire market.",
+          "audio": "Virality is not an accident; it is an engineered mathematical function. You do not 'hope' your product goes viral; you build specific mechanisms into the software to force the K-factor above 1."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Engineering the Loop",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup builds an app where users can track their personal diet. The K-factor is 0.1. Why?",
+          "options": [
+            "Because diets are boring.",
+            "Lack of Inherent Social Value. Tracking your diet is a solo activity. There is no natural reason to invite your friends to the app, because their presence doesn't make the app better for you. Single-player mode destroys virality.",
+            "Because the app is too expensive."
+          ],
+          "correct_answer": "Lack of Inherent Social Value. Tracking your diet is a solo activity. There is no natural reason to invite your friends to the app, because their presence doesn't make the app better for you. Single-player mode destroys virality.",
+          "explanation": "Multiplayer mode is the foundation of the K-Factor."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the famous growth hack used by Hotmail in 1996. What was the viral mechanism?",
+          "tts_text": "We didn't have money for ads. So we just added one line of text to the bottom of every single email our users sent: 'P.S. Get your free email at Hotmail.' Every email sent became a billboard.",
+          "options": [
+            "They bought television ads.",
+            "Inherent Virality. The user doesn't even have to 'try' to invite someone. Simply by using the product (sending an email), they are automatically broadcasting the product to a non-user. The product itself is the marketing channel.",
+            "They paid users to send emails."
+          ],
+          "correct_answer": "Inherent Virality. The user doesn't even have to 'try' to invite someone. Simply by using the product (sending an email), they are automatically broadcasting the product to a non-user. The product itself is the marketing channel.",
+          "explanation": "This hack acquired 12 million users in 18 months."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is an 'Incentivized Viral Loop' (like Dropbox used)?",
+          "options": [
+            "Giving users physical trophies.",
+            "Paying the user in digital value to invite friends. Dropbox said: 'If you invite a friend, we will give both you and your friend 500MB of extra storage space for free.' It aligns the user's greed with the company's growth.",
+            "Threatening to delete the user's account."
+          ],
+          "correct_answer": "Paying the user in digital value to invite friends. Dropbox said: 'If you invite a friend, we will give both you and your friend 500MB of extra storage space for free.' It aligns the user's greed with the company's growth.",
+          "explanation": "If the product isn't naturally viral, you must buy the virality with digital perks."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Viral Cycle Time' just as important as the K-Factor?",
+          "options": [
+            "Because speed looks cool.",
+            "Because it controls the velocity of the outbreak. If your K-Factor is 2, but it takes a user 6 months to invite 2 friends, your growth is slow. If it takes them 6 seconds (like sharing a TikTok video), your company explodes overnight.",
+            "Because servers are fast."
+          ],
+          "correct_answer": "Because it controls the velocity of the outbreak. If your K-Factor is 2, but it takes a user 6 months to invite 2 friends, your growth is slow. If it takes them 6 seconds (like sharing a TikTok video), your company explodes overnight.",
+          "explanation": "Short cycle times create hyper-growth."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Virality Terminology",
+      "pairs": [
+        { "concept": "K-Factor", "match": "The mathematical number of new users generated by one existing user" },
+        { "concept": "Inherent Virality", "match": "When the normal usage of the product automatically advertises it to others" },
+        { "concept": "Incentivized Loop", "match": "Giving users a digital reward (like storage space) for inviting friends" },
+        { "concept": "Cycle Time", "match": "How quickly a new user successfully invites another new user" }
+      ]
+    }
+  ]
+}

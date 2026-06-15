@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-110",
+  "title": "Protecting Against Corporate Espionage",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Threat from Within",
+      "parts": [
+        {
+          "visual": "Corporate Espionage is the theft of trade secrets by competitors or foreign states. The biggest threat is rarely a hacker; it is usually your own employees.\n\nThe Defense Perimeter:\n1. Principle of Least Privilege (PoLP): Employees only get access to the data absolutely necessary for their specific job.\n2. Offboarding Protocols: Revoking all access the exact second an employee resigns or is fired.\n3. Non-Compete Clauses: Legally preventing key staff from taking your secrets straight to your biggest rival.",
+          "audio": "Corporate espionage is a massive threat, usually coming from within. Protect your data by enforcing the Principle of Least Privilege and strict offboarding protocols."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Data Security Architecture",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Principle of Least Privilege'?",
+          "options": [
+            "Paying people the lowest salary possible.",
+            "A cybersecurity concept where an employee is given the absolute minimum level of digital access required to perform their daily duties, and nothing more.",
+            "Giving everyone admin passwords."
+          ],
+          "correct_answer": "A cybersecurity concept where an employee is given the absolute minimum level of digital access required to perform their daily duties, and nothing more.",
+          "explanation": "If a marketing intern's laptop is hacked, the hacker should not be able to access the core engineering source code."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the HR Director. What critical security step is being executed?",
+          "tts_text": "John's resignation meeting is at 2 PM. I need IT to lock his email, revoke his VPN access, and remotely wipe his laptop at 2:01 PM exactly.",
+          "options": [
+            "Onboarding.",
+            "Strict Digital Offboarding.",
+            "A promotion."
+          ],
+          "correct_answer": "Strict Digital Offboarding.",
+          "explanation": "A departing employee who is going to a competitor is the highest risk vector for data theft. Access must be severed instantly."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do companies use 'Non-Compete' and 'Non-Solicitation' agreements?",
+          "options": [
+            "To be mean.",
+            "To legally prevent an executive from taking the company's client list and recruiting their former team members to join a rival company.",
+            "To lower taxes."
+          ],
+          "correct_answer": "To legally prevent an executive from taking the company's client list and recruiting their former team members to join a rival company.",
+          "explanation": "While laws vary heavily by region, these contracts are the primary legal deterrent against internal corporate theft."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Social Engineering' in the context of corporate espionage?",
+          "options": [
+            "A college degree.",
+            "Manipulating people into breaking normal security procedures (e.g., a hacker calling an employee pretending to be the CEO and asking for a password).",
+            "Building bridges."
+          ],
+          "correct_answer": "Manipulating people into breaking normal security procedures (e.g., a hacker calling an employee pretending to be the CEO and asking for a password).",
+          "explanation": "You can buy a $10 million firewall, but if an employee willingly hands over their password because someone asked politely, the firewall is useless."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Security Terminology",
+      "pairs": [
+        { "concept": "Espionage", "match": "The practice of spying to obtain political or military/corporate information" },
+        { "concept": "PoLP", "match": "Principle of Least Privilege" },
+        { "concept": "Non-Compete", "match": "A contract restricting an employee from working for a rival" },
+        { "concept": "Social Engineering", "match": "Psychological manipulation to trick users into making security mistakes" }
+      ]
+    }
+  ]
+}

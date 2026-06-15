@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-166",
+  "title": "Network Effects",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Winner Takes All",
+      "parts": [
+        {
+          "visual": "Why is it impossible to create a new social network that beats Facebook, even if your software is 10 times better? Because of 'Network Effects'.\n\nThe Concept:\n1. The Definition: A phenomenon where a product becomes more valuable as more people use it.\n2. The Telephone: One telephone is useless. Two are somewhat useful. One billion telephones are incredibly valuable.\n3. The Moat: Once a company achieves a massive Network Effect, it creates an impenetrable moat. Competitors cannot win, because they don't have the users.",
+          "audio": "A Network Effect occurs when a product becomes more valuable simply because more people are using it. This creates a massive competitive advantage, often leading to a Winner-Takes-All market."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Power of the Crowd",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "You build a ride-sharing app that is faster and cheaper than Uber. But when a rider opens your app, there are no drivers. When a driver opens your app, there are no riders. What is your problem?",
+          "options": [
+            "Your app needs a better logo.",
+            "You have a 'Cold Start Problem' in a 'Two-Sided Network'. You cannot get riders without drivers, and you cannot get drivers without riders.",
+            "The app is too expensive."
+          ],
+          "correct_answer": "You have a 'Cold Start Problem' in a 'Two-Sided Network'. You cannot get riders without drivers, and you cannot get drivers without riders.",
+          "explanation": "This is why Uber spent billions of dollars subsidizing rides. They had to buy their way into a Network Effect."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Tech CEO. What makes their company a monopoly?",
+          "tts_text": "Our software is actually quite old and clunky. But every single major corporation in the world uses our file format. If you want to do business globally, you have to use our software.",
+          "options": [
+            "They have the best engineers.",
+            "A strong Network Effect. The value is not the software itself; the value is that everyone else is using it.",
+            "They charge the lowest prices."
+          ],
+          "correct_answer": "A strong Network Effect. The value is not the software itself; the value is that everyone else is using it.",
+          "explanation": "This is why Microsoft Word and Excel dominated the world for decades."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the difference between 'Virality' and a 'Network Effect'?",
+          "options": [
+            "They are exactly the same.",
+            "Virality is how fast a product spreads (growth). A Network Effect is how the product becomes more valuable as it spreads (retention and power).",
+            "Virality is illegal."
+          ],
+          "correct_answer": "Virality is how fast a product spreads (growth). A Network Effect is how the product becomes more valuable as it spreads (retention and power).",
+          "explanation": "A funny YouTube video is highly viral, but it has zero network effect."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do venture capitalists aggressively fund companies that have strong Network Effects?",
+          "options": [
+            "Because they like networks.",
+            "Because Network Effects naturally lead to 'Winner-Takes-All' markets. If the company wins, it doesn't just get 20% of the market; it gets 95% of the market.",
+            "Because the servers are cheap."
+          ],
+          "correct_answer": "Because Network Effects naturally lead to 'Winner-Takes-All' markets. If the company wins, it doesn't just get 20% of the market; it gets 95% of the market.",
+          "explanation": "In a network-driven market, second place is usually bankruptcy."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Network Terminology",
+      "pairs": [
+        { "concept": "Network Effect", "match": "A product becoming more valuable as more people use it" },
+        { "concept": "Two-Sided Market", "match": "An economic platform having two distinct user groups that provide each other with network benefits" },
+        { "concept": "Cold Start Problem", "match": "The challenge of getting the first users onto a network platform" },
+        { "concept": "Winner-Takes-All", "match": "A market where the top competitor captures almost all the revenue" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-191",
+  "title": "The Bullwhip Effect (Supply Chain)",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Chaos in the Supply Chain",
+      "parts": [
+        {
+          "visual": "A customer buys two extra rolls of toilet paper. The grocery store panics and orders 10 extra cases. The distributor panics and orders 100 extra pallets. The factory panics and builds a new $50 Million facility. Six months later, nobody is buying toilet paper, and the factory goes bankrupt.\n\nThe Phenomenon:\n1. The Bullwhip Effect: A tiny shift in consumer demand causes massive, destructive fluctuations up the supply chain.\n2. The Cause: Lack of communication and the psychology of fear (over-ordering to avoid running out).",
+          "audio": "The Bullwhip Effect occurs when small changes in consumer demand cause massive, erratic fluctuations upstream in the supply chain, often leading to devastating financial losses for manufacturers."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Managing the Whip",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A sudden winter storm causes a 5% increase in flashlight sales. Because every middleman in the supply chain adds a 'safety buffer' to their orders, the factory ends up producing 500% more flashlights than normal. What is the result?",
+          "options": [
+            "Massive profits.",
+            "The Bullwhip Effect strikes. Three months later, warehouses are flooded with unsold flashlights. The excess inventory destroys the company's cash flow, leading to layoffs.",
+            "The storm gets worse."
+          ],
+          "correct_answer": "The Bullwhip Effect strikes. Three months later, warehouses are flooded with unsold flashlights. The excess inventory destroys the company's cash flow, leading to layoffs.",
+          "explanation": "Overproduction is just as dangerous to a company as underproduction."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Supply Chain Director. What is her solution to the Bullwhip Effect?",
+          "tts_text": "We cannot rely on the distributors guessing what the customers want. We need to integrate our software directly into the cash registers of the retail stores. When a customer buys a shirt, our factory in Vietnam needs to know 5 seconds later.",
+          "options": [
+            "Stopping production completely.",
+            "Data Transparency (Point of Sale integration). The only way to stop the panic is to give the factory raw, unfiltered consumer data in real-time.",
+            "Firing the distributors."
+          ],
+          "correct_answer": "Data Transparency (Point of Sale integration). The only way to stop the panic is to give the factory raw, unfiltered consumer data in real-time.",
+          "explanation": "If you remove the middlemen from the data flow, you remove the psychological panic."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Safety Stock'?",
+          "options": [
+            "Stock in a security company.",
+            "Extra inventory kept on hand in case of an unexpected spike in demand or a delay from the supplier. It acts as an expensive insurance policy against stockouts.",
+            "Stock that does not lose value."
+          ],
+          "correct_answer": "Extra inventory kept on hand in case of an unexpected spike in demand or a delay from the supplier. It acts as an expensive insurance policy against stockouts.",
+          "explanation": "Safety stock protects against the Bullwhip, but holding it costs massive amounts of money."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How did Walmart become the most powerful retailer in the world?",
+          "options": [
+            "By having the best commercials.",
+            "By mastering Supply Chain Logistics. They forced every supplier to share inventory data on a unified system, essentially eliminating the Bullwhip Effect and crushing competitors on price.",
+            "By paying the highest wages."
+          ],
+          "correct_answer": "By mastering Supply Chain Logistics. They forced every supplier to share inventory data on a unified system, essentially eliminating the Bullwhip Effect and crushing competitors on price.",
+          "explanation": "Walmart is not a retail company; it is a logistics company that happens to own stores."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Logistics Terminology",
+      "pairs": [
+        { "concept": "Bullwhip Effect", "match": "A supply chain phenomenon describing how small fluctuations in demand at the retail level cause progressively larger fluctuations at the wholesale and manufacturer level" },
+        { "concept": "Safety Stock", "match": "An additional quantity of an item held in inventory to reduce the risk that the item will be out of stock" },
+        { "concept": "POS Data", "match": "Point of Sale data (real-time information from the cash register)" },
+        { "concept": "Lead Time", "match": "The amount of time that passes from the start of a process until its conclusion" }
+      ]
+    }
+  ]
+}

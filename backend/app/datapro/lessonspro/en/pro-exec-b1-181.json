@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-181",
+  "title": "Price Discrimination (Dynamic Pricing)",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Charging Everyone a Different Price",
+      "parts": [
+        {
+          "visual": "You are sitting on an airplane. The person to your left paid $200 for their ticket. The person to your right paid $800 for the exact same seat. How is this legal?\n\nThe Algorithm:\n1. Dynamic Pricing: Algorithms that change the price of a product every second based on demand.\n2. Price Discrimination: Identifying exactly how much money a specific customer is willing to pay, and charging them that exact maximum amount.",
+          "audio": "Price Discrimination is a pricing strategy where identical goods or services are sold at different prices to different customers. Airlines use Dynamic Pricing algorithms to extract the absolute maximum amount of money from each passenger."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Extracting Maximum Value",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A business traveler books a flight at 9:00 AM on a Tuesday for a meeting tomorrow. A student books the exact same flight three months in advance for a vacation. Why does the airline charge the business traveler 400% more?",
+          "options": [
+            "Because they hate business travelers.",
+            "Because the business traveler's 'Price Elasticity' is zero. They *must* be at that meeting tomorrow, and their company is paying for it, so the airline extracts maximum revenue.",
+            "Because business seats are bigger."
+          ],
+          "correct_answer": "Because the business traveler's 'Price Elasticity' is zero. They *must* be at that meeting tomorrow, and their company is paying for it, so the airline extracts maximum revenue.",
+          "explanation": "The airline's algorithm identifies urgency and corporate budgets, adjusting the price accordingly."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the enraged Uber user. What pricing mechanism is she complaining about?",
+          "tts_text": "It usually costs me $15 to get home from the bar. But because it's raining and it's 2:00 AM, the app is trying to charge me $75 for the exact same ride!",
+          "options": [
+            "A software glitch.",
+            "Surge Pricing. When demand drastically outpaces supply, the algorithm automatically spikes prices to balance the market (and maximize profit).",
+            "A special premium car."
+          ],
+          "correct_answer": "Surge Pricing. When demand drastically outpaces supply, the algorithm automatically spikes prices to balance the market (and maximize profit).",
+          "explanation": "Surge pricing is economically rational but psychologically infuriating to consumers."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do movie theaters offer 'Senior Citizen Discounts' and 'Student Discounts'?",
+          "options": [
+            "Because they are charities.",
+            "It is a legal form of 'Price Discrimination'. Seniors and students have less money (high elasticity). If the theater charged everyone full price, those seats would remain empty, earning zero revenue.",
+            "Because the law requires it."
+          ],
+          "correct_answer": "It is a legal form of 'Price Discrimination'. Seniors and students have less money (high elasticity). If the theater charged everyone full price, those seats would remain empty, earning zero revenue.",
+          "explanation": "By creating 'buckets' of customers, you capture revenue from poor customers without lowering the price for rich customers."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a company is caught charging different prices based on a customer's race or gender?",
+          "options": [
+            "They make more money.",
+            "That crosses the line from 'Price Discrimination' (legal economics) into actual Discrimination (highly illegal), resulting in massive federal lawsuits.",
+            "They have to apologize on Twitter."
+          ],
+          "correct_answer": "That crosses the line from 'Price Discrimination' (legal economics) into actual Discrimination (highly illegal), resulting in massive federal lawsuits.",
+          "explanation": "Algorithms must be carefully audited to ensure they aren't unintentionally violating civil rights laws."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Pricing Strategy Terminology",
+      "pairs": [
+        { "concept": "Dynamic Pricing", "match": "Adjusting prices continually to meet the characteristics and needs of individual customers and situations" },
+        { "concept": "Price Discrimination", "match": "Selling the same product at different prices to different buyers" },
+        { "concept": "Surge Pricing", "match": "Raising prices temporarily during periods of unusually high demand" },
+        { "concept": "Price Elasticity", "match": "A measure of how sensitive demand is to a change in price" }
+      ]
+    }
+  ]
+}

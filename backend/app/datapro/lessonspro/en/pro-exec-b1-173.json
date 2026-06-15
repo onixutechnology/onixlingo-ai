@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-173",
+  "title": "Stock Buybacks vs. Dividends",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Returning Capital to Shareholders",
+      "parts": [
+        {
+          "visual": "A massive corporation has $10 Billion in cash sitting in the bank. They have no new products to build. Wall Street demands they give the money back to the shareholders.\n\nThe Two Methods:\n1. The Dividend: The company sends a cash check directly to every shareholder (highly taxed).\n2. The Stock Buyback: The company uses the $10 Billion to buy its own shares on the open market and destroys them. This reduces the supply of shares, mathematically driving the stock price up (tax efficient).",
+          "audio": "When a company has too much cash, they must return it to shareholders. They can issue a cash Dividend, or execute a Stock Buyback, which artificially drives the stock price up by reducing the supply of shares."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Financial Engineering",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A CEO's annual bonus is tied to the company's 'Earnings Per Share' (EPS). The CEO uses $5 Billion of company cash to execute a massive 'Stock Buyback'. Why?",
+          "options": [
+            "Because he likes the stock.",
+            "By buying and destroying millions of shares, the denominator of the EPS equation shrinks. The EPS goes up, the stock price spikes, and the CEO triggers his multi-million dollar bonus.",
+            "To give money to charity."
+          ],
+          "correct_answer": "By buying and destroying millions of shares, the denominator of the EPS equation shrinks. The EPS goes up, the stock price spikes, and the CEO triggers his multi-million dollar bonus.",
+          "explanation": "Critics argue that buybacks are just financial engineering used to enrich executives, rather than investing the money in R&D or employee salaries."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the aggressive shareholder. What is he demanding?",
+          "tts_text": "You have $50 Billion in cash earning 1% interest in a bank account. You are hoarding capital. Issue a special dividend immediately, or we will vote you out.",
+          "options": [
+            "He wants the company to build a new factory.",
+            "He wants Capital Allocation. Investors believe they can invest that cash better than the CEO can.",
+            "He wants to buy the company."
+          ],
+          "correct_answer": "He wants Capital Allocation. Investors believe they can invest that cash better than the CEO can.",
+          "explanation": "If a CEO cannot find a project that generates a high Return on Investment (ROI), their fiduciary duty is to give the cash back to the investors."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do tech companies (like Apple) historically prefer 'Buybacks' instead of 'Dividends'?",
+          "options": [
+            "Because checks are hard to write.",
+            "Tax efficiency. Dividends trigger immediate income taxes for the shareholders. Buybacks drive the stock price up, allowing shareholders to delay paying taxes until they decide to sell.",
+            "Because dividends are illegal in California."
+          ],
+          "correct_answer": "Tax efficiency. Dividends trigger immediate income taxes for the shareholders. Buybacks drive the stock price up, allowing shareholders to delay paying taxes until they decide to sell.",
+          "explanation": "Modern corporate finance is heavily dictated by tax optimization."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of executing massive Stock Buybacks during an economic boom?",
+          "options": [
+            "The stock price goes up.",
+            "When the economy crashes, the company will have no cash reserves left to survive, forcing them to beg the government for a taxpayer bailout.",
+            "The shareholders get angry."
+          ],
+          "correct_answer": "When the economy crashes, the company will have no cash reserves left to survive, forcing them to beg the government for a taxpayer bailout.",
+          "explanation": "This exact scenario happened to the major US airlines during the 2020 pandemic."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Capital Allocation Terminology",
+      "pairs": [
+        { "concept": "Dividend", "match": "A distribution of a portion of a company's earnings directly to its shareholders" },
+        { "concept": "Stock Buyback", "match": "A company buying its own outstanding shares to reduce the number of shares on the open market" },
+        { "concept": "EPS", "match": "Earnings Per Share (Profit divided by outstanding shares)" },
+        { "concept": "Capital Allocation", "match": "The process of determining how a company's financial resources should be invested" }
+      ]
+    }
+  ]
+}

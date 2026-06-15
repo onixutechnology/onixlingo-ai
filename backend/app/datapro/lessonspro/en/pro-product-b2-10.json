@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-10",
+  "title": "Launching and The Post-Launch Hangover",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Day Zero",
+      "parts": [
+        {
+          "visual": "The team worked 80 hours a week for six months. They finally hit 'Deploy'. The marketing team fires the emails. The CEO pops champagne. The next morning, the PM looks at the analytics dashboard. Only 12 people clicked the button, and 8 of them experienced a critical error. The champagne goes flat.\n\nThe Reality of Launch:\n1. Launch is a Milestone, Not a Destination: Amateurs think launching the feature is the end of the project. Professionals know that launch is merely 'Day Zero'—the very first day you actually start getting real data.\n2. The Post-Launch Hangover: The depressing period immediately after a launch when the initial hype dies, the metrics are lower than expected, and the team must grind through months of tiny iterations to make the feature actually work.",
+          "audio": "A feature is never truly finished; it is only abandoned. If you launch a feature and immediately move all your engineers to the next shiny project, the first feature will slowly die. You must reserve 30% of your engineering time for the post-launch fixes."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Surviving the Metrics",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Phased Rollout' (or Canary Release)?",
+          "options": [
+            "Releasing yellow birds.",
+            "Risk mitigation. Instead of launching a massive new feature to 100% of the users at once, you launch it to 1% of the users. If the servers crash or the users hate it, the blast radius is tiny. If it succeeds, you slowly dial it up to 100%.",
+            "Rolling out a new carpet."
+          ],
+          "correct_answer": "Risk mitigation. Instead of launching a massive new feature to 100% of the users at once, you launch it to 1% of the users. If the servers crash or the users hate it, the blast radius is tiny. If it succeeds, you slowly dial it up to 100%.",
+          "explanation": "Never test explosives in a crowded room."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the PM analyzing a failed launch. What is a 'False Positive' in product metrics?",
+          "tts_text": "On launch day, we had 10,000 clicks on the new AI tool. We thought it was a massive success! But three days later, usage dropped to zero. The users didn't click because it was useful; they clicked because the button was big, red, and new. They tried it once and hated it.",
+          "options": [
+            "When the code says yes but means no.",
+            "Novelty Effect. Users will often click on something simply because it is new, creating a massive initial spike in metrics that looks like success. True success is only measured by 'Retention'—do they come back and use it again next week?",
+            "When users leave positive reviews falsely."
+          ],
+          "correct_answer": "Novelty Effect. Users will often click on something simply because it is new, creating a massive initial spike in metrics that looks like success. True success is only measured by 'Retention'—do they come back and use it again next week?",
+          "explanation": "Curiosity is not loyalty."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why must a PM fight the CEO during the 'Post-Launch Hangover'?",
+          "options": [
+            "Because the CEO drank too much.",
+            "The CEO immediately wants the team to start building 'The Next Big Thing'. The PM must fiercely defend the engineers so they can spend the next 4 weeks fixing the bugs and optimizing the feature they just launched, before moving on.",
+            "Because the PM wants a vacation."
+          ],
+          "correct_answer": "The CEO immediately wants the team to start building 'The Next Big Thing'. The PM must fiercely defend the engineers so they can spend the next 4 weeks fixing the bugs and optimizing the feature they just launched, before moving on.",
+          "explanation": "Iteration is where the actual money is made."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does it mean to 'Kill a Feature'?",
+          "options": [
+            "To hire an assassin.",
+            "The hardest PM decision. If a feature launches, gets iterated on, and still nobody uses it, the PM must order the engineers to delete the code. Deleting it removes complexity from the app and removes technical debt. It is painful, but necessary.",
+            "To make it super popular."
+          ],
+          "correct_answer": "The hardest PM decision. If a feature launches, gets iterated on, and still nobody uses it, the PM must order the engineers to delete the code. Deleting it removes complexity from the app and removes technical debt. It is painful, but necessary.",
+          "explanation": "A bloated product is a dying product."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Launch Terminology",
+      "pairs": [
+        { "concept": "Phased Rollout", "match": "Launching to only 1% of users to test for catastrophic bugs safely" },
+        { "concept": "Novelty Effect", "match": "When users click a new button just because it's new, faking success" },
+        { "concept": "Retention", "match": "The only true metric of success; whether users come back next week" },
+        { "concept": "Killing a Feature", "match": "Deleting a failed feature entirely to prevent codebase bloat" }
+      ]
+    }
+  ]
+}

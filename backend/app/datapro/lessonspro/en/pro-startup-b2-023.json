@@ -1,0 +1,106 @@
+{
+  "id": "pro-startup-b2-023",
+  "title": "Liquidation Preferences (Downside Protection)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Who Gets Paid First?",
+      "parts": [
+        {
+          "visual": "A VC invests $5 Million into a startup for 20% ownership. Two years later, the startup fails and is sold for only $5 Million total. Does the VC get 20% ($1M) and the founder gets 80% ($4M)? NO. The VC gets all $5 Million. The founder gets zero.\n\nThe Mechanism:\n1. Preferred Stock: VCs do not buy normal 'Common Stock' like the founders. They buy 'Preferred Stock'.\n2. Liquidation Preference: A legal clause that guarantees the investor gets their money back first before the founders get a single penny, protecting the VC if the company is sold for a low price.",
+          "audio": "Liquidation Preferences dictate the exact order in which people get paid when a company is sold or goes bankrupt. VCs use this clause as a shield to guarantee they recover their capital in a disaster scenario."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Waterfall of Cash",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A VC invests $10 Million with a '1x Liquidation Preference'. The company is later sold for $12 Million. How is the money distributed?",
+          "options": [
+            "The founders take $12M.",
+            "The VC takes their $10M first (the 1x preference). The remaining $2M is then split among the common shareholders (the founders and employees).",
+            "The VC takes $12M."
+          ],
+          "correct_answer": "The VC takes their $10M first (the 1x preference). The remaining $2M is then split among the common shareholders (the founders and employees).",
+          "explanation": "The '1x' means the VC is guaranteed to get 1 times their original investment back before anyone else eats."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the aggressive VC negotiating. What predatory term is he demanding?",
+          "tts_text": "We will give you the money, but we require a 3x Liquidation Preference. We are taking a massive risk on you, so we need extra downside protection.",
+          "options": [
+            "A 30% interest rate.",
+            "A '3x Liquidation Preference' means if the VC invests $5M, they are guaranteed to take the first $15M when the company sells before the founders get anything. This is highly punitive.",
+            "Three board seats."
+          ],
+          "correct_answer": "A '3x Liquidation Preference' means if the VC invests $5M, they are guaranteed to take the first $15M when the company sells before the founders get anything. This is highly punitive.",
+          "explanation": "Standard Silicon Valley terms are '1x Non-Participating'. Anything higher is toxic to the founders."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens in a 'Home Run' scenario where the company is sold for $1 Billion?",
+          "options": [
+            "The VC asks for a refund.",
+            "The Liquidation Preference doesn't matter. The VC will 'convert' their Preferred Stock into Common Stock, give up their downside protection, and simply take their massive 20% slice of the $1 Billion ($200M).",
+            "The founders keep all $1 Billion."
+          ],
+          "correct_answer": "The Liquidation Preference doesn't matter. The VC will 'convert' their Preferred Stock into Common Stock, give up their downside protection, and simply take their massive 20% slice of the $1 Billion ($200M).",
+          "explanation": "Liquidation preferences only matter in mediocre exits or failures. In massive successes, everyone gets rich."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do employees with Stock Options often get nothing when a struggling startup is sold?",
+          "options": [
+            "Because the CEO hates them.",
+            "Because employees hold 'Common Stock'. If the sale price is lower than the total VC Liquidation Preferences, the VCs take 100% of the cash, leaving zero dollars to trickle down to the employees.",
+            "Because options expire."
+          ],
+          "correct_answer": "Because employees hold 'Common Stock'. If the sale price is lower than the total VC Liquidation Preferences, the VCs take 100% of the cash, leaving zero dollars to trickle down to the employees.",
+          "explanation": "This is known as a 'Liquidation Overhang', and it destroys employee morale."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Priorities",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the investor's safety net:",
+          "parts": [
+            "Preferred",
+            "stock",
+            "guarantees",
+            "investors",
+            "get",
+            "their",
+            "money",
+            "back",
+            "first."
+          ],
+          "correct_order": [
+            "Preferred",
+            "stock",
+            "guarantees",
+            "investors",
+            "get",
+            "their",
+            "money",
+            "back",
+            "first."
+          ],
+          "explanation": "The ultimate difference between Founders (Common) and VCs (Preferred)."
+        }
+      ]
+    }
+  ]
+}

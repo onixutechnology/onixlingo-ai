@@ -1,0 +1,108 @@
+{
+  "id": "pro-startup-b2-007",
+  "title": "CAC vs. LTV (The Math of Growth)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Golden Ratio",
+      "parts": [
+        {
+          "visual": "A CEO is celebrating because they acquired 10,000 new users today. But the CFO is crying because the company is now bankrupt.\n\nThe Equation:\n1. CAC (Customer Acquisition Cost): How much marketing/sales money you burned to get ONE paying customer. (e.g., you spent $1,000 on ads to get 1 user. CAC = $1,000).\n2. LTV (Lifetime Value): How much total profit that ONE user will give you before they cancel. (e.g., they pay $10/month for 10 months. LTV = $100).\n3. The Disaster: Spending $1,000 to acquire a $100 customer is financial suicide.",
+          "audio": "The relationship between Customer Acquisition Cost and Lifetime Value is the heartbeat of a startup. If your CAC is higher than your LTV, your company is fundamentally broken."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Money Machine",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup has an LTV of $3,000. Their CAC is $1,000. Is this a healthy business model?",
+          "options": [
+            "No, the CAC is too high.",
+            "Yes. This is the 'Golden Ratio' of 3:1. For every $1 they put into the marketing machine, they get $3 back over the lifetime of the customer. VCs will pour millions into this company.",
+            "No, the numbers are too small."
+          ],
+          "correct_answer": "Yes. This is the 'Golden Ratio' of 3:1. For every $1 they put into the marketing machine, they get $3 back over the lifetime of the customer. VCs will pour millions into this company.",
+          "explanation": "If the LTV to CAC ratio is higher than 3:1, you have built a money-printing machine."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CFO's warning. What is the danger of 'Payback Period'?",
+          "tts_text": "Our LTV is $500 and our CAC is $100. That's a great ratio. But it takes us 2 years to collect that $500 from the customer. We have to pay Facebook the $100 today. We are going to run out of cash before we get paid.",
+          "options": [
+            "Facebook is too expensive.",
+            "Cash Flow Death. Even with a profitable ratio, if the 'Payback Period' (the time it takes to recover the CAC) is too long, the startup will burn through its cash reserves and die.",
+            "The customers are lying."
+          ],
+          "correct_answer": "Cash Flow Death. Even with a profitable ratio, if the 'Payback Period' (the time it takes to recover the CAC) is too long, the startup will burn through its cash reserves and die.",
+          "explanation": "A great LTV/CAC ratio cannot save you if your bank account hits zero."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How does lowering your 'Churn Rate' mathematically impact this equation?",
+          "options": [
+            "It lowers the CAC.",
+            "It directly increases the Lifetime Value (LTV). If customers stay with you for 20 months instead of 10 months, your LTV doubles, making your business instantly more profitable without spending more on marketing.",
+            "It decreases the payback period."
+          ],
+          "correct_answer": "It directly increases the Lifetime Value (LTV). If customers stay with you for 20 months instead of 10 months, your LTV doubles, making your business instantly more profitable without spending more on marketing.",
+          "explanation": "This is why retaining old customers is always cheaper than acquiring new ones."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens to the CAC in an industry when multiple heavily-funded startups start competing for the exact same customers on Google Ads?",
+          "options": [
+            "The CAC drops.",
+            "The CAC explodes. Because it is an auction system, the startups just outbid each other with VC money, driving the cost of acquisition so high that everyone loses money.",
+            "The CAC stays the same."
+          ],
+          "correct_answer": "The CAC explodes. Because it is an auction system, the startups just outbid each other with VC money, driving the cost of acquisition so high that everyone loses money.",
+          "explanation": "This is the 'CAC Trap'. You must find cheaper, non-traditional channels to survive."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Metrics",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to state the golden rule of SaaS economics:",
+          "parts": [
+            "Your",
+            "lifetime",
+            "value",
+            "must",
+            "be",
+            "three",
+            "times",
+            "your",
+            "acquisition",
+            "cost."
+          ],
+          "correct_order": [
+            "Your",
+            "lifetime",
+            "value",
+            "must",
+            "be",
+            "three",
+            "times",
+            "your",
+            "acquisition",
+            "cost."
+          ],
+          "explanation": "The 3:1 ratio is the industry standard for a healthy, scalable startup."
+        }
+      ]
+    }
+  ]
+}

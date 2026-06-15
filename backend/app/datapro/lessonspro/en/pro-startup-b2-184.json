@@ -1,0 +1,104 @@
+{
+  "id": "pro-startup-b2-184",
+  "title": "Feature Creep and Scope Bloat",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Disease of 'More'",
+      "parts": [
+        {
+          "visual": "A startup builds an app to help people track their water intake. It's simple and beautiful. Then, the marketing team says: 'Let's add a social feed!' The CEO says: 'Let's add a crypto wallet!' The engineers say: 'Let's add AI!' Six months later, the app is a slow, confusing mess. Users delete it because they just wanted to track water.\n\nThe Creep:\n1. Feature Creep: The continuous, subtle addition of new features to a product until the original, core value proposition is completely buried in a confusing, heavy interface.\n2. The 'Yes' Trap: It is incredibly easy for a founder to say 'Yes' to a customer who requests a random feature. True product management is the art of saying 'No' 99 times out of 100.",
+          "audio": "Startups rarely die from starvation. They usually die from indigestion. They try to do ten things poorly instead of doing one thing perfectly. Your product should be a scalpel, not a Swiss Army Knife."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Defending the Core",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A massive enterprise client says: 'We will pay you $100k, but only if you build this custom, obscure feature just for us.' Why is this dangerous?",
+          "options": [
+            "Because $100k is not enough.",
+            "The Custom Dev Trap. If you say yes, you stop building a scalable product for thousands of users, and you become a consulting firm for one client. That custom feature will clutter your code forever, confusing all your other users.",
+            "Because enterprise clients lie."
+          ],
+          "correct_answer": "The Custom Dev Trap. If you say yes, you stop building a scalable product for thousands of users, and you become a consulting firm for one client. That custom feature will clutter your code forever, confusing all your other users.",
+          "explanation": "Never let one loud customer hijack your entire product roadmap."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the famous Steve Jobs quote about design. What does he say focus really means?",
+          "tts_text": "People think focus means saying yes to the thing you've got to focus on. But that's not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully.",
+          "options": [
+            "Focus means working 100 hours a week.",
+            "Focus is the weaponization of 'No'. A bad product manager says no to bad ideas. A great product manager says no to incredibly good, profitable ideas, simply because they distract from the single, core mission.",
+            "Focus means staring at the screen."
+          ],
+          "correct_answer": "Focus is the weaponization of 'No'. A bad product manager says no to bad ideas. A great product manager says no to incredibly good, profitable ideas, simply because they distract from the single, core mission.",
+          "explanation": "Strategy is deciding what not to do."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Scope Bloat' during an engineering Sprint?",
+          "options": [
+            "When the computers overheat.",
+            "When the team agrees to build Feature X in two weeks, but halfway through, the CEO demands they also add Feature Y and Z to the same sprint. The scope 'bloats', deadlines are missed, code is rushed, and the engineers burn out.",
+            "When the app file size gets too big."
+          ],
+          "correct_answer": "When the team agrees to build Feature X in two weeks, but halfway through, the CEO demands they also add Feature Y and Z to the same sprint. The scope 'bloats', deadlines are missed, code is rushed, and the engineers burn out.",
+          "explanation": "Scope bloat destroys engineering morale."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How do you cure a product suffering from severe Feature Creep?",
+          "options": [
+            "Add a tutorial.",
+            "Sunsetting (Killing Features). The hardest thing a founder can do is look at a feature they spent 3 months building, realize it is confusing the core product, and ruthlessly delete it from the app. Deleting code is often better than writing code.",
+            "Change the colors."
+          ],
+          "correct_answer": "Sunsetting (Killing Features). The hardest thing a founder can do is look at a feature they spent 3 months building, realize it is confusing the core product, and ruthlessly delete it from the app. Deleting code is often better than writing code.",
+          "explanation": "Addition by subtraction."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Focus",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the essence of product management:",
+          "parts": [
+            "True",
+            "focus",
+            "is",
+            "saying",
+            "no",
+            "to",
+            "good",
+            "ideas."
+          ],
+          "correct_order": [
+            "True",
+            "focus",
+            "is",
+            "saying",
+            "no",
+            "to",
+            "good",
+            "ideas."
+          ],
+          "explanation": "If it doesn't serve the core mission, it is a distraction."
+        }
+      ]
+    }
+  ]
+}

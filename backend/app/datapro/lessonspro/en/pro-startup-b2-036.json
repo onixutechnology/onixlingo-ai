@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-036",
+  "title": "SaaS (Software as a Service) Business Model",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The End of the CD-ROM",
+      "parts": [
+        {
+          "visual": "In 1999, you paid $500 to buy a CD-ROM of Microsoft Office. You owned it forever. In 2023, you pay $10 a month to use Google Workspace in the cloud. If you stop paying, the software stops working.\n\nThe Revolution:\n1. SaaS (Software as a Service): The business model where customers rent software on a recurring subscription basis instead of buying it outright.\n2. The Advantage: Predictable, compounding revenue. The company doesn't have to 'resell' the customer every year. They just have to keep them from canceling.",
+          "audio": "SaaS is the most lucrative business model ever invented. Wall Street loves SaaS because the revenue is highly predictable. You do not sell a product once; you lease access to a digital utility every single month."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Mechanics of the Cloud",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A company used to sell its software for a one-time fee of $1,000. They switch to a SaaS model and charge $100 a month. In the first year, their revenue drops massively. Why?",
+          "options": [
+            "Because SaaS is illegal.",
+            "The 'SaaS Cash Flow Trough'. Instead of getting $1,000 on Day 1, they only get $100. It takes 10 months just to break even on that one customer. However, in Year 2 and Year 3, the SaaS model becomes vastly more profitable.",
+            "Because the software broke."
+          ],
+          "correct_answer": "The 'SaaS Cash Flow Trough'. Instead of getting $1,000 on Day 1, they only get $100. It takes 10 months just to break even on that one customer. However, in Year 2 and Year 3, the SaaS model becomes vastly more profitable.",
+          "explanation": "Transitioning to SaaS requires massive upfront capital to survive the initial revenue drop."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC explaining why SaaS companies are valued so highly. What is the key phrase?",
+          "tts_text": "If a consulting firm makes $10 Million this year, they have to start at zero on January 1st next year. If a SaaS company makes $10 Million this year, they wake up on January 1st with $10 Million automatically locked in.",
+          "options": [
+            "Consultants are lazy.",
+            "Recurring Revenue. The SaaS model guarantees that revenue repeats automatically without the sales team having to lift a finger, assuming the churn rate is low.",
+            "The VC likes January."
+          ],
+          "correct_answer": "Recurring Revenue. The SaaS model guarantees that revenue repeats automatically without the sales team having to lift a finger, assuming the churn rate is low.",
+          "explanation": "Predictability is what drives billion-dollar valuations."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the primary difference between 'On-Premise' software and 'SaaS'?",
+          "options": [
+            "On-Premise is faster.",
+            "Hosting. On-Premise software is physically installed on the customer's own private servers. SaaS is hosted in the cloud (like AWS) and maintained entirely by the startup.",
+            "SaaS has no buttons."
+          ],
+          "correct_answer": "Hosting. On-Premise software is physically installed on the customer's own private servers. SaaS is hosted in the cloud (like AWS) and maintained entirely by the startup.",
+          "explanation": "SaaS allows the startup to push bug fixes instantly to all users simultaneously."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Gross Margin' usually so high in a SaaS company (often 80-90%)?",
+          "options": [
+            "Because software engineers are cheap.",
+            "Because the cost of replicating the product is near zero. Once the code is written, selling it to a million users just costs a few dollars in server space.",
+            "Because taxes are lower."
+          ],
+          "correct_answer": "Because the cost of replicating the product is near zero. Once the code is written, selling it to a million users just costs a few dollars in server space.",
+          "explanation": "High margins are why venture capitalists are addicted to software."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "SaaS Terminology",
+      "pairs": [
+        { "concept": "SaaS", "match": "Software distributed via the cloud on a subscription basis" },
+        { "concept": "Recurring Revenue", "match": "Income that is highly likely to continue in the future automatically" },
+        { "concept": "On-Premise", "match": "Software installed and run on computers on the premises of the person using it" },
+        { "concept": "Gross Margin", "match": "The percentage of revenue that exceeds the direct costs of delivering the software" }
+      ]
+    }
+  ]
+}

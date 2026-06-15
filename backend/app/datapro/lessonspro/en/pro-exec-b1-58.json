@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-58",
+  "title": "Data Privacy and Cybersecurity Basics",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Executive's Responsibility",
+      "parts": [
+        {
+          "visual": "Cybersecurity is not just an 'IT problem'; it is an executive risk management issue. A data breach can bankrupt a company.\n\nCore Threats:\n1. Phishing: Fraudulent emails designed to steal credentials.\n2. Ransomware: Malware that locks your data until a ransom is paid.\n3. Insider Threat: Employees leaking data (accidentally or maliciously).",
+          "audio": "Cybersecurity is not just an IT problem; it is an executive risk management issue. Understand the threats of Phishing, Ransomware, and Insider Threats."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Managing Cyber Risk",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "An employee receives an email that looks like it's from the CEO, asking for an urgent wire transfer to a new vendor. What is this?",
+          "options": [
+            "A standard financial request.",
+            "A Spear-Phishing attack (Social Engineering).",
+            "A computer virus."
+          ],
+          "correct_answer": "A Spear-Phishing attack (Social Engineering).",
+          "explanation": "Hackers frequently impersonate executives to bypass security protocols. Verification protocols are essential."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the IT Director. What security protocol is being enforced?",
+          "tts_text": "We are requiring all employees to use an authenticator app when logging in from an external network.",
+          "options": [
+            "Phishing.",
+            "Two-Factor Authentication (2FA).",
+            "A firewall."
+          ],
+          "correct_answer": "Two-Factor Authentication (2FA).",
+          "explanation": "2FA requires both a password (something you know) and a device (something you have), drastically reducing unauthorized access."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Data Privacy' (like GDPR) different from 'Cybersecurity'?",
+          "options": [
+            "They are the exact same thing.",
+            "Cybersecurity stops hackers; Data Privacy governs how a company legally collects, stores, and sells legitimate user data.",
+            "Data privacy only applies to social media."
+          ],
+          "correct_answer": "Cybersecurity stops hackers; Data Privacy governs how a company legally collects, stores, and sells legitimate user data.",
+          "explanation": "You can have perfect cybersecurity and still be sued for millions if you violate data privacy laws like GDPR or CCPA."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If your company is hit by Ransomware, what is the standard executive protocol?",
+          "options": [
+            "Pay the hackers immediately.",
+            "Disconnect infected systems, engage an incident response firm, and rely on secure, offline backups to restore the data.",
+            "Turn off the Wi-Fi and go home."
+          ],
+          "correct_answer": "Disconnect infected systems, engage an incident response firm, and rely on secure, offline backups to restore the data.",
+          "explanation": "Paying ransoms encourages more attacks and does not guarantee data recovery. Offline backups are the ultimate defense."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Security Terminology",
+      "pairs": [
+        { "concept": "Phishing", "match": "Fraudulent emails designed to steal information" },
+        { "concept": "Ransomware", "match": "Malware that demands payment to unlock data" },
+        { "concept": "2FA", "match": "Two-Factor Authentication" },
+        { "concept": "Breach", "match": "An incident where data is accessed without authorization" }
+      ]
+    }
+  ]
+}

@@ -128,7 +128,7 @@ async def get_lesson_content(
         parts = lesson_id.split("-")
         if len(parts) >= 3:
             num_part = parts[-1]
-            block_id = "-".join(parts[1:-1])  # e.g., 'exec-crisis'
+            block_id = "-".join(parts[1:-1])  # e.g., 'exec-crisis' or 'exec-b1'
             
             PRO_BLOCK_IDS = [
                 'exec-b1', 'exec-b2', 'exec-c1', 'exec-c2', 'exec-exec', 'exec-mastery',
@@ -139,10 +139,9 @@ async def get_lesson_content(
             ]
             
             if block_id in PRO_BLOCK_IDS:
-                block_idx = PRO_BLOCK_IDS.index(block_id)
-                physical_prefixes = ["b1", "b2", "c1", "c2", "exec", "mastery"]
-                mapped_prefix = physical_prefixes[block_idx % 6]
-                filename = f"pro-{mapped_prefix}-{num_part}.json"
+                # Ya no reciclamos prefijos. Ahora buscamos el archivo único.
+                # Ejemplo: pro-exec-b1-1.json
+                filename = f"pro-{block_id}-{num_part}.json"
                 mapped_pro_id = lesson_id
     
     # Si el idioma solicitado es 'en' (por defecto) pero la lección tiene prefijo 'fr-' o 'zh-',

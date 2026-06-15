@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-076",
+  "title": "Managing the Burn Rate",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Speed of Fire",
+      "parts": [
+        {
+          "visual": "A startup raises $10 Million. The CEO immediately hires 50 people, rents a massive office in San Francisco, and buys everyone a MacBook Pro. Nine months later, the $10 Million is gone, the product isn't finished, and the company files for bankruptcy.\n\nThe Oxygen of the Company:\n1. Burn Rate: The exact amount of cash a startup loses every single month before it achieves profitability.\n2. Runway: How many months the startup can survive at its current burn rate before the bank account hits exactly zero.",
+          "audio": "Startups do not die because their product is bad. Startups die because they run out of money. Managing the burn rate is the single most important mathematical responsibility of the CEO."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Calculating Survival",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup has $2,000,000 in the bank. They spend $300,000 a month on salaries and servers, and they generate $100,000 a month in revenue. What is their 'Net Burn Rate', and what is their 'Runway'?",
+          "options": [
+            "Net Burn: $300,000. Runway: 6.6 months.",
+            "Net Burn: $200,000. Runway: 10 months. (They spend 300k, but make 100k, so they are only 'burning' 200k. Two million divided by 200k equals exactly 10 months to live).",
+            "Net Burn: $400,000. Runway: 5 months."
+          ],
+          "correct_answer": "Net Burn: $200,000. Runway: 10 months. (They spend 300k, but make 100k, so they are only 'burning' 200k. Two million divided by 200k equals exactly 10 months to live).",
+          "explanation": "If your runway is less than 6 months, you are in a state of absolute emergency."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CFO's warning. What happens when a startup tries to raise money with only 2 months of runway left?",
+          "tts_text": "If we wait until December to fundraise, the VCs will look at our bank account and see we are desperate. They will give us terrible terms, demand 40% of the company, and fire the CEO, because they know we have no leverage.",
+          "options": [
+            "The VCs will give them more money.",
+            "Loss of Leverage. You must raise money when you don't actually need it. If you try to raise capital when you are starving to death, predators will smell the blood and destroy your valuation.",
+            "The VCs will take a vacation."
+          ],
+          "correct_answer": "Loss of Leverage. You must raise money when you don't actually need it. If you try to raise capital when you are starving to death, predators will smell the blood and destroy your valuation.",
+          "explanation": "Always raise money when you have at least 12 months of runway."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Default Alive' vs 'Default Dead' calculation?",
+          "options": [
+            "A video game mode.",
+            "A mathematical projection. If your expenses stay exactly the same and your revenue continues to grow at its current historical rate, will you reach profitability before the cash runs out? If yes, you are Default Alive. If no, you are Default Dead.",
+            "A legal term."
+          ],
+          "correct_answer": "A mathematical projection. If your expenses stay exactly the same and your revenue continues to grow at its current historical rate, will you reach profitability before the cash runs out? If yes, you are Default Alive. If no, you are Default Dead.",
+          "explanation": "Created by Paul Graham (Y Combinator), this is the most important question in Silicon Valley."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do VCs actively *encourage* a high burn rate after a Series A round?",
+          "options": [
+            "Because they hate money.",
+            "To buy market share. VCs do not invest to see a startup be 'safe' and profitable. They want the startup to burn millions on marketing to destroy competitors and achieve a monopoly before the money runs out.",
+            "To pay higher taxes."
+          ],
+          "correct_answer": "To buy market share. VCs do not invest to see a startup be 'safe' and profitable. They want the startup to burn millions on marketing to destroy competitors and achieve a monopoly before the money runs out.",
+          "explanation": "Venture capital is rocket fuel. It is meant to be burned."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Financial Survival Terminology",
+      "pairs": [
+        { "concept": "Gross Burn", "match": "The total amount of money a company spends every month" },
+        { "concept": "Net Burn", "match": "The total money spent minus the revenue generated (the actual cash lost)" },
+        { "concept": "Runway", "match": "The amount of time the company has before it runs out of cash" },
+        { "concept": "Default Dead", "match": "A startup trajectory that mathematically ends in bankruptcy without intervention" }
+      ]
+    }
+  ]
+}

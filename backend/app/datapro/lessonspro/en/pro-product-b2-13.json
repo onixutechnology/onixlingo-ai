@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-13",
+  "title": "Product Analytics (MAU, DAU, Churn)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Pulse of the Machine",
+      "parts": [
+        {
+          "visual": "A founder brags to investors: 'We have 10 Million registered users!' The investor looks at the real data. 9.9 million of those people downloaded the app three years ago, opened it once, and never came back. The app is completely dead, but the founder is blinded by a 'Vanity Metric'.\n\nThe Truth Serum:\n1. Active Users (MAU/DAU): You do not care how many people downloaded the app. You only care about Monthly Active Users (MAU) and Daily Active Users (DAU)—the people actually logging in and doing work.\n2. Churn Rate: The silent killer. Churn is the percentage of your users who cancel their subscription or abandon your app every month. If your churn is high, you are pouring water into a bucket with a massive hole in the bottom.",
+          "audio": "Product management without analytics is just guessing. If you cannot mathematically prove that a user clicked a button, the feature does not exist. Data is the only objective truth in a company full of opinions."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Reading the Matrix",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of a 'Vanity Metric'?",
+          "options": [
+            "It makes you look ugly.",
+            "It is a number that looks huge (like 'Total App Downloads') and makes the team feel great, but it has zero correlation to actual revenue or user engagement. It creates a false sense of success while the company secretly bleeds to death.",
+            "It is too hard to calculate."
+          ],
+          "correct_answer": "It is a number that looks huge (like 'Total App Downloads') and makes the team feel great, but it has zero correlation to actual revenue or user engagement. It creates a false sense of success while the company secretly bleeds to death.",
+          "explanation": "Downloads pay the ego. Active users pay the rent."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO panic about the Churn Rate. What is the mathematical problem with high Churn?",
+          "tts_text": "We are spending $50,000 a month on marketing to acquire 1,000 new users. But our Churn is 20%. That means 200 of them are cancelling their accounts before the end of the month. We have to run at maximum speed just to stay in the exact same place.",
+          "options": [
+            "The marketing is too cheap.",
+            "The Leaky Bucket. If your churn is high, all your growth efforts are wasted replacing the people who left, instead of actually growing the total user base. You cannot out-market a terrible product.",
+            "The churn is too low."
+          ],
+          "correct_answer": "The Leaky Bucket. If your churn is high, all your growth efforts are wasted replacing the people who left, instead of actually growing the total user base. You cannot out-market a terrible product.",
+          "explanation": "Fix the hole before you turn on the hose."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does the DAU/MAU ratio measure?",
+          "options": [
+            "How many dogs use the app.",
+            "Stickiness. It divides Daily Active Users by Monthly Active Users. If the ratio is 50%, it means the average user opens the app 15 days a month. A high DAU/MAU ratio (like WhatsApp) means the product is an unbreakable daily habit.",
+            "How much money you make."
+          ],
+          "correct_answer": "Stickiness. It divides Daily Active Users by Monthly Active Users. If the ratio is 50%, it means the average user opens the app 15 days a month. A high DAU/MAU ratio (like WhatsApp) means the product is an unbreakable daily habit.",
+          "explanation": "Are you a vitamin (daily) or a painkiller (rarely)?"
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Cohort Analysis'?",
+          "options": [
+            "Analyzing ancient Rome.",
+            "Grouping users by the month they joined. Instead of looking at a massive blended average, you look at 'The group of users who joined in January' vs 'The group who joined in March'. It tells you if your recent product updates are actually improving retention.",
+            "Analyzing how fast users type."
+          ],
+          "correct_answer": "Grouping users by the month they joined. Instead of looking at a massive blended average, you look at 'The group of users who joined in January' vs 'The group who joined in March'. It tells you if your recent product updates are actually improving retention.",
+          "explanation": "Averages lie. Cohorts tell the truth."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Analytics Metrics",
+      "pairs": [
+        { "concept": "Vanity Metric", "match": "A massive number that makes you look good but drives zero real business value" },
+        { "concept": "Churn Rate", "match": "The percentage of users who abandon your app or cancel their subscription" },
+        { "concept": "MAU", "match": "Monthly Active Users; the true measure of your active user base" },
+        { "concept": "Stickiness", "match": "How deeply your app is ingrained in a user's daily habit (DAU/MAU ratio)" }
+      ]
+    }
+  ]
+}

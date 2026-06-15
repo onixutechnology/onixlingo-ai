@@ -1,0 +1,104 @@
+{
+  "id": "pro-product-b2-9",
+  "title": "The Minimum Viable Product (MVP) vs. Minimum Lovable Product (MLP)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Evolution of 'Good Enough'",
+      "parts": [
+        {
+          "visual": "You want to build a spaceship. An MVP (Minimum Viable Product) is a skateboard. It gets the user from point A to point B, but it's ugly and slow. In 2012, users accepted skateboards because software was rare. Today, there are 5 million apps. If you hand a modern user a skateboard, they will throw it in the trash.\n\nThe Shift:\n1. The MVP: The absolute minimum amount of code required to test if a customer will actually pay for a solution. It is designed to be embarrassing.\n2. The MLP (Minimum Lovable Product): In highly competitive modern markets, 'viable' is no longer enough. The first version must be small, but it must be beautifully designed and emotionally delightful, otherwise the user will instantly switch to a competitor.",
+          "audio": "Reid Hoffman famously said, 'If you are not embarrassed by the first version of your product, you launched too late.' But if you are launching an email app in a world where Gmail exists, your embarrassment cannot be an ugly interface; it must only be a lack of advanced features."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Defining the Minimum",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the true psychological purpose of an MVP?",
+          "options": [
+            "To make a cheap product.",
+            "To validate a dangerous assumption quickly. If you assume people want an app for dog walking, you don't build a massive AI platform. You build a 1-page website with a phone number. If nobody calls the number, you saved 6 months of engineering.",
+            "To get famous quickly."
+          ],
+          "correct_answer": "To validate a dangerous assumption quickly. If you assume people want an app for dog walking, you don't build a massive AI platform. You build a 1-page website with a phone number. If nobody calls the number, you saved 6 months of engineering.",
+          "explanation": "An MVP is an experiment, not a final product."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the UX Designer explain the shift to MLP. Why is the 'skateboard' analogy failing today?",
+          "tts_text": "Ten years ago, users would tolerate a confusing menu if the technology was new. Today, consumer expectations are set by Apple and Instagram. If our new banking app doesn't feel perfectly smooth in the first 3 seconds, they uninstall it forever.",
+          "options": [
+            "Because skateboards are dangerous.",
+            "The Baseline of Delight. In a saturated market, users do not have patience for ugly software. A Minimum Lovable Product means you still only build ONE feature, but that one feature must have world-class UX and visual design to earn trust.",
+            "Because banking is boring."
+          ],
+          "correct_answer": "The Baseline of Delight. In a saturated market, users do not have patience for ugly software. A Minimum Lovable Product means you still only build ONE feature, but that one feature must have world-class UX and visual design to earn trust.",
+          "explanation": "You can cut scope, but you cannot cut quality."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Concierge MVP'?",
+          "options": [
+            "A hotel booking app.",
+            "Faking the technology with human labor. Instead of building an algorithm to recommend clothes, the founder manually looks at the user's photos and sends an email with recommendations. It proves the user wants the service before a single line of code is written.",
+            "A very expensive VIP feature."
+          ],
+          "correct_answer": "Faking the technology with human labor. Instead of building an algorithm to recommend clothes, the founder manually looks at the user's photos and sends an email with recommendations. It proves the user wants the service before a single line of code is written.",
+          "explanation": "Do things that don't scale, to learn what does scale."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How does a PM decide what to cut to reach an MVP?",
+          "options": [
+            "They cut the hardest code.",
+            "They focus exclusively on the 'Core Value Proposition'. If you are building Airbnb, the core value is 'booking a room'. Advanced filters, wishlists, and host reviews are stripped away. If the core value fails, the advanced features won't save it.",
+            "They cut whatever the designer hates."
+          ],
+          "correct_answer": "They focus exclusively on the 'Core Value Proposition'. If you are building Airbnb, the core value is 'booking a room'. Advanced filters, wishlists, and host reviews are stripped away. If the core value fails, the advanced features won't save it.",
+          "explanation": "If the heartbeat fails, you don't need a haircut."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of the MVP",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to define the rule of scope:",
+          "parts": [
+            "Cut",
+            "the",
+            "scope,",
+            "but",
+            "never",
+            "cut",
+            "the",
+            "quality."
+          ],
+          "correct_order": [
+            "Cut",
+            "the",
+            "scope,",
+            "but",
+            "never",
+            "cut",
+            "the",
+            "quality."
+          ],
+          "explanation": "Build half a product, not a half-assed product."
+        }
+      ]
+    }
+  ]
+}

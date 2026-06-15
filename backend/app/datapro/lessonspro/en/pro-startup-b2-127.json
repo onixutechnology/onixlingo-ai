@@ -1,0 +1,100 @@
+{
+  "id": "pro-startup-b2-127",
+  "title": "The Burn Rate and Cash Runway",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Ticking Clock",
+      "parts": [
+        {
+          "visual": "A startup raises $2 Million. The CEO hires 10 engineers, rents a fancy office, and throws a huge launch party. Six months later, the bank account hits $0. The CEO is shocked. The company dies instantly.\n\nThe Survival Metrics:\n1. The Burn Rate: The exact amount of cash the startup loses every single month (Total Expenses minus Total Revenue).\n2. The Runway: The amount of time (in months) the startup has before it goes completely bankrupt. (Total Cash divided by Burn Rate).",
+          "audio": "As a founder, your primary job is not writing code; your primary job is not running out of money. If you do not know your exact burn rate and runway down to the specific day, you are flying a plane blindfolded."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Managing the Oxygen",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup has $1,000,000 in the bank. They spend $150,000 a month on salaries, and make $50,000 a month in revenue. What is their 'Net Burn Rate'?",
+          "options": [
+            "$150,000 a month.",
+            "$100,000 a month. The 'Net Burn' is the actual cash lost after revenue is factored in ($150k expenses - $50k revenue = $100k net loss).",
+            "$50,000 a month."
+          ],
+          "correct_answer": "$100,000 a month. The 'Net Burn' is the actual cash lost after revenue is factored in ($150k expenses - $50k revenue = $100k net loss).",
+          "explanation": "Gross burn is what you spend. Net burn is what you lose."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CFO's warning to the CEO. What is the critical error the CEO is making regarding the Runway?",
+          "tts_text": "We have 12 months of runway left. But you want to start fundraising in month 11. That is suicide. Fundraising takes 6 months. If we start in month 11, we will miss payroll and die before the VC check clears.",
+          "options": [
+            "The CEO wants to buy a boat.",
+            "Waiting too long to fundraise. A founder must always initiate the next round of fundraising when they have at least 6 to 9 months of runway left. Raising money when you are desperate destroys your negotiation power.",
+            "The CFO is bad at math."
+          ],
+          "correct_answer": "Waiting too long to fundraise. A founder must always initiate the next round of fundraising when they have at least 6 to 9 months of runway left. Raising money when you are desperate destroys your negotiation power.",
+          "explanation": "Never raise money when you are bleeding."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the fastest, most brutal way to decrease the Burn Rate to survive a crisis?",
+          "options": [
+            "Cancel the Netflix subscription.",
+            "A Reduction in Force (Layoffs). In a software startup, 80% of the expenses are usually employee salaries. You cannot cut your way to survival by stopping free coffee; you must cut headcount.",
+            "Buy cheaper computers."
+          ],
+          "correct_answer": "A Reduction in Force (Layoffs). In a software startup, 80% of the expenses are usually employee salaries. You cannot cut your way to survival by stopping free coffee; you must cut headcount.",
+          "explanation": "Headcount is destiny."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do VCs actually *encourage* a high burn rate in the early stages?",
+          "options": [
+            "Because VCs hate money.",
+            "Because they are buying speed. VCs do not invest in a startup so it can survive as a 'zombie' company for 10 years. They want the startup to burn the cash aggressively to hire top engineers and capture the market before competitors do.",
+            "Because high burn rates look cool."
+          ],
+          "correct_answer": "Because they are buying speed. VCs do not invest in a startup so it can survive as a 'zombie' company for 10 years. They want the startup to burn the cash aggressively to hire top engineers and capture the market before competitors do.",
+          "explanation": "Venture capital is rocket fuel. You either achieve orbit or explode."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Survival",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to state the absolute rule of startups:",
+          "parts": [
+            "Never,",
+            "ever,",
+            "run",
+            "out",
+            "of",
+            "cash."
+          ],
+          "correct_order": [
+            "Never,",
+            "ever,",
+            "run",
+            "out",
+            "of",
+            "cash."
+          ],
+          "explanation": "The only unforgivable sin in entrepreneurship."
+        }
+      ]
+    }
+  ]
+}

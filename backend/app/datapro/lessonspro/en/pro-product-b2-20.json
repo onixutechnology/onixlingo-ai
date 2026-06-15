@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-20",
+  "title": "Stakeholder Management and Politics",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Art of Saying No",
+      "parts": [
+        {
+          "visual": "You are a PM. The CEO bursts into your office: 'I saw a competitor launch an AI feature! We need to stop everything and build AI right now!' Thirty minutes later, the Head of Sales emails: 'If we don't build this specific dashboard, we lose a $1M deal!' You have 3 engineers. You cannot do both.\n\nThe Politics of Product:\n1. Stakeholder Management: The psychological warfare of managing the competing egos, fears, and demands of executives across the company without destroying your product roadmap.\n2. The 'No' Framework: A PM cannot just say 'No'. They must say 'No, because if we do your idea, we will lose $500k in this other area. Are you willing to accept that trade-off?' You force them to make the hard mathematical choice.",
+          "audio": "A junior PM tries to make everyone happy and ends up building a terrible, chaotic product. A senior PM understands that their primary job is to disappoint highly important people in a professional, data-driven way."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Defending the Roadmap",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of the 'Loudest Voice in the Room'?",
+          "options": [
+            "It hurts your ears.",
+            "Usually, the Sales Director or the CEO yells the loudest for a feature. If the PM surrenders to the noise without data, the product roadmap becomes a chaotic list of random ideas, destroying the long-term vision of the company.",
+            "The room echoes too much."
+          ],
+          "correct_answer": "Usually, the Sales Director or the CEO yells the loudest for a feature. If the PM surrenders to the noise without data, the product roadmap becomes a chaotic list of random ideas, destroying the long-term vision of the company.",
+          "explanation": "Volume is not validity."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the PM handling the CEO's ridiculous demand. What tactic did the PM use?",
+          "tts_text": "CEO: We must build this blockchain feature by Friday! PM: 'I love that idea. We can absolutely do it. But to do it, I have to completely cancel the new security update. The app might get hacked next week. Do I have your approval to cancel the security update?'",
+          "options": [
+            "The PM quit.",
+            "The Trade-Off Mirror. Instead of arguing, the PM agrees but explicitly forces the CEO to look at the catastrophic cost of their demand. By making the CEO own the negative consequence, the CEO usually backs down.",
+            "The PM built the blockchain."
+          ],
+          "correct_answer": "The Trade-Off Mirror. Instead of arguing, the PM agrees but explicitly forces the CEO to look at the catastrophic cost of their demand. By making the CEO own the negative consequence, the CEO usually backs down.",
+          "explanation": "Make them pay the tax of their own ideas."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why should a PM never present a raw 'Feature List' to stakeholders?",
+          "options": [
+            "Because lists are boring.",
+            "It invites micromanagement. If you show executives a list of 10 features, they will argue about which feature is better. You must present 'Problems to Solve' (e.g., 'Reduce checkout time'). It forces executives to align on the goal, not the code.",
+            "Because the paper is too long."
+          ],
+          "correct_answer": "It invites micromanagement. If you show executives a list of 10 features, they will argue about which feature is better. You must present 'Problems to Solve' (e.g., 'Reduce checkout time'). It forces executives to align on the goal, not the code.",
+          "explanation": "Align on the destination, not the vehicle."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Yes, if...' negotiation strategy?",
+          "options": [
+            "Saying yes to everything.",
+            "A diplomatic way to block bad ideas. 'Yes, we can build that custom dashboard for your client, IF you give me $100,000 to hire two more freelance engineers right now.' It changes a firm No into an impossible conditional Yes.",
+            "Saying yes if it rains."
+          ],
+          "correct_answer": "A diplomatic way to block bad ideas. 'Yes, we can build that custom dashboard for your client, IF you give me $100,000 to hire two more freelance engineers right now.' It changes a firm No into an impossible conditional Yes.",
+          "explanation": "The polite path to rejection."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Corporate Politics",
+      "pairs": [
+        { "concept": "Stakeholder Management", "match": "Navigating the egos and demands of executives without ruining the product" },
+        { "concept": "The Trade-Off", "match": "Forcing an executive to cancel a good idea to make room for their new idea" },
+        { "concept": "HiPPO", "match": "The Highest Paid Person's Opinion; the enemy of a data-driven roadmap" },
+        { "concept": "Yes, if...", "match": "Agreeing to a bad idea only under impossible financial conditions" }
+      ]
+    }
+  ]
+}

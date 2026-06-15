@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-136",
+  "title": "The Cost of Capital",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Money is Not Free",
+      "parts": [
+        {
+          "visual": "A fundamental truth of corporate finance: Money is a product, and it has a price. That price is called the 'Cost of Capital'.\n\nThe Two Types of Money:\n1. Debt (Bonds/Loans): Cheaper, but highly risky. If you miss a payment, the bank takes the company.\n2. Equity (Stock): Safer, but highly expensive. You don't have to pay it back, but you give away permanent ownership and future profits.",
+          "audio": "Money is not free; it has a price called the Cost of Capital. Executives must choose between the cheap risk of Debt and the expensive safety of Equity."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Financing the Empire",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Your company needs $100 Million to build a new factory. Why might the CFO prefer to borrow the money (Debt) rather than sell new shares of stock (Equity)?",
+          "options": [
+            "Because banks are nicer.",
+            "Because debt is mathematically cheaper. The interest payments are tax-deductible, and you don't dilute the ownership of the current shareholders.",
+            "Because stock is illegal."
+          ],
+          "correct_answer": "Because debt is mathematically cheaper. The interest payments are tax-deductible, and you don't dilute the ownership of the current shareholders.",
+          "explanation": "However, if the factory fails and you cannot make the interest payments, the bank will force you into bankruptcy."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO's dilemma. What financial danger is she facing?",
+          "tts_text": "Interest rates just doubled. We can no longer afford to borrow money to fund our expansion. We have to halt all construction.",
+          "options": [
+            "A drop in the Cost of Capital.",
+            "A spike in the Cost of Capital (Macroeconomic Risk).",
+            "A marketing failure."
+          ],
+          "correct_answer": "A spike in the Cost of Capital (Macroeconomic Risk).",
+          "explanation": "When central banks raise interest rates, borrowing money becomes too expensive, forcing companies to shrink instead of grow."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does WACC stand for in corporate finance?",
+          "options": [
+            "Weak And Crazy Companies.",
+            "Weighted Average Cost of Capital. It is the average rate a company pays to finance its assets, blending both debt and equity.",
+            "Working At Corporate Centers."
+          ],
+          "correct_answer": "Weighted Average Cost of Capital. It is the average rate a company pays to finance its assets, blending both debt and equity.",
+          "explanation": "If a CEO pitches a new project that makes a 5% return, but the company's WACC is 8%, the project will actively destroy value."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do startups almost exclusively use Equity (Venture Capital) instead of Debt (Bank Loans)?",
+          "options": [
+            "Because banks hate technology.",
+            "Because startups burn cash and have no profits to make monthly interest payments. Banks won't lend to them, so they must sell ownership to survive.",
+            "Because venture capitalists are generous."
+          ],
+          "correct_answer": "Because startups burn cash and have no profits to make monthly interest payments. Banks won't lend to them, so they must sell ownership to survive.",
+          "explanation": "Equity is the most expensive money in the world (giving up 20% of your company), but for a startup, it is the only money available."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Capital Terminology",
+      "pairs": [
+        { "concept": "Cost of Capital", "match": "The required return necessary to make a capital budgeting project worthwhile" },
+        { "concept": "Debt", "match": "Money borrowed that must be paid back with interest" },
+        { "concept": "Equity", "match": "Value of the shares issued by a company" },
+        { "concept": "WACC", "match": "Weighted Average Cost of Capital" }
+      ]
+    }
+  ]
+}

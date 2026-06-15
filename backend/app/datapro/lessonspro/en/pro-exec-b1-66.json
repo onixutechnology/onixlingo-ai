@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-66",
+  "title": "Managing Remote and Global Teams",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Asynchronous Leadership",
+      "parts": [
+        {
+          "visual": "You cannot manage a global, remote team by forcing everyone to be on a Zoom call at 3 AM. Executives master 'Asynchronous' (async) work.\n\nRemote Leadership Rules:\n1. Measure Output, not hours online.\n2. Document everything. If it isn't written down, it didn't happen.\n3. Be hyper-intentional about building culture, because there are no 'water cooler' moments.",
+          "audio": "Executives master asynchronous work. When leading global teams, measure output rather than hours online, and document everything."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Remote Mindset",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "An employee in Tokyo logs off at 5 PM their time. You (in New York) need an immediate answer to a non-urgent question. What do you do?",
+          "options": [
+            "Call their personal phone until they answer.",
+            "Send them an email or Slack message expecting an answer when they log on the next morning. Respect local time zones.",
+            "Fire them for not being online when you are."
+          ],
+          "correct_answer": "Send them an email or Slack message expecting an answer when they log on the next morning. Respect local time zones.",
+          "explanation": "Global leadership requires respecting boundaries across time zones. Non-urgent issues must be handled asynchronously."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the remote leader. What management style is this?",
+          "tts_text": "I don't care if you work at 2 PM or 2 AM. I only care that the code is submitted and bug-free by Friday.",
+          "options": [
+            "Micromanagement.",
+            "Output-based management (Results-Oriented Work Environment).",
+            "Lazy management."
+          ],
+          "correct_answer": "Output-based management (Results-Oriented Work Environment).",
+          "explanation": "In a remote setting, tracking 'hours at a desk' is impossible and toxic. Track deliverables instead."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Documentation' the most important skill in a remote company?",
+          "options": [
+            "Because paper is cheap.",
+            "Because without heavy documentation, knowledge gets trapped in people's heads or private chats, slowing the whole company down.",
+            "To prove people are working."
+          ],
+          "correct_answer": "Because without heavy documentation, knowledge gets trapped in people's heads or private chats, slowing the whole company down.",
+          "explanation": "A strong remote culture relies on public wikis (like Notion or Confluence) so anyone can find answers without waiting for a meeting."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Proximity Bias'?",
+          "options": [
+            "The tendency to give preferential treatment to employees who are physically in the office with you over remote workers.",
+            "Standing too close to someone.",
+            "A software bug."
+          ],
+          "correct_answer": "The tendency to give preferential treatment to employees who are physically in the office with you over remote workers.",
+          "explanation": "Hybrid executives must actively fight proximity bias to ensure remote workers get equal access to promotions and high-level projects."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Remote Work Terms",
+      "pairs": [
+        { "concept": "Asynchronous", "match": "Communication that does not happen in real-time" },
+        { "concept": "Synchronous", "match": "Communication happening at the same time (e.g., a live meeting)" },
+        { "concept": "Output-based", "match": "Measuring success by results, not hours worked" },
+        { "concept": "Proximity Bias", "match": "Favoring employees who are physically present" }
+      ]
+    }
+  ]
+}

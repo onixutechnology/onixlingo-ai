@@ -1,0 +1,106 @@
+{
+  "id": "pro-exec-b1-140",
+  "title": "Intellectual Property: Trade Secrets vs. Patents",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Protecting the Magic",
+      "parts": [
+        {
+          "visual": "A company's most valuable asset is often its ideas. But how do you protect an idea?\n\nThe Executive Choice:\n1. The Patent: You register the invention with the government. You get a 20-year legal monopoly to sell it. The catch: You must publish the exact blueprints publicly for anyone to read.\n2. The Trade Secret: You never tell the government. You lock the recipe in a vault. The catch: If someone reverse-engineers it legally, you have zero protection.",
+          "audio": "To protect an invention, executives must choose between a Patent and a Trade Secret. A patent gives you a 20-year monopoly, but you must publish your blueprints to the world."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The IP Strategy",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "The recipe for Coca-Cola has never been patented. It is protected as a 'Trade Secret'. Why did the executives make this choice?",
+          "options": [
+            "Because patents are too expensive.",
+            "Because a patent expires after 20 years, allowing anyone to legally copy it. A trade secret lasts forever, as long as you can keep it hidden.",
+            "Because they forgot to file the paperwork."
+          ],
+          "correct_answer": "Because a patent expires after 20 years, allowing anyone to legally copy it. A trade secret lasts forever, as long as you can keep it hidden.",
+          "explanation": "If Coca-Cola had patented their recipe in 1886, the recipe would have become public knowledge, and legally free to copy, in 1906."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Chief Technology Officer. Why is he demanding a patent?",
+          "tts_text": "If we release this new hardware, our competitors will buy it, take it apart, and reverse-engineer how we built it in under a month.",
+          "options": [
+            "Because it is easy to keep a secret.",
+            "Because if a product is easily reverse-engineered, a Trade Secret is useless. You must rely on the legal protection of a Patent.",
+            "Because he likes lawyers."
+          ],
+          "correct_answer": "Because if a product is easily reverse-engineered, a Trade Secret is useless. You must rely on the legal protection of a Patent.",
+          "explanation": "You cannot keep a physical machine a secret once you sell it to the public. You must patent the mechanics."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the fatal flaw of relying on a Trade Secret?",
+          "options": [
+            "It is illegal.",
+            "If another company independently discovers the exact same formula through their own research, they can legally use it, and you cannot stop them.",
+            "It costs billions of dollars."
+          ],
+          "correct_answer": "If another company independently discovers the exact same formula through their own research, they can legally use it, and you cannot stop them.",
+          "explanation": "Trade secrets only protect you against espionage and theft. They do not protect you against independent genius."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does it mean when a patent enters the 'Public Domain'?",
+          "options": [
+            "The government owns it.",
+            "The 20-year legal monopoly has expired. The invention is now free for any company in the world to manufacture and sell without paying royalties.",
+            "It is secret again."
+          ],
+          "correct_answer": "The 20-year legal monopoly has expired. The invention is now free for any company in the world to manufacture and sell without paying royalties.",
+          "explanation": "This is the core bargain of the patent system: Short-term monopoly in exchange for long-term human progress."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Secrecy",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to instruct your legal team:",
+          "parts": [
+            "We",
+            "will",
+            "protect",
+            "this",
+            "algorithm",
+            "as",
+            "a",
+            "trade",
+            "secret."
+          ],
+          "correct_order": [
+            "We",
+            "will",
+            "protect",
+            "this",
+            "algorithm",
+            "as",
+            "a",
+            "trade",
+            "secret."
+          ],
+          "explanation": "Algorithms, especially AI models, are notoriously difficult to patent, making secrecy the preferred executive choice."
+        }
+      ]
+    }
+  ]
+}

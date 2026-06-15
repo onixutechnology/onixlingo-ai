@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-186",
+  "title": "The Subscription Economy (SaaS)",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Renting Instead of Buying",
+      "parts": [
+        {
+          "visual": "Ten years ago, you bought a software CD for $100 and owned it forever. Today, you pay $10 every month until you die. Welcome to SaaS (Software as a Service).\n\nThe Math of Subscriptions:\n1. Recurring Revenue (MRR): The holy grail of modern business. You start every month knowing exactly how much money you will make.\n2. Churn Rate: The percentage of customers who cancel their subscription each month.\n3. Lifetime Value (LTV): How much total money a customer pays before they finally cancel.",
+          "audio": "SaaS (Software as a Service) replaced one-time purchases with monthly subscriptions. Wall Street loves the Subscription Economy because it creates highly predictable Monthly Recurring Revenue, as long as the company can control its Churn Rate."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Infinite Payment",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A CEO changes their software pricing from a 'One-Time $500 Purchase' to a '$50/Month Subscription'. In the first year, revenue drops. But five years later, the company is worth billions. Why?",
+          "options": [
+            "Because they fired employees.",
+            "Because of the Lifetime Value (LTV). Over 5 years, the customer pays $3,000 instead of $500, and Wall Street values 'Recurring Revenue' much higher than one-time sales.",
+            "Because of inflation."
+          ],
+          "correct_answer": "Because of the Lifetime Value (LTV). Over 5 years, the customer pays $3,000 instead of $500, and Wall Street values 'Recurring Revenue' much higher than one-time sales.",
+          "explanation": "This is exactly what Adobe did when they transitioned Photoshop from a CD to a Cloud Subscription. Their stock price exploded."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the SaaS investor. What metric is he terrified of?",
+          "tts_text": "You are acquiring 10,000 new users a month, which is great. But your cancellation rate is 15% a month. You are pouring water into a bucket with a massive hole in the bottom.",
+          "options": [
+            "The Cost of Acquisition.",
+            "The Churn Rate. High churn means the product is fundamentally broken, and the company will eventually collapse once it runs out of new people to acquire.",
+            "The Server Costs."
+          ],
+          "correct_answer": "The Churn Rate. High churn means the product is fundamentally broken, and the company will eventually collapse once it runs out of new people to acquire.",
+          "explanation": "In SaaS, fixing Churn is infinitely more important than acquiring new users."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the psychological trick behind 'Auto-Renewal'?",
+          "options": [
+            "It makes computers faster.",
+            "It leverages human laziness (friction). Once a user enters their credit card, they will often keep paying for months or years simply because they forget to cancel or find the cancellation process too annoying.",
+            "It is required by the government."
+          ],
+          "correct_answer": "It leverages human laziness (friction). Once a user enters their credit card, they will often keep paying for months or years simply because they forget to cancel or find the cancellation process too annoying.",
+          "explanation": "Many subscription businesses rely heavily on the 'Gym Membership' model—people pay, but they never actually go."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does 'MRR' stand for?",
+          "options": [
+            "More Revenue Required.",
+            "Monthly Recurring Revenue. The total predictable income a company expects to receive every single month from active subscriptions.",
+            "Maximum Return Rate."
+          ],
+          "correct_answer": "Monthly Recurring Revenue. The total predictable income a company expects to receive every single month from active subscriptions.",
+          "explanation": "MRR is the heartbeat of any modern technology company."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "SaaS Terminology",
+      "pairs": [
+        { "concept": "SaaS", "match": "Software as a Service (a software licensing and delivery model)" },
+        { "concept": "MRR", "match": "Monthly Recurring Revenue" },
+        { "concept": "Churn Rate", "match": "The annual percentage rate at which customers stop subscribing to a service" },
+        { "concept": "LTV", "match": "Lifetime Value (The total revenue a company expects from a single customer account)" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "pro-product-b2-29",
+  "title": "Feature Factories vs. Empowered Teams",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Assembly Line of Doom",
+      "parts": [
+        {
+          "visual": "Team A: The CEO hands the PM a list of 10 features. The PM writes the tickets. The engineers write the code. They launch. Nobody uses the features. The CEO yells at them to build 10 more features. \nTeam B: The CEO says 'Our checkout conversion is too low. Fix it.' The PM, Designer, and Lead Engineer lock themselves in a room, run experiments, and invent a 1-click checkout that doubles revenue.\n\nThe Two Worlds:\n1. The Feature Factory: A toxic environment where PMs and engineers are treated like mindless assembly-line workers. Success is measured by 'How many features did we ship?' instead of 'Did we actually solve a problem?'\n2. The Empowered Team: The gold standard of product management (championed by Marty Cagan). The team is given a business problem, not a feature list. They are empowered to figure out the solution themselves.",
+          "audio": "If you hand a brilliant engineer a dictatorial list of features to build, you are wasting 90% of their brain. You are paying for their hands, but throwing away their creativity."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Escaping the Factory",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the primary symptom of a 'Feature Factory' company?",
+          "options": [
+            "They build features too slowly.",
+            "Celebrating the Launch, ignoring the Outcome. In a feature factory, everyone eats cake on the day the code is deployed. But nobody checks the analytics 30 days later to see if the feature actually increased revenue. Shipping code is treated as the final goal.",
+            "They don't have a factory."
+          ],
+          "correct_answer": "Celebrating the Launch, ignoring the Outcome. In a feature factory, everyone eats cake on the day the code is deployed. But nobody checks the analytics 30 days later to see if the feature actually increased revenue. Shipping code is treated as the final goal.",
+          "explanation": "Shipping is not success. Impact is success."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Silicon Valley veteran explaining team dynamics. What is the 'Product Trio'?",
+          "tts_text": "If you want an empowered team, you cannot have the PM dictating orders. You need the Trio: The Product Manager (who represents the business), the Lead Designer (who represents the user), and the Tech Lead (who represents the code). They make decisions together as equals.",
+          "options": [
+            "Three CEOs.",
+            "A balanced power structure. By giving Design and Engineering an equal vote with Product Management from day one, you ensure that the solution is viable for the business, usable for the customer, and physically possible to code.",
+            "Three PMs fighting."
+          ],
+          "correct_answer": "A balanced power structure. By giving Design and Engineering an equal vote with Product Management from day one, you ensure that the solution is viable for the business, usable for the customer, and physically possible to code.",
+          "explanation": "Viable. Usable. Feasible."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do PMs in 'Empowered Teams' spend so much time on 'Discovery'?",
+          "options": [
+            "Because they like watching TV.",
+            "To de-risk the idea before coding. Discovery is the process of interviewing users and testing cheap prototypes to ensure the idea is actually good. Feature factories skip Discovery and go straight to coding, which results in building highly expensive garbage.",
+            "To write more code."
+          ],
+          "correct_answer": "To de-risk the idea before coding. Discovery is the process of interviewing users and testing cheap prototypes to ensure the idea is actually good. Feature factories skip Discovery and go straight to coding, which results in building highly expensive garbage.",
+          "explanation": "Code is the most expensive way to test an idea."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Outputs vs. Outcomes'?",
+          "options": [
+            "A computer term.",
+            "The core philosophy of modern product management. An Output is the physical thing you built (e.g., 'We built a search bar'). An Outcome is the business result of that thing (e.g., 'Users find products 40% faster'). Empowered teams are judged strictly on Outcomes.",
+            "An accounting error."
+          ],
+          "correct_answer": "The core philosophy of modern product management. An Output is the physical thing you built (e.g., 'We built a search bar'). An Outcome is the business result of that thing (e.g., 'Users find products 40% faster'). Empowered teams are judged strictly on Outcomes.",
+          "explanation": "Nobody buys a search bar. They buy speed."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Empowerment",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to define the golden rule of team management:",
+          "parts": [
+            "Give",
+            "them",
+            "problems",
+            "to",
+            "solve,",
+            "not",
+            "features",
+            "to",
+            "build."
+          ],
+          "correct_order": [
+            "Give",
+            "them",
+            "problems",
+            "to",
+            "solve,",
+            "not",
+            "features",
+            "to",
+            "build."
+          ],
+          "explanation": "Trust your team's intelligence."
+        }
+      ]
+    }
+  ]
+}

@@ -31,7 +31,7 @@ export default function LiveChessboard({
 
   useEffect(() => {
     // Configuración de la URL del WebSocket
-    const wsBaseUrl = process.env.NODE_ENV === 'production' ? 'wss://api.onixlingo.onixu.company/ws' : 'ws://127.0.0.1:5000/ws';
+    const wsBaseUrl = process.env.NODE_ENV === 'production' ? 'wss://api.onixlingo.onixu.company/ws' : 'ws://127.0.0.1:8020/ws';
     const wsUrl = `${wsBaseUrl}/chess/matches/${matchId}?token=${token}`;
 
     const ws = new WebSocket(wsUrl);

@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-126",
+  "title": "Unit Economics (Gross Margin vs. Net Profit)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Anatomy of a Dollar",
+      "parts": [
+        {
+          "visual": "A startup sells $10 Million worth of software. The CEO throws a massive party. The next day, the CFO reveals they spent $12 Million to generate that $10 Million. The startup is actually bankrupt.\n\nThe Math of Survival:\n1. Gross Margin: The money left over after paying the direct costs of delivering the software (like AWS server fees). Software should have an 80%+ Gross Margin.\n2. Net Profit: The money left over after paying absolutely everything, including the CEO's salary, the office rent, and the marketing team. Startups often have high Gross Margins but negative Net Profit.",
+          "audio": "Revenue is a vanity metric. If you sell a dollar for ninety cents, you will generate infinite revenue, but you will go bankrupt doing it. VCs look past the revenue directly to the Gross Margin to see if the core business actually works."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Decoding the Spreadsheet",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup charges $100 for a software license. It costs them $10 in server hosting to run it for the user. What is their Gross Margin?",
+          "options": [
+            "$100",
+            "$90 (or 90%). The Gross Margin only subtracts the 'Cost of Goods Sold' (COGS), which in software is usually just the server fees and customer support directly tied to that specific user.",
+            "$10"
+          ],
+          "correct_answer": "$90 (or 90%). The Gross Margin only subtracts the 'Cost of Goods Sold' (COGS), which in software is usually just the server fees and customer support directly tied to that specific user.",
+          "explanation": "Software is beautiful because the Gross Margins are astronomically high."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC evaluating two companies. Why does the VC hate the hardware company?",
+          "tts_text": "Company A is a SaaS tool with 85% gross margins. Company B makes physical bicycles. Their gross margin is 15%. I will never fund Company B, because they have to sell ten times as many bicycles just to pay for their office rent.",
+          "options": [
+            "The VC doesn't know how to ride a bike.",
+            "Margin Economics. Hardware is notoriously difficult because the raw materials (steel, rubber) consume almost all the revenue. A software company keeps 85 cents of every dollar to spend on growth; a hardware company only keeps 15 cents.",
+            "The SaaS tool is shinier."
+          ],
+          "correct_answer": "Margin Economics. Hardware is notoriously difficult because the raw materials (steel, rubber) consume almost all the revenue. A software company keeps 85 cents of every dollar to spend on growth; a hardware company only keeps 15 cents.",
+          "explanation": "High margins fund high growth."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A startup has an amazing 90% Gross Margin, but a deeply negative Net Profit. Is this a bad thing?",
+          "options": [
+            "Yes, it means they are failing.",
+            "Not necessarily. In the early days, almost all startups have negative Net Profit because they are spending their VC money to hire engineers and run ads to grow fast. As long as the *Gross Margin* is healthy, the business model is sound.",
+            "Yes, the CEO should be fired."
+          ],
+          "correct_answer": "Not necessarily. In the early days, almost all startups have negative Net Profit because they are spending their VC money to hire engineers and run ads to grow fast. As long as the *Gross Margin* is healthy, the business model is sound.",
+          "explanation": "You can fix Net Profit by slowing down growth. You cannot fix a bad Gross Margin."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'WeWork' famously considered a failure of Unit Economics?",
+          "options": [
+            "They didn't have enough coffee.",
+            "They pretended to be a software company to get high valuations, but their actual business was renting physical office space. Their Gross Margins were terrible. They were structurally incapable of achieving software-like profitability.",
+            "The CEO was too quiet."
+          ],
+          "correct_answer": "They pretended to be a software company to get high valuations, but their actual business was renting physical office space. Their Gross Margins were terrible. They were structurally incapable of achieving software-like profitability.",
+          "explanation": "You cannot bend the laws of physics with a nice slide deck."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Accounting Terminology",
+      "pairs": [
+        { "concept": "Gross Margin", "match": "Revenue minus the direct costs of delivering the product (COGS)" },
+        { "concept": "Net Profit", "match": "What is left over after paying all operating expenses, including rent and salaries" },
+        { "concept": "COGS", "match": "Cost of Goods Sold (e.g., AWS server hosting fees)" },
+        { "concept": "Unit Economics", "match": "The direct revenues and costs associated with a single customer" }
+      ]
+    }
+  ]
+}

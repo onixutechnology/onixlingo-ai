@@ -1,0 +1,102 @@
+{
+  "id": "pro-exec-b1-68",
+  "title": "Conducting a Post-Mortem Analysis",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Learning from Failure",
+      "parts": [
+        {
+          "visual": "A project failed. What happens next defines the culture of the company. Great leaders conduct a 'Blameless Post-Mortem'.\n\nThe Structure:\n1. What was supposed to happen?\n2. What actually happened?\n3. Why did it happen? (Root Cause Analysis, e.g., the '5 Whys').\n4. What will we change in the system so it never happens again?",
+          "audio": "Great leaders conduct a Blameless Post-Mortem after a failure. Focus on the root cause and change the system, not the people."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Root Cause Analysis",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the primary goal of a 'Blameless' Post-Mortem?",
+          "options": [
+            "To pretend the failure didn't happen.",
+            "To figure out *what* failed in the system, rather than *who* to punish, ensuring the team is honest about their mistakes.",
+            "To give everyone a bonus."
+          ],
+          "correct_answer": "To figure out *what* failed in the system, rather than *who* to punish, ensuring the team is honest about their mistakes.",
+          "explanation": "If people know they will be fired for making an honest mistake, they will hide the mistake, ensuring the company never learns from it."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the executive. What problem-solving technique is this?",
+          "tts_text": "The server crashed. Why? Because the drive filled up. Why? Because the log files weren't deleting. Why? Because the automation script broke.",
+          "options": [
+            "The '5 Whys' technique.",
+            "Complaining.",
+            "Brainstorming."
+          ],
+          "correct_answer": "The '5 Whys' technique.",
+          "explanation": "Asking 'Why' repeatedly forces the team to move past the surface-level symptom (server crash) to the actual root cause (broken script)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "In a post-mortem, an employee says, 'I forgot to check the box.' What is the executive response?",
+          "options": [
+            "You are fired for forgetting.",
+            "Why did the system allow a critical process to rely on human memory? Let's automate that checkbox.",
+            "Just remember to check it next time."
+          ],
+          "correct_answer": "Why did the system allow a critical process to rely on human memory? Let's automate that checkbox.",
+          "explanation": "Human error is inevitable. A strong executive designs systems that are resilient to human error."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "When should a post-mortem be conducted?",
+          "options": [
+            "Six months after the failure.",
+            "Within a few days of the incident, while the context and details are still fresh in everyone's mind.",
+            "Never. Just move on."
+          ],
+          "correct_answer": "Within a few days of the incident, while the context and details are still fresh in everyone's mind.",
+          "explanation": "Speed is critical for accurate data gathering during an incident review."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Review",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to start a blameless review:",
+          "parts": [
+            "Our",
+            "goal",
+            "is",
+            "to",
+            "fix",
+            "the",
+            "process."
+          ],
+          "correct_order": [
+            "Our",
+            "goal",
+            "is",
+            "to",
+            "fix",
+            "the",
+            "process."
+          ],
+          "explanation": "Stating this explicitly at the start lowers defenses and encourages honesty."
+        }
+      ]
+    }
+  ]
+}

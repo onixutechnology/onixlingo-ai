@@ -1,0 +1,106 @@
+{
+  "id": "pro-startup-b2-037",
+  "title": "MRR and ARR",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Pulse of the Startup",
+      "parts": [
+        {
+          "visual": "A founder says: 'We made $500,000 this month!' The VC asks: 'How much of that is MRR?' The founder replies: 'Only $50,000. The rest was a one-time consulting fee.' The VC loses all interest.\n\nThe Metrics:\n1. MRR (Monthly Recurring Revenue): The total amount of predictable, subscription-based revenue a company generates every single month.\n2. ARR (Annual Recurring Revenue): MRR multiplied by 12. It is the annualized run-rate of the business.",
+          "audio": "In a SaaS company, one-time revenue does not matter. The entire valuation of the company is mathematically tied to the growth of MRR. It is the absolute most important number on your dashboard."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Calculating the Core",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup has 1,000 customers paying $50 per month. They also sold a $10,000 customized server to one client this month. What is their MRR?",
+          "options": [
+            "$60,000.",
+            "$50,000. (1,000 customers * $50). The $10,000 server sale is 'Non-Recurring Revenue' and must be strictly separated from the MRR calculation.",
+            "$10,000."
+          ],
+          "correct_answer": "$50,000. (1,000 customers * $50). The $10,000 server sale is 'Non-Recurring Revenue' and must be strictly separated from the MRR calculation.",
+          "explanation": "Never mix services revenue with subscription revenue when talking to investors."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the financial report. What is 'Expansion MRR'?",
+          "tts_text": "Our base MRR remained the same, but our Expansion MRR grew by 15% because our existing users upgraded to the 'Premium' tier and bought extra user licenses.",
+          "options": [
+            "New customers signing up.",
+            "Additional recurring revenue generated from existing customers. This is highly profitable because you don't have to pay marketing costs to acquire these upgrades.",
+            "Customers who cancel."
+          ],
+          "correct_answer": "Additional recurring revenue generated from existing customers. This is highly profitable because you don't have to pay marketing costs to acquire these upgrades.",
+          "explanation": "Expansion MRR is the secret engine of a massively successful SaaS business."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If a startup has an MRR of $100,000, what is their ARR?",
+          "options": [
+            "It is impossible to know.",
+            "$1,200,000. ARR is simply MRR multiplied by 12. It represents what the company will make in the next year if everything stays exactly the same.",
+            "$100,000."
+          ],
+          "correct_answer": "$1,200,000. ARR is simply MRR multiplied by 12. It represents what the company will make in the next year if everything stays exactly the same.",
+          "explanation": "Most investors value startups as a 'Multiple of ARR' (e.g., valuing the company at 10x its ARR)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Contraction MRR'?",
+          "options": [
+            "When the company shrinks the office.",
+            "When an existing customer decides to 'downgrade' their subscription to a cheaper plan. They didn't churn (cancel completely), but they are paying you less money than before.",
+            "When a customer pays early."
+          ],
+          "correct_answer": "When an existing customer decides to 'downgrade' their subscription to a cheaper plan. They didn't churn (cancel completely), but they are paying you less money than before.",
+          "explanation": "Net MRR Growth = (New MRR + Expansion MRR) - (Churn MRR + Contraction MRR)."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Revenue",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe SaaS valuation:",
+          "parts": [
+            "Investors",
+            "value",
+            "the",
+            "company",
+            "based",
+            "on",
+            "predictable",
+            "recurring",
+            "revenue."
+          ],
+          "correct_order": [
+            "Investors",
+            "value",
+            "the",
+            "company",
+            "based",
+            "on",
+            "predictable",
+            "recurring",
+            "revenue."
+          ],
+          "explanation": "The higher the predictability, the higher the valuation multiple."
+        }
+      ]
+    }
+  ]
+}

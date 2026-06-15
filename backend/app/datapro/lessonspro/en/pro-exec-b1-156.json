@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-156",
+  "title": "The Subscription Economy (SaaS)",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Owning Nothing, Renting Everything",
+      "parts": [
+        {
+          "visual": "A massive shift in global economics: Companies stopped selling you software for $100 once, and started charging you $10 a month forever. This is SaaS.\n\nThe SaaS Holy Trinity:\n1. MRR (Monthly Recurring Revenue): The guaranteed money arriving every single month.\n2. CAC (Customer Acquisition Cost): How much money you spend on marketing to get one new subscriber.\n3. LTV (Lifetime Value): How much total money that subscriber will pay you before they cancel.",
+          "audio": "In the Subscription Economy, companies don't sell products; they rent them forever. This model relies on three metrics: Monthly Recurring Revenue, Customer Acquisition Cost, and Lifetime Value."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Software as a Service",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A software company spends $50 in advertising to get one new user (CAC = $50). The user pays $10 a month. They cancel after 3 months (LTV = $30). What is the result?",
+          "options": [
+            "The company is highly profitable.",
+            "The company is bleeding cash. Their Customer Acquisition Cost ($50) is higher than the Customer Lifetime Value ($30). The business model is fundamentally broken.",
+            "The company should spend more on ads."
+          ],
+          "correct_answer": "The company is bleeding cash. Their Customer Acquisition Cost ($50) is higher than the Customer Lifetime Value ($30). The business model is fundamentally broken.",
+          "explanation": "In SaaS, if your LTV is not at least 3 times higher than your CAC, your company will eventually die."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO's ultimate fear. What metric is destroying the company?",
+          "tts_text": "We signed up 10,000 new users this month, which is great. But 12,000 of our old users canceled their subscriptions. We are shrinking.",
+          "options": [
+            "High marketing costs.",
+            "High 'Churn Rate'.",
+            "A lack of new ideas."
+          ],
+          "correct_answer": "High 'Churn Rate'.",
+          "explanation": "Churn (cancellations) is the silent killer of subscription companies. It is a leaky bucket; you cannot pour water in fast enough if the hole at the bottom is too big."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do Wall Street investors love 'SaaS' (Software as a Service) companies so much?",
+          "options": [
+            "Because they love computers.",
+            "Because 'Recurring Revenue' is highly predictable. Investors hate uncertainty. A company guaranteed to make $10M next month is worth far more than a company that *might* sell $10M of hardware.",
+            "Because the software is fun to use."
+          ],
+          "correct_answer": "Because 'Recurring Revenue' is highly predictable. Investors hate uncertainty. A company guaranteed to make $10M next month is worth far more than a company that *might* sell $10M of hardware.",
+          "explanation": "This predictability is why SaaS companies are valued at incredibly high multiples compared to traditional retail companies."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Freemium'?",
+          "options": [
+            "A type of expensive coffee.",
+            "A pricing strategy where the basic product is provided free of charge, but money is charged for additional features, services, or virtual goods.",
+            "A software bug."
+          ],
+          "correct_answer": "A pricing strategy where the basic product is provided free of charge, but money is charged for additional features, services, or virtual goods.",
+          "explanation": "Freemium is an aggressive tactic to lower Customer Acquisition Cost (CAC) by letting the product market itself."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "SaaS Terminology",
+      "pairs": [
+        { "concept": "SaaS", "match": "Software as a Service" },
+        { "concept": "MRR", "match": "Monthly Recurring Revenue" },
+        { "concept": "Churn Rate", "match": "The annual percentage rate at which customers stop subscribing" },
+        { "concept": "Freemium", "match": "Offering basic services for free, while charging a premium for advanced features" }
+      ]
+    }
+  ]
+}

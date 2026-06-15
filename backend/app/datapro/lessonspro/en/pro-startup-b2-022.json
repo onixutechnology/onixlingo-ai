@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-022",
+  "title": "The Term Sheet",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Rules of Engagement",
+      "parts": [
+        {
+          "visual": "After weeks of pitching, the VC finally sends you a document. It is 5 pages long. It is not a check. It is a Term Sheet. If you sign it without a lawyer, you might accidentally give the VC the legal right to fire you tomorrow.\n\nThe Document:\n1. The Term Sheet: A non-binding agreement setting forth the basic terms and conditions under which an investment will be made.\n2. The Two Pillars: Every clause in a Term Sheet is designed to optimize one of two things: Economics (who gets the money) or Control (who makes the decisions).",
+          "audio": "The Term Sheet is the blueprint of the investment. It dictates valuation, board seats, and what happens if the company goes bankrupt. While non-binding, once it is signed, it is almost impossible to renegotiate the terms."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Decoding the Legalese",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What does it mean when a Term Sheet is 'Non-Binding'?",
+          "options": [
+            "It is printed on cheap paper.",
+            "It means the VC can legally walk away and cancel the deal at any time before the final, massive legal contracts are signed, even if the founder has already signed the Term Sheet.",
+            "It means the founder doesn't have to pay the money back."
+          ],
+          "correct_answer": "It means the VC can legally walk away and cancel the deal at any time before the final, massive legal contracts are signed, even if the founder has already signed the Term Sheet.",
+          "explanation": "A signed Term Sheet is not money in the bank. It is simply an agreement to start paying lawyers to draft the final contracts."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the lawyer warning the founder about a specific clause. What is the danger?",
+          "tts_text": "This clause is called 'No-Shop'. It says that if you sign this Term Sheet, you are legally forbidden from talking to any other investors for the next 45 days.",
+          "options": [
+            "The founder cannot buy groceries.",
+            "The No-Shop Clause prevents the founder from creating a bidding war. The VC locks the founder down, ensuring they cannot use this Term Sheet to get a better valuation from a rival VC.",
+            "The founder must fire their team."
+          ],
+          "correct_answer": "The No-Shop Clause prevents the founder from creating a bidding war. The VC locks the founder down, ensuring they cannot use this Term Sheet to get a better valuation from a rival VC.",
+          "explanation": "This is one of the few clauses in a Term Sheet that is actually legally binding immediately."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What are 'Protective Provisions' (Veto Rights) in a Term Sheet?",
+          "options": [
+            "Guards for the office.",
+            "Clauses that give the VC the power to veto specific major decisions (like selling the company or firing the CEO), even if the VC only owns 10% of the voting stock.",
+            "Insurance for the computers."
+          ],
+          "correct_answer": "Clauses that give the VC the power to veto specific major decisions (like selling the company or firing the CEO), even if the VC only owns 10% of the voting stock.",
+          "explanation": "This is how VCs exert massive Control without owning a mathematical majority of the company."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why should a founder NEVER accept a 'Participating Preferred' stock term if they can avoid it?",
+          "options": [
+            "Because it sounds confusing.",
+            "It is 'Double Dipping'. It allows the VC to get their initial investment money back first, AND THEN take their percentage of the remaining profits, drastically reducing the founder's payout in a sale.",
+            "Because it is illegal."
+          ],
+          "correct_answer": "It is 'Double Dipping'. It allows the VC to get their initial investment money back first, AND THEN take their percentage of the remaining profits, drastically reducing the founder's payout in a sale.",
+          "explanation": "Founders should fight aggressively for 'Non-Participating' preferred stock."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Term Sheet Terminology",
+      "pairs": [
+        { "concept": "Term Sheet", "match": "A non-binding agreement outlining the basic terms of an investment" },
+        { "concept": "No-Shop Clause", "match": "A provision preventing the startup from soliciting other investment offers for a set period" },
+        { "concept": "Protective Provisions", "match": "Veto rights granted to investors over certain key corporate actions" },
+        { "concept": "Economics vs. Control", "match": "The two fundamental categories of power negotiated in a venture deal" }
+      ]
+    }
+  ]
+}

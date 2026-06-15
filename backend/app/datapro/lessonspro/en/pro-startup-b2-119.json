@@ -1,0 +1,100 @@
+{
+  "id": "pro-startup-b2-119",
+  "title": "The Aha! Moment (Onboarding Optimization)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Window of Judgment",
+      "parts": [
+        {
+          "visual": "A user downloads your new app. They open it. You have exactly 7 seconds before they decide if your app is genius or garbage. If they see a complex 10-step tutorial, they close the app and delete it forever.\n\nThe Hook:\n1. User Onboarding: The process of guiding a new user from their first interaction with the product to their first moment of success.\n2. The 'Aha!' Moment: The exact psychological second when the user suddenly understands the core value of your product. (e.g., For Uber, it's the moment the map shows a car is exactly 2 minutes away).",
+          "audio": "Your marketing team spent $50 to get a user to download the app. Your onboarding process just lost them in 5 seconds because you made them read a manual. The sole purpose of onboarding is to drag the user to the 'Aha!' moment as violently fast as possible."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Engineering the Epiphany",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A complex B2B software requires the user to input 20 pieces of company data before the dashboard will generate a report. Most users quit at step 5. How do you fix this onboarding?",
+          "options": [
+            "Make the text bigger.",
+            "Empty States and Sample Data. Do not show them a blank screen. Pre-fill the dashboard with beautiful, fake 'Sample Data' so they instantly experience the 'Aha!' moment (the final report) without doing any work. Then ask them to connect their real data.",
+            "Add a video explaining the 20 steps."
+          ],
+          "correct_answer": "Empty States and Sample Data. Do not show them a blank screen. Pre-fill the dashboard with beautiful, fake 'Sample Data' so they instantly experience the 'Aha!' moment (the final report) without doing any work. Then ask them to connect their real data.",
+          "explanation": "Show them the destination before you make them walk the path."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the famous growth metric from Facebook's early days. What was their engineered 'Aha!' moment?",
+          "tts_text": "We analyzed all the data and realized one simple rule: If a new user added 7 friends within their first 10 days, they would never leave Facebook. If they added 6 friends, they would churn. So we focused our entire engineering team on forcing them to find 7 friends.",
+          "options": [
+            "Adding a profile picture.",
+            "The Activation Metric. Facebook discovered the exact mathematical action that correlated with long-term retention ('7 friends in 10 days'). Every single button and pop-up in their early onboarding was aggressively designed to make that specific action happen.",
+            "Logging in twice."
+          ],
+          "correct_answer": "The Activation Metric. Facebook discovered the exact mathematical action that correlated with long-term retention ('7 friends in 10 days'). Every single button and pop-up in their early onboarding was aggressively designed to make that specific action happen.",
+          "explanation": "Find your '7 friends' metric."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why are 10-slide 'swipe tutorials' at the beginning of an app considered terrible UX design today?",
+          "options": [
+            "Because users like swiping.",
+            "Because users do not read; they skip. If your app requires a 10-page manual to understand, the UI is broken. Good onboarding is 'Progressive Disclosure'—teaching the user how to use the app *while* they are actually using it, one small step at a time.",
+            "Because the slides are usually ugly."
+          ],
+          "correct_answer": "Because users do not read; they skip. If your app requires a 10-page manual to understand, the UI is broken. Good onboarding is 'Progressive Disclosure'—teaching the user how to use the app *while* they are actually using it, one small step at a time.",
+          "explanation": "Show, don't tell. Do, don't read."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Time to Value' (TTV)?",
+          "options": [
+            "How long the app takes to download.",
+            "The total time elapsed from the moment the user signs up to the moment they experience the 'Aha!' moment. The lower the TTV, the higher the survival rate of the startup. If TTV is 3 weeks, you are dead.",
+            "The time it takes to process a credit card."
+          ],
+          "correct_answer": "The total time elapsed from the moment the user signs up to the moment they experience the 'Aha!' moment. The lower the TTV, the higher the survival rate of the startup. If TTV is 3 weeks, you are dead.",
+          "explanation": "Impatience is the default state of the modern consumer."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Onboarding",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the onboarding philosophy:",
+          "parts": [
+            "Reduce",
+            "friction,",
+            "accelerate",
+            "the",
+            "Aha",
+            "moment."
+          ],
+          "correct_order": [
+            "Reduce",
+            "friction,",
+            "accelerate",
+            "the",
+            "Aha",
+            "moment."
+          ],
+          "explanation": "You only have seven seconds. Don't waste them."
+        }
+      ]
+    }
+  ]
+}

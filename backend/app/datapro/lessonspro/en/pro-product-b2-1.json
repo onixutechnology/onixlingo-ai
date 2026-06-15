@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-1",
+  "title": "What is a Product Manager?",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The CEO of the Product",
+      "parts": [
+        {
+          "visual": "An engineering team is building a feature nobody wants. The sales team is selling a feature that doesn't exist yet. The design team is making buttons that look pretty but confuse the users. Amidst this chaos stands one person holding a roadmap, trying to align everyone towards a single goal: The Product Manager (PM).\n\nThe Role:\n1. The Definition: A Product Manager is the person responsible for the strategy, roadmap, and feature definition for a product or product line.\n2. The Paradox of Power: A PM is often called the 'CEO of the Product'. However, this is a dangerous myth. A PM has all the responsibility of a CEO, but absolutely zero direct authority. The engineers do not report to the PM. The designers do not report to the PM. The PM must lead entirely through influence, logic, and user data.",
+          "audio": "The best product managers do not write code, they do not design screens, and they do not sell the software. Their only job is to ensure that the code being written, the screens being designed, and the software being sold are actually solving a real human problem."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Leading Without Authority",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Paradox of Power' for a Product Manager?",
+          "options": [
+            "They have too much power.",
+            "They are fully responsible for the success or failure of the product, but they cannot actually order anyone to do anything. They must convince engineers and designers to follow their vision using data and empathy, not executive commands.",
+            "They don't know how to code."
+          ],
+          "correct_answer": "They are fully responsible for the success or failure of the product, but they cannot actually order anyone to do anything. They must convince engineers and designers to follow their vision using data and empathy, not executive commands.",
+          "explanation": "Influence is harder than authority."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the veteran PM explain the difference between a Project Manager and a Product Manager.",
+          "tts_text": "A project manager focuses on 'When'. They make sure the train runs on time and hits the deadline. A product manager focuses on 'Why'. They make sure the train is actually going to a destination that the passengers want to visit.",
+          "options": [
+            "Project managers drive trains.",
+            "Execution vs. Value. A Project Manager manages the timeline, budget, and resources to build a predetermined feature. A Product Manager decides if that feature should even exist in the first place by understanding the customer's deepest needs.",
+            "Product managers are slower."
+          ],
+          "correct_answer": "Execution vs. Value. A Project Manager manages the timeline, budget, and resources to build a predetermined feature. A Product Manager decides if that feature should even exist in the first place by understanding the customer's deepest needs.",
+          "explanation": "Delivery is useless if the product is irrelevant."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If a PM does not code, design, or sell, what is their primary daily output?",
+          "options": [
+            "Making coffee.",
+            "Clarity and Alignment. Their output is decisions, written requirements, and communication. They translate the chaotic needs of the users into a clear, prioritized list of tasks for the engineering and design teams.",
+            "Writing a lot of emails."
+          ],
+          "correct_answer": "Clarity and Alignment. Their output is decisions, written requirements, and communication. They translate the chaotic needs of the users into a clear, prioritized list of tasks for the engineering and design teams.",
+          "explanation": "Clarity is the ultimate corporate currency."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'The CEO of the Product' a dangerous myth?",
+          "options": [
+            "Because CEOs get paid more.",
+            "Because a CEO can fire people. If a PM acts like a dictator and orders engineers to build things 'because I said so', the engineers will rebel. A PM must lead by presenting compelling evidence from the market, not by pulling rank.",
+            "Because PMs don't wear suits."
+          ],
+          "correct_answer": "Because a CEO can fire people. If a PM acts like a dictator and orders engineers to build things 'because I said so', the engineers will rebel. A PM must lead by presenting compelling evidence from the market, not by pulling rank.",
+          "explanation": "Dictators make terrible product managers."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "PM Fundamentals",
+      "pairs": [
+        { "concept": "Product Manager", "match": "Responsible for deciding 'What' to build and 'Why' we are building it" },
+        { "concept": "Project Manager", "match": "Responsible for managing the timeline and 'When' it will be delivered" },
+        { "concept": "Leading by Influence", "match": "Persuading teams using data and empathy, rather than giving orders" },
+        { "concept": "Clarity", "match": "The primary output of a PM; eliminating confusion for the engineering team" }
+      ]
+    }
+  ]
+}

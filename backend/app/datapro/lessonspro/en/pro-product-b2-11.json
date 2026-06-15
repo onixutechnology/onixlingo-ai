@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-11",
+  "title": "UX vs. UI (Wireframes to Pixels)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Bones and the Paint",
+      "parts": [
+        {
+          "visual": "A team builds a beautiful, glowing, 3D button. It looks like a masterpiece of modern art. But when the user tries to buy a shirt, they can't find the button because it was placed at the very bottom of the screen, underneath an ad. The 'Paint' was perfect. The 'Bones' were broken.\n\nThe Difference:\n1. UX (User Experience): The logic, flow, and psychology of the product. It is the invisible skeleton. UX designers draw black-and-white boxes (Wireframes) to ensure the user can get from A to B without getting angry.\n2. UI (User Interface): The visual surface of the product. It is the paint, the typography, the colors, and the micro-animations. UI designers make the experience beautiful and emotionally satisfying.",
+          "audio": "A beautiful UI cannot save a terrible UX. If the house has a beautiful paint job but the doors open into brick walls, nobody will live there. You must nail the black-and-white wireframes before you ever touch a color palette."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Designing the Flow",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Wireframe'?",
+          "options": [
+            "A frame made of wires.",
+            "A low-fidelity, black-and-white sketch of a screen. It strips away all colors, images, and fonts so the team is forced to only discuss the logical placement of buttons and the flow of information.",
+            "A high-resolution photograph."
+          ],
+          "correct_answer": "A low-fidelity, black-and-white sketch of a screen. It strips away all colors, images, and fonts so the team is forced to only discuss the logical placement of buttons and the flow of information.",
+          "explanation": "Remove the beauty to test the logic."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the design critique. Why did the UX designer reject the UI designer's new font?",
+          "tts_text": "The new cursive font looks incredibly elegant. I love the aesthetic. However, our core users are over 60 years old. When we ran the accessibility test, 40% of them couldn't read the cursive font on a mobile screen. We have to change it to Arial.",
+          "options": [
+            "Because Arial is a cursive font.",
+            "Accessibility over Aesthetics. A great UI must serve the UX. If a visual choice (like a thin font or low-contrast colors) makes the product physically harder for the target demographic to use, it is objectively bad design, no matter how pretty it is.",
+            "Because cursive is for young people."
+          ],
+          "correct_answer": "Accessibility over Aesthetics. A great UI must serve the UX. If a visual choice (like a thin font or low-contrast colors) makes the product physically harder for the target demographic to use, it is objectively bad design, no matter how pretty it is.",
+          "explanation": "If they can't read it, they won't buy it."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Which of these is a pure UX (User Experience) problem, not a UI problem?",
+          "options": [
+            "The red color is too bright.",
+            "To delete an account, the user has to click through 7 different confusing menus and re-enter their password three times. The flow is exhausting and creates massive frustration.",
+            "The logo is slightly off-center."
+          ],
+          "correct_answer": "To delete an account, the user has to click through 7 different confusing menus and re-enter their password three times. The flow is exhausting and creates massive frustration.",
+          "explanation": "UX is about friction. UI is about visuals."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do PMs force designers to create 'Clickable Prototypes' before engineers write code?",
+          "options": [
+            "To annoy the designers.",
+            "To test the flow cheaply. A clickable prototype links the wireframes together so it feels like a real app, but it has no actual code behind it. You can put it in front of a user to see if they get confused, saving months of expensive engineering time.",
+            "To make the code run faster."
+          ],
+          "correct_answer": "To test the flow cheaply. A clickable prototype links the wireframes together so it feels like a real app, but it has no actual code behind it. You can put it in front of a user to see if they get confused, saving months of expensive engineering time.",
+          "explanation": "Fake it before you make it."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Design Vocabulary",
+      "pairs": [
+        { "concept": "UX (User Experience)", "match": "The logic, psychology, and structural flow of the product" },
+        { "concept": "UI (User Interface)", "match": "The colors, typography, and visual beauty of the product" },
+        { "concept": "Wireframe", "match": "A black-and-white sketch to focus strictly on layout and logic" },
+        { "concept": "Accessibility", "match": "Ensuring the design can be easily used by people with visual or physical limits" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "pro-startup-b2-114",
+  "title": "Freemium vs. Free Trial Economics",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Cost of Free",
+      "parts": [
+        {
+          "visual": "A startup launches a 'Freemium' product. 100,000 users sign up for free. The AWS server bill hits $50,000 a month. But only 100 users upgrade to the $10/month paid plan. The startup is making $1,000 in revenue and burning $50,000 in costs. They die in 3 months.\n\nThe Acquisition Engines:\n1. Freemium: A permanently free version of the software with limited features. The massive free user base acts as marketing, but costs money to host.\n2. Free Trial: A full-featured version of the software that completely locks the user out after 14 or 30 days unless they pay.",
+          "audio": "Free is never free for the startup. A free user is an expense. If your free tier does not mathematically convert enough users into paying customers to cover the server costs of the free loaders, Freemium is not a business model; it is a suicide pact."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Conversion Mathematics",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "When is 'Freemium' (a permanent free tier) a brilliant strategy?",
+          "options": [
+            "When server costs are high.",
+            "When the product has strong 'Network Effects' or viral loops (like Zoom or Slack). The free users naturally invite their coworkers or clients into the software, acting as a massive, zero-cost sales team that eventually forces an enterprise upgrade.",
+            "When the product is hard to use."
+          ],
+          "correct_answer": "When the product has strong 'Network Effects' or viral loops (like Zoom or Slack). The free users naturally invite their coworkers or clients into the software, acting as a massive, zero-cost sales team that eventually forces an enterprise upgrade.",
+          "explanation": "In Freemium, the free users *are* the marketing department."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO switching from Freemium to a 14-Day Free Trial. What problem did this solve?",
+          "tts_text": "Under the Freemium model, people would sign up and just let their accounts sit there for a year doing nothing. When we switched to a 14-Day Free Trial, it created massive urgency. They knew the clock was ticking, so they actually used it.",
+          "options": [
+            "It created a legal problem.",
+            "Forcing the Evaluation Event. A free trial creates psychological pressure. Because it expires, the user must dedicate time this week to decide if the software is valuable. Freemium allows users to procrastinate forever without converting.",
+            "It made the software slower."
+          ],
+          "correct_answer": "Forcing the Evaluation Event. A free trial creates psychological pressure. Because it expires, the user must dedicate time this week to decide if the software is valuable. Freemium allows users to procrastinate forever without converting.",
+          "explanation": "Urgency is the catalyst for conversion."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of asking for a Credit Card *before* starting a Free Trial (Credit Card Wall)?",
+          "options": [
+            "It is illegal.",
+            "It absolutely plummets your initial sign-up rate (often by 80%), because people hate giving out their card. However, the 20% who *do* sign up have a massively higher intent to actually buy. It prioritizes lead quality over lead quantity.",
+            "The credit card companies get angry."
+          ],
+          "correct_answer": "It absolutely plummets your initial sign-up rate (often by 80%), because people hate giving out their card. However, the 20% who *do* sign up have a massively higher intent to actually buy. It prioritizes lead quality over lead quantity.",
+          "explanation": "You get fewer leads, but they are much better leads."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A B2B enterprise software costs $50,000 a year. Should they offer a Freemium tier?",
+          "options": [
+            "Yes, to get users.",
+            "No. Massive enterprise deployments require deep integration, legal approval, and training. A single employee playing with a free version cannot test a $50,000 system. They need a guided 'Proof of Concept' led by a salesperson, not a self-serve free trial.",
+            "Yes, free is always good."
+          ],
+          "correct_answer": "No. Massive enterprise deployments require deep integration, legal approval, and training. A single employee playing with a free version cannot test a $50,000 system. They need a guided 'Proof of Concept' led by a salesperson, not a self-serve free trial.",
+          "explanation": "High-complexity products cannot be sold via self-serve free trials."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of the Trial",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the Freemium trap:",
+          "parts": [
+            "If",
+            "they",
+            "don't",
+            "convert,",
+            "they",
+            "are",
+            "just",
+            "an",
+            "expense."
+          ],
+          "correct_order": [
+            "If",
+            "they",
+            "don't",
+            "convert,",
+            "they",
+            "are",
+            "just",
+            "an",
+            "expense."
+          ],
+          "explanation": "The harsh math of hosting free users."
+        }
+      ]
+    }
+  ]
+}

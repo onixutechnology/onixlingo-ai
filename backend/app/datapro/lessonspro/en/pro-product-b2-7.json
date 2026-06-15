@@ -1,0 +1,104 @@
+{
+  "id": "pro-product-b2-7",
+  "title": "The Sprint and Scrum Rituals",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Heartbeat of the Team",
+      "parts": [
+        {
+          "visual": "Every two weeks, the engineering team hits a reset button. They look at a massive list of ideas (The Backlog), pick exactly what they can realistically build in 14 days, lock the doors, and start coding. At the end of the 14 days, they show what they built to the company.\n\nThe Scrum Framework:\n1. The Sprint: A short, time-boxed period (usually 2 weeks) where the team commits to building a specific set of features. Once the Sprint starts, the PM is strictly forbidden from adding new tasks or interrupting the engineers.\n2. The Rituals: The framework relies on strict meetings: The Planning (deciding what to build), The Daily Standup (a 15-minute sync), and The Retrospective (a brutally honest meeting about what went wrong).",
+          "audio": "A Sprint is a protective shield. Engineers need deep, uninterrupted focus to write complex logic. If a PM taps them on the shoulder every hour with a 'new urgent idea', the code will break. The Sprint guarantees them two weeks of peace."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Rules of the Game",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the purpose of the 'Product Backlog'?",
+          "options": [
+            "A list of fired employees.",
+            "The ultimate graveyard and waiting room of ideas. It is a prioritized list of every single feature, bug fix, and technical upgrade the team MIGHT build in the future. The PM constantly re-orders this list so the most important item is always at the top.",
+            "A log of the server errors."
+          ],
+          "correct_answer": "The ultimate graveyard and waiting room of ideas. It is a prioritized list of every single feature, bug fix, and technical upgrade the team MIGHT build in the future. The PM constantly re-orders this list so the most important item is always at the top.",
+          "explanation": "The Backlog is a living document of priority."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Scrum Master running a Daily Standup. Why is the meeting strictly limited to 15 minutes?",
+          "tts_text": "Alright team, 15 minutes max. Three questions only: What did you do yesterday? What are you doing today? Are there any blockers stopping you? We are not here to solve the problems, we are just here to expose them.",
+          "options": [
+            "Because standing up hurts.",
+            "To prevent meeting bloat. The Daily Standup is a fast synchronization mechanism, not a debate club. If two engineers need 40 minutes to debate an API architecture, they must do it separately. The Standup keeps the team aligned without wasting their coding time.",
+            "Because the boss is busy."
+          ],
+          "correct_answer": "To prevent meeting bloat. The Daily Standup is a fast synchronization mechanism, not a debate club. If two engineers need 40 minutes to debate an API architecture, they must do it separately. The Standup keeps the team aligned without wasting their coding time.",
+          "explanation": "Expose the blocker, then go back to work."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens during the 'Sprint Retrospective'?",
+          "options": [
+            "They celebrate with pizza.",
+            "Continuous Improvement. At the end of the Sprint, the team asks: 'What went well? What failed? How can we be faster next time?' It is a blameless psychological safe space where the team optimizes their own internal working process.",
+            "They plan the next year."
+          ],
+          "correct_answer": "Continuous Improvement. At the end of the Sprint, the team asks: 'What went well? What failed? How can we be faster next time?' It is a blameless psychological safe space where the team optimizes their own internal working process.",
+          "explanation": "You cannot improve a process you do not analyze."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Scope Creep' during a Sprint, and why is it banned?",
+          "options": [
+            "When the app gets slower.",
+            "When the PM secretly adds 'just one more tiny feature' to the Sprint after it has already started. It is banned because it destroys the engineers' ability to accurately estimate their time and causes them to miss their delivery commitments.",
+            "When the developers creep in late."
+          ],
+          "correct_answer": "When the PM secretly adds 'just one more tiny feature' to the Sprint after it has already started. It is banned because it destroys the engineers' ability to accurately estimate their time and causes them to miss their delivery commitments.",
+          "explanation": "The Sprint boundary is sacred."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Scrum",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the rule of the Sprint:",
+          "parts": [
+            "Once",
+            "the",
+            "Sprint",
+            "begins,",
+            "the",
+            "plan",
+            "is",
+            "locked."
+          ],
+          "correct_order": [
+            "Once",
+            "the",
+            "Sprint",
+            "begins,",
+            "the",
+            "plan",
+            "is",
+            "locked."
+          ],
+          "explanation": "Protect the engineers from chaos."
+        }
+      ]
+    }
+  ]
+}

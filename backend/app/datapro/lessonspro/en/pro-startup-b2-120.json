@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-120",
+  "title": "Cohort Analysis and Retention Curves",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The X-Ray of the Business",
+      "parts": [
+        {
+          "visual": "A CEO shows a graph to an investor. The line goes straight up: 'We have 100,000 Total Active Users!' The investor is not impressed. The investor asks: 'Show me your Month-3 Retention Cohorts.' The CEO turns pale, because the data shows 90% of those users delete the app after 3 months.\n\nThe Truth Serum:\n1. Vanity Metrics: Numbers that look amazing on a chart (like 'Total Downloads') but tell you absolutely nothing about the actual health of the business.\n2. Cohort Analysis: Grouping users based on the month they signed up (e.g., 'The January Cohort') and tracking *only* that specific group over time to see exactly when they abandon the product.",
+          "audio": "Total User Growth can easily be faked by just spending massive amounts of money on Facebook ads. You cannot fake a Retention Curve. If your retention curve goes to zero, your product is a leaky bucket, and you do not have Product-Market Fit."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Reading the Curve",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What does a 'Smiling Retention Curve' mean, and why do VCs love it?",
+          "options": [
+            "It means the founders are happy.",
+            "It is extremely rare. It means users drop off initially, but after 12 months, old users *start coming back* to the product, causing the retention line to curve back upward. It proves the product has intense, undeniable long-term value.",
+            "It means the logo is yellow."
+          ],
+          "correct_answer": "It is extremely rare. It means users drop off initially, but after 12 months, old users *start coming back* to the product, causing the retention line to curve back upward. It proves the product has intense, undeniable long-term value.",
+          "explanation": "Evernote famously had a smiling retention curve."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the data analyst explaining a problem with the 'March Cohort'. What happened?",
+          "tts_text": "Our January and February cohorts retained at 40% after three months. But the March cohort dropped to 10% retention. We need to figure out what feature we broke in the March software update that made everyone so angry.",
+          "options": [
+            "March is a bad month.",
+            "Version Control Analysis. By isolating users into monthly cohorts, the startup can immediately see if a specific product update (released in March) destroyed the user experience. Without cohorts, that data would be hidden in the overall average.",
+            "The marketing team took a vacation."
+          ],
+          "correct_answer": "Version Control Analysis. By isolating users into monthly cohorts, the startup can immediately see if a specific product update (released in March) destroyed the user experience. Without cohorts, that data would be hidden in the overall average.",
+          "explanation": "Cohorts tell you exactly *when* the problem started."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If your Day-1 retention is 90%, but your Day-30 retention is 5%, what is the fundamental problem with your startup?",
+          "options": [
+            "Your marketing is bad.",
+            "You have a great Hook, but no Core Loop. Your marketing and onboarding are brilliant (everyone tries it on Day 1). But the actual product has zero lasting value. You are tricking people into downloading a useless app.",
+            "You need more ads."
+          ],
+          "correct_answer": "You have a great Hook, but no Core Loop. Your marketing and onboarding are brilliant (everyone tries it on Day 1). But the actual product has zero lasting value. You are tricking people into downloading a useless app.",
+          "explanation": "You cannot trick people into sticking around."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Flattening the Curve' the ultimate goal of retention analysis?",
+          "options": [
+            "To make the chart look boring.",
+            "Because it proves survival. Every app loses users in the first few weeks. The goal is for the retention curve to eventually stop dropping and become a flat horizontal line (e.g., 20% of users stay forever). If it hits zero, the company dies.",
+            "Because VCs like flat things."
+          ],
+          "correct_answer": "Because it proves survival. Every app loses users in the first few weeks. The goal is for the retention curve to eventually stop dropping and become a flat horizontal line (e.g., 20% of users stay forever). If it hits zero, the company dies.",
+          "explanation": "A flat line means you have found your true, core audience."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Data Terminology",
+      "pairs": [
+        { "concept": "Cohort", "match": "A specific group of users who all signed up during the same time period" },
+        { "concept": "Retention Curve", "match": "A graph showing the percentage of users who continue using the app over time" },
+        { "concept": "Vanity Metric", "match": "A number that looks good (Total Downloads) but hides the true health of the business" },
+        { "concept": "Smiling Curve", "match": "A rare phenomenon where churned users eventually return to the product" }
+      ]
+    }
+  ]
+}

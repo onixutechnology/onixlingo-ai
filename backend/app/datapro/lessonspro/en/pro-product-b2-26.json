@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-26",
+  "title": "The Product Vision (The North Star)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Painting the Future",
+      "parts": [
+        {
+          "visual": "Three bricklayers are asked what they are doing. The first says, 'I am laying bricks.' The second says, 'I am building a wall.' The third says, 'I am building a cathedral.' The third worker will build a better wall, because they understand the ultimate purpose of the work.\n\nThe Compass:\n1. The Product Vision: A vivid, emotional, and highly ambitious description of the future you are trying to create in 3 to 5 years. It is the 'Cathedral'. It does not contain code or specific features.\n2. The North Star: If a PM's team is confused, fighting over features, or exhausted, it is usually because the PM failed to provide a clear Vision. The Vision acts as a compass; it helps engineers and designers make hundreds of daily micro-decisions without needing to ask the PM.",
+          "audio": "A great Product Vision is completely divorced from the reality of today. It is a story about how the world will be fundamentally better for your users in 5 years. If the vision does not inspire the engineers, they will just lay bricks."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Leading with Purpose",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the primary difference between a 'Product Vision' and a 'Feature List'?",
+          "options": [
+            "The font size.",
+            "A Vision describes the destination (e.g., 'A world where nobody ever waits in line for a taxi'). A Feature List describes the vehicle (e.g., 'A button that calls a car using GPS'). The vision inspires; the list executes.",
+            "A Vision is written in code."
+          ],
+          "correct_answer": "A Vision describes the destination (e.g., 'A world where nobody ever waits in line for a taxi'). A Feature List describes the vehicle (e.g., 'A button that calls a car using GPS'). The vision inspires; the list executes.",
+          "explanation": "Start with 'Why', not 'What'."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO rejecting a PM's vision document. Why was it rejected?",
+          "tts_text": "Your vision document says: 'We will increase revenue by 15% next year by adding an AI chatbot.' This is terrible. This is a financial goal, not a vision. A user does not care about our revenue. Give me a vision that solves a human problem.",
+          "options": [
+            "Because 15% is too low.",
+            "It was entirely company-centric. A true Product Vision must be obsessively customer-centric. It describes how the user's life improves, not how the company's bank account improves. Empathy is the core of a great vision.",
+            "Because chatbots are boring."
+          ],
+          "correct_answer": "It was entirely company-centric. A true Product Vision must be obsessively customer-centric. It describes how the user's life improves, not how the company's bank account improves. Empathy is the core of a great vision.",
+          "explanation": "Money is the byproduct of solving a problem, not the vision itself."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens to an engineering team that lacks a strong Product Vision?",
+          "options": [
+            "They write code faster.",
+            "They become a 'Mercenary' team. They just show up, look at the JIRA tickets, write the code, and go home. They do not care if the product succeeds or fails. A strong vision turns mercenaries into 'Missionaries' who fight for the user.",
+            "They get fired immediately."
+          ],
+          "correct_answer": "They become a 'Mercenary' team. They just show up, look at the JIRA tickets, write the code, and go home. They do not care if the product succeeds or fails. A strong vision turns mercenaries into 'Missionaries' who fight for the user.",
+          "explanation": "You cannot buy passion with a paycheck alone."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'North Star Metric'?",
+          "options": [
+            "A metric for counting stars.",
+            "The single mathematical metric that best captures the core value your product delivers to its customers. For Spotify, it's 'Time Spent Listening'. If this single number goes up, the company is successfully executing its vision.",
+            "A financial accounting term."
+          ],
+          "correct_answer": "The single mathematical metric that best captures the core value your product delivers to its customers. For Spotify, it's 'Time Spent Listening'. If this single number goes up, the company is successfully executing its vision.",
+          "explanation": "The mathematical translation of the Vision."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Vision Vocabulary",
+      "pairs": [
+        { "concept": "Product Vision", "match": "A bold, customer-centric description of the future you are building" },
+        { "concept": "North Star Metric", "match": "The single data point that proves you are delivering core value" },
+        { "concept": "Mercenary Team", "match": "Engineers who just write code for money without caring about the user" },
+        { "concept": "Missionary Team", "match": "Engineers inspired by a vision who fight to solve the user's problem" }
+      ]
+    }
+  ]
+}

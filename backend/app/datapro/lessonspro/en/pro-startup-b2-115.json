@@ -1,0 +1,108 @@
+{
+  "id": "pro-startup-b2-115",
+  "title": "The Paywall and Feature Gating",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Art of the Block",
+      "parts": [
+        {
+          "visual": "A user loves a free SaaS tool. They use it every day. One day, they try to export their data to a PDF. A beautiful screen pops up: 'Exporting to PDF is a Premium Feature. Upgrade for $10/month.' The user sighs, pulls out their credit card, and pays.\n\nThe Conversion Psychology:\n1. The Paywall: The exact moment in the user journey where the software blocks progress and asks for money.\n2. Feature Gating: The strategic decision of exactly which features to give away for free (to build habit) and which features to lock behind the paywall (to force conversion).",
+          "audio": "If you give away too much value for free, the user will never upgrade. If you give away too little, the user will never form the habit and will just abandon the app. The Paywall is a delicate psychological boundary."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Designing the Trap",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup builds an email marketing tool. Which feature should they give away for free, and which should they put behind the Paywall (Gate)?",
+          "options": [
+            "Gate sending emails, free analytics.",
+            "Free sending (up to 100 emails), Gate the Analytics. You must let the user experience the core magic (sending the email) for free to get them hooked. But you lock the advanced professional tools (seeing who opened the email) to force the upgrade.",
+            "Gate everything."
+          ],
+          "correct_answer": "Free sending (up to 100 emails), Gate the Analytics. You must let the user experience the core magic (sending the email) for free to get them hooked. But you lock the advanced professional tools (seeing who opened the email) to force the upgrade.",
+          "explanation": "Core loop is free. Professional efficiency is paid."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Product Manager explaining a 'Usage-Based Paywall'. How does it work?",
+          "tts_text": "We don't lock any features. Every user gets 100% of the tools. But the moment they try to save their 5th project, the paywall drops. 'You have reached your limit of 4 free projects. Upgrade to save more.'",
+          "options": [
+            "It locks the best features.",
+            "The Capacity Limit. This allows the user to fall deeply in love with every single feature in the app. The paywall only hits them when they are already highly invested and actually need the tool for their daily workflow. The conversion rate is massive.",
+            "It deletes their projects."
+          ],
+          "correct_answer": "The Capacity Limit. This allows the user to fall deeply in love with every single feature in the app. The paywall only hits them when they are already highly invested and actually need the tool for their daily workflow. The conversion rate is massive.",
+          "explanation": "Let them build the habit before you drop the gate."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the ultimate 'Enterprise Trigger' feature that B2B SaaS companies always lock behind their most expensive $1,000/month paywall?",
+          "options": [
+            "Dark mode.",
+            "SSO (Single Sign-On) and Audit Logs. A single user doesn't care about SSO. But a Fortune 500 IT department legally *must* have SSO to manage employee passwords. You gate security features specifically to trap massive corporations into the highest pricing tier.",
+            "A nice font."
+          ],
+          "correct_answer": "SSO (Single Sign-On) and Audit Logs. A single user doesn't care about SSO. But a Fortune 500 IT department legally *must* have SSO to manage employee passwords. You gate security features specifically to trap massive corporations into the highest pricing tier.",
+          "explanation": "This is infamously known as the 'SSO Tax' in Silicon Valley."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Reverse Trial' (a hybrid model)?",
+          "options": [
+            "Paying the user.",
+            "The user signs up for free and instantly gets 14 days of the Premium version. After 14 days, instead of locking them out, they are downgraded to the limited Free version. They experienced the premium luxury, and now the 'pain' of losing it drives the upgrade.",
+            "A legal trial."
+          ],
+          "correct_answer": "The user signs up for free and instantly gets 14 days of the Premium version. After 14 days, instead of locking them out, they are downgraded to the limited Free version. They experienced the premium luxury, and now the 'pain' of losing it drives the upgrade.",
+          "explanation": "Loss aversion is a powerful psychological trigger."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of the Gate",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the B2B pricing trap:",
+          "parts": [
+            "Core",
+            "loop",
+            "is",
+            "free,",
+            "efficiency",
+            "is",
+            "paid,",
+            "security",
+            "is",
+            "enterprise."
+          ],
+          "correct_order": [
+            "Core",
+            "loop",
+            "is",
+            "free,",
+            "efficiency",
+            "is",
+            "paid,",
+            "security",
+            "is",
+            "enterprise."
+          ],
+          "explanation": "The blueprint for modern SaaS pricing architecture."
+        }
+      ]
+    }
+  ]
+}

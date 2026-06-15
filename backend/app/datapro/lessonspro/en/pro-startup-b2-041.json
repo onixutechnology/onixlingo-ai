@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-041",
+  "title": "The M&A Process (Mergers & Acquisitions)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Exit Event",
+      "parts": [
+        {
+          "visual": "A founder has worked 80 hours a week for 7 years. They have a $50 Million paper valuation, but zero cash in their personal bank account. Google offers to buy the company for $100 Million in cash. The founder's life is about to change forever.\n\nThe Exit:\n1. M&A (Mergers and Acquisitions): The process of one company buying another. This is the primary way founders and VCs finally turn their 'paper wealth' into actual cash in the bank.\n2. The Two Currencies: An acquisition can be paid in Cash (safe), or in the Stock of the acquiring company (risky, but potentially more lucrative).",
+          "audio": "An M&A event is the finish line for 99% of successful startups. VCs do not invest to hold your stock forever; they invest so you can eventually sell the company and give them a massive return."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Selling the Dream",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A massive corporation offers to buy a startup for $20 Million. However, the corporation isn't paying in cash. They are paying in 'Restricted Stock'. What does this mean for the founders?",
+          "options": [
+            "They get cash immediately.",
+            "They are being paid in the corporation's own stock, but they are legally forbidden from selling that stock for a certain period of time (e.g., 2 years). If the corporation's stock crashes during those 2 years, the founders lose their wealth.",
+            "They have to buy the stock."
+          ],
+          "correct_answer": "They are being paid in the corporation's own stock, but they are legally forbidden from selling that stock for a certain period of time (e.g., 2 years). If the corporation's stock crashes during those 2 years, the founders lose their wealth.",
+          "explanation": "Cash is king. Stock is a gamble."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO of the acquiring company. Why are they buying the startup?",
+          "tts_text": "We don't actually care about their product. We are shutting their app down on Day 1. But their engineering team is incredible, and we desperately need AI engineers. We are buying the company just to get the humans.",
+          "options": [
+            "An IPO.",
+            "An 'Acqui-hire' (Acquisition + Hire). The buyer is purchasing the company solely to acquire its talent, usually because the startup's actual product failed to get traction.",
+            "A hostile takeover."
+          ],
+          "correct_answer": "An 'Acqui-hire' (Acquisition + Hire). The buyer is purchasing the company solely to acquire its talent, usually because the startup's actual product failed to get traction.",
+          "explanation": "Acqui-hires are often 'soft landings' orchestrated by VCs to save face when a startup fails."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Due Diligence' in an M&A deal?",
+          "options": [
+            "A party to celebrate the deal.",
+            "A brutally exhaustive investigation by the acquiring company's lawyers and accountants. They inspect every single line of code, contract, and bank statement to ensure the startup isn't lying about anything before the money is transferred.",
+            "A fast signature."
+          ],
+          "correct_answer": "A brutally exhaustive investigation by the acquiring company's lawyers and accountants. They inspect every single line of code, contract, and bank statement to ensure the startup isn't lying about anything before the money is transferred.",
+          "explanation": "Many M&A deals fall apart during due diligence when the buyer discovers hidden technical debt or legal issues."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why would a startup's Board of Directors force the CEO to accept an acquisition offer, even if the CEO wants to keep building the company?",
+          "options": [
+            "Because the Board wants a vacation.",
+            "Fiduciary Duty. If the offer is massive, the Board has a legal obligation to maximize returns for the shareholders (the VCs). If the VCs want to cash out, they will overrule the founder.",
+            "Because it is illegal to say no."
+          ],
+          "correct_answer": "Fiduciary Duty. If the offer is massive, the Board has a legal obligation to maximize returns for the shareholders (the VCs). If the VCs want to cash out, they will overrule the founder.",
+          "explanation": "This is why Board Control is the ultimate power in a startup."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "M&A Terminology",
+      "pairs": [
+        { "concept": "M&A", "match": "Mergers and Acquisitions (the buying, selling, and combining of companies)" },
+        { "concept": "Acqui-hire", "match": "Buying a company primarily for the skills and expertise of its staff" },
+        { "concept": "Due Diligence", "match": "A comprehensive appraisal of a business undertaken by a prospective buyer" },
+        { "concept": "Restricted Stock", "match": "Stock given to an employee that cannot be sold until certain conditions are met" }
+      ]
+    }
+  ]
+}

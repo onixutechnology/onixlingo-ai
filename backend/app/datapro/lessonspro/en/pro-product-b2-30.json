@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-30",
+  "title": "The Role of the Product Designer",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "More Than Just Colors",
+      "parts": [
+        {
+          "visual": "A bad PM writes a 50-page document describing exactly how a screen should look, hands it to a Product Designer, and says: 'Make this look pretty.' The Designer quits. \nA good PM brings the Designer to a user interview, shows them the user struggling to navigate the app, and says: 'How do we solve this psychological puzzle together?'\n\nThe Partner:\n1. The Misconception: Amateurs think Product Designers are 'pixel pushers' who just choose fonts and colors at the end of the process.\n2. The Reality: A true Product Designer is a systems thinker and a user psychologist. They should be involved from Day 1 to help define the architecture of the product, run user tests, and prototype solutions before engineering ever starts.",
+          "audio": "If you treat your designer like a paintbrush, you will get a pretty product that nobody knows how to use. If you treat your designer like a strategic partner, you will get a product that feels like magic."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Designing the System",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Design System'?",
+          "options": [
+            "A system for painting.",
+            "A master library of reusable components (buttons, fonts, colors, error states) that the entire company uses. It ensures that the app looks consistent across 500 different screens, and it allows engineers to build features 10x faster because they just copy-paste the pre-approved button.",
+            "A set of rules for the office."
+          ],
+          "correct_answer": "A master library of reusable components (buttons, fonts, colors, error states) that the entire company uses. It ensures that the app looks consistent across 500 different screens, and it allows engineers to build features 10x faster because they just copy-paste the pre-approved button.",
+          "explanation": "Scale requires standardization."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Designer explaining their primary focus. What is 'Information Architecture'?",
+          "tts_text": "I don't care what color the 'Submit' button is yet. Right now, I am mapping out how the user navigates from the Homepage, to the Dashboard, to the Settings. If the hierarchy of information is confusing, a beautiful button won't save us.",
+          "options": [
+            "Building houses with information.",
+            "The structural blueprint of the app. It is the logical organization of menus, categories, and navigation. Good Information Architecture means the user can instinctively guess where a feature is hidden, even if they have never used the app before.",
+            "Writing the code for the database."
+          ],
+          "correct_answer": "The structural blueprint of the app. It is the logical organization of menus, categories, and navigation. Good Information Architecture means the user can instinctively guess where a feature is hidden, even if they have never used the app before.",
+          "explanation": "Structure precedes surface."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why must a Product Designer understand 'Edge Cases'?",
+          "options": [
+            "To design the edges of the screen.",
+            "Because users do crazy things. A 'Happy Path' is when the user does exactly what you want. An 'Edge Case' is when the user uploads a 5-gigabyte image of a cat instead of their resume. The designer must design the error screens and safety nets for when things break.",
+            "To avoid sharp corners."
+          ],
+          "correct_answer": "Because users do crazy things. A 'Happy Path' is when the user does exactly what you want. An 'Edge Case' is when the user uploads a 5-gigabyte image of a cat instead of their resume. The designer must design the error screens and safety nets for when things break.",
+          "explanation": "Design for disaster, not just perfection."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the relationship between the PM and the Designer in user research?",
+          "options": [
+            "The PM does it alone.",
+            "They do it together. The PM asks questions about the business value and willingness to pay. The Designer watches the user's mouse movements and body language to spot friction. They form a complete picture of the user's mind.",
+            "They never talk to users."
+          ],
+          "correct_answer": "They do it together. The PM asks questions about the business value and willingness to pay. The Designer watches the user's mouse movements and body language to spot friction. They form a complete picture of the user's mind.",
+          "explanation": "Two lenses on the same reality."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Design Terminology",
+      "pairs": [
+        { "concept": "Design System", "match": "A master library of reusable buttons and components for consistency" },
+        { "concept": "Information Architecture", "match": "The structural blueprint of menus and navigation logic" },
+        { "concept": "Happy Path", "match": "The perfect scenario where the user does exactly what they should" },
+        { "concept": "Edge Case", "match": "The rare, chaotic scenario where the user breaks the system" }
+      ]
+    }
+  ]
+}

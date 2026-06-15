@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-040",
+  "title": "Lifetime Value (LTV)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Value of Loyalty",
+      "parts": [
+        {
+          "visual": "A customer pays you $10 a month. It costs you $50 to acquire them (CAC). If they cancel in month 2, you lost $30. If they stay for 5 years, they pay you $600. The math of the startup depends entirely on how long they stay.\n\nThe Holy Ratio:\n1. Lifetime Value (LTV): The total amount of gross profit a company expects to make from a single customer over the entire duration of their relationship.\n2. The Golden Ratio (LTV:CAC): The relationship between how much a customer is worth and how much it costs to get them. A healthy startup must have a ratio of at least 3:1.",
+          "audio": "Lifetime Value is the ultimate measure of a product's true worth. If your LTV is massive, you can afford to spend massive amounts of money on marketing to destroy your competitors. LTV is the fuel of the growth engine."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Golden Ratio",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup has a Customer Acquisition Cost (CAC) of $100. The Lifetime Value (LTV) of their average customer is $150. Their LTV:CAC ratio is 1.5 : 1. What will the VC say?",
+          "options": [
+            "Good job.",
+            "'This business is un-fundable.' A 1.5 ratio is far too close to zero. Once you factor in office rent, salaries, and server costs, this company is actually losing massive amounts of money.",
+            "Increase the marketing budget."
+          ],
+          "correct_answer": "'This business is un-fundable.' A 1.5 ratio is far too close to zero. Once you factor in office rent, salaries, and server costs, this company is actually losing massive amounts of money.",
+          "explanation": "The benchmark for a highly profitable SaaS company is a ratio of 3:1 or 4:1."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO explaining how they are going to increase LTV. What is the strategy?",
+          "tts_text": "We are not going to raise the price of the basic software. Instead, we are launching three new premium features. If we can get 20% of our existing users to buy those features, our average LTV will double.",
+          "options": [
+            "To fire the sales team.",
+            "Cross-selling and Upselling. By convincing existing, loyal customers to buy more products, the company increases the Lifetime Value without spending a single dollar on new marketing (CAC).",
+            "To launch a billboard ad."
+          ],
+          "correct_answer": "Cross-selling and Upselling. By convincing existing, loyal customers to buy more products, the company increases the Lifetime Value without spending a single dollar on new marketing (CAC).",
+          "explanation": "It is always cheaper to sell to an existing customer than to acquire a new one."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How does a high 'Churn Rate' mathematically destroy your LTV?",
+          "options": [
+            "It doesn't affect LTV.",
+            "LTV is calculated based on how many months a customer stays. If churn is high, the 'Lifetime' of the customer is drastically shortened. They leave before they can pay you enough to cover the CAC.",
+            "It makes the math too hard."
+          ],
+          "correct_answer": "LTV is calculated based on how many months a customer stays. If churn is high, the 'Lifetime' of the customer is drastically shortened. They leave before they can pay you enough to cover the CAC.",
+          "explanation": "High Churn = Low LTV = Startup Death."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What should a startup do if their LTV:CAC ratio is insanely high, like 8:1?",
+          "options": [
+            "Celebrate and do nothing.",
+            "Aggressively increase their marketing spend. An 8:1 ratio means they are 'under-investing' in growth. They should pour millions into marketing right now to capture the entire market before competitors arrive.",
+            "Lower their prices."
+          ],
+          "correct_answer": "Aggressively increase their marketing spend. An 8:1 ratio means they are 'under-investing' in growth. They should pour millions into marketing right now to capture the entire market before competitors arrive.",
+          "explanation": "If the machine prints $8 for every $1 you put in, you should mortgage your house to put more $1 bills into the machine."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Unit Economics Terminology",
+      "pairs": [
+        { "concept": "LTV", "match": "The total gross profit generated by a customer over their entire relationship with the company" },
+        { "concept": "CAC", "match": "The total cost to acquire one paying customer" },
+        { "concept": "LTV:CAC Ratio", "match": "The metric measuring the relationship between the lifetime value and the cost to acquire" },
+        { "concept": "Upselling", "match": "Persuading a customer to buy a more expensive, upgraded version of an item" }
+      ]
+    }
+  ]
+}

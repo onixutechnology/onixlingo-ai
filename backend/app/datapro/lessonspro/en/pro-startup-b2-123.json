@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-123",
+  "title": "Paid Acquisition (CAC Arbitrage)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Buying Growth",
+      "parts": [
+        {
+          "visual": "A startup raises $5 Million. They use $4 Million to run Facebook and Google ads. They know exactly how much they are spending, and exactly how many users they are getting. It is not art; it is a brutal, mathematical machine.\n\nThe Engine:\n1. Paid Acquisition: Paying platforms (Google, Meta, LinkedIn) to place your product directly in front of targeted users.\n2. Arbitrage: The goal of paid ads is simple arbitrage. You must buy attention for $5 and convert it into a user worth $50. If you crack this formula, you have a license to print money.",
+          "audio": "Paid acquisition is a drug. It gives you instant growth and dopamine. But as you spend more money, the platform realizes you are dependent, and the cost of the ads will always go up, slowly crushing your profit margins."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Math of Ads",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the primary difference between Google Ads (Search) and Meta Ads (Facebook/Instagram)?",
+          "options": [
+            "Google has more pictures.",
+            "Intent vs. Interruption. On Google, people are actively searching for a solution (High Intent). On Meta, people are looking at photos of dogs, and you interrupt them with an ad (Low Intent, but massive volume).",
+            "Meta is cheaper."
+          ],
+          "correct_answer": "Intent vs. Interruption. On Google, people are actively searching for a solution (High Intent). On Meta, people are looking at photos of dogs, and you interrupt them with an ad (Low Intent, but massive volume).",
+          "explanation": "You use Google to capture existing demand. You use Meta to create new demand."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CMO talking about their ad strategy. What is the 'CAC Payback Period' trap?",
+          "tts_text": "We spend $100 to acquire a customer. They pay us $10 a month. Mathematically, it takes us 10 months just to break even on the ad spend. By month 6, we ran out of cash to pay the ad network.",
+          "options": [
+            "The ads were too ugly.",
+            "The Cash Flow Gap. Even if the LTV is highly profitable over 3 years, the ad network demands the $100 *today*. If you rely heavily on paid ads but have slow monthly subscriptions, you will suffer a fatal cash flow crisis.",
+            "The customers were fake."
+          ],
+          "correct_answer": "The Cash Flow Gap. Even if the LTV is highly profitable over 3 years, the ad network demands the $100 *today*. If you rely heavily on paid ads but have slow monthly subscriptions, you will suffer a fatal cash flow crisis.",
+          "explanation": "This is why startups offer 'Annual Plans' at a discount—to get the cash upfront."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do Customer Acquisition Costs (CAC) inevitably rise over time on platforms like Google or Meta?",
+          "options": [
+            "Because Mark Zuckerberg needs a new yacht.",
+            "Ad Fatigue and Competition. As your startup grows, you exhaust the 'easy' cheap customers who wanted your product immediately. To find new customers, you have to bid against massive competitors for more expensive, harder-to-convert users.",
+            "Because the internet gets full."
+          ],
+          "correct_answer": "Ad Fatigue and Competition. As your startup grows, you exhaust the 'easy' cheap customers who wanted your product immediately. To find new customers, you have to bid against massive competitors for more expensive, harder-to-convert users.",
+          "explanation": "The Law of Shitty Click-Through Rates: All marketing channels degrade over time."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If a B2B startup sells a $50,000 enterprise software, where should they spend their ad budget?",
+          "options": [
+            "TikTok.",
+            "LinkedIn. It is the most expensive ad platform in the world per click, but the targeting is hyper-specific. You can target ads exclusively to 'CFOs at Banks with over 10,000 employees'. You pay $50 for a click, but the arbitrage works.",
+            "Snapchat."
+          ],
+          "correct_answer": "LinkedIn. It is the most expensive ad platform in the world per click, but the targeting is hyper-specific. You can target ads exclusively to 'CFOs at Banks with over 10,000 employees'. You pay $50 for a click, but the arbitrage works.",
+          "explanation": "B2B arbitrage requires precision, not volume."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Ad Terminology",
+      "pairs": [
+        { "concept": "Arbitrage", "match": "Buying attention for less money than the customer is ultimately worth" },
+        { "concept": "Intent-Based Ad", "match": "Targeting users who are actively searching for a solution (Google Search)" },
+        { "concept": "Interruption Ad", "match": "Targeting users who are doing something else and trying to distract them (Meta)" },
+        { "concept": "Ad Fatigue", "match": "When users see your ad so many times they go blind to it and stop clicking" }
+      ]
+    }
+  ]
+}

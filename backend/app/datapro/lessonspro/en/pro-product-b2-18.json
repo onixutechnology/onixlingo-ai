@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-18",
+  "title": "Freemium vs. Enterprise Pricing",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Art of Getting Paid",
+      "parts": [
+        {
+          "visual": "Startup A builds a $10/month app. They spend $15 on marketing to acquire a user. They go bankrupt in 3 months. \nStartup B builds a $100,000/year Enterprise software. They take 9 months to close a single deal. They run out of cash and go bankrupt.\n\nThe Pricing Model:\n1. The Math of Survival: Pricing is not just a number on a website; it dictates your entire product architecture, your marketing strategy, and the type of salespeople you must hire.\n2. B2C vs B2B: Business-to-Consumer (B2C) relies on millions of users paying tiny amounts (Spotify). Business-to-Business (B2B) relies on a few massive companies paying huge amounts (Salesforce). The product management required for each is completely different.",
+          "audio": "Pricing is a product feature. If you design a brilliant enterprise tool but try to sell it for $5 a month with a self-serve checkout, large corporations will actually refuse to buy it because it looks 'too cheap to be secure.'"
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Models of Monetization",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the psychological trap of the 'Freemium' model?",
+          "options": [
+            "It costs too much.",
+            "The Free-Rider Problem. You offer a great free version hoping users will upgrade to Pro. But if the free version is TOO good, 99% of users will never pay you a dime, and your server costs will bankrupt the company.",
+            "People don't like free things."
+          ],
+          "correct_answer": "The Free-Rider Problem. You offer a great free version hoping users will upgrade to Pro. But if the free version is TOO good, 99% of users will never pay you a dime, and your server costs will bankrupt the company.",
+          "explanation": "You must find the exact point of pain that forces them to pay."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Enterprise PM. Why does an Enterprise product look so 'boring' compared to a consumer app?",
+          "tts_text": "My enterprise buyers don't care about cute animations. They care about single sign-on security, compliance with European data laws, and admin permission roles. They are paying me $50,000 to keep them out of jail, not to entertain them.",
+          "options": [
+            "Because enterprise PMs are boring.",
+            "Compliance over Delight. In B2B Enterprise, the person using the software is rarely the person paying for it. The buyer is a CTO who requires strict security features (SSO, Audit Logs). If you don't have those, the deal is dead instantly.",
+            "Because the budget is small."
+          ],
+          "correct_answer": "Compliance over Delight. In B2B Enterprise, the person using the software is rarely the person paying for it. The buyer is a CTO who requires strict security features (SSO, Audit Logs). If you don't have those, the deal is dead instantly.",
+          "explanation": "Sell to the buyer, build for the user."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Paywall'?",
+          "options": [
+            "A wall made of money.",
+            "A digital barrier in the product flow. For example, a news website lets you read 3 articles for free. When you click the 4th, a screen pops up demanding a credit card. It is the literal boundary between free value and revenue.",
+            "A security system for banks."
+          ],
+          "correct_answer": "A digital barrier in the product flow. For example, a news website lets you read 3 articles for free. When you click the 4th, a screen pops up demanding a credit card. It is the literal boundary between free value and revenue.",
+          "explanation": "The architecture of the ask."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does 'Product-Led Growth' (PLG) mean?",
+          "options": [
+            "The product grows plants.",
+            "The product sells itself. Instead of hiring salespeople to call clients, you build a product so incredibly intuitive and valuable that users invite their own coworkers to use it (like Slack or Notion). The product acts as the sales engine.",
+            "The product costs a lot."
+          ],
+          "correct_answer": "The product sells itself. Instead of hiring salespeople to call clients, you build a product so incredibly intuitive and valuable that users invite their own coworkers to use it (like Slack or Notion). The product acts as the sales engine.",
+          "explanation": "Code is cheaper than commissions."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Pricing Vocabulary",
+      "pairs": [
+        { "concept": "Freemium", "match": "Giving 90% of the value for free, charging for the final 10%" },
+        { "concept": "Enterprise", "match": "Selling massive $100k contracts requiring high security and compliance" },
+        { "concept": "Product-Led Growth", "match": "Designing the software to automatically sell itself and spread via users" },
+        { "concept": "Paywall", "match": "The hard barrier where the user is forced to enter a credit card" }
+      ]
+    }
+  ]
+}

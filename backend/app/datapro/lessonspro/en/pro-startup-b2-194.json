@@ -1,0 +1,106 @@
+{
+  "id": "pro-startup-b2-194",
+  "title": "The 'Theranos' Trap (Fake it 'til you make it)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Line Between Vision and Fraud",
+      "parts": [
+        {
+          "visual": "A software founder tells a VC: 'Our AI can summarize a book in 5 seconds.' (The AI actually takes 10 seconds right now, but they know how to fix it). A biotech founder tells a VC: 'Our machine can detect cancer with one drop of blood.' (The machine is a plastic box with broken lights inside, and they know it doesn't work). The first founder is a visionary. The second founder goes to federal prison.\n\nThe Slippery Slope:\n1. Reality Distortion: Silicon Valley encourages founders to 'Fake it 'til you make it'—to sell a vision of the future that does not exist yet. It is the core of venture capital.\n2. The Fraud Line: The line is crossed when you lie about historical data, fake current revenue, or endanger human life (hardware/health) while pretending it works.",
+          "audio": "It is perfectly legal to tell an investor what your software WILL do in three years. It is a federal crime to tell an investor what your software CAN do today, if it cannot actually do it."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Crossing the Line",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Concierge MVP' vs. 'Wire Fraud'?",
+          "options": [
+            "Wire fraud uses wires.",
+            "If you manually do the work behind the scenes and tell the customer 'We are testing our system', that is an MVP. If you manually do the work behind the scenes and tell investors 'Our proprietary AI algorithm is fully autonomous', you are committing wire fraud.",
+            "An MVP costs more money."
+          ],
+          "correct_answer": "If you manually do the work behind the scenes and tell the customer 'We are testing our system', that is an MVP. If you manually do the work behind the scenes and tell investors 'Our proprietary AI algorithm is fully autonomous', you are committing wire fraud.",
+          "explanation": "Lying to investors about current technological capabilities is a crime."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the lawyer explaining the Theranos collapse. Why did hardware fraud send the CEO to prison, while software failures rarely do?",
+          "tts_text": "If a video game startup promises a multiplayer feature and it fails, users just get bored. When Theranos faked their blood-testing hardware, real humans got fake medical results and thought they had cancer. Software fails gracefully. Hardware fraud hurts humans.",
+          "options": [
+            "Hardware is heavier.",
+            "Physical Consequences. Software 'vaporware' usually just results in lost money and angry VCs. Faking deep tech, health, or hardware involves FDA regulations, public safety, and severe federal criminal consequences. You cannot 'hack' biology.",
+            "Software lawyers are better."
+          ],
+          "correct_answer": "Physical Consequences. Software 'vaporware' usually just results in lost money and angry VCs. Faking deep tech, health, or hardware involves FDA regulations, public safety, and severe federal criminal consequences. You cannot 'hack' biology.",
+          "explanation": "You cannot 'Move Fast and Break Things' when the thing is a human."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens when a CEO lies to their own engineers to maintain the 'Vision'?",
+          "options": [
+            "The engineers work faster.",
+            "Compartmentalization. The CEO forces different engineering teams to work in complete secrecy so no one realizes the entire product is a lie. When the engineers finally talk to each other, the illusion shatters and whistleblowers contact the press.",
+            "The code compiles perfectly."
+          ],
+          "correct_answer": "Compartmentalization. The CEO forces different engineering teams to work in complete secrecy so no one realizes the entire product is a lie. When the engineers finally talk to each other, the illusion shatters and whistleblowers contact the press.",
+          "explanation": "A house of cards requires absolute silence."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Is it legal to use a 'Wizard of Oz' demo for a pitch?",
+          "options": [
+            "Yes, if you explain it.",
+            "Yes, as long as you are completely transparent. If you show a beautiful app design that is actually just a clickable video (not real code), you must explicitly state: 'This is a design prototype, not functional code.' Honesty protects you from lawsuits.",
+            "No, the FBI will arrest you."
+          ],
+          "correct_answer": "Yes, as long as you are completely transparent. If you show a beautiful app design that is actually just a clickable video (not real code), you must explicitly state: 'This is a design prototype, not functional code.' Honesty protects you from lawsuits.",
+          "explanation": "Selling the dream is fine, as long as everyone knows it is a dream."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Truth",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the legal line of startups:",
+          "parts": [
+            "Sell",
+            "the",
+            "future,",
+            "but",
+            "never",
+            "lie",
+            "about",
+            "the",
+            "present."
+          ],
+          "correct_order": [
+            "Sell",
+            "the",
+            "future,",
+            "but",
+            "never",
+            "lie",
+            "about",
+            "the",
+            "present."
+          ],
+          "explanation": "The difference between Steve Jobs and Elizabeth Holmes."
+        }
+      ]
+    }
+  ]
+}

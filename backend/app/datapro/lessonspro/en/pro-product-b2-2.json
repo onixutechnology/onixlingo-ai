@@ -1,0 +1,96 @@
+{
+  "id": "pro-product-b2-2",
+  "title": "The Triangle (Engineering, Design, Business)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Core Intersection",
+      "parts": [
+        {
+          "visual": "Imagine a Venn Diagram with three massive circles. Circle 1: Technology (What is possible to build). Circle 2: User Experience (What is beautiful and easy to use). Circle 3: Business (What will make money). The tiny, overlapping center where all three circles meet is where the Product Manager lives.\n\nThe Trinity of Conflict:\n1. The Triangle: The PM must balance the competing desires of Engineering, Design, and the Business executives. \n2. The Tension: Engineering wants to build scalable, perfect, slow architecture. Design wants to build pixel-perfect, complex, beautiful interfaces. The Business wants to launch a broken feature tomorrow to hit a revenue goal. The PM must find the brutal compromise between them.",
+          "audio": "If you only listen to Engineering, you build a fast product that is ugly. If you only listen to Design, you build a beautiful product that is too slow. If you only listen to Business, you build a profitable product that users hate. The PM is the great balancer."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Balancing the Forces",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the primary concern of the 'Business' point of the triangle?",
+          "options": [
+            "Making the code clean.",
+            "Viability. The business stakeholders (CEO, Sales, Marketing) only care if the product will generate revenue, capture market share, and beat competitors. They do not care about code quality or pixel perfection.",
+            "Making the app pretty."
+          ],
+          "correct_answer": "Viability. The business stakeholders (CEO, Sales, Marketing) only care if the product will generate revenue, capture market share, and beat competitors. They do not care about code quality or pixel perfection.",
+          "explanation": "Revenue keeps the lights on."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the PM mediate a fight. Why did the PM reject the designer's new animation?",
+          "tts_text": "The 3D animation you designed for the checkout button is stunning. However, engineering says it will take 6 weeks to build, and the business needs this checkout flow live by Black Friday in 2 weeks. We have to cut the animation.",
+          "options": [
+            "Because the PM hates art.",
+            "Feasibility vs. Desirability. The animation was highly desirable (UX), but not technically feasible (Engineering) within the business timeline (Business). The PM must ruthlessly kill good ideas that don't fit the triangle.",
+            "Because the animation was ugly."
+          ],
+          "correct_answer": "Feasibility vs. Desirability. The animation was highly desirable (UX), but not technically feasible (Engineering) within the business timeline (Business). The PM must ruthlessly kill good ideas that don't fit the triangle.",
+          "explanation": "Compromise is the art of mutual disappointment."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why does a PM need to be 'Bilingual'?",
+          "options": [
+            "To speak Spanish.",
+            "To translate between disciplines. A PM must speak enough 'Code' to understand an engineer's API constraints, enough 'Design' to discuss user flows, and enough 'Finance' to explain ROI to the CEO. They are the universal translator.",
+            "To talk to international clients."
+          ],
+          "correct_answer": "To translate between disciplines. A PM must speak enough 'Code' to understand an engineer's API constraints, enough 'Design' to discuss user flows, and enough 'Finance' to explain ROI to the CEO. They are the universal translator.",
+          "explanation": "Translation prevents civil war between departments."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a PM heavily favors the 'Engineering' side over the other two?",
+          "options": [
+            "The product gets faster.",
+            "Over-engineering. The team will spend 6 months building a perfectly scalable, mathematically flawless backend system for a feature that zero users actually want to use. The company runs out of money with perfect code.",
+            "The designers get happy."
+          ],
+          "correct_answer": "Over-engineering. The team will spend 6 months building a perfectly scalable, mathematically flawless backend system for a feature that zero users actually want to use. The company runs out of money with perfect code.",
+          "explanation": "Perfect code for a useless product is still a failure."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of the Triangle",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the three pillars of a product:",
+          "parts": [
+            "Feasible,",
+            "Desirable,",
+            "and",
+            "Viable."
+          ],
+          "correct_order": [
+            "Feasible,",
+            "Desirable,",
+            "and",
+            "Viable."
+          ],
+          "explanation": "Can we build it? Do they want it? Will it make money?"
+        }
+      ]
+    }
+  ]
+}

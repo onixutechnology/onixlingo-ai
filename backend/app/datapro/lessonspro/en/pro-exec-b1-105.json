@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-105",
+  "title": "Hedging Currency Risk",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Protecting Profit Margins",
+      "parts": [
+        {
+          "visual": "If you are a US company paying factories in China and selling software in Europe, fluctuating currency exchange rates can wipe out your profit margins overnight.\n\nThe Executive Defense:\n'Hedging' is a financial strategy used to protect against the risk of currency fluctuations. You enter into a 'Forward Contract' with a bank to lock in today's exchange rate for a future date.",
+          "audio": "Fluctuating currency exchange rates can destroy your profit margins. Executives use 'Hedging' to lock in exchange rates and protect the company's financial stability."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Foreign Exchange (FX)",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "You sell your product in Europe for Euros, but you pay your engineers in US Dollars. If the Euro suddenly loses 20% of its value against the Dollar, what happens?",
+          "options": [
+            "You make more profit.",
+            "Your profit margins are crushed, because the Euros you collected are now worth fewer Dollars to pay your staff.",
+            "Nothing happens."
+          ],
+          "correct_answer": "Your profit margins are crushed, because the Euros you collected are now worth fewer Dollars to pay your staff.",
+          "explanation": "This is FX (Foreign Exchange) risk. An executive cannot control macroeconomics, but they must protect the company against it."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CFO's strategy. What financial tool is this?",
+          "tts_text": "We need to pay our Japanese supplier 100 Million Yen in six months. Let's sign a contract with the bank today to lock in the exchange rate.",
+          "options": [
+            "A loan.",
+            "A Forward Contract (Hedging).",
+            "A stock option."
+          ],
+          "correct_answer": "A Forward Contract (Hedging).",
+          "explanation": "A forward contract guarantees the price of the currency in the future. If the Yen skyrockets, you are protected. You traded potential gains for absolute certainty."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the primary goal of corporate 'Hedging'?",
+          "options": [
+            "To gamble and make a massive profit on currency trading.",
+            "To remove uncertainty. It acts as an insurance policy to guarantee profit margins against wild market swings.",
+            "To avoid taxes."
+          ],
+          "correct_answer": "To remove uncertainty. It acts as an insurance policy to guarantee profit margins against wild market swings.",
+          "explanation": "Corporations are not hedge funds; their goal is to sell products reliably, not to gamble on foreign exchange markets."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If a US company 'Offshores' its customer service to India, what currency risk do they expose themselves to?",
+          "options": [
+            "None.",
+            "If the Indian Rupee gains immense strength against the US Dollar, the offshore team suddenly becomes far more expensive than originally planned.",
+            "The US Dollar might crash."
+          ],
+          "correct_answer": "If the Indian Rupee gains immense strength against the US Dollar, the offshore team suddenly becomes far more expensive than originally planned.",
+          "explanation": "Labor arbitrage (finding cheaper labor abroad) always carries an inherent FX risk that the CFO must manage."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "FX Terminology",
+      "pairs": [
+        { "concept": "FX", "match": "Foreign Exchange" },
+        { "concept": "Hedging", "match": "An investment to reduce the risk of adverse price movements" },
+        { "concept": "Forward Contract", "match": "An agreement to buy/sell currency at a set price on a future date" },
+        { "concept": "Volatility", "match": "The rate at which the price of an asset increases or decreases" }
+      ]
+    }
+  ]
+}

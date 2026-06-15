@@ -12,7 +12,7 @@ import confetti from 'canvas-confetti';
 import { useUIStore } from '@/store/uiStore';
 
 // URL HÍBRIDA: Detecta si estás en Vercel (Prod) o en tu PC (Dev)
-const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:5000';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';
 
 interface Props {
   xpEarned: number;

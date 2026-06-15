@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-21",
+  "title": "Dark Patterns in UX",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Weaponization of Psychology",
+      "parts": [
+        {
+          "visual": "You want to cancel your gym membership. You log into the app. The 'Upgrade' button is massive and green. The 'Cancel' button is light gray text hidden at the very bottom of the page. When you click it, a pop-up appears: 'Are you sure you want to lose all your progress and be unhealthy?' You feel guilty and close the app.\n\nThe Dark Arts:\n1. Dark Patterns: User interfaces specifically designed to trick, manipulate, or exhaust users into doing things they do not want to do (like buying insurance or keeping a subscription).\n2. The Short-Term Trap: Dark patterns mathematically work. They will instantly increase your revenue this month. But they destroy trust. A user who feels tricked will never return, and will actively tell their friends your company is evil.",
+          "audio": "A good PM reduces friction to help the user achieve the user's goal. A toxic PM intentionally adds friction to block the user from achieving their goal, just to hit a quarterly corporate revenue target. It is profitable, but it is deeply unethical."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Recognizing the Trap",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Roach Motel' dark pattern?",
+          "options": [
+            "A dirty hotel.",
+            "A design where it is incredibly easy to get into a situation (like signing up for a subscription with one click), but almost impossible to get out of it (requiring you to call a phone number between 9am-5pm to cancel).",
+            "A bug in the software code."
+          ],
+          "correct_answer": "A design where it is incredibly easy to get into a situation (like signing up for a subscription with one click), but almost impossible to get out of it (requiring you to call a phone number between 9am-5pm to cancel).",
+          "explanation": "Easy to enter, impossible to leave."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the user complain about a flight booking app. What dark pattern did they experience?",
+          "tts_text": "I was buying a $100 ticket. When I clicked 'Checkout', the final price was $145! They had automatically added a $45 travel insurance box that was secretly checked at the bottom of page 3. I almost didn't notice.",
+          "options": [
+            "The plane was delayed.",
+            "Sneak into Basket. The system automatically adds items or upgrades to the user's cart without their explicit consent, relying on the user's fatigue and lack of attention to steal extra money at the final checkout step.",
+            "The ticket was fake."
+          ],
+          "correct_answer": "Sneak into Basket. The system automatically adds items or upgrades to the user's cart without their explicit consent, relying on the user's fatigue and lack of attention to steal extra money at the final checkout step.",
+          "explanation": "Exploiting user fatigue for profit."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Confirmshaming'?",
+          "options": [
+            "Making the user feel embarrassed.",
+            "Designing the 'Decline' button to emotionally manipulate the user. For example, a popup asks for your email to get a discount. The decline button says: 'No thanks, I prefer to pay full price because I hate saving money.' It uses guilt as a weapon.",
+            "Saying a bad word to confirm."
+          ],
+          "correct_answer": "Designing the 'Decline' button to emotionally manipulate the user. For example, a popup asks for your email to get a discount. The decline button says: 'No thanks, I prefer to pay full price because I hate saving money.' It uses guilt as a weapon.",
+          "explanation": "Guilt is a toxic conversion strategy."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do governments (like the EU) actively pass laws against Dark Patterns?",
+          "options": [
+            "Because politicians hate computers.",
+            "Consumer Protection. Dark patterns are no longer just 'clever marketing'; they are legally recognized as digital fraud. Companies like Amazon have been sued for hundreds of millions of dollars for making it intentionally difficult to cancel Prime.",
+            "Because apps use too much battery."
+          ],
+          "correct_answer": "Consumer Protection. Dark patterns are no longer just 'clever marketing'; they are legally recognized as digital fraud. Companies like Amazon have been sued for hundreds of millions of dollars for making it intentionally difficult to cancel Prime.",
+          "explanation": "Manipulation is moving from unethical to illegal."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Dark Pattern Terms",
+      "pairs": [
+        { "concept": "Dark Pattern", "match": "A UI designed specifically to trick or manipulate the user" },
+        { "concept": "Roach Motel", "match": "Incredibly easy to sign up, painfully difficult to cancel" },
+        { "concept": "Sneak into Basket", "match": "Secretly adding items to the checkout cart hoping the user won't notice" },
+        { "concept": "Confirmshaming", "match": "Using guilt or insulting language on the 'Decline' button" }
+      ]
+    }
+  ]
+}

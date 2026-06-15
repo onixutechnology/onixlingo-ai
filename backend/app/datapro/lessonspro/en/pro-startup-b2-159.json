@@ -1,0 +1,104 @@
+{
+  "id": "pro-startup-b2-159",
+  "title": "Voting Rights (Common vs. Preferred Stock)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Illusion of Ownership",
+      "parts": [
+        {
+          "visual": "A founder owns 60% of the company's stock. The VCs own 40%. The founder assumes they can do whatever they want because 60 is bigger than 40. But when the founder tries to sell the company, the VC legally blocks the sale. The founder is confused: 'But I own the majority!' The VC smiles: 'You own Common Stock. I own Preferred Stock.'\n\nThe Two Classes:\n1. Common Stock: Issued to founders and employees. It represents basic ownership, but is at the absolute bottom of the legal food chain.\n2. Preferred Stock: Issued to Venture Capitalists. It comes with 'Superpowers' (Protective Provisions), giving the minority VC the legal right to veto major decisions, regardless of what percentage of the company they own.",
+          "audio": "In startup math, 40% Preferred can be vastly more powerful than 60% Common. A VC does not give you $10 Million without installing legal tripwires that prevent you from selling the company or firing the board without their explicit permission."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Power of Preferred",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What are 'Protective Provisions' (Veto Rights) in a VC term sheet?",
+          "options": [
+            "Bodyguards for the CEO.",
+            "Special legal rights attached to Preferred Stock. Even if the VC only owns 10% of the company, Protective Provisions state that the company CANNOT be sold, cannot take on debt, and cannot issue new stock without the VC voting 'Yes'.",
+            "A type of insurance."
+          ],
+          "correct_answer": "Special legal rights attached to Preferred Stock. Even if the VC only owns 10% of the company, Protective Provisions state that the company CANNOT be sold, cannot take on debt, and cannot issue new stock without the VC voting 'Yes'.",
+          "explanation": "Protective provisions are the ultimate defensive weapon for minority investors."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the founder explaining 'Super-Voting Shares' (like Mark Zuckerberg has). What do they do?",
+          "tts_text": "To prevent VCs from ever firing me, I created a special class of Founder Stock. My shares get 10 votes per share, while the VCs only get 1 vote per share. Even if I only own 15% of the company, I control 60% of the voting power.",
+          "options": [
+            "They make the stock cheaper.",
+            "Total Founder Control. Dual-class stock structures allow a founder to sell massive amounts of equity to raise billions, while mathematically retaining absolute dictatorial voting control over the board of directors.",
+            "They make the stock illegal."
+          ],
+          "correct_answer": "Total Founder Control. Dual-class stock structures allow a founder to sell massive amounts of equity to raise billions, while mathematically retaining absolute dictatorial voting control over the board of directors.",
+          "explanation": "He who controls the voting math controls the company."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "In a bankruptcy liquidation, who gets paid FIRST?",
+          "options": [
+            "The employees with Common Stock.",
+            "The VCs with Preferred Stock. Preferred stock literally means 'Preference in Liquidation'. If the company is sold for parts, the VCs get all their money back before the founders or employees see a single penny.",
+            "The founder."
+          ],
+          "correct_answer": "The VCs with Preferred Stock. Preferred stock literally means 'Preference in Liquidation'. If the company is sold for parts, the VCs get all their money back before the founders or employees see a single penny.",
+          "explanation": "Common stock is the last in line at the buffet."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Pro-Rata Rights'?",
+          "options": [
+            "The right to a discount.",
+            "The right of an early VC to maintain their percentage of ownership in future funding rounds. If they own 10% now, they have the legal right to buy 10% of the next round so they don't get diluted by massive new investors.",
+            "The right to fire the CEO."
+          ],
+          "correct_answer": "The right of an early VC to maintain their percentage of ownership in future funding rounds. If they own 10% now, they have the legal right to buy 10% of the next round so they don't get diluted by massive new investors.",
+          "explanation": "Pro-rata lets early investors double-down on their winners."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Control",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the reality of startup ownership:",
+          "parts": [
+            "Preferred",
+            "stock",
+            "has",
+            "veto",
+            "power",
+            "over",
+            "Common",
+            "stock."
+          ],
+          "correct_order": [
+            "Preferred",
+            "stock",
+            "has",
+            "veto",
+            "power",
+            "over",
+            "Common",
+            "stock."
+          ],
+          "explanation": "Percentage means nothing if you don't have the legal rights."
+        }
+      ]
+    }
+  ]
+}

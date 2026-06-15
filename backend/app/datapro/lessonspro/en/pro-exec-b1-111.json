@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-111",
+  "title": "Managing Intellectual Property (IP) Litigation",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Patent War",
+      "parts": [
+        {
+          "visual": "When a competitor steals your technology, or accuses you of stealing theirs, the executive team enters 'IP Litigation'.\n\nThe Battlefield:\n1. Infringement: The legal claim that someone used your patented technology without permission.\n2. Injunction: A court order forcing the competitor to stop selling the product immediately.\n3. Patent Trolls: Companies that produce nothing, but buy patents solely to sue real companies for money.",
+          "audio": "When a competitor steals your technology, you enter IP Litigation. Executives fight 'Infringement' by seeking 'Injunctions' to halt competitor sales."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Legal Strategy",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A rival tech company launches a phone that uses the exact screen technology you patented last year. What is your legal claim?",
+          "options": [
+            "Patent Infringement.",
+            "Copyright Infringement.",
+            "Treason."
+          ],
+          "correct_answer": "Patent Infringement.",
+          "explanation": "Patents protect physical inventions and functional processes. Using them without a license is infringement."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the General Counsel (Lawyer). What legal weapon is she asking for?",
+          "tts_text": "We cannot wait two years for a trial. We need the judge to issue an order tomorrow to completely halt their manufacturing.",
+          "options": [
+            "A settlement.",
+            "An Injunction.",
+            "A subpoena."
+          ],
+          "correct_answer": "An Injunction.",
+          "explanation": "An injunction is the nuclear weapon of IP law. It stops the competitor from doing business while the trial is ongoing."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do tech giants hate 'Patent Trolls' (Non-Practicing Entities)?",
+          "options": [
+            "Because they make bad products.",
+            "Because they don't actually build products; they just buy vague patents and sue massive tech companies, hoping for a quick multi-million dollar settlement.",
+            "Because they are slow."
+          ],
+          "correct_answer": "Because they don't actually build products; they just buy vague patents and sue massive tech companies, hoping for a quick multi-million dollar settlement.",
+          "explanation": "Patent trolls exploit the legal system, forcing executives to decide between paying a $5M settlement or spending $10M on lawyers to fight them."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If your company accidentally infringes on a patent, what is the standard executive solution to avoid going to court?",
+          "options": [
+            "Ignore the letters.",
+            "Negotiate a 'Licensing Agreement' where you agree to pay them a royalty fee for every unit you sell.",
+            "Change your company name."
+          ],
+          "correct_answer": "Negotiate a 'Licensing Agreement' where you agree to pay them a royalty fee for every unit you sell.",
+          "explanation": "Business is about math, not pride. Sometimes paying a license fee is much cheaper than fighting a 5-year lawsuit."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Litigation Terminology",
+      "pairs": [
+        { "concept": "Infringement", "match": "The action of breaking the terms of a law or intellectual property right" },
+        { "concept": "Injunction", "match": "A judicial order that restrains a person/company from beginning or continuing an action" },
+        { "concept": "Patent Troll", "match": "A company that obtains the rights to patents simply to profit from lawsuits" },
+        { "concept": "Licensing", "match": "Granting permission to use IP in exchange for a fee" }
+      ]
+    }
+  ]
+}

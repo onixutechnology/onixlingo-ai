@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-120",
+  "title": "Bankruptcy and Restructuring (Chapter 11)",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Strategic Death and Rebirth",
+      "parts": [
+        {
+          "visual": "Bankruptcy is not always the end of a company; sometimes it is a strategic tool to destroy bad debts and start over.\n\nThe US Bankruptcy Code:\n1. Chapter 7: Liquidation. The company is dead. Everything is sold for parts.\n2. Chapter 11: Reorganization. The company continues to operate while the court forces creditors to accept less money.",
+          "audio": "Bankruptcy is not always the end. Chapter 11 is a strategic tool used by executives to restructure massive debt while keeping the company alive."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Restructuring Playbook",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Your airline owes $2 Billion to banks, and you cannot make the payments. However, people are still buying tickets. What is the executive strategy?",
+          "options": [
+            "File for Chapter 7 Liquidation and fire everyone.",
+            "File for Chapter 11 Bankruptcy. The airline keeps flying, but the court forces the banks to restructure the debt so the company can survive.",
+            "Flee the country."
+          ],
+          "correct_answer": "File for Chapter 11 Bankruptcy. The airline keeps flying, but the court forces the banks to restructure the debt so the company can survive.",
+          "explanation": "Almost every major US airline has filed for Chapter 11 at least once. It is a financial reset button."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the restructuring consultant. Who gets wiped out?",
+          "tts_text": "Under the Chapter 11 plan, the bondholders will take a 30% haircut, but the equity shareholders will be wiped out completely to zero.",
+          "options": [
+            "The employees.",
+            "The shareholders (the people who own the stock).",
+            "The customers."
+          ],
+          "correct_answer": "The shareholders (the people who own the stock).",
+          "explanation": "In bankruptcy, debt holders (banks) get paid first. Equity holders (stock owners) are at the very bottom of the priority list and usually lose everything."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why would a company willingly file for bankruptcy if they aren't technically out of cash yet?",
+          "options": [
+            "Because they are bored.",
+            "To aggressively break expensive, unbreakable contracts (like massive real estate leases or toxic union pensions) that the court can legally void.",
+            "To avoid paying taxes."
+          ],
+          "correct_answer": "To aggressively break expensive, unbreakable contracts (like massive real estate leases or toxic union pensions) that the court can legally void.",
+          "explanation": "Retailers often use Chapter 11 specifically to legally break 20-year leases on unprofitable mall stores."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Turnaround CEO'?",
+          "options": [
+            "A CEO who spins in a circle.",
+            "A specialized, ruthless executive hired specifically to guide a failing company through Chapter 11, fire thousands of people, and save the core business.",
+            "A marketing expert."
+          ],
+          "correct_answer": "A specialized, ruthless executive hired specifically to guide a failing company through Chapter 11, fire thousands of people, and save the core business.",
+          "explanation": "Turnaround CEOs are the corporate grim reapers. They do the brutal work that the original founders refuse to do."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Bankruptcy Terminology",
+      "pairs": [
+        { "concept": "Chapter 11", "match": "A bankruptcy filing that allows a company to restructure while operating" },
+        { "concept": "Chapter 7", "match": "A bankruptcy filing where the company is completely liquidated" },
+        { "concept": "Haircut", "match": "When creditors accept less money than they are actually owed" },
+        { "concept": "Creditor", "match": "A person or company to whom money is owed" }
+      ]
+    }
+  ]
+}

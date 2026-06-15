@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-035",
+  "title": "Do Things That Don't Scale",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Y Combinator Mantra",
+      "parts": [
+        {
+          "visual": "A founder builds an app. They wait for millions of users to magically arrive via Google Ads. Nobody comes. Another founder builds an app. They physically walk into 100 coffee shops and manually install the app on people's phones. The second founder wins.\n\nThe Concept:\n1. The Trap: Founders want to build massive, automated, scalable systems from Day 1.\n2. The Reality: To get your first 100 users, you must do things manually. You must hand-recruit users, offer insane customer service, and manually hack the initial growth.",
+          "audio": "'Do things that don't scale' is Paul Graham's most famous advice. A startup is not a small version of a large corporation. To build the initial momentum, you must engage in brutal, unscalable manual labor."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Manual Grind",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Airbnb had zero users. The founders flew to New York, rented a camera, physically went to the apartments of their first few hosts, and took professional photos for them for free. Why did they do this?",
+          "options": [
+            "They liked photography.",
+            "They were 'doing things that don't scale'. Taking photos manually for 10 users cannot scale to a million users, but it was the exact manual intervention needed to make the product look premium and survive the first month.",
+            "They were bored."
+          ],
+          "correct_answer": "They were 'doing things that don't scale'. Taking photos manually for 10 users cannot scale to a million users, but it was the exact manual intervention needed to make the product look premium and survive the first month.",
+          "explanation": "You must manually push the boulder before it rolls down the hill."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO of a new software company. How are they handling customer support?",
+          "tts_text": "We only have 50 customers. Every time a customer sends a support email, it goes directly to my personal cell phone. I reply within 60 seconds, day or night. I am the customer support team.",
+          "options": [
+            "The CEO is crazy.",
+            "Insane Customer Service. This doesn't scale to 10,000 customers, but providing mind-blowing, personalized support to the first 50 users turns them into fanatical evangelists who will market the product for free.",
+            "The company is broke."
+          ],
+          "correct_answer": "Insane Customer Service. This doesn't scale to 10,000 customers, but providing mind-blowing, personalized support to the first 50 users turns them into fanatical evangelists who will market the product for free.",
+          "explanation": "Big companies cannot give 60-second support. That is your early advantage."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do engineers often hate the advice 'Do things that don't scale'?",
+          "options": [
+            "Because it is illegal.",
+            "Because engineers are trained to build elegant, automated systems. The idea of manually entering data into a spreadsheet to fake an AI feature (a 'Wizard of Oz' MVP) feels wrong to them, even if it saves the business.",
+            "Because they don't know how."
+          ],
+          "correct_answer": "Because engineers are trained to build elegant, automated systems. The idea of manually entering data into a spreadsheet to fake an AI feature (a 'Wizard of Oz' MVP) feels wrong to them, even if it saves the business.",
+          "explanation": "You must be a hustler first and an engineer second."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "When is it the right time to *stop* doing things that don't scale?",
+          "options": [
+            "After one week.",
+            "When the unscalable processes physically begin to break under the weight of customer demand (e.g., when the CEO is getting 500 support emails a day). That is when you finally build the automated systems.",
+            "Never."
+          ],
+          "correct_answer": "When the unscalable processes physically begin to break under the weight of customer demand (e.g., when the CEO is getting 500 support emails a day). That is when you finally build the automated systems.",
+          "explanation": "Do the manual work until it breaks. Then automate."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Scaling Terminology",
+      "pairs": [
+        { "concept": "Do things that don't scale", "match": "Manually pushing growth and operations in the early days before automating" },
+        { "concept": "Wizard of Oz MVP", "match": "Faking a complex backend system with manual human labor to test demand" },
+        { "concept": "Evangelist", "match": "An early customer who loves the product so much they market it to others for free" },
+        { "concept": "Hand-to-Hand Combat", "match": "Acquiring your first customers individually through direct, personal effort" }
+      ]
+    }
+  ]
+}

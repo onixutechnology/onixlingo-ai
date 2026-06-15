@@ -1,0 +1,104 @@
+{
+  "id": "pro-product-b2-15",
+  "title": "The Funnel (Acquisition to Activation)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Brutal Math of Drop-Offs",
+      "parts": [
+        {
+          "visual": "Imagine a physical funnel used for pouring oil. At the top (Acquisition), 10,000 people visit your website. In the middle (Onboarding), 2,000 people create an account. At the bottom (Activation), only 100 people actually complete their first task. The other 9,900 people leaked out of the funnel and are gone forever.\n\nThe Journey:\n1. The Funnel: A visualization of the sequential steps a user must take to get value out of your product. At every single step, a percentage of users will get bored, get confused, and leave (Drop-off).\n2. The 'Aha!' Moment (Activation): The exact second the user experiences the core value of the product for the first time. The PM's ultimate job is to drag the user through the funnel to the Aha! moment as fast as humanly possible.",
+          "audio": "Users do not owe you their attention. Every extra click, every extra form field, and every extra second of loading time is a hole in your funnel where hundreds of users will leak out and never return."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Plugging the Holes",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Aha! Moment' (Activation) in a product like Zoom?",
+          "options": [
+            "Typing in a password.",
+            "The exact second the user clicks a link and instantly sees the faces of their coworkers on a video call. It is the moment they realize 'Oh, this is magic.' Once they hit this moment, they are highly likely to become a paying customer.",
+            "Reading the terms of service."
+          ],
+          "correct_answer": "The exact second the user clicks a link and instantly sees the faces of their coworkers on a video call. It is the moment they realize 'Oh, this is magic.' Once they hit this moment, they are highly likely to become a paying customer.",
+          "explanation": "Value must be felt, not just promised."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the PM diagnosing a funnel problem. Where is the massive leak?",
+          "tts_text": "Our marketing is great. 50,000 people hit the landing page. 40,000 people click 'Sign Up'. But then, we force them to confirm their email address before they can log in. Only 10,000 people actually click the link in their email. We are losing 30,000 users in the inbox.",
+          "options": [
+            "The marketing is bad.",
+            "The Email Verification step. By adding a high-friction security step right in the middle of the onboarding funnel, the product actively blocks 30,000 interested users from reaching the Aha! moment. The PM must remove or delay this step.",
+            "The users don't like email."
+          ],
+          "correct_answer": "The Email Verification step. By adding a high-friction security step right in the middle of the onboarding funnel, the product actively blocks 30,000 interested users from reaching the Aha! moment. The PM must remove or delay this step.",
+          "explanation": "Security should not kill acquisition."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Onboarding' the most critical phase of the funnel?",
+          "options": [
+            "Because it sounds cool.",
+            "It is the bridge between Acquisition (visiting) and Activation (experiencing value). If your onboarding requires the user to read a 10-page manual to understand the interface, the funnel breaks. Onboarding must be an effortless, guided path.",
+            "Because it costs money."
+          ],
+          "correct_answer": "It is the bridge between Acquisition (visiting) and Activation (experiencing value). If your onboarding requires the user to read a 10-page manual to understand the interface, the funnel breaks. Onboarding must be an effortless, guided path.",
+          "explanation": "First impressions are permanent in software."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If your Drop-off rate from 'Download' to 'Create Account' is 80%, what should you do?",
+          "options": [
+            "Spend more on marketing.",
+            "Fix the product friction. Spending more on marketing will just pour more expensive water into a broken bucket. You must redesign the 'Create Account' screen to make it radically simpler before you spend another dollar on ads.",
+            "Change the company logo."
+          ],
+          "correct_answer": "Fix the product friction. Spending more on marketing will just pour more expensive water into a broken bucket. You must redesign the 'Create Account' screen to make it radically simpler before you spend another dollar on ads.",
+          "explanation": "Never scale a broken funnel."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of the Funnel",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the urgency of the funnel:",
+          "parts": [
+            "Get",
+            "the",
+            "user",
+            "to",
+            "the",
+            "Aha!",
+            "moment",
+            "fast."
+          ],
+          "correct_order": [
+            "Get",
+            "the",
+            "user",
+            "to",
+            "the",
+            "Aha!",
+            "moment",
+            "fast."
+          ],
+          "explanation": "Patience is a resource your users do not have."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-020",
+  "title": "The Valley of Death",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Surviving the Darkness",
+      "parts": [
+        {
+          "visual": "You raised a $1 Million Seed round. The press celebrated you. Six months later, the prototype is broken, your co-founder quit, investors are ignoring your emails, and you have 3 months of cash left. Welcome to the Valley of Death.\n\nThe Psychology:\n1. The Trough of Sorrow: The agonizing period after the initial hype fades, where the founder realizes how impossibly difficult it actually is to build a successful company.\n2. Survival: This is where 90% of startups die. The founders who survive are not necessarily the smartest; they are simply the most resilient.",
+          "audio": "Every startup goes through the Valley of Death. It is the terrifying period between the initial Seed funding and the moment the product finally achieves Product-Market Fit. It is defined by constant failure, exhaustion, and the terrifying fear of bankruptcy."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Psychological Gauntlet",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A founder is in the Valley of Death. The product has bugs, and early customers are leaving. The founder decides to spend $50,000 on a massive PR campaign to get articles in TechCrunch to 'fix the momentum'. Why is this fatal?",
+          "options": [
+            "TechCrunch is not popular.",
+            "PR cannot fix a broken product. Bringing a thousand new users to a buggy product will only destroy the brand faster and burn precious runway. They must fix the product first.",
+            "PR is too expensive."
+          ],
+          "correct_answer": "PR cannot fix a broken product. Bringing a thousand new users to a buggy product will only destroy the brand faster and burn precious runway. They must fix the product first.",
+          "explanation": "Fake momentum is the deadliest illusion in a startup."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the veteran founder. How did they survive the Valley of Death?",
+          "tts_text": "We stopped looking at the stock market. We stopped caring about our competitors' valuations. We locked the doors, ignored the press, and spoke to exactly ten highly-engaged customers every single day for eight months until we fixed the software.",
+          "options": [
+            "By taking a vacation.",
+            "Extreme Focus. Survival requires ignoring the 'Tech Theatre' (parties, press, valuations) and relentlessly executing the Build-Measure-Learn loop with real customers.",
+            "By asking for more VC money."
+          ],
+          "correct_answer": "Extreme Focus. Survival requires ignoring the 'Tech Theatre' (parties, press, valuations) and relentlessly executing the Build-Measure-Learn loop with real customers.",
+          "explanation": "When you are bleeding, stop dancing."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the psychological trap of 'The Pivot of Despair'?",
+          "options": [
+            "Crying in the office.",
+            "When a panicked founder pivots the entire company every two weeks because they are terrified. They never give any single strategy enough time to actually work, ensuring absolute failure.",
+            "Pivoting to a charity model."
+          ],
+          "correct_answer": "When a panicked founder pivots the entire company every two weeks because they are terrified. They never give any single strategy enough time to actually work, ensuring absolute failure.",
+          "explanation": "A pivot must be based on solid data, not raw panic."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the only thing that pulls a startup OUT of the Valley of Death?",
+          "options": [
+            "A good lawyer.",
+            "Product-Market Fit (PMF). The magical moment when the market starts pulling the product out of the startup faster than they can build it. Revenue skyrockets, and survival is secured.",
+            "A new logo."
+          ],
+          "correct_answer": "Product-Market Fit (PMF). The magical moment when the market starts pulling the product out of the startup faster than they can build it. Revenue skyrockets, and survival is secured.",
+          "explanation": "Before PMF, you are pushing a boulder up a hill. After PMF, you are chasing the boulder down the hill."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Survival Terminology",
+      "pairs": [
+        { "concept": "Valley of Death", "match": "The difficult period covering the time from when a startup receives initial funding to when it begins generating revenue" },
+        { "concept": "Product-Market Fit", "match": "Being in a good market with a product that can satisfy that market" },
+        { "concept": "Tech Theatre", "match": "Wasting time on press, parties, and vanity metrics instead of building the product" },
+        { "concept": "Resilience", "match": "The capacity to withstand or to recover quickly from difficulties; toughness" }
+      ]
+    }
+  ]
+}

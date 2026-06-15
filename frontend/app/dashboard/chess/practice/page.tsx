@@ -25,7 +25,7 @@ import {
   Sparkles
 } from 'lucide-react';
 
-const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:5000';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';
 const FALLBACK_FEN = '3k4/8/8/3p4/8/8/8/3R2K1 w - - 0 1';
 
 type LessonData = {
@@ -115,8 +115,23 @@ function PracticeArena() {
   }, [lessonId]);
 
   const loadPosition = useCallback((data: LessonData) => {
-    const safeFen = sanitizeFEN(data?.fen);
+    let safeFen = sanitizeFEN(data?.fen);
+    
     try {
+      if (data?.solution && data.solution !== 'FREE_PLAY' && safeFen !== 'start') {
+        const solution = data.solution.trim();
+        if (/^[a-h][1-8][a-h][1-8]$/.test(solution)) {
+          const fromSquare = solution.slice(0, 2);
+          const temp = new Chess(safeFen);
+          const piece = temp.get(fromSquare as Square);
+          if (piece && piece.color !== temp.turn()) {
+            const parts = safeFen.split(' ');
+            parts[1] = piece.color;
+            safeFen = parts.join(' ');
+          }
+        }
+      }
+
       const nextGame = new Chess();
       if (safeFen !== 'start') {
         nextGame.load(safeFen);
@@ -152,8 +167,15 @@ function PracticeArena() {
           return;
         }
 
+        let targetLessonId = lessonId;
+        if (lessonId === 'daily-puzzle') {
+          const dias = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
+          const hoy = dias[new Date().getDay()];
+          targetLessonId = `daily-puzzle-${hoy}`;
+        }
+
         const safeToken = token.startsWith('Bearer ') ? token : `Bearer ${token}`;
-        const res = await fetch(`${API_URL}/api/v1/chess/lessons/${lessonId}`, {
+        const res = await fetch(`${API_URL}/api/v1/chess/lessons/${targetLessonId}`, {
           headers: {
             Authorization: safeToken,
             'Cache-Control': 'no-cache',
@@ -235,7 +257,37 @@ function PracticeArena() {
 
   const onDrop = useCallback(
     ({ sourceSquare, targetSquare }: { sourceSquare: Square; targetSquare: Square }) => {
-      if (!lessonData || isBotThinking || status === 'correct' || status === 'gameover' || !targetSquare || gameRef.current.isGameOver()) return;
+      if (!lessonData || isBotThinking || status === 'correct' || status === 'gameover' || !targetSquare) return;
+
+      const moveUci = `${sourceSquare}${targetSquare}`;
+      const solution = lessonData.solution?.trim() || '';
+
+      // BYPASS: Si el movimiento es exactamente la solución, lo aprobamos sin importar si chess.js lo considera legal
+      // (Útil para ejercicios de posiciones atípicas o movimientos de piezas bloqueados)
+      if (solution && solution === moveUci) {
+        setStatus('correct');
+        setShowGuide(false);
+        setFeedback(lessonData.explanation || '¡Brillante! Solución encontrada.');
+        confetti({
+          particleCount: 180,
+          spread: 90,
+          colors: ['#4ade80', '#818cf8', '#facc15'],
+        });
+        void saveProgress();
+        
+        // Actualización visual manual
+        const tempGame = new Chess(fen);
+        try {
+          tempGame.move({ from: sourceSquare, to: targetSquare, promotion: 'q' });
+        } catch {
+          const piece = tempGame.get(sourceSquare);
+          tempGame.remove(sourceSquare);
+          if (piece) tempGame.put(piece, targetSquare);
+        }
+        setFen(tempGame.fen());
+        setLastMoveSquares({ from: sourceSquare, to: targetSquare });
+        return;
+      }
 
       let moveResult: Move | null = null;
       try {
@@ -264,9 +316,7 @@ function PracticeArena() {
         return;
       }
 
-      const moveUci = `${sourceSquare}${targetSquare}`;
       const moveSan = moveResult.san?.trim() || '';
-      const solution = lessonData.solution?.trim() || '';
 
       if (solution && (solution === moveUci || solution === moveSan)) {
         setStatus('correct');
@@ -468,7 +518,7 @@ function PracticeArena() {
             )}
           </div>
 
-          <h1 className="text-2xl lg:text-3xl font-black text-slate-900 mb-6 leading-tight tracking-tight border-l-4 border-[#D4AF37]/30 pl-4 py-1">
+          <h1 className="text-2xl lg:text-3xl font-black text-white mb-6 leading-tight tracking-tight border-l-4 border-[#D4AF37]/30 pl-4 py-1">
             {lessonData.title || 'Chess Practice'}
           </h1>
 
@@ -490,7 +540,7 @@ function PracticeArena() {
           <div className={`p-5 rounded-none border shadow-none flex items-start gap-4 transition-colors ${status === 'correct' ? 'bg-emerald-950/60 border-emerald-800/40 text-emerald-300' : status === 'wrong' ? 'bg-red-955/60 border-red-800/40 text-red-300' : 'bg-[#361d0f]/80 border-[#502b16] text-[#ecd3b5]'}`}>
             {status === 'correct' ? <CheckCircle2 className="shrink-0 w-6 h-6 mt-0.5" /> : status === 'wrong' ? <XCircle className="shrink-0 w-6 h-6 mt-0.5" /> : <Lightbulb className="shrink-0 w-6 h-6 mt-0.5" />}
             <div>
-              <h4 className="font-black text-xs mb-1 uppercase tracking-widest text-slate-900">
+              <h4 className="font-black text-xs mb-1 uppercase tracking-widest text-white">
                 {status === 'correct' ? '¡Brillante!' : status === 'wrong' ? 'Movimiento Incorrecto' : status === 'gameover' ? 'Partida Terminada' : 'Análisis Activo'}
               </h4>
               <p className="text-sm font-medium opacity-90 leading-relaxed">{feedback}</p>

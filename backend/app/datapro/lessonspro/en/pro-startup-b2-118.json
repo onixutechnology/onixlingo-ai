@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-118",
+  "title": "A/B Testing and Statistical Significance",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Death of Opinions",
+      "parts": [
+        {
+          "visual": "The CEO thinks the 'Buy Now' button should be Red. The Head of Design thinks it should be Blue. They argue for three hours. The engineer says, 'Let's just A/B test it.' They show Red to 50,000 users and Blue to 50,000 users. Red generates $10,000 more in sales. The argument is over.\n\nThe Data Engine:\n1. A/B Testing (Split Testing): A randomized experiment with two variants (A and B) to determine which version performs better at a specific metric (like conversion rate).\n2. The Mindset: In modern product management, executive opinions are irrelevant. The only thing that matters is what the data proves the users actually prefer.",
+          "audio": "If you have data, let's look at data. If all we have are opinions, let's go with mine. A/B testing is how a startup escapes the tyranny of the CEO's intuition and builds a scientifically optimized product."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Trusting the Math",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup runs an A/B test for 2 hours. Version A gets 10 clicks. Version B gets 12 clicks. The CEO says, 'Version B is the winner, change the whole website!' What is the error?",
+          "options": [
+            "Version A is better.",
+            "Lack of Statistical Significance. The sample size is way too small. A difference of 2 clicks could just be random luck (noise). You cannot make product decisions until the math guarantees (usually 95% confidence) that the result is real.",
+            "They should test Version C."
+          ],
+          "correct_answer": "Lack of Statistical Significance. The sample size is way too small. A difference of 2 clicks could just be random luck (noise). You cannot make product decisions until the math guarantees (usually 95% confidence) that the result is real.",
+          "explanation": "Do not let small numbers lie to you."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the data scientist complaining about a ruined A/B test. What did the marketing team do wrong?",
+          "tts_text": "We were testing the new checkout page to see if it increased sales. But halfway through the test, the marketing team launched a massive 50% off discount code on Twitter. Now the data is completely ruined.",
+          "options": [
+            "The marketing team forgot the code.",
+            "Testing Multiple Variables. An A/B test must isolate exactly ONE variable (e.g., the page design). By introducing a massive discount at the exact same time, you no longer know if people bought because of the design or because of the discount.",
+            "The marketing team used the wrong font."
+          ],
+          "correct_answer": "Testing Multiple Variables. An A/B test must isolate exactly ONE variable (e.g., the page design). By introducing a massive discount at the exact same time, you no longer know if people bought because of the design or because of the discount.",
+          "explanation": "Scientific experiments require strict isolation."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Local Maximum' trap in continuous A/B testing?",
+          "options": [
+            "A server error.",
+            "You spend years A/B testing the color of a button to get a 1% increase in sales. But you are ignoring the fact that the entire product is fundamentally boring. You optimized the wrong thing perfectly, missing the opportunity to build something truly new.",
+            "When the CEO gets angry."
+          ],
+          "correct_answer": "You spend years A/B testing the color of a button to get a 1% increase in sales. But you are ignoring the fact that the entire product is fundamentally boring. You optimized the wrong thing perfectly, missing the opportunity to build something truly new.",
+          "explanation": "A/B testing optimizes the present; it does not invent the future."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is it incredibly difficult for a very early-stage startup (with only 100 users) to run effective A/B tests?",
+          "options": [
+            "Because they don't know how to code.",
+            "Not enough traffic. To reach statistical significance on a small change, you often need tens of thousands of users. Early startups don't have the volume. They must rely on qualitative feedback (talking to users) rather than pure quantitative data.",
+            "Because A/B testing software is expensive."
+          ],
+          "correct_answer": "Not enough traffic. To reach statistical significance on a small change, you often need tens of thousands of users. Early startups don't have the volume. They must rely on qualitative feedback (talking to users) rather than pure quantitative data.",
+          "explanation": "Data requires volume."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Testing Terminology",
+      "pairs": [
+        { "concept": "A/B Test", "match": "Comparing two versions of a web page to see which performs better" },
+        { "concept": "Statistical Significance", "match": "The mathematical proof that a test result is real, not just random luck" },
+        { "concept": "Local Maximum", "match": "Optimizing a flawed design perfectly while missing a better overarching idea" },
+        { "concept": "Qualitative Feedback", "match": "Talking directly to users to understand 'why' they do things" }
+      ]
+    }
+  ]
+}

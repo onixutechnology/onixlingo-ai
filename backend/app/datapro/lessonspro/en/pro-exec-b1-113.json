@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-113",
+  "title": "The Economics of SaaS (Software as a Service)",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Subscription Empire",
+      "parts": [
+        {
+          "visual": "Why does Wall Street love SaaS (Software as a Service)? Because it replaces one-time sales with predictable, recurring revenue.\n\nThe Holy Trinity of SaaS Metrics:\n1. MRR/ARR: Monthly/Annual Recurring Revenue.\n2. Churn Rate: The percentage of customers who cancel their subscription.\n3. CAC Payback Period: How many months it takes to earn back the money you spent to acquire the customer.",
+          "audio": "SaaS business models are built on recurring revenue. Executives track MRR, the Churn Rate, and the CAC Payback Period obsessively."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "SaaS Metrics",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "You have an amazing marketing team that signs up 1,000 new users every month. However, your 'Churn Rate' is 20% a month. What is the executive analysis?",
+          "options": [
+            "The business is thriving.",
+            "The business is a 'Leaky Bucket'. You are spending millions to acquire users who hate the product and leave immediately. Fix the product before doing more marketing.",
+            "You need more marketing."
+          ],
+          "correct_answer": "The business is a 'Leaky Bucket'. You are spending millions to acquire users who hate the product and leave immediately. Fix the product before doing more marketing.",
+          "explanation": "High churn is the number one killer of SaaS companies. It means the product is failing to deliver value."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CFO. What metric are they complaining about?",
+          "tts_text": "We spend $100 to acquire a user, but they only pay us $10 a month. It takes 10 full months just to break even on them!",
+          "options": [
+            "MRR (Monthly Recurring Revenue).",
+            "CAC Payback Period.",
+            "Net Promoter Score."
+          ],
+          "correct_answer": "CAC Payback Period.",
+          "explanation": "If it takes 10 months to pay back the acquisition cost, and the customer churns in month 6, the company loses money on every single sale."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do investors value ARR (Annual Recurring Revenue) so much higher than one-time sales revenue?",
+          "options": [
+            "Because it sounds cooler.",
+            "Because recurring revenue is highly predictable. Predictability lowers risk, which drastically increases the valuation of the company.",
+            "Because it is tax-free."
+          ],
+          "correct_answer": "Because recurring revenue is highly predictable. Predictability lowers risk, which drastically increases the valuation of the company.",
+          "explanation": "A company making $10M in unpredictable one-time sales might be worth $15M. A SaaS company with $10M in ARR might be worth $100M."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Negative Churn'?",
+          "options": [
+            "A math error.",
+            "The holy grail of SaaS: When the extra money generated from existing customers upgrading their accounts is greater than the revenue lost from customers cancelling.",
+            "When no one cancels."
+          ],
+          "correct_answer": "The holy grail of SaaS: When the extra money generated from existing customers upgrading their accounts is greater than the revenue lost from customers cancelling.",
+          "explanation": "Negative churn means your company will grow revenue every year even if you never sign a single new customer."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "SaaS Terminology",
+      "pairs": [
+        { "concept": "SaaS", "match": "Software as a Service" },
+        { "concept": "ARR", "match": "Annual Recurring Revenue" },
+        { "concept": "Churn", "match": "The rate at which customers cancel their subscriptions" },
+        { "concept": "Payback Period", "match": "The time required to recover the cost of an investment" }
+      ]
+    }
+  ]
+}

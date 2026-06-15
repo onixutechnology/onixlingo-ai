@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-116",
+  "title": "The Minimum Viable Product (MVP) vs. SLC",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Evolution of 'Good Enough'",
+      "parts": [
+        {
+          "visual": "In 2010, a startup launches an 'MVP' (Minimum Viable Product). It looks terrible, crashes often, but proves the core concept. Users forgive the bugs. In 2024, a startup launches the exact same ugly MVP. Users immediately delete it and leave a 1-star review, complaining the UI is trash.\n\nThe Standard Change:\n1. The MVP Trap: Founders often use 'MVP' as an excuse to launch broken, embarrassing software. In a hyper-competitive market, consumers have zero tolerance for broken things.\n2. The SLC (Simple, Lovable, Complete): A modern alternative to the MVP. Instead of building a complex product poorly, you build a very tiny, simple product flawlessly.",
+          "audio": "If you want to build a motorcycle, an MVP is building a skateboard. It proves you can move forward. But today, the skateboard cannot have square wheels. It must be a perfectly designed, highly polished skateboard."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Defining the Scope",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A team wants to build a new email client with AI, a calendar, and a task manager. How do they build an 'SLC' (Simple, Lovable, Complete) version?",
+          "options": [
+            "Build all three features, but with lots of bugs.",
+            "Build ONLY the AI email feature. Completely ignore the calendar and the task manager for now. Ensure the AI email feature is the most beautiful, fastest, and most reliable experience on the market.",
+            "Draw a picture of the app."
+          ],
+          "correct_answer": "Build ONLY the AI email feature. Completely ignore the calendar and the task manager for now. Ensure the AI email feature is the most beautiful, fastest, and most reliable experience on the market.",
+          "explanation": "Cut scope, do not cut quality."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Product Manager explaining why their traditional MVP failed. What was the critical error?",
+          "tts_text": "We launched with 50 features, but none of them worked perfectly. Users didn't say 'Oh, this is an early prototype, I will be patient.' They just said 'This software is garbage' and went back to using our competitor.",
+          "options": [
+            "The price was too high.",
+            "The 'Viable' Misunderstanding. Founders forget that 'Viable' means the user can actually use it to solve their problem without getting frustrated. A broken feature is not viable; it is just broken.",
+            "The logo was ugly."
+          ],
+          "correct_answer": "The 'Viable' Misunderstanding. Founders forget that 'Viable' means the user can actually use it to solve their problem without getting frustrated. A broken feature is not viable; it is just broken.",
+          "explanation": "First impressions in software are almost impossible to reverse."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Lovable' included in the SLC framework?",
+          "options": [
+            "Because tech needs more romance.",
+            "Because functional is no longer enough. There are a hundred task managers that 'function'. To steal a user from an existing habit, your new software must evoke an emotional response—it must be a joy to use.",
+            "Because investors like the word."
+          ],
+          "correct_answer": "Because functional is no longer enough. There are a hundred task managers that 'function'. To steal a user from an existing habit, your new software must evoke an emotional response—it must be a joy to use.",
+          "explanation": "UX (User Experience) is a competitive moat."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If you are embarrassed by your first release, what does Reid Hoffman (founder of LinkedIn) say you should do?",
+          "options": [
+            "Hide your face.",
+            "Launch anyway. 'If you are not embarrassed by the first version of your product, you've launched too late.' The goal is to get user feedback as fast as possible, but you must balance this with the modern 'SLC' quality standards.",
+            "Delete the code."
+          ],
+          "correct_answer": "Launch anyway. 'If you are not embarrassed by the first version of your product, you've launched too late.' The goal is to get user feedback as fast as possible, but you must balance this with the modern 'SLC' quality standards.",
+          "explanation": "The tension between launching fast and launching perfectly is the core struggle of Product Management."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Product Terminology",
+      "pairs": [
+        { "concept": "MVP", "match": "Minimum Viable Product; the absolute bare minimum needed to test a hypothesis" },
+        { "concept": "SLC", "match": "Simple, Lovable, Complete; a highly polished product with a deliberately tiny scope" },
+        { "concept": "Scope Creep", "match": "The dangerous tendency to keep adding new features before launching" },
+        { "concept": "Time to Market", "match": "The speed at which a startup can get a product into the hands of real users" }
+      ]
+    }
+  ]
+}

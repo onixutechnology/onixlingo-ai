@@ -1,0 +1,104 @@
+{
+  "id": "pro-product-b2-4",
+  "title": "Writing a PRD (Product Requirements Document)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Blueprint of the Software",
+      "parts": [
+        {
+          "visual": "A PM tells an engineer: 'Make a login page.' The engineer builds a simple email/password box. Two weeks later, the PM yells: 'Where is the Google Login? Where is the 'Forgot Password' flow? Where is the error state for wrong passwords?' The engineer replies: 'You didn't write it down.'\n\nThe PRD:\n1. The Document: The Product Requirements Document (PRD) is the master blueprint. It translates the chaotic vision in the PM's head into exact, logical instructions for the engineering and design teams.\n2. The Anatomy: A good PRD defines the 'Problem', the 'Target Audience', the 'Success Metrics', the exact 'User Stories', and the 'Out of Scope' items (what we are actively choosing NOT to build).",
+          "audio": "Engineers are not mind readers. If it is not explicitly written in the PRD, it does not exist. A lazy PM writes a one-paragraph request. A professional PM writes a comprehensive document that anticipates every edge case, error state, and user click."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Architecture of Clarity",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'User Story' in a PRD?",
+          "options": [
+            "A fairy tale about the user.",
+            "A standard format for defining features from the user's perspective. Example: 'As a [User Type], I want to [Action] so that I can [Benefit].' This forces the engineer to understand WHY the feature is being built, not just WHAT to code.",
+            "A review left on the App Store."
+          ],
+          "correct_answer": "A standard format for defining features from the user's perspective. Example: 'As a [User Type], I want to [Action] so that I can [Benefit].' This forces the engineer to understand WHY the feature is being built, not just WHAT to code.",
+          "explanation": "Focus on the human outcome, not the technical input."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Lead Engineer complain about a bad PRD. What critical element did the PM forget?",
+          "tts_text": "The PM designed the perfect 'Happy Path' where the user enters the correct credit card and buys the item. But they forgot to define what happens if the bank rejects the card, or the wifi drops. I spent 3 days guessing what the error messages should say.",
+          "options": [
+            "They forgot the happy path.",
+            "Edge Cases and Error States. Bad PMs only design for when everything goes perfectly. Great PMs spend 80% of the PRD defining exactly what happens when the user makes a mistake, the server crashes, or the data is missing.",
+            "They forgot the colors."
+          ],
+          "correct_answer": "Edge Cases and Error States. Bad PMs only design for when everything goes perfectly. Great PMs spend 80% of the PRD defining exactly what happens when the user makes a mistake, the server crashes, or the data is missing.",
+          "explanation": "Software lives in the edge cases."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is the 'Out of Scope' section of a PRD incredibly important?",
+          "options": [
+            "To use less paper.",
+            "To prevent Feature Creep. By explicitly listing things the team will NOT build in this version (e.g., 'We will NOT build Apple Pay integration in V1'), the PM defends the engineers from sudden, distracting requests from the sales team.",
+            "To hide secrets."
+          ],
+          "correct_answer": "To prevent Feature Creep. By explicitly listing things the team will NOT build in this version (e.g., 'We will NOT build Apple Pay integration in V1'), the PM defends the engineers from sudden, distracting requests from the sales team.",
+          "explanation": "A fence around the project protects the timeline."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Success Metric' in a PRD?",
+          "options": [
+            "A trophy.",
+            "The exact mathematical number that proves the feature worked. (e.g., 'Success is reducing shopping cart abandonment by 15%'). Without a success metric, a team can launch a useless feature, celebrate, and have no idea if they actually helped the business.",
+            "The number of lines of code."
+          ],
+          "correct_answer": "The exact mathematical number that proves the feature worked. (e.g., 'Success is reducing shopping cart abandonment by 15%'). Without a success metric, a team can launch a useless feature, celebrate, and have no idea if they actually helped the business.",
+          "explanation": "Launch is not success. Impact is success."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Requirements",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to create a standard User Story:",
+          "parts": [
+            "As",
+            "a",
+            "user,",
+            "I",
+            "want",
+            "to",
+            "login",
+            "quickly."
+          ],
+          "correct_order": [
+            "As",
+            "a",
+            "user,",
+            "I",
+            "want",
+            "to",
+            "login",
+            "quickly."
+          ],
+          "explanation": "The core building block of product development."
+        }
+      ]
+    }
+  ]
+}

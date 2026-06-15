@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-18",
+  "title": "Running Efficient Meetings",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Meeting Architect",
+      "parts": [
+        {
+          "visual": "Poorly run meetings cost companies millions in lost productivity. Executives must be architects of efficiency.\n\nRules for Meetings:\n1. No agenda, no meeting.\n2. Only invite essential decision-makers or contributors.\n3. Park off-topic discussions in a 'parking lot'.",
+          "audio": "Poorly run meetings cost millions in lost productivity. Always have an agenda, invite only essential people, and park off-topic discussions."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Meeting Management",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Someone brings up an interesting but unrelated issue during your project status meeting. How do you handle it?",
+          "options": [
+            "Spend the rest of the meeting discussing it.",
+            "Say: 'That's a great point. Let's put it in the parking lot and discuss it offline.'",
+            "Tell them to stop talking."
+          ],
+          "correct_answer": "Say: 'That's a great point. Let's put it in the parking lot and discuss it offline.'",
+          "explanation": "The 'parking lot' technique validates the person's contribution while fiercely protecting the meeting's agenda."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the phrase. What is its purpose in a meeting context?",
+          "tts_text": "Before we wrap up, I'd like to summarize the action items and assign deadlines.",
+          "options": [
+            "Ending the meeting without a conclusion.",
+            "Ensuring accountability and clear next steps.",
+            "Wasting time."
+          ],
+          "correct_answer": "Ensuring accountability and clear next steps.",
+          "explanation": "A meeting without recorded action items and deadlines is just a conversation."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does it mean to take something 'offline'?",
+          "options": [
+            "To disconnect from the internet.",
+            "To discuss a topic outside of the current meeting, usually one-on-one.",
+            "To turn off your computer."
+          ],
+          "correct_answer": "To discuss a topic outside of the current meeting, usually one-on-one.",
+          "explanation": "This is a common corporate idiom used to prevent meetings from getting derailed by niche topics."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is it important to only invite 'essential' people to a meeting?",
+          "options": [
+            "To make others feel excluded.",
+            "To respect people's time and keep decision-making agile.",
+            "To save money on snacks."
+          ],
+          "correct_answer": "To respect people's time and keep decision-making agile.",
+          "explanation": "Every person in a meeting has an hourly cost to the company. Inviting 'spectators' is a waste of corporate resources."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Meeting Vocabulary",
+      "pairs": [
+        { "concept": "Agenda", "match": "List of items to discuss" },
+        { "concept": "Parking lot", "match": "Place to record off-topic ideas" },
+        { "concept": "Offline", "match": "Discussion outside the meeting" },
+        { "concept": "Action item", "match": "Task assigned for completion" }
+      ]
+    }
+  ]
+}

@@ -98,7 +98,27 @@ def get_engine_move(board: chess.Board, difficulty: str):
             board_value = minimax(board, 2, -float('inf'), float('inf'), board.turn == chess.WHITE)
             board.pop()
             
-            if board.turn == chess.BLACK: # El motor suele ser negras en tu frontend
+            if board.turn == chess.BLACK:
+                if board_value < best_value:
+                    best_value = board_value
+                    best_move = move
+            else:
+                if board_value > best_value:
+                    best_value = board_value
+                    best_move = move
+        return best_move or random.choice(legal_moves)
+        
+    elif difficulty == "titanium":
+        # Minimax con profundidad 4 (ELO 5000 simulado, muy exigente en cálculo)
+        best_move = None
+        best_value = float('inf') if board.turn == chess.BLACK else -float('inf')
+        
+        for move in legal_moves:
+            board.push(move)
+            board_value = minimax(board, 3, -float('inf'), float('inf'), board.turn == chess.WHITE)
+            board.pop()
+            
+            if board.turn == chess.BLACK:
                 if board_value < best_value:
                     best_value = board_value
                     best_move = move
@@ -144,13 +164,24 @@ def engine_move(
             
             # 🔥 SI EL USUARIO GANÓ (Result 1-0), OTORGAR PUNTOS SEGÚN DIFICULTAD
             if game_over and result == "1-0":
-                points = 10 if request.difficulty == "principiante" else 30 if request.difficulty == "manager" else 100
+                points = 10 if request.difficulty == "principiante" else 30 if request.difficulty == "manager" else 100 if request.difficulty == "ceo" else 500
                 grant_eloquence_points(db, current_user.id, points)
 
             return ChessMoveResponse(fen=board.fen(), move_uci=move.uci(), game_over=game_over, result=result)
         
         return ChessMoveResponse(fen=board.fen(), game_over=True, result=board.result())
     except Exception as e: raise HTTPException(status_code=400, detail=str(e))
+
+@router.get("/ai-opening")
+def get_ai_opening(current_user = Depends(get_current_active_user)):
+    import json
+    import os
+    file_path = "app/data/lessons/chess/ai_openings.json"
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
+            openings = json.load(f)
+            return random.choice(openings)
+    return {'name': 'Estándar', 'fen': 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'}
 
 
 from app.db.models import MatchmakingQueue, ChessMatch, User, ChessProgress, UserAchievement
@@ -416,8 +447,21 @@ async def get_chess_lesson(
     Retorna la data de una lección de ajedrez (FEN, solución) y genera la instrucción/explicación dinámicamente con IA.
     """
     try:
-        # 1. Obtener la data estática segura
-        data = get_lesson_data(lesson_id)
+        import os
+        import json
+        
+        # 1. Obtener la data (de JSON si es daily-puzzle, o del catálogo)
+        if lesson_id.startswith("daily-puzzle-"):
+            day_str = lesson_id.replace("daily-puzzle-", "")
+            file_path = f"app/data/lessons/chess/{day_str}.json"
+            if os.path.exists(file_path):
+                with open(file_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+            else:
+                data = {"fen": "3k4/8/8/3p4/8/8/8/3R2K1 w - - 0 1", "solution": "FREE_PLAY"}
+        else:
+            data = get_lesson_data(lesson_id)
+            
         fen = data.get("fen", "start")
         solution = data.get("solution", "")
         

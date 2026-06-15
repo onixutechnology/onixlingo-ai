@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-169",
+  "title": "Intellectual Property (Patents vs. Trade Secrets)",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Protecting the Formula",
+      "parts": [
+        {
+          "visual": "Your engineers just invented a revolutionary new chemical formula. As CEO, you must protect it. You have two choices, and they are mutually exclusive.\n\nThe Two Paths:\n1. The Patent: You register it with the government. The government gives you a 20-year legal monopoly. BUT, you must publish the exact formula publicly for the entire world to see.\n2. The Trade Secret: You tell no one. You keep the formula in a safe. It lasts forever, BUT if a competitor legally reverse-engineers it, you have zero legal protection.",
+          "audio": "When protecting Intellectual Property, executives must choose between a Patent, which grants a temporary legal monopoly in exchange for public disclosure, or a Trade Secret, which lasts forever but offers no protection against reverse engineering."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The IP Dilemma",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "The formula for Coca-Cola has never been patented. Why?",
+          "options": [
+            "Because they forgot to file the paperwork.",
+            "Because a patent expires after 20 years. If Coca-Cola patented the formula in 1886, it would be public property by 1906. Instead, they kept it as a Trade Secret forever.",
+            "Because patents are expensive."
+          ],
+          "correct_answer": "Because a patent expires after 20 years. If Coca-Cola patented the formula in 1886, it would be public property by 1906. Instead, they kept it as a Trade Secret forever.",
+          "explanation": "If a product is very difficult to reverse engineer (like a complex chemical syrup), a Trade Secret is often far more valuable than a Patent."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the hardware engineer. Why is he demanding they file a patent?",
+          "tts_text": "We cannot keep this new smartphone hinge a trade secret. The moment we sell it, our competitors will buy one, take it apart, and copy the mechanical design in three days.",
+          "options": [
+            "He likes legal documents.",
+            "Because the product is easily 'Reverse-Engineered'. Once it is public, secrecy is impossible. Therefore, legal patent protection is the only defense.",
+            "He wants to be famous."
+          ],
+          "correct_answer": "Because the product is easily 'Reverse-Engineered'. Once it is public, secrecy is impossible. Therefore, legal patent protection is the only defense.",
+          "explanation": "Mechanical devices and software interfaces cannot be hidden. They must be patented."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Patent Troll' (Non-Practicing Entity)?",
+          "options": [
+            "A mythological creature.",
+            "A shell company that buys broad, vague patents, doesn't actually manufacture any products, and simply sues massive tech companies for billions of dollars claiming patent infringement.",
+            "A patent lawyer."
+          ],
+          "correct_answer": "A shell company that buys broad, vague patents, doesn't actually manufacture any products, and simply sues massive tech companies for billions of dollars claiming patent infringement.",
+          "explanation": "Patent trolls are a massive drain on the global economy, using the legal system as a weapon of extortion."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If you hold a US Patent, but a factory in China copies your design and sells it entirely within China, what happens?",
+          "options": [
+            "The US military steps in.",
+            "Nothing. Patents are strictly territorial. A US patent offers zero legal protection in China unless you also successfully filed for a patent under Chinese law.",
+            "You get an automatic refund."
+          ],
+          "correct_answer": "Nothing. Patents are strictly territorial. A US patent offers zero legal protection in China unless you also successfully filed for a patent under Chinese law.",
+          "explanation": "Global Intellectual Property strategy requires filing and fighting in dozens of jurisdictions simultaneously."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "IP Law Terminology",
+      "pairs": [
+        { "concept": "Patent", "match": "A government authority conferring a right or title for a set period, especially the sole right to exclude others from making, using, or selling an invention" },
+        { "concept": "Trade Secret", "match": "A type of intellectual property that comprise formulas, practices, processes, designs, instruments, patterns, or compilations of information that have inherent economic value because they are not generally known" },
+        { "concept": "Reverse Engineering", "match": "The reproduction of another manufacturer's product following detailed examination of its construction or composition" },
+        { "concept": "Patent Troll", "match": "A firm that uses patent infringement claims to win court judgments for profit, without intending to manufacture the patented product" }
+      ]
+    }
+  ]
+}

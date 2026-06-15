@@ -1,0 +1,106 @@
+{
+  "id": "pro-startup-b2-070",
+  "title": "Closing the Deal (The Contract)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Final Boss",
+      "parts": [
+        {
+          "visual": "You passed the demo. You passed the POC. The client said 'Yes'. You pop the champagne. Two months later, you still haven't been paid. The contract is trapped in the basement of the legal department, bleeding out from red ink.\n\nThe Gauntlet:\n1. Procurement & Legal: The final, terrifying hurdle of B2B sales. Their entire job is to minimize risk for the corporation and maximize liability for your startup.\n2. The MSA (Master Services Agreement): The massive, 50-page legal contract that governs the entire relationship. If you sign a bad MSA, a single bug in your software could result in your startup being sued for millions.",
+          "audio": "A verbal 'Yes' from a CEO means absolutely nothing. In enterprise sales, a deal is not closed until the legal contract is signed by both parties and the cash has cleared the bank. Everything else is just a conversation."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Surviving Legal",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A corporation's legal team sends back the startup's contract. They have added an 'Unlimited Indemnification' clause. What does this mean, and what should the startup do?",
+          "options": [
+            "Sign it quickly.",
+            "It means if the startup's software causes a problem, the corporation can sue the startup for an infinite amount of money. The startup must violently reject this and insist on a 'Liability Cap' (e.g., capped at the value of the contract).",
+            "It means the startup gets infinite money."
+          ],
+          "correct_answer": "It means if the startup's software causes a problem, the corporation can sue the startup for an infinite amount of money. The startup must violently reject this and insist on a 'Liability Cap' (e.g., capped at the value of the contract).",
+          "explanation": "Unlimited liability is a death sentence for a startup."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the salesperson fighting with Procurement. What are they negotiating?",
+          "tts_text": "We agreed to $100,000. Now your procurement team is telling me standard payment terms are 'Net-90'. My startup cannot wait 90 days to get paid after we deliver the software. We need 'Net-30' or we walk away.",
+          "options": [
+            "The color of the software.",
+            "Payment Terms. Massive corporations love to hold their cash, forcing small startups to act like free banks for 90 days. The salesperson is fighting to get the cash in the bank in 30 days to survive.",
+            "The lunch menu."
+          ],
+          "correct_answer": "Payment Terms. Massive corporations love to hold their cash, forcing small startups to act like free banks for 90 days. The salesperson is fighting to get the cash in the bank in 30 days to survive.",
+          "explanation": "Net-90 has bankrupted many successful startups."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is an 'SLA' (Service Level Agreement)?",
+          "options": [
+            "A secret law agency.",
+            "A legally binding promise in the contract regarding the software's performance. For example, promising '99.9% Uptime'. If the servers crash and violate the SLA, the startup must pay financial penalties back to the client.",
+            "A type of European currency."
+          ],
+          "correct_answer": "A legally binding promise in the contract regarding the software's performance. For example, promising '99.9% Uptime'. If the servers crash and violate the SLA, the startup must pay financial penalties back to the client.",
+          "explanation": "Do not promise five nines (99.999%) if your engineering team is two guys in a garage."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of a 'Termination for Convenience' clause for a SaaS startup?",
+          "options": [
+            "There is no danger.",
+            "It allows the massive corporation to cancel the 3-year contract at any moment, for any reason, with 30 days notice. It completely destroys the startup's 'Predictable Revenue' model that VCs value so highly.",
+            "It means the software stops working."
+          ],
+          "correct_answer": "It allows the massive corporation to cancel the 3-year contract at any moment, for any reason, with 30 days notice. It completely destroys the startup's 'Predictable Revenue' model that VCs value so highly.",
+          "explanation": "A 3-year contract with a 30-day termination clause is just a 30-day contract."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Closing",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the ultimate rule of sales:",
+          "parts": [
+            "The",
+            "deal",
+            "is",
+            "not",
+            "closed",
+            "until",
+            "the",
+            "cash",
+            "clears."
+          ],
+          "correct_order": [
+            "The",
+            "deal",
+            "is",
+            "not",
+            "closed",
+            "until",
+            "the",
+            "cash",
+            "clears."
+          ],
+          "explanation": "Everything else is just a hallucination."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-021",
+  "title": "Pre-Money vs. Post-Money Valuation",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Math of Illusion",
+      "parts": [
+        {
+          "visual": "A founder says: 'I am raising $2 Million on an $8 Million valuation.' The VC asks: 'Is that Pre-Money or Post-Money?' The founder freezes. If they answer incorrectly, they accidentally give away an extra 5% of their entire company.\n\nThe Definitions:\n1. Pre-Money Valuation: How much the company is worth the second *before* the VC puts the money in the bank.\n2. Post-Money Valuation: The Pre-Money Valuation + the Investment Amount. (e.g., $8M Pre-money + $2M Investment = $10M Post-money).",
+          "audio": "Understanding the difference between Pre-Money and Post-Money valuation is not just an academic exercise. It dictates exactly how much of your company you are giving away, and it is the most common mathematical trap for amateur founders."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Calculating the Dilution",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A VC invests $2 Million at an $8 Million PRE-MONEY valuation. What is the POST-MONEY valuation, and what percentage of the company does the VC now own?",
+          "options": [
+            "Post-Money is $8M. The VC owns 25%.",
+            "Post-Money is $10M ($8M + $2M). The VC owns 20% ($2M / $10M).",
+            "Post-Money is $10M. The VC owns 25%."
+          ],
+          "correct_answer": "Post-Money is $10M ($8M + $2M). The VC owns 20% ($2M / $10M).",
+          "explanation": "To calculate the VC's ownership percentage, you always divide the Investment Amount by the POST-MONEY valuation."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC's offer. How are they trying to trick the founder into giving up more equity?",
+          "tts_text": "We love the company. We will give you the $2 Million. And we agree with your $8 Million valuation! But to be clear, that is an $8 Million POST-MONEY valuation.",
+          "options": [
+            "The VC is being generous.",
+            "The VC is changing the math. An $8M POST-MONEY valuation means the PRE-MONEY valuation is actually only $6M ($8M - $2M). The VC will now own 25% of the company instead of 20%.",
+            "The VC is bad at math."
+          ],
+          "correct_answer": "The VC is changing the math. An $8M POST-MONEY valuation means the PRE-MONEY valuation is actually only $6M ($8M - $2M). The VC will now own 25% of the company instead of 20%.",
+          "explanation": "If a founder doesn't clarify 'Pre' or 'Post', the VC will always assume the one that gives them more ownership."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Valuation' essentially a made-up number in the Seed Stage (when the startup has no revenue)?",
+          "options": [
+            "Because math doesn't exist.",
+            "Because there are no financial cash flows to measure. Seed valuation is entirely driven by supply and demand, founder charisma, and the VC's FOMO (Fear Of Missing Out).",
+            "Because the government sets the valuation."
+          ],
+          "correct_answer": "Because there are no financial cash flows to measure. Seed valuation is entirely driven by supply and demand, founder charisma, and the VC's FOMO (Fear Of Missing Out).",
+          "explanation": "At the early stage, your company is worth exactly what someone else is willing to pay for it. Nothing more."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of raising money at a valuation that is 'too high' (e.g., a $100M valuation with zero revenue)?",
+          "options": [
+            "It makes the founders too rich.",
+            "The 'Valuation Trap'. In the next funding round, you must justify that massive valuation with actual revenue. If you fail, you will suffer a 'Down Round', which destroys the company's morale and equity structure.",
+            "It is against SEC rules."
+          ],
+          "correct_answer": "The 'Valuation Trap'. In the next funding round, you must justify that massive valuation with actual revenue. If you fail, you will suffer a 'Down Round', which destroys the company's morale and equity structure.",
+          "explanation": "A high valuation feels like a victory, but it is actually a massive burden of expectations."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Valuation Terminology",
+      "pairs": [
+        { "concept": "Pre-Money Valuation", "match": "The value of a company before it receives outside financing" },
+        { "concept": "Post-Money Valuation", "match": "The value of a company immediately after receiving outside financing" },
+        { "concept": "Seed Stage", "match": "The earliest stage of venture funding, often before the company has meaningful revenue" },
+        { "concept": "FOMO", "match": "Fear Of Missing Out (The psychological driver that makes VCs invest quickly)" }
+      ]
+    }
+  ]
+}

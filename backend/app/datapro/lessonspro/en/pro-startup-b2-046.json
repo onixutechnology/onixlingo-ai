@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-046",
+  "title": "Technical Debt",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Price of Speed",
+      "parts": [
+        {
+          "visual": "A startup has two months to launch their product before they run out of money. The engineers write messy, unscalable code just to get the app working. It works. They get funding. Two years later, the app crashes every day because the code is a disaster.\n\nThe Concept:\n1. Technical Debt: The implied cost of additional rework caused by choosing an easy, fast solution now instead of using a better approach that would take longer.\n2. The Trade-Off: Taking on technical debt in the early days is often necessary to survive. But just like financial debt, if you don't pay it back (by refactoring the code), the interest payments will eventually bankrupt the company.",
+          "audio": "Technical debt is the silent killer of scaling startups. You borrow time from the future to survive the present. But eventually, the bill comes due, and your entire engineering team will be paralyzed just trying to keep the servers from melting."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Managing the Debt",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup is in the 'Valley of Death' with 3 months of cash left. They need to release a new feature to close a massive client. The CTO says: 'To build it correctly, it will take 4 months. To build it poorly, it will take 1 month.' What should the CEO do?",
+          "options": [
+            "Build it correctly and go bankrupt.",
+            "Take on the Technical Debt. Build it poorly in 1 month, close the client, secure the funding, and promise to fix the code later. Survival is more important than elegant code.",
+            "Fire the CTO."
+          ],
+          "correct_answer": "Take on the Technical Debt. Build it poorly in 1 month, close the client, secure the funding, and promise to fix the code later. Survival is more important than elegant code.",
+          "explanation": "Perfect code for a dead company is useless."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Lead Engineer complaining. What is the consequence of not paying down technical debt?",
+          "tts_text": "We can't launch any new features! Every time we try to add a simple button, three other parts of the app break. The entire codebase is held together by duct tape. We spend 90% of our time just fixing bugs.",
+          "options": [
+            "The engineers are lazy.",
+            "Velocity Death. The 'interest' on the technical debt has become so high that the engineering team is completely paralyzed. Innovation stops entirely because the system is too fragile to modify.",
+            "The computers are broken."
+          ],
+          "correct_answer": "Velocity Death. The 'interest' on the technical debt has become so high that the engineering team is completely paralyzed. Innovation stops entirely because the system is too fragile to modify.",
+          "explanation": "This is why startups get disrupted by newer, faster startups."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How should a scaling startup 'pay off' its technical debt?",
+          "options": [
+            "By taking out a bank loan.",
+            "By allocating a strict percentage of engineering time (e.g., 20% of every week) exclusively to 'Refactoring'—rewriting the old, messy code into a stable, scalable architecture.",
+            "By deleting the app."
+          ],
+          "correct_answer": "By allocating a strict percentage of engineering time (e.g., 20% of every week) exclusively to 'Refactoring'—rewriting the old, messy code into a stable, scalable architecture.",
+          "explanation": "You must balance building the future with cleaning up the past."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is there an eternal war between the Sales Team and the Engineering Team regarding Technical Debt?",
+          "options": [
+            "They don't like each other.",
+            "The Sales Team wants shiny new features *today* to close deals (creating debt). The Engineering Team wants time to fix the invisible infrastructure (paying off debt). The CEO must balance this tension.",
+            "The Sales Team writes bad code."
+          ],
+          "correct_answer": "The Sales Team wants shiny new features *today* to close deals (creating debt). The Engineering Team wants time to fix the invisible infrastructure (paying off debt). The CEO must balance this tension.",
+          "explanation": "A CEO who only listens to Sales will eventually face a catastrophic system failure."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Engineering Terminology",
+      "pairs": [
+        { "concept": "Technical Debt", "match": "The cost of future rework caused by choosing a fast, messy solution now" },
+        { "concept": "Refactoring", "match": "Restructuring existing computer code without changing its external behavior" },
+        { "concept": "Velocity", "match": "The speed at which an engineering team can safely ship new features" },
+        { "concept": "Scalable Architecture", "match": "A system designed to handle massive growth without breaking" }
+      ]
+    }
+  ]
+}

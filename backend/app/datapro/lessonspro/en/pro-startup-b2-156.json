@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-156",
+  "title": "Forming the Board of Directors",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The True Bosses",
+      "parts": [
+        {
+          "visual": "A 24-year-old CEO walks into a room. Sitting at the table are three 50-year-old billionaires who invested in the company. The CEO is technically the boss of the company, but these three billionaires are the bosses of the CEO. They are the Board of Directors, and they have the legal power to sell the company or fire the CEO today.\n\nThe Corporate Hierarchy:\n1. The Board of Directors: The highest governing authority in a corporation. They do not run the daily operations, but they hire (and fire) the CEO, approve massive budgets, and decide when to sell the company.\n2. The Composition: An early-stage board usually has 3 seats: Two Founders and One Lead VC. As the company raises more money, the board expands to 5 or 7 seats, often diluting the founders' voting control.",
+          "audio": "When you are a solo founder, you answer only to yourself. The moment you take venture capital and form a Board of Directors, you are an employee. The Board is your boss, and you must manage them as carefully as you manage your own team."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Structuring the Power",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup is raising a Series A. The VC demands a board seat. If there are two founders, what is the resulting board structure?",
+          "options": [
+            "A 4-person board.",
+            "A 3-person board (2 Founders, 1 VC). This is the standard Series A structure. It allows the VC to have massive legal insight and influence, but the two founders still control the majority vote (2 vs 1) to protect their vision.",
+            "The VC becomes the CEO."
+          ],
+          "correct_answer": "A 3-person board (2 Founders, 1 VC). This is the standard Series A structure. It allows the VC to have massive legal insight and influence, but the two founders still control the majority vote (2 vs 1) to protect their vision.",
+          "explanation": "At the Seed and Series A stages, founders should try to maintain board control."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the lawyer explain 'Fiduciary Duty'. Who does the Board of Directors legally serve?",
+          "tts_text": "The board members do not legally work for the CEO. They do not work for the employees. A board member has a strict fiduciary duty to the 'Shareholders'. Their only legal obligation is to maximize the financial value of the company's stock.",
+          "options": [
+            "They serve the government.",
+            "The Shareholders. If a CEO wants to launch a highly risky, unprofitable project to 'save the world', the Board will legally block it, because their legal duty is to protect the financial investment of the people who bought stock.",
+            "They serve the CEO."
+          ],
+          "correct_answer": "The Shareholders. If a CEO wants to launch a highly risky, unprofitable project to 'save the world', the Board will legally block it, because their legal duty is to protect the financial investment of the people who bought stock.",
+          "explanation": "The Board protects the money, not the mission."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of having an 'Even-Numbered' Board of Directors (e.g., 4 people)?",
+          "options": [
+            "It looks ugly on paper.",
+            "Deadlock. If a massive decision arises—like whether to sell the company to Google—and the board is split 2 vs 2, the company is instantly legally paralyzed. Boards are almost always structured with odd numbers (3, 5, 7) to guarantee a tie-breaking vote.",
+            "They can't fit in the boardroom."
+          ],
+          "correct_answer": "Deadlock. If a massive decision arises—like whether to sell the company to Google—and the board is split 2 vs 2, the company is instantly legally paralyzed. Boards are almost always structured with odd numbers (3, 5, 7) to guarantee a tie-breaking vote.",
+          "explanation": "Corporate governance requires mathematical certainty."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Board Observer'?",
+          "options": [
+            "A security camera in the room.",
+            "An investor who is legally allowed to attend every board meeting, listen to all the secrets, and offer advice, but has absolutely ZERO voting power. It is a great compromise for smaller investors who want insight but don't deserve a full seat.",
+            "A journalist."
+          ],
+          "correct_answer": "An investor who is legally allowed to attend every board meeting, listen to all the secrets, and offer advice, but has absolutely ZERO voting power. It is a great compromise for smaller investors who want insight but don't deserve a full seat.",
+          "explanation": "They have a voice, but no vote."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Governance Terminology",
+      "pairs": [
+        { "concept": "Board of Directors", "match": "The ultimate governing body that hires and fires the CEO" },
+        { "concept": "Fiduciary Duty", "match": "The legal obligation to maximize financial returns for shareholders" },
+        { "concept": "Board Observer", "match": "A person allowed in the boardroom with a voice, but no voting power" },
+        { "concept": "Deadlock", "match": "A catastrophic tie vote caused by having an even number of board seats" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-106",
+  "title": "Executive Compensation Models",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Beyond the Base Salary",
+      "parts": [
+        {
+          "visual": "At the executive level, your base salary is only a fraction of your Total Target Cash. True wealth is built through equity.\n\nThe Compensation Stack:\n1. Base Salary: The guaranteed monthly cash.\n2. Performance Bonus: Cash tied to company OKRs.\n3. Equity (RSUs or Options): Stock ownership that vests over time, designed to lock you in ('The Golden Handcuffs').",
+          "audio": "At the executive level, true wealth is built through equity. You must negotiate your compensation stack, including your base salary, performance bonuses, and Restricted Stock Units."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "RSUs vs. Stock Options",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is a Restricted Stock Unit (RSU)?",
+          "options": [
+            "A coupon for the company cafeteria.",
+            "An actual share of the company stock that is given to you, but you do not 'own' it until you complete a vesting period (usually 1 to 4 years).",
+            "A loan that you must pay back."
+          ],
+          "correct_answer": "An actual share of the company stock that is given to you, but you do not 'own' it until you complete a vesting period (usually 1 to 4 years).",
+          "explanation": "RSUs always have value as long as the company's stock is worth more than zero. They are safer than Stock Options."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the recruiter. What negotiation lever is being pulled?",
+          "tts_text": "We cannot match your current base salary, but we can offer you a massive sign-on bonus and double the equity package.",
+          "options": [
+            "Trading guaranteed cash for high-upside equity.",
+            "Offering an illegal bribe.",
+            "Reducing total compensation."
+          ],
+          "correct_answer": "Trading guaranteed cash for high-upside equity.",
+          "explanation": "Startups are cash-poor but equity-rich. They use stock to attract executives they otherwise could not afford."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How are 'Stock Options' different from RSUs?",
+          "options": [
+            "They are the exact same thing.",
+            "An option is the 'right to buy' a share at a fixed price. If the stock price falls below that fixed price, your options are completely worthless ('underwater').",
+            "Options are cash payments."
+          ],
+          "correct_answer": "An option is the 'right to buy' a share at a fixed price. If the stock price falls below that fixed price, your options are completely worthless ('underwater').",
+          "explanation": "Options are a gamble on the company's growth. If the company stagnates, the executive gets nothing."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do companies use a 4-year 'Vesting Schedule' with a '1-Year Cliff'?",
+          "options": [
+            "Because they hate math.",
+            "To guarantee loyalty. If you quit or get fired before the 1-year mark (the cliff), you get zero stock. It forces you to stay.",
+            "Because it is required by the UN."
+          ],
+          "correct_answer": "To guarantee loyalty. If you quit or get fired before the 1-year mark (the cliff), you get zero stock. It forces you to stay.",
+          "explanation": "This is the architecture of the 'Golden Handcuffs'. You are paid to stay, not just to work."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Compensation Terminology",
+      "pairs": [
+        { "concept": "RSU", "match": "Restricted Stock Unit (Actual shares granted over time)" },
+        { "concept": "Stock Option", "match": "The right to purchase shares at a fixed price" },
+        { "concept": "Cliff", "match": "The initial period you must work before any equity vests" },
+        { "concept": "Golden Handcuffs", "match": "Financial incentives designed to keep an employee from leaving" }
+      ]
+    }
+  ]
+}

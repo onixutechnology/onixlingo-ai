@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-072",
+  "title": "Onboarding (The First 30 Days)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The First Impression",
+      "parts": [
+        {
+          "visual": "A massive corporation signs a $100,000 contract for your software. On Day 1, they log in. The interface is confusing, there are no instructions, and their team can't figure out how to upload their data. On Day 30, they demand a refund.\n\nThe Crucial Window:\n1. Onboarding: The critical process of guiding a new customer through the initial setup and ensuring they successfully use the product for the first time.\n2. Time to Value (TTV): The amount of time it takes for a new user to experience the core benefit of your product. If TTV is too long, the user will abandon the software.",
+          "audio": "A signed contract does not mean you have a customer. It means you have an opportunity. The first 30 days of onboarding will completely dictate whether that customer stays for 10 years or churns in month two."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Delivering the 'Aha!' Moment",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Aha! Moment' in user onboarding?",
+          "options": [
+            "When the user forgets their password.",
+            "The exact, specific moment when the user finally understands the true value of the product and realizes it will solve their massive problem. Onboarding must be designed to push the user to this exact moment as fast as possible.",
+            "When the user pays the bill."
+          ],
+          "correct_answer": "The exact, specific moment when the user finally understands the true value of the product and realizes it will solve their massive problem. Onboarding must be designed to push the user to this exact moment as fast as possible.",
+          "explanation": "Facebook's famous 'Aha! Moment' was getting a user to add 7 friends in 10 days."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Customer Success Manager. What is her onboarding strategy?",
+          "tts_text": "We don't just send them a PDF manual. We physically fly a trainer to their office in New York. We sit with their team for two days and manually upload all their old data into our new system so they don't have to do the hard work.",
+          "options": [
+            "White-Glove Onboarding.",
+            "White-Glove Onboarding. For extremely high-value enterprise clients, you provide a premium, highly personalized, done-for-you service to remove absolutely all friction from the adoption process.",
+            "Self-Serve Onboarding."
+          ],
+          "correct_answer": "White-Glove Onboarding. For extremely high-value enterprise clients, you provide a premium, highly personalized, done-for-you service to remove absolutely all friction from the adoption process.",
+          "explanation": "You cannot use self-serve onboarding for a $500,000 enterprise contract."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Friction' the ultimate enemy of the first 30 days?",
+          "options": [
+            "Because friction creates fire.",
+            "Because human beings naturally resist change. Even if your software is better, learning a new system is painful. If the onboarding has friction (complex setup, bad UI), they will just go back to using Excel.",
+            "Because friction is expensive."
+          ],
+          "correct_answer": "Because human beings naturally resist change. Even if your software is better, learning a new system is painful. If the onboarding has friction (complex setup, bad UI), they will just go back to using Excel.",
+          "explanation": "You are competing against the comfort of the status quo."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A user signs up for a free trial of a PLG (Product-Led Growth) app. What is the most effective onboarding tactic?",
+          "options": [
+            "Calling them on the phone.",
+            "In-App Tooltips and Checklists. A highly polished, automated digital tour that guides them through their first three clicks, giving them a quick 'win' without requiring them to speak to a human.",
+            "Mailing them a DVD."
+          ],
+          "correct_answer": "In-App Tooltips and Checklists. A highly polished, automated digital tour that guides them through their first three clicks, giving them a quick 'win' without requiring them to speak to a human.",
+          "explanation": "Self-serve software requires self-serve onboarding."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Onboarding Terminology",
+      "pairs": [
+        { "concept": "Onboarding", "match": "The process of helping a new customer get set up and experience the product's value" },
+        { "concept": "Time to Value (TTV)", "match": "How long it takes a user to realize the core benefit of your product" },
+        { "concept": "Aha! Moment", "match": "The exact point when the user realizes the product solves their problem" },
+        { "concept": "White-Glove Service", "match": "A premium, highly personalized, done-for-you customer experience" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-181",
+  "title": "Technical Debt (The Hidden Mortgage)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Borrowing from the Future",
+      "parts": [
+        {
+          "visual": "A startup needs to launch a feature by Friday to close a $50,000 deal. The engineers say doing it correctly will take a month. The CEO says: 'Just hack it together with tape and glue so it works for the demo.' The feature launches, the deal closes. Three years later, that 'tape and glue' code breaks, and the entire app goes offline for a week.\n\nThe Debt:\n1. Technical Debt: The implied cost of additional rework caused by choosing an easy (limited) solution now instead of using a better approach that would take longer.\n2. The Interest Rate: Just like financial debt, technical debt accumulates interest. Every time you write new code on top of bad, rushed code, the system becomes exponentially harder and slower to fix.",
+          "audio": "Taking on technical debt is not inherently evil. Sometimes you have to rush the code to survive the month. But if you never pause to pay down that debt through 'Refactoring', your engineering velocity will eventually drop to zero."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Paying the Piper",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What does it mean to 'Refactor' code?",
+          "options": [
+            "Deleting the whole app.",
+            "Going back into the existing, messy codebase and rewriting it to be clean, stable, and scalable, without changing what the user actually sees on the screen. It is the exact equivalent of paying off your credit card balance.",
+            "Adding more messy code."
+          ],
+          "correct_answer": "Going back into the existing, messy codebase and rewriting it to be clean, stable, and scalable, without changing what the user actually sees on the screen. It is the exact equivalent of paying off your credit card balance.",
+          "explanation": "Refactoring is how you pay down the debt."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CTO complaining to the CEO. What is the consequence of having too much technical debt?",
+          "tts_text": "Two years ago, adding a new button took us 3 hours. Today, because the foundation is a tangled mess of rushed code, adding that exact same button takes us 3 weeks, because every time we touch the code, five other things break.",
+          "options": [
+            "The engineers get lazy.",
+            "Velocity Collapse. As technical debt compounds, the entire engineering team slows to a crawl. They spend 90% of their time fixing bugs caused by the old, bad code, and only 10% of their time building new features.",
+            "The app looks ugly."
+          ],
+          "correct_answer": "Velocity Collapse. As technical debt compounds, the entire engineering team slows to a crawl. They spend 90% of their time fixing bugs caused by the old, bad code, and only 10% of their time building new features.",
+          "explanation": "Bad code is like walking through deep mud."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Spaghetti Code' dangerous?",
+          "options": [
+            "Because it makes you hungry.",
+            "It lacks structure. When code is rushed, everything is tangled together instead of being separated into clean modules. If a developer tries to fix the login screen, they accidentally break the payment processor because the code is woven together like spaghetti.",
+            "Because it is written in Italian."
+          ],
+          "correct_answer": "It lacks structure. When code is rushed, everything is tangled together instead of being separated into clean modules. If a developer tries to fix the login screen, they accidentally break the payment processor because the code is woven together like spaghetti.",
+          "explanation": "Complexity is the enemy of stability."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "When is it actually a GOOD idea for a CEO to intentionally take on Technical Debt?",
+          "options": [
+            "Never.",
+            "When the startup is searching for Product-Market Fit. If you aren't sure if users even want the feature, spending 6 months building the perfect code architecture is a waste. You hack it together in a week to test it. If they like it, you rewrite it later.",
+            "When the engineers are bored."
+          ],
+          "correct_answer": "When the startup is searching for Product-Market Fit. If you aren't sure if users even want the feature, spending 6 months building the perfect code architecture is a waste. You hack it together in a week to test it. If they like it, you rewrite it later.",
+          "explanation": "Debt is leverage. Use it strategically to validate ideas fast."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Engineering Terminology",
+      "pairs": [
+        { "concept": "Technical Debt", "match": "The future cost of choosing a fast, messy engineering solution today" },
+        { "concept": "Refactoring", "match": "Cleaning up and rewriting old code without changing what the user sees" },
+        { "concept": "Velocity", "match": "The speed at which an engineering team can ship new features" },
+        { "concept": "Spaghetti Code", "match": "A tangled, messy codebase where changing one thing breaks everything else" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "pro-exec-b1-9",
+  "title": "Presenting Data Highlights",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Speaking with Numbers",
+      "parts": [
+        {
+          "visual": "Executives do not have time to read spreadsheets row by row. Your job is to extract the insight, not just read the data.\n\nThe 'Insight First' method:\n1. State the insight (e.g., 'Revenue grew due to Enterprise sales').\n2. Provide the key data points (e.g., 'Enterprise is up 25% YoY').\n3. Explain the implication (e.g., 'We should allocate more marketing budget here').",
+          "audio": "Extract the insight, don't just read the data. State the trend, provide the key metric, and explain the business implication."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Data Interpretation",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Which of these statements is an 'Insight' rather than just a 'Data Point'?",
+          "options": [
+            "We sold 400 units in May and 500 in June.",
+            "Our Q2 growth is being driven entirely by our recent expansion into the European market.",
+            "The spreadsheet shows a 10% change."
+          ],
+          "correct_answer": "Our Q2 growth is being driven entirely by our recent expansion into the European market.",
+          "explanation": "This statement interprets the 'why' behind the numbers, which is what executives actually care about."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the phrase. What kind of trend is being described?",
+          "tts_text": "Customer acquisition costs have steadily declined over the past three quarters.",
+          "options": [
+            "A negative, worrying trend",
+            "A positive, favorable trend",
+            "A static, unchanging situation"
+          ],
+          "correct_answer": "A positive, favorable trend",
+          "explanation": "For a metric like 'Costs', a steady decline is highly favorable and positive for the business."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does 'YoY' stand for in business reporting?",
+          "options": [
+            "Yield on Yield",
+            "Year over Year",
+            "Your own Yield"
+          ],
+          "correct_answer": "Year over Year",
+          "explanation": "YoY compares financial results of a period against the same period from the previous year."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How should you present a metric that missed its target?",
+          "options": [
+            "Hide it in the appendix.",
+            "Acknowledge the miss directly and immediately present the root cause analysis.",
+            "Pretend it was a typo."
+          ],
+          "correct_answer": "Acknowledge the miss directly and immediately present the root cause analysis.",
+          "explanation": "Transparency builds trust. Executives want to know that you understand why the miss happened."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Trend Vocabulary Syntax",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe a trend accurately:",
+          "parts": [
+            "Sales",
+            "have",
+            "increased",
+            "significantly",
+            "this",
+            "quarter."
+          ],
+          "correct_order": [
+            "Sales",
+            "have",
+            "increased",
+            "significantly",
+            "this",
+            "quarter."
+          ],
+          "explanation": "Subject + Verb (Present Perfect) + Adverb + Time period."
+        }
+      ]
+    }
+  ]
+}

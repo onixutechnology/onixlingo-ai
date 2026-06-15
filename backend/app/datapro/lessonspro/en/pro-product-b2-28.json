@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-28",
+  "title": "OKRs (Objectives and Key Results)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Execution Framework",
+      "parts": [
+        {
+          "visual": "A CEO tells the company: 'Our goal is to be the best app in the world!' The engineers cheer. Three months later, nothing has changed, because 'being the best' is impossible to measure. The PM steps in and says: 'Our Objective is to dominate mobile. Our Key Result is increasing mobile DAU by 40% by Q3.' Now, the engineers know exactly what to build.\n\nThe Math of Ambition:\n1. Objective (The O): A qualitative, inspiring, and highly ambitious goal (e.g., 'Make our checkout process lightning fast').\n2. Key Results (The KRs): 2 to 4 strictly quantitative, measurable metrics that prove whether you actually achieved the Objective (e.g., 'Reduce checkout time from 4 seconds to 1.5 seconds').",
+          "audio": "If it does not have a number, it is not a Key Result. OKRs bridge the gap between the beautiful, emotional Product Vision and the brutal, mathematical reality of daily engineering work."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Measuring Success",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Which of the following is a valid, well-written 'Key Result'?",
+          "options": [
+            "Improve the user experience.",
+            "Increase Day-1 Retention from 20% to 35% by December 31st.",
+            "Launch the new AI feature."
+          ],
+          "correct_answer": "Increase Day-1 Retention from 20% to 35% by December 31st.",
+          "explanation": "It has a starting metric, a target metric, and a deadline."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the PM setting OKRs. Why do they explicitly tell the team that achieving 70% of the goal is considered a 'success'?",
+          "tts_text": "Team, our KR is to process 1 Million transactions this month. I want to be clear: I am setting this number intentionally too high. If we hit 700,000, we pop champagne. If we hit 1 Million, we aimed too low.",
+          "options": [
+            "Because the team is lazy.",
+            "Stretch Goals. True OKRs are designed to be slightly impossible. If a team easily achieves 100% of their OKRs every quarter, it means they are playing it safe and not innovating. A 70% completion rate means they pushed themselves to the absolute limit.",
+            "Because math is hard."
+          ],
+          "correct_answer": "Stretch Goals. True OKRs are designed to be slightly impossible. If a team easily achieves 100% of their OKRs every quarter, it means they are playing it safe and not innovating. A 70% completion rate means they pushed themselves to the absolute limit.",
+          "explanation": "Aim for the stars, land on the moon."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why should OKRs NEVER be tied to employee bonuses or salaries?",
+          "options": [
+            "Because companies want to save money.",
+            "The Sandbagging Effect. If an engineer's salary depends on hitting 100% of their OKR, they will intentionally set the OKR extremely low so they guarantee they get the money. OKRs must be completely divorced from compensation to encourage high-risk innovation.",
+            "Because it is illegal."
+          ],
+          "correct_answer": "The Sandbagging Effect. If an engineer's salary depends on hitting 100% of their OKR, they will intentionally set the OKR extremely low so they guarantee they get the money. OKRs must be completely divorced from compensation to encourage high-risk innovation.",
+          "explanation": "Do not punish people for aiming high."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the difference between an OKR and a KPI (Key Performance Indicator)?",
+          "options": [
+            "They are the exact same thing.",
+            "KPIs measure the health of the machine (e.g., Server Uptime = 99.9%). You monitor them constantly to ensure nothing breaks. OKRs measure the aggressive growth of the machine (e.g., Launch new market in Japan). OKRs push you forward; KPIs keep you alive.",
+            "KPIs are only for marketing."
+          ],
+          "correct_answer": "KPIs measure the health of the machine (e.g., Server Uptime = 99.9%). You monitor them constantly to ensure nothing breaks. OKRs measure the aggressive growth of the machine (e.g., Launch new market in Japan). OKRs push you forward; KPIs keep you alive.",
+          "explanation": "KPIs are the dashboard. OKRs are the destination."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Goal Terminology",
+      "pairs": [
+        { "concept": "Objective", "match": "The qualitative, inspiring goal you want to achieve" },
+        { "concept": "Key Result", "match": "The strict, quantitative metric that proves you achieved the goal" },
+        { "concept": "Stretch Goal", "match": "Setting the target so high that achieving 70% is a massive success" },
+        { "concept": "KPI", "match": "A baseline health metric you monitor to ensure the system doesn't break" }
+      ]
+    }
+  ]
+}

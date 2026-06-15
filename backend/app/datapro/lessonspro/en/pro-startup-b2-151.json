@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-151",
+  "title": "Incorporation (C-Corp vs. LLC)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Legal Skeleton",
+      "parts": [
+        {
+          "visual": "Two friends build a brilliant app. They register their company as an 'LLC' to save $500 on lawyer fees. A year later, a legendary Venture Capitalist offers them $5 Million. The VC looks at their legal structure, shakes his head, and says: 'I cannot invest in an LLC. Come back when you are a Delaware C-Corp.' They lose the deal.\n\nThe Structures:\n1. LLC (Limited Liability Company): Great for small businesses, restaurants, and consulting firms. Terrible for high-growth tech startups because it is extremely difficult to issue stock options to employees or accept VC money.\n2. Delaware C-Corp: The gold standard for Silicon Valley. It is a corporate structure specifically designed to issue millions of shares, protect founders from personal liability, and easily accept massive venture capital.",
+          "audio": "In the startup world, you do not get points for creativity in your legal structure. If you want VC money, you must be a Delaware C-Corp. Anything else is a legal nightmare that will cost you tens of thousands of dollars to fix later."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Choosing the Framework",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A founder wants to start a local bakery and never plans to raise venture capital or issue stock to employees. Which structure should they choose?",
+          "options": [
+            "Delaware C-Corp.",
+            "LLC (Limited Liability Company). An LLC is cheaper to maintain, has simpler tax structures (pass-through taxation), and is perfect for businesses that just want to generate cash profit for the owners without dealing with complex corporate boards.",
+            "No structure, just use cash."
+          ],
+          "correct_answer": "LLC (Limited Liability Company). An LLC is cheaper to maintain, has simpler tax structures (pass-through taxation), and is perfect for businesses that just want to generate cash profit for the owners without dealing with complex corporate boards.",
+          "explanation": "Not every business is a tech startup."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the lawyer explaining why 'Delaware' is the magic word in Silicon Valley. Why do companies incorporate there, even if their office is in California?",
+          "tts_text": "Delaware has a highly specialized court system called the Court of Chancery. Their judges only handle corporate law, and their legal precedents are incredibly predictable. VCs love predictability, so they force startups to incorporate there.",
+          "options": [
+            "Because Delaware has nice beaches.",
+            "Legal Predictability. If a startup gets sued by a shareholder, the VC wants to know exactly how the judge will rule. Delaware's corporate laws are so well-defined over 100 years that corporate disputes are resolved quickly and logically.",
+            "Because taxes are 0% in Delaware."
+          ],
+          "correct_answer": "Legal Predictability. If a startup gets sued by a shareholder, the VC wants to know exactly how the judge will rule. Delaware's corporate laws are so well-defined over 100 years that corporate disputes are resolved quickly and logically.",
+          "explanation": "Investors hate legal ambiguity."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Double Taxation' and why do C-Corps suffer from it?",
+          "options": [
+            "Paying the lawyer twice.",
+            "A structural flaw of the C-Corp. The corporation itself pays taxes on its profits. Then, when it distributes those profits to the founders as dividends, the founders pay personal income tax on that same money. The money is taxed twice.",
+            "A tax on two offices."
+          ],
+          "correct_answer": "A structural flaw of the C-Corp. The corporation itself pays taxes on its profits. Then, when it distributes those profits to the founders as dividends, the founders pay personal income tax on that same money. The money is taxed twice.",
+          "explanation": "Tech startups accept double taxation because they almost never pay dividends anyway; they reinvest all profit into growth."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If an LLC is sued and loses $1 Million, can the winner take the founder's personal house to pay the debt?",
+          "options": [
+            "Yes, immediately.",
+            "No, that is the 'Limited Liability' shield. Assuming the founder didn't commit blatant fraud or mix their personal bank account with the business account, the legal structure protects their personal assets from corporate debts.",
+            "Only if the house is big."
+          ],
+          "correct_answer": "No, that is the 'Limited Liability' shield. Assuming the founder didn't commit blatant fraud or mix their personal bank account with the business account, the legal structure protects their personal assets from corporate debts.",
+          "explanation": "Never mix personal and business money, or you 'pierce the corporate veil'."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Legal Terminology",
+      "pairs": [
+        { "concept": "C-Corp", "match": "The standard corporate structure required by VCs to issue shares easily" },
+        { "concept": "LLC", "match": "A flexible structure good for small businesses but terrible for raising venture capital" },
+        { "concept": "Delaware", "match": "The US state with the most predictable and VC-friendly corporate laws" },
+        { "concept": "Double Taxation", "match": "The financial penalty of a C-Corp where profits and dividends are both taxed" }
+      ]
+    }
+  ]
+}

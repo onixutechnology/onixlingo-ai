@@ -1,0 +1,104 @@
+{
+  "id": "pro-startup-b2-155",
+  "title": "Legal Due Diligence (Preparing for the VC Audit)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Brutal Inspection",
+      "parts": [
+        {
+          "visual": "A VC smiles and says, 'We love your startup. Here is a Term Sheet for $10 Million.' The founder celebrates. But the money doesn't hit the bank account. For the next 4 weeks, an army of corporate lawyers descends upon the startup, demanding to read every single contract, email, and line of code ever written.\n\nThe Investigation:\n1. Due Diligence: The grueling, exhaustive legal and financial audit performed by investors or acquirers *before* they actually transfer the money.\n2. The Data Room: A highly secure digital vault where the startup must organize and upload every employment contract, IP assignment, tax return, and board minute. If the Data Room is a mess, the VC will walk away.",
+          "audio": "A Term Sheet is not a check; it is an intention to marry. Due Diligence is the private investigator they hire to look into your past before the wedding. If you have been sloppy with your legal paperwork, the deal will die in Due Diligence."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Surviving the Audit",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "During Due Diligence, the VC lawyers discover that the company's first engineer never signed an 'IP Assignment Agreement'. What does the VC do?",
+          "options": [
+            "They ignore it.",
+            "They freeze the entire deal immediately. Without that signature, the engineer technically owns the code, not the company. The VC will refuse to invest a single dollar until the founder tracks down the ex-engineer and begs them to sign the document retroactively.",
+            "They call the police."
+          ],
+          "correct_answer": "They freeze the entire deal immediately. Without that signature, the engineer technically owns the code, not the company. The VC will refuse to invest a single dollar until the founder tracks down the ex-engineer and begs them to sign the document retroactively.",
+          "explanation": "A single missing signature can destroy a $10 Million deal."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the founder explaining a 'Data Room' disaster. What caused the delay?",
+          "tts_text": "We told the investors we had signed contracts with five major banks. But when they asked for the PDFs in the Data Room, I couldn't find them. They were lost in an old email inbox. The VCs thought I was lying, and the deal was delayed by three weeks.",
+          "options": [
+            "The banks were fake.",
+            "Poor Document Hygiene. Startups are chaotic, but administrative chaos terrifies investors. A founder must treat their legal contracts with the same respect and organization as their source code. A messy Data Room signals a poorly managed company.",
+            "The internet was down."
+          ],
+          "correct_answer": "Poor Document Hygiene. Startups are chaotic, but administrative chaos terrifies investors. A founder must treat their legal contracts with the same respect and organization as their source code. A messy Data Room signals a poorly managed company.",
+          "explanation": "Organize your Data Room on Day 1, not Day 1,000."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is an 'Open Source Audit' during technical Due Diligence?",
+          "options": [
+            "Counting the number of laptops.",
+            "A software scan to ensure the startup didn't copy-paste illegal 'GPL' open-source code into their proprietary product. If you use certain open-source licenses, you are legally forced to make your entire codebase public, which destroys the company's value.",
+            "Checking if the office door is open."
+          ],
+          "correct_answer": "A software scan to ensure the startup didn't copy-paste illegal 'GPL' open-source code into their proprietary product. If you use certain open-source licenses, you are legally forced to make your entire codebase public, which destroys the company's value.",
+          "explanation": "Not all free code is safe code."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is it dangerous for a founder to lie during Due Diligence to make the company look better?",
+          "options": [
+            "It's not dangerous.",
+            "Representations and Warranties (R&Ws). When signing the final deal, the founder legally guarantees (warrants) that all the information provided is completely true. If the VC later discovers a lie, they can sue the founder personally for fraud and claw back the money.",
+            "The VC might cry."
+          ],
+          "correct_answer": "Representations and Warranties (R&Ws). When signing the final deal, the founder legally guarantees (warrants) that all the information provided is completely true. If the VC later discovers a lie, they can sue the founder personally for fraud and claw back the money.",
+          "explanation": "Due diligence is an audit. You cannot lie on an audit."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of the Audit",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the reality of startup paperwork:",
+          "parts": [
+            "A",
+            "messy",
+            "Data",
+            "Room",
+            "will",
+            "kill",
+            "the",
+            "deal."
+          ],
+          "correct_order": [
+            "A",
+            "messy",
+            "Data",
+            "Room",
+            "will",
+            "kill",
+            "the",
+            "deal."
+          ],
+          "explanation": "Paperwork is not an afterthought; it is the foundation of value."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "pro-startup-b2-065",
+  "title": "Conversion Rate Optimization (CRO)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Science of Clicking",
+      "parts": [
+        {
+          "visual": "A startup spends $100,000 a month to send 100,000 visitors to their website. Only 1,000 people buy the product (1% conversion rate). Instead of spending another $100,000 on ads, they change the color of the 'Buy' button from gray to bright red. Suddenly, 2,000 people buy (2% conversion rate). They doubled their revenue for $0.\n\nThe Mechanics:\n1. CRO (Conversion Rate Optimization): The systematic process of increasing the percentage of website visitors who take a desired action (buying, signing up).\n2. A/B Testing: The core tool of CRO. You show version A (green button) to 50% of users, and version B (red button) to 50%. Math dictates the winner.",
+          "audio": "CRO is the closest thing to printing money in the tech world. By running thousands of microscopic psychological experiments on your website, you can mathematically force more people to buy without spending an extra dime on marketing."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "A/B Testing Reality",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A CEO wants to run an A/B test. She changes the headline, the button color, the background image, and the pricing all at the same time in 'Version B'. Why is this a terrible A/B test?",
+          "options": [
+            "Because Version B is ugly.",
+            "Because of 'Variable Isolation'. If Version B wins, you have absolutely no idea *why* it won. Was it the color? The price? The headline? You must test one single variable at a time to get scientific data.",
+            "Because the CEO is not an engineer."
+          ],
+          "correct_answer": "Because of 'Variable Isolation'. If Version B wins, you have absolutely no idea *why* it won. Was it the color? The price? The headline? You must test one single variable at a time to get scientific data.",
+          "explanation": "Scientific method: isolate the variable."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the data scientist explaining 'Statistical Significance'. Why won't he declare a winner after 10 clicks?",
+          "tts_text": "Version A got 6 clicks. Version B got 4 clicks. The CEO wants to declare A the winner. But with only 10 users, this is pure random chance. We need 10,000 users before the math proves that A is actually better.",
+          "options": [
+            "Because 6 is not a big number.",
+            "Statistical Significance. You cannot make multi-million dollar business decisions based on small sample sizes. A test is useless until enough traffic has passed through it to eliminate random luck.",
+            "Because he likes Version B."
+          ],
+          "correct_answer": "Statistical Significance. You cannot make multi-million dollar business decisions based on small sample sizes. A test is useless until enough traffic has passed through it to eliminate random luck.",
+          "explanation": "Math does not care about your gut feeling."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Friction' in the context of CRO?",
+          "options": [
+            "When the website crashes.",
+            "Anything that makes it psychologically or physically harder for the user to buy. Asking for a phone number when you don't need it creates massive friction. CRO is the ruthless elimination of friction.",
+            "When two executives argue."
+          ],
+          "correct_answer": "Anything that makes it psychologically or physically harder for the user to buy. Asking for a phone number when you don't need it creates massive friction. CRO is the ruthless elimination of friction.",
+          "explanation": "Amazon's '1-Click Buy' is the greatest CRO invention in history."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do elite startups obsess over 'Social Proof' on their landing pages?",
+          "options": [
+            "To brag to their friends.",
+            "Because of herd psychology. Adding a logo banner that says 'Trusted by Google and Netflix' or showing 5-star customer reviews instantly lowers the user's anxiety and massively increases the conversion rate.",
+            "Because it looks pretty."
+          ],
+          "correct_answer": "Because of herd psychology. Adding a logo banner that says 'Trusted by Google and Netflix' or showing 5-star customer reviews instantly lowers the user's anxiety and massively increases the conversion rate.",
+          "explanation": "Trust is the currency of conversion."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Testing",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the CRO mindset:",
+          "parts": [
+            "Never",
+            "guess",
+            "what",
+            "users",
+            "want,",
+            "let",
+            "the",
+            "data",
+            "decide."
+          ],
+          "correct_order": [
+            "Never",
+            "guess",
+            "what",
+            "users",
+            "want,",
+            "let",
+            "the",
+            "data",
+            "decide."
+          ],
+          "explanation": "Your opinion is irrelevant. The click is the only truth."
+        }
+      ]
+    }
+  ]
+}

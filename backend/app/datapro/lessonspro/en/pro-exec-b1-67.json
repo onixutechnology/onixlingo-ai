@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-67",
+  "title": "Board of Directors vs. Executive Team",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Who is Really in Charge?",
+      "parts": [
+        {
+          "visual": "A common mistake is thinking the CEO answers to no one. The CEO answers to the Board of Directors.\n\nThe Division of Power:\n1. The Board: Governance. They represent the shareholders, approve major budgets, and hire/fire the CEO.\n2. The Executive Team (C-Suite): Management. They run the daily operations and execute the strategy approved by the Board.",
+          "audio": "The CEO answers to the Board of Directors. The Board handles Governance, while the Executive Team handles daily Management."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Corporate Governance",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Who has the power to fire the Chief Executive Officer (CEO)?",
+          "options": [
+            "The HR Department.",
+            "The Board of Directors.",
+            "The employees, by voting."
+          ],
+          "correct_answer": "The Board of Directors.",
+          "explanation": "The Board's primary legal responsibility is hiring, evaluating, and (if necessary) firing the CEO on behalf of the shareholders."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the phrase. What type of corporate structure is this?",
+          "tts_text": "We need the Board's approval before we can proceed with the acquisition of our competitor.",
+          "options": [
+            "Management.",
+            "Corporate Governance.",
+            "A startup pitch."
+          ],
+          "correct_answer": "Corporate Governance.",
+          "explanation": "Massive financial decisions (like M&A or taking on huge debt) require Board approval; the CEO cannot make them unilaterally."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the difference between an 'Inside Director' and an 'Outside Director'?",
+          "options": [
+            "One works inside the building, one works outside.",
+            "An Inside Director is an employee of the company (like the CEO). An Outside Director is independent and brings objective oversight.",
+            "Outside directors are not paid."
+          ],
+          "correct_answer": "An Inside Director is an employee of the company (like the CEO). An Outside Director is independent and brings objective oversight.",
+          "explanation": "A healthy board must have Independent (Outside) Directors to prevent the CEO from having absolute, unchecked power."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If a Board member starts telling a marketing manager how to run their daily ad campaigns, what is happening?",
+          "options": [
+            "Excellent teamwork.",
+            "The Board member is overstepping their bounds. The Board governs; they do not manage daily operations.",
+            "A standard performance review."
+          ],
+          "correct_answer": "The Board member is overstepping their bounds. The Board governs; they do not manage daily operations.",
+          "explanation": "The phrase 'Noses in, fingers out' applies to the Board: They should look deeply into the business, but not touch the daily controls."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Governance Vocabulary",
+      "pairs": [
+        { "concept": "Governance", "match": "The system of rules and practices by which a company is directed" },
+        { "concept": "Shareholder", "match": "An owner of shares in a company" },
+        { "concept": "Fiduciary Duty", "match": "A legal obligation to act in the best financial interest of the company" },
+        { "concept": "C-Suite", "match": "The executive management team (CEO, CFO, CTO, etc.)" }
+      ]
+    }
+  ]
+}

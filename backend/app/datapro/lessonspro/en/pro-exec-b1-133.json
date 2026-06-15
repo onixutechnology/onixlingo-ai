@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-133",
+  "title": "Defensive Cybersecurity for Executives",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Digital Extortion",
+      "parts": [
+        {
+          "visual": "A CEO doesn't need to know how to code, but they must understand cyber-warfare. A single hack can bankrupt a company in 24 hours.\n\nThe Threat Vectors:\n1. Ransomware: Hackers encrypt all your servers so you cannot use them, and demand a $10M payment in Bitcoin for the password.\n2. Phishing/Spear-Phishing: Fooling an employee into clicking a malicious link via email.\n3. The Backups: The only defense against ransomware is having 'Immutable Backups' stored completely offline.",
+          "audio": "A single hack can destroy a company. Ransomware encrypts your servers and demands a massive payment. The only defense is maintaining offline, immutable backups."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Cyber Crisis",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A hacker gang successfully deployed 'Ransomware' on your hospital's network. All patient machines are locked. They demand $5 Million. What is the grim reality?",
+          "options": [
+            "Just restart the computers.",
+            "If you do not have offline backups, you are at the absolute mercy of the hackers. Many companies are forced to quietly pay the ransom to survive.",
+            "Call the police and the hackers will unlock it."
+          ],
+          "correct_answer": "If you do not have offline backups, you are at the absolute mercy of the hackers. Many companies are forced to quietly pay the ransom to survive.",
+          "explanation": "Law enforcement cannot 'decrypt' modern ransomware. Prevention and backups are the only true defense."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CISO (Chief Information Security Officer). What concept is he explaining?",
+          "tts_text": "We cannot just back up our data to the cloud. If the hackers get our cloud password, they will delete the backups too. We need an offline, disconnected hard drive.",
+          "options": [
+            "Cloud computing.",
+            "Air-gapped / Immutable Backups.",
+            "A USB stick."
+          ],
+          "correct_answer": "Air-gapped / Immutable Backups.",
+          "explanation": "An 'air-gap' means the backup server is physically disconnected from the internet. Hackers cannot encrypt what they cannot reach."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Spear-Phishing'?",
+          "options": [
+            "A sport.",
+            "A highly targeted cyber attack where hackers research a specific executive (like the CFO), and send a custom email pretending to be the CEO asking for a wire transfer.",
+            "A virus on a phone."
+          ],
+          "correct_answer": "A highly targeted cyber attack where hackers research a specific executive (like the CFO), and send a custom email pretending to be the CEO asking for a wire transfer.",
+          "explanation": "Generic spam is easy to block. Spear-phishing uses psychological manipulation and corporate hierarchies to bypass human logic."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do companies buy 'Cyber Insurance'?",
+          "options": [
+            "To get free antivirus software.",
+            "To transfer the financial risk. The insurance company pays the multi-million dollar ransom, covers the legal fees, and pays for the PR crisis team.",
+            "It is required by law."
+          ],
+          "correct_answer": "To transfer the financial risk. The insurance company pays the multi-million dollar ransom, covers the legal fees, and pays for the PR crisis team.",
+          "explanation": "However, to get the insurance, the company must prove to the insurer that they have strict security protocols in place."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Cyber Terminology",
+      "pairs": [
+        { "concept": "Ransomware", "match": "Malware that encrypts data and demands payment for the decryption key" },
+        { "concept": "Phishing", "match": "Fraudulent communication designed to trick a person into revealing data" },
+        { "concept": "Air-Gap", "match": "A security measure where a network is physically isolated from the internet" },
+        { "concept": "CISO", "match": "Chief Information Security Officer" }
+      ]
+    }
+  ]
+}

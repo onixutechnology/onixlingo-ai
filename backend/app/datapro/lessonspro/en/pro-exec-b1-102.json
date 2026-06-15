@@ -1,0 +1,104 @@
+{
+  "id": "pro-exec-b1-102",
+  "title": "Navigating Regulatory Compliance",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Cost of Doing Business",
+      "parts": [
+        {
+          "visual": "Compliance is ensuring your company obeys all industry laws, security standards, and ethical policies. It is not an obstacle; it is a shield.\n\nThe Heavyweights:\n1. GDPR: European data privacy law.\n2. HIPAA: US healthcare data protection.\n3. SOX (Sarbanes-Oxley): Prevents accounting fraud in public companies.\n4. ESG: Environmental, Social, and Governance reporting.",
+          "audio": "Compliance is the shield that protects your company from lawsuits and fines. Executives must understand key regulations like GDPR, HIPAA, and SOX."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Regulatory Frameworks",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Your startup builds an app that connects patients with doctors. Which massive regulatory framework must you comply with in the US?",
+          "options": [
+            "GDPR.",
+            "HIPAA (Health Insurance Portability and Accountability Act), to protect sensitive patient medical records.",
+            "SOX."
+          ],
+          "correct_answer": "HIPAA (Health Insurance Portability and Accountability Act), to protect sensitive patient medical records.",
+          "explanation": "If a healthcare app leaks patient data, HIPAA violations can result in criminal charges and millions in fines."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the legal counsel. What compliance law is being enforced?",
+          "tts_text": "Before we launch in France, we must build a system that allows users to permanently delete all their personal data with one click.",
+          "options": [
+            "HIPAA.",
+            "GDPR (General Data Protection Regulation).",
+            "SEC regulations."
+          ],
+          "correct_answer": "GDPR (General Data Protection Regulation).",
+          "explanation": "Under GDPR, European citizens have the 'Right to be Forgotten'. Companies must build architecture to completely erase user data upon request."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why was the Sarbanes-Oxley Act (SOX) created?",
+          "options": [
+            "To make accounting easier.",
+            "To prevent corporate accounting scandals (like Enron) by making CEOs and CFOs personally liable for the accuracy of financial reports.",
+            "To protect the environment."
+          ],
+          "correct_answer": "To prevent corporate accounting scandals (like Enron) by making CEOs and CFOs personally liable for the accuracy of financial reports.",
+          "explanation": "Under SOX, if a company lies about its profits, the CEO can go to federal prison. It forces executives to take compliance seriously."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a company treats compliance as an 'afterthought' to save money?",
+          "options": [
+            "They make more profit.",
+            "They face catastrophic fines, loss of operating licenses, and severe reputational damage when caught.",
+            "The government gives them a warning."
+          ],
+          "correct_answer": "They face catastrophic fines, loss of operating licenses, and severe reputational damage when caught.",
+          "explanation": "Non-compliance is far more expensive than building a strong compliance department."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Law",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to request a legal review:",
+          "parts": [
+            "We",
+            "must",
+            "ensure",
+            "strict",
+            "compliance",
+            "with",
+            "federal",
+            "regulations."
+          ],
+          "correct_order": [
+            "We",
+            "must",
+            "ensure",
+            "strict",
+            "compliance",
+            "with",
+            "federal",
+            "regulations."
+          ],
+          "explanation": "This establishes a culture of legality and risk-management within the executive team."
+        }
+      ]
+    }
+  ]
+}

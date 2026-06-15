@@ -1,0 +1,104 @@
+{
+  "id": "pro-exec-b1-83",
+  "title": "Building a Board Deck",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Art of the Pre-Read",
+      "parts": [
+        {
+          "visual": "A 'Board Deck' is the presentation material sent to the Board of Directors. The goal is to drive decisions, not just share data.\n\nRules of the Deck:\n1. The Pre-Read: Send the deck 48 hours early so the meeting is for discussion, not reading.\n2. The Executive Summary: The first slide must contain the 'Ask' and the core metrics.\n3. Appendix: Put all the heavy data charts in the back. Keep the main slides clean.",
+          "audio": "A Board Deck drives decisions. Send the materials 48 hours early as a pre-read, and keep heavy data in the appendix."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Board Materials",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "You present a 60-slide deck during a 1-hour board meeting. What is the result?",
+          "options": [
+            "The board is impressed by your hard work.",
+            "You run out of time for strategic discussion, annoying the board members who feel you wasted their time.",
+            "You get a promotion."
+          ],
+          "correct_answer": "You run out of time for strategic discussion, annoying the board members who feel you wasted their time.",
+          "explanation": "Board members can read. Do not read slides to them. Use the meeting time to debate the strategic implications of the data."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO. What part of the board deck is this?",
+          "tts_text": "If you want to dive into the specific regional sales data, please see slide 42 in the back.",
+          "options": [
+            "The Executive Summary.",
+            "The Appendix.",
+            "The Cover Slide."
+          ],
+          "correct_answer": "The Appendix.",
+          "explanation": "The Appendix is the secret weapon of the executive. It keeps the main presentation clean, but provides backup data if a board member asks a detailed question."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is the 'Pre-Read' mandatory in executive culture?",
+          "options": [
+            "To give people homework.",
+            "It allows board members to process the data beforehand, ensuring the live meeting is spent making decisions rather than digesting facts.",
+            "It saves paper."
+          ],
+          "correct_answer": "It allows board members to process the data beforehand, ensuring the live meeting is spent making decisions rather than digesting facts.",
+          "explanation": "A meeting without a pre-read is just an expensive reading session."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How should a slide's title be formatted in a board deck?",
+          "options": [
+            "As a single word (e.g., 'Sales').",
+            "As a complete sentence stating the key takeaway (e.g., 'Q3 Sales declined 5% due to supply chain delays in Asia').",
+            "No title is needed."
+          ],
+          "correct_answer": "As a complete sentence stating the key takeaway (e.g., 'Q3 Sales declined 5% due to supply chain delays in Asia').",
+          "explanation": "An executive should be able to read just the titles of your slides and understand the entire story of the presentation."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Presentation",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to reference the appendix during a meeting:",
+          "parts": [
+            "Detailed",
+            "metrics",
+            "can",
+            "be",
+            "found",
+            "in",
+            "the",
+            "appendix."
+          ],
+          "correct_order": [
+            "Detailed",
+            "metrics",
+            "can",
+            "be",
+            "found",
+            "in",
+            "the",
+            "appendix."
+          ],
+          "explanation": "This allows you to acknowledge the data exists without derailing the live conversation."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-161",
+  "title": "The Hardware Curse (Hardware is Hard)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Physics of Startups",
+      "parts": [
+        {
+          "visual": "A software founder types code for a weekend, hits 'Deploy', and instantly ships an update to millions of users for $0. A hardware founder designs a smart-watch. It takes 18 months, $5 Million, and 3 trips to China just to produce the first plastic prototype. If a software button is broken, you update the code in 5 minutes. If a physical button on the watch is broken, you have to recall 10,000 units from the ocean.\n\nThe Hardware Reality:\n1. Atoms vs. Bytes: Moving physical matter (atoms) is infinitely more expensive, slower, and riskier than moving digital code (bytes). 'Hardware is Hard' is the ultimate Silicon Valley cliché because it is brutally true.\n2. The Inventory Trap: Software has infinite margins; the 2nd copy costs nothing to make. Hardware requires you to pay factories millions of dollars to build 10,000 units *before* you have even sold a single one.",
+          "audio": "In software, you can 'Move Fast and Break Things'. In hardware, if you move fast and break things, your factory burns down, you go bankrupt, and someone might actually die. The Lean Startup model does not work with physical plastic and metal."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Atoms vs. Bytes",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A hardware startup raises $2 Million to build an innovative smart-helmet. Why will most traditional SaaS VCs instantly reject them?",
+          "options": [
+            "Because helmets are uncool.",
+            "Margin and Capital Intensity. Traditional VCs are addicted to software margins (90% profit). A hardware company has physical costs (30% profit) and requires 10x more capital just to build a factory line before generating $1 of revenue.",
+            "Because VCs don't ride bikes."
+          ],
+          "correct_answer": "Margin and Capital Intensity. Traditional VCs are addicted to software margins (90% profit). A hardware company has physical costs (30% profit) and requires 10x more capital just to build a factory line before generating $1 of revenue.",
+          "explanation": "Hardware margins terrify software investors."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the hardware CEO explaining a massive crisis. What is the fundamental difference between a software bug and a hardware defect?",
+          "tts_text": "We shipped 50,000 units to stores. Then we realized the battery overheats. In software, I would push an 'Over-the-Air' update tonight. In hardware, I have to charter a cargo plane, recall 50,000 boxes, manually open them, and replace the batteries. It will bankrupt us.",
+          "options": [
+            "Hardware bugs are cheaper.",
+            "The Cost of Iteration. Software iteration is practically free and instant. Hardware iteration requires massive physical logistics, shipping delays, and raw material costs. You cannot ship a 'Beta' version of a physical battery.",
+            "Software bugs take longer to fix."
+          ],
+          "correct_answer": "The Cost of Iteration. Software iteration is practically free and instant. Hardware iteration requires massive physical logistics, shipping delays, and raw material costs. You cannot ship a 'Beta' version of a physical battery.",
+          "explanation": "Hardware must be perfect before it leaves the factory."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'BOM' in the hardware startup world?",
+          "options": [
+            "A sudden explosion.",
+            "Bill of Materials. It is the master list of every single screw, microchip, and piece of plastic required to build one unit of your product, alongside the exact cost of each piece. If the BOM cost is too high, the company cannot survive.",
+            "Buying Online Merch."
+          ],
+          "correct_answer": "Bill of Materials. It is the master list of every single screw, microchip, and piece of plastic required to build one unit of your product, alongside the exact cost of each piece. If the BOM cost is too high, the company cannot survive.",
+          "explanation": "The BOM is the financial heartbeat of a hardware startup."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why did hardware companies like Peloton or GoPro historically struggle on the public stock market compared to software companies?",
+          "options": [
+            "People don't like physical goods.",
+            "Lack of Recurring Revenue. Software charges $20 every single month forever (SaaS). Hardware is usually a one-time purchase. Once you buy a $400 GoPro, you don't buy another one for 5 years, forcing the company to constantly find new customers.",
+            "The hardware is too heavy."
+          ],
+          "correct_answer": "Lack of Recurring Revenue. Software charges $20 every single month forever (SaaS). Hardware is usually a one-time purchase. Once you buy a $400 GoPro, you don't buy another one for 5 years, forcing the company to constantly find new customers.",
+          "explanation": "Wall Street pays a premium for guaranteed monthly subscriptions, not one-off plastic sales."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Hardware Terminology",
+      "pairs": [
+        { "concept": "BOM (Bill of Materials)", "match": "The total cost of every physical component inside the product" },
+        { "concept": "Capital Intensity", "match": "The massive amount of cash required up-front just to build a prototype" },
+        { "concept": "Atoms vs. Bytes", "match": "The fundamental difference in speed between physical goods and software" },
+        { "concept": "Over-the-Air (OTA)", "match": "A wireless software update that can fix digital bugs, but not physical broken parts" }
+      ]
+    }
+  ]
+}

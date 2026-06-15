@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-8",
+  "title": "Managing Technical Debt",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Invisible Mortgage",
+      "parts": [
+        {
+          "visual": "A startup needs to launch a new payment system in two weeks to hit a sales goal. The Lead Engineer says: 'To build it perfectly will take 6 weeks. To build it fast and ugly will take 2 weeks.' The PM chooses fast. They hit the sales goal. But now, buried inside the app, is a terrible piece of code. Six months later, the app crashes entirely because of that code.\n\nThe Debt:\n1. Technical Debt: Taking a shortcut in code architecture today to launch faster, knowing you will have to pay a massive 'interest rate' (bugs, slow servers) in the future.\n2. The PM's Dilemma: Engineers hate technical debt and always want to rewrite the code perfectly. PMs and Sales love technical debt because it allows them to launch features instantly. If the PM ignores the debt for too long, the company goes technically bankrupt.",
+          "audio": "Technical debt is not inherently evil. It is a financial tool. Sometimes you must put a feature on a credit card to survive the month. But if you never pay off the credit card, the interest payments will eventually destroy your engineering team."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Paying the Interest",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "How does 'Technical Debt' physically affect an engineering team?",
+          "options": [
+            "They lose their laptops.",
+            "Velocity Death. As debt piles up, the codebase becomes so fragile and chaotic that adding a simple button takes 3 weeks instead of 1 day. The engineers spend 80% of their time fixing old bugs instead of building new revenue-generating features.",
+            "They get fired by the bank."
+          ],
+          "correct_answer": "Velocity Death. As debt piles up, the codebase becomes so fragile and chaotic that adding a simple button takes 3 weeks instead of 1 day. The engineers spend 80% of their time fixing old bugs instead of building new revenue-generating features.",
+          "explanation": "Debt slows you down until you stop entirely."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CTO negotiating with the PM. What is 'Refactoring'?",
+          "tts_text": "I will build your crazy marketing feature this week, but in exchange, you must give me the entirety of next month to refactor the database. We need to tear down the walls and rebuild the foundation, or the servers will literally melt on Black Friday.",
+          "options": [
+            "Making the code cheaper.",
+            "Paying down the debt. Refactoring is the process of rewriting and cleaning up ugly, rushed code to make it stable and scalable. It creates zero new features for the user, but it prevents the entire app from collapsing in the future.",
+            "Selling the old code."
+          ],
+          "correct_answer": "Paying down the debt. Refactoring is the process of rewriting and cleaning up ugly, rushed code to make it stable and scalable. It creates zero new features for the user, but it prevents the entire app from collapsing in the future.",
+          "explanation": "Cleaning the kitchen after a massive dinner rush."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is it incredibly difficult for a PM to prioritize 'Refactoring' over 'New Features'?",
+          "options": [
+            "Because refactoring sounds boring.",
+            "The Invisible Value. The CEO and the Board only reward PMs for launching shiny new features that drive immediate revenue. Refactoring is completely invisible to the user and the CEO. It takes massive courage for a PM to say, 'We are launching nothing this month so we can fix the pipes.'",
+            "Because engineers don't want to do it."
+          ],
+          "correct_answer": "The Invisible Value. The CEO and the Board only reward PMs for launching shiny new features that drive immediate revenue. Refactoring is completely invisible to the user and the CEO. It takes massive courage for a PM to say, 'We are launching nothing this month so we can fix the pipes.'",
+          "explanation": "It is hard to get promoted for preventing a disaster."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the standard '20% Rule' in agile product management?",
+          "options": [
+            "Giving a 20% discount.",
+            "A healthy compromise. The PM automatically dedicates 20% of every sprint's engineering capacity entirely to fixing bugs and paying down technical debt. This ensures the debt never spirals out of control while still allowing 80% of the time for new features.",
+            "Working 20% faster."
+          ],
+          "correct_answer": "A healthy compromise. The PM automatically dedicates 20% of every sprint's engineering capacity entirely to fixing bugs and paying down technical debt. This ensures the debt never spirals out of control while still allowing 80% of the time for new features.",
+          "explanation": "A structural defense against codebase collapse."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Debt Terminology",
+      "pairs": [
+        { "concept": "Technical Debt", "match": "Taking a quick, ugly shortcut in code to launch a feature faster" },
+        { "concept": "Refactoring", "match": "Spending weeks rewriting old code to make it clean and stable" },
+        { "concept": "Velocity Death", "match": "When the codebase is so messy that adding a new button takes a month" },
+        { "concept": "The 20% Rule", "match": "Allocating a permanent chunk of time in every sprint just to clean up code" }
+      ]
+    }
+  ]
+}

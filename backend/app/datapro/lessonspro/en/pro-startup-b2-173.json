@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-173",
+  "title": "Margins (Gross vs. Net)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Quality of Revenue",
+      "parts": [
+        {
+          "visual": "Startup A sells physical mattresses. For every $1,000 mattress they sell, it costs them $700 in factory labor and materials to make it. (30% Gross Margin). Startup B sells accounting software. For every $1,000 subscription they sell, it costs them $10 in AWS server space. (99% Gross Margin). Wall Street will value Startup B ten times higher than Startup A.\n\nThe Math of Scaling:\n1. Gross Margin: The revenue left over *after* paying the direct costs of delivering the product (COGS). Software has high gross margins. Hardware and services have low gross margins.\n2. Net Margin: The actual profit left over after paying for EVERYTHING (including marketing, office rent, and CEO salaries).",
+          "audio": "Not all revenue is created equal. A million dollars of software revenue is vastly more valuable than a million dollars of consulting revenue, because software margins mean almost all of that million dollars can be reinvested into growth."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Quality of Money",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What does COGS stand for?",
+          "options": [
+            "Company Official Goals.",
+            "Cost of Goods Sold. It is the direct, unavoidable cost required to deliver one unit of your product. If you run a cloud software company, your COGS is basically just AWS server hosting and Stripe credit card fees.",
+            "Cost of Great Software."
+          ],
+          "correct_answer": "Cost of Goods Sold. It is the direct, unavoidable cost required to deliver one unit of your product. If you run a cloud software company, your COGS is basically just AWS server hosting and Stripe credit card fees.",
+          "explanation": "COGS is the baseline penalty for existing."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC criticizing a 'tech' company. Why does the VC say it is actually a services company?",
+          "tts_text": "They claim to be an AI tech company. But every time they get a new client, they have to hire three human consultants to manually set up the system. Their Gross Margins are 40%. They are not a tech company; they are a consulting firm in disguise.",
+          "options": [
+            "Because they don't use AI.",
+            "Services don't scale. True software companies have 80%+ gross margins because the code scales infinitely for free. If you have to hire humans to deliver the product, your margins collapse, and VCs will refuse to value you as a tech company.",
+            "Because consultants are expensive."
+          ],
+          "correct_answer": "Services don't scale. True software companies have 80%+ gross margins because the code scales infinitely for free. If you have to hire humans to deliver the product, your margins collapse, and VCs will refuse to value you as a tech company.",
+          "explanation": "Software scales. Humans don't."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "A startup has $1 Million in revenue, 85% Gross Margins, but is losing $500,000 a month (Negative Net Margin). Is this a broken company?",
+          "options": [
+            "Yes, it is bankrupt.",
+            "No, this is a classic healthy hyper-growth startup. The high Gross Margin proves the core product is wildly profitable. The Negative Net Margin just means they are intentionally spending all that profit (and VC cash) on marketing to grow faster.",
+            "Yes, the margins are too high."
+          ],
+          "correct_answer": "No, this is a classic healthy hyper-growth startup. The high Gross Margin proves the core product is wildly profitable. The Negative Net Margin just means they are intentionally spending all that profit (and VC cash) on marketing to grow faster.",
+          "explanation": "Negative net margin is a choice. Negative gross margin is a death sentence."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why did WeWork crash so spectacularly when it tried to go public?",
+          "options": [
+            "They ran out of coffee.",
+            "They disguised low-margin real estate as high-margin tech. WeWork claimed to be a 'Tech Company', but their COGS (paying rent on massive office buildings) meant their Gross Margins were terrible. Wall Street realized they were just a landlord.",
+            "The app didn't work."
+          ],
+          "correct_answer": "They disguised low-margin real estate as high-margin tech. WeWork claimed to be a 'Tech Company', but their COGS (paying rent on massive office buildings) meant their Gross Margins were terrible. Wall Street realized they were just a landlord.",
+          "explanation": "You cannot trick the math."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Margin Terminology",
+      "pairs": [
+        { "concept": "Gross Margin", "match": "Revenue minus the direct cost of delivering the product (COGS)" },
+        { "concept": "Net Margin", "match": "The final profit after all marketing, salaries, and rent are paid" },
+        { "concept": "COGS", "match": "Cost of Goods Sold (AWS servers, Stripe fees, factory materials)" },
+        { "concept": "Services Company", "match": "A low-margin business that scales by hiring more humans, not software" }
+      ]
+    }
+  ]
+}

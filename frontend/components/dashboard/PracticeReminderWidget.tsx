@@ -162,8 +162,8 @@ export default function PracticeReminderWidget({ themeColor = 'orange' }: Practi
               <Sparkles size={11} className={colors.text} />
               <span className={`text-[8px] font-black uppercase tracking-[0.2em] ${isWood ? 'text-amber-200/50' : (themeColor === 'orange' ? 'text-orange-600' : 'text-slate-900')}`}>Hábitos Diarios</span>
             </div>
-            <h3 className={`text-xs font-black uppercase tracking-tight leading-none ${isWood ? 'text-slate-900' : (themeColor === 'orange' ? 'text-orange-950' : 'text-sky-950')}`}>Recordatorio de Práctica</h3>
-            <p className={`text-[9px] font-semibold leading-none mt-1.5 mb-3 ${isWood ? 'text-sky-500' : (themeColor === 'orange' ? 'text-orange-700' : 'text-sky-700')}`}>
+            <h3 className={`text-xs font-black uppercase tracking-tight leading-none ${isWood ? 'text-white' : (themeColor === 'orange' ? 'text-orange-950' : 'text-sky-950')}`}>Recordatorio de Práctica</h3>
+            <p className={`text-[9px] font-semibold leading-none mt-1.5 mb-3 ${isWood ? 'text-slate-300' : (themeColor === 'orange' ? 'text-orange-700' : 'text-sky-700')}`}>
               Mantén activa tu racha y no pierdas tu XP diario.
             </p>
           </div>
@@ -200,7 +200,7 @@ export default function PracticeReminderWidget({ themeColor = 'orange' }: Practi
                   onChange={(e) => handleTimeChange(idx, e.target.value)}
                   className={`px-1.5 py-1 text-xs font-bold font-mono outline-none rounded-none w-20 ${
                     isWood 
-                      ? 'bg-[#1b0e06] border border-[#5d3017] text-slate-900 focus:border-[#ecd3b5]/60' 
+                      ? 'bg-[#1b0e06] border border-[#5d3017] text-white focus:border-[#ecd3b5]/60' 
                       : (themeColor === 'orange' ? 'bg-white border border-orange-200 text-orange-950 focus:border-orange-400' : 'bg-white border border-sky-200 text-sky-950 focus:border-sky-400')
                   }`}
                 />

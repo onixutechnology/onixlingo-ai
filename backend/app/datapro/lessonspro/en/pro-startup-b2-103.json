@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-103",
+  "title": "Patents and Intellectual Property (IP) Defensibility",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Building the Legal Fortress",
+      "parts": [
+        {
+          "visual": "A biotech startup invents a new pill that stops hair loss. It took them 5 years and $50 Million to discover the exact chemical formula. If they just start selling it, a massive pharmaceutical company will analyze the pill, copy the formula, and mass-produce it the next day, bankrupting the startup.\n\nThe Legal Shield:\n1. Intellectual Property (IP): Creations of the mind (inventions, algorithms, designs) that are legally recognized as exclusive property.\n2. The Patent: A government license that gives the startup the exclusive legal right to exclude others from making, using, or selling their invention for a set period of years (usually 20 years).",
+          "audio": "In deep tech, biotech, and hardware, the patent is the product. Without a patent, you have no defensibility. You are just doing free research and development for massive corporations to steal."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Defending the Invention",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A software startup creates a new task-management app. They want to patent the idea of 'clicking a button to delete a task'. What will the patent office say?",
+          "options": [
+            "They will approve the patent.",
+            "They will reject it. To be patentable, an invention must be 'Novel' (new) and 'Non-obvious'. Clicking a button to delete something is incredibly obvious and already exists everywhere. You cannot patent generic ideas.",
+            "They will charge them a million dollars."
+          ],
+          "correct_answer": "They will reject it. To be patentable, an invention must be 'Novel' (new) and 'Non-obvious'. Clicking a button to delete something is incredibly obvious and already exists everywhere. You cannot patent generic ideas.",
+          "explanation": "Software patents are notoriously difficult to get and defend."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC evaluating the biotech startup. What is the key to their valuation?",
+          "tts_text": "The science is cool, but what really excites me is that they have 15 granted patents blocking any competitor from making this specific type of chemical compound in the USA, Europe, and China. They own the entire category.",
+          "options": [
+            "The founders are cool.",
+            "The IP Portfolio. The VC is not investing in the pills; the VC is investing in the legal monopoly granted by the patents. A strong IP portfolio guarantees that the startup will face zero direct competition for the next decade.",
+            "The logo is nice."
+          ],
+          "correct_answer": "The IP Portfolio. The VC is not investing in the pills; the VC is investing in the legal monopoly granted by the patents. A strong IP portfolio guarantees that the startup will face zero direct competition for the next decade.",
+          "explanation": "A patent is a government-granted monopoly."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of relying entirely on 'Trade Secrets' instead of Patents?",
+          "options": [
+            "There is no danger.",
+            "A trade secret (like the recipe for Coca-Cola) is only protected as long as it remains a secret. If a competitor independently discovers your secret algorithm, or an ex-employee legally reverse-engineers it, you have no legal protection to stop them from using it.",
+            "Trade secrets expire in 5 years."
+          ],
+          "correct_answer": "A trade secret (like the recipe for Coca-Cola) is only protected as long as it remains a secret. If a competitor independently discovers your secret algorithm, or an ex-employee legally reverse-engineers it, you have no legal protection to stop them from using it.",
+          "explanation": "Patents protect you from reverse-engineering. Trade secrets do not."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Patent Troll'?",
+          "options": [
+            "A monster under a bridge.",
+            "A shady company that produces absolutely nothing. They just buy up thousands of vague, broad patents and then sue successful startups, claiming the startup infringed on their patent, hoping the startup will pay a settlement to avoid court.",
+            "A person who reviews patents."
+          ],
+          "correct_answer": "A shady company that produces absolutely nothing. They just buy up thousands of vague, broad patents and then sue successful startups, claiming the startup infringed on their patent, hoping the startup will pay a settlement to avoid court.",
+          "explanation": "These are the parasites of the innovation ecosystem."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Intellectual Property Terminology",
+      "pairs": [
+        { "concept": "Patent", "match": "A government-granted monopoly to exclude others from making your invention" },
+        { "concept": "Trade Secret", "match": "Valuable proprietary information protected by keeping it strictly confidential" },
+        { "concept": "Non-obvious", "match": "A legal requirement that the invention must represent a true leap in innovation" },
+        { "concept": "IP Portfolio", "match": "The total collection of patents, trademarks, and copyrights owned by a company" }
+      ]
+    }
+  ]
+}

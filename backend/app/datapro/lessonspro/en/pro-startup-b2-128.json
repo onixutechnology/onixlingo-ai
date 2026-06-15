@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-128",
+  "title": "Cap Table Management (Option Pools)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Pie of Power",
+      "parts": [
+        {
+          "visual": "A founder owns 100% of their company. They raise a Seed Round and give away 20%. They raise a Series A and give away another 20%. They create an Option Pool for employees and give away 15%. By the time the company IPOs, the founder only owns 8% of their own company.\n\nThe Ledger:\n1. The Cap Table (Capitalization Table): The master spreadsheet that legally tracks exactly who owns what percentage of the company (Founders, Investors, Employees).\n2. The Option Pool: A block of shares set aside specifically to be given to future employees as an incentive to join the high-risk startup.",
+          "audio": "Dilution is a feature, not a bug. Owning 8% of a $10 Billion unicorn makes you vastly richer than owning 100% of a company that failed in a garage. But if you mismanage your Cap Table, you will lose control of your own board."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Dividing the Empire",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A VC offers to invest $5 Million, but demands that the founders create a '20% Employee Option Pool' BEFORE the investment happens. Who pays for the dilution of this option pool?",
+          "options": [
+            "The VC pays for it.",
+            "The Founders pay for it entirely. By forcing the pool to be created *before* the investment (Pre-Money), the VC guarantees that their own new shares will not be diluted by the employee pool. It is a classic VC negotiation tactic.",
+            "The government pays for it."
+          ],
+          "correct_answer": "The Founders pay for it entirely. By forcing the pool to be created *before* the investment (Pre-Money), the VC guarantees that their own new shares will not be diluted by the employee pool. It is a classic VC negotiation tactic.",
+          "explanation": "VCs always protect their own equity at the expense of the founders."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO explaining a massive mistake on their early Cap Table. What did they do wrong?",
+          "tts_text": "When we started, I gave my uncle 10% of the company just for giving me $5,000 to buy laptops. Now the company is worth $100 Million, my uncle is a multi-millionaire, and the new VCs are furious about 'dead equity'.",
+          "options": [
+            "The laptops were broken.",
+            "Dead Equity. Giving massive chunks of the company to early 'friends and family' who do not actively work at the startup destroys the Cap Table. VCs hate investing when large portions of the company are owned by people doing zero work.",
+            "The uncle was a bad programmer."
+          ],
+          "correct_answer": "Dead Equity. Giving massive chunks of the company to early 'friends and family' who do not actively work at the startup destroys the Cap Table. VCs hate investing when large portions of the company are owned by people doing zero work.",
+          "explanation": "Never give away equity casually. It is your most expensive asset."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do startups grant 'Stock Options' instead of just giving employees actual shares immediately?",
+          "options": [
+            "Because options sound cooler.",
+            "Tax and Vesting Control. If you give an employee actual shares, it triggers an immediate, massive tax bill for them. Options give them the *right* to buy the stock later when it is valuable, and allows the company to enforce a 4-year vesting schedule.",
+            "Because actual shares are too heavy."
+          ],
+          "correct_answer": "Tax and Vesting Control. If you give an employee actual shares, it triggers an immediate, massive tax bill for them. Options give them the *right* to buy the stock later when it is valuable, and allows the company to enforce a 4-year vesting schedule.",
+          "explanation": "Options are the golden handcuffs of Silicon Valley."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a Cap Table gets too messy (e.g., 50 different micro-investors with different voting rights)?",
+          "options": [
+            "The spreadsheet crashes.",
+            "The company becomes 'Un-fundable'. Major Series A or B investors will simply refuse to invest because getting all 50 angry micro-investors to legally agree to the new terms is impossible. A clean cap table is required for growth.",
+            "The SEC gives them a fine."
+          ],
+          "correct_answer": "The company becomes 'Un-fundable'. Major Series A or B investors will simply refuse to invest because getting all 50 angry micro-investors to legally agree to the new terms is impossible. A clean cap table is required for growth.",
+          "explanation": "Messy cap tables kill great companies."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Equity Terminology",
+      "pairs": [
+        { "concept": "Cap Table", "match": "The legal ledger detailing exactly who owns what percentage of the startup" },
+        { "concept": "Option Pool", "match": "Shares set aside to attract and retain high-quality employees" },
+        { "concept": "Dead Equity", "match": "Large portions of the company owned by people who no longer contribute value" },
+        { "concept": "Dilution", "match": "The decrease in ownership percentage that occurs when new shares are issued" }
+      ]
+    }
+  ]
+}

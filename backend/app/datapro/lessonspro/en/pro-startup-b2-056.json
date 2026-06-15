@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-056",
+  "title": "Shipping Fast (The MVF)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Velocity of Code",
+      "parts": [
+        {
+          "visual": "A perfectionist engineering team spends 6 months building an incredible, flawless new feature. They launch it. Zero users click on it. They just wasted $500,000 of investor money building something nobody wanted.\n\nThe Solution:\n1. Shipping Fast: The philosophy that releasing imperfect code quickly is mathematically superior to releasing perfect code slowly.\n2. MVF (Minimum Viable Feature): Instead of building the entire feature, you build the ugliest, fastest version of it in 3 days just to see if any users actually click the button.",
+          "audio": "In a startup, speed is your only defensible advantage against massive corporations. If you are not deeply embarrassed by the first version of your product when you launch it, you launched too late."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Art of Imperfection",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A Product Manager wants to add an 'Export to PDF' button. The engineers say it will take 3 weeks to build the PDF generator. How can the PM test this as a 'Minimum Viable Feature' in 1 hour?",
+          "options": [
+            "Fire the engineers.",
+            "Put a fake 'Export to PDF' button on the site. When users click it, show a pop-up saying 'Coming Soon!' and count how many people clicked it. If nobody clicks, you saved 3 weeks of engineering time.",
+            "Build the PDF generator in 3 hours."
+          ],
+          "correct_answer": "Put a fake 'Export to PDF' button on the site. When users click it, show a pop-up saying 'Coming Soon!' and count how many people clicked it. If nobody clicks, you saved 3 weeks of engineering time.",
+          "explanation": "This is called a 'Painted Door Test'. It measures intent before writing code."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO yelling at the CTO. Why is the CEO angry about the code quality?",
+          "tts_text": "I don't care if the code is messy! We are a startup, not NASA! If this feature has a few bugs, the users will complain and we will fix it tomorrow. But if we wait another month to launch it perfectly, we will run out of money and die.",
+          "options": [
+            "The CEO hates NASA.",
+            "The trade-off between Quality and Survival. Perfect code is a luxury that early-stage startups cannot afford. The market rewards speed of iteration far more than it rewards initial perfection.",
+            "The CTO is too fast."
+          ],
+          "correct_answer": "The trade-off between Quality and Survival. Perfect code is a luxury that early-stage startups cannot afford. The market rewards speed of iteration far more than it rewards initial perfection.",
+          "explanation": "If your product is perfect, you spent too much time building it."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Feature Creep'?",
+          "options": [
+            "A scary person in the office.",
+            "The deadly tendency to constantly add new requirements and 'cool ideas' to a project while it is being built, which delays the launch date indefinitely and burns through all the cash.",
+            "A feature that walks slowly."
+          ],
+          "correct_answer": "The deadly tendency to constantly add new requirements and 'cool ideas' to a project while it is being built, which delays the launch date indefinitely and burns through all the cash.",
+          "explanation": "Feature creep is the enemy of shipping fast. You must lock the scope."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do elite engineering teams practice 'Continuous Deployment'?",
+          "options": [
+            "Because they never sleep.",
+            "It is a system that automatically pushes code to the live servers multiple times a day. Instead of one massive, terrifying 'Launch Day' every 6 months, updates happen instantly and continuously, reducing risk.",
+            "Because the servers are cheap."
+          ],
+          "correct_answer": "It is a system that automatically pushes code to the live servers multiple times a day. Instead of one massive, terrifying 'Launch Day' every 6 months, updates happen instantly and continuously, reducing risk.",
+          "explanation": "Small, frequent updates are drastically safer than massive, rare updates."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Product Culture Terminology",
+      "pairs": [
+        { "concept": "Shipping", "match": "The act of releasing a product or feature to the live market" },
+        { "concept": "Feature Creep", "match": "The ongoing expansion of new features in a product, leading to endless delays" },
+        { "concept": "Continuous Deployment", "match": "Automated software release process pushing updates multiple times a day" },
+        { "concept": "Painted Door Test", "match": "Adding a fake button to test user demand before writing the actual code" }
+      ]
+    }
+  ]
+}

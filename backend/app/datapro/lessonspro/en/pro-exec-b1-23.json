@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-23",
+  "title": "Crisis Management Basics",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Leading Through the Storm",
+      "parts": [
+        {
+          "visual": "A crisis is any unexpected event that threatens a company's reputation or bottom line. Executives earn their title during a crisis.\n\nThe 3 Cs of Crisis Management:\n1. Candor: Be honest about what happened.\n2. Concern: Show empathy for those affected.\n3. Control: Present a clear action plan to fix it.",
+          "audio": "A crisis is an unexpected event that threatens a company. Use the 3 Cs of Crisis Management: Candor, Concern, and Control."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Crisis Playbook",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A major client data leak has just occurred. What is your immediate executive response?",
+          "options": [
+            "Deny it on Twitter.",
+            "Acknowledge the breach publicly, express deep concern, and outline the immediate steps being taken to secure the data.",
+            "Blame the IT intern."
+          ],
+          "correct_answer": "Acknowledge the breach publicly, express deep concern, and outline the immediate steps being taken to secure the data.",
+          "explanation": "This approach uses all 3 Cs (Candor, Concern, Control) and prevents rumors from filling the silence."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO's statement. Which of the 3 Cs is this?",
+          "tts_text": "We deeply regret the disruption this outage has caused to your businesses.",
+          "options": [
+            "Candor (Honesty)",
+            "Concern (Empathy)",
+            "Control (Action)"
+          ],
+          "correct_answer": "Concern (Empathy)",
+          "explanation": "Expressing regret and acknowledging the impact on the customer is a textbook display of 'Concern'."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'damage control'?",
+          "options": [
+            "Fixing broken office furniture.",
+            "Action taken to minimize the negative consequences of an incident.",
+            "Firing everyone involved."
+          ],
+          "correct_answer": "Action taken to minimize the negative consequences of an incident.",
+          "explanation": "Damage control is the operational and PR response required to stabilize a crisis."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is it important to designate a 'single point of contact' during a crisis?",
+          "options": [
+            "So only one person gets fired.",
+            "To ensure consistent, accurate messaging to the public and employees, avoiding conflicting statements.",
+            "To save money on PR."
+          ],
+          "correct_answer": "To ensure consistent, accurate messaging to the public and employees, avoiding conflicting statements.",
+          "explanation": "Multiple people speaking to the press can lead to contradictory information, escalating the crisis."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Crisis Vocabulary",
+      "pairs": [
+        { "concept": "PR Disaster", "match": "A severe public relations failure" },
+        { "concept": "Mitigation", "match": "Action of reducing severity or damage" },
+        { "concept": "Transparency", "match": "Operating in an open and honest way" },
+        { "concept": "Contingency plan", "match": "A backup plan for unexpected events" }
+      ]
+    }
+  ]
+}

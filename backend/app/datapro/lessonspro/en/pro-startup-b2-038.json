@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-038",
+  "title": "The B2B Sales Cycle",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Selling to the Enterprise",
+      "parts": [
+        {
+          "visual": "Selling a $10 app to a teenager takes 30 seconds. Selling a $100,000 software package to a bank takes 12 months, 40 meetings, a legal review, a security audit, and a dinner with the CEO.\n\nThe Battlefield:\n1. B2B (Business to Business): Selling your software to other companies, not consumers.\n2. The Sales Cycle: The massive amount of time it takes from the first email (Lead) to the signed contract (Closed-Won). It is highly bureaucratic and requires extreme patience and cash reserves.",
+          "audio": "Enterprise B2B sales is not about having the coolest product. It is about navigating corporate politics, surviving security audits, and convincing a terrified executive that buying your software will not get them fired."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Navigating the Bureaucracy",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup pitches a brilliant HR software to the 'Head of Recruiting' at a massive corporation. The Head of Recruiting loves it and wants to buy it. Why is the deal not closed yet?",
+          "options": [
+            "Because the startup forgot to ask for money.",
+            "Because the Head of Recruiting is a 'Champion', but they are not the 'Economic Buyer'. The CFO still has to approve the budget, and the IT department has to approve the security.",
+            "Because it is the weekend."
+          ],
+          "correct_answer": "Because the Head of Recruiting is a 'Champion', but they are not the 'Economic Buyer'. The CFO still has to approve the budget, and the IT department has to approve the security.",
+          "explanation": "In B2B sales, you never sell to one person. You sell to a committee."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the salesperson complaining. What killed the deal at the last second?",
+          "tts_text": "We had the verbal yes! But then it went to 'Procurement'. The legal team took three months to review the contract, rewrote all the liability clauses, and demanded a 30% discount.",
+          "options": [
+            "The product stopped working.",
+            "The Procurement Department. Their entire job is to slow down the purchase, mitigate legal risk, and negotiate the price down. They are the final boss of enterprise sales.",
+            "The salesperson quit."
+          ],
+          "correct_answer": "The Procurement Department. Their entire job is to slow down the purchase, mitigate legal risk, and negotiate the price down. They are the final boss of enterprise sales.",
+          "explanation": "Never celebrate a deal until the contract clears Procurement and the cash is in the bank."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Proof of Concept' (POC) in B2B sales?",
+          "options": [
+            "A theoretical essay about the code.",
+            "A paid (or unpaid) trial period where the corporation tests the software in a limited environment to prove it actually works before committing to a massive multi-year contract.",
+            "A screenshot of the app."
+          ],
+          "correct_answer": "A paid (or unpaid) trial period where the corporation tests the software in a limited environment to prove it actually works before committing to a massive multi-year contract.",
+          "explanation": "A successful POC is the bridge over corporate fear."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do B2B startups need to raise so much Venture Capital just to fund their sales team?",
+          "options": [
+            "Salespeople demand expensive cars.",
+            "Because of the 'Sales Cycle Time'. If the sales cycle takes 9 months, the startup has to pay the salesperson's salary for 9 straight months before that person closes a single dollar of revenue.",
+            "Because sales teams are bad at math."
+          ],
+          "correct_answer": "Because of the 'Sales Cycle Time'. If the sales cycle takes 9 months, the startup has to pay the salesperson's salary for 9 straight months before that person closes a single dollar of revenue.",
+          "explanation": "Long sales cycles burn massive amounts of runway."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "B2B Sales Terminology",
+      "pairs": [
+        { "concept": "Sales Cycle", "match": "The total time from initial contact with a prospect to signing the final contract" },
+        { "concept": "Champion", "match": "An internal employee at the target company who loves your product and fights to buy it" },
+        { "concept": "Economic Buyer", "match": "The executive who actually controls the budget and signs the check" },
+        { "concept": "Procurement", "match": "The department responsible for purchasing, legal review, and contract negotiation" }
+      ]
+    }
+  ]
+}

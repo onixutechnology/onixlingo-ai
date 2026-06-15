@@ -1,0 +1,100 @@
+{
+  "id": "pro-startup-b2-182",
+  "title": "Agile vs. Waterfall in Startups",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Speed of Execution",
+      "parts": [
+        {
+          "visual": "A 1990s corporation decides to build an app. They spend 6 months writing a 500-page specification document. Then engineers spend 2 years coding it in secret. When they finally launch, the market has completely changed and nobody wants the app. A 2024 startup builds a rough version in 2 weeks, launches it, gets user feedback, and updates it every Friday.\n\nThe Methodologies:\n1. Waterfall: The old way. A linear, rigid process where each phase (Design, Build, Test, Deploy) is fully completed before the next begins. It is perfect for building bridges, but fatal for software.\n2. Agile: The startup way. A fluid process based on 'Sprints' (usually 2-week cycles) where teams build small pieces, launch them immediately, and adapt to user feedback instantly.",
+          "audio": "In a startup, planning what you will build 12 months from now is a hallucination. You don't know what users want today. Agile development assumes that your initial plan is wrong, and optimizes for adapting to reality as fast as possible."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Managing the Chaos",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Sprint' in Agile development?",
+          "options": [
+            "Running around the office.",
+            "A short, fixed timeframe (usually 2 weeks) where the engineering team commits to building a specific set of small features. At the end of the 2 weeks, that code MUST be finished and deployable to actual users.",
+            "A long 6-month planning phase."
+          ],
+          "correct_answer": "A short, fixed timeframe (usually 2 weeks) where the engineering team commits to building a specific set of small features. At the end of the 2 weeks, that code MUST be finished and deployable to actual users.",
+          "explanation": "Sprints force momentum and prevent endless perfectionism."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Product Manager. What is the 'Daily Stand-Up'?",
+          "tts_text": "Every morning at 10 AM, the engineering team meets for exactly 10 minutes. No chairs allowed. Every person answers three questions: What did you do yesterday? What are you doing today? What is blocking you from working?",
+          "options": [
+            "A comedy show.",
+            "A hyper-efficient daily alignment meeting. It is designed to instantly identify 'blockers' (e.g., an engineer is stuck because they are waiting on a design file) so the manager can remove the obstacle immediately and keep the team moving.",
+            "A long debate about the future."
+          ],
+          "correct_answer": "A hyper-efficient daily alignment meeting. It is designed to instantly identify 'blockers' (e.g., an engineer is stuck because they are waiting on a design file) so the manager can remove the obstacle immediately and keep the team moving.",
+          "explanation": "Communication should be a quick pulse, not a heavy meeting."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Waterfall' development dangerous for a software startup?",
+          "options": [
+            "Because water ruins computers.",
+            "It creates a massive feedback loop delay. If you lock yourself in a room for 18 months executing a rigid plan, you cannot adapt if a competitor launches or if user preferences change. You launch a finished product into a market that no longer exists.",
+            "Because the documents are too heavy."
+          ],
+          "correct_answer": "It creates a massive feedback loop delay. If you lock yourself in a room for 18 months executing a rigid plan, you cannot adapt if a competitor launches or if user preferences change. You launch a finished product into a market that no longer exists.",
+          "explanation": "Rigidity is death in early-stage tech."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the role of a 'Scrum Master' or Agile Coach?",
+          "options": [
+            "To yell at people.",
+            "To protect the process. They don't write code. Their job is to ensure the team stays disciplined, runs the daily stand-ups, removes administrative blockers, and prevents the CEO from randomly changing the engineers' tasks in the middle of a sprint.",
+            "To design the UI."
+          ],
+          "correct_answer": "To protect the process. They don't write code. Their job is to ensure the team stays disciplined, runs the daily stand-ups, removes administrative blockers, and prevents the CEO from randomly changing the engineers' tasks in the middle of a sprint.",
+          "explanation": "The protector of engineering focus."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Development",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the core philosophy of Agile:",
+          "parts": [
+            "Optimize",
+            "for",
+            "adaptability",
+            "instead",
+            "of",
+            "predictability."
+          ],
+          "correct_order": [
+            "Optimize",
+            "for",
+            "adaptability",
+            "instead",
+            "of",
+            "predictability."
+          ],
+          "explanation": "You cannot predict the future, but you can react to it instantly."
+        }
+      ]
+    }
+  ]
+}

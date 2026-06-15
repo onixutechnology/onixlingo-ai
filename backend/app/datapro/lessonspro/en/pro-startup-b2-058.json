@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-058",
+  "title": "Agile vs. Waterfall in the Real World",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The War of Frameworks",
+      "parts": [
+        {
+          "visual": "A bank spends 2 years writing a 500-page document describing exactly how a new software should work. They build it. By the time it launches, the market has changed, and nobody wants it. This is Waterfall.\n\nThe Modern Approach:\n1. Waterfall: The traditional method. Plan everything perfectly upfront, then build it sequentially over years.\n2. Agile: The startup method. Build a tiny piece in 2 weeks (a 'Sprint'), show it to the user, get feedback, and adjust immediately. It assumes that the original plan is always wrong.",
+          "audio": "In the modern tech world, nobody uses Waterfall unless they are building a nuclear submarine. Software is fluid. Agile methodologies allow a company to pivot instantly when the market provides negative feedback."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Executing Sprints",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the primary psychological purpose of a two-week 'Sprint' in Agile methodology?",
+          "options": [
+            "To make engineers run fast.",
+            "To force a 'Feedback Loop'. By forcing the team to produce something functional every two weeks, the company can show it to users and realize they are building the wrong thing after 14 days, instead of 14 months.",
+            "To plan a long vacation."
+          ],
+          "correct_answer": "To force a 'Feedback Loop'. By forcing the team to produce something functional every two weeks, the company can show it to users and realize they are building the wrong thing after 14 days, instead of 14 months.",
+          "explanation": "Sprints mitigate the risk of building something nobody wants."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Product Manager running a 'Daily Stand-up'. What are the three questions everyone must answer?",
+          "tts_text": "Alright team, 15 minutes max. Everyone answer: What did you do yesterday? What are you doing today? And what is blocking you from getting your work done?",
+          "options": [
+            "What did you eat, sleep, and drink?",
+            "Yesterday, Today, and Blockers. This rapid daily meeting ensures total transparency and instantly highlights if an engineer is stuck on a problem so the team can unblock them immediately.",
+            "Who, What, and Where?"
+          ],
+          "correct_answer": "Yesterday, Today, and Blockers. This rapid daily meeting ensures total transparency and instantly highlights if an engineer is stuck on a problem so the team can unblock them immediately.",
+          "explanation": "Stand-ups are designed to kill miscommunication before it festers."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How do Agile teams handle changing requirements from the CEO mid-project?",
+          "options": [
+            "They cry.",
+            "They put the new requirement into the 'Backlog'. They do not interrupt the current 2-week sprint. The CEO must wait until the current sprint is finished, and then the new feature can be prioritized for the next sprint.",
+            "They stop everything and build it."
+          ],
+          "correct_answer": "They put the new requirement into the 'Backlog'. They do not interrupt the current 2-week sprint. The CEO must wait until the current sprint is finished, and then the new feature can be prioritized for the next sprint.",
+          "explanation": "Agile protects engineers from the chaos of a visionary CEO."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Fake Agile'?",
+          "options": [
+            "When the team isn't actually fast.",
+            "When a massive corporation uses Agile terminology (like 'Sprints' and 'Scrum Masters') but still requires 6 months of management approvals before any code can actually be launched to the public.",
+            "When the software is fake."
+          ],
+          "correct_answer": "When a massive corporation uses Agile terminology (like 'Sprints' and 'Scrum Masters') but still requires 6 months of management approvals before any code can actually be launched to the public.",
+          "explanation": "Agile without autonomy is just micromanagement with new vocabulary."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Methodology Terminology",
+      "pairs": [
+        { "concept": "Agile", "match": "An iterative approach to software development focused on rapid feedback" },
+        { "concept": "Sprint", "match": "A short, time-boxed period (usually 2 weeks) to complete a set amount of work" },
+        { "concept": "Daily Stand-up", "match": "A fast daily meeting where team members report progress and blockers" },
+        { "concept": "Backlog", "match": "A prioritized list of features and fixes that the team will work on in the future" }
+      ]
+    }
+  ]
+}

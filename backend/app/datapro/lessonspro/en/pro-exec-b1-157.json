@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-157",
+  "title": "Whistleblowers and Retaliation",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Enemy Inside",
+      "parts": [
+        {
+          "visual": "A 'Whistleblower' is an employee who discovers the company is doing something illegal (fraud, pollution, safety violations) and reports it to the government or the media.\n\nThe Executive Response:\n1. The Temptation: The instinct is to immediately fire the 'traitor' for destroying the company's reputation.\n2. The Law: Firing a whistleblower is called 'Retaliation'. It is a severe federal crime that can send the CEO directly to prison.",
+          "audio": "A Whistleblower exposes corporate crimes to the government. Executives often want to fire them immediately, but this is considered Retaliation, which is a severe federal crime."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Internal Investigation",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A junior accountant realizes the CFO is stealing money. The accountant emails the SEC (Securities and Exchange Commission). The CEO finds out. What is the only legal action the CEO can take?",
+          "options": [
+            "Fire the accountant for breaking confidentiality.",
+            "Immediately put the accountant on paid leave to protect them from harassment, fire the CFO, and hire an independent law firm to investigate the fraud.",
+            "Bribe the accountant to be quiet."
+          ],
+          "correct_answer": "Immediately put the accountant on paid leave to protect them from harassment, fire the CFO, and hire an independent law firm to investigate the fraud.",
+          "explanation": "If you punish the whistleblower in any way (firing them, demoting them, or even moving their desk), you are committing criminal Retaliation."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the enraged VP. What illegal action is he proposing?",
+          "tts_text": "He leaked our toxic waste data to the New York Times. I don't care if it's true. Find a reason to fire him today. Say he was late to work.",
+          "options": [
+            "A standard HR procedure.",
+            "Pretextual Firing (Disguised Retaliation).",
+            "A promotion."
+          ],
+          "correct_answer": "Pretextual Firing (Disguised Retaliation).",
+          "explanation": "Judges are experts at spotting this. Firing a whistleblower for a sudden, minor 'performance issue' will result in massive punitive damages."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why does the government offer massive financial bounties (sometimes millions of dollars) to corporate whistleblowers?",
+          "options": [
+            "Because the government has too much money.",
+            "To break the corporate 'Wall of Silence'. The financial reward must be large enough to offset the fact that the whistleblower will likely be blacklisted from their industry forever.",
+            "To encourage teamwork."
+          ],
+          "correct_answer": "To break the corporate 'Wall of Silence'. The financial reward must be large enough to offset the fact that the whistleblower will likely be blacklisted from their industry forever.",
+          "explanation": "Whistleblowers often destroy their own careers to expose the truth. The bounty system incentivizes honesty over corporate loyalty."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is an NDA (Non-Disclosure Agreement)?",
+          "options": [
+            "A contract to buy a house.",
+            "A legal contract restricting an employee from sharing company secrets. However, NDAs cannot be legally used to silence whistleblowers reporting actual crimes.",
+            "A retirement plan."
+          ],
+          "correct_answer": "A legal contract restricting an employee from sharing company secrets. However, NDAs cannot be legally used to silence whistleblowers reporting actual crimes.",
+          "explanation": "You can use an NDA to protect your software code. You cannot use an NDA to hide toxic waste."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Compliance Terminology",
+      "pairs": [
+        { "concept": "Whistleblower", "match": "A person who informs on a person or organization engaged in an illicit activity" },
+        { "concept": "Retaliation", "match": "Punishing an employee for engaging in legally protected activity" },
+        { "concept": "NDA", "match": "Non-Disclosure Agreement" },
+        { "concept": "SEC", "match": "Securities and Exchange Commission (US financial regulator)" }
+      ]
+    }
+  ]
+}

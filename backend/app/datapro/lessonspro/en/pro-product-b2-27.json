@@ -1,0 +1,102 @@
+{
+  "id": "pro-product-b2-27",
+  "title": "The Product Roadmap",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Map is Not the Territory",
+      "parts": [
+        {
+          "visual": "A CEO looks at a beautiful Gantt chart. It says 'Feature X will launch on October 14th'. It is currently January. The PM knows October 14th is a complete lie, because nobody can predict the future of software 10 months in advance. But the CEO demands a date.\n\nThe Illusion of Control:\n1. The Roadmap: A strategic document that communicates the sequence of problems the team plans to solve over the next 6-12 months. \n2. The Timeline Trap: Amateurs treat Roadmaps like absolute legal contracts with exact dates. Professionals treat Roadmaps as 'Strategic Intentions'. The further out the date, the more it is a guess. Great roadmaps use 'Now, Next, Later' instead of hard dates.",
+          "audio": "A roadmap that promises 50 features on 50 exact dates is not a strategy; it is a fantasy. A real roadmap communicates priorities. It tells the company what we are NOT doing, so we can focus on what we ARE doing."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Navigating the Map",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Why is the 'Now, Next, Later' roadmap format superior to a traditional timeline with exact dates?",
+          "options": [
+            "Because it uses fewer words.",
+            "It acknowledges the reality of software development. 'Now' is highly detailed. 'Next' is a solid plan but flexible. 'Later' is just a blurry vision. It prevents the sales team from promising an exact feature to a client in December.",
+            "Because it looks prettier in presentations."
+          ],
+          "correct_answer": "It acknowledges the reality of software development. 'Now' is highly detailed. 'Next' is a solid plan but flexible. 'Later' is just a blurry vision. It prevents the sales team from promising an exact feature to a client in December.",
+          "explanation": "Honesty over false precision."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the PM defending the roadmap to the Sales team. What is the core function of the roadmap?",
+          "tts_text": "I understand you want the custom dashboard for your big client. But look at the roadmap. Q3 is entirely dedicated to fixing the database security. If we stop to build your dashboard, the app will get hacked. The roadmap's job is to enforce focus.",
+          "options": [
+            "To make the sales team angry.",
+            "Alignment and Refusal. The roadmap is a shield. It aligns the entire company on the top priorities, and it gives the PM the official authority to say 'No' to any new idea that distracts from those priorities.",
+            "To schedule vacations."
+          ],
+          "correct_answer": "Alignment and Refusal. The roadmap is a shield. It aligns the entire company on the top priorities, and it gives the PM the official authority to say 'No' to any new idea that distracts from those priorities.",
+          "explanation": "Strategy is deciding what not to do."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is an 'Outcome-Based Roadmap'?",
+          "options": [
+            "A roadmap with no pictures.",
+            "Instead of listing features (e.g., 'Build AI Chatbot'), it lists the business problems to be solved (e.g., 'Reduce customer support tickets by 20%'). This allows the engineering team to invent the best solution, rather than just executing a dictated feature.",
+            "A roadmap based on luck."
+          ],
+          "correct_answer": "Instead of listing features (e.g., 'Build AI Chatbot'), it lists the business problems to be solved (e.g., 'Reduce customer support tickets by 20%'). This allows the engineering team to invent the best solution, rather than just executing a dictated feature.",
+          "explanation": "Focus on the destination, let the engineers build the car."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How often should a healthy product roadmap change?",
+          "options": [
+            "Never.",
+            "Constantly, based on new data. If a PM launches a feature in Q1, and the data shows users hate it, a rigid roadmap would force the PM to keep building the Q2 feature anyway. An agile roadmap adapts immediately to the new reality.",
+            "Every day at noon."
+          ],
+          "correct_answer": "Constantly, based on new data. If a PM launches a feature in Q1, and the data shows users hate it, a rigid roadmap would force the PM to keep building the Q2 feature anyway. An agile roadmap adapts immediately to the new reality.",
+          "explanation": "The map must reflect the changing territory."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Strategy",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe an outcome-based roadmap:",
+          "parts": [
+            "Focus",
+            "on",
+            "solving",
+            "problems,",
+            "not",
+            "shipping",
+            "features."
+          ],
+          "correct_order": [
+            "Focus",
+            "on",
+            "solving",
+            "problems,",
+            "not",
+            "shipping",
+            "features."
+          ],
+          "explanation": "Nobody cares about the feature; they care about the result."
+        }
+      ]
+    }
+  ]
+}

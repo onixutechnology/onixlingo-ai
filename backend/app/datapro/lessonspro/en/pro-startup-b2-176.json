@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-176",
+  "title": "Viral Loops and Referral Engines",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Engineering Word of Mouth",
+      "parts": [
+        {
+          "visual": "A startup pays $0 in advertising. User A downloads the app. In order to use the app properly, User A must invite User B and User C. Now the startup has 3 users. User B and User C invite two more people each. The startup now has 7 users. This mathematical explosion is called a Viral Loop.\n\nThe Viral Coefficient (K-Factor):\n1. The K-Factor: The exact number of new users that every existing user successfully recruits. If K is 1.2, every 10 users invite 12 new users. The company will grow infinitely with zero marketing budget.\n2. Built-in Virality vs. Artificial Virality: True virality happens when the product is literally useless unless you invite a friend (like WhatsApp). Artificial virality is offering someone $10 to invite a friend (like Uber or PayPal).",
+          "audio": "Virality is not 'making a funny video on TikTok.' In Silicon Valley, virality is a strict mathematical formula engineered directly into the software's core mechanics. You must force your users to become your unpaid sales team."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Math of Contagion",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a startup's 'K-Factor' is 0.8?",
+          "options": [
+            "The app crashes.",
+            "The viral loop will eventually die out. A K-Factor of 0.8 means every 10 users only invite 8 new users. The next generation is smaller than the last. To achieve infinite exponential growth, the K-Factor must be strictly greater than 1.0.",
+            "The company becomes a unicorn."
+          ],
+          "correct_answer": "The viral loop will eventually die out. A K-Factor of 0.8 means every 10 users only invite 8 new users. The next generation is smaller than the last. To achieve infinite exponential growth, the K-Factor must be strictly greater than 1.0.",
+          "explanation": "If K < 1, the fire eventually burns out."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the growth hacker explaining Dropbox's early strategy. What was their famous referral engine?",
+          "tts_text": "We were spending $300 on Google Ads to get a customer who only paid us $99. We were dying. So, we stopped buying ads. Instead, we gave users 500 megabytes of free storage space for every friend they successfully invited. We gamified the storage.",
+          "options": [
+            "They gave away free computers.",
+            "The Double-Sided Incentive. Dropbox rewarded BOTH the person sending the invite (more space) and the person accepting the invite (more space). This artificial virality exploded their growth from 100,000 to 4 million users in 15 months.",
+            "They bought more Google ads."
+          ],
+          "correct_answer": "The Double-Sided Incentive. Dropbox rewarded BOTH the person sending the invite (more space) and the person accepting the invite (more space). This artificial virality exploded their growth from 100,000 to 4 million users in 15 months.",
+          "explanation": "A bribe only works if both sides win."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why did Hotmail grow so incredibly fast in 1996 without a marketing budget?",
+          "options": [
+            "Because emails were hot.",
+            "The 'Inherent Virality' signature. At the bottom of every single email sent by a Hotmail user, the company automatically attached a line of text: 'Get your free email at Hotmail'. Every time a user used the product, they were advertising it to a non-user.",
+            "They advertised on television."
+          ],
+          "correct_answer": "The 'Inherent Virality' signature. At the bottom of every single email sent by a Hotmail user, the company automatically attached a line of text: 'Get your free email at Hotmail'. Every time a user used the product, they were advertising it to a non-user.",
+          "explanation": "The product itself is the billboard."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of relying purely on a viral loop for growth?",
+          "options": [
+            "Viruses are dangerous.",
+            "Viral Degradation. The early adopters invite their friends quickly, but eventually, everyone in the target market has already seen the invite. The K-Factor naturally drops over time, meaning the startup must eventually build traditional sales channels.",
+            "The servers get too cold."
+          ],
+          "correct_answer": "Viral Degradation. The early adopters invite their friends quickly, but eventually, everyone in the target market has already seen the invite. The K-Factor naturally drops over time, meaning the startup must eventually build traditional sales channels.",
+          "explanation": "You eventually run out of fresh humans."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Virality Terminology",
+      "pairs": [
+        { "concept": "Viral Loop", "match": "The cycle of a user joining, inviting friends, who then invite more friends" },
+        { "concept": "K-Factor", "match": "The exact mathematical number of new users generated by one existing user" },
+        { "concept": "Inherent Virality", "match": "When the product (like Zoom) is literally impossible to use without inviting someone" },
+        { "concept": "Double-Sided Incentive", "match": "Rewarding both the recruiter and the recruited (e.g., $10 for both)" }
+      ]
+    }
+  ]
+}

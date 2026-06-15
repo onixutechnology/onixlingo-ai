@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-110",
+  "title": "Land and Expand (The Enterprise Strategy)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Trojan Horse",
+      "parts": [
+        {
+          "visual": "A massive bank has 50,000 employees. A startup does not try to sell software to the CEO. Instead, the startup gives the software for free to a tiny team of 5 designers inside the bank. The designers love it. They invite other teams. A year later, all 50,000 employees are using it, and the startup forces the bank's CFO to sign a $5 Million contract.\n\nThe Tactic:\n1. Land and Expand: A sales strategy where a startup 'lands' inside a massive corporation with a tiny, cheap (or free) pilot project, bypassing the strict corporate procurement process, and then organically 'expands' to the rest of the company.\n2. Bottom-Up Sales: Selling to the actual end-users (the employees) rather than the executives (Top-Down).",
+          "audio": "Trying to sell a $5 Million software contract to a Fortune 500 CFO is almost impossible for an unknown startup. The secret is to infiltrate the company from the bottom up, making the employees absolutely dependent on your tool before the CFO even knows you exist."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Infiltrating the Giant",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Why is the 'Land and Expand' model (like Slack or Figma uses) so effective against massive corporations?",
+          "options": [
+            "Because the logos are cute.",
+            "It bypasses Procurement. A $5 Million contract takes 18 months of legal review. A $10/month subscription can be bought by a single employee using their corporate credit card instantly. You sneak past the bureaucratic guards.",
+            "Because CFOs are easily tricked."
+          ],
+          "correct_answer": "It bypasses Procurement. A $5 Million contract takes 18 months of legal review. A $10/month subscription can be bought by a single employee using their corporate credit card instantly. You sneak past the bureaucratic guards.",
+          "explanation": "The corporate credit card is the ultimate backdoor."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the startup's VP of Sales explaining the trap they set for the enterprise. What forces the massive contract?",
+          "tts_text": "We let 5,000 of their employees use our tool for free. All their critical project data is now inside our system. Tomorrow, we are turning off the 'Single Sign-On (SSO)' security feature unless the company signs a formal $500k Enterprise Agreement.",
+          "options": [
+            "They threaten to delete the data.",
+            "The Security Chokehold. The employees dragged the software into the company. But the IT department cannot allow 5,000 employees to use software without SSO security. The startup holds the security features hostage to force the enterprise upgrade.",
+            "They threaten to call the police."
+          ],
+          "correct_answer": "The Security Chokehold. The employees dragged the software into the company. But the IT department cannot allow 5,000 employees to use software without SSO security. The startup holds the security features hostage to force the enterprise upgrade.",
+          "explanation": "This is why Open Core models are so financially devastating."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "In a 'Land and Expand' model, what is the 'Land' phase?",
+          "options": [
+            "Buying a house.",
+            "Acquiring the very first group of users inside the target company, often completely for free or at a massive loss, simply to prove the product works and gain a foothold inside the corporate walls.",
+            "Sending a salesperson on an airplane."
+          ],
+          "correct_answer": "Acquiring the very first group of users inside the target company, often completely for free or at a massive loss, simply to prove the product works and gain a foothold inside the corporate walls.",
+          "explanation": "The 'Land' is the Trojan Horse."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the critical product requirement for 'Bottom-Up' sales to actually work?",
+          "options": [
+            "It must be very expensive.",
+            "Consumer-grade UX (User Experience). In top-down sales, the boss forces employees to use terrible software. In bottom-up sales, the employees *choose* to use your software. If your B2B tool isn't as beautiful and easy to use as Instagram, they will ignore it.",
+            "It must require a manual."
+          ],
+          "correct_answer": "Consumer-grade UX (User Experience). In top-down sales, the boss forces employees to use terrible software. In bottom-up sales, the employees *choose* to use your software. If your B2B tool isn't as beautiful and easy to use as Instagram, they will ignore it.",
+          "explanation": "B2B software must now look and feel like B2C software."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Expansion Terminology",
+      "pairs": [
+        { "concept": "Land and Expand", "match": "Starting with a small pilot project and growing it into a massive contract" },
+        { "concept": "Bottom-Up Sales", "match": "Selling to the end-user employees rather than the executives" },
+        { "concept": "Top-Down Sales", "match": "Selling directly to the CEO/CFO who then forces the company to adopt it" },
+        { "concept": "Trojan Horse", "match": "Using a free or cheap tier to bypass corporate procurement" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-111",
+  "title": "LTV to CAC Ratio (The Golden Metric)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Physics of Profit",
+      "parts": [
+        {
+          "visual": "A startup spends $500 on Facebook ads to acquire one new customer. That customer pays them $10 a month for Netflix-style software, but cancels after 3 months. The startup made $30, but spent $500. They are mathematically doomed, even if they have a million users.\n\nThe Ratio:\n1. CAC (Customer Acquisition Cost): The total sales and marketing money spent to get one new paying customer.\n2. LTV (Lifetime Value): The total gross profit a startup expects to make from that customer before they churn (leave).\n3. The Golden Rule: In software, your LTV must be at least 3 times higher than your CAC (a 3:1 ratio) to survive.",
+          "audio": "VCs do not care how many users you have; they care about your unit economics. If your LTV to CAC ratio is 1 to 1, you are not running a business, you are running a charity for Google and Facebook."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Calculating Survival",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A SaaS startup has an LTV of $1000 and a CAC of $200. The ratio is 5:1. What does the VC tell the founder to do immediately?",
+          "options": [
+            "Stop marketing.",
+            "Spend dramatically more money on marketing. A 5:1 ratio means the business is an extremely efficient money-printing machine. If you put $1 into marketing, you get $5 back. You must raise millions and spend it as fast as possible to dominate the market.",
+            "Lower the price of the product."
+          ],
+          "correct_answer": "Spend dramatically more money on marketing. A 5:1 ratio means the business is an extremely efficient money-printing machine. If you put $1 into marketing, you get $5 back. You must raise millions and spend it as fast as possible to dominate the market.",
+          "explanation": "High LTV:CAC ratios are a signal to pour gasoline on the fire."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO analyzing their broken ratio. How are they planning to fix it?",
+          "tts_text": "Our CAC is too high because our sales reps spend 5 hours on the phone with every $20/month customer. We have to fire the sales team and automate the checkout process, or we have to raise the software price to $200/month.",
+          "options": [
+            "They will buy cheaper phones.",
+            "Aligning the Sales Motion. You cannot use expensive human salespeople to sell cheap software. The CAC will always destroy the LTV. You must either have a 'Zero-Touch' automated sales funnel for cheap products, or sell massive enterprise contracts to justify the humans.",
+            "They will make the software worse."
+          ],
+          "correct_answer": "Aligning the Sales Motion. You cannot use expensive human salespeople to sell cheap software. The CAC will always destroy the LTV. You must either have a 'Zero-Touch' automated sales funnel for cheap products, or sell massive enterprise contracts to justify the humans.",
+          "explanation": "The price of the product determines the sales channel."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a startup calculates 'LTV' based on Revenue instead of Gross Margin (Profit)?",
+          "options": [
+            "They get a tax break.",
+            "They will accidentally go bankrupt. If you charge $100, but it costs you $80 in server fees to run the software, your real value is $20. If you assume the LTV is $100 and spend $50 to acquire the customer, you are losing massive amounts of money.",
+            "Nothing happens."
+          ],
+          "correct_answer": "They will accidentally go bankrupt. If you charge $100, but it costs you $80 in server fees to run the software, your real value is $20. If you assume the LTV is $100 and spend $50 to acquire the customer, you are losing massive amounts of money.",
+          "explanation": "Revenue is vanity. Gross Margin is reality."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is a Payback Period (how long it takes to recover the CAC) under 12 months critical for startups?",
+          "options": [
+            "Because 12 is a lucky number.",
+            "Cash Flow Survival. If it takes you 3 years to earn back the $500 you spent on Facebook ads today, you will run out of cash and die before the customer becomes profitable. Fast payback periods allow you to recycle the cash into new ads quickly.",
+            "Because VCs hate long years."
+          ],
+          "correct_answer": "Cash Flow Survival. If it takes you 3 years to earn back the $500 you spent on Facebook ads today, you will run out of cash and die before the customer becomes profitable. Fast payback periods allow you to recycle the cash into new ads quickly.",
+          "explanation": "LTV:CAC tells you if you are profitable. Payback Period tells you if you will survive."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Unit Economics Terminology",
+      "pairs": [
+        { "concept": "CAC", "match": "The total cost of acquiring one new paying customer" },
+        { "concept": "LTV", "match": "The total gross profit generated by a customer over their lifetime" },
+        { "concept": "Payback Period", "match": "The number of months it takes to recover the CAC from a new customer" },
+        { "concept": "3:1 Ratio", "match": "The minimum healthy benchmark for LTV compared to CAC in a SaaS startup" }
+      ]
+    }
+  ]
+}

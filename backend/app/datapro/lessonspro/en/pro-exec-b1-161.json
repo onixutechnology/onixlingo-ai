@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-161",
+  "title": "Supply Chain Vulnerability",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Danger of Efficiency",
+      "parts": [
+        {
+          "visual": "For decades, companies perfected 'Just-In-Time' manufacturing. They held zero inventory in warehouses to save money, relying on parts arriving precisely when needed.\n\nThe Crisis:\n1. The Shock: A global pandemic or a stuck ship in the Suez Canal breaks the chain.\n2. The Paralysis: Because they have zero backup inventory, factories shut down immediately. You cannot build a $50,000 car because you are missing a $2 microchip.\n3. The Shift: Companies are moving from 'Just-In-Time' to 'Just-In-Case' (stockpiling inventory).",
+          "audio": "Just-In-Time manufacturing saves money by eliminating warehouse inventory. However, a single disruption in the global supply chain causes immediate paralysis. Companies are now shifting to Just-In-Case stockpiling."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Breaking the Chain",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A massive auto manufacturer must halt all production globally. They have the steel, the engines, and the tires, but a factory fire in Taiwan destroyed their supply of tiny electronic chips. What is this called?",
+          "options": [
+            "A minor delay.",
+            "A Single Point of Failure in a 'Just-In-Time' supply chain. Optimizing for extreme cost efficiency created extreme vulnerability.",
+            "A marketing problem."
+          ],
+          "correct_answer": "A Single Point of Failure in a 'Just-In-Time' supply chain. Optimizing for extreme cost efficiency created extreme vulnerability.",
+          "explanation": "If your supply chain is a tightrope, you will fall the moment the wind blows."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VP of Operations. What strategic shift is she demanding?",
+          "tts_text": "I don't care if it costs us $50 Million to lease new warehouses. We are returning to 'Just-In-Case' inventory. I will never let a port strike shut down our factories again.",
+          "options": [
+            "Saving money at all costs.",
+            "Prioritizing Resilience over Efficiency.",
+            "Moving to a different country."
+          ],
+          "correct_answer": "Prioritizing Resilience over Efficiency.",
+          "explanation": "Resilience is expensive. It requires tying up massive amounts of capital in spare inventory 'just in case' something goes wrong."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does 'Nearshoring' (or Reshoring) mean?",
+          "options": [
+            "Going to the beach.",
+            "Moving your manufacturing facilities closer to your final customers (e.g., from Asia back to North America) to reduce reliance on vulnerable trans-oceanic shipping routes.",
+            "Buying a boat."
+          ],
+          "correct_answer": "Moving your manufacturing facilities closer to your final customers (e.g., from Asia back to North America) to reduce reliance on vulnerable trans-oceanic shipping routes.",
+          "explanation": "Nearshoring increases labor costs, but drastically reduces shipping time and geopolitical risk."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Bullwhip Effect'?",
+          "options": [
+            "A cowboy trick.",
+            "A phenomenon where a tiny change in consumer demand causes massive, chaotic over-ordering and stock shortages as the signal travels up the supply chain.",
+            "A type of physical punishment in the factory."
+          ],
+          "correct_answer": "A phenomenon where a tiny change in consumer demand causes massive, chaotic over-ordering and stock shortages as the signal travels up the supply chain.",
+          "explanation": "When panic hits a supply chain, everyone over-orders, which eventually leads to massive, costly excess inventory when the panic ends."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Logistics Terminology",
+      "pairs": [
+        { "concept": "Just-In-Time", "match": "An inventory strategy aligning raw-material orders directly with production schedules" },
+        { "concept": "Just-In-Case", "match": "An inventory strategy of stockpiling goods to prevent shortages" },
+        { "concept": "Nearshoring", "match": "Transferring a business operation to a nearby country" },
+        { "concept": "Bullwhip Effect", "match": "Increasing swings in inventory in response to shifts in customer demand" }
+      ]
+    }
+  ]
+}

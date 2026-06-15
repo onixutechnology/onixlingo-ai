@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-175",
+  "title": "Network Effects (Defensibility)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Ultimate Moat",
+      "parts": [
+        {
+          "visual": "Imagine the first person to buy a telephone. It was completely useless, because there was no one else to call. When the second person bought a telephone, the network became slightly useful. When a million people bought telephones, the network became the most valuable technology on Earth. Every new user added value to every existing user.\n\nThe Defensibility:\n1. The Network Effect: A phenomenon where a product or service gains additional value as more people use it. (e.g., Airbnb, Uber, Facebook).\n2. The Moat: Once a startup achieves a true network effect, it becomes almost impossible to kill. A competitor can build a faster, cheaper Facebook, but nobody will use it, because all their friends are already on the original Facebook.",
+          "audio": "Code can be copied in a week. A network of a million interconnected humans cannot be copied. If your startup relies purely on features to win, you will eventually lose. If your startup builds a network effect, you will build a monopoly."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Building the Monopoly",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Cold Start Problem' in a network effect business?",
+          "options": [
+            "Servers overheating.",
+            "The brutal difficulty of getting the first users. If you launch a dating app, men won't join because there are no women, and women won't join because there are no men. A network is completely useless until it reaches 'Critical Mass'.",
+            "Not having enough coffee."
+          ],
+          "correct_answer": "The brutal difficulty of getting the first users. If you launch a dating app, men won't join because there are no women, and women won't join because there are no men. A network is completely useless until it reaches 'Critical Mass'.",
+          "explanation": "You have to fake the network until you make it."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Airbnb executive. What type of network effect is Airbnb?",
+          "tts_text": "Our hosts and our guests are completely different types of people. Guests want a million houses to choose from. Hosts want a million tourists booking their rooms. We sit in the middle and connect the two sides.",
+          "options": [
+            "A Single-Sided Network.",
+            "A Two-Sided Marketplace. This requires building two completely different businesses simultaneously (supply and demand). It is incredibly difficult to start, but once both sides are locked in, it creates a nearly impenetrable monopoly.",
+            "A Local Network."
+          ],
+          "correct_answer": "A Two-Sided Marketplace. This requires building two completely different businesses simultaneously (supply and demand). It is incredibly difficult to start, but once both sides are locked in, it creates a nearly impenetrable monopoly.",
+          "explanation": "Supply drives demand, which drives more supply."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Does a standard B2B SaaS tool (like Microsoft Word or a basic CRM) have a network effect?",
+          "options": [
+            "Yes, immediately.",
+            "No. If I use Microsoft Word to write a document, it doesn't make *your* Microsoft Word any better. Standard software has high margins, but low defensibility because it lacks a network. Anyone can code a better text editor.",
+            "Only on Tuesdays."
+          ],
+          "correct_answer": "No. If I use Microsoft Word to write a document, it doesn't make *your* Microsoft Word any better. Standard software has high margins, but low defensibility because it lacks a network. Anyone can code a better text editor.",
+          "explanation": "Utility is not defensibility."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Data Network Effect' (like Waze or Google Search)?",
+          "options": [
+            "Selling data.",
+            "When the product automatically gets smarter because users generate data just by using it. The more people drive with Waze, the better Waze understands traffic, making the routes faster, which attracts more users, creating a permanent loop.",
+            "Using a lot of gigabytes."
+          ],
+          "correct_answer": "When the product automatically gets smarter because users generate data just by using it. The more people drive with Waze, the better Waze understands traffic, making the routes faster, which attracts more users, creating a permanent loop.",
+          "explanation": "The algorithm feeds on the crowd."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Network Terminology",
+      "pairs": [
+        { "concept": "Network Effect", "match": "A product becomes more valuable purely because more people use it" },
+        { "concept": "Cold Start Problem", "match": "The impossible challenge of getting the first users onto an empty network" },
+        { "concept": "Two-Sided Marketplace", "match": "Connecting separate supply and demand (e.g., Uber drivers and riders)" },
+        { "concept": "Critical Mass", "match": "The tipping point where the network finally becomes self-sustaining" }
+      ]
+    }
+  ]
+}

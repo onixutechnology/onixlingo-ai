@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-126",
+  "title": "Offshore Tax Havens and Transfer Pricing",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Global Tax Game",
+      "parts": [
+        {
+          "visual": "A CFO's job is not just to make money, but to legally protect it from governments. The primary tool for this is international tax structuring.\n\nThe Loophole:\n1. Tax Haven: A country with extremely low corporate taxes (like Ireland, Bermuda, or the Cayman Islands).\n2. Transfer Pricing: A massive company charging its own subsidiaries money for 'intellectual property' to artificially shift profits to a Tax Haven.",
+          "audio": "A CFO's job is to legally protect corporate profits from taxes. Global companies use 'Tax Havens' and 'Transfer Pricing' to shift billions of dollars to countries with low tax rates."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Corporate Tax Strategy",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Your tech company makes $1 Billion in profit in the USA. The US tax rate is 21%. Ireland's tax rate is 12.5%. What does the CFO do?",
+          "options": [
+            "Pay the US tax and smile.",
+            "Set up an Irish subsidiary to 'own' the company's patents. The Irish subsidiary then charges the US company $1 Billion to 'use' the patents. The US profit drops to zero, and the $1 Billion is taxed in Ireland at 12.5%.",
+            "Hide the money in a mattress."
+          ],
+          "correct_answer": "Set up an Irish subsidiary to 'own' the company's patents. The Irish subsidiary then charges the US company $1 Billion to 'use' the patents. The US profit drops to zero, and the $1 Billion is taxed in Ireland at 12.5%.",
+          "explanation": "This is 'Transfer Pricing', the most famous (and controversial) strategy used by Apple, Google, and Amazon to save billions."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CFO. What is she defending?",
+          "tts_text": "We are not committing tax evasion. We are engaged in aggressive, but fully legal, tax avoidance. We follow the letter of the law in every country we operate.",
+          "options": [
+            "Tax Avoidance (legal loopholes).",
+            "Tax Evasion (illegal fraud).",
+            "Charity work."
+          ],
+          "correct_answer": "Tax Avoidance (legal loopholes).",
+          "explanation": "Tax evasion is a crime that sends executives to prison. Tax avoidance is a strategy that earns CFOs massive bonuses."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Shell Company'?",
+          "options": [
+            "A company that sells seashells.",
+            "A corporate entity that exists only on paper in a tax haven, with no actual office or employees, used exclusively to hold money or assets anonymously.",
+            "A construction firm."
+          ],
+          "correct_answer": "A corporate entity that exists only on paper in a tax haven, with no actual office or employees, used exclusively to hold money or assets anonymously.",
+          "explanation": "Thousands of massive corporations 'exist' as a single P.O. Box in the Cayman Islands for tax and liability purposes."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do governments tolerate these massive tax loopholes?",
+          "options": [
+            "Because they don't know about them.",
+            "Because of intense corporate lobbying, and the fear that if they close the loopholes, the corporations will just leave the country entirely.",
+            "Because it helps the environment."
+          ],
+          "correct_answer": "Because of intense corporate lobbying, and the fear that if they close the loopholes, the corporations will just leave the country entirely.",
+          "explanation": "It is a global race to the bottom. Governments compete against each other to offer corporations the best tax deals."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Tax Terminology",
+      "pairs": [
+        { "concept": "Tax Haven", "match": "A country offering foreign businesses very low tax liability" },
+        { "concept": "Transfer Pricing", "match": "The rules and methods for pricing transactions within an enterprise" },
+        { "concept": "Tax Evasion", "match": "The illegal non-payment or underpayment of tax" },
+        { "concept": "Tax Avoidance", "match": "The legal usage of the tax regime to one's own advantage" }
+      ]
+    }
+  ]
+}

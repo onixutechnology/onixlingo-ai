@@ -1,0 +1,100 @@
+{
+  "id": "pro-startup-b2-027",
+  "title": "Churn Rate and Retention",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Leaky Bucket",
+      "parts": [
+        {
+          "visual": "You pour 100 liters of water into a bucket every minute. But the bucket has a massive hole at the bottom, leaking 90 liters a minute. To fill the bucket, you have to spend millions on more water.\n\nThe Math:\n1. Churn Rate: The percentage of customers who cancel their subscription or stop using the product within a given time period.\n2. Retention Rate: The percentage of customers who stay.\n3. The Reality: High churn means your product is a 'Vitamin'. If you don't fix the leak, you will run out of money trying to buy new users.",
+          "audio": "Investors do not care how many new users you acquire if your Churn Rate is high. A high churn rate proves that your product does not have Product-Market Fit. It is the ultimate diagnostic metric for the health of a startup."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Plugging the Hole",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A consumer app has a monthly churn rate of 20%. This means 20% of their users cancel every single month. What will happen in 5 months?",
+          "options": [
+            "They will be highly profitable.",
+            "Mathematically, they will lose 100% of their original user base. To survive, the marketing team must perform miracles every month just to replace the people leaving.",
+            "The app will go viral."
+          ],
+          "correct_answer": "Mathematically, they will lose 100% of their original user base. To survive, the marketing team must perform miracles every month just to replace the people leaving.",
+          "explanation": "Consumer apps often have high churn, which is why they are incredibly difficult to scale."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the B2B SaaS CEO. What is her ultimate goal?",
+          "tts_text": "We don't just want a 0% churn rate. We want 'Negative Churn'. We want the customers who stay to upgrade their accounts and pay us so much more money that it completely covers the revenue we lose from the few people who cancel.",
+          "options": [
+            "To get negative reviews.",
+            "Net Negative Churn. This is the holy grail of SaaS. It means your company grows revenue automatically every month, even if your marketing team acquires exactly zero new customers.",
+            "To fire her marketing team."
+          ],
+          "correct_answer": "Net Negative Churn. This is the holy grail of SaaS. It means your company grows revenue automatically every month, even if your marketing team acquires exactly zero new customers.",
+          "explanation": "Negative churn happens through 'Upsells' and 'Expansion Revenue'."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Cohort Analysis'?",
+          "options": [
+            "A medical procedure.",
+            "Tracking a specific group of users (e.g., 'Everyone who signed up in January') over time to see exactly when and why they drop off. It helps pinpoint the exact moment the product fails them.",
+            "A type of marketing ad."
+          ],
+          "correct_answer": "Tracking a specific group of users (e.g., 'Everyone who signed up in January') over time to see exactly when and why they drop off. It helps pinpoint the exact moment the product fails them.",
+          "explanation": "If every cohort cancels on Day 14, you know exactly where to fix the software."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is B2B Enterprise software fundamentally more valuable than B2C Consumer apps?",
+          "options": [
+            "Because the logos are blue.",
+            "Because B2B Enterprise software has artificially low churn. Once a Fortune 500 company integrates your software into their operations, the 'Switching Costs' are so painful they will almost never cancel.",
+            "Because consumers don't have credit cards."
+          ],
+          "correct_answer": "Because B2B Enterprise software has artificially low churn. Once a Fortune 500 company integrates your software into their operations, the 'Switching Costs' are so painful they will almost never cancel.",
+          "explanation": "High Switching Costs create a defensive moat against churn."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Retention",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to state the reality of growth:",
+          "parts": [
+            "You",
+            "cannot",
+            "outgrow",
+            "a",
+            "leaky",
+            "bucket."
+          ],
+          "correct_order": [
+            "You",
+            "cannot",
+            "outgrow",
+            "a",
+            "leaky",
+            "bucket."
+          ],
+          "explanation": "Fix the product before you spend money on marketing."
+        }
+      ]
+    }
+  ]
+}

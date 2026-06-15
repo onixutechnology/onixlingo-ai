@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-193",
+  "title": "The Agency Problem",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Conflict of Interest",
+      "parts": [
+        {
+          "visual": "You own a house (Principal). You hire a real estate agent (Agent) to sell it. You want to wait 6 months to get the absolute highest price ($500k). The agent wants to sell it tomorrow for $450k so they can get their commission today and go on vacation. \n\nThe Conflict:\n1. The Agency Problem: When the incentives of the person managing the asset (the Agent/CEO) do not perfectly align with the incentives of the person who owns the asset (the Principal/Shareholders).",
+          "audio": "The Agency Problem is the fundamental conflict of interest in corporate capitalism. It occurs when executives (the agents) make decisions that enrich themselves rather than the shareholders (the principals)."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Aligning Incentives",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A CEO is two years away from retiring. They cancel a massive, 10-year R&D project that would have saved the company, just so they can report higher profits this year and trigger a massive cash bonus before they leave. What is this?",
+          "options": [
+            "Good financial planning.",
+            "The Agency Problem. The CEO (Agent) is optimizing for their personal short-term wealth, while actively destroying the long-term wealth of the Shareholders (Principals).",
+            "A standard retirement plan."
+          ],
+          "correct_answer": "The Agency Problem. The CEO (Agent) is optimizing for their personal short-term wealth, while actively destroying the long-term wealth of the Shareholders (Principals).",
+          "explanation": "When an executive has no long-term stake in the company, they will strip-mine the present."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Board Member proposing a new compensation package. How are they trying to solve the Agency Problem?",
+          "tts_text": "We are cutting the CEO's cash salary in half. Instead, we are giving him 100,000 shares of stock that he is legally not allowed to sell for five years. If the company crashes in year three, he loses everything.",
+          "options": [
+            "By punishing the CEO.",
+            "By aligning incentives (Skin in the Game). By forcing the CEO's wealth to be tied directly to the long-term stock price, the CEO's goals now match the shareholders' goals.",
+            "By saving cash."
+          ],
+          "correct_answer": "By aligning incentives (Skin in the Game). By forcing the CEO's wealth to be tied directly to the long-term stock price, the CEO's goals now match the shareholders' goals.",
+          "explanation": "This is why almost all modern executive compensation is paid in stock options, not cash."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Empire Building' in the context of the Agency Problem?",
+          "options": [
+            "A real estate division.",
+            "When a CEO buys terrible companies just to make their own corporation physically larger. A larger corporation usually means a higher salary and more prestige for the CEO, even if it destroys shareholder value.",
+            "Building a new headquarters."
+          ],
+          "correct_answer": "When a CEO buys terrible companies just to make their own corporation physically larger. A larger corporation usually means a higher salary and more prestige for the CEO, even if it destroys shareholder value.",
+          "explanation": "Ego is the enemy of the shareholder."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Information Asymmetry' the core driver of the Agency Problem?",
+          "options": [
+            "Because the internet is fast.",
+            "Because the CEO works at the company every day and knows all the dark secrets. The shareholders only see the polished quarterly reports. The CEO can use this hidden knowledge to manipulate the board.",
+            "Because the Board doesn't read."
+          ],
+          "correct_answer": "Because the CEO works at the company every day and knows all the dark secrets. The shareholders only see the polished quarterly reports. The CEO can use this hidden knowledge to manipulate the board.",
+          "explanation": "The Board's primary job is to pierce through this asymmetry to find the truth."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Corporate Governance Terminology",
+      "pairs": [
+        { "concept": "Agency Problem", "match": "A conflict of interest inherent in any relationship where one party is expected to act in another's best interests" },
+        { "concept": "Principal", "match": "The owner of the asset (The Shareholders)" },
+        { "concept": "Agent", "match": "The person hired to manage the asset (The CEO/Executives)" },
+        { "concept": "Information Asymmetry", "match": "A situation where one party has more or better information than the other" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-145",
+  "title": "The SPAC (Special Purpose Acquisition Company)",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Blank Check Company",
+      "parts": [
+        {
+          "visual": "A traditional IPO takes 12 months of brutal SEC scrutiny. Executives invented a loophole to bypass this: The SPAC.\n\nThe SPAC Mechanics:\n1. The Blank Check: A group of famous investors create a fake 'Shell Company' with no products, take it public, and raise $1 Billion based purely on their reputation.\n2. The Hunt: The Shell Company has 2 years to find a real, private startup to buy.\n3. The Merger: The Shell Company buys the startup. The startup instantly becomes a public company, bypassing the traditional IPO process.",
+          "audio": "A SPAC is a Blank Check company. It is an empty shell that goes public just to raise money. It then buys a private startup, instantly turning that startup into a public company through a loophole."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Financial Loophole",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Why would a private tech startup choose to merge with a SPAC instead of doing a traditional IPO?",
+          "options": [
+            "Because they like the acronym.",
+            "Because an IPO is painfully slow and strictly regulates what executives can promise. A SPAC merger is much faster and allows the CEO to make wild, forward-looking promises to pump the stock.",
+            "Because SPACs are illegal."
+          ],
+          "correct_answer": "Because an IPO is painfully slow and strictly regulates what executives can promise. A SPAC merger is much faster and allows the CEO to make wild, forward-looking promises to pump the stock.",
+          "explanation": "SPACs exploded in popularity because they allowed companies with zero revenue to go public based entirely on hype."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the SEC regulator. What is the fundamental danger of a SPAC?",
+          "tts_text": "Retail investors are giving billions of dollars to a 'blank check' company that doesn't even know what business it is going to buy yet. It is pure speculation.",
+          "options": [
+            "The extreme risk of trusting an empty shell company.",
+            "A safe, guaranteed return on investment.",
+            "A standard bank loan."
+          ],
+          "correct_answer": "The extreme risk of trusting an empty shell company.",
+          "explanation": "You are literally investing in nothing but the 'reputation' of the SPAC's founders."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a SPAC raises $1 Billion, but fails to find a company to buy within the 2-year time limit?",
+          "options": [
+            "The founders keep the money.",
+            "The SPAC is legally forced to dissolve, and all the money must be returned to the original investors.",
+            "They buy a sports team."
+          ],
+          "correct_answer": "The SPAC is legally forced to dissolve, and all the money must be returned to the original investors.",
+          "explanation": "This creates massive pressure on the SPAC founders to buy *anything* before the deadline, often leading them to overpay for terrible companies."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the general reputation of SPACs among serious, long-term institutional investors?",
+          "options": [
+            "They love them.",
+            "They are highly skeptical. Many SPACs were used to bring terrible, unprofitable companies to the public market, resulting in massive losses for retail investors.",
+            "They think they are boring."
+          ],
+          "correct_answer": "They are highly skeptical. Many SPACs were used to bring terrible, unprofitable companies to the public market, resulting in massive losses for retail investors.",
+          "explanation": "While legal, the 'backdoor' nature of a SPAC often signals that a company was not strong enough to survive a real IPO."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Market Mechanics",
+      "pairs": [
+        { "concept": "SPAC", "match": "Special Purpose Acquisition Company (A blank check company)" },
+        { "concept": "Shell Company", "match": "An inactive company used as a vehicle for various financial maneuvers" },
+        { "concept": "IPO", "match": "Initial Public Offering (The traditional way to go public)" },
+        { "concept": "Speculation", "match": "Investment in stocks in the hope of gain but with the risk of loss" }
+      ]
+    }
+  ]
+}

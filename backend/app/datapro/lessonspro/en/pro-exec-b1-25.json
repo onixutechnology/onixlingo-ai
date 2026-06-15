@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-25",
+  "title": "Making Data-Driven Decisions",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Beyond Gut Feeling",
+      "parts": [
+        {
+          "visual": "Data-Driven Decision Making (DDDM) means using facts, metrics, and data to guide strategic business decisions rather than intuition alone.\n\nThe Process:\n1. Formulate a clear question (What are we trying to solve?).\n2. Gather the relevant data.\n3. Analyze for patterns.\n4. Execute and measure.",
+          "audio": "Data-Driven Decision Making means using facts and metrics to guide business decisions rather than intuition alone."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Analytical Scenarios",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "The marketing team wants to change the website color because the VP 'feels' blue is better. What is the executive response?",
+          "options": [
+            "Change the color immediately.",
+            "Let's run an A/B test with blue and our current color, and let the conversion data decide.",
+            "Argue that red is better."
+          ],
+          "correct_answer": "Let's run an A/B test with blue and our current color, and let the conversion data decide.",
+          "explanation": "A/B testing replaces subjective opinions with objective user data."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the phrase. What statistical error is being warned against?",
+          "tts_text": "Just because ice cream sales and sunburns increase at the same time, doesn't mean ice cream causes sunburns.",
+          "options": [
+            "Correlation does not imply causation.",
+            "Sample size is too small.",
+            "Confirmation bias."
+          ],
+          "correct_answer": "Correlation does not imply causation.",
+          "explanation": "Two things happening at the same time (correlation) do not mean one caused the other (causation). Executives must know the difference."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Confirmation Bias' in decision making?",
+          "options": [
+            "Confirming a meeting time.",
+            "The tendency to search for or interpret data in a way that confirms your pre-existing beliefs.",
+            "A bias against new employees."
+          ],
+          "correct_answer": "The tendency to search for or interpret data in a way that confirms your pre-existing beliefs.",
+          "explanation": "Great leaders actively look for data that *disproves* their theory to avoid this dangerous bias."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does 'statistical significance' mean in business testing?",
+          "options": [
+            "The numbers look really big.",
+            "The likelihood that a result or relationship is caused by something other than mere random chance.",
+            "The CEO signed off on the statistics."
+          ],
+          "correct_answer": "The likelihood that a result or relationship is caused by something other than mere random chance.",
+          "explanation": "You cannot make a million-dollar decision on a test that isn't statistically significant."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Data Analytics Terms",
+      "pairs": [
+        { "concept": "A/B Testing", "match": "Comparing two versions to see which performs better" },
+        { "concept": "Metric", "match": "A quantifiable measure of performance" },
+        { "concept": "Qualitative", "match": "Data based on subjective properties (interviews, feelings)" },
+        { "concept": "Quantitative", "match": "Data based on numbers and statistics" }
+      ]
+    }
+  ]
+}

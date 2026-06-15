@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-180",
+  "title": "The \"Freemium\" Trap",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Illusion of Growth",
+      "parts": [
+        {
+          "visual": "A startup launches a powerful AI writing tool. They make it 100% free. 50,000 people sign up immediately! The founders celebrate. But every time a user generates an essay, it costs the startup $0.10 in API fees. At the end of the month, they owe $50,000. They add a 'Premium' $10/month tier. Only 10 people upgrade. The startup goes bankrupt.\n\nThe Freemium Math:\n1. Free as Marketing: Freemium is not a business model; it is a customer acquisition strategy. You are giving away software for free, hoping that a tiny percentage of power-users will hit a 'paywall' and upgrade to cover the costs of all the free users.\n2. The Conversion Rate: The global average conversion rate from Free to Paid is 2% to 4%. If your free product is too good, the conversion rate drops to 0% because nobody needs to upgrade.",
+          "audio": "Giving away your product for free is the easiest way to get users. It is also the easiest way to destroy your company. If you cannot mathematically prove that your 3% paid users can cover the server costs of your 97% free users, you are just running a charity."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Designing the Paywall",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the biggest mistake founders make when designing a Freemium product?",
+          "options": [
+            "Making the button red.",
+            "Giving away too much value for free. If the free version solves 100% of the customer's problem, they have zero incentive to ever pull out their credit card. The free version must be a 'teaser' that inevitably forces a painful limitation.",
+            "Asking for an email address."
+          ],
+          "correct_answer": "Giving away too much value for free. If the free version solves 100% of the customer's problem, they have zero incentive to ever pull out their credit card. The free version must be a 'teaser' that inevitably forces a painful limitation.",
+          "explanation": "You must create the pain that your premium version cures."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the product manager. What is the difference between a 'Feature Paywall' and a 'Usage Paywall'?",
+          "tts_text": "We let everyone use the basic tools for free forever. But if they want to export the file in high-resolution, they must pay. That is a feature paywall. Alternatively, we let them do everything perfectly, but only 3 times a month. That is a usage paywall.",
+          "options": [
+            "They are the exact same thing.",
+            "A Feature Paywall blocks advanced tools (e.g., 'Pay to unlock Analytics'). A Usage Paywall blocks volume (e.g., 'You have read 3 free articles, pay to read more'). Both are designed to capture the heavy power-users.",
+            "Feature paywalls are illegal."
+          ],
+          "correct_answer": "A Feature Paywall blocks advanced tools (e.g., 'Pay to unlock Analytics'). A Usage Paywall blocks volume (e.g., 'You have read 3 free articles, pay to read more'). Both are designed to capture the heavy power-users.",
+          "explanation": "Find the point where the user is addicted, and put the toll booth there."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is offering a '14-Day Free Trial' generally safer for a bootstrapped startup than a permanent 'Freemium' model?",
+          "options": [
+            "Because 14 is a lucky number.",
+            "It caps the financial loss. In a Free Trial, a user can only cost you server money for 14 days before they are forced to pay or leave. In Freemium, a 'free rider' can use your servers for 5 years and cost you thousands of dollars without ever paying.",
+            "Because users like timers."
+          ],
+          "correct_answer": "It caps the financial loss. In a Free Trial, a user can only cost you server money for 14 days before they are forced to pay or leave. In Freemium, a 'free rider' can use your servers for 5 years and cost you thousands of dollars without ever paying.",
+          "explanation": "Freemium requires massive VC funding to subsidize the free riders."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If a startup has 100,000 free users and 1,000 paid users, what is their Conversion Rate?",
+          "options": [
+            "10%",
+            "1%. (1,000 divided by 100,000). This is dangerously low. It means the startup is spending massive amounts of money supporting 99,000 people who will never generate revenue. They either need to make the paywall harder, or kill the free tier.",
+            "50%"
+          ],
+          "correct_answer": "1%. (1,000 divided by 100,000). This is dangerously low. It means the startup is spending massive amounts of money supporting 99,000 people who will never generate revenue. They either need to make the paywall harder, or kill the free tier.",
+          "explanation": "The math of subsidies."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Monetization Terminology",
+      "pairs": [
+        { "concept": "Freemium", "match": "A permanent free tier designed to act as a marketing funnel" },
+        { "concept": "Free Trial", "match": "Full access to the product, but strictly limited by time (e.g., 14 days)" },
+        { "concept": "Usage Paywall", "match": "Charging users only when they hit a certain limit (e.g., 500 emails sent)" },
+        { "concept": "Conversion Rate", "match": "The tiny percentage of free users who actually decide to upgrade" }
+      ]
+    }
+  ]
+}

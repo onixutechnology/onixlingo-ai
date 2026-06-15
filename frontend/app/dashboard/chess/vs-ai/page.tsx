@@ -22,6 +22,7 @@ export default function ChessVsAIPage() {
   const router = useRouter();
   const { user } = useAuthStore();
   const [game, setGame] = useState(new Chess());
+  const [openingName, setOpeningName] = useState('Estándar');
   const [moveHistory, setMoveHistory] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState('Su turno');
@@ -123,11 +124,43 @@ export default function ChessVsAIPage() {
       const savedDiff = localStorage.getItem('onix_chess_difficulty');
       if (savedFen) {
         setPendingFen(savedFen);
-        if (savedDiff) setPendingDiff(savedDiff);
+        if (savedDiff) setDifficulty(savedDiff);
         setShowResumePrompt(true);
+      } else {
+        startNewGameWithAI();
       }
     }
   }, []);
+
+  async function startNewGameWithAI() {
+    setIsLoading(true);
+    setStatus('Cargando Apertura Magistral...');
+    try {
+      const { token } = useAuthStore.getState();
+      const safeToken = token?.startsWith('Bearer ') ? token : `Bearer ${token}`;
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8020'}/api/v1/chess/ai-opening`, {
+        headers: { Authorization: safeToken }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setGame(new Chess(data.fen));
+        setOpeningName(data.name);
+      } else {
+        setGame(new Chess());
+        setOpeningName('Clásica');
+      }
+    } catch (e) {
+      setGame(new Chess());
+      setOpeningName('Clásica');
+    } finally {
+      setMoveHistory([]);
+      setIsGameOver(false);
+      setWinner(null);
+      setStatus('Su turno');
+      localStorage.removeItem('onix_chess_fen');
+      setIsLoading(false);
+    }
+  }
 
   function makeAMove(move: any) {
     const gameCopy = new Chess(game.fen());
@@ -234,14 +267,10 @@ export default function ChessVsAIPage() {
   }
 
   function resetGame() {
-    setGame(new Chess());
-    setMoveHistory([]);
-    setIsGameOver(false);
-    setWinner(null);
-    setStatus('Su turno');
     if (typeof window !== 'undefined') {
       localStorage.removeItem('onix_chess_fen');
     }
+    startNewGameWithAI();
   }
 
   return (
@@ -283,6 +312,10 @@ export default function ChessVsAIPage() {
         <div className="flex items-center gap-6">
           <div className="hidden md:flex items-center gap-6 px-6 border-x border-[#3c1e0a]">
             <div className="text-center">
+              <p className="text-[8px] text-amber-200/50 font-black uppercase tracking-widest leading-none mb-1">Apertura Magistral</p>
+              <p className="text-[10px] font-black uppercase text-amber-400 truncate max-w-[200px]">{openingName}</p>
+            </div>
+            <div className="text-center border-l border-[#3c1e0a] pl-6">
               <p className="text-[8px] text-amber-200/50 font-black uppercase tracking-widest leading-none mb-1">Status</p>
               <p className={`text-[10px] font-black uppercase ${isLoading ? 'text-amber-400 animate-pulse' : 'text-slate-900'}`}>{status}</p>
             </div>
@@ -313,7 +346,7 @@ export default function ChessVsAIPage() {
                 <div>
                    <p className="text-[8px] text-amber-200/60 font-black uppercase tracking-widest">Nivel Ejecutivo</p>
                    <div className="flex gap-2 mt-1">
-                      {['principiante', 'manager', 'ceo'].map((lvl) => (
+                      {['principiante', 'manager', 'ceo', 'titanium'].map((lvl) => (
                         <button 
                           key={lvl}
                           onClick={() => setDifficulty(lvl)}
@@ -330,9 +363,9 @@ export default function ChessVsAIPage() {
              <div className="flex flex-col items-end gap-1">
                 <div className="flex items-center gap-2">
                    <div className="h-1.5 w-24 bg-[#130a04] border border-[#3c1e0a] rounded-none overflow-hidden">
-                      <div className={`h-full bg-[#ecd3b5] transition-all duration-500 ${difficulty === 'principiante' ? 'w-1/3' : difficulty === 'manager' ? 'w-2/3' : 'w-full'}`}></div>
+                      <div className={`h-full bg-[#ecd3b5] transition-all duration-500 ${difficulty === 'principiante' ? 'w-1/4' : difficulty === 'manager' ? 'w-2/4' : difficulty === 'ceo' ? 'w-3/4' : 'w-full !bg-purple-500'}`}></div>
                    </div>
-                   <span className="text-[9px] font-black text-amber-300 uppercase tracking-widest">{difficulty === 'principiante' ? 'Lvl 1' : difficulty === 'manager' ? 'Lvl 5' : 'Lvl 10'}</span>
+                   <span className="text-[9px] font-black text-amber-300 uppercase tracking-widest">{difficulty === 'principiante' ? 'Lvl 1' : difficulty === 'manager' ? 'Lvl 5' : difficulty === 'ceo' ? 'Lvl 10' : 'Lvl 5000'}</span>
                 </div>
                 <p className="text-[9px] text-amber-200/50 font-bold uppercase tracking-wider">
                   Tu ELO Táctico: <span className="text-slate-900 font-black">{user?.chess_tactical_elo ?? 800}</span>

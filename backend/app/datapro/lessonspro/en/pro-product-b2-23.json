@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-23",
+  "title": "Hardware vs. Software PM",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Physics of Atoms vs. Bits",
+      "parts": [
+        {
+          "visual": "A Software PM realizes a button is the wrong color. They tell the engineer, who changes one line of code. Five seconds later, 10 million users have the new blue button. \nA Hardware PM realizes the battery in their new phone is too big. The phone is already in a factory in China. They have to halt the assembly line, throw away $5 Million worth of molded plastic, and delay the global launch by 6 months.\n\nThe Hard Reality:\n1. Software is Agile (Bits): Code is incredibly forgiving. You can launch a broken product, fix the bug over the weekend, and nobody gets hurt. \n2. Hardware is Unforgiving (Atoms): Physical products obey the laws of physics and supply chains. You cannot 'push an update' to a physical plastic mold. If a hardware PM makes a mistake in the PRD, it can literally bankrupt the company.",
+          "audio": "Software PMs live in a world of infinite flexibility, where mistakes are cheap. Hardware PMs live in a world of rigid reality, where a millimeter mistake in a design file costs $10 Million to fix."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Managing the Factory",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Why is the 'MVP' (Minimum Viable Product) concept incredibly dangerous in Hardware?",
+          "options": [
+            "Because hardware is heavy.",
+            "You cannot ship a 'half-built' physical device. If a software app crashes, the user closes it. If a hardware drone's software crashes, it falls out of the sky and hits someone. Hardware must be 99% perfect before the first customer touches it.",
+            "Because MVP stands for Most Valuable Player."
+          ],
+          "correct_answer": "You cannot ship a 'half-built' physical device. If a software app crashes, the user closes it. If a hardware drone's software crashes, it falls out of the sky and hits someone. Hardware must be 99% perfect before the first customer touches it.",
+          "explanation": "You cannot 'Move Fast and Break Things' if the thing is a car."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Hardware PM explaining a supply chain crisis. What is 'BOM'?",
+          "tts_text": "We designed the perfect smart-watch. But when I looked at the BOM, the total cost of all the microchips, glass, and sensors was $400. The market will only pay $350 for the watch. We have to completely redesign the entire device to make it cheaper.",
+          "options": [
+            "A loud noise.",
+            "Bill of Materials. It is the master recipe of a physical product. It lists every single screw, microchip, and piece of plastic, and exactly how much it costs. A Hardware PM spends half their life arguing with suppliers to get the BOM cost down.",
+            "The battery mechanism."
+          ],
+          "correct_answer": "Bill of Materials. It is the master recipe of a physical product. It lists every single screw, microchip, and piece of plastic, and exactly how much it costs. A Hardware PM spends half their life arguing with suppliers to get the BOM cost down.",
+          "explanation": "If the BOM is too high, the company dies on every sale."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Tooling' in the hardware manufacturing process?",
+          "options": [
+            "Buying hammers.",
+            "The creation of the massive steel molds required to inject plastic and build the physical shape of your product. Tooling costs hundreds of thousands of dollars and takes months. Once the steel is cut, the shape of the product cannot be changed.",
+            "Fixing software bugs."
+          ],
+          "correct_answer": "The creation of the massive steel molds required to inject plastic and build the physical shape of your product. Tooling costs hundreds of thousands of dollars and takes months. Once the steel is cut, the shape of the product cannot be changed.",
+          "explanation": "Steel is not Agile."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do Hardware PMs focus so heavily on 'Yield Rate'?",
+          "options": [
+            "To see how many cars stop.",
+            "It is the percentage of products that come off the factory line without defects. If a factory makes 100 phones, but 20 of them have broken screens (80% Yield Rate), the company loses massive amounts of money. The PM must optimize the design for manufacturability.",
+            "Because it sounds professional."
+          ],
+          "correct_answer": "It is the percentage of products that come off the factory line without defects. If a factory makes 100 phones, but 20 of them have broken screens (80% Yield Rate), the company loses massive amounts of money. The PM must optimize the design for manufacturability.",
+          "explanation": "A great design is useless if the factory cannot build it."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Hardware Vocabulary",
+      "pairs": [
+        { "concept": "Atoms vs Bits", "match": "The fundamental difference between physical products and digital software" },
+        { "concept": "BOM", "match": "Bill of Materials; the master list and cost of every single component" },
+        { "concept": "Tooling", "match": "The expensive, irreversible process of cutting steel molds for manufacturing" },
+        { "concept": "Yield Rate", "match": "The percentage of physical products that survive the factory without defects" }
+      ]
+    }
+  ]
+}

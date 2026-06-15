@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-184",
+  "title": "Corporate Bond Issuance",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Borrowing Billions",
+      "parts": [
+        {
+          "visual": "A massive corporation needs $2 Billion to build a new microchip factory. They don't go to a local bank. They go to Wall Street and 'Issue Bonds'.\n\nThe Mechanism:\n1. The Bond: An I.O.U. The company prints paper saying 'Give us $1,000 today, and we will pay you 5% interest every year, and give the $1,000 back in 10 years.'\n2. The Investors: Pension funds and mutual funds buy millions of these bonds.\n3. The Rating: If the company is safe, they pay a low interest rate (Investment Grade). If the company is dying, they must pay a massive interest rate to attract buyers (Junk Bonds).",
+          "audio": "When massive corporations need billions of dollars, they issue Corporate Bonds. A bond is simply an I.O.U. sold to investors. The interest rate depends entirely on the company's Credit Rating."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Debt and Ratings",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A massive airline is losing money and asks Wall Street to buy $1 Billion of their new 10-year bonds. The credit rating agency (Moody's) downgrades the airline to 'Junk' status. What happens to the bond?",
+          "options": [
+            "The airline gets the money for free.",
+            "The airline must offer a massive, punishing interest rate (e.g., 12%) to convince anyone to take the risk of buying the bonds, dramatically increasing the company's financial burden.",
+            "The government buys the bonds."
+          ],
+          "correct_answer": "The airline must offer a massive, punishing interest rate (e.g., 12%) to convince anyone to take the risk of buying the bonds, dramatically increasing the company's financial burden.",
+          "explanation": "High Risk = High Reward. Investors demand 'Yield' (high interest) when buying debt from a dying company."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CFO. What is the fundamental difference between selling Stocks and selling Bonds?",
+          "tts_text": "If we sell more stock, we dilute our ownership and give up voting power. If we sell bonds, we keep 100% control of the company, but we are legally obligated to pay the interest, even if we go bankrupt.",
+          "options": [
+            "Bonds are printed on red paper.",
+            "Stocks represent 'Equity' (Ownership). Bonds represent 'Debt' (A legal obligation).",
+            "Stocks are tax-free."
+          ],
+          "correct_answer": "Stocks represent 'Equity' (Ownership). Bonds represent 'Debt' (A legal obligation).",
+          "explanation": "This is the most fundamental choice in corporate finance: Debt vs. Equity."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Maturity' in the bond market?",
+          "options": [
+            "When the CEO retires.",
+            "The exact date when the company is legally required to pay back the original principal amount (e.g., the $1,000) to the bondholder.",
+            "When the bond is printed."
+          ],
+          "correct_answer": "The exact date when the company is legally required to pay back the original principal amount (e.g., the $1,000) to the bondholder.",
+          "explanation": "A company might pay $50 a year in interest for 10 years, but at Maturity, they must write a massive check to return the original principal."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does 'Default' mean?",
+          "options": [
+            "A computer setting.",
+            "When a company fails to make a scheduled interest payment on its bonds, triggering a massive legal and financial crisis that usually leads to bankruptcy.",
+            "A type of bank account."
+          ],
+          "correct_answer": "When a company fails to make a scheduled interest payment on its bonds, triggering a massive legal and financial crisis that usually leads to bankruptcy.",
+          "explanation": "Default is the ultimate nightmare for a CFO. It destroys the company's reputation in the capital markets."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Bond Market Terminology",
+      "pairs": [
+        { "concept": "Corporate Bond", "match": "A debt security issued by a corporation and sold to investors" },
+        { "concept": "Junk Bond", "match": "A high-yield, high-risk security issued by a company with a poor credit rating" },
+        { "concept": "Maturity Date", "match": "The date on which the principal amount of a note, draft, or bond becomes due" },
+        { "concept": "Default", "match": "The failure to fulfill an obligation, especially to repay a loan or appear in a court of law" }
+      ]
+    }
+  ]
+}

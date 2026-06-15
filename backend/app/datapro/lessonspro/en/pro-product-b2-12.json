@@ -1,0 +1,98 @@
+{
+  "id": "pro-product-b2-12",
+  "title": "Cognitive Load and Friction",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Don't Make Me Think",
+      "parts": [
+        {
+          "visual": "A user opens a new app. The screen has 15 different buttons, 3 popup messages asking for permissions, and a massive wall of text explaining how to use it. The user's brain gets overwhelmed instantly. They close the app and never open it again.\n\nThe Brain Limit:\n1. Cognitive Load: The amount of mental processing power required to use a product. Every extra button, word, or choice you add to a screen heavily taxes the user's brain.\n2. Friction: Any step in a process that slows the user down (e.g., asking for a credit card before they can see the product). Good PMs act like assassins, hunting down and killing friction on every single screen.",
+          "audio": "Your users are exhausted. They just worked 8 hours, sat in traffic, and argued with their kids. When they open your app, they have zero mental energy left. If your app requires them to think to navigate it, you have already lost them."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Hunting Friction",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Hick's Law' in UX design?",
+          "options": [
+            "The law of bad design.",
+            "The time it takes to make a decision increases with the number and complexity of choices. If you give a user 10 buttons on a screen, they will freeze and click nothing. If you give them 1 clear button, they will click it instantly.",
+            "The law of fast internet."
+          ],
+          "correct_answer": "The time it takes to make a decision increases with the number and complexity of choices. If you give a user 10 buttons on a screen, they will freeze and click nothing. If you give them 1 clear button, they will click it instantly.",
+          "explanation": "More choices equals more paralysis."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the PM explain a change to the signup flow. How did they increase conversion by 40%?",
+          "tts_text": "Our old signup form asked for First Name, Last Name, Phone Number, Email, and Password. I deleted Name and Phone Number. Now it just asks for Email and Password. Less typing means less friction. Conversion skyrocketed.",
+          "options": [
+            "By making the buttons red.",
+            "Ruthless Reduction. Every single field in a form is a massive point of friction that causes users to abandon the process. By delaying the collection of non-essential data (like a phone number) until later, the PM radically lowered the cognitive load.",
+            "By asking for more data."
+          ],
+          "correct_answer": "Ruthless Reduction. Every single field in a form is a massive point of friction that causes users to abandon the process. By delaying the collection of non-essential data (like a phone number) until later, the PM radically lowered the cognitive load.",
+          "explanation": "Ask for data only when you absolutely need it."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Positive Friction'?",
+          "options": [
+            "Rubbing your hands together.",
+            "Sometimes, you want to slow the user down. If a user clicks 'Delete Entire Account', you do not want it to happen instantly. You intentionally add friction (like a popup saying 'Are you absolutely sure?') to prevent a catastrophic mistake.",
+            "When the app runs too fast."
+          ],
+          "correct_answer": "Sometimes, you want to slow the user down. If a user clicks 'Delete Entire Account', you do not want it to happen instantly. You intentionally add friction (like a popup saying 'Are you absolutely sure?') to prevent a catastrophic mistake.",
+          "explanation": "Speed is good, but safety is better."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'White Space' (empty space on a screen) critical for managing Cognitive Load?",
+          "options": [
+            "Because it saves pixels.",
+            "It gives the brain room to breathe. Cramming 50 elements onto a screen makes it look like a chaotic airplane cockpit. White space groups related items together and directs the user's eye naturally to the single most important action.",
+            "Because it looks like snow."
+          ],
+          "correct_answer": "It gives the brain room to breathe. Cramming 50 elements onto a screen makes it look like a chaotic airplane cockpit. White space groups related items together and directs the user's eye naturally to the single most important action.",
+          "explanation": "Silence is the most important part of the music."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Simplicity",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the golden rule of UX:",
+          "parts": [
+            "Don't",
+            "make",
+            "the",
+            "user",
+            "think."
+          ],
+          "correct_order": [
+            "Don't",
+            "make",
+            "the",
+            "user",
+            "think."
+          ],
+          "explanation": "Intuition is just the absence of friction."
+        }
+      ]
+    }
+  ]
+}

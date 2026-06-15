@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-118",
+  "title": "Private Equity and Leveraged Buyouts (LBO)",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Corporate Raiders",
+      "parts": [
+        {
+          "visual": "Private Equity (PE) firms buy struggling companies, restructure them aggressively, and sell them for a massive profit.\n\nThe Leveraged Buyout (LBO):\n1. The Debt Trap: The PE firm buys your company using massive loans, but forces *your* company to pay off the debt.\n2. The Efficiency Drive: The PE firm will instantly fire 20% of the staff to increase profit margins.\n3. The Exit: After 3 to 5 years, the PE firm sells your company to a bigger rival or takes it public.",
+          "audio": "Private Equity firms use Leveraged Buyouts to purchase companies with massive debt. They restructure aggressively, cut costs, and sell the company for a massive profit."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Surviving Private Equity",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A Private Equity firm buys your retail company in a 'Leveraged Buyout' (LBO). How do they pay for it?",
+          "options": [
+            "They use their own cash.",
+            "They borrow 80% of the money from banks, and then transfer that massive debt onto the balance sheet of your retail company.",
+            "They ask the government."
+          ],
+          "correct_answer": "They borrow 80% of the money from banks, and then transfer that massive debt onto the balance sheet of your retail company.",
+          "explanation": "This is why LBOs are so controversial. The company being bought is saddled with crushing debt to pay for its own acquisition."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the new PE Executive. What is his immediate objective?",
+          "tts_text": "Our EBITDA margins are unacceptable. We are closing the 50 lowest-performing stores tomorrow and cutting corporate headcount by 30%.",
+          "options": [
+            "Aggressive Restructuring.",
+            "Expanding the business.",
+            "Making employees happy."
+          ],
+          "correct_answer": "Aggressive Restructuring.",
+          "explanation": "Private Equity is not emotionally attached to your history. They exist solely to optimize financial metrics."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a company bought in an LBO cannot make the monthly payments on its massive new debt?",
+          "options": [
+            "The bank forgives the debt.",
+            "The company declares bankruptcy. The PE firm loses their initial investment, but the company itself is destroyed.",
+            "The government pays it."
+          ],
+          "correct_answer": "The company declares bankruptcy. The PE firm loses their initial investment, but the company itself is destroyed.",
+          "explanation": "LBOs are high-risk. Toys 'R' Us famously went bankrupt primarily because of the massive debt from an LBO."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do CEOs sometimes *want* to be bought by Private Equity?",
+          "options": [
+            "Because PE firms are nice.",
+            "To take the company 'Private'. Escaping the brutal 90-day earnings cycle of the public stock market allows the CEO to make long-term structural changes in secret.",
+            "To get famous."
+          ],
+          "correct_answer": "To take the company 'Private'. Escaping the brutal 90-day earnings cycle of the public stock market allows the CEO to make long-term structural changes in secret.",
+          "explanation": "Being a public company is exhausting. Going private allows a CEO to execute painful pivots without analysts screaming at them every quarter."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "PE Terminology",
+      "pairs": [
+        { "concept": "Private Equity", "match": "Investment funds that buy and restructure private companies" },
+        { "concept": "LBO", "match": "Leveraged Buyout (Buying a company primarily with borrowed money)" },
+        { "concept": "EBITDA", "match": "Earnings Before Interest, Taxes, Depreciation, and Amortization" },
+        { "concept": "Going Private", "match": "Removing a company from the public stock exchange" }
+      ]
+    }
+  ]
+}

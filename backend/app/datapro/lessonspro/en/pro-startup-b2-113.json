@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-113",
+  "title": "Value-Based Pricing",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Pricing is Not Cost",
+      "parts": [
+        {
+          "visual": "A startup builds an AI tool that saves a massive bank $10 Million a year in legal fees. It costs the startup exactly $10 a month in AWS server fees to run the AI. Should the startup charge the bank $20 a month (cost + profit)? No. They charge the bank $1 Million a year.\n\nThe Psychology of Price:\n1. Cost-Plus Pricing: Setting a price based on how much it costs to make the product (Terrible for software).\n2. Value-Based Pricing: Setting a price based entirely on the massive financial value the product unlocks for the customer. If you save them $10M, charging $1M is a bargain.",
+          "audio": "Startups consistently undercharge because founders feel guilty charging massive amounts of money for software that costs pennies to run. But enterprise customers do not care about your server costs; they care about their own ROI."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Extracting the Value",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A founder builds a security tool that prevents hackers from stealing data. It costs the founder $5 to run. They try to sell it to an airline for $50. The airline refuses to buy it. Why?",
+          "options": [
+            "The airline likes hackers.",
+            "Because the price is too low to be credible. If a massive airline has a $100 Million security problem, and you offer a $50 solution, the CISO will instantly assume your software is a toy and dangerous to use. Price signals quality.",
+            "Because the founder is rude."
+          ],
+          "correct_answer": "Because the price is too low to be credible. If a massive airline has a $100 Million security problem, and you offer a $50 solution, the CISO will instantly assume your software is a toy and dangerous to use. Price signals quality.",
+          "explanation": "In enterprise sales, being too cheap is a massive red flag."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the pricing expert. What is the fundamental requirement for Value-Based Pricing to work?",
+          "tts_text": "You cannot just make up a high number. You must sit down with the CFO and mathematically prove that your software increases their revenue by X, or decreases their operational costs by Y. You must calculate the exact ROI.",
+          "options": [
+            "Having a nice logo.",
+            "Quantifiable ROI (Return on Investment). You must literally do the math for the customer. If you cannot mathematically prove that your software makes them richer or saves them money, you cannot use value-based pricing.",
+            "Being friends with the CEO."
+          ],
+          "correct_answer": "Quantifiable ROI (Return on Investment). You must literally do the math for the customer. If you cannot mathematically prove that your software makes them richer or saves them money, you cannot use value-based pricing.",
+          "explanation": "You are not selling software; you are selling financial outcomes."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Competitor-Based Pricing' (charging exactly 10% less than your rival) a dangerous trap for early-stage startups?",
+          "options": [
+            "Because rivals are scary.",
+            "It triggers a 'Race to the Bottom'. If you lower your price, they will lower theirs, until neither company can survive. Instead of competing on price, startups must compete on unique, differentiated value that rivals cannot copy.",
+            "Because math is hard."
+          ],
+          "correct_answer": "It triggers a 'Race to the Bottom'. If you lower your price, they will lower theirs, until neither company can survive. Instead of competing on price, startups must compete on unique, differentiated value that rivals cannot copy.",
+          "explanation": "If you compete purely on price, you will eventually price yourself into bankruptcy."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a B2B startup doubles their price tomorrow?",
+          "options": [
+            "All customers will leave.",
+            "Usually, almost nothing bad happens. Startups are notoriously underpriced. They might lose 10% of their most annoying, cheapest customers, but their overall revenue will skyrocket, and their profit margins will explode.",
+            "The servers will crash."
+          ],
+          "correct_answer": "Usually, almost nothing bad happens. Startups are notoriously underpriced. They might lose 10% of their most annoying, cheapest customers, but their overall revenue will skyrocket, and their profit margins will explode.",
+          "explanation": "Most startups are terrified to raise prices. It is usually their biggest mistake."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Pricing Terminology",
+      "pairs": [
+        { "concept": "Value-Based Pricing", "match": "Setting a price based on the financial outcome the product creates for the buyer" },
+        { "concept": "Cost-Plus Pricing", "match": "A terrible software strategy of setting a price based on server and engineering costs" },
+        { "concept": "Race to the Bottom", "match": "The destructive cycle of competitors constantly lowering prices to win deals" },
+        { "concept": "Price as a Signal", "match": "The psychological effect where a high price makes the enterprise trust the product more" }
+      ]
+    }
+  ]
+}

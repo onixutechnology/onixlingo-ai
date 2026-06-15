@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-143",
+  "title": "SPACs and Direct Listings",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Hacking the IPO",
+      "parts": [
+        {
+          "visual": "A traditional IPO takes a year of grueling paperwork and costs millions in fees to investment bankers. Some tech founders, hating Wall Street bankers, decided to invent faster, cheaper ways to go public.\n\nThe Alternatives:\n1. Direct Listing: A company goes public without raising *new* money or hiring bankers to sell shares. They just list their *existing* shares directly on the stock exchange. (e.g., Spotify).\n2. SPAC (Special Purpose Acquisition Company): A 'Blank Check' shell company goes public first with no actual business. Then, it uses its public money to buy a private startup, instantly turning that startup into a public company.",
+          "audio": "A traditional IPO is like building a custom house from scratch. A SPAC is like buying an empty house that is already fully permitted and just moving your furniture into it. It is vastly faster, but much more dangerous."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Backdoors to Wall Street",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Why did companies like Spotify and Slack choose a 'Direct Listing' instead of a traditional IPO?",
+          "options": [
+            "Because they were bankrupt.",
+            "They didn't need the money. Traditional IPOs are designed to raise massive cash. Spotify already had billions. They just wanted to allow their employees to sell their shares freely without paying massive 7% fees to Wall Street bankers.",
+            "Because they liked the name."
+          ],
+          "correct_answer": "They didn't need the money. Traditional IPOs are designed to raise massive cash. Spotify already had billions. They just wanted to allow their employees to sell their shares freely without paying massive 7% fees to Wall Street bankers.",
+          "explanation": "If you don't need cash, you don't need the bankers."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the financial analyst explaining the danger of SPACs. What is the fundamental risk?",
+          "tts_text": "Because SPACs bypass the rigorous, brutal SEC scrutiny of a traditional IPO, hundreds of terrible, unprofitable startups went public in 2021 by merging with SPACs. When the market realized the companies were garbage, retail investors lost billions.",
+          "options": [
+            "SPACs are too slow.",
+            "Lack of Quality Control. The traditional IPO process is slow because it legally forces the company to prove it is a real, sustainable business. SPACs allowed highly speculative, dangerous companies to dump their stock on the public market.",
+            "SPACs make too much money."
+          ],
+          "correct_answer": "Lack of Quality Control. The traditional IPO process is slow because it legally forces the company to prove it is a real, sustainable business. SPACs allowed highly speculative, dangerous companies to dump their stock on the public market.",
+          "explanation": "Speed usually comes at the cost of safety."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the primary difference between how prices are set in an IPO versus a Direct Listing?",
+          "options": [
+            "Prices are random.",
+            "In an IPO, investment bankers legally set the initial price based on back-room deals with massive funds. In a Direct Listing, the price is set entirely by raw supply and demand on the open market on Day 1. It is purely democratic.",
+            "Prices are set by the government."
+          ],
+          "correct_answer": "In an IPO, investment bankers legally set the initial price based on back-room deals with massive funds. In a Direct Listing, the price is set entirely by raw supply and demand on the open market on Day 1. It is purely democratic.",
+          "explanation": "Direct listings let the free market decide the value instantly."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If a startup uses a SPAC to go public, who actually negotiated the valuation of the company?",
+          "options": [
+            "The SEC.",
+            "The SPAC Sponsor. The founder of the shell company negotiates directly with the startup CEO. If they agree the startup is worth $2 Billion, the deal happens. This is much faster than convincing 100 different mutual funds during an IPO roadshow.",
+            "The users of the app."
+          ],
+          "correct_answer": "The SPAC Sponsor. The founder of the shell company negotiates directly with the startup CEO. If they agree the startup is worth $2 Billion, the deal happens. This is much faster than convincing 100 different mutual funds during an IPO roadshow.",
+          "explanation": "A SPAC is fundamentally just a 1-on-1 merger deal."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Public Market Terminology",
+      "pairs": [
+        { "concept": "IPO", "match": "The traditional, expensive process of raising new capital on the public market" },
+        { "concept": "Direct Listing", "match": "Going public without raising new money or using bankers, purely for liquidity" },
+        { "concept": "SPAC", "match": "A public shell company created specifically to buy a private startup" },
+        { "concept": "Retail Investor", "match": "Normal, everyday people buying stock on their phones (not massive funds)" }
+      ]
+    }
+  ]
+}

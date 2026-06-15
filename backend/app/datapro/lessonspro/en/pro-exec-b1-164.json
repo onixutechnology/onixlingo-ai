@@ -1,0 +1,106 @@
+{
+  "id": "pro-exec-b1-164",
+  "title": "Corporate Espionage",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Stealing the Future",
+      "parts": [
+        {
+          "visual": "You spend 5 years and $2 Billion developing a revolutionary battery. Three months before you launch, your biggest competitor launches the exact same battery. How?\n\nThe Infiltration:\n1. The Insider Threat: A disgruntled employee downloads the CAD blueprints to a USB drive and sells them to the competitor.\n2. The Cyber Attack: State-sponsored hackers break into your servers.\n3. The Cost: Corporate espionage destroys your competitive advantage instantly. It is the theft of Intellectual Property (IP).",
+          "audio": "Corporate Espionage is the theft of trade secrets. Competitors or hostile nations will bribe your employees or hack your servers to steal your Intellectual Property, destroying your competitive advantage."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Threat Vector",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Your Chief Engineer suddenly resigns and goes to work for your biggest rival. A month later, your rival announces a product identical to your secret prototype. What is the likely cause?",
+          "options": [
+            "It is a coincidence.",
+            "Theft of Trade Secrets. The engineer committed Corporate Espionage by stealing your IP (Intellectual Property) and taking it to their new employer.",
+            "They are just smarter than you."
+          ],
+          "correct_answer": "Theft of Trade Secrets. The engineer committed Corporate Espionage by stealing your IP (Intellectual Property) and taking it to their new employer.",
+          "explanation": "This is why executives sign extreme Non-Compete and Non-Disclosure agreements. IP theft is a multi-billion dollar crime."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Cybersecurity Director. What is the greatest vulnerability in any company?",
+          "tts_text": "Our firewalls are military-grade. Our encryption is unbreakable. But none of that matters because an intern clicked on a phishing email and handed over their password.",
+          "options": [
+            "Bad software.",
+            "Human Error. Employees are the weakest link in corporate security.",
+            "Slow internet."
+          ],
+          "correct_answer": "Human Error. Employees are the weakest link in corporate security.",
+          "explanation": "Social engineering (tricking humans) is far easier and cheaper than hacking complex algorithms."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'State-Sponsored' Corporate Espionage?",
+          "options": [
+            "When the government buys your product.",
+            "When a foreign government uses its national intelligence agencies to hack your company and steal your technology, specifically to give it to their own domestic companies.",
+            "A tax audit."
+          ],
+          "correct_answer": "When a foreign government uses its national intelligence agencies to hack your company and steal your technology, specifically to give it to their own domestic companies.",
+          "explanation": "Private companies are increasingly finding themselves at war with the intelligence apparatus of hostile nations."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Spear-Phishing'?",
+          "options": [
+            "A fishing technique.",
+            "A highly targeted cyberattack where a hacker researches a specific executive (e.g., the CFO) and sends a fake email that perfectly impersonates the CEO, asking for an urgent wire transfer.",
+            "A physical weapon."
+          ],
+          "correct_answer": "A highly targeted cyberattack where a hacker researches a specific executive (e.g., the CFO) and sends a fake email that perfectly impersonates the CEO, asking for an urgent wire transfer.",
+          "explanation": "Unlike generic spam, spear-phishing is meticulously researched and highly effective against stressed executives."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Security",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to declare a security breach:",
+          "parts": [
+            "We",
+            "have",
+            "detected",
+            "an",
+            "unauthorized",
+            "exfiltration",
+            "of",
+            "proprietary",
+            "data."
+          ],
+          "correct_order": [
+            "We",
+            "have",
+            "detected",
+            "an",
+            "unauthorized",
+            "exfiltration",
+            "of",
+            "proprietary",
+            "data."
+          ],
+          "explanation": "The formal, terrifying language a CISO uses when the company's secrets have been stolen."
+        }
+      ]
+    }
+  ]
+}

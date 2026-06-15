@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-141",
+  "title": "M&A (Mergers and Acquisitions) Overview",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Art of the Exit",
+      "parts": [
+        {
+          "visual": "A startup builds an incredible AI video editor. Adobe, a multi-billion dollar corporation, notices it. Instead of spending 5 years trying to build their own AI editor to compete, Adobe simply writes a check for $500 Million and buys the startup. The founders are instantly rich.\n\nThe End Game:\n1. The Exit: The ultimate goal of venture capital. VCs only make money when a startup 'exits' (gets bought or goes public). Until then, the billion-dollar valuation is just fake paper money.\n2. M&A (Mergers and Acquisitions): When one company buys another. Over 90% of successful startups exit via M&A, not by going public.",
+          "audio": "Companies are bought, not sold. If you build a company purely hoping someone will buy it, you will fail. You must build a highly profitable, independent business that is so dangerous to a massive corporation that they are forced to buy you to survive."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Strategy of the Sale",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A massive tech giant buys a 2-year-old startup for $100 Million. The startup has zero revenue. Why did the tech giant buy them?",
+          "options": [
+            "They wanted the office furniture.",
+            "The Talent or the Tech. The tech giant didn't buy a business; they bought the brilliant engineering team ('Acqui-hire') or a highly specific, patented algorithm that would have taken them years to build internally. Time is more expensive than money.",
+            "They made a mistake."
+          ],
+          "correct_answer": "The Talent or the Tech. The tech giant didn't buy a business; they bought the brilliant engineering team ('Acqui-hire') or a highly specific, patented algorithm that would have taken them years to build internally. Time is more expensive than money.",
+          "explanation": "Corporations buy speed."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO describing a hostile M&A tactic. What is the buyer trying to do?",
+          "tts_text": "They told us they wanted to buy us. We spent three months showing them all our code and our secret customer lists during Due Diligence. Then they suddenly canceled the deal and launched an exact copy of our software a month later.",
+          "options": [
+            "They forgot to pay.",
+            "The Fishing Expedition. Sometimes massive corporations fake an acquisition offer purely to gain legal access to a competitor's proprietary secrets during the 'Due Diligence' phase. Startups must heavily guard their core IP until the money is in the bank.",
+            "They ran out of money."
+          ],
+          "correct_answer": "The Fishing Expedition. Sometimes massive corporations fake an acquisition offer purely to gain legal access to a competitor's proprietary secrets during the 'Due Diligence' phase. Startups must heavily guard their core IP until the money is in the bank.",
+          "explanation": "Never show the recipe until the check clears."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the role of an 'Investment Banker' in an M&A deal?",
+          "options": [
+            "They write the code.",
+            "They are the highly paid brokers. If a founder wants to sell their company, the investment banker prepares the financial documents, contacts multiple massive corporations, and creates a 'Bidding War' to drive the purchase price as high as possible.",
+            "They design the logo."
+          ],
+          "correct_answer": "They are the highly paid brokers. If a founder wants to sell their company, the investment banker prepares the financial documents, contacts multiple massive corporations, and creates a 'Bidding War' to drive the purchase price as high as possible.",
+          "explanation": "Bankers sell companies the way real estate agents sell houses."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If a founder owns 20% of a company, and the company is acquired for $100 Million, why might the founder walk away with absolutely $0?",
+          "options": [
+            "Because they lost their password.",
+            "Liquidation Preferences. If the startup raised $150 Million from VCs over its lifetime, the legal contracts guarantee the VCs get their money back *first*. Since the sale price ($100M) is less than the invested cash ($150M), the founders get nothing.",
+            "Because taxes are 100%."
+          ],
+          "correct_answer": "Liquidation Preferences. If the startup raised $150 Million from VCs over its lifetime, the legal contracts guarantee the VCs get their money back *first*. Since the sale price ($100M) is less than the invested cash ($150M), the founders get nothing.",
+          "explanation": "The Cap Table math is brutal in a mediocre exit."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "M&A Terminology",
+      "pairs": [
+        { "concept": "The Exit", "match": "The event where investors and founders finally convert their shares into cash" },
+        { "concept": "Due Diligence", "match": "The aggressive legal and financial investigation before a company is bought" },
+        { "concept": "Fishing Expedition", "match": "Faking an acquisition offer to steal a competitor's secrets" },
+        { "concept": "Investment Banker", "match": "The broker hired to start a bidding war and sell the company" }
+      ]
+    }
+  ]
+}

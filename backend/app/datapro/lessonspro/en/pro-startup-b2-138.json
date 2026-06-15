@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-138",
+  "title": "Down Rounds (When Valuations Drop)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Humbling of a Unicorn",
+      "parts": [
+        {
+          "visual": "In 2021, a startup raises money at a $1 Billion valuation. They are a 'Unicorn'. In 2023, the economy crashes. They run out of money. To survive, they have to raise money again, but investors now say the company is only worth $300 Million. The founders are crushed.\n\nThe Math of Pain:\n1. The Down Round: Raising capital at a lower valuation than the previous funding round.\n2. The Dilution Shock: Because the company is worth less, the founders must give away a vastly larger percentage of the company to the new investors to get the same amount of cash. The founders lose massive amounts of ownership.",
+          "audio": "A down round is humiliating, but it is not a death sentence. Bankruptcy is a death sentence. The smartest founders swallow their pride, take the brutal dilution, accept the new reality, and focus on keeping the company alive."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Swallowing the Pride",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What happens to employee morale during a Down Round?",
+          "options": [
+            "It goes up.",
+            "It collapses. Employees were given Stock Options based on the $1 Billion valuation. When the valuation drops to $300 Million, the employees realize their stock is 'underwater' (worthless). Many will quit unless the CEO actively resets and re-issues new stock options.",
+            "Nothing happens."
+          ],
+          "correct_answer": "It collapses. Employees were given Stock Options based on the $1 Billion valuation. When the valuation drops to $300 Million, the employees realize their stock is 'underwater' (worthless). Many will quit unless the CEO actively resets and re-issues new stock options.",
+          "explanation": "A down round destroys the primary financial incentive of your team."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC triggering 'Anti-Dilution Provisions'. What does this mean for the founders?",
+          "tts_text": "Because you raised a down round, our contract protects us. We automatically get extra free shares to make up for the loss in valuation. The math dictates that all these extra shares come directly out of the founder's ownership percentage.",
+          "options": [
+            "The founders get rich.",
+            "The Founder Penalty. Early investors often have legal clauses that protect them from losing money in a down round. The math of the Cap Table shifts the entire financial punishment directly onto the founders and the employees.",
+            "The investors get angry."
+          ],
+          "correct_answer": "The Founder Penalty. Early investors often have legal clauses that protect them from losing money in a down round. The math of the Cap Table shifts the entire financial punishment directly onto the founders and the employees.",
+          "explanation": "VCs protect their downside. Founders absorb the impact."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If a CEO knows a Down Round is inevitable, what is the worst thing they can do?",
+          "options": [
+            "Tell the board.",
+            "Wait and hope for a miracle. If you wait until you have 2 weeks of cash left to negotiate a down round, the new investors will smell blood in the water. They will demand completely predatory terms, or simply let you go bankrupt and buy your assets.",
+            "Hire a new accountant."
+          ],
+          "correct_answer": "Wait and hope for a miracle. If you wait until you have 2 weeks of cash left to negotiate a down round, the new investors will smell blood in the water. They will demand completely predatory terms, or simply let you go bankrupt and buy your assets.",
+          "explanation": "Desperation is the worst negotiating position in the world."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Flat Round'?",
+          "options": [
+            "Raising money on a flat desk.",
+            "A compromise. The company raises money at the exact same valuation as their last round. It is not a victory (because startups are supposed to grow), but it avoids the massive psychological and legal penalties of a formal Down Round.",
+            "Raising no money."
+          ],
+          "correct_answer": "A compromise. The company raises money at the exact same valuation as their last round. It is not a victory (because startups are supposed to grow), but it avoids the massive psychological and legal penalties of a formal Down Round.",
+          "explanation": "A flat round buys you time to fix the engine."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Valuation Terminology",
+      "pairs": [
+        { "concept": "Down Round", "match": "Raising capital at a lower valuation than the previous round" },
+        { "concept": "Flat Round", "match": "Raising capital at the exact same valuation as the previous round" },
+        { "concept": "Underwater Options", "match": "Employee stock options that are currently mathematically worthless" },
+        { "concept": "Anti-Dilution", "match": "A legal clause that protects investors, but severely punishes founders during a down round" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-64",
+  "title": "Pitching to Venture Capital (VC)",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The 10x Mindset",
+      "parts": [
+        {
+          "visual": "Venture Capitalists do not invest in 'safe' businesses. They invest in scalable startups that can return 10x their money to cover the losses of their other investments.\n\nThe Pitch Deck Essentials:\n1. The TAM (Total Addressable Market) - It must be huge.\n2. The Moat - Why can't Google just copy you tomorrow?\n3. The Team - Why are you the only people who can build this?",
+          "audio": "Venture Capitalists invest in startups that can return 10x their money. Your pitch must prove a massive Total Addressable Market and a strong Moat."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "VC Dynamics",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A founder pitches a VC a local restaurant business that will guarantee a steady 8% profit every year. Will the VC invest?",
+          "options": [
+            "Yes, because VCs love steady profits.",
+            "No. VCs operate on a 'Power Law' where they need massive, exponential growth (10x-100x returns) to survive.",
+            "Yes, if the food is good."
+          ],
+          "correct_answer": "No. VCs operate on a 'Power Law' where they need massive, exponential growth (10x-100x returns) to survive.",
+          "explanation": "A good small business is a terrible VC investment. VCs fund 'Unicorns' (billion-dollar potentials)."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the phrase. What is the VC asking about?",
+          "tts_text": "I like the product, but what is your CAC compared to your LTV?",
+          "options": [
+            "Customer Acquisition Cost vs. Lifetime Value.",
+            "Computer Access Codes.",
+            "Cost of Advertising."
+          ],
+          "correct_answer": "Customer Acquisition Cost vs. Lifetime Value.",
+          "explanation": "CAC (How much it costs to get a user) must be significantly lower than LTV (How much money that user spends over time) for a business to scale."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Traction' in the context of a startup pitch?",
+          "options": [
+            "The tires on the founder's car.",
+            "Quantitative evidence of market demand (e.g., active users, recurring revenue, signed contracts).",
+            "A good idea."
+          ],
+          "correct_answer": "Quantitative evidence of market demand (e.g., active users, recurring revenue, signed contracts).",
+          "explanation": "An idea is worthless. Traction proves that strangers are actually willing to pay for your idea."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does a VC mean when they ask 'What is your Burn Rate?'",
+          "options": [
+            "How hot the office gets.",
+            "How much money the company is losing every month before it runs out of cash.",
+            "How fast the servers run."
+          ],
+          "correct_answer": "How much money the company is losing every month before it runs out of cash.",
+          "explanation": "Burn rate determines the company's 'Runway'—how many months they have left to survive before they need to raise more money or go bankrupt."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Startup Jargon",
+      "pairs": [
+        { "concept": "TAM", "match": "Total Addressable Market" },
+        { "concept": "Burn Rate", "match": "The rate at which a company spends its capital" },
+        { "concept": "Runway", "match": "The amount of time until a startup runs out of money" },
+        { "concept": "Traction", "match": "Momentum or measurable growth in a startup" }
+      ]
+    }
+  ]
+}

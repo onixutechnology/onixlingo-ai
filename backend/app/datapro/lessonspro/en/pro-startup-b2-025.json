@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-025",
+  "title": "The Down Round (When Valuation Drops)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Nightmare Scenario",
+      "parts": [
+        {
+          "visual": "In 2021, your startup raised money at a $100 Million valuation. You were a genius. In 2023, you run out of cash. The economy crashed. The best offer you get is $20 Million. You have suffered a Down Round.\n\nThe Fallout:\n1. Massive Dilution: Because the stock is now so cheap, the new investors buy a huge percentage of the company, crushing the founders' ownership.\n2. Anti-Dilution Clauses: The old VCs activate legal shields that magically give them free stock to protect their investment, meaning the founders and employees suffer 100% of the pain.",
+          "audio": "A Down Round occurs when a company raises capital at a lower valuation than its previous round. It is the most brutal financial event a startup can survive, destroying founder equity, employee morale, and market perception."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Surviving the Crash",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Why does a 'Down Round' instantly destroy employee morale?",
+          "options": [
+            "Because the office gets smaller.",
+            "Because the employees' stock options are now 'Underwater' (worthless). They realize their equity is wiped out, and the smartest engineers will immediately quit to join a winning company.",
+            "Because they have to work weekends."
+          ],
+          "correct_answer": "Because the employees' stock options are now 'Underwater' (worthless). They realize their equity is wiped out, and the smartest engineers will immediately quit to join a winning company.",
+          "explanation": "Startups pay low salaries in exchange for valuable stock. If the stock is worthless, the talent leaves."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC triggering their legal protection. What is happening to the founder?",
+          "tts_text": "Since this is a down round, my 'Full Ratchet Anti-Dilution' clause is activated. My old shares are magically repriced to the new, lower price. You must issue me a million new shares for free.",
+          "options": [
+            "The VC is buying more stock.",
+            "The VC is forcing the Founder to absorb all the damage. The anti-dilution clause protects the VC's ownership percentage by printing new shares for them, which mathematically dilutes the founder into oblivion.",
+            "The VC is giving the founder a loan."
+          ],
+          "correct_answer": "The VC is forcing the Founder to absorb all the damage. The anti-dilution clause protects the VC's ownership percentage by printing new shares for them, which mathematically dilutes the founder into oblivion.",
+          "explanation": "This is why founders must aggressively negotiate 'Broad-Based Weighted Average' anti-dilution instead of the toxic 'Full Ratchet'."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "To avoid a highly public, embarrassing Down Round, what financial trick do founders often use to raise money quickly?",
+          "options": [
+            "A bank robbery.",
+            "A 'Convertible Note' or 'SAFE'. It is a loan that will convert into stock later. Because it doesn't officially set a new valuation today, it hides the fact that the company is struggling.",
+            "A Kickstarter campaign."
+          ],
+          "correct_answer": "A 'Convertible Note' or 'SAFE'. It is a loan that will convert into stock later. Because it doesn't officially set a new valuation today, it hides the fact that the company is struggling.",
+          "explanation": "SAFEs are the ultimate tool for pushing hard valuation conversations into the future."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Is a Down Round always fatal to a startup?",
+          "options": [
+            "Yes, the company must close.",
+            "No. It is a massive reset, but if the founder accepts the dilution, retains the core team, and uses the new cash to achieve Product-Market Fit, the company can still reach a billion-dollar valuation later.",
+            "Yes, it is illegal to continue."
+          ],
+          "correct_answer": "No. It is a massive reset, but if the founder accepts the dilution, retains the core team, and uses the new cash to achieve Product-Market Fit, the company can still reach a billion-dollar valuation later.",
+          "explanation": "Swallowing your pride and accepting a Down Round is often the only way to save the company."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Crash Terminology",
+      "pairs": [
+        { "concept": "Down Round", "match": "A financing round in which a company sells shares at a lower price than its previous round" },
+        { "concept": "Anti-Dilution", "match": "A clause that protects an investor from equity dilution if the company issues new shares at a lower price" },
+        { "concept": "Underwater Options", "match": "Employee stock options where the exercise price is higher than the current market price" },
+        { "concept": "SAFE", "match": "Simple Agreement for Future Equity (a popular early-stage financing instrument)" }
+      ]
+    }
+  ]
+}

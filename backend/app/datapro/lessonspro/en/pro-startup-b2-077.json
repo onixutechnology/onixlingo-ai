@@ -1,0 +1,104 @@
+{
+  "id": "pro-startup-b2-077",
+  "title": "The P&L (Profit & Loss Statement)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Scoreboard",
+      "parts": [
+        {
+          "visual": "A founder brags: 'We generated $5 Million in sales this year!' The bank asks to see their P&L. The document shows $5 Million in Top-Line revenue, but $7 Million in expenses. The company is actually losing $2 Million a year. The bank denies the loan.\n\nThe Document:\n1. The P&L (Profit & Loss / Income Statement): The fundamental financial document that summarizes the revenues, costs, and expenses incurred during a specific period.\n2. The Two Lines: The 'Top Line' is total Revenue. The 'Bottom Line' is Net Profit (what is left after every single expense and tax is paid).",
+          "audio": "Founders love to talk about the Top Line because it is a big, impressive number. Investors only care about the Bottom Line and the Margins. You cannot pay your employees with Top Line revenue."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Reading the Matrix",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is 'COGS' (Cost of Goods Sold) on a software startup's P&L?",
+          "options": [
+            "The cost of the office coffee.",
+            "The direct costs attributable to producing the software. For a SaaS company, this is almost entirely cloud hosting costs (AWS/Azure) and customer support salaries.",
+            "The CEO's salary."
+          ],
+          "correct_answer": "The direct costs attributable to producing the software. For a SaaS company, this is almost entirely cloud hosting costs (AWS/Azure) and customer support salaries.",
+          "explanation": "Revenue minus COGS equals your 'Gross Profit'."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CFO explaining 'EBITDA'. Why do investors use this specific metric instead of pure Net Income?",
+          "tts_text": "Our Net Income looks terrible because we have massive depreciation on our servers and heavy taxes. But if you look at EBITDA, it proves our core business operations are highly profitable.",
+          "options": [
+            "Because it sounds cool.",
+            "Earnings Before Interest, Taxes, Depreciation, and Amortization. It strips out accounting rules and tax variations to show the pure, raw profitability of the company's daily operations.",
+            "Because it hides the CEO's salary."
+          ],
+          "correct_answer": "Earnings Before Interest, Taxes, Depreciation, and Amortization. It strips out accounting rules and tax variations to show the pure, raw profitability of the company's daily operations.",
+          "explanation": "EBITDA is the standard metric used to value mature tech companies."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a startup confuses 'Cash Flow' with 'Profit'?",
+          "options": [
+            "Nothing happens.",
+            "They will go bankrupt. A company can be 'Profitable' on the P&L (they signed $1M in contracts this month), but have negative 'Cash Flow' (the clients won't actually pay the cash for 90 days). You can die of thirst while swimming in the ocean.",
+            "They will pay less taxes."
+          ],
+          "correct_answer": "They will go bankrupt. A company can be 'Profitable' on the P&L (they signed $1M in contracts this month), but have negative 'Cash Flow' (the clients won't actually pay the cash for 90 days). You can die of thirst while swimming in the ocean.",
+          "explanation": "Profit is a theory. Cash is reality."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "On the P&L, what does 'OPEX' (Operating Expenses) generally include for a startup?",
+          "options": [
+            "The cost of raw materials.",
+            "The day-to-day costs of running the business not tied directly to making the product. This includes Sales, Marketing, Legal, Office Rent, and Executive Salaries (SG&A).",
+            "The cost of the AWS servers."
+          ],
+          "correct_answer": "The day-to-day costs of running the business not tied directly to making the product. This includes Sales, Marketing, Legal, Office Rent, and Executive Salaries (SG&A).",
+          "explanation": "When a company does massive layoffs, they are usually trying to slash their OPEX."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Finance",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the financial formula:",
+          "parts": [
+            "Revenue",
+            "minus",
+            "COGS",
+            "minus",
+            "OPEX",
+            "equals",
+            "Net",
+            "Profit."
+          ],
+          "correct_order": [
+            "Revenue",
+            "minus",
+            "COGS",
+            "minus",
+            "OPEX",
+            "equals",
+            "Net",
+            "Profit."
+          ],
+          "explanation": "The basic arithmetic of capitalism."
+        }
+      ]
+    }
+  ]
+}

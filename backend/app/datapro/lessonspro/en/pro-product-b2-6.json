@@ -1,0 +1,83 @@
+{
+  "id": "pro-product-b2-6",
+  "title": "Agile vs. Waterfall",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Physics of Software Development",
+      "parts": [
+        {
+          "visual": "A bank spends 2 years writing a 500-page document describing their new app. They give it to engineers, who spend 2 years coding it exactly as written. They launch it in year 4, only to realize nobody uses banking apps anymore; they use Apple Pay. The bank wasted $50 Million.\n\nThe Two Religions:\n1. Waterfall: The traditional method. You plan everything perfectly in advance, build it all at once, and release it years later. It assumes the world will not change while you are building. It is perfect for building bridges, but terrible for building software.\n2. Agile: The modern method. You build a tiny, ugly piece of the software in 2 weeks, give it to users, watch them hate it, and instantly change the plan. It embraces the fact that your initial plan is probably wrong.",
+          "audio": "In software, certainty is an illusion. Waterfall tries to eliminate risk by planning perfectly. Agile eliminates risk by failing so fast and so cheaply that the failures don't matter."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Embracing the Chaos",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Why is the 'Waterfall' method still used to build physical bridges, but abandoned for software?",
+          "options": [
+            "Because software doesn't fall down.",
+            "Cost of Change. If you are building a bridge and realize halfway through that it needs to be 10 miles to the left, it is impossible to change. You must plan perfectly. In software, moving a digital button to the left costs exactly zero dollars. Software allows for cheap adaptation.",
+            "Because bridges are made of water."
+          ],
+          "correct_answer": "Cost of Change. If you are building a bridge and realize halfway through that it needs to be 10 miles to the left, it is impossible to change. You must plan perfectly. In software, moving a digital button to the left costs exactly zero dollars. Software allows for cheap adaptation.",
+          "explanation": "Pixels are cheaper than concrete."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Agile PM explaining their philosophy. What is the ultimate goal of working in an Agile methodology?",
+          "tts_text": "We do not write 100-page requirement documents because nobody reads them. We write code. Our goal is to get working software into the hands of a real, confused user as humanly fast as possible, because their confusion is our actual blueprint.",
+          "options": [
+            "To write a book.",
+            "Speed to Feedback. Agile assumes the PM is wrong. The only way to find out what is right is to build a cheap prototype, launch it, and watch the user break it. Feedback loops are more valuable than theoretical planning.",
+            "To make users angry."
+          ],
+          "correct_answer": "Speed to Feedback. Agile assumes the PM is wrong. The only way to find out what is right is to build a cheap prototype, launch it, and watch the user break it. Feedback loops are more valuable than theoretical planning.",
+          "explanation": "Your business plan will not survive first contact with the customer."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the biggest danger of implementing 'Fake Agile'?",
+          "options": [
+            "People run too fast.",
+            "Micromanagement in disguise. Many companies claim to be Agile because they have 2-week sprints, but the CEO still dictates a rigid 2-year master plan that cannot be changed. This is just Waterfall with more meetings.",
+            "The software becomes a fake app."
+          ],
+          "correct_answer": "Micromanagement in disguise. Many companies claim to be Agile because they have 2-week sprints, but the CEO still dictates a rigid 2-year master plan that cannot be changed. This is just Waterfall with more meetings.",
+          "explanation": "Agile is a mindset of flexibility, not just a calendar of meetings."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "In Agile, what does 'Responding to change over following a plan' mean?",
+          "options": [
+            "You never plan anything.",
+            "If you spend 3 months building a feature, and halfway through a massive competitor launches the exact same thing for free, you immediately stop building it. You throw away the plan because the market reality changed.",
+            "You change your password every day."
+          ],
+          "correct_answer": "If you spend 3 months building a feature, and halfway through a massive competitor launches the exact same thing for free, you immediately stop building it. You throw away the plan because the market reality changed.",
+          "explanation": "Adaptability is the ultimate competitive advantage."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Methodology Terms",
+      "pairs": [
+        { "concept": "Waterfall", "match": "Planning everything perfectly for years before writing a single line of code" },
+        { "concept": "Agile", "match": "Building small pieces quickly, launching them, and adapting based on feedback" },
+        { "concept": "Cost of Change", "match": "The reason software can be Agile; changing pixels is practically free" },
+        { "concept": "Fake Agile", "match": "Having short sprints but keeping a rigid, unchangeable 2-year master plan" }
+      ]
+    }
+  ]
+}

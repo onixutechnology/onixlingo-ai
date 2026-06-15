@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-093",
+  "title": "Bankruptcy (Chapter 7 and 11)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The End of the Line",
+      "parts": [
+        {
+          "visual": "The bank account hits zero. The VCs refuse to invest another dollar. The servers are shut off. The employees are sent home. The CEO sits alone in an empty office and calls the lawyers.\n\nThe Legal Reality:\n1. Chapter 7 (Liquidation): The company is completely dead. The court sells the office chairs, laptops, and patents to pay back the creditors. The equity goes to zero.\n2. Chapter 11 (Reorganization): The company is dying, but the court protects it from creditors while the CEO tries to restructure the massive debt and save the core business.",
+          "audio": "Nine out of ten startups fail. Bankruptcy is the statistical default state of entrepreneurship. It is not a moral failing; it is the brutal mathematical reality of taking massive risks in a competitive market."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Anatomy of Failure",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup files for Chapter 7 bankruptcy. The court sells their servers for $100,000. Who gets the money first?",
+          "options": [
+            "The Founders.",
+            "The Secured Creditors. In bankruptcy, there is a strict hierarchy of pain. The bank that loaned the startup money gets paid first. The VCs get paid next. The founders and employees with common stock are at the absolute bottom and get exactly $0.",
+            "The VCs."
+          ],
+          "correct_answer": "The Secured Creditors. In bankruptcy, there is a strict hierarchy of pain. The bank that loaned the startup money gets paid first. The VCs get paid next. The founders and employees with common stock are at the absolute bottom and get exactly $0.",
+          "explanation": "Equity is worthless in a liquidation."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO's desperate mistake right before bankruptcy. What law did they break?",
+          "tts_text": "I know we have no money, but I took $50,000 out of my personal savings to pay the AWS bill to keep the servers on. I didn't pay the employee payroll taxes to the government this month.",
+          "options": [
+            "They paid AWS.",
+            "Piercing the Corporate Veil. If a CEO fails to pay the government payroll taxes, the government will bypass the 'Limited Liability' of the corporation and personally seize the CEO's house and bank accounts. Never mess with payroll taxes.",
+            "They used their own money."
+          ],
+          "correct_answer": "Piercing the Corporate Veil. If a CEO fails to pay the government payroll taxes, the government will bypass the 'Limited Liability' of the corporation and personally seize the CEO's house and bank accounts. Never mess with payroll taxes.",
+          "explanation": "A failed startup is fine. Personal bankruptcy is a tragedy."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do VCs almost never sue founders when a startup goes bankrupt?",
+          "options": [
+            "Because VCs are nice.",
+            "Because failure is part of the VC business model. They expect 8 out of 10 companies to die. As long as the founder didn't commit literal fraud, the VC writes the investment off as a total loss and moves on to the next deal.",
+            "Because lawyers are expensive."
+          ],
+          "correct_answer": "Because failure is part of the VC business model. They expect 8 out of 10 companies to die. As long as the founder didn't commit literal fraud, the VC writes the investment off as a total loss and moves on to the next deal.",
+          "explanation": "Venture Capital is the business of funding failure to find the one unicorn."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the worst possible way for a CEO to handle the final weeks of a dying startup?",
+          "options": [
+            "Crying in the office.",
+            "Ghosting everyone. Some founders panic, stop answering emails from investors, stop talking to employees, and just disappear. This destroys the founder's reputation forever. You must 'fail gracefully' and communicate clearly to the very end.",
+            "Filing for Chapter 11."
+          ],
+          "correct_answer": "Ghosting everyone. Some founders panic, stop answering emails from investors, stop talking to employees, and just disappear. This destroys the founder's reputation forever. You must 'fail gracefully' and communicate clearly to the very end.",
+          "explanation": "How you act when the ship is sinking defines your character in Silicon Valley."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Failure Terminology",
+      "pairs": [
+        { "concept": "Chapter 7", "match": "Total liquidation and death of the company" },
+        { "concept": "Chapter 11", "match": "Protection from creditors to reorganize debt and attempt survival" },
+        { "concept": "Secured Creditor", "match": "The bank or entity that gets paid first during liquidation" },
+        { "concept": "Piercing the Veil", "match": "When a founder becomes personally legally liable for the corporation's debts due to negligence" }
+      ]
+    }
+  ]
+}

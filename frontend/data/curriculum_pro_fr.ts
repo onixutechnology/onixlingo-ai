@@ -171,8 +171,21 @@ const ICON_MAP: Record<string, any> = {
 
 const TEMPLATE_KEYS = ['b1', 'b2', 'c1', 'c2', 'exec', 'mastery'];
 
+import { PRO_LESSONS_DB } from './pro_lessons_db';
+
 const buildProLessons = (blockId: string, lang: 'en' | 'fr', templateIdx: number): any[] => {
   const templateKey = TEMPLATE_KEYS[templateIdx];
+  const dbKey = `${lang}-${blockId}`;
+  
+  // If we have injected the JSON array for this block, use it!
+  if (PRO_LESSONS_DB[dbKey] && PRO_LESSONS_DB[dbKey].length > 0) {
+    return PRO_LESSONS_DB[dbKey].map((title, idx) => ({
+      id: `pro-${blockId}-${idx + 1}`,
+      title
+    }));
+  }
+
+  // Fallback to the algorithmic generator for blocks we haven't injected yet
   const rawTitles = lang === 'en' 
     ? (templateKey === 'b1' ? TITLES_B1_EN 
        : templateKey === 'b2' ? TITLES_B2_EN 
@@ -193,14 +206,12 @@ const buildProLessons = (blockId: string, lang: 'en' | 'fr', templateIdx: number
     const id = `pro-${blockId}-${num}`;
     let title = rawTitles[idx % rawTitles.length];
     
-    // Customize lesson title for blocks 6-29 to make them fully themed and professional
+    // Customize lesson title for blocks 6-29
     if (templateIdx >= 0) {
-      // Clean generic placeholders
       if (title.includes("Topic") || title.includes("Sujet")) {
         const domainName = blockId.replace("exec-fr-", "").replace("exec-", "").toUpperCase();
         title = lang === 'en' ? `${domainName} Scenario ${num}` : `${domainName} Scénario ${num}`;
       } else if (idx >= 10) {
-        // Append distinct parts so that none of the 100 lessons inside a block repeat the exact same title
         const partNum = Math.floor(idx / 10) + 1;
         title = lang === 'fr' ? `${title} (Partie ${partNum})` : `${title} (Pt. ${partNum})`;
       }

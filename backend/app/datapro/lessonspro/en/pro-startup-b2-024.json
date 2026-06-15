@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-024",
+  "title": "Board Seats and Control",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Who Actually Runs the Company?",
+      "parts": [
+        {
+          "visual": "A founder owns 60% of the stock. They think they are the boss. But the Board of Directors has 3 seats. The founder holds 1 seat, and the VCs hold 2 seats. The VCs vote to fire the founder. The founder is fired from their own company.\n\nThe Governance:\n1. The Board of Directors: The highest governing authority of a corporation. They hire and fire the CEO.\n2. Stock vs. Seats: Owning the majority of the stock does not protect you if you do not control the majority of the Board Seats.",
+          "audio": "When a founder takes Venture Capital, they must surrender Board Seats. Managing the Board of Directors is the ultimate political game for a startup CEO. If you lose control of the board, you lose your company."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Corporate Politics",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup has a 3-person Board of Directors. It consists of the Founder, the Lead VC, and an 'Independent' Director. What is the true purpose of the Independent Director?",
+          "options": [
+            "To take notes.",
+            "They are the tie-breaker. If the Founder and the VC disagree on a massive decision, the Independent Director casts the deciding vote. Whoever controls the Independent, controls the company.",
+            "To plan the parties."
+          ],
+          "correct_answer": "They are the tie-breaker. If the Founder and the VC disagree on a massive decision, the Independent Director casts the deciding vote. Whoever controls the Independent, controls the company.",
+          "explanation": "Founders must fight aggressively to ensure the Independent Director is someone they trust."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC's demand. What are they trying to do to the Founder's power?",
+          "tts_text": "We are leading the Series A round. We demand a 5-person board: You, your co-founder, me, my partner from our firm, and an industry expert that our firm chooses.",
+          "options": [
+            "They want to help the founder.",
+            "A Board Takeover. The VC is asking for 3 out of 5 seats. If the founder accepts this, they are instantly losing control of their own company on Day 1.",
+            "They want to start a band."
+          ],
+          "correct_answer": "A Board Takeover. The VC is asking for 3 out of 5 seats. If the founder accepts this, they are instantly losing control of their own company on Day 1.",
+          "explanation": "A standard Series A board is 2 Founders, 1 VC, and 0 Independents (to protect founder control)."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is a 'Board Observer'?",
+          "options": [
+            "A security camera.",
+            "An investor who is allowed to sit in the boardroom and listen to all confidential meetings, but does not have the legal right to vote. It is a compromise for smaller investors.",
+            "A journalist."
+          ],
+          "correct_answer": "An investor who is allowed to sit in the boardroom and listen to all confidential meetings, but does not have the legal right to vote. It is a compromise for smaller investors.",
+          "explanation": "Observers have no legal power, but they can still exert massive psychological influence."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Can the Board of Directors legally force the company to be sold against the CEO's wishes?",
+          "options": [
+            "Yes, they have absolute power.",
+            "Yes. The Board's fiduciary duty is to maximize shareholder value. If a massive acquisition offer comes in, the Board can vote to accept it and fire the CEO if they try to block it.",
+            "No, the CEO is king."
+          ],
+          "correct_answer": "Yes. The Board's fiduciary duty is to maximize shareholder value. If a massive acquisition offer comes in, the Board can vote to accept it and fire the CEO if they try to block it.",
+          "explanation": "This is the ultimate manifestation of the 'Rich vs. King' dilemma."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Governance Terminology",
+      "pairs": [
+        { "concept": "Board of Directors", "match": "An elected group of individuals that represent shareholders and oversee the CEO" },
+        { "concept": "Independent Director", "match": "A board member who is not an employee, founder, or major investor" },
+        { "concept": "Fiduciary Duty", "match": "The legal obligation of the Board to act in the best financial interest of the shareholders" },
+        { "concept": "Board Observer", "match": "A person who can attend board meetings but has no official vote" }
+      ]
+    }
+  ]
+}

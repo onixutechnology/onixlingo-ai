@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-044",
+  "title": "The Lock-Up Period",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Golden Prison",
+      "parts": [
+        {
+          "visual": "Your company just IPO'd. The stock price skyrocketed. You are a billionaire on paper. You open your laptop to sell all your stock and buy an island. An error message appears. You are legally forbidden from selling a single share.\n\nThe Restriction:\n1. The Lock-Up Period: A legally binding contract that prevents founders, employees, and early investors from selling any of their shares for a specific period of time immediately following an IPO (usually 180 days).\n2. The Purpose: To prevent the founders from 'dumping' all their stock on Day 1, which would crash the stock price and destroy the investment of the new public shareholders.",
+          "audio": "An IPO does not mean instant cash for the founders. The Lock-Up Period is a six-month waiting game where your net worth violently fluctuates with the stock market, and you are entirely powerless to cash out."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Surviving the Wait",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup IPOs at $100 per share. The founder owns 1 million shares ($100M). The lock-up period is 180 days. On day 90, the economy crashes and the stock drops to $10. What can the founder do?",
+          "options": [
+            "Sell the stock quickly.",
+            "Absolutely nothing. They must watch their net worth drop from $100 Million to $10 Million and they are legally prohibited from selling to stop the bleeding. They are trapped by the lock-up.",
+            "Sue the government."
+          ],
+          "correct_answer": "Absolutely nothing. They must watch their net worth drop from $100 Million to $10 Million and they are legally prohibited from selling to stop the bleeding. They are trapped by the lock-up.",
+          "explanation": "This is the immense psychological stress of the Lock-Up Period."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the investment banker explaining why the lock-up is necessary. Who is it protecting?",
+          "tts_text": "If the CEO and all the early investors sell their millions of shares on the exact day of the IPO, there will be massive supply and no demand. The stock price will instantly crash to zero. We must restrict supply to protect the new public buyers.",
+          "options": [
+            "It protects the CEO.",
+            "It protects Market Stability. The lock-up prevents a 'pump and dump' scenario, assuring the new public investors that the founders actually believe in the long-term future of the company.",
+            "It protects the banks."
+          ],
+          "correct_answer": "It protects Market Stability. The lock-up prevents a 'pump and dump' scenario, assuring the new public investors that the founders actually believe in the long-term future of the company.",
+          "explanation": "If the captain abandons the ship on Day 1, nobody else will buy a ticket."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens on 'Lock-Up Expiration Day' (e.g., exactly 181 days after the IPO)?",
+          "options": [
+            "A massive party.",
+            "The stock price often drops temporarily. Millions of shares owned by employees and VCs suddenly become eligible to be sold at the exact same time. This massive influx of supply usually drives the price down.",
+            "The company is sold."
+          ],
+          "correct_answer": "The stock price often drops temporarily. Millions of shares owned by employees and VCs suddenly become eligible to be sold at the exact same time. This massive influx of supply usually drives the price down.",
+          "explanation": "Smart traders often bet against (short) a stock right before its lock-up expires."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How do wealthy founders get cash during the Lock-Up period if they cannot sell their stock?",
+          "options": [
+            "They get a normal job.",
+            "They use Margin Loans. They go to a massive bank and use their locked-up stock as collateral to get a massive cash loan. They get cash to buy houses without technically selling the stock.",
+            "They sell their furniture."
+          ],
+          "correct_answer": "They use Margin Loans. They go to a massive bank and use their locked-up stock as collateral to get a massive cash loan. They get cash to buy houses without technically selling the stock.",
+          "explanation": "This is extremely dangerous. If the stock crashes, the bank will seize their assets (a 'Margin Call')."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Post-IPO Terminology",
+      "pairs": [
+        { "concept": "Lock-Up Period", "match": "A predetermined amount of time following an IPO where early investors cannot sell shares" },
+        { "concept": "Margin Loan", "match": "Borrowing money from a broker using your stock as collateral" },
+        { "concept": "Market Stability", "match": "Preventing massive price crashes by controlling the supply of stock available to sell" },
+        { "concept": "Dumping Shares", "match": "Selling a massive amount of stock all at once, driving the price down" }
+      ]
+    }
+  ]
+}

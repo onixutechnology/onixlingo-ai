@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-163",
+  "title": "Supply Chain and Manufacturing Dependencies",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Global Fragility",
+      "parts": [
+        {
+          "visual": "A startup designs a brilliant electric scooter. They assemble it in California, but the battery cells come from China, the microchips from Taiwan, and the rubber tires from Vietnam. A massive storm shuts down a single port in Taiwan for two weeks. The startup instantly runs out of microchips. The entire California factory stops. The startup goes bankrupt.\n\nThe Weakest Link:\n1. The Supply Chain: The complex global network of factories, shipping routes, and raw materials required to build a physical product.\n2. Single Point of Failure: Hardware startups often buy custom parts from just one cheap factory in Asia. If that factory burns down, or political relations sour, the startup's revenue drops to absolute zero.",
+          "audio": "In software, your supply chain is an Amazon Web Services server. If AWS goes down, it comes back up in an hour. In hardware, your supply chain spans five continents. If a ship gets stuck in a canal, your company is paralyzed for six months."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Managing the Factory Floor",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Lead Time' in a hardware startup?",
+          "options": [
+            "The time it takes to draw the logo.",
+            "The delay between ordering a part and actually receiving it. For advanced microchips, the 'Lead Time' can be 52 weeks. A founder must mathematically predict exactly how many chips they will need a year from now, or they will have nothing to sell.",
+            "The time it takes to fire an employee."
+          ],
+          "correct_answer": "The delay between ordering a part and actually receiving it. For advanced microchips, the 'Lead Time' can be 52 weeks. A founder must mathematically predict exactly how many chips they will need a year from now, or they will have nothing to sell.",
+          "explanation": "Hardware requires predicting the future with your wallet."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the hardware CEO explaining 'Tooling Costs'. Why do hardware startups need so much upfront cash?",
+          "tts_text": "Before the factory in Shenzhen can make 10,000 plastic casings for our drone, we have to pay them $250,000 just to cut the custom steel molds that the plastic is injected into. If we change the design by 1 millimeter, we have to buy a new $250,000 mold.",
+          "options": [
+            "Because tools are heavy.",
+            "The Price of Custom Manufacturing. 'Tooling' refers to the custom industrial machines and steel molds required to make your specific product. It is a massive, non-refundable upfront capital expenditure that software companies never have to pay.",
+            "Because factory workers demand cash."
+          ],
+          "correct_answer": "The Price of Custom Manufacturing. 'Tooling' refers to the custom industrial machines and steel molds required to make your specific product. It is a massive, non-refundable upfront capital expenditure that software companies never have to pay.",
+          "explanation": "You have to pay to build the machine that builds your machine."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does a 'Contract Manufacturer' (CM) do?",
+          "options": [
+            "They write contracts for lawyers.",
+            "A massive third-party company (like Foxconn, which builds iPhones) that physically manufactures your product for you. Startups do not build their own factories; they rent space and labor on the assembly lines of massive CMs.",
+            "They design the website."
+          ],
+          "correct_answer": "A massive third-party company (like Foxconn, which builds iPhones) that physically manufactures your product for you. Startups do not build their own factories; they rent space and labor on the assembly lines of massive CMs.",
+          "explanation": "You design the brains; the CM provides the muscle."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Dual Sourcing' a critical survival tactic for hardware startups?",
+          "options": [
+            "Because two is a lucky number.",
+            "Using at least two completely different factories in different countries to supply your most critical parts. It costs more money, but if one country experiences a tariff war or a natural disaster, the second factory keeps your business alive.",
+            "Because you can get double the amount."
+          ],
+          "correct_answer": "Using at least two completely different factories in different countries to supply your most critical parts. It costs more money, but if one country experiences a tariff war or a natural disaster, the second factory keeps your business alive.",
+          "explanation": "Redundancy is the only defense against global chaos."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Supply Chain Vocabulary",
+      "pairs": [
+        { "concept": "Lead Time", "match": "The months of delay between ordering a part and receiving it" },
+        { "concept": "Tooling", "match": "The expensive custom steel molds needed to manufacture physical parts" },
+        { "concept": "Contract Manufacturer (CM)", "match": "A giant third-party factory that builds the physical product for you" },
+        { "concept": "Dual Sourcing", "match": "Using two different factories to prevent a single point of failure" }
+      ]
+    }
+  ]
+}

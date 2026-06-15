@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-148",
+  "title": "Burn Rate and Runway",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Countdown to Zero",
+      "parts": [
+        {
+          "visual": "For startups and highly unprofitable growth companies, cash is oxygen. If you run out of cash, the company dies instantly.\n\nThe Two Metrics of Survival:\n1. Burn Rate: The exact amount of money the company loses every single month (Expenses minus Revenue).\n2. Runway: How many months the company has left before the bank account hits exactly $0.00.\n\nRunway = Total Cash in Bank / Monthly Burn Rate.",
+          "audio": "For a startup, cash is oxygen. Burn Rate is how much money you lose every month. Runway is how many months you have left before the company dies."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Financial Survival",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Your startup has $10 Million in the bank. You spend $1.5 Million a month on salaries, and you make $500,000 a month in revenue. What is your 'Burn Rate'?",
+          "options": [
+            "$1.5 Million.",
+            "$1 Million per month ($1.5M expenses minus $500k revenue).",
+            "$500,000."
+          ],
+          "correct_answer": "$1 Million per month ($1.5M expenses minus $500k revenue).",
+          "explanation": "Burn rate is net cash lost. It measures how fast the fire is consuming your resources."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO. What is the fundamental crisis?",
+          "tts_text": "We have three months of runway left. The venture capitalists have stopped returning my calls. We need to cut the burn rate in half immediately.",
+          "options": [
+            "They are making too much money.",
+            "They are about to go bankrupt. To extend their 'Runway', they must execute massive layoffs to lower their 'Burn Rate'.",
+            "They need to hire more people."
+          ],
+          "correct_answer": "They are about to go bankrupt. To extend their 'Runway', they must execute massive layoffs to lower their 'Burn Rate'.",
+          "explanation": "If you cannot raise more cash, the only way to survive is to drastically cut expenses."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "When an investor asks a CEO 'When is your Default Alive date?', what do they mean?",
+          "options": [
+            "When is your birthday?",
+            "At your current growth rate, in what exact month will your revenue finally surpass your expenses, meaning you no longer need investor money to survive?",
+            "When will you sell the company?"
+          ],
+          "correct_answer": "At your current growth rate, in what exact month will your revenue finally surpass your expenses, meaning you no longer need investor money to survive?",
+          "explanation": "'Default Alive' is the holy grail. It means you control your own destiny. 'Default Dead' means if you don't raise more money, you die."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is having a high 'Burn Rate' sometimes considered a good thing in Silicon Valley?",
+          "options": [
+            "It isn't.",
+            "Because if you are aggressively spending money on marketing to capture a massive market monopoly before your competitors, 'burning' cash is the only way to grow fast enough.",
+            "Because it lowers taxes."
+          ],
+          "correct_answer": "Because if you are aggressively spending money on marketing to capture a massive market monopoly before your competitors, 'burning' cash is the only way to grow fast enough.",
+          "explanation": "This was the model of Uber and Amazon. Burn billions to crush the competition, then raise prices once you have a monopoly."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Startup Finance Terminology",
+      "pairs": [
+        { "concept": "Burn Rate", "match": "The rate at which a new company uses up its venture capital to finance overhead before generating positive cash flow" },
+        { "concept": "Runway", "match": "The amount of time a company has before it runs out of cash" },
+        { "concept": "Default Alive", "match": "On track to reach profitability before running out of cash" },
+        { "concept": "Default Dead", "match": "On track to run out of cash before reaching profitability" }
+      ]
+    }
+  ]
+}

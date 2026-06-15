@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-140",
+  "title": "Knowing When to Shut Down",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Honorable Exit",
+      "parts": [
+        {
+          "visual": "A startup has tried 4 different pivots. They have $100,000 left. They have 10 employees. The founders realize the market simply doesn't exist. Instead of burning the last $100k, they stop. They pay the employees severance, shut down the servers, and return the last few pennies to the investors.\n\nThe Final Act:\n1. The Zombie Startup: A company that is not growing, not dying, but just burning cash slowly with no hope of success. It traps the founders in purgatory.\n2. The Dignified Shutdown: Recognizing failure early enough to pay your debts, treat your employees well, and close the doors legally. It is the hardest, but most mature decision a founder can make.",
+          "audio": "Silicon Valley does not punish failure. Most successful founders failed their first two times. Silicon Valley only punishes lying, fraud, and cowardice. If you fail honorably, VCs will gladly fund your next company."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Mechanics of Closing",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the absolute worst way a founder can shut down a company?",
+          "options": [
+            "Selling it.",
+            "Waiting until the bank account is literally $0, missing payroll, owing the government unpaid taxes, and 'Ghosting' the investors. This destroys the founder's reputation permanently and exposes them to massive personal legal liability.",
+            "Crying."
+          ],
+          "correct_answer": "Waiting until the bank account is literally $0, missing payroll, owing the government unpaid taxes, and 'Ghosting' the investors. This destroys the founder's reputation permanently and exposes them to massive personal legal liability.",
+          "explanation": "You must land the plane, not let it crash into a mountain."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the lawyer explaining the shutdown process. What MUST the remaining cash be used for first?",
+          "tts_text": "Before you give a single penny back to the VCs, you must pay all unpaid salaries, pay the server bills, and pay all corporate taxes. If you don't pay the taxes, the government can come after your personal bank accounts.",
+          "options": [
+            "Buying a nice dinner.",
+            "Paying the 'Creditors'. Employees, vendors, and the government are creditors. In a corporate bankruptcy or shutdown, creditors legally must be paid first. VCs (shareholders) are at the absolute bottom of the priority list; they usually get nothing.",
+            "Giving it to the VCs."
+          ],
+          "correct_answer": "Paying the 'Creditors'. Employees, vendors, and the government are creditors. In a corporate bankruptcy or shutdown, creditors legally must be paid first. VCs (shareholders) are at the absolute bottom of the priority list; they usually get nothing.",
+          "explanation": "Equity is risk. Debt is an obligation."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is an 'Acqui-hire'?",
+          "options": [
+            "Hiring an accountant.",
+            "A soft landing. A massive company (like Google) buys your failing startup for a very small amount of money. They don't want your product; they just want to hire your brilliant engineering team. The investors get some money back, and everyone gets a job.",
+            "Firing everyone."
+          ],
+          "correct_answer": "A soft landing. A massive company (like Google) buys your failing startup for a very small amount of money. They don't want your product; they just want to hire your brilliant engineering team. The investors get some money back, and everyone gets a job.",
+          "explanation": "An elegant way to fail without destroying careers."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How should a founder communicate a shutdown to their investors?",
+          "options": [
+            "Send an emoji.",
+            "A brutal, honest, highly detailed post-mortem memo. Explain exactly what hypotheses failed, why the market rejected the product, and how the remaining funds are being dispersed. VCs respect analytical failure.",
+            "Blame the government."
+          ],
+          "correct_answer": "A brutal, honest, highly detailed post-mortem memo. Explain exactly what hypotheses failed, why the market rejected the product, and how the remaining funds are being dispersed. VCs respect analytical failure.",
+          "explanation": "A great post-mortem is the pitch deck for your next company."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Failure Terminology",
+      "pairs": [
+        { "concept": "Zombie Startup", "match": "A company with no growth and no hope, just slowly dying" },
+        { "concept": "Acqui-hire", "match": "Being bought purely for your engineering talent, not your product" },
+        { "concept": "Creditors", "match": "Employees and vendors who legally must be paid before investors" },
+        { "concept": "Post-Mortem", "match": "The final analytical memo explaining exactly why the company died" }
+      ]
+    }
+  ]
+}

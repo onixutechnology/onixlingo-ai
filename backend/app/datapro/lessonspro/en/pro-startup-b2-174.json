@@ -1,0 +1,102 @@
+{
+  "id": "pro-startup-b2-174",
+  "title": "Churn Rate (The Silent Killer)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Leaky Bucket",
+      "parts": [
+        {
+          "visual": "A startup spends $100,000 on marketing and acquires 1,000 new subscribers this month. The CEO is thrilled. But the product is full of bugs, and customer service is terrible. At the end of the month, 900 old subscribers cancel their accounts. The CEO just spent $100,000 to only grow by 100 net users.\n\nThe Sickness:\n1. Churn Rate: The percentage of your customers who cancel their subscription in a given time period. \n2. The Leaky Bucket: You cannot build a massive company if your churn is high. No matter how much water (new users) you pour into the top of the bucket, if the holes at the bottom (churn) are too big, the bucket will eventually empty.",
+          "audio": "Founders are obsessed with acquisition. They want to celebrate new users. But investors are obsessed with retention. High churn means your product is fundamentally broken. It means people tried your vision, and decided it wasn't worth paying for."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Plugging the Holes",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A consumer app (like Netflix or Spotify) typically has a monthly churn rate of 2% to 5%. What happens if a B2B Enterprise software company has a 5% monthly churn rate?",
+          "options": [
+            "That is a great number.",
+            "They will go bankrupt. Enterprise B2B software is incredibly hard to sell. Once a giant corporation buys it, they are supposed to keep it for 5 years. A 5% monthly churn in B2B means the product is causing massive active damage to clients.",
+            "The CEO gets a bonus."
+          ],
+          "correct_answer": "They will go bankrupt. Enterprise B2B software is incredibly hard to sell. Once a giant corporation buys it, they are supposed to keep it for 5 years. A 5% monthly churn in B2B means the product is causing massive active damage to clients.",
+          "explanation": "Acceptable churn depends entirely on who the customer is."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the data scientist explaining 'Negative Churn'. How can a company have negative churn?",
+          "tts_text": "We lost 10% of our customers this year. But the 90% of customers who stayed loved the product so much that they upgraded to the Premium tier. The extra money from the upgrades was larger than the money lost from the cancellations.",
+          "options": [
+            "Negative churn is illegal.",
+            "Expansion Revenue. 'Net Negative Churn' is the holy grail of SaaS. It means that even if you acquire absolutely zero new customers next year, your total revenue will still grow because your existing customers keep paying you more money over time.",
+            "They hacked the bank."
+          ],
+          "correct_answer": "Expansion Revenue. 'Net Negative Churn' is the holy grail of SaaS. It means that even if you acquire absolutely zero new customers next year, your total revenue will still grow because your existing customers keep paying you more money over time.",
+          "explanation": "When the remaining water expands to fill the bucket."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the difference between 'Voluntary Churn' and 'Involuntary Churn'?",
+          "options": [
+            "One is loud.",
+            "Voluntary is when a user clicks 'Cancel' because they hate the app. Involuntary is when a user's credit card expires and the system fails to charge them. Startups lose millions of dollars simply because they don't aggressively retry failed credit cards.",
+            "One is legal."
+          ],
+          "correct_answer": "Voluntary is when a user clicks 'Cancel' because they hate the app. Involuntary is when a user's credit card expires and the system fails to charge them. Startups lose millions of dollars simply because they don't aggressively retry failed credit cards.",
+          "explanation": "Never lose a customer just because their Visa expired."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why does a high churn rate destroy your LTV (Lifetime Value)?",
+          "options": [
+            "Because math is hard.",
+            "LTV is calculated by how many months a user stays. If your average user cancels after 2 months instead of 20 months, your LTV collapses. If your LTV collapses, you can no longer afford your CAC (Customer Acquisition Cost), and the business model breaks.",
+            "Because marketing gets angry."
+          ],
+          "correct_answer": "LTV is calculated by how many months a user stays. If your average user cancels after 2 months instead of 20 months, your LTV collapses. If your LTV collapses, you can no longer afford your CAC (Customer Acquisition Cost), and the business model breaks.",
+          "explanation": "Churn is a poison that kills the entire financial machine."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Retention",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the brutal reality of SaaS:",
+          "parts": [
+            "You",
+            "cannot",
+            "out-market",
+            "a",
+            "high",
+            "churn",
+            "rate."
+          ],
+          "correct_order": [
+            "You",
+            "cannot",
+            "out-market",
+            "a",
+            "high",
+            "churn",
+            "rate."
+          ],
+          "explanation": "A leaky bucket will always eventually empty."
+        }
+      ]
+    }
+  ]
+}

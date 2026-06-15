@@ -61,7 +61,7 @@ export default function ChessTrainer() {
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
 
     try {
-      const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:5000';
+      const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';
       await fetch(`${API_URL}/api/v1/chess/progress`, {
         method: 'POST',
         headers: { 

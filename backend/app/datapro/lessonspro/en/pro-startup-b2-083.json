@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-083",
+  "title": "Due Diligence",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Financial Autopsy",
+      "parts": [
+        {
+          "visual": "A massive corporation agrees to buy your startup for $50 Million. They shake your hand. Then, they send an army of 20 lawyers and accountants to live in your office for two months. They check every single email, line of code, and tax document from the last 5 years.\n\nThe Investigation:\n1. Due Diligence: The exhaustive legal and financial investigation an acquiring company performs *after* the initial agreement but *before* the money changes hands.\n2. The Purpose: To ensure the startup wasn't lying about its revenue, doesn't have secret lawsuits pending, and actually owns the intellectual property it claims to own.",
+          "audio": "A handshake agreement means nothing. Due Diligence is where deals go to die. If the acquiring company's lawyers find a single skeleton in your startup's closet, they will either cancel the deal or slash the price by millions."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Surviving the Audit",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "During technical due diligence, the acquiring company realizes that the startup's code was built using 'GPL Open Source' code that legally requires them to make all their proprietary algorithms public. What happens?",
+          "options": [
+            "They celebrate.",
+            "The deal dies instantly. The acquiring company is buying the startup for its secret, proprietary code. If the code is legally tainted by bad open-source licenses, the startup's core asset is completely worthless.",
+            "They ask for a discount."
+          ],
+          "correct_answer": "The deal dies instantly. The acquiring company is buying the startup for its secret, proprietary code. If the code is legally tainted by bad open-source licenses, the startup's core asset is completely worthless.",
+          "explanation": "Technical debt becomes a legal nightmare during M&A."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the lawyer explaining a major problem found during Due Diligence. What is the issue?",
+          "tts_text": "We reviewed your early employee contracts. The intern who designed your core algorithm four years ago never signed an 'IP Assignment' agreement. Technically, the intern owns the algorithm, not the company.",
+          "options": [
+            "The intern was lazy.",
+            "IP Ownership Risk. The acquiring company is paying millions for the intellectual property. If the startup cannot legally prove it owns 100% of the IP, the acquiring company will halt the deal until the intern signs the papers.",
+            "The algorithm is slow."
+          ],
+          "correct_answer": "IP Ownership Risk. The acquiring company is paying millions for the intellectual property. If the startup cannot legally prove it owns 100% of the IP, the acquiring company will halt the deal until the intern signs the papers.",
+          "explanation": "If the intern realizes this, they can extort the startup for millions."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Data Room'?",
+          "options": [
+            "A room full of servers.",
+            "A highly secure, organized cloud folder containing every single legal contract, employee agreement, patent, and tax return the startup has ever produced. The acquiring lawyers spend weeks analyzing this room.",
+            "A room where the CEO sleeps."
+          ],
+          "correct_answer": "A highly secure, organized cloud folder containing every single legal contract, employee agreement, patent, and tax return the startup has ever produced. The acquiring lawyers spend weeks analyzing this room.",
+          "explanation": "A messy Data Room signals a messy company."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is customer due diligence terrifying for a startup?",
+          "options": [
+            "Because customers bite.",
+            "The acquiring company will actually call the startup's biggest customers and ask if they are happy. If the customers say 'We hate the software and plan to cancel next month', the acquiring company will walk away from the deal.",
+            "Because the phones are loud."
+          ],
+          "correct_answer": "The acquiring company will actually call the startup's biggest customers and ask if they are happy. If the customers say 'We hate the software and plan to cancel next month', the acquiring company will walk away from the deal.",
+          "explanation": "You cannot hide churn from a forensic accountant."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Due Diligence Terminology",
+      "pairs": [
+        { "concept": "Due Diligence", "match": "The comprehensive appraisal of a business undertaken by a prospective buyer" },
+        { "concept": "Data Room", "match": "A secure digital repository for storing highly confidential corporate documents" },
+        { "concept": "IP Assignment", "match": "A legal contract ensuring the company, not the employee, owns the inventions" },
+        { "concept": "Open Source Risk", "match": "Using free code that legally requires the startup to publish its own secret code" }
+      ]
+    }
+  ]
+}

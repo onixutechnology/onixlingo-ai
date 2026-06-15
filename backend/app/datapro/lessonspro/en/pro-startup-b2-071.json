@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-071",
+  "title": "The Churn Rate (The Silent Killer)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Leaky Bucket",
+      "parts": [
+        {
+          "visual": "A startup spends $10,000 to acquire 100 new customers this month. The sales team celebrates. However, 110 existing customers cancel their subscriptions this month. The company is actually shrinking, despite acquiring new users. The bucket is leaking faster than it can be filled.\n\nThe Metric:\n1. Churn Rate: The percentage of customers who cancel their subscription within a given time period (usually measured monthly or annually).\n2. The Math of Death: If your monthly churn rate is 10%, you will lose your entire customer base in less than a year. High churn makes growth mathematically impossible.",
+          "audio": "Churn is the silent killer of SaaS startups. You cannot out-market a bad churn rate. If your customers are leaving out the back door as fast as you bring them in the front door, you do not have a real business."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Plugging the Holes",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A startup has an amazing sales team bringing in 500 new customers a month, but their Churn Rate is 15% per month. What should the CEO do?",
+          "options": [
+            "Hire more salespeople.",
+            "Stop all marketing and sales immediately and fix the core product. A 15% monthly churn means the product is fundamentally broken. Pouring more leads into a broken funnel is just burning cash.",
+            "Increase the price."
+          ],
+          "correct_answer": "Stop all marketing and sales immediately and fix the core product. A 15% monthly churn means the product is fundamentally broken. Pouring more leads into a broken funnel is just burning cash.",
+          "explanation": "High churn is the market screaming that your product lacks value."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC evaluating the startup's metrics. What type of churn is he talking about?",
+          "tts_text": "Their user churn is 5%, which is okay. But their Revenue Churn is -2% (Negative Churn). That means even though some users leave, the remaining users are buying so many upgrades that total revenue is actually going up automatically.",
+          "options": [
+            "He is confused.",
+            "Negative Revenue Churn. This is the holy grail of SaaS. It means the 'Expansion Revenue' from loyal customers upgrading their accounts is larger than the revenue lost from customers who cancel.",
+            "He is talking about a bakery."
+          ],
+          "correct_answer": "Negative Revenue Churn. This is the holy grail of SaaS. It means the 'Expansion Revenue' from loyal customers upgrading their accounts is larger than the revenue lost from customers who cancel.",
+          "explanation": "Negative churn means the company grows even if they fire their entire sales team."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Involuntary Churn'?",
+          "options": [
+            "When a customer is kidnapped.",
+            "When a customer's subscription is canceled because their credit card expired or their payment failed, not because they actually wanted to cancel. Startups must use automated 'Dunning' software to recover these payments.",
+            "When a customer forgets their password."
+          ],
+          "correct_answer": "When a customer's subscription is canceled because their credit card expired or their payment failed, not because they actually wanted to cancel. Startups must use automated 'Dunning' software to recover these payments.",
+          "explanation": "Losing a happy customer because of a declined credit card is a tragic failure."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is selling to the 'wrong customer' a primary cause of churn?",
+          "options": [
+            "Because they are mean.",
+            "If a salesperson lies or overpromises just to get the commission, they close a customer who doesn't actually need the product. The customer will realize this in month 2 and instantly churn, wasting everyone's time.",
+            "Because they have bad credit."
+          ],
+          "correct_answer": "If a salesperson lies or overpromises just to get the commission, they close a customer who doesn't actually need the product. The customer will realize this in month 2 and instantly churn, wasting everyone's time.",
+          "explanation": "Bad sales cause bad churn."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Retention Terminology",
+      "pairs": [
+        { "concept": "Churn Rate", "match": "The annual or monthly percentage rate at which customers stop subscribing" },
+        { "concept": "Negative Churn", "match": "When expansion revenue from existing customers exceeds revenue lost from cancellations" },
+        { "concept": "Involuntary Churn", "match": "Cancellations caused by failed payments or expired credit cards" },
+        { "concept": "Dunning", "match": "The automated process of communicating with customers to collect payment for past-due accounts" }
+      ]
+    }
+  ]
+}

@@ -51,8 +51,9 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
     const piece = game.get(square);
     const isPieceOfCurrentTurn = piece && piece.color === game.turn();
 
-    // Si ya teníamos una pieza seleccionada y hacemos clic en un movimiento válido: ¡MOVER!
-    if (selectedSquare && optionSquares[square]) {
+    // Si ya teníamos una pieza seleccionada: ¡INTENTAR MOVER!
+    // No dependemos estrictamente de optionSquares para permitir la validación manual de puzzles
+    if (selectedSquare) {
       onDrop({ sourceSquare: selectedSquare, targetSquare: square });
       setSelectedSquare(null);
       setOptionSquares({});
@@ -60,7 +61,9 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
     }
 
     // Si hacemos clic en una pieza nuestra, la seleccionamos y calculamos movimientos
-    if (isPieceOfCurrentTurn) {
+    // En modo práctica, permitimos seleccionar cualquier pieza por si el turno interno del FEN
+    // no coincide exactamente con el ejercicio
+    if (piece) {
       setSelectedSquare(square);
       // Extraemos los movimientos legales desde esa casilla
       const moves = game.moves({ square, verbose: true }) as Move[];
@@ -109,10 +112,13 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
             >
               {/* Capas de selección y último movimiento (Preserva textura inferior de madera) */}
               {isSelected && (
-                <div className="absolute inset-0 bg-[#D4AF37]/20/30 z-10 pointer-events-none" />
+                <div className="absolute inset-0 bg-[#D4AF37]/40 z-10 pointer-events-none" />
               )}
               {isLastMove && (
-                <div className="absolute inset-0 bg-amber-400/30 z-10 pointer-events-none" />
+                <div className="absolute inset-0 bg-[#D4AF37]/40 z-10 pointer-events-none" />
+              )}
+              {isLastMove && !isSelected && (
+                <div className="absolute inset-0 bg-[#D4AF37]/20 z-10 pointer-events-none" />
               )}
 
               {/* Coordenadas del tablero */}
@@ -129,10 +135,10 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
 
               {/* Indicador de movimiento válido (Punto ámbar o anillo de captura) */}
               {isOption && !isCaptureOption && (
-                <div className="absolute w-[30%] h-[30%] bg-[#D4AF37]/20/40 rounded-full z-10 pointer-events-none" />
+                <div className="absolute w-[30%] h-[30%] bg-[#D4AF37]/60 rounded-full z-10 pointer-events-none shadow-md" />
               )}
-              {isCaptureOption && (
-                <div className="absolute w-[85%] h-[85%] border-[6px] border-[#D4AF37]/30/40 rounded-full z-10 pointer-events-none" />
+              {isOption && isCaptureOption && (
+                <div className="absolute inset-0 border-[6px] border-[#D4AF37]/60 rounded-full m-1 z-10 pointer-events-none" />
               )}
 
               {/* Renderizado de la pieza */}

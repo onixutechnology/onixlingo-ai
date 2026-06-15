@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-060",
+  "title": "The Tech Stack Dilemma",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Choosing the Foundation",
+      "parts": [
+        {
+          "visual": "A founder needs to build a web app. Engineer A says: 'We must use Rust and microservices because it's the fastest new technology.' Engineer B says: 'We should use Ruby on Rails because it's boring, old, and we can build it in a weekend.'\n\nThe Decision:\n1. The Tech Stack: The combination of programming languages, frameworks, and databases used to build the software.\n2. The Trap: Engineers love playing with shiny, new, experimental technologies ('Resume Driven Development'). But for a startup, using experimental tech is a massive risk. Boring technology is highly predictable and makes hiring easier.",
+          "audio": "When choosing a tech stack, the goal is not to win an engineering award. The goal is to build the product as fast as humanly possible so you can test it with users. Choose the boring technology that your team already knows."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Architecting for Survival",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A CTO decides to use a brand-new, experimental database technology created 3 months ago because 'it's 5% faster'. Six months later, the database crashes. Why was this a terrible decision?",
+          "options": [
+            "Because the database was too slow.",
+            "Lack of Ecosystem. When an experimental database crashes, there are no solutions on Stack Overflow, no third-party tools, and no developers in the market who know how to fix it. The startup is paralyzed.",
+            "Because the CTO didn't read the manual."
+          ],
+          "correct_answer": "Lack of Ecosystem. When an experimental database crashes, there are no solutions on Stack Overflow, no third-party tools, and no developers in the market who know how to fix it. The startup is paralyzed.",
+          "explanation": "Boring technology has a massive ecosystem of solutions."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the senior engineer. What is 'Resume Driven Development'?",
+          "tts_text": "He didn't choose Kubernetes and Blockchain because the company needed it. Our app is a simple to-do list. He chose those complex technologies just so he could put them on his resume and get a better job at Google next year.",
+          "options": [
+            "Writing a good resume.",
+            "When engineers prioritize their own career advancement over the company's survival. They force the startup to use unnecessarily complex new technology just to learn it on the company's dime.",
+            "Using Google Docs."
+          ],
+          "correct_answer": "When engineers prioritize their own career advancement over the company's survival. They force the startup to use unnecessarily complex new technology just to learn it on the company's dime.",
+          "explanation": "The CEO must protect the company from bored engineers."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is it dangerous to design a 'Microservices Architecture' for a Day-1 Startup that has zero users?",
+          "options": [
+            "Because microservices are illegal.",
+            "Premature Optimization. Building Netflix-level architecture for an app with 10 users is a massive waste of time and cash. You will run out of money before you finish building the complex infrastructure.",
+            "Because users don't like microservices."
+          ],
+          "correct_answer": "Premature Optimization. Building Netflix-level architecture for an app with 10 users is a massive waste of time and cash. You will run out of money before you finish building the complex infrastructure.",
+          "explanation": "Start with a simple 'Monolith'. Break it into microservices only when the servers are literally on fire from too many users."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the primary factor a non-technical CEO should consider when approving a tech stack?",
+          "options": [
+            "How cool the logo is.",
+            "The Hiring Pool. If the CTO chooses a rare, obscure programming language, the CEO will never be able to afford or find new engineers to hire when the company tries to scale.",
+            "The color of the code."
+          ],
+          "correct_answer": "The Hiring Pool. If the CTO chooses a rare, obscure programming language, the CEO will never be able to afford or find new engineers to hire when the company tries to scale.",
+          "explanation": "You must choose a language that thousands of developers already know."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Architecture Terminology",
+      "pairs": [
+        { "concept": "Tech Stack", "match": "The combination of software tools and programming languages used to build an app" },
+        { "concept": "Premature Optimization", "match": "Wasting time building complex architecture before you even have users" },
+        { "concept": "Monolith", "match": "A simple software architecture where all code is contained in one single massive application" },
+        { "concept": "Ecosystem", "match": "The surrounding community, libraries, and forums available for a specific technology" }
+      ]
+    }
+  ]
+}

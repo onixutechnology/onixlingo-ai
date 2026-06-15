@@ -1,0 +1,104 @@
+{
+  "id": "pro-startup-b2-069",
+  "title": "The Proof of Concept (POC)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Trial by Fire",
+      "parts": [
+        {
+          "visual": "You are trying to sell a $250,000 security system to a bank. The bank's CTO likes your demo, but says: 'I cannot risk my career on a PowerPoint. Prove it works on our servers.'\n\nThe Crucible:\n1. POC (Proof of Concept): A restricted, short-term trial of the software inside the client's actual environment to prove that the technology does what the salesperson promised.\n2. The Danger Zone: A poorly managed POC is a black hole. Startups often spend months doing free work for massive corporations, only to have the corporation cancel the deal at the end.",
+          "audio": "A Proof of Concept is not a free trial. It is a highly structured, legally binding test. If you pass the test, they must buy the product. Never do a POC without agreed-upon success criteria."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Managing the Trial",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A massive corporation asks for a 3-month free POC to 'play around with the software'. What should the startup's VP of Sales say?",
+          "options": [
+            "Yes, immediately.",
+            "'No. A POC must be paid, restricted to 30 days, and tied to strict success metrics.' Giving away 3 months of free software destroys your leverage and turns you into unpaid IT support.",
+            "Yes, but only for 1 year."
+          ],
+          "correct_answer": "'No. A POC must be paid, restricted to 30 days, and tied to strict success metrics.' Giving away 3 months of free software destroys your leverage and turns you into unpaid IT support.",
+          "explanation": "If they refuse to pay a small fee for the POC, they were never going to pay for the final contract."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the salesperson securing the POC. What critical document are they negotiating?",
+          "tts_text": "Before we install the software, we need to sign this document. It explicitly states that if our software increases your server speed by 20% in 14 days, you agree to sign the $100k annual contract immediately.",
+          "options": [
+            "A Christmas card.",
+            "The Success Criteria. This is the mathematical finish line. The salesperson is locking the client into a conditional promise: 'If I prove X, you must buy Y.' This prevents the client from moving the goalposts.",
+            "A receipt."
+          ],
+          "correct_answer": "The Success Criteria. This is the mathematical finish line. The salesperson is locking the client into a conditional promise: 'If I prove X, you must buy Y.' This prevents the client from moving the goalposts.",
+          "explanation": "Never start a race without knowing where the finish line is."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is the 'IT Security Audit' the scariest part of an enterprise POC?",
+          "options": [
+            "Because auditors are mean.",
+            "Because the corporation's security team will aggressively scan your startup's code for vulnerabilities. If they find a single security flaw, they will veto the entire deal instantly, regardless of what the CEO wants.",
+            "Because it costs too much."
+          ],
+          "correct_answer": "Because the corporation's security team will aggressively scan your startup's code for vulnerabilities. If they find a single security flaw, they will veto the entire deal instantly, regardless of what the CEO wants.",
+          "explanation": "In B2B sales, the Chief Information Security Officer (CISO) is the 'Final Boss'."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if a startup fails a high-profile POC with a massive company?",
+          "options": [
+            "They get a participation trophy.",
+            "Word travels fast. In enterprise industries (like banking or healthcare), executives talk to each other. Failing a POC badly can permanently destroy the startup's reputation in that entire industry.",
+            "They try again tomorrow."
+          ],
+          "correct_answer": "Word travels fast. In enterprise industries (like banking or healthcare), executives talk to each other. Failing a POC badly can permanently destroy the startup's reputation in that entire industry.",
+          "explanation": "Do not agree to a POC unless you are 100% certain your software will not crash."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Proof",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the rule of trials:",
+          "parts": [
+            "Never",
+            "do",
+            "a",
+            "Proof",
+            "of",
+            "Concept",
+            "for",
+            "free."
+          ],
+          "correct_order": [
+            "Never",
+            "do",
+            "a",
+            "Proof",
+            "of",
+            "Concept",
+            "for",
+            "free."
+          ],
+          "explanation": "Free work is valued at exactly zero."
+        }
+      ]
+    }
+  ]
+}

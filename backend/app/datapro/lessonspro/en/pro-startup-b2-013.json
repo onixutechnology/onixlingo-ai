@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-013",
+  "title": "Vesting and The Cliff",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Earning Your Shares",
+      "parts": [
+        {
+          "visual": "You start a company with your best friend. You split it 50/50. One month later, your friend quits to go to Hawaii. They still own 50% of your company forever, while you do all the work. You are ruined.\n\nThe Protection:\n1. Vesting: You do not get your shares on Day 1. You 'earn' them over a period of time (usually 4 years).\n2. The Cliff: A massive trial period (usually 1 year). If you quit or get fired before exactly 12 months, you walk away with 0% of the company.",
+          "audio": "Vesting and the Cliff are legal mechanisms designed to protect the startup from its own founders. They ensure that if a co-founder quits early, they cannot steal half the company's equity without actually doing the work."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Golden Handcuffs",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A founder has a '4-Year Vesting Schedule'. What does this actually mean?",
+          "options": [
+            "They are fired in 4 years.",
+            "Instead of getting 100% of their stock on Day 1, they earn exactly 1/48th of their total stock every single month for 48 months. If they quit in Year 2, they only keep half their stock, and the rest goes back to the company.",
+            "They can only sell the company after 4 years."
+          ],
+          "correct_answer": "Instead of getting 100% of their stock on Day 1, they earn exactly 1/48th of their total stock every single month for 48 months. If they quit in Year 2, they only keep half their stock, and the rest goes back to the company.",
+          "explanation": "Vesting guarantees that founders actually stay and build the company."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the lawyer explaining 'The Cliff'. What happens to the founder who quits on month 11?",
+          "tts_text": "I don't care if you worked 100 hours a week. You have a 1-year cliff. You quit on month eleven. You leave this building with absolutely zero shares of stock.",
+          "options": [
+            "The lawyer is wrong.",
+            "The Cliff is a binary trapdoor. For the first 364 days, you earn 0%. On exactly day 365, you instantly 'vest' your first 25% of the company. If you leave before the cliff, you get nothing.",
+            "The founder gets a bonus."
+          ],
+          "correct_answer": "The Cliff is a binary trapdoor. For the first 364 days, you earn 0%. On exactly day 365, you instantly 'vest' your first 25% of the company. If you leave before the cliff, you get nothing.",
+          "explanation": "The Cliff protects the company from giving equity to people who quit when things get hard in the first year."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why will a Venture Capitalist refuse to invest if the founders do NOT have a vesting schedule?",
+          "options": [
+            "Because VCs like complex contracts.",
+            "Because it is too risky. If the VCs put $5 Million in the bank, and the founders have 100% of their stock immediately, the founders could literally quit the next day, walk away as major shareholders, and let the company die.",
+            "Because VCs want to pay taxes."
+          ],
+          "correct_answer": "Because it is too risky. If the VCs put $5 Million in the bank, and the founders have 100% of their stock immediately, the founders could literally quit the next day, walk away as major shareholders, and let the company die.",
+          "explanation": "Investors will force founders to sign vesting agreements before they write the check."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Accelerated Vesting' upon a Change of Control?",
+          "options": [
+            "Making the founders work faster.",
+            "A legal clause protecting the founders. If the company is sold to Google (Change of Control), all of the founders' unvested shares immediately turn into real shares, so they can cash out and get rich.",
+            "Selling the stock at a discount."
+          ],
+          "correct_answer": "A legal clause protecting the founders. If the company is sold to Google (Change of Control), all of the founders' unvested shares immediately turn into real shares, so they can cash out and get rich.",
+          "explanation": "Without this clause, the acquiring company could just fire the founders on the day of the sale to steal their unvested equity."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Equity Protection Terminology",
+      "pairs": [
+        { "concept": "Vesting", "match": "The process of earning ownership of your shares over a period of time" },
+        { "concept": "The Cliff", "match": "A set period of time before any shares vest, usually 1 year" },
+        { "concept": "Dead Equity", "match": "Shares owned by someone who no longer works at or contributes to the company" },
+        { "concept": "Acceleration", "match": "When unvested shares instantly become vested, usually due to an acquisition" }
+      ]
+    }
+  ]
+}

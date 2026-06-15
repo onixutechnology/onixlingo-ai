@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-108",
+  "title": "Implementing Agile at the Enterprise Level",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Moving Fast in a Giant Machine",
+      "parts": [
+        {
+          "visual": "Startups are naturally fast (Agile). Massive corporations are naturally slow (Waterfall). Executive leadership must figure out how to make a 10,000-person company move like a startup.\n\nThe Agile Pillars:\n1. Sprints: Breaking massive 2-year projects into 2-week executable chunks.\n2. Cross-Functional Teams: Putting a developer, marketer, and lawyer in the same room to eliminate hand-off delays.\n3. The MVP: Launching the 'Minimum Viable Product' to test the market, rather than waiting for perfection.",
+          "audio": "To make a massive corporation move fast, executives implement Agile methodologies. Use short Sprints, build Cross-Functional Teams, and launch Minimum Viable Products."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Agile Architecture",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "What is the primary flaw of the traditional 'Waterfall' project management method for modern software?",
+          "options": [
+            "It uses too much water.",
+            "You spend two years building something in secret, only to launch it and realize the market no longer wants it.",
+            "It is too fast."
+          ],
+          "correct_answer": "You spend two years building something in secret, only to launch it and realize the market no longer wants it.",
+          "explanation": "Waterfall assumes requirements never change. Agile assumes the market changes every month."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Product Director. What Agile concept is being deployed?",
+          "tts_text": "We are not building the full 3D app yet. Just build a basic webpage with a 'Buy' button to see if anyone actually clicks it.",
+          "options": [
+            "Building the Minimum Viable Product (MVP) to test assumptions quickly.",
+            "Being lazy.",
+            "A Sunk Cost Fallacy."
+          ],
+          "correct_answer": "Building the Minimum Viable Product (MVP) to test assumptions quickly.",
+          "explanation": "Why spend $1M building a feature if you can spend $1k to prove nobody wants it?"
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do 'Cross-Functional Teams' drastically speed up enterprise projects?",
+          "options": [
+            "Because they eat lunch together.",
+            "They destroy 'Silos'. Instead of Engineering taking 3 weeks to email Legal for approval, the lawyer is on the team and approves it instantly.",
+            "They cost less money."
+          ],
+          "correct_answer": "They destroy 'Silos'. Instead of Engineering taking 3 weeks to email Legal for approval, the lawyer is on the team and approves it instantly.",
+          "explanation": "Corporate slowness is mostly caused by waiting for other departments to reply. Agile merges the departments."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the purpose of a 'Scrum' or 'Daily Stand-up' meeting?",
+          "options": [
+            "To talk for 2 hours about weekend plans.",
+            "A strict 15-minute meeting where the team simply states: What they did yesterday, what they will do today, and what is blocking them.",
+            "To yell at employees."
+          ],
+          "correct_answer": "A strict 15-minute meeting where the team simply states: What they did yesterday, what they will do today, and what is blocking them.",
+          "explanation": "It is not a status report for the boss; it is an alignment tool for the team to remove blockers instantly."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Agile Terminology",
+      "pairs": [
+        { "concept": "Agile", "match": "An iterative approach to project management and software development" },
+        { "concept": "Sprint", "match": "A short, time-boxed period to complete a set amount of work" },
+        { "concept": "MVP", "match": "A product with just enough features to satisfy early customers" },
+        { "concept": "Silo", "match": "A department that operates in isolation from others" }
+      ]
+    }
+  ]
+}

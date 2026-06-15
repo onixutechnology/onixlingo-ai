@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-168",
+  "title": "The Freemium Conversion",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Art of the Upgrade",
+      "parts": [
+        {
+          "visual": "In the software world, 'Freemium' is a massive gamble. You give away your product to 10 million people for free, hoping that a tiny percentage will pay you for the 'Pro' version.\n\nThe Math:\n1. Free Users: They cost you money every month in server fees and support.\n2. Conversion Rate: The exact percentage of free users who eventually pull out their credit card and upgrade.\n3. The Paywall: The psychological boundary where the free product ends and the premium features begin.",
+          "audio": "Freemium is a business model where you give the core product away for free. The entire financial survival of the company depends on the Conversion Rate—the percentage of users who hit a Paywall and upgrade to the paid version."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Monetizing the Free",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Your app has 5 Million free users, but only a 0.5% 'Conversion Rate'. You are spending $2 Million a month on servers, but only making $500,000 in revenue. What is the brutal reality?",
+          "options": [
+            "You are highly successful.",
+            "Your free product is too good, and your premium features aren't valuable enough. You are subsidizing free users until you go bankrupt.",
+            "You need more free users."
+          ],
+          "correct_answer": "Your free product is too good, and your premium features aren't valuable enough. You are subsidizing free users until you go bankrupt.",
+          "explanation": "If the free tier solves 100% of the customer's problem, they will never pay you."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Head of Product. What strategy is he suggesting to fix the conversion rate?",
+          "tts_text": "We need to tighten the paywall. Currently, free users can download 50 reports a month. We need to drop that limit to 5 reports. If they need more, they have to pay.",
+          "options": [
+            "Giving away more free features.",
+            "Creating artificial scarcity to force a conversion event.",
+            "Lowering the price."
+          ],
+          "correct_answer": "Creating artificial scarcity to force a conversion event.",
+          "explanation": "You must introduce a point of friction where the user's workflow is interrupted, forcing them to make a purchasing decision."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Spotify' considered the greatest success story of the Freemium model?",
+          "options": [
+            "Because they play music.",
+            "Because they achieved a massive Conversion Rate (over 40%). By injecting annoying ads into the free tier, they made the paid tier feel like a massive relief.",
+            "Because they have green logos."
+          ],
+          "correct_answer": "Because they achieved a massive Conversion Rate (over 40%). By injecting annoying ads into the free tier, they made the paid tier feel like a massive relief.",
+          "explanation": "A standard SaaS conversion rate is 2% to 5%. Spotify's 40% conversion rate is legendary."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of making the 'Paywall' too aggressive (e.g., charging for basic features on day one)?",
+          "options": [
+            "You make too much money.",
+            "You destroy the top of your funnel. If the free version is useless, nobody will share it, your viral growth dies, and your Customer Acquisition Cost skyrockets.",
+            "The app will crash."
+          ],
+          "correct_answer": "You destroy the top of your funnel. If the free version is useless, nobody will share it, your viral growth dies, and your Customer Acquisition Cost skyrockets.",
+          "explanation": "It is a delicate balance: Give away enough to create viral growth, but withhold enough to generate revenue."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Freemium Economics",
+      "pairs": [
+        { "concept": "Conversion Rate", "match": "The percentage of free users who upgrade to a paid subscription" },
+        { "concept": "Paywall", "match": "A system that prevents internet users from accessing webpage content without a paid subscription" },
+        { "concept": "Artificial Scarcity", "match": "Intentionally limiting the availability of a product to drive demand" },
+        { "concept": "Top of Funnel", "match": "The earliest stage of the customer journey, representing total brand awareness" }
+      ]
+    }
+  ]
+}

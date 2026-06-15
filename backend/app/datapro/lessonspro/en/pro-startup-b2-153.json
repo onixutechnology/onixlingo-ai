@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-153",
+  "title": "NDAs and Non-Compete Agreements",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Secrets of the Kingdom",
+      "parts": [
+        {
+          "visual": "A founder has an idea for an app. They refuse to tell anyone about it unless the person signs a 10-page legal NDA (Non-Disclosure Agreement). They send the NDA to a famous VC. The VC deletes the email instantly and blocks the founder.\n\nThe Reality of Secrets:\n1. The NDA Delusion: Ideas are worthless; execution is everything. Elite VCs will NEVER sign an NDA to hear a pitch because they hear 100 pitches a day and it would create a massive legal liability for them.\n2. The Actual Use: NDAs are not for protecting broad ideas. They are for protecting highly specific trade secrets (like source code, customer lists, or unreleased financial data) during an M&A deal or when hiring a contractor.",
+          "audio": "Asking a VC to sign an NDA before a pitch is the fastest way to prove you are an amateur. However, failing to make your employees sign an NDA when they join the company is a fatal error that will destroy your intellectual property."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Guarding the Execution",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A massive corporation wants to buy your startup. They ask to see your source code. What must happen FIRST?",
+          "options": [
+            "You send them a USB drive.",
+            "A Mutual NDA must be signed. This is the exact correct time to use an NDA. Before giving a potential acquirer access to your deepest trade secrets in a 'Data Room', you must legally force them to keep the data secret if the deal falls apart.",
+            "You ask for a deposit."
+          ],
+          "correct_answer": "A Mutual NDA must be signed. This is the exact correct time to use an NDA. Before giving a potential acquirer access to your deepest trade secrets in a 'Data Room', you must legally force them to keep the data secret if the deal falls apart.",
+          "explanation": "NDAs are for execution details, not high-level ideas."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the California lawyer discussing 'Non-Compete' agreements. What is the harsh reality for startups?",
+          "tts_text": "You can make an engineer sign a contract saying they won't work for a competitor for two years after they leave. But if your company is in California, that contract is completely illegal and utterly unenforceable.",
+          "options": [
+            "Non-Competes are great in California.",
+            "State Law Differences. California famously bans Non-Compete agreements. An engineer can quit Google on Friday and start a directly competing AI company on Monday. This specific law is actually one of the main reasons Silicon Valley grew so fast.",
+            "You must pay the engineer to leave."
+          ],
+          "correct_answer": "State Law Differences. California famously bans Non-Compete agreements. An engineer can quit Google on Friday and start a directly competing AI company on Monday. This specific law is actually one of the main reasons Silicon Valley grew so fast.",
+          "explanation": "Free movement of talent drives innovation, but terrifies founders."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Since Non-Competes are often illegal or hard to enforce, what legal tool do startups use instead to stop ex-employees from destroying the company?",
+          "options": [
+            "Blackmail.",
+            "Non-Solicitation Agreements. While you usually cannot stop an ex-employee from working for a rival, a Non-Solicitation agreement legally bans them from calling up your current employees and trying to hire them away, or stealing your current clients.",
+            "Asking them nicely."
+          ],
+          "correct_answer": "Non-Solicitation Agreements. While you usually cannot stop an ex-employee from working for a rival, a Non-Solicitation agreement legally bans them from calling up your current employees and trying to hire them away, or stealing your current clients.",
+          "explanation": "You can leave, but you can't take the team with you."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the difference between a Unilateral NDA and a Mutual NDA?",
+          "options": [
+            "One is longer.",
+            "Unilateral means only ONE party is sharing secrets, and the other party must keep quiet (e.g., you hiring a freelancer). Mutual means BOTH parties are sharing secrets with each other (e.g., two companies exploring a partnership).",
+            "One is for software, one is for hardware."
+          ],
+          "correct_answer": "Unilateral means only ONE party is sharing secrets, and the other party must keep quiet (e.g., you hiring a freelancer). Mutual means BOTH parties are sharing secrets with each other (e.g., two companies exploring a partnership).",
+          "explanation": "Always know who is legally bound to silence."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Contract Terminology",
+      "pairs": [
+        { "concept": "NDA", "match": "Non-Disclosure Agreement; a legal contract to keep specific information secret" },
+        { "concept": "Non-Compete", "match": "A contract banning an employee from working for a rival (often illegal in CA)" },
+        { "concept": "Non-Solicitation", "match": "A contract banning an ex-employee from stealing your current staff or clients" },
+        { "concept": "Trade Secret", "match": "Highly valuable, hidden business information (like the Coca-Cola recipe)" }
+      ]
+    }
+  ]
+}

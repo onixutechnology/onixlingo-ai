@@ -1,0 +1,104 @@
+{
+  "id": "pro-startup-b2-015",
+  "title": "The Founder Divorce",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "When the Partnership Dies",
+      "parts": [
+        {
+          "visual": "You and your co-founder have been fighting for six months. The stress is destroying the company. One of you has to leave. It is financially and emotionally brutal.\n\nThe Reality:\n1. Co-founder conflict is the #1 reason early-stage startups die.\n2. The Divorce: Firing your co-founder is exactly like a marriage divorce. It involves lawyers, massive emotional trauma, and the complex un-tangling of the Cap Table (Equity).",
+          "audio": "Firing a co-founder is the most traumatic event in a startup's lifecycle. It is highly emotional, legally dangerous, and if handled incorrectly, it will instantly destroy the company."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "The Legal Separation",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "You decide to fire your co-founder. They have a 4-year vesting schedule with a 1-year cliff. They are fired on month 14. What happens to their equity?",
+          "options": [
+            "They get 100% of it.",
+            "They only keep the exact amount that vested during those 14 months (roughly 29%). The remaining 71% of their unvested stock is legally taken back by the company. They are now an ex-employee, but still a minority shareholder.",
+            "They get 0% of it."
+          ],
+          "correct_answer": "They only keep the exact amount that vested during those 14 months (roughly 29%). The remaining 71% of their unvested stock is legally taken back by the company. They are now an ex-employee, but still a minority shareholder.",
+          "explanation": "This is exactly why the vesting schedule exists. Without it, the fired co-founder would walk away with half your company."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO talking to the Board of Directors. Why must they act so quickly to fire the co-founder?",
+          "tts_text": "He is toxic. The engineers are threatening to quit because of his behavior. If we don't remove him from the building by Friday, the entire engineering team will walk out.",
+          "options": [
+            "To save money.",
+            "Culture Protection. A toxic co-founder will act like a cancer, driving away all the 'A-Players' in the company. The Board must surgically remove the founder to save the rest of the team.",
+            "Because it is Friday."
+          ],
+          "correct_answer": "Culture Protection. A toxic co-founder will act like a cancer, driving away all the 'A-Players' in the company. The Board must surgically remove the founder to save the rest of the team.",
+          "explanation": "Tolerance of a toxic co-founder signals to the rest of the company that toxicity is acceptable."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the biggest mistake founders make when starting a company that guarantees a terrible 'Divorce' later?",
+          "options": [
+            "Not buying a coffee machine.",
+            "Not signing an Operating Agreement on Day 1. If you don't write down the legal rules of 'how we fire each other' when you are best friends, it will be a legal bloodbath when you become enemies.",
+            "Not picking a good name."
+          ],
+          "correct_answer": "Not signing an Operating Agreement on Day 1. If you don't write down the legal rules of 'how we fire each other' when you are best friends, it will be a legal bloodbath when you become enemies.",
+          "explanation": "You must plan the divorce before you get married."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Can the CEO just fire the other Co-Founder by yelling 'You're fired'?",
+          "options": [
+            "Yes, if they are loud enough.",
+            "Usually no. Co-founders are typically members of the Board of Directors. To remove a founder, you usually need a formal vote from the Board, and it must be executed strictly according to the corporate bylaws.",
+            "Yes, if they own 50%."
+          ],
+          "correct_answer": "Usually no. Co-founders are typically members of the Board of Directors. To remove a founder, you usually need a formal vote from the Board, and it must be executed strictly according to the corporate bylaws.",
+          "explanation": "Firing a founder is a complex corporate governance action, not a simple HR decision."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Separation",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to explain the necessity of legal contracts:",
+          "parts": [
+            "Plan",
+            "the",
+            "divorce",
+            "before",
+            "you",
+            "sign",
+            "the",
+            "partnership."
+          ],
+          "correct_order": [
+            "Plan",
+            "the",
+            "divorce",
+            "before",
+            "you",
+            "sign",
+            "the",
+            "partnership."
+          ],
+          "explanation": "Vesting schedules and Operating Agreements are your insurance policy against human emotion."
+        }
+      ]
+    }
+  ]
+}

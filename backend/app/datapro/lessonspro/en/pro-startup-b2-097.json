@@ -1,0 +1,102 @@
+{
+  "id": "pro-startup-b2-097",
+  "title": "Open Source vs. Proprietary SaaS",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Free Code, Billion Dollar Empires",
+      "parts": [
+        {
+          "visual": "A startup publishes the core of their software on the internet for free. Anyone can download it, modify it, and use it without paying. Ten years later, that same startup IPOs for $10 Billion.\n\nThe Business Models:\n1. Open Source (Commercial): Giving away the base software to build a massive global community of developers, then charging enterprise corporations for premium features, security, and cloud hosting.\n2. Proprietary SaaS: The code is a locked black box. The customer rents access to the software but never sees the underlying code.",
+          "audio": "Open source is not charity; it is a ruthless, highly effective marketing strategy. By giving away the core code, you destroy the competition's ability to charge for it, commoditizing the market while you monopolize the premium services."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Monetizing the Free",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "If an Open Source company gives away its main software for free, how do they make millions of dollars from banks?",
+          "options": [
+            "They ask for donations.",
+            "They sell 'Enterprise Support and Security'. A bank will happily download the free code to test it, but they cannot legally run their entire global operation on unmanaged, unsupported free code. They must pay the startup for an SLA.",
+            "They sell t-shirts."
+          ],
+          "correct_answer": "They sell 'Enterprise Support and Security'. A bank will happily download the free code to test it, but they cannot legally run their entire global operation on unmanaged, unsupported free code. They must pay the startup for an SLA.",
+          "explanation": "Banks do not buy software; they buy risk reduction."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Open Source CEO. What is the 'Open Core' model?",
+          "tts_text": "We give away 80% of our product entirely for free. The community loves it. But if a massive corporation wants Single Sign-On (SSO) or advanced audit logs, they have to pay for the 'Enterprise License'.",
+          "options": [
+            "They steal code.",
+            "Open Core. The basic functionality is open source, but the advanced features required strictly by large corporations are proprietary and extremely expensive. It acts as a massive funnel.",
+            "They hate corporations."
+          ],
+          "correct_answer": "Open Core. The basic functionality is open source, but the advanced features required strictly by large corporations are proprietary and extremely expensive. It acts as a massive funnel.",
+          "explanation": "Give the tool to the developer; sell the security to the CTO."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the massive danger of building a successful Open Source project?",
+          "options": [
+            "It might get deleted.",
+            "The AWS Threat. If your open source code gets extremely popular, Amazon Web Services (AWS) might just take your free code, host it on their servers, and sell it directly to their massive customer base, cutting you out entirely.",
+            "People might not like the logo."
+          ],
+          "correct_answer": "The AWS Threat. If your open source code gets extremely popular, Amazon Web Services (AWS) might just take your free code, host it on their servers, and sell it directly to their massive customer base, cutting you out entirely.",
+          "explanation": "This has forced many open source companies to aggressively change their legal licenses to block Amazon."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do VCs love investing in Commercial Open Source companies?",
+          "options": [
+            "Because VCs love volunteering.",
+            "Massive Distribution at Zero Cost. The open source community spreads the software organically to millions of developers around the world. The startup doesn't have to spend $50 Million on Google Ads to acquire users.",
+            "Because open source is easy to spell."
+          ],
+          "correct_answer": "Massive Distribution at Zero Cost. The open source community spreads the software organically to millions of developers around the world. The startup doesn't have to spend $50 Million on Google Ads to acquire users.",
+          "explanation": "Developers trust code they can read, not salespeople who call them."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of Open Source",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the Open Core strategy:",
+          "parts": [
+            "Give",
+            "the",
+            "code",
+            "away,",
+            "sell",
+            "the",
+            "security."
+          ],
+          "correct_order": [
+            "Give",
+            "the",
+            "code",
+            "away,",
+            "sell",
+            "the",
+            "security."
+          ],
+          "explanation": "Community builds distribution; enterprise builds revenue."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-88",
+  "title": "Identifying Bottlenecks in Operations",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Theory of Constraints",
+      "parts": [
+        {
+          "visual": "A chain is only as strong as its weakest link. In business, a system can only move as fast as its slowest process. This is the Bottleneck.\n\nThe Process:\n1. Identify: Find where work is piling up.\n2. Exploit: Ensure the bottleneck is operating at 100% capacity.\n3. Elevate: Spend money or hire people to expand the bottleneck.\n4. Repeat: Once you fix one bottleneck, a new one will appear.",
+          "audio": "A business system can only move as fast as its slowest process. Executives use the Theory of Constraints to identify and elevate operational bottlenecks."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Operational Flow",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Your sales team can sign 100 clients a day. Your onboarding team can only set up 20 clients a day. Where is the bottleneck?",
+          "options": [
+            "The sales team.",
+            "The onboarding team.",
+            "The clients."
+          ],
+          "correct_answer": "The onboarding team.",
+          "explanation": "The onboarding team is the constraint. Even if sales signs 500 clients, the company will only process 20 a day."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Operations VP. What mistake are they making?",
+          "tts_text": "Our onboarding team is overwhelmed, so I'm going to hire five more salespeople to increase our revenue.",
+          "options": [
+            "Ignoring the bottleneck.",
+            "Fixing the bottleneck.",
+            "Improving morale."
+          ],
+          "correct_answer": "Ignoring the bottleneck.",
+          "explanation": "Hiring more salespeople when the onboarding team is already drowning will just create angry clients who pay but never get set up."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "According to the Theory of Constraints, what happens after you fix the primary bottleneck?",
+          "options": [
+            "The system is perfect forever.",
+            "A new bottleneck will immediately appear somewhere else in the chain.",
+            "Everyone gets fired."
+          ],
+          "correct_answer": "A new bottleneck will immediately appear somewhere else in the chain.",
+          "explanation": "If you fix onboarding, suddenly customer support might become the new bottleneck because they can't handle the influx of new, happy clients."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How do you 'Exploit' a bottleneck?",
+          "options": [
+            "Yell at the employees in that department.",
+            "Ensure that the bottleneck process never wastes a single second. If an engineer is the bottleneck, don't make them do administrative paperwork.",
+            "Pay them less."
+          ],
+          "correct_answer": "Ensure that the bottleneck process never wastes a single second. If an engineer is the bottleneck, don't make them do administrative paperwork.",
+          "explanation": "Before spending money to hire more people, ensure the current constraint is completely shielded from non-essential tasks."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Systems Vocabulary",
+      "pairs": [
+        { "concept": "Bottleneck", "match": "The slowest point in a system that dictates overall speed" },
+        { "concept": "Constraint", "match": "A limitation or restriction" },
+        { "concept": "Throughput", "match": "The amount of material or items passing through a system" },
+        { "concept": "Capacity", "match": "The maximum amount that a system can contain or produce" }
+      ]
+    }
+  ]
+}

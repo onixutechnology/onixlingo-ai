@@ -209,6 +209,10 @@ export default function ChessLobbyPage() {
     }
 
     return list
+      .filter(item => {
+        const name = item.alias?.toLowerCase() || '';
+        return name !== 'diana' && name !== 'dina';
+      })
       .sort((a, b) => b.xp - a.xp)
       .map((item, idx) => ({
         rank: item.rank === '-' ? '-' : idx + 1,
@@ -277,7 +281,7 @@ export default function ChessLobbyPage() {
                     <Crown size={12} /> Titanium Chess Academy
                   </span>
                 </div>
-                <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-2 drop-shadow-none">
+                <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-2 drop-shadow-none">
                   Escuela de Ajedrez
                 </h1>
                 <p className="text-slate-300 max-w-2xl text-sm md:text-base leading-relaxed">
@@ -421,7 +425,7 @@ export default function ChessLobbyPage() {
                   <Star size={32} fill="currentColor" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-1 group-hover:text-amber-300 transition-colors">Reto Diario: Entrenamiento de Élite</h3>
+                  <h3 className="text-xl font-bold text-white mb-1 group-hover:text-amber-300 transition-colors">Reto Diario: Entrenamiento de Élite</h3>
                   <p className="text-sm text-slate-300">Resuelve el problema de hoy para mantener tu racha.</p>
                   <div className="flex gap-2 mt-2">
                     <span className="text-[10px] bg-red-950/60 text-red-400 px-2 py-0.5 rounded-none border border-red-800/40 font-bold">DIFÍCIL</span>
@@ -450,7 +454,7 @@ export default function ChessLobbyPage() {
                   </div>
                   <span className="text-[10px] font-black uppercase tracking-wider text-amber-400">Cognitive Engine</span>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-amber-300 transition-colors">Jugar contra OnixAI</h3>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">Jugar contra OnixAI</h3>
                 <p className="text-sm text-slate-300 mb-6">Pon a prueba tu pensamiento estratégico en tiempo real contra OnixAI con 3 niveles ejecutivos: Principiante, Manager y CEO.</p>
               </div>
               <div className="flex items-center gap-2 text-amber-400 text-xs font-black uppercase tracking-widest mt-auto">
@@ -470,7 +474,7 @@ export default function ChessLobbyPage() {
                   </div>
                   <span className="text-[10px] font-black uppercase tracking-wider text-amber-400">Matchmaking Realtime</span>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-amber-300 transition-colors">Arena PvP (Multijugador)</h3>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">Arena PvP (Multijugador)</h3>
                 <p className="text-sm text-slate-300 mb-6">Enfréntate en vivo a otros estudiantes de la academia. Control de tiempo Bullet, Blitz y Rapid con emparejamiento por ELO.</p>
               </div>
               <div className="flex items-center gap-2 text-amber-400 text-xs font-black uppercase tracking-widest mt-auto">
@@ -494,7 +498,7 @@ export default function ChessLobbyPage() {
                   <Sparkles size={11} className="text-[#D4AF37]" />
                   <span className="text-[8px] font-black uppercase tracking-[0.2em] text-amber-200/50">Titanium Arena</span>
                 </div>
-                <h3 className="text-xs font-black uppercase tracking-tight text-slate-900 leading-none">Ranking de la Arena</h3>
+                <h3 className="text-xs font-black uppercase tracking-tight text-white leading-none">Ranking de la Arena</h3>
                 <p className="text-[9px] text-slate-300 font-semibold leading-none mt-1.5">Top alumnos con mayor ELO acumulado en la Arena.</p>
               </div>
 
@@ -502,10 +506,10 @@ export default function ChessLobbyPage() {
                 {getChessLeaderboard().map((item, index) => (
                   <div 
                     key={index}
-                    className={`flex items-center justify-between p-2 text-[10px] font-bold border ${item.isMe ? 'border-[#D4AF37]/30/40 bg-[#361d0f]/50 text-slate-900' : 'border-[#3c1e0a]/50 text-[#ecd3b5]'}`}
+                    className={`flex items-center justify-between p-2 text-[10px] font-bold border ${item.isMe ? 'border-[#D4AF37]/30/40 bg-[#361d0f]/50 text-white' : 'border-[#3c1e0a]/50 text-[#ecd3b5]'}`}
                   >
                     <div className="flex items-center gap-2">
-                      <span className={`w-4 h-4 flex items-center justify-center font-mono text-[9px] font-black ${index === 0 ? 'bg-[#D4AF37]/20 text-slate-900' : index === 1 ? 'bg-slate-400 text-slate-900' : 'bg-amber-800 text-slate-900'}`}>
+                      <span className={`w-4 h-4 flex items-center justify-center font-mono text-[9px] font-black ${index === 0 ? 'bg-[#D4AF37]/20 text-white' : index === 1 ? 'bg-slate-400 text-slate-900' : 'bg-amber-800 text-white'}`}>
                         {index + 1}
                       </span>
                       <span>{item.name}</span>
@@ -526,7 +530,7 @@ export default function ChessLobbyPage() {
                   <Sparkles size={11} className="text-[#D4AF37]" />
                   <span className="text-[8px] font-black uppercase tracking-[0.2em] text-amber-200/50">Logros de Combate</span>
                 </div>
-                <h3 className="text-xs font-black uppercase tracking-tight text-slate-900 leading-none">Trofeos de Ajedrez</h3>
+                <h3 className="text-xs font-black uppercase tracking-tight text-white leading-none">Trofeos de Ajedrez</h3>
                 <p className="text-[9px] text-slate-300 font-semibold leading-none mt-1.5">Conquista lecciones tácticas y PvP para desbloquear.</p>
               </div>
 
@@ -538,10 +542,10 @@ export default function ChessLobbyPage() {
                 ].map((badge, idx) => (
                   <div 
                     key={idx}
-                    className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-500/40 bg-emerald-950/20 text-emerald-400' : 'border-[#3c1e0a]/50 text-slate-500 opacity-60'}`}
+                    className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-500/40 bg-emerald-950/20 text-emerald-400' : 'border-[#3c1e0a]/50 text-white opacity-60'}`}
                   >
                     <div className="flex items-center gap-2">
-                      <Award size={12} className={badge.unlocked ? 'text-emerald-400' : 'text-slate-600'} />
+                      <Award size={12} className={badge.unlocked ? 'text-emerald-400' : 'text-white opacity-80'} />
                       <div className="text-left">
                         <p className="text-[9px] font-black leading-none">{badge.title}</p>
                         <p className="text-[7px] font-bold text-amber-200/60 mt-0.5 leading-none">{badge.desc}</p>
@@ -561,7 +565,7 @@ export default function ChessLobbyPage() {
         <div className="space-y-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-amber-900/30 pb-4">
             <div>
-              <h2 className="text-xl font-bold font-serif italic text-slate-900">Ruta del Aprendizaje</h2>
+              <h2 className="text-xl font-bold font-serif italic text-white">Ruta del Aprendizaje</h2>
             </div>
           </div>
 
@@ -618,7 +622,7 @@ export default function ChessLobbyPage() {
                             
                             <div className="flex-1 relative z-10">
                               <div className="flex justify-between items-start mb-2 flex-wrap gap-2">
-                                <h4 className="text-lg font-bold text-slate-900 leading-tight">{module.title}</h4>
+                                <h4 className="text-lg font-bold text-white leading-tight">{module.title}</h4>
                                 <div className="flex items-center gap-3">
                                   {module.locked ? (
                                     <div className="flex items-center gap-2 text-slate-600 font-bold text-[10px] bg-[#221006]/85 border border-[#3c1e0a]/40 px-2 py-1 rounded-none animate-pulse">
@@ -682,10 +686,10 @@ export default function ChessLobbyPage() {
                                     <div className="flex items-center gap-3">
                                       <div className={`w-7 h-7 rounded-none flex items-center justify-center text-[10px] font-bold border transition-colors 
                                         ${lesson.completed ? 'bg-emerald-600 border-emerald-500 text-slate-900 shadow-none' : 
-                                          isLessonLocked ? 'border-slate-800 text-slate-600' : 'bg-transparent border-[#361d0f] text-[#361d0f] group-hover:border-[#D4AF37]/30 group-hover:text-amber-400'}`}>
+                                          isLessonLocked ? 'border-slate-800 text-slate-600' : 'bg-transparent border-[#361d0f] text-[#ecd3b5]/50 group-hover:border-[#D4AF37]/30 group-hover:text-amber-400'}`}>
                                         {lesson.completed ? <Shield size={12} fill="currentColor"/> : isLessonLocked ? <Lock size={10} className="text-slate-600" /> : idx + 1}
                                       </div>
-                                      <span className={`font-bold text-xs ${lesson.completed ? 'text-slate-600 line-through decoration-slate-700' : isLessonLocked ? 'text-slate-600' : 'text-[#ecd3b5] group-hover:text-slate-900'}`}>
+                                      <span className={`font-bold text-xs ${lesson.completed ? 'text-slate-600 line-through decoration-slate-700' : isLessonLocked ? 'text-slate-600' : 'text-[#ecd3b5] group-hover:text-white'}`}>
                                         {lesson.title}
                                       </span>
                                     </div>

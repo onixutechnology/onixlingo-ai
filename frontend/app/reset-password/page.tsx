@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Lock, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 
-const RAW_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company/api/v1' : 'http://127.0.0.1:5000/api/v1';
+const RAW_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company/api/v1' : 'http://127.0.0.1:8020/api/v1';
 const API_URL = RAW_URL.endsWith('/api/v1') ? RAW_URL : `${RAW_URL.replace(/\/$/, '')}/api/v1`;
 
 function ResetPasswordForm() {

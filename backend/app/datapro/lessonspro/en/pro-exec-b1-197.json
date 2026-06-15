@@ -1,0 +1,83 @@
+{
+  "id": "pro-exec-b1-197",
+  "title": "Asymmetric Information (The Market for Lemons)",
+  "level": "B1",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "When the Seller Knows More",
+      "parts": [
+        {
+          "visual": "You are buying a used car. The seller knows the engine is about to explode. You do not. Because you cannot trust the seller, you refuse to pay a high price. The seller is forced to lower the price.\n\nThe Economic Theory:\n1. Asymmetric Information: One party in a transaction has vastly more information than the other.\n2. The Market for Lemons: Because buyers know they might be buying a bad product (a 'lemon'), they refuse to pay a premium. This drives high-quality products out of the market entirely.",
+          "audio": "Asymmetric Information occurs when the seller knows more about the product than the buyer. This lack of trust destroys markets, famously known as the Market for Lemons, where high-quality goods cannot be sold."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Bridging the Trust Gap",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A massive corporation is trying to buy a small tech startup. The startup CEO knows the main software has a terrible security flaw, but hides this from the corporation during negotiations. What economic concept is happening?",
+          "options": [
+            "Good negotiating.",
+            "Asymmetric Information. The seller possesses critical, negative data that the buyer does not have, skewing the market price.",
+            "A software update."
+          ],
+          "correct_answer": "Asymmetric Information. The seller possesses critical, negative data that the buyer does not have, skewing the market price.",
+          "explanation": "This is why acquiring companies spend millions of dollars on 'Due Diligence'—to eliminate the asymmetry."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the Insurance Executive. Why is the health insurance company losing money?",
+          "tts_text": "Healthy people don't want to buy our expensive insurance. The only people signing up are people who secretly know they are already sick and will need expensive surgery next month.",
+          "options": [
+            "Because doctors are expensive.",
+            "Adverse Selection. This is a fatal consequence of Asymmetric Information. The buyer (patient) knows their health status better than the seller (insurance company).",
+            "Because the website crashed."
+          ],
+          "correct_answer": "Adverse Selection. This is a fatal consequence of Asymmetric Information. The buyer (patient) knows their health status better than the seller (insurance company).",
+          "explanation": "If an insurance pool is only filled with sick people, the financial math collapses."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "How do companies solve the 'Market for Lemons' problem to sell high-quality products?",
+          "options": [
+            "They complain about it.",
+            "Through 'Signaling' and Warranties. By offering a 10-year money-back guarantee, the seller 'signals' to the buyer that the product is high-quality, legally bridging the trust gap.",
+            "They lower the price."
+          ],
+          "correct_answer": "Through 'Signaling' and Warranties. By offering a 10-year money-back guarantee, the seller 'signals' to the buyer that the product is high-quality, legally bridging the trust gap.",
+          "explanation": "A warranty is an economic weapon used to prove that you are not selling a lemon."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens in a market if Information Asymmetry becomes too severe and no signaling mechanisms exist?",
+          "options": [
+            "Everyone gets rich.",
+            "The market collapses completely. Buyers refuse to buy anything because the risk of being scammed is too high, and honest sellers leave because they cannot get a fair price.",
+            "Prices go up."
+          ],
+          "correct_answer": "The market collapses completely. Buyers refuse to buy anything because the risk of being scammed is too high, and honest sellers leave because they cannot get a fair price.",
+          "explanation": "Trust is the invisible foundation of all global commerce. When trust dies, the market dies."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Information Terminology",
+      "pairs": [
+        { "concept": "Asymmetric Information", "match": "A situation in which one party in a transaction has more or superior information compared to another" },
+        { "concept": "Adverse Selection", "match": "When buyers or sellers have information that the other party does not, usually leading to bad financial outcomes" },
+        { "concept": "Signaling", "match": "Actions taken by an informed party to reveal private information to an uninformed party" },
+        { "concept": "Due Diligence", "match": "A comprehensive appraisal of a business undertaken by a prospective buyer to establish its assets and liabilities" }
+      ]
+    }
+  ]
+}

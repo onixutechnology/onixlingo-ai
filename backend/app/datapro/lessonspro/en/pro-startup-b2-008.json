@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-008",
+  "title": "The Minimum Viable Product (MVP)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Launch Before You're Ready",
+      "parts": [
+        {
+          "visual": "A founder spends 2 years and $1 Million building the 'perfect' software in secret. They launch it. Nobody wants it. They are bankrupt.\n\nThe Antidote:\n1. The MVP (Minimum Viable Product): A version of a new product which allows a team to collect the maximum amount of validated learning about customers with the least effort.\n2. The Core Rule: If you are not embarrassed by the first version of your product, you launched too late.",
+          "audio": "The MVP is not a broken product; it is the absolute smallest thing you can build to test if your core hypothesis is true. Do not waste years building features nobody asked for."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Validating the Hypothesis",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A founder wants to build an app that uses AI to write legal contracts. Building the AI will take a year. What is the best MVP to test the market *this week*?",
+          "options": [
+            "Wait a year and build the AI.",
+            "Create a simple landing page that says 'AI Legal Contracts - $50'. When a customer pays, the founder manually writes the contract themselves and emails it. This proves people will actually pay for the service before writing any code.",
+            "Write a blog post about AI."
+          ],
+          "correct_answer": "Create a simple landing page that says 'AI Legal Contracts - $50'. When a customer pays, the founder manually writes the contract themselves and emails it. This proves people will actually pay for the service before writing any code.",
+          "explanation": "This is known as the 'Wizard of Oz' MVP. It looks automated on the outside, but is manual on the inside."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the engineer complaining about the MVP. Why is the founder ignoring him?",
+          "tts_text": "The design looks terrible! It only has two buttons! The database isn't scalable! We can't let users see this, it will ruin our reputation!",
+          "options": [
+            "The founder hates design.",
+            "The engineer is obsessed with perfection, but the founder knows the MVP is only a tool for 'Validated Learning'. The goal is to get user feedback immediately, not to win a design award.",
+            "The founder is lazy."
+          ],
+          "correct_answer": "The engineer is obsessed with perfection, but the founder knows the MVP is only a tool for 'Validated Learning'. The goal is to get user feedback immediately, not to win a design award.",
+          "explanation": "Perfect is the enemy of shipped."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the danger of asking your friends 'Is this a good idea?' instead of building an MVP?",
+          "options": [
+            "Friends are too busy.",
+            "Friends will lie to you to protect your feelings. An MVP forces real customers to vote with their credit cards, which is the only data that actually matters.",
+            "Friends will steal the idea."
+          ],
+          "correct_answer": "Friends will lie to you to protect your feelings. An MVP forces real customers to vote with their credit cards, which is the only data that actually matters.",
+          "explanation": "A verbal 'yes' is worthless. A credit card transaction is truth."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does a startup do *after* launching the MVP and collecting data?",
+          "options": [
+            "They go on vacation.",
+            "They execute the 'Build-Measure-Learn' feedback loop. If the data shows the idea is wrong, they execute a 'Pivot' (a fundamental change in strategy) instead of blindly continuing to fail.",
+            "They sue the customers."
+          ],
+          "correct_answer": "They execute the 'Build-Measure-Learn' feedback loop. If the data shows the idea is wrong, they execute a 'Pivot' (a fundamental change in strategy) instead of blindly continuing to fail.",
+          "explanation": "Startups are essentially high-speed science experiments."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Lean Startup Terminology",
+      "pairs": [
+        { "concept": "MVP", "match": "Minimum Viable Product (the simplest version of a product that can be released)" },
+        { "concept": "Pivot", "match": "A structured course correction designed to test a new fundamental hypothesis about the product" },
+        { "concept": "Wizard of Oz MVP", "match": "A product that appears fully functional to the user but is operated manually behind the scenes" },
+        { "concept": "Validated Learning", "match": "A process in which one learns by trying out an initial idea and then measuring it to substantiate the effect" }
+      ]
+    }
+  ]
+}

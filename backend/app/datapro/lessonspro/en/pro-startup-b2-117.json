@@ -1,0 +1,102 @@
+{
+  "id": "pro-startup-b2-117",
+  "title": "Technical Debt (The Silent Killer)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Borrowing from the Future",
+      "parts": [
+        {
+          "visual": "A startup needs to launch a feature on Friday to win a $1 Million deal. The engineers write terrible, messy code to get it done fast. They win the deal. A year later, adding a simple button to the app takes the engineers 3 weeks because the core code is a tangled nightmare.\n\nThe Code Tax:\n1. Technical Debt: The implied cost of additional rework caused by choosing an easy, fast software solution now instead of using a better, cleaner approach that would take longer.\n2. The Interest Rate: Just like financial debt, technical debt accumulates 'interest'. The longer you leave bad code in the system, the slower and more expensive all future development becomes.",
+          "audio": "Technical debt is not inherently evil. Taking on debt to win a massive contract is a smart business decision. The tragedy is when founders forget to 'pay back' the debt, causing the engineering team to eventually grind to a complete halt."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Managing the Code Ledger",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A CEO demands five new features this month. The CTO says, 'We can't, we need to spend this month refactoring our old code.' Who is right?",
+          "options": [
+            "The CEO.",
+            "It is a negotiation. The CEO is pushing for 'Feature Velocity' (revenue). The CTO is warning about 'Technical Bankruptcy' (the system collapsing). A healthy startup dedicates a strict percentage of time (e.g., 20%) entirely to paying down technical debt.",
+            "Neither."
+          ],
+          "correct_answer": "It is a negotiation. The CEO is pushing for 'Feature Velocity' (revenue). The CTO is warning about 'Technical Bankruptcy' (the system collapsing). A healthy startup dedicates a strict percentage of time (e.g., 20%) entirely to paying down technical debt.",
+          "explanation": "If you never do maintenance, the car will explode."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the engineer describe the state of the codebase. What is the symptom of massive technical debt?",
+          "tts_text": "I'm terrified to change anything. Yesterday I fixed a bug in the login screen, and for some reason, it completely broke the payment system. Everything is connected with duct tape. We spend 80% of our week fixing bugs instead of building new things.",
+          "options": [
+            "The computers are too slow.",
+            "Spaghetti Code and Fragility. The code is so messy and intertwined that making a change in one place causes unpredictable explosions in another. The team's velocity drops to zero because every action requires massive caution.",
+            "The office is too cold."
+          ],
+          "correct_answer": "Spaghetti Code and Fragility. The code is so messy and intertwined that making a change in one place causes unpredictable explosions in another. The team's velocity drops to zero because every action requires massive caution.",
+          "explanation": "When velocity hits zero, the startup dies."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is 'Refactoring'?",
+          "options": [
+            "Firing bad engineers.",
+            "The disciplined process of restructuring existing computer code—changing the factoring—without changing its external behavior. It is the literal act of 'paying down' technical debt by cleaning up the mess.",
+            "Buying new servers."
+          ],
+          "correct_answer": "The disciplined process of restructuring existing computer code—changing the factoring—without changing its external behavior. It is the literal act of 'paying down' technical debt by cleaning up the mess.",
+          "explanation": "Refactoring is invisible to the user, but crucial to the company."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why do non-technical founders struggle to understand Technical Debt?",
+          "options": [
+            "Because they hate math.",
+            "Because it is invisible. A non-technical CEO only sees the user interface (which looks fine). They cannot see the decaying, chaotic architecture underneath. They often assume engineers are just being 'lazy' when development slows down.",
+            "Because engineers lie."
+          ],
+          "correct_answer": "Because it is invisible. A non-technical CEO only sees the user interface (which looks fine). They cannot see the decaying, chaotic architecture underneath. They often assume engineers are just being 'lazy' when development slows down.",
+          "explanation": "The CTO must translate technical debt into business risk for the CEO."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of the Architecture",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the engineering reality:",
+          "parts": [
+            "Fast",
+            "code",
+            "today",
+            "means",
+            "slow",
+            "code",
+            "tomorrow."
+          ],
+          "correct_order": [
+            "Fast",
+            "code",
+            "today",
+            "means",
+            "slow",
+            "code",
+            "tomorrow."
+          ],
+          "explanation": "The permanent trade-off of software development."
+        }
+      ]
+    }
+  ]
+}

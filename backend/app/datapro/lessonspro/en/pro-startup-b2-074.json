@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-074",
+  "title": "Net Promoter Score (NPS)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The One Number That Matters",
+      "parts": [
+        {
+          "visual": "You finish using an app, and a single question pops up: 'On a scale of 0 to 10, how likely are you to recommend us to a friend or colleague?' This is the most famous metric in modern business.\n\nThe Math of Loyalty:\n1. Net Promoter Score (NPS): A customer loyalty metric developed by Bain & Company.\n2. The Categories: \n- Promoters (Score 9-10): Loyal enthusiasts who will fuel your growth.\n- Passives (Score 7-8): Satisfied but unenthusiastic; easily stolen by competitors.\n- Detractors (Score 0-6): Unhappy customers who will actively damage your brand.",
+          "audio": "NPS is calculated by subtracting the percentage of Detractors from the percentage of Promoters. A score above 50 is excellent. A score below zero means your customers actively hate your company."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Measuring the Love",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A customer gives your software an '8' on the NPS survey. How does the NPS system categorize this user?",
+          "options": [
+            "As a Promoter.",
+            "As a 'Passive'. They like the product, but they do not love it enough to risk their own reputation by recommending it to a friend. Passives do not help your startup grow.",
+            "As a Detractor."
+          ],
+          "correct_answer": "As a 'Passive'. They like the product, but they do not love it enough to risk their own reputation by recommending it to a friend. Passives do not help your startup grow.",
+          "explanation": "In NPS, an 8 is basically a zero. Only 9s and 10s matter."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the CEO reacting to a massive spike in 'Detractors' (scores 0-6). What must the company do immediately?",
+          "tts_text": "Our NPS just dropped to negative 10! The new update must have broken something critical. I want the product team calling every single person who gave us a '2' right now to find out exactly what they hate.",
+          "options": [
+            "Ignore them.",
+            "Close the Feedback Loop. Detractors are a massive warning siren. The company must proactively contact them, apologize, fix the issue, and try to convert their anger back into loyalty.",
+            "Delete the survey."
+          ],
+          "correct_answer": "Close the Feedback Loop. Detractors are a massive warning siren. The company must proactively contact them, apologize, fix the issue, and try to convert their anger back into loyalty.",
+          "explanation": "A vocal Detractor will write a bad review that costs you 10 future sales."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is the exact phrasing 'How likely are you to recommend us?' so powerful?",
+          "options": [
+            "Because it is a short sentence.",
+            "Because recommending a product requires putting one's personal reputation on the line. People will say they 'like' a bad product to be polite, but they will never recommend a bad product to a colleague.",
+            "Because it is required by law."
+          ],
+          "correct_answer": "Because recommending a product requires putting one's personal reputation on the line. People will say they 'like' a bad product to be polite, but they will never recommend a bad product to a colleague.",
+          "explanation": "Social risk is the ultimate lie detector."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "If your startup has an incredibly high NPS (e.g., 70+), what is the best marketing strategy?",
+          "options": [
+            "Stop doing marketing.",
+            "Activate the Promoters. You have an army of people giving you 9s and 10s. You should immediately build a 'Referral Program' to incentivize them to actually bring their friends into the platform.",
+            "Lower the price."
+          ],
+          "correct_answer": "Activate the Promoters. You have an army of people giving you 9s and 10s. You should immediately build a 'Referral Program' to incentivize them to actually bring their friends into the platform.",
+          "explanation": "Promoters are unpaid salespeople. Give them a commission."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "NPS Terminology",
+      "pairs": [
+        { "concept": "NPS", "match": "Net Promoter Score; the ultimate metric of customer loyalty" },
+        { "concept": "Promoters (9-10)", "match": "Highly loyal enthusiasts who will actively recommend your product" },
+        { "concept": "Passives (7-8)", "match": "Satisfied customers who are vulnerable to competitive offerings" },
+        { "concept": "Detractors (0-6)", "match": "Unhappy customers who can damage your brand through negative word-of-mouth" }
+      ]
+    }
+  ]
+}

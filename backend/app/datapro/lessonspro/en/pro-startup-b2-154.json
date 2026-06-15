@@ -1,0 +1,104 @@
+{
+  "id": "pro-startup-b2-154",
+  "title": "Co-Founder Agreements (Vesting and Cliffs)",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "The Divorce Papers",
+      "parts": [
+        {
+          "visual": "Two friends start a company. They split the equity 50/50 on day one. Six months later, one founder gets bored, quits, and moves to a beach. The remaining founder works 100 hours a week for 5 years and builds a $100 Million company. The founder who quit on the beach still owns half of it. The working founder is furious.\n\nThe Prevention:\n1. Vesting Schedules: You do not get your equity on day one. You 'earn' your equity slowly over time (usually 4 years). If you quit early, you stop earning shares.\n2. The 1-Year Cliff: A brutal but necessary rule. If you quit or get fired before exactly 12 months have passed, you get absolutely zero shares. It protects the company from bad hires and flaky co-founders.",
+          "audio": "A Co-Founder agreement is essentially a corporate prenuptial agreement. You must write it when everyone is happy and optimistic, because when the stress hits and someone wants to quit, it is too late to negotiate the terms of the divorce."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Locking the Equity",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "A co-founder has a standard '4-year vesting schedule with a 1-year cliff'. They quit on month 11. How much equity do they keep?",
+          "options": [
+            "25%",
+            "0%. The cliff is an absolute barrier. If you do not survive the first 365 days, you leave with absolutely nothing. This protects the Cap Table from being polluted by early dropouts.",
+            "50%"
+          ],
+          "correct_answer": "0%. The cliff is an absolute barrier. If you do not survive the first 365 days, you leave with absolutely nothing. This protects the Cap Table from being polluted by early dropouts.",
+          "explanation": "The cliff is ruthless but necessary."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the VC explaining why they require Founder Vesting. What is the VC's biggest fear?",
+          "tts_text": "I will not invest $2 Million into your company unless both founders put their own shares on a vesting schedule. If you don't vest, you could take my money, quit tomorrow, keep all your stock, and let the company die.",
+          "options": [
+            "The founders are too smart.",
+            "Founder Abandonment. VCs invest in the people, not just the idea. Vesting acts as 'Golden Handcuffs'. By forcing the founders to earn their own shares over 4 years, the VC guarantees the founders are financially trapped and highly motivated to stay and work.",
+            "The founders will buy a boat."
+          ],
+          "correct_answer": "Founder Abandonment. VCs invest in the people, not just the idea. Vesting acts as 'Golden Handcuffs'. By forcing the founders to earn their own shares over 4 years, the VC guarantees the founders are financially trapped and highly motivated to stay and work.",
+          "explanation": "VCs require you to earn the company you built."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What happens if two co-founders just split the company 50/50 without any formal legal agreement about decision making?",
+          "options": [
+            "It is a perfect democracy.",
+            "Deadlock. If a major decision arises (like selling the company) and one founder says yes and the other says no, the company is instantly paralyzed. A 50/50 split without a tie-breaking mechanism is a ticking legal time bomb.",
+            "The investors decide."
+          ],
+          "correct_answer": "Deadlock. If a major decision arises (like selling the company) and one founder says yes and the other says no, the company is instantly paralyzed. A 50/50 split without a tie-breaking mechanism is a ticking legal time bomb.",
+          "explanation": "Democracies are slow. Startups must be fast."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What does 'Acceleration upon Change of Control' mean in a founder agreement?",
+          "options": [
+            "The company drives faster.",
+            "If the startup is suddenly bought by a massive corporation before the 4 years are up, 'Acceleration' means the remaining unvested shares instantly become vested. The founders get all their stock immediately because the ultimate goal (an exit) was achieved early.",
+            "The founders are fired faster."
+          ],
+          "correct_answer": "If the startup is suddenly bought by a massive corporation before the 4 years are up, 'Acceleration' means the remaining unvested shares instantly become vested. The founders get all their stock immediately because the ultimate goal (an exit) was achieved early.",
+          "explanation": "If you win the game in year two, you shouldn't have to wait until year four to get the prize."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-2",
+      "type": "quiz",
+      "title": "Syntax of the Cliff",
+      "questions": [
+        {
+          "type": "order_sentence",
+          "question": "Order the words to describe the reality of startup equity:",
+          "parts": [
+            "You",
+            "do",
+            "not",
+            "own",
+            "equity,",
+            "you",
+            "earn",
+            "it."
+          ],
+          "correct_order": [
+            "You",
+            "do",
+            "not",
+            "own",
+            "equity,",
+            "you",
+            "earn",
+            "it."
+          ],
+          "explanation": "The fundamental principle of vesting."
+        }
+      ]
+    }
+  ]
+}

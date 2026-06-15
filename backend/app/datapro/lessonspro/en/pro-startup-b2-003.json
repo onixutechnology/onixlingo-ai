@@ -1,0 +1,83 @@
+{
+  "id": "pro-startup-b2-003",
+  "title": "The Value Proposition",
+  "level": "B2",
+  "type": "titanium_gauntlet",
+  "total_xp": 500,
+  "stages": [
+    {
+      "id": "stage-theory-1",
+      "type": "theory",
+      "title": "Why They Buy",
+      "parts": [
+        {
+          "visual": "A customer is looking at your software and your competitor's software. They both cost $50. Why should the customer choose yours?\n\nThe Promise:\n1. The Value Proposition: A clear, simple statement that explains how your product solves a problem, delivers specific benefits, and tells the ideal customer why they should buy from you and not the competition.\n2. It is not a slogan (like 'Just Do It'). It is a brutal calculation of ROI (Return on Investment) for the buyer.",
+          "audio": "A Value Proposition is a concise statement that explains exactly why a customer should buy your product over the competition. It must focus on the specific, measurable benefits the customer will receive."
+        }
+      ]
+    },
+    {
+      "id": "stage-quiz-1",
+      "type": "quiz",
+      "title": "Crafting the Hook",
+      "questions": [
+        {
+          "type": "quiz_choice",
+          "question": "Which of the following is a strong, effective Value Proposition for a B2B startup?",
+          "options": [
+            "'We use AI to empower your workforce synergistically.'",
+            "'Our software reduces your accounting team's data entry time by 40%, saving you $50,000 a year in administrative costs.'",
+            "'The best software in the world.'"
+          ],
+          "correct_answer": "'Our software reduces your accounting team's data entry time by 40%, saving you $50,000 a year in administrative costs.'",
+          "explanation": "A great value proposition contains specific numbers, a clear benefit, and addresses a specific pain point."
+        },
+        {
+          "type": "listening_match",
+          "question": "Listen to the founder's website copy. What error are they making?",
+          "tts_text": "Our platform is built on an ultra-fast React framework with a Node.js backend and military-grade AES-256 encryption.",
+          "options": [
+            "They are speaking Spanish.",
+            "They are listing 'Features' instead of 'Benefits'. Customers do not buy technology; they buy what the technology does for them.",
+            "The encryption is too strong."
+          ],
+          "correct_answer": "They are listing 'Features' instead of 'Benefits'. Customers do not buy technology; they buy what the technology does for them.",
+          "explanation": "Feature: 'AES-256 encryption'. Benefit: 'Your private data will never be stolen.' Sell the benefit."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "What is the 'Unique Selling Proposition' (USP)?",
+          "options": [
+            "A legal patent.",
+            "The one specific thing that your product does significantly better than any other competitor in the market. It is your defensive moat.",
+            "The price of the product."
+          ],
+          "correct_answer": "The one specific thing that your product does significantly better than any other competitor in the market. It is your defensive moat.",
+          "explanation": "If your USP is simply 'we are cheaper', you will lose a price war against Amazon or Google."
+        },
+        {
+          "type": "quiz_choice",
+          "question": "Why is 'Clarity' more important than 'Cleverness' in a Value Proposition?",
+          "options": [
+            "Because cleverness is illegal.",
+            "Because a confused mind never buys. If a user lands on your website and cannot understand what you do in 5 seconds, they will leave.",
+            "Because clarity is cheaper."
+          ],
+          "correct_answer": "Because a confused mind never buys. If a user lands on your website and cannot understand what you do in 5 seconds, they will leave.",
+          "explanation": "Save the clever poetry for the marketing slogans. The Value Proposition must be brutally clear."
+        }
+      ]
+    },
+    {
+      "id": "stage-drill-1",
+      "type": "pairing_drill",
+      "title": "Proposition Terminology",
+      "pairs": [
+        { "concept": "Value Proposition", "match": "A promise of value to be delivered, communicated, and acknowledged" },
+        { "concept": "USP", "match": "Unique Selling Proposition (The factor that differentiates a product from its competitors)" },
+        { "concept": "Feature", "match": "A factual statement about the product or service being promoted" },
+        { "concept": "Benefit", "match": "The actual positive outcome the user experiences by using the product" }
+      ]
+    }
+  ]
+}
