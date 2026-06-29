@@ -1,0 +1,24 @@
+{
+  "id": "ielts_writing_v1",
+  "title": "IELTS Academic Writing - Mock Test V1",
+  "level": "C1",
+  "description": "Simulación completa del IELTS Academic Writing. Incluye el Task 1 (Reporte Gráfico) y Task 2 (Ensayo Académico).",
+  "time_limit": 3600,
+  "stages": [
+    {
+      "id": "task_1_graph",
+      "type": "practice_writing",
+      "scenario": "Academic Report (Task 1)",
+      "question": "Task 1: The chart below shows the percentage of households with different types of technology in the UK between 1996 and 2002.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "image_url": "/media/exams/images/ielts_writing_task1_chart.png",
+      "ai_system_prompt": "ROLE: IELTS Examiner (Task 1). Assess Task Achievement, Coherence, Lexical Resource, and Grammatical Range. Do not explain everything, just return the JSON format requested with concise feedback."
+    },
+    {
+      "id": "task_2_essay",
+      "type": "practice_writing",
+      "scenario": "Academic Essay (Task 2)",
+      "question": "Task 2: In many countries, the proportion of older people is steadily increasing. Does this trend have more positive or negative effects on society?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "ai_system_prompt": "ROLE: IELTS Examiner (Task 2). Assess Task Response, Coherence and Cohesion, Lexical Resource, and Grammatical Range and Accuracy. Ensure feedback is strict and academic."
+    }
+  ]
+}

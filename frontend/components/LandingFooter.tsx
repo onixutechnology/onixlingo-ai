@@ -15,6 +15,7 @@ export default function LandingFooter() {
           <Link href="/planes" className="hover:text-[#D4AF37] transition-colors">Planes</Link>
           <Link href="/legal/privacy" className="hover:text-[#D4AF37] transition-colors">Privacidad</Link>
           <Link href="/legal/terms" className="hover:text-[#D4AF37] transition-colors">Términos</Link>
+          <Link href="/legal/cookies" className="hover:text-[#D4AF37] transition-colors">Cookies</Link>
           <Link href="/legal/support" className="hover:text-[#D4AF37] transition-colors">Soporte</Link>
         </div>
         <div className="text-center md:text-right text-xs space-y-1">

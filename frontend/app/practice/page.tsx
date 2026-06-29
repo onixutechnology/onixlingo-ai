@@ -17,7 +17,7 @@ import { useUIStore } from '@/store/uiStore';
 import Avatar3D from '@/components/avatar/Avatar3D';
 
 // --- CONFIGURACIÓN API (Ajústalo a tu backend real) ---
-const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8021';
 
 export default function PracticePage() {
   const router = useRouter();

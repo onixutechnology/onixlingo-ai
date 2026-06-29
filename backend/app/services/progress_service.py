@@ -36,7 +36,8 @@ def update_lesson_progress(
     total_steps: int, 
     lesson_type: str = "standard",
     difficulty_completed: str = "easy",
-    language: str = "en"
+    language: str = "en",
+    user_timezone: str = "UTC"
 ):
     # 1. Obtener o Crear Progreso Actual
     progress = get_user_progress(db, user_id, lesson_id, language)
@@ -77,8 +78,8 @@ def update_lesson_progress(
         _unlock_next_content(db, user_id, lesson_id, lesson_type, language)
         _check_achievements(db, user_id, score)
         
-        # 🔥 Actualizar Racha (Streak)
-        _update_user_streak(db, user_id)
+        # 🔥 Actualizar Racha (Streak) con Zona Horaria Local
+        _update_user_streak(db, user_id, user_timezone)
 
         # 🔥 OTORGAR PUNTOS DE ELOCUENCIA (Si es Pro)
         if lesson_type == "pro":
@@ -165,19 +166,38 @@ def _grant_if_not_exists(db: Session, user_id: int, code: str):
         db.add(new_ach)
         print(f"🏆 Logro otorgado: {code} al usuario {user_id}")
 
-def _update_user_streak(db: Session, user_id: int):
+import zoneinfo
+from datetime import timezone
+
+def _update_user_streak(db: Session, user_id: int, user_timezone: str = "UTC"):
     """
-    Calcula y actualiza la racha diaria del usuario.
+    Calcula y actualiza la racha diaria del usuario respetando su zona horaria local.
     """
     user = db.query(models.User).filter(models.User.id == user_id).first()
     if not user: return
 
-    now = datetime.now()
+    try:
+        tz = zoneinfo.ZoneInfo(user_timezone)
+    except Exception:
+        tz = timezone.utc
+
+    # Hora actual en UTC y luego convertida a la zona horaria del usuario
+    now_utc = datetime.now(timezone.utc)
+    now_local = now_utc.astimezone(tz)
+    current_date = now_local.date()
+
     if not user.last_activity_at:
         user.streak_days = 1
     else:
-        last_act = user.last_activity_at
-        diff = (now.date() - last_act.date()).days
+        # Convertir last_activity_at (que asumimos está en UTC) a la zona del usuario
+        last_act_utc = user.last_activity_at
+        if last_act_utc.tzinfo is None:
+            last_act_utc = last_act_utc.replace(tzinfo=timezone.utc)
+        
+        last_act_local = last_act_utc.astimezone(tz)
+        last_date = last_act_local.date()
+        
+        diff = (current_date - last_date).days
         
         if diff == 1:
             # Consecutivo: Aumenta racha
@@ -185,9 +205,10 @@ def _update_user_streak(db: Session, user_id: int):
         elif diff > 1:
             # Se rompió la racha: Reinicia
             user.streak_days = 1
-        # Si diff == 0, ya hizo algo hoy, la racha se mantiene igual
+        # Si diff == 0, ya hizo algo hoy en su zona horaria local, la racha se mantiene igual
 
-    user.last_activity_at = now
+    user.last_activity_at = now_utc.replace(tzinfo=None) # Guardar como naive UTC para compatibilidad
+
 
 def grant_eloquence_points(db: Session, user_id: int, points: int):
     """Otorga puntos de elocuencia directamente (usado por Ajedrez u otros eventos)"""

@@ -12,7 +12,7 @@ import PairingDrill from '@/components/lesson/vocabulary/PairingDrill';
 import LessonComplete from '@/components/lesson/LessonComplete';
 
 // ✅ URL INTELIGENTE: Usa la de Vercel en la nube, o Localhost en tu casa
-const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8021';
 
 // --- TIPOS STRICTOS (Punto 19) ---
 interface Pair {
@@ -198,7 +198,8 @@ export default function VocabularyLessonPage() {
                     score: 100,           // Vocabulario se completa o no (no hay nota parcial)
                     stars: 3,
                     difficulty_completed: difficulty, // 🔥 Enviamos dificultad elegida
-                    language: activeLanguage
+                    language: activeLanguage,
+                    user_timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
                 })
             });
         }

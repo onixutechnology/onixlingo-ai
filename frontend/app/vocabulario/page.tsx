@@ -56,8 +56,8 @@ export default function VocabularioPage() {
       {/* NAVBAR */}
       <LandingNavbar />
 
-      {/* HERO SECTION (BLACK) */}
-      <header className="pt-36 pb-16 px-6 relative overflow-hidden bg-slate-50">
+      {/* HERO SECTION (WHITE) */}
+      <header className="pt-28 pb-12 px-6 relative overflow-hidden bg-slate-50">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#D4AF37]/10 blur-[130px] opacity-40 pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-bold uppercase tracking-widest shadow-none">

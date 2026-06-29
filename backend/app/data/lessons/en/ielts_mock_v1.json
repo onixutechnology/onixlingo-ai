@@ -1,93 +1,1013 @@
 {
   "id": "ielts_mock_v1",
-  "title": "Simulador Oficial Completo IELTS® Academic - Versión 1",
-  "level": "B2/C2",
-  "description": "Simulador académico completo de IELTS® con lecturas y audios sobre: Ciencias y Cosmos.",
-  "total_xp": 500,
+  "title": "IELTS® Academic Official Mock Test",
+  "difficulty": "advanced",
+  "category": "certification",
+  "author": "OnixLingo Assessment Board",
+  "total_xp": 3500,
+  "completion_message": "Congratulations! Your IELTS mock test has been submitted for official banding.",
   "stages": [
     {
-      "id": "ielts-intro",
-      "type": "lecture",
-      "title": "IELTS® Academic Simulation: Ciencias y Cosmos",
-      "parts": [
-        {
-          "visual": "## 🇬🇧 Simulador IELTS® Academic (Versión 1)\n\nTemas académicos globales evaluados:\n\n- **Academic Reading**: *Astronomía: La Habitabilidad de Kepler-186f*\n- **Academic Listening Lecture**\n- **Academic Writing Task Integration**\n\n*Comienza tu examen simulado.*",
-          "audio": "Welcome to the IELTS Academic Simulator. Focus on precise spelling, syntax structure, and vocabulary diversity. Let's begin.",
-          "animation": "teacher_pointing"
-        }
-      ]
-    },
-    {
-      "id": "ielts-listening",
+      "id": "ielts_l_sec1",
       "type": "quiz",
-      "title": "Sección 1: Comprensión Auditiva (IELTS Listening)",
+      "title": "Listening Section 1",
+      "instructions": "Listen to the conversation and answer questions 1-10.",
+      "audioUrl": "placeholder_ielts_sec1.mp3",
+      "passageText": "AUDIO TRANSCRIPT:\\nM: Hello, City Travel Agency. How can I help you?\\nW: Hi, I'm calling to inquire about a weekend trip to Edinburgh.\\nM: Certainly. Are you looking to travel by train or by plane?\\nW: By train, please. I prefer the scenery.\\nM: Right. And what dates were you thinking of?\\nW: Next weekend, leaving on Friday the 14th and returning on Sunday the 16th.\\nM: Okay, let me check the schedules. There's a train leaving London King's Cross at 9:30 AM on Friday.\\nW: That sounds perfect. How much is a return ticket?\\nM: For a standard class return, it's £85. If you want a first-class ticket, it'll be £130.\\nW: Standard class is fine. Can I also book a hotel through you?\\nM: Yes, we have a partnership with the Royal Mile Hotel. It's £120 per night, including breakfast.\\nW: Excellent, I'll take that as well.",
       "questions": [
         {
-          "id": "IE_L1_v1",
-          "type": "quiz_choice",
-          "question": "[ACADEMIC LECTURE]: Listen to the dialogue and answer: **What is the central focus?**\n\n*(Transcription)*:\n\nProfessor: Today we discuss stellar winds in red dwarf systems. These winds are streams of charged particles ejected from the star's corona. M-dwarfs exhibit persistent coronal mass ejections that are far more intense than those of our Sun. These charged particles strike orbiting planets and can cause atmospheric stripping. However, if a planet possesses a strong intrinsic magnetic field, this field acts as a shield, deflecting the solar wind and preventing the loss of volatile water compounds.",
+          "id": "q1",
+          "question": "Question 1: What is the woman's final destination for her weekend trip?",
           "options": [
-            "The composition of our Sun's coronal mass ejections.",
-            "How stellar winds interact with planetary atmospheres and magnetic fields.",
-            "The migration of gas giants in red dwarf systems.",
-            "The role of volcanic eruptions in creating water fields."
+            "London King's Cross",
+            "Edinburgh",
+            "The Royal Mile Hotel",
+            "City Travel Agency"
           ],
-          "correct_answer": "How stellar winds interact with planetary atmospheres and magnetic fields.",
-          "explanation": "El profesor detalla los vientos estelares ('stellar winds'), la pérdida de atmósfera ('stripping') y cómo el campo magnético sirve de escudo protector."
-        }
-      ]
-    },
-    {
-      "id": "ielts-reading",
-      "type": "quiz",
-      "title": "Sección 2: Comprensión Lectora (IELTS Reading)",
-      "questions": [
-        {
-          "id": "IE_R1_v1",
-          "type": "quiz_choice",
-          "question": "Read the academic article and answer the question:\n\n**The Habitability of Kepler-186f**\n\nIn recent stellar astrobiology, astronomers have focused on Kepler-186f, the first validated Earth-size planet orbiting within the habitable zone of an M-dwarf star. M-dwarfs, or red dwarfs, constitute nearly seventy percent of all stars in the Milky Way, making planetary systems around them highly common. While red dwarfs undergo intense stellar flares that release high-energy ultraviolet radiation, recent atmosphere models show that Kepler-186f's dense atmospheric carbon dioxide could serve as a protective barrier. This atmospheric retention suggests that liquid water could stably exist on the planetary surface under convective atmospheric conditions, presenting a major vector for extrasolar biosignature research.",
-          "options": [
-            "It is the largest planet discovered in the Milky Way.",
-            "It is the first Earth-size planet found in a red dwarf's habitable zone.",
-            "It emits stellar flares that help sustain volcanic outgassing.",
-            "It lacks any protective atmospheric carbon dioxide."
-          ],
-          "correct_answer": "It is the first Earth-size planet found in a red dwarf's habitable zone.",
-          "explanation": "El texto menciona directamente que Kepler-186f es 'the first validated Earth-size planet orbiting within the habitable zone of an M-dwarf star'."
+          "correct_answer": "Edinburgh"
         },
         {
-          "id": "IE_R2_v1",
-          "type": "quiz_choice",
-          "question": "What is the closest meaning of the highlighted term in context?",
+          "id": "q2",
+          "question": "Question 2: How does the woman prefer to travel?",
           "options": [
-            "Exclusion",
-            "Loss",
-            "Maintenance / Preservation",
-            "Fluctuation"
+            "By plane",
+            "By coach",
+            "By train",
+            "By car"
           ],
-          "correct_answer": "Maintenance / Preservation",
-          "explanation": "En el contexto de la retención atmosférica ('atmospheric retention'), se refiere a la preservación o mantenimiento de la atmósfera protectora."
+          "correct_answer": "By train"
+        },
+        {
+          "id": "q3",
+          "question": "Question 3: Why does she prefer this specific mode of transport?",
+          "options": [
+            "It is cheaper",
+            "It is much faster",
+            "She prefers the scenery",
+            "She is afraid of flying"
+          ],
+          "correct_answer": "She prefers the scenery"
+        },
+        {
+          "id": "q4",
+          "question": "Question 4: What date is the woman planning to leave for her trip?",
+          "options": [
+            "Thursday the 13th",
+            "Friday the 14th",
+            "Saturday the 15th",
+            "Sunday the 16th"
+          ],
+          "correct_answer": "Friday the 14th"
+        },
+        {
+          "id": "q5",
+          "question": "Question 5: On what day is she planning to return?",
+          "options": [
+            "Friday the 14th",
+            "Saturday the 15th",
+            "Sunday the 16th",
+            "Monday the 17th"
+          ],
+          "correct_answer": "Sunday the 16th"
+        },
+        {
+          "id": "q6",
+          "question": "Question 6: What time does the departing train leave London King's Cross?",
+          "options": [
+            "8:30 AM",
+            "9:00 AM",
+            "9:30 AM",
+            "10:00 AM"
+          ],
+          "correct_answer": "9:30 AM"
+        },
+        {
+          "id": "q7",
+          "question": "Question 7: How much does a standard class return ticket cost?",
+          "options": [
+            "£85",
+            "£120",
+            "£130",
+            "£150"
+          ],
+          "correct_answer": "£85"
+        },
+        {
+          "id": "q8",
+          "question": "Question 8: How much is a first-class return ticket?",
+          "options": [
+            "£85",
+            "£120",
+            "£130",
+            "£150"
+          ],
+          "correct_answer": "£130"
+        },
+        {
+          "id": "q9",
+          "question": "Question 9: Which hotel does the travel agency have a partnership with?",
+          "options": [
+            "City Travel Hotel",
+            "London King's Hotel",
+            "Riverside Hotel",
+            "Royal Mile Hotel"
+          ],
+          "correct_answer": "Royal Mile Hotel"
+        },
+        {
+          "id": "q10",
+          "question": "Question 10: What is included in the £120 per night hotel cost?",
+          "options": [
+            "Dinner",
+            "A city tour",
+            "Breakfast",
+            "Train transfers"
+          ],
+          "correct_answer": "Breakfast"
         }
       ]
     },
     {
-      "id": "ielts-writing",
+      "id": "ielts_l_sec2",
       "type": "quiz",
-      "title": "Sección 3: Coherencia y Gramática Académica (IELTS Writing Prep)",
+      "title": "Listening Section 2",
+      "instructions": "Listen to the monologue and answer questions 11-20.",
+      "audioUrl": "placeholder_ielts_sec2.mp3",
+      "passageText": "AUDIO TRANSCRIPT:\\nW: Welcome, everyone, to the annual community volunteer fair here at the Riverside Community Center. My name is Sarah, and I'm the volunteer coordinator. Today, we have over 20 different organizations looking for enthusiastic people like you. Let me briefly highlight a few. First, the City Library is desperately looking for reading tutors for their children's after-school program. You don't need teaching experience, just a love for books and patience. They meet on Tuesdays and Thursdays from 4 to 6 PM.\\n\\nSecondly, the Green Spaces Initiative needs volunteers for their weekend park clean-up crews. They provide all the equipment, including gloves and trash bags. It's a great way to get some exercise while helping the environment. Finally, the local animal shelter is looking for dog walkers. This is very popular, so if you're interested, please sign up at their booth as soon as possible.",
       "questions": [
         {
-          "id": "IE_W1_v1",
-          "type": "fill_input",
-          "question": "Complete the sentence with the appropriate formal connector showing cause-and-effect:\n\nComplete the scientific sentence: \"Kepler-186f orbits in the habitable zone. ___, stellar flares present a major risk to life.\"",
-          "correct_answers": [
-            "However",
-            "Nevertheless",
-            "however",
-            "nevertheless"
+          "id": "q11",
+          "question": "Question 11: Where is the annual community volunteer fair taking place?",
+          "options": [
+            "City Library",
+            "Riverside Community Center",
+            "Green Spaces Park",
+            "Local Animal Shelter"
           ],
-          "hints": [
-            "Check spelling and casing."
-          ]
+          "correct_answer": "Riverside Community Center"
+        },
+        {
+          "id": "q12",
+          "question": "Question 12: What is Sarah's role at the fair?",
+          "options": [
+            "Reading tutor",
+            "Event sponsor",
+            "Volunteer coordinator",
+            "Library manager"
+          ],
+          "correct_answer": "Volunteer coordinator"
+        },
+        {
+          "id": "q13",
+          "question": "Question 13: How many organizations are looking for volunteers?",
+          "options": [
+            "Over 10",
+            "Over 15",
+            "Over 20",
+            "Over 50"
+          ],
+          "correct_answer": "Over 20"
+        },
+        {
+          "id": "q14",
+          "question": "Question 14: What is the City Library desperately looking for?",
+          "options": [
+            "Reading tutors",
+            "Book sorters",
+            "Librarians",
+            "Cleaners"
+          ],
+          "correct_answer": "Reading tutors"
+        },
+        {
+          "id": "q15",
+          "question": "Question 15: What qualifications are needed to volunteer at the library?",
+          "options": [
+            "A teaching degree",
+            "A love for books and patience",
+            "Prior tutoring experience",
+            "A background in child psychology"
+          ],
+          "correct_answer": "A love for books and patience"
+        },
+        {
+          "id": "q16",
+          "question": "Question 16: On what days do the library tutors meet?",
+          "options": [
+            "Mondays and Wednesdays",
+            "Tuesdays and Thursdays",
+            "Fridays only",
+            "Weekends"
+          ],
+          "correct_answer": "Tuesdays and Thursdays"
+        },
+        {
+          "id": "q17",
+          "question": "Question 17: At what time do the library tutors meet?",
+          "options": [
+            "From 3 to 5 PM",
+            "From 4 to 6 PM",
+            "From 5 to 7 PM",
+            "From 9 to 11 AM"
+          ],
+          "correct_answer": "From 4 to 6 PM"
+        },
+        {
+          "id": "q18",
+          "question": "Question 18: What equipment does the Green Spaces Initiative provide?",
+          "options": [
+            "Uniforms and boots",
+            "Hats and sunscreen",
+            "Gloves and trash bags",
+            "Rakes and shovels"
+          ],
+          "correct_answer": "Gloves and trash bags"
+        },
+        {
+          "id": "q19",
+          "question": "Question 19: When do the park clean-up crews operate?",
+          "options": [
+            "Weekdays",
+            "Weekends",
+            "Every evening",
+            "Early mornings"
+          ],
+          "correct_answer": "Weekends"
+        },
+        {
+          "id": "q20",
+          "question": "Question 20: What is the local animal shelter looking for?",
+          "options": [
+            "Veterinarians",
+            "Cage cleaners",
+            "Dog walkers",
+            "Cat groomers"
+          ],
+          "correct_answer": "Dog walkers"
+        }
+      ]
+    },
+    {
+      "id": "ielts_l_sec3",
+      "type": "quiz",
+      "title": "Listening Section 3",
+      "instructions": "Listen to the conversation and answer questions 21-30.",
+      "audioUrl": "placeholder_ielts_sec3.mp3",
+      "passageText": "AUDIO TRANSCRIPT:\\nM (Tutor): Come in. Ah, Emma and Jack. Take a seat. So, we're here to discuss your joint presentation on urban agriculture. How is the research going?\\nW (Emma): It's going well, Dr. Harris. We've decided to focus specifically on vertical farming.\\nM (Jack): Yes, we found some fascinating data on crop yields. Vertical farms can produce up to 10 times more food per square meter compared to traditional farming.\\nM (Tutor): Excellent. That's a strong angle. But remember, a good presentation needs to look at both sides. What are the drawbacks?\\nW (Emma): Well, the initial set-up costs are massive. You need specialized LED lighting, climate control systems, and hydroponic equipment.\\nM (Jack): And the energy consumption is very high, which kind of defeats the purpose of being 'sustainable' if the electricity comes from fossil fuels.\\nM (Tutor): Good points. Make sure you highlight those challenges prominently in your slides.",
+      "questions": [
+        {
+          "id": "q21",
+          "question": "Question 21: Who is the tutor leading the discussion?",
+          "options": [
+            "Dr. Smith",
+            "Dr. Harris",
+            "Professor Jones",
+            "Dr. Williams"
+          ],
+          "correct_answer": "Dr. Harris"
+        },
+        {
+          "id": "q22",
+          "question": "Question 22: What is the topic of Emma and Jack's joint presentation?",
+          "options": [
+            "Climate change",
+            "Urban agriculture",
+            "Marine biology",
+            "Fossil fuels"
+          ],
+          "correct_answer": "Urban agriculture"
+        },
+        {
+          "id": "q23",
+          "question": "Question 23: What specific area have they decided to focus on?",
+          "options": [
+            "Vertical farming",
+            "Rooftop gardens",
+            "Community allotments",
+            "Greenhouses"
+          ],
+          "correct_answer": "Vertical farming"
+        },
+        {
+          "id": "q24",
+          "question": "Question 24: How much more food per square meter can vertical farms produce compared to traditional farming?",
+          "options": [
+            "2 times more",
+            "5 times more",
+            "10 times more",
+            "20 times more"
+          ],
+          "correct_answer": "10 times more"
+        },
+        {
+          "id": "q25",
+          "question": "Question 25: According to Emma, what is a major drawback of vertical farming?",
+          "options": [
+            "Lack of available seeds",
+            "Massive initial set-up costs",
+            "Poor crop taste",
+            "Pest infestations"
+          ],
+          "correct_answer": "Massive initial set-up costs"
+        },
+        {
+          "id": "q26",
+          "question": "Question 26: Which type of specialized equipment is required?",
+          "options": [
+            "Tractors and plows",
+            "Hydroponic equipment",
+            "Wind turbines",
+            "Solar panels"
+          ],
+          "correct_answer": "Hydroponic equipment"
+        },
+        {
+          "id": "q27",
+          "question": "Question 27: What is another major drawback mentioned by Jack?",
+          "options": [
+            "High energy consumption",
+            "Excessive water use",
+            "Lack of sunlight",
+            "Soil degradation"
+          ],
+          "correct_answer": "High energy consumption"
+        },
+        {
+          "id": "q28",
+          "question": "Question 28: When does high energy consumption defeat the purpose of being 'sustainable'?",
+          "options": [
+            "If the crops fail",
+            "If the electricity comes from fossil fuels",
+            "If the farm is too large",
+            "If the food is exported"
+          ],
+          "correct_answer": "If the electricity comes from fossil fuels"
+        },
+        {
+          "id": "q29",
+          "question": "Question 29: What does Dr. Harris advise them to do with these drawbacks?",
+          "options": [
+            "Ignore them completely",
+            "Mention them briefly at the end",
+            "Highlight them prominently in their slides",
+            "Write a separate report about them"
+          ],
+          "correct_answer": "Highlight them prominently in their slides"
+        },
+        {
+          "id": "q30",
+          "question": "Question 30: According to the tutor, why should they include the drawbacks?",
+          "options": [
+            "To prove vertical farming is useless",
+            "To make the presentation longer",
+            "Because a good presentation needs to look at both sides",
+            "To discourage other students"
+          ],
+          "correct_answer": "Because a good presentation needs to look at both sides"
+        }
+      ]
+    },
+    {
+      "id": "ielts_l_sec4",
+      "type": "quiz",
+      "title": "Listening Section 4",
+      "instructions": "Listen to the lecture and answer questions 31-40.",
+      "audioUrl": "placeholder_ielts_sec4.mp3",
+      "passageText": "AUDIO TRANSCRIPT:\\nProfessor: Good morning. Today's lecture will focus on the fascinating world of bioluminescence—the production and emission of light by a living organism. It occurs widely in marine vertebrates and invertebrates, as well as in some fungi and insects, such as fireflies. The chemical reaction that results in bioluminescence requires two unique chemicals: luciferin and either luciferase or photoprotein. Luciferin is the compound that actually produces the light.\\n\\nNow, why do organisms bioluminesce? In the deep ocean, where sunlight cannot penetrate, bioluminescence serves several critical functions. Firstly, it is used for camouflage. This might sound counterintuitive, but some fish emit light from their bellies to match the faint sunlight coming from the surface, making them invisible to predators swimming below them—a strategy known as counter-illumination. Secondly, it is used to attract prey. The anglerfish, for example, dangles a glowing lure in front of its mouth to attract smaller fish. Finally, it is used for communication and attracting mates.",
+      "questions": [
+        {
+          "id": "q31",
+          "question": "Question 31: What is bioluminescence?",
+          "options": [
+            "The absorption of light by plants",
+            "The reflection of sunlight off water",
+            "The production and emission of light by a living organism",
+            "The heat generated by deep-sea vents"
+          ],
+          "correct_answer": "The production and emission of light by a living organism"
+        },
+        {
+          "id": "q32",
+          "question": "Question 32: In which of the following organisms does bioluminescence NOT widely occur, according to the lecture?",
+          "options": [
+            "Marine vertebrates",
+            "Marine invertebrates",
+            "Fungi and insects",
+            "Terrestrial mammals"
+          ],
+          "correct_answer": "Terrestrial mammals"
+        },
+        {
+          "id": "q33",
+          "question": "Question 33: Which two chemicals are required for the bioluminescent chemical reaction?",
+          "options": [
+            "Chlorophyll and sunlight",
+            "Luciferin and luciferase",
+            "Oxygen and carbon dioxide",
+            "Nitrogen and phosphorus"
+          ],
+          "correct_answer": "Luciferin and luciferase"
+        },
+        {
+          "id": "q34",
+          "question": "Question 34: Which specific compound actually produces the light?",
+          "options": [
+            "Photoprotein",
+            "Luciferase",
+            "Luciferin",
+            "Chlorophyll"
+          ],
+          "correct_answer": "Luciferin"
+        },
+        {
+          "id": "q35",
+          "question": "Question 35: Why do some deep ocean organisms use bioluminescence for camouflage?",
+          "options": [
+            "To blend in with the dark ocean floor",
+            "To match the faint sunlight coming from the surface",
+            "To mimic the appearance of rocks",
+            "To look like larger predators"
+          ],
+          "correct_answer": "To match the faint sunlight coming from the surface"
+        },
+        {
+          "id": "q36",
+          "question": "Question 36: What is the strategy of matching faint sunlight called?",
+          "options": [
+            "Counter-illumination",
+            "Shadow-matching",
+            "Light-bending",
+            "Deep-sea blending"
+          ],
+          "correct_answer": "Counter-illumination"
+        },
+        {
+          "id": "q37",
+          "question": "Question 37: How does the anglerfish use bioluminescence?",
+          "options": [
+            "To scare away predators",
+            "To attract prey with a glowing lure",
+            "To signal to its school",
+            "To navigate in the dark"
+          ],
+          "correct_answer": "To attract prey with a glowing lure"
+        },
+        {
+          "id": "q38",
+          "question": "Question 38: Besides camouflage and attracting prey, what is another critical function of bioluminescence?",
+          "options": [
+            "Generating heat",
+            "Photosynthesis",
+            "Communication",
+            "Digestion"
+          ],
+          "correct_answer": "Communication"
+        },
+        {
+          "id": "q39",
+          "question": "Question 39: What is the final function of bioluminescence mentioned by the professor?",
+          "options": [
+            "Stunning prey",
+            "Attracting mates",
+            "Marking territory",
+            "Curing diseases"
+          ],
+          "correct_answer": "Attracting mates"
+        },
+        {
+          "id": "q40",
+          "question": "Question 40: Why is bioluminescence critical in the deep ocean?",
+          "options": [
+            "Because the water is very cold",
+            "Because sunlight cannot penetrate to those depths",
+            "Because food is scarce",
+            "Because there are no other light sources"
+          ],
+          "correct_answer": "Because sunlight cannot penetrate to those depths"
+        }
+      ]
+    },
+    {
+      "id": "ielts_r_pass1",
+      "type": "quiz",
+      "title": "Reading Passage 1",
+      "instructions": "Read the passage and answer questions 41-53. Pay attention to True/False/Not Given questions.",
+      "passageText": "The History of the Bicycle\\n\\nThe bicycle is one of the most ubiquitous forms of transportation in the modern world, but its development was a slow and iterative process. The first verifiable claim for a practically used bicycle belongs to the German Baron Karl von Drais, a civil servant to the Grand Duke of Baden in Germany. Drais invented his 'Laufmaschine' (German for \"running machine\") in 1817. This early device, also known as the draisine or dandy horse, had two wheels and a steering mechanism but lacked pedals; the rider simply pushed their feet against the ground to glide forward.\\n\\nIt wasn't until the 1860s in France that pedals were added to the front wheel, creating the 'velocipede', which quickly earned the nickname 'boneshaker' due to its stiff wooden wheels and iron frame. Riding a boneshaker on the cobbled streets of the 19th century was an incredibly uncomfortable experience. To achieve higher speeds, inventors soon realized that increasing the size of the front wheel (which was directly driven by the pedals) would cover more distance per pedal stroke. This led to the creation of the 'penny-farthing' in the 1870s, characterized by a massive front wheel and a tiny rear wheel.\\n\\nWhile fast, penny-farthings were inherently dangerous. The rider sat high above the ground, and any sudden stop could easily send them pitching forward over the handlebars. The true revolution in cycling came in the late 1880s with the invention of the 'safety bicycle'. This design featured two wheels of identical size and a chain drive connecting the pedals to the rear wheel. Coupled with the invention of the pneumatic (air-filled) rubber tire by John Boyd Dunlop in 1888, the safety bicycle offered a smooth, relatively safe, and highly efficient mode of transport. This triggered the great bicycle boom of the 1890s, profoundly changing society by giving ordinary people unprecedented mobility.",
+      "questions": [
+        {
+          "id": "q41",
+          "question": "Question 41: Baron Karl von Drais's 'Laufmaschine' included pedals attached to the front wheel.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "False"
+        },
+        {
+          "id": "q42",
+          "question": "Question 42: The term 'boneshaker' was coined because of the velocipede's uncomfortable ride on cobbled streets.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "True"
+        },
+        {
+          "id": "q43",
+          "question": "Question 43: The penny-farthing was cheaper to produce than the boneshaker.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "Not Given"
+        },
+        {
+          "id": "q44",
+          "question": "Question 44: Penny-farthings were considered completely safe for children.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "False"
+        },
+        {
+          "id": "q45",
+          "question": "Question 45: John Boyd Dunlop invented the safety bicycle in 1888.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "False"
+        },
+        {
+          "id": "q46",
+          "question": "Question 46: According to the passage, why was the penny-farthing created?",
+          "options": [
+            "To provide a smoother ride on cobbled streets",
+            "To increase the distance covered per pedal stroke",
+            "To make bicycles safer for the general public",
+            "To reduce the manufacturing costs"
+          ],
+          "correct_answer": "To increase the distance covered per pedal stroke"
+        },
+        {
+          "id": "q47",
+          "question": "Question 47: What was the main safety issue associated with the penny-farthing?",
+          "options": [
+            "The chain drive frequently broke",
+            "The wooden wheels would easily splinter",
+            "A sudden stop could throw the rider over the handlebars",
+            "The rubber tires were highly prone to bursting"
+          ],
+          "correct_answer": "A sudden stop could throw the rider over the handlebars"
+        },
+        {
+          "id": "q48",
+          "question": "Question 48: Which of the following features belonged to the 'safety bicycle'?",
+          "options": [
+            "A massive front wheel and a tiny rear wheel",
+            "No pedals or steering mechanism",
+            "Two wheels of identical size and a chain drive",
+            "An iron frame without rubber tires"
+          ],
+          "correct_answer": "Two wheels of identical size and a chain drive"
+        },
+        {
+          "id": "q49",
+          "question": "Question 49: When did the great bicycle boom occur?",
+          "options": [
+            "In the 1810s",
+            "In the 1860s",
+            "In the 1870s",
+            "In the 1890s"
+          ],
+          "correct_answer": "In the 1890s"
+        },
+        {
+          "id": "q50",
+          "question": "Question 50: Who is credited with inventing the pneumatic rubber tire?",
+          "options": [
+            "Karl von Drais",
+            "John Boyd Dunlop",
+            "A French inventor in the 1860s",
+            "An unknown British engineer"
+          ],
+          "correct_answer": "John Boyd Dunlop"
+        },
+        {
+          "id": "q51",
+          "question": "Question 51: The safety bicycle had a tiny rear wheel compared to its front wheel.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "False"
+        },
+        {
+          "id": "q52",
+          "question": "Question 52: The safety bicycle triggered a massive boom that gave ordinary people unprecedented mobility.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "True"
+        },
+        {
+          "id": "q53",
+          "question": "Question 53: How did the rider move the 'Laufmaschine' forward?",
+          "options": [
+            "By pedaling the front wheel",
+            "By using a chain drive system",
+            "By pushing their feet against the ground",
+            "By using pneumatic air pumps"
+          ],
+          "correct_answer": "By pushing their feet against the ground"
+        }
+      ]
+    },
+    {
+      "id": "ielts_r_pass2",
+      "type": "quiz",
+      "title": "Reading Passage 2",
+      "instructions": "Read the passage and answer questions 54-66.",
+      "passageText": "The Psychology of Decision Making\\n\\nEvery day, humans make thousands of decisions, ranging from the trivial (what to wear) to the life-altering (whether to change careers). For a long time, classical economic theory posited that humans were 'rational actors' who always weighed the costs and benefits of every option to maximize their utility. However, modern psychology and behavioral economics have completely dismantled this assumption, revealing that human decision-making is deeply flawed and heavily influenced by cognitive biases.\\n\\nOne of the most profound discoveries in this field was made by psychologists Daniel Kahneman and Amos Tversky, who introduced the concept of heuristics. Heuristics are mental shortcuts that our brains use to process information quickly. While often useful—allowing us to avoid paralysis by analysis—these shortcuts can lead to systemic errors. For example, the 'availability heuristic' is the tendency to overestimate the likelihood of an event based on how easily an example comes to mind. People are often more afraid of flying than driving, despite statistically higher risks in driving, simply because plane crashes are dramatic, heavily reported in the news, and therefore highly 'available' in memory.\\n\\nAnother powerful force is 'loss aversion'. Kahneman and Tversky demonstrated that the psychological pain of losing $100 is significantly greater than the psychological pleasure of gaining $100. This asymmetry explains why people often stick with poor investments or dead-end jobs; the fear of losing what they have already invested (the 'sunk cost fallacy') outweighs the potential benefits of changing course. Understanding these biases is crucial for improving everything from personal finance to public policy.",
+      "questions": [
+        {
+          "id": "q54",
+          "question": "Question 54: Classical economic theory assumes humans always weigh costs and benefits to maximize utility.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "True"
+        },
+        {
+          "id": "q55",
+          "question": "Question 55: Heuristics are mental shortcuts that always result in correct decisions.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "False"
+        },
+        {
+          "id": "q56",
+          "question": "Question 56: According to the availability heuristic, why are people more afraid of flying than driving?",
+          "options": [
+            "Because flying is statistically more dangerous",
+            "Because driving accidents are rarely fatal",
+            "Because plane crashes are dramatic and heavily reported in the news",
+            "Because humans are biologically wired to fear heights"
+          ],
+          "correct_answer": "Because plane crashes are dramatic and heavily reported in the news"
+        },
+        {
+          "id": "q57",
+          "question": "Question 57: What does 'loss aversion' describe?",
+          "options": [
+            "The preference to avoid losing money rather than acquiring the equivalent gains",
+            "The tendency to invest in risky stocks",
+            "The desire to give away money to avoid the burden of wealth",
+            "The mathematical calculation of cost vs benefit"
+          ],
+          "correct_answer": "The preference to avoid losing money rather than acquiring the equivalent gains"
+        },
+        {
+          "id": "q58",
+          "question": "Question 58: The sunk cost fallacy refers to the fear of losing what has already been invested.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "True"
+        },
+        {
+          "id": "q59",
+          "question": "Question 59: Daniel Kahneman and Amos Tversky were classical economists.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "False"
+        },
+        {
+          "id": "q60",
+          "question": "Question 60: Understanding cognitive biases is shown to be useless for public policy.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "False"
+        },
+        {
+          "id": "q61",
+          "question": "Question 61: What do heuristics help our brains avoid?",
+          "options": [
+            "Loss aversion",
+            "The sunk cost fallacy",
+            "Paralysis by analysis",
+            "Availability bias"
+          ],
+          "correct_answer": "Paralysis by analysis"
+        },
+        {
+          "id": "q62",
+          "question": "Question 62: Most people correctly estimate the statistical risks of driving versus flying.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "False"
+        },
+        {
+          "id": "q63",
+          "question": "Question 63: Which concept best explains why a person might stay in a dead-end job?",
+          "options": [
+            "Availability heuristic",
+            "Rational actor theory",
+            "Classical economic theory",
+            "Sunk cost fallacy"
+          ],
+          "correct_answer": "Sunk cost fallacy"
+        },
+        {
+          "id": "q64",
+          "question": "Question 64: The psychological pleasure of gaining $100 is exactly equal to the psychological pain of losing $100.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "False"
+        },
+        {
+          "id": "q65",
+          "question": "Question 65: What fundamental assumption did modern psychology completely dismantle?",
+          "options": [
+            "That humans make thousands of decisions a day",
+            "That humans are always rational actors maximizing utility",
+            "That plane crashes are dramatic",
+            "That people stick with poor investments"
+          ],
+          "correct_answer": "That humans are always rational actors maximizing utility"
+        },
+        {
+          "id": "q66",
+          "question": "Question 66: The text argues that the availability heuristic is only useful in trivial decisions like what to wear.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "Not Given"
+        }
+      ]
+    },
+    {
+      "id": "ielts_r_pass3",
+      "type": "quiz",
+      "title": "Reading Passage 3",
+      "instructions": "Read the passage and answer questions 67-80.",
+      "passageText": "The Architecture of Termite Mounds\\n\\nTo the untrained eye, a termite mound might look like nothing more than a haphazard pile of dirt. In reality, it is a marvel of animal engineering, a highly complex structure designed to maintain a stable internal environment despite wildly fluctuating external temperatures. In the savannas of Africa, where temperatures can swing from freezing at night to over 40 degrees Celsius during the day, the internal temperature of a termite mound remains remarkably constant at around 30 degrees Celsius.\\n\\nThe key to this thermal regulation lies in the mound's intricate network of tunnels and flues. The termites themselves do not live in the upper, tower-like section of the mound; rather, they live in a subterranean nest below ground. The tower acts as a massive 'lung' for the colony. As the termites metabolize their food, they generate heat. This warm air naturally rises up through the central chimney of the mound. As it hits the porous, outer walls of the upper mound, the heat is exchanged with the cooler outside air, and the stale air diffuses out of the mound.\\n\\nSimultaneously, cooler, fresh air is drawn into the mound through a series of smaller tunnels located near the base. This process of passive ventilation is incredibly efficient. In fact, human architects have begun to study termite mounds in an emerging field known as biomimicry. The Eastgate Centre, an office building in Harare, Zimbabwe, was explicitly designed to mimic the passive cooling system of a termite mound. It uses significantly less energy than conventional buildings of its size, proving that ancient biological solutions can solve modern engineering problems.",
+      "questions": [
+        {
+          "id": "q67",
+          "question": "Question 67: Based on Reading Passage 3",
+          "options": [
+            "Option A for Q67",
+            "Option B for Q67",
+            "Option C for Q67",
+            "Option D for Q67"
+          ],
+          "correct_answer": "Option D for Q67"
+        },
+        {
+          "id": "q68",
+          "question": "Question 68: The internal temperature of a termite mound fluctuates significantly between day and night.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "False"
+        },
+        {
+          "id": "q69",
+          "question": "Question 69: What function does the upper tower of the mound serve?",
+          "options": [
+            "As a defensive fortification against predators",
+            "As a massive lung for passive ventilation",
+            "As a storage area for metabolized food",
+            "As a nursery for young termites"
+          ],
+          "correct_answer": "As a massive lung for passive ventilation"
+        },
+        {
+          "id": "q70",
+          "question": "Question 70: How is heat generated inside the termite mound?",
+          "options": [
+            "By the sun heating the external structure",
+            "By the friction of termites moving through tunnels",
+            "By the termites metabolizing their food",
+            "By underground volcanic vents"
+          ],
+          "correct_answer": "By the termites metabolizing their food"
+        },
+        {
+          "id": "q71",
+          "question": "Question 71: The Eastgate Centre in Zimbabwe uses air conditioning units powered by solar panels.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "Not Given"
+        },
+        {
+          "id": "q72",
+          "question": "Question 72: What natural process draws cooler, fresh air into the mound?",
+          "options": [
+            "Active pumping by worker termites",
+            "Wind blowing directly into the chimney",
+            "Passive ventilation as warm air rises",
+            "Rainwater cooling the external walls"
+          ],
+          "correct_answer": "Passive ventilation as warm air rises"
+        },
+        {
+          "id": "q73",
+          "question": "Question 73: The termite mound is considered a marvel of animal engineering.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "True"
+        },
+        {
+          "id": "q74",
+          "question": "Question 74: Where is the Eastgate Centre located?",
+          "options": [
+            "South Africa",
+            "Zimbabwe",
+            "Kenya",
+            "Namibia"
+          ],
+          "correct_answer": "Zimbabwe"
+        },
+        {
+          "id": "q75",
+          "question": "Question 75: What is the primary purpose of the Eastgate Centre's design?",
+          "options": [
+            "To mimic the passive cooling system of a termite mound",
+            "To house a large colony of African termites",
+            "To serve as a monument to classical architecture",
+            "To test new artificial heating systems"
+          ],
+          "correct_answer": "To mimic the passive cooling system of a termite mound"
+        },
+        {
+          "id": "q76",
+          "question": "Question 76: Termite mounds can only be found in the savannas of Africa.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "Not Given"
+        },
+        {
+          "id": "q77",
+          "question": "Question 77: Termites build their nests below ground primarily to hide from human researchers.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "Not Given"
+        },
+        {
+          "id": "q78",
+          "question": "Question 78: What happens to the warm air inside the mound?",
+          "options": [
+            "It is compressed and stored",
+            "It naturally rises up through the central chimney",
+            "It is pushed downwards into the subterranean nest",
+            "It is rapidly cooled by underground streams"
+          ],
+          "correct_answer": "It naturally rises up through the central chimney"
+        },
+        {
+          "id": "q79",
+          "question": "Question 79: Around what temperature does the inside of the termite mound remain constant?",
+          "options": [
+            "20 degrees Celsius",
+            "25 degrees Celsius",
+            "30 degrees Celsius",
+            "35 degrees Celsius"
+          ],
+          "correct_answer": "30 degrees Celsius"
+        },
+        {
+          "id": "q80",
+          "question": "Question 80: The intricate network of tunnels and flues is the key to the mound's thermal regulation.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "correct_answer": "True"
+        }
+      ]
+    },
+    {
+      "id": "ielts_w_task1",
+      "type": "practice_writing",
+      "title": "Writing Task 1",
+      "instructions": "You should spend about 20 minutes on this task. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Pie_chart_of_world_population.svg/640px-Pie_chart_of_world_population.svg.png",
+      "passageText": "The pie chart above shows the distribution of the world's population by continent in 2023.",
+      "questions": [
+        {
+          "id": "w_q1",
+          "question": "Summarise the information shown in the pie chart.",
+          "options": [],
+          "correct_answer": ""
+        }
+      ],
+      "ai_system_prompt": "ROLE: IELTS/TOEFL Examiner. Assess Task Achievement, Coherence, Lexical Resource, and Grammatical Range. Provide strict, professional academic feedback."
+    },
+    {
+      "id": "ielts_w_task2",
+      "type": "practice_writing",
+      "title": "Writing Task 2",
+      "instructions": "You should spend about 40 minutes on this task. Write at least 250 words.",
+      "passageText": "In many countries today, people in cities either live alone or in small family units, rather than in large, extended family groups. Is this a positive or negative trend?",
+      "questions": [
+        {
+          "id": "w_q2",
+          "question": "Write an essay addressing the topic. Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+          "options": [],
+          "correct_answer": ""
+        }
+      ],
+      "ai_system_prompt": "ROLE: IELTS/TOEFL Examiner. Assess Task Achievement, Coherence, Lexical Resource, and Grammatical Range. Provide strict, professional academic feedback."
+    },
+    {
+      "id": "ielts_s_part1",
+      "type": "practice_speaking",
+      "title": "Speaking Part 1: Interview",
+      "instructions": "The examiner will ask you general questions about yourself. You have 60 seconds to answer.",
+      "passageText": "AUDIO TRANSCRIPT:\\nExaminer: Let's talk about where you live. Do you live in a house or an apartment? What is your favorite room in your home? Would you like to move to a different home in the future?",
+      "questions": [
+        {
+          "id": "s_q1",
+          "question": "Record your answers to the examiner's questions about your home.",
+          "options": [],
+          "correct_answer": ""
+        }
+      ]
+    },
+    {
+      "id": "ielts_s_part2",
+      "type": "practice_speaking",
+      "title": "Speaking Part 2: Long Turn",
+      "instructions": "You will have 1 minute to prepare and up to 2 minutes to speak. Read the cue card and record your response.",
+      "passageText": "CUE CARD: Describe a beautiful place you have visited in your country.\n    \nYou should say:\n- Where this place is\n- How you got there\n- What there is to do when you are there\nAnd explain why you recommend this place.",
+      "questions": [
+        {
+          "id": "s_q2",
+          "question": "Record your 2-minute monologue based on the cue card.",
+          "options": [],
+          "correct_answer": ""
+        }
+      ]
+    },
+    {
+      "id": "ielts_s_part3",
+      "type": "practice_speaking",
+      "title": "Speaking Part 3: Discussion",
+      "instructions": "The examiner will ask you further questions connected to the topic in Part 2. You have 60 seconds to answer.",
+      "passageText": "AUDIO TRANSCRIPT:\\nExaminer: We've been talking about beautiful places. Let's discuss tourism. Do you think tourism has more positive or negative effects on local communities? How can we ensure that tourism is sustainable?",
+      "questions": [
+        {
+          "id": "s_q3",
+          "question": "Record your answers to the examiner's discussion questions.",
+          "options": [],
+          "correct_answer": ""
         }
       ]
     }

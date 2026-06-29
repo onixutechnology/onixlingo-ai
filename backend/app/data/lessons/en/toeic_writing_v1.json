@@ -1,0 +1,46 @@
+{
+  "id": "toeic_writing_v1",
+  "title": "TOEIC Writing Test - Full Simulation V1",
+  "level": "C1",
+  "description": "Simulación completa del examen oficial TOEIC Writing. Incluye creación de oraciones, respuestas a correos corporativos y ensayo de opinión.",
+  "time_limit": 3600,
+  "stages": [
+    {
+      "id": "part1_sentences",
+      "type": "practice_writing",
+      "scenario": "Write a sentence based on a picture.",
+      "question": "Part 1: Write ONE sentence based on the picture. You MUST use the two words provided.\n\nWords to use: (review / together).",
+      "image_url": "/media/exams/images/toeic_writing_q1_meeting.png",
+      "ai_system_prompt": "ROLE: TOEIC Grader (Part 1). Evaluate the sentence strictly. Did they use both words correctly? Is grammar perfect? Keep the explanation concise."
+    },
+    {
+      "id": "part1_sentences_2",
+      "type": "practice_writing",
+      "scenario": "Write a sentence based on a picture.",
+      "question": "Part 1: Write ONE sentence based on the picture. You MUST use the two words provided.\n\nWords to use: (package / deliver).",
+      "image_url": "/media/exams/images/toeic_writing_q2_delivery.png",
+      "ai_system_prompt": "ROLE: TOEIC Grader (Part 1). Evaluate if the sentence uses the provided words correctly with perfect grammar."
+    },
+    {
+      "id": "part2_email_1",
+      "type": "practice_writing",
+      "scenario": "Respond to a written request",
+      "question": "Part 2: Read the email and respond.\n\nFrom: HR Department\nTo: All Employees\nSubject: Office Renovation\n\nWe are planning to renovate the break room next month. What features or appliances would you like to see in the new break room? Please provide at least two suggestions and explain why they would be beneficial.\n\nDirections: Write an email responding to HR. Include two suggestions and reasons.",
+      "ai_system_prompt": "ROLE: TOEIC Grader (Part 2 - Email). Evaluate business tone, clarity, and whether they provided two suggestions with reasons. Give concise feedback."
+    },
+    {
+      "id": "part2_email_2",
+      "type": "practice_writing",
+      "scenario": "Respond to a written request",
+      "question": "Part 2: Read the email and respond.\n\nFrom: Jonathan Hayes, Client\nTo: Sales Team\nSubject: Delayed Shipment\n\nI was expecting delivery of our server racks yesterday, but they haven't arrived. Could you please check the status and let me know when we can expect them?\n\nDirections: Respond to the client. Apologize for the delay, provide a reason, and give a new delivery date.",
+      "ai_system_prompt": "ROLE: TOEIC Grader (Part 2 - Email). Evaluate professional tone, empathy (apology), clarity of reason, and delivery date."
+    },
+    {
+      "id": "part3_essay",
+      "type": "practice_writing",
+      "scenario": "Write an opinion essay",
+      "question": "Part 3: Write an opinion essay.\n\nSome companies allow employees to work from home entirely, while others require employees to work in the office. In your opinion, what are the advantages of working in an office compared to working from home? Support your opinion with specific reasons and examples.\n\nDirections: Write a minimum of 300 words.",
+      "ai_system_prompt": "ROLE: TOEIC Grader (Part 3 - Essay). Evaluate structure, vocabulary richness, grammar, and coherence. Must provide a highly professional C-Level rewrite suggestion."
+    }
+  ]
+}

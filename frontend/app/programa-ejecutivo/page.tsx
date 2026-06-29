@@ -368,7 +368,7 @@ export default function ProgramaEjecutivoPage() {
       <LandingNavbar />
 
       {/* HERO (BLACK) */}
-      <header className="pt-36 pb-16 px-6 relative overflow-hidden bg-slate-50">
+      <header className="pt-28 pb-12 px-6 relative overflow-hidden bg-slate-50">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[#D4AF37]/10 blur-[140px] opacity-60 pointer-events-none" />
         <div className="max-w-5xl mx-auto text-center relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-bold uppercase tracking-widest shadow-none">
@@ -713,7 +713,7 @@ export default function ProgramaEjecutivoPage() {
                 <span className="text-[#D4AF37]">Executive Speech Standard</span>
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed font-light">
-                Al completar la currícula de 60 unidades, obtendrás la credencial digital respaldada por OnixLingo, verificable por departamentos de RH en la blockchain corporativa.
+                Al completar la currícula de 60 unidades, obtendrás reportes analíticos detallados respaldados por OnixLingo, ideales para demostrar tu evolución ante departamentos de RH.
               </p>
 
               <ul className="space-y-3 text-xs text-gray-700 font-medium">

@@ -14,6 +14,8 @@ import {
 
 import Avatar3D from '@/components/avatar/Avatar3D';
 import LessonComplete from '@/components/lesson/LessonComplete';
+import WritingEvaluator from '@/components/lesson/WritingEvaluator';
+import SpeakingEvaluator from '@/components/lesson/SpeakingEvaluator';
 import { useAvatarStore } from '@/store/avatarStore';
 import { useUIStore } from '@/store/uiStore';
 import { useSearchParams } from 'next/navigation';
@@ -22,7 +24,7 @@ import confetti from 'canvas-confetti';
 
 const API_URL = process.env.NODE_ENV === 'production' 
   ? 'https://api.onixlingo.onixu.company' 
-  : 'http://127.0.0.1:8020';
+  : 'http://127.0.0.1:8021';
 
 
 // ============================================================================
@@ -435,6 +437,22 @@ export default function LessonRunnerEngine() {
     else if (isPro || (params?.lessonId as string || '').includes('mock')) router.push('/dashboard');
     else router.push('/dashboard');
   }, [router, isPro, lessonType, currentStageIndex, currentQuestionIndex, stats, answerHistory, params?.lessonId]);
+
+  // AUTOGUARDADO EN TIEMPO REAL
+  useEffect(() => {
+    if (lesson && !isSimulator && !showResults) {
+      const sessionState = {
+        currentStageIndex,
+        currentQuestionIndex,
+        stats,
+        answerHistory,
+        timestamp: Date.now()
+      };
+      try {
+        localStorage.setItem(`session_${params?.lessonId}`, JSON.stringify(sessionState));
+      } catch(e){}
+    }
+  }, [lesson, isSimulator, showResults, currentStageIndex, currentQuestionIndex, stats, answerHistory, params?.lessonId]);
 
   // [FUNCIÓN 9] Registrar evento analítico
   const trackEvent = useCallback((eventType: string, data: any): void => {
@@ -1520,7 +1538,8 @@ export default function LessonRunnerEngine() {
       total_steps: totalQuestions,
       score: accuracy,
       stars: accuracy >= 90 ? 3 : accuracy >= 70 ? 2 : 1,
-      language: activeLanguage
+      language: activeLanguage,
+      user_timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
     };
 
     try {
@@ -1548,6 +1567,11 @@ export default function LessonRunnerEngine() {
       };
 
       saveToLocalStorage(`progress_${lesson?.id}`, progress);
+
+      // Limpiar sesión guardada ya que se terminó la lección
+      try {
+        localStorage.removeItem(`session_${lesson?.id}`);
+      } catch(e){}
 
     } catch (error) {
       // Error crítico manejado
@@ -2300,6 +2324,22 @@ export default function LessonRunnerEngine() {
               })()}
             </div>
           </div>
+        )}
+
+        {currentStage.type === 'practice_writing' && (
+          <WritingEvaluator 
+            stage={currentStage} 
+            onComplete={nextStage} 
+            isPro={isPro} 
+          />
+        )}
+
+        {currentStage.type === 'practice_speaking' && (
+          <SpeakingEvaluator 
+            stage={currentStage} 
+            onComplete={nextStage} 
+            isPro={isPro} 
+          />
         )}
 
         {currentStage.type === 'practice_chat' && (

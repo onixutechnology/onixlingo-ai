@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import Cookies from 'js-cookie';
 
-const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8022';
 
 // ══════════════════════════════════════════════════════════════
 // INTERFACES

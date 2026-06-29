@@ -30,6 +30,11 @@ class LessonStage(BaseModel):
     xp_reward: Optional[int] = 0
     parts: Optional[List[Dict[str, Any]]] = None      
     questions: Optional[List[Dict[str, Any]]] = None  
+    imageUrl: Optional[str] = None
+    audioUrl: Optional[str] = None
+    instructions: Optional[str] = None
+    passageText: Optional[str] = None
+    passageTitle: Optional[str] = None
     scenario: Optional[str] = None                    
     ai_system_prompt: Optional[str] = None            
     initial_message: Optional[str] = None             

@@ -361,7 +361,21 @@ export default function VocabularyPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-10">
+      {/* WRAPPER PRINCIPAL CON ANUNCIOS */}
+      <div className="max-w-[1700px] mx-auto flex flex-col 2xl:flex-row gap-6 pt-6 px-4 pb-10">
+        
+        {/* --- ESPACIO PUBLICITARIO IZQUIERDO --- */}
+        <div className="hidden 2xl:block w-[160px] shrink-0">
+          <div className="sticky top-24 flex justify-center">
+             <div className="w-[160px] h-[600px] bg-white border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-slate-500 text-center p-4 rounded-none shadow-[0_4px_15px_rgba(234,88,12,0.05)]">
+                <span className="font-black text-[10px] uppercase tracking-widest mb-2">AdSense Izquierdo</span>
+                <span className="text-[9px] leading-tight font-bold">160x600 Vertical</span>
+             </div>
+          </div>
+        </div>
+
+        {/* CONTENEDOR CENTRAL */}
+        <div className="flex-1 min-w-0 max-w-7xl mx-auto w-full flex flex-col">
         
         {/* --- PANEL DE CONTROL DE VOCABULARIO (OPTIMIZADO PARA PAREJAS DE PALABRAS Y SEGUIMIENTO) --- */}
         <div className="mb-10 bg-orange-100 border-l-4 border-slate-300 p-6 shadow-[0_10px_40px_rgba(234,88,12,0.12)] text-black relative overflow-hidden group rounded-none">
@@ -677,7 +691,19 @@ export default function VocabularyPage() {
             </motion.div>
           </>
         )}
-      </div>
+        </div> {/* CIERRE CONTENEDOR CENTRAL */}
+
+        {/* --- ESPACIO PUBLICITARIO DERECHO --- */}
+        <div className="hidden 2xl:block w-[160px] shrink-0">
+          <div className="sticky top-24 flex justify-center">
+             <div className="w-[160px] h-[600px] bg-white border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-slate-500 text-center p-4 rounded-none shadow-[0_4px_15px_rgba(234,88,12,0.05)]">
+                <span className="font-black text-[10px] uppercase tracking-widest mb-2">AdSense Derecho</span>
+                <span className="text-[9px] leading-tight font-bold">160x600 Vertical</span>
+             </div>
+          </div>
+        </div>
+
+      </div> {/* CIERRE WRAPPER PRINCIPAL CON ANUNCIOS */}
 
       {/* --- MODAL DE SELECCIÓN DE IDIOMA CORPORATIVO --- */}
       <AnimatePresence>

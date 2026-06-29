@@ -52,7 +52,7 @@ function RegisterForm() {
       if (data.access_token) {
         Cookies.set('access_token', data.access_token, { 
           expires: 1, 
-          secure: true, 
+          secure: process.env.NODE_ENV === 'production', 
           sameSite: 'lax',
           path: '/'
         });

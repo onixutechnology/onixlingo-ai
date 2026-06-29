@@ -15,6 +15,23 @@ backend/.env
 *.env
 
 # --- Sistema y Varios ---
+# --- Dependencias ---
+node_modules/
+frontend/node_modules/
+backend/venv/
+venv/
+__pycache__/
+*.pyc
+backend/__pycache__/
+
+# --- Seguridad (CRÍTICO - BLOQUEO DE LLAVES) ---
+.env
+.env.local
+frontend/.env.local
+backend/.env
+*.env
+
+# --- Sistema y Varios ---
 .DS_Store
 Thumbs.db
 .next/
@@ -23,3 +40,4 @@ build/
 dist/
 *.db
 *.sqlite3
+backend/google-credentials.json

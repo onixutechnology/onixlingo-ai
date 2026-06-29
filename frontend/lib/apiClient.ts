@@ -6,7 +6,7 @@ let RAW_URL = 'https://api.onixlingo.onixu.company/api/v1';
 
 // En desarrollo usamos el backend local
 if (process.env.NODE_ENV !== 'production') {
-    RAW_URL = 'http://127.0.0.1:8020/api/v1';
+    RAW_URL = 'http://127.0.0.1:8022/api/v1';
 }
 
 const BASE_URL = RAW_URL.endsWith('/api/v1') ? RAW_URL : `${RAW_URL.replace(/\/$/, '')}/api/v1`;

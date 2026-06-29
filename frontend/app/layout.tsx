@@ -5,6 +5,9 @@ import "./globals.css";
 import { PaddleProvider } from '@/components/providers/PaddleProvider';
 import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import EnergyRegenerator from '@/components/EnergyRegenerator';
+import CookieBanner from '@/components/CookieBanner';
+import GlobalBroadcastListener from '@/components/GlobalBroadcastListener';
+import SupportWidget from '@/components/SupportWidget';
 
 export const viewport: Viewport = {
   themeColor: "#4f46e5",
@@ -15,10 +18,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "OnixLingo | AI-Powered Enterprise Language Training",
+    default: "OnixLingo | Aprende Inglés, Francés, Chino y Ajedrez con IA",
     template: "%s | OnixLingo"
   },
-  description: "Plataforma de aprendizaje de idiomas de alto rendimiento impulsada por Inteligencia Artificial para ejecutivos y profesionales de OnixLingo.",
+  description: "Plataforma educativa de alto rendimiento impulsada por IA. Desarrolla fluidez en Inglés, Francés, Chino Mandarín y domina la estrategia con Ajedrez Táctico. Simulaciones corporativas y tutores virtuales 24/7.",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -75,10 +78,12 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans text-slate-900 antialiased">
-        {/* ENVOLVEMOS LA APLICACIÓN CON EL PROVIDER */}
         <PaddleProvider>
           <EnergyRegenerator />
           {children}
+          <CookieBanner />
+          <GlobalBroadcastListener />
+          <SupportWidget />
         </PaddleProvider>
         <PwaInstallPrompt />
       </body>

@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 // --- CONFIGURACIÓN API ---
-const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8021';
 
 // --- MAPA SEGURO DE COLORES TAILWIND ---
 const COLOR_MAP: Record<string, { bg: string, text: string, ring: string, bar: string }> = {

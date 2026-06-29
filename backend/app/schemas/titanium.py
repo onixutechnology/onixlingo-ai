@@ -15,6 +15,7 @@ class ProgressUpdate(BaseModel):
     score: int        # 0 a 100
     stars: Optional[int] = 0
     difficulty_completed: Optional[str] = "easy"
+    user_timezone: Optional[str] = "UTC"
 
 # ==============================================================================
 # 2. OUTPUT: Lo que envías al Frontend (Lectura inteligente)

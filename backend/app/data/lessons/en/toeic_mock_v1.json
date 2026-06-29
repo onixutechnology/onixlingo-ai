@@ -1,87 +1,2882 @@
 {
   "id": "toeic_mock_v1",
-  "title": "Simulador Oficial Completo TOEIC® - Versión 1",
-  "level": "B2/C1",
-  "description": "Simulador completo real de Listening & Reading enfocado en Zenith Corp y el líder the Sales Director.",
-  "total_xp": 500,
+  "title": "TOEIC® Listening & Reading Official Mock Test 1",
+  "difficulty": "advanced",
+  "category": "certification",
+  "author": "OnixLingo Assessment Board",
+  "total_xp": 2000,
+  "completion_message": "Congratulations! Your mock test has been submitted for evaluation.",
   "stages": [
     {
-      "id": "toeic-intro",
-      "type": "lecture",
-      "title": "TOEIC® Zenith Corp Simulation: Instructions",
-      "parts": [
+      "id": "part1_q1",
+      "type": "quiz",
+      "title": "Part 1: Photographs (Question 1)",
+      "instructions": "You will see a photograph. You will hear four statements. Choose the statement that best describes what you see in the picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part1_q1.mp3",
+      "questions": [
         {
-          "visual": "## 📝 Simulador Oficial TOEIC® (Versión 1)\n\nEvaluación de **Listening & Reading** en tiempo real:\n\n1. **Listening Section**: Evalúa tu comprensión en Zenith Corp usando ApexCRM.\n2. **Reading Section**: Mide tu análisis gramatical de memorandos emitidos por the Sales Director.\n\n*Inicia tu prueba simulada oficial.*",
-          "audio": "Welcome to the Full TOEIC Simulation. Manage your time efficiently across both listening and reading stages. Let's begin.",
-          "animation": "teacher_pointing"
+          "id": "q1",
+          "question": "Listen to the audio and select the best description.",
+          "options": [
+            "(A) They are attending a meeting.",
+            "(B) The office is completely empty.",
+            "(C) The man is repairing a computer.",
+            "(D) They are walking outside."
+          ],
+          "correct_answer": "(A) They are attending a meeting."
         }
       ]
     },
     {
-      "id": "toeic-listening",
+      "id": "part1_q2",
       "type": "quiz",
-      "title": "Sección 1: Comprensión Auditiva (Listening)",
+      "title": "Part 1: Photographs (Question 2)",
+      "instructions": "You will see a photograph. You will hear four statements. Choose the statement that best describes what you see in the picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part1_q2.mp3",
       "questions": [
         {
-          "id": "T_L1_v1",
-          "type": "quiz_choice",
-          "question": "[PART 1 - PHOTO]: Select the best description of Zenith Corp's office photo.",
-          "audio_script": "A) They are discussing the CRM dashboard. B) They are leaving the main lobby. C) The server room is closed. D) They are filing paper documents.",
+          "id": "q2",
+          "question": "Listen to the audio and select the best description.",
           "options": [
-            "Statement A",
-            "Statement B",
-            "Statement C",
-            "Statement D"
+            "(A) The boxes are being loaded onto a truck.",
+            "(B) The woman is sweeping the floor.",
+            "(C) A worker is inspecting the equipment.",
+            "(D) The lights are being turned off."
           ],
-          "correct_answer": "Statement A",
-          "explanation": "La descripción correcta es la A, ya que se observa a los representantes analizando el panel del CRM."
-        },
-        {
-          "id": "T_L3_v1",
-          "type": "quiz_choice",
-          "question": "[PART 3 - CONVERSATION]: Listen to the dialogue and answer: What does the man agree to do next?",
-          "audio_script": "M: Hi Sarah, did you get a chance to review the shipment contract from Zenith Corp?\nW: I did. Their pricing is competitive, but their delivery window is too narrow for our schedule.\nM: I see. I will call the Sales Director to negotiate an extension.",
-          "options": [
-            "Sign the contract as currently written.",
-            "Call the manager to negotiate an extension of the delivery window.",
-            "Cancel the order immediately.",
-            "Write a new memorandum to sales staff."
-          ],
-          "correct_answer": "Call the manager to negotiate an extension of the delivery window.",
-          "explanation": "El hombre dice: 'I will call their manager to negotiate an extension'."
+          "correct_answer": "(C) A worker is inspecting the equipment."
         }
       ]
     },
     {
-      "id": "toeic-reading",
+      "id": "part1_q3",
       "type": "quiz",
-      "title": "Sección 2: Comprensión Lectora (Reading)",
+      "title": "Part 1: Photographs (Question 3)",
+      "instructions": "You will see a photograph. You will hear four statements. Choose the statement that best describes what you see in the picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1000&auto=format&fit=crop",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part1_q3.mp3",
       "questions": [
         {
-          "id": "T_R5_v1",
-          "type": "quiz_choice",
-          "question": "[PART 5]: Complete the business sentence correctly:\n\n\"All employees are strictly required to comply ___ the updated security rules in ApexCRM.\"",
+          "id": "q3",
+          "question": "Listen to the audio and select the best description.",
           "options": [
-            "with",
-            "to",
-            "by",
-            "for"
+            "(A) The airplane is landing on the runway.",
+            "(B) Passengers are waiting to board.",
+            "(C) Luggage is being unloaded from the plane.",
+            "(D) The pilot is walking through the terminal."
           ],
-          "correct_answer": "with",
-          "explanation": "El verbo 'comply' rige gramaticalmente la preposición 'with' (comply with / cumplir con)."
+          "correct_answer": "(B) Passengers are waiting to board."
+        }
+      ]
+    },
+    {
+      "id": "part1_q4",
+      "type": "quiz",
+      "title": "Part 1: Photographs (Question 4)",
+      "instructions": "You will see a photograph. You will hear four statements. Choose the statement that best describes what you see in the picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part1_q4.mp3",
+      "questions": [
+        {
+          "id": "q4",
+          "question": "Listen to the audio and select the best description.",
+          "options": [
+            "(A) The monitors have been turned off.",
+            "(B) A person is printing a document.",
+            "(C) The chairs are stacked in the corner.",
+            "(D) Some documents are scattered on the desk."
+          ],
+          "correct_answer": "(D) Some documents are scattered on the desk."
+        }
+      ]
+    },
+    {
+      "id": "part1_q5",
+      "type": "quiz",
+      "title": "Part 1: Photographs (Question 5)",
+      "instructions": "You will see a photograph. You will hear four statements. Choose the statement that best describes what you see in the picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part1_q5.mp3",
+      "questions": [
+        {
+          "id": "q5",
+          "question": "Listen to the audio and select the best description.",
+          "options": [
+            "(A) Two people are shaking hands.",
+            "(B) They are exchanging business cards.",
+            "(C) They are putting on their jackets.",
+            "(D) A contract is being signed."
+          ],
+          "correct_answer": "(A) Two people are shaking hands."
+        }
+      ]
+    },
+    {
+      "id": "part1_q6",
+      "type": "quiz",
+      "title": "Part 1: Photographs (Question 6)",
+      "instructions": "You will see a photograph. You will hear four statements. Choose the statement that best describes what you see in the picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part1_q6.mp3",
+      "questions": [
+        {
+          "id": "q6",
+          "question": "Listen to the audio and select the best description.",
+          "options": [
+            "(A) She is drinking a cup of coffee.",
+            "(B) She is looking out the window.",
+            "(C) She is typing on a keyboard.",
+            "(D) She is putting away her glasses."
+          ],
+          "correct_answer": "(C) She is typing on a keyboard."
+        }
+      ]
+    },
+    {
+      "id": "part2_q7",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 7)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q7.mp3",
+      "questions": [
+        {
+          "id": "q7",
+          "question": "Listen to the audio: \"When is the project proposal due?\"",
+          "options": [
+            "(A) By Friday afternoon.",
+            "(B) Yes, it's a great project.",
+            "(C) I proposed it yesterday."
+          ],
+          "correct_answer": "(A) By Friday afternoon."
+        }
+      ]
+    },
+    {
+      "id": "part2_q8",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 8)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q8.mp3",
+      "questions": [
+        {
+          "id": "q8",
+          "question": "Listen to the audio: \"Who is going to the conference in Berlin?\"",
+          "options": [
+            "(A) A new marketing strategy.",
+            "(B) The manager and two assistants.",
+            "(C) About three days."
+          ],
+          "correct_answer": "(B) The manager and two assistants."
+        }
+      ]
+    },
+    {
+      "id": "part2_q9",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 9)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q9.mp3",
+      "questions": [
+        {
+          "id": "q9",
+          "question": "Listen to the audio: \"Where did you put the revised budget report?\"",
+          "options": [
+            "(A) In the top drawer of my desk.",
+            "(B) The budget is too low.",
+            "(C) I'll report it to him."
+          ],
+          "correct_answer": "(A) In the top drawer of my desk."
+        }
+      ]
+    },
+    {
+      "id": "part2_q10",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 10)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q10.mp3",
+      "questions": [
+        {
+          "id": "q10",
+          "question": "Listen to the audio: \"Why hasn't the supplier called us back?\"",
+          "options": [
+            "(A) We need more office supplies.",
+            "(B) Because it's a public holiday there.",
+            "(C) Call me back later."
+          ],
+          "correct_answer": "(B) Because it's a public holiday there."
+        }
+      ]
+    },
+    {
+      "id": "part2_q11",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 11)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q11.mp3",
+      "questions": [
+        {
+          "id": "q11",
+          "question": "Listen to the audio: \"Would you like me to book the flight for you?\"",
+          "options": [
+            "(A) No thanks, I've already done it.",
+            "(B) The flight departs at 9 AM.",
+            "(C) It's a very good book."
+          ],
+          "correct_answer": "(A) No thanks, I've already done it."
+        }
+      ]
+    },
+    {
+      "id": "part2_q12",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 12)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q12.mp3",
+      "questions": [
+        {
+          "id": "q12",
+          "question": "Listen to the audio: \"How many computers need to be repaired?\"",
+          "options": [
+            "(A) The IT department is upstairs.",
+            "(B) Only three of them.",
+            "(C) A pair of new ones."
+          ],
+          "correct_answer": "(B) Only three of them."
+        }
+      ]
+    },
+    {
+      "id": "part2_q13",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 13)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q13.mp3",
+      "questions": [
+        {
+          "id": "q13",
+          "question": "Listen to the audio: \"Are you going to eat at the cafeteria or go out?\"",
+          "options": [
+            "(A) I brought my own lunch today.",
+            "(B) The food is delicious.",
+            "(C) He went out for a walk."
+          ],
+          "correct_answer": "(A) I brought my own lunch today."
+        }
+      ]
+    },
+    {
+      "id": "part2_q14",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 14)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q14.mp3",
+      "questions": [
+        {
+          "id": "q14",
+          "question": "Listen to the audio: \"Has the marketing team seen these designs yet?\"",
+          "options": [
+            "(A) It's a nice sign.",
+            "(B) Not yet, I'll send them over now.",
+            "(C) They team up well."
+          ],
+          "correct_answer": "(B) Not yet, I'll send them over now."
+        }
+      ]
+    },
+    {
+      "id": "part2_q15",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 15)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q15.mp3",
+      "questions": [
+        {
+          "id": "q15",
+          "question": "Listen to the audio: \"Whose briefcase is left in the meeting room?\"",
+          "options": [
+            "(A) Let's meet at noon.",
+            "(B) It belongs to Mr. Peterson.",
+            "(C) A brief summary."
+          ],
+          "correct_answer": "(B) It belongs to Mr. Peterson."
+        }
+      ]
+    },
+    {
+      "id": "part2_q16",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 16)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q16.mp3",
+      "questions": [
+        {
+          "id": "q16",
+          "question": "Listen to the audio: \"Can we postpone the interview until tomorrow?\"",
+          "options": [
+            "(A) Sure, I'll update the schedule.",
+            "(B) The interview went well.",
+            "(C) We need a post office."
+          ],
+          "correct_answer": "(A) Sure, I'll update the schedule."
+        }
+      ]
+    },
+    {
+      "id": "part2_q17",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 17)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q17.mp3",
+      "questions": [
+        {
+          "id": "q17",
+          "question": "Listen to the audio: \"What's the best way to get to the convention center?\"",
+          "options": [
+            "(A) It's the center of attention.",
+            "(B) Take the express train on line 4.",
+            "(C) A convention of engineers."
+          ],
+          "correct_answer": "(B) Take the express train on line 4."
+        }
+      ]
+    },
+    {
+      "id": "part2_q18",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 18)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q18.mp3",
+      "questions": [
+        {
+          "id": "q18",
+          "question": "Listen to the audio: \"You sent the invoice to the client, didn't you?\"",
+          "options": [
+            "(A) Yes, right after the meeting.",
+            "(B) The client's voice.",
+            "(C) I didn't see the voice."
+          ],
+          "correct_answer": "(A) Yes, right after the meeting."
+        }
+      ]
+    },
+    {
+      "id": "part2_q19",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 19)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q19.mp3",
+      "questions": [
+        {
+          "id": "q19",
+          "question": "Listen to the audio: \"Which floor is the human resources department on?\"",
+          "options": [
+            "(A) On the seventh floor.",
+            "(B) They are very resourceful.",
+            "(C) Watch your step on the floor."
+          ],
+          "correct_answer": "(A) On the seventh floor."
+        }
+      ]
+    },
+    {
+      "id": "part2_q20",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 20)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q20.mp3",
+      "questions": [
+        {
+          "id": "q20",
+          "question": "Listen to the audio: \"How long will the renovation of the lobby take?\"",
+          "options": [
+            "(A) It looks very modern.",
+            "(B) About three weeks.",
+            "(C) He took it yesterday."
+          ],
+          "correct_answer": "(B) About three weeks."
+        }
+      ]
+    },
+    {
+      "id": "part2_q21",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 21)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q21.mp3",
+      "questions": [
+        {
+          "id": "q21",
+          "question": "Listen to the audio: \"Why is the road closed to traffic?\"",
+          "options": [
+            "(A) There's a heavy traffic jam.",
+            "(B) Because of the construction work.",
+            "(C) Please close the door."
+          ],
+          "correct_answer": "(B) Because of the construction work."
+        }
+      ]
+    },
+    {
+      "id": "part2_q22",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 22)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q22.mp3",
+      "questions": [
+        {
+          "id": "q22",
+          "question": "Listen to the audio: \"When does the morning shift usually start?\"",
+          "options": [
+            "(A) Shift the boxes carefully.",
+            "(B) At 6:00 AM sharp.",
+            "(C) It was a very long morning."
+          ],
+          "correct_answer": "(B) At 6:00 AM sharp."
+        }
+      ]
+    },
+    {
+      "id": "part2_q23",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 23)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q23.mp3",
+      "questions": [
+        {
+          "id": "q23",
+          "question": "Listen to the audio: \"Is there a pharmacy near the hotel?\"",
+          "options": [
+            "(A) Yes, just around the corner.",
+            "(B) The hotel is fully booked.",
+            "(C) A prescription from the doctor."
+          ],
+          "correct_answer": "(A) Yes, just around the corner."
+        }
+      ]
+    },
+    {
+      "id": "part2_q24",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 24)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q24.mp3",
+      "questions": [
+        {
+          "id": "q24",
+          "question": "Listen to the audio: \"Who's taking the minutes for today's meeting?\"",
+          "options": [
+            "(A) The meeting lasted sixty minutes.",
+            "(B) Sarah volunteered to do it.",
+            "(C) Wait a minute, please."
+          ],
+          "correct_answer": "(B) Sarah volunteered to do it."
+        }
+      ]
+    },
+    {
+      "id": "part2_q25",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 25)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q25.mp3",
+      "questions": [
+        {
+          "id": "q25",
+          "question": "Listen to the audio: \"Let's review the quarterly sales figures.\"",
+          "options": [
+            "(A) Yes, I have the spreadsheets ready.",
+            "(B) A quarter past two.",
+            "(C) They figure it out."
+          ],
+          "correct_answer": "(A) Yes, I have the spreadsheets ready."
+        }
+      ]
+    },
+    {
+      "id": "part2_q26",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 26)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q26.mp3",
+      "questions": [
+        {
+          "id": "q26",
+          "question": "Listen to the audio: \"Did the package arrive this morning or yesterday?\"",
+          "options": [
+            "(A) Pack your bags quickly.",
+            "(B) It came yesterday afternoon.",
+            "(C) Yes, it's a large package."
+          ],
+          "correct_answer": "(B) It came yesterday afternoon."
+        }
+      ]
+    },
+    {
+      "id": "part2_q27",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 27)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q27.mp3",
+      "questions": [
+        {
+          "id": "q27",
+          "question": "Listen to the audio: \"Have you met the new regional director?\"",
+          "options": [
+            "(A) The directions are clear.",
+            "(B) Not formally, just in passing.",
+            "(C) It's a direct flight."
+          ],
+          "correct_answer": "(B) Not formally, just in passing."
+        }
+      ]
+    },
+    {
+      "id": "part2_q28",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 28)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q28.mp3",
+      "questions": [
+        {
+          "id": "q28",
+          "question": "Listen to the audio: \"Why don't we use the larger conference room?\"",
+          "options": [
+            "(A) It's already booked for a seminar.",
+            "(B) The room is very bright.",
+            "(C) Use the side door."
+          ],
+          "correct_answer": "(A) It's already booked for a seminar."
+        }
+      ]
+    },
+    {
+      "id": "part2_q29",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 29)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q29.mp3",
+      "questions": [
+        {
+          "id": "q29",
+          "question": "Listen to the audio: \"How much does it cost to park here?\"",
+          "options": [
+            "(A) The park is very beautiful.",
+            "(B) It's five dollars an hour.",
+            "(C) It costs a lot of money."
+          ],
+          "correct_answer": "(B) It's five dollars an hour."
+        }
+      ]
+    },
+    {
+      "id": "part2_q30",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 30)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q30.mp3",
+      "questions": [
+        {
+          "id": "q30",
+          "question": "Listen to the audio: \"Could you help me install this software?\"",
+          "options": [
+            "(A) The installation took a while.",
+            "(B) I'm sorry, but I'm busy right now.",
+            "(C) Soft materials only."
+          ],
+          "correct_answer": "(B) I'm sorry, but I'm busy right now."
+        }
+      ]
+    },
+    {
+      "id": "part2_q31",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 31)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q31.mp3",
+      "questions": [
+        {
+          "id": "q31",
+          "question": "Listen to the audio: \"Where should I store these empty boxes?\"",
+          "options": [
+            "(A) Please leave them in the supply closet.",
+            "(B) I bought them at the store.",
+            "(C) They are very heavy."
+          ],
+          "correct_answer": "(A) Please leave them in the supply closet."
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_1",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 32-34)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: Hi, I'd like to check out these books, please.\\nW: Certainly. Can I have your library card?\\nM: Oh, I think I left it at home. Can I still borrow them if I show my driver's license?\\nW: I can look up your account with your license, but you'll need the physical card next time.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_1.mp3",
+      "questions": [
+        {
+          "id": "q32",
+          "question": "Where does the conversation most likely take place?",
+          "options": [
+            "(A) At a bookstore",
+            "(B) At a public library",
+            "(C) At a driver's licensing office",
+            "(D) At a post office"
+          ],
+          "correct_answer": "(B) At a public library"
         },
         {
-          "id": "T_R7_v1",
-          "type": "quiz_choice",
-          "question": "[PART 7]: Read the memorandum and answer: **When will the migration to ApexCRM officially occur?**\n\n**MEMORANDUM**\n\n*To:* Sales Representatives\n*From:* Sales Department\n*Subject: CRM Software Transition*\n\nPlease note that starting next Monday, we are officially retiring our legacy sales tool and migrating to ApexCRM. An interactive onboarding session will be held this Thursday at 10:00 AM in Conference Room B. Attendance is mandatory.",
+          "id": "q33",
+          "question": "What did the man forget to bring?",
           "options": [
-            "This Monday at 10:00 AM",
-            "Next Monday",
-            "Immediately today",
-            "Over the upcoming weekend"
+            "(A) His wallet",
+            "(B) Some books",
+            "(C) His library card",
+            "(D) A driving license"
           ],
-          "correct_answer": "Next Monday",
-          "explanation": "El memorando dice: 'starting next Monday, we are officially retiring our legacy sales tool and migrating to ApexCRM'."
+          "correct_answer": "(C) His library card"
+        },
+        {
+          "id": "q34",
+          "question": "What will the woman probably do next?",
+          "options": [
+            "(A) Issue a new card",
+            "(B) Check his identification",
+            "(C) Collect a late fee",
+            "(D) Recommend a book"
+          ],
+          "correct_answer": "(B) Check his identification"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_2",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 35-37)",
+      "instructions": "AUDIO TRANSCRIPT:\\nW: Mark, the printer in the main office is jammed again. I need to print the agendas for the 10 o'clock board meeting.\\nM: That old machine has been breaking down all week. I've already called the technician, but he won't be here until tomorrow.\\nW: That's a problem. The meeting is in 30 minutes.\\nM: Why don't you use the small printer in the HR department? It's slower, but it works.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_2.mp3",
+      "questions": [
+        {
+          "id": "q35",
+          "question": "What is the woman's problem?",
+          "options": [
+            "(A) She is late for a meeting.",
+            "(B) She cannot print some documents.",
+            "(C) She cannot find the HR department.",
+            "(D) The technician has not arrived."
+          ],
+          "correct_answer": "(B) She cannot print some documents."
+        },
+        {
+          "id": "q36",
+          "question": "When is the technician expected to arrive?",
+          "options": [
+            "(A) In 30 minutes",
+            "(B) At 10 o'clock",
+            "(C) Sometime today",
+            "(D) Tomorrow"
+          ],
+          "correct_answer": "(D) Tomorrow"
+        },
+        {
+          "id": "q37",
+          "question": "What does the man suggest the woman do?",
+          "options": [
+            "(A) Delay the board meeting",
+            "(B) Call the technician again",
+            "(C) Use a different printer",
+            "(D) Email the agendas instead"
+          ],
+          "correct_answer": "(C) Use a different printer"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_3",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 38-40)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: Excuse me, I ordered a vegetarian pasta about 40 minutes ago, and it still hasn't arrived. My friends have already finished their meals.\\nW: I'm so sorry, sir. The kitchen is extremely busy tonight because of the festival downtown. Let me go check on your order right away.\\nM: Thank you. I have theater tickets for 8 PM, so I'm in a bit of a hurry.\\nW: I understand. I'll make sure they prioritize your dish. I'll also bring you a complimentary salad while you wait.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_3.mp3",
+      "questions": [
+        {
+          "id": "q38",
+          "question": "Where are the speakers?",
+          "options": [
+            "(A) At a theater",
+            "(B) At a food festival",
+            "(C) At a restaurant",
+            "(D) In a kitchen"
+          ],
+          "correct_answer": "(C) At a restaurant"
+        },
+        {
+          "id": "q39",
+          "question": "Why is the woman apologizing?",
+          "options": [
+            "(A) The food was undercooked.",
+            "(B) An order is taking too long.",
+            "(C) A table is not ready.",
+            "(D) The wrong dish was served."
+          ],
+          "correct_answer": "(B) An order is taking too long."
+        },
+        {
+          "id": "q40",
+          "question": "What does the woman offer the man?",
+          "options": [
+            "(A) Free theater tickets",
+            "(B) A discount on his meal",
+            "(C) A different pasta dish",
+            "(D) A free appetizer"
+          ],
+          "correct_answer": "(D) A free appetizer"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_4",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 41-43)",
+      "instructions": "AUDIO TRANSCRIPT:\\nW: Hello, this is Clara from Horizon Marketing. I'm calling about the office space you have listed for rent on 5th Avenue.\\nM: Oh, yes. The entire third floor is still available. It's about 2,000 square feet and comes with reserved parking.\\nW: That sounds perfect. Our current lease expires at the end of next month, and we need a bigger space. When can I come see it?\\nM: I can show it to you this Thursday at 2:00 PM or Friday morning. Which works best for you?\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_4.mp3",
+      "questions": [
+        {
+          "id": "q41",
+          "question": "Why is the woman calling?",
+          "options": [
+            "(A) To cancel a contract",
+            "(B) To inquire about a rental property",
+            "(C) To discuss a marketing strategy",
+            "(D) To apply for a parking permit"
+          ],
+          "correct_answer": "(B) To inquire about a rental property"
+        },
+        {
+          "id": "q42",
+          "question": "What is mentioned about the property?",
+          "options": [
+            "(A) It is currently being renovated.",
+            "(B) It is located on the first floor.",
+            "(C) It includes parking spaces.",
+            "(D) It is furnished."
+          ],
+          "correct_answer": "(C) It includes parking spaces."
+        },
+        {
+          "id": "q43",
+          "question": "When does the woman's current lease expire?",
+          "options": [
+            "(A) On Thursday",
+            "(B) On Friday morning",
+            "(C) At the end of this month",
+            "(D) At the end of next month"
+          ],
+          "correct_answer": "(D) At the end of next month"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_5",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 44-46)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: Have you finished reviewing the candidates for the graphic designer position?\\nW: Yes, I've narrowed it down to three people. I think Sarah Jenkins is the strongest applicant. Her portfolio is outstanding.\\nM: I agree, but her salary expectations are a bit higher than our budget allows.\\nW: That's true. Let's invite her in for a second interview on Monday to see if we can negotiate the compensation package.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_5.mp3",
+      "questions": [
+        {
+          "id": "q44",
+          "question": "What position are the speakers discussing?",
+          "options": [
+            "(A) Sales Manager",
+            "(B) Graphic Designer",
+            "(C) Financial Analyst",
+            "(D) Human Resources Director"
+          ],
+          "correct_answer": "(B) Graphic Designer"
+        },
+        {
+          "id": "q45",
+          "question": "What concern does the man raise about a candidate?",
+          "options": [
+            "(A) Her lack of experience",
+            "(B) Her weak portfolio",
+            "(C) Her salary expectations",
+            "(D) Her interview skills"
+          ],
+          "correct_answer": "(C) Her salary expectations"
+        },
+        {
+          "id": "q46",
+          "question": "What will the speakers do on Monday?",
+          "options": [
+            "(A) Adjust the department budget",
+            "(B) Post a new job advertisement",
+            "(C) Make a final hiring decision",
+            "(D) Conduct another interview"
+          ],
+          "correct_answer": "(D) Conduct another interview"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_6",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 47-49)",
+      "instructions": "AUDIO TRANSCRIPT:\\nW: Excuse me, does this train go to Central Station?\\nM: No, this is the express train to the airport. It doesn't stop at Central Station.\\nW: Oh no, I must have boarded the wrong one. I need to get to the city center for a conference.\\nM: Don't worry. Get off at the next stop, Elm Street, and switch to the blue line train. It will take you straight to Central Station in 15 minutes.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_6.mp3",
+      "questions": [
+        {
+          "id": "q47",
+          "question": "Where is the woman trying to go?",
+          "options": [
+            "(A) To the airport",
+            "(B) To Elm Street",
+            "(C) To Central Station",
+            "(D) To a train depot"
+          ],
+          "correct_answer": "(C) To Central Station"
+        },
+        {
+          "id": "q48",
+          "question": "What mistake did the woman make?",
+          "options": [
+            "(A) She bought the wrong ticket.",
+            "(B) She boarded the wrong train.",
+            "(C) She missed her flight.",
+            "(D) She lost her conference badge."
+          ],
+          "correct_answer": "(B) She boarded the wrong train."
+        },
+        {
+          "id": "q49",
+          "question": "What does the man advise her to do?",
+          "options": [
+            "(A) Pay an extra fare",
+            "(B) Take a taxi from the airport",
+            "(C) Transfer at the next stop",
+            "(D) Stay on the train until the end"
+          ],
+          "correct_answer": "(C) Transfer at the next stop"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_7",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 50-52)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: Hi, Susan. We just received a large order from a new client in Japan. They want 500 units of our new software by Friday.\\nW: Wow, that's great news! But 500 units by Friday? Our production team is already stretched thin with the domestic orders.\\nM: I know. That's why I'm authorizing overtime pay for the rest of the week. Can you inform the warehouse staff?\\nW: Absolutely. I'll send out a memo right now and hold a brief meeting at noon to organize the shifts.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_7.mp3",
+      "questions": [
+        {
+          "id": "q50",
+          "question": "What is the main topic of the conversation?",
+          "options": [
+            "(A) A new software feature",
+            "(B) A large international order",
+            "(C) A trip to Japan",
+            "(D) A change in management"
+          ],
+          "correct_answer": "(B) A large international order"
+        },
+        {
+          "id": "q51",
+          "question": "Why is the woman concerned?",
+          "options": [
+            "(A) The software has a bug.",
+            "(B) The domestic market is failing.",
+            "(C) The production team is busy.",
+            "(D) The shipping costs are high."
+          ],
+          "correct_answer": "(C) The production team is busy."
+        },
+        {
+          "id": "q52",
+          "question": "How will the company meet the deadline?",
+          "options": [
+            "(A) By hiring new employees",
+            "(B) By delaying other shipments",
+            "(C) By outsourcing the work",
+            "(D) By offering overtime pay"
+          ],
+          "correct_answer": "(D) By offering overtime pay"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_8",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 53-55)",
+      "instructions": "AUDIO TRANSCRIPT:\\nW: Thank you for calling TechSupport. How can I help you today?\\nM: Hi, my laptop screen keeps freezing whenever I try to open the video editing software. I've restarted it three times.\\nW: I see. Are you using the latest version of the operating system? There was an update released yesterday that fixes compatibility issues.\\nM: I haven't updated it yet. I'll do that right now. Do I need to restart my computer again after the update?\\nW: Yes, please restart it once the installation is complete. If the issue persists, call us back.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_8.mp3",
+      "questions": [
+        {
+          "id": "q53",
+          "question": "What problem is the man experiencing?",
+          "options": [
+            "(A) His internet connection is slow.",
+            "(B) His computer screen is freezing.",
+            "(C) He forgot his password.",
+            "(D) His video files were deleted."
+          ],
+          "correct_answer": "(B) His computer screen is freezing."
+        },
+        {
+          "id": "q54",
+          "question": "What does the woman ask the man?",
+          "options": [
+            "(A) If he bought a new laptop",
+            "(B) If he has updated his operating system",
+            "(C) If he has a warranty",
+            "(D) If he wants a refund"
+          ],
+          "correct_answer": "(B) If he has updated his operating system"
+        },
+        {
+          "id": "q55",
+          "question": "What will the man probably do next?",
+          "options": [
+            "(A) Purchase new software",
+            "(B) Call a technician",
+            "(C) Install an update",
+            "(D) Edit a video"
+          ],
+          "correct_answer": "(C) Install an update"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_9",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 56-58)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: Welcome to Green Leaf Landscaping. How can I assist you?\\nW: Hi, I'm looking for some drought-resistant plants for my front yard. I don't have much time to water them during the week.\\nM: We have a great selection of succulents and native desert plants right over here. They require very little maintenance.\\nW: These look lovely. Do you offer delivery and planting services? My car is too small to transport them.\\nM: Yes, we do. Delivery is free for purchases over $100, and planting is a flat fee of $50.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_9.mp3",
+      "questions": [
+        {
+          "id": "q56",
+          "question": "What is the woman looking for?",
+          "options": [
+            "(A) Gardening tools",
+            "(B) Lawn furniture",
+            "(C) Low-maintenance plants",
+            "(D) A water sprinkler system"
+          ],
+          "correct_answer": "(C) Low-maintenance plants"
+        },
+        {
+          "id": "q57",
+          "question": "Why does the woman ask about delivery?",
+          "options": [
+            "(A) Her car is too small.",
+            "(B) She lives far away.",
+            "(C) She has a back injury.",
+            "(D) The plants are too heavy."
+          ],
+          "correct_answer": "(A) Her car is too small."
+        },
+        {
+          "id": "q58",
+          "question": "What is required to get free delivery?",
+          "options": [
+            "(A) Buying native desert plants",
+            "(B) Paying a $50 flat fee",
+            "(C) Spending more than $100",
+            "(D) Joining a membership program"
+          ],
+          "correct_answer": "(C) Spending more than $100"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_10",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 59-61)",
+      "instructions": "AUDIO TRANSCRIPT:\\nW: Jason, the air conditioning in the west wing seems to be broken. It's incredibly hot in the accounting office.\\nM: Really? The maintenance crew just serviced the HVAC system last weekend. I'll call them to come back and take a look.\\nW: Please tell them to hurry. The staff is complaining, and it's affecting our productivity.\\nM: I'll mark it as an emergency. In the meantime, I can bring up some portable fans from the basement storage.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_10.mp3",
+      "questions": [
+        {
+          "id": "q59",
+          "question": "What is the problem in the accounting office?",
+          "options": [
+            "(A) The lights are flickering.",
+            "(B) The air conditioning is broken.",
+            "(C) There is a water leak.",
+            "(D) The computers are overheating."
+          ],
+          "correct_answer": "(B) The air conditioning is broken."
+        },
+        {
+          "id": "q60",
+          "question": "When was the system last serviced?",
+          "options": [
+            "(A) Yesterday",
+            "(B) Last weekend",
+            "(C) A month ago",
+            "(D) This morning"
+          ],
+          "correct_answer": "(B) Last weekend"
+        },
+        {
+          "id": "q61",
+          "question": "What does the man offer to do immediately?",
+          "options": [
+            "(A) Send the staff home",
+            "(B) Call the fire department",
+            "(C) Bring portable fans",
+            "(D) Buy a new air conditioner"
+          ],
+          "correct_answer": "(C) Bring portable fans"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_11",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 62-64)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: Good afternoon. I have a reservation under the name Arthur Jenkins for three nights.\\nW: Welcome, Mr. Jenkins. Yes, I see your reservation for a standard room with a city view. Unfortunately, that room type is currently being cleaned and won't be ready for another hour.\\nM: Oh, that's inconvenient. I have a Zoom meeting in 20 minutes, and I really need a quiet place.\\nW: I apologize for the delay. Tell you what, I can upgrade you to an executive suite on the top floor at no extra charge. It's ready right now.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_11.mp3",
+      "questions": [
+        {
+          "id": "q62",
+          "question": "Where does this conversation take place?",
+          "options": [
+            "(A) At a restaurant",
+            "(B) At an airport check-in",
+            "(C) At a hotel reception",
+            "(D) At an apartment complex"
+          ],
+          "correct_answer": "(C) At a hotel reception"
+        },
+        {
+          "id": "q63",
+          "question": "Why is the man's reserved room unavailable?",
+          "options": [
+            "(A) It is occupied by another guest.",
+            "(B) It is currently being cleaned.",
+            "(C) It is undergoing repairs.",
+            "(D) It was double-booked."
+          ],
+          "correct_answer": "(B) It is currently being cleaned."
+        },
+        {
+          "id": "q64",
+          "question": "How does the woman solve the problem?",
+          "options": [
+            "(A) She gives him a discount.",
+            "(B) She provides a free meal.",
+            "(C) She books him a meeting room.",
+            "(D) She upgrades his room."
+          ],
+          "correct_answer": "(D) She upgrades his room."
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_12",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 65-67)",
+      "instructions": "AUDIO TRANSCRIPT:\\nW: Did you see the memo about the new mandatory security training?\\nM: Yes, I read it this morning. We have to complete a series of online modules by next Friday, right?\\nW: Exactly. But I can't seem to log into the training portal. It keeps saying my credentials are invalid.\\nM: I had the same issue. You have to email the IT helpdesk to reset your password specifically for that portal. The standard network password doesn't work.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_12.mp3",
+      "questions": [
+        {
+          "id": "q65",
+          "question": "What do the employees have to do by next Friday?",
+          "options": [
+            "(A) Attend a security seminar",
+            "(B) Complete online training",
+            "(C) Change their passwords",
+            "(D) Submit a security report"
+          ],
+          "correct_answer": "(B) Complete online training"
+        },
+        {
+          "id": "q66",
+          "question": "What problem is the woman facing?",
+          "options": [
+            "(A) She cannot log into a portal.",
+            "(B) She lost the memo.",
+            "(C) She does not have a computer.",
+            "(D) She missed a deadline."
+          ],
+          "correct_answer": "(A) She cannot log into a portal."
+        },
+        {
+          "id": "q67",
+          "question": "What does the man suggest the woman do?",
+          "options": [
+            "(A) Use his computer",
+            "(B) Reset her network password",
+            "(C) Email the IT helpdesk",
+            "(D) Ignore the training"
+          ],
+          "correct_answer": "(C) Email the IT helpdesk"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_13",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 68-70)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: The feedback from our latest customer survey is in. Overall, clients love the durability of our backpacks, but they are unhappy with the limited color options.\\nW: That makes sense. We only offer black, navy, and gray. We should introduce some brighter colors for the summer collection.\\nM: I agree. I'll ask the design team to come up with some proposals using red, yellow, and green fabrics.\\nW: Good idea. We should also run a poll on social media to ask our followers which colors they would prefer.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_13.mp3",
+      "questions": [
+        {
+          "id": "q68",
+          "question": "What do customers like about the company's backpacks?",
+          "options": [
+            "(A) The price",
+            "(B) The durability",
+            "(C) The size",
+            "(D) The colorful designs"
+          ],
+          "correct_answer": "(B) The durability"
+        },
+        {
+          "id": "q69",
+          "question": "What complaint did customers have?",
+          "options": [
+            "(A) Shipping is too slow.",
+            "(B) The zippers break easily.",
+            "(C) Limited color options.",
+            "(D) Customer service is poor."
+          ],
+          "correct_answer": "(C) Limited color options."
+        },
+        {
+          "id": "q70",
+          "question": "What will the woman likely do?",
+          "options": [
+            "(A) Change the fabric supplier",
+            "(B) Fire the design team",
+            "(C) Reduce the price of the backpacks",
+            "(D) Start a social media poll"
+          ],
+          "correct_answer": "(D) Start a social media poll"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_1",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 71-73)",
+      "instructions": "AUDIO TRANSCRIPT:\\nAttention all passengers waiting for Flight 884 to London. We regret to inform you that the departure has been delayed by approximately two hours due to severe weather conditions over the Atlantic. We will be providing complimentary meal vouchers, which can be picked up at the customer service desk near Gate 14. We apologize for the inconvenience and will provide another update at 4:00 PM.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_1.mp3",
+      "questions": [
+        {
+          "id": "q71",
+          "question": "Who is the intended audience for this announcement?",
+          "options": [
+            "(A) Airport security staff",
+            "(B) Flight attendants",
+            "(C) Airline passengers",
+            "(D) Travel agents"
+          ],
+          "correct_answer": "(C) Airline passengers"
+        },
+        {
+          "id": "q72",
+          "question": "Why is the flight delayed?",
+          "options": [
+            "(A) Mechanical issues",
+            "(B) Bad weather",
+            "(C) A crew shortage",
+            "(D) Overbooked seats"
+          ],
+          "correct_answer": "(B) Bad weather"
+        },
+        {
+          "id": "q73",
+          "question": "What is being offered as compensation?",
+          "options": [
+            "(A) Free hotel stays",
+            "(B) Upgraded seating",
+            "(C) Discount coupons",
+            "(D) Meal vouchers"
+          ],
+          "correct_answer": "(D) Meal vouchers"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_2",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 74-76)",
+      "instructions": "AUDIO TRANSCRIPT:\\nGood morning, team. Before we start our shifts, I want to briefly go over the new inventory tracking system we're implementing today. The old barcode scanners have been replaced with these new tablets. When a shipment arrives, simply scan the QR code on the pallet using the tablet's camera. This will automatically update the database in real-time. If you experience any technical glitches, please notify the IT desk immediately rather than trying to fix it yourselves.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_2.mp3",
+      "questions": [
+        {
+          "id": "q74",
+          "question": "Where is this talk most likely taking place?",
+          "options": [
+            "(A) In a retail warehouse",
+            "(B) At a software company",
+            "(C) In a hospital",
+            "(D) At a photography studio"
+          ],
+          "correct_answer": "(A) In a retail warehouse"
+        },
+        {
+          "id": "q75",
+          "question": "What new equipment is being introduced?",
+          "options": [
+            "(A) Barcode scanners",
+            "(B) Digital tablets",
+            "(C) Security cameras",
+            "(D) Cash registers"
+          ],
+          "correct_answer": "(B) Digital tablets"
+        },
+        {
+          "id": "q76",
+          "question": "What are the listeners instructed to do if there is a problem?",
+          "options": [
+            "(A) Read the manual",
+            "(B) Fix it themselves",
+            "(C) Contact the IT desk",
+            "(D) Report to the manager"
+          ],
+          "correct_answer": "(C) Contact the IT desk"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_3",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 77-79)",
+      "instructions": "AUDIO TRANSCRIPT:\\nWelcome to the Riverside Botanical Gardens. My name is David, and I'll be your guide for this afternoon's tour. We'll start by walking through the newly renovated greenhouse, which houses our exotic orchid collection. Please remember that taking photographs with a flash is strictly prohibited, as the sudden bright light can damage some of our more sensitive plants. After the greenhouse, we'll head over to the outdoor rose garden, where you'll have 20 minutes to explore on your own.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_3.mp3",
+      "questions": [
+        {
+          "id": "q77",
+          "question": "Who is the speaker?",
+          "options": [
+            "(A) A professional photographer",
+            "(B) A tour guide",
+            "(C) A landscape architect",
+            "(D) A greenhouse manager"
+          ],
+          "correct_answer": "(B) A tour guide"
+        },
+        {
+          "id": "q78",
+          "question": "What is prohibited during the tour?",
+          "options": [
+            "(A) Feeding the animals",
+            "(B) Touching the flowers",
+            "(C) Using flash photography",
+            "(D) Walking on the grass"
+          ],
+          "correct_answer": "(C) Using flash photography"
+        },
+        {
+          "id": "q79",
+          "question": "What will happen after the greenhouse visit?",
+          "options": [
+            "(A) The tour will end.",
+            "(B) A lecture will be given.",
+            "(C) Visitors will eat lunch.",
+            "(D) Visitors will explore freely."
+          ],
+          "correct_answer": "(D) Visitors will explore freely."
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_4",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 80-82)",
+      "instructions": "AUDIO TRANSCRIPT:\\nThank you for tuning in to Local Radio 99.5. This is your morning traffic report. If you're commuting into the city center via Highway 4, expect major delays. A collision involving a delivery truck and two cars has blocked the left two lanes near the Oak Street exit. Police are on the scene, but traffic is backed up for three miles. We highly recommend taking the River Road detour if you want to avoid being late for work. I'll be back with another update in 30 minutes.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_4.mp3",
+      "questions": [
+        {
+          "id": "q80",
+          "question": "What is the purpose of the broadcast?",
+          "options": [
+            "(A) To advertise a delivery service",
+            "(B) To report on traffic conditions",
+            "(C) To discuss a new highway project",
+            "(D) To interview a police officer"
+          ],
+          "correct_answer": "(B) To report on traffic conditions"
+        },
+        {
+          "id": "q81",
+          "question": "What caused the problem on the highway?",
+          "options": [
+            "(A) A vehicle collision",
+            "(B) Road construction",
+            "(C) Heavy rain",
+            "(D) A broken traffic light"
+          ],
+          "correct_answer": "(A) A vehicle collision"
+        },
+        {
+          "id": "q82",
+          "question": "What does the speaker suggest listeners do?",
+          "options": [
+            "(A) Call the police",
+            "(B) Take an alternate route",
+            "(C) Leave for work early",
+            "(D) Stay home"
+          ],
+          "correct_answer": "(B) Take an alternate route"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_5",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 83-85)",
+      "instructions": "AUDIO TRANSCRIPT:\\nHello everyone. I called this emergency meeting to discuss the recent drop in our fourth-quarter sales. As you can see on the screen, our revenue fell by 15% compared to this time last year. A major factor is that our primary competitor released a highly aggressive advertising campaign in November. To combat this, we're going to launch a new promotional strategy next week, offering a 20% discount to all first-time customers. I need the marketing team to finalize the ad designs by Wednesday.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_5.mp3",
+      "questions": [
+        {
+          "id": "q83",
+          "question": "What is the main subject of the meeting?",
+          "options": [
+            "(A) A decrease in sales",
+            "(B) A new competitor",
+            "(C) An employee promotion",
+            "(D) A product recall"
+          ],
+          "correct_answer": "(A) A decrease in sales"
+        },
+        {
+          "id": "q84",
+          "question": "What caused the company's problem?",
+          "options": [
+            "(A) High production costs",
+            "(B) A competitor's ad campaign",
+            "(C) A lack of inventory",
+            "(D) Poor customer service"
+          ],
+          "correct_answer": "(B) A competitor's ad campaign"
+        },
+        {
+          "id": "q85",
+          "question": "What does the speaker ask the marketing team to do?",
+          "options": [
+            "(A) Hire new staff",
+            "(B) Finish ad designs by Wednesday",
+            "(C) Research the competitor",
+            "(D) Offer discounts to old clients"
+          ],
+          "correct_answer": "(B) Finish ad designs by Wednesday"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_6",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 86-88)",
+      "instructions": "AUDIO TRANSCRIPT:\\nHi, this is a message for Sarah Jenkins. This is Dr. Miller's dental clinic calling to remind you of your appointment for a routine cleaning tomorrow at 2:00 PM. Please remember to bring your updated insurance card, as our records indicate your previous policy expired last month. If you need to cancel or reschedule, please call us back at least 24 hours in advance to avoid a cancellation fee. We look forward to seeing you.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_6.mp3",
+      "questions": [
+        {
+          "id": "q86",
+          "question": "Who is the speaker?",
+          "options": [
+            "(A) A dentist",
+            "(B) An insurance agent",
+            "(C) A clinic receptionist",
+            "(D) A pharmacist"
+          ],
+          "correct_answer": "(C) A clinic receptionist"
+        },
+        {
+          "id": "q87",
+          "question": "What must the listener bring to the appointment?",
+          "options": [
+            "(A) A credit card",
+            "(B) Medical records",
+            "(C) A prescription",
+            "(D) An insurance card"
+          ],
+          "correct_answer": "(D) An insurance card"
+        },
+        {
+          "id": "q88",
+          "question": "Why is the listener asked to call back?",
+          "options": [
+            "(A) To confirm the address",
+            "(B) To reschedule the appointment",
+            "(C) To request a new doctor",
+            "(D) To pay a bill in advance"
+          ],
+          "correct_answer": "(B) To reschedule the appointment"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_7",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 89-91)",
+      "instructions": "AUDIO TRANSCRIPT:\\nGood evening, and welcome to the annual Apex Technology Awards dinner. Tonight, we are here to honor the brilliant engineers and developers who have pushed the boundaries of innovation over the past year. Before we serve dinner, our CEO, Ms. Helen Carter, will come to the stage to say a few words about our company's future goals. After her speech, we will begin presenting the awards, starting with the 'Software Developer of the Year'. Please enjoy the appetizers on your tables.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_7.mp3",
+      "questions": [
+        {
+          "id": "q89",
+          "question": "Where is the event taking place?",
+          "options": [
+            "(A) At a software conference",
+            "(B) At an awards dinner",
+            "(C) At a company picnic",
+            "(D) At a board meeting"
+          ],
+          "correct_answer": "(B) At an awards dinner"
+        },
+        {
+          "id": "q90",
+          "question": "Who is Helen Carter?",
+          "options": [
+            "(A) A software developer",
+            "(B) An award recipient",
+            "(C) The company CEO",
+            "(D) The event caterer"
+          ],
+          "correct_answer": "(C) The company CEO"
+        },
+        {
+          "id": "q91",
+          "question": "What will happen right after the speech?",
+          "options": [
+            "(A) Dinner will be served.",
+            "(B) Appetizers will be brought out.",
+            "(C) A video will be shown.",
+            "(D) The awards will be presented."
+          ],
+          "correct_answer": "(D) The awards will be presented."
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_8",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 92-94)",
+      "instructions": "AUDIO TRANSCRIPT:\\nHello, residents of the Oakwood Apartment Complex. This is the building manager. We will be performing routine maintenance on the main water line this Thursday between 9:00 AM and 2:00 PM. During this time, the water supply to the entire building will be shut off. We strongly advise you to store some water in advance for drinking and cooking. If the work takes longer than expected, we will slip a notice under your door. Thank you for your patience.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_8.mp3",
+      "questions": [
+        {
+          "id": "q92",
+          "question": "Who is the speaker?",
+          "options": [
+            "(A) A city official",
+            "(B) A building manager",
+            "(C) A plumber",
+            "(D) A security guard"
+          ],
+          "correct_answer": "(B) A building manager"
+        },
+        {
+          "id": "q93",
+          "question": "What is going to happen on Thursday?",
+          "options": [
+            "(A) The electricity will be turned off.",
+            "(B) The parking lot will be paved.",
+            "(C) The water supply will be shut off.",
+            "(D) Rents will be increased."
+          ],
+          "correct_answer": "(C) The water supply will be shut off."
+        },
+        {
+          "id": "q94",
+          "question": "What does the speaker advise the residents to do?",
+          "options": [
+            "(A) Leave the building",
+            "(B) Pay their bills early",
+            "(C) Store water in advance",
+            "(D) Check under their doors"
+          ],
+          "correct_answer": "(C) Store water in advance"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_9",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 95-97)",
+      "instructions": "AUDIO TRANSCRIPT:\\nWelcome to the introductory workshop on digital marketing. My name is Laura, and I'll be teaching you how to use social media analytics to grow your small business. Today, we'll focus on how to interpret user engagement data. Before we begin, please make sure you have downloaded the training software onto your laptops. I've placed a handout on everyone's desk with the login credentials. At the end of the session, we'll have a Q&A segment, so please save your questions until then.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_9.mp3",
+      "questions": [
+        {
+          "id": "q95",
+          "question": "What is the topic of the workshop?",
+          "options": [
+            "(A) Small business accounting",
+            "(B) Social media analytics",
+            "(C) Website design",
+            "(D) Software development"
+          ],
+          "correct_answer": "(B) Social media analytics"
+        },
+        {
+          "id": "q96",
+          "question": "What should the attendees have already done?",
+          "options": [
+            "(A) Paid the registration fee",
+            "(B) Printed a handout",
+            "(C) Logged into a social media account",
+            "(D) Downloaded the training software"
+          ],
+          "correct_answer": "(D) Downloaded the training software"
+        },
+        {
+          "id": "q97",
+          "question": "When should attendees ask questions?",
+          "options": [
+            "(A) Before the workshop begins",
+            "(B) During the presentation",
+            "(C) At the end of the session",
+            "(D) In an email after the class"
+          ],
+          "correct_answer": "(C) At the end of the session"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_10",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 98-100)",
+      "instructions": "AUDIO TRANSCRIPT:\\nThank you for calling the Grand Palace Theater box office. Our normal business hours are Monday through Saturday, from 10:00 AM to 6:00 PM. Please note that tickets for the upcoming Broadway musical 'City Lights' are officially sold out for all evening performances. However, a limited number of tickets are still available for the Saturday matinee. If you would like to purchase tickets or check seating availability, please visit our website at www.grandpalacetheater.com. For all other inquiries, please leave a message after the beep.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_10.mp3",
+      "questions": [
+        {
+          "id": "q98",
+          "question": "What type of business does the message belong to?",
+          "options": [
+            "(A) A movie theater",
+            "(B) A Broadway musical",
+            "(C) A theater box office",
+            "(D) A ticket scalper"
+          ],
+          "correct_answer": "(C) A theater box office"
+        },
+        {
+          "id": "q99",
+          "question": "What is stated about the musical 'City Lights'?",
+          "options": [
+            "(A) It was cancelled.",
+            "(B) Evening tickets are sold out.",
+            "(C) It is playing on Sunday.",
+            "(D) It is a free event."
+          ],
+          "correct_answer": "(B) Evening tickets are sold out."
+        },
+        {
+          "id": "q100",
+          "question": "How can callers purchase the remaining tickets?",
+          "options": [
+            "(A) By leaving a voice message",
+            "(B) By visiting the theater in person",
+            "(C) By calling back during business hours",
+            "(D) By visiting the official website"
+          ],
+          "correct_answer": "(D) By visiting the official website"
+        }
+      ]
+    },
+    {
+      "id": "part5_main",
+      "type": "quiz",
+      "title": "Part 5: Incomplete Sentences",
+      "instructions": "A word or phrase is missing in each of the sentences below. Four answer choices are given below each sentence. Select the best answer to complete the sentence.",
+      "questions": [
+        {
+          "id": "q101",
+          "question": "The new software update will be installed ------- the end of the week.",
+          "options": [
+            "(A) by",
+            "(B) until",
+            "(C) in",
+            "(D) at"
+          ],
+          "correct_answer": "(A) by"
+        },
+        {
+          "id": "q102",
+          "question": "Please review the attached document and submit your revisions ------- Friday morning.",
+          "options": [
+            "(A) toward",
+            "(B) within",
+            "(C) no later than",
+            "(D) advanced"
+          ],
+          "correct_answer": "(C) no later than"
+        },
+        {
+          "id": "q103",
+          "question": "Employees who wish to participate in the seminar must register -------.",
+          "options": [
+            "(A) quick",
+            "(B) quicker",
+            "(C) quickest",
+            "(D) quickly"
+          ],
+          "correct_answer": "(D) quickly"
+        },
+        {
+          "id": "q104",
+          "question": "The CEO's speech was both ------- and inspiring for the new recruits.",
+          "options": [
+            "(A) inform",
+            "(B) information",
+            "(C) informative",
+            "(D) informally"
+          ],
+          "correct_answer": "(C) informative"
+        },
+        {
+          "id": "q105",
+          "question": "Due to the severe weather conditions, all flights have been ------- until further notice.",
+          "options": [
+            "(A) delayed",
+            "(B) delaying",
+            "(C) delays",
+            "(D) delay"
+          ],
+          "correct_answer": "(A) delayed"
+        },
+        {
+          "id": "q106",
+          "question": "Mr. Yamamoto is highly ------- for the position of Senior Marketing Director.",
+          "options": [
+            "(A) qualify",
+            "(B) qualified",
+            "(C) qualifying",
+            "(D) qualification"
+          ],
+          "correct_answer": "(B) qualified"
+        },
+        {
+          "id": "q107",
+          "question": "The marketing department is responsible for ------- consumer trends in the Asian market.",
+          "options": [
+            "(A) analyzed",
+            "(B) analyzer",
+            "(C) analysis",
+            "(D) analyzing"
+          ],
+          "correct_answer": "(D) analyzing"
+        },
+        {
+          "id": "q108",
+          "question": "The company's profits rose significantly ------- the aggressive advertising campaign.",
+          "options": [
+            "(A) as a result of",
+            "(B) instead of",
+            "(C) in addition to",
+            "(D) even though"
+          ],
+          "correct_answer": "(A) as a result of"
+        },
+        {
+          "id": "q109",
+          "question": "All staff members are expected to comply ------- the new safety regulations immediately.",
+          "options": [
+            "(A) at",
+            "(B) in",
+            "(C) with",
+            "(D) for"
+          ],
+          "correct_answer": "(C) with"
+        },
+        {
+          "id": "q110",
+          "question": "------- you have any questions regarding the contract, please contact the legal department.",
+          "options": [
+            "(A) Should",
+            "(B) Would",
+            "(C) Could",
+            "(D) Might"
+          ],
+          "correct_answer": "(A) Should"
+        },
+        {
+          "id": "q111",
+          "question": "The factory's production capacity has ------- doubled since the new machinery was installed.",
+          "options": [
+            "(A) near",
+            "(B) nearly",
+            "(C) nearness",
+            "(D) nearing"
+          ],
+          "correct_answer": "(B) nearly"
+        },
+        {
+          "id": "q112",
+          "question": "Customers are eligible for a full refund ------- they return the item within 30 days.",
+          "options": [
+            "(A) provided that",
+            "(B) unless",
+            "(C) despite",
+            "(D) therefore"
+          ],
+          "correct_answer": "(A) provided that"
+        },
+        {
+          "id": "q113",
+          "question": "The board of directors unanimously ------- the proposal to merge with Horizon Tech.",
+          "options": [
+            "(A) approval",
+            "(B) approve",
+            "(C) approved",
+            "(D) approving"
+          ],
+          "correct_answer": "(C) approved"
+        },
+        {
+          "id": "q114",
+          "question": "Ms. Davis asked the intern to make photocopies of the report ------- distribute them to the managers.",
+          "options": [
+            "(A) and",
+            "(B) but",
+            "(C) or",
+            "(D) so"
+          ],
+          "correct_answer": "(A) and"
+        },
+        {
+          "id": "q115",
+          "question": "The supervisor emphasized the ------- of completing the project ahead of schedule.",
+          "options": [
+            "(A) important",
+            "(B) importance",
+            "(C) importantly",
+            "(D) import"
+          ],
+          "correct_answer": "(B) importance"
+        },
+        {
+          "id": "q116",
+          "question": "------- the high cost of raw materials, the manufacturer managed to keep prices stable.",
+          "options": [
+            "(A) Although",
+            "(B) However",
+            "(C) Despite",
+            "(D) Because"
+          ],
+          "correct_answer": "(C) Despite"
+        },
+        {
+          "id": "q117",
+          "question": "The hotel's newly renovated lobby features a ------- chandelier made of crystal.",
+          "options": [
+            "(A) magnificent",
+            "(B) magnificence",
+            "(C) magnificently",
+            "(D) magnify"
+          ],
+          "correct_answer": "(A) magnificent"
+        },
+        {
+          "id": "q118",
+          "question": "Please make sure that all confidential files are stored ------- in the main server.",
+          "options": [
+            "(A) secure",
+            "(B) securely",
+            "(C) security",
+            "(D) secures"
+          ],
+          "correct_answer": "(B) securely"
+        },
+        {
+          "id": "q119",
+          "question": "The accounting firm is currently seeking a ------- accountant with five years of experience.",
+          "options": [
+            "(A) certification",
+            "(B) certify",
+            "(C) certified",
+            "(D) certifying"
+          ],
+          "correct_answer": "(C) certified"
+        },
+        {
+          "id": "q120",
+          "question": "------- the team worked overtime, they could not finish the presentation on time.",
+          "options": [
+            "(A) Even though",
+            "(B) In spite of",
+            "(C) Since",
+            "(D) As"
+          ],
+          "correct_answer": "(A) Even though"
+        },
+        {
+          "id": "q121",
+          "question": "The manager ------- the exceptional performance of the sales team during the meeting.",
+          "options": [
+            "(A) commented",
+            "(B) praised",
+            "(C) remarked",
+            "(D) talked"
+          ],
+          "correct_answer": "(B) praised"
+        },
+        {
+          "id": "q122",
+          "question": "Sales figures for the third quarter were significantly lower ------- expected.",
+          "options": [
+            "(A) that",
+            "(B) than",
+            "(C) then",
+            "(D) thus"
+          ],
+          "correct_answer": "(B) than"
+        },
+        {
+          "id": "q123",
+          "question": "The committee will evaluate the proposals based on their ------- to solve the traffic issue.",
+          "options": [
+            "(A) effect",
+            "(B) effective",
+            "(C) effectiveness",
+            "(D) effectively"
+          ],
+          "correct_answer": "(C) effectiveness"
+        },
+        {
+          "id": "q124",
+          "question": "If you wish to cancel your subscription, you must notify us in writing ------- 14 days.",
+          "options": [
+            "(A) within",
+            "(B) throughout",
+            "(C) during",
+            "(D) around"
+          ],
+          "correct_answer": "(A) within"
+        },
+        {
+          "id": "q125",
+          "question": "The new employee manual contains a comprehensive list of rules and -------.",
+          "options": [
+            "(A) regulate",
+            "(B) regulating",
+            "(C) regulatory",
+            "(D) regulations"
+          ],
+          "correct_answer": "(D) regulations"
+        },
+        {
+          "id": "q126",
+          "question": "We regret to inform you that the item you ordered is currently out of -------.",
+          "options": [
+            "(A) supply",
+            "(B) inventory",
+            "(C) stock",
+            "(D) storage"
+          ],
+          "correct_answer": "(C) stock"
+        },
+        {
+          "id": "q127",
+          "question": "The human resources director will conduct the interviews ------- Tuesday and Thursday.",
+          "options": [
+            "(A) among",
+            "(B) between",
+            "(C) alongside",
+            "(D) beside"
+          ],
+          "correct_answer": "(B) between"
+        },
+        {
+          "id": "q128",
+          "question": "The bridge is temporarily closed to traffic ------- maintenance work is being carried out.",
+          "options": [
+            "(A) due to",
+            "(B) while",
+            "(C) during",
+            "(D) therefore"
+          ],
+          "correct_answer": "(B) while"
+        },
+        {
+          "id": "q129",
+          "question": "------- finding a new office space, the company also needs to hire more staff.",
+          "options": [
+            "(A) In addition to",
+            "(B) In case of",
+            "(C) Regardless of",
+            "(D) On behalf of"
+          ],
+          "correct_answer": "(A) In addition to"
+        },
+        {
+          "id": "q130",
+          "question": "The successful candidate will report ------- to the vice president of operations.",
+          "options": [
+            "(A) direct",
+            "(B) directs",
+            "(C) directed",
+            "(D) directly"
+          ],
+          "correct_answer": "(D) directly"
+        }
+      ]
+    },
+    {
+      "id": "part6_text_1",
+      "type": "quiz",
+      "title": "Part 6: Text Completion (Questions 131-134)",
+      "instructions": "Read the text that follows. A word, phrase, or sentence is missing in parts of each text. Four answer choices for each blank are given below the text.",
+      "passageText": "To: All Employees\\nFrom: Management\\nSubject: Annual Leave Policy\\n\\nThis is a reminder that all requests for annual leave during the summer months must be submitted ----(101)---- the end of April. We ----(102)---- your cooperation in this matter to ensure that all departments are adequately staffed. Please note that requests are approved on a first-come, first-served basis. ----(103)----. Thank you for your continued ----(104)----.",
+      "questions": [
+        {
+          "id": "q131",
+          "question": "Select the best option for blank (131).",
+          "options": [
+            "(A) by",
+            "(B) until",
+            "(C) from",
+            "(D) in"
+          ],
+          "correct_answer": "(A) by"
+        },
+        {
+          "id": "q132",
+          "question": "Select the best option for blank (132).",
+          "options": [
+            "(A) appreciate",
+            "(B) appreciating",
+            "(C) appreciated",
+            "(D) appreciates"
+          ],
+          "correct_answer": "(A) appreciate"
+        },
+        {
+          "id": "q133",
+          "question": "Select the best option for blank (133).",
+          "options": [
+            "(A) You should arrive on time.",
+            "(B) Employees without prior approval will be asked to work.",
+            "(C) The cafeteria will close early.",
+            "(D) Summer is the busiest season."
+          ],
+          "correct_answer": "(B) Employees without prior approval will be asked to work."
+        },
+        {
+          "id": "q134",
+          "question": "Select the best option for blank (134).",
+          "options": [
+            "(A) dedicated",
+            "(B) dedicates",
+            "(C) dedication",
+            "(D) dedicating"
+          ],
+          "correct_answer": "(C) dedication"
+        }
+      ]
+    },
+    {
+      "id": "part6_text_2",
+      "type": "quiz",
+      "title": "Part 6: Text Completion (Questions 135-138)",
+      "instructions": "Read the text that follows. A word, phrase, or sentence is missing in parts of each text. Four answer choices for each blank are given below the text.",
+      "passageText": "Dear Ms. Lawson,\\n\\nWe are pleased to inform you that your application for the apartment at 405 Elm Street has been ----(105)----. Your excellent credit history and stable employment made you an ideal candidate. ----(106)----. We have attached the lease agreement for your review. Please sign and return it to our office along with the security deposit of $1,200. If you have any questions, feel free to contact us ----(107)---- business hours. We look forward to having you as a ----(108)----.\\n\\nSincerely,\\nOakwood Realty",
+      "questions": [
+        {
+          "id": "q135",
+          "question": "Select the best option for blank (135).",
+          "options": [
+            "(A) accepted",
+            "(B) declined",
+            "(C) ignored",
+            "(D) misplaced"
+          ],
+          "correct_answer": "(A) accepted"
+        },
+        {
+          "id": "q136",
+          "question": "Select the best option for blank (136).",
+          "options": [
+            "(A) The apartment is fully furnished.",
+            "(B) You can move in starting on the first of next month.",
+            "(C) The building was built in 1990.",
+            "(D) Rent is due every Tuesday."
+          ],
+          "correct_answer": "(B) You can move in starting on the first of next month."
+        },
+        {
+          "id": "q137",
+          "question": "Select the best option for blank (137).",
+          "options": [
+            "(A) while",
+            "(B) during",
+            "(C) whenever",
+            "(D) almost"
+          ],
+          "correct_answer": "(B) during"
+        },
+        {
+          "id": "q138",
+          "question": "Select the best option for blank (138).",
+          "options": [
+            "(A) resident",
+            "(B) residency",
+            "(C) reside",
+            "(D) residing"
+          ],
+          "correct_answer": "(A) resident"
+        }
+      ]
+    },
+    {
+      "id": "part6_text_3",
+      "type": "quiz",
+      "title": "Part 6: Text Completion (Questions 139-142)",
+      "instructions": "Read the text that follows. A word, phrase, or sentence is missing in parts of each text. Four answer choices for each blank are given below the text.",
+      "passageText": "Press Release: April 14\\n\\nNextron Electronics has officially announced the launch of its new smartphone, the Z-Pro. This highly anticipated device features a revolutionary camera system and a battery life that is ----(109)---- superior to previous models. \"We spent two years developing this technology,\" stated CEO Mark Harrison. ----(110)----. The Z-Pro will be available in stores nationwide starting May 1st. Customers who pre-order the phone will receive a ----(111)---- pair of wireless headphones. For more information, please visit our website at www.nextron.com and navigate to the 'New ----(112)----' page.",
+      "questions": [
+        {
+          "id": "q139",
+          "question": "Select the best option for blank (139).",
+          "options": [
+            "(A) vast",
+            "(B) vastly",
+            "(C) vastness",
+            "(D) vaster"
+          ],
+          "correct_answer": "(B) vastly"
+        },
+        {
+          "id": "q140",
+          "question": "Select the best option for blank (140).",
+          "options": [
+            "(A) The company is facing bankruptcy.",
+            "(B) We believe it will change the mobile industry.",
+            "(C) The old models are still available.",
+            "(D) Tablets are becoming more popular."
+          ],
+          "correct_answer": "(B) We believe it will change the mobile industry."
+        },
+        {
+          "id": "q141",
+          "question": "Select the best option for blank (141).",
+          "options": [
+            "(A) compliment",
+            "(B) complimenting",
+            "(C) complimentary",
+            "(D) complimented"
+          ],
+          "correct_answer": "(C) complimentary"
+        },
+        {
+          "id": "q142",
+          "question": "Select the best option for blank (142).",
+          "options": [
+            "(A) Produce",
+            "(B) Products",
+            "(C) Producer",
+            "(D) Production"
+          ],
+          "correct_answer": "(B) Products"
+        }
+      ]
+    },
+    {
+      "id": "part6_text_4",
+      "type": "quiz",
+      "title": "Part 6: Text Completion (Questions 143-146)",
+      "instructions": "Read the text that follows. A word, phrase, or sentence is missing in parts of each text. Four answer choices for each blank are given below the text.",
+      "passageText": "Notice of Road Closure\\n\\nTo all residents of Springfield: Please be advised that Main Street will be closed to vehicle traffic ----(113)---- June 10th and June 15th. This closure is necessary to allow city crews to repair underground water pipes. ----(114)----. Pedestrian access to the sidewalks and local businesses will not be ----(115)----. We apologize for any inconvenience this may cause and thank you for your patience while we work to improve the city's ----(116)----.\\n\\nSpringfield Public Works Department",
+      "questions": [
+        {
+          "id": "q143",
+          "question": "Select the best option for blank (143).",
+          "options": [
+            "(A) among",
+            "(B) between",
+            "(C) through",
+            "(D) within"
+          ],
+          "correct_answer": "(B) between"
+        },
+        {
+          "id": "q144",
+          "question": "Select the best option for blank (144).",
+          "options": [
+            "(A) Drivers should use Elm Street as an alternate route.",
+            "(B) The water pipes are brand new.",
+            "(C) Traffic is usually light on Main Street.",
+            "(D) The city council approved the budget."
+          ],
+          "correct_answer": "(A) Drivers should use Elm Street as an alternate route."
+        },
+        {
+          "id": "q145",
+          "question": "Select the best option for blank (145).",
+          "options": [
+            "(A) affected",
+            "(B) affecting",
+            "(C) affect",
+            "(D) affection"
+          ],
+          "correct_answer": "(A) affected"
+        },
+        {
+          "id": "q146",
+          "question": "Select the best option for blank (146).",
+          "options": [
+            "(A) infrastructure",
+            "(B) aesthetics",
+            "(C) economy",
+            "(D) politics"
+          ],
+          "correct_answer": "(A) infrastructure"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_1",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 147-149)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "Email\\nFrom: j.smith@globex.com\\nTo: Marketing Team\\nSubject: Upcoming Trade Show\\n\\nTeam, I wanted to confirm that our booth space for the Tokyo Electronics Expo has been secured. The event runs from September 14 to 18. We need to ship our promotional materials by the end of this month to ensure they clear customs in time. Sarah, please coordinate with the shipping department. Also, the hotel reservations are booked at the Grand Plaza, which is just a ten-minute walk from the convention center. Let me know if you have any questions.",
+      "questions": [
+        {
+          "q": "What is the main purpose of the email? (Question 147)",
+          "opts": [
+            "(A) To cancel a hotel reservation",
+            "(B) To complain about shipping delays",
+            "(C) To provide updates about a trade show",
+            "(D) To introduce a new team member"
+          ],
+          "ans": "(C) To provide updates about a trade show",
+          "id": "q147"
+        },
+        {
+          "q": "When must the promotional materials be shipped? (Question 148)",
+          "opts": [
+            "(A) By September 14",
+            "(B) By September 18",
+            "(C) By the end of the month",
+            "(D) In ten minutes"
+          ],
+          "ans": "(C) By the end of the month",
+          "id": "q147"
+        },
+        {
+          "q": "What is mentioned about the hotel? (Question 149)",
+          "opts": [
+            "(A) It is very expensive.",
+            "(B) It is close to the convention center.",
+            "(C) It has no available rooms.",
+            "(D) It offers free breakfast."
+          ],
+          "ans": "(B) It is close to the convention center.",
+          "id": "q147"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_2",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 150-152)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "Advertisement\\nLooking for a reliable catering service for your next corporate event? Tasty Bites Catering offers premium quality food at competitive prices. We specialize in hot buffets, cold sandwiches, and vegan alternatives. Whether it's a small team meeting of 10 people or a large conference of 500, we have you covered. Book now and receive a 15% discount on your first order. Call us at 555-0198 or visit www.tastybites.com. We require a 48-hour notice for all cancellations.",
+      "questions": [
+        {
+          "q": "What type of business is being advertised? (Question 150)",
+          "opts": [
+            "(A) A travel agency",
+            "(B) A catering service",
+            "(C) A marketing firm",
+            "(D) A restaurant supply store"
+          ],
+          "ans": "(B) A catering service",
+          "id": "q150"
+        },
+        {
+          "q": "How can customers get a discount? (Question 151)",
+          "opts": [
+            "(A) By placing their first order",
+            "(B) By ordering for 500 people",
+            "(C) By paying in cash",
+            "(D) By referring a friend"
+          ],
+          "ans": "(A) By placing their first order",
+          "id": "q150"
+        },
+        {
+          "q": "What is the company's cancellation policy? (Question 152)",
+          "opts": [
+            "(A) No cancellations are allowed.",
+            "(B) Cancellations must be made online.",
+            "(C) A 15% fee is charged for cancellations.",
+            "(D) A 48-hour notice is required."
+          ],
+          "ans": "(D) A 48-hour notice is required.",
+          "id": "q150"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_3",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 153-155)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "News Article\\nBusiness Daily - October 4\\n\\nLocal startup GreenEnergy Solutions has just secured $5 million in funding from a group of international investors. The company, which specializes in affordable solar panels for residential homes, plans to use the money to build a new manufacturing plant on the outskirts of the city. \"This funding will allow us to double our production capacity and hire 200 new workers,\" said CEO Amanda Lewis. Construction of the plant is set to begin in January and should be fully operational by next summer.",
+      "questions": [
+        {
+          "q": "What does GreenEnergy Solutions produce? (Question 153)",
+          "opts": [
+            "(A) Wind turbines",
+            "(B) Solar panels",
+            "(C) Electric cars",
+            "(D) Batteries"
+          ],
+          "ans": "(B) Solar panels",
+          "id": "q153"
+        },
+        {
+          "q": "How much money did the company receive? (Question 154)",
+          "opts": [
+            "(A) $5 million",
+            "(B) $200 thousand",
+            "(C) $10 million",
+            "(D) $15 million"
+          ],
+          "ans": "(A) $5 million",
+          "id": "q153"
+        },
+        {
+          "q": "What will the company do with the funds? (Question 155)",
+          "opts": [
+            "(A) Pay off debts",
+            "(B) Acquire a competitor",
+            "(C) Build a new factory",
+            "(D) Launch a marketing campaign"
+          ],
+          "ans": "(C) Build a new factory",
+          "id": "q153"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_4",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 156-158)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "Email\\nFrom: j.smith@globex.com\\nTo: Marketing Team\\nSubject: Upcoming Trade Show\\n\\nTeam, I wanted to confirm that our booth space for the Tokyo Electronics Expo has been secured. The event runs from September 14 to 18. We need to ship our promotional materials by the end of this month to ensure they clear customs in time. Sarah, please coordinate with the shipping department. Also, the hotel reservations are booked at the Grand Plaza, which is just a ten-minute walk from the convention center. Let me know if you have any questions.",
+      "questions": [
+        {
+          "q": "What is the main purpose of the email? (Question 156)",
+          "opts": [
+            "(A) To cancel a hotel reservation",
+            "(B) To complain about shipping delays",
+            "(C) To provide updates about a trade show",
+            "(D) To introduce a new team member"
+          ],
+          "ans": "(C) To provide updates about a trade show",
+          "id": "q156"
+        },
+        {
+          "q": "When must the promotional materials be shipped? (Question 157)",
+          "opts": [
+            "(A) By September 14",
+            "(B) By September 18",
+            "(C) By the end of the month",
+            "(D) In ten minutes"
+          ],
+          "ans": "(C) By the end of the month",
+          "id": "q156"
+        },
+        {
+          "q": "What is mentioned about the hotel? (Question 158)",
+          "opts": [
+            "(A) It is very expensive.",
+            "(B) It is close to the convention center.",
+            "(C) It has no available rooms.",
+            "(D) It offers free breakfast."
+          ],
+          "ans": "(B) It is close to the convention center.",
+          "id": "q156"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_5",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 159-161)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "Advertisement\\nLooking for a reliable catering service for your next corporate event? Tasty Bites Catering offers premium quality food at competitive prices. We specialize in hot buffets, cold sandwiches, and vegan alternatives. Whether it's a small team meeting of 10 people or a large conference of 500, we have you covered. Book now and receive a 15% discount on your first order. Call us at 555-0198 or visit www.tastybites.com. We require a 48-hour notice for all cancellations.",
+      "questions": [
+        {
+          "q": "What type of business is being advertised? (Question 159)",
+          "opts": [
+            "(A) A travel agency",
+            "(B) A catering service",
+            "(C) A marketing firm",
+            "(D) A restaurant supply store"
+          ],
+          "ans": "(B) A catering service",
+          "id": "q159"
+        },
+        {
+          "q": "How can customers get a discount? (Question 160)",
+          "opts": [
+            "(A) By placing their first order",
+            "(B) By ordering for 500 people",
+            "(C) By paying in cash",
+            "(D) By referring a friend"
+          ],
+          "ans": "(A) By placing their first order",
+          "id": "q159"
+        },
+        {
+          "q": "What is the company's cancellation policy? (Question 161)",
+          "opts": [
+            "(A) No cancellations are allowed.",
+            "(B) Cancellations must be made online.",
+            "(C) A 15% fee is charged for cancellations.",
+            "(D) A 48-hour notice is required."
+          ],
+          "ans": "(D) A 48-hour notice is required.",
+          "id": "q159"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_6",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 162-164)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "News Article\\nBusiness Daily - October 4\\n\\nLocal startup GreenEnergy Solutions has just secured $5 million in funding from a group of international investors. The company, which specializes in affordable solar panels for residential homes, plans to use the money to build a new manufacturing plant on the outskirts of the city. \"This funding will allow us to double our production capacity and hire 200 new workers,\" said CEO Amanda Lewis. Construction of the plant is set to begin in January and should be fully operational by next summer.",
+      "questions": [
+        {
+          "q": "What does GreenEnergy Solutions produce? (Question 162)",
+          "opts": [
+            "(A) Wind turbines",
+            "(B) Solar panels",
+            "(C) Electric cars",
+            "(D) Batteries"
+          ],
+          "ans": "(B) Solar panels",
+          "id": "q162"
+        },
+        {
+          "q": "How much money did the company receive? (Question 163)",
+          "opts": [
+            "(A) $5 million",
+            "(B) $200 thousand",
+            "(C) $10 million",
+            "(D) $15 million"
+          ],
+          "ans": "(A) $5 million",
+          "id": "q162"
+        },
+        {
+          "q": "What will the company do with the funds? (Question 164)",
+          "opts": [
+            "(A) Pay off debts",
+            "(B) Acquire a competitor",
+            "(C) Build a new factory",
+            "(D) Launch a marketing campaign"
+          ],
+          "ans": "(C) Build a new factory",
+          "id": "q162"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_7",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 165-167)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "Email\\nFrom: j.smith@globex.com\\nTo: Marketing Team\\nSubject: Upcoming Trade Show\\n\\nTeam, I wanted to confirm that our booth space for the Tokyo Electronics Expo has been secured. The event runs from September 14 to 18. We need to ship our promotional materials by the end of this month to ensure they clear customs in time. Sarah, please coordinate with the shipping department. Also, the hotel reservations are booked at the Grand Plaza, which is just a ten-minute walk from the convention center. Let me know if you have any questions.",
+      "questions": [
+        {
+          "q": "What is the main purpose of the email? (Question 165)",
+          "opts": [
+            "(A) To cancel a hotel reservation",
+            "(B) To complain about shipping delays",
+            "(C) To provide updates about a trade show",
+            "(D) To introduce a new team member"
+          ],
+          "ans": "(C) To provide updates about a trade show",
+          "id": "q165"
+        },
+        {
+          "q": "When must the promotional materials be shipped? (Question 166)",
+          "opts": [
+            "(A) By September 14",
+            "(B) By September 18",
+            "(C) By the end of the month",
+            "(D) In ten minutes"
+          ],
+          "ans": "(C) By the end of the month",
+          "id": "q165"
+        },
+        {
+          "q": "What is mentioned about the hotel? (Question 167)",
+          "opts": [
+            "(A) It is very expensive.",
+            "(B) It is close to the convention center.",
+            "(C) It has no available rooms.",
+            "(D) It offers free breakfast."
+          ],
+          "ans": "(B) It is close to the convention center.",
+          "id": "q165"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_8",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 168-170)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "Advertisement\\nLooking for a reliable catering service for your next corporate event? Tasty Bites Catering offers premium quality food at competitive prices. We specialize in hot buffets, cold sandwiches, and vegan alternatives. Whether it's a small team meeting of 10 people or a large conference of 500, we have you covered. Book now and receive a 15% discount on your first order. Call us at 555-0198 or visit www.tastybites.com. We require a 48-hour notice for all cancellations.",
+      "questions": [
+        {
+          "q": "What type of business is being advertised? (Question 168)",
+          "opts": [
+            "(A) A travel agency",
+            "(B) A catering service",
+            "(C) A marketing firm",
+            "(D) A restaurant supply store"
+          ],
+          "ans": "(B) A catering service",
+          "id": "q168"
+        },
+        {
+          "q": "How can customers get a discount? (Question 169)",
+          "opts": [
+            "(A) By placing their first order",
+            "(B) By ordering for 500 people",
+            "(C) By paying in cash",
+            "(D) By referring a friend"
+          ],
+          "ans": "(A) By placing their first order",
+          "id": "q168"
+        },
+        {
+          "q": "What is the company's cancellation policy? (Question 170)",
+          "opts": [
+            "(A) No cancellations are allowed.",
+            "(B) Cancellations must be made online.",
+            "(C) A 15% fee is charged for cancellations.",
+            "(D) A 48-hour notice is required."
+          ],
+          "ans": "(D) A 48-hour notice is required.",
+          "id": "q168"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_9",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 171-173)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "News Article\\nBusiness Daily - October 4\\n\\nLocal startup GreenEnergy Solutions has just secured $5 million in funding from a group of international investors. The company, which specializes in affordable solar panels for residential homes, plans to use the money to build a new manufacturing plant on the outskirts of the city. \"This funding will allow us to double our production capacity and hire 200 new workers,\" said CEO Amanda Lewis. Construction of the plant is set to begin in January and should be fully operational by next summer.",
+      "questions": [
+        {
+          "q": "What does GreenEnergy Solutions produce? (Question 171)",
+          "opts": [
+            "(A) Wind turbines",
+            "(B) Solar panels",
+            "(C) Electric cars",
+            "(D) Batteries"
+          ],
+          "ans": "(B) Solar panels",
+          "id": "q171"
+        },
+        {
+          "q": "How much money did the company receive? (Question 172)",
+          "opts": [
+            "(A) $5 million",
+            "(B) $200 thousand",
+            "(C) $10 million",
+            "(D) $15 million"
+          ],
+          "ans": "(A) $5 million",
+          "id": "q171"
+        },
+        {
+          "q": "What will the company do with the funds? (Question 173)",
+          "opts": [
+            "(A) Pay off debts",
+            "(B) Acquire a competitor",
+            "(C) Build a new factory",
+            "(D) Launch a marketing campaign"
+          ],
+          "ans": "(C) Build a new factory",
+          "id": "q171"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_10",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 174-176)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "Email\\nFrom: j.smith@globex.com\\nTo: Marketing Team\\nSubject: Upcoming Trade Show\\n\\nTeam, I wanted to confirm that our booth space for the Tokyo Electronics Expo has been secured. The event runs from September 14 to 18. We need to ship our promotional materials by the end of this month to ensure they clear customs in time. Sarah, please coordinate with the shipping department. Also, the hotel reservations are booked at the Grand Plaza, which is just a ten-minute walk from the convention center. Let me know if you have any questions.",
+      "questions": [
+        {
+          "q": "What is the main purpose of the email? (Question 174)",
+          "opts": [
+            "(A) To cancel a hotel reservation",
+            "(B) To complain about shipping delays",
+            "(C) To provide updates about a trade show",
+            "(D) To introduce a new team member"
+          ],
+          "ans": "(C) To provide updates about a trade show",
+          "id": "q174"
+        },
+        {
+          "q": "When must the promotional materials be shipped? (Question 175)",
+          "opts": [
+            "(A) By September 14",
+            "(B) By September 18",
+            "(C) By the end of the month",
+            "(D) In ten minutes"
+          ],
+          "ans": "(C) By the end of the month",
+          "id": "q174"
+        },
+        {
+          "q": "What is mentioned about the hotel? (Question 176)",
+          "opts": [
+            "(A) It is very expensive.",
+            "(B) It is close to the convention center.",
+            "(C) It has no available rooms.",
+            "(D) It offers free breakfast."
+          ],
+          "ans": "(B) It is close to the convention center.",
+          "id": "q174"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_11",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 177-179)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "Advertisement\\nLooking for a reliable catering service for your next corporate event? Tasty Bites Catering offers premium quality food at competitive prices. We specialize in hot buffets, cold sandwiches, and vegan alternatives. Whether it's a small team meeting of 10 people or a large conference of 500, we have you covered. Book now and receive a 15% discount on your first order. Call us at 555-0198 or visit www.tastybites.com. We require a 48-hour notice for all cancellations.",
+      "questions": [
+        {
+          "q": "What type of business is being advertised? (Question 177)",
+          "opts": [
+            "(A) A travel agency",
+            "(B) A catering service",
+            "(C) A marketing firm",
+            "(D) A restaurant supply store"
+          ],
+          "ans": "(B) A catering service",
+          "id": "q177"
+        },
+        {
+          "q": "How can customers get a discount? (Question 178)",
+          "opts": [
+            "(A) By placing their first order",
+            "(B) By ordering for 500 people",
+            "(C) By paying in cash",
+            "(D) By referring a friend"
+          ],
+          "ans": "(A) By placing their first order",
+          "id": "q177"
+        },
+        {
+          "q": "What is the company's cancellation policy? (Question 179)",
+          "opts": [
+            "(A) No cancellations are allowed.",
+            "(B) Cancellations must be made online.",
+            "(C) A 15% fee is charged for cancellations.",
+            "(D) A 48-hour notice is required."
+          ],
+          "ans": "(D) A 48-hour notice is required.",
+          "id": "q177"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_12",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 180-182)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "News Article\\nBusiness Daily - October 4\\n\\nLocal startup GreenEnergy Solutions has just secured $5 million in funding from a group of international investors. The company, which specializes in affordable solar panels for residential homes, plans to use the money to build a new manufacturing plant on the outskirts of the city. \"This funding will allow us to double our production capacity and hire 200 new workers,\" said CEO Amanda Lewis. Construction of the plant is set to begin in January and should be fully operational by next summer.",
+      "questions": [
+        {
+          "q": "What does GreenEnergy Solutions produce? (Question 180)",
+          "opts": [
+            "(A) Wind turbines",
+            "(B) Solar panels",
+            "(C) Electric cars",
+            "(D) Batteries"
+          ],
+          "ans": "(B) Solar panels",
+          "id": "q180"
+        },
+        {
+          "q": "How much money did the company receive? (Question 181)",
+          "opts": [
+            "(A) $5 million",
+            "(B) $200 thousand",
+            "(C) $10 million",
+            "(D) $15 million"
+          ],
+          "ans": "(A) $5 million",
+          "id": "q180"
+        },
+        {
+          "q": "What will the company do with the funds? (Question 182)",
+          "opts": [
+            "(A) Pay off debts",
+            "(B) Acquire a competitor",
+            "(C) Build a new factory",
+            "(D) Launch a marketing campaign"
+          ],
+          "ans": "(C) Build a new factory",
+          "id": "q180"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_13",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 183-185)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "Email\\nFrom: j.smith@globex.com\\nTo: Marketing Team\\nSubject: Upcoming Trade Show\\n\\nTeam, I wanted to confirm that our booth space for the Tokyo Electronics Expo has been secured. The event runs from September 14 to 18. We need to ship our promotional materials by the end of this month to ensure they clear customs in time. Sarah, please coordinate with the shipping department. Also, the hotel reservations are booked at the Grand Plaza, which is just a ten-minute walk from the convention center. Let me know if you have any questions.",
+      "questions": [
+        {
+          "q": "What is the main purpose of the email? (Question 183)",
+          "opts": [
+            "(A) To cancel a hotel reservation",
+            "(B) To complain about shipping delays",
+            "(C) To provide updates about a trade show",
+            "(D) To introduce a new team member"
+          ],
+          "ans": "(C) To provide updates about a trade show",
+          "id": "q183"
+        },
+        {
+          "q": "When must the promotional materials be shipped? (Question 184)",
+          "opts": [
+            "(A) By September 14",
+            "(B) By September 18",
+            "(C) By the end of the month",
+            "(D) In ten minutes"
+          ],
+          "ans": "(C) By the end of the month",
+          "id": "q183"
+        },
+        {
+          "q": "What is mentioned about the hotel? (Question 185)",
+          "opts": [
+            "(A) It is very expensive.",
+            "(B) It is close to the convention center.",
+            "(C) It has no available rooms.",
+            "(D) It offers free breakfast."
+          ],
+          "ans": "(B) It is close to the convention center.",
+          "id": "q183"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_14",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 186-188)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "Advertisement\\nLooking for a reliable catering service for your next corporate event? Tasty Bites Catering offers premium quality food at competitive prices. We specialize in hot buffets, cold sandwiches, and vegan alternatives. Whether it's a small team meeting of 10 people or a large conference of 500, we have you covered. Book now and receive a 15% discount on your first order. Call us at 555-0198 or visit www.tastybites.com. We require a 48-hour notice for all cancellations.",
+      "questions": [
+        {
+          "q": "What type of business is being advertised? (Question 186)",
+          "opts": [
+            "(A) A travel agency",
+            "(B) A catering service",
+            "(C) A marketing firm",
+            "(D) A restaurant supply store"
+          ],
+          "ans": "(B) A catering service",
+          "id": "q186"
+        },
+        {
+          "q": "How can customers get a discount? (Question 187)",
+          "opts": [
+            "(A) By placing their first order",
+            "(B) By ordering for 500 people",
+            "(C) By paying in cash",
+            "(D) By referring a friend"
+          ],
+          "ans": "(A) By placing their first order",
+          "id": "q186"
+        },
+        {
+          "q": "What is the company's cancellation policy? (Question 188)",
+          "opts": [
+            "(A) No cancellations are allowed.",
+            "(B) Cancellations must be made online.",
+            "(C) A 15% fee is charged for cancellations.",
+            "(D) A 48-hour notice is required."
+          ],
+          "ans": "(D) A 48-hour notice is required.",
+          "id": "q186"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_15",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 189-191)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "News Article\\nBusiness Daily - October 4\\n\\nLocal startup GreenEnergy Solutions has just secured $5 million in funding from a group of international investors. The company, which specializes in affordable solar panels for residential homes, plans to use the money to build a new manufacturing plant on the outskirts of the city. \"This funding will allow us to double our production capacity and hire 200 new workers,\" said CEO Amanda Lewis. Construction of the plant is set to begin in January and should be fully operational by next summer.",
+      "questions": [
+        {
+          "q": "What does GreenEnergy Solutions produce? (Question 189)",
+          "opts": [
+            "(A) Wind turbines",
+            "(B) Solar panels",
+            "(C) Electric cars",
+            "(D) Batteries"
+          ],
+          "ans": "(B) Solar panels",
+          "id": "q189"
+        },
+        {
+          "q": "How much money did the company receive? (Question 190)",
+          "opts": [
+            "(A) $5 million",
+            "(B) $200 thousand",
+            "(C) $10 million",
+            "(D) $15 million"
+          ],
+          "ans": "(A) $5 million",
+          "id": "q189"
+        },
+        {
+          "q": "What will the company do with the funds? (Question 191)",
+          "opts": [
+            "(A) Pay off debts",
+            "(B) Acquire a competitor",
+            "(C) Build a new factory",
+            "(D) Launch a marketing campaign"
+          ],
+          "ans": "(C) Build a new factory",
+          "id": "q189"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_16",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 192-194)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "Email\\nFrom: j.smith@globex.com\\nTo: Marketing Team\\nSubject: Upcoming Trade Show\\n\\nTeam, I wanted to confirm that our booth space for the Tokyo Electronics Expo has been secured. The event runs from September 14 to 18. We need to ship our promotional materials by the end of this month to ensure they clear customs in time. Sarah, please coordinate with the shipping department. Also, the hotel reservations are booked at the Grand Plaza, which is just a ten-minute walk from the convention center. Let me know if you have any questions.",
+      "questions": [
+        {
+          "q": "What is the main purpose of the email? (Question 192)",
+          "opts": [
+            "(A) To cancel a hotel reservation",
+            "(B) To complain about shipping delays",
+            "(C) To provide updates about a trade show",
+            "(D) To introduce a new team member"
+          ],
+          "ans": "(C) To provide updates about a trade show",
+          "id": "q192"
+        },
+        {
+          "q": "When must the promotional materials be shipped? (Question 193)",
+          "opts": [
+            "(A) By September 14",
+            "(B) By September 18",
+            "(C) By the end of the month",
+            "(D) In ten minutes"
+          ],
+          "ans": "(C) By the end of the month",
+          "id": "q192"
+        },
+        {
+          "q": "What is mentioned about the hotel? (Question 194)",
+          "opts": [
+            "(A) It is very expensive.",
+            "(B) It is close to the convention center.",
+            "(C) It has no available rooms.",
+            "(D) It offers free breakfast."
+          ],
+          "ans": "(B) It is close to the convention center.",
+          "id": "q192"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_17",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 195-197)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "Advertisement\\nLooking for a reliable catering service for your next corporate event? Tasty Bites Catering offers premium quality food at competitive prices. We specialize in hot buffets, cold sandwiches, and vegan alternatives. Whether it's a small team meeting of 10 people or a large conference of 500, we have you covered. Book now and receive a 15% discount on your first order. Call us at 555-0198 or visit www.tastybites.com. We require a 48-hour notice for all cancellations.",
+      "questions": [
+        {
+          "q": "What type of business is being advertised? (Question 195)",
+          "opts": [
+            "(A) A travel agency",
+            "(B) A catering service",
+            "(C) A marketing firm",
+            "(D) A restaurant supply store"
+          ],
+          "ans": "(B) A catering service",
+          "id": "q195"
+        },
+        {
+          "q": "How can customers get a discount? (Question 196)",
+          "opts": [
+            "(A) By placing their first order",
+            "(B) By ordering for 500 people",
+            "(C) By paying in cash",
+            "(D) By referring a friend"
+          ],
+          "ans": "(A) By placing their first order",
+          "id": "q195"
+        },
+        {
+          "q": "What is the company's cancellation policy? (Question 197)",
+          "opts": [
+            "(A) No cancellations are allowed.",
+            "(B) Cancellations must be made online.",
+            "(C) A 15% fee is charged for cancellations.",
+            "(D) A 48-hour notice is required."
+          ],
+          "ans": "(D) A 48-hour notice is required.",
+          "id": "q195"
+        }
+      ]
+    },
+    {
+      "id": "part7_passage_18",
+      "type": "quiz",
+      "title": "Part 7: Reading Comprehension (Questions 198-200)",
+      "instructions": "Read the following text and answer the questions below.",
+      "passageText": "News Article\\nBusiness Daily - October 4\\n\\nLocal startup GreenEnergy Solutions has just secured $5 million in funding from a group of international investors. The company, which specializes in affordable solar panels for residential homes, plans to use the money to build a new manufacturing plant on the outskirts of the city. \"This funding will allow us to double our production capacity and hire 200 new workers,\" said CEO Amanda Lewis. Construction of the plant is set to begin in January and should be fully operational by next summer.",
+      "questions": [
+        {
+          "q": "What does GreenEnergy Solutions produce? (Question 198)",
+          "opts": [
+            "(A) Wind turbines",
+            "(B) Solar panels",
+            "(C) Electric cars",
+            "(D) Batteries"
+          ],
+          "ans": "(B) Solar panels",
+          "id": "q198"
+        },
+        {
+          "q": "How much money did the company receive? (Question 199)",
+          "opts": [
+            "(A) $5 million",
+            "(B) $200 thousand",
+            "(C) $10 million",
+            "(D) $15 million"
+          ],
+          "ans": "(A) $5 million",
+          "id": "q198"
+        },
+        {
+          "q": "What will the company do with the funds? (Question 200)",
+          "opts": [
+            "(A) Pay off debts",
+            "(B) Acquire a competitor",
+            "(C) Build a new factory",
+            "(D) Launch a marketing campaign"
+          ],
+          "ans": "(C) Build a new factory",
+          "id": "q198"
         }
       ]
     }

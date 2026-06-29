@@ -12,7 +12,7 @@ import confetti from 'canvas-confetti';
 import { useUIStore } from '@/store/uiStore';
 
 // URL HÍBRIDA: Detecta si estás en Vercel (Prod) o en tu PC (Dev)
-const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8022';
 
 interface Props {
   xpEarned: number;
@@ -588,11 +588,11 @@ export default function LessonComplete({
                 </div>
 
                 {!isSuccess && (
-                  <div className="bg-rose-950/20 border border-rose-900/40 p-4 flex gap-3 text-rose-300 text-xs">
-                    <AlertCircle size={18} className="flex-shrink-0" />
+                  <div className="bg-white border border-slate-200 p-4 flex gap-3 text-slate-900 text-xs rounded-none">
+                    <AlertCircle size={18} className="flex-shrink-0 text-slate-800" />
                     <div>
-                      <p className="font-bold">Módulo reprobado</p>
-                      <p className="text-[11px] text-rose-400 mt-0.5">Necesitas una precisión mínima del 50% para que OnixLingo emita tu certificado oficial de puntaje real.</p>
+                      <p className="font-bold text-slate-900">Módulo reprobado</p>
+                      <p className="text-[11px] text-slate-600 mt-0.5">Necesitas una precisión mínima del 50% para que OnixLingo emita tu certificado oficial de puntaje real.</p>
                     </div>
                   </div>
                 )}

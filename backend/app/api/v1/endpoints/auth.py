@@ -14,7 +14,7 @@ from google.oauth2 import id_token
 from google.auth.transport import requests
 
 from app.database import get_db
-from app.db.models import User, BetaCode
+from app.db.models import User, BetaCode, GlobalSetting
 from app.config import settings 
 from app.core.security import verify_password, get_password_hash, create_access_token
 
@@ -67,6 +67,11 @@ class ResetPasswordRequest(BaseModel):
 
 @router.post("/register", status_code=status.HTTP_201_CREATED)
 def register(user: UserCreate, db: Session = Depends(get_db)):
+    # 0. Check global setting for registration
+    registration_setting = db.query(GlobalSetting).filter(GlobalSetting.key == "registration_open").first()
+    if registration_setting and registration_setting.value.lower() == "false":
+        raise HTTPException(status_code=403, detail="El registro de nuevos alumnos está cerrado por mantenimiento.")
+
     # 1. Verificar si el código de acceso único existe y está disponible (si fue provisto)
     beta_code_record = None
     clean_code = user.invited_by_code.strip() if user.invited_by_code else None

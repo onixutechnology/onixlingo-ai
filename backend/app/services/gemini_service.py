@@ -36,7 +36,7 @@ class GeminiService:
         }
         
         # Modelo base (Usamos Flash por velocidad y bajo costo)
-        self.model_name = 'gemini-1.5-flash' 
+        self.model_name = 'gemini-2.5-flash' 
 
     async def get_chat_response(self, message: str, context_instruction: str) -> Dict[str, Any]:
         """
@@ -93,17 +93,23 @@ class GeminiService:
                 "analysis": None
             }
 
-    async def get_response(self, message: str, context: str, mode: str = "practice") -> Dict[str, Any]:
+    async def get_response(self, message: str, context: str, mode: str = "practice", ai_config: dict = None) -> Dict[str, Any]:
         """
         Genera la respuesta del tutor evaluando gramática, vocabulario y tono.
         Adaptador inteligente y profesional para el endpoint /chat.
         """
         try:
+            model_version = ai_config.get("model_version", self.model_name) if ai_config else self.model_name
+            temperature = float(ai_config.get("temperature", 0.7)) if ai_config else 0.7
+            sys_prompt = ai_config.get("system_prompt", context) if ai_config else context
+
+            generation_config = {**self.generation_config, "temperature": temperature}
+
             # Creamos el modelo dinámicamente inyectando el rol e instrucciones de sistema
             model = genai.GenerativeModel(
-                model_name=self.model_name,
-                system_instruction=context,
-                generation_config=self.generation_config,
+                model_name=model_version,
+                system_instruction=sys_prompt,
+                generation_config=generation_config,
                 safety_settings=self.safety_settings
             )
 
@@ -208,7 +214,7 @@ class GeminiService:
         Traduce y adapta un texto técnico/corporativo en inglés a un discurso hablado profesional en el idioma objetivo.
         """
         try:
-            model = genai.GenerativeModel('gemini-1.5-flash')
+            model = genai.GenerativeModel('gemini-2.5-flash')
             prompt = f"""
             Translate and adapt the following English business/corporate training slide text into a highly professional, natural spoken explanation in {target_lang}.
             
@@ -269,3 +275,87 @@ class GeminiService:
                 "instruction": "Analiza la posición y encuentra el mejor movimiento crítico.",
                 "explanation": "¡Excelente jugada! Has encontrado la táctica ganadora en la posición."
             }
+
+    async def evaluate_writing(self, student_text: str, task_prompt: str) -> Dict[str, Any]:
+        """
+        Evalúa de forma estricta y profesional un texto escrito (ensayo, correo corporativo).
+        Diseñado para consumir mínimos tokens exigiendo respuestas muy breves.
+        """
+        try:
+            model = genai.GenerativeModel(
+                model_name=self.model_name,
+                generation_config=self.generation_config,
+                safety_settings=self.safety_settings
+            )
+            
+            prompt = f"""
+            Task: Executive/Academic Writing Evaluation.
+            Prompt given to student: "{task_prompt}"
+            Student's text: "{student_text}"
+            
+            Analyze grammar, vocabulary, and coherence strictly. Keep it ultra-concise to save tokens.
+            
+            Return JSON ONLY:
+            {{
+                "grammar_score": Int (0-100),
+                "vocab_score": Int (0-100),
+                "coherence_score": Int (0-100),
+                "mistakes": ["Brief array of grammar/spelling errors found (max 3 items)"],
+                "rewrite_suggestion": "String. Provide ONE highly professional, native C-Level version of the text. Keep it brief."
+            }}
+            """
+            
+            response = await model.generate_content_async(prompt)
+            result = json.loads(response.text)
+            
+            # Sanitización rápida
+            return {
+                "grammar_score": result.get("grammar_score", 0),
+                "vocab_score": result.get("vocab_score", 0),
+                "coherence_score": result.get("coherence_score", 0),
+                "mistakes": result.get("mistakes", []),
+                "rewrite_suggestion": result.get("rewrite_suggestion", "N/A")
+            }
+        except Exception as e:
+            logger.error(f"Error in evaluate_writing: {e}")
+            return {
+                "grammar_score": 0, "vocab_score": 0, "coherence_score": 0,
+                "mistakes": ["Error processing evaluation."],
+                "rewrite_suggestion": "Please try submitting your text again."
+            }
+
+    async def generate_cfo_report(self, stats: dict) -> str:
+        """
+        Genera un reporte ejecutivo como un CFO de Silicon Valley basado en las analíticas de OnixLingo.
+        """
+        try:
+            model = genai.GenerativeModel(
+                model_name=self.model_name,
+                generation_config={**self.generation_config, "response_mime_type": "text/plain"},
+                safety_settings=self.safety_settings
+            )
+            
+            prompt = f"""
+            Actúa como el Chief Financial Officer (CFO) y experto en crecimiento de startups (Silicon Valley).
+            Acabo de solicitarte un análisis de nuestra plataforma SaaS educativa (OnixLingo).
+            
+            Aquí están las métricas de la última proyección:
+            - MRR Actual: ${stats.get('current_mrr', 0)}
+            - MRR Proyectado (30 días): ${stats.get('projected_mrr', 0)}
+            - Crecimiento Esperado: {stats.get('expected_growth_percentage', 0)}%
+            - Usuarios en Riesgo Inminente de Churn: {stats.get('churn_risk_count', 0)}
+            - Usuarios con Alta Probabilidad de Upgrade (PRO): {stats.get('upgrade_candidates_count', 0)}
+            
+            Tu tarea: Redacta un Resumen Ejecutivo en español de máximo 2 párrafos cortos. 
+            El primer párrafo debe dar un diagnóstico directo, filoso e inteligente de la situación financiera.
+            El segundo párrafo debe dar 2 recomendaciones accionables exactas para intervenir y mejorar estos números esta semana.
+            
+            Sé profesional, conciso y utiliza jerga de startups/finanzas (ej. LTV, Churn, Conversión). No uses saludos largos ni despedidas. Ve directo al grano.
+            """
+            
+            response = await model.generate_content_async(prompt)
+            return response.text.strip()
+            
+        except Exception as e:
+            logger.error(f"Error in generate_cfo_report: {e}")
+            return "Error de conexión con el modelo predictivo. Por favor, recalcule más tarde."

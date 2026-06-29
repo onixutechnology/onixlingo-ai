@@ -1,0 +1,40 @@
+{
+  "id": "toeic_speaking_v1",
+  "title": "TOEIC Speaking Test - Full Simulation V1",
+  "level": "C1",
+  "description": "Simulación completa del examen TOEIC Speaking. Incluye lectura en voz alta, descripción visual y respuestas situacionales usando Google Cloud STT.",
+  "time_limit": 1200,
+  "stages": [
+    {
+      "id": "part1_read_aloud_1",
+      "type": "practice_speaking",
+      "target_text": "Good morning passengers. This is an announcement for all passengers traveling on flight 402 to London. We are currently experiencing a slight delay due to inclement weather. Please remain seated and we will provide an update shortly.",
+      "instructions": "Part 1: Read the text aloud naturally and clearly. You have 45 seconds to prepare."
+    },
+    {
+      "id": "part2_describe_picture",
+      "type": "practice_speaking",
+      "target_text": "In this picture, I can see three people sitting around a conference table. One woman is pointing at a laptop screen, while the other two are taking notes. They appear to be in a modern office with large windows.",
+      "instructions": "Part 2: Describe the picture on your screen in as much detail as possible. You have 45 seconds to speak.",
+      "image_url": "/media/exams/images/toeic_speaking_q2_corporate.png"
+    },
+    {
+      "id": "part3_respond_q4",
+      "type": "practice_speaking",
+      "target_text": "I usually commute to work by taking the subway. It takes me about 30 minutes each way, and I prefer it because it avoids morning traffic.",
+      "instructions": "Part 3 (Q4): Respond to the question.\n\nImagine that a marketing firm is doing research. Answer their questions.\n\nQuestion: How do you usually commute to work or school, and how long does it take?"
+    },
+    {
+      "id": "part5_propose_solution",
+      "type": "practice_speaking",
+      "target_text": "Hi Mr. Smith, this is John returning your call. I understand you received the wrong model of the printer you ordered. I apologize for the inconvenience. I will immediately dispatch a courier with the correct model today, and they will pick up the wrong one at no extra charge.",
+      "instructions": "Part 5 (Q10): Propose a solution.\n\nYou are a customer service manager. Listen to the voicemail from an angry client who received the wrong product. Leave a voicemail proposing a solution."
+    },
+    {
+      "id": "part6_express_opinion",
+      "type": "practice_speaking",
+      "target_text": "I strongly believe that continuing education is essential for career growth. Firstly, technology evolves rapidly, and employees must update their skills to remain competitive. Secondly, learning new concepts fosters innovation and creativity within the company.",
+      "instructions": "Part 6 (Q11): Express an opinion.\n\nDo you agree or disagree with the following statement: 'Employees should be required to take continuing education courses every year.' Support your answer with specific reasons."
+    }
+  ]
+}

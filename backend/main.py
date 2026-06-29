@@ -9,16 +9,20 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request, HTTPException, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
+import asyncio
 
 # --- IMPORTACIONES LOCALES ---
 from app.config import settings
-from app.database import create_db, get_db
+from app.database import create_db, get_db, SessionLocal
+from app.db import models
 from app.services import user_service
+from app.services.scheduler_service import cron_loop
 from app.datachess.seed_chess import generate_lessons 
 
 # --- IMPORTAMOS LOS ROUTERS ---
-from app.api.v1.endpoints import auth, lessons, progress, ai, users, speech, chess_ws, billing, avatar, exercises, admin
+from app.api.v1.endpoints import auth, lessons, progress, ai, users, speech, chess_ws, billing, avatar, exercises, admin, broadcast_ws
 from app.api.v1.endpoints import chess as chess_endpoints
 from app.api import chess 
 
@@ -29,6 +33,8 @@ async def lifespan(app: FastAPI):
         level=logging.INFO
     )
     logger = logging.getLogger("OnixLingo.Core")
+    # 🔥 Start the CRON engine background task
+    cron_task = asyncio.create_task(cron_loop())
     try:
         create_db()
         logger.info("[DB] Base de datos conectada y esquemas sincronizados.")
@@ -38,6 +44,8 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.critical(f"[DB] Error critico al conectar DB: {e}")
     yield
+    # Clean up the task on shutdown
+    cron_task.cancel()
     logger.info("[SYSTEM] Apagando sistema OnixLingo...")
 
 app = FastAPI(
@@ -50,13 +58,34 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.BACKEND_CORS_ORIGINS, 
-    allow_origin_regex=r"(https://.*\.vercel\.app|http://localhost:\d+|http://127\.0\.0\.1:\d+)", 
+    allow_origins=[
+        "http://localhost:3000", "http://127.0.0.1:3000",
+        "http://localhost:3001", "http://127.0.0.1:3001",
+        "http://localhost:3002", "http://127.0.0.1:3002",
+        "http://localhost:5173", "http://127.0.0.1:5173",
+        "https://onixlingo.onixu.company", "https://api.onixlingo.onixu.company"
+    ],
     allow_credentials=True, 
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"], 
     allow_headers=["*"],
     expose_headers=["*"]
 )
+
+@app.middleware("http")
+async def maintenance_middleware(request: Request, call_next):
+    path = request.url.path
+    # Only block /api/v1/ endpoints, EXCEPT /admin, /auth/login, /webhooks
+    if path.startswith("/api/v1/") and not path.startswith("/api/v1/admin") and not path.startswith("/api/v1/auth/login") and not path.startswith("/api/v1/webhooks"):
+        db = SessionLocal()
+        try:
+            m_mode = db.query(models.GlobalSetting).filter(models.GlobalSetting.key == "maintenance_mode").first()
+            if m_mode and m_mode.value.lower() == "true":
+                return JSONResponse(status_code=503, content={"detail": "La plataforma se encuentra en mantenimiento programado. Vuelve pronto."})
+        finally:
+            db.close()
+            
+    response = await call_next(request)
+    return response
 
 # 🔥 CORRECCIÓN: Webhook de Paddle optimizado para Integer IDs
 @app.post("/api/v1/webhooks/paddle", tags=["Payments"], include_in_schema=False)
@@ -101,12 +130,43 @@ async def paddle_webhook(
                 logger.info(f"✅ [UPGRADE] Usuario ID {user_id} actualizado a {tier.upper()} exitosamente vía Paddle.")
             else:
                 logger.warning(f"⚠️ [WARNING] Usuario ID {user_id} pagó pero no se encontró en DB.")
+            
+            # ── REGISTRAR LA TRANSACCIÓN REAL EN LA DB ──
+            paddle_txn_id = data.get("id", "")  # ID de transacción de Paddle
+            
+            # Extraer el monto real pagado por el usuario
+            details = data.get("details", {})
+            totals = details.get("totals", {})
+            # Paddle envía el monto en centavos (ej: 999 = $9.99)
+            raw_amount = totals.get("grand_total", "0")
+            amount = float(raw_amount) / 100 if raw_amount else (29.99 if tier == "executive" else 9.99)
+            currency = data.get("currency_code", "USD")
+            
+            # Evitar duplicados: verificar que no exista ya esta transacción
+            existing_tx = db.query(models.Transaction).filter(
+                models.Transaction.paddle_transaction_id == paddle_txn_id
+            ).first()
+            
+            if not existing_tx and paddle_txn_id:
+                new_tx = models.Transaction(
+                    user_id=user_id,
+                    amount=amount,
+                    currency=currency,
+                    status="completed",
+                    paddle_transaction_id=paddle_txn_id,
+                    tier_purchased=tier
+                )
+                db.add(new_tx)
+                db.commit()
+                logger.info(f"💰 [TRANSACTION] Registrada: ${amount} {currency} | Tier: {tier} | Paddle ID: {paddle_txn_id}")
+            elif existing_tx:
+                logger.info(f"ℹ️ [DUPLICATE] Transacción {paddle_txn_id} ya registrada, ignorando duplicado.")
                 
         except (TypeError, ValueError):
             logger.error(f"❌ [PADDLE ERROR] El internal_user_id no es un entero válido: {custom_data.get('internal_user_id')}")
             return {"status": "error", "detail": "Invalid user ID"}
         except Exception as e:
-            logger.error(f"❌ [DB ERROR] Fallo al actualizar estado PRO: {e}")
+            logger.error(f"❌ [DB ERROR] Fallo al actualizar estado PRO o registrar transacción: {e}")
 
     return {"status": "success", "event_type": event_type}
 
@@ -125,6 +185,9 @@ app.include_router(admin.router, prefix="/api/v1/admin", tags=["Admin Panel"])
 
 # ⚡ NUEVO: WEBSOCKET PARA AJEDREZ EN VIVO
 app.include_router(chess_ws.router, prefix="/ws/chess/matches", tags=["WebSockets"])
+
+# ⚡ NUEVO: WEBSOCKET PARA BROADCASTING GLOBAL
+app.include_router(broadcast_ws.router, prefix="/ws/broadcast", tags=["WebSockets"])
 
 @app.get("/", tags=["System"])
 @app.head("/", include_in_schema=False)

@@ -138,7 +138,7 @@ export default function ChessVsAIPage() {
     try {
       const { token } = useAuthStore.getState();
       const safeToken = token?.startsWith('Bearer ') ? token : `Bearer ${token}`;
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8020'}/api/v1/chess/ai-opening`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8021'}/api/v1/chess/ai-opening`, {
         headers: { Authorization: safeToken }
       });
       if (res.ok) {

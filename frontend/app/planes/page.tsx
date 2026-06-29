@@ -55,7 +55,7 @@ const plans = [
       'Corporativo Simulator interactivo (Escenarios M&A, VC Pitch, etc.)',
       'Módulo de Speech Analytics Avanzado (8 dimensiones fonéticas)',
       'Acreditación oficial "Executive Speech Standard"',
-      'Certificados blockchain de OnixLingo verificables',
+      'Reportes ejecutivos de rendimiento detallados',
       'Descuentos en licencias corporativas adicionales',
       'Soporte prioritario 24/7 de OnixLingo'
     ],
@@ -106,7 +106,7 @@ export default function PlanesPage() {
       <LandingNavbar />
 
       {/* HERO (BLACK) */}
-      <header className="pt-36 pb-16 px-6 text-center relative overflow-hidden bg-slate-50">
+      <header className="pt-28 pb-12 px-6 text-center relative overflow-hidden bg-slate-50">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#D4AF37]/10 blur-[130px] opacity-40 pointer-events-none" />
         <div className="max-w-4xl mx-auto relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-bold uppercase tracking-widest shadow-none">
@@ -349,7 +349,7 @@ export default function PlanesPage() {
                   { name: 'Multiplicador de Boletos VIP Sorteos', f: 'No', p: 'x5 Boost en Pro', e: 'x5 Boost en Pro' },
                   { name: 'Corporativo Simulator Alta Dirección', f: 'No', p: 'No', e: 'Ilimitado (60 unidades)' },
                   { name: 'Speech Analytics Diagnostics', f: 'Standard Feedback', p: 'Standard Feedback', e: 'Avanzado de 8 dimensiones fonéticas' },
-                  { name: 'Acreditaciones Oficiales OnixLingo', f: 'No', p: 'No', e: 'Sí (Verificable blockchain)' }
+                  { name: 'Reportes Ejecutivos de Progreso', f: 'No', p: 'No', e: 'Sí' }
                 ].map((row, idx) => (
                   <tr key={idx} className="border-b border-slate-200 hover:bg-white/50">
                     <td className="p-3.5 font-bold text-slate-900 border-r border-slate-200">{row.name}</td>

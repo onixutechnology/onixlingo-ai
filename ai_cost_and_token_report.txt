@@ -1,0 +1,103 @@
+=============================================================================
+      REPORTE DETALLADO DE ARQUITECTURA, CONSUMO DE TOKENS Y COSTOS IA
+                       ONIXLINGO LANGUAGE AI TUTOR
+=============================================================================
+
+Este documento desglosa a nivel técnico la eficiencia y el consumo estimado de 
+la infraestructura de Inteligencia Artificial que potencia los módulos de 
+Speaking y Writing de los exámenes oficiales (TOEIC, IELTS, TOEFL, etc.).
+
+-----------------------------------------------------------------------------
+1. METODOLOGÍA DE AHORRO Y EFICIENCIA "TOKEN-FRIENDLY"
+-----------------------------------------------------------------------------
+Toda la arquitectura fue diseñada pensando en la escalabilidad masiva y en 
+proteger la facturación de Google Cloud. Para lograr esto, se implementaron 
+las siguientes estrategias:
+
+A) JSON Mode Estricto: 
+   En lugar de permitir que Gemini genere respuestas conversacionales largas y 
+   costosas (ej. "¡Hola! He revisado tu ensayo y aquí tienes el resultado..."), 
+   la API se forzó a usar `response_mime_type="application/json"`. Esto 
+   obliga a la IA a devolver exclusivamente los datos estructurados, ahorrando 
+   cientos de tokens inútiles de "palabrería".
+
+B) Separación de STT y LLM:
+   No se envía audio crudo a Gemini. El audio se transcribe primero usando 
+   Google Cloud Speech-to-Text (V1), que es extremadamente barato (se cobra 
+   por fracción de segundo de audio) y rápido. Gemini solo recibe el texto 
+   transcrito, lo cual es exponencialmente más barato en términos de tokens.
+
+C) Base de Datos "Cadenero" (Protección Freemium):
+   Se implementó la tabla `AIPracticeLog` en la base de datos (SQLite/PostgreSQL).
+   Los usuarios "Free" no pueden ejecutar llamadas infinitas a la API; el backend 
+   intercepta sus solicitudes y las bloquea automáticamente al llegar a su límite 
+   diario (3 usos), respondiendo con un HTTP 403 Forbidden antes de que la 
+   solicitud llegue a Google Cloud.
+
+-----------------------------------------------------------------------------
+2. DESGLOSE DEL EVALUADOR DE SPEAKING (MÓDULO DE VOZ)
+-----------------------------------------------------------------------------
+Endpoint: /api/v1/speech/analyze
+Flujo: Usuario habla -> Frontend envía WebM -> Backend usa Google STT -> Gemini evalúa.
+
+* Costo de Transcripción (Google Cloud STT V1):
+  Aproximadamente $0.006 USD por cada 15 segundos de audio procesado.
+  
+* Consumo de Tokens (Gemini 2.5 Flash):
+  - Tokens de Entrada (Input): 
+    * System Prompt (Instrucciones sobre qué evaluar).
+    * Target Text (Lo que el alumno debía decir).
+    * Transcripción resultante.
+    > Total Input Estimado: ~100 a 150 tokens.
+    
+  - Tokens de Salida (Output):
+    * JSON con `fluency_score` y un breve `feedback`.
+    > Total Output Estimado: ~40 a 60 tokens.
+
+> CONSUMO PROMEDIO SPEAKING: ~200 Tokens por evaluación.
+
+-----------------------------------------------------------------------------
+3. DESGLOSE DEL EVALUADOR DE WRITING (MÓDULO ESCRITO)
+-----------------------------------------------------------------------------
+Endpoint: /api/v1/ai/evaluate-writing
+Flujo: Usuario escribe ensayo -> Frontend envía JSON -> Gemini evalúa.
+
+* Consumo de Tokens (Gemini 2.5 Flash):
+  - Tokens de Entrada (Input): 
+    * System Prompt corporativo/académico (Roles de examinador TOEIC/IELTS).
+    * Ensayo del usuario (Ej. 250 - 300 palabras).
+    > Total Input Estimado: ~350 a 450 tokens.
+    
+  - Tokens de Salida (Output):
+    * JSON estructurado: `grammar_score`, `vocab_score`, `coherence_score`.
+    * Lista (Array) con los errores gramaticales detectados.
+    * Un párrafo completo sugerido de "Reescritura C-Level".
+    > Total Output Estimado: ~150 a 200 tokens.
+
+> CONSUMO PROMEDIO WRITING: ~500 a 650 Tokens por ensayo evaluado.
+
+-----------------------------------------------------------------------------
+4. ANÁLISIS DE COSTOS GEMINI 2.5 FLASH A ESCALA (MODO PRODUCCIÓN)
+-----------------------------------------------------------------------------
+Actualmente, Gemini 2.5 Flash tiene un costo aproximado de $0.075 USD por cada 
+millón de tokens de entrada (Input), y $0.30 USD por cada millón de tokens 
+de salida (Output) [precios variables según tarifas vigentes de Google].
+
+Si un usuario Premium realiza un examen complejo (ej. 5 pruebas de speaking 
+y 2 pruebas de writing) en un solo día:
+- 5 Speaking = 1,000 tokens en total.
+- 2 Writing = 1,300 tokens en total.
+- Total por usuario al día = ~2,300 tokens.
+
+Con 1 millón de tokens, puedes procesar los exámenes diarios completos de 
+aproximadamente 430 usuarios Premium activos al mismo tiempo, gastando menos 
+de $0.50 USD. 
+
+-----------------------------------------------------------------------------
+CONCLUSIÓN EJECUTIVA
+-----------------------------------------------------------------------------
+La arquitectura actual no solo es funcional y robusta, sino que está 
+matemáticamente blindada para operar en modo Producción (SaaS) con un altísimo 
+margen de rentabilidad. El sistema de bloqueos garantiza que los usuarios no de 
+pago no generen fugas financieras, mientras que la estructura JSON garantiza 
+la precisión matemática de la IA.

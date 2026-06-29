@@ -1,95 +1,688 @@
 {
   "id": "toefl_mock_v1",
-  "title": "Simulador Oficial Completo TOEFL® iBT - Versión 1",
-  "level": "B2/C1",
-  "description": "Simulador académico completo de TOEFL® con lecturas y conferencias sobre: Ciencias y Cosmos.",
-  "total_xp": 500,
+  "title": "TOEFL iBT® Official Mock Test",
+  "difficulty": "advanced",
+  "category": "certification",
+  "author": "OnixLingo Assessment Board",
+  "total_xp": 3000,
+  "completion_message": "Congratulations! Your TOEFL mock test has been submitted for official grading.",
   "stages": [
     {
-      "id": "toefl-intro",
-      "type": "lecture",
-      "title": "TOEFL® iBT Simulation: Ciencias y Cosmos",
-      "parts": [
-        {
-          "visual": "## 🎓 Simulador TOEFL® iBT (Versión 1)\n\nTemas académicos oficiales evaluados:\n\n- **Reading Article**: *Astronomía: La Habitabilidad de Kepler-186f*\n- **Academic Lecture**: *Lecture on Stellar Evolution & Solar Wind Impact*\n- **Writing structure & Integration**\n\n*Comienza tu examen académico.*",
-          "audio": "Welcome to the Integrated TOEFL iBT simulation. You will be tested on your ability to synthesize information from complex academic sources. Let's start.",
-          "animation": "analyzing"
-        }
-      ]
-    },
-    {
-      "id": "toefl-reading",
+      "id": "toefl_r_passage1",
       "type": "quiz",
-      "title": "Sección 1: Comprensión Lectora Académica (Reading)",
+      "title": "Reading Passage 1",
+      "instructions": "Read the passage and answer the questions that follow.",
+      "passageText": "The Origins of Agriculture\\n\\nFor most of human history, people lived as nomadic hunter-gatherers, moving from place to place in search of food. However, around 10,000 to 12,000 years ago, a profound shift occurred: the transition to agriculture. This period, often referred to as the Neolithic Revolution, marked the beginning of settled human communities. The shift did not happen simultaneously worldwide but rather independently in several different regions, most notably the Fertile Crescent in the Middle East, the Yangtze and Yellow River valleys in China, and the Mesoamerican and Andean regions in the Americas.\\n\\nOne of the primary catalysts for this transition was climate change. As the last Ice Age ended, the Earth's climate became warmer and more stable, creating favorable conditions for certain wild grasses, the ancestors of modern wheat and barley, to thrive. Hunter-gatherers began to harvest these abundant resources and, over time, learned to cultivate them actively. This process of domestication involved selecting seeds from plants with desirable traits, such as larger grains or stronger stalks that would not shatter when harvested.\\n\\nThe adoption of agriculture had far-reaching consequences for human society. It allowed for the production of a food surplus, which meant that not everyone had to be involved in food acquisition. This surplus freed up individuals to specialize in other tasks, leading to the development of complex societies, the invention of writing, the rise of monumental architecture, and the establishment of social hierarchies. However, agriculture also introduced new challenges, such as a reliance on a limited number of crops, vulnerability to weather fluctuations, and an increase in communicable diseases due to denser living conditions.",
       "questions": [
         {
-          "id": "TF_R1_v1",
-          "type": "quiz_choice",
-          "question": "Read the academic article and answer the question:\n\n**The Habitability of Kepler-186f**\n\nIn recent stellar astrobiology, astronomers have focused on Kepler-186f, the first validated Earth-size planet orbiting within the habitable zone of an M-dwarf star. M-dwarfs, or red dwarfs, constitute nearly seventy percent of all stars in the Milky Way, making planetary systems around them highly common. While red dwarfs undergo intense stellar flares that release high-energy ultraviolet radiation, recent atmosphere models show that Kepler-186f's dense atmospheric carbon dioxide could serve as a protective barrier. This atmospheric retention suggests that liquid water could stably exist on the planetary surface under convective atmospheric conditions, presenting a major vector for extrasolar biosignature research.",
+          "id": "q1",
+          "question": "According to paragraph 1, what was the Neolithic Revolution?",
           "options": [
-            "It is the largest planet discovered in the Milky Way.",
-            "It is the first Earth-size planet found in a red dwarf's habitable zone.",
-            "It emits stellar flares that help sustain volcanic outgassing.",
-            "It lacks any protective atmospheric carbon dioxide."
+            "The discovery of fire and its uses",
+            "The transition from nomadic hunter-gathering to settled agriculture",
+            "The rapid climate change at the end of the Ice Age",
+            "The global migration of early human communities"
           ],
-          "correct_answer": "It is the first Earth-size planet found in a red dwarf's habitable zone.",
-          "explanation": "El texto menciona directamente que Kepler-186f es 'the first validated Earth-size planet orbiting within the habitable zone of an M-dwarf star'."
+          "correct_answer": "The transition from nomadic hunter-gathering to settled agriculture"
         },
         {
-          "id": "TF_R2_v1",
-          "type": "quiz_choice",
-          "question": "What is the closest meaning of the target word in this academic context?",
+          "id": "q2",
+          "question": "The word 'catalysts' in paragraph 2 is closest in meaning to:",
           "options": [
-            "Exclusion",
-            "Loss",
-            "Maintenance / Preservation",
-            "Fluctuation"
+            "Triggers",
+            "Obstacles",
+            "Reactions",
+            "Environments"
           ],
-          "correct_answer": "Maintenance / Preservation",
-          "explanation": "En el contexto de la retención atmosférica ('atmospheric retention'), se refiere a la preservación o mantenimiento de la atmósfera protectora."
+          "correct_answer": "Triggers"
+        },
+        {
+          "id": "q3",
+          "question": "Why does the author mention 'the end of the last Ice Age'?",
+          "options": [
+            "To explain why the Earth's climate became suitable for wild grasses to thrive",
+            "To highlight the difficulties early humans faced during migration",
+            "To describe the extinction of large mammalian species",
+            "To contrast the climate of the Fertile Crescent with that of Mesoamerica"
+          ],
+          "correct_answer": "To explain why the Earth's climate became suitable for wild grasses to thrive"
+        },
+        {
+          "id": "q4",
+          "question": "According to paragraph 2, what was one desirable trait of domesticated plants?",
+          "options": [
+            "The ability to grow without water",
+            "Resistance to common plant diseases",
+            "Stalks that were strong enough not to shatter during harvesting",
+            "A rapid growth cycle from seed to harvest"
+          ],
+          "correct_answer": "Stalks that were strong enough not to shatter during harvesting"
+        },
+        {
+          "id": "q5",
+          "question": "Which of the following can be inferred from paragraph 3 about food surplus?",
+          "options": [
+            "It caused widespread famine when crops eventually failed",
+            "It led to the immediate end of all nomadic hunter-gatherer societies",
+            "It allowed some individuals in the society to pursue professions other than farming",
+            "It forced communities to abandon architectural projects"
+          ],
+          "correct_answer": "It allowed some individuals in the society to pursue professions other than farming"
+        },
+        {
+          "id": "q6",
+          "question": "The word 'them' in paragraph 2 refers to:",
+          "options": [
+            "Hunter-gatherers",
+            "Desirable traits",
+            "Modern wheat and barley",
+            "Abundant resources"
+          ],
+          "correct_answer": "Abundant resources"
+        },
+        {
+          "id": "q7",
+          "question": "According to paragraph 3, which of the following is a negative consequence of agriculture?",
+          "options": [
+            "An increased susceptibility to infectious diseases due to denser living conditions",
+            "The decline in the development of complex societal hierarchies",
+            "A complete loss of traditional hunting skills",
+            "The overpopulation of wild animal species"
+          ],
+          "correct_answer": "An increased susceptibility to infectious diseases due to denser living conditions"
+        },
+        {
+          "id": "q8",
+          "question": "In paragraph 1, the author's primary purpose is to:",
+          "options": [
+            "Describe the origins and geographical spread of early agricultural practices",
+            "Argue that the Neolithic Revolution was detrimental to human survival",
+            "Compare the nutritional value of different ancient crops",
+            "Explain the technological advancements of the hunter-gatherer era"
+          ],
+          "correct_answer": "Describe the origins and geographical spread of early agricultural practices"
+        },
+        {
+          "id": "q9",
+          "question": "Which of the following best expresses the essential information in the highlighted sentence: 'It allowed for the production of a food surplus, which meant that not everyone had to be involved in food acquisition.'?",
+          "options": [
+            "Producing more food than needed meant that fewer people had to work in agriculture.",
+            "Everyone was forced to participate in food production due to the agricultural surplus.",
+            "The production of a food surplus caused people to lose interest in acquiring food.",
+            "Because there was a surplus, people no longer needed to eat as much."
+          ],
+          "correct_answer": "Producing more food than needed meant that fewer people had to work in agriculture."
+        },
+        {
+          "id": "q10",
+          "question": "Look at the four squares [■] that indicate where the following sentence could be added: 'These early farmers began selectively breeding plants that yielded the most food.' Where would the sentence best fit?",
+          "options": [
+            "At the beginning of paragraph 1",
+            "Right after '...and over time, learned to cultivate them actively.' in paragraph 2",
+            "At the end of paragraph 3",
+            "Before 'One of the primary catalysts...' in paragraph 2"
+          ],
+          "correct_answer": "Right after '...and over time, learned to cultivate them actively.' in paragraph 2"
         }
       ]
     },
     {
-      "id": "toefl-listening",
+      "id": "toefl_r_passage2",
       "type": "quiz",
-      "title": "Sección 2: Comprensión Auditiva Académica (Listening)",
+      "title": "Reading Passage 2",
+      "instructions": "Read the passage and answer the questions that follow.",
+      "passageText": "Coral Reef Bleaching\\n\\nCoral reefs are among the most diverse and biologically complex ecosystems on Earth. Often referred to as the \"rainforests of the sea,\" they provide a habitat for a quarter of all marine species, despite covering less than 0.1% of the ocean floor. At the heart of this ecosystem is a symbiotic relationship between coral polyps, the animals that build the reefs, and microscopic algae called zooxanthellae. These algae live within the tissues of the polyps and provide them with essential nutrients through photosynthesis. In return, the coral provides the algae with a protected environment and the compounds they need for photosynthesis.\\n\\nHowever, this delicate balance is highly sensitive to environmental stress, particularly changes in water temperature. When ocean temperatures rise even slightly above the normal summer maximum, corals become stressed and expel their zooxanthellae. Because the algae give corals their vibrant colors, the loss of these organisms leaves the coral's white calcium carbonate skeleton exposed, a phenomenon known as coral bleaching. While bleached corals are not immediately dead, they are severely weakened, more susceptible to disease, and deprived of their primary food source.\\n\\nThe frequency and severity of mass coral bleaching events have increased dramatically in recent decades, primarily driven by anthropogenic climate change. If temperatures return to normal relatively quickly, corals can recover by repopulating their algae. However, prolonged periods of elevated temperatures usually result in widespread coral mortality. The loss of coral reefs has devastating ecological and economic impacts, affecting coastal protection, fisheries, and tourism.",
       "questions": [
         {
-          "id": "TF_L1_v1",
-          "type": "quiz_choice",
-          "question": "[UNIVERSITY LECTURE]: Listen to the professor's explanation and answer: **What is the main topic?**\n\n*(Transcription)*:\n\nProfessor: Today we discuss stellar winds in red dwarf systems. These winds are streams of charged particles ejected from the star's corona. M-dwarfs exhibit persistent coronal mass ejections that are far more intense than those of our Sun. These charged particles strike orbiting planets and can cause atmospheric stripping. However, if a planet possesses a strong intrinsic magnetic field, this field acts as a shield, deflecting the solar wind and preventing the loss of volatile water compounds.",
+          "id": "q11",
+          "question": "According to paragraph 1, why are coral reefs referred to as the 'rainforests of the sea'?",
           "options": [
-            "The composition of our Sun's coronal mass ejections.",
-            "How stellar winds interact with planetary atmospheres and magnetic fields.",
-            "The migration of gas giants in red dwarf systems.",
-            "The role of volcanic eruptions in creating water fields."
+            "Because they receive abundant rainfall throughout the year.",
+            "Because they support an incredibly diverse range of marine life in a very small area.",
+            "Because they grow as rapidly as tropical trees.",
+            "Because they are located exclusively near dense rainforests."
           ],
-          "correct_answer": "How stellar winds interact with planetary atmospheres and magnetic fields.",
-          "explanation": "El profesor detalla los vientos estelares ('stellar winds'), la pérdida de atmósfera ('stripping') y cómo el campo magnético sirve de escudo protector."
+          "correct_answer": "Because they support an incredibly diverse range of marine life in a very small area."
+        },
+        {
+          "id": "q12",
+          "question": "Based on paragraph 1, what do zooxanthellae provide to coral polyps?",
+          "options": [
+            "Essential nutrients produced through photosynthesis.",
+            "Protection from predatory marine species.",
+            "Calcium carbonate to build their skeletons.",
+            "Compounds needed to regulate water temperature."
+          ],
+          "correct_answer": "Essential nutrients produced through photosynthesis."
+        },
+        {
+          "id": "q13",
+          "question": "The word 'symbiotic' in paragraph 1 is closest in meaning to:",
+          "options": [
+            "Mutually beneficial",
+            "Highly destructive",
+            "Completely random",
+            "Brief and temporary"
+          ],
+          "correct_answer": "Mutually beneficial"
+        },
+        {
+          "id": "q14",
+          "question": "According to paragraph 2, what causes coral bleaching?",
+          "options": [
+            "The accumulation of calcium carbonate on the reef.",
+            "The aggressive behavior of coral polyps towards algae.",
+            "The expulsion of microscopic algae by stressed coral polyps.",
+            "The overconsumption of algae by local fish populations."
+          ],
+          "correct_answer": "The expulsion of microscopic algae by stressed coral polyps."
+        },
+        {
+          "id": "q15",
+          "question": "What happens to a coral immediately after it undergoes bleaching?",
+          "options": [
+            "It begins to rapidly produce new zooxanthellae.",
+            "It loses its main source of food and becomes more vulnerable to disease.",
+            "It develops a much stronger calcium carbonate skeleton.",
+            "It dies instantly due to the lack of oxygen."
+          ],
+          "correct_answer": "It loses its main source of food and becomes more vulnerable to disease."
+        },
+        {
+          "id": "q16",
+          "question": "The phrase 'this delicate balance' in paragraph 2 refers to:",
+          "options": [
+            "The distribution of coral reefs across the ocean floor.",
+            "The ratio of ocean temperatures to air temperatures.",
+            "The relationship between coral polyps and zooxanthellae.",
+            "The amount of sunlight penetrating the ocean surface."
+          ],
+          "correct_answer": "The relationship between coral polyps and zooxanthellae."
+        },
+        {
+          "id": "q17",
+          "question": "According to paragraph 3, what is the primary driver of the increase in mass coral bleaching events?",
+          "options": [
+            "A sudden increase in marine predators.",
+            "Anthropogenic climate change leading to elevated ocean temperatures.",
+            "The introduction of invasive algae species.",
+            "A natural cycle of ocean temperature fluctuation."
+          ],
+          "correct_answer": "Anthropogenic climate change leading to elevated ocean temperatures."
+        },
+        {
+          "id": "q18",
+          "question": "Which of the following can be inferred about coral recovery from paragraph 3?",
+          "options": [
+            "Corals can never recover once they have expelled their algae.",
+            "Corals can only recover if ocean temperatures drop back to normal relatively quickly.",
+            "Corals prefer prolonged periods of elevated temperatures to fully recover.",
+            "Corals recover faster without the presence of zooxanthellae."
+          ],
+          "correct_answer": "Corals can only recover if ocean temperatures drop back to normal relatively quickly."
+        },
+        {
+          "id": "q19",
+          "question": "Which of the following is NOT mentioned in paragraph 3 as an impact of coral reef loss?",
+          "options": [
+            "Decreased coastal protection",
+            "Harm to the fisheries industry",
+            "A decline in tourism",
+            "A decrease in oceanic oxygen levels"
+          ],
+          "correct_answer": "A decrease in oceanic oxygen levels"
+        },
+        {
+          "id": "q20",
+          "question": "The author's primary purpose in writing the passage is to:",
+          "options": [
+            "Explain the biological mechanics of coral bleaching and its devastating consequences.",
+            "Argue that tourism should be banned near sensitive coral reef systems.",
+            "Compare coral reefs to tropical rainforests in terms of biodiversity.",
+            "Detail the specific compounds produced during coral photosynthesis."
+          ],
+          "correct_answer": "Explain the biological mechanics of coral bleaching and its devastating consequences."
         }
       ]
     },
     {
-      "id": "toefl-writing-prep",
+      "id": "toefl_l_conv1",
       "type": "quiz",
-      "title": "Sección 3: Estructura y Coherencia Académica (Writing Prep)",
+      "title": "Listening: Campus Conversation 1",
+      "instructions": "Listen to the conversation and answer the questions.\n\nAUDIO TRANSCRIPT:\nM: Hi, Professor Adams. Do you have a minute?\\nW: Sure, Mark. What can I help you with?\\nM: Well, I'm having some trouble deciding on a topic for my final research paper in sociology. I originally wanted to write about urbanization in the 19th century, but the scope feels too broad.\\nW: You're right, that is a massive topic. You need to narrow it down. Instead of just 'urbanization', why not look at the impact of the industrial revolution on family structures in a specific city, like London?\\nM: Oh, that's a great idea! It would be much easier to find specific case studies for that.\\nW: Exactly. Why don't you do some preliminary research this weekend and come back to my office hours on Tuesday with a rough outline?",
       "questions": [
         {
-          "id": "TF_W1_v1",
-          "type": "fill_input",
-          "question": "Fill in the blank with the appropriate academic connector that best completes the logical flow:\n\nComplete the scientific sentence: \"Kepler-186f orbits in the habitable zone. ___, stellar flares present a major risk to life.\"",
-          "correct_answers": [
-            "However",
-            "Nevertheless",
-            "however",
-            "nevertheless"
+          "id": "q21",
+          "question": "Why does the student go to see the professor?",
+          "options": [
+            "To ask for an extension on a sociology assignment.",
+            "To get help narrowing down a topic for his final research paper.",
+            "To discuss his grade on a recent mid-term exam.",
+            "To request a letter of recommendation for graduate school."
           ],
-          "hints": [
-            "Check punctuation and capitalization."
-          ]
+          "correct_answer": "To get help narrowing down a topic for his final research paper."
+        },
+        {
+          "id": "q22",
+          "question": "What was the student's original topic idea?",
+          "options": [
+            "The decline of the British Empire.",
+            "The architectural differences between London and Paris.",
+            "Urbanization in the 19th century.",
+            "The history of sociology as an academic discipline."
+          ],
+          "correct_answer": "Urbanization in the 19th century."
+        },
+        {
+          "id": "q23",
+          "question": "What does the professor suggest the student focus on?",
+          "options": [
+            "The impact of the industrial revolution on family structures in a specific city.",
+            "The role of women in the 19th-century workforce.",
+            "The economic policies that led to rapid urbanization.",
+            "The development of public transportation in early modern cities."
+          ],
+          "correct_answer": "The impact of the industrial revolution on family structures in a specific city."
+        },
+        {
+          "id": "q24",
+          "question": "How does the student react to the professor's suggestion?",
+          "options": [
+            "He is disappointed because he finds the topic boring.",
+            "He enthusiastically agrees because it will make finding case studies easier.",
+            "He is confused and asks for a different suggestion.",
+            "He politely declines and decides to stick to his original idea."
+          ],
+          "correct_answer": "He enthusiastically agrees because it will make finding case studies easier."
+        },
+        {
+          "id": "q25",
+          "question": "What is the student expected to do before his next meeting with the professor?",
+          "options": [
+            "Submit a full draft of the research paper.",
+            "Conduct preliminary research and prepare a rough outline.",
+            "Interview several sociology students about their topics.",
+            "Read an entire textbook chapter on urbanization."
+          ],
+          "correct_answer": "Conduct preliminary research and prepare a rough outline."
         }
       ]
+    },
+    {
+      "id": "toefl_l_lec1",
+      "type": "quiz",
+      "title": "Listening: Academic Lecture 1",
+      "instructions": "Listen to the lecture and answer the questions.\n\nAUDIO TRANSCRIPT:\nProfessor: Today, we're going to discuss a fascinating phenomenon in astronomy known as a supernova. A supernova is essentially the explosive death of a star. It's one of the most energetic events in the universe. Now, there are two main types of supernovae, but today we'll focus on Type II. A Type II supernova occurs when a massive star—at least eight times the mass of our sun—runs out of nuclear fuel. See, throughout a star's life, there's a delicate balance. Gravity is constantly trying to crush the star inward, while the energy from nuclear fusion in the core pushes outward. When the fuel runs out, fusion stops. Gravity wins. The core collapses in a fraction of a second, and then rebounds in a colossal explosion, sending the star's outer layers hurtling into space. This explosion is so bright it can outshine an entire galaxy for a brief period.",
+      "questions": [
+        {
+          "id": "q26",
+          "question": "What is the main topic of the lecture?",
+          "options": [
+            "The formation of new galaxies in the universe.",
+            "The physical process that leads to a Type II supernova.",
+            "The discovery of the first recorded supernova.",
+            "The role of nuclear fusion in creating solar energy."
+          ],
+          "correct_answer": "The physical process that leads to a Type II supernova."
+        },
+        {
+          "id": "q27",
+          "question": "According to the professor, what maintains the delicate balance within a star during its life?",
+          "options": [
+            "The opposing forces of gravity pushing inward and nuclear fusion pushing outward.",
+            "The equal distribution of hydrogen and helium gas.",
+            "The constant rotation of the star's core.",
+            "The magnetic fields generated by surrounding planets."
+          ],
+          "correct_answer": "The opposing forces of gravity pushing inward and nuclear fusion pushing outward."
+        },
+        {
+          "id": "q28",
+          "question": "What causes a Type II supernova to occur?",
+          "options": [
+            "A star collides with a massive black hole.",
+            "A massive star exhausts its supply of nuclear fuel.",
+            "Two small stars merge together in a dense galaxy.",
+            "A star absorbs too much energy from neighboring celestial bodies."
+          ],
+          "correct_answer": "A massive star exhausts its supply of nuclear fuel."
+        },
+        {
+          "id": "q29",
+          "question": "According to the lecture, what happens immediately after a star's nuclear fusion stops?",
+          "options": [
+            "Gravity takes over, causing the core of the star to collapse inward.",
+            "The star slowly fades away into a brown dwarf.",
+            "The outer layers freeze and turn to solid ice.",
+            "The star begins to pull in planets from its solar system."
+          ],
+          "correct_answer": "Gravity takes over, causing the core of the star to collapse inward."
+        },
+        {
+          "id": "q30",
+          "question": "How massive must a star be to undergo a Type II supernova?",
+          "options": [
+            "Exactly the same mass as our sun.",
+            "At least half the mass of our sun.",
+            "At least eight times the mass of our sun.",
+            "A hundred times the mass of our sun."
+          ],
+          "correct_answer": "At least eight times the mass of our sun."
+        },
+        {
+          "id": "q31",
+          "question": "What does the professor say about the brightness of a supernova?",
+          "options": [
+            "It is barely visible from Earth without a telescope.",
+            "It is roughly as bright as the moon.",
+            "It can briefly outshine an entire galaxy.",
+            "It gradually brightens over the course of several centuries."
+          ],
+          "correct_answer": "It can briefly outshine an entire galaxy."
+        }
+      ]
+    },
+    {
+      "id": "toefl_l_conv2",
+      "type": "quiz",
+      "title": "Listening: Campus Conversation 2",
+      "instructions": "Listen to the conversation and answer the questions.\n\nAUDIO TRANSCRIPT:\nW: Excuse me, I'm trying to find the housing office. The directory says it's in the student union building, but I've walked all over the first floor and can't find it.\\nM: Oh, the directory is actually outdated. The housing office was moved to the new administration building last semester. It's just across the quad, next to the library.\\nW: That explains it! Thank you. I need to submit my application to switch dorms for next year.\\nM: Make sure you hurry. The deadline for priority housing applications is 4:00 PM today, and there's usually a long line.\\nW: Wow, I didn't realize that. Thanks for the warning!",
+      "questions": [
+        {
+          "id": "q32",
+          "question": "Why is the woman unable to find the housing office at first?",
+          "options": [
+            "Because she went to the wrong campus entirely.",
+            "Because the campus directory has not been updated with the new location.",
+            "Because the office was closed for renovations.",
+            "Because she lost the map the university provided."
+          ],
+          "correct_answer": "Because the campus directory has not been updated with the new location."
+        },
+        {
+          "id": "q33",
+          "question": "Where is the housing office currently located?",
+          "options": [
+            "In the student union building.",
+            "On the first floor of her dormitory.",
+            "In the administration building next to the library.",
+            "Off-campus in a separate building."
+          ],
+          "correct_answer": "In the administration building next to the library."
+        },
+        {
+          "id": "q34",
+          "question": "Why does the woman need to visit the housing office?",
+          "options": [
+            "To complain about a noisy roommate.",
+            "To submit an application to switch her dormitory for the upcoming year.",
+            "To pay her housing fees for the current semester.",
+            "To ask for a refund on her meal plan."
+          ],
+          "correct_answer": "To submit an application to switch her dormitory for the upcoming year."
+        },
+        {
+          "id": "q35",
+          "question": "What does the man warn the woman about?",
+          "options": [
+            "The office staff is known to be very rude.",
+            "The deadline is approaching soon and there will likely be a long line.",
+            "The application requires a non-refundable fee.",
+            "The library is currently closed for repairs."
+          ],
+          "correct_answer": "The deadline is approaching soon and there will likely be a long line."
+        },
+        {
+          "id": "q36",
+          "question": "What is the deadline for priority housing applications?",
+          "options": [
+            "12:00 PM today.",
+            "Tomorrow morning.",
+            "4:00 PM today.",
+            "Next Friday."
+          ],
+          "correct_answer": "4:00 PM today."
+        }
+      ]
+    },
+    {
+      "id": "toefl_l_lec2",
+      "type": "quiz",
+      "title": "Listening: Academic Lecture 2",
+      "instructions": "Listen to the lecture and answer the questions.\n\nAUDIO TRANSCRIPT:\nProfessor: Let's turn our attention to psychology, specifically the concept of cognitive dissonance. This theory was first proposed by Leon Festinger in the 1950s. Cognitive dissonance refers to the mental discomfort a person experiences when holding two or more contradictory beliefs, ideas, or values. It also happens when a person's behavior contradicts their beliefs. For example, consider a person who smokes cigarettes but knows that smoking causes lung cancer. The belief that smoking is harmful contradicts the behavior of smoking. This inconsistency causes psychological stress. To reduce this discomfort, the person will usually try to align their beliefs and behavior. They might quit smoking, which is the behavioral change. Or, they might alter their belief by convincing themselves that the health risks are exaggerated, or by adopting a new belief, such as 'smoking helps me relax, which is good for my mental health.'",
+      "questions": [
+        {
+          "id": "q37",
+          "question": "What is the main subject of the lecture?",
+          "options": [
+            "The history of psychology in the 1950s.",
+            "The psychological concept of cognitive dissonance and how people resolve it.",
+            "The physical health risks associated with smoking cigarettes.",
+            "The effectiveness of modern anti-smoking campaigns."
+          ],
+          "correct_answer": "The psychological concept of cognitive dissonance and how people resolve it."
+        },
+        {
+          "id": "q38",
+          "question": "According to the professor, when does cognitive dissonance occur?",
+          "options": [
+            "When a person holds contradictory beliefs or when their behavior contradicts their beliefs.",
+            "When a person is completely unaware of the consequences of their actions.",
+            "When a person successfully persuades someone else to change their mind.",
+            "When a person experiences severe physical pain."
+          ],
+          "correct_answer": "When a person holds contradictory beliefs or when their behavior contradicts their beliefs."
+        },
+        {
+          "id": "q39",
+          "question": "In the professor's example, what causes psychological stress for the smoker?",
+          "options": [
+            "The rising cost of cigarettes.",
+            "The knowledge that smoking causes cancer contradicts the act of smoking.",
+            "The social stigma associated with smoking in public places.",
+            "The inability to find a place to smoke on campus."
+          ],
+          "correct_answer": "The knowledge that smoking causes cancer contradicts the act of smoking."
+        },
+        {
+          "id": "q40",
+          "question": "According to the lecture, how might a person reduce the discomfort caused by cognitive dissonance?",
+          "options": [
+            "By ignoring the problem completely until it goes away.",
+            "By changing their behavior to align with their beliefs, or by altering their beliefs to justify their behavior.",
+            "By blaming others for their own contradictory actions.",
+            "By engaging in physical exercise to relieve stress."
+          ],
+          "correct_answer": "By changing their behavior to align with their beliefs, or by altering their beliefs to justify their behavior."
+        },
+        {
+          "id": "q41",
+          "question": "Who first proposed the theory of cognitive dissonance?",
+          "options": [
+            "Sigmund Freud",
+            "B.F. Skinner",
+            "Leon Festinger",
+            "Carl Jung"
+          ],
+          "correct_answer": "Leon Festinger"
+        },
+        {
+          "id": "q42",
+          "question": "Which of the following is an example of altering a belief to reduce dissonance, as mentioned in the lecture?",
+          "options": [
+            "Quitting smoking entirely.",
+            "Convincing oneself that the health risks of smoking are exaggerated.",
+            "Switching to a cheaper brand of cigarettes.",
+            "Joining a support group to help quit smoking."
+          ],
+          "correct_answer": "Convincing oneself that the health risks of smoking are exaggerated."
+        }
+      ]
+    },
+    {
+      "id": "toefl_l_lec3",
+      "type": "quiz",
+      "title": "Listening: Academic Lecture 3",
+      "instructions": "Listen to the lecture and answer the questions.\n\nAUDIO TRANSCRIPT:\nProfessor: In art history, the Renaissance is often viewed as a period of profound cultural awakening. But what sparked this movement in 14th-century Italy? Several factors coalesced. First, there was a renewed interest in the classical texts of ancient Greece and Rome. Scholars, known as humanists, began translating these texts, which emphasized human potential and achievements rather than just religious theology. Secondly, Italy's geographical position made it a hub for trade between Europe and the Middle East. This wealth created a new class of powerful merchants and bankers, like the Medici family in Florence. Unlike the old nobility, whose wealth was tied to land, these merchants used their money to sponsor artists and architects, essentially using art as a display of power and prestige. This patronage system allowed artists like Leonardo da Vinci and Michelangelo to thrive.",
+      "questions": [
+        {
+          "id": "q43",
+          "question": "What is the main purpose of the lecture?",
+          "options": [
+            "To compare the art styles of Leonardo da Vinci and Michelangelo.",
+            "To explain the historical factors that sparked the Renaissance in 14th-century Italy.",
+            "To describe the architectural achievements of the Medici family.",
+            "To analyze the religious theology of the Middle Ages."
+          ],
+          "correct_answer": "To explain the historical factors that sparked the Renaissance in 14th-century Italy."
+        },
+        {
+          "id": "q44",
+          "question": "According to the professor, what was a key focus of the classical texts translated by humanists?",
+          "options": [
+            "Human potential and achievements rather than just religious theology.",
+            "The engineering techniques used to build ancient Roman aqueducts.",
+            "Strict rules for painting religious figures.",
+            "The geography of the Middle East."
+          ],
+          "correct_answer": "Human potential and achievements rather than just religious theology."
+        },
+        {
+          "id": "q45",
+          "question": "How did Italy's geographical position contribute to the Renaissance?",
+          "options": [
+            "It isolated Italy from the plagues affecting the rest of Europe.",
+            "It made Italy a wealthy hub for international trade between Europe and the Middle East.",
+            "It provided abundant natural resources like gold and silver.",
+            "It allowed Italy to easily conquer neighboring countries."
+          ],
+          "correct_answer": "It made Italy a wealthy hub for international trade between Europe and the Middle East."
+        },
+        {
+          "id": "q46",
+          "question": "How did the wealth of the new merchant class differ from that of the old nobility?",
+          "options": [
+            "The merchants inherited their wealth from royalty.",
+            "The merchants acquired their wealth entirely through agriculture.",
+            "The merchants' wealth was derived from trade and banking rather than land ownership.",
+            "The merchants' wealth was closely tied to the church."
+          ],
+          "correct_answer": "The merchants' wealth was derived from trade and banking rather than land ownership."
+        },
+        {
+          "id": "q47",
+          "question": "Why did merchants and bankers sponsor artists and architects?",
+          "options": [
+            "Because the government forced them to pay an art tax.",
+            "To use art as a public display of their new power, prestige, and wealth.",
+            "To provide employment for the poor citizens of Florence.",
+            "Because they wanted to learn how to paint and sculpt themselves."
+          ],
+          "correct_answer": "To use art as a public display of their new power, prestige, and wealth."
+        },
+        {
+          "id": "q48",
+          "question": "Which family does the professor mention as an example of powerful merchants?",
+          "options": [
+            "The Borgia family",
+            "The Tudor family",
+            "The Medici family",
+            "The Hapsburg family"
+          ],
+          "correct_answer": "The Medici family"
+        }
+      ]
+    },
+    {
+      "id": "toefl_s_task1",
+      "type": "practice_speaking",
+      "title": "Speaking Task 1: Independent",
+      "instructions": "You will have 15 seconds to prepare your response and 45 seconds to speak.",
+      "questions": [
+        {
+          "id": "s_q1",
+          "question": "Some people believe that university education should be free for everyone. Others think that students should pay for their higher education. Which view do you agree with and why? Include details and examples to support your explanation.",
+          "options": [],
+          "correct_answer": ""
+        }
+      ]
+    },
+    {
+      "id": "toefl_s_task2",
+      "type": "practice_speaking",
+      "title": "Speaking Task 2: Campus Situation",
+      "instructions": "Read the passage and listen to the conversation. Then, record your response. You have 30 seconds to prepare and 60 seconds to speak.",
+      "passageText": "READING PASSAGE:\\nUniversity to Eliminate Free Parking\\nStarting next semester, the university will no longer offer free parking for students. Instead, a new permit system will be introduced, requiring students to pay $50 per semester to park on campus. The university states that the funds raised will be used to improve the campus bus system, making it more frequent and reliable.\\n\\nAUDIO TRANSCRIPT:\\nM: I can't believe they are getting rid of free parking.\\nW: Actually, I think it's a good idea. The parking lots are always overcrowded anyway. Maybe this will encourage more people to take the bus.\\nM: But the bus system is terrible. It's always late.\\nW: That's exactly why they're doing it! The announcement said the money from the permits will go directly into buying more buses and hiring more drivers.",
+      "questions": [
+        {
+          "id": "s_q2",
+          "question": "The woman expresses her opinion about the university's new parking policy. State her opinion and explain the reasons she gives for holding that opinion.",
+          "options": [],
+          "correct_answer": ""
+        }
+      ]
+    },
+    {
+      "id": "toefl_s_task3",
+      "type": "practice_speaking",
+      "title": "Speaking Task 3: Academic Concept",
+      "instructions": "Read the passage and listen to the lecture. Then, record your response. You have 30 seconds to prepare and 60 seconds to speak.",
+      "passageText": "READING PASSAGE:\\nAposematism\\nAposematism is a biological concept referring to the use of warning coloration by prey species to signal to predators that they are toxic, dangerous, or unpalatable. Instead of using camouflage to hide, these animals display bright, highly contrasting colors—such as red, yellow, and black—making them highly visible.\\n\\nAUDIO TRANSCRIPT:\\nProfessor: So, a classic example of aposematism is the poison dart frog, found in the rainforests of Central and South America. These frogs are tiny, but their skin secretes a highly toxic poison that can easily kill a predator. To keep predators from even trying to eat them, the frogs are colored in brilliant, neon shades of blue, red, or yellow. A bird flying overhead might spot the bright frog and think it's an easy meal. However, if the bird actually attacks and tastes the poison, it will get extremely sick. If the bird survives, it will forever associate those bright, neon colors with that terrible sickness. So, the next time it sees a brightly colored frog, it will completely ignore it.",
+      "questions": [
+        {
+          "id": "s_q3",
+          "question": "Using the example of the poison dart frog from the lecture, explain the concept of aposematism.",
+          "options": [],
+          "correct_answer": ""
+        }
+      ]
+    },
+    {
+      "id": "toefl_s_task4",
+      "type": "practice_speaking",
+      "title": "Speaking Task 4: Academic Lecture",
+      "instructions": "Listen to the lecture. Then, record your response. You have 20 seconds to prepare and 60 seconds to speak.",
+      "passageText": "AUDIO TRANSCRIPT:\\nProfessor: In business management, there are generally two types of pricing strategies companies use when launching a brand new product: skimming and penetration. Let's look at skimming first. Skimming is when a company sets a very high initial price for a product. They do this to maximize short-term profits before competitors enter the market. For example, a tech company releases a cutting-edge video game console. At first, only the most dedicated gamers will buy it at the high price. Once sales slow down, the company lowers the price to attract the next layer of customers.\\n\\nNow, the opposite strategy is penetration pricing. This is when a company sets a very low initial price to quickly attract a large number of buyers and gain market share. Think of a new streaming service. They might offer subscriptions for just two dollars a month. Because it's so cheap, millions of people sign up right away. The company loses money at first, but once people are hooked on the service, they slowly raise the price.",
+      "questions": [
+        {
+          "id": "s_q4",
+          "question": "Using the examples of the video game console and the streaming service, explain the two pricing strategies discussed by the professor.",
+          "options": [],
+          "correct_answer": ""
+        }
+      ]
+    },
+    {
+      "id": "toefl_w_task1",
+      "type": "practice_writing",
+      "title": "Writing Task 1: Integrated Essay",
+      "instructions": "Read the passage and listen to the lecture. Then, write an essay summarizing the points made in the lecture and explaining how they cast doubt on the points made in the reading passage. Minimum 150 words.",
+      "passageText": "READING PASSAGE:\\nWind power is rapidly becoming a major source of renewable energy worldwide. However, despite its environmental benefits, the widespread installation of wind turbines has several significant drawbacks. First, wind turbines pose a severe threat to bird populations. Thousands of birds, including endangered species of eagles and hawks, are killed each year when they fly into the massive spinning blades. Second, wind farms require vast amounts of open land. This land could otherwise be used for agriculture or left as untouched natural habitats. Finally, wind energy is unreliable. Wind speeds fluctuate constantly, meaning that turbines cannot provide a consistent, steady supply of electricity to the power grid.\\n\\nAUDIO TRANSCRIPT:\\nProfessor: The criticisms you just read about wind power are common, but they are largely outdated or exaggerated. First, regarding the danger to birds... well, modern wind turbines have been completely redesigned. The new models are much taller and have blades that spin much more slowly than older models. This slower rotation makes them far more visible to birds, significantly reducing bird fatalities. In fact, communication towers and tall glass buildings kill millions more birds than wind turbines do.\\n\\nSecond, the claim that wind farms ruin agricultural land is simply not true. The footprint of the actual turbine base is very small. Farmers can, and do, plant their crops right up to the base of the turbines. So the land is actually serving a dual purpose: generating energy and growing food.\\n\\nThird, it's true that wind speeds fluctuate, but power grids have adapted. Energy companies now build wind farms in widely dispersed geographical areas. If the wind isn't blowing in one state, it's usually blowing in another. Furthermore, advances in battery storage technology allow us to store excess energy generated on very windy days and release it into the grid when the wind is calm.",
+      "questions": [
+        {
+          "id": "w_q1",
+          "question": "Summarize the points made in the lecture, being sure to explain how they cast doubt on specific points made in the reading passage.",
+          "options": [],
+          "correct_answer": ""
+        }
+      ],
+      "ai_system_prompt": "ROLE: IELTS/TOEFL Examiner. Assess Task Achievement, Coherence, Lexical Resource, and Grammatical Range. Provide strict, professional academic feedback."
+    },
+    {
+      "id": "toefl_w_task2",
+      "type": "practice_writing",
+      "title": "Writing Task 2: Academic Discussion",
+      "instructions": "Write a response to the professor's question. Express your opinion and contribute to the discussion. Minimum 100 words.",
+      "passageText": "INSTRUCTIONS:\\nYour professor is teaching a class on sociology. Write a post responding to the professor's question. In your response, you should express and support your personal opinion and make a contribution to the discussion.\\n\\nProfessor: Today we are discussing the impact of remote work on society. Some argue that allowing employees to work from home increases productivity and improves work-life balance. Others argue that it destroys company culture and leads to social isolation. What is your opinion? Does remote work have a more positive or negative impact on society?\\n\\nStudent 1 (Alex): I strongly believe remote work is positive. Before my company allowed remote work, I spent two hours commuting every day. Now, I use that time to exercise and cook healthy meals. I'm actually much more focused when I work from my home office because there are fewer interruptions than in an open-plan office.\\n\\nStudent 2 (Maria): I have to disagree. While skipping the commute is nice, I think remote work is negative for society. It's incredibly isolating. Humans are social creatures, and we need face-to-face interaction. Also, it's much harder to collaborate on creative projects over video calls. Company culture disappears when you never see your colleagues in person.",
+      "questions": [
+        {
+          "id": "w_q2",
+          "question": "Does remote work have a more positive or negative impact on society? Explain your reasoning.",
+          "options": [],
+          "correct_answer": ""
+        }
+      ],
+      "ai_system_prompt": "ROLE: IELTS/TOEFL Examiner. Assess Task Achievement, Coherence, Lexical Resource, and Grammatical Range. Provide strict, professional academic feedback."
     }
   ]
 }

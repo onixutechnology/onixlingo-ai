@@ -13,6 +13,7 @@ import apiClient from '@/lib/apiClient';
 import { motion, AnimatePresence } from 'framer-motion';
 import Cookies from 'js-cookie';
 import { UpgradeModal } from '@/components/pro/UpgradeModal';
+import PushNotificationManager from '../components/PushNotificationManager';
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -361,7 +362,7 @@ export default function ProfilePage() {
         id: 'toefl_mock',
         category: 'exams',
         title: 'Especialista TOEFL',
-        desc: 'Aprobación de simulacro de certificación académica internacional.',
+        desc: 'Aprobación de simulacro de evaluación académica avanzada.',
         req: 'Completa un simulador TOEFL.',
         icon: <Trophy size={20} />,
         color: 'from-indigo-500 via-sky-300 to-blue-700',
@@ -1155,6 +1156,10 @@ export default function ProfilePage() {
                           <span className="text-[8px] font-black uppercase tracking-widest">{passwordError}</span>
                         </div>
                       )}
+                    </div>
+                    {/* Preferencias de notificaciones In-App */}
+                    <div className="mt-6">
+                      <PushNotificationManager />
                     </div>
                     {/* Información de accesos */}
                     <div className="mt-6 pt-6 border-t border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-4">

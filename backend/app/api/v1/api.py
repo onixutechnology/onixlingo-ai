@@ -14,7 +14,8 @@ from app.api.v1.endpoints import (
     exercises,
     admin,
     voclessons,
-    chess # 🔥 NUEVO: Importamos el módulo chess
+    chess, # 🔥 NUEVO: Importamos el módulo chess
+    push # 🔥 NUEVO: Web Push Notifications
 )
 
 api_router = APIRouter()
@@ -45,3 +46,6 @@ api_router.include_router(avatar.router, prefix="/avatar", tags=["Avatar"])
 
 # 🛡️ PANEL DE ADMINISTRACIÓN (Acceso restringido)
 api_router.include_router(admin.router, prefix="/admin", tags=["Admin Dashboard"])
+
+# 🔔 Notificaciones Push (PWA)
+api_router.include_router(push.router, prefix="/push", tags=["Push"])

@@ -1,5 +1,5 @@
 import enum
-from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey, Text, func
+from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey, Text, func, Float
 from sqlalchemy.orm import relationship
 from app.db.base import Base
 
@@ -195,6 +195,14 @@ class SpeechPracticeLog(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
+class AIPracticeLog(Base):
+    __tablename__ = "ai_practice_logs"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    action_type = Column(String, default="chat") # "chat" o "writing"
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
 
 class ExamAttempt(Base):
     __tablename__ = "exam_attempts"
@@ -210,4 +218,114 @@ class ExamAttempt(Base):
 
     user = relationship("User")
 
-
+
+class AIConfiguration(Base):
+    __tablename__ = "ai_configurations"
+
+    id = Column(Integer, primary_key=True, index=True)
+    engine_name = Column(String, unique=True, index=True, nullable=False)
+    system_prompt = Column(Text, nullable=False)
+    temperature = Column(String, default="0.7")
+    model_version = Column(String, default="gpt-4o")
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+
+class SupportTicket(Base):
+    __tablename__ = "support_tickets"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    subject = Column(String, nullable=False)
+    message = Column(Text, nullable=False)
+    status = Column(String, default="open") 
+    priority = Column(String, default="normal")
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+    
+    user = relationship("User")
+
+class SystemAuditLog(Base):
+    __tablename__ = "system_audit_logs"
+
+    id = Column(Integer, primary_key=True, index=True)
+    admin_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    action = Column(String, nullable=False)
+    details = Column(Text, nullable=True)
+    ip_address = Column(String, nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+class GlobalSetting(Base):
+    __tablename__ = "global_settings"
+
+    id = Column(Integer, primary_key=True, index=True)
+    key = Column(String, unique=True, index=True, nullable=False)
+    value = Column(String, nullable=False)
+    description = Column(String, nullable=True)
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+
+class Campaign(Base):
+    __tablename__ = "campaigns"
+
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String, nullable=False)
+    body = Column(Text, nullable=False)
+    target_audience = Column(String, default="all")
+    campaign_type = Column(String, default="email")
+    status = Column(String, default="sent") # pending, sent, failed
+    is_scheduled = Column(Boolean, default=False)
+    scheduled_at = Column(DateTime(timezone=True), nullable=True)
+    frequency = Column(String, default="once") # once, daily, weekly, monthly
+    sent_at = Column(DateTime(timezone=True), server_default=func.now())
+
+class Referral(Base):
+    __tablename__ = "referrals"
+
+    id = Column(Integer, primary_key=True, index=True)
+    referrer_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    referred_id = Column(Integer, ForeignKey("users.id"), nullable=False, unique=True)
+    status = Column(String, default="pending") # pending, rewarded
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    rewarded_at = Column(DateTime(timezone=True), nullable=True)
+
+    # Relaciones para joins fáciles
+    referrer = relationship("User", foreign_keys=[referrer_id])
+    referred = relationship("User", foreign_keys=[referred_id])
+
+class Transaction(Base):
+    __tablename__ = "transactions"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    amount = Column(Float, nullable=False)
+    currency = Column(String, default="USD")
+    status = Column(String, default="completed") # completed, failed, refunded
+    paddle_transaction_id = Column(String, nullable=True, unique=True)
+    tier_purchased = Column(String, nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+    user = relationship("User")
+
+class BlogPost(Base):
+    __tablename__ = "blog_posts"
+
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String, nullable=False)
+    slug = Column(String, unique=True, index=True, nullable=False)
+    content = Column(Text, nullable=False)
+    author = Column(String, default="OnixLingo Team")
+    status = Column(String, default="draft") # draft, published
+    views = Column(Integer, default=0)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+
+class PushSubscription(Base):
+    __tablename__ = "push_subscriptions"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
+    endpoint = Column(String, unique=True, index=True, nullable=False)
+    p256dh = Column(String, nullable=False)
+    auth = Column(String, nullable=False)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+
+    user = relationship("User")

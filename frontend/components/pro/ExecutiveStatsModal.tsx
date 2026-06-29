@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { X, BarChart3, Trophy, Activity, Loader2 } from 'lucide-react';
 import Cookies from 'js-cookie';
 
-const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8021';
 
 interface KPIStats {
   totalXP: number;

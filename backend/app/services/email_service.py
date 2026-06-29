@@ -100,7 +100,7 @@ def send_welcome_email(to_email: str, username: str):
                 </div>
                 
                 <p style="font-size: 12px; color: #64748b; margin-top: 40px; text-align: center;">
-                    Si tienes alguna duda, responde a este correo y nuestro equipo te ayudará.
+                    Si tienes alguna duda, escríbenos a soporte@onixu.company
                 </p>
             </div>
             """
@@ -108,6 +108,43 @@ def send_welcome_email(to_email: str, username: str):
         logger.info(f"📧 Correo de bienvenida enviado a {to_email}")
         return response
     except Exception as e:
-        logger.error(f"❌ Error al enviar correo de bienvenida vía Resend: {e}")
-        # No bloqueamos si el correo falla
-        pass
+        logger.error(f"❌ Error al enviar correo de bienvenida vía Resend a {to_email}: {e}")
+
+from app.services.email_templates import get_template
+
+def send_campaign_emails(users: list, template_type: str, subject: str, custom_body: str = ""):
+    """Envía correos en lote a una lista de usuarios (max 100 por lote)."""
+    resend_key = os.getenv("RESEND_API_KEY")
+    if not resend_key:
+        logger.error("❌ ERROR: RESEND_API_KEY no configurada.")
+        return 0
+        
+    resend.api_key = resend_key
+    sender = "OnixLingo <soporte@onixu.company>"
+    
+    emails_to_send = []
+    for user in users:
+        html_content = get_template(
+            template_type=template_type,
+            username=user.first_name or user.username or "Estudiante",
+            custom_body=custom_body
+        )
+        emails_to_send.append({
+            "from": sender,
+            "to": [user.email],
+            "subject": subject,
+            "html": html_content
+        })
+        
+    batch_size = 100
+    sent_count = 0
+    for i in range(0, len(emails_to_send), batch_size):
+        batch = emails_to_send[i:i + batch_size]
+        try:
+            resend.Batch.send(batch)
+            sent_count += len(batch)
+            logger.info(f"✅ Lote de {len(batch)} correos de campaña enviado.")
+        except Exception as e:
+            logger.error(f"❌ Error al enviar lote de campaña: {e}")
+            
+    return sent_count

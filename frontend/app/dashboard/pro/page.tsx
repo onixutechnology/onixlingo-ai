@@ -267,38 +267,38 @@ export default function ExecutiveDashboard() {
             <div className="w-7 h-7 bg-gradient-to-br from-teal-300 to-cyan-500 flex items-center justify-center shadow-none shadow-teal-400/30">
               <Crown size={14} className="text-slate-900" />
             </div>
-            <span className="font-black text-slate-900 text-sm tracking-tight">
+            <span className="font-black text-white text-sm tracking-tight">
               OnixLingo <span className="text-cyan-200">Executive</span>
             </span>
           </div>
-          <div className="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-sm border border-white/30 bg-white/10 text-[10px] font-black text-slate-900 uppercase tracking-widest">
+          <div className="hidden md:flex items-center gap-1.5 px-3 py-1 rounded-sm border border-white/30 bg-white/10 text-[10px] font-black text-white uppercase tracking-widest">
             <Gem size={11} />
             Titanium Status
           </div>
         </div>
 
         <div className="flex items-center gap-6">
-          <div className="hidden md:flex items-center gap-5 text-[11px] font-black text-slate-900/70 uppercase tracking-widest">
+          <div className="hidden md:flex items-center gap-5 text-[11px] font-black text-white/80 uppercase tracking-widest">
             <span className="flex items-center gap-1.5 text-purple-300">
               <Crown size={13} className="fill-purple-300/20 text-purple-300" /> LEVEL {kpis.currentLevel}
             </span>
             <span className="flex items-center gap-1.5 text-amber-300">
               <Trophy size={13} /> {kpis.totalXP} XP
             </span>
-            <span className="flex items-center gap-1.5 text-slate-900">
+            <span className="flex items-center gap-1.5 text-white">
               <Activity size={13} /> {kpis.accuracy}% ACC
             </span>
           </div>
           <div className="flex items-center gap-4 border-l border-white/20 pl-5">
             <Link
               href="/dashboard/leaderboard"
-              className="text-[10px] font-black text-slate-900/70 hover:text-slate-900 transition-colors uppercase tracking-widest flex items-center gap-1.5"
+              className="text-[10px] font-black text-white/70 hover:text-white transition-colors uppercase tracking-widest flex items-center gap-1.5"
             >
               <Trophy size={13} /> Ranking
             </Link>
             <button
               onClick={() => { setMode('student'); router.push('/dashboard'); }}
-              className="text-[10px] font-black text-slate-900/70 hover:text-slate-900 transition-colors uppercase tracking-widest"
+              className="text-[10px] font-black text-white/70 hover:text-white transition-colors uppercase tracking-widest"
             >
               Exit Executive
             </button>

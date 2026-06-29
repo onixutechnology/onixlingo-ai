@@ -16,6 +16,7 @@ import {
   ChevronDown, Sparkles, Award
 } from 'lucide-react';
 import { BASE_MODULES, LOGICAL_MODULES, CHESS_LEVELS } from './chess-data';
+import { CHESS_TROPHIES } from './chess-trophies';
 import apiClient from '@/lib/apiClient';
 import { useAuthStore } from '@/store/useAuthStore';
 import { useUIStore } from '@/store/uiStore';
@@ -228,6 +229,17 @@ export default function ChessLobbyPage() {
     return Math.round((completed / lessons.length) * 100);
   };
 
+  const nextLessonData = (() => {
+    if (!modules || modules.length === 0) return null;
+    for (const mod of modules) {
+      const uncompleted = mod.lessons?.find((l: any) => !l.completed);
+      if (uncompleted) {
+        return { lesson: uncompleted, module: mod };
+      }
+    }
+    return null;
+  })();
+
   if (isLoading) {
     return (
       <div style={woodThemeBgStyle} className="wood-theme-bg min-h-screen flex flex-col items-center justify-center text-[#D4AF37] rounded-none">
@@ -239,6 +251,23 @@ export default function ChessLobbyPage() {
 
   return (
     <div style={woodThemeBgStyle} className="wood-theme-bg min-h-screen text-[#ecd3b5] font-sans pb-20 rounded-none">
+      
+      {/* WRAPPER PRINCIPAL CON ANUNCIOS */}
+      <div className="max-w-[1700px] mx-auto flex flex-col 2xl:flex-row gap-6 pt-6 px-4">
+        
+        {/* --- ESPACIO PUBLICITARIO IZQUIERDO --- */}
+        <div className="hidden 2xl:block w-[160px] shrink-0">
+          <div className="sticky top-20 flex justify-center">
+             <div className="w-[160px] h-[600px] bg-[#1a0d04]/50 border-2 border-dashed border-[#D4AF37]/30 flex flex-col items-center justify-center text-[#D4AF37]/70 text-center p-4 rounded-none shadow-sm">
+                <span className="font-black text-[10px] uppercase tracking-widest mb-2">AdSense Izquierdo</span>
+                <span className="text-[9px] leading-tight font-bold">160x600 Vertical</span>
+             </div>
+          </div>
+        </div>
+
+        {/* CONTENEDOR CENTRAL */}
+        <div className="flex-1 min-w-0 max-w-7xl mx-auto w-full flex flex-col gap-6">
+
       {/* HEADER HERO */}
       <div style={woodPanelStyle} className="wood-panel relative border-b-4 border-[#1a0d04] pb-12 pt-8 px-6 overflow-hidden rounded-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-amber-500/5 via-transparent to-transparent"></div>
@@ -534,28 +563,33 @@ export default function ChessLobbyPage() {
                 <p className="text-[9px] text-slate-300 font-semibold leading-none mt-1.5">Conquista lecciones tácticas y PvP para desbloquear.</p>
               </div>
 
-              <div className="space-y-1.5 pt-1">
-                {[
-                  { title: 'Pensador Táctico', desc: 'Resuelve al menos 1 reto de táctica', unlocked: stats.puzzlesSolved >= 1 },
-                  { title: 'Maestro del ELO', desc: 'Alcanza ELO 1000+ Táctico o 1400+ Arena', unlocked: (user?.chess_elo ?? stats.arenaElo) >= 1400 || (user?.chess_tactical_elo ?? stats.tacticalElo) >= 1000 },
-                  { title: 'Superviviente del Reto', desc: 'Mantén tu racha activa resolviendo puzzles', unlocked: stats.puzzlesSolved > 0 }
-                ].map((badge, idx) => (
-                  <div 
-                    key={idx}
-                    className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-500/40 bg-emerald-950/20 text-emerald-400' : 'border-[#3c1e0a]/50 text-white opacity-60'}`}
-                  >
-                    <div className="flex items-center gap-2">
-                      <Award size={12} className={badge.unlocked ? 'text-emerald-400' : 'text-white opacity-80'} />
-                      <div className="text-left">
-                        <p className="text-[9px] font-black leading-none">{badge.title}</p>
-                        <p className="text-[7px] font-bold text-amber-200/60 mt-0.5 leading-none">{badge.desc}</p>
+              <div className="space-y-1.5 pt-1 max-h-[250px] overflow-y-auto custom-scrollbar pr-2">
+                <style>{`
+                  .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+                  .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+                  .custom-scrollbar::-webkit-scrollbar-thumb { background: #3c1e0a; border-radius: 4px; }
+                  .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #502b16; }
+                `}</style>
+                {CHESS_TROPHIES.map((badge, idx) => {
+                  const isUnlocked = badge.condition(stats, user);
+                  return (
+                    <div 
+                      key={idx}
+                      className={`flex items-center justify-between p-2 border ${isUnlocked ? 'border-emerald-500/40 bg-emerald-950/20 text-emerald-400' : 'border-[#3c1e0a]/50 text-white opacity-60'}`}
+                    >
+                      <div className="flex items-center gap-2">
+                        <Award size={12} className={isUnlocked ? 'text-emerald-400' : 'text-white opacity-80'} />
+                        <div className="text-left">
+                          <p className="text-[9px] font-black leading-none">{badge.title}</p>
+                          <p className="text-[7px] font-bold text-amber-200/60 mt-0.5 leading-none">{badge.desc}</p>
+                        </div>
                       </div>
+                      <span className="text-[7px] font-black uppercase tracking-widest shrink-0 ml-2">
+                        {isUnlocked ? 'Desbloqueado' : 'Bloqueado'}
+                      </span>
                     </div>
-                    <span className="text-[7px] font-black uppercase tracking-widest">
-                      {badge.unlocked ? 'Desbloqueado' : 'Bloqueado'}
-                    </span>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -567,6 +601,31 @@ export default function ChessLobbyPage() {
             <div>
               <h2 className="text-xl font-bold font-serif italic text-white">Ruta del Aprendizaje</h2>
             </div>
+            
+            {nextLessonData && !isLoading && (
+              <div 
+                onClick={() => {
+                  if (nextLessonData.module.locked) {
+                    setShowUpgrade(true);
+                  } else {
+                    window.location.href = `/dashboard/chess/practice?lessonId=${nextLessonData.lesson.id}`;
+                  }
+                }}
+                className={`flex items-center gap-4 p-3 border cursor-pointer hover:scale-[1.02] transition-all bg-[#2a1409] ${nextLessonData.module.locked ? 'border-[#3c1e0a]/80 opacity-80 hover:bg-[#2a1409]' : 'border-[#D4AF37]/50 hover:bg-[#361d0f]'}`}
+              >
+                <div className="flex flex-col text-left md:text-right">
+                  <span className={`text-[10px] font-black uppercase tracking-wider ${nextLessonData.module.locked ? 'text-slate-500' : 'text-amber-500'}`}>
+                    {nextLessonData.module.locked ? 'Próxima (Bloqueada)' : 'Continuar Aprendizaje'}
+                  </span>
+                  <span className="text-sm font-bold text-white truncate max-w-[200px] md:max-w-[300px]">
+                    {nextLessonData.lesson.title}
+                  </span>
+                </div>
+                <div className={`w-10 h-10 flex items-center justify-center rounded-none bg-[#1a0d04] border ${nextLessonData.module.locked ? 'border-slate-700 text-slate-500' : 'border-[#D4AF37]/30 text-amber-400'}`}>
+                  {nextLessonData.module.locked ? <Lock size={16} /> : <Play size={16} fill="currentColor" />}
+                </div>
+              </div>
+            )}
           </div>
 
           {CHESS_LEVELS.map((level) => {
@@ -748,6 +807,21 @@ export default function ChessLobbyPage() {
           })}
         </div>
       </div>
+      
+        </div> {/* CIERRE CONTENEDOR CENTRAL */}
+
+        {/* --- ESPACIO PUBLICITARIO DERECHO --- */}
+        <div className="hidden 2xl:block w-[160px] shrink-0">
+          <div className="sticky top-20 flex justify-center">
+             <div className="w-[160px] h-[600px] bg-[#1a0d04]/50 border-2 border-dashed border-[#D4AF37]/30 flex flex-col items-center justify-center text-[#D4AF37]/70 text-center p-4 rounded-none shadow-sm">
+                <span className="font-black text-[10px] uppercase tracking-widest mb-2">AdSense Derecho</span>
+                <span className="text-[9px] leading-tight font-bold">160x600 Vertical</span>
+             </div>
+          </div>
+        </div>
+
+      </div> {/* CIERRE WRAPPER PRINCIPAL CON ANUNCIOS */}
+
       {showUpgrade && <UpgradeModal onClose={() => setShowUpgrade(false)} />}
     </div>
   );

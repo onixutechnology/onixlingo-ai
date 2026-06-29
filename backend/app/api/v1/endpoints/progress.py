@@ -41,7 +41,8 @@ def complete_lesson(
             total_steps=data.total_steps, 
             lesson_type=data.lesson_type,
             difficulty_completed=data.difficulty_completed,
-            language=getattr(data, 'language', 'en') or 'en'
+            language=getattr(data, 'language', 'en') or 'en',
+            user_timezone=getattr(data, 'user_timezone', 'UTC')
         )
         return progress
     except Exception as e:

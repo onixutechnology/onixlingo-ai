@@ -34,7 +34,7 @@ import { CURRICULUM_ZH } from '@/data/curriculum_zh';
 type LessonStatus = 'locked' | 'active' | 'completed';
 
 const LANGUAGE_COLORS: Record<string, { primary: string, secondary: string, accent: string, selection: string, bg: string }> = {
-  en: { primary: 'blue-600', secondary: 'blue-50', accent: 'blue-700', selection: 'bg-blue-100', bg: 'text-blue-900' },
+  en: { primary: 'sky-400', secondary: 'sky-50', accent: 'sky-500', selection: 'bg-sky-100', bg: 'text-sky-900' },
   fr: { primary: 'cyan-500', secondary: 'cyan-50', accent: 'cyan-600', selection: 'bg-cyan-100', bg: 'text-cyan-900' },
   zh: { primary: 'indigo-200', secondary: 'indigo-50', accent: 'indigo-300', selection: 'bg-indigo-100', bg: 'text-indigo-900' },
 };
@@ -63,26 +63,29 @@ const HeaderStats = ({ xp, streak, onOpenStats }: { xp: number, streak: number, 
 
   return (
     <div className="flex items-center gap-2 bg-white px-2 py-1 rounded-none border border-sky-200 shadow-none">
-      <button onClick={onOpenStats} className="hidden md:flex items-center gap-2 px-3 border-r border-sky-100 hover:bg-sky-50 transition-colors text-left outline-none cursor-pointer">
+      <button onClick={onOpenStats} className="flex items-center gap-1.5 md:gap-2 px-2 md:px-3 border-r border-sky-100 hover:bg-sky-50 transition-colors text-left outline-none cursor-pointer">
         <div className="text-purple-650"><Crown size={14} className="fill-purple-100" /></div>
-        <div>
+        <div className="hidden md:block">
           <p className="text-[8px] text-sky-600 font-black uppercase tracking-widest leading-none mb-0.5">Nivel</p>
           <span className="text-xs font-black text-sky-950 leading-none">{level}</span>
         </div>
+        <div className="md:hidden text-xs font-black text-sky-950 leading-none">{level}</div>
       </button>
-      <button onClick={onOpenStats} className="hidden md:flex items-center gap-2 px-3 border-r border-sky-100 hover:bg-sky-50 transition-colors text-left outline-none cursor-pointer">
+      <button onClick={onOpenStats} className="flex items-center gap-1.5 md:gap-2 px-2 md:px-3 border-r border-sky-100 hover:bg-sky-50 transition-colors text-left outline-none cursor-pointer">
         <div className="text-[#D4AF37]"><Zap size={14} fill="currentColor" /></div>
-        <div>
+        <div className="hidden md:block">
           <p className="text-[8px] text-sky-600 font-black uppercase tracking-widest leading-none mb-0.5">XP</p>
           <span className="text-xs font-black text-sky-950 leading-none">{xp.toLocaleString()}</span>
         </div>
+        <div className="md:hidden text-xs font-black text-sky-950 leading-none">{xp >= 1000 ? (xp/1000).toFixed(1)+'k' : xp}</div>
       </button>
-      <button onClick={onOpenStats} className="hidden md:flex items-center gap-2 px-3 border-r border-sky-100 hover:bg-sky-50 transition-colors text-left outline-none cursor-pointer">
+      <button onClick={onOpenStats} className="flex items-center gap-1.5 md:gap-2 px-2 md:px-3 border-r border-sky-100 hover:bg-sky-50 transition-colors text-left outline-none cursor-pointer">
         <div className="text-orange-500"><Flame size={14} fill="currentColor" /></div>
-        <div>
+        <div className="hidden md:block">
           <p className="text-[8px] text-sky-600 font-black uppercase tracking-widest leading-none mb-0.5">Racha</p>
           <span className="text-xs font-black text-sky-950 leading-none">{streak}</span>
         </div>
+        <div className="md:hidden text-xs font-black text-sky-950 leading-none">{streak}</div>
       </button>
 
       {/* ⚡ ENERGÍA INDICATOR (Batería Premium) */}
@@ -225,8 +228,6 @@ export default function DashboardPage() {
   const [globalProgress, setGlobalProgress] = useState(0);
   const [timeMode, setTimeMode] = useState<'basic' | 'intermediate' | 'advanced'>('basic');
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
-  const [selectedSimulator, setSelectedSimulator] = useState<string | null>(null);
-  const [showVersionModal, setShowVersionModal] = useState(false);
   const [showStatsModal, setShowStatsModal] = useState(false);
 
   // Estado local para acordeón de niveles (Lección A expandida por defecto)
@@ -414,8 +415,7 @@ export default function DashboardPage() {
     if (userTier !== 'executive') {
       setShowUpgradeModal(true);
     } else {
-      setSelectedSimulator(lessonId);
-      setShowVersionModal(true);
+      router.push(`/simulator/${lessonId}_v1`);
     }
   };
 
@@ -438,6 +438,16 @@ export default function DashboardPage() {
   };
 
   const getStars = (lessonId: string) => dashboardData?.standard?.find((l: any) => l.lesson_id === lessonId && (l.language === activeLanguage || (!l.language && activeLanguage === 'en')))?.stars || 0;
+
+  const getLessonProgressPercent = (lessonId: string) => {
+    const node = dashboardData?.standard?.find((l: any) => l.lesson_id === lessonId && (l.language === activeLanguage || (!l.language && activeLanguage === 'en')));
+    if (node && node.total_steps && node.total_steps > 0) {
+      if (node.current_step > 0) {
+        return Math.max(1, Math.round((node.current_step / node.total_steps) * 100));
+      }
+    }
+    return 0;
+  };
 
   const theme = useMemo(() => LANGUAGE_COLORS[activeLanguage] || LANGUAGE_COLORS.en, [activeLanguage]);
 
@@ -613,9 +623,9 @@ export default function DashboardPage() {
                         {item.icon === 'Smartphone' && <Smartphone size={10} className={unlocked ? "text-[#D4AF37]" : active ? "text-[#D4AF37]" : "text-sky-500"} />}
                         {item.icon === 'Laptop' && <Laptop size={10} className={unlocked ? "text-[#D4AF37]" : active ? "text-[#D4AF37]" : "text-sky-500"} />}
                       </div>
-                      <div className="absolute inset-0 bg-sky-950/95 text-slate-900 p-1 text-[7px] font-black uppercase flex flex-col justify-center items-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-150 rounded-none z-30">
+                      <div className="absolute inset-0 bg-sky-500/95 text-white p-1 text-[7px] font-black uppercase flex flex-col justify-center items-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-150 rounded-none z-30">
                         <span className="text-center">{item.prize}</span>
-                        <span className="text-[5px] text-amber-400 mt-0.5 uppercase tracking-widest font-black">
+                        <span className="text-[5px] text-amber-300 mt-0.5 uppercase tracking-widest font-black">
                           {unlocked ? '¡Sorteado!' : active ? 'Siguiente' : 'Bloqueado'}
                         </span>
                       </div>
@@ -933,18 +943,30 @@ export default function DashboardPage() {
 
                                   {/* Tiempo En Curso */}
                                   {isActive && (
-                                    <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-[#D4AF37] animate-pulse">
-                                      {isEven ? (
-                                        <>
-                                          <Timer size={12} />
-                                          <span>En Progreso</span>
-                                        </>
-                                      ) : (
-                                        <>
-                                          <span>En Progreso</span>
-                                          <Timer size={12} />
-                                        </>
-                                      )}
+                                    <div className="flex flex-col gap-1.5 mt-1">
+                                      <div className={`flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-[#D4AF37] ${isEven ? 'justify-start' : 'justify-end'}`}>
+                                        {isEven ? (
+                                          <>
+                                            <Timer size={12} className="animate-pulse" />
+                                            <span className="animate-pulse">En Progreso</span>
+                                          </>
+                                        ) : (
+                                          <>
+                                            <span className="animate-pulse">En Progreso</span>
+                                            <Timer size={12} className="animate-pulse" />
+                                          </>
+                                        )}
+                                      </div>
+                                      <div className={`w-full h-1 bg-sky-100/50 rounded-none overflow-hidden`}>
+                                        <motion.div 
+                                          initial={{ width: 0 }}
+                                          animate={{ width: `${getLessonProgressPercent(lesson.id)}%` }}
+                                          className={`h-full bg-[#D4AF37] ${isEven ? 'float-left' : 'float-right'}`}
+                                        />
+                                      </div>
+                                      <div className={`text-[7px] font-black text-sky-600/70 uppercase tracking-widest ${isEven ? 'text-left' : 'text-right'}`}>
+                                        Avance: {getLessonProgressPercent(lesson.id)}%
+                                      </div>
                                     </div>
                                   )}
                                 </div>
@@ -970,33 +992,6 @@ export default function DashboardPage() {
                   <Shield size={14} className={`text-${theme.primary}`} /> Simuladores Estratégicos
                 </h2>
 
-                {/* SELECTOR DE MODO DE TIEMPO CORPORATIVO */}
-                <div className="inline-flex bg-sky-100 p-0.5 border border-sky-200">
-                  {(['basic', 'intermediate', 'advanced'] as const).map(mode => {
-                    const label = {
-                      basic: 'Básico (Sin Tiempo)',
-                      intermediate: 'Intermedio (10 Min)',
-                      advanced: 'Avanzado (5 Min)'
-                    }[mode];
-
-                    const activeColor = {
-                      basic: `bg-sky-200 text-slate-900 border border-sky-400`,
-                      intermediate: 'bg-orange-200 text-slate-900 border border-orange-400',
-                      advanced: 'bg-rose-200 text-slate-900 border border-rose-400'
-                    }[mode];
-
-                    const isActive = timeMode === mode;
-                    return (
-                      <button
-                        key={mode}
-                        onClick={() => setTimeMode(mode)}
-                        className={`px-3 py-1 rounded-none text-[8px] font-black uppercase tracking-widest transition-all ${isActive ? activeColor : 'text-sky-600 hover:text-sky-950'}`}
-                      >
-                        {label}
-                      </button>
-                    );
-                  })}
-                </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -1018,10 +1013,10 @@ export default function DashboardPage() {
                       const completedCount = getCompletedCount('toeic_listening');
                       return completedCount > 0 ? (
                         <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[7px] font-black uppercase px-1.5 py-0.5 border border-[#D4AF37]/30">
-                          {completedCount === 10 ? '✓ COMPLETO (10/10)' : `${completedCount}/10 COMPLETADO`}
+                          ✓ COMPLETO
                         </span>
                       ) : (
-                        <span className="text-[7px] text-sky-600 font-bold uppercase tracking-wider">0/10 versiones</span>
+                        <span className="text-[7px] text-sky-600 font-bold uppercase tracking-wider">VERSIÓN ÚNICA</span>
                       );
                     })()}
                   </div>
@@ -1044,10 +1039,10 @@ export default function DashboardPage() {
                       const completedCount = getCompletedCount('toeic_reading');
                       return completedCount > 0 ? (
                         <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[7px] font-black uppercase px-1.5 py-0.5 border border-[#D4AF37]/30">
-                          {completedCount === 10 ? '✓ COMPLETO (10/10)' : `${completedCount}/10 COMPLETADO`}
+                          ✓ COMPLETO
                         </span>
                       ) : (
-                        <span className="text-[7px] text-sky-600 font-bold uppercase tracking-wider">0/10 versiones</span>
+                        <span className="text-[7px] text-sky-600 font-bold uppercase tracking-wider">VERSIÓN ÚNICA</span>
                       );
                     })()}
                   </div>
@@ -1070,10 +1065,10 @@ export default function DashboardPage() {
                       const completedCount = getCompletedCount('toeic_mock');
                       return completedCount > 0 ? (
                         <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[7px] font-black uppercase px-1.5 py-0.5 border border-[#D4AF37]/30">
-                          {completedCount === 10 ? '✓ COMPLETO (10/10)' : `${completedCount}/10 COMPLETADO`}
+                          ✓ COMPLETO
                         </span>
                       ) : (
-                        <span className="text-[7px] text-sky-600 font-bold uppercase tracking-wider">0/10 versiones</span>
+                        <span className="text-[7px] text-sky-600 font-bold uppercase tracking-wider">VERSIÓN ÚNICA</span>
                       );
                     })()}
                   </div>
@@ -1096,10 +1091,10 @@ export default function DashboardPage() {
                       const completedCount = getCompletedCount('toefl_mock');
                       return completedCount > 0 ? (
                         <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[7px] font-black uppercase px-1.5 py-0.5 border border-[#D4AF37]/30">
-                          {completedCount === 10 ? '✓ COMPLETO (10/10)' : `${completedCount}/10 COMPLETADO`}
+                          ✓ COMPLETO
                         </span>
                       ) : (
-                        <span className="text-[7px] text-sky-600 font-bold uppercase tracking-wider">0/10 versiones</span>
+                        <span className="text-[7px] text-sky-600 font-bold uppercase tracking-wider">VERSIÓN ÚNICA</span>
                       );
                     })()}
                   </div>
@@ -1122,10 +1117,10 @@ export default function DashboardPage() {
                       const completedCount = getCompletedCount('ielts_mock');
                       return completedCount > 0 ? (
                         <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[7px] font-black uppercase px-1.5 py-0.5 border border-[#D4AF37]/30">
-                          {completedCount === 10 ? '✓ COMPLETO (10/10)' : `${completedCount}/10 COMPLETADO`}
+                          ✓ COMPLETO
                         </span>
                       ) : (
-                        <span className="text-[7px] text-sky-600 font-bold uppercase tracking-wider">0/10 versiones</span>
+                        <span className="text-[7px] text-sky-600 font-bold uppercase tracking-wider">VERSIÓN ÚNICA</span>
                       );
                     })()}
                   </div>
@@ -1154,81 +1149,6 @@ export default function DashboardPage() {
 
       {showUpgradeModal && <UpgradeModal onClose={() => setShowUpgradeModal(false)} />}
 
-      {showVersionModal && selectedSimulator && (
-        <div className="fixed inset-0 bg-green-950/40 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-in fade-in duration-200">
-          <div className="bg-gradient-to-br from-green-50 via-green-100/95 to-green-50/80 border-2 border-green-300 p-6 md:p-8 max-w-3xl w-full shadow-[0_20px_50px_rgba(20,83,45,0.25)] rounded-none relative animate-in zoom-in-95 duration-200 backdrop-blur-lg">
-            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-green-500 via-emerald-400 to-green-600 rounded-t-2xl" />
-            
-            <div className="flex justify-between items-center mb-4">
-              <div className="flex items-center gap-2">
-                <Award className="text-green-700 w-5 h-5 shrink-0" />
-                <h3 className="text-base font-serif font-black italic uppercase tracking-wider text-green-950">
-                  {getSimulatorDisplayName(selectedSimulator)}
-                </h3>
-              </div>
-              <button
-                onClick={() => setShowVersionModal(false)}
-                className="text-green-700 hover:text-green-950 bg-green-200/50 hover:bg-green-300/50 border border-green-300 rounded-full p-1.5 transition-all active:scale-90"
-              >
-                <X size={16} />
-              </button>
-            </div>
-
-            <p className="text-[10px] text-green-800 font-bold uppercase tracking-widest leading-relaxed mb-6 border-b border-green-300/60 pb-3">
-              Selecciona una de las 10 versiones profesionales a continuación. Cada versión evalúa un contexto temático específico sin nombres ficticios, garantizando una simulación 100% real.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-h-[380px] overflow-y-auto pr-2 custom-scrollbar">
-              {(() => {
-                const versions = SIMULATOR_VERSIONS_METADATA[selectedSimulator] || SIMULATOR_VERSIONS_METADATA.toeic_listening;
-
-                return Array.from({ length: 10 }).map((_, i) => {
-                  const vNum = i + 1;
-                  const versionId = `${selectedSimulator}_v${vNum}`;
-                  const isCompleted = dashboardData?.standard?.some(
-                    (l: any) => l.lesson_id === versionId && l.status === 'completed'
-                  );
-                  const verMeta = versions[i] || { title: `Versión ${vNum}`, desc: "Evaluación oficial de certificación." };
-
-                  return (
-                    <button
-                      key={vNum}
-                      onClick={() => {
-                        setShowVersionModal(false);
-                        router.push(`/lesson/${versionId}?type=standard&timeMode=${timeMode}`);
-                      }}
-                      className={`p-4 text-left border transition-all duration-200 relative group/card flex flex-col justify-between hover:scale-[1.01] hover:shadow-none rounded-none min-h-[100px] ${
-                        isCompleted 
-                          ? 'bg-green-200/70 border-green-400 text-green-950 hover:bg-green-300/50 hover:border-green-600 shadow-[0_10px_40px_rgba(14,165,233,0.08)] ring-1 ring-green-400/30' 
-                          : 'bg-white border-green-200 text-green-900 hover:bg-green-50 hover:border-green-500'
-                      }`}
-                    >
-                      <div className="flex justify-between items-center w-full mb-1.5">
-                        <span className="font-mono text-[10px] font-black tracking-wider uppercase text-green-800">
-                          {verMeta.title}
-                        </span>
-                        {isCompleted ? (
-                          <span className="flex items-center gap-1 bg-green-600 text-slate-900 text-[8px] font-black uppercase px-2 py-0.5 tracking-wider rounded-none border border-green-700 shadow-[0_10px_40px_rgba(14,165,233,0.08)]">
-                            <Check size={8} strokeWidth={4} /> Completado
-                          </span>
-                        ) : (
-                          <span className="bg-green-50 border border-green-200 text-green-800 text-[8px] font-black uppercase px-2 py-0.5 tracking-wider rounded-none">
-                            Pendiente
-                          </span>
-                        )}
-                      </div>
-                      
-                      <p className="text-[9.5px] text-green-950/80 font-semibold leading-relaxed group-hover/card:text-green-950 transition-colors font-sans">
-                        {verMeta.desc}
-                      </p>
-                    </button>
-                  );
-                });
-              })()}
-            </div>
-          </div>
-        </div>
-      )}
 
       {showStatsModal && <StatsModal onClose={() => setShowStatsModal(false)} userStats={userStats} />}
     </div>

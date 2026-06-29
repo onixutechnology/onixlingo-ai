@@ -3,9 +3,9 @@ import re
 
 directory = r'c:\Users\jeico\onixlingo\language-ai-tutor\frontend'
 
-target_code = "const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';"
-target_code_raw = "const RAW_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company/api/v1' : 'http://127.0.0.1:8020/api/v1';"
-target_code_ai = "process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8020';"
+target_code = "const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8022';"
+target_code_raw = "const RAW_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company/api/v1' : 'http://127.0.0.1:8022/api/v1';"
+target_code_ai = "process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8022';"
 
 for root, _, files in os.walk(directory):
     if 'node_modules' in root or '.next' in root:

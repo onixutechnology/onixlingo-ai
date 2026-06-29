@@ -32,6 +32,7 @@ class StatsSchema(BaseModel):
 class UserProfileResponse(BaseModel):
     id: str
     username: str
+    role: str
     full_name: Optional[str]
     email: Optional[str]
     phone: Optional[str]
@@ -42,6 +43,11 @@ class UserProfileResponse(BaseModel):
     stats: StatsSchema
     chess_elo: int
     chess_tactical_elo: int
+
+class TicketCreate(BaseModel):
+    subject: str
+    message: str
+    priority: str = "normal"
 
 # --- ENDPOINTS ---
 @router.get("/me", response_model=UserProfileResponse)
@@ -63,6 +69,7 @@ def read_user_me(
     return {
         "id": str(current_user.id),
         "username": current_user.username,
+        "role": current_user.role or "user",
         "full_name": current_user.full_name,
         "email": current_user.email,
         "phone": current_user.phone,
@@ -113,3 +120,22 @@ def update_user_me(
     db.refresh(current_user)
 
     return read_user_me(current_user=current_user, db=db)
+
+@router.post("/support-tickets")
+def create_support_ticket(
+    payload: TicketCreate,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    from app.db.models import SupportTicket
+    new_ticket = SupportTicket(
+        user_id=current_user.id,
+        subject=payload.subject,
+        message=payload.message,
+        priority=payload.priority,
+        status="open"
+    )
+    db.add(new_ticket)
+    db.commit()
+    db.refresh(new_ticket)
+    return {"status": "success", "ticket_id": new_ticket.id}

@@ -2,8 +2,8 @@ import os
 import re
 
 directory = r'c:\Users\jeico\onixlingo\language-ai-tutor\frontend'
-target_code_ws1 = "const wsBaseUrl = process.env.NODE_ENV === 'production' ? 'wss://api.onixlingo.onixu.company/ws' : 'ws://127.0.0.1:8020/ws';"
-target_code_ws2 = "process.env.NODE_ENV === 'production' ? 'wss://api.onixlingo.onixu.company/ws' : 'ws://127.0.0.1:8020/ws';"
+target_code_ws1 = "const wsBaseUrl = process.env.NODE_ENV === 'production' ? 'wss://api.onixlingo.onixu.company/ws' : 'ws://127.0.0.1:8022/ws';"
+target_code_ws2 = "process.env.NODE_ENV === 'production' ? 'wss://api.onixlingo.onixu.company/ws' : 'ws://127.0.0.1:8022/ws';"
 
 for root, _, files in os.walk(directory):
     if 'node_modules' in root or '.next' in root:
@@ -16,8 +16,8 @@ for root, _, files in os.walk(directory):
                 
             modified = False
             
-            if "const wsBaseUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8020/ws';" in content:
-                content = content.replace("const wsBaseUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8020/ws';", target_code_ws1)
+            if "const wsBaseUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8022/ws';" in content:
+                content = content.replace("const wsBaseUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8022/ws';", target_code_ws1)
                 modified = True
                 
             if 'process.env.NEXT_PUBLIC_WS_URL ?? "wss://api.onixlingo.com/ws";' in content:

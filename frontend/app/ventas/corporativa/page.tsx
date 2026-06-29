@@ -411,7 +411,7 @@ export default function CorporativaPage() {
       </nav>
 
       {/* HEADER HERO */}
-      <header className="pt-40 pb-12 px-6 text-center bg-white">
+      <header className="pt-28 pb-12 px-6 text-center bg-white">
         <div className="max-w-4xl mx-auto space-y-4">
           <h1 className="text-4xl md:text-5xl font-black text-black tracking-tight leading-tight uppercase font-serif italic">
             Infraestructura de Licenciamiento <span className="text-[#D4AF37]">Corporativo B2B</span>

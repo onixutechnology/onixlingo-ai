@@ -1,54 +1,1576 @@
 {
   "id": "toeic_listening_v1",
-  "title": "TOEIC® Listening - Versión 1: Meetings & CRM Transition",
-  "level": "B2/C1",
-  "description": "Prueba intensiva de comprensión auditiva TOEIC® enfocada en el contexto de Zenith Corp con the Sales Director.",
-  "total_xp": 100,
+  "title": "TOEIC® Listening Official Module",
+  "difficulty": "advanced",
+  "category": "certification",
+  "author": "OnixLingo Assessment Board",
+  "total_xp": 1000,
+  "completion_message": "Congratulations! Your Listening module has been submitted.",
   "stages": [
     {
-      "id": "listening-intro",
-      "type": "lecture",
-      "title": "TOEIC Part 1: Strategy & Warm-up",
-      "parts": [
+      "id": "part1_q1",
+      "type": "quiz",
+      "title": "Part 1: Photographs (Question 1)",
+      "instructions": "You will see a photograph. You will hear four statements. Choose the statement that best describes what you see in the picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part1_q1.mp3",
+      "questions": [
         {
-          "visual": "## 📸 Simulación de Auditiva: Zenith Corp\n\nEvaluaremos tu destreza auditiva en el contexto de **Zenith Corp** (Líder a cargo: **the Sales Director**).\n\nConcéntrate plenamente en las descripciones y los audios corporativos.",
-          "audio": "Welcome to this specialized TOEIC Listening drill. Listen closely to the speaker options and pick the best description of the workspace. Good luck!",
-          "animation": "teacher_pointing"
+          "id": "q1",
+          "question": "Listen to the audio and select the best description.",
+          "options": [
+            "(A) They are attending a meeting.",
+            "(B) The office is completely empty.",
+            "(C) The man is repairing a computer.",
+            "(D) They are walking outside."
+          ],
+          "correct_answer": "(A) They are attending a meeting."
         }
       ]
     },
     {
-      "id": "listening-quiz",
+      "id": "part1_q2",
       "type": "quiz",
-      "title": "Parte 1: Photodescription & Conversations",
+      "title": "Part 1: Photographs (Question 2)",
+      "instructions": "You will see a photograph. You will hear four statements. Choose the statement that best describes what you see in the picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part1_q2.mp3",
       "questions": [
         {
-          "id": "TL1_v1",
-          "type": "quiz_choice",
-          "question": "[PART 1 - PHOTOGRAPH]: Look at the business picture of Zenith Corp's office staff. Select the correct description.",
-          "audio_script": "A) They are discussing the CRM dashboard. B) They are leaving the main lobby. C) The server room is closed. D) They are filing paper documents.",
+          "id": "q2",
+          "question": "Listen to the audio and select the best description.",
           "options": [
-            "Statement A",
-            "Statement B",
-            "Statement C",
-            "Statement D"
+            "(A) The boxes are being loaded onto a truck.",
+            "(B) The woman is sweeping the floor.",
+            "(C) A worker is inspecting the equipment.",
+            "(D) The lights are being turned off."
           ],
-          "correct_answer": "Statement A",
-          "explanation": "La descripción correcta es la A, ya que se observa a los representantes analizando el panel del CRM."
+          "correct_answer": "(C) A worker is inspecting the equipment."
+        }
+      ]
+    },
+    {
+      "id": "part1_q3",
+      "type": "quiz",
+      "title": "Part 1: Photographs (Question 3)",
+      "instructions": "You will see a photograph. You will hear four statements. Choose the statement that best describes what you see in the picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1000&auto=format&fit=crop",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part1_q3.mp3",
+      "questions": [
+        {
+          "id": "q3",
+          "question": "Listen to the audio and select the best description.",
+          "options": [
+            "(A) The airplane is landing on the runway.",
+            "(B) Passengers are waiting to board.",
+            "(C) Luggage is being unloaded from the plane.",
+            "(D) The pilot is walking through the terminal."
+          ],
+          "correct_answer": "(B) Passengers are waiting to board."
+        }
+      ]
+    },
+    {
+      "id": "part1_q4",
+      "type": "quiz",
+      "title": "Part 1: Photographs (Question 4)",
+      "instructions": "You will see a photograph. You will hear four statements. Choose the statement that best describes what you see in the picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part1_q4.mp3",
+      "questions": [
+        {
+          "id": "q4",
+          "question": "Listen to the audio and select the best description.",
+          "options": [
+            "(A) The monitors have been turned off.",
+            "(B) A person is printing a document.",
+            "(C) The chairs are stacked in the corner.",
+            "(D) Some documents are scattered on the desk."
+          ],
+          "correct_answer": "(D) Some documents are scattered on the desk."
+        }
+      ]
+    },
+    {
+      "id": "part1_q5",
+      "type": "quiz",
+      "title": "Part 1: Photographs (Question 5)",
+      "instructions": "You will see a photograph. You will hear four statements. Choose the statement that best describes what you see in the picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part1_q5.mp3",
+      "questions": [
+        {
+          "id": "q5",
+          "question": "Listen to the audio and select the best description.",
+          "options": [
+            "(A) Two people are shaking hands.",
+            "(B) They are exchanging business cards.",
+            "(C) They are putting on their jackets.",
+            "(D) A contract is being signed."
+          ],
+          "correct_answer": "(A) Two people are shaking hands."
+        }
+      ]
+    },
+    {
+      "id": "part1_q6",
+      "type": "quiz",
+      "title": "Part 1: Photographs (Question 6)",
+      "instructions": "You will see a photograph. You will hear four statements. Choose the statement that best describes what you see in the picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part1_q6.mp3",
+      "questions": [
+        {
+          "id": "q6",
+          "question": "Listen to the audio and select the best description.",
+          "options": [
+            "(A) She is drinking a cup of coffee.",
+            "(B) She is looking out the window.",
+            "(C) She is typing on a keyboard.",
+            "(D) She is putting away her glasses."
+          ],
+          "correct_answer": "(C) She is typing on a keyboard."
+        }
+      ]
+    },
+    {
+      "id": "part2_q7",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 7)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q7.mp3",
+      "questions": [
+        {
+          "id": "q7",
+          "question": "Listen to the audio: \"When is the project proposal due?\"",
+          "options": [
+            "(A) By Friday afternoon.",
+            "(B) Yes, it's a great project.",
+            "(C) I proposed it yesterday."
+          ],
+          "correct_answer": "(A) By Friday afternoon."
+        }
+      ]
+    },
+    {
+      "id": "part2_q8",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 8)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q8.mp3",
+      "questions": [
+        {
+          "id": "q8",
+          "question": "Listen to the audio: \"Who is going to the conference in Berlin?\"",
+          "options": [
+            "(A) A new marketing strategy.",
+            "(B) The manager and two assistants.",
+            "(C) About three days."
+          ],
+          "correct_answer": "(B) The manager and two assistants."
+        }
+      ]
+    },
+    {
+      "id": "part2_q9",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 9)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q9.mp3",
+      "questions": [
+        {
+          "id": "q9",
+          "question": "Listen to the audio: \"Where did you put the revised budget report?\"",
+          "options": [
+            "(A) In the top drawer of my desk.",
+            "(B) The budget is too low.",
+            "(C) I'll report it to him."
+          ],
+          "correct_answer": "(A) In the top drawer of my desk."
+        }
+      ]
+    },
+    {
+      "id": "part2_q10",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 10)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q10.mp3",
+      "questions": [
+        {
+          "id": "q10",
+          "question": "Listen to the audio: \"Why hasn't the supplier called us back?\"",
+          "options": [
+            "(A) We need more office supplies.",
+            "(B) Because it's a public holiday there.",
+            "(C) Call me back later."
+          ],
+          "correct_answer": "(B) Because it's a public holiday there."
+        }
+      ]
+    },
+    {
+      "id": "part2_q11",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 11)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q11.mp3",
+      "questions": [
+        {
+          "id": "q11",
+          "question": "Listen to the audio: \"Would you like me to book the flight for you?\"",
+          "options": [
+            "(A) No thanks, I've already done it.",
+            "(B) The flight departs at 9 AM.",
+            "(C) It's a very good book."
+          ],
+          "correct_answer": "(A) No thanks, I've already done it."
+        }
+      ]
+    },
+    {
+      "id": "part2_q12",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 12)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q12.mp3",
+      "questions": [
+        {
+          "id": "q12",
+          "question": "Listen to the audio: \"How many computers need to be repaired?\"",
+          "options": [
+            "(A) The IT department is upstairs.",
+            "(B) Only three of them.",
+            "(C) A pair of new ones."
+          ],
+          "correct_answer": "(B) Only three of them."
+        }
+      ]
+    },
+    {
+      "id": "part2_q13",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 13)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q13.mp3",
+      "questions": [
+        {
+          "id": "q13",
+          "question": "Listen to the audio: \"Are you going to eat at the cafeteria or go out?\"",
+          "options": [
+            "(A) I brought my own lunch today.",
+            "(B) The food is delicious.",
+            "(C) He went out for a walk."
+          ],
+          "correct_answer": "(A) I brought my own lunch today."
+        }
+      ]
+    },
+    {
+      "id": "part2_q14",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 14)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q14.mp3",
+      "questions": [
+        {
+          "id": "q14",
+          "question": "Listen to the audio: \"Has the marketing team seen these designs yet?\"",
+          "options": [
+            "(A) It's a nice sign.",
+            "(B) Not yet, I'll send them over now.",
+            "(C) They team up well."
+          ],
+          "correct_answer": "(B) Not yet, I'll send them over now."
+        }
+      ]
+    },
+    {
+      "id": "part2_q15",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 15)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q15.mp3",
+      "questions": [
+        {
+          "id": "q15",
+          "question": "Listen to the audio: \"Whose briefcase is left in the meeting room?\"",
+          "options": [
+            "(A) Let's meet at noon.",
+            "(B) It belongs to Mr. Peterson.",
+            "(C) A brief summary."
+          ],
+          "correct_answer": "(B) It belongs to Mr. Peterson."
+        }
+      ]
+    },
+    {
+      "id": "part2_q16",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 16)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q16.mp3",
+      "questions": [
+        {
+          "id": "q16",
+          "question": "Listen to the audio: \"Can we postpone the interview until tomorrow?\"",
+          "options": [
+            "(A) Sure, I'll update the schedule.",
+            "(B) The interview went well.",
+            "(C) We need a post office."
+          ],
+          "correct_answer": "(A) Sure, I'll update the schedule."
+        }
+      ]
+    },
+    {
+      "id": "part2_q17",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 17)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q17.mp3",
+      "questions": [
+        {
+          "id": "q17",
+          "question": "Listen to the audio: \"What's the best way to get to the convention center?\"",
+          "options": [
+            "(A) It's the center of attention.",
+            "(B) Take the express train on line 4.",
+            "(C) A convention of engineers."
+          ],
+          "correct_answer": "(B) Take the express train on line 4."
+        }
+      ]
+    },
+    {
+      "id": "part2_q18",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 18)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q18.mp3",
+      "questions": [
+        {
+          "id": "q18",
+          "question": "Listen to the audio: \"You sent the invoice to the client, didn't you?\"",
+          "options": [
+            "(A) Yes, right after the meeting.",
+            "(B) The client's voice.",
+            "(C) I didn't see the voice."
+          ],
+          "correct_answer": "(A) Yes, right after the meeting."
+        }
+      ]
+    },
+    {
+      "id": "part2_q19",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 19)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q19.mp3",
+      "questions": [
+        {
+          "id": "q19",
+          "question": "Listen to the audio: \"Which floor is the human resources department on?\"",
+          "options": [
+            "(A) On the seventh floor.",
+            "(B) They are very resourceful.",
+            "(C) Watch your step on the floor."
+          ],
+          "correct_answer": "(A) On the seventh floor."
+        }
+      ]
+    },
+    {
+      "id": "part2_q20",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 20)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q20.mp3",
+      "questions": [
+        {
+          "id": "q20",
+          "question": "Listen to the audio: \"How long will the renovation of the lobby take?\"",
+          "options": [
+            "(A) It looks very modern.",
+            "(B) About three weeks.",
+            "(C) He took it yesterday."
+          ],
+          "correct_answer": "(B) About three weeks."
+        }
+      ]
+    },
+    {
+      "id": "part2_q21",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 21)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q21.mp3",
+      "questions": [
+        {
+          "id": "q21",
+          "question": "Listen to the audio: \"Why is the road closed to traffic?\"",
+          "options": [
+            "(A) There's a heavy traffic jam.",
+            "(B) Because of the construction work.",
+            "(C) Please close the door."
+          ],
+          "correct_answer": "(B) Because of the construction work."
+        }
+      ]
+    },
+    {
+      "id": "part2_q22",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 22)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q22.mp3",
+      "questions": [
+        {
+          "id": "q22",
+          "question": "Listen to the audio: \"When does the morning shift usually start?\"",
+          "options": [
+            "(A) Shift the boxes carefully.",
+            "(B) At 6:00 AM sharp.",
+            "(C) It was a very long morning."
+          ],
+          "correct_answer": "(B) At 6:00 AM sharp."
+        }
+      ]
+    },
+    {
+      "id": "part2_q23",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 23)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q23.mp3",
+      "questions": [
+        {
+          "id": "q23",
+          "question": "Listen to the audio: \"Is there a pharmacy near the hotel?\"",
+          "options": [
+            "(A) Yes, just around the corner.",
+            "(B) The hotel is fully booked.",
+            "(C) A prescription from the doctor."
+          ],
+          "correct_answer": "(A) Yes, just around the corner."
+        }
+      ]
+    },
+    {
+      "id": "part2_q24",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 24)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q24.mp3",
+      "questions": [
+        {
+          "id": "q24",
+          "question": "Listen to the audio: \"Who's taking the minutes for today's meeting?\"",
+          "options": [
+            "(A) The meeting lasted sixty minutes.",
+            "(B) Sarah volunteered to do it.",
+            "(C) Wait a minute, please."
+          ],
+          "correct_answer": "(B) Sarah volunteered to do it."
+        }
+      ]
+    },
+    {
+      "id": "part2_q25",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 25)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q25.mp3",
+      "questions": [
+        {
+          "id": "q25",
+          "question": "Listen to the audio: \"Let's review the quarterly sales figures.\"",
+          "options": [
+            "(A) Yes, I have the spreadsheets ready.",
+            "(B) A quarter past two.",
+            "(C) They figure it out."
+          ],
+          "correct_answer": "(A) Yes, I have the spreadsheets ready."
+        }
+      ]
+    },
+    {
+      "id": "part2_q26",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 26)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q26.mp3",
+      "questions": [
+        {
+          "id": "q26",
+          "question": "Listen to the audio: \"Did the package arrive this morning or yesterday?\"",
+          "options": [
+            "(A) Pack your bags quickly.",
+            "(B) It came yesterday afternoon.",
+            "(C) Yes, it's a large package."
+          ],
+          "correct_answer": "(B) It came yesterday afternoon."
+        }
+      ]
+    },
+    {
+      "id": "part2_q27",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 27)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q27.mp3",
+      "questions": [
+        {
+          "id": "q27",
+          "question": "Listen to the audio: \"Have you met the new regional director?\"",
+          "options": [
+            "(A) The directions are clear.",
+            "(B) Not formally, just in passing.",
+            "(C) It's a direct flight."
+          ],
+          "correct_answer": "(B) Not formally, just in passing."
+        }
+      ]
+    },
+    {
+      "id": "part2_q28",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 28)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q28.mp3",
+      "questions": [
+        {
+          "id": "q28",
+          "question": "Listen to the audio: \"Why don't we use the larger conference room?\"",
+          "options": [
+            "(A) It's already booked for a seminar.",
+            "(B) The room is very bright.",
+            "(C) Use the side door."
+          ],
+          "correct_answer": "(A) It's already booked for a seminar."
+        }
+      ]
+    },
+    {
+      "id": "part2_q29",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 29)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q29.mp3",
+      "questions": [
+        {
+          "id": "q29",
+          "question": "Listen to the audio: \"How much does it cost to park here?\"",
+          "options": [
+            "(A) The park is very beautiful.",
+            "(B) It's five dollars an hour.",
+            "(C) It costs a lot of money."
+          ],
+          "correct_answer": "(B) It's five dollars an hour."
+        }
+      ]
+    },
+    {
+      "id": "part2_q30",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 30)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q30.mp3",
+      "questions": [
+        {
+          "id": "q30",
+          "question": "Listen to the audio: \"Could you help me install this software?\"",
+          "options": [
+            "(A) The installation took a while.",
+            "(B) I'm sorry, but I'm busy right now.",
+            "(C) Soft materials only."
+          ],
+          "correct_answer": "(B) I'm sorry, but I'm busy right now."
+        }
+      ]
+    },
+    {
+      "id": "part2_q31",
+      "type": "quiz",
+      "title": "Part 2: Question-Response (Question 31)",
+      "instructions": "You will hear a question or statement and three responses spoken in English. Select the best response to the question or statement.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part2_q31.mp3",
+      "questions": [
+        {
+          "id": "q31",
+          "question": "Listen to the audio: \"Where should I store these empty boxes?\"",
+          "options": [
+            "(A) Please leave them in the supply closet.",
+            "(B) I bought them at the store.",
+            "(C) They are very heavy."
+          ],
+          "correct_answer": "(A) Please leave them in the supply closet."
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_1",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 32-34)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: Hi, I'd like to check out these books, please.\\nW: Certainly. Can I have your library card?\\nM: Oh, I think I left it at home. Can I still borrow them if I show my driver's license?\\nW: I can look up your account with your license, but you'll need the physical card next time.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_1.mp3",
+      "questions": [
+        {
+          "id": "q32",
+          "question": "Where does the conversation most likely take place?",
+          "options": [
+            "(A) At a bookstore",
+            "(B) At a public library",
+            "(C) At a driver's licensing office",
+            "(D) At a post office"
+          ],
+          "correct_answer": "(B) At a public library"
         },
         {
-          "id": "TL3_v1",
-          "type": "quiz_choice",
-          "question": "[PART 3 - CONVERSATION]: Listen to the conversation and answer: What is the main issue discussed by the speakers?",
-          "audio_script": "M: Hi Sarah, did you get a chance to review the shipment contract from Zenith Corp?\nW: I did. Their pricing is competitive, but their delivery window is too narrow for our schedule.\nM: I see. I will call the Sales Director to negotiate an extension.",
+          "id": "q33",
+          "question": "What did the man forget to bring?",
           "options": [
-            "The contract pricing is too high.",
-            "The delivery window is too narrow for their schedule.",
-            "They want to cancel the shipment.",
-            "The company wants to buy ApexCRM."
+            "(A) His wallet",
+            "(B) Some books",
+            "(C) His library card",
+            "(D) A driving license"
           ],
-          "correct_answer": "The delivery window is too narrow for their schedule.",
-          "explanation": "La mujer menciona explícitamente: 'pricing is competitive, but their delivery window is too narrow for our schedule'."
+          "correct_answer": "(C) His library card"
+        },
+        {
+          "id": "q34",
+          "question": "What will the woman probably do next?",
+          "options": [
+            "(A) Issue a new card",
+            "(B) Check his identification",
+            "(C) Collect a late fee",
+            "(D) Recommend a book"
+          ],
+          "correct_answer": "(B) Check his identification"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_2",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 35-37)",
+      "instructions": "AUDIO TRANSCRIPT:\\nW: Mark, the printer in the main office is jammed again. I need to print the agendas for the 10 o'clock board meeting.\\nM: That old machine has been breaking down all week. I've already called the technician, but he won't be here until tomorrow.\\nW: That's a problem. The meeting is in 30 minutes.\\nM: Why don't you use the small printer in the HR department? It's slower, but it works.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_2.mp3",
+      "questions": [
+        {
+          "id": "q35",
+          "question": "What is the woman's problem?",
+          "options": [
+            "(A) She is late for a meeting.",
+            "(B) She cannot print some documents.",
+            "(C) She cannot find the HR department.",
+            "(D) The technician has not arrived."
+          ],
+          "correct_answer": "(B) She cannot print some documents."
+        },
+        {
+          "id": "q36",
+          "question": "When is the technician expected to arrive?",
+          "options": [
+            "(A) In 30 minutes",
+            "(B) At 10 o'clock",
+            "(C) Sometime today",
+            "(D) Tomorrow"
+          ],
+          "correct_answer": "(D) Tomorrow"
+        },
+        {
+          "id": "q37",
+          "question": "What does the man suggest the woman do?",
+          "options": [
+            "(A) Delay the board meeting",
+            "(B) Call the technician again",
+            "(C) Use a different printer",
+            "(D) Email the agendas instead"
+          ],
+          "correct_answer": "(C) Use a different printer"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_3",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 38-40)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: Excuse me, I ordered a vegetarian pasta about 40 minutes ago, and it still hasn't arrived. My friends have already finished their meals.\\nW: I'm so sorry, sir. The kitchen is extremely busy tonight because of the festival downtown. Let me go check on your order right away.\\nM: Thank you. I have theater tickets for 8 PM, so I'm in a bit of a hurry.\\nW: I understand. I'll make sure they prioritize your dish. I'll also bring you a complimentary salad while you wait.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_3.mp3",
+      "questions": [
+        {
+          "id": "q38",
+          "question": "Where are the speakers?",
+          "options": [
+            "(A) At a theater",
+            "(B) At a food festival",
+            "(C) At a restaurant",
+            "(D) In a kitchen"
+          ],
+          "correct_answer": "(C) At a restaurant"
+        },
+        {
+          "id": "q39",
+          "question": "Why is the woman apologizing?",
+          "options": [
+            "(A) The food was undercooked.",
+            "(B) An order is taking too long.",
+            "(C) A table is not ready.",
+            "(D) The wrong dish was served."
+          ],
+          "correct_answer": "(B) An order is taking too long."
+        },
+        {
+          "id": "q40",
+          "question": "What does the woman offer the man?",
+          "options": [
+            "(A) Free theater tickets",
+            "(B) A discount on his meal",
+            "(C) A different pasta dish",
+            "(D) A free appetizer"
+          ],
+          "correct_answer": "(D) A free appetizer"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_4",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 41-43)",
+      "instructions": "AUDIO TRANSCRIPT:\\nW: Hello, this is Clara from Horizon Marketing. I'm calling about the office space you have listed for rent on 5th Avenue.\\nM: Oh, yes. The entire third floor is still available. It's about 2,000 square feet and comes with reserved parking.\\nW: That sounds perfect. Our current lease expires at the end of next month, and we need a bigger space. When can I come see it?\\nM: I can show it to you this Thursday at 2:00 PM or Friday morning. Which works best for you?\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_4.mp3",
+      "questions": [
+        {
+          "id": "q41",
+          "question": "Why is the woman calling?",
+          "options": [
+            "(A) To cancel a contract",
+            "(B) To inquire about a rental property",
+            "(C) To discuss a marketing strategy",
+            "(D) To apply for a parking permit"
+          ],
+          "correct_answer": "(B) To inquire about a rental property"
+        },
+        {
+          "id": "q42",
+          "question": "What is mentioned about the property?",
+          "options": [
+            "(A) It is currently being renovated.",
+            "(B) It is located on the first floor.",
+            "(C) It includes parking spaces.",
+            "(D) It is furnished."
+          ],
+          "correct_answer": "(C) It includes parking spaces."
+        },
+        {
+          "id": "q43",
+          "question": "When does the woman's current lease expire?",
+          "options": [
+            "(A) On Thursday",
+            "(B) On Friday morning",
+            "(C) At the end of this month",
+            "(D) At the end of next month"
+          ],
+          "correct_answer": "(D) At the end of next month"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_5",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 44-46)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: Have you finished reviewing the candidates for the graphic designer position?\\nW: Yes, I've narrowed it down to three people. I think Sarah Jenkins is the strongest applicant. Her portfolio is outstanding.\\nM: I agree, but her salary expectations are a bit higher than our budget allows.\\nW: That's true. Let's invite her in for a second interview on Monday to see if we can negotiate the compensation package.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_5.mp3",
+      "questions": [
+        {
+          "id": "q44",
+          "question": "What position are the speakers discussing?",
+          "options": [
+            "(A) Sales Manager",
+            "(B) Graphic Designer",
+            "(C) Financial Analyst",
+            "(D) Human Resources Director"
+          ],
+          "correct_answer": "(B) Graphic Designer"
+        },
+        {
+          "id": "q45",
+          "question": "What concern does the man raise about a candidate?",
+          "options": [
+            "(A) Her lack of experience",
+            "(B) Her weak portfolio",
+            "(C) Her salary expectations",
+            "(D) Her interview skills"
+          ],
+          "correct_answer": "(C) Her salary expectations"
+        },
+        {
+          "id": "q46",
+          "question": "What will the speakers do on Monday?",
+          "options": [
+            "(A) Adjust the department budget",
+            "(B) Post a new job advertisement",
+            "(C) Make a final hiring decision",
+            "(D) Conduct another interview"
+          ],
+          "correct_answer": "(D) Conduct another interview"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_6",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 47-49)",
+      "instructions": "AUDIO TRANSCRIPT:\\nW: Excuse me, does this train go to Central Station?\\nM: No, this is the express train to the airport. It doesn't stop at Central Station.\\nW: Oh no, I must have boarded the wrong one. I need to get to the city center for a conference.\\nM: Don't worry. Get off at the next stop, Elm Street, and switch to the blue line train. It will take you straight to Central Station in 15 minutes.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_6.mp3",
+      "questions": [
+        {
+          "id": "q47",
+          "question": "Where is the woman trying to go?",
+          "options": [
+            "(A) To the airport",
+            "(B) To Elm Street",
+            "(C) To Central Station",
+            "(D) To a train depot"
+          ],
+          "correct_answer": "(C) To Central Station"
+        },
+        {
+          "id": "q48",
+          "question": "What mistake did the woman make?",
+          "options": [
+            "(A) She bought the wrong ticket.",
+            "(B) She boarded the wrong train.",
+            "(C) She missed her flight.",
+            "(D) She lost her conference badge."
+          ],
+          "correct_answer": "(B) She boarded the wrong train."
+        },
+        {
+          "id": "q49",
+          "question": "What does the man advise her to do?",
+          "options": [
+            "(A) Pay an extra fare",
+            "(B) Take a taxi from the airport",
+            "(C) Transfer at the next stop",
+            "(D) Stay on the train until the end"
+          ],
+          "correct_answer": "(C) Transfer at the next stop"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_7",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 50-52)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: Hi, Susan. We just received a large order from a new client in Japan. They want 500 units of our new software by Friday.\\nW: Wow, that's great news! But 500 units by Friday? Our production team is already stretched thin with the domestic orders.\\nM: I know. That's why I'm authorizing overtime pay for the rest of the week. Can you inform the warehouse staff?\\nW: Absolutely. I'll send out a memo right now and hold a brief meeting at noon to organize the shifts.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_7.mp3",
+      "questions": [
+        {
+          "id": "q50",
+          "question": "What is the main topic of the conversation?",
+          "options": [
+            "(A) A new software feature",
+            "(B) A large international order",
+            "(C) A trip to Japan",
+            "(D) A change in management"
+          ],
+          "correct_answer": "(B) A large international order"
+        },
+        {
+          "id": "q51",
+          "question": "Why is the woman concerned?",
+          "options": [
+            "(A) The software has a bug.",
+            "(B) The domestic market is failing.",
+            "(C) The production team is busy.",
+            "(D) The shipping costs are high."
+          ],
+          "correct_answer": "(C) The production team is busy."
+        },
+        {
+          "id": "q52",
+          "question": "How will the company meet the deadline?",
+          "options": [
+            "(A) By hiring new employees",
+            "(B) By delaying other shipments",
+            "(C) By outsourcing the work",
+            "(D) By offering overtime pay"
+          ],
+          "correct_answer": "(D) By offering overtime pay"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_8",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 53-55)",
+      "instructions": "AUDIO TRANSCRIPT:\\nW: Thank you for calling TechSupport. How can I help you today?\\nM: Hi, my laptop screen keeps freezing whenever I try to open the video editing software. I've restarted it three times.\\nW: I see. Are you using the latest version of the operating system? There was an update released yesterday that fixes compatibility issues.\\nM: I haven't updated it yet. I'll do that right now. Do I need to restart my computer again after the update?\\nW: Yes, please restart it once the installation is complete. If the issue persists, call us back.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_8.mp3",
+      "questions": [
+        {
+          "id": "q53",
+          "question": "What problem is the man experiencing?",
+          "options": [
+            "(A) His internet connection is slow.",
+            "(B) His computer screen is freezing.",
+            "(C) He forgot his password.",
+            "(D) His video files were deleted."
+          ],
+          "correct_answer": "(B) His computer screen is freezing."
+        },
+        {
+          "id": "q54",
+          "question": "What does the woman ask the man?",
+          "options": [
+            "(A) If he bought a new laptop",
+            "(B) If he has updated his operating system",
+            "(C) If he has a warranty",
+            "(D) If he wants a refund"
+          ],
+          "correct_answer": "(B) If he has updated his operating system"
+        },
+        {
+          "id": "q55",
+          "question": "What will the man probably do next?",
+          "options": [
+            "(A) Purchase new software",
+            "(B) Call a technician",
+            "(C) Install an update",
+            "(D) Edit a video"
+          ],
+          "correct_answer": "(C) Install an update"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_9",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 56-58)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: Welcome to Green Leaf Landscaping. How can I assist you?\\nW: Hi, I'm looking for some drought-resistant plants for my front yard. I don't have much time to water them during the week.\\nM: We have a great selection of succulents and native desert plants right over here. They require very little maintenance.\\nW: These look lovely. Do you offer delivery and planting services? My car is too small to transport them.\\nM: Yes, we do. Delivery is free for purchases over $100, and planting is a flat fee of $50.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_9.mp3",
+      "questions": [
+        {
+          "id": "q56",
+          "question": "What is the woman looking for?",
+          "options": [
+            "(A) Gardening tools",
+            "(B) Lawn furniture",
+            "(C) Low-maintenance plants",
+            "(D) A water sprinkler system"
+          ],
+          "correct_answer": "(C) Low-maintenance plants"
+        },
+        {
+          "id": "q57",
+          "question": "Why does the woman ask about delivery?",
+          "options": [
+            "(A) Her car is too small.",
+            "(B) She lives far away.",
+            "(C) She has a back injury.",
+            "(D) The plants are too heavy."
+          ],
+          "correct_answer": "(A) Her car is too small."
+        },
+        {
+          "id": "q58",
+          "question": "What is required to get free delivery?",
+          "options": [
+            "(A) Buying native desert plants",
+            "(B) Paying a $50 flat fee",
+            "(C) Spending more than $100",
+            "(D) Joining a membership program"
+          ],
+          "correct_answer": "(C) Spending more than $100"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_10",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 59-61)",
+      "instructions": "AUDIO TRANSCRIPT:\\nW: Jason, the air conditioning in the west wing seems to be broken. It's incredibly hot in the accounting office.\\nM: Really? The maintenance crew just serviced the HVAC system last weekend. I'll call them to come back and take a look.\\nW: Please tell them to hurry. The staff is complaining, and it's affecting our productivity.\\nM: I'll mark it as an emergency. In the meantime, I can bring up some portable fans from the basement storage.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_10.mp3",
+      "questions": [
+        {
+          "id": "q59",
+          "question": "What is the problem in the accounting office?",
+          "options": [
+            "(A) The lights are flickering.",
+            "(B) The air conditioning is broken.",
+            "(C) There is a water leak.",
+            "(D) The computers are overheating."
+          ],
+          "correct_answer": "(B) The air conditioning is broken."
+        },
+        {
+          "id": "q60",
+          "question": "When was the system last serviced?",
+          "options": [
+            "(A) Yesterday",
+            "(B) Last weekend",
+            "(C) A month ago",
+            "(D) This morning"
+          ],
+          "correct_answer": "(B) Last weekend"
+        },
+        {
+          "id": "q61",
+          "question": "What does the man offer to do immediately?",
+          "options": [
+            "(A) Send the staff home",
+            "(B) Call the fire department",
+            "(C) Bring portable fans",
+            "(D) Buy a new air conditioner"
+          ],
+          "correct_answer": "(C) Bring portable fans"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_11",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 62-64)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: Good afternoon. I have a reservation under the name Arthur Jenkins for three nights.\\nW: Welcome, Mr. Jenkins. Yes, I see your reservation for a standard room with a city view. Unfortunately, that room type is currently being cleaned and won't be ready for another hour.\\nM: Oh, that's inconvenient. I have a Zoom meeting in 20 minutes, and I really need a quiet place.\\nW: I apologize for the delay. Tell you what, I can upgrade you to an executive suite on the top floor at no extra charge. It's ready right now.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_11.mp3",
+      "questions": [
+        {
+          "id": "q62",
+          "question": "Where does this conversation take place?",
+          "options": [
+            "(A) At a restaurant",
+            "(B) At an airport check-in",
+            "(C) At a hotel reception",
+            "(D) At an apartment complex"
+          ],
+          "correct_answer": "(C) At a hotel reception"
+        },
+        {
+          "id": "q63",
+          "question": "Why is the man's reserved room unavailable?",
+          "options": [
+            "(A) It is occupied by another guest.",
+            "(B) It is currently being cleaned.",
+            "(C) It is undergoing repairs.",
+            "(D) It was double-booked."
+          ],
+          "correct_answer": "(B) It is currently being cleaned."
+        },
+        {
+          "id": "q64",
+          "question": "How does the woman solve the problem?",
+          "options": [
+            "(A) She gives him a discount.",
+            "(B) She provides a free meal.",
+            "(C) She books him a meeting room.",
+            "(D) She upgrades his room."
+          ],
+          "correct_answer": "(D) She upgrades his room."
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_12",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 65-67)",
+      "instructions": "AUDIO TRANSCRIPT:\\nW: Did you see the memo about the new mandatory security training?\\nM: Yes, I read it this morning. We have to complete a series of online modules by next Friday, right?\\nW: Exactly. But I can't seem to log into the training portal. It keeps saying my credentials are invalid.\\nM: I had the same issue. You have to email the IT helpdesk to reset your password specifically for that portal. The standard network password doesn't work.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_12.mp3",
+      "questions": [
+        {
+          "id": "q65",
+          "question": "What do the employees have to do by next Friday?",
+          "options": [
+            "(A) Attend a security seminar",
+            "(B) Complete online training",
+            "(C) Change their passwords",
+            "(D) Submit a security report"
+          ],
+          "correct_answer": "(B) Complete online training"
+        },
+        {
+          "id": "q66",
+          "question": "What problem is the woman facing?",
+          "options": [
+            "(A) She cannot log into a portal.",
+            "(B) She lost the memo.",
+            "(C) She does not have a computer.",
+            "(D) She missed a deadline."
+          ],
+          "correct_answer": "(A) She cannot log into a portal."
+        },
+        {
+          "id": "q67",
+          "question": "What does the man suggest the woman do?",
+          "options": [
+            "(A) Use his computer",
+            "(B) Reset her network password",
+            "(C) Email the IT helpdesk",
+            "(D) Ignore the training"
+          ],
+          "correct_answer": "(C) Email the IT helpdesk"
+        }
+      ]
+    },
+    {
+      "id": "part3_conv_13",
+      "type": "quiz",
+      "title": "Part 3: Conversations (Questions 68-70)",
+      "instructions": "AUDIO TRANSCRIPT:\\nM: The feedback from our latest customer survey is in. Overall, clients love the durability of our backpacks, but they are unhappy with the limited color options.\\nW: That makes sense. We only offer black, navy, and gray. We should introduce some brighter colors for the summer collection.\\nM: I agree. I'll ask the design team to come up with some proposals using red, yellow, and green fabrics.\\nW: Good idea. We should also run a poll on social media to ask our followers which colors they would prefer.\\n\\nYou will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation.",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part3_conv_13.mp3",
+      "questions": [
+        {
+          "id": "q68",
+          "question": "What do customers like about the company's backpacks?",
+          "options": [
+            "(A) The price",
+            "(B) The durability",
+            "(C) The size",
+            "(D) The colorful designs"
+          ],
+          "correct_answer": "(B) The durability"
+        },
+        {
+          "id": "q69",
+          "question": "What complaint did customers have?",
+          "options": [
+            "(A) Shipping is too slow.",
+            "(B) The zippers break easily.",
+            "(C) Limited color options.",
+            "(D) Customer service is poor."
+          ],
+          "correct_answer": "(C) Limited color options."
+        },
+        {
+          "id": "q70",
+          "question": "What will the woman likely do?",
+          "options": [
+            "(A) Change the fabric supplier",
+            "(B) Fire the design team",
+            "(C) Reduce the price of the backpacks",
+            "(D) Start a social media poll"
+          ],
+          "correct_answer": "(D) Start a social media poll"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_1",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 71-73)",
+      "instructions": "AUDIO TRANSCRIPT:\\nAttention all passengers waiting for Flight 884 to London. We regret to inform you that the departure has been delayed by approximately two hours due to severe weather conditions over the Atlantic. We will be providing complimentary meal vouchers, which can be picked up at the customer service desk near Gate 14. We apologize for the inconvenience and will provide another update at 4:00 PM.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_1.mp3",
+      "questions": [
+        {
+          "id": "q71",
+          "question": "Who is the intended audience for this announcement?",
+          "options": [
+            "(A) Airport security staff",
+            "(B) Flight attendants",
+            "(C) Airline passengers",
+            "(D) Travel agents"
+          ],
+          "correct_answer": "(C) Airline passengers"
+        },
+        {
+          "id": "q72",
+          "question": "Why is the flight delayed?",
+          "options": [
+            "(A) Mechanical issues",
+            "(B) Bad weather",
+            "(C) A crew shortage",
+            "(D) Overbooked seats"
+          ],
+          "correct_answer": "(B) Bad weather"
+        },
+        {
+          "id": "q73",
+          "question": "What is being offered as compensation?",
+          "options": [
+            "(A) Free hotel stays",
+            "(B) Upgraded seating",
+            "(C) Discount coupons",
+            "(D) Meal vouchers"
+          ],
+          "correct_answer": "(D) Meal vouchers"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_2",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 74-76)",
+      "instructions": "AUDIO TRANSCRIPT:\\nGood morning, team. Before we start our shifts, I want to briefly go over the new inventory tracking system we're implementing today. The old barcode scanners have been replaced with these new tablets. When a shipment arrives, simply scan the QR code on the pallet using the tablet's camera. This will automatically update the database in real-time. If you experience any technical glitches, please notify the IT desk immediately rather than trying to fix it yourselves.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_2.mp3",
+      "questions": [
+        {
+          "id": "q74",
+          "question": "Where is this talk most likely taking place?",
+          "options": [
+            "(A) In a retail warehouse",
+            "(B) At a software company",
+            "(C) In a hospital",
+            "(D) At a photography studio"
+          ],
+          "correct_answer": "(A) In a retail warehouse"
+        },
+        {
+          "id": "q75",
+          "question": "What new equipment is being introduced?",
+          "options": [
+            "(A) Barcode scanners",
+            "(B) Digital tablets",
+            "(C) Security cameras",
+            "(D) Cash registers"
+          ],
+          "correct_answer": "(B) Digital tablets"
+        },
+        {
+          "id": "q76",
+          "question": "What are the listeners instructed to do if there is a problem?",
+          "options": [
+            "(A) Read the manual",
+            "(B) Fix it themselves",
+            "(C) Contact the IT desk",
+            "(D) Report to the manager"
+          ],
+          "correct_answer": "(C) Contact the IT desk"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_3",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 77-79)",
+      "instructions": "AUDIO TRANSCRIPT:\\nWelcome to the Riverside Botanical Gardens. My name is David, and I'll be your guide for this afternoon's tour. We'll start by walking through the newly renovated greenhouse, which houses our exotic orchid collection. Please remember that taking photographs with a flash is strictly prohibited, as the sudden bright light can damage some of our more sensitive plants. After the greenhouse, we'll head over to the outdoor rose garden, where you'll have 20 minutes to explore on your own.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_3.mp3",
+      "questions": [
+        {
+          "id": "q77",
+          "question": "Who is the speaker?",
+          "options": [
+            "(A) A professional photographer",
+            "(B) A tour guide",
+            "(C) A landscape architect",
+            "(D) A greenhouse manager"
+          ],
+          "correct_answer": "(B) A tour guide"
+        },
+        {
+          "id": "q78",
+          "question": "What is prohibited during the tour?",
+          "options": [
+            "(A) Feeding the animals",
+            "(B) Touching the flowers",
+            "(C) Using flash photography",
+            "(D) Walking on the grass"
+          ],
+          "correct_answer": "(C) Using flash photography"
+        },
+        {
+          "id": "q79",
+          "question": "What will happen after the greenhouse visit?",
+          "options": [
+            "(A) The tour will end.",
+            "(B) A lecture will be given.",
+            "(C) Visitors will eat lunch.",
+            "(D) Visitors will explore freely."
+          ],
+          "correct_answer": "(D) Visitors will explore freely."
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_4",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 80-82)",
+      "instructions": "AUDIO TRANSCRIPT:\\nThank you for tuning in to Local Radio 99.5. This is your morning traffic report. If you're commuting into the city center via Highway 4, expect major delays. A collision involving a delivery truck and two cars has blocked the left two lanes near the Oak Street exit. Police are on the scene, but traffic is backed up for three miles. We highly recommend taking the River Road detour if you want to avoid being late for work. I'll be back with another update in 30 minutes.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_4.mp3",
+      "questions": [
+        {
+          "id": "q80",
+          "question": "What is the purpose of the broadcast?",
+          "options": [
+            "(A) To advertise a delivery service",
+            "(B) To report on traffic conditions",
+            "(C) To discuss a new highway project",
+            "(D) To interview a police officer"
+          ],
+          "correct_answer": "(B) To report on traffic conditions"
+        },
+        {
+          "id": "q81",
+          "question": "What caused the problem on the highway?",
+          "options": [
+            "(A) A vehicle collision",
+            "(B) Road construction",
+            "(C) Heavy rain",
+            "(D) A broken traffic light"
+          ],
+          "correct_answer": "(A) A vehicle collision"
+        },
+        {
+          "id": "q82",
+          "question": "What does the speaker suggest listeners do?",
+          "options": [
+            "(A) Call the police",
+            "(B) Take an alternate route",
+            "(C) Leave for work early",
+            "(D) Stay home"
+          ],
+          "correct_answer": "(B) Take an alternate route"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_5",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 83-85)",
+      "instructions": "AUDIO TRANSCRIPT:\\nHello everyone. I called this emergency meeting to discuss the recent drop in our fourth-quarter sales. As you can see on the screen, our revenue fell by 15% compared to this time last year. A major factor is that our primary competitor released a highly aggressive advertising campaign in November. To combat this, we're going to launch a new promotional strategy next week, offering a 20% discount to all first-time customers. I need the marketing team to finalize the ad designs by Wednesday.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_5.mp3",
+      "questions": [
+        {
+          "id": "q83",
+          "question": "What is the main subject of the meeting?",
+          "options": [
+            "(A) A decrease in sales",
+            "(B) A new competitor",
+            "(C) An employee promotion",
+            "(D) A product recall"
+          ],
+          "correct_answer": "(A) A decrease in sales"
+        },
+        {
+          "id": "q84",
+          "question": "What caused the company's problem?",
+          "options": [
+            "(A) High production costs",
+            "(B) A competitor's ad campaign",
+            "(C) A lack of inventory",
+            "(D) Poor customer service"
+          ],
+          "correct_answer": "(B) A competitor's ad campaign"
+        },
+        {
+          "id": "q85",
+          "question": "What does the speaker ask the marketing team to do?",
+          "options": [
+            "(A) Hire new staff",
+            "(B) Finish ad designs by Wednesday",
+            "(C) Research the competitor",
+            "(D) Offer discounts to old clients"
+          ],
+          "correct_answer": "(B) Finish ad designs by Wednesday"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_6",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 86-88)",
+      "instructions": "AUDIO TRANSCRIPT:\\nHi, this is a message for Sarah Jenkins. This is Dr. Miller's dental clinic calling to remind you of your appointment for a routine cleaning tomorrow at 2:00 PM. Please remember to bring your updated insurance card, as our records indicate your previous policy expired last month. If you need to cancel or reschedule, please call us back at least 24 hours in advance to avoid a cancellation fee. We look forward to seeing you.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_6.mp3",
+      "questions": [
+        {
+          "id": "q86",
+          "question": "Who is the speaker?",
+          "options": [
+            "(A) A dentist",
+            "(B) An insurance agent",
+            "(C) A clinic receptionist",
+            "(D) A pharmacist"
+          ],
+          "correct_answer": "(C) A clinic receptionist"
+        },
+        {
+          "id": "q87",
+          "question": "What must the listener bring to the appointment?",
+          "options": [
+            "(A) A credit card",
+            "(B) Medical records",
+            "(C) A prescription",
+            "(D) An insurance card"
+          ],
+          "correct_answer": "(D) An insurance card"
+        },
+        {
+          "id": "q88",
+          "question": "Why is the listener asked to call back?",
+          "options": [
+            "(A) To confirm the address",
+            "(B) To reschedule the appointment",
+            "(C) To request a new doctor",
+            "(D) To pay a bill in advance"
+          ],
+          "correct_answer": "(B) To reschedule the appointment"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_7",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 89-91)",
+      "instructions": "AUDIO TRANSCRIPT:\\nGood evening, and welcome to the annual Apex Technology Awards dinner. Tonight, we are here to honor the brilliant engineers and developers who have pushed the boundaries of innovation over the past year. Before we serve dinner, our CEO, Ms. Helen Carter, will come to the stage to say a few words about our company's future goals. After her speech, we will begin presenting the awards, starting with the 'Software Developer of the Year'. Please enjoy the appetizers on your tables.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_7.mp3",
+      "questions": [
+        {
+          "id": "q89",
+          "question": "Where is the event taking place?",
+          "options": [
+            "(A) At a software conference",
+            "(B) At an awards dinner",
+            "(C) At a company picnic",
+            "(D) At a board meeting"
+          ],
+          "correct_answer": "(B) At an awards dinner"
+        },
+        {
+          "id": "q90",
+          "question": "Who is Helen Carter?",
+          "options": [
+            "(A) A software developer",
+            "(B) An award recipient",
+            "(C) The company CEO",
+            "(D) The event caterer"
+          ],
+          "correct_answer": "(C) The company CEO"
+        },
+        {
+          "id": "q91",
+          "question": "What will happen right after the speech?",
+          "options": [
+            "(A) Dinner will be served.",
+            "(B) Appetizers will be brought out.",
+            "(C) A video will be shown.",
+            "(D) The awards will be presented."
+          ],
+          "correct_answer": "(D) The awards will be presented."
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_8",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 92-94)",
+      "instructions": "AUDIO TRANSCRIPT:\\nHello, residents of the Oakwood Apartment Complex. This is the building manager. We will be performing routine maintenance on the main water line this Thursday between 9:00 AM and 2:00 PM. During this time, the water supply to the entire building will be shut off. We strongly advise you to store some water in advance for drinking and cooking. If the work takes longer than expected, we will slip a notice under your door. Thank you for your patience.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_8.mp3",
+      "questions": [
+        {
+          "id": "q92",
+          "question": "Who is the speaker?",
+          "options": [
+            "(A) A city official",
+            "(B) A building manager",
+            "(C) A plumber",
+            "(D) A security guard"
+          ],
+          "correct_answer": "(B) A building manager"
+        },
+        {
+          "id": "q93",
+          "question": "What is going to happen on Thursday?",
+          "options": [
+            "(A) The electricity will be turned off.",
+            "(B) The parking lot will be paved.",
+            "(C) The water supply will be shut off.",
+            "(D) Rents will be increased."
+          ],
+          "correct_answer": "(C) The water supply will be shut off."
+        },
+        {
+          "id": "q94",
+          "question": "What does the speaker advise the residents to do?",
+          "options": [
+            "(A) Leave the building",
+            "(B) Pay their bills early",
+            "(C) Store water in advance",
+            "(D) Check under their doors"
+          ],
+          "correct_answer": "(C) Store water in advance"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_9",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 95-97)",
+      "instructions": "AUDIO TRANSCRIPT:\\nWelcome to the introductory workshop on digital marketing. My name is Laura, and I'll be teaching you how to use social media analytics to grow your small business. Today, we'll focus on how to interpret user engagement data. Before we begin, please make sure you have downloaded the training software onto your laptops. I've placed a handout on everyone's desk with the login credentials. At the end of the session, we'll have a Q&A segment, so please save your questions until then.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_9.mp3",
+      "questions": [
+        {
+          "id": "q95",
+          "question": "What is the topic of the workshop?",
+          "options": [
+            "(A) Small business accounting",
+            "(B) Social media analytics",
+            "(C) Website design",
+            "(D) Software development"
+          ],
+          "correct_answer": "(B) Social media analytics"
+        },
+        {
+          "id": "q96",
+          "question": "What should the attendees have already done?",
+          "options": [
+            "(A) Paid the registration fee",
+            "(B) Printed a handout",
+            "(C) Logged into a social media account",
+            "(D) Downloaded the training software"
+          ],
+          "correct_answer": "(D) Downloaded the training software"
+        },
+        {
+          "id": "q97",
+          "question": "When should attendees ask questions?",
+          "options": [
+            "(A) Before the workshop begins",
+            "(B) During the presentation",
+            "(C) At the end of the session",
+            "(D) In an email after the class"
+          ],
+          "correct_answer": "(C) At the end of the session"
+        }
+      ]
+    },
+    {
+      "id": "part4_talk_10",
+      "type": "quiz",
+      "title": "Part 4: Talks (Questions 98-100)",
+      "instructions": "AUDIO TRANSCRIPT:\\nThank you for calling the Grand Palace Theater box office. Our normal business hours are Monday through Saturday, from 10:00 AM to 6:00 PM. Please note that tickets for the upcoming Broadway musical 'City Lights' are officially sold out for all evening performances. However, a limited number of tickets are still available for the Saturday matinee. If you would like to purchase tickets or check seating availability, please visit our website at www.grandpalacetheater.com. For all other inquiries, please leave a message after the beep.\\n\\nYou will hear some short talks...",
+      "audioUrl": "/media/exams/toeic_listening_v1/audios/part4_talk_10.mp3",
+      "questions": [
+        {
+          "id": "q98",
+          "question": "What type of business does the message belong to?",
+          "options": [
+            "(A) A movie theater",
+            "(B) A Broadway musical",
+            "(C) A theater box office",
+            "(D) A ticket scalper"
+          ],
+          "correct_answer": "(C) A theater box office"
+        },
+        {
+          "id": "q99",
+          "question": "What is stated about the musical 'City Lights'?",
+          "options": [
+            "(A) It was cancelled.",
+            "(B) Evening tickets are sold out.",
+            "(C) It is playing on Sunday.",
+            "(D) It is a free event."
+          ],
+          "correct_answer": "(B) Evening tickets are sold out."
+        },
+        {
+          "id": "q100",
+          "question": "How can callers purchase the remaining tickets?",
+          "options": [
+            "(A) By leaving a voice message",
+            "(B) By visiting the theater in person",
+            "(C) By calling back during business hours",
+            "(D) By visiting the official website"
+          ],
+          "correct_answer": "(D) By visiting the official website"
         }
       ]
     }
