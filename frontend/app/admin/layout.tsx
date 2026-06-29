@@ -63,7 +63,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     }
   }, [token]);
 
-  const userInitials = user?.first_name ? user.first_name.charAt(0).toUpperCase() : 'AD';
+  const userInitials = user?.username ? user.username.charAt(0).toUpperCase() : 'AD';
 
   return (
     <div className="flex flex-col h-screen bg-slate-50 text-slate-900 font-sans overflow-hidden relative">
@@ -159,7 +159,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                         {userInitials}
                       </div>
                       <div className="overflow-hidden">
-                        <p className="font-black font-mono text-xs uppercase tracking-widest text-slate-800 truncate">{user?.first_name ? `${user.first_name} ${user.last_name || ''}` : 'ROOT_ADMIN'}</p>
+                        <p className="font-black font-mono text-xs uppercase tracking-widest text-slate-800 truncate">{user?.username ? user.username : 'ROOT_ADMIN'}</p>
                         <p className="text-[10px] font-mono font-semibold text-slate-500 truncate">{user?.email || 'admin@onixlingo.com'}</p>
                         <p className="text-[9px] font-black font-mono uppercase text-emerald-600 tracking-wider mt-1">{user?.role || 'LEVEL 5 CLEARANCE'}</p>
                       </div>

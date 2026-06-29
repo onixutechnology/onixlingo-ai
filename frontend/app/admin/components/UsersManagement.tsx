@@ -180,7 +180,7 @@ export default function UsersManagement() {
                             <div className="font-bold text-slate-900 flex items-center gap-1.5">
                               {u.username}
                               {u.role === 'admin' && (
-                                <ShieldAlert size={11} className="text-red-500" title="Administrador" />
+                                <ShieldAlert size={11} className="text-red-500" />
                               )}
                             </div>
                             <div className="text-[10px] text-slate-400 font-mono">{u.email}</div>
