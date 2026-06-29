@@ -15,7 +15,12 @@ class SpeechAnalysisService:
             self.model = None
             
         # Configurar Google Cloud STT
-        self.speech_client = speech.SpeechClient()
+        try:
+            self.speech_client = speech.SpeechClient()
+        except Exception as e:
+            print(f"No se pudo inicializar Google Speech Client: {e}")
+            self.speech_client = None
+            
         self.project_id = self._get_project_id()
 
     def _get_project_id(self) -> str:
@@ -30,6 +35,9 @@ class SpeechAnalysisService:
 
     def _transcribe_audio_google(self, audio_bytes: bytes, language_code: str = "en-US") -> str:
         """Transcribe el audio usando Google Cloud Speech-to-Text V1"""
+        if not self.speech_client:
+            raise Exception("Google Speech Client no inicializado. Forzando fallback a Gemini.")
+            
         audio = speech.RecognitionAudio(content=audio_bytes)
         
         # In V1, we can try to leave encoding unspecified if it's a known format with header,
