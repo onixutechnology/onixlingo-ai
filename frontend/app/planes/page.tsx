@@ -19,7 +19,7 @@ const plans = [
       'Acceso a lecciones estándar (Inglés, Francés, Chino)',
       '2 puzzles diarios de Ajedrez Cognitivo',
       'Modo Fácil en bloques de vocabulario',
-      'Feedback básico de voz IA',
+      'Feedback básico de voz Sistema',
       'Acceso al dashboard global'
     ],
     cta: 'Empezar Gratis',
@@ -51,7 +51,7 @@ const plans = [
     priceYearly: 1499,
     equivalentMonthly: 125,
     features: [
-      'Acceso COMPLETO a todos los idiomas e IA Coach',
+      'Acceso COMPLETO a todos los idiomas e Sistema Coach',
       'Corporativo Simulator interactivo (Escenarios M&A, VC Pitch, etc.)',
       'Módulo de Speech Analytics Avanzado (8 dimensiones fonéticas)',
       'Acreditación oficial "Executive Speech Standard"',
@@ -344,7 +344,7 @@ export default function PlanesPage() {
               <tbody className="text-xs text-slate-700 font-medium">
                 {[
                   { name: 'Cursos de Idiomas (Inglés, Chino, Francés)', f: 'Lecciones básicas', p: 'Completo (A1 a C2)', e: 'Completo + Multi-accent' },
-                  { name: 'Ajedrez Cognitivo Estratégico', f: '2 puzzles diarios', p: 'Ilimitado', e: 'Ilimitado + Tutor IA' },
+                  { name: 'Ajedrez Cognitivo Estratégico', f: '2 puzzles diarios', p: 'Ilimitado', e: 'Ilimitado + Tutor automatizado' },
                   { name: 'Drills de Vocabulario', f: 'Solo Fácil', p: 'Fácil, Medio y Pro', e: 'Acceso Total + SRS' },
                   { name: 'Multiplicador de Boletos VIP Sorteos', f: 'No', p: 'x5 Boost en Pro', e: 'x5 Boost en Pro' },
                   { name: 'Corporativo Simulator Alta Dirección', f: 'No', p: 'No', e: 'Ilimitado (60 unidades)' },

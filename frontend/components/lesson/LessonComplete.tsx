@@ -439,7 +439,7 @@ export default function LessonComplete({
                 onClick={() => setActiveTab('report')}
                 className={`w-full py-3 px-4 flex items-center gap-3 text-left transition-all rounded-none text-xs font-black uppercase tracking-wider border-l-2 ${activeTab === 'report' ? 'bg-[#D4AF37]/20/10 border-[#D4AF37]/30 text-amber-400' : 'border-transparent text-slate-500 hover:bg-white/5 hover:text-slate-900'}`}
               >
-                <FileText size={16} /> 📊 Reporte & IA Asesor
+                <FileText size={16} /> 📊 Reporte & Asesor Analítico
               </button>
               {answerHistory && answerHistory.length > 0 && (
                 <button 
@@ -599,7 +599,7 @@ export default function LessonComplete({
               </motion.div>
             )}
 
-            {/* PESTAÑA 2: ANALÍTICA BASADA EN IA Y MEJORAS */}
+            {/* PESTAÑA 2: ANALÍTICA BASADA EN SISTEMAS Y MEJORAS */}
             {activeTab === 'report' && (
               <motion.div
                 key="report-view"
@@ -612,7 +612,7 @@ export default function LessonComplete({
                   <h2 className="text-xl font-serif font-black italic tracking-wide text-[#D4AF37] uppercase">
                     Reporte de Fortalezas y Áreas de Mejora
                   </h2>
-                  <p className="text-[10px] text-slate-500 uppercase tracking-widest font-mono mt-0.5">ANÁLISIS DE HABILIDADES BASADO EN NEURAL ADVISOR IA</p>
+                  <p className="text-[10px] text-slate-500 uppercase tracking-widest font-mono mt-0.5">ANÁLISIS DE HABILIDADES BASADO EN SISTEMA NEURAL ADVISOR</p>
                 </div>
 
                 {completionMessage && (
@@ -677,7 +677,7 @@ export default function LessonComplete({
 
                 </div>
 
-                {/* RECOMENDACIONES DE NEURAL ADVISOR IA */}
+                {/* RECOMENDACIONES DE SISTEMA NEURAL ADVISOR */}
                 <div className="bg-slate-50 border border-slate-800 p-5 rounded-none relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-500/5 to-transparent blur-xl pointer-events-none" />
                   

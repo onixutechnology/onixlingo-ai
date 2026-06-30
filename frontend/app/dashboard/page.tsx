@@ -190,7 +190,7 @@ const SIMULATOR_VERSIONS_METADATA: Record<string, Array<{ title: string; desc: s
     { title: "Versión 7: Historia del Arte", desc: "Análisis académico de la perspectiva renacentista y literatura clásica." },
     { title: "Versión 8: Historia Económica", desc: "Textos sobre el surgimiento del trueque y los primeros sistemas monetarios." },
     { title: "Versión 9: Genética Molecular", desc: "Conferencias sobre la secuenciación del ADN y terapia génica aplicada." },
-    { title: "Versión 10: Redes Neuronales", desc: "Discusiones sobre inteligencia artificial aplicada al campo académico y salud." }
+    { title: "Versión 10: Redes Neuronales", desc: "Discusiones sobre tecnología cognitiva aplicada al campo académico y salud." }
   ],
   ielts_mock: [
     { title: "Versión 1: Exploración Espacial", desc: "Lecturas académicas de astronomía y ensayos sobre el descubrimiento de exoplanetas." },
@@ -202,7 +202,7 @@ const SIMULATOR_VERSIONS_METADATA: Record<string, Array<{ title: string; desc: s
     { title: "Versión 7: Renacimiento y Artes", desc: "Análisis crítico de técnicas de pintura y evolución del arte europeo." },
     { title: "Versión 8: Economía Primitiva", desc: "Textos analíticos sobre el origen de las divisas y el intercambio comercial temprano." },
     { title: "Versión 9: Terapia Génica y Salud", desc: "Conferencias de medicina avanzada, mutaciones y edición genética." },
-    { title: "Versión 10: Inteligencia Artificial", desc: "Discusiones tecnológicas sobre el futuro del aprendizaje profundo computacional." }
+    { title: "Versión 10: Sistema Analítico Avanzado", desc: "Discusiones tecnológicas sobre el futuro del aprendizaje profundo computacional." }
   ]
 };
 

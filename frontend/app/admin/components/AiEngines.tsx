@@ -94,7 +94,7 @@ export default function AiEngines() {
             <Bot size={28} className="text-indigo-300" />
           </div>
           <div>
-            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-shadow-sm">Motores de IA</h2>
+            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-shadow-sm">Motores de Sistema</h2>
             <p className="text-xs text-indigo-200/70 mt-1 font-mono uppercase tracking-widest">Afinamiento Neural del Tutor</p>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function AiEngines() {
 
                 <div className="flex-1 flex flex-col">
                   <label className="text-[10px] font-black uppercase text-slate-500 tracking-widest flex items-center gap-1.5 mb-2">
-                    <Bot size={12} /> System Prompt (Instrucciones de la IA)
+                    <Bot size={12} /> System Prompt (Instrucciones del sistema)
                   </label>
                   <textarea 
                     value={config.system_prompt} 

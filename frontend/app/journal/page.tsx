@@ -5,17 +5,17 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Journal & Artículos',
-  description: 'Aprende sobre las últimas metodologías de aprendizaje de idiomas con inteligencia artificial, estrategias de ajedrez corporativo y desarrollo profesional.',
+  description: 'Aprende sobre las últimas metodologías de aprendizaje de idiomas con tecnología cognitiva, estrategias de ajedrez corporativo y desarrollo profesional.',
 };
 
 export default function Journal() {
   const articles = [
     {
       id: 1,
-      title: "Cómo la IA está transformando el aprendizaje de idiomas en corporaciones",
+      title: "Cómo los sistemas cognitivos están transformando el aprendizaje de idiomas en corporaciones",
       excerpt: "Descubre por qué las empresas líderes están abandonando los métodos tradicionales y apostando por tutores virtuales 24/7 para capacitar a sus equipos globales.",
       date: "23 Jun 2026",
-      category: "Inteligencia Artificial",
+      category: "Sistema Analítico Avanzado",
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ export default function Journal() {
     {
       id: 4,
       title: "Simulación de Alta Dirección: Entrenando con Avatares",
-      excerpt: "Nuestros nuevos escenarios de simulación te permiten practicar presentaciones frente a una junta directiva hostil controlada por inteligencia artificial.",
+      excerpt: "Nuestros nuevos escenarios de simulación te permiten practicar presentaciones frente a una junta directiva hostil controlada por tecnología cognitiva.",
       date: "05 Jun 2026",
       category: "Desarrollo Ejecutivo",
     }

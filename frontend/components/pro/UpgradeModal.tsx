@@ -218,7 +218,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                 </li>
                 <li className="flex gap-2.5 items-start text-sky-400">
                   <X className="shrink-0 mt-0.5" size={14} />
-                  <span>Sin tutoría conversacional ni prácticas de IA.</span>
+                  <span>Sin tutoría conversacional ni prácticas dinámicas.</span>
                 </li>
                 <li className="flex gap-2.5 items-start">
                   <Check className="text-sky-500 shrink-0 mt-0.5" size={14} />
@@ -282,7 +282,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                 </li>
                 <li className="flex gap-2.5 items-start text-sky-400">
                   <X className="shrink-0 mt-0.5" size={14} />
-                  <span>Excluye: Temario Executive y Conversación IA.</span>
+                  <span>Excluye: Temario Executive y Simulador Conversacional.</span>
                 </li>
               </ul>
             </div>
@@ -336,7 +336,7 @@ export const UpgradeModal = ({ onClose, isEmbedded = false }: UpgradeModalProps)
                 </li>
                 <li className="flex gap-2.5 items-start">
                   <Check className="text-[#D4AF37] shrink-0 mt-0.5" size={14} />
-                  <span><strong>Tutoría conversacional ilimitada por IA</strong>.</span>
+                  <span><strong>Práctica conversacional dinámica ilimitada</strong>.</span>
                 </li>
                 <li className="flex gap-2.5 items-start">
                   <Check className="text-[#D4AF37] shrink-0 mt-0.5" size={14} />

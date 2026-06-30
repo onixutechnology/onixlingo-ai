@@ -78,7 +78,7 @@ def gift_user_subscription(
 ):
     """
     Regala días de suscripción a un usuario con nivel y mensaje personalizado.
-    Envía notificación por correo electrónico via Resend.
+    La lógica de base de datos y envío de correos ahora vive en AdminService.
     """
     target_user = db.query(models.User).filter(models.User.id == user_id).first()
     if not target_user:
@@ -90,80 +90,15 @@ def gift_user_subscription(
     if payload.days < 1 or payload.days > 365:
         raise HTTPException(status_code=400, detail="Los días deben estar entre 1 y 365")
 
-    now = datetime.utcnow()
-    current_valid = target_user.valid_until if target_user.valid_until and target_user.valid_until > now else now
-    target_user.valid_until = current_valid + timedelta(days=payload.days)
-    target_user.is_pro = True
-    target_user.tier = payload.tier
-    db.commit()
-
-    # ── Notificación por email via Resend ──
-    if payload.notify_email and target_user.email:
-        try:
-            import os, resend
-            resend_key = os.getenv("RESEND_API_KEY")
-            if resend_key:
-                resend.api_key = resend_key
-                frontend_url = os.getenv("FRONTEND_URL", "https://onixlingo.com").rstrip('/')
-
-                TIER_LABELS = {
-                    "pro": ("🚀 PRO", "#3b82f6"),
-                    "executive": ("💼 EXECUTIVE", "#8b5cf6"),
-                    "titanium": ("💎 TITANIUM", "#f59e0b"),
-                }
-                tier_label, tier_color = TIER_LABELS.get(payload.tier, ("⭐ PREMIUM", "#0d9488"))
-                personal_section = f"""
-                    <div style="background:#1e293b;border-left:4px solid {tier_color};padding:16px 20px;border-radius:4px;margin:20px 0;">
-                        <p style="margin:0;font-size:14px;color:#e2e8f0;font-style:italic;">"{payload.message}"</p>
-                        <p style="margin:8px 0 0 0;font-size:11px;color:#94a3b8;">— Equipo OnixLingo</p>
-                    </div>
-                """ if payload.message.strip() else ""
-
-                resend.Emails.send({
-                    "from": "OnixLingo <soporte@onixu.company>",
-                    "to": target_user.email,
-                    "subject": f"🎁 ¡Tienes un regalo! {payload.days} días {tier_label} en OnixLingo",
-                    "html": f"""
-                    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;background:#0F1623;color:#f1f5f9;padding:40px;border-radius:10px;border:1px solid #1e293b;">
-                        <div style="text-align:center;margin-bottom:30px;">
-                            <h1 style="color:{tier_color};font-size:32px;margin:0;">🎁 ¡Un regalo para ti!</h1>
-                        </div>
-                        <p style="font-size:16px;line-height:1.6;">Hola <strong>{target_user.username}</strong>,</p>
-                        <p style="font-size:16px;line-height:1.6;">
-                            El equipo de <strong>OnixLingo</strong> te ha obsequiado acceso 
-                            <span style="color:{tier_color};font-weight:bold;">{tier_label}</span> 
-                            por <strong>{payload.days} días</strong>. 🎉
-                        </p>
-                        {personal_section}
-                        <div style="background:#1e293b;border-radius:8px;padding:20px;margin:20px 0;text-align:center;">
-                            <p style="margin:0 0 8px 0;font-size:13px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">Tu acceso vence el</p>
-                            <p style="margin:0;font-size:22px;font-weight:bold;color:{tier_color};">
-                                {target_user.valid_until.strftime('%d de %B de %Y') if target_user.valid_until else 'Calculando...'}
-                            </p>
-                        </div>
-                        <div style="text-align:center;margin-top:30px;">
-                            <a href="{frontend_url}/dashboard" 
-                               style="display:inline-block;padding:14px 32px;background:{tier_color};color:#000;text-decoration:none;border-radius:0;font-weight:bold;font-size:16px;">
-                                Ir a mi Dashboard →
-                            </a>
-                        </div>
-                        <p style="font-size:12px;color:#64748b;margin-top:40px;text-align:center;">
-                            Si tienes dudas escríbenos a soporte@onixu.company
-                        </p>
-                    </div>
-                    """
-                })
-        except Exception as e:
-            # No bloqueamos la operación si el email falla
-            import logging
-            logging.getLogger("OnixLingo.Admin").warning(f"Email de regalo no enviado: {e}")
-
-    return {
-        "status": "success",
-        "message": f"¡Regalo enviado! {payload.days} días {payload.tier} otorgados a {target_user.username}",
-        "new_expiration": target_user.valid_until.isoformat() if target_user.valid_until else None,
-        "email_sent": payload.notify_email and bool(target_user.email)
-    }
+    from app.services.admin_service import AdminService
+    return AdminService.gift_subscription(
+        db=db,
+        target_user=target_user,
+        days=payload.days,
+        tier=payload.tier,
+        message=payload.message,
+        notify_email=payload.notify_email
+    )
 
 from pydantic import BaseModel
 from app.core.security import get_password_hash
@@ -490,56 +425,140 @@ class UpdateTicketStatus(BaseModel):
     status: str
 
 @router.get("/support-tickets")
-def get_support_tickets(db: Session = Depends(get_db), current_admin: models.User = Depends(get_current_admin_user)):
-    tickets = db.query(models.SupportTicket).options(joinedload(models.SupportTicket.user)).order_by(models.SupportTicket.id.desc()).all()
+def get_support_tickets(
+    skip: int = 0, 
+    limit: int = 50, 
+    status_filter: str = "all", 
+    db: Session = Depends(get_db), 
+    current_admin: models.User = Depends(get_current_admin_user)
+):
+    query = db.query(models.SupportTicket).options(joinedload(models.SupportTicket.user))
     
-    # Check if empty to generate mocks just to show something the first time
-    if not tickets:
-        user1 = db.query(models.User).first()
-        if user1:
-            mock1 = models.SupportTicket(user_id=user1.id, subject="Error en la pasarela de Paddle", message="He intentado comprar el acceso Titanium pero me rechaza la tarjeta Visa. Por favor ayúdenme.", priority="high")
-            mock2 = models.SupportTicket(user_id=user1.id, subject="Perdí mi racha", message="Entré todos los días pero hoy me dice que mi racha volvió a 0. Ayuda.", priority="normal")
-            db.add_all([mock1, mock2])
-            db.commit()
-            tickets = db.query(models.SupportTicket).options(joinedload(models.SupportTicket.user)).order_by(models.SupportTicket.id.desc()).all()
+    if status_filter != "all":
+        query = query.filter(models.SupportTicket.status == status_filter)
         
-    return [{
-        "id": t.id,
-        "subject": t.subject,
-        "message": t.message,
-        "status": t.status,
-        "priority": t.priority,
-        "created_at": t.created_at,
-        "user_email": t.user.email if t.user else "Usuario Desconocido"
-    } for t in tickets]
+    total = query.count()
+    tickets = query.order_by(models.SupportTicket.id.desc()).offset(skip).limit(limit).all()
+    
+    return {
+        "tickets": [{
+            "id": t.id,
+            "subject": t.subject,
+            "message": t.message,
+            "status": t.status,
+            "priority": t.priority,
+            "created_at": t.created_at,
+            "user_email": t.user.email if t.user else "Usuario Desconocido"
+        } for t in tickets],
+        "total": total
+    }
 
 @router.put("/support-tickets/{ticket_id}")
 def update_support_ticket(ticket_id: int, payload: UpdateTicketStatus, db: Session = Depends(get_db), current_admin: models.User = Depends(get_current_admin_user)):
-    ticket = db.query(models.SupportTicket).filter(models.SupportTicket.id == ticket_id).first()
+    ticket = db.query(models.SupportTicket).options(joinedload(models.SupportTicket.user)).filter(models.SupportTicket.id == ticket_id).first()
     if ticket:
         ticket.status = payload.status
         db.commit()
+        
+        # Enviar email al usuario
+        if ticket.user and ticket.user.email:
+            try:
+                import os, resend
+                resend_key = os.getenv("RESEND_API_KEY")
+                if resend_key:
+                    resend.api_key = resend_key
+                    frontend_url = os.getenv("FRONTEND_URL", "https://onixlingo.onixu.company").rstrip('/')
+                    
+                    status_es = "Resuelto" if payload.status == "resolved" else ("Cerrado" if payload.status == "closed" else "Abierto")
+                    color = "#10b981" if payload.status == "resolved" else ("#64748b" if payload.status == "closed" else "#f59e0b")
+                    
+                    resend.Emails.send({
+                        "from": "OnixLingo Soporte <soporte@onixu.company>",
+                        "to": ticket.user.email,
+                        "subject": f"Actualización de Ticket #{ticket.id}: {status_es}",
+                        "html": f"""
+                        <div style="font-family:sans-serif;max-width:600px;margin:0 auto;background:#0F1623;color:#f1f5f9;padding:40px;border-radius:10px;border:1px solid #1e293b;">
+                            <h1 style="color:{color};font-size:24px;margin-top:0;">Actualización de tu Ticket</h1>
+                            <p style="font-size:16px;line-height:1.6;">Hola <strong>{ticket.user.username}</strong>,</p>
+                            <p style="font-size:16px;line-height:1.6;">
+                                Tu ticket <strong>#{ticket.id}</strong> ("{ticket.subject}") ha cambiado de estado a: <strong style="color:{color};">{status_es.upper()}</strong>.
+                            </p>
+                            <p style="font-size:16px;line-height:1.6;">Si necesitas más ayuda, puedes reabrir el ticket desde tu dashboard o enviar uno nuevo.</p>
+                            
+                            <div style="text-align:center;margin-top:30px;">
+                                <a href="{frontend_url}/dashboard" 
+                                   style="display:inline-block;padding:12px 24px;background:{color};color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;font-size:14px;">
+                                    Ir a mi Dashboard
+                                </a>
+                            </div>
+                        </div>
+                        """
+                    })
+            except Exception as e:
+                import logging
+                logging.getLogger("OnixLingo.Admin").warning(f"Error sending ticket update email: {e}")
+                
         return {"status": "success"}
     return {"status": "not_found"}
 
 @router.get("/audit-logs")
-def get_audit_logs(request: Request, db: Session = Depends(get_db), current_admin: models.User = Depends(get_current_admin_user)):
+def get_audit_logs(
+    request: Request, 
+    skip: int = 0, 
+    limit: int = 50, 
+    action_filter: str = None,
+    db: Session = Depends(get_db), 
+    current_admin: models.User = Depends(get_current_admin_user)
+):
+    from sqlalchemy import or_, func
+    from datetime import datetime, timedelta
+
     # Log this admin access as well!
     client_ip = request.client.host if request.client else "Unknown"
     new_log = models.SystemAuditLog(admin_id=current_admin.id, action="Acceso a Auditoría", details="El administrador accedió al registro de seguridad.", ip_address=client_ip)
     db.add(new_log)
     db.commit()
     
-    logs = db.query(models.SystemAuditLog).order_by(models.SystemAuditLog.id.desc()).limit(100).all()
+    query = db.query(models.SystemAuditLog)
     
-    return [{
-        "id": l.id,
-        "admin_id": l.admin_id,
-        "action": l.action,
-        "details": l.details,
-        "ip_address": l.ip_address,
-        "created_at": l.created_at
-    } for l in logs]
+    if action_filter and action_filter != "all":
+        query = query.filter(models.SystemAuditLog.action.ilike(f"%{action_filter}%"))
+        
+    total_logs = query.count()
+    logs = query.order_by(models.SystemAuditLog.id.desc()).offset(skip).limit(limit).all()
+    
+    # Calculate metrics
+    now = datetime.utcnow()
+    past_24h = now - timedelta(hours=24)
+    
+    events_24h = db.query(models.SystemAuditLog).filter(models.SystemAuditLog.created_at >= past_24h).count()
+    
+    # Critical alerts count (e.g. action contains error, fallido, elimin, crític)
+    critical_alerts_count = db.query(models.SystemAuditLog).filter(
+        or_(
+            models.SystemAuditLog.action.ilike("%error%"),
+            models.SystemAuditLog.action.ilike("%fallid%"),
+            models.SystemAuditLog.action.ilike("%elimin%"),
+            models.SystemAuditLog.action.ilike("%crític%"),
+            models.SystemAuditLog.action.ilike("%critic%"),
+            models.SystemAuditLog.action.ilike("%unauthorized%"),
+            models.SystemAuditLog.action.ilike("%suspicious%")
+        )
+    ).count()
+    
+    return {
+        "logs": [{
+            "id": l.id,
+            "admin_id": l.admin_id,
+            "action": l.action,
+            "details": l.details,
+            "ip_address": l.ip_address,
+            "created_at": l.created_at
+        } for l in logs],
+        "total": total_logs,
+        "events_24h": events_24h,
+        "critical_alerts": critical_alerts_count
+    }
 
 class GlobalSettingUpdate(BaseModel):
     key: str
@@ -559,7 +578,7 @@ def get_global_settings(db: Session = Depends(get_db), current_admin: models.Use
         "payment_environment": {"value": "test", "desc": "Entorno de pasarela (test/live)"},
         "default_currency": {"value": "USD", "desc": "Moneda por defecto para pagos"},
         "platform_name": {"value": "OnixLingo", "desc": "Nombre visible de la plataforma"},
-        "support_email": {"value": "support@onixlingo.com", "desc": "Email oficial de soporte técnico"}
+        "support_email": {"value": "support@onixlingo.onixu.company", "desc": "Email oficial de soporte técnico"}
     }
     
     current_settings = db.query(models.GlobalSetting).all()
@@ -749,28 +768,6 @@ def get_affiliates(db: Session = Depends(get_db), current_admin: models.User = D
         joinedload(models.Referral.referred)
     ).all()
     
-    # Check if empty to generate mock data just to show something the first time
-    if not referrals:
-        user1 = db.query(models.User).filter(models.User.email != None).first()
-        user2 = db.query(models.User).filter(models.User.email != None).offset(1).first()
-        user3 = db.query(models.User).filter(models.User.email != None).offset(2).first()
-        if user1 and user2 and user3:
-            # Set a random referral code if they dont have one
-            if not user1.referral_code:
-                user1.referral_code = "TEST1"
-            if not user2.referral_code:
-                user2.referral_code = "TEST2"
-                
-            mock1 = models.Referral(referrer_id=user1.id, referred_id=user2.id, status="pending")
-            mock2 = models.Referral(referrer_id=user1.id, referred_id=user3.id, status="rewarded")
-            db.add_all([mock1, mock2])
-            db.commit()
-            
-            referrals = db.query(models.Referral).options(
-                joinedload(models.Referral.referrer),
-                joinedload(models.Referral.referred)
-            ).all()
-
     # Procesar para la tabla de Embajadores
     ambassadors_map = {}
     for ref in referrals:

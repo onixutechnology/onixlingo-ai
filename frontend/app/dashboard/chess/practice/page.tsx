@@ -186,7 +186,7 @@ function PracticeArena() {
         if (!res.ok) throw new Error(`Error ${res.status}`);
         const data: LessonData = await res.json();
         
-        // REEMPLAZAR TEXTOS GENÉRICOS DE IA POR NUESTROS NOMBRES PROCEDURALES PERFECTOS
+        // REEMPLAZAR TEXTOS GENÉRICOS DE Sistema POR NUESTROS NOMBRES PROCEDURALES PERFECTOS
         const baseLesson = BASE_MODULES.find(b => b.id === lessonId);
         if (baseLesson) {
           data.title = baseLesson.title;
@@ -220,7 +220,7 @@ function PracticeArena() {
     if (!isFreePlay || gameRef.current.isGameOver()) return;
 
     setIsBotThinking(true);
-    setFeedback('La IA está pensando...');
+    setFeedback('El Sistema está pensando...');
 
     await new Promise((resolve) => setTimeout(resolve, 400));
     const legalMoves = gameRef.current.moves({ verbose: true }) as Move[];
@@ -513,7 +513,7 @@ function PracticeArena() {
 
             {isBotThinking && (
               <div className="px-3 py-1 rounded-none bg-amber-955/60 text-amber-300 border border-amber-800/40 text-[10px] font-bold flex items-center gap-1">
-                <Loader2 size={12} className="animate-spin" /> IA pensando
+                <Loader2 size={12} className="animate-spin" /> Sistema pensando
               </div>
             )}
           </div>

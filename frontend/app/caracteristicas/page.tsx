@@ -24,9 +24,9 @@ const features = [
   {
     icon: BrainCircuit,
     color: 'indigo',
-    tag: 'IA Adaptativa',
+    tag: 'Sistema Adaptativa',
     title: 'Motor Neuronal de Cero Latencia',
-    description: 'Nuestro núcleo de inteligencia artificial procesa cada respuesta en milisegundos. El sistema analiza tu nivel en tiempo real y recalibra la dificultad de cada ejercicio de forma automática, garantizando que siempre estés en tu zona óptima de aprendizaje.',
+    description: 'Nuestro núcleo de procesamiento cognitivo procesa cada respuesta en milisegundos. El sistema analiza tu nivel en tiempo real y recalibra la dificultad de cada ejercicio de forma automática, garantizando que siempre estés en tu zona óptima de aprendizaje.',
     bullets: [
       'Ajuste de dificultad en tiempo real por sesión',
       'Modelos de lenguaje alineados con el estándar MCER',
@@ -41,7 +41,7 @@ const features = [
     icon: Mic,
     color: 'emerald',
     tag: 'Speech Analytics',
-    title: 'Análisis Fonético con IA en Tiempo Real',
+    title: 'Análisis Fonético con el sistema en Tiempo Real',
     description: 'Pronuncia, recibe feedback inmediato y corrige. Nuestro sistema de Speech Analytics descompone tu voz en métricas de precisión, fluidez, entonación, ritmo, ritmo y confianza. No solo te dice si es correcto — te dice exactamente qué ajustar.',
     bullets: [
       'Detección de 8 dimensiones fonéticas simultáneas',
@@ -79,7 +79,7 @@ const features = [
       'Puzzles tácticos adaptados a tu Elo estimado',
       'Aperturas clásicas: Ruy López, Siciliana, Caro-Kann',
       '3,000+ retos dinámicos y lecciones en la biblioteca',
-      'Tutor IA que explica cada decisión táctica',
+      'Tutor automatizado que explica cada decisión táctica',
     ],
     stat: '3,000+', statLabel: 'Puzzles y Retos',
     extraDetails: 'Puzzles indexados dinámicamente según la teoría del flujo cognitivo. El motor evalúa el árbol de decisiones estratégico y te entrena para justificar cada jugada en inglés, fomentando el pensamiento racional bajo presión extrema.',
@@ -120,7 +120,7 @@ const features = [
 ];
 
 const techStack = [
-  { icon: Cpu, label: 'Motor de IA propio', sub: 'Alineado con el estándar MCER' },
+  { icon: Cpu, label: 'Motor de Sistema propio', sub: 'Alineado con el estándar MCER' },
   { icon: Radio, label: 'Streaming de audio real', sub: 'WebRTC + análisis fonético' },
   { icon: Shield, label: 'Datos cifrados E2E', sub: 'SOC2 compliant infrastructure' },
   { icon: Activity, label: 'Uptime 99.9%', sub: 'Infraestructura multi-región' },
@@ -173,7 +173,7 @@ export default function CaracteristicasPage() {
             <span className="text-slate-900">Aprendizaje sin Fricciones.</span>
           </h1>
           <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed font-light">
-            OnixLingo integra inteligencia artificial cognitiva, motores de análisis fonométrico en tiempo real y dinámicas de ajedrez estratégico para asegurar un desarrollo cognitivo premium.
+            OnixLingo integra tecnología cognitiva, motores de análisis fonométrico en tiempo real y dinámicas de ajedrez estratégico para asegurar un desarrollo cognitivo premium.
           </p>
           <div className="flex justify-center gap-4 pt-2">
             <Link href="/register">
@@ -197,7 +197,7 @@ export default function CaracteristicasPage() {
             { val: '3,000+', label: 'Lecciones de Idiomas', color: 'text-black' },
             { val: '3,000+', label: 'Retos de Ajedrez', color: 'text-[#D4AF37]' },
             { val: '1,400+', label: 'Temas y Contextos', color: 'text-black' },
-            { val: '< 80ms', label: 'Latencia de IA', color: 'text-black' },
+            { val: '< 80ms', label: 'Latencia de Sistema', color: 'text-black' },
           ].map((s, i) => (
             <div key={i} className="p-5 bg-white border border-black shadow-none flex flex-col justify-center">
               <p className={`text-3xl font-black ${s.color}`}>{s.val}</p>
@@ -360,7 +360,7 @@ export default function CaracteristicasPage() {
               <div className="p-4 bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-amber-900 flex gap-3 text-xs leading-normal">
                 <AlertTriangle size={18} className="shrink-0 mt-0.5 text-[#D4AF37]" />
                 <div>
-                  <p className="font-extrabold uppercase text-[9px] tracking-wider text-[#D4AF37] mb-0.5">Demostración de Inferencia e IA</p>
+                  <p className="font-extrabold uppercase text-[9px] tracking-wider text-[#D4AF37] mb-0.5">Demostración de Inferencia e Sistema</p>
                   <p className="font-light">Las herramientas completas de Speech Analytics, simuladores acústicos de voz y persistencia en la base de datos están habilitadas en tu panel privado tras registrarte.</p>
                 </div>
               </div>

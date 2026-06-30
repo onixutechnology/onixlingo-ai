@@ -18,10 +18,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "OnixLingo | Aprende Inglés, Francés, Chino y Ajedrez con IA",
+    default: "OnixLingo | Aprende Inglés, Francés, Chino y Ajedrez con Sistemas Cognitivos",
     template: "%s | OnixLingo"
   },
-  description: "Plataforma educativa de alto rendimiento impulsada por IA. Desarrolla fluidez en Inglés, Francés, Chino Mandarín y domina la estrategia con Ajedrez Táctico. Simulaciones corporativas y tutores virtuales 24/7.",
+  description: "Plataforma educativa de alto rendimiento impulsada por Sistemas Cognitivos. Desarrolla fluidez en Inglés, Francés, Chino Mandarín y domina la estrategia con Ajedrez Táctico. Simulaciones corporativas y tutores virtuales 24/7.",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-  keywords: ["idiomas", "IA", "ejecutivos", "B2B", "English training", "Ajedrez PvP", "OnixLingo"],
+  keywords: ["idiomas", "Sistema", "ejecutivos", "B2B", "English training", "Ajedrez PvP", "OnixLingo"],
   authors: [{ name: "OnixLingo Engineering" }],
   openGraph: {
     type: "website",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "OnixLingo | AI Language Tutor",
-    description: "IA aplicada al entrenamiento de idiomas para equipos de alto desempeño.",
+    description: "Sistema aplicada al entrenamiento de idiomas para equipos de alto desempeño.",
     images: ["/og-image.png"],
   },
   robots: {

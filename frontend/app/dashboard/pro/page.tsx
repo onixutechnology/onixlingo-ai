@@ -509,7 +509,7 @@ export default function ExecutiveDashboard() {
                 <Video size={22} />
               </div>
               <h3 className="text-base font-black text-slate-900 mb-1.5 uppercase tracking-tight">Corporativo Simulator</h3>
-              <p className="text-xs text-slate-700 font-medium leading-relaxed mb-4">Ejercicios en tiempo real con una junta directiva de IA.</p>
+              <p className="text-xs text-slate-700 font-medium leading-relaxed mb-4">Ejercicios en tiempo real con una junta directiva de Sistema.</p>
               <div className="flex items-center gap-1.5 text-[10px] font-bold text-teal-800 uppercase tracking-widest">
                 Enter Room <ChevronRight size={12} />
               </div>

@@ -38,7 +38,7 @@ const TIER_OPTIONS = [
     lightBg: '#eff6ff',
     lightBorder: '#bfdbfe',
     textColor: '#1d4ed8',
-    desc: 'Tutores IA, lecciones avanzadas, pronunciación',
+    desc: 'Tutores automatizados, lecciones avanzadas, pronunciación',
   },
   {
     id: 'executive',

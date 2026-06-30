@@ -79,7 +79,7 @@ export default function Home() {
               <div className="p-3 bg-slate-50 text-slate-900 shrink-0"><User size={24} /></div>
               <div>
                 <h4 className="font-bold text-black uppercase tracking-widest text-sm mb-2">Capacitación Experta</h4>
-                <p className="text-gray-800 text-sm leading-relaxed">Formamos para el dominio absoluto con simuladores de IA avanzados.</p>
+                <p className="text-gray-800 text-sm leading-relaxed">Formamos para el dominio absoluto con simuladores de Sistema avanzados.</p>
               </div>
             </div>
 
@@ -132,7 +132,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-black mb-3 uppercase tracking-widest">Ajedrez Táctico</h3>
               <p className="text-black font-medium leading-relaxed text-sm">
-                Entrenamiento y puzzles asistidos por IA. Analiza tus blunders y mejora tu cálculo bajo presión.
+                Entrenamiento y puzzles asistidos por Sistema. Analiza tus blunders y mejora tu cálculo bajo presión.
               </p>
             </div>
 
@@ -143,7 +143,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-black mb-3 uppercase tracking-widest">Simulación Alta Dirección</h3>
               <p className="text-black font-medium leading-relaxed text-sm">
-                Negociaciones, reuniones de directorio y presentaciones frente a inversores controlados por IA corporativa.
+                Negociaciones, reuniones de directorio y presentaciones frente a inversores controlados por sistemas corporativos.
               </p>
             </div>
 
@@ -157,7 +157,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-widest uppercase mb-8">Nuestra <span className="text-[#D4AF37]">Metodología</span> de Aprendizaje</h2>
           <div className="space-y-6 text-gray-700 text-lg font-light leading-relaxed">
             <p>
-              En OnixLingo, hemos desarrollado un enfoque pedagógico innovador que fusiona la lingüística computacional avanzada con la simulación de entornos corporativos reales. Nuestro sistema no se basa en la memorización aislada de vocabulario, sino en la inmersión total a través de conversaciones contextuales generadas por inteligencia artificial adaptativa.
+              En OnixLingo, hemos desarrollado un enfoque pedagógico innovador que fusiona la lingüística computacional avanzada con la simulación de entornos corporativos reales. Nuestro sistema no se basa en la memorización aislada de vocabulario, sino en la inmersión total a través de conversaciones contextuales generadas por sistemas de evaluación adaptativa.
             </p>
             <p>
               Al interactuar con nuestros tutores virtuales en inglés, francés o chino mandarín, el sistema analiza en tiempo real la pronunciación, la sintaxis y la fluidez del usuario. Esta retroalimentación instantánea permite corregir errores fosilizados y acelerar la adquisición del idioma hasta un 300% más rápido que los métodos tradicionales, preparando a los ejecutivos para negociaciones de alto riesgo.
@@ -175,7 +175,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-slate-900 tracking-widest uppercase mb-12 text-center">Preguntas Frecuentes</h2>
           <div className="space-y-8">
             <div className="bg-white p-6 border border-gray-200 hover:border-[#D4AF37]/50 transition-colors">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">¿Cómo funciona la evaluación por IA?</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">¿Cómo funciona la evaluación automatizada?</h3>
               <p className="text-gray-700 font-light leading-relaxed">
                 Nuestra tecnología de reconocimiento de voz de nivel empresarial captura tu discurso y lo compara con una inmensa base de datos de hablantes nativos. Evalúa tu cadencia, entonación y precisión gramatical en milisegundos, proporcionándote un reporte detallado después de cada sesión de simulación ejecutiva.
               </p>
@@ -183,7 +183,7 @@ export default function Home() {
             <div className="bg-white p-6 border border-gray-200 hover:border-[#D4AF37]/50 transition-colors">
               <h3 className="text-xl font-bold text-slate-900 mb-3">¿Cómo mido mi progreso en el idioma?</h3>
               <p className="text-gray-700 font-light leading-relaxed">
-                Nuestra plataforma proporciona reportes analíticos detallados y seguimiento en tiempo real de tu fluidez, vocabulario y precisión gramatical. Podrás ver tu evolución constante mediante métricas de rendimiento basadas en tus interacciones con nuestros tutores IA.
+                Nuestra plataforma proporciona reportes analíticos detallados y seguimiento en tiempo real de tu fluidez, vocabulario y precisión gramatical. Podrás ver tu evolución constante mediante métricas de rendimiento basadas en tus interacciones con nuestros tutores automatizados.
               </p>
             </div>
             <div className="bg-white p-6 border border-gray-200 hover:border-[#D4AF37]/50 transition-colors">

@@ -297,7 +297,7 @@ export default function CompanyDashboardPage() {
                 {(company?.top_weakness_categories?.length ?? 0) > 0 && (
                     <section className="rounded-none border border-rose-500/20 bg-rose-900/10 p-5">
                         <p className="mb-3 text-sm font-semibold text-rose-300">
-                            🧠 Top AI-Detected Team Weaknesses
+                            🧠 Top System-Detected Team Weaknesses
                         </p>
                         <div className="flex flex-wrap gap-2">
                             {company!.top_weakness_categories.map((cat) => (

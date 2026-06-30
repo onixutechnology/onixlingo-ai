@@ -175,7 +175,7 @@ export default function GlobalSettings() {
             <Server size={16} /> Sistema
           </button>
           <button onClick={() => setActiveTab('ai')} className={`flex items-center gap-3 px-5 py-4 text-xs font-black uppercase tracking-widest transition-colors ${activeTab === 'ai' ? 'bg-indigo-50 text-indigo-700 border-l-4 border-indigo-600 shadow-sm' : 'bg-white text-slate-500 hover:bg-slate-50 border-l-4 border-transparent'}`}>
-            <Bot size={16} /> Inteligencia Artificial
+            <Bot size={16} /> Sistema Analítico Avanzado
           </button>
           <button onClick={() => setActiveTab('billing')} className={`flex items-center gap-3 px-5 py-4 text-xs font-black uppercase tracking-widest transition-colors ${activeTab === 'billing' ? 'bg-indigo-50 text-indigo-700 border-l-4 border-indigo-600 shadow-sm' : 'bg-white text-slate-500 hover:bg-slate-50 border-l-4 border-transparent'}`}>
             <CreditCard size={16} /> Pagos y Finanzas
@@ -209,7 +209,7 @@ export default function GlobalSettings() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <SelectField 
                   settingKey="ai_default_engine" 
-                  label="Motor IA Principal" 
+                  label="Motor Sistema Principal" 
                   options={[
                     {value: 'gpt-4o', label: 'OpenAI GPT-4o (Recomendado)'},
                     {value: 'gpt-4o-mini', label: 'OpenAI GPT-4o Mini (Rápido/Económico)'},

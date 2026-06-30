@@ -735,22 +735,7 @@ export default function ChessArenaPage() {
                                                 </thead>
                                                 <tbody className="divide-y divide-[#3c1e0a]/40 text-slate-300">
                                                     <tr>
-                                                        <td className="py-2.5 font-bold text-slate-900">Bot-Manager</td>
-                                                        <td className="py-2.5">🔥 Blitz 3+2</td>
-                                                        <td className="py-2.5 text-emerald-400 font-bold">Victoria</td>
-                                                        <td className="py-2.5 text-emerald-400 font-bold text-right">+15</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td className="py-2.5 font-bold text-slate-900">Carlos_CEO</td>
-                                                        <td className="py-2.5">🛡️ Rapid 10+0</td>
-                                                        <td className="py-2.5 text-red-400 font-bold">Derrota</td>
-                                                        <td className="py-2.5 text-red-400 font-bold text-right">-15</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td className="py-2.5 font-bold text-slate-900">Bot-Principiante</td>
-                                                        <td className="py-2.5">⚡ Bullet 1+0</td>
-                                                        <td className="py-2.5 text-emerald-400 font-bold">Victoria</td>
-                                                        <td className="py-2.5 text-emerald-400 font-bold text-right">+5</td>
+                                                        <td colSpan={4} className="py-8 text-center text-slate-500 font-bold">Sin partidas recientes</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -783,49 +768,8 @@ export default function ChessArenaPage() {
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-[#3c1e0a]/40 text-slate-300 font-medium">
-                                            <tr className="bg-[#462614]/10">
-                                                <td className="py-3.5 font-black text-amber-400 text-sm">#1</td>
-                                                <td className="py-3.5 font-bold text-slate-900 flex items-center gap-1.5">
-                                                    Magnus_CEO <Crown size={12} className="text-amber-400" />
-                                                </td>
-                                                <td className="py-3.5 font-black text-amber-300">2840</td>
-                                                <td className="py-3.5">84%</td>
-                                                <td className="py-3.5">🇳🇴 NO</td>
-                                                <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-amber-950/60 text-amber-300 border border-amber-800/40 px-1.5 py-0.5">EXECUTIVE</span></td>
-                                            </tr>
                                             <tr>
-                                                <td className="py-3.5 font-black text-[#D4AF37]/60 text-sm">#2</td>
-                                                <td className="py-3.5 font-bold text-slate-900">Kasparov_Pro</td>
-                                                <td className="py-3.5 font-bold">2610</td>
-                                                <td className="py-3.5">76%</td>
-                                                <td className="py-3.5">🇦🇿 AZ</td>
-                                                <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-amber-950/60 text-amber-300 border border-amber-800/40 px-1.5 py-0.5">EXECUTIVE</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td className="py-3.5 font-black text-[#D4AF37]/60 text-sm">#3</td>
-                                                <td className="py-3.5 font-bold text-slate-900">Sofia_Chess92</td>
-                                                <td className="py-3.5 font-bold">1850</td>
-                                                <td className="py-3.5">68%</td>
-                                                <td className="py-3.5">🇪🇸 ES</td>
-                                                <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-[#130a04] text-slate-300 border border-[#3c1e0a] px-1.5 py-0.5">PRO</span></td>
-                                            </tr>
-                                            <tr className="bg-[#462614]/30 border-y-2 border-amber-700/40">
-                                                <td className="py-3.5 font-black text-amber-400 text-sm">#4</td>
-                                                <td className="py-3.5 font-bold text-slate-900 flex items-center gap-1.5">
-                                                    {user?.username ?? "Usuario"} <span className="text-[8px] text-amber-400 font-bold">(Tú)</span>
-                                                </td>
-                                                <td className="py-3.5 font-black text-amber-300">{localElo}</td>
-                                                <td className="py-3.5">58%</td>
-                                                <td className="py-3.5">🇲🇽 MX</td>
-                                                <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-[#130a04] text-slate-300 border border-[#3c1e0a] px-1.5 py-0.5">PRO</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td className="py-3.5 font-black text-[#D4AF37]/60 text-sm">#5</td>
-                                                <td className="py-3.5 font-bold text-slate-900">Student_99</td>
-                                                <td className="py-3.5 font-bold">1220</td>
-                                                <td className="py-3.5">51%</td>
-                                                <td className="py-3.5">🇨🇴 CO</td>
-                                                <td className="py-3.5 text-right"><span className="text-[8px] font-black bg-[#130a04] text-slate-600 border border-[#3c1e0a]/40 px-1.5 py-0.5">STUDENT</span></td>
+                                                <td colSpan={6} className="py-8 text-center text-slate-500 font-bold">Clasificación en progreso...</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -869,13 +813,13 @@ export default function ChessArenaPage() {
                                         </div>
                                     </div>
 
-                                    {/* vs AI Lab */}
+                                    {/* vs Bot Lab */}
                                     <div className="wood-panel p-6 rounded-none flex flex-col justify-between h-96">
                                         <div className="space-y-4">
                                             <div className="w-10 h-10 bg-amber-950/40 border border-amber-800/40 text-amber-400 flex items-center justify-center">
                                                 <Brain size={20} />
                                             </div>
-                                            <h4 className="font-bold text-base text-slate-900 uppercase">Laboratorio de OnixAI</h4>
+                                            <h4 className="font-bold text-base text-slate-900 uppercase">Laboratorio de Práctica</h4>
                                             <p className="text-xs text-slate-300 leading-relaxed">
                                                 Enfréntate a nuestro motor inteligente en partidas completas. Utiliza algoritmos Minimax a profundidad 3 y adaptabilidad posicional según tu nivel de juego.
                                             </p>

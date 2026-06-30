@@ -914,11 +914,11 @@ export default function LessonRunnerEngine() {
     }
   }, [userId, lesson, stats, trackEvent]);
 
-  // [PRO 34] Integración de IA para feedback personalizado
+  // [PRO 34] Integración de análisis automatizado para feedback personalizado
   const getAIFeedback = useCallback(async (answer: string, question: string): Promise<string> => {
     // Simulación - en producción llamarías a un modelo LLM
     trackEvent('ai_feedback_requested', { answerLength: answer.length });
-    return `Feedback IA: Tu respuesta "${answer}" fue ${answer.length > 5 ? 'completa' : 'breve'}`;
+    return `Feedback del Sistema: Tu respuesta "${answer}" fue ${answer.length > 5 ? 'completa' : 'breve'}`;
   }, [trackEvent]);
 
   // [PRO 35] Gestor de sesiones guardadas
@@ -987,7 +987,7 @@ export default function LessonRunnerEngine() {
     return Math.floor(stats.xpAccumulated / 1000) + 1;
   }, [stats.xpAccumulated]);
 
-  // [PRO 41] Sugerencias de mejora basadas en IA
+  // [PRO 41] Sugerencias de mejora basadas en Sistema
   const getAIImprovementSuggestions = useCallback((): string[] => {
     const suggestions: string[] = [];
     const weakAreas = identifyWeakAreas();

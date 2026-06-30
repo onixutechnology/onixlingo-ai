@@ -607,70 +607,70 @@ export const CURRICULUM_FR: LevelSection[] = [
     title: 'Nivel A1: Bases y Supervivencia',
     description: 'Establece los cimientos del francés: saludos, números, rutinas básicas de oficina.',
     color: 'emerald',
-    lessons: buildLessons('a1', TEMAS_A1_DATA, 200)
+    lessons: buildLessons('a1', TEMAS_A1_DATA)
   },
   {
     id: 'FR-A2',
     title: 'Nivel A2: Comunicación Cotidiana',
     description: 'Interactúa en situaciones elementales: pedidos, correos básicos, desplazamientos.',
     color: 'emerald',
-    lessons: buildLessons('a2', TEMAS_A2_DATA, 200)
+    lessons: buildLessons('a2', TEMAS_A2_DATA)
   },
   {
     id: 'FR-B1',
     title: 'Nivel B1: Autonomía Profesional',
     description: 'Redacta correos formales, lidera juntas y expresa opiniones con soltura.',
     color: 'blue',
-    lessons: buildLessons('b1', TEMAS_B1_DATA, 200)
+    lessons: buildLessons('b1', TEMAS_B1_DATA)
   },
   {
     id: 'FR-B2',
     title: 'Nivel B2: Operaciones Ejecutivas',
     description: 'Domina la gestión de proyectos, equipos y presupuestos en francés de negocios.',
     color: 'blue',
-    lessons: buildLessons('b2', TEMAS_B2_DATA, 200)
+    lessons: buildLessons('b2', TEMAS_B2_DATA)
   },
   {
     id: 'FR-C1',
     title: 'Nivel C1: Liderazgo Estratégico',
     description: 'Lidera negociaciones de alto nivel, discursos corporativos y estrategia organizacional.',
     color: 'orange',
-    lessons: buildLessons('c1', TEMAS_C1_DATA, 200)
+    lessons: buildLessons('c1', TEMAS_C1_DATA)
   },
   {
     id: 'FR-C2',
     title: 'Nivel C2: Geopolítica Global',
     description: 'Domina retórica ejecutiva, geopolítica corporativa y toma de decisiones globales.',
     color: 'orange',
-    lessons: buildLessons('c2', TEMAS_C2_DATA, 200)
+    lessons: buildLessons('c2', TEMAS_C2_DATA)
   },
   {
     id: 'FR-TFI',
     title: 'Nivel TFI: Certificación TFI®',
     description: 'Preparación intensiva para el examen oficial TFI® con ejercicios del formato real.',
     color: 'purple',
-    lessons: buildLessons('tfi', TEMAS_TFI_DATA, 200)
+    lessons: buildLessons('tfi', TEMAS_TFI_DATA)
   },
   {
     id: 'FR-M1',
     title: 'Nivel M1: RRPP y Gestión de Crisis',
     description: 'Gestiona la comunicación de crisis, relaciones públicas y reputación de marca.',
     color: 'purple',
-    lessons: buildLessons('m1', TEMAS_M1_DATA, 200)
+    lessons: buildLessons('m1', TEMAS_M1_DATA)
   },
   {
     id: 'FR-M2',
     title: 'Nivel M2: Fusiones y Adquisiciones',
     description: 'Lidera integraciones corporativas y negociaciones de F&A transfronterizas.',
     color: 'purple',
-    lessons: buildLessons('m2', TEMAS_M2_DATA, 200)
+    lessons: buildLessons('m2', TEMAS_M2_DATA)
   },
   {
     id: 'FR-PRO',
     title: 'Nivel PRO: Pro Executive: Gobernanza',
     description: 'Domina la supervisión del consejo, auditoría ética y sucesión ejecutiva global.',
     color: 'purple',
-    lessons: buildLessons('pro', TEMAS_PRO_DATA, 200)
+    lessons: buildLessons('pro', TEMAS_PRO_DATA)
   },
 ];
 

@@ -3041,9 +3041,9 @@ const TEMAS_C_DATA: string[][] = [
 ];
 
 // Generar lecciones de forma dinámica con tipado seguro para lecciones
-const buildLessons = (prefix: string, rawData: string[][], count: number = 100): LessonNode[] => {
+const buildLessons = (prefix: string, rawData: string[][]): LessonNode[] => {
   const lessons: LessonNode[] = [];
-  for (let idx = 0; idx < count; idx++) {
+  for (let idx = 0; idx < rawData.length; idx++) {
     const rawIndex = idx % rawData.length;
     const item = rawData[rawIndex];
     const num = idx + 1;
@@ -3057,8 +3057,7 @@ const buildLessons = (prefix: string, rawData: string[][], count: number = 100):
     const positions: ('left' | 'center' | 'right')[] = ['center', 'left', 'center', 'right'];
     const position = positions[idx % positions.length];
     
-    const suffix = idx >= rawData.length ? ` - Section ${Math.floor(idx / rawData.length) + 1}` : "";
-    const title = `${item[0]}${suffix}`;
+    const title = item[0];
     
     lessons.push({
       id,
@@ -3081,49 +3080,49 @@ export const CURRICULUM: LevelSection[] = [
     title: 'Nivel A1: Beginner Foundations',
     description: 'Establece los cimientos indispensables del inglés y sobrevive en entornos de oficina.',
     color: 'emerald',
-    lessons: buildLessons('a1', TEMAS_A_DATA, 200)
+    lessons: buildLessons('a1', TEMAS_A_DATA)
   },
   {
     id: 'A2',
     title: 'Nivel A2: Operations & Survival',
     description: 'Domina tareas cotidianas y operativas en inglés de negocios.',
     color: 'emerald',
-    lessons: buildLessons('a2', TEMAS_A2_DATA, 200)
+    lessons: buildLessons('a2', TEMAS_A2_DATA)
   },
   {
     id: 'B1',
     title: 'Nivel B1: Professional Management',
     description: 'Comunícate con soltura, redacta correos formales y lidera juntas con precisión.',
     color: 'blue',
-    lessons: buildLessons('b1', TEMAS_B_DATA, 200)
+    lessons: buildLessons('b1', TEMAS_B_DATA)
   },
   {
     id: 'B2',
     title: 'Nivel B2: Executive Operations',
     description: 'Domina la agilidad operativa, gestión de proyectos y retroalimentación de equipos.',
     color: 'blue',
-    lessons: buildLessons('b2', TEMAS_B_DATA, 200)
+    lessons: buildLessons('b2', TEMAS_B_DATA)
   },
   {
     id: 'C1',
     title: 'Nivel C1: Strategic Leadership',
     description: 'Domina negociaciones de alto nivel, fusiones y discursos ante mesas directivas.',
     color: 'orange',
-    lessons: buildLessons('c1', TEMAS_C_DATA, 200)
+    lessons: buildLessons('c1', TEMAS_C_DATA)
   },
   {
     id: 'C2',
     title: 'Nivel C2: Global Geopolitics & Strategy',
     description: 'Lidera la toma de decisiones corporativas globales con total naturalidad y retórica fina.',
     color: 'orange',
-    lessons: buildLessons('c2', TEMAS_C_DATA, 200)
+    lessons: buildLessons('c2', TEMAS_C_DATA)
   },
   {
     id: 'TOEIC',
     title: 'Certificación: TOEIC® Mastery',
     description: 'Preparación de alto rendimiento para el examen oficial TOEIC® de habilidades ejecutivas.',
     color: 'purple',
-    lessons: buildLessons('toeic', TEMAS_C_DATA, 200)
+    lessons: buildLessons('toeic', TEMAS_C_DATA)
   }
 ];
 

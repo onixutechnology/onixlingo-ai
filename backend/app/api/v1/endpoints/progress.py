@@ -142,10 +142,6 @@ def get_user_stats(
     premium_count = db.query(models.User).filter(
         (models.User.is_pro == True) | (models.User.tier == "titanium") | (models.User.tier == "pro") | (models.User.tier == "executive"),
         models.User.role != "admin",
-        models.User.email != "jeicomorales1@gmail.com",
-        models.User.email != "j2022eico2@gmail.com",
-        models.User.email != "moralesmorenojacob0@gmail.com",
-        models.User.username != "jeicomorales1",
         models.User.paddle_subscription_id != None
     ).count()
 

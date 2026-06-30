@@ -472,7 +472,7 @@ export default function ChessLobbyPage() {
 
         {/* SECCIÓN: MODOS DE JUEGO */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Tarjeta: Vs OnixAI */}
+          {/* Tarjeta: Vs Bot */}
           <Link href="/dashboard/chess/vs-ai" className="block">
             <div style={woodPanelStyle} className="wood-panel p-6 rounded-none shadow-xl hover:border-[#62351b] hover:scale-[1.01] transition-all duration-300 group cursor-pointer relative overflow-hidden h-full flex flex-col justify-between">
               <div className="absolute right-0 top-0 w-32 h-32 bg-[#D4AF37]/20/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -483,8 +483,8 @@ export default function ChessLobbyPage() {
                   </div>
                   <span className="text-[10px] font-black uppercase tracking-wider text-amber-400">Cognitive Engine</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">Jugar contra OnixAI</h3>
-                <p className="text-sm text-slate-300 mb-6">Pon a prueba tu pensamiento estratégico en tiempo real contra OnixAI con 3 niveles ejecutivos: Principiante, Manager y CEO.</p>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">Jugar contra el Simulador</h3>
+                <p className="text-sm text-slate-300 mb-6">Pon a prueba tu pensamiento estratégico en tiempo real contra el Simulador con 3 niveles ejecutivos: Principiante, Manager y CEO.</p>
               </div>
               <div className="flex items-center gap-2 text-amber-400 text-xs font-black uppercase tracking-widest mt-auto">
                 ENTRAR AL LAB <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />

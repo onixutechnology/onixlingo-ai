@@ -866,7 +866,7 @@ export default function ProfilePage() {
                   <div className="space-y-2.5">
                     {[
                       'Acceso completo a lecciones A1 hasta C1',
-                      'Tutoría conversacional por Inteligencia Artificial',
+                      'Tutoría conversacional interactiva',
                       'Energía ilimitada y sin publicidad corporativa',
                     ].map((b, i) => (
                       <div key={i} className="flex items-center gap-2">
@@ -1073,8 +1073,8 @@ export default function ProfilePage() {
                     className="p-8 grid grid-cols-1 md:grid-cols-2 gap-6"
                   >
                     {[
-                      { label: 'Nombre completo', field: 'full_name', type: 'text', icon: <User size={13} />, placeholder: 'Ej. Jacob Morales' },
-                      { label: 'Correo electrónico', field: 'email', type: 'email', icon: <Mail size={13} />, placeholder: 'correo@ejemplo.com' },
+                      { label: 'Nombre completo', field: 'full_name', type: 'text', icon: <User size={13} />, placeholder: 'Ej. Nombre Apellido' },
+                      { label: 'Correo electrónico', field: 'email', type: 'email', icon: <Mail size={13} />, placeholder: 'correo@empresa.com' },
                       { label: 'Teléfono de contacto', field: 'phone', type: 'tel', icon: <Phone size={13} />, placeholder: '+52 000 000 0000' },
                     ].map(({ label, field, type, icon, placeholder }) => (
                       <div key={field} className="space-y-1.5">

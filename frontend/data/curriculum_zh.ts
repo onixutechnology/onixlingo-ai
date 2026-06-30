@@ -1550,21 +1550,21 @@ export const CURRICULUM_ZH: LevelSection[] = [
     title: 'Nivel A: Cimientos y Supervivencia',
     description: 'Establece los cimientos indispensables del chino mandarín y desenvuélvete en situaciones cotidianas.',
     color: 'orange',
-    lessons: buildLessons('a', TEMAS_A_DATA, 200)
+    lessons: buildLessons('a', TEMAS_A_DATA)
   },
   {
     id: 'ZH-B',
     title: 'Nivel B: Operaciones y Negocios',
     description: 'Comunícate con soltura, domina el vocabulario de oficina y maneja transacciones comerciales en chino.',
     color: 'blue',
-    lessons: buildLessons('b', TEMAS_B_DATA, 200)
+    lessons: buildLessons('b', TEMAS_B_DATA)
   },
   {
     id: 'ZH-C',
     title: 'Nivel C: Liderazgo y Guanxi',
     description: 'Domina negociaciones estratégicas de alto nivel y establece relaciones sólidas (Guanxi) en China.',
     color: 'purple',
-    lessons: buildLessons('c', TEMAS_C_DATA, 200)
+    lessons: buildLessons('c', TEMAS_C_DATA)
   }
 ];
 

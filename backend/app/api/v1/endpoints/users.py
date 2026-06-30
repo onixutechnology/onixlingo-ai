@@ -44,9 +44,11 @@ class UserProfileResponse(BaseModel):
     chess_elo: int
     chess_tactical_elo: int
 
+from pydantic import BaseModel, EmailStr, Field
+
 class TicketCreate(BaseModel):
-    subject: str
-    message: str
+    subject: str = Field(..., max_length=150)
+    message: str = Field(..., max_length=1000)
     priority: str = "normal"
 
 # --- ENDPOINTS ---
@@ -138,4 +140,58 @@ def create_support_ticket(
     db.add(new_ticket)
     db.commit()
     db.refresh(new_ticket)
+    
+    # Send email notification via Resend
+    if current_user.email:
+        try:
+            import os, resend
+            resend_key = os.getenv("RESEND_API_KEY")
+            if resend_key:
+                resend.api_key = resend_key
+                frontend_url = os.getenv("FRONTEND_URL", "https://onixlingo.onixu.company").rstrip('/')
+                
+                resend.Emails.send({
+                    "from": "OnixLingo Soporte <soporte@onixu.company>",
+                    "to": current_user.email,
+                    "subject": f"Hemos recibido tu ticket: {payload.subject}",
+                    "html": f"""
+                    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;background:#0F1623;color:#f1f5f9;padding:40px;border-radius:10px;border:1px solid #1e293b;">
+                        <h1 style="color:#6366f1;font-size:24px;margin-top:0;">Hemos recibido tu solicitud</h1>
+                        <p style="font-size:16px;line-height:1.6;">Hola <strong>{current_user.username}</strong>,</p>
+                        <p style="font-size:16px;line-height:1.6;">
+                            Confirmamos la recepción de tu ticket <strong>#{new_ticket.id}</strong> ("{payload.subject}").
+                        </p>
+                        <p style="font-size:16px;line-height:1.6;">Nuestro equipo de soporte está revisando tu caso y nos pondremos en contacto contigo lo antes posible a través de este mismo correo.</p>
+                        
+                        <div style="background:#1e293b;border-radius:8px;padding:20px;margin:20px 0;">
+                            <p style="margin:0;font-size:13px;color:#94a3b8;">Tu mensaje:</p>
+                            <p style="margin:8px 0 0 0;font-size:14px;color:#e2e8f0;font-style:italic;">"{payload.message}"</p>
+                        </div>
+                        
+                        <div style="text-align:center;margin-top:30px;">
+                            <a href="{frontend_url}/dashboard" 
+                               style="display:inline-block;padding:12px 24px;background:#6366f1;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;font-size:14px;">
+                                Ir a mi Dashboard
+                            </a>
+                        </div>
+                    </div>
+                    """
+                })
+        except Exception as e:
+            import logging
+            logging.getLogger("OnixLingo.Users").warning(f"Error sending ticket confirmation email: {e}")
+
     return {"status": "success", "ticket_id": new_ticket.id}
+
+@router.get("/me/gamification")
+def get_user_gamification(
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    from app.services.gamification_service import GamificationService
+    total_xp = 0
+    if current_user.progress:
+        for lesson in current_user.progress:
+            total_xp += lesson.score
+            
+    return GamificationService.get_gamification_stats(total_xp)

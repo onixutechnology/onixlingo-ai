@@ -206,7 +206,7 @@ export default function ChessVsAIPage() {
     localStorage.setItem('onix_chess_difficulty', difficulty);
 
     setIsLoading(true);
-    setStatus('OnixAI pensando...');
+    setStatus('Bot pensando...');
 
     // Capturamos el FEN exacto del movimiento del usuario para evitar cierres stale
     const userMoveFen = gameCopy.fen();
@@ -218,13 +218,13 @@ export default function ChessVsAIPage() {
       });
 
       if (response.data.move_uci) {
-        // Clonar el tablero después del movimiento del usuario para aplicar la jugada de la IA
+        // Clonar el tablero después del movimiento del usuario para aplicar la jugada del sistema
         const aiGameCopy = new Chess(userMoveFen);
         aiGameCopy.move(response.data.move_uci);
         setGame(aiGameCopy);
         setMoveHistory(aiGameCopy.history());
         
-        // Auto-guardar posición FEN actual después de la respuesta de la IA
+        // Auto-guardar posición FEN actual después de la respuesta del sistema
         localStorage.setItem('onix_chess_fen', aiGameCopy.fen());
         localStorage.setItem('onix_chess_difficulty', difficulty);
         

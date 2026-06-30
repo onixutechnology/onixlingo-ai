@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-// Tipos sincronizados con la IA
+// Tipos sincronizados con el sistema
 export type AvatarGesture = 
   | 'idle' 
   | 'talking' 

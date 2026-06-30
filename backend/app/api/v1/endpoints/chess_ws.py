@@ -24,26 +24,6 @@ async def get_ws_user(token: str, db: Session) -> Dict[str, Any]:
     if token.startswith("Bearer "):
         token = token.split(" ")[1]
 
-    # --- FALLBACK DE DESARROLLO PARA LOCALHOST ---
-    is_jwt = token.count(".") == 2 and token.startswith("ey")
-    if not is_jwt:
-        user = None
-        if token.isdigit():
-            user = db.query(User).filter(User.id == int(token)).first()
-        else:
-            user = db.query(User).filter(User.username == token).first()
-        
-        if user:
-            return {"id": user.id, "username": user.username}
-            
-        if token in ["mock-jwt-token", "user-1234"]:
-            first_user = db.query(User).filter(User.role != "bot").first()
-            if first_user:
-                return {"id": first_user.id, "username": first_user.username}
-            return {"id": 1, "username": "Alex_Titanium"}
-            
-        raise ValueError("Token de prueba inválido o usuario no encontrado")
-
     # --- FLUJO ESTÁNDAR JWT ---
     try:
         payload = jwt.decode(token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM])

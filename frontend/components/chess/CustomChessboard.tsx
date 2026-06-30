@@ -24,7 +24,7 @@ export default function CustomChessboard({ fen, onDrop, disabled, lastMove, hint
   const game = useMemo(() => new Chess(fen), [fen]);
   const board = game.board(); 
 
-  // Estados para el sistema Click-to-Move
+  // Estados paral sistema Click-to-Move
   const [selectedSquare, setSelectedSquare] = useState<Square | null>(null);
   const [optionSquares, setOptionSquares] = useState<Record<string, Move>>({});
 

@@ -807,9 +807,9 @@ export const ReadingStudio = ({ onClose }: ReadingStudioProps) => {
   const getLevelProgressPercentage = () => fn55(executiveXP);
   const getExecutiveLevelBadge = () => fn56(getExecutiveLevel());
   const getAccentDescription = () => {
-    if (customAccent === 'UK') return "British Professional Accent (Dr. Chen Calibration)";
-    if (customAccent === 'ES') return "Spanish Bilateral Accent (Elena Rodriguez Calibration)";
-    return "American Corporate Accent (Marcus Thorne Calibration)";
+    if (customAccent === 'UK') return "British Professional Accent (UK Operations Calibration)";
+    if (customAccent === 'ES') return "Spanish Bilateral Accent (LATAM Partnerships Calibration)";
+    return "American Corporate Accent (US Headquarters Calibration)";
   };
 
   // Diagnostic log mock helpers
@@ -997,7 +997,7 @@ Average Duration: ${getAverageSessionDuration()} seconds
     }
   };
 
-  // 🧠 ENVIAR A LA IA
+  // 🧠 ENVIAR AL SISTEMA
   const analyzeAudio = async (audioBlob: Blob) => {
     const formData = new FormData();
     formData.append('audio', audioBlob, 'recording.webm');
@@ -1491,7 +1491,7 @@ Average Duration: ${getAverageSessionDuration()} seconds
             </div>
           )}
 
-          {/* ACTIVE AI ANALYSIS VIEW */}
+          {/* ACTIVE ANALYSIS VIEW */}
           {result && (
             <div className="flex-1 flex flex-col justify-center animate-in slide-in-from-bottom-8 duration-500 mt-6 border-t border-orange-500/10 pt-6">
               <div className="bg-white/60 border border-orange-500/20 rounded-none p-8 text-center relative overflow-hidden">

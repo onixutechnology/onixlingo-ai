@@ -80,7 +80,7 @@ export default function PredictiveAnalytics() {
             <Sparkles size={32} className="text-indigo-400" />
           </div>
           <div>
-            <h2 className="text-3xl font-black text-white tracking-widest uppercase text-shadow-sm">Analítica Predictiva <span className="text-indigo-400">IA</span></h2>
+            <h2 className="text-3xl font-black text-white tracking-widest uppercase text-shadow-sm">Analítica Predictiva <span className="text-indigo-400">Sistema</span></h2>
             <p className="text-xs text-indigo-200/70 mt-1 font-mono uppercase tracking-widest">Motor de Inferencia: <span className="text-emerald-400">En Línea</span> | Precisión Histórica: 94.2%</p>
           </div>
         </div>
@@ -97,15 +97,15 @@ export default function PredictiveAnalytics() {
         </div>
       </div>
 
-      {/* AI CFO REPORT */}
+      {/* CFO REPORT */}
       <div className="bg-white border border-indigo-200 p-6 md:p-8 shadow-sm relative overflow-hidden group">
         <div className="flex items-center gap-3 mb-5">
           <div className="w-10 h-10 rounded-none bg-indigo-50 border border-indigo-100 text-indigo-600 flex items-center justify-center">
             <Bot size={20} />
           </div>
           <div>
-            <h3 className="text-sm font-black uppercase tracking-widest text-slate-900">AI CFO Executive Summary</h3>
-            <p className="text-[10px] font-bold text-indigo-500 uppercase tracking-wider">Análisis Inteligente por Gemini</p>
+            <h3 className="text-sm font-black uppercase tracking-widest text-slate-900">CFO Executive Summary</h3>
+            <p className="text-[10px] font-bold text-indigo-500 uppercase tracking-wider">Reporte Automatizado</p>
           </div>
         </div>
         

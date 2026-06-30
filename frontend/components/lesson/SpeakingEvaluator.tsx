@@ -95,7 +95,7 @@ export default function SpeakingEvaluator({ stage, onComplete, isPro }: Speaking
           </div>
           <div>
             <h2 className="text-xl font-bold text-slate-800">Prueba de Speaking</h2>
-            <p className="text-sm text-slate-500">Google Cloud STT + AI Evaluator</p>
+            <p className="text-sm text-slate-500">Google Cloud STT + Evaluador Analítico</p>
           </div>
         </div>
         
@@ -162,7 +162,7 @@ export default function SpeakingEvaluator({ stage, onComplete, isPro }: Speaking
             
             <div className="p-6 bg-slate-50 rounded-xl border border-slate-200">
               <div className="text-sm font-bold text-slate-700 uppercase tracking-wider mb-3 flex items-center gap-2">
-                Feedback de la IA
+                Feedback de la Plataforma
               </div>
               <p className="text-slate-700">{result.feedback || "Excelente pronunciación."}</p>
             </div>

@@ -136,7 +136,7 @@ export default function VentasPage() {
                   <Check size={14} className="text-black shrink-0 mt-0.5" /> <span>Temario Executive de Negocios</span>
                 </li>
                 <li className="flex items-start gap-3 text-[10px] font-bold text-black uppercase tracking-tight leading-relaxed">
-                  <Check size={14} className="text-black shrink-0 mt-0.5" /> <span>Tutoría conversacional por IA</span>
+                  <Check size={14} className="text-black shrink-0 mt-0.5" /> <span>Tutoría conversacional interactiva</span>
                 </li>
                 <li className="flex items-start gap-3 text-[10px] font-bold text-black uppercase tracking-tight leading-relaxed">
                   <Check size={14} className="text-black shrink-0 mt-0.5" /> <span>Idiomas: Español, Francés, Chino</span>

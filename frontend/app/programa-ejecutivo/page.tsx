@@ -49,7 +49,7 @@ const scenarios = [
     title: 'Presentación de Cierre Fiscal para IPO',
     situation: 'Presentación de resultados financieros consolidados ante la junta preparatoria del debut en Wall Street.',
     prompt: 'Justifica el margen operativo del trimestre y explica los gastos amortizados de I+D.',
-    teleprompter: 'Amortizamos la inversión en el motor de inteligencia artificial a cinco años, asegurando un margen neto estable del treinta y dos por ciento para el debut bursátil.',
+    teleprompter: 'Amortizamos la inversión en el motor de análisis algorítmico a cinco años, asegurando un margen neto estable del treinta y dos por ciento para el debut bursátil.',
     jargonKeywords: ['amortizamos', 'margen', 'estable', 'bursátil']
   }
 ];

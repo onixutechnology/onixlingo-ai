@@ -69,7 +69,7 @@ export default function SupportPage() {
             Reporte de Fallos Técnicos
           </h4>
           <p className="text-sm text-slate-600 mt-2 pl-6">
-            Si la IA no reconoce tu pronunciación de voz o experimentas fallas en el simulador de ajedrez, te recomendamos limpiar el caché del navegador e intentar de nuevo. Si persiste, envíanos una captura de pantalla y detalles del dispositivo al correo de soporte para que ingeniería lo resuelva.
+            Si el sistema no reconoce tu pronunciación de voz o experimentas fallas en el simulador de ajedrez, te recomendamos limpiar el caché del navegador e intentar de nuevo. Si persiste, envíanos una captura de pantalla y detalles del dispositivo al correo de soporte para que ingeniería lo resuelva.
           </p>
         </div>
       </div>

@@ -35,7 +35,7 @@ export default function PrivacyPage() {
         Utilizamos la información recolectada únicamente para:
       </p>
       <ul className="list-disc pl-6 mb-4 space-y-2 text-sm text-slate-600">
-        <li>Proporcionar y personalizar las lecciones e interacción didáctica con Inteligencia Artificial.</li>
+        <li>Proporcionar y personalizar las lecciones e interacción didáctica con el Sistema Analítico Avanzado.</li>
         <li>Registrar y mostrar el progreso del estudiante en la tabla de clasificación (Leaderboard).</li>
         <li>Enviar notificaciones operativas importantes (restablecimiento de contraseña, avisos de facturación).</li>
         <li>Prevenir fraudes y asegurar el correcto funcionamiento del software.</li>

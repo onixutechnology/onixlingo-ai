@@ -58,7 +58,7 @@ export default function SuccessPage() {
             <Shield size={14} className="text-[#D4AF37]"/> Arsenal Desbloqueado:
           </h3>
           <ul className="space-y-3 relative z-10">
-            {['Simulador de Entrevistas IA', 'Certificación TOEIC Ilimitada', 'Modo Offline & Sin Anuncios'].map((item, i) => (
+            {['Simulador Interactivo de Entrevistas', 'Certificación TOEIC Ilimitada', 'Modo Offline & Sin Anuncios'].map((item, i) => (
               <li key={i} className="flex items-center gap-3 text-slate-700 text-xs font-bold uppercase tracking-wider">
                 <div className="w-1.5 h-1.5 rounded-none bg-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.8)]"></div>
                 {item}

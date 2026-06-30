@@ -646,7 +646,7 @@ export const ExecutiveCommandCenter = ({ onClose, kpis, completedLessons }: Exec
 
               {/* Insights Row */}
               <div className="p-4 bg-amber-950/20 border border-[#D4AF37]/30/15 rounded-none">
-                <span className="text-[9px] font-black text-amber-400 uppercase tracking-widest block mb-2">🔍 AI Insights</span>
+                <span className="text-[9px] font-black text-amber-400 uppercase tracking-widest block mb-2">🔍 Insights Analíticos</span>
                 <ul className="space-y-1">
                   {[
                     fn196(kpis.totalXP),

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
@@ -69,12 +69,12 @@ export default function MeetingRoomPage() {
       description: 'Acquiring your main tech competitor in Europe. You must present the expansion plan, justify the 45M EUR investment valuation, and handle sharp objections from the CFO regarding cash reserves.',
       objectives: [
         'Present key Q4 synergistic benefits of the acquisition',
-        'Address Elena Rodriguez\'s concerns about short-term cash flow depletion',
+        'Address Chief Financial Officer\'s concerns about short-term cash flow depletion',
         'Use advanced M&A terminology (synergies, valuation multiplier, due diligence)',
         'Maintain a balanced, authoritative executive tone under pressure'
       ],
-      initialQuestion: "Welcome, CEO. We are gathered here to make a final vote on the acquisition proposal of TechVantage Europe. Elena and Marcus have strong reservations regarding the valuation. Please state your final strategic case for why this acquisition is absolutely vital for our global Q4 expansion.",
-      initialSpeaker: '1' // Dr. Sarah Chen
+      initialQuestion: "Welcome, CEO. We are gathered here to make a final vote on the acquisition proposal of TechVantage Europe. CFO and Lead Investor have strong reservations regarding the valuation. Please state your final strategic case for why this acquisition is absolutely vital for our global Q4 expansion.",
+      initialSpeaker: '1' // Chief Technology Officer
     },
     {
       id: 'product_recall',
@@ -85,26 +85,26 @@ export default function MeetingRoomPage() {
       objectives: [
         'Explain the containment and customer safety protocols immediately',
         'Justify the direct impact on product margins to the board',
-        'De-escalate panic from Marcus Thorne about public shareholder reaction',
+        'De-escalate panic from Lead Investor about public shareholder reaction',
         'Show decisive crisis leadership and high corporate accountability'
       ],
-      initialQuestion: "We have an emergency on our hands. The media is already reporting two minor incidents in Germany. Marcus is talking about immediate class-action risks, and our stock is down 4% in pre-market. How do you propose we contain this crisis without completely decimating our brand value?",
-      initialSpeaker: '2' // Marcus Thorne
+      initialQuestion: "We have an emergency on our hands. The media is already reporting two minor incidents in Germany. Lead Investor is talking about immediate class-action risks, and our stock is down 4% in pre-market. How do you propose we contain this crisis without completely decimating our brand value?",
+      initialSpeaker: '2' // Lead Investor
     },
     {
       id: 'cloud_migration',
       title: 'Q4 Technology Budget Defence',
-      subtitle: 'Strategic AI & Infrastructure migration',
+      subtitle: 'Strategic Tech & Infrastructure migration',
       difficulty: 'MEDIUM',
-      description: 'You are proposing to migrate 100% of physical data centers to a modern cloud AI infrastructure. The board is skeptical about the high capital expenditure and demands clear ROI timeline projections.',
+      description: 'You are proposing to migrate 100% of physical data centers to a modern cloud infrastructure. The board is skeptical about the high capital expenditure and demands clear ROI timeline projections.',
       objectives: [
-        'Articulate the long-term operational efficiency gains of Cloud AI',
+        'Articulate the long-term operational efficiency gains of Cloud',
         'Prove the migration has a clear 18-month ROI projection',
         'Reassure Dr. Chen regarding absolute data security and sovereignty',
         'Conclude the pitch with a definitive request for allocation authorization'
       ],
-      initialQuestion: "Thanks for joining us, CEO. The budget spreadsheet you submitted outlines a substantial capital allocation for this Cloud AI transition. In a high-inflation market, why shouldn't we postpone this massive expenditure to Q2 of next year?",
-      initialSpeaker: '3' // Elena Rodriguez
+      initialQuestion: "Thanks for joining us, CEO. The budget spreadsheet you submitted outlines a substantial capital allocation for this Cloud transition. In a high-inflation market, why shouldn't we postpone this massive expenditure to Q2 of next year?",
+      initialSpeaker: '3' // Chief Financial Officer
     }
   ];
 
@@ -169,8 +169,8 @@ export default function MeetingRoomPage() {
   const [characters, setCharacters] = useState<Character[]>([
     { 
       id: '1', 
-      name: 'Dr. Sarah Chen', 
-      role: 'AI Strategy & Board Director', 
+      name: 'Chief Technology Officer', 
+      role: 'Tech Strategy & Board Director', 
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=200&auto=format&fit=crop', 
       status: 'idle', 
       isAI: true,
@@ -178,7 +178,7 @@ export default function MeetingRoomPage() {
     },
     { 
       id: '2', 
-      name: 'Marcus Thorne', 
+      name: 'Lead Investor', 
       role: 'Venture Capital Partner', 
       avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&h=200&auto=format&fit=crop', 
       status: 'idle', 
@@ -187,7 +187,7 @@ export default function MeetingRoomPage() {
     },
     { 
       id: '3', 
-      name: 'Elena Rodriguez', 
+      name: 'Chief Financial Officer', 
       role: 'Chief Financial Officer (CFO)', 
       avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&h=200&auto=format&fit=crop', 
       status: 'idle', 
@@ -355,12 +355,12 @@ export default function MeetingRoomPage() {
   // [10] getObjectionMitigationStrategy: Returns scenarios specific strategies
   const getObjectionMitigationStrategy = (): string => {
     if (selectedScenario.id === 'ma_pitch') {
-      return "Focus on European market shares, Elena Rodriguez's cash buffers, and post-merger integration synergies.";
+      return "Focus on European market shares, CFO's cash buffers, and post-merger integration synergies.";
     }
     if (selectedScenario.id === 'product_recall') {
       return "Prioritize public safety parameters immediately, present liability caps, and outline product margin recovery roadmaps.";
     }
-    return "Differentiate Cloud AI operational efficiency (OpEx) gains from initial capital expenditures (CapEx).";
+    return "Differentiate Cloud operational efficiency (OpEx) gains from initial capital expenditures (CapEx).";
   };
 
   // [11] resetAllExecutiveMetrics: Restores default simulator KPIs
@@ -378,7 +378,7 @@ export default function MeetingRoomPage() {
   // [12] generateDynamicChallenge = Creates a random constraint for negotiation
   const generateDynamicChallenge = (): void => {
     const list = [
-      "Address Elena's cash reserve query in under two turns.",
+      "Address CFO's cash reserve query in under two turns.",
       "Integrate 'synergies' and 'hedging' in your next statement.",
       "Maintain a 90%+ tone rating while justifying capital allocation.",
       "De-escalate public market panic under 10 seconds of speech.",
@@ -557,17 +557,17 @@ export default function MeetingRoomPage() {
 
   // [31] getBoardMemberObjectionSeverity: Computes stress dynamic color of each member
   const getBoardMemberObjectionSeverity = (memberId: string): string => {
-    if (selectedScenario.id === 'product_recall' && memberId === '2') return 'HIGH OBJECTION ALERT'; // Marcus VC
-    if (selectedScenario.id === 'ma_pitch' && memberId === '3') return 'HIGH CASH RISK OBJECTION'; // Elena CFO
+    if (selectedScenario.id === 'product_recall' && memberId === '2') return 'HIGH OBJECTION ALERT'; // Lead Investor VC
+    if (selectedScenario.id === 'ma_pitch' && memberId === '3') return 'HIGH CASH RISK OBJECTION'; // CFO CFO
     if (selectedScenario.id === 'cloud_migration' && memberId === '1') return 'HIGH TECHNICAL OBJECTION'; // Dr. Chen Director
     return 'OBSERVING PROPOSAL';
   };
 
   // [32] getSentimentEmoticon: Returns dynamic sentiment emoticons
   const getSentimentEmoticon = (status: 'speaking' | 'listening' | 'idle'): string => {
-    if (status === 'speaking') return '🗣️';
-    if (status === 'listening') return '👂';
-    return '👤';
+    if (status === 'speaking') return 'ðŸ—£ï¸';
+    if (status === 'listening') return 'ðŸ‘‚';
+    return 'ðŸ‘¤';
   };
 
   // [33] toggleVoiceSubtitles: Setting helper
@@ -645,7 +645,7 @@ export default function MeetingRoomPage() {
   const getBoardSatisfactionIndicator = (): string => {
     if (boardTrust >= 85) return "UNANIMOUS APPROVAL PROJECTED";
     if (boardTrust >= 70) return "SKEPTICAL BUT RECEPTIVE";
-    return "REJECTION ALERT (Elena rodri objection high)";
+    return "REJECTION ALERT (CFO rodri objection high)";
   };
 
   // [44] getVoiceStabilityMetrics: Voice clarity rating
@@ -655,8 +655,8 @@ export default function MeetingRoomPage() {
 
   // [45] getAudienceToneAdjustment: In-depth recommendation feedback
   const getAudienceToneAdjustment = (): string => {
-    if (toneScore < 75) return "Elena finds the pitch too risk-prone. Speak about liability hedging.";
-    if (vocabularyScore < 75) return "Marcus Thorne expects M&A specific metrics. Present valuation ratios.";
+    if (toneScore < 75) return "CFO finds the pitch too risk-prone. Speak about liability hedging.";
+    if (vocabularyScore < 75) return "Lead Investor expects M&A specific metrics. Present valuation ratios.";
     return "Perfect audience calibration. Board members are fully aligned.";
   };
 
@@ -675,7 +675,7 @@ export default function MeetingRoomPage() {
   // [48] getObjectionDefenseTip: Context tips
   const getObjectionDefenseTip = (id: string): string => {
     const tips: Record<string, string> = {
-      'ma_pitch': "Acknowledge Elena's cash reserve limit, then pivot to post-merger synergistic dividends.",
+      'ma_pitch': "Acknowledge CFO's cash reserve limit, then pivot to post-merger synergistic dividends.",
       'product_recall': "Decisively declare immediate containment logs, then outline long-term brand equity hedging.",
       'cloud_migration': "Explain OpEx scaling. Argue that a delay yields high maintenance CapEx in the mid-run."
     };
@@ -1179,9 +1179,9 @@ export default function MeetingRoomPage() {
 
   // [115] getAccentDescription: Details of accent
   const getAccentDescription = (): string => {
-    if (speakerAccent === 'UK') return "British Professional Accent (Sarah Chen focus)";
-    if (speakerAccent === 'ES') return "Spanish Bilateral Accent (Elena Rodriguez focus)";
-    return "American Corporate Accent (Marcus Thorne focus)";
+    if (speakerAccent === 'UK') return "British Professional Accent (CTO focus)";
+    if (speakerAccent === 'ES') return "Spanish Bilateral Accent (Chief Financial Officer focus)";
+    return "American Corporate Accent (Lead Investor focus)";
   };
 
   // [116] getObjectionDefenseStatusText: Dynamic summaries
@@ -1204,7 +1204,7 @@ export default function MeetingRoomPage() {
     return getObjectionAggressionScore();
   };
 
-  // [120] getHistoricalMaxTrustScore: Récord trust
+  // [120] getHistoricalMaxTrustScore: RÃ©cord trust
   const getHistoricalMaxTrustScore = (): number => {
     return getHistoricalMaxTrust();
   };
@@ -1419,25 +1419,25 @@ export default function MeetingRoomPage() {
     return getExecutiveDiagnosticLogs();
   };
 
-  // [161] getElenaObjectionDetails: Elena Rodriguez specialized board details
-  const getElenaObjectionDetails = (): string => {
+  // [161] getCFOObjectionDetails: Chief Financial Officer specialized board details
+  const getCFOObjectionDetails = (): string => {
     return getBoardMemberObjectionSeverity('3');
   };
 
-  // [162] getMarcusObjectionDetails: Marcus Thorne specialized VC details
-  const getMarcusObjectionDetails = (): string => {
+  // [162] getLeadInvestorObjectionDetails: Lead Investor specialized VC details
+  const getLeadInvestorObjectionDetails = (): string => {
     return getBoardMemberObjectionSeverity('2');
   };
 
-  // [163] getSarahObjectionDetails: Dr Sarah Chen board details
-  const getSarahObjectionDetails = (): string => {
+  // [163] getCTOObjectionDetails: Dr CTO board details
+  const getCTOObjectionDetails = (): string => {
     return getBoardMemberObjectionSeverity('1');
   };
 
   // [164] getBoardMemberObjectionStatusEmoji: Renders status tags for member
   const getBoardMemberObjectionStatusEmoji = (id: string): string => {
     const char = characters.find(c => c.id === id);
-    return char ? getSentimentEmoticon(char.status) : '👤';
+    return char ? getSentimentEmoticon(char.status) : 'ðŸ‘¤';
   };
 
   // [165] getHistoricalLogLength: history logs count
@@ -1930,19 +1930,19 @@ export default function MeetingRoomPage() {
     return getBoardMemberObjectionStatusEmoji(id);
   };
 
-  // [263] getSarahObjectionDetailsWrapper: Dr Sarah Chen detailed board objections
-  const getSarahObjectionDetailsWrapper = (): string => {
-    return getSarahObjectionDetails();
+  // [263] getCTOObjectionDetailsWrapper: Dr CTO detailed board objections
+  const getCTOObjectionDetailsWrapper = (): string => {
+    return getCTOObjectionDetails();
   };
 
-  // [264] getMarcusObjectionDetailsWrapper: Marcus Thorne detailed VC objections
-  const getMarcusObjectionDetailsWrapper = (): string => {
-    return getMarcusObjectionDetails();
+  // [264] getLeadInvestorObjectionDetailsWrapper: Lead Investor detailed VC objections
+  const getLeadInvestorObjectionDetailsWrapper = (): string => {
+    return getLeadInvestorObjectionDetails();
   };
 
-  // [265] getElenaObjectionDetailsWrapper: Elena Rodriguez detailed CFO objections
-  const getElenaObjectionDetailsWrapper = (): string => {
-    return getElenaObjectionDetails();
+  // [265] getCFOObjectionDetailsWrapper: Chief Financial Officer detailed CFO objections
+  const getCFOObjectionDetailsWrapper = (): string => {
+    return getCFOObjectionDetails();
   };
 
   // [266] getDynamicDiagnosticsLogHistoryStrWrapper: diagnostics logging detailed wrapper
@@ -2299,7 +2299,7 @@ export default function MeetingRoomPage() {
     }
   };
 
-  // Submit Answer to dynamic AI Corporativo Simulator
+  // Submit Answer to dynamic Corporativo Simulator
   const handleSendMessage = async () => {
     const textToSend = inputText.trim();
     if (!textToSend && !audioBlob) return;
@@ -2317,9 +2317,9 @@ export default function MeetingRoomPage() {
     
     // Choose next speaker sequentially or based on content
     let nextSpeakerId = '1';
-    if (currentTurnOwner === '1') nextSpeakerId = '3'; // Sarah -> Elena
-    else if (currentTurnOwner === '3') nextSpeakerId = '2'; // Elena -> Marcus
-    else nextSpeakerId = '1'; // Marcus -> Sarah
+    if (currentTurnOwner === '1') nextSpeakerId = '3'; // CTO -> CFO
+    else if (currentTurnOwner === '3') nextSpeakerId = '2'; // CFO -> Lead Investor
+    else nextSpeakerId = '1'; // Lead Investor -> CTO
     
     const nextSpeaker = characters.find(c => c.id === nextSpeakerId) || characters[0];
 
@@ -2364,9 +2364,9 @@ export default function MeetingRoomPage() {
       
       User is playing the role of the CEO. Respond to their proposal: "${textToSend}".
       Be professional, critical, demand metrics/ROI, and remain true to your character:
-      - Dr. Sarah Chen is strategic, tech-savvy, and worried about security/ethics.
-      - Marcus Thorne is a venture capitalist, extremely ROI focused, wants global growth, and hates risks.
-      - Elena Rodriguez is the CFO, ultra-conservative with cash flow, demands cost savings and mitigation plans.
+      - Chief Technology Officer is strategic, tech-savvy, and worried about security/ethics.
+      - Lead Investor is a venture capitalist, extremely ROI focused, wants global growth, and hates risks.
+      - Chief Financial Officer is the CFO, ultra-conservative with cash flow, demands cost savings and mitigation plans.
       
       Ensure you give:
       1. A realistic response challenging the CEO's claims.
@@ -2374,7 +2374,7 @@ export default function MeetingRoomPage() {
       3. A clear score for grammar, tone, and vocabulary choice.
       `;
 
-      // Make chat post request to our premium backend AI engine
+      // Make chat post request to our premium backend engine
       const chatResponse = await apiClient.post('/ai/chat', {
         message: textToSend || "Let me elaborate on our strategic approach for the board.",
         context: systemPrompt,
@@ -2431,7 +2431,7 @@ export default function MeetingRoomPage() {
       ));
       setCurrentTurnOwner(nextSpeakerId);
 
-      // Add AI reply to logs
+      // Add engine reply to logs
       setMessages(prev => [...prev, { 
         role: 'ai', 
         sender: nextSpeaker.name,
@@ -2472,7 +2472,7 @@ export default function MeetingRoomPage() {
       }, 5000);
 
     } catch (error: any) {
-      console.warn("AI response error fallback initialized.", error);
+      console.warn("System response error fallback initialized.", error);
       
       // Dynamic simulated C-level board objection fallback in case user tier throws 403 or backend is offline
       const fallbackQuestions: Record<string, string[]> = {
@@ -2724,7 +2724,7 @@ export default function MeetingRoomPage() {
                       {/* Live feedback status badges */}
                       <div className="absolute top-3 left-3 flex gap-1.5">
                         <span className="px-2 py-0.5 bg-slate-50/80 text-[8px] font-black text-slate-500 uppercase tracking-widest rounded backdrop-blur-md border border-slate-800">
-                          Board AI
+                          Board Simulator
                         </span>
                         {char.status !== 'idle' && (
                           <span className={`px-2 py-0.5 text-[8px] font-black uppercase tracking-widest rounded backdrop-blur-md border ${
@@ -3272,9 +3272,9 @@ export default function MeetingRoomPage() {
                                 onChange={(e) => alert(`Accent calibrated to: ${e.target.value}`)}
                                 className="w-full bg-slate-50 border border-slate-900 rounded-none p-2.5 text-xs font-bold text-slate-900 focus:outline-none focus:border-orange-500"
                               >
-                                <option value="US">American Corporate (Marcus Thorne)</option>
-                                <option value="UK">British Professional (Sarah Chen)</option>
-                                <option value="ES">Spanish Bilateral (Elena Rodriguez)</option>
+                                <option value="US">American Corporate (Lead Investor)</option>
+                                <option value="UK">British Professional (CTO)</option>
+                                <option value="ES">Spanish Bilateral (Chief Financial Officer)</option>
                               </select>
                               <p className="text-[8px] text-slate-600 leading-normal italic mt-1">
                                 {getAccentDescription()}
@@ -3436,3 +3436,5 @@ export default function MeetingRoomPage() {
     </div>
   );
 }
+
+

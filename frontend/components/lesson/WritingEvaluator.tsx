@@ -53,7 +53,7 @@ export default function WritingEvaluator({ stage, onComplete, isPro }: WritingEv
           </div>
           <div>
             <h2 className="text-xl font-bold text-slate-800">{stage.scenario || "Writing Task"}</h2>
-            <p className="text-sm text-slate-500">Evaluación de IA Profesional</p>
+            <p className="text-sm text-slate-500">Evaluación Cognitiva Profesional</p>
           </div>
         </div>
         <div className="prose prose-slate max-w-none text-slate-700 whitespace-pre-wrap">
@@ -93,7 +93,7 @@ export default function WritingEvaluator({ stage, onComplete, isPro }: WritingEv
               {isEvaluating ? (
                 <><RefreshCw size={18} className="animate-spin" /> Analizando...</>
               ) : (
-                <><PenTool size={18} /> Enviar a Revisión IA</>
+                <><PenTool size={18} /> Enviar a Revisión del Sistema</>
               )}
             </button>
           </div>
@@ -102,7 +102,7 @@ export default function WritingEvaluator({ stage, onComplete, isPro }: WritingEv
         /* Resultados de la Evaluación */
         <div className="bg-white rounded-2xl shadow-sm border border-emerald-100 p-6 animate-in fade-in slide-in-from-bottom-4">
           <h3 className="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-            <CheckCircle2 className="text-emerald-500" /> Resultados del Evaluador IA
+            <CheckCircle2 className="text-emerald-500" /> Resultados del Evaluador Analítico
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">

@@ -13,11 +13,11 @@ const MODULES = [
   { id: 'users', label: 'Gestión de Usuarios', icon: Users },
   { id: 'messaging', label: 'Mensajería Push', icon: Megaphone },
   { id: 'affiliates', label: 'Centro de Afiliados', icon: Share2 },
-  { id: 'predictive', label: 'Analítica Predictiva (IA)', icon: Sparkles },
+  { id: 'predictive', label: 'Analítica Predictiva (Sistema)', icon: Sparkles },
   { id: 'finances', label: 'Finanzas y Facturas', icon: Wallet },
   { id: 'billing', label: 'Configuración Paddle', icon: CreditCard },
   { id: 'analytics', label: 'Analíticas y Reportes', icon: BarChart3 },
-  { id: 'ai_models', label: 'Motores de IA', icon: Bot },
+  { id: 'ai_models', label: 'Motores de Sistema', icon: Bot },
   { id: 'content', label: 'Gestor de Contenido', icon: BookOpen },
   { id: 'marketing', label: 'Marketing y Promos', icon: Tag },
   { id: 'support', label: 'Tickets de Soporte', icon: Ticket },
@@ -160,7 +160,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                       </div>
                       <div className="overflow-hidden">
                         <p className="font-black font-mono text-xs uppercase tracking-widest text-slate-800 truncate">{user?.username ? user.username : 'ROOT_ADMIN'}</p>
-                        <p className="text-[10px] font-mono font-semibold text-slate-500 truncate">{user?.email || 'admin@onixlingo.com'}</p>
+                        <p className="text-[10px] font-mono font-semibold text-slate-500 truncate">{user?.email || 'admin'}</p>
                         <p className="text-[9px] font-black font-mono uppercase text-emerald-600 tracking-wider mt-1">{user?.role || 'LEVEL 5 CLEARANCE'}</p>
                       </div>
                     </div>

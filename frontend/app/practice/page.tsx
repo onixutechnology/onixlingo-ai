@@ -36,7 +36,7 @@ export default function PracticePage() {
 
   // 3. Estados Locales
   const [input, setInput] = useState('');
-  const [response, setResponse] = useState('¡Hola! Soy tu tutor IA. ¿Qué quieres practicar hoy?');
+  const [response, setResponse] = useState('¡Hola! Soy tu asistente de evaluación. ¿Qué quieres practicar hoy?');
   const [loading, setLoading] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
 
@@ -131,7 +131,7 @@ export default function PracticePage() {
             Función Premium
           </h2>
           <p className="text-[10px] text-slate-600 leading-relaxed mb-8 uppercase tracking-wider font-bold">
-            Las prácticas de conversación libre con Inteligencia Artificial (Speech Tutor) no están disponibles en el Plan Free.
+            Las prácticas de simulación conversacional libre (Speech Tutor) no están disponibles en el Plan Free.
           </p>
           
           <div className="flex flex-col gap-3">
@@ -166,7 +166,7 @@ export default function PracticePage() {
             </Link>
             <div>
                 <h1 className="text-lg font-black tracking-tight text-slate-900 font-serif italic">
-                    AI Tutor <span className="text-[#D4AF37]">Live</span>
+                    Simulador <span className="text-[#D4AF37]">Live</span>
                 </h1>
                 <p className="text-[10px] opacity-60 uppercase tracking-widest font-bold">Conversation Mode</p>
             </div>
@@ -196,7 +196,7 @@ export default function PracticePage() {
                 <Avatar3D />
             </div>
 
-            {/* Subtítulos Flotantes (Respuesta de IA) */}
+            {/* Subtítulos Flotantes (Respuesta de Sistema) */}
             <div className="absolute bottom-8 left-6 right-6 text-center z-20">
                 <div className="inline-block px-6 py-4 rounded-none shadow-xl backdrop-blur-md max-w-2xl text-lg transition-all bg-[#D4AF37]/20 text-slate-900 border border-[#D4AF37]/30 font-bold">
                     {loading ? (

@@ -23,13 +23,7 @@ def get_current_user(
     """
     Valida el token JWT y recupera el usuario de la DB.
     """
-    # --- FALLBACK DE DESARROLLO ---
-    if token == "mock-jwt-token":
-        user = db.query(models.User).filter(models.User.role == "admin").first()
-        if not user:
-            user = db.query(models.User).first()
-        if user:
-            return user
+
 
     try:
         payload = jwt.decode(
