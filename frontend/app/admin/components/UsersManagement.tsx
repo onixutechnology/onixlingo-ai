@@ -108,7 +108,7 @@ export default function UsersManagement() {
         ].map(stat => (
           <div
             key={stat.label}
-            className="bg-white/40 backdrop-blur-md border border-white/60 p-5 flex items-center gap-4 shadow-[3px_3px_0_0_rgba(203,213,225,0.5)] hover:shadow-[6px_6px_0_0_rgba(203,213,225,0.5)] hover:-translate-y-0.5 transition-all"
+            className="bg-white/40 backdrop-blur-md border border-[#1d4ed8] p-5 flex items-center gap-4   hover:-translate-y-0.5 transition-all"
           >
             <div className="p-3 rounded-none" style={{ background: `${stat.color}15`, color: stat.color }}>
               {stat.icon}
@@ -122,14 +122,14 @@ export default function UsersManagement() {
       </div>
 
       {/* TABLE */}
-      <div className="bg-white/40 backdrop-blur-md border border-white/60 shadow-[3px_3px_0_0_rgba(203,213,225,0.5)] relative overflow-hidden">
+      <div className="bg-white/40 backdrop-blur-md border border-[#1d4ed8]  relative overflow-hidden">
         {loading && users.length > 0 && (
           <div className="absolute inset-0 bg-white/60 backdrop-blur-sm z-10 flex items-center justify-center">
             <Loader2 className="animate-spin text-indigo-600" size={32} />
           </div>
         )}
 
-        <div className="p-5 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 bg-slate-50/50">
+        <div className="p-5 border-b border-[#1d4ed8] flex flex-col sm:flex-row justify-between items-center gap-4 bg-slate-50/50">
           <h2 className="text-sm font-black font-mono tracking-widest uppercase text-slate-900">
             Directorio de Cuentas
           </h2>
@@ -140,7 +140,7 @@ export default function UsersManagement() {
               placeholder="Buscar usuario o email..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
-              className="w-full bg-white/60 border border-white/60 text-sm text-slate-900 pl-10 pr-4 py-2.5 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition-all placeholder:text-slate-400"
+              className="w-full bg-white/60 border border-[#1d4ed8] text-sm text-slate-900 pl-10 pr-4 py-2.5 outline-none focus:border-[#1d4ed8] focus:ring-2 focus:ring-indigo-100 transition-all placeholder:text-slate-400"
             />
           </div>
         </div>
@@ -154,11 +154,11 @@ export default function UsersManagement() {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-slate-50/80 text-slate-500 text-[10px] uppercase tracking-wider">
-                  <th className="p-4 pl-6 font-black border-b border-slate-200">ID</th>
-                  <th className="p-4 font-black border-b border-slate-200">Usuario</th>
-                  <th className="p-4 font-black border-b border-slate-200">Nivel</th>
-                  <th className="p-4 font-black border-b border-slate-200">Vencimiento VIP</th>
-                  <th className="p-4 pr-6 font-black border-b border-slate-200 text-right">Acciones</th>
+                  <th className="p-4 pl-6 font-black border-b border-[#1d4ed8]">ID</th>
+                  <th className="p-4 font-black border-b border-[#1d4ed8]">Usuario</th>
+                  <th className="p-4 font-black border-b border-[#1d4ed8]">Nivel</th>
+                  <th className="p-4 font-black border-b border-[#1d4ed8]">Vencimiento VIP</th>
+                  <th className="p-4 pr-6 font-black border-b border-[#1d4ed8] text-right">Acciones</th>
                 </tr>
               </thead>
               <tbody className="text-sm">
@@ -171,7 +171,7 @@ export default function UsersManagement() {
                       <td className="p-4">
                         <div className="flex items-center gap-3">
                           <div
-                            className="w-8 h-8 flex items-center justify-center font-bold text-xs shadow-sm shrink-0 group-hover:scale-105 transition-transform"
+                            className="w-8 h-8 flex items-center justify-center font-bold text-xs  shrink-0 group-hover:scale-105 transition-transform"
                             style={{ background: `${tierMeta.color}15`, color: tierMeta.color }}
                           >
                             {u.username.substring(0, 2).toUpperCase()}
@@ -210,7 +210,7 @@ export default function UsersManagement() {
                         <div className="flex items-center justify-end gap-2">
                           <button
                             onClick={() => setGiftingUser(u)}
-                            className="p-2 transition-colors shadow-sm hover:scale-110 active:scale-95"
+                            className="p-2 transition-colors  hover:scale-110 active:scale-95"
                             style={{
                               background: '#fffbeb',
                               border: '1px solid #fde68a',
@@ -222,7 +222,7 @@ export default function UsersManagement() {
                           </button>
                           <button
                             onClick={() => setManagingUser(u)}
-                            className="p-2 text-slate-600 bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-colors shadow-sm hover:scale-110 active:scale-95"
+                            className="p-2 text-slate-600 bg-slate-100 hover:bg-slate-200 border border-[#1d4ed8] transition-colors  hover:scale-110 active:scale-95"
                             title="Configurar Cuenta"
                           >
                             <Settings size={15} />

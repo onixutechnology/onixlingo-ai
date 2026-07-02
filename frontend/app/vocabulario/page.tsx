@@ -1,12 +1,11 @@
 'use client';
-import LandingFooter from '@/components/LandingFooter';
 import LandingNavbar from '@/components/LandingNavbar';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
-  BookOpen, ChevronRight, Play, AlertCircle
+  BookOpen, ChevronRight, Play
 } from 'lucide-react';
 
 const languages = [
@@ -37,6 +36,9 @@ const levels = [
   { id: 5, name: 'C1', desc: 'Fluidez', color: 'text-pink-700 bg-pink-100' },
   { id: 6, name: 'C2', desc: 'Maestría', color: 'text-pink-800 bg-pink-200' },
 ];
+
+const categoryMap = Object.fromEntries(categories.map(c => [c.id, c]));
+const levelMap = Object.fromEntries(levels.map(l => [l.id, l]));
 
 export default function VocabularioPage() {
   const router = useRouter();
@@ -158,7 +160,7 @@ export default function VocabularioPage() {
           <div className="space-y-2">
             <h4 className="text-2xl font-bold text-slate-900">Iniciar Simulador Interactivo</h4>
             <p className="text-slate-600 text-sm">
-              Módulo: <span className="font-bold text-[#D4AF37]">{categories.find(c => c.id === selectedCategory)?.title}</span> - Nivel: <span className="font-bold text-[#D4AF37]">{levels.find(l => l.id === selectedLevel)?.name}</span>
+              Módulo: <span className="font-bold text-[#D4AF37]">{categoryMap[selectedCategory]?.title}</span> - Nivel: <span className="font-bold text-[#D4AF37]">{levelMap[selectedLevel]?.name}</span>
             </p>
           </div>
           <button

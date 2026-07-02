@@ -1,267 +1,224 @@
 'use client';
-import LandingFooter from '@/components/LandingFooter';
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { 
-  BrainCircuit, 
-  Mic, 
-  Globe, 
   ArrowRight, 
   CheckCircle2, 
   Sparkles,
-  Gem,
   Crown,
   Languages,
-  LayoutGrid,
   Building2,
-  Zap,
-  Trophy,
-  User
+  Mic,
+  ChevronRight
 } from 'lucide-react';
-import FloatingParticles from '@/components/FloatingParticles';
-import LandingNavbar from '@/components/LandingNavbar';
+
+const LandingNavbar = dynamic(() => import('@/components/LandingNavbar'), { ssr: true });
+const LandingFooter = dynamic(() => import('@/components/LandingFooter'), { ssr: true });
+const FloatingParticles = dynamic(() => import('@/components/FloatingParticles'), { 
+  ssr: false, // Las partículas son pesadas y puramente visuales, no necesitan SSR
+});
+
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8022';
 
 export default function Home() {
+  const [prices, setPrices] = useState({ pro: 129, exec: 249 });
+
+  useEffect(() => {
+    const controller = new AbortController(); // Evita fugas de memoria si el usuario cambia de página rápido
+    fetch(`${API_URL}/api/v1/billing/public/pricing`, { 
+      signal: controller.signal,
+      next: { revalidate: 3600 } // Optimización de Next.js para cachear la respuesta
+    })
+      .then(res => res.json())
+      .then(data => {
+        setPrices({
+          pro: data.display_price_pro_monthly || 129,
+          exec: data.display_price_exec_monthly || 249
+        });
+      })
+      .catch(err => {
+        if (err.name !== 'AbortError') console.error("Error fetching pricing:", err);
+      });
+
+    return () => controller.abort(); // Limpieza del hook
+  }, []);
+
   return (
-    <div className="min-h-screen bg-white text-black selection:bg-[#D4AF37]/30 selection:text-black">
+    <div className="min-h-screen bg-white text-black selection:bg-[#D4AF37]/30 selection:text-black font-sans overflow-x-hidden">
       
       <LandingNavbar />
 
-      {/* --- SECCIÓN 1: HERO (NEGRO) --- */}
-      <main className="pt-28 pb-12 px-6 relative overflow-hidden bg-slate-50">
+      {/* --- FASE 1: HERO (SHARP EXECUTIVE) --- */}
+      <main className="relative pt-32 pb-24 px-6 min-h-[85vh] flex flex-col justify-center items-center bg-slate-50 border-b border-gray-200">
         <FloatingParticles />
         
-        <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in-up relative z-10">
+        <div className="max-w-5xl mx-auto text-center space-y-8 relative z-10 mt-16 md:mt-0">
           
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-none bg-white border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-bold uppercase tracking-widest shadow-none">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-none bg-white border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-bold uppercase tracking-widest shadow-sm"
+          >
             <Sparkles size={12} className="text-[#D4AF37]" />
-            El Sistema Universal
-          </div>
+            El Sistema Ejecutivo Definitivo
+          </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] uppercase">
-            Aprende Inglés, Francés, Chino y Ajedrez
-          </h1>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] uppercase"
+          >
+            Domina <span className="text-[#D4AF37]">Idiomas</span> y<br className="hidden md:block"/> Estrategia de Ajedrez
+          </motion.h1>
 
-          <p className="text-xl md:text-2xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-light">
-            La infraestructura que sostiene el crecimiento moderno. Desarrolla fluidez, confianza y estrategia bajo un mismo ecosistema profesional.
-          </p>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-light"
+          >
+            Infraestructura cognitiva para Alta Dirección. Desarrolla fluidez, confianza y cálculo bajo presión en un ecosistema impulsado por IA de próxima generación.
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-5 justify-center pt-8">
-            <Link href="/register" className="w-full sm:w-auto">
-              <button className="w-full sm:w-auto bg-[#D4AF37] text-black border border-[#D4AF37] text-lg font-bold py-4 px-10 rounded-none shadow-xl shadow-[#D4AF37]/20 transition-all flex items-center justify-center gap-3 hover:-translate-y-1 hover:bg-[#b5952f] uppercase tracking-widest">
-                Explorar Ecosistema <ArrowRight size={20} />
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col sm:flex-row gap-5 justify-center pt-8"
+          >
+            <Link href="/register" className="w-full sm:w-auto group">
+              <button className="w-full sm:w-auto relative overflow-hidden bg-[#D4AF37] text-black text-sm font-bold py-4 px-10 rounded-none shadow-md transition-all flex items-center justify-center gap-3 hover:-translate-y-1 hover:shadow-xl hover:bg-[#b5952f] uppercase tracking-widest border border-black">
+                <span className="relative z-10 flex items-center gap-2">Explorar Ecosistema <ArrowRight size={18} /></span>
               </button>
             </Link>
             <Link href="/login" className="w-full sm:w-auto">
-              <button className="w-full sm:w-auto bg-white border border-gray-300 text-black hover:border-black hover:bg-white text-lg font-bold py-4 px-10 rounded-none transition-all shadow-none hover:shadow-none uppercase tracking-widest">
+              <button className="w-full sm:w-auto bg-white border border-gray-300 text-black hover:bg-gray-50 hover:border-black text-sm font-bold py-4 px-10 rounded-none transition-all shadow-none uppercase tracking-widest">
                 Portal de Clientes
               </button>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </main>
 
-      {/* --- SECCIÓN 2: MÉTRICAS (BLANCA LIMPIA) --- */}
-      <section className="py-20 bg-white border-y border-gray-200 relative z-10">
+      {/* --- FASE 2: ECOSISTEMA (GRID CUADRADO Y LIMPIO) --- */}
+      <section id="features" className="py-24 bg-[#D4AF37]/10 relative z-10 border-b border-black/20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white border border-gray-200 rounded-none p-8 flex gap-4 items-start shadow-none hover:shadow-none transition-shadow animate-fade-in-up [animation-delay:200ms] opacity-0">
-              <div className="p-3 bg-slate-50 text-slate-900 shrink-0"><LayoutGrid size={24} /></div>
-              <div>
-                <h4 className="font-bold text-black uppercase tracking-widest text-sm mb-2">Integración Total</h4>
-                <p className="text-gray-800 text-sm leading-relaxed">Unión perfecta de software corporativo y educación en múltiples idiomas.</p>
-              </div>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-none p-8 flex gap-4 items-start shadow-none hover:shadow-none transition-shadow animate-fade-in-up [animation-delay:400ms] opacity-0">
-              <div className="p-3 bg-slate-50 text-slate-900 shrink-0"><User size={24} /></div>
-              <div>
-                <h4 className="font-bold text-black uppercase tracking-widest text-sm mb-2">Capacitación Experta</h4>
-                <p className="text-gray-800 text-sm leading-relaxed">Formamos para el dominio absoluto con simuladores de Sistema avanzados.</p>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-none p-8 flex gap-4 items-start shadow-none hover:shadow-none transition-shadow animate-fade-in-up [animation-delay:600ms] opacity-0">
-              <div className="p-3 bg-slate-50 text-slate-900 shrink-0"><CheckCircle2 size={24} /></div>
-              <div>
-                <h4 className="font-bold text-black uppercase tracking-widest text-sm mb-2">Garantía Vitalicia</h4>
-                <p className="text-gray-800 text-sm leading-relaxed">Soporte técnico blindado y actualización continua de lecciones.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* --- SECCIÓN 3: ECOSISTEMA ESPACIAL (DORADO 20%) --- */}
-      <section id="features" className="py-32 bg-[#D4AF37]/20 text-black relative z-10 border-b border-[#D4AF37]/30 overflow-hidden">
-        
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="mb-16 md:flex justify-between items-end border-b border-black/10 pb-8">
-            <div className="max-w-2xl">
-              <h2 className="text-4xl md:text-5xl font-bold text-black tracking-widest uppercase mb-4">Nuestro <span className="text-slate-900 bg-white px-2 py-1">Ecosistema</span></h2>
-              <p className="text-black text-lg font-bold leading-relaxed">
-                Tecnología de clase mundial diseñada para escalar sin límites, con máxima seguridad y un rendimiento operativo insuperable.
-              </p>
-            </div>
-            <div className="hidden md:block">
-              <button className="text-black font-bold uppercase tracking-widest text-sm hover:text-slate-900 transition-colors flex items-center gap-2 bg-[#D4AF37] px-4 py-2 border border-black">
-                Explorar <ArrowRight size={16} />
-              </button>
-            </div>
+          
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight uppercase">Arquitectura <span className="bg-white px-3 py-1 border border-black/10">Premium</span></h2>
+            <p className="text-slate-700 max-w-2xl mx-auto font-light text-lg">Tecnología de clase mundial diseñada para acelerar tu crecimiento intelectual.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            {/* Idiomas */}
-            <div className="lg:col-span-2 group bg-white p-8 rounded-none border border-black hover:border-[#D4AF37] hover:-translate-y-1 transition-all duration-300 animate-fade-in-up opacity-0 [animation-delay:100ms]">
-              <div className="w-12 h-12 bg-white text-slate-900 border border-black rounded-none flex items-center justify-center mb-6">
-                <Languages size={24} />
+            {/* Box 1: Idiomas (Largo) */}
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="lg:col-span-2 relative overflow-hidden rounded-none border border-black bg-white p-8 flex flex-col justify-start group hover:border-[#D4AF37] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all cursor-default"
+            >
+              <div className="mb-6 p-4 bg-slate-50 w-fit rounded-none border border-gray-200">
+                <Languages size={28} className="text-slate-900" />
               </div>
-              <h3 className="text-2xl font-bold text-black mb-3 uppercase tracking-widest">Soberanía Multilingüe</h3>
-              <p className="text-black font-medium leading-relaxed mb-6">
-                Instrucción rigurosa de Inglés, Francés y Chino Mandarín adaptada a los estándares de competencia del MCER. Interacción acústica con avatares nativos y retroalimentación de pronunciación instantánea.
-              </p>
-            </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-widest">Soberanía Multilingüe</h3>
+              <p className="text-slate-700 font-medium leading-relaxed">Instrucción rigurosa de Inglés, Francés y Chino adaptada al MCER. Interacción acústica con avatares nativos y retroalimentación de pronunciación instantánea con latencia ultra baja.</p>
+            </motion.div>
 
-            {/* Ajedrez */}
-            <div className="group bg-white p-8 rounded-none border border-black hover:border-[#D4AF37] hover:-translate-y-1 transition-all duration-300 animate-fade-in-up opacity-0 [animation-delay:200ms]">
-              <div className="w-12 h-12 bg-white text-slate-900 border border-black rounded-none flex items-center justify-center mb-6">
-                <Crown size={24} />
+            {/* Box 2: Ajedrez */}
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="relative overflow-hidden rounded-none border border-black bg-white p-8 flex flex-col justify-start group hover:border-[#D4AF37] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all cursor-default"
+            >
+              <div className="mb-6 p-4 bg-slate-50 w-fit rounded-none border border-gray-200">
+                <Crown size={28} className="text-[#D4AF37]" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-3 uppercase tracking-widest">Ajedrez Táctico</h3>
-              <p className="text-black font-medium leading-relaxed text-sm">
-                Entrenamiento y puzzles asistidos por Sistema. Analiza tus blunders y mejora tu cálculo bajo presión.
-              </p>
-            </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3 uppercase tracking-widest">Ajedrez Táctico</h3>
+              <p className="text-slate-700 text-sm font-medium leading-relaxed">Entrenamiento asistido por motor de cálculo. Analiza tus blunders y mejora tu toma de decisiones bajo presión extrema.</p>
+            </motion.div>
 
-            {/* Simulación Ejecutiva */}
-            <div className="group bg-white p-8 rounded-none border border-black hover:border-[#D4AF37] hover:-translate-y-1 transition-all duration-300 animate-fade-in-up opacity-0 [animation-delay:300ms]">
-              <div className="w-12 h-12 bg-white text-slate-900 border border-black rounded-none flex items-center justify-center mb-6">
-                <Building2 size={24} />
+            {/* Box 3: Simulación */}
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="relative overflow-hidden rounded-none border border-black bg-white p-8 flex flex-col justify-start group hover:border-[#D4AF37] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all cursor-default"
+            >
+              <div className="mb-6 p-4 bg-slate-50 w-fit rounded-none border border-gray-200">
+                <Building2 size={28} className="text-slate-900" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-3 uppercase tracking-widest">Simulación Alta Dirección</h3>
-              <p className="text-black font-medium leading-relaxed text-sm">
-                Negociaciones, reuniones de directorio y presentaciones frente a inversores controlados por sistemas corporativos.
-              </p>
-            </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3 uppercase tracking-widest">Alta Dirección</h3>
+              <p className="text-slate-700 text-sm font-medium leading-relaxed">Negociaciones de M&A y juntas de directorio simuladas para entrenar situaciones ejecutivas del mundo real.</p>
+            </motion.div>
 
           </div>
         </div>
       </section>
 
-      {/* --- SECCIÓN METODOLOGÍA (TEXTO DENSO PARA ADSENSE) --- */}
-      <section className="py-24 bg-white text-black relative z-10 border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-widest uppercase mb-8">Nuestra <span className="text-[#D4AF37]">Metodología</span> de Aprendizaje</h2>
-          <div className="space-y-6 text-gray-700 text-lg font-light leading-relaxed">
-            <p>
-              En OnixLingo, hemos desarrollado un enfoque pedagógico innovador que fusiona la lingüística computacional avanzada con la simulación de entornos corporativos reales. Nuestro sistema no se basa en la memorización aislada de vocabulario, sino en la inmersión total a través de conversaciones contextuales generadas por sistemas de evaluación adaptativa.
-            </p>
-            <p>
-              Al interactuar con nuestros tutores virtuales en inglés, francés o chino mandarín, el sistema analiza en tiempo real la pronunciación, la sintaxis y la fluidez del usuario. Esta retroalimentación instantánea permite corregir errores fosilizados y acelerar la adquisición del idioma hasta un 300% más rápido que los métodos tradicionales, preparando a los ejecutivos para negociaciones de alto riesgo.
-            </p>
-            <p>
-              Además, nuestra integración del ajedrez táctico sirve como un gimnasio cognitivo. Estudios demuestran que el pensamiento estratégico desarrollado en el tablero de ajedrez se traduce directamente en una mejor toma de decisiones bajo presión, complementando perfectamente las habilidades de comunicación intercultural que nuestros usuarios adquieren en la plataforma.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* --- SECCIÓN FAQ --- */}
-      <section className="py-24 bg-slate-50 text-black relative z-10 border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-slate-900 tracking-widest uppercase mb-12 text-center">Preguntas Frecuentes</h2>
-          <div className="space-y-8">
-            <div className="bg-white p-6 border border-gray-200 hover:border-[#D4AF37]/50 transition-colors">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">¿Cómo funciona la evaluación automatizada?</h3>
-              <p className="text-gray-700 font-light leading-relaxed">
-                Nuestra tecnología de reconocimiento de voz de nivel empresarial captura tu discurso y lo compara con una inmensa base de datos de hablantes nativos. Evalúa tu cadencia, entonación y precisión gramatical en milisegundos, proporcionándote un reporte detallado después de cada sesión de simulación ejecutiva.
-              </p>
-            </div>
-            <div className="bg-white p-6 border border-gray-200 hover:border-[#D4AF37]/50 transition-colors">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">¿Cómo mido mi progreso en el idioma?</h3>
-              <p className="text-gray-700 font-light leading-relaxed">
-                Nuestra plataforma proporciona reportes analíticos detallados y seguimiento en tiempo real de tu fluidez, vocabulario y precisión gramatical. Podrás ver tu evolución constante mediante métricas de rendimiento basadas en tus interacciones con nuestros tutores automatizados.
-              </p>
-            </div>
-            <div className="bg-white p-6 border border-gray-200 hover:border-[#D4AF37]/50 transition-colors">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">¿Por qué integrar Ajedrez en una plataforma de idiomas?</h3>
-              <p className="text-gray-700 font-light leading-relaxed">
-                Los líderes corporativos necesitan tanto fluidez verbal como agilidad mental. El entrenamiento en ajedrez táctico desarrolla habilidades críticas como el reconocimiento de patrones, la evaluación posicional y el cálculo profundo; herramientas mentales indispensables para negociar contratos internacionales en un segundo o tercer idioma.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* --- SECCIÓN 4: CTA FINAL CON PLANES MINIATURA --- */}
-      <section className="py-24 bg-slate-50 text-center px-6 relative z-10 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto space-y-12">
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight uppercase">
-              El conocimiento global <br/>en tus manos.
-            </h2>
-            <p className="text-xl text-slate-700 font-light max-w-2xl mx-auto">
-              Únete a OnixLingo y transforma la forma en la que aprendes, compites y te comunicas con el mundo. Elige el plan que mejor se adapte a tus objetivos.
-            </p>
+      {/* --- FASE 3: PRECIOS Y CTA (BLOQUES PLANOS Y SHARP) --- */}
+      <section className="py-24 bg-slate-50 relative z-10 border-t border-gray-200 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight uppercase">Invierte en tu <br className="md:hidden"/><span className="text-[#D4AF37]">Capital Intelectual</span></h2>
+            <p className="text-slate-700 max-w-2xl mx-auto font-light text-lg">Selecciona el tier que mejor se adapte a tus ambiciones corporativas.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-            {/* Free Plan */}
-            <div className="bg-white border border-gray-200 p-8 flex flex-col justify-between hover:border-black transition-colors">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Free */}
+            <div className="rounded-none border border-gray-300 bg-white p-8 flex flex-col justify-between hover:border-black transition-all shadow-none hover:shadow-xl">
               <div>
                 <h3 className="font-bold text-xl uppercase tracking-widest text-slate-900 mb-2">Free</h3>
-                <p className="text-gray-500 text-sm mb-6">Exploración inicial del ecosistema.</p>
-                <div className="text-4xl font-black text-black font-mono mb-6">$0 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">/ mes</span></div>
-                <ul className="space-y-3 mb-8 text-sm text-gray-700">
-                  <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-slate-900 shrink-0"/> <span>Lecciones estándar</span></li>
-                  <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-slate-900 shrink-0"/> <span>2 puzzles diarios</span></li>
+                <p className="text-gray-500 text-sm mb-8">Exploración inicial.</p>
+                <div className="text-5xl font-black text-black font-mono mb-8">$0 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">/ mes</span></div>
+                <ul className="space-y-4 mb-8 text-sm text-gray-700">
+                  <li className="flex items-center gap-3"><CheckCircle2 size={18} className="text-slate-900"/> <span>Lecciones estándar A1</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 size={18} className="text-slate-900"/> <span>2 puzzles diarios</span></li>
                 </ul>
               </div>
               <Link href="/register">
-                <button className="w-full bg-white border border-black text-black font-bold uppercase tracking-widest py-3 text-sm hover:bg-slate-900 hover:text-white transition-colors">
+                <button className="w-full bg-white border border-black text-black font-bold py-4 rounded-none hover:bg-slate-900 hover:text-white transition-colors text-sm uppercase tracking-widest">
                   Empezar Gratis
                 </button>
               </Link>
             </div>
 
-            {/* Pro Plan */}
-            <div className="bg-white border border-gray-200 p-8 flex flex-col justify-between hover:border-black transition-colors relative">
+            {/* Pro */}
+            <div className="rounded-none border-2 border-black bg-white p-8 flex flex-col justify-between relative shadow-[8px_8px_0px_0px_rgba(212,175,55,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_rgba(212,175,55,1)] transition-all">
+              <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-[#D4AF37] text-black text-[10px] font-bold px-4 py-1 rounded-none uppercase tracking-widest border border-black">
+                Recomendado
+              </div>
               <div>
                 <h3 className="font-bold text-xl uppercase tracking-widest text-slate-900 mb-2">Pro</h3>
-                <p className="text-gray-500 text-sm mb-6">Para profesionales independientes.</p>
-                <div className="text-4xl font-black text-black font-mono mb-6">$129 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">/ mes</span></div>
-                <ul className="space-y-3 mb-8 text-sm text-gray-700">
-                  <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#D4AF37] shrink-0"/> <span>Acceso ilimitado A1-C2</span></li>
-                  <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#D4AF37] shrink-0"/> <span>Ajedrez ilimitado</span></li>
+                <p className="text-gray-500 text-sm mb-8">Profesionales independientes.</p>
+                <div className="text-5xl font-black text-black font-mono mb-8">${prices.pro} <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">/ mes</span></div>
+                <ul className="space-y-4 mb-8 text-sm text-gray-800 font-medium">
+                  <li className="flex items-center gap-3"><CheckCircle2 size={18} className="text-[#D4AF37]"/> <span>Acceso ilimitado A1-C2</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 size={18} className="text-[#D4AF37]"/> <span>Ajedrez táctico ilimitado</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 size={18} className="text-[#D4AF37]"/> <span>Certificaciones Oficiales</span></li>
                 </ul>
               </div>
               <Link href="/planes">
-                <button className="w-full bg-slate-900 text-white font-bold uppercase tracking-widest py-3 text-sm hover:bg-black transition-colors">
+                <button className="w-full bg-[#D4AF37] text-black font-bold py-4 rounded-none border border-black hover:bg-[#b5952f] transition-colors text-sm uppercase tracking-widest">
                   Ver Detalles Pro
                 </button>
               </Link>
             </div>
 
-            {/* Executive Plan */}
-            <div className="bg-white border-2 border-[#D4AF37] p-8 flex flex-col justify-between relative shadow-lg shadow-[#D4AF37]/10">
-              <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-[#D4AF37] text-black font-bold uppercase tracking-widest text-[10px] px-3 py-1">
-                Recomendado
-              </div>
+            {/* Executive */}
+            <div className="rounded-none border border-gray-300 bg-white p-8 flex flex-col justify-between hover:border-black transition-all shadow-none hover:shadow-xl">
               <div>
                 <h3 className="font-bold text-xl uppercase tracking-widest text-slate-900 mb-2">Executive</h3>
-                <p className="text-gray-500 text-sm mb-6">Membresía Alta Dirección definitiva.</p>
-                <div className="text-4xl font-black text-black font-mono mb-6">$249 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">/ mes</span></div>
-                <ul className="space-y-3 mb-8 text-sm text-gray-700">
-                  <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#D4AF37] shrink-0"/> <span>Simulador Corporativo</span></li>
-                  <li className="flex items-start gap-2"><CheckCircle2 size={18} className="text-[#D4AF37] shrink-0"/> <span>Speech Analytics Avanzado</span></li>
+                <p className="text-gray-500 text-sm mb-8">Membresía Alta Dirección.</p>
+                <div className="text-5xl font-black text-black font-mono mb-8">${prices.exec} <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">/ mes</span></div>
+                <ul className="space-y-4 mb-8 text-sm text-gray-700">
+                  <li className="flex items-center gap-3"><CheckCircle2 size={18} className="text-slate-900"/> <span>Simulador Corporativo IA</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 size={18} className="text-slate-900"/> <span>Speech Analytics Avanzado</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 size={18} className="text-slate-900"/> <span>Soporte Prioritario</span></li>
                 </ul>
               </div>
               <Link href="/planes">
-                <button className="w-full bg-[#D4AF37] text-black font-bold uppercase tracking-widest py-3 text-sm hover:bg-[#b5952f] transition-colors">
-                  Adquirir Executive
+                <button className="w-full bg-slate-900 text-white font-bold py-4 rounded-none hover:bg-black transition-colors text-sm uppercase tracking-widest flex items-center justify-center gap-2">
+                  Adquirir Executive <ChevronRight size={16} />
                 </button>
               </Link>
             </div>
@@ -270,8 +227,9 @@ export default function Home() {
       </section>
 
       {/* --- FOOTER --- */}
-      <LandingFooter />
-
+      <div className="border-t border-black/10">
+        <LandingFooter />
+      </div>
     </div>
   );
 }

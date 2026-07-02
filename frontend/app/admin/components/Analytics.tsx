@@ -82,21 +82,21 @@ export default function Analytics() {
     <div className="w-full max-w-[1800px] mx-auto space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
       
       {/* HEADER SCI-FI STYLING */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-indigo-500/30 shadow-lg relative overflow-hidden group">
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-[#1d4ed8]  relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-indigo-400/20 transition-all duration-700"></div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none opacity-10"></div>
         
         <div className="relative z-10 flex items-center gap-5">
-          <div className="w-14 h-14 bg-indigo-500/20 border border-indigo-400/50 flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.4)]">
+          <div className="w-14 h-14 bg-indigo-500/20 border border-[#1d4ed8]/50 flex items-center justify-center ">
             <BarChart3 size={28} className="text-cyan-400" />
           </div>
           <div>
-            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-shadow-sm">Analíticas y Reportes</h2>
+            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-">Analíticas y Reportes</h2>
             <div className="flex items-center gap-3 mt-1.5">
-              <span className="flex items-center gap-1.5 text-[10px] font-black font-mono px-2 py-0.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/50 uppercase tracking-widest">
+              <span className="flex items-center gap-1.5 text-[10px] font-black font-mono px-2 py-0.5 bg-emerald-500/20 text-emerald-400 border border-[#1d4ed8]/50 uppercase tracking-widest">
                 <ShieldCheck size={10} /> Sistema Online
               </span>
-              <span className="flex items-center gap-1.5 text-[10px] font-black font-mono px-2 py-0.5 bg-indigo-500/20 text-indigo-300 border border-indigo-500/50 uppercase tracking-widest">
+              <span className="flex items-center gap-1.5 text-[10px] font-black font-mono px-2 py-0.5 bg-indigo-500/20 text-indigo-300 border border-[#1d4ed8]/50 uppercase tracking-widest">
                 <TrendingUp size={10} /> Data en Tiempo Real
               </span>
             </div>
@@ -109,7 +109,7 @@ export default function Analytics() {
         {/* PANEL IZQUIERDO: Growth Chart */}
         <div className="xl:col-span-2 space-y-6">
           
-          <div className="bg-white border border-slate-200 shadow-sm relative overflow-hidden flex flex-col h-full">
+          <div className="bg-white border border-[#1d4ed8]  relative overflow-hidden flex flex-col h-full">
             <div className="p-6 border-b border-slate-100 flex items-center justify-between">
               <div>
                 <h3 className="text-sm font-black uppercase tracking-widest text-slate-900 flex items-center gap-2">
@@ -133,7 +133,7 @@ export default function Analytics() {
                     </div>
                     <div className="w-full max-w-[40px] bg-slate-100 rounded-t-sm relative flex flex-col justify-end h-full">
                       <div 
-                        className="w-full bg-gradient-to-t from-indigo-600 to-cyan-400 rounded-t-sm transition-all duration-1000 ease-out group-hover:from-indigo-500 group-hover:to-cyan-300 shadow-[0_0_15px_rgba(79,70,229,0.2)]"
+                        className="w-full bg-gradient-to-t from-indigo-600 to-cyan-400 rounded-t-sm transition-all duration-1000 ease-out group-hover:from-indigo-500 group-hover:to-cyan-300 "
                         style={{ height: `${heightPct}%` }}
                       ></div>
                     </div>
@@ -152,7 +152,7 @@ export default function Analytics() {
         <div className="xl:col-span-1 space-y-6">
           
           {/* Idiomas */}
-          <div className="bg-white border border-slate-200 shadow-sm">
+          <div className="bg-white border border-[#1d4ed8] ">
             <div className="p-6 border-b border-slate-100">
               <h3 className="text-sm font-black uppercase tracking-widest text-slate-900 flex items-center gap-2">
                 <Languages size={16} className="text-indigo-500" /> Distribución de Idiomas
@@ -196,14 +196,14 @@ export default function Analytics() {
 
           {/* Engagement */}
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-slate-900 text-white p-5 border border-slate-800 shadow-sm relative overflow-hidden group">
+            <div className="bg-slate-900 text-white p-5 border border-[#1d4ed8]  relative overflow-hidden group">
               <Zap size={24} className="text-yellow-400 mb-3 opacity-80 group-hover:scale-110 transition-transform" />
               <div className="text-2xl font-black font-mono mb-1">{data.engagement.avg_eloquence}</div>
               <p className="text-[9px] font-black uppercase tracking-widest text-slate-400">Elocuencia Promedio</p>
               <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-yellow-400/5 blur-xl rounded-full"></div>
             </div>
             
-            <div className="bg-slate-900 text-white p-5 border border-slate-800 shadow-sm relative overflow-hidden group">
+            <div className="bg-slate-900 text-white p-5 border border-[#1d4ed8]  relative overflow-hidden group">
               <Target size={24} className="text-emerald-400 mb-3 opacity-80 group-hover:scale-110 transition-transform" />
               <div className="text-2xl font-black font-mono mb-1">{data.engagement.avg_streak}</div>
               <p className="text-[9px] font-black uppercase tracking-widest text-slate-400">Días de Racha Promedio</p>
@@ -212,7 +212,7 @@ export default function Analytics() {
           </div>
 
           {/* Resumen de Tiers */}
-          <div className="bg-indigo-50 border border-indigo-100 p-5 shadow-sm">
+          <div className="bg-indigo-50 border border-indigo-100 p-5 ">
             <h3 className="text-[10px] font-black uppercase tracking-widest text-indigo-800 mb-4 flex items-center gap-2">
               <Clock size={14} /> Penetración de Suscripción
             </h3>

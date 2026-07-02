@@ -1,12 +1,10 @@
 'use client';
-import LandingFooter from '@/components/LandingFooter';
-
 import React, { useState, useEffect } from 'react';
 import LandingNavbar from '@/components/LandingNavbar';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Cookies from 'js-cookie';
-import { User, Lock, Loader2, AlertCircle, ArrowRight, Eye, EyeOff, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { User, Lock, Loader2, AlertCircle, ArrowRight, Eye, EyeOff } from 'lucide-react';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 
 import apiClient from '@/lib/apiClient';

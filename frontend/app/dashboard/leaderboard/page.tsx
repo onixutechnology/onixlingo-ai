@@ -442,7 +442,7 @@ export default function LeaderboardPage() {
                         </div>
                       </div>
                       <h3 className="text-lg font-black text-slate-900 uppercase tracking-tighter mb-1 truncate w-full">
-                        {player.is_pro ? 'Executive' : 'Student'} {player.username}
+                        {player.is_pro ? 'Executive' : 'Student'} {player.username ? player.username.substring(0, 2).toUpperCase() : '??'}
                       </h3>
                       <div className="flex items-center gap-2 mb-4">
                         <div className="flex items-center gap-1 text-orange-500 bg-orange-50 px-2 py-0.5 text-[8px] font-black uppercase">
@@ -492,7 +492,7 @@ export default function LeaderboardPage() {
                           <div>
                             <div className="flex items-center gap-2">
                               <span className="font-black text-xs text-slate-900 uppercase tracking-tight">
-                                {player.is_pro ? 'Executive' : 'Student'} {player.username}
+                                {player.is_pro ? 'Executive' : 'Student'} {player.username ? player.username.substring(0, 2).toUpperCase() : '??'}
                               </span>
                               {player.is_pro && <ShieldCheck size={12} className="text-[#D4AF37]" />}
                             </div>
@@ -523,20 +523,20 @@ export default function LeaderboardPage() {
         {/* PROMO TITANIUM */}
         <div className="bg-slate-50 p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800 mt-12">
           <div className="flex items-center gap-5">
-            <div className="p-4 bg-[#D4AF37]/20/10 text-teal-400 border border-teal-500/20">
+            <div className="p-4 bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/20">
               <Crown size={28} />
             </div>
             <div>
-              <h4 className="text-slate-900 text-sm font-black uppercase tracking-widest mb-1">Escala al Nivel Titanium</h4>
+              <h4 className="text-slate-900 text-sm font-black uppercase tracking-widest mb-1">Mejorar Plan</h4>
               <p className="text-slate-500 text-[10px] font-bold uppercase tracking-tight max-w-sm">
-                Los perfiles Titanium ganan 2x puntos de elocuencia y desbloquean trofeos Executive Pro exclusivos.
+                Desbloquea beneficios premium, acceso a IA ejecutiva y simuladores de negocios avanzados.
               </p>
             </div>
           </div>
-          <button onClick={() => router.push('/dashboard/pro')}
-            className="w-full md:w-auto px-10 py-4 bg-[#D4AF37]/20 hover:bg-[#D4AF37]/20 text-slate-900 text-[10px] font-black uppercase tracking-[0.3em] transition-all active:scale-95 shadow-none shadow-teal-900/20"
+          <button onClick={() => router.push('/dashboard/pricing')}
+            className="w-full md:w-auto px-10 py-4 bg-[#D4AF37]/20 hover:bg-[#D4AF37]/30 text-slate-900 text-[10px] font-black uppercase tracking-[0.3em] transition-all active:scale-95 shadow-none shadow-teal-900/20"
           >
-            Upgrade Account
+            Mejorar Plan
           </button>
         </div>
       </main>

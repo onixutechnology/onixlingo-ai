@@ -1454,7 +1454,11 @@ async def get_global_settings(
     defaults = {
         "maintenance_mode": "false",
         "allow_registration": "true",
-        "allow_gifts": "true"
+        "allow_gifts": "true",
+        "display_price_pro_monthly": "129",
+        "display_price_pro_yearly": "799",
+        "display_price_exec_monthly": "249",
+        "display_price_exec_yearly": "1499",
     }
     
     current_settings = {s.key: s.value for s in settings}

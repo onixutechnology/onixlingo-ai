@@ -108,7 +108,7 @@ export default function UserManagementModal({
 
   return createPortal(
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="bg-white w-full max-w-md shadow-2xl animate-in zoom-in-95 duration-200 overflow-hidden">
+      <div className="bg-white w-full max-w-md  animate-in zoom-in-95 duration-200 overflow-hidden">
         {/* Header */}
         <div className="flex justify-between items-center px-6 py-5 border-b border-slate-100 bg-slate-900">
           <div className="flex items-center gap-3">
@@ -138,7 +138,7 @@ export default function UserManagementModal({
                 activeSection === s.id
                   ? s.id === 'danger'
                     ? 'border-b-2 border-red-500 text-red-600 bg-red-50'
-                    : 'border-b-2 border-indigo-500 text-indigo-700 bg-indigo-50'
+                    : 'border-b-2 border-[#1d4ed8] text-indigo-700 bg-indigo-50'
                   : 'text-slate-400 hover:text-slate-700 hover:bg-slate-50'
               }`}
             >
@@ -195,8 +195,8 @@ export default function UserManagementModal({
                   disabled={loading}
                   className={`flex-1 py-3 text-sm font-black font-mono uppercase border transition-all rounded-none disabled:opacity-50 flex items-center justify-center gap-2 ${
                     managingUser.role === 'user'
-                      ? 'bg-slate-900 text-white border-slate-900'
-                      : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
+                      ? 'bg-slate-900 text-white border-[#1d4ed8]'
+                      : 'bg-white border-[#1d4ed8] text-slate-700 hover:bg-slate-50'
                   }`}
                 >
                   <User size={14} /> Estudiante
@@ -207,14 +207,14 @@ export default function UserManagementModal({
                   className={`flex-1 py-3 text-sm font-black font-mono uppercase border transition-all rounded-none disabled:opacity-50 flex items-center justify-center gap-2 ${
                     managingUser.role === 'admin'
                       ? 'bg-red-500 text-white border-red-500'
-                      : 'bg-white border-slate-200 text-slate-700 hover:bg-red-50 hover:text-red-600 hover:border-red-200'
+                      : 'bg-white border-[#1d4ed8] text-slate-700 hover:bg-red-50 hover:text-red-600 hover:border-red-200'
                   }`}
                 >
                   <ShieldAlert size={14} /> Admin
                 </button>
               </div>
               <div
-                className="p-3 bg-amber-50 border border-amber-200 text-amber-700 text-xs leading-relaxed"
+                className="p-3 bg-amber-50 border border-[#1d4ed8] text-amber-700 text-xs leading-relaxed"
               >
                 ⚠️ Otorgar rol <strong>Admin</strong> le da acceso completo a este panel de control. Solo asigna esta función a personas de confianza del equipo.
               </div>
@@ -230,14 +230,14 @@ export default function UserManagementModal({
               <button
                 onClick={handleResetPassword}
                 disabled={loading}
-                className="w-full py-3 bg-white border border-slate-200 hover:bg-blue-50 hover:border-blue-200 text-slate-700 hover:text-blue-700 text-sm font-black font-mono uppercase flex items-center justify-center gap-2 transition-all disabled:opacity-50"
+                className="w-full py-3 bg-white border border-[#1d4ed8] hover:bg-blue-50 hover:border-[#1d4ed8] text-slate-700 hover:text-blue-700 text-sm font-black font-mono uppercase flex items-center justify-center gap-2 transition-all disabled:opacity-50"
               >
                 <KeyRound size={15} /> Forzar Nueva Contraseña
               </button>
               <button
                 onClick={handleBan}
                 disabled={loading}
-                className="w-full py-3 bg-white border border-amber-200 hover:bg-amber-50 text-amber-700 text-sm font-black font-mono uppercase flex items-center justify-center gap-2 transition-all disabled:opacity-50"
+                className="w-full py-3 bg-white border border-[#1d4ed8] hover:bg-amber-50 text-amber-700 text-sm font-black font-mono uppercase flex items-center justify-center gap-2 transition-all disabled:opacity-50"
               >
                 <Ban size={15} /> Suspender / Reactivar Cuenta
               </button>
@@ -264,7 +264,7 @@ export default function UserManagementModal({
             <div
               className={`px-3 py-2.5 text-xs font-mono flex items-center gap-2 ${
                 feedback.type === 'success'
-                  ? 'bg-emerald-50 border border-emerald-200 text-emerald-700'
+                  ? 'bg-emerald-50 border border-[#1d4ed8] text-emerald-700'
                   : 'bg-red-50 border border-red-200 text-red-700'
               }`}
             >

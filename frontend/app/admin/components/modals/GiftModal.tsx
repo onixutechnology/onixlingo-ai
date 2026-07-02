@@ -122,7 +122,7 @@ export default function GiftModal({ user, mounted, onClose, onSuccess }: GiftMod
 
   return createPortal(
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="w-full max-w-lg bg-white shadow-2xl animate-in zoom-in-95 duration-200 overflow-hidden border border-slate-200">
+      <div className="w-full max-w-lg bg-white  animate-in zoom-in-95 duration-200 overflow-hidden border border-[#1d4ed8]">
 
         {/* Header — borde de color del tier activo */}
         <div
@@ -241,7 +241,7 @@ export default function GiftModal({ user, mounted, onClose, onSuccess }: GiftMod
                 maxLength={280}
                 rows={3}
                 placeholder="Escribe un mensaje especial... (aparecerá en el correo)"
-                className="w-full text-sm resize-none outline-none text-slate-700 placeholder:text-slate-300 p-3 border border-slate-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all bg-slate-50"
+                className="w-full text-sm resize-none outline-none text-slate-700 placeholder:text-slate-300 p-3 border border-[#1d4ed8] focus:border-[#1d4ed8] focus:ring-2 focus:ring-blue-100 transition-all bg-slate-50"
               />
               <div className="flex justify-between mt-1">
                 <span className="text-[10px] text-slate-400 flex items-center gap-1">
@@ -252,7 +252,7 @@ export default function GiftModal({ user, mounted, onClose, onSuccess }: GiftMod
             </div>
 
             {/* ── 4. Toggle email ── */}
-            <div className="flex items-center justify-between px-4 py-3 bg-slate-50 border border-slate-200">
+            <div className="flex items-center justify-between px-4 py-3 bg-slate-50 border border-[#1d4ed8]">
               <div className="flex items-center gap-2.5">
                 <Mail size={14} style={{ color: notifyEmail ? activeTier.color : '#94a3b8' }} />
                 <div>

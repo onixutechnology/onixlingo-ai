@@ -99,16 +99,16 @@ export default function ContentManager() {
     <div className="w-full max-w-[1800px] mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
       
       {/* HEADER */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-indigo-500/30 shadow-lg relative overflow-hidden group">
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-[#1d4ed8]  relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-indigo-400/20 transition-all duration-700"></div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none opacity-10"></div>
         
         <div className="relative z-10 flex items-center gap-5">
-          <div className="w-14 h-14 bg-indigo-500/20 border border-indigo-400/50 flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.4)]">
+          <div className="w-14 h-14 bg-indigo-500/20 border border-[#1d4ed8]/50 flex items-center justify-center ">
             <Database size={28} className="text-indigo-300" />
           </div>
           <div>
-            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-shadow-sm">Gestor de Contenido</h2>
+            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-">Gestor de Contenido</h2>
             <p className="text-xs text-indigo-200/70 mt-1 font-mono uppercase tracking-widest">Base de Datos de Lecciones y Blog</p>
           </div>
         </div>
@@ -116,28 +116,28 @@ export default function ContentManager() {
 
       {/* STATS OVERVIEW */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div className="bg-white border border-slate-200 p-6 shadow-sm">
+        <div className="bg-white border border-[#1d4ed8] p-6 ">
           <div className="flex items-center gap-3 text-slate-500 mb-2">
             <BookOpen size={16} />
             <h4 className="text-[10px] uppercase font-black tracking-widest">Lecciones de Inglés</h4>
           </div>
           <p className="text-3xl font-black text-slate-800">{stats.language_lessons?.en || 0}</p>
         </div>
-        <div className="bg-white border border-slate-200 p-6 shadow-sm">
+        <div className="bg-white border border-[#1d4ed8] p-6 ">
           <div className="flex items-center gap-3 text-slate-500 mb-2">
             <BookOpen size={16} />
             <h4 className="text-[10px] uppercase font-black tracking-widest">Lecciones de Francés</h4>
           </div>
           <p className="text-3xl font-black text-slate-800">{stats.language_lessons?.fr || 0}</p>
         </div>
-        <div className="bg-white border border-slate-200 p-6 shadow-sm">
+        <div className="bg-white border border-[#1d4ed8] p-6 ">
           <div className="flex items-center gap-3 text-slate-500 mb-2">
             <BookOpen size={16} />
             <h4 className="text-[10px] uppercase font-black tracking-widest">Lecciones de Chino</h4>
           </div>
           <p className="text-3xl font-black text-slate-800">{stats.language_lessons?.zh || 0}</p>
         </div>
-        <div className="bg-indigo-50 border border-indigo-200 p-6 shadow-sm">
+        <div className="bg-indigo-50 border border-[#1d4ed8] p-6 ">
           <div className="flex items-center gap-3 text-indigo-600 mb-2">
             <Crown size={16} />
             <h4 className="text-[10px] uppercase font-black tracking-widest">Lecciones Ajedrez (Pro)</h4>
@@ -149,14 +149,14 @@ export default function ContentManager() {
       {/* LESSON EDITOR SECTION */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
         {/* Sidebar - File Explorer */}
-        <div className="col-span-1 bg-slate-900 border border-slate-700 shadow-xl overflow-hidden rounded-sm flex flex-col h-[600px]">
-          <div className="p-4 border-b border-slate-700 bg-slate-950">
+        <div className="col-span-1 bg-slate-900 border border-[#1d4ed8]  overflow-hidden rounded-sm flex flex-col h-[600px]">
+          <div className="p-4 border-b border-[#1d4ed8] bg-slate-950">
             <h3 className="text-xs font-black uppercase tracking-widest text-indigo-400">Archivos JSON</h3>
           </div>
           <div className="flex-1 overflow-y-auto p-2">
             {lessonsList && Object.entries(lessonsList).map(([lang, files]: [string, any]) => (
               <div key={lang} className="mb-4">
-                <div className="px-3 py-1 text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1 border-b border-slate-800">
+                <div className="px-3 py-1 text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1 border-b border-[#1d4ed8]">
                   {lang === 'en' ? 'Inglés' : lang === 'fr' ? 'Francés' : 'Chino'}
                 </div>
                 {files.map((file: string) => (
@@ -165,7 +165,7 @@ export default function ContentManager() {
                     onClick={() => loadLesson(lang, file)}
                     className={`w-full text-left px-3 py-2 text-xs font-mono truncate transition-colors ${
                       selectedLesson?.lang === lang && selectedLesson?.id === file
-                        ? 'bg-indigo-500/20 text-indigo-300 border-l-2 border-indigo-500'
+                        ? 'bg-indigo-500/20 text-indigo-300 border-l-2 border-[#1d4ed8]'
                         : 'text-slate-400 hover:bg-slate-800 hover:text-slate-200 border-l-2 border-transparent'
                     }`}
                   >
@@ -178,10 +178,10 @@ export default function ContentManager() {
         </div>
 
         {/* Editor Area */}
-        <div className="col-span-1 md:col-span-3 bg-[#1e1e1e] border border-slate-700 shadow-xl rounded-sm flex flex-col h-[600px] relative">
+        <div className="col-span-1 md:col-span-3 bg-[#1e1e1e] border border-[#1d4ed8]  rounded-sm flex flex-col h-[600px] relative">
           {selectedLesson ? (
             <>
-              <div className="p-4 border-b border-slate-700 bg-[#252526] flex justify-between items-center">
+              <div className="p-4 border-b border-[#1d4ed8] bg-[#252526] flex justify-between items-center">
                 <div className="flex items-center gap-3">
                   <span className="text-xs font-mono text-slate-400">
                     app/data/lessons/{selectedLesson.lang}/{selectedLesson.id}
@@ -197,7 +197,7 @@ export default function ContentManager() {
                 <button 
                   onClick={saveLesson}
                   disabled={isSaving}
-                  className="flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-black uppercase tracking-widest transition-colors shadow-sm disabled:opacity-50"
+                  className="flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-black uppercase tracking-widest transition-colors  disabled:opacity-50"
                 >
                   {isSaving ? <Loader2 size={14} className="animate-spin" /> : <CheckCircle2 size={14} />}
                   Guardar en Producción
@@ -220,7 +220,7 @@ export default function ContentManager() {
       </div>
 
       {/* BLOG SECTION */}
-      <div className="bg-white border border-slate-200 shadow-sm mt-8">
+      <div className="bg-white border border-[#1d4ed8]  mt-8">
         <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50">
           <div className="flex items-center gap-2 text-slate-800">
             <FileText size={20} className="text-indigo-500" />
@@ -240,7 +240,7 @@ export default function ContentManager() {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-white border-b border-slate-200 text-[10px] uppercase tracking-widest text-slate-500">
+                <tr className="bg-white border-b border-[#1d4ed8] text-[10px] uppercase tracking-widest text-slate-500">
                   <th className="p-4 font-black">Título</th>
                   <th className="p-4 font-black">Slug</th>
                   <th className="p-4 font-black">Estado</th>
@@ -254,7 +254,7 @@ export default function ContentManager() {
                     <td className="p-4 text-xs font-mono text-slate-500">{post.slug}</td>
                     <td className="p-4">
                       <span className={`inline-flex items-center px-2 py-1 rounded text-[10px] font-black uppercase tracking-wide border ${
-                        post.status === 'published' ? 'bg-emerald-100 text-emerald-800 border-emerald-200' : 'bg-amber-100 text-amber-800 border-amber-200'
+                        post.status === 'published' ? 'bg-emerald-100 text-emerald-800 border-[#1d4ed8]' : 'bg-amber-100 text-amber-800 border-[#1d4ed8]'
                       }`}>
                         {post.status}
                       </span>

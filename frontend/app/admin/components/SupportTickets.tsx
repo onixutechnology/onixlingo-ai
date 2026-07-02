@@ -58,16 +58,16 @@ export default function SupportTickets() {
     <div className="w-full max-w-[1800px] mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
       
       {/* HEADER */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-indigo-500/30 shadow-lg relative overflow-hidden group">
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-[#1d4ed8]  relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-indigo-400/20 transition-all duration-700"></div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none opacity-10"></div>
         
         <div className="relative z-10 flex items-center gap-5">
-          <div className="w-14 h-14 bg-indigo-500/20 border border-indigo-400/50 flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.4)]">
+          <div className="w-14 h-14 bg-indigo-500/20 border border-[#1d4ed8]/50 flex items-center justify-center ">
             <LifeBuoy size={28} className="text-indigo-300" />
           </div>
           <div>
-            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-shadow-sm">Tickets de Soporte</h2>
+            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-">Tickets de Soporte</h2>
             <p className="text-xs text-indigo-200/70 mt-1 font-mono uppercase tracking-widest">Atención al Alumno</p>
           </div>
         </div>
@@ -75,13 +75,13 @@ export default function SupportTickets() {
 
       <div className="grid grid-cols-1 gap-6">
         {tickets.length === 0 ? (
-          <div className="p-12 text-center bg-white border border-slate-200 shadow-sm">
+          <div className="p-12 text-center bg-white border border-[#1d4ed8] ">
             <MessageSquare size={48} className="mx-auto text-slate-300 mb-4" />
             <p className="text-slate-500 font-medium">No hay tickets de soporte pendientes.</p>
           </div>
         ) : (
           tickets.map((t) => (
-            <div key={t.id} className="bg-white border border-slate-200 shadow-sm flex flex-col md:flex-row">
+            <div key={t.id} className="bg-white border border-[#1d4ed8]  flex flex-col md:flex-row">
               <div className={`w-2 md:w-3 shrink-0 ${t.priority === 'high' ? 'bg-red-500' : 'bg-indigo-500'}`}></div>
               <div className="p-6 flex-1 flex flex-col lg:flex-row gap-6">
                 
@@ -89,9 +89,9 @@ export default function SupportTickets() {
                 <div className="flex-1 space-y-3">
                   <div className="flex items-center gap-3">
                     <span className={`px-2 py-1 text-[10px] font-black uppercase tracking-wider rounded border ${
-                      t.status === 'open' ? 'bg-amber-100 text-amber-800 border-amber-200' :
-                      t.status === 'resolved' ? 'bg-emerald-100 text-emerald-800 border-emerald-200' :
-                      'bg-slate-100 text-slate-500 border-slate-200'
+                      t.status === 'open' ? 'bg-amber-100 text-amber-800 border-[#1d4ed8]' :
+                      t.status === 'resolved' ? 'bg-emerald-100 text-emerald-800 border-[#1d4ed8]' :
+                      'bg-slate-100 text-slate-500 border-[#1d4ed8]'
                     }`}>
                       {t.status === 'open' ? 'Abierto' : t.status === 'resolved' ? 'Resuelto' : 'Cerrado'}
                     </span>
@@ -115,7 +115,7 @@ export default function SupportTickets() {
                   {t.status !== 'resolved' && (
                     <button 
                       onClick={() => updateStatus(t.id, 'resolved')}
-                      className="w-full flex items-center justify-center gap-2 py-2.5 bg-emerald-500 text-white text-xs font-black uppercase tracking-wider hover:bg-emerald-600 transition-colors shadow-sm"
+                      className="w-full flex items-center justify-center gap-2 py-2.5 bg-emerald-500 text-white text-xs font-black uppercase tracking-wider hover:bg-emerald-600 transition-colors "
                     >
                       <CheckCircle2 size={16} /> Resolver
                     </button>

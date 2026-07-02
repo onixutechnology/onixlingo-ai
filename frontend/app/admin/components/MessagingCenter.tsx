@@ -108,16 +108,16 @@ export default function MessagingCenter() {
     <div className="w-full max-w-[1800px] mx-auto space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
       
       {/* HEADER SCI-FI STYLING */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-indigo-500/30 shadow-lg relative overflow-hidden group">
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-[#1d4ed8]  relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-indigo-400/20 transition-all duration-700"></div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none opacity-10"></div>
         
         <div className="relative z-10 flex items-center gap-5">
-          <div className="w-14 h-14 bg-indigo-500/20 border border-indigo-400/50 flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.4)]">
+          <div className="w-14 h-14 bg-indigo-500/20 border border-[#1d4ed8]/50 flex items-center justify-center ">
             <BellRing size={28} className="text-indigo-300" />
           </div>
           <div>
-            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-shadow-sm">Centro de Mensajería</h2>
+            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-">Centro de Mensajería</h2>
             <p className="text-xs text-indigo-200/70 mt-1 font-mono uppercase tracking-widest">Motor de Notificaciones Push & Email</p>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function MessagingCenter() {
         <div className="relative z-10">
           <button 
             onClick={() => setActiveTab('create')}
-            className="flex items-center gap-3 px-6 py-3 bg-white text-slate-900 rounded-none text-xs font-black font-mono uppercase tracking-widest transition-all shadow-[4px_4px_0_0_rgba(79,70,229,0.5)] hover:shadow-[2px_2px_0_0_rgba(79,70,229,0.5)] hover:translate-y-0.5 hover:translate-x-0.5 active:scale-95"
+            className="flex items-center gap-3 px-6 py-3 bg-white text-slate-900 rounded-none text-xs font-black font-mono uppercase tracking-widest transition-all   hover:translate-y-0.5 hover:translate-x-0.5 active:scale-95"
           >
             <Plus size={16} className="text-indigo-600" />
             Nueva Campaña
@@ -135,7 +135,7 @@ export default function MessagingCenter() {
 
       {/* KPIS */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white border border-slate-200 p-6 flex items-center gap-5">
+        <div className="bg-white border border-[#1d4ed8] p-6 flex items-center gap-5">
           <div className="p-4 bg-emerald-50 text-emerald-600 rounded-full">
             <BarChart2 size={24} />
           </div>
@@ -146,7 +146,7 @@ export default function MessagingCenter() {
             </h3>
           </div>
         </div>
-        <div className="bg-white border border-slate-200 p-6 flex items-center gap-5">
+        <div className="bg-white border border-[#1d4ed8] p-6 flex items-center gap-5">
           <div className="p-4 bg-indigo-50 text-indigo-600 rounded-full">
             <UserCheck size={24} />
           </div>
@@ -157,7 +157,7 @@ export default function MessagingCenter() {
             </h3>
           </div>
         </div>
-        <div className="bg-white border border-slate-200 p-6 flex items-center gap-5">
+        <div className="bg-white border border-[#1d4ed8] p-6 flex items-center gap-5">
           <div className="p-4 bg-amber-50 text-amber-600 rounded-full">
             <Clock size={24} />
           </div>
@@ -171,7 +171,7 @@ export default function MessagingCenter() {
       </div>
 
       {/* MAIN CONTENT AREA */}
-      <div className="bg-white border border-slate-200 shadow-sm mt-6 min-h-[400px]">
+      <div className="bg-white border border-[#1d4ed8]  mt-6 min-h-[400px]">
         {/* TABS */}
         <div className="flex border-b border-slate-100 bg-slate-50/50">
           <button 
@@ -242,7 +242,7 @@ export default function MessagingCenter() {
                         <td className="px-6 py-4 text-right">
                           <button 
                             onClick={() => handleDeleteCampaign(mail.id)}
-                            className="text-[10px] font-black uppercase text-rose-500 hover:bg-rose-50 px-3 py-1.5 transition-colors border border-transparent hover:border-rose-200 mr-2"
+                            className="text-[10px] font-black uppercase text-rose-500 hover:bg-rose-50 px-3 py-1.5 transition-colors border border-transparent hover:border-[#1d4ed8] mr-2"
                           >
                             Cancelar
                           </button>
@@ -275,7 +275,7 @@ export default function MessagingCenter() {
               </div>
               <div className="relative">
                 <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
-                <input type="text" placeholder="Buscar campaña..." className="pl-9 pr-4 py-2 text-xs border border-slate-200 bg-slate-50 focus:outline-none focus:border-indigo-500 font-medium w-64" />
+                <input type="text" placeholder="Buscar campaña..." className="pl-9 pr-4 py-2 text-xs border border-[#1d4ed8] bg-slate-50 focus:outline-none focus:border-[#1d4ed8] font-medium w-64" />
               </div>
             </div>
             
@@ -314,7 +314,7 @@ export default function MessagingCenter() {
                           <span className="text-xs font-black font-mono text-emerald-600">{mail.status}</span>
                         </td>
                         <td className="px-6 py-4 text-right">
-                          <button className="text-[10px] font-black uppercase text-indigo-600 hover:bg-indigo-50 px-3 py-1.5 transition-colors border border-transparent hover:border-indigo-200 inline-flex items-center gap-1">
+                          <button className="text-[10px] font-black uppercase text-indigo-600 hover:bg-indigo-50 px-3 py-1.5 transition-colors border border-transparent hover:border-[#1d4ed8] inline-flex items-center gap-1">
                             Ver Stats <ArrowUpRight size={12} />
                           </button>
                         </td>
@@ -352,7 +352,7 @@ export default function MessagingCenter() {
                       value={title}
                       onChange={(e) => setTitle(e.target.value)}
                       placeholder="Ej: Promo Verano 2026" 
-                      className="w-full p-3 border border-slate-200 text-sm font-medium focus:outline-none focus:border-indigo-500" 
+                      className="w-full p-3 border border-[#1d4ed8] text-sm font-medium focus:outline-none focus:border-[#1d4ed8]" 
                     />
                   </div>
                   <div className="space-y-2">
@@ -360,7 +360,7 @@ export default function MessagingCenter() {
                     <select 
                       value={targetAudience}
                       onChange={(e) => setTargetAudience(e.target.value)}
-                      className="w-full p-3 border border-slate-200 text-sm font-medium focus:outline-none focus:border-indigo-500 bg-white"
+                      className="w-full p-3 border border-[#1d4ed8] text-sm font-medium focus:outline-none focus:border-[#1d4ed8] bg-white"
                     >
                       <option>Todos los usuarios</option>
                       <option>Usuarios PRO</option>
@@ -377,11 +377,11 @@ export default function MessagingCenter() {
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
                     placeholder="Escribe tu mensaje aquí..." 
-                    className="w-full p-3 border border-slate-200 text-sm focus:outline-none focus:border-indigo-500 font-mono resize-none"
+                    className="w-full p-3 border border-[#1d4ed8] text-sm focus:outline-none focus:border-[#1d4ed8] font-mono resize-none"
                   ></textarea>
                 </div>
 
-                <div className="p-5 bg-slate-50 border border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div className="p-5 bg-slate-50 border border-[#1d4ed8] flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div className="space-y-1">
                     <p className="text-xs font-black uppercase tracking-widest text-slate-700">Método de Envío</p>
                     <p className="text-[10px] text-slate-500 font-medium">Elige cuándo se enviará esta campaña.</p>
@@ -414,7 +414,7 @@ export default function MessagingCenter() {
                         type="datetime-local" 
                         value={scheduledAt}
                         onChange={(e) => setScheduledAt(e.target.value)}
-                        className="p-2 border border-slate-200 text-xs font-medium focus:outline-none focus:border-indigo-500" 
+                        className="p-2 border border-[#1d4ed8] text-xs font-medium focus:outline-none focus:border-[#1d4ed8]" 
                       />
                     )}
                   </div>
@@ -424,7 +424,7 @@ export default function MessagingCenter() {
                   <button 
                     onClick={handleCreateCampaign}
                     disabled={submitting}
-                    className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 text-xs font-black uppercase tracking-widest transition-colors shadow-md disabled:opacity-50"
+                    className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 text-xs font-black uppercase tracking-widest transition-colors  disabled:opacity-50"
                   >
                     {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send size={16} />} 
                     {isScheduled ? 'Programar Envío' : 'Enviar Ahora'}

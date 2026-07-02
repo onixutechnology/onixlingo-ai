@@ -72,10 +72,32 @@ const faqs = [
   { q: '¿Ofrecen descuentos corporativos para equipos enteros?', a: 'Sí, contamos con una calculadora B2B interactiva para compras por volumen a partir de 5 licencias. Esto incluye acceso multi-tenant de analíticas e integraciones seguras con SSO.' }
 ];
 
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.onixlingo.onixu.company' : 'http://127.0.0.1:8022';
+
 export default function PlanesPage() {
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('yearly');
   const [employeeCount, setEmployeeCount] = useState(15);
   const [b2bPlanType, setB2bPlanType] = useState<'pro' | 'executive'>('executive');
+  const [dynamicPrices, setDynamicPrices] = useState({
+    pro_monthly: 129,
+    pro_yearly: 799,
+    exec_monthly: 249,
+    exec_yearly: 1499
+  });
+
+  React.useEffect(() => {
+    fetch(`${API_URL}/api/v1/billing/public/pricing`)
+      .then(res => res.json())
+      .then(data => {
+        setDynamicPrices({
+          pro_monthly: data.display_price_pro_monthly || 129,
+          pro_yearly: data.display_price_pro_yearly || 799,
+          exec_monthly: data.display_price_exec_monthly || 249,
+          exec_yearly: data.display_price_exec_yearly || 1499
+        });
+      })
+      .catch(err => console.error("Error fetching pricing:", err));
+  }, []);
   
   const getB2bDiscount = (count: number) => {
     if (count < 5) return 0;
@@ -85,7 +107,10 @@ export default function PlanesPage() {
   };
 
   const calculateB2bCost = () => {
-    const basePrice = b2bPlanType === 'pro' ? 66 : 125; 
+    // Para B2B usamos el equivalente mensual del plan anual
+    const proMonthlyEq = Math.round(dynamicPrices.pro_yearly / 12);
+    const execMonthlyEq = Math.round(dynamicPrices.exec_yearly / 12);
+    const basePrice = b2bPlanType === 'pro' ? proMonthlyEq : execMonthlyEq; 
     const rawCost = basePrice * employeeCount;
     const discount = getB2bDiscount(employeeCount);
     const discountedCost = rawCost * (1 - discount / 100);
@@ -161,7 +186,21 @@ export default function PlanesPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {plans.map((p) => {
             const isExecutive = p.name === 'Executive';
-            const price = billingPeriod === 'monthly' ? p.priceMonthly : p.priceYearly;
+            const isPro = p.name === 'Pro';
+            
+            let priceMonthly = p.priceMonthly;
+            let priceYearly = p.priceYearly;
+            
+            if (isPro) {
+              priceMonthly = dynamicPrices.pro_monthly;
+              priceYearly = dynamicPrices.pro_yearly;
+            } else if (isExecutive) {
+              priceMonthly = dynamicPrices.exec_monthly;
+              priceYearly = dynamicPrices.exec_yearly;
+            }
+            
+            const price = billingPeriod === 'monthly' ? priceMonthly : priceYearly;
+            const equivalentMonthly = Math.round(priceYearly / 12);
             
             return (
               <div
@@ -186,9 +225,9 @@ export default function PlanesPage() {
                       <span className="text-4xl font-black text-black tracking-tight font-mono">{price}</span>
                       <span className="text-[9px] text-slate-500 font-bold uppercase">MXN / {billingPeriod === 'monthly' ? 'mes' : 'año'}</span>
                     </div>
-                    {billingPeriod === 'yearly' && p.equivalentMonthly > 0 && (
+                    {billingPeriod === 'yearly' && equivalentMonthly > 0 && (
                       <span className="text-[9px] font-bold text-black/70">
-                        (Equivale a ${p.equivalentMonthly} MXN/mes)
+                        (Equivale a ${equivalentMonthly} MXN/mes)
                       </span>
                     )}
                   </div>

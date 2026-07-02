@@ -31,7 +31,7 @@ const AD_CONFIG = {
   }
 };
 
-export const AdBanner = ({ variant = 'horizontal' }: { variant?: 'horizontal' | 'sidebar' }) => {
+export const AdBanner = ({ variant = 'horizontal', slot, style }: { variant?: 'horizontal' | 'sidebar', slot?: string, style?: React.CSSProperties }) => {
   const [shouldShow, setShouldShow] = useState(false);
   const { userTier } = useUIStore();
 
@@ -43,6 +43,28 @@ export const AdBanner = ({ variant = 'horizontal' }: { variant?: 'horizontal' | 
       setShouldShow(false);
     }
   }, [userTier]);
+
+  // --- MODO ADSENSE MOCK (Cuando se pasa slot y style, como en los laterales) ---
+  if (slot && style) {
+    return (
+      <div 
+        style={style} 
+        className={`bg-slate-100 border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-center p-4 rounded-none transition-opacity ${!shouldShow ? 'opacity-30' : 'opacity-80 hover:opacity-100'}`}
+      >
+        <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">
+          Espacio AdSense
+        </span>
+        <span className="text-[8px] font-bold text-slate-400 font-mono bg-white px-2 py-1 border border-slate-200">
+          Slot: {slot}
+        </span>
+        {!shouldShow && (
+          <span className="text-[8px] font-bold text-rose-500 mt-2 uppercase tracking-widest text-center">
+            (Oculto para usuarios PRO)
+          </span>
+        )}
+      </div>
+    );
+  }
 
   if (!shouldShow) return null;
 

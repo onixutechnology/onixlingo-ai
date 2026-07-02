@@ -24,18 +24,18 @@ export default function Subscriptions() {
     <div className="w-full max-w-[1800px] mx-auto space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
       
       {/* HEADER SCI-FI STYLING */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-indigo-500/30 shadow-lg relative overflow-hidden group">
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-[#1d4ed8]  relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-indigo-400/20 transition-all duration-700"></div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none opacity-10"></div>
         
         <div className="relative z-10 flex items-center gap-5">
-          <div className="w-14 h-14 bg-indigo-500/20 border border-indigo-400/50 flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.4)]">
+          <div className="w-14 h-14 bg-indigo-500/20 border border-[#1d4ed8]/50 flex items-center justify-center ">
             <CreditCard size={28} className="text-yellow-400" />
           </div>
           <div>
-            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-shadow-sm">Configuración Paddle</h2>
+            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-">Configuración Paddle</h2>
             <div className="flex items-center gap-3 mt-1.5">
-              <span className="flex items-center gap-1.5 text-[10px] font-black font-mono px-2 py-0.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/50 uppercase tracking-widest">
+              <span className="flex items-center gap-1.5 text-[10px] font-black font-mono px-2 py-0.5 bg-emerald-500/20 text-emerald-400 border border-[#1d4ed8]/50 uppercase tracking-widest">
                 <ShieldCheck size={10} /> SDK Conectado
               </span>
               <span className="flex items-center gap-1.5 text-[10px] font-black font-mono px-2 py-0.5 bg-yellow-500/20 text-yellow-400 border border-yellow-500/50 uppercase tracking-widest">
@@ -52,7 +52,7 @@ export default function Subscriptions() {
         <div className="xl:col-span-2 space-y-6">
           
           {/* Tarjeta de Webhook */}
-          <div className="bg-white border border-slate-200 shadow-sm relative overflow-hidden">
+          <div className="bg-white border border-[#1d4ed8]  relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             
             <div className="p-6 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
@@ -70,7 +70,7 @@ export default function Subscriptions() {
                 Para que el backend actualice automáticamente las cuentas de los usuarios a nivel PRO o Executive y llene tu panel de Finanzas, debes configurar la siguiente URL como tu <strong>Default Webhook</strong> en el panel de control de Paddle.
               </p>
 
-              <div className="bg-slate-50 border border-slate-200 p-4 rounded-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="bg-slate-50 border border-[#1d4ed8] p-4 rounded-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex-1 overflow-x-auto">
                   <code className="text-xs font-mono text-indigo-700 font-bold whitespace-nowrap">
                     {webhookUrl}
@@ -78,13 +78,13 @@ export default function Subscriptions() {
                 </div>
                 <button 
                   onClick={handleCopy}
-                  className="shrink-0 flex items-center justify-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-[10px] font-black uppercase tracking-widest transition-colors shadow-sm"
+                  className="shrink-0 flex items-center justify-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-[10px] font-black uppercase tracking-widest transition-colors "
                 >
                   {copied ? <><Check size={14} /> Copiado</> : <><Copy size={14} /> Copiar URL</>}
                 </button>
               </div>
 
-              <div className="mt-6 flex items-start gap-3 p-4 bg-amber-50 border border-amber-200 text-amber-800 rounded-sm">
+              <div className="mt-6 flex items-start gap-3 p-4 bg-amber-50 border border-[#1d4ed8] text-amber-800 rounded-sm">
                 <Zap size={18} className="shrink-0 mt-0.5 text-amber-600" />
                 <div className="text-xs">
                   <strong className="font-black uppercase tracking-widest block mb-1">Clave Secreta Requerida</strong>
@@ -98,7 +98,7 @@ export default function Subscriptions() {
 
         {/* PANEL DERECHO: Tiers */}
         <div className="xl:col-span-1">
-          <div className="bg-white border border-slate-200 shadow-sm flex flex-col h-full">
+          <div className="bg-white border border-[#1d4ed8]  flex flex-col h-full">
             <div className="p-6 border-b border-slate-100">
               <h3 className="text-sm font-black uppercase tracking-widest text-slate-900 flex items-center gap-2">
                 <ShieldCheck size={16} className="text-indigo-500" /> Niveles (Tiers) Activos
@@ -115,7 +115,7 @@ export default function Subscriptions() {
                   <div>
                     <div className="text-2xl font-black font-mono text-indigo-700 leading-none">$129<span className="text-sm text-slate-500"> MXN/mes</span></div>
                   </div>
-                  <div className="border-l border-indigo-200 pl-3">
+                  <div className="border-l border-[#1d4ed8] pl-3">
                     <div className="text-[10px] font-black font-mono text-slate-600 uppercase">Anual:</div>
                     <div className="text-sm font-black font-mono text-indigo-700 leading-none">$799<span className="text-[10px] text-slate-500"> MXN/año</span></div>
                   </div>
@@ -127,13 +127,13 @@ export default function Subscriptions() {
                 </div>
               </div>
 
-              <div className="group border border-slate-200 p-5 hover:border-slate-300 transition-colors">
+              <div className="group border border-[#1d4ed8] p-5 hover:border-[#1d4ed8] transition-colors">
                 <h4 className="text-lg font-black text-slate-900 uppercase">Titanium Executive</h4>
                 <div className="flex items-end gap-3 mt-1">
                   <div>
                     <div className="text-2xl font-black font-mono text-slate-800 leading-none">$249<span className="text-sm text-slate-500"> MXN/mes</span></div>
                   </div>
-                  <div className="border-l border-slate-200 pl-3">
+                  <div className="border-l border-[#1d4ed8] pl-3">
                     <div className="text-[10px] font-black font-mono text-slate-400 uppercase">Anual:</div>
                     <div className="text-sm font-black font-mono text-slate-800 leading-none">$1499<span className="text-[10px] text-slate-500"> MXN/año</span></div>
                   </div>

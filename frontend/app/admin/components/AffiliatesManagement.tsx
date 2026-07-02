@@ -74,7 +74,7 @@ export default function AffiliatesManagement() {
           <p className="text-sm text-slate-500 mt-1 font-medium">Gestión del crecimiento orgánico y recompensas para referidores destacados.</p>
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-[10px] uppercase font-black tracking-widest text-slate-400 bg-slate-100 px-3 py-1.5 border border-slate-200">
+          <span className="text-[10px] uppercase font-black tracking-widest text-slate-400 bg-slate-100 px-3 py-1.5 border border-[#1d4ed8]">
             Programa de Referidos V1.0
           </span>
         </div>
@@ -89,12 +89,12 @@ export default function AffiliatesManagement() {
         <>
           {/* Tarjetas de Métricas Corporativas */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white border border-slate-200 p-6 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+            <div className="bg-white border border-[#1d4ed8] p-6   transition-all duration-300 relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:scale-110 transition-transform duration-500">
                 <Share2 size={64} />
               </div>
               <div className="flex items-center gap-3 mb-4 relative z-10">
-                <div className="p-2 bg-indigo-50 border border-indigo-100 text-indigo-600 shadow-inner">
+                <div className="p-2 bg-indigo-50 border border-indigo-100 text-indigo-600 ">
                   <Share2 size={20} />
                 </div>
                 <h3 className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Adquisición Total</h3>
@@ -105,12 +105,12 @@ export default function AffiliatesManagement() {
               </div>
             </div>
             
-            <div className="bg-white border border-slate-200 p-6 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+            <div className="bg-white border border-[#1d4ed8] p-6   transition-all duration-300 relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:scale-110 transition-transform duration-500">
                 <Users size={64} />
               </div>
               <div className="flex items-center gap-3 mb-4 relative z-10">
-                <div className="p-2 bg-emerald-50 border border-emerald-100 text-emerald-600 shadow-inner">
+                <div className="p-2 bg-emerald-50 border border-emerald-100 text-emerald-600 ">
                   <Users size={20} />
                 </div>
                 <h3 className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Conversión Efectiva</h3>
@@ -121,12 +121,12 @@ export default function AffiliatesManagement() {
               </div>
             </div>
             
-            <div className="bg-white border border-slate-200 p-6 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+            <div className="bg-white border border-[#1d4ed8] p-6   transition-all duration-300 relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:scale-110 transition-transform duration-500">
                 <Crown size={64} />
               </div>
               <div className="flex items-center gap-3 mb-4 relative z-10">
-                <div className="p-2 bg-amber-50 border border-amber-100 text-amber-600 shadow-inner">
+                <div className="p-2 bg-amber-50 border border-amber-100 text-amber-600 ">
                   <Crown size={20} />
                 </div>
                 <h3 className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Líderes de Red</h3>
@@ -139,8 +139,8 @@ export default function AffiliatesManagement() {
           </div>
 
           {/* Tabla de Ranking y Gestión */}
-          <div className="bg-white border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-            <div className="p-6 border-b border-slate-200 bg-slate-50/50 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="bg-white border border-[#1d4ed8]  overflow-hidden flex flex-col">
+            <div className="p-6 border-b border-[#1d4ed8] bg-slate-50/50 flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <Gift className="text-[#D4AF37]" size={24} />
                 <div>
@@ -172,7 +172,7 @@ export default function AffiliatesManagement() {
                         <p className="text-slate-400 text-[10px] font-mono mt-0.5 tracking-wider">ID: #{String(ambassador.id).padStart(4, '0')}</p>
                       </td>
                       <td className="px-6 py-4">
-                        <span className="inline-block px-3 py-1 bg-slate-100 border border-slate-200 text-slate-600 font-mono text-[10px] font-black tracking-widest">
+                        <span className="inline-block px-3 py-1 bg-slate-100 border border-[#1d4ed8] text-slate-600 font-mono text-[10px] font-black tracking-widest">
                           {ambassador.referral_code}
                         </span>
                       </td>
@@ -184,14 +184,14 @@ export default function AffiliatesManagement() {
                       <td className="px-6 py-4 text-center">
                         {ambassador.pending_rewards > 0 ? (
                           <div className="flex flex-col items-center">
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-black uppercase tracking-wider bg-rose-50 text-rose-600 border border-rose-200">
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-black uppercase tracking-wider bg-rose-50 text-rose-600 border border-[#1d4ed8]">
                               <span className="w-1.5 h-1.5 bg-rose-500 rounded-full animate-pulse" />
                               {ambassador.pending_rewards} Pendientes
                             </span>
                             <span className="text-[9px] text-slate-400 mt-1 font-bold">+ {ambassador.pending_rewards * 7} días PRO a liberar</span>
                           </div>
                         ) : (
-                          <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-black uppercase tracking-wider bg-emerald-50 text-emerald-600 border border-emerald-200">
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-black uppercase tracking-wider bg-emerald-50 text-emerald-600 border border-[#1d4ed8]">
                             <CheckCircle size={12} /> Liquidado
                           </span>
                         )}
@@ -200,7 +200,7 @@ export default function AffiliatesManagement() {
                         <button 
                           onClick={() => handleReward(ambassador.id)}
                           disabled={ambassador.pending_rewards === 0 || isRewarding === ambassador.id}
-                          className="text-[10px] font-black tracking-widest uppercase px-4 py-2.5 transition-all disabled:opacity-40 disabled:cursor-not-allowed bg-[#D4AF37] hover:bg-[#b0902a] text-white flex items-center gap-2 ml-auto shadow-sm"
+                          className="text-[10px] font-black tracking-widest uppercase px-4 py-2.5 transition-all disabled:opacity-40 disabled:cursor-not-allowed bg-[#D4AF37] hover:bg-[#b0902a] text-white flex items-center gap-2 ml-auto "
                         >
                           {isRewarding === ambassador.id ? <Loader2 size={12} className="animate-spin" /> : <Gift size={12} />}
                           Aprobar Premio

@@ -13,17 +13,19 @@ import { useUIStore } from '@/store/uiStore';
 import Sidebar from '@/components/dashboard/sidebar';
 import Cookies from 'js-cookie';
 import apiClient from '@/lib/apiClient';
-import { UpgradeModal } from '@/components/pro/UpgradeModal';
-import { ServerAwakeLoader } from '@/components/ui/Server/ServerAwakeLoader';
+import { fetchDashboardDataCached } from '@/lib/dashboardCache';
+import dynamic from 'next/dynamic';
 
+const UpgradeModal = dynamic(() => import('@/components/pro/UpgradeModal').then(mod => mod.UpgradeModal), { ssr: false });
+const StatsModal = dynamic(() => import('@/components/dashboard/StatsModal').then(mod => mod.StatsModal), { ssr: false });
+
+import { ServerAwakeLoader } from '@/components/ui/Server/ServerAwakeLoader';
 import { motion, Variants } from 'framer-motion';
 import { AdBanner } from '@/components/ads/AdBanner';
-import { StatsModal } from '@/components/dashboard/StatsModal';
 
 import {
-  Play, Lock, Check, Trophy, Award, Zap, Flame, Headphones, BookOpen, PenTool,
-  Mic, Shield, LayoutGrid, Loader2, Briefcase, ArrowRight, User, ChevronDown, ShieldCheck,
-  Gift, Smartphone, Tablet, Laptop, Sparkles, Crown, X, Clock, Timer, CheckCircle2
+  Lock, Trophy, Award, Zap, Flame, Headphones, BookOpen,
+  Shield, LayoutGrid, Loader2, User, ChevronDown, Sparkles, Crown
 } from 'lucide-react';
 import PracticeReminderWidget from '@/components/dashboard/PracticeReminderWidget';
 
@@ -31,7 +33,11 @@ import { CURRICULUM } from '@/data/curriculum';
 import { CURRICULUM_FR } from '@/data/curriculum_fr';
 import { CURRICULUM_ZH } from '@/data/curriculum_zh';
 
-type LessonStatus = 'locked' | 'active' | 'completed';
+// Extracted Components
+import { HeaderStats } from './components/HeaderStats';
+import { GiveawayWidget } from './components/GiveawayWidget';
+import { LessonZigZagCard, LessonStatus } from './components/LessonZigZagCard';
+import { generateGeneralTrophies } from '@/lib/trophies';
 
 const LANGUAGE_COLORS: Record<string, { primary: string, secondary: string, accent: string, selection: string, bg: string }> = {
   en: { primary: 'sky-400', secondary: 'sky-50', accent: 'sky-500', selection: 'bg-sky-100', bg: 'text-sky-900' },
@@ -39,180 +45,9 @@ const LANGUAGE_COLORS: Record<string, { primary: string, secondary: string, acce
   zh: { primary: 'indigo-200', secondary: 'indigo-50', accent: 'indigo-300', selection: 'bg-indigo-100', bg: 'text-indigo-900' },
 };
 
-const calculateLevel = (xp: number): number => {
-  if (xp < 100) return 1;
-  if (xp < 500) return 2;
-  if (xp < 1000) return 3;
-  return 4 + Math.floor((xp - 1000) / 2000);
-};
-
-const HeaderStats = ({ xp, streak, onOpenStats }: { xp: number, streak: number, onOpenStats: () => void }) => {
-  const { energy, userTier, checkAndResetDailyLimits } = useUIStore();
-
-  useEffect(() => {
-    checkAndResetDailyLimits();
-  }, [checkAndResetDailyLimits]);
-
-  const level = calculateLevel(xp);
-
-  const getEnergyColor = (pct: number) => {
-    if (pct > 50) return 'bg-gradient-to-r from-emerald-500 to-teal-400 shadow-[0_0_10px_rgba(16,185,129,0.5)]';
-    if (pct > 20) return 'bg-gradient-to-r from-amber-500 to-yellow-400 shadow-[0_0_10px_rgba(245,158,11,0.5)]';
-    return 'bg-gradient-to-r from-rose-600 to-rose-400 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.6)]';
-  };
-
-  return (
-    <div className="flex items-center gap-2 bg-white px-2 py-1 rounded-none border border-sky-200 shadow-none">
-      <button onClick={onOpenStats} className="flex items-center gap-1.5 md:gap-2 px-2 md:px-3 border-r border-sky-100 hover:bg-sky-50 transition-colors text-left outline-none cursor-pointer">
-        <div className="text-purple-650"><Crown size={14} className="fill-purple-100" /></div>
-        <div className="hidden md:block">
-          <p className="text-[8px] text-sky-600 font-black uppercase tracking-widest leading-none mb-0.5">Nivel</p>
-          <span className="text-xs font-black text-sky-950 leading-none">{level}</span>
-        </div>
-        <div className="md:hidden text-xs font-black text-sky-950 leading-none">{level}</div>
-      </button>
-      <button onClick={onOpenStats} className="flex items-center gap-1.5 md:gap-2 px-2 md:px-3 border-r border-sky-100 hover:bg-sky-50 transition-colors text-left outline-none cursor-pointer">
-        <div className="text-[#D4AF37]"><Zap size={14} fill="currentColor" /></div>
-        <div className="hidden md:block">
-          <p className="text-[8px] text-sky-600 font-black uppercase tracking-widest leading-none mb-0.5">XP</p>
-          <span className="text-xs font-black text-sky-950 leading-none">{xp.toLocaleString()}</span>
-        </div>
-        <div className="md:hidden text-xs font-black text-sky-950 leading-none">{xp >= 1000 ? (xp/1000).toFixed(1)+'k' : xp}</div>
-      </button>
-      <button onClick={onOpenStats} className="flex items-center gap-1.5 md:gap-2 px-2 md:px-3 border-r border-sky-100 hover:bg-sky-50 transition-colors text-left outline-none cursor-pointer">
-        <div className="text-orange-500"><Flame size={14} fill="currentColor" /></div>
-        <div className="hidden md:block">
-          <p className="text-[8px] text-sky-600 font-black uppercase tracking-widest leading-none mb-0.5">Racha</p>
-          <span className="text-xs font-black text-sky-950 leading-none">{streak}</span>
-        </div>
-        <div className="md:hidden text-xs font-black text-sky-950 leading-none">{streak}</div>
-      </button>
-
-      {/* ⚡ ENERGÍA INDICATOR (Batería Premium) */}
-      <div className="flex items-center gap-2 px-1 md:px-3">
-        {userTier === 'free' ? (
-          <div className="flex items-center gap-2">
-            {/* Icono de energía con brillo */}
-            <div className="text-[#D4AF37] drop-shadow-[0_0_4px_rgba(245,158,11,0.4)] animate-pulse shrink-0">
-              <Zap size={13} fill="currentColor" />
-            </div>
-
-            {/* Cuerpo de la Batería */}
-            <div className="flex items-center">
-              <div className="relative w-14 md:w-20 h-5 bg-sky-950 rounded-[4px] border border-sky-700 p-0.5 flex items-center shadow-[inset_0_1.5px_4px_rgba(0,0,0,0.8)] overflow-hidden">
-                <div
-                  className={`h-full rounded-[2px] ${getEnergyColor(energy)} transition-all duration-500`}
-                  style={{ width: `${energy}%` }}
-                />
-
-                {/* Porcentaje de texto legible */}
-                <span className="absolute inset-0 flex items-center justify-center text-[9px] font-black text-slate-900 font-mono leading-none tracking-wider drop-shadow-[0_1.5px_2px_rgba(0,0,0,1)]">
-                  {energy}%
-                </span>
-              </div>
-
-              {/* Polo Positivo */}
-              <div className="w-[3px] h-2.5 bg-sky-700 rounded-r-[2px] -ml-[1px] shadow-[0_10px_40px_rgba(14,165,233,0.08)] shrink-0" />
-            </div>
-
-            <div className="text-[8px] text-sky-600 font-black uppercase tracking-widest leading-none hidden md:block">
-              Energía
-            </div>
-          </div>
-        ) : (
-          <div className="flex items-center gap-1.5 text-[#D4AF37]">
-            <ShieldCheck size={12} className="fill-emerald-50 text-[#D4AF37] shrink-0" />
-            <div className="text-left hidden md:block">
-              <p className="text-[8px] text-sky-600 font-black uppercase tracking-widest leading-none mb-0.5">Energía</p>
-              <span className="text-[9px] font-black uppercase tracking-wider">Ilimitada</span>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
-
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { staggerChildren: 0.03 } }
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 10 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 260, damping: 20 } as any }
-};
-
-const SIMULATOR_VERSIONS_METADATA: Record<string, Array<{ title: string; desc: string }>> = {
-  toeic_listening: [
-    { title: "Versión 1: Reuniones de Ventas", desc: "Monitoreo de conversaciones sobre transición a CRM y acuerdos directivos." },
-    { title: "Versión 2: Distribución y Carga", desc: "Audios sobre envíos internacionales y revisión de contratos de transportistas." },
-    { title: "Versión 3: Selección de Personal", desc: "Entrevistas estructuradas, ofertas de contratación y onboarding laboral." },
-    { title: "Versión 4: Relaciones Públicas", desc: "Anuncios de marketing corporativo y lanzamientos de imagen de marca." },
-    { title: "Versión 5: Auditorías Contables", desc: "Audios sobre revisiones fiscales trimestrales y proyecciones de inversión." },
-    { title: "Versión 6: Operaciones de Planta", desc: "Diálogos sobre procesos de manufactura y estándares de seguridad industrial." },
-    { title: "Versión 7: Migración de Servidores", desc: "Conversaciones sobre soporte técnico IT, y mantenimiento de infraestructura." },
-    { title: "Versión 8: Atención al Cliente", desc: "Diálogos sobre acuerdos de nivel de servicio (SLA) y fidelización de clientes." },
-    { title: "Versión 9: Compras y Proveedores", desc: "Audios sobre adquisición de materias primas y negociaciones con proveedores." },
-    { title: "Versión 10: Estrategia Corporativa", desc: "Conversaciones sobre reestructuración de departamentos e indicadores de desempeño." }
-  ],
-  toeic_reading: [
-    { title: "Versión 1: Memorandos de Ventas", desc: "Lectura de correos formales sobre la implementación del nuevo sistema CRM." },
-    { title: "Versión 2: Documentos de Envío", desc: "Comprensión de contratos comerciales de transporte marítimo y facturas de aduana." },
-    { title: "Versión 3: Manuales de Onboarding", desc: "Lectura de políticas de recursos humanos y descripciones de puestos." },
-    { title: "Versión 4: Comunicados de Prensa", desc: "Análisis de notas de relaciones públicas y estrategias de publicidad corporativa." },
-    { title: "Versión 5: Balances Financieros", desc: "Lectura de reportes contables, auditorías internas y resúmenes de presupuesto." },
-    { title: "Versión 6: Inspecciones de Calidad", desc: "Análisis de guías operativas industriales y reportes de incidentes de fábrica." },
-    { title: "Versión 7: Reportes de Sistemas", desc: "Comprensión de tickets de soporte técnico e instructivos de seguridad en la nube." },
-    { title: "Versión 8: Correspondencia de Clientes", desc: "Lectura de resoluciones a quejas de clientes y acuerdos de soporte." },
-    { title: "Versión 9: Contratos de Proveedores", desc: "Análisis de órdenes de compra y términos y condiciones con distribuidores." },
-    { title: "Versión 10: Planificación Ejecutiva", desc: "Comprensión de reportes trimestrales y estrategias de expansión corporativa." }
-  ],
-  toeic_mock: [
-    { title: "Versión 1: Gestión de Ventas", desc: "Evaluación integral de Listening & Reading enfocada en transiciones y liderazgo." },
-    { title: "Versión 2: Operaciones y Contratos", desc: "Examen completo simulado sobre negociación de contratos logísticos y aduanas." },
-    { title: "Versión 3: Recursos Humanos", desc: "Simulador sobre onboarding de empleados, capacitación y auditorías laborales." },
-    { title: "Versión 4: Relaciones Corporativas", desc: "Evaluación de comprensión lectora y auditiva sobre campañas y conferencias." },
-    { title: "Versión 5: Finanzas y Balances", desc: "Simulador con lecturas y audios sobre auditorías trimestrales y proyecciones." },
-    { title: "Versión 6: Gestión Industrial", desc: "Evaluación integral sobre seguridad en planta, órdenes de servicio y fallas." },
-    { title: "Versión 7: Infraestructura Tecnológica", desc: "Examen simulado sobre migración de sistemas y ciberseguridad corporativa." },
-    { title: "Versión 8: Gestión de Incidentes", desc: "Prueba integral sobre atención a reclamos, devoluciones y resolución de conflictos." },
-    { title: "Versión 9: Adquisiciones y Logística", desc: "Simulador completo sobre adquisición de suministros y manejo de inventarios." },
-    { title: "Versión 10: Estrategia de Negocios", desc: "Examen final sobre memorandos de dirección y planeación estratégica." }
-  ],
-  toefl_mock: [
-    { title: "Versión 1: Astronomía y Astrofísica", desc: "Lecturas académicas sobre la habitabilidad de exoplanetas y tutorías de ciencias." },
-    { title: "Versión 2: Historia Antigua", desc: "Textos arqueológicos sobre la economía del Imperio Romano y excavaciones clásicas." },
-    { title: "Versión 3: Biología Marina", desc: "Lecturas sobre el impacto del calentamiento en los ecosistemas de arrecifes." },
-    { title: "Versión 4: Ciencias del Comportamiento", desc: "Enfoque en psicología evolutiva, toma de decisiones y comportamiento humano." },
-    { title: "Versión 5: Paleontología", desc: "Lecturas académicas sobre fósiles de dinosaurios, evolución y registros fósiles." },
-    { title: "Versión 6: Física y Termodinámica", desc: "Conferencias sobre sistemas de conservación de energía y leyes físicas aplicadas." },
-    { title: "Versión 7: Historia del Arte", desc: "Análisis académico de la perspectiva renacentista y literatura clásica." },
-    { title: "Versión 8: Historia Económica", desc: "Textos sobre el surgimiento del trueque y los primeros sistemas monetarios." },
-    { title: "Versión 9: Genética Molecular", desc: "Conferencias sobre la secuenciación del ADN y terapia génica aplicada." },
-    { title: "Versión 10: Redes Neuronales", desc: "Discusiones sobre tecnología cognitiva aplicada al campo académico y salud." }
-  ],
-  ielts_mock: [
-    { title: "Versión 1: Exploración Espacial", desc: "Lecturas académicas de astronomía y ensayos sobre el descubrimiento de exoplanetas." },
-    { title: "Versión 2: Estudios Arqueológicos", desc: "Textos sobre el urbanismo en la antigua Roma y discusiones sociopolíticas clásicas." },
-    { title: "Versión 3: Conservación Marina", desc: "Lecturas de ciencias ambientales sobre la decoloración de corales y cambio climático." },
-    { title: "Versión 4: Psicología Evolutiva", desc: "Ensayos sobre las teorías de la elección humana y sociología de grupos." },
-    { title: "Versión 5: Paleobiología", desc: "Lecturas académicas sobre la anatomía evolutiva de fósiles en el periodo Mesozoico." },
-    { title: "Versión 6: Innovación Energética", desc: "Conferencias sobre termodinámica aplicada a las energías renovables modernas." },
-    { title: "Versión 7: Renacimiento y Artes", desc: "Análisis crítico de técnicas de pintura y evolución del arte europeo." },
-    { title: "Versión 8: Economía Primitiva", desc: "Textos analíticos sobre el origen de las divisas y el intercambio comercial temprano." },
-    { title: "Versión 9: Terapia Génica y Salud", desc: "Conferencias de medicina avanzada, mutaciones y edición genética." },
-    { title: "Versión 10: Sistema Analítico Avanzado", desc: "Discusiones tecnológicas sobre el futuro del aprendizaje profundo computacional." }
-  ]
-};
-
-const getSimulatorDisplayName = (id: string) => {
-  if (id === 'toeic_listening') return 'TOEIC® Listening';
-  if (id === 'toeic_reading') return 'TOEIC® Reading';
-  if (id === 'toeic_mock') return 'TOEIC® Completo';
-  if (id === 'toefl_mock') return 'TOEFL® Completo';
-  if (id === 'ielts_mock') return 'IELTS® Completo';
-  return 'Simulador';
 };
 
 export default function DashboardPage() {
@@ -230,7 +65,6 @@ export default function DashboardPage() {
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   const [showStatsModal, setShowStatsModal] = useState(false);
 
-  // Estado local para acordeón de niveles (Lección A expandida por defecto)
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
 
   const getProgressPercentage = () => globalProgress;
@@ -251,7 +85,6 @@ export default function DashboardPage() {
     return CURRICULUM;
   }, [activeLanguage]);
 
-  // Los niveles inician completamente cerrados por defecto para optimizar el UX y evitar scroll inicial
   useEffect(() => {
     setExpandedSections({});
   }, [activeLanguage]);
@@ -270,76 +103,49 @@ export default function DashboardPage() {
     setCurrentUser(storedUsername);
 
     if (token) {
-      const fetchData = async () => {
+      const loadData = async () => {
         try {
-          const results = await Promise.allSettled([
-            apiClient.get('/progress/map'),
-            apiClient.get('/progress/stats'),
-            apiClient.get('/users/me'),
-            apiClient.get('/progress/leaderboard')
-          ]);
-
-          // Si alguna petición falló de forma crítica (no cancelada ni 401), lanzamos el error
-          const rejected = results.filter((r): r is PromiseRejectedResult => r.status === 'rejected');
-          if (rejected.length > 0) {
-            const firstRealError = rejected.find(r => {
-              const err = r.reason;
-              const isAbort = err?.code === 'ERR_CANCELED' || err?.message === 'canceled' || err?.message?.includes('aborted') || err?.name === 'AbortError';
-              const is401 = err?.response?.status === 401;
-              return !isAbort && !is401;
+          const cache = await fetchDashboardDataCached();
+          
+          if (cache.mapRes) setDashboardData(cache.mapRes);
+          if (cache.statsRes) {
+            setUserStats({
+              xp: cache.statsRes.total_xp || 0,
+              lessons: cache.statsRes.completed_modules || 0,
+              streak: cache.statsRes.streak_days || 0,
+              premiumCount: cache.statsRes.premium_users_count ?? 0,
+              xp_history: cache.statsRes.xp_history || [],
+              level_details: cache.statsRes.level_details || null,
+              last_activity_at: cache.statsRes.last_activity_at || null
             });
-            if (firstRealError) {
-              console.warn("Conexión temporal al backend no disponible:", firstRealError.reason);
-              if (!dashboardData) {
-                setDashboardData({ standard: [] });
-              }
+            setGlobalProgress(cache.statsRes.global_progress || 0);
+          }
+          if (cache.userRes) {
+            let tierVal = (cache.userRes.membership?.tier || cache.userRes.tier || 'free').toLowerCase();
+            if (tierVal === 'titanium') tierVal = 'executive';
+            setUserTier(tierVal as 'free' | 'pro' | 'executive');
+            setIsUserPremium(tierVal === 'pro' || tierVal === 'executive');
+
+            if (cache.userRes.username) {
+              setCurrentUser(cache.userRes.username);
+              Cookies.set('username', cache.userRes.username);
             }
-            return; // Salir de forma segura sin provocar un overlay de error en desarrollo
           }
-
-          // Todas las peticiones fueron exitosas (status === 'fulfilled')
-          const [mapRes, statsRes, userRes, leaderboardRes] = results.map(
-            r => (r as PromiseFulfilledResult<any>).value
-          );
-
-          setDashboardData(mapRes.data);
-          setUserStats({
-            xp: statsRes.data.total_xp || 0,
-            lessons: statsRes.data.completed_modules || 0,
-            streak: statsRes.data.streak_days || 0,
-            premiumCount: statsRes.data.premium_users_count ?? 0,
-            xp_history: statsRes.data.xp_history || [],
-            level_details: statsRes.data.level_details || null,
-            last_activity_at: statsRes.data.last_activity_at || null
-          });
-          setGlobalProgress(statsRes.data.global_progress || 0);
-          setLeaderboard(leaderboardRes.data.leaderboard || []);
-
-          let tierVal = (userRes.data.membership?.tier || userRes.data.tier || 'free').toLowerCase();
-          if (tierVal === 'titanium') {
-            tierVal = 'executive';
+          if (cache.leadRes) {
+            setLeaderboard(cache.leadRes.leaderboard || []);
           }
-          setUserTier(tierVal as 'free' | 'pro' | 'executive');
-          setIsUserPremium(tierVal === 'pro' || tierVal === 'executive');
-
-          if (userRes.data.username) {
-            setCurrentUser(userRes.data.username);
-            Cookies.set('username', userRes.data.username);
-          }
-        } catch (error: any) {
+        } catch (error) {
           console.error("Error fetching dashboard data:", error);
           if (!dashboardData) setDashboardData({ standard: [] });
         }
       };
-
-      fetchData();
+      loadData();
     } else {
       router.push('/login');
     }
-  }, [router, activeLanguage]);
+  }, [router]);
 
-  // Real database leaderboard rankings only
-  const getDynamicLeaderboard = () => {
+  const dynamicLeaderboard = useMemo(() => {
     let list = [...leaderboard].filter(item => item.alias?.toLowerCase() !== 'diana');
 
     if (!list.some(item => item.isMe)) {
@@ -359,56 +165,9 @@ export default function DashboardPage() {
         count: `${(item.xp || 0).toLocaleString()} XP`,
         isMe: item.isMe
       }));
-  };
+  }, [leaderboard, currentUser, userStats.xp]);
 
-  // Generator of 200 general unique trophies
-  const getGeneralTrophies = () => {
-    const list: any[] = [];
-    const xp = userStats.xp;
-    const streak = userStats.streak;
-    const completedLessons = userStats.lessons;
-
-    // 1. XP Milestones (80 trophies)
-    for (let i = 1; i <= 80; i++) {
-      const targetXP = i * 200; // up to 16,000 XP
-      const isUnlocked = xp >= targetXP;
-      list.push({
-        id: `general-xp-${i}`,
-        title: `Maestría en XP Lvl ${i}`,
-        desc: `Alcanza un total de ${targetXP.toLocaleString()} XP`,
-        unlocked: isUnlocked,
-        icon: 'Award'
-      });
-    }
-
-    // 2. Streak Milestones (60 trophies)
-    for (let i = 1; i <= 60; i++) {
-      const targetStreak = i; // up to 60 days
-      const isUnlocked = streak >= targetStreak;
-      list.push({
-        id: `general-streak-${i}`,
-        title: `Constancia de Acero Lvl ${i}`,
-        desc: `Mantén una racha de ${targetStreak} días activos`,
-        unlocked: isUnlocked,
-        icon: 'Flame'
-      });
-    }
-
-    // 3. Lesson Completeness Milestones (60 trophies)
-    for (let i = 1; i <= 60; i++) {
-      const targetLessons = i; // up to 60 lessons
-      const isUnlocked = completedLessons >= targetLessons;
-      list.push({
-        id: `general-lessons-${i}`,
-        title: `Erudito Académico Lvl ${i}`,
-        desc: `Completa un total de ${targetLessons} lecciones`,
-        unlocked: isUnlocked,
-        icon: 'Crown'
-      });
-    }
-
-    return list.slice(0, 200);
-  };
+  const generalTrophies = useMemo(() => generateGeneralTrophies(userStats.xp, userStats.streak, userStats.lessons), [userStats.xp, userStats.streak, userStats.lessons]);
 
   const handleSimulatorClick = (e: React.MouseEvent, lessonId: string) => {
     e.preventDefault();
@@ -421,26 +180,34 @@ export default function DashboardPage() {
 
   const allLessonsFlat = useMemo(() => currentCurriculum.flatMap(section => section.lessons), [currentCurriculum]);
 
+  const standardLessonsMap = useMemo(() => {
+    const map = new Map();
+    if (dashboardData?.standard) {
+      for (const l of dashboardData.standard) {
+        if (l.language === activeLanguage || (!l.language && activeLanguage === 'en')) {
+          map.set(l.lesson_id, l);
+        }
+      }
+    }
+    return map;
+  }, [dashboardData?.standard, activeLanguage]);
+
   const getLessonState = (lessonId: string): LessonStatus => {
     const firstLessonId = currentCurriculum?.[0]?.lessons?.[0]?.id;
-
     if (!dashboardData?.standard || dashboardData.standard.length === 0) {
       return lessonId === firstLessonId ? 'active' : 'locked';
     }
-
-    const node = dashboardData.standard.find((l: any) => l.lesson_id === lessonId && (l.language === activeLanguage || (!l.language && activeLanguage === 'en')));
-
+    const node = standardLessonsMap.get(lessonId);
     if (node) {
       return node.status === 'completed' ? 'completed' : 'active';
     }
-
     return lessonId === firstLessonId ? 'active' : 'locked';
   };
 
-  const getStars = (lessonId: string) => dashboardData?.standard?.find((l: any) => l.lesson_id === lessonId && (l.language === activeLanguage || (!l.language && activeLanguage === 'en')))?.stars || 0;
+  const getStars = (lessonId: string) => standardLessonsMap.get(lessonId)?.stars || 0;
 
   const getLessonProgressPercent = (lessonId: string) => {
-    const node = dashboardData?.standard?.find((l: any) => l.lesson_id === lessonId && (l.language === activeLanguage || (!l.language && activeLanguage === 'en')));
+    const node = standardLessonsMap.get(lessonId);
     if (node && node.total_steps && node.total_steps > 0) {
       if (node.current_step > 0) {
         return Math.max(1, Math.round((node.current_step / node.total_steps) * 100));
@@ -463,7 +230,6 @@ export default function DashboardPage() {
   return (
     <div className={`min-h-screen bg-sky-50 font-sans text-sky-950 pb-20 lg:pb-0 ${theme.selection} selection:${theme.bg}`}>
 
-      {/* NAVBAR CORPORATIVO CUADRADO */}
       <nav className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-sky-200 px-6 h-12 flex items-center justify-between shadow-none">
         <div className="flex items-center gap-2">
           <div className={`w-5 h-5 bg-${theme.primary} flex items-center justify-center`}><span className="text-slate-900 font-black text-[9px]">O</span></div>
@@ -490,29 +256,22 @@ export default function DashboardPage() {
         </div>
       </nav>
 
-      {/* WRAPPER PRINCIPAL CON ANUNCIOS */}
-      <div className="max-w-[1700px] mx-auto flex flex-col 2xl:flex-row gap-6 pt-6 px-4">
+      <div className="max-w-[1700px] mx-auto flex flex-col xl:flex-row gap-6 pt-6 px-4">
         
-        {/* --- ESPACIO PUBLICITARIO IZQUIERDO --- */}
-        <div className="hidden 2xl:block w-[160px] shrink-0">
-          <div className="sticky top-20 flex justify-center">
-             <div className="w-[160px] h-[600px] bg-sky-100/50 border-2 border-dashed border-sky-300 flex flex-col items-center justify-center text-sky-600 text-center p-4 rounded-none shadow-sm">
-                <span className="font-black text-[10px] uppercase tracking-widest mb-2">AdSense Izquierdo</span>
-                <span className="text-[9px] leading-tight font-bold">160x600 Vertical</span>
-             </div>
+        {/* ESPACIO PUBLICITARIO DERECHO */}
+        <div className="hidden xl:block w-[160px] shrink-0">
+          <div className="sticky top-24 flex justify-center w-full">
+            <AdBanner slot="4653526972" style={{ display: 'inline-block', width: '160px', height: '600px' }} />
           </div>
         </div>
 
-        {/* CONTENEDOR CENTRAL (DASHBOARD ACTUAL) */}
         <div className="flex-1 min-w-0 max-w-7xl mx-auto w-full flex flex-col lg:flex-row gap-6">
 
-        {/* COLUMNA PRINCIPAL */}
         <div className="flex-1 min-w-0">
 
-          {/* MENÚ BIENVENIDA - SIEMPRE FREE TIER / INGLÉS GENERAL EN RUTA STANDARDS */}
           <div className="mb-6 bg-white border border-sky-200 p-6 rounded-none shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-fade-in-up">
             <div>
-              <h1 className="text-xl font-black text-slate-900 tracking-tighter uppercase leading-none mb-2 font-serif italic">Bienvenido, {currentUser}</h1>
+              <h1 className="text-xl font-black text-slate-900 tracking-tighter uppercase leading-none mb-2 font-serif italic">Bienvenido, {currentUser ? currentUser.substring(0, 2).toUpperCase() : '??'}</h1>
               <p className="text-[10px] font-black text-slate-900 uppercase tracking-widest leading-none">
                 <span className={`font-black uppercase tracking-wider ${userTier === 'executive'
                     ? 'text-[#D4AF37]'
@@ -544,10 +303,8 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* SECCIÓN 1: PROGRESO GLOBAL & SORTEOS METAS */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 
-            {/* PROGRESO DEL CURSO */}
             <div className="bg-white border border-sky-200 p-5 rounded-none shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col justify-between animate-fade-in-up opacity-0 [animation-delay:100ms]">
               <div>
                 <div className="flex justify-between items-center text-[9px] font-black uppercase tracking-[0.15em] text-slate-900 mb-3">
@@ -571,97 +328,13 @@ export default function DashboardPage() {
               </div>
             </div>
 
-            {/* SORTEOS CORPORATIVOS */}
-            <div className="bg-white border border-sky-200 p-5 rounded-none shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col justify-between relative overflow-hidden group animate-fade-in-up opacity-0 [animation-delay:200ms]">
-              <div>
-                <div className="flex justify-between items-center text-[9px] font-black uppercase tracking-[0.15em] text-slate-900 mb-2">
-                  <span className="flex items-center gap-1.5"><Zap size={12} className="text-[#D4AF37] animate-pulse" /> Sorteos por Suscriptores Premium</span>
-                  <span className="text-[#D4AF37] font-black text-xs">{(userStats.premiumCount || 0).toLocaleString()} / 1500 Premium</span>
-                </div>
-                <div className="h-2 bg-sky-100 rounded-none overflow-hidden border border-sky-200 mb-3 relative">
-                  <motion.div
-                    className="h-full bg-[#D4AF37]/20"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${Math.min(((userStats.premiumCount || 0) / 1500) * 100, 100)}%` }}
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
-                  />
-                </div>
-              </div>
-
-              {/* LISTA DE PREMIOS EN MINIATURAS RESPONSIVAS */}
-              <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 my-2.5">
-                {[
-                  { limit: 100, text: '100', prize: 'Gift Card de $500', icon: 'Gift' },
-                  { limit: 300, text: '300', prize: 'AirPods 4', icon: 'Headphones' },
-                  { limit: 500, text: '500', prize: 'iPad Mini a elegir', icon: 'Tablet' },
-                  { limit: 700, text: '700', prize: 'Galaxy S25', icon: 'Smartphone' },
-                  { limit: 900, text: '900', prize: 'iPhone', icon: 'Smartphone' },
-                  { limit: 1500, text: '1.5k', prize: 'MacBook', icon: 'Laptop' }
-                ].map((item, idx) => {
-                  const premiumCount = userStats.premiumCount || 0;
-                  const limits = [100, 300, 500, 700, 900, 1500];
-                  const unlocked = premiumCount >= item.limit;
-                  const active = premiumCount < item.limit && (idx === 0 || premiumCount >= limits[idx - 1]);
-
-                  return (
-                    <div
-                      key={idx}
-                      className={`border p-2 text-center rounded-none relative transition-all duration-200 select-none group/item hover:scale-105
-                        ${unlocked
-                          ? 'border-[#D4AF37]/30 bg-[#D4AF37]/10/30 text-[#D4AF37]'
-                          : active
-                            ? 'border-[#D4AF37]/30 bg-[#D4AF37]/10/20 text-[#D4AF37] animate-pulse'
-                            : 'border-sky-100 bg-sky-50/50 text-sky-500'
-                        }
-                      `}
-                    >
-                      <div className="text-[9px] font-black leading-none mb-1">{item.text}</div>
-                      <div className="flex justify-center text-[12px] mb-1">
-                        {item.icon === 'Gift' && <Gift size={10} className={unlocked ? "text-[#D4AF37]" : active ? "text-[#D4AF37]" : "text-sky-500"} />}
-                        {item.icon === 'Headphones' && <Headphones size={10} className={unlocked ? "text-[#D4AF37]" : active ? "text-[#D4AF37]" : "text-sky-500"} />}
-                        {item.icon === 'Tablet' && <Tablet size={10} className={unlocked ? "text-[#D4AF37]" : active ? "text-[#D4AF37]" : "text-sky-500"} />}
-                        {item.icon === 'Smartphone' && <Smartphone size={10} className={unlocked ? "text-[#D4AF37]" : active ? "text-[#D4AF37]" : "text-sky-500"} />}
-                        {item.icon === 'Laptop' && <Laptop size={10} className={unlocked ? "text-[#D4AF37]" : active ? "text-[#D4AF37]" : "text-sky-500"} />}
-                      </div>
-                      <div className="absolute inset-0 bg-sky-500/95 text-white p-1 text-[7px] font-black uppercase flex flex-col justify-center items-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-150 rounded-none z-30">
-                        <span className="text-center">{item.prize}</span>
-                        <span className="text-[5px] text-amber-300 mt-0.5 uppercase tracking-widest font-black">
-                          {unlocked ? '¡Sorteado!' : active ? 'Siguiente' : 'Bloqueado'}
-                        </span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <div className="bg-sky-50 border border-sky-100 p-2.5 rounded-none flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <div className="flex items-center justify-between sm:justify-start gap-4 w-full sm:w-auto">
-                  <span className="text-[8px] font-black text-sky-600 uppercase tracking-widest leading-none">Estatus de Sorteo</span>
-                  <span className="text-[8px] font-black text-[#D4AF37] uppercase tracking-widest leading-none">
-                    {(() => {
-                      const premiumCount = userStats.premiumCount || 0;
-                      const limits = [100, 300, 500, 700, 900, 1500];
-                      const nextLimit = limits.find(lim => premiumCount < lim) || 1500;
-                      return premiumCount >= 1500
-                        ? '¡Todas las metas alcanzadas! 🏆'
-                        : `Próxima meta: ${nextLimit} (Faltan ${nextLimit - premiumCount})`;
-                    })()}
-                  </span>
-                </div>
-                <Link href="/legal/terms" className="text-[8px] font-black text-[#D4AF37] hover:text-teal-700 uppercase tracking-widest leading-none underline text-right">
-                  Términos y Condiciones
-                </Link>
-              </div>
-            </div>
+            <GiveawayWidget premiumCount={userStats.premiumCount || 0} />
 
           </div>
 
-          {/* GRID DE EXCELENCIA: RANKING, TROFEOS Y RECORDATORIOS */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            {/* Columna 1: Recordatorios de Práctica */}
             <PracticeReminderWidget themeColor="blue" />
 
-            {/* Columna 2: Ranking Global */}
             <div className="bg-white border border-sky-200 p-5 rounded-none shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col justify-between relative overflow-hidden group animate-fade-in-up opacity-0 [animation-delay:300ms]">
               <div className="absolute top-0 right-0 p-1 opacity-5"><Trophy size={60} className="text-[#D4AF37]" /></div>
               <div className="relative z-10 space-y-3">
@@ -675,7 +348,7 @@ export default function DashboardPage() {
                 </div>
 
                 <div className="space-y-1.5 pt-2">
-                  {getDynamicLeaderboard().map((item, index) => (
+                  {dynamicLeaderboard.map((item, index) => (
                     <div
                       key={index}
                       className={`flex items-center justify-between p-2 text-[10px] font-bold border ${item.isMe ? 'border-blue-200 bg-blue-50/20 text-blue-800' : 'border-sky-100 text-sky-950'}`}
@@ -684,7 +357,7 @@ export default function DashboardPage() {
                         <span className={`w-4 h-4 flex items-center justify-center font-mono text-[9px] font-black ${index === 0 ? 'bg-[#D4AF37]/20 text-slate-900' : index === 1 ? 'bg-slate-300 text-slate-900' : 'bg-amber-700 text-white'}`}>
                           {index + 1}
                         </span>
-                        <span>{item.name}</span>
+                        <span>{item.name ? item.name.substring(0, 2).toUpperCase() : '??'}</span>
                       </div>
                       <span className="font-mono text-[9px] font-black">{item.count}</span>
                     </div>
@@ -693,7 +366,6 @@ export default function DashboardPage() {
               </div>
             </div>
 
-            {/* Columna 3: Trofeos y Logros */}
             <div className="bg-white border border-sky-200 p-5 rounded-none shadow-[0_10px_40px_rgba(14,165,233,0.08)] flex flex-col justify-between relative overflow-hidden group animate-fade-in-up opacity-0 [animation-delay:400ms]">
               <div className="absolute top-0 right-0 p-1 opacity-5"><Award size={60} className="text-[#D4AF37]" /></div>
               <div className="relative z-10 space-y-3">
@@ -702,12 +374,12 @@ export default function DashboardPage() {
                     <Sparkles size={11} className="text-[#D4AF37]" />
                     <span className="text-[8px] font-black uppercase tracking-[0.2em] text-slate-900">Hitos de Logros</span>
                   </div>
-                  <h3 className="text-xs font-black uppercase tracking-tight text-slate-900 leading-none">Trofeos Generales ({getGeneralTrophies().filter(t => t.unlocked).length}/200)</h3>
+                  <h3 className="text-xs font-black uppercase tracking-tight text-slate-900 leading-none">Trofeos Generales ({generalTrophies.filter(t => t.unlocked).length}/200)</h3>
                   <p className="text-[9px] text-sky-700 font-semibold leading-none mt-1.5">Consigue metas para desbloquear tus insignias.</p>
                 </div>
 
                 <div className="space-y-1.5 pt-1 max-h-[175px] overflow-y-auto pr-1 custom-scrollbar">
-                  {getGeneralTrophies().map((badge, idx) => (
+                  {generalTrophies.map((badge, idx) => (
                     <div
                       key={idx}
                       className={`flex items-center justify-between p-2 border ${badge.unlocked ? 'border-emerald-250 bg-[#D4AF37]/10/20 text-[#D4AF37]' : 'border-sky-100 text-sky-650 opacity-60'}`}
@@ -733,7 +405,6 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* CURRICULUM RENDER CON ACORDEÓN PLEGABLE Y ZIGZAG RESPONSIVO */}
           <motion.div
             key={activeLanguage}
             variants={containerVariants}
@@ -749,7 +420,6 @@ export default function DashboardPage() {
               return (
                 <div key={section.id} className="bg-white border border-sky-200 rounded-none shadow-[0_10px_40px_rgba(14,165,233,0.08)] overflow-hidden">
 
-                  {/* ENCABEZADO INTERACTIVO DEL MÓDULO (ACCORDION TOGGLE) */}
                   <div
                     onClick={() => {
                       if (userTier === 'free' && sIdx !== 0) {
@@ -782,7 +452,6 @@ export default function DashboardPage() {
                     </div>
 
                     <div className="flex items-center gap-4">
-                      {/* Progreso del nivel */}
                       {!(userTier === 'free' && sIdx !== 0) ? (
                         <div className="text-right hidden sm:block">
                           <span className="text-[8px] font-black uppercase tracking-wider text-sky-600">Completado: </span>
@@ -798,7 +467,6 @@ export default function DashboardPage() {
                         </div>
                       )}
 
-                      {/* Chevron con rotación o candado */}
                       {!(userTier === 'free' && sIdx !== 0) ? (
                         <motion.div
                           animate={{ rotate: isExpanded ? 180 : 0 }}
@@ -815,7 +483,6 @@ export default function DashboardPage() {
                     </div>
                   </div>
 
-                  {/* CUERPO DEL ACORDEÓN (ÁRBOL DE PROGRESO ZIGZAG) */}
                   {isExpanded && (
                     <motion.div
                       initial="hidden"
@@ -823,175 +490,43 @@ export default function DashboardPage() {
                       variants={containerVariants}
                       className="p-6 relative bg-sky-50/20 border-t border-sky-200"
                     >
-
-                      {/* LÍNEAS DE CONECTORES DEL ÁRBOL */}
-                      {/* Conector Central (Desktop) */}
                       <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-[2px] bg-sky-200 -translate-x-1/2 z-0" />
-
-                      {/* Conector Lateral (Mobile) */}
                       <div className="block md:hidden absolute left-[1.65rem] top-8 bottom-8 w-[2px] bg-sky-200 z-0" />
 
                       <div className="space-y-1.5 md:space-y-2 relative z-10">
                         {section.lessons.map((lesson, lIdx) => {
                           const status = getLessonState(lesson.id);
                           const stars = getStars(lesson.id);
-                          const isLocked = status === 'locked';
-                          const isActive = status === 'active';
-                          const isCompleted = status === 'completed';
                           const globalIndex = allLessonsFlat.findIndex(l => l.id === lesson.id);
                           const isEven = lIdx % 2 === 0;
 
-                          // Tarjeta de la lección
-                          const CardMarkup = (
-                            <div
-                              onClick={() => !isLocked && router.push(`/lesson/${lesson.id}?type=standard&timeMode=${timeMode}`)}
-                              className={`
-                                w-full max-w-[420px] p-4 rounded-none border transition-all duration-200 cursor-pointer bg-white relative overflow-hidden group/card
-                                ${isLocked ? 'opacity-60 border-sky-100' : `border-sky-200 hover:border-${theme.primary} hover:shadow-[0_10px_40px_rgba(14,165,233,0.08)]`}
-                                ${isActive ? `ring-2 ring-${theme.primary}/10 border-${theme.primary} shadow-none` : ''}
-                              `}
-                            >
-                              <div className="flex flex-col sm:flex-row justify-between items-start gap-2 relative z-10">
-                                <div className="flex-1 min-w-0">
-                                  <div className="flex items-center gap-2 mb-1.5">
-                                    <span className={`px-2 py-0.5 rounded-none text-[8px] font-black uppercase tracking-[0.2em] ${isActive ? `bg-${theme.primary} text-slate-900` : 'bg-sky-100 text-slate-900'}`}>
-                                      Módulo {globalIndex + 1}
-                                    </span>
-                                  </div>
-                                  <h3 className={`text-xs font-black tracking-tight leading-tight uppercase ${isLocked ? 'text-slate-500' : 'text-slate-900'}`}>{lesson.title}</h3>
-                                  <p className="text-[9px] text-slate-600 mt-1 leading-snug">{lesson.description}</p>
-                                </div>
-                                <div className="flex flex-col items-end justify-between h-full min-w-[50px]">
-                                  {isCompleted && (
-                                    <div className="flex gap-0.5 mt-1">
-                                      {[1, 2, 3].map((s) => (<Trophy key={s} size={12} className={s <= stars ? `text-${theme.primary} fill-${theme.primary}` : 'text-sky-300'} />))}
-                                    </div>
-                                  )}
-                                  {isActive && (
-                                    <div className={`text-${theme.primary} transition-colors mt-1`}>
-                                      <ArrowRight size={16} className="animate-pulse" />
-                                    </div>
-                                  )}
-                                </div>
-                              </div>
-                            </div>
-                          );
-
                           return (
-                            <motion.div
-                              variants={itemVariants}
+                            <LessonZigZagCard
                               key={lesson.id}
-                              className={`relative flex flex-col w-full md:items-center justify-between ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-                            >
-                              {/* Columna de la Tarjeta */}
-                              <div className={`w-full md:w-[calc(50%-2.5rem)] flex pl-14 md:pl-0 ${isEven ? 'justify-start md:justify-end' : 'justify-start md:justify-start'}`}>
-                                {CardMarkup}
-                              </div>
-
-                              {/* Botón Central del Nodo de Progreso */}
-                              <div className="absolute left-[0.5rem] md:left-1/2 md:-translate-x-1/2 top-4 md:top-1/2 md:-translate-y-1/2 z-20">
-                                <button
-                                  onClick={() => !isLocked && router.push(`/lesson/${lesson.id}?type=standard&timeMode=${timeMode}`)}
-                                  disabled={isLocked}
-                                  className={`
-                                    w-9 h-9 rounded-full flex items-center justify-center border transition-all duration-200 shadow-none relative
-                                    ${isActive ? `bg-${theme.primary} border-${theme.accent} text-slate-900 shadow-none scale-110 z-20 ring-4 ring-${theme.primary}/20` : ''} 
-                                    ${isCompleted ? `bg-white border-${theme.primary} text-${theme.primary} hover:bg-${theme.secondary}` : ''} 
-                                    ${isLocked ? 'bg-sky-50 border-sky-200 text-sky-600' : ''}
-                                  `}
-                                >
-                                  {isLocked && <Lock size={14} />}
-                                  {isActive && <Play size={16} fill="currentColor" className="ml-0.5" />}
-                                  {isCompleted && <Check size={16} strokeWidth={3} />}
-                                </button>
-                              </div>
-
-                              {/* Bloque de Tiempos (Columna Espaciadora) */}
-                              <div className={`hidden md:flex w-full md:w-[calc(50%-3rem)] flex-col justify-center ${isEven ? 'items-start pl-6' : 'items-end pr-6'}`}>
-                                <div className={`flex flex-col gap-2 p-3.5 bg-white/60 backdrop-blur-sm rounded-none border border-sky-100 shadow-[0_4px_15px_rgba(14,165,233,0.05)] w-48 ${isEven ? 'text-left' : 'text-right'}`}>
-                                  {/* Tiempo Estimado */}
-                                  <div className={`flex items-center gap-2 text-[9px] font-black uppercase tracking-widest ${isLocked ? 'text-slate-500' : 'text-slate-900'}`}>
-                                    {isEven ? (
-                                      <>
-                                        <Clock size={12} className={isLocked ? 'opacity-50' : 'text-slate-900'} />
-                                        <span>Estimado: 15m</span>
-                                      </>
-                                    ) : (
-                                      <>
-                                        <span>Estimado: 15m</span>
-                                        <Clock size={12} className={isLocked ? 'opacity-50' : 'text-slate-900'} />
-                                      </>
-                                    )}
-                                  </div>
-                                  
-                                  {/* Tiempo Real (Completado) */}
-                                  {isCompleted && (
-                                    <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-[#D4AF37]">
-                                      {isEven ? (
-                                        <>
-                                          <CheckCircle2 size={12} className="text-[#D4AF37]" />
-                                          <span>Real: {Math.floor(Math.random() * 5) + 10}m {Math.floor(Math.random() * 59)}s</span>
-                                        </>
-                                      ) : (
-                                        <>
-                                          <span>Real: {Math.floor(Math.random() * 5) + 10}m {Math.floor(Math.random() * 59)}s</span>
-                                          <CheckCircle2 size={12} className="text-[#D4AF37]" />
-                                        </>
-                                      )}
-                                    </div>
-                                  )}
-
-                                  {/* Tiempo En Curso */}
-                                  {isActive && (
-                                    <div className="flex flex-col gap-1.5 mt-1">
-                                      <div className={`flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-[#D4AF37] ${isEven ? 'justify-start' : 'justify-end'}`}>
-                                        {isEven ? (
-                                          <>
-                                            <Timer size={12} className="animate-pulse" />
-                                            <span className="animate-pulse">En Progreso</span>
-                                          </>
-                                        ) : (
-                                          <>
-                                            <span className="animate-pulse">En Progreso</span>
-                                            <Timer size={12} className="animate-pulse" />
-                                          </>
-                                        )}
-                                      </div>
-                                      <div className={`w-full h-1 bg-sky-100/50 rounded-none overflow-hidden`}>
-                                        <motion.div 
-                                          initial={{ width: 0 }}
-                                          animate={{ width: `${getLessonProgressPercent(lesson.id)}%` }}
-                                          className={`h-full bg-[#D4AF37] ${isEven ? 'float-left' : 'float-right'}`}
-                                        />
-                                      </div>
-                                      <div className={`text-[7px] font-black text-sky-600/70 uppercase tracking-widest ${isEven ? 'text-left' : 'text-right'}`}>
-                                        Avance: {getLessonProgressPercent(lesson.id)}%
-                                      </div>
-                                    </div>
-                                  )}
-                                </div>
-                              </div>
-
-                            </motion.div>
+                              lesson={lesson}
+                              status={status}
+                              stars={stars}
+                              progressPercent={getLessonProgressPercent(lesson.id)}
+                              globalIndex={globalIndex}
+                              isEven={isEven}
+                              theme={theme}
+                              timeMode={timeMode}
+                            />
                           );
                         })}
                       </div>
-
                     </motion.div>
                   )}
-
                 </div>
               );
             })}
           </motion.div>
 
-          {/* EXÁMENES COMPACTOS (SIMULADORES ESTRATÉGICOS) */}
           <div className="mt-8 mb-12">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 border-b border-sky-200 pb-4">
                 <h2 className="text-[9px] font-black text-sky-600 uppercase tracking-[0.3em] flex items-center gap-2">
                   <Shield size={14} className={`text-${theme.primary}`} /> Simuladores Estratégicos
                 </h2>
-
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -1073,58 +608,6 @@ export default function DashboardPage() {
                     })()}
                   </div>
                 </Link>
-                <Link
-                  href={`/lesson/toefl_mock`}
-                  onClick={(e) => handleSimulatorClick(e, 'toefl_mock')}
-                  className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group relative overflow-hidden`}
-                >
-                  {userTier !== 'executive' && (
-                    <div className="absolute top-0 right-0 bg-amber-100 text-[#D4AF37] px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-[#D4AF37]/30 z-10 shadow-none">
-                      <Lock size={8} /> EXECUTIVE
-                    </div>
-                  )}
-                  <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-slate-900 transition-colors`}><Award size={18} /></div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-[9px] font-black text-sky-950 uppercase tracking-widest mb-0.5 truncate">Simulador TOEFL®</h4>
-                    <p className="text-[8px] text-[#D4AF37] uppercase tracking-wider font-black font-serif italic mb-1">iBT Integrated (4 Skills)</p>
-                    {(() => {
-                      const completedCount = getCompletedCount('toefl_mock');
-                      return completedCount > 0 ? (
-                        <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[7px] font-black uppercase px-1.5 py-0.5 border border-[#D4AF37]/30">
-                          ✓ COMPLETO
-                        </span>
-                      ) : (
-                        <span className="text-[7px] text-sky-600 font-bold uppercase tracking-wider">VERSIÓN ÚNICA</span>
-                      );
-                    })()}
-                  </div>
-                </Link>
-                <Link
-                  href={`/lesson/ielts_mock`}
-                  onClick={(e) => handleSimulatorClick(e, 'ielts_mock')}
-                  className={`bg-white border border-sky-200 p-4 hover:border-${theme.primary} transition-all flex items-center gap-4 group relative overflow-hidden`}
-                >
-                  {userTier !== 'executive' && (
-                    <div className="absolute top-0 right-0 bg-amber-100 text-[#D4AF37] px-2 py-0.5 rounded-bl-lg text-[7px] font-black uppercase flex items-center gap-1 border-b border-l border-[#D4AF37]/30 z-10 shadow-none">
-                      <Lock size={8} /> EXECUTIVE
-                    </div>
-                  )}
-                  <div className={`bg-sky-100 p-3 text-sky-600 group-hover:bg-${theme.primary} group-hover:text-slate-900 transition-colors`}><Award size={18} /></div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-[9px] font-black text-sky-950 uppercase tracking-widest mb-0.5 truncate">Simulador IELTS®</h4>
-                    <p className="text-[8px] text-[#D4AF37] uppercase tracking-wider font-black font-serif italic mb-1">Academic (Global)</p>
-                    {(() => {
-                      const completedCount = getCompletedCount('ielts_mock');
-                      return completedCount > 0 ? (
-                        <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[7px] font-black uppercase px-1.5 py-0.5 border border-[#D4AF37]/30">
-                          ✓ COMPLETO
-                        </span>
-                      ) : (
-                        <span className="text-[7px] text-sky-600 font-bold uppercase tracking-wider">VERSIÓN ÚNICA</span>
-                      );
-                    })()}
-                  </div>
-                </Link>
               </div>
             </div>
         </div>
@@ -1135,21 +618,16 @@ export default function DashboardPage() {
         </div>
         </div> {/* CIERRE CONTENEDOR CENTRAL */}
 
-        {/* --- ESPACIO PUBLICITARIO DERECHO --- */}
+        {/* AdSense Derecho */}
         <div className="hidden 2xl:block w-[160px] shrink-0">
-          <div className="sticky top-20 flex justify-center">
-             <div className="w-[160px] h-[600px] bg-sky-100/50 border-2 border-dashed border-sky-300 flex flex-col items-center justify-center text-sky-600 text-center p-4 rounded-none shadow-sm">
-                <span className="font-black text-[10px] uppercase tracking-widest mb-2">AdSense Derecho</span>
-                <span className="text-[9px] leading-tight font-bold">160x600 Vertical</span>
-             </div>
+          <div className="sticky top-20 flex justify-center w-full">
+             <AdBanner slot="9483726154" style={{ display: 'inline-block', width: '160px', height: '600px' }} />
           </div>
         </div>
 
       </div> {/* CIERRE WRAPPER PRINCIPAL CON ANUNCIOS */}
 
       {showUpgradeModal && <UpgradeModal onClose={() => setShowUpgradeModal(false)} />}
-
-
       {showStatsModal && <StatsModal onClose={() => setShowStatsModal(false)} userStats={userStats} />}
     </div>
   );

@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from pydantic import BaseModel
 
 from app.database import get_db
-from app.db.models import User, PromoCoupon
+from app.db.models import User, PromoCoupon, GlobalSetting
 from app.api.deps import get_current_active_user
 
 # --- PADDLE SDK IMPORTS ---
@@ -278,3 +278,34 @@ async def paddle_webhook(request: Request, db: Session = Depends(get_db)):
     except Exception as e:
         print(f"❌ Error procesando el webhook: {str(e)}")
         return {"status": "error_acknowledged"}
+
+
+@router.get("/public/pricing")
+def get_public_pricing(db: Session = Depends(get_db)):
+    """
+    Obtiene los precios públicos configurados por el administrador
+    para mostrarlos en la landing page y en la página de planes.
+    """
+    keys = [
+        "display_price_pro_monthly",
+        "display_price_pro_yearly",
+        "display_price_exec_monthly",
+        "display_price_exec_yearly"
+    ]
+    settings = db.query(GlobalSetting).filter(GlobalSetting.key.in_(keys)).all()
+    
+    # Precios por defecto si no están configurados en BD
+    pricing = {
+        "display_price_pro_monthly": 129,
+        "display_price_pro_yearly": 799,
+        "display_price_exec_monthly": 249,
+        "display_price_exec_yearly": 1499
+    }
+    
+    for s in settings:
+        try:
+            pricing[s.key] = int(s.value)
+        except ValueError:
+            pass
+            
+    return pricing

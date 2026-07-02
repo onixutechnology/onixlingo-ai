@@ -1230,28 +1230,28 @@ export function evaluateUnlocks(
   if (frCount >= 25) ids.add('t_406');
   if (frCount >= 30) ids.add('t_416');
   if (frCount >= 40) ids.add('t_407');
-  if (frCount >= 50) ids.add('t_408'); ids.add('t_430');
+  if (frCount >= 50) { ids.add('t_408'); ids.add('t_430'); }
   if (frCount >= 60) ids.add('t_409');
   if (frCount >= 80) ids.add('t_410');
-  if (frCount >= 100) ids.add('t_411'); ids.add('t_431');
+  if (frCount >= 100) { ids.add('t_411'); ids.add('t_431'); }
   if (frCount >= 150) ids.add('t_432');
-  if (frCount >= 200) ids.add('t_433'); ids.add('t_412');
+  if (frCount >= 200) { ids.add('t_433'); ids.add('t_412'); }
 
   // ─── CHINO ───
   if (hasZh) ids.add('t_521');
   if (zhCount >= 1) ids.add('t_533');
   if (zhCount >= 3) ids.add('t_522');
   if (zhCount >= 5) ids.add('t_523');
-  if (zhCount >= 10) ids.add('t_524'); ids.add('t_561');
+  if (zhCount >= 10) { ids.add('t_524'); ids.add('t_561'); }
   if (zhCount >= 15) ids.add('t_534');
   if (zhCount >= 20) ids.add('t_525');
-  if (zhCount >= 25) ids.add('t_526'); ids.add('t_562');
+  if (zhCount >= 25) { ids.add('t_526'); ids.add('t_562'); }
   if (zhCount >= 30) ids.add('t_535');
   if (zhCount >= 40) ids.add('t_527');
-  if (zhCount >= 50) ids.add('t_528'); ids.add('t_563');
-  if (zhCount >= 60) ids.add('t_529'); ids.add('t_536');
+  if (zhCount >= 50) { ids.add('t_528'); ids.add('t_563'); }
+  if (zhCount >= 60) { ids.add('t_529'); ids.add('t_536'); }
   if (zhCount >= 80) ids.add('t_530');
-  if (zhCount >= 100) ids.add('t_531'); ids.add('t_564');
+  if (zhCount >= 100) { ids.add('t_531'); ids.add('t_564'); }
   if (zhCount >= 150) ids.add('t_537');
   if (zhCount >= 200) ids.add('t_532');
 
@@ -1305,7 +1305,7 @@ export function evaluateUnlocks(
   if (speechScore >= 90) ids.add('t_869');
   if (speechScore >= 99) ids.add('t_870');
   if (speechSessions >= 10) ids.add('t_915');
-  if (boardroomSessions >= 1) ids.add('t_862'); ids.add('t_863');
+  if (boardroomSessions >= 1) { ids.add('t_862'); ids.add('t_863'); }
   if (boardroomSessions >= 10) ids.add('t_917');
   if (b2bSessions >= 1) ids.add('t_864');
   if (b2bWins >= 5) ids.add('t_865');
@@ -1326,10 +1326,10 @@ export function evaluateUnlocks(
   if (eloquence >= 100000) ids.add('t_940');
   if (rank <= 100) ids.add('t_941');
   if (rank <= 50) ids.add('t_942');
-  if (rank <= 25) ids.add('t_943'); ids.add('t_973');
+  if (rank <= 25) { ids.add('t_943'); ids.add('t_973'); }
   if (rank <= 10) ids.add('t_944');
   if (rank <= 5) ids.add('t_945');
-  if (rank === 1) ids.add('t_946'); ids.add('t_961');
+  if (rank === 1) { ids.add('t_946'); ids.add('t_961'); }
 
   // ─── LEGENDARIOS ───
   if (enCount >= 50 && frCount >= 50 && zhCount >= 50) ids.add('t_981');

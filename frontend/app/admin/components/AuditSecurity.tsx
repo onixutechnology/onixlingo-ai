@@ -49,37 +49,37 @@ export default function AuditSecurity() {
     <div className="w-full max-w-[1800px] mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
       
       {/* HEADER */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-indigo-500/30 shadow-lg relative overflow-hidden group">
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-[#1d4ed8]  relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-indigo-400/20 transition-all duration-700"></div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none opacity-10"></div>
         
         <div className="relative z-10 flex items-center gap-5">
-          <div className="w-14 h-14 bg-indigo-500/20 border border-indigo-400/50 flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.4)]">
+          <div className="w-14 h-14 bg-indigo-500/20 border border-[#1d4ed8]/50 flex items-center justify-center ">
             <ShieldCheck size={28} className="text-indigo-300" />
           </div>
           <div>
-            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-shadow-sm">Seguridad y Auditoría</h2>
+            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-">Seguridad y Auditoría</h2>
             <p className="text-xs text-indigo-200/70 mt-1 font-mono uppercase tracking-widest">Registro de Acciones Administrativas</p>
           </div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-emerald-50 border border-emerald-200 p-5 flex items-center gap-4">
+        <div className="bg-emerald-50 border border-[#1d4ed8] p-5 flex items-center gap-4">
           <div className="bg-emerald-100 p-3 rounded-full text-emerald-600"><Server size={20} /></div>
           <div>
             <h4 className="text-[10px] uppercase tracking-widest font-black text-emerald-800">Estado del Sistema</h4>
             <p className="text-lg font-black text-emerald-900 mt-1">Estable</p>
           </div>
         </div>
-        <div className="bg-indigo-50 border border-indigo-200 p-5 flex items-center gap-4">
+        <div className="bg-indigo-50 border border-[#1d4ed8] p-5 flex items-center gap-4">
           <div className="bg-indigo-100 p-3 rounded-full text-indigo-600"><Activity size={20} /></div>
           <div>
             <h4 className="text-[10px] uppercase tracking-widest font-black text-indigo-800">Eventos de Auditoría (24h)</h4>
             <p className="text-lg font-black text-indigo-900 mt-1">{logs.length}</p>
           </div>
         </div>
-        <div className="bg-amber-50 border border-amber-200 p-5 flex items-center gap-4">
+        <div className="bg-amber-50 border border-[#1d4ed8] p-5 flex items-center gap-4">
           <div className="bg-amber-100 p-3 rounded-full text-amber-600"><AlertTriangle size={20} /></div>
           <div>
             <h4 className="text-[10px] uppercase tracking-widest font-black text-amber-800">Alertas Críticas</h4>
@@ -89,11 +89,11 @@ export default function AuditSecurity() {
       </div>
 
       {/* TABLE */}
-      <div className="bg-white border border-slate-200 shadow-sm overflow-hidden">
+      <div className="bg-white border border-[#1d4ed8]  overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-slate-50 border-b border-slate-200 text-[10px] uppercase tracking-widest text-slate-500">
+              <tr className="bg-slate-50 border-b border-[#1d4ed8] text-[10px] uppercase tracking-widest text-slate-500">
                 <th className="p-4 font-black">Fecha y Hora</th>
                 <th className="p-4 font-black">Acción</th>
                 <th className="p-4 font-black">Admin ID</th>
@@ -113,7 +113,7 @@ export default function AuditSecurity() {
                       {new Date(log.created_at).toLocaleString()}
                     </td>
                     <td className="p-4">
-                      <span className="inline-flex items-center px-2 py-1 rounded bg-slate-100 text-[10px] font-black uppercase text-slate-700 tracking-wide border border-slate-200">
+                      <span className="inline-flex items-center px-2 py-1 rounded bg-slate-100 text-[10px] font-black uppercase text-slate-700 tracking-wide border border-[#1d4ed8]">
                         {log.action}
                       </span>
                     </td>

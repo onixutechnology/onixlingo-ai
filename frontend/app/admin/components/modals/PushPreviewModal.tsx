@@ -27,7 +27,7 @@ export default function PushPreviewModal({
 
   return createPortal(
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="bg-white rounded-none shadow-[8px_8px_0px_0px_rgba(203,213,225,0.6)] w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200">
+      <div className="bg-white rounded-none  w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200">
         <div className="flex justify-between items-center p-6 border-b border-slate-100">
           <div className="flex items-center gap-3">
             <BellIcon className="text-amber-500" size={24} />
@@ -40,8 +40,8 @@ export default function PushPreviewModal({
         
         <div className="p-6 bg-slate-50 flex justify-center items-center py-12">
           {/* Simulador de teléfono / notificación nativa */}
-          <div className="bg-white/90 backdrop-blur-md rounded-[20px] shadow-lg border border-slate-100 w-full max-w-[320px] overflow-hidden">
-            <div className="px-4 py-3 bg-slate-900/5 border-b border-slate-900/5 flex items-center justify-between">
+          <div className="bg-white/90 backdrop-blur-md rounded-[20px]  border border-slate-100 w-full max-w-[320px] overflow-hidden">
+            <div className="px-4 py-3 bg-slate-900/5 border-b border-[#1d4ed8]/5 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-5 h-5 bg-indigo-600 rounded flex items-center justify-center text-white text-[10px] font-bold">O</div>
                   <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">OnixLingo</span>

@@ -73,16 +73,16 @@ export default function FinanceManager() {
     <div className="w-full max-w-[1800px] mx-auto space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
       
       {/* HEADER SCI-FI STYLING */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-indigo-500/30 shadow-lg relative overflow-hidden group">
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4 bg-slate-900 bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 p-6 md:p-8 border border-[#1d4ed8]  relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-indigo-400/20 transition-all duration-700"></div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none opacity-10"></div>
         
         <div className="relative z-10 flex items-center gap-5">
-          <div className="w-14 h-14 bg-indigo-500/20 border border-indigo-400/50 flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.4)]">
+          <div className="w-14 h-14 bg-indigo-500/20 border border-[#1d4ed8]/50 flex items-center justify-center ">
             <CreditCard size={28} className="text-emerald-400" />
           </div>
           <div>
-            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-shadow-sm">Finanzas y Facturas</h2>
+            <h2 className="text-2xl font-black text-white tracking-widest uppercase text-">Finanzas y Facturas</h2>
             <p className="text-xs text-indigo-200/70 mt-1 font-mono uppercase tracking-widest">Motor de Pagos & Webhooks de Paddle</p>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function FinanceManager() {
             <RefreshCcw size={14} className={loading ? "animate-spin" : ""} />
           </button>
           <button 
-            className="flex items-center gap-3 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-900 rounded-none text-xs font-black font-mono uppercase tracking-widest transition-all shadow-[4px_4px_0_0_rgba(16,185,129,0.4)] hover:shadow-[2px_2px_0_0_rgba(16,185,129,0.4)] hover:translate-y-0.5 hover:translate-x-0.5 active:scale-95"
+            className="flex items-center gap-3 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-900 rounded-none text-xs font-black font-mono uppercase tracking-widest transition-all   hover:translate-y-0.5 hover:translate-x-0.5 active:scale-95"
           >
             <Download size={16} />
             Exportar CSV
@@ -106,7 +106,7 @@ export default function FinanceManager() {
 
       {/* KPIS */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white border border-slate-200 p-6 flex items-center justify-between group hover:border-emerald-200 transition-colors">
+        <div className="bg-white border border-[#1d4ed8] p-6 flex items-center justify-between group hover:border-[#1d4ed8] transition-colors">
           <div>
             <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Ingreso Bruto Histórico</p>
             <div className="flex items-end gap-2 mt-1">
@@ -120,7 +120,7 @@ export default function FinanceManager() {
           </div>
         </div>
         
-        <div className="bg-white border border-slate-200 p-6 flex items-center justify-between group hover:border-indigo-200 transition-colors">
+        <div className="bg-white border border-[#1d4ed8] p-6 flex items-center justify-between group hover:border-[#1d4ed8] transition-colors">
           <div>
             <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Transacciones Procesadas</p>
             <div className="flex items-end gap-2 mt-1">
@@ -134,7 +134,7 @@ export default function FinanceManager() {
           </div>
         </div>
 
-        <div className="bg-white border border-slate-200 p-6 flex items-center justify-between group hover:border-amber-200 transition-colors">
+        <div className="bg-white border border-[#1d4ed8] p-6 flex items-center justify-between group hover:border-[#1d4ed8] transition-colors">
           <div>
             <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Salud de Ingresos</p>
             <div className="flex items-end gap-2 mt-2">
@@ -162,7 +162,7 @@ export default function FinanceManager() {
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
         
         {/* CHART WIDGET */}
-        <div className="xl:col-span-1 bg-white border border-slate-200 shadow-sm flex flex-col">
+        <div className="xl:col-span-1 bg-white border border-[#1d4ed8]  flex flex-col">
           <div className="p-6 border-b border-slate-100">
             <h3 className="text-sm font-black uppercase tracking-widest text-slate-900 flex items-center gap-2">
               <BarChart3 size={16} className="text-indigo-500" /> Ingresos Mensuales
@@ -205,7 +205,7 @@ export default function FinanceManager() {
         </div>
 
         {/* TRANSACTIONS TABLE */}
-        <div className="xl:col-span-2 bg-white border border-slate-200 shadow-sm flex flex-col">
+        <div className="xl:col-span-2 bg-white border border-[#1d4ed8]  flex flex-col">
           <div className="p-6 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <h3 className="text-sm font-black uppercase tracking-widest text-slate-900 flex items-center gap-2">
@@ -220,7 +220,7 @@ export default function FinanceManager() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Buscar email o ID..." 
-                className="pl-9 pr-4 py-2 text-xs border border-slate-200 bg-slate-50 focus:outline-none focus:border-indigo-500 font-medium w-full sm:w-64" 
+                className="pl-9 pr-4 py-2 text-xs border border-[#1d4ed8] bg-slate-50 focus:outline-none focus:border-[#1d4ed8] font-medium w-full sm:w-64" 
               />
             </div>
           </div>
@@ -277,7 +277,7 @@ export default function FinanceManager() {
                         </div>
                       </td>
                       <td className="px-6 py-4 text-right">
-                        <button className="text-[10px] font-black uppercase text-indigo-600 hover:bg-indigo-50 px-3 py-1.5 transition-colors border border-transparent hover:border-indigo-200 inline-flex items-center gap-1">
+                        <button className="text-[10px] font-black uppercase text-indigo-600 hover:bg-indigo-50 px-3 py-1.5 transition-colors border border-transparent hover:border-[#1d4ed8] inline-flex items-center gap-1">
                           Factura <ArrowUpRight size={10} />
                         </button>
                       </td>

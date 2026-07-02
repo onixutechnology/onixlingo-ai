@@ -1,5 +1,4 @@
 'use client';
-import LandingFooter from '@/components/LandingFooter';
 import LandingNavbar from '@/components/LandingNavbar';
 
 import React, { useState, useEffect, Suspense } from 'react';

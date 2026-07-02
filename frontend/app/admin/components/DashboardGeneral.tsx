@@ -137,20 +137,20 @@ export default function DashboardGeneral() {
     <div className="relative max-w-7xl mx-auto space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20">
 
 
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 border-b-2 border-slate-200/50 pb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 border-b-2 border-[#1d4ed8] pb-6">
         <div>
           <h2 className="text-3xl font-black text-slate-900 uppercase tracking-widest">ONIXLINGO PANEL ADMINISTRATIVO</h2>
           <p className="text-sm text-slate-500 mt-1 font-mono">SYS_STATUS: ONLINE | DATA_SOURCE: LIVE_DB_FAST</p>
         </div>
-        <div className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-emerald-400 border border-emerald-500/30 text-xs font-bold font-mono">
-          <div className="w-2 h-2 bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,1)] animate-pulse"></div>
+        <div className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-emerald-400 border border-[#1d4ed8] text-xs font-bold font-mono">
+          <div className="w-2 h-2 bg-emerald-400  animate-pulse"></div>
           SYS_ONLINE
         </div>
       </div>
 
       {/* 1. VISIÓN FINANCIERA & PREDICTIVA (REAL) */}
       <section className="space-y-4">
-        <h3 className="text-sm font-black text-slate-800 flex items-center gap-2 uppercase tracking-widest border-l-4 border-emerald-500 pl-3">
+        <h3 className="text-sm font-black text-slate-800 flex items-center gap-2 uppercase tracking-widest border-l-4 border-[#1d4ed8] pl-3">
           <DollarSign size={16} className="text-emerald-500"/> Financial Sector
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
@@ -165,7 +165,7 @@ export default function DashboardGeneral() {
 
       {/* 2. CRECIMIENTO Y RETENCIÓN (REAL) */}
       <section className="space-y-4">
-        <h3 className="text-sm font-black text-slate-800 flex items-center gap-2 uppercase tracking-widest border-l-4 border-blue-500 pl-3">
+        <h3 className="text-sm font-black text-slate-800 flex items-center gap-2 uppercase tracking-widest border-l-4 border-[#1d4ed8] pl-3">
           <Activity size={16} className="text-blue-500"/> User Telemetry
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
@@ -180,7 +180,7 @@ export default function DashboardGeneral() {
 
       {/* 3. CONTENIDO, SOPORTE Y MARKETING (REAL) */}
       <section className="space-y-4">
-        <h3 className="text-sm font-black text-slate-800 flex items-center gap-2 uppercase tracking-widest border-l-4 border-slate-700 pl-3">
+        <h3 className="text-sm font-black text-slate-800 flex items-center gap-2 uppercase tracking-widest border-l-4 border-[#1d4ed8] pl-3">
           <Database size={16} className="text-slate-700"/> Operations Array
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-4">
@@ -197,37 +197,37 @@ export default function DashboardGeneral() {
       
       {/* 4. DISTRIBUCIONES (GRÁFICOS REALES SCI-FI) */}
       <section className="space-y-4">
-        <h3 className="text-sm font-black text-slate-800 flex items-center gap-2 uppercase tracking-widest border-l-4 border-purple-500 pl-3">
+        <h3 className="text-sm font-black text-slate-800 flex items-center gap-2 uppercase tracking-widest border-l-4 border-[#1d4ed8] pl-3">
           <BarChart2 size={16} className="text-purple-500"/> Distribution Nodes
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           {/* Chart 1: Distribución de Idiomas */}
-          <div className="relative bg-white/40 backdrop-blur-xl p-6 border border-white/60 shadow-[4px_4px_0px_0px_rgba(203,213,225,0.6)] transition-all hover:shadow-[8px_8px_0px_0px_rgba(167,139,250,0.6)] hover:-translate-y-1 hover:-translate-x-1 group">
-            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-indigo-300 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-indigo-300 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div className="relative bg-white/40 backdrop-blur-xl p-6 border border-[#1d4ed8]  transition-all  hover:-translate-y-1 hover:-translate-x-1 group">
+            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#1d4ed8] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[#1d4ed8] opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
             <h4 className="text-xs font-black text-slate-700 mb-6 flex items-center gap-2 uppercase tracking-widest"><Globe size={14} className="text-blue-500"/> Nodes por Idioma</h4>
             <div className="space-y-5">
               <div>
                 <div className="flex justify-between text-[10px] font-black font-mono text-slate-600 mb-1.5 uppercase"><span>ENG_NODE</span> <span>{((s.en_learners / total_learners) * 100).toFixed(0)}%</span></div>
-                <div className="w-full bg-slate-200/50 h-2"><div className="bg-blue-500 h-2 shadow-[0_0_10px_rgba(59,130,246,0.6)]" style={{ width: `${(s.en_learners / total_learners) * 100}%` }}></div></div>
+                <div className="w-full bg-slate-200/50 h-2"><div className="bg-blue-500 h-2 " style={{ width: `${(s.en_learners / total_learners) * 100}%` }}></div></div>
               </div>
               <div>
                 <div className="flex justify-between text-[10px] font-black font-mono text-slate-600 mb-1.5 uppercase"><span>FRA_NODE</span> <span>{((s.fr_learners / total_learners) * 100).toFixed(0)}%</span></div>
-                <div className="w-full bg-slate-200/50 h-2"><div className="bg-indigo-500 h-2 shadow-[0_0_10px_rgba(99,102,241,0.6)]" style={{ width: `${(s.fr_learners / total_learners) * 100}%` }}></div></div>
+                <div className="w-full bg-slate-200/50 h-2"><div className="bg-indigo-500 h-2 " style={{ width: `${(s.fr_learners / total_learners) * 100}%` }}></div></div>
               </div>
               <div>
                 <div className="flex justify-between text-[10px] font-black font-mono text-slate-600 mb-1.5 uppercase"><span>ZHO_NODE</span> <span>{((s.zh_learners / total_learners) * 100).toFixed(0)}%</span></div>
-                <div className="w-full bg-slate-200/50 h-2"><div className="bg-emerald-500 h-2 shadow-[0_0_10px_rgba(16,185,129,0.6)]" style={{ width: `${(s.zh_learners / total_learners) * 100}%` }}></div></div>
+                <div className="w-full bg-slate-200/50 h-2"><div className="bg-emerald-500 h-2 " style={{ width: `${(s.zh_learners / total_learners) * 100}%` }}></div></div>
               </div>
             </div>
           </div>
 
           {/* Chart 2: Distribución de Suscripciones */}
-          <div className="relative bg-white/40 backdrop-blur-xl p-6 border border-white/60 shadow-[4px_4px_0px_0px_rgba(203,213,225,0.6)] transition-all hover:shadow-[8px_8px_0px_0px_rgba(251,191,36,0.6)] hover:-translate-y-1 hover:-translate-x-1 group">
-            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-amber-300 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-amber-300 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div className="relative bg-white/40 backdrop-blur-xl p-6 border border-[#1d4ed8]  transition-all  hover:-translate-y-1 hover:-translate-x-1 group">
+            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#1d4ed8] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[#1d4ed8] opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
             <h4 className="text-xs font-black text-slate-700 mb-6 flex items-center gap-2 uppercase tracking-widest"><Crown size={14} className="text-amber-500"/> Subscriptions Status</h4>
             <div className="space-y-5">
@@ -237,15 +237,15 @@ export default function DashboardGeneral() {
               </div>
               <div>
                 <div className="flex justify-between text-[10px] font-black font-mono text-amber-600 mb-1.5 uppercase"><span>TIER_VIP</span> <span>{s.total_users > 0 ? ((s.pro_users/s.total_users) * 100).toFixed(0) : 0}%</span></div>
-                <div className="w-full bg-amber-100/50 h-2"><div className="bg-amber-500 h-2 shadow-[0_0_10px_rgba(245,158,11,0.8)]" style={{ width: `${s.total_users > 0 ? (s.pro_users/s.total_users) * 100 : 0}%` }}></div></div>
+                <div className="w-full bg-amber-100/50 h-2"><div className="bg-amber-500 h-2 " style={{ width: `${s.total_users > 0 ? (s.pro_users/s.total_users) * 100 : 0}%` }}></div></div>
               </div>
               <div>
                 <div className="flex justify-between text-[10px] font-black font-mono text-slate-800 mb-1.5 uppercase"><span>TIER_EXEC</span> <span>{s.total_users > 0 ? ((s.executive_users/s.total_users) * 100).toFixed(0) : 0}%</span></div>
-                <div className="w-full bg-slate-200/50 h-2"><div className="bg-slate-800 h-2 shadow-[0_0_10px_rgba(30,41,59,0.8)]" style={{ width: `${s.total_users > 0 ? (s.executive_users/s.total_users) * 100 : 0}%` }}></div></div>
+                <div className="w-full bg-slate-200/50 h-2"><div className="bg-slate-800 h-2 " style={{ width: `${s.total_users > 0 ? (s.executive_users/s.total_users) * 100 : 0}%` }}></div></div>
               </div>
               <div>
                 <div className="flex justify-between text-[10px] font-black font-mono text-emerald-600 mb-1.5 uppercase"><span>FREE_ACTIVE</span> <span>{s.total_users > 0 ? ((s.active_free_users/s.total_users) * 100).toFixed(0) : 0}%</span></div>
-                <div className="w-full bg-emerald-100/50 h-2"><div className="bg-emerald-500 h-2 shadow-[0_0_10px_rgba(16,185,129,0.8)]" style={{ width: `${s.total_users > 0 ? (s.active_free_users/s.total_users) * 100 : 0}%` }}></div></div>
+                <div className="w-full bg-emerald-100/50 h-2"><div className="bg-emerald-500 h-2 " style={{ width: `${s.total_users > 0 ? (s.active_free_users/s.total_users) * 100 : 0}%` }}></div></div>
               </div>
             </div>
           </div>
@@ -259,24 +259,24 @@ export default function DashboardGeneral() {
 
 function MetricCard({ title, value, icon, color }: { title: string, value: string|number, icon: any, color: string }) {
   const colorMap: any = {
-    blue: 'bg-blue-50/80 border-blue-200 text-blue-600',
-    amber: 'bg-amber-50/80 border-amber-200 text-amber-600',
-    emerald: 'bg-emerald-50/80 border-emerald-200 text-emerald-600',
-    indigo: 'bg-indigo-50/80 border-indigo-200 text-indigo-600',
-    rose: 'bg-rose-50/80 border-rose-200 text-rose-600',
-    purple: 'bg-purple-50/80 border-purple-200 text-purple-600',
-    sky: 'bg-sky-50/80 border-sky-200 text-sky-600',
-    slate: 'bg-slate-50/80 border-slate-200 text-slate-600',
+    blue: 'bg-blue-50/80 border-[#1d4ed8] text-blue-600',
+    amber: 'bg-amber-50/80 border-[#1d4ed8] text-amber-600',
+    emerald: 'bg-emerald-50/80 border-[#1d4ed8] text-emerald-600',
+    indigo: 'bg-indigo-50/80 border-[#1d4ed8] text-indigo-600',
+    rose: 'bg-rose-50/80 border-[#1d4ed8] text-rose-600',
+    purple: 'bg-purple-50/80 border-[#1d4ed8] text-purple-600',
+    sky: 'bg-sky-50/80 border-[#1d4ed8] text-sky-600',
+    slate: 'bg-slate-50/80 border-[#1d4ed8] text-slate-600',
   };
   return (
-    <div className="relative bg-white/40 backdrop-blur-md border border-white/60 p-4 shadow-[3px_3px_0px_0px_rgba(203,213,225,0.6)] hover:shadow-[6px_6px_0px_0px_rgba(148,163,184,0.5)] hover:-translate-y-1 hover:-translate-x-1 transition-all duration-300 flex flex-col justify-between group overflow-hidden">
+    <div className="relative bg-white/40 backdrop-blur-md border border-[#1d4ed8] p-4   hover:-translate-y-1 hover:-translate-x-1 transition-all duration-300 flex flex-col justify-between group overflow-hidden">
       
       {/* Sci-fi corner accents */}
-      <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-slate-400/30"></div>
-      <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-slate-400/30"></div>
+      <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#1d4ed8]/30"></div>
+      <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#1d4ed8]/30"></div>
 
       <div className="flex justify-between items-start mb-3">
-        <div className={`p-2 border ${colorMap[color] || colorMap.slate} group-hover:scale-110 transition-transform duration-300 shadow-inner rounded-none`}>
+        <div className={`p-2 border ${colorMap[color] || colorMap.slate} group-hover:scale-110 transition-transform duration-300  rounded-none`}>
           {icon}
         </div>
       </div>
